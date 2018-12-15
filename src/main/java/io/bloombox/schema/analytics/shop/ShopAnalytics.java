@@ -1,8 +1,8 @@
 /*
- * Copyright 2018, Bloombox, LLC. All rights reserved.
+ * Copyright 2018, Momentum Ideas, Co. All rights reserved.
  *
  * Source and object computer code contained herein is the private intellectual
- * property of Bloombox, a California Limited Liability Corporation. Use of this
+ * property of Momentum Ideas Co., a Delaware Corporation. Use of this
  * code in source form requires permission in writing before use or the
  * assembly, distribution, or publishing of derivative works, for commercial
  * purposes or any other purpose, from a duly authorized officer of Momentum
@@ -36,7 +36,7 @@ public final class ShopAnalytics {
    * Specifies actions that may be taken w.r.t. a physical or digital storefront. Stays in sync with `UserAction`.
    * </pre>
    *
-   * Protobuf enum {@code bloombox.schema.analytics.shop.ShopAction}
+   * Protobuf enum {@code bloombox.analytics.shop.ShopAction}
    */
   public enum ShopAction
       implements com.google.protobuf.ProtocolMessageEnum {
@@ -315,11 +315,11 @@ public final class ShopAnalytics {
       this.value = value;
     }
 
-    // @@protoc_insertion_point(enum_scope:bloombox.schema.analytics.shop.ShopAction)
+    // @@protoc_insertion_point(enum_scope:bloombox.analytics.shop.ShopAction)
   }
 
   public interface ImpressionOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:bloombox.schema.analytics.shop.Impression)
+      // @@protoc_insertion_point(interface_extends:bloombox.analytics.shop.Impression)
       com.google.protobuf.MessageOrBuilder {
 
     /**
@@ -362,11 +362,11 @@ public final class ShopAnalytics {
    * was offered the decision to engage.
    * </pre>
    *
-   * Protobuf type {@code bloombox.schema.analytics.shop.Impression}
+   * Protobuf type {@code bloombox.analytics.shop.Impression}
    */
   public  static final class Impression extends
       com.google.protobuf.GeneratedMessageV3 implements
-      // @@protoc_insertion_point(message_implements:bloombox.schema.analytics.shop.Impression)
+      // @@protoc_insertion_point(message_implements:bloombox.analytics.shop.Impression)
       ImpressionOrBuilder {
   private static final long serialVersionUID = 0L;
     // Use Impression.newBuilder() to construct.
@@ -401,13 +401,6 @@ public final class ShopAnalytics {
             case 0:
               done = true;
               break;
-            default: {
-              if (!parseUnknownFieldProto3(
-                  input, unknownFields, extensionRegistry, tag)) {
-                done = true;
-              }
-              break;
-            }
             case 8: {
 
               physical_ = input.readBool();
@@ -426,6 +419,13 @@ public final class ShopAnalytics {
 
               break;
             }
+            default: {
+              if (!parseUnknownFieldProto3(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
           }
         }
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
@@ -440,12 +440,13 @@ public final class ShopAnalytics {
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return io.bloombox.schema.analytics.shop.ShopAnalytics.internal_static_bloombox_schema_analytics_shop_Impression_descriptor;
+      return io.bloombox.schema.analytics.shop.ShopAnalytics.internal_static_bloombox_analytics_shop_Impression_descriptor;
     }
 
+    @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return io.bloombox.schema.analytics.shop.ShopAnalytics.internal_static_bloombox_schema_analytics_shop_Impression_fieldAccessorTable
+      return io.bloombox.schema.analytics.shop.ShopAnalytics.internal_static_bloombox_analytics_shop_Impression_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
               io.bloombox.schema.analytics.shop.ShopAnalytics.Impression.class, io.bloombox.schema.analytics.shop.ShopAnalytics.Impression.Builder.class);
     }
@@ -497,6 +498,7 @@ public final class ShopAnalytics {
     }
 
     private byte memoizedIsInitialized = -1;
+    @java.lang.Override
     public final boolean isInitialized() {
       byte isInitialized = memoizedIsInitialized;
       if (isInitialized == 1) return true;
@@ -506,6 +508,7 @@ public final class ShopAnalytics {
       return true;
     }
 
+    @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
       if (physical_ != false) {
@@ -517,6 +520,7 @@ public final class ShopAnalytics {
       unknownFields.writeTo(output);
     }
 
+    @java.lang.Override
     public int getSerializedSize() {
       int size = memoizedSize;
       if (size != -1) return size;
@@ -646,6 +650,7 @@ public final class ShopAnalytics {
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
 
+    @java.lang.Override
     public Builder newBuilderForType() { return newBuilder(); }
     public static Builder newBuilder() {
       return DEFAULT_INSTANCE.toBuilder();
@@ -653,6 +658,7 @@ public final class ShopAnalytics {
     public static Builder newBuilder(io.bloombox.schema.analytics.shop.ShopAnalytics.Impression prototype) {
       return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
     }
+    @java.lang.Override
     public Builder toBuilder() {
       return this == DEFAULT_INSTANCE
           ? new Builder() : new Builder().mergeFrom(this);
@@ -670,20 +676,21 @@ public final class ShopAnalytics {
      * was offered the decision to engage.
      * </pre>
      *
-     * Protobuf type {@code bloombox.schema.analytics.shop.Impression}
+     * Protobuf type {@code bloombox.analytics.shop.Impression}
      */
     public static final class Builder extends
         com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:bloombox.schema.analytics.shop.Impression)
+        // @@protoc_insertion_point(builder_implements:bloombox.analytics.shop.Impression)
         io.bloombox.schema.analytics.shop.ShopAnalytics.ImpressionOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return io.bloombox.schema.analytics.shop.ShopAnalytics.internal_static_bloombox_schema_analytics_shop_Impression_descriptor;
+        return io.bloombox.schema.analytics.shop.ShopAnalytics.internal_static_bloombox_analytics_shop_Impression_descriptor;
       }
 
+      @java.lang.Override
       protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return io.bloombox.schema.analytics.shop.ShopAnalytics.internal_static_bloombox_schema_analytics_shop_Impression_fieldAccessorTable
+        return io.bloombox.schema.analytics.shop.ShopAnalytics.internal_static_bloombox_analytics_shop_Impression_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
                 io.bloombox.schema.analytics.shop.ShopAnalytics.Impression.class, io.bloombox.schema.analytics.shop.ShopAnalytics.Impression.Builder.class);
       }
@@ -703,6 +710,7 @@ public final class ShopAnalytics {
                 .alwaysUseFieldBuilders) {
         }
       }
+      @java.lang.Override
       public Builder clear() {
         super.clear();
         physical_ = false;
@@ -716,15 +724,18 @@ public final class ShopAnalytics {
         return this;
       }
 
+      @java.lang.Override
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return io.bloombox.schema.analytics.shop.ShopAnalytics.internal_static_bloombox_schema_analytics_shop_Impression_descriptor;
+        return io.bloombox.schema.analytics.shop.ShopAnalytics.internal_static_bloombox_analytics_shop_Impression_descriptor;
       }
 
+      @java.lang.Override
       public io.bloombox.schema.analytics.shop.ShopAnalytics.Impression getDefaultInstanceForType() {
         return io.bloombox.schema.analytics.shop.ShopAnalytics.Impression.getDefaultInstance();
       }
 
+      @java.lang.Override
       public io.bloombox.schema.analytics.shop.ShopAnalytics.Impression build() {
         io.bloombox.schema.analytics.shop.ShopAnalytics.Impression result = buildPartial();
         if (!result.isInitialized()) {
@@ -733,6 +744,7 @@ public final class ShopAnalytics {
         return result;
       }
 
+      @java.lang.Override
       public io.bloombox.schema.analytics.shop.ShopAnalytics.Impression buildPartial() {
         io.bloombox.schema.analytics.shop.ShopAnalytics.Impression result = new io.bloombox.schema.analytics.shop.ShopAnalytics.Impression(this);
         result.physical_ = physical_;
@@ -745,32 +757,39 @@ public final class ShopAnalytics {
         return result;
       }
 
+      @java.lang.Override
       public Builder clone() {
         return (Builder) super.clone();
       }
+      @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
         return (Builder) super.setField(field, value);
       }
+      @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
         return (Builder) super.clearField(field);
       }
+      @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
         return (Builder) super.clearOneof(oneof);
       }
+      @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
         return (Builder) super.setRepeatedField(field, index, value);
       }
+      @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
         return (Builder) super.addRepeatedField(field, value);
       }
+      @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
         if (other instanceof io.bloombox.schema.analytics.shop.ShopAnalytics.Impression) {
           return mergeFrom((io.bloombox.schema.analytics.shop.ShopAnalytics.Impression)other);
@@ -793,10 +812,12 @@ public final class ShopAnalytics {
         return this;
       }
 
+      @java.lang.Override
       public final boolean isInitialized() {
         return true;
       }
 
+      @java.lang.Override
       public Builder mergeFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -1005,21 +1026,23 @@ public final class ShopAnalytics {
         }
         return occurredBuilder_;
       }
+      @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
         return super.setUnknownFieldsProto3(unknownFields);
       }
 
+      @java.lang.Override
       public final Builder mergeUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
         return super.mergeUnknownFields(unknownFields);
       }
 
 
-      // @@protoc_insertion_point(builder_scope:bloombox.schema.analytics.shop.Impression)
+      // @@protoc_insertion_point(builder_scope:bloombox.analytics.shop.Impression)
     }
 
-    // @@protoc_insertion_point(class_scope:bloombox.schema.analytics.shop.Impression)
+    // @@protoc_insertion_point(class_scope:bloombox.analytics.shop.Impression)
     private static final io.bloombox.schema.analytics.shop.ShopAnalytics.Impression DEFAULT_INSTANCE;
     static {
       DEFAULT_INSTANCE = new io.bloombox.schema.analytics.shop.ShopAnalytics.Impression();
@@ -1031,6 +1054,7 @@ public final class ShopAnalytics {
 
     private static final com.google.protobuf.Parser<Impression>
         PARSER = new com.google.protobuf.AbstractParser<Impression>() {
+      @java.lang.Override
       public Impression parsePartialFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -1048,6 +1072,7 @@ public final class ShopAnalytics {
       return PARSER;
     }
 
+    @java.lang.Override
     public io.bloombox.schema.analytics.shop.ShopAnalytics.Impression getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
@@ -1055,7 +1080,7 @@ public final class ShopAnalytics {
   }
 
   public interface ViewOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:bloombox.schema.analytics.shop.View)
+      // @@protoc_insertion_point(interface_extends:bloombox.analytics.shop.View)
       com.google.protobuf.MessageOrBuilder {
 
     /**
@@ -1107,11 +1132,11 @@ public final class ShopAnalytics {
    * brick-and-mortar location, or otherwise chosen to engage in a non-commercial way.
    * </pre>
    *
-   * Protobuf type {@code bloombox.schema.analytics.shop.View}
+   * Protobuf type {@code bloombox.analytics.shop.View}
    */
   public  static final class View extends
       com.google.protobuf.GeneratedMessageV3 implements
-      // @@protoc_insertion_point(message_implements:bloombox.schema.analytics.shop.View)
+      // @@protoc_insertion_point(message_implements:bloombox.analytics.shop.View)
       ViewOrBuilder {
   private static final long serialVersionUID = 0L;
     // Use View.newBuilder() to construct.
@@ -1147,13 +1172,6 @@ public final class ShopAnalytics {
             case 0:
               done = true;
               break;
-            default: {
-              if (!parseUnknownFieldProto3(
-                  input, unknownFields, extensionRegistry, tag)) {
-                done = true;
-              }
-              break;
-            }
             case 8: {
 
               physical_ = input.readBool();
@@ -1177,6 +1195,13 @@ public final class ShopAnalytics {
 
               break;
             }
+            default: {
+              if (!parseUnknownFieldProto3(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
           }
         }
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
@@ -1191,12 +1216,13 @@ public final class ShopAnalytics {
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return io.bloombox.schema.analytics.shop.ShopAnalytics.internal_static_bloombox_schema_analytics_shop_View_descriptor;
+      return io.bloombox.schema.analytics.shop.ShopAnalytics.internal_static_bloombox_analytics_shop_View_descriptor;
     }
 
+    @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return io.bloombox.schema.analytics.shop.ShopAnalytics.internal_static_bloombox_schema_analytics_shop_View_fieldAccessorTable
+      return io.bloombox.schema.analytics.shop.ShopAnalytics.internal_static_bloombox_analytics_shop_View_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
               io.bloombox.schema.analytics.shop.ShopAnalytics.View.class, io.bloombox.schema.analytics.shop.ShopAnalytics.View.Builder.class);
     }
@@ -1261,6 +1287,7 @@ public final class ShopAnalytics {
     }
 
     private byte memoizedIsInitialized = -1;
+    @java.lang.Override
     public final boolean isInitialized() {
       byte isInitialized = memoizedIsInitialized;
       if (isInitialized == 1) return true;
@@ -1270,6 +1297,7 @@ public final class ShopAnalytics {
       return true;
     }
 
+    @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
       if (physical_ != false) {
@@ -1284,6 +1312,7 @@ public final class ShopAnalytics {
       unknownFields.writeTo(output);
     }
 
+    @java.lang.Override
     public int getSerializedSize() {
       int size = memoizedSize;
       if (size != -1) return size;
@@ -1422,6 +1451,7 @@ public final class ShopAnalytics {
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
 
+    @java.lang.Override
     public Builder newBuilderForType() { return newBuilder(); }
     public static Builder newBuilder() {
       return DEFAULT_INSTANCE.toBuilder();
@@ -1429,6 +1459,7 @@ public final class ShopAnalytics {
     public static Builder newBuilder(io.bloombox.schema.analytics.shop.ShopAnalytics.View prototype) {
       return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
     }
+    @java.lang.Override
     public Builder toBuilder() {
       return this == DEFAULT_INSTANCE
           ? new Builder() : new Builder().mergeFrom(this);
@@ -1446,20 +1477,21 @@ public final class ShopAnalytics {
      * brick-and-mortar location, or otherwise chosen to engage in a non-commercial way.
      * </pre>
      *
-     * Protobuf type {@code bloombox.schema.analytics.shop.View}
+     * Protobuf type {@code bloombox.analytics.shop.View}
      */
     public static final class Builder extends
         com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:bloombox.schema.analytics.shop.View)
+        // @@protoc_insertion_point(builder_implements:bloombox.analytics.shop.View)
         io.bloombox.schema.analytics.shop.ShopAnalytics.ViewOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return io.bloombox.schema.analytics.shop.ShopAnalytics.internal_static_bloombox_schema_analytics_shop_View_descriptor;
+        return io.bloombox.schema.analytics.shop.ShopAnalytics.internal_static_bloombox_analytics_shop_View_descriptor;
       }
 
+      @java.lang.Override
       protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return io.bloombox.schema.analytics.shop.ShopAnalytics.internal_static_bloombox_schema_analytics_shop_View_fieldAccessorTable
+        return io.bloombox.schema.analytics.shop.ShopAnalytics.internal_static_bloombox_analytics_shop_View_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
                 io.bloombox.schema.analytics.shop.ShopAnalytics.View.class, io.bloombox.schema.analytics.shop.ShopAnalytics.View.Builder.class);
       }
@@ -1479,6 +1511,7 @@ public final class ShopAnalytics {
                 .alwaysUseFieldBuilders) {
         }
       }
+      @java.lang.Override
       public Builder clear() {
         super.clear();
         physical_ = false;
@@ -1494,15 +1527,18 @@ public final class ShopAnalytics {
         return this;
       }
 
+      @java.lang.Override
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return io.bloombox.schema.analytics.shop.ShopAnalytics.internal_static_bloombox_schema_analytics_shop_View_descriptor;
+        return io.bloombox.schema.analytics.shop.ShopAnalytics.internal_static_bloombox_analytics_shop_View_descriptor;
       }
 
+      @java.lang.Override
       public io.bloombox.schema.analytics.shop.ShopAnalytics.View getDefaultInstanceForType() {
         return io.bloombox.schema.analytics.shop.ShopAnalytics.View.getDefaultInstance();
       }
 
+      @java.lang.Override
       public io.bloombox.schema.analytics.shop.ShopAnalytics.View build() {
         io.bloombox.schema.analytics.shop.ShopAnalytics.View result = buildPartial();
         if (!result.isInitialized()) {
@@ -1511,6 +1547,7 @@ public final class ShopAnalytics {
         return result;
       }
 
+      @java.lang.Override
       public io.bloombox.schema.analytics.shop.ShopAnalytics.View buildPartial() {
         io.bloombox.schema.analytics.shop.ShopAnalytics.View result = new io.bloombox.schema.analytics.shop.ShopAnalytics.View(this);
         result.physical_ = physical_;
@@ -1524,32 +1561,39 @@ public final class ShopAnalytics {
         return result;
       }
 
+      @java.lang.Override
       public Builder clone() {
         return (Builder) super.clone();
       }
+      @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
         return (Builder) super.setField(field, value);
       }
+      @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
         return (Builder) super.clearField(field);
       }
+      @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
         return (Builder) super.clearOneof(oneof);
       }
+      @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
         return (Builder) super.setRepeatedField(field, index, value);
       }
+      @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
         return (Builder) super.addRepeatedField(field, value);
       }
+      @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
         if (other instanceof io.bloombox.schema.analytics.shop.ShopAnalytics.View) {
           return mergeFrom((io.bloombox.schema.analytics.shop.ShopAnalytics.View)other);
@@ -1575,10 +1619,12 @@ public final class ShopAnalytics {
         return this;
       }
 
+      @java.lang.Override
       public final boolean isInitialized() {
         return true;
       }
 
+      @java.lang.Override
       public Builder mergeFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -1825,21 +1871,23 @@ public final class ShopAnalytics {
         }
         return occurredBuilder_;
       }
+      @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
         return super.setUnknownFieldsProto3(unknownFields);
       }
 
+      @java.lang.Override
       public final Builder mergeUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
         return super.mergeUnknownFields(unknownFields);
       }
 
 
-      // @@protoc_insertion_point(builder_scope:bloombox.schema.analytics.shop.View)
+      // @@protoc_insertion_point(builder_scope:bloombox.analytics.shop.View)
     }
 
-    // @@protoc_insertion_point(class_scope:bloombox.schema.analytics.shop.View)
+    // @@protoc_insertion_point(class_scope:bloombox.analytics.shop.View)
     private static final io.bloombox.schema.analytics.shop.ShopAnalytics.View DEFAULT_INSTANCE;
     static {
       DEFAULT_INSTANCE = new io.bloombox.schema.analytics.shop.ShopAnalytics.View();
@@ -1851,6 +1899,7 @@ public final class ShopAnalytics {
 
     private static final com.google.protobuf.Parser<View>
         PARSER = new com.google.protobuf.AbstractParser<View>() {
+      @java.lang.Override
       public View parsePartialFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -1868,6 +1917,7 @@ public final class ShopAnalytics {
       return PARSER;
     }
 
+    @java.lang.Override
     public io.bloombox.schema.analytics.shop.ShopAnalytics.View getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
@@ -1875,7 +1925,7 @@ public final class ShopAnalytics {
   }
 
   public interface ActionOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:bloombox.schema.analytics.shop.Action)
+      // @@protoc_insertion_point(interface_extends:bloombox.analytics.shop.Action)
       com.google.protobuf.MessageOrBuilder {
 
     /**
@@ -1892,7 +1942,7 @@ public final class ShopAnalytics {
      * Action that was taken at or within the digital or physical shop.
      * </pre>
      *
-     * <code>.bloombox.schema.analytics.shop.ShopAction verb = 2;</code>
+     * <code>.bloombox.analytics.shop.ShopAction verb = 2;</code>
      */
     int getVerbValue();
     /**
@@ -1900,7 +1950,7 @@ public final class ShopAnalytics {
      * Action that was taken at or within the digital or physical shop.
      * </pre>
      *
-     * <code>.bloombox.schema.analytics.shop.ShopAction verb = 2;</code>
+     * <code>.bloombox.analytics.shop.ShopAction verb = 2;</code>
      */
     io.bloombox.schema.analytics.shop.ShopAnalytics.ShopAction getVerb();
 
@@ -1935,11 +1985,11 @@ public final class ShopAnalytics {
    * interactive session with a digital or physical commercial storefront.
    * </pre>
    *
-   * Protobuf type {@code bloombox.schema.analytics.shop.Action}
+   * Protobuf type {@code bloombox.analytics.shop.Action}
    */
   public  static final class Action extends
       com.google.protobuf.GeneratedMessageV3 implements
-      // @@protoc_insertion_point(message_implements:bloombox.schema.analytics.shop.Action)
+      // @@protoc_insertion_point(message_implements:bloombox.analytics.shop.Action)
       ActionOrBuilder {
   private static final long serialVersionUID = 0L;
     // Use Action.newBuilder() to construct.
@@ -1975,13 +2025,6 @@ public final class ShopAnalytics {
             case 0:
               done = true;
               break;
-            default: {
-              if (!parseUnknownFieldProto3(
-                  input, unknownFields, extensionRegistry, tag)) {
-                done = true;
-              }
-              break;
-            }
             case 8: {
 
               physical_ = input.readBool();
@@ -2006,6 +2049,13 @@ public final class ShopAnalytics {
 
               break;
             }
+            default: {
+              if (!parseUnknownFieldProto3(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
           }
         }
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
@@ -2020,12 +2070,13 @@ public final class ShopAnalytics {
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return io.bloombox.schema.analytics.shop.ShopAnalytics.internal_static_bloombox_schema_analytics_shop_Action_descriptor;
+      return io.bloombox.schema.analytics.shop.ShopAnalytics.internal_static_bloombox_analytics_shop_Action_descriptor;
     }
 
+    @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return io.bloombox.schema.analytics.shop.ShopAnalytics.internal_static_bloombox_schema_analytics_shop_Action_fieldAccessorTable
+      return io.bloombox.schema.analytics.shop.ShopAnalytics.internal_static_bloombox_analytics_shop_Action_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
               io.bloombox.schema.analytics.shop.ShopAnalytics.Action.class, io.bloombox.schema.analytics.shop.ShopAnalytics.Action.Builder.class);
     }
@@ -2050,7 +2101,7 @@ public final class ShopAnalytics {
      * Action that was taken at or within the digital or physical shop.
      * </pre>
      *
-     * <code>.bloombox.schema.analytics.shop.ShopAction verb = 2;</code>
+     * <code>.bloombox.analytics.shop.ShopAction verb = 2;</code>
      */
     public int getVerbValue() {
       return verb_;
@@ -2060,9 +2111,10 @@ public final class ShopAnalytics {
      * Action that was taken at or within the digital or physical shop.
      * </pre>
      *
-     * <code>.bloombox.schema.analytics.shop.ShopAction verb = 2;</code>
+     * <code>.bloombox.analytics.shop.ShopAction verb = 2;</code>
      */
     public io.bloombox.schema.analytics.shop.ShopAnalytics.ShopAction getVerb() {
+      @SuppressWarnings("deprecation")
       io.bloombox.schema.analytics.shop.ShopAnalytics.ShopAction result = io.bloombox.schema.analytics.shop.ShopAnalytics.ShopAction.valueOf(verb_);
       return result == null ? io.bloombox.schema.analytics.shop.ShopAnalytics.ShopAction.UNRECOGNIZED : result;
     }
@@ -2101,6 +2153,7 @@ public final class ShopAnalytics {
     }
 
     private byte memoizedIsInitialized = -1;
+    @java.lang.Override
     public final boolean isInitialized() {
       byte isInitialized = memoizedIsInitialized;
       if (isInitialized == 1) return true;
@@ -2110,6 +2163,7 @@ public final class ShopAnalytics {
       return true;
     }
 
+    @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
       if (physical_ != false) {
@@ -2124,6 +2178,7 @@ public final class ShopAnalytics {
       unknownFields.writeTo(output);
     }
 
+    @java.lang.Override
     public int getSerializedSize() {
       int size = memoizedSize;
       if (size != -1) return size;
@@ -2260,6 +2315,7 @@ public final class ShopAnalytics {
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
 
+    @java.lang.Override
     public Builder newBuilderForType() { return newBuilder(); }
     public static Builder newBuilder() {
       return DEFAULT_INSTANCE.toBuilder();
@@ -2267,6 +2323,7 @@ public final class ShopAnalytics {
     public static Builder newBuilder(io.bloombox.schema.analytics.shop.ShopAnalytics.Action prototype) {
       return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
     }
+    @java.lang.Override
     public Builder toBuilder() {
       return this == DEFAULT_INSTANCE
           ? new Builder() : new Builder().mergeFrom(this);
@@ -2284,20 +2341,21 @@ public final class ShopAnalytics {
      * interactive session with a digital or physical commercial storefront.
      * </pre>
      *
-     * Protobuf type {@code bloombox.schema.analytics.shop.Action}
+     * Protobuf type {@code bloombox.analytics.shop.Action}
      */
     public static final class Builder extends
         com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:bloombox.schema.analytics.shop.Action)
+        // @@protoc_insertion_point(builder_implements:bloombox.analytics.shop.Action)
         io.bloombox.schema.analytics.shop.ShopAnalytics.ActionOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return io.bloombox.schema.analytics.shop.ShopAnalytics.internal_static_bloombox_schema_analytics_shop_Action_descriptor;
+        return io.bloombox.schema.analytics.shop.ShopAnalytics.internal_static_bloombox_analytics_shop_Action_descriptor;
       }
 
+      @java.lang.Override
       protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return io.bloombox.schema.analytics.shop.ShopAnalytics.internal_static_bloombox_schema_analytics_shop_Action_fieldAccessorTable
+        return io.bloombox.schema.analytics.shop.ShopAnalytics.internal_static_bloombox_analytics_shop_Action_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
                 io.bloombox.schema.analytics.shop.ShopAnalytics.Action.class, io.bloombox.schema.analytics.shop.ShopAnalytics.Action.Builder.class);
       }
@@ -2317,6 +2375,7 @@ public final class ShopAnalytics {
                 .alwaysUseFieldBuilders) {
         }
       }
+      @java.lang.Override
       public Builder clear() {
         super.clear();
         physical_ = false;
@@ -2332,15 +2391,18 @@ public final class ShopAnalytics {
         return this;
       }
 
+      @java.lang.Override
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return io.bloombox.schema.analytics.shop.ShopAnalytics.internal_static_bloombox_schema_analytics_shop_Action_descriptor;
+        return io.bloombox.schema.analytics.shop.ShopAnalytics.internal_static_bloombox_analytics_shop_Action_descriptor;
       }
 
+      @java.lang.Override
       public io.bloombox.schema.analytics.shop.ShopAnalytics.Action getDefaultInstanceForType() {
         return io.bloombox.schema.analytics.shop.ShopAnalytics.Action.getDefaultInstance();
       }
 
+      @java.lang.Override
       public io.bloombox.schema.analytics.shop.ShopAnalytics.Action build() {
         io.bloombox.schema.analytics.shop.ShopAnalytics.Action result = buildPartial();
         if (!result.isInitialized()) {
@@ -2349,6 +2411,7 @@ public final class ShopAnalytics {
         return result;
       }
 
+      @java.lang.Override
       public io.bloombox.schema.analytics.shop.ShopAnalytics.Action buildPartial() {
         io.bloombox.schema.analytics.shop.ShopAnalytics.Action result = new io.bloombox.schema.analytics.shop.ShopAnalytics.Action(this);
         result.physical_ = physical_;
@@ -2362,32 +2425,39 @@ public final class ShopAnalytics {
         return result;
       }
 
+      @java.lang.Override
       public Builder clone() {
         return (Builder) super.clone();
       }
+      @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
         return (Builder) super.setField(field, value);
       }
+      @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
         return (Builder) super.clearField(field);
       }
+      @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
         return (Builder) super.clearOneof(oneof);
       }
+      @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
         return (Builder) super.setRepeatedField(field, index, value);
       }
+      @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
         return (Builder) super.addRepeatedField(field, value);
       }
+      @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
         if (other instanceof io.bloombox.schema.analytics.shop.ShopAnalytics.Action) {
           return mergeFrom((io.bloombox.schema.analytics.shop.ShopAnalytics.Action)other);
@@ -2413,10 +2483,12 @@ public final class ShopAnalytics {
         return this;
       }
 
+      @java.lang.Override
       public final boolean isInitialized() {
         return true;
       }
 
+      @java.lang.Override
       public Builder mergeFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -2479,7 +2551,7 @@ public final class ShopAnalytics {
        * Action that was taken at or within the digital or physical shop.
        * </pre>
        *
-       * <code>.bloombox.schema.analytics.shop.ShopAction verb = 2;</code>
+       * <code>.bloombox.analytics.shop.ShopAction verb = 2;</code>
        */
       public int getVerbValue() {
         return verb_;
@@ -2489,7 +2561,7 @@ public final class ShopAnalytics {
        * Action that was taken at or within the digital or physical shop.
        * </pre>
        *
-       * <code>.bloombox.schema.analytics.shop.ShopAction verb = 2;</code>
+       * <code>.bloombox.analytics.shop.ShopAction verb = 2;</code>
        */
       public Builder setVerbValue(int value) {
         verb_ = value;
@@ -2501,9 +2573,10 @@ public final class ShopAnalytics {
        * Action that was taken at or within the digital or physical shop.
        * </pre>
        *
-       * <code>.bloombox.schema.analytics.shop.ShopAction verb = 2;</code>
+       * <code>.bloombox.analytics.shop.ShopAction verb = 2;</code>
        */
       public io.bloombox.schema.analytics.shop.ShopAnalytics.ShopAction getVerb() {
+        @SuppressWarnings("deprecation")
         io.bloombox.schema.analytics.shop.ShopAnalytics.ShopAction result = io.bloombox.schema.analytics.shop.ShopAnalytics.ShopAction.valueOf(verb_);
         return result == null ? io.bloombox.schema.analytics.shop.ShopAnalytics.ShopAction.UNRECOGNIZED : result;
       }
@@ -2512,7 +2585,7 @@ public final class ShopAnalytics {
        * Action that was taken at or within the digital or physical shop.
        * </pre>
        *
-       * <code>.bloombox.schema.analytics.shop.ShopAction verb = 2;</code>
+       * <code>.bloombox.analytics.shop.ShopAction verb = 2;</code>
        */
       public Builder setVerb(io.bloombox.schema.analytics.shop.ShopAnalytics.ShopAction value) {
         if (value == null) {
@@ -2528,7 +2601,7 @@ public final class ShopAnalytics {
        * Action that was taken at or within the digital or physical shop.
        * </pre>
        *
-       * <code>.bloombox.schema.analytics.shop.ShopAction verb = 2;</code>
+       * <code>.bloombox.analytics.shop.ShopAction verb = 2;</code>
        */
       public Builder clearVerb() {
         
@@ -2689,21 +2762,23 @@ public final class ShopAnalytics {
         }
         return occurredBuilder_;
       }
+      @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
         return super.setUnknownFieldsProto3(unknownFields);
       }
 
+      @java.lang.Override
       public final Builder mergeUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
         return super.mergeUnknownFields(unknownFields);
       }
 
 
-      // @@protoc_insertion_point(builder_scope:bloombox.schema.analytics.shop.Action)
+      // @@protoc_insertion_point(builder_scope:bloombox.analytics.shop.Action)
     }
 
-    // @@protoc_insertion_point(class_scope:bloombox.schema.analytics.shop.Action)
+    // @@protoc_insertion_point(class_scope:bloombox.analytics.shop.Action)
     private static final io.bloombox.schema.analytics.shop.ShopAnalytics.Action DEFAULT_INSTANCE;
     static {
       DEFAULT_INSTANCE = new io.bloombox.schema.analytics.shop.ShopAnalytics.Action();
@@ -2715,6 +2790,7 @@ public final class ShopAnalytics {
 
     private static final com.google.protobuf.Parser<Action>
         PARSER = new com.google.protobuf.AbstractParser<Action>() {
+      @java.lang.Override
       public Action parsePartialFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -2732,6 +2808,7 @@ public final class ShopAnalytics {
       return PARSER;
     }
 
+    @java.lang.Override
     public io.bloombox.schema.analytics.shop.ShopAnalytics.Action getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
@@ -2739,20 +2816,20 @@ public final class ShopAnalytics {
   }
 
   private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_bloombox_schema_analytics_shop_Impression_descriptor;
+    internal_static_bloombox_analytics_shop_Impression_descriptor;
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_bloombox_schema_analytics_shop_Impression_fieldAccessorTable;
+      internal_static_bloombox_analytics_shop_Impression_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_bloombox_schema_analytics_shop_View_descriptor;
+    internal_static_bloombox_analytics_shop_View_descriptor;
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_bloombox_schema_analytics_shop_View_fieldAccessorTable;
+      internal_static_bloombox_analytics_shop_View_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_bloombox_schema_analytics_shop_Action_descriptor;
+    internal_static_bloombox_analytics_shop_Action_descriptor;
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_bloombox_schema_analytics_shop_Action_fieldAccessorTable;
+      internal_static_bloombox_analytics_shop_Action_fieldAccessorTable;
 
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
@@ -2763,21 +2840,21 @@ public final class ShopAnalytics {
   static {
     java.lang.String[] descriptorData = {
       "\n&analytics/commerce/ShopAnalytics.proto" +
-      "\022\036bloombox.schema.analytics.shop\032\026tempor" +
-      "al/Instant.proto\"P\n\nImpression\022\020\n\010physic" +
-      "al\030\001 \001(\010\0220\n\010occurred\030\002 \001(\0132\036.opencannabi" +
-      "s.temporal.Instant\"_\n\004View\022\020\n\010physical\030\001" +
-      " \001(\010\022\023\n\013interactive\030\002 \001(\010\0220\n\010occurred\030\003 " +
-      "\001(\0132\036.opencannabis.temporal.Instant\"\206\001\n\006" +
-      "Action\022\020\n\010physical\030\001 \001(\010\0228\n\004verb\030\002 \001(\0162*" +
-      ".bloombox.schema.analytics.shop.ShopActi" +
-      "on\0220\n\010occurred\030\004 \001(\0132\036.opencannabis.temp" +
-      "oral.Instant*\230\001\n\nShopAction\022\n\n\006ENGAGE\020\000\022" +
-      "\n\n\006ENROLL\020\n\022\014\n\010ACTIVATE\020\013\022\010\n\004JOIN\020\014\022\n\n\006V" +
-      "ERIFY\020\r\022\013\n\007CHECKIN\020\016\022\017\n\013PREFERENCES\020\017\022\014\n" +
-      "\010PURCHASE\020\020\022\t\n\005ORDER\020\021\022\n\n\006OPT_IN\020\024\022\013\n\007OP" +
-      "T_OUT\020\025B<\n!io.bloombox.schema.analytics." +
-      "shopB\rShopAnalyticsH\001P\000\242\002\003BBSb\006proto3"
+      "\022\027bloombox.analytics.shop\032\026temporal/Inst" +
+      "ant.proto\"P\n\nImpression\022\020\n\010physical\030\001 \001(" +
+      "\010\0220\n\010occurred\030\002 \001(\0132\036.opencannabis.tempo" +
+      "ral.Instant\"_\n\004View\022\020\n\010physical\030\001 \001(\010\022\023\n" +
+      "\013interactive\030\002 \001(\010\0220\n\010occurred\030\003 \001(\0132\036.o" +
+      "pencannabis.temporal.Instant\"\177\n\006Action\022\020" +
+      "\n\010physical\030\001 \001(\010\0221\n\004verb\030\002 \001(\0162#.bloombo" +
+      "x.analytics.shop.ShopAction\0220\n\010occurred\030" +
+      "\004 \001(\0132\036.opencannabis.temporal.Instant*\230\001" +
+      "\n\nShopAction\022\n\n\006ENGAGE\020\000\022\n\n\006ENROLL\020\n\022\014\n\010" +
+      "ACTIVATE\020\013\022\010\n\004JOIN\020\014\022\n\n\006VERIFY\020\r\022\013\n\007CHEC" +
+      "KIN\020\016\022\017\n\013PREFERENCES\020\017\022\014\n\010PURCHASE\020\020\022\t\n\005" +
+      "ORDER\020\021\022\n\n\006OPT_IN\020\024\022\013\n\007OPT_OUT\020\025B<\n!io.b" +
+      "loombox.schema.analytics.shopB\rShopAnaly" +
+      "ticsH\001P\000\242\002\003BBSb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -2792,23 +2869,23 @@ public final class ShopAnalytics {
         new com.google.protobuf.Descriptors.FileDescriptor[] {
           io.opencannabis.schema.temporal.TemporalInstant.getDescriptor(),
         }, assigner);
-    internal_static_bloombox_schema_analytics_shop_Impression_descriptor =
+    internal_static_bloombox_analytics_shop_Impression_descriptor =
       getDescriptor().getMessageTypes().get(0);
-    internal_static_bloombox_schema_analytics_shop_Impression_fieldAccessorTable = new
+    internal_static_bloombox_analytics_shop_Impression_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_bloombox_schema_analytics_shop_Impression_descriptor,
+        internal_static_bloombox_analytics_shop_Impression_descriptor,
         new java.lang.String[] { "Physical", "Occurred", });
-    internal_static_bloombox_schema_analytics_shop_View_descriptor =
+    internal_static_bloombox_analytics_shop_View_descriptor =
       getDescriptor().getMessageTypes().get(1);
-    internal_static_bloombox_schema_analytics_shop_View_fieldAccessorTable = new
+    internal_static_bloombox_analytics_shop_View_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_bloombox_schema_analytics_shop_View_descriptor,
+        internal_static_bloombox_analytics_shop_View_descriptor,
         new java.lang.String[] { "Physical", "Interactive", "Occurred", });
-    internal_static_bloombox_schema_analytics_shop_Action_descriptor =
+    internal_static_bloombox_analytics_shop_Action_descriptor =
       getDescriptor().getMessageTypes().get(2);
-    internal_static_bloombox_schema_analytics_shop_Action_fieldAccessorTable = new
+    internal_static_bloombox_analytics_shop_Action_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_bloombox_schema_analytics_shop_Action_descriptor,
+        internal_static_bloombox_analytics_shop_Action_descriptor,
         new java.lang.String[] { "Physical", "Verb", "Occurred", });
     io.opencannabis.schema.temporal.TemporalInstant.getDescriptor();
   }

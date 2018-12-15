@@ -1,11 +1,12 @@
 /*
- * Copyright 2018, Bloombox, LLC.
+ * Copyright 2018, Momentum Ideas, Co. All rights reserved.
  *
- * Licensed under the Apache License, Version 2.0 (the "License");
- * you may not use this file except in compliance with the License.
- * You may obtain a copy of the License at
- *
- *     http://www.apache.org/licenses/LICENSE-2.0
+ * Source and object computer code contained herein is the private intellectual
+ * property of Momentum Ideas Co., a Delaware Corporation. Use of this
+ * code in source form requires permission in writing before use or the
+ * assembly, distribution, or publishing of derivative works, for commercial
+ * purposes or any other purpose, from a duly authorized officer of Momentum
+ * Ideas Co.
  *
  * Unless required by applicable law or agreed to in writing, software
  * distributed under the License is distributed on an "AS IS" BASIS,
@@ -24,11 +25,11 @@ package io.bloombox.schema.search;
  * Specifies the count of items in a particular result category included in a search response.
  * </pre>
  *
- * Protobuf type {@code bloombox.schema.search.ResultsetCategoricalCount}
+ * Protobuf type {@code bloombox.search.ResultsetCategoricalCount}
  */
 public  final class ResultsetCategoricalCount extends
     com.google.protobuf.GeneratedMessageV3 implements
-    // @@protoc_insertion_point(message_implements:bloombox.schema.search.ResultsetCategoricalCount)
+    // @@protoc_insertion_point(message_implements:bloombox.search.ResultsetCategoricalCount)
     ResultsetCategoricalCountOrBuilder {
 private static final long serialVersionUID = 0L;
   // Use ResultsetCategoricalCount.newBuilder() to construct.
@@ -64,13 +65,6 @@ private static final long serialVersionUID = 0L;
           case 0:
             done = true;
             break;
-          default: {
-            if (!parseUnknownFieldProto3(
-                input, unknownFields, extensionRegistry, tag)) {
-              done = true;
-            }
-            break;
-          }
           case 8: {
             int rawValue = input.readEnum();
 
@@ -80,6 +74,13 @@ private static final long serialVersionUID = 0L;
           case 16: {
 
             count_ = input.readInt32();
+            break;
+          }
+          default: {
+            if (!parseUnknownFieldProto3(
+                input, unknownFields, extensionRegistry, tag)) {
+              done = true;
+            }
             break;
           }
         }
@@ -96,12 +97,13 @@ private static final long serialVersionUID = 0L;
   }
   public static final com.google.protobuf.Descriptors.Descriptor
       getDescriptor() {
-    return io.bloombox.schema.search.SearchMetadata.internal_static_bloombox_schema_search_ResultsetCategoricalCount_descriptor;
+    return io.bloombox.schema.search.SearchMetadata.internal_static_bloombox_search_ResultsetCategoricalCount_descriptor;
   }
 
+  @java.lang.Override
   protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internalGetFieldAccessorTable() {
-    return io.bloombox.schema.search.SearchMetadata.internal_static_bloombox_schema_search_ResultsetCategoricalCount_fieldAccessorTable
+    return io.bloombox.schema.search.SearchMetadata.internal_static_bloombox_search_ResultsetCategoricalCount_fieldAccessorTable
         .ensureFieldAccessorsInitialized(
             io.bloombox.schema.search.ResultsetCategoricalCount.class, io.bloombox.schema.search.ResultsetCategoricalCount.Builder.class);
   }
@@ -113,7 +115,7 @@ private static final long serialVersionUID = 0L;
    * Specifies the type of record enclosed with this count.
    * </pre>
    *
-   * <code>.bloombox.schema.search.SearchableCollection type = 1;</code>
+   * <code>.bloombox.search.SearchableCollection type = 1;</code>
    */
   public int getTypeValue() {
     return type_;
@@ -123,9 +125,10 @@ private static final long serialVersionUID = 0L;
    * Specifies the type of record enclosed with this count.
    * </pre>
    *
-   * <code>.bloombox.schema.search.SearchableCollection type = 1;</code>
+   * <code>.bloombox.search.SearchableCollection type = 1;</code>
    */
   public io.bloombox.schema.search.SearchableCollection getType() {
+    @SuppressWarnings("deprecation")
     io.bloombox.schema.search.SearchableCollection result = io.bloombox.schema.search.SearchableCollection.valueOf(type_);
     return result == null ? io.bloombox.schema.search.SearchableCollection.UNRECOGNIZED : result;
   }
@@ -144,6 +147,7 @@ private static final long serialVersionUID = 0L;
   }
 
   private byte memoizedIsInitialized = -1;
+  @java.lang.Override
   public final boolean isInitialized() {
     byte isInitialized = memoizedIsInitialized;
     if (isInitialized == 1) return true;
@@ -153,6 +157,7 @@ private static final long serialVersionUID = 0L;
     return true;
   }
 
+  @java.lang.Override
   public void writeTo(com.google.protobuf.CodedOutputStream output)
                       throws java.io.IOException {
     if (type_ != io.bloombox.schema.search.SearchableCollection.GLOBAL.getNumber()) {
@@ -164,6 +169,7 @@ private static final long serialVersionUID = 0L;
     unknownFields.writeTo(output);
   }
 
+  @java.lang.Override
   public int getSerializedSize() {
     int size = memoizedSize;
     if (size != -1) return size;
@@ -286,6 +292,7 @@ private static final long serialVersionUID = 0L;
         .parseWithIOException(PARSER, input, extensionRegistry);
   }
 
+  @java.lang.Override
   public Builder newBuilderForType() { return newBuilder(); }
   public static Builder newBuilder() {
     return DEFAULT_INSTANCE.toBuilder();
@@ -293,6 +300,7 @@ private static final long serialVersionUID = 0L;
   public static Builder newBuilder(io.bloombox.schema.search.ResultsetCategoricalCount prototype) {
     return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
   }
+  @java.lang.Override
   public Builder toBuilder() {
     return this == DEFAULT_INSTANCE
         ? new Builder() : new Builder().mergeFrom(this);
@@ -309,20 +317,21 @@ private static final long serialVersionUID = 0L;
    * Specifies the count of items in a particular result category included in a search response.
    * </pre>
    *
-   * Protobuf type {@code bloombox.schema.search.ResultsetCategoricalCount}
+   * Protobuf type {@code bloombox.search.ResultsetCategoricalCount}
    */
   public static final class Builder extends
       com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-      // @@protoc_insertion_point(builder_implements:bloombox.schema.search.ResultsetCategoricalCount)
+      // @@protoc_insertion_point(builder_implements:bloombox.search.ResultsetCategoricalCount)
       io.bloombox.schema.search.ResultsetCategoricalCountOrBuilder {
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return io.bloombox.schema.search.SearchMetadata.internal_static_bloombox_schema_search_ResultsetCategoricalCount_descriptor;
+      return io.bloombox.schema.search.SearchMetadata.internal_static_bloombox_search_ResultsetCategoricalCount_descriptor;
     }
 
+    @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return io.bloombox.schema.search.SearchMetadata.internal_static_bloombox_schema_search_ResultsetCategoricalCount_fieldAccessorTable
+      return io.bloombox.schema.search.SearchMetadata.internal_static_bloombox_search_ResultsetCategoricalCount_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
               io.bloombox.schema.search.ResultsetCategoricalCount.class, io.bloombox.schema.search.ResultsetCategoricalCount.Builder.class);
     }
@@ -342,6 +351,7 @@ private static final long serialVersionUID = 0L;
               .alwaysUseFieldBuilders) {
       }
     }
+    @java.lang.Override
     public Builder clear() {
       super.clear();
       type_ = 0;
@@ -351,15 +361,18 @@ private static final long serialVersionUID = 0L;
       return this;
     }
 
+    @java.lang.Override
     public com.google.protobuf.Descriptors.Descriptor
         getDescriptorForType() {
-      return io.bloombox.schema.search.SearchMetadata.internal_static_bloombox_schema_search_ResultsetCategoricalCount_descriptor;
+      return io.bloombox.schema.search.SearchMetadata.internal_static_bloombox_search_ResultsetCategoricalCount_descriptor;
     }
 
+    @java.lang.Override
     public io.bloombox.schema.search.ResultsetCategoricalCount getDefaultInstanceForType() {
       return io.bloombox.schema.search.ResultsetCategoricalCount.getDefaultInstance();
     }
 
+    @java.lang.Override
     public io.bloombox.schema.search.ResultsetCategoricalCount build() {
       io.bloombox.schema.search.ResultsetCategoricalCount result = buildPartial();
       if (!result.isInitialized()) {
@@ -368,6 +381,7 @@ private static final long serialVersionUID = 0L;
       return result;
     }
 
+    @java.lang.Override
     public io.bloombox.schema.search.ResultsetCategoricalCount buildPartial() {
       io.bloombox.schema.search.ResultsetCategoricalCount result = new io.bloombox.schema.search.ResultsetCategoricalCount(this);
       result.type_ = type_;
@@ -376,32 +390,39 @@ private static final long serialVersionUID = 0L;
       return result;
     }
 
+    @java.lang.Override
     public Builder clone() {
       return (Builder) super.clone();
     }
+    @java.lang.Override
     public Builder setField(
         com.google.protobuf.Descriptors.FieldDescriptor field,
         java.lang.Object value) {
       return (Builder) super.setField(field, value);
     }
+    @java.lang.Override
     public Builder clearField(
         com.google.protobuf.Descriptors.FieldDescriptor field) {
       return (Builder) super.clearField(field);
     }
+    @java.lang.Override
     public Builder clearOneof(
         com.google.protobuf.Descriptors.OneofDescriptor oneof) {
       return (Builder) super.clearOneof(oneof);
     }
+    @java.lang.Override
     public Builder setRepeatedField(
         com.google.protobuf.Descriptors.FieldDescriptor field,
         int index, java.lang.Object value) {
       return (Builder) super.setRepeatedField(field, index, value);
     }
+    @java.lang.Override
     public Builder addRepeatedField(
         com.google.protobuf.Descriptors.FieldDescriptor field,
         java.lang.Object value) {
       return (Builder) super.addRepeatedField(field, value);
     }
+    @java.lang.Override
     public Builder mergeFrom(com.google.protobuf.Message other) {
       if (other instanceof io.bloombox.schema.search.ResultsetCategoricalCount) {
         return mergeFrom((io.bloombox.schema.search.ResultsetCategoricalCount)other);
@@ -424,10 +445,12 @@ private static final long serialVersionUID = 0L;
       return this;
     }
 
+    @java.lang.Override
     public final boolean isInitialized() {
       return true;
     }
 
+    @java.lang.Override
     public Builder mergeFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -452,7 +475,7 @@ private static final long serialVersionUID = 0L;
      * Specifies the type of record enclosed with this count.
      * </pre>
      *
-     * <code>.bloombox.schema.search.SearchableCollection type = 1;</code>
+     * <code>.bloombox.search.SearchableCollection type = 1;</code>
      */
     public int getTypeValue() {
       return type_;
@@ -462,7 +485,7 @@ private static final long serialVersionUID = 0L;
      * Specifies the type of record enclosed with this count.
      * </pre>
      *
-     * <code>.bloombox.schema.search.SearchableCollection type = 1;</code>
+     * <code>.bloombox.search.SearchableCollection type = 1;</code>
      */
     public Builder setTypeValue(int value) {
       type_ = value;
@@ -474,9 +497,10 @@ private static final long serialVersionUID = 0L;
      * Specifies the type of record enclosed with this count.
      * </pre>
      *
-     * <code>.bloombox.schema.search.SearchableCollection type = 1;</code>
+     * <code>.bloombox.search.SearchableCollection type = 1;</code>
      */
     public io.bloombox.schema.search.SearchableCollection getType() {
+      @SuppressWarnings("deprecation")
       io.bloombox.schema.search.SearchableCollection result = io.bloombox.schema.search.SearchableCollection.valueOf(type_);
       return result == null ? io.bloombox.schema.search.SearchableCollection.UNRECOGNIZED : result;
     }
@@ -485,7 +509,7 @@ private static final long serialVersionUID = 0L;
      * Specifies the type of record enclosed with this count.
      * </pre>
      *
-     * <code>.bloombox.schema.search.SearchableCollection type = 1;</code>
+     * <code>.bloombox.search.SearchableCollection type = 1;</code>
      */
     public Builder setType(io.bloombox.schema.search.SearchableCollection value) {
       if (value == null) {
@@ -501,7 +525,7 @@ private static final long serialVersionUID = 0L;
      * Specifies the type of record enclosed with this count.
      * </pre>
      *
-     * <code>.bloombox.schema.search.SearchableCollection type = 1;</code>
+     * <code>.bloombox.search.SearchableCollection type = 1;</code>
      */
     public Builder clearType() {
       
@@ -547,21 +571,23 @@ private static final long serialVersionUID = 0L;
       onChanged();
       return this;
     }
+    @java.lang.Override
     public final Builder setUnknownFields(
         final com.google.protobuf.UnknownFieldSet unknownFields) {
       return super.setUnknownFieldsProto3(unknownFields);
     }
 
+    @java.lang.Override
     public final Builder mergeUnknownFields(
         final com.google.protobuf.UnknownFieldSet unknownFields) {
       return super.mergeUnknownFields(unknownFields);
     }
 
 
-    // @@protoc_insertion_point(builder_scope:bloombox.schema.search.ResultsetCategoricalCount)
+    // @@protoc_insertion_point(builder_scope:bloombox.search.ResultsetCategoricalCount)
   }
 
-  // @@protoc_insertion_point(class_scope:bloombox.schema.search.ResultsetCategoricalCount)
+  // @@protoc_insertion_point(class_scope:bloombox.search.ResultsetCategoricalCount)
   private static final io.bloombox.schema.search.ResultsetCategoricalCount DEFAULT_INSTANCE;
   static {
     DEFAULT_INSTANCE = new io.bloombox.schema.search.ResultsetCategoricalCount();
@@ -573,6 +599,7 @@ private static final long serialVersionUID = 0L;
 
   private static final com.google.protobuf.Parser<ResultsetCategoricalCount>
       PARSER = new com.google.protobuf.AbstractParser<ResultsetCategoricalCount>() {
+    @java.lang.Override
     public ResultsetCategoricalCount parsePartialFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -590,6 +617,7 @@ private static final long serialVersionUID = 0L;
     return PARSER;
   }
 
+  @java.lang.Override
   public io.bloombox.schema.search.ResultsetCategoricalCount getDefaultInstanceForType() {
     return DEFAULT_INSTANCE;
   }

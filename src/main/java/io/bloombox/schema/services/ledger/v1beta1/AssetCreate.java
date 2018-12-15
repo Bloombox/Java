@@ -1,8 +1,8 @@
 /*
- * Copyright 2018, Bloombox, LLC. All rights reserved.
+ * Copyright 2018, Momentum Ideas, Co. All rights reserved.
  *
  * Source and object computer code contained herein is the private intellectual
- * property of Bloombox, a California Limited Liability Corporation. Use of this
+ * property of Momentum Ideas Co., a Delaware Corporation. Use of this
  * code in source form requires permission in writing before use or the
  * assembly, distribution, or publishing of derivative works, for commercial
  * purposes or any other purpose, from a duly authorized officer of Momentum
@@ -26,11 +26,11 @@ package io.bloombox.schema.services.ledger.v1beta1;
  * distributed ledger or blockchain. This facilitates the creation or issuance of assets.
  * </pre>
  *
- * Protobuf type {@code bloombox.schema.services.ledger.v1beta1.AssetCreate}
+ * Protobuf type {@code bloombox.services.ledger.v1beta1.AssetCreate}
  */
 public  final class AssetCreate extends
     com.google.protobuf.GeneratedMessageV3 implements
-    // @@protoc_insertion_point(message_implements:bloombox.schema.services.ledger.v1beta1.AssetCreate)
+    // @@protoc_insertion_point(message_implements:bloombox.services.ledger.v1beta1.AssetCreate)
     AssetCreateOrBuilder {
 private static final long serialVersionUID = 0L;
   // Use AssetCreate.newBuilder() to construct.
@@ -84,18 +84,19 @@ private static final long serialVersionUID = 0L;
   }
   public static final com.google.protobuf.Descriptors.Descriptor
       getDescriptor() {
-    return io.bloombox.schema.services.ledger.v1beta1.LedgerServiceBeta1.internal_static_bloombox_schema_services_ledger_v1beta1_AssetCreate_descriptor;
+    return io.bloombox.schema.services.ledger.v1beta1.LedgerServiceBeta1.internal_static_bloombox_services_ledger_v1beta1_AssetCreate_descriptor;
   }
 
+  @java.lang.Override
   protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internalGetFieldAccessorTable() {
-    return io.bloombox.schema.services.ledger.v1beta1.LedgerServiceBeta1.internal_static_bloombox_schema_services_ledger_v1beta1_AssetCreate_fieldAccessorTable
+    return io.bloombox.schema.services.ledger.v1beta1.LedgerServiceBeta1.internal_static_bloombox_services_ledger_v1beta1_AssetCreate_fieldAccessorTable
         .ensureFieldAccessorsInitialized(
             io.bloombox.schema.services.ledger.v1beta1.AssetCreate.class, io.bloombox.schema.services.ledger.v1beta1.AssetCreate.Builder.class);
   }
 
   public interface RequestOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:bloombox.schema.services.ledger.v1beta1.AssetCreate.Request)
+      // @@protoc_insertion_point(interface_extends:bloombox.services.ledger.v1beta1.AssetCreate.Request)
       com.google.protobuf.MessageOrBuilder {
 
     /**
@@ -103,7 +104,7 @@ private static final long serialVersionUID = 0L;
      * Specifies a payload containing a CREATE transaction.
      * </pre>
      *
-     * <code>.bloombox.schema.ledger.CreateOperation op = 1;</code>
+     * <code>.bloombox.ledger.CreateOperation op = 1;</code>
      */
     boolean hasOp();
     /**
@@ -111,7 +112,7 @@ private static final long serialVersionUID = 0L;
      * Specifies a payload containing a CREATE transaction.
      * </pre>
      *
-     * <code>.bloombox.schema.ledger.CreateOperation op = 1;</code>
+     * <code>.bloombox.ledger.CreateOperation op = 1;</code>
      */
     io.bloombox.schema.ledger.Transactions.CreateOperation getOp();
     /**
@@ -119,7 +120,7 @@ private static final long serialVersionUID = 0L;
      * Specifies a payload containing a CREATE transaction.
      * </pre>
      *
-     * <code>.bloombox.schema.ledger.CreateOperation op = 1;</code>
+     * <code>.bloombox.ledger.CreateOperation op = 1;</code>
      */
     io.bloombox.schema.ledger.Transactions.CreateOperationOrBuilder getOpOrBuilder();
   }
@@ -128,11 +129,11 @@ private static final long serialVersionUID = 0L;
    * Specifies a request to perform a CREATE transaction.
    * </pre>
    *
-   * Protobuf type {@code bloombox.schema.services.ledger.v1beta1.AssetCreate.Request}
+   * Protobuf type {@code bloombox.services.ledger.v1beta1.AssetCreate.Request}
    */
   public  static final class Request extends
       com.google.protobuf.GeneratedMessageV3 implements
-      // @@protoc_insertion_point(message_implements:bloombox.schema.services.ledger.v1beta1.AssetCreate.Request)
+      // @@protoc_insertion_point(message_implements:bloombox.services.ledger.v1beta1.AssetCreate.Request)
       RequestOrBuilder {
   private static final long serialVersionUID = 0L;
     // Use Request.newBuilder() to construct.
@@ -166,13 +167,6 @@ private static final long serialVersionUID = 0L;
             case 0:
               done = true;
               break;
-            default: {
-              if (!parseUnknownFieldProto3(
-                  input, unknownFields, extensionRegistry, tag)) {
-                done = true;
-              }
-              break;
-            }
             case 10: {
               io.bloombox.schema.ledger.Transactions.CreateOperation.Builder subBuilder = null;
               if (op_ != null) {
@@ -184,6 +178,13 @@ private static final long serialVersionUID = 0L;
                 op_ = subBuilder.buildPartial();
               }
 
+              break;
+            }
+            default: {
+              if (!parseUnknownFieldProto3(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
               break;
             }
           }
@@ -200,12 +201,13 @@ private static final long serialVersionUID = 0L;
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return io.bloombox.schema.services.ledger.v1beta1.LedgerServiceBeta1.internal_static_bloombox_schema_services_ledger_v1beta1_AssetCreate_Request_descriptor;
+      return io.bloombox.schema.services.ledger.v1beta1.LedgerServiceBeta1.internal_static_bloombox_services_ledger_v1beta1_AssetCreate_Request_descriptor;
     }
 
+    @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return io.bloombox.schema.services.ledger.v1beta1.LedgerServiceBeta1.internal_static_bloombox_schema_services_ledger_v1beta1_AssetCreate_Request_fieldAccessorTable
+      return io.bloombox.schema.services.ledger.v1beta1.LedgerServiceBeta1.internal_static_bloombox_services_ledger_v1beta1_AssetCreate_Request_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
               io.bloombox.schema.services.ledger.v1beta1.AssetCreate.Request.class, io.bloombox.schema.services.ledger.v1beta1.AssetCreate.Request.Builder.class);
     }
@@ -217,7 +219,7 @@ private static final long serialVersionUID = 0L;
      * Specifies a payload containing a CREATE transaction.
      * </pre>
      *
-     * <code>.bloombox.schema.ledger.CreateOperation op = 1;</code>
+     * <code>.bloombox.ledger.CreateOperation op = 1;</code>
      */
     public boolean hasOp() {
       return op_ != null;
@@ -227,7 +229,7 @@ private static final long serialVersionUID = 0L;
      * Specifies a payload containing a CREATE transaction.
      * </pre>
      *
-     * <code>.bloombox.schema.ledger.CreateOperation op = 1;</code>
+     * <code>.bloombox.ledger.CreateOperation op = 1;</code>
      */
     public io.bloombox.schema.ledger.Transactions.CreateOperation getOp() {
       return op_ == null ? io.bloombox.schema.ledger.Transactions.CreateOperation.getDefaultInstance() : op_;
@@ -237,13 +239,14 @@ private static final long serialVersionUID = 0L;
      * Specifies a payload containing a CREATE transaction.
      * </pre>
      *
-     * <code>.bloombox.schema.ledger.CreateOperation op = 1;</code>
+     * <code>.bloombox.ledger.CreateOperation op = 1;</code>
      */
     public io.bloombox.schema.ledger.Transactions.CreateOperationOrBuilder getOpOrBuilder() {
       return getOp();
     }
 
     private byte memoizedIsInitialized = -1;
+    @java.lang.Override
     public final boolean isInitialized() {
       byte isInitialized = memoizedIsInitialized;
       if (isInitialized == 1) return true;
@@ -253,6 +256,7 @@ private static final long serialVersionUID = 0L;
       return true;
     }
 
+    @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
       if (op_ != null) {
@@ -261,6 +265,7 @@ private static final long serialVersionUID = 0L;
       unknownFields.writeTo(output);
     }
 
+    @java.lang.Override
     public int getSerializedSize() {
       int size = memoizedSize;
       if (size != -1) return size;
@@ -381,6 +386,7 @@ private static final long serialVersionUID = 0L;
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
 
+    @java.lang.Override
     public Builder newBuilderForType() { return newBuilder(); }
     public static Builder newBuilder() {
       return DEFAULT_INSTANCE.toBuilder();
@@ -388,6 +394,7 @@ private static final long serialVersionUID = 0L;
     public static Builder newBuilder(io.bloombox.schema.services.ledger.v1beta1.AssetCreate.Request prototype) {
       return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
     }
+    @java.lang.Override
     public Builder toBuilder() {
       return this == DEFAULT_INSTANCE
           ? new Builder() : new Builder().mergeFrom(this);
@@ -404,20 +411,21 @@ private static final long serialVersionUID = 0L;
      * Specifies a request to perform a CREATE transaction.
      * </pre>
      *
-     * Protobuf type {@code bloombox.schema.services.ledger.v1beta1.AssetCreate.Request}
+     * Protobuf type {@code bloombox.services.ledger.v1beta1.AssetCreate.Request}
      */
     public static final class Builder extends
         com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:bloombox.schema.services.ledger.v1beta1.AssetCreate.Request)
+        // @@protoc_insertion_point(builder_implements:bloombox.services.ledger.v1beta1.AssetCreate.Request)
         io.bloombox.schema.services.ledger.v1beta1.AssetCreate.RequestOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return io.bloombox.schema.services.ledger.v1beta1.LedgerServiceBeta1.internal_static_bloombox_schema_services_ledger_v1beta1_AssetCreate_Request_descriptor;
+        return io.bloombox.schema.services.ledger.v1beta1.LedgerServiceBeta1.internal_static_bloombox_services_ledger_v1beta1_AssetCreate_Request_descriptor;
       }
 
+      @java.lang.Override
       protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return io.bloombox.schema.services.ledger.v1beta1.LedgerServiceBeta1.internal_static_bloombox_schema_services_ledger_v1beta1_AssetCreate_Request_fieldAccessorTable
+        return io.bloombox.schema.services.ledger.v1beta1.LedgerServiceBeta1.internal_static_bloombox_services_ledger_v1beta1_AssetCreate_Request_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
                 io.bloombox.schema.services.ledger.v1beta1.AssetCreate.Request.class, io.bloombox.schema.services.ledger.v1beta1.AssetCreate.Request.Builder.class);
       }
@@ -437,6 +445,7 @@ private static final long serialVersionUID = 0L;
                 .alwaysUseFieldBuilders) {
         }
       }
+      @java.lang.Override
       public Builder clear() {
         super.clear();
         if (opBuilder_ == null) {
@@ -448,15 +457,18 @@ private static final long serialVersionUID = 0L;
         return this;
       }
 
+      @java.lang.Override
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return io.bloombox.schema.services.ledger.v1beta1.LedgerServiceBeta1.internal_static_bloombox_schema_services_ledger_v1beta1_AssetCreate_Request_descriptor;
+        return io.bloombox.schema.services.ledger.v1beta1.LedgerServiceBeta1.internal_static_bloombox_services_ledger_v1beta1_AssetCreate_Request_descriptor;
       }
 
+      @java.lang.Override
       public io.bloombox.schema.services.ledger.v1beta1.AssetCreate.Request getDefaultInstanceForType() {
         return io.bloombox.schema.services.ledger.v1beta1.AssetCreate.Request.getDefaultInstance();
       }
 
+      @java.lang.Override
       public io.bloombox.schema.services.ledger.v1beta1.AssetCreate.Request build() {
         io.bloombox.schema.services.ledger.v1beta1.AssetCreate.Request result = buildPartial();
         if (!result.isInitialized()) {
@@ -465,6 +477,7 @@ private static final long serialVersionUID = 0L;
         return result;
       }
 
+      @java.lang.Override
       public io.bloombox.schema.services.ledger.v1beta1.AssetCreate.Request buildPartial() {
         io.bloombox.schema.services.ledger.v1beta1.AssetCreate.Request result = new io.bloombox.schema.services.ledger.v1beta1.AssetCreate.Request(this);
         if (opBuilder_ == null) {
@@ -476,32 +489,39 @@ private static final long serialVersionUID = 0L;
         return result;
       }
 
+      @java.lang.Override
       public Builder clone() {
         return (Builder) super.clone();
       }
+      @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
         return (Builder) super.setField(field, value);
       }
+      @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
         return (Builder) super.clearField(field);
       }
+      @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
         return (Builder) super.clearOneof(oneof);
       }
+      @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
         return (Builder) super.setRepeatedField(field, index, value);
       }
+      @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
         return (Builder) super.addRepeatedField(field, value);
       }
+      @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
         if (other instanceof io.bloombox.schema.services.ledger.v1beta1.AssetCreate.Request) {
           return mergeFrom((io.bloombox.schema.services.ledger.v1beta1.AssetCreate.Request)other);
@@ -521,10 +541,12 @@ private static final long serialVersionUID = 0L;
         return this;
       }
 
+      @java.lang.Override
       public final boolean isInitialized() {
         return true;
       }
 
+      @java.lang.Override
       public Builder mergeFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -551,7 +573,7 @@ private static final long serialVersionUID = 0L;
        * Specifies a payload containing a CREATE transaction.
        * </pre>
        *
-       * <code>.bloombox.schema.ledger.CreateOperation op = 1;</code>
+       * <code>.bloombox.ledger.CreateOperation op = 1;</code>
        */
       public boolean hasOp() {
         return opBuilder_ != null || op_ != null;
@@ -561,7 +583,7 @@ private static final long serialVersionUID = 0L;
        * Specifies a payload containing a CREATE transaction.
        * </pre>
        *
-       * <code>.bloombox.schema.ledger.CreateOperation op = 1;</code>
+       * <code>.bloombox.ledger.CreateOperation op = 1;</code>
        */
       public io.bloombox.schema.ledger.Transactions.CreateOperation getOp() {
         if (opBuilder_ == null) {
@@ -575,7 +597,7 @@ private static final long serialVersionUID = 0L;
        * Specifies a payload containing a CREATE transaction.
        * </pre>
        *
-       * <code>.bloombox.schema.ledger.CreateOperation op = 1;</code>
+       * <code>.bloombox.ledger.CreateOperation op = 1;</code>
        */
       public Builder setOp(io.bloombox.schema.ledger.Transactions.CreateOperation value) {
         if (opBuilder_ == null) {
@@ -595,7 +617,7 @@ private static final long serialVersionUID = 0L;
        * Specifies a payload containing a CREATE transaction.
        * </pre>
        *
-       * <code>.bloombox.schema.ledger.CreateOperation op = 1;</code>
+       * <code>.bloombox.ledger.CreateOperation op = 1;</code>
        */
       public Builder setOp(
           io.bloombox.schema.ledger.Transactions.CreateOperation.Builder builderForValue) {
@@ -613,7 +635,7 @@ private static final long serialVersionUID = 0L;
        * Specifies a payload containing a CREATE transaction.
        * </pre>
        *
-       * <code>.bloombox.schema.ledger.CreateOperation op = 1;</code>
+       * <code>.bloombox.ledger.CreateOperation op = 1;</code>
        */
       public Builder mergeOp(io.bloombox.schema.ledger.Transactions.CreateOperation value) {
         if (opBuilder_ == null) {
@@ -635,7 +657,7 @@ private static final long serialVersionUID = 0L;
        * Specifies a payload containing a CREATE transaction.
        * </pre>
        *
-       * <code>.bloombox.schema.ledger.CreateOperation op = 1;</code>
+       * <code>.bloombox.ledger.CreateOperation op = 1;</code>
        */
       public Builder clearOp() {
         if (opBuilder_ == null) {
@@ -653,7 +675,7 @@ private static final long serialVersionUID = 0L;
        * Specifies a payload containing a CREATE transaction.
        * </pre>
        *
-       * <code>.bloombox.schema.ledger.CreateOperation op = 1;</code>
+       * <code>.bloombox.ledger.CreateOperation op = 1;</code>
        */
       public io.bloombox.schema.ledger.Transactions.CreateOperation.Builder getOpBuilder() {
         
@@ -665,7 +687,7 @@ private static final long serialVersionUID = 0L;
        * Specifies a payload containing a CREATE transaction.
        * </pre>
        *
-       * <code>.bloombox.schema.ledger.CreateOperation op = 1;</code>
+       * <code>.bloombox.ledger.CreateOperation op = 1;</code>
        */
       public io.bloombox.schema.ledger.Transactions.CreateOperationOrBuilder getOpOrBuilder() {
         if (opBuilder_ != null) {
@@ -680,7 +702,7 @@ private static final long serialVersionUID = 0L;
        * Specifies a payload containing a CREATE transaction.
        * </pre>
        *
-       * <code>.bloombox.schema.ledger.CreateOperation op = 1;</code>
+       * <code>.bloombox.ledger.CreateOperation op = 1;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
           io.bloombox.schema.ledger.Transactions.CreateOperation, io.bloombox.schema.ledger.Transactions.CreateOperation.Builder, io.bloombox.schema.ledger.Transactions.CreateOperationOrBuilder> 
@@ -695,21 +717,23 @@ private static final long serialVersionUID = 0L;
         }
         return opBuilder_;
       }
+      @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
         return super.setUnknownFieldsProto3(unknownFields);
       }
 
+      @java.lang.Override
       public final Builder mergeUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
         return super.mergeUnknownFields(unknownFields);
       }
 
 
-      // @@protoc_insertion_point(builder_scope:bloombox.schema.services.ledger.v1beta1.AssetCreate.Request)
+      // @@protoc_insertion_point(builder_scope:bloombox.services.ledger.v1beta1.AssetCreate.Request)
     }
 
-    // @@protoc_insertion_point(class_scope:bloombox.schema.services.ledger.v1beta1.AssetCreate.Request)
+    // @@protoc_insertion_point(class_scope:bloombox.services.ledger.v1beta1.AssetCreate.Request)
     private static final io.bloombox.schema.services.ledger.v1beta1.AssetCreate.Request DEFAULT_INSTANCE;
     static {
       DEFAULT_INSTANCE = new io.bloombox.schema.services.ledger.v1beta1.AssetCreate.Request();
@@ -721,6 +745,7 @@ private static final long serialVersionUID = 0L;
 
     private static final com.google.protobuf.Parser<Request>
         PARSER = new com.google.protobuf.AbstractParser<Request>() {
+      @java.lang.Override
       public Request parsePartialFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -738,6 +763,7 @@ private static final long serialVersionUID = 0L;
       return PARSER;
     }
 
+    @java.lang.Override
     public io.bloombox.schema.services.ledger.v1beta1.AssetCreate.Request getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
@@ -745,7 +771,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public interface ResponseOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:bloombox.schema.services.ledger.v1beta1.AssetCreate.Response)
+      // @@protoc_insertion_point(interface_extends:bloombox.services.ledger.v1beta1.AssetCreate.Response)
       com.google.protobuf.MessageOrBuilder {
 
     /**
@@ -753,7 +779,7 @@ private static final long serialVersionUID = 0L;
      * Specifies the terminal status of the requested transaction.
      * </pre>
      *
-     * <code>.bloombox.schema.services.ledger.v1beta1.TransactionStatus status = 1;</code>
+     * <code>.bloombox.services.ledger.v1beta1.TransactionStatus status = 1;</code>
      */
     int getStatusValue();
     /**
@@ -761,7 +787,7 @@ private static final long serialVersionUID = 0L;
      * Specifies the terminal status of the requested transaction.
      * </pre>
      *
-     * <code>.bloombox.schema.services.ledger.v1beta1.TransactionStatus status = 1;</code>
+     * <code>.bloombox.services.ledger.v1beta1.TransactionStatus status = 1;</code>
      */
     io.bloombox.schema.services.ledger.v1beta1.TransactionStatus getStatus();
 
@@ -770,7 +796,7 @@ private static final long serialVersionUID = 0L;
      * Transaction object. Provided when the transaction has finalized.
      * </pre>
      *
-     * <code>.bloombox.schema.ledger.Transaction txn = 2;</code>
+     * <code>.bloombox.ledger.Transaction txn = 2;</code>
      */
     boolean hasTxn();
     /**
@@ -778,7 +804,7 @@ private static final long serialVersionUID = 0L;
      * Transaction object. Provided when the transaction has finalized.
      * </pre>
      *
-     * <code>.bloombox.schema.ledger.Transaction txn = 2;</code>
+     * <code>.bloombox.ledger.Transaction txn = 2;</code>
      */
     io.bloombox.schema.ledger.Transactions.Transaction getTxn();
     /**
@@ -786,7 +812,7 @@ private static final long serialVersionUID = 0L;
      * Transaction object. Provided when the transaction has finalized.
      * </pre>
      *
-     * <code>.bloombox.schema.ledger.Transaction txn = 2;</code>
+     * <code>.bloombox.ledger.Transaction txn = 2;</code>
      */
     io.bloombox.schema.ledger.Transactions.TransactionOrBuilder getTxnOrBuilder();
   }
@@ -795,11 +821,11 @@ private static final long serialVersionUID = 0L;
    * Specifies a response to a request to perform a CREATE transaction.
    * </pre>
    *
-   * Protobuf type {@code bloombox.schema.services.ledger.v1beta1.AssetCreate.Response}
+   * Protobuf type {@code bloombox.services.ledger.v1beta1.AssetCreate.Response}
    */
   public  static final class Response extends
       com.google.protobuf.GeneratedMessageV3 implements
-      // @@protoc_insertion_point(message_implements:bloombox.schema.services.ledger.v1beta1.AssetCreate.Response)
+      // @@protoc_insertion_point(message_implements:bloombox.services.ledger.v1beta1.AssetCreate.Response)
       ResponseOrBuilder {
   private static final long serialVersionUID = 0L;
     // Use Response.newBuilder() to construct.
@@ -834,13 +860,6 @@ private static final long serialVersionUID = 0L;
             case 0:
               done = true;
               break;
-            default: {
-              if (!parseUnknownFieldProto3(
-                  input, unknownFields, extensionRegistry, tag)) {
-                done = true;
-              }
-              break;
-            }
             case 8: {
               int rawValue = input.readEnum();
 
@@ -860,6 +879,13 @@ private static final long serialVersionUID = 0L;
 
               break;
             }
+            default: {
+              if (!parseUnknownFieldProto3(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
           }
         }
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
@@ -874,12 +900,13 @@ private static final long serialVersionUID = 0L;
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return io.bloombox.schema.services.ledger.v1beta1.LedgerServiceBeta1.internal_static_bloombox_schema_services_ledger_v1beta1_AssetCreate_Response_descriptor;
+      return io.bloombox.schema.services.ledger.v1beta1.LedgerServiceBeta1.internal_static_bloombox_services_ledger_v1beta1_AssetCreate_Response_descriptor;
     }
 
+    @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return io.bloombox.schema.services.ledger.v1beta1.LedgerServiceBeta1.internal_static_bloombox_schema_services_ledger_v1beta1_AssetCreate_Response_fieldAccessorTable
+      return io.bloombox.schema.services.ledger.v1beta1.LedgerServiceBeta1.internal_static_bloombox_services_ledger_v1beta1_AssetCreate_Response_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
               io.bloombox.schema.services.ledger.v1beta1.AssetCreate.Response.class, io.bloombox.schema.services.ledger.v1beta1.AssetCreate.Response.Builder.class);
     }
@@ -891,7 +918,7 @@ private static final long serialVersionUID = 0L;
      * Specifies the terminal status of the requested transaction.
      * </pre>
      *
-     * <code>.bloombox.schema.services.ledger.v1beta1.TransactionStatus status = 1;</code>
+     * <code>.bloombox.services.ledger.v1beta1.TransactionStatus status = 1;</code>
      */
     public int getStatusValue() {
       return status_;
@@ -901,9 +928,10 @@ private static final long serialVersionUID = 0L;
      * Specifies the terminal status of the requested transaction.
      * </pre>
      *
-     * <code>.bloombox.schema.services.ledger.v1beta1.TransactionStatus status = 1;</code>
+     * <code>.bloombox.services.ledger.v1beta1.TransactionStatus status = 1;</code>
      */
     public io.bloombox.schema.services.ledger.v1beta1.TransactionStatus getStatus() {
+      @SuppressWarnings("deprecation")
       io.bloombox.schema.services.ledger.v1beta1.TransactionStatus result = io.bloombox.schema.services.ledger.v1beta1.TransactionStatus.valueOf(status_);
       return result == null ? io.bloombox.schema.services.ledger.v1beta1.TransactionStatus.UNRECOGNIZED : result;
     }
@@ -915,7 +943,7 @@ private static final long serialVersionUID = 0L;
      * Transaction object. Provided when the transaction has finalized.
      * </pre>
      *
-     * <code>.bloombox.schema.ledger.Transaction txn = 2;</code>
+     * <code>.bloombox.ledger.Transaction txn = 2;</code>
      */
     public boolean hasTxn() {
       return txn_ != null;
@@ -925,7 +953,7 @@ private static final long serialVersionUID = 0L;
      * Transaction object. Provided when the transaction has finalized.
      * </pre>
      *
-     * <code>.bloombox.schema.ledger.Transaction txn = 2;</code>
+     * <code>.bloombox.ledger.Transaction txn = 2;</code>
      */
     public io.bloombox.schema.ledger.Transactions.Transaction getTxn() {
       return txn_ == null ? io.bloombox.schema.ledger.Transactions.Transaction.getDefaultInstance() : txn_;
@@ -935,13 +963,14 @@ private static final long serialVersionUID = 0L;
      * Transaction object. Provided when the transaction has finalized.
      * </pre>
      *
-     * <code>.bloombox.schema.ledger.Transaction txn = 2;</code>
+     * <code>.bloombox.ledger.Transaction txn = 2;</code>
      */
     public io.bloombox.schema.ledger.Transactions.TransactionOrBuilder getTxnOrBuilder() {
       return getTxn();
     }
 
     private byte memoizedIsInitialized = -1;
+    @java.lang.Override
     public final boolean isInitialized() {
       byte isInitialized = memoizedIsInitialized;
       if (isInitialized == 1) return true;
@@ -951,6 +980,7 @@ private static final long serialVersionUID = 0L;
       return true;
     }
 
+    @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
       if (status_ != io.bloombox.schema.services.ledger.v1beta1.TransactionStatus.INFLIGHT.getNumber()) {
@@ -962,6 +992,7 @@ private static final long serialVersionUID = 0L;
       unknownFields.writeTo(output);
     }
 
+    @java.lang.Override
     public int getSerializedSize() {
       int size = memoizedSize;
       if (size != -1) return size;
@@ -1089,6 +1120,7 @@ private static final long serialVersionUID = 0L;
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
 
+    @java.lang.Override
     public Builder newBuilderForType() { return newBuilder(); }
     public static Builder newBuilder() {
       return DEFAULT_INSTANCE.toBuilder();
@@ -1096,6 +1128,7 @@ private static final long serialVersionUID = 0L;
     public static Builder newBuilder(io.bloombox.schema.services.ledger.v1beta1.AssetCreate.Response prototype) {
       return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
     }
+    @java.lang.Override
     public Builder toBuilder() {
       return this == DEFAULT_INSTANCE
           ? new Builder() : new Builder().mergeFrom(this);
@@ -1112,20 +1145,21 @@ private static final long serialVersionUID = 0L;
      * Specifies a response to a request to perform a CREATE transaction.
      * </pre>
      *
-     * Protobuf type {@code bloombox.schema.services.ledger.v1beta1.AssetCreate.Response}
+     * Protobuf type {@code bloombox.services.ledger.v1beta1.AssetCreate.Response}
      */
     public static final class Builder extends
         com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:bloombox.schema.services.ledger.v1beta1.AssetCreate.Response)
+        // @@protoc_insertion_point(builder_implements:bloombox.services.ledger.v1beta1.AssetCreate.Response)
         io.bloombox.schema.services.ledger.v1beta1.AssetCreate.ResponseOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return io.bloombox.schema.services.ledger.v1beta1.LedgerServiceBeta1.internal_static_bloombox_schema_services_ledger_v1beta1_AssetCreate_Response_descriptor;
+        return io.bloombox.schema.services.ledger.v1beta1.LedgerServiceBeta1.internal_static_bloombox_services_ledger_v1beta1_AssetCreate_Response_descriptor;
       }
 
+      @java.lang.Override
       protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return io.bloombox.schema.services.ledger.v1beta1.LedgerServiceBeta1.internal_static_bloombox_schema_services_ledger_v1beta1_AssetCreate_Response_fieldAccessorTable
+        return io.bloombox.schema.services.ledger.v1beta1.LedgerServiceBeta1.internal_static_bloombox_services_ledger_v1beta1_AssetCreate_Response_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
                 io.bloombox.schema.services.ledger.v1beta1.AssetCreate.Response.class, io.bloombox.schema.services.ledger.v1beta1.AssetCreate.Response.Builder.class);
       }
@@ -1145,6 +1179,7 @@ private static final long serialVersionUID = 0L;
                 .alwaysUseFieldBuilders) {
         }
       }
+      @java.lang.Override
       public Builder clear() {
         super.clear();
         status_ = 0;
@@ -1158,15 +1193,18 @@ private static final long serialVersionUID = 0L;
         return this;
       }
 
+      @java.lang.Override
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return io.bloombox.schema.services.ledger.v1beta1.LedgerServiceBeta1.internal_static_bloombox_schema_services_ledger_v1beta1_AssetCreate_Response_descriptor;
+        return io.bloombox.schema.services.ledger.v1beta1.LedgerServiceBeta1.internal_static_bloombox_services_ledger_v1beta1_AssetCreate_Response_descriptor;
       }
 
+      @java.lang.Override
       public io.bloombox.schema.services.ledger.v1beta1.AssetCreate.Response getDefaultInstanceForType() {
         return io.bloombox.schema.services.ledger.v1beta1.AssetCreate.Response.getDefaultInstance();
       }
 
+      @java.lang.Override
       public io.bloombox.schema.services.ledger.v1beta1.AssetCreate.Response build() {
         io.bloombox.schema.services.ledger.v1beta1.AssetCreate.Response result = buildPartial();
         if (!result.isInitialized()) {
@@ -1175,6 +1213,7 @@ private static final long serialVersionUID = 0L;
         return result;
       }
 
+      @java.lang.Override
       public io.bloombox.schema.services.ledger.v1beta1.AssetCreate.Response buildPartial() {
         io.bloombox.schema.services.ledger.v1beta1.AssetCreate.Response result = new io.bloombox.schema.services.ledger.v1beta1.AssetCreate.Response(this);
         result.status_ = status_;
@@ -1187,32 +1226,39 @@ private static final long serialVersionUID = 0L;
         return result;
       }
 
+      @java.lang.Override
       public Builder clone() {
         return (Builder) super.clone();
       }
+      @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
         return (Builder) super.setField(field, value);
       }
+      @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
         return (Builder) super.clearField(field);
       }
+      @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
         return (Builder) super.clearOneof(oneof);
       }
+      @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
         return (Builder) super.setRepeatedField(field, index, value);
       }
+      @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
         return (Builder) super.addRepeatedField(field, value);
       }
+      @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
         if (other instanceof io.bloombox.schema.services.ledger.v1beta1.AssetCreate.Response) {
           return mergeFrom((io.bloombox.schema.services.ledger.v1beta1.AssetCreate.Response)other);
@@ -1235,10 +1281,12 @@ private static final long serialVersionUID = 0L;
         return this;
       }
 
+      @java.lang.Override
       public final boolean isInitialized() {
         return true;
       }
 
+      @java.lang.Override
       public Builder mergeFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -1263,7 +1311,7 @@ private static final long serialVersionUID = 0L;
        * Specifies the terminal status of the requested transaction.
        * </pre>
        *
-       * <code>.bloombox.schema.services.ledger.v1beta1.TransactionStatus status = 1;</code>
+       * <code>.bloombox.services.ledger.v1beta1.TransactionStatus status = 1;</code>
        */
       public int getStatusValue() {
         return status_;
@@ -1273,7 +1321,7 @@ private static final long serialVersionUID = 0L;
        * Specifies the terminal status of the requested transaction.
        * </pre>
        *
-       * <code>.bloombox.schema.services.ledger.v1beta1.TransactionStatus status = 1;</code>
+       * <code>.bloombox.services.ledger.v1beta1.TransactionStatus status = 1;</code>
        */
       public Builder setStatusValue(int value) {
         status_ = value;
@@ -1285,9 +1333,10 @@ private static final long serialVersionUID = 0L;
        * Specifies the terminal status of the requested transaction.
        * </pre>
        *
-       * <code>.bloombox.schema.services.ledger.v1beta1.TransactionStatus status = 1;</code>
+       * <code>.bloombox.services.ledger.v1beta1.TransactionStatus status = 1;</code>
        */
       public io.bloombox.schema.services.ledger.v1beta1.TransactionStatus getStatus() {
+        @SuppressWarnings("deprecation")
         io.bloombox.schema.services.ledger.v1beta1.TransactionStatus result = io.bloombox.schema.services.ledger.v1beta1.TransactionStatus.valueOf(status_);
         return result == null ? io.bloombox.schema.services.ledger.v1beta1.TransactionStatus.UNRECOGNIZED : result;
       }
@@ -1296,7 +1345,7 @@ private static final long serialVersionUID = 0L;
        * Specifies the terminal status of the requested transaction.
        * </pre>
        *
-       * <code>.bloombox.schema.services.ledger.v1beta1.TransactionStatus status = 1;</code>
+       * <code>.bloombox.services.ledger.v1beta1.TransactionStatus status = 1;</code>
        */
       public Builder setStatus(io.bloombox.schema.services.ledger.v1beta1.TransactionStatus value) {
         if (value == null) {
@@ -1312,7 +1361,7 @@ private static final long serialVersionUID = 0L;
        * Specifies the terminal status of the requested transaction.
        * </pre>
        *
-       * <code>.bloombox.schema.services.ledger.v1beta1.TransactionStatus status = 1;</code>
+       * <code>.bloombox.services.ledger.v1beta1.TransactionStatus status = 1;</code>
        */
       public Builder clearStatus() {
         
@@ -1329,7 +1378,7 @@ private static final long serialVersionUID = 0L;
        * Transaction object. Provided when the transaction has finalized.
        * </pre>
        *
-       * <code>.bloombox.schema.ledger.Transaction txn = 2;</code>
+       * <code>.bloombox.ledger.Transaction txn = 2;</code>
        */
       public boolean hasTxn() {
         return txnBuilder_ != null || txn_ != null;
@@ -1339,7 +1388,7 @@ private static final long serialVersionUID = 0L;
        * Transaction object. Provided when the transaction has finalized.
        * </pre>
        *
-       * <code>.bloombox.schema.ledger.Transaction txn = 2;</code>
+       * <code>.bloombox.ledger.Transaction txn = 2;</code>
        */
       public io.bloombox.schema.ledger.Transactions.Transaction getTxn() {
         if (txnBuilder_ == null) {
@@ -1353,7 +1402,7 @@ private static final long serialVersionUID = 0L;
        * Transaction object. Provided when the transaction has finalized.
        * </pre>
        *
-       * <code>.bloombox.schema.ledger.Transaction txn = 2;</code>
+       * <code>.bloombox.ledger.Transaction txn = 2;</code>
        */
       public Builder setTxn(io.bloombox.schema.ledger.Transactions.Transaction value) {
         if (txnBuilder_ == null) {
@@ -1373,7 +1422,7 @@ private static final long serialVersionUID = 0L;
        * Transaction object. Provided when the transaction has finalized.
        * </pre>
        *
-       * <code>.bloombox.schema.ledger.Transaction txn = 2;</code>
+       * <code>.bloombox.ledger.Transaction txn = 2;</code>
        */
       public Builder setTxn(
           io.bloombox.schema.ledger.Transactions.Transaction.Builder builderForValue) {
@@ -1391,7 +1440,7 @@ private static final long serialVersionUID = 0L;
        * Transaction object. Provided when the transaction has finalized.
        * </pre>
        *
-       * <code>.bloombox.schema.ledger.Transaction txn = 2;</code>
+       * <code>.bloombox.ledger.Transaction txn = 2;</code>
        */
       public Builder mergeTxn(io.bloombox.schema.ledger.Transactions.Transaction value) {
         if (txnBuilder_ == null) {
@@ -1413,7 +1462,7 @@ private static final long serialVersionUID = 0L;
        * Transaction object. Provided when the transaction has finalized.
        * </pre>
        *
-       * <code>.bloombox.schema.ledger.Transaction txn = 2;</code>
+       * <code>.bloombox.ledger.Transaction txn = 2;</code>
        */
       public Builder clearTxn() {
         if (txnBuilder_ == null) {
@@ -1431,7 +1480,7 @@ private static final long serialVersionUID = 0L;
        * Transaction object. Provided when the transaction has finalized.
        * </pre>
        *
-       * <code>.bloombox.schema.ledger.Transaction txn = 2;</code>
+       * <code>.bloombox.ledger.Transaction txn = 2;</code>
        */
       public io.bloombox.schema.ledger.Transactions.Transaction.Builder getTxnBuilder() {
         
@@ -1443,7 +1492,7 @@ private static final long serialVersionUID = 0L;
        * Transaction object. Provided when the transaction has finalized.
        * </pre>
        *
-       * <code>.bloombox.schema.ledger.Transaction txn = 2;</code>
+       * <code>.bloombox.ledger.Transaction txn = 2;</code>
        */
       public io.bloombox.schema.ledger.Transactions.TransactionOrBuilder getTxnOrBuilder() {
         if (txnBuilder_ != null) {
@@ -1458,7 +1507,7 @@ private static final long serialVersionUID = 0L;
        * Transaction object. Provided when the transaction has finalized.
        * </pre>
        *
-       * <code>.bloombox.schema.ledger.Transaction txn = 2;</code>
+       * <code>.bloombox.ledger.Transaction txn = 2;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
           io.bloombox.schema.ledger.Transactions.Transaction, io.bloombox.schema.ledger.Transactions.Transaction.Builder, io.bloombox.schema.ledger.Transactions.TransactionOrBuilder> 
@@ -1473,21 +1522,23 @@ private static final long serialVersionUID = 0L;
         }
         return txnBuilder_;
       }
+      @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
         return super.setUnknownFieldsProto3(unknownFields);
       }
 
+      @java.lang.Override
       public final Builder mergeUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
         return super.mergeUnknownFields(unknownFields);
       }
 
 
-      // @@protoc_insertion_point(builder_scope:bloombox.schema.services.ledger.v1beta1.AssetCreate.Response)
+      // @@protoc_insertion_point(builder_scope:bloombox.services.ledger.v1beta1.AssetCreate.Response)
     }
 
-    // @@protoc_insertion_point(class_scope:bloombox.schema.services.ledger.v1beta1.AssetCreate.Response)
+    // @@protoc_insertion_point(class_scope:bloombox.services.ledger.v1beta1.AssetCreate.Response)
     private static final io.bloombox.schema.services.ledger.v1beta1.AssetCreate.Response DEFAULT_INSTANCE;
     static {
       DEFAULT_INSTANCE = new io.bloombox.schema.services.ledger.v1beta1.AssetCreate.Response();
@@ -1499,6 +1550,7 @@ private static final long serialVersionUID = 0L;
 
     private static final com.google.protobuf.Parser<Response>
         PARSER = new com.google.protobuf.AbstractParser<Response>() {
+      @java.lang.Override
       public Response parsePartialFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -1516,6 +1568,7 @@ private static final long serialVersionUID = 0L;
       return PARSER;
     }
 
+    @java.lang.Override
     public io.bloombox.schema.services.ledger.v1beta1.AssetCreate.Response getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
@@ -1523,7 +1576,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public interface OperationOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:bloombox.schema.services.ledger.v1beta1.AssetCreate.Operation)
+      // @@protoc_insertion_point(interface_extends:bloombox.services.ledger.v1beta1.AssetCreate.Operation)
       com.google.protobuf.MessageOrBuilder {
 
     /**
@@ -1531,7 +1584,7 @@ private static final long serialVersionUID = 0L;
      * Specifies a request to perform a CREATE operation.
      * </pre>
      *
-     * <code>.bloombox.schema.services.ledger.v1beta1.AssetCreate.Request request = 1;</code>
+     * <code>.bloombox.services.ledger.v1beta1.AssetCreate.Request request = 1;</code>
      */
     boolean hasRequest();
     /**
@@ -1539,7 +1592,7 @@ private static final long serialVersionUID = 0L;
      * Specifies a request to perform a CREATE operation.
      * </pre>
      *
-     * <code>.bloombox.schema.services.ledger.v1beta1.AssetCreate.Request request = 1;</code>
+     * <code>.bloombox.services.ledger.v1beta1.AssetCreate.Request request = 1;</code>
      */
     io.bloombox.schema.services.ledger.v1beta1.AssetCreate.Request getRequest();
     /**
@@ -1547,7 +1600,7 @@ private static final long serialVersionUID = 0L;
      * Specifies a request to perform a CREATE operation.
      * </pre>
      *
-     * <code>.bloombox.schema.services.ledger.v1beta1.AssetCreate.Request request = 1;</code>
+     * <code>.bloombox.services.ledger.v1beta1.AssetCreate.Request request = 1;</code>
      */
     io.bloombox.schema.services.ledger.v1beta1.AssetCreate.RequestOrBuilder getRequestOrBuilder();
 
@@ -1556,7 +1609,7 @@ private static final long serialVersionUID = 0L;
      * Specifies a response to a request to perform a CREATE operation.
      * </pre>
      *
-     * <code>.bloombox.schema.services.ledger.v1beta1.AssetCreate.Response response = 2;</code>
+     * <code>.bloombox.services.ledger.v1beta1.AssetCreate.Response response = 2;</code>
      */
     boolean hasResponse();
     /**
@@ -1564,7 +1617,7 @@ private static final long serialVersionUID = 0L;
      * Specifies a response to a request to perform a CREATE operation.
      * </pre>
      *
-     * <code>.bloombox.schema.services.ledger.v1beta1.AssetCreate.Response response = 2;</code>
+     * <code>.bloombox.services.ledger.v1beta1.AssetCreate.Response response = 2;</code>
      */
     io.bloombox.schema.services.ledger.v1beta1.AssetCreate.Response getResponse();
     /**
@@ -1572,7 +1625,7 @@ private static final long serialVersionUID = 0L;
      * Specifies a response to a request to perform a CREATE operation.
      * </pre>
      *
-     * <code>.bloombox.schema.services.ledger.v1beta1.AssetCreate.Response response = 2;</code>
+     * <code>.bloombox.services.ledger.v1beta1.AssetCreate.Response response = 2;</code>
      */
     io.bloombox.schema.services.ledger.v1beta1.AssetCreate.ResponseOrBuilder getResponseOrBuilder();
   }
@@ -1581,11 +1634,11 @@ private static final long serialVersionUID = 0L;
    * Specifies a complete request/response operation to perform a CREATE transaction.
    * </pre>
    *
-   * Protobuf type {@code bloombox.schema.services.ledger.v1beta1.AssetCreate.Operation}
+   * Protobuf type {@code bloombox.services.ledger.v1beta1.AssetCreate.Operation}
    */
   public  static final class Operation extends
       com.google.protobuf.GeneratedMessageV3 implements
-      // @@protoc_insertion_point(message_implements:bloombox.schema.services.ledger.v1beta1.AssetCreate.Operation)
+      // @@protoc_insertion_point(message_implements:bloombox.services.ledger.v1beta1.AssetCreate.Operation)
       OperationOrBuilder {
   private static final long serialVersionUID = 0L;
     // Use Operation.newBuilder() to construct.
@@ -1619,13 +1672,6 @@ private static final long serialVersionUID = 0L;
             case 0:
               done = true;
               break;
-            default: {
-              if (!parseUnknownFieldProto3(
-                  input, unknownFields, extensionRegistry, tag)) {
-                done = true;
-              }
-              break;
-            }
             case 10: {
               io.bloombox.schema.services.ledger.v1beta1.AssetCreate.Request.Builder subBuilder = null;
               if (request_ != null) {
@@ -1652,6 +1698,13 @@ private static final long serialVersionUID = 0L;
 
               break;
             }
+            default: {
+              if (!parseUnknownFieldProto3(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
           }
         }
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
@@ -1666,12 +1719,13 @@ private static final long serialVersionUID = 0L;
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return io.bloombox.schema.services.ledger.v1beta1.LedgerServiceBeta1.internal_static_bloombox_schema_services_ledger_v1beta1_AssetCreate_Operation_descriptor;
+      return io.bloombox.schema.services.ledger.v1beta1.LedgerServiceBeta1.internal_static_bloombox_services_ledger_v1beta1_AssetCreate_Operation_descriptor;
     }
 
+    @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return io.bloombox.schema.services.ledger.v1beta1.LedgerServiceBeta1.internal_static_bloombox_schema_services_ledger_v1beta1_AssetCreate_Operation_fieldAccessorTable
+      return io.bloombox.schema.services.ledger.v1beta1.LedgerServiceBeta1.internal_static_bloombox_services_ledger_v1beta1_AssetCreate_Operation_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
               io.bloombox.schema.services.ledger.v1beta1.AssetCreate.Operation.class, io.bloombox.schema.services.ledger.v1beta1.AssetCreate.Operation.Builder.class);
     }
@@ -1683,7 +1737,7 @@ private static final long serialVersionUID = 0L;
      * Specifies a request to perform a CREATE operation.
      * </pre>
      *
-     * <code>.bloombox.schema.services.ledger.v1beta1.AssetCreate.Request request = 1;</code>
+     * <code>.bloombox.services.ledger.v1beta1.AssetCreate.Request request = 1;</code>
      */
     public boolean hasRequest() {
       return request_ != null;
@@ -1693,7 +1747,7 @@ private static final long serialVersionUID = 0L;
      * Specifies a request to perform a CREATE operation.
      * </pre>
      *
-     * <code>.bloombox.schema.services.ledger.v1beta1.AssetCreate.Request request = 1;</code>
+     * <code>.bloombox.services.ledger.v1beta1.AssetCreate.Request request = 1;</code>
      */
     public io.bloombox.schema.services.ledger.v1beta1.AssetCreate.Request getRequest() {
       return request_ == null ? io.bloombox.schema.services.ledger.v1beta1.AssetCreate.Request.getDefaultInstance() : request_;
@@ -1703,7 +1757,7 @@ private static final long serialVersionUID = 0L;
      * Specifies a request to perform a CREATE operation.
      * </pre>
      *
-     * <code>.bloombox.schema.services.ledger.v1beta1.AssetCreate.Request request = 1;</code>
+     * <code>.bloombox.services.ledger.v1beta1.AssetCreate.Request request = 1;</code>
      */
     public io.bloombox.schema.services.ledger.v1beta1.AssetCreate.RequestOrBuilder getRequestOrBuilder() {
       return getRequest();
@@ -1716,7 +1770,7 @@ private static final long serialVersionUID = 0L;
      * Specifies a response to a request to perform a CREATE operation.
      * </pre>
      *
-     * <code>.bloombox.schema.services.ledger.v1beta1.AssetCreate.Response response = 2;</code>
+     * <code>.bloombox.services.ledger.v1beta1.AssetCreate.Response response = 2;</code>
      */
     public boolean hasResponse() {
       return response_ != null;
@@ -1726,7 +1780,7 @@ private static final long serialVersionUID = 0L;
      * Specifies a response to a request to perform a CREATE operation.
      * </pre>
      *
-     * <code>.bloombox.schema.services.ledger.v1beta1.AssetCreate.Response response = 2;</code>
+     * <code>.bloombox.services.ledger.v1beta1.AssetCreate.Response response = 2;</code>
      */
     public io.bloombox.schema.services.ledger.v1beta1.AssetCreate.Response getResponse() {
       return response_ == null ? io.bloombox.schema.services.ledger.v1beta1.AssetCreate.Response.getDefaultInstance() : response_;
@@ -1736,13 +1790,14 @@ private static final long serialVersionUID = 0L;
      * Specifies a response to a request to perform a CREATE operation.
      * </pre>
      *
-     * <code>.bloombox.schema.services.ledger.v1beta1.AssetCreate.Response response = 2;</code>
+     * <code>.bloombox.services.ledger.v1beta1.AssetCreate.Response response = 2;</code>
      */
     public io.bloombox.schema.services.ledger.v1beta1.AssetCreate.ResponseOrBuilder getResponseOrBuilder() {
       return getResponse();
     }
 
     private byte memoizedIsInitialized = -1;
+    @java.lang.Override
     public final boolean isInitialized() {
       byte isInitialized = memoizedIsInitialized;
       if (isInitialized == 1) return true;
@@ -1752,6 +1807,7 @@ private static final long serialVersionUID = 0L;
       return true;
     }
 
+    @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
       if (request_ != null) {
@@ -1763,6 +1819,7 @@ private static final long serialVersionUID = 0L;
       unknownFields.writeTo(output);
     }
 
+    @java.lang.Override
     public int getSerializedSize() {
       int size = memoizedSize;
       if (size != -1) return size;
@@ -1896,6 +1953,7 @@ private static final long serialVersionUID = 0L;
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
 
+    @java.lang.Override
     public Builder newBuilderForType() { return newBuilder(); }
     public static Builder newBuilder() {
       return DEFAULT_INSTANCE.toBuilder();
@@ -1903,6 +1961,7 @@ private static final long serialVersionUID = 0L;
     public static Builder newBuilder(io.bloombox.schema.services.ledger.v1beta1.AssetCreate.Operation prototype) {
       return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
     }
+    @java.lang.Override
     public Builder toBuilder() {
       return this == DEFAULT_INSTANCE
           ? new Builder() : new Builder().mergeFrom(this);
@@ -1919,20 +1978,21 @@ private static final long serialVersionUID = 0L;
      * Specifies a complete request/response operation to perform a CREATE transaction.
      * </pre>
      *
-     * Protobuf type {@code bloombox.schema.services.ledger.v1beta1.AssetCreate.Operation}
+     * Protobuf type {@code bloombox.services.ledger.v1beta1.AssetCreate.Operation}
      */
     public static final class Builder extends
         com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:bloombox.schema.services.ledger.v1beta1.AssetCreate.Operation)
+        // @@protoc_insertion_point(builder_implements:bloombox.services.ledger.v1beta1.AssetCreate.Operation)
         io.bloombox.schema.services.ledger.v1beta1.AssetCreate.OperationOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return io.bloombox.schema.services.ledger.v1beta1.LedgerServiceBeta1.internal_static_bloombox_schema_services_ledger_v1beta1_AssetCreate_Operation_descriptor;
+        return io.bloombox.schema.services.ledger.v1beta1.LedgerServiceBeta1.internal_static_bloombox_services_ledger_v1beta1_AssetCreate_Operation_descriptor;
       }
 
+      @java.lang.Override
       protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return io.bloombox.schema.services.ledger.v1beta1.LedgerServiceBeta1.internal_static_bloombox_schema_services_ledger_v1beta1_AssetCreate_Operation_fieldAccessorTable
+        return io.bloombox.schema.services.ledger.v1beta1.LedgerServiceBeta1.internal_static_bloombox_services_ledger_v1beta1_AssetCreate_Operation_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
                 io.bloombox.schema.services.ledger.v1beta1.AssetCreate.Operation.class, io.bloombox.schema.services.ledger.v1beta1.AssetCreate.Operation.Builder.class);
       }
@@ -1952,6 +2012,7 @@ private static final long serialVersionUID = 0L;
                 .alwaysUseFieldBuilders) {
         }
       }
+      @java.lang.Override
       public Builder clear() {
         super.clear();
         if (requestBuilder_ == null) {
@@ -1969,15 +2030,18 @@ private static final long serialVersionUID = 0L;
         return this;
       }
 
+      @java.lang.Override
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return io.bloombox.schema.services.ledger.v1beta1.LedgerServiceBeta1.internal_static_bloombox_schema_services_ledger_v1beta1_AssetCreate_Operation_descriptor;
+        return io.bloombox.schema.services.ledger.v1beta1.LedgerServiceBeta1.internal_static_bloombox_services_ledger_v1beta1_AssetCreate_Operation_descriptor;
       }
 
+      @java.lang.Override
       public io.bloombox.schema.services.ledger.v1beta1.AssetCreate.Operation getDefaultInstanceForType() {
         return io.bloombox.schema.services.ledger.v1beta1.AssetCreate.Operation.getDefaultInstance();
       }
 
+      @java.lang.Override
       public io.bloombox.schema.services.ledger.v1beta1.AssetCreate.Operation build() {
         io.bloombox.schema.services.ledger.v1beta1.AssetCreate.Operation result = buildPartial();
         if (!result.isInitialized()) {
@@ -1986,6 +2050,7 @@ private static final long serialVersionUID = 0L;
         return result;
       }
 
+      @java.lang.Override
       public io.bloombox.schema.services.ledger.v1beta1.AssetCreate.Operation buildPartial() {
         io.bloombox.schema.services.ledger.v1beta1.AssetCreate.Operation result = new io.bloombox.schema.services.ledger.v1beta1.AssetCreate.Operation(this);
         if (requestBuilder_ == null) {
@@ -2002,32 +2067,39 @@ private static final long serialVersionUID = 0L;
         return result;
       }
 
+      @java.lang.Override
       public Builder clone() {
         return (Builder) super.clone();
       }
+      @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
         return (Builder) super.setField(field, value);
       }
+      @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
         return (Builder) super.clearField(field);
       }
+      @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
         return (Builder) super.clearOneof(oneof);
       }
+      @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
         return (Builder) super.setRepeatedField(field, index, value);
       }
+      @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
         return (Builder) super.addRepeatedField(field, value);
       }
+      @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
         if (other instanceof io.bloombox.schema.services.ledger.v1beta1.AssetCreate.Operation) {
           return mergeFrom((io.bloombox.schema.services.ledger.v1beta1.AssetCreate.Operation)other);
@@ -2050,10 +2122,12 @@ private static final long serialVersionUID = 0L;
         return this;
       }
 
+      @java.lang.Override
       public final boolean isInitialized() {
         return true;
       }
 
+      @java.lang.Override
       public Builder mergeFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -2080,7 +2154,7 @@ private static final long serialVersionUID = 0L;
        * Specifies a request to perform a CREATE operation.
        * </pre>
        *
-       * <code>.bloombox.schema.services.ledger.v1beta1.AssetCreate.Request request = 1;</code>
+       * <code>.bloombox.services.ledger.v1beta1.AssetCreate.Request request = 1;</code>
        */
       public boolean hasRequest() {
         return requestBuilder_ != null || request_ != null;
@@ -2090,7 +2164,7 @@ private static final long serialVersionUID = 0L;
        * Specifies a request to perform a CREATE operation.
        * </pre>
        *
-       * <code>.bloombox.schema.services.ledger.v1beta1.AssetCreate.Request request = 1;</code>
+       * <code>.bloombox.services.ledger.v1beta1.AssetCreate.Request request = 1;</code>
        */
       public io.bloombox.schema.services.ledger.v1beta1.AssetCreate.Request getRequest() {
         if (requestBuilder_ == null) {
@@ -2104,7 +2178,7 @@ private static final long serialVersionUID = 0L;
        * Specifies a request to perform a CREATE operation.
        * </pre>
        *
-       * <code>.bloombox.schema.services.ledger.v1beta1.AssetCreate.Request request = 1;</code>
+       * <code>.bloombox.services.ledger.v1beta1.AssetCreate.Request request = 1;</code>
        */
       public Builder setRequest(io.bloombox.schema.services.ledger.v1beta1.AssetCreate.Request value) {
         if (requestBuilder_ == null) {
@@ -2124,7 +2198,7 @@ private static final long serialVersionUID = 0L;
        * Specifies a request to perform a CREATE operation.
        * </pre>
        *
-       * <code>.bloombox.schema.services.ledger.v1beta1.AssetCreate.Request request = 1;</code>
+       * <code>.bloombox.services.ledger.v1beta1.AssetCreate.Request request = 1;</code>
        */
       public Builder setRequest(
           io.bloombox.schema.services.ledger.v1beta1.AssetCreate.Request.Builder builderForValue) {
@@ -2142,7 +2216,7 @@ private static final long serialVersionUID = 0L;
        * Specifies a request to perform a CREATE operation.
        * </pre>
        *
-       * <code>.bloombox.schema.services.ledger.v1beta1.AssetCreate.Request request = 1;</code>
+       * <code>.bloombox.services.ledger.v1beta1.AssetCreate.Request request = 1;</code>
        */
       public Builder mergeRequest(io.bloombox.schema.services.ledger.v1beta1.AssetCreate.Request value) {
         if (requestBuilder_ == null) {
@@ -2164,7 +2238,7 @@ private static final long serialVersionUID = 0L;
        * Specifies a request to perform a CREATE operation.
        * </pre>
        *
-       * <code>.bloombox.schema.services.ledger.v1beta1.AssetCreate.Request request = 1;</code>
+       * <code>.bloombox.services.ledger.v1beta1.AssetCreate.Request request = 1;</code>
        */
       public Builder clearRequest() {
         if (requestBuilder_ == null) {
@@ -2182,7 +2256,7 @@ private static final long serialVersionUID = 0L;
        * Specifies a request to perform a CREATE operation.
        * </pre>
        *
-       * <code>.bloombox.schema.services.ledger.v1beta1.AssetCreate.Request request = 1;</code>
+       * <code>.bloombox.services.ledger.v1beta1.AssetCreate.Request request = 1;</code>
        */
       public io.bloombox.schema.services.ledger.v1beta1.AssetCreate.Request.Builder getRequestBuilder() {
         
@@ -2194,7 +2268,7 @@ private static final long serialVersionUID = 0L;
        * Specifies a request to perform a CREATE operation.
        * </pre>
        *
-       * <code>.bloombox.schema.services.ledger.v1beta1.AssetCreate.Request request = 1;</code>
+       * <code>.bloombox.services.ledger.v1beta1.AssetCreate.Request request = 1;</code>
        */
       public io.bloombox.schema.services.ledger.v1beta1.AssetCreate.RequestOrBuilder getRequestOrBuilder() {
         if (requestBuilder_ != null) {
@@ -2209,7 +2283,7 @@ private static final long serialVersionUID = 0L;
        * Specifies a request to perform a CREATE operation.
        * </pre>
        *
-       * <code>.bloombox.schema.services.ledger.v1beta1.AssetCreate.Request request = 1;</code>
+       * <code>.bloombox.services.ledger.v1beta1.AssetCreate.Request request = 1;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
           io.bloombox.schema.services.ledger.v1beta1.AssetCreate.Request, io.bloombox.schema.services.ledger.v1beta1.AssetCreate.Request.Builder, io.bloombox.schema.services.ledger.v1beta1.AssetCreate.RequestOrBuilder> 
@@ -2233,7 +2307,7 @@ private static final long serialVersionUID = 0L;
        * Specifies a response to a request to perform a CREATE operation.
        * </pre>
        *
-       * <code>.bloombox.schema.services.ledger.v1beta1.AssetCreate.Response response = 2;</code>
+       * <code>.bloombox.services.ledger.v1beta1.AssetCreate.Response response = 2;</code>
        */
       public boolean hasResponse() {
         return responseBuilder_ != null || response_ != null;
@@ -2243,7 +2317,7 @@ private static final long serialVersionUID = 0L;
        * Specifies a response to a request to perform a CREATE operation.
        * </pre>
        *
-       * <code>.bloombox.schema.services.ledger.v1beta1.AssetCreate.Response response = 2;</code>
+       * <code>.bloombox.services.ledger.v1beta1.AssetCreate.Response response = 2;</code>
        */
       public io.bloombox.schema.services.ledger.v1beta1.AssetCreate.Response getResponse() {
         if (responseBuilder_ == null) {
@@ -2257,7 +2331,7 @@ private static final long serialVersionUID = 0L;
        * Specifies a response to a request to perform a CREATE operation.
        * </pre>
        *
-       * <code>.bloombox.schema.services.ledger.v1beta1.AssetCreate.Response response = 2;</code>
+       * <code>.bloombox.services.ledger.v1beta1.AssetCreate.Response response = 2;</code>
        */
       public Builder setResponse(io.bloombox.schema.services.ledger.v1beta1.AssetCreate.Response value) {
         if (responseBuilder_ == null) {
@@ -2277,7 +2351,7 @@ private static final long serialVersionUID = 0L;
        * Specifies a response to a request to perform a CREATE operation.
        * </pre>
        *
-       * <code>.bloombox.schema.services.ledger.v1beta1.AssetCreate.Response response = 2;</code>
+       * <code>.bloombox.services.ledger.v1beta1.AssetCreate.Response response = 2;</code>
        */
       public Builder setResponse(
           io.bloombox.schema.services.ledger.v1beta1.AssetCreate.Response.Builder builderForValue) {
@@ -2295,7 +2369,7 @@ private static final long serialVersionUID = 0L;
        * Specifies a response to a request to perform a CREATE operation.
        * </pre>
        *
-       * <code>.bloombox.schema.services.ledger.v1beta1.AssetCreate.Response response = 2;</code>
+       * <code>.bloombox.services.ledger.v1beta1.AssetCreate.Response response = 2;</code>
        */
       public Builder mergeResponse(io.bloombox.schema.services.ledger.v1beta1.AssetCreate.Response value) {
         if (responseBuilder_ == null) {
@@ -2317,7 +2391,7 @@ private static final long serialVersionUID = 0L;
        * Specifies a response to a request to perform a CREATE operation.
        * </pre>
        *
-       * <code>.bloombox.schema.services.ledger.v1beta1.AssetCreate.Response response = 2;</code>
+       * <code>.bloombox.services.ledger.v1beta1.AssetCreate.Response response = 2;</code>
        */
       public Builder clearResponse() {
         if (responseBuilder_ == null) {
@@ -2335,7 +2409,7 @@ private static final long serialVersionUID = 0L;
        * Specifies a response to a request to perform a CREATE operation.
        * </pre>
        *
-       * <code>.bloombox.schema.services.ledger.v1beta1.AssetCreate.Response response = 2;</code>
+       * <code>.bloombox.services.ledger.v1beta1.AssetCreate.Response response = 2;</code>
        */
       public io.bloombox.schema.services.ledger.v1beta1.AssetCreate.Response.Builder getResponseBuilder() {
         
@@ -2347,7 +2421,7 @@ private static final long serialVersionUID = 0L;
        * Specifies a response to a request to perform a CREATE operation.
        * </pre>
        *
-       * <code>.bloombox.schema.services.ledger.v1beta1.AssetCreate.Response response = 2;</code>
+       * <code>.bloombox.services.ledger.v1beta1.AssetCreate.Response response = 2;</code>
        */
       public io.bloombox.schema.services.ledger.v1beta1.AssetCreate.ResponseOrBuilder getResponseOrBuilder() {
         if (responseBuilder_ != null) {
@@ -2362,7 +2436,7 @@ private static final long serialVersionUID = 0L;
        * Specifies a response to a request to perform a CREATE operation.
        * </pre>
        *
-       * <code>.bloombox.schema.services.ledger.v1beta1.AssetCreate.Response response = 2;</code>
+       * <code>.bloombox.services.ledger.v1beta1.AssetCreate.Response response = 2;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
           io.bloombox.schema.services.ledger.v1beta1.AssetCreate.Response, io.bloombox.schema.services.ledger.v1beta1.AssetCreate.Response.Builder, io.bloombox.schema.services.ledger.v1beta1.AssetCreate.ResponseOrBuilder> 
@@ -2377,21 +2451,23 @@ private static final long serialVersionUID = 0L;
         }
         return responseBuilder_;
       }
+      @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
         return super.setUnknownFieldsProto3(unknownFields);
       }
 
+      @java.lang.Override
       public final Builder mergeUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
         return super.mergeUnknownFields(unknownFields);
       }
 
 
-      // @@protoc_insertion_point(builder_scope:bloombox.schema.services.ledger.v1beta1.AssetCreate.Operation)
+      // @@protoc_insertion_point(builder_scope:bloombox.services.ledger.v1beta1.AssetCreate.Operation)
     }
 
-    // @@protoc_insertion_point(class_scope:bloombox.schema.services.ledger.v1beta1.AssetCreate.Operation)
+    // @@protoc_insertion_point(class_scope:bloombox.services.ledger.v1beta1.AssetCreate.Operation)
     private static final io.bloombox.schema.services.ledger.v1beta1.AssetCreate.Operation DEFAULT_INSTANCE;
     static {
       DEFAULT_INSTANCE = new io.bloombox.schema.services.ledger.v1beta1.AssetCreate.Operation();
@@ -2403,6 +2479,7 @@ private static final long serialVersionUID = 0L;
 
     private static final com.google.protobuf.Parser<Operation>
         PARSER = new com.google.protobuf.AbstractParser<Operation>() {
+      @java.lang.Override
       public Operation parsePartialFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -2420,6 +2497,7 @@ private static final long serialVersionUID = 0L;
       return PARSER;
     }
 
+    @java.lang.Override
     public io.bloombox.schema.services.ledger.v1beta1.AssetCreate.Operation getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
@@ -2427,6 +2505,7 @@ private static final long serialVersionUID = 0L;
   }
 
   private byte memoizedIsInitialized = -1;
+  @java.lang.Override
   public final boolean isInitialized() {
     byte isInitialized = memoizedIsInitialized;
     if (isInitialized == 1) return true;
@@ -2436,11 +2515,13 @@ private static final long serialVersionUID = 0L;
     return true;
   }
 
+  @java.lang.Override
   public void writeTo(com.google.protobuf.CodedOutputStream output)
                       throws java.io.IOException {
     unknownFields.writeTo(output);
   }
 
+  @java.lang.Override
   public int getSerializedSize() {
     int size = memoizedSize;
     if (size != -1) return size;
@@ -2548,6 +2629,7 @@ private static final long serialVersionUID = 0L;
         .parseWithIOException(PARSER, input, extensionRegistry);
   }
 
+  @java.lang.Override
   public Builder newBuilderForType() { return newBuilder(); }
   public static Builder newBuilder() {
     return DEFAULT_INSTANCE.toBuilder();
@@ -2555,6 +2637,7 @@ private static final long serialVersionUID = 0L;
   public static Builder newBuilder(io.bloombox.schema.services.ledger.v1beta1.AssetCreate prototype) {
     return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
   }
+  @java.lang.Override
   public Builder toBuilder() {
     return this == DEFAULT_INSTANCE
         ? new Builder() : new Builder().mergeFrom(this);
@@ -2572,20 +2655,21 @@ private static final long serialVersionUID = 0L;
    * distributed ledger or blockchain. This facilitates the creation or issuance of assets.
    * </pre>
    *
-   * Protobuf type {@code bloombox.schema.services.ledger.v1beta1.AssetCreate}
+   * Protobuf type {@code bloombox.services.ledger.v1beta1.AssetCreate}
    */
   public static final class Builder extends
       com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-      // @@protoc_insertion_point(builder_implements:bloombox.schema.services.ledger.v1beta1.AssetCreate)
+      // @@protoc_insertion_point(builder_implements:bloombox.services.ledger.v1beta1.AssetCreate)
       io.bloombox.schema.services.ledger.v1beta1.AssetCreateOrBuilder {
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return io.bloombox.schema.services.ledger.v1beta1.LedgerServiceBeta1.internal_static_bloombox_schema_services_ledger_v1beta1_AssetCreate_descriptor;
+      return io.bloombox.schema.services.ledger.v1beta1.LedgerServiceBeta1.internal_static_bloombox_services_ledger_v1beta1_AssetCreate_descriptor;
     }
 
+    @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return io.bloombox.schema.services.ledger.v1beta1.LedgerServiceBeta1.internal_static_bloombox_schema_services_ledger_v1beta1_AssetCreate_fieldAccessorTable
+      return io.bloombox.schema.services.ledger.v1beta1.LedgerServiceBeta1.internal_static_bloombox_services_ledger_v1beta1_AssetCreate_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
               io.bloombox.schema.services.ledger.v1beta1.AssetCreate.class, io.bloombox.schema.services.ledger.v1beta1.AssetCreate.Builder.class);
     }
@@ -2605,20 +2689,24 @@ private static final long serialVersionUID = 0L;
               .alwaysUseFieldBuilders) {
       }
     }
+    @java.lang.Override
     public Builder clear() {
       super.clear();
       return this;
     }
 
+    @java.lang.Override
     public com.google.protobuf.Descriptors.Descriptor
         getDescriptorForType() {
-      return io.bloombox.schema.services.ledger.v1beta1.LedgerServiceBeta1.internal_static_bloombox_schema_services_ledger_v1beta1_AssetCreate_descriptor;
+      return io.bloombox.schema.services.ledger.v1beta1.LedgerServiceBeta1.internal_static_bloombox_services_ledger_v1beta1_AssetCreate_descriptor;
     }
 
+    @java.lang.Override
     public io.bloombox.schema.services.ledger.v1beta1.AssetCreate getDefaultInstanceForType() {
       return io.bloombox.schema.services.ledger.v1beta1.AssetCreate.getDefaultInstance();
     }
 
+    @java.lang.Override
     public io.bloombox.schema.services.ledger.v1beta1.AssetCreate build() {
       io.bloombox.schema.services.ledger.v1beta1.AssetCreate result = buildPartial();
       if (!result.isInitialized()) {
@@ -2627,38 +2715,46 @@ private static final long serialVersionUID = 0L;
       return result;
     }
 
+    @java.lang.Override
     public io.bloombox.schema.services.ledger.v1beta1.AssetCreate buildPartial() {
       io.bloombox.schema.services.ledger.v1beta1.AssetCreate result = new io.bloombox.schema.services.ledger.v1beta1.AssetCreate(this);
       onBuilt();
       return result;
     }
 
+    @java.lang.Override
     public Builder clone() {
       return (Builder) super.clone();
     }
+    @java.lang.Override
     public Builder setField(
         com.google.protobuf.Descriptors.FieldDescriptor field,
         java.lang.Object value) {
       return (Builder) super.setField(field, value);
     }
+    @java.lang.Override
     public Builder clearField(
         com.google.protobuf.Descriptors.FieldDescriptor field) {
       return (Builder) super.clearField(field);
     }
+    @java.lang.Override
     public Builder clearOneof(
         com.google.protobuf.Descriptors.OneofDescriptor oneof) {
       return (Builder) super.clearOneof(oneof);
     }
+    @java.lang.Override
     public Builder setRepeatedField(
         com.google.protobuf.Descriptors.FieldDescriptor field,
         int index, java.lang.Object value) {
       return (Builder) super.setRepeatedField(field, index, value);
     }
+    @java.lang.Override
     public Builder addRepeatedField(
         com.google.protobuf.Descriptors.FieldDescriptor field,
         java.lang.Object value) {
       return (Builder) super.addRepeatedField(field, value);
     }
+    @java.lang.Override
     public Builder mergeFrom(com.google.protobuf.Message other) {
       if (other instanceof io.bloombox.schema.services.ledger.v1beta1.AssetCreate) {
         return mergeFrom((io.bloombox.schema.services.ledger.v1beta1.AssetCreate)other);
@@ -2675,10 +2771,12 @@ private static final long serialVersionUID = 0L;
       return this;
     }
 
+    @java.lang.Override
     public final boolean isInitialized() {
       return true;
     }
 
+    @java.lang.Override
     public Builder mergeFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -2696,21 +2794,23 @@ private static final long serialVersionUID = 0L;
       }
       return this;
     }
+    @java.lang.Override
     public final Builder setUnknownFields(
         final com.google.protobuf.UnknownFieldSet unknownFields) {
       return super.setUnknownFieldsProto3(unknownFields);
     }
 
+    @java.lang.Override
     public final Builder mergeUnknownFields(
         final com.google.protobuf.UnknownFieldSet unknownFields) {
       return super.mergeUnknownFields(unknownFields);
     }
 
 
-    // @@protoc_insertion_point(builder_scope:bloombox.schema.services.ledger.v1beta1.AssetCreate)
+    // @@protoc_insertion_point(builder_scope:bloombox.services.ledger.v1beta1.AssetCreate)
   }
 
-  // @@protoc_insertion_point(class_scope:bloombox.schema.services.ledger.v1beta1.AssetCreate)
+  // @@protoc_insertion_point(class_scope:bloombox.services.ledger.v1beta1.AssetCreate)
   private static final io.bloombox.schema.services.ledger.v1beta1.AssetCreate DEFAULT_INSTANCE;
   static {
     DEFAULT_INSTANCE = new io.bloombox.schema.services.ledger.v1beta1.AssetCreate();
@@ -2722,6 +2822,7 @@ private static final long serialVersionUID = 0L;
 
   private static final com.google.protobuf.Parser<AssetCreate>
       PARSER = new com.google.protobuf.AbstractParser<AssetCreate>() {
+    @java.lang.Override
     public AssetCreate parsePartialFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -2739,6 +2840,7 @@ private static final long serialVersionUID = 0L;
     return PARSER;
   }
 
+  @java.lang.Override
   public io.bloombox.schema.services.ledger.v1beta1.AssetCreate getDefaultInstanceForType() {
     return DEFAULT_INSTANCE;
   }

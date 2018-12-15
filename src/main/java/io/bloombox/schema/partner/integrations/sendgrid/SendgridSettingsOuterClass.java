@@ -1,11 +1,12 @@
 /*
- * Copyright 2018, Bloombox, LLC.
+ * Copyright 2018, Momentum Ideas, Co. All rights reserved.
  *
- * Licensed under the Apache License, Version 2.0 (the "License");
- * you may not use this file except in compliance with the License.
- * You may obtain a copy of the License at
- *
- *     http://www.apache.org/licenses/LICENSE-2.0
+ * Source and object computer code contained herein is the private intellectual
+ * property of Momentum Ideas Co., a Delaware Corporation. Use of this
+ * code in source form requires permission in writing before use or the
+ * assembly, distribution, or publishing of derivative works, for commercial
+ * purposes or any other purpose, from a duly authorized officer of Momentum
+ * Ideas Co.
  *
  * Unless required by applicable law or agreed to in writing, software
  * distributed under the License is distributed on an "AS IS" BASIS,
@@ -31,7 +32,7 @@ public final class SendgridSettingsOuterClass {
         (com.google.protobuf.ExtensionRegistryLite) registry);
   }
   public interface SendgridIntegrationFeaturesOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:bloombox.schema.partner.integrations.sendgrid.SendgridIntegrationFeatures)
+      // @@protoc_insertion_point(interface_extends:bloombox.partner.integrations.sendgrid.SendgridIntegrationFeatures)
       com.google.protobuf.MessageOrBuilder {
   }
   /**
@@ -39,11 +40,11 @@ public final class SendgridSettingsOuterClass {
    * Specifies Sendgrid features that may be enabled or disabled.
    * </pre>
    *
-   * Protobuf type {@code bloombox.schema.partner.integrations.sendgrid.SendgridIntegrationFeatures}
+   * Protobuf type {@code bloombox.partner.integrations.sendgrid.SendgridIntegrationFeatures}
    */
   public  static final class SendgridIntegrationFeatures extends
       com.google.protobuf.GeneratedMessageV3 implements
-      // @@protoc_insertion_point(message_implements:bloombox.schema.partner.integrations.sendgrid.SendgridIntegrationFeatures)
+      // @@protoc_insertion_point(message_implements:bloombox.partner.integrations.sendgrid.SendgridIntegrationFeatures)
       SendgridIntegrationFeaturesOrBuilder {
   private static final long serialVersionUID = 0L;
     // Use SendgridIntegrationFeatures.newBuilder() to construct.
@@ -97,17 +98,19 @@ public final class SendgridSettingsOuterClass {
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return io.bloombox.schema.partner.integrations.sendgrid.SendgridSettingsOuterClass.internal_static_bloombox_schema_partner_integrations_sendgrid_SendgridIntegrationFeatures_descriptor;
+      return io.bloombox.schema.partner.integrations.sendgrid.SendgridSettingsOuterClass.internal_static_bloombox_partner_integrations_sendgrid_SendgridIntegrationFeatures_descriptor;
     }
 
+    @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return io.bloombox.schema.partner.integrations.sendgrid.SendgridSettingsOuterClass.internal_static_bloombox_schema_partner_integrations_sendgrid_SendgridIntegrationFeatures_fieldAccessorTable
+      return io.bloombox.schema.partner.integrations.sendgrid.SendgridSettingsOuterClass.internal_static_bloombox_partner_integrations_sendgrid_SendgridIntegrationFeatures_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
               io.bloombox.schema.partner.integrations.sendgrid.SendgridSettingsOuterClass.SendgridIntegrationFeatures.class, io.bloombox.schema.partner.integrations.sendgrid.SendgridSettingsOuterClass.SendgridIntegrationFeatures.Builder.class);
     }
 
     private byte memoizedIsInitialized = -1;
+    @java.lang.Override
     public final boolean isInitialized() {
       byte isInitialized = memoizedIsInitialized;
       if (isInitialized == 1) return true;
@@ -117,11 +120,13 @@ public final class SendgridSettingsOuterClass {
       return true;
     }
 
+    @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
       unknownFields.writeTo(output);
     }
 
+    @java.lang.Override
     public int getSerializedSize() {
       int size = memoizedSize;
       if (size != -1) return size;
@@ -229,6 +234,7 @@ public final class SendgridSettingsOuterClass {
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
 
+    @java.lang.Override
     public Builder newBuilderForType() { return newBuilder(); }
     public static Builder newBuilder() {
       return DEFAULT_INSTANCE.toBuilder();
@@ -236,6 +242,7 @@ public final class SendgridSettingsOuterClass {
     public static Builder newBuilder(io.bloombox.schema.partner.integrations.sendgrid.SendgridSettingsOuterClass.SendgridIntegrationFeatures prototype) {
       return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
     }
+    @java.lang.Override
     public Builder toBuilder() {
       return this == DEFAULT_INSTANCE
           ? new Builder() : new Builder().mergeFrom(this);
@@ -252,20 +259,21 @@ public final class SendgridSettingsOuterClass {
      * Specifies Sendgrid features that may be enabled or disabled.
      * </pre>
      *
-     * Protobuf type {@code bloombox.schema.partner.integrations.sendgrid.SendgridIntegrationFeatures}
+     * Protobuf type {@code bloombox.partner.integrations.sendgrid.SendgridIntegrationFeatures}
      */
     public static final class Builder extends
         com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:bloombox.schema.partner.integrations.sendgrid.SendgridIntegrationFeatures)
+        // @@protoc_insertion_point(builder_implements:bloombox.partner.integrations.sendgrid.SendgridIntegrationFeatures)
         io.bloombox.schema.partner.integrations.sendgrid.SendgridSettingsOuterClass.SendgridIntegrationFeaturesOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return io.bloombox.schema.partner.integrations.sendgrid.SendgridSettingsOuterClass.internal_static_bloombox_schema_partner_integrations_sendgrid_SendgridIntegrationFeatures_descriptor;
+        return io.bloombox.schema.partner.integrations.sendgrid.SendgridSettingsOuterClass.internal_static_bloombox_partner_integrations_sendgrid_SendgridIntegrationFeatures_descriptor;
       }
 
+      @java.lang.Override
       protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return io.bloombox.schema.partner.integrations.sendgrid.SendgridSettingsOuterClass.internal_static_bloombox_schema_partner_integrations_sendgrid_SendgridIntegrationFeatures_fieldAccessorTable
+        return io.bloombox.schema.partner.integrations.sendgrid.SendgridSettingsOuterClass.internal_static_bloombox_partner_integrations_sendgrid_SendgridIntegrationFeatures_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
                 io.bloombox.schema.partner.integrations.sendgrid.SendgridSettingsOuterClass.SendgridIntegrationFeatures.class, io.bloombox.schema.partner.integrations.sendgrid.SendgridSettingsOuterClass.SendgridIntegrationFeatures.Builder.class);
       }
@@ -285,20 +293,24 @@ public final class SendgridSettingsOuterClass {
                 .alwaysUseFieldBuilders) {
         }
       }
+      @java.lang.Override
       public Builder clear() {
         super.clear();
         return this;
       }
 
+      @java.lang.Override
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return io.bloombox.schema.partner.integrations.sendgrid.SendgridSettingsOuterClass.internal_static_bloombox_schema_partner_integrations_sendgrid_SendgridIntegrationFeatures_descriptor;
+        return io.bloombox.schema.partner.integrations.sendgrid.SendgridSettingsOuterClass.internal_static_bloombox_partner_integrations_sendgrid_SendgridIntegrationFeatures_descriptor;
       }
 
+      @java.lang.Override
       public io.bloombox.schema.partner.integrations.sendgrid.SendgridSettingsOuterClass.SendgridIntegrationFeatures getDefaultInstanceForType() {
         return io.bloombox.schema.partner.integrations.sendgrid.SendgridSettingsOuterClass.SendgridIntegrationFeatures.getDefaultInstance();
       }
 
+      @java.lang.Override
       public io.bloombox.schema.partner.integrations.sendgrid.SendgridSettingsOuterClass.SendgridIntegrationFeatures build() {
         io.bloombox.schema.partner.integrations.sendgrid.SendgridSettingsOuterClass.SendgridIntegrationFeatures result = buildPartial();
         if (!result.isInitialized()) {
@@ -307,38 +319,46 @@ public final class SendgridSettingsOuterClass {
         return result;
       }
 
+      @java.lang.Override
       public io.bloombox.schema.partner.integrations.sendgrid.SendgridSettingsOuterClass.SendgridIntegrationFeatures buildPartial() {
         io.bloombox.schema.partner.integrations.sendgrid.SendgridSettingsOuterClass.SendgridIntegrationFeatures result = new io.bloombox.schema.partner.integrations.sendgrid.SendgridSettingsOuterClass.SendgridIntegrationFeatures(this);
         onBuilt();
         return result;
       }
 
+      @java.lang.Override
       public Builder clone() {
         return (Builder) super.clone();
       }
+      @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
         return (Builder) super.setField(field, value);
       }
+      @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
         return (Builder) super.clearField(field);
       }
+      @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
         return (Builder) super.clearOneof(oneof);
       }
+      @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
         return (Builder) super.setRepeatedField(field, index, value);
       }
+      @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
         return (Builder) super.addRepeatedField(field, value);
       }
+      @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
         if (other instanceof io.bloombox.schema.partner.integrations.sendgrid.SendgridSettingsOuterClass.SendgridIntegrationFeatures) {
           return mergeFrom((io.bloombox.schema.partner.integrations.sendgrid.SendgridSettingsOuterClass.SendgridIntegrationFeatures)other);
@@ -355,10 +375,12 @@ public final class SendgridSettingsOuterClass {
         return this;
       }
 
+      @java.lang.Override
       public final boolean isInitialized() {
         return true;
       }
 
+      @java.lang.Override
       public Builder mergeFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -376,21 +398,23 @@ public final class SendgridSettingsOuterClass {
         }
         return this;
       }
+      @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
         return super.setUnknownFieldsProto3(unknownFields);
       }
 
+      @java.lang.Override
       public final Builder mergeUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
         return super.mergeUnknownFields(unknownFields);
       }
 
 
-      // @@protoc_insertion_point(builder_scope:bloombox.schema.partner.integrations.sendgrid.SendgridIntegrationFeatures)
+      // @@protoc_insertion_point(builder_scope:bloombox.partner.integrations.sendgrid.SendgridIntegrationFeatures)
     }
 
-    // @@protoc_insertion_point(class_scope:bloombox.schema.partner.integrations.sendgrid.SendgridIntegrationFeatures)
+    // @@protoc_insertion_point(class_scope:bloombox.partner.integrations.sendgrid.SendgridIntegrationFeatures)
     private static final io.bloombox.schema.partner.integrations.sendgrid.SendgridSettingsOuterClass.SendgridIntegrationFeatures DEFAULT_INSTANCE;
     static {
       DEFAULT_INSTANCE = new io.bloombox.schema.partner.integrations.sendgrid.SendgridSettingsOuterClass.SendgridIntegrationFeatures();
@@ -402,6 +426,7 @@ public final class SendgridSettingsOuterClass {
 
     private static final com.google.protobuf.Parser<SendgridIntegrationFeatures>
         PARSER = new com.google.protobuf.AbstractParser<SendgridIntegrationFeatures>() {
+      @java.lang.Override
       public SendgridIntegrationFeatures parsePartialFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -419,6 +444,7 @@ public final class SendgridSettingsOuterClass {
       return PARSER;
     }
 
+    @java.lang.Override
     public io.bloombox.schema.partner.integrations.sendgrid.SendgridSettingsOuterClass.SendgridIntegrationFeatures getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
@@ -426,7 +452,7 @@ public final class SendgridSettingsOuterClass {
   }
 
   public interface SendgridSettingsOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:bloombox.schema.partner.integrations.sendgrid.SendgridSettings)
+      // @@protoc_insertion_point(interface_extends:bloombox.partner.integrations.sendgrid.SendgridSettings)
       com.google.protobuf.MessageOrBuilder {
 
     /**
@@ -434,7 +460,7 @@ public final class SendgridSettingsOuterClass {
      * Flags indicating features that should be enabled or disabled.
      * </pre>
      *
-     * <code>.bloombox.schema.partner.integrations.sendgrid.SendgridIntegrationFeatures features = 10;</code>
+     * <code>.bloombox.partner.integrations.sendgrid.SendgridIntegrationFeatures features = 10;</code>
      */
     boolean hasFeatures();
     /**
@@ -442,7 +468,7 @@ public final class SendgridSettingsOuterClass {
      * Flags indicating features that should be enabled or disabled.
      * </pre>
      *
-     * <code>.bloombox.schema.partner.integrations.sendgrid.SendgridIntegrationFeatures features = 10;</code>
+     * <code>.bloombox.partner.integrations.sendgrid.SendgridIntegrationFeatures features = 10;</code>
      */
     io.bloombox.schema.partner.integrations.sendgrid.SendgridSettingsOuterClass.SendgridIntegrationFeatures getFeatures();
     /**
@@ -450,7 +476,7 @@ public final class SendgridSettingsOuterClass {
      * Flags indicating features that should be enabled or disabled.
      * </pre>
      *
-     * <code>.bloombox.schema.partner.integrations.sendgrid.SendgridIntegrationFeatures features = 10;</code>
+     * <code>.bloombox.partner.integrations.sendgrid.SendgridIntegrationFeatures features = 10;</code>
      */
     io.bloombox.schema.partner.integrations.sendgrid.SendgridSettingsOuterClass.SendgridIntegrationFeaturesOrBuilder getFeaturesOrBuilder();
   }
@@ -459,11 +485,11 @@ public final class SendgridSettingsOuterClass {
    * Specifies Sendgrid settings for integration with Bloombox.
    * </pre>
    *
-   * Protobuf type {@code bloombox.schema.partner.integrations.sendgrid.SendgridSettings}
+   * Protobuf type {@code bloombox.partner.integrations.sendgrid.SendgridSettings}
    */
   public  static final class SendgridSettings extends
       com.google.protobuf.GeneratedMessageV3 implements
-      // @@protoc_insertion_point(message_implements:bloombox.schema.partner.integrations.sendgrid.SendgridSettings)
+      // @@protoc_insertion_point(message_implements:bloombox.partner.integrations.sendgrid.SendgridSettings)
       SendgridSettingsOrBuilder {
   private static final long serialVersionUID = 0L;
     // Use SendgridSettings.newBuilder() to construct.
@@ -497,13 +523,6 @@ public final class SendgridSettingsOuterClass {
             case 0:
               done = true;
               break;
-            default: {
-              if (!parseUnknownFieldProto3(
-                  input, unknownFields, extensionRegistry, tag)) {
-                done = true;
-              }
-              break;
-            }
             case 82: {
               io.bloombox.schema.partner.integrations.sendgrid.SendgridSettingsOuterClass.SendgridIntegrationFeatures.Builder subBuilder = null;
               if (features_ != null) {
@@ -515,6 +534,13 @@ public final class SendgridSettingsOuterClass {
                 features_ = subBuilder.buildPartial();
               }
 
+              break;
+            }
+            default: {
+              if (!parseUnknownFieldProto3(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
               break;
             }
           }
@@ -531,12 +557,13 @@ public final class SendgridSettingsOuterClass {
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return io.bloombox.schema.partner.integrations.sendgrid.SendgridSettingsOuterClass.internal_static_bloombox_schema_partner_integrations_sendgrid_SendgridSettings_descriptor;
+      return io.bloombox.schema.partner.integrations.sendgrid.SendgridSettingsOuterClass.internal_static_bloombox_partner_integrations_sendgrid_SendgridSettings_descriptor;
     }
 
+    @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return io.bloombox.schema.partner.integrations.sendgrid.SendgridSettingsOuterClass.internal_static_bloombox_schema_partner_integrations_sendgrid_SendgridSettings_fieldAccessorTable
+      return io.bloombox.schema.partner.integrations.sendgrid.SendgridSettingsOuterClass.internal_static_bloombox_partner_integrations_sendgrid_SendgridSettings_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
               io.bloombox.schema.partner.integrations.sendgrid.SendgridSettingsOuterClass.SendgridSettings.class, io.bloombox.schema.partner.integrations.sendgrid.SendgridSettingsOuterClass.SendgridSettings.Builder.class);
     }
@@ -548,7 +575,7 @@ public final class SendgridSettingsOuterClass {
      * Flags indicating features that should be enabled or disabled.
      * </pre>
      *
-     * <code>.bloombox.schema.partner.integrations.sendgrid.SendgridIntegrationFeatures features = 10;</code>
+     * <code>.bloombox.partner.integrations.sendgrid.SendgridIntegrationFeatures features = 10;</code>
      */
     public boolean hasFeatures() {
       return features_ != null;
@@ -558,7 +585,7 @@ public final class SendgridSettingsOuterClass {
      * Flags indicating features that should be enabled or disabled.
      * </pre>
      *
-     * <code>.bloombox.schema.partner.integrations.sendgrid.SendgridIntegrationFeatures features = 10;</code>
+     * <code>.bloombox.partner.integrations.sendgrid.SendgridIntegrationFeatures features = 10;</code>
      */
     public io.bloombox.schema.partner.integrations.sendgrid.SendgridSettingsOuterClass.SendgridIntegrationFeatures getFeatures() {
       return features_ == null ? io.bloombox.schema.partner.integrations.sendgrid.SendgridSettingsOuterClass.SendgridIntegrationFeatures.getDefaultInstance() : features_;
@@ -568,13 +595,14 @@ public final class SendgridSettingsOuterClass {
      * Flags indicating features that should be enabled or disabled.
      * </pre>
      *
-     * <code>.bloombox.schema.partner.integrations.sendgrid.SendgridIntegrationFeatures features = 10;</code>
+     * <code>.bloombox.partner.integrations.sendgrid.SendgridIntegrationFeatures features = 10;</code>
      */
     public io.bloombox.schema.partner.integrations.sendgrid.SendgridSettingsOuterClass.SendgridIntegrationFeaturesOrBuilder getFeaturesOrBuilder() {
       return getFeatures();
     }
 
     private byte memoizedIsInitialized = -1;
+    @java.lang.Override
     public final boolean isInitialized() {
       byte isInitialized = memoizedIsInitialized;
       if (isInitialized == 1) return true;
@@ -584,6 +612,7 @@ public final class SendgridSettingsOuterClass {
       return true;
     }
 
+    @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
       if (features_ != null) {
@@ -592,6 +621,7 @@ public final class SendgridSettingsOuterClass {
       unknownFields.writeTo(output);
     }
 
+    @java.lang.Override
     public int getSerializedSize() {
       int size = memoizedSize;
       if (size != -1) return size;
@@ -712,6 +742,7 @@ public final class SendgridSettingsOuterClass {
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
 
+    @java.lang.Override
     public Builder newBuilderForType() { return newBuilder(); }
     public static Builder newBuilder() {
       return DEFAULT_INSTANCE.toBuilder();
@@ -719,6 +750,7 @@ public final class SendgridSettingsOuterClass {
     public static Builder newBuilder(io.bloombox.schema.partner.integrations.sendgrid.SendgridSettingsOuterClass.SendgridSettings prototype) {
       return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
     }
+    @java.lang.Override
     public Builder toBuilder() {
       return this == DEFAULT_INSTANCE
           ? new Builder() : new Builder().mergeFrom(this);
@@ -735,20 +767,21 @@ public final class SendgridSettingsOuterClass {
      * Specifies Sendgrid settings for integration with Bloombox.
      * </pre>
      *
-     * Protobuf type {@code bloombox.schema.partner.integrations.sendgrid.SendgridSettings}
+     * Protobuf type {@code bloombox.partner.integrations.sendgrid.SendgridSettings}
      */
     public static final class Builder extends
         com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:bloombox.schema.partner.integrations.sendgrid.SendgridSettings)
+        // @@protoc_insertion_point(builder_implements:bloombox.partner.integrations.sendgrid.SendgridSettings)
         io.bloombox.schema.partner.integrations.sendgrid.SendgridSettingsOuterClass.SendgridSettingsOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return io.bloombox.schema.partner.integrations.sendgrid.SendgridSettingsOuterClass.internal_static_bloombox_schema_partner_integrations_sendgrid_SendgridSettings_descriptor;
+        return io.bloombox.schema.partner.integrations.sendgrid.SendgridSettingsOuterClass.internal_static_bloombox_partner_integrations_sendgrid_SendgridSettings_descriptor;
       }
 
+      @java.lang.Override
       protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return io.bloombox.schema.partner.integrations.sendgrid.SendgridSettingsOuterClass.internal_static_bloombox_schema_partner_integrations_sendgrid_SendgridSettings_fieldAccessorTable
+        return io.bloombox.schema.partner.integrations.sendgrid.SendgridSettingsOuterClass.internal_static_bloombox_partner_integrations_sendgrid_SendgridSettings_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
                 io.bloombox.schema.partner.integrations.sendgrid.SendgridSettingsOuterClass.SendgridSettings.class, io.bloombox.schema.partner.integrations.sendgrid.SendgridSettingsOuterClass.SendgridSettings.Builder.class);
       }
@@ -768,6 +801,7 @@ public final class SendgridSettingsOuterClass {
                 .alwaysUseFieldBuilders) {
         }
       }
+      @java.lang.Override
       public Builder clear() {
         super.clear();
         if (featuresBuilder_ == null) {
@@ -779,15 +813,18 @@ public final class SendgridSettingsOuterClass {
         return this;
       }
 
+      @java.lang.Override
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return io.bloombox.schema.partner.integrations.sendgrid.SendgridSettingsOuterClass.internal_static_bloombox_schema_partner_integrations_sendgrid_SendgridSettings_descriptor;
+        return io.bloombox.schema.partner.integrations.sendgrid.SendgridSettingsOuterClass.internal_static_bloombox_partner_integrations_sendgrid_SendgridSettings_descriptor;
       }
 
+      @java.lang.Override
       public io.bloombox.schema.partner.integrations.sendgrid.SendgridSettingsOuterClass.SendgridSettings getDefaultInstanceForType() {
         return io.bloombox.schema.partner.integrations.sendgrid.SendgridSettingsOuterClass.SendgridSettings.getDefaultInstance();
       }
 
+      @java.lang.Override
       public io.bloombox.schema.partner.integrations.sendgrid.SendgridSettingsOuterClass.SendgridSettings build() {
         io.bloombox.schema.partner.integrations.sendgrid.SendgridSettingsOuterClass.SendgridSettings result = buildPartial();
         if (!result.isInitialized()) {
@@ -796,6 +833,7 @@ public final class SendgridSettingsOuterClass {
         return result;
       }
 
+      @java.lang.Override
       public io.bloombox.schema.partner.integrations.sendgrid.SendgridSettingsOuterClass.SendgridSettings buildPartial() {
         io.bloombox.schema.partner.integrations.sendgrid.SendgridSettingsOuterClass.SendgridSettings result = new io.bloombox.schema.partner.integrations.sendgrid.SendgridSettingsOuterClass.SendgridSettings(this);
         if (featuresBuilder_ == null) {
@@ -807,32 +845,39 @@ public final class SendgridSettingsOuterClass {
         return result;
       }
 
+      @java.lang.Override
       public Builder clone() {
         return (Builder) super.clone();
       }
+      @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
         return (Builder) super.setField(field, value);
       }
+      @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
         return (Builder) super.clearField(field);
       }
+      @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
         return (Builder) super.clearOneof(oneof);
       }
+      @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
         return (Builder) super.setRepeatedField(field, index, value);
       }
+      @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
         return (Builder) super.addRepeatedField(field, value);
       }
+      @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
         if (other instanceof io.bloombox.schema.partner.integrations.sendgrid.SendgridSettingsOuterClass.SendgridSettings) {
           return mergeFrom((io.bloombox.schema.partner.integrations.sendgrid.SendgridSettingsOuterClass.SendgridSettings)other);
@@ -852,10 +897,12 @@ public final class SendgridSettingsOuterClass {
         return this;
       }
 
+      @java.lang.Override
       public final boolean isInitialized() {
         return true;
       }
 
+      @java.lang.Override
       public Builder mergeFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -882,7 +929,7 @@ public final class SendgridSettingsOuterClass {
        * Flags indicating features that should be enabled or disabled.
        * </pre>
        *
-       * <code>.bloombox.schema.partner.integrations.sendgrid.SendgridIntegrationFeatures features = 10;</code>
+       * <code>.bloombox.partner.integrations.sendgrid.SendgridIntegrationFeatures features = 10;</code>
        */
       public boolean hasFeatures() {
         return featuresBuilder_ != null || features_ != null;
@@ -892,7 +939,7 @@ public final class SendgridSettingsOuterClass {
        * Flags indicating features that should be enabled or disabled.
        * </pre>
        *
-       * <code>.bloombox.schema.partner.integrations.sendgrid.SendgridIntegrationFeatures features = 10;</code>
+       * <code>.bloombox.partner.integrations.sendgrid.SendgridIntegrationFeatures features = 10;</code>
        */
       public io.bloombox.schema.partner.integrations.sendgrid.SendgridSettingsOuterClass.SendgridIntegrationFeatures getFeatures() {
         if (featuresBuilder_ == null) {
@@ -906,7 +953,7 @@ public final class SendgridSettingsOuterClass {
        * Flags indicating features that should be enabled or disabled.
        * </pre>
        *
-       * <code>.bloombox.schema.partner.integrations.sendgrid.SendgridIntegrationFeatures features = 10;</code>
+       * <code>.bloombox.partner.integrations.sendgrid.SendgridIntegrationFeatures features = 10;</code>
        */
       public Builder setFeatures(io.bloombox.schema.partner.integrations.sendgrid.SendgridSettingsOuterClass.SendgridIntegrationFeatures value) {
         if (featuresBuilder_ == null) {
@@ -926,7 +973,7 @@ public final class SendgridSettingsOuterClass {
        * Flags indicating features that should be enabled or disabled.
        * </pre>
        *
-       * <code>.bloombox.schema.partner.integrations.sendgrid.SendgridIntegrationFeatures features = 10;</code>
+       * <code>.bloombox.partner.integrations.sendgrid.SendgridIntegrationFeatures features = 10;</code>
        */
       public Builder setFeatures(
           io.bloombox.schema.partner.integrations.sendgrid.SendgridSettingsOuterClass.SendgridIntegrationFeatures.Builder builderForValue) {
@@ -944,7 +991,7 @@ public final class SendgridSettingsOuterClass {
        * Flags indicating features that should be enabled or disabled.
        * </pre>
        *
-       * <code>.bloombox.schema.partner.integrations.sendgrid.SendgridIntegrationFeatures features = 10;</code>
+       * <code>.bloombox.partner.integrations.sendgrid.SendgridIntegrationFeatures features = 10;</code>
        */
       public Builder mergeFeatures(io.bloombox.schema.partner.integrations.sendgrid.SendgridSettingsOuterClass.SendgridIntegrationFeatures value) {
         if (featuresBuilder_ == null) {
@@ -966,7 +1013,7 @@ public final class SendgridSettingsOuterClass {
        * Flags indicating features that should be enabled or disabled.
        * </pre>
        *
-       * <code>.bloombox.schema.partner.integrations.sendgrid.SendgridIntegrationFeatures features = 10;</code>
+       * <code>.bloombox.partner.integrations.sendgrid.SendgridIntegrationFeatures features = 10;</code>
        */
       public Builder clearFeatures() {
         if (featuresBuilder_ == null) {
@@ -984,7 +1031,7 @@ public final class SendgridSettingsOuterClass {
        * Flags indicating features that should be enabled or disabled.
        * </pre>
        *
-       * <code>.bloombox.schema.partner.integrations.sendgrid.SendgridIntegrationFeatures features = 10;</code>
+       * <code>.bloombox.partner.integrations.sendgrid.SendgridIntegrationFeatures features = 10;</code>
        */
       public io.bloombox.schema.partner.integrations.sendgrid.SendgridSettingsOuterClass.SendgridIntegrationFeatures.Builder getFeaturesBuilder() {
         
@@ -996,7 +1043,7 @@ public final class SendgridSettingsOuterClass {
        * Flags indicating features that should be enabled or disabled.
        * </pre>
        *
-       * <code>.bloombox.schema.partner.integrations.sendgrid.SendgridIntegrationFeatures features = 10;</code>
+       * <code>.bloombox.partner.integrations.sendgrid.SendgridIntegrationFeatures features = 10;</code>
        */
       public io.bloombox.schema.partner.integrations.sendgrid.SendgridSettingsOuterClass.SendgridIntegrationFeaturesOrBuilder getFeaturesOrBuilder() {
         if (featuresBuilder_ != null) {
@@ -1011,7 +1058,7 @@ public final class SendgridSettingsOuterClass {
        * Flags indicating features that should be enabled or disabled.
        * </pre>
        *
-       * <code>.bloombox.schema.partner.integrations.sendgrid.SendgridIntegrationFeatures features = 10;</code>
+       * <code>.bloombox.partner.integrations.sendgrid.SendgridIntegrationFeatures features = 10;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
           io.bloombox.schema.partner.integrations.sendgrid.SendgridSettingsOuterClass.SendgridIntegrationFeatures, io.bloombox.schema.partner.integrations.sendgrid.SendgridSettingsOuterClass.SendgridIntegrationFeatures.Builder, io.bloombox.schema.partner.integrations.sendgrid.SendgridSettingsOuterClass.SendgridIntegrationFeaturesOrBuilder> 
@@ -1026,21 +1073,23 @@ public final class SendgridSettingsOuterClass {
         }
         return featuresBuilder_;
       }
+      @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
         return super.setUnknownFieldsProto3(unknownFields);
       }
 
+      @java.lang.Override
       public final Builder mergeUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
         return super.mergeUnknownFields(unknownFields);
       }
 
 
-      // @@protoc_insertion_point(builder_scope:bloombox.schema.partner.integrations.sendgrid.SendgridSettings)
+      // @@protoc_insertion_point(builder_scope:bloombox.partner.integrations.sendgrid.SendgridSettings)
     }
 
-    // @@protoc_insertion_point(class_scope:bloombox.schema.partner.integrations.sendgrid.SendgridSettings)
+    // @@protoc_insertion_point(class_scope:bloombox.partner.integrations.sendgrid.SendgridSettings)
     private static final io.bloombox.schema.partner.integrations.sendgrid.SendgridSettingsOuterClass.SendgridSettings DEFAULT_INSTANCE;
     static {
       DEFAULT_INSTANCE = new io.bloombox.schema.partner.integrations.sendgrid.SendgridSettingsOuterClass.SendgridSettings();
@@ -1052,6 +1101,7 @@ public final class SendgridSettingsOuterClass {
 
     private static final com.google.protobuf.Parser<SendgridSettings>
         PARSER = new com.google.protobuf.AbstractParser<SendgridSettings>() {
+      @java.lang.Override
       public SendgridSettings parsePartialFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -1069,6 +1119,7 @@ public final class SendgridSettingsOuterClass {
       return PARSER;
     }
 
+    @java.lang.Override
     public io.bloombox.schema.partner.integrations.sendgrid.SendgridSettingsOuterClass.SendgridSettings getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
@@ -1076,15 +1127,15 @@ public final class SendgridSettingsOuterClass {
   }
 
   private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_bloombox_schema_partner_integrations_sendgrid_SendgridIntegrationFeatures_descriptor;
+    internal_static_bloombox_partner_integrations_sendgrid_SendgridIntegrationFeatures_descriptor;
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_bloombox_schema_partner_integrations_sendgrid_SendgridIntegrationFeatures_fieldAccessorTable;
+      internal_static_bloombox_partner_integrations_sendgrid_SendgridIntegrationFeatures_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_bloombox_schema_partner_integrations_sendgrid_SendgridSettings_descriptor;
+    internal_static_bloombox_partner_integrations_sendgrid_SendgridSettings_descriptor;
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_bloombox_schema_partner_integrations_sendgrid_SendgridSettings_fieldAccessorTable;
+      internal_static_bloombox_partner_integrations_sendgrid_SendgridSettings_fieldAccessorTable;
 
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
@@ -1095,13 +1146,13 @@ public final class SendgridSettingsOuterClass {
   static {
     java.lang.String[] descriptorData = {
       "\n+partner/integrations/SendgridSettings." +
-      "proto\022-bloombox.schema.partner.integrati" +
-      "ons.sendgrid\"\035\n\033SendgridIntegrationFeatu" +
-      "res\"p\n\020SendgridSettings\022\\\n\010features\030\n \001(" +
-      "\0132J.bloombox.schema.partner.integrations" +
-      ".sendgrid.SendgridIntegrationFeaturesB<\n" +
-      "0io.bloombox.schema.partner.integrations" +
-      ".sendgridH\001P\000\242\002\003BBSb\006proto3"
+      "proto\022&bloombox.partner.integrations.sen" +
+      "dgrid\"\035\n\033SendgridIntegrationFeatures\"i\n\020" +
+      "SendgridSettings\022U\n\010features\030\n \001(\0132C.blo" +
+      "ombox.partner.integrations.sendgrid.Send" +
+      "gridIntegrationFeaturesB<\n0io.bloombox.s" +
+      "chema.partner.integrations.sendgridH\001P\000\242" +
+      "\002\003BBSb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -1115,17 +1166,17 @@ public final class SendgridSettingsOuterClass {
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
         }, assigner);
-    internal_static_bloombox_schema_partner_integrations_sendgrid_SendgridIntegrationFeatures_descriptor =
+    internal_static_bloombox_partner_integrations_sendgrid_SendgridIntegrationFeatures_descriptor =
       getDescriptor().getMessageTypes().get(0);
-    internal_static_bloombox_schema_partner_integrations_sendgrid_SendgridIntegrationFeatures_fieldAccessorTable = new
+    internal_static_bloombox_partner_integrations_sendgrid_SendgridIntegrationFeatures_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_bloombox_schema_partner_integrations_sendgrid_SendgridIntegrationFeatures_descriptor,
+        internal_static_bloombox_partner_integrations_sendgrid_SendgridIntegrationFeatures_descriptor,
         new java.lang.String[] { });
-    internal_static_bloombox_schema_partner_integrations_sendgrid_SendgridSettings_descriptor =
+    internal_static_bloombox_partner_integrations_sendgrid_SendgridSettings_descriptor =
       getDescriptor().getMessageTypes().get(1);
-    internal_static_bloombox_schema_partner_integrations_sendgrid_SendgridSettings_fieldAccessorTable = new
+    internal_static_bloombox_partner_integrations_sendgrid_SendgridSettings_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_bloombox_schema_partner_integrations_sendgrid_SendgridSettings_descriptor,
+        internal_static_bloombox_partner_integrations_sendgrid_SendgridSettings_descriptor,
         new java.lang.String[] { "Features", });
   }
 

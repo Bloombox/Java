@@ -1,11 +1,12 @@
 /*
- * Copyright 2018, Bloombox, LLC.
+ * Copyright 2018, Momentum Ideas, Co. All rights reserved.
  *
- * Licensed under the Apache License, Version 2.0 (the "License");
- * you may not use this file except in compliance with the License.
- * You may obtain a copy of the License at
- *
- *     http://www.apache.org/licenses/LICENSE-2.0
+ * Source and object computer code contained herein is the private intellectual
+ * property of Momentum Ideas Co., a Delaware Corporation. Use of this
+ * code in source form requires permission in writing before use or the
+ * assembly, distribution, or publishing of derivative works, for commercial
+ * purposes or any other purpose, from a duly authorized officer of Momentum
+ * Ideas Co.
  *
  * Unless required by applicable law or agreed to in writing, software
  * distributed under the License is distributed on an "AS IS" BASIS,
@@ -24,11 +25,11 @@ package io.bloombox.schema.search;
  * Specifies result metadata specific to product records.
  * </pre>
  *
- * Protobuf type {@code bloombox.schema.search.ProductResultMetadata}
+ * Protobuf type {@code bloombox.search.ProductResultMetadata}
  */
 public  final class ProductResultMetadata extends
     com.google.protobuf.GeneratedMessageV3 implements
-    // @@protoc_insertion_point(message_implements:bloombox.schema.search.ProductResultMetadata)
+    // @@protoc_insertion_point(message_implements:bloombox.search.ProductResultMetadata)
     ProductResultMetadataOrBuilder {
 private static final long serialVersionUID = 0L;
   // Use ProductResultMetadata.newBuilder() to construct.
@@ -62,13 +63,6 @@ private static final long serialVersionUID = 0L;
           case 0:
             done = true;
             break;
-          default: {
-            if (!parseUnknownFieldProto3(
-                input, unknownFields, extensionRegistry, tag)) {
-              done = true;
-            }
-            break;
-          }
           case 10: {
             io.bloombox.schema.search.ProductResultBound.Builder subBuilder = null;
             if (price_ != null) {
@@ -108,6 +102,13 @@ private static final long serialVersionUID = 0L;
 
             break;
           }
+          default: {
+            if (!parseUnknownFieldProto3(
+                input, unknownFields, extensionRegistry, tag)) {
+              done = true;
+            }
+            break;
+          }
         }
       }
     } catch (com.google.protobuf.InvalidProtocolBufferException e) {
@@ -122,12 +123,13 @@ private static final long serialVersionUID = 0L;
   }
   public static final com.google.protobuf.Descriptors.Descriptor
       getDescriptor() {
-    return io.bloombox.schema.search.SearchMetadata.internal_static_bloombox_schema_search_ProductResultMetadata_descriptor;
+    return io.bloombox.schema.search.SearchMetadata.internal_static_bloombox_search_ProductResultMetadata_descriptor;
   }
 
+  @java.lang.Override
   protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internalGetFieldAccessorTable() {
-    return io.bloombox.schema.search.SearchMetadata.internal_static_bloombox_schema_search_ProductResultMetadata_fieldAccessorTable
+    return io.bloombox.schema.search.SearchMetadata.internal_static_bloombox_search_ProductResultMetadata_fieldAccessorTable
         .ensureFieldAccessorsInitialized(
             io.bloombox.schema.search.ProductResultMetadata.class, io.bloombox.schema.search.ProductResultMetadata.Builder.class);
   }
@@ -139,7 +141,7 @@ private static final long serialVersionUID = 0L;
    * Price bounds.
    * </pre>
    *
-   * <code>.bloombox.schema.search.ProductResultBound price = 1;</code>
+   * <code>.bloombox.search.ProductResultBound price = 1;</code>
    */
   public boolean hasPrice() {
     return price_ != null;
@@ -149,7 +151,7 @@ private static final long serialVersionUID = 0L;
    * Price bounds.
    * </pre>
    *
-   * <code>.bloombox.schema.search.ProductResultBound price = 1;</code>
+   * <code>.bloombox.search.ProductResultBound price = 1;</code>
    */
   public io.bloombox.schema.search.ProductResultBound getPrice() {
     return price_ == null ? io.bloombox.schema.search.ProductResultBound.getDefaultInstance() : price_;
@@ -159,7 +161,7 @@ private static final long serialVersionUID = 0L;
    * Price bounds.
    * </pre>
    *
-   * <code>.bloombox.schema.search.ProductResultBound price = 1;</code>
+   * <code>.bloombox.search.ProductResultBound price = 1;</code>
    */
   public io.bloombox.schema.search.ProductResultBoundOrBuilder getPriceOrBuilder() {
     return getPrice();
@@ -172,7 +174,7 @@ private static final long serialVersionUID = 0L;
    * THC bounds.
    * </pre>
    *
-   * <code>.bloombox.schema.search.ProductResultBound thc = 2;</code>
+   * <code>.bloombox.search.ProductResultBound thc = 2;</code>
    */
   public boolean hasThc() {
     return thc_ != null;
@@ -182,7 +184,7 @@ private static final long serialVersionUID = 0L;
    * THC bounds.
    * </pre>
    *
-   * <code>.bloombox.schema.search.ProductResultBound thc = 2;</code>
+   * <code>.bloombox.search.ProductResultBound thc = 2;</code>
    */
   public io.bloombox.schema.search.ProductResultBound getThc() {
     return thc_ == null ? io.bloombox.schema.search.ProductResultBound.getDefaultInstance() : thc_;
@@ -192,7 +194,7 @@ private static final long serialVersionUID = 0L;
    * THC bounds.
    * </pre>
    *
-   * <code>.bloombox.schema.search.ProductResultBound thc = 2;</code>
+   * <code>.bloombox.search.ProductResultBound thc = 2;</code>
    */
   public io.bloombox.schema.search.ProductResultBoundOrBuilder getThcOrBuilder() {
     return getThc();
@@ -205,7 +207,7 @@ private static final long serialVersionUID = 0L;
    * CBD bounds.
    * </pre>
    *
-   * <code>.bloombox.schema.search.ProductResultBound cbd = 3;</code>
+   * <code>.bloombox.search.ProductResultBound cbd = 3;</code>
    */
   public boolean hasCbd() {
     return cbd_ != null;
@@ -215,7 +217,7 @@ private static final long serialVersionUID = 0L;
    * CBD bounds.
    * </pre>
    *
-   * <code>.bloombox.schema.search.ProductResultBound cbd = 3;</code>
+   * <code>.bloombox.search.ProductResultBound cbd = 3;</code>
    */
   public io.bloombox.schema.search.ProductResultBound getCbd() {
     return cbd_ == null ? io.bloombox.schema.search.ProductResultBound.getDefaultInstance() : cbd_;
@@ -225,13 +227,14 @@ private static final long serialVersionUID = 0L;
    * CBD bounds.
    * </pre>
    *
-   * <code>.bloombox.schema.search.ProductResultBound cbd = 3;</code>
+   * <code>.bloombox.search.ProductResultBound cbd = 3;</code>
    */
   public io.bloombox.schema.search.ProductResultBoundOrBuilder getCbdOrBuilder() {
     return getCbd();
   }
 
   private byte memoizedIsInitialized = -1;
+  @java.lang.Override
   public final boolean isInitialized() {
     byte isInitialized = memoizedIsInitialized;
     if (isInitialized == 1) return true;
@@ -241,6 +244,7 @@ private static final long serialVersionUID = 0L;
     return true;
   }
 
+  @java.lang.Override
   public void writeTo(com.google.protobuf.CodedOutputStream output)
                       throws java.io.IOException {
     if (price_ != null) {
@@ -255,6 +259,7 @@ private static final long serialVersionUID = 0L;
     unknownFields.writeTo(output);
   }
 
+  @java.lang.Override
   public int getSerializedSize() {
     int size = memoizedSize;
     if (size != -1) return size;
@@ -401,6 +406,7 @@ private static final long serialVersionUID = 0L;
         .parseWithIOException(PARSER, input, extensionRegistry);
   }
 
+  @java.lang.Override
   public Builder newBuilderForType() { return newBuilder(); }
   public static Builder newBuilder() {
     return DEFAULT_INSTANCE.toBuilder();
@@ -408,6 +414,7 @@ private static final long serialVersionUID = 0L;
   public static Builder newBuilder(io.bloombox.schema.search.ProductResultMetadata prototype) {
     return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
   }
+  @java.lang.Override
   public Builder toBuilder() {
     return this == DEFAULT_INSTANCE
         ? new Builder() : new Builder().mergeFrom(this);
@@ -424,20 +431,21 @@ private static final long serialVersionUID = 0L;
    * Specifies result metadata specific to product records.
    * </pre>
    *
-   * Protobuf type {@code bloombox.schema.search.ProductResultMetadata}
+   * Protobuf type {@code bloombox.search.ProductResultMetadata}
    */
   public static final class Builder extends
       com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-      // @@protoc_insertion_point(builder_implements:bloombox.schema.search.ProductResultMetadata)
+      // @@protoc_insertion_point(builder_implements:bloombox.search.ProductResultMetadata)
       io.bloombox.schema.search.ProductResultMetadataOrBuilder {
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return io.bloombox.schema.search.SearchMetadata.internal_static_bloombox_schema_search_ProductResultMetadata_descriptor;
+      return io.bloombox.schema.search.SearchMetadata.internal_static_bloombox_search_ProductResultMetadata_descriptor;
     }
 
+    @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return io.bloombox.schema.search.SearchMetadata.internal_static_bloombox_schema_search_ProductResultMetadata_fieldAccessorTable
+      return io.bloombox.schema.search.SearchMetadata.internal_static_bloombox_search_ProductResultMetadata_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
               io.bloombox.schema.search.ProductResultMetadata.class, io.bloombox.schema.search.ProductResultMetadata.Builder.class);
     }
@@ -457,6 +465,7 @@ private static final long serialVersionUID = 0L;
               .alwaysUseFieldBuilders) {
       }
     }
+    @java.lang.Override
     public Builder clear() {
       super.clear();
       if (priceBuilder_ == null) {
@@ -480,15 +489,18 @@ private static final long serialVersionUID = 0L;
       return this;
     }
 
+    @java.lang.Override
     public com.google.protobuf.Descriptors.Descriptor
         getDescriptorForType() {
-      return io.bloombox.schema.search.SearchMetadata.internal_static_bloombox_schema_search_ProductResultMetadata_descriptor;
+      return io.bloombox.schema.search.SearchMetadata.internal_static_bloombox_search_ProductResultMetadata_descriptor;
     }
 
+    @java.lang.Override
     public io.bloombox.schema.search.ProductResultMetadata getDefaultInstanceForType() {
       return io.bloombox.schema.search.ProductResultMetadata.getDefaultInstance();
     }
 
+    @java.lang.Override
     public io.bloombox.schema.search.ProductResultMetadata build() {
       io.bloombox.schema.search.ProductResultMetadata result = buildPartial();
       if (!result.isInitialized()) {
@@ -497,6 +509,7 @@ private static final long serialVersionUID = 0L;
       return result;
     }
 
+    @java.lang.Override
     public io.bloombox.schema.search.ProductResultMetadata buildPartial() {
       io.bloombox.schema.search.ProductResultMetadata result = new io.bloombox.schema.search.ProductResultMetadata(this);
       if (priceBuilder_ == null) {
@@ -518,32 +531,39 @@ private static final long serialVersionUID = 0L;
       return result;
     }
 
+    @java.lang.Override
     public Builder clone() {
       return (Builder) super.clone();
     }
+    @java.lang.Override
     public Builder setField(
         com.google.protobuf.Descriptors.FieldDescriptor field,
         java.lang.Object value) {
       return (Builder) super.setField(field, value);
     }
+    @java.lang.Override
     public Builder clearField(
         com.google.protobuf.Descriptors.FieldDescriptor field) {
       return (Builder) super.clearField(field);
     }
+    @java.lang.Override
     public Builder clearOneof(
         com.google.protobuf.Descriptors.OneofDescriptor oneof) {
       return (Builder) super.clearOneof(oneof);
     }
+    @java.lang.Override
     public Builder setRepeatedField(
         com.google.protobuf.Descriptors.FieldDescriptor field,
         int index, java.lang.Object value) {
       return (Builder) super.setRepeatedField(field, index, value);
     }
+    @java.lang.Override
     public Builder addRepeatedField(
         com.google.protobuf.Descriptors.FieldDescriptor field,
         java.lang.Object value) {
       return (Builder) super.addRepeatedField(field, value);
     }
+    @java.lang.Override
     public Builder mergeFrom(com.google.protobuf.Message other) {
       if (other instanceof io.bloombox.schema.search.ProductResultMetadata) {
         return mergeFrom((io.bloombox.schema.search.ProductResultMetadata)other);
@@ -569,10 +589,12 @@ private static final long serialVersionUID = 0L;
       return this;
     }
 
+    @java.lang.Override
     public final boolean isInitialized() {
       return true;
     }
 
+    @java.lang.Override
     public Builder mergeFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -599,7 +621,7 @@ private static final long serialVersionUID = 0L;
      * Price bounds.
      * </pre>
      *
-     * <code>.bloombox.schema.search.ProductResultBound price = 1;</code>
+     * <code>.bloombox.search.ProductResultBound price = 1;</code>
      */
     public boolean hasPrice() {
       return priceBuilder_ != null || price_ != null;
@@ -609,7 +631,7 @@ private static final long serialVersionUID = 0L;
      * Price bounds.
      * </pre>
      *
-     * <code>.bloombox.schema.search.ProductResultBound price = 1;</code>
+     * <code>.bloombox.search.ProductResultBound price = 1;</code>
      */
     public io.bloombox.schema.search.ProductResultBound getPrice() {
       if (priceBuilder_ == null) {
@@ -623,7 +645,7 @@ private static final long serialVersionUID = 0L;
      * Price bounds.
      * </pre>
      *
-     * <code>.bloombox.schema.search.ProductResultBound price = 1;</code>
+     * <code>.bloombox.search.ProductResultBound price = 1;</code>
      */
     public Builder setPrice(io.bloombox.schema.search.ProductResultBound value) {
       if (priceBuilder_ == null) {
@@ -643,7 +665,7 @@ private static final long serialVersionUID = 0L;
      * Price bounds.
      * </pre>
      *
-     * <code>.bloombox.schema.search.ProductResultBound price = 1;</code>
+     * <code>.bloombox.search.ProductResultBound price = 1;</code>
      */
     public Builder setPrice(
         io.bloombox.schema.search.ProductResultBound.Builder builderForValue) {
@@ -661,7 +683,7 @@ private static final long serialVersionUID = 0L;
      * Price bounds.
      * </pre>
      *
-     * <code>.bloombox.schema.search.ProductResultBound price = 1;</code>
+     * <code>.bloombox.search.ProductResultBound price = 1;</code>
      */
     public Builder mergePrice(io.bloombox.schema.search.ProductResultBound value) {
       if (priceBuilder_ == null) {
@@ -683,7 +705,7 @@ private static final long serialVersionUID = 0L;
      * Price bounds.
      * </pre>
      *
-     * <code>.bloombox.schema.search.ProductResultBound price = 1;</code>
+     * <code>.bloombox.search.ProductResultBound price = 1;</code>
      */
     public Builder clearPrice() {
       if (priceBuilder_ == null) {
@@ -701,7 +723,7 @@ private static final long serialVersionUID = 0L;
      * Price bounds.
      * </pre>
      *
-     * <code>.bloombox.schema.search.ProductResultBound price = 1;</code>
+     * <code>.bloombox.search.ProductResultBound price = 1;</code>
      */
     public io.bloombox.schema.search.ProductResultBound.Builder getPriceBuilder() {
       
@@ -713,7 +735,7 @@ private static final long serialVersionUID = 0L;
      * Price bounds.
      * </pre>
      *
-     * <code>.bloombox.schema.search.ProductResultBound price = 1;</code>
+     * <code>.bloombox.search.ProductResultBound price = 1;</code>
      */
     public io.bloombox.schema.search.ProductResultBoundOrBuilder getPriceOrBuilder() {
       if (priceBuilder_ != null) {
@@ -728,7 +750,7 @@ private static final long serialVersionUID = 0L;
      * Price bounds.
      * </pre>
      *
-     * <code>.bloombox.schema.search.ProductResultBound price = 1;</code>
+     * <code>.bloombox.search.ProductResultBound price = 1;</code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<
         io.bloombox.schema.search.ProductResultBound, io.bloombox.schema.search.ProductResultBound.Builder, io.bloombox.schema.search.ProductResultBoundOrBuilder> 
@@ -752,7 +774,7 @@ private static final long serialVersionUID = 0L;
      * THC bounds.
      * </pre>
      *
-     * <code>.bloombox.schema.search.ProductResultBound thc = 2;</code>
+     * <code>.bloombox.search.ProductResultBound thc = 2;</code>
      */
     public boolean hasThc() {
       return thcBuilder_ != null || thc_ != null;
@@ -762,7 +784,7 @@ private static final long serialVersionUID = 0L;
      * THC bounds.
      * </pre>
      *
-     * <code>.bloombox.schema.search.ProductResultBound thc = 2;</code>
+     * <code>.bloombox.search.ProductResultBound thc = 2;</code>
      */
     public io.bloombox.schema.search.ProductResultBound getThc() {
       if (thcBuilder_ == null) {
@@ -776,7 +798,7 @@ private static final long serialVersionUID = 0L;
      * THC bounds.
      * </pre>
      *
-     * <code>.bloombox.schema.search.ProductResultBound thc = 2;</code>
+     * <code>.bloombox.search.ProductResultBound thc = 2;</code>
      */
     public Builder setThc(io.bloombox.schema.search.ProductResultBound value) {
       if (thcBuilder_ == null) {
@@ -796,7 +818,7 @@ private static final long serialVersionUID = 0L;
      * THC bounds.
      * </pre>
      *
-     * <code>.bloombox.schema.search.ProductResultBound thc = 2;</code>
+     * <code>.bloombox.search.ProductResultBound thc = 2;</code>
      */
     public Builder setThc(
         io.bloombox.schema.search.ProductResultBound.Builder builderForValue) {
@@ -814,7 +836,7 @@ private static final long serialVersionUID = 0L;
      * THC bounds.
      * </pre>
      *
-     * <code>.bloombox.schema.search.ProductResultBound thc = 2;</code>
+     * <code>.bloombox.search.ProductResultBound thc = 2;</code>
      */
     public Builder mergeThc(io.bloombox.schema.search.ProductResultBound value) {
       if (thcBuilder_ == null) {
@@ -836,7 +858,7 @@ private static final long serialVersionUID = 0L;
      * THC bounds.
      * </pre>
      *
-     * <code>.bloombox.schema.search.ProductResultBound thc = 2;</code>
+     * <code>.bloombox.search.ProductResultBound thc = 2;</code>
      */
     public Builder clearThc() {
       if (thcBuilder_ == null) {
@@ -854,7 +876,7 @@ private static final long serialVersionUID = 0L;
      * THC bounds.
      * </pre>
      *
-     * <code>.bloombox.schema.search.ProductResultBound thc = 2;</code>
+     * <code>.bloombox.search.ProductResultBound thc = 2;</code>
      */
     public io.bloombox.schema.search.ProductResultBound.Builder getThcBuilder() {
       
@@ -866,7 +888,7 @@ private static final long serialVersionUID = 0L;
      * THC bounds.
      * </pre>
      *
-     * <code>.bloombox.schema.search.ProductResultBound thc = 2;</code>
+     * <code>.bloombox.search.ProductResultBound thc = 2;</code>
      */
     public io.bloombox.schema.search.ProductResultBoundOrBuilder getThcOrBuilder() {
       if (thcBuilder_ != null) {
@@ -881,7 +903,7 @@ private static final long serialVersionUID = 0L;
      * THC bounds.
      * </pre>
      *
-     * <code>.bloombox.schema.search.ProductResultBound thc = 2;</code>
+     * <code>.bloombox.search.ProductResultBound thc = 2;</code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<
         io.bloombox.schema.search.ProductResultBound, io.bloombox.schema.search.ProductResultBound.Builder, io.bloombox.schema.search.ProductResultBoundOrBuilder> 
@@ -905,7 +927,7 @@ private static final long serialVersionUID = 0L;
      * CBD bounds.
      * </pre>
      *
-     * <code>.bloombox.schema.search.ProductResultBound cbd = 3;</code>
+     * <code>.bloombox.search.ProductResultBound cbd = 3;</code>
      */
     public boolean hasCbd() {
       return cbdBuilder_ != null || cbd_ != null;
@@ -915,7 +937,7 @@ private static final long serialVersionUID = 0L;
      * CBD bounds.
      * </pre>
      *
-     * <code>.bloombox.schema.search.ProductResultBound cbd = 3;</code>
+     * <code>.bloombox.search.ProductResultBound cbd = 3;</code>
      */
     public io.bloombox.schema.search.ProductResultBound getCbd() {
       if (cbdBuilder_ == null) {
@@ -929,7 +951,7 @@ private static final long serialVersionUID = 0L;
      * CBD bounds.
      * </pre>
      *
-     * <code>.bloombox.schema.search.ProductResultBound cbd = 3;</code>
+     * <code>.bloombox.search.ProductResultBound cbd = 3;</code>
      */
     public Builder setCbd(io.bloombox.schema.search.ProductResultBound value) {
       if (cbdBuilder_ == null) {
@@ -949,7 +971,7 @@ private static final long serialVersionUID = 0L;
      * CBD bounds.
      * </pre>
      *
-     * <code>.bloombox.schema.search.ProductResultBound cbd = 3;</code>
+     * <code>.bloombox.search.ProductResultBound cbd = 3;</code>
      */
     public Builder setCbd(
         io.bloombox.schema.search.ProductResultBound.Builder builderForValue) {
@@ -967,7 +989,7 @@ private static final long serialVersionUID = 0L;
      * CBD bounds.
      * </pre>
      *
-     * <code>.bloombox.schema.search.ProductResultBound cbd = 3;</code>
+     * <code>.bloombox.search.ProductResultBound cbd = 3;</code>
      */
     public Builder mergeCbd(io.bloombox.schema.search.ProductResultBound value) {
       if (cbdBuilder_ == null) {
@@ -989,7 +1011,7 @@ private static final long serialVersionUID = 0L;
      * CBD bounds.
      * </pre>
      *
-     * <code>.bloombox.schema.search.ProductResultBound cbd = 3;</code>
+     * <code>.bloombox.search.ProductResultBound cbd = 3;</code>
      */
     public Builder clearCbd() {
       if (cbdBuilder_ == null) {
@@ -1007,7 +1029,7 @@ private static final long serialVersionUID = 0L;
      * CBD bounds.
      * </pre>
      *
-     * <code>.bloombox.schema.search.ProductResultBound cbd = 3;</code>
+     * <code>.bloombox.search.ProductResultBound cbd = 3;</code>
      */
     public io.bloombox.schema.search.ProductResultBound.Builder getCbdBuilder() {
       
@@ -1019,7 +1041,7 @@ private static final long serialVersionUID = 0L;
      * CBD bounds.
      * </pre>
      *
-     * <code>.bloombox.schema.search.ProductResultBound cbd = 3;</code>
+     * <code>.bloombox.search.ProductResultBound cbd = 3;</code>
      */
     public io.bloombox.schema.search.ProductResultBoundOrBuilder getCbdOrBuilder() {
       if (cbdBuilder_ != null) {
@@ -1034,7 +1056,7 @@ private static final long serialVersionUID = 0L;
      * CBD bounds.
      * </pre>
      *
-     * <code>.bloombox.schema.search.ProductResultBound cbd = 3;</code>
+     * <code>.bloombox.search.ProductResultBound cbd = 3;</code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<
         io.bloombox.schema.search.ProductResultBound, io.bloombox.schema.search.ProductResultBound.Builder, io.bloombox.schema.search.ProductResultBoundOrBuilder> 
@@ -1049,21 +1071,23 @@ private static final long serialVersionUID = 0L;
       }
       return cbdBuilder_;
     }
+    @java.lang.Override
     public final Builder setUnknownFields(
         final com.google.protobuf.UnknownFieldSet unknownFields) {
       return super.setUnknownFieldsProto3(unknownFields);
     }
 
+    @java.lang.Override
     public final Builder mergeUnknownFields(
         final com.google.protobuf.UnknownFieldSet unknownFields) {
       return super.mergeUnknownFields(unknownFields);
     }
 
 
-    // @@protoc_insertion_point(builder_scope:bloombox.schema.search.ProductResultMetadata)
+    // @@protoc_insertion_point(builder_scope:bloombox.search.ProductResultMetadata)
   }
 
-  // @@protoc_insertion_point(class_scope:bloombox.schema.search.ProductResultMetadata)
+  // @@protoc_insertion_point(class_scope:bloombox.search.ProductResultMetadata)
   private static final io.bloombox.schema.search.ProductResultMetadata DEFAULT_INSTANCE;
   static {
     DEFAULT_INSTANCE = new io.bloombox.schema.search.ProductResultMetadata();
@@ -1075,6 +1099,7 @@ private static final long serialVersionUID = 0L;
 
   private static final com.google.protobuf.Parser<ProductResultMetadata>
       PARSER = new com.google.protobuf.AbstractParser<ProductResultMetadata>() {
+    @java.lang.Override
     public ProductResultMetadata parsePartialFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -1092,6 +1117,7 @@ private static final long serialVersionUID = 0L;
     return PARSER;
   }
 
+  @java.lang.Override
   public io.bloombox.schema.search.ProductResultMetadata getDefaultInstanceForType() {
     return DEFAULT_INSTANCE;
   }

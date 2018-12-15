@@ -1,11 +1,12 @@
 /*
- * Copyright 2018, Bloombox, LLC.
+ * Copyright 2018, Momentum Ideas, Co. All rights reserved.
  *
- * Licensed under the Apache License, Version 2.0 (the "License");
- * you may not use this file except in compliance with the License.
- * You may obtain a copy of the License at
- *
- *     http://www.apache.org/licenses/LICENSE-2.0
+ * Source and object computer code contained herein is the private intellectual
+ * property of Momentum Ideas Co., a Delaware Corporation. Use of this
+ * code in source form requires permission in writing before use or the
+ * assembly, distribution, or publishing of derivative works, for commercial
+ * purposes or any other purpose, from a duly authorized officer of Momentum
+ * Ideas Co.
  *
  * Unless required by applicable law or agreed to in writing, software
  * distributed under the License is distributed on an "AS IS" BASIS,
@@ -20,7 +21,7 @@
 package io.bloombox.schema.search;
 
 public interface SearchResultsetMetadataOrBuilder extends
-    // @@protoc_insertion_point(interface_extends:bloombox.schema.search.SearchResultsetMetadata)
+    // @@protoc_insertion_point(interface_extends:bloombox.search.SearchResultsetMetadata)
     com.google.protobuf.MessageOrBuilder {
 
   /**
@@ -28,7 +29,7 @@ public interface SearchResultsetMetadataOrBuilder extends
    * Count of matching records, across all categorical types.
    * </pre>
    *
-   * <code>repeated .bloombox.schema.search.ResultsetCategoricalCount count = 1;</code>
+   * <code>repeated .bloombox.search.ResultsetCategoricalCount count = 1;</code>
    */
   java.util.List<io.bloombox.schema.search.ResultsetCategoricalCount> 
       getCountList();
@@ -37,7 +38,7 @@ public interface SearchResultsetMetadataOrBuilder extends
    * Count of matching records, across all categorical types.
    * </pre>
    *
-   * <code>repeated .bloombox.schema.search.ResultsetCategoricalCount count = 1;</code>
+   * <code>repeated .bloombox.search.ResultsetCategoricalCount count = 1;</code>
    */
   io.bloombox.schema.search.ResultsetCategoricalCount getCount(int index);
   /**
@@ -45,7 +46,7 @@ public interface SearchResultsetMetadataOrBuilder extends
    * Count of matching records, across all categorical types.
    * </pre>
    *
-   * <code>repeated .bloombox.schema.search.ResultsetCategoricalCount count = 1;</code>
+   * <code>repeated .bloombox.search.ResultsetCategoricalCount count = 1;</code>
    */
   int getCountCount();
   /**
@@ -53,7 +54,7 @@ public interface SearchResultsetMetadataOrBuilder extends
    * Count of matching records, across all categorical types.
    * </pre>
    *
-   * <code>repeated .bloombox.schema.search.ResultsetCategoricalCount count = 1;</code>
+   * <code>repeated .bloombox.search.ResultsetCategoricalCount count = 1;</code>
    */
   java.util.List<? extends io.bloombox.schema.search.ResultsetCategoricalCountOrBuilder> 
       getCountOrBuilderList();
@@ -62,7 +63,7 @@ public interface SearchResultsetMetadataOrBuilder extends
    * Count of matching records, across all categorical types.
    * </pre>
    *
-   * <code>repeated .bloombox.schema.search.ResultsetCategoricalCount count = 1;</code>
+   * <code>repeated .bloombox.search.ResultsetCategoricalCount count = 1;</code>
    */
   io.bloombox.schema.search.ResultsetCategoricalCountOrBuilder getCountOrBuilder(
       int index);
@@ -72,7 +73,7 @@ public interface SearchResultsetMetadataOrBuilder extends
    * Product-specific metadata.
    * </pre>
    *
-   * <code>.bloombox.schema.search.ProductResultMetadata products = 2;</code>
+   * <code>.bloombox.search.ProductResultMetadata products = 2;</code>
    */
   boolean hasProducts();
   /**
@@ -80,7 +81,7 @@ public interface SearchResultsetMetadataOrBuilder extends
    * Product-specific metadata.
    * </pre>
    *
-   * <code>.bloombox.schema.search.ProductResultMetadata products = 2;</code>
+   * <code>.bloombox.search.ProductResultMetadata products = 2;</code>
    */
   io.bloombox.schema.search.ProductResultMetadata getProducts();
   /**
@@ -88,7 +89,7 @@ public interface SearchResultsetMetadataOrBuilder extends
    * Product-specific metadata.
    * </pre>
    *
-   * <code>.bloombox.schema.search.ProductResultMetadata products = 2;</code>
+   * <code>.bloombox.search.ProductResultMetadata products = 2;</code>
    */
   io.bloombox.schema.search.ProductResultMetadataOrBuilder getProductsOrBuilder();
 }

@@ -1,11 +1,12 @@
 /*
- * Copyright 2018, Bloombox, LLC.
+ * Copyright 2018, Momentum Ideas, Co. All rights reserved.
  *
- * Licensed under the Apache License, Version 2.0 (the "License");
- * you may not use this file except in compliance with the License.
- * You may obtain a copy of the License at
- *
- *     http://www.apache.org/licenses/LICENSE-2.0
+ * Source and object computer code contained herein is the private intellectual
+ * property of Momentum Ideas Co., a Delaware Corporation. Use of this
+ * code in source form requires permission in writing before use or the
+ * assembly, distribution, or publishing of derivative works, for commercial
+ * purposes or any other purpose, from a duly authorized officer of Momentum
+ * Ideas Co.
  *
  * Unless required by applicable law or agreed to in writing, software
  * distributed under the License is distributed on an "AS IS" BASIS,
@@ -30,6 +31,141 @@ public final class GenericContent {
     registerAllExtensions(
         (com.google.protobuf.ExtensionRegistryLite) registry);
   }
+  /**
+   * <pre>
+   * Enumerates supported encodings for content data.
+   * </pre>
+   *
+   * Protobuf enum {@code opencannabis.content.Encoding}
+   */
+  public enum Encoding
+      implements com.google.protobuf.ProtocolMessageEnum {
+    /**
+     * <pre>
+     * UTF-8 standard encoding.
+     * </pre>
+     *
+     * <code>UTF8 = 0;</code>
+     */
+    UTF8(0),
+    /**
+     * <pre>
+     * Base-64 encoded UTF-8.
+     * </pre>
+     *
+     * <code>B64 = 1;</code>
+     */
+    B64(1),
+    /**
+     * <pre>
+     * Base-64 encoded ASCII.
+     * </pre>
+     *
+     * <code>B64_ASCII = 2;</code>
+     */
+    B64_ASCII(2),
+    UNRECOGNIZED(-1),
+    ;
+
+    /**
+     * <pre>
+     * UTF-8 standard encoding.
+     * </pre>
+     *
+     * <code>UTF8 = 0;</code>
+     */
+    public static final int UTF8_VALUE = 0;
+    /**
+     * <pre>
+     * Base-64 encoded UTF-8.
+     * </pre>
+     *
+     * <code>B64 = 1;</code>
+     */
+    public static final int B64_VALUE = 1;
+    /**
+     * <pre>
+     * Base-64 encoded ASCII.
+     * </pre>
+     *
+     * <code>B64_ASCII = 2;</code>
+     */
+    public static final int B64_ASCII_VALUE = 2;
+
+
+    public final int getNumber() {
+      if (this == UNRECOGNIZED) {
+        throw new java.lang.IllegalArgumentException(
+            "Can't get the number of an unknown enum value.");
+      }
+      return value;
+    }
+
+    /**
+     * @deprecated Use {@link #forNumber(int)} instead.
+     */
+    @java.lang.Deprecated
+    public static Encoding valueOf(int value) {
+      return forNumber(value);
+    }
+
+    public static Encoding forNumber(int value) {
+      switch (value) {
+        case 0: return UTF8;
+        case 1: return B64;
+        case 2: return B64_ASCII;
+        default: return null;
+      }
+    }
+
+    public static com.google.protobuf.Internal.EnumLiteMap<Encoding>
+        internalGetValueMap() {
+      return internalValueMap;
+    }
+    private static final com.google.protobuf.Internal.EnumLiteMap<
+        Encoding> internalValueMap =
+          new com.google.protobuf.Internal.EnumLiteMap<Encoding>() {
+            public Encoding findValueByNumber(int number) {
+              return Encoding.forNumber(number);
+            }
+          };
+
+    public final com.google.protobuf.Descriptors.EnumValueDescriptor
+        getValueDescriptor() {
+      return getDescriptor().getValues().get(ordinal());
+    }
+    public final com.google.protobuf.Descriptors.EnumDescriptor
+        getDescriptorForType() {
+      return getDescriptor();
+    }
+    public static final com.google.protobuf.Descriptors.EnumDescriptor
+        getDescriptor() {
+      return io.opencannabis.schema.content.GenericContent.getDescriptor().getEnumTypes().get(0);
+    }
+
+    private static final Encoding[] VALUES = values();
+
+    public static Encoding valueOf(
+        com.google.protobuf.Descriptors.EnumValueDescriptor desc) {
+      if (desc.getType() != getDescriptor()) {
+        throw new java.lang.IllegalArgumentException(
+          "EnumValueDescriptor is not for this type.");
+      }
+      if (desc.getIndex() == -1) {
+        return UNRECOGNIZED;
+      }
+      return VALUES[desc.getIndex()];
+    }
+
+    private final int value;
+
+    private Encoding(int value) {
+      this.value = value;
+    }
+
+    // @@protoc_insertion_point(enum_scope:opencannabis.content.Encoding)
+  }
+
   public interface ContentOrBuilder extends
       // @@protoc_insertion_point(interface_extends:opencannabis.content.Content)
       com.google.protobuf.MessageOrBuilder {
@@ -56,7 +192,7 @@ public final class GenericContent {
      * Encoding of underlying content data.
      * </pre>
      *
-     * <code>.opencannabis.content.Content.Encoding encoding = 2;</code>
+     * <code>.opencannabis.content.Encoding encoding = 2;</code>
      */
     int getEncodingValue();
     /**
@@ -64,9 +200,9 @@ public final class GenericContent {
      * Encoding of underlying content data.
      * </pre>
      *
-     * <code>.opencannabis.content.Content.Encoding encoding = 2;</code>
+     * <code>.opencannabis.content.Encoding encoding = 2;</code>
      */
-    io.opencannabis.schema.content.GenericContent.Content.Encoding getEncoding();
+    io.opencannabis.schema.content.GenericContent.Encoding getEncoding();
 
     /**
      * <pre>
@@ -185,13 +321,6 @@ public final class GenericContent {
             case 0:
               done = true;
               break;
-            default: {
-              if (!parseUnknownFieldProto3(
-                  input, unknownFields, extensionRegistry, tag)) {
-                done = true;
-              }
-              break;
-            }
             case 8: {
               int rawValue = input.readEnum();
 
@@ -234,6 +363,13 @@ public final class GenericContent {
               payload_ = input.readBytes();
               break;
             }
+            default: {
+              if (!parseUnknownFieldProto3(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
           }
         }
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
@@ -251,6 +387,7 @@ public final class GenericContent {
       return io.opencannabis.schema.content.GenericContent.internal_static_opencannabis_content_Content_descriptor;
     }
 
+    @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
       return io.opencannabis.schema.content.GenericContent.internal_static_opencannabis_content_Content_fieldAccessorTable
@@ -410,141 +547,6 @@ public final class GenericContent {
       // @@protoc_insertion_point(enum_scope:opencannabis.content.Content.Type)
     }
 
-    /**
-     * <pre>
-     * Enumerates supported encodings for content data.
-     * </pre>
-     *
-     * Protobuf enum {@code opencannabis.content.Content.Encoding}
-     */
-    public enum Encoding
-        implements com.google.protobuf.ProtocolMessageEnum {
-      /**
-       * <pre>
-       * UTF-8 standard encoding.
-       * </pre>
-       *
-       * <code>UTF8 = 0;</code>
-       */
-      UTF8(0),
-      /**
-       * <pre>
-       * Base-64 encoded UTF-8.
-       * </pre>
-       *
-       * <code>B64 = 1;</code>
-       */
-      B64(1),
-      /**
-       * <pre>
-       * Base-64 encoded ASCII.
-       * </pre>
-       *
-       * <code>B64_ASCII = 2;</code>
-       */
-      B64_ASCII(2),
-      UNRECOGNIZED(-1),
-      ;
-
-      /**
-       * <pre>
-       * UTF-8 standard encoding.
-       * </pre>
-       *
-       * <code>UTF8 = 0;</code>
-       */
-      public static final int UTF8_VALUE = 0;
-      /**
-       * <pre>
-       * Base-64 encoded UTF-8.
-       * </pre>
-       *
-       * <code>B64 = 1;</code>
-       */
-      public static final int B64_VALUE = 1;
-      /**
-       * <pre>
-       * Base-64 encoded ASCII.
-       * </pre>
-       *
-       * <code>B64_ASCII = 2;</code>
-       */
-      public static final int B64_ASCII_VALUE = 2;
-
-
-      public final int getNumber() {
-        if (this == UNRECOGNIZED) {
-          throw new java.lang.IllegalArgumentException(
-              "Can't get the number of an unknown enum value.");
-        }
-        return value;
-      }
-
-      /**
-       * @deprecated Use {@link #forNumber(int)} instead.
-       */
-      @java.lang.Deprecated
-      public static Encoding valueOf(int value) {
-        return forNumber(value);
-      }
-
-      public static Encoding forNumber(int value) {
-        switch (value) {
-          case 0: return UTF8;
-          case 1: return B64;
-          case 2: return B64_ASCII;
-          default: return null;
-        }
-      }
-
-      public static com.google.protobuf.Internal.EnumLiteMap<Encoding>
-          internalGetValueMap() {
-        return internalValueMap;
-      }
-      private static final com.google.protobuf.Internal.EnumLiteMap<
-          Encoding> internalValueMap =
-            new com.google.protobuf.Internal.EnumLiteMap<Encoding>() {
-              public Encoding findValueByNumber(int number) {
-                return Encoding.forNumber(number);
-              }
-            };
-
-      public final com.google.protobuf.Descriptors.EnumValueDescriptor
-          getValueDescriptor() {
-        return getDescriptor().getValues().get(ordinal());
-      }
-      public final com.google.protobuf.Descriptors.EnumDescriptor
-          getDescriptorForType() {
-        return getDescriptor();
-      }
-      public static final com.google.protobuf.Descriptors.EnumDescriptor
-          getDescriptor() {
-        return io.opencannabis.schema.content.GenericContent.Content.getDescriptor().getEnumTypes().get(1);
-      }
-
-      private static final Encoding[] VALUES = values();
-
-      public static Encoding valueOf(
-          com.google.protobuf.Descriptors.EnumValueDescriptor desc) {
-        if (desc.getType() != getDescriptor()) {
-          throw new java.lang.IllegalArgumentException(
-            "EnumValueDescriptor is not for this type.");
-        }
-        if (desc.getIndex() == -1) {
-          return UNRECOGNIZED;
-        }
-        return VALUES[desc.getIndex()];
-      }
-
-      private final int value;
-
-      private Encoding(int value) {
-        this.value = value;
-      }
-
-      // @@protoc_insertion_point(enum_scope:opencannabis.content.Content.Encoding)
-    }
-
     private int payloadCase_ = 0;
     private java.lang.Object payload_;
     public enum PayloadCase
@@ -603,6 +605,7 @@ public final class GenericContent {
      * <code>.opencannabis.content.Content.Type type = 1;</code>
      */
     public io.opencannabis.schema.content.GenericContent.Content.Type getType() {
+      @SuppressWarnings("deprecation")
       io.opencannabis.schema.content.GenericContent.Content.Type result = io.opencannabis.schema.content.GenericContent.Content.Type.valueOf(type_);
       return result == null ? io.opencannabis.schema.content.GenericContent.Content.Type.UNRECOGNIZED : result;
     }
@@ -614,7 +617,7 @@ public final class GenericContent {
      * Encoding of underlying content data.
      * </pre>
      *
-     * <code>.opencannabis.content.Content.Encoding encoding = 2;</code>
+     * <code>.opencannabis.content.Encoding encoding = 2;</code>
      */
     public int getEncodingValue() {
       return encoding_;
@@ -624,11 +627,12 @@ public final class GenericContent {
      * Encoding of underlying content data.
      * </pre>
      *
-     * <code>.opencannabis.content.Content.Encoding encoding = 2;</code>
+     * <code>.opencannabis.content.Encoding encoding = 2;</code>
      */
-    public io.opencannabis.schema.content.GenericContent.Content.Encoding getEncoding() {
-      io.opencannabis.schema.content.GenericContent.Content.Encoding result = io.opencannabis.schema.content.GenericContent.Content.Encoding.valueOf(encoding_);
-      return result == null ? io.opencannabis.schema.content.GenericContent.Content.Encoding.UNRECOGNIZED : result;
+    public io.opencannabis.schema.content.GenericContent.Encoding getEncoding() {
+      @SuppressWarnings("deprecation")
+      io.opencannabis.schema.content.GenericContent.Encoding result = io.opencannabis.schema.content.GenericContent.Encoding.valueOf(encoding_);
+      return result == null ? io.opencannabis.schema.content.GenericContent.Encoding.UNRECOGNIZED : result;
     }
 
     public static final int LANGUAGE_FIELD_NUMBER = 3;
@@ -651,6 +655,7 @@ public final class GenericContent {
      * <code>.opencannabis.base.Language language = 3;</code>
      */
     public io.opencannabis.schema.base.BaseLanguage.Language getLanguage() {
+      @SuppressWarnings("deprecation")
       io.opencannabis.schema.base.BaseLanguage.Language result = io.opencannabis.schema.base.BaseLanguage.Language.valueOf(language_);
       return result == null ? io.opencannabis.schema.base.BaseLanguage.Language.UNRECOGNIZED : result;
     }
@@ -755,6 +760,7 @@ public final class GenericContent {
     }
 
     private byte memoizedIsInitialized = -1;
+    @java.lang.Override
     public final boolean isInitialized() {
       byte isInitialized = memoizedIsInitialized;
       if (isInitialized == 1) return true;
@@ -764,12 +770,13 @@ public final class GenericContent {
       return true;
     }
 
+    @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
       if (type_ != io.opencannabis.schema.content.GenericContent.Content.Type.TEXT.getNumber()) {
         output.writeEnum(1, type_);
       }
-      if (encoding_ != io.opencannabis.schema.content.GenericContent.Content.Encoding.UTF8.getNumber()) {
+      if (encoding_ != io.opencannabis.schema.content.GenericContent.Encoding.UTF8.getNumber()) {
         output.writeEnum(2, encoding_);
       }
       if (language_ != io.opencannabis.schema.base.BaseLanguage.Language.LANGUAGE_UNSPECIFIED.getNumber()) {
@@ -788,6 +795,7 @@ public final class GenericContent {
       unknownFields.writeTo(output);
     }
 
+    @java.lang.Override
     public int getSerializedSize() {
       int size = memoizedSize;
       if (size != -1) return size;
@@ -797,7 +805,7 @@ public final class GenericContent {
         size += com.google.protobuf.CodedOutputStream
           .computeEnumSize(1, type_);
       }
-      if (encoding_ != io.opencannabis.schema.content.GenericContent.Content.Encoding.UTF8.getNumber()) {
+      if (encoding_ != io.opencannabis.schema.content.GenericContent.Encoding.UTF8.getNumber()) {
         size += com.google.protobuf.CodedOutputStream
           .computeEnumSize(2, encoding_);
       }
@@ -964,6 +972,7 @@ public final class GenericContent {
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
 
+    @java.lang.Override
     public Builder newBuilderForType() { return newBuilder(); }
     public static Builder newBuilder() {
       return DEFAULT_INSTANCE.toBuilder();
@@ -971,6 +980,7 @@ public final class GenericContent {
     public static Builder newBuilder(io.opencannabis.schema.content.GenericContent.Content prototype) {
       return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
     }
+    @java.lang.Override
     public Builder toBuilder() {
       return this == DEFAULT_INSTANCE
           ? new Builder() : new Builder().mergeFrom(this);
@@ -998,6 +1008,7 @@ public final class GenericContent {
         return io.opencannabis.schema.content.GenericContent.internal_static_opencannabis_content_Content_descriptor;
       }
 
+      @java.lang.Override
       protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
           internalGetFieldAccessorTable() {
         return io.opencannabis.schema.content.GenericContent.internal_static_opencannabis_content_Content_fieldAccessorTable
@@ -1020,6 +1031,7 @@ public final class GenericContent {
                 .alwaysUseFieldBuilders) {
         }
       }
+      @java.lang.Override
       public Builder clear() {
         super.clear();
         type_ = 0;
@@ -1039,15 +1051,18 @@ public final class GenericContent {
         return this;
       }
 
+      @java.lang.Override
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
         return io.opencannabis.schema.content.GenericContent.internal_static_opencannabis_content_Content_descriptor;
       }
 
+      @java.lang.Override
       public io.opencannabis.schema.content.GenericContent.Content getDefaultInstanceForType() {
         return io.opencannabis.schema.content.GenericContent.Content.getDefaultInstance();
       }
 
+      @java.lang.Override
       public io.opencannabis.schema.content.GenericContent.Content build() {
         io.opencannabis.schema.content.GenericContent.Content result = buildPartial();
         if (!result.isInitialized()) {
@@ -1056,6 +1071,7 @@ public final class GenericContent {
         return result;
       }
 
+      @java.lang.Override
       public io.opencannabis.schema.content.GenericContent.Content buildPartial() {
         io.opencannabis.schema.content.GenericContent.Content result = new io.opencannabis.schema.content.GenericContent.Content(this);
         result.type_ = type_;
@@ -1077,32 +1093,39 @@ public final class GenericContent {
         return result;
       }
 
+      @java.lang.Override
       public Builder clone() {
         return (Builder) super.clone();
       }
+      @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
         return (Builder) super.setField(field, value);
       }
+      @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
         return (Builder) super.clearField(field);
       }
+      @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
         return (Builder) super.clearOneof(oneof);
       }
+      @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
         return (Builder) super.setRepeatedField(field, index, value);
       }
+      @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
         return (Builder) super.addRepeatedField(field, value);
       }
+      @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
         if (other instanceof io.opencannabis.schema.content.GenericContent.Content) {
           return mergeFrom((io.opencannabis.schema.content.GenericContent.Content)other);
@@ -1146,10 +1169,12 @@ public final class GenericContent {
         return this;
       }
 
+      @java.lang.Override
       public final boolean isInitialized() {
         return true;
       }
 
+      @java.lang.Override
       public Builder mergeFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -1214,6 +1239,7 @@ public final class GenericContent {
        * <code>.opencannabis.content.Content.Type type = 1;</code>
        */
       public io.opencannabis.schema.content.GenericContent.Content.Type getType() {
+        @SuppressWarnings("deprecation")
         io.opencannabis.schema.content.GenericContent.Content.Type result = io.opencannabis.schema.content.GenericContent.Content.Type.valueOf(type_);
         return result == null ? io.opencannabis.schema.content.GenericContent.Content.Type.UNRECOGNIZED : result;
       }
@@ -1253,7 +1279,7 @@ public final class GenericContent {
        * Encoding of underlying content data.
        * </pre>
        *
-       * <code>.opencannabis.content.Content.Encoding encoding = 2;</code>
+       * <code>.opencannabis.content.Encoding encoding = 2;</code>
        */
       public int getEncodingValue() {
         return encoding_;
@@ -1263,7 +1289,7 @@ public final class GenericContent {
        * Encoding of underlying content data.
        * </pre>
        *
-       * <code>.opencannabis.content.Content.Encoding encoding = 2;</code>
+       * <code>.opencannabis.content.Encoding encoding = 2;</code>
        */
       public Builder setEncodingValue(int value) {
         encoding_ = value;
@@ -1275,20 +1301,21 @@ public final class GenericContent {
        * Encoding of underlying content data.
        * </pre>
        *
-       * <code>.opencannabis.content.Content.Encoding encoding = 2;</code>
+       * <code>.opencannabis.content.Encoding encoding = 2;</code>
        */
-      public io.opencannabis.schema.content.GenericContent.Content.Encoding getEncoding() {
-        io.opencannabis.schema.content.GenericContent.Content.Encoding result = io.opencannabis.schema.content.GenericContent.Content.Encoding.valueOf(encoding_);
-        return result == null ? io.opencannabis.schema.content.GenericContent.Content.Encoding.UNRECOGNIZED : result;
+      public io.opencannabis.schema.content.GenericContent.Encoding getEncoding() {
+        @SuppressWarnings("deprecation")
+        io.opencannabis.schema.content.GenericContent.Encoding result = io.opencannabis.schema.content.GenericContent.Encoding.valueOf(encoding_);
+        return result == null ? io.opencannabis.schema.content.GenericContent.Encoding.UNRECOGNIZED : result;
       }
       /**
        * <pre>
        * Encoding of underlying content data.
        * </pre>
        *
-       * <code>.opencannabis.content.Content.Encoding encoding = 2;</code>
+       * <code>.opencannabis.content.Encoding encoding = 2;</code>
        */
-      public Builder setEncoding(io.opencannabis.schema.content.GenericContent.Content.Encoding value) {
+      public Builder setEncoding(io.opencannabis.schema.content.GenericContent.Encoding value) {
         if (value == null) {
           throw new NullPointerException();
         }
@@ -1302,7 +1329,7 @@ public final class GenericContent {
        * Encoding of underlying content data.
        * </pre>
        *
-       * <code>.opencannabis.content.Content.Encoding encoding = 2;</code>
+       * <code>.opencannabis.content.Encoding encoding = 2;</code>
        */
       public Builder clearEncoding() {
         
@@ -1342,6 +1369,7 @@ public final class GenericContent {
        * <code>.opencannabis.base.Language language = 3;</code>
        */
       public io.opencannabis.schema.base.BaseLanguage.Language getLanguage() {
+        @SuppressWarnings("deprecation")
         io.opencannabis.schema.base.BaseLanguage.Language result = io.opencannabis.schema.base.BaseLanguage.Language.valueOf(language_);
         return result == null ? io.opencannabis.schema.base.BaseLanguage.Language.UNRECOGNIZED : result;
       }
@@ -1672,11 +1700,13 @@ public final class GenericContent {
         }
         return this;
       }
+      @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
         return super.setUnknownFieldsProto3(unknownFields);
       }
 
+      @java.lang.Override
       public final Builder mergeUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
         return super.mergeUnknownFields(unknownFields);
@@ -1698,6 +1728,7 @@ public final class GenericContent {
 
     private static final com.google.protobuf.Parser<Content>
         PARSER = new com.google.protobuf.AbstractParser<Content>() {
+      @java.lang.Override
       public Content parsePartialFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -1715,6 +1746,7 @@ public final class GenericContent {
       return PARSER;
     }
 
+    @java.lang.Override
     public io.opencannabis.schema.content.GenericContent.Content getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
@@ -1737,18 +1769,18 @@ public final class GenericContent {
     java.lang.String[] descriptorData = {
       "\n\025content/Content.proto\022\024opencannabis.co" +
       "ntent\032\016bq_field.proto\032\023base/Language.pro" +
-      "to\032\026base/Compression.proto\"\352\002\n\007Content\0220" +
+      "to\032\026base/Compression.proto\"\264\002\n\007Content\0220" +
       "\n\004type\030\001 \001(\0162\".opencannabis.content.Cont" +
-      "ent.Type\0228\n\010encoding\030\002 \001(\0162&.opencannabi" +
-      "s.content.Content.Encoding\022-\n\010language\030\003" +
-      " \001(\0162\033.opencannabis.base.Language\0223\n\013com" +
-      "pression\030\004 \001(\0132\036.opencannabis.base.Compr" +
-      "ession\022\021\n\007content\030\n \001(\tH\000\022\r\n\003raw\030\024 \001(\014H\000" +
-      "\"4\n\004Type\022\010\n\004TEXT\020\000\022\014\n\010MARKDOWN\020\001\022\010\n\004HTML" +
-      "\020\002\022\n\n\006BINARY\020\003\",\n\010Encoding\022\010\n\004UTF8\020\000\022\007\n\003" +
-      "B64\020\001\022\r\n\tB64_ASCII\020\002B\t\n\007payloadB:\n\036io.op" +
-      "encannabis.schema.contentB\016GenericConten" +
-      "tH\001P\000\242\002\003OCSb\006proto3"
+      "ent.Type\0220\n\010encoding\030\002 \001(\0162\036.opencannabi" +
+      "s.content.Encoding\022-\n\010language\030\003 \001(\0162\033.o" +
+      "pencannabis.base.Language\0223\n\013compression" +
+      "\030\004 \001(\0132\036.opencannabis.base.Compression\022\021" +
+      "\n\007content\030\n \001(\tH\000\022\r\n\003raw\030\024 \001(\014H\000\"4\n\004Type" +
+      "\022\010\n\004TEXT\020\000\022\014\n\010MARKDOWN\020\001\022\010\n\004HTML\020\002\022\n\n\006BI" +
+      "NARY\020\003B\t\n\007payload*,\n\010Encoding\022\010\n\004UTF8\020\000\022" +
+      "\007\n\003B64\020\001\022\r\n\tB64_ASCII\020\002B:\n\036io.opencannab" +
+      "is.schema.contentB\016GenericContentH\001P\000\242\002\003" +
+      "OCSb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {

@@ -1,8 +1,8 @@
 /*
- * Copyright 2018, Bloombox, LLC. All rights reserved.
+ * Copyright 2018, Momentum Ideas, Co. All rights reserved.
  *
  * Source and object computer code contained herein is the private intellectual
- * property of Bloombox, a California Limited Liability Corporation. Use of this
+ * property of Momentum Ideas Co., a Delaware Corporation. Use of this
  * code in source form requires permission in writing before use or the
  * assembly, distribution, or publishing of derivative works, for commercial
  * purposes or any other purpose, from a duly authorized officer of Momentum
@@ -17,20 +17,20 @@
 
 package io.bloombox.schema.services.shop.v1;
 
-import static io.grpc.stub.ClientCalls.asyncUnaryCall;
-import static io.grpc.stub.ClientCalls.asyncServerStreamingCall;
-import static io.grpc.stub.ClientCalls.asyncClientStreamingCall;
-import static io.grpc.stub.ClientCalls.asyncBidiStreamingCall;
-import static io.grpc.stub.ClientCalls.blockingUnaryCall;
-import static io.grpc.stub.ClientCalls.blockingServerStreamingCall;
-import static io.grpc.stub.ClientCalls.futureUnaryCall;
 import static io.grpc.MethodDescriptor.generateFullMethodName;
-import static io.grpc.stub.ServerCalls.asyncUnaryCall;
-import static io.grpc.stub.ServerCalls.asyncServerStreamingCall;
-import static io.grpc.stub.ServerCalls.asyncClientStreamingCall;
+import static io.grpc.stub.ClientCalls.asyncBidiStreamingCall;
+import static io.grpc.stub.ClientCalls.asyncClientStreamingCall;
+import static io.grpc.stub.ClientCalls.asyncServerStreamingCall;
+import static io.grpc.stub.ClientCalls.asyncUnaryCall;
+import static io.grpc.stub.ClientCalls.blockingServerStreamingCall;
+import static io.grpc.stub.ClientCalls.blockingUnaryCall;
+import static io.grpc.stub.ClientCalls.futureUnaryCall;
 import static io.grpc.stub.ServerCalls.asyncBidiStreamingCall;
-import static io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall;
+import static io.grpc.stub.ServerCalls.asyncClientStreamingCall;
+import static io.grpc.stub.ServerCalls.asyncServerStreamingCall;
+import static io.grpc.stub.ServerCalls.asyncUnaryCall;
 import static io.grpc.stub.ServerCalls.asyncUnimplementedStreamingCall;
+import static io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall;
 
 /**
  * <pre>
@@ -39,111 +39,270 @@ import static io.grpc.stub.ServerCalls.asyncUnimplementedStreamingCall;
  * </pre>
  */
 @javax.annotation.Generated(
-    value = "by gRPC proto compiler (version 1.6.0-SNAPSHOT)",
+    value = "by gRPC proto compiler (version 1.18.0-SNAPSHOT)",
     comments = "Source: shop/v1/ShopService_v1.proto")
 public final class ShopGrpc {
 
   private ShopGrpc() {}
 
-  public static final String SERVICE_NAME = "bloombox.schema.services.shop.v1.Shop";
+  public static final String SERVICE_NAME = "bloombox.services.shop.v1.Shop";
 
   // Static method descriptors that strictly reflect the proto.
-  @io.grpc.ExperimentalApi("https://github.com/grpc/grpc-java/issues/1901")
-  public static final io.grpc.MethodDescriptor<io.bloombox.schema.services.shop.v1.Ping.Request,
-      io.bloombox.schema.services.shop.v1.Ping.Response> METHOD_PING =
-      io.grpc.MethodDescriptor.<io.bloombox.schema.services.shop.v1.Ping.Request, io.bloombox.schema.services.shop.v1.Ping.Response>newBuilder()
-          .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-          .setFullMethodName(generateFullMethodName(
-              "bloombox.schema.services.shop.v1.Shop", "Ping"))
-          .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-              io.bloombox.schema.services.shop.v1.Ping.Request.getDefaultInstance()))
-          .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-              io.bloombox.schema.services.shop.v1.Ping.Response.getDefaultInstance()))
-          .build();
-  @io.grpc.ExperimentalApi("https://github.com/grpc/grpc-java/issues/1901")
-  public static final io.grpc.MethodDescriptor<io.bloombox.schema.services.shop.v1.ShopInfo.Request,
-      io.bloombox.schema.services.shop.v1.ShopInfo.Response> METHOD_SHOP_INFO =
-      io.grpc.MethodDescriptor.<io.bloombox.schema.services.shop.v1.ShopInfo.Request, io.bloombox.schema.services.shop.v1.ShopInfo.Response>newBuilder()
-          .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-          .setFullMethodName(generateFullMethodName(
-              "bloombox.schema.services.shop.v1.Shop", "ShopInfo"))
-          .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-              io.bloombox.schema.services.shop.v1.ShopInfo.Request.getDefaultInstance()))
-          .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-              io.bloombox.schema.services.shop.v1.ShopInfo.Response.getDefaultInstance()))
-          .build();
-  @io.grpc.ExperimentalApi("https://github.com/grpc/grpc-java/issues/1901")
-  public static final io.grpc.MethodDescriptor<io.bloombox.schema.services.shop.v1.EnrollMember.Request,
-      io.bloombox.schema.services.shop.v1.EnrollMember.Response> METHOD_ENROLL_MEMBER =
-      io.grpc.MethodDescriptor.<io.bloombox.schema.services.shop.v1.EnrollMember.Request, io.bloombox.schema.services.shop.v1.EnrollMember.Response>newBuilder()
-          .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-          .setFullMethodName(generateFullMethodName(
-              "bloombox.schema.services.shop.v1.Shop", "EnrollMember"))
-          .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-              io.bloombox.schema.services.shop.v1.EnrollMember.Request.getDefaultInstance()))
-          .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-              io.bloombox.schema.services.shop.v1.EnrollMember.Response.getDefaultInstance()))
-          .build();
-  @io.grpc.ExperimentalApi("https://github.com/grpc/grpc-java/issues/1901")
-  public static final io.grpc.MethodDescriptor<io.bloombox.schema.services.shop.v1.CheckZipcode.Request,
-      io.bloombox.schema.services.shop.v1.CheckZipcode.Response> METHOD_CHECK_ZIPCODE =
-      io.grpc.MethodDescriptor.<io.bloombox.schema.services.shop.v1.CheckZipcode.Request, io.bloombox.schema.services.shop.v1.CheckZipcode.Response>newBuilder()
-          .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-          .setFullMethodName(generateFullMethodName(
-              "bloombox.schema.services.shop.v1.Shop", "CheckZipcode"))
-          .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-              io.bloombox.schema.services.shop.v1.CheckZipcode.Request.getDefaultInstance()))
-          .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-              io.bloombox.schema.services.shop.v1.CheckZipcode.Response.getDefaultInstance()))
-          .build();
-  @io.grpc.ExperimentalApi("https://github.com/grpc/grpc-java/issues/1901")
-  public static final io.grpc.MethodDescriptor<io.bloombox.schema.services.shop.v1.VerifyMember.Request,
-      io.bloombox.schema.services.shop.v1.VerifyMember.Response> METHOD_VERIFY_MEMBER =
-      io.grpc.MethodDescriptor.<io.bloombox.schema.services.shop.v1.VerifyMember.Request, io.bloombox.schema.services.shop.v1.VerifyMember.Response>newBuilder()
-          .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-          .setFullMethodName(generateFullMethodName(
-              "bloombox.schema.services.shop.v1.Shop", "VerifyMember"))
-          .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-              io.bloombox.schema.services.shop.v1.VerifyMember.Request.getDefaultInstance()))
-          .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-              io.bloombox.schema.services.shop.v1.VerifyMember.Response.getDefaultInstance()))
-          .build();
-  @io.grpc.ExperimentalApi("https://github.com/grpc/grpc-java/issues/1901")
-  public static final io.grpc.MethodDescriptor<io.bloombox.schema.services.shop.v1.SubmitOrder.Request,
-      io.bloombox.schema.services.shop.v1.SubmitOrder.Response> METHOD_SUBMIT_ORDER =
-      io.grpc.MethodDescriptor.<io.bloombox.schema.services.shop.v1.SubmitOrder.Request, io.bloombox.schema.services.shop.v1.SubmitOrder.Response>newBuilder()
-          .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-          .setFullMethodName(generateFullMethodName(
-              "bloombox.schema.services.shop.v1.Shop", "SubmitOrder"))
-          .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-              io.bloombox.schema.services.shop.v1.SubmitOrder.Request.getDefaultInstance()))
-          .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-              io.bloombox.schema.services.shop.v1.SubmitOrder.Response.getDefaultInstance()))
-          .build();
-  @io.grpc.ExperimentalApi("https://github.com/grpc/grpc-java/issues/1901")
-  public static final io.grpc.MethodDescriptor<io.bloombox.schema.services.shop.v1.GetOrder.Request,
-      io.bloombox.schema.services.shop.v1.GetOrder.Response> METHOD_GET_ORDER =
-      io.grpc.MethodDescriptor.<io.bloombox.schema.services.shop.v1.GetOrder.Request, io.bloombox.schema.services.shop.v1.GetOrder.Response>newBuilder()
-          .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-          .setFullMethodName(generateFullMethodName(
-              "bloombox.schema.services.shop.v1.Shop", "GetOrder"))
-          .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-              io.bloombox.schema.services.shop.v1.GetOrder.Request.getDefaultInstance()))
-          .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-              io.bloombox.schema.services.shop.v1.GetOrder.Response.getDefaultInstance()))
-          .build();
-  @io.grpc.ExperimentalApi("https://github.com/grpc/grpc-java/issues/1901")
-  public static final io.grpc.MethodDescriptor<io.bloombox.schema.services.shop.v1.ShareOrder.Request,
-      io.bloombox.schema.services.shop.v1.ShareOrder.Response> METHOD_SHARE_ORDER =
-      io.grpc.MethodDescriptor.<io.bloombox.schema.services.shop.v1.ShareOrder.Request, io.bloombox.schema.services.shop.v1.ShareOrder.Response>newBuilder()
-          .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-          .setFullMethodName(generateFullMethodName(
-              "bloombox.schema.services.shop.v1.Shop", "ShareOrder"))
-          .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-              io.bloombox.schema.services.shop.v1.ShareOrder.Request.getDefaultInstance()))
-          .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-              io.bloombox.schema.services.shop.v1.ShareOrder.Response.getDefaultInstance()))
-          .build();
+  private static volatile io.grpc.MethodDescriptor<io.bloombox.schema.services.shop.v1.Ping.Request,
+      io.bloombox.schema.services.shop.v1.Ping.Response> getPingMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "Ping",
+      requestType = io.bloombox.schema.services.shop.v1.Ping.Request.class,
+      responseType = io.bloombox.schema.services.shop.v1.Ping.Response.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<io.bloombox.schema.services.shop.v1.Ping.Request,
+      io.bloombox.schema.services.shop.v1.Ping.Response> getPingMethod() {
+    io.grpc.MethodDescriptor<io.bloombox.schema.services.shop.v1.Ping.Request, io.bloombox.schema.services.shop.v1.Ping.Response> getPingMethod;
+    if ((getPingMethod = ShopGrpc.getPingMethod) == null) {
+      synchronized (ShopGrpc.class) {
+        if ((getPingMethod = ShopGrpc.getPingMethod) == null) {
+          ShopGrpc.getPingMethod = getPingMethod = 
+              io.grpc.MethodDescriptor.<io.bloombox.schema.services.shop.v1.Ping.Request, io.bloombox.schema.services.shop.v1.Ping.Response>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(
+                  "bloombox.services.shop.v1.Shop", "Ping"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  io.bloombox.schema.services.shop.v1.Ping.Request.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  io.bloombox.schema.services.shop.v1.Ping.Response.getDefaultInstance()))
+                  .setSchemaDescriptor(new ShopMethodDescriptorSupplier("Ping"))
+                  .build();
+          }
+        }
+     }
+     return getPingMethod;
+  }
+
+  private static volatile io.grpc.MethodDescriptor<io.bloombox.schema.services.shop.v1.ShopInfo.Request,
+      io.bloombox.schema.services.shop.v1.ShopInfo.Response> getShopInfoMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "ShopInfo",
+      requestType = io.bloombox.schema.services.shop.v1.ShopInfo.Request.class,
+      responseType = io.bloombox.schema.services.shop.v1.ShopInfo.Response.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<io.bloombox.schema.services.shop.v1.ShopInfo.Request,
+      io.bloombox.schema.services.shop.v1.ShopInfo.Response> getShopInfoMethod() {
+    io.grpc.MethodDescriptor<io.bloombox.schema.services.shop.v1.ShopInfo.Request, io.bloombox.schema.services.shop.v1.ShopInfo.Response> getShopInfoMethod;
+    if ((getShopInfoMethod = ShopGrpc.getShopInfoMethod) == null) {
+      synchronized (ShopGrpc.class) {
+        if ((getShopInfoMethod = ShopGrpc.getShopInfoMethod) == null) {
+          ShopGrpc.getShopInfoMethod = getShopInfoMethod = 
+              io.grpc.MethodDescriptor.<io.bloombox.schema.services.shop.v1.ShopInfo.Request, io.bloombox.schema.services.shop.v1.ShopInfo.Response>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(
+                  "bloombox.services.shop.v1.Shop", "ShopInfo"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  io.bloombox.schema.services.shop.v1.ShopInfo.Request.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  io.bloombox.schema.services.shop.v1.ShopInfo.Response.getDefaultInstance()))
+                  .setSchemaDescriptor(new ShopMethodDescriptorSupplier("ShopInfo"))
+                  .build();
+          }
+        }
+     }
+     return getShopInfoMethod;
+  }
+
+  private static volatile io.grpc.MethodDescriptor<io.bloombox.schema.services.shop.v1.EnrollMember.Request,
+      io.bloombox.schema.services.shop.v1.EnrollMember.Response> getEnrollMemberMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "EnrollMember",
+      requestType = io.bloombox.schema.services.shop.v1.EnrollMember.Request.class,
+      responseType = io.bloombox.schema.services.shop.v1.EnrollMember.Response.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<io.bloombox.schema.services.shop.v1.EnrollMember.Request,
+      io.bloombox.schema.services.shop.v1.EnrollMember.Response> getEnrollMemberMethod() {
+    io.grpc.MethodDescriptor<io.bloombox.schema.services.shop.v1.EnrollMember.Request, io.bloombox.schema.services.shop.v1.EnrollMember.Response> getEnrollMemberMethod;
+    if ((getEnrollMemberMethod = ShopGrpc.getEnrollMemberMethod) == null) {
+      synchronized (ShopGrpc.class) {
+        if ((getEnrollMemberMethod = ShopGrpc.getEnrollMemberMethod) == null) {
+          ShopGrpc.getEnrollMemberMethod = getEnrollMemberMethod = 
+              io.grpc.MethodDescriptor.<io.bloombox.schema.services.shop.v1.EnrollMember.Request, io.bloombox.schema.services.shop.v1.EnrollMember.Response>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(
+                  "bloombox.services.shop.v1.Shop", "EnrollMember"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  io.bloombox.schema.services.shop.v1.EnrollMember.Request.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  io.bloombox.schema.services.shop.v1.EnrollMember.Response.getDefaultInstance()))
+                  .setSchemaDescriptor(new ShopMethodDescriptorSupplier("EnrollMember"))
+                  .build();
+          }
+        }
+     }
+     return getEnrollMemberMethod;
+  }
+
+  private static volatile io.grpc.MethodDescriptor<io.bloombox.schema.services.shop.v1.CheckZipcode.Request,
+      io.bloombox.schema.services.shop.v1.CheckZipcode.Response> getCheckZipcodeMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "CheckZipcode",
+      requestType = io.bloombox.schema.services.shop.v1.CheckZipcode.Request.class,
+      responseType = io.bloombox.schema.services.shop.v1.CheckZipcode.Response.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<io.bloombox.schema.services.shop.v1.CheckZipcode.Request,
+      io.bloombox.schema.services.shop.v1.CheckZipcode.Response> getCheckZipcodeMethod() {
+    io.grpc.MethodDescriptor<io.bloombox.schema.services.shop.v1.CheckZipcode.Request, io.bloombox.schema.services.shop.v1.CheckZipcode.Response> getCheckZipcodeMethod;
+    if ((getCheckZipcodeMethod = ShopGrpc.getCheckZipcodeMethod) == null) {
+      synchronized (ShopGrpc.class) {
+        if ((getCheckZipcodeMethod = ShopGrpc.getCheckZipcodeMethod) == null) {
+          ShopGrpc.getCheckZipcodeMethod = getCheckZipcodeMethod = 
+              io.grpc.MethodDescriptor.<io.bloombox.schema.services.shop.v1.CheckZipcode.Request, io.bloombox.schema.services.shop.v1.CheckZipcode.Response>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(
+                  "bloombox.services.shop.v1.Shop", "CheckZipcode"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  io.bloombox.schema.services.shop.v1.CheckZipcode.Request.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  io.bloombox.schema.services.shop.v1.CheckZipcode.Response.getDefaultInstance()))
+                  .setSchemaDescriptor(new ShopMethodDescriptorSupplier("CheckZipcode"))
+                  .build();
+          }
+        }
+     }
+     return getCheckZipcodeMethod;
+  }
+
+  private static volatile io.grpc.MethodDescriptor<io.bloombox.schema.services.shop.v1.VerifyMember.Request,
+      io.bloombox.schema.services.shop.v1.VerifyMember.Response> getVerifyMemberMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "VerifyMember",
+      requestType = io.bloombox.schema.services.shop.v1.VerifyMember.Request.class,
+      responseType = io.bloombox.schema.services.shop.v1.VerifyMember.Response.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<io.bloombox.schema.services.shop.v1.VerifyMember.Request,
+      io.bloombox.schema.services.shop.v1.VerifyMember.Response> getVerifyMemberMethod() {
+    io.grpc.MethodDescriptor<io.bloombox.schema.services.shop.v1.VerifyMember.Request, io.bloombox.schema.services.shop.v1.VerifyMember.Response> getVerifyMemberMethod;
+    if ((getVerifyMemberMethod = ShopGrpc.getVerifyMemberMethod) == null) {
+      synchronized (ShopGrpc.class) {
+        if ((getVerifyMemberMethod = ShopGrpc.getVerifyMemberMethod) == null) {
+          ShopGrpc.getVerifyMemberMethod = getVerifyMemberMethod = 
+              io.grpc.MethodDescriptor.<io.bloombox.schema.services.shop.v1.VerifyMember.Request, io.bloombox.schema.services.shop.v1.VerifyMember.Response>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(
+                  "bloombox.services.shop.v1.Shop", "VerifyMember"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  io.bloombox.schema.services.shop.v1.VerifyMember.Request.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  io.bloombox.schema.services.shop.v1.VerifyMember.Response.getDefaultInstance()))
+                  .setSchemaDescriptor(new ShopMethodDescriptorSupplier("VerifyMember"))
+                  .build();
+          }
+        }
+     }
+     return getVerifyMemberMethod;
+  }
+
+  private static volatile io.grpc.MethodDescriptor<io.bloombox.schema.services.shop.v1.SubmitOrder.Request,
+      io.bloombox.schema.services.shop.v1.SubmitOrder.Response> getSubmitOrderMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "SubmitOrder",
+      requestType = io.bloombox.schema.services.shop.v1.SubmitOrder.Request.class,
+      responseType = io.bloombox.schema.services.shop.v1.SubmitOrder.Response.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<io.bloombox.schema.services.shop.v1.SubmitOrder.Request,
+      io.bloombox.schema.services.shop.v1.SubmitOrder.Response> getSubmitOrderMethod() {
+    io.grpc.MethodDescriptor<io.bloombox.schema.services.shop.v1.SubmitOrder.Request, io.bloombox.schema.services.shop.v1.SubmitOrder.Response> getSubmitOrderMethod;
+    if ((getSubmitOrderMethod = ShopGrpc.getSubmitOrderMethod) == null) {
+      synchronized (ShopGrpc.class) {
+        if ((getSubmitOrderMethod = ShopGrpc.getSubmitOrderMethod) == null) {
+          ShopGrpc.getSubmitOrderMethod = getSubmitOrderMethod = 
+              io.grpc.MethodDescriptor.<io.bloombox.schema.services.shop.v1.SubmitOrder.Request, io.bloombox.schema.services.shop.v1.SubmitOrder.Response>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(
+                  "bloombox.services.shop.v1.Shop", "SubmitOrder"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  io.bloombox.schema.services.shop.v1.SubmitOrder.Request.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  io.bloombox.schema.services.shop.v1.SubmitOrder.Response.getDefaultInstance()))
+                  .setSchemaDescriptor(new ShopMethodDescriptorSupplier("SubmitOrder"))
+                  .build();
+          }
+        }
+     }
+     return getSubmitOrderMethod;
+  }
+
+  private static volatile io.grpc.MethodDescriptor<io.bloombox.schema.services.shop.v1.GetOrder.Request,
+      io.bloombox.schema.services.shop.v1.GetOrder.Response> getGetOrderMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "GetOrder",
+      requestType = io.bloombox.schema.services.shop.v1.GetOrder.Request.class,
+      responseType = io.bloombox.schema.services.shop.v1.GetOrder.Response.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<io.bloombox.schema.services.shop.v1.GetOrder.Request,
+      io.bloombox.schema.services.shop.v1.GetOrder.Response> getGetOrderMethod() {
+    io.grpc.MethodDescriptor<io.bloombox.schema.services.shop.v1.GetOrder.Request, io.bloombox.schema.services.shop.v1.GetOrder.Response> getGetOrderMethod;
+    if ((getGetOrderMethod = ShopGrpc.getGetOrderMethod) == null) {
+      synchronized (ShopGrpc.class) {
+        if ((getGetOrderMethod = ShopGrpc.getGetOrderMethod) == null) {
+          ShopGrpc.getGetOrderMethod = getGetOrderMethod = 
+              io.grpc.MethodDescriptor.<io.bloombox.schema.services.shop.v1.GetOrder.Request, io.bloombox.schema.services.shop.v1.GetOrder.Response>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(
+                  "bloombox.services.shop.v1.Shop", "GetOrder"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  io.bloombox.schema.services.shop.v1.GetOrder.Request.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  io.bloombox.schema.services.shop.v1.GetOrder.Response.getDefaultInstance()))
+                  .setSchemaDescriptor(new ShopMethodDescriptorSupplier("GetOrder"))
+                  .build();
+          }
+        }
+     }
+     return getGetOrderMethod;
+  }
+
+  private static volatile io.grpc.MethodDescriptor<io.bloombox.schema.services.shop.v1.ShareOrder.Request,
+      io.bloombox.schema.services.shop.v1.ShareOrder.Response> getShareOrderMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "ShareOrder",
+      requestType = io.bloombox.schema.services.shop.v1.ShareOrder.Request.class,
+      responseType = io.bloombox.schema.services.shop.v1.ShareOrder.Response.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<io.bloombox.schema.services.shop.v1.ShareOrder.Request,
+      io.bloombox.schema.services.shop.v1.ShareOrder.Response> getShareOrderMethod() {
+    io.grpc.MethodDescriptor<io.bloombox.schema.services.shop.v1.ShareOrder.Request, io.bloombox.schema.services.shop.v1.ShareOrder.Response> getShareOrderMethod;
+    if ((getShareOrderMethod = ShopGrpc.getShareOrderMethod) == null) {
+      synchronized (ShopGrpc.class) {
+        if ((getShareOrderMethod = ShopGrpc.getShareOrderMethod) == null) {
+          ShopGrpc.getShareOrderMethod = getShareOrderMethod = 
+              io.grpc.MethodDescriptor.<io.bloombox.schema.services.shop.v1.ShareOrder.Request, io.bloombox.schema.services.shop.v1.ShareOrder.Response>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(
+                  "bloombox.services.shop.v1.Shop", "ShareOrder"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  io.bloombox.schema.services.shop.v1.ShareOrder.Request.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  io.bloombox.schema.services.shop.v1.ShareOrder.Response.getDefaultInstance()))
+                  .setSchemaDescriptor(new ShopMethodDescriptorSupplier("ShareOrder"))
+                  .build();
+          }
+        }
+     }
+     return getShareOrderMethod;
+  }
 
   /**
    * Creates a new async stub that supports all call types for the service
@@ -183,7 +342,7 @@ public final class ShopGrpc {
      */
     public void ping(io.bloombox.schema.services.shop.v1.Ping.Request request,
         io.grpc.stub.StreamObserver<io.bloombox.schema.services.shop.v1.Ping.Response> responseObserver) {
-      asyncUnimplementedUnaryCall(METHOD_PING, responseObserver);
+      asyncUnimplementedUnaryCall(getPingMethod(), responseObserver);
     }
 
     /**
@@ -193,7 +352,7 @@ public final class ShopGrpc {
      */
     public void shopInfo(io.bloombox.schema.services.shop.v1.ShopInfo.Request request,
         io.grpc.stub.StreamObserver<io.bloombox.schema.services.shop.v1.ShopInfo.Response> responseObserver) {
-      asyncUnimplementedUnaryCall(METHOD_SHOP_INFO, responseObserver);
+      asyncUnimplementedUnaryCall(getShopInfoMethod(), responseObserver);
     }
 
     /**
@@ -203,7 +362,7 @@ public final class ShopGrpc {
      */
     public void enrollMember(io.bloombox.schema.services.shop.v1.EnrollMember.Request request,
         io.grpc.stub.StreamObserver<io.bloombox.schema.services.shop.v1.EnrollMember.Response> responseObserver) {
-      asyncUnimplementedUnaryCall(METHOD_ENROLL_MEMBER, responseObserver);
+      asyncUnimplementedUnaryCall(getEnrollMemberMethod(), responseObserver);
     }
 
     /**
@@ -213,7 +372,7 @@ public final class ShopGrpc {
      */
     public void checkZipcode(io.bloombox.schema.services.shop.v1.CheckZipcode.Request request,
         io.grpc.stub.StreamObserver<io.bloombox.schema.services.shop.v1.CheckZipcode.Response> responseObserver) {
-      asyncUnimplementedUnaryCall(METHOD_CHECK_ZIPCODE, responseObserver);
+      asyncUnimplementedUnaryCall(getCheckZipcodeMethod(), responseObserver);
     }
 
     /**
@@ -223,7 +382,7 @@ public final class ShopGrpc {
      */
     public void verifyMember(io.bloombox.schema.services.shop.v1.VerifyMember.Request request,
         io.grpc.stub.StreamObserver<io.bloombox.schema.services.shop.v1.VerifyMember.Response> responseObserver) {
-      asyncUnimplementedUnaryCall(METHOD_VERIFY_MEMBER, responseObserver);
+      asyncUnimplementedUnaryCall(getVerifyMemberMethod(), responseObserver);
     }
 
     /**
@@ -233,7 +392,7 @@ public final class ShopGrpc {
      */
     public void submitOrder(io.bloombox.schema.services.shop.v1.SubmitOrder.Request request,
         io.grpc.stub.StreamObserver<io.bloombox.schema.services.shop.v1.SubmitOrder.Response> responseObserver) {
-      asyncUnimplementedUnaryCall(METHOD_SUBMIT_ORDER, responseObserver);
+      asyncUnimplementedUnaryCall(getSubmitOrderMethod(), responseObserver);
     }
 
     /**
@@ -243,7 +402,7 @@ public final class ShopGrpc {
      */
     public void getOrder(io.bloombox.schema.services.shop.v1.GetOrder.Request request,
         io.grpc.stub.StreamObserver<io.bloombox.schema.services.shop.v1.GetOrder.Response> responseObserver) {
-      asyncUnimplementedUnaryCall(METHOD_GET_ORDER, responseObserver);
+      asyncUnimplementedUnaryCall(getGetOrderMethod(), responseObserver);
     }
 
     /**
@@ -253,62 +412,62 @@ public final class ShopGrpc {
      */
     public void shareOrder(io.bloombox.schema.services.shop.v1.ShareOrder.Request request,
         io.grpc.stub.StreamObserver<io.bloombox.schema.services.shop.v1.ShareOrder.Response> responseObserver) {
-      asyncUnimplementedUnaryCall(METHOD_SHARE_ORDER, responseObserver);
+      asyncUnimplementedUnaryCall(getShareOrderMethod(), responseObserver);
     }
 
     @java.lang.Override public final io.grpc.ServerServiceDefinition bindService() {
       return io.grpc.ServerServiceDefinition.builder(getServiceDescriptor())
           .addMethod(
-            METHOD_PING,
+            getPingMethod(),
             asyncUnaryCall(
               new MethodHandlers<
                 io.bloombox.schema.services.shop.v1.Ping.Request,
                 io.bloombox.schema.services.shop.v1.Ping.Response>(
                   this, METHODID_PING)))
           .addMethod(
-            METHOD_SHOP_INFO,
+            getShopInfoMethod(),
             asyncUnaryCall(
               new MethodHandlers<
                 io.bloombox.schema.services.shop.v1.ShopInfo.Request,
                 io.bloombox.schema.services.shop.v1.ShopInfo.Response>(
                   this, METHODID_SHOP_INFO)))
           .addMethod(
-            METHOD_ENROLL_MEMBER,
+            getEnrollMemberMethod(),
             asyncUnaryCall(
               new MethodHandlers<
                 io.bloombox.schema.services.shop.v1.EnrollMember.Request,
                 io.bloombox.schema.services.shop.v1.EnrollMember.Response>(
                   this, METHODID_ENROLL_MEMBER)))
           .addMethod(
-            METHOD_CHECK_ZIPCODE,
+            getCheckZipcodeMethod(),
             asyncUnaryCall(
               new MethodHandlers<
                 io.bloombox.schema.services.shop.v1.CheckZipcode.Request,
                 io.bloombox.schema.services.shop.v1.CheckZipcode.Response>(
                   this, METHODID_CHECK_ZIPCODE)))
           .addMethod(
-            METHOD_VERIFY_MEMBER,
+            getVerifyMemberMethod(),
             asyncUnaryCall(
               new MethodHandlers<
                 io.bloombox.schema.services.shop.v1.VerifyMember.Request,
                 io.bloombox.schema.services.shop.v1.VerifyMember.Response>(
                   this, METHODID_VERIFY_MEMBER)))
           .addMethod(
-            METHOD_SUBMIT_ORDER,
+            getSubmitOrderMethod(),
             asyncUnaryCall(
               new MethodHandlers<
                 io.bloombox.schema.services.shop.v1.SubmitOrder.Request,
                 io.bloombox.schema.services.shop.v1.SubmitOrder.Response>(
                   this, METHODID_SUBMIT_ORDER)))
           .addMethod(
-            METHOD_GET_ORDER,
+            getGetOrderMethod(),
             asyncUnaryCall(
               new MethodHandlers<
                 io.bloombox.schema.services.shop.v1.GetOrder.Request,
                 io.bloombox.schema.services.shop.v1.GetOrder.Response>(
                   this, METHODID_GET_ORDER)))
           .addMethod(
-            METHOD_SHARE_ORDER,
+            getShareOrderMethod(),
             asyncUnaryCall(
               new MethodHandlers<
                 io.bloombox.schema.services.shop.v1.ShareOrder.Request,
@@ -348,7 +507,7 @@ public final class ShopGrpc {
     public void ping(io.bloombox.schema.services.shop.v1.Ping.Request request,
         io.grpc.stub.StreamObserver<io.bloombox.schema.services.shop.v1.Ping.Response> responseObserver) {
       asyncUnaryCall(
-          getChannel().newCall(METHOD_PING, getCallOptions()), request, responseObserver);
+          getChannel().newCall(getPingMethod(), getCallOptions()), request, responseObserver);
     }
 
     /**
@@ -359,7 +518,7 @@ public final class ShopGrpc {
     public void shopInfo(io.bloombox.schema.services.shop.v1.ShopInfo.Request request,
         io.grpc.stub.StreamObserver<io.bloombox.schema.services.shop.v1.ShopInfo.Response> responseObserver) {
       asyncUnaryCall(
-          getChannel().newCall(METHOD_SHOP_INFO, getCallOptions()), request, responseObserver);
+          getChannel().newCall(getShopInfoMethod(), getCallOptions()), request, responseObserver);
     }
 
     /**
@@ -370,7 +529,7 @@ public final class ShopGrpc {
     public void enrollMember(io.bloombox.schema.services.shop.v1.EnrollMember.Request request,
         io.grpc.stub.StreamObserver<io.bloombox.schema.services.shop.v1.EnrollMember.Response> responseObserver) {
       asyncUnaryCall(
-          getChannel().newCall(METHOD_ENROLL_MEMBER, getCallOptions()), request, responseObserver);
+          getChannel().newCall(getEnrollMemberMethod(), getCallOptions()), request, responseObserver);
     }
 
     /**
@@ -381,7 +540,7 @@ public final class ShopGrpc {
     public void checkZipcode(io.bloombox.schema.services.shop.v1.CheckZipcode.Request request,
         io.grpc.stub.StreamObserver<io.bloombox.schema.services.shop.v1.CheckZipcode.Response> responseObserver) {
       asyncUnaryCall(
-          getChannel().newCall(METHOD_CHECK_ZIPCODE, getCallOptions()), request, responseObserver);
+          getChannel().newCall(getCheckZipcodeMethod(), getCallOptions()), request, responseObserver);
     }
 
     /**
@@ -392,7 +551,7 @@ public final class ShopGrpc {
     public void verifyMember(io.bloombox.schema.services.shop.v1.VerifyMember.Request request,
         io.grpc.stub.StreamObserver<io.bloombox.schema.services.shop.v1.VerifyMember.Response> responseObserver) {
       asyncUnaryCall(
-          getChannel().newCall(METHOD_VERIFY_MEMBER, getCallOptions()), request, responseObserver);
+          getChannel().newCall(getVerifyMemberMethod(), getCallOptions()), request, responseObserver);
     }
 
     /**
@@ -403,7 +562,7 @@ public final class ShopGrpc {
     public void submitOrder(io.bloombox.schema.services.shop.v1.SubmitOrder.Request request,
         io.grpc.stub.StreamObserver<io.bloombox.schema.services.shop.v1.SubmitOrder.Response> responseObserver) {
       asyncUnaryCall(
-          getChannel().newCall(METHOD_SUBMIT_ORDER, getCallOptions()), request, responseObserver);
+          getChannel().newCall(getSubmitOrderMethod(), getCallOptions()), request, responseObserver);
     }
 
     /**
@@ -414,7 +573,7 @@ public final class ShopGrpc {
     public void getOrder(io.bloombox.schema.services.shop.v1.GetOrder.Request request,
         io.grpc.stub.StreamObserver<io.bloombox.schema.services.shop.v1.GetOrder.Response> responseObserver) {
       asyncUnaryCall(
-          getChannel().newCall(METHOD_GET_ORDER, getCallOptions()), request, responseObserver);
+          getChannel().newCall(getGetOrderMethod(), getCallOptions()), request, responseObserver);
     }
 
     /**
@@ -425,7 +584,7 @@ public final class ShopGrpc {
     public void shareOrder(io.bloombox.schema.services.shop.v1.ShareOrder.Request request,
         io.grpc.stub.StreamObserver<io.bloombox.schema.services.shop.v1.ShareOrder.Response> responseObserver) {
       asyncUnaryCall(
-          getChannel().newCall(METHOD_SHARE_ORDER, getCallOptions()), request, responseObserver);
+          getChannel().newCall(getShareOrderMethod(), getCallOptions()), request, responseObserver);
     }
   }
 
@@ -458,7 +617,7 @@ public final class ShopGrpc {
      */
     public io.bloombox.schema.services.shop.v1.Ping.Response ping(io.bloombox.schema.services.shop.v1.Ping.Request request) {
       return blockingUnaryCall(
-          getChannel(), METHOD_PING, getCallOptions(), request);
+          getChannel(), getPingMethod(), getCallOptions(), request);
     }
 
     /**
@@ -468,7 +627,7 @@ public final class ShopGrpc {
      */
     public io.bloombox.schema.services.shop.v1.ShopInfo.Response shopInfo(io.bloombox.schema.services.shop.v1.ShopInfo.Request request) {
       return blockingUnaryCall(
-          getChannel(), METHOD_SHOP_INFO, getCallOptions(), request);
+          getChannel(), getShopInfoMethod(), getCallOptions(), request);
     }
 
     /**
@@ -478,7 +637,7 @@ public final class ShopGrpc {
      */
     public io.bloombox.schema.services.shop.v1.EnrollMember.Response enrollMember(io.bloombox.schema.services.shop.v1.EnrollMember.Request request) {
       return blockingUnaryCall(
-          getChannel(), METHOD_ENROLL_MEMBER, getCallOptions(), request);
+          getChannel(), getEnrollMemberMethod(), getCallOptions(), request);
     }
 
     /**
@@ -488,7 +647,7 @@ public final class ShopGrpc {
      */
     public io.bloombox.schema.services.shop.v1.CheckZipcode.Response checkZipcode(io.bloombox.schema.services.shop.v1.CheckZipcode.Request request) {
       return blockingUnaryCall(
-          getChannel(), METHOD_CHECK_ZIPCODE, getCallOptions(), request);
+          getChannel(), getCheckZipcodeMethod(), getCallOptions(), request);
     }
 
     /**
@@ -498,7 +657,7 @@ public final class ShopGrpc {
      */
     public io.bloombox.schema.services.shop.v1.VerifyMember.Response verifyMember(io.bloombox.schema.services.shop.v1.VerifyMember.Request request) {
       return blockingUnaryCall(
-          getChannel(), METHOD_VERIFY_MEMBER, getCallOptions(), request);
+          getChannel(), getVerifyMemberMethod(), getCallOptions(), request);
     }
 
     /**
@@ -508,7 +667,7 @@ public final class ShopGrpc {
      */
     public io.bloombox.schema.services.shop.v1.SubmitOrder.Response submitOrder(io.bloombox.schema.services.shop.v1.SubmitOrder.Request request) {
       return blockingUnaryCall(
-          getChannel(), METHOD_SUBMIT_ORDER, getCallOptions(), request);
+          getChannel(), getSubmitOrderMethod(), getCallOptions(), request);
     }
 
     /**
@@ -518,7 +677,7 @@ public final class ShopGrpc {
      */
     public io.bloombox.schema.services.shop.v1.GetOrder.Response getOrder(io.bloombox.schema.services.shop.v1.GetOrder.Request request) {
       return blockingUnaryCall(
-          getChannel(), METHOD_GET_ORDER, getCallOptions(), request);
+          getChannel(), getGetOrderMethod(), getCallOptions(), request);
     }
 
     /**
@@ -528,7 +687,7 @@ public final class ShopGrpc {
      */
     public io.bloombox.schema.services.shop.v1.ShareOrder.Response shareOrder(io.bloombox.schema.services.shop.v1.ShareOrder.Request request) {
       return blockingUnaryCall(
-          getChannel(), METHOD_SHARE_ORDER, getCallOptions(), request);
+          getChannel(), getShareOrderMethod(), getCallOptions(), request);
     }
   }
 
@@ -562,7 +721,7 @@ public final class ShopGrpc {
     public com.google.common.util.concurrent.ListenableFuture<io.bloombox.schema.services.shop.v1.Ping.Response> ping(
         io.bloombox.schema.services.shop.v1.Ping.Request request) {
       return futureUnaryCall(
-          getChannel().newCall(METHOD_PING, getCallOptions()), request);
+          getChannel().newCall(getPingMethod(), getCallOptions()), request);
     }
 
     /**
@@ -573,7 +732,7 @@ public final class ShopGrpc {
     public com.google.common.util.concurrent.ListenableFuture<io.bloombox.schema.services.shop.v1.ShopInfo.Response> shopInfo(
         io.bloombox.schema.services.shop.v1.ShopInfo.Request request) {
       return futureUnaryCall(
-          getChannel().newCall(METHOD_SHOP_INFO, getCallOptions()), request);
+          getChannel().newCall(getShopInfoMethod(), getCallOptions()), request);
     }
 
     /**
@@ -584,7 +743,7 @@ public final class ShopGrpc {
     public com.google.common.util.concurrent.ListenableFuture<io.bloombox.schema.services.shop.v1.EnrollMember.Response> enrollMember(
         io.bloombox.schema.services.shop.v1.EnrollMember.Request request) {
       return futureUnaryCall(
-          getChannel().newCall(METHOD_ENROLL_MEMBER, getCallOptions()), request);
+          getChannel().newCall(getEnrollMemberMethod(), getCallOptions()), request);
     }
 
     /**
@@ -595,7 +754,7 @@ public final class ShopGrpc {
     public com.google.common.util.concurrent.ListenableFuture<io.bloombox.schema.services.shop.v1.CheckZipcode.Response> checkZipcode(
         io.bloombox.schema.services.shop.v1.CheckZipcode.Request request) {
       return futureUnaryCall(
-          getChannel().newCall(METHOD_CHECK_ZIPCODE, getCallOptions()), request);
+          getChannel().newCall(getCheckZipcodeMethod(), getCallOptions()), request);
     }
 
     /**
@@ -606,7 +765,7 @@ public final class ShopGrpc {
     public com.google.common.util.concurrent.ListenableFuture<io.bloombox.schema.services.shop.v1.VerifyMember.Response> verifyMember(
         io.bloombox.schema.services.shop.v1.VerifyMember.Request request) {
       return futureUnaryCall(
-          getChannel().newCall(METHOD_VERIFY_MEMBER, getCallOptions()), request);
+          getChannel().newCall(getVerifyMemberMethod(), getCallOptions()), request);
     }
 
     /**
@@ -617,7 +776,7 @@ public final class ShopGrpc {
     public com.google.common.util.concurrent.ListenableFuture<io.bloombox.schema.services.shop.v1.SubmitOrder.Response> submitOrder(
         io.bloombox.schema.services.shop.v1.SubmitOrder.Request request) {
       return futureUnaryCall(
-          getChannel().newCall(METHOD_SUBMIT_ORDER, getCallOptions()), request);
+          getChannel().newCall(getSubmitOrderMethod(), getCallOptions()), request);
     }
 
     /**
@@ -628,7 +787,7 @@ public final class ShopGrpc {
     public com.google.common.util.concurrent.ListenableFuture<io.bloombox.schema.services.shop.v1.GetOrder.Response> getOrder(
         io.bloombox.schema.services.shop.v1.GetOrder.Request request) {
       return futureUnaryCall(
-          getChannel().newCall(METHOD_GET_ORDER, getCallOptions()), request);
+          getChannel().newCall(getGetOrderMethod(), getCallOptions()), request);
     }
 
     /**
@@ -639,7 +798,7 @@ public final class ShopGrpc {
     public com.google.common.util.concurrent.ListenableFuture<io.bloombox.schema.services.shop.v1.ShareOrder.Response> shareOrder(
         io.bloombox.schema.services.shop.v1.ShareOrder.Request request) {
       return futureUnaryCall(
-          getChannel().newCall(METHOD_SHARE_ORDER, getCallOptions()), request);
+          getChannel().newCall(getShareOrderMethod(), getCallOptions()), request);
     }
   }
 
@@ -717,10 +876,38 @@ public final class ShopGrpc {
     }
   }
 
-  private static final class ShopDescriptorSupplier implements io.grpc.protobuf.ProtoFileDescriptorSupplier {
+  private static abstract class ShopBaseDescriptorSupplier
+      implements io.grpc.protobuf.ProtoFileDescriptorSupplier, io.grpc.protobuf.ProtoServiceDescriptorSupplier {
+    ShopBaseDescriptorSupplier() {}
+
     @java.lang.Override
     public com.google.protobuf.Descriptors.FileDescriptor getFileDescriptor() {
       return io.bloombox.schema.services.shop.v1.ShopServiceV1.getDescriptor();
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Descriptors.ServiceDescriptor getServiceDescriptor() {
+      return getFileDescriptor().findServiceByName("Shop");
+    }
+  }
+
+  private static final class ShopFileDescriptorSupplier
+      extends ShopBaseDescriptorSupplier {
+    ShopFileDescriptorSupplier() {}
+  }
+
+  private static final class ShopMethodDescriptorSupplier
+      extends ShopBaseDescriptorSupplier
+      implements io.grpc.protobuf.ProtoMethodDescriptorSupplier {
+    private final String methodName;
+
+    ShopMethodDescriptorSupplier(String methodName) {
+      this.methodName = methodName;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Descriptors.MethodDescriptor getMethodDescriptor() {
+      return getServiceDescriptor().findMethodByName(methodName);
     }
   }
 
@@ -733,15 +920,15 @@ public final class ShopGrpc {
         result = serviceDescriptor;
         if (result == null) {
           serviceDescriptor = result = io.grpc.ServiceDescriptor.newBuilder(SERVICE_NAME)
-              .setSchemaDescriptor(new ShopDescriptorSupplier())
-              .addMethod(METHOD_PING)
-              .addMethod(METHOD_SHOP_INFO)
-              .addMethod(METHOD_ENROLL_MEMBER)
-              .addMethod(METHOD_CHECK_ZIPCODE)
-              .addMethod(METHOD_VERIFY_MEMBER)
-              .addMethod(METHOD_SUBMIT_ORDER)
-              .addMethod(METHOD_GET_ORDER)
-              .addMethod(METHOD_SHARE_ORDER)
+              .setSchemaDescriptor(new ShopFileDescriptorSupplier())
+              .addMethod(getPingMethod())
+              .addMethod(getShopInfoMethod())
+              .addMethod(getEnrollMemberMethod())
+              .addMethod(getCheckZipcodeMethod())
+              .addMethod(getVerifyMemberMethod())
+              .addMethod(getSubmitOrderMethod())
+              .addMethod(getGetOrderMethod())
+              .addMethod(getShareOrderMethod())
               .build();
         }
       }

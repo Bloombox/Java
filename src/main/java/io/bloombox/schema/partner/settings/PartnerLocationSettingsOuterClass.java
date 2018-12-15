@@ -1,11 +1,12 @@
 /*
- * Copyright 2018, Bloombox, LLC.
+ * Copyright 2018, Momentum Ideas, Co. All rights reserved.
  *
- * Licensed under the Apache License, Version 2.0 (the "License");
- * you may not use this file except in compliance with the License.
- * You may obtain a copy of the License at
- *
- *     http://www.apache.org/licenses/LICENSE-2.0
+ * Source and object computer code contained herein is the private intellectual
+ * property of Momentum Ideas Co., a Delaware Corporation. Use of this
+ * code in source form requires permission in writing before use or the
+ * assembly, distribution, or publishing of derivative works, for commercial
+ * purposes or any other purpose, from a duly authorized officer of Momentum
+ * Ideas Co.
  *
  * Unless required by applicable law or agreed to in writing, software
  * distributed under the License is distributed on an "AS IS" BASIS,
@@ -35,7 +36,7 @@ public final class PartnerLocationSettingsOuterClass {
    * Enumerates types of section settings that may be applied and considered.
    * </pre>
    *
-   * Protobuf enum {@code bloombox.schema.partner.settings.SectionSettingsType}
+   * Protobuf enum {@code bloombox.partner.settings.SectionSettingsType}
    */
   public enum SectionSettingsType
       implements com.google.protobuf.ProtocolMessageEnum {
@@ -145,7 +146,7 @@ public final class PartnerLocationSettingsOuterClass {
       this.value = value;
     }
 
-    // @@protoc_insertion_point(enum_scope:bloombox.schema.partner.settings.SectionSettingsType)
+    // @@protoc_insertion_point(enum_scope:bloombox.partner.settings.SectionSettingsType)
   }
 
   /**
@@ -153,7 +154,7 @@ public final class PartnerLocationSettingsOuterClass {
    * Specifies known types of filtered product sections.
    * </pre>
    *
-   * Protobuf enum {@code bloombox.schema.partner.settings.FilteredSectionType}
+   * Protobuf enum {@code bloombox.partner.settings.FilteredSectionType}
    */
   public enum FilteredSectionType
       implements com.google.protobuf.ProtocolMessageEnum {
@@ -280,7 +281,7 @@ public final class PartnerLocationSettingsOuterClass {
       this.value = value;
     }
 
-    // @@protoc_insertion_point(enum_scope:bloombox.schema.partner.settings.FilteredSectionType)
+    // @@protoc_insertion_point(enum_scope:bloombox.partner.settings.FilteredSectionType)
   }
 
   /**
@@ -288,7 +289,7 @@ public final class PartnerLocationSettingsOuterClass {
    * Specifies the type of a custom settings specification payload.
    * </pre>
    *
-   * Protobuf enum {@code bloombox.schema.partner.settings.CustomSettingsType}
+   * Protobuf enum {@code bloombox.partner.settings.CustomSettingsType}
    */
   public enum CustomSettingsType
       implements com.google.protobuf.ProtocolMessageEnum {
@@ -381,7 +382,7 @@ public final class PartnerLocationSettingsOuterClass {
       this.value = value;
     }
 
-    // @@protoc_insertion_point(enum_scope:bloombox.schema.partner.settings.CustomSettingsType)
+    // @@protoc_insertion_point(enum_scope:bloombox.partner.settings.CustomSettingsType)
   }
 
   /**
@@ -389,7 +390,7 @@ public final class PartnerLocationSettingsOuterClass {
    * Enumerates available known hours spans, to which a set of hours boundaries and shop status may apply.
    * </pre>
    *
-   * Protobuf enum {@code bloombox.schema.partner.settings.HoursSpan}
+   * Protobuf enum {@code bloombox.partner.settings.HoursSpan}
    */
   public enum HoursSpan
       implements com.google.protobuf.ProtocolMessageEnum {
@@ -635,7 +636,7 @@ public final class PartnerLocationSettingsOuterClass {
       this.value = value;
     }
 
-    // @@protoc_insertion_point(enum_scope:bloombox.schema.partner.settings.HoursSpan)
+    // @@protoc_insertion_point(enum_scope:bloombox.partner.settings.HoursSpan)
   }
 
   /**
@@ -644,7 +645,7 @@ public final class PartnerLocationSettingsOuterClass {
    * delivery.
    * </pre>
    *
-   * Protobuf enum {@code bloombox.schema.partner.settings.ShopStatus}
+   * Protobuf enum {@code bloombox.partner.settings.ShopStatus}
    */
   public enum ShopStatus
       implements com.google.protobuf.ProtocolMessageEnum {
@@ -788,7 +789,7 @@ public final class PartnerLocationSettingsOuterClass {
       this.value = value;
     }
 
-    // @@protoc_insertion_point(enum_scope:bloombox.schema.partner.settings.ShopStatus)
+    // @@protoc_insertion_point(enum_scope:bloombox.partner.settings.ShopStatus)
   }
 
   /**
@@ -796,7 +797,7 @@ public final class PartnerLocationSettingsOuterClass {
    * Enumerates the types of shop comms for which settings may be specified.
    * </pre>
    *
-   * Protobuf enum {@code bloombox.schema.partner.settings.ShopCommsType}
+   * Protobuf enum {@code bloombox.partner.settings.ShopCommsType}
    */
   public enum ShopCommsType
       implements com.google.protobuf.ProtocolMessageEnum {
@@ -906,7 +907,7 @@ public final class PartnerLocationSettingsOuterClass {
       this.value = value;
     }
 
-    // @@protoc_insertion_point(enum_scope:bloombox.schema.partner.settings.ShopCommsType)
+    // @@protoc_insertion_point(enum_scope:bloombox.partner.settings.ShopCommsType)
   }
 
   /**
@@ -914,7 +915,7 @@ public final class PartnerLocationSettingsOuterClass {
    * Specifies available shop action notification channels.
    * </pre>
    *
-   * Protobuf enum {@code bloombox.schema.partner.settings.ShopContactChannel}
+   * Protobuf enum {@code bloombox.partner.settings.ShopContactChannel}
    */
   public enum ShopContactChannel
       implements com.google.protobuf.ProtocolMessageEnum {
@@ -1041,7 +1042,7 @@ public final class PartnerLocationSettingsOuterClass {
       this.value = value;
     }
 
-    // @@protoc_insertion_point(enum_scope:bloombox.schema.partner.settings.ShopContactChannel)
+    // @@protoc_insertion_point(enum_scope:bloombox.partner.settings.ShopContactChannel)
   }
 
   /**
@@ -1049,7 +1050,7 @@ public final class PartnerLocationSettingsOuterClass {
    * Specifies the operating mode for build-a-bag/cart UI on tablet menus.
    * </pre>
    *
-   * Protobuf enum {@code bloombox.schema.partner.settings.CartMode}
+   * Protobuf enum {@code bloombox.partner.settings.CartMode}
    */
   public enum CartMode
       implements com.google.protobuf.ProtocolMessageEnum {
@@ -1176,11 +1177,11 @@ public final class PartnerLocationSettingsOuterClass {
       this.value = value;
     }
 
-    // @@protoc_insertion_point(enum_scope:bloombox.schema.partner.settings.CartMode)
+    // @@protoc_insertion_point(enum_scope:bloombox.partner.settings.CartMode)
   }
 
   public interface APISettingsOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:bloombox.schema.partner.settings.APISettings)
+      // @@protoc_insertion_point(interface_extends:bloombox.partner.settings.APISettings)
       com.google.protobuf.MessageOrBuilder {
 
     /**
@@ -1206,11 +1207,11 @@ public final class PartnerLocationSettingsOuterClass {
    * Specifies API-related settings that are setup on a per-location basis.
    * </pre>
    *
-   * Protobuf type {@code bloombox.schema.partner.settings.APISettings}
+   * Protobuf type {@code bloombox.partner.settings.APISettings}
    */
   public  static final class APISettings extends
       com.google.protobuf.GeneratedMessageV3 implements
-      // @@protoc_insertion_point(message_implements:bloombox.schema.partner.settings.APISettings)
+      // @@protoc_insertion_point(message_implements:bloombox.partner.settings.APISettings)
       APISettingsOrBuilder {
   private static final long serialVersionUID = 0L;
     // Use APISettings.newBuilder() to construct.
@@ -1245,17 +1246,17 @@ public final class PartnerLocationSettingsOuterClass {
             case 0:
               done = true;
               break;
+            case 10: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              embed_ = s;
+              break;
+            }
             default: {
               if (!parseUnknownFieldProto3(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
-              break;
-            }
-            case 10: {
-              java.lang.String s = input.readStringRequireUtf8();
-
-              embed_ = s;
               break;
             }
           }
@@ -1272,12 +1273,13 @@ public final class PartnerLocationSettingsOuterClass {
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.internal_static_bloombox_schema_partner_settings_APISettings_descriptor;
+      return io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.internal_static_bloombox_partner_settings_APISettings_descriptor;
     }
 
+    @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.internal_static_bloombox_schema_partner_settings_APISettings_fieldAccessorTable
+      return io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.internal_static_bloombox_partner_settings_APISettings_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
               io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.APISettings.class, io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.APISettings.Builder.class);
     }
@@ -1325,6 +1327,7 @@ public final class PartnerLocationSettingsOuterClass {
     }
 
     private byte memoizedIsInitialized = -1;
+    @java.lang.Override
     public final boolean isInitialized() {
       byte isInitialized = memoizedIsInitialized;
       if (isInitialized == 1) return true;
@@ -1334,6 +1337,7 @@ public final class PartnerLocationSettingsOuterClass {
       return true;
     }
 
+    @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
       if (!getEmbedBytes().isEmpty()) {
@@ -1342,6 +1346,7 @@ public final class PartnerLocationSettingsOuterClass {
       unknownFields.writeTo(output);
     }
 
+    @java.lang.Override
     public int getSerializedSize() {
       int size = memoizedSize;
       if (size != -1) return size;
@@ -1456,6 +1461,7 @@ public final class PartnerLocationSettingsOuterClass {
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
 
+    @java.lang.Override
     public Builder newBuilderForType() { return newBuilder(); }
     public static Builder newBuilder() {
       return DEFAULT_INSTANCE.toBuilder();
@@ -1463,6 +1469,7 @@ public final class PartnerLocationSettingsOuterClass {
     public static Builder newBuilder(io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.APISettings prototype) {
       return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
     }
+    @java.lang.Override
     public Builder toBuilder() {
       return this == DEFAULT_INSTANCE
           ? new Builder() : new Builder().mergeFrom(this);
@@ -1479,20 +1486,21 @@ public final class PartnerLocationSettingsOuterClass {
      * Specifies API-related settings that are setup on a per-location basis.
      * </pre>
      *
-     * Protobuf type {@code bloombox.schema.partner.settings.APISettings}
+     * Protobuf type {@code bloombox.partner.settings.APISettings}
      */
     public static final class Builder extends
         com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:bloombox.schema.partner.settings.APISettings)
+        // @@protoc_insertion_point(builder_implements:bloombox.partner.settings.APISettings)
         io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.APISettingsOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.internal_static_bloombox_schema_partner_settings_APISettings_descriptor;
+        return io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.internal_static_bloombox_partner_settings_APISettings_descriptor;
       }
 
+      @java.lang.Override
       protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.internal_static_bloombox_schema_partner_settings_APISettings_fieldAccessorTable
+        return io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.internal_static_bloombox_partner_settings_APISettings_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
                 io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.APISettings.class, io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.APISettings.Builder.class);
       }
@@ -1512,6 +1520,7 @@ public final class PartnerLocationSettingsOuterClass {
                 .alwaysUseFieldBuilders) {
         }
       }
+      @java.lang.Override
       public Builder clear() {
         super.clear();
         embed_ = "";
@@ -1519,15 +1528,18 @@ public final class PartnerLocationSettingsOuterClass {
         return this;
       }
 
+      @java.lang.Override
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.internal_static_bloombox_schema_partner_settings_APISettings_descriptor;
+        return io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.internal_static_bloombox_partner_settings_APISettings_descriptor;
       }
 
+      @java.lang.Override
       public io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.APISettings getDefaultInstanceForType() {
         return io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.APISettings.getDefaultInstance();
       }
 
+      @java.lang.Override
       public io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.APISettings build() {
         io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.APISettings result = buildPartial();
         if (!result.isInitialized()) {
@@ -1536,6 +1548,7 @@ public final class PartnerLocationSettingsOuterClass {
         return result;
       }
 
+      @java.lang.Override
       public io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.APISettings buildPartial() {
         io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.APISettings result = new io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.APISettings(this);
         result.embed_ = embed_;
@@ -1543,32 +1556,39 @@ public final class PartnerLocationSettingsOuterClass {
         return result;
       }
 
+      @java.lang.Override
       public Builder clone() {
         return (Builder) super.clone();
       }
+      @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
         return (Builder) super.setField(field, value);
       }
+      @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
         return (Builder) super.clearField(field);
       }
+      @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
         return (Builder) super.clearOneof(oneof);
       }
+      @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
         return (Builder) super.setRepeatedField(field, index, value);
       }
+      @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
         return (Builder) super.addRepeatedField(field, value);
       }
+      @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
         if (other instanceof io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.APISettings) {
           return mergeFrom((io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.APISettings)other);
@@ -1589,10 +1609,12 @@ public final class PartnerLocationSettingsOuterClass {
         return this;
       }
 
+      @java.lang.Override
       public final boolean isInitialized() {
         return true;
       }
 
+      @java.lang.Override
       public Builder mergeFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -1699,21 +1721,23 @@ public final class PartnerLocationSettingsOuterClass {
         onChanged();
         return this;
       }
+      @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
         return super.setUnknownFieldsProto3(unknownFields);
       }
 
+      @java.lang.Override
       public final Builder mergeUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
         return super.mergeUnknownFields(unknownFields);
       }
 
 
-      // @@protoc_insertion_point(builder_scope:bloombox.schema.partner.settings.APISettings)
+      // @@protoc_insertion_point(builder_scope:bloombox.partner.settings.APISettings)
     }
 
-    // @@protoc_insertion_point(class_scope:bloombox.schema.partner.settings.APISettings)
+    // @@protoc_insertion_point(class_scope:bloombox.partner.settings.APISettings)
     private static final io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.APISettings DEFAULT_INSTANCE;
     static {
       DEFAULT_INSTANCE = new io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.APISettings();
@@ -1725,6 +1749,7 @@ public final class PartnerLocationSettingsOuterClass {
 
     private static final com.google.protobuf.Parser<APISettings>
         PARSER = new com.google.protobuf.AbstractParser<APISettings>() {
+      @java.lang.Override
       public APISettings parsePartialFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -1742,6 +1767,7 @@ public final class PartnerLocationSettingsOuterClass {
       return PARSER;
     }
 
+    @java.lang.Override
     public io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.APISettings getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
@@ -1749,7 +1775,7 @@ public final class PartnerLocationSettingsOuterClass {
   }
 
   public interface InHouseBrandOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:bloombox.schema.partner.settings.InHouseBrand)
+      // @@protoc_insertion_point(interface_extends:bloombox.partner.settings.InHouseBrand)
       com.google.protobuf.MessageOrBuilder {
 
     /**
@@ -1810,11 +1836,11 @@ public final class PartnerLocationSettingsOuterClass {
    * Specifies an in-house brand that should be highlighted in menu display applications.
    * </pre>
    *
-   * Protobuf type {@code bloombox.schema.partner.settings.InHouseBrand}
+   * Protobuf type {@code bloombox.partner.settings.InHouseBrand}
    */
   public  static final class InHouseBrand extends
       com.google.protobuf.GeneratedMessageV3 implements
-      // @@protoc_insertion_point(message_implements:bloombox.schema.partner.settings.InHouseBrand)
+      // @@protoc_insertion_point(message_implements:bloombox.partner.settings.InHouseBrand)
       InHouseBrandOrBuilder {
   private static final long serialVersionUID = 0L;
     // Use InHouseBrand.newBuilder() to construct.
@@ -1850,13 +1876,6 @@ public final class PartnerLocationSettingsOuterClass {
             case 0:
               done = true;
               break;
-            default: {
-              if (!parseUnknownFieldProto3(
-                  input, unknownFields, extensionRegistry, tag)) {
-                done = true;
-              }
-              break;
-            }
             case 10: {
               java.lang.String s = input.readStringRequireUtf8();
 
@@ -1870,6 +1889,13 @@ public final class PartnerLocationSettingsOuterClass {
                 mutable_bitField0_ |= 0x00000002;
               }
               brand_.add(s);
+              break;
+            }
+            default: {
+              if (!parseUnknownFieldProto3(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
               break;
             }
           }
@@ -1889,12 +1915,13 @@ public final class PartnerLocationSettingsOuterClass {
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.internal_static_bloombox_schema_partner_settings_InHouseBrand_descriptor;
+      return io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.internal_static_bloombox_partner_settings_InHouseBrand_descriptor;
     }
 
+    @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.internal_static_bloombox_schema_partner_settings_InHouseBrand_fieldAccessorTable
+      return io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.internal_static_bloombox_partner_settings_InHouseBrand_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
               io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.InHouseBrand.class, io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.InHouseBrand.Builder.class);
     }
@@ -1988,6 +2015,7 @@ public final class PartnerLocationSettingsOuterClass {
     }
 
     private byte memoizedIsInitialized = -1;
+    @java.lang.Override
     public final boolean isInitialized() {
       byte isInitialized = memoizedIsInitialized;
       if (isInitialized == 1) return true;
@@ -1997,6 +2025,7 @@ public final class PartnerLocationSettingsOuterClass {
       return true;
     }
 
+    @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
       if (!getLabelBytes().isEmpty()) {
@@ -2008,6 +2037,7 @@ public final class PartnerLocationSettingsOuterClass {
       unknownFields.writeTo(output);
     }
 
+    @java.lang.Override
     public int getSerializedSize() {
       int size = memoizedSize;
       if (size != -1) return size;
@@ -2136,6 +2166,7 @@ public final class PartnerLocationSettingsOuterClass {
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
 
+    @java.lang.Override
     public Builder newBuilderForType() { return newBuilder(); }
     public static Builder newBuilder() {
       return DEFAULT_INSTANCE.toBuilder();
@@ -2143,6 +2174,7 @@ public final class PartnerLocationSettingsOuterClass {
     public static Builder newBuilder(io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.InHouseBrand prototype) {
       return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
     }
+    @java.lang.Override
     public Builder toBuilder() {
       return this == DEFAULT_INSTANCE
           ? new Builder() : new Builder().mergeFrom(this);
@@ -2159,20 +2191,21 @@ public final class PartnerLocationSettingsOuterClass {
      * Specifies an in-house brand that should be highlighted in menu display applications.
      * </pre>
      *
-     * Protobuf type {@code bloombox.schema.partner.settings.InHouseBrand}
+     * Protobuf type {@code bloombox.partner.settings.InHouseBrand}
      */
     public static final class Builder extends
         com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:bloombox.schema.partner.settings.InHouseBrand)
+        // @@protoc_insertion_point(builder_implements:bloombox.partner.settings.InHouseBrand)
         io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.InHouseBrandOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.internal_static_bloombox_schema_partner_settings_InHouseBrand_descriptor;
+        return io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.internal_static_bloombox_partner_settings_InHouseBrand_descriptor;
       }
 
+      @java.lang.Override
       protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.internal_static_bloombox_schema_partner_settings_InHouseBrand_fieldAccessorTable
+        return io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.internal_static_bloombox_partner_settings_InHouseBrand_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
                 io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.InHouseBrand.class, io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.InHouseBrand.Builder.class);
       }
@@ -2192,6 +2225,7 @@ public final class PartnerLocationSettingsOuterClass {
                 .alwaysUseFieldBuilders) {
         }
       }
+      @java.lang.Override
       public Builder clear() {
         super.clear();
         label_ = "";
@@ -2201,15 +2235,18 @@ public final class PartnerLocationSettingsOuterClass {
         return this;
       }
 
+      @java.lang.Override
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.internal_static_bloombox_schema_partner_settings_InHouseBrand_descriptor;
+        return io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.internal_static_bloombox_partner_settings_InHouseBrand_descriptor;
       }
 
+      @java.lang.Override
       public io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.InHouseBrand getDefaultInstanceForType() {
         return io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.InHouseBrand.getDefaultInstance();
       }
 
+      @java.lang.Override
       public io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.InHouseBrand build() {
         io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.InHouseBrand result = buildPartial();
         if (!result.isInitialized()) {
@@ -2218,6 +2255,7 @@ public final class PartnerLocationSettingsOuterClass {
         return result;
       }
 
+      @java.lang.Override
       public io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.InHouseBrand buildPartial() {
         io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.InHouseBrand result = new io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.InHouseBrand(this);
         int from_bitField0_ = bitField0_;
@@ -2233,32 +2271,39 @@ public final class PartnerLocationSettingsOuterClass {
         return result;
       }
 
+      @java.lang.Override
       public Builder clone() {
         return (Builder) super.clone();
       }
+      @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
         return (Builder) super.setField(field, value);
       }
+      @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
         return (Builder) super.clearField(field);
       }
+      @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
         return (Builder) super.clearOneof(oneof);
       }
+      @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
         return (Builder) super.setRepeatedField(field, index, value);
       }
+      @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
         return (Builder) super.addRepeatedField(field, value);
       }
+      @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
         if (other instanceof io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.InHouseBrand) {
           return mergeFrom((io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.InHouseBrand)other);
@@ -2289,10 +2334,12 @@ public final class PartnerLocationSettingsOuterClass {
         return this;
       }
 
+      @java.lang.Override
       public final boolean isInitialized() {
         return true;
       }
 
+      @java.lang.Override
       public Builder mergeFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -2530,21 +2577,23 @@ public final class PartnerLocationSettingsOuterClass {
         onChanged();
         return this;
       }
+      @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
         return super.setUnknownFieldsProto3(unknownFields);
       }
 
+      @java.lang.Override
       public final Builder mergeUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
         return super.mergeUnknownFields(unknownFields);
       }
 
 
-      // @@protoc_insertion_point(builder_scope:bloombox.schema.partner.settings.InHouseBrand)
+      // @@protoc_insertion_point(builder_scope:bloombox.partner.settings.InHouseBrand)
     }
 
-    // @@protoc_insertion_point(class_scope:bloombox.schema.partner.settings.InHouseBrand)
+    // @@protoc_insertion_point(class_scope:bloombox.partner.settings.InHouseBrand)
     private static final io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.InHouseBrand DEFAULT_INSTANCE;
     static {
       DEFAULT_INSTANCE = new io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.InHouseBrand();
@@ -2556,6 +2605,7 @@ public final class PartnerLocationSettingsOuterClass {
 
     private static final com.google.protobuf.Parser<InHouseBrand>
         PARSER = new com.google.protobuf.AbstractParser<InHouseBrand>() {
+      @java.lang.Override
       public InHouseBrand parsePartialFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -2573,6 +2623,7 @@ public final class PartnerLocationSettingsOuterClass {
       return PARSER;
     }
 
+    @java.lang.Override
     public io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.InHouseBrand getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
@@ -2580,7 +2631,7 @@ public final class PartnerLocationSettingsOuterClass {
   }
 
   public interface ProductBrandSettingsOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:bloombox.schema.partner.settings.ProductBrandSettings)
+      // @@protoc_insertion_point(interface_extends:bloombox.partner.settings.ProductBrandSettings)
       com.google.protobuf.MessageOrBuilder {
 
     /**
@@ -2588,7 +2639,7 @@ public final class PartnerLocationSettingsOuterClass {
      * Settings payloads for in-house brands.
      * </pre>
      *
-     * <code>repeated .bloombox.schema.partner.settings.InHouseBrand inhouse = 1;</code>
+     * <code>repeated .bloombox.partner.settings.InHouseBrand inhouse = 1;</code>
      */
     java.util.List<io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.InHouseBrand> 
         getInhouseList();
@@ -2597,7 +2648,7 @@ public final class PartnerLocationSettingsOuterClass {
      * Settings payloads for in-house brands.
      * </pre>
      *
-     * <code>repeated .bloombox.schema.partner.settings.InHouseBrand inhouse = 1;</code>
+     * <code>repeated .bloombox.partner.settings.InHouseBrand inhouse = 1;</code>
      */
     io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.InHouseBrand getInhouse(int index);
     /**
@@ -2605,7 +2656,7 @@ public final class PartnerLocationSettingsOuterClass {
      * Settings payloads for in-house brands.
      * </pre>
      *
-     * <code>repeated .bloombox.schema.partner.settings.InHouseBrand inhouse = 1;</code>
+     * <code>repeated .bloombox.partner.settings.InHouseBrand inhouse = 1;</code>
      */
     int getInhouseCount();
     /**
@@ -2613,7 +2664,7 @@ public final class PartnerLocationSettingsOuterClass {
      * Settings payloads for in-house brands.
      * </pre>
      *
-     * <code>repeated .bloombox.schema.partner.settings.InHouseBrand inhouse = 1;</code>
+     * <code>repeated .bloombox.partner.settings.InHouseBrand inhouse = 1;</code>
      */
     java.util.List<? extends io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.InHouseBrandOrBuilder> 
         getInhouseOrBuilderList();
@@ -2622,7 +2673,7 @@ public final class PartnerLocationSettingsOuterClass {
      * Settings payloads for in-house brands.
      * </pre>
      *
-     * <code>repeated .bloombox.schema.partner.settings.InHouseBrand inhouse = 1;</code>
+     * <code>repeated .bloombox.partner.settings.InHouseBrand inhouse = 1;</code>
      */
     io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.InHouseBrandOrBuilder getInhouseOrBuilder(
         int index);
@@ -2632,11 +2683,11 @@ public final class PartnerLocationSettingsOuterClass {
    * Settings related to brand taxonomy for products.
    * </pre>
    *
-   * Protobuf type {@code bloombox.schema.partner.settings.ProductBrandSettings}
+   * Protobuf type {@code bloombox.partner.settings.ProductBrandSettings}
    */
   public  static final class ProductBrandSettings extends
       com.google.protobuf.GeneratedMessageV3 implements
-      // @@protoc_insertion_point(message_implements:bloombox.schema.partner.settings.ProductBrandSettings)
+      // @@protoc_insertion_point(message_implements:bloombox.partner.settings.ProductBrandSettings)
       ProductBrandSettingsOrBuilder {
   private static final long serialVersionUID = 0L;
     // Use ProductBrandSettings.newBuilder() to construct.
@@ -2671,13 +2722,6 @@ public final class PartnerLocationSettingsOuterClass {
             case 0:
               done = true;
               break;
-            default: {
-              if (!parseUnknownFieldProto3(
-                  input, unknownFields, extensionRegistry, tag)) {
-                done = true;
-              }
-              break;
-            }
             case 10: {
               if (!((mutable_bitField0_ & 0x00000001) == 0x00000001)) {
                 inhouse_ = new java.util.ArrayList<io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.InHouseBrand>();
@@ -2685,6 +2729,13 @@ public final class PartnerLocationSettingsOuterClass {
               }
               inhouse_.add(
                   input.readMessage(io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.InHouseBrand.parser(), extensionRegistry));
+              break;
+            }
+            default: {
+              if (!parseUnknownFieldProto3(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
               break;
             }
           }
@@ -2704,12 +2755,13 @@ public final class PartnerLocationSettingsOuterClass {
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.internal_static_bloombox_schema_partner_settings_ProductBrandSettings_descriptor;
+      return io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.internal_static_bloombox_partner_settings_ProductBrandSettings_descriptor;
     }
 
+    @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.internal_static_bloombox_schema_partner_settings_ProductBrandSettings_fieldAccessorTable
+      return io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.internal_static_bloombox_partner_settings_ProductBrandSettings_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
               io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.ProductBrandSettings.class, io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.ProductBrandSettings.Builder.class);
     }
@@ -2721,7 +2773,7 @@ public final class PartnerLocationSettingsOuterClass {
      * Settings payloads for in-house brands.
      * </pre>
      *
-     * <code>repeated .bloombox.schema.partner.settings.InHouseBrand inhouse = 1;</code>
+     * <code>repeated .bloombox.partner.settings.InHouseBrand inhouse = 1;</code>
      */
     public java.util.List<io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.InHouseBrand> getInhouseList() {
       return inhouse_;
@@ -2731,7 +2783,7 @@ public final class PartnerLocationSettingsOuterClass {
      * Settings payloads for in-house brands.
      * </pre>
      *
-     * <code>repeated .bloombox.schema.partner.settings.InHouseBrand inhouse = 1;</code>
+     * <code>repeated .bloombox.partner.settings.InHouseBrand inhouse = 1;</code>
      */
     public java.util.List<? extends io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.InHouseBrandOrBuilder> 
         getInhouseOrBuilderList() {
@@ -2742,7 +2794,7 @@ public final class PartnerLocationSettingsOuterClass {
      * Settings payloads for in-house brands.
      * </pre>
      *
-     * <code>repeated .bloombox.schema.partner.settings.InHouseBrand inhouse = 1;</code>
+     * <code>repeated .bloombox.partner.settings.InHouseBrand inhouse = 1;</code>
      */
     public int getInhouseCount() {
       return inhouse_.size();
@@ -2752,7 +2804,7 @@ public final class PartnerLocationSettingsOuterClass {
      * Settings payloads for in-house brands.
      * </pre>
      *
-     * <code>repeated .bloombox.schema.partner.settings.InHouseBrand inhouse = 1;</code>
+     * <code>repeated .bloombox.partner.settings.InHouseBrand inhouse = 1;</code>
      */
     public io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.InHouseBrand getInhouse(int index) {
       return inhouse_.get(index);
@@ -2762,7 +2814,7 @@ public final class PartnerLocationSettingsOuterClass {
      * Settings payloads for in-house brands.
      * </pre>
      *
-     * <code>repeated .bloombox.schema.partner.settings.InHouseBrand inhouse = 1;</code>
+     * <code>repeated .bloombox.partner.settings.InHouseBrand inhouse = 1;</code>
      */
     public io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.InHouseBrandOrBuilder getInhouseOrBuilder(
         int index) {
@@ -2770,6 +2822,7 @@ public final class PartnerLocationSettingsOuterClass {
     }
 
     private byte memoizedIsInitialized = -1;
+    @java.lang.Override
     public final boolean isInitialized() {
       byte isInitialized = memoizedIsInitialized;
       if (isInitialized == 1) return true;
@@ -2779,6 +2832,7 @@ public final class PartnerLocationSettingsOuterClass {
       return true;
     }
 
+    @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
       for (int i = 0; i < inhouse_.size(); i++) {
@@ -2787,6 +2841,7 @@ public final class PartnerLocationSettingsOuterClass {
       unknownFields.writeTo(output);
     }
 
+    @java.lang.Override
     public int getSerializedSize() {
       int size = memoizedSize;
       if (size != -1) return size;
@@ -2904,6 +2959,7 @@ public final class PartnerLocationSettingsOuterClass {
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
 
+    @java.lang.Override
     public Builder newBuilderForType() { return newBuilder(); }
     public static Builder newBuilder() {
       return DEFAULT_INSTANCE.toBuilder();
@@ -2911,6 +2967,7 @@ public final class PartnerLocationSettingsOuterClass {
     public static Builder newBuilder(io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.ProductBrandSettings prototype) {
       return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
     }
+    @java.lang.Override
     public Builder toBuilder() {
       return this == DEFAULT_INSTANCE
           ? new Builder() : new Builder().mergeFrom(this);
@@ -2927,20 +2984,21 @@ public final class PartnerLocationSettingsOuterClass {
      * Settings related to brand taxonomy for products.
      * </pre>
      *
-     * Protobuf type {@code bloombox.schema.partner.settings.ProductBrandSettings}
+     * Protobuf type {@code bloombox.partner.settings.ProductBrandSettings}
      */
     public static final class Builder extends
         com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:bloombox.schema.partner.settings.ProductBrandSettings)
+        // @@protoc_insertion_point(builder_implements:bloombox.partner.settings.ProductBrandSettings)
         io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.ProductBrandSettingsOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.internal_static_bloombox_schema_partner_settings_ProductBrandSettings_descriptor;
+        return io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.internal_static_bloombox_partner_settings_ProductBrandSettings_descriptor;
       }
 
+      @java.lang.Override
       protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.internal_static_bloombox_schema_partner_settings_ProductBrandSettings_fieldAccessorTable
+        return io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.internal_static_bloombox_partner_settings_ProductBrandSettings_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
                 io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.ProductBrandSettings.class, io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.ProductBrandSettings.Builder.class);
       }
@@ -2961,6 +3019,7 @@ public final class PartnerLocationSettingsOuterClass {
           getInhouseFieldBuilder();
         }
       }
+      @java.lang.Override
       public Builder clear() {
         super.clear();
         if (inhouseBuilder_ == null) {
@@ -2972,15 +3031,18 @@ public final class PartnerLocationSettingsOuterClass {
         return this;
       }
 
+      @java.lang.Override
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.internal_static_bloombox_schema_partner_settings_ProductBrandSettings_descriptor;
+        return io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.internal_static_bloombox_partner_settings_ProductBrandSettings_descriptor;
       }
 
+      @java.lang.Override
       public io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.ProductBrandSettings getDefaultInstanceForType() {
         return io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.ProductBrandSettings.getDefaultInstance();
       }
 
+      @java.lang.Override
       public io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.ProductBrandSettings build() {
         io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.ProductBrandSettings result = buildPartial();
         if (!result.isInitialized()) {
@@ -2989,6 +3051,7 @@ public final class PartnerLocationSettingsOuterClass {
         return result;
       }
 
+      @java.lang.Override
       public io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.ProductBrandSettings buildPartial() {
         io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.ProductBrandSettings result = new io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.ProductBrandSettings(this);
         int from_bitField0_ = bitField0_;
@@ -3005,32 +3068,39 @@ public final class PartnerLocationSettingsOuterClass {
         return result;
       }
 
+      @java.lang.Override
       public Builder clone() {
         return (Builder) super.clone();
       }
+      @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
         return (Builder) super.setField(field, value);
       }
+      @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
         return (Builder) super.clearField(field);
       }
+      @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
         return (Builder) super.clearOneof(oneof);
       }
+      @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
         return (Builder) super.setRepeatedField(field, index, value);
       }
+      @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
         return (Builder) super.addRepeatedField(field, value);
       }
+      @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
         if (other instanceof io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.ProductBrandSettings) {
           return mergeFrom((io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.ProductBrandSettings)other);
@@ -3073,10 +3143,12 @@ public final class PartnerLocationSettingsOuterClass {
         return this;
       }
 
+      @java.lang.Override
       public final boolean isInitialized() {
         return true;
       }
 
+      @java.lang.Override
       public Builder mergeFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -3113,7 +3185,7 @@ public final class PartnerLocationSettingsOuterClass {
        * Settings payloads for in-house brands.
        * </pre>
        *
-       * <code>repeated .bloombox.schema.partner.settings.InHouseBrand inhouse = 1;</code>
+       * <code>repeated .bloombox.partner.settings.InHouseBrand inhouse = 1;</code>
        */
       public java.util.List<io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.InHouseBrand> getInhouseList() {
         if (inhouseBuilder_ == null) {
@@ -3127,7 +3199,7 @@ public final class PartnerLocationSettingsOuterClass {
        * Settings payloads for in-house brands.
        * </pre>
        *
-       * <code>repeated .bloombox.schema.partner.settings.InHouseBrand inhouse = 1;</code>
+       * <code>repeated .bloombox.partner.settings.InHouseBrand inhouse = 1;</code>
        */
       public int getInhouseCount() {
         if (inhouseBuilder_ == null) {
@@ -3141,7 +3213,7 @@ public final class PartnerLocationSettingsOuterClass {
        * Settings payloads for in-house brands.
        * </pre>
        *
-       * <code>repeated .bloombox.schema.partner.settings.InHouseBrand inhouse = 1;</code>
+       * <code>repeated .bloombox.partner.settings.InHouseBrand inhouse = 1;</code>
        */
       public io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.InHouseBrand getInhouse(int index) {
         if (inhouseBuilder_ == null) {
@@ -3155,7 +3227,7 @@ public final class PartnerLocationSettingsOuterClass {
        * Settings payloads for in-house brands.
        * </pre>
        *
-       * <code>repeated .bloombox.schema.partner.settings.InHouseBrand inhouse = 1;</code>
+       * <code>repeated .bloombox.partner.settings.InHouseBrand inhouse = 1;</code>
        */
       public Builder setInhouse(
           int index, io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.InHouseBrand value) {
@@ -3176,7 +3248,7 @@ public final class PartnerLocationSettingsOuterClass {
        * Settings payloads for in-house brands.
        * </pre>
        *
-       * <code>repeated .bloombox.schema.partner.settings.InHouseBrand inhouse = 1;</code>
+       * <code>repeated .bloombox.partner.settings.InHouseBrand inhouse = 1;</code>
        */
       public Builder setInhouse(
           int index, io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.InHouseBrand.Builder builderForValue) {
@@ -3194,7 +3266,7 @@ public final class PartnerLocationSettingsOuterClass {
        * Settings payloads for in-house brands.
        * </pre>
        *
-       * <code>repeated .bloombox.schema.partner.settings.InHouseBrand inhouse = 1;</code>
+       * <code>repeated .bloombox.partner.settings.InHouseBrand inhouse = 1;</code>
        */
       public Builder addInhouse(io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.InHouseBrand value) {
         if (inhouseBuilder_ == null) {
@@ -3214,7 +3286,7 @@ public final class PartnerLocationSettingsOuterClass {
        * Settings payloads for in-house brands.
        * </pre>
        *
-       * <code>repeated .bloombox.schema.partner.settings.InHouseBrand inhouse = 1;</code>
+       * <code>repeated .bloombox.partner.settings.InHouseBrand inhouse = 1;</code>
        */
       public Builder addInhouse(
           int index, io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.InHouseBrand value) {
@@ -3235,7 +3307,7 @@ public final class PartnerLocationSettingsOuterClass {
        * Settings payloads for in-house brands.
        * </pre>
        *
-       * <code>repeated .bloombox.schema.partner.settings.InHouseBrand inhouse = 1;</code>
+       * <code>repeated .bloombox.partner.settings.InHouseBrand inhouse = 1;</code>
        */
       public Builder addInhouse(
           io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.InHouseBrand.Builder builderForValue) {
@@ -3253,7 +3325,7 @@ public final class PartnerLocationSettingsOuterClass {
        * Settings payloads for in-house brands.
        * </pre>
        *
-       * <code>repeated .bloombox.schema.partner.settings.InHouseBrand inhouse = 1;</code>
+       * <code>repeated .bloombox.partner.settings.InHouseBrand inhouse = 1;</code>
        */
       public Builder addInhouse(
           int index, io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.InHouseBrand.Builder builderForValue) {
@@ -3271,7 +3343,7 @@ public final class PartnerLocationSettingsOuterClass {
        * Settings payloads for in-house brands.
        * </pre>
        *
-       * <code>repeated .bloombox.schema.partner.settings.InHouseBrand inhouse = 1;</code>
+       * <code>repeated .bloombox.partner.settings.InHouseBrand inhouse = 1;</code>
        */
       public Builder addAllInhouse(
           java.lang.Iterable<? extends io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.InHouseBrand> values) {
@@ -3290,7 +3362,7 @@ public final class PartnerLocationSettingsOuterClass {
        * Settings payloads for in-house brands.
        * </pre>
        *
-       * <code>repeated .bloombox.schema.partner.settings.InHouseBrand inhouse = 1;</code>
+       * <code>repeated .bloombox.partner.settings.InHouseBrand inhouse = 1;</code>
        */
       public Builder clearInhouse() {
         if (inhouseBuilder_ == null) {
@@ -3307,7 +3379,7 @@ public final class PartnerLocationSettingsOuterClass {
        * Settings payloads for in-house brands.
        * </pre>
        *
-       * <code>repeated .bloombox.schema.partner.settings.InHouseBrand inhouse = 1;</code>
+       * <code>repeated .bloombox.partner.settings.InHouseBrand inhouse = 1;</code>
        */
       public Builder removeInhouse(int index) {
         if (inhouseBuilder_ == null) {
@@ -3324,7 +3396,7 @@ public final class PartnerLocationSettingsOuterClass {
        * Settings payloads for in-house brands.
        * </pre>
        *
-       * <code>repeated .bloombox.schema.partner.settings.InHouseBrand inhouse = 1;</code>
+       * <code>repeated .bloombox.partner.settings.InHouseBrand inhouse = 1;</code>
        */
       public io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.InHouseBrand.Builder getInhouseBuilder(
           int index) {
@@ -3335,7 +3407,7 @@ public final class PartnerLocationSettingsOuterClass {
        * Settings payloads for in-house brands.
        * </pre>
        *
-       * <code>repeated .bloombox.schema.partner.settings.InHouseBrand inhouse = 1;</code>
+       * <code>repeated .bloombox.partner.settings.InHouseBrand inhouse = 1;</code>
        */
       public io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.InHouseBrandOrBuilder getInhouseOrBuilder(
           int index) {
@@ -3349,7 +3421,7 @@ public final class PartnerLocationSettingsOuterClass {
        * Settings payloads for in-house brands.
        * </pre>
        *
-       * <code>repeated .bloombox.schema.partner.settings.InHouseBrand inhouse = 1;</code>
+       * <code>repeated .bloombox.partner.settings.InHouseBrand inhouse = 1;</code>
        */
       public java.util.List<? extends io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.InHouseBrandOrBuilder> 
            getInhouseOrBuilderList() {
@@ -3364,7 +3436,7 @@ public final class PartnerLocationSettingsOuterClass {
        * Settings payloads for in-house brands.
        * </pre>
        *
-       * <code>repeated .bloombox.schema.partner.settings.InHouseBrand inhouse = 1;</code>
+       * <code>repeated .bloombox.partner.settings.InHouseBrand inhouse = 1;</code>
        */
       public io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.InHouseBrand.Builder addInhouseBuilder() {
         return getInhouseFieldBuilder().addBuilder(
@@ -3375,7 +3447,7 @@ public final class PartnerLocationSettingsOuterClass {
        * Settings payloads for in-house brands.
        * </pre>
        *
-       * <code>repeated .bloombox.schema.partner.settings.InHouseBrand inhouse = 1;</code>
+       * <code>repeated .bloombox.partner.settings.InHouseBrand inhouse = 1;</code>
        */
       public io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.InHouseBrand.Builder addInhouseBuilder(
           int index) {
@@ -3387,7 +3459,7 @@ public final class PartnerLocationSettingsOuterClass {
        * Settings payloads for in-house brands.
        * </pre>
        *
-       * <code>repeated .bloombox.schema.partner.settings.InHouseBrand inhouse = 1;</code>
+       * <code>repeated .bloombox.partner.settings.InHouseBrand inhouse = 1;</code>
        */
       public java.util.List<io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.InHouseBrand.Builder> 
            getInhouseBuilderList() {
@@ -3407,21 +3479,23 @@ public final class PartnerLocationSettingsOuterClass {
         }
         return inhouseBuilder_;
       }
+      @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
         return super.setUnknownFieldsProto3(unknownFields);
       }
 
+      @java.lang.Override
       public final Builder mergeUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
         return super.mergeUnknownFields(unknownFields);
       }
 
 
-      // @@protoc_insertion_point(builder_scope:bloombox.schema.partner.settings.ProductBrandSettings)
+      // @@protoc_insertion_point(builder_scope:bloombox.partner.settings.ProductBrandSettings)
     }
 
-    // @@protoc_insertion_point(class_scope:bloombox.schema.partner.settings.ProductBrandSettings)
+    // @@protoc_insertion_point(class_scope:bloombox.partner.settings.ProductBrandSettings)
     private static final io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.ProductBrandSettings DEFAULT_INSTANCE;
     static {
       DEFAULT_INSTANCE = new io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.ProductBrandSettings();
@@ -3433,6 +3507,7 @@ public final class PartnerLocationSettingsOuterClass {
 
     private static final com.google.protobuf.Parser<ProductBrandSettings>
         PARSER = new com.google.protobuf.AbstractParser<ProductBrandSettings>() {
+      @java.lang.Override
       public ProductBrandSettings parsePartialFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -3450,6 +3525,7 @@ public final class PartnerLocationSettingsOuterClass {
       return PARSER;
     }
 
+    @java.lang.Override
     public io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.ProductBrandSettings getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
@@ -3457,7 +3533,7 @@ public final class PartnerLocationSettingsOuterClass {
   }
 
   public interface PublishSettingsOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:bloombox.schema.partner.settings.PublishSettings)
+      // @@protoc_insertion_point(interface_extends:bloombox.partner.settings.PublishSettings)
       com.google.protobuf.MessageOrBuilder {
 
     /**
@@ -3483,11 +3559,11 @@ public final class PartnerLocationSettingsOuterClass {
    * Settings on a per-location basis about what should/should not be published.
    * </pre>
    *
-   * Protobuf type {@code bloombox.schema.partner.settings.PublishSettings}
+   * Protobuf type {@code bloombox.partner.settings.PublishSettings}
    */
   public  static final class PublishSettings extends
       com.google.protobuf.GeneratedMessageV3 implements
-      // @@protoc_insertion_point(message_implements:bloombox.schema.partner.settings.PublishSettings)
+      // @@protoc_insertion_point(message_implements:bloombox.partner.settings.PublishSettings)
       PublishSettingsOrBuilder {
   private static final long serialVersionUID = 0L;
     // Use PublishSettings.newBuilder() to construct.
@@ -3523,13 +3599,6 @@ public final class PartnerLocationSettingsOuterClass {
             case 0:
               done = true;
               break;
-            default: {
-              if (!parseUnknownFieldProto3(
-                  input, unknownFields, extensionRegistry, tag)) {
-                done = true;
-              }
-              break;
-            }
             case 8: {
 
               menu_ = input.readBool();
@@ -3538,6 +3607,13 @@ public final class PartnerLocationSettingsOuterClass {
             case 16: {
 
               profile_ = input.readBool();
+              break;
+            }
+            default: {
+              if (!parseUnknownFieldProto3(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
               break;
             }
           }
@@ -3554,12 +3630,13 @@ public final class PartnerLocationSettingsOuterClass {
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.internal_static_bloombox_schema_partner_settings_PublishSettings_descriptor;
+      return io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.internal_static_bloombox_partner_settings_PublishSettings_descriptor;
     }
 
+    @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.internal_static_bloombox_schema_partner_settings_PublishSettings_fieldAccessorTable
+      return io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.internal_static_bloombox_partner_settings_PublishSettings_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
               io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.PublishSettings.class, io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.PublishSettings.Builder.class);
     }
@@ -3591,6 +3668,7 @@ public final class PartnerLocationSettingsOuterClass {
     }
 
     private byte memoizedIsInitialized = -1;
+    @java.lang.Override
     public final boolean isInitialized() {
       byte isInitialized = memoizedIsInitialized;
       if (isInitialized == 1) return true;
@@ -3600,6 +3678,7 @@ public final class PartnerLocationSettingsOuterClass {
       return true;
     }
 
+    @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
       if (menu_ != false) {
@@ -3611,6 +3690,7 @@ public final class PartnerLocationSettingsOuterClass {
       unknownFields.writeTo(output);
     }
 
+    @java.lang.Override
     public int getSerializedSize() {
       int size = memoizedSize;
       if (size != -1) return size;
@@ -3736,6 +3816,7 @@ public final class PartnerLocationSettingsOuterClass {
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
 
+    @java.lang.Override
     public Builder newBuilderForType() { return newBuilder(); }
     public static Builder newBuilder() {
       return DEFAULT_INSTANCE.toBuilder();
@@ -3743,6 +3824,7 @@ public final class PartnerLocationSettingsOuterClass {
     public static Builder newBuilder(io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.PublishSettings prototype) {
       return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
     }
+    @java.lang.Override
     public Builder toBuilder() {
       return this == DEFAULT_INSTANCE
           ? new Builder() : new Builder().mergeFrom(this);
@@ -3759,20 +3841,21 @@ public final class PartnerLocationSettingsOuterClass {
      * Settings on a per-location basis about what should/should not be published.
      * </pre>
      *
-     * Protobuf type {@code bloombox.schema.partner.settings.PublishSettings}
+     * Protobuf type {@code bloombox.partner.settings.PublishSettings}
      */
     public static final class Builder extends
         com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:bloombox.schema.partner.settings.PublishSettings)
+        // @@protoc_insertion_point(builder_implements:bloombox.partner.settings.PublishSettings)
         io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.PublishSettingsOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.internal_static_bloombox_schema_partner_settings_PublishSettings_descriptor;
+        return io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.internal_static_bloombox_partner_settings_PublishSettings_descriptor;
       }
 
+      @java.lang.Override
       protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.internal_static_bloombox_schema_partner_settings_PublishSettings_fieldAccessorTable
+        return io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.internal_static_bloombox_partner_settings_PublishSettings_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
                 io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.PublishSettings.class, io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.PublishSettings.Builder.class);
       }
@@ -3792,6 +3875,7 @@ public final class PartnerLocationSettingsOuterClass {
                 .alwaysUseFieldBuilders) {
         }
       }
+      @java.lang.Override
       public Builder clear() {
         super.clear();
         menu_ = false;
@@ -3801,15 +3885,18 @@ public final class PartnerLocationSettingsOuterClass {
         return this;
       }
 
+      @java.lang.Override
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.internal_static_bloombox_schema_partner_settings_PublishSettings_descriptor;
+        return io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.internal_static_bloombox_partner_settings_PublishSettings_descriptor;
       }
 
+      @java.lang.Override
       public io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.PublishSettings getDefaultInstanceForType() {
         return io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.PublishSettings.getDefaultInstance();
       }
 
+      @java.lang.Override
       public io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.PublishSettings build() {
         io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.PublishSettings result = buildPartial();
         if (!result.isInitialized()) {
@@ -3818,6 +3905,7 @@ public final class PartnerLocationSettingsOuterClass {
         return result;
       }
 
+      @java.lang.Override
       public io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.PublishSettings buildPartial() {
         io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.PublishSettings result = new io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.PublishSettings(this);
         result.menu_ = menu_;
@@ -3826,32 +3914,39 @@ public final class PartnerLocationSettingsOuterClass {
         return result;
       }
 
+      @java.lang.Override
       public Builder clone() {
         return (Builder) super.clone();
       }
+      @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
         return (Builder) super.setField(field, value);
       }
+      @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
         return (Builder) super.clearField(field);
       }
+      @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
         return (Builder) super.clearOneof(oneof);
       }
+      @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
         return (Builder) super.setRepeatedField(field, index, value);
       }
+      @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
         return (Builder) super.addRepeatedField(field, value);
       }
+      @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
         if (other instanceof io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.PublishSettings) {
           return mergeFrom((io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.PublishSettings)other);
@@ -3874,10 +3969,12 @@ public final class PartnerLocationSettingsOuterClass {
         return this;
       }
 
+      @java.lang.Override
       public final boolean isInitialized() {
         return true;
       }
 
+      @java.lang.Override
       public Builder mergeFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -3971,21 +4068,23 @@ public final class PartnerLocationSettingsOuterClass {
         onChanged();
         return this;
       }
+      @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
         return super.setUnknownFieldsProto3(unknownFields);
       }
 
+      @java.lang.Override
       public final Builder mergeUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
         return super.mergeUnknownFields(unknownFields);
       }
 
 
-      // @@protoc_insertion_point(builder_scope:bloombox.schema.partner.settings.PublishSettings)
+      // @@protoc_insertion_point(builder_scope:bloombox.partner.settings.PublishSettings)
     }
 
-    // @@protoc_insertion_point(class_scope:bloombox.schema.partner.settings.PublishSettings)
+    // @@protoc_insertion_point(class_scope:bloombox.partner.settings.PublishSettings)
     private static final io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.PublishSettings DEFAULT_INSTANCE;
     static {
       DEFAULT_INSTANCE = new io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.PublishSettings();
@@ -3997,6 +4096,7 @@ public final class PartnerLocationSettingsOuterClass {
 
     private static final com.google.protobuf.Parser<PublishSettings>
         PARSER = new com.google.protobuf.AbstractParser<PublishSettings>() {
+      @java.lang.Override
       public PublishSettings parsePartialFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -4014,6 +4114,7 @@ public final class PartnerLocationSettingsOuterClass {
       return PARSER;
     }
 
+    @java.lang.Override
     public io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.PublishSettings getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
@@ -4021,7 +4122,7 @@ public final class PartnerLocationSettingsOuterClass {
   }
 
   public interface CustomSectionSettingsOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:bloombox.schema.partner.settings.CustomSectionSettings)
+      // @@protoc_insertion_point(interface_extends:bloombox.partner.settings.CustomSectionSettings)
       com.google.protobuf.MessageOrBuilder {
 
     /**
@@ -4047,7 +4148,7 @@ public final class PartnerLocationSettingsOuterClass {
      * Specified internal filter to employ for this section.
      * </pre>
      *
-     * <code>.bloombox.schema.partner.settings.FilteredSectionType filter = 2;</code>
+     * <code>.bloombox.partner.settings.FilteredSectionType filter = 2;</code>
      */
     int getFilterValue();
     /**
@@ -4055,7 +4156,7 @@ public final class PartnerLocationSettingsOuterClass {
      * Specified internal filter to employ for this section.
      * </pre>
      *
-     * <code>.bloombox.schema.partner.settings.FilteredSectionType filter = 2;</code>
+     * <code>.bloombox.partner.settings.FilteredSectionType filter = 2;</code>
      */
     io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.FilteredSectionType getFilter();
 
@@ -4066,11 +4167,11 @@ public final class PartnerLocationSettingsOuterClass {
    * Specific settings specifying a filtered section type.
    * </pre>
    *
-   * Protobuf type {@code bloombox.schema.partner.settings.CustomSectionSettings}
+   * Protobuf type {@code bloombox.partner.settings.CustomSectionSettings}
    */
   public  static final class CustomSectionSettings extends
       com.google.protobuf.GeneratedMessageV3 implements
-      // @@protoc_insertion_point(message_implements:bloombox.schema.partner.settings.CustomSectionSettings)
+      // @@protoc_insertion_point(message_implements:bloombox.partner.settings.CustomSectionSettings)
       CustomSectionSettingsOrBuilder {
   private static final long serialVersionUID = 0L;
     // Use CustomSectionSettings.newBuilder() to construct.
@@ -4105,13 +4206,6 @@ public final class PartnerLocationSettingsOuterClass {
             case 0:
               done = true;
               break;
-            default: {
-              if (!parseUnknownFieldProto3(
-                  input, unknownFields, extensionRegistry, tag)) {
-                done = true;
-              }
-              break;
-            }
             case 10: {
               java.lang.String s = input.readStringRequireUtf8();
 
@@ -4122,6 +4216,13 @@ public final class PartnerLocationSettingsOuterClass {
               int rawValue = input.readEnum();
               settingsCase_ = 2;
               settings_ = rawValue;
+              break;
+            }
+            default: {
+              if (!parseUnknownFieldProto3(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
               break;
             }
           }
@@ -4138,12 +4239,13 @@ public final class PartnerLocationSettingsOuterClass {
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.internal_static_bloombox_schema_partner_settings_CustomSectionSettings_descriptor;
+      return io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.internal_static_bloombox_partner_settings_CustomSectionSettings_descriptor;
     }
 
+    @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.internal_static_bloombox_schema_partner_settings_CustomSectionSettings_fieldAccessorTable
+      return io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.internal_static_bloombox_partner_settings_CustomSectionSettings_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
               io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.CustomSectionSettings.class, io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.CustomSectionSettings.Builder.class);
     }
@@ -4232,7 +4334,7 @@ public final class PartnerLocationSettingsOuterClass {
      * Specified internal filter to employ for this section.
      * </pre>
      *
-     * <code>.bloombox.schema.partner.settings.FilteredSectionType filter = 2;</code>
+     * <code>.bloombox.partner.settings.FilteredSectionType filter = 2;</code>
      */
     public int getFilterValue() {
       if (settingsCase_ == 2) {
@@ -4245,10 +4347,11 @@ public final class PartnerLocationSettingsOuterClass {
      * Specified internal filter to employ for this section.
      * </pre>
      *
-     * <code>.bloombox.schema.partner.settings.FilteredSectionType filter = 2;</code>
+     * <code>.bloombox.partner.settings.FilteredSectionType filter = 2;</code>
      */
     public io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.FilteredSectionType getFilter() {
       if (settingsCase_ == 2) {
+        @SuppressWarnings("deprecation")
         io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.FilteredSectionType result = io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.FilteredSectionType.valueOf(
             (java.lang.Integer) settings_);
         return result == null ? io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.FilteredSectionType.UNRECOGNIZED : result;
@@ -4257,6 +4360,7 @@ public final class PartnerLocationSettingsOuterClass {
     }
 
     private byte memoizedIsInitialized = -1;
+    @java.lang.Override
     public final boolean isInitialized() {
       byte isInitialized = memoizedIsInitialized;
       if (isInitialized == 1) return true;
@@ -4266,6 +4370,7 @@ public final class PartnerLocationSettingsOuterClass {
       return true;
     }
 
+    @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
       if (!getSpecBytes().isEmpty()) {
@@ -4277,6 +4382,7 @@ public final class PartnerLocationSettingsOuterClass {
       unknownFields.writeTo(output);
     }
 
+    @java.lang.Override
     public int getSerializedSize() {
       int size = memoizedSize;
       if (size != -1) return size;
@@ -4414,6 +4520,7 @@ public final class PartnerLocationSettingsOuterClass {
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
 
+    @java.lang.Override
     public Builder newBuilderForType() { return newBuilder(); }
     public static Builder newBuilder() {
       return DEFAULT_INSTANCE.toBuilder();
@@ -4421,6 +4528,7 @@ public final class PartnerLocationSettingsOuterClass {
     public static Builder newBuilder(io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.CustomSectionSettings prototype) {
       return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
     }
+    @java.lang.Override
     public Builder toBuilder() {
       return this == DEFAULT_INSTANCE
           ? new Builder() : new Builder().mergeFrom(this);
@@ -4437,20 +4545,21 @@ public final class PartnerLocationSettingsOuterClass {
      * Specific settings specifying a filtered section type.
      * </pre>
      *
-     * Protobuf type {@code bloombox.schema.partner.settings.CustomSectionSettings}
+     * Protobuf type {@code bloombox.partner.settings.CustomSectionSettings}
      */
     public static final class Builder extends
         com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:bloombox.schema.partner.settings.CustomSectionSettings)
+        // @@protoc_insertion_point(builder_implements:bloombox.partner.settings.CustomSectionSettings)
         io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.CustomSectionSettingsOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.internal_static_bloombox_schema_partner_settings_CustomSectionSettings_descriptor;
+        return io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.internal_static_bloombox_partner_settings_CustomSectionSettings_descriptor;
       }
 
+      @java.lang.Override
       protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.internal_static_bloombox_schema_partner_settings_CustomSectionSettings_fieldAccessorTable
+        return io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.internal_static_bloombox_partner_settings_CustomSectionSettings_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
                 io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.CustomSectionSettings.class, io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.CustomSectionSettings.Builder.class);
       }
@@ -4470,6 +4579,7 @@ public final class PartnerLocationSettingsOuterClass {
                 .alwaysUseFieldBuilders) {
         }
       }
+      @java.lang.Override
       public Builder clear() {
         super.clear();
         spec_ = "";
@@ -4479,15 +4589,18 @@ public final class PartnerLocationSettingsOuterClass {
         return this;
       }
 
+      @java.lang.Override
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.internal_static_bloombox_schema_partner_settings_CustomSectionSettings_descriptor;
+        return io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.internal_static_bloombox_partner_settings_CustomSectionSettings_descriptor;
       }
 
+      @java.lang.Override
       public io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.CustomSectionSettings getDefaultInstanceForType() {
         return io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.CustomSectionSettings.getDefaultInstance();
       }
 
+      @java.lang.Override
       public io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.CustomSectionSettings build() {
         io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.CustomSectionSettings result = buildPartial();
         if (!result.isInitialized()) {
@@ -4496,6 +4609,7 @@ public final class PartnerLocationSettingsOuterClass {
         return result;
       }
 
+      @java.lang.Override
       public io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.CustomSectionSettings buildPartial() {
         io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.CustomSectionSettings result = new io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.CustomSectionSettings(this);
         result.spec_ = spec_;
@@ -4507,32 +4621,39 @@ public final class PartnerLocationSettingsOuterClass {
         return result;
       }
 
+      @java.lang.Override
       public Builder clone() {
         return (Builder) super.clone();
       }
+      @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
         return (Builder) super.setField(field, value);
       }
+      @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
         return (Builder) super.clearField(field);
       }
+      @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
         return (Builder) super.clearOneof(oneof);
       }
+      @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
         return (Builder) super.setRepeatedField(field, index, value);
       }
+      @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
         return (Builder) super.addRepeatedField(field, value);
       }
+      @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
         if (other instanceof io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.CustomSectionSettings) {
           return mergeFrom((io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.CustomSectionSettings)other);
@@ -4562,10 +4683,12 @@ public final class PartnerLocationSettingsOuterClass {
         return this;
       }
 
+      @java.lang.Override
       public final boolean isInitialized() {
         return true;
       }
 
+      @java.lang.Override
       public Builder mergeFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -4693,7 +4816,7 @@ public final class PartnerLocationSettingsOuterClass {
        * Specified internal filter to employ for this section.
        * </pre>
        *
-       * <code>.bloombox.schema.partner.settings.FilteredSectionType filter = 2;</code>
+       * <code>.bloombox.partner.settings.FilteredSectionType filter = 2;</code>
        */
       public int getFilterValue() {
         if (settingsCase_ == 2) {
@@ -4706,7 +4829,7 @@ public final class PartnerLocationSettingsOuterClass {
        * Specified internal filter to employ for this section.
        * </pre>
        *
-       * <code>.bloombox.schema.partner.settings.FilteredSectionType filter = 2;</code>
+       * <code>.bloombox.partner.settings.FilteredSectionType filter = 2;</code>
        */
       public Builder setFilterValue(int value) {
         settingsCase_ = 2;
@@ -4719,10 +4842,11 @@ public final class PartnerLocationSettingsOuterClass {
        * Specified internal filter to employ for this section.
        * </pre>
        *
-       * <code>.bloombox.schema.partner.settings.FilteredSectionType filter = 2;</code>
+       * <code>.bloombox.partner.settings.FilteredSectionType filter = 2;</code>
        */
       public io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.FilteredSectionType getFilter() {
         if (settingsCase_ == 2) {
+          @SuppressWarnings("deprecation")
           io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.FilteredSectionType result = io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.FilteredSectionType.valueOf(
               (java.lang.Integer) settings_);
           return result == null ? io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.FilteredSectionType.UNRECOGNIZED : result;
@@ -4734,7 +4858,7 @@ public final class PartnerLocationSettingsOuterClass {
        * Specified internal filter to employ for this section.
        * </pre>
        *
-       * <code>.bloombox.schema.partner.settings.FilteredSectionType filter = 2;</code>
+       * <code>.bloombox.partner.settings.FilteredSectionType filter = 2;</code>
        */
       public Builder setFilter(io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.FilteredSectionType value) {
         if (value == null) {
@@ -4750,7 +4874,7 @@ public final class PartnerLocationSettingsOuterClass {
        * Specified internal filter to employ for this section.
        * </pre>
        *
-       * <code>.bloombox.schema.partner.settings.FilteredSectionType filter = 2;</code>
+       * <code>.bloombox.partner.settings.FilteredSectionType filter = 2;</code>
        */
       public Builder clearFilter() {
         if (settingsCase_ == 2) {
@@ -4760,21 +4884,23 @@ public final class PartnerLocationSettingsOuterClass {
         }
         return this;
       }
+      @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
         return super.setUnknownFieldsProto3(unknownFields);
       }
 
+      @java.lang.Override
       public final Builder mergeUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
         return super.mergeUnknownFields(unknownFields);
       }
 
 
-      // @@protoc_insertion_point(builder_scope:bloombox.schema.partner.settings.CustomSectionSettings)
+      // @@protoc_insertion_point(builder_scope:bloombox.partner.settings.CustomSectionSettings)
     }
 
-    // @@protoc_insertion_point(class_scope:bloombox.schema.partner.settings.CustomSectionSettings)
+    // @@protoc_insertion_point(class_scope:bloombox.partner.settings.CustomSectionSettings)
     private static final io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.CustomSectionSettings DEFAULT_INSTANCE;
     static {
       DEFAULT_INSTANCE = new io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.CustomSectionSettings();
@@ -4786,6 +4912,7 @@ public final class PartnerLocationSettingsOuterClass {
 
     private static final com.google.protobuf.Parser<CustomSectionSettings>
         PARSER = new com.google.protobuf.AbstractParser<CustomSectionSettings>() {
+      @java.lang.Override
       public CustomSectionSettings parsePartialFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -4803,6 +4930,7 @@ public final class PartnerLocationSettingsOuterClass {
       return PARSER;
     }
 
+    @java.lang.Override
     public io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.CustomSectionSettings getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
@@ -4810,7 +4938,7 @@ public final class PartnerLocationSettingsOuterClass {
   }
 
   public interface SectionSettingsPayloadOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:bloombox.schema.partner.settings.SectionSettingsPayload)
+      // @@protoc_insertion_point(interface_extends:bloombox.partner.settings.SectionSettingsPayload)
       com.google.protobuf.MessageOrBuilder {
 
     /**
@@ -4875,7 +5003,7 @@ public final class PartnerLocationSettingsOuterClass {
      * This is a specification of a standard section type.
      * </pre>
      *
-     * <code>.bloombox.schema.partner.settings.SectionSettingsType type = 5;</code>
+     * <code>.bloombox.partner.settings.SectionSettingsType type = 5;</code>
      */
     int getTypeValue();
     /**
@@ -4883,7 +5011,7 @@ public final class PartnerLocationSettingsOuterClass {
      * This is a specification of a standard section type.
      * </pre>
      *
-     * <code>.bloombox.schema.partner.settings.SectionSettingsType type = 5;</code>
+     * <code>.bloombox.partner.settings.SectionSettingsType type = 5;</code>
      */
     io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.SectionSettingsType getType();
 
@@ -4892,7 +5020,7 @@ public final class PartnerLocationSettingsOuterClass {
      * This is a specification of a filtered section type.
      * </pre>
      *
-     * <code>.bloombox.schema.partner.settings.CustomSectionSettings custom = 6;</code>
+     * <code>.bloombox.partner.settings.CustomSectionSettings custom = 6;</code>
      */
     boolean hasCustom();
     /**
@@ -4900,7 +5028,7 @@ public final class PartnerLocationSettingsOuterClass {
      * This is a specification of a filtered section type.
      * </pre>
      *
-     * <code>.bloombox.schema.partner.settings.CustomSectionSettings custom = 6;</code>
+     * <code>.bloombox.partner.settings.CustomSectionSettings custom = 6;</code>
      */
     io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.CustomSectionSettings getCustom();
     /**
@@ -4908,7 +5036,7 @@ public final class PartnerLocationSettingsOuterClass {
      * This is a specification of a filtered section type.
      * </pre>
      *
-     * <code>.bloombox.schema.partner.settings.CustomSectionSettings custom = 6;</code>
+     * <code>.bloombox.partner.settings.CustomSectionSettings custom = 6;</code>
      */
     io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.CustomSectionSettingsOrBuilder getCustomOrBuilder();
 
@@ -4919,11 +5047,11 @@ public final class PartnerLocationSettingsOuterClass {
    * Payload of settings for a specified menu section.
    * </pre>
    *
-   * Protobuf type {@code bloombox.schema.partner.settings.SectionSettingsPayload}
+   * Protobuf type {@code bloombox.partner.settings.SectionSettingsPayload}
    */
   public  static final class SectionSettingsPayload extends
       com.google.protobuf.GeneratedMessageV3 implements
-      // @@protoc_insertion_point(message_implements:bloombox.schema.partner.settings.SectionSettingsPayload)
+      // @@protoc_insertion_point(message_implements:bloombox.partner.settings.SectionSettingsPayload)
       SectionSettingsPayloadOrBuilder {
   private static final long serialVersionUID = 0L;
     // Use SectionSettingsPayload.newBuilder() to construct.
@@ -4961,13 +5089,6 @@ public final class PartnerLocationSettingsOuterClass {
             case 0:
               done = true;
               break;
-            default: {
-              if (!parseUnknownFieldProto3(
-                  input, unknownFields, extensionRegistry, tag)) {
-                done = true;
-              }
-              break;
-            }
             case 8: {
 
               hide_ = input.readBool();
@@ -5010,6 +5131,13 @@ public final class PartnerLocationSettingsOuterClass {
               kindCase_ = 6;
               break;
             }
+            default: {
+              if (!parseUnknownFieldProto3(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
           }
         }
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
@@ -5024,12 +5152,13 @@ public final class PartnerLocationSettingsOuterClass {
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.internal_static_bloombox_schema_partner_settings_SectionSettingsPayload_descriptor;
+      return io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.internal_static_bloombox_partner_settings_SectionSettingsPayload_descriptor;
     }
 
+    @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.internal_static_bloombox_schema_partner_settings_SectionSettingsPayload_fieldAccessorTable
+      return io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.internal_static_bloombox_partner_settings_SectionSettingsPayload_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
               io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.SectionSettingsPayload.class, io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.SectionSettingsPayload.Builder.class);
     }
@@ -5191,7 +5320,7 @@ public final class PartnerLocationSettingsOuterClass {
      * This is a specification of a standard section type.
      * </pre>
      *
-     * <code>.bloombox.schema.partner.settings.SectionSettingsType type = 5;</code>
+     * <code>.bloombox.partner.settings.SectionSettingsType type = 5;</code>
      */
     public int getTypeValue() {
       if (kindCase_ == 5) {
@@ -5204,10 +5333,11 @@ public final class PartnerLocationSettingsOuterClass {
      * This is a specification of a standard section type.
      * </pre>
      *
-     * <code>.bloombox.schema.partner.settings.SectionSettingsType type = 5;</code>
+     * <code>.bloombox.partner.settings.SectionSettingsType type = 5;</code>
      */
     public io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.SectionSettingsType getType() {
       if (kindCase_ == 5) {
+        @SuppressWarnings("deprecation")
         io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.SectionSettingsType result = io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.SectionSettingsType.valueOf(
             (java.lang.Integer) kind_);
         return result == null ? io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.SectionSettingsType.UNRECOGNIZED : result;
@@ -5221,7 +5351,7 @@ public final class PartnerLocationSettingsOuterClass {
      * This is a specification of a filtered section type.
      * </pre>
      *
-     * <code>.bloombox.schema.partner.settings.CustomSectionSettings custom = 6;</code>
+     * <code>.bloombox.partner.settings.CustomSectionSettings custom = 6;</code>
      */
     public boolean hasCustom() {
       return kindCase_ == 6;
@@ -5231,7 +5361,7 @@ public final class PartnerLocationSettingsOuterClass {
      * This is a specification of a filtered section type.
      * </pre>
      *
-     * <code>.bloombox.schema.partner.settings.CustomSectionSettings custom = 6;</code>
+     * <code>.bloombox.partner.settings.CustomSectionSettings custom = 6;</code>
      */
     public io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.CustomSectionSettings getCustom() {
       if (kindCase_ == 6) {
@@ -5244,7 +5374,7 @@ public final class PartnerLocationSettingsOuterClass {
      * This is a specification of a filtered section type.
      * </pre>
      *
-     * <code>.bloombox.schema.partner.settings.CustomSectionSettings custom = 6;</code>
+     * <code>.bloombox.partner.settings.CustomSectionSettings custom = 6;</code>
      */
     public io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.CustomSectionSettingsOrBuilder getCustomOrBuilder() {
       if (kindCase_ == 6) {
@@ -5254,6 +5384,7 @@ public final class PartnerLocationSettingsOuterClass {
     }
 
     private byte memoizedIsInitialized = -1;
+    @java.lang.Override
     public final boolean isInitialized() {
       byte isInitialized = memoizedIsInitialized;
       if (isInitialized == 1) return true;
@@ -5263,6 +5394,7 @@ public final class PartnerLocationSettingsOuterClass {
       return true;
     }
 
+    @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
       if (hide_ != false) {
@@ -5286,6 +5418,7 @@ public final class PartnerLocationSettingsOuterClass {
       unknownFields.writeTo(output);
     }
 
+    @java.lang.Override
     public int getSerializedSize() {
       int size = memoizedSize;
       if (size != -1) return size;
@@ -5460,6 +5593,7 @@ public final class PartnerLocationSettingsOuterClass {
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
 
+    @java.lang.Override
     public Builder newBuilderForType() { return newBuilder(); }
     public static Builder newBuilder() {
       return DEFAULT_INSTANCE.toBuilder();
@@ -5467,6 +5601,7 @@ public final class PartnerLocationSettingsOuterClass {
     public static Builder newBuilder(io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.SectionSettingsPayload prototype) {
       return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
     }
+    @java.lang.Override
     public Builder toBuilder() {
       return this == DEFAULT_INSTANCE
           ? new Builder() : new Builder().mergeFrom(this);
@@ -5483,20 +5618,21 @@ public final class PartnerLocationSettingsOuterClass {
      * Payload of settings for a specified menu section.
      * </pre>
      *
-     * Protobuf type {@code bloombox.schema.partner.settings.SectionSettingsPayload}
+     * Protobuf type {@code bloombox.partner.settings.SectionSettingsPayload}
      */
     public static final class Builder extends
         com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:bloombox.schema.partner.settings.SectionSettingsPayload)
+        // @@protoc_insertion_point(builder_implements:bloombox.partner.settings.SectionSettingsPayload)
         io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.SectionSettingsPayloadOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.internal_static_bloombox_schema_partner_settings_SectionSettingsPayload_descriptor;
+        return io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.internal_static_bloombox_partner_settings_SectionSettingsPayload_descriptor;
       }
 
+      @java.lang.Override
       protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.internal_static_bloombox_schema_partner_settings_SectionSettingsPayload_fieldAccessorTable
+        return io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.internal_static_bloombox_partner_settings_SectionSettingsPayload_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
                 io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.SectionSettingsPayload.class, io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.SectionSettingsPayload.Builder.class);
       }
@@ -5516,6 +5652,7 @@ public final class PartnerLocationSettingsOuterClass {
                 .alwaysUseFieldBuilders) {
         }
       }
+      @java.lang.Override
       public Builder clear() {
         super.clear();
         hide_ = false;
@@ -5531,15 +5668,18 @@ public final class PartnerLocationSettingsOuterClass {
         return this;
       }
 
+      @java.lang.Override
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.internal_static_bloombox_schema_partner_settings_SectionSettingsPayload_descriptor;
+        return io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.internal_static_bloombox_partner_settings_SectionSettingsPayload_descriptor;
       }
 
+      @java.lang.Override
       public io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.SectionSettingsPayload getDefaultInstanceForType() {
         return io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.SectionSettingsPayload.getDefaultInstance();
       }
 
+      @java.lang.Override
       public io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.SectionSettingsPayload build() {
         io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.SectionSettingsPayload result = buildPartial();
         if (!result.isInitialized()) {
@@ -5548,6 +5688,7 @@ public final class PartnerLocationSettingsOuterClass {
         return result;
       }
 
+      @java.lang.Override
       public io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.SectionSettingsPayload buildPartial() {
         io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.SectionSettingsPayload result = new io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.SectionSettingsPayload(this);
         result.hide_ = hide_;
@@ -5569,32 +5710,39 @@ public final class PartnerLocationSettingsOuterClass {
         return result;
       }
 
+      @java.lang.Override
       public Builder clone() {
         return (Builder) super.clone();
       }
+      @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
         return (Builder) super.setField(field, value);
       }
+      @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
         return (Builder) super.clearField(field);
       }
+      @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
         return (Builder) super.clearOneof(oneof);
       }
+      @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
         return (Builder) super.setRepeatedField(field, index, value);
       }
+      @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
         return (Builder) super.addRepeatedField(field, value);
       }
+      @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
         if (other instanceof io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.SectionSettingsPayload) {
           return mergeFrom((io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.SectionSettingsPayload)other);
@@ -5638,10 +5786,12 @@ public final class PartnerLocationSettingsOuterClass {
         return this;
       }
 
+      @java.lang.Override
       public final boolean isInitialized() {
         return true;
       }
 
+      @java.lang.Override
       public Builder mergeFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -5942,7 +6092,7 @@ public final class PartnerLocationSettingsOuterClass {
        * This is a specification of a standard section type.
        * </pre>
        *
-       * <code>.bloombox.schema.partner.settings.SectionSettingsType type = 5;</code>
+       * <code>.bloombox.partner.settings.SectionSettingsType type = 5;</code>
        */
       public int getTypeValue() {
         if (kindCase_ == 5) {
@@ -5955,7 +6105,7 @@ public final class PartnerLocationSettingsOuterClass {
        * This is a specification of a standard section type.
        * </pre>
        *
-       * <code>.bloombox.schema.partner.settings.SectionSettingsType type = 5;</code>
+       * <code>.bloombox.partner.settings.SectionSettingsType type = 5;</code>
        */
       public Builder setTypeValue(int value) {
         kindCase_ = 5;
@@ -5968,10 +6118,11 @@ public final class PartnerLocationSettingsOuterClass {
        * This is a specification of a standard section type.
        * </pre>
        *
-       * <code>.bloombox.schema.partner.settings.SectionSettingsType type = 5;</code>
+       * <code>.bloombox.partner.settings.SectionSettingsType type = 5;</code>
        */
       public io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.SectionSettingsType getType() {
         if (kindCase_ == 5) {
+          @SuppressWarnings("deprecation")
           io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.SectionSettingsType result = io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.SectionSettingsType.valueOf(
               (java.lang.Integer) kind_);
           return result == null ? io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.SectionSettingsType.UNRECOGNIZED : result;
@@ -5983,7 +6134,7 @@ public final class PartnerLocationSettingsOuterClass {
        * This is a specification of a standard section type.
        * </pre>
        *
-       * <code>.bloombox.schema.partner.settings.SectionSettingsType type = 5;</code>
+       * <code>.bloombox.partner.settings.SectionSettingsType type = 5;</code>
        */
       public Builder setType(io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.SectionSettingsType value) {
         if (value == null) {
@@ -5999,7 +6150,7 @@ public final class PartnerLocationSettingsOuterClass {
        * This is a specification of a standard section type.
        * </pre>
        *
-       * <code>.bloombox.schema.partner.settings.SectionSettingsType type = 5;</code>
+       * <code>.bloombox.partner.settings.SectionSettingsType type = 5;</code>
        */
       public Builder clearType() {
         if (kindCase_ == 5) {
@@ -6017,7 +6168,7 @@ public final class PartnerLocationSettingsOuterClass {
        * This is a specification of a filtered section type.
        * </pre>
        *
-       * <code>.bloombox.schema.partner.settings.CustomSectionSettings custom = 6;</code>
+       * <code>.bloombox.partner.settings.CustomSectionSettings custom = 6;</code>
        */
       public boolean hasCustom() {
         return kindCase_ == 6;
@@ -6027,7 +6178,7 @@ public final class PartnerLocationSettingsOuterClass {
        * This is a specification of a filtered section type.
        * </pre>
        *
-       * <code>.bloombox.schema.partner.settings.CustomSectionSettings custom = 6;</code>
+       * <code>.bloombox.partner.settings.CustomSectionSettings custom = 6;</code>
        */
       public io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.CustomSectionSettings getCustom() {
         if (customBuilder_ == null) {
@@ -6047,7 +6198,7 @@ public final class PartnerLocationSettingsOuterClass {
        * This is a specification of a filtered section type.
        * </pre>
        *
-       * <code>.bloombox.schema.partner.settings.CustomSectionSettings custom = 6;</code>
+       * <code>.bloombox.partner.settings.CustomSectionSettings custom = 6;</code>
        */
       public Builder setCustom(io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.CustomSectionSettings value) {
         if (customBuilder_ == null) {
@@ -6067,7 +6218,7 @@ public final class PartnerLocationSettingsOuterClass {
        * This is a specification of a filtered section type.
        * </pre>
        *
-       * <code>.bloombox.schema.partner.settings.CustomSectionSettings custom = 6;</code>
+       * <code>.bloombox.partner.settings.CustomSectionSettings custom = 6;</code>
        */
       public Builder setCustom(
           io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.CustomSectionSettings.Builder builderForValue) {
@@ -6085,7 +6236,7 @@ public final class PartnerLocationSettingsOuterClass {
        * This is a specification of a filtered section type.
        * </pre>
        *
-       * <code>.bloombox.schema.partner.settings.CustomSectionSettings custom = 6;</code>
+       * <code>.bloombox.partner.settings.CustomSectionSettings custom = 6;</code>
        */
       public Builder mergeCustom(io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.CustomSectionSettings value) {
         if (customBuilder_ == null) {
@@ -6111,7 +6262,7 @@ public final class PartnerLocationSettingsOuterClass {
        * This is a specification of a filtered section type.
        * </pre>
        *
-       * <code>.bloombox.schema.partner.settings.CustomSectionSettings custom = 6;</code>
+       * <code>.bloombox.partner.settings.CustomSectionSettings custom = 6;</code>
        */
       public Builder clearCustom() {
         if (customBuilder_ == null) {
@@ -6134,7 +6285,7 @@ public final class PartnerLocationSettingsOuterClass {
        * This is a specification of a filtered section type.
        * </pre>
        *
-       * <code>.bloombox.schema.partner.settings.CustomSectionSettings custom = 6;</code>
+       * <code>.bloombox.partner.settings.CustomSectionSettings custom = 6;</code>
        */
       public io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.CustomSectionSettings.Builder getCustomBuilder() {
         return getCustomFieldBuilder().getBuilder();
@@ -6144,7 +6295,7 @@ public final class PartnerLocationSettingsOuterClass {
        * This is a specification of a filtered section type.
        * </pre>
        *
-       * <code>.bloombox.schema.partner.settings.CustomSectionSettings custom = 6;</code>
+       * <code>.bloombox.partner.settings.CustomSectionSettings custom = 6;</code>
        */
       public io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.CustomSectionSettingsOrBuilder getCustomOrBuilder() {
         if ((kindCase_ == 6) && (customBuilder_ != null)) {
@@ -6161,7 +6312,7 @@ public final class PartnerLocationSettingsOuterClass {
        * This is a specification of a filtered section type.
        * </pre>
        *
-       * <code>.bloombox.schema.partner.settings.CustomSectionSettings custom = 6;</code>
+       * <code>.bloombox.partner.settings.CustomSectionSettings custom = 6;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
           io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.CustomSectionSettings, io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.CustomSectionSettings.Builder, io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.CustomSectionSettingsOrBuilder> 
@@ -6181,21 +6332,23 @@ public final class PartnerLocationSettingsOuterClass {
         onChanged();;
         return customBuilder_;
       }
+      @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
         return super.setUnknownFieldsProto3(unknownFields);
       }
 
+      @java.lang.Override
       public final Builder mergeUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
         return super.mergeUnknownFields(unknownFields);
       }
 
 
-      // @@protoc_insertion_point(builder_scope:bloombox.schema.partner.settings.SectionSettingsPayload)
+      // @@protoc_insertion_point(builder_scope:bloombox.partner.settings.SectionSettingsPayload)
     }
 
-    // @@protoc_insertion_point(class_scope:bloombox.schema.partner.settings.SectionSettingsPayload)
+    // @@protoc_insertion_point(class_scope:bloombox.partner.settings.SectionSettingsPayload)
     private static final io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.SectionSettingsPayload DEFAULT_INSTANCE;
     static {
       DEFAULT_INSTANCE = new io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.SectionSettingsPayload();
@@ -6207,6 +6360,7 @@ public final class PartnerLocationSettingsOuterClass {
 
     private static final com.google.protobuf.Parser<SectionSettingsPayload>
         PARSER = new com.google.protobuf.AbstractParser<SectionSettingsPayload>() {
+      @java.lang.Override
       public SectionSettingsPayload parsePartialFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -6224,6 +6378,7 @@ public final class PartnerLocationSettingsOuterClass {
       return PARSER;
     }
 
+    @java.lang.Override
     public io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.SectionSettingsPayload getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
@@ -6231,7 +6386,7 @@ public final class PartnerLocationSettingsOuterClass {
   }
 
   public interface SectionSettingsOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:bloombox.schema.partner.settings.SectionSettings)
+      // @@protoc_insertion_point(interface_extends:bloombox.partner.settings.SectionSettings)
       com.google.protobuf.MessageOrBuilder {
 
     /**
@@ -6239,7 +6394,7 @@ public final class PartnerLocationSettingsOuterClass {
      * Apothecary section settings.
      * </pre>
      *
-     * <code>.bloombox.schema.partner.settings.SectionSettingsPayload apothecary = 1;</code>
+     * <code>.bloombox.partner.settings.SectionSettingsPayload apothecary = 1;</code>
      */
     boolean hasApothecary();
     /**
@@ -6247,7 +6402,7 @@ public final class PartnerLocationSettingsOuterClass {
      * Apothecary section settings.
      * </pre>
      *
-     * <code>.bloombox.schema.partner.settings.SectionSettingsPayload apothecary = 1;</code>
+     * <code>.bloombox.partner.settings.SectionSettingsPayload apothecary = 1;</code>
      */
     io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.SectionSettingsPayload getApothecary();
     /**
@@ -6255,7 +6410,7 @@ public final class PartnerLocationSettingsOuterClass {
      * Apothecary section settings.
      * </pre>
      *
-     * <code>.bloombox.schema.partner.settings.SectionSettingsPayload apothecary = 1;</code>
+     * <code>.bloombox.partner.settings.SectionSettingsPayload apothecary = 1;</code>
      */
     io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.SectionSettingsPayloadOrBuilder getApothecaryOrBuilder();
 
@@ -6264,7 +6419,7 @@ public final class PartnerLocationSettingsOuterClass {
      * Cartridges section settings.
      * </pre>
      *
-     * <code>.bloombox.schema.partner.settings.SectionSettingsPayload cartridges = 2;</code>
+     * <code>.bloombox.partner.settings.SectionSettingsPayload cartridges = 2;</code>
      */
     boolean hasCartridges();
     /**
@@ -6272,7 +6427,7 @@ public final class PartnerLocationSettingsOuterClass {
      * Cartridges section settings.
      * </pre>
      *
-     * <code>.bloombox.schema.partner.settings.SectionSettingsPayload cartridges = 2;</code>
+     * <code>.bloombox.partner.settings.SectionSettingsPayload cartridges = 2;</code>
      */
     io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.SectionSettingsPayload getCartridges();
     /**
@@ -6280,7 +6435,7 @@ public final class PartnerLocationSettingsOuterClass {
      * Cartridges section settings.
      * </pre>
      *
-     * <code>.bloombox.schema.partner.settings.SectionSettingsPayload cartridges = 2;</code>
+     * <code>.bloombox.partner.settings.SectionSettingsPayload cartridges = 2;</code>
      */
     io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.SectionSettingsPayloadOrBuilder getCartridgesOrBuilder();
 
@@ -6289,7 +6444,7 @@ public final class PartnerLocationSettingsOuterClass {
      * Concentrates/extracts section settings.
      * </pre>
      *
-     * <code>.bloombox.schema.partner.settings.SectionSettingsPayload concentrates = 3;</code>
+     * <code>.bloombox.partner.settings.SectionSettingsPayload concentrates = 3;</code>
      */
     boolean hasConcentrates();
     /**
@@ -6297,7 +6452,7 @@ public final class PartnerLocationSettingsOuterClass {
      * Concentrates/extracts section settings.
      * </pre>
      *
-     * <code>.bloombox.schema.partner.settings.SectionSettingsPayload concentrates = 3;</code>
+     * <code>.bloombox.partner.settings.SectionSettingsPayload concentrates = 3;</code>
      */
     io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.SectionSettingsPayload getConcentrates();
     /**
@@ -6305,7 +6460,7 @@ public final class PartnerLocationSettingsOuterClass {
      * Concentrates/extracts section settings.
      * </pre>
      *
-     * <code>.bloombox.schema.partner.settings.SectionSettingsPayload concentrates = 3;</code>
+     * <code>.bloombox.partner.settings.SectionSettingsPayload concentrates = 3;</code>
      */
     io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.SectionSettingsPayloadOrBuilder getConcentratesOrBuilder();
 
@@ -6314,7 +6469,7 @@ public final class PartnerLocationSettingsOuterClass {
      * Edibles section settings.
      * </pre>
      *
-     * <code>.bloombox.schema.partner.settings.SectionSettingsPayload edibles = 4;</code>
+     * <code>.bloombox.partner.settings.SectionSettingsPayload edibles = 4;</code>
      */
     boolean hasEdibles();
     /**
@@ -6322,7 +6477,7 @@ public final class PartnerLocationSettingsOuterClass {
      * Edibles section settings.
      * </pre>
      *
-     * <code>.bloombox.schema.partner.settings.SectionSettingsPayload edibles = 4;</code>
+     * <code>.bloombox.partner.settings.SectionSettingsPayload edibles = 4;</code>
      */
     io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.SectionSettingsPayload getEdibles();
     /**
@@ -6330,7 +6485,7 @@ public final class PartnerLocationSettingsOuterClass {
      * Edibles section settings.
      * </pre>
      *
-     * <code>.bloombox.schema.partner.settings.SectionSettingsPayload edibles = 4;</code>
+     * <code>.bloombox.partner.settings.SectionSettingsPayload edibles = 4;</code>
      */
     io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.SectionSettingsPayloadOrBuilder getEdiblesOrBuilder();
 
@@ -6339,7 +6494,7 @@ public final class PartnerLocationSettingsOuterClass {
      * Flowers section settings.
      * </pre>
      *
-     * <code>.bloombox.schema.partner.settings.SectionSettingsPayload flowers = 5;</code>
+     * <code>.bloombox.partner.settings.SectionSettingsPayload flowers = 5;</code>
      */
     boolean hasFlowers();
     /**
@@ -6347,7 +6502,7 @@ public final class PartnerLocationSettingsOuterClass {
      * Flowers section settings.
      * </pre>
      *
-     * <code>.bloombox.schema.partner.settings.SectionSettingsPayload flowers = 5;</code>
+     * <code>.bloombox.partner.settings.SectionSettingsPayload flowers = 5;</code>
      */
     io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.SectionSettingsPayload getFlowers();
     /**
@@ -6355,7 +6510,7 @@ public final class PartnerLocationSettingsOuterClass {
      * Flowers section settings.
      * </pre>
      *
-     * <code>.bloombox.schema.partner.settings.SectionSettingsPayload flowers = 5;</code>
+     * <code>.bloombox.partner.settings.SectionSettingsPayload flowers = 5;</code>
      */
     io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.SectionSettingsPayloadOrBuilder getFlowersOrBuilder();
 
@@ -6364,7 +6519,7 @@ public final class PartnerLocationSettingsOuterClass {
      * Prerolls section settings.
      * </pre>
      *
-     * <code>.bloombox.schema.partner.settings.SectionSettingsPayload prerolls = 6;</code>
+     * <code>.bloombox.partner.settings.SectionSettingsPayload prerolls = 6;</code>
      */
     boolean hasPrerolls();
     /**
@@ -6372,7 +6527,7 @@ public final class PartnerLocationSettingsOuterClass {
      * Prerolls section settings.
      * </pre>
      *
-     * <code>.bloombox.schema.partner.settings.SectionSettingsPayload prerolls = 6;</code>
+     * <code>.bloombox.partner.settings.SectionSettingsPayload prerolls = 6;</code>
      */
     io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.SectionSettingsPayload getPrerolls();
     /**
@@ -6380,7 +6535,7 @@ public final class PartnerLocationSettingsOuterClass {
      * Prerolls section settings.
      * </pre>
      *
-     * <code>.bloombox.schema.partner.settings.SectionSettingsPayload prerolls = 6;</code>
+     * <code>.bloombox.partner.settings.SectionSettingsPayload prerolls = 6;</code>
      */
     io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.SectionSettingsPayloadOrBuilder getPrerollsOrBuilder();
 
@@ -6389,7 +6544,7 @@ public final class PartnerLocationSettingsOuterClass {
      * Merchandise section settings.
      * </pre>
      *
-     * <code>.bloombox.schema.partner.settings.SectionSettingsPayload merchandise = 7;</code>
+     * <code>.bloombox.partner.settings.SectionSettingsPayload merchandise = 7;</code>
      */
     boolean hasMerchandise();
     /**
@@ -6397,7 +6552,7 @@ public final class PartnerLocationSettingsOuterClass {
      * Merchandise section settings.
      * </pre>
      *
-     * <code>.bloombox.schema.partner.settings.SectionSettingsPayload merchandise = 7;</code>
+     * <code>.bloombox.partner.settings.SectionSettingsPayload merchandise = 7;</code>
      */
     io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.SectionSettingsPayload getMerchandise();
     /**
@@ -6405,7 +6560,7 @@ public final class PartnerLocationSettingsOuterClass {
      * Merchandise section settings.
      * </pre>
      *
-     * <code>.bloombox.schema.partner.settings.SectionSettingsPayload merchandise = 7;</code>
+     * <code>.bloombox.partner.settings.SectionSettingsPayload merchandise = 7;</code>
      */
     io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.SectionSettingsPayloadOrBuilder getMerchandiseOrBuilder();
 
@@ -6414,7 +6569,7 @@ public final class PartnerLocationSettingsOuterClass {
      * Plants section settings.
      * </pre>
      *
-     * <code>.bloombox.schema.partner.settings.SectionSettingsPayload plants = 8;</code>
+     * <code>.bloombox.partner.settings.SectionSettingsPayload plants = 8;</code>
      */
     boolean hasPlants();
     /**
@@ -6422,7 +6577,7 @@ public final class PartnerLocationSettingsOuterClass {
      * Plants section settings.
      * </pre>
      *
-     * <code>.bloombox.schema.partner.settings.SectionSettingsPayload plants = 8;</code>
+     * <code>.bloombox.partner.settings.SectionSettingsPayload plants = 8;</code>
      */
     io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.SectionSettingsPayload getPlants();
     /**
@@ -6430,7 +6585,7 @@ public final class PartnerLocationSettingsOuterClass {
      * Plants section settings.
      * </pre>
      *
-     * <code>.bloombox.schema.partner.settings.SectionSettingsPayload plants = 8;</code>
+     * <code>.bloombox.partner.settings.SectionSettingsPayload plants = 8;</code>
      */
     io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.SectionSettingsPayloadOrBuilder getPlantsOrBuilder();
 
@@ -6439,7 +6594,7 @@ public final class PartnerLocationSettingsOuterClass {
      * CBD section settings.
      * </pre>
      *
-     * <code>.bloombox.schema.partner.settings.SectionSettingsPayload cbd = 20;</code>
+     * <code>.bloombox.partner.settings.SectionSettingsPayload cbd = 20;</code>
      */
     boolean hasCbd();
     /**
@@ -6447,7 +6602,7 @@ public final class PartnerLocationSettingsOuterClass {
      * CBD section settings.
      * </pre>
      *
-     * <code>.bloombox.schema.partner.settings.SectionSettingsPayload cbd = 20;</code>
+     * <code>.bloombox.partner.settings.SectionSettingsPayload cbd = 20;</code>
      */
     io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.SectionSettingsPayload getCbd();
     /**
@@ -6455,7 +6610,7 @@ public final class PartnerLocationSettingsOuterClass {
      * CBD section settings.
      * </pre>
      *
-     * <code>.bloombox.schema.partner.settings.SectionSettingsPayload cbd = 20;</code>
+     * <code>.bloombox.partner.settings.SectionSettingsPayload cbd = 20;</code>
      */
     io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.SectionSettingsPayloadOrBuilder getCbdOrBuilder();
 
@@ -6464,7 +6619,7 @@ public final class PartnerLocationSettingsOuterClass {
      * In-house section settings.
      * </pre>
      *
-     * <code>.bloombox.schema.partner.settings.SectionSettingsPayload house = 21;</code>
+     * <code>.bloombox.partner.settings.SectionSettingsPayload house = 21;</code>
      */
     boolean hasHouse();
     /**
@@ -6472,7 +6627,7 @@ public final class PartnerLocationSettingsOuterClass {
      * In-house section settings.
      * </pre>
      *
-     * <code>.bloombox.schema.partner.settings.SectionSettingsPayload house = 21;</code>
+     * <code>.bloombox.partner.settings.SectionSettingsPayload house = 21;</code>
      */
     io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.SectionSettingsPayload getHouse();
     /**
@@ -6480,7 +6635,7 @@ public final class PartnerLocationSettingsOuterClass {
      * In-house section settings.
      * </pre>
      *
-     * <code>.bloombox.schema.partner.settings.SectionSettingsPayload house = 21;</code>
+     * <code>.bloombox.partner.settings.SectionSettingsPayload house = 21;</code>
      */
     io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.SectionSettingsPayloadOrBuilder getHouseOrBuilder();
 
@@ -6489,7 +6644,7 @@ public final class PartnerLocationSettingsOuterClass {
      * On-sale section settings.
      * </pre>
      *
-     * <code>.bloombox.schema.partner.settings.SectionSettingsPayload onsale = 22;</code>
+     * <code>.bloombox.partner.settings.SectionSettingsPayload onsale = 22;</code>
      */
     boolean hasOnsale();
     /**
@@ -6497,7 +6652,7 @@ public final class PartnerLocationSettingsOuterClass {
      * On-sale section settings.
      * </pre>
      *
-     * <code>.bloombox.schema.partner.settings.SectionSettingsPayload onsale = 22;</code>
+     * <code>.bloombox.partner.settings.SectionSettingsPayload onsale = 22;</code>
      */
     io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.SectionSettingsPayload getOnsale();
     /**
@@ -6505,7 +6660,7 @@ public final class PartnerLocationSettingsOuterClass {
      * On-sale section settings.
      * </pre>
      *
-     * <code>.bloombox.schema.partner.settings.SectionSettingsPayload onsale = 22;</code>
+     * <code>.bloombox.partner.settings.SectionSettingsPayload onsale = 22;</code>
      */
     io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.SectionSettingsPayloadOrBuilder getOnsaleOrBuilder();
   }
@@ -6514,11 +6669,11 @@ public final class PartnerLocationSettingsOuterClass {
    * Section-level settings in menu display applications.
    * </pre>
    *
-   * Protobuf type {@code bloombox.schema.partner.settings.SectionSettings}
+   * Protobuf type {@code bloombox.partner.settings.SectionSettings}
    */
   public  static final class SectionSettings extends
       com.google.protobuf.GeneratedMessageV3 implements
-      // @@protoc_insertion_point(message_implements:bloombox.schema.partner.settings.SectionSettings)
+      // @@protoc_insertion_point(message_implements:bloombox.partner.settings.SectionSettings)
       SectionSettingsOrBuilder {
   private static final long serialVersionUID = 0L;
     // Use SectionSettings.newBuilder() to construct.
@@ -6552,13 +6707,6 @@ public final class PartnerLocationSettingsOuterClass {
             case 0:
               done = true;
               break;
-            default: {
-              if (!parseUnknownFieldProto3(
-                  input, unknownFields, extensionRegistry, tag)) {
-                done = true;
-              }
-              break;
-            }
             case 10: {
               io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.SectionSettingsPayload.Builder subBuilder = null;
               if (apothecary_ != null) {
@@ -6702,6 +6850,13 @@ public final class PartnerLocationSettingsOuterClass {
 
               break;
             }
+            default: {
+              if (!parseUnknownFieldProto3(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
           }
         }
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
@@ -6716,12 +6871,13 @@ public final class PartnerLocationSettingsOuterClass {
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.internal_static_bloombox_schema_partner_settings_SectionSettings_descriptor;
+      return io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.internal_static_bloombox_partner_settings_SectionSettings_descriptor;
     }
 
+    @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.internal_static_bloombox_schema_partner_settings_SectionSettings_fieldAccessorTable
+      return io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.internal_static_bloombox_partner_settings_SectionSettings_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
               io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.SectionSettings.class, io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.SectionSettings.Builder.class);
     }
@@ -6733,7 +6889,7 @@ public final class PartnerLocationSettingsOuterClass {
      * Apothecary section settings.
      * </pre>
      *
-     * <code>.bloombox.schema.partner.settings.SectionSettingsPayload apothecary = 1;</code>
+     * <code>.bloombox.partner.settings.SectionSettingsPayload apothecary = 1;</code>
      */
     public boolean hasApothecary() {
       return apothecary_ != null;
@@ -6743,7 +6899,7 @@ public final class PartnerLocationSettingsOuterClass {
      * Apothecary section settings.
      * </pre>
      *
-     * <code>.bloombox.schema.partner.settings.SectionSettingsPayload apothecary = 1;</code>
+     * <code>.bloombox.partner.settings.SectionSettingsPayload apothecary = 1;</code>
      */
     public io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.SectionSettingsPayload getApothecary() {
       return apothecary_ == null ? io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.SectionSettingsPayload.getDefaultInstance() : apothecary_;
@@ -6753,7 +6909,7 @@ public final class PartnerLocationSettingsOuterClass {
      * Apothecary section settings.
      * </pre>
      *
-     * <code>.bloombox.schema.partner.settings.SectionSettingsPayload apothecary = 1;</code>
+     * <code>.bloombox.partner.settings.SectionSettingsPayload apothecary = 1;</code>
      */
     public io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.SectionSettingsPayloadOrBuilder getApothecaryOrBuilder() {
       return getApothecary();
@@ -6766,7 +6922,7 @@ public final class PartnerLocationSettingsOuterClass {
      * Cartridges section settings.
      * </pre>
      *
-     * <code>.bloombox.schema.partner.settings.SectionSettingsPayload cartridges = 2;</code>
+     * <code>.bloombox.partner.settings.SectionSettingsPayload cartridges = 2;</code>
      */
     public boolean hasCartridges() {
       return cartridges_ != null;
@@ -6776,7 +6932,7 @@ public final class PartnerLocationSettingsOuterClass {
      * Cartridges section settings.
      * </pre>
      *
-     * <code>.bloombox.schema.partner.settings.SectionSettingsPayload cartridges = 2;</code>
+     * <code>.bloombox.partner.settings.SectionSettingsPayload cartridges = 2;</code>
      */
     public io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.SectionSettingsPayload getCartridges() {
       return cartridges_ == null ? io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.SectionSettingsPayload.getDefaultInstance() : cartridges_;
@@ -6786,7 +6942,7 @@ public final class PartnerLocationSettingsOuterClass {
      * Cartridges section settings.
      * </pre>
      *
-     * <code>.bloombox.schema.partner.settings.SectionSettingsPayload cartridges = 2;</code>
+     * <code>.bloombox.partner.settings.SectionSettingsPayload cartridges = 2;</code>
      */
     public io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.SectionSettingsPayloadOrBuilder getCartridgesOrBuilder() {
       return getCartridges();
@@ -6799,7 +6955,7 @@ public final class PartnerLocationSettingsOuterClass {
      * Concentrates/extracts section settings.
      * </pre>
      *
-     * <code>.bloombox.schema.partner.settings.SectionSettingsPayload concentrates = 3;</code>
+     * <code>.bloombox.partner.settings.SectionSettingsPayload concentrates = 3;</code>
      */
     public boolean hasConcentrates() {
       return concentrates_ != null;
@@ -6809,7 +6965,7 @@ public final class PartnerLocationSettingsOuterClass {
      * Concentrates/extracts section settings.
      * </pre>
      *
-     * <code>.bloombox.schema.partner.settings.SectionSettingsPayload concentrates = 3;</code>
+     * <code>.bloombox.partner.settings.SectionSettingsPayload concentrates = 3;</code>
      */
     public io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.SectionSettingsPayload getConcentrates() {
       return concentrates_ == null ? io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.SectionSettingsPayload.getDefaultInstance() : concentrates_;
@@ -6819,7 +6975,7 @@ public final class PartnerLocationSettingsOuterClass {
      * Concentrates/extracts section settings.
      * </pre>
      *
-     * <code>.bloombox.schema.partner.settings.SectionSettingsPayload concentrates = 3;</code>
+     * <code>.bloombox.partner.settings.SectionSettingsPayload concentrates = 3;</code>
      */
     public io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.SectionSettingsPayloadOrBuilder getConcentratesOrBuilder() {
       return getConcentrates();
@@ -6832,7 +6988,7 @@ public final class PartnerLocationSettingsOuterClass {
      * Edibles section settings.
      * </pre>
      *
-     * <code>.bloombox.schema.partner.settings.SectionSettingsPayload edibles = 4;</code>
+     * <code>.bloombox.partner.settings.SectionSettingsPayload edibles = 4;</code>
      */
     public boolean hasEdibles() {
       return edibles_ != null;
@@ -6842,7 +6998,7 @@ public final class PartnerLocationSettingsOuterClass {
      * Edibles section settings.
      * </pre>
      *
-     * <code>.bloombox.schema.partner.settings.SectionSettingsPayload edibles = 4;</code>
+     * <code>.bloombox.partner.settings.SectionSettingsPayload edibles = 4;</code>
      */
     public io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.SectionSettingsPayload getEdibles() {
       return edibles_ == null ? io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.SectionSettingsPayload.getDefaultInstance() : edibles_;
@@ -6852,7 +7008,7 @@ public final class PartnerLocationSettingsOuterClass {
      * Edibles section settings.
      * </pre>
      *
-     * <code>.bloombox.schema.partner.settings.SectionSettingsPayload edibles = 4;</code>
+     * <code>.bloombox.partner.settings.SectionSettingsPayload edibles = 4;</code>
      */
     public io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.SectionSettingsPayloadOrBuilder getEdiblesOrBuilder() {
       return getEdibles();
@@ -6865,7 +7021,7 @@ public final class PartnerLocationSettingsOuterClass {
      * Flowers section settings.
      * </pre>
      *
-     * <code>.bloombox.schema.partner.settings.SectionSettingsPayload flowers = 5;</code>
+     * <code>.bloombox.partner.settings.SectionSettingsPayload flowers = 5;</code>
      */
     public boolean hasFlowers() {
       return flowers_ != null;
@@ -6875,7 +7031,7 @@ public final class PartnerLocationSettingsOuterClass {
      * Flowers section settings.
      * </pre>
      *
-     * <code>.bloombox.schema.partner.settings.SectionSettingsPayload flowers = 5;</code>
+     * <code>.bloombox.partner.settings.SectionSettingsPayload flowers = 5;</code>
      */
     public io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.SectionSettingsPayload getFlowers() {
       return flowers_ == null ? io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.SectionSettingsPayload.getDefaultInstance() : flowers_;
@@ -6885,7 +7041,7 @@ public final class PartnerLocationSettingsOuterClass {
      * Flowers section settings.
      * </pre>
      *
-     * <code>.bloombox.schema.partner.settings.SectionSettingsPayload flowers = 5;</code>
+     * <code>.bloombox.partner.settings.SectionSettingsPayload flowers = 5;</code>
      */
     public io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.SectionSettingsPayloadOrBuilder getFlowersOrBuilder() {
       return getFlowers();
@@ -6898,7 +7054,7 @@ public final class PartnerLocationSettingsOuterClass {
      * Prerolls section settings.
      * </pre>
      *
-     * <code>.bloombox.schema.partner.settings.SectionSettingsPayload prerolls = 6;</code>
+     * <code>.bloombox.partner.settings.SectionSettingsPayload prerolls = 6;</code>
      */
     public boolean hasPrerolls() {
       return prerolls_ != null;
@@ -6908,7 +7064,7 @@ public final class PartnerLocationSettingsOuterClass {
      * Prerolls section settings.
      * </pre>
      *
-     * <code>.bloombox.schema.partner.settings.SectionSettingsPayload prerolls = 6;</code>
+     * <code>.bloombox.partner.settings.SectionSettingsPayload prerolls = 6;</code>
      */
     public io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.SectionSettingsPayload getPrerolls() {
       return prerolls_ == null ? io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.SectionSettingsPayload.getDefaultInstance() : prerolls_;
@@ -6918,7 +7074,7 @@ public final class PartnerLocationSettingsOuterClass {
      * Prerolls section settings.
      * </pre>
      *
-     * <code>.bloombox.schema.partner.settings.SectionSettingsPayload prerolls = 6;</code>
+     * <code>.bloombox.partner.settings.SectionSettingsPayload prerolls = 6;</code>
      */
     public io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.SectionSettingsPayloadOrBuilder getPrerollsOrBuilder() {
       return getPrerolls();
@@ -6931,7 +7087,7 @@ public final class PartnerLocationSettingsOuterClass {
      * Merchandise section settings.
      * </pre>
      *
-     * <code>.bloombox.schema.partner.settings.SectionSettingsPayload merchandise = 7;</code>
+     * <code>.bloombox.partner.settings.SectionSettingsPayload merchandise = 7;</code>
      */
     public boolean hasMerchandise() {
       return merchandise_ != null;
@@ -6941,7 +7097,7 @@ public final class PartnerLocationSettingsOuterClass {
      * Merchandise section settings.
      * </pre>
      *
-     * <code>.bloombox.schema.partner.settings.SectionSettingsPayload merchandise = 7;</code>
+     * <code>.bloombox.partner.settings.SectionSettingsPayload merchandise = 7;</code>
      */
     public io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.SectionSettingsPayload getMerchandise() {
       return merchandise_ == null ? io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.SectionSettingsPayload.getDefaultInstance() : merchandise_;
@@ -6951,7 +7107,7 @@ public final class PartnerLocationSettingsOuterClass {
      * Merchandise section settings.
      * </pre>
      *
-     * <code>.bloombox.schema.partner.settings.SectionSettingsPayload merchandise = 7;</code>
+     * <code>.bloombox.partner.settings.SectionSettingsPayload merchandise = 7;</code>
      */
     public io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.SectionSettingsPayloadOrBuilder getMerchandiseOrBuilder() {
       return getMerchandise();
@@ -6964,7 +7120,7 @@ public final class PartnerLocationSettingsOuterClass {
      * Plants section settings.
      * </pre>
      *
-     * <code>.bloombox.schema.partner.settings.SectionSettingsPayload plants = 8;</code>
+     * <code>.bloombox.partner.settings.SectionSettingsPayload plants = 8;</code>
      */
     public boolean hasPlants() {
       return plants_ != null;
@@ -6974,7 +7130,7 @@ public final class PartnerLocationSettingsOuterClass {
      * Plants section settings.
      * </pre>
      *
-     * <code>.bloombox.schema.partner.settings.SectionSettingsPayload plants = 8;</code>
+     * <code>.bloombox.partner.settings.SectionSettingsPayload plants = 8;</code>
      */
     public io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.SectionSettingsPayload getPlants() {
       return plants_ == null ? io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.SectionSettingsPayload.getDefaultInstance() : plants_;
@@ -6984,7 +7140,7 @@ public final class PartnerLocationSettingsOuterClass {
      * Plants section settings.
      * </pre>
      *
-     * <code>.bloombox.schema.partner.settings.SectionSettingsPayload plants = 8;</code>
+     * <code>.bloombox.partner.settings.SectionSettingsPayload plants = 8;</code>
      */
     public io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.SectionSettingsPayloadOrBuilder getPlantsOrBuilder() {
       return getPlants();
@@ -6997,7 +7153,7 @@ public final class PartnerLocationSettingsOuterClass {
      * CBD section settings.
      * </pre>
      *
-     * <code>.bloombox.schema.partner.settings.SectionSettingsPayload cbd = 20;</code>
+     * <code>.bloombox.partner.settings.SectionSettingsPayload cbd = 20;</code>
      */
     public boolean hasCbd() {
       return cbd_ != null;
@@ -7007,7 +7163,7 @@ public final class PartnerLocationSettingsOuterClass {
      * CBD section settings.
      * </pre>
      *
-     * <code>.bloombox.schema.partner.settings.SectionSettingsPayload cbd = 20;</code>
+     * <code>.bloombox.partner.settings.SectionSettingsPayload cbd = 20;</code>
      */
     public io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.SectionSettingsPayload getCbd() {
       return cbd_ == null ? io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.SectionSettingsPayload.getDefaultInstance() : cbd_;
@@ -7017,7 +7173,7 @@ public final class PartnerLocationSettingsOuterClass {
      * CBD section settings.
      * </pre>
      *
-     * <code>.bloombox.schema.partner.settings.SectionSettingsPayload cbd = 20;</code>
+     * <code>.bloombox.partner.settings.SectionSettingsPayload cbd = 20;</code>
      */
     public io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.SectionSettingsPayloadOrBuilder getCbdOrBuilder() {
       return getCbd();
@@ -7030,7 +7186,7 @@ public final class PartnerLocationSettingsOuterClass {
      * In-house section settings.
      * </pre>
      *
-     * <code>.bloombox.schema.partner.settings.SectionSettingsPayload house = 21;</code>
+     * <code>.bloombox.partner.settings.SectionSettingsPayload house = 21;</code>
      */
     public boolean hasHouse() {
       return house_ != null;
@@ -7040,7 +7196,7 @@ public final class PartnerLocationSettingsOuterClass {
      * In-house section settings.
      * </pre>
      *
-     * <code>.bloombox.schema.partner.settings.SectionSettingsPayload house = 21;</code>
+     * <code>.bloombox.partner.settings.SectionSettingsPayload house = 21;</code>
      */
     public io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.SectionSettingsPayload getHouse() {
       return house_ == null ? io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.SectionSettingsPayload.getDefaultInstance() : house_;
@@ -7050,7 +7206,7 @@ public final class PartnerLocationSettingsOuterClass {
      * In-house section settings.
      * </pre>
      *
-     * <code>.bloombox.schema.partner.settings.SectionSettingsPayload house = 21;</code>
+     * <code>.bloombox.partner.settings.SectionSettingsPayload house = 21;</code>
      */
     public io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.SectionSettingsPayloadOrBuilder getHouseOrBuilder() {
       return getHouse();
@@ -7063,7 +7219,7 @@ public final class PartnerLocationSettingsOuterClass {
      * On-sale section settings.
      * </pre>
      *
-     * <code>.bloombox.schema.partner.settings.SectionSettingsPayload onsale = 22;</code>
+     * <code>.bloombox.partner.settings.SectionSettingsPayload onsale = 22;</code>
      */
     public boolean hasOnsale() {
       return onsale_ != null;
@@ -7073,7 +7229,7 @@ public final class PartnerLocationSettingsOuterClass {
      * On-sale section settings.
      * </pre>
      *
-     * <code>.bloombox.schema.partner.settings.SectionSettingsPayload onsale = 22;</code>
+     * <code>.bloombox.partner.settings.SectionSettingsPayload onsale = 22;</code>
      */
     public io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.SectionSettingsPayload getOnsale() {
       return onsale_ == null ? io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.SectionSettingsPayload.getDefaultInstance() : onsale_;
@@ -7083,13 +7239,14 @@ public final class PartnerLocationSettingsOuterClass {
      * On-sale section settings.
      * </pre>
      *
-     * <code>.bloombox.schema.partner.settings.SectionSettingsPayload onsale = 22;</code>
+     * <code>.bloombox.partner.settings.SectionSettingsPayload onsale = 22;</code>
      */
     public io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.SectionSettingsPayloadOrBuilder getOnsaleOrBuilder() {
       return getOnsale();
     }
 
     private byte memoizedIsInitialized = -1;
+    @java.lang.Override
     public final boolean isInitialized() {
       byte isInitialized = memoizedIsInitialized;
       if (isInitialized == 1) return true;
@@ -7099,6 +7256,7 @@ public final class PartnerLocationSettingsOuterClass {
       return true;
     }
 
+    @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
       if (apothecary_ != null) {
@@ -7137,6 +7295,7 @@ public final class PartnerLocationSettingsOuterClass {
       unknownFields.writeTo(output);
     }
 
+    @java.lang.Override
     public int getSerializedSize() {
       int size = memoizedSize;
       if (size != -1) return size;
@@ -7387,6 +7546,7 @@ public final class PartnerLocationSettingsOuterClass {
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
 
+    @java.lang.Override
     public Builder newBuilderForType() { return newBuilder(); }
     public static Builder newBuilder() {
       return DEFAULT_INSTANCE.toBuilder();
@@ -7394,6 +7554,7 @@ public final class PartnerLocationSettingsOuterClass {
     public static Builder newBuilder(io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.SectionSettings prototype) {
       return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
     }
+    @java.lang.Override
     public Builder toBuilder() {
       return this == DEFAULT_INSTANCE
           ? new Builder() : new Builder().mergeFrom(this);
@@ -7410,20 +7571,21 @@ public final class PartnerLocationSettingsOuterClass {
      * Section-level settings in menu display applications.
      * </pre>
      *
-     * Protobuf type {@code bloombox.schema.partner.settings.SectionSettings}
+     * Protobuf type {@code bloombox.partner.settings.SectionSettings}
      */
     public static final class Builder extends
         com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:bloombox.schema.partner.settings.SectionSettings)
+        // @@protoc_insertion_point(builder_implements:bloombox.partner.settings.SectionSettings)
         io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.SectionSettingsOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.internal_static_bloombox_schema_partner_settings_SectionSettings_descriptor;
+        return io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.internal_static_bloombox_partner_settings_SectionSettings_descriptor;
       }
 
+      @java.lang.Override
       protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.internal_static_bloombox_schema_partner_settings_SectionSettings_fieldAccessorTable
+        return io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.internal_static_bloombox_partner_settings_SectionSettings_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
                 io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.SectionSettings.class, io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.SectionSettings.Builder.class);
       }
@@ -7443,6 +7605,7 @@ public final class PartnerLocationSettingsOuterClass {
                 .alwaysUseFieldBuilders) {
         }
       }
+      @java.lang.Override
       public Builder clear() {
         super.clear();
         if (apothecaryBuilder_ == null) {
@@ -7514,15 +7677,18 @@ public final class PartnerLocationSettingsOuterClass {
         return this;
       }
 
+      @java.lang.Override
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.internal_static_bloombox_schema_partner_settings_SectionSettings_descriptor;
+        return io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.internal_static_bloombox_partner_settings_SectionSettings_descriptor;
       }
 
+      @java.lang.Override
       public io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.SectionSettings getDefaultInstanceForType() {
         return io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.SectionSettings.getDefaultInstance();
       }
 
+      @java.lang.Override
       public io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.SectionSettings build() {
         io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.SectionSettings result = buildPartial();
         if (!result.isInitialized()) {
@@ -7531,6 +7697,7 @@ public final class PartnerLocationSettingsOuterClass {
         return result;
       }
 
+      @java.lang.Override
       public io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.SectionSettings buildPartial() {
         io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.SectionSettings result = new io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.SectionSettings(this);
         if (apothecaryBuilder_ == null) {
@@ -7592,32 +7759,39 @@ public final class PartnerLocationSettingsOuterClass {
         return result;
       }
 
+      @java.lang.Override
       public Builder clone() {
         return (Builder) super.clone();
       }
+      @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
         return (Builder) super.setField(field, value);
       }
+      @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
         return (Builder) super.clearField(field);
       }
+      @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
         return (Builder) super.clearOneof(oneof);
       }
+      @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
         return (Builder) super.setRepeatedField(field, index, value);
       }
+      @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
         return (Builder) super.addRepeatedField(field, value);
       }
+      @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
         if (other instanceof io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.SectionSettings) {
           return mergeFrom((io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.SectionSettings)other);
@@ -7667,10 +7841,12 @@ public final class PartnerLocationSettingsOuterClass {
         return this;
       }
 
+      @java.lang.Override
       public final boolean isInitialized() {
         return true;
       }
 
+      @java.lang.Override
       public Builder mergeFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -7697,7 +7873,7 @@ public final class PartnerLocationSettingsOuterClass {
        * Apothecary section settings.
        * </pre>
        *
-       * <code>.bloombox.schema.partner.settings.SectionSettingsPayload apothecary = 1;</code>
+       * <code>.bloombox.partner.settings.SectionSettingsPayload apothecary = 1;</code>
        */
       public boolean hasApothecary() {
         return apothecaryBuilder_ != null || apothecary_ != null;
@@ -7707,7 +7883,7 @@ public final class PartnerLocationSettingsOuterClass {
        * Apothecary section settings.
        * </pre>
        *
-       * <code>.bloombox.schema.partner.settings.SectionSettingsPayload apothecary = 1;</code>
+       * <code>.bloombox.partner.settings.SectionSettingsPayload apothecary = 1;</code>
        */
       public io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.SectionSettingsPayload getApothecary() {
         if (apothecaryBuilder_ == null) {
@@ -7721,7 +7897,7 @@ public final class PartnerLocationSettingsOuterClass {
        * Apothecary section settings.
        * </pre>
        *
-       * <code>.bloombox.schema.partner.settings.SectionSettingsPayload apothecary = 1;</code>
+       * <code>.bloombox.partner.settings.SectionSettingsPayload apothecary = 1;</code>
        */
       public Builder setApothecary(io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.SectionSettingsPayload value) {
         if (apothecaryBuilder_ == null) {
@@ -7741,7 +7917,7 @@ public final class PartnerLocationSettingsOuterClass {
        * Apothecary section settings.
        * </pre>
        *
-       * <code>.bloombox.schema.partner.settings.SectionSettingsPayload apothecary = 1;</code>
+       * <code>.bloombox.partner.settings.SectionSettingsPayload apothecary = 1;</code>
        */
       public Builder setApothecary(
           io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.SectionSettingsPayload.Builder builderForValue) {
@@ -7759,7 +7935,7 @@ public final class PartnerLocationSettingsOuterClass {
        * Apothecary section settings.
        * </pre>
        *
-       * <code>.bloombox.schema.partner.settings.SectionSettingsPayload apothecary = 1;</code>
+       * <code>.bloombox.partner.settings.SectionSettingsPayload apothecary = 1;</code>
        */
       public Builder mergeApothecary(io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.SectionSettingsPayload value) {
         if (apothecaryBuilder_ == null) {
@@ -7781,7 +7957,7 @@ public final class PartnerLocationSettingsOuterClass {
        * Apothecary section settings.
        * </pre>
        *
-       * <code>.bloombox.schema.partner.settings.SectionSettingsPayload apothecary = 1;</code>
+       * <code>.bloombox.partner.settings.SectionSettingsPayload apothecary = 1;</code>
        */
       public Builder clearApothecary() {
         if (apothecaryBuilder_ == null) {
@@ -7799,7 +7975,7 @@ public final class PartnerLocationSettingsOuterClass {
        * Apothecary section settings.
        * </pre>
        *
-       * <code>.bloombox.schema.partner.settings.SectionSettingsPayload apothecary = 1;</code>
+       * <code>.bloombox.partner.settings.SectionSettingsPayload apothecary = 1;</code>
        */
       public io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.SectionSettingsPayload.Builder getApothecaryBuilder() {
         
@@ -7811,7 +7987,7 @@ public final class PartnerLocationSettingsOuterClass {
        * Apothecary section settings.
        * </pre>
        *
-       * <code>.bloombox.schema.partner.settings.SectionSettingsPayload apothecary = 1;</code>
+       * <code>.bloombox.partner.settings.SectionSettingsPayload apothecary = 1;</code>
        */
       public io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.SectionSettingsPayloadOrBuilder getApothecaryOrBuilder() {
         if (apothecaryBuilder_ != null) {
@@ -7826,7 +8002,7 @@ public final class PartnerLocationSettingsOuterClass {
        * Apothecary section settings.
        * </pre>
        *
-       * <code>.bloombox.schema.partner.settings.SectionSettingsPayload apothecary = 1;</code>
+       * <code>.bloombox.partner.settings.SectionSettingsPayload apothecary = 1;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
           io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.SectionSettingsPayload, io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.SectionSettingsPayload.Builder, io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.SectionSettingsPayloadOrBuilder> 
@@ -7850,7 +8026,7 @@ public final class PartnerLocationSettingsOuterClass {
        * Cartridges section settings.
        * </pre>
        *
-       * <code>.bloombox.schema.partner.settings.SectionSettingsPayload cartridges = 2;</code>
+       * <code>.bloombox.partner.settings.SectionSettingsPayload cartridges = 2;</code>
        */
       public boolean hasCartridges() {
         return cartridgesBuilder_ != null || cartridges_ != null;
@@ -7860,7 +8036,7 @@ public final class PartnerLocationSettingsOuterClass {
        * Cartridges section settings.
        * </pre>
        *
-       * <code>.bloombox.schema.partner.settings.SectionSettingsPayload cartridges = 2;</code>
+       * <code>.bloombox.partner.settings.SectionSettingsPayload cartridges = 2;</code>
        */
       public io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.SectionSettingsPayload getCartridges() {
         if (cartridgesBuilder_ == null) {
@@ -7874,7 +8050,7 @@ public final class PartnerLocationSettingsOuterClass {
        * Cartridges section settings.
        * </pre>
        *
-       * <code>.bloombox.schema.partner.settings.SectionSettingsPayload cartridges = 2;</code>
+       * <code>.bloombox.partner.settings.SectionSettingsPayload cartridges = 2;</code>
        */
       public Builder setCartridges(io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.SectionSettingsPayload value) {
         if (cartridgesBuilder_ == null) {
@@ -7894,7 +8070,7 @@ public final class PartnerLocationSettingsOuterClass {
        * Cartridges section settings.
        * </pre>
        *
-       * <code>.bloombox.schema.partner.settings.SectionSettingsPayload cartridges = 2;</code>
+       * <code>.bloombox.partner.settings.SectionSettingsPayload cartridges = 2;</code>
        */
       public Builder setCartridges(
           io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.SectionSettingsPayload.Builder builderForValue) {
@@ -7912,7 +8088,7 @@ public final class PartnerLocationSettingsOuterClass {
        * Cartridges section settings.
        * </pre>
        *
-       * <code>.bloombox.schema.partner.settings.SectionSettingsPayload cartridges = 2;</code>
+       * <code>.bloombox.partner.settings.SectionSettingsPayload cartridges = 2;</code>
        */
       public Builder mergeCartridges(io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.SectionSettingsPayload value) {
         if (cartridgesBuilder_ == null) {
@@ -7934,7 +8110,7 @@ public final class PartnerLocationSettingsOuterClass {
        * Cartridges section settings.
        * </pre>
        *
-       * <code>.bloombox.schema.partner.settings.SectionSettingsPayload cartridges = 2;</code>
+       * <code>.bloombox.partner.settings.SectionSettingsPayload cartridges = 2;</code>
        */
       public Builder clearCartridges() {
         if (cartridgesBuilder_ == null) {
@@ -7952,7 +8128,7 @@ public final class PartnerLocationSettingsOuterClass {
        * Cartridges section settings.
        * </pre>
        *
-       * <code>.bloombox.schema.partner.settings.SectionSettingsPayload cartridges = 2;</code>
+       * <code>.bloombox.partner.settings.SectionSettingsPayload cartridges = 2;</code>
        */
       public io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.SectionSettingsPayload.Builder getCartridgesBuilder() {
         
@@ -7964,7 +8140,7 @@ public final class PartnerLocationSettingsOuterClass {
        * Cartridges section settings.
        * </pre>
        *
-       * <code>.bloombox.schema.partner.settings.SectionSettingsPayload cartridges = 2;</code>
+       * <code>.bloombox.partner.settings.SectionSettingsPayload cartridges = 2;</code>
        */
       public io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.SectionSettingsPayloadOrBuilder getCartridgesOrBuilder() {
         if (cartridgesBuilder_ != null) {
@@ -7979,7 +8155,7 @@ public final class PartnerLocationSettingsOuterClass {
        * Cartridges section settings.
        * </pre>
        *
-       * <code>.bloombox.schema.partner.settings.SectionSettingsPayload cartridges = 2;</code>
+       * <code>.bloombox.partner.settings.SectionSettingsPayload cartridges = 2;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
           io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.SectionSettingsPayload, io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.SectionSettingsPayload.Builder, io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.SectionSettingsPayloadOrBuilder> 
@@ -8003,7 +8179,7 @@ public final class PartnerLocationSettingsOuterClass {
        * Concentrates/extracts section settings.
        * </pre>
        *
-       * <code>.bloombox.schema.partner.settings.SectionSettingsPayload concentrates = 3;</code>
+       * <code>.bloombox.partner.settings.SectionSettingsPayload concentrates = 3;</code>
        */
       public boolean hasConcentrates() {
         return concentratesBuilder_ != null || concentrates_ != null;
@@ -8013,7 +8189,7 @@ public final class PartnerLocationSettingsOuterClass {
        * Concentrates/extracts section settings.
        * </pre>
        *
-       * <code>.bloombox.schema.partner.settings.SectionSettingsPayload concentrates = 3;</code>
+       * <code>.bloombox.partner.settings.SectionSettingsPayload concentrates = 3;</code>
        */
       public io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.SectionSettingsPayload getConcentrates() {
         if (concentratesBuilder_ == null) {
@@ -8027,7 +8203,7 @@ public final class PartnerLocationSettingsOuterClass {
        * Concentrates/extracts section settings.
        * </pre>
        *
-       * <code>.bloombox.schema.partner.settings.SectionSettingsPayload concentrates = 3;</code>
+       * <code>.bloombox.partner.settings.SectionSettingsPayload concentrates = 3;</code>
        */
       public Builder setConcentrates(io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.SectionSettingsPayload value) {
         if (concentratesBuilder_ == null) {
@@ -8047,7 +8223,7 @@ public final class PartnerLocationSettingsOuterClass {
        * Concentrates/extracts section settings.
        * </pre>
        *
-       * <code>.bloombox.schema.partner.settings.SectionSettingsPayload concentrates = 3;</code>
+       * <code>.bloombox.partner.settings.SectionSettingsPayload concentrates = 3;</code>
        */
       public Builder setConcentrates(
           io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.SectionSettingsPayload.Builder builderForValue) {
@@ -8065,7 +8241,7 @@ public final class PartnerLocationSettingsOuterClass {
        * Concentrates/extracts section settings.
        * </pre>
        *
-       * <code>.bloombox.schema.partner.settings.SectionSettingsPayload concentrates = 3;</code>
+       * <code>.bloombox.partner.settings.SectionSettingsPayload concentrates = 3;</code>
        */
       public Builder mergeConcentrates(io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.SectionSettingsPayload value) {
         if (concentratesBuilder_ == null) {
@@ -8087,7 +8263,7 @@ public final class PartnerLocationSettingsOuterClass {
        * Concentrates/extracts section settings.
        * </pre>
        *
-       * <code>.bloombox.schema.partner.settings.SectionSettingsPayload concentrates = 3;</code>
+       * <code>.bloombox.partner.settings.SectionSettingsPayload concentrates = 3;</code>
        */
       public Builder clearConcentrates() {
         if (concentratesBuilder_ == null) {
@@ -8105,7 +8281,7 @@ public final class PartnerLocationSettingsOuterClass {
        * Concentrates/extracts section settings.
        * </pre>
        *
-       * <code>.bloombox.schema.partner.settings.SectionSettingsPayload concentrates = 3;</code>
+       * <code>.bloombox.partner.settings.SectionSettingsPayload concentrates = 3;</code>
        */
       public io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.SectionSettingsPayload.Builder getConcentratesBuilder() {
         
@@ -8117,7 +8293,7 @@ public final class PartnerLocationSettingsOuterClass {
        * Concentrates/extracts section settings.
        * </pre>
        *
-       * <code>.bloombox.schema.partner.settings.SectionSettingsPayload concentrates = 3;</code>
+       * <code>.bloombox.partner.settings.SectionSettingsPayload concentrates = 3;</code>
        */
       public io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.SectionSettingsPayloadOrBuilder getConcentratesOrBuilder() {
         if (concentratesBuilder_ != null) {
@@ -8132,7 +8308,7 @@ public final class PartnerLocationSettingsOuterClass {
        * Concentrates/extracts section settings.
        * </pre>
        *
-       * <code>.bloombox.schema.partner.settings.SectionSettingsPayload concentrates = 3;</code>
+       * <code>.bloombox.partner.settings.SectionSettingsPayload concentrates = 3;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
           io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.SectionSettingsPayload, io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.SectionSettingsPayload.Builder, io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.SectionSettingsPayloadOrBuilder> 
@@ -8156,7 +8332,7 @@ public final class PartnerLocationSettingsOuterClass {
        * Edibles section settings.
        * </pre>
        *
-       * <code>.bloombox.schema.partner.settings.SectionSettingsPayload edibles = 4;</code>
+       * <code>.bloombox.partner.settings.SectionSettingsPayload edibles = 4;</code>
        */
       public boolean hasEdibles() {
         return ediblesBuilder_ != null || edibles_ != null;
@@ -8166,7 +8342,7 @@ public final class PartnerLocationSettingsOuterClass {
        * Edibles section settings.
        * </pre>
        *
-       * <code>.bloombox.schema.partner.settings.SectionSettingsPayload edibles = 4;</code>
+       * <code>.bloombox.partner.settings.SectionSettingsPayload edibles = 4;</code>
        */
       public io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.SectionSettingsPayload getEdibles() {
         if (ediblesBuilder_ == null) {
@@ -8180,7 +8356,7 @@ public final class PartnerLocationSettingsOuterClass {
        * Edibles section settings.
        * </pre>
        *
-       * <code>.bloombox.schema.partner.settings.SectionSettingsPayload edibles = 4;</code>
+       * <code>.bloombox.partner.settings.SectionSettingsPayload edibles = 4;</code>
        */
       public Builder setEdibles(io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.SectionSettingsPayload value) {
         if (ediblesBuilder_ == null) {
@@ -8200,7 +8376,7 @@ public final class PartnerLocationSettingsOuterClass {
        * Edibles section settings.
        * </pre>
        *
-       * <code>.bloombox.schema.partner.settings.SectionSettingsPayload edibles = 4;</code>
+       * <code>.bloombox.partner.settings.SectionSettingsPayload edibles = 4;</code>
        */
       public Builder setEdibles(
           io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.SectionSettingsPayload.Builder builderForValue) {
@@ -8218,7 +8394,7 @@ public final class PartnerLocationSettingsOuterClass {
        * Edibles section settings.
        * </pre>
        *
-       * <code>.bloombox.schema.partner.settings.SectionSettingsPayload edibles = 4;</code>
+       * <code>.bloombox.partner.settings.SectionSettingsPayload edibles = 4;</code>
        */
       public Builder mergeEdibles(io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.SectionSettingsPayload value) {
         if (ediblesBuilder_ == null) {
@@ -8240,7 +8416,7 @@ public final class PartnerLocationSettingsOuterClass {
        * Edibles section settings.
        * </pre>
        *
-       * <code>.bloombox.schema.partner.settings.SectionSettingsPayload edibles = 4;</code>
+       * <code>.bloombox.partner.settings.SectionSettingsPayload edibles = 4;</code>
        */
       public Builder clearEdibles() {
         if (ediblesBuilder_ == null) {
@@ -8258,7 +8434,7 @@ public final class PartnerLocationSettingsOuterClass {
        * Edibles section settings.
        * </pre>
        *
-       * <code>.bloombox.schema.partner.settings.SectionSettingsPayload edibles = 4;</code>
+       * <code>.bloombox.partner.settings.SectionSettingsPayload edibles = 4;</code>
        */
       public io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.SectionSettingsPayload.Builder getEdiblesBuilder() {
         
@@ -8270,7 +8446,7 @@ public final class PartnerLocationSettingsOuterClass {
        * Edibles section settings.
        * </pre>
        *
-       * <code>.bloombox.schema.partner.settings.SectionSettingsPayload edibles = 4;</code>
+       * <code>.bloombox.partner.settings.SectionSettingsPayload edibles = 4;</code>
        */
       public io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.SectionSettingsPayloadOrBuilder getEdiblesOrBuilder() {
         if (ediblesBuilder_ != null) {
@@ -8285,7 +8461,7 @@ public final class PartnerLocationSettingsOuterClass {
        * Edibles section settings.
        * </pre>
        *
-       * <code>.bloombox.schema.partner.settings.SectionSettingsPayload edibles = 4;</code>
+       * <code>.bloombox.partner.settings.SectionSettingsPayload edibles = 4;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
           io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.SectionSettingsPayload, io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.SectionSettingsPayload.Builder, io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.SectionSettingsPayloadOrBuilder> 
@@ -8309,7 +8485,7 @@ public final class PartnerLocationSettingsOuterClass {
        * Flowers section settings.
        * </pre>
        *
-       * <code>.bloombox.schema.partner.settings.SectionSettingsPayload flowers = 5;</code>
+       * <code>.bloombox.partner.settings.SectionSettingsPayload flowers = 5;</code>
        */
       public boolean hasFlowers() {
         return flowersBuilder_ != null || flowers_ != null;
@@ -8319,7 +8495,7 @@ public final class PartnerLocationSettingsOuterClass {
        * Flowers section settings.
        * </pre>
        *
-       * <code>.bloombox.schema.partner.settings.SectionSettingsPayload flowers = 5;</code>
+       * <code>.bloombox.partner.settings.SectionSettingsPayload flowers = 5;</code>
        */
       public io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.SectionSettingsPayload getFlowers() {
         if (flowersBuilder_ == null) {
@@ -8333,7 +8509,7 @@ public final class PartnerLocationSettingsOuterClass {
        * Flowers section settings.
        * </pre>
        *
-       * <code>.bloombox.schema.partner.settings.SectionSettingsPayload flowers = 5;</code>
+       * <code>.bloombox.partner.settings.SectionSettingsPayload flowers = 5;</code>
        */
       public Builder setFlowers(io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.SectionSettingsPayload value) {
         if (flowersBuilder_ == null) {
@@ -8353,7 +8529,7 @@ public final class PartnerLocationSettingsOuterClass {
        * Flowers section settings.
        * </pre>
        *
-       * <code>.bloombox.schema.partner.settings.SectionSettingsPayload flowers = 5;</code>
+       * <code>.bloombox.partner.settings.SectionSettingsPayload flowers = 5;</code>
        */
       public Builder setFlowers(
           io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.SectionSettingsPayload.Builder builderForValue) {
@@ -8371,7 +8547,7 @@ public final class PartnerLocationSettingsOuterClass {
        * Flowers section settings.
        * </pre>
        *
-       * <code>.bloombox.schema.partner.settings.SectionSettingsPayload flowers = 5;</code>
+       * <code>.bloombox.partner.settings.SectionSettingsPayload flowers = 5;</code>
        */
       public Builder mergeFlowers(io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.SectionSettingsPayload value) {
         if (flowersBuilder_ == null) {
@@ -8393,7 +8569,7 @@ public final class PartnerLocationSettingsOuterClass {
        * Flowers section settings.
        * </pre>
        *
-       * <code>.bloombox.schema.partner.settings.SectionSettingsPayload flowers = 5;</code>
+       * <code>.bloombox.partner.settings.SectionSettingsPayload flowers = 5;</code>
        */
       public Builder clearFlowers() {
         if (flowersBuilder_ == null) {
@@ -8411,7 +8587,7 @@ public final class PartnerLocationSettingsOuterClass {
        * Flowers section settings.
        * </pre>
        *
-       * <code>.bloombox.schema.partner.settings.SectionSettingsPayload flowers = 5;</code>
+       * <code>.bloombox.partner.settings.SectionSettingsPayload flowers = 5;</code>
        */
       public io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.SectionSettingsPayload.Builder getFlowersBuilder() {
         
@@ -8423,7 +8599,7 @@ public final class PartnerLocationSettingsOuterClass {
        * Flowers section settings.
        * </pre>
        *
-       * <code>.bloombox.schema.partner.settings.SectionSettingsPayload flowers = 5;</code>
+       * <code>.bloombox.partner.settings.SectionSettingsPayload flowers = 5;</code>
        */
       public io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.SectionSettingsPayloadOrBuilder getFlowersOrBuilder() {
         if (flowersBuilder_ != null) {
@@ -8438,7 +8614,7 @@ public final class PartnerLocationSettingsOuterClass {
        * Flowers section settings.
        * </pre>
        *
-       * <code>.bloombox.schema.partner.settings.SectionSettingsPayload flowers = 5;</code>
+       * <code>.bloombox.partner.settings.SectionSettingsPayload flowers = 5;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
           io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.SectionSettingsPayload, io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.SectionSettingsPayload.Builder, io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.SectionSettingsPayloadOrBuilder> 
@@ -8462,7 +8638,7 @@ public final class PartnerLocationSettingsOuterClass {
        * Prerolls section settings.
        * </pre>
        *
-       * <code>.bloombox.schema.partner.settings.SectionSettingsPayload prerolls = 6;</code>
+       * <code>.bloombox.partner.settings.SectionSettingsPayload prerolls = 6;</code>
        */
       public boolean hasPrerolls() {
         return prerollsBuilder_ != null || prerolls_ != null;
@@ -8472,7 +8648,7 @@ public final class PartnerLocationSettingsOuterClass {
        * Prerolls section settings.
        * </pre>
        *
-       * <code>.bloombox.schema.partner.settings.SectionSettingsPayload prerolls = 6;</code>
+       * <code>.bloombox.partner.settings.SectionSettingsPayload prerolls = 6;</code>
        */
       public io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.SectionSettingsPayload getPrerolls() {
         if (prerollsBuilder_ == null) {
@@ -8486,7 +8662,7 @@ public final class PartnerLocationSettingsOuterClass {
        * Prerolls section settings.
        * </pre>
        *
-       * <code>.bloombox.schema.partner.settings.SectionSettingsPayload prerolls = 6;</code>
+       * <code>.bloombox.partner.settings.SectionSettingsPayload prerolls = 6;</code>
        */
       public Builder setPrerolls(io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.SectionSettingsPayload value) {
         if (prerollsBuilder_ == null) {
@@ -8506,7 +8682,7 @@ public final class PartnerLocationSettingsOuterClass {
        * Prerolls section settings.
        * </pre>
        *
-       * <code>.bloombox.schema.partner.settings.SectionSettingsPayload prerolls = 6;</code>
+       * <code>.bloombox.partner.settings.SectionSettingsPayload prerolls = 6;</code>
        */
       public Builder setPrerolls(
           io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.SectionSettingsPayload.Builder builderForValue) {
@@ -8524,7 +8700,7 @@ public final class PartnerLocationSettingsOuterClass {
        * Prerolls section settings.
        * </pre>
        *
-       * <code>.bloombox.schema.partner.settings.SectionSettingsPayload prerolls = 6;</code>
+       * <code>.bloombox.partner.settings.SectionSettingsPayload prerolls = 6;</code>
        */
       public Builder mergePrerolls(io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.SectionSettingsPayload value) {
         if (prerollsBuilder_ == null) {
@@ -8546,7 +8722,7 @@ public final class PartnerLocationSettingsOuterClass {
        * Prerolls section settings.
        * </pre>
        *
-       * <code>.bloombox.schema.partner.settings.SectionSettingsPayload prerolls = 6;</code>
+       * <code>.bloombox.partner.settings.SectionSettingsPayload prerolls = 6;</code>
        */
       public Builder clearPrerolls() {
         if (prerollsBuilder_ == null) {
@@ -8564,7 +8740,7 @@ public final class PartnerLocationSettingsOuterClass {
        * Prerolls section settings.
        * </pre>
        *
-       * <code>.bloombox.schema.partner.settings.SectionSettingsPayload prerolls = 6;</code>
+       * <code>.bloombox.partner.settings.SectionSettingsPayload prerolls = 6;</code>
        */
       public io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.SectionSettingsPayload.Builder getPrerollsBuilder() {
         
@@ -8576,7 +8752,7 @@ public final class PartnerLocationSettingsOuterClass {
        * Prerolls section settings.
        * </pre>
        *
-       * <code>.bloombox.schema.partner.settings.SectionSettingsPayload prerolls = 6;</code>
+       * <code>.bloombox.partner.settings.SectionSettingsPayload prerolls = 6;</code>
        */
       public io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.SectionSettingsPayloadOrBuilder getPrerollsOrBuilder() {
         if (prerollsBuilder_ != null) {
@@ -8591,7 +8767,7 @@ public final class PartnerLocationSettingsOuterClass {
        * Prerolls section settings.
        * </pre>
        *
-       * <code>.bloombox.schema.partner.settings.SectionSettingsPayload prerolls = 6;</code>
+       * <code>.bloombox.partner.settings.SectionSettingsPayload prerolls = 6;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
           io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.SectionSettingsPayload, io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.SectionSettingsPayload.Builder, io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.SectionSettingsPayloadOrBuilder> 
@@ -8615,7 +8791,7 @@ public final class PartnerLocationSettingsOuterClass {
        * Merchandise section settings.
        * </pre>
        *
-       * <code>.bloombox.schema.partner.settings.SectionSettingsPayload merchandise = 7;</code>
+       * <code>.bloombox.partner.settings.SectionSettingsPayload merchandise = 7;</code>
        */
       public boolean hasMerchandise() {
         return merchandiseBuilder_ != null || merchandise_ != null;
@@ -8625,7 +8801,7 @@ public final class PartnerLocationSettingsOuterClass {
        * Merchandise section settings.
        * </pre>
        *
-       * <code>.bloombox.schema.partner.settings.SectionSettingsPayload merchandise = 7;</code>
+       * <code>.bloombox.partner.settings.SectionSettingsPayload merchandise = 7;</code>
        */
       public io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.SectionSettingsPayload getMerchandise() {
         if (merchandiseBuilder_ == null) {
@@ -8639,7 +8815,7 @@ public final class PartnerLocationSettingsOuterClass {
        * Merchandise section settings.
        * </pre>
        *
-       * <code>.bloombox.schema.partner.settings.SectionSettingsPayload merchandise = 7;</code>
+       * <code>.bloombox.partner.settings.SectionSettingsPayload merchandise = 7;</code>
        */
       public Builder setMerchandise(io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.SectionSettingsPayload value) {
         if (merchandiseBuilder_ == null) {
@@ -8659,7 +8835,7 @@ public final class PartnerLocationSettingsOuterClass {
        * Merchandise section settings.
        * </pre>
        *
-       * <code>.bloombox.schema.partner.settings.SectionSettingsPayload merchandise = 7;</code>
+       * <code>.bloombox.partner.settings.SectionSettingsPayload merchandise = 7;</code>
        */
       public Builder setMerchandise(
           io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.SectionSettingsPayload.Builder builderForValue) {
@@ -8677,7 +8853,7 @@ public final class PartnerLocationSettingsOuterClass {
        * Merchandise section settings.
        * </pre>
        *
-       * <code>.bloombox.schema.partner.settings.SectionSettingsPayload merchandise = 7;</code>
+       * <code>.bloombox.partner.settings.SectionSettingsPayload merchandise = 7;</code>
        */
       public Builder mergeMerchandise(io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.SectionSettingsPayload value) {
         if (merchandiseBuilder_ == null) {
@@ -8699,7 +8875,7 @@ public final class PartnerLocationSettingsOuterClass {
        * Merchandise section settings.
        * </pre>
        *
-       * <code>.bloombox.schema.partner.settings.SectionSettingsPayload merchandise = 7;</code>
+       * <code>.bloombox.partner.settings.SectionSettingsPayload merchandise = 7;</code>
        */
       public Builder clearMerchandise() {
         if (merchandiseBuilder_ == null) {
@@ -8717,7 +8893,7 @@ public final class PartnerLocationSettingsOuterClass {
        * Merchandise section settings.
        * </pre>
        *
-       * <code>.bloombox.schema.partner.settings.SectionSettingsPayload merchandise = 7;</code>
+       * <code>.bloombox.partner.settings.SectionSettingsPayload merchandise = 7;</code>
        */
       public io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.SectionSettingsPayload.Builder getMerchandiseBuilder() {
         
@@ -8729,7 +8905,7 @@ public final class PartnerLocationSettingsOuterClass {
        * Merchandise section settings.
        * </pre>
        *
-       * <code>.bloombox.schema.partner.settings.SectionSettingsPayload merchandise = 7;</code>
+       * <code>.bloombox.partner.settings.SectionSettingsPayload merchandise = 7;</code>
        */
       public io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.SectionSettingsPayloadOrBuilder getMerchandiseOrBuilder() {
         if (merchandiseBuilder_ != null) {
@@ -8744,7 +8920,7 @@ public final class PartnerLocationSettingsOuterClass {
        * Merchandise section settings.
        * </pre>
        *
-       * <code>.bloombox.schema.partner.settings.SectionSettingsPayload merchandise = 7;</code>
+       * <code>.bloombox.partner.settings.SectionSettingsPayload merchandise = 7;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
           io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.SectionSettingsPayload, io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.SectionSettingsPayload.Builder, io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.SectionSettingsPayloadOrBuilder> 
@@ -8768,7 +8944,7 @@ public final class PartnerLocationSettingsOuterClass {
        * Plants section settings.
        * </pre>
        *
-       * <code>.bloombox.schema.partner.settings.SectionSettingsPayload plants = 8;</code>
+       * <code>.bloombox.partner.settings.SectionSettingsPayload plants = 8;</code>
        */
       public boolean hasPlants() {
         return plantsBuilder_ != null || plants_ != null;
@@ -8778,7 +8954,7 @@ public final class PartnerLocationSettingsOuterClass {
        * Plants section settings.
        * </pre>
        *
-       * <code>.bloombox.schema.partner.settings.SectionSettingsPayload plants = 8;</code>
+       * <code>.bloombox.partner.settings.SectionSettingsPayload plants = 8;</code>
        */
       public io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.SectionSettingsPayload getPlants() {
         if (plantsBuilder_ == null) {
@@ -8792,7 +8968,7 @@ public final class PartnerLocationSettingsOuterClass {
        * Plants section settings.
        * </pre>
        *
-       * <code>.bloombox.schema.partner.settings.SectionSettingsPayload plants = 8;</code>
+       * <code>.bloombox.partner.settings.SectionSettingsPayload plants = 8;</code>
        */
       public Builder setPlants(io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.SectionSettingsPayload value) {
         if (plantsBuilder_ == null) {
@@ -8812,7 +8988,7 @@ public final class PartnerLocationSettingsOuterClass {
        * Plants section settings.
        * </pre>
        *
-       * <code>.bloombox.schema.partner.settings.SectionSettingsPayload plants = 8;</code>
+       * <code>.bloombox.partner.settings.SectionSettingsPayload plants = 8;</code>
        */
       public Builder setPlants(
           io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.SectionSettingsPayload.Builder builderForValue) {
@@ -8830,7 +9006,7 @@ public final class PartnerLocationSettingsOuterClass {
        * Plants section settings.
        * </pre>
        *
-       * <code>.bloombox.schema.partner.settings.SectionSettingsPayload plants = 8;</code>
+       * <code>.bloombox.partner.settings.SectionSettingsPayload plants = 8;</code>
        */
       public Builder mergePlants(io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.SectionSettingsPayload value) {
         if (plantsBuilder_ == null) {
@@ -8852,7 +9028,7 @@ public final class PartnerLocationSettingsOuterClass {
        * Plants section settings.
        * </pre>
        *
-       * <code>.bloombox.schema.partner.settings.SectionSettingsPayload plants = 8;</code>
+       * <code>.bloombox.partner.settings.SectionSettingsPayload plants = 8;</code>
        */
       public Builder clearPlants() {
         if (plantsBuilder_ == null) {
@@ -8870,7 +9046,7 @@ public final class PartnerLocationSettingsOuterClass {
        * Plants section settings.
        * </pre>
        *
-       * <code>.bloombox.schema.partner.settings.SectionSettingsPayload plants = 8;</code>
+       * <code>.bloombox.partner.settings.SectionSettingsPayload plants = 8;</code>
        */
       public io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.SectionSettingsPayload.Builder getPlantsBuilder() {
         
@@ -8882,7 +9058,7 @@ public final class PartnerLocationSettingsOuterClass {
        * Plants section settings.
        * </pre>
        *
-       * <code>.bloombox.schema.partner.settings.SectionSettingsPayload plants = 8;</code>
+       * <code>.bloombox.partner.settings.SectionSettingsPayload plants = 8;</code>
        */
       public io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.SectionSettingsPayloadOrBuilder getPlantsOrBuilder() {
         if (plantsBuilder_ != null) {
@@ -8897,7 +9073,7 @@ public final class PartnerLocationSettingsOuterClass {
        * Plants section settings.
        * </pre>
        *
-       * <code>.bloombox.schema.partner.settings.SectionSettingsPayload plants = 8;</code>
+       * <code>.bloombox.partner.settings.SectionSettingsPayload plants = 8;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
           io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.SectionSettingsPayload, io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.SectionSettingsPayload.Builder, io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.SectionSettingsPayloadOrBuilder> 
@@ -8921,7 +9097,7 @@ public final class PartnerLocationSettingsOuterClass {
        * CBD section settings.
        * </pre>
        *
-       * <code>.bloombox.schema.partner.settings.SectionSettingsPayload cbd = 20;</code>
+       * <code>.bloombox.partner.settings.SectionSettingsPayload cbd = 20;</code>
        */
       public boolean hasCbd() {
         return cbdBuilder_ != null || cbd_ != null;
@@ -8931,7 +9107,7 @@ public final class PartnerLocationSettingsOuterClass {
        * CBD section settings.
        * </pre>
        *
-       * <code>.bloombox.schema.partner.settings.SectionSettingsPayload cbd = 20;</code>
+       * <code>.bloombox.partner.settings.SectionSettingsPayload cbd = 20;</code>
        */
       public io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.SectionSettingsPayload getCbd() {
         if (cbdBuilder_ == null) {
@@ -8945,7 +9121,7 @@ public final class PartnerLocationSettingsOuterClass {
        * CBD section settings.
        * </pre>
        *
-       * <code>.bloombox.schema.partner.settings.SectionSettingsPayload cbd = 20;</code>
+       * <code>.bloombox.partner.settings.SectionSettingsPayload cbd = 20;</code>
        */
       public Builder setCbd(io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.SectionSettingsPayload value) {
         if (cbdBuilder_ == null) {
@@ -8965,7 +9141,7 @@ public final class PartnerLocationSettingsOuterClass {
        * CBD section settings.
        * </pre>
        *
-       * <code>.bloombox.schema.partner.settings.SectionSettingsPayload cbd = 20;</code>
+       * <code>.bloombox.partner.settings.SectionSettingsPayload cbd = 20;</code>
        */
       public Builder setCbd(
           io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.SectionSettingsPayload.Builder builderForValue) {
@@ -8983,7 +9159,7 @@ public final class PartnerLocationSettingsOuterClass {
        * CBD section settings.
        * </pre>
        *
-       * <code>.bloombox.schema.partner.settings.SectionSettingsPayload cbd = 20;</code>
+       * <code>.bloombox.partner.settings.SectionSettingsPayload cbd = 20;</code>
        */
       public Builder mergeCbd(io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.SectionSettingsPayload value) {
         if (cbdBuilder_ == null) {
@@ -9005,7 +9181,7 @@ public final class PartnerLocationSettingsOuterClass {
        * CBD section settings.
        * </pre>
        *
-       * <code>.bloombox.schema.partner.settings.SectionSettingsPayload cbd = 20;</code>
+       * <code>.bloombox.partner.settings.SectionSettingsPayload cbd = 20;</code>
        */
       public Builder clearCbd() {
         if (cbdBuilder_ == null) {
@@ -9023,7 +9199,7 @@ public final class PartnerLocationSettingsOuterClass {
        * CBD section settings.
        * </pre>
        *
-       * <code>.bloombox.schema.partner.settings.SectionSettingsPayload cbd = 20;</code>
+       * <code>.bloombox.partner.settings.SectionSettingsPayload cbd = 20;</code>
        */
       public io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.SectionSettingsPayload.Builder getCbdBuilder() {
         
@@ -9035,7 +9211,7 @@ public final class PartnerLocationSettingsOuterClass {
        * CBD section settings.
        * </pre>
        *
-       * <code>.bloombox.schema.partner.settings.SectionSettingsPayload cbd = 20;</code>
+       * <code>.bloombox.partner.settings.SectionSettingsPayload cbd = 20;</code>
        */
       public io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.SectionSettingsPayloadOrBuilder getCbdOrBuilder() {
         if (cbdBuilder_ != null) {
@@ -9050,7 +9226,7 @@ public final class PartnerLocationSettingsOuterClass {
        * CBD section settings.
        * </pre>
        *
-       * <code>.bloombox.schema.partner.settings.SectionSettingsPayload cbd = 20;</code>
+       * <code>.bloombox.partner.settings.SectionSettingsPayload cbd = 20;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
           io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.SectionSettingsPayload, io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.SectionSettingsPayload.Builder, io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.SectionSettingsPayloadOrBuilder> 
@@ -9074,7 +9250,7 @@ public final class PartnerLocationSettingsOuterClass {
        * In-house section settings.
        * </pre>
        *
-       * <code>.bloombox.schema.partner.settings.SectionSettingsPayload house = 21;</code>
+       * <code>.bloombox.partner.settings.SectionSettingsPayload house = 21;</code>
        */
       public boolean hasHouse() {
         return houseBuilder_ != null || house_ != null;
@@ -9084,7 +9260,7 @@ public final class PartnerLocationSettingsOuterClass {
        * In-house section settings.
        * </pre>
        *
-       * <code>.bloombox.schema.partner.settings.SectionSettingsPayload house = 21;</code>
+       * <code>.bloombox.partner.settings.SectionSettingsPayload house = 21;</code>
        */
       public io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.SectionSettingsPayload getHouse() {
         if (houseBuilder_ == null) {
@@ -9098,7 +9274,7 @@ public final class PartnerLocationSettingsOuterClass {
        * In-house section settings.
        * </pre>
        *
-       * <code>.bloombox.schema.partner.settings.SectionSettingsPayload house = 21;</code>
+       * <code>.bloombox.partner.settings.SectionSettingsPayload house = 21;</code>
        */
       public Builder setHouse(io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.SectionSettingsPayload value) {
         if (houseBuilder_ == null) {
@@ -9118,7 +9294,7 @@ public final class PartnerLocationSettingsOuterClass {
        * In-house section settings.
        * </pre>
        *
-       * <code>.bloombox.schema.partner.settings.SectionSettingsPayload house = 21;</code>
+       * <code>.bloombox.partner.settings.SectionSettingsPayload house = 21;</code>
        */
       public Builder setHouse(
           io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.SectionSettingsPayload.Builder builderForValue) {
@@ -9136,7 +9312,7 @@ public final class PartnerLocationSettingsOuterClass {
        * In-house section settings.
        * </pre>
        *
-       * <code>.bloombox.schema.partner.settings.SectionSettingsPayload house = 21;</code>
+       * <code>.bloombox.partner.settings.SectionSettingsPayload house = 21;</code>
        */
       public Builder mergeHouse(io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.SectionSettingsPayload value) {
         if (houseBuilder_ == null) {
@@ -9158,7 +9334,7 @@ public final class PartnerLocationSettingsOuterClass {
        * In-house section settings.
        * </pre>
        *
-       * <code>.bloombox.schema.partner.settings.SectionSettingsPayload house = 21;</code>
+       * <code>.bloombox.partner.settings.SectionSettingsPayload house = 21;</code>
        */
       public Builder clearHouse() {
         if (houseBuilder_ == null) {
@@ -9176,7 +9352,7 @@ public final class PartnerLocationSettingsOuterClass {
        * In-house section settings.
        * </pre>
        *
-       * <code>.bloombox.schema.partner.settings.SectionSettingsPayload house = 21;</code>
+       * <code>.bloombox.partner.settings.SectionSettingsPayload house = 21;</code>
        */
       public io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.SectionSettingsPayload.Builder getHouseBuilder() {
         
@@ -9188,7 +9364,7 @@ public final class PartnerLocationSettingsOuterClass {
        * In-house section settings.
        * </pre>
        *
-       * <code>.bloombox.schema.partner.settings.SectionSettingsPayload house = 21;</code>
+       * <code>.bloombox.partner.settings.SectionSettingsPayload house = 21;</code>
        */
       public io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.SectionSettingsPayloadOrBuilder getHouseOrBuilder() {
         if (houseBuilder_ != null) {
@@ -9203,7 +9379,7 @@ public final class PartnerLocationSettingsOuterClass {
        * In-house section settings.
        * </pre>
        *
-       * <code>.bloombox.schema.partner.settings.SectionSettingsPayload house = 21;</code>
+       * <code>.bloombox.partner.settings.SectionSettingsPayload house = 21;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
           io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.SectionSettingsPayload, io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.SectionSettingsPayload.Builder, io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.SectionSettingsPayloadOrBuilder> 
@@ -9227,7 +9403,7 @@ public final class PartnerLocationSettingsOuterClass {
        * On-sale section settings.
        * </pre>
        *
-       * <code>.bloombox.schema.partner.settings.SectionSettingsPayload onsale = 22;</code>
+       * <code>.bloombox.partner.settings.SectionSettingsPayload onsale = 22;</code>
        */
       public boolean hasOnsale() {
         return onsaleBuilder_ != null || onsale_ != null;
@@ -9237,7 +9413,7 @@ public final class PartnerLocationSettingsOuterClass {
        * On-sale section settings.
        * </pre>
        *
-       * <code>.bloombox.schema.partner.settings.SectionSettingsPayload onsale = 22;</code>
+       * <code>.bloombox.partner.settings.SectionSettingsPayload onsale = 22;</code>
        */
       public io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.SectionSettingsPayload getOnsale() {
         if (onsaleBuilder_ == null) {
@@ -9251,7 +9427,7 @@ public final class PartnerLocationSettingsOuterClass {
        * On-sale section settings.
        * </pre>
        *
-       * <code>.bloombox.schema.partner.settings.SectionSettingsPayload onsale = 22;</code>
+       * <code>.bloombox.partner.settings.SectionSettingsPayload onsale = 22;</code>
        */
       public Builder setOnsale(io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.SectionSettingsPayload value) {
         if (onsaleBuilder_ == null) {
@@ -9271,7 +9447,7 @@ public final class PartnerLocationSettingsOuterClass {
        * On-sale section settings.
        * </pre>
        *
-       * <code>.bloombox.schema.partner.settings.SectionSettingsPayload onsale = 22;</code>
+       * <code>.bloombox.partner.settings.SectionSettingsPayload onsale = 22;</code>
        */
       public Builder setOnsale(
           io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.SectionSettingsPayload.Builder builderForValue) {
@@ -9289,7 +9465,7 @@ public final class PartnerLocationSettingsOuterClass {
        * On-sale section settings.
        * </pre>
        *
-       * <code>.bloombox.schema.partner.settings.SectionSettingsPayload onsale = 22;</code>
+       * <code>.bloombox.partner.settings.SectionSettingsPayload onsale = 22;</code>
        */
       public Builder mergeOnsale(io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.SectionSettingsPayload value) {
         if (onsaleBuilder_ == null) {
@@ -9311,7 +9487,7 @@ public final class PartnerLocationSettingsOuterClass {
        * On-sale section settings.
        * </pre>
        *
-       * <code>.bloombox.schema.partner.settings.SectionSettingsPayload onsale = 22;</code>
+       * <code>.bloombox.partner.settings.SectionSettingsPayload onsale = 22;</code>
        */
       public Builder clearOnsale() {
         if (onsaleBuilder_ == null) {
@@ -9329,7 +9505,7 @@ public final class PartnerLocationSettingsOuterClass {
        * On-sale section settings.
        * </pre>
        *
-       * <code>.bloombox.schema.partner.settings.SectionSettingsPayload onsale = 22;</code>
+       * <code>.bloombox.partner.settings.SectionSettingsPayload onsale = 22;</code>
        */
       public io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.SectionSettingsPayload.Builder getOnsaleBuilder() {
         
@@ -9341,7 +9517,7 @@ public final class PartnerLocationSettingsOuterClass {
        * On-sale section settings.
        * </pre>
        *
-       * <code>.bloombox.schema.partner.settings.SectionSettingsPayload onsale = 22;</code>
+       * <code>.bloombox.partner.settings.SectionSettingsPayload onsale = 22;</code>
        */
       public io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.SectionSettingsPayloadOrBuilder getOnsaleOrBuilder() {
         if (onsaleBuilder_ != null) {
@@ -9356,7 +9532,7 @@ public final class PartnerLocationSettingsOuterClass {
        * On-sale section settings.
        * </pre>
        *
-       * <code>.bloombox.schema.partner.settings.SectionSettingsPayload onsale = 22;</code>
+       * <code>.bloombox.partner.settings.SectionSettingsPayload onsale = 22;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
           io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.SectionSettingsPayload, io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.SectionSettingsPayload.Builder, io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.SectionSettingsPayloadOrBuilder> 
@@ -9371,21 +9547,23 @@ public final class PartnerLocationSettingsOuterClass {
         }
         return onsaleBuilder_;
       }
+      @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
         return super.setUnknownFieldsProto3(unknownFields);
       }
 
+      @java.lang.Override
       public final Builder mergeUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
         return super.mergeUnknownFields(unknownFields);
       }
 
 
-      // @@protoc_insertion_point(builder_scope:bloombox.schema.partner.settings.SectionSettings)
+      // @@protoc_insertion_point(builder_scope:bloombox.partner.settings.SectionSettings)
     }
 
-    // @@protoc_insertion_point(class_scope:bloombox.schema.partner.settings.SectionSettings)
+    // @@protoc_insertion_point(class_scope:bloombox.partner.settings.SectionSettings)
     private static final io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.SectionSettings DEFAULT_INSTANCE;
     static {
       DEFAULT_INSTANCE = new io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.SectionSettings();
@@ -9397,6 +9575,7 @@ public final class PartnerLocationSettingsOuterClass {
 
     private static final com.google.protobuf.Parser<SectionSettings>
         PARSER = new com.google.protobuf.AbstractParser<SectionSettings>() {
+      @java.lang.Override
       public SectionSettings parsePartialFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -9414,6 +9593,7 @@ public final class PartnerLocationSettingsOuterClass {
       return PARSER;
     }
 
+    @java.lang.Override
     public io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.SectionSettings getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
@@ -9421,7 +9601,7 @@ public final class PartnerLocationSettingsOuterClass {
   }
 
   public interface TVBannerSettingsOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:bloombox.schema.partner.settings.TVBannerSettings)
+      // @@protoc_insertion_point(interface_extends:bloombox.partner.settings.TVBannerSettings)
       com.google.protobuf.MessageOrBuilder {
 
     /**
@@ -9465,11 +9645,11 @@ public final class PartnerLocationSettingsOuterClass {
    * Specifies banner settings for television display units.
    * </pre>
    *
-   * Protobuf type {@code bloombox.schema.partner.settings.TVBannerSettings}
+   * Protobuf type {@code bloombox.partner.settings.TVBannerSettings}
    */
   public  static final class TVBannerSettings extends
       com.google.protobuf.GeneratedMessageV3 implements
-      // @@protoc_insertion_point(message_implements:bloombox.schema.partner.settings.TVBannerSettings)
+      // @@protoc_insertion_point(message_implements:bloombox.partner.settings.TVBannerSettings)
       TVBannerSettingsOrBuilder {
   private static final long serialVersionUID = 0L;
     // Use TVBannerSettings.newBuilder() to construct.
@@ -9505,13 +9685,6 @@ public final class PartnerLocationSettingsOuterClass {
             case 0:
               done = true;
               break;
-            default: {
-              if (!parseUnknownFieldProto3(
-                  input, unknownFields, extensionRegistry, tag)) {
-                done = true;
-              }
-              break;
-            }
             case 10: {
               java.lang.String s = input.readStringRequireUtf8();
 
@@ -9522,6 +9695,13 @@ public final class PartnerLocationSettingsOuterClass {
               java.lang.String s = input.readStringRequireUtf8();
 
               image_ = s;
+              break;
+            }
+            default: {
+              if (!parseUnknownFieldProto3(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
               break;
             }
           }
@@ -9538,12 +9718,13 @@ public final class PartnerLocationSettingsOuterClass {
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.internal_static_bloombox_schema_partner_settings_TVBannerSettings_descriptor;
+      return io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.internal_static_bloombox_partner_settings_TVBannerSettings_descriptor;
     }
 
+    @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.internal_static_bloombox_schema_partner_settings_TVBannerSettings_fieldAccessorTable
+      return io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.internal_static_bloombox_partner_settings_TVBannerSettings_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
               io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.TVBannerSettings.class, io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.TVBannerSettings.Builder.class);
     }
@@ -9633,6 +9814,7 @@ public final class PartnerLocationSettingsOuterClass {
     }
 
     private byte memoizedIsInitialized = -1;
+    @java.lang.Override
     public final boolean isInitialized() {
       byte isInitialized = memoizedIsInitialized;
       if (isInitialized == 1) return true;
@@ -9642,6 +9824,7 @@ public final class PartnerLocationSettingsOuterClass {
       return true;
     }
 
+    @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
       if (!getBannerTextBytes().isEmpty()) {
@@ -9653,6 +9836,7 @@ public final class PartnerLocationSettingsOuterClass {
       unknownFields.writeTo(output);
     }
 
+    @java.lang.Override
     public int getSerializedSize() {
       int size = memoizedSize;
       if (size != -1) return size;
@@ -9774,6 +9958,7 @@ public final class PartnerLocationSettingsOuterClass {
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
 
+    @java.lang.Override
     public Builder newBuilderForType() { return newBuilder(); }
     public static Builder newBuilder() {
       return DEFAULT_INSTANCE.toBuilder();
@@ -9781,6 +9966,7 @@ public final class PartnerLocationSettingsOuterClass {
     public static Builder newBuilder(io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.TVBannerSettings prototype) {
       return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
     }
+    @java.lang.Override
     public Builder toBuilder() {
       return this == DEFAULT_INSTANCE
           ? new Builder() : new Builder().mergeFrom(this);
@@ -9797,20 +9983,21 @@ public final class PartnerLocationSettingsOuterClass {
      * Specifies banner settings for television display units.
      * </pre>
      *
-     * Protobuf type {@code bloombox.schema.partner.settings.TVBannerSettings}
+     * Protobuf type {@code bloombox.partner.settings.TVBannerSettings}
      */
     public static final class Builder extends
         com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:bloombox.schema.partner.settings.TVBannerSettings)
+        // @@protoc_insertion_point(builder_implements:bloombox.partner.settings.TVBannerSettings)
         io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.TVBannerSettingsOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.internal_static_bloombox_schema_partner_settings_TVBannerSettings_descriptor;
+        return io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.internal_static_bloombox_partner_settings_TVBannerSettings_descriptor;
       }
 
+      @java.lang.Override
       protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.internal_static_bloombox_schema_partner_settings_TVBannerSettings_fieldAccessorTable
+        return io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.internal_static_bloombox_partner_settings_TVBannerSettings_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
                 io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.TVBannerSettings.class, io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.TVBannerSettings.Builder.class);
       }
@@ -9830,6 +10017,7 @@ public final class PartnerLocationSettingsOuterClass {
                 .alwaysUseFieldBuilders) {
         }
       }
+      @java.lang.Override
       public Builder clear() {
         super.clear();
         bannerText_ = "";
@@ -9839,15 +10027,18 @@ public final class PartnerLocationSettingsOuterClass {
         return this;
       }
 
+      @java.lang.Override
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.internal_static_bloombox_schema_partner_settings_TVBannerSettings_descriptor;
+        return io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.internal_static_bloombox_partner_settings_TVBannerSettings_descriptor;
       }
 
+      @java.lang.Override
       public io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.TVBannerSettings getDefaultInstanceForType() {
         return io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.TVBannerSettings.getDefaultInstance();
       }
 
+      @java.lang.Override
       public io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.TVBannerSettings build() {
         io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.TVBannerSettings result = buildPartial();
         if (!result.isInitialized()) {
@@ -9856,6 +10047,7 @@ public final class PartnerLocationSettingsOuterClass {
         return result;
       }
 
+      @java.lang.Override
       public io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.TVBannerSettings buildPartial() {
         io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.TVBannerSettings result = new io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.TVBannerSettings(this);
         result.bannerText_ = bannerText_;
@@ -9864,32 +10056,39 @@ public final class PartnerLocationSettingsOuterClass {
         return result;
       }
 
+      @java.lang.Override
       public Builder clone() {
         return (Builder) super.clone();
       }
+      @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
         return (Builder) super.setField(field, value);
       }
+      @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
         return (Builder) super.clearField(field);
       }
+      @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
         return (Builder) super.clearOneof(oneof);
       }
+      @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
         return (Builder) super.setRepeatedField(field, index, value);
       }
+      @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
         return (Builder) super.addRepeatedField(field, value);
       }
+      @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
         if (other instanceof io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.TVBannerSettings) {
           return mergeFrom((io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.TVBannerSettings)other);
@@ -9914,10 +10113,12 @@ public final class PartnerLocationSettingsOuterClass {
         return this;
       }
 
+      @java.lang.Override
       public final boolean isInitialized() {
         return true;
       }
 
+      @java.lang.Override
       public Builder mergeFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -10113,21 +10314,23 @@ public final class PartnerLocationSettingsOuterClass {
         onChanged();
         return this;
       }
+      @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
         return super.setUnknownFieldsProto3(unknownFields);
       }
 
+      @java.lang.Override
       public final Builder mergeUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
         return super.mergeUnknownFields(unknownFields);
       }
 
 
-      // @@protoc_insertion_point(builder_scope:bloombox.schema.partner.settings.TVBannerSettings)
+      // @@protoc_insertion_point(builder_scope:bloombox.partner.settings.TVBannerSettings)
     }
 
-    // @@protoc_insertion_point(class_scope:bloombox.schema.partner.settings.TVBannerSettings)
+    // @@protoc_insertion_point(class_scope:bloombox.partner.settings.TVBannerSettings)
     private static final io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.TVBannerSettings DEFAULT_INSTANCE;
     static {
       DEFAULT_INSTANCE = new io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.TVBannerSettings();
@@ -10139,6 +10342,7 @@ public final class PartnerLocationSettingsOuterClass {
 
     private static final com.google.protobuf.Parser<TVBannerSettings>
         PARSER = new com.google.protobuf.AbstractParser<TVBannerSettings>() {
+      @java.lang.Override
       public TVBannerSettings parsePartialFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -10156,6 +10360,7 @@ public final class PartnerLocationSettingsOuterClass {
       return PARSER;
     }
 
+    @java.lang.Override
     public io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.TVBannerSettings getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
@@ -10163,7 +10368,7 @@ public final class PartnerLocationSettingsOuterClass {
   }
 
   public interface TVSectionSettingsPayloadOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:bloombox.schema.partner.settings.TVSectionSettingsPayload)
+      // @@protoc_insertion_point(interface_extends:bloombox.partner.settings.TVSectionSettingsPayload)
       com.google.protobuf.MessageOrBuilder {
 
     /**
@@ -10216,11 +10421,11 @@ public final class PartnerLocationSettingsOuterClass {
    * Section-specific settings when viewed via TV menus.
    * </pre>
    *
-   * Protobuf type {@code bloombox.schema.partner.settings.TVSectionSettingsPayload}
+   * Protobuf type {@code bloombox.partner.settings.TVSectionSettingsPayload}
    */
   public  static final class TVSectionSettingsPayload extends
       com.google.protobuf.GeneratedMessageV3 implements
-      // @@protoc_insertion_point(message_implements:bloombox.schema.partner.settings.TVSectionSettingsPayload)
+      // @@protoc_insertion_point(message_implements:bloombox.partner.settings.TVSectionSettingsPayload)
       TVSectionSettingsPayloadOrBuilder {
   private static final long serialVersionUID = 0L;
     // Use TVSectionSettingsPayload.newBuilder() to construct.
@@ -10257,13 +10462,6 @@ public final class PartnerLocationSettingsOuterClass {
             case 0:
               done = true;
               break;
-            default: {
-              if (!parseUnknownFieldProto3(
-                  input, unknownFields, extensionRegistry, tag)) {
-                done = true;
-              }
-              break;
-            }
             case 8: {
 
               sort_ = input.readUInt32();
@@ -10281,6 +10479,13 @@ public final class PartnerLocationSettingsOuterClass {
               image_ = s;
               break;
             }
+            default: {
+              if (!parseUnknownFieldProto3(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
           }
         }
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
@@ -10295,12 +10500,13 @@ public final class PartnerLocationSettingsOuterClass {
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.internal_static_bloombox_schema_partner_settings_TVSectionSettingsPayload_descriptor;
+      return io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.internal_static_bloombox_partner_settings_TVSectionSettingsPayload_descriptor;
     }
 
+    @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.internal_static_bloombox_schema_partner_settings_TVSectionSettingsPayload_fieldAccessorTable
+      return io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.internal_static_bloombox_partner_settings_TVSectionSettingsPayload_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
               io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.TVSectionSettingsPayload.class, io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.TVSectionSettingsPayload.Builder.class);
     }
@@ -10403,6 +10609,7 @@ public final class PartnerLocationSettingsOuterClass {
     }
 
     private byte memoizedIsInitialized = -1;
+    @java.lang.Override
     public final boolean isInitialized() {
       byte isInitialized = memoizedIsInitialized;
       if (isInitialized == 1) return true;
@@ -10412,6 +10619,7 @@ public final class PartnerLocationSettingsOuterClass {
       return true;
     }
 
+    @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
       if (sort_ != 0) {
@@ -10426,6 +10634,7 @@ public final class PartnerLocationSettingsOuterClass {
       unknownFields.writeTo(output);
     }
 
+    @java.lang.Override
     public int getSerializedSize() {
       int size = memoizedSize;
       if (size != -1) return size;
@@ -10555,6 +10764,7 @@ public final class PartnerLocationSettingsOuterClass {
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
 
+    @java.lang.Override
     public Builder newBuilderForType() { return newBuilder(); }
     public static Builder newBuilder() {
       return DEFAULT_INSTANCE.toBuilder();
@@ -10562,6 +10772,7 @@ public final class PartnerLocationSettingsOuterClass {
     public static Builder newBuilder(io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.TVSectionSettingsPayload prototype) {
       return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
     }
+    @java.lang.Override
     public Builder toBuilder() {
       return this == DEFAULT_INSTANCE
           ? new Builder() : new Builder().mergeFrom(this);
@@ -10578,20 +10789,21 @@ public final class PartnerLocationSettingsOuterClass {
      * Section-specific settings when viewed via TV menus.
      * </pre>
      *
-     * Protobuf type {@code bloombox.schema.partner.settings.TVSectionSettingsPayload}
+     * Protobuf type {@code bloombox.partner.settings.TVSectionSettingsPayload}
      */
     public static final class Builder extends
         com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:bloombox.schema.partner.settings.TVSectionSettingsPayload)
+        // @@protoc_insertion_point(builder_implements:bloombox.partner.settings.TVSectionSettingsPayload)
         io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.TVSectionSettingsPayloadOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.internal_static_bloombox_schema_partner_settings_TVSectionSettingsPayload_descriptor;
+        return io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.internal_static_bloombox_partner_settings_TVSectionSettingsPayload_descriptor;
       }
 
+      @java.lang.Override
       protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.internal_static_bloombox_schema_partner_settings_TVSectionSettingsPayload_fieldAccessorTable
+        return io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.internal_static_bloombox_partner_settings_TVSectionSettingsPayload_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
                 io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.TVSectionSettingsPayload.class, io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.TVSectionSettingsPayload.Builder.class);
       }
@@ -10611,6 +10823,7 @@ public final class PartnerLocationSettingsOuterClass {
                 .alwaysUseFieldBuilders) {
         }
       }
+      @java.lang.Override
       public Builder clear() {
         super.clear();
         sort_ = 0;
@@ -10622,15 +10835,18 @@ public final class PartnerLocationSettingsOuterClass {
         return this;
       }
 
+      @java.lang.Override
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.internal_static_bloombox_schema_partner_settings_TVSectionSettingsPayload_descriptor;
+        return io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.internal_static_bloombox_partner_settings_TVSectionSettingsPayload_descriptor;
       }
 
+      @java.lang.Override
       public io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.TVSectionSettingsPayload getDefaultInstanceForType() {
         return io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.TVSectionSettingsPayload.getDefaultInstance();
       }
 
+      @java.lang.Override
       public io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.TVSectionSettingsPayload build() {
         io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.TVSectionSettingsPayload result = buildPartial();
         if (!result.isInitialized()) {
@@ -10639,6 +10855,7 @@ public final class PartnerLocationSettingsOuterClass {
         return result;
       }
 
+      @java.lang.Override
       public io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.TVSectionSettingsPayload buildPartial() {
         io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.TVSectionSettingsPayload result = new io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.TVSectionSettingsPayload(this);
         result.sort_ = sort_;
@@ -10648,32 +10865,39 @@ public final class PartnerLocationSettingsOuterClass {
         return result;
       }
 
+      @java.lang.Override
       public Builder clone() {
         return (Builder) super.clone();
       }
+      @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
         return (Builder) super.setField(field, value);
       }
+      @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
         return (Builder) super.clearField(field);
       }
+      @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
         return (Builder) super.clearOneof(oneof);
       }
+      @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
         return (Builder) super.setRepeatedField(field, index, value);
       }
+      @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
         return (Builder) super.addRepeatedField(field, value);
       }
+      @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
         if (other instanceof io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.TVSectionSettingsPayload) {
           return mergeFrom((io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.TVSectionSettingsPayload)other);
@@ -10701,10 +10925,12 @@ public final class PartnerLocationSettingsOuterClass {
         return this;
       }
 
+      @java.lang.Override
       public final boolean isInitialized() {
         return true;
       }
 
+      @java.lang.Override
       public Builder mergeFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -10938,21 +11164,23 @@ public final class PartnerLocationSettingsOuterClass {
         onChanged();
         return this;
       }
+      @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
         return super.setUnknownFieldsProto3(unknownFields);
       }
 
+      @java.lang.Override
       public final Builder mergeUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
         return super.mergeUnknownFields(unknownFields);
       }
 
 
-      // @@protoc_insertion_point(builder_scope:bloombox.schema.partner.settings.TVSectionSettingsPayload)
+      // @@protoc_insertion_point(builder_scope:bloombox.partner.settings.TVSectionSettingsPayload)
     }
 
-    // @@protoc_insertion_point(class_scope:bloombox.schema.partner.settings.TVSectionSettingsPayload)
+    // @@protoc_insertion_point(class_scope:bloombox.partner.settings.TVSectionSettingsPayload)
     private static final io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.TVSectionSettingsPayload DEFAULT_INSTANCE;
     static {
       DEFAULT_INSTANCE = new io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.TVSectionSettingsPayload();
@@ -10964,6 +11192,7 @@ public final class PartnerLocationSettingsOuterClass {
 
     private static final com.google.protobuf.Parser<TVSectionSettingsPayload>
         PARSER = new com.google.protobuf.AbstractParser<TVSectionSettingsPayload>() {
+      @java.lang.Override
       public TVSectionSettingsPayload parsePartialFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -10981,6 +11210,7 @@ public final class PartnerLocationSettingsOuterClass {
       return PARSER;
     }
 
+    @java.lang.Override
     public io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.TVSectionSettingsPayload getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
@@ -10988,7 +11218,7 @@ public final class PartnerLocationSettingsOuterClass {
   }
 
   public interface TVMenuSettingsOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:bloombox.schema.partner.settings.TVMenuSettings)
+      // @@protoc_insertion_point(interface_extends:bloombox.partner.settings.TVMenuSettings)
       com.google.protobuf.MessageOrBuilder {
 
     /**
@@ -10996,7 +11226,7 @@ public final class PartnerLocationSettingsOuterClass {
      * Apothecary section settings, when viewed on TV menus.
      * </pre>
      *
-     * <code>.bloombox.schema.partner.settings.TVSectionSettingsPayload apothecary = 1;</code>
+     * <code>.bloombox.partner.settings.TVSectionSettingsPayload apothecary = 1;</code>
      */
     boolean hasApothecary();
     /**
@@ -11004,7 +11234,7 @@ public final class PartnerLocationSettingsOuterClass {
      * Apothecary section settings, when viewed on TV menus.
      * </pre>
      *
-     * <code>.bloombox.schema.partner.settings.TVSectionSettingsPayload apothecary = 1;</code>
+     * <code>.bloombox.partner.settings.TVSectionSettingsPayload apothecary = 1;</code>
      */
     io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.TVSectionSettingsPayload getApothecary();
     /**
@@ -11012,7 +11242,7 @@ public final class PartnerLocationSettingsOuterClass {
      * Apothecary section settings, when viewed on TV menus.
      * </pre>
      *
-     * <code>.bloombox.schema.partner.settings.TVSectionSettingsPayload apothecary = 1;</code>
+     * <code>.bloombox.partner.settings.TVSectionSettingsPayload apothecary = 1;</code>
      */
     io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.TVSectionSettingsPayloadOrBuilder getApothecaryOrBuilder();
 
@@ -11021,7 +11251,7 @@ public final class PartnerLocationSettingsOuterClass {
      * Cartridges section settings, when viewed on TV menus.
      * </pre>
      *
-     * <code>.bloombox.schema.partner.settings.TVSectionSettingsPayload cartridges = 2;</code>
+     * <code>.bloombox.partner.settings.TVSectionSettingsPayload cartridges = 2;</code>
      */
     boolean hasCartridges();
     /**
@@ -11029,7 +11259,7 @@ public final class PartnerLocationSettingsOuterClass {
      * Cartridges section settings, when viewed on TV menus.
      * </pre>
      *
-     * <code>.bloombox.schema.partner.settings.TVSectionSettingsPayload cartridges = 2;</code>
+     * <code>.bloombox.partner.settings.TVSectionSettingsPayload cartridges = 2;</code>
      */
     io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.TVSectionSettingsPayload getCartridges();
     /**
@@ -11037,7 +11267,7 @@ public final class PartnerLocationSettingsOuterClass {
      * Cartridges section settings, when viewed on TV menus.
      * </pre>
      *
-     * <code>.bloombox.schema.partner.settings.TVSectionSettingsPayload cartridges = 2;</code>
+     * <code>.bloombox.partner.settings.TVSectionSettingsPayload cartridges = 2;</code>
      */
     io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.TVSectionSettingsPayloadOrBuilder getCartridgesOrBuilder();
 
@@ -11046,7 +11276,7 @@ public final class PartnerLocationSettingsOuterClass {
      * Concentrates/extracts section settings, when viewed on TV menus.
      * </pre>
      *
-     * <code>.bloombox.schema.partner.settings.TVSectionSettingsPayload concentrates = 3;</code>
+     * <code>.bloombox.partner.settings.TVSectionSettingsPayload concentrates = 3;</code>
      */
     boolean hasConcentrates();
     /**
@@ -11054,7 +11284,7 @@ public final class PartnerLocationSettingsOuterClass {
      * Concentrates/extracts section settings, when viewed on TV menus.
      * </pre>
      *
-     * <code>.bloombox.schema.partner.settings.TVSectionSettingsPayload concentrates = 3;</code>
+     * <code>.bloombox.partner.settings.TVSectionSettingsPayload concentrates = 3;</code>
      */
     io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.TVSectionSettingsPayload getConcentrates();
     /**
@@ -11062,7 +11292,7 @@ public final class PartnerLocationSettingsOuterClass {
      * Concentrates/extracts section settings, when viewed on TV menus.
      * </pre>
      *
-     * <code>.bloombox.schema.partner.settings.TVSectionSettingsPayload concentrates = 3;</code>
+     * <code>.bloombox.partner.settings.TVSectionSettingsPayload concentrates = 3;</code>
      */
     io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.TVSectionSettingsPayloadOrBuilder getConcentratesOrBuilder();
 
@@ -11071,7 +11301,7 @@ public final class PartnerLocationSettingsOuterClass {
      * Edibles section settings, when viewed on TV menus.
      * </pre>
      *
-     * <code>.bloombox.schema.partner.settings.TVSectionSettingsPayload edibles = 4;</code>
+     * <code>.bloombox.partner.settings.TVSectionSettingsPayload edibles = 4;</code>
      */
     boolean hasEdibles();
     /**
@@ -11079,7 +11309,7 @@ public final class PartnerLocationSettingsOuterClass {
      * Edibles section settings, when viewed on TV menus.
      * </pre>
      *
-     * <code>.bloombox.schema.partner.settings.TVSectionSettingsPayload edibles = 4;</code>
+     * <code>.bloombox.partner.settings.TVSectionSettingsPayload edibles = 4;</code>
      */
     io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.TVSectionSettingsPayload getEdibles();
     /**
@@ -11087,7 +11317,7 @@ public final class PartnerLocationSettingsOuterClass {
      * Edibles section settings, when viewed on TV menus.
      * </pre>
      *
-     * <code>.bloombox.schema.partner.settings.TVSectionSettingsPayload edibles = 4;</code>
+     * <code>.bloombox.partner.settings.TVSectionSettingsPayload edibles = 4;</code>
      */
     io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.TVSectionSettingsPayloadOrBuilder getEdiblesOrBuilder();
 
@@ -11096,7 +11326,7 @@ public final class PartnerLocationSettingsOuterClass {
      * Flowers section settings, when viewed on TV menus.
      * </pre>
      *
-     * <code>.bloombox.schema.partner.settings.TVSectionSettingsPayload flowers = 5;</code>
+     * <code>.bloombox.partner.settings.TVSectionSettingsPayload flowers = 5;</code>
      */
     boolean hasFlowers();
     /**
@@ -11104,7 +11334,7 @@ public final class PartnerLocationSettingsOuterClass {
      * Flowers section settings, when viewed on TV menus.
      * </pre>
      *
-     * <code>.bloombox.schema.partner.settings.TVSectionSettingsPayload flowers = 5;</code>
+     * <code>.bloombox.partner.settings.TVSectionSettingsPayload flowers = 5;</code>
      */
     io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.TVSectionSettingsPayload getFlowers();
     /**
@@ -11112,7 +11342,7 @@ public final class PartnerLocationSettingsOuterClass {
      * Flowers section settings, when viewed on TV menus.
      * </pre>
      *
-     * <code>.bloombox.schema.partner.settings.TVSectionSettingsPayload flowers = 5;</code>
+     * <code>.bloombox.partner.settings.TVSectionSettingsPayload flowers = 5;</code>
      */
     io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.TVSectionSettingsPayloadOrBuilder getFlowersOrBuilder();
 
@@ -11121,7 +11351,7 @@ public final class PartnerLocationSettingsOuterClass {
      * Prerolls section settings, when viewed on TV menus.
      * </pre>
      *
-     * <code>.bloombox.schema.partner.settings.TVSectionSettingsPayload prerolls = 6;</code>
+     * <code>.bloombox.partner.settings.TVSectionSettingsPayload prerolls = 6;</code>
      */
     boolean hasPrerolls();
     /**
@@ -11129,7 +11359,7 @@ public final class PartnerLocationSettingsOuterClass {
      * Prerolls section settings, when viewed on TV menus.
      * </pre>
      *
-     * <code>.bloombox.schema.partner.settings.TVSectionSettingsPayload prerolls = 6;</code>
+     * <code>.bloombox.partner.settings.TVSectionSettingsPayload prerolls = 6;</code>
      */
     io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.TVSectionSettingsPayload getPrerolls();
     /**
@@ -11137,7 +11367,7 @@ public final class PartnerLocationSettingsOuterClass {
      * Prerolls section settings, when viewed on TV menus.
      * </pre>
      *
-     * <code>.bloombox.schema.partner.settings.TVSectionSettingsPayload prerolls = 6;</code>
+     * <code>.bloombox.partner.settings.TVSectionSettingsPayload prerolls = 6;</code>
      */
     io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.TVSectionSettingsPayloadOrBuilder getPrerollsOrBuilder();
 
@@ -11146,7 +11376,7 @@ public final class PartnerLocationSettingsOuterClass {
      * Merchandise section settings, when viewed on TV menus.
      * </pre>
      *
-     * <code>.bloombox.schema.partner.settings.TVSectionSettingsPayload merchandise = 7;</code>
+     * <code>.bloombox.partner.settings.TVSectionSettingsPayload merchandise = 7;</code>
      */
     boolean hasMerchandise();
     /**
@@ -11154,7 +11384,7 @@ public final class PartnerLocationSettingsOuterClass {
      * Merchandise section settings, when viewed on TV menus.
      * </pre>
      *
-     * <code>.bloombox.schema.partner.settings.TVSectionSettingsPayload merchandise = 7;</code>
+     * <code>.bloombox.partner.settings.TVSectionSettingsPayload merchandise = 7;</code>
      */
     io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.TVSectionSettingsPayload getMerchandise();
     /**
@@ -11162,7 +11392,7 @@ public final class PartnerLocationSettingsOuterClass {
      * Merchandise section settings, when viewed on TV menus.
      * </pre>
      *
-     * <code>.bloombox.schema.partner.settings.TVSectionSettingsPayload merchandise = 7;</code>
+     * <code>.bloombox.partner.settings.TVSectionSettingsPayload merchandise = 7;</code>
      */
     io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.TVSectionSettingsPayloadOrBuilder getMerchandiseOrBuilder();
 
@@ -11171,7 +11401,7 @@ public final class PartnerLocationSettingsOuterClass {
      * Plants section settings, when viewed on TV menus.
      * </pre>
      *
-     * <code>.bloombox.schema.partner.settings.TVSectionSettingsPayload plants = 8;</code>
+     * <code>.bloombox.partner.settings.TVSectionSettingsPayload plants = 8;</code>
      */
     boolean hasPlants();
     /**
@@ -11179,7 +11409,7 @@ public final class PartnerLocationSettingsOuterClass {
      * Plants section settings, when viewed on TV menus.
      * </pre>
      *
-     * <code>.bloombox.schema.partner.settings.TVSectionSettingsPayload plants = 8;</code>
+     * <code>.bloombox.partner.settings.TVSectionSettingsPayload plants = 8;</code>
      */
     io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.TVSectionSettingsPayload getPlants();
     /**
@@ -11187,7 +11417,7 @@ public final class PartnerLocationSettingsOuterClass {
      * Plants section settings, when viewed on TV menus.
      * </pre>
      *
-     * <code>.bloombox.schema.partner.settings.TVSectionSettingsPayload plants = 8;</code>
+     * <code>.bloombox.partner.settings.TVSectionSettingsPayload plants = 8;</code>
      */
     io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.TVSectionSettingsPayloadOrBuilder getPlantsOrBuilder();
   }
@@ -11196,11 +11426,11 @@ public final class PartnerLocationSettingsOuterClass {
    * Specifies settings specific to TV menus.
    * </pre>
    *
-   * Protobuf type {@code bloombox.schema.partner.settings.TVMenuSettings}
+   * Protobuf type {@code bloombox.partner.settings.TVMenuSettings}
    */
   public  static final class TVMenuSettings extends
       com.google.protobuf.GeneratedMessageV3 implements
-      // @@protoc_insertion_point(message_implements:bloombox.schema.partner.settings.TVMenuSettings)
+      // @@protoc_insertion_point(message_implements:bloombox.partner.settings.TVMenuSettings)
       TVMenuSettingsOrBuilder {
   private static final long serialVersionUID = 0L;
     // Use TVMenuSettings.newBuilder() to construct.
@@ -11234,13 +11464,6 @@ public final class PartnerLocationSettingsOuterClass {
             case 0:
               done = true;
               break;
-            default: {
-              if (!parseUnknownFieldProto3(
-                  input, unknownFields, extensionRegistry, tag)) {
-                done = true;
-              }
-              break;
-            }
             case 10: {
               io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.TVSectionSettingsPayload.Builder subBuilder = null;
               if (apothecary_ != null) {
@@ -11345,6 +11568,13 @@ public final class PartnerLocationSettingsOuterClass {
 
               break;
             }
+            default: {
+              if (!parseUnknownFieldProto3(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
           }
         }
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
@@ -11359,12 +11589,13 @@ public final class PartnerLocationSettingsOuterClass {
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.internal_static_bloombox_schema_partner_settings_TVMenuSettings_descriptor;
+      return io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.internal_static_bloombox_partner_settings_TVMenuSettings_descriptor;
     }
 
+    @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.internal_static_bloombox_schema_partner_settings_TVMenuSettings_fieldAccessorTable
+      return io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.internal_static_bloombox_partner_settings_TVMenuSettings_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
               io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.TVMenuSettings.class, io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.TVMenuSettings.Builder.class);
     }
@@ -11376,7 +11607,7 @@ public final class PartnerLocationSettingsOuterClass {
      * Apothecary section settings, when viewed on TV menus.
      * </pre>
      *
-     * <code>.bloombox.schema.partner.settings.TVSectionSettingsPayload apothecary = 1;</code>
+     * <code>.bloombox.partner.settings.TVSectionSettingsPayload apothecary = 1;</code>
      */
     public boolean hasApothecary() {
       return apothecary_ != null;
@@ -11386,7 +11617,7 @@ public final class PartnerLocationSettingsOuterClass {
      * Apothecary section settings, when viewed on TV menus.
      * </pre>
      *
-     * <code>.bloombox.schema.partner.settings.TVSectionSettingsPayload apothecary = 1;</code>
+     * <code>.bloombox.partner.settings.TVSectionSettingsPayload apothecary = 1;</code>
      */
     public io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.TVSectionSettingsPayload getApothecary() {
       return apothecary_ == null ? io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.TVSectionSettingsPayload.getDefaultInstance() : apothecary_;
@@ -11396,7 +11627,7 @@ public final class PartnerLocationSettingsOuterClass {
      * Apothecary section settings, when viewed on TV menus.
      * </pre>
      *
-     * <code>.bloombox.schema.partner.settings.TVSectionSettingsPayload apothecary = 1;</code>
+     * <code>.bloombox.partner.settings.TVSectionSettingsPayload apothecary = 1;</code>
      */
     public io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.TVSectionSettingsPayloadOrBuilder getApothecaryOrBuilder() {
       return getApothecary();
@@ -11409,7 +11640,7 @@ public final class PartnerLocationSettingsOuterClass {
      * Cartridges section settings, when viewed on TV menus.
      * </pre>
      *
-     * <code>.bloombox.schema.partner.settings.TVSectionSettingsPayload cartridges = 2;</code>
+     * <code>.bloombox.partner.settings.TVSectionSettingsPayload cartridges = 2;</code>
      */
     public boolean hasCartridges() {
       return cartridges_ != null;
@@ -11419,7 +11650,7 @@ public final class PartnerLocationSettingsOuterClass {
      * Cartridges section settings, when viewed on TV menus.
      * </pre>
      *
-     * <code>.bloombox.schema.partner.settings.TVSectionSettingsPayload cartridges = 2;</code>
+     * <code>.bloombox.partner.settings.TVSectionSettingsPayload cartridges = 2;</code>
      */
     public io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.TVSectionSettingsPayload getCartridges() {
       return cartridges_ == null ? io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.TVSectionSettingsPayload.getDefaultInstance() : cartridges_;
@@ -11429,7 +11660,7 @@ public final class PartnerLocationSettingsOuterClass {
      * Cartridges section settings, when viewed on TV menus.
      * </pre>
      *
-     * <code>.bloombox.schema.partner.settings.TVSectionSettingsPayload cartridges = 2;</code>
+     * <code>.bloombox.partner.settings.TVSectionSettingsPayload cartridges = 2;</code>
      */
     public io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.TVSectionSettingsPayloadOrBuilder getCartridgesOrBuilder() {
       return getCartridges();
@@ -11442,7 +11673,7 @@ public final class PartnerLocationSettingsOuterClass {
      * Concentrates/extracts section settings, when viewed on TV menus.
      * </pre>
      *
-     * <code>.bloombox.schema.partner.settings.TVSectionSettingsPayload concentrates = 3;</code>
+     * <code>.bloombox.partner.settings.TVSectionSettingsPayload concentrates = 3;</code>
      */
     public boolean hasConcentrates() {
       return concentrates_ != null;
@@ -11452,7 +11683,7 @@ public final class PartnerLocationSettingsOuterClass {
      * Concentrates/extracts section settings, when viewed on TV menus.
      * </pre>
      *
-     * <code>.bloombox.schema.partner.settings.TVSectionSettingsPayload concentrates = 3;</code>
+     * <code>.bloombox.partner.settings.TVSectionSettingsPayload concentrates = 3;</code>
      */
     public io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.TVSectionSettingsPayload getConcentrates() {
       return concentrates_ == null ? io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.TVSectionSettingsPayload.getDefaultInstance() : concentrates_;
@@ -11462,7 +11693,7 @@ public final class PartnerLocationSettingsOuterClass {
      * Concentrates/extracts section settings, when viewed on TV menus.
      * </pre>
      *
-     * <code>.bloombox.schema.partner.settings.TVSectionSettingsPayload concentrates = 3;</code>
+     * <code>.bloombox.partner.settings.TVSectionSettingsPayload concentrates = 3;</code>
      */
     public io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.TVSectionSettingsPayloadOrBuilder getConcentratesOrBuilder() {
       return getConcentrates();
@@ -11475,7 +11706,7 @@ public final class PartnerLocationSettingsOuterClass {
      * Edibles section settings, when viewed on TV menus.
      * </pre>
      *
-     * <code>.bloombox.schema.partner.settings.TVSectionSettingsPayload edibles = 4;</code>
+     * <code>.bloombox.partner.settings.TVSectionSettingsPayload edibles = 4;</code>
      */
     public boolean hasEdibles() {
       return edibles_ != null;
@@ -11485,7 +11716,7 @@ public final class PartnerLocationSettingsOuterClass {
      * Edibles section settings, when viewed on TV menus.
      * </pre>
      *
-     * <code>.bloombox.schema.partner.settings.TVSectionSettingsPayload edibles = 4;</code>
+     * <code>.bloombox.partner.settings.TVSectionSettingsPayload edibles = 4;</code>
      */
     public io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.TVSectionSettingsPayload getEdibles() {
       return edibles_ == null ? io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.TVSectionSettingsPayload.getDefaultInstance() : edibles_;
@@ -11495,7 +11726,7 @@ public final class PartnerLocationSettingsOuterClass {
      * Edibles section settings, when viewed on TV menus.
      * </pre>
      *
-     * <code>.bloombox.schema.partner.settings.TVSectionSettingsPayload edibles = 4;</code>
+     * <code>.bloombox.partner.settings.TVSectionSettingsPayload edibles = 4;</code>
      */
     public io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.TVSectionSettingsPayloadOrBuilder getEdiblesOrBuilder() {
       return getEdibles();
@@ -11508,7 +11739,7 @@ public final class PartnerLocationSettingsOuterClass {
      * Flowers section settings, when viewed on TV menus.
      * </pre>
      *
-     * <code>.bloombox.schema.partner.settings.TVSectionSettingsPayload flowers = 5;</code>
+     * <code>.bloombox.partner.settings.TVSectionSettingsPayload flowers = 5;</code>
      */
     public boolean hasFlowers() {
       return flowers_ != null;
@@ -11518,7 +11749,7 @@ public final class PartnerLocationSettingsOuterClass {
      * Flowers section settings, when viewed on TV menus.
      * </pre>
      *
-     * <code>.bloombox.schema.partner.settings.TVSectionSettingsPayload flowers = 5;</code>
+     * <code>.bloombox.partner.settings.TVSectionSettingsPayload flowers = 5;</code>
      */
     public io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.TVSectionSettingsPayload getFlowers() {
       return flowers_ == null ? io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.TVSectionSettingsPayload.getDefaultInstance() : flowers_;
@@ -11528,7 +11759,7 @@ public final class PartnerLocationSettingsOuterClass {
      * Flowers section settings, when viewed on TV menus.
      * </pre>
      *
-     * <code>.bloombox.schema.partner.settings.TVSectionSettingsPayload flowers = 5;</code>
+     * <code>.bloombox.partner.settings.TVSectionSettingsPayload flowers = 5;</code>
      */
     public io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.TVSectionSettingsPayloadOrBuilder getFlowersOrBuilder() {
       return getFlowers();
@@ -11541,7 +11772,7 @@ public final class PartnerLocationSettingsOuterClass {
      * Prerolls section settings, when viewed on TV menus.
      * </pre>
      *
-     * <code>.bloombox.schema.partner.settings.TVSectionSettingsPayload prerolls = 6;</code>
+     * <code>.bloombox.partner.settings.TVSectionSettingsPayload prerolls = 6;</code>
      */
     public boolean hasPrerolls() {
       return prerolls_ != null;
@@ -11551,7 +11782,7 @@ public final class PartnerLocationSettingsOuterClass {
      * Prerolls section settings, when viewed on TV menus.
      * </pre>
      *
-     * <code>.bloombox.schema.partner.settings.TVSectionSettingsPayload prerolls = 6;</code>
+     * <code>.bloombox.partner.settings.TVSectionSettingsPayload prerolls = 6;</code>
      */
     public io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.TVSectionSettingsPayload getPrerolls() {
       return prerolls_ == null ? io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.TVSectionSettingsPayload.getDefaultInstance() : prerolls_;
@@ -11561,7 +11792,7 @@ public final class PartnerLocationSettingsOuterClass {
      * Prerolls section settings, when viewed on TV menus.
      * </pre>
      *
-     * <code>.bloombox.schema.partner.settings.TVSectionSettingsPayload prerolls = 6;</code>
+     * <code>.bloombox.partner.settings.TVSectionSettingsPayload prerolls = 6;</code>
      */
     public io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.TVSectionSettingsPayloadOrBuilder getPrerollsOrBuilder() {
       return getPrerolls();
@@ -11574,7 +11805,7 @@ public final class PartnerLocationSettingsOuterClass {
      * Merchandise section settings, when viewed on TV menus.
      * </pre>
      *
-     * <code>.bloombox.schema.partner.settings.TVSectionSettingsPayload merchandise = 7;</code>
+     * <code>.bloombox.partner.settings.TVSectionSettingsPayload merchandise = 7;</code>
      */
     public boolean hasMerchandise() {
       return merchandise_ != null;
@@ -11584,7 +11815,7 @@ public final class PartnerLocationSettingsOuterClass {
      * Merchandise section settings, when viewed on TV menus.
      * </pre>
      *
-     * <code>.bloombox.schema.partner.settings.TVSectionSettingsPayload merchandise = 7;</code>
+     * <code>.bloombox.partner.settings.TVSectionSettingsPayload merchandise = 7;</code>
      */
     public io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.TVSectionSettingsPayload getMerchandise() {
       return merchandise_ == null ? io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.TVSectionSettingsPayload.getDefaultInstance() : merchandise_;
@@ -11594,7 +11825,7 @@ public final class PartnerLocationSettingsOuterClass {
      * Merchandise section settings, when viewed on TV menus.
      * </pre>
      *
-     * <code>.bloombox.schema.partner.settings.TVSectionSettingsPayload merchandise = 7;</code>
+     * <code>.bloombox.partner.settings.TVSectionSettingsPayload merchandise = 7;</code>
      */
     public io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.TVSectionSettingsPayloadOrBuilder getMerchandiseOrBuilder() {
       return getMerchandise();
@@ -11607,7 +11838,7 @@ public final class PartnerLocationSettingsOuterClass {
      * Plants section settings, when viewed on TV menus.
      * </pre>
      *
-     * <code>.bloombox.schema.partner.settings.TVSectionSettingsPayload plants = 8;</code>
+     * <code>.bloombox.partner.settings.TVSectionSettingsPayload plants = 8;</code>
      */
     public boolean hasPlants() {
       return plants_ != null;
@@ -11617,7 +11848,7 @@ public final class PartnerLocationSettingsOuterClass {
      * Plants section settings, when viewed on TV menus.
      * </pre>
      *
-     * <code>.bloombox.schema.partner.settings.TVSectionSettingsPayload plants = 8;</code>
+     * <code>.bloombox.partner.settings.TVSectionSettingsPayload plants = 8;</code>
      */
     public io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.TVSectionSettingsPayload getPlants() {
       return plants_ == null ? io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.TVSectionSettingsPayload.getDefaultInstance() : plants_;
@@ -11627,13 +11858,14 @@ public final class PartnerLocationSettingsOuterClass {
      * Plants section settings, when viewed on TV menus.
      * </pre>
      *
-     * <code>.bloombox.schema.partner.settings.TVSectionSettingsPayload plants = 8;</code>
+     * <code>.bloombox.partner.settings.TVSectionSettingsPayload plants = 8;</code>
      */
     public io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.TVSectionSettingsPayloadOrBuilder getPlantsOrBuilder() {
       return getPlants();
     }
 
     private byte memoizedIsInitialized = -1;
+    @java.lang.Override
     public final boolean isInitialized() {
       byte isInitialized = memoizedIsInitialized;
       if (isInitialized == 1) return true;
@@ -11643,6 +11875,7 @@ public final class PartnerLocationSettingsOuterClass {
       return true;
     }
 
+    @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
       if (apothecary_ != null) {
@@ -11672,6 +11905,7 @@ public final class PartnerLocationSettingsOuterClass {
       unknownFields.writeTo(output);
     }
 
+    @java.lang.Override
     public int getSerializedSize() {
       int size = memoizedSize;
       if (size != -1) return size;
@@ -11883,6 +12117,7 @@ public final class PartnerLocationSettingsOuterClass {
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
 
+    @java.lang.Override
     public Builder newBuilderForType() { return newBuilder(); }
     public static Builder newBuilder() {
       return DEFAULT_INSTANCE.toBuilder();
@@ -11890,6 +12125,7 @@ public final class PartnerLocationSettingsOuterClass {
     public static Builder newBuilder(io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.TVMenuSettings prototype) {
       return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
     }
+    @java.lang.Override
     public Builder toBuilder() {
       return this == DEFAULT_INSTANCE
           ? new Builder() : new Builder().mergeFrom(this);
@@ -11906,20 +12142,21 @@ public final class PartnerLocationSettingsOuterClass {
      * Specifies settings specific to TV menus.
      * </pre>
      *
-     * Protobuf type {@code bloombox.schema.partner.settings.TVMenuSettings}
+     * Protobuf type {@code bloombox.partner.settings.TVMenuSettings}
      */
     public static final class Builder extends
         com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:bloombox.schema.partner.settings.TVMenuSettings)
+        // @@protoc_insertion_point(builder_implements:bloombox.partner.settings.TVMenuSettings)
         io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.TVMenuSettingsOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.internal_static_bloombox_schema_partner_settings_TVMenuSettings_descriptor;
+        return io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.internal_static_bloombox_partner_settings_TVMenuSettings_descriptor;
       }
 
+      @java.lang.Override
       protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.internal_static_bloombox_schema_partner_settings_TVMenuSettings_fieldAccessorTable
+        return io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.internal_static_bloombox_partner_settings_TVMenuSettings_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
                 io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.TVMenuSettings.class, io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.TVMenuSettings.Builder.class);
       }
@@ -11939,6 +12176,7 @@ public final class PartnerLocationSettingsOuterClass {
                 .alwaysUseFieldBuilders) {
         }
       }
+      @java.lang.Override
       public Builder clear() {
         super.clear();
         if (apothecaryBuilder_ == null) {
@@ -11992,15 +12230,18 @@ public final class PartnerLocationSettingsOuterClass {
         return this;
       }
 
+      @java.lang.Override
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.internal_static_bloombox_schema_partner_settings_TVMenuSettings_descriptor;
+        return io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.internal_static_bloombox_partner_settings_TVMenuSettings_descriptor;
       }
 
+      @java.lang.Override
       public io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.TVMenuSettings getDefaultInstanceForType() {
         return io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.TVMenuSettings.getDefaultInstance();
       }
 
+      @java.lang.Override
       public io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.TVMenuSettings build() {
         io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.TVMenuSettings result = buildPartial();
         if (!result.isInitialized()) {
@@ -12009,6 +12250,7 @@ public final class PartnerLocationSettingsOuterClass {
         return result;
       }
 
+      @java.lang.Override
       public io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.TVMenuSettings buildPartial() {
         io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.TVMenuSettings result = new io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.TVMenuSettings(this);
         if (apothecaryBuilder_ == null) {
@@ -12055,32 +12297,39 @@ public final class PartnerLocationSettingsOuterClass {
         return result;
       }
 
+      @java.lang.Override
       public Builder clone() {
         return (Builder) super.clone();
       }
+      @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
         return (Builder) super.setField(field, value);
       }
+      @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
         return (Builder) super.clearField(field);
       }
+      @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
         return (Builder) super.clearOneof(oneof);
       }
+      @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
         return (Builder) super.setRepeatedField(field, index, value);
       }
+      @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
         return (Builder) super.addRepeatedField(field, value);
       }
+      @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
         if (other instanceof io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.TVMenuSettings) {
           return mergeFrom((io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.TVMenuSettings)other);
@@ -12121,10 +12370,12 @@ public final class PartnerLocationSettingsOuterClass {
         return this;
       }
 
+      @java.lang.Override
       public final boolean isInitialized() {
         return true;
       }
 
+      @java.lang.Override
       public Builder mergeFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -12151,7 +12402,7 @@ public final class PartnerLocationSettingsOuterClass {
        * Apothecary section settings, when viewed on TV menus.
        * </pre>
        *
-       * <code>.bloombox.schema.partner.settings.TVSectionSettingsPayload apothecary = 1;</code>
+       * <code>.bloombox.partner.settings.TVSectionSettingsPayload apothecary = 1;</code>
        */
       public boolean hasApothecary() {
         return apothecaryBuilder_ != null || apothecary_ != null;
@@ -12161,7 +12412,7 @@ public final class PartnerLocationSettingsOuterClass {
        * Apothecary section settings, when viewed on TV menus.
        * </pre>
        *
-       * <code>.bloombox.schema.partner.settings.TVSectionSettingsPayload apothecary = 1;</code>
+       * <code>.bloombox.partner.settings.TVSectionSettingsPayload apothecary = 1;</code>
        */
       public io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.TVSectionSettingsPayload getApothecary() {
         if (apothecaryBuilder_ == null) {
@@ -12175,7 +12426,7 @@ public final class PartnerLocationSettingsOuterClass {
        * Apothecary section settings, when viewed on TV menus.
        * </pre>
        *
-       * <code>.bloombox.schema.partner.settings.TVSectionSettingsPayload apothecary = 1;</code>
+       * <code>.bloombox.partner.settings.TVSectionSettingsPayload apothecary = 1;</code>
        */
       public Builder setApothecary(io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.TVSectionSettingsPayload value) {
         if (apothecaryBuilder_ == null) {
@@ -12195,7 +12446,7 @@ public final class PartnerLocationSettingsOuterClass {
        * Apothecary section settings, when viewed on TV menus.
        * </pre>
        *
-       * <code>.bloombox.schema.partner.settings.TVSectionSettingsPayload apothecary = 1;</code>
+       * <code>.bloombox.partner.settings.TVSectionSettingsPayload apothecary = 1;</code>
        */
       public Builder setApothecary(
           io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.TVSectionSettingsPayload.Builder builderForValue) {
@@ -12213,7 +12464,7 @@ public final class PartnerLocationSettingsOuterClass {
        * Apothecary section settings, when viewed on TV menus.
        * </pre>
        *
-       * <code>.bloombox.schema.partner.settings.TVSectionSettingsPayload apothecary = 1;</code>
+       * <code>.bloombox.partner.settings.TVSectionSettingsPayload apothecary = 1;</code>
        */
       public Builder mergeApothecary(io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.TVSectionSettingsPayload value) {
         if (apothecaryBuilder_ == null) {
@@ -12235,7 +12486,7 @@ public final class PartnerLocationSettingsOuterClass {
        * Apothecary section settings, when viewed on TV menus.
        * </pre>
        *
-       * <code>.bloombox.schema.partner.settings.TVSectionSettingsPayload apothecary = 1;</code>
+       * <code>.bloombox.partner.settings.TVSectionSettingsPayload apothecary = 1;</code>
        */
       public Builder clearApothecary() {
         if (apothecaryBuilder_ == null) {
@@ -12253,7 +12504,7 @@ public final class PartnerLocationSettingsOuterClass {
        * Apothecary section settings, when viewed on TV menus.
        * </pre>
        *
-       * <code>.bloombox.schema.partner.settings.TVSectionSettingsPayload apothecary = 1;</code>
+       * <code>.bloombox.partner.settings.TVSectionSettingsPayload apothecary = 1;</code>
        */
       public io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.TVSectionSettingsPayload.Builder getApothecaryBuilder() {
         
@@ -12265,7 +12516,7 @@ public final class PartnerLocationSettingsOuterClass {
        * Apothecary section settings, when viewed on TV menus.
        * </pre>
        *
-       * <code>.bloombox.schema.partner.settings.TVSectionSettingsPayload apothecary = 1;</code>
+       * <code>.bloombox.partner.settings.TVSectionSettingsPayload apothecary = 1;</code>
        */
       public io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.TVSectionSettingsPayloadOrBuilder getApothecaryOrBuilder() {
         if (apothecaryBuilder_ != null) {
@@ -12280,7 +12531,7 @@ public final class PartnerLocationSettingsOuterClass {
        * Apothecary section settings, when viewed on TV menus.
        * </pre>
        *
-       * <code>.bloombox.schema.partner.settings.TVSectionSettingsPayload apothecary = 1;</code>
+       * <code>.bloombox.partner.settings.TVSectionSettingsPayload apothecary = 1;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
           io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.TVSectionSettingsPayload, io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.TVSectionSettingsPayload.Builder, io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.TVSectionSettingsPayloadOrBuilder> 
@@ -12304,7 +12555,7 @@ public final class PartnerLocationSettingsOuterClass {
        * Cartridges section settings, when viewed on TV menus.
        * </pre>
        *
-       * <code>.bloombox.schema.partner.settings.TVSectionSettingsPayload cartridges = 2;</code>
+       * <code>.bloombox.partner.settings.TVSectionSettingsPayload cartridges = 2;</code>
        */
       public boolean hasCartridges() {
         return cartridgesBuilder_ != null || cartridges_ != null;
@@ -12314,7 +12565,7 @@ public final class PartnerLocationSettingsOuterClass {
        * Cartridges section settings, when viewed on TV menus.
        * </pre>
        *
-       * <code>.bloombox.schema.partner.settings.TVSectionSettingsPayload cartridges = 2;</code>
+       * <code>.bloombox.partner.settings.TVSectionSettingsPayload cartridges = 2;</code>
        */
       public io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.TVSectionSettingsPayload getCartridges() {
         if (cartridgesBuilder_ == null) {
@@ -12328,7 +12579,7 @@ public final class PartnerLocationSettingsOuterClass {
        * Cartridges section settings, when viewed on TV menus.
        * </pre>
        *
-       * <code>.bloombox.schema.partner.settings.TVSectionSettingsPayload cartridges = 2;</code>
+       * <code>.bloombox.partner.settings.TVSectionSettingsPayload cartridges = 2;</code>
        */
       public Builder setCartridges(io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.TVSectionSettingsPayload value) {
         if (cartridgesBuilder_ == null) {
@@ -12348,7 +12599,7 @@ public final class PartnerLocationSettingsOuterClass {
        * Cartridges section settings, when viewed on TV menus.
        * </pre>
        *
-       * <code>.bloombox.schema.partner.settings.TVSectionSettingsPayload cartridges = 2;</code>
+       * <code>.bloombox.partner.settings.TVSectionSettingsPayload cartridges = 2;</code>
        */
       public Builder setCartridges(
           io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.TVSectionSettingsPayload.Builder builderForValue) {
@@ -12366,7 +12617,7 @@ public final class PartnerLocationSettingsOuterClass {
        * Cartridges section settings, when viewed on TV menus.
        * </pre>
        *
-       * <code>.bloombox.schema.partner.settings.TVSectionSettingsPayload cartridges = 2;</code>
+       * <code>.bloombox.partner.settings.TVSectionSettingsPayload cartridges = 2;</code>
        */
       public Builder mergeCartridges(io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.TVSectionSettingsPayload value) {
         if (cartridgesBuilder_ == null) {
@@ -12388,7 +12639,7 @@ public final class PartnerLocationSettingsOuterClass {
        * Cartridges section settings, when viewed on TV menus.
        * </pre>
        *
-       * <code>.bloombox.schema.partner.settings.TVSectionSettingsPayload cartridges = 2;</code>
+       * <code>.bloombox.partner.settings.TVSectionSettingsPayload cartridges = 2;</code>
        */
       public Builder clearCartridges() {
         if (cartridgesBuilder_ == null) {
@@ -12406,7 +12657,7 @@ public final class PartnerLocationSettingsOuterClass {
        * Cartridges section settings, when viewed on TV menus.
        * </pre>
        *
-       * <code>.bloombox.schema.partner.settings.TVSectionSettingsPayload cartridges = 2;</code>
+       * <code>.bloombox.partner.settings.TVSectionSettingsPayload cartridges = 2;</code>
        */
       public io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.TVSectionSettingsPayload.Builder getCartridgesBuilder() {
         
@@ -12418,7 +12669,7 @@ public final class PartnerLocationSettingsOuterClass {
        * Cartridges section settings, when viewed on TV menus.
        * </pre>
        *
-       * <code>.bloombox.schema.partner.settings.TVSectionSettingsPayload cartridges = 2;</code>
+       * <code>.bloombox.partner.settings.TVSectionSettingsPayload cartridges = 2;</code>
        */
       public io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.TVSectionSettingsPayloadOrBuilder getCartridgesOrBuilder() {
         if (cartridgesBuilder_ != null) {
@@ -12433,7 +12684,7 @@ public final class PartnerLocationSettingsOuterClass {
        * Cartridges section settings, when viewed on TV menus.
        * </pre>
        *
-       * <code>.bloombox.schema.partner.settings.TVSectionSettingsPayload cartridges = 2;</code>
+       * <code>.bloombox.partner.settings.TVSectionSettingsPayload cartridges = 2;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
           io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.TVSectionSettingsPayload, io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.TVSectionSettingsPayload.Builder, io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.TVSectionSettingsPayloadOrBuilder> 
@@ -12457,7 +12708,7 @@ public final class PartnerLocationSettingsOuterClass {
        * Concentrates/extracts section settings, when viewed on TV menus.
        * </pre>
        *
-       * <code>.bloombox.schema.partner.settings.TVSectionSettingsPayload concentrates = 3;</code>
+       * <code>.bloombox.partner.settings.TVSectionSettingsPayload concentrates = 3;</code>
        */
       public boolean hasConcentrates() {
         return concentratesBuilder_ != null || concentrates_ != null;
@@ -12467,7 +12718,7 @@ public final class PartnerLocationSettingsOuterClass {
        * Concentrates/extracts section settings, when viewed on TV menus.
        * </pre>
        *
-       * <code>.bloombox.schema.partner.settings.TVSectionSettingsPayload concentrates = 3;</code>
+       * <code>.bloombox.partner.settings.TVSectionSettingsPayload concentrates = 3;</code>
        */
       public io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.TVSectionSettingsPayload getConcentrates() {
         if (concentratesBuilder_ == null) {
@@ -12481,7 +12732,7 @@ public final class PartnerLocationSettingsOuterClass {
        * Concentrates/extracts section settings, when viewed on TV menus.
        * </pre>
        *
-       * <code>.bloombox.schema.partner.settings.TVSectionSettingsPayload concentrates = 3;</code>
+       * <code>.bloombox.partner.settings.TVSectionSettingsPayload concentrates = 3;</code>
        */
       public Builder setConcentrates(io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.TVSectionSettingsPayload value) {
         if (concentratesBuilder_ == null) {
@@ -12501,7 +12752,7 @@ public final class PartnerLocationSettingsOuterClass {
        * Concentrates/extracts section settings, when viewed on TV menus.
        * </pre>
        *
-       * <code>.bloombox.schema.partner.settings.TVSectionSettingsPayload concentrates = 3;</code>
+       * <code>.bloombox.partner.settings.TVSectionSettingsPayload concentrates = 3;</code>
        */
       public Builder setConcentrates(
           io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.TVSectionSettingsPayload.Builder builderForValue) {
@@ -12519,7 +12770,7 @@ public final class PartnerLocationSettingsOuterClass {
        * Concentrates/extracts section settings, when viewed on TV menus.
        * </pre>
        *
-       * <code>.bloombox.schema.partner.settings.TVSectionSettingsPayload concentrates = 3;</code>
+       * <code>.bloombox.partner.settings.TVSectionSettingsPayload concentrates = 3;</code>
        */
       public Builder mergeConcentrates(io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.TVSectionSettingsPayload value) {
         if (concentratesBuilder_ == null) {
@@ -12541,7 +12792,7 @@ public final class PartnerLocationSettingsOuterClass {
        * Concentrates/extracts section settings, when viewed on TV menus.
        * </pre>
        *
-       * <code>.bloombox.schema.partner.settings.TVSectionSettingsPayload concentrates = 3;</code>
+       * <code>.bloombox.partner.settings.TVSectionSettingsPayload concentrates = 3;</code>
        */
       public Builder clearConcentrates() {
         if (concentratesBuilder_ == null) {
@@ -12559,7 +12810,7 @@ public final class PartnerLocationSettingsOuterClass {
        * Concentrates/extracts section settings, when viewed on TV menus.
        * </pre>
        *
-       * <code>.bloombox.schema.partner.settings.TVSectionSettingsPayload concentrates = 3;</code>
+       * <code>.bloombox.partner.settings.TVSectionSettingsPayload concentrates = 3;</code>
        */
       public io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.TVSectionSettingsPayload.Builder getConcentratesBuilder() {
         
@@ -12571,7 +12822,7 @@ public final class PartnerLocationSettingsOuterClass {
        * Concentrates/extracts section settings, when viewed on TV menus.
        * </pre>
        *
-       * <code>.bloombox.schema.partner.settings.TVSectionSettingsPayload concentrates = 3;</code>
+       * <code>.bloombox.partner.settings.TVSectionSettingsPayload concentrates = 3;</code>
        */
       public io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.TVSectionSettingsPayloadOrBuilder getConcentratesOrBuilder() {
         if (concentratesBuilder_ != null) {
@@ -12586,7 +12837,7 @@ public final class PartnerLocationSettingsOuterClass {
        * Concentrates/extracts section settings, when viewed on TV menus.
        * </pre>
        *
-       * <code>.bloombox.schema.partner.settings.TVSectionSettingsPayload concentrates = 3;</code>
+       * <code>.bloombox.partner.settings.TVSectionSettingsPayload concentrates = 3;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
           io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.TVSectionSettingsPayload, io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.TVSectionSettingsPayload.Builder, io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.TVSectionSettingsPayloadOrBuilder> 
@@ -12610,7 +12861,7 @@ public final class PartnerLocationSettingsOuterClass {
        * Edibles section settings, when viewed on TV menus.
        * </pre>
        *
-       * <code>.bloombox.schema.partner.settings.TVSectionSettingsPayload edibles = 4;</code>
+       * <code>.bloombox.partner.settings.TVSectionSettingsPayload edibles = 4;</code>
        */
       public boolean hasEdibles() {
         return ediblesBuilder_ != null || edibles_ != null;
@@ -12620,7 +12871,7 @@ public final class PartnerLocationSettingsOuterClass {
        * Edibles section settings, when viewed on TV menus.
        * </pre>
        *
-       * <code>.bloombox.schema.partner.settings.TVSectionSettingsPayload edibles = 4;</code>
+       * <code>.bloombox.partner.settings.TVSectionSettingsPayload edibles = 4;</code>
        */
       public io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.TVSectionSettingsPayload getEdibles() {
         if (ediblesBuilder_ == null) {
@@ -12634,7 +12885,7 @@ public final class PartnerLocationSettingsOuterClass {
        * Edibles section settings, when viewed on TV menus.
        * </pre>
        *
-       * <code>.bloombox.schema.partner.settings.TVSectionSettingsPayload edibles = 4;</code>
+       * <code>.bloombox.partner.settings.TVSectionSettingsPayload edibles = 4;</code>
        */
       public Builder setEdibles(io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.TVSectionSettingsPayload value) {
         if (ediblesBuilder_ == null) {
@@ -12654,7 +12905,7 @@ public final class PartnerLocationSettingsOuterClass {
        * Edibles section settings, when viewed on TV menus.
        * </pre>
        *
-       * <code>.bloombox.schema.partner.settings.TVSectionSettingsPayload edibles = 4;</code>
+       * <code>.bloombox.partner.settings.TVSectionSettingsPayload edibles = 4;</code>
        */
       public Builder setEdibles(
           io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.TVSectionSettingsPayload.Builder builderForValue) {
@@ -12672,7 +12923,7 @@ public final class PartnerLocationSettingsOuterClass {
        * Edibles section settings, when viewed on TV menus.
        * </pre>
        *
-       * <code>.bloombox.schema.partner.settings.TVSectionSettingsPayload edibles = 4;</code>
+       * <code>.bloombox.partner.settings.TVSectionSettingsPayload edibles = 4;</code>
        */
       public Builder mergeEdibles(io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.TVSectionSettingsPayload value) {
         if (ediblesBuilder_ == null) {
@@ -12694,7 +12945,7 @@ public final class PartnerLocationSettingsOuterClass {
        * Edibles section settings, when viewed on TV menus.
        * </pre>
        *
-       * <code>.bloombox.schema.partner.settings.TVSectionSettingsPayload edibles = 4;</code>
+       * <code>.bloombox.partner.settings.TVSectionSettingsPayload edibles = 4;</code>
        */
       public Builder clearEdibles() {
         if (ediblesBuilder_ == null) {
@@ -12712,7 +12963,7 @@ public final class PartnerLocationSettingsOuterClass {
        * Edibles section settings, when viewed on TV menus.
        * </pre>
        *
-       * <code>.bloombox.schema.partner.settings.TVSectionSettingsPayload edibles = 4;</code>
+       * <code>.bloombox.partner.settings.TVSectionSettingsPayload edibles = 4;</code>
        */
       public io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.TVSectionSettingsPayload.Builder getEdiblesBuilder() {
         
@@ -12724,7 +12975,7 @@ public final class PartnerLocationSettingsOuterClass {
        * Edibles section settings, when viewed on TV menus.
        * </pre>
        *
-       * <code>.bloombox.schema.partner.settings.TVSectionSettingsPayload edibles = 4;</code>
+       * <code>.bloombox.partner.settings.TVSectionSettingsPayload edibles = 4;</code>
        */
       public io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.TVSectionSettingsPayloadOrBuilder getEdiblesOrBuilder() {
         if (ediblesBuilder_ != null) {
@@ -12739,7 +12990,7 @@ public final class PartnerLocationSettingsOuterClass {
        * Edibles section settings, when viewed on TV menus.
        * </pre>
        *
-       * <code>.bloombox.schema.partner.settings.TVSectionSettingsPayload edibles = 4;</code>
+       * <code>.bloombox.partner.settings.TVSectionSettingsPayload edibles = 4;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
           io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.TVSectionSettingsPayload, io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.TVSectionSettingsPayload.Builder, io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.TVSectionSettingsPayloadOrBuilder> 
@@ -12763,7 +13014,7 @@ public final class PartnerLocationSettingsOuterClass {
        * Flowers section settings, when viewed on TV menus.
        * </pre>
        *
-       * <code>.bloombox.schema.partner.settings.TVSectionSettingsPayload flowers = 5;</code>
+       * <code>.bloombox.partner.settings.TVSectionSettingsPayload flowers = 5;</code>
        */
       public boolean hasFlowers() {
         return flowersBuilder_ != null || flowers_ != null;
@@ -12773,7 +13024,7 @@ public final class PartnerLocationSettingsOuterClass {
        * Flowers section settings, when viewed on TV menus.
        * </pre>
        *
-       * <code>.bloombox.schema.partner.settings.TVSectionSettingsPayload flowers = 5;</code>
+       * <code>.bloombox.partner.settings.TVSectionSettingsPayload flowers = 5;</code>
        */
       public io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.TVSectionSettingsPayload getFlowers() {
         if (flowersBuilder_ == null) {
@@ -12787,7 +13038,7 @@ public final class PartnerLocationSettingsOuterClass {
        * Flowers section settings, when viewed on TV menus.
        * </pre>
        *
-       * <code>.bloombox.schema.partner.settings.TVSectionSettingsPayload flowers = 5;</code>
+       * <code>.bloombox.partner.settings.TVSectionSettingsPayload flowers = 5;</code>
        */
       public Builder setFlowers(io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.TVSectionSettingsPayload value) {
         if (flowersBuilder_ == null) {
@@ -12807,7 +13058,7 @@ public final class PartnerLocationSettingsOuterClass {
        * Flowers section settings, when viewed on TV menus.
        * </pre>
        *
-       * <code>.bloombox.schema.partner.settings.TVSectionSettingsPayload flowers = 5;</code>
+       * <code>.bloombox.partner.settings.TVSectionSettingsPayload flowers = 5;</code>
        */
       public Builder setFlowers(
           io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.TVSectionSettingsPayload.Builder builderForValue) {
@@ -12825,7 +13076,7 @@ public final class PartnerLocationSettingsOuterClass {
        * Flowers section settings, when viewed on TV menus.
        * </pre>
        *
-       * <code>.bloombox.schema.partner.settings.TVSectionSettingsPayload flowers = 5;</code>
+       * <code>.bloombox.partner.settings.TVSectionSettingsPayload flowers = 5;</code>
        */
       public Builder mergeFlowers(io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.TVSectionSettingsPayload value) {
         if (flowersBuilder_ == null) {
@@ -12847,7 +13098,7 @@ public final class PartnerLocationSettingsOuterClass {
        * Flowers section settings, when viewed on TV menus.
        * </pre>
        *
-       * <code>.bloombox.schema.partner.settings.TVSectionSettingsPayload flowers = 5;</code>
+       * <code>.bloombox.partner.settings.TVSectionSettingsPayload flowers = 5;</code>
        */
       public Builder clearFlowers() {
         if (flowersBuilder_ == null) {
@@ -12865,7 +13116,7 @@ public final class PartnerLocationSettingsOuterClass {
        * Flowers section settings, when viewed on TV menus.
        * </pre>
        *
-       * <code>.bloombox.schema.partner.settings.TVSectionSettingsPayload flowers = 5;</code>
+       * <code>.bloombox.partner.settings.TVSectionSettingsPayload flowers = 5;</code>
        */
       public io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.TVSectionSettingsPayload.Builder getFlowersBuilder() {
         
@@ -12877,7 +13128,7 @@ public final class PartnerLocationSettingsOuterClass {
        * Flowers section settings, when viewed on TV menus.
        * </pre>
        *
-       * <code>.bloombox.schema.partner.settings.TVSectionSettingsPayload flowers = 5;</code>
+       * <code>.bloombox.partner.settings.TVSectionSettingsPayload flowers = 5;</code>
        */
       public io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.TVSectionSettingsPayloadOrBuilder getFlowersOrBuilder() {
         if (flowersBuilder_ != null) {
@@ -12892,7 +13143,7 @@ public final class PartnerLocationSettingsOuterClass {
        * Flowers section settings, when viewed on TV menus.
        * </pre>
        *
-       * <code>.bloombox.schema.partner.settings.TVSectionSettingsPayload flowers = 5;</code>
+       * <code>.bloombox.partner.settings.TVSectionSettingsPayload flowers = 5;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
           io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.TVSectionSettingsPayload, io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.TVSectionSettingsPayload.Builder, io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.TVSectionSettingsPayloadOrBuilder> 
@@ -12916,7 +13167,7 @@ public final class PartnerLocationSettingsOuterClass {
        * Prerolls section settings, when viewed on TV menus.
        * </pre>
        *
-       * <code>.bloombox.schema.partner.settings.TVSectionSettingsPayload prerolls = 6;</code>
+       * <code>.bloombox.partner.settings.TVSectionSettingsPayload prerolls = 6;</code>
        */
       public boolean hasPrerolls() {
         return prerollsBuilder_ != null || prerolls_ != null;
@@ -12926,7 +13177,7 @@ public final class PartnerLocationSettingsOuterClass {
        * Prerolls section settings, when viewed on TV menus.
        * </pre>
        *
-       * <code>.bloombox.schema.partner.settings.TVSectionSettingsPayload prerolls = 6;</code>
+       * <code>.bloombox.partner.settings.TVSectionSettingsPayload prerolls = 6;</code>
        */
       public io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.TVSectionSettingsPayload getPrerolls() {
         if (prerollsBuilder_ == null) {
@@ -12940,7 +13191,7 @@ public final class PartnerLocationSettingsOuterClass {
        * Prerolls section settings, when viewed on TV menus.
        * </pre>
        *
-       * <code>.bloombox.schema.partner.settings.TVSectionSettingsPayload prerolls = 6;</code>
+       * <code>.bloombox.partner.settings.TVSectionSettingsPayload prerolls = 6;</code>
        */
       public Builder setPrerolls(io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.TVSectionSettingsPayload value) {
         if (prerollsBuilder_ == null) {
@@ -12960,7 +13211,7 @@ public final class PartnerLocationSettingsOuterClass {
        * Prerolls section settings, when viewed on TV menus.
        * </pre>
        *
-       * <code>.bloombox.schema.partner.settings.TVSectionSettingsPayload prerolls = 6;</code>
+       * <code>.bloombox.partner.settings.TVSectionSettingsPayload prerolls = 6;</code>
        */
       public Builder setPrerolls(
           io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.TVSectionSettingsPayload.Builder builderForValue) {
@@ -12978,7 +13229,7 @@ public final class PartnerLocationSettingsOuterClass {
        * Prerolls section settings, when viewed on TV menus.
        * </pre>
        *
-       * <code>.bloombox.schema.partner.settings.TVSectionSettingsPayload prerolls = 6;</code>
+       * <code>.bloombox.partner.settings.TVSectionSettingsPayload prerolls = 6;</code>
        */
       public Builder mergePrerolls(io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.TVSectionSettingsPayload value) {
         if (prerollsBuilder_ == null) {
@@ -13000,7 +13251,7 @@ public final class PartnerLocationSettingsOuterClass {
        * Prerolls section settings, when viewed on TV menus.
        * </pre>
        *
-       * <code>.bloombox.schema.partner.settings.TVSectionSettingsPayload prerolls = 6;</code>
+       * <code>.bloombox.partner.settings.TVSectionSettingsPayload prerolls = 6;</code>
        */
       public Builder clearPrerolls() {
         if (prerollsBuilder_ == null) {
@@ -13018,7 +13269,7 @@ public final class PartnerLocationSettingsOuterClass {
        * Prerolls section settings, when viewed on TV menus.
        * </pre>
        *
-       * <code>.bloombox.schema.partner.settings.TVSectionSettingsPayload prerolls = 6;</code>
+       * <code>.bloombox.partner.settings.TVSectionSettingsPayload prerolls = 6;</code>
        */
       public io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.TVSectionSettingsPayload.Builder getPrerollsBuilder() {
         
@@ -13030,7 +13281,7 @@ public final class PartnerLocationSettingsOuterClass {
        * Prerolls section settings, when viewed on TV menus.
        * </pre>
        *
-       * <code>.bloombox.schema.partner.settings.TVSectionSettingsPayload prerolls = 6;</code>
+       * <code>.bloombox.partner.settings.TVSectionSettingsPayload prerolls = 6;</code>
        */
       public io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.TVSectionSettingsPayloadOrBuilder getPrerollsOrBuilder() {
         if (prerollsBuilder_ != null) {
@@ -13045,7 +13296,7 @@ public final class PartnerLocationSettingsOuterClass {
        * Prerolls section settings, when viewed on TV menus.
        * </pre>
        *
-       * <code>.bloombox.schema.partner.settings.TVSectionSettingsPayload prerolls = 6;</code>
+       * <code>.bloombox.partner.settings.TVSectionSettingsPayload prerolls = 6;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
           io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.TVSectionSettingsPayload, io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.TVSectionSettingsPayload.Builder, io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.TVSectionSettingsPayloadOrBuilder> 
@@ -13069,7 +13320,7 @@ public final class PartnerLocationSettingsOuterClass {
        * Merchandise section settings, when viewed on TV menus.
        * </pre>
        *
-       * <code>.bloombox.schema.partner.settings.TVSectionSettingsPayload merchandise = 7;</code>
+       * <code>.bloombox.partner.settings.TVSectionSettingsPayload merchandise = 7;</code>
        */
       public boolean hasMerchandise() {
         return merchandiseBuilder_ != null || merchandise_ != null;
@@ -13079,7 +13330,7 @@ public final class PartnerLocationSettingsOuterClass {
        * Merchandise section settings, when viewed on TV menus.
        * </pre>
        *
-       * <code>.bloombox.schema.partner.settings.TVSectionSettingsPayload merchandise = 7;</code>
+       * <code>.bloombox.partner.settings.TVSectionSettingsPayload merchandise = 7;</code>
        */
       public io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.TVSectionSettingsPayload getMerchandise() {
         if (merchandiseBuilder_ == null) {
@@ -13093,7 +13344,7 @@ public final class PartnerLocationSettingsOuterClass {
        * Merchandise section settings, when viewed on TV menus.
        * </pre>
        *
-       * <code>.bloombox.schema.partner.settings.TVSectionSettingsPayload merchandise = 7;</code>
+       * <code>.bloombox.partner.settings.TVSectionSettingsPayload merchandise = 7;</code>
        */
       public Builder setMerchandise(io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.TVSectionSettingsPayload value) {
         if (merchandiseBuilder_ == null) {
@@ -13113,7 +13364,7 @@ public final class PartnerLocationSettingsOuterClass {
        * Merchandise section settings, when viewed on TV menus.
        * </pre>
        *
-       * <code>.bloombox.schema.partner.settings.TVSectionSettingsPayload merchandise = 7;</code>
+       * <code>.bloombox.partner.settings.TVSectionSettingsPayload merchandise = 7;</code>
        */
       public Builder setMerchandise(
           io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.TVSectionSettingsPayload.Builder builderForValue) {
@@ -13131,7 +13382,7 @@ public final class PartnerLocationSettingsOuterClass {
        * Merchandise section settings, when viewed on TV menus.
        * </pre>
        *
-       * <code>.bloombox.schema.partner.settings.TVSectionSettingsPayload merchandise = 7;</code>
+       * <code>.bloombox.partner.settings.TVSectionSettingsPayload merchandise = 7;</code>
        */
       public Builder mergeMerchandise(io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.TVSectionSettingsPayload value) {
         if (merchandiseBuilder_ == null) {
@@ -13153,7 +13404,7 @@ public final class PartnerLocationSettingsOuterClass {
        * Merchandise section settings, when viewed on TV menus.
        * </pre>
        *
-       * <code>.bloombox.schema.partner.settings.TVSectionSettingsPayload merchandise = 7;</code>
+       * <code>.bloombox.partner.settings.TVSectionSettingsPayload merchandise = 7;</code>
        */
       public Builder clearMerchandise() {
         if (merchandiseBuilder_ == null) {
@@ -13171,7 +13422,7 @@ public final class PartnerLocationSettingsOuterClass {
        * Merchandise section settings, when viewed on TV menus.
        * </pre>
        *
-       * <code>.bloombox.schema.partner.settings.TVSectionSettingsPayload merchandise = 7;</code>
+       * <code>.bloombox.partner.settings.TVSectionSettingsPayload merchandise = 7;</code>
        */
       public io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.TVSectionSettingsPayload.Builder getMerchandiseBuilder() {
         
@@ -13183,7 +13434,7 @@ public final class PartnerLocationSettingsOuterClass {
        * Merchandise section settings, when viewed on TV menus.
        * </pre>
        *
-       * <code>.bloombox.schema.partner.settings.TVSectionSettingsPayload merchandise = 7;</code>
+       * <code>.bloombox.partner.settings.TVSectionSettingsPayload merchandise = 7;</code>
        */
       public io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.TVSectionSettingsPayloadOrBuilder getMerchandiseOrBuilder() {
         if (merchandiseBuilder_ != null) {
@@ -13198,7 +13449,7 @@ public final class PartnerLocationSettingsOuterClass {
        * Merchandise section settings, when viewed on TV menus.
        * </pre>
        *
-       * <code>.bloombox.schema.partner.settings.TVSectionSettingsPayload merchandise = 7;</code>
+       * <code>.bloombox.partner.settings.TVSectionSettingsPayload merchandise = 7;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
           io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.TVSectionSettingsPayload, io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.TVSectionSettingsPayload.Builder, io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.TVSectionSettingsPayloadOrBuilder> 
@@ -13222,7 +13473,7 @@ public final class PartnerLocationSettingsOuterClass {
        * Plants section settings, when viewed on TV menus.
        * </pre>
        *
-       * <code>.bloombox.schema.partner.settings.TVSectionSettingsPayload plants = 8;</code>
+       * <code>.bloombox.partner.settings.TVSectionSettingsPayload plants = 8;</code>
        */
       public boolean hasPlants() {
         return plantsBuilder_ != null || plants_ != null;
@@ -13232,7 +13483,7 @@ public final class PartnerLocationSettingsOuterClass {
        * Plants section settings, when viewed on TV menus.
        * </pre>
        *
-       * <code>.bloombox.schema.partner.settings.TVSectionSettingsPayload plants = 8;</code>
+       * <code>.bloombox.partner.settings.TVSectionSettingsPayload plants = 8;</code>
        */
       public io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.TVSectionSettingsPayload getPlants() {
         if (plantsBuilder_ == null) {
@@ -13246,7 +13497,7 @@ public final class PartnerLocationSettingsOuterClass {
        * Plants section settings, when viewed on TV menus.
        * </pre>
        *
-       * <code>.bloombox.schema.partner.settings.TVSectionSettingsPayload plants = 8;</code>
+       * <code>.bloombox.partner.settings.TVSectionSettingsPayload plants = 8;</code>
        */
       public Builder setPlants(io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.TVSectionSettingsPayload value) {
         if (plantsBuilder_ == null) {
@@ -13266,7 +13517,7 @@ public final class PartnerLocationSettingsOuterClass {
        * Plants section settings, when viewed on TV menus.
        * </pre>
        *
-       * <code>.bloombox.schema.partner.settings.TVSectionSettingsPayload plants = 8;</code>
+       * <code>.bloombox.partner.settings.TVSectionSettingsPayload plants = 8;</code>
        */
       public Builder setPlants(
           io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.TVSectionSettingsPayload.Builder builderForValue) {
@@ -13284,7 +13535,7 @@ public final class PartnerLocationSettingsOuterClass {
        * Plants section settings, when viewed on TV menus.
        * </pre>
        *
-       * <code>.bloombox.schema.partner.settings.TVSectionSettingsPayload plants = 8;</code>
+       * <code>.bloombox.partner.settings.TVSectionSettingsPayload plants = 8;</code>
        */
       public Builder mergePlants(io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.TVSectionSettingsPayload value) {
         if (plantsBuilder_ == null) {
@@ -13306,7 +13557,7 @@ public final class PartnerLocationSettingsOuterClass {
        * Plants section settings, when viewed on TV menus.
        * </pre>
        *
-       * <code>.bloombox.schema.partner.settings.TVSectionSettingsPayload plants = 8;</code>
+       * <code>.bloombox.partner.settings.TVSectionSettingsPayload plants = 8;</code>
        */
       public Builder clearPlants() {
         if (plantsBuilder_ == null) {
@@ -13324,7 +13575,7 @@ public final class PartnerLocationSettingsOuterClass {
        * Plants section settings, when viewed on TV menus.
        * </pre>
        *
-       * <code>.bloombox.schema.partner.settings.TVSectionSettingsPayload plants = 8;</code>
+       * <code>.bloombox.partner.settings.TVSectionSettingsPayload plants = 8;</code>
        */
       public io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.TVSectionSettingsPayload.Builder getPlantsBuilder() {
         
@@ -13336,7 +13587,7 @@ public final class PartnerLocationSettingsOuterClass {
        * Plants section settings, when viewed on TV menus.
        * </pre>
        *
-       * <code>.bloombox.schema.partner.settings.TVSectionSettingsPayload plants = 8;</code>
+       * <code>.bloombox.partner.settings.TVSectionSettingsPayload plants = 8;</code>
        */
       public io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.TVSectionSettingsPayloadOrBuilder getPlantsOrBuilder() {
         if (plantsBuilder_ != null) {
@@ -13351,7 +13602,7 @@ public final class PartnerLocationSettingsOuterClass {
        * Plants section settings, when viewed on TV menus.
        * </pre>
        *
-       * <code>.bloombox.schema.partner.settings.TVSectionSettingsPayload plants = 8;</code>
+       * <code>.bloombox.partner.settings.TVSectionSettingsPayload plants = 8;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
           io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.TVSectionSettingsPayload, io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.TVSectionSettingsPayload.Builder, io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.TVSectionSettingsPayloadOrBuilder> 
@@ -13366,21 +13617,23 @@ public final class PartnerLocationSettingsOuterClass {
         }
         return plantsBuilder_;
       }
+      @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
         return super.setUnknownFieldsProto3(unknownFields);
       }
 
+      @java.lang.Override
       public final Builder mergeUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
         return super.mergeUnknownFields(unknownFields);
       }
 
 
-      // @@protoc_insertion_point(builder_scope:bloombox.schema.partner.settings.TVMenuSettings)
+      // @@protoc_insertion_point(builder_scope:bloombox.partner.settings.TVMenuSettings)
     }
 
-    // @@protoc_insertion_point(class_scope:bloombox.schema.partner.settings.TVMenuSettings)
+    // @@protoc_insertion_point(class_scope:bloombox.partner.settings.TVMenuSettings)
     private static final io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.TVMenuSettings DEFAULT_INSTANCE;
     static {
       DEFAULT_INSTANCE = new io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.TVMenuSettings();
@@ -13392,6 +13645,7 @@ public final class PartnerLocationSettingsOuterClass {
 
     private static final com.google.protobuf.Parser<TVMenuSettings>
         PARSER = new com.google.protobuf.AbstractParser<TVMenuSettings>() {
+      @java.lang.Override
       public TVMenuSettings parsePartialFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -13409,6 +13663,7 @@ public final class PartnerLocationSettingsOuterClass {
       return PARSER;
     }
 
+    @java.lang.Override
     public io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.TVMenuSettings getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
@@ -13416,7 +13671,7 @@ public final class PartnerLocationSettingsOuterClass {
   }
 
   public interface TVSettingsOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:bloombox.schema.partner.settings.TVSettings)
+      // @@protoc_insertion_point(interface_extends:bloombox.partner.settings.TVSettings)
       com.google.protobuf.MessageOrBuilder {
 
     /**
@@ -13424,7 +13679,7 @@ public final class PartnerLocationSettingsOuterClass {
      * Settings for the TV's top banner.
      * </pre>
      *
-     * <code>.bloombox.schema.partner.settings.TVBannerSettings banner = 1;</code>
+     * <code>.bloombox.partner.settings.TVBannerSettings banner = 1;</code>
      */
     boolean hasBanner();
     /**
@@ -13432,7 +13687,7 @@ public final class PartnerLocationSettingsOuterClass {
      * Settings for the TV's top banner.
      * </pre>
      *
-     * <code>.bloombox.schema.partner.settings.TVBannerSettings banner = 1;</code>
+     * <code>.bloombox.partner.settings.TVBannerSettings banner = 1;</code>
      */
     io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.TVBannerSettings getBanner();
     /**
@@ -13440,7 +13695,7 @@ public final class PartnerLocationSettingsOuterClass {
      * Settings for the TV's top banner.
      * </pre>
      *
-     * <code>.bloombox.schema.partner.settings.TVBannerSettings banner = 1;</code>
+     * <code>.bloombox.partner.settings.TVBannerSettings banner = 1;</code>
      */
     io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.TVBannerSettingsOrBuilder getBannerOrBuilder();
 
@@ -13449,7 +13704,7 @@ public final class PartnerLocationSettingsOuterClass {
      * Menu-specific settings for TVs.
      * </pre>
      *
-     * <code>.bloombox.schema.partner.settings.TVMenuSettings settings = 2;</code>
+     * <code>.bloombox.partner.settings.TVMenuSettings settings = 2;</code>
      */
     boolean hasSettings();
     /**
@@ -13457,7 +13712,7 @@ public final class PartnerLocationSettingsOuterClass {
      * Menu-specific settings for TVs.
      * </pre>
      *
-     * <code>.bloombox.schema.partner.settings.TVMenuSettings settings = 2;</code>
+     * <code>.bloombox.partner.settings.TVMenuSettings settings = 2;</code>
      */
     io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.TVMenuSettings getSettings();
     /**
@@ -13465,7 +13720,7 @@ public final class PartnerLocationSettingsOuterClass {
      * Menu-specific settings for TVs.
      * </pre>
      *
-     * <code>.bloombox.schema.partner.settings.TVMenuSettings settings = 2;</code>
+     * <code>.bloombox.partner.settings.TVMenuSettings settings = 2;</code>
      */
     io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.TVMenuSettingsOrBuilder getSettingsOrBuilder();
   }
@@ -13474,11 +13729,11 @@ public final class PartnerLocationSettingsOuterClass {
    * Specifies settings for television display units on a per-location basis.
    * </pre>
    *
-   * Protobuf type {@code bloombox.schema.partner.settings.TVSettings}
+   * Protobuf type {@code bloombox.partner.settings.TVSettings}
    */
   public  static final class TVSettings extends
       com.google.protobuf.GeneratedMessageV3 implements
-      // @@protoc_insertion_point(message_implements:bloombox.schema.partner.settings.TVSettings)
+      // @@protoc_insertion_point(message_implements:bloombox.partner.settings.TVSettings)
       TVSettingsOrBuilder {
   private static final long serialVersionUID = 0L;
     // Use TVSettings.newBuilder() to construct.
@@ -13512,13 +13767,6 @@ public final class PartnerLocationSettingsOuterClass {
             case 0:
               done = true;
               break;
-            default: {
-              if (!parseUnknownFieldProto3(
-                  input, unknownFields, extensionRegistry, tag)) {
-                done = true;
-              }
-              break;
-            }
             case 10: {
               io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.TVBannerSettings.Builder subBuilder = null;
               if (banner_ != null) {
@@ -13545,6 +13793,13 @@ public final class PartnerLocationSettingsOuterClass {
 
               break;
             }
+            default: {
+              if (!parseUnknownFieldProto3(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
           }
         }
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
@@ -13559,12 +13814,13 @@ public final class PartnerLocationSettingsOuterClass {
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.internal_static_bloombox_schema_partner_settings_TVSettings_descriptor;
+      return io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.internal_static_bloombox_partner_settings_TVSettings_descriptor;
     }
 
+    @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.internal_static_bloombox_schema_partner_settings_TVSettings_fieldAccessorTable
+      return io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.internal_static_bloombox_partner_settings_TVSettings_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
               io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.TVSettings.class, io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.TVSettings.Builder.class);
     }
@@ -13576,7 +13832,7 @@ public final class PartnerLocationSettingsOuterClass {
      * Settings for the TV's top banner.
      * </pre>
      *
-     * <code>.bloombox.schema.partner.settings.TVBannerSettings banner = 1;</code>
+     * <code>.bloombox.partner.settings.TVBannerSettings banner = 1;</code>
      */
     public boolean hasBanner() {
       return banner_ != null;
@@ -13586,7 +13842,7 @@ public final class PartnerLocationSettingsOuterClass {
      * Settings for the TV's top banner.
      * </pre>
      *
-     * <code>.bloombox.schema.partner.settings.TVBannerSettings banner = 1;</code>
+     * <code>.bloombox.partner.settings.TVBannerSettings banner = 1;</code>
      */
     public io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.TVBannerSettings getBanner() {
       return banner_ == null ? io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.TVBannerSettings.getDefaultInstance() : banner_;
@@ -13596,7 +13852,7 @@ public final class PartnerLocationSettingsOuterClass {
      * Settings for the TV's top banner.
      * </pre>
      *
-     * <code>.bloombox.schema.partner.settings.TVBannerSettings banner = 1;</code>
+     * <code>.bloombox.partner.settings.TVBannerSettings banner = 1;</code>
      */
     public io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.TVBannerSettingsOrBuilder getBannerOrBuilder() {
       return getBanner();
@@ -13609,7 +13865,7 @@ public final class PartnerLocationSettingsOuterClass {
      * Menu-specific settings for TVs.
      * </pre>
      *
-     * <code>.bloombox.schema.partner.settings.TVMenuSettings settings = 2;</code>
+     * <code>.bloombox.partner.settings.TVMenuSettings settings = 2;</code>
      */
     public boolean hasSettings() {
       return settings_ != null;
@@ -13619,7 +13875,7 @@ public final class PartnerLocationSettingsOuterClass {
      * Menu-specific settings for TVs.
      * </pre>
      *
-     * <code>.bloombox.schema.partner.settings.TVMenuSettings settings = 2;</code>
+     * <code>.bloombox.partner.settings.TVMenuSettings settings = 2;</code>
      */
     public io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.TVMenuSettings getSettings() {
       return settings_ == null ? io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.TVMenuSettings.getDefaultInstance() : settings_;
@@ -13629,13 +13885,14 @@ public final class PartnerLocationSettingsOuterClass {
      * Menu-specific settings for TVs.
      * </pre>
      *
-     * <code>.bloombox.schema.partner.settings.TVMenuSettings settings = 2;</code>
+     * <code>.bloombox.partner.settings.TVMenuSettings settings = 2;</code>
      */
     public io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.TVMenuSettingsOrBuilder getSettingsOrBuilder() {
       return getSettings();
     }
 
     private byte memoizedIsInitialized = -1;
+    @java.lang.Override
     public final boolean isInitialized() {
       byte isInitialized = memoizedIsInitialized;
       if (isInitialized == 1) return true;
@@ -13645,6 +13902,7 @@ public final class PartnerLocationSettingsOuterClass {
       return true;
     }
 
+    @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
       if (banner_ != null) {
@@ -13656,6 +13914,7 @@ public final class PartnerLocationSettingsOuterClass {
       unknownFields.writeTo(output);
     }
 
+    @java.lang.Override
     public int getSerializedSize() {
       int size = memoizedSize;
       if (size != -1) return size;
@@ -13789,6 +14048,7 @@ public final class PartnerLocationSettingsOuterClass {
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
 
+    @java.lang.Override
     public Builder newBuilderForType() { return newBuilder(); }
     public static Builder newBuilder() {
       return DEFAULT_INSTANCE.toBuilder();
@@ -13796,6 +14056,7 @@ public final class PartnerLocationSettingsOuterClass {
     public static Builder newBuilder(io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.TVSettings prototype) {
       return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
     }
+    @java.lang.Override
     public Builder toBuilder() {
       return this == DEFAULT_INSTANCE
           ? new Builder() : new Builder().mergeFrom(this);
@@ -13812,20 +14073,21 @@ public final class PartnerLocationSettingsOuterClass {
      * Specifies settings for television display units on a per-location basis.
      * </pre>
      *
-     * Protobuf type {@code bloombox.schema.partner.settings.TVSettings}
+     * Protobuf type {@code bloombox.partner.settings.TVSettings}
      */
     public static final class Builder extends
         com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:bloombox.schema.partner.settings.TVSettings)
+        // @@protoc_insertion_point(builder_implements:bloombox.partner.settings.TVSettings)
         io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.TVSettingsOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.internal_static_bloombox_schema_partner_settings_TVSettings_descriptor;
+        return io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.internal_static_bloombox_partner_settings_TVSettings_descriptor;
       }
 
+      @java.lang.Override
       protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.internal_static_bloombox_schema_partner_settings_TVSettings_fieldAccessorTable
+        return io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.internal_static_bloombox_partner_settings_TVSettings_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
                 io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.TVSettings.class, io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.TVSettings.Builder.class);
       }
@@ -13845,6 +14107,7 @@ public final class PartnerLocationSettingsOuterClass {
                 .alwaysUseFieldBuilders) {
         }
       }
+      @java.lang.Override
       public Builder clear() {
         super.clear();
         if (bannerBuilder_ == null) {
@@ -13862,15 +14125,18 @@ public final class PartnerLocationSettingsOuterClass {
         return this;
       }
 
+      @java.lang.Override
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.internal_static_bloombox_schema_partner_settings_TVSettings_descriptor;
+        return io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.internal_static_bloombox_partner_settings_TVSettings_descriptor;
       }
 
+      @java.lang.Override
       public io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.TVSettings getDefaultInstanceForType() {
         return io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.TVSettings.getDefaultInstance();
       }
 
+      @java.lang.Override
       public io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.TVSettings build() {
         io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.TVSettings result = buildPartial();
         if (!result.isInitialized()) {
@@ -13879,6 +14145,7 @@ public final class PartnerLocationSettingsOuterClass {
         return result;
       }
 
+      @java.lang.Override
       public io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.TVSettings buildPartial() {
         io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.TVSettings result = new io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.TVSettings(this);
         if (bannerBuilder_ == null) {
@@ -13895,32 +14162,39 @@ public final class PartnerLocationSettingsOuterClass {
         return result;
       }
 
+      @java.lang.Override
       public Builder clone() {
         return (Builder) super.clone();
       }
+      @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
         return (Builder) super.setField(field, value);
       }
+      @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
         return (Builder) super.clearField(field);
       }
+      @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
         return (Builder) super.clearOneof(oneof);
       }
+      @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
         return (Builder) super.setRepeatedField(field, index, value);
       }
+      @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
         return (Builder) super.addRepeatedField(field, value);
       }
+      @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
         if (other instanceof io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.TVSettings) {
           return mergeFrom((io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.TVSettings)other);
@@ -13943,10 +14217,12 @@ public final class PartnerLocationSettingsOuterClass {
         return this;
       }
 
+      @java.lang.Override
       public final boolean isInitialized() {
         return true;
       }
 
+      @java.lang.Override
       public Builder mergeFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -13973,7 +14249,7 @@ public final class PartnerLocationSettingsOuterClass {
        * Settings for the TV's top banner.
        * </pre>
        *
-       * <code>.bloombox.schema.partner.settings.TVBannerSettings banner = 1;</code>
+       * <code>.bloombox.partner.settings.TVBannerSettings banner = 1;</code>
        */
       public boolean hasBanner() {
         return bannerBuilder_ != null || banner_ != null;
@@ -13983,7 +14259,7 @@ public final class PartnerLocationSettingsOuterClass {
        * Settings for the TV's top banner.
        * </pre>
        *
-       * <code>.bloombox.schema.partner.settings.TVBannerSettings banner = 1;</code>
+       * <code>.bloombox.partner.settings.TVBannerSettings banner = 1;</code>
        */
       public io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.TVBannerSettings getBanner() {
         if (bannerBuilder_ == null) {
@@ -13997,7 +14273,7 @@ public final class PartnerLocationSettingsOuterClass {
        * Settings for the TV's top banner.
        * </pre>
        *
-       * <code>.bloombox.schema.partner.settings.TVBannerSettings banner = 1;</code>
+       * <code>.bloombox.partner.settings.TVBannerSettings banner = 1;</code>
        */
       public Builder setBanner(io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.TVBannerSettings value) {
         if (bannerBuilder_ == null) {
@@ -14017,7 +14293,7 @@ public final class PartnerLocationSettingsOuterClass {
        * Settings for the TV's top banner.
        * </pre>
        *
-       * <code>.bloombox.schema.partner.settings.TVBannerSettings banner = 1;</code>
+       * <code>.bloombox.partner.settings.TVBannerSettings banner = 1;</code>
        */
       public Builder setBanner(
           io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.TVBannerSettings.Builder builderForValue) {
@@ -14035,7 +14311,7 @@ public final class PartnerLocationSettingsOuterClass {
        * Settings for the TV's top banner.
        * </pre>
        *
-       * <code>.bloombox.schema.partner.settings.TVBannerSettings banner = 1;</code>
+       * <code>.bloombox.partner.settings.TVBannerSettings banner = 1;</code>
        */
       public Builder mergeBanner(io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.TVBannerSettings value) {
         if (bannerBuilder_ == null) {
@@ -14057,7 +14333,7 @@ public final class PartnerLocationSettingsOuterClass {
        * Settings for the TV's top banner.
        * </pre>
        *
-       * <code>.bloombox.schema.partner.settings.TVBannerSettings banner = 1;</code>
+       * <code>.bloombox.partner.settings.TVBannerSettings banner = 1;</code>
        */
       public Builder clearBanner() {
         if (bannerBuilder_ == null) {
@@ -14075,7 +14351,7 @@ public final class PartnerLocationSettingsOuterClass {
        * Settings for the TV's top banner.
        * </pre>
        *
-       * <code>.bloombox.schema.partner.settings.TVBannerSettings banner = 1;</code>
+       * <code>.bloombox.partner.settings.TVBannerSettings banner = 1;</code>
        */
       public io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.TVBannerSettings.Builder getBannerBuilder() {
         
@@ -14087,7 +14363,7 @@ public final class PartnerLocationSettingsOuterClass {
        * Settings for the TV's top banner.
        * </pre>
        *
-       * <code>.bloombox.schema.partner.settings.TVBannerSettings banner = 1;</code>
+       * <code>.bloombox.partner.settings.TVBannerSettings banner = 1;</code>
        */
       public io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.TVBannerSettingsOrBuilder getBannerOrBuilder() {
         if (bannerBuilder_ != null) {
@@ -14102,7 +14378,7 @@ public final class PartnerLocationSettingsOuterClass {
        * Settings for the TV's top banner.
        * </pre>
        *
-       * <code>.bloombox.schema.partner.settings.TVBannerSettings banner = 1;</code>
+       * <code>.bloombox.partner.settings.TVBannerSettings banner = 1;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
           io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.TVBannerSettings, io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.TVBannerSettings.Builder, io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.TVBannerSettingsOrBuilder> 
@@ -14126,7 +14402,7 @@ public final class PartnerLocationSettingsOuterClass {
        * Menu-specific settings for TVs.
        * </pre>
        *
-       * <code>.bloombox.schema.partner.settings.TVMenuSettings settings = 2;</code>
+       * <code>.bloombox.partner.settings.TVMenuSettings settings = 2;</code>
        */
       public boolean hasSettings() {
         return settingsBuilder_ != null || settings_ != null;
@@ -14136,7 +14412,7 @@ public final class PartnerLocationSettingsOuterClass {
        * Menu-specific settings for TVs.
        * </pre>
        *
-       * <code>.bloombox.schema.partner.settings.TVMenuSettings settings = 2;</code>
+       * <code>.bloombox.partner.settings.TVMenuSettings settings = 2;</code>
        */
       public io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.TVMenuSettings getSettings() {
         if (settingsBuilder_ == null) {
@@ -14150,7 +14426,7 @@ public final class PartnerLocationSettingsOuterClass {
        * Menu-specific settings for TVs.
        * </pre>
        *
-       * <code>.bloombox.schema.partner.settings.TVMenuSettings settings = 2;</code>
+       * <code>.bloombox.partner.settings.TVMenuSettings settings = 2;</code>
        */
       public Builder setSettings(io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.TVMenuSettings value) {
         if (settingsBuilder_ == null) {
@@ -14170,7 +14446,7 @@ public final class PartnerLocationSettingsOuterClass {
        * Menu-specific settings for TVs.
        * </pre>
        *
-       * <code>.bloombox.schema.partner.settings.TVMenuSettings settings = 2;</code>
+       * <code>.bloombox.partner.settings.TVMenuSettings settings = 2;</code>
        */
       public Builder setSettings(
           io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.TVMenuSettings.Builder builderForValue) {
@@ -14188,7 +14464,7 @@ public final class PartnerLocationSettingsOuterClass {
        * Menu-specific settings for TVs.
        * </pre>
        *
-       * <code>.bloombox.schema.partner.settings.TVMenuSettings settings = 2;</code>
+       * <code>.bloombox.partner.settings.TVMenuSettings settings = 2;</code>
        */
       public Builder mergeSettings(io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.TVMenuSettings value) {
         if (settingsBuilder_ == null) {
@@ -14210,7 +14486,7 @@ public final class PartnerLocationSettingsOuterClass {
        * Menu-specific settings for TVs.
        * </pre>
        *
-       * <code>.bloombox.schema.partner.settings.TVMenuSettings settings = 2;</code>
+       * <code>.bloombox.partner.settings.TVMenuSettings settings = 2;</code>
        */
       public Builder clearSettings() {
         if (settingsBuilder_ == null) {
@@ -14228,7 +14504,7 @@ public final class PartnerLocationSettingsOuterClass {
        * Menu-specific settings for TVs.
        * </pre>
        *
-       * <code>.bloombox.schema.partner.settings.TVMenuSettings settings = 2;</code>
+       * <code>.bloombox.partner.settings.TVMenuSettings settings = 2;</code>
        */
       public io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.TVMenuSettings.Builder getSettingsBuilder() {
         
@@ -14240,7 +14516,7 @@ public final class PartnerLocationSettingsOuterClass {
        * Menu-specific settings for TVs.
        * </pre>
        *
-       * <code>.bloombox.schema.partner.settings.TVMenuSettings settings = 2;</code>
+       * <code>.bloombox.partner.settings.TVMenuSettings settings = 2;</code>
        */
       public io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.TVMenuSettingsOrBuilder getSettingsOrBuilder() {
         if (settingsBuilder_ != null) {
@@ -14255,7 +14531,7 @@ public final class PartnerLocationSettingsOuterClass {
        * Menu-specific settings for TVs.
        * </pre>
        *
-       * <code>.bloombox.schema.partner.settings.TVMenuSettings settings = 2;</code>
+       * <code>.bloombox.partner.settings.TVMenuSettings settings = 2;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
           io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.TVMenuSettings, io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.TVMenuSettings.Builder, io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.TVMenuSettingsOrBuilder> 
@@ -14270,21 +14546,23 @@ public final class PartnerLocationSettingsOuterClass {
         }
         return settingsBuilder_;
       }
+      @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
         return super.setUnknownFieldsProto3(unknownFields);
       }
 
+      @java.lang.Override
       public final Builder mergeUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
         return super.mergeUnknownFields(unknownFields);
       }
 
 
-      // @@protoc_insertion_point(builder_scope:bloombox.schema.partner.settings.TVSettings)
+      // @@protoc_insertion_point(builder_scope:bloombox.partner.settings.TVSettings)
     }
 
-    // @@protoc_insertion_point(class_scope:bloombox.schema.partner.settings.TVSettings)
+    // @@protoc_insertion_point(class_scope:bloombox.partner.settings.TVSettings)
     private static final io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.TVSettings DEFAULT_INSTANCE;
     static {
       DEFAULT_INSTANCE = new io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.TVSettings();
@@ -14296,6 +14574,7 @@ public final class PartnerLocationSettingsOuterClass {
 
     private static final com.google.protobuf.Parser<TVSettings>
         PARSER = new com.google.protobuf.AbstractParser<TVSettings>() {
+      @java.lang.Override
       public TVSettings parsePartialFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -14313,6 +14592,7 @@ public final class PartnerLocationSettingsOuterClass {
       return PARSER;
     }
 
+    @java.lang.Override
     public io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.TVSettings getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
@@ -14320,7 +14600,7 @@ public final class PartnerLocationSettingsOuterClass {
   }
 
   public interface HoursSpecOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:bloombox.schema.partner.settings.HoursSpec)
+      // @@protoc_insertion_point(interface_extends:bloombox.partner.settings.HoursSpec)
       com.google.protobuf.MessageOrBuilder {
 
     /**
@@ -14346,11 +14626,11 @@ public final class PartnerLocationSettingsOuterClass {
    * Specifies an hours point as part of an hours boundary.
    * </pre>
    *
-   * Protobuf type {@code bloombox.schema.partner.settings.HoursSpec}
+   * Protobuf type {@code bloombox.partner.settings.HoursSpec}
    */
   public  static final class HoursSpec extends
       com.google.protobuf.GeneratedMessageV3 implements
-      // @@protoc_insertion_point(message_implements:bloombox.schema.partner.settings.HoursSpec)
+      // @@protoc_insertion_point(message_implements:bloombox.partner.settings.HoursSpec)
       HoursSpecOrBuilder {
   private static final long serialVersionUID = 0L;
     // Use HoursSpec.newBuilder() to construct.
@@ -14386,13 +14666,6 @@ public final class PartnerLocationSettingsOuterClass {
             case 0:
               done = true;
               break;
-            default: {
-              if (!parseUnknownFieldProto3(
-                  input, unknownFields, extensionRegistry, tag)) {
-                done = true;
-              }
-              break;
-            }
             case 8: {
 
               hour_ = input.readUInt32();
@@ -14401,6 +14674,13 @@ public final class PartnerLocationSettingsOuterClass {
             case 16: {
 
               minute_ = input.readUInt32();
+              break;
+            }
+            default: {
+              if (!parseUnknownFieldProto3(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
               break;
             }
           }
@@ -14417,12 +14697,13 @@ public final class PartnerLocationSettingsOuterClass {
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.internal_static_bloombox_schema_partner_settings_HoursSpec_descriptor;
+      return io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.internal_static_bloombox_partner_settings_HoursSpec_descriptor;
     }
 
+    @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.internal_static_bloombox_schema_partner_settings_HoursSpec_fieldAccessorTable
+      return io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.internal_static_bloombox_partner_settings_HoursSpec_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
               io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.HoursSpec.class, io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.HoursSpec.Builder.class);
     }
@@ -14454,6 +14735,7 @@ public final class PartnerLocationSettingsOuterClass {
     }
 
     private byte memoizedIsInitialized = -1;
+    @java.lang.Override
     public final boolean isInitialized() {
       byte isInitialized = memoizedIsInitialized;
       if (isInitialized == 1) return true;
@@ -14463,6 +14745,7 @@ public final class PartnerLocationSettingsOuterClass {
       return true;
     }
 
+    @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
       if (hour_ != 0) {
@@ -14474,6 +14757,7 @@ public final class PartnerLocationSettingsOuterClass {
       unknownFields.writeTo(output);
     }
 
+    @java.lang.Override
     public int getSerializedSize() {
       int size = memoizedSize;
       if (size != -1) return size;
@@ -14597,6 +14881,7 @@ public final class PartnerLocationSettingsOuterClass {
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
 
+    @java.lang.Override
     public Builder newBuilderForType() { return newBuilder(); }
     public static Builder newBuilder() {
       return DEFAULT_INSTANCE.toBuilder();
@@ -14604,6 +14889,7 @@ public final class PartnerLocationSettingsOuterClass {
     public static Builder newBuilder(io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.HoursSpec prototype) {
       return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
     }
+    @java.lang.Override
     public Builder toBuilder() {
       return this == DEFAULT_INSTANCE
           ? new Builder() : new Builder().mergeFrom(this);
@@ -14620,20 +14906,21 @@ public final class PartnerLocationSettingsOuterClass {
      * Specifies an hours point as part of an hours boundary.
      * </pre>
      *
-     * Protobuf type {@code bloombox.schema.partner.settings.HoursSpec}
+     * Protobuf type {@code bloombox.partner.settings.HoursSpec}
      */
     public static final class Builder extends
         com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:bloombox.schema.partner.settings.HoursSpec)
+        // @@protoc_insertion_point(builder_implements:bloombox.partner.settings.HoursSpec)
         io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.HoursSpecOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.internal_static_bloombox_schema_partner_settings_HoursSpec_descriptor;
+        return io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.internal_static_bloombox_partner_settings_HoursSpec_descriptor;
       }
 
+      @java.lang.Override
       protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.internal_static_bloombox_schema_partner_settings_HoursSpec_fieldAccessorTable
+        return io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.internal_static_bloombox_partner_settings_HoursSpec_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
                 io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.HoursSpec.class, io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.HoursSpec.Builder.class);
       }
@@ -14653,6 +14940,7 @@ public final class PartnerLocationSettingsOuterClass {
                 .alwaysUseFieldBuilders) {
         }
       }
+      @java.lang.Override
       public Builder clear() {
         super.clear();
         hour_ = 0;
@@ -14662,15 +14950,18 @@ public final class PartnerLocationSettingsOuterClass {
         return this;
       }
 
+      @java.lang.Override
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.internal_static_bloombox_schema_partner_settings_HoursSpec_descriptor;
+        return io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.internal_static_bloombox_partner_settings_HoursSpec_descriptor;
       }
 
+      @java.lang.Override
       public io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.HoursSpec getDefaultInstanceForType() {
         return io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.HoursSpec.getDefaultInstance();
       }
 
+      @java.lang.Override
       public io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.HoursSpec build() {
         io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.HoursSpec result = buildPartial();
         if (!result.isInitialized()) {
@@ -14679,6 +14970,7 @@ public final class PartnerLocationSettingsOuterClass {
         return result;
       }
 
+      @java.lang.Override
       public io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.HoursSpec buildPartial() {
         io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.HoursSpec result = new io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.HoursSpec(this);
         result.hour_ = hour_;
@@ -14687,32 +14979,39 @@ public final class PartnerLocationSettingsOuterClass {
         return result;
       }
 
+      @java.lang.Override
       public Builder clone() {
         return (Builder) super.clone();
       }
+      @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
         return (Builder) super.setField(field, value);
       }
+      @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
         return (Builder) super.clearField(field);
       }
+      @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
         return (Builder) super.clearOneof(oneof);
       }
+      @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
         return (Builder) super.setRepeatedField(field, index, value);
       }
+      @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
         return (Builder) super.addRepeatedField(field, value);
       }
+      @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
         if (other instanceof io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.HoursSpec) {
           return mergeFrom((io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.HoursSpec)other);
@@ -14735,10 +15034,12 @@ public final class PartnerLocationSettingsOuterClass {
         return this;
       }
 
+      @java.lang.Override
       public final boolean isInitialized() {
         return true;
       }
 
+      @java.lang.Override
       public Builder mergeFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -14832,21 +15133,23 @@ public final class PartnerLocationSettingsOuterClass {
         onChanged();
         return this;
       }
+      @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
         return super.setUnknownFieldsProto3(unknownFields);
       }
 
+      @java.lang.Override
       public final Builder mergeUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
         return super.mergeUnknownFields(unknownFields);
       }
 
 
-      // @@protoc_insertion_point(builder_scope:bloombox.schema.partner.settings.HoursSpec)
+      // @@protoc_insertion_point(builder_scope:bloombox.partner.settings.HoursSpec)
     }
 
-    // @@protoc_insertion_point(class_scope:bloombox.schema.partner.settings.HoursSpec)
+    // @@protoc_insertion_point(class_scope:bloombox.partner.settings.HoursSpec)
     private static final io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.HoursSpec DEFAULT_INSTANCE;
     static {
       DEFAULT_INSTANCE = new io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.HoursSpec();
@@ -14858,6 +15161,7 @@ public final class PartnerLocationSettingsOuterClass {
 
     private static final com.google.protobuf.Parser<HoursSpec>
         PARSER = new com.google.protobuf.AbstractParser<HoursSpec>() {
+      @java.lang.Override
       public HoursSpec parsePartialFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -14875,6 +15179,7 @@ public final class PartnerLocationSettingsOuterClass {
       return PARSER;
     }
 
+    @java.lang.Override
     public io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.HoursSpec getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
@@ -14882,7 +15187,7 @@ public final class PartnerLocationSettingsOuterClass {
   }
 
   public interface HoursBoundaryOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:bloombox.schema.partner.settings.HoursBoundary)
+      // @@protoc_insertion_point(interface_extends:bloombox.partner.settings.HoursBoundary)
       com.google.protobuf.MessageOrBuilder {
 
     /**
@@ -14890,7 +15195,7 @@ public final class PartnerLocationSettingsOuterClass {
      * Beginning of the hours boundary.
      * </pre>
      *
-     * <code>.bloombox.schema.partner.settings.HoursSpec begin = 1;</code>
+     * <code>.bloombox.partner.settings.HoursSpec begin = 1;</code>
      */
     boolean hasBegin();
     /**
@@ -14898,7 +15203,7 @@ public final class PartnerLocationSettingsOuterClass {
      * Beginning of the hours boundary.
      * </pre>
      *
-     * <code>.bloombox.schema.partner.settings.HoursSpec begin = 1;</code>
+     * <code>.bloombox.partner.settings.HoursSpec begin = 1;</code>
      */
     io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.HoursSpec getBegin();
     /**
@@ -14906,7 +15211,7 @@ public final class PartnerLocationSettingsOuterClass {
      * Beginning of the hours boundary.
      * </pre>
      *
-     * <code>.bloombox.schema.partner.settings.HoursSpec begin = 1;</code>
+     * <code>.bloombox.partner.settings.HoursSpec begin = 1;</code>
      */
     io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.HoursSpecOrBuilder getBeginOrBuilder();
 
@@ -14915,7 +15220,7 @@ public final class PartnerLocationSettingsOuterClass {
      * End of the hours boundary.
      * </pre>
      *
-     * <code>.bloombox.schema.partner.settings.HoursSpec end = 2;</code>
+     * <code>.bloombox.partner.settings.HoursSpec end = 2;</code>
      */
     boolean hasEnd();
     /**
@@ -14923,7 +15228,7 @@ public final class PartnerLocationSettingsOuterClass {
      * End of the hours boundary.
      * </pre>
      *
-     * <code>.bloombox.schema.partner.settings.HoursSpec end = 2;</code>
+     * <code>.bloombox.partner.settings.HoursSpec end = 2;</code>
      */
     io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.HoursSpec getEnd();
     /**
@@ -14931,7 +15236,7 @@ public final class PartnerLocationSettingsOuterClass {
      * End of the hours boundary.
      * </pre>
      *
-     * <code>.bloombox.schema.partner.settings.HoursSpec end = 2;</code>
+     * <code>.bloombox.partner.settings.HoursSpec end = 2;</code>
      */
     io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.HoursSpecOrBuilder getEndOrBuilder();
 
@@ -14940,7 +15245,7 @@ public final class PartnerLocationSettingsOuterClass {
      * How this boundary applies - the span of days for this boundary.
      * </pre>
      *
-     * <code>.bloombox.schema.partner.settings.HoursSpan span = 3;</code>
+     * <code>.bloombox.partner.settings.HoursSpan span = 3;</code>
      */
     int getSpanValue();
     /**
@@ -14948,7 +15253,7 @@ public final class PartnerLocationSettingsOuterClass {
      * How this boundary applies - the span of days for this boundary.
      * </pre>
      *
-     * <code>.bloombox.schema.partner.settings.HoursSpan span = 3;</code>
+     * <code>.bloombox.partner.settings.HoursSpan span = 3;</code>
      */
     io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.HoursSpan getSpan();
   }
@@ -14957,11 +15262,11 @@ public final class PartnerLocationSettingsOuterClass {
    * Specifies an hours boundary as part of an hours settings payload.
    * </pre>
    *
-   * Protobuf type {@code bloombox.schema.partner.settings.HoursBoundary}
+   * Protobuf type {@code bloombox.partner.settings.HoursBoundary}
    */
   public  static final class HoursBoundary extends
       com.google.protobuf.GeneratedMessageV3 implements
-      // @@protoc_insertion_point(message_implements:bloombox.schema.partner.settings.HoursBoundary)
+      // @@protoc_insertion_point(message_implements:bloombox.partner.settings.HoursBoundary)
       HoursBoundaryOrBuilder {
   private static final long serialVersionUID = 0L;
     // Use HoursBoundary.newBuilder() to construct.
@@ -14996,13 +15301,6 @@ public final class PartnerLocationSettingsOuterClass {
             case 0:
               done = true;
               break;
-            default: {
-              if (!parseUnknownFieldProto3(
-                  input, unknownFields, extensionRegistry, tag)) {
-                done = true;
-              }
-              break;
-            }
             case 10: {
               io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.HoursSpec.Builder subBuilder = null;
               if (begin_ != null) {
@@ -15035,6 +15333,13 @@ public final class PartnerLocationSettingsOuterClass {
               span_ = rawValue;
               break;
             }
+            default: {
+              if (!parseUnknownFieldProto3(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
           }
         }
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
@@ -15049,12 +15354,13 @@ public final class PartnerLocationSettingsOuterClass {
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.internal_static_bloombox_schema_partner_settings_HoursBoundary_descriptor;
+      return io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.internal_static_bloombox_partner_settings_HoursBoundary_descriptor;
     }
 
+    @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.internal_static_bloombox_schema_partner_settings_HoursBoundary_fieldAccessorTable
+      return io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.internal_static_bloombox_partner_settings_HoursBoundary_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
               io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.HoursBoundary.class, io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.HoursBoundary.Builder.class);
     }
@@ -15066,7 +15372,7 @@ public final class PartnerLocationSettingsOuterClass {
      * Beginning of the hours boundary.
      * </pre>
      *
-     * <code>.bloombox.schema.partner.settings.HoursSpec begin = 1;</code>
+     * <code>.bloombox.partner.settings.HoursSpec begin = 1;</code>
      */
     public boolean hasBegin() {
       return begin_ != null;
@@ -15076,7 +15382,7 @@ public final class PartnerLocationSettingsOuterClass {
      * Beginning of the hours boundary.
      * </pre>
      *
-     * <code>.bloombox.schema.partner.settings.HoursSpec begin = 1;</code>
+     * <code>.bloombox.partner.settings.HoursSpec begin = 1;</code>
      */
     public io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.HoursSpec getBegin() {
       return begin_ == null ? io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.HoursSpec.getDefaultInstance() : begin_;
@@ -15086,7 +15392,7 @@ public final class PartnerLocationSettingsOuterClass {
      * Beginning of the hours boundary.
      * </pre>
      *
-     * <code>.bloombox.schema.partner.settings.HoursSpec begin = 1;</code>
+     * <code>.bloombox.partner.settings.HoursSpec begin = 1;</code>
      */
     public io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.HoursSpecOrBuilder getBeginOrBuilder() {
       return getBegin();
@@ -15099,7 +15405,7 @@ public final class PartnerLocationSettingsOuterClass {
      * End of the hours boundary.
      * </pre>
      *
-     * <code>.bloombox.schema.partner.settings.HoursSpec end = 2;</code>
+     * <code>.bloombox.partner.settings.HoursSpec end = 2;</code>
      */
     public boolean hasEnd() {
       return end_ != null;
@@ -15109,7 +15415,7 @@ public final class PartnerLocationSettingsOuterClass {
      * End of the hours boundary.
      * </pre>
      *
-     * <code>.bloombox.schema.partner.settings.HoursSpec end = 2;</code>
+     * <code>.bloombox.partner.settings.HoursSpec end = 2;</code>
      */
     public io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.HoursSpec getEnd() {
       return end_ == null ? io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.HoursSpec.getDefaultInstance() : end_;
@@ -15119,7 +15425,7 @@ public final class PartnerLocationSettingsOuterClass {
      * End of the hours boundary.
      * </pre>
      *
-     * <code>.bloombox.schema.partner.settings.HoursSpec end = 2;</code>
+     * <code>.bloombox.partner.settings.HoursSpec end = 2;</code>
      */
     public io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.HoursSpecOrBuilder getEndOrBuilder() {
       return getEnd();
@@ -15132,7 +15438,7 @@ public final class PartnerLocationSettingsOuterClass {
      * How this boundary applies - the span of days for this boundary.
      * </pre>
      *
-     * <code>.bloombox.schema.partner.settings.HoursSpan span = 3;</code>
+     * <code>.bloombox.partner.settings.HoursSpan span = 3;</code>
      */
     public int getSpanValue() {
       return span_;
@@ -15142,14 +15448,16 @@ public final class PartnerLocationSettingsOuterClass {
      * How this boundary applies - the span of days for this boundary.
      * </pre>
      *
-     * <code>.bloombox.schema.partner.settings.HoursSpan span = 3;</code>
+     * <code>.bloombox.partner.settings.HoursSpan span = 3;</code>
      */
     public io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.HoursSpan getSpan() {
+      @SuppressWarnings("deprecation")
       io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.HoursSpan result = io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.HoursSpan.valueOf(span_);
       return result == null ? io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.HoursSpan.UNRECOGNIZED : result;
     }
 
     private byte memoizedIsInitialized = -1;
+    @java.lang.Override
     public final boolean isInitialized() {
       byte isInitialized = memoizedIsInitialized;
       if (isInitialized == 1) return true;
@@ -15159,6 +15467,7 @@ public final class PartnerLocationSettingsOuterClass {
       return true;
     }
 
+    @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
       if (begin_ != null) {
@@ -15173,6 +15482,7 @@ public final class PartnerLocationSettingsOuterClass {
       unknownFields.writeTo(output);
     }
 
+    @java.lang.Override
     public int getSerializedSize() {
       int size = memoizedSize;
       if (size != -1) return size;
@@ -15313,6 +15623,7 @@ public final class PartnerLocationSettingsOuterClass {
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
 
+    @java.lang.Override
     public Builder newBuilderForType() { return newBuilder(); }
     public static Builder newBuilder() {
       return DEFAULT_INSTANCE.toBuilder();
@@ -15320,6 +15631,7 @@ public final class PartnerLocationSettingsOuterClass {
     public static Builder newBuilder(io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.HoursBoundary prototype) {
       return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
     }
+    @java.lang.Override
     public Builder toBuilder() {
       return this == DEFAULT_INSTANCE
           ? new Builder() : new Builder().mergeFrom(this);
@@ -15336,20 +15648,21 @@ public final class PartnerLocationSettingsOuterClass {
      * Specifies an hours boundary as part of an hours settings payload.
      * </pre>
      *
-     * Protobuf type {@code bloombox.schema.partner.settings.HoursBoundary}
+     * Protobuf type {@code bloombox.partner.settings.HoursBoundary}
      */
     public static final class Builder extends
         com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:bloombox.schema.partner.settings.HoursBoundary)
+        // @@protoc_insertion_point(builder_implements:bloombox.partner.settings.HoursBoundary)
         io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.HoursBoundaryOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.internal_static_bloombox_schema_partner_settings_HoursBoundary_descriptor;
+        return io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.internal_static_bloombox_partner_settings_HoursBoundary_descriptor;
       }
 
+      @java.lang.Override
       protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.internal_static_bloombox_schema_partner_settings_HoursBoundary_fieldAccessorTable
+        return io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.internal_static_bloombox_partner_settings_HoursBoundary_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
                 io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.HoursBoundary.class, io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.HoursBoundary.Builder.class);
       }
@@ -15369,6 +15682,7 @@ public final class PartnerLocationSettingsOuterClass {
                 .alwaysUseFieldBuilders) {
         }
       }
+      @java.lang.Override
       public Builder clear() {
         super.clear();
         if (beginBuilder_ == null) {
@@ -15388,15 +15702,18 @@ public final class PartnerLocationSettingsOuterClass {
         return this;
       }
 
+      @java.lang.Override
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.internal_static_bloombox_schema_partner_settings_HoursBoundary_descriptor;
+        return io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.internal_static_bloombox_partner_settings_HoursBoundary_descriptor;
       }
 
+      @java.lang.Override
       public io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.HoursBoundary getDefaultInstanceForType() {
         return io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.HoursBoundary.getDefaultInstance();
       }
 
+      @java.lang.Override
       public io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.HoursBoundary build() {
         io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.HoursBoundary result = buildPartial();
         if (!result.isInitialized()) {
@@ -15405,6 +15722,7 @@ public final class PartnerLocationSettingsOuterClass {
         return result;
       }
 
+      @java.lang.Override
       public io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.HoursBoundary buildPartial() {
         io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.HoursBoundary result = new io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.HoursBoundary(this);
         if (beginBuilder_ == null) {
@@ -15422,32 +15740,39 @@ public final class PartnerLocationSettingsOuterClass {
         return result;
       }
 
+      @java.lang.Override
       public Builder clone() {
         return (Builder) super.clone();
       }
+      @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
         return (Builder) super.setField(field, value);
       }
+      @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
         return (Builder) super.clearField(field);
       }
+      @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
         return (Builder) super.clearOneof(oneof);
       }
+      @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
         return (Builder) super.setRepeatedField(field, index, value);
       }
+      @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
         return (Builder) super.addRepeatedField(field, value);
       }
+      @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
         if (other instanceof io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.HoursBoundary) {
           return mergeFrom((io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.HoursBoundary)other);
@@ -15473,10 +15798,12 @@ public final class PartnerLocationSettingsOuterClass {
         return this;
       }
 
+      @java.lang.Override
       public final boolean isInitialized() {
         return true;
       }
 
+      @java.lang.Override
       public Builder mergeFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -15503,7 +15830,7 @@ public final class PartnerLocationSettingsOuterClass {
        * Beginning of the hours boundary.
        * </pre>
        *
-       * <code>.bloombox.schema.partner.settings.HoursSpec begin = 1;</code>
+       * <code>.bloombox.partner.settings.HoursSpec begin = 1;</code>
        */
       public boolean hasBegin() {
         return beginBuilder_ != null || begin_ != null;
@@ -15513,7 +15840,7 @@ public final class PartnerLocationSettingsOuterClass {
        * Beginning of the hours boundary.
        * </pre>
        *
-       * <code>.bloombox.schema.partner.settings.HoursSpec begin = 1;</code>
+       * <code>.bloombox.partner.settings.HoursSpec begin = 1;</code>
        */
       public io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.HoursSpec getBegin() {
         if (beginBuilder_ == null) {
@@ -15527,7 +15854,7 @@ public final class PartnerLocationSettingsOuterClass {
        * Beginning of the hours boundary.
        * </pre>
        *
-       * <code>.bloombox.schema.partner.settings.HoursSpec begin = 1;</code>
+       * <code>.bloombox.partner.settings.HoursSpec begin = 1;</code>
        */
       public Builder setBegin(io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.HoursSpec value) {
         if (beginBuilder_ == null) {
@@ -15547,7 +15874,7 @@ public final class PartnerLocationSettingsOuterClass {
        * Beginning of the hours boundary.
        * </pre>
        *
-       * <code>.bloombox.schema.partner.settings.HoursSpec begin = 1;</code>
+       * <code>.bloombox.partner.settings.HoursSpec begin = 1;</code>
        */
       public Builder setBegin(
           io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.HoursSpec.Builder builderForValue) {
@@ -15565,7 +15892,7 @@ public final class PartnerLocationSettingsOuterClass {
        * Beginning of the hours boundary.
        * </pre>
        *
-       * <code>.bloombox.schema.partner.settings.HoursSpec begin = 1;</code>
+       * <code>.bloombox.partner.settings.HoursSpec begin = 1;</code>
        */
       public Builder mergeBegin(io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.HoursSpec value) {
         if (beginBuilder_ == null) {
@@ -15587,7 +15914,7 @@ public final class PartnerLocationSettingsOuterClass {
        * Beginning of the hours boundary.
        * </pre>
        *
-       * <code>.bloombox.schema.partner.settings.HoursSpec begin = 1;</code>
+       * <code>.bloombox.partner.settings.HoursSpec begin = 1;</code>
        */
       public Builder clearBegin() {
         if (beginBuilder_ == null) {
@@ -15605,7 +15932,7 @@ public final class PartnerLocationSettingsOuterClass {
        * Beginning of the hours boundary.
        * </pre>
        *
-       * <code>.bloombox.schema.partner.settings.HoursSpec begin = 1;</code>
+       * <code>.bloombox.partner.settings.HoursSpec begin = 1;</code>
        */
       public io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.HoursSpec.Builder getBeginBuilder() {
         
@@ -15617,7 +15944,7 @@ public final class PartnerLocationSettingsOuterClass {
        * Beginning of the hours boundary.
        * </pre>
        *
-       * <code>.bloombox.schema.partner.settings.HoursSpec begin = 1;</code>
+       * <code>.bloombox.partner.settings.HoursSpec begin = 1;</code>
        */
       public io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.HoursSpecOrBuilder getBeginOrBuilder() {
         if (beginBuilder_ != null) {
@@ -15632,7 +15959,7 @@ public final class PartnerLocationSettingsOuterClass {
        * Beginning of the hours boundary.
        * </pre>
        *
-       * <code>.bloombox.schema.partner.settings.HoursSpec begin = 1;</code>
+       * <code>.bloombox.partner.settings.HoursSpec begin = 1;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
           io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.HoursSpec, io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.HoursSpec.Builder, io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.HoursSpecOrBuilder> 
@@ -15656,7 +15983,7 @@ public final class PartnerLocationSettingsOuterClass {
        * End of the hours boundary.
        * </pre>
        *
-       * <code>.bloombox.schema.partner.settings.HoursSpec end = 2;</code>
+       * <code>.bloombox.partner.settings.HoursSpec end = 2;</code>
        */
       public boolean hasEnd() {
         return endBuilder_ != null || end_ != null;
@@ -15666,7 +15993,7 @@ public final class PartnerLocationSettingsOuterClass {
        * End of the hours boundary.
        * </pre>
        *
-       * <code>.bloombox.schema.partner.settings.HoursSpec end = 2;</code>
+       * <code>.bloombox.partner.settings.HoursSpec end = 2;</code>
        */
       public io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.HoursSpec getEnd() {
         if (endBuilder_ == null) {
@@ -15680,7 +16007,7 @@ public final class PartnerLocationSettingsOuterClass {
        * End of the hours boundary.
        * </pre>
        *
-       * <code>.bloombox.schema.partner.settings.HoursSpec end = 2;</code>
+       * <code>.bloombox.partner.settings.HoursSpec end = 2;</code>
        */
       public Builder setEnd(io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.HoursSpec value) {
         if (endBuilder_ == null) {
@@ -15700,7 +16027,7 @@ public final class PartnerLocationSettingsOuterClass {
        * End of the hours boundary.
        * </pre>
        *
-       * <code>.bloombox.schema.partner.settings.HoursSpec end = 2;</code>
+       * <code>.bloombox.partner.settings.HoursSpec end = 2;</code>
        */
       public Builder setEnd(
           io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.HoursSpec.Builder builderForValue) {
@@ -15718,7 +16045,7 @@ public final class PartnerLocationSettingsOuterClass {
        * End of the hours boundary.
        * </pre>
        *
-       * <code>.bloombox.schema.partner.settings.HoursSpec end = 2;</code>
+       * <code>.bloombox.partner.settings.HoursSpec end = 2;</code>
        */
       public Builder mergeEnd(io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.HoursSpec value) {
         if (endBuilder_ == null) {
@@ -15740,7 +16067,7 @@ public final class PartnerLocationSettingsOuterClass {
        * End of the hours boundary.
        * </pre>
        *
-       * <code>.bloombox.schema.partner.settings.HoursSpec end = 2;</code>
+       * <code>.bloombox.partner.settings.HoursSpec end = 2;</code>
        */
       public Builder clearEnd() {
         if (endBuilder_ == null) {
@@ -15758,7 +16085,7 @@ public final class PartnerLocationSettingsOuterClass {
        * End of the hours boundary.
        * </pre>
        *
-       * <code>.bloombox.schema.partner.settings.HoursSpec end = 2;</code>
+       * <code>.bloombox.partner.settings.HoursSpec end = 2;</code>
        */
       public io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.HoursSpec.Builder getEndBuilder() {
         
@@ -15770,7 +16097,7 @@ public final class PartnerLocationSettingsOuterClass {
        * End of the hours boundary.
        * </pre>
        *
-       * <code>.bloombox.schema.partner.settings.HoursSpec end = 2;</code>
+       * <code>.bloombox.partner.settings.HoursSpec end = 2;</code>
        */
       public io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.HoursSpecOrBuilder getEndOrBuilder() {
         if (endBuilder_ != null) {
@@ -15785,7 +16112,7 @@ public final class PartnerLocationSettingsOuterClass {
        * End of the hours boundary.
        * </pre>
        *
-       * <code>.bloombox.schema.partner.settings.HoursSpec end = 2;</code>
+       * <code>.bloombox.partner.settings.HoursSpec end = 2;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
           io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.HoursSpec, io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.HoursSpec.Builder, io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.HoursSpecOrBuilder> 
@@ -15807,7 +16134,7 @@ public final class PartnerLocationSettingsOuterClass {
        * How this boundary applies - the span of days for this boundary.
        * </pre>
        *
-       * <code>.bloombox.schema.partner.settings.HoursSpan span = 3;</code>
+       * <code>.bloombox.partner.settings.HoursSpan span = 3;</code>
        */
       public int getSpanValue() {
         return span_;
@@ -15817,7 +16144,7 @@ public final class PartnerLocationSettingsOuterClass {
        * How this boundary applies - the span of days for this boundary.
        * </pre>
        *
-       * <code>.bloombox.schema.partner.settings.HoursSpan span = 3;</code>
+       * <code>.bloombox.partner.settings.HoursSpan span = 3;</code>
        */
       public Builder setSpanValue(int value) {
         span_ = value;
@@ -15829,9 +16156,10 @@ public final class PartnerLocationSettingsOuterClass {
        * How this boundary applies - the span of days for this boundary.
        * </pre>
        *
-       * <code>.bloombox.schema.partner.settings.HoursSpan span = 3;</code>
+       * <code>.bloombox.partner.settings.HoursSpan span = 3;</code>
        */
       public io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.HoursSpan getSpan() {
+        @SuppressWarnings("deprecation")
         io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.HoursSpan result = io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.HoursSpan.valueOf(span_);
         return result == null ? io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.HoursSpan.UNRECOGNIZED : result;
       }
@@ -15840,7 +16168,7 @@ public final class PartnerLocationSettingsOuterClass {
        * How this boundary applies - the span of days for this boundary.
        * </pre>
        *
-       * <code>.bloombox.schema.partner.settings.HoursSpan span = 3;</code>
+       * <code>.bloombox.partner.settings.HoursSpan span = 3;</code>
        */
       public Builder setSpan(io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.HoursSpan value) {
         if (value == null) {
@@ -15856,7 +16184,7 @@ public final class PartnerLocationSettingsOuterClass {
        * How this boundary applies - the span of days for this boundary.
        * </pre>
        *
-       * <code>.bloombox.schema.partner.settings.HoursSpan span = 3;</code>
+       * <code>.bloombox.partner.settings.HoursSpan span = 3;</code>
        */
       public Builder clearSpan() {
         
@@ -15864,21 +16192,23 @@ public final class PartnerLocationSettingsOuterClass {
         onChanged();
         return this;
       }
+      @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
         return super.setUnknownFieldsProto3(unknownFields);
       }
 
+      @java.lang.Override
       public final Builder mergeUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
         return super.mergeUnknownFields(unknownFields);
       }
 
 
-      // @@protoc_insertion_point(builder_scope:bloombox.schema.partner.settings.HoursBoundary)
+      // @@protoc_insertion_point(builder_scope:bloombox.partner.settings.HoursBoundary)
     }
 
-    // @@protoc_insertion_point(class_scope:bloombox.schema.partner.settings.HoursBoundary)
+    // @@protoc_insertion_point(class_scope:bloombox.partner.settings.HoursBoundary)
     private static final io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.HoursBoundary DEFAULT_INSTANCE;
     static {
       DEFAULT_INSTANCE = new io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.HoursBoundary();
@@ -15890,6 +16220,7 @@ public final class PartnerLocationSettingsOuterClass {
 
     private static final com.google.protobuf.Parser<HoursBoundary>
         PARSER = new com.google.protobuf.AbstractParser<HoursBoundary>() {
+      @java.lang.Override
       public HoursBoundary parsePartialFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -15907,6 +16238,7 @@ public final class PartnerLocationSettingsOuterClass {
       return PARSER;
     }
 
+    @java.lang.Override
     public io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.HoursBoundary getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
@@ -15914,7 +16246,7 @@ public final class PartnerLocationSettingsOuterClass {
   }
 
   public interface RegularHoursSettingsOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:bloombox.schema.partner.settings.RegularHoursSettings)
+      // @@protoc_insertion_point(interface_extends:bloombox.partner.settings.RegularHoursSettings)
       com.google.protobuf.MessageOrBuilder {
 
     /**
@@ -15922,7 +16254,7 @@ public final class PartnerLocationSettingsOuterClass {
      * Boundary of this set of hours settings.
      * </pre>
      *
-     * <code>.bloombox.schema.partner.settings.HoursBoundary bounds = 1;</code>
+     * <code>.bloombox.partner.settings.HoursBoundary bounds = 1;</code>
      */
     boolean hasBounds();
     /**
@@ -15930,7 +16262,7 @@ public final class PartnerLocationSettingsOuterClass {
      * Boundary of this set of hours settings.
      * </pre>
      *
-     * <code>.bloombox.schema.partner.settings.HoursBoundary bounds = 1;</code>
+     * <code>.bloombox.partner.settings.HoursBoundary bounds = 1;</code>
      */
     io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.HoursBoundary getBounds();
     /**
@@ -15938,7 +16270,7 @@ public final class PartnerLocationSettingsOuterClass {
      * Boundary of this set of hours settings.
      * </pre>
      *
-     * <code>.bloombox.schema.partner.settings.HoursBoundary bounds = 1;</code>
+     * <code>.bloombox.partner.settings.HoursBoundary bounds = 1;</code>
      */
     io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.HoursBoundaryOrBuilder getBoundsOrBuilder();
 
@@ -15947,7 +16279,7 @@ public final class PartnerLocationSettingsOuterClass {
      * Specifies the policy that should apply during the specified bounds, with regard to the shop's open/closed status.
      * </pre>
      *
-     * <code>.bloombox.schema.partner.settings.ShopStatus mode = 2;</code>
+     * <code>.bloombox.partner.settings.ShopStatus mode = 2;</code>
      */
     int getModeValue();
     /**
@@ -15955,7 +16287,7 @@ public final class PartnerLocationSettingsOuterClass {
      * Specifies the policy that should apply during the specified bounds, with regard to the shop's open/closed status.
      * </pre>
      *
-     * <code>.bloombox.schema.partner.settings.ShopStatus mode = 2;</code>
+     * <code>.bloombox.partner.settings.ShopStatus mode = 2;</code>
      */
     io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.ShopStatus getMode();
   }
@@ -15964,11 +16296,11 @@ public final class PartnerLocationSettingsOuterClass {
    * Specifies 'regular' hours, that apply when no 'special' hours apply.
    * </pre>
    *
-   * Protobuf type {@code bloombox.schema.partner.settings.RegularHoursSettings}
+   * Protobuf type {@code bloombox.partner.settings.RegularHoursSettings}
    */
   public  static final class RegularHoursSettings extends
       com.google.protobuf.GeneratedMessageV3 implements
-      // @@protoc_insertion_point(message_implements:bloombox.schema.partner.settings.RegularHoursSettings)
+      // @@protoc_insertion_point(message_implements:bloombox.partner.settings.RegularHoursSettings)
       RegularHoursSettingsOrBuilder {
   private static final long serialVersionUID = 0L;
     // Use RegularHoursSettings.newBuilder() to construct.
@@ -16003,13 +16335,6 @@ public final class PartnerLocationSettingsOuterClass {
             case 0:
               done = true;
               break;
-            default: {
-              if (!parseUnknownFieldProto3(
-                  input, unknownFields, extensionRegistry, tag)) {
-                done = true;
-              }
-              break;
-            }
             case 10: {
               io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.HoursBoundary.Builder subBuilder = null;
               if (bounds_ != null) {
@@ -16029,6 +16354,13 @@ public final class PartnerLocationSettingsOuterClass {
               mode_ = rawValue;
               break;
             }
+            default: {
+              if (!parseUnknownFieldProto3(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
           }
         }
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
@@ -16043,12 +16375,13 @@ public final class PartnerLocationSettingsOuterClass {
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.internal_static_bloombox_schema_partner_settings_RegularHoursSettings_descriptor;
+      return io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.internal_static_bloombox_partner_settings_RegularHoursSettings_descriptor;
     }
 
+    @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.internal_static_bloombox_schema_partner_settings_RegularHoursSettings_fieldAccessorTable
+      return io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.internal_static_bloombox_partner_settings_RegularHoursSettings_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
               io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.RegularHoursSettings.class, io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.RegularHoursSettings.Builder.class);
     }
@@ -16060,7 +16393,7 @@ public final class PartnerLocationSettingsOuterClass {
      * Boundary of this set of hours settings.
      * </pre>
      *
-     * <code>.bloombox.schema.partner.settings.HoursBoundary bounds = 1;</code>
+     * <code>.bloombox.partner.settings.HoursBoundary bounds = 1;</code>
      */
     public boolean hasBounds() {
       return bounds_ != null;
@@ -16070,7 +16403,7 @@ public final class PartnerLocationSettingsOuterClass {
      * Boundary of this set of hours settings.
      * </pre>
      *
-     * <code>.bloombox.schema.partner.settings.HoursBoundary bounds = 1;</code>
+     * <code>.bloombox.partner.settings.HoursBoundary bounds = 1;</code>
      */
     public io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.HoursBoundary getBounds() {
       return bounds_ == null ? io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.HoursBoundary.getDefaultInstance() : bounds_;
@@ -16080,7 +16413,7 @@ public final class PartnerLocationSettingsOuterClass {
      * Boundary of this set of hours settings.
      * </pre>
      *
-     * <code>.bloombox.schema.partner.settings.HoursBoundary bounds = 1;</code>
+     * <code>.bloombox.partner.settings.HoursBoundary bounds = 1;</code>
      */
     public io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.HoursBoundaryOrBuilder getBoundsOrBuilder() {
       return getBounds();
@@ -16093,7 +16426,7 @@ public final class PartnerLocationSettingsOuterClass {
      * Specifies the policy that should apply during the specified bounds, with regard to the shop's open/closed status.
      * </pre>
      *
-     * <code>.bloombox.schema.partner.settings.ShopStatus mode = 2;</code>
+     * <code>.bloombox.partner.settings.ShopStatus mode = 2;</code>
      */
     public int getModeValue() {
       return mode_;
@@ -16103,14 +16436,16 @@ public final class PartnerLocationSettingsOuterClass {
      * Specifies the policy that should apply during the specified bounds, with regard to the shop's open/closed status.
      * </pre>
      *
-     * <code>.bloombox.schema.partner.settings.ShopStatus mode = 2;</code>
+     * <code>.bloombox.partner.settings.ShopStatus mode = 2;</code>
      */
     public io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.ShopStatus getMode() {
+      @SuppressWarnings("deprecation")
       io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.ShopStatus result = io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.ShopStatus.valueOf(mode_);
       return result == null ? io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.ShopStatus.UNRECOGNIZED : result;
     }
 
     private byte memoizedIsInitialized = -1;
+    @java.lang.Override
     public final boolean isInitialized() {
       byte isInitialized = memoizedIsInitialized;
       if (isInitialized == 1) return true;
@@ -16120,6 +16455,7 @@ public final class PartnerLocationSettingsOuterClass {
       return true;
     }
 
+    @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
       if (bounds_ != null) {
@@ -16131,6 +16467,7 @@ public final class PartnerLocationSettingsOuterClass {
       unknownFields.writeTo(output);
     }
 
+    @java.lang.Override
     public int getSerializedSize() {
       int size = memoizedSize;
       if (size != -1) return size;
@@ -16258,6 +16595,7 @@ public final class PartnerLocationSettingsOuterClass {
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
 
+    @java.lang.Override
     public Builder newBuilderForType() { return newBuilder(); }
     public static Builder newBuilder() {
       return DEFAULT_INSTANCE.toBuilder();
@@ -16265,6 +16603,7 @@ public final class PartnerLocationSettingsOuterClass {
     public static Builder newBuilder(io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.RegularHoursSettings prototype) {
       return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
     }
+    @java.lang.Override
     public Builder toBuilder() {
       return this == DEFAULT_INSTANCE
           ? new Builder() : new Builder().mergeFrom(this);
@@ -16281,20 +16620,21 @@ public final class PartnerLocationSettingsOuterClass {
      * Specifies 'regular' hours, that apply when no 'special' hours apply.
      * </pre>
      *
-     * Protobuf type {@code bloombox.schema.partner.settings.RegularHoursSettings}
+     * Protobuf type {@code bloombox.partner.settings.RegularHoursSettings}
      */
     public static final class Builder extends
         com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:bloombox.schema.partner.settings.RegularHoursSettings)
+        // @@protoc_insertion_point(builder_implements:bloombox.partner.settings.RegularHoursSettings)
         io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.RegularHoursSettingsOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.internal_static_bloombox_schema_partner_settings_RegularHoursSettings_descriptor;
+        return io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.internal_static_bloombox_partner_settings_RegularHoursSettings_descriptor;
       }
 
+      @java.lang.Override
       protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.internal_static_bloombox_schema_partner_settings_RegularHoursSettings_fieldAccessorTable
+        return io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.internal_static_bloombox_partner_settings_RegularHoursSettings_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
                 io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.RegularHoursSettings.class, io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.RegularHoursSettings.Builder.class);
       }
@@ -16314,6 +16654,7 @@ public final class PartnerLocationSettingsOuterClass {
                 .alwaysUseFieldBuilders) {
         }
       }
+      @java.lang.Override
       public Builder clear() {
         super.clear();
         if (boundsBuilder_ == null) {
@@ -16327,15 +16668,18 @@ public final class PartnerLocationSettingsOuterClass {
         return this;
       }
 
+      @java.lang.Override
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.internal_static_bloombox_schema_partner_settings_RegularHoursSettings_descriptor;
+        return io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.internal_static_bloombox_partner_settings_RegularHoursSettings_descriptor;
       }
 
+      @java.lang.Override
       public io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.RegularHoursSettings getDefaultInstanceForType() {
         return io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.RegularHoursSettings.getDefaultInstance();
       }
 
+      @java.lang.Override
       public io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.RegularHoursSettings build() {
         io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.RegularHoursSettings result = buildPartial();
         if (!result.isInitialized()) {
@@ -16344,6 +16688,7 @@ public final class PartnerLocationSettingsOuterClass {
         return result;
       }
 
+      @java.lang.Override
       public io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.RegularHoursSettings buildPartial() {
         io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.RegularHoursSettings result = new io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.RegularHoursSettings(this);
         if (boundsBuilder_ == null) {
@@ -16356,32 +16701,39 @@ public final class PartnerLocationSettingsOuterClass {
         return result;
       }
 
+      @java.lang.Override
       public Builder clone() {
         return (Builder) super.clone();
       }
+      @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
         return (Builder) super.setField(field, value);
       }
+      @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
         return (Builder) super.clearField(field);
       }
+      @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
         return (Builder) super.clearOneof(oneof);
       }
+      @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
         return (Builder) super.setRepeatedField(field, index, value);
       }
+      @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
         return (Builder) super.addRepeatedField(field, value);
       }
+      @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
         if (other instanceof io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.RegularHoursSettings) {
           return mergeFrom((io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.RegularHoursSettings)other);
@@ -16404,10 +16756,12 @@ public final class PartnerLocationSettingsOuterClass {
         return this;
       }
 
+      @java.lang.Override
       public final boolean isInitialized() {
         return true;
       }
 
+      @java.lang.Override
       public Builder mergeFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -16434,7 +16788,7 @@ public final class PartnerLocationSettingsOuterClass {
        * Boundary of this set of hours settings.
        * </pre>
        *
-       * <code>.bloombox.schema.partner.settings.HoursBoundary bounds = 1;</code>
+       * <code>.bloombox.partner.settings.HoursBoundary bounds = 1;</code>
        */
       public boolean hasBounds() {
         return boundsBuilder_ != null || bounds_ != null;
@@ -16444,7 +16798,7 @@ public final class PartnerLocationSettingsOuterClass {
        * Boundary of this set of hours settings.
        * </pre>
        *
-       * <code>.bloombox.schema.partner.settings.HoursBoundary bounds = 1;</code>
+       * <code>.bloombox.partner.settings.HoursBoundary bounds = 1;</code>
        */
       public io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.HoursBoundary getBounds() {
         if (boundsBuilder_ == null) {
@@ -16458,7 +16812,7 @@ public final class PartnerLocationSettingsOuterClass {
        * Boundary of this set of hours settings.
        * </pre>
        *
-       * <code>.bloombox.schema.partner.settings.HoursBoundary bounds = 1;</code>
+       * <code>.bloombox.partner.settings.HoursBoundary bounds = 1;</code>
        */
       public Builder setBounds(io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.HoursBoundary value) {
         if (boundsBuilder_ == null) {
@@ -16478,7 +16832,7 @@ public final class PartnerLocationSettingsOuterClass {
        * Boundary of this set of hours settings.
        * </pre>
        *
-       * <code>.bloombox.schema.partner.settings.HoursBoundary bounds = 1;</code>
+       * <code>.bloombox.partner.settings.HoursBoundary bounds = 1;</code>
        */
       public Builder setBounds(
           io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.HoursBoundary.Builder builderForValue) {
@@ -16496,7 +16850,7 @@ public final class PartnerLocationSettingsOuterClass {
        * Boundary of this set of hours settings.
        * </pre>
        *
-       * <code>.bloombox.schema.partner.settings.HoursBoundary bounds = 1;</code>
+       * <code>.bloombox.partner.settings.HoursBoundary bounds = 1;</code>
        */
       public Builder mergeBounds(io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.HoursBoundary value) {
         if (boundsBuilder_ == null) {
@@ -16518,7 +16872,7 @@ public final class PartnerLocationSettingsOuterClass {
        * Boundary of this set of hours settings.
        * </pre>
        *
-       * <code>.bloombox.schema.partner.settings.HoursBoundary bounds = 1;</code>
+       * <code>.bloombox.partner.settings.HoursBoundary bounds = 1;</code>
        */
       public Builder clearBounds() {
         if (boundsBuilder_ == null) {
@@ -16536,7 +16890,7 @@ public final class PartnerLocationSettingsOuterClass {
        * Boundary of this set of hours settings.
        * </pre>
        *
-       * <code>.bloombox.schema.partner.settings.HoursBoundary bounds = 1;</code>
+       * <code>.bloombox.partner.settings.HoursBoundary bounds = 1;</code>
        */
       public io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.HoursBoundary.Builder getBoundsBuilder() {
         
@@ -16548,7 +16902,7 @@ public final class PartnerLocationSettingsOuterClass {
        * Boundary of this set of hours settings.
        * </pre>
        *
-       * <code>.bloombox.schema.partner.settings.HoursBoundary bounds = 1;</code>
+       * <code>.bloombox.partner.settings.HoursBoundary bounds = 1;</code>
        */
       public io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.HoursBoundaryOrBuilder getBoundsOrBuilder() {
         if (boundsBuilder_ != null) {
@@ -16563,7 +16917,7 @@ public final class PartnerLocationSettingsOuterClass {
        * Boundary of this set of hours settings.
        * </pre>
        *
-       * <code>.bloombox.schema.partner.settings.HoursBoundary bounds = 1;</code>
+       * <code>.bloombox.partner.settings.HoursBoundary bounds = 1;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
           io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.HoursBoundary, io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.HoursBoundary.Builder, io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.HoursBoundaryOrBuilder> 
@@ -16585,7 +16939,7 @@ public final class PartnerLocationSettingsOuterClass {
        * Specifies the policy that should apply during the specified bounds, with regard to the shop's open/closed status.
        * </pre>
        *
-       * <code>.bloombox.schema.partner.settings.ShopStatus mode = 2;</code>
+       * <code>.bloombox.partner.settings.ShopStatus mode = 2;</code>
        */
       public int getModeValue() {
         return mode_;
@@ -16595,7 +16949,7 @@ public final class PartnerLocationSettingsOuterClass {
        * Specifies the policy that should apply during the specified bounds, with regard to the shop's open/closed status.
        * </pre>
        *
-       * <code>.bloombox.schema.partner.settings.ShopStatus mode = 2;</code>
+       * <code>.bloombox.partner.settings.ShopStatus mode = 2;</code>
        */
       public Builder setModeValue(int value) {
         mode_ = value;
@@ -16607,9 +16961,10 @@ public final class PartnerLocationSettingsOuterClass {
        * Specifies the policy that should apply during the specified bounds, with regard to the shop's open/closed status.
        * </pre>
        *
-       * <code>.bloombox.schema.partner.settings.ShopStatus mode = 2;</code>
+       * <code>.bloombox.partner.settings.ShopStatus mode = 2;</code>
        */
       public io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.ShopStatus getMode() {
+        @SuppressWarnings("deprecation")
         io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.ShopStatus result = io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.ShopStatus.valueOf(mode_);
         return result == null ? io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.ShopStatus.UNRECOGNIZED : result;
       }
@@ -16618,7 +16973,7 @@ public final class PartnerLocationSettingsOuterClass {
        * Specifies the policy that should apply during the specified bounds, with regard to the shop's open/closed status.
        * </pre>
        *
-       * <code>.bloombox.schema.partner.settings.ShopStatus mode = 2;</code>
+       * <code>.bloombox.partner.settings.ShopStatus mode = 2;</code>
        */
       public Builder setMode(io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.ShopStatus value) {
         if (value == null) {
@@ -16634,7 +16989,7 @@ public final class PartnerLocationSettingsOuterClass {
        * Specifies the policy that should apply during the specified bounds, with regard to the shop's open/closed status.
        * </pre>
        *
-       * <code>.bloombox.schema.partner.settings.ShopStatus mode = 2;</code>
+       * <code>.bloombox.partner.settings.ShopStatus mode = 2;</code>
        */
       public Builder clearMode() {
         
@@ -16642,21 +16997,23 @@ public final class PartnerLocationSettingsOuterClass {
         onChanged();
         return this;
       }
+      @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
         return super.setUnknownFieldsProto3(unknownFields);
       }
 
+      @java.lang.Override
       public final Builder mergeUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
         return super.mergeUnknownFields(unknownFields);
       }
 
 
-      // @@protoc_insertion_point(builder_scope:bloombox.schema.partner.settings.RegularHoursSettings)
+      // @@protoc_insertion_point(builder_scope:bloombox.partner.settings.RegularHoursSettings)
     }
 
-    // @@protoc_insertion_point(class_scope:bloombox.schema.partner.settings.RegularHoursSettings)
+    // @@protoc_insertion_point(class_scope:bloombox.partner.settings.RegularHoursSettings)
     private static final io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.RegularHoursSettings DEFAULT_INSTANCE;
     static {
       DEFAULT_INSTANCE = new io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.RegularHoursSettings();
@@ -16668,6 +17025,7 @@ public final class PartnerLocationSettingsOuterClass {
 
     private static final com.google.protobuf.Parser<RegularHoursSettings>
         PARSER = new com.google.protobuf.AbstractParser<RegularHoursSettings>() {
+      @java.lang.Override
       public RegularHoursSettings parsePartialFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -16685,6 +17043,7 @@ public final class PartnerLocationSettingsOuterClass {
       return PARSER;
     }
 
+    @java.lang.Override
     public io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.RegularHoursSettings getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
@@ -16692,7 +17051,7 @@ public final class PartnerLocationSettingsOuterClass {
   }
 
   public interface SpecialHoursSettingsOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:bloombox.schema.partner.settings.SpecialHoursSettings)
+      // @@protoc_insertion_point(interface_extends:bloombox.partner.settings.SpecialHoursSettings)
       com.google.protobuf.MessageOrBuilder {
 
     /**
@@ -16700,7 +17059,7 @@ public final class PartnerLocationSettingsOuterClass {
      * Boundary of this set of hours settings.
      * </pre>
      *
-     * <code>.bloombox.schema.partner.settings.HoursBoundary bounds = 1;</code>
+     * <code>.bloombox.partner.settings.HoursBoundary bounds = 1;</code>
      */
     boolean hasBounds();
     /**
@@ -16708,7 +17067,7 @@ public final class PartnerLocationSettingsOuterClass {
      * Boundary of this set of hours settings.
      * </pre>
      *
-     * <code>.bloombox.schema.partner.settings.HoursBoundary bounds = 1;</code>
+     * <code>.bloombox.partner.settings.HoursBoundary bounds = 1;</code>
      */
     io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.HoursBoundary getBounds();
     /**
@@ -16716,7 +17075,7 @@ public final class PartnerLocationSettingsOuterClass {
      * Boundary of this set of hours settings.
      * </pre>
      *
-     * <code>.bloombox.schema.partner.settings.HoursBoundary bounds = 1;</code>
+     * <code>.bloombox.partner.settings.HoursBoundary bounds = 1;</code>
      */
     io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.HoursBoundaryOrBuilder getBoundsOrBuilder();
 
@@ -16725,7 +17084,7 @@ public final class PartnerLocationSettingsOuterClass {
      * Specifies the policy that should apply during the specified bounds, with regard to the shop's open/closed status.
      * </pre>
      *
-     * <code>.bloombox.schema.partner.settings.ShopStatus mode = 2;</code>
+     * <code>.bloombox.partner.settings.ShopStatus mode = 2;</code>
      */
     int getModeValue();
     /**
@@ -16733,7 +17092,7 @@ public final class PartnerLocationSettingsOuterClass {
      * Specifies the policy that should apply during the specified bounds, with regard to the shop's open/closed status.
      * </pre>
      *
-     * <code>.bloombox.schema.partner.settings.ShopStatus mode = 2;</code>
+     * <code>.bloombox.partner.settings.ShopStatus mode = 2;</code>
      */
     io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.ShopStatus getMode();
 
@@ -16767,11 +17126,11 @@ public final class PartnerLocationSettingsOuterClass {
    * Specifies 'special' hours, such as holidays or one-off days.
    * </pre>
    *
-   * Protobuf type {@code bloombox.schema.partner.settings.SpecialHoursSettings}
+   * Protobuf type {@code bloombox.partner.settings.SpecialHoursSettings}
    */
   public  static final class SpecialHoursSettings extends
       com.google.protobuf.GeneratedMessageV3 implements
-      // @@protoc_insertion_point(message_implements:bloombox.schema.partner.settings.SpecialHoursSettings)
+      // @@protoc_insertion_point(message_implements:bloombox.partner.settings.SpecialHoursSettings)
       SpecialHoursSettingsOrBuilder {
   private static final long serialVersionUID = 0L;
     // Use SpecialHoursSettings.newBuilder() to construct.
@@ -16806,13 +17165,6 @@ public final class PartnerLocationSettingsOuterClass {
             case 0:
               done = true;
               break;
-            default: {
-              if (!parseUnknownFieldProto3(
-                  input, unknownFields, extensionRegistry, tag)) {
-                done = true;
-              }
-              break;
-            }
             case 10: {
               io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.HoursBoundary.Builder subBuilder = null;
               if (bounds_ != null) {
@@ -16845,6 +17197,13 @@ public final class PartnerLocationSettingsOuterClass {
 
               break;
             }
+            default: {
+              if (!parseUnknownFieldProto3(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
           }
         }
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
@@ -16859,12 +17218,13 @@ public final class PartnerLocationSettingsOuterClass {
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.internal_static_bloombox_schema_partner_settings_SpecialHoursSettings_descriptor;
+      return io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.internal_static_bloombox_partner_settings_SpecialHoursSettings_descriptor;
     }
 
+    @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.internal_static_bloombox_schema_partner_settings_SpecialHoursSettings_fieldAccessorTable
+      return io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.internal_static_bloombox_partner_settings_SpecialHoursSettings_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
               io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.SpecialHoursSettings.class, io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.SpecialHoursSettings.Builder.class);
     }
@@ -16876,7 +17236,7 @@ public final class PartnerLocationSettingsOuterClass {
      * Boundary of this set of hours settings.
      * </pre>
      *
-     * <code>.bloombox.schema.partner.settings.HoursBoundary bounds = 1;</code>
+     * <code>.bloombox.partner.settings.HoursBoundary bounds = 1;</code>
      */
     public boolean hasBounds() {
       return bounds_ != null;
@@ -16886,7 +17246,7 @@ public final class PartnerLocationSettingsOuterClass {
      * Boundary of this set of hours settings.
      * </pre>
      *
-     * <code>.bloombox.schema.partner.settings.HoursBoundary bounds = 1;</code>
+     * <code>.bloombox.partner.settings.HoursBoundary bounds = 1;</code>
      */
     public io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.HoursBoundary getBounds() {
       return bounds_ == null ? io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.HoursBoundary.getDefaultInstance() : bounds_;
@@ -16896,7 +17256,7 @@ public final class PartnerLocationSettingsOuterClass {
      * Boundary of this set of hours settings.
      * </pre>
      *
-     * <code>.bloombox.schema.partner.settings.HoursBoundary bounds = 1;</code>
+     * <code>.bloombox.partner.settings.HoursBoundary bounds = 1;</code>
      */
     public io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.HoursBoundaryOrBuilder getBoundsOrBuilder() {
       return getBounds();
@@ -16909,7 +17269,7 @@ public final class PartnerLocationSettingsOuterClass {
      * Specifies the policy that should apply during the specified bounds, with regard to the shop's open/closed status.
      * </pre>
      *
-     * <code>.bloombox.schema.partner.settings.ShopStatus mode = 2;</code>
+     * <code>.bloombox.partner.settings.ShopStatus mode = 2;</code>
      */
     public int getModeValue() {
       return mode_;
@@ -16919,9 +17279,10 @@ public final class PartnerLocationSettingsOuterClass {
      * Specifies the policy that should apply during the specified bounds, with regard to the shop's open/closed status.
      * </pre>
      *
-     * <code>.bloombox.schema.partner.settings.ShopStatus mode = 2;</code>
+     * <code>.bloombox.partner.settings.ShopStatus mode = 2;</code>
      */
     public io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.ShopStatus getMode() {
+      @SuppressWarnings("deprecation")
       io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.ShopStatus result = io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.ShopStatus.valueOf(mode_);
       return result == null ? io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.ShopStatus.UNRECOGNIZED : result;
     }
@@ -16960,6 +17321,7 @@ public final class PartnerLocationSettingsOuterClass {
     }
 
     private byte memoizedIsInitialized = -1;
+    @java.lang.Override
     public final boolean isInitialized() {
       byte isInitialized = memoizedIsInitialized;
       if (isInitialized == 1) return true;
@@ -16969,6 +17331,7 @@ public final class PartnerLocationSettingsOuterClass {
       return true;
     }
 
+    @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
       if (bounds_ != null) {
@@ -16983,6 +17346,7 @@ public final class PartnerLocationSettingsOuterClass {
       unknownFields.writeTo(output);
     }
 
+    @java.lang.Override
     public int getSerializedSize() {
       int size = memoizedSize;
       if (size != -1) return size;
@@ -17123,6 +17487,7 @@ public final class PartnerLocationSettingsOuterClass {
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
 
+    @java.lang.Override
     public Builder newBuilderForType() { return newBuilder(); }
     public static Builder newBuilder() {
       return DEFAULT_INSTANCE.toBuilder();
@@ -17130,6 +17495,7 @@ public final class PartnerLocationSettingsOuterClass {
     public static Builder newBuilder(io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.SpecialHoursSettings prototype) {
       return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
     }
+    @java.lang.Override
     public Builder toBuilder() {
       return this == DEFAULT_INSTANCE
           ? new Builder() : new Builder().mergeFrom(this);
@@ -17146,20 +17512,21 @@ public final class PartnerLocationSettingsOuterClass {
      * Specifies 'special' hours, such as holidays or one-off days.
      * </pre>
      *
-     * Protobuf type {@code bloombox.schema.partner.settings.SpecialHoursSettings}
+     * Protobuf type {@code bloombox.partner.settings.SpecialHoursSettings}
      */
     public static final class Builder extends
         com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:bloombox.schema.partner.settings.SpecialHoursSettings)
+        // @@protoc_insertion_point(builder_implements:bloombox.partner.settings.SpecialHoursSettings)
         io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.SpecialHoursSettingsOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.internal_static_bloombox_schema_partner_settings_SpecialHoursSettings_descriptor;
+        return io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.internal_static_bloombox_partner_settings_SpecialHoursSettings_descriptor;
       }
 
+      @java.lang.Override
       protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.internal_static_bloombox_schema_partner_settings_SpecialHoursSettings_fieldAccessorTable
+        return io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.internal_static_bloombox_partner_settings_SpecialHoursSettings_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
                 io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.SpecialHoursSettings.class, io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.SpecialHoursSettings.Builder.class);
       }
@@ -17179,6 +17546,7 @@ public final class PartnerLocationSettingsOuterClass {
                 .alwaysUseFieldBuilders) {
         }
       }
+      @java.lang.Override
       public Builder clear() {
         super.clear();
         if (boundsBuilder_ == null) {
@@ -17198,15 +17566,18 @@ public final class PartnerLocationSettingsOuterClass {
         return this;
       }
 
+      @java.lang.Override
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.internal_static_bloombox_schema_partner_settings_SpecialHoursSettings_descriptor;
+        return io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.internal_static_bloombox_partner_settings_SpecialHoursSettings_descriptor;
       }
 
+      @java.lang.Override
       public io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.SpecialHoursSettings getDefaultInstanceForType() {
         return io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.SpecialHoursSettings.getDefaultInstance();
       }
 
+      @java.lang.Override
       public io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.SpecialHoursSettings build() {
         io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.SpecialHoursSettings result = buildPartial();
         if (!result.isInitialized()) {
@@ -17215,6 +17586,7 @@ public final class PartnerLocationSettingsOuterClass {
         return result;
       }
 
+      @java.lang.Override
       public io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.SpecialHoursSettings buildPartial() {
         io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.SpecialHoursSettings result = new io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.SpecialHoursSettings(this);
         if (boundsBuilder_ == null) {
@@ -17232,32 +17604,39 @@ public final class PartnerLocationSettingsOuterClass {
         return result;
       }
 
+      @java.lang.Override
       public Builder clone() {
         return (Builder) super.clone();
       }
+      @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
         return (Builder) super.setField(field, value);
       }
+      @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
         return (Builder) super.clearField(field);
       }
+      @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
         return (Builder) super.clearOneof(oneof);
       }
+      @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
         return (Builder) super.setRepeatedField(field, index, value);
       }
+      @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
         return (Builder) super.addRepeatedField(field, value);
       }
+      @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
         if (other instanceof io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.SpecialHoursSettings) {
           return mergeFrom((io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.SpecialHoursSettings)other);
@@ -17283,10 +17662,12 @@ public final class PartnerLocationSettingsOuterClass {
         return this;
       }
 
+      @java.lang.Override
       public final boolean isInitialized() {
         return true;
       }
 
+      @java.lang.Override
       public Builder mergeFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -17313,7 +17694,7 @@ public final class PartnerLocationSettingsOuterClass {
        * Boundary of this set of hours settings.
        * </pre>
        *
-       * <code>.bloombox.schema.partner.settings.HoursBoundary bounds = 1;</code>
+       * <code>.bloombox.partner.settings.HoursBoundary bounds = 1;</code>
        */
       public boolean hasBounds() {
         return boundsBuilder_ != null || bounds_ != null;
@@ -17323,7 +17704,7 @@ public final class PartnerLocationSettingsOuterClass {
        * Boundary of this set of hours settings.
        * </pre>
        *
-       * <code>.bloombox.schema.partner.settings.HoursBoundary bounds = 1;</code>
+       * <code>.bloombox.partner.settings.HoursBoundary bounds = 1;</code>
        */
       public io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.HoursBoundary getBounds() {
         if (boundsBuilder_ == null) {
@@ -17337,7 +17718,7 @@ public final class PartnerLocationSettingsOuterClass {
        * Boundary of this set of hours settings.
        * </pre>
        *
-       * <code>.bloombox.schema.partner.settings.HoursBoundary bounds = 1;</code>
+       * <code>.bloombox.partner.settings.HoursBoundary bounds = 1;</code>
        */
       public Builder setBounds(io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.HoursBoundary value) {
         if (boundsBuilder_ == null) {
@@ -17357,7 +17738,7 @@ public final class PartnerLocationSettingsOuterClass {
        * Boundary of this set of hours settings.
        * </pre>
        *
-       * <code>.bloombox.schema.partner.settings.HoursBoundary bounds = 1;</code>
+       * <code>.bloombox.partner.settings.HoursBoundary bounds = 1;</code>
        */
       public Builder setBounds(
           io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.HoursBoundary.Builder builderForValue) {
@@ -17375,7 +17756,7 @@ public final class PartnerLocationSettingsOuterClass {
        * Boundary of this set of hours settings.
        * </pre>
        *
-       * <code>.bloombox.schema.partner.settings.HoursBoundary bounds = 1;</code>
+       * <code>.bloombox.partner.settings.HoursBoundary bounds = 1;</code>
        */
       public Builder mergeBounds(io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.HoursBoundary value) {
         if (boundsBuilder_ == null) {
@@ -17397,7 +17778,7 @@ public final class PartnerLocationSettingsOuterClass {
        * Boundary of this set of hours settings.
        * </pre>
        *
-       * <code>.bloombox.schema.partner.settings.HoursBoundary bounds = 1;</code>
+       * <code>.bloombox.partner.settings.HoursBoundary bounds = 1;</code>
        */
       public Builder clearBounds() {
         if (boundsBuilder_ == null) {
@@ -17415,7 +17796,7 @@ public final class PartnerLocationSettingsOuterClass {
        * Boundary of this set of hours settings.
        * </pre>
        *
-       * <code>.bloombox.schema.partner.settings.HoursBoundary bounds = 1;</code>
+       * <code>.bloombox.partner.settings.HoursBoundary bounds = 1;</code>
        */
       public io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.HoursBoundary.Builder getBoundsBuilder() {
         
@@ -17427,7 +17808,7 @@ public final class PartnerLocationSettingsOuterClass {
        * Boundary of this set of hours settings.
        * </pre>
        *
-       * <code>.bloombox.schema.partner.settings.HoursBoundary bounds = 1;</code>
+       * <code>.bloombox.partner.settings.HoursBoundary bounds = 1;</code>
        */
       public io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.HoursBoundaryOrBuilder getBoundsOrBuilder() {
         if (boundsBuilder_ != null) {
@@ -17442,7 +17823,7 @@ public final class PartnerLocationSettingsOuterClass {
        * Boundary of this set of hours settings.
        * </pre>
        *
-       * <code>.bloombox.schema.partner.settings.HoursBoundary bounds = 1;</code>
+       * <code>.bloombox.partner.settings.HoursBoundary bounds = 1;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
           io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.HoursBoundary, io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.HoursBoundary.Builder, io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.HoursBoundaryOrBuilder> 
@@ -17464,7 +17845,7 @@ public final class PartnerLocationSettingsOuterClass {
        * Specifies the policy that should apply during the specified bounds, with regard to the shop's open/closed status.
        * </pre>
        *
-       * <code>.bloombox.schema.partner.settings.ShopStatus mode = 2;</code>
+       * <code>.bloombox.partner.settings.ShopStatus mode = 2;</code>
        */
       public int getModeValue() {
         return mode_;
@@ -17474,7 +17855,7 @@ public final class PartnerLocationSettingsOuterClass {
        * Specifies the policy that should apply during the specified bounds, with regard to the shop's open/closed status.
        * </pre>
        *
-       * <code>.bloombox.schema.partner.settings.ShopStatus mode = 2;</code>
+       * <code>.bloombox.partner.settings.ShopStatus mode = 2;</code>
        */
       public Builder setModeValue(int value) {
         mode_ = value;
@@ -17486,9 +17867,10 @@ public final class PartnerLocationSettingsOuterClass {
        * Specifies the policy that should apply during the specified bounds, with regard to the shop's open/closed status.
        * </pre>
        *
-       * <code>.bloombox.schema.partner.settings.ShopStatus mode = 2;</code>
+       * <code>.bloombox.partner.settings.ShopStatus mode = 2;</code>
        */
       public io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.ShopStatus getMode() {
+        @SuppressWarnings("deprecation")
         io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.ShopStatus result = io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.ShopStatus.valueOf(mode_);
         return result == null ? io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.ShopStatus.UNRECOGNIZED : result;
       }
@@ -17497,7 +17879,7 @@ public final class PartnerLocationSettingsOuterClass {
        * Specifies the policy that should apply during the specified bounds, with regard to the shop's open/closed status.
        * </pre>
        *
-       * <code>.bloombox.schema.partner.settings.ShopStatus mode = 2;</code>
+       * <code>.bloombox.partner.settings.ShopStatus mode = 2;</code>
        */
       public Builder setMode(io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.ShopStatus value) {
         if (value == null) {
@@ -17513,7 +17895,7 @@ public final class PartnerLocationSettingsOuterClass {
        * Specifies the policy that should apply during the specified bounds, with regard to the shop's open/closed status.
        * </pre>
        *
-       * <code>.bloombox.schema.partner.settings.ShopStatus mode = 2;</code>
+       * <code>.bloombox.partner.settings.ShopStatus mode = 2;</code>
        */
       public Builder clearMode() {
         
@@ -17674,21 +18056,23 @@ public final class PartnerLocationSettingsOuterClass {
         }
         return dateBuilder_;
       }
+      @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
         return super.setUnknownFieldsProto3(unknownFields);
       }
 
+      @java.lang.Override
       public final Builder mergeUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
         return super.mergeUnknownFields(unknownFields);
       }
 
 
-      // @@protoc_insertion_point(builder_scope:bloombox.schema.partner.settings.SpecialHoursSettings)
+      // @@protoc_insertion_point(builder_scope:bloombox.partner.settings.SpecialHoursSettings)
     }
 
-    // @@protoc_insertion_point(class_scope:bloombox.schema.partner.settings.SpecialHoursSettings)
+    // @@protoc_insertion_point(class_scope:bloombox.partner.settings.SpecialHoursSettings)
     private static final io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.SpecialHoursSettings DEFAULT_INSTANCE;
     static {
       DEFAULT_INSTANCE = new io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.SpecialHoursSettings();
@@ -17700,6 +18084,7 @@ public final class PartnerLocationSettingsOuterClass {
 
     private static final com.google.protobuf.Parser<SpecialHoursSettings>
         PARSER = new com.google.protobuf.AbstractParser<SpecialHoursSettings>() {
+      @java.lang.Override
       public SpecialHoursSettings parsePartialFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -17717,6 +18102,7 @@ public final class PartnerLocationSettingsOuterClass {
       return PARSER;
     }
 
+    @java.lang.Override
     public io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.SpecialHoursSettings getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
@@ -17724,7 +18110,7 @@ public final class PartnerLocationSettingsOuterClass {
   }
 
   public interface ShopHoursSettingsOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:bloombox.schema.partner.settings.ShopHoursSettings)
+      // @@protoc_insertion_point(interface_extends:bloombox.partner.settings.ShopHoursSettings)
       com.google.protobuf.MessageOrBuilder {
 
     /**
@@ -17732,7 +18118,7 @@ public final class PartnerLocationSettingsOuterClass {
      * Specifies payloads of regular hours settings for this shop location.
      * </pre>
      *
-     * <code>repeated .bloombox.schema.partner.settings.RegularHoursSettings regular = 1;</code>
+     * <code>repeated .bloombox.partner.settings.RegularHoursSettings regular = 1;</code>
      */
     java.util.List<io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.RegularHoursSettings> 
         getRegularList();
@@ -17741,7 +18127,7 @@ public final class PartnerLocationSettingsOuterClass {
      * Specifies payloads of regular hours settings for this shop location.
      * </pre>
      *
-     * <code>repeated .bloombox.schema.partner.settings.RegularHoursSettings regular = 1;</code>
+     * <code>repeated .bloombox.partner.settings.RegularHoursSettings regular = 1;</code>
      */
     io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.RegularHoursSettings getRegular(int index);
     /**
@@ -17749,7 +18135,7 @@ public final class PartnerLocationSettingsOuterClass {
      * Specifies payloads of regular hours settings for this shop location.
      * </pre>
      *
-     * <code>repeated .bloombox.schema.partner.settings.RegularHoursSettings regular = 1;</code>
+     * <code>repeated .bloombox.partner.settings.RegularHoursSettings regular = 1;</code>
      */
     int getRegularCount();
     /**
@@ -17757,7 +18143,7 @@ public final class PartnerLocationSettingsOuterClass {
      * Specifies payloads of regular hours settings for this shop location.
      * </pre>
      *
-     * <code>repeated .bloombox.schema.partner.settings.RegularHoursSettings regular = 1;</code>
+     * <code>repeated .bloombox.partner.settings.RegularHoursSettings regular = 1;</code>
      */
     java.util.List<? extends io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.RegularHoursSettingsOrBuilder> 
         getRegularOrBuilderList();
@@ -17766,7 +18152,7 @@ public final class PartnerLocationSettingsOuterClass {
      * Specifies payloads of regular hours settings for this shop location.
      * </pre>
      *
-     * <code>repeated .bloombox.schema.partner.settings.RegularHoursSettings regular = 1;</code>
+     * <code>repeated .bloombox.partner.settings.RegularHoursSettings regular = 1;</code>
      */
     io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.RegularHoursSettingsOrBuilder getRegularOrBuilder(
         int index);
@@ -17776,7 +18162,7 @@ public final class PartnerLocationSettingsOuterClass {
      * Specifies paylods of special hours settings for this shop location, mapped to the day they apply.
      * </pre>
      *
-     * <code>map&lt;string, .bloombox.schema.partner.settings.SpecialHoursSettings&gt; special = 2;</code>
+     * <code>map&lt;string, .bloombox.partner.settings.SpecialHoursSettings&gt; special = 2;</code>
      */
     int getSpecialCount();
     /**
@@ -17784,7 +18170,7 @@ public final class PartnerLocationSettingsOuterClass {
      * Specifies paylods of special hours settings for this shop location, mapped to the day they apply.
      * </pre>
      *
-     * <code>map&lt;string, .bloombox.schema.partner.settings.SpecialHoursSettings&gt; special = 2;</code>
+     * <code>map&lt;string, .bloombox.partner.settings.SpecialHoursSettings&gt; special = 2;</code>
      */
     boolean containsSpecial(
         java.lang.String key);
@@ -17799,7 +18185,7 @@ public final class PartnerLocationSettingsOuterClass {
      * Specifies paylods of special hours settings for this shop location, mapped to the day they apply.
      * </pre>
      *
-     * <code>map&lt;string, .bloombox.schema.partner.settings.SpecialHoursSettings&gt; special = 2;</code>
+     * <code>map&lt;string, .bloombox.partner.settings.SpecialHoursSettings&gt; special = 2;</code>
      */
     java.util.Map<java.lang.String, io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.SpecialHoursSettings>
     getSpecialMap();
@@ -17808,7 +18194,7 @@ public final class PartnerLocationSettingsOuterClass {
      * Specifies paylods of special hours settings for this shop location, mapped to the day they apply.
      * </pre>
      *
-     * <code>map&lt;string, .bloombox.schema.partner.settings.SpecialHoursSettings&gt; special = 2;</code>
+     * <code>map&lt;string, .bloombox.partner.settings.SpecialHoursSettings&gt; special = 2;</code>
      */
 
     io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.SpecialHoursSettings getSpecialOrDefault(
@@ -17819,7 +18205,7 @@ public final class PartnerLocationSettingsOuterClass {
      * Specifies paylods of special hours settings for this shop location, mapped to the day they apply.
      * </pre>
      *
-     * <code>map&lt;string, .bloombox.schema.partner.settings.SpecialHoursSettings&gt; special = 2;</code>
+     * <code>map&lt;string, .bloombox.partner.settings.SpecialHoursSettings&gt; special = 2;</code>
      */
 
     io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.SpecialHoursSettings getSpecialOrThrow(
@@ -17830,11 +18216,11 @@ public final class PartnerLocationSettingsOuterClass {
    * Specifies shop hours that tie together the physical and digital storefront.
    * </pre>
    *
-   * Protobuf type {@code bloombox.schema.partner.settings.ShopHoursSettings}
+   * Protobuf type {@code bloombox.partner.settings.ShopHoursSettings}
    */
   public  static final class ShopHoursSettings extends
       com.google.protobuf.GeneratedMessageV3 implements
-      // @@protoc_insertion_point(message_implements:bloombox.schema.partner.settings.ShopHoursSettings)
+      // @@protoc_insertion_point(message_implements:bloombox.partner.settings.ShopHoursSettings)
       ShopHoursSettingsOrBuilder {
   private static final long serialVersionUID = 0L;
     // Use ShopHoursSettings.newBuilder() to construct.
@@ -17869,13 +18255,6 @@ public final class PartnerLocationSettingsOuterClass {
             case 0:
               done = true;
               break;
-            default: {
-              if (!parseUnknownFieldProto3(
-                  input, unknownFields, extensionRegistry, tag)) {
-                done = true;
-              }
-              break;
-            }
             case 10: {
               if (!((mutable_bitField0_ & 0x00000001) == 0x00000001)) {
                 regular_ = new java.util.ArrayList<io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.RegularHoursSettings>();
@@ -17898,6 +18277,13 @@ public final class PartnerLocationSettingsOuterClass {
                   special__.getKey(), special__.getValue());
               break;
             }
+            default: {
+              if (!parseUnknownFieldProto3(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
           }
         }
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
@@ -17915,10 +18301,11 @@ public final class PartnerLocationSettingsOuterClass {
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.internal_static_bloombox_schema_partner_settings_ShopHoursSettings_descriptor;
+      return io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.internal_static_bloombox_partner_settings_ShopHoursSettings_descriptor;
     }
 
     @SuppressWarnings({"rawtypes"})
+    @java.lang.Override
     protected com.google.protobuf.MapField internalGetMapField(
         int number) {
       switch (number) {
@@ -17929,9 +18316,10 @@ public final class PartnerLocationSettingsOuterClass {
               "Invalid map field number: " + number);
       }
     }
+    @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.internal_static_bloombox_schema_partner_settings_ShopHoursSettings_fieldAccessorTable
+      return io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.internal_static_bloombox_partner_settings_ShopHoursSettings_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
               io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.ShopHoursSettings.class, io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.ShopHoursSettings.Builder.class);
     }
@@ -17943,7 +18331,7 @@ public final class PartnerLocationSettingsOuterClass {
      * Specifies payloads of regular hours settings for this shop location.
      * </pre>
      *
-     * <code>repeated .bloombox.schema.partner.settings.RegularHoursSettings regular = 1;</code>
+     * <code>repeated .bloombox.partner.settings.RegularHoursSettings regular = 1;</code>
      */
     public java.util.List<io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.RegularHoursSettings> getRegularList() {
       return regular_;
@@ -17953,7 +18341,7 @@ public final class PartnerLocationSettingsOuterClass {
      * Specifies payloads of regular hours settings for this shop location.
      * </pre>
      *
-     * <code>repeated .bloombox.schema.partner.settings.RegularHoursSettings regular = 1;</code>
+     * <code>repeated .bloombox.partner.settings.RegularHoursSettings regular = 1;</code>
      */
     public java.util.List<? extends io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.RegularHoursSettingsOrBuilder> 
         getRegularOrBuilderList() {
@@ -17964,7 +18352,7 @@ public final class PartnerLocationSettingsOuterClass {
      * Specifies payloads of regular hours settings for this shop location.
      * </pre>
      *
-     * <code>repeated .bloombox.schema.partner.settings.RegularHoursSettings regular = 1;</code>
+     * <code>repeated .bloombox.partner.settings.RegularHoursSettings regular = 1;</code>
      */
     public int getRegularCount() {
       return regular_.size();
@@ -17974,7 +18362,7 @@ public final class PartnerLocationSettingsOuterClass {
      * Specifies payloads of regular hours settings for this shop location.
      * </pre>
      *
-     * <code>repeated .bloombox.schema.partner.settings.RegularHoursSettings regular = 1;</code>
+     * <code>repeated .bloombox.partner.settings.RegularHoursSettings regular = 1;</code>
      */
     public io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.RegularHoursSettings getRegular(int index) {
       return regular_.get(index);
@@ -17984,7 +18372,7 @@ public final class PartnerLocationSettingsOuterClass {
      * Specifies payloads of regular hours settings for this shop location.
      * </pre>
      *
-     * <code>repeated .bloombox.schema.partner.settings.RegularHoursSettings regular = 1;</code>
+     * <code>repeated .bloombox.partner.settings.RegularHoursSettings regular = 1;</code>
      */
     public io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.RegularHoursSettingsOrBuilder getRegularOrBuilder(
         int index) {
@@ -17997,7 +18385,7 @@ public final class PartnerLocationSettingsOuterClass {
           java.lang.String, io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.SpecialHoursSettings> defaultEntry =
               com.google.protobuf.MapEntry
               .<java.lang.String, io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.SpecialHoursSettings>newDefaultInstance(
-                  io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.internal_static_bloombox_schema_partner_settings_ShopHoursSettings_SpecialEntry_descriptor, 
+                  io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.internal_static_bloombox_partner_settings_ShopHoursSettings_SpecialEntry_descriptor, 
                   com.google.protobuf.WireFormat.FieldType.STRING,
                   "",
                   com.google.protobuf.WireFormat.FieldType.MESSAGE,
@@ -18022,7 +18410,7 @@ public final class PartnerLocationSettingsOuterClass {
      * Specifies paylods of special hours settings for this shop location, mapped to the day they apply.
      * </pre>
      *
-     * <code>map&lt;string, .bloombox.schema.partner.settings.SpecialHoursSettings&gt; special = 2;</code>
+     * <code>map&lt;string, .bloombox.partner.settings.SpecialHoursSettings&gt; special = 2;</code>
      */
 
     public boolean containsSpecial(
@@ -18042,7 +18430,7 @@ public final class PartnerLocationSettingsOuterClass {
      * Specifies paylods of special hours settings for this shop location, mapped to the day they apply.
      * </pre>
      *
-     * <code>map&lt;string, .bloombox.schema.partner.settings.SpecialHoursSettings&gt; special = 2;</code>
+     * <code>map&lt;string, .bloombox.partner.settings.SpecialHoursSettings&gt; special = 2;</code>
      */
 
     public java.util.Map<java.lang.String, io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.SpecialHoursSettings> getSpecialMap() {
@@ -18053,7 +18441,7 @@ public final class PartnerLocationSettingsOuterClass {
      * Specifies paylods of special hours settings for this shop location, mapped to the day they apply.
      * </pre>
      *
-     * <code>map&lt;string, .bloombox.schema.partner.settings.SpecialHoursSettings&gt; special = 2;</code>
+     * <code>map&lt;string, .bloombox.partner.settings.SpecialHoursSettings&gt; special = 2;</code>
      */
 
     public io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.SpecialHoursSettings getSpecialOrDefault(
@@ -18069,7 +18457,7 @@ public final class PartnerLocationSettingsOuterClass {
      * Specifies paylods of special hours settings for this shop location, mapped to the day they apply.
      * </pre>
      *
-     * <code>map&lt;string, .bloombox.schema.partner.settings.SpecialHoursSettings&gt; special = 2;</code>
+     * <code>map&lt;string, .bloombox.partner.settings.SpecialHoursSettings&gt; special = 2;</code>
      */
 
     public io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.SpecialHoursSettings getSpecialOrThrow(
@@ -18084,6 +18472,7 @@ public final class PartnerLocationSettingsOuterClass {
     }
 
     private byte memoizedIsInitialized = -1;
+    @java.lang.Override
     public final boolean isInitialized() {
       byte isInitialized = memoizedIsInitialized;
       if (isInitialized == 1) return true;
@@ -18093,6 +18482,7 @@ public final class PartnerLocationSettingsOuterClass {
       return true;
     }
 
+    @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
       for (int i = 0; i < regular_.size(); i++) {
@@ -18107,6 +18497,7 @@ public final class PartnerLocationSettingsOuterClass {
       unknownFields.writeTo(output);
     }
 
+    @java.lang.Override
     public int getSerializedSize() {
       int size = memoizedSize;
       if (size != -1) return size;
@@ -18240,6 +18631,7 @@ public final class PartnerLocationSettingsOuterClass {
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
 
+    @java.lang.Override
     public Builder newBuilderForType() { return newBuilder(); }
     public static Builder newBuilder() {
       return DEFAULT_INSTANCE.toBuilder();
@@ -18247,6 +18639,7 @@ public final class PartnerLocationSettingsOuterClass {
     public static Builder newBuilder(io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.ShopHoursSettings prototype) {
       return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
     }
+    @java.lang.Override
     public Builder toBuilder() {
       return this == DEFAULT_INSTANCE
           ? new Builder() : new Builder().mergeFrom(this);
@@ -18263,15 +18656,15 @@ public final class PartnerLocationSettingsOuterClass {
      * Specifies shop hours that tie together the physical and digital storefront.
      * </pre>
      *
-     * Protobuf type {@code bloombox.schema.partner.settings.ShopHoursSettings}
+     * Protobuf type {@code bloombox.partner.settings.ShopHoursSettings}
      */
     public static final class Builder extends
         com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:bloombox.schema.partner.settings.ShopHoursSettings)
+        // @@protoc_insertion_point(builder_implements:bloombox.partner.settings.ShopHoursSettings)
         io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.ShopHoursSettingsOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.internal_static_bloombox_schema_partner_settings_ShopHoursSettings_descriptor;
+        return io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.internal_static_bloombox_partner_settings_ShopHoursSettings_descriptor;
       }
 
       @SuppressWarnings({"rawtypes"})
@@ -18296,9 +18689,10 @@ public final class PartnerLocationSettingsOuterClass {
                 "Invalid map field number: " + number);
         }
       }
+      @java.lang.Override
       protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.internal_static_bloombox_schema_partner_settings_ShopHoursSettings_fieldAccessorTable
+        return io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.internal_static_bloombox_partner_settings_ShopHoursSettings_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
                 io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.ShopHoursSettings.class, io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.ShopHoursSettings.Builder.class);
       }
@@ -18319,6 +18713,7 @@ public final class PartnerLocationSettingsOuterClass {
           getRegularFieldBuilder();
         }
       }
+      @java.lang.Override
       public Builder clear() {
         super.clear();
         if (regularBuilder_ == null) {
@@ -18331,15 +18726,18 @@ public final class PartnerLocationSettingsOuterClass {
         return this;
       }
 
+      @java.lang.Override
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.internal_static_bloombox_schema_partner_settings_ShopHoursSettings_descriptor;
+        return io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.internal_static_bloombox_partner_settings_ShopHoursSettings_descriptor;
       }
 
+      @java.lang.Override
       public io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.ShopHoursSettings getDefaultInstanceForType() {
         return io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.ShopHoursSettings.getDefaultInstance();
       }
 
+      @java.lang.Override
       public io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.ShopHoursSettings build() {
         io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.ShopHoursSettings result = buildPartial();
         if (!result.isInitialized()) {
@@ -18348,6 +18746,7 @@ public final class PartnerLocationSettingsOuterClass {
         return result;
       }
 
+      @java.lang.Override
       public io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.ShopHoursSettings buildPartial() {
         io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.ShopHoursSettings result = new io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.ShopHoursSettings(this);
         int from_bitField0_ = bitField0_;
@@ -18366,32 +18765,39 @@ public final class PartnerLocationSettingsOuterClass {
         return result;
       }
 
+      @java.lang.Override
       public Builder clone() {
         return (Builder) super.clone();
       }
+      @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
         return (Builder) super.setField(field, value);
       }
+      @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
         return (Builder) super.clearField(field);
       }
+      @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
         return (Builder) super.clearOneof(oneof);
       }
+      @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
         return (Builder) super.setRepeatedField(field, index, value);
       }
+      @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
         return (Builder) super.addRepeatedField(field, value);
       }
+      @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
         if (other instanceof io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.ShopHoursSettings) {
           return mergeFrom((io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.ShopHoursSettings)other);
@@ -18436,10 +18842,12 @@ public final class PartnerLocationSettingsOuterClass {
         return this;
       }
 
+      @java.lang.Override
       public final boolean isInitialized() {
         return true;
       }
 
+      @java.lang.Override
       public Builder mergeFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -18476,7 +18884,7 @@ public final class PartnerLocationSettingsOuterClass {
        * Specifies payloads of regular hours settings for this shop location.
        * </pre>
        *
-       * <code>repeated .bloombox.schema.partner.settings.RegularHoursSettings regular = 1;</code>
+       * <code>repeated .bloombox.partner.settings.RegularHoursSettings regular = 1;</code>
        */
       public java.util.List<io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.RegularHoursSettings> getRegularList() {
         if (regularBuilder_ == null) {
@@ -18490,7 +18898,7 @@ public final class PartnerLocationSettingsOuterClass {
        * Specifies payloads of regular hours settings for this shop location.
        * </pre>
        *
-       * <code>repeated .bloombox.schema.partner.settings.RegularHoursSettings regular = 1;</code>
+       * <code>repeated .bloombox.partner.settings.RegularHoursSettings regular = 1;</code>
        */
       public int getRegularCount() {
         if (regularBuilder_ == null) {
@@ -18504,7 +18912,7 @@ public final class PartnerLocationSettingsOuterClass {
        * Specifies payloads of regular hours settings for this shop location.
        * </pre>
        *
-       * <code>repeated .bloombox.schema.partner.settings.RegularHoursSettings regular = 1;</code>
+       * <code>repeated .bloombox.partner.settings.RegularHoursSettings regular = 1;</code>
        */
       public io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.RegularHoursSettings getRegular(int index) {
         if (regularBuilder_ == null) {
@@ -18518,7 +18926,7 @@ public final class PartnerLocationSettingsOuterClass {
        * Specifies payloads of regular hours settings for this shop location.
        * </pre>
        *
-       * <code>repeated .bloombox.schema.partner.settings.RegularHoursSettings regular = 1;</code>
+       * <code>repeated .bloombox.partner.settings.RegularHoursSettings regular = 1;</code>
        */
       public Builder setRegular(
           int index, io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.RegularHoursSettings value) {
@@ -18539,7 +18947,7 @@ public final class PartnerLocationSettingsOuterClass {
        * Specifies payloads of regular hours settings for this shop location.
        * </pre>
        *
-       * <code>repeated .bloombox.schema.partner.settings.RegularHoursSettings regular = 1;</code>
+       * <code>repeated .bloombox.partner.settings.RegularHoursSettings regular = 1;</code>
        */
       public Builder setRegular(
           int index, io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.RegularHoursSettings.Builder builderForValue) {
@@ -18557,7 +18965,7 @@ public final class PartnerLocationSettingsOuterClass {
        * Specifies payloads of regular hours settings for this shop location.
        * </pre>
        *
-       * <code>repeated .bloombox.schema.partner.settings.RegularHoursSettings regular = 1;</code>
+       * <code>repeated .bloombox.partner.settings.RegularHoursSettings regular = 1;</code>
        */
       public Builder addRegular(io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.RegularHoursSettings value) {
         if (regularBuilder_ == null) {
@@ -18577,7 +18985,7 @@ public final class PartnerLocationSettingsOuterClass {
        * Specifies payloads of regular hours settings for this shop location.
        * </pre>
        *
-       * <code>repeated .bloombox.schema.partner.settings.RegularHoursSettings regular = 1;</code>
+       * <code>repeated .bloombox.partner.settings.RegularHoursSettings regular = 1;</code>
        */
       public Builder addRegular(
           int index, io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.RegularHoursSettings value) {
@@ -18598,7 +19006,7 @@ public final class PartnerLocationSettingsOuterClass {
        * Specifies payloads of regular hours settings for this shop location.
        * </pre>
        *
-       * <code>repeated .bloombox.schema.partner.settings.RegularHoursSettings regular = 1;</code>
+       * <code>repeated .bloombox.partner.settings.RegularHoursSettings regular = 1;</code>
        */
       public Builder addRegular(
           io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.RegularHoursSettings.Builder builderForValue) {
@@ -18616,7 +19024,7 @@ public final class PartnerLocationSettingsOuterClass {
        * Specifies payloads of regular hours settings for this shop location.
        * </pre>
        *
-       * <code>repeated .bloombox.schema.partner.settings.RegularHoursSettings regular = 1;</code>
+       * <code>repeated .bloombox.partner.settings.RegularHoursSettings regular = 1;</code>
        */
       public Builder addRegular(
           int index, io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.RegularHoursSettings.Builder builderForValue) {
@@ -18634,7 +19042,7 @@ public final class PartnerLocationSettingsOuterClass {
        * Specifies payloads of regular hours settings for this shop location.
        * </pre>
        *
-       * <code>repeated .bloombox.schema.partner.settings.RegularHoursSettings regular = 1;</code>
+       * <code>repeated .bloombox.partner.settings.RegularHoursSettings regular = 1;</code>
        */
       public Builder addAllRegular(
           java.lang.Iterable<? extends io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.RegularHoursSettings> values) {
@@ -18653,7 +19061,7 @@ public final class PartnerLocationSettingsOuterClass {
        * Specifies payloads of regular hours settings for this shop location.
        * </pre>
        *
-       * <code>repeated .bloombox.schema.partner.settings.RegularHoursSettings regular = 1;</code>
+       * <code>repeated .bloombox.partner.settings.RegularHoursSettings regular = 1;</code>
        */
       public Builder clearRegular() {
         if (regularBuilder_ == null) {
@@ -18670,7 +19078,7 @@ public final class PartnerLocationSettingsOuterClass {
        * Specifies payloads of regular hours settings for this shop location.
        * </pre>
        *
-       * <code>repeated .bloombox.schema.partner.settings.RegularHoursSettings regular = 1;</code>
+       * <code>repeated .bloombox.partner.settings.RegularHoursSettings regular = 1;</code>
        */
       public Builder removeRegular(int index) {
         if (regularBuilder_ == null) {
@@ -18687,7 +19095,7 @@ public final class PartnerLocationSettingsOuterClass {
        * Specifies payloads of regular hours settings for this shop location.
        * </pre>
        *
-       * <code>repeated .bloombox.schema.partner.settings.RegularHoursSettings regular = 1;</code>
+       * <code>repeated .bloombox.partner.settings.RegularHoursSettings regular = 1;</code>
        */
       public io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.RegularHoursSettings.Builder getRegularBuilder(
           int index) {
@@ -18698,7 +19106,7 @@ public final class PartnerLocationSettingsOuterClass {
        * Specifies payloads of regular hours settings for this shop location.
        * </pre>
        *
-       * <code>repeated .bloombox.schema.partner.settings.RegularHoursSettings regular = 1;</code>
+       * <code>repeated .bloombox.partner.settings.RegularHoursSettings regular = 1;</code>
        */
       public io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.RegularHoursSettingsOrBuilder getRegularOrBuilder(
           int index) {
@@ -18712,7 +19120,7 @@ public final class PartnerLocationSettingsOuterClass {
        * Specifies payloads of regular hours settings for this shop location.
        * </pre>
        *
-       * <code>repeated .bloombox.schema.partner.settings.RegularHoursSettings regular = 1;</code>
+       * <code>repeated .bloombox.partner.settings.RegularHoursSettings regular = 1;</code>
        */
       public java.util.List<? extends io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.RegularHoursSettingsOrBuilder> 
            getRegularOrBuilderList() {
@@ -18727,7 +19135,7 @@ public final class PartnerLocationSettingsOuterClass {
        * Specifies payloads of regular hours settings for this shop location.
        * </pre>
        *
-       * <code>repeated .bloombox.schema.partner.settings.RegularHoursSettings regular = 1;</code>
+       * <code>repeated .bloombox.partner.settings.RegularHoursSettings regular = 1;</code>
        */
       public io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.RegularHoursSettings.Builder addRegularBuilder() {
         return getRegularFieldBuilder().addBuilder(
@@ -18738,7 +19146,7 @@ public final class PartnerLocationSettingsOuterClass {
        * Specifies payloads of regular hours settings for this shop location.
        * </pre>
        *
-       * <code>repeated .bloombox.schema.partner.settings.RegularHoursSettings regular = 1;</code>
+       * <code>repeated .bloombox.partner.settings.RegularHoursSettings regular = 1;</code>
        */
       public io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.RegularHoursSettings.Builder addRegularBuilder(
           int index) {
@@ -18750,7 +19158,7 @@ public final class PartnerLocationSettingsOuterClass {
        * Specifies payloads of regular hours settings for this shop location.
        * </pre>
        *
-       * <code>repeated .bloombox.schema.partner.settings.RegularHoursSettings regular = 1;</code>
+       * <code>repeated .bloombox.partner.settings.RegularHoursSettings regular = 1;</code>
        */
       public java.util.List<io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.RegularHoursSettings.Builder> 
            getRegularBuilderList() {
@@ -18802,7 +19210,7 @@ public final class PartnerLocationSettingsOuterClass {
        * Specifies paylods of special hours settings for this shop location, mapped to the day they apply.
        * </pre>
        *
-       * <code>map&lt;string, .bloombox.schema.partner.settings.SpecialHoursSettings&gt; special = 2;</code>
+       * <code>map&lt;string, .bloombox.partner.settings.SpecialHoursSettings&gt; special = 2;</code>
        */
 
       public boolean containsSpecial(
@@ -18822,7 +19230,7 @@ public final class PartnerLocationSettingsOuterClass {
        * Specifies paylods of special hours settings for this shop location, mapped to the day they apply.
        * </pre>
        *
-       * <code>map&lt;string, .bloombox.schema.partner.settings.SpecialHoursSettings&gt; special = 2;</code>
+       * <code>map&lt;string, .bloombox.partner.settings.SpecialHoursSettings&gt; special = 2;</code>
        */
 
       public java.util.Map<java.lang.String, io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.SpecialHoursSettings> getSpecialMap() {
@@ -18833,7 +19241,7 @@ public final class PartnerLocationSettingsOuterClass {
        * Specifies paylods of special hours settings for this shop location, mapped to the day they apply.
        * </pre>
        *
-       * <code>map&lt;string, .bloombox.schema.partner.settings.SpecialHoursSettings&gt; special = 2;</code>
+       * <code>map&lt;string, .bloombox.partner.settings.SpecialHoursSettings&gt; special = 2;</code>
        */
 
       public io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.SpecialHoursSettings getSpecialOrDefault(
@@ -18849,7 +19257,7 @@ public final class PartnerLocationSettingsOuterClass {
        * Specifies paylods of special hours settings for this shop location, mapped to the day they apply.
        * </pre>
        *
-       * <code>map&lt;string, .bloombox.schema.partner.settings.SpecialHoursSettings&gt; special = 2;</code>
+       * <code>map&lt;string, .bloombox.partner.settings.SpecialHoursSettings&gt; special = 2;</code>
        */
 
       public io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.SpecialHoursSettings getSpecialOrThrow(
@@ -18873,7 +19281,7 @@ public final class PartnerLocationSettingsOuterClass {
        * Specifies paylods of special hours settings for this shop location, mapped to the day they apply.
        * </pre>
        *
-       * <code>map&lt;string, .bloombox.schema.partner.settings.SpecialHoursSettings&gt; special = 2;</code>
+       * <code>map&lt;string, .bloombox.partner.settings.SpecialHoursSettings&gt; special = 2;</code>
        */
 
       public Builder removeSpecial(
@@ -18896,7 +19304,7 @@ public final class PartnerLocationSettingsOuterClass {
        * Specifies paylods of special hours settings for this shop location, mapped to the day they apply.
        * </pre>
        *
-       * <code>map&lt;string, .bloombox.schema.partner.settings.SpecialHoursSettings&gt; special = 2;</code>
+       * <code>map&lt;string, .bloombox.partner.settings.SpecialHoursSettings&gt; special = 2;</code>
        */
       public Builder putSpecial(
           java.lang.String key,
@@ -18912,7 +19320,7 @@ public final class PartnerLocationSettingsOuterClass {
        * Specifies paylods of special hours settings for this shop location, mapped to the day they apply.
        * </pre>
        *
-       * <code>map&lt;string, .bloombox.schema.partner.settings.SpecialHoursSettings&gt; special = 2;</code>
+       * <code>map&lt;string, .bloombox.partner.settings.SpecialHoursSettings&gt; special = 2;</code>
        */
 
       public Builder putAllSpecial(
@@ -18921,21 +19329,23 @@ public final class PartnerLocationSettingsOuterClass {
             .putAll(values);
         return this;
       }
+      @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
         return super.setUnknownFieldsProto3(unknownFields);
       }
 
+      @java.lang.Override
       public final Builder mergeUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
         return super.mergeUnknownFields(unknownFields);
       }
 
 
-      // @@protoc_insertion_point(builder_scope:bloombox.schema.partner.settings.ShopHoursSettings)
+      // @@protoc_insertion_point(builder_scope:bloombox.partner.settings.ShopHoursSettings)
     }
 
-    // @@protoc_insertion_point(class_scope:bloombox.schema.partner.settings.ShopHoursSettings)
+    // @@protoc_insertion_point(class_scope:bloombox.partner.settings.ShopHoursSettings)
     private static final io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.ShopHoursSettings DEFAULT_INSTANCE;
     static {
       DEFAULT_INSTANCE = new io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.ShopHoursSettings();
@@ -18947,6 +19357,7 @@ public final class PartnerLocationSettingsOuterClass {
 
     private static final com.google.protobuf.Parser<ShopHoursSettings>
         PARSER = new com.google.protobuf.AbstractParser<ShopHoursSettings>() {
+      @java.lang.Override
       public ShopHoursSettings parsePartialFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -18964,6 +19375,7 @@ public final class PartnerLocationSettingsOuterClass {
       return PARSER;
     }
 
+    @java.lang.Override
     public io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.ShopHoursSettings getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
@@ -18971,7 +19383,7 @@ public final class PartnerLocationSettingsOuterClass {
   }
 
   public interface ShopServiceSettingsOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:bloombox.schema.partner.settings.ShopServiceSettings)
+      // @@protoc_insertion_point(interface_extends:bloombox.partner.settings.ShopServiceSettings)
       com.google.protobuf.MessageOrBuilder {
 
     /**
@@ -19033,11 +19445,11 @@ public final class PartnerLocationSettingsOuterClass {
    * Flags that indicate the services offered through a particular shop.
    * </pre>
    *
-   * Protobuf type {@code bloombox.schema.partner.settings.ShopServiceSettings}
+   * Protobuf type {@code bloombox.partner.settings.ShopServiceSettings}
    */
   public  static final class ShopServiceSettings extends
       com.google.protobuf.GeneratedMessageV3 implements
-      // @@protoc_insertion_point(message_implements:bloombox.schema.partner.settings.ShopServiceSettings)
+      // @@protoc_insertion_point(message_implements:bloombox.partner.settings.ShopServiceSettings)
       ShopServiceSettingsOrBuilder {
   private static final long serialVersionUID = 0L;
     // Use ShopServiceSettings.newBuilder() to construct.
@@ -19077,13 +19489,6 @@ public final class PartnerLocationSettingsOuterClass {
             case 0:
               done = true;
               break;
-            default: {
-              if (!parseUnknownFieldProto3(
-                  input, unknownFields, extensionRegistry, tag)) {
-                done = true;
-              }
-              break;
-            }
             case 8: {
 
               delivery_ = input.readBool();
@@ -19114,6 +19519,13 @@ public final class PartnerLocationSettingsOuterClass {
               adultUse_ = input.readBool();
               break;
             }
+            default: {
+              if (!parseUnknownFieldProto3(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
           }
         }
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
@@ -19128,12 +19540,13 @@ public final class PartnerLocationSettingsOuterClass {
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.internal_static_bloombox_schema_partner_settings_ShopServiceSettings_descriptor;
+      return io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.internal_static_bloombox_partner_settings_ShopServiceSettings_descriptor;
     }
 
+    @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.internal_static_bloombox_schema_partner_settings_ShopServiceSettings_fieldAccessorTable
+      return io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.internal_static_bloombox_partner_settings_ShopServiceSettings_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
               io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.ShopServiceSettings.class, io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.ShopServiceSettings.Builder.class);
     }
@@ -19217,6 +19630,7 @@ public final class PartnerLocationSettingsOuterClass {
     }
 
     private byte memoizedIsInitialized = -1;
+    @java.lang.Override
     public final boolean isInitialized() {
       byte isInitialized = memoizedIsInitialized;
       if (isInitialized == 1) return true;
@@ -19226,6 +19640,7 @@ public final class PartnerLocationSettingsOuterClass {
       return true;
     }
 
+    @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
       if (delivery_ != false) {
@@ -19249,6 +19664,7 @@ public final class PartnerLocationSettingsOuterClass {
       unknownFields.writeTo(output);
     }
 
+    @java.lang.Override
     public int getSerializedSize() {
       int size = memoizedSize;
       if (size != -1) return size;
@@ -19410,6 +19826,7 @@ public final class PartnerLocationSettingsOuterClass {
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
 
+    @java.lang.Override
     public Builder newBuilderForType() { return newBuilder(); }
     public static Builder newBuilder() {
       return DEFAULT_INSTANCE.toBuilder();
@@ -19417,6 +19834,7 @@ public final class PartnerLocationSettingsOuterClass {
     public static Builder newBuilder(io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.ShopServiceSettings prototype) {
       return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
     }
+    @java.lang.Override
     public Builder toBuilder() {
       return this == DEFAULT_INSTANCE
           ? new Builder() : new Builder().mergeFrom(this);
@@ -19433,20 +19851,21 @@ public final class PartnerLocationSettingsOuterClass {
      * Flags that indicate the services offered through a particular shop.
      * </pre>
      *
-     * Protobuf type {@code bloombox.schema.partner.settings.ShopServiceSettings}
+     * Protobuf type {@code bloombox.partner.settings.ShopServiceSettings}
      */
     public static final class Builder extends
         com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:bloombox.schema.partner.settings.ShopServiceSettings)
+        // @@protoc_insertion_point(builder_implements:bloombox.partner.settings.ShopServiceSettings)
         io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.ShopServiceSettingsOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.internal_static_bloombox_schema_partner_settings_ShopServiceSettings_descriptor;
+        return io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.internal_static_bloombox_partner_settings_ShopServiceSettings_descriptor;
       }
 
+      @java.lang.Override
       protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.internal_static_bloombox_schema_partner_settings_ShopServiceSettings_fieldAccessorTable
+        return io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.internal_static_bloombox_partner_settings_ShopServiceSettings_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
                 io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.ShopServiceSettings.class, io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.ShopServiceSettings.Builder.class);
       }
@@ -19466,6 +19885,7 @@ public final class PartnerLocationSettingsOuterClass {
                 .alwaysUseFieldBuilders) {
         }
       }
+      @java.lang.Override
       public Builder clear() {
         super.clear();
         delivery_ = false;
@@ -19483,15 +19903,18 @@ public final class PartnerLocationSettingsOuterClass {
         return this;
       }
 
+      @java.lang.Override
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.internal_static_bloombox_schema_partner_settings_ShopServiceSettings_descriptor;
+        return io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.internal_static_bloombox_partner_settings_ShopServiceSettings_descriptor;
       }
 
+      @java.lang.Override
       public io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.ShopServiceSettings getDefaultInstanceForType() {
         return io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.ShopServiceSettings.getDefaultInstance();
       }
 
+      @java.lang.Override
       public io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.ShopServiceSettings build() {
         io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.ShopServiceSettings result = buildPartial();
         if (!result.isInitialized()) {
@@ -19500,6 +19923,7 @@ public final class PartnerLocationSettingsOuterClass {
         return result;
       }
 
+      @java.lang.Override
       public io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.ShopServiceSettings buildPartial() {
         io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.ShopServiceSettings result = new io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.ShopServiceSettings(this);
         result.delivery_ = delivery_;
@@ -19512,32 +19936,39 @@ public final class PartnerLocationSettingsOuterClass {
         return result;
       }
 
+      @java.lang.Override
       public Builder clone() {
         return (Builder) super.clone();
       }
+      @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
         return (Builder) super.setField(field, value);
       }
+      @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
         return (Builder) super.clearField(field);
       }
+      @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
         return (Builder) super.clearOneof(oneof);
       }
+      @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
         return (Builder) super.setRepeatedField(field, index, value);
       }
+      @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
         return (Builder) super.addRepeatedField(field, value);
       }
+      @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
         if (other instanceof io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.ShopServiceSettings) {
           return mergeFrom((io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.ShopServiceSettings)other);
@@ -19572,10 +20003,12 @@ public final class PartnerLocationSettingsOuterClass {
         return this;
       }
 
+      @java.lang.Override
       public final boolean isInitialized() {
         return true;
       }
 
+      @java.lang.Override
       public Builder mergeFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -19821,21 +20254,23 @@ public final class PartnerLocationSettingsOuterClass {
         onChanged();
         return this;
       }
+      @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
         return super.setUnknownFieldsProto3(unknownFields);
       }
 
+      @java.lang.Override
       public final Builder mergeUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
         return super.mergeUnknownFields(unknownFields);
       }
 
 
-      // @@protoc_insertion_point(builder_scope:bloombox.schema.partner.settings.ShopServiceSettings)
+      // @@protoc_insertion_point(builder_scope:bloombox.partner.settings.ShopServiceSettings)
     }
 
-    // @@protoc_insertion_point(class_scope:bloombox.schema.partner.settings.ShopServiceSettings)
+    // @@protoc_insertion_point(class_scope:bloombox.partner.settings.ShopServiceSettings)
     private static final io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.ShopServiceSettings DEFAULT_INSTANCE;
     static {
       DEFAULT_INSTANCE = new io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.ShopServiceSettings();
@@ -19847,6 +20282,7 @@ public final class PartnerLocationSettingsOuterClass {
 
     private static final com.google.protobuf.Parser<ShopServiceSettings>
         PARSER = new com.google.protobuf.AbstractParser<ShopServiceSettings>() {
+      @java.lang.Override
       public ShopServiceSettings parsePartialFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -19864,6 +20300,7 @@ public final class PartnerLocationSettingsOuterClass {
       return PARSER;
     }
 
+    @java.lang.Override
     public io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.ShopServiceSettings getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
@@ -19871,7 +20308,7 @@ public final class PartnerLocationSettingsOuterClass {
   }
 
   public interface DeliveryZipcodeSettingsOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:bloombox.schema.partner.settings.DeliveryZipcodeSettings)
+      // @@protoc_insertion_point(interface_extends:bloombox.partner.settings.DeliveryZipcodeSettings)
       com.google.protobuf.MessageOrBuilder {
 
     /**
@@ -19916,11 +20353,11 @@ public final class PartnerLocationSettingsOuterClass {
    * Settings for delivery according to a specific zipcode.
    * </pre>
    *
-   * Protobuf type {@code bloombox.schema.partner.settings.DeliveryZipcodeSettings}
+   * Protobuf type {@code bloombox.partner.settings.DeliveryZipcodeSettings}
    */
   public  static final class DeliveryZipcodeSettings extends
       com.google.protobuf.GeneratedMessageV3 implements
-      // @@protoc_insertion_point(message_implements:bloombox.schema.partner.settings.DeliveryZipcodeSettings)
+      // @@protoc_insertion_point(message_implements:bloombox.partner.settings.DeliveryZipcodeSettings)
       DeliveryZipcodeSettingsOrBuilder {
   private static final long serialVersionUID = 0L;
     // Use DeliveryZipcodeSettings.newBuilder() to construct.
@@ -19957,13 +20394,6 @@ public final class PartnerLocationSettingsOuterClass {
             case 0:
               done = true;
               break;
-            default: {
-              if (!parseUnknownFieldProto3(
-                  input, unknownFields, extensionRegistry, tag)) {
-                done = true;
-              }
-              break;
-            }
             case 10: {
               java.lang.String s = input.readStringRequireUtf8();
 
@@ -19980,6 +20410,13 @@ public final class PartnerLocationSettingsOuterClass {
               deliveryMinimum_ = input.readUInt32();
               break;
             }
+            default: {
+              if (!parseUnknownFieldProto3(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
           }
         }
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
@@ -19994,12 +20431,13 @@ public final class PartnerLocationSettingsOuterClass {
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.internal_static_bloombox_schema_partner_settings_DeliveryZipcodeSettings_descriptor;
+      return io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.internal_static_bloombox_partner_settings_DeliveryZipcodeSettings_descriptor;
     }
 
+    @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.internal_static_bloombox_schema_partner_settings_DeliveryZipcodeSettings_fieldAccessorTable
+      return io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.internal_static_bloombox_partner_settings_DeliveryZipcodeSettings_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
               io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.DeliveryZipcodeSettings.class, io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.DeliveryZipcodeSettings.Builder.class);
     }
@@ -20074,6 +20512,7 @@ public final class PartnerLocationSettingsOuterClass {
     }
 
     private byte memoizedIsInitialized = -1;
+    @java.lang.Override
     public final boolean isInitialized() {
       byte isInitialized = memoizedIsInitialized;
       if (isInitialized == 1) return true;
@@ -20083,6 +20522,7 @@ public final class PartnerLocationSettingsOuterClass {
       return true;
     }
 
+    @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
       if (!getZipcodeBytes().isEmpty()) {
@@ -20097,6 +20537,7 @@ public final class PartnerLocationSettingsOuterClass {
       unknownFields.writeTo(output);
     }
 
+    @java.lang.Override
     public int getSerializedSize() {
       int size = memoizedSize;
       if (size != -1) return size;
@@ -20228,6 +20669,7 @@ public final class PartnerLocationSettingsOuterClass {
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
 
+    @java.lang.Override
     public Builder newBuilderForType() { return newBuilder(); }
     public static Builder newBuilder() {
       return DEFAULT_INSTANCE.toBuilder();
@@ -20235,6 +20677,7 @@ public final class PartnerLocationSettingsOuterClass {
     public static Builder newBuilder(io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.DeliveryZipcodeSettings prototype) {
       return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
     }
+    @java.lang.Override
     public Builder toBuilder() {
       return this == DEFAULT_INSTANCE
           ? new Builder() : new Builder().mergeFrom(this);
@@ -20251,20 +20694,21 @@ public final class PartnerLocationSettingsOuterClass {
      * Settings for delivery according to a specific zipcode.
      * </pre>
      *
-     * Protobuf type {@code bloombox.schema.partner.settings.DeliveryZipcodeSettings}
+     * Protobuf type {@code bloombox.partner.settings.DeliveryZipcodeSettings}
      */
     public static final class Builder extends
         com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:bloombox.schema.partner.settings.DeliveryZipcodeSettings)
+        // @@protoc_insertion_point(builder_implements:bloombox.partner.settings.DeliveryZipcodeSettings)
         io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.DeliveryZipcodeSettingsOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.internal_static_bloombox_schema_partner_settings_DeliveryZipcodeSettings_descriptor;
+        return io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.internal_static_bloombox_partner_settings_DeliveryZipcodeSettings_descriptor;
       }
 
+      @java.lang.Override
       protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.internal_static_bloombox_schema_partner_settings_DeliveryZipcodeSettings_fieldAccessorTable
+        return io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.internal_static_bloombox_partner_settings_DeliveryZipcodeSettings_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
                 io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.DeliveryZipcodeSettings.class, io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.DeliveryZipcodeSettings.Builder.class);
       }
@@ -20284,6 +20728,7 @@ public final class PartnerLocationSettingsOuterClass {
                 .alwaysUseFieldBuilders) {
         }
       }
+      @java.lang.Override
       public Builder clear() {
         super.clear();
         zipcode_ = "";
@@ -20295,15 +20740,18 @@ public final class PartnerLocationSettingsOuterClass {
         return this;
       }
 
+      @java.lang.Override
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.internal_static_bloombox_schema_partner_settings_DeliveryZipcodeSettings_descriptor;
+        return io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.internal_static_bloombox_partner_settings_DeliveryZipcodeSettings_descriptor;
       }
 
+      @java.lang.Override
       public io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.DeliveryZipcodeSettings getDefaultInstanceForType() {
         return io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.DeliveryZipcodeSettings.getDefaultInstance();
       }
 
+      @java.lang.Override
       public io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.DeliveryZipcodeSettings build() {
         io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.DeliveryZipcodeSettings result = buildPartial();
         if (!result.isInitialized()) {
@@ -20312,6 +20760,7 @@ public final class PartnerLocationSettingsOuterClass {
         return result;
       }
 
+      @java.lang.Override
       public io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.DeliveryZipcodeSettings buildPartial() {
         io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.DeliveryZipcodeSettings result = new io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.DeliveryZipcodeSettings(this);
         result.zipcode_ = zipcode_;
@@ -20321,32 +20770,39 @@ public final class PartnerLocationSettingsOuterClass {
         return result;
       }
 
+      @java.lang.Override
       public Builder clone() {
         return (Builder) super.clone();
       }
+      @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
         return (Builder) super.setField(field, value);
       }
+      @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
         return (Builder) super.clearField(field);
       }
+      @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
         return (Builder) super.clearOneof(oneof);
       }
+      @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
         return (Builder) super.setRepeatedField(field, index, value);
       }
+      @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
         return (Builder) super.addRepeatedField(field, value);
       }
+      @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
         if (other instanceof io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.DeliveryZipcodeSettings) {
           return mergeFrom((io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.DeliveryZipcodeSettings)other);
@@ -20373,10 +20829,12 @@ public final class PartnerLocationSettingsOuterClass {
         return this;
       }
 
+      @java.lang.Override
       public final boolean isInitialized() {
         return true;
       }
 
+      @java.lang.Override
       public Builder mergeFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -20562,21 +21020,23 @@ public final class PartnerLocationSettingsOuterClass {
         onChanged();
         return this;
       }
+      @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
         return super.setUnknownFieldsProto3(unknownFields);
       }
 
+      @java.lang.Override
       public final Builder mergeUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
         return super.mergeUnknownFields(unknownFields);
       }
 
 
-      // @@protoc_insertion_point(builder_scope:bloombox.schema.partner.settings.DeliveryZipcodeSettings)
+      // @@protoc_insertion_point(builder_scope:bloombox.partner.settings.DeliveryZipcodeSettings)
     }
 
-    // @@protoc_insertion_point(class_scope:bloombox.schema.partner.settings.DeliveryZipcodeSettings)
+    // @@protoc_insertion_point(class_scope:bloombox.partner.settings.DeliveryZipcodeSettings)
     private static final io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.DeliveryZipcodeSettings DEFAULT_INSTANCE;
     static {
       DEFAULT_INSTANCE = new io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.DeliveryZipcodeSettings();
@@ -20588,6 +21048,7 @@ public final class PartnerLocationSettingsOuterClass {
 
     private static final com.google.protobuf.Parser<DeliveryZipcodeSettings>
         PARSER = new com.google.protobuf.AbstractParser<DeliveryZipcodeSettings>() {
+      @java.lang.Override
       public DeliveryZipcodeSettings parsePartialFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -20605,6 +21066,7 @@ public final class PartnerLocationSettingsOuterClass {
       return PARSER;
     }
 
+    @java.lang.Override
     public io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.DeliveryZipcodeSettings getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
@@ -20612,7 +21074,7 @@ public final class PartnerLocationSettingsOuterClass {
   }
 
   public interface DeliverySettingsOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:bloombox.schema.partner.settings.DeliverySettings)
+      // @@protoc_insertion_point(interface_extends:bloombox.partner.settings.DeliverySettings)
       com.google.protobuf.MessageOrBuilder {
 
     /**
@@ -20629,7 +21091,7 @@ public final class PartnerLocationSettingsOuterClass {
      * Specifies zipcode-level settings for delivery.
      * </pre>
      *
-     * <code>map&lt;string, .bloombox.schema.partner.settings.DeliveryZipcodeSettings&gt; zipcodes = 2;</code>
+     * <code>map&lt;string, .bloombox.partner.settings.DeliveryZipcodeSettings&gt; zipcodes = 2;</code>
      */
     int getZipcodesCount();
     /**
@@ -20637,7 +21099,7 @@ public final class PartnerLocationSettingsOuterClass {
      * Specifies zipcode-level settings for delivery.
      * </pre>
      *
-     * <code>map&lt;string, .bloombox.schema.partner.settings.DeliveryZipcodeSettings&gt; zipcodes = 2;</code>
+     * <code>map&lt;string, .bloombox.partner.settings.DeliveryZipcodeSettings&gt; zipcodes = 2;</code>
      */
     boolean containsZipcodes(
         java.lang.String key);
@@ -20652,7 +21114,7 @@ public final class PartnerLocationSettingsOuterClass {
      * Specifies zipcode-level settings for delivery.
      * </pre>
      *
-     * <code>map&lt;string, .bloombox.schema.partner.settings.DeliveryZipcodeSettings&gt; zipcodes = 2;</code>
+     * <code>map&lt;string, .bloombox.partner.settings.DeliveryZipcodeSettings&gt; zipcodes = 2;</code>
      */
     java.util.Map<java.lang.String, io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.DeliveryZipcodeSettings>
     getZipcodesMap();
@@ -20661,7 +21123,7 @@ public final class PartnerLocationSettingsOuterClass {
      * Specifies zipcode-level settings for delivery.
      * </pre>
      *
-     * <code>map&lt;string, .bloombox.schema.partner.settings.DeliveryZipcodeSettings&gt; zipcodes = 2;</code>
+     * <code>map&lt;string, .bloombox.partner.settings.DeliveryZipcodeSettings&gt; zipcodes = 2;</code>
      */
 
     io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.DeliveryZipcodeSettings getZipcodesOrDefault(
@@ -20672,7 +21134,7 @@ public final class PartnerLocationSettingsOuterClass {
      * Specifies zipcode-level settings for delivery.
      * </pre>
      *
-     * <code>map&lt;string, .bloombox.schema.partner.settings.DeliveryZipcodeSettings&gt; zipcodes = 2;</code>
+     * <code>map&lt;string, .bloombox.partner.settings.DeliveryZipcodeSettings&gt; zipcodes = 2;</code>
      */
 
     io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.DeliveryZipcodeSettings getZipcodesOrThrow(
@@ -20683,11 +21145,11 @@ public final class PartnerLocationSettingsOuterClass {
    * Settings for delivery services.
    * </pre>
    *
-   * Protobuf type {@code bloombox.schema.partner.settings.DeliverySettings}
+   * Protobuf type {@code bloombox.partner.settings.DeliverySettings}
    */
   public  static final class DeliverySettings extends
       com.google.protobuf.GeneratedMessageV3 implements
-      // @@protoc_insertion_point(message_implements:bloombox.schema.partner.settings.DeliverySettings)
+      // @@protoc_insertion_point(message_implements:bloombox.partner.settings.DeliverySettings)
       DeliverySettingsOrBuilder {
   private static final long serialVersionUID = 0L;
     // Use DeliverySettings.newBuilder() to construct.
@@ -20722,13 +21184,6 @@ public final class PartnerLocationSettingsOuterClass {
             case 0:
               done = true;
               break;
-            default: {
-              if (!parseUnknownFieldProto3(
-                  input, unknownFields, extensionRegistry, tag)) {
-                done = true;
-              }
-              break;
-            }
             case 8: {
 
               globalMinimum_ = input.readUInt32();
@@ -20747,6 +21202,13 @@ public final class PartnerLocationSettingsOuterClass {
                   zipcodes__.getKey(), zipcodes__.getValue());
               break;
             }
+            default: {
+              if (!parseUnknownFieldProto3(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
           }
         }
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
@@ -20761,10 +21223,11 @@ public final class PartnerLocationSettingsOuterClass {
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.internal_static_bloombox_schema_partner_settings_DeliverySettings_descriptor;
+      return io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.internal_static_bloombox_partner_settings_DeliverySettings_descriptor;
     }
 
     @SuppressWarnings({"rawtypes"})
+    @java.lang.Override
     protected com.google.protobuf.MapField internalGetMapField(
         int number) {
       switch (number) {
@@ -20775,9 +21238,10 @@ public final class PartnerLocationSettingsOuterClass {
               "Invalid map field number: " + number);
       }
     }
+    @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.internal_static_bloombox_schema_partner_settings_DeliverySettings_fieldAccessorTable
+      return io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.internal_static_bloombox_partner_settings_DeliverySettings_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
               io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.DeliverySettings.class, io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.DeliverySettings.Builder.class);
     }
@@ -20802,7 +21266,7 @@ public final class PartnerLocationSettingsOuterClass {
           java.lang.String, io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.DeliveryZipcodeSettings> defaultEntry =
               com.google.protobuf.MapEntry
               .<java.lang.String, io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.DeliveryZipcodeSettings>newDefaultInstance(
-                  io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.internal_static_bloombox_schema_partner_settings_DeliverySettings_ZipcodesEntry_descriptor, 
+                  io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.internal_static_bloombox_partner_settings_DeliverySettings_ZipcodesEntry_descriptor, 
                   com.google.protobuf.WireFormat.FieldType.STRING,
                   "",
                   com.google.protobuf.WireFormat.FieldType.MESSAGE,
@@ -20827,7 +21291,7 @@ public final class PartnerLocationSettingsOuterClass {
      * Specifies zipcode-level settings for delivery.
      * </pre>
      *
-     * <code>map&lt;string, .bloombox.schema.partner.settings.DeliveryZipcodeSettings&gt; zipcodes = 2;</code>
+     * <code>map&lt;string, .bloombox.partner.settings.DeliveryZipcodeSettings&gt; zipcodes = 2;</code>
      */
 
     public boolean containsZipcodes(
@@ -20847,7 +21311,7 @@ public final class PartnerLocationSettingsOuterClass {
      * Specifies zipcode-level settings for delivery.
      * </pre>
      *
-     * <code>map&lt;string, .bloombox.schema.partner.settings.DeliveryZipcodeSettings&gt; zipcodes = 2;</code>
+     * <code>map&lt;string, .bloombox.partner.settings.DeliveryZipcodeSettings&gt; zipcodes = 2;</code>
      */
 
     public java.util.Map<java.lang.String, io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.DeliveryZipcodeSettings> getZipcodesMap() {
@@ -20858,7 +21322,7 @@ public final class PartnerLocationSettingsOuterClass {
      * Specifies zipcode-level settings for delivery.
      * </pre>
      *
-     * <code>map&lt;string, .bloombox.schema.partner.settings.DeliveryZipcodeSettings&gt; zipcodes = 2;</code>
+     * <code>map&lt;string, .bloombox.partner.settings.DeliveryZipcodeSettings&gt; zipcodes = 2;</code>
      */
 
     public io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.DeliveryZipcodeSettings getZipcodesOrDefault(
@@ -20874,7 +21338,7 @@ public final class PartnerLocationSettingsOuterClass {
      * Specifies zipcode-level settings for delivery.
      * </pre>
      *
-     * <code>map&lt;string, .bloombox.schema.partner.settings.DeliveryZipcodeSettings&gt; zipcodes = 2;</code>
+     * <code>map&lt;string, .bloombox.partner.settings.DeliveryZipcodeSettings&gt; zipcodes = 2;</code>
      */
 
     public io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.DeliveryZipcodeSettings getZipcodesOrThrow(
@@ -20889,6 +21353,7 @@ public final class PartnerLocationSettingsOuterClass {
     }
 
     private byte memoizedIsInitialized = -1;
+    @java.lang.Override
     public final boolean isInitialized() {
       byte isInitialized = memoizedIsInitialized;
       if (isInitialized == 1) return true;
@@ -20898,6 +21363,7 @@ public final class PartnerLocationSettingsOuterClass {
       return true;
     }
 
+    @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
       if (globalMinimum_ != 0) {
@@ -20912,6 +21378,7 @@ public final class PartnerLocationSettingsOuterClass {
       unknownFields.writeTo(output);
     }
 
+    @java.lang.Override
     public int getSerializedSize() {
       int size = memoizedSize;
       if (size != -1) return size;
@@ -21043,6 +21510,7 @@ public final class PartnerLocationSettingsOuterClass {
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
 
+    @java.lang.Override
     public Builder newBuilderForType() { return newBuilder(); }
     public static Builder newBuilder() {
       return DEFAULT_INSTANCE.toBuilder();
@@ -21050,6 +21518,7 @@ public final class PartnerLocationSettingsOuterClass {
     public static Builder newBuilder(io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.DeliverySettings prototype) {
       return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
     }
+    @java.lang.Override
     public Builder toBuilder() {
       return this == DEFAULT_INSTANCE
           ? new Builder() : new Builder().mergeFrom(this);
@@ -21066,15 +21535,15 @@ public final class PartnerLocationSettingsOuterClass {
      * Settings for delivery services.
      * </pre>
      *
-     * Protobuf type {@code bloombox.schema.partner.settings.DeliverySettings}
+     * Protobuf type {@code bloombox.partner.settings.DeliverySettings}
      */
     public static final class Builder extends
         com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:bloombox.schema.partner.settings.DeliverySettings)
+        // @@protoc_insertion_point(builder_implements:bloombox.partner.settings.DeliverySettings)
         io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.DeliverySettingsOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.internal_static_bloombox_schema_partner_settings_DeliverySettings_descriptor;
+        return io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.internal_static_bloombox_partner_settings_DeliverySettings_descriptor;
       }
 
       @SuppressWarnings({"rawtypes"})
@@ -21099,9 +21568,10 @@ public final class PartnerLocationSettingsOuterClass {
                 "Invalid map field number: " + number);
         }
       }
+      @java.lang.Override
       protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.internal_static_bloombox_schema_partner_settings_DeliverySettings_fieldAccessorTable
+        return io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.internal_static_bloombox_partner_settings_DeliverySettings_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
                 io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.DeliverySettings.class, io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.DeliverySettings.Builder.class);
       }
@@ -21121,6 +21591,7 @@ public final class PartnerLocationSettingsOuterClass {
                 .alwaysUseFieldBuilders) {
         }
       }
+      @java.lang.Override
       public Builder clear() {
         super.clear();
         globalMinimum_ = 0;
@@ -21129,15 +21600,18 @@ public final class PartnerLocationSettingsOuterClass {
         return this;
       }
 
+      @java.lang.Override
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.internal_static_bloombox_schema_partner_settings_DeliverySettings_descriptor;
+        return io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.internal_static_bloombox_partner_settings_DeliverySettings_descriptor;
       }
 
+      @java.lang.Override
       public io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.DeliverySettings getDefaultInstanceForType() {
         return io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.DeliverySettings.getDefaultInstance();
       }
 
+      @java.lang.Override
       public io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.DeliverySettings build() {
         io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.DeliverySettings result = buildPartial();
         if (!result.isInitialized()) {
@@ -21146,6 +21620,7 @@ public final class PartnerLocationSettingsOuterClass {
         return result;
       }
 
+      @java.lang.Override
       public io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.DeliverySettings buildPartial() {
         io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.DeliverySettings result = new io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.DeliverySettings(this);
         int from_bitField0_ = bitField0_;
@@ -21158,32 +21633,39 @@ public final class PartnerLocationSettingsOuterClass {
         return result;
       }
 
+      @java.lang.Override
       public Builder clone() {
         return (Builder) super.clone();
       }
+      @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
         return (Builder) super.setField(field, value);
       }
+      @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
         return (Builder) super.clearField(field);
       }
+      @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
         return (Builder) super.clearOneof(oneof);
       }
+      @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
         return (Builder) super.setRepeatedField(field, index, value);
       }
+      @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
         return (Builder) super.addRepeatedField(field, value);
       }
+      @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
         if (other instanceof io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.DeliverySettings) {
           return mergeFrom((io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.DeliverySettings)other);
@@ -21205,10 +21687,12 @@ public final class PartnerLocationSettingsOuterClass {
         return this;
       }
 
+      @java.lang.Override
       public final boolean isInitialized() {
         return true;
       }
 
+      @java.lang.Override
       public Builder mergeFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -21297,7 +21781,7 @@ public final class PartnerLocationSettingsOuterClass {
        * Specifies zipcode-level settings for delivery.
        * </pre>
        *
-       * <code>map&lt;string, .bloombox.schema.partner.settings.DeliveryZipcodeSettings&gt; zipcodes = 2;</code>
+       * <code>map&lt;string, .bloombox.partner.settings.DeliveryZipcodeSettings&gt; zipcodes = 2;</code>
        */
 
       public boolean containsZipcodes(
@@ -21317,7 +21801,7 @@ public final class PartnerLocationSettingsOuterClass {
        * Specifies zipcode-level settings for delivery.
        * </pre>
        *
-       * <code>map&lt;string, .bloombox.schema.partner.settings.DeliveryZipcodeSettings&gt; zipcodes = 2;</code>
+       * <code>map&lt;string, .bloombox.partner.settings.DeliveryZipcodeSettings&gt; zipcodes = 2;</code>
        */
 
       public java.util.Map<java.lang.String, io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.DeliveryZipcodeSettings> getZipcodesMap() {
@@ -21328,7 +21812,7 @@ public final class PartnerLocationSettingsOuterClass {
        * Specifies zipcode-level settings for delivery.
        * </pre>
        *
-       * <code>map&lt;string, .bloombox.schema.partner.settings.DeliveryZipcodeSettings&gt; zipcodes = 2;</code>
+       * <code>map&lt;string, .bloombox.partner.settings.DeliveryZipcodeSettings&gt; zipcodes = 2;</code>
        */
 
       public io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.DeliveryZipcodeSettings getZipcodesOrDefault(
@@ -21344,7 +21828,7 @@ public final class PartnerLocationSettingsOuterClass {
        * Specifies zipcode-level settings for delivery.
        * </pre>
        *
-       * <code>map&lt;string, .bloombox.schema.partner.settings.DeliveryZipcodeSettings&gt; zipcodes = 2;</code>
+       * <code>map&lt;string, .bloombox.partner.settings.DeliveryZipcodeSettings&gt; zipcodes = 2;</code>
        */
 
       public io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.DeliveryZipcodeSettings getZipcodesOrThrow(
@@ -21368,7 +21852,7 @@ public final class PartnerLocationSettingsOuterClass {
        * Specifies zipcode-level settings for delivery.
        * </pre>
        *
-       * <code>map&lt;string, .bloombox.schema.partner.settings.DeliveryZipcodeSettings&gt; zipcodes = 2;</code>
+       * <code>map&lt;string, .bloombox.partner.settings.DeliveryZipcodeSettings&gt; zipcodes = 2;</code>
        */
 
       public Builder removeZipcodes(
@@ -21391,7 +21875,7 @@ public final class PartnerLocationSettingsOuterClass {
        * Specifies zipcode-level settings for delivery.
        * </pre>
        *
-       * <code>map&lt;string, .bloombox.schema.partner.settings.DeliveryZipcodeSettings&gt; zipcodes = 2;</code>
+       * <code>map&lt;string, .bloombox.partner.settings.DeliveryZipcodeSettings&gt; zipcodes = 2;</code>
        */
       public Builder putZipcodes(
           java.lang.String key,
@@ -21407,7 +21891,7 @@ public final class PartnerLocationSettingsOuterClass {
        * Specifies zipcode-level settings for delivery.
        * </pre>
        *
-       * <code>map&lt;string, .bloombox.schema.partner.settings.DeliveryZipcodeSettings&gt; zipcodes = 2;</code>
+       * <code>map&lt;string, .bloombox.partner.settings.DeliveryZipcodeSettings&gt; zipcodes = 2;</code>
        */
 
       public Builder putAllZipcodes(
@@ -21416,21 +21900,23 @@ public final class PartnerLocationSettingsOuterClass {
             .putAll(values);
         return this;
       }
+      @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
         return super.setUnknownFieldsProto3(unknownFields);
       }
 
+      @java.lang.Override
       public final Builder mergeUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
         return super.mergeUnknownFields(unknownFields);
       }
 
 
-      // @@protoc_insertion_point(builder_scope:bloombox.schema.partner.settings.DeliverySettings)
+      // @@protoc_insertion_point(builder_scope:bloombox.partner.settings.DeliverySettings)
     }
 
-    // @@protoc_insertion_point(class_scope:bloombox.schema.partner.settings.DeliverySettings)
+    // @@protoc_insertion_point(class_scope:bloombox.partner.settings.DeliverySettings)
     private static final io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.DeliverySettings DEFAULT_INSTANCE;
     static {
       DEFAULT_INSTANCE = new io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.DeliverySettings();
@@ -21442,6 +21928,7 @@ public final class PartnerLocationSettingsOuterClass {
 
     private static final com.google.protobuf.Parser<DeliverySettings>
         PARSER = new com.google.protobuf.AbstractParser<DeliverySettings>() {
+      @java.lang.Override
       public DeliverySettings parsePartialFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -21459,6 +21946,7 @@ public final class PartnerLocationSettingsOuterClass {
       return PARSER;
     }
 
+    @java.lang.Override
     public io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.DeliverySettings getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
@@ -21466,7 +21954,7 @@ public final class PartnerLocationSettingsOuterClass {
   }
 
   public interface ShopContactChannelSettingsOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:bloombox.schema.partner.settings.ShopContactChannelSettings)
+      // @@protoc_insertion_point(interface_extends:bloombox.partner.settings.ShopContactChannelSettings)
       com.google.protobuf.MessageOrBuilder {
 
     /**
@@ -21492,11 +21980,11 @@ public final class PartnerLocationSettingsOuterClass {
    * Specifies channel-specific shop contact/notification settings.
    * </pre>
    *
-   * Protobuf type {@code bloombox.schema.partner.settings.ShopContactChannelSettings}
+   * Protobuf type {@code bloombox.partner.settings.ShopContactChannelSettings}
    */
   public  static final class ShopContactChannelSettings extends
       com.google.protobuf.GeneratedMessageV3 implements
-      // @@protoc_insertion_point(message_implements:bloombox.schema.partner.settings.ShopContactChannelSettings)
+      // @@protoc_insertion_point(message_implements:bloombox.partner.settings.ShopContactChannelSettings)
       ShopContactChannelSettingsOrBuilder {
   private static final long serialVersionUID = 0L;
     // Use ShopContactChannelSettings.newBuilder() to construct.
@@ -21532,13 +22020,6 @@ public final class PartnerLocationSettingsOuterClass {
             case 0:
               done = true;
               break;
-            default: {
-              if (!parseUnknownFieldProto3(
-                  input, unknownFields, extensionRegistry, tag)) {
-                done = true;
-              }
-              break;
-            }
             case 8: {
 
               email_ = input.readBool();
@@ -21547,6 +22028,13 @@ public final class PartnerLocationSettingsOuterClass {
             case 16: {
 
               sms_ = input.readBool();
+              break;
+            }
+            default: {
+              if (!parseUnknownFieldProto3(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
               break;
             }
           }
@@ -21563,12 +22051,13 @@ public final class PartnerLocationSettingsOuterClass {
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.internal_static_bloombox_schema_partner_settings_ShopContactChannelSettings_descriptor;
+      return io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.internal_static_bloombox_partner_settings_ShopContactChannelSettings_descriptor;
     }
 
+    @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.internal_static_bloombox_schema_partner_settings_ShopContactChannelSettings_fieldAccessorTable
+      return io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.internal_static_bloombox_partner_settings_ShopContactChannelSettings_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
               io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.ShopContactChannelSettings.class, io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.ShopContactChannelSettings.Builder.class);
     }
@@ -21600,6 +22089,7 @@ public final class PartnerLocationSettingsOuterClass {
     }
 
     private byte memoizedIsInitialized = -1;
+    @java.lang.Override
     public final boolean isInitialized() {
       byte isInitialized = memoizedIsInitialized;
       if (isInitialized == 1) return true;
@@ -21609,6 +22099,7 @@ public final class PartnerLocationSettingsOuterClass {
       return true;
     }
 
+    @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
       if (email_ != false) {
@@ -21620,6 +22111,7 @@ public final class PartnerLocationSettingsOuterClass {
       unknownFields.writeTo(output);
     }
 
+    @java.lang.Override
     public int getSerializedSize() {
       int size = memoizedSize;
       if (size != -1) return size;
@@ -21745,6 +22237,7 @@ public final class PartnerLocationSettingsOuterClass {
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
 
+    @java.lang.Override
     public Builder newBuilderForType() { return newBuilder(); }
     public static Builder newBuilder() {
       return DEFAULT_INSTANCE.toBuilder();
@@ -21752,6 +22245,7 @@ public final class PartnerLocationSettingsOuterClass {
     public static Builder newBuilder(io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.ShopContactChannelSettings prototype) {
       return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
     }
+    @java.lang.Override
     public Builder toBuilder() {
       return this == DEFAULT_INSTANCE
           ? new Builder() : new Builder().mergeFrom(this);
@@ -21768,20 +22262,21 @@ public final class PartnerLocationSettingsOuterClass {
      * Specifies channel-specific shop contact/notification settings.
      * </pre>
      *
-     * Protobuf type {@code bloombox.schema.partner.settings.ShopContactChannelSettings}
+     * Protobuf type {@code bloombox.partner.settings.ShopContactChannelSettings}
      */
     public static final class Builder extends
         com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:bloombox.schema.partner.settings.ShopContactChannelSettings)
+        // @@protoc_insertion_point(builder_implements:bloombox.partner.settings.ShopContactChannelSettings)
         io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.ShopContactChannelSettingsOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.internal_static_bloombox_schema_partner_settings_ShopContactChannelSettings_descriptor;
+        return io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.internal_static_bloombox_partner_settings_ShopContactChannelSettings_descriptor;
       }
 
+      @java.lang.Override
       protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.internal_static_bloombox_schema_partner_settings_ShopContactChannelSettings_fieldAccessorTable
+        return io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.internal_static_bloombox_partner_settings_ShopContactChannelSettings_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
                 io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.ShopContactChannelSettings.class, io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.ShopContactChannelSettings.Builder.class);
       }
@@ -21801,6 +22296,7 @@ public final class PartnerLocationSettingsOuterClass {
                 .alwaysUseFieldBuilders) {
         }
       }
+      @java.lang.Override
       public Builder clear() {
         super.clear();
         email_ = false;
@@ -21810,15 +22306,18 @@ public final class PartnerLocationSettingsOuterClass {
         return this;
       }
 
+      @java.lang.Override
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.internal_static_bloombox_schema_partner_settings_ShopContactChannelSettings_descriptor;
+        return io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.internal_static_bloombox_partner_settings_ShopContactChannelSettings_descriptor;
       }
 
+      @java.lang.Override
       public io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.ShopContactChannelSettings getDefaultInstanceForType() {
         return io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.ShopContactChannelSettings.getDefaultInstance();
       }
 
+      @java.lang.Override
       public io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.ShopContactChannelSettings build() {
         io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.ShopContactChannelSettings result = buildPartial();
         if (!result.isInitialized()) {
@@ -21827,6 +22326,7 @@ public final class PartnerLocationSettingsOuterClass {
         return result;
       }
 
+      @java.lang.Override
       public io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.ShopContactChannelSettings buildPartial() {
         io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.ShopContactChannelSettings result = new io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.ShopContactChannelSettings(this);
         result.email_ = email_;
@@ -21835,32 +22335,39 @@ public final class PartnerLocationSettingsOuterClass {
         return result;
       }
 
+      @java.lang.Override
       public Builder clone() {
         return (Builder) super.clone();
       }
+      @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
         return (Builder) super.setField(field, value);
       }
+      @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
         return (Builder) super.clearField(field);
       }
+      @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
         return (Builder) super.clearOneof(oneof);
       }
+      @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
         return (Builder) super.setRepeatedField(field, index, value);
       }
+      @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
         return (Builder) super.addRepeatedField(field, value);
       }
+      @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
         if (other instanceof io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.ShopContactChannelSettings) {
           return mergeFrom((io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.ShopContactChannelSettings)other);
@@ -21883,10 +22390,12 @@ public final class PartnerLocationSettingsOuterClass {
         return this;
       }
 
+      @java.lang.Override
       public final boolean isInitialized() {
         return true;
       }
 
+      @java.lang.Override
       public Builder mergeFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -21980,21 +22489,23 @@ public final class PartnerLocationSettingsOuterClass {
         onChanged();
         return this;
       }
+      @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
         return super.setUnknownFieldsProto3(unknownFields);
       }
 
+      @java.lang.Override
       public final Builder mergeUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
         return super.mergeUnknownFields(unknownFields);
       }
 
 
-      // @@protoc_insertion_point(builder_scope:bloombox.schema.partner.settings.ShopContactChannelSettings)
+      // @@protoc_insertion_point(builder_scope:bloombox.partner.settings.ShopContactChannelSettings)
     }
 
-    // @@protoc_insertion_point(class_scope:bloombox.schema.partner.settings.ShopContactChannelSettings)
+    // @@protoc_insertion_point(class_scope:bloombox.partner.settings.ShopContactChannelSettings)
     private static final io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.ShopContactChannelSettings DEFAULT_INSTANCE;
     static {
       DEFAULT_INSTANCE = new io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.ShopContactChannelSettings();
@@ -22006,6 +22517,7 @@ public final class PartnerLocationSettingsOuterClass {
 
     private static final com.google.protobuf.Parser<ShopContactChannelSettings>
         PARSER = new com.google.protobuf.AbstractParser<ShopContactChannelSettings>() {
+      @java.lang.Override
       public ShopContactChannelSettings parsePartialFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -22023,6 +22535,7 @@ public final class PartnerLocationSettingsOuterClass {
       return PARSER;
     }
 
+    @java.lang.Override
     public io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.ShopContactChannelSettings getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
@@ -22030,7 +22543,7 @@ public final class PartnerLocationSettingsOuterClass {
   }
 
   public interface ShopChannelSettingsOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:bloombox.schema.partner.settings.ShopChannelSettings)
+      // @@protoc_insertion_point(interface_extends:bloombox.partner.settings.ShopChannelSettings)
       com.google.protobuf.MessageOrBuilder {
 
     /**
@@ -22038,7 +22551,7 @@ public final class PartnerLocationSettingsOuterClass {
      * Specifies channel-specific settings for orders notifications.
      * </pre>
      *
-     * <code>.bloombox.schema.partner.settings.ShopContactChannelSettings orders = 1;</code>
+     * <code>.bloombox.partner.settings.ShopContactChannelSettings orders = 1;</code>
      */
     boolean hasOrders();
     /**
@@ -22046,7 +22559,7 @@ public final class PartnerLocationSettingsOuterClass {
      * Specifies channel-specific settings for orders notifications.
      * </pre>
      *
-     * <code>.bloombox.schema.partner.settings.ShopContactChannelSettings orders = 1;</code>
+     * <code>.bloombox.partner.settings.ShopContactChannelSettings orders = 1;</code>
      */
     io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.ShopContactChannelSettings getOrders();
     /**
@@ -22054,7 +22567,7 @@ public final class PartnerLocationSettingsOuterClass {
      * Specifies channel-specific settings for orders notifications.
      * </pre>
      *
-     * <code>.bloombox.schema.partner.settings.ShopContactChannelSettings orders = 1;</code>
+     * <code>.bloombox.partner.settings.ShopContactChannelSettings orders = 1;</code>
      */
     io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.ShopContactChannelSettingsOrBuilder getOrdersOrBuilder();
 
@@ -22063,7 +22576,7 @@ public final class PartnerLocationSettingsOuterClass {
      * Specifies channel-specific settings for enrollment notifications.
      * </pre>
      *
-     * <code>.bloombox.schema.partner.settings.ShopContactChannelSettings enrollment = 2;</code>
+     * <code>.bloombox.partner.settings.ShopContactChannelSettings enrollment = 2;</code>
      */
     boolean hasEnrollment();
     /**
@@ -22071,7 +22584,7 @@ public final class PartnerLocationSettingsOuterClass {
      * Specifies channel-specific settings for enrollment notifications.
      * </pre>
      *
-     * <code>.bloombox.schema.partner.settings.ShopContactChannelSettings enrollment = 2;</code>
+     * <code>.bloombox.partner.settings.ShopContactChannelSettings enrollment = 2;</code>
      */
     io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.ShopContactChannelSettings getEnrollment();
     /**
@@ -22079,7 +22592,7 @@ public final class PartnerLocationSettingsOuterClass {
      * Specifies channel-specific settings for enrollment notifications.
      * </pre>
      *
-     * <code>.bloombox.schema.partner.settings.ShopContactChannelSettings enrollment = 2;</code>
+     * <code>.bloombox.partner.settings.ShopContactChannelSettings enrollment = 2;</code>
      */
     io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.ShopContactChannelSettingsOrBuilder getEnrollmentOrBuilder();
 
@@ -22088,7 +22601,7 @@ public final class PartnerLocationSettingsOuterClass {
      * Specifies channel-specific settings for marketing notifications.
      * </pre>
      *
-     * <code>.bloombox.schema.partner.settings.ShopContactChannelSettings marketing = 3;</code>
+     * <code>.bloombox.partner.settings.ShopContactChannelSettings marketing = 3;</code>
      */
     boolean hasMarketing();
     /**
@@ -22096,7 +22609,7 @@ public final class PartnerLocationSettingsOuterClass {
      * Specifies channel-specific settings for marketing notifications.
      * </pre>
      *
-     * <code>.bloombox.schema.partner.settings.ShopContactChannelSettings marketing = 3;</code>
+     * <code>.bloombox.partner.settings.ShopContactChannelSettings marketing = 3;</code>
      */
     io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.ShopContactChannelSettings getMarketing();
     /**
@@ -22104,7 +22617,7 @@ public final class PartnerLocationSettingsOuterClass {
      * Specifies channel-specific settings for marketing notifications.
      * </pre>
      *
-     * <code>.bloombox.schema.partner.settings.ShopContactChannelSettings marketing = 3;</code>
+     * <code>.bloombox.partner.settings.ShopContactChannelSettings marketing = 3;</code>
      */
     io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.ShopContactChannelSettingsOrBuilder getMarketingOrBuilder();
   }
@@ -22113,11 +22626,11 @@ public final class PartnerLocationSettingsOuterClass {
    * Groups settings for different shop notification channels into one payload.
    * </pre>
    *
-   * Protobuf type {@code bloombox.schema.partner.settings.ShopChannelSettings}
+   * Protobuf type {@code bloombox.partner.settings.ShopChannelSettings}
    */
   public  static final class ShopChannelSettings extends
       com.google.protobuf.GeneratedMessageV3 implements
-      // @@protoc_insertion_point(message_implements:bloombox.schema.partner.settings.ShopChannelSettings)
+      // @@protoc_insertion_point(message_implements:bloombox.partner.settings.ShopChannelSettings)
       ShopChannelSettingsOrBuilder {
   private static final long serialVersionUID = 0L;
     // Use ShopChannelSettings.newBuilder() to construct.
@@ -22151,13 +22664,6 @@ public final class PartnerLocationSettingsOuterClass {
             case 0:
               done = true;
               break;
-            default: {
-              if (!parseUnknownFieldProto3(
-                  input, unknownFields, extensionRegistry, tag)) {
-                done = true;
-              }
-              break;
-            }
             case 10: {
               io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.ShopContactChannelSettings.Builder subBuilder = null;
               if (orders_ != null) {
@@ -22197,6 +22703,13 @@ public final class PartnerLocationSettingsOuterClass {
 
               break;
             }
+            default: {
+              if (!parseUnknownFieldProto3(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
           }
         }
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
@@ -22211,12 +22724,13 @@ public final class PartnerLocationSettingsOuterClass {
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.internal_static_bloombox_schema_partner_settings_ShopChannelSettings_descriptor;
+      return io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.internal_static_bloombox_partner_settings_ShopChannelSettings_descriptor;
     }
 
+    @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.internal_static_bloombox_schema_partner_settings_ShopChannelSettings_fieldAccessorTable
+      return io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.internal_static_bloombox_partner_settings_ShopChannelSettings_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
               io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.ShopChannelSettings.class, io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.ShopChannelSettings.Builder.class);
     }
@@ -22228,7 +22742,7 @@ public final class PartnerLocationSettingsOuterClass {
      * Specifies channel-specific settings for orders notifications.
      * </pre>
      *
-     * <code>.bloombox.schema.partner.settings.ShopContactChannelSettings orders = 1;</code>
+     * <code>.bloombox.partner.settings.ShopContactChannelSettings orders = 1;</code>
      */
     public boolean hasOrders() {
       return orders_ != null;
@@ -22238,7 +22752,7 @@ public final class PartnerLocationSettingsOuterClass {
      * Specifies channel-specific settings for orders notifications.
      * </pre>
      *
-     * <code>.bloombox.schema.partner.settings.ShopContactChannelSettings orders = 1;</code>
+     * <code>.bloombox.partner.settings.ShopContactChannelSettings orders = 1;</code>
      */
     public io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.ShopContactChannelSettings getOrders() {
       return orders_ == null ? io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.ShopContactChannelSettings.getDefaultInstance() : orders_;
@@ -22248,7 +22762,7 @@ public final class PartnerLocationSettingsOuterClass {
      * Specifies channel-specific settings for orders notifications.
      * </pre>
      *
-     * <code>.bloombox.schema.partner.settings.ShopContactChannelSettings orders = 1;</code>
+     * <code>.bloombox.partner.settings.ShopContactChannelSettings orders = 1;</code>
      */
     public io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.ShopContactChannelSettingsOrBuilder getOrdersOrBuilder() {
       return getOrders();
@@ -22261,7 +22775,7 @@ public final class PartnerLocationSettingsOuterClass {
      * Specifies channel-specific settings for enrollment notifications.
      * </pre>
      *
-     * <code>.bloombox.schema.partner.settings.ShopContactChannelSettings enrollment = 2;</code>
+     * <code>.bloombox.partner.settings.ShopContactChannelSettings enrollment = 2;</code>
      */
     public boolean hasEnrollment() {
       return enrollment_ != null;
@@ -22271,7 +22785,7 @@ public final class PartnerLocationSettingsOuterClass {
      * Specifies channel-specific settings for enrollment notifications.
      * </pre>
      *
-     * <code>.bloombox.schema.partner.settings.ShopContactChannelSettings enrollment = 2;</code>
+     * <code>.bloombox.partner.settings.ShopContactChannelSettings enrollment = 2;</code>
      */
     public io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.ShopContactChannelSettings getEnrollment() {
       return enrollment_ == null ? io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.ShopContactChannelSettings.getDefaultInstance() : enrollment_;
@@ -22281,7 +22795,7 @@ public final class PartnerLocationSettingsOuterClass {
      * Specifies channel-specific settings for enrollment notifications.
      * </pre>
      *
-     * <code>.bloombox.schema.partner.settings.ShopContactChannelSettings enrollment = 2;</code>
+     * <code>.bloombox.partner.settings.ShopContactChannelSettings enrollment = 2;</code>
      */
     public io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.ShopContactChannelSettingsOrBuilder getEnrollmentOrBuilder() {
       return getEnrollment();
@@ -22294,7 +22808,7 @@ public final class PartnerLocationSettingsOuterClass {
      * Specifies channel-specific settings for marketing notifications.
      * </pre>
      *
-     * <code>.bloombox.schema.partner.settings.ShopContactChannelSettings marketing = 3;</code>
+     * <code>.bloombox.partner.settings.ShopContactChannelSettings marketing = 3;</code>
      */
     public boolean hasMarketing() {
       return marketing_ != null;
@@ -22304,7 +22818,7 @@ public final class PartnerLocationSettingsOuterClass {
      * Specifies channel-specific settings for marketing notifications.
      * </pre>
      *
-     * <code>.bloombox.schema.partner.settings.ShopContactChannelSettings marketing = 3;</code>
+     * <code>.bloombox.partner.settings.ShopContactChannelSettings marketing = 3;</code>
      */
     public io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.ShopContactChannelSettings getMarketing() {
       return marketing_ == null ? io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.ShopContactChannelSettings.getDefaultInstance() : marketing_;
@@ -22314,13 +22828,14 @@ public final class PartnerLocationSettingsOuterClass {
      * Specifies channel-specific settings for marketing notifications.
      * </pre>
      *
-     * <code>.bloombox.schema.partner.settings.ShopContactChannelSettings marketing = 3;</code>
+     * <code>.bloombox.partner.settings.ShopContactChannelSettings marketing = 3;</code>
      */
     public io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.ShopContactChannelSettingsOrBuilder getMarketingOrBuilder() {
       return getMarketing();
     }
 
     private byte memoizedIsInitialized = -1;
+    @java.lang.Override
     public final boolean isInitialized() {
       byte isInitialized = memoizedIsInitialized;
       if (isInitialized == 1) return true;
@@ -22330,6 +22845,7 @@ public final class PartnerLocationSettingsOuterClass {
       return true;
     }
 
+    @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
       if (orders_ != null) {
@@ -22344,6 +22860,7 @@ public final class PartnerLocationSettingsOuterClass {
       unknownFields.writeTo(output);
     }
 
+    @java.lang.Override
     public int getSerializedSize() {
       int size = memoizedSize;
       if (size != -1) return size;
@@ -22490,6 +23007,7 @@ public final class PartnerLocationSettingsOuterClass {
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
 
+    @java.lang.Override
     public Builder newBuilderForType() { return newBuilder(); }
     public static Builder newBuilder() {
       return DEFAULT_INSTANCE.toBuilder();
@@ -22497,6 +23015,7 @@ public final class PartnerLocationSettingsOuterClass {
     public static Builder newBuilder(io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.ShopChannelSettings prototype) {
       return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
     }
+    @java.lang.Override
     public Builder toBuilder() {
       return this == DEFAULT_INSTANCE
           ? new Builder() : new Builder().mergeFrom(this);
@@ -22513,20 +23032,21 @@ public final class PartnerLocationSettingsOuterClass {
      * Groups settings for different shop notification channels into one payload.
      * </pre>
      *
-     * Protobuf type {@code bloombox.schema.partner.settings.ShopChannelSettings}
+     * Protobuf type {@code bloombox.partner.settings.ShopChannelSettings}
      */
     public static final class Builder extends
         com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:bloombox.schema.partner.settings.ShopChannelSettings)
+        // @@protoc_insertion_point(builder_implements:bloombox.partner.settings.ShopChannelSettings)
         io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.ShopChannelSettingsOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.internal_static_bloombox_schema_partner_settings_ShopChannelSettings_descriptor;
+        return io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.internal_static_bloombox_partner_settings_ShopChannelSettings_descriptor;
       }
 
+      @java.lang.Override
       protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.internal_static_bloombox_schema_partner_settings_ShopChannelSettings_fieldAccessorTable
+        return io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.internal_static_bloombox_partner_settings_ShopChannelSettings_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
                 io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.ShopChannelSettings.class, io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.ShopChannelSettings.Builder.class);
       }
@@ -22546,6 +23066,7 @@ public final class PartnerLocationSettingsOuterClass {
                 .alwaysUseFieldBuilders) {
         }
       }
+      @java.lang.Override
       public Builder clear() {
         super.clear();
         if (ordersBuilder_ == null) {
@@ -22569,15 +23090,18 @@ public final class PartnerLocationSettingsOuterClass {
         return this;
       }
 
+      @java.lang.Override
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.internal_static_bloombox_schema_partner_settings_ShopChannelSettings_descriptor;
+        return io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.internal_static_bloombox_partner_settings_ShopChannelSettings_descriptor;
       }
 
+      @java.lang.Override
       public io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.ShopChannelSettings getDefaultInstanceForType() {
         return io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.ShopChannelSettings.getDefaultInstance();
       }
 
+      @java.lang.Override
       public io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.ShopChannelSettings build() {
         io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.ShopChannelSettings result = buildPartial();
         if (!result.isInitialized()) {
@@ -22586,6 +23110,7 @@ public final class PartnerLocationSettingsOuterClass {
         return result;
       }
 
+      @java.lang.Override
       public io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.ShopChannelSettings buildPartial() {
         io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.ShopChannelSettings result = new io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.ShopChannelSettings(this);
         if (ordersBuilder_ == null) {
@@ -22607,32 +23132,39 @@ public final class PartnerLocationSettingsOuterClass {
         return result;
       }
 
+      @java.lang.Override
       public Builder clone() {
         return (Builder) super.clone();
       }
+      @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
         return (Builder) super.setField(field, value);
       }
+      @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
         return (Builder) super.clearField(field);
       }
+      @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
         return (Builder) super.clearOneof(oneof);
       }
+      @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
         return (Builder) super.setRepeatedField(field, index, value);
       }
+      @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
         return (Builder) super.addRepeatedField(field, value);
       }
+      @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
         if (other instanceof io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.ShopChannelSettings) {
           return mergeFrom((io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.ShopChannelSettings)other);
@@ -22658,10 +23190,12 @@ public final class PartnerLocationSettingsOuterClass {
         return this;
       }
 
+      @java.lang.Override
       public final boolean isInitialized() {
         return true;
       }
 
+      @java.lang.Override
       public Builder mergeFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -22688,7 +23222,7 @@ public final class PartnerLocationSettingsOuterClass {
        * Specifies channel-specific settings for orders notifications.
        * </pre>
        *
-       * <code>.bloombox.schema.partner.settings.ShopContactChannelSettings orders = 1;</code>
+       * <code>.bloombox.partner.settings.ShopContactChannelSettings orders = 1;</code>
        */
       public boolean hasOrders() {
         return ordersBuilder_ != null || orders_ != null;
@@ -22698,7 +23232,7 @@ public final class PartnerLocationSettingsOuterClass {
        * Specifies channel-specific settings for orders notifications.
        * </pre>
        *
-       * <code>.bloombox.schema.partner.settings.ShopContactChannelSettings orders = 1;</code>
+       * <code>.bloombox.partner.settings.ShopContactChannelSettings orders = 1;</code>
        */
       public io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.ShopContactChannelSettings getOrders() {
         if (ordersBuilder_ == null) {
@@ -22712,7 +23246,7 @@ public final class PartnerLocationSettingsOuterClass {
        * Specifies channel-specific settings for orders notifications.
        * </pre>
        *
-       * <code>.bloombox.schema.partner.settings.ShopContactChannelSettings orders = 1;</code>
+       * <code>.bloombox.partner.settings.ShopContactChannelSettings orders = 1;</code>
        */
       public Builder setOrders(io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.ShopContactChannelSettings value) {
         if (ordersBuilder_ == null) {
@@ -22732,7 +23266,7 @@ public final class PartnerLocationSettingsOuterClass {
        * Specifies channel-specific settings for orders notifications.
        * </pre>
        *
-       * <code>.bloombox.schema.partner.settings.ShopContactChannelSettings orders = 1;</code>
+       * <code>.bloombox.partner.settings.ShopContactChannelSettings orders = 1;</code>
        */
       public Builder setOrders(
           io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.ShopContactChannelSettings.Builder builderForValue) {
@@ -22750,7 +23284,7 @@ public final class PartnerLocationSettingsOuterClass {
        * Specifies channel-specific settings for orders notifications.
        * </pre>
        *
-       * <code>.bloombox.schema.partner.settings.ShopContactChannelSettings orders = 1;</code>
+       * <code>.bloombox.partner.settings.ShopContactChannelSettings orders = 1;</code>
        */
       public Builder mergeOrders(io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.ShopContactChannelSettings value) {
         if (ordersBuilder_ == null) {
@@ -22772,7 +23306,7 @@ public final class PartnerLocationSettingsOuterClass {
        * Specifies channel-specific settings for orders notifications.
        * </pre>
        *
-       * <code>.bloombox.schema.partner.settings.ShopContactChannelSettings orders = 1;</code>
+       * <code>.bloombox.partner.settings.ShopContactChannelSettings orders = 1;</code>
        */
       public Builder clearOrders() {
         if (ordersBuilder_ == null) {
@@ -22790,7 +23324,7 @@ public final class PartnerLocationSettingsOuterClass {
        * Specifies channel-specific settings for orders notifications.
        * </pre>
        *
-       * <code>.bloombox.schema.partner.settings.ShopContactChannelSettings orders = 1;</code>
+       * <code>.bloombox.partner.settings.ShopContactChannelSettings orders = 1;</code>
        */
       public io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.ShopContactChannelSettings.Builder getOrdersBuilder() {
         
@@ -22802,7 +23336,7 @@ public final class PartnerLocationSettingsOuterClass {
        * Specifies channel-specific settings for orders notifications.
        * </pre>
        *
-       * <code>.bloombox.schema.partner.settings.ShopContactChannelSettings orders = 1;</code>
+       * <code>.bloombox.partner.settings.ShopContactChannelSettings orders = 1;</code>
        */
       public io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.ShopContactChannelSettingsOrBuilder getOrdersOrBuilder() {
         if (ordersBuilder_ != null) {
@@ -22817,7 +23351,7 @@ public final class PartnerLocationSettingsOuterClass {
        * Specifies channel-specific settings for orders notifications.
        * </pre>
        *
-       * <code>.bloombox.schema.partner.settings.ShopContactChannelSettings orders = 1;</code>
+       * <code>.bloombox.partner.settings.ShopContactChannelSettings orders = 1;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
           io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.ShopContactChannelSettings, io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.ShopContactChannelSettings.Builder, io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.ShopContactChannelSettingsOrBuilder> 
@@ -22841,7 +23375,7 @@ public final class PartnerLocationSettingsOuterClass {
        * Specifies channel-specific settings for enrollment notifications.
        * </pre>
        *
-       * <code>.bloombox.schema.partner.settings.ShopContactChannelSettings enrollment = 2;</code>
+       * <code>.bloombox.partner.settings.ShopContactChannelSettings enrollment = 2;</code>
        */
       public boolean hasEnrollment() {
         return enrollmentBuilder_ != null || enrollment_ != null;
@@ -22851,7 +23385,7 @@ public final class PartnerLocationSettingsOuterClass {
        * Specifies channel-specific settings for enrollment notifications.
        * </pre>
        *
-       * <code>.bloombox.schema.partner.settings.ShopContactChannelSettings enrollment = 2;</code>
+       * <code>.bloombox.partner.settings.ShopContactChannelSettings enrollment = 2;</code>
        */
       public io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.ShopContactChannelSettings getEnrollment() {
         if (enrollmentBuilder_ == null) {
@@ -22865,7 +23399,7 @@ public final class PartnerLocationSettingsOuterClass {
        * Specifies channel-specific settings for enrollment notifications.
        * </pre>
        *
-       * <code>.bloombox.schema.partner.settings.ShopContactChannelSettings enrollment = 2;</code>
+       * <code>.bloombox.partner.settings.ShopContactChannelSettings enrollment = 2;</code>
        */
       public Builder setEnrollment(io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.ShopContactChannelSettings value) {
         if (enrollmentBuilder_ == null) {
@@ -22885,7 +23419,7 @@ public final class PartnerLocationSettingsOuterClass {
        * Specifies channel-specific settings for enrollment notifications.
        * </pre>
        *
-       * <code>.bloombox.schema.partner.settings.ShopContactChannelSettings enrollment = 2;</code>
+       * <code>.bloombox.partner.settings.ShopContactChannelSettings enrollment = 2;</code>
        */
       public Builder setEnrollment(
           io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.ShopContactChannelSettings.Builder builderForValue) {
@@ -22903,7 +23437,7 @@ public final class PartnerLocationSettingsOuterClass {
        * Specifies channel-specific settings for enrollment notifications.
        * </pre>
        *
-       * <code>.bloombox.schema.partner.settings.ShopContactChannelSettings enrollment = 2;</code>
+       * <code>.bloombox.partner.settings.ShopContactChannelSettings enrollment = 2;</code>
        */
       public Builder mergeEnrollment(io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.ShopContactChannelSettings value) {
         if (enrollmentBuilder_ == null) {
@@ -22925,7 +23459,7 @@ public final class PartnerLocationSettingsOuterClass {
        * Specifies channel-specific settings for enrollment notifications.
        * </pre>
        *
-       * <code>.bloombox.schema.partner.settings.ShopContactChannelSettings enrollment = 2;</code>
+       * <code>.bloombox.partner.settings.ShopContactChannelSettings enrollment = 2;</code>
        */
       public Builder clearEnrollment() {
         if (enrollmentBuilder_ == null) {
@@ -22943,7 +23477,7 @@ public final class PartnerLocationSettingsOuterClass {
        * Specifies channel-specific settings for enrollment notifications.
        * </pre>
        *
-       * <code>.bloombox.schema.partner.settings.ShopContactChannelSettings enrollment = 2;</code>
+       * <code>.bloombox.partner.settings.ShopContactChannelSettings enrollment = 2;</code>
        */
       public io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.ShopContactChannelSettings.Builder getEnrollmentBuilder() {
         
@@ -22955,7 +23489,7 @@ public final class PartnerLocationSettingsOuterClass {
        * Specifies channel-specific settings for enrollment notifications.
        * </pre>
        *
-       * <code>.bloombox.schema.partner.settings.ShopContactChannelSettings enrollment = 2;</code>
+       * <code>.bloombox.partner.settings.ShopContactChannelSettings enrollment = 2;</code>
        */
       public io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.ShopContactChannelSettingsOrBuilder getEnrollmentOrBuilder() {
         if (enrollmentBuilder_ != null) {
@@ -22970,7 +23504,7 @@ public final class PartnerLocationSettingsOuterClass {
        * Specifies channel-specific settings for enrollment notifications.
        * </pre>
        *
-       * <code>.bloombox.schema.partner.settings.ShopContactChannelSettings enrollment = 2;</code>
+       * <code>.bloombox.partner.settings.ShopContactChannelSettings enrollment = 2;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
           io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.ShopContactChannelSettings, io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.ShopContactChannelSettings.Builder, io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.ShopContactChannelSettingsOrBuilder> 
@@ -22994,7 +23528,7 @@ public final class PartnerLocationSettingsOuterClass {
        * Specifies channel-specific settings for marketing notifications.
        * </pre>
        *
-       * <code>.bloombox.schema.partner.settings.ShopContactChannelSettings marketing = 3;</code>
+       * <code>.bloombox.partner.settings.ShopContactChannelSettings marketing = 3;</code>
        */
       public boolean hasMarketing() {
         return marketingBuilder_ != null || marketing_ != null;
@@ -23004,7 +23538,7 @@ public final class PartnerLocationSettingsOuterClass {
        * Specifies channel-specific settings for marketing notifications.
        * </pre>
        *
-       * <code>.bloombox.schema.partner.settings.ShopContactChannelSettings marketing = 3;</code>
+       * <code>.bloombox.partner.settings.ShopContactChannelSettings marketing = 3;</code>
        */
       public io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.ShopContactChannelSettings getMarketing() {
         if (marketingBuilder_ == null) {
@@ -23018,7 +23552,7 @@ public final class PartnerLocationSettingsOuterClass {
        * Specifies channel-specific settings for marketing notifications.
        * </pre>
        *
-       * <code>.bloombox.schema.partner.settings.ShopContactChannelSettings marketing = 3;</code>
+       * <code>.bloombox.partner.settings.ShopContactChannelSettings marketing = 3;</code>
        */
       public Builder setMarketing(io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.ShopContactChannelSettings value) {
         if (marketingBuilder_ == null) {
@@ -23038,7 +23572,7 @@ public final class PartnerLocationSettingsOuterClass {
        * Specifies channel-specific settings for marketing notifications.
        * </pre>
        *
-       * <code>.bloombox.schema.partner.settings.ShopContactChannelSettings marketing = 3;</code>
+       * <code>.bloombox.partner.settings.ShopContactChannelSettings marketing = 3;</code>
        */
       public Builder setMarketing(
           io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.ShopContactChannelSettings.Builder builderForValue) {
@@ -23056,7 +23590,7 @@ public final class PartnerLocationSettingsOuterClass {
        * Specifies channel-specific settings for marketing notifications.
        * </pre>
        *
-       * <code>.bloombox.schema.partner.settings.ShopContactChannelSettings marketing = 3;</code>
+       * <code>.bloombox.partner.settings.ShopContactChannelSettings marketing = 3;</code>
        */
       public Builder mergeMarketing(io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.ShopContactChannelSettings value) {
         if (marketingBuilder_ == null) {
@@ -23078,7 +23612,7 @@ public final class PartnerLocationSettingsOuterClass {
        * Specifies channel-specific settings for marketing notifications.
        * </pre>
        *
-       * <code>.bloombox.schema.partner.settings.ShopContactChannelSettings marketing = 3;</code>
+       * <code>.bloombox.partner.settings.ShopContactChannelSettings marketing = 3;</code>
        */
       public Builder clearMarketing() {
         if (marketingBuilder_ == null) {
@@ -23096,7 +23630,7 @@ public final class PartnerLocationSettingsOuterClass {
        * Specifies channel-specific settings for marketing notifications.
        * </pre>
        *
-       * <code>.bloombox.schema.partner.settings.ShopContactChannelSettings marketing = 3;</code>
+       * <code>.bloombox.partner.settings.ShopContactChannelSettings marketing = 3;</code>
        */
       public io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.ShopContactChannelSettings.Builder getMarketingBuilder() {
         
@@ -23108,7 +23642,7 @@ public final class PartnerLocationSettingsOuterClass {
        * Specifies channel-specific settings for marketing notifications.
        * </pre>
        *
-       * <code>.bloombox.schema.partner.settings.ShopContactChannelSettings marketing = 3;</code>
+       * <code>.bloombox.partner.settings.ShopContactChannelSettings marketing = 3;</code>
        */
       public io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.ShopContactChannelSettingsOrBuilder getMarketingOrBuilder() {
         if (marketingBuilder_ != null) {
@@ -23123,7 +23657,7 @@ public final class PartnerLocationSettingsOuterClass {
        * Specifies channel-specific settings for marketing notifications.
        * </pre>
        *
-       * <code>.bloombox.schema.partner.settings.ShopContactChannelSettings marketing = 3;</code>
+       * <code>.bloombox.partner.settings.ShopContactChannelSettings marketing = 3;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
           io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.ShopContactChannelSettings, io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.ShopContactChannelSettings.Builder, io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.ShopContactChannelSettingsOrBuilder> 
@@ -23138,21 +23672,23 @@ public final class PartnerLocationSettingsOuterClass {
         }
         return marketingBuilder_;
       }
+      @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
         return super.setUnknownFieldsProto3(unknownFields);
       }
 
+      @java.lang.Override
       public final Builder mergeUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
         return super.mergeUnknownFields(unknownFields);
       }
 
 
-      // @@protoc_insertion_point(builder_scope:bloombox.schema.partner.settings.ShopChannelSettings)
+      // @@protoc_insertion_point(builder_scope:bloombox.partner.settings.ShopChannelSettings)
     }
 
-    // @@protoc_insertion_point(class_scope:bloombox.schema.partner.settings.ShopChannelSettings)
+    // @@protoc_insertion_point(class_scope:bloombox.partner.settings.ShopChannelSettings)
     private static final io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.ShopChannelSettings DEFAULT_INSTANCE;
     static {
       DEFAULT_INSTANCE = new io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.ShopChannelSettings();
@@ -23164,6 +23700,7 @@ public final class PartnerLocationSettingsOuterClass {
 
     private static final com.google.protobuf.Parser<ShopChannelSettings>
         PARSER = new com.google.protobuf.AbstractParser<ShopChannelSettings>() {
+      @java.lang.Override
       public ShopChannelSettings parsePartialFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -23181,6 +23718,7 @@ public final class PartnerLocationSettingsOuterClass {
       return PARSER;
     }
 
+    @java.lang.Override
     public io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.ShopChannelSettings getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
@@ -23188,7 +23726,7 @@ public final class PartnerLocationSettingsOuterClass {
   }
 
   public interface ShopContactTargetOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:bloombox.schema.partner.settings.ShopContactTarget)
+      // @@protoc_insertion_point(interface_extends:bloombox.partner.settings.ShopContactTarget)
       com.google.protobuf.MessageOrBuilder {
 
     /**
@@ -23273,7 +23811,7 @@ public final class PartnerLocationSettingsOuterClass {
      * Specifies channel-specific subscription settings.
      * </pre>
      *
-     * <code>.bloombox.schema.partner.settings.ShopChannelSettings channels = 5;</code>
+     * <code>.bloombox.partner.settings.ShopChannelSettings channels = 5;</code>
      */
     boolean hasChannels();
     /**
@@ -23281,7 +23819,7 @@ public final class PartnerLocationSettingsOuterClass {
      * Specifies channel-specific subscription settings.
      * </pre>
      *
-     * <code>.bloombox.schema.partner.settings.ShopChannelSettings channels = 5;</code>
+     * <code>.bloombox.partner.settings.ShopChannelSettings channels = 5;</code>
      */
     io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.ShopChannelSettings getChannels();
     /**
@@ -23289,7 +23827,7 @@ public final class PartnerLocationSettingsOuterClass {
      * Specifies channel-specific subscription settings.
      * </pre>
      *
-     * <code>.bloombox.schema.partner.settings.ShopChannelSettings channels = 5;</code>
+     * <code>.bloombox.partner.settings.ShopChannelSettings channels = 5;</code>
      */
     io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.ShopChannelSettingsOrBuilder getChannelsOrBuilder();
   }
@@ -23298,11 +23836,11 @@ public final class PartnerLocationSettingsOuterClass {
    * Specifies a shop contact target who should receive shop notifications in some specified circumstances.
    * </pre>
    *
-   * Protobuf type {@code bloombox.schema.partner.settings.ShopContactTarget}
+   * Protobuf type {@code bloombox.partner.settings.ShopContactTarget}
    */
   public  static final class ShopContactTarget extends
       com.google.protobuf.GeneratedMessageV3 implements
-      // @@protoc_insertion_point(message_implements:bloombox.schema.partner.settings.ShopContactTarget)
+      // @@protoc_insertion_point(message_implements:bloombox.partner.settings.ShopContactTarget)
       ShopContactTargetOrBuilder {
   private static final long serialVersionUID = 0L;
     // Use ShopContactTarget.newBuilder() to construct.
@@ -23338,13 +23876,6 @@ public final class PartnerLocationSettingsOuterClass {
             case 0:
               done = true;
               break;
-            default: {
-              if (!parseUnknownFieldProto3(
-                  input, unknownFields, extensionRegistry, tag)) {
-                done = true;
-              }
-              break;
-            }
             case 10: {
               java.lang.String s = input.readStringRequireUtf8();
 
@@ -23395,6 +23926,13 @@ public final class PartnerLocationSettingsOuterClass {
 
               break;
             }
+            default: {
+              if (!parseUnknownFieldProto3(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
           }
         }
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
@@ -23409,12 +23947,13 @@ public final class PartnerLocationSettingsOuterClass {
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.internal_static_bloombox_schema_partner_settings_ShopContactTarget_descriptor;
+      return io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.internal_static_bloombox_partner_settings_ShopContactTarget_descriptor;
     }
 
+    @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.internal_static_bloombox_schema_partner_settings_ShopContactTarget_fieldAccessorTable
+      return io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.internal_static_bloombox_partner_settings_ShopContactTarget_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
               io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.ShopContactTarget.class, io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.ShopContactTarget.Builder.class);
     }
@@ -23547,7 +24086,7 @@ public final class PartnerLocationSettingsOuterClass {
      * Specifies channel-specific subscription settings.
      * </pre>
      *
-     * <code>.bloombox.schema.partner.settings.ShopChannelSettings channels = 5;</code>
+     * <code>.bloombox.partner.settings.ShopChannelSettings channels = 5;</code>
      */
     public boolean hasChannels() {
       return channels_ != null;
@@ -23557,7 +24096,7 @@ public final class PartnerLocationSettingsOuterClass {
      * Specifies channel-specific subscription settings.
      * </pre>
      *
-     * <code>.bloombox.schema.partner.settings.ShopChannelSettings channels = 5;</code>
+     * <code>.bloombox.partner.settings.ShopChannelSettings channels = 5;</code>
      */
     public io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.ShopChannelSettings getChannels() {
       return channels_ == null ? io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.ShopChannelSettings.getDefaultInstance() : channels_;
@@ -23567,13 +24106,14 @@ public final class PartnerLocationSettingsOuterClass {
      * Specifies channel-specific subscription settings.
      * </pre>
      *
-     * <code>.bloombox.schema.partner.settings.ShopChannelSettings channels = 5;</code>
+     * <code>.bloombox.partner.settings.ShopChannelSettings channels = 5;</code>
      */
     public io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.ShopChannelSettingsOrBuilder getChannelsOrBuilder() {
       return getChannels();
     }
 
     private byte memoizedIsInitialized = -1;
+    @java.lang.Override
     public final boolean isInitialized() {
       byte isInitialized = memoizedIsInitialized;
       if (isInitialized == 1) return true;
@@ -23583,6 +24123,7 @@ public final class PartnerLocationSettingsOuterClass {
       return true;
     }
 
+    @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
       if (!getLabelBytes().isEmpty()) {
@@ -23603,6 +24144,7 @@ public final class PartnerLocationSettingsOuterClass {
       unknownFields.writeTo(output);
     }
 
+    @java.lang.Override
     public int getSerializedSize() {
       int size = memoizedSize;
       if (size != -1) return size;
@@ -23765,6 +24307,7 @@ public final class PartnerLocationSettingsOuterClass {
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
 
+    @java.lang.Override
     public Builder newBuilderForType() { return newBuilder(); }
     public static Builder newBuilder() {
       return DEFAULT_INSTANCE.toBuilder();
@@ -23772,6 +24315,7 @@ public final class PartnerLocationSettingsOuterClass {
     public static Builder newBuilder(io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.ShopContactTarget prototype) {
       return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
     }
+    @java.lang.Override
     public Builder toBuilder() {
       return this == DEFAULT_INSTANCE
           ? new Builder() : new Builder().mergeFrom(this);
@@ -23788,20 +24332,21 @@ public final class PartnerLocationSettingsOuterClass {
      * Specifies a shop contact target who should receive shop notifications in some specified circumstances.
      * </pre>
      *
-     * Protobuf type {@code bloombox.schema.partner.settings.ShopContactTarget}
+     * Protobuf type {@code bloombox.partner.settings.ShopContactTarget}
      */
     public static final class Builder extends
         com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:bloombox.schema.partner.settings.ShopContactTarget)
+        // @@protoc_insertion_point(builder_implements:bloombox.partner.settings.ShopContactTarget)
         io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.ShopContactTargetOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.internal_static_bloombox_schema_partner_settings_ShopContactTarget_descriptor;
+        return io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.internal_static_bloombox_partner_settings_ShopContactTarget_descriptor;
       }
 
+      @java.lang.Override
       protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.internal_static_bloombox_schema_partner_settings_ShopContactTarget_fieldAccessorTable
+        return io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.internal_static_bloombox_partner_settings_ShopContactTarget_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
                 io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.ShopContactTarget.class, io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.ShopContactTarget.Builder.class);
       }
@@ -23821,6 +24366,7 @@ public final class PartnerLocationSettingsOuterClass {
                 .alwaysUseFieldBuilders) {
         }
       }
+      @java.lang.Override
       public Builder clear() {
         super.clear();
         label_ = "";
@@ -23848,15 +24394,18 @@ public final class PartnerLocationSettingsOuterClass {
         return this;
       }
 
+      @java.lang.Override
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.internal_static_bloombox_schema_partner_settings_ShopContactTarget_descriptor;
+        return io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.internal_static_bloombox_partner_settings_ShopContactTarget_descriptor;
       }
 
+      @java.lang.Override
       public io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.ShopContactTarget getDefaultInstanceForType() {
         return io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.ShopContactTarget.getDefaultInstance();
       }
 
+      @java.lang.Override
       public io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.ShopContactTarget build() {
         io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.ShopContactTarget result = buildPartial();
         if (!result.isInitialized()) {
@@ -23865,6 +24414,7 @@ public final class PartnerLocationSettingsOuterClass {
         return result;
       }
 
+      @java.lang.Override
       public io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.ShopContactTarget buildPartial() {
         io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.ShopContactTarget result = new io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.ShopContactTarget(this);
         result.label_ = label_;
@@ -23888,32 +24438,39 @@ public final class PartnerLocationSettingsOuterClass {
         return result;
       }
 
+      @java.lang.Override
       public Builder clone() {
         return (Builder) super.clone();
       }
+      @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
         return (Builder) super.setField(field, value);
       }
+      @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
         return (Builder) super.clearField(field);
       }
+      @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
         return (Builder) super.clearOneof(oneof);
       }
+      @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
         return (Builder) super.setRepeatedField(field, index, value);
       }
+      @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
         return (Builder) super.addRepeatedField(field, value);
       }
+      @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
         if (other instanceof io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.ShopContactTarget) {
           return mergeFrom((io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.ShopContactTarget)other);
@@ -23946,10 +24503,12 @@ public final class PartnerLocationSettingsOuterClass {
         return this;
       }
 
+      @java.lang.Override
       public final boolean isInitialized() {
         return true;
       }
 
+      @java.lang.Override
       public Builder mergeFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -24409,7 +24968,7 @@ public final class PartnerLocationSettingsOuterClass {
        * Specifies channel-specific subscription settings.
        * </pre>
        *
-       * <code>.bloombox.schema.partner.settings.ShopChannelSettings channels = 5;</code>
+       * <code>.bloombox.partner.settings.ShopChannelSettings channels = 5;</code>
        */
       public boolean hasChannels() {
         return channelsBuilder_ != null || channels_ != null;
@@ -24419,7 +24978,7 @@ public final class PartnerLocationSettingsOuterClass {
        * Specifies channel-specific subscription settings.
        * </pre>
        *
-       * <code>.bloombox.schema.partner.settings.ShopChannelSettings channels = 5;</code>
+       * <code>.bloombox.partner.settings.ShopChannelSettings channels = 5;</code>
        */
       public io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.ShopChannelSettings getChannels() {
         if (channelsBuilder_ == null) {
@@ -24433,7 +24992,7 @@ public final class PartnerLocationSettingsOuterClass {
        * Specifies channel-specific subscription settings.
        * </pre>
        *
-       * <code>.bloombox.schema.partner.settings.ShopChannelSettings channels = 5;</code>
+       * <code>.bloombox.partner.settings.ShopChannelSettings channels = 5;</code>
        */
       public Builder setChannels(io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.ShopChannelSettings value) {
         if (channelsBuilder_ == null) {
@@ -24453,7 +25012,7 @@ public final class PartnerLocationSettingsOuterClass {
        * Specifies channel-specific subscription settings.
        * </pre>
        *
-       * <code>.bloombox.schema.partner.settings.ShopChannelSettings channels = 5;</code>
+       * <code>.bloombox.partner.settings.ShopChannelSettings channels = 5;</code>
        */
       public Builder setChannels(
           io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.ShopChannelSettings.Builder builderForValue) {
@@ -24471,7 +25030,7 @@ public final class PartnerLocationSettingsOuterClass {
        * Specifies channel-specific subscription settings.
        * </pre>
        *
-       * <code>.bloombox.schema.partner.settings.ShopChannelSettings channels = 5;</code>
+       * <code>.bloombox.partner.settings.ShopChannelSettings channels = 5;</code>
        */
       public Builder mergeChannels(io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.ShopChannelSettings value) {
         if (channelsBuilder_ == null) {
@@ -24493,7 +25052,7 @@ public final class PartnerLocationSettingsOuterClass {
        * Specifies channel-specific subscription settings.
        * </pre>
        *
-       * <code>.bloombox.schema.partner.settings.ShopChannelSettings channels = 5;</code>
+       * <code>.bloombox.partner.settings.ShopChannelSettings channels = 5;</code>
        */
       public Builder clearChannels() {
         if (channelsBuilder_ == null) {
@@ -24511,7 +25070,7 @@ public final class PartnerLocationSettingsOuterClass {
        * Specifies channel-specific subscription settings.
        * </pre>
        *
-       * <code>.bloombox.schema.partner.settings.ShopChannelSettings channels = 5;</code>
+       * <code>.bloombox.partner.settings.ShopChannelSettings channels = 5;</code>
        */
       public io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.ShopChannelSettings.Builder getChannelsBuilder() {
         
@@ -24523,7 +25082,7 @@ public final class PartnerLocationSettingsOuterClass {
        * Specifies channel-specific subscription settings.
        * </pre>
        *
-       * <code>.bloombox.schema.partner.settings.ShopChannelSettings channels = 5;</code>
+       * <code>.bloombox.partner.settings.ShopChannelSettings channels = 5;</code>
        */
       public io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.ShopChannelSettingsOrBuilder getChannelsOrBuilder() {
         if (channelsBuilder_ != null) {
@@ -24538,7 +25097,7 @@ public final class PartnerLocationSettingsOuterClass {
        * Specifies channel-specific subscription settings.
        * </pre>
        *
-       * <code>.bloombox.schema.partner.settings.ShopChannelSettings channels = 5;</code>
+       * <code>.bloombox.partner.settings.ShopChannelSettings channels = 5;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
           io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.ShopChannelSettings, io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.ShopChannelSettings.Builder, io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.ShopChannelSettingsOrBuilder> 
@@ -24553,21 +25112,23 @@ public final class PartnerLocationSettingsOuterClass {
         }
         return channelsBuilder_;
       }
+      @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
         return super.setUnknownFieldsProto3(unknownFields);
       }
 
+      @java.lang.Override
       public final Builder mergeUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
         return super.mergeUnknownFields(unknownFields);
       }
 
 
-      // @@protoc_insertion_point(builder_scope:bloombox.schema.partner.settings.ShopContactTarget)
+      // @@protoc_insertion_point(builder_scope:bloombox.partner.settings.ShopContactTarget)
     }
 
-    // @@protoc_insertion_point(class_scope:bloombox.schema.partner.settings.ShopContactTarget)
+    // @@protoc_insertion_point(class_scope:bloombox.partner.settings.ShopContactTarget)
     private static final io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.ShopContactTarget DEFAULT_INSTANCE;
     static {
       DEFAULT_INSTANCE = new io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.ShopContactTarget();
@@ -24579,6 +25140,7 @@ public final class PartnerLocationSettingsOuterClass {
 
     private static final com.google.protobuf.Parser<ShopContactTarget>
         PARSER = new com.google.protobuf.AbstractParser<ShopContactTarget>() {
+      @java.lang.Override
       public ShopContactTarget parsePartialFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -24596,6 +25158,7 @@ public final class PartnerLocationSettingsOuterClass {
       return PARSER;
     }
 
+    @java.lang.Override
     public io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.ShopContactTarget getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
@@ -24603,7 +25166,7 @@ public final class PartnerLocationSettingsOuterClass {
   }
 
   public interface CommsSenderSettingsOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:bloombox.schema.partner.settings.CommsSenderSettings)
+      // @@protoc_insertion_point(interface_extends:bloombox.partner.settings.CommsSenderSettings)
       com.google.protobuf.MessageOrBuilder {
 
     /**
@@ -24661,11 +25224,11 @@ public final class PartnerLocationSettingsOuterClass {
    * Specifies sender account settings for SMS and email notification channels.
    * </pre>
    *
-   * Protobuf type {@code bloombox.schema.partner.settings.CommsSenderSettings}
+   * Protobuf type {@code bloombox.partner.settings.CommsSenderSettings}
    */
   public  static final class CommsSenderSettings extends
       com.google.protobuf.GeneratedMessageV3 implements
-      // @@protoc_insertion_point(message_implements:bloombox.schema.partner.settings.CommsSenderSettings)
+      // @@protoc_insertion_point(message_implements:bloombox.partner.settings.CommsSenderSettings)
       CommsSenderSettingsOrBuilder {
   private static final long serialVersionUID = 0L;
     // Use CommsSenderSettings.newBuilder() to construct.
@@ -24699,13 +25262,6 @@ public final class PartnerLocationSettingsOuterClass {
             case 0:
               done = true;
               break;
-            default: {
-              if (!parseUnknownFieldProto3(
-                  input, unknownFields, extensionRegistry, tag)) {
-                done = true;
-              }
-              break;
-            }
             case 10: {
               io.opencannabis.schema.contact.ContactEmail.EmailAddress.Builder subBuilder = null;
               if (email_ != null) {
@@ -24732,6 +25288,13 @@ public final class PartnerLocationSettingsOuterClass {
 
               break;
             }
+            default: {
+              if (!parseUnknownFieldProto3(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
           }
         }
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
@@ -24746,12 +25309,13 @@ public final class PartnerLocationSettingsOuterClass {
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.internal_static_bloombox_schema_partner_settings_CommsSenderSettings_descriptor;
+      return io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.internal_static_bloombox_partner_settings_CommsSenderSettings_descriptor;
     }
 
+    @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.internal_static_bloombox_schema_partner_settings_CommsSenderSettings_fieldAccessorTable
+      return io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.internal_static_bloombox_partner_settings_CommsSenderSettings_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
               io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.CommsSenderSettings.class, io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.CommsSenderSettings.Builder.class);
     }
@@ -24823,6 +25387,7 @@ public final class PartnerLocationSettingsOuterClass {
     }
 
     private byte memoizedIsInitialized = -1;
+    @java.lang.Override
     public final boolean isInitialized() {
       byte isInitialized = memoizedIsInitialized;
       if (isInitialized == 1) return true;
@@ -24832,6 +25397,7 @@ public final class PartnerLocationSettingsOuterClass {
       return true;
     }
 
+    @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
       if (email_ != null) {
@@ -24843,6 +25409,7 @@ public final class PartnerLocationSettingsOuterClass {
       unknownFields.writeTo(output);
     }
 
+    @java.lang.Override
     public int getSerializedSize() {
       int size = memoizedSize;
       if (size != -1) return size;
@@ -24976,6 +25543,7 @@ public final class PartnerLocationSettingsOuterClass {
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
 
+    @java.lang.Override
     public Builder newBuilderForType() { return newBuilder(); }
     public static Builder newBuilder() {
       return DEFAULT_INSTANCE.toBuilder();
@@ -24983,6 +25551,7 @@ public final class PartnerLocationSettingsOuterClass {
     public static Builder newBuilder(io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.CommsSenderSettings prototype) {
       return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
     }
+    @java.lang.Override
     public Builder toBuilder() {
       return this == DEFAULT_INSTANCE
           ? new Builder() : new Builder().mergeFrom(this);
@@ -24999,20 +25568,21 @@ public final class PartnerLocationSettingsOuterClass {
      * Specifies sender account settings for SMS and email notification channels.
      * </pre>
      *
-     * Protobuf type {@code bloombox.schema.partner.settings.CommsSenderSettings}
+     * Protobuf type {@code bloombox.partner.settings.CommsSenderSettings}
      */
     public static final class Builder extends
         com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:bloombox.schema.partner.settings.CommsSenderSettings)
+        // @@protoc_insertion_point(builder_implements:bloombox.partner.settings.CommsSenderSettings)
         io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.CommsSenderSettingsOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.internal_static_bloombox_schema_partner_settings_CommsSenderSettings_descriptor;
+        return io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.internal_static_bloombox_partner_settings_CommsSenderSettings_descriptor;
       }
 
+      @java.lang.Override
       protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.internal_static_bloombox_schema_partner_settings_CommsSenderSettings_fieldAccessorTable
+        return io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.internal_static_bloombox_partner_settings_CommsSenderSettings_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
                 io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.CommsSenderSettings.class, io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.CommsSenderSettings.Builder.class);
       }
@@ -25032,6 +25602,7 @@ public final class PartnerLocationSettingsOuterClass {
                 .alwaysUseFieldBuilders) {
         }
       }
+      @java.lang.Override
       public Builder clear() {
         super.clear();
         if (emailBuilder_ == null) {
@@ -25049,15 +25620,18 @@ public final class PartnerLocationSettingsOuterClass {
         return this;
       }
 
+      @java.lang.Override
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.internal_static_bloombox_schema_partner_settings_CommsSenderSettings_descriptor;
+        return io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.internal_static_bloombox_partner_settings_CommsSenderSettings_descriptor;
       }
 
+      @java.lang.Override
       public io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.CommsSenderSettings getDefaultInstanceForType() {
         return io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.CommsSenderSettings.getDefaultInstance();
       }
 
+      @java.lang.Override
       public io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.CommsSenderSettings build() {
         io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.CommsSenderSettings result = buildPartial();
         if (!result.isInitialized()) {
@@ -25066,6 +25640,7 @@ public final class PartnerLocationSettingsOuterClass {
         return result;
       }
 
+      @java.lang.Override
       public io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.CommsSenderSettings buildPartial() {
         io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.CommsSenderSettings result = new io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.CommsSenderSettings(this);
         if (emailBuilder_ == null) {
@@ -25082,32 +25657,39 @@ public final class PartnerLocationSettingsOuterClass {
         return result;
       }
 
+      @java.lang.Override
       public Builder clone() {
         return (Builder) super.clone();
       }
+      @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
         return (Builder) super.setField(field, value);
       }
+      @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
         return (Builder) super.clearField(field);
       }
+      @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
         return (Builder) super.clearOneof(oneof);
       }
+      @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
         return (Builder) super.setRepeatedField(field, index, value);
       }
+      @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
         return (Builder) super.addRepeatedField(field, value);
       }
+      @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
         if (other instanceof io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.CommsSenderSettings) {
           return mergeFrom((io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.CommsSenderSettings)other);
@@ -25130,10 +25712,12 @@ public final class PartnerLocationSettingsOuterClass {
         return this;
       }
 
+      @java.lang.Override
       public final boolean isInitialized() {
         return true;
       }
 
+      @java.lang.Override
       public Builder mergeFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -25457,21 +26041,23 @@ public final class PartnerLocationSettingsOuterClass {
         }
         return phoneBuilder_;
       }
+      @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
         return super.setUnknownFieldsProto3(unknownFields);
       }
 
+      @java.lang.Override
       public final Builder mergeUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
         return super.mergeUnknownFields(unknownFields);
       }
 
 
-      // @@protoc_insertion_point(builder_scope:bloombox.schema.partner.settings.CommsSenderSettings)
+      // @@protoc_insertion_point(builder_scope:bloombox.partner.settings.CommsSenderSettings)
     }
 
-    // @@protoc_insertion_point(class_scope:bloombox.schema.partner.settings.CommsSenderSettings)
+    // @@protoc_insertion_point(class_scope:bloombox.partner.settings.CommsSenderSettings)
     private static final io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.CommsSenderSettings DEFAULT_INSTANCE;
     static {
       DEFAULT_INSTANCE = new io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.CommsSenderSettings();
@@ -25483,6 +26069,7 @@ public final class PartnerLocationSettingsOuterClass {
 
     private static final com.google.protobuf.Parser<CommsSenderSettings>
         PARSER = new com.google.protobuf.AbstractParser<CommsSenderSettings>() {
+      @java.lang.Override
       public CommsSenderSettings parsePartialFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -25500,6 +26087,7 @@ public final class PartnerLocationSettingsOuterClass {
       return PARSER;
     }
 
+    @java.lang.Override
     public io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.CommsSenderSettings getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
@@ -25507,7 +26095,7 @@ public final class PartnerLocationSettingsOuterClass {
   }
 
   public interface CommsSettingsPayloadOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:bloombox.schema.partner.settings.CommsSettingsPayload)
+      // @@protoc_insertion_point(interface_extends:bloombox.partner.settings.CommsSettingsPayload)
       com.google.protobuf.MessageOrBuilder {
 
     /**
@@ -25516,7 +26104,7 @@ public final class PartnerLocationSettingsOuterClass {
      * message is used as a map value, since this value is used as its key.
      * </pre>
      *
-     * <code>.bloombox.schema.partner.settings.ShopCommsType type = 1;</code>
+     * <code>.bloombox.partner.settings.ShopCommsType type = 1;</code>
      */
     int getTypeValue();
     /**
@@ -25525,7 +26113,7 @@ public final class PartnerLocationSettingsOuterClass {
      * message is used as a map value, since this value is used as its key.
      * </pre>
      *
-     * <code>.bloombox.schema.partner.settings.ShopCommsType type = 1;</code>
+     * <code>.bloombox.partner.settings.ShopCommsType type = 1;</code>
      */
     io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.ShopCommsType getType();
 
@@ -25535,7 +26123,7 @@ public final class PartnerLocationSettingsOuterClass {
      * set of contacts reached-out-to when things occur. In an external context, these are like a BCC function.
      * </pre>
      *
-     * <code>repeated .bloombox.schema.partner.settings.ShopContactTarget contacts = 2;</code>
+     * <code>repeated .bloombox.partner.settings.ShopContactTarget contacts = 2;</code>
      */
     java.util.List<io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.ShopContactTarget> 
         getContactsList();
@@ -25545,7 +26133,7 @@ public final class PartnerLocationSettingsOuterClass {
      * set of contacts reached-out-to when things occur. In an external context, these are like a BCC function.
      * </pre>
      *
-     * <code>repeated .bloombox.schema.partner.settings.ShopContactTarget contacts = 2;</code>
+     * <code>repeated .bloombox.partner.settings.ShopContactTarget contacts = 2;</code>
      */
     io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.ShopContactTarget getContacts(int index);
     /**
@@ -25554,7 +26142,7 @@ public final class PartnerLocationSettingsOuterClass {
      * set of contacts reached-out-to when things occur. In an external context, these are like a BCC function.
      * </pre>
      *
-     * <code>repeated .bloombox.schema.partner.settings.ShopContactTarget contacts = 2;</code>
+     * <code>repeated .bloombox.partner.settings.ShopContactTarget contacts = 2;</code>
      */
     int getContactsCount();
     /**
@@ -25563,7 +26151,7 @@ public final class PartnerLocationSettingsOuterClass {
      * set of contacts reached-out-to when things occur. In an external context, these are like a BCC function.
      * </pre>
      *
-     * <code>repeated .bloombox.schema.partner.settings.ShopContactTarget contacts = 2;</code>
+     * <code>repeated .bloombox.partner.settings.ShopContactTarget contacts = 2;</code>
      */
     java.util.List<? extends io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.ShopContactTargetOrBuilder> 
         getContactsOrBuilderList();
@@ -25573,7 +26161,7 @@ public final class PartnerLocationSettingsOuterClass {
      * set of contacts reached-out-to when things occur. In an external context, these are like a BCC function.
      * </pre>
      *
-     * <code>repeated .bloombox.schema.partner.settings.ShopContactTarget contacts = 2;</code>
+     * <code>repeated .bloombox.partner.settings.ShopContactTarget contacts = 2;</code>
      */
     io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.ShopContactTargetOrBuilder getContactsOrBuilder(
         int index);
@@ -25584,7 +26172,7 @@ public final class PartnerLocationSettingsOuterClass {
      * (source email address), and SMS (source phone number).
      * </pre>
      *
-     * <code>.bloombox.schema.partner.settings.CommsSenderSettings sender = 3;</code>
+     * <code>.bloombox.partner.settings.CommsSenderSettings sender = 3;</code>
      */
     boolean hasSender();
     /**
@@ -25593,7 +26181,7 @@ public final class PartnerLocationSettingsOuterClass {
      * (source email address), and SMS (source phone number).
      * </pre>
      *
-     * <code>.bloombox.schema.partner.settings.CommsSenderSettings sender = 3;</code>
+     * <code>.bloombox.partner.settings.CommsSenderSettings sender = 3;</code>
      */
     io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.CommsSenderSettings getSender();
     /**
@@ -25602,7 +26190,7 @@ public final class PartnerLocationSettingsOuterClass {
      * (source email address), and SMS (source phone number).
      * </pre>
      *
-     * <code>.bloombox.schema.partner.settings.CommsSenderSettings sender = 3;</code>
+     * <code>.bloombox.partner.settings.CommsSenderSettings sender = 3;</code>
      */
     io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.CommsSenderSettingsOrBuilder getSenderOrBuilder();
   }
@@ -25611,11 +26199,11 @@ public final class PartnerLocationSettingsOuterClass {
    * Specifies a particular type of communication settings, usually keyed by its type.
    * </pre>
    *
-   * Protobuf type {@code bloombox.schema.partner.settings.CommsSettingsPayload}
+   * Protobuf type {@code bloombox.partner.settings.CommsSettingsPayload}
    */
   public  static final class CommsSettingsPayload extends
       com.google.protobuf.GeneratedMessageV3 implements
-      // @@protoc_insertion_point(message_implements:bloombox.schema.partner.settings.CommsSettingsPayload)
+      // @@protoc_insertion_point(message_implements:bloombox.partner.settings.CommsSettingsPayload)
       CommsSettingsPayloadOrBuilder {
   private static final long serialVersionUID = 0L;
     // Use CommsSettingsPayload.newBuilder() to construct.
@@ -25651,13 +26239,6 @@ public final class PartnerLocationSettingsOuterClass {
             case 0:
               done = true;
               break;
-            default: {
-              if (!parseUnknownFieldProto3(
-                  input, unknownFields, extensionRegistry, tag)) {
-                done = true;
-              }
-              break;
-            }
             case 8: {
               int rawValue = input.readEnum();
 
@@ -25686,6 +26267,13 @@ public final class PartnerLocationSettingsOuterClass {
 
               break;
             }
+            default: {
+              if (!parseUnknownFieldProto3(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
           }
         }
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
@@ -25703,12 +26291,13 @@ public final class PartnerLocationSettingsOuterClass {
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.internal_static_bloombox_schema_partner_settings_CommsSettingsPayload_descriptor;
+      return io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.internal_static_bloombox_partner_settings_CommsSettingsPayload_descriptor;
     }
 
+    @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.internal_static_bloombox_schema_partner_settings_CommsSettingsPayload_fieldAccessorTable
+      return io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.internal_static_bloombox_partner_settings_CommsSettingsPayload_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
               io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.CommsSettingsPayload.class, io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.CommsSettingsPayload.Builder.class);
     }
@@ -25722,7 +26311,7 @@ public final class PartnerLocationSettingsOuterClass {
      * message is used as a map value, since this value is used as its key.
      * </pre>
      *
-     * <code>.bloombox.schema.partner.settings.ShopCommsType type = 1;</code>
+     * <code>.bloombox.partner.settings.ShopCommsType type = 1;</code>
      */
     public int getTypeValue() {
       return type_;
@@ -25733,9 +26322,10 @@ public final class PartnerLocationSettingsOuterClass {
      * message is used as a map value, since this value is used as its key.
      * </pre>
      *
-     * <code>.bloombox.schema.partner.settings.ShopCommsType type = 1;</code>
+     * <code>.bloombox.partner.settings.ShopCommsType type = 1;</code>
      */
     public io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.ShopCommsType getType() {
+      @SuppressWarnings("deprecation")
       io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.ShopCommsType result = io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.ShopCommsType.valueOf(type_);
       return result == null ? io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.ShopCommsType.UNRECOGNIZED : result;
     }
@@ -25748,7 +26338,7 @@ public final class PartnerLocationSettingsOuterClass {
      * set of contacts reached-out-to when things occur. In an external context, these are like a BCC function.
      * </pre>
      *
-     * <code>repeated .bloombox.schema.partner.settings.ShopContactTarget contacts = 2;</code>
+     * <code>repeated .bloombox.partner.settings.ShopContactTarget contacts = 2;</code>
      */
     public java.util.List<io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.ShopContactTarget> getContactsList() {
       return contacts_;
@@ -25759,7 +26349,7 @@ public final class PartnerLocationSettingsOuterClass {
      * set of contacts reached-out-to when things occur. In an external context, these are like a BCC function.
      * </pre>
      *
-     * <code>repeated .bloombox.schema.partner.settings.ShopContactTarget contacts = 2;</code>
+     * <code>repeated .bloombox.partner.settings.ShopContactTarget contacts = 2;</code>
      */
     public java.util.List<? extends io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.ShopContactTargetOrBuilder> 
         getContactsOrBuilderList() {
@@ -25771,7 +26361,7 @@ public final class PartnerLocationSettingsOuterClass {
      * set of contacts reached-out-to when things occur. In an external context, these are like a BCC function.
      * </pre>
      *
-     * <code>repeated .bloombox.schema.partner.settings.ShopContactTarget contacts = 2;</code>
+     * <code>repeated .bloombox.partner.settings.ShopContactTarget contacts = 2;</code>
      */
     public int getContactsCount() {
       return contacts_.size();
@@ -25782,7 +26372,7 @@ public final class PartnerLocationSettingsOuterClass {
      * set of contacts reached-out-to when things occur. In an external context, these are like a BCC function.
      * </pre>
      *
-     * <code>repeated .bloombox.schema.partner.settings.ShopContactTarget contacts = 2;</code>
+     * <code>repeated .bloombox.partner.settings.ShopContactTarget contacts = 2;</code>
      */
     public io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.ShopContactTarget getContacts(int index) {
       return contacts_.get(index);
@@ -25793,7 +26383,7 @@ public final class PartnerLocationSettingsOuterClass {
      * set of contacts reached-out-to when things occur. In an external context, these are like a BCC function.
      * </pre>
      *
-     * <code>repeated .bloombox.schema.partner.settings.ShopContactTarget contacts = 2;</code>
+     * <code>repeated .bloombox.partner.settings.ShopContactTarget contacts = 2;</code>
      */
     public io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.ShopContactTargetOrBuilder getContactsOrBuilder(
         int index) {
@@ -25808,7 +26398,7 @@ public final class PartnerLocationSettingsOuterClass {
      * (source email address), and SMS (source phone number).
      * </pre>
      *
-     * <code>.bloombox.schema.partner.settings.CommsSenderSettings sender = 3;</code>
+     * <code>.bloombox.partner.settings.CommsSenderSettings sender = 3;</code>
      */
     public boolean hasSender() {
       return sender_ != null;
@@ -25819,7 +26409,7 @@ public final class PartnerLocationSettingsOuterClass {
      * (source email address), and SMS (source phone number).
      * </pre>
      *
-     * <code>.bloombox.schema.partner.settings.CommsSenderSettings sender = 3;</code>
+     * <code>.bloombox.partner.settings.CommsSenderSettings sender = 3;</code>
      */
     public io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.CommsSenderSettings getSender() {
       return sender_ == null ? io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.CommsSenderSettings.getDefaultInstance() : sender_;
@@ -25830,13 +26420,14 @@ public final class PartnerLocationSettingsOuterClass {
      * (source email address), and SMS (source phone number).
      * </pre>
      *
-     * <code>.bloombox.schema.partner.settings.CommsSenderSettings sender = 3;</code>
+     * <code>.bloombox.partner.settings.CommsSenderSettings sender = 3;</code>
      */
     public io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.CommsSenderSettingsOrBuilder getSenderOrBuilder() {
       return getSender();
     }
 
     private byte memoizedIsInitialized = -1;
+    @java.lang.Override
     public final boolean isInitialized() {
       byte isInitialized = memoizedIsInitialized;
       if (isInitialized == 1) return true;
@@ -25846,6 +26437,7 @@ public final class PartnerLocationSettingsOuterClass {
       return true;
     }
 
+    @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
       if (type_ != io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.ShopCommsType.INTERNAL.getNumber()) {
@@ -25860,6 +26452,7 @@ public final class PartnerLocationSettingsOuterClass {
       unknownFields.writeTo(output);
     }
 
+    @java.lang.Override
     public int getSerializedSize() {
       int size = memoizedSize;
       if (size != -1) return size;
@@ -25997,6 +26590,7 @@ public final class PartnerLocationSettingsOuterClass {
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
 
+    @java.lang.Override
     public Builder newBuilderForType() { return newBuilder(); }
     public static Builder newBuilder() {
       return DEFAULT_INSTANCE.toBuilder();
@@ -26004,6 +26598,7 @@ public final class PartnerLocationSettingsOuterClass {
     public static Builder newBuilder(io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.CommsSettingsPayload prototype) {
       return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
     }
+    @java.lang.Override
     public Builder toBuilder() {
       return this == DEFAULT_INSTANCE
           ? new Builder() : new Builder().mergeFrom(this);
@@ -26020,20 +26615,21 @@ public final class PartnerLocationSettingsOuterClass {
      * Specifies a particular type of communication settings, usually keyed by its type.
      * </pre>
      *
-     * Protobuf type {@code bloombox.schema.partner.settings.CommsSettingsPayload}
+     * Protobuf type {@code bloombox.partner.settings.CommsSettingsPayload}
      */
     public static final class Builder extends
         com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:bloombox.schema.partner.settings.CommsSettingsPayload)
+        // @@protoc_insertion_point(builder_implements:bloombox.partner.settings.CommsSettingsPayload)
         io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.CommsSettingsPayloadOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.internal_static_bloombox_schema_partner_settings_CommsSettingsPayload_descriptor;
+        return io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.internal_static_bloombox_partner_settings_CommsSettingsPayload_descriptor;
       }
 
+      @java.lang.Override
       protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.internal_static_bloombox_schema_partner_settings_CommsSettingsPayload_fieldAccessorTable
+        return io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.internal_static_bloombox_partner_settings_CommsSettingsPayload_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
                 io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.CommsSettingsPayload.class, io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.CommsSettingsPayload.Builder.class);
       }
@@ -26054,6 +26650,7 @@ public final class PartnerLocationSettingsOuterClass {
           getContactsFieldBuilder();
         }
       }
+      @java.lang.Override
       public Builder clear() {
         super.clear();
         type_ = 0;
@@ -26073,15 +26670,18 @@ public final class PartnerLocationSettingsOuterClass {
         return this;
       }
 
+      @java.lang.Override
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.internal_static_bloombox_schema_partner_settings_CommsSettingsPayload_descriptor;
+        return io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.internal_static_bloombox_partner_settings_CommsSettingsPayload_descriptor;
       }
 
+      @java.lang.Override
       public io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.CommsSettingsPayload getDefaultInstanceForType() {
         return io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.CommsSettingsPayload.getDefaultInstance();
       }
 
+      @java.lang.Override
       public io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.CommsSettingsPayload build() {
         io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.CommsSettingsPayload result = buildPartial();
         if (!result.isInitialized()) {
@@ -26090,6 +26690,7 @@ public final class PartnerLocationSettingsOuterClass {
         return result;
       }
 
+      @java.lang.Override
       public io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.CommsSettingsPayload buildPartial() {
         io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.CommsSettingsPayload result = new io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.CommsSettingsPayload(this);
         int from_bitField0_ = bitField0_;
@@ -26114,32 +26715,39 @@ public final class PartnerLocationSettingsOuterClass {
         return result;
       }
 
+      @java.lang.Override
       public Builder clone() {
         return (Builder) super.clone();
       }
+      @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
         return (Builder) super.setField(field, value);
       }
+      @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
         return (Builder) super.clearField(field);
       }
+      @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
         return (Builder) super.clearOneof(oneof);
       }
+      @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
         return (Builder) super.setRepeatedField(field, index, value);
       }
+      @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
         return (Builder) super.addRepeatedField(field, value);
       }
+      @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
         if (other instanceof io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.CommsSettingsPayload) {
           return mergeFrom((io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.CommsSettingsPayload)other);
@@ -26188,10 +26796,12 @@ public final class PartnerLocationSettingsOuterClass {
         return this;
       }
 
+      @java.lang.Override
       public final boolean isInitialized() {
         return true;
       }
 
+      @java.lang.Override
       public Builder mergeFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -26218,7 +26828,7 @@ public final class PartnerLocationSettingsOuterClass {
        * message is used as a map value, since this value is used as its key.
        * </pre>
        *
-       * <code>.bloombox.schema.partner.settings.ShopCommsType type = 1;</code>
+       * <code>.bloombox.partner.settings.ShopCommsType type = 1;</code>
        */
       public int getTypeValue() {
         return type_;
@@ -26229,7 +26839,7 @@ public final class PartnerLocationSettingsOuterClass {
        * message is used as a map value, since this value is used as its key.
        * </pre>
        *
-       * <code>.bloombox.schema.partner.settings.ShopCommsType type = 1;</code>
+       * <code>.bloombox.partner.settings.ShopCommsType type = 1;</code>
        */
       public Builder setTypeValue(int value) {
         type_ = value;
@@ -26242,9 +26852,10 @@ public final class PartnerLocationSettingsOuterClass {
        * message is used as a map value, since this value is used as its key.
        * </pre>
        *
-       * <code>.bloombox.schema.partner.settings.ShopCommsType type = 1;</code>
+       * <code>.bloombox.partner.settings.ShopCommsType type = 1;</code>
        */
       public io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.ShopCommsType getType() {
+        @SuppressWarnings("deprecation")
         io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.ShopCommsType result = io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.ShopCommsType.valueOf(type_);
         return result == null ? io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.ShopCommsType.UNRECOGNIZED : result;
       }
@@ -26254,7 +26865,7 @@ public final class PartnerLocationSettingsOuterClass {
        * message is used as a map value, since this value is used as its key.
        * </pre>
        *
-       * <code>.bloombox.schema.partner.settings.ShopCommsType type = 1;</code>
+       * <code>.bloombox.partner.settings.ShopCommsType type = 1;</code>
        */
       public Builder setType(io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.ShopCommsType value) {
         if (value == null) {
@@ -26271,7 +26882,7 @@ public final class PartnerLocationSettingsOuterClass {
        * message is used as a map value, since this value is used as its key.
        * </pre>
        *
-       * <code>.bloombox.schema.partner.settings.ShopCommsType type = 1;</code>
+       * <code>.bloombox.partner.settings.ShopCommsType type = 1;</code>
        */
       public Builder clearType() {
         
@@ -26298,7 +26909,7 @@ public final class PartnerLocationSettingsOuterClass {
        * set of contacts reached-out-to when things occur. In an external context, these are like a BCC function.
        * </pre>
        *
-       * <code>repeated .bloombox.schema.partner.settings.ShopContactTarget contacts = 2;</code>
+       * <code>repeated .bloombox.partner.settings.ShopContactTarget contacts = 2;</code>
        */
       public java.util.List<io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.ShopContactTarget> getContactsList() {
         if (contactsBuilder_ == null) {
@@ -26313,7 +26924,7 @@ public final class PartnerLocationSettingsOuterClass {
        * set of contacts reached-out-to when things occur. In an external context, these are like a BCC function.
        * </pre>
        *
-       * <code>repeated .bloombox.schema.partner.settings.ShopContactTarget contacts = 2;</code>
+       * <code>repeated .bloombox.partner.settings.ShopContactTarget contacts = 2;</code>
        */
       public int getContactsCount() {
         if (contactsBuilder_ == null) {
@@ -26328,7 +26939,7 @@ public final class PartnerLocationSettingsOuterClass {
        * set of contacts reached-out-to when things occur. In an external context, these are like a BCC function.
        * </pre>
        *
-       * <code>repeated .bloombox.schema.partner.settings.ShopContactTarget contacts = 2;</code>
+       * <code>repeated .bloombox.partner.settings.ShopContactTarget contacts = 2;</code>
        */
       public io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.ShopContactTarget getContacts(int index) {
         if (contactsBuilder_ == null) {
@@ -26343,7 +26954,7 @@ public final class PartnerLocationSettingsOuterClass {
        * set of contacts reached-out-to when things occur. In an external context, these are like a BCC function.
        * </pre>
        *
-       * <code>repeated .bloombox.schema.partner.settings.ShopContactTarget contacts = 2;</code>
+       * <code>repeated .bloombox.partner.settings.ShopContactTarget contacts = 2;</code>
        */
       public Builder setContacts(
           int index, io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.ShopContactTarget value) {
@@ -26365,7 +26976,7 @@ public final class PartnerLocationSettingsOuterClass {
        * set of contacts reached-out-to when things occur. In an external context, these are like a BCC function.
        * </pre>
        *
-       * <code>repeated .bloombox.schema.partner.settings.ShopContactTarget contacts = 2;</code>
+       * <code>repeated .bloombox.partner.settings.ShopContactTarget contacts = 2;</code>
        */
       public Builder setContacts(
           int index, io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.ShopContactTarget.Builder builderForValue) {
@@ -26384,7 +26995,7 @@ public final class PartnerLocationSettingsOuterClass {
        * set of contacts reached-out-to when things occur. In an external context, these are like a BCC function.
        * </pre>
        *
-       * <code>repeated .bloombox.schema.partner.settings.ShopContactTarget contacts = 2;</code>
+       * <code>repeated .bloombox.partner.settings.ShopContactTarget contacts = 2;</code>
        */
       public Builder addContacts(io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.ShopContactTarget value) {
         if (contactsBuilder_ == null) {
@@ -26405,7 +27016,7 @@ public final class PartnerLocationSettingsOuterClass {
        * set of contacts reached-out-to when things occur. In an external context, these are like a BCC function.
        * </pre>
        *
-       * <code>repeated .bloombox.schema.partner.settings.ShopContactTarget contacts = 2;</code>
+       * <code>repeated .bloombox.partner.settings.ShopContactTarget contacts = 2;</code>
        */
       public Builder addContacts(
           int index, io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.ShopContactTarget value) {
@@ -26427,7 +27038,7 @@ public final class PartnerLocationSettingsOuterClass {
        * set of contacts reached-out-to when things occur. In an external context, these are like a BCC function.
        * </pre>
        *
-       * <code>repeated .bloombox.schema.partner.settings.ShopContactTarget contacts = 2;</code>
+       * <code>repeated .bloombox.partner.settings.ShopContactTarget contacts = 2;</code>
        */
       public Builder addContacts(
           io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.ShopContactTarget.Builder builderForValue) {
@@ -26446,7 +27057,7 @@ public final class PartnerLocationSettingsOuterClass {
        * set of contacts reached-out-to when things occur. In an external context, these are like a BCC function.
        * </pre>
        *
-       * <code>repeated .bloombox.schema.partner.settings.ShopContactTarget contacts = 2;</code>
+       * <code>repeated .bloombox.partner.settings.ShopContactTarget contacts = 2;</code>
        */
       public Builder addContacts(
           int index, io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.ShopContactTarget.Builder builderForValue) {
@@ -26465,7 +27076,7 @@ public final class PartnerLocationSettingsOuterClass {
        * set of contacts reached-out-to when things occur. In an external context, these are like a BCC function.
        * </pre>
        *
-       * <code>repeated .bloombox.schema.partner.settings.ShopContactTarget contacts = 2;</code>
+       * <code>repeated .bloombox.partner.settings.ShopContactTarget contacts = 2;</code>
        */
       public Builder addAllContacts(
           java.lang.Iterable<? extends io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.ShopContactTarget> values) {
@@ -26485,7 +27096,7 @@ public final class PartnerLocationSettingsOuterClass {
        * set of contacts reached-out-to when things occur. In an external context, these are like a BCC function.
        * </pre>
        *
-       * <code>repeated .bloombox.schema.partner.settings.ShopContactTarget contacts = 2;</code>
+       * <code>repeated .bloombox.partner.settings.ShopContactTarget contacts = 2;</code>
        */
       public Builder clearContacts() {
         if (contactsBuilder_ == null) {
@@ -26503,7 +27114,7 @@ public final class PartnerLocationSettingsOuterClass {
        * set of contacts reached-out-to when things occur. In an external context, these are like a BCC function.
        * </pre>
        *
-       * <code>repeated .bloombox.schema.partner.settings.ShopContactTarget contacts = 2;</code>
+       * <code>repeated .bloombox.partner.settings.ShopContactTarget contacts = 2;</code>
        */
       public Builder removeContacts(int index) {
         if (contactsBuilder_ == null) {
@@ -26521,7 +27132,7 @@ public final class PartnerLocationSettingsOuterClass {
        * set of contacts reached-out-to when things occur. In an external context, these are like a BCC function.
        * </pre>
        *
-       * <code>repeated .bloombox.schema.partner.settings.ShopContactTarget contacts = 2;</code>
+       * <code>repeated .bloombox.partner.settings.ShopContactTarget contacts = 2;</code>
        */
       public io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.ShopContactTarget.Builder getContactsBuilder(
           int index) {
@@ -26533,7 +27144,7 @@ public final class PartnerLocationSettingsOuterClass {
        * set of contacts reached-out-to when things occur. In an external context, these are like a BCC function.
        * </pre>
        *
-       * <code>repeated .bloombox.schema.partner.settings.ShopContactTarget contacts = 2;</code>
+       * <code>repeated .bloombox.partner.settings.ShopContactTarget contacts = 2;</code>
        */
       public io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.ShopContactTargetOrBuilder getContactsOrBuilder(
           int index) {
@@ -26548,7 +27159,7 @@ public final class PartnerLocationSettingsOuterClass {
        * set of contacts reached-out-to when things occur. In an external context, these are like a BCC function.
        * </pre>
        *
-       * <code>repeated .bloombox.schema.partner.settings.ShopContactTarget contacts = 2;</code>
+       * <code>repeated .bloombox.partner.settings.ShopContactTarget contacts = 2;</code>
        */
       public java.util.List<? extends io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.ShopContactTargetOrBuilder> 
            getContactsOrBuilderList() {
@@ -26564,7 +27175,7 @@ public final class PartnerLocationSettingsOuterClass {
        * set of contacts reached-out-to when things occur. In an external context, these are like a BCC function.
        * </pre>
        *
-       * <code>repeated .bloombox.schema.partner.settings.ShopContactTarget contacts = 2;</code>
+       * <code>repeated .bloombox.partner.settings.ShopContactTarget contacts = 2;</code>
        */
       public io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.ShopContactTarget.Builder addContactsBuilder() {
         return getContactsFieldBuilder().addBuilder(
@@ -26576,7 +27187,7 @@ public final class PartnerLocationSettingsOuterClass {
        * set of contacts reached-out-to when things occur. In an external context, these are like a BCC function.
        * </pre>
        *
-       * <code>repeated .bloombox.schema.partner.settings.ShopContactTarget contacts = 2;</code>
+       * <code>repeated .bloombox.partner.settings.ShopContactTarget contacts = 2;</code>
        */
       public io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.ShopContactTarget.Builder addContactsBuilder(
           int index) {
@@ -26589,7 +27200,7 @@ public final class PartnerLocationSettingsOuterClass {
        * set of contacts reached-out-to when things occur. In an external context, these are like a BCC function.
        * </pre>
        *
-       * <code>repeated .bloombox.schema.partner.settings.ShopContactTarget contacts = 2;</code>
+       * <code>repeated .bloombox.partner.settings.ShopContactTarget contacts = 2;</code>
        */
       public java.util.List<io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.ShopContactTarget.Builder> 
            getContactsBuilderList() {
@@ -26619,7 +27230,7 @@ public final class PartnerLocationSettingsOuterClass {
        * (source email address), and SMS (source phone number).
        * </pre>
        *
-       * <code>.bloombox.schema.partner.settings.CommsSenderSettings sender = 3;</code>
+       * <code>.bloombox.partner.settings.CommsSenderSettings sender = 3;</code>
        */
       public boolean hasSender() {
         return senderBuilder_ != null || sender_ != null;
@@ -26630,7 +27241,7 @@ public final class PartnerLocationSettingsOuterClass {
        * (source email address), and SMS (source phone number).
        * </pre>
        *
-       * <code>.bloombox.schema.partner.settings.CommsSenderSettings sender = 3;</code>
+       * <code>.bloombox.partner.settings.CommsSenderSettings sender = 3;</code>
        */
       public io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.CommsSenderSettings getSender() {
         if (senderBuilder_ == null) {
@@ -26645,7 +27256,7 @@ public final class PartnerLocationSettingsOuterClass {
        * (source email address), and SMS (source phone number).
        * </pre>
        *
-       * <code>.bloombox.schema.partner.settings.CommsSenderSettings sender = 3;</code>
+       * <code>.bloombox.partner.settings.CommsSenderSettings sender = 3;</code>
        */
       public Builder setSender(io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.CommsSenderSettings value) {
         if (senderBuilder_ == null) {
@@ -26666,7 +27277,7 @@ public final class PartnerLocationSettingsOuterClass {
        * (source email address), and SMS (source phone number).
        * </pre>
        *
-       * <code>.bloombox.schema.partner.settings.CommsSenderSettings sender = 3;</code>
+       * <code>.bloombox.partner.settings.CommsSenderSettings sender = 3;</code>
        */
       public Builder setSender(
           io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.CommsSenderSettings.Builder builderForValue) {
@@ -26685,7 +27296,7 @@ public final class PartnerLocationSettingsOuterClass {
        * (source email address), and SMS (source phone number).
        * </pre>
        *
-       * <code>.bloombox.schema.partner.settings.CommsSenderSettings sender = 3;</code>
+       * <code>.bloombox.partner.settings.CommsSenderSettings sender = 3;</code>
        */
       public Builder mergeSender(io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.CommsSenderSettings value) {
         if (senderBuilder_ == null) {
@@ -26708,7 +27319,7 @@ public final class PartnerLocationSettingsOuterClass {
        * (source email address), and SMS (source phone number).
        * </pre>
        *
-       * <code>.bloombox.schema.partner.settings.CommsSenderSettings sender = 3;</code>
+       * <code>.bloombox.partner.settings.CommsSenderSettings sender = 3;</code>
        */
       public Builder clearSender() {
         if (senderBuilder_ == null) {
@@ -26727,7 +27338,7 @@ public final class PartnerLocationSettingsOuterClass {
        * (source email address), and SMS (source phone number).
        * </pre>
        *
-       * <code>.bloombox.schema.partner.settings.CommsSenderSettings sender = 3;</code>
+       * <code>.bloombox.partner.settings.CommsSenderSettings sender = 3;</code>
        */
       public io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.CommsSenderSettings.Builder getSenderBuilder() {
         
@@ -26740,7 +27351,7 @@ public final class PartnerLocationSettingsOuterClass {
        * (source email address), and SMS (source phone number).
        * </pre>
        *
-       * <code>.bloombox.schema.partner.settings.CommsSenderSettings sender = 3;</code>
+       * <code>.bloombox.partner.settings.CommsSenderSettings sender = 3;</code>
        */
       public io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.CommsSenderSettingsOrBuilder getSenderOrBuilder() {
         if (senderBuilder_ != null) {
@@ -26756,7 +27367,7 @@ public final class PartnerLocationSettingsOuterClass {
        * (source email address), and SMS (source phone number).
        * </pre>
        *
-       * <code>.bloombox.schema.partner.settings.CommsSenderSettings sender = 3;</code>
+       * <code>.bloombox.partner.settings.CommsSenderSettings sender = 3;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
           io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.CommsSenderSettings, io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.CommsSenderSettings.Builder, io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.CommsSenderSettingsOrBuilder> 
@@ -26771,21 +27382,23 @@ public final class PartnerLocationSettingsOuterClass {
         }
         return senderBuilder_;
       }
+      @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
         return super.setUnknownFieldsProto3(unknownFields);
       }
 
+      @java.lang.Override
       public final Builder mergeUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
         return super.mergeUnknownFields(unknownFields);
       }
 
 
-      // @@protoc_insertion_point(builder_scope:bloombox.schema.partner.settings.CommsSettingsPayload)
+      // @@protoc_insertion_point(builder_scope:bloombox.partner.settings.CommsSettingsPayload)
     }
 
-    // @@protoc_insertion_point(class_scope:bloombox.schema.partner.settings.CommsSettingsPayload)
+    // @@protoc_insertion_point(class_scope:bloombox.partner.settings.CommsSettingsPayload)
     private static final io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.CommsSettingsPayload DEFAULT_INSTANCE;
     static {
       DEFAULT_INSTANCE = new io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.CommsSettingsPayload();
@@ -26797,6 +27410,7 @@ public final class PartnerLocationSettingsOuterClass {
 
     private static final com.google.protobuf.Parser<CommsSettingsPayload>
         PARSER = new com.google.protobuf.AbstractParser<CommsSettingsPayload>() {
+      @java.lang.Override
       public CommsSettingsPayload parsePartialFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -26814,6 +27428,7 @@ public final class PartnerLocationSettingsOuterClass {
       return PARSER;
     }
 
+    @java.lang.Override
     public io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.CommsSettingsPayload getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
@@ -26821,7 +27436,7 @@ public final class PartnerLocationSettingsOuterClass {
   }
 
   public interface ShopCommsSettingsOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:bloombox.schema.partner.settings.ShopCommsSettings)
+      // @@protoc_insertion_point(interface_extends:bloombox.partner.settings.ShopCommsSettings)
       com.google.protobuf.MessageOrBuilder {
 
     /**
@@ -26829,7 +27444,7 @@ public final class PartnerLocationSettingsOuterClass {
      * Internal communications settings. This includes dispensary owners/operators/staff and other internal stakeholders.
      * </pre>
      *
-     * <code>.bloombox.schema.partner.settings.CommsSettingsPayload internal = 1;</code>
+     * <code>.bloombox.partner.settings.CommsSettingsPayload internal = 1;</code>
      */
     boolean hasInternal();
     /**
@@ -26837,7 +27452,7 @@ public final class PartnerLocationSettingsOuterClass {
      * Internal communications settings. This includes dispensary owners/operators/staff and other internal stakeholders.
      * </pre>
      *
-     * <code>.bloombox.schema.partner.settings.CommsSettingsPayload internal = 1;</code>
+     * <code>.bloombox.partner.settings.CommsSettingsPayload internal = 1;</code>
      */
     io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.CommsSettingsPayload getInternal();
     /**
@@ -26845,7 +27460,7 @@ public final class PartnerLocationSettingsOuterClass {
      * Internal communications settings. This includes dispensary owners/operators/staff and other internal stakeholders.
      * </pre>
      *
-     * <code>.bloombox.schema.partner.settings.CommsSettingsPayload internal = 1;</code>
+     * <code>.bloombox.partner.settings.CommsSettingsPayload internal = 1;</code>
      */
     io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.CommsSettingsPayloadOrBuilder getInternalOrBuilder();
 
@@ -26855,7 +27470,7 @@ public final class PartnerLocationSettingsOuterClass {
      * customers, and so on.
      * </pre>
      *
-     * <code>.bloombox.schema.partner.settings.CommsSettingsPayload external = 2;</code>
+     * <code>.bloombox.partner.settings.CommsSettingsPayload external = 2;</code>
      */
     boolean hasExternal();
     /**
@@ -26864,7 +27479,7 @@ public final class PartnerLocationSettingsOuterClass {
      * customers, and so on.
      * </pre>
      *
-     * <code>.bloombox.schema.partner.settings.CommsSettingsPayload external = 2;</code>
+     * <code>.bloombox.partner.settings.CommsSettingsPayload external = 2;</code>
      */
     io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.CommsSettingsPayload getExternal();
     /**
@@ -26873,7 +27488,7 @@ public final class PartnerLocationSettingsOuterClass {
      * customers, and so on.
      * </pre>
      *
-     * <code>.bloombox.schema.partner.settings.CommsSettingsPayload external = 2;</code>
+     * <code>.bloombox.partner.settings.CommsSettingsPayload external = 2;</code>
      */
     io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.CommsSettingsPayloadOrBuilder getExternalOrBuilder();
   }
@@ -26882,11 +27497,11 @@ public final class PartnerLocationSettingsOuterClass {
    * Specifies settings related to shop comms.
    * </pre>
    *
-   * Protobuf type {@code bloombox.schema.partner.settings.ShopCommsSettings}
+   * Protobuf type {@code bloombox.partner.settings.ShopCommsSettings}
    */
   public  static final class ShopCommsSettings extends
       com.google.protobuf.GeneratedMessageV3 implements
-      // @@protoc_insertion_point(message_implements:bloombox.schema.partner.settings.ShopCommsSettings)
+      // @@protoc_insertion_point(message_implements:bloombox.partner.settings.ShopCommsSettings)
       ShopCommsSettingsOrBuilder {
   private static final long serialVersionUID = 0L;
     // Use ShopCommsSettings.newBuilder() to construct.
@@ -26920,13 +27535,6 @@ public final class PartnerLocationSettingsOuterClass {
             case 0:
               done = true;
               break;
-            default: {
-              if (!parseUnknownFieldProto3(
-                  input, unknownFields, extensionRegistry, tag)) {
-                done = true;
-              }
-              break;
-            }
             case 10: {
               io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.CommsSettingsPayload.Builder subBuilder = null;
               if (internal_ != null) {
@@ -26953,6 +27561,13 @@ public final class PartnerLocationSettingsOuterClass {
 
               break;
             }
+            default: {
+              if (!parseUnknownFieldProto3(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
           }
         }
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
@@ -26967,12 +27582,13 @@ public final class PartnerLocationSettingsOuterClass {
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.internal_static_bloombox_schema_partner_settings_ShopCommsSettings_descriptor;
+      return io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.internal_static_bloombox_partner_settings_ShopCommsSettings_descriptor;
     }
 
+    @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.internal_static_bloombox_schema_partner_settings_ShopCommsSettings_fieldAccessorTable
+      return io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.internal_static_bloombox_partner_settings_ShopCommsSettings_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
               io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.ShopCommsSettings.class, io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.ShopCommsSettings.Builder.class);
     }
@@ -26984,7 +27600,7 @@ public final class PartnerLocationSettingsOuterClass {
      * Internal communications settings. This includes dispensary owners/operators/staff and other internal stakeholders.
      * </pre>
      *
-     * <code>.bloombox.schema.partner.settings.CommsSettingsPayload internal = 1;</code>
+     * <code>.bloombox.partner.settings.CommsSettingsPayload internal = 1;</code>
      */
     public boolean hasInternal() {
       return internal_ != null;
@@ -26994,7 +27610,7 @@ public final class PartnerLocationSettingsOuterClass {
      * Internal communications settings. This includes dispensary owners/operators/staff and other internal stakeholders.
      * </pre>
      *
-     * <code>.bloombox.schema.partner.settings.CommsSettingsPayload internal = 1;</code>
+     * <code>.bloombox.partner.settings.CommsSettingsPayload internal = 1;</code>
      */
     public io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.CommsSettingsPayload getInternal() {
       return internal_ == null ? io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.CommsSettingsPayload.getDefaultInstance() : internal_;
@@ -27004,7 +27620,7 @@ public final class PartnerLocationSettingsOuterClass {
      * Internal communications settings. This includes dispensary owners/operators/staff and other internal stakeholders.
      * </pre>
      *
-     * <code>.bloombox.schema.partner.settings.CommsSettingsPayload internal = 1;</code>
+     * <code>.bloombox.partner.settings.CommsSettingsPayload internal = 1;</code>
      */
     public io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.CommsSettingsPayloadOrBuilder getInternalOrBuilder() {
       return getInternal();
@@ -27018,7 +27634,7 @@ public final class PartnerLocationSettingsOuterClass {
      * customers, and so on.
      * </pre>
      *
-     * <code>.bloombox.schema.partner.settings.CommsSettingsPayload external = 2;</code>
+     * <code>.bloombox.partner.settings.CommsSettingsPayload external = 2;</code>
      */
     public boolean hasExternal() {
       return external_ != null;
@@ -27029,7 +27645,7 @@ public final class PartnerLocationSettingsOuterClass {
      * customers, and so on.
      * </pre>
      *
-     * <code>.bloombox.schema.partner.settings.CommsSettingsPayload external = 2;</code>
+     * <code>.bloombox.partner.settings.CommsSettingsPayload external = 2;</code>
      */
     public io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.CommsSettingsPayload getExternal() {
       return external_ == null ? io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.CommsSettingsPayload.getDefaultInstance() : external_;
@@ -27040,13 +27656,14 @@ public final class PartnerLocationSettingsOuterClass {
      * customers, and so on.
      * </pre>
      *
-     * <code>.bloombox.schema.partner.settings.CommsSettingsPayload external = 2;</code>
+     * <code>.bloombox.partner.settings.CommsSettingsPayload external = 2;</code>
      */
     public io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.CommsSettingsPayloadOrBuilder getExternalOrBuilder() {
       return getExternal();
     }
 
     private byte memoizedIsInitialized = -1;
+    @java.lang.Override
     public final boolean isInitialized() {
       byte isInitialized = memoizedIsInitialized;
       if (isInitialized == 1) return true;
@@ -27056,6 +27673,7 @@ public final class PartnerLocationSettingsOuterClass {
       return true;
     }
 
+    @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
       if (internal_ != null) {
@@ -27067,6 +27685,7 @@ public final class PartnerLocationSettingsOuterClass {
       unknownFields.writeTo(output);
     }
 
+    @java.lang.Override
     public int getSerializedSize() {
       int size = memoizedSize;
       if (size != -1) return size;
@@ -27200,6 +27819,7 @@ public final class PartnerLocationSettingsOuterClass {
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
 
+    @java.lang.Override
     public Builder newBuilderForType() { return newBuilder(); }
     public static Builder newBuilder() {
       return DEFAULT_INSTANCE.toBuilder();
@@ -27207,6 +27827,7 @@ public final class PartnerLocationSettingsOuterClass {
     public static Builder newBuilder(io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.ShopCommsSettings prototype) {
       return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
     }
+    @java.lang.Override
     public Builder toBuilder() {
       return this == DEFAULT_INSTANCE
           ? new Builder() : new Builder().mergeFrom(this);
@@ -27223,20 +27844,21 @@ public final class PartnerLocationSettingsOuterClass {
      * Specifies settings related to shop comms.
      * </pre>
      *
-     * Protobuf type {@code bloombox.schema.partner.settings.ShopCommsSettings}
+     * Protobuf type {@code bloombox.partner.settings.ShopCommsSettings}
      */
     public static final class Builder extends
         com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:bloombox.schema.partner.settings.ShopCommsSettings)
+        // @@protoc_insertion_point(builder_implements:bloombox.partner.settings.ShopCommsSettings)
         io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.ShopCommsSettingsOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.internal_static_bloombox_schema_partner_settings_ShopCommsSettings_descriptor;
+        return io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.internal_static_bloombox_partner_settings_ShopCommsSettings_descriptor;
       }
 
+      @java.lang.Override
       protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.internal_static_bloombox_schema_partner_settings_ShopCommsSettings_fieldAccessorTable
+        return io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.internal_static_bloombox_partner_settings_ShopCommsSettings_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
                 io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.ShopCommsSettings.class, io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.ShopCommsSettings.Builder.class);
       }
@@ -27256,6 +27878,7 @@ public final class PartnerLocationSettingsOuterClass {
                 .alwaysUseFieldBuilders) {
         }
       }
+      @java.lang.Override
       public Builder clear() {
         super.clear();
         if (internalBuilder_ == null) {
@@ -27273,15 +27896,18 @@ public final class PartnerLocationSettingsOuterClass {
         return this;
       }
 
+      @java.lang.Override
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.internal_static_bloombox_schema_partner_settings_ShopCommsSettings_descriptor;
+        return io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.internal_static_bloombox_partner_settings_ShopCommsSettings_descriptor;
       }
 
+      @java.lang.Override
       public io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.ShopCommsSettings getDefaultInstanceForType() {
         return io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.ShopCommsSettings.getDefaultInstance();
       }
 
+      @java.lang.Override
       public io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.ShopCommsSettings build() {
         io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.ShopCommsSettings result = buildPartial();
         if (!result.isInitialized()) {
@@ -27290,6 +27916,7 @@ public final class PartnerLocationSettingsOuterClass {
         return result;
       }
 
+      @java.lang.Override
       public io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.ShopCommsSettings buildPartial() {
         io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.ShopCommsSettings result = new io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.ShopCommsSettings(this);
         if (internalBuilder_ == null) {
@@ -27306,32 +27933,39 @@ public final class PartnerLocationSettingsOuterClass {
         return result;
       }
 
+      @java.lang.Override
       public Builder clone() {
         return (Builder) super.clone();
       }
+      @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
         return (Builder) super.setField(field, value);
       }
+      @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
         return (Builder) super.clearField(field);
       }
+      @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
         return (Builder) super.clearOneof(oneof);
       }
+      @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
         return (Builder) super.setRepeatedField(field, index, value);
       }
+      @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
         return (Builder) super.addRepeatedField(field, value);
       }
+      @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
         if (other instanceof io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.ShopCommsSettings) {
           return mergeFrom((io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.ShopCommsSettings)other);
@@ -27354,10 +27988,12 @@ public final class PartnerLocationSettingsOuterClass {
         return this;
       }
 
+      @java.lang.Override
       public final boolean isInitialized() {
         return true;
       }
 
+      @java.lang.Override
       public Builder mergeFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -27384,7 +28020,7 @@ public final class PartnerLocationSettingsOuterClass {
        * Internal communications settings. This includes dispensary owners/operators/staff and other internal stakeholders.
        * </pre>
        *
-       * <code>.bloombox.schema.partner.settings.CommsSettingsPayload internal = 1;</code>
+       * <code>.bloombox.partner.settings.CommsSettingsPayload internal = 1;</code>
        */
       public boolean hasInternal() {
         return internalBuilder_ != null || internal_ != null;
@@ -27394,7 +28030,7 @@ public final class PartnerLocationSettingsOuterClass {
        * Internal communications settings. This includes dispensary owners/operators/staff and other internal stakeholders.
        * </pre>
        *
-       * <code>.bloombox.schema.partner.settings.CommsSettingsPayload internal = 1;</code>
+       * <code>.bloombox.partner.settings.CommsSettingsPayload internal = 1;</code>
        */
       public io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.CommsSettingsPayload getInternal() {
         if (internalBuilder_ == null) {
@@ -27408,7 +28044,7 @@ public final class PartnerLocationSettingsOuterClass {
        * Internal communications settings. This includes dispensary owners/operators/staff and other internal stakeholders.
        * </pre>
        *
-       * <code>.bloombox.schema.partner.settings.CommsSettingsPayload internal = 1;</code>
+       * <code>.bloombox.partner.settings.CommsSettingsPayload internal = 1;</code>
        */
       public Builder setInternal(io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.CommsSettingsPayload value) {
         if (internalBuilder_ == null) {
@@ -27428,7 +28064,7 @@ public final class PartnerLocationSettingsOuterClass {
        * Internal communications settings. This includes dispensary owners/operators/staff and other internal stakeholders.
        * </pre>
        *
-       * <code>.bloombox.schema.partner.settings.CommsSettingsPayload internal = 1;</code>
+       * <code>.bloombox.partner.settings.CommsSettingsPayload internal = 1;</code>
        */
       public Builder setInternal(
           io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.CommsSettingsPayload.Builder builderForValue) {
@@ -27446,7 +28082,7 @@ public final class PartnerLocationSettingsOuterClass {
        * Internal communications settings. This includes dispensary owners/operators/staff and other internal stakeholders.
        * </pre>
        *
-       * <code>.bloombox.schema.partner.settings.CommsSettingsPayload internal = 1;</code>
+       * <code>.bloombox.partner.settings.CommsSettingsPayload internal = 1;</code>
        */
       public Builder mergeInternal(io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.CommsSettingsPayload value) {
         if (internalBuilder_ == null) {
@@ -27468,7 +28104,7 @@ public final class PartnerLocationSettingsOuterClass {
        * Internal communications settings. This includes dispensary owners/operators/staff and other internal stakeholders.
        * </pre>
        *
-       * <code>.bloombox.schema.partner.settings.CommsSettingsPayload internal = 1;</code>
+       * <code>.bloombox.partner.settings.CommsSettingsPayload internal = 1;</code>
        */
       public Builder clearInternal() {
         if (internalBuilder_ == null) {
@@ -27486,7 +28122,7 @@ public final class PartnerLocationSettingsOuterClass {
        * Internal communications settings. This includes dispensary owners/operators/staff and other internal stakeholders.
        * </pre>
        *
-       * <code>.bloombox.schema.partner.settings.CommsSettingsPayload internal = 1;</code>
+       * <code>.bloombox.partner.settings.CommsSettingsPayload internal = 1;</code>
        */
       public io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.CommsSettingsPayload.Builder getInternalBuilder() {
         
@@ -27498,7 +28134,7 @@ public final class PartnerLocationSettingsOuterClass {
        * Internal communications settings. This includes dispensary owners/operators/staff and other internal stakeholders.
        * </pre>
        *
-       * <code>.bloombox.schema.partner.settings.CommsSettingsPayload internal = 1;</code>
+       * <code>.bloombox.partner.settings.CommsSettingsPayload internal = 1;</code>
        */
       public io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.CommsSettingsPayloadOrBuilder getInternalOrBuilder() {
         if (internalBuilder_ != null) {
@@ -27513,7 +28149,7 @@ public final class PartnerLocationSettingsOuterClass {
        * Internal communications settings. This includes dispensary owners/operators/staff and other internal stakeholders.
        * </pre>
        *
-       * <code>.bloombox.schema.partner.settings.CommsSettingsPayload internal = 1;</code>
+       * <code>.bloombox.partner.settings.CommsSettingsPayload internal = 1;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
           io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.CommsSettingsPayload, io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.CommsSettingsPayload.Builder, io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.CommsSettingsPayloadOrBuilder> 
@@ -27538,7 +28174,7 @@ public final class PartnerLocationSettingsOuterClass {
        * customers, and so on.
        * </pre>
        *
-       * <code>.bloombox.schema.partner.settings.CommsSettingsPayload external = 2;</code>
+       * <code>.bloombox.partner.settings.CommsSettingsPayload external = 2;</code>
        */
       public boolean hasExternal() {
         return externalBuilder_ != null || external_ != null;
@@ -27549,7 +28185,7 @@ public final class PartnerLocationSettingsOuterClass {
        * customers, and so on.
        * </pre>
        *
-       * <code>.bloombox.schema.partner.settings.CommsSettingsPayload external = 2;</code>
+       * <code>.bloombox.partner.settings.CommsSettingsPayload external = 2;</code>
        */
       public io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.CommsSettingsPayload getExternal() {
         if (externalBuilder_ == null) {
@@ -27564,7 +28200,7 @@ public final class PartnerLocationSettingsOuterClass {
        * customers, and so on.
        * </pre>
        *
-       * <code>.bloombox.schema.partner.settings.CommsSettingsPayload external = 2;</code>
+       * <code>.bloombox.partner.settings.CommsSettingsPayload external = 2;</code>
        */
       public Builder setExternal(io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.CommsSettingsPayload value) {
         if (externalBuilder_ == null) {
@@ -27585,7 +28221,7 @@ public final class PartnerLocationSettingsOuterClass {
        * customers, and so on.
        * </pre>
        *
-       * <code>.bloombox.schema.partner.settings.CommsSettingsPayload external = 2;</code>
+       * <code>.bloombox.partner.settings.CommsSettingsPayload external = 2;</code>
        */
       public Builder setExternal(
           io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.CommsSettingsPayload.Builder builderForValue) {
@@ -27604,7 +28240,7 @@ public final class PartnerLocationSettingsOuterClass {
        * customers, and so on.
        * </pre>
        *
-       * <code>.bloombox.schema.partner.settings.CommsSettingsPayload external = 2;</code>
+       * <code>.bloombox.partner.settings.CommsSettingsPayload external = 2;</code>
        */
       public Builder mergeExternal(io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.CommsSettingsPayload value) {
         if (externalBuilder_ == null) {
@@ -27627,7 +28263,7 @@ public final class PartnerLocationSettingsOuterClass {
        * customers, and so on.
        * </pre>
        *
-       * <code>.bloombox.schema.partner.settings.CommsSettingsPayload external = 2;</code>
+       * <code>.bloombox.partner.settings.CommsSettingsPayload external = 2;</code>
        */
       public Builder clearExternal() {
         if (externalBuilder_ == null) {
@@ -27646,7 +28282,7 @@ public final class PartnerLocationSettingsOuterClass {
        * customers, and so on.
        * </pre>
        *
-       * <code>.bloombox.schema.partner.settings.CommsSettingsPayload external = 2;</code>
+       * <code>.bloombox.partner.settings.CommsSettingsPayload external = 2;</code>
        */
       public io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.CommsSettingsPayload.Builder getExternalBuilder() {
         
@@ -27659,7 +28295,7 @@ public final class PartnerLocationSettingsOuterClass {
        * customers, and so on.
        * </pre>
        *
-       * <code>.bloombox.schema.partner.settings.CommsSettingsPayload external = 2;</code>
+       * <code>.bloombox.partner.settings.CommsSettingsPayload external = 2;</code>
        */
       public io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.CommsSettingsPayloadOrBuilder getExternalOrBuilder() {
         if (externalBuilder_ != null) {
@@ -27675,7 +28311,7 @@ public final class PartnerLocationSettingsOuterClass {
        * customers, and so on.
        * </pre>
        *
-       * <code>.bloombox.schema.partner.settings.CommsSettingsPayload external = 2;</code>
+       * <code>.bloombox.partner.settings.CommsSettingsPayload external = 2;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
           io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.CommsSettingsPayload, io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.CommsSettingsPayload.Builder, io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.CommsSettingsPayloadOrBuilder> 
@@ -27690,21 +28326,23 @@ public final class PartnerLocationSettingsOuterClass {
         }
         return externalBuilder_;
       }
+      @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
         return super.setUnknownFieldsProto3(unknownFields);
       }
 
+      @java.lang.Override
       public final Builder mergeUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
         return super.mergeUnknownFields(unknownFields);
       }
 
 
-      // @@protoc_insertion_point(builder_scope:bloombox.schema.partner.settings.ShopCommsSettings)
+      // @@protoc_insertion_point(builder_scope:bloombox.partner.settings.ShopCommsSettings)
     }
 
-    // @@protoc_insertion_point(class_scope:bloombox.schema.partner.settings.ShopCommsSettings)
+    // @@protoc_insertion_point(class_scope:bloombox.partner.settings.ShopCommsSettings)
     private static final io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.ShopCommsSettings DEFAULT_INSTANCE;
     static {
       DEFAULT_INSTANCE = new io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.ShopCommsSettings();
@@ -27716,6 +28354,7 @@ public final class PartnerLocationSettingsOuterClass {
 
     private static final com.google.protobuf.Parser<ShopCommsSettings>
         PARSER = new com.google.protobuf.AbstractParser<ShopCommsSettings>() {
+      @java.lang.Override
       public ShopCommsSettings parsePartialFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -27733,6 +28372,7 @@ public final class PartnerLocationSettingsOuterClass {
       return PARSER;
     }
 
+    @java.lang.Override
     public io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.ShopCommsSettings getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
@@ -27740,7 +28380,7 @@ public final class PartnerLocationSettingsOuterClass {
   }
 
   public interface OnlineShopSettingsOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:bloombox.schema.partner.settings.OnlineShopSettings)
+      // @@protoc_insertion_point(interface_extends:bloombox.partner.settings.OnlineShopSettings)
       com.google.protobuf.MessageOrBuilder {
 
     /**
@@ -27766,7 +28406,7 @@ public final class PartnerLocationSettingsOuterClass {
      * Specifies settings related to internal or external communications.
      * </pre>
      *
-     * <code>.bloombox.schema.partner.settings.ShopCommsSettings comms = 2;</code>
+     * <code>.bloombox.partner.settings.ShopCommsSettings comms = 2;</code>
      */
     boolean hasComms();
     /**
@@ -27774,7 +28414,7 @@ public final class PartnerLocationSettingsOuterClass {
      * Specifies settings related to internal or external communications.
      * </pre>
      *
-     * <code>.bloombox.schema.partner.settings.ShopCommsSettings comms = 2;</code>
+     * <code>.bloombox.partner.settings.ShopCommsSettings comms = 2;</code>
      */
     io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.ShopCommsSettings getComms();
     /**
@@ -27782,7 +28422,7 @@ public final class PartnerLocationSettingsOuterClass {
      * Specifies settings related to internal or external communications.
      * </pre>
      *
-     * <code>.bloombox.schema.partner.settings.ShopCommsSettings comms = 2;</code>
+     * <code>.bloombox.partner.settings.ShopCommsSettings comms = 2;</code>
      */
     io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.ShopCommsSettingsOrBuilder getCommsOrBuilder();
 
@@ -27929,11 +28569,11 @@ public final class PartnerLocationSettingsOuterClass {
    * Settings scope for items specifically related to online shop access.
    * </pre>
    *
-   * Protobuf type {@code bloombox.schema.partner.settings.OnlineShopSettings}
+   * Protobuf type {@code bloombox.partner.settings.OnlineShopSettings}
    */
   public  static final class OnlineShopSettings extends
       com.google.protobuf.GeneratedMessageV3 implements
-      // @@protoc_insertion_point(message_implements:bloombox.schema.partner.settings.OnlineShopSettings)
+      // @@protoc_insertion_point(message_implements:bloombox.partner.settings.OnlineShopSettings)
       OnlineShopSettingsOrBuilder {
   private static final long serialVersionUID = 0L;
     // Use OnlineShopSettings.newBuilder() to construct.
@@ -27973,13 +28613,6 @@ public final class PartnerLocationSettingsOuterClass {
             case 0:
               done = true;
               break;
-            default: {
-              if (!parseUnknownFieldProto3(
-                  input, unknownFields, extensionRegistry, tag)) {
-                done = true;
-              }
-              break;
-            }
             case 10: {
               java.lang.String s = input.readStringRequireUtf8();
 
@@ -28063,6 +28696,13 @@ public final class PartnerLocationSettingsOuterClass {
               input.popLimit(oldLimit);
               break;
             }
+            default: {
+              if (!parseUnknownFieldProto3(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
           }
         }
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
@@ -28083,12 +28723,13 @@ public final class PartnerLocationSettingsOuterClass {
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.internal_static_bloombox_schema_partner_settings_OnlineShopSettings_descriptor;
+      return io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.internal_static_bloombox_partner_settings_OnlineShopSettings_descriptor;
     }
 
+    @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.internal_static_bloombox_schema_partner_settings_OnlineShopSettings_fieldAccessorTable
+      return io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.internal_static_bloombox_partner_settings_OnlineShopSettings_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
               io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.OnlineShopSettings.class, io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.OnlineShopSettings.Builder.class);
     }
@@ -28143,7 +28784,7 @@ public final class PartnerLocationSettingsOuterClass {
      * Specifies settings related to internal or external communications.
      * </pre>
      *
-     * <code>.bloombox.schema.partner.settings.ShopCommsSettings comms = 2;</code>
+     * <code>.bloombox.partner.settings.ShopCommsSettings comms = 2;</code>
      */
     public boolean hasComms() {
       return comms_ != null;
@@ -28153,7 +28794,7 @@ public final class PartnerLocationSettingsOuterClass {
      * Specifies settings related to internal or external communications.
      * </pre>
      *
-     * <code>.bloombox.schema.partner.settings.ShopCommsSettings comms = 2;</code>
+     * <code>.bloombox.partner.settings.ShopCommsSettings comms = 2;</code>
      */
     public io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.ShopCommsSettings getComms() {
       return comms_ == null ? io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.ShopCommsSettings.getDefaultInstance() : comms_;
@@ -28163,7 +28804,7 @@ public final class PartnerLocationSettingsOuterClass {
      * Specifies settings related to internal or external communications.
      * </pre>
      *
-     * <code>.bloombox.schema.partner.settings.ShopCommsSettings comms = 2;</code>
+     * <code>.bloombox.partner.settings.ShopCommsSettings comms = 2;</code>
      */
     public io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.ShopCommsSettingsOrBuilder getCommsOrBuilder() {
       return getComms();
@@ -28302,6 +28943,7 @@ public final class PartnerLocationSettingsOuterClass {
             new com.google.protobuf.Internal.ListAdapter.Converter<
                 java.lang.Integer, io.opencannabis.schema.commerce.Payments.PaymentMethod>() {
               public io.opencannabis.schema.commerce.Payments.PaymentMethod convert(java.lang.Integer from) {
+                @SuppressWarnings("deprecation")
                 io.opencannabis.schema.commerce.Payments.PaymentMethod result = io.opencannabis.schema.commerce.Payments.PaymentMethod.valueOf(from);
                 return result == null ? io.opencannabis.schema.commerce.Payments.PaymentMethod.UNRECOGNIZED : result;
               }
@@ -28367,6 +29009,7 @@ public final class PartnerLocationSettingsOuterClass {
             new com.google.protobuf.Internal.ListAdapter.Converter<
                 java.lang.Integer, io.opencannabis.schema.commerce.Payments.PaymentCardType>() {
               public io.opencannabis.schema.commerce.Payments.PaymentCardType convert(java.lang.Integer from) {
+                @SuppressWarnings("deprecation")
                 io.opencannabis.schema.commerce.Payments.PaymentCardType result = io.opencannabis.schema.commerce.Payments.PaymentCardType.valueOf(from);
                 return result == null ? io.opencannabis.schema.commerce.Payments.PaymentCardType.UNRECOGNIZED : result;
               }
@@ -28426,6 +29069,7 @@ public final class PartnerLocationSettingsOuterClass {
     private int acceptedCardMemoizedSerializedSize;
 
     private byte memoizedIsInitialized = -1;
+    @java.lang.Override
     public final boolean isInitialized() {
       byte isInitialized = memoizedIsInitialized;
       if (isInitialized == 1) return true;
@@ -28435,6 +29079,7 @@ public final class PartnerLocationSettingsOuterClass {
       return true;
     }
 
+    @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
       getSerializedSize();
@@ -28470,6 +29115,7 @@ public final class PartnerLocationSettingsOuterClass {
       unknownFields.writeTo(output);
     }
 
+    @java.lang.Override
     public int getSerializedSize() {
       int size = memoizedSize;
       if (size != -1) return size;
@@ -28652,6 +29298,7 @@ public final class PartnerLocationSettingsOuterClass {
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
 
+    @java.lang.Override
     public Builder newBuilderForType() { return newBuilder(); }
     public static Builder newBuilder() {
       return DEFAULT_INSTANCE.toBuilder();
@@ -28659,6 +29306,7 @@ public final class PartnerLocationSettingsOuterClass {
     public static Builder newBuilder(io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.OnlineShopSettings prototype) {
       return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
     }
+    @java.lang.Override
     public Builder toBuilder() {
       return this == DEFAULT_INSTANCE
           ? new Builder() : new Builder().mergeFrom(this);
@@ -28675,20 +29323,21 @@ public final class PartnerLocationSettingsOuterClass {
      * Settings scope for items specifically related to online shop access.
      * </pre>
      *
-     * Protobuf type {@code bloombox.schema.partner.settings.OnlineShopSettings}
+     * Protobuf type {@code bloombox.partner.settings.OnlineShopSettings}
      */
     public static final class Builder extends
         com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:bloombox.schema.partner.settings.OnlineShopSettings)
+        // @@protoc_insertion_point(builder_implements:bloombox.partner.settings.OnlineShopSettings)
         io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.OnlineShopSettingsOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.internal_static_bloombox_schema_partner_settings_OnlineShopSettings_descriptor;
+        return io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.internal_static_bloombox_partner_settings_OnlineShopSettings_descriptor;
       }
 
+      @java.lang.Override
       protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.internal_static_bloombox_schema_partner_settings_OnlineShopSettings_fieldAccessorTable
+        return io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.internal_static_bloombox_partner_settings_OnlineShopSettings_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
                 io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.OnlineShopSettings.class, io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.OnlineShopSettings.Builder.class);
       }
@@ -28708,6 +29357,7 @@ public final class PartnerLocationSettingsOuterClass {
                 .alwaysUseFieldBuilders) {
         }
       }
+      @java.lang.Override
       public Builder clear() {
         super.clear();
         origin_ = "";
@@ -28731,15 +29381,18 @@ public final class PartnerLocationSettingsOuterClass {
         return this;
       }
 
+      @java.lang.Override
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.internal_static_bloombox_schema_partner_settings_OnlineShopSettings_descriptor;
+        return io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.internal_static_bloombox_partner_settings_OnlineShopSettings_descriptor;
       }
 
+      @java.lang.Override
       public io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.OnlineShopSettings getDefaultInstanceForType() {
         return io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.OnlineShopSettings.getDefaultInstance();
       }
 
+      @java.lang.Override
       public io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.OnlineShopSettings build() {
         io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.OnlineShopSettings result = buildPartial();
         if (!result.isInitialized()) {
@@ -28748,6 +29401,7 @@ public final class PartnerLocationSettingsOuterClass {
         return result;
       }
 
+      @java.lang.Override
       public io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.OnlineShopSettings buildPartial() {
         io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.OnlineShopSettings result = new io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.OnlineShopSettings(this);
         int from_bitField0_ = bitField0_;
@@ -28776,32 +29430,39 @@ public final class PartnerLocationSettingsOuterClass {
         return result;
       }
 
+      @java.lang.Override
       public Builder clone() {
         return (Builder) super.clone();
       }
+      @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
         return (Builder) super.setField(field, value);
       }
+      @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
         return (Builder) super.clearField(field);
       }
+      @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
         return (Builder) super.clearOneof(oneof);
       }
+      @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
         return (Builder) super.setRepeatedField(field, index, value);
       }
+      @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
         return (Builder) super.addRepeatedField(field, value);
       }
+      @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
         if (other instanceof io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.OnlineShopSettings) {
           return mergeFrom((io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.OnlineShopSettings)other);
@@ -28857,10 +29518,12 @@ public final class PartnerLocationSettingsOuterClass {
         return this;
       }
 
+      @java.lang.Override
       public final boolean isInitialized() {
         return true;
       }
 
+      @java.lang.Override
       public Builder mergeFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -28977,7 +29640,7 @@ public final class PartnerLocationSettingsOuterClass {
        * Specifies settings related to internal or external communications.
        * </pre>
        *
-       * <code>.bloombox.schema.partner.settings.ShopCommsSettings comms = 2;</code>
+       * <code>.bloombox.partner.settings.ShopCommsSettings comms = 2;</code>
        */
       public boolean hasComms() {
         return commsBuilder_ != null || comms_ != null;
@@ -28987,7 +29650,7 @@ public final class PartnerLocationSettingsOuterClass {
        * Specifies settings related to internal or external communications.
        * </pre>
        *
-       * <code>.bloombox.schema.partner.settings.ShopCommsSettings comms = 2;</code>
+       * <code>.bloombox.partner.settings.ShopCommsSettings comms = 2;</code>
        */
       public io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.ShopCommsSettings getComms() {
         if (commsBuilder_ == null) {
@@ -29001,7 +29664,7 @@ public final class PartnerLocationSettingsOuterClass {
        * Specifies settings related to internal or external communications.
        * </pre>
        *
-       * <code>.bloombox.schema.partner.settings.ShopCommsSettings comms = 2;</code>
+       * <code>.bloombox.partner.settings.ShopCommsSettings comms = 2;</code>
        */
       public Builder setComms(io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.ShopCommsSettings value) {
         if (commsBuilder_ == null) {
@@ -29021,7 +29684,7 @@ public final class PartnerLocationSettingsOuterClass {
        * Specifies settings related to internal or external communications.
        * </pre>
        *
-       * <code>.bloombox.schema.partner.settings.ShopCommsSettings comms = 2;</code>
+       * <code>.bloombox.partner.settings.ShopCommsSettings comms = 2;</code>
        */
       public Builder setComms(
           io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.ShopCommsSettings.Builder builderForValue) {
@@ -29039,7 +29702,7 @@ public final class PartnerLocationSettingsOuterClass {
        * Specifies settings related to internal or external communications.
        * </pre>
        *
-       * <code>.bloombox.schema.partner.settings.ShopCommsSettings comms = 2;</code>
+       * <code>.bloombox.partner.settings.ShopCommsSettings comms = 2;</code>
        */
       public Builder mergeComms(io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.ShopCommsSettings value) {
         if (commsBuilder_ == null) {
@@ -29061,7 +29724,7 @@ public final class PartnerLocationSettingsOuterClass {
        * Specifies settings related to internal or external communications.
        * </pre>
        *
-       * <code>.bloombox.schema.partner.settings.ShopCommsSettings comms = 2;</code>
+       * <code>.bloombox.partner.settings.ShopCommsSettings comms = 2;</code>
        */
       public Builder clearComms() {
         if (commsBuilder_ == null) {
@@ -29079,7 +29742,7 @@ public final class PartnerLocationSettingsOuterClass {
        * Specifies settings related to internal or external communications.
        * </pre>
        *
-       * <code>.bloombox.schema.partner.settings.ShopCommsSettings comms = 2;</code>
+       * <code>.bloombox.partner.settings.ShopCommsSettings comms = 2;</code>
        */
       public io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.ShopCommsSettings.Builder getCommsBuilder() {
         
@@ -29091,7 +29754,7 @@ public final class PartnerLocationSettingsOuterClass {
        * Specifies settings related to internal or external communications.
        * </pre>
        *
-       * <code>.bloombox.schema.partner.settings.ShopCommsSettings comms = 2;</code>
+       * <code>.bloombox.partner.settings.ShopCommsSettings comms = 2;</code>
        */
       public io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.ShopCommsSettingsOrBuilder getCommsOrBuilder() {
         if (commsBuilder_ != null) {
@@ -29106,7 +29769,7 @@ public final class PartnerLocationSettingsOuterClass {
        * Specifies settings related to internal or external communications.
        * </pre>
        *
-       * <code>.bloombox.schema.partner.settings.ShopCommsSettings comms = 2;</code>
+       * <code>.bloombox.partner.settings.ShopCommsSettings comms = 2;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
           io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.ShopCommsSettings, io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.ShopCommsSettings.Builder, io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.ShopCommsSettingsOrBuilder> 
@@ -29720,21 +30383,23 @@ public final class PartnerLocationSettingsOuterClass {
         onChanged();
         return this;
       }
+      @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
         return super.setUnknownFieldsProto3(unknownFields);
       }
 
+      @java.lang.Override
       public final Builder mergeUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
         return super.mergeUnknownFields(unknownFields);
       }
 
 
-      // @@protoc_insertion_point(builder_scope:bloombox.schema.partner.settings.OnlineShopSettings)
+      // @@protoc_insertion_point(builder_scope:bloombox.partner.settings.OnlineShopSettings)
     }
 
-    // @@protoc_insertion_point(class_scope:bloombox.schema.partner.settings.OnlineShopSettings)
+    // @@protoc_insertion_point(class_scope:bloombox.partner.settings.OnlineShopSettings)
     private static final io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.OnlineShopSettings DEFAULT_INSTANCE;
     static {
       DEFAULT_INSTANCE = new io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.OnlineShopSettings();
@@ -29746,6 +30411,7 @@ public final class PartnerLocationSettingsOuterClass {
 
     private static final com.google.protobuf.Parser<OnlineShopSettings>
         PARSER = new com.google.protobuf.AbstractParser<OnlineShopSettings>() {
+      @java.lang.Override
       public OnlineShopSettings parsePartialFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -29763,6 +30429,7 @@ public final class PartnerLocationSettingsOuterClass {
       return PARSER;
     }
 
+    @java.lang.Override
     public io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.OnlineShopSettings getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
@@ -29770,7 +30437,7 @@ public final class PartnerLocationSettingsOuterClass {
   }
 
   public interface PhysicalStorefrontSettingsOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:bloombox.schema.partner.settings.PhysicalStorefrontSettings)
+      // @@protoc_insertion_point(interface_extends:bloombox.partner.settings.PhysicalStorefrontSettings)
       com.google.protobuf.MessageOrBuilder {
 
     /**
@@ -29887,11 +30554,11 @@ public final class PartnerLocationSettingsOuterClass {
    * Specifies settings and preferences related to a location's physical storefront.
    * </pre>
    *
-   * Protobuf type {@code bloombox.schema.partner.settings.PhysicalStorefrontSettings}
+   * Protobuf type {@code bloombox.partner.settings.PhysicalStorefrontSettings}
    */
   public  static final class PhysicalStorefrontSettings extends
       com.google.protobuf.GeneratedMessageV3 implements
-      // @@protoc_insertion_point(message_implements:bloombox.schema.partner.settings.PhysicalStorefrontSettings)
+      // @@protoc_insertion_point(message_implements:bloombox.partner.settings.PhysicalStorefrontSettings)
       PhysicalStorefrontSettingsOrBuilder {
   private static final long serialVersionUID = 0L;
     // Use PhysicalStorefrontSettings.newBuilder() to construct.
@@ -29927,13 +30594,6 @@ public final class PartnerLocationSettingsOuterClass {
             case 0:
               done = true;
               break;
-            default: {
-              if (!parseUnknownFieldProto3(
-                  input, unknownFields, extensionRegistry, tag)) {
-                done = true;
-              }
-              break;
-            }
             case 10: {
               io.opencannabis.schema.geo.Location.Builder subBuilder = null;
               if (location_ != null) {
@@ -29993,6 +30653,13 @@ public final class PartnerLocationSettingsOuterClass {
               input.popLimit(oldLimit);
               break;
             }
+            default: {
+              if (!parseUnknownFieldProto3(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
           }
         }
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
@@ -30013,12 +30680,13 @@ public final class PartnerLocationSettingsOuterClass {
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.internal_static_bloombox_schema_partner_settings_PhysicalStorefrontSettings_descriptor;
+      return io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.internal_static_bloombox_partner_settings_PhysicalStorefrontSettings_descriptor;
     }
 
+    @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.internal_static_bloombox_schema_partner_settings_PhysicalStorefrontSettings_fieldAccessorTable
+      return io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.internal_static_bloombox_partner_settings_PhysicalStorefrontSettings_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
               io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.PhysicalStorefrontSettings.class, io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.PhysicalStorefrontSettings.Builder.class);
     }
@@ -30064,6 +30732,7 @@ public final class PartnerLocationSettingsOuterClass {
             new com.google.protobuf.Internal.ListAdapter.Converter<
                 java.lang.Integer, io.opencannabis.schema.commerce.Payments.PaymentMethod>() {
               public io.opencannabis.schema.commerce.Payments.PaymentMethod convert(java.lang.Integer from) {
+                @SuppressWarnings("deprecation")
                 io.opencannabis.schema.commerce.Payments.PaymentMethod result = io.opencannabis.schema.commerce.Payments.PaymentMethod.valueOf(from);
                 return result == null ? io.opencannabis.schema.commerce.Payments.PaymentMethod.UNRECOGNIZED : result;
               }
@@ -30129,6 +30798,7 @@ public final class PartnerLocationSettingsOuterClass {
             new com.google.protobuf.Internal.ListAdapter.Converter<
                 java.lang.Integer, io.opencannabis.schema.commerce.Payments.PaymentCardType>() {
               public io.opencannabis.schema.commerce.Payments.PaymentCardType convert(java.lang.Integer from) {
+                @SuppressWarnings("deprecation")
                 io.opencannabis.schema.commerce.Payments.PaymentCardType result = io.opencannabis.schema.commerce.Payments.PaymentCardType.valueOf(from);
                 return result == null ? io.opencannabis.schema.commerce.Payments.PaymentCardType.UNRECOGNIZED : result;
               }
@@ -30188,6 +30858,7 @@ public final class PartnerLocationSettingsOuterClass {
     private int acceptedCardMemoizedSerializedSize;
 
     private byte memoizedIsInitialized = -1;
+    @java.lang.Override
     public final boolean isInitialized() {
       byte isInitialized = memoizedIsInitialized;
       if (isInitialized == 1) return true;
@@ -30197,6 +30868,7 @@ public final class PartnerLocationSettingsOuterClass {
       return true;
     }
 
+    @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
       getSerializedSize();
@@ -30220,6 +30892,7 @@ public final class PartnerLocationSettingsOuterClass {
       unknownFields.writeTo(output);
     }
 
+    @java.lang.Override
     public int getSerializedSize() {
       int size = memoizedSize;
       if (size != -1) return size;
@@ -30374,6 +31047,7 @@ public final class PartnerLocationSettingsOuterClass {
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
 
+    @java.lang.Override
     public Builder newBuilderForType() { return newBuilder(); }
     public static Builder newBuilder() {
       return DEFAULT_INSTANCE.toBuilder();
@@ -30381,6 +31055,7 @@ public final class PartnerLocationSettingsOuterClass {
     public static Builder newBuilder(io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.PhysicalStorefrontSettings prototype) {
       return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
     }
+    @java.lang.Override
     public Builder toBuilder() {
       return this == DEFAULT_INSTANCE
           ? new Builder() : new Builder().mergeFrom(this);
@@ -30397,20 +31072,21 @@ public final class PartnerLocationSettingsOuterClass {
      * Specifies settings and preferences related to a location's physical storefront.
      * </pre>
      *
-     * Protobuf type {@code bloombox.schema.partner.settings.PhysicalStorefrontSettings}
+     * Protobuf type {@code bloombox.partner.settings.PhysicalStorefrontSettings}
      */
     public static final class Builder extends
         com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:bloombox.schema.partner.settings.PhysicalStorefrontSettings)
+        // @@protoc_insertion_point(builder_implements:bloombox.partner.settings.PhysicalStorefrontSettings)
         io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.PhysicalStorefrontSettingsOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.internal_static_bloombox_schema_partner_settings_PhysicalStorefrontSettings_descriptor;
+        return io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.internal_static_bloombox_partner_settings_PhysicalStorefrontSettings_descriptor;
       }
 
+      @java.lang.Override
       protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.internal_static_bloombox_schema_partner_settings_PhysicalStorefrontSettings_fieldAccessorTable
+        return io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.internal_static_bloombox_partner_settings_PhysicalStorefrontSettings_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
                 io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.PhysicalStorefrontSettings.class, io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.PhysicalStorefrontSettings.Builder.class);
       }
@@ -30430,6 +31106,7 @@ public final class PartnerLocationSettingsOuterClass {
                 .alwaysUseFieldBuilders) {
         }
       }
+      @java.lang.Override
       public Builder clear() {
         super.clear();
         if (locationBuilder_ == null) {
@@ -30445,15 +31122,18 @@ public final class PartnerLocationSettingsOuterClass {
         return this;
       }
 
+      @java.lang.Override
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.internal_static_bloombox_schema_partner_settings_PhysicalStorefrontSettings_descriptor;
+        return io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.internal_static_bloombox_partner_settings_PhysicalStorefrontSettings_descriptor;
       }
 
+      @java.lang.Override
       public io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.PhysicalStorefrontSettings getDefaultInstanceForType() {
         return io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.PhysicalStorefrontSettings.getDefaultInstance();
       }
 
+      @java.lang.Override
       public io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.PhysicalStorefrontSettings build() {
         io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.PhysicalStorefrontSettings result = buildPartial();
         if (!result.isInitialized()) {
@@ -30462,6 +31142,7 @@ public final class PartnerLocationSettingsOuterClass {
         return result;
       }
 
+      @java.lang.Override
       public io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.PhysicalStorefrontSettings buildPartial() {
         io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.PhysicalStorefrontSettings result = new io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.PhysicalStorefrontSettings(this);
         int from_bitField0_ = bitField0_;
@@ -30486,32 +31167,39 @@ public final class PartnerLocationSettingsOuterClass {
         return result;
       }
 
+      @java.lang.Override
       public Builder clone() {
         return (Builder) super.clone();
       }
+      @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
         return (Builder) super.setField(field, value);
       }
+      @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
         return (Builder) super.clearField(field);
       }
+      @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
         return (Builder) super.clearOneof(oneof);
       }
+      @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
         return (Builder) super.setRepeatedField(field, index, value);
       }
+      @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
         return (Builder) super.addRepeatedField(field, value);
       }
+      @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
         if (other instanceof io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.PhysicalStorefrontSettings) {
           return mergeFrom((io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.PhysicalStorefrontSettings)other);
@@ -30551,10 +31239,12 @@ public final class PartnerLocationSettingsOuterClass {
         return this;
       }
 
+      @java.lang.Override
       public final boolean isInitialized() {
         return true;
       }
 
+      @java.lang.Override
       public Builder mergeFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -31058,21 +31748,23 @@ public final class PartnerLocationSettingsOuterClass {
         onChanged();
         return this;
       }
+      @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
         return super.setUnknownFieldsProto3(unknownFields);
       }
 
+      @java.lang.Override
       public final Builder mergeUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
         return super.mergeUnknownFields(unknownFields);
       }
 
 
-      // @@protoc_insertion_point(builder_scope:bloombox.schema.partner.settings.PhysicalStorefrontSettings)
+      // @@protoc_insertion_point(builder_scope:bloombox.partner.settings.PhysicalStorefrontSettings)
     }
 
-    // @@protoc_insertion_point(class_scope:bloombox.schema.partner.settings.PhysicalStorefrontSettings)
+    // @@protoc_insertion_point(class_scope:bloombox.partner.settings.PhysicalStorefrontSettings)
     private static final io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.PhysicalStorefrontSettings DEFAULT_INSTANCE;
     static {
       DEFAULT_INSTANCE = new io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.PhysicalStorefrontSettings();
@@ -31084,6 +31776,7 @@ public final class PartnerLocationSettingsOuterClass {
 
     private static final com.google.protobuf.Parser<PhysicalStorefrontSettings>
         PARSER = new com.google.protobuf.AbstractParser<PhysicalStorefrontSettings>() {
+      @java.lang.Override
       public PhysicalStorefrontSettings parsePartialFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -31101,6 +31794,7 @@ public final class PartnerLocationSettingsOuterClass {
       return PARSER;
     }
 
+    @java.lang.Override
     public io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.PhysicalStorefrontSettings getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
@@ -31108,7 +31802,7 @@ public final class PartnerLocationSettingsOuterClass {
   }
 
   public interface StorefrontSettingsOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:bloombox.schema.partner.settings.StorefrontSettings)
+      // @@protoc_insertion_point(interface_extends:bloombox.partner.settings.StorefrontSettings)
       com.google.protobuf.MessageOrBuilder {
 
     /**
@@ -31116,7 +31810,7 @@ public final class PartnerLocationSettingsOuterClass {
      * Specifies settings related to shop delivery.
      * </pre>
      *
-     * <code>.bloombox.schema.partner.settings.DeliverySettings delivery = 1;</code>
+     * <code>.bloombox.partner.settings.DeliverySettings delivery = 1;</code>
      */
     boolean hasDelivery();
     /**
@@ -31124,7 +31818,7 @@ public final class PartnerLocationSettingsOuterClass {
      * Specifies settings related to shop delivery.
      * </pre>
      *
-     * <code>.bloombox.schema.partner.settings.DeliverySettings delivery = 1;</code>
+     * <code>.bloombox.partner.settings.DeliverySettings delivery = 1;</code>
      */
     io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.DeliverySettings getDelivery();
     /**
@@ -31132,7 +31826,7 @@ public final class PartnerLocationSettingsOuterClass {
      * Specifies settings related to shop delivery.
      * </pre>
      *
-     * <code>.bloombox.schema.partner.settings.DeliverySettings delivery = 1;</code>
+     * <code>.bloombox.partner.settings.DeliverySettings delivery = 1;</code>
      */
     io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.DeliverySettingsOrBuilder getDeliveryOrBuilder();
 
@@ -31141,7 +31835,7 @@ public final class PartnerLocationSettingsOuterClass {
      * Specifies settings related to the online shop.
      * </pre>
      *
-     * <code>.bloombox.schema.partner.settings.OnlineShopSettings online = 2;</code>
+     * <code>.bloombox.partner.settings.OnlineShopSettings online = 2;</code>
      */
     boolean hasOnline();
     /**
@@ -31149,7 +31843,7 @@ public final class PartnerLocationSettingsOuterClass {
      * Specifies settings related to the online shop.
      * </pre>
      *
-     * <code>.bloombox.schema.partner.settings.OnlineShopSettings online = 2;</code>
+     * <code>.bloombox.partner.settings.OnlineShopSettings online = 2;</code>
      */
     io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.OnlineShopSettings getOnline();
     /**
@@ -31157,7 +31851,7 @@ public final class PartnerLocationSettingsOuterClass {
      * Specifies settings related to the online shop.
      * </pre>
      *
-     * <code>.bloombox.schema.partner.settings.OnlineShopSettings online = 2;</code>
+     * <code>.bloombox.partner.settings.OnlineShopSettings online = 2;</code>
      */
     io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.OnlineShopSettingsOrBuilder getOnlineOrBuilder();
 
@@ -31166,7 +31860,7 @@ public final class PartnerLocationSettingsOuterClass {
      * Specifies settings related to this location's physical storefront.
      * </pre>
      *
-     * <code>.bloombox.schema.partner.settings.PhysicalStorefrontSettings physical = 3;</code>
+     * <code>.bloombox.partner.settings.PhysicalStorefrontSettings physical = 3;</code>
      */
     boolean hasPhysical();
     /**
@@ -31174,7 +31868,7 @@ public final class PartnerLocationSettingsOuterClass {
      * Specifies settings related to this location's physical storefront.
      * </pre>
      *
-     * <code>.bloombox.schema.partner.settings.PhysicalStorefrontSettings physical = 3;</code>
+     * <code>.bloombox.partner.settings.PhysicalStorefrontSettings physical = 3;</code>
      */
     io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.PhysicalStorefrontSettings getPhysical();
     /**
@@ -31182,7 +31876,7 @@ public final class PartnerLocationSettingsOuterClass {
      * Specifies settings related to this location's physical storefront.
      * </pre>
      *
-     * <code>.bloombox.schema.partner.settings.PhysicalStorefrontSettings physical = 3;</code>
+     * <code>.bloombox.partner.settings.PhysicalStorefrontSettings physical = 3;</code>
      */
     io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.PhysicalStorefrontSettingsOrBuilder getPhysicalOrBuilder();
   }
@@ -31191,11 +31885,11 @@ public final class PartnerLocationSettingsOuterClass {
    * Specifies settings related to the actual sale of goods, either digitally or physically.
    * </pre>
    *
-   * Protobuf type {@code bloombox.schema.partner.settings.StorefrontSettings}
+   * Protobuf type {@code bloombox.partner.settings.StorefrontSettings}
    */
   public  static final class StorefrontSettings extends
       com.google.protobuf.GeneratedMessageV3 implements
-      // @@protoc_insertion_point(message_implements:bloombox.schema.partner.settings.StorefrontSettings)
+      // @@protoc_insertion_point(message_implements:bloombox.partner.settings.StorefrontSettings)
       StorefrontSettingsOrBuilder {
   private static final long serialVersionUID = 0L;
     // Use StorefrontSettings.newBuilder() to construct.
@@ -31229,13 +31923,6 @@ public final class PartnerLocationSettingsOuterClass {
             case 0:
               done = true;
               break;
-            default: {
-              if (!parseUnknownFieldProto3(
-                  input, unknownFields, extensionRegistry, tag)) {
-                done = true;
-              }
-              break;
-            }
             case 10: {
               io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.DeliverySettings.Builder subBuilder = null;
               if (delivery_ != null) {
@@ -31275,6 +31962,13 @@ public final class PartnerLocationSettingsOuterClass {
 
               break;
             }
+            default: {
+              if (!parseUnknownFieldProto3(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
           }
         }
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
@@ -31289,12 +31983,13 @@ public final class PartnerLocationSettingsOuterClass {
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.internal_static_bloombox_schema_partner_settings_StorefrontSettings_descriptor;
+      return io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.internal_static_bloombox_partner_settings_StorefrontSettings_descriptor;
     }
 
+    @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.internal_static_bloombox_schema_partner_settings_StorefrontSettings_fieldAccessorTable
+      return io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.internal_static_bloombox_partner_settings_StorefrontSettings_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
               io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.StorefrontSettings.class, io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.StorefrontSettings.Builder.class);
     }
@@ -31306,7 +32001,7 @@ public final class PartnerLocationSettingsOuterClass {
      * Specifies settings related to shop delivery.
      * </pre>
      *
-     * <code>.bloombox.schema.partner.settings.DeliverySettings delivery = 1;</code>
+     * <code>.bloombox.partner.settings.DeliverySettings delivery = 1;</code>
      */
     public boolean hasDelivery() {
       return delivery_ != null;
@@ -31316,7 +32011,7 @@ public final class PartnerLocationSettingsOuterClass {
      * Specifies settings related to shop delivery.
      * </pre>
      *
-     * <code>.bloombox.schema.partner.settings.DeliverySettings delivery = 1;</code>
+     * <code>.bloombox.partner.settings.DeliverySettings delivery = 1;</code>
      */
     public io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.DeliverySettings getDelivery() {
       return delivery_ == null ? io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.DeliverySettings.getDefaultInstance() : delivery_;
@@ -31326,7 +32021,7 @@ public final class PartnerLocationSettingsOuterClass {
      * Specifies settings related to shop delivery.
      * </pre>
      *
-     * <code>.bloombox.schema.partner.settings.DeliverySettings delivery = 1;</code>
+     * <code>.bloombox.partner.settings.DeliverySettings delivery = 1;</code>
      */
     public io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.DeliverySettingsOrBuilder getDeliveryOrBuilder() {
       return getDelivery();
@@ -31339,7 +32034,7 @@ public final class PartnerLocationSettingsOuterClass {
      * Specifies settings related to the online shop.
      * </pre>
      *
-     * <code>.bloombox.schema.partner.settings.OnlineShopSettings online = 2;</code>
+     * <code>.bloombox.partner.settings.OnlineShopSettings online = 2;</code>
      */
     public boolean hasOnline() {
       return online_ != null;
@@ -31349,7 +32044,7 @@ public final class PartnerLocationSettingsOuterClass {
      * Specifies settings related to the online shop.
      * </pre>
      *
-     * <code>.bloombox.schema.partner.settings.OnlineShopSettings online = 2;</code>
+     * <code>.bloombox.partner.settings.OnlineShopSettings online = 2;</code>
      */
     public io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.OnlineShopSettings getOnline() {
       return online_ == null ? io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.OnlineShopSettings.getDefaultInstance() : online_;
@@ -31359,7 +32054,7 @@ public final class PartnerLocationSettingsOuterClass {
      * Specifies settings related to the online shop.
      * </pre>
      *
-     * <code>.bloombox.schema.partner.settings.OnlineShopSettings online = 2;</code>
+     * <code>.bloombox.partner.settings.OnlineShopSettings online = 2;</code>
      */
     public io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.OnlineShopSettingsOrBuilder getOnlineOrBuilder() {
       return getOnline();
@@ -31372,7 +32067,7 @@ public final class PartnerLocationSettingsOuterClass {
      * Specifies settings related to this location's physical storefront.
      * </pre>
      *
-     * <code>.bloombox.schema.partner.settings.PhysicalStorefrontSettings physical = 3;</code>
+     * <code>.bloombox.partner.settings.PhysicalStorefrontSettings physical = 3;</code>
      */
     public boolean hasPhysical() {
       return physical_ != null;
@@ -31382,7 +32077,7 @@ public final class PartnerLocationSettingsOuterClass {
      * Specifies settings related to this location's physical storefront.
      * </pre>
      *
-     * <code>.bloombox.schema.partner.settings.PhysicalStorefrontSettings physical = 3;</code>
+     * <code>.bloombox.partner.settings.PhysicalStorefrontSettings physical = 3;</code>
      */
     public io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.PhysicalStorefrontSettings getPhysical() {
       return physical_ == null ? io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.PhysicalStorefrontSettings.getDefaultInstance() : physical_;
@@ -31392,13 +32087,14 @@ public final class PartnerLocationSettingsOuterClass {
      * Specifies settings related to this location's physical storefront.
      * </pre>
      *
-     * <code>.bloombox.schema.partner.settings.PhysicalStorefrontSettings physical = 3;</code>
+     * <code>.bloombox.partner.settings.PhysicalStorefrontSettings physical = 3;</code>
      */
     public io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.PhysicalStorefrontSettingsOrBuilder getPhysicalOrBuilder() {
       return getPhysical();
     }
 
     private byte memoizedIsInitialized = -1;
+    @java.lang.Override
     public final boolean isInitialized() {
       byte isInitialized = memoizedIsInitialized;
       if (isInitialized == 1) return true;
@@ -31408,6 +32104,7 @@ public final class PartnerLocationSettingsOuterClass {
       return true;
     }
 
+    @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
       if (delivery_ != null) {
@@ -31422,6 +32119,7 @@ public final class PartnerLocationSettingsOuterClass {
       unknownFields.writeTo(output);
     }
 
+    @java.lang.Override
     public int getSerializedSize() {
       int size = memoizedSize;
       if (size != -1) return size;
@@ -31568,6 +32266,7 @@ public final class PartnerLocationSettingsOuterClass {
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
 
+    @java.lang.Override
     public Builder newBuilderForType() { return newBuilder(); }
     public static Builder newBuilder() {
       return DEFAULT_INSTANCE.toBuilder();
@@ -31575,6 +32274,7 @@ public final class PartnerLocationSettingsOuterClass {
     public static Builder newBuilder(io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.StorefrontSettings prototype) {
       return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
     }
+    @java.lang.Override
     public Builder toBuilder() {
       return this == DEFAULT_INSTANCE
           ? new Builder() : new Builder().mergeFrom(this);
@@ -31591,20 +32291,21 @@ public final class PartnerLocationSettingsOuterClass {
      * Specifies settings related to the actual sale of goods, either digitally or physically.
      * </pre>
      *
-     * Protobuf type {@code bloombox.schema.partner.settings.StorefrontSettings}
+     * Protobuf type {@code bloombox.partner.settings.StorefrontSettings}
      */
     public static final class Builder extends
         com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:bloombox.schema.partner.settings.StorefrontSettings)
+        // @@protoc_insertion_point(builder_implements:bloombox.partner.settings.StorefrontSettings)
         io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.StorefrontSettingsOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.internal_static_bloombox_schema_partner_settings_StorefrontSettings_descriptor;
+        return io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.internal_static_bloombox_partner_settings_StorefrontSettings_descriptor;
       }
 
+      @java.lang.Override
       protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.internal_static_bloombox_schema_partner_settings_StorefrontSettings_fieldAccessorTable
+        return io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.internal_static_bloombox_partner_settings_StorefrontSettings_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
                 io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.StorefrontSettings.class, io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.StorefrontSettings.Builder.class);
       }
@@ -31624,6 +32325,7 @@ public final class PartnerLocationSettingsOuterClass {
                 .alwaysUseFieldBuilders) {
         }
       }
+      @java.lang.Override
       public Builder clear() {
         super.clear();
         if (deliveryBuilder_ == null) {
@@ -31647,15 +32349,18 @@ public final class PartnerLocationSettingsOuterClass {
         return this;
       }
 
+      @java.lang.Override
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.internal_static_bloombox_schema_partner_settings_StorefrontSettings_descriptor;
+        return io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.internal_static_bloombox_partner_settings_StorefrontSettings_descriptor;
       }
 
+      @java.lang.Override
       public io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.StorefrontSettings getDefaultInstanceForType() {
         return io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.StorefrontSettings.getDefaultInstance();
       }
 
+      @java.lang.Override
       public io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.StorefrontSettings build() {
         io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.StorefrontSettings result = buildPartial();
         if (!result.isInitialized()) {
@@ -31664,6 +32369,7 @@ public final class PartnerLocationSettingsOuterClass {
         return result;
       }
 
+      @java.lang.Override
       public io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.StorefrontSettings buildPartial() {
         io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.StorefrontSettings result = new io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.StorefrontSettings(this);
         if (deliveryBuilder_ == null) {
@@ -31685,32 +32391,39 @@ public final class PartnerLocationSettingsOuterClass {
         return result;
       }
 
+      @java.lang.Override
       public Builder clone() {
         return (Builder) super.clone();
       }
+      @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
         return (Builder) super.setField(field, value);
       }
+      @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
         return (Builder) super.clearField(field);
       }
+      @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
         return (Builder) super.clearOneof(oneof);
       }
+      @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
         return (Builder) super.setRepeatedField(field, index, value);
       }
+      @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
         return (Builder) super.addRepeatedField(field, value);
       }
+      @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
         if (other instanceof io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.StorefrontSettings) {
           return mergeFrom((io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.StorefrontSettings)other);
@@ -31736,10 +32449,12 @@ public final class PartnerLocationSettingsOuterClass {
         return this;
       }
 
+      @java.lang.Override
       public final boolean isInitialized() {
         return true;
       }
 
+      @java.lang.Override
       public Builder mergeFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -31766,7 +32481,7 @@ public final class PartnerLocationSettingsOuterClass {
        * Specifies settings related to shop delivery.
        * </pre>
        *
-       * <code>.bloombox.schema.partner.settings.DeliverySettings delivery = 1;</code>
+       * <code>.bloombox.partner.settings.DeliverySettings delivery = 1;</code>
        */
       public boolean hasDelivery() {
         return deliveryBuilder_ != null || delivery_ != null;
@@ -31776,7 +32491,7 @@ public final class PartnerLocationSettingsOuterClass {
        * Specifies settings related to shop delivery.
        * </pre>
        *
-       * <code>.bloombox.schema.partner.settings.DeliverySettings delivery = 1;</code>
+       * <code>.bloombox.partner.settings.DeliverySettings delivery = 1;</code>
        */
       public io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.DeliverySettings getDelivery() {
         if (deliveryBuilder_ == null) {
@@ -31790,7 +32505,7 @@ public final class PartnerLocationSettingsOuterClass {
        * Specifies settings related to shop delivery.
        * </pre>
        *
-       * <code>.bloombox.schema.partner.settings.DeliverySettings delivery = 1;</code>
+       * <code>.bloombox.partner.settings.DeliverySettings delivery = 1;</code>
        */
       public Builder setDelivery(io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.DeliverySettings value) {
         if (deliveryBuilder_ == null) {
@@ -31810,7 +32525,7 @@ public final class PartnerLocationSettingsOuterClass {
        * Specifies settings related to shop delivery.
        * </pre>
        *
-       * <code>.bloombox.schema.partner.settings.DeliverySettings delivery = 1;</code>
+       * <code>.bloombox.partner.settings.DeliverySettings delivery = 1;</code>
        */
       public Builder setDelivery(
           io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.DeliverySettings.Builder builderForValue) {
@@ -31828,7 +32543,7 @@ public final class PartnerLocationSettingsOuterClass {
        * Specifies settings related to shop delivery.
        * </pre>
        *
-       * <code>.bloombox.schema.partner.settings.DeliverySettings delivery = 1;</code>
+       * <code>.bloombox.partner.settings.DeliverySettings delivery = 1;</code>
        */
       public Builder mergeDelivery(io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.DeliverySettings value) {
         if (deliveryBuilder_ == null) {
@@ -31850,7 +32565,7 @@ public final class PartnerLocationSettingsOuterClass {
        * Specifies settings related to shop delivery.
        * </pre>
        *
-       * <code>.bloombox.schema.partner.settings.DeliverySettings delivery = 1;</code>
+       * <code>.bloombox.partner.settings.DeliverySettings delivery = 1;</code>
        */
       public Builder clearDelivery() {
         if (deliveryBuilder_ == null) {
@@ -31868,7 +32583,7 @@ public final class PartnerLocationSettingsOuterClass {
        * Specifies settings related to shop delivery.
        * </pre>
        *
-       * <code>.bloombox.schema.partner.settings.DeliverySettings delivery = 1;</code>
+       * <code>.bloombox.partner.settings.DeliverySettings delivery = 1;</code>
        */
       public io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.DeliverySettings.Builder getDeliveryBuilder() {
         
@@ -31880,7 +32595,7 @@ public final class PartnerLocationSettingsOuterClass {
        * Specifies settings related to shop delivery.
        * </pre>
        *
-       * <code>.bloombox.schema.partner.settings.DeliverySettings delivery = 1;</code>
+       * <code>.bloombox.partner.settings.DeliverySettings delivery = 1;</code>
        */
       public io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.DeliverySettingsOrBuilder getDeliveryOrBuilder() {
         if (deliveryBuilder_ != null) {
@@ -31895,7 +32610,7 @@ public final class PartnerLocationSettingsOuterClass {
        * Specifies settings related to shop delivery.
        * </pre>
        *
-       * <code>.bloombox.schema.partner.settings.DeliverySettings delivery = 1;</code>
+       * <code>.bloombox.partner.settings.DeliverySettings delivery = 1;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
           io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.DeliverySettings, io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.DeliverySettings.Builder, io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.DeliverySettingsOrBuilder> 
@@ -31919,7 +32634,7 @@ public final class PartnerLocationSettingsOuterClass {
        * Specifies settings related to the online shop.
        * </pre>
        *
-       * <code>.bloombox.schema.partner.settings.OnlineShopSettings online = 2;</code>
+       * <code>.bloombox.partner.settings.OnlineShopSettings online = 2;</code>
        */
       public boolean hasOnline() {
         return onlineBuilder_ != null || online_ != null;
@@ -31929,7 +32644,7 @@ public final class PartnerLocationSettingsOuterClass {
        * Specifies settings related to the online shop.
        * </pre>
        *
-       * <code>.bloombox.schema.partner.settings.OnlineShopSettings online = 2;</code>
+       * <code>.bloombox.partner.settings.OnlineShopSettings online = 2;</code>
        */
       public io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.OnlineShopSettings getOnline() {
         if (onlineBuilder_ == null) {
@@ -31943,7 +32658,7 @@ public final class PartnerLocationSettingsOuterClass {
        * Specifies settings related to the online shop.
        * </pre>
        *
-       * <code>.bloombox.schema.partner.settings.OnlineShopSettings online = 2;</code>
+       * <code>.bloombox.partner.settings.OnlineShopSettings online = 2;</code>
        */
       public Builder setOnline(io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.OnlineShopSettings value) {
         if (onlineBuilder_ == null) {
@@ -31963,7 +32678,7 @@ public final class PartnerLocationSettingsOuterClass {
        * Specifies settings related to the online shop.
        * </pre>
        *
-       * <code>.bloombox.schema.partner.settings.OnlineShopSettings online = 2;</code>
+       * <code>.bloombox.partner.settings.OnlineShopSettings online = 2;</code>
        */
       public Builder setOnline(
           io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.OnlineShopSettings.Builder builderForValue) {
@@ -31981,7 +32696,7 @@ public final class PartnerLocationSettingsOuterClass {
        * Specifies settings related to the online shop.
        * </pre>
        *
-       * <code>.bloombox.schema.partner.settings.OnlineShopSettings online = 2;</code>
+       * <code>.bloombox.partner.settings.OnlineShopSettings online = 2;</code>
        */
       public Builder mergeOnline(io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.OnlineShopSettings value) {
         if (onlineBuilder_ == null) {
@@ -32003,7 +32718,7 @@ public final class PartnerLocationSettingsOuterClass {
        * Specifies settings related to the online shop.
        * </pre>
        *
-       * <code>.bloombox.schema.partner.settings.OnlineShopSettings online = 2;</code>
+       * <code>.bloombox.partner.settings.OnlineShopSettings online = 2;</code>
        */
       public Builder clearOnline() {
         if (onlineBuilder_ == null) {
@@ -32021,7 +32736,7 @@ public final class PartnerLocationSettingsOuterClass {
        * Specifies settings related to the online shop.
        * </pre>
        *
-       * <code>.bloombox.schema.partner.settings.OnlineShopSettings online = 2;</code>
+       * <code>.bloombox.partner.settings.OnlineShopSettings online = 2;</code>
        */
       public io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.OnlineShopSettings.Builder getOnlineBuilder() {
         
@@ -32033,7 +32748,7 @@ public final class PartnerLocationSettingsOuterClass {
        * Specifies settings related to the online shop.
        * </pre>
        *
-       * <code>.bloombox.schema.partner.settings.OnlineShopSettings online = 2;</code>
+       * <code>.bloombox.partner.settings.OnlineShopSettings online = 2;</code>
        */
       public io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.OnlineShopSettingsOrBuilder getOnlineOrBuilder() {
         if (onlineBuilder_ != null) {
@@ -32048,7 +32763,7 @@ public final class PartnerLocationSettingsOuterClass {
        * Specifies settings related to the online shop.
        * </pre>
        *
-       * <code>.bloombox.schema.partner.settings.OnlineShopSettings online = 2;</code>
+       * <code>.bloombox.partner.settings.OnlineShopSettings online = 2;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
           io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.OnlineShopSettings, io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.OnlineShopSettings.Builder, io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.OnlineShopSettingsOrBuilder> 
@@ -32072,7 +32787,7 @@ public final class PartnerLocationSettingsOuterClass {
        * Specifies settings related to this location's physical storefront.
        * </pre>
        *
-       * <code>.bloombox.schema.partner.settings.PhysicalStorefrontSettings physical = 3;</code>
+       * <code>.bloombox.partner.settings.PhysicalStorefrontSettings physical = 3;</code>
        */
       public boolean hasPhysical() {
         return physicalBuilder_ != null || physical_ != null;
@@ -32082,7 +32797,7 @@ public final class PartnerLocationSettingsOuterClass {
        * Specifies settings related to this location's physical storefront.
        * </pre>
        *
-       * <code>.bloombox.schema.partner.settings.PhysicalStorefrontSettings physical = 3;</code>
+       * <code>.bloombox.partner.settings.PhysicalStorefrontSettings physical = 3;</code>
        */
       public io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.PhysicalStorefrontSettings getPhysical() {
         if (physicalBuilder_ == null) {
@@ -32096,7 +32811,7 @@ public final class PartnerLocationSettingsOuterClass {
        * Specifies settings related to this location's physical storefront.
        * </pre>
        *
-       * <code>.bloombox.schema.partner.settings.PhysicalStorefrontSettings physical = 3;</code>
+       * <code>.bloombox.partner.settings.PhysicalStorefrontSettings physical = 3;</code>
        */
       public Builder setPhysical(io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.PhysicalStorefrontSettings value) {
         if (physicalBuilder_ == null) {
@@ -32116,7 +32831,7 @@ public final class PartnerLocationSettingsOuterClass {
        * Specifies settings related to this location's physical storefront.
        * </pre>
        *
-       * <code>.bloombox.schema.partner.settings.PhysicalStorefrontSettings physical = 3;</code>
+       * <code>.bloombox.partner.settings.PhysicalStorefrontSettings physical = 3;</code>
        */
       public Builder setPhysical(
           io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.PhysicalStorefrontSettings.Builder builderForValue) {
@@ -32134,7 +32849,7 @@ public final class PartnerLocationSettingsOuterClass {
        * Specifies settings related to this location's physical storefront.
        * </pre>
        *
-       * <code>.bloombox.schema.partner.settings.PhysicalStorefrontSettings physical = 3;</code>
+       * <code>.bloombox.partner.settings.PhysicalStorefrontSettings physical = 3;</code>
        */
       public Builder mergePhysical(io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.PhysicalStorefrontSettings value) {
         if (physicalBuilder_ == null) {
@@ -32156,7 +32871,7 @@ public final class PartnerLocationSettingsOuterClass {
        * Specifies settings related to this location's physical storefront.
        * </pre>
        *
-       * <code>.bloombox.schema.partner.settings.PhysicalStorefrontSettings physical = 3;</code>
+       * <code>.bloombox.partner.settings.PhysicalStorefrontSettings physical = 3;</code>
        */
       public Builder clearPhysical() {
         if (physicalBuilder_ == null) {
@@ -32174,7 +32889,7 @@ public final class PartnerLocationSettingsOuterClass {
        * Specifies settings related to this location's physical storefront.
        * </pre>
        *
-       * <code>.bloombox.schema.partner.settings.PhysicalStorefrontSettings physical = 3;</code>
+       * <code>.bloombox.partner.settings.PhysicalStorefrontSettings physical = 3;</code>
        */
       public io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.PhysicalStorefrontSettings.Builder getPhysicalBuilder() {
         
@@ -32186,7 +32901,7 @@ public final class PartnerLocationSettingsOuterClass {
        * Specifies settings related to this location's physical storefront.
        * </pre>
        *
-       * <code>.bloombox.schema.partner.settings.PhysicalStorefrontSettings physical = 3;</code>
+       * <code>.bloombox.partner.settings.PhysicalStorefrontSettings physical = 3;</code>
        */
       public io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.PhysicalStorefrontSettingsOrBuilder getPhysicalOrBuilder() {
         if (physicalBuilder_ != null) {
@@ -32201,7 +32916,7 @@ public final class PartnerLocationSettingsOuterClass {
        * Specifies settings related to this location's physical storefront.
        * </pre>
        *
-       * <code>.bloombox.schema.partner.settings.PhysicalStorefrontSettings physical = 3;</code>
+       * <code>.bloombox.partner.settings.PhysicalStorefrontSettings physical = 3;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
           io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.PhysicalStorefrontSettings, io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.PhysicalStorefrontSettings.Builder, io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.PhysicalStorefrontSettingsOrBuilder> 
@@ -32216,21 +32931,23 @@ public final class PartnerLocationSettingsOuterClass {
         }
         return physicalBuilder_;
       }
+      @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
         return super.setUnknownFieldsProto3(unknownFields);
       }
 
+      @java.lang.Override
       public final Builder mergeUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
         return super.mergeUnknownFields(unknownFields);
       }
 
 
-      // @@protoc_insertion_point(builder_scope:bloombox.schema.partner.settings.StorefrontSettings)
+      // @@protoc_insertion_point(builder_scope:bloombox.partner.settings.StorefrontSettings)
     }
 
-    // @@protoc_insertion_point(class_scope:bloombox.schema.partner.settings.StorefrontSettings)
+    // @@protoc_insertion_point(class_scope:bloombox.partner.settings.StorefrontSettings)
     private static final io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.StorefrontSettings DEFAULT_INSTANCE;
     static {
       DEFAULT_INSTANCE = new io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.StorefrontSettings();
@@ -32242,6 +32959,7 @@ public final class PartnerLocationSettingsOuterClass {
 
     private static final com.google.protobuf.Parser<StorefrontSettings>
         PARSER = new com.google.protobuf.AbstractParser<StorefrontSettings>() {
+      @java.lang.Override
       public StorefrontSettings parsePartialFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -32259,6 +32977,7 @@ public final class PartnerLocationSettingsOuterClass {
       return PARSER;
     }
 
+    @java.lang.Override
     public io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.StorefrontSettings getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
@@ -32266,7 +32985,7 @@ public final class PartnerLocationSettingsOuterClass {
   }
 
   public interface ShopSettingsOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:bloombox.schema.partner.settings.ShopSettings)
+      // @@protoc_insertion_point(interface_extends:bloombox.partner.settings.ShopSettings)
       com.google.protobuf.MessageOrBuilder {
 
     /**
@@ -32274,7 +32993,7 @@ public final class PartnerLocationSettingsOuterClass {
      * Specifies hours that apply to this storefront.
      * </pre>
      *
-     * <code>.bloombox.schema.partner.settings.ShopHoursSettings hours = 1;</code>
+     * <code>.bloombox.partner.settings.ShopHoursSettings hours = 1;</code>
      */
     boolean hasHours();
     /**
@@ -32282,7 +33001,7 @@ public final class PartnerLocationSettingsOuterClass {
      * Specifies hours that apply to this storefront.
      * </pre>
      *
-     * <code>.bloombox.schema.partner.settings.ShopHoursSettings hours = 1;</code>
+     * <code>.bloombox.partner.settings.ShopHoursSettings hours = 1;</code>
      */
     io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.ShopHoursSettings getHours();
     /**
@@ -32290,7 +33009,7 @@ public final class PartnerLocationSettingsOuterClass {
      * Specifies hours that apply to this storefront.
      * </pre>
      *
-     * <code>.bloombox.schema.partner.settings.ShopHoursSettings hours = 1;</code>
+     * <code>.bloombox.partner.settings.ShopHoursSettings hours = 1;</code>
      */
     io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.ShopHoursSettingsOrBuilder getHoursOrBuilder();
 
@@ -32299,7 +33018,7 @@ public final class PartnerLocationSettingsOuterClass {
      * Specifies the services offered by this shop, digital or physical.
      * </pre>
      *
-     * <code>.bloombox.schema.partner.settings.ShopServiceSettings services = 2;</code>
+     * <code>.bloombox.partner.settings.ShopServiceSettings services = 2;</code>
      */
     boolean hasServices();
     /**
@@ -32307,7 +33026,7 @@ public final class PartnerLocationSettingsOuterClass {
      * Specifies the services offered by this shop, digital or physical.
      * </pre>
      *
-     * <code>.bloombox.schema.partner.settings.ShopServiceSettings services = 2;</code>
+     * <code>.bloombox.partner.settings.ShopServiceSettings services = 2;</code>
      */
     io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.ShopServiceSettings getServices();
     /**
@@ -32315,7 +33034,7 @@ public final class PartnerLocationSettingsOuterClass {
      * Specifies the services offered by this shop, digital or physical.
      * </pre>
      *
-     * <code>.bloombox.schema.partner.settings.ShopServiceSettings services = 2;</code>
+     * <code>.bloombox.partner.settings.ShopServiceSettings services = 2;</code>
      */
     io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.ShopServiceSettingsOrBuilder getServicesOrBuilder();
 
@@ -32324,7 +33043,7 @@ public final class PartnerLocationSettingsOuterClass {
      * Specifies settings that apply to digital and physical sale of goods.
      * </pre>
      *
-     * <code>.bloombox.schema.partner.settings.StorefrontSettings storefront = 3;</code>
+     * <code>.bloombox.partner.settings.StorefrontSettings storefront = 3;</code>
      */
     boolean hasStorefront();
     /**
@@ -32332,7 +33051,7 @@ public final class PartnerLocationSettingsOuterClass {
      * Specifies settings that apply to digital and physical sale of goods.
      * </pre>
      *
-     * <code>.bloombox.schema.partner.settings.StorefrontSettings storefront = 3;</code>
+     * <code>.bloombox.partner.settings.StorefrontSettings storefront = 3;</code>
      */
     io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.StorefrontSettings getStorefront();
     /**
@@ -32340,7 +33059,7 @@ public final class PartnerLocationSettingsOuterClass {
      * Specifies settings that apply to digital and physical sale of goods.
      * </pre>
      *
-     * <code>.bloombox.schema.partner.settings.StorefrontSettings storefront = 3;</code>
+     * <code>.bloombox.partner.settings.StorefrontSettings storefront = 3;</code>
      */
     io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.StorefrontSettingsOrBuilder getStorefrontOrBuilder();
   }
@@ -32349,11 +33068,11 @@ public final class PartnerLocationSettingsOuterClass {
    * Specifies settings that apply to the web shop on a per-location basis.
    * </pre>
    *
-   * Protobuf type {@code bloombox.schema.partner.settings.ShopSettings}
+   * Protobuf type {@code bloombox.partner.settings.ShopSettings}
    */
   public  static final class ShopSettings extends
       com.google.protobuf.GeneratedMessageV3 implements
-      // @@protoc_insertion_point(message_implements:bloombox.schema.partner.settings.ShopSettings)
+      // @@protoc_insertion_point(message_implements:bloombox.partner.settings.ShopSettings)
       ShopSettingsOrBuilder {
   private static final long serialVersionUID = 0L;
     // Use ShopSettings.newBuilder() to construct.
@@ -32387,13 +33106,6 @@ public final class PartnerLocationSettingsOuterClass {
             case 0:
               done = true;
               break;
-            default: {
-              if (!parseUnknownFieldProto3(
-                  input, unknownFields, extensionRegistry, tag)) {
-                done = true;
-              }
-              break;
-            }
             case 10: {
               io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.ShopHoursSettings.Builder subBuilder = null;
               if (hours_ != null) {
@@ -32433,6 +33145,13 @@ public final class PartnerLocationSettingsOuterClass {
 
               break;
             }
+            default: {
+              if (!parseUnknownFieldProto3(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
           }
         }
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
@@ -32447,12 +33166,13 @@ public final class PartnerLocationSettingsOuterClass {
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.internal_static_bloombox_schema_partner_settings_ShopSettings_descriptor;
+      return io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.internal_static_bloombox_partner_settings_ShopSettings_descriptor;
     }
 
+    @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.internal_static_bloombox_schema_partner_settings_ShopSettings_fieldAccessorTable
+      return io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.internal_static_bloombox_partner_settings_ShopSettings_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
               io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.ShopSettings.class, io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.ShopSettings.Builder.class);
     }
@@ -32464,7 +33184,7 @@ public final class PartnerLocationSettingsOuterClass {
      * Specifies hours that apply to this storefront.
      * </pre>
      *
-     * <code>.bloombox.schema.partner.settings.ShopHoursSettings hours = 1;</code>
+     * <code>.bloombox.partner.settings.ShopHoursSettings hours = 1;</code>
      */
     public boolean hasHours() {
       return hours_ != null;
@@ -32474,7 +33194,7 @@ public final class PartnerLocationSettingsOuterClass {
      * Specifies hours that apply to this storefront.
      * </pre>
      *
-     * <code>.bloombox.schema.partner.settings.ShopHoursSettings hours = 1;</code>
+     * <code>.bloombox.partner.settings.ShopHoursSettings hours = 1;</code>
      */
     public io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.ShopHoursSettings getHours() {
       return hours_ == null ? io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.ShopHoursSettings.getDefaultInstance() : hours_;
@@ -32484,7 +33204,7 @@ public final class PartnerLocationSettingsOuterClass {
      * Specifies hours that apply to this storefront.
      * </pre>
      *
-     * <code>.bloombox.schema.partner.settings.ShopHoursSettings hours = 1;</code>
+     * <code>.bloombox.partner.settings.ShopHoursSettings hours = 1;</code>
      */
     public io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.ShopHoursSettingsOrBuilder getHoursOrBuilder() {
       return getHours();
@@ -32497,7 +33217,7 @@ public final class PartnerLocationSettingsOuterClass {
      * Specifies the services offered by this shop, digital or physical.
      * </pre>
      *
-     * <code>.bloombox.schema.partner.settings.ShopServiceSettings services = 2;</code>
+     * <code>.bloombox.partner.settings.ShopServiceSettings services = 2;</code>
      */
     public boolean hasServices() {
       return services_ != null;
@@ -32507,7 +33227,7 @@ public final class PartnerLocationSettingsOuterClass {
      * Specifies the services offered by this shop, digital or physical.
      * </pre>
      *
-     * <code>.bloombox.schema.partner.settings.ShopServiceSettings services = 2;</code>
+     * <code>.bloombox.partner.settings.ShopServiceSettings services = 2;</code>
      */
     public io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.ShopServiceSettings getServices() {
       return services_ == null ? io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.ShopServiceSettings.getDefaultInstance() : services_;
@@ -32517,7 +33237,7 @@ public final class PartnerLocationSettingsOuterClass {
      * Specifies the services offered by this shop, digital or physical.
      * </pre>
      *
-     * <code>.bloombox.schema.partner.settings.ShopServiceSettings services = 2;</code>
+     * <code>.bloombox.partner.settings.ShopServiceSettings services = 2;</code>
      */
     public io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.ShopServiceSettingsOrBuilder getServicesOrBuilder() {
       return getServices();
@@ -32530,7 +33250,7 @@ public final class PartnerLocationSettingsOuterClass {
      * Specifies settings that apply to digital and physical sale of goods.
      * </pre>
      *
-     * <code>.bloombox.schema.partner.settings.StorefrontSettings storefront = 3;</code>
+     * <code>.bloombox.partner.settings.StorefrontSettings storefront = 3;</code>
      */
     public boolean hasStorefront() {
       return storefront_ != null;
@@ -32540,7 +33260,7 @@ public final class PartnerLocationSettingsOuterClass {
      * Specifies settings that apply to digital and physical sale of goods.
      * </pre>
      *
-     * <code>.bloombox.schema.partner.settings.StorefrontSettings storefront = 3;</code>
+     * <code>.bloombox.partner.settings.StorefrontSettings storefront = 3;</code>
      */
     public io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.StorefrontSettings getStorefront() {
       return storefront_ == null ? io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.StorefrontSettings.getDefaultInstance() : storefront_;
@@ -32550,13 +33270,14 @@ public final class PartnerLocationSettingsOuterClass {
      * Specifies settings that apply to digital and physical sale of goods.
      * </pre>
      *
-     * <code>.bloombox.schema.partner.settings.StorefrontSettings storefront = 3;</code>
+     * <code>.bloombox.partner.settings.StorefrontSettings storefront = 3;</code>
      */
     public io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.StorefrontSettingsOrBuilder getStorefrontOrBuilder() {
       return getStorefront();
     }
 
     private byte memoizedIsInitialized = -1;
+    @java.lang.Override
     public final boolean isInitialized() {
       byte isInitialized = memoizedIsInitialized;
       if (isInitialized == 1) return true;
@@ -32566,6 +33287,7 @@ public final class PartnerLocationSettingsOuterClass {
       return true;
     }
 
+    @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
       if (hours_ != null) {
@@ -32580,6 +33302,7 @@ public final class PartnerLocationSettingsOuterClass {
       unknownFields.writeTo(output);
     }
 
+    @java.lang.Override
     public int getSerializedSize() {
       int size = memoizedSize;
       if (size != -1) return size;
@@ -32726,6 +33449,7 @@ public final class PartnerLocationSettingsOuterClass {
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
 
+    @java.lang.Override
     public Builder newBuilderForType() { return newBuilder(); }
     public static Builder newBuilder() {
       return DEFAULT_INSTANCE.toBuilder();
@@ -32733,6 +33457,7 @@ public final class PartnerLocationSettingsOuterClass {
     public static Builder newBuilder(io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.ShopSettings prototype) {
       return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
     }
+    @java.lang.Override
     public Builder toBuilder() {
       return this == DEFAULT_INSTANCE
           ? new Builder() : new Builder().mergeFrom(this);
@@ -32749,20 +33474,21 @@ public final class PartnerLocationSettingsOuterClass {
      * Specifies settings that apply to the web shop on a per-location basis.
      * </pre>
      *
-     * Protobuf type {@code bloombox.schema.partner.settings.ShopSettings}
+     * Protobuf type {@code bloombox.partner.settings.ShopSettings}
      */
     public static final class Builder extends
         com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:bloombox.schema.partner.settings.ShopSettings)
+        // @@protoc_insertion_point(builder_implements:bloombox.partner.settings.ShopSettings)
         io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.ShopSettingsOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.internal_static_bloombox_schema_partner_settings_ShopSettings_descriptor;
+        return io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.internal_static_bloombox_partner_settings_ShopSettings_descriptor;
       }
 
+      @java.lang.Override
       protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.internal_static_bloombox_schema_partner_settings_ShopSettings_fieldAccessorTable
+        return io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.internal_static_bloombox_partner_settings_ShopSettings_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
                 io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.ShopSettings.class, io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.ShopSettings.Builder.class);
       }
@@ -32782,6 +33508,7 @@ public final class PartnerLocationSettingsOuterClass {
                 .alwaysUseFieldBuilders) {
         }
       }
+      @java.lang.Override
       public Builder clear() {
         super.clear();
         if (hoursBuilder_ == null) {
@@ -32805,15 +33532,18 @@ public final class PartnerLocationSettingsOuterClass {
         return this;
       }
 
+      @java.lang.Override
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.internal_static_bloombox_schema_partner_settings_ShopSettings_descriptor;
+        return io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.internal_static_bloombox_partner_settings_ShopSettings_descriptor;
       }
 
+      @java.lang.Override
       public io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.ShopSettings getDefaultInstanceForType() {
         return io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.ShopSettings.getDefaultInstance();
       }
 
+      @java.lang.Override
       public io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.ShopSettings build() {
         io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.ShopSettings result = buildPartial();
         if (!result.isInitialized()) {
@@ -32822,6 +33552,7 @@ public final class PartnerLocationSettingsOuterClass {
         return result;
       }
 
+      @java.lang.Override
       public io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.ShopSettings buildPartial() {
         io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.ShopSettings result = new io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.ShopSettings(this);
         if (hoursBuilder_ == null) {
@@ -32843,32 +33574,39 @@ public final class PartnerLocationSettingsOuterClass {
         return result;
       }
 
+      @java.lang.Override
       public Builder clone() {
         return (Builder) super.clone();
       }
+      @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
         return (Builder) super.setField(field, value);
       }
+      @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
         return (Builder) super.clearField(field);
       }
+      @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
         return (Builder) super.clearOneof(oneof);
       }
+      @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
         return (Builder) super.setRepeatedField(field, index, value);
       }
+      @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
         return (Builder) super.addRepeatedField(field, value);
       }
+      @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
         if (other instanceof io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.ShopSettings) {
           return mergeFrom((io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.ShopSettings)other);
@@ -32894,10 +33632,12 @@ public final class PartnerLocationSettingsOuterClass {
         return this;
       }
 
+      @java.lang.Override
       public final boolean isInitialized() {
         return true;
       }
 
+      @java.lang.Override
       public Builder mergeFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -32924,7 +33664,7 @@ public final class PartnerLocationSettingsOuterClass {
        * Specifies hours that apply to this storefront.
        * </pre>
        *
-       * <code>.bloombox.schema.partner.settings.ShopHoursSettings hours = 1;</code>
+       * <code>.bloombox.partner.settings.ShopHoursSettings hours = 1;</code>
        */
       public boolean hasHours() {
         return hoursBuilder_ != null || hours_ != null;
@@ -32934,7 +33674,7 @@ public final class PartnerLocationSettingsOuterClass {
        * Specifies hours that apply to this storefront.
        * </pre>
        *
-       * <code>.bloombox.schema.partner.settings.ShopHoursSettings hours = 1;</code>
+       * <code>.bloombox.partner.settings.ShopHoursSettings hours = 1;</code>
        */
       public io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.ShopHoursSettings getHours() {
         if (hoursBuilder_ == null) {
@@ -32948,7 +33688,7 @@ public final class PartnerLocationSettingsOuterClass {
        * Specifies hours that apply to this storefront.
        * </pre>
        *
-       * <code>.bloombox.schema.partner.settings.ShopHoursSettings hours = 1;</code>
+       * <code>.bloombox.partner.settings.ShopHoursSettings hours = 1;</code>
        */
       public Builder setHours(io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.ShopHoursSettings value) {
         if (hoursBuilder_ == null) {
@@ -32968,7 +33708,7 @@ public final class PartnerLocationSettingsOuterClass {
        * Specifies hours that apply to this storefront.
        * </pre>
        *
-       * <code>.bloombox.schema.partner.settings.ShopHoursSettings hours = 1;</code>
+       * <code>.bloombox.partner.settings.ShopHoursSettings hours = 1;</code>
        */
       public Builder setHours(
           io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.ShopHoursSettings.Builder builderForValue) {
@@ -32986,7 +33726,7 @@ public final class PartnerLocationSettingsOuterClass {
        * Specifies hours that apply to this storefront.
        * </pre>
        *
-       * <code>.bloombox.schema.partner.settings.ShopHoursSettings hours = 1;</code>
+       * <code>.bloombox.partner.settings.ShopHoursSettings hours = 1;</code>
        */
       public Builder mergeHours(io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.ShopHoursSettings value) {
         if (hoursBuilder_ == null) {
@@ -33008,7 +33748,7 @@ public final class PartnerLocationSettingsOuterClass {
        * Specifies hours that apply to this storefront.
        * </pre>
        *
-       * <code>.bloombox.schema.partner.settings.ShopHoursSettings hours = 1;</code>
+       * <code>.bloombox.partner.settings.ShopHoursSettings hours = 1;</code>
        */
       public Builder clearHours() {
         if (hoursBuilder_ == null) {
@@ -33026,7 +33766,7 @@ public final class PartnerLocationSettingsOuterClass {
        * Specifies hours that apply to this storefront.
        * </pre>
        *
-       * <code>.bloombox.schema.partner.settings.ShopHoursSettings hours = 1;</code>
+       * <code>.bloombox.partner.settings.ShopHoursSettings hours = 1;</code>
        */
       public io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.ShopHoursSettings.Builder getHoursBuilder() {
         
@@ -33038,7 +33778,7 @@ public final class PartnerLocationSettingsOuterClass {
        * Specifies hours that apply to this storefront.
        * </pre>
        *
-       * <code>.bloombox.schema.partner.settings.ShopHoursSettings hours = 1;</code>
+       * <code>.bloombox.partner.settings.ShopHoursSettings hours = 1;</code>
        */
       public io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.ShopHoursSettingsOrBuilder getHoursOrBuilder() {
         if (hoursBuilder_ != null) {
@@ -33053,7 +33793,7 @@ public final class PartnerLocationSettingsOuterClass {
        * Specifies hours that apply to this storefront.
        * </pre>
        *
-       * <code>.bloombox.schema.partner.settings.ShopHoursSettings hours = 1;</code>
+       * <code>.bloombox.partner.settings.ShopHoursSettings hours = 1;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
           io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.ShopHoursSettings, io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.ShopHoursSettings.Builder, io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.ShopHoursSettingsOrBuilder> 
@@ -33077,7 +33817,7 @@ public final class PartnerLocationSettingsOuterClass {
        * Specifies the services offered by this shop, digital or physical.
        * </pre>
        *
-       * <code>.bloombox.schema.partner.settings.ShopServiceSettings services = 2;</code>
+       * <code>.bloombox.partner.settings.ShopServiceSettings services = 2;</code>
        */
       public boolean hasServices() {
         return servicesBuilder_ != null || services_ != null;
@@ -33087,7 +33827,7 @@ public final class PartnerLocationSettingsOuterClass {
        * Specifies the services offered by this shop, digital or physical.
        * </pre>
        *
-       * <code>.bloombox.schema.partner.settings.ShopServiceSettings services = 2;</code>
+       * <code>.bloombox.partner.settings.ShopServiceSettings services = 2;</code>
        */
       public io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.ShopServiceSettings getServices() {
         if (servicesBuilder_ == null) {
@@ -33101,7 +33841,7 @@ public final class PartnerLocationSettingsOuterClass {
        * Specifies the services offered by this shop, digital or physical.
        * </pre>
        *
-       * <code>.bloombox.schema.partner.settings.ShopServiceSettings services = 2;</code>
+       * <code>.bloombox.partner.settings.ShopServiceSettings services = 2;</code>
        */
       public Builder setServices(io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.ShopServiceSettings value) {
         if (servicesBuilder_ == null) {
@@ -33121,7 +33861,7 @@ public final class PartnerLocationSettingsOuterClass {
        * Specifies the services offered by this shop, digital or physical.
        * </pre>
        *
-       * <code>.bloombox.schema.partner.settings.ShopServiceSettings services = 2;</code>
+       * <code>.bloombox.partner.settings.ShopServiceSettings services = 2;</code>
        */
       public Builder setServices(
           io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.ShopServiceSettings.Builder builderForValue) {
@@ -33139,7 +33879,7 @@ public final class PartnerLocationSettingsOuterClass {
        * Specifies the services offered by this shop, digital or physical.
        * </pre>
        *
-       * <code>.bloombox.schema.partner.settings.ShopServiceSettings services = 2;</code>
+       * <code>.bloombox.partner.settings.ShopServiceSettings services = 2;</code>
        */
       public Builder mergeServices(io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.ShopServiceSettings value) {
         if (servicesBuilder_ == null) {
@@ -33161,7 +33901,7 @@ public final class PartnerLocationSettingsOuterClass {
        * Specifies the services offered by this shop, digital or physical.
        * </pre>
        *
-       * <code>.bloombox.schema.partner.settings.ShopServiceSettings services = 2;</code>
+       * <code>.bloombox.partner.settings.ShopServiceSettings services = 2;</code>
        */
       public Builder clearServices() {
         if (servicesBuilder_ == null) {
@@ -33179,7 +33919,7 @@ public final class PartnerLocationSettingsOuterClass {
        * Specifies the services offered by this shop, digital or physical.
        * </pre>
        *
-       * <code>.bloombox.schema.partner.settings.ShopServiceSettings services = 2;</code>
+       * <code>.bloombox.partner.settings.ShopServiceSettings services = 2;</code>
        */
       public io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.ShopServiceSettings.Builder getServicesBuilder() {
         
@@ -33191,7 +33931,7 @@ public final class PartnerLocationSettingsOuterClass {
        * Specifies the services offered by this shop, digital or physical.
        * </pre>
        *
-       * <code>.bloombox.schema.partner.settings.ShopServiceSettings services = 2;</code>
+       * <code>.bloombox.partner.settings.ShopServiceSettings services = 2;</code>
        */
       public io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.ShopServiceSettingsOrBuilder getServicesOrBuilder() {
         if (servicesBuilder_ != null) {
@@ -33206,7 +33946,7 @@ public final class PartnerLocationSettingsOuterClass {
        * Specifies the services offered by this shop, digital or physical.
        * </pre>
        *
-       * <code>.bloombox.schema.partner.settings.ShopServiceSettings services = 2;</code>
+       * <code>.bloombox.partner.settings.ShopServiceSettings services = 2;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
           io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.ShopServiceSettings, io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.ShopServiceSettings.Builder, io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.ShopServiceSettingsOrBuilder> 
@@ -33230,7 +33970,7 @@ public final class PartnerLocationSettingsOuterClass {
        * Specifies settings that apply to digital and physical sale of goods.
        * </pre>
        *
-       * <code>.bloombox.schema.partner.settings.StorefrontSettings storefront = 3;</code>
+       * <code>.bloombox.partner.settings.StorefrontSettings storefront = 3;</code>
        */
       public boolean hasStorefront() {
         return storefrontBuilder_ != null || storefront_ != null;
@@ -33240,7 +33980,7 @@ public final class PartnerLocationSettingsOuterClass {
        * Specifies settings that apply to digital and physical sale of goods.
        * </pre>
        *
-       * <code>.bloombox.schema.partner.settings.StorefrontSettings storefront = 3;</code>
+       * <code>.bloombox.partner.settings.StorefrontSettings storefront = 3;</code>
        */
       public io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.StorefrontSettings getStorefront() {
         if (storefrontBuilder_ == null) {
@@ -33254,7 +33994,7 @@ public final class PartnerLocationSettingsOuterClass {
        * Specifies settings that apply to digital and physical sale of goods.
        * </pre>
        *
-       * <code>.bloombox.schema.partner.settings.StorefrontSettings storefront = 3;</code>
+       * <code>.bloombox.partner.settings.StorefrontSettings storefront = 3;</code>
        */
       public Builder setStorefront(io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.StorefrontSettings value) {
         if (storefrontBuilder_ == null) {
@@ -33274,7 +34014,7 @@ public final class PartnerLocationSettingsOuterClass {
        * Specifies settings that apply to digital and physical sale of goods.
        * </pre>
        *
-       * <code>.bloombox.schema.partner.settings.StorefrontSettings storefront = 3;</code>
+       * <code>.bloombox.partner.settings.StorefrontSettings storefront = 3;</code>
        */
       public Builder setStorefront(
           io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.StorefrontSettings.Builder builderForValue) {
@@ -33292,7 +34032,7 @@ public final class PartnerLocationSettingsOuterClass {
        * Specifies settings that apply to digital and physical sale of goods.
        * </pre>
        *
-       * <code>.bloombox.schema.partner.settings.StorefrontSettings storefront = 3;</code>
+       * <code>.bloombox.partner.settings.StorefrontSettings storefront = 3;</code>
        */
       public Builder mergeStorefront(io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.StorefrontSettings value) {
         if (storefrontBuilder_ == null) {
@@ -33314,7 +34054,7 @@ public final class PartnerLocationSettingsOuterClass {
        * Specifies settings that apply to digital and physical sale of goods.
        * </pre>
        *
-       * <code>.bloombox.schema.partner.settings.StorefrontSettings storefront = 3;</code>
+       * <code>.bloombox.partner.settings.StorefrontSettings storefront = 3;</code>
        */
       public Builder clearStorefront() {
         if (storefrontBuilder_ == null) {
@@ -33332,7 +34072,7 @@ public final class PartnerLocationSettingsOuterClass {
        * Specifies settings that apply to digital and physical sale of goods.
        * </pre>
        *
-       * <code>.bloombox.schema.partner.settings.StorefrontSettings storefront = 3;</code>
+       * <code>.bloombox.partner.settings.StorefrontSettings storefront = 3;</code>
        */
       public io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.StorefrontSettings.Builder getStorefrontBuilder() {
         
@@ -33344,7 +34084,7 @@ public final class PartnerLocationSettingsOuterClass {
        * Specifies settings that apply to digital and physical sale of goods.
        * </pre>
        *
-       * <code>.bloombox.schema.partner.settings.StorefrontSettings storefront = 3;</code>
+       * <code>.bloombox.partner.settings.StorefrontSettings storefront = 3;</code>
        */
       public io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.StorefrontSettingsOrBuilder getStorefrontOrBuilder() {
         if (storefrontBuilder_ != null) {
@@ -33359,7 +34099,7 @@ public final class PartnerLocationSettingsOuterClass {
        * Specifies settings that apply to digital and physical sale of goods.
        * </pre>
        *
-       * <code>.bloombox.schema.partner.settings.StorefrontSettings storefront = 3;</code>
+       * <code>.bloombox.partner.settings.StorefrontSettings storefront = 3;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
           io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.StorefrontSettings, io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.StorefrontSettings.Builder, io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.StorefrontSettingsOrBuilder> 
@@ -33374,21 +34114,23 @@ public final class PartnerLocationSettingsOuterClass {
         }
         return storefrontBuilder_;
       }
+      @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
         return super.setUnknownFieldsProto3(unknownFields);
       }
 
+      @java.lang.Override
       public final Builder mergeUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
         return super.mergeUnknownFields(unknownFields);
       }
 
 
-      // @@protoc_insertion_point(builder_scope:bloombox.schema.partner.settings.ShopSettings)
+      // @@protoc_insertion_point(builder_scope:bloombox.partner.settings.ShopSettings)
     }
 
-    // @@protoc_insertion_point(class_scope:bloombox.schema.partner.settings.ShopSettings)
+    // @@protoc_insertion_point(class_scope:bloombox.partner.settings.ShopSettings)
     private static final io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.ShopSettings DEFAULT_INSTANCE;
     static {
       DEFAULT_INSTANCE = new io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.ShopSettings();
@@ -33400,6 +34142,7 @@ public final class PartnerLocationSettingsOuterClass {
 
     private static final com.google.protobuf.Parser<ShopSettings>
         PARSER = new com.google.protobuf.AbstractParser<ShopSettings>() {
+      @java.lang.Override
       public ShopSettings parsePartialFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -33417,6 +34160,7 @@ public final class PartnerLocationSettingsOuterClass {
       return PARSER;
     }
 
+    @java.lang.Override
     public io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.ShopSettings getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
@@ -33424,7 +34168,7 @@ public final class PartnerLocationSettingsOuterClass {
   }
 
   public interface CartSettingsOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:bloombox.schema.partner.settings.CartSettings)
+      // @@protoc_insertion_point(interface_extends:bloombox.partner.settings.CartSettings)
       com.google.protobuf.MessageOrBuilder {
 
     /**
@@ -33432,7 +34176,7 @@ public final class PartnerLocationSettingsOuterClass {
      * Operating mode for the cart.
      * </pre>
      *
-     * <code>.bloombox.schema.partner.settings.CartMode mode = 1;</code>
+     * <code>.bloombox.partner.settings.CartMode mode = 1;</code>
      */
     int getModeValue();
     /**
@@ -33440,7 +34184,7 @@ public final class PartnerLocationSettingsOuterClass {
      * Operating mode for the cart.
      * </pre>
      *
-     * <code>.bloombox.schema.partner.settings.CartMode mode = 1;</code>
+     * <code>.bloombox.partner.settings.CartMode mode = 1;</code>
      */
     io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.CartMode getMode();
 
@@ -33466,11 +34210,11 @@ public final class PartnerLocationSettingsOuterClass {
    * Settings for the cart UI and mode switch on tablet menus.
    * </pre>
    *
-   * Protobuf type {@code bloombox.schema.partner.settings.CartSettings}
+   * Protobuf type {@code bloombox.partner.settings.CartSettings}
    */
   public  static final class CartSettings extends
       com.google.protobuf.GeneratedMessageV3 implements
-      // @@protoc_insertion_point(message_implements:bloombox.schema.partner.settings.CartSettings)
+      // @@protoc_insertion_point(message_implements:bloombox.partner.settings.CartSettings)
       CartSettingsOrBuilder {
   private static final long serialVersionUID = 0L;
     // Use CartSettings.newBuilder() to construct.
@@ -33506,13 +34250,6 @@ public final class PartnerLocationSettingsOuterClass {
             case 0:
               done = true;
               break;
-            default: {
-              if (!parseUnknownFieldProto3(
-                  input, unknownFields, extensionRegistry, tag)) {
-                done = true;
-              }
-              break;
-            }
             case 8: {
               int rawValue = input.readEnum();
 
@@ -33523,6 +34260,13 @@ public final class PartnerLocationSettingsOuterClass {
               int rawValue = input.readEnum();
 
               orderType_ = rawValue;
+              break;
+            }
+            default: {
+              if (!parseUnknownFieldProto3(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
               break;
             }
           }
@@ -33539,12 +34283,13 @@ public final class PartnerLocationSettingsOuterClass {
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.internal_static_bloombox_schema_partner_settings_CartSettings_descriptor;
+      return io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.internal_static_bloombox_partner_settings_CartSettings_descriptor;
     }
 
+    @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.internal_static_bloombox_schema_partner_settings_CartSettings_fieldAccessorTable
+      return io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.internal_static_bloombox_partner_settings_CartSettings_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
               io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.CartSettings.class, io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.CartSettings.Builder.class);
     }
@@ -33556,7 +34301,7 @@ public final class PartnerLocationSettingsOuterClass {
      * Operating mode for the cart.
      * </pre>
      *
-     * <code>.bloombox.schema.partner.settings.CartMode mode = 1;</code>
+     * <code>.bloombox.partner.settings.CartMode mode = 1;</code>
      */
     public int getModeValue() {
       return mode_;
@@ -33566,9 +34311,10 @@ public final class PartnerLocationSettingsOuterClass {
      * Operating mode for the cart.
      * </pre>
      *
-     * <code>.bloombox.schema.partner.settings.CartMode mode = 1;</code>
+     * <code>.bloombox.partner.settings.CartMode mode = 1;</code>
      */
     public io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.CartMode getMode() {
+      @SuppressWarnings("deprecation")
       io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.CartMode result = io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.CartMode.valueOf(mode_);
       return result == null ? io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.CartMode.UNRECOGNIZED : result;
     }
@@ -33593,11 +34339,13 @@ public final class PartnerLocationSettingsOuterClass {
      * <code>.opencannabis.commerce.OrderType order_type = 2;</code>
      */
     public io.opencannabis.schema.commerce.CommercialOrder.OrderType getOrderType() {
+      @SuppressWarnings("deprecation")
       io.opencannabis.schema.commerce.CommercialOrder.OrderType result = io.opencannabis.schema.commerce.CommercialOrder.OrderType.valueOf(orderType_);
       return result == null ? io.opencannabis.schema.commerce.CommercialOrder.OrderType.UNRECOGNIZED : result;
     }
 
     private byte memoizedIsInitialized = -1;
+    @java.lang.Override
     public final boolean isInitialized() {
       byte isInitialized = memoizedIsInitialized;
       if (isInitialized == 1) return true;
@@ -33607,6 +34355,7 @@ public final class PartnerLocationSettingsOuterClass {
       return true;
     }
 
+    @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
       if (mode_ != io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.CartMode.OFF.getNumber()) {
@@ -33618,6 +34367,7 @@ public final class PartnerLocationSettingsOuterClass {
       unknownFields.writeTo(output);
     }
 
+    @java.lang.Override
     public int getSerializedSize() {
       int size = memoizedSize;
       if (size != -1) return size;
@@ -33739,6 +34489,7 @@ public final class PartnerLocationSettingsOuterClass {
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
 
+    @java.lang.Override
     public Builder newBuilderForType() { return newBuilder(); }
     public static Builder newBuilder() {
       return DEFAULT_INSTANCE.toBuilder();
@@ -33746,6 +34497,7 @@ public final class PartnerLocationSettingsOuterClass {
     public static Builder newBuilder(io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.CartSettings prototype) {
       return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
     }
+    @java.lang.Override
     public Builder toBuilder() {
       return this == DEFAULT_INSTANCE
           ? new Builder() : new Builder().mergeFrom(this);
@@ -33762,20 +34514,21 @@ public final class PartnerLocationSettingsOuterClass {
      * Settings for the cart UI and mode switch on tablet menus.
      * </pre>
      *
-     * Protobuf type {@code bloombox.schema.partner.settings.CartSettings}
+     * Protobuf type {@code bloombox.partner.settings.CartSettings}
      */
     public static final class Builder extends
         com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:bloombox.schema.partner.settings.CartSettings)
+        // @@protoc_insertion_point(builder_implements:bloombox.partner.settings.CartSettings)
         io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.CartSettingsOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.internal_static_bloombox_schema_partner_settings_CartSettings_descriptor;
+        return io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.internal_static_bloombox_partner_settings_CartSettings_descriptor;
       }
 
+      @java.lang.Override
       protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.internal_static_bloombox_schema_partner_settings_CartSettings_fieldAccessorTable
+        return io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.internal_static_bloombox_partner_settings_CartSettings_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
                 io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.CartSettings.class, io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.CartSettings.Builder.class);
       }
@@ -33795,6 +34548,7 @@ public final class PartnerLocationSettingsOuterClass {
                 .alwaysUseFieldBuilders) {
         }
       }
+      @java.lang.Override
       public Builder clear() {
         super.clear();
         mode_ = 0;
@@ -33804,15 +34558,18 @@ public final class PartnerLocationSettingsOuterClass {
         return this;
       }
 
+      @java.lang.Override
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.internal_static_bloombox_schema_partner_settings_CartSettings_descriptor;
+        return io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.internal_static_bloombox_partner_settings_CartSettings_descriptor;
       }
 
+      @java.lang.Override
       public io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.CartSettings getDefaultInstanceForType() {
         return io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.CartSettings.getDefaultInstance();
       }
 
+      @java.lang.Override
       public io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.CartSettings build() {
         io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.CartSettings result = buildPartial();
         if (!result.isInitialized()) {
@@ -33821,6 +34578,7 @@ public final class PartnerLocationSettingsOuterClass {
         return result;
       }
 
+      @java.lang.Override
       public io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.CartSettings buildPartial() {
         io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.CartSettings result = new io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.CartSettings(this);
         result.mode_ = mode_;
@@ -33829,32 +34587,39 @@ public final class PartnerLocationSettingsOuterClass {
         return result;
       }
 
+      @java.lang.Override
       public Builder clone() {
         return (Builder) super.clone();
       }
+      @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
         return (Builder) super.setField(field, value);
       }
+      @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
         return (Builder) super.clearField(field);
       }
+      @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
         return (Builder) super.clearOneof(oneof);
       }
+      @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
         return (Builder) super.setRepeatedField(field, index, value);
       }
+      @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
         return (Builder) super.addRepeatedField(field, value);
       }
+      @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
         if (other instanceof io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.CartSettings) {
           return mergeFrom((io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.CartSettings)other);
@@ -33877,10 +34642,12 @@ public final class PartnerLocationSettingsOuterClass {
         return this;
       }
 
+      @java.lang.Override
       public final boolean isInitialized() {
         return true;
       }
 
+      @java.lang.Override
       public Builder mergeFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -33905,7 +34672,7 @@ public final class PartnerLocationSettingsOuterClass {
        * Operating mode for the cart.
        * </pre>
        *
-       * <code>.bloombox.schema.partner.settings.CartMode mode = 1;</code>
+       * <code>.bloombox.partner.settings.CartMode mode = 1;</code>
        */
       public int getModeValue() {
         return mode_;
@@ -33915,7 +34682,7 @@ public final class PartnerLocationSettingsOuterClass {
        * Operating mode for the cart.
        * </pre>
        *
-       * <code>.bloombox.schema.partner.settings.CartMode mode = 1;</code>
+       * <code>.bloombox.partner.settings.CartMode mode = 1;</code>
        */
       public Builder setModeValue(int value) {
         mode_ = value;
@@ -33927,9 +34694,10 @@ public final class PartnerLocationSettingsOuterClass {
        * Operating mode for the cart.
        * </pre>
        *
-       * <code>.bloombox.schema.partner.settings.CartMode mode = 1;</code>
+       * <code>.bloombox.partner.settings.CartMode mode = 1;</code>
        */
       public io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.CartMode getMode() {
+        @SuppressWarnings("deprecation")
         io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.CartMode result = io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.CartMode.valueOf(mode_);
         return result == null ? io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.CartMode.UNRECOGNIZED : result;
       }
@@ -33938,7 +34706,7 @@ public final class PartnerLocationSettingsOuterClass {
        * Operating mode for the cart.
        * </pre>
        *
-       * <code>.bloombox.schema.partner.settings.CartMode mode = 1;</code>
+       * <code>.bloombox.partner.settings.CartMode mode = 1;</code>
        */
       public Builder setMode(io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.CartMode value) {
         if (value == null) {
@@ -33954,7 +34722,7 @@ public final class PartnerLocationSettingsOuterClass {
        * Operating mode for the cart.
        * </pre>
        *
-       * <code>.bloombox.schema.partner.settings.CartMode mode = 1;</code>
+       * <code>.bloombox.partner.settings.CartMode mode = 1;</code>
        */
       public Builder clearMode() {
         
@@ -33994,6 +34762,7 @@ public final class PartnerLocationSettingsOuterClass {
        * <code>.opencannabis.commerce.OrderType order_type = 2;</code>
        */
       public io.opencannabis.schema.commerce.CommercialOrder.OrderType getOrderType() {
+        @SuppressWarnings("deprecation")
         io.opencannabis.schema.commerce.CommercialOrder.OrderType result = io.opencannabis.schema.commerce.CommercialOrder.OrderType.valueOf(orderType_);
         return result == null ? io.opencannabis.schema.commerce.CommercialOrder.OrderType.UNRECOGNIZED : result;
       }
@@ -34026,21 +34795,23 @@ public final class PartnerLocationSettingsOuterClass {
         onChanged();
         return this;
       }
+      @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
         return super.setUnknownFieldsProto3(unknownFields);
       }
 
+      @java.lang.Override
       public final Builder mergeUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
         return super.mergeUnknownFields(unknownFields);
       }
 
 
-      // @@protoc_insertion_point(builder_scope:bloombox.schema.partner.settings.CartSettings)
+      // @@protoc_insertion_point(builder_scope:bloombox.partner.settings.CartSettings)
     }
 
-    // @@protoc_insertion_point(class_scope:bloombox.schema.partner.settings.CartSettings)
+    // @@protoc_insertion_point(class_scope:bloombox.partner.settings.CartSettings)
     private static final io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.CartSettings DEFAULT_INSTANCE;
     static {
       DEFAULT_INSTANCE = new io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.CartSettings();
@@ -34052,6 +34823,7 @@ public final class PartnerLocationSettingsOuterClass {
 
     private static final com.google.protobuf.Parser<CartSettings>
         PARSER = new com.google.protobuf.AbstractParser<CartSettings>() {
+      @java.lang.Override
       public CartSettings parsePartialFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -34069,6 +34841,7 @@ public final class PartnerLocationSettingsOuterClass {
       return PARSER;
     }
 
+    @java.lang.Override
     public io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.CartSettings getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
@@ -34076,7 +34849,7 @@ public final class PartnerLocationSettingsOuterClass {
   }
 
   public interface TabletSettingsOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:bloombox.schema.partner.settings.TabletSettings)
+      // @@protoc_insertion_point(interface_extends:bloombox.partner.settings.TabletSettings)
       com.google.protobuf.MessageOrBuilder {
 
     /**
@@ -34084,7 +34857,7 @@ public final class PartnerLocationSettingsOuterClass {
      * Settings for the tablet menu cart/build-a-bag feature.
      * </pre>
      *
-     * <code>.bloombox.schema.partner.settings.CartSettings cart = 1;</code>
+     * <code>.bloombox.partner.settings.CartSettings cart = 1;</code>
      */
     boolean hasCart();
     /**
@@ -34092,7 +34865,7 @@ public final class PartnerLocationSettingsOuterClass {
      * Settings for the tablet menu cart/build-a-bag feature.
      * </pre>
      *
-     * <code>.bloombox.schema.partner.settings.CartSettings cart = 1;</code>
+     * <code>.bloombox.partner.settings.CartSettings cart = 1;</code>
      */
     io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.CartSettings getCart();
     /**
@@ -34100,7 +34873,7 @@ public final class PartnerLocationSettingsOuterClass {
      * Settings for the tablet menu cart/build-a-bag feature.
      * </pre>
      *
-     * <code>.bloombox.schema.partner.settings.CartSettings cart = 1;</code>
+     * <code>.bloombox.partner.settings.CartSettings cart = 1;</code>
      */
     io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.CartSettingsOrBuilder getCartOrBuilder();
   }
@@ -34109,11 +34882,11 @@ public final class PartnerLocationSettingsOuterClass {
    * Settings related to tablet menus.
    * </pre>
    *
-   * Protobuf type {@code bloombox.schema.partner.settings.TabletSettings}
+   * Protobuf type {@code bloombox.partner.settings.TabletSettings}
    */
   public  static final class TabletSettings extends
       com.google.protobuf.GeneratedMessageV3 implements
-      // @@protoc_insertion_point(message_implements:bloombox.schema.partner.settings.TabletSettings)
+      // @@protoc_insertion_point(message_implements:bloombox.partner.settings.TabletSettings)
       TabletSettingsOrBuilder {
   private static final long serialVersionUID = 0L;
     // Use TabletSettings.newBuilder() to construct.
@@ -34147,13 +34920,6 @@ public final class PartnerLocationSettingsOuterClass {
             case 0:
               done = true;
               break;
-            default: {
-              if (!parseUnknownFieldProto3(
-                  input, unknownFields, extensionRegistry, tag)) {
-                done = true;
-              }
-              break;
-            }
             case 10: {
               io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.CartSettings.Builder subBuilder = null;
               if (cart_ != null) {
@@ -34165,6 +34931,13 @@ public final class PartnerLocationSettingsOuterClass {
                 cart_ = subBuilder.buildPartial();
               }
 
+              break;
+            }
+            default: {
+              if (!parseUnknownFieldProto3(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
               break;
             }
           }
@@ -34181,12 +34954,13 @@ public final class PartnerLocationSettingsOuterClass {
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.internal_static_bloombox_schema_partner_settings_TabletSettings_descriptor;
+      return io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.internal_static_bloombox_partner_settings_TabletSettings_descriptor;
     }
 
+    @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.internal_static_bloombox_schema_partner_settings_TabletSettings_fieldAccessorTable
+      return io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.internal_static_bloombox_partner_settings_TabletSettings_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
               io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.TabletSettings.class, io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.TabletSettings.Builder.class);
     }
@@ -34198,7 +34972,7 @@ public final class PartnerLocationSettingsOuterClass {
      * Settings for the tablet menu cart/build-a-bag feature.
      * </pre>
      *
-     * <code>.bloombox.schema.partner.settings.CartSettings cart = 1;</code>
+     * <code>.bloombox.partner.settings.CartSettings cart = 1;</code>
      */
     public boolean hasCart() {
       return cart_ != null;
@@ -34208,7 +34982,7 @@ public final class PartnerLocationSettingsOuterClass {
      * Settings for the tablet menu cart/build-a-bag feature.
      * </pre>
      *
-     * <code>.bloombox.schema.partner.settings.CartSettings cart = 1;</code>
+     * <code>.bloombox.partner.settings.CartSettings cart = 1;</code>
      */
     public io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.CartSettings getCart() {
       return cart_ == null ? io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.CartSettings.getDefaultInstance() : cart_;
@@ -34218,13 +34992,14 @@ public final class PartnerLocationSettingsOuterClass {
      * Settings for the tablet menu cart/build-a-bag feature.
      * </pre>
      *
-     * <code>.bloombox.schema.partner.settings.CartSettings cart = 1;</code>
+     * <code>.bloombox.partner.settings.CartSettings cart = 1;</code>
      */
     public io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.CartSettingsOrBuilder getCartOrBuilder() {
       return getCart();
     }
 
     private byte memoizedIsInitialized = -1;
+    @java.lang.Override
     public final boolean isInitialized() {
       byte isInitialized = memoizedIsInitialized;
       if (isInitialized == 1) return true;
@@ -34234,6 +35009,7 @@ public final class PartnerLocationSettingsOuterClass {
       return true;
     }
 
+    @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
       if (cart_ != null) {
@@ -34242,6 +35018,7 @@ public final class PartnerLocationSettingsOuterClass {
       unknownFields.writeTo(output);
     }
 
+    @java.lang.Override
     public int getSerializedSize() {
       int size = memoizedSize;
       if (size != -1) return size;
@@ -34362,6 +35139,7 @@ public final class PartnerLocationSettingsOuterClass {
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
 
+    @java.lang.Override
     public Builder newBuilderForType() { return newBuilder(); }
     public static Builder newBuilder() {
       return DEFAULT_INSTANCE.toBuilder();
@@ -34369,6 +35147,7 @@ public final class PartnerLocationSettingsOuterClass {
     public static Builder newBuilder(io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.TabletSettings prototype) {
       return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
     }
+    @java.lang.Override
     public Builder toBuilder() {
       return this == DEFAULT_INSTANCE
           ? new Builder() : new Builder().mergeFrom(this);
@@ -34385,20 +35164,21 @@ public final class PartnerLocationSettingsOuterClass {
      * Settings related to tablet menus.
      * </pre>
      *
-     * Protobuf type {@code bloombox.schema.partner.settings.TabletSettings}
+     * Protobuf type {@code bloombox.partner.settings.TabletSettings}
      */
     public static final class Builder extends
         com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:bloombox.schema.partner.settings.TabletSettings)
+        // @@protoc_insertion_point(builder_implements:bloombox.partner.settings.TabletSettings)
         io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.TabletSettingsOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.internal_static_bloombox_schema_partner_settings_TabletSettings_descriptor;
+        return io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.internal_static_bloombox_partner_settings_TabletSettings_descriptor;
       }
 
+      @java.lang.Override
       protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.internal_static_bloombox_schema_partner_settings_TabletSettings_fieldAccessorTable
+        return io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.internal_static_bloombox_partner_settings_TabletSettings_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
                 io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.TabletSettings.class, io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.TabletSettings.Builder.class);
       }
@@ -34418,6 +35198,7 @@ public final class PartnerLocationSettingsOuterClass {
                 .alwaysUseFieldBuilders) {
         }
       }
+      @java.lang.Override
       public Builder clear() {
         super.clear();
         if (cartBuilder_ == null) {
@@ -34429,15 +35210,18 @@ public final class PartnerLocationSettingsOuterClass {
         return this;
       }
 
+      @java.lang.Override
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.internal_static_bloombox_schema_partner_settings_TabletSettings_descriptor;
+        return io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.internal_static_bloombox_partner_settings_TabletSettings_descriptor;
       }
 
+      @java.lang.Override
       public io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.TabletSettings getDefaultInstanceForType() {
         return io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.TabletSettings.getDefaultInstance();
       }
 
+      @java.lang.Override
       public io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.TabletSettings build() {
         io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.TabletSettings result = buildPartial();
         if (!result.isInitialized()) {
@@ -34446,6 +35230,7 @@ public final class PartnerLocationSettingsOuterClass {
         return result;
       }
 
+      @java.lang.Override
       public io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.TabletSettings buildPartial() {
         io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.TabletSettings result = new io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.TabletSettings(this);
         if (cartBuilder_ == null) {
@@ -34457,32 +35242,39 @@ public final class PartnerLocationSettingsOuterClass {
         return result;
       }
 
+      @java.lang.Override
       public Builder clone() {
         return (Builder) super.clone();
       }
+      @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
         return (Builder) super.setField(field, value);
       }
+      @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
         return (Builder) super.clearField(field);
       }
+      @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
         return (Builder) super.clearOneof(oneof);
       }
+      @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
         return (Builder) super.setRepeatedField(field, index, value);
       }
+      @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
         return (Builder) super.addRepeatedField(field, value);
       }
+      @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
         if (other instanceof io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.TabletSettings) {
           return mergeFrom((io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.TabletSettings)other);
@@ -34502,10 +35294,12 @@ public final class PartnerLocationSettingsOuterClass {
         return this;
       }
 
+      @java.lang.Override
       public final boolean isInitialized() {
         return true;
       }
 
+      @java.lang.Override
       public Builder mergeFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -34532,7 +35326,7 @@ public final class PartnerLocationSettingsOuterClass {
        * Settings for the tablet menu cart/build-a-bag feature.
        * </pre>
        *
-       * <code>.bloombox.schema.partner.settings.CartSettings cart = 1;</code>
+       * <code>.bloombox.partner.settings.CartSettings cart = 1;</code>
        */
       public boolean hasCart() {
         return cartBuilder_ != null || cart_ != null;
@@ -34542,7 +35336,7 @@ public final class PartnerLocationSettingsOuterClass {
        * Settings for the tablet menu cart/build-a-bag feature.
        * </pre>
        *
-       * <code>.bloombox.schema.partner.settings.CartSettings cart = 1;</code>
+       * <code>.bloombox.partner.settings.CartSettings cart = 1;</code>
        */
       public io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.CartSettings getCart() {
         if (cartBuilder_ == null) {
@@ -34556,7 +35350,7 @@ public final class PartnerLocationSettingsOuterClass {
        * Settings for the tablet menu cart/build-a-bag feature.
        * </pre>
        *
-       * <code>.bloombox.schema.partner.settings.CartSettings cart = 1;</code>
+       * <code>.bloombox.partner.settings.CartSettings cart = 1;</code>
        */
       public Builder setCart(io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.CartSettings value) {
         if (cartBuilder_ == null) {
@@ -34576,7 +35370,7 @@ public final class PartnerLocationSettingsOuterClass {
        * Settings for the tablet menu cart/build-a-bag feature.
        * </pre>
        *
-       * <code>.bloombox.schema.partner.settings.CartSettings cart = 1;</code>
+       * <code>.bloombox.partner.settings.CartSettings cart = 1;</code>
        */
       public Builder setCart(
           io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.CartSettings.Builder builderForValue) {
@@ -34594,7 +35388,7 @@ public final class PartnerLocationSettingsOuterClass {
        * Settings for the tablet menu cart/build-a-bag feature.
        * </pre>
        *
-       * <code>.bloombox.schema.partner.settings.CartSettings cart = 1;</code>
+       * <code>.bloombox.partner.settings.CartSettings cart = 1;</code>
        */
       public Builder mergeCart(io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.CartSettings value) {
         if (cartBuilder_ == null) {
@@ -34616,7 +35410,7 @@ public final class PartnerLocationSettingsOuterClass {
        * Settings for the tablet menu cart/build-a-bag feature.
        * </pre>
        *
-       * <code>.bloombox.schema.partner.settings.CartSettings cart = 1;</code>
+       * <code>.bloombox.partner.settings.CartSettings cart = 1;</code>
        */
       public Builder clearCart() {
         if (cartBuilder_ == null) {
@@ -34634,7 +35428,7 @@ public final class PartnerLocationSettingsOuterClass {
        * Settings for the tablet menu cart/build-a-bag feature.
        * </pre>
        *
-       * <code>.bloombox.schema.partner.settings.CartSettings cart = 1;</code>
+       * <code>.bloombox.partner.settings.CartSettings cart = 1;</code>
        */
       public io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.CartSettings.Builder getCartBuilder() {
         
@@ -34646,7 +35440,7 @@ public final class PartnerLocationSettingsOuterClass {
        * Settings for the tablet menu cart/build-a-bag feature.
        * </pre>
        *
-       * <code>.bloombox.schema.partner.settings.CartSettings cart = 1;</code>
+       * <code>.bloombox.partner.settings.CartSettings cart = 1;</code>
        */
       public io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.CartSettingsOrBuilder getCartOrBuilder() {
         if (cartBuilder_ != null) {
@@ -34661,7 +35455,7 @@ public final class PartnerLocationSettingsOuterClass {
        * Settings for the tablet menu cart/build-a-bag feature.
        * </pre>
        *
-       * <code>.bloombox.schema.partner.settings.CartSettings cart = 1;</code>
+       * <code>.bloombox.partner.settings.CartSettings cart = 1;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
           io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.CartSettings, io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.CartSettings.Builder, io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.CartSettingsOrBuilder> 
@@ -34676,21 +35470,23 @@ public final class PartnerLocationSettingsOuterClass {
         }
         return cartBuilder_;
       }
+      @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
         return super.setUnknownFieldsProto3(unknownFields);
       }
 
+      @java.lang.Override
       public final Builder mergeUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
         return super.mergeUnknownFields(unknownFields);
       }
 
 
-      // @@protoc_insertion_point(builder_scope:bloombox.schema.partner.settings.TabletSettings)
+      // @@protoc_insertion_point(builder_scope:bloombox.partner.settings.TabletSettings)
     }
 
-    // @@protoc_insertion_point(class_scope:bloombox.schema.partner.settings.TabletSettings)
+    // @@protoc_insertion_point(class_scope:bloombox.partner.settings.TabletSettings)
     private static final io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.TabletSettings DEFAULT_INSTANCE;
     static {
       DEFAULT_INSTANCE = new io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.TabletSettings();
@@ -34702,6 +35498,7 @@ public final class PartnerLocationSettingsOuterClass {
 
     private static final com.google.protobuf.Parser<TabletSettings>
         PARSER = new com.google.protobuf.AbstractParser<TabletSettings>() {
+      @java.lang.Override
       public TabletSettings parsePartialFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -34719,6 +35516,7 @@ public final class PartnerLocationSettingsOuterClass {
       return PARSER;
     }
 
+    @java.lang.Override
     public io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.TabletSettings getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
@@ -34726,7 +35524,7 @@ public final class PartnerLocationSettingsOuterClass {
   }
 
   public interface PartnerLocationSettingsOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:bloombox.schema.partner.settings.PartnerLocationSettings)
+      // @@protoc_insertion_point(interface_extends:bloombox.partner.settings.PartnerLocationSettings)
       com.google.protobuf.MessageOrBuilder {
 
     /**
@@ -34734,7 +35532,7 @@ public final class PartnerLocationSettingsOuterClass {
      * Internal API-related settings.
      * </pre>
      *
-     * <code>.bloombox.schema.partner.settings.APISettings api = 1;</code>
+     * <code>.bloombox.partner.settings.APISettings api = 1;</code>
      */
     boolean hasApi();
     /**
@@ -34742,7 +35540,7 @@ public final class PartnerLocationSettingsOuterClass {
      * Internal API-related settings.
      * </pre>
      *
-     * <code>.bloombox.schema.partner.settings.APISettings api = 1;</code>
+     * <code>.bloombox.partner.settings.APISettings api = 1;</code>
      */
     io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.APISettings getApi();
     /**
@@ -34750,7 +35548,7 @@ public final class PartnerLocationSettingsOuterClass {
      * Internal API-related settings.
      * </pre>
      *
-     * <code>.bloombox.schema.partner.settings.APISettings api = 1;</code>
+     * <code>.bloombox.partner.settings.APISettings api = 1;</code>
      */
     io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.APISettingsOrBuilder getApiOrBuilder();
 
@@ -34759,7 +35557,7 @@ public final class PartnerLocationSettingsOuterClass {
      * Product-level branding settings.
      * </pre>
      *
-     * <code>.bloombox.schema.partner.settings.ProductBrandSettings brands = 2;</code>
+     * <code>.bloombox.partner.settings.ProductBrandSettings brands = 2;</code>
      */
     boolean hasBrands();
     /**
@@ -34767,7 +35565,7 @@ public final class PartnerLocationSettingsOuterClass {
      * Product-level branding settings.
      * </pre>
      *
-     * <code>.bloombox.schema.partner.settings.ProductBrandSettings brands = 2;</code>
+     * <code>.bloombox.partner.settings.ProductBrandSettings brands = 2;</code>
      */
     io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.ProductBrandSettings getBrands();
     /**
@@ -34775,7 +35573,7 @@ public final class PartnerLocationSettingsOuterClass {
      * Product-level branding settings.
      * </pre>
      *
-     * <code>.bloombox.schema.partner.settings.ProductBrandSettings brands = 2;</code>
+     * <code>.bloombox.partner.settings.ProductBrandSettings brands = 2;</code>
      */
     io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.ProductBrandSettingsOrBuilder getBrandsOrBuilder();
 
@@ -34784,7 +35582,7 @@ public final class PartnerLocationSettingsOuterClass {
      * Settings related to publishing data on behalf of a partner.
      * </pre>
      *
-     * <code>.bloombox.schema.partner.settings.PublishSettings publish = 3;</code>
+     * <code>.bloombox.partner.settings.PublishSettings publish = 3;</code>
      */
     boolean hasPublish();
     /**
@@ -34792,7 +35590,7 @@ public final class PartnerLocationSettingsOuterClass {
      * Settings related to publishing data on behalf of a partner.
      * </pre>
      *
-     * <code>.bloombox.schema.partner.settings.PublishSettings publish = 3;</code>
+     * <code>.bloombox.partner.settings.PublishSettings publish = 3;</code>
      */
     io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.PublishSettings getPublish();
     /**
@@ -34800,7 +35598,7 @@ public final class PartnerLocationSettingsOuterClass {
      * Settings related to publishing data on behalf of a partner.
      * </pre>
      *
-     * <code>.bloombox.schema.partner.settings.PublishSettings publish = 3;</code>
+     * <code>.bloombox.partner.settings.PublishSettings publish = 3;</code>
      */
     io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.PublishSettingsOrBuilder getPublishOrBuilder();
 
@@ -34809,7 +35607,7 @@ public final class PartnerLocationSettingsOuterClass {
      * Section-level menu settings.
      * </pre>
      *
-     * <code>.bloombox.schema.partner.settings.SectionSettings sections = 4;</code>
+     * <code>.bloombox.partner.settings.SectionSettings sections = 4;</code>
      */
     boolean hasSections();
     /**
@@ -34817,7 +35615,7 @@ public final class PartnerLocationSettingsOuterClass {
      * Section-level menu settings.
      * </pre>
      *
-     * <code>.bloombox.schema.partner.settings.SectionSettings sections = 4;</code>
+     * <code>.bloombox.partner.settings.SectionSettings sections = 4;</code>
      */
     io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.SectionSettings getSections();
     /**
@@ -34825,7 +35623,7 @@ public final class PartnerLocationSettingsOuterClass {
      * Section-level menu settings.
      * </pre>
      *
-     * <code>.bloombox.schema.partner.settings.SectionSettings sections = 4;</code>
+     * <code>.bloombox.partner.settings.SectionSettings sections = 4;</code>
      */
     io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.SectionSettingsOrBuilder getSectionsOrBuilder();
 
@@ -34834,7 +35632,7 @@ public final class PartnerLocationSettingsOuterClass {
      * Specifies settings that apply to the web or physical storefronts for this partner location.
      * </pre>
      *
-     * <code>.bloombox.schema.partner.settings.ShopSettings shop = 5;</code>
+     * <code>.bloombox.partner.settings.ShopSettings shop = 5;</code>
      */
     boolean hasShop();
     /**
@@ -34842,7 +35640,7 @@ public final class PartnerLocationSettingsOuterClass {
      * Specifies settings that apply to the web or physical storefronts for this partner location.
      * </pre>
      *
-     * <code>.bloombox.schema.partner.settings.ShopSettings shop = 5;</code>
+     * <code>.bloombox.partner.settings.ShopSettings shop = 5;</code>
      */
     io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.ShopSettings getShop();
     /**
@@ -34850,7 +35648,7 @@ public final class PartnerLocationSettingsOuterClass {
      * Specifies settings that apply to the web or physical storefronts for this partner location.
      * </pre>
      *
-     * <code>.bloombox.schema.partner.settings.ShopSettings shop = 5;</code>
+     * <code>.bloombox.partner.settings.ShopSettings shop = 5;</code>
      */
     io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.ShopSettingsOrBuilder getShopOrBuilder();
 
@@ -34859,7 +35657,7 @@ public final class PartnerLocationSettingsOuterClass {
      * Specifies settings that apply to television display units, particularly TV menus.
      * </pre>
      *
-     * <code>.bloombox.schema.partner.settings.TVSettings tv = 6;</code>
+     * <code>.bloombox.partner.settings.TVSettings tv = 6;</code>
      */
     boolean hasTv();
     /**
@@ -34867,7 +35665,7 @@ public final class PartnerLocationSettingsOuterClass {
      * Specifies settings that apply to television display units, particularly TV menus.
      * </pre>
      *
-     * <code>.bloombox.schema.partner.settings.TVSettings tv = 6;</code>
+     * <code>.bloombox.partner.settings.TVSettings tv = 6;</code>
      */
     io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.TVSettings getTv();
     /**
@@ -34875,7 +35673,7 @@ public final class PartnerLocationSettingsOuterClass {
      * Specifies settings that apply to television display units, particularly TV menus.
      * </pre>
      *
-     * <code>.bloombox.schema.partner.settings.TVSettings tv = 6;</code>
+     * <code>.bloombox.partner.settings.TVSettings tv = 6;</code>
      */
     io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.TVSettingsOrBuilder getTvOrBuilder();
 
@@ -34884,7 +35682,7 @@ public final class PartnerLocationSettingsOuterClass {
      * Tablet-related settings.
      * </pre>
      *
-     * <code>.bloombox.schema.partner.settings.TabletSettings tablet = 7;</code>
+     * <code>.bloombox.partner.settings.TabletSettings tablet = 7;</code>
      */
     boolean hasTablet();
     /**
@@ -34892,7 +35690,7 @@ public final class PartnerLocationSettingsOuterClass {
      * Tablet-related settings.
      * </pre>
      *
-     * <code>.bloombox.schema.partner.settings.TabletSettings tablet = 7;</code>
+     * <code>.bloombox.partner.settings.TabletSettings tablet = 7;</code>
      */
     io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.TabletSettings getTablet();
     /**
@@ -34900,7 +35698,7 @@ public final class PartnerLocationSettingsOuterClass {
      * Tablet-related settings.
      * </pre>
      *
-     * <code>.bloombox.schema.partner.settings.TabletSettings tablet = 7;</code>
+     * <code>.bloombox.partner.settings.TabletSettings tablet = 7;</code>
      */
     io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.TabletSettingsOrBuilder getTabletOrBuilder();
 
@@ -34909,7 +35707,7 @@ public final class PartnerLocationSettingsOuterClass {
      * Integration settings for this location.
      * </pre>
      *
-     * <code>.bloombox.schema.partner.integrations.LocationIntegrationSettings integration = 20;</code>
+     * <code>.bloombox.partner.integrations.LocationIntegrationSettings integration = 20;</code>
      */
     boolean hasIntegration();
     /**
@@ -34917,7 +35715,7 @@ public final class PartnerLocationSettingsOuterClass {
      * Integration settings for this location.
      * </pre>
      *
-     * <code>.bloombox.schema.partner.integrations.LocationIntegrationSettings integration = 20;</code>
+     * <code>.bloombox.partner.integrations.LocationIntegrationSettings integration = 20;</code>
      */
     io.bloombox.schema.partner.integrations.IntegrationSettings.LocationIntegrationSettings getIntegration();
     /**
@@ -34925,7 +35723,7 @@ public final class PartnerLocationSettingsOuterClass {
      * Integration settings for this location.
      * </pre>
      *
-     * <code>.bloombox.schema.partner.integrations.LocationIntegrationSettings integration = 20;</code>
+     * <code>.bloombox.partner.integrations.LocationIntegrationSettings integration = 20;</code>
      */
     io.bloombox.schema.partner.integrations.IntegrationSettings.LocationIntegrationSettingsOrBuilder getIntegrationOrBuilder();
   }
@@ -34934,11 +35732,11 @@ public final class PartnerLocationSettingsOuterClass {
    * Partner location-level account settings.
    * </pre>
    *
-   * Protobuf type {@code bloombox.schema.partner.settings.PartnerLocationSettings}
+   * Protobuf type {@code bloombox.partner.settings.PartnerLocationSettings}
    */
   public  static final class PartnerLocationSettings extends
       com.google.protobuf.GeneratedMessageV3 implements
-      // @@protoc_insertion_point(message_implements:bloombox.schema.partner.settings.PartnerLocationSettings)
+      // @@protoc_insertion_point(message_implements:bloombox.partner.settings.PartnerLocationSettings)
       PartnerLocationSettingsOrBuilder {
   private static final long serialVersionUID = 0L;
     // Use PartnerLocationSettings.newBuilder() to construct.
@@ -34972,13 +35770,6 @@ public final class PartnerLocationSettingsOuterClass {
             case 0:
               done = true;
               break;
-            default: {
-              if (!parseUnknownFieldProto3(
-                  input, unknownFields, extensionRegistry, tag)) {
-                done = true;
-              }
-              break;
-            }
             case 10: {
               io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.APISettings.Builder subBuilder = null;
               if (api_ != null) {
@@ -35083,6 +35874,13 @@ public final class PartnerLocationSettingsOuterClass {
 
               break;
             }
+            default: {
+              if (!parseUnknownFieldProto3(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
           }
         }
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
@@ -35097,12 +35895,13 @@ public final class PartnerLocationSettingsOuterClass {
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.internal_static_bloombox_schema_partner_settings_PartnerLocationSettings_descriptor;
+      return io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.internal_static_bloombox_partner_settings_PartnerLocationSettings_descriptor;
     }
 
+    @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.internal_static_bloombox_schema_partner_settings_PartnerLocationSettings_fieldAccessorTable
+      return io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.internal_static_bloombox_partner_settings_PartnerLocationSettings_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
               io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.PartnerLocationSettings.class, io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.PartnerLocationSettings.Builder.class);
     }
@@ -35114,7 +35913,7 @@ public final class PartnerLocationSettingsOuterClass {
      * Internal API-related settings.
      * </pre>
      *
-     * <code>.bloombox.schema.partner.settings.APISettings api = 1;</code>
+     * <code>.bloombox.partner.settings.APISettings api = 1;</code>
      */
     public boolean hasApi() {
       return api_ != null;
@@ -35124,7 +35923,7 @@ public final class PartnerLocationSettingsOuterClass {
      * Internal API-related settings.
      * </pre>
      *
-     * <code>.bloombox.schema.partner.settings.APISettings api = 1;</code>
+     * <code>.bloombox.partner.settings.APISettings api = 1;</code>
      */
     public io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.APISettings getApi() {
       return api_ == null ? io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.APISettings.getDefaultInstance() : api_;
@@ -35134,7 +35933,7 @@ public final class PartnerLocationSettingsOuterClass {
      * Internal API-related settings.
      * </pre>
      *
-     * <code>.bloombox.schema.partner.settings.APISettings api = 1;</code>
+     * <code>.bloombox.partner.settings.APISettings api = 1;</code>
      */
     public io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.APISettingsOrBuilder getApiOrBuilder() {
       return getApi();
@@ -35147,7 +35946,7 @@ public final class PartnerLocationSettingsOuterClass {
      * Product-level branding settings.
      * </pre>
      *
-     * <code>.bloombox.schema.partner.settings.ProductBrandSettings brands = 2;</code>
+     * <code>.bloombox.partner.settings.ProductBrandSettings brands = 2;</code>
      */
     public boolean hasBrands() {
       return brands_ != null;
@@ -35157,7 +35956,7 @@ public final class PartnerLocationSettingsOuterClass {
      * Product-level branding settings.
      * </pre>
      *
-     * <code>.bloombox.schema.partner.settings.ProductBrandSettings brands = 2;</code>
+     * <code>.bloombox.partner.settings.ProductBrandSettings brands = 2;</code>
      */
     public io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.ProductBrandSettings getBrands() {
       return brands_ == null ? io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.ProductBrandSettings.getDefaultInstance() : brands_;
@@ -35167,7 +35966,7 @@ public final class PartnerLocationSettingsOuterClass {
      * Product-level branding settings.
      * </pre>
      *
-     * <code>.bloombox.schema.partner.settings.ProductBrandSettings brands = 2;</code>
+     * <code>.bloombox.partner.settings.ProductBrandSettings brands = 2;</code>
      */
     public io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.ProductBrandSettingsOrBuilder getBrandsOrBuilder() {
       return getBrands();
@@ -35180,7 +35979,7 @@ public final class PartnerLocationSettingsOuterClass {
      * Settings related to publishing data on behalf of a partner.
      * </pre>
      *
-     * <code>.bloombox.schema.partner.settings.PublishSettings publish = 3;</code>
+     * <code>.bloombox.partner.settings.PublishSettings publish = 3;</code>
      */
     public boolean hasPublish() {
       return publish_ != null;
@@ -35190,7 +35989,7 @@ public final class PartnerLocationSettingsOuterClass {
      * Settings related to publishing data on behalf of a partner.
      * </pre>
      *
-     * <code>.bloombox.schema.partner.settings.PublishSettings publish = 3;</code>
+     * <code>.bloombox.partner.settings.PublishSettings publish = 3;</code>
      */
     public io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.PublishSettings getPublish() {
       return publish_ == null ? io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.PublishSettings.getDefaultInstance() : publish_;
@@ -35200,7 +35999,7 @@ public final class PartnerLocationSettingsOuterClass {
      * Settings related to publishing data on behalf of a partner.
      * </pre>
      *
-     * <code>.bloombox.schema.partner.settings.PublishSettings publish = 3;</code>
+     * <code>.bloombox.partner.settings.PublishSettings publish = 3;</code>
      */
     public io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.PublishSettingsOrBuilder getPublishOrBuilder() {
       return getPublish();
@@ -35213,7 +36012,7 @@ public final class PartnerLocationSettingsOuterClass {
      * Section-level menu settings.
      * </pre>
      *
-     * <code>.bloombox.schema.partner.settings.SectionSettings sections = 4;</code>
+     * <code>.bloombox.partner.settings.SectionSettings sections = 4;</code>
      */
     public boolean hasSections() {
       return sections_ != null;
@@ -35223,7 +36022,7 @@ public final class PartnerLocationSettingsOuterClass {
      * Section-level menu settings.
      * </pre>
      *
-     * <code>.bloombox.schema.partner.settings.SectionSettings sections = 4;</code>
+     * <code>.bloombox.partner.settings.SectionSettings sections = 4;</code>
      */
     public io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.SectionSettings getSections() {
       return sections_ == null ? io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.SectionSettings.getDefaultInstance() : sections_;
@@ -35233,7 +36032,7 @@ public final class PartnerLocationSettingsOuterClass {
      * Section-level menu settings.
      * </pre>
      *
-     * <code>.bloombox.schema.partner.settings.SectionSettings sections = 4;</code>
+     * <code>.bloombox.partner.settings.SectionSettings sections = 4;</code>
      */
     public io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.SectionSettingsOrBuilder getSectionsOrBuilder() {
       return getSections();
@@ -35246,7 +36045,7 @@ public final class PartnerLocationSettingsOuterClass {
      * Specifies settings that apply to the web or physical storefronts for this partner location.
      * </pre>
      *
-     * <code>.bloombox.schema.partner.settings.ShopSettings shop = 5;</code>
+     * <code>.bloombox.partner.settings.ShopSettings shop = 5;</code>
      */
     public boolean hasShop() {
       return shop_ != null;
@@ -35256,7 +36055,7 @@ public final class PartnerLocationSettingsOuterClass {
      * Specifies settings that apply to the web or physical storefronts for this partner location.
      * </pre>
      *
-     * <code>.bloombox.schema.partner.settings.ShopSettings shop = 5;</code>
+     * <code>.bloombox.partner.settings.ShopSettings shop = 5;</code>
      */
     public io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.ShopSettings getShop() {
       return shop_ == null ? io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.ShopSettings.getDefaultInstance() : shop_;
@@ -35266,7 +36065,7 @@ public final class PartnerLocationSettingsOuterClass {
      * Specifies settings that apply to the web or physical storefronts for this partner location.
      * </pre>
      *
-     * <code>.bloombox.schema.partner.settings.ShopSettings shop = 5;</code>
+     * <code>.bloombox.partner.settings.ShopSettings shop = 5;</code>
      */
     public io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.ShopSettingsOrBuilder getShopOrBuilder() {
       return getShop();
@@ -35279,7 +36078,7 @@ public final class PartnerLocationSettingsOuterClass {
      * Specifies settings that apply to television display units, particularly TV menus.
      * </pre>
      *
-     * <code>.bloombox.schema.partner.settings.TVSettings tv = 6;</code>
+     * <code>.bloombox.partner.settings.TVSettings tv = 6;</code>
      */
     public boolean hasTv() {
       return tv_ != null;
@@ -35289,7 +36088,7 @@ public final class PartnerLocationSettingsOuterClass {
      * Specifies settings that apply to television display units, particularly TV menus.
      * </pre>
      *
-     * <code>.bloombox.schema.partner.settings.TVSettings tv = 6;</code>
+     * <code>.bloombox.partner.settings.TVSettings tv = 6;</code>
      */
     public io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.TVSettings getTv() {
       return tv_ == null ? io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.TVSettings.getDefaultInstance() : tv_;
@@ -35299,7 +36098,7 @@ public final class PartnerLocationSettingsOuterClass {
      * Specifies settings that apply to television display units, particularly TV menus.
      * </pre>
      *
-     * <code>.bloombox.schema.partner.settings.TVSettings tv = 6;</code>
+     * <code>.bloombox.partner.settings.TVSettings tv = 6;</code>
      */
     public io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.TVSettingsOrBuilder getTvOrBuilder() {
       return getTv();
@@ -35312,7 +36111,7 @@ public final class PartnerLocationSettingsOuterClass {
      * Tablet-related settings.
      * </pre>
      *
-     * <code>.bloombox.schema.partner.settings.TabletSettings tablet = 7;</code>
+     * <code>.bloombox.partner.settings.TabletSettings tablet = 7;</code>
      */
     public boolean hasTablet() {
       return tablet_ != null;
@@ -35322,7 +36121,7 @@ public final class PartnerLocationSettingsOuterClass {
      * Tablet-related settings.
      * </pre>
      *
-     * <code>.bloombox.schema.partner.settings.TabletSettings tablet = 7;</code>
+     * <code>.bloombox.partner.settings.TabletSettings tablet = 7;</code>
      */
     public io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.TabletSettings getTablet() {
       return tablet_ == null ? io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.TabletSettings.getDefaultInstance() : tablet_;
@@ -35332,7 +36131,7 @@ public final class PartnerLocationSettingsOuterClass {
      * Tablet-related settings.
      * </pre>
      *
-     * <code>.bloombox.schema.partner.settings.TabletSettings tablet = 7;</code>
+     * <code>.bloombox.partner.settings.TabletSettings tablet = 7;</code>
      */
     public io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.TabletSettingsOrBuilder getTabletOrBuilder() {
       return getTablet();
@@ -35345,7 +36144,7 @@ public final class PartnerLocationSettingsOuterClass {
      * Integration settings for this location.
      * </pre>
      *
-     * <code>.bloombox.schema.partner.integrations.LocationIntegrationSettings integration = 20;</code>
+     * <code>.bloombox.partner.integrations.LocationIntegrationSettings integration = 20;</code>
      */
     public boolean hasIntegration() {
       return integration_ != null;
@@ -35355,7 +36154,7 @@ public final class PartnerLocationSettingsOuterClass {
      * Integration settings for this location.
      * </pre>
      *
-     * <code>.bloombox.schema.partner.integrations.LocationIntegrationSettings integration = 20;</code>
+     * <code>.bloombox.partner.integrations.LocationIntegrationSettings integration = 20;</code>
      */
     public io.bloombox.schema.partner.integrations.IntegrationSettings.LocationIntegrationSettings getIntegration() {
       return integration_ == null ? io.bloombox.schema.partner.integrations.IntegrationSettings.LocationIntegrationSettings.getDefaultInstance() : integration_;
@@ -35365,13 +36164,14 @@ public final class PartnerLocationSettingsOuterClass {
      * Integration settings for this location.
      * </pre>
      *
-     * <code>.bloombox.schema.partner.integrations.LocationIntegrationSettings integration = 20;</code>
+     * <code>.bloombox.partner.integrations.LocationIntegrationSettings integration = 20;</code>
      */
     public io.bloombox.schema.partner.integrations.IntegrationSettings.LocationIntegrationSettingsOrBuilder getIntegrationOrBuilder() {
       return getIntegration();
     }
 
     private byte memoizedIsInitialized = -1;
+    @java.lang.Override
     public final boolean isInitialized() {
       byte isInitialized = memoizedIsInitialized;
       if (isInitialized == 1) return true;
@@ -35381,6 +36181,7 @@ public final class PartnerLocationSettingsOuterClass {
       return true;
     }
 
+    @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
       if (api_ != null) {
@@ -35410,6 +36211,7 @@ public final class PartnerLocationSettingsOuterClass {
       unknownFields.writeTo(output);
     }
 
+    @java.lang.Override
     public int getSerializedSize() {
       int size = memoizedSize;
       if (size != -1) return size;
@@ -35621,6 +36423,7 @@ public final class PartnerLocationSettingsOuterClass {
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
 
+    @java.lang.Override
     public Builder newBuilderForType() { return newBuilder(); }
     public static Builder newBuilder() {
       return DEFAULT_INSTANCE.toBuilder();
@@ -35628,6 +36431,7 @@ public final class PartnerLocationSettingsOuterClass {
     public static Builder newBuilder(io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.PartnerLocationSettings prototype) {
       return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
     }
+    @java.lang.Override
     public Builder toBuilder() {
       return this == DEFAULT_INSTANCE
           ? new Builder() : new Builder().mergeFrom(this);
@@ -35644,20 +36448,21 @@ public final class PartnerLocationSettingsOuterClass {
      * Partner location-level account settings.
      * </pre>
      *
-     * Protobuf type {@code bloombox.schema.partner.settings.PartnerLocationSettings}
+     * Protobuf type {@code bloombox.partner.settings.PartnerLocationSettings}
      */
     public static final class Builder extends
         com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:bloombox.schema.partner.settings.PartnerLocationSettings)
+        // @@protoc_insertion_point(builder_implements:bloombox.partner.settings.PartnerLocationSettings)
         io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.PartnerLocationSettingsOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.internal_static_bloombox_schema_partner_settings_PartnerLocationSettings_descriptor;
+        return io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.internal_static_bloombox_partner_settings_PartnerLocationSettings_descriptor;
       }
 
+      @java.lang.Override
       protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.internal_static_bloombox_schema_partner_settings_PartnerLocationSettings_fieldAccessorTable
+        return io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.internal_static_bloombox_partner_settings_PartnerLocationSettings_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
                 io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.PartnerLocationSettings.class, io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.PartnerLocationSettings.Builder.class);
       }
@@ -35677,6 +36482,7 @@ public final class PartnerLocationSettingsOuterClass {
                 .alwaysUseFieldBuilders) {
         }
       }
+      @java.lang.Override
       public Builder clear() {
         super.clear();
         if (apiBuilder_ == null) {
@@ -35730,15 +36536,18 @@ public final class PartnerLocationSettingsOuterClass {
         return this;
       }
 
+      @java.lang.Override
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.internal_static_bloombox_schema_partner_settings_PartnerLocationSettings_descriptor;
+        return io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.internal_static_bloombox_partner_settings_PartnerLocationSettings_descriptor;
       }
 
+      @java.lang.Override
       public io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.PartnerLocationSettings getDefaultInstanceForType() {
         return io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.PartnerLocationSettings.getDefaultInstance();
       }
 
+      @java.lang.Override
       public io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.PartnerLocationSettings build() {
         io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.PartnerLocationSettings result = buildPartial();
         if (!result.isInitialized()) {
@@ -35747,6 +36556,7 @@ public final class PartnerLocationSettingsOuterClass {
         return result;
       }
 
+      @java.lang.Override
       public io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.PartnerLocationSettings buildPartial() {
         io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.PartnerLocationSettings result = new io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.PartnerLocationSettings(this);
         if (apiBuilder_ == null) {
@@ -35793,32 +36603,39 @@ public final class PartnerLocationSettingsOuterClass {
         return result;
       }
 
+      @java.lang.Override
       public Builder clone() {
         return (Builder) super.clone();
       }
+      @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
         return (Builder) super.setField(field, value);
       }
+      @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
         return (Builder) super.clearField(field);
       }
+      @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
         return (Builder) super.clearOneof(oneof);
       }
+      @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
         return (Builder) super.setRepeatedField(field, index, value);
       }
+      @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
         return (Builder) super.addRepeatedField(field, value);
       }
+      @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
         if (other instanceof io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.PartnerLocationSettings) {
           return mergeFrom((io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.PartnerLocationSettings)other);
@@ -35859,10 +36676,12 @@ public final class PartnerLocationSettingsOuterClass {
         return this;
       }
 
+      @java.lang.Override
       public final boolean isInitialized() {
         return true;
       }
 
+      @java.lang.Override
       public Builder mergeFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -35889,7 +36708,7 @@ public final class PartnerLocationSettingsOuterClass {
        * Internal API-related settings.
        * </pre>
        *
-       * <code>.bloombox.schema.partner.settings.APISettings api = 1;</code>
+       * <code>.bloombox.partner.settings.APISettings api = 1;</code>
        */
       public boolean hasApi() {
         return apiBuilder_ != null || api_ != null;
@@ -35899,7 +36718,7 @@ public final class PartnerLocationSettingsOuterClass {
        * Internal API-related settings.
        * </pre>
        *
-       * <code>.bloombox.schema.partner.settings.APISettings api = 1;</code>
+       * <code>.bloombox.partner.settings.APISettings api = 1;</code>
        */
       public io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.APISettings getApi() {
         if (apiBuilder_ == null) {
@@ -35913,7 +36732,7 @@ public final class PartnerLocationSettingsOuterClass {
        * Internal API-related settings.
        * </pre>
        *
-       * <code>.bloombox.schema.partner.settings.APISettings api = 1;</code>
+       * <code>.bloombox.partner.settings.APISettings api = 1;</code>
        */
       public Builder setApi(io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.APISettings value) {
         if (apiBuilder_ == null) {
@@ -35933,7 +36752,7 @@ public final class PartnerLocationSettingsOuterClass {
        * Internal API-related settings.
        * </pre>
        *
-       * <code>.bloombox.schema.partner.settings.APISettings api = 1;</code>
+       * <code>.bloombox.partner.settings.APISettings api = 1;</code>
        */
       public Builder setApi(
           io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.APISettings.Builder builderForValue) {
@@ -35951,7 +36770,7 @@ public final class PartnerLocationSettingsOuterClass {
        * Internal API-related settings.
        * </pre>
        *
-       * <code>.bloombox.schema.partner.settings.APISettings api = 1;</code>
+       * <code>.bloombox.partner.settings.APISettings api = 1;</code>
        */
       public Builder mergeApi(io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.APISettings value) {
         if (apiBuilder_ == null) {
@@ -35973,7 +36792,7 @@ public final class PartnerLocationSettingsOuterClass {
        * Internal API-related settings.
        * </pre>
        *
-       * <code>.bloombox.schema.partner.settings.APISettings api = 1;</code>
+       * <code>.bloombox.partner.settings.APISettings api = 1;</code>
        */
       public Builder clearApi() {
         if (apiBuilder_ == null) {
@@ -35991,7 +36810,7 @@ public final class PartnerLocationSettingsOuterClass {
        * Internal API-related settings.
        * </pre>
        *
-       * <code>.bloombox.schema.partner.settings.APISettings api = 1;</code>
+       * <code>.bloombox.partner.settings.APISettings api = 1;</code>
        */
       public io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.APISettings.Builder getApiBuilder() {
         
@@ -36003,7 +36822,7 @@ public final class PartnerLocationSettingsOuterClass {
        * Internal API-related settings.
        * </pre>
        *
-       * <code>.bloombox.schema.partner.settings.APISettings api = 1;</code>
+       * <code>.bloombox.partner.settings.APISettings api = 1;</code>
        */
       public io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.APISettingsOrBuilder getApiOrBuilder() {
         if (apiBuilder_ != null) {
@@ -36018,7 +36837,7 @@ public final class PartnerLocationSettingsOuterClass {
        * Internal API-related settings.
        * </pre>
        *
-       * <code>.bloombox.schema.partner.settings.APISettings api = 1;</code>
+       * <code>.bloombox.partner.settings.APISettings api = 1;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
           io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.APISettings, io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.APISettings.Builder, io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.APISettingsOrBuilder> 
@@ -36042,7 +36861,7 @@ public final class PartnerLocationSettingsOuterClass {
        * Product-level branding settings.
        * </pre>
        *
-       * <code>.bloombox.schema.partner.settings.ProductBrandSettings brands = 2;</code>
+       * <code>.bloombox.partner.settings.ProductBrandSettings brands = 2;</code>
        */
       public boolean hasBrands() {
         return brandsBuilder_ != null || brands_ != null;
@@ -36052,7 +36871,7 @@ public final class PartnerLocationSettingsOuterClass {
        * Product-level branding settings.
        * </pre>
        *
-       * <code>.bloombox.schema.partner.settings.ProductBrandSettings brands = 2;</code>
+       * <code>.bloombox.partner.settings.ProductBrandSettings brands = 2;</code>
        */
       public io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.ProductBrandSettings getBrands() {
         if (brandsBuilder_ == null) {
@@ -36066,7 +36885,7 @@ public final class PartnerLocationSettingsOuterClass {
        * Product-level branding settings.
        * </pre>
        *
-       * <code>.bloombox.schema.partner.settings.ProductBrandSettings brands = 2;</code>
+       * <code>.bloombox.partner.settings.ProductBrandSettings brands = 2;</code>
        */
       public Builder setBrands(io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.ProductBrandSettings value) {
         if (brandsBuilder_ == null) {
@@ -36086,7 +36905,7 @@ public final class PartnerLocationSettingsOuterClass {
        * Product-level branding settings.
        * </pre>
        *
-       * <code>.bloombox.schema.partner.settings.ProductBrandSettings brands = 2;</code>
+       * <code>.bloombox.partner.settings.ProductBrandSettings brands = 2;</code>
        */
       public Builder setBrands(
           io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.ProductBrandSettings.Builder builderForValue) {
@@ -36104,7 +36923,7 @@ public final class PartnerLocationSettingsOuterClass {
        * Product-level branding settings.
        * </pre>
        *
-       * <code>.bloombox.schema.partner.settings.ProductBrandSettings brands = 2;</code>
+       * <code>.bloombox.partner.settings.ProductBrandSettings brands = 2;</code>
        */
       public Builder mergeBrands(io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.ProductBrandSettings value) {
         if (brandsBuilder_ == null) {
@@ -36126,7 +36945,7 @@ public final class PartnerLocationSettingsOuterClass {
        * Product-level branding settings.
        * </pre>
        *
-       * <code>.bloombox.schema.partner.settings.ProductBrandSettings brands = 2;</code>
+       * <code>.bloombox.partner.settings.ProductBrandSettings brands = 2;</code>
        */
       public Builder clearBrands() {
         if (brandsBuilder_ == null) {
@@ -36144,7 +36963,7 @@ public final class PartnerLocationSettingsOuterClass {
        * Product-level branding settings.
        * </pre>
        *
-       * <code>.bloombox.schema.partner.settings.ProductBrandSettings brands = 2;</code>
+       * <code>.bloombox.partner.settings.ProductBrandSettings brands = 2;</code>
        */
       public io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.ProductBrandSettings.Builder getBrandsBuilder() {
         
@@ -36156,7 +36975,7 @@ public final class PartnerLocationSettingsOuterClass {
        * Product-level branding settings.
        * </pre>
        *
-       * <code>.bloombox.schema.partner.settings.ProductBrandSettings brands = 2;</code>
+       * <code>.bloombox.partner.settings.ProductBrandSettings brands = 2;</code>
        */
       public io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.ProductBrandSettingsOrBuilder getBrandsOrBuilder() {
         if (brandsBuilder_ != null) {
@@ -36171,7 +36990,7 @@ public final class PartnerLocationSettingsOuterClass {
        * Product-level branding settings.
        * </pre>
        *
-       * <code>.bloombox.schema.partner.settings.ProductBrandSettings brands = 2;</code>
+       * <code>.bloombox.partner.settings.ProductBrandSettings brands = 2;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
           io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.ProductBrandSettings, io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.ProductBrandSettings.Builder, io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.ProductBrandSettingsOrBuilder> 
@@ -36195,7 +37014,7 @@ public final class PartnerLocationSettingsOuterClass {
        * Settings related to publishing data on behalf of a partner.
        * </pre>
        *
-       * <code>.bloombox.schema.partner.settings.PublishSettings publish = 3;</code>
+       * <code>.bloombox.partner.settings.PublishSettings publish = 3;</code>
        */
       public boolean hasPublish() {
         return publishBuilder_ != null || publish_ != null;
@@ -36205,7 +37024,7 @@ public final class PartnerLocationSettingsOuterClass {
        * Settings related to publishing data on behalf of a partner.
        * </pre>
        *
-       * <code>.bloombox.schema.partner.settings.PublishSettings publish = 3;</code>
+       * <code>.bloombox.partner.settings.PublishSettings publish = 3;</code>
        */
       public io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.PublishSettings getPublish() {
         if (publishBuilder_ == null) {
@@ -36219,7 +37038,7 @@ public final class PartnerLocationSettingsOuterClass {
        * Settings related to publishing data on behalf of a partner.
        * </pre>
        *
-       * <code>.bloombox.schema.partner.settings.PublishSettings publish = 3;</code>
+       * <code>.bloombox.partner.settings.PublishSettings publish = 3;</code>
        */
       public Builder setPublish(io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.PublishSettings value) {
         if (publishBuilder_ == null) {
@@ -36239,7 +37058,7 @@ public final class PartnerLocationSettingsOuterClass {
        * Settings related to publishing data on behalf of a partner.
        * </pre>
        *
-       * <code>.bloombox.schema.partner.settings.PublishSettings publish = 3;</code>
+       * <code>.bloombox.partner.settings.PublishSettings publish = 3;</code>
        */
       public Builder setPublish(
           io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.PublishSettings.Builder builderForValue) {
@@ -36257,7 +37076,7 @@ public final class PartnerLocationSettingsOuterClass {
        * Settings related to publishing data on behalf of a partner.
        * </pre>
        *
-       * <code>.bloombox.schema.partner.settings.PublishSettings publish = 3;</code>
+       * <code>.bloombox.partner.settings.PublishSettings publish = 3;</code>
        */
       public Builder mergePublish(io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.PublishSettings value) {
         if (publishBuilder_ == null) {
@@ -36279,7 +37098,7 @@ public final class PartnerLocationSettingsOuterClass {
        * Settings related to publishing data on behalf of a partner.
        * </pre>
        *
-       * <code>.bloombox.schema.partner.settings.PublishSettings publish = 3;</code>
+       * <code>.bloombox.partner.settings.PublishSettings publish = 3;</code>
        */
       public Builder clearPublish() {
         if (publishBuilder_ == null) {
@@ -36297,7 +37116,7 @@ public final class PartnerLocationSettingsOuterClass {
        * Settings related to publishing data on behalf of a partner.
        * </pre>
        *
-       * <code>.bloombox.schema.partner.settings.PublishSettings publish = 3;</code>
+       * <code>.bloombox.partner.settings.PublishSettings publish = 3;</code>
        */
       public io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.PublishSettings.Builder getPublishBuilder() {
         
@@ -36309,7 +37128,7 @@ public final class PartnerLocationSettingsOuterClass {
        * Settings related to publishing data on behalf of a partner.
        * </pre>
        *
-       * <code>.bloombox.schema.partner.settings.PublishSettings publish = 3;</code>
+       * <code>.bloombox.partner.settings.PublishSettings publish = 3;</code>
        */
       public io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.PublishSettingsOrBuilder getPublishOrBuilder() {
         if (publishBuilder_ != null) {
@@ -36324,7 +37143,7 @@ public final class PartnerLocationSettingsOuterClass {
        * Settings related to publishing data on behalf of a partner.
        * </pre>
        *
-       * <code>.bloombox.schema.partner.settings.PublishSettings publish = 3;</code>
+       * <code>.bloombox.partner.settings.PublishSettings publish = 3;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
           io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.PublishSettings, io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.PublishSettings.Builder, io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.PublishSettingsOrBuilder> 
@@ -36348,7 +37167,7 @@ public final class PartnerLocationSettingsOuterClass {
        * Section-level menu settings.
        * </pre>
        *
-       * <code>.bloombox.schema.partner.settings.SectionSettings sections = 4;</code>
+       * <code>.bloombox.partner.settings.SectionSettings sections = 4;</code>
        */
       public boolean hasSections() {
         return sectionsBuilder_ != null || sections_ != null;
@@ -36358,7 +37177,7 @@ public final class PartnerLocationSettingsOuterClass {
        * Section-level menu settings.
        * </pre>
        *
-       * <code>.bloombox.schema.partner.settings.SectionSettings sections = 4;</code>
+       * <code>.bloombox.partner.settings.SectionSettings sections = 4;</code>
        */
       public io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.SectionSettings getSections() {
         if (sectionsBuilder_ == null) {
@@ -36372,7 +37191,7 @@ public final class PartnerLocationSettingsOuterClass {
        * Section-level menu settings.
        * </pre>
        *
-       * <code>.bloombox.schema.partner.settings.SectionSettings sections = 4;</code>
+       * <code>.bloombox.partner.settings.SectionSettings sections = 4;</code>
        */
       public Builder setSections(io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.SectionSettings value) {
         if (sectionsBuilder_ == null) {
@@ -36392,7 +37211,7 @@ public final class PartnerLocationSettingsOuterClass {
        * Section-level menu settings.
        * </pre>
        *
-       * <code>.bloombox.schema.partner.settings.SectionSettings sections = 4;</code>
+       * <code>.bloombox.partner.settings.SectionSettings sections = 4;</code>
        */
       public Builder setSections(
           io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.SectionSettings.Builder builderForValue) {
@@ -36410,7 +37229,7 @@ public final class PartnerLocationSettingsOuterClass {
        * Section-level menu settings.
        * </pre>
        *
-       * <code>.bloombox.schema.partner.settings.SectionSettings sections = 4;</code>
+       * <code>.bloombox.partner.settings.SectionSettings sections = 4;</code>
        */
       public Builder mergeSections(io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.SectionSettings value) {
         if (sectionsBuilder_ == null) {
@@ -36432,7 +37251,7 @@ public final class PartnerLocationSettingsOuterClass {
        * Section-level menu settings.
        * </pre>
        *
-       * <code>.bloombox.schema.partner.settings.SectionSettings sections = 4;</code>
+       * <code>.bloombox.partner.settings.SectionSettings sections = 4;</code>
        */
       public Builder clearSections() {
         if (sectionsBuilder_ == null) {
@@ -36450,7 +37269,7 @@ public final class PartnerLocationSettingsOuterClass {
        * Section-level menu settings.
        * </pre>
        *
-       * <code>.bloombox.schema.partner.settings.SectionSettings sections = 4;</code>
+       * <code>.bloombox.partner.settings.SectionSettings sections = 4;</code>
        */
       public io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.SectionSettings.Builder getSectionsBuilder() {
         
@@ -36462,7 +37281,7 @@ public final class PartnerLocationSettingsOuterClass {
        * Section-level menu settings.
        * </pre>
        *
-       * <code>.bloombox.schema.partner.settings.SectionSettings sections = 4;</code>
+       * <code>.bloombox.partner.settings.SectionSettings sections = 4;</code>
        */
       public io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.SectionSettingsOrBuilder getSectionsOrBuilder() {
         if (sectionsBuilder_ != null) {
@@ -36477,7 +37296,7 @@ public final class PartnerLocationSettingsOuterClass {
        * Section-level menu settings.
        * </pre>
        *
-       * <code>.bloombox.schema.partner.settings.SectionSettings sections = 4;</code>
+       * <code>.bloombox.partner.settings.SectionSettings sections = 4;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
           io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.SectionSettings, io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.SectionSettings.Builder, io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.SectionSettingsOrBuilder> 
@@ -36501,7 +37320,7 @@ public final class PartnerLocationSettingsOuterClass {
        * Specifies settings that apply to the web or physical storefronts for this partner location.
        * </pre>
        *
-       * <code>.bloombox.schema.partner.settings.ShopSettings shop = 5;</code>
+       * <code>.bloombox.partner.settings.ShopSettings shop = 5;</code>
        */
       public boolean hasShop() {
         return shopBuilder_ != null || shop_ != null;
@@ -36511,7 +37330,7 @@ public final class PartnerLocationSettingsOuterClass {
        * Specifies settings that apply to the web or physical storefronts for this partner location.
        * </pre>
        *
-       * <code>.bloombox.schema.partner.settings.ShopSettings shop = 5;</code>
+       * <code>.bloombox.partner.settings.ShopSettings shop = 5;</code>
        */
       public io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.ShopSettings getShop() {
         if (shopBuilder_ == null) {
@@ -36525,7 +37344,7 @@ public final class PartnerLocationSettingsOuterClass {
        * Specifies settings that apply to the web or physical storefronts for this partner location.
        * </pre>
        *
-       * <code>.bloombox.schema.partner.settings.ShopSettings shop = 5;</code>
+       * <code>.bloombox.partner.settings.ShopSettings shop = 5;</code>
        */
       public Builder setShop(io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.ShopSettings value) {
         if (shopBuilder_ == null) {
@@ -36545,7 +37364,7 @@ public final class PartnerLocationSettingsOuterClass {
        * Specifies settings that apply to the web or physical storefronts for this partner location.
        * </pre>
        *
-       * <code>.bloombox.schema.partner.settings.ShopSettings shop = 5;</code>
+       * <code>.bloombox.partner.settings.ShopSettings shop = 5;</code>
        */
       public Builder setShop(
           io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.ShopSettings.Builder builderForValue) {
@@ -36563,7 +37382,7 @@ public final class PartnerLocationSettingsOuterClass {
        * Specifies settings that apply to the web or physical storefronts for this partner location.
        * </pre>
        *
-       * <code>.bloombox.schema.partner.settings.ShopSettings shop = 5;</code>
+       * <code>.bloombox.partner.settings.ShopSettings shop = 5;</code>
        */
       public Builder mergeShop(io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.ShopSettings value) {
         if (shopBuilder_ == null) {
@@ -36585,7 +37404,7 @@ public final class PartnerLocationSettingsOuterClass {
        * Specifies settings that apply to the web or physical storefronts for this partner location.
        * </pre>
        *
-       * <code>.bloombox.schema.partner.settings.ShopSettings shop = 5;</code>
+       * <code>.bloombox.partner.settings.ShopSettings shop = 5;</code>
        */
       public Builder clearShop() {
         if (shopBuilder_ == null) {
@@ -36603,7 +37422,7 @@ public final class PartnerLocationSettingsOuterClass {
        * Specifies settings that apply to the web or physical storefronts for this partner location.
        * </pre>
        *
-       * <code>.bloombox.schema.partner.settings.ShopSettings shop = 5;</code>
+       * <code>.bloombox.partner.settings.ShopSettings shop = 5;</code>
        */
       public io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.ShopSettings.Builder getShopBuilder() {
         
@@ -36615,7 +37434,7 @@ public final class PartnerLocationSettingsOuterClass {
        * Specifies settings that apply to the web or physical storefronts for this partner location.
        * </pre>
        *
-       * <code>.bloombox.schema.partner.settings.ShopSettings shop = 5;</code>
+       * <code>.bloombox.partner.settings.ShopSettings shop = 5;</code>
        */
       public io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.ShopSettingsOrBuilder getShopOrBuilder() {
         if (shopBuilder_ != null) {
@@ -36630,7 +37449,7 @@ public final class PartnerLocationSettingsOuterClass {
        * Specifies settings that apply to the web or physical storefronts for this partner location.
        * </pre>
        *
-       * <code>.bloombox.schema.partner.settings.ShopSettings shop = 5;</code>
+       * <code>.bloombox.partner.settings.ShopSettings shop = 5;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
           io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.ShopSettings, io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.ShopSettings.Builder, io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.ShopSettingsOrBuilder> 
@@ -36654,7 +37473,7 @@ public final class PartnerLocationSettingsOuterClass {
        * Specifies settings that apply to television display units, particularly TV menus.
        * </pre>
        *
-       * <code>.bloombox.schema.partner.settings.TVSettings tv = 6;</code>
+       * <code>.bloombox.partner.settings.TVSettings tv = 6;</code>
        */
       public boolean hasTv() {
         return tvBuilder_ != null || tv_ != null;
@@ -36664,7 +37483,7 @@ public final class PartnerLocationSettingsOuterClass {
        * Specifies settings that apply to television display units, particularly TV menus.
        * </pre>
        *
-       * <code>.bloombox.schema.partner.settings.TVSettings tv = 6;</code>
+       * <code>.bloombox.partner.settings.TVSettings tv = 6;</code>
        */
       public io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.TVSettings getTv() {
         if (tvBuilder_ == null) {
@@ -36678,7 +37497,7 @@ public final class PartnerLocationSettingsOuterClass {
        * Specifies settings that apply to television display units, particularly TV menus.
        * </pre>
        *
-       * <code>.bloombox.schema.partner.settings.TVSettings tv = 6;</code>
+       * <code>.bloombox.partner.settings.TVSettings tv = 6;</code>
        */
       public Builder setTv(io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.TVSettings value) {
         if (tvBuilder_ == null) {
@@ -36698,7 +37517,7 @@ public final class PartnerLocationSettingsOuterClass {
        * Specifies settings that apply to television display units, particularly TV menus.
        * </pre>
        *
-       * <code>.bloombox.schema.partner.settings.TVSettings tv = 6;</code>
+       * <code>.bloombox.partner.settings.TVSettings tv = 6;</code>
        */
       public Builder setTv(
           io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.TVSettings.Builder builderForValue) {
@@ -36716,7 +37535,7 @@ public final class PartnerLocationSettingsOuterClass {
        * Specifies settings that apply to television display units, particularly TV menus.
        * </pre>
        *
-       * <code>.bloombox.schema.partner.settings.TVSettings tv = 6;</code>
+       * <code>.bloombox.partner.settings.TVSettings tv = 6;</code>
        */
       public Builder mergeTv(io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.TVSettings value) {
         if (tvBuilder_ == null) {
@@ -36738,7 +37557,7 @@ public final class PartnerLocationSettingsOuterClass {
        * Specifies settings that apply to television display units, particularly TV menus.
        * </pre>
        *
-       * <code>.bloombox.schema.partner.settings.TVSettings tv = 6;</code>
+       * <code>.bloombox.partner.settings.TVSettings tv = 6;</code>
        */
       public Builder clearTv() {
         if (tvBuilder_ == null) {
@@ -36756,7 +37575,7 @@ public final class PartnerLocationSettingsOuterClass {
        * Specifies settings that apply to television display units, particularly TV menus.
        * </pre>
        *
-       * <code>.bloombox.schema.partner.settings.TVSettings tv = 6;</code>
+       * <code>.bloombox.partner.settings.TVSettings tv = 6;</code>
        */
       public io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.TVSettings.Builder getTvBuilder() {
         
@@ -36768,7 +37587,7 @@ public final class PartnerLocationSettingsOuterClass {
        * Specifies settings that apply to television display units, particularly TV menus.
        * </pre>
        *
-       * <code>.bloombox.schema.partner.settings.TVSettings tv = 6;</code>
+       * <code>.bloombox.partner.settings.TVSettings tv = 6;</code>
        */
       public io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.TVSettingsOrBuilder getTvOrBuilder() {
         if (tvBuilder_ != null) {
@@ -36783,7 +37602,7 @@ public final class PartnerLocationSettingsOuterClass {
        * Specifies settings that apply to television display units, particularly TV menus.
        * </pre>
        *
-       * <code>.bloombox.schema.partner.settings.TVSettings tv = 6;</code>
+       * <code>.bloombox.partner.settings.TVSettings tv = 6;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
           io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.TVSettings, io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.TVSettings.Builder, io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.TVSettingsOrBuilder> 
@@ -36807,7 +37626,7 @@ public final class PartnerLocationSettingsOuterClass {
        * Tablet-related settings.
        * </pre>
        *
-       * <code>.bloombox.schema.partner.settings.TabletSettings tablet = 7;</code>
+       * <code>.bloombox.partner.settings.TabletSettings tablet = 7;</code>
        */
       public boolean hasTablet() {
         return tabletBuilder_ != null || tablet_ != null;
@@ -36817,7 +37636,7 @@ public final class PartnerLocationSettingsOuterClass {
        * Tablet-related settings.
        * </pre>
        *
-       * <code>.bloombox.schema.partner.settings.TabletSettings tablet = 7;</code>
+       * <code>.bloombox.partner.settings.TabletSettings tablet = 7;</code>
        */
       public io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.TabletSettings getTablet() {
         if (tabletBuilder_ == null) {
@@ -36831,7 +37650,7 @@ public final class PartnerLocationSettingsOuterClass {
        * Tablet-related settings.
        * </pre>
        *
-       * <code>.bloombox.schema.partner.settings.TabletSettings tablet = 7;</code>
+       * <code>.bloombox.partner.settings.TabletSettings tablet = 7;</code>
        */
       public Builder setTablet(io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.TabletSettings value) {
         if (tabletBuilder_ == null) {
@@ -36851,7 +37670,7 @@ public final class PartnerLocationSettingsOuterClass {
        * Tablet-related settings.
        * </pre>
        *
-       * <code>.bloombox.schema.partner.settings.TabletSettings tablet = 7;</code>
+       * <code>.bloombox.partner.settings.TabletSettings tablet = 7;</code>
        */
       public Builder setTablet(
           io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.TabletSettings.Builder builderForValue) {
@@ -36869,7 +37688,7 @@ public final class PartnerLocationSettingsOuterClass {
        * Tablet-related settings.
        * </pre>
        *
-       * <code>.bloombox.schema.partner.settings.TabletSettings tablet = 7;</code>
+       * <code>.bloombox.partner.settings.TabletSettings tablet = 7;</code>
        */
       public Builder mergeTablet(io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.TabletSettings value) {
         if (tabletBuilder_ == null) {
@@ -36891,7 +37710,7 @@ public final class PartnerLocationSettingsOuterClass {
        * Tablet-related settings.
        * </pre>
        *
-       * <code>.bloombox.schema.partner.settings.TabletSettings tablet = 7;</code>
+       * <code>.bloombox.partner.settings.TabletSettings tablet = 7;</code>
        */
       public Builder clearTablet() {
         if (tabletBuilder_ == null) {
@@ -36909,7 +37728,7 @@ public final class PartnerLocationSettingsOuterClass {
        * Tablet-related settings.
        * </pre>
        *
-       * <code>.bloombox.schema.partner.settings.TabletSettings tablet = 7;</code>
+       * <code>.bloombox.partner.settings.TabletSettings tablet = 7;</code>
        */
       public io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.TabletSettings.Builder getTabletBuilder() {
         
@@ -36921,7 +37740,7 @@ public final class PartnerLocationSettingsOuterClass {
        * Tablet-related settings.
        * </pre>
        *
-       * <code>.bloombox.schema.partner.settings.TabletSettings tablet = 7;</code>
+       * <code>.bloombox.partner.settings.TabletSettings tablet = 7;</code>
        */
       public io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.TabletSettingsOrBuilder getTabletOrBuilder() {
         if (tabletBuilder_ != null) {
@@ -36936,7 +37755,7 @@ public final class PartnerLocationSettingsOuterClass {
        * Tablet-related settings.
        * </pre>
        *
-       * <code>.bloombox.schema.partner.settings.TabletSettings tablet = 7;</code>
+       * <code>.bloombox.partner.settings.TabletSettings tablet = 7;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
           io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.TabletSettings, io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.TabletSettings.Builder, io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.TabletSettingsOrBuilder> 
@@ -36960,7 +37779,7 @@ public final class PartnerLocationSettingsOuterClass {
        * Integration settings for this location.
        * </pre>
        *
-       * <code>.bloombox.schema.partner.integrations.LocationIntegrationSettings integration = 20;</code>
+       * <code>.bloombox.partner.integrations.LocationIntegrationSettings integration = 20;</code>
        */
       public boolean hasIntegration() {
         return integrationBuilder_ != null || integration_ != null;
@@ -36970,7 +37789,7 @@ public final class PartnerLocationSettingsOuterClass {
        * Integration settings for this location.
        * </pre>
        *
-       * <code>.bloombox.schema.partner.integrations.LocationIntegrationSettings integration = 20;</code>
+       * <code>.bloombox.partner.integrations.LocationIntegrationSettings integration = 20;</code>
        */
       public io.bloombox.schema.partner.integrations.IntegrationSettings.LocationIntegrationSettings getIntegration() {
         if (integrationBuilder_ == null) {
@@ -36984,7 +37803,7 @@ public final class PartnerLocationSettingsOuterClass {
        * Integration settings for this location.
        * </pre>
        *
-       * <code>.bloombox.schema.partner.integrations.LocationIntegrationSettings integration = 20;</code>
+       * <code>.bloombox.partner.integrations.LocationIntegrationSettings integration = 20;</code>
        */
       public Builder setIntegration(io.bloombox.schema.partner.integrations.IntegrationSettings.LocationIntegrationSettings value) {
         if (integrationBuilder_ == null) {
@@ -37004,7 +37823,7 @@ public final class PartnerLocationSettingsOuterClass {
        * Integration settings for this location.
        * </pre>
        *
-       * <code>.bloombox.schema.partner.integrations.LocationIntegrationSettings integration = 20;</code>
+       * <code>.bloombox.partner.integrations.LocationIntegrationSettings integration = 20;</code>
        */
       public Builder setIntegration(
           io.bloombox.schema.partner.integrations.IntegrationSettings.LocationIntegrationSettings.Builder builderForValue) {
@@ -37022,7 +37841,7 @@ public final class PartnerLocationSettingsOuterClass {
        * Integration settings for this location.
        * </pre>
        *
-       * <code>.bloombox.schema.partner.integrations.LocationIntegrationSettings integration = 20;</code>
+       * <code>.bloombox.partner.integrations.LocationIntegrationSettings integration = 20;</code>
        */
       public Builder mergeIntegration(io.bloombox.schema.partner.integrations.IntegrationSettings.LocationIntegrationSettings value) {
         if (integrationBuilder_ == null) {
@@ -37044,7 +37863,7 @@ public final class PartnerLocationSettingsOuterClass {
        * Integration settings for this location.
        * </pre>
        *
-       * <code>.bloombox.schema.partner.integrations.LocationIntegrationSettings integration = 20;</code>
+       * <code>.bloombox.partner.integrations.LocationIntegrationSettings integration = 20;</code>
        */
       public Builder clearIntegration() {
         if (integrationBuilder_ == null) {
@@ -37062,7 +37881,7 @@ public final class PartnerLocationSettingsOuterClass {
        * Integration settings for this location.
        * </pre>
        *
-       * <code>.bloombox.schema.partner.integrations.LocationIntegrationSettings integration = 20;</code>
+       * <code>.bloombox.partner.integrations.LocationIntegrationSettings integration = 20;</code>
        */
       public io.bloombox.schema.partner.integrations.IntegrationSettings.LocationIntegrationSettings.Builder getIntegrationBuilder() {
         
@@ -37074,7 +37893,7 @@ public final class PartnerLocationSettingsOuterClass {
        * Integration settings for this location.
        * </pre>
        *
-       * <code>.bloombox.schema.partner.integrations.LocationIntegrationSettings integration = 20;</code>
+       * <code>.bloombox.partner.integrations.LocationIntegrationSettings integration = 20;</code>
        */
       public io.bloombox.schema.partner.integrations.IntegrationSettings.LocationIntegrationSettingsOrBuilder getIntegrationOrBuilder() {
         if (integrationBuilder_ != null) {
@@ -37089,7 +37908,7 @@ public final class PartnerLocationSettingsOuterClass {
        * Integration settings for this location.
        * </pre>
        *
-       * <code>.bloombox.schema.partner.integrations.LocationIntegrationSettings integration = 20;</code>
+       * <code>.bloombox.partner.integrations.LocationIntegrationSettings integration = 20;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
           io.bloombox.schema.partner.integrations.IntegrationSettings.LocationIntegrationSettings, io.bloombox.schema.partner.integrations.IntegrationSettings.LocationIntegrationSettings.Builder, io.bloombox.schema.partner.integrations.IntegrationSettings.LocationIntegrationSettingsOrBuilder> 
@@ -37104,21 +37923,23 @@ public final class PartnerLocationSettingsOuterClass {
         }
         return integrationBuilder_;
       }
+      @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
         return super.setUnknownFieldsProto3(unknownFields);
       }
 
+      @java.lang.Override
       public final Builder mergeUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
         return super.mergeUnknownFields(unknownFields);
       }
 
 
-      // @@protoc_insertion_point(builder_scope:bloombox.schema.partner.settings.PartnerLocationSettings)
+      // @@protoc_insertion_point(builder_scope:bloombox.partner.settings.PartnerLocationSettings)
     }
 
-    // @@protoc_insertion_point(class_scope:bloombox.schema.partner.settings.PartnerLocationSettings)
+    // @@protoc_insertion_point(class_scope:bloombox.partner.settings.PartnerLocationSettings)
     private static final io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.PartnerLocationSettings DEFAULT_INSTANCE;
     static {
       DEFAULT_INSTANCE = new io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.PartnerLocationSettings();
@@ -37130,6 +37951,7 @@ public final class PartnerLocationSettingsOuterClass {
 
     private static final com.google.protobuf.Parser<PartnerLocationSettings>
         PARSER = new com.google.protobuf.AbstractParser<PartnerLocationSettings>() {
+      @java.lang.Override
       public PartnerLocationSettings parsePartialFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -37147,6 +37969,7 @@ public final class PartnerLocationSettingsOuterClass {
       return PARSER;
     }
 
+    @java.lang.Override
     public io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.PartnerLocationSettings getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
@@ -37154,175 +37977,175 @@ public final class PartnerLocationSettingsOuterClass {
   }
 
   private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_bloombox_schema_partner_settings_APISettings_descriptor;
+    internal_static_bloombox_partner_settings_APISettings_descriptor;
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_bloombox_schema_partner_settings_APISettings_fieldAccessorTable;
+      internal_static_bloombox_partner_settings_APISettings_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_bloombox_schema_partner_settings_InHouseBrand_descriptor;
+    internal_static_bloombox_partner_settings_InHouseBrand_descriptor;
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_bloombox_schema_partner_settings_InHouseBrand_fieldAccessorTable;
+      internal_static_bloombox_partner_settings_InHouseBrand_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_bloombox_schema_partner_settings_ProductBrandSettings_descriptor;
+    internal_static_bloombox_partner_settings_ProductBrandSettings_descriptor;
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_bloombox_schema_partner_settings_ProductBrandSettings_fieldAccessorTable;
+      internal_static_bloombox_partner_settings_ProductBrandSettings_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_bloombox_schema_partner_settings_PublishSettings_descriptor;
+    internal_static_bloombox_partner_settings_PublishSettings_descriptor;
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_bloombox_schema_partner_settings_PublishSettings_fieldAccessorTable;
+      internal_static_bloombox_partner_settings_PublishSettings_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_bloombox_schema_partner_settings_CustomSectionSettings_descriptor;
+    internal_static_bloombox_partner_settings_CustomSectionSettings_descriptor;
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_bloombox_schema_partner_settings_CustomSectionSettings_fieldAccessorTable;
+      internal_static_bloombox_partner_settings_CustomSectionSettings_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_bloombox_schema_partner_settings_SectionSettingsPayload_descriptor;
+    internal_static_bloombox_partner_settings_SectionSettingsPayload_descriptor;
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_bloombox_schema_partner_settings_SectionSettingsPayload_fieldAccessorTable;
+      internal_static_bloombox_partner_settings_SectionSettingsPayload_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_bloombox_schema_partner_settings_SectionSettings_descriptor;
+    internal_static_bloombox_partner_settings_SectionSettings_descriptor;
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_bloombox_schema_partner_settings_SectionSettings_fieldAccessorTable;
+      internal_static_bloombox_partner_settings_SectionSettings_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_bloombox_schema_partner_settings_TVBannerSettings_descriptor;
+    internal_static_bloombox_partner_settings_TVBannerSettings_descriptor;
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_bloombox_schema_partner_settings_TVBannerSettings_fieldAccessorTable;
+      internal_static_bloombox_partner_settings_TVBannerSettings_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_bloombox_schema_partner_settings_TVSectionSettingsPayload_descriptor;
+    internal_static_bloombox_partner_settings_TVSectionSettingsPayload_descriptor;
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_bloombox_schema_partner_settings_TVSectionSettingsPayload_fieldAccessorTable;
+      internal_static_bloombox_partner_settings_TVSectionSettingsPayload_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_bloombox_schema_partner_settings_TVMenuSettings_descriptor;
+    internal_static_bloombox_partner_settings_TVMenuSettings_descriptor;
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_bloombox_schema_partner_settings_TVMenuSettings_fieldAccessorTable;
+      internal_static_bloombox_partner_settings_TVMenuSettings_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_bloombox_schema_partner_settings_TVSettings_descriptor;
+    internal_static_bloombox_partner_settings_TVSettings_descriptor;
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_bloombox_schema_partner_settings_TVSettings_fieldAccessorTable;
+      internal_static_bloombox_partner_settings_TVSettings_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_bloombox_schema_partner_settings_HoursSpec_descriptor;
+    internal_static_bloombox_partner_settings_HoursSpec_descriptor;
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_bloombox_schema_partner_settings_HoursSpec_fieldAccessorTable;
+      internal_static_bloombox_partner_settings_HoursSpec_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_bloombox_schema_partner_settings_HoursBoundary_descriptor;
+    internal_static_bloombox_partner_settings_HoursBoundary_descriptor;
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_bloombox_schema_partner_settings_HoursBoundary_fieldAccessorTable;
+      internal_static_bloombox_partner_settings_HoursBoundary_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_bloombox_schema_partner_settings_RegularHoursSettings_descriptor;
+    internal_static_bloombox_partner_settings_RegularHoursSettings_descriptor;
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_bloombox_schema_partner_settings_RegularHoursSettings_fieldAccessorTable;
+      internal_static_bloombox_partner_settings_RegularHoursSettings_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_bloombox_schema_partner_settings_SpecialHoursSettings_descriptor;
+    internal_static_bloombox_partner_settings_SpecialHoursSettings_descriptor;
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_bloombox_schema_partner_settings_SpecialHoursSettings_fieldAccessorTable;
+      internal_static_bloombox_partner_settings_SpecialHoursSettings_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_bloombox_schema_partner_settings_ShopHoursSettings_descriptor;
+    internal_static_bloombox_partner_settings_ShopHoursSettings_descriptor;
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_bloombox_schema_partner_settings_ShopHoursSettings_fieldAccessorTable;
+      internal_static_bloombox_partner_settings_ShopHoursSettings_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_bloombox_schema_partner_settings_ShopHoursSettings_SpecialEntry_descriptor;
+    internal_static_bloombox_partner_settings_ShopHoursSettings_SpecialEntry_descriptor;
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_bloombox_schema_partner_settings_ShopHoursSettings_SpecialEntry_fieldAccessorTable;
+      internal_static_bloombox_partner_settings_ShopHoursSettings_SpecialEntry_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_bloombox_schema_partner_settings_ShopServiceSettings_descriptor;
+    internal_static_bloombox_partner_settings_ShopServiceSettings_descriptor;
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_bloombox_schema_partner_settings_ShopServiceSettings_fieldAccessorTable;
+      internal_static_bloombox_partner_settings_ShopServiceSettings_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_bloombox_schema_partner_settings_DeliveryZipcodeSettings_descriptor;
+    internal_static_bloombox_partner_settings_DeliveryZipcodeSettings_descriptor;
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_bloombox_schema_partner_settings_DeliveryZipcodeSettings_fieldAccessorTable;
+      internal_static_bloombox_partner_settings_DeliveryZipcodeSettings_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_bloombox_schema_partner_settings_DeliverySettings_descriptor;
+    internal_static_bloombox_partner_settings_DeliverySettings_descriptor;
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_bloombox_schema_partner_settings_DeliverySettings_fieldAccessorTable;
+      internal_static_bloombox_partner_settings_DeliverySettings_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_bloombox_schema_partner_settings_DeliverySettings_ZipcodesEntry_descriptor;
+    internal_static_bloombox_partner_settings_DeliverySettings_ZipcodesEntry_descriptor;
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_bloombox_schema_partner_settings_DeliverySettings_ZipcodesEntry_fieldAccessorTable;
+      internal_static_bloombox_partner_settings_DeliverySettings_ZipcodesEntry_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_bloombox_schema_partner_settings_ShopContactChannelSettings_descriptor;
+    internal_static_bloombox_partner_settings_ShopContactChannelSettings_descriptor;
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_bloombox_schema_partner_settings_ShopContactChannelSettings_fieldAccessorTable;
+      internal_static_bloombox_partner_settings_ShopContactChannelSettings_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_bloombox_schema_partner_settings_ShopChannelSettings_descriptor;
+    internal_static_bloombox_partner_settings_ShopChannelSettings_descriptor;
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_bloombox_schema_partner_settings_ShopChannelSettings_fieldAccessorTable;
+      internal_static_bloombox_partner_settings_ShopChannelSettings_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_bloombox_schema_partner_settings_ShopContactTarget_descriptor;
+    internal_static_bloombox_partner_settings_ShopContactTarget_descriptor;
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_bloombox_schema_partner_settings_ShopContactTarget_fieldAccessorTable;
+      internal_static_bloombox_partner_settings_ShopContactTarget_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_bloombox_schema_partner_settings_CommsSenderSettings_descriptor;
+    internal_static_bloombox_partner_settings_CommsSenderSettings_descriptor;
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_bloombox_schema_partner_settings_CommsSenderSettings_fieldAccessorTable;
+      internal_static_bloombox_partner_settings_CommsSenderSettings_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_bloombox_schema_partner_settings_CommsSettingsPayload_descriptor;
+    internal_static_bloombox_partner_settings_CommsSettingsPayload_descriptor;
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_bloombox_schema_partner_settings_CommsSettingsPayload_fieldAccessorTable;
+      internal_static_bloombox_partner_settings_CommsSettingsPayload_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_bloombox_schema_partner_settings_ShopCommsSettings_descriptor;
+    internal_static_bloombox_partner_settings_ShopCommsSettings_descriptor;
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_bloombox_schema_partner_settings_ShopCommsSettings_fieldAccessorTable;
+      internal_static_bloombox_partner_settings_ShopCommsSettings_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_bloombox_schema_partner_settings_OnlineShopSettings_descriptor;
+    internal_static_bloombox_partner_settings_OnlineShopSettings_descriptor;
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_bloombox_schema_partner_settings_OnlineShopSettings_fieldAccessorTable;
+      internal_static_bloombox_partner_settings_OnlineShopSettings_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_bloombox_schema_partner_settings_PhysicalStorefrontSettings_descriptor;
+    internal_static_bloombox_partner_settings_PhysicalStorefrontSettings_descriptor;
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_bloombox_schema_partner_settings_PhysicalStorefrontSettings_fieldAccessorTable;
+      internal_static_bloombox_partner_settings_PhysicalStorefrontSettings_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_bloombox_schema_partner_settings_StorefrontSettings_descriptor;
+    internal_static_bloombox_partner_settings_StorefrontSettings_descriptor;
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_bloombox_schema_partner_settings_StorefrontSettings_fieldAccessorTable;
+      internal_static_bloombox_partner_settings_StorefrontSettings_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_bloombox_schema_partner_settings_ShopSettings_descriptor;
+    internal_static_bloombox_partner_settings_ShopSettings_descriptor;
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_bloombox_schema_partner_settings_ShopSettings_fieldAccessorTable;
+      internal_static_bloombox_partner_settings_ShopSettings_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_bloombox_schema_partner_settings_CartSettings_descriptor;
+    internal_static_bloombox_partner_settings_CartSettings_descriptor;
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_bloombox_schema_partner_settings_CartSettings_fieldAccessorTable;
+      internal_static_bloombox_partner_settings_CartSettings_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_bloombox_schema_partner_settings_TabletSettings_descriptor;
+    internal_static_bloombox_partner_settings_TabletSettings_descriptor;
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_bloombox_schema_partner_settings_TabletSettings_fieldAccessorTable;
+      internal_static_bloombox_partner_settings_TabletSettings_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_bloombox_schema_partner_settings_PartnerLocationSettings_descriptor;
+    internal_static_bloombox_partner_settings_PartnerLocationSettings_descriptor;
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_bloombox_schema_partner_settings_PartnerLocationSettings_fieldAccessorTable;
+      internal_static_bloombox_partner_settings_PartnerLocationSettings_fieldAccessorTable;
 
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
@@ -37333,189 +38156,178 @@ public final class PartnerLocationSettingsOuterClass {
   static {
     java.lang.String[] descriptorData = {
       "\n.partner/settings/PartnerLocationSettin" +
-      "gs.proto\022 bloombox.schema.partner.settin" +
-      "gs\032\022geo/Location.proto\032\023temporal/Date.pr" +
-      "oto\032\024commerce/Order.proto\032\037commerce/paym" +
-      "ents/Payment.proto\032\031contact/PhoneNumber." +
-      "proto\032\032contact/EmailAddress.proto\032.partn" +
-      "er/integrations/IntegrationSettings.prot" +
-      "o\"\034\n\013APISettings\022\r\n\005embed\030\001 \001(\t\",\n\014InHou" +
-      "seBrand\022\r\n\005label\030\001 \001(\t\022\r\n\005brand\030\002 \003(\t\"W\n" +
-      "\024ProductBrandSettings\022?\n\007inhouse\030\001 \003(\0132." +
-      ".bloombox.schema.partner.settings.InHous" +
-      "eBrand\"0\n\017PublishSettings\022\014\n\004menu\030\001 \001(\010\022" +
-      "\017\n\007profile\030\002 \001(\010\"z\n\025CustomSectionSetting" +
-      "s\022\014\n\004spec\030\001 \001(\t\022G\n\006filter\030\002 \001(\01625.bloomb" +
-      "ox.schema.partner.settings.FilteredSecti" +
-      "onTypeH\000B\n\n\010settings\"\354\001\n\026SectionSettings" +
-      "Payload\022\014\n\004hide\030\001 \001(\010\022\r\n\005label\030\002 \001(\010\022\r\n\005" +
-      "media\030\003 \001(\t\022\014\n\004text\030\004 \001(\t\022E\n\004type\030\005 \001(\0162" +
-      "5.bloombox.schema.partner.settings.Secti" +
-      "onSettingsTypeH\000\022I\n\006custom\030\006 \001(\01327.bloom" +
-      "box.schema.partner.settings.CustomSectio" +
-      "nSettingsH\000B\006\n\004kind\"\322\006\n\017SectionSettings\022" +
-      "L\n\napothecary\030\001 \001(\01328.bloombox.schema.pa" +
-      "rtner.settings.SectionSettingsPayload\022L\n" +
-      "\ncartridges\030\002 \001(\01328.bloombox.schema.part" +
-      "ner.settings.SectionSettingsPayload\022N\n\014c" +
-      "oncentrates\030\003 \001(\01328.bloombox.schema.part" +
-      "ner.settings.SectionSettingsPayload\022I\n\007e" +
-      "dibles\030\004 \001(\01328.bloombox.schema.partner.s" +
-      "ettings.SectionSettingsPayload\022I\n\007flower" +
-      "s\030\005 \001(\01328.bloombox.schema.partner.settin" +
-      "gs.SectionSettingsPayload\022J\n\010prerolls\030\006 " +
-      "\001(\01328.bloombox.schema.partner.settings.S" +
-      "ectionSettingsPayload\022M\n\013merchandise\030\007 \001" +
-      "(\01328.bloombox.schema.partner.settings.Se" +
-      "ctionSettingsPayload\022H\n\006plants\030\010 \001(\01328.b" +
-      "loombox.schema.partner.settings.SectionS" +
-      "ettingsPayload\022E\n\003cbd\030\024 \001(\01328.bloombox.s" +
-      "chema.partner.settings.SectionSettingsPa" +
-      "yload\022G\n\005house\030\025 \001(\01328.bloombox.schema.p" +
-      "artner.settings.SectionSettingsPayload\022H" +
-      "\n\006onsale\030\026 \001(\01328.bloombox.schema.partner" +
-      ".settings.SectionSettingsPayload\"6\n\020TVBa" +
-      "nnerSettings\022\023\n\013banner_text\030\001 \001(\t\022\r\n\005ima" +
-      "ge\030\002 \001(\t\"F\n\030TVSectionSettingsPayload\022\014\n\004" +
-      "sort\030\001 \001(\r\022\r\n\005title\030\002 \001(\t\022\r\n\005image\030\003 \001(\t" +
-      "\"\207\005\n\016TVMenuSettings\022N\n\napothecary\030\001 \001(\0132" +
-      ":.bloombox.schema.partner.settings.TVSec" +
-      "tionSettingsPayload\022N\n\ncartridges\030\002 \001(\0132" +
-      ":.bloombox.schema.partner.settings.TVSec" +
-      "tionSettingsPayload\022P\n\014concentrates\030\003 \001(" +
-      "\0132:.bloombox.schema.partner.settings.TVS" +
-      "ectionSettingsPayload\022K\n\007edibles\030\004 \001(\0132:" +
-      ".bloombox.schema.partner.settings.TVSect" +
-      "ionSettingsPayload\022K\n\007flowers\030\005 \001(\0132:.bl" +
-      "oombox.schema.partner.settings.TVSection" +
-      "SettingsPayload\022L\n\010prerolls\030\006 \001(\0132:.bloo" +
-      "mbox.schema.partner.settings.TVSectionSe" +
-      "ttingsPayload\022O\n\013merchandise\030\007 \001(\0132:.blo" +
-      "ombox.schema.partner.settings.TVSectionS" +
-      "ettingsPayload\022J\n\006plants\030\010 \001(\0132:.bloombo" +
-      "x.schema.partner.settings.TVSectionSetti" +
-      "ngsPayload\"\224\001\n\nTVSettings\022B\n\006banner\030\001 \001(" +
-      "\01322.bloombox.schema.partner.settings.TVB" +
-      "annerSettings\022B\n\010settings\030\002 \001(\01320.bloomb" +
-      "ox.schema.partner.settings.TVMenuSetting" +
-      "s\")\n\tHoursSpec\022\014\n\004hour\030\001 \001(\r\022\016\n\006minute\030\002" +
-      " \001(\r\"\300\001\n\rHoursBoundary\022:\n\005begin\030\001 \001(\0132+." +
-      "bloombox.schema.partner.settings.HoursSp" +
-      "ec\0228\n\003end\030\002 \001(\0132+.bloombox.schema.partne" +
-      "r.settings.HoursSpec\0229\n\004span\030\003 \001(\0162+.blo" +
-      "ombox.schema.partner.settings.HoursSpan\"" +
-      "\223\001\n\024RegularHoursSettings\022?\n\006bounds\030\001 \001(\013" +
-      "2/.bloombox.schema.partner.settings.Hour" +
-      "sBoundary\022:\n\004mode\030\002 \001(\0162,.bloombox.schem" +
-      "a.partner.settings.ShopStatus\"\276\001\n\024Specia" +
-      "lHoursSettings\022?\n\006bounds\030\001 \001(\0132/.bloombo" +
-      "x.schema.partner.settings.HoursBoundary\022" +
-      ":\n\004mode\030\002 \001(\0162,.bloombox.schema.partner." +
-      "settings.ShopStatus\022)\n\004date\030\003 \001(\0132\033.open" +
-      "cannabis.temporal.Date\"\227\002\n\021ShopHoursSett" +
-      "ings\022G\n\007regular\030\001 \003(\01326.bloombox.schema." +
-      "partner.settings.RegularHoursSettings\022Q\n" +
-      "\007special\030\002 \003(\0132@.bloombox.schema.partner" +
-      ".settings.ShopHoursSettings.SpecialEntry" +
-      "\032f\n\014SpecialEntry\022\013\n\003key\030\001 \001(\t\022E\n\005value\030\002" +
-      " \001(\01326.bloombox.schema.partner.settings." +
-      "SpecialHoursSettings:\0028\001\"\200\001\n\023ShopService" +
-      "Settings\022\020\n\010delivery\030\001 \001(\010\022\017\n\007express\030\002 " +
-      "\001(\010\022\016\n\006pickup\030\003 \001(\010\022\022\n\nstorefront\030\004 \001(\010\022" +
-      "\017\n\007medical\030\005 \001(\010\022\021\n\tadult_use\030\006 \001(\010\"U\n\027D" +
-      "eliveryZipcodeSettings\022\017\n\007zipcode\030\001 \001(\t\022" +
-      "\017\n\007enabled\030\002 \001(\010\022\030\n\020delivery_minimum\030\003 \001" +
-      "(\r\"\352\001\n\020DeliverySettings\022\026\n\016global_minimu" +
-      "m\030\001 \001(\r\022R\n\010zipcodes\030\002 \003(\0132@.bloombox.sch" +
-      "ema.partner.settings.DeliverySettings.Zi" +
-      "pcodesEntry\032j\n\rZipcodesEntry\022\013\n\003key\030\001 \001(" +
-      "\t\022H\n\005value\030\002 \001(\01329.bloombox.schema.partn" +
-      "er.settings.DeliveryZipcodeSettings:\0028\001\"" +
-      "8\n\032ShopContactChannelSettings\022\r\n\005email\030\001" +
-      " \001(\010\022\013\n\003sms\030\002 \001(\010\"\206\002\n\023ShopChannelSetting" +
-      "s\022L\n\006orders\030\001 \001(\0132<.bloombox.schema.part" +
-      "ner.settings.ShopContactChannelSettings\022" +
-      "P\n\nenrollment\030\002 \001(\0132<.bloombox.schema.pa" +
+      "gs.proto\022\031bloombox.partner.settings\032\022geo" +
+      "/Location.proto\032\023temporal/Date.proto\032\024co" +
+      "mmerce/Order.proto\032\037commerce/payments/Pa" +
+      "yment.proto\032\031contact/PhoneNumber.proto\032\032" +
+      "contact/EmailAddress.proto\032.partner/inte" +
+      "grations/IntegrationSettings.proto\"\034\n\013AP" +
+      "ISettings\022\r\n\005embed\030\001 \001(\t\",\n\014InHouseBrand" +
+      "\022\r\n\005label\030\001 \001(\t\022\r\n\005brand\030\002 \003(\t\"P\n\024Produc" +
+      "tBrandSettings\0228\n\007inhouse\030\001 \003(\0132\'.bloomb" +
+      "ox.partner.settings.InHouseBrand\"0\n\017Publ" +
+      "ishSettings\022\014\n\004menu\030\001 \001(\010\022\017\n\007profile\030\002 \001" +
+      "(\010\"s\n\025CustomSectionSettings\022\014\n\004spec\030\001 \001(" +
+      "\t\022@\n\006filter\030\002 \001(\0162..bloombox.partner.set" +
+      "tings.FilteredSectionTypeH\000B\n\n\010settings\"" +
+      "\336\001\n\026SectionSettingsPayload\022\014\n\004hide\030\001 \001(\010" +
+      "\022\r\n\005label\030\002 \001(\010\022\r\n\005media\030\003 \001(\t\022\014\n\004text\030\004" +
+      " \001(\t\022>\n\004type\030\005 \001(\0162..bloombox.partner.se" +
+      "ttings.SectionSettingsTypeH\000\022B\n\006custom\030\006" +
+      " \001(\01320.bloombox.partner.settings.CustomS" +
+      "ectionSettingsH\000B\006\n\004kind\"\205\006\n\017SectionSett" +
+      "ings\022E\n\napothecary\030\001 \001(\01321.bloombox.part" +
+      "ner.settings.SectionSettingsPayload\022E\n\nc" +
+      "artridges\030\002 \001(\01321.bloombox.partner.setti" +
+      "ngs.SectionSettingsPayload\022G\n\014concentrat" +
+      "es\030\003 \001(\01321.bloombox.partner.settings.Sec" +
+      "tionSettingsPayload\022B\n\007edibles\030\004 \001(\01321.b" +
+      "loombox.partner.settings.SectionSettings" +
+      "Payload\022B\n\007flowers\030\005 \001(\01321.bloombox.part" +
+      "ner.settings.SectionSettingsPayload\022C\n\010p" +
+      "rerolls\030\006 \001(\01321.bloombox.partner.setting" +
+      "s.SectionSettingsPayload\022F\n\013merchandise\030" +
+      "\007 \001(\01321.bloombox.partner.settings.Sectio" +
+      "nSettingsPayload\022A\n\006plants\030\010 \001(\01321.bloom" +
+      "box.partner.settings.SectionSettingsPayl" +
+      "oad\022>\n\003cbd\030\024 \001(\01321.bloombox.partner.sett" +
+      "ings.SectionSettingsPayload\022@\n\005house\030\025 \001" +
+      "(\01321.bloombox.partner.settings.SectionSe" +
+      "ttingsPayload\022A\n\006onsale\030\026 \001(\01321.bloombox" +
+      ".partner.settings.SectionSettingsPayload" +
+      "\"6\n\020TVBannerSettings\022\023\n\013banner_text\030\001 \001(" +
+      "\t\022\r\n\005image\030\002 \001(\t\"F\n\030TVSectionSettingsPay" +
+      "load\022\014\n\004sort\030\001 \001(\r\022\r\n\005title\030\002 \001(\t\022\r\n\005ima" +
+      "ge\030\003 \001(\t\"\317\004\n\016TVMenuSettings\022G\n\napothecar" +
+      "y\030\001 \001(\01323.bloombox.partner.settings.TVSe" +
+      "ctionSettingsPayload\022G\n\ncartridges\030\002 \001(\013" +
+      "23.bloombox.partner.settings.TVSectionSe" +
+      "ttingsPayload\022I\n\014concentrates\030\003 \001(\01323.bl" +
+      "oombox.partner.settings.TVSectionSetting" +
+      "sPayload\022D\n\007edibles\030\004 \001(\01323.bloombox.par" +
+      "tner.settings.TVSectionSettingsPayload\022D" +
+      "\n\007flowers\030\005 \001(\01323.bloombox.partner.setti" +
+      "ngs.TVSectionSettingsPayload\022E\n\010prerolls" +
+      "\030\006 \001(\01323.bloombox.partner.settings.TVSec" +
+      "tionSettingsPayload\022H\n\013merchandise\030\007 \001(\013" +
+      "23.bloombox.partner.settings.TVSectionSe" +
+      "ttingsPayload\022C\n\006plants\030\010 \001(\01323.bloombox" +
+      ".partner.settings.TVSectionSettingsPaylo" +
+      "ad\"\206\001\n\nTVSettings\022;\n\006banner\030\001 \001(\0132+.bloo" +
+      "mbox.partner.settings.TVBannerSettings\022;" +
+      "\n\010settings\030\002 \001(\0132).bloombox.partner.sett" +
+      "ings.TVMenuSettings\")\n\tHoursSpec\022\014\n\004hour" +
+      "\030\001 \001(\r\022\016\n\006minute\030\002 \001(\r\"\253\001\n\rHoursBoundary" +
+      "\0223\n\005begin\030\001 \001(\0132$.bloombox.partner.setti" +
+      "ngs.HoursSpec\0221\n\003end\030\002 \001(\0132$.bloombox.pa" +
+      "rtner.settings.HoursSpec\0222\n\004span\030\003 \001(\0162$" +
+      ".bloombox.partner.settings.HoursSpan\"\205\001\n" +
+      "\024RegularHoursSettings\0228\n\006bounds\030\001 \001(\0132(." +
+      "bloombox.partner.settings.HoursBoundary\022" +
+      "3\n\004mode\030\002 \001(\0162%.bloombox.partner.setting" +
+      "s.ShopStatus\"\260\001\n\024SpecialHoursSettings\0228\n" +
+      "\006bounds\030\001 \001(\0132(.bloombox.partner.setting" +
+      "s.HoursBoundary\0223\n\004mode\030\002 \001(\0162%.bloombox" +
+      ".partner.settings.ShopStatus\022)\n\004date\030\003 \001" +
+      "(\0132\033.opencannabis.temporal.Date\"\202\002\n\021Shop" +
+      "HoursSettings\022@\n\007regular\030\001 \003(\0132/.bloombo" +
+      "x.partner.settings.RegularHoursSettings\022" +
+      "J\n\007special\030\002 \003(\01329.bloombox.partner.sett" +
+      "ings.ShopHoursSettings.SpecialEntry\032_\n\014S" +
+      "pecialEntry\022\013\n\003key\030\001 \001(\t\022>\n\005value\030\002 \001(\0132" +
+      "/.bloombox.partner.settings.SpecialHours" +
+      "Settings:\0028\001\"\200\001\n\023ShopServiceSettings\022\020\n\010" +
+      "delivery\030\001 \001(\010\022\017\n\007express\030\002 \001(\010\022\016\n\006picku" +
+      "p\030\003 \001(\010\022\022\n\nstorefront\030\004 \001(\010\022\017\n\007medical\030\005" +
+      " \001(\010\022\021\n\tadult_use\030\006 \001(\010\"U\n\027DeliveryZipco" +
+      "deSettings\022\017\n\007zipcode\030\001 \001(\t\022\017\n\007enabled\030\002" +
+      " \001(\010\022\030\n\020delivery_minimum\030\003 \001(\r\"\334\001\n\020Deliv" +
+      "erySettings\022\026\n\016global_minimum\030\001 \001(\r\022K\n\010z" +
+      "ipcodes\030\002 \003(\01329.bloombox.partner.setting" +
+      "s.DeliverySettings.ZipcodesEntry\032c\n\rZipc" +
+      "odesEntry\022\013\n\003key\030\001 \001(\t\022A\n\005value\030\002 \001(\01322." +
+      "bloombox.partner.settings.DeliveryZipcod" +
+      "eSettings:\0028\001\"8\n\032ShopContactChannelSetti" +
+      "ngs\022\r\n\005email\030\001 \001(\010\022\013\n\003sms\030\002 \001(\010\"\361\001\n\023Shop" +
+      "ChannelSettings\022E\n\006orders\030\001 \001(\01325.bloomb" +
+      "ox.partner.settings.ShopContactChannelSe" +
+      "ttings\022I\n\nenrollment\030\002 \001(\01325.bloombox.pa" +
       "rtner.settings.ShopContactChannelSetting" +
-      "s\022O\n\tmarketing\030\003 \001(\0132<.bloombox.schema.p" +
-      "artner.settings.ShopContactChannelSettin" +
-      "gs\"\337\001\n\021ShopContactTarget\022\r\n\005label\030\001 \001(\t\022" +
-      "\r\n\005debug\030\002 \001(\010\0221\n\005email\030\003 \001(\0132\".opencann" +
-      "abis.contact.EmailAddress\0220\n\005phone\030\004 \001(\013" +
-      "2!.opencannabis.contact.PhoneNumber\022G\n\010c" +
-      "hannels\030\005 \001(\01325.bloombox.schema.partner." +
-      "settings.ShopChannelSettings\"z\n\023CommsSen" +
-      "derSettings\0221\n\005email\030\001 \001(\0132\".opencannabi" +
-      "s.contact.EmailAddress\0220\n\005phone\030\002 \001(\0132!." +
-      "opencannabis.contact.PhoneNumber\"\343\001\n\024Com" +
-      "msSettingsPayload\022=\n\004type\030\001 \001(\0162/.bloomb" +
-      "ox.schema.partner.settings.ShopCommsType" +
-      "\022E\n\010contacts\030\002 \003(\01323.bloombox.schema.par" +
-      "tner.settings.ShopContactTarget\022E\n\006sende" +
-      "r\030\003 \001(\01325.bloombox.schema.partner.settin" +
-      "gs.CommsSenderSettings\"\247\001\n\021ShopCommsSett" +
-      "ings\022H\n\010internal\030\001 \001(\01326.bloombox.schema" +
-      ".partner.settings.CommsSettingsPayload\022H" +
-      "\n\010external\030\002 \001(\01326.bloombox.schema.partn" +
-      "er.settings.CommsSettingsPayload\"\225\002\n\022Onl" +
-      "ineShopSettings\022\016\n\006origin\030\001 \001(\t\022B\n\005comms" +
-      "\030\002 \001(\01323.bloombox.schema.partner.setting" +
-      "s.ShopCommsSettings\022\016\n\006domain\030\003 \001(\t\022\016\n\006s" +
-      "ignup\030\004 \001(\t\022\r\n\005login\030\005 \001(\t\022=\n\017accepted_m" +
-      "ethod\030\006 \003(\0162$.opencannabis.commerce.Paym" +
-      "entMethod\022=\n\raccepted_card\030\007 \003(\0162&.openc" +
-      "annabis.commerce.PaymentCardType\"\310\001\n\032Phy" +
-      "sicalStorefrontSettings\022,\n\010location\030\001 \001(" +
-      "\0132\032.opencannabis.geo.Location\022=\n\017accepte" +
-      "d_method\030\002 \003(\0162$.opencannabis.commerce.P" +
-      "aymentMethod\022=\n\raccepted_card\030\003 \003(\0162&.op" +
-      "encannabis.commerce.PaymentCardType\"\360\001\n\022" +
-      "StorefrontSettings\022D\n\010delivery\030\001 \001(\01322.b" +
-      "loombox.schema.partner.settings.Delivery" +
-      "Settings\022D\n\006online\030\002 \001(\01324.bloombox.sche" +
-      "ma.partner.settings.OnlineShopSettings\022N" +
-      "\n\010physical\030\003 \001(\0132<.bloombox.schema.partn" +
-      "er.settings.PhysicalStorefrontSettings\"\345" +
-      "\001\n\014ShopSettings\022B\n\005hours\030\001 \001(\01323.bloombo" +
-      "x.schema.partner.settings.ShopHoursSetti" +
-      "ngs\022G\n\010services\030\002 \001(\01325.bloombox.schema." +
-      "partner.settings.ShopServiceSettings\022H\n\n" +
-      "storefront\030\003 \001(\01324.bloombox.schema.partn" +
-      "er.settings.StorefrontSettings\"~\n\014CartSe" +
-      "ttings\0228\n\004mode\030\001 \001(\0162*.bloombox.schema.p" +
-      "artner.settings.CartMode\0224\n\norder_type\030\002" +
-      " \001(\0162 .opencannabis.commerce.OrderType\"N" +
-      "\n\016TabletSettings\022<\n\004cart\030\001 \001(\0132..bloombo" +
-      "x.schema.partner.settings.CartSettings\"\270" +
-      "\004\n\027PartnerLocationSettings\022:\n\003api\030\001 \001(\0132" +
-      "-.bloombox.schema.partner.settings.APISe" +
-      "ttings\022F\n\006brands\030\002 \001(\01326.bloombox.schema" +
-      ".partner.settings.ProductBrandSettings\022B" +
-      "\n\007publish\030\003 \001(\01321.bloombox.schema.partne" +
-      "r.settings.PublishSettings\022C\n\010sections\030\004" +
-      " \001(\01321.bloombox.schema.partner.settings." +
-      "SectionSettings\022<\n\004shop\030\005 \001(\0132..bloombox" +
-      ".schema.partner.settings.ShopSettings\0228\n" +
-      "\002tv\030\006 \001(\0132,.bloombox.schema.partner.sett" +
-      "ings.TVSettings\022@\n\006tablet\030\007 \001(\01320.bloomb" +
-      "ox.schema.partner.settings.TabletSetting" +
-      "s\022V\n\013integration\030\024 \001(\0132A.bloombox.schema" +
-      ".partner.integrations.LocationIntegratio" +
-      "nSettings*1\n\023SectionSettingsType\022\014\n\010STAN" +
-      "DARD\020\000\022\014\n\010FILTERED\020\001*5\n\023FilteredSectionT" +
-      "ype\022\007\n\003CBD\020\000\022\t\n\005HOUSE\020\001\022\n\n\006ONSALE\020\002* \n\022C" +
-      "ustomSettingsType\022\n\n\006FILTER\020\000*\221\001\n\tHoursS" +
-      "pan\022\014\n\010EVERYDAY\020\000\022\014\n\010WEEKDAYS\020\001\022\014\n\010WEEKE" +
-      "NDS\020\002\022\n\n\006MONDAY\020\003\022\013\n\007TUESDAY\020\004\022\r\n\tWEDNES" +
-      "DAY\020\005\022\014\n\010THURSDAY\020\006\022\n\n\006FRIDAY\020\007\022\014\n\010SATUR" +
-      "DAY\020\010\022\n\n\006SUNDAY\020\t*F\n\nShopStatus\022\010\n\004OPEN\020" +
-      "\000\022\n\n\006CLOSED\020\001\022\021\n\rDELIVERY_ONLY\020\002\022\017\n\013PICK" +
-      "UP_ONLY\020\003*+\n\rShopCommsType\022\014\n\010INTERNAL\020\000" +
-      "\022\014\n\010EXTERNAL\020\001*A\n\022ShopContactChannel\022\014\n\010" +
-      "ORDERING\020\000\022\016\n\nENROLLMENT\020\001\022\r\n\tMARKETING\020" +
-      "\002*&\n\010CartMode\022\007\n\003OFF\020\000\022\007\n\003BAG\020\001\022\010\n\004CART\020" +
-      "\002B/\n#io.bloombox.schema.partner.settings" +
-      "H\001P\000\242\002\003BBSb\006proto3"
+      "s\022H\n\tmarketing\030\003 \001(\01325.bloombox.partner." +
+      "settings.ShopContactChannelSettings\"\330\001\n\021" +
+      "ShopContactTarget\022\r\n\005label\030\001 \001(\t\022\r\n\005debu" +
+      "g\030\002 \001(\010\0221\n\005email\030\003 \001(\0132\".opencannabis.co" +
+      "ntact.EmailAddress\0220\n\005phone\030\004 \001(\0132!.open" +
+      "cannabis.contact.PhoneNumber\022@\n\010channels" +
+      "\030\005 \001(\0132..bloombox.partner.settings.ShopC" +
+      "hannelSettings\"z\n\023CommsSenderSettings\0221\n" +
+      "\005email\030\001 \001(\0132\".opencannabis.contact.Emai" +
+      "lAddress\0220\n\005phone\030\002 \001(\0132!.opencannabis.c" +
+      "ontact.PhoneNumber\"\316\001\n\024CommsSettingsPayl" +
+      "oad\0226\n\004type\030\001 \001(\0162(.bloombox.partner.set" +
+      "tings.ShopCommsType\022>\n\010contacts\030\002 \003(\0132,." +
+      "bloombox.partner.settings.ShopContactTar" +
+      "get\022>\n\006sender\030\003 \001(\0132..bloombox.partner.s" +
+      "ettings.CommsSenderSettings\"\231\001\n\021ShopComm" +
+      "sSettings\022A\n\010internal\030\001 \001(\0132/.bloombox.p" +
+      "artner.settings.CommsSettingsPayload\022A\n\010" +
+      "external\030\002 \001(\0132/.bloombox.partner.settin" +
+      "gs.CommsSettingsPayload\"\216\002\n\022OnlineShopSe" +
+      "ttings\022\016\n\006origin\030\001 \001(\t\022;\n\005comms\030\002 \001(\0132,." +
+      "bloombox.partner.settings.ShopCommsSetti" +
+      "ngs\022\016\n\006domain\030\003 \001(\t\022\016\n\006signup\030\004 \001(\t\022\r\n\005l" +
+      "ogin\030\005 \001(\t\022=\n\017accepted_method\030\006 \003(\0162$.op" +
+      "encannabis.commerce.PaymentMethod\022=\n\racc" +
+      "epted_card\030\007 \003(\0162&.opencannabis.commerce" +
+      ".PaymentCardType\"\310\001\n\032PhysicalStorefrontS" +
+      "ettings\022,\n\010location\030\001 \001(\0132\032.opencannabis" +
+      ".geo.Location\022=\n\017accepted_method\030\002 \003(\0162$" +
+      ".opencannabis.commerce.PaymentMethod\022=\n\r" +
+      "accepted_card\030\003 \003(\0162&.opencannabis.comme" +
+      "rce.PaymentCardType\"\333\001\n\022StorefrontSettin" +
+      "gs\022=\n\010delivery\030\001 \001(\0132+.bloombox.partner." +
+      "settings.DeliverySettings\022=\n\006online\030\002 \001(" +
+      "\0132-.bloombox.partner.settings.OnlineShop" +
+      "Settings\022G\n\010physical\030\003 \001(\01325.bloombox.pa" +
+      "rtner.settings.PhysicalStorefrontSetting" +
+      "s\"\320\001\n\014ShopSettings\022;\n\005hours\030\001 \001(\0132,.bloo" +
+      "mbox.partner.settings.ShopHoursSettings\022" +
+      "@\n\010services\030\002 \001(\0132..bloombox.partner.set" +
+      "tings.ShopServiceSettings\022A\n\nstorefront\030" +
+      "\003 \001(\0132-.bloombox.partner.settings.Storef" +
+      "rontSettings\"w\n\014CartSettings\0221\n\004mode\030\001 \001" +
+      "(\0162#.bloombox.partner.settings.CartMode\022" +
+      "4\n\norder_type\030\002 \001(\0162 .opencannabis.comme" +
+      "rce.OrderType\"G\n\016TabletSettings\0225\n\004cart\030" +
+      "\001 \001(\0132\'.bloombox.partner.settings.CartSe" +
+      "ttings\"\200\004\n\027PartnerLocationSettings\0223\n\003ap" +
+      "i\030\001 \001(\0132&.bloombox.partner.settings.APIS" +
+      "ettings\022?\n\006brands\030\002 \001(\0132/.bloombox.partn" +
+      "er.settings.ProductBrandSettings\022;\n\007publ" +
+      "ish\030\003 \001(\0132*.bloombox.partner.settings.Pu" +
+      "blishSettings\022<\n\010sections\030\004 \001(\0132*.bloomb" +
+      "ox.partner.settings.SectionSettings\0225\n\004s" +
+      "hop\030\005 \001(\0132\'.bloombox.partner.settings.Sh" +
+      "opSettings\0221\n\002tv\030\006 \001(\0132%.bloombox.partne" +
+      "r.settings.TVSettings\0229\n\006tablet\030\007 \001(\0132)." +
+      "bloombox.partner.settings.TabletSettings" +
+      "\022O\n\013integration\030\024 \001(\0132:.bloombox.partner" +
+      ".integrations.LocationIntegrationSetting" +
+      "s*1\n\023SectionSettingsType\022\014\n\010STANDARD\020\000\022\014" +
+      "\n\010FILTERED\020\001*5\n\023FilteredSectionType\022\007\n\003C" +
+      "BD\020\000\022\t\n\005HOUSE\020\001\022\n\n\006ONSALE\020\002* \n\022CustomSet" +
+      "tingsType\022\n\n\006FILTER\020\000*\221\001\n\tHoursSpan\022\014\n\010E" +
+      "VERYDAY\020\000\022\014\n\010WEEKDAYS\020\001\022\014\n\010WEEKENDS\020\002\022\n\n" +
+      "\006MONDAY\020\003\022\013\n\007TUESDAY\020\004\022\r\n\tWEDNESDAY\020\005\022\014\n" +
+      "\010THURSDAY\020\006\022\n\n\006FRIDAY\020\007\022\014\n\010SATURDAY\020\010\022\n\n" +
+      "\006SUNDAY\020\t*F\n\nShopStatus\022\010\n\004OPEN\020\000\022\n\n\006CLO" +
+      "SED\020\001\022\021\n\rDELIVERY_ONLY\020\002\022\017\n\013PICKUP_ONLY\020" +
+      "\003*+\n\rShopCommsType\022\014\n\010INTERNAL\020\000\022\014\n\010EXTE" +
+      "RNAL\020\001*A\n\022ShopContactChannel\022\014\n\010ORDERING" +
+      "\020\000\022\016\n\nENROLLMENT\020\001\022\r\n\tMARKETING\020\002*&\n\010Car" +
+      "tMode\022\007\n\003OFF\020\000\022\007\n\003BAG\020\001\022\010\n\004CART\020\002B/\n#io." +
+      "bloombox.schema.partner.settingsH\001P\000\242\002\003B" +
+      "BSb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -37536,209 +38348,209 @@ public final class PartnerLocationSettingsOuterClass {
           io.opencannabis.schema.contact.ContactEmail.getDescriptor(),
           io.bloombox.schema.partner.integrations.IntegrationSettings.getDescriptor(),
         }, assigner);
-    internal_static_bloombox_schema_partner_settings_APISettings_descriptor =
+    internal_static_bloombox_partner_settings_APISettings_descriptor =
       getDescriptor().getMessageTypes().get(0);
-    internal_static_bloombox_schema_partner_settings_APISettings_fieldAccessorTable = new
+    internal_static_bloombox_partner_settings_APISettings_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_bloombox_schema_partner_settings_APISettings_descriptor,
+        internal_static_bloombox_partner_settings_APISettings_descriptor,
         new java.lang.String[] { "Embed", });
-    internal_static_bloombox_schema_partner_settings_InHouseBrand_descriptor =
+    internal_static_bloombox_partner_settings_InHouseBrand_descriptor =
       getDescriptor().getMessageTypes().get(1);
-    internal_static_bloombox_schema_partner_settings_InHouseBrand_fieldAccessorTable = new
+    internal_static_bloombox_partner_settings_InHouseBrand_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_bloombox_schema_partner_settings_InHouseBrand_descriptor,
+        internal_static_bloombox_partner_settings_InHouseBrand_descriptor,
         new java.lang.String[] { "Label", "Brand", });
-    internal_static_bloombox_schema_partner_settings_ProductBrandSettings_descriptor =
+    internal_static_bloombox_partner_settings_ProductBrandSettings_descriptor =
       getDescriptor().getMessageTypes().get(2);
-    internal_static_bloombox_schema_partner_settings_ProductBrandSettings_fieldAccessorTable = new
+    internal_static_bloombox_partner_settings_ProductBrandSettings_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_bloombox_schema_partner_settings_ProductBrandSettings_descriptor,
+        internal_static_bloombox_partner_settings_ProductBrandSettings_descriptor,
         new java.lang.String[] { "Inhouse", });
-    internal_static_bloombox_schema_partner_settings_PublishSettings_descriptor =
+    internal_static_bloombox_partner_settings_PublishSettings_descriptor =
       getDescriptor().getMessageTypes().get(3);
-    internal_static_bloombox_schema_partner_settings_PublishSettings_fieldAccessorTable = new
+    internal_static_bloombox_partner_settings_PublishSettings_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_bloombox_schema_partner_settings_PublishSettings_descriptor,
+        internal_static_bloombox_partner_settings_PublishSettings_descriptor,
         new java.lang.String[] { "Menu", "Profile", });
-    internal_static_bloombox_schema_partner_settings_CustomSectionSettings_descriptor =
+    internal_static_bloombox_partner_settings_CustomSectionSettings_descriptor =
       getDescriptor().getMessageTypes().get(4);
-    internal_static_bloombox_schema_partner_settings_CustomSectionSettings_fieldAccessorTable = new
+    internal_static_bloombox_partner_settings_CustomSectionSettings_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_bloombox_schema_partner_settings_CustomSectionSettings_descriptor,
+        internal_static_bloombox_partner_settings_CustomSectionSettings_descriptor,
         new java.lang.String[] { "Spec", "Filter", "Settings", });
-    internal_static_bloombox_schema_partner_settings_SectionSettingsPayload_descriptor =
+    internal_static_bloombox_partner_settings_SectionSettingsPayload_descriptor =
       getDescriptor().getMessageTypes().get(5);
-    internal_static_bloombox_schema_partner_settings_SectionSettingsPayload_fieldAccessorTable = new
+    internal_static_bloombox_partner_settings_SectionSettingsPayload_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_bloombox_schema_partner_settings_SectionSettingsPayload_descriptor,
+        internal_static_bloombox_partner_settings_SectionSettingsPayload_descriptor,
         new java.lang.String[] { "Hide", "Label", "Media", "Text", "Type", "Custom", "Kind", });
-    internal_static_bloombox_schema_partner_settings_SectionSettings_descriptor =
+    internal_static_bloombox_partner_settings_SectionSettings_descriptor =
       getDescriptor().getMessageTypes().get(6);
-    internal_static_bloombox_schema_partner_settings_SectionSettings_fieldAccessorTable = new
+    internal_static_bloombox_partner_settings_SectionSettings_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_bloombox_schema_partner_settings_SectionSettings_descriptor,
+        internal_static_bloombox_partner_settings_SectionSettings_descriptor,
         new java.lang.String[] { "Apothecary", "Cartridges", "Concentrates", "Edibles", "Flowers", "Prerolls", "Merchandise", "Plants", "Cbd", "House", "Onsale", });
-    internal_static_bloombox_schema_partner_settings_TVBannerSettings_descriptor =
+    internal_static_bloombox_partner_settings_TVBannerSettings_descriptor =
       getDescriptor().getMessageTypes().get(7);
-    internal_static_bloombox_schema_partner_settings_TVBannerSettings_fieldAccessorTable = new
+    internal_static_bloombox_partner_settings_TVBannerSettings_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_bloombox_schema_partner_settings_TVBannerSettings_descriptor,
+        internal_static_bloombox_partner_settings_TVBannerSettings_descriptor,
         new java.lang.String[] { "BannerText", "Image", });
-    internal_static_bloombox_schema_partner_settings_TVSectionSettingsPayload_descriptor =
+    internal_static_bloombox_partner_settings_TVSectionSettingsPayload_descriptor =
       getDescriptor().getMessageTypes().get(8);
-    internal_static_bloombox_schema_partner_settings_TVSectionSettingsPayload_fieldAccessorTable = new
+    internal_static_bloombox_partner_settings_TVSectionSettingsPayload_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_bloombox_schema_partner_settings_TVSectionSettingsPayload_descriptor,
+        internal_static_bloombox_partner_settings_TVSectionSettingsPayload_descriptor,
         new java.lang.String[] { "Sort", "Title", "Image", });
-    internal_static_bloombox_schema_partner_settings_TVMenuSettings_descriptor =
+    internal_static_bloombox_partner_settings_TVMenuSettings_descriptor =
       getDescriptor().getMessageTypes().get(9);
-    internal_static_bloombox_schema_partner_settings_TVMenuSettings_fieldAccessorTable = new
+    internal_static_bloombox_partner_settings_TVMenuSettings_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_bloombox_schema_partner_settings_TVMenuSettings_descriptor,
+        internal_static_bloombox_partner_settings_TVMenuSettings_descriptor,
         new java.lang.String[] { "Apothecary", "Cartridges", "Concentrates", "Edibles", "Flowers", "Prerolls", "Merchandise", "Plants", });
-    internal_static_bloombox_schema_partner_settings_TVSettings_descriptor =
+    internal_static_bloombox_partner_settings_TVSettings_descriptor =
       getDescriptor().getMessageTypes().get(10);
-    internal_static_bloombox_schema_partner_settings_TVSettings_fieldAccessorTable = new
+    internal_static_bloombox_partner_settings_TVSettings_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_bloombox_schema_partner_settings_TVSettings_descriptor,
+        internal_static_bloombox_partner_settings_TVSettings_descriptor,
         new java.lang.String[] { "Banner", "Settings", });
-    internal_static_bloombox_schema_partner_settings_HoursSpec_descriptor =
+    internal_static_bloombox_partner_settings_HoursSpec_descriptor =
       getDescriptor().getMessageTypes().get(11);
-    internal_static_bloombox_schema_partner_settings_HoursSpec_fieldAccessorTable = new
+    internal_static_bloombox_partner_settings_HoursSpec_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_bloombox_schema_partner_settings_HoursSpec_descriptor,
+        internal_static_bloombox_partner_settings_HoursSpec_descriptor,
         new java.lang.String[] { "Hour", "Minute", });
-    internal_static_bloombox_schema_partner_settings_HoursBoundary_descriptor =
+    internal_static_bloombox_partner_settings_HoursBoundary_descriptor =
       getDescriptor().getMessageTypes().get(12);
-    internal_static_bloombox_schema_partner_settings_HoursBoundary_fieldAccessorTable = new
+    internal_static_bloombox_partner_settings_HoursBoundary_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_bloombox_schema_partner_settings_HoursBoundary_descriptor,
+        internal_static_bloombox_partner_settings_HoursBoundary_descriptor,
         new java.lang.String[] { "Begin", "End", "Span", });
-    internal_static_bloombox_schema_partner_settings_RegularHoursSettings_descriptor =
+    internal_static_bloombox_partner_settings_RegularHoursSettings_descriptor =
       getDescriptor().getMessageTypes().get(13);
-    internal_static_bloombox_schema_partner_settings_RegularHoursSettings_fieldAccessorTable = new
+    internal_static_bloombox_partner_settings_RegularHoursSettings_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_bloombox_schema_partner_settings_RegularHoursSettings_descriptor,
+        internal_static_bloombox_partner_settings_RegularHoursSettings_descriptor,
         new java.lang.String[] { "Bounds", "Mode", });
-    internal_static_bloombox_schema_partner_settings_SpecialHoursSettings_descriptor =
+    internal_static_bloombox_partner_settings_SpecialHoursSettings_descriptor =
       getDescriptor().getMessageTypes().get(14);
-    internal_static_bloombox_schema_partner_settings_SpecialHoursSettings_fieldAccessorTable = new
+    internal_static_bloombox_partner_settings_SpecialHoursSettings_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_bloombox_schema_partner_settings_SpecialHoursSettings_descriptor,
+        internal_static_bloombox_partner_settings_SpecialHoursSettings_descriptor,
         new java.lang.String[] { "Bounds", "Mode", "Date", });
-    internal_static_bloombox_schema_partner_settings_ShopHoursSettings_descriptor =
+    internal_static_bloombox_partner_settings_ShopHoursSettings_descriptor =
       getDescriptor().getMessageTypes().get(15);
-    internal_static_bloombox_schema_partner_settings_ShopHoursSettings_fieldAccessorTable = new
+    internal_static_bloombox_partner_settings_ShopHoursSettings_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_bloombox_schema_partner_settings_ShopHoursSettings_descriptor,
+        internal_static_bloombox_partner_settings_ShopHoursSettings_descriptor,
         new java.lang.String[] { "Regular", "Special", });
-    internal_static_bloombox_schema_partner_settings_ShopHoursSettings_SpecialEntry_descriptor =
-      internal_static_bloombox_schema_partner_settings_ShopHoursSettings_descriptor.getNestedTypes().get(0);
-    internal_static_bloombox_schema_partner_settings_ShopHoursSettings_SpecialEntry_fieldAccessorTable = new
+    internal_static_bloombox_partner_settings_ShopHoursSettings_SpecialEntry_descriptor =
+      internal_static_bloombox_partner_settings_ShopHoursSettings_descriptor.getNestedTypes().get(0);
+    internal_static_bloombox_partner_settings_ShopHoursSettings_SpecialEntry_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_bloombox_schema_partner_settings_ShopHoursSettings_SpecialEntry_descriptor,
+        internal_static_bloombox_partner_settings_ShopHoursSettings_SpecialEntry_descriptor,
         new java.lang.String[] { "Key", "Value", });
-    internal_static_bloombox_schema_partner_settings_ShopServiceSettings_descriptor =
+    internal_static_bloombox_partner_settings_ShopServiceSettings_descriptor =
       getDescriptor().getMessageTypes().get(16);
-    internal_static_bloombox_schema_partner_settings_ShopServiceSettings_fieldAccessorTable = new
+    internal_static_bloombox_partner_settings_ShopServiceSettings_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_bloombox_schema_partner_settings_ShopServiceSettings_descriptor,
+        internal_static_bloombox_partner_settings_ShopServiceSettings_descriptor,
         new java.lang.String[] { "Delivery", "Express", "Pickup", "Storefront", "Medical", "AdultUse", });
-    internal_static_bloombox_schema_partner_settings_DeliveryZipcodeSettings_descriptor =
+    internal_static_bloombox_partner_settings_DeliveryZipcodeSettings_descriptor =
       getDescriptor().getMessageTypes().get(17);
-    internal_static_bloombox_schema_partner_settings_DeliveryZipcodeSettings_fieldAccessorTable = new
+    internal_static_bloombox_partner_settings_DeliveryZipcodeSettings_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_bloombox_schema_partner_settings_DeliveryZipcodeSettings_descriptor,
+        internal_static_bloombox_partner_settings_DeliveryZipcodeSettings_descriptor,
         new java.lang.String[] { "Zipcode", "Enabled", "DeliveryMinimum", });
-    internal_static_bloombox_schema_partner_settings_DeliverySettings_descriptor =
+    internal_static_bloombox_partner_settings_DeliverySettings_descriptor =
       getDescriptor().getMessageTypes().get(18);
-    internal_static_bloombox_schema_partner_settings_DeliverySettings_fieldAccessorTable = new
+    internal_static_bloombox_partner_settings_DeliverySettings_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_bloombox_schema_partner_settings_DeliverySettings_descriptor,
+        internal_static_bloombox_partner_settings_DeliverySettings_descriptor,
         new java.lang.String[] { "GlobalMinimum", "Zipcodes", });
-    internal_static_bloombox_schema_partner_settings_DeliverySettings_ZipcodesEntry_descriptor =
-      internal_static_bloombox_schema_partner_settings_DeliverySettings_descriptor.getNestedTypes().get(0);
-    internal_static_bloombox_schema_partner_settings_DeliverySettings_ZipcodesEntry_fieldAccessorTable = new
+    internal_static_bloombox_partner_settings_DeliverySettings_ZipcodesEntry_descriptor =
+      internal_static_bloombox_partner_settings_DeliverySettings_descriptor.getNestedTypes().get(0);
+    internal_static_bloombox_partner_settings_DeliverySettings_ZipcodesEntry_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_bloombox_schema_partner_settings_DeliverySettings_ZipcodesEntry_descriptor,
+        internal_static_bloombox_partner_settings_DeliverySettings_ZipcodesEntry_descriptor,
         new java.lang.String[] { "Key", "Value", });
-    internal_static_bloombox_schema_partner_settings_ShopContactChannelSettings_descriptor =
+    internal_static_bloombox_partner_settings_ShopContactChannelSettings_descriptor =
       getDescriptor().getMessageTypes().get(19);
-    internal_static_bloombox_schema_partner_settings_ShopContactChannelSettings_fieldAccessorTable = new
+    internal_static_bloombox_partner_settings_ShopContactChannelSettings_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_bloombox_schema_partner_settings_ShopContactChannelSettings_descriptor,
+        internal_static_bloombox_partner_settings_ShopContactChannelSettings_descriptor,
         new java.lang.String[] { "Email", "Sms", });
-    internal_static_bloombox_schema_partner_settings_ShopChannelSettings_descriptor =
+    internal_static_bloombox_partner_settings_ShopChannelSettings_descriptor =
       getDescriptor().getMessageTypes().get(20);
-    internal_static_bloombox_schema_partner_settings_ShopChannelSettings_fieldAccessorTable = new
+    internal_static_bloombox_partner_settings_ShopChannelSettings_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_bloombox_schema_partner_settings_ShopChannelSettings_descriptor,
+        internal_static_bloombox_partner_settings_ShopChannelSettings_descriptor,
         new java.lang.String[] { "Orders", "Enrollment", "Marketing", });
-    internal_static_bloombox_schema_partner_settings_ShopContactTarget_descriptor =
+    internal_static_bloombox_partner_settings_ShopContactTarget_descriptor =
       getDescriptor().getMessageTypes().get(21);
-    internal_static_bloombox_schema_partner_settings_ShopContactTarget_fieldAccessorTable = new
+    internal_static_bloombox_partner_settings_ShopContactTarget_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_bloombox_schema_partner_settings_ShopContactTarget_descriptor,
+        internal_static_bloombox_partner_settings_ShopContactTarget_descriptor,
         new java.lang.String[] { "Label", "Debug", "Email", "Phone", "Channels", });
-    internal_static_bloombox_schema_partner_settings_CommsSenderSettings_descriptor =
+    internal_static_bloombox_partner_settings_CommsSenderSettings_descriptor =
       getDescriptor().getMessageTypes().get(22);
-    internal_static_bloombox_schema_partner_settings_CommsSenderSettings_fieldAccessorTable = new
+    internal_static_bloombox_partner_settings_CommsSenderSettings_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_bloombox_schema_partner_settings_CommsSenderSettings_descriptor,
+        internal_static_bloombox_partner_settings_CommsSenderSettings_descriptor,
         new java.lang.String[] { "Email", "Phone", });
-    internal_static_bloombox_schema_partner_settings_CommsSettingsPayload_descriptor =
+    internal_static_bloombox_partner_settings_CommsSettingsPayload_descriptor =
       getDescriptor().getMessageTypes().get(23);
-    internal_static_bloombox_schema_partner_settings_CommsSettingsPayload_fieldAccessorTable = new
+    internal_static_bloombox_partner_settings_CommsSettingsPayload_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_bloombox_schema_partner_settings_CommsSettingsPayload_descriptor,
+        internal_static_bloombox_partner_settings_CommsSettingsPayload_descriptor,
         new java.lang.String[] { "Type", "Contacts", "Sender", });
-    internal_static_bloombox_schema_partner_settings_ShopCommsSettings_descriptor =
+    internal_static_bloombox_partner_settings_ShopCommsSettings_descriptor =
       getDescriptor().getMessageTypes().get(24);
-    internal_static_bloombox_schema_partner_settings_ShopCommsSettings_fieldAccessorTable = new
+    internal_static_bloombox_partner_settings_ShopCommsSettings_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_bloombox_schema_partner_settings_ShopCommsSettings_descriptor,
+        internal_static_bloombox_partner_settings_ShopCommsSettings_descriptor,
         new java.lang.String[] { "Internal", "External", });
-    internal_static_bloombox_schema_partner_settings_OnlineShopSettings_descriptor =
+    internal_static_bloombox_partner_settings_OnlineShopSettings_descriptor =
       getDescriptor().getMessageTypes().get(25);
-    internal_static_bloombox_schema_partner_settings_OnlineShopSettings_fieldAccessorTable = new
+    internal_static_bloombox_partner_settings_OnlineShopSettings_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_bloombox_schema_partner_settings_OnlineShopSettings_descriptor,
+        internal_static_bloombox_partner_settings_OnlineShopSettings_descriptor,
         new java.lang.String[] { "Origin", "Comms", "Domain", "Signup", "Login", "AcceptedMethod", "AcceptedCard", });
-    internal_static_bloombox_schema_partner_settings_PhysicalStorefrontSettings_descriptor =
+    internal_static_bloombox_partner_settings_PhysicalStorefrontSettings_descriptor =
       getDescriptor().getMessageTypes().get(26);
-    internal_static_bloombox_schema_partner_settings_PhysicalStorefrontSettings_fieldAccessorTable = new
+    internal_static_bloombox_partner_settings_PhysicalStorefrontSettings_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_bloombox_schema_partner_settings_PhysicalStorefrontSettings_descriptor,
+        internal_static_bloombox_partner_settings_PhysicalStorefrontSettings_descriptor,
         new java.lang.String[] { "Location", "AcceptedMethod", "AcceptedCard", });
-    internal_static_bloombox_schema_partner_settings_StorefrontSettings_descriptor =
+    internal_static_bloombox_partner_settings_StorefrontSettings_descriptor =
       getDescriptor().getMessageTypes().get(27);
-    internal_static_bloombox_schema_partner_settings_StorefrontSettings_fieldAccessorTable = new
+    internal_static_bloombox_partner_settings_StorefrontSettings_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_bloombox_schema_partner_settings_StorefrontSettings_descriptor,
+        internal_static_bloombox_partner_settings_StorefrontSettings_descriptor,
         new java.lang.String[] { "Delivery", "Online", "Physical", });
-    internal_static_bloombox_schema_partner_settings_ShopSettings_descriptor =
+    internal_static_bloombox_partner_settings_ShopSettings_descriptor =
       getDescriptor().getMessageTypes().get(28);
-    internal_static_bloombox_schema_partner_settings_ShopSettings_fieldAccessorTable = new
+    internal_static_bloombox_partner_settings_ShopSettings_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_bloombox_schema_partner_settings_ShopSettings_descriptor,
+        internal_static_bloombox_partner_settings_ShopSettings_descriptor,
         new java.lang.String[] { "Hours", "Services", "Storefront", });
-    internal_static_bloombox_schema_partner_settings_CartSettings_descriptor =
+    internal_static_bloombox_partner_settings_CartSettings_descriptor =
       getDescriptor().getMessageTypes().get(29);
-    internal_static_bloombox_schema_partner_settings_CartSettings_fieldAccessorTable = new
+    internal_static_bloombox_partner_settings_CartSettings_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_bloombox_schema_partner_settings_CartSettings_descriptor,
+        internal_static_bloombox_partner_settings_CartSettings_descriptor,
         new java.lang.String[] { "Mode", "OrderType", });
-    internal_static_bloombox_schema_partner_settings_TabletSettings_descriptor =
+    internal_static_bloombox_partner_settings_TabletSettings_descriptor =
       getDescriptor().getMessageTypes().get(30);
-    internal_static_bloombox_schema_partner_settings_TabletSettings_fieldAccessorTable = new
+    internal_static_bloombox_partner_settings_TabletSettings_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_bloombox_schema_partner_settings_TabletSettings_descriptor,
+        internal_static_bloombox_partner_settings_TabletSettings_descriptor,
         new java.lang.String[] { "Cart", });
-    internal_static_bloombox_schema_partner_settings_PartnerLocationSettings_descriptor =
+    internal_static_bloombox_partner_settings_PartnerLocationSettings_descriptor =
       getDescriptor().getMessageTypes().get(31);
-    internal_static_bloombox_schema_partner_settings_PartnerLocationSettings_fieldAccessorTable = new
+    internal_static_bloombox_partner_settings_PartnerLocationSettings_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_bloombox_schema_partner_settings_PartnerLocationSettings_descriptor,
+        internal_static_bloombox_partner_settings_PartnerLocationSettings_descriptor,
         new java.lang.String[] { "Api", "Brands", "Publish", "Sections", "Shop", "Tv", "Tablet", "Integration", });
     io.opencannabis.schema.geo.LocationOuterClass.getDescriptor();
     io.opencannabis.schema.temporal.TemporalDate.getDescriptor();

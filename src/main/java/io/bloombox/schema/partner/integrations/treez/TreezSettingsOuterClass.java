@@ -1,11 +1,12 @@
 /*
- * Copyright 2018, Bloombox, LLC.
+ * Copyright 2018, Momentum Ideas, Co. All rights reserved.
  *
- * Licensed under the Apache License, Version 2.0 (the "License");
- * you may not use this file except in compliance with the License.
- * You may obtain a copy of the License at
- *
- *     http://www.apache.org/licenses/LICENSE-2.0
+ * Source and object computer code contained herein is the private intellectual
+ * property of Momentum Ideas Co., a Delaware Corporation. Use of this
+ * code in source form requires permission in writing before use or the
+ * assembly, distribution, or publishing of derivative works, for commercial
+ * purposes or any other purpose, from a duly authorized officer of Momentum
+ * Ideas Co.
  *
  * Unless required by applicable law or agreed to in writing, software
  * distributed under the License is distributed on an "AS IS" BASIS,
@@ -31,7 +32,7 @@ public final class TreezSettingsOuterClass {
         (com.google.protobuf.ExtensionRegistryLite) registry);
   }
   public interface TreezIntegrationFeaturesOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:bloombox.schema.partner.integrations.treez.TreezIntegrationFeatures)
+      // @@protoc_insertion_point(interface_extends:bloombox.partner.integrations.treez.TreezIntegrationFeatures)
       com.google.protobuf.MessageOrBuilder {
 
     /**
@@ -48,11 +49,11 @@ public final class TreezSettingsOuterClass {
    * Specifies Treez features that may be enabled or disabled.
    * </pre>
    *
-   * Protobuf type {@code bloombox.schema.partner.integrations.treez.TreezIntegrationFeatures}
+   * Protobuf type {@code bloombox.partner.integrations.treez.TreezIntegrationFeatures}
    */
   public  static final class TreezIntegrationFeatures extends
       com.google.protobuf.GeneratedMessageV3 implements
-      // @@protoc_insertion_point(message_implements:bloombox.schema.partner.integrations.treez.TreezIntegrationFeatures)
+      // @@protoc_insertion_point(message_implements:bloombox.partner.integrations.treez.TreezIntegrationFeatures)
       TreezIntegrationFeaturesOrBuilder {
   private static final long serialVersionUID = 0L;
     // Use TreezIntegrationFeatures.newBuilder() to construct.
@@ -87,16 +88,16 @@ public final class TreezSettingsOuterClass {
             case 0:
               done = true;
               break;
+            case 8: {
+
+              menuRead_ = input.readBool();
+              break;
+            }
             default: {
               if (!parseUnknownFieldProto3(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
-              break;
-            }
-            case 8: {
-
-              menuRead_ = input.readBool();
               break;
             }
           }
@@ -113,12 +114,13 @@ public final class TreezSettingsOuterClass {
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return io.bloombox.schema.partner.integrations.treez.TreezSettingsOuterClass.internal_static_bloombox_schema_partner_integrations_treez_TreezIntegrationFeatures_descriptor;
+      return io.bloombox.schema.partner.integrations.treez.TreezSettingsOuterClass.internal_static_bloombox_partner_integrations_treez_TreezIntegrationFeatures_descriptor;
     }
 
+    @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return io.bloombox.schema.partner.integrations.treez.TreezSettingsOuterClass.internal_static_bloombox_schema_partner_integrations_treez_TreezIntegrationFeatures_fieldAccessorTable
+      return io.bloombox.schema.partner.integrations.treez.TreezSettingsOuterClass.internal_static_bloombox_partner_integrations_treez_TreezIntegrationFeatures_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
               io.bloombox.schema.partner.integrations.treez.TreezSettingsOuterClass.TreezIntegrationFeatures.class, io.bloombox.schema.partner.integrations.treez.TreezSettingsOuterClass.TreezIntegrationFeatures.Builder.class);
     }
@@ -137,6 +139,7 @@ public final class TreezSettingsOuterClass {
     }
 
     private byte memoizedIsInitialized = -1;
+    @java.lang.Override
     public final boolean isInitialized() {
       byte isInitialized = memoizedIsInitialized;
       if (isInitialized == 1) return true;
@@ -146,6 +149,7 @@ public final class TreezSettingsOuterClass {
       return true;
     }
 
+    @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
       if (menuRead_ != false) {
@@ -154,6 +158,7 @@ public final class TreezSettingsOuterClass {
       unknownFields.writeTo(output);
     }
 
+    @java.lang.Override
     public int getSerializedSize() {
       int size = memoizedSize;
       if (size != -1) return size;
@@ -270,6 +275,7 @@ public final class TreezSettingsOuterClass {
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
 
+    @java.lang.Override
     public Builder newBuilderForType() { return newBuilder(); }
     public static Builder newBuilder() {
       return DEFAULT_INSTANCE.toBuilder();
@@ -277,6 +283,7 @@ public final class TreezSettingsOuterClass {
     public static Builder newBuilder(io.bloombox.schema.partner.integrations.treez.TreezSettingsOuterClass.TreezIntegrationFeatures prototype) {
       return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
     }
+    @java.lang.Override
     public Builder toBuilder() {
       return this == DEFAULT_INSTANCE
           ? new Builder() : new Builder().mergeFrom(this);
@@ -293,20 +300,21 @@ public final class TreezSettingsOuterClass {
      * Specifies Treez features that may be enabled or disabled.
      * </pre>
      *
-     * Protobuf type {@code bloombox.schema.partner.integrations.treez.TreezIntegrationFeatures}
+     * Protobuf type {@code bloombox.partner.integrations.treez.TreezIntegrationFeatures}
      */
     public static final class Builder extends
         com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:bloombox.schema.partner.integrations.treez.TreezIntegrationFeatures)
+        // @@protoc_insertion_point(builder_implements:bloombox.partner.integrations.treez.TreezIntegrationFeatures)
         io.bloombox.schema.partner.integrations.treez.TreezSettingsOuterClass.TreezIntegrationFeaturesOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return io.bloombox.schema.partner.integrations.treez.TreezSettingsOuterClass.internal_static_bloombox_schema_partner_integrations_treez_TreezIntegrationFeatures_descriptor;
+        return io.bloombox.schema.partner.integrations.treez.TreezSettingsOuterClass.internal_static_bloombox_partner_integrations_treez_TreezIntegrationFeatures_descriptor;
       }
 
+      @java.lang.Override
       protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return io.bloombox.schema.partner.integrations.treez.TreezSettingsOuterClass.internal_static_bloombox_schema_partner_integrations_treez_TreezIntegrationFeatures_fieldAccessorTable
+        return io.bloombox.schema.partner.integrations.treez.TreezSettingsOuterClass.internal_static_bloombox_partner_integrations_treez_TreezIntegrationFeatures_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
                 io.bloombox.schema.partner.integrations.treez.TreezSettingsOuterClass.TreezIntegrationFeatures.class, io.bloombox.schema.partner.integrations.treez.TreezSettingsOuterClass.TreezIntegrationFeatures.Builder.class);
       }
@@ -326,6 +334,7 @@ public final class TreezSettingsOuterClass {
                 .alwaysUseFieldBuilders) {
         }
       }
+      @java.lang.Override
       public Builder clear() {
         super.clear();
         menuRead_ = false;
@@ -333,15 +342,18 @@ public final class TreezSettingsOuterClass {
         return this;
       }
 
+      @java.lang.Override
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return io.bloombox.schema.partner.integrations.treez.TreezSettingsOuterClass.internal_static_bloombox_schema_partner_integrations_treez_TreezIntegrationFeatures_descriptor;
+        return io.bloombox.schema.partner.integrations.treez.TreezSettingsOuterClass.internal_static_bloombox_partner_integrations_treez_TreezIntegrationFeatures_descriptor;
       }
 
+      @java.lang.Override
       public io.bloombox.schema.partner.integrations.treez.TreezSettingsOuterClass.TreezIntegrationFeatures getDefaultInstanceForType() {
         return io.bloombox.schema.partner.integrations.treez.TreezSettingsOuterClass.TreezIntegrationFeatures.getDefaultInstance();
       }
 
+      @java.lang.Override
       public io.bloombox.schema.partner.integrations.treez.TreezSettingsOuterClass.TreezIntegrationFeatures build() {
         io.bloombox.schema.partner.integrations.treez.TreezSettingsOuterClass.TreezIntegrationFeatures result = buildPartial();
         if (!result.isInitialized()) {
@@ -350,6 +362,7 @@ public final class TreezSettingsOuterClass {
         return result;
       }
 
+      @java.lang.Override
       public io.bloombox.schema.partner.integrations.treez.TreezSettingsOuterClass.TreezIntegrationFeatures buildPartial() {
         io.bloombox.schema.partner.integrations.treez.TreezSettingsOuterClass.TreezIntegrationFeatures result = new io.bloombox.schema.partner.integrations.treez.TreezSettingsOuterClass.TreezIntegrationFeatures(this);
         result.menuRead_ = menuRead_;
@@ -357,32 +370,39 @@ public final class TreezSettingsOuterClass {
         return result;
       }
 
+      @java.lang.Override
       public Builder clone() {
         return (Builder) super.clone();
       }
+      @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
         return (Builder) super.setField(field, value);
       }
+      @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
         return (Builder) super.clearField(field);
       }
+      @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
         return (Builder) super.clearOneof(oneof);
       }
+      @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
         return (Builder) super.setRepeatedField(field, index, value);
       }
+      @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
         return (Builder) super.addRepeatedField(field, value);
       }
+      @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
         if (other instanceof io.bloombox.schema.partner.integrations.treez.TreezSettingsOuterClass.TreezIntegrationFeatures) {
           return mergeFrom((io.bloombox.schema.partner.integrations.treez.TreezSettingsOuterClass.TreezIntegrationFeatures)other);
@@ -402,10 +422,12 @@ public final class TreezSettingsOuterClass {
         return this;
       }
 
+      @java.lang.Override
       public final boolean isInitialized() {
         return true;
       }
 
+      @java.lang.Override
       public Builder mergeFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -461,21 +483,23 @@ public final class TreezSettingsOuterClass {
         onChanged();
         return this;
       }
+      @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
         return super.setUnknownFieldsProto3(unknownFields);
       }
 
+      @java.lang.Override
       public final Builder mergeUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
         return super.mergeUnknownFields(unknownFields);
       }
 
 
-      // @@protoc_insertion_point(builder_scope:bloombox.schema.partner.integrations.treez.TreezIntegrationFeatures)
+      // @@protoc_insertion_point(builder_scope:bloombox.partner.integrations.treez.TreezIntegrationFeatures)
     }
 
-    // @@protoc_insertion_point(class_scope:bloombox.schema.partner.integrations.treez.TreezIntegrationFeatures)
+    // @@protoc_insertion_point(class_scope:bloombox.partner.integrations.treez.TreezIntegrationFeatures)
     private static final io.bloombox.schema.partner.integrations.treez.TreezSettingsOuterClass.TreezIntegrationFeatures DEFAULT_INSTANCE;
     static {
       DEFAULT_INSTANCE = new io.bloombox.schema.partner.integrations.treez.TreezSettingsOuterClass.TreezIntegrationFeatures();
@@ -487,6 +511,7 @@ public final class TreezSettingsOuterClass {
 
     private static final com.google.protobuf.Parser<TreezIntegrationFeatures>
         PARSER = new com.google.protobuf.AbstractParser<TreezIntegrationFeatures>() {
+      @java.lang.Override
       public TreezIntegrationFeatures parsePartialFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -504,6 +529,7 @@ public final class TreezSettingsOuterClass {
       return PARSER;
     }
 
+    @java.lang.Override
     public io.bloombox.schema.partner.integrations.treez.TreezSettingsOuterClass.TreezIntegrationFeatures getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
@@ -511,7 +537,7 @@ public final class TreezSettingsOuterClass {
   }
 
   public interface TreezSettingsOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:bloombox.schema.partner.integrations.treez.TreezSettings)
+      // @@protoc_insertion_point(interface_extends:bloombox.partner.integrations.treez.TreezSettings)
       com.google.protobuf.MessageOrBuilder {
 
     /**
@@ -562,7 +588,7 @@ public final class TreezSettingsOuterClass {
      * Flags indicating features that should be enabled or disabled.
      * </pre>
      *
-     * <code>.bloombox.schema.partner.integrations.treez.TreezIntegrationFeatures features = 10;</code>
+     * <code>.bloombox.partner.integrations.treez.TreezIntegrationFeatures features = 10;</code>
      */
     boolean hasFeatures();
     /**
@@ -570,7 +596,7 @@ public final class TreezSettingsOuterClass {
      * Flags indicating features that should be enabled or disabled.
      * </pre>
      *
-     * <code>.bloombox.schema.partner.integrations.treez.TreezIntegrationFeatures features = 10;</code>
+     * <code>.bloombox.partner.integrations.treez.TreezIntegrationFeatures features = 10;</code>
      */
     io.bloombox.schema.partner.integrations.treez.TreezSettingsOuterClass.TreezIntegrationFeatures getFeatures();
     /**
@@ -578,7 +604,7 @@ public final class TreezSettingsOuterClass {
      * Flags indicating features that should be enabled or disabled.
      * </pre>
      *
-     * <code>.bloombox.schema.partner.integrations.treez.TreezIntegrationFeatures features = 10;</code>
+     * <code>.bloombox.partner.integrations.treez.TreezIntegrationFeatures features = 10;</code>
      */
     io.bloombox.schema.partner.integrations.treez.TreezSettingsOuterClass.TreezIntegrationFeaturesOrBuilder getFeaturesOrBuilder();
   }
@@ -587,11 +613,11 @@ public final class TreezSettingsOuterClass {
    * Specifies settings related to Treez integration with Bloombox.
    * </pre>
    *
-   * Protobuf type {@code bloombox.schema.partner.integrations.treez.TreezSettings}
+   * Protobuf type {@code bloombox.partner.integrations.treez.TreezSettings}
    */
   public  static final class TreezSettings extends
       com.google.protobuf.GeneratedMessageV3 implements
-      // @@protoc_insertion_point(message_implements:bloombox.schema.partner.integrations.treez.TreezSettings)
+      // @@protoc_insertion_point(message_implements:bloombox.partner.integrations.treez.TreezSettings)
       TreezSettingsOrBuilder {
   private static final long serialVersionUID = 0L;
     // Use TreezSettings.newBuilder() to construct.
@@ -626,13 +652,6 @@ public final class TreezSettingsOuterClass {
             case 0:
               done = true;
               break;
-            default: {
-              if (!parseUnknownFieldProto3(
-                  input, unknownFields, extensionRegistry, tag)) {
-                done = true;
-              }
-              break;
-            }
             case 10: {
               java.lang.String s = input.readStringRequireUtf8();
 
@@ -665,6 +684,13 @@ public final class TreezSettingsOuterClass {
 
               break;
             }
+            default: {
+              if (!parseUnknownFieldProto3(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
           }
         }
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
@@ -679,12 +705,13 @@ public final class TreezSettingsOuterClass {
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return io.bloombox.schema.partner.integrations.treez.TreezSettingsOuterClass.internal_static_bloombox_schema_partner_integrations_treez_TreezSettings_descriptor;
+      return io.bloombox.schema.partner.integrations.treez.TreezSettingsOuterClass.internal_static_bloombox_partner_integrations_treez_TreezSettings_descriptor;
     }
 
+    @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return io.bloombox.schema.partner.integrations.treez.TreezSettingsOuterClass.internal_static_bloombox_schema_partner_integrations_treez_TreezSettings_fieldAccessorTable
+      return io.bloombox.schema.partner.integrations.treez.TreezSettingsOuterClass.internal_static_bloombox_partner_integrations_treez_TreezSettings_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
               io.bloombox.schema.partner.integrations.treez.TreezSettingsOuterClass.TreezSettings.class, io.bloombox.schema.partner.integrations.treez.TreezSettingsOuterClass.TreezSettings.Builder.class);
     }
@@ -771,7 +798,7 @@ public final class TreezSettingsOuterClass {
      * Flags indicating features that should be enabled or disabled.
      * </pre>
      *
-     * <code>.bloombox.schema.partner.integrations.treez.TreezIntegrationFeatures features = 10;</code>
+     * <code>.bloombox.partner.integrations.treez.TreezIntegrationFeatures features = 10;</code>
      */
     public boolean hasFeatures() {
       return features_ != null;
@@ -781,7 +808,7 @@ public final class TreezSettingsOuterClass {
      * Flags indicating features that should be enabled or disabled.
      * </pre>
      *
-     * <code>.bloombox.schema.partner.integrations.treez.TreezIntegrationFeatures features = 10;</code>
+     * <code>.bloombox.partner.integrations.treez.TreezIntegrationFeatures features = 10;</code>
      */
     public io.bloombox.schema.partner.integrations.treez.TreezSettingsOuterClass.TreezIntegrationFeatures getFeatures() {
       return features_ == null ? io.bloombox.schema.partner.integrations.treez.TreezSettingsOuterClass.TreezIntegrationFeatures.getDefaultInstance() : features_;
@@ -791,13 +818,14 @@ public final class TreezSettingsOuterClass {
      * Flags indicating features that should be enabled or disabled.
      * </pre>
      *
-     * <code>.bloombox.schema.partner.integrations.treez.TreezIntegrationFeatures features = 10;</code>
+     * <code>.bloombox.partner.integrations.treez.TreezIntegrationFeatures features = 10;</code>
      */
     public io.bloombox.schema.partner.integrations.treez.TreezSettingsOuterClass.TreezIntegrationFeaturesOrBuilder getFeaturesOrBuilder() {
       return getFeatures();
     }
 
     private byte memoizedIsInitialized = -1;
+    @java.lang.Override
     public final boolean isInitialized() {
       byte isInitialized = memoizedIsInitialized;
       if (isInitialized == 1) return true;
@@ -807,6 +835,7 @@ public final class TreezSettingsOuterClass {
       return true;
     }
 
+    @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
       if (!getAccountIdBytes().isEmpty()) {
@@ -821,6 +850,7 @@ public final class TreezSettingsOuterClass {
       unknownFields.writeTo(output);
     }
 
+    @java.lang.Override
     public int getSerializedSize() {
       int size = memoizedSize;
       if (size != -1) return size;
@@ -961,6 +991,7 @@ public final class TreezSettingsOuterClass {
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
 
+    @java.lang.Override
     public Builder newBuilderForType() { return newBuilder(); }
     public static Builder newBuilder() {
       return DEFAULT_INSTANCE.toBuilder();
@@ -968,6 +999,7 @@ public final class TreezSettingsOuterClass {
     public static Builder newBuilder(io.bloombox.schema.partner.integrations.treez.TreezSettingsOuterClass.TreezSettings prototype) {
       return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
     }
+    @java.lang.Override
     public Builder toBuilder() {
       return this == DEFAULT_INSTANCE
           ? new Builder() : new Builder().mergeFrom(this);
@@ -984,20 +1016,21 @@ public final class TreezSettingsOuterClass {
      * Specifies settings related to Treez integration with Bloombox.
      * </pre>
      *
-     * Protobuf type {@code bloombox.schema.partner.integrations.treez.TreezSettings}
+     * Protobuf type {@code bloombox.partner.integrations.treez.TreezSettings}
      */
     public static final class Builder extends
         com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:bloombox.schema.partner.integrations.treez.TreezSettings)
+        // @@protoc_insertion_point(builder_implements:bloombox.partner.integrations.treez.TreezSettings)
         io.bloombox.schema.partner.integrations.treez.TreezSettingsOuterClass.TreezSettingsOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return io.bloombox.schema.partner.integrations.treez.TreezSettingsOuterClass.internal_static_bloombox_schema_partner_integrations_treez_TreezSettings_descriptor;
+        return io.bloombox.schema.partner.integrations.treez.TreezSettingsOuterClass.internal_static_bloombox_partner_integrations_treez_TreezSettings_descriptor;
       }
 
+      @java.lang.Override
       protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return io.bloombox.schema.partner.integrations.treez.TreezSettingsOuterClass.internal_static_bloombox_schema_partner_integrations_treez_TreezSettings_fieldAccessorTable
+        return io.bloombox.schema.partner.integrations.treez.TreezSettingsOuterClass.internal_static_bloombox_partner_integrations_treez_TreezSettings_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
                 io.bloombox.schema.partner.integrations.treez.TreezSettingsOuterClass.TreezSettings.class, io.bloombox.schema.partner.integrations.treez.TreezSettingsOuterClass.TreezSettings.Builder.class);
       }
@@ -1017,6 +1050,7 @@ public final class TreezSettingsOuterClass {
                 .alwaysUseFieldBuilders) {
         }
       }
+      @java.lang.Override
       public Builder clear() {
         super.clear();
         accountId_ = "";
@@ -1036,15 +1070,18 @@ public final class TreezSettingsOuterClass {
         return this;
       }
 
+      @java.lang.Override
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return io.bloombox.schema.partner.integrations.treez.TreezSettingsOuterClass.internal_static_bloombox_schema_partner_integrations_treez_TreezSettings_descriptor;
+        return io.bloombox.schema.partner.integrations.treez.TreezSettingsOuterClass.internal_static_bloombox_partner_integrations_treez_TreezSettings_descriptor;
       }
 
+      @java.lang.Override
       public io.bloombox.schema.partner.integrations.treez.TreezSettingsOuterClass.TreezSettings getDefaultInstanceForType() {
         return io.bloombox.schema.partner.integrations.treez.TreezSettingsOuterClass.TreezSettings.getDefaultInstance();
       }
 
+      @java.lang.Override
       public io.bloombox.schema.partner.integrations.treez.TreezSettingsOuterClass.TreezSettings build() {
         io.bloombox.schema.partner.integrations.treez.TreezSettingsOuterClass.TreezSettings result = buildPartial();
         if (!result.isInitialized()) {
@@ -1053,6 +1090,7 @@ public final class TreezSettingsOuterClass {
         return result;
       }
 
+      @java.lang.Override
       public io.bloombox.schema.partner.integrations.treez.TreezSettingsOuterClass.TreezSettings buildPartial() {
         io.bloombox.schema.partner.integrations.treez.TreezSettingsOuterClass.TreezSettings result = new io.bloombox.schema.partner.integrations.treez.TreezSettingsOuterClass.TreezSettings(this);
         result.accountId_ = accountId_;
@@ -1070,32 +1108,39 @@ public final class TreezSettingsOuterClass {
         return result;
       }
 
+      @java.lang.Override
       public Builder clone() {
         return (Builder) super.clone();
       }
+      @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
         return (Builder) super.setField(field, value);
       }
+      @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
         return (Builder) super.clearField(field);
       }
+      @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
         return (Builder) super.clearOneof(oneof);
       }
+      @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
         return (Builder) super.setRepeatedField(field, index, value);
       }
+      @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
         return (Builder) super.addRepeatedField(field, value);
       }
+      @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
         if (other instanceof io.bloombox.schema.partner.integrations.treez.TreezSettingsOuterClass.TreezSettings) {
           return mergeFrom((io.bloombox.schema.partner.integrations.treez.TreezSettingsOuterClass.TreezSettings)other);
@@ -1122,10 +1167,12 @@ public final class TreezSettingsOuterClass {
         return this;
       }
 
+      @java.lang.Override
       public final boolean isInitialized() {
         return true;
       }
 
+      @java.lang.Override
       public Builder mergeFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -1394,7 +1441,7 @@ public final class TreezSettingsOuterClass {
        * Flags indicating features that should be enabled or disabled.
        * </pre>
        *
-       * <code>.bloombox.schema.partner.integrations.treez.TreezIntegrationFeatures features = 10;</code>
+       * <code>.bloombox.partner.integrations.treez.TreezIntegrationFeatures features = 10;</code>
        */
       public boolean hasFeatures() {
         return featuresBuilder_ != null || features_ != null;
@@ -1404,7 +1451,7 @@ public final class TreezSettingsOuterClass {
        * Flags indicating features that should be enabled or disabled.
        * </pre>
        *
-       * <code>.bloombox.schema.partner.integrations.treez.TreezIntegrationFeatures features = 10;</code>
+       * <code>.bloombox.partner.integrations.treez.TreezIntegrationFeatures features = 10;</code>
        */
       public io.bloombox.schema.partner.integrations.treez.TreezSettingsOuterClass.TreezIntegrationFeatures getFeatures() {
         if (featuresBuilder_ == null) {
@@ -1418,7 +1465,7 @@ public final class TreezSettingsOuterClass {
        * Flags indicating features that should be enabled or disabled.
        * </pre>
        *
-       * <code>.bloombox.schema.partner.integrations.treez.TreezIntegrationFeatures features = 10;</code>
+       * <code>.bloombox.partner.integrations.treez.TreezIntegrationFeatures features = 10;</code>
        */
       public Builder setFeatures(io.bloombox.schema.partner.integrations.treez.TreezSettingsOuterClass.TreezIntegrationFeatures value) {
         if (featuresBuilder_ == null) {
@@ -1438,7 +1485,7 @@ public final class TreezSettingsOuterClass {
        * Flags indicating features that should be enabled or disabled.
        * </pre>
        *
-       * <code>.bloombox.schema.partner.integrations.treez.TreezIntegrationFeatures features = 10;</code>
+       * <code>.bloombox.partner.integrations.treez.TreezIntegrationFeatures features = 10;</code>
        */
       public Builder setFeatures(
           io.bloombox.schema.partner.integrations.treez.TreezSettingsOuterClass.TreezIntegrationFeatures.Builder builderForValue) {
@@ -1456,7 +1503,7 @@ public final class TreezSettingsOuterClass {
        * Flags indicating features that should be enabled or disabled.
        * </pre>
        *
-       * <code>.bloombox.schema.partner.integrations.treez.TreezIntegrationFeatures features = 10;</code>
+       * <code>.bloombox.partner.integrations.treez.TreezIntegrationFeatures features = 10;</code>
        */
       public Builder mergeFeatures(io.bloombox.schema.partner.integrations.treez.TreezSettingsOuterClass.TreezIntegrationFeatures value) {
         if (featuresBuilder_ == null) {
@@ -1478,7 +1525,7 @@ public final class TreezSettingsOuterClass {
        * Flags indicating features that should be enabled or disabled.
        * </pre>
        *
-       * <code>.bloombox.schema.partner.integrations.treez.TreezIntegrationFeatures features = 10;</code>
+       * <code>.bloombox.partner.integrations.treez.TreezIntegrationFeatures features = 10;</code>
        */
       public Builder clearFeatures() {
         if (featuresBuilder_ == null) {
@@ -1496,7 +1543,7 @@ public final class TreezSettingsOuterClass {
        * Flags indicating features that should be enabled or disabled.
        * </pre>
        *
-       * <code>.bloombox.schema.partner.integrations.treez.TreezIntegrationFeatures features = 10;</code>
+       * <code>.bloombox.partner.integrations.treez.TreezIntegrationFeatures features = 10;</code>
        */
       public io.bloombox.schema.partner.integrations.treez.TreezSettingsOuterClass.TreezIntegrationFeatures.Builder getFeaturesBuilder() {
         
@@ -1508,7 +1555,7 @@ public final class TreezSettingsOuterClass {
        * Flags indicating features that should be enabled or disabled.
        * </pre>
        *
-       * <code>.bloombox.schema.partner.integrations.treez.TreezIntegrationFeatures features = 10;</code>
+       * <code>.bloombox.partner.integrations.treez.TreezIntegrationFeatures features = 10;</code>
        */
       public io.bloombox.schema.partner.integrations.treez.TreezSettingsOuterClass.TreezIntegrationFeaturesOrBuilder getFeaturesOrBuilder() {
         if (featuresBuilder_ != null) {
@@ -1523,7 +1570,7 @@ public final class TreezSettingsOuterClass {
        * Flags indicating features that should be enabled or disabled.
        * </pre>
        *
-       * <code>.bloombox.schema.partner.integrations.treez.TreezIntegrationFeatures features = 10;</code>
+       * <code>.bloombox.partner.integrations.treez.TreezIntegrationFeatures features = 10;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
           io.bloombox.schema.partner.integrations.treez.TreezSettingsOuterClass.TreezIntegrationFeatures, io.bloombox.schema.partner.integrations.treez.TreezSettingsOuterClass.TreezIntegrationFeatures.Builder, io.bloombox.schema.partner.integrations.treez.TreezSettingsOuterClass.TreezIntegrationFeaturesOrBuilder> 
@@ -1538,21 +1585,23 @@ public final class TreezSettingsOuterClass {
         }
         return featuresBuilder_;
       }
+      @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
         return super.setUnknownFieldsProto3(unknownFields);
       }
 
+      @java.lang.Override
       public final Builder mergeUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
         return super.mergeUnknownFields(unknownFields);
       }
 
 
-      // @@protoc_insertion_point(builder_scope:bloombox.schema.partner.integrations.treez.TreezSettings)
+      // @@protoc_insertion_point(builder_scope:bloombox.partner.integrations.treez.TreezSettings)
     }
 
-    // @@protoc_insertion_point(class_scope:bloombox.schema.partner.integrations.treez.TreezSettings)
+    // @@protoc_insertion_point(class_scope:bloombox.partner.integrations.treez.TreezSettings)
     private static final io.bloombox.schema.partner.integrations.treez.TreezSettingsOuterClass.TreezSettings DEFAULT_INSTANCE;
     static {
       DEFAULT_INSTANCE = new io.bloombox.schema.partner.integrations.treez.TreezSettingsOuterClass.TreezSettings();
@@ -1564,6 +1613,7 @@ public final class TreezSettingsOuterClass {
 
     private static final com.google.protobuf.Parser<TreezSettings>
         PARSER = new com.google.protobuf.AbstractParser<TreezSettings>() {
+      @java.lang.Override
       public TreezSettings parsePartialFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -1581,6 +1631,7 @@ public final class TreezSettingsOuterClass {
       return PARSER;
     }
 
+    @java.lang.Override
     public io.bloombox.schema.partner.integrations.treez.TreezSettingsOuterClass.TreezSettings getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
@@ -1588,15 +1639,15 @@ public final class TreezSettingsOuterClass {
   }
 
   private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_bloombox_schema_partner_integrations_treez_TreezIntegrationFeatures_descriptor;
+    internal_static_bloombox_partner_integrations_treez_TreezIntegrationFeatures_descriptor;
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_bloombox_schema_partner_integrations_treez_TreezIntegrationFeatures_fieldAccessorTable;
+      internal_static_bloombox_partner_integrations_treez_TreezIntegrationFeatures_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_bloombox_schema_partner_integrations_treez_TreezSettings_descriptor;
+    internal_static_bloombox_partner_integrations_treez_TreezSettings_descriptor;
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_bloombox_schema_partner_integrations_treez_TreezSettings_fieldAccessorTable;
+      internal_static_bloombox_partner_integrations_treez_TreezSettings_fieldAccessorTable;
 
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
@@ -1607,16 +1658,15 @@ public final class TreezSettingsOuterClass {
   static {
     java.lang.String[] descriptorData = {
       "\n(partner/integrations/TreezSettings.pro" +
-      "to\022*bloombox.schema.partner.integrations" +
-      ".treez\032\027temporal/Schedule.proto\"-\n\030Treez" +
-      "IntegrationFeatures\022\021\n\tmenu_read\030\001 \001(\010\"\263" +
-      "\001\n\rTreezSettings\022\022\n\naccount_id\030\001 \001(\t\0226\n\r" +
-      "sync_interval\030\002 \001(\0132\037.opencannabis.tempo" +
-      "ral.Schedule\022V\n\010features\030\n \001(\0132D.bloombo" +
-      "x.schema.partner.integrations.treez.Tree" +
-      "zIntegrationFeaturesB9\n-io.bloombox.sche" +
-      "ma.partner.integrations.treezH\001P\000\242\002\003BBSb" +
-      "\006proto3"
+      "to\022#bloombox.partner.integrations.treez\032" +
+      "\027temporal/Schedule.proto\"-\n\030TreezIntegra" +
+      "tionFeatures\022\021\n\tmenu_read\030\001 \001(\010\"\254\001\n\rTree" +
+      "zSettings\022\022\n\naccount_id\030\001 \001(\t\0226\n\rsync_in" +
+      "terval\030\002 \001(\0132\037.opencannabis.temporal.Sch" +
+      "edule\022O\n\010features\030\n \001(\0132=.bloombox.partn" +
+      "er.integrations.treez.TreezIntegrationFe" +
+      "aturesB9\n-io.bloombox.schema.partner.int" +
+      "egrations.treezH\001P\000\242\002\003BBSb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -1631,17 +1681,17 @@ public final class TreezSettingsOuterClass {
         new com.google.protobuf.Descriptors.FileDescriptor[] {
           io.opencannabis.schema.temporal.TemporalSchedule.getDescriptor(),
         }, assigner);
-    internal_static_bloombox_schema_partner_integrations_treez_TreezIntegrationFeatures_descriptor =
+    internal_static_bloombox_partner_integrations_treez_TreezIntegrationFeatures_descriptor =
       getDescriptor().getMessageTypes().get(0);
-    internal_static_bloombox_schema_partner_integrations_treez_TreezIntegrationFeatures_fieldAccessorTable = new
+    internal_static_bloombox_partner_integrations_treez_TreezIntegrationFeatures_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_bloombox_schema_partner_integrations_treez_TreezIntegrationFeatures_descriptor,
+        internal_static_bloombox_partner_integrations_treez_TreezIntegrationFeatures_descriptor,
         new java.lang.String[] { "MenuRead", });
-    internal_static_bloombox_schema_partner_integrations_treez_TreezSettings_descriptor =
+    internal_static_bloombox_partner_integrations_treez_TreezSettings_descriptor =
       getDescriptor().getMessageTypes().get(1);
-    internal_static_bloombox_schema_partner_integrations_treez_TreezSettings_fieldAccessorTable = new
+    internal_static_bloombox_partner_integrations_treez_TreezSettings_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_bloombox_schema_partner_integrations_treez_TreezSettings_descriptor,
+        internal_static_bloombox_partner_integrations_treez_TreezSettings_descriptor,
         new java.lang.String[] { "AccountId", "SyncInterval", "Features", });
     io.opencannabis.schema.temporal.TemporalSchedule.getDescriptor();
   }

@@ -1,11 +1,12 @@
 /*
- * Copyright 2018, Bloombox, LLC.
+ * Copyright 2018, Momentum Ideas, Co. All rights reserved.
  *
- * Licensed under the Apache License, Version 2.0 (the "License");
- * you may not use this file except in compliance with the License.
- * You may obtain a copy of the License at
- *
- *     http://www.apache.org/licenses/LICENSE-2.0
+ * Source and object computer code contained herein is the private intellectual
+ * property of Momentum Ideas Co., a Delaware Corporation. Use of this
+ * code in source form requires permission in writing before use or the
+ * assembly, distribution, or publishing of derivative works, for commercial
+ * purposes or any other purpose, from a duly authorized officer of Momentum
+ * Ideas Co.
  *
  * Unless required by applicable law or agreed to in writing, software
  * distributed under the License is distributed on an "AS IS" BASIS,
@@ -42,7 +43,7 @@ public final class AttachedMedia {
       implements com.google.protobuf.ProtocolMessageEnum {
     /**
      * <pre>
-     * The media item has been provisioned, but is not yet subject to a resumable write operation (at which point, the
+     * The media item has been provisioned, but is not yet subject to a resume-able write operation (at which point, the
      * media item would be 'PENDING').
      * </pre>
      *
@@ -81,7 +82,7 @@ public final class AttachedMedia {
 
     /**
      * <pre>
-     * The media item has been provisioned, but is not yet subject to a resumable write operation (at which point, the
+     * The media item has been provisioned, but is not yet subject to a resume-able write operation (at which point, the
      * media item would be 'PENDING').
      * </pre>
      *
@@ -364,50 +365,36 @@ public final class AttachedMedia {
      * Specify a partner as the subject parent of this media.
      * </pre>
      *
-     * <code>.bloombox.schema.partner.PartnerKey partner = 3;</code>
+     * <code>string partner = 3;</code>
      */
-    boolean hasPartner();
+    java.lang.String getPartner();
     /**
      * <pre>
      * Specify a partner as the subject parent of this media.
      * </pre>
      *
-     * <code>.bloombox.schema.partner.PartnerKey partner = 3;</code>
+     * <code>string partner = 3;</code>
      */
-    io.bloombox.schema.partner.PartnerMeta.PartnerKey getPartner();
-    /**
-     * <pre>
-     * Specify a partner as the subject parent of this media.
-     * </pre>
-     *
-     * <code>.bloombox.schema.partner.PartnerKey partner = 3;</code>
-     */
-    io.bloombox.schema.partner.PartnerMeta.PartnerKeyOrBuilder getPartnerOrBuilder();
+    com.google.protobuf.ByteString
+        getPartnerBytes();
 
     /**
      * <pre>
      * Specify a partner and location as the subject parent of this media.
      * </pre>
      *
-     * <code>.bloombox.schema.partner.LocationKey location = 4;</code>
+     * <code>string location = 4;</code>
      */
-    boolean hasLocation();
+    java.lang.String getLocation();
     /**
      * <pre>
      * Specify a partner and location as the subject parent of this media.
      * </pre>
      *
-     * <code>.bloombox.schema.partner.LocationKey location = 4;</code>
+     * <code>string location = 4;</code>
      */
-    io.bloombox.schema.partner.LocationAccountKey.LocationKey getLocation();
-    /**
-     * <pre>
-     * Specify a partner and location as the subject parent of this media.
-     * </pre>
-     *
-     * <code>.bloombox.schema.partner.LocationKey location = 4;</code>
-     */
-    io.bloombox.schema.partner.LocationAccountKey.LocationKeyOrBuilder getLocationOrBuilder();
+    com.google.protobuf.ByteString
+        getLocationBytes();
 
     /**
      * <pre>
@@ -464,13 +451,6 @@ public final class AttachedMedia {
             case 0:
               done = true;
               break;
-            default: {
-              if (!parseUnknownFieldProto3(
-                  input, unknownFields, extensionRegistry, tag)) {
-                done = true;
-              }
-              break;
-            }
             case 18: {
               io.opencannabis.schema.base.BaseProductKey.ProductKey.Builder subBuilder = null;
               if (attachmentCase_ == 2) {
@@ -486,36 +466,27 @@ public final class AttachedMedia {
               break;
             }
             case 26: {
-              io.bloombox.schema.partner.PartnerMeta.PartnerKey.Builder subBuilder = null;
-              if (attachmentCase_ == 3) {
-                subBuilder = ((io.bloombox.schema.partner.PartnerMeta.PartnerKey) attachment_).toBuilder();
-              }
-              attachment_ =
-                  input.readMessage(io.bloombox.schema.partner.PartnerMeta.PartnerKey.parser(), extensionRegistry);
-              if (subBuilder != null) {
-                subBuilder.mergeFrom((io.bloombox.schema.partner.PartnerMeta.PartnerKey) attachment_);
-                attachment_ = subBuilder.buildPartial();
-              }
+              java.lang.String s = input.readStringRequireUtf8();
               attachmentCase_ = 3;
+              attachment_ = s;
               break;
             }
             case 34: {
-              io.bloombox.schema.partner.LocationAccountKey.LocationKey.Builder subBuilder = null;
-              if (attachmentCase_ == 4) {
-                subBuilder = ((io.bloombox.schema.partner.LocationAccountKey.LocationKey) attachment_).toBuilder();
-              }
-              attachment_ =
-                  input.readMessage(io.bloombox.schema.partner.LocationAccountKey.LocationKey.parser(), extensionRegistry);
-              if (subBuilder != null) {
-                subBuilder.mergeFrom((io.bloombox.schema.partner.LocationAccountKey.LocationKey) attachment_);
-                attachment_ = subBuilder.buildPartial();
-              }
+              java.lang.String s = input.readStringRequireUtf8();
               attachmentCase_ = 4;
+              attachment_ = s;
               break;
             }
             case 40: {
               attachmentCase_ = 5;
               attachment_ = input.readBool();
+              break;
+            }
+            default: {
+              if (!parseUnknownFieldProto3(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
               break;
             }
           }
@@ -535,6 +506,7 @@ public final class AttachedMedia {
       return io.opencannabis.schema.media.AttachedMedia.internal_static_opencannabis_media_MediaSubject_descriptor;
     }
 
+    @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
       return io.opencannabis.schema.media.AttachedMedia.internal_static_opencannabis_media_MediaSubject_fieldAccessorTable
@@ -628,36 +600,49 @@ public final class AttachedMedia {
      * Specify a partner as the subject parent of this media.
      * </pre>
      *
-     * <code>.bloombox.schema.partner.PartnerKey partner = 3;</code>
+     * <code>string partner = 3;</code>
      */
-    public boolean hasPartner() {
-      return attachmentCase_ == 3;
+    public java.lang.String getPartner() {
+      java.lang.Object ref = "";
+      if (attachmentCase_ == 3) {
+        ref = attachment_;
+      }
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        if (attachmentCase_ == 3) {
+          attachment_ = s;
+        }
+        return s;
+      }
     }
     /**
      * <pre>
      * Specify a partner as the subject parent of this media.
      * </pre>
      *
-     * <code>.bloombox.schema.partner.PartnerKey partner = 3;</code>
+     * <code>string partner = 3;</code>
      */
-    public io.bloombox.schema.partner.PartnerMeta.PartnerKey getPartner() {
+    public com.google.protobuf.ByteString
+        getPartnerBytes() {
+      java.lang.Object ref = "";
       if (attachmentCase_ == 3) {
-         return (io.bloombox.schema.partner.PartnerMeta.PartnerKey) attachment_;
+        ref = attachment_;
       }
-      return io.bloombox.schema.partner.PartnerMeta.PartnerKey.getDefaultInstance();
-    }
-    /**
-     * <pre>
-     * Specify a partner as the subject parent of this media.
-     * </pre>
-     *
-     * <code>.bloombox.schema.partner.PartnerKey partner = 3;</code>
-     */
-    public io.bloombox.schema.partner.PartnerMeta.PartnerKeyOrBuilder getPartnerOrBuilder() {
-      if (attachmentCase_ == 3) {
-         return (io.bloombox.schema.partner.PartnerMeta.PartnerKey) attachment_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        if (attachmentCase_ == 3) {
+          attachment_ = b;
+        }
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
       }
-      return io.bloombox.schema.partner.PartnerMeta.PartnerKey.getDefaultInstance();
     }
 
     public static final int LOCATION_FIELD_NUMBER = 4;
@@ -666,36 +651,49 @@ public final class AttachedMedia {
      * Specify a partner and location as the subject parent of this media.
      * </pre>
      *
-     * <code>.bloombox.schema.partner.LocationKey location = 4;</code>
+     * <code>string location = 4;</code>
      */
-    public boolean hasLocation() {
-      return attachmentCase_ == 4;
+    public java.lang.String getLocation() {
+      java.lang.Object ref = "";
+      if (attachmentCase_ == 4) {
+        ref = attachment_;
+      }
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        if (attachmentCase_ == 4) {
+          attachment_ = s;
+        }
+        return s;
+      }
     }
     /**
      * <pre>
      * Specify a partner and location as the subject parent of this media.
      * </pre>
      *
-     * <code>.bloombox.schema.partner.LocationKey location = 4;</code>
+     * <code>string location = 4;</code>
      */
-    public io.bloombox.schema.partner.LocationAccountKey.LocationKey getLocation() {
+    public com.google.protobuf.ByteString
+        getLocationBytes() {
+      java.lang.Object ref = "";
       if (attachmentCase_ == 4) {
-         return (io.bloombox.schema.partner.LocationAccountKey.LocationKey) attachment_;
+        ref = attachment_;
       }
-      return io.bloombox.schema.partner.LocationAccountKey.LocationKey.getDefaultInstance();
-    }
-    /**
-     * <pre>
-     * Specify a partner and location as the subject parent of this media.
-     * </pre>
-     *
-     * <code>.bloombox.schema.partner.LocationKey location = 4;</code>
-     */
-    public io.bloombox.schema.partner.LocationAccountKey.LocationKeyOrBuilder getLocationOrBuilder() {
-      if (attachmentCase_ == 4) {
-         return (io.bloombox.schema.partner.LocationAccountKey.LocationKey) attachment_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        if (attachmentCase_ == 4) {
+          attachment_ = b;
+        }
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
       }
-      return io.bloombox.schema.partner.LocationAccountKey.LocationKey.getDefaultInstance();
     }
 
     public static final int GLOBAL_FIELD_NUMBER = 5;
@@ -714,6 +712,7 @@ public final class AttachedMedia {
     }
 
     private byte memoizedIsInitialized = -1;
+    @java.lang.Override
     public final boolean isInitialized() {
       byte isInitialized = memoizedIsInitialized;
       if (isInitialized == 1) return true;
@@ -723,16 +722,17 @@ public final class AttachedMedia {
       return true;
     }
 
+    @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
       if (attachmentCase_ == 2) {
         output.writeMessage(2, (io.opencannabis.schema.base.BaseProductKey.ProductKey) attachment_);
       }
       if (attachmentCase_ == 3) {
-        output.writeMessage(3, (io.bloombox.schema.partner.PartnerMeta.PartnerKey) attachment_);
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 3, attachment_);
       }
       if (attachmentCase_ == 4) {
-        output.writeMessage(4, (io.bloombox.schema.partner.LocationAccountKey.LocationKey) attachment_);
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 4, attachment_);
       }
       if (attachmentCase_ == 5) {
         output.writeBool(
@@ -741,6 +741,7 @@ public final class AttachedMedia {
       unknownFields.writeTo(output);
     }
 
+    @java.lang.Override
     public int getSerializedSize() {
       int size = memoizedSize;
       if (size != -1) return size;
@@ -751,12 +752,10 @@ public final class AttachedMedia {
           .computeMessageSize(2, (io.opencannabis.schema.base.BaseProductKey.ProductKey) attachment_);
       }
       if (attachmentCase_ == 3) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(3, (io.bloombox.schema.partner.PartnerMeta.PartnerKey) attachment_);
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, attachment_);
       }
       if (attachmentCase_ == 4) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(4, (io.bloombox.schema.partner.LocationAccountKey.LocationKey) attachment_);
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(4, attachment_);
       }
       if (attachmentCase_ == 5) {
         size += com.google.protobuf.CodedOutputStream
@@ -909,6 +908,7 @@ public final class AttachedMedia {
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
 
+    @java.lang.Override
     public Builder newBuilderForType() { return newBuilder(); }
     public static Builder newBuilder() {
       return DEFAULT_INSTANCE.toBuilder();
@@ -916,6 +916,7 @@ public final class AttachedMedia {
     public static Builder newBuilder(io.opencannabis.schema.media.AttachedMedia.MediaSubject prototype) {
       return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
     }
+    @java.lang.Override
     public Builder toBuilder() {
       return this == DEFAULT_INSTANCE
           ? new Builder() : new Builder().mergeFrom(this);
@@ -944,6 +945,7 @@ public final class AttachedMedia {
         return io.opencannabis.schema.media.AttachedMedia.internal_static_opencannabis_media_MediaSubject_descriptor;
       }
 
+      @java.lang.Override
       protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
           internalGetFieldAccessorTable() {
         return io.opencannabis.schema.media.AttachedMedia.internal_static_opencannabis_media_MediaSubject_fieldAccessorTable
@@ -966,6 +968,7 @@ public final class AttachedMedia {
                 .alwaysUseFieldBuilders) {
         }
       }
+      @java.lang.Override
       public Builder clear() {
         super.clear();
         attachmentCase_ = 0;
@@ -973,15 +976,18 @@ public final class AttachedMedia {
         return this;
       }
 
+      @java.lang.Override
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
         return io.opencannabis.schema.media.AttachedMedia.internal_static_opencannabis_media_MediaSubject_descriptor;
       }
 
+      @java.lang.Override
       public io.opencannabis.schema.media.AttachedMedia.MediaSubject getDefaultInstanceForType() {
         return io.opencannabis.schema.media.AttachedMedia.MediaSubject.getDefaultInstance();
       }
 
+      @java.lang.Override
       public io.opencannabis.schema.media.AttachedMedia.MediaSubject build() {
         io.opencannabis.schema.media.AttachedMedia.MediaSubject result = buildPartial();
         if (!result.isInitialized()) {
@@ -990,6 +996,7 @@ public final class AttachedMedia {
         return result;
       }
 
+      @java.lang.Override
       public io.opencannabis.schema.media.AttachedMedia.MediaSubject buildPartial() {
         io.opencannabis.schema.media.AttachedMedia.MediaSubject result = new io.opencannabis.schema.media.AttachedMedia.MediaSubject(this);
         if (attachmentCase_ == 2) {
@@ -1000,18 +1007,10 @@ public final class AttachedMedia {
           }
         }
         if (attachmentCase_ == 3) {
-          if (partnerBuilder_ == null) {
-            result.attachment_ = attachment_;
-          } else {
-            result.attachment_ = partnerBuilder_.build();
-          }
+          result.attachment_ = attachment_;
         }
         if (attachmentCase_ == 4) {
-          if (locationBuilder_ == null) {
-            result.attachment_ = attachment_;
-          } else {
-            result.attachment_ = locationBuilder_.build();
-          }
+          result.attachment_ = attachment_;
         }
         if (attachmentCase_ == 5) {
           result.attachment_ = attachment_;
@@ -1021,32 +1020,39 @@ public final class AttachedMedia {
         return result;
       }
 
+      @java.lang.Override
       public Builder clone() {
         return (Builder) super.clone();
       }
+      @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
         return (Builder) super.setField(field, value);
       }
+      @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
         return (Builder) super.clearField(field);
       }
+      @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
         return (Builder) super.clearOneof(oneof);
       }
+      @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
         return (Builder) super.setRepeatedField(field, index, value);
       }
+      @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
         return (Builder) super.addRepeatedField(field, value);
       }
+      @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
         if (other instanceof io.opencannabis.schema.media.AttachedMedia.MediaSubject) {
           return mergeFrom((io.opencannabis.schema.media.AttachedMedia.MediaSubject)other);
@@ -1064,11 +1070,15 @@ public final class AttachedMedia {
             break;
           }
           case PARTNER: {
-            mergePartner(other.getPartner());
+            attachmentCase_ = 3;
+            attachment_ = other.attachment_;
+            onChanged();
             break;
           }
           case LOCATION: {
-            mergeLocation(other.getLocation());
+            attachmentCase_ = 4;
+            attachment_ = other.attachment_;
+            onChanged();
             break;
           }
           case GLOBAL: {
@@ -1084,10 +1094,12 @@ public final class AttachedMedia {
         return this;
       }
 
+      @java.lang.Override
       public final boolean isInitialized() {
         return true;
       }
 
+      @java.lang.Override
       public Builder mergeFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -1293,36 +1305,28 @@ public final class AttachedMedia {
         return productBuilder_;
       }
 
-      private com.google.protobuf.SingleFieldBuilderV3<
-          io.bloombox.schema.partner.PartnerMeta.PartnerKey, io.bloombox.schema.partner.PartnerMeta.PartnerKey.Builder, io.bloombox.schema.partner.PartnerMeta.PartnerKeyOrBuilder> partnerBuilder_;
       /**
        * <pre>
        * Specify a partner as the subject parent of this media.
        * </pre>
        *
-       * <code>.bloombox.schema.partner.PartnerKey partner = 3;</code>
+       * <code>string partner = 3;</code>
        */
-      public boolean hasPartner() {
-        return attachmentCase_ == 3;
-      }
-      /**
-       * <pre>
-       * Specify a partner as the subject parent of this media.
-       * </pre>
-       *
-       * <code>.bloombox.schema.partner.PartnerKey partner = 3;</code>
-       */
-      public io.bloombox.schema.partner.PartnerMeta.PartnerKey getPartner() {
-        if (partnerBuilder_ == null) {
+      public java.lang.String getPartner() {
+        java.lang.Object ref = "";
+        if (attachmentCase_ == 3) {
+          ref = attachment_;
+        }
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
           if (attachmentCase_ == 3) {
-            return (io.bloombox.schema.partner.PartnerMeta.PartnerKey) attachment_;
+            attachment_ = s;
           }
-          return io.bloombox.schema.partner.PartnerMeta.PartnerKey.getDefaultInstance();
+          return s;
         } else {
-          if (attachmentCase_ == 3) {
-            return partnerBuilder_.getMessage();
-          }
-          return io.bloombox.schema.partner.PartnerMeta.PartnerKey.getDefaultInstance();
+          return (java.lang.String) ref;
         }
       }
       /**
@@ -1330,37 +1334,41 @@ public final class AttachedMedia {
        * Specify a partner as the subject parent of this media.
        * </pre>
        *
-       * <code>.bloombox.schema.partner.PartnerKey partner = 3;</code>
+       * <code>string partner = 3;</code>
        */
-      public Builder setPartner(io.bloombox.schema.partner.PartnerMeta.PartnerKey value) {
-        if (partnerBuilder_ == null) {
-          if (value == null) {
-            throw new NullPointerException();
-          }
-          attachment_ = value;
-          onChanged();
-        } else {
-          partnerBuilder_.setMessage(value);
+      public com.google.protobuf.ByteString
+          getPartnerBytes() {
+        java.lang.Object ref = "";
+        if (attachmentCase_ == 3) {
+          ref = attachment_;
         }
-        attachmentCase_ = 3;
-        return this;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          if (attachmentCase_ == 3) {
+            attachment_ = b;
+          }
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
       }
       /**
        * <pre>
        * Specify a partner as the subject parent of this media.
        * </pre>
        *
-       * <code>.bloombox.schema.partner.PartnerKey partner = 3;</code>
+       * <code>string partner = 3;</code>
        */
       public Builder setPartner(
-          io.bloombox.schema.partner.PartnerMeta.PartnerKey.Builder builderForValue) {
-        if (partnerBuilder_ == null) {
-          attachment_ = builderForValue.build();
-          onChanged();
-        } else {
-          partnerBuilder_.setMessage(builderForValue.build());
-        }
-        attachmentCase_ = 3;
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  attachmentCase_ = 3;
+        attachment_ = value;
+        onChanged();
         return this;
       }
       /**
@@ -1368,47 +1376,13 @@ public final class AttachedMedia {
        * Specify a partner as the subject parent of this media.
        * </pre>
        *
-       * <code>.bloombox.schema.partner.PartnerKey partner = 3;</code>
-       */
-      public Builder mergePartner(io.bloombox.schema.partner.PartnerMeta.PartnerKey value) {
-        if (partnerBuilder_ == null) {
-          if (attachmentCase_ == 3 &&
-              attachment_ != io.bloombox.schema.partner.PartnerMeta.PartnerKey.getDefaultInstance()) {
-            attachment_ = io.bloombox.schema.partner.PartnerMeta.PartnerKey.newBuilder((io.bloombox.schema.partner.PartnerMeta.PartnerKey) attachment_)
-                .mergeFrom(value).buildPartial();
-          } else {
-            attachment_ = value;
-          }
-          onChanged();
-        } else {
-          if (attachmentCase_ == 3) {
-            partnerBuilder_.mergeFrom(value);
-          }
-          partnerBuilder_.setMessage(value);
-        }
-        attachmentCase_ = 3;
-        return this;
-      }
-      /**
-       * <pre>
-       * Specify a partner as the subject parent of this media.
-       * </pre>
-       *
-       * <code>.bloombox.schema.partner.PartnerKey partner = 3;</code>
+       * <code>string partner = 3;</code>
        */
       public Builder clearPartner() {
-        if (partnerBuilder_ == null) {
-          if (attachmentCase_ == 3) {
-            attachmentCase_ = 0;
-            attachment_ = null;
-            onChanged();
-          }
-        } else {
-          if (attachmentCase_ == 3) {
-            attachmentCase_ = 0;
-            attachment_ = null;
-          }
-          partnerBuilder_.clear();
+        if (attachmentCase_ == 3) {
+          attachmentCase_ = 0;
+          attachment_ = null;
+          onChanged();
         }
         return this;
       }
@@ -1417,84 +1391,42 @@ public final class AttachedMedia {
        * Specify a partner as the subject parent of this media.
        * </pre>
        *
-       * <code>.bloombox.schema.partner.PartnerKey partner = 3;</code>
+       * <code>string partner = 3;</code>
        */
-      public io.bloombox.schema.partner.PartnerMeta.PartnerKey.Builder getPartnerBuilder() {
-        return getPartnerFieldBuilder().getBuilder();
-      }
-      /**
-       * <pre>
-       * Specify a partner as the subject parent of this media.
-       * </pre>
-       *
-       * <code>.bloombox.schema.partner.PartnerKey partner = 3;</code>
-       */
-      public io.bloombox.schema.partner.PartnerMeta.PartnerKeyOrBuilder getPartnerOrBuilder() {
-        if ((attachmentCase_ == 3) && (partnerBuilder_ != null)) {
-          return partnerBuilder_.getMessageOrBuilder();
-        } else {
-          if (attachmentCase_ == 3) {
-            return (io.bloombox.schema.partner.PartnerMeta.PartnerKey) attachment_;
-          }
-          return io.bloombox.schema.partner.PartnerMeta.PartnerKey.getDefaultInstance();
-        }
-      }
-      /**
-       * <pre>
-       * Specify a partner as the subject parent of this media.
-       * </pre>
-       *
-       * <code>.bloombox.schema.partner.PartnerKey partner = 3;</code>
-       */
-      private com.google.protobuf.SingleFieldBuilderV3<
-          io.bloombox.schema.partner.PartnerMeta.PartnerKey, io.bloombox.schema.partner.PartnerMeta.PartnerKey.Builder, io.bloombox.schema.partner.PartnerMeta.PartnerKeyOrBuilder> 
-          getPartnerFieldBuilder() {
-        if (partnerBuilder_ == null) {
-          if (!(attachmentCase_ == 3)) {
-            attachment_ = io.bloombox.schema.partner.PartnerMeta.PartnerKey.getDefaultInstance();
-          }
-          partnerBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-              io.bloombox.schema.partner.PartnerMeta.PartnerKey, io.bloombox.schema.partner.PartnerMeta.PartnerKey.Builder, io.bloombox.schema.partner.PartnerMeta.PartnerKeyOrBuilder>(
-                  (io.bloombox.schema.partner.PartnerMeta.PartnerKey) attachment_,
-                  getParentForChildren(),
-                  isClean());
-          attachment_ = null;
-        }
+      public Builder setPartnerBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
         attachmentCase_ = 3;
-        onChanged();;
-        return partnerBuilder_;
+        attachment_ = value;
+        onChanged();
+        return this;
       }
 
-      private com.google.protobuf.SingleFieldBuilderV3<
-          io.bloombox.schema.partner.LocationAccountKey.LocationKey, io.bloombox.schema.partner.LocationAccountKey.LocationKey.Builder, io.bloombox.schema.partner.LocationAccountKey.LocationKeyOrBuilder> locationBuilder_;
       /**
        * <pre>
        * Specify a partner and location as the subject parent of this media.
        * </pre>
        *
-       * <code>.bloombox.schema.partner.LocationKey location = 4;</code>
+       * <code>string location = 4;</code>
        */
-      public boolean hasLocation() {
-        return attachmentCase_ == 4;
-      }
-      /**
-       * <pre>
-       * Specify a partner and location as the subject parent of this media.
-       * </pre>
-       *
-       * <code>.bloombox.schema.partner.LocationKey location = 4;</code>
-       */
-      public io.bloombox.schema.partner.LocationAccountKey.LocationKey getLocation() {
-        if (locationBuilder_ == null) {
+      public java.lang.String getLocation() {
+        java.lang.Object ref = "";
+        if (attachmentCase_ == 4) {
+          ref = attachment_;
+        }
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
           if (attachmentCase_ == 4) {
-            return (io.bloombox.schema.partner.LocationAccountKey.LocationKey) attachment_;
+            attachment_ = s;
           }
-          return io.bloombox.schema.partner.LocationAccountKey.LocationKey.getDefaultInstance();
+          return s;
         } else {
-          if (attachmentCase_ == 4) {
-            return locationBuilder_.getMessage();
-          }
-          return io.bloombox.schema.partner.LocationAccountKey.LocationKey.getDefaultInstance();
+          return (java.lang.String) ref;
         }
       }
       /**
@@ -1502,37 +1434,41 @@ public final class AttachedMedia {
        * Specify a partner and location as the subject parent of this media.
        * </pre>
        *
-       * <code>.bloombox.schema.partner.LocationKey location = 4;</code>
+       * <code>string location = 4;</code>
        */
-      public Builder setLocation(io.bloombox.schema.partner.LocationAccountKey.LocationKey value) {
-        if (locationBuilder_ == null) {
-          if (value == null) {
-            throw new NullPointerException();
-          }
-          attachment_ = value;
-          onChanged();
-        } else {
-          locationBuilder_.setMessage(value);
+      public com.google.protobuf.ByteString
+          getLocationBytes() {
+        java.lang.Object ref = "";
+        if (attachmentCase_ == 4) {
+          ref = attachment_;
         }
-        attachmentCase_ = 4;
-        return this;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          if (attachmentCase_ == 4) {
+            attachment_ = b;
+          }
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
       }
       /**
        * <pre>
        * Specify a partner and location as the subject parent of this media.
        * </pre>
        *
-       * <code>.bloombox.schema.partner.LocationKey location = 4;</code>
+       * <code>string location = 4;</code>
        */
       public Builder setLocation(
-          io.bloombox.schema.partner.LocationAccountKey.LocationKey.Builder builderForValue) {
-        if (locationBuilder_ == null) {
-          attachment_ = builderForValue.build();
-          onChanged();
-        } else {
-          locationBuilder_.setMessage(builderForValue.build());
-        }
-        attachmentCase_ = 4;
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  attachmentCase_ = 4;
+        attachment_ = value;
+        onChanged();
         return this;
       }
       /**
@@ -1540,47 +1476,13 @@ public final class AttachedMedia {
        * Specify a partner and location as the subject parent of this media.
        * </pre>
        *
-       * <code>.bloombox.schema.partner.LocationKey location = 4;</code>
-       */
-      public Builder mergeLocation(io.bloombox.schema.partner.LocationAccountKey.LocationKey value) {
-        if (locationBuilder_ == null) {
-          if (attachmentCase_ == 4 &&
-              attachment_ != io.bloombox.schema.partner.LocationAccountKey.LocationKey.getDefaultInstance()) {
-            attachment_ = io.bloombox.schema.partner.LocationAccountKey.LocationKey.newBuilder((io.bloombox.schema.partner.LocationAccountKey.LocationKey) attachment_)
-                .mergeFrom(value).buildPartial();
-          } else {
-            attachment_ = value;
-          }
-          onChanged();
-        } else {
-          if (attachmentCase_ == 4) {
-            locationBuilder_.mergeFrom(value);
-          }
-          locationBuilder_.setMessage(value);
-        }
-        attachmentCase_ = 4;
-        return this;
-      }
-      /**
-       * <pre>
-       * Specify a partner and location as the subject parent of this media.
-       * </pre>
-       *
-       * <code>.bloombox.schema.partner.LocationKey location = 4;</code>
+       * <code>string location = 4;</code>
        */
       public Builder clearLocation() {
-        if (locationBuilder_ == null) {
-          if (attachmentCase_ == 4) {
-            attachmentCase_ = 0;
-            attachment_ = null;
-            onChanged();
-          }
-        } else {
-          if (attachmentCase_ == 4) {
-            attachmentCase_ = 0;
-            attachment_ = null;
-          }
-          locationBuilder_.clear();
+        if (attachmentCase_ == 4) {
+          attachmentCase_ = 0;
+          attachment_ = null;
+          onChanged();
         }
         return this;
       }
@@ -1589,52 +1491,18 @@ public final class AttachedMedia {
        * Specify a partner and location as the subject parent of this media.
        * </pre>
        *
-       * <code>.bloombox.schema.partner.LocationKey location = 4;</code>
+       * <code>string location = 4;</code>
        */
-      public io.bloombox.schema.partner.LocationAccountKey.LocationKey.Builder getLocationBuilder() {
-        return getLocationFieldBuilder().getBuilder();
-      }
-      /**
-       * <pre>
-       * Specify a partner and location as the subject parent of this media.
-       * </pre>
-       *
-       * <code>.bloombox.schema.partner.LocationKey location = 4;</code>
-       */
-      public io.bloombox.schema.partner.LocationAccountKey.LocationKeyOrBuilder getLocationOrBuilder() {
-        if ((attachmentCase_ == 4) && (locationBuilder_ != null)) {
-          return locationBuilder_.getMessageOrBuilder();
-        } else {
-          if (attachmentCase_ == 4) {
-            return (io.bloombox.schema.partner.LocationAccountKey.LocationKey) attachment_;
-          }
-          return io.bloombox.schema.partner.LocationAccountKey.LocationKey.getDefaultInstance();
-        }
-      }
-      /**
-       * <pre>
-       * Specify a partner and location as the subject parent of this media.
-       * </pre>
-       *
-       * <code>.bloombox.schema.partner.LocationKey location = 4;</code>
-       */
-      private com.google.protobuf.SingleFieldBuilderV3<
-          io.bloombox.schema.partner.LocationAccountKey.LocationKey, io.bloombox.schema.partner.LocationAccountKey.LocationKey.Builder, io.bloombox.schema.partner.LocationAccountKey.LocationKeyOrBuilder> 
-          getLocationFieldBuilder() {
-        if (locationBuilder_ == null) {
-          if (!(attachmentCase_ == 4)) {
-            attachment_ = io.bloombox.schema.partner.LocationAccountKey.LocationKey.getDefaultInstance();
-          }
-          locationBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-              io.bloombox.schema.partner.LocationAccountKey.LocationKey, io.bloombox.schema.partner.LocationAccountKey.LocationKey.Builder, io.bloombox.schema.partner.LocationAccountKey.LocationKeyOrBuilder>(
-                  (io.bloombox.schema.partner.LocationAccountKey.LocationKey) attachment_,
-                  getParentForChildren(),
-                  isClean());
-          attachment_ = null;
-        }
+      public Builder setLocationBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
         attachmentCase_ = 4;
-        onChanged();;
-        return locationBuilder_;
+        attachment_ = value;
+        onChanged();
+        return this;
       }
 
       /**
@@ -1678,11 +1546,13 @@ public final class AttachedMedia {
         }
         return this;
       }
+      @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
         return super.setUnknownFieldsProto3(unknownFields);
       }
 
+      @java.lang.Override
       public final Builder mergeUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
         return super.mergeUnknownFields(unknownFields);
@@ -1704,6 +1574,7 @@ public final class AttachedMedia {
 
     private static final com.google.protobuf.Parser<MediaSubject>
         PARSER = new com.google.protobuf.AbstractParser<MediaSubject>() {
+      @java.lang.Override
       public MediaSubject parsePartialFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -1721,6 +1592,7 @@ public final class AttachedMedia {
       return PARSER;
     }
 
+    @java.lang.Override
     public io.opencannabis.schema.media.AttachedMedia.MediaSubject getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
@@ -1753,7 +1625,7 @@ public final class AttachedMedia {
 
     /**
      * <pre>
-     * Upload operation ID, provided by GCS upon initializing a resumable upload operation.
+     * Upload operation ID, provided by GCS upon initializing a resume-able upload operation.
      * </pre>
      *
      * <code>string operation = 2 [(.core.field) = { ... }</code>
@@ -1761,7 +1633,7 @@ public final class AttachedMedia {
     java.lang.String getOperation();
     /**
      * <pre>
-     * Upload operation ID, provided by GCS upon initializing a resumable upload operation.
+     * Upload operation ID, provided by GCS upon initializing a resume-able upload operation.
      * </pre>
      *
      * <code>string operation = 2 [(.core.field) = { ... }</code>
@@ -1796,7 +1668,7 @@ public final class AttachedMedia {
 
     /**
      * <pre>
-     * Mimetype for the file uploaded as part of this media operation. This should be known ahead of time.
+     * Mime-type for the file uploaded as part of this media operation. This should be known ahead of time.
      * </pre>
      *
      * <code>string mime = 4 [(.core.field) = { ... }</code>
@@ -1804,7 +1676,7 @@ public final class AttachedMedia {
     java.lang.String getMime();
     /**
      * <pre>
-     * Mimetype for the file uploaded as part of this media operation. This should be known ahead of time.
+     * Mime-type for the file uploaded as part of this media operation. This should be known ahead of time.
      * </pre>
      *
      * <code>string mime = 4 [(.core.field) = { ... }</code>
@@ -1875,25 +1747,18 @@ public final class AttachedMedia {
      * User account that initiated this upload operation.
      * </pre>
      *
-     * <code>.bloombox.schema.identity.UserKey owner = 9 [(.core.field) = { ... }</code>
+     * <code>string owner = 9 [(.core.field) = { ... }</code>
      */
-    boolean hasOwner();
+    java.lang.String getOwner();
     /**
      * <pre>
      * User account that initiated this upload operation.
      * </pre>
      *
-     * <code>.bloombox.schema.identity.UserKey owner = 9 [(.core.field) = { ... }</code>
+     * <code>string owner = 9 [(.core.field) = { ... }</code>
      */
-    io.bloombox.schema.identity.AppUserKey.UserKey getOwner();
-    /**
-     * <pre>
-     * User account that initiated this upload operation.
-     * </pre>
-     *
-     * <code>.bloombox.schema.identity.UserKey owner = 9 [(.core.field) = { ... }</code>
-     */
-    io.bloombox.schema.identity.AppUserKey.UserKeyOrBuilder getOwnerOrBuilder();
+    com.google.protobuf.ByteString
+        getOwnerBytes();
 
     /**
      * <pre>
@@ -2006,6 +1871,7 @@ public final class AttachedMedia {
       finished_ = false;
       md5_ = "";
       crc32_ = "";
+      owner_ = "";
       path_ = "";
       parent_ = "";
     }
@@ -2034,13 +1900,6 @@ public final class AttachedMedia {
             case 0:
               done = true;
               break;
-            default: {
-              if (!parseUnknownFieldProto3(
-                  input, unknownFields, extensionRegistry, tag)) {
-                done = true;
-              }
-              break;
-            }
             case 10: {
               java.lang.String s = input.readStringRequireUtf8();
 
@@ -2095,16 +1954,9 @@ public final class AttachedMedia {
               break;
             }
             case 74: {
-              io.bloombox.schema.identity.AppUserKey.UserKey.Builder subBuilder = null;
-              if (owner_ != null) {
-                subBuilder = owner_.toBuilder();
-              }
-              owner_ = input.readMessage(io.bloombox.schema.identity.AppUserKey.UserKey.parser(), extensionRegistry);
-              if (subBuilder != null) {
-                subBuilder.mergeFrom(owner_);
-                owner_ = subBuilder.buildPartial();
-              }
+              java.lang.String s = input.readStringRequireUtf8();
 
+              owner_ = s;
               break;
             }
             case 82: {
@@ -2145,6 +1997,13 @@ public final class AttachedMedia {
 
               break;
             }
+            default: {
+              if (!parseUnknownFieldProto3(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
           }
         }
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
@@ -2162,6 +2021,7 @@ public final class AttachedMedia {
       return io.opencannabis.schema.media.AttachedMedia.internal_static_opencannabis_media_MediaUpload_descriptor;
     }
 
+    @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
       return io.opencannabis.schema.media.AttachedMedia.internal_static_opencannabis_media_MediaUpload_fieldAccessorTable
@@ -2217,7 +2077,7 @@ public final class AttachedMedia {
     private volatile java.lang.Object operation_;
     /**
      * <pre>
-     * Upload operation ID, provided by GCS upon initializing a resumable upload operation.
+     * Upload operation ID, provided by GCS upon initializing a resume-able upload operation.
      * </pre>
      *
      * <code>string operation = 2 [(.core.field) = { ... }</code>
@@ -2236,7 +2096,7 @@ public final class AttachedMedia {
     }
     /**
      * <pre>
-     * Upload operation ID, provided by GCS upon initializing a resumable upload operation.
+     * Upload operation ID, provided by GCS upon initializing a resume-able upload operation.
      * </pre>
      *
      * <code>string operation = 2 [(.core.field) = { ... }</code>
@@ -2292,7 +2152,7 @@ public final class AttachedMedia {
     private volatile java.lang.Object mime_;
     /**
      * <pre>
-     * Mimetype for the file uploaded as part of this media operation. This should be known ahead of time.
+     * Mime-type for the file uploaded as part of this media operation. This should be known ahead of time.
      * </pre>
      *
      * <code>string mime = 4 [(.core.field) = { ... }</code>
@@ -2311,7 +2171,7 @@ public final class AttachedMedia {
     }
     /**
      * <pre>
-     * Mimetype for the file uploaded as part of this media operation. This should be known ahead of time.
+     * Mime-type for the file uploaded as part of this media operation. This should be known ahead of time.
      * </pre>
      *
      * <code>string mime = 4 [(.core.field) = { ... }</code>
@@ -2445,36 +2305,45 @@ public final class AttachedMedia {
     }
 
     public static final int OWNER_FIELD_NUMBER = 9;
-    private io.bloombox.schema.identity.AppUserKey.UserKey owner_;
+    private volatile java.lang.Object owner_;
     /**
      * <pre>
      * User account that initiated this upload operation.
      * </pre>
      *
-     * <code>.bloombox.schema.identity.UserKey owner = 9 [(.core.field) = { ... }</code>
+     * <code>string owner = 9 [(.core.field) = { ... }</code>
      */
-    public boolean hasOwner() {
-      return owner_ != null;
+    public java.lang.String getOwner() {
+      java.lang.Object ref = owner_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        owner_ = s;
+        return s;
+      }
     }
     /**
      * <pre>
      * User account that initiated this upload operation.
      * </pre>
      *
-     * <code>.bloombox.schema.identity.UserKey owner = 9 [(.core.field) = { ... }</code>
+     * <code>string owner = 9 [(.core.field) = { ... }</code>
      */
-    public io.bloombox.schema.identity.AppUserKey.UserKey getOwner() {
-      return owner_ == null ? io.bloombox.schema.identity.AppUserKey.UserKey.getDefaultInstance() : owner_;
-    }
-    /**
-     * <pre>
-     * User account that initiated this upload operation.
-     * </pre>
-     *
-     * <code>.bloombox.schema.identity.UserKey owner = 9 [(.core.field) = { ... }</code>
-     */
-    public io.bloombox.schema.identity.AppUserKey.UserKeyOrBuilder getOwnerOrBuilder() {
-      return getOwner();
+    public com.google.protobuf.ByteString
+        getOwnerBytes() {
+      java.lang.Object ref = owner_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        owner_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
     }
 
     public static final int PATH_FIELD_NUMBER = 10;
@@ -2628,6 +2497,7 @@ public final class AttachedMedia {
     }
 
     private byte memoizedIsInitialized = -1;
+    @java.lang.Override
     public final boolean isInitialized() {
       byte isInitialized = memoizedIsInitialized;
       if (isInitialized == 1) return true;
@@ -2637,6 +2507,7 @@ public final class AttachedMedia {
       return true;
     }
 
+    @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
       if (!getTokenBytes().isEmpty()) {
@@ -2663,8 +2534,8 @@ public final class AttachedMedia {
       if (!getCrc32Bytes().isEmpty()) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 8, crc32_);
       }
-      if (owner_ != null) {
-        output.writeMessage(9, getOwner());
+      if (!getOwnerBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 9, owner_);
       }
       if (!getPathBytes().isEmpty()) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 10, path_);
@@ -2681,6 +2552,7 @@ public final class AttachedMedia {
       unknownFields.writeTo(output);
     }
 
+    @java.lang.Override
     public int getSerializedSize() {
       int size = memoizedSize;
       if (size != -1) return size;
@@ -2713,9 +2585,8 @@ public final class AttachedMedia {
       if (!getCrc32Bytes().isEmpty()) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(8, crc32_);
       }
-      if (owner_ != null) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(9, getOwner());
+      if (!getOwnerBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(9, owner_);
       }
       if (!getPathBytes().isEmpty()) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(10, path_);
@@ -2766,11 +2637,8 @@ public final class AttachedMedia {
           .equals(other.getMd5());
       result = result && getCrc32()
           .equals(other.getCrc32());
-      result = result && (hasOwner() == other.hasOwner());
-      if (hasOwner()) {
-        result = result && getOwner()
-            .equals(other.getOwner());
-      }
+      result = result && getOwner()
+          .equals(other.getOwner());
       result = result && getPath()
           .equals(other.getPath());
       result = result && getParent()
@@ -2816,10 +2684,8 @@ public final class AttachedMedia {
       hash = (53 * hash) + getMd5().hashCode();
       hash = (37 * hash) + CRC32_FIELD_NUMBER;
       hash = (53 * hash) + getCrc32().hashCode();
-      if (hasOwner()) {
-        hash = (37 * hash) + OWNER_FIELD_NUMBER;
-        hash = (53 * hash) + getOwner().hashCode();
-      }
+      hash = (37 * hash) + OWNER_FIELD_NUMBER;
+      hash = (53 * hash) + getOwner().hashCode();
       hash = (37 * hash) + PATH_FIELD_NUMBER;
       hash = (53 * hash) + getPath().hashCode();
       hash = (37 * hash) + PARENT_FIELD_NUMBER;
@@ -2907,6 +2773,7 @@ public final class AttachedMedia {
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
 
+    @java.lang.Override
     public Builder newBuilderForType() { return newBuilder(); }
     public static Builder newBuilder() {
       return DEFAULT_INSTANCE.toBuilder();
@@ -2914,6 +2781,7 @@ public final class AttachedMedia {
     public static Builder newBuilder(io.opencannabis.schema.media.AttachedMedia.MediaUpload prototype) {
       return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
     }
+    @java.lang.Override
     public Builder toBuilder() {
       return this == DEFAULT_INSTANCE
           ? new Builder() : new Builder().mergeFrom(this);
@@ -2942,6 +2810,7 @@ public final class AttachedMedia {
         return io.opencannabis.schema.media.AttachedMedia.internal_static_opencannabis_media_MediaUpload_descriptor;
       }
 
+      @java.lang.Override
       protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
           internalGetFieldAccessorTable() {
         return io.opencannabis.schema.media.AttachedMedia.internal_static_opencannabis_media_MediaUpload_fieldAccessorTable
@@ -2964,6 +2833,7 @@ public final class AttachedMedia {
                 .alwaysUseFieldBuilders) {
         }
       }
+      @java.lang.Override
       public Builder clear() {
         super.clear();
         token_ = "";
@@ -2986,12 +2856,8 @@ public final class AttachedMedia {
 
         crc32_ = "";
 
-        if (ownerBuilder_ == null) {
-          owner_ = null;
-        } else {
-          owner_ = null;
-          ownerBuilder_ = null;
-        }
+        owner_ = "";
+
         path_ = "";
 
         parent_ = "";
@@ -3011,15 +2877,18 @@ public final class AttachedMedia {
         return this;
       }
 
+      @java.lang.Override
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
         return io.opencannabis.schema.media.AttachedMedia.internal_static_opencannabis_media_MediaUpload_descriptor;
       }
 
+      @java.lang.Override
       public io.opencannabis.schema.media.AttachedMedia.MediaUpload getDefaultInstanceForType() {
         return io.opencannabis.schema.media.AttachedMedia.MediaUpload.getDefaultInstance();
       }
 
+      @java.lang.Override
       public io.opencannabis.schema.media.AttachedMedia.MediaUpload build() {
         io.opencannabis.schema.media.AttachedMedia.MediaUpload result = buildPartial();
         if (!result.isInitialized()) {
@@ -3028,6 +2897,7 @@ public final class AttachedMedia {
         return result;
       }
 
+      @java.lang.Override
       public io.opencannabis.schema.media.AttachedMedia.MediaUpload buildPartial() {
         io.opencannabis.schema.media.AttachedMedia.MediaUpload result = new io.opencannabis.schema.media.AttachedMedia.MediaUpload(this);
         result.token_ = token_;
@@ -3042,11 +2912,7 @@ public final class AttachedMedia {
         result.finished_ = finished_;
         result.md5_ = md5_;
         result.crc32_ = crc32_;
-        if (ownerBuilder_ == null) {
-          result.owner_ = owner_;
-        } else {
-          result.owner_ = ownerBuilder_.build();
-        }
+        result.owner_ = owner_;
         result.path_ = path_;
         result.parent_ = parent_;
         if (createdBuilder_ == null) {
@@ -3063,32 +2929,39 @@ public final class AttachedMedia {
         return result;
       }
 
+      @java.lang.Override
       public Builder clone() {
         return (Builder) super.clone();
       }
+      @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
         return (Builder) super.setField(field, value);
       }
+      @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
         return (Builder) super.clearField(field);
       }
+      @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
         return (Builder) super.clearOneof(oneof);
       }
+      @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
         return (Builder) super.setRepeatedField(field, index, value);
       }
+      @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
         return (Builder) super.addRepeatedField(field, value);
       }
+      @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
         if (other instanceof io.opencannabis.schema.media.AttachedMedia.MediaUpload) {
           return mergeFrom((io.opencannabis.schema.media.AttachedMedia.MediaUpload)other);
@@ -3129,8 +3002,9 @@ public final class AttachedMedia {
           crc32_ = other.crc32_;
           onChanged();
         }
-        if (other.hasOwner()) {
-          mergeOwner(other.getOwner());
+        if (!other.getOwner().isEmpty()) {
+          owner_ = other.owner_;
+          onChanged();
         }
         if (!other.getPath().isEmpty()) {
           path_ = other.path_;
@@ -3151,10 +3025,12 @@ public final class AttachedMedia {
         return this;
       }
 
+      @java.lang.Override
       public final boolean isInitialized() {
         return true;
       }
 
+      @java.lang.Override
       public Builder mergeFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -3270,7 +3146,7 @@ public final class AttachedMedia {
       private java.lang.Object operation_ = "";
       /**
        * <pre>
-       * Upload operation ID, provided by GCS upon initializing a resumable upload operation.
+       * Upload operation ID, provided by GCS upon initializing a resume-able upload operation.
        * </pre>
        *
        * <code>string operation = 2 [(.core.field) = { ... }</code>
@@ -3289,7 +3165,7 @@ public final class AttachedMedia {
       }
       /**
        * <pre>
-       * Upload operation ID, provided by GCS upon initializing a resumable upload operation.
+       * Upload operation ID, provided by GCS upon initializing a resume-able upload operation.
        * </pre>
        *
        * <code>string operation = 2 [(.core.field) = { ... }</code>
@@ -3309,7 +3185,7 @@ public final class AttachedMedia {
       }
       /**
        * <pre>
-       * Upload operation ID, provided by GCS upon initializing a resumable upload operation.
+       * Upload operation ID, provided by GCS upon initializing a resume-able upload operation.
        * </pre>
        *
        * <code>string operation = 2 [(.core.field) = { ... }</code>
@@ -3326,7 +3202,7 @@ public final class AttachedMedia {
       }
       /**
        * <pre>
-       * Upload operation ID, provided by GCS upon initializing a resumable upload operation.
+       * Upload operation ID, provided by GCS upon initializing a resume-able upload operation.
        * </pre>
        *
        * <code>string operation = 2 [(.core.field) = { ... }</code>
@@ -3339,7 +3215,7 @@ public final class AttachedMedia {
       }
       /**
        * <pre>
-       * Upload operation ID, provided by GCS upon initializing a resumable upload operation.
+       * Upload operation ID, provided by GCS upon initializing a resume-able upload operation.
        * </pre>
        *
        * <code>string operation = 2 [(.core.field) = { ... }</code>
@@ -3512,7 +3388,7 @@ public final class AttachedMedia {
       private java.lang.Object mime_ = "";
       /**
        * <pre>
-       * Mimetype for the file uploaded as part of this media operation. This should be known ahead of time.
+       * Mime-type for the file uploaded as part of this media operation. This should be known ahead of time.
        * </pre>
        *
        * <code>string mime = 4 [(.core.field) = { ... }</code>
@@ -3531,7 +3407,7 @@ public final class AttachedMedia {
       }
       /**
        * <pre>
-       * Mimetype for the file uploaded as part of this media operation. This should be known ahead of time.
+       * Mime-type for the file uploaded as part of this media operation. This should be known ahead of time.
        * </pre>
        *
        * <code>string mime = 4 [(.core.field) = { ... }</code>
@@ -3551,7 +3427,7 @@ public final class AttachedMedia {
       }
       /**
        * <pre>
-       * Mimetype for the file uploaded as part of this media operation. This should be known ahead of time.
+       * Mime-type for the file uploaded as part of this media operation. This should be known ahead of time.
        * </pre>
        *
        * <code>string mime = 4 [(.core.field) = { ... }</code>
@@ -3568,7 +3444,7 @@ public final class AttachedMedia {
       }
       /**
        * <pre>
-       * Mimetype for the file uploaded as part of this media operation. This should be known ahead of time.
+       * Mime-type for the file uploaded as part of this media operation. This should be known ahead of time.
        * </pre>
        *
        * <code>string mime = 4 [(.core.field) = { ... }</code>
@@ -3581,7 +3457,7 @@ public final class AttachedMedia {
       }
       /**
        * <pre>
-       * Mimetype for the file uploaded as part of this media operation. This should be known ahead of time.
+       * Mime-type for the file uploaded as part of this media operation. This should be known ahead of time.
        * </pre>
        *
        * <code>string mime = 4 [(.core.field) = { ... }</code>
@@ -3862,31 +3738,24 @@ public final class AttachedMedia {
         return this;
       }
 
-      private io.bloombox.schema.identity.AppUserKey.UserKey owner_ = null;
-      private com.google.protobuf.SingleFieldBuilderV3<
-          io.bloombox.schema.identity.AppUserKey.UserKey, io.bloombox.schema.identity.AppUserKey.UserKey.Builder, io.bloombox.schema.identity.AppUserKey.UserKeyOrBuilder> ownerBuilder_;
+      private java.lang.Object owner_ = "";
       /**
        * <pre>
        * User account that initiated this upload operation.
        * </pre>
        *
-       * <code>.bloombox.schema.identity.UserKey owner = 9 [(.core.field) = { ... }</code>
+       * <code>string owner = 9 [(.core.field) = { ... }</code>
        */
-      public boolean hasOwner() {
-        return ownerBuilder_ != null || owner_ != null;
-      }
-      /**
-       * <pre>
-       * User account that initiated this upload operation.
-       * </pre>
-       *
-       * <code>.bloombox.schema.identity.UserKey owner = 9 [(.core.field) = { ... }</code>
-       */
-      public io.bloombox.schema.identity.AppUserKey.UserKey getOwner() {
-        if (ownerBuilder_ == null) {
-          return owner_ == null ? io.bloombox.schema.identity.AppUserKey.UserKey.getDefaultInstance() : owner_;
+      public java.lang.String getOwner() {
+        java.lang.Object ref = owner_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          owner_ = s;
+          return s;
         } else {
-          return ownerBuilder_.getMessage();
+          return (java.lang.String) ref;
         }
       }
       /**
@@ -3894,37 +3763,36 @@ public final class AttachedMedia {
        * User account that initiated this upload operation.
        * </pre>
        *
-       * <code>.bloombox.schema.identity.UserKey owner = 9 [(.core.field) = { ... }</code>
+       * <code>string owner = 9 [(.core.field) = { ... }</code>
        */
-      public Builder setOwner(io.bloombox.schema.identity.AppUserKey.UserKey value) {
-        if (ownerBuilder_ == null) {
-          if (value == null) {
-            throw new NullPointerException();
-          }
-          owner_ = value;
-          onChanged();
+      public com.google.protobuf.ByteString
+          getOwnerBytes() {
+        java.lang.Object ref = owner_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          owner_ = b;
+          return b;
         } else {
-          ownerBuilder_.setMessage(value);
+          return (com.google.protobuf.ByteString) ref;
         }
-
-        return this;
       }
       /**
        * <pre>
        * User account that initiated this upload operation.
        * </pre>
        *
-       * <code>.bloombox.schema.identity.UserKey owner = 9 [(.core.field) = { ... }</code>
+       * <code>string owner = 9 [(.core.field) = { ... }</code>
        */
       public Builder setOwner(
-          io.bloombox.schema.identity.AppUserKey.UserKey.Builder builderForValue) {
-        if (ownerBuilder_ == null) {
-          owner_ = builderForValue.build();
-          onChanged();
-        } else {
-          ownerBuilder_.setMessage(builderForValue.build());
-        }
-
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        owner_ = value;
+        onChanged();
         return this;
       }
       /**
@@ -3932,39 +3800,12 @@ public final class AttachedMedia {
        * User account that initiated this upload operation.
        * </pre>
        *
-       * <code>.bloombox.schema.identity.UserKey owner = 9 [(.core.field) = { ... }</code>
-       */
-      public Builder mergeOwner(io.bloombox.schema.identity.AppUserKey.UserKey value) {
-        if (ownerBuilder_ == null) {
-          if (owner_ != null) {
-            owner_ =
-              io.bloombox.schema.identity.AppUserKey.UserKey.newBuilder(owner_).mergeFrom(value).buildPartial();
-          } else {
-            owner_ = value;
-          }
-          onChanged();
-        } else {
-          ownerBuilder_.mergeFrom(value);
-        }
-
-        return this;
-      }
-      /**
-       * <pre>
-       * User account that initiated this upload operation.
-       * </pre>
-       *
-       * <code>.bloombox.schema.identity.UserKey owner = 9 [(.core.field) = { ... }</code>
+       * <code>string owner = 9 [(.core.field) = { ... }</code>
        */
       public Builder clearOwner() {
-        if (ownerBuilder_ == null) {
-          owner_ = null;
-          onChanged();
-        } else {
-          owner_ = null;
-          ownerBuilder_ = null;
-        }
-
+        
+        owner_ = getDefaultInstance().getOwner();
+        onChanged();
         return this;
       }
       /**
@@ -3972,47 +3813,18 @@ public final class AttachedMedia {
        * User account that initiated this upload operation.
        * </pre>
        *
-       * <code>.bloombox.schema.identity.UserKey owner = 9 [(.core.field) = { ... }</code>
+       * <code>string owner = 9 [(.core.field) = { ... }</code>
        */
-      public io.bloombox.schema.identity.AppUserKey.UserKey.Builder getOwnerBuilder() {
+      public Builder setOwnerBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
         
+        owner_ = value;
         onChanged();
-        return getOwnerFieldBuilder().getBuilder();
-      }
-      /**
-       * <pre>
-       * User account that initiated this upload operation.
-       * </pre>
-       *
-       * <code>.bloombox.schema.identity.UserKey owner = 9 [(.core.field) = { ... }</code>
-       */
-      public io.bloombox.schema.identity.AppUserKey.UserKeyOrBuilder getOwnerOrBuilder() {
-        if (ownerBuilder_ != null) {
-          return ownerBuilder_.getMessageOrBuilder();
-        } else {
-          return owner_ == null ?
-              io.bloombox.schema.identity.AppUserKey.UserKey.getDefaultInstance() : owner_;
-        }
-      }
-      /**
-       * <pre>
-       * User account that initiated this upload operation.
-       * </pre>
-       *
-       * <code>.bloombox.schema.identity.UserKey owner = 9 [(.core.field) = { ... }</code>
-       */
-      private com.google.protobuf.SingleFieldBuilderV3<
-          io.bloombox.schema.identity.AppUserKey.UserKey, io.bloombox.schema.identity.AppUserKey.UserKey.Builder, io.bloombox.schema.identity.AppUserKey.UserKeyOrBuilder> 
-          getOwnerFieldBuilder() {
-        if (ownerBuilder_ == null) {
-          ownerBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-              io.bloombox.schema.identity.AppUserKey.UserKey, io.bloombox.schema.identity.AppUserKey.UserKey.Builder, io.bloombox.schema.identity.AppUserKey.UserKeyOrBuilder>(
-                  getOwner(),
-                  getParentForChildren(),
-                  isClean());
-          owner_ = null;
-        }
-        return ownerBuilder_;
+        return this;
       }
 
       private java.lang.Object path_ = "";
@@ -4498,11 +4310,13 @@ public final class AttachedMedia {
         }
         return completedBuilder_;
       }
+      @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
         return super.setUnknownFieldsProto3(unknownFields);
       }
 
+      @java.lang.Override
       public final Builder mergeUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
         return super.mergeUnknownFields(unknownFields);
@@ -4524,6 +4338,7 @@ public final class AttachedMedia {
 
     private static final com.google.protobuf.Parser<MediaUpload>
         PARSER = new com.google.protobuf.AbstractParser<MediaUpload>() {
+      @java.lang.Override
       public MediaUpload parsePartialFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -4541,6 +4356,7 @@ public final class AttachedMedia {
       return PARSER;
     }
 
+    @java.lang.Override
     public io.opencannabis.schema.media.AttachedMedia.MediaUpload getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
@@ -4844,13 +4660,6 @@ public final class AttachedMedia {
             case 0:
               done = true;
               break;
-            default: {
-              if (!parseUnknownFieldProto3(
-                  input, unknownFields, extensionRegistry, tag)) {
-                done = true;
-              }
-              break;
-            }
             case 10: {
               io.opencannabis.schema.media.MediaItemKey.MediaKey.Builder subBuilder = null;
               if (key_ != null) {
@@ -4958,6 +4767,13 @@ public final class AttachedMedia {
               token_ = s;
               break;
             }
+            default: {
+              if (!parseUnknownFieldProto3(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
           }
         }
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
@@ -4975,6 +4791,7 @@ public final class AttachedMedia {
       return io.opencannabis.schema.media.AttachedMedia.internal_static_opencannabis_media_MediaItem_descriptor;
     }
 
+    @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
       return io.opencannabis.schema.media.AttachedMedia.internal_static_opencannabis_media_MediaItem_fieldAccessorTable
@@ -5027,6 +4844,7 @@ public final class AttachedMedia {
      * <code>.opencannabis.media.MediaStatus status = 2 [(.core.field) = { ... }</code>
      */
     public io.opencannabis.schema.media.AttachedMedia.MediaStatus getStatus() {
+      @SuppressWarnings("deprecation")
       io.opencannabis.schema.media.AttachedMedia.MediaStatus result = io.opencannabis.schema.media.AttachedMedia.MediaStatus.valueOf(status_);
       return result == null ? io.opencannabis.schema.media.AttachedMedia.MediaStatus.UNRECOGNIZED : result;
     }
@@ -5210,6 +5028,7 @@ public final class AttachedMedia {
      * <code>.opencannabis.media.MediaPrivacy privacy = 7 [(.core.field) = { ... }</code>
      */
     public io.opencannabis.schema.media.AttachedMedia.MediaPrivacy getPrivacy() {
+      @SuppressWarnings("deprecation")
       io.opencannabis.schema.media.AttachedMedia.MediaPrivacy result = io.opencannabis.schema.media.AttachedMedia.MediaPrivacy.valueOf(privacy_);
       return result == null ? io.opencannabis.schema.media.AttachedMedia.MediaPrivacy.UNRECOGNIZED : result;
     }
@@ -5398,6 +5217,7 @@ public final class AttachedMedia {
     }
 
     private byte memoizedIsInitialized = -1;
+    @java.lang.Override
     public final boolean isInitialized() {
       byte isInitialized = memoizedIsInitialized;
       if (isInitialized == 1) return true;
@@ -5407,6 +5227,7 @@ public final class AttachedMedia {
       return true;
     }
 
+    @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
       if (key_ != null) {
@@ -5448,6 +5269,7 @@ public final class AttachedMedia {
       unknownFields.writeTo(output);
     }
 
+    @java.lang.Override
     public int getSerializedSize() {
       int size = memoizedSize;
       if (size != -1) return size;
@@ -5669,6 +5491,7 @@ public final class AttachedMedia {
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
 
+    @java.lang.Override
     public Builder newBuilderForType() { return newBuilder(); }
     public static Builder newBuilder() {
       return DEFAULT_INSTANCE.toBuilder();
@@ -5676,6 +5499,7 @@ public final class AttachedMedia {
     public static Builder newBuilder(io.opencannabis.schema.media.AttachedMedia.MediaItem prototype) {
       return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
     }
+    @java.lang.Override
     public Builder toBuilder() {
       return this == DEFAULT_INSTANCE
           ? new Builder() : new Builder().mergeFrom(this);
@@ -5705,6 +5529,7 @@ public final class AttachedMedia {
         return io.opencannabis.schema.media.AttachedMedia.internal_static_opencannabis_media_MediaItem_descriptor;
       }
 
+      @java.lang.Override
       protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
           internalGetFieldAccessorTable() {
         return io.opencannabis.schema.media.AttachedMedia.internal_static_opencannabis_media_MediaItem_fieldAccessorTable
@@ -5727,6 +5552,7 @@ public final class AttachedMedia {
                 .alwaysUseFieldBuilders) {
         }
       }
+      @java.lang.Override
       public Builder clear() {
         super.clear();
         if (keyBuilder_ == null) {
@@ -5776,15 +5602,18 @@ public final class AttachedMedia {
         return this;
       }
 
+      @java.lang.Override
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
         return io.opencannabis.schema.media.AttachedMedia.internal_static_opencannabis_media_MediaItem_descriptor;
       }
 
+      @java.lang.Override
       public io.opencannabis.schema.media.AttachedMedia.MediaItem getDefaultInstanceForType() {
         return io.opencannabis.schema.media.AttachedMedia.MediaItem.getDefaultInstance();
       }
 
+      @java.lang.Override
       public io.opencannabis.schema.media.AttachedMedia.MediaItem build() {
         io.opencannabis.schema.media.AttachedMedia.MediaItem result = buildPartial();
         if (!result.isInitialized()) {
@@ -5793,6 +5622,7 @@ public final class AttachedMedia {
         return result;
       }
 
+      @java.lang.Override
       public io.opencannabis.schema.media.AttachedMedia.MediaItem buildPartial() {
         io.opencannabis.schema.media.AttachedMedia.MediaItem result = new io.opencannabis.schema.media.AttachedMedia.MediaItem(this);
         if (keyBuilder_ == null) {
@@ -5831,32 +5661,39 @@ public final class AttachedMedia {
         return result;
       }
 
+      @java.lang.Override
       public Builder clone() {
         return (Builder) super.clone();
       }
+      @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
         return (Builder) super.setField(field, value);
       }
+      @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
         return (Builder) super.clearField(field);
       }
+      @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
         return (Builder) super.clearOneof(oneof);
       }
+      @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
         return (Builder) super.setRepeatedField(field, index, value);
       }
+      @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
         return (Builder) super.addRepeatedField(field, value);
       }
+      @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
         if (other instanceof io.opencannabis.schema.media.AttachedMedia.MediaItem) {
           return mergeFrom((io.opencannabis.schema.media.AttachedMedia.MediaItem)other);
@@ -5914,10 +5751,12 @@ public final class AttachedMedia {
         return this;
       }
 
+      @java.lang.Override
       public final boolean isInitialized() {
         return true;
       }
 
+      @java.lang.Override
       public Builder mergeFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -6108,6 +5947,7 @@ public final class AttachedMedia {
        * <code>.opencannabis.media.MediaStatus status = 2 [(.core.field) = { ... }</code>
        */
       public io.opencannabis.schema.media.AttachedMedia.MediaStatus getStatus() {
+        @SuppressWarnings("deprecation")
         io.opencannabis.schema.media.AttachedMedia.MediaStatus result = io.opencannabis.schema.media.AttachedMedia.MediaStatus.valueOf(status_);
         return result == null ? io.opencannabis.schema.media.AttachedMedia.MediaStatus.UNRECOGNIZED : result;
       }
@@ -6584,6 +6424,7 @@ public final class AttachedMedia {
        * <code>.opencannabis.media.MediaPrivacy privacy = 7 [(.core.field) = { ... }</code>
        */
       public io.opencannabis.schema.media.AttachedMedia.MediaPrivacy getPrivacy() {
+        @SuppressWarnings("deprecation")
         io.opencannabis.schema.media.AttachedMedia.MediaPrivacy result = io.opencannabis.schema.media.AttachedMedia.MediaPrivacy.valueOf(privacy_);
         return result == null ? io.opencannabis.schema.media.AttachedMedia.MediaPrivacy.UNRECOGNIZED : result;
       }
@@ -7253,11 +7094,13 @@ public final class AttachedMedia {
         onChanged();
         return this;
       }
+      @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
         return super.setUnknownFieldsProto3(unknownFields);
       }
 
+      @java.lang.Override
       public final Builder mergeUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
         return super.mergeUnknownFields(unknownFields);
@@ -7279,6 +7122,7 @@ public final class AttachedMedia {
 
     private static final com.google.protobuf.Parser<MediaItem>
         PARSER = new com.google.protobuf.AbstractParser<MediaItem>() {
+      @java.lang.Override
       public MediaItem parsePartialFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -7296,6 +7140,7 @@ public final class AttachedMedia {
       return PARSER;
     }
 
+    @java.lang.Override
     public io.opencannabis.schema.media.AttachedMedia.MediaItem getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
@@ -7331,71 +7176,68 @@ public final class AttachedMedia {
       "y.proto\032\025media/MediaType.proto\032\025base/Pro" +
       "ductKey.proto\032\026identity/UserKey.proto\032\030p" +
       "artner/PartnerKey.proto\032\031partner/Locatio" +
-      "nKey.proto\032\026temporal/Instant.proto\"\322\001\n\014M" +
+      "nKey.proto\032\026temporal/Instant.proto\"\207\001\n\014M" +
       "ediaSubject\0220\n\007product\030\002 \001(\0132\035.opencanna" +
-      "bis.base.ProductKeyH\000\0226\n\007partner\030\003 \001(\0132#" +
-      ".bloombox.schema.partner.PartnerKeyH\000\0228\n" +
-      "\010location\030\004 \001(\0132$.bloombox.schema.partne" +
-      "r.LocationKeyH\000\022\020\n\006global\030\005 \001(\010H\000B\014\n\natt" +
-      "achment\"\302\010\n\013MediaUpload\022E\n\005token\030\001 \001(\tB6" +
-      "\302\265\003\002\010\002\302\265\003,\022*Unique ID/token for this upl" +
-      "oad operation.\022>\n\toperation\030\002 \001(\tB+\302\265\003\'\022" +
-      "%Upload operation ID, assigned by GCS.\022s" +
-      "\n\005media\030\003 \001(\0132\035.opencannabis.media.Media" +
-      "ItemBE\322\265\003\002\010\000\302\265\003;\0229Media item to be attac" +
-      "hed after this operation completes.\022S\n\004m" +
-      "ime\030\004 \001(\tBE\302\265\003A\022?Mimetype for the file u" +
-      "ploaded as part of this media operation." +
-      "\022K\n\004size\030\005 \001(\004B=\302\265\0039\0227Size, in bytes, of" +
-      " the item uploaded in this operation.\022K\n" +
-      "\010finished\030\006 \001(\010B9\302\265\0035\0223Whether this uplo" +
-      "ad operation has completed or not.\0222\n\003md" +
-      "5\030\007 \001(\tB%\302\265\003!\022\037MD5 hash for the data upl" +
-      "oaded.\0226\n\005crc32\030\010 \001(\tB\'\302\265\003#\022!CRC32 hash " +
-      "for the data uploaded.\022j\n\005owner\030\t \001(\0132!." +
-      "bloombox.schema.identity.UserKeyB8\302\265\0034\0222" +
-      "User account that initiated this upload " +
-      "operation.\0227\n\004path\030\n \001(\tB)\302\265\003%\022#Path in " +
-      "GCS to the underlying file.\022G\n\006parent\030\013 " +
-      "\001(\tB7\302\265\0033\0221Previous upload version for t" +
-      "his same media item.\022l\n\007created\030\024 \001(\0132\036." +
-      "opencannabis.temporal.InstantB;\302\265\0037\0225Tim" +
-      "estamp for when this upload operation wa" +
-      "s created.\022o\n\tcompleted\030\025 \001(\0132\036.opencann" +
-      "abis.temporal.InstantB<\302\265\0038\0226imestamp fo" +
-      "r when this upload operation was complet" +
-      "ed.:\017\202\367\002\013\010\002\022\007uploads\"\220\010\n\tMediaItem\022`\n\003ke" +
-      "y\030\001 \001(\0132\034.opencannabis.media.MediaKeyB5\302" +
-      "\265\003\002\010\001\302\265\003+\022)Key uniquely identifying this" +
-      " media item.\022]\n\006status\030\002 \001(\0162\037.opencanna" +
-      "bis.media.MediaStatusB,\302\265\003(\022&Status for " +
-      "this individual media item.\022T\n\004type\030\003 \001(" +
-      "\0132\035.opencannabis.media.MediaTypeB\'\302\265\003#\022!" +
-      "Type of media this is describing.\0221\n\004nam" +
-      "e\030\004 \001(\tB#\302\265\003\037\022\035Friendly name for this me" +
-      "dia.\022.\n\003uri\030\005 \001(\tB!\302\265\003\035\022\033Absolute URI to" +
-      " this media.\022Y\n\013serving_uri\030\006 \001(\tBD\302\265\003@\022" +
-      ">Serving URI for this media, if it diffe" +
-      "rs from the origin URI.\022Z\n\007privacy\030\007 \001(\016" +
-      "2 .opencannabis.media.MediaPrivacyB\'\302\265\003#" +
-      "\022!Privacy mode for this media item.\022b\n\007c" +
-      "reated\030\010 \001(\0132\036.opencannabis.temporal.Ins" +
-      "tantB1\302\265\003-\022+Timestamp for when this reco" +
-      "rd was created.\022i\n\010modified\030\t \001(\0132\036.open" +
-      "cannabis.temporal.InstantB7\302\265\0033\0221Timesta" +
-      "mp for when this record was last modifie" +
-      "d.\022u\n\tpublished\030\n \001(\0132\036.opencannabis.tem" +
-      "poral.InstantBB\302\265\003>\022<Timestamp for when " +
-      "this media item was originally published" +
-      ".\0229\n\005scope\030\013 \001(\tB*\302\265\003&\022$Ownership scope " +
-      "for this media item.\022B\n\005token\030\014 \001(\tB3\302\265\003" +
-      "/\022-Most recent upload token for this med" +
-      "ia item.:\r\202\367\002\t\010\002\022\005media*D\n\013MediaStatus\022\017" +
-      "\n\013PROVISIONED\020\000\022\013\n\007PENDING\020\001\022\014\n\010UPLOADED" +
-      "\020\002\022\t\n\005READY\020\003*<\n\014MediaPrivacy\022\023\n\017DEFAULT" +
-      "_PRIVACY\020\000\022\013\n\007PARTNER\020\001\022\n\n\006PUBLIC\020\002B7\n\034i" +
-      "o.opencannabis.schema.mediaB\rAttachedMed" +
-      "iaH\001P\000\242\002\003OCSb\006proto3"
+      "bis.base.ProductKeyH\000\022\021\n\007partner\030\003 \001(\tH\000" +
+      "\022\022\n\010location\030\004 \001(\tH\000\022\020\n\006global\030\005 \001(\010H\000B\014" +
+      "\n\nattachment\"\240\010\n\013MediaUpload\022E\n\005token\030\001 " +
+      "\001(\tB6\302\265\003\002\010\002\302\265\003,\022*Unique ID/token for thi" +
+      "s upload operation.\022>\n\toperation\030\002 \001(\tB+" +
+      "\302\265\003\'\022%Upload operation ID, assigned by G" +
+      "CS.\022s\n\005media\030\003 \001(\0132\035.opencannabis.media." +
+      "MediaItemBE\322\265\003\002\010\000\302\265\003;\0229Media item to be " +
+      "attached after this operation completes." +
+      "\022S\n\004mime\030\004 \001(\tBE\302\265\003A\022?Mimetype for the f" +
+      "ile uploaded as part of this media opera" +
+      "tion.\022K\n\004size\030\005 \001(\004B=\302\265\0039\0227Size, in byte" +
+      "s, of the item uploaded in this operatio" +
+      "n.\022K\n\010finished\030\006 \001(\010B9\302\265\0035\0223Whether this" +
+      " upload operation has completed or not.\022" +
+      "2\n\003md5\030\007 \001(\tB%\302\265\003!\022\037MD5 hash for the dat" +
+      "a uploaded.\0226\n\005crc32\030\010 \001(\tB\'\302\265\003#\022!CRC32 " +
+      "hash for the data uploaded.\022G\n\005owner\030\t \001" +
+      "(\tB8\302\265\0034\0222User account that initiated th" +
+      "is upload operation.\0227\n\004path\030\n \001(\tB)\302\265\003%" +
+      "\022#Path in GCS to the underlying file.\022G\n" +
+      "\006parent\030\013 \001(\tB7\302\265\0033\0221Previous upload ver" +
+      "sion for this same media item.\022l\n\007create" +
+      "d\030\024 \001(\0132\036.opencannabis.temporal.InstantB" +
+      ";\302\265\0037\0225Timestamp for when this upload op" +
+      "eration was created.\022p\n\tcompleted\030\025 \001(\0132" +
+      "\036.opencannabis.temporal.InstantB=\302\265\0039\0227T" +
+      "imestamp for when this upload operation " +
+      "was completed.:\017\202\367\002\013\010\002\022\007uploads\"\220\010\n\tMedi" +
+      "aItem\022`\n\003key\030\001 \001(\0132\034.opencannabis.media." +
+      "MediaKeyB5\302\265\003\002\010\001\302\265\003+\022)Key uniquely ident" +
+      "ifying this media item.\022]\n\006status\030\002 \001(\0162" +
+      "\037.opencannabis.media.MediaStatusB,\302\265\003(\022&" +
+      "Status for this individual media item.\022T" +
+      "\n\004type\030\003 \001(\0132\035.opencannabis.media.MediaT" +
+      "ypeB\'\302\265\003#\022!Type of media this is describ" +
+      "ing.\0221\n\004name\030\004 \001(\tB#\302\265\003\037\022\035Friendly name " +
+      "for this media.\022.\n\003uri\030\005 \001(\tB!\302\265\003\035\022\033Abso" +
+      "lute URI to this media.\022Y\n\013serving_uri\030\006" +
+      " \001(\tBD\302\265\003@\022>Serving URI for this media, " +
+      "if it differs from the origin URI.\022Z\n\007pr" +
+      "ivacy\030\007 \001(\0162 .opencannabis.media.MediaPr" +
+      "ivacyB\'\302\265\003#\022!Privacy mode for this media" +
+      " item.\022b\n\007created\030\010 \001(\0132\036.opencannabis.t" +
+      "emporal.InstantB1\302\265\003-\022+Timestamp for whe" +
+      "n this record was created.\022i\n\010modified\030\t" +
+      " \001(\0132\036.opencannabis.temporal.InstantB7\302\265" +
+      "\0033\0221Timestamp for when this record was l" +
+      "ast modified.\022u\n\tpublished\030\n \001(\0132\036.openc" +
+      "annabis.temporal.InstantBB\302\265\003>\022<Timestam" +
+      "p for when this media item was originall" +
+      "y published.\0229\n\005scope\030\013 \001(\tB*\302\265\003&\022$Owner" +
+      "ship scope for this media item.\022B\n\005token" +
+      "\030\014 \001(\tB3\302\265\003/\022-Most recent upload token f" +
+      "or this media item.:\r\202\367\002\t\010\002\022\005media*D\n\013Me" +
+      "diaStatus\022\017\n\013PROVISIONED\020\000\022\013\n\007PENDING\020\001\022" +
+      "\014\n\010UPLOADED\020\002\022\t\n\005READY\020\003*<\n\014MediaPrivacy" +
+      "\022\023\n\017DEFAULT_PRIVACY\020\000\022\013\n\007PARTNER\020\001\022\n\n\006PU" +
+      "BLIC\020\002B7\n\034io.opencannabis.schema.mediaB\r" +
+      "AttachedMediaH\001P\000\242\002\003OCSb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {

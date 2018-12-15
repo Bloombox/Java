@@ -1,8 +1,8 @@
 /*
- * Copyright 2018, Bloombox, LLC. All rights reserved.
+ * Copyright 2018, Momentum Ideas, Co. All rights reserved.
  *
  * Source and object computer code contained herein is the private intellectual
- * property of Bloombox, a California Limited Liability Corporation. Use of this
+ * property of Momentum Ideas Co., a Delaware Corporation. Use of this
  * code in source form requires permission in writing before use or the
  * assembly, distribution, or publishing of derivative works, for commercial
  * purposes or any other purpose, from a duly authorized officer of Momentum
@@ -25,11 +25,11 @@ package io.bloombox.schema.services.wallet.v1;
  * Request to list cards for a given user, from their own perspective, optionally filtering by partner/location key.
  * </pre>
  *
- * Protobuf type {@code bloombox.schema.services.wallet.v1.CardList}
+ * Protobuf type {@code bloombox.services.wallet.v1.CardList}
  */
 public  final class CardList extends
     com.google.protobuf.GeneratedMessageV3 implements
-    // @@protoc_insertion_point(message_implements:bloombox.schema.services.wallet.v1.CardList)
+    // @@protoc_insertion_point(message_implements:bloombox.services.wallet.v1.CardList)
     CardListOrBuilder {
 private static final long serialVersionUID = 0L;
   // Use CardList.newBuilder() to construct.
@@ -83,18 +83,19 @@ private static final long serialVersionUID = 0L;
   }
   public static final com.google.protobuf.Descriptors.Descriptor
       getDescriptor() {
-    return io.bloombox.schema.services.wallet.v1.WalletServiceV1.internal_static_bloombox_schema_services_wallet_v1_CardList_descriptor;
+    return io.bloombox.schema.services.wallet.v1.WalletServiceV1.internal_static_bloombox_services_wallet_v1_CardList_descriptor;
   }
 
+  @java.lang.Override
   protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internalGetFieldAccessorTable() {
-    return io.bloombox.schema.services.wallet.v1.WalletServiceV1.internal_static_bloombox_schema_services_wallet_v1_CardList_fieldAccessorTable
+    return io.bloombox.schema.services.wallet.v1.WalletServiceV1.internal_static_bloombox_services_wallet_v1_CardList_fieldAccessorTable
         .ensureFieldAccessorsInitialized(
             io.bloombox.schema.services.wallet.v1.CardList.class, io.bloombox.schema.services.wallet.v1.CardList.Builder.class);
   }
 
   public interface RequestOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:bloombox.schema.services.wallet.v1.CardList.Request)
+      // @@protoc_insertion_point(interface_extends:bloombox.services.wallet.v1.CardList.Request)
       com.google.protobuf.MessageOrBuilder {
 
     /**
@@ -156,11 +157,11 @@ private static final long serialVersionUID = 0L;
    * Request to list cards for a given user.
    * </pre>
    *
-   * Protobuf type {@code bloombox.schema.services.wallet.v1.CardList.Request}
+   * Protobuf type {@code bloombox.services.wallet.v1.CardList.Request}
    */
   public  static final class Request extends
       com.google.protobuf.GeneratedMessageV3 implements
-      // @@protoc_insertion_point(message_implements:bloombox.schema.services.wallet.v1.CardList.Request)
+      // @@protoc_insertion_point(message_implements:bloombox.services.wallet.v1.CardList.Request)
       RequestOrBuilder {
   private static final long serialVersionUID = 0L;
     // Use Request.newBuilder() to construct.
@@ -197,13 +198,6 @@ private static final long serialVersionUID = 0L;
             case 0:
               done = true;
               break;
-            default: {
-              if (!parseUnknownFieldProto3(
-                  input, unknownFields, extensionRegistry, tag)) {
-                done = true;
-              }
-              break;
-            }
             case 10: {
               java.lang.String s = input.readStringRequireUtf8();
 
@@ -222,6 +216,13 @@ private static final long serialVersionUID = 0L;
               passesUpdatedSince_ = s;
               break;
             }
+            default: {
+              if (!parseUnknownFieldProto3(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
           }
         }
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
@@ -236,12 +237,13 @@ private static final long serialVersionUID = 0L;
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return io.bloombox.schema.services.wallet.v1.WalletServiceV1.internal_static_bloombox_schema_services_wallet_v1_CardList_Request_descriptor;
+      return io.bloombox.schema.services.wallet.v1.WalletServiceV1.internal_static_bloombox_services_wallet_v1_CardList_Request_descriptor;
     }
 
+    @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return io.bloombox.schema.services.wallet.v1.WalletServiceV1.internal_static_bloombox_schema_services_wallet_v1_CardList_Request_fieldAccessorTable
+      return io.bloombox.schema.services.wallet.v1.WalletServiceV1.internal_static_bloombox_services_wallet_v1_CardList_Request_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
               io.bloombox.schema.services.wallet.v1.CardList.Request.class, io.bloombox.schema.services.wallet.v1.CardList.Request.Builder.class);
     }
@@ -373,6 +375,7 @@ private static final long serialVersionUID = 0L;
     }
 
     private byte memoizedIsInitialized = -1;
+    @java.lang.Override
     public final boolean isInitialized() {
       byte isInitialized = memoizedIsInitialized;
       if (isInitialized == 1) return true;
@@ -382,6 +385,7 @@ private static final long serialVersionUID = 0L;
       return true;
     }
 
+    @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
       if (!getLibraryBytes().isEmpty()) {
@@ -396,6 +400,7 @@ private static final long serialVersionUID = 0L;
       unknownFields.writeTo(output);
     }
 
+    @java.lang.Override
     public int getSerializedSize() {
       int size = memoizedSize;
       if (size != -1) return size;
@@ -524,6 +529,7 @@ private static final long serialVersionUID = 0L;
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
 
+    @java.lang.Override
     public Builder newBuilderForType() { return newBuilder(); }
     public static Builder newBuilder() {
       return DEFAULT_INSTANCE.toBuilder();
@@ -531,6 +537,7 @@ private static final long serialVersionUID = 0L;
     public static Builder newBuilder(io.bloombox.schema.services.wallet.v1.CardList.Request prototype) {
       return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
     }
+    @java.lang.Override
     public Builder toBuilder() {
       return this == DEFAULT_INSTANCE
           ? new Builder() : new Builder().mergeFrom(this);
@@ -547,20 +554,21 @@ private static final long serialVersionUID = 0L;
      * Request to list cards for a given user.
      * </pre>
      *
-     * Protobuf type {@code bloombox.schema.services.wallet.v1.CardList.Request}
+     * Protobuf type {@code bloombox.services.wallet.v1.CardList.Request}
      */
     public static final class Builder extends
         com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:bloombox.schema.services.wallet.v1.CardList.Request)
+        // @@protoc_insertion_point(builder_implements:bloombox.services.wallet.v1.CardList.Request)
         io.bloombox.schema.services.wallet.v1.CardList.RequestOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return io.bloombox.schema.services.wallet.v1.WalletServiceV1.internal_static_bloombox_schema_services_wallet_v1_CardList_Request_descriptor;
+        return io.bloombox.schema.services.wallet.v1.WalletServiceV1.internal_static_bloombox_services_wallet_v1_CardList_Request_descriptor;
       }
 
+      @java.lang.Override
       protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return io.bloombox.schema.services.wallet.v1.WalletServiceV1.internal_static_bloombox_schema_services_wallet_v1_CardList_Request_fieldAccessorTable
+        return io.bloombox.schema.services.wallet.v1.WalletServiceV1.internal_static_bloombox_services_wallet_v1_CardList_Request_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
                 io.bloombox.schema.services.wallet.v1.CardList.Request.class, io.bloombox.schema.services.wallet.v1.CardList.Request.Builder.class);
       }
@@ -580,6 +588,7 @@ private static final long serialVersionUID = 0L;
                 .alwaysUseFieldBuilders) {
         }
       }
+      @java.lang.Override
       public Builder clear() {
         super.clear();
         library_ = "";
@@ -591,15 +600,18 @@ private static final long serialVersionUID = 0L;
         return this;
       }
 
+      @java.lang.Override
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return io.bloombox.schema.services.wallet.v1.WalletServiceV1.internal_static_bloombox_schema_services_wallet_v1_CardList_Request_descriptor;
+        return io.bloombox.schema.services.wallet.v1.WalletServiceV1.internal_static_bloombox_services_wallet_v1_CardList_Request_descriptor;
       }
 
+      @java.lang.Override
       public io.bloombox.schema.services.wallet.v1.CardList.Request getDefaultInstanceForType() {
         return io.bloombox.schema.services.wallet.v1.CardList.Request.getDefaultInstance();
       }
 
+      @java.lang.Override
       public io.bloombox.schema.services.wallet.v1.CardList.Request build() {
         io.bloombox.schema.services.wallet.v1.CardList.Request result = buildPartial();
         if (!result.isInitialized()) {
@@ -608,6 +620,7 @@ private static final long serialVersionUID = 0L;
         return result;
       }
 
+      @java.lang.Override
       public io.bloombox.schema.services.wallet.v1.CardList.Request buildPartial() {
         io.bloombox.schema.services.wallet.v1.CardList.Request result = new io.bloombox.schema.services.wallet.v1.CardList.Request(this);
         result.library_ = library_;
@@ -617,32 +630,39 @@ private static final long serialVersionUID = 0L;
         return result;
       }
 
+      @java.lang.Override
       public Builder clone() {
         return (Builder) super.clone();
       }
+      @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
         return (Builder) super.setField(field, value);
       }
+      @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
         return (Builder) super.clearField(field);
       }
+      @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
         return (Builder) super.clearOneof(oneof);
       }
+      @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
         return (Builder) super.setRepeatedField(field, index, value);
       }
+      @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
         return (Builder) super.addRepeatedField(field, value);
       }
+      @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
         if (other instanceof io.bloombox.schema.services.wallet.v1.CardList.Request) {
           return mergeFrom((io.bloombox.schema.services.wallet.v1.CardList.Request)other);
@@ -671,10 +691,12 @@ private static final long serialVersionUID = 0L;
         return this;
       }
 
+      @java.lang.Override
       public final boolean isInitialized() {
         return true;
       }
 
+      @java.lang.Override
       public Builder mergeFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -959,21 +981,23 @@ private static final long serialVersionUID = 0L;
         onChanged();
         return this;
       }
+      @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
         return super.setUnknownFieldsProto3(unknownFields);
       }
 
+      @java.lang.Override
       public final Builder mergeUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
         return super.mergeUnknownFields(unknownFields);
       }
 
 
-      // @@protoc_insertion_point(builder_scope:bloombox.schema.services.wallet.v1.CardList.Request)
+      // @@protoc_insertion_point(builder_scope:bloombox.services.wallet.v1.CardList.Request)
     }
 
-    // @@protoc_insertion_point(class_scope:bloombox.schema.services.wallet.v1.CardList.Request)
+    // @@protoc_insertion_point(class_scope:bloombox.services.wallet.v1.CardList.Request)
     private static final io.bloombox.schema.services.wallet.v1.CardList.Request DEFAULT_INSTANCE;
     static {
       DEFAULT_INSTANCE = new io.bloombox.schema.services.wallet.v1.CardList.Request();
@@ -985,6 +1009,7 @@ private static final long serialVersionUID = 0L;
 
     private static final com.google.protobuf.Parser<Request>
         PARSER = new com.google.protobuf.AbstractParser<Request>() {
+      @java.lang.Override
       public Request parsePartialFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -1002,6 +1027,7 @@ private static final long serialVersionUID = 0L;
       return PARSER;
     }
 
+    @java.lang.Override
     public io.bloombox.schema.services.wallet.v1.CardList.Request getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
@@ -1009,7 +1035,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public interface ResponseOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:bloombox.schema.services.wallet.v1.CardList.Response)
+      // @@protoc_insertion_point(interface_extends:bloombox.services.wallet.v1.CardList.Response)
       com.google.protobuf.MessageOrBuilder {
 
     /**
@@ -1070,11 +1096,11 @@ private static final long serialVersionUID = 0L;
    * Response to a request to list cards for a given user.
    * </pre>
    *
-   * Protobuf type {@code bloombox.schema.services.wallet.v1.CardList.Response}
+   * Protobuf type {@code bloombox.services.wallet.v1.CardList.Response}
    */
   public  static final class Response extends
       com.google.protobuf.GeneratedMessageV3 implements
-      // @@protoc_insertion_point(message_implements:bloombox.schema.services.wallet.v1.CardList.Response)
+      // @@protoc_insertion_point(message_implements:bloombox.services.wallet.v1.CardList.Response)
       ResponseOrBuilder {
   private static final long serialVersionUID = 0L;
     // Use Response.newBuilder() to construct.
@@ -1110,13 +1136,6 @@ private static final long serialVersionUID = 0L;
             case 0:
               done = true;
               break;
-            default: {
-              if (!parseUnknownFieldProto3(
-                  input, unknownFields, extensionRegistry, tag)) {
-                done = true;
-              }
-              break;
-            }
             case 10: {
               java.lang.String s = input.readStringRequireUtf8();
 
@@ -1130,6 +1149,13 @@ private static final long serialVersionUID = 0L;
                 mutable_bitField0_ |= 0x00000002;
               }
               serialNumbers_.add(s);
+              break;
+            }
+            default: {
+              if (!parseUnknownFieldProto3(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
               break;
             }
           }
@@ -1149,12 +1175,13 @@ private static final long serialVersionUID = 0L;
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return io.bloombox.schema.services.wallet.v1.WalletServiceV1.internal_static_bloombox_schema_services_wallet_v1_CardList_Response_descriptor;
+      return io.bloombox.schema.services.wallet.v1.WalletServiceV1.internal_static_bloombox_services_wallet_v1_CardList_Response_descriptor;
     }
 
+    @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return io.bloombox.schema.services.wallet.v1.WalletServiceV1.internal_static_bloombox_schema_services_wallet_v1_CardList_Response_fieldAccessorTable
+      return io.bloombox.schema.services.wallet.v1.WalletServiceV1.internal_static_bloombox_services_wallet_v1_CardList_Response_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
               io.bloombox.schema.services.wallet.v1.CardList.Response.class, io.bloombox.schema.services.wallet.v1.CardList.Response.Builder.class);
     }
@@ -1248,6 +1275,7 @@ private static final long serialVersionUID = 0L;
     }
 
     private byte memoizedIsInitialized = -1;
+    @java.lang.Override
     public final boolean isInitialized() {
       byte isInitialized = memoizedIsInitialized;
       if (isInitialized == 1) return true;
@@ -1257,6 +1285,7 @@ private static final long serialVersionUID = 0L;
       return true;
     }
 
+    @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
       if (!getLastUpdatedBytes().isEmpty()) {
@@ -1268,6 +1297,7 @@ private static final long serialVersionUID = 0L;
       unknownFields.writeTo(output);
     }
 
+    @java.lang.Override
     public int getSerializedSize() {
       int size = memoizedSize;
       if (size != -1) return size;
@@ -1396,6 +1426,7 @@ private static final long serialVersionUID = 0L;
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
 
+    @java.lang.Override
     public Builder newBuilderForType() { return newBuilder(); }
     public static Builder newBuilder() {
       return DEFAULT_INSTANCE.toBuilder();
@@ -1403,6 +1434,7 @@ private static final long serialVersionUID = 0L;
     public static Builder newBuilder(io.bloombox.schema.services.wallet.v1.CardList.Response prototype) {
       return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
     }
+    @java.lang.Override
     public Builder toBuilder() {
       return this == DEFAULT_INSTANCE
           ? new Builder() : new Builder().mergeFrom(this);
@@ -1419,20 +1451,21 @@ private static final long serialVersionUID = 0L;
      * Response to a request to list cards for a given user.
      * </pre>
      *
-     * Protobuf type {@code bloombox.schema.services.wallet.v1.CardList.Response}
+     * Protobuf type {@code bloombox.services.wallet.v1.CardList.Response}
      */
     public static final class Builder extends
         com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:bloombox.schema.services.wallet.v1.CardList.Response)
+        // @@protoc_insertion_point(builder_implements:bloombox.services.wallet.v1.CardList.Response)
         io.bloombox.schema.services.wallet.v1.CardList.ResponseOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return io.bloombox.schema.services.wallet.v1.WalletServiceV1.internal_static_bloombox_schema_services_wallet_v1_CardList_Response_descriptor;
+        return io.bloombox.schema.services.wallet.v1.WalletServiceV1.internal_static_bloombox_services_wallet_v1_CardList_Response_descriptor;
       }
 
+      @java.lang.Override
       protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return io.bloombox.schema.services.wallet.v1.WalletServiceV1.internal_static_bloombox_schema_services_wallet_v1_CardList_Response_fieldAccessorTable
+        return io.bloombox.schema.services.wallet.v1.WalletServiceV1.internal_static_bloombox_services_wallet_v1_CardList_Response_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
                 io.bloombox.schema.services.wallet.v1.CardList.Response.class, io.bloombox.schema.services.wallet.v1.CardList.Response.Builder.class);
       }
@@ -1452,6 +1485,7 @@ private static final long serialVersionUID = 0L;
                 .alwaysUseFieldBuilders) {
         }
       }
+      @java.lang.Override
       public Builder clear() {
         super.clear();
         lastUpdated_ = "";
@@ -1461,15 +1495,18 @@ private static final long serialVersionUID = 0L;
         return this;
       }
 
+      @java.lang.Override
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return io.bloombox.schema.services.wallet.v1.WalletServiceV1.internal_static_bloombox_schema_services_wallet_v1_CardList_Response_descriptor;
+        return io.bloombox.schema.services.wallet.v1.WalletServiceV1.internal_static_bloombox_services_wallet_v1_CardList_Response_descriptor;
       }
 
+      @java.lang.Override
       public io.bloombox.schema.services.wallet.v1.CardList.Response getDefaultInstanceForType() {
         return io.bloombox.schema.services.wallet.v1.CardList.Response.getDefaultInstance();
       }
 
+      @java.lang.Override
       public io.bloombox.schema.services.wallet.v1.CardList.Response build() {
         io.bloombox.schema.services.wallet.v1.CardList.Response result = buildPartial();
         if (!result.isInitialized()) {
@@ -1478,6 +1515,7 @@ private static final long serialVersionUID = 0L;
         return result;
       }
 
+      @java.lang.Override
       public io.bloombox.schema.services.wallet.v1.CardList.Response buildPartial() {
         io.bloombox.schema.services.wallet.v1.CardList.Response result = new io.bloombox.schema.services.wallet.v1.CardList.Response(this);
         int from_bitField0_ = bitField0_;
@@ -1493,32 +1531,39 @@ private static final long serialVersionUID = 0L;
         return result;
       }
 
+      @java.lang.Override
       public Builder clone() {
         return (Builder) super.clone();
       }
+      @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
         return (Builder) super.setField(field, value);
       }
+      @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
         return (Builder) super.clearField(field);
       }
+      @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
         return (Builder) super.clearOneof(oneof);
       }
+      @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
         return (Builder) super.setRepeatedField(field, index, value);
       }
+      @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
         return (Builder) super.addRepeatedField(field, value);
       }
+      @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
         if (other instanceof io.bloombox.schema.services.wallet.v1.CardList.Response) {
           return mergeFrom((io.bloombox.schema.services.wallet.v1.CardList.Response)other);
@@ -1549,10 +1594,12 @@ private static final long serialVersionUID = 0L;
         return this;
       }
 
+      @java.lang.Override
       public final boolean isInitialized() {
         return true;
       }
 
+      @java.lang.Override
       public Builder mergeFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -1790,21 +1837,23 @@ private static final long serialVersionUID = 0L;
         onChanged();
         return this;
       }
+      @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
         return super.setUnknownFieldsProto3(unknownFields);
       }
 
+      @java.lang.Override
       public final Builder mergeUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
         return super.mergeUnknownFields(unknownFields);
       }
 
 
-      // @@protoc_insertion_point(builder_scope:bloombox.schema.services.wallet.v1.CardList.Response)
+      // @@protoc_insertion_point(builder_scope:bloombox.services.wallet.v1.CardList.Response)
     }
 
-    // @@protoc_insertion_point(class_scope:bloombox.schema.services.wallet.v1.CardList.Response)
+    // @@protoc_insertion_point(class_scope:bloombox.services.wallet.v1.CardList.Response)
     private static final io.bloombox.schema.services.wallet.v1.CardList.Response DEFAULT_INSTANCE;
     static {
       DEFAULT_INSTANCE = new io.bloombox.schema.services.wallet.v1.CardList.Response();
@@ -1816,6 +1865,7 @@ private static final long serialVersionUID = 0L;
 
     private static final com.google.protobuf.Parser<Response>
         PARSER = new com.google.protobuf.AbstractParser<Response>() {
+      @java.lang.Override
       public Response parsePartialFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -1833,6 +1883,7 @@ private static final long serialVersionUID = 0L;
       return PARSER;
     }
 
+    @java.lang.Override
     public io.bloombox.schema.services.wallet.v1.CardList.Response getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
@@ -1840,7 +1891,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public interface OperationOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:bloombox.schema.services.wallet.v1.CardList.Operation)
+      // @@protoc_insertion_point(interface_extends:bloombox.services.wallet.v1.CardList.Operation)
       com.google.protobuf.MessageOrBuilder {
 
     /**
@@ -1848,7 +1899,7 @@ private static final long serialVersionUID = 0L;
      * Request to list cards for a given user.
      * </pre>
      *
-     * <code>.bloombox.schema.services.wallet.v1.CardList.Request request = 1;</code>
+     * <code>.bloombox.services.wallet.v1.CardList.Request request = 1;</code>
      */
     boolean hasRequest();
     /**
@@ -1856,7 +1907,7 @@ private static final long serialVersionUID = 0L;
      * Request to list cards for a given user.
      * </pre>
      *
-     * <code>.bloombox.schema.services.wallet.v1.CardList.Request request = 1;</code>
+     * <code>.bloombox.services.wallet.v1.CardList.Request request = 1;</code>
      */
     io.bloombox.schema.services.wallet.v1.CardList.Request getRequest();
     /**
@@ -1864,7 +1915,7 @@ private static final long serialVersionUID = 0L;
      * Request to list cards for a given user.
      * </pre>
      *
-     * <code>.bloombox.schema.services.wallet.v1.CardList.Request request = 1;</code>
+     * <code>.bloombox.services.wallet.v1.CardList.Request request = 1;</code>
      */
     io.bloombox.schema.services.wallet.v1.CardList.RequestOrBuilder getRequestOrBuilder();
 
@@ -1873,7 +1924,7 @@ private static final long serialVersionUID = 0L;
      * Response to a request to list cards for a given user.
      * </pre>
      *
-     * <code>.bloombox.schema.services.wallet.v1.CardList.Response response = 2;</code>
+     * <code>.bloombox.services.wallet.v1.CardList.Response response = 2;</code>
      */
     boolean hasResponse();
     /**
@@ -1881,7 +1932,7 @@ private static final long serialVersionUID = 0L;
      * Response to a request to list cards for a given user.
      * </pre>
      *
-     * <code>.bloombox.schema.services.wallet.v1.CardList.Response response = 2;</code>
+     * <code>.bloombox.services.wallet.v1.CardList.Response response = 2;</code>
      */
     io.bloombox.schema.services.wallet.v1.CardList.Response getResponse();
     /**
@@ -1889,7 +1940,7 @@ private static final long serialVersionUID = 0L;
      * Response to a request to list cards for a given user.
      * </pre>
      *
-     * <code>.bloombox.schema.services.wallet.v1.CardList.Response response = 2;</code>
+     * <code>.bloombox.services.wallet.v1.CardList.Response response = 2;</code>
      */
     io.bloombox.schema.services.wallet.v1.CardList.ResponseOrBuilder getResponseOrBuilder();
   }
@@ -1898,11 +1949,11 @@ private static final long serialVersionUID = 0L;
    * Operation to list cards for a given user.
    * </pre>
    *
-   * Protobuf type {@code bloombox.schema.services.wallet.v1.CardList.Operation}
+   * Protobuf type {@code bloombox.services.wallet.v1.CardList.Operation}
    */
   public  static final class Operation extends
       com.google.protobuf.GeneratedMessageV3 implements
-      // @@protoc_insertion_point(message_implements:bloombox.schema.services.wallet.v1.CardList.Operation)
+      // @@protoc_insertion_point(message_implements:bloombox.services.wallet.v1.CardList.Operation)
       OperationOrBuilder {
   private static final long serialVersionUID = 0L;
     // Use Operation.newBuilder() to construct.
@@ -1936,13 +1987,6 @@ private static final long serialVersionUID = 0L;
             case 0:
               done = true;
               break;
-            default: {
-              if (!parseUnknownFieldProto3(
-                  input, unknownFields, extensionRegistry, tag)) {
-                done = true;
-              }
-              break;
-            }
             case 10: {
               io.bloombox.schema.services.wallet.v1.CardList.Request.Builder subBuilder = null;
               if (request_ != null) {
@@ -1969,6 +2013,13 @@ private static final long serialVersionUID = 0L;
 
               break;
             }
+            default: {
+              if (!parseUnknownFieldProto3(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
           }
         }
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
@@ -1983,12 +2034,13 @@ private static final long serialVersionUID = 0L;
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return io.bloombox.schema.services.wallet.v1.WalletServiceV1.internal_static_bloombox_schema_services_wallet_v1_CardList_Operation_descriptor;
+      return io.bloombox.schema.services.wallet.v1.WalletServiceV1.internal_static_bloombox_services_wallet_v1_CardList_Operation_descriptor;
     }
 
+    @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return io.bloombox.schema.services.wallet.v1.WalletServiceV1.internal_static_bloombox_schema_services_wallet_v1_CardList_Operation_fieldAccessorTable
+      return io.bloombox.schema.services.wallet.v1.WalletServiceV1.internal_static_bloombox_services_wallet_v1_CardList_Operation_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
               io.bloombox.schema.services.wallet.v1.CardList.Operation.class, io.bloombox.schema.services.wallet.v1.CardList.Operation.Builder.class);
     }
@@ -2000,7 +2052,7 @@ private static final long serialVersionUID = 0L;
      * Request to list cards for a given user.
      * </pre>
      *
-     * <code>.bloombox.schema.services.wallet.v1.CardList.Request request = 1;</code>
+     * <code>.bloombox.services.wallet.v1.CardList.Request request = 1;</code>
      */
     public boolean hasRequest() {
       return request_ != null;
@@ -2010,7 +2062,7 @@ private static final long serialVersionUID = 0L;
      * Request to list cards for a given user.
      * </pre>
      *
-     * <code>.bloombox.schema.services.wallet.v1.CardList.Request request = 1;</code>
+     * <code>.bloombox.services.wallet.v1.CardList.Request request = 1;</code>
      */
     public io.bloombox.schema.services.wallet.v1.CardList.Request getRequest() {
       return request_ == null ? io.bloombox.schema.services.wallet.v1.CardList.Request.getDefaultInstance() : request_;
@@ -2020,7 +2072,7 @@ private static final long serialVersionUID = 0L;
      * Request to list cards for a given user.
      * </pre>
      *
-     * <code>.bloombox.schema.services.wallet.v1.CardList.Request request = 1;</code>
+     * <code>.bloombox.services.wallet.v1.CardList.Request request = 1;</code>
      */
     public io.bloombox.schema.services.wallet.v1.CardList.RequestOrBuilder getRequestOrBuilder() {
       return getRequest();
@@ -2033,7 +2085,7 @@ private static final long serialVersionUID = 0L;
      * Response to a request to list cards for a given user.
      * </pre>
      *
-     * <code>.bloombox.schema.services.wallet.v1.CardList.Response response = 2;</code>
+     * <code>.bloombox.services.wallet.v1.CardList.Response response = 2;</code>
      */
     public boolean hasResponse() {
       return response_ != null;
@@ -2043,7 +2095,7 @@ private static final long serialVersionUID = 0L;
      * Response to a request to list cards for a given user.
      * </pre>
      *
-     * <code>.bloombox.schema.services.wallet.v1.CardList.Response response = 2;</code>
+     * <code>.bloombox.services.wallet.v1.CardList.Response response = 2;</code>
      */
     public io.bloombox.schema.services.wallet.v1.CardList.Response getResponse() {
       return response_ == null ? io.bloombox.schema.services.wallet.v1.CardList.Response.getDefaultInstance() : response_;
@@ -2053,13 +2105,14 @@ private static final long serialVersionUID = 0L;
      * Response to a request to list cards for a given user.
      * </pre>
      *
-     * <code>.bloombox.schema.services.wallet.v1.CardList.Response response = 2;</code>
+     * <code>.bloombox.services.wallet.v1.CardList.Response response = 2;</code>
      */
     public io.bloombox.schema.services.wallet.v1.CardList.ResponseOrBuilder getResponseOrBuilder() {
       return getResponse();
     }
 
     private byte memoizedIsInitialized = -1;
+    @java.lang.Override
     public final boolean isInitialized() {
       byte isInitialized = memoizedIsInitialized;
       if (isInitialized == 1) return true;
@@ -2069,6 +2122,7 @@ private static final long serialVersionUID = 0L;
       return true;
     }
 
+    @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
       if (request_ != null) {
@@ -2080,6 +2134,7 @@ private static final long serialVersionUID = 0L;
       unknownFields.writeTo(output);
     }
 
+    @java.lang.Override
     public int getSerializedSize() {
       int size = memoizedSize;
       if (size != -1) return size;
@@ -2213,6 +2268,7 @@ private static final long serialVersionUID = 0L;
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
 
+    @java.lang.Override
     public Builder newBuilderForType() { return newBuilder(); }
     public static Builder newBuilder() {
       return DEFAULT_INSTANCE.toBuilder();
@@ -2220,6 +2276,7 @@ private static final long serialVersionUID = 0L;
     public static Builder newBuilder(io.bloombox.schema.services.wallet.v1.CardList.Operation prototype) {
       return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
     }
+    @java.lang.Override
     public Builder toBuilder() {
       return this == DEFAULT_INSTANCE
           ? new Builder() : new Builder().mergeFrom(this);
@@ -2236,20 +2293,21 @@ private static final long serialVersionUID = 0L;
      * Operation to list cards for a given user.
      * </pre>
      *
-     * Protobuf type {@code bloombox.schema.services.wallet.v1.CardList.Operation}
+     * Protobuf type {@code bloombox.services.wallet.v1.CardList.Operation}
      */
     public static final class Builder extends
         com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:bloombox.schema.services.wallet.v1.CardList.Operation)
+        // @@protoc_insertion_point(builder_implements:bloombox.services.wallet.v1.CardList.Operation)
         io.bloombox.schema.services.wallet.v1.CardList.OperationOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return io.bloombox.schema.services.wallet.v1.WalletServiceV1.internal_static_bloombox_schema_services_wallet_v1_CardList_Operation_descriptor;
+        return io.bloombox.schema.services.wallet.v1.WalletServiceV1.internal_static_bloombox_services_wallet_v1_CardList_Operation_descriptor;
       }
 
+      @java.lang.Override
       protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return io.bloombox.schema.services.wallet.v1.WalletServiceV1.internal_static_bloombox_schema_services_wallet_v1_CardList_Operation_fieldAccessorTable
+        return io.bloombox.schema.services.wallet.v1.WalletServiceV1.internal_static_bloombox_services_wallet_v1_CardList_Operation_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
                 io.bloombox.schema.services.wallet.v1.CardList.Operation.class, io.bloombox.schema.services.wallet.v1.CardList.Operation.Builder.class);
       }
@@ -2269,6 +2327,7 @@ private static final long serialVersionUID = 0L;
                 .alwaysUseFieldBuilders) {
         }
       }
+      @java.lang.Override
       public Builder clear() {
         super.clear();
         if (requestBuilder_ == null) {
@@ -2286,15 +2345,18 @@ private static final long serialVersionUID = 0L;
         return this;
       }
 
+      @java.lang.Override
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return io.bloombox.schema.services.wallet.v1.WalletServiceV1.internal_static_bloombox_schema_services_wallet_v1_CardList_Operation_descriptor;
+        return io.bloombox.schema.services.wallet.v1.WalletServiceV1.internal_static_bloombox_services_wallet_v1_CardList_Operation_descriptor;
       }
 
+      @java.lang.Override
       public io.bloombox.schema.services.wallet.v1.CardList.Operation getDefaultInstanceForType() {
         return io.bloombox.schema.services.wallet.v1.CardList.Operation.getDefaultInstance();
       }
 
+      @java.lang.Override
       public io.bloombox.schema.services.wallet.v1.CardList.Operation build() {
         io.bloombox.schema.services.wallet.v1.CardList.Operation result = buildPartial();
         if (!result.isInitialized()) {
@@ -2303,6 +2365,7 @@ private static final long serialVersionUID = 0L;
         return result;
       }
 
+      @java.lang.Override
       public io.bloombox.schema.services.wallet.v1.CardList.Operation buildPartial() {
         io.bloombox.schema.services.wallet.v1.CardList.Operation result = new io.bloombox.schema.services.wallet.v1.CardList.Operation(this);
         if (requestBuilder_ == null) {
@@ -2319,32 +2382,39 @@ private static final long serialVersionUID = 0L;
         return result;
       }
 
+      @java.lang.Override
       public Builder clone() {
         return (Builder) super.clone();
       }
+      @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
         return (Builder) super.setField(field, value);
       }
+      @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
         return (Builder) super.clearField(field);
       }
+      @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
         return (Builder) super.clearOneof(oneof);
       }
+      @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
         return (Builder) super.setRepeatedField(field, index, value);
       }
+      @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
         return (Builder) super.addRepeatedField(field, value);
       }
+      @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
         if (other instanceof io.bloombox.schema.services.wallet.v1.CardList.Operation) {
           return mergeFrom((io.bloombox.schema.services.wallet.v1.CardList.Operation)other);
@@ -2367,10 +2437,12 @@ private static final long serialVersionUID = 0L;
         return this;
       }
 
+      @java.lang.Override
       public final boolean isInitialized() {
         return true;
       }
 
+      @java.lang.Override
       public Builder mergeFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -2397,7 +2469,7 @@ private static final long serialVersionUID = 0L;
        * Request to list cards for a given user.
        * </pre>
        *
-       * <code>.bloombox.schema.services.wallet.v1.CardList.Request request = 1;</code>
+       * <code>.bloombox.services.wallet.v1.CardList.Request request = 1;</code>
        */
       public boolean hasRequest() {
         return requestBuilder_ != null || request_ != null;
@@ -2407,7 +2479,7 @@ private static final long serialVersionUID = 0L;
        * Request to list cards for a given user.
        * </pre>
        *
-       * <code>.bloombox.schema.services.wallet.v1.CardList.Request request = 1;</code>
+       * <code>.bloombox.services.wallet.v1.CardList.Request request = 1;</code>
        */
       public io.bloombox.schema.services.wallet.v1.CardList.Request getRequest() {
         if (requestBuilder_ == null) {
@@ -2421,7 +2493,7 @@ private static final long serialVersionUID = 0L;
        * Request to list cards for a given user.
        * </pre>
        *
-       * <code>.bloombox.schema.services.wallet.v1.CardList.Request request = 1;</code>
+       * <code>.bloombox.services.wallet.v1.CardList.Request request = 1;</code>
        */
       public Builder setRequest(io.bloombox.schema.services.wallet.v1.CardList.Request value) {
         if (requestBuilder_ == null) {
@@ -2441,7 +2513,7 @@ private static final long serialVersionUID = 0L;
        * Request to list cards for a given user.
        * </pre>
        *
-       * <code>.bloombox.schema.services.wallet.v1.CardList.Request request = 1;</code>
+       * <code>.bloombox.services.wallet.v1.CardList.Request request = 1;</code>
        */
       public Builder setRequest(
           io.bloombox.schema.services.wallet.v1.CardList.Request.Builder builderForValue) {
@@ -2459,7 +2531,7 @@ private static final long serialVersionUID = 0L;
        * Request to list cards for a given user.
        * </pre>
        *
-       * <code>.bloombox.schema.services.wallet.v1.CardList.Request request = 1;</code>
+       * <code>.bloombox.services.wallet.v1.CardList.Request request = 1;</code>
        */
       public Builder mergeRequest(io.bloombox.schema.services.wallet.v1.CardList.Request value) {
         if (requestBuilder_ == null) {
@@ -2481,7 +2553,7 @@ private static final long serialVersionUID = 0L;
        * Request to list cards for a given user.
        * </pre>
        *
-       * <code>.bloombox.schema.services.wallet.v1.CardList.Request request = 1;</code>
+       * <code>.bloombox.services.wallet.v1.CardList.Request request = 1;</code>
        */
       public Builder clearRequest() {
         if (requestBuilder_ == null) {
@@ -2499,7 +2571,7 @@ private static final long serialVersionUID = 0L;
        * Request to list cards for a given user.
        * </pre>
        *
-       * <code>.bloombox.schema.services.wallet.v1.CardList.Request request = 1;</code>
+       * <code>.bloombox.services.wallet.v1.CardList.Request request = 1;</code>
        */
       public io.bloombox.schema.services.wallet.v1.CardList.Request.Builder getRequestBuilder() {
         
@@ -2511,7 +2583,7 @@ private static final long serialVersionUID = 0L;
        * Request to list cards for a given user.
        * </pre>
        *
-       * <code>.bloombox.schema.services.wallet.v1.CardList.Request request = 1;</code>
+       * <code>.bloombox.services.wallet.v1.CardList.Request request = 1;</code>
        */
       public io.bloombox.schema.services.wallet.v1.CardList.RequestOrBuilder getRequestOrBuilder() {
         if (requestBuilder_ != null) {
@@ -2526,7 +2598,7 @@ private static final long serialVersionUID = 0L;
        * Request to list cards for a given user.
        * </pre>
        *
-       * <code>.bloombox.schema.services.wallet.v1.CardList.Request request = 1;</code>
+       * <code>.bloombox.services.wallet.v1.CardList.Request request = 1;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
           io.bloombox.schema.services.wallet.v1.CardList.Request, io.bloombox.schema.services.wallet.v1.CardList.Request.Builder, io.bloombox.schema.services.wallet.v1.CardList.RequestOrBuilder> 
@@ -2550,7 +2622,7 @@ private static final long serialVersionUID = 0L;
        * Response to a request to list cards for a given user.
        * </pre>
        *
-       * <code>.bloombox.schema.services.wallet.v1.CardList.Response response = 2;</code>
+       * <code>.bloombox.services.wallet.v1.CardList.Response response = 2;</code>
        */
       public boolean hasResponse() {
         return responseBuilder_ != null || response_ != null;
@@ -2560,7 +2632,7 @@ private static final long serialVersionUID = 0L;
        * Response to a request to list cards for a given user.
        * </pre>
        *
-       * <code>.bloombox.schema.services.wallet.v1.CardList.Response response = 2;</code>
+       * <code>.bloombox.services.wallet.v1.CardList.Response response = 2;</code>
        */
       public io.bloombox.schema.services.wallet.v1.CardList.Response getResponse() {
         if (responseBuilder_ == null) {
@@ -2574,7 +2646,7 @@ private static final long serialVersionUID = 0L;
        * Response to a request to list cards for a given user.
        * </pre>
        *
-       * <code>.bloombox.schema.services.wallet.v1.CardList.Response response = 2;</code>
+       * <code>.bloombox.services.wallet.v1.CardList.Response response = 2;</code>
        */
       public Builder setResponse(io.bloombox.schema.services.wallet.v1.CardList.Response value) {
         if (responseBuilder_ == null) {
@@ -2594,7 +2666,7 @@ private static final long serialVersionUID = 0L;
        * Response to a request to list cards for a given user.
        * </pre>
        *
-       * <code>.bloombox.schema.services.wallet.v1.CardList.Response response = 2;</code>
+       * <code>.bloombox.services.wallet.v1.CardList.Response response = 2;</code>
        */
       public Builder setResponse(
           io.bloombox.schema.services.wallet.v1.CardList.Response.Builder builderForValue) {
@@ -2612,7 +2684,7 @@ private static final long serialVersionUID = 0L;
        * Response to a request to list cards for a given user.
        * </pre>
        *
-       * <code>.bloombox.schema.services.wallet.v1.CardList.Response response = 2;</code>
+       * <code>.bloombox.services.wallet.v1.CardList.Response response = 2;</code>
        */
       public Builder mergeResponse(io.bloombox.schema.services.wallet.v1.CardList.Response value) {
         if (responseBuilder_ == null) {
@@ -2634,7 +2706,7 @@ private static final long serialVersionUID = 0L;
        * Response to a request to list cards for a given user.
        * </pre>
        *
-       * <code>.bloombox.schema.services.wallet.v1.CardList.Response response = 2;</code>
+       * <code>.bloombox.services.wallet.v1.CardList.Response response = 2;</code>
        */
       public Builder clearResponse() {
         if (responseBuilder_ == null) {
@@ -2652,7 +2724,7 @@ private static final long serialVersionUID = 0L;
        * Response to a request to list cards for a given user.
        * </pre>
        *
-       * <code>.bloombox.schema.services.wallet.v1.CardList.Response response = 2;</code>
+       * <code>.bloombox.services.wallet.v1.CardList.Response response = 2;</code>
        */
       public io.bloombox.schema.services.wallet.v1.CardList.Response.Builder getResponseBuilder() {
         
@@ -2664,7 +2736,7 @@ private static final long serialVersionUID = 0L;
        * Response to a request to list cards for a given user.
        * </pre>
        *
-       * <code>.bloombox.schema.services.wallet.v1.CardList.Response response = 2;</code>
+       * <code>.bloombox.services.wallet.v1.CardList.Response response = 2;</code>
        */
       public io.bloombox.schema.services.wallet.v1.CardList.ResponseOrBuilder getResponseOrBuilder() {
         if (responseBuilder_ != null) {
@@ -2679,7 +2751,7 @@ private static final long serialVersionUID = 0L;
        * Response to a request to list cards for a given user.
        * </pre>
        *
-       * <code>.bloombox.schema.services.wallet.v1.CardList.Response response = 2;</code>
+       * <code>.bloombox.services.wallet.v1.CardList.Response response = 2;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
           io.bloombox.schema.services.wallet.v1.CardList.Response, io.bloombox.schema.services.wallet.v1.CardList.Response.Builder, io.bloombox.schema.services.wallet.v1.CardList.ResponseOrBuilder> 
@@ -2694,21 +2766,23 @@ private static final long serialVersionUID = 0L;
         }
         return responseBuilder_;
       }
+      @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
         return super.setUnknownFieldsProto3(unknownFields);
       }
 
+      @java.lang.Override
       public final Builder mergeUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
         return super.mergeUnknownFields(unknownFields);
       }
 
 
-      // @@protoc_insertion_point(builder_scope:bloombox.schema.services.wallet.v1.CardList.Operation)
+      // @@protoc_insertion_point(builder_scope:bloombox.services.wallet.v1.CardList.Operation)
     }
 
-    // @@protoc_insertion_point(class_scope:bloombox.schema.services.wallet.v1.CardList.Operation)
+    // @@protoc_insertion_point(class_scope:bloombox.services.wallet.v1.CardList.Operation)
     private static final io.bloombox.schema.services.wallet.v1.CardList.Operation DEFAULT_INSTANCE;
     static {
       DEFAULT_INSTANCE = new io.bloombox.schema.services.wallet.v1.CardList.Operation();
@@ -2720,6 +2794,7 @@ private static final long serialVersionUID = 0L;
 
     private static final com.google.protobuf.Parser<Operation>
         PARSER = new com.google.protobuf.AbstractParser<Operation>() {
+      @java.lang.Override
       public Operation parsePartialFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -2737,6 +2812,7 @@ private static final long serialVersionUID = 0L;
       return PARSER;
     }
 
+    @java.lang.Override
     public io.bloombox.schema.services.wallet.v1.CardList.Operation getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
@@ -2744,6 +2820,7 @@ private static final long serialVersionUID = 0L;
   }
 
   private byte memoizedIsInitialized = -1;
+  @java.lang.Override
   public final boolean isInitialized() {
     byte isInitialized = memoizedIsInitialized;
     if (isInitialized == 1) return true;
@@ -2753,11 +2830,13 @@ private static final long serialVersionUID = 0L;
     return true;
   }
 
+  @java.lang.Override
   public void writeTo(com.google.protobuf.CodedOutputStream output)
                       throws java.io.IOException {
     unknownFields.writeTo(output);
   }
 
+  @java.lang.Override
   public int getSerializedSize() {
     int size = memoizedSize;
     if (size != -1) return size;
@@ -2865,6 +2944,7 @@ private static final long serialVersionUID = 0L;
         .parseWithIOException(PARSER, input, extensionRegistry);
   }
 
+  @java.lang.Override
   public Builder newBuilderForType() { return newBuilder(); }
   public static Builder newBuilder() {
     return DEFAULT_INSTANCE.toBuilder();
@@ -2872,6 +2952,7 @@ private static final long serialVersionUID = 0L;
   public static Builder newBuilder(io.bloombox.schema.services.wallet.v1.CardList prototype) {
     return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
   }
+  @java.lang.Override
   public Builder toBuilder() {
     return this == DEFAULT_INSTANCE
         ? new Builder() : new Builder().mergeFrom(this);
@@ -2888,20 +2969,21 @@ private static final long serialVersionUID = 0L;
    * Request to list cards for a given user, from their own perspective, optionally filtering by partner/location key.
    * </pre>
    *
-   * Protobuf type {@code bloombox.schema.services.wallet.v1.CardList}
+   * Protobuf type {@code bloombox.services.wallet.v1.CardList}
    */
   public static final class Builder extends
       com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-      // @@protoc_insertion_point(builder_implements:bloombox.schema.services.wallet.v1.CardList)
+      // @@protoc_insertion_point(builder_implements:bloombox.services.wallet.v1.CardList)
       io.bloombox.schema.services.wallet.v1.CardListOrBuilder {
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return io.bloombox.schema.services.wallet.v1.WalletServiceV1.internal_static_bloombox_schema_services_wallet_v1_CardList_descriptor;
+      return io.bloombox.schema.services.wallet.v1.WalletServiceV1.internal_static_bloombox_services_wallet_v1_CardList_descriptor;
     }
 
+    @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return io.bloombox.schema.services.wallet.v1.WalletServiceV1.internal_static_bloombox_schema_services_wallet_v1_CardList_fieldAccessorTable
+      return io.bloombox.schema.services.wallet.v1.WalletServiceV1.internal_static_bloombox_services_wallet_v1_CardList_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
               io.bloombox.schema.services.wallet.v1.CardList.class, io.bloombox.schema.services.wallet.v1.CardList.Builder.class);
     }
@@ -2921,20 +3003,24 @@ private static final long serialVersionUID = 0L;
               .alwaysUseFieldBuilders) {
       }
     }
+    @java.lang.Override
     public Builder clear() {
       super.clear();
       return this;
     }
 
+    @java.lang.Override
     public com.google.protobuf.Descriptors.Descriptor
         getDescriptorForType() {
-      return io.bloombox.schema.services.wallet.v1.WalletServiceV1.internal_static_bloombox_schema_services_wallet_v1_CardList_descriptor;
+      return io.bloombox.schema.services.wallet.v1.WalletServiceV1.internal_static_bloombox_services_wallet_v1_CardList_descriptor;
     }
 
+    @java.lang.Override
     public io.bloombox.schema.services.wallet.v1.CardList getDefaultInstanceForType() {
       return io.bloombox.schema.services.wallet.v1.CardList.getDefaultInstance();
     }
 
+    @java.lang.Override
     public io.bloombox.schema.services.wallet.v1.CardList build() {
       io.bloombox.schema.services.wallet.v1.CardList result = buildPartial();
       if (!result.isInitialized()) {
@@ -2943,38 +3029,46 @@ private static final long serialVersionUID = 0L;
       return result;
     }
 
+    @java.lang.Override
     public io.bloombox.schema.services.wallet.v1.CardList buildPartial() {
       io.bloombox.schema.services.wallet.v1.CardList result = new io.bloombox.schema.services.wallet.v1.CardList(this);
       onBuilt();
       return result;
     }
 
+    @java.lang.Override
     public Builder clone() {
       return (Builder) super.clone();
     }
+    @java.lang.Override
     public Builder setField(
         com.google.protobuf.Descriptors.FieldDescriptor field,
         java.lang.Object value) {
       return (Builder) super.setField(field, value);
     }
+    @java.lang.Override
     public Builder clearField(
         com.google.protobuf.Descriptors.FieldDescriptor field) {
       return (Builder) super.clearField(field);
     }
+    @java.lang.Override
     public Builder clearOneof(
         com.google.protobuf.Descriptors.OneofDescriptor oneof) {
       return (Builder) super.clearOneof(oneof);
     }
+    @java.lang.Override
     public Builder setRepeatedField(
         com.google.protobuf.Descriptors.FieldDescriptor field,
         int index, java.lang.Object value) {
       return (Builder) super.setRepeatedField(field, index, value);
     }
+    @java.lang.Override
     public Builder addRepeatedField(
         com.google.protobuf.Descriptors.FieldDescriptor field,
         java.lang.Object value) {
       return (Builder) super.addRepeatedField(field, value);
     }
+    @java.lang.Override
     public Builder mergeFrom(com.google.protobuf.Message other) {
       if (other instanceof io.bloombox.schema.services.wallet.v1.CardList) {
         return mergeFrom((io.bloombox.schema.services.wallet.v1.CardList)other);
@@ -2991,10 +3085,12 @@ private static final long serialVersionUID = 0L;
       return this;
     }
 
+    @java.lang.Override
     public final boolean isInitialized() {
       return true;
     }
 
+    @java.lang.Override
     public Builder mergeFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -3012,21 +3108,23 @@ private static final long serialVersionUID = 0L;
       }
       return this;
     }
+    @java.lang.Override
     public final Builder setUnknownFields(
         final com.google.protobuf.UnknownFieldSet unknownFields) {
       return super.setUnknownFieldsProto3(unknownFields);
     }
 
+    @java.lang.Override
     public final Builder mergeUnknownFields(
         final com.google.protobuf.UnknownFieldSet unknownFields) {
       return super.mergeUnknownFields(unknownFields);
     }
 
 
-    // @@protoc_insertion_point(builder_scope:bloombox.schema.services.wallet.v1.CardList)
+    // @@protoc_insertion_point(builder_scope:bloombox.services.wallet.v1.CardList)
   }
 
-  // @@protoc_insertion_point(class_scope:bloombox.schema.services.wallet.v1.CardList)
+  // @@protoc_insertion_point(class_scope:bloombox.services.wallet.v1.CardList)
   private static final io.bloombox.schema.services.wallet.v1.CardList DEFAULT_INSTANCE;
   static {
     DEFAULT_INSTANCE = new io.bloombox.schema.services.wallet.v1.CardList();
@@ -3038,6 +3136,7 @@ private static final long serialVersionUID = 0L;
 
   private static final com.google.protobuf.Parser<CardList>
       PARSER = new com.google.protobuf.AbstractParser<CardList>() {
+    @java.lang.Override
     public CardList parsePartialFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -3055,6 +3154,7 @@ private static final long serialVersionUID = 0L;
     return PARSER;
   }
 
+  @java.lang.Override
   public io.bloombox.schema.services.wallet.v1.CardList getDefaultInstanceForType() {
     return DEFAULT_INSTANCE;
   }

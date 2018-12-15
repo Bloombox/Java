@@ -1,8 +1,8 @@
 /*
- * Copyright 2018, Bloombox, LLC. All rights reserved.
+ * Copyright 2018, Momentum Ideas, Co. All rights reserved.
  *
  * Source and object computer code contained herein is the private intellectual
- * property of Bloombox, a California Limited Liability Corporation. Use of this
+ * property of Momentum Ideas Co., a Delaware Corporation. Use of this
  * code in source form requires permission in writing before use or the
  * assembly, distribution, or publishing of derivative works, for commercial
  * purposes or any other purpose, from a duly authorized officer of Momentum
@@ -25,11 +25,11 @@ package io.bloombox.schema.services.auth.v1beta1;
  * Specifies an RPC operation wherein a user has requested an assertion of their identity be validated by the server.
  * </pre>
  *
- * Protobuf type {@code bloombox.schema.services.auth.v1beta1.AuthenticateUser}
+ * Protobuf type {@code bloombox.services.auth.v1beta1.AuthenticateUser}
  */
 public  final class AuthenticateUser extends
     com.google.protobuf.GeneratedMessageV3 implements
-    // @@protoc_insertion_point(message_implements:bloombox.schema.services.auth.v1beta1.AuthenticateUser)
+    // @@protoc_insertion_point(message_implements:bloombox.services.auth.v1beta1.AuthenticateUser)
     AuthenticateUserOrBuilder {
 private static final long serialVersionUID = 0L;
   // Use AuthenticateUser.newBuilder() to construct.
@@ -83,18 +83,19 @@ private static final long serialVersionUID = 0L;
   }
   public static final com.google.protobuf.Descriptors.Descriptor
       getDescriptor() {
-    return io.bloombox.schema.services.auth.v1beta1.AuthServiceBeta1.internal_static_bloombox_schema_services_auth_v1beta1_AuthenticateUser_descriptor;
+    return io.bloombox.schema.services.auth.v1beta1.AuthServiceBeta1.internal_static_bloombox_services_auth_v1beta1_AuthenticateUser_descriptor;
   }
 
+  @java.lang.Override
   protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internalGetFieldAccessorTable() {
-    return io.bloombox.schema.services.auth.v1beta1.AuthServiceBeta1.internal_static_bloombox_schema_services_auth_v1beta1_AuthenticateUser_fieldAccessorTable
+    return io.bloombox.schema.services.auth.v1beta1.AuthServiceBeta1.internal_static_bloombox_services_auth_v1beta1_AuthenticateUser_fieldAccessorTable
         .ensureFieldAccessorsInitialized(
             io.bloombox.schema.services.auth.v1beta1.AuthenticateUser.class, io.bloombox.schema.services.auth.v1beta1.AuthenticateUser.Builder.class);
   }
 
   public interface RequestOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:bloombox.schema.services.auth.v1beta1.AuthenticateUser.Request)
+      // @@protoc_insertion_point(interface_extends:bloombox.services.auth.v1beta1.AuthenticateUser.Request)
       com.google.protobuf.MessageOrBuilder {
 
     /**
@@ -102,7 +103,7 @@ private static final long serialVersionUID = 0L;
      * Provider the user would like to login with.
      * </pre>
      *
-     * <code>.bloombox.schema.identity.IdentityProvider provider = 1;</code>
+     * <code>.bloombox.identity.IdentityProvider provider = 1;</code>
      */
     int getProviderValue();
     /**
@@ -110,7 +111,7 @@ private static final long serialVersionUID = 0L;
      * Provider the user would like to login with.
      * </pre>
      *
-     * <code>.bloombox.schema.identity.IdentityProvider provider = 1;</code>
+     * <code>.bloombox.identity.IdentityProvider provider = 1;</code>
      */
     io.bloombox.schema.identity.AppUser.IdentityProvider getProvider();
 
@@ -119,7 +120,7 @@ private static final long serialVersionUID = 0L;
      * Login credentials provided by the user or Firebase.
      * </pre>
      *
-     * <code>.bloombox.schema.services.auth.v1beta1.AccountAssertion assertion = 2;</code>
+     * <code>.bloombox.services.auth.v1beta1.AccountAssertion assertion = 2;</code>
      */
     boolean hasAssertion();
     /**
@@ -127,7 +128,7 @@ private static final long serialVersionUID = 0L;
      * Login credentials provided by the user or Firebase.
      * </pre>
      *
-     * <code>.bloombox.schema.services.auth.v1beta1.AccountAssertion assertion = 2;</code>
+     * <code>.bloombox.services.auth.v1beta1.AccountAssertion assertion = 2;</code>
      */
     io.bloombox.schema.services.auth.v1beta1.AccountAssertion getAssertion();
     /**
@@ -135,7 +136,7 @@ private static final long serialVersionUID = 0L;
      * Login credentials provided by the user or Firebase.
      * </pre>
      *
-     * <code>.bloombox.schema.services.auth.v1beta1.AccountAssertion assertion = 2;</code>
+     * <code>.bloombox.services.auth.v1beta1.AccountAssertion assertion = 2;</code>
      */
     io.bloombox.schema.services.auth.v1beta1.AccountAssertionOrBuilder getAssertionOrBuilder();
   }
@@ -144,11 +145,11 @@ private static final long serialVersionUID = 0L;
    * Request to authenticate a user.
    * </pre>
    *
-   * Protobuf type {@code bloombox.schema.services.auth.v1beta1.AuthenticateUser.Request}
+   * Protobuf type {@code bloombox.services.auth.v1beta1.AuthenticateUser.Request}
    */
   public  static final class Request extends
       com.google.protobuf.GeneratedMessageV3 implements
-      // @@protoc_insertion_point(message_implements:bloombox.schema.services.auth.v1beta1.AuthenticateUser.Request)
+      // @@protoc_insertion_point(message_implements:bloombox.services.auth.v1beta1.AuthenticateUser.Request)
       RequestOrBuilder {
   private static final long serialVersionUID = 0L;
     // Use Request.newBuilder() to construct.
@@ -183,13 +184,6 @@ private static final long serialVersionUID = 0L;
             case 0:
               done = true;
               break;
-            default: {
-              if (!parseUnknownFieldProto3(
-                  input, unknownFields, extensionRegistry, tag)) {
-                done = true;
-              }
-              break;
-            }
             case 8: {
               int rawValue = input.readEnum();
 
@@ -209,6 +203,13 @@ private static final long serialVersionUID = 0L;
 
               break;
             }
+            default: {
+              if (!parseUnknownFieldProto3(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
           }
         }
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
@@ -223,12 +224,13 @@ private static final long serialVersionUID = 0L;
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return io.bloombox.schema.services.auth.v1beta1.AuthServiceBeta1.internal_static_bloombox_schema_services_auth_v1beta1_AuthenticateUser_Request_descriptor;
+      return io.bloombox.schema.services.auth.v1beta1.AuthServiceBeta1.internal_static_bloombox_services_auth_v1beta1_AuthenticateUser_Request_descriptor;
     }
 
+    @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return io.bloombox.schema.services.auth.v1beta1.AuthServiceBeta1.internal_static_bloombox_schema_services_auth_v1beta1_AuthenticateUser_Request_fieldAccessorTable
+      return io.bloombox.schema.services.auth.v1beta1.AuthServiceBeta1.internal_static_bloombox_services_auth_v1beta1_AuthenticateUser_Request_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
               io.bloombox.schema.services.auth.v1beta1.AuthenticateUser.Request.class, io.bloombox.schema.services.auth.v1beta1.AuthenticateUser.Request.Builder.class);
     }
@@ -240,7 +242,7 @@ private static final long serialVersionUID = 0L;
      * Provider the user would like to login with.
      * </pre>
      *
-     * <code>.bloombox.schema.identity.IdentityProvider provider = 1;</code>
+     * <code>.bloombox.identity.IdentityProvider provider = 1;</code>
      */
     public int getProviderValue() {
       return provider_;
@@ -250,9 +252,10 @@ private static final long serialVersionUID = 0L;
      * Provider the user would like to login with.
      * </pre>
      *
-     * <code>.bloombox.schema.identity.IdentityProvider provider = 1;</code>
+     * <code>.bloombox.identity.IdentityProvider provider = 1;</code>
      */
     public io.bloombox.schema.identity.AppUser.IdentityProvider getProvider() {
+      @SuppressWarnings("deprecation")
       io.bloombox.schema.identity.AppUser.IdentityProvider result = io.bloombox.schema.identity.AppUser.IdentityProvider.valueOf(provider_);
       return result == null ? io.bloombox.schema.identity.AppUser.IdentityProvider.UNRECOGNIZED : result;
     }
@@ -264,7 +267,7 @@ private static final long serialVersionUID = 0L;
      * Login credentials provided by the user or Firebase.
      * </pre>
      *
-     * <code>.bloombox.schema.services.auth.v1beta1.AccountAssertion assertion = 2;</code>
+     * <code>.bloombox.services.auth.v1beta1.AccountAssertion assertion = 2;</code>
      */
     public boolean hasAssertion() {
       return assertion_ != null;
@@ -274,7 +277,7 @@ private static final long serialVersionUID = 0L;
      * Login credentials provided by the user or Firebase.
      * </pre>
      *
-     * <code>.bloombox.schema.services.auth.v1beta1.AccountAssertion assertion = 2;</code>
+     * <code>.bloombox.services.auth.v1beta1.AccountAssertion assertion = 2;</code>
      */
     public io.bloombox.schema.services.auth.v1beta1.AccountAssertion getAssertion() {
       return assertion_ == null ? io.bloombox.schema.services.auth.v1beta1.AccountAssertion.getDefaultInstance() : assertion_;
@@ -284,13 +287,14 @@ private static final long serialVersionUID = 0L;
      * Login credentials provided by the user or Firebase.
      * </pre>
      *
-     * <code>.bloombox.schema.services.auth.v1beta1.AccountAssertion assertion = 2;</code>
+     * <code>.bloombox.services.auth.v1beta1.AccountAssertion assertion = 2;</code>
      */
     public io.bloombox.schema.services.auth.v1beta1.AccountAssertionOrBuilder getAssertionOrBuilder() {
       return getAssertion();
     }
 
     private byte memoizedIsInitialized = -1;
+    @java.lang.Override
     public final boolean isInitialized() {
       byte isInitialized = memoizedIsInitialized;
       if (isInitialized == 1) return true;
@@ -300,6 +304,7 @@ private static final long serialVersionUID = 0L;
       return true;
     }
 
+    @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
       if (provider_ != io.bloombox.schema.identity.AppUser.IdentityProvider.EMAIL.getNumber()) {
@@ -311,6 +316,7 @@ private static final long serialVersionUID = 0L;
       unknownFields.writeTo(output);
     }
 
+    @java.lang.Override
     public int getSerializedSize() {
       int size = memoizedSize;
       if (size != -1) return size;
@@ -438,6 +444,7 @@ private static final long serialVersionUID = 0L;
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
 
+    @java.lang.Override
     public Builder newBuilderForType() { return newBuilder(); }
     public static Builder newBuilder() {
       return DEFAULT_INSTANCE.toBuilder();
@@ -445,6 +452,7 @@ private static final long serialVersionUID = 0L;
     public static Builder newBuilder(io.bloombox.schema.services.auth.v1beta1.AuthenticateUser.Request prototype) {
       return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
     }
+    @java.lang.Override
     public Builder toBuilder() {
       return this == DEFAULT_INSTANCE
           ? new Builder() : new Builder().mergeFrom(this);
@@ -461,20 +469,21 @@ private static final long serialVersionUID = 0L;
      * Request to authenticate a user.
      * </pre>
      *
-     * Protobuf type {@code bloombox.schema.services.auth.v1beta1.AuthenticateUser.Request}
+     * Protobuf type {@code bloombox.services.auth.v1beta1.AuthenticateUser.Request}
      */
     public static final class Builder extends
         com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:bloombox.schema.services.auth.v1beta1.AuthenticateUser.Request)
+        // @@protoc_insertion_point(builder_implements:bloombox.services.auth.v1beta1.AuthenticateUser.Request)
         io.bloombox.schema.services.auth.v1beta1.AuthenticateUser.RequestOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return io.bloombox.schema.services.auth.v1beta1.AuthServiceBeta1.internal_static_bloombox_schema_services_auth_v1beta1_AuthenticateUser_Request_descriptor;
+        return io.bloombox.schema.services.auth.v1beta1.AuthServiceBeta1.internal_static_bloombox_services_auth_v1beta1_AuthenticateUser_Request_descriptor;
       }
 
+      @java.lang.Override
       protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return io.bloombox.schema.services.auth.v1beta1.AuthServiceBeta1.internal_static_bloombox_schema_services_auth_v1beta1_AuthenticateUser_Request_fieldAccessorTable
+        return io.bloombox.schema.services.auth.v1beta1.AuthServiceBeta1.internal_static_bloombox_services_auth_v1beta1_AuthenticateUser_Request_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
                 io.bloombox.schema.services.auth.v1beta1.AuthenticateUser.Request.class, io.bloombox.schema.services.auth.v1beta1.AuthenticateUser.Request.Builder.class);
       }
@@ -494,6 +503,7 @@ private static final long serialVersionUID = 0L;
                 .alwaysUseFieldBuilders) {
         }
       }
+      @java.lang.Override
       public Builder clear() {
         super.clear();
         provider_ = 0;
@@ -507,15 +517,18 @@ private static final long serialVersionUID = 0L;
         return this;
       }
 
+      @java.lang.Override
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return io.bloombox.schema.services.auth.v1beta1.AuthServiceBeta1.internal_static_bloombox_schema_services_auth_v1beta1_AuthenticateUser_Request_descriptor;
+        return io.bloombox.schema.services.auth.v1beta1.AuthServiceBeta1.internal_static_bloombox_services_auth_v1beta1_AuthenticateUser_Request_descriptor;
       }
 
+      @java.lang.Override
       public io.bloombox.schema.services.auth.v1beta1.AuthenticateUser.Request getDefaultInstanceForType() {
         return io.bloombox.schema.services.auth.v1beta1.AuthenticateUser.Request.getDefaultInstance();
       }
 
+      @java.lang.Override
       public io.bloombox.schema.services.auth.v1beta1.AuthenticateUser.Request build() {
         io.bloombox.schema.services.auth.v1beta1.AuthenticateUser.Request result = buildPartial();
         if (!result.isInitialized()) {
@@ -524,6 +537,7 @@ private static final long serialVersionUID = 0L;
         return result;
       }
 
+      @java.lang.Override
       public io.bloombox.schema.services.auth.v1beta1.AuthenticateUser.Request buildPartial() {
         io.bloombox.schema.services.auth.v1beta1.AuthenticateUser.Request result = new io.bloombox.schema.services.auth.v1beta1.AuthenticateUser.Request(this);
         result.provider_ = provider_;
@@ -536,32 +550,39 @@ private static final long serialVersionUID = 0L;
         return result;
       }
 
+      @java.lang.Override
       public Builder clone() {
         return (Builder) super.clone();
       }
+      @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
         return (Builder) super.setField(field, value);
       }
+      @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
         return (Builder) super.clearField(field);
       }
+      @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
         return (Builder) super.clearOneof(oneof);
       }
+      @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
         return (Builder) super.setRepeatedField(field, index, value);
       }
+      @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
         return (Builder) super.addRepeatedField(field, value);
       }
+      @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
         if (other instanceof io.bloombox.schema.services.auth.v1beta1.AuthenticateUser.Request) {
           return mergeFrom((io.bloombox.schema.services.auth.v1beta1.AuthenticateUser.Request)other);
@@ -584,10 +605,12 @@ private static final long serialVersionUID = 0L;
         return this;
       }
 
+      @java.lang.Override
       public final boolean isInitialized() {
         return true;
       }
 
+      @java.lang.Override
       public Builder mergeFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -612,7 +635,7 @@ private static final long serialVersionUID = 0L;
        * Provider the user would like to login with.
        * </pre>
        *
-       * <code>.bloombox.schema.identity.IdentityProvider provider = 1;</code>
+       * <code>.bloombox.identity.IdentityProvider provider = 1;</code>
        */
       public int getProviderValue() {
         return provider_;
@@ -622,7 +645,7 @@ private static final long serialVersionUID = 0L;
        * Provider the user would like to login with.
        * </pre>
        *
-       * <code>.bloombox.schema.identity.IdentityProvider provider = 1;</code>
+       * <code>.bloombox.identity.IdentityProvider provider = 1;</code>
        */
       public Builder setProviderValue(int value) {
         provider_ = value;
@@ -634,9 +657,10 @@ private static final long serialVersionUID = 0L;
        * Provider the user would like to login with.
        * </pre>
        *
-       * <code>.bloombox.schema.identity.IdentityProvider provider = 1;</code>
+       * <code>.bloombox.identity.IdentityProvider provider = 1;</code>
        */
       public io.bloombox.schema.identity.AppUser.IdentityProvider getProvider() {
+        @SuppressWarnings("deprecation")
         io.bloombox.schema.identity.AppUser.IdentityProvider result = io.bloombox.schema.identity.AppUser.IdentityProvider.valueOf(provider_);
         return result == null ? io.bloombox.schema.identity.AppUser.IdentityProvider.UNRECOGNIZED : result;
       }
@@ -645,7 +669,7 @@ private static final long serialVersionUID = 0L;
        * Provider the user would like to login with.
        * </pre>
        *
-       * <code>.bloombox.schema.identity.IdentityProvider provider = 1;</code>
+       * <code>.bloombox.identity.IdentityProvider provider = 1;</code>
        */
       public Builder setProvider(io.bloombox.schema.identity.AppUser.IdentityProvider value) {
         if (value == null) {
@@ -661,7 +685,7 @@ private static final long serialVersionUID = 0L;
        * Provider the user would like to login with.
        * </pre>
        *
-       * <code>.bloombox.schema.identity.IdentityProvider provider = 1;</code>
+       * <code>.bloombox.identity.IdentityProvider provider = 1;</code>
        */
       public Builder clearProvider() {
         
@@ -678,7 +702,7 @@ private static final long serialVersionUID = 0L;
        * Login credentials provided by the user or Firebase.
        * </pre>
        *
-       * <code>.bloombox.schema.services.auth.v1beta1.AccountAssertion assertion = 2;</code>
+       * <code>.bloombox.services.auth.v1beta1.AccountAssertion assertion = 2;</code>
        */
       public boolean hasAssertion() {
         return assertionBuilder_ != null || assertion_ != null;
@@ -688,7 +712,7 @@ private static final long serialVersionUID = 0L;
        * Login credentials provided by the user or Firebase.
        * </pre>
        *
-       * <code>.bloombox.schema.services.auth.v1beta1.AccountAssertion assertion = 2;</code>
+       * <code>.bloombox.services.auth.v1beta1.AccountAssertion assertion = 2;</code>
        */
       public io.bloombox.schema.services.auth.v1beta1.AccountAssertion getAssertion() {
         if (assertionBuilder_ == null) {
@@ -702,7 +726,7 @@ private static final long serialVersionUID = 0L;
        * Login credentials provided by the user or Firebase.
        * </pre>
        *
-       * <code>.bloombox.schema.services.auth.v1beta1.AccountAssertion assertion = 2;</code>
+       * <code>.bloombox.services.auth.v1beta1.AccountAssertion assertion = 2;</code>
        */
       public Builder setAssertion(io.bloombox.schema.services.auth.v1beta1.AccountAssertion value) {
         if (assertionBuilder_ == null) {
@@ -722,7 +746,7 @@ private static final long serialVersionUID = 0L;
        * Login credentials provided by the user or Firebase.
        * </pre>
        *
-       * <code>.bloombox.schema.services.auth.v1beta1.AccountAssertion assertion = 2;</code>
+       * <code>.bloombox.services.auth.v1beta1.AccountAssertion assertion = 2;</code>
        */
       public Builder setAssertion(
           io.bloombox.schema.services.auth.v1beta1.AccountAssertion.Builder builderForValue) {
@@ -740,7 +764,7 @@ private static final long serialVersionUID = 0L;
        * Login credentials provided by the user or Firebase.
        * </pre>
        *
-       * <code>.bloombox.schema.services.auth.v1beta1.AccountAssertion assertion = 2;</code>
+       * <code>.bloombox.services.auth.v1beta1.AccountAssertion assertion = 2;</code>
        */
       public Builder mergeAssertion(io.bloombox.schema.services.auth.v1beta1.AccountAssertion value) {
         if (assertionBuilder_ == null) {
@@ -762,7 +786,7 @@ private static final long serialVersionUID = 0L;
        * Login credentials provided by the user or Firebase.
        * </pre>
        *
-       * <code>.bloombox.schema.services.auth.v1beta1.AccountAssertion assertion = 2;</code>
+       * <code>.bloombox.services.auth.v1beta1.AccountAssertion assertion = 2;</code>
        */
       public Builder clearAssertion() {
         if (assertionBuilder_ == null) {
@@ -780,7 +804,7 @@ private static final long serialVersionUID = 0L;
        * Login credentials provided by the user or Firebase.
        * </pre>
        *
-       * <code>.bloombox.schema.services.auth.v1beta1.AccountAssertion assertion = 2;</code>
+       * <code>.bloombox.services.auth.v1beta1.AccountAssertion assertion = 2;</code>
        */
       public io.bloombox.schema.services.auth.v1beta1.AccountAssertion.Builder getAssertionBuilder() {
         
@@ -792,7 +816,7 @@ private static final long serialVersionUID = 0L;
        * Login credentials provided by the user or Firebase.
        * </pre>
        *
-       * <code>.bloombox.schema.services.auth.v1beta1.AccountAssertion assertion = 2;</code>
+       * <code>.bloombox.services.auth.v1beta1.AccountAssertion assertion = 2;</code>
        */
       public io.bloombox.schema.services.auth.v1beta1.AccountAssertionOrBuilder getAssertionOrBuilder() {
         if (assertionBuilder_ != null) {
@@ -807,7 +831,7 @@ private static final long serialVersionUID = 0L;
        * Login credentials provided by the user or Firebase.
        * </pre>
        *
-       * <code>.bloombox.schema.services.auth.v1beta1.AccountAssertion assertion = 2;</code>
+       * <code>.bloombox.services.auth.v1beta1.AccountAssertion assertion = 2;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
           io.bloombox.schema.services.auth.v1beta1.AccountAssertion, io.bloombox.schema.services.auth.v1beta1.AccountAssertion.Builder, io.bloombox.schema.services.auth.v1beta1.AccountAssertionOrBuilder> 
@@ -822,21 +846,23 @@ private static final long serialVersionUID = 0L;
         }
         return assertionBuilder_;
       }
+      @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
         return super.setUnknownFieldsProto3(unknownFields);
       }
 
+      @java.lang.Override
       public final Builder mergeUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
         return super.mergeUnknownFields(unknownFields);
       }
 
 
-      // @@protoc_insertion_point(builder_scope:bloombox.schema.services.auth.v1beta1.AuthenticateUser.Request)
+      // @@protoc_insertion_point(builder_scope:bloombox.services.auth.v1beta1.AuthenticateUser.Request)
     }
 
-    // @@protoc_insertion_point(class_scope:bloombox.schema.services.auth.v1beta1.AuthenticateUser.Request)
+    // @@protoc_insertion_point(class_scope:bloombox.services.auth.v1beta1.AuthenticateUser.Request)
     private static final io.bloombox.schema.services.auth.v1beta1.AuthenticateUser.Request DEFAULT_INSTANCE;
     static {
       DEFAULT_INSTANCE = new io.bloombox.schema.services.auth.v1beta1.AuthenticateUser.Request();
@@ -848,6 +874,7 @@ private static final long serialVersionUID = 0L;
 
     private static final com.google.protobuf.Parser<Request>
         PARSER = new com.google.protobuf.AbstractParser<Request>() {
+      @java.lang.Override
       public Request parsePartialFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -865,6 +892,7 @@ private static final long serialVersionUID = 0L;
       return PARSER;
     }
 
+    @java.lang.Override
     public io.bloombox.schema.services.auth.v1beta1.AuthenticateUser.Request getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
@@ -872,7 +900,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public interface ResponseOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:bloombox.schema.services.auth.v1beta1.AuthenticateUser.Response)
+      // @@protoc_insertion_point(interface_extends:bloombox.services.auth.v1beta1.AuthenticateUser.Response)
       com.google.protobuf.MessageOrBuilder {
 
     /**
@@ -934,11 +962,11 @@ private static final long serialVersionUID = 0L;
    * Response to a request to authenticate a user.
    * </pre>
    *
-   * Protobuf type {@code bloombox.schema.services.auth.v1beta1.AuthenticateUser.Response}
+   * Protobuf type {@code bloombox.services.auth.v1beta1.AuthenticateUser.Response}
    */
   public  static final class Response extends
       com.google.protobuf.GeneratedMessageV3 implements
-      // @@protoc_insertion_point(message_implements:bloombox.schema.services.auth.v1beta1.AuthenticateUser.Response)
+      // @@protoc_insertion_point(message_implements:bloombox.services.auth.v1beta1.AuthenticateUser.Response)
       ResponseOrBuilder {
   private static final long serialVersionUID = 0L;
     // Use Response.newBuilder() to construct.
@@ -975,13 +1003,6 @@ private static final long serialVersionUID = 0L;
             case 0:
               done = true;
               break;
-            default: {
-              if (!parseUnknownFieldProto3(
-                  input, unknownFields, extensionRegistry, tag)) {
-                done = true;
-              }
-              break;
-            }
             case 10: {
               java.lang.String s = input.readStringRequireUtf8();
 
@@ -1000,6 +1021,13 @@ private static final long serialVersionUID = 0L;
               token_ = s;
               break;
             }
+            default: {
+              if (!parseUnknownFieldProto3(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
           }
         }
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
@@ -1014,12 +1042,13 @@ private static final long serialVersionUID = 0L;
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return io.bloombox.schema.services.auth.v1beta1.AuthServiceBeta1.internal_static_bloombox_schema_services_auth_v1beta1_AuthenticateUser_Response_descriptor;
+      return io.bloombox.schema.services.auth.v1beta1.AuthServiceBeta1.internal_static_bloombox_services_auth_v1beta1_AuthenticateUser_Response_descriptor;
     }
 
+    @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return io.bloombox.schema.services.auth.v1beta1.AuthServiceBeta1.internal_static_bloombox_schema_services_auth_v1beta1_AuthenticateUser_Response_fieldAccessorTable
+      return io.bloombox.schema.services.auth.v1beta1.AuthServiceBeta1.internal_static_bloombox_services_auth_v1beta1_AuthenticateUser_Response_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
               io.bloombox.schema.services.auth.v1beta1.AuthenticateUser.Response.class, io.bloombox.schema.services.auth.v1beta1.AuthenticateUser.Response.Builder.class);
     }
@@ -1151,6 +1180,7 @@ private static final long serialVersionUID = 0L;
     }
 
     private byte memoizedIsInitialized = -1;
+    @java.lang.Override
     public final boolean isInitialized() {
       byte isInitialized = memoizedIsInitialized;
       if (isInitialized == 1) return true;
@@ -1160,6 +1190,7 @@ private static final long serialVersionUID = 0L;
       return true;
     }
 
+    @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
       if (!getUidBytes().isEmpty()) {
@@ -1174,6 +1205,7 @@ private static final long serialVersionUID = 0L;
       unknownFields.writeTo(output);
     }
 
+    @java.lang.Override
     public int getSerializedSize() {
       int size = memoizedSize;
       if (size != -1) return size;
@@ -1302,6 +1334,7 @@ private static final long serialVersionUID = 0L;
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
 
+    @java.lang.Override
     public Builder newBuilderForType() { return newBuilder(); }
     public static Builder newBuilder() {
       return DEFAULT_INSTANCE.toBuilder();
@@ -1309,6 +1342,7 @@ private static final long serialVersionUID = 0L;
     public static Builder newBuilder(io.bloombox.schema.services.auth.v1beta1.AuthenticateUser.Response prototype) {
       return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
     }
+    @java.lang.Override
     public Builder toBuilder() {
       return this == DEFAULT_INSTANCE
           ? new Builder() : new Builder().mergeFrom(this);
@@ -1325,20 +1359,21 @@ private static final long serialVersionUID = 0L;
      * Response to a request to authenticate a user.
      * </pre>
      *
-     * Protobuf type {@code bloombox.schema.services.auth.v1beta1.AuthenticateUser.Response}
+     * Protobuf type {@code bloombox.services.auth.v1beta1.AuthenticateUser.Response}
      */
     public static final class Builder extends
         com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:bloombox.schema.services.auth.v1beta1.AuthenticateUser.Response)
+        // @@protoc_insertion_point(builder_implements:bloombox.services.auth.v1beta1.AuthenticateUser.Response)
         io.bloombox.schema.services.auth.v1beta1.AuthenticateUser.ResponseOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return io.bloombox.schema.services.auth.v1beta1.AuthServiceBeta1.internal_static_bloombox_schema_services_auth_v1beta1_AuthenticateUser_Response_descriptor;
+        return io.bloombox.schema.services.auth.v1beta1.AuthServiceBeta1.internal_static_bloombox_services_auth_v1beta1_AuthenticateUser_Response_descriptor;
       }
 
+      @java.lang.Override
       protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return io.bloombox.schema.services.auth.v1beta1.AuthServiceBeta1.internal_static_bloombox_schema_services_auth_v1beta1_AuthenticateUser_Response_fieldAccessorTable
+        return io.bloombox.schema.services.auth.v1beta1.AuthServiceBeta1.internal_static_bloombox_services_auth_v1beta1_AuthenticateUser_Response_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
                 io.bloombox.schema.services.auth.v1beta1.AuthenticateUser.Response.class, io.bloombox.schema.services.auth.v1beta1.AuthenticateUser.Response.Builder.class);
       }
@@ -1358,6 +1393,7 @@ private static final long serialVersionUID = 0L;
                 .alwaysUseFieldBuilders) {
         }
       }
+      @java.lang.Override
       public Builder clear() {
         super.clear();
         uid_ = "";
@@ -1369,15 +1405,18 @@ private static final long serialVersionUID = 0L;
         return this;
       }
 
+      @java.lang.Override
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return io.bloombox.schema.services.auth.v1beta1.AuthServiceBeta1.internal_static_bloombox_schema_services_auth_v1beta1_AuthenticateUser_Response_descriptor;
+        return io.bloombox.schema.services.auth.v1beta1.AuthServiceBeta1.internal_static_bloombox_services_auth_v1beta1_AuthenticateUser_Response_descriptor;
       }
 
+      @java.lang.Override
       public io.bloombox.schema.services.auth.v1beta1.AuthenticateUser.Response getDefaultInstanceForType() {
         return io.bloombox.schema.services.auth.v1beta1.AuthenticateUser.Response.getDefaultInstance();
       }
 
+      @java.lang.Override
       public io.bloombox.schema.services.auth.v1beta1.AuthenticateUser.Response build() {
         io.bloombox.schema.services.auth.v1beta1.AuthenticateUser.Response result = buildPartial();
         if (!result.isInitialized()) {
@@ -1386,6 +1425,7 @@ private static final long serialVersionUID = 0L;
         return result;
       }
 
+      @java.lang.Override
       public io.bloombox.schema.services.auth.v1beta1.AuthenticateUser.Response buildPartial() {
         io.bloombox.schema.services.auth.v1beta1.AuthenticateUser.Response result = new io.bloombox.schema.services.auth.v1beta1.AuthenticateUser.Response(this);
         result.uid_ = uid_;
@@ -1395,32 +1435,39 @@ private static final long serialVersionUID = 0L;
         return result;
       }
 
+      @java.lang.Override
       public Builder clone() {
         return (Builder) super.clone();
       }
+      @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
         return (Builder) super.setField(field, value);
       }
+      @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
         return (Builder) super.clearField(field);
       }
+      @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
         return (Builder) super.clearOneof(oneof);
       }
+      @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
         return (Builder) super.setRepeatedField(field, index, value);
       }
+      @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
         return (Builder) super.addRepeatedField(field, value);
       }
+      @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
         if (other instanceof io.bloombox.schema.services.auth.v1beta1.AuthenticateUser.Response) {
           return mergeFrom((io.bloombox.schema.services.auth.v1beta1.AuthenticateUser.Response)other);
@@ -1449,10 +1496,12 @@ private static final long serialVersionUID = 0L;
         return this;
       }
 
+      @java.lang.Override
       public final boolean isInitialized() {
         return true;
       }
 
+      @java.lang.Override
       public Builder mergeFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -1737,21 +1786,23 @@ private static final long serialVersionUID = 0L;
         onChanged();
         return this;
       }
+      @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
         return super.setUnknownFieldsProto3(unknownFields);
       }
 
+      @java.lang.Override
       public final Builder mergeUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
         return super.mergeUnknownFields(unknownFields);
       }
 
 
-      // @@protoc_insertion_point(builder_scope:bloombox.schema.services.auth.v1beta1.AuthenticateUser.Response)
+      // @@protoc_insertion_point(builder_scope:bloombox.services.auth.v1beta1.AuthenticateUser.Response)
     }
 
-    // @@protoc_insertion_point(class_scope:bloombox.schema.services.auth.v1beta1.AuthenticateUser.Response)
+    // @@protoc_insertion_point(class_scope:bloombox.services.auth.v1beta1.AuthenticateUser.Response)
     private static final io.bloombox.schema.services.auth.v1beta1.AuthenticateUser.Response DEFAULT_INSTANCE;
     static {
       DEFAULT_INSTANCE = new io.bloombox.schema.services.auth.v1beta1.AuthenticateUser.Response();
@@ -1763,6 +1814,7 @@ private static final long serialVersionUID = 0L;
 
     private static final com.google.protobuf.Parser<Response>
         PARSER = new com.google.protobuf.AbstractParser<Response>() {
+      @java.lang.Override
       public Response parsePartialFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -1780,6 +1832,7 @@ private static final long serialVersionUID = 0L;
       return PARSER;
     }
 
+    @java.lang.Override
     public io.bloombox.schema.services.auth.v1beta1.AuthenticateUser.Response getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
@@ -1787,6 +1840,7 @@ private static final long serialVersionUID = 0L;
   }
 
   private byte memoizedIsInitialized = -1;
+  @java.lang.Override
   public final boolean isInitialized() {
     byte isInitialized = memoizedIsInitialized;
     if (isInitialized == 1) return true;
@@ -1796,11 +1850,13 @@ private static final long serialVersionUID = 0L;
     return true;
   }
 
+  @java.lang.Override
   public void writeTo(com.google.protobuf.CodedOutputStream output)
                       throws java.io.IOException {
     unknownFields.writeTo(output);
   }
 
+  @java.lang.Override
   public int getSerializedSize() {
     int size = memoizedSize;
     if (size != -1) return size;
@@ -1908,6 +1964,7 @@ private static final long serialVersionUID = 0L;
         .parseWithIOException(PARSER, input, extensionRegistry);
   }
 
+  @java.lang.Override
   public Builder newBuilderForType() { return newBuilder(); }
   public static Builder newBuilder() {
     return DEFAULT_INSTANCE.toBuilder();
@@ -1915,6 +1972,7 @@ private static final long serialVersionUID = 0L;
   public static Builder newBuilder(io.bloombox.schema.services.auth.v1beta1.AuthenticateUser prototype) {
     return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
   }
+  @java.lang.Override
   public Builder toBuilder() {
     return this == DEFAULT_INSTANCE
         ? new Builder() : new Builder().mergeFrom(this);
@@ -1931,20 +1989,21 @@ private static final long serialVersionUID = 0L;
    * Specifies an RPC operation wherein a user has requested an assertion of their identity be validated by the server.
    * </pre>
    *
-   * Protobuf type {@code bloombox.schema.services.auth.v1beta1.AuthenticateUser}
+   * Protobuf type {@code bloombox.services.auth.v1beta1.AuthenticateUser}
    */
   public static final class Builder extends
       com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-      // @@protoc_insertion_point(builder_implements:bloombox.schema.services.auth.v1beta1.AuthenticateUser)
+      // @@protoc_insertion_point(builder_implements:bloombox.services.auth.v1beta1.AuthenticateUser)
       io.bloombox.schema.services.auth.v1beta1.AuthenticateUserOrBuilder {
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return io.bloombox.schema.services.auth.v1beta1.AuthServiceBeta1.internal_static_bloombox_schema_services_auth_v1beta1_AuthenticateUser_descriptor;
+      return io.bloombox.schema.services.auth.v1beta1.AuthServiceBeta1.internal_static_bloombox_services_auth_v1beta1_AuthenticateUser_descriptor;
     }
 
+    @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return io.bloombox.schema.services.auth.v1beta1.AuthServiceBeta1.internal_static_bloombox_schema_services_auth_v1beta1_AuthenticateUser_fieldAccessorTable
+      return io.bloombox.schema.services.auth.v1beta1.AuthServiceBeta1.internal_static_bloombox_services_auth_v1beta1_AuthenticateUser_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
               io.bloombox.schema.services.auth.v1beta1.AuthenticateUser.class, io.bloombox.schema.services.auth.v1beta1.AuthenticateUser.Builder.class);
     }
@@ -1964,20 +2023,24 @@ private static final long serialVersionUID = 0L;
               .alwaysUseFieldBuilders) {
       }
     }
+    @java.lang.Override
     public Builder clear() {
       super.clear();
       return this;
     }
 
+    @java.lang.Override
     public com.google.protobuf.Descriptors.Descriptor
         getDescriptorForType() {
-      return io.bloombox.schema.services.auth.v1beta1.AuthServiceBeta1.internal_static_bloombox_schema_services_auth_v1beta1_AuthenticateUser_descriptor;
+      return io.bloombox.schema.services.auth.v1beta1.AuthServiceBeta1.internal_static_bloombox_services_auth_v1beta1_AuthenticateUser_descriptor;
     }
 
+    @java.lang.Override
     public io.bloombox.schema.services.auth.v1beta1.AuthenticateUser getDefaultInstanceForType() {
       return io.bloombox.schema.services.auth.v1beta1.AuthenticateUser.getDefaultInstance();
     }
 
+    @java.lang.Override
     public io.bloombox.schema.services.auth.v1beta1.AuthenticateUser build() {
       io.bloombox.schema.services.auth.v1beta1.AuthenticateUser result = buildPartial();
       if (!result.isInitialized()) {
@@ -1986,38 +2049,46 @@ private static final long serialVersionUID = 0L;
       return result;
     }
 
+    @java.lang.Override
     public io.bloombox.schema.services.auth.v1beta1.AuthenticateUser buildPartial() {
       io.bloombox.schema.services.auth.v1beta1.AuthenticateUser result = new io.bloombox.schema.services.auth.v1beta1.AuthenticateUser(this);
       onBuilt();
       return result;
     }
 
+    @java.lang.Override
     public Builder clone() {
       return (Builder) super.clone();
     }
+    @java.lang.Override
     public Builder setField(
         com.google.protobuf.Descriptors.FieldDescriptor field,
         java.lang.Object value) {
       return (Builder) super.setField(field, value);
     }
+    @java.lang.Override
     public Builder clearField(
         com.google.protobuf.Descriptors.FieldDescriptor field) {
       return (Builder) super.clearField(field);
     }
+    @java.lang.Override
     public Builder clearOneof(
         com.google.protobuf.Descriptors.OneofDescriptor oneof) {
       return (Builder) super.clearOneof(oneof);
     }
+    @java.lang.Override
     public Builder setRepeatedField(
         com.google.protobuf.Descriptors.FieldDescriptor field,
         int index, java.lang.Object value) {
       return (Builder) super.setRepeatedField(field, index, value);
     }
+    @java.lang.Override
     public Builder addRepeatedField(
         com.google.protobuf.Descriptors.FieldDescriptor field,
         java.lang.Object value) {
       return (Builder) super.addRepeatedField(field, value);
     }
+    @java.lang.Override
     public Builder mergeFrom(com.google.protobuf.Message other) {
       if (other instanceof io.bloombox.schema.services.auth.v1beta1.AuthenticateUser) {
         return mergeFrom((io.bloombox.schema.services.auth.v1beta1.AuthenticateUser)other);
@@ -2034,10 +2105,12 @@ private static final long serialVersionUID = 0L;
       return this;
     }
 
+    @java.lang.Override
     public final boolean isInitialized() {
       return true;
     }
 
+    @java.lang.Override
     public Builder mergeFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -2055,21 +2128,23 @@ private static final long serialVersionUID = 0L;
       }
       return this;
     }
+    @java.lang.Override
     public final Builder setUnknownFields(
         final com.google.protobuf.UnknownFieldSet unknownFields) {
       return super.setUnknownFieldsProto3(unknownFields);
     }
 
+    @java.lang.Override
     public final Builder mergeUnknownFields(
         final com.google.protobuf.UnknownFieldSet unknownFields) {
       return super.mergeUnknownFields(unknownFields);
     }
 
 
-    // @@protoc_insertion_point(builder_scope:bloombox.schema.services.auth.v1beta1.AuthenticateUser)
+    // @@protoc_insertion_point(builder_scope:bloombox.services.auth.v1beta1.AuthenticateUser)
   }
 
-  // @@protoc_insertion_point(class_scope:bloombox.schema.services.auth.v1beta1.AuthenticateUser)
+  // @@protoc_insertion_point(class_scope:bloombox.services.auth.v1beta1.AuthenticateUser)
   private static final io.bloombox.schema.services.auth.v1beta1.AuthenticateUser DEFAULT_INSTANCE;
   static {
     DEFAULT_INSTANCE = new io.bloombox.schema.services.auth.v1beta1.AuthenticateUser();
@@ -2081,6 +2156,7 @@ private static final long serialVersionUID = 0L;
 
   private static final com.google.protobuf.Parser<AuthenticateUser>
       PARSER = new com.google.protobuf.AbstractParser<AuthenticateUser>() {
+    @java.lang.Override
     public AuthenticateUser parsePartialFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -2098,6 +2174,7 @@ private static final long serialVersionUID = 0L;
     return PARSER;
   }
 
+  @java.lang.Override
   public io.bloombox.schema.services.auth.v1beta1.AuthenticateUser getDefaultInstanceForType() {
     return DEFAULT_INSTANCE;
   }

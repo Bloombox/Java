@@ -1,8 +1,8 @@
 /*
- * Copyright 2018, Bloombox, LLC. All rights reserved.
+ * Copyright 2018, Momentum Ideas, Co. All rights reserved.
  *
  * Source and object computer code contained herein is the private intellectual
- * property of Bloombox, a California Limited Liability Corporation. Use of this
+ * property of Momentum Ideas Co., a Delaware Corporation. Use of this
  * code in source form requires permission in writing before use or the
  * assembly, distribution, or publishing of derivative works, for commercial
  * purposes or any other purpose, from a duly authorized officer of Momentum
@@ -21,7 +21,7 @@
 package io.bloombox.schema.services.devices.v1beta1;
 
 public interface DeviceActivationOrBuilder extends
-    // @@protoc_insertion_point(interface_extends:bloombox.schema.services.devices.v1beta1.DeviceActivation)
+    // @@protoc_insertion_point(interface_extends:bloombox.services.devices.v1beta1.DeviceActivation)
     com.google.protobuf.MessageOrBuilder {
 
   /**
@@ -65,7 +65,7 @@ public interface DeviceActivationOrBuilder extends
    * Assignment information for the device.
    * </pre>
    *
-   * <code>.bloombox.schema.services.devices.v1beta1.DeviceAssignment assignment = 3;</code>
+   * <code>.bloombox.services.devices.v1beta1.DeviceAssignment assignment = 3;</code>
    */
   boolean hasAssignment();
   /**
@@ -73,7 +73,7 @@ public interface DeviceActivationOrBuilder extends
    * Assignment information for the device.
    * </pre>
    *
-   * <code>.bloombox.schema.services.devices.v1beta1.DeviceAssignment assignment = 3;</code>
+   * <code>.bloombox.services.devices.v1beta1.DeviceAssignment assignment = 3;</code>
    */
   io.bloombox.schema.services.devices.v1beta1.DeviceAssignment getAssignment();
   /**
@@ -81,7 +81,7 @@ public interface DeviceActivationOrBuilder extends
    * Assignment information for the device.
    * </pre>
    *
-   * <code>.bloombox.schema.services.devices.v1beta1.DeviceAssignment assignment = 3;</code>
+   * <code>.bloombox.services.devices.v1beta1.DeviceAssignment assignment = 3;</code>
    */
   io.bloombox.schema.services.devices.v1beta1.DeviceAssignmentOrBuilder getAssignmentOrBuilder();
 
@@ -91,7 +91,7 @@ public interface DeviceActivationOrBuilder extends
    * allows the device access to assigned information and credentials.
    * </pre>
    *
-   * <code>.bloombox.schema.security.DeviceTicket ticket = 4;</code>
+   * <code>.bloombox.security.DeviceTicket ticket = 4;</code>
    */
   boolean hasTicket();
   /**
@@ -100,7 +100,7 @@ public interface DeviceActivationOrBuilder extends
    * allows the device access to assigned information and credentials.
    * </pre>
    *
-   * <code>.bloombox.schema.security.DeviceTicket ticket = 4;</code>
+   * <code>.bloombox.security.DeviceTicket ticket = 4;</code>
    */
   io.bloombox.schema.security.DeviceSecurity.DeviceTicket getTicket();
   /**
@@ -109,7 +109,7 @@ public interface DeviceActivationOrBuilder extends
    * allows the device access to assigned information and credentials.
    * </pre>
    *
-   * <code>.bloombox.schema.security.DeviceTicket ticket = 4;</code>
+   * <code>.bloombox.security.DeviceTicket ticket = 4;</code>
    */
   io.bloombox.schema.security.DeviceSecurity.DeviceTicketOrBuilder getTicketOrBuilder();
 
@@ -119,7 +119,7 @@ public interface DeviceActivationOrBuilder extends
    * direct use of Firebase.
    * </pre>
    *
-   * <code>.bloombox.schema.services.devices.v1beta1.DeviceEndpoints endpoints = 5;</code>
+   * <code>.bloombox.services.devices.v1beta1.DeviceEndpoints endpoints = 5;</code>
    */
   boolean hasEndpoints();
   /**
@@ -128,7 +128,7 @@ public interface DeviceActivationOrBuilder extends
    * direct use of Firebase.
    * </pre>
    *
-   * <code>.bloombox.schema.services.devices.v1beta1.DeviceEndpoints endpoints = 5;</code>
+   * <code>.bloombox.services.devices.v1beta1.DeviceEndpoints endpoints = 5;</code>
    */
   io.bloombox.schema.services.devices.v1beta1.DeviceEndpoints getEndpoints();
   /**
@@ -137,7 +137,7 @@ public interface DeviceActivationOrBuilder extends
    * direct use of Firebase.
    * </pre>
    *
-   * <code>.bloombox.schema.services.devices.v1beta1.DeviceEndpoints endpoints = 5;</code>
+   * <code>.bloombox.services.devices.v1beta1.DeviceEndpoints endpoints = 5;</code>
    */
   io.bloombox.schema.services.devices.v1beta1.DeviceEndpointsOrBuilder getEndpointsOrBuilder();
 
@@ -175,7 +175,7 @@ public interface DeviceActivationOrBuilder extends
    * Platform server-side systems.
    * </pre>
    *
-   * <code>.bloombox.schema.services.devices.v1beta1.DeviceKeys credentials = 7;</code>
+   * <code>.bloombox.services.devices.v1beta1.DeviceKeys credentials = 7;</code>
    */
   boolean hasCredentials();
   /**
@@ -184,7 +184,7 @@ public interface DeviceActivationOrBuilder extends
    * Platform server-side systems.
    * </pre>
    *
-   * <code>.bloombox.schema.services.devices.v1beta1.DeviceKeys credentials = 7;</code>
+   * <code>.bloombox.services.devices.v1beta1.DeviceKeys credentials = 7;</code>
    */
   io.bloombox.schema.services.devices.v1beta1.DeviceKeys getCredentials();
   /**
@@ -193,7 +193,7 @@ public interface DeviceActivationOrBuilder extends
    * Platform server-side systems.
    * </pre>
    *
-   * <code>.bloombox.schema.services.devices.v1beta1.DeviceKeys credentials = 7;</code>
+   * <code>.bloombox.services.devices.v1beta1.DeviceKeys credentials = 7;</code>
    */
   io.bloombox.schema.services.devices.v1beta1.DeviceKeysOrBuilder getCredentialsOrBuilder();
 }

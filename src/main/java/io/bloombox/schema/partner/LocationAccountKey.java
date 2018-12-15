@@ -1,11 +1,12 @@
 /*
- * Copyright 2018, Bloombox, LLC.
+ * Copyright 2018, Momentum Ideas, Co. All rights reserved.
  *
- * Licensed under the Apache License, Version 2.0 (the "License");
- * you may not use this file except in compliance with the License.
- * You may obtain a copy of the License at
- *
- *     http://www.apache.org/licenses/LICENSE-2.0
+ * Source and object computer code contained herein is the private intellectual
+ * property of Momentum Ideas Co., a Delaware Corporation. Use of this
+ * code in source form requires permission in writing before use or the
+ * assembly, distribution, or publishing of derivative works, for commercial
+ * purposes or any other purpose, from a duly authorized officer of Momentum
+ * Ideas Co.
  *
  * Unless required by applicable law or agreed to in writing, software
  * distributed under the License is distributed on an "AS IS" BASIS,
@@ -31,7 +32,7 @@ public final class LocationAccountKey {
         (com.google.protobuf.ExtensionRegistryLite) registry);
   }
   public interface LocationKeyOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:bloombox.schema.partner.LocationKey)
+      // @@protoc_insertion_point(interface_extends:bloombox.partner.LocationKey)
       com.google.protobuf.MessageOrBuilder {
 
     /**
@@ -39,7 +40,7 @@ public final class LocationAccountKey {
      * Specifies the partner that owns this location.
      * </pre>
      *
-     * <code>.bloombox.schema.partner.PartnerKey partner = 1 [(.gen_bq_schema.description) = "Specifies the partner that owns this location."];</code>
+     * <code>.bloombox.partner.PartnerKey partner = 1 [(.gen_bq_schema.description) = "Specifies the partner that owns this location."];</code>
      */
     boolean hasPartner();
     /**
@@ -47,7 +48,7 @@ public final class LocationAccountKey {
      * Specifies the partner that owns this location.
      * </pre>
      *
-     * <code>.bloombox.schema.partner.PartnerKey partner = 1 [(.gen_bq_schema.description) = "Specifies the partner that owns this location."];</code>
+     * <code>.bloombox.partner.PartnerKey partner = 1 [(.gen_bq_schema.description) = "Specifies the partner that owns this location."];</code>
      */
     io.bloombox.schema.partner.PartnerMeta.PartnerKey getPartner();
     /**
@@ -55,7 +56,7 @@ public final class LocationAccountKey {
      * Specifies the partner that owns this location.
      * </pre>
      *
-     * <code>.bloombox.schema.partner.PartnerKey partner = 1 [(.gen_bq_schema.description) = "Specifies the partner that owns this location."];</code>
+     * <code>.bloombox.partner.PartnerKey partner = 1 [(.gen_bq_schema.description) = "Specifies the partner that owns this location."];</code>
      */
     io.bloombox.schema.partner.PartnerMeta.PartnerKeyOrBuilder getPartnerOrBuilder();
 
@@ -82,11 +83,11 @@ public final class LocationAccountKey {
    * Specifies a key that references a location owned by a partner organization that has an active account with Bloombox.
    * </pre>
    *
-   * Protobuf type {@code bloombox.schema.partner.LocationKey}
+   * Protobuf type {@code bloombox.partner.LocationKey}
    */
   public  static final class LocationKey extends
       com.google.protobuf.GeneratedMessageV3 implements
-      // @@protoc_insertion_point(message_implements:bloombox.schema.partner.LocationKey)
+      // @@protoc_insertion_point(message_implements:bloombox.partner.LocationKey)
       LocationKeyOrBuilder {
   private static final long serialVersionUID = 0L;
     // Use LocationKey.newBuilder() to construct.
@@ -121,13 +122,6 @@ public final class LocationAccountKey {
             case 0:
               done = true;
               break;
-            default: {
-              if (!parseUnknownFieldProto3(
-                  input, unknownFields, extensionRegistry, tag)) {
-                done = true;
-              }
-              break;
-            }
             case 10: {
               io.bloombox.schema.partner.PartnerMeta.PartnerKey.Builder subBuilder = null;
               if (partner_ != null) {
@@ -147,6 +141,13 @@ public final class LocationAccountKey {
               code_ = s;
               break;
             }
+            default: {
+              if (!parseUnknownFieldProto3(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
           }
         }
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
@@ -161,12 +162,13 @@ public final class LocationAccountKey {
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return io.bloombox.schema.partner.LocationAccountKey.internal_static_bloombox_schema_partner_LocationKey_descriptor;
+      return io.bloombox.schema.partner.LocationAccountKey.internal_static_bloombox_partner_LocationKey_descriptor;
     }
 
+    @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return io.bloombox.schema.partner.LocationAccountKey.internal_static_bloombox_schema_partner_LocationKey_fieldAccessorTable
+      return io.bloombox.schema.partner.LocationAccountKey.internal_static_bloombox_partner_LocationKey_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
               io.bloombox.schema.partner.LocationAccountKey.LocationKey.class, io.bloombox.schema.partner.LocationAccountKey.LocationKey.Builder.class);
     }
@@ -178,7 +180,7 @@ public final class LocationAccountKey {
      * Specifies the partner that owns this location.
      * </pre>
      *
-     * <code>.bloombox.schema.partner.PartnerKey partner = 1 [(.gen_bq_schema.description) = "Specifies the partner that owns this location."];</code>
+     * <code>.bloombox.partner.PartnerKey partner = 1 [(.gen_bq_schema.description) = "Specifies the partner that owns this location."];</code>
      */
     public boolean hasPartner() {
       return partner_ != null;
@@ -188,7 +190,7 @@ public final class LocationAccountKey {
      * Specifies the partner that owns this location.
      * </pre>
      *
-     * <code>.bloombox.schema.partner.PartnerKey partner = 1 [(.gen_bq_schema.description) = "Specifies the partner that owns this location."];</code>
+     * <code>.bloombox.partner.PartnerKey partner = 1 [(.gen_bq_schema.description) = "Specifies the partner that owns this location."];</code>
      */
     public io.bloombox.schema.partner.PartnerMeta.PartnerKey getPartner() {
       return partner_ == null ? io.bloombox.schema.partner.PartnerMeta.PartnerKey.getDefaultInstance() : partner_;
@@ -198,7 +200,7 @@ public final class LocationAccountKey {
      * Specifies the partner that owns this location.
      * </pre>
      *
-     * <code>.bloombox.schema.partner.PartnerKey partner = 1 [(.gen_bq_schema.description) = "Specifies the partner that owns this location."];</code>
+     * <code>.bloombox.partner.PartnerKey partner = 1 [(.gen_bq_schema.description) = "Specifies the partner that owns this location."];</code>
      */
     public io.bloombox.schema.partner.PartnerMeta.PartnerKeyOrBuilder getPartnerOrBuilder() {
       return getPartner();
@@ -247,6 +249,7 @@ public final class LocationAccountKey {
     }
 
     private byte memoizedIsInitialized = -1;
+    @java.lang.Override
     public final boolean isInitialized() {
       byte isInitialized = memoizedIsInitialized;
       if (isInitialized == 1) return true;
@@ -256,6 +259,7 @@ public final class LocationAccountKey {
       return true;
     }
 
+    @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
       if (partner_ != null) {
@@ -267,6 +271,7 @@ public final class LocationAccountKey {
       unknownFields.writeTo(output);
     }
 
+    @java.lang.Override
     public int getSerializedSize() {
       int size = memoizedSize;
       if (size != -1) return size;
@@ -394,6 +399,7 @@ public final class LocationAccountKey {
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
 
+    @java.lang.Override
     public Builder newBuilderForType() { return newBuilder(); }
     public static Builder newBuilder() {
       return DEFAULT_INSTANCE.toBuilder();
@@ -401,6 +407,7 @@ public final class LocationAccountKey {
     public static Builder newBuilder(io.bloombox.schema.partner.LocationAccountKey.LocationKey prototype) {
       return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
     }
+    @java.lang.Override
     public Builder toBuilder() {
       return this == DEFAULT_INSTANCE
           ? new Builder() : new Builder().mergeFrom(this);
@@ -417,20 +424,21 @@ public final class LocationAccountKey {
      * Specifies a key that references a location owned by a partner organization that has an active account with Bloombox.
      * </pre>
      *
-     * Protobuf type {@code bloombox.schema.partner.LocationKey}
+     * Protobuf type {@code bloombox.partner.LocationKey}
      */
     public static final class Builder extends
         com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:bloombox.schema.partner.LocationKey)
+        // @@protoc_insertion_point(builder_implements:bloombox.partner.LocationKey)
         io.bloombox.schema.partner.LocationAccountKey.LocationKeyOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return io.bloombox.schema.partner.LocationAccountKey.internal_static_bloombox_schema_partner_LocationKey_descriptor;
+        return io.bloombox.schema.partner.LocationAccountKey.internal_static_bloombox_partner_LocationKey_descriptor;
       }
 
+      @java.lang.Override
       protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return io.bloombox.schema.partner.LocationAccountKey.internal_static_bloombox_schema_partner_LocationKey_fieldAccessorTable
+        return io.bloombox.schema.partner.LocationAccountKey.internal_static_bloombox_partner_LocationKey_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
                 io.bloombox.schema.partner.LocationAccountKey.LocationKey.class, io.bloombox.schema.partner.LocationAccountKey.LocationKey.Builder.class);
       }
@@ -450,6 +458,7 @@ public final class LocationAccountKey {
                 .alwaysUseFieldBuilders) {
         }
       }
+      @java.lang.Override
       public Builder clear() {
         super.clear();
         if (partnerBuilder_ == null) {
@@ -463,15 +472,18 @@ public final class LocationAccountKey {
         return this;
       }
 
+      @java.lang.Override
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return io.bloombox.schema.partner.LocationAccountKey.internal_static_bloombox_schema_partner_LocationKey_descriptor;
+        return io.bloombox.schema.partner.LocationAccountKey.internal_static_bloombox_partner_LocationKey_descriptor;
       }
 
+      @java.lang.Override
       public io.bloombox.schema.partner.LocationAccountKey.LocationKey getDefaultInstanceForType() {
         return io.bloombox.schema.partner.LocationAccountKey.LocationKey.getDefaultInstance();
       }
 
+      @java.lang.Override
       public io.bloombox.schema.partner.LocationAccountKey.LocationKey build() {
         io.bloombox.schema.partner.LocationAccountKey.LocationKey result = buildPartial();
         if (!result.isInitialized()) {
@@ -480,6 +492,7 @@ public final class LocationAccountKey {
         return result;
       }
 
+      @java.lang.Override
       public io.bloombox.schema.partner.LocationAccountKey.LocationKey buildPartial() {
         io.bloombox.schema.partner.LocationAccountKey.LocationKey result = new io.bloombox.schema.partner.LocationAccountKey.LocationKey(this);
         if (partnerBuilder_ == null) {
@@ -492,32 +505,39 @@ public final class LocationAccountKey {
         return result;
       }
 
+      @java.lang.Override
       public Builder clone() {
         return (Builder) super.clone();
       }
+      @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
         return (Builder) super.setField(field, value);
       }
+      @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
         return (Builder) super.clearField(field);
       }
+      @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
         return (Builder) super.clearOneof(oneof);
       }
+      @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
         return (Builder) super.setRepeatedField(field, index, value);
       }
+      @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
         return (Builder) super.addRepeatedField(field, value);
       }
+      @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
         if (other instanceof io.bloombox.schema.partner.LocationAccountKey.LocationKey) {
           return mergeFrom((io.bloombox.schema.partner.LocationAccountKey.LocationKey)other);
@@ -541,10 +561,12 @@ public final class LocationAccountKey {
         return this;
       }
 
+      @java.lang.Override
       public final boolean isInitialized() {
         return true;
       }
 
+      @java.lang.Override
       public Builder mergeFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -571,7 +593,7 @@ public final class LocationAccountKey {
        * Specifies the partner that owns this location.
        * </pre>
        *
-       * <code>.bloombox.schema.partner.PartnerKey partner = 1 [(.gen_bq_schema.description) = "Specifies the partner that owns this location."];</code>
+       * <code>.bloombox.partner.PartnerKey partner = 1 [(.gen_bq_schema.description) = "Specifies the partner that owns this location."];</code>
        */
       public boolean hasPartner() {
         return partnerBuilder_ != null || partner_ != null;
@@ -581,7 +603,7 @@ public final class LocationAccountKey {
        * Specifies the partner that owns this location.
        * </pre>
        *
-       * <code>.bloombox.schema.partner.PartnerKey partner = 1 [(.gen_bq_schema.description) = "Specifies the partner that owns this location."];</code>
+       * <code>.bloombox.partner.PartnerKey partner = 1 [(.gen_bq_schema.description) = "Specifies the partner that owns this location."];</code>
        */
       public io.bloombox.schema.partner.PartnerMeta.PartnerKey getPartner() {
         if (partnerBuilder_ == null) {
@@ -595,7 +617,7 @@ public final class LocationAccountKey {
        * Specifies the partner that owns this location.
        * </pre>
        *
-       * <code>.bloombox.schema.partner.PartnerKey partner = 1 [(.gen_bq_schema.description) = "Specifies the partner that owns this location."];</code>
+       * <code>.bloombox.partner.PartnerKey partner = 1 [(.gen_bq_schema.description) = "Specifies the partner that owns this location."];</code>
        */
       public Builder setPartner(io.bloombox.schema.partner.PartnerMeta.PartnerKey value) {
         if (partnerBuilder_ == null) {
@@ -615,7 +637,7 @@ public final class LocationAccountKey {
        * Specifies the partner that owns this location.
        * </pre>
        *
-       * <code>.bloombox.schema.partner.PartnerKey partner = 1 [(.gen_bq_schema.description) = "Specifies the partner that owns this location."];</code>
+       * <code>.bloombox.partner.PartnerKey partner = 1 [(.gen_bq_schema.description) = "Specifies the partner that owns this location."];</code>
        */
       public Builder setPartner(
           io.bloombox.schema.partner.PartnerMeta.PartnerKey.Builder builderForValue) {
@@ -633,7 +655,7 @@ public final class LocationAccountKey {
        * Specifies the partner that owns this location.
        * </pre>
        *
-       * <code>.bloombox.schema.partner.PartnerKey partner = 1 [(.gen_bq_schema.description) = "Specifies the partner that owns this location."];</code>
+       * <code>.bloombox.partner.PartnerKey partner = 1 [(.gen_bq_schema.description) = "Specifies the partner that owns this location."];</code>
        */
       public Builder mergePartner(io.bloombox.schema.partner.PartnerMeta.PartnerKey value) {
         if (partnerBuilder_ == null) {
@@ -655,7 +677,7 @@ public final class LocationAccountKey {
        * Specifies the partner that owns this location.
        * </pre>
        *
-       * <code>.bloombox.schema.partner.PartnerKey partner = 1 [(.gen_bq_schema.description) = "Specifies the partner that owns this location."];</code>
+       * <code>.bloombox.partner.PartnerKey partner = 1 [(.gen_bq_schema.description) = "Specifies the partner that owns this location."];</code>
        */
       public Builder clearPartner() {
         if (partnerBuilder_ == null) {
@@ -673,7 +695,7 @@ public final class LocationAccountKey {
        * Specifies the partner that owns this location.
        * </pre>
        *
-       * <code>.bloombox.schema.partner.PartnerKey partner = 1 [(.gen_bq_schema.description) = "Specifies the partner that owns this location."];</code>
+       * <code>.bloombox.partner.PartnerKey partner = 1 [(.gen_bq_schema.description) = "Specifies the partner that owns this location."];</code>
        */
       public io.bloombox.schema.partner.PartnerMeta.PartnerKey.Builder getPartnerBuilder() {
         
@@ -685,7 +707,7 @@ public final class LocationAccountKey {
        * Specifies the partner that owns this location.
        * </pre>
        *
-       * <code>.bloombox.schema.partner.PartnerKey partner = 1 [(.gen_bq_schema.description) = "Specifies the partner that owns this location."];</code>
+       * <code>.bloombox.partner.PartnerKey partner = 1 [(.gen_bq_schema.description) = "Specifies the partner that owns this location."];</code>
        */
       public io.bloombox.schema.partner.PartnerMeta.PartnerKeyOrBuilder getPartnerOrBuilder() {
         if (partnerBuilder_ != null) {
@@ -700,7 +722,7 @@ public final class LocationAccountKey {
        * Specifies the partner that owns this location.
        * </pre>
        *
-       * <code>.bloombox.schema.partner.PartnerKey partner = 1 [(.gen_bq_schema.description) = "Specifies the partner that owns this location."];</code>
+       * <code>.bloombox.partner.PartnerKey partner = 1 [(.gen_bq_schema.description) = "Specifies the partner that owns this location."];</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
           io.bloombox.schema.partner.PartnerMeta.PartnerKey, io.bloombox.schema.partner.PartnerMeta.PartnerKey.Builder, io.bloombox.schema.partner.PartnerMeta.PartnerKeyOrBuilder> 
@@ -804,21 +826,23 @@ public final class LocationAccountKey {
         onChanged();
         return this;
       }
+      @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
         return super.setUnknownFieldsProto3(unknownFields);
       }
 
+      @java.lang.Override
       public final Builder mergeUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
         return super.mergeUnknownFields(unknownFields);
       }
 
 
-      // @@protoc_insertion_point(builder_scope:bloombox.schema.partner.LocationKey)
+      // @@protoc_insertion_point(builder_scope:bloombox.partner.LocationKey)
     }
 
-    // @@protoc_insertion_point(class_scope:bloombox.schema.partner.LocationKey)
+    // @@protoc_insertion_point(class_scope:bloombox.partner.LocationKey)
     private static final io.bloombox.schema.partner.LocationAccountKey.LocationKey DEFAULT_INSTANCE;
     static {
       DEFAULT_INSTANCE = new io.bloombox.schema.partner.LocationAccountKey.LocationKey();
@@ -830,6 +854,7 @@ public final class LocationAccountKey {
 
     private static final com.google.protobuf.Parser<LocationKey>
         PARSER = new com.google.protobuf.AbstractParser<LocationKey>() {
+      @java.lang.Override
       public LocationKey parsePartialFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -847,6 +872,7 @@ public final class LocationAccountKey {
       return PARSER;
     }
 
+    @java.lang.Override
     public io.bloombox.schema.partner.LocationAccountKey.LocationKey getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
@@ -854,10 +880,10 @@ public final class LocationAccountKey {
   }
 
   private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_bloombox_schema_partner_LocationKey_descriptor;
+    internal_static_bloombox_partner_LocationKey_descriptor;
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_bloombox_schema_partner_LocationKey_fieldAccessorTable;
+      internal_static_bloombox_partner_LocationKey_fieldAccessorTable;
 
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
@@ -867,17 +893,16 @@ public final class LocationAccountKey {
       descriptor;
   static {
     java.lang.String[] descriptorData = {
-      "\n\031partner/LocationKey.proto\022\027bloombox.sc" +
-      "hema.partner\032\016bq_field.proto\032\024core/Datam" +
-      "odel.proto\032\030partner/PartnerKey.proto\"\342\001\n" +
-      "\013LocationKey\022g\n\007partner\030\001 \001(\0132#.bloombox" +
-      ".schema.partner.PartnerKeyB1\212@.Specifies" +
-      " the partner that owns this location.\022j\n" +
-      "\004code\030\002 \001(\tB\\\302\265\003\002\010\002\212@SShort string that " +
-      "uniquely identifies this location, under" +
-      " a given partner account.B:\n\032io.bloombox" +
-      ".schema.partnerB\022LocationAccountKeyH\001P\000\242" +
-      "\002\003BBSb\006proto3"
+      "\n\031partner/LocationKey.proto\022\020bloombox.pa" +
+      "rtner\032\016bq_field.proto\032\024core/Datamodel.pr" +
+      "oto\032\030partner/PartnerKey.proto\"\333\001\n\013Locati" +
+      "onKey\022`\n\007partner\030\001 \001(\0132\034.bloombox.partne" +
+      "r.PartnerKeyB1\212@.Specifies the partner t" +
+      "hat owns this location.\022j\n\004code\030\002 \001(\tB\\\302" +
+      "\265\003\002\010\002\212@SShort string that uniquely ident" +
+      "ifies this location, under a given partn" +
+      "er account.B:\n\032io.bloombox.schema.partne" +
+      "rB\022LocationAccountKeyH\001P\000\242\002\003BBSb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -894,11 +919,11 @@ public final class LocationAccountKey {
           core.Datamodel.getDescriptor(),
           io.bloombox.schema.partner.PartnerMeta.getDescriptor(),
         }, assigner);
-    internal_static_bloombox_schema_partner_LocationKey_descriptor =
+    internal_static_bloombox_partner_LocationKey_descriptor =
       getDescriptor().getMessageTypes().get(0);
-    internal_static_bloombox_schema_partner_LocationKey_fieldAccessorTable = new
+    internal_static_bloombox_partner_LocationKey_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_bloombox_schema_partner_LocationKey_descriptor,
+        internal_static_bloombox_partner_LocationKey_descriptor,
         new java.lang.String[] { "Partner", "Code", });
     com.google.protobuf.ExtensionRegistry registry =
         com.google.protobuf.ExtensionRegistry.newInstance();

@@ -1,8 +1,8 @@
 /*
- * Copyright 2018, Bloombox, LLC. All rights reserved.
+ * Copyright 2018, Momentum Ideas, Co. All rights reserved.
  *
  * Source and object computer code contained herein is the private intellectual
- * property of Bloombox, a California Limited Liability Corporation. Use of this
+ * property of Momentum Ideas Co., a Delaware Corporation. Use of this
  * code in source form requires permission in writing before use or the
  * assembly, distribution, or publishing of derivative works, for commercial
  * purposes or any other purpose, from a duly authorized officer of Momentum
@@ -25,11 +25,11 @@ package io.bloombox.schema.services.dash.v1beta1;
  * Specifies an RPC operation to update partner-level settings from the dashboard.
  * </pre>
  *
- * Protobuf type {@code bloombox.schema.services.dash.v1beta1.UpdatePartnerSettings}
+ * Protobuf type {@code bloombox.services.dash.v1beta1.UpdatePartnerSettings}
  */
 public  final class UpdatePartnerSettings extends
     com.google.protobuf.GeneratedMessageV3 implements
-    // @@protoc_insertion_point(message_implements:bloombox.schema.services.dash.v1beta1.UpdatePartnerSettings)
+    // @@protoc_insertion_point(message_implements:bloombox.services.dash.v1beta1.UpdatePartnerSettings)
     UpdatePartnerSettingsOrBuilder {
 private static final long serialVersionUID = 0L;
   // Use UpdatePartnerSettings.newBuilder() to construct.
@@ -83,18 +83,19 @@ private static final long serialVersionUID = 0L;
   }
   public static final com.google.protobuf.Descriptors.Descriptor
       getDescriptor() {
-    return io.bloombox.schema.services.dash.v1beta1.DashServiceBeta1.internal_static_bloombox_schema_services_dash_v1beta1_UpdatePartnerSettings_descriptor;
+    return io.bloombox.schema.services.dash.v1beta1.DashServiceBeta1.internal_static_bloombox_services_dash_v1beta1_UpdatePartnerSettings_descriptor;
   }
 
+  @java.lang.Override
   protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internalGetFieldAccessorTable() {
-    return io.bloombox.schema.services.dash.v1beta1.DashServiceBeta1.internal_static_bloombox_schema_services_dash_v1beta1_UpdatePartnerSettings_fieldAccessorTable
+    return io.bloombox.schema.services.dash.v1beta1.DashServiceBeta1.internal_static_bloombox_services_dash_v1beta1_UpdatePartnerSettings_fieldAccessorTable
         .ensureFieldAccessorsInitialized(
             io.bloombox.schema.services.dash.v1beta1.UpdatePartnerSettings.class, io.bloombox.schema.services.dash.v1beta1.UpdatePartnerSettings.Builder.class);
   }
 
   public interface RequestOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:bloombox.schema.services.dash.v1beta1.UpdatePartnerSettings.Request)
+      // @@protoc_insertion_point(interface_extends:bloombox.services.dash.v1beta1.UpdatePartnerSettings.Request)
       com.google.protobuf.MessageOrBuilder {
 
     /**
@@ -120,7 +121,7 @@ private static final long serialVersionUID = 0L;
      * Settings to apply for the partner.
      * </pre>
      *
-     * <code>.bloombox.schema.partner.settings.PartnerSettings settings = 2;</code>
+     * <code>.bloombox.partner.settings.PartnerSettings settings = 2;</code>
      */
     boolean hasSettings();
     /**
@@ -128,7 +129,7 @@ private static final long serialVersionUID = 0L;
      * Settings to apply for the partner.
      * </pre>
      *
-     * <code>.bloombox.schema.partner.settings.PartnerSettings settings = 2;</code>
+     * <code>.bloombox.partner.settings.PartnerSettings settings = 2;</code>
      */
     io.bloombox.schema.partner.settings.PartnerSettingsOuterClass.PartnerSettings getSettings();
     /**
@@ -136,7 +137,7 @@ private static final long serialVersionUID = 0L;
      * Settings to apply for the partner.
      * </pre>
      *
-     * <code>.bloombox.schema.partner.settings.PartnerSettings settings = 2;</code>
+     * <code>.bloombox.partner.settings.PartnerSettings settings = 2;</code>
      */
     io.bloombox.schema.partner.settings.PartnerSettingsOuterClass.PartnerSettingsOrBuilder getSettingsOrBuilder();
   }
@@ -145,11 +146,11 @@ private static final long serialVersionUID = 0L;
    * Request to update partner-level settings.
    * </pre>
    *
-   * Protobuf type {@code bloombox.schema.services.dash.v1beta1.UpdatePartnerSettings.Request}
+   * Protobuf type {@code bloombox.services.dash.v1beta1.UpdatePartnerSettings.Request}
    */
   public  static final class Request extends
       com.google.protobuf.GeneratedMessageV3 implements
-      // @@protoc_insertion_point(message_implements:bloombox.schema.services.dash.v1beta1.UpdatePartnerSettings.Request)
+      // @@protoc_insertion_point(message_implements:bloombox.services.dash.v1beta1.UpdatePartnerSettings.Request)
       RequestOrBuilder {
   private static final long serialVersionUID = 0L;
     // Use Request.newBuilder() to construct.
@@ -184,13 +185,6 @@ private static final long serialVersionUID = 0L;
             case 0:
               done = true;
               break;
-            default: {
-              if (!parseUnknownFieldProto3(
-                  input, unknownFields, extensionRegistry, tag)) {
-                done = true;
-              }
-              break;
-            }
             case 10: {
               java.lang.String s = input.readStringRequireUtf8();
 
@@ -210,6 +204,13 @@ private static final long serialVersionUID = 0L;
 
               break;
             }
+            default: {
+              if (!parseUnknownFieldProto3(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
           }
         }
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
@@ -224,12 +225,13 @@ private static final long serialVersionUID = 0L;
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return io.bloombox.schema.services.dash.v1beta1.DashServiceBeta1.internal_static_bloombox_schema_services_dash_v1beta1_UpdatePartnerSettings_Request_descriptor;
+      return io.bloombox.schema.services.dash.v1beta1.DashServiceBeta1.internal_static_bloombox_services_dash_v1beta1_UpdatePartnerSettings_Request_descriptor;
     }
 
+    @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return io.bloombox.schema.services.dash.v1beta1.DashServiceBeta1.internal_static_bloombox_schema_services_dash_v1beta1_UpdatePartnerSettings_Request_fieldAccessorTable
+      return io.bloombox.schema.services.dash.v1beta1.DashServiceBeta1.internal_static_bloombox_services_dash_v1beta1_UpdatePartnerSettings_Request_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
               io.bloombox.schema.services.dash.v1beta1.UpdatePartnerSettings.Request.class, io.bloombox.schema.services.dash.v1beta1.UpdatePartnerSettings.Request.Builder.class);
     }
@@ -283,7 +285,7 @@ private static final long serialVersionUID = 0L;
      * Settings to apply for the partner.
      * </pre>
      *
-     * <code>.bloombox.schema.partner.settings.PartnerSettings settings = 2;</code>
+     * <code>.bloombox.partner.settings.PartnerSettings settings = 2;</code>
      */
     public boolean hasSettings() {
       return settings_ != null;
@@ -293,7 +295,7 @@ private static final long serialVersionUID = 0L;
      * Settings to apply for the partner.
      * </pre>
      *
-     * <code>.bloombox.schema.partner.settings.PartnerSettings settings = 2;</code>
+     * <code>.bloombox.partner.settings.PartnerSettings settings = 2;</code>
      */
     public io.bloombox.schema.partner.settings.PartnerSettingsOuterClass.PartnerSettings getSettings() {
       return settings_ == null ? io.bloombox.schema.partner.settings.PartnerSettingsOuterClass.PartnerSettings.getDefaultInstance() : settings_;
@@ -303,13 +305,14 @@ private static final long serialVersionUID = 0L;
      * Settings to apply for the partner.
      * </pre>
      *
-     * <code>.bloombox.schema.partner.settings.PartnerSettings settings = 2;</code>
+     * <code>.bloombox.partner.settings.PartnerSettings settings = 2;</code>
      */
     public io.bloombox.schema.partner.settings.PartnerSettingsOuterClass.PartnerSettingsOrBuilder getSettingsOrBuilder() {
       return getSettings();
     }
 
     private byte memoizedIsInitialized = -1;
+    @java.lang.Override
     public final boolean isInitialized() {
       byte isInitialized = memoizedIsInitialized;
       if (isInitialized == 1) return true;
@@ -319,6 +322,7 @@ private static final long serialVersionUID = 0L;
       return true;
     }
 
+    @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
       if (!getPartnerBytes().isEmpty()) {
@@ -330,6 +334,7 @@ private static final long serialVersionUID = 0L;
       unknownFields.writeTo(output);
     }
 
+    @java.lang.Override
     public int getSerializedSize() {
       int size = memoizedSize;
       if (size != -1) return size;
@@ -457,6 +462,7 @@ private static final long serialVersionUID = 0L;
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
 
+    @java.lang.Override
     public Builder newBuilderForType() { return newBuilder(); }
     public static Builder newBuilder() {
       return DEFAULT_INSTANCE.toBuilder();
@@ -464,6 +470,7 @@ private static final long serialVersionUID = 0L;
     public static Builder newBuilder(io.bloombox.schema.services.dash.v1beta1.UpdatePartnerSettings.Request prototype) {
       return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
     }
+    @java.lang.Override
     public Builder toBuilder() {
       return this == DEFAULT_INSTANCE
           ? new Builder() : new Builder().mergeFrom(this);
@@ -480,20 +487,21 @@ private static final long serialVersionUID = 0L;
      * Request to update partner-level settings.
      * </pre>
      *
-     * Protobuf type {@code bloombox.schema.services.dash.v1beta1.UpdatePartnerSettings.Request}
+     * Protobuf type {@code bloombox.services.dash.v1beta1.UpdatePartnerSettings.Request}
      */
     public static final class Builder extends
         com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:bloombox.schema.services.dash.v1beta1.UpdatePartnerSettings.Request)
+        // @@protoc_insertion_point(builder_implements:bloombox.services.dash.v1beta1.UpdatePartnerSettings.Request)
         io.bloombox.schema.services.dash.v1beta1.UpdatePartnerSettings.RequestOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return io.bloombox.schema.services.dash.v1beta1.DashServiceBeta1.internal_static_bloombox_schema_services_dash_v1beta1_UpdatePartnerSettings_Request_descriptor;
+        return io.bloombox.schema.services.dash.v1beta1.DashServiceBeta1.internal_static_bloombox_services_dash_v1beta1_UpdatePartnerSettings_Request_descriptor;
       }
 
+      @java.lang.Override
       protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return io.bloombox.schema.services.dash.v1beta1.DashServiceBeta1.internal_static_bloombox_schema_services_dash_v1beta1_UpdatePartnerSettings_Request_fieldAccessorTable
+        return io.bloombox.schema.services.dash.v1beta1.DashServiceBeta1.internal_static_bloombox_services_dash_v1beta1_UpdatePartnerSettings_Request_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
                 io.bloombox.schema.services.dash.v1beta1.UpdatePartnerSettings.Request.class, io.bloombox.schema.services.dash.v1beta1.UpdatePartnerSettings.Request.Builder.class);
       }
@@ -513,6 +521,7 @@ private static final long serialVersionUID = 0L;
                 .alwaysUseFieldBuilders) {
         }
       }
+      @java.lang.Override
       public Builder clear() {
         super.clear();
         partner_ = "";
@@ -526,15 +535,18 @@ private static final long serialVersionUID = 0L;
         return this;
       }
 
+      @java.lang.Override
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return io.bloombox.schema.services.dash.v1beta1.DashServiceBeta1.internal_static_bloombox_schema_services_dash_v1beta1_UpdatePartnerSettings_Request_descriptor;
+        return io.bloombox.schema.services.dash.v1beta1.DashServiceBeta1.internal_static_bloombox_services_dash_v1beta1_UpdatePartnerSettings_Request_descriptor;
       }
 
+      @java.lang.Override
       public io.bloombox.schema.services.dash.v1beta1.UpdatePartnerSettings.Request getDefaultInstanceForType() {
         return io.bloombox.schema.services.dash.v1beta1.UpdatePartnerSettings.Request.getDefaultInstance();
       }
 
+      @java.lang.Override
       public io.bloombox.schema.services.dash.v1beta1.UpdatePartnerSettings.Request build() {
         io.bloombox.schema.services.dash.v1beta1.UpdatePartnerSettings.Request result = buildPartial();
         if (!result.isInitialized()) {
@@ -543,6 +555,7 @@ private static final long serialVersionUID = 0L;
         return result;
       }
 
+      @java.lang.Override
       public io.bloombox.schema.services.dash.v1beta1.UpdatePartnerSettings.Request buildPartial() {
         io.bloombox.schema.services.dash.v1beta1.UpdatePartnerSettings.Request result = new io.bloombox.schema.services.dash.v1beta1.UpdatePartnerSettings.Request(this);
         result.partner_ = partner_;
@@ -555,32 +568,39 @@ private static final long serialVersionUID = 0L;
         return result;
       }
 
+      @java.lang.Override
       public Builder clone() {
         return (Builder) super.clone();
       }
+      @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
         return (Builder) super.setField(field, value);
       }
+      @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
         return (Builder) super.clearField(field);
       }
+      @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
         return (Builder) super.clearOneof(oneof);
       }
+      @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
         return (Builder) super.setRepeatedField(field, index, value);
       }
+      @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
         return (Builder) super.addRepeatedField(field, value);
       }
+      @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
         if (other instanceof io.bloombox.schema.services.dash.v1beta1.UpdatePartnerSettings.Request) {
           return mergeFrom((io.bloombox.schema.services.dash.v1beta1.UpdatePartnerSettings.Request)other);
@@ -604,10 +624,12 @@ private static final long serialVersionUID = 0L;
         return this;
       }
 
+      @java.lang.Override
       public final boolean isInitialized() {
         return true;
       }
 
+      @java.lang.Override
       public Builder mergeFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -723,7 +745,7 @@ private static final long serialVersionUID = 0L;
        * Settings to apply for the partner.
        * </pre>
        *
-       * <code>.bloombox.schema.partner.settings.PartnerSettings settings = 2;</code>
+       * <code>.bloombox.partner.settings.PartnerSettings settings = 2;</code>
        */
       public boolean hasSettings() {
         return settingsBuilder_ != null || settings_ != null;
@@ -733,7 +755,7 @@ private static final long serialVersionUID = 0L;
        * Settings to apply for the partner.
        * </pre>
        *
-       * <code>.bloombox.schema.partner.settings.PartnerSettings settings = 2;</code>
+       * <code>.bloombox.partner.settings.PartnerSettings settings = 2;</code>
        */
       public io.bloombox.schema.partner.settings.PartnerSettingsOuterClass.PartnerSettings getSettings() {
         if (settingsBuilder_ == null) {
@@ -747,7 +769,7 @@ private static final long serialVersionUID = 0L;
        * Settings to apply for the partner.
        * </pre>
        *
-       * <code>.bloombox.schema.partner.settings.PartnerSettings settings = 2;</code>
+       * <code>.bloombox.partner.settings.PartnerSettings settings = 2;</code>
        */
       public Builder setSettings(io.bloombox.schema.partner.settings.PartnerSettingsOuterClass.PartnerSettings value) {
         if (settingsBuilder_ == null) {
@@ -767,7 +789,7 @@ private static final long serialVersionUID = 0L;
        * Settings to apply for the partner.
        * </pre>
        *
-       * <code>.bloombox.schema.partner.settings.PartnerSettings settings = 2;</code>
+       * <code>.bloombox.partner.settings.PartnerSettings settings = 2;</code>
        */
       public Builder setSettings(
           io.bloombox.schema.partner.settings.PartnerSettingsOuterClass.PartnerSettings.Builder builderForValue) {
@@ -785,7 +807,7 @@ private static final long serialVersionUID = 0L;
        * Settings to apply for the partner.
        * </pre>
        *
-       * <code>.bloombox.schema.partner.settings.PartnerSettings settings = 2;</code>
+       * <code>.bloombox.partner.settings.PartnerSettings settings = 2;</code>
        */
       public Builder mergeSettings(io.bloombox.schema.partner.settings.PartnerSettingsOuterClass.PartnerSettings value) {
         if (settingsBuilder_ == null) {
@@ -807,7 +829,7 @@ private static final long serialVersionUID = 0L;
        * Settings to apply for the partner.
        * </pre>
        *
-       * <code>.bloombox.schema.partner.settings.PartnerSettings settings = 2;</code>
+       * <code>.bloombox.partner.settings.PartnerSettings settings = 2;</code>
        */
       public Builder clearSettings() {
         if (settingsBuilder_ == null) {
@@ -825,7 +847,7 @@ private static final long serialVersionUID = 0L;
        * Settings to apply for the partner.
        * </pre>
        *
-       * <code>.bloombox.schema.partner.settings.PartnerSettings settings = 2;</code>
+       * <code>.bloombox.partner.settings.PartnerSettings settings = 2;</code>
        */
       public io.bloombox.schema.partner.settings.PartnerSettingsOuterClass.PartnerSettings.Builder getSettingsBuilder() {
         
@@ -837,7 +859,7 @@ private static final long serialVersionUID = 0L;
        * Settings to apply for the partner.
        * </pre>
        *
-       * <code>.bloombox.schema.partner.settings.PartnerSettings settings = 2;</code>
+       * <code>.bloombox.partner.settings.PartnerSettings settings = 2;</code>
        */
       public io.bloombox.schema.partner.settings.PartnerSettingsOuterClass.PartnerSettingsOrBuilder getSettingsOrBuilder() {
         if (settingsBuilder_ != null) {
@@ -852,7 +874,7 @@ private static final long serialVersionUID = 0L;
        * Settings to apply for the partner.
        * </pre>
        *
-       * <code>.bloombox.schema.partner.settings.PartnerSettings settings = 2;</code>
+       * <code>.bloombox.partner.settings.PartnerSettings settings = 2;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
           io.bloombox.schema.partner.settings.PartnerSettingsOuterClass.PartnerSettings, io.bloombox.schema.partner.settings.PartnerSettingsOuterClass.PartnerSettings.Builder, io.bloombox.schema.partner.settings.PartnerSettingsOuterClass.PartnerSettingsOrBuilder> 
@@ -867,21 +889,23 @@ private static final long serialVersionUID = 0L;
         }
         return settingsBuilder_;
       }
+      @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
         return super.setUnknownFieldsProto3(unknownFields);
       }
 
+      @java.lang.Override
       public final Builder mergeUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
         return super.mergeUnknownFields(unknownFields);
       }
 
 
-      // @@protoc_insertion_point(builder_scope:bloombox.schema.services.dash.v1beta1.UpdatePartnerSettings.Request)
+      // @@protoc_insertion_point(builder_scope:bloombox.services.dash.v1beta1.UpdatePartnerSettings.Request)
     }
 
-    // @@protoc_insertion_point(class_scope:bloombox.schema.services.dash.v1beta1.UpdatePartnerSettings.Request)
+    // @@protoc_insertion_point(class_scope:bloombox.services.dash.v1beta1.UpdatePartnerSettings.Request)
     private static final io.bloombox.schema.services.dash.v1beta1.UpdatePartnerSettings.Request DEFAULT_INSTANCE;
     static {
       DEFAULT_INSTANCE = new io.bloombox.schema.services.dash.v1beta1.UpdatePartnerSettings.Request();
@@ -893,6 +917,7 @@ private static final long serialVersionUID = 0L;
 
     private static final com.google.protobuf.Parser<Request>
         PARSER = new com.google.protobuf.AbstractParser<Request>() {
+      @java.lang.Override
       public Request parsePartialFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -910,6 +935,7 @@ private static final long serialVersionUID = 0L;
       return PARSER;
     }
 
+    @java.lang.Override
     public io.bloombox.schema.services.dash.v1beta1.UpdatePartnerSettings.Request getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
@@ -917,6 +943,7 @@ private static final long serialVersionUID = 0L;
   }
 
   private byte memoizedIsInitialized = -1;
+  @java.lang.Override
   public final boolean isInitialized() {
     byte isInitialized = memoizedIsInitialized;
     if (isInitialized == 1) return true;
@@ -926,11 +953,13 @@ private static final long serialVersionUID = 0L;
     return true;
   }
 
+  @java.lang.Override
   public void writeTo(com.google.protobuf.CodedOutputStream output)
                       throws java.io.IOException {
     unknownFields.writeTo(output);
   }
 
+  @java.lang.Override
   public int getSerializedSize() {
     int size = memoizedSize;
     if (size != -1) return size;
@@ -1038,6 +1067,7 @@ private static final long serialVersionUID = 0L;
         .parseWithIOException(PARSER, input, extensionRegistry);
   }
 
+  @java.lang.Override
   public Builder newBuilderForType() { return newBuilder(); }
   public static Builder newBuilder() {
     return DEFAULT_INSTANCE.toBuilder();
@@ -1045,6 +1075,7 @@ private static final long serialVersionUID = 0L;
   public static Builder newBuilder(io.bloombox.schema.services.dash.v1beta1.UpdatePartnerSettings prototype) {
     return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
   }
+  @java.lang.Override
   public Builder toBuilder() {
     return this == DEFAULT_INSTANCE
         ? new Builder() : new Builder().mergeFrom(this);
@@ -1061,20 +1092,21 @@ private static final long serialVersionUID = 0L;
    * Specifies an RPC operation to update partner-level settings from the dashboard.
    * </pre>
    *
-   * Protobuf type {@code bloombox.schema.services.dash.v1beta1.UpdatePartnerSettings}
+   * Protobuf type {@code bloombox.services.dash.v1beta1.UpdatePartnerSettings}
    */
   public static final class Builder extends
       com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-      // @@protoc_insertion_point(builder_implements:bloombox.schema.services.dash.v1beta1.UpdatePartnerSettings)
+      // @@protoc_insertion_point(builder_implements:bloombox.services.dash.v1beta1.UpdatePartnerSettings)
       io.bloombox.schema.services.dash.v1beta1.UpdatePartnerSettingsOrBuilder {
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return io.bloombox.schema.services.dash.v1beta1.DashServiceBeta1.internal_static_bloombox_schema_services_dash_v1beta1_UpdatePartnerSettings_descriptor;
+      return io.bloombox.schema.services.dash.v1beta1.DashServiceBeta1.internal_static_bloombox_services_dash_v1beta1_UpdatePartnerSettings_descriptor;
     }
 
+    @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return io.bloombox.schema.services.dash.v1beta1.DashServiceBeta1.internal_static_bloombox_schema_services_dash_v1beta1_UpdatePartnerSettings_fieldAccessorTable
+      return io.bloombox.schema.services.dash.v1beta1.DashServiceBeta1.internal_static_bloombox_services_dash_v1beta1_UpdatePartnerSettings_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
               io.bloombox.schema.services.dash.v1beta1.UpdatePartnerSettings.class, io.bloombox.schema.services.dash.v1beta1.UpdatePartnerSettings.Builder.class);
     }
@@ -1094,20 +1126,24 @@ private static final long serialVersionUID = 0L;
               .alwaysUseFieldBuilders) {
       }
     }
+    @java.lang.Override
     public Builder clear() {
       super.clear();
       return this;
     }
 
+    @java.lang.Override
     public com.google.protobuf.Descriptors.Descriptor
         getDescriptorForType() {
-      return io.bloombox.schema.services.dash.v1beta1.DashServiceBeta1.internal_static_bloombox_schema_services_dash_v1beta1_UpdatePartnerSettings_descriptor;
+      return io.bloombox.schema.services.dash.v1beta1.DashServiceBeta1.internal_static_bloombox_services_dash_v1beta1_UpdatePartnerSettings_descriptor;
     }
 
+    @java.lang.Override
     public io.bloombox.schema.services.dash.v1beta1.UpdatePartnerSettings getDefaultInstanceForType() {
       return io.bloombox.schema.services.dash.v1beta1.UpdatePartnerSettings.getDefaultInstance();
     }
 
+    @java.lang.Override
     public io.bloombox.schema.services.dash.v1beta1.UpdatePartnerSettings build() {
       io.bloombox.schema.services.dash.v1beta1.UpdatePartnerSettings result = buildPartial();
       if (!result.isInitialized()) {
@@ -1116,38 +1152,46 @@ private static final long serialVersionUID = 0L;
       return result;
     }
 
+    @java.lang.Override
     public io.bloombox.schema.services.dash.v1beta1.UpdatePartnerSettings buildPartial() {
       io.bloombox.schema.services.dash.v1beta1.UpdatePartnerSettings result = new io.bloombox.schema.services.dash.v1beta1.UpdatePartnerSettings(this);
       onBuilt();
       return result;
     }
 
+    @java.lang.Override
     public Builder clone() {
       return (Builder) super.clone();
     }
+    @java.lang.Override
     public Builder setField(
         com.google.protobuf.Descriptors.FieldDescriptor field,
         java.lang.Object value) {
       return (Builder) super.setField(field, value);
     }
+    @java.lang.Override
     public Builder clearField(
         com.google.protobuf.Descriptors.FieldDescriptor field) {
       return (Builder) super.clearField(field);
     }
+    @java.lang.Override
     public Builder clearOneof(
         com.google.protobuf.Descriptors.OneofDescriptor oneof) {
       return (Builder) super.clearOneof(oneof);
     }
+    @java.lang.Override
     public Builder setRepeatedField(
         com.google.protobuf.Descriptors.FieldDescriptor field,
         int index, java.lang.Object value) {
       return (Builder) super.setRepeatedField(field, index, value);
     }
+    @java.lang.Override
     public Builder addRepeatedField(
         com.google.protobuf.Descriptors.FieldDescriptor field,
         java.lang.Object value) {
       return (Builder) super.addRepeatedField(field, value);
     }
+    @java.lang.Override
     public Builder mergeFrom(com.google.protobuf.Message other) {
       if (other instanceof io.bloombox.schema.services.dash.v1beta1.UpdatePartnerSettings) {
         return mergeFrom((io.bloombox.schema.services.dash.v1beta1.UpdatePartnerSettings)other);
@@ -1164,10 +1208,12 @@ private static final long serialVersionUID = 0L;
       return this;
     }
 
+    @java.lang.Override
     public final boolean isInitialized() {
       return true;
     }
 
+    @java.lang.Override
     public Builder mergeFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -1185,21 +1231,23 @@ private static final long serialVersionUID = 0L;
       }
       return this;
     }
+    @java.lang.Override
     public final Builder setUnknownFields(
         final com.google.protobuf.UnknownFieldSet unknownFields) {
       return super.setUnknownFieldsProto3(unknownFields);
     }
 
+    @java.lang.Override
     public final Builder mergeUnknownFields(
         final com.google.protobuf.UnknownFieldSet unknownFields) {
       return super.mergeUnknownFields(unknownFields);
     }
 
 
-    // @@protoc_insertion_point(builder_scope:bloombox.schema.services.dash.v1beta1.UpdatePartnerSettings)
+    // @@protoc_insertion_point(builder_scope:bloombox.services.dash.v1beta1.UpdatePartnerSettings)
   }
 
-  // @@protoc_insertion_point(class_scope:bloombox.schema.services.dash.v1beta1.UpdatePartnerSettings)
+  // @@protoc_insertion_point(class_scope:bloombox.services.dash.v1beta1.UpdatePartnerSettings)
   private static final io.bloombox.schema.services.dash.v1beta1.UpdatePartnerSettings DEFAULT_INSTANCE;
   static {
     DEFAULT_INSTANCE = new io.bloombox.schema.services.dash.v1beta1.UpdatePartnerSettings();
@@ -1211,6 +1259,7 @@ private static final long serialVersionUID = 0L;
 
   private static final com.google.protobuf.Parser<UpdatePartnerSettings>
       PARSER = new com.google.protobuf.AbstractParser<UpdatePartnerSettings>() {
+    @java.lang.Override
     public UpdatePartnerSettings parsePartialFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -1228,6 +1277,7 @@ private static final long serialVersionUID = 0L;
     return PARSER;
   }
 
+  @java.lang.Override
   public io.bloombox.schema.services.dash.v1beta1.UpdatePartnerSettings getDefaultInstanceForType() {
     return DEFAULT_INSTANCE;
   }

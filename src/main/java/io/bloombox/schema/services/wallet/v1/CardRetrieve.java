@@ -1,8 +1,8 @@
 /*
- * Copyright 2018, Bloombox, LLC. All rights reserved.
+ * Copyright 2018, Momentum Ideas, Co. All rights reserved.
  *
  * Source and object computer code contained herein is the private intellectual
- * property of Bloombox, a California Limited Liability Corporation. Use of this
+ * property of Momentum Ideas Co., a Delaware Corporation. Use of this
  * code in source form requires permission in writing before use or the
  * assembly, distribution, or publishing of derivative works, for commercial
  * purposes or any other purpose, from a duly authorized officer of Momentum
@@ -25,11 +25,11 @@ package io.bloombox.schema.services.wallet.v1;
  * Specifies an RPC operation to retrieve the latest version of a given wallet pass.
  * </pre>
  *
- * Protobuf type {@code bloombox.schema.services.wallet.v1.CardRetrieve}
+ * Protobuf type {@code bloombox.services.wallet.v1.CardRetrieve}
  */
 public  final class CardRetrieve extends
     com.google.protobuf.GeneratedMessageV3 implements
-    // @@protoc_insertion_point(message_implements:bloombox.schema.services.wallet.v1.CardRetrieve)
+    // @@protoc_insertion_point(message_implements:bloombox.services.wallet.v1.CardRetrieve)
     CardRetrieveOrBuilder {
 private static final long serialVersionUID = 0L;
   // Use CardRetrieve.newBuilder() to construct.
@@ -83,18 +83,19 @@ private static final long serialVersionUID = 0L;
   }
   public static final com.google.protobuf.Descriptors.Descriptor
       getDescriptor() {
-    return io.bloombox.schema.services.wallet.v1.WalletServiceV1.internal_static_bloombox_schema_services_wallet_v1_CardRetrieve_descriptor;
+    return io.bloombox.schema.services.wallet.v1.WalletServiceV1.internal_static_bloombox_services_wallet_v1_CardRetrieve_descriptor;
   }
 
+  @java.lang.Override
   protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internalGetFieldAccessorTable() {
-    return io.bloombox.schema.services.wallet.v1.WalletServiceV1.internal_static_bloombox_schema_services_wallet_v1_CardRetrieve_fieldAccessorTable
+    return io.bloombox.schema.services.wallet.v1.WalletServiceV1.internal_static_bloombox_services_wallet_v1_CardRetrieve_fieldAccessorTable
         .ensureFieldAccessorsInitialized(
             io.bloombox.schema.services.wallet.v1.CardRetrieve.class, io.bloombox.schema.services.wallet.v1.CardRetrieve.Builder.class);
   }
 
   public interface RequestOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:bloombox.schema.services.wallet.v1.CardRetrieve.Request)
+      // @@protoc_insertion_point(interface_extends:bloombox.services.wallet.v1.CardRetrieve.Request)
       com.google.protobuf.MessageOrBuilder {
 
     /**
@@ -138,11 +139,11 @@ private static final long serialVersionUID = 0L;
    * Request to retrieve a wallet pass.
    * </pre>
    *
-   * Protobuf type {@code bloombox.schema.services.wallet.v1.CardRetrieve.Request}
+   * Protobuf type {@code bloombox.services.wallet.v1.CardRetrieve.Request}
    */
   public  static final class Request extends
       com.google.protobuf.GeneratedMessageV3 implements
-      // @@protoc_insertion_point(message_implements:bloombox.schema.services.wallet.v1.CardRetrieve.Request)
+      // @@protoc_insertion_point(message_implements:bloombox.services.wallet.v1.CardRetrieve.Request)
       RequestOrBuilder {
   private static final long serialVersionUID = 0L;
     // Use Request.newBuilder() to construct.
@@ -178,13 +179,6 @@ private static final long serialVersionUID = 0L;
             case 0:
               done = true;
               break;
-            default: {
-              if (!parseUnknownFieldProto3(
-                  input, unknownFields, extensionRegistry, tag)) {
-                done = true;
-              }
-              break;
-            }
             case 18: {
               java.lang.String s = input.readStringRequireUtf8();
 
@@ -195,6 +189,13 @@ private static final long serialVersionUID = 0L;
               java.lang.String s = input.readStringRequireUtf8();
 
               serial_ = s;
+              break;
+            }
+            default: {
+              if (!parseUnknownFieldProto3(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
               break;
             }
           }
@@ -211,12 +212,13 @@ private static final long serialVersionUID = 0L;
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return io.bloombox.schema.services.wallet.v1.WalletServiceV1.internal_static_bloombox_schema_services_wallet_v1_CardRetrieve_Request_descriptor;
+      return io.bloombox.schema.services.wallet.v1.WalletServiceV1.internal_static_bloombox_services_wallet_v1_CardRetrieve_Request_descriptor;
     }
 
+    @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return io.bloombox.schema.services.wallet.v1.WalletServiceV1.internal_static_bloombox_schema_services_wallet_v1_CardRetrieve_Request_fieldAccessorTable
+      return io.bloombox.schema.services.wallet.v1.WalletServiceV1.internal_static_bloombox_services_wallet_v1_CardRetrieve_Request_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
               io.bloombox.schema.services.wallet.v1.CardRetrieve.Request.class, io.bloombox.schema.services.wallet.v1.CardRetrieve.Request.Builder.class);
     }
@@ -306,6 +308,7 @@ private static final long serialVersionUID = 0L;
     }
 
     private byte memoizedIsInitialized = -1;
+    @java.lang.Override
     public final boolean isInitialized() {
       byte isInitialized = memoizedIsInitialized;
       if (isInitialized == 1) return true;
@@ -315,6 +318,7 @@ private static final long serialVersionUID = 0L;
       return true;
     }
 
+    @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
       if (!getPassTypeBytes().isEmpty()) {
@@ -326,6 +330,7 @@ private static final long serialVersionUID = 0L;
       unknownFields.writeTo(output);
     }
 
+    @java.lang.Override
     public int getSerializedSize() {
       int size = memoizedSize;
       if (size != -1) return size;
@@ -447,6 +452,7 @@ private static final long serialVersionUID = 0L;
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
 
+    @java.lang.Override
     public Builder newBuilderForType() { return newBuilder(); }
     public static Builder newBuilder() {
       return DEFAULT_INSTANCE.toBuilder();
@@ -454,6 +460,7 @@ private static final long serialVersionUID = 0L;
     public static Builder newBuilder(io.bloombox.schema.services.wallet.v1.CardRetrieve.Request prototype) {
       return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
     }
+    @java.lang.Override
     public Builder toBuilder() {
       return this == DEFAULT_INSTANCE
           ? new Builder() : new Builder().mergeFrom(this);
@@ -470,20 +477,21 @@ private static final long serialVersionUID = 0L;
      * Request to retrieve a wallet pass.
      * </pre>
      *
-     * Protobuf type {@code bloombox.schema.services.wallet.v1.CardRetrieve.Request}
+     * Protobuf type {@code bloombox.services.wallet.v1.CardRetrieve.Request}
      */
     public static final class Builder extends
         com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:bloombox.schema.services.wallet.v1.CardRetrieve.Request)
+        // @@protoc_insertion_point(builder_implements:bloombox.services.wallet.v1.CardRetrieve.Request)
         io.bloombox.schema.services.wallet.v1.CardRetrieve.RequestOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return io.bloombox.schema.services.wallet.v1.WalletServiceV1.internal_static_bloombox_schema_services_wallet_v1_CardRetrieve_Request_descriptor;
+        return io.bloombox.schema.services.wallet.v1.WalletServiceV1.internal_static_bloombox_services_wallet_v1_CardRetrieve_Request_descriptor;
       }
 
+      @java.lang.Override
       protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return io.bloombox.schema.services.wallet.v1.WalletServiceV1.internal_static_bloombox_schema_services_wallet_v1_CardRetrieve_Request_fieldAccessorTable
+        return io.bloombox.schema.services.wallet.v1.WalletServiceV1.internal_static_bloombox_services_wallet_v1_CardRetrieve_Request_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
                 io.bloombox.schema.services.wallet.v1.CardRetrieve.Request.class, io.bloombox.schema.services.wallet.v1.CardRetrieve.Request.Builder.class);
       }
@@ -503,6 +511,7 @@ private static final long serialVersionUID = 0L;
                 .alwaysUseFieldBuilders) {
         }
       }
+      @java.lang.Override
       public Builder clear() {
         super.clear();
         passType_ = "";
@@ -512,15 +521,18 @@ private static final long serialVersionUID = 0L;
         return this;
       }
 
+      @java.lang.Override
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return io.bloombox.schema.services.wallet.v1.WalletServiceV1.internal_static_bloombox_schema_services_wallet_v1_CardRetrieve_Request_descriptor;
+        return io.bloombox.schema.services.wallet.v1.WalletServiceV1.internal_static_bloombox_services_wallet_v1_CardRetrieve_Request_descriptor;
       }
 
+      @java.lang.Override
       public io.bloombox.schema.services.wallet.v1.CardRetrieve.Request getDefaultInstanceForType() {
         return io.bloombox.schema.services.wallet.v1.CardRetrieve.Request.getDefaultInstance();
       }
 
+      @java.lang.Override
       public io.bloombox.schema.services.wallet.v1.CardRetrieve.Request build() {
         io.bloombox.schema.services.wallet.v1.CardRetrieve.Request result = buildPartial();
         if (!result.isInitialized()) {
@@ -529,6 +541,7 @@ private static final long serialVersionUID = 0L;
         return result;
       }
 
+      @java.lang.Override
       public io.bloombox.schema.services.wallet.v1.CardRetrieve.Request buildPartial() {
         io.bloombox.schema.services.wallet.v1.CardRetrieve.Request result = new io.bloombox.schema.services.wallet.v1.CardRetrieve.Request(this);
         result.passType_ = passType_;
@@ -537,32 +550,39 @@ private static final long serialVersionUID = 0L;
         return result;
       }
 
+      @java.lang.Override
       public Builder clone() {
         return (Builder) super.clone();
       }
+      @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
         return (Builder) super.setField(field, value);
       }
+      @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
         return (Builder) super.clearField(field);
       }
+      @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
         return (Builder) super.clearOneof(oneof);
       }
+      @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
         return (Builder) super.setRepeatedField(field, index, value);
       }
+      @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
         return (Builder) super.addRepeatedField(field, value);
       }
+      @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
         if (other instanceof io.bloombox.schema.services.wallet.v1.CardRetrieve.Request) {
           return mergeFrom((io.bloombox.schema.services.wallet.v1.CardRetrieve.Request)other);
@@ -587,10 +607,12 @@ private static final long serialVersionUID = 0L;
         return this;
       }
 
+      @java.lang.Override
       public final boolean isInitialized() {
         return true;
       }
 
+      @java.lang.Override
       public Builder mergeFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -786,21 +808,23 @@ private static final long serialVersionUID = 0L;
         onChanged();
         return this;
       }
+      @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
         return super.setUnknownFieldsProto3(unknownFields);
       }
 
+      @java.lang.Override
       public final Builder mergeUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
         return super.mergeUnknownFields(unknownFields);
       }
 
 
-      // @@protoc_insertion_point(builder_scope:bloombox.schema.services.wallet.v1.CardRetrieve.Request)
+      // @@protoc_insertion_point(builder_scope:bloombox.services.wallet.v1.CardRetrieve.Request)
     }
 
-    // @@protoc_insertion_point(class_scope:bloombox.schema.services.wallet.v1.CardRetrieve.Request)
+    // @@protoc_insertion_point(class_scope:bloombox.services.wallet.v1.CardRetrieve.Request)
     private static final io.bloombox.schema.services.wallet.v1.CardRetrieve.Request DEFAULT_INSTANCE;
     static {
       DEFAULT_INSTANCE = new io.bloombox.schema.services.wallet.v1.CardRetrieve.Request();
@@ -812,6 +836,7 @@ private static final long serialVersionUID = 0L;
 
     private static final com.google.protobuf.Parser<Request>
         PARSER = new com.google.protobuf.AbstractParser<Request>() {
+      @java.lang.Override
       public Request parsePartialFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -829,6 +854,7 @@ private static final long serialVersionUID = 0L;
       return PARSER;
     }
 
+    @java.lang.Override
     public io.bloombox.schema.services.wallet.v1.CardRetrieve.Request getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
@@ -836,7 +862,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public interface ResponseOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:bloombox.schema.services.wallet.v1.CardRetrieve.Response)
+      // @@protoc_insertion_point(interface_extends:bloombox.services.wallet.v1.CardRetrieve.Response)
       com.google.protobuf.MessageOrBuilder {
 
     /**
@@ -853,11 +879,11 @@ private static final long serialVersionUID = 0L;
    * Response containing the resulting pass, if it could be found.
    * </pre>
    *
-   * Protobuf type {@code bloombox.schema.services.wallet.v1.CardRetrieve.Response}
+   * Protobuf type {@code bloombox.services.wallet.v1.CardRetrieve.Response}
    */
   public  static final class Response extends
       com.google.protobuf.GeneratedMessageV3 implements
-      // @@protoc_insertion_point(message_implements:bloombox.schema.services.wallet.v1.CardRetrieve.Response)
+      // @@protoc_insertion_point(message_implements:bloombox.services.wallet.v1.CardRetrieve.Response)
       ResponseOrBuilder {
   private static final long serialVersionUID = 0L;
     // Use Response.newBuilder() to construct.
@@ -892,16 +918,16 @@ private static final long serialVersionUID = 0L;
             case 0:
               done = true;
               break;
+            case 10: {
+
+              payload_ = input.readBytes();
+              break;
+            }
             default: {
               if (!parseUnknownFieldProto3(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
-              break;
-            }
-            case 10: {
-
-              payload_ = input.readBytes();
               break;
             }
           }
@@ -918,12 +944,13 @@ private static final long serialVersionUID = 0L;
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return io.bloombox.schema.services.wallet.v1.WalletServiceV1.internal_static_bloombox_schema_services_wallet_v1_CardRetrieve_Response_descriptor;
+      return io.bloombox.schema.services.wallet.v1.WalletServiceV1.internal_static_bloombox_services_wallet_v1_CardRetrieve_Response_descriptor;
     }
 
+    @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return io.bloombox.schema.services.wallet.v1.WalletServiceV1.internal_static_bloombox_schema_services_wallet_v1_CardRetrieve_Response_fieldAccessorTable
+      return io.bloombox.schema.services.wallet.v1.WalletServiceV1.internal_static_bloombox_services_wallet_v1_CardRetrieve_Response_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
               io.bloombox.schema.services.wallet.v1.CardRetrieve.Response.class, io.bloombox.schema.services.wallet.v1.CardRetrieve.Response.Builder.class);
     }
@@ -942,6 +969,7 @@ private static final long serialVersionUID = 0L;
     }
 
     private byte memoizedIsInitialized = -1;
+    @java.lang.Override
     public final boolean isInitialized() {
       byte isInitialized = memoizedIsInitialized;
       if (isInitialized == 1) return true;
@@ -951,6 +979,7 @@ private static final long serialVersionUID = 0L;
       return true;
     }
 
+    @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
       if (!payload_.isEmpty()) {
@@ -959,6 +988,7 @@ private static final long serialVersionUID = 0L;
       unknownFields.writeTo(output);
     }
 
+    @java.lang.Override
     public int getSerializedSize() {
       int size = memoizedSize;
       if (size != -1) return size;
@@ -1074,6 +1104,7 @@ private static final long serialVersionUID = 0L;
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
 
+    @java.lang.Override
     public Builder newBuilderForType() { return newBuilder(); }
     public static Builder newBuilder() {
       return DEFAULT_INSTANCE.toBuilder();
@@ -1081,6 +1112,7 @@ private static final long serialVersionUID = 0L;
     public static Builder newBuilder(io.bloombox.schema.services.wallet.v1.CardRetrieve.Response prototype) {
       return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
     }
+    @java.lang.Override
     public Builder toBuilder() {
       return this == DEFAULT_INSTANCE
           ? new Builder() : new Builder().mergeFrom(this);
@@ -1097,20 +1129,21 @@ private static final long serialVersionUID = 0L;
      * Response containing the resulting pass, if it could be found.
      * </pre>
      *
-     * Protobuf type {@code bloombox.schema.services.wallet.v1.CardRetrieve.Response}
+     * Protobuf type {@code bloombox.services.wallet.v1.CardRetrieve.Response}
      */
     public static final class Builder extends
         com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:bloombox.schema.services.wallet.v1.CardRetrieve.Response)
+        // @@protoc_insertion_point(builder_implements:bloombox.services.wallet.v1.CardRetrieve.Response)
         io.bloombox.schema.services.wallet.v1.CardRetrieve.ResponseOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return io.bloombox.schema.services.wallet.v1.WalletServiceV1.internal_static_bloombox_schema_services_wallet_v1_CardRetrieve_Response_descriptor;
+        return io.bloombox.schema.services.wallet.v1.WalletServiceV1.internal_static_bloombox_services_wallet_v1_CardRetrieve_Response_descriptor;
       }
 
+      @java.lang.Override
       protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return io.bloombox.schema.services.wallet.v1.WalletServiceV1.internal_static_bloombox_schema_services_wallet_v1_CardRetrieve_Response_fieldAccessorTable
+        return io.bloombox.schema.services.wallet.v1.WalletServiceV1.internal_static_bloombox_services_wallet_v1_CardRetrieve_Response_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
                 io.bloombox.schema.services.wallet.v1.CardRetrieve.Response.class, io.bloombox.schema.services.wallet.v1.CardRetrieve.Response.Builder.class);
       }
@@ -1130,6 +1163,7 @@ private static final long serialVersionUID = 0L;
                 .alwaysUseFieldBuilders) {
         }
       }
+      @java.lang.Override
       public Builder clear() {
         super.clear();
         payload_ = com.google.protobuf.ByteString.EMPTY;
@@ -1137,15 +1171,18 @@ private static final long serialVersionUID = 0L;
         return this;
       }
 
+      @java.lang.Override
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return io.bloombox.schema.services.wallet.v1.WalletServiceV1.internal_static_bloombox_schema_services_wallet_v1_CardRetrieve_Response_descriptor;
+        return io.bloombox.schema.services.wallet.v1.WalletServiceV1.internal_static_bloombox_services_wallet_v1_CardRetrieve_Response_descriptor;
       }
 
+      @java.lang.Override
       public io.bloombox.schema.services.wallet.v1.CardRetrieve.Response getDefaultInstanceForType() {
         return io.bloombox.schema.services.wallet.v1.CardRetrieve.Response.getDefaultInstance();
       }
 
+      @java.lang.Override
       public io.bloombox.schema.services.wallet.v1.CardRetrieve.Response build() {
         io.bloombox.schema.services.wallet.v1.CardRetrieve.Response result = buildPartial();
         if (!result.isInitialized()) {
@@ -1154,6 +1191,7 @@ private static final long serialVersionUID = 0L;
         return result;
       }
 
+      @java.lang.Override
       public io.bloombox.schema.services.wallet.v1.CardRetrieve.Response buildPartial() {
         io.bloombox.schema.services.wallet.v1.CardRetrieve.Response result = new io.bloombox.schema.services.wallet.v1.CardRetrieve.Response(this);
         result.payload_ = payload_;
@@ -1161,32 +1199,39 @@ private static final long serialVersionUID = 0L;
         return result;
       }
 
+      @java.lang.Override
       public Builder clone() {
         return (Builder) super.clone();
       }
+      @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
         return (Builder) super.setField(field, value);
       }
+      @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
         return (Builder) super.clearField(field);
       }
+      @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
         return (Builder) super.clearOneof(oneof);
       }
+      @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
         return (Builder) super.setRepeatedField(field, index, value);
       }
+      @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
         return (Builder) super.addRepeatedField(field, value);
       }
+      @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
         if (other instanceof io.bloombox.schema.services.wallet.v1.CardRetrieve.Response) {
           return mergeFrom((io.bloombox.schema.services.wallet.v1.CardRetrieve.Response)other);
@@ -1206,10 +1251,12 @@ private static final long serialVersionUID = 0L;
         return this;
       }
 
+      @java.lang.Override
       public final boolean isInitialized() {
         return true;
       }
 
+      @java.lang.Override
       public Builder mergeFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -1268,21 +1315,23 @@ private static final long serialVersionUID = 0L;
         onChanged();
         return this;
       }
+      @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
         return super.setUnknownFieldsProto3(unknownFields);
       }
 
+      @java.lang.Override
       public final Builder mergeUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
         return super.mergeUnknownFields(unknownFields);
       }
 
 
-      // @@protoc_insertion_point(builder_scope:bloombox.schema.services.wallet.v1.CardRetrieve.Response)
+      // @@protoc_insertion_point(builder_scope:bloombox.services.wallet.v1.CardRetrieve.Response)
     }
 
-    // @@protoc_insertion_point(class_scope:bloombox.schema.services.wallet.v1.CardRetrieve.Response)
+    // @@protoc_insertion_point(class_scope:bloombox.services.wallet.v1.CardRetrieve.Response)
     private static final io.bloombox.schema.services.wallet.v1.CardRetrieve.Response DEFAULT_INSTANCE;
     static {
       DEFAULT_INSTANCE = new io.bloombox.schema.services.wallet.v1.CardRetrieve.Response();
@@ -1294,6 +1343,7 @@ private static final long serialVersionUID = 0L;
 
     private static final com.google.protobuf.Parser<Response>
         PARSER = new com.google.protobuf.AbstractParser<Response>() {
+      @java.lang.Override
       public Response parsePartialFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -1311,6 +1361,7 @@ private static final long serialVersionUID = 0L;
       return PARSER;
     }
 
+    @java.lang.Override
     public io.bloombox.schema.services.wallet.v1.CardRetrieve.Response getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
@@ -1318,6 +1369,7 @@ private static final long serialVersionUID = 0L;
   }
 
   private byte memoizedIsInitialized = -1;
+  @java.lang.Override
   public final boolean isInitialized() {
     byte isInitialized = memoizedIsInitialized;
     if (isInitialized == 1) return true;
@@ -1327,11 +1379,13 @@ private static final long serialVersionUID = 0L;
     return true;
   }
 
+  @java.lang.Override
   public void writeTo(com.google.protobuf.CodedOutputStream output)
                       throws java.io.IOException {
     unknownFields.writeTo(output);
   }
 
+  @java.lang.Override
   public int getSerializedSize() {
     int size = memoizedSize;
     if (size != -1) return size;
@@ -1439,6 +1493,7 @@ private static final long serialVersionUID = 0L;
         .parseWithIOException(PARSER, input, extensionRegistry);
   }
 
+  @java.lang.Override
   public Builder newBuilderForType() { return newBuilder(); }
   public static Builder newBuilder() {
     return DEFAULT_INSTANCE.toBuilder();
@@ -1446,6 +1501,7 @@ private static final long serialVersionUID = 0L;
   public static Builder newBuilder(io.bloombox.schema.services.wallet.v1.CardRetrieve prototype) {
     return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
   }
+  @java.lang.Override
   public Builder toBuilder() {
     return this == DEFAULT_INSTANCE
         ? new Builder() : new Builder().mergeFrom(this);
@@ -1462,20 +1518,21 @@ private static final long serialVersionUID = 0L;
    * Specifies an RPC operation to retrieve the latest version of a given wallet pass.
    * </pre>
    *
-   * Protobuf type {@code bloombox.schema.services.wallet.v1.CardRetrieve}
+   * Protobuf type {@code bloombox.services.wallet.v1.CardRetrieve}
    */
   public static final class Builder extends
       com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-      // @@protoc_insertion_point(builder_implements:bloombox.schema.services.wallet.v1.CardRetrieve)
+      // @@protoc_insertion_point(builder_implements:bloombox.services.wallet.v1.CardRetrieve)
       io.bloombox.schema.services.wallet.v1.CardRetrieveOrBuilder {
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return io.bloombox.schema.services.wallet.v1.WalletServiceV1.internal_static_bloombox_schema_services_wallet_v1_CardRetrieve_descriptor;
+      return io.bloombox.schema.services.wallet.v1.WalletServiceV1.internal_static_bloombox_services_wallet_v1_CardRetrieve_descriptor;
     }
 
+    @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return io.bloombox.schema.services.wallet.v1.WalletServiceV1.internal_static_bloombox_schema_services_wallet_v1_CardRetrieve_fieldAccessorTable
+      return io.bloombox.schema.services.wallet.v1.WalletServiceV1.internal_static_bloombox_services_wallet_v1_CardRetrieve_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
               io.bloombox.schema.services.wallet.v1.CardRetrieve.class, io.bloombox.schema.services.wallet.v1.CardRetrieve.Builder.class);
     }
@@ -1495,20 +1552,24 @@ private static final long serialVersionUID = 0L;
               .alwaysUseFieldBuilders) {
       }
     }
+    @java.lang.Override
     public Builder clear() {
       super.clear();
       return this;
     }
 
+    @java.lang.Override
     public com.google.protobuf.Descriptors.Descriptor
         getDescriptorForType() {
-      return io.bloombox.schema.services.wallet.v1.WalletServiceV1.internal_static_bloombox_schema_services_wallet_v1_CardRetrieve_descriptor;
+      return io.bloombox.schema.services.wallet.v1.WalletServiceV1.internal_static_bloombox_services_wallet_v1_CardRetrieve_descriptor;
     }
 
+    @java.lang.Override
     public io.bloombox.schema.services.wallet.v1.CardRetrieve getDefaultInstanceForType() {
       return io.bloombox.schema.services.wallet.v1.CardRetrieve.getDefaultInstance();
     }
 
+    @java.lang.Override
     public io.bloombox.schema.services.wallet.v1.CardRetrieve build() {
       io.bloombox.schema.services.wallet.v1.CardRetrieve result = buildPartial();
       if (!result.isInitialized()) {
@@ -1517,38 +1578,46 @@ private static final long serialVersionUID = 0L;
       return result;
     }
 
+    @java.lang.Override
     public io.bloombox.schema.services.wallet.v1.CardRetrieve buildPartial() {
       io.bloombox.schema.services.wallet.v1.CardRetrieve result = new io.bloombox.schema.services.wallet.v1.CardRetrieve(this);
       onBuilt();
       return result;
     }
 
+    @java.lang.Override
     public Builder clone() {
       return (Builder) super.clone();
     }
+    @java.lang.Override
     public Builder setField(
         com.google.protobuf.Descriptors.FieldDescriptor field,
         java.lang.Object value) {
       return (Builder) super.setField(field, value);
     }
+    @java.lang.Override
     public Builder clearField(
         com.google.protobuf.Descriptors.FieldDescriptor field) {
       return (Builder) super.clearField(field);
     }
+    @java.lang.Override
     public Builder clearOneof(
         com.google.protobuf.Descriptors.OneofDescriptor oneof) {
       return (Builder) super.clearOneof(oneof);
     }
+    @java.lang.Override
     public Builder setRepeatedField(
         com.google.protobuf.Descriptors.FieldDescriptor field,
         int index, java.lang.Object value) {
       return (Builder) super.setRepeatedField(field, index, value);
     }
+    @java.lang.Override
     public Builder addRepeatedField(
         com.google.protobuf.Descriptors.FieldDescriptor field,
         java.lang.Object value) {
       return (Builder) super.addRepeatedField(field, value);
     }
+    @java.lang.Override
     public Builder mergeFrom(com.google.protobuf.Message other) {
       if (other instanceof io.bloombox.schema.services.wallet.v1.CardRetrieve) {
         return mergeFrom((io.bloombox.schema.services.wallet.v1.CardRetrieve)other);
@@ -1565,10 +1634,12 @@ private static final long serialVersionUID = 0L;
       return this;
     }
 
+    @java.lang.Override
     public final boolean isInitialized() {
       return true;
     }
 
+    @java.lang.Override
     public Builder mergeFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -1586,21 +1657,23 @@ private static final long serialVersionUID = 0L;
       }
       return this;
     }
+    @java.lang.Override
     public final Builder setUnknownFields(
         final com.google.protobuf.UnknownFieldSet unknownFields) {
       return super.setUnknownFieldsProto3(unknownFields);
     }
 
+    @java.lang.Override
     public final Builder mergeUnknownFields(
         final com.google.protobuf.UnknownFieldSet unknownFields) {
       return super.mergeUnknownFields(unknownFields);
     }
 
 
-    // @@protoc_insertion_point(builder_scope:bloombox.schema.services.wallet.v1.CardRetrieve)
+    // @@protoc_insertion_point(builder_scope:bloombox.services.wallet.v1.CardRetrieve)
   }
 
-  // @@protoc_insertion_point(class_scope:bloombox.schema.services.wallet.v1.CardRetrieve)
+  // @@protoc_insertion_point(class_scope:bloombox.services.wallet.v1.CardRetrieve)
   private static final io.bloombox.schema.services.wallet.v1.CardRetrieve DEFAULT_INSTANCE;
   static {
     DEFAULT_INSTANCE = new io.bloombox.schema.services.wallet.v1.CardRetrieve();
@@ -1612,6 +1685,7 @@ private static final long serialVersionUID = 0L;
 
   private static final com.google.protobuf.Parser<CardRetrieve>
       PARSER = new com.google.protobuf.AbstractParser<CardRetrieve>() {
+    @java.lang.Override
     public CardRetrieve parsePartialFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -1629,6 +1703,7 @@ private static final long serialVersionUID = 0L;
     return PARSER;
   }
 
+  @java.lang.Override
   public io.bloombox.schema.services.wallet.v1.CardRetrieve getDefaultInstanceForType() {
     return DEFAULT_INSTANCE;
   }

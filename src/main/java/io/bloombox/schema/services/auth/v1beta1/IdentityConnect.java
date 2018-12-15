@@ -1,8 +1,8 @@
 /*
- * Copyright 2018, Bloombox, LLC. All rights reserved.
+ * Copyright 2018, Momentum Ideas, Co. All rights reserved.
  *
  * Source and object computer code contained herein is the private intellectual
- * property of Bloombox, a California Limited Liability Corporation. Use of this
+ * property of Momentum Ideas Co., a Delaware Corporation. Use of this
  * code in source form requires permission in writing before use or the
  * assembly, distribution, or publishing of derivative works, for commercial
  * purposes or any other purpose, from a duly authorized officer of Momentum
@@ -27,11 +27,11 @@ package io.bloombox.schema.services.auth.v1beta1;
  * auto-linked with their identity.
  * </pre>
  *
- * Protobuf type {@code bloombox.schema.services.auth.v1beta1.IdentityConnect}
+ * Protobuf type {@code bloombox.services.auth.v1beta1.IdentityConnect}
  */
 public  final class IdentityConnect extends
     com.google.protobuf.GeneratedMessageV3 implements
-    // @@protoc_insertion_point(message_implements:bloombox.schema.services.auth.v1beta1.IdentityConnect)
+    // @@protoc_insertion_point(message_implements:bloombox.services.auth.v1beta1.IdentityConnect)
     IdentityConnectOrBuilder {
 private static final long serialVersionUID = 0L;
   // Use IdentityConnect.newBuilder() to construct.
@@ -85,18 +85,19 @@ private static final long serialVersionUID = 0L;
   }
   public static final com.google.protobuf.Descriptors.Descriptor
       getDescriptor() {
-    return io.bloombox.schema.services.auth.v1beta1.AuthServiceBeta1.internal_static_bloombox_schema_services_auth_v1beta1_IdentityConnect_descriptor;
+    return io.bloombox.schema.services.auth.v1beta1.AuthServiceBeta1.internal_static_bloombox_services_auth_v1beta1_IdentityConnect_descriptor;
   }
 
+  @java.lang.Override
   protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internalGetFieldAccessorTable() {
-    return io.bloombox.schema.services.auth.v1beta1.AuthServiceBeta1.internal_static_bloombox_schema_services_auth_v1beta1_IdentityConnect_fieldAccessorTable
+    return io.bloombox.schema.services.auth.v1beta1.AuthServiceBeta1.internal_static_bloombox_services_auth_v1beta1_IdentityConnect_fieldAccessorTable
         .ensureFieldAccessorsInitialized(
             io.bloombox.schema.services.auth.v1beta1.IdentityConnect.class, io.bloombox.schema.services.auth.v1beta1.IdentityConnect.Builder.class);
   }
 
   public interface RequestOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:bloombox.schema.services.auth.v1beta1.IdentityConnect.Request)
+      // @@protoc_insertion_point(interface_extends:bloombox.services.auth.v1beta1.IdentityConnect.Request)
       com.google.protobuf.MessageOrBuilder {
 
     /**
@@ -296,11 +297,11 @@ private static final long serialVersionUID = 0L;
    * Request to link a validated and signed user identity with an account.
    * </pre>
    *
-   * Protobuf type {@code bloombox.schema.services.auth.v1beta1.IdentityConnect.Request}
+   * Protobuf type {@code bloombox.services.auth.v1beta1.IdentityConnect.Request}
    */
   public  static final class Request extends
       com.google.protobuf.GeneratedMessageV3 implements
-      // @@protoc_insertion_point(message_implements:bloombox.schema.services.auth.v1beta1.IdentityConnect.Request)
+      // @@protoc_insertion_point(message_implements:bloombox.services.auth.v1beta1.IdentityConnect.Request)
       RequestOrBuilder {
   private static final long serialVersionUID = 0L;
     // Use Request.newBuilder() to construct.
@@ -342,13 +343,6 @@ private static final long serialVersionUID = 0L;
             case 0:
               done = true;
               break;
-            default: {
-              if (!parseUnknownFieldProto3(
-                  input, unknownFields, extensionRegistry, tag)) {
-                done = true;
-              }
-              break;
-            }
             case 10: {
               java.lang.String s = input.readStringRequireUtf8();
 
@@ -397,6 +391,13 @@ private static final long serialVersionUID = 0L;
               adid_ = s;
               break;
             }
+            default: {
+              if (!parseUnknownFieldProto3(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
           }
         }
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
@@ -411,12 +412,13 @@ private static final long serialVersionUID = 0L;
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return io.bloombox.schema.services.auth.v1beta1.AuthServiceBeta1.internal_static_bloombox_schema_services_auth_v1beta1_IdentityConnect_Request_descriptor;
+      return io.bloombox.schema.services.auth.v1beta1.AuthServiceBeta1.internal_static_bloombox_services_auth_v1beta1_IdentityConnect_Request_descriptor;
     }
 
+    @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return io.bloombox.schema.services.auth.v1beta1.AuthServiceBeta1.internal_static_bloombox_schema_services_auth_v1beta1_IdentityConnect_Request_fieldAccessorTable
+      return io.bloombox.schema.services.auth.v1beta1.AuthServiceBeta1.internal_static_bloombox_services_auth_v1beta1_IdentityConnect_Request_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
               io.bloombox.schema.services.auth.v1beta1.IdentityConnect.Request.class, io.bloombox.schema.services.auth.v1beta1.IdentityConnect.Request.Builder.class);
     }
@@ -806,6 +808,7 @@ private static final long serialVersionUID = 0L;
     }
 
     private byte memoizedIsInitialized = -1;
+    @java.lang.Override
     public final boolean isInitialized() {
       byte isInitialized = memoizedIsInitialized;
       if (isInitialized == 1) return true;
@@ -815,6 +818,7 @@ private static final long serialVersionUID = 0L;
       return true;
     }
 
+    @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
       if (!getTokenBytes().isEmpty()) {
@@ -844,6 +848,7 @@ private static final long serialVersionUID = 0L;
       unknownFields.writeTo(output);
     }
 
+    @java.lang.Override
     public int getSerializedSize() {
       int size = memoizedSize;
       if (size != -1) return size;
@@ -1007,6 +1012,7 @@ private static final long serialVersionUID = 0L;
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
 
+    @java.lang.Override
     public Builder newBuilderForType() { return newBuilder(); }
     public static Builder newBuilder() {
       return DEFAULT_INSTANCE.toBuilder();
@@ -1014,6 +1020,7 @@ private static final long serialVersionUID = 0L;
     public static Builder newBuilder(io.bloombox.schema.services.auth.v1beta1.IdentityConnect.Request prototype) {
       return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
     }
+    @java.lang.Override
     public Builder toBuilder() {
       return this == DEFAULT_INSTANCE
           ? new Builder() : new Builder().mergeFrom(this);
@@ -1030,20 +1037,21 @@ private static final long serialVersionUID = 0L;
      * Request to link a validated and signed user identity with an account.
      * </pre>
      *
-     * Protobuf type {@code bloombox.schema.services.auth.v1beta1.IdentityConnect.Request}
+     * Protobuf type {@code bloombox.services.auth.v1beta1.IdentityConnect.Request}
      */
     public static final class Builder extends
         com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:bloombox.schema.services.auth.v1beta1.IdentityConnect.Request)
+        // @@protoc_insertion_point(builder_implements:bloombox.services.auth.v1beta1.IdentityConnect.Request)
         io.bloombox.schema.services.auth.v1beta1.IdentityConnect.RequestOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return io.bloombox.schema.services.auth.v1beta1.AuthServiceBeta1.internal_static_bloombox_schema_services_auth_v1beta1_IdentityConnect_Request_descriptor;
+        return io.bloombox.schema.services.auth.v1beta1.AuthServiceBeta1.internal_static_bloombox_services_auth_v1beta1_IdentityConnect_Request_descriptor;
       }
 
+      @java.lang.Override
       protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return io.bloombox.schema.services.auth.v1beta1.AuthServiceBeta1.internal_static_bloombox_schema_services_auth_v1beta1_IdentityConnect_Request_fieldAccessorTable
+        return io.bloombox.schema.services.auth.v1beta1.AuthServiceBeta1.internal_static_bloombox_services_auth_v1beta1_IdentityConnect_Request_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
                 io.bloombox.schema.services.auth.v1beta1.IdentityConnect.Request.class, io.bloombox.schema.services.auth.v1beta1.IdentityConnect.Request.Builder.class);
       }
@@ -1063,6 +1071,7 @@ private static final long serialVersionUID = 0L;
                 .alwaysUseFieldBuilders) {
         }
       }
+      @java.lang.Override
       public Builder clear() {
         super.clear();
         token_ = "";
@@ -1084,15 +1093,18 @@ private static final long serialVersionUID = 0L;
         return this;
       }
 
+      @java.lang.Override
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return io.bloombox.schema.services.auth.v1beta1.AuthServiceBeta1.internal_static_bloombox_schema_services_auth_v1beta1_IdentityConnect_Request_descriptor;
+        return io.bloombox.schema.services.auth.v1beta1.AuthServiceBeta1.internal_static_bloombox_services_auth_v1beta1_IdentityConnect_Request_descriptor;
       }
 
+      @java.lang.Override
       public io.bloombox.schema.services.auth.v1beta1.IdentityConnect.Request getDefaultInstanceForType() {
         return io.bloombox.schema.services.auth.v1beta1.IdentityConnect.Request.getDefaultInstance();
       }
 
+      @java.lang.Override
       public io.bloombox.schema.services.auth.v1beta1.IdentityConnect.Request build() {
         io.bloombox.schema.services.auth.v1beta1.IdentityConnect.Request result = buildPartial();
         if (!result.isInitialized()) {
@@ -1101,6 +1113,7 @@ private static final long serialVersionUID = 0L;
         return result;
       }
 
+      @java.lang.Override
       public io.bloombox.schema.services.auth.v1beta1.IdentityConnect.Request buildPartial() {
         io.bloombox.schema.services.auth.v1beta1.IdentityConnect.Request result = new io.bloombox.schema.services.auth.v1beta1.IdentityConnect.Request(this);
         result.token_ = token_;
@@ -1115,32 +1128,39 @@ private static final long serialVersionUID = 0L;
         return result;
       }
 
+      @java.lang.Override
       public Builder clone() {
         return (Builder) super.clone();
       }
+      @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
         return (Builder) super.setField(field, value);
       }
+      @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
         return (Builder) super.clearField(field);
       }
+      @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
         return (Builder) super.clearOneof(oneof);
       }
+      @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
         return (Builder) super.setRepeatedField(field, index, value);
       }
+      @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
         return (Builder) super.addRepeatedField(field, value);
       }
+      @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
         if (other instanceof io.bloombox.schema.services.auth.v1beta1.IdentityConnect.Request) {
           return mergeFrom((io.bloombox.schema.services.auth.v1beta1.IdentityConnect.Request)other);
@@ -1189,10 +1209,12 @@ private static final long serialVersionUID = 0L;
         return this;
       }
 
+      @java.lang.Override
       public final boolean isInitialized() {
         return true;
       }
 
+      @java.lang.Override
       public Builder mergeFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -2042,21 +2064,23 @@ private static final long serialVersionUID = 0L;
         onChanged();
         return this;
       }
+      @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
         return super.setUnknownFieldsProto3(unknownFields);
       }
 
+      @java.lang.Override
       public final Builder mergeUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
         return super.mergeUnknownFields(unknownFields);
       }
 
 
-      // @@protoc_insertion_point(builder_scope:bloombox.schema.services.auth.v1beta1.IdentityConnect.Request)
+      // @@protoc_insertion_point(builder_scope:bloombox.services.auth.v1beta1.IdentityConnect.Request)
     }
 
-    // @@protoc_insertion_point(class_scope:bloombox.schema.services.auth.v1beta1.IdentityConnect.Request)
+    // @@protoc_insertion_point(class_scope:bloombox.services.auth.v1beta1.IdentityConnect.Request)
     private static final io.bloombox.schema.services.auth.v1beta1.IdentityConnect.Request DEFAULT_INSTANCE;
     static {
       DEFAULT_INSTANCE = new io.bloombox.schema.services.auth.v1beta1.IdentityConnect.Request();
@@ -2068,6 +2092,7 @@ private static final long serialVersionUID = 0L;
 
     private static final com.google.protobuf.Parser<Request>
         PARSER = new com.google.protobuf.AbstractParser<Request>() {
+      @java.lang.Override
       public Request parsePartialFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -2085,6 +2110,7 @@ private static final long serialVersionUID = 0L;
       return PARSER;
     }
 
+    @java.lang.Override
     public io.bloombox.schema.services.auth.v1beta1.IdentityConnect.Request getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
@@ -2092,8 +2118,39 @@ private static final long serialVersionUID = 0L;
   }
 
   public interface ResponseOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:bloombox.schema.services.auth.v1beta1.IdentityConnect.Response)
+      // @@protoc_insertion_point(interface_extends:bloombox.services.auth.v1beta1.IdentityConnect.Response)
       com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * Resolved key for the subject user. A user key is distinguished from a UID, in that it addresses an actual account
+     * and user profile payload, rather than just pointing to an identity that can be linked to a full account. User
+     * keys are used for interacting with the API in an identity agnostic manner, post-authorization.
+     * </pre>
+     *
+     * <code>.bloombox.identity.UserKey key = 1;</code>
+     */
+    boolean hasKey();
+    /**
+     * <pre>
+     * Resolved key for the subject user. A user key is distinguished from a UID, in that it addresses an actual account
+     * and user profile payload, rather than just pointing to an identity that can be linked to a full account. User
+     * keys are used for interacting with the API in an identity agnostic manner, post-authorization.
+     * </pre>
+     *
+     * <code>.bloombox.identity.UserKey key = 1;</code>
+     */
+    io.bloombox.schema.identity.AppUserKey.UserKey getKey();
+    /**
+     * <pre>
+     * Resolved key for the subject user. A user key is distinguished from a UID, in that it addresses an actual account
+     * and user profile payload, rather than just pointing to an identity that can be linked to a full account. User
+     * keys are used for interacting with the API in an identity agnostic manner, post-authorization.
+     * </pre>
+     *
+     * <code>.bloombox.identity.UserKey key = 1;</code>
+     */
+    io.bloombox.schema.identity.AppUserKey.UserKeyOrBuilder getKeyOrBuilder();
 
     /**
      * <pre>
@@ -2102,7 +2159,7 @@ private static final long serialVersionUID = 0L;
      * and enabled to use the state associated with this token.
      * </pre>
      *
-     * <code>.bloombox.schema.security.AuthToken token = 1;</code>
+     * <code>.bloombox.security.AuthToken token = 2;</code>
      */
     boolean hasToken();
     /**
@@ -2112,7 +2169,7 @@ private static final long serialVersionUID = 0L;
      * and enabled to use the state associated with this token.
      * </pre>
      *
-     * <code>.bloombox.schema.security.AuthToken token = 1;</code>
+     * <code>.bloombox.security.AuthToken token = 2;</code>
      */
     io.bloombox.schema.security.AuthToken getToken();
     /**
@@ -2122,7 +2179,7 @@ private static final long serialVersionUID = 0L;
      * and enabled to use the state associated with this token.
      * </pre>
      *
-     * <code>.bloombox.schema.security.AuthToken token = 1;</code>
+     * <code>.bloombox.security.AuthToken token = 2;</code>
      */
     io.bloombox.schema.security.AuthTokenOrBuilder getTokenOrBuilder();
 
@@ -2132,7 +2189,7 @@ private static final long serialVersionUID = 0L;
      * from an earlier enrollment/authentication process, where it was established and confirmed by the user.
      * </pre>
      *
-     * <code>.bloombox.schema.identity.User profile = 2;</code>
+     * <code>.bloombox.identity.User profile = 3;</code>
      */
     boolean hasProfile();
     /**
@@ -2141,7 +2198,7 @@ private static final long serialVersionUID = 0L;
      * from an earlier enrollment/authentication process, where it was established and confirmed by the user.
      * </pre>
      *
-     * <code>.bloombox.schema.identity.User profile = 2;</code>
+     * <code>.bloombox.identity.User profile = 3;</code>
      */
     io.bloombox.schema.identity.AppUser.User getProfile();
     /**
@@ -2150,7 +2207,7 @@ private static final long serialVersionUID = 0L;
      * from an earlier enrollment/authentication process, where it was established and confirmed by the user.
      * </pre>
      *
-     * <code>.bloombox.schema.identity.User profile = 2;</code>
+     * <code>.bloombox.identity.User profile = 3;</code>
      */
     io.bloombox.schema.identity.AppUser.UserOrBuilder getProfileOrBuilder();
 
@@ -2161,7 +2218,7 @@ private static final long serialVersionUID = 0L;
      * data provided earlier in the flow by the client device.
      * </pre>
      *
-     * <code>bool setup = 3;</code>
+     * <code>bool setup = 4;</code>
      */
     boolean getSetup();
 
@@ -2172,11 +2229,11 @@ private static final long serialVersionUID = 0L;
    * Response to a request to link a user identity to an account.
    * </pre>
    *
-   * Protobuf type {@code bloombox.schema.services.auth.v1beta1.IdentityConnect.Response}
+   * Protobuf type {@code bloombox.services.auth.v1beta1.IdentityConnect.Response}
    */
   public  static final class Response extends
       com.google.protobuf.GeneratedMessageV3 implements
-      // @@protoc_insertion_point(message_implements:bloombox.schema.services.auth.v1beta1.IdentityConnect.Response)
+      // @@protoc_insertion_point(message_implements:bloombox.services.auth.v1beta1.IdentityConnect.Response)
       ResponseOrBuilder {
   private static final long serialVersionUID = 0L;
     // Use Response.newBuilder() to construct.
@@ -2210,14 +2267,20 @@ private static final long serialVersionUID = 0L;
             case 0:
               done = true;
               break;
-            default: {
-              if (!parseUnknownFieldProto3(
-                  input, unknownFields, extensionRegistry, tag)) {
-                done = true;
+            case 10: {
+              io.bloombox.schema.identity.AppUserKey.UserKey.Builder subBuilder = null;
+              if (key_ != null) {
+                subBuilder = key_.toBuilder();
               }
+              key_ = input.readMessage(io.bloombox.schema.identity.AppUserKey.UserKey.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(key_);
+                key_ = subBuilder.buildPartial();
+              }
+
               break;
             }
-            case 10: {
+            case 18: {
               io.bloombox.schema.security.AuthToken.Builder subBuilder = null;
               if (token_ != null) {
                 subBuilder = token_.toBuilder();
@@ -2230,9 +2293,9 @@ private static final long serialVersionUID = 0L;
 
               break;
             }
-            case 18: {
+            case 26: {
               io.bloombox.schema.identity.AppUser.User.Builder subBuilder = null;
-              if (resultCase_ == 2) {
+              if (resultCase_ == 3) {
                 subBuilder = ((io.bloombox.schema.identity.AppUser.User) result_).toBuilder();
               }
               result_ =
@@ -2241,12 +2304,19 @@ private static final long serialVersionUID = 0L;
                 subBuilder.mergeFrom((io.bloombox.schema.identity.AppUser.User) result_);
                 result_ = subBuilder.buildPartial();
               }
-              resultCase_ = 2;
+              resultCase_ = 3;
               break;
             }
-            case 24: {
-              resultCase_ = 3;
+            case 32: {
+              resultCase_ = 4;
               result_ = input.readBool();
+              break;
+            }
+            default: {
+              if (!parseUnknownFieldProto3(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
               break;
             }
           }
@@ -2263,12 +2333,13 @@ private static final long serialVersionUID = 0L;
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return io.bloombox.schema.services.auth.v1beta1.AuthServiceBeta1.internal_static_bloombox_schema_services_auth_v1beta1_IdentityConnect_Response_descriptor;
+      return io.bloombox.schema.services.auth.v1beta1.AuthServiceBeta1.internal_static_bloombox_services_auth_v1beta1_IdentityConnect_Response_descriptor;
     }
 
+    @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return io.bloombox.schema.services.auth.v1beta1.AuthServiceBeta1.internal_static_bloombox_schema_services_auth_v1beta1_IdentityConnect_Response_fieldAccessorTable
+      return io.bloombox.schema.services.auth.v1beta1.AuthServiceBeta1.internal_static_bloombox_services_auth_v1beta1_IdentityConnect_Response_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
               io.bloombox.schema.services.auth.v1beta1.IdentityConnect.Response.class, io.bloombox.schema.services.auth.v1beta1.IdentityConnect.Response.Builder.class);
     }
@@ -2277,8 +2348,8 @@ private static final long serialVersionUID = 0L;
     private java.lang.Object result_;
     public enum ResultCase
         implements com.google.protobuf.Internal.EnumLite {
-      PROFILE(2),
-      SETUP(3),
+      PROFILE(3),
+      SETUP(4),
       RESULT_NOT_SET(0);
       private final int value;
       private ResultCase(int value) {
@@ -2294,8 +2365,8 @@ private static final long serialVersionUID = 0L;
 
       public static ResultCase forNumber(int value) {
         switch (value) {
-          case 2: return PROFILE;
-          case 3: return SETUP;
+          case 3: return PROFILE;
+          case 4: return SETUP;
           case 0: return RESULT_NOT_SET;
           default: return null;
         }
@@ -2311,7 +2382,46 @@ private static final long serialVersionUID = 0L;
           resultCase_);
     }
 
-    public static final int TOKEN_FIELD_NUMBER = 1;
+    public static final int KEY_FIELD_NUMBER = 1;
+    private io.bloombox.schema.identity.AppUserKey.UserKey key_;
+    /**
+     * <pre>
+     * Resolved key for the subject user. A user key is distinguished from a UID, in that it addresses an actual account
+     * and user profile payload, rather than just pointing to an identity that can be linked to a full account. User
+     * keys are used for interacting with the API in an identity agnostic manner, post-authorization.
+     * </pre>
+     *
+     * <code>.bloombox.identity.UserKey key = 1;</code>
+     */
+    public boolean hasKey() {
+      return key_ != null;
+    }
+    /**
+     * <pre>
+     * Resolved key for the subject user. A user key is distinguished from a UID, in that it addresses an actual account
+     * and user profile payload, rather than just pointing to an identity that can be linked to a full account. User
+     * keys are used for interacting with the API in an identity agnostic manner, post-authorization.
+     * </pre>
+     *
+     * <code>.bloombox.identity.UserKey key = 1;</code>
+     */
+    public io.bloombox.schema.identity.AppUserKey.UserKey getKey() {
+      return key_ == null ? io.bloombox.schema.identity.AppUserKey.UserKey.getDefaultInstance() : key_;
+    }
+    /**
+     * <pre>
+     * Resolved key for the subject user. A user key is distinguished from a UID, in that it addresses an actual account
+     * and user profile payload, rather than just pointing to an identity that can be linked to a full account. User
+     * keys are used for interacting with the API in an identity agnostic manner, post-authorization.
+     * </pre>
+     *
+     * <code>.bloombox.identity.UserKey key = 1;</code>
+     */
+    public io.bloombox.schema.identity.AppUserKey.UserKeyOrBuilder getKeyOrBuilder() {
+      return getKey();
+    }
+
+    public static final int TOKEN_FIELD_NUMBER = 2;
     private io.bloombox.schema.security.AuthToken token_;
     /**
      * <pre>
@@ -2320,7 +2430,7 @@ private static final long serialVersionUID = 0L;
      * and enabled to use the state associated with this token.
      * </pre>
      *
-     * <code>.bloombox.schema.security.AuthToken token = 1;</code>
+     * <code>.bloombox.security.AuthToken token = 2;</code>
      */
     public boolean hasToken() {
       return token_ != null;
@@ -2332,7 +2442,7 @@ private static final long serialVersionUID = 0L;
      * and enabled to use the state associated with this token.
      * </pre>
      *
-     * <code>.bloombox.schema.security.AuthToken token = 1;</code>
+     * <code>.bloombox.security.AuthToken token = 2;</code>
      */
     public io.bloombox.schema.security.AuthToken getToken() {
       return token_ == null ? io.bloombox.schema.security.AuthToken.getDefaultInstance() : token_;
@@ -2344,23 +2454,23 @@ private static final long serialVersionUID = 0L;
      * and enabled to use the state associated with this token.
      * </pre>
      *
-     * <code>.bloombox.schema.security.AuthToken token = 1;</code>
+     * <code>.bloombox.security.AuthToken token = 2;</code>
      */
     public io.bloombox.schema.security.AuthTokenOrBuilder getTokenOrBuilder() {
       return getToken();
     }
 
-    public static final int PROFILE_FIELD_NUMBER = 2;
+    public static final int PROFILE_FIELD_NUMBER = 3;
     /**
      * <pre>
      * Resulting user profile, either generated from the user based on the provided identity information, or returned
      * from an earlier enrollment/authentication process, where it was established and confirmed by the user.
      * </pre>
      *
-     * <code>.bloombox.schema.identity.User profile = 2;</code>
+     * <code>.bloombox.identity.User profile = 3;</code>
      */
     public boolean hasProfile() {
-      return resultCase_ == 2;
+      return resultCase_ == 3;
     }
     /**
      * <pre>
@@ -2368,10 +2478,10 @@ private static final long serialVersionUID = 0L;
      * from an earlier enrollment/authentication process, where it was established and confirmed by the user.
      * </pre>
      *
-     * <code>.bloombox.schema.identity.User profile = 2;</code>
+     * <code>.bloombox.identity.User profile = 3;</code>
      */
     public io.bloombox.schema.identity.AppUser.User getProfile() {
-      if (resultCase_ == 2) {
+      if (resultCase_ == 3) {
          return (io.bloombox.schema.identity.AppUser.User) result_;
       }
       return io.bloombox.schema.identity.AppUser.User.getDefaultInstance();
@@ -2382,16 +2492,16 @@ private static final long serialVersionUID = 0L;
      * from an earlier enrollment/authentication process, where it was established and confirmed by the user.
      * </pre>
      *
-     * <code>.bloombox.schema.identity.User profile = 2;</code>
+     * <code>.bloombox.identity.User profile = 3;</code>
      */
     public io.bloombox.schema.identity.AppUser.UserOrBuilder getProfileOrBuilder() {
-      if (resultCase_ == 2) {
+      if (resultCase_ == 3) {
          return (io.bloombox.schema.identity.AppUser.User) result_;
       }
       return io.bloombox.schema.identity.AppUser.User.getDefaultInstance();
     }
 
-    public static final int SETUP_FIELD_NUMBER = 3;
+    public static final int SETUP_FIELD_NUMBER = 4;
     /**
      * <pre>
      * Flag indicating that the user needs to perform setup in order to establish a profile. If `setup` is seen as
@@ -2399,16 +2509,17 @@ private static final long serialVersionUID = 0L;
      * data provided earlier in the flow by the client device.
      * </pre>
      *
-     * <code>bool setup = 3;</code>
+     * <code>bool setup = 4;</code>
      */
     public boolean getSetup() {
-      if (resultCase_ == 3) {
+      if (resultCase_ == 4) {
         return (java.lang.Boolean) result_;
       }
       return false;
     }
 
     private byte memoizedIsInitialized = -1;
+    @java.lang.Override
     public final boolean isInitialized() {
       byte isInitialized = memoizedIsInitialized;
       if (isInitialized == 1) return true;
@@ -2418,38 +2529,47 @@ private static final long serialVersionUID = 0L;
       return true;
     }
 
+    @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (token_ != null) {
-        output.writeMessage(1, getToken());
+      if (key_ != null) {
+        output.writeMessage(1, getKey());
       }
-      if (resultCase_ == 2) {
-        output.writeMessage(2, (io.bloombox.schema.identity.AppUser.User) result_);
+      if (token_ != null) {
+        output.writeMessage(2, getToken());
       }
       if (resultCase_ == 3) {
+        output.writeMessage(3, (io.bloombox.schema.identity.AppUser.User) result_);
+      }
+      if (resultCase_ == 4) {
         output.writeBool(
-            3, (boolean)((java.lang.Boolean) result_));
+            4, (boolean)((java.lang.Boolean) result_));
       }
       unknownFields.writeTo(output);
     }
 
+    @java.lang.Override
     public int getSerializedSize() {
       int size = memoizedSize;
       if (size != -1) return size;
 
       size = 0;
+      if (key_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, getKey());
+      }
       if (token_ != null) {
         size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(1, getToken());
-      }
-      if (resultCase_ == 2) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(2, (io.bloombox.schema.identity.AppUser.User) result_);
+          .computeMessageSize(2, getToken());
       }
       if (resultCase_ == 3) {
         size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(3, (io.bloombox.schema.identity.AppUser.User) result_);
+      }
+      if (resultCase_ == 4) {
+        size += com.google.protobuf.CodedOutputStream
           .computeBoolSize(
-              3, (boolean)((java.lang.Boolean) result_));
+              4, (boolean)((java.lang.Boolean) result_));
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -2467,6 +2587,11 @@ private static final long serialVersionUID = 0L;
       io.bloombox.schema.services.auth.v1beta1.IdentityConnect.Response other = (io.bloombox.schema.services.auth.v1beta1.IdentityConnect.Response) obj;
 
       boolean result = true;
+      result = result && (hasKey() == other.hasKey());
+      if (hasKey()) {
+        result = result && getKey()
+            .equals(other.getKey());
+      }
       result = result && (hasToken() == other.hasToken());
       if (hasToken()) {
         result = result && getToken()
@@ -2476,11 +2601,11 @@ private static final long serialVersionUID = 0L;
           other.getResultCase());
       if (!result) return false;
       switch (resultCase_) {
-        case 2:
+        case 3:
           result = result && getProfile()
               .equals(other.getProfile());
           break;
-        case 3:
+        case 4:
           result = result && (getSetup()
               == other.getSetup());
           break;
@@ -2498,16 +2623,20 @@ private static final long serialVersionUID = 0L;
       }
       int hash = 41;
       hash = (19 * hash) + getDescriptor().hashCode();
+      if (hasKey()) {
+        hash = (37 * hash) + KEY_FIELD_NUMBER;
+        hash = (53 * hash) + getKey().hashCode();
+      }
       if (hasToken()) {
         hash = (37 * hash) + TOKEN_FIELD_NUMBER;
         hash = (53 * hash) + getToken().hashCode();
       }
       switch (resultCase_) {
-        case 2:
+        case 3:
           hash = (37 * hash) + PROFILE_FIELD_NUMBER;
           hash = (53 * hash) + getProfile().hashCode();
           break;
-        case 3:
+        case 4:
           hash = (37 * hash) + SETUP_FIELD_NUMBER;
           hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
               getSetup());
@@ -2590,6 +2719,7 @@ private static final long serialVersionUID = 0L;
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
 
+    @java.lang.Override
     public Builder newBuilderForType() { return newBuilder(); }
     public static Builder newBuilder() {
       return DEFAULT_INSTANCE.toBuilder();
@@ -2597,6 +2727,7 @@ private static final long serialVersionUID = 0L;
     public static Builder newBuilder(io.bloombox.schema.services.auth.v1beta1.IdentityConnect.Response prototype) {
       return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
     }
+    @java.lang.Override
     public Builder toBuilder() {
       return this == DEFAULT_INSTANCE
           ? new Builder() : new Builder().mergeFrom(this);
@@ -2613,20 +2744,21 @@ private static final long serialVersionUID = 0L;
      * Response to a request to link a user identity to an account.
      * </pre>
      *
-     * Protobuf type {@code bloombox.schema.services.auth.v1beta1.IdentityConnect.Response}
+     * Protobuf type {@code bloombox.services.auth.v1beta1.IdentityConnect.Response}
      */
     public static final class Builder extends
         com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:bloombox.schema.services.auth.v1beta1.IdentityConnect.Response)
+        // @@protoc_insertion_point(builder_implements:bloombox.services.auth.v1beta1.IdentityConnect.Response)
         io.bloombox.schema.services.auth.v1beta1.IdentityConnect.ResponseOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return io.bloombox.schema.services.auth.v1beta1.AuthServiceBeta1.internal_static_bloombox_schema_services_auth_v1beta1_IdentityConnect_Response_descriptor;
+        return io.bloombox.schema.services.auth.v1beta1.AuthServiceBeta1.internal_static_bloombox_services_auth_v1beta1_IdentityConnect_Response_descriptor;
       }
 
+      @java.lang.Override
       protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return io.bloombox.schema.services.auth.v1beta1.AuthServiceBeta1.internal_static_bloombox_schema_services_auth_v1beta1_IdentityConnect_Response_fieldAccessorTable
+        return io.bloombox.schema.services.auth.v1beta1.AuthServiceBeta1.internal_static_bloombox_services_auth_v1beta1_IdentityConnect_Response_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
                 io.bloombox.schema.services.auth.v1beta1.IdentityConnect.Response.class, io.bloombox.schema.services.auth.v1beta1.IdentityConnect.Response.Builder.class);
       }
@@ -2646,8 +2778,15 @@ private static final long serialVersionUID = 0L;
                 .alwaysUseFieldBuilders) {
         }
       }
+      @java.lang.Override
       public Builder clear() {
         super.clear();
+        if (keyBuilder_ == null) {
+          key_ = null;
+        } else {
+          key_ = null;
+          keyBuilder_ = null;
+        }
         if (tokenBuilder_ == null) {
           token_ = null;
         } else {
@@ -2659,15 +2798,18 @@ private static final long serialVersionUID = 0L;
         return this;
       }
 
+      @java.lang.Override
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return io.bloombox.schema.services.auth.v1beta1.AuthServiceBeta1.internal_static_bloombox_schema_services_auth_v1beta1_IdentityConnect_Response_descriptor;
+        return io.bloombox.schema.services.auth.v1beta1.AuthServiceBeta1.internal_static_bloombox_services_auth_v1beta1_IdentityConnect_Response_descriptor;
       }
 
+      @java.lang.Override
       public io.bloombox.schema.services.auth.v1beta1.IdentityConnect.Response getDefaultInstanceForType() {
         return io.bloombox.schema.services.auth.v1beta1.IdentityConnect.Response.getDefaultInstance();
       }
 
+      @java.lang.Override
       public io.bloombox.schema.services.auth.v1beta1.IdentityConnect.Response build() {
         io.bloombox.schema.services.auth.v1beta1.IdentityConnect.Response result = buildPartial();
         if (!result.isInitialized()) {
@@ -2676,21 +2818,27 @@ private static final long serialVersionUID = 0L;
         return result;
       }
 
+      @java.lang.Override
       public io.bloombox.schema.services.auth.v1beta1.IdentityConnect.Response buildPartial() {
         io.bloombox.schema.services.auth.v1beta1.IdentityConnect.Response result = new io.bloombox.schema.services.auth.v1beta1.IdentityConnect.Response(this);
+        if (keyBuilder_ == null) {
+          result.key_ = key_;
+        } else {
+          result.key_ = keyBuilder_.build();
+        }
         if (tokenBuilder_ == null) {
           result.token_ = token_;
         } else {
           result.token_ = tokenBuilder_.build();
         }
-        if (resultCase_ == 2) {
+        if (resultCase_ == 3) {
           if (profileBuilder_ == null) {
             result.result_ = result_;
           } else {
             result.result_ = profileBuilder_.build();
           }
         }
-        if (resultCase_ == 3) {
+        if (resultCase_ == 4) {
           result.result_ = result_;
         }
         result.resultCase_ = resultCase_;
@@ -2698,32 +2846,39 @@ private static final long serialVersionUID = 0L;
         return result;
       }
 
+      @java.lang.Override
       public Builder clone() {
         return (Builder) super.clone();
       }
+      @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
         return (Builder) super.setField(field, value);
       }
+      @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
         return (Builder) super.clearField(field);
       }
+      @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
         return (Builder) super.clearOneof(oneof);
       }
+      @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
         return (Builder) super.setRepeatedField(field, index, value);
       }
+      @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
         return (Builder) super.addRepeatedField(field, value);
       }
+      @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
         if (other instanceof io.bloombox.schema.services.auth.v1beta1.IdentityConnect.Response) {
           return mergeFrom((io.bloombox.schema.services.auth.v1beta1.IdentityConnect.Response)other);
@@ -2735,6 +2890,9 @@ private static final long serialVersionUID = 0L;
 
       public Builder mergeFrom(io.bloombox.schema.services.auth.v1beta1.IdentityConnect.Response other) {
         if (other == io.bloombox.schema.services.auth.v1beta1.IdentityConnect.Response.getDefaultInstance()) return this;
+        if (other.hasKey()) {
+          mergeKey(other.getKey());
+        }
         if (other.hasToken()) {
           mergeToken(other.getToken());
         }
@@ -2756,10 +2914,12 @@ private static final long serialVersionUID = 0L;
         return this;
       }
 
+      @java.lang.Override
       public final boolean isInitialized() {
         return true;
       }
 
+      @java.lang.Override
       public Builder mergeFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -2793,6 +2953,177 @@ private static final long serialVersionUID = 0L;
       }
 
 
+      private io.bloombox.schema.identity.AppUserKey.UserKey key_ = null;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          io.bloombox.schema.identity.AppUserKey.UserKey, io.bloombox.schema.identity.AppUserKey.UserKey.Builder, io.bloombox.schema.identity.AppUserKey.UserKeyOrBuilder> keyBuilder_;
+      /**
+       * <pre>
+       * Resolved key for the subject user. A user key is distinguished from a UID, in that it addresses an actual account
+       * and user profile payload, rather than just pointing to an identity that can be linked to a full account. User
+       * keys are used for interacting with the API in an identity agnostic manner, post-authorization.
+       * </pre>
+       *
+       * <code>.bloombox.identity.UserKey key = 1;</code>
+       */
+      public boolean hasKey() {
+        return keyBuilder_ != null || key_ != null;
+      }
+      /**
+       * <pre>
+       * Resolved key for the subject user. A user key is distinguished from a UID, in that it addresses an actual account
+       * and user profile payload, rather than just pointing to an identity that can be linked to a full account. User
+       * keys are used for interacting with the API in an identity agnostic manner, post-authorization.
+       * </pre>
+       *
+       * <code>.bloombox.identity.UserKey key = 1;</code>
+       */
+      public io.bloombox.schema.identity.AppUserKey.UserKey getKey() {
+        if (keyBuilder_ == null) {
+          return key_ == null ? io.bloombox.schema.identity.AppUserKey.UserKey.getDefaultInstance() : key_;
+        } else {
+          return keyBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * Resolved key for the subject user. A user key is distinguished from a UID, in that it addresses an actual account
+       * and user profile payload, rather than just pointing to an identity that can be linked to a full account. User
+       * keys are used for interacting with the API in an identity agnostic manner, post-authorization.
+       * </pre>
+       *
+       * <code>.bloombox.identity.UserKey key = 1;</code>
+       */
+      public Builder setKey(io.bloombox.schema.identity.AppUserKey.UserKey value) {
+        if (keyBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          key_ = value;
+          onChanged();
+        } else {
+          keyBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Resolved key for the subject user. A user key is distinguished from a UID, in that it addresses an actual account
+       * and user profile payload, rather than just pointing to an identity that can be linked to a full account. User
+       * keys are used for interacting with the API in an identity agnostic manner, post-authorization.
+       * </pre>
+       *
+       * <code>.bloombox.identity.UserKey key = 1;</code>
+       */
+      public Builder setKey(
+          io.bloombox.schema.identity.AppUserKey.UserKey.Builder builderForValue) {
+        if (keyBuilder_ == null) {
+          key_ = builderForValue.build();
+          onChanged();
+        } else {
+          keyBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Resolved key for the subject user. A user key is distinguished from a UID, in that it addresses an actual account
+       * and user profile payload, rather than just pointing to an identity that can be linked to a full account. User
+       * keys are used for interacting with the API in an identity agnostic manner, post-authorization.
+       * </pre>
+       *
+       * <code>.bloombox.identity.UserKey key = 1;</code>
+       */
+      public Builder mergeKey(io.bloombox.schema.identity.AppUserKey.UserKey value) {
+        if (keyBuilder_ == null) {
+          if (key_ != null) {
+            key_ =
+              io.bloombox.schema.identity.AppUserKey.UserKey.newBuilder(key_).mergeFrom(value).buildPartial();
+          } else {
+            key_ = value;
+          }
+          onChanged();
+        } else {
+          keyBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Resolved key for the subject user. A user key is distinguished from a UID, in that it addresses an actual account
+       * and user profile payload, rather than just pointing to an identity that can be linked to a full account. User
+       * keys are used for interacting with the API in an identity agnostic manner, post-authorization.
+       * </pre>
+       *
+       * <code>.bloombox.identity.UserKey key = 1;</code>
+       */
+      public Builder clearKey() {
+        if (keyBuilder_ == null) {
+          key_ = null;
+          onChanged();
+        } else {
+          key_ = null;
+          keyBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Resolved key for the subject user. A user key is distinguished from a UID, in that it addresses an actual account
+       * and user profile payload, rather than just pointing to an identity that can be linked to a full account. User
+       * keys are used for interacting with the API in an identity agnostic manner, post-authorization.
+       * </pre>
+       *
+       * <code>.bloombox.identity.UserKey key = 1;</code>
+       */
+      public io.bloombox.schema.identity.AppUserKey.UserKey.Builder getKeyBuilder() {
+        
+        onChanged();
+        return getKeyFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * Resolved key for the subject user. A user key is distinguished from a UID, in that it addresses an actual account
+       * and user profile payload, rather than just pointing to an identity that can be linked to a full account. User
+       * keys are used for interacting with the API in an identity agnostic manner, post-authorization.
+       * </pre>
+       *
+       * <code>.bloombox.identity.UserKey key = 1;</code>
+       */
+      public io.bloombox.schema.identity.AppUserKey.UserKeyOrBuilder getKeyOrBuilder() {
+        if (keyBuilder_ != null) {
+          return keyBuilder_.getMessageOrBuilder();
+        } else {
+          return key_ == null ?
+              io.bloombox.schema.identity.AppUserKey.UserKey.getDefaultInstance() : key_;
+        }
+      }
+      /**
+       * <pre>
+       * Resolved key for the subject user. A user key is distinguished from a UID, in that it addresses an actual account
+       * and user profile payload, rather than just pointing to an identity that can be linked to a full account. User
+       * keys are used for interacting with the API in an identity agnostic manner, post-authorization.
+       * </pre>
+       *
+       * <code>.bloombox.identity.UserKey key = 1;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          io.bloombox.schema.identity.AppUserKey.UserKey, io.bloombox.schema.identity.AppUserKey.UserKey.Builder, io.bloombox.schema.identity.AppUserKey.UserKeyOrBuilder> 
+          getKeyFieldBuilder() {
+        if (keyBuilder_ == null) {
+          keyBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              io.bloombox.schema.identity.AppUserKey.UserKey, io.bloombox.schema.identity.AppUserKey.UserKey.Builder, io.bloombox.schema.identity.AppUserKey.UserKeyOrBuilder>(
+                  getKey(),
+                  getParentForChildren(),
+                  isClean());
+          key_ = null;
+        }
+        return keyBuilder_;
+      }
+
       private io.bloombox.schema.security.AuthToken token_ = null;
       private com.google.protobuf.SingleFieldBuilderV3<
           io.bloombox.schema.security.AuthToken, io.bloombox.schema.security.AuthToken.Builder, io.bloombox.schema.security.AuthTokenOrBuilder> tokenBuilder_;
@@ -2803,7 +3134,7 @@ private static final long serialVersionUID = 0L;
        * and enabled to use the state associated with this token.
        * </pre>
        *
-       * <code>.bloombox.schema.security.AuthToken token = 1;</code>
+       * <code>.bloombox.security.AuthToken token = 2;</code>
        */
       public boolean hasToken() {
         return tokenBuilder_ != null || token_ != null;
@@ -2815,7 +3146,7 @@ private static final long serialVersionUID = 0L;
        * and enabled to use the state associated with this token.
        * </pre>
        *
-       * <code>.bloombox.schema.security.AuthToken token = 1;</code>
+       * <code>.bloombox.security.AuthToken token = 2;</code>
        */
       public io.bloombox.schema.security.AuthToken getToken() {
         if (tokenBuilder_ == null) {
@@ -2831,7 +3162,7 @@ private static final long serialVersionUID = 0L;
        * and enabled to use the state associated with this token.
        * </pre>
        *
-       * <code>.bloombox.schema.security.AuthToken token = 1;</code>
+       * <code>.bloombox.security.AuthToken token = 2;</code>
        */
       public Builder setToken(io.bloombox.schema.security.AuthToken value) {
         if (tokenBuilder_ == null) {
@@ -2853,7 +3184,7 @@ private static final long serialVersionUID = 0L;
        * and enabled to use the state associated with this token.
        * </pre>
        *
-       * <code>.bloombox.schema.security.AuthToken token = 1;</code>
+       * <code>.bloombox.security.AuthToken token = 2;</code>
        */
       public Builder setToken(
           io.bloombox.schema.security.AuthToken.Builder builderForValue) {
@@ -2873,7 +3204,7 @@ private static final long serialVersionUID = 0L;
        * and enabled to use the state associated with this token.
        * </pre>
        *
-       * <code>.bloombox.schema.security.AuthToken token = 1;</code>
+       * <code>.bloombox.security.AuthToken token = 2;</code>
        */
       public Builder mergeToken(io.bloombox.schema.security.AuthToken value) {
         if (tokenBuilder_ == null) {
@@ -2897,7 +3228,7 @@ private static final long serialVersionUID = 0L;
        * and enabled to use the state associated with this token.
        * </pre>
        *
-       * <code>.bloombox.schema.security.AuthToken token = 1;</code>
+       * <code>.bloombox.security.AuthToken token = 2;</code>
        */
       public Builder clearToken() {
         if (tokenBuilder_ == null) {
@@ -2917,7 +3248,7 @@ private static final long serialVersionUID = 0L;
        * and enabled to use the state associated with this token.
        * </pre>
        *
-       * <code>.bloombox.schema.security.AuthToken token = 1;</code>
+       * <code>.bloombox.security.AuthToken token = 2;</code>
        */
       public io.bloombox.schema.security.AuthToken.Builder getTokenBuilder() {
         
@@ -2931,7 +3262,7 @@ private static final long serialVersionUID = 0L;
        * and enabled to use the state associated with this token.
        * </pre>
        *
-       * <code>.bloombox.schema.security.AuthToken token = 1;</code>
+       * <code>.bloombox.security.AuthToken token = 2;</code>
        */
       public io.bloombox.schema.security.AuthTokenOrBuilder getTokenOrBuilder() {
         if (tokenBuilder_ != null) {
@@ -2948,7 +3279,7 @@ private static final long serialVersionUID = 0L;
        * and enabled to use the state associated with this token.
        * </pre>
        *
-       * <code>.bloombox.schema.security.AuthToken token = 1;</code>
+       * <code>.bloombox.security.AuthToken token = 2;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
           io.bloombox.schema.security.AuthToken, io.bloombox.schema.security.AuthToken.Builder, io.bloombox.schema.security.AuthTokenOrBuilder> 
@@ -2972,10 +3303,10 @@ private static final long serialVersionUID = 0L;
        * from an earlier enrollment/authentication process, where it was established and confirmed by the user.
        * </pre>
        *
-       * <code>.bloombox.schema.identity.User profile = 2;</code>
+       * <code>.bloombox.identity.User profile = 3;</code>
        */
       public boolean hasProfile() {
-        return resultCase_ == 2;
+        return resultCase_ == 3;
       }
       /**
        * <pre>
@@ -2983,16 +3314,16 @@ private static final long serialVersionUID = 0L;
        * from an earlier enrollment/authentication process, where it was established and confirmed by the user.
        * </pre>
        *
-       * <code>.bloombox.schema.identity.User profile = 2;</code>
+       * <code>.bloombox.identity.User profile = 3;</code>
        */
       public io.bloombox.schema.identity.AppUser.User getProfile() {
         if (profileBuilder_ == null) {
-          if (resultCase_ == 2) {
+          if (resultCase_ == 3) {
             return (io.bloombox.schema.identity.AppUser.User) result_;
           }
           return io.bloombox.schema.identity.AppUser.User.getDefaultInstance();
         } else {
-          if (resultCase_ == 2) {
+          if (resultCase_ == 3) {
             return profileBuilder_.getMessage();
           }
           return io.bloombox.schema.identity.AppUser.User.getDefaultInstance();
@@ -3004,7 +3335,7 @@ private static final long serialVersionUID = 0L;
        * from an earlier enrollment/authentication process, where it was established and confirmed by the user.
        * </pre>
        *
-       * <code>.bloombox.schema.identity.User profile = 2;</code>
+       * <code>.bloombox.identity.User profile = 3;</code>
        */
       public Builder setProfile(io.bloombox.schema.identity.AppUser.User value) {
         if (profileBuilder_ == null) {
@@ -3016,7 +3347,7 @@ private static final long serialVersionUID = 0L;
         } else {
           profileBuilder_.setMessage(value);
         }
-        resultCase_ = 2;
+        resultCase_ = 3;
         return this;
       }
       /**
@@ -3025,7 +3356,7 @@ private static final long serialVersionUID = 0L;
        * from an earlier enrollment/authentication process, where it was established and confirmed by the user.
        * </pre>
        *
-       * <code>.bloombox.schema.identity.User profile = 2;</code>
+       * <code>.bloombox.identity.User profile = 3;</code>
        */
       public Builder setProfile(
           io.bloombox.schema.identity.AppUser.User.Builder builderForValue) {
@@ -3035,7 +3366,7 @@ private static final long serialVersionUID = 0L;
         } else {
           profileBuilder_.setMessage(builderForValue.build());
         }
-        resultCase_ = 2;
+        resultCase_ = 3;
         return this;
       }
       /**
@@ -3044,11 +3375,11 @@ private static final long serialVersionUID = 0L;
        * from an earlier enrollment/authentication process, where it was established and confirmed by the user.
        * </pre>
        *
-       * <code>.bloombox.schema.identity.User profile = 2;</code>
+       * <code>.bloombox.identity.User profile = 3;</code>
        */
       public Builder mergeProfile(io.bloombox.schema.identity.AppUser.User value) {
         if (profileBuilder_ == null) {
-          if (resultCase_ == 2 &&
+          if (resultCase_ == 3 &&
               result_ != io.bloombox.schema.identity.AppUser.User.getDefaultInstance()) {
             result_ = io.bloombox.schema.identity.AppUser.User.newBuilder((io.bloombox.schema.identity.AppUser.User) result_)
                 .mergeFrom(value).buildPartial();
@@ -3057,12 +3388,12 @@ private static final long serialVersionUID = 0L;
           }
           onChanged();
         } else {
-          if (resultCase_ == 2) {
+          if (resultCase_ == 3) {
             profileBuilder_.mergeFrom(value);
           }
           profileBuilder_.setMessage(value);
         }
-        resultCase_ = 2;
+        resultCase_ = 3;
         return this;
       }
       /**
@@ -3071,17 +3402,17 @@ private static final long serialVersionUID = 0L;
        * from an earlier enrollment/authentication process, where it was established and confirmed by the user.
        * </pre>
        *
-       * <code>.bloombox.schema.identity.User profile = 2;</code>
+       * <code>.bloombox.identity.User profile = 3;</code>
        */
       public Builder clearProfile() {
         if (profileBuilder_ == null) {
-          if (resultCase_ == 2) {
+          if (resultCase_ == 3) {
             resultCase_ = 0;
             result_ = null;
             onChanged();
           }
         } else {
-          if (resultCase_ == 2) {
+          if (resultCase_ == 3) {
             resultCase_ = 0;
             result_ = null;
           }
@@ -3095,7 +3426,7 @@ private static final long serialVersionUID = 0L;
        * from an earlier enrollment/authentication process, where it was established and confirmed by the user.
        * </pre>
        *
-       * <code>.bloombox.schema.identity.User profile = 2;</code>
+       * <code>.bloombox.identity.User profile = 3;</code>
        */
       public io.bloombox.schema.identity.AppUser.User.Builder getProfileBuilder() {
         return getProfileFieldBuilder().getBuilder();
@@ -3106,13 +3437,13 @@ private static final long serialVersionUID = 0L;
        * from an earlier enrollment/authentication process, where it was established and confirmed by the user.
        * </pre>
        *
-       * <code>.bloombox.schema.identity.User profile = 2;</code>
+       * <code>.bloombox.identity.User profile = 3;</code>
        */
       public io.bloombox.schema.identity.AppUser.UserOrBuilder getProfileOrBuilder() {
-        if ((resultCase_ == 2) && (profileBuilder_ != null)) {
+        if ((resultCase_ == 3) && (profileBuilder_ != null)) {
           return profileBuilder_.getMessageOrBuilder();
         } else {
-          if (resultCase_ == 2) {
+          if (resultCase_ == 3) {
             return (io.bloombox.schema.identity.AppUser.User) result_;
           }
           return io.bloombox.schema.identity.AppUser.User.getDefaultInstance();
@@ -3124,13 +3455,13 @@ private static final long serialVersionUID = 0L;
        * from an earlier enrollment/authentication process, where it was established and confirmed by the user.
        * </pre>
        *
-       * <code>.bloombox.schema.identity.User profile = 2;</code>
+       * <code>.bloombox.identity.User profile = 3;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
           io.bloombox.schema.identity.AppUser.User, io.bloombox.schema.identity.AppUser.User.Builder, io.bloombox.schema.identity.AppUser.UserOrBuilder> 
           getProfileFieldBuilder() {
         if (profileBuilder_ == null) {
-          if (!(resultCase_ == 2)) {
+          if (!(resultCase_ == 3)) {
             result_ = io.bloombox.schema.identity.AppUser.User.getDefaultInstance();
           }
           profileBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
@@ -3140,7 +3471,7 @@ private static final long serialVersionUID = 0L;
                   isClean());
           result_ = null;
         }
-        resultCase_ = 2;
+        resultCase_ = 3;
         onChanged();;
         return profileBuilder_;
       }
@@ -3152,10 +3483,10 @@ private static final long serialVersionUID = 0L;
        * data provided earlier in the flow by the client device.
        * </pre>
        *
-       * <code>bool setup = 3;</code>
+       * <code>bool setup = 4;</code>
        */
       public boolean getSetup() {
-        if (resultCase_ == 3) {
+        if (resultCase_ == 4) {
           return (java.lang.Boolean) result_;
         }
         return false;
@@ -3167,10 +3498,10 @@ private static final long serialVersionUID = 0L;
        * data provided earlier in the flow by the client device.
        * </pre>
        *
-       * <code>bool setup = 3;</code>
+       * <code>bool setup = 4;</code>
        */
       public Builder setSetup(boolean value) {
-        resultCase_ = 3;
+        resultCase_ = 4;
         result_ = value;
         onChanged();
         return this;
@@ -3182,31 +3513,33 @@ private static final long serialVersionUID = 0L;
        * data provided earlier in the flow by the client device.
        * </pre>
        *
-       * <code>bool setup = 3;</code>
+       * <code>bool setup = 4;</code>
        */
       public Builder clearSetup() {
-        if (resultCase_ == 3) {
+        if (resultCase_ == 4) {
           resultCase_ = 0;
           result_ = null;
           onChanged();
         }
         return this;
       }
+      @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
         return super.setUnknownFieldsProto3(unknownFields);
       }
 
+      @java.lang.Override
       public final Builder mergeUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
         return super.mergeUnknownFields(unknownFields);
       }
 
 
-      // @@protoc_insertion_point(builder_scope:bloombox.schema.services.auth.v1beta1.IdentityConnect.Response)
+      // @@protoc_insertion_point(builder_scope:bloombox.services.auth.v1beta1.IdentityConnect.Response)
     }
 
-    // @@protoc_insertion_point(class_scope:bloombox.schema.services.auth.v1beta1.IdentityConnect.Response)
+    // @@protoc_insertion_point(class_scope:bloombox.services.auth.v1beta1.IdentityConnect.Response)
     private static final io.bloombox.schema.services.auth.v1beta1.IdentityConnect.Response DEFAULT_INSTANCE;
     static {
       DEFAULT_INSTANCE = new io.bloombox.schema.services.auth.v1beta1.IdentityConnect.Response();
@@ -3218,6 +3551,7 @@ private static final long serialVersionUID = 0L;
 
     private static final com.google.protobuf.Parser<Response>
         PARSER = new com.google.protobuf.AbstractParser<Response>() {
+      @java.lang.Override
       public Response parsePartialFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -3235,6 +3569,7 @@ private static final long serialVersionUID = 0L;
       return PARSER;
     }
 
+    @java.lang.Override
     public io.bloombox.schema.services.auth.v1beta1.IdentityConnect.Response getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
@@ -3242,6 +3577,7 @@ private static final long serialVersionUID = 0L;
   }
 
   private byte memoizedIsInitialized = -1;
+  @java.lang.Override
   public final boolean isInitialized() {
     byte isInitialized = memoizedIsInitialized;
     if (isInitialized == 1) return true;
@@ -3251,11 +3587,13 @@ private static final long serialVersionUID = 0L;
     return true;
   }
 
+  @java.lang.Override
   public void writeTo(com.google.protobuf.CodedOutputStream output)
                       throws java.io.IOException {
     unknownFields.writeTo(output);
   }
 
+  @java.lang.Override
   public int getSerializedSize() {
     int size = memoizedSize;
     if (size != -1) return size;
@@ -3363,6 +3701,7 @@ private static final long serialVersionUID = 0L;
         .parseWithIOException(PARSER, input, extensionRegistry);
   }
 
+  @java.lang.Override
   public Builder newBuilderForType() { return newBuilder(); }
   public static Builder newBuilder() {
     return DEFAULT_INSTANCE.toBuilder();
@@ -3370,6 +3709,7 @@ private static final long serialVersionUID = 0L;
   public static Builder newBuilder(io.bloombox.schema.services.auth.v1beta1.IdentityConnect prototype) {
     return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
   }
+  @java.lang.Override
   public Builder toBuilder() {
     return this == DEFAULT_INSTANCE
         ? new Builder() : new Builder().mergeFrom(this);
@@ -3388,20 +3728,21 @@ private static final long serialVersionUID = 0L;
    * auto-linked with their identity.
    * </pre>
    *
-   * Protobuf type {@code bloombox.schema.services.auth.v1beta1.IdentityConnect}
+   * Protobuf type {@code bloombox.services.auth.v1beta1.IdentityConnect}
    */
   public static final class Builder extends
       com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-      // @@protoc_insertion_point(builder_implements:bloombox.schema.services.auth.v1beta1.IdentityConnect)
+      // @@protoc_insertion_point(builder_implements:bloombox.services.auth.v1beta1.IdentityConnect)
       io.bloombox.schema.services.auth.v1beta1.IdentityConnectOrBuilder {
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return io.bloombox.schema.services.auth.v1beta1.AuthServiceBeta1.internal_static_bloombox_schema_services_auth_v1beta1_IdentityConnect_descriptor;
+      return io.bloombox.schema.services.auth.v1beta1.AuthServiceBeta1.internal_static_bloombox_services_auth_v1beta1_IdentityConnect_descriptor;
     }
 
+    @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return io.bloombox.schema.services.auth.v1beta1.AuthServiceBeta1.internal_static_bloombox_schema_services_auth_v1beta1_IdentityConnect_fieldAccessorTable
+      return io.bloombox.schema.services.auth.v1beta1.AuthServiceBeta1.internal_static_bloombox_services_auth_v1beta1_IdentityConnect_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
               io.bloombox.schema.services.auth.v1beta1.IdentityConnect.class, io.bloombox.schema.services.auth.v1beta1.IdentityConnect.Builder.class);
     }
@@ -3421,20 +3762,24 @@ private static final long serialVersionUID = 0L;
               .alwaysUseFieldBuilders) {
       }
     }
+    @java.lang.Override
     public Builder clear() {
       super.clear();
       return this;
     }
 
+    @java.lang.Override
     public com.google.protobuf.Descriptors.Descriptor
         getDescriptorForType() {
-      return io.bloombox.schema.services.auth.v1beta1.AuthServiceBeta1.internal_static_bloombox_schema_services_auth_v1beta1_IdentityConnect_descriptor;
+      return io.bloombox.schema.services.auth.v1beta1.AuthServiceBeta1.internal_static_bloombox_services_auth_v1beta1_IdentityConnect_descriptor;
     }
 
+    @java.lang.Override
     public io.bloombox.schema.services.auth.v1beta1.IdentityConnect getDefaultInstanceForType() {
       return io.bloombox.schema.services.auth.v1beta1.IdentityConnect.getDefaultInstance();
     }
 
+    @java.lang.Override
     public io.bloombox.schema.services.auth.v1beta1.IdentityConnect build() {
       io.bloombox.schema.services.auth.v1beta1.IdentityConnect result = buildPartial();
       if (!result.isInitialized()) {
@@ -3443,38 +3788,46 @@ private static final long serialVersionUID = 0L;
       return result;
     }
 
+    @java.lang.Override
     public io.bloombox.schema.services.auth.v1beta1.IdentityConnect buildPartial() {
       io.bloombox.schema.services.auth.v1beta1.IdentityConnect result = new io.bloombox.schema.services.auth.v1beta1.IdentityConnect(this);
       onBuilt();
       return result;
     }
 
+    @java.lang.Override
     public Builder clone() {
       return (Builder) super.clone();
     }
+    @java.lang.Override
     public Builder setField(
         com.google.protobuf.Descriptors.FieldDescriptor field,
         java.lang.Object value) {
       return (Builder) super.setField(field, value);
     }
+    @java.lang.Override
     public Builder clearField(
         com.google.protobuf.Descriptors.FieldDescriptor field) {
       return (Builder) super.clearField(field);
     }
+    @java.lang.Override
     public Builder clearOneof(
         com.google.protobuf.Descriptors.OneofDescriptor oneof) {
       return (Builder) super.clearOneof(oneof);
     }
+    @java.lang.Override
     public Builder setRepeatedField(
         com.google.protobuf.Descriptors.FieldDescriptor field,
         int index, java.lang.Object value) {
       return (Builder) super.setRepeatedField(field, index, value);
     }
+    @java.lang.Override
     public Builder addRepeatedField(
         com.google.protobuf.Descriptors.FieldDescriptor field,
         java.lang.Object value) {
       return (Builder) super.addRepeatedField(field, value);
     }
+    @java.lang.Override
     public Builder mergeFrom(com.google.protobuf.Message other) {
       if (other instanceof io.bloombox.schema.services.auth.v1beta1.IdentityConnect) {
         return mergeFrom((io.bloombox.schema.services.auth.v1beta1.IdentityConnect)other);
@@ -3491,10 +3844,12 @@ private static final long serialVersionUID = 0L;
       return this;
     }
 
+    @java.lang.Override
     public final boolean isInitialized() {
       return true;
     }
 
+    @java.lang.Override
     public Builder mergeFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -3512,21 +3867,23 @@ private static final long serialVersionUID = 0L;
       }
       return this;
     }
+    @java.lang.Override
     public final Builder setUnknownFields(
         final com.google.protobuf.UnknownFieldSet unknownFields) {
       return super.setUnknownFieldsProto3(unknownFields);
     }
 
+    @java.lang.Override
     public final Builder mergeUnknownFields(
         final com.google.protobuf.UnknownFieldSet unknownFields) {
       return super.mergeUnknownFields(unknownFields);
     }
 
 
-    // @@protoc_insertion_point(builder_scope:bloombox.schema.services.auth.v1beta1.IdentityConnect)
+    // @@protoc_insertion_point(builder_scope:bloombox.services.auth.v1beta1.IdentityConnect)
   }
 
-  // @@protoc_insertion_point(class_scope:bloombox.schema.services.auth.v1beta1.IdentityConnect)
+  // @@protoc_insertion_point(class_scope:bloombox.services.auth.v1beta1.IdentityConnect)
   private static final io.bloombox.schema.services.auth.v1beta1.IdentityConnect DEFAULT_INSTANCE;
   static {
     DEFAULT_INSTANCE = new io.bloombox.schema.services.auth.v1beta1.IdentityConnect();
@@ -3538,6 +3895,7 @@ private static final long serialVersionUID = 0L;
 
   private static final com.google.protobuf.Parser<IdentityConnect>
       PARSER = new com.google.protobuf.AbstractParser<IdentityConnect>() {
+    @java.lang.Override
     public IdentityConnect parsePartialFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -3555,6 +3913,7 @@ private static final long serialVersionUID = 0L;
     return PARSER;
   }
 
+  @java.lang.Override
   public io.bloombox.schema.services.auth.v1beta1.IdentityConnect getDefaultInstanceForType() {
     return DEFAULT_INSTANCE;
   }

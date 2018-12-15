@@ -1,11 +1,12 @@
 /*
- * Copyright 2018, Bloombox, LLC.
+ * Copyright 2018, Momentum Ideas, Co. All rights reserved.
  *
- * Licensed under the Apache License, Version 2.0 (the "License");
- * you may not use this file except in compliance with the License.
- * You may obtain a copy of the License at
- *
- *     http://www.apache.org/licenses/LICENSE-2.0
+ * Source and object computer code contained herein is the private intellectual
+ * property of Momentum Ideas Co., a Delaware Corporation. Use of this
+ * code in source form requires permission in writing before use or the
+ * assembly, distribution, or publishing of derivative works, for commercial
+ * purposes or any other purpose, from a duly authorized officer of Momentum
+ * Ideas Co.
  *
  * Unless required by applicable law or agreed to in writing, software
  * distributed under the License is distributed on an "AS IS" BASIS,
@@ -589,13 +590,6 @@ public final class EdibleProduct {
             case 0:
               done = true;
               break;
-            default: {
-              if (!parseUnknownFieldProto3(
-                  input, unknownFields, extensionRegistry, tag)) {
-                done = true;
-              }
-              break;
-            }
             case 10: {
               java.lang.String s = input.readStringRequireUtf8();
 
@@ -606,6 +600,13 @@ public final class EdibleProduct {
               java.lang.String s = input.readStringRequireUtf8();
 
               amount_ = s;
+              break;
+            }
+            default: {
+              if (!parseUnknownFieldProto3(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
               break;
             }
           }
@@ -625,6 +626,7 @@ public final class EdibleProduct {
       return io.opencannabis.schema.product.EdibleProduct.internal_static_opencannabis_products_EdibleIngredient_descriptor;
     }
 
+    @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
       return io.opencannabis.schema.product.EdibleProduct.internal_static_opencannabis_products_EdibleIngredient_fieldAccessorTable
@@ -717,6 +719,7 @@ public final class EdibleProduct {
     }
 
     private byte memoizedIsInitialized = -1;
+    @java.lang.Override
     public final boolean isInitialized() {
       byte isInitialized = memoizedIsInitialized;
       if (isInitialized == 1) return true;
@@ -726,6 +729,7 @@ public final class EdibleProduct {
       return true;
     }
 
+    @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
       if (!getLabelBytes().isEmpty()) {
@@ -737,6 +741,7 @@ public final class EdibleProduct {
       unknownFields.writeTo(output);
     }
 
+    @java.lang.Override
     public int getSerializedSize() {
       int size = memoizedSize;
       if (size != -1) return size;
@@ -858,6 +863,7 @@ public final class EdibleProduct {
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
 
+    @java.lang.Override
     public Builder newBuilderForType() { return newBuilder(); }
     public static Builder newBuilder() {
       return DEFAULT_INSTANCE.toBuilder();
@@ -865,6 +871,7 @@ public final class EdibleProduct {
     public static Builder newBuilder(io.opencannabis.schema.product.EdibleProduct.EdibleIngredient prototype) {
       return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
     }
+    @java.lang.Override
     public Builder toBuilder() {
       return this == DEFAULT_INSTANCE
           ? new Builder() : new Builder().mergeFrom(this);
@@ -892,6 +899,7 @@ public final class EdibleProduct {
         return io.opencannabis.schema.product.EdibleProduct.internal_static_opencannabis_products_EdibleIngredient_descriptor;
       }
 
+      @java.lang.Override
       protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
           internalGetFieldAccessorTable() {
         return io.opencannabis.schema.product.EdibleProduct.internal_static_opencannabis_products_EdibleIngredient_fieldAccessorTable
@@ -914,6 +922,7 @@ public final class EdibleProduct {
                 .alwaysUseFieldBuilders) {
         }
       }
+      @java.lang.Override
       public Builder clear() {
         super.clear();
         label_ = "";
@@ -923,15 +932,18 @@ public final class EdibleProduct {
         return this;
       }
 
+      @java.lang.Override
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
         return io.opencannabis.schema.product.EdibleProduct.internal_static_opencannabis_products_EdibleIngredient_descriptor;
       }
 
+      @java.lang.Override
       public io.opencannabis.schema.product.EdibleProduct.EdibleIngredient getDefaultInstanceForType() {
         return io.opencannabis.schema.product.EdibleProduct.EdibleIngredient.getDefaultInstance();
       }
 
+      @java.lang.Override
       public io.opencannabis.schema.product.EdibleProduct.EdibleIngredient build() {
         io.opencannabis.schema.product.EdibleProduct.EdibleIngredient result = buildPartial();
         if (!result.isInitialized()) {
@@ -940,6 +952,7 @@ public final class EdibleProduct {
         return result;
       }
 
+      @java.lang.Override
       public io.opencannabis.schema.product.EdibleProduct.EdibleIngredient buildPartial() {
         io.opencannabis.schema.product.EdibleProduct.EdibleIngredient result = new io.opencannabis.schema.product.EdibleProduct.EdibleIngredient(this);
         result.label_ = label_;
@@ -948,32 +961,39 @@ public final class EdibleProduct {
         return result;
       }
 
+      @java.lang.Override
       public Builder clone() {
         return (Builder) super.clone();
       }
+      @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
         return (Builder) super.setField(field, value);
       }
+      @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
         return (Builder) super.clearField(field);
       }
+      @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
         return (Builder) super.clearOneof(oneof);
       }
+      @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
         return (Builder) super.setRepeatedField(field, index, value);
       }
+      @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
         return (Builder) super.addRepeatedField(field, value);
       }
+      @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
         if (other instanceof io.opencannabis.schema.product.EdibleProduct.EdibleIngredient) {
           return mergeFrom((io.opencannabis.schema.product.EdibleProduct.EdibleIngredient)other);
@@ -998,10 +1018,12 @@ public final class EdibleProduct {
         return this;
       }
 
+      @java.lang.Override
       public final boolean isInitialized() {
         return true;
       }
 
+      @java.lang.Override
       public Builder mergeFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -1197,11 +1219,13 @@ public final class EdibleProduct {
         onChanged();
         return this;
       }
+      @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
         return super.setUnknownFieldsProto3(unknownFields);
       }
 
+      @java.lang.Override
       public final Builder mergeUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
         return super.mergeUnknownFields(unknownFields);
@@ -1223,6 +1247,7 @@ public final class EdibleProduct {
 
     private static final com.google.protobuf.Parser<EdibleIngredient>
         PARSER = new com.google.protobuf.AbstractParser<EdibleIngredient>() {
+      @java.lang.Override
       public EdibleIngredient parsePartialFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -1240,6 +1265,7 @@ public final class EdibleProduct {
       return PARSER;
     }
 
+    @java.lang.Override
     public io.opencannabis.schema.product.EdibleProduct.EdibleIngredient getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
@@ -1475,13 +1501,6 @@ public final class EdibleProduct {
             case 0:
               done = true;
               break;
-            default: {
-              if (!parseUnknownFieldProto3(
-                  input, unknownFields, extensionRegistry, tag)) {
-                done = true;
-              }
-              break;
-            }
             case 10: {
               io.opencannabis.schema.base.BaseProductKey.ProductKey.Builder subBuilder = null;
               if (key_ != null) {
@@ -1559,6 +1578,13 @@ public final class EdibleProduct {
                   input.readMessage(io.opencannabis.schema.product.EdibleProduct.EdibleIngredient.parser(), extensionRegistry));
               break;
             }
+            default: {
+              if (!parseUnknownFieldProto3(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
           }
         }
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
@@ -1582,6 +1608,7 @@ public final class EdibleProduct {
       return io.opencannabis.schema.product.EdibleProduct.internal_static_opencannabis_products_Edible_descriptor;
     }
 
+    @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
       return io.opencannabis.schema.product.EdibleProduct.internal_static_opencannabis_products_Edible_fieldAccessorTable
@@ -1643,6 +1670,7 @@ public final class EdibleProduct {
      * <code>.opencannabis.products.EdibleType type = 2;</code>
      */
     public io.opencannabis.schema.product.EdibleProduct.EdibleType getType() {
+      @SuppressWarnings("deprecation")
       io.opencannabis.schema.product.EdibleProduct.EdibleType result = io.opencannabis.schema.product.EdibleProduct.EdibleType.valueOf(type_);
       return result == null ? io.opencannabis.schema.product.EdibleProduct.EdibleType.UNRECOGNIZED : result;
     }
@@ -1654,6 +1682,7 @@ public final class EdibleProduct {
             new com.google.protobuf.Internal.ListAdapter.Converter<
                 java.lang.Integer, io.opencannabis.schema.product.EdibleProduct.EdibleFlag>() {
               public io.opencannabis.schema.product.EdibleProduct.EdibleFlag convert(java.lang.Integer from) {
+                @SuppressWarnings("deprecation")
                 io.opencannabis.schema.product.EdibleProduct.EdibleFlag result = io.opencannabis.schema.product.EdibleProduct.EdibleFlag.valueOf(from);
                 return result == null ? io.opencannabis.schema.product.EdibleProduct.EdibleFlag.UNRECOGNIZED : result;
               }
@@ -1834,6 +1863,7 @@ public final class EdibleProduct {
     }
 
     private byte memoizedIsInitialized = -1;
+    @java.lang.Override
     public final boolean isInitialized() {
       byte isInitialized = memoizedIsInitialized;
       if (isInitialized == 1) return true;
@@ -1843,6 +1873,7 @@ public final class EdibleProduct {
       return true;
     }
 
+    @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
       getSerializedSize();
@@ -1871,6 +1902,7 @@ public final class EdibleProduct {
       unknownFields.writeTo(output);
     }
 
+    @java.lang.Override
     public int getSerializedSize() {
       int size = memoizedSize;
       if (size != -1) return size;
@@ -2051,6 +2083,7 @@ public final class EdibleProduct {
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
 
+    @java.lang.Override
     public Builder newBuilderForType() { return newBuilder(); }
     public static Builder newBuilder() {
       return DEFAULT_INSTANCE.toBuilder();
@@ -2058,6 +2091,7 @@ public final class EdibleProduct {
     public static Builder newBuilder(io.opencannabis.schema.product.EdibleProduct.Edible prototype) {
       return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
     }
+    @java.lang.Override
     public Builder toBuilder() {
       return this == DEFAULT_INSTANCE
           ? new Builder() : new Builder().mergeFrom(this);
@@ -2086,6 +2120,7 @@ public final class EdibleProduct {
         return io.opencannabis.schema.product.EdibleProduct.internal_static_opencannabis_products_Edible_descriptor;
       }
 
+      @java.lang.Override
       protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
           internalGetFieldAccessorTable() {
         return io.opencannabis.schema.product.EdibleProduct.internal_static_opencannabis_products_Edible_fieldAccessorTable
@@ -2109,6 +2144,7 @@ public final class EdibleProduct {
           getIngredientsFieldBuilder();
         }
       }
+      @java.lang.Override
       public Builder clear() {
         super.clear();
         if (keyBuilder_ == null) {
@@ -2142,15 +2178,18 @@ public final class EdibleProduct {
         return this;
       }
 
+      @java.lang.Override
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
         return io.opencannabis.schema.product.EdibleProduct.internal_static_opencannabis_products_Edible_descriptor;
       }
 
+      @java.lang.Override
       public io.opencannabis.schema.product.EdibleProduct.Edible getDefaultInstanceForType() {
         return io.opencannabis.schema.product.EdibleProduct.Edible.getDefaultInstance();
       }
 
+      @java.lang.Override
       public io.opencannabis.schema.product.EdibleProduct.Edible build() {
         io.opencannabis.schema.product.EdibleProduct.Edible result = buildPartial();
         if (!result.isInitialized()) {
@@ -2159,6 +2198,7 @@ public final class EdibleProduct {
         return result;
       }
 
+      @java.lang.Override
       public io.opencannabis.schema.product.EdibleProduct.Edible buildPartial() {
         io.opencannabis.schema.product.EdibleProduct.Edible result = new io.opencannabis.schema.product.EdibleProduct.Edible(this);
         int from_bitField0_ = bitField0_;
@@ -2198,32 +2238,39 @@ public final class EdibleProduct {
         return result;
       }
 
+      @java.lang.Override
       public Builder clone() {
         return (Builder) super.clone();
       }
+      @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
         return (Builder) super.setField(field, value);
       }
+      @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
         return (Builder) super.clearField(field);
       }
+      @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
         return (Builder) super.clearOneof(oneof);
       }
+      @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
         return (Builder) super.setRepeatedField(field, index, value);
       }
+      @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
         return (Builder) super.addRepeatedField(field, value);
       }
+      @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
         if (other instanceof io.opencannabis.schema.product.EdibleProduct.Edible) {
           return mergeFrom((io.opencannabis.schema.product.EdibleProduct.Edible)other);
@@ -2288,10 +2335,12 @@ public final class EdibleProduct {
         return this;
       }
 
+      @java.lang.Override
       public final boolean isInitialized() {
         return true;
       }
 
+      @java.lang.Override
       public Builder mergeFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -2495,6 +2544,7 @@ public final class EdibleProduct {
        * <code>.opencannabis.products.EdibleType type = 2;</code>
        */
       public io.opencannabis.schema.product.EdibleProduct.EdibleType getType() {
+        @SuppressWarnings("deprecation")
         io.opencannabis.schema.product.EdibleProduct.EdibleType result = io.opencannabis.schema.product.EdibleProduct.EdibleType.valueOf(type_);
         return result == null ? io.opencannabis.schema.product.EdibleProduct.EdibleType.UNRECOGNIZED : result;
       }
@@ -3311,11 +3361,13 @@ public final class EdibleProduct {
         }
         return ingredientsBuilder_;
       }
+      @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
         return super.setUnknownFieldsProto3(unknownFields);
       }
 
+      @java.lang.Override
       public final Builder mergeUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
         return super.mergeUnknownFields(unknownFields);
@@ -3337,6 +3389,7 @@ public final class EdibleProduct {
 
     private static final com.google.protobuf.Parser<Edible>
         PARSER = new com.google.protobuf.AbstractParser<Edible>() {
+      @java.lang.Override
       public Edible parsePartialFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -3354,6 +3407,7 @@ public final class EdibleProduct {
       return PARSER;
     }
 
+    @java.lang.Override
     public io.opencannabis.schema.product.EdibleProduct.Edible getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }

@@ -1,11 +1,12 @@
 /*
- * Copyright 2018, Bloombox, LLC.
+ * Copyright 2018, Momentum Ideas, Co. All rights reserved.
  *
- * Licensed under the Apache License, Version 2.0 (the "License");
- * you may not use this file except in compliance with the License.
- * You may obtain a copy of the License at
- *
- *     http://www.apache.org/licenses/LICENSE-2.0
+ * Source and object computer code contained herein is the private intellectual
+ * property of Momentum Ideas Co., a Delaware Corporation. Use of this
+ * code in source form requires permission in writing before use or the
+ * assembly, distribution, or publishing of derivative works, for commercial
+ * purposes or any other purpose, from a duly authorized officer of Momentum
+ * Ideas Co.
  *
  * Unless required by applicable law or agreed to in writing, software
  * distributed under the License is distributed on an "AS IS" BASIS,
@@ -31,7 +32,7 @@ public final class Assets {
         (com.google.protobuf.ExtensionRegistryLite) registry);
   }
   public interface AssetKeyOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:bloombox.schema.ledger.AssetKey)
+      // @@protoc_insertion_point(interface_extends:bloombox.ledger.AssetKey)
       com.google.protobuf.MessageOrBuilder {
 
     /**
@@ -60,11 +61,11 @@ public final class Assets {
    * string asset ID, calculated based on the asset's content and the owner's private key signing that content.
    * </pre>
    *
-   * Protobuf type {@code bloombox.schema.ledger.AssetKey}
+   * Protobuf type {@code bloombox.ledger.AssetKey}
    */
   public  static final class AssetKey extends
       com.google.protobuf.GeneratedMessageV3 implements
-      // @@protoc_insertion_point(message_implements:bloombox.schema.ledger.AssetKey)
+      // @@protoc_insertion_point(message_implements:bloombox.ledger.AssetKey)
       AssetKeyOrBuilder {
   private static final long serialVersionUID = 0L;
     // Use AssetKey.newBuilder() to construct.
@@ -99,17 +100,17 @@ public final class Assets {
             case 0:
               done = true;
               break;
+            case 10: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              id_ = s;
+              break;
+            }
             default: {
               if (!parseUnknownFieldProto3(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
-              break;
-            }
-            case 10: {
-              java.lang.String s = input.readStringRequireUtf8();
-
-              id_ = s;
               break;
             }
           }
@@ -126,12 +127,13 @@ public final class Assets {
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return io.bloombox.schema.ledger.Assets.internal_static_bloombox_schema_ledger_AssetKey_descriptor;
+      return io.bloombox.schema.ledger.Assets.internal_static_bloombox_ledger_AssetKey_descriptor;
     }
 
+    @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return io.bloombox.schema.ledger.Assets.internal_static_bloombox_schema_ledger_AssetKey_fieldAccessorTable
+      return io.bloombox.schema.ledger.Assets.internal_static_bloombox_ledger_AssetKey_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
               io.bloombox.schema.ledger.Assets.AssetKey.class, io.bloombox.schema.ledger.Assets.AssetKey.Builder.class);
     }
@@ -181,6 +183,7 @@ public final class Assets {
     }
 
     private byte memoizedIsInitialized = -1;
+    @java.lang.Override
     public final boolean isInitialized() {
       byte isInitialized = memoizedIsInitialized;
       if (isInitialized == 1) return true;
@@ -190,6 +193,7 @@ public final class Assets {
       return true;
     }
 
+    @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
       if (!getIdBytes().isEmpty()) {
@@ -198,6 +202,7 @@ public final class Assets {
       unknownFields.writeTo(output);
     }
 
+    @java.lang.Override
     public int getSerializedSize() {
       int size = memoizedSize;
       if (size != -1) return size;
@@ -312,6 +317,7 @@ public final class Assets {
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
 
+    @java.lang.Override
     public Builder newBuilderForType() { return newBuilder(); }
     public static Builder newBuilder() {
       return DEFAULT_INSTANCE.toBuilder();
@@ -319,6 +325,7 @@ public final class Assets {
     public static Builder newBuilder(io.bloombox.schema.ledger.Assets.AssetKey prototype) {
       return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
     }
+    @java.lang.Override
     public Builder toBuilder() {
       return this == DEFAULT_INSTANCE
           ? new Builder() : new Builder().mergeFrom(this);
@@ -336,20 +343,21 @@ public final class Assets {
      * string asset ID, calculated based on the asset's content and the owner's private key signing that content.
      * </pre>
      *
-     * Protobuf type {@code bloombox.schema.ledger.AssetKey}
+     * Protobuf type {@code bloombox.ledger.AssetKey}
      */
     public static final class Builder extends
         com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:bloombox.schema.ledger.AssetKey)
+        // @@protoc_insertion_point(builder_implements:bloombox.ledger.AssetKey)
         io.bloombox.schema.ledger.Assets.AssetKeyOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return io.bloombox.schema.ledger.Assets.internal_static_bloombox_schema_ledger_AssetKey_descriptor;
+        return io.bloombox.schema.ledger.Assets.internal_static_bloombox_ledger_AssetKey_descriptor;
       }
 
+      @java.lang.Override
       protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return io.bloombox.schema.ledger.Assets.internal_static_bloombox_schema_ledger_AssetKey_fieldAccessorTable
+        return io.bloombox.schema.ledger.Assets.internal_static_bloombox_ledger_AssetKey_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
                 io.bloombox.schema.ledger.Assets.AssetKey.class, io.bloombox.schema.ledger.Assets.AssetKey.Builder.class);
       }
@@ -369,6 +377,7 @@ public final class Assets {
                 .alwaysUseFieldBuilders) {
         }
       }
+      @java.lang.Override
       public Builder clear() {
         super.clear();
         id_ = "";
@@ -376,15 +385,18 @@ public final class Assets {
         return this;
       }
 
+      @java.lang.Override
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return io.bloombox.schema.ledger.Assets.internal_static_bloombox_schema_ledger_AssetKey_descriptor;
+        return io.bloombox.schema.ledger.Assets.internal_static_bloombox_ledger_AssetKey_descriptor;
       }
 
+      @java.lang.Override
       public io.bloombox.schema.ledger.Assets.AssetKey getDefaultInstanceForType() {
         return io.bloombox.schema.ledger.Assets.AssetKey.getDefaultInstance();
       }
 
+      @java.lang.Override
       public io.bloombox.schema.ledger.Assets.AssetKey build() {
         io.bloombox.schema.ledger.Assets.AssetKey result = buildPartial();
         if (!result.isInitialized()) {
@@ -393,6 +405,7 @@ public final class Assets {
         return result;
       }
 
+      @java.lang.Override
       public io.bloombox.schema.ledger.Assets.AssetKey buildPartial() {
         io.bloombox.schema.ledger.Assets.AssetKey result = new io.bloombox.schema.ledger.Assets.AssetKey(this);
         result.id_ = id_;
@@ -400,32 +413,39 @@ public final class Assets {
         return result;
       }
 
+      @java.lang.Override
       public Builder clone() {
         return (Builder) super.clone();
       }
+      @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
         return (Builder) super.setField(field, value);
       }
+      @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
         return (Builder) super.clearField(field);
       }
+      @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
         return (Builder) super.clearOneof(oneof);
       }
+      @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
         return (Builder) super.setRepeatedField(field, index, value);
       }
+      @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
         return (Builder) super.addRepeatedField(field, value);
       }
+      @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
         if (other instanceof io.bloombox.schema.ledger.Assets.AssetKey) {
           return mergeFrom((io.bloombox.schema.ledger.Assets.AssetKey)other);
@@ -446,10 +466,12 @@ public final class Assets {
         return this;
       }
 
+      @java.lang.Override
       public final boolean isInitialized() {
         return true;
       }
 
+      @java.lang.Override
       public Builder mergeFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -561,21 +583,23 @@ public final class Assets {
         onChanged();
         return this;
       }
+      @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
         return super.setUnknownFieldsProto3(unknownFields);
       }
 
+      @java.lang.Override
       public final Builder mergeUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
         return super.mergeUnknownFields(unknownFields);
       }
 
 
-      // @@protoc_insertion_point(builder_scope:bloombox.schema.ledger.AssetKey)
+      // @@protoc_insertion_point(builder_scope:bloombox.ledger.AssetKey)
     }
 
-    // @@protoc_insertion_point(class_scope:bloombox.schema.ledger.AssetKey)
+    // @@protoc_insertion_point(class_scope:bloombox.ledger.AssetKey)
     private static final io.bloombox.schema.ledger.Assets.AssetKey DEFAULT_INSTANCE;
     static {
       DEFAULT_INSTANCE = new io.bloombox.schema.ledger.Assets.AssetKey();
@@ -587,6 +611,7 @@ public final class Assets {
 
     private static final com.google.protobuf.Parser<AssetKey>
         PARSER = new com.google.protobuf.AbstractParser<AssetKey>() {
+      @java.lang.Override
       public AssetKey parsePartialFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -604,6 +629,7 @@ public final class Assets {
       return PARSER;
     }
 
+    @java.lang.Override
     public io.bloombox.schema.ledger.Assets.AssetKey getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
@@ -611,7 +637,7 @@ public final class Assets {
   }
 
   public interface AssetDataOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:bloombox.schema.ledger.AssetData)
+      // @@protoc_insertion_point(interface_extends:bloombox.ledger.AssetData)
       com.google.protobuf.MessageOrBuilder {
 
     /**
@@ -676,11 +702,11 @@ public final class Assets {
    * be used, wherein the encoding is the same as encoded-form, without the base58 wrapping.
    * </pre>
    *
-   * Protobuf type {@code bloombox.schema.ledger.AssetData}
+   * Protobuf type {@code bloombox.ledger.AssetData}
    */
   public  static final class AssetData extends
       com.google.protobuf.GeneratedMessageV3 implements
-      // @@protoc_insertion_point(message_implements:bloombox.schema.ledger.AssetData)
+      // @@protoc_insertion_point(message_implements:bloombox.ledger.AssetData)
       AssetDataOrBuilder {
   private static final long serialVersionUID = 0L;
     // Use AssetData.newBuilder() to construct.
@@ -714,13 +740,6 @@ public final class Assets {
             case 0:
               done = true;
               break;
-            default: {
-              if (!parseUnknownFieldProto3(
-                  input, unknownFields, extensionRegistry, tag)) {
-                done = true;
-              }
-              break;
-            }
             case 10: {
               payloadCase_ = 1;
               payload_ = input.readBytes();
@@ -746,6 +765,13 @@ public final class Assets {
               payloadCase_ = 3;
               break;
             }
+            default: {
+              if (!parseUnknownFieldProto3(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
           }
         }
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
@@ -760,12 +786,13 @@ public final class Assets {
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return io.bloombox.schema.ledger.Assets.internal_static_bloombox_schema_ledger_AssetData_descriptor;
+      return io.bloombox.schema.ledger.Assets.internal_static_bloombox_ledger_AssetData_descriptor;
     }
 
+    @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return io.bloombox.schema.ledger.Assets.internal_static_bloombox_schema_ledger_AssetData_fieldAccessorTable
+      return io.bloombox.schema.ledger.Assets.internal_static_bloombox_ledger_AssetData_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
               io.bloombox.schema.ledger.Assets.AssetData.class, io.bloombox.schema.ledger.Assets.AssetData.Builder.class);
     }
@@ -915,6 +942,7 @@ public final class Assets {
     }
 
     private byte memoizedIsInitialized = -1;
+    @java.lang.Override
     public final boolean isInitialized() {
       byte isInitialized = memoizedIsInitialized;
       if (isInitialized == 1) return true;
@@ -924,6 +952,7 @@ public final class Assets {
       return true;
     }
 
+    @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
       if (payloadCase_ == 1) {
@@ -939,6 +968,7 @@ public final class Assets {
       unknownFields.writeTo(output);
     }
 
+    @java.lang.Override
     public int getSerializedSize() {
       int size = memoizedSize;
       if (size != -1) return size;
@@ -1093,6 +1123,7 @@ public final class Assets {
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
 
+    @java.lang.Override
     public Builder newBuilderForType() { return newBuilder(); }
     public static Builder newBuilder() {
       return DEFAULT_INSTANCE.toBuilder();
@@ -1100,6 +1131,7 @@ public final class Assets {
     public static Builder newBuilder(io.bloombox.schema.ledger.Assets.AssetData prototype) {
       return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
     }
+    @java.lang.Override
     public Builder toBuilder() {
       return this == DEFAULT_INSTANCE
           ? new Builder() : new Builder().mergeFrom(this);
@@ -1119,20 +1151,21 @@ public final class Assets {
      * be used, wherein the encoding is the same as encoded-form, without the base58 wrapping.
      * </pre>
      *
-     * Protobuf type {@code bloombox.schema.ledger.AssetData}
+     * Protobuf type {@code bloombox.ledger.AssetData}
      */
     public static final class Builder extends
         com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:bloombox.schema.ledger.AssetData)
+        // @@protoc_insertion_point(builder_implements:bloombox.ledger.AssetData)
         io.bloombox.schema.ledger.Assets.AssetDataOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return io.bloombox.schema.ledger.Assets.internal_static_bloombox_schema_ledger_AssetData_descriptor;
+        return io.bloombox.schema.ledger.Assets.internal_static_bloombox_ledger_AssetData_descriptor;
       }
 
+      @java.lang.Override
       protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return io.bloombox.schema.ledger.Assets.internal_static_bloombox_schema_ledger_AssetData_fieldAccessorTable
+        return io.bloombox.schema.ledger.Assets.internal_static_bloombox_ledger_AssetData_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
                 io.bloombox.schema.ledger.Assets.AssetData.class, io.bloombox.schema.ledger.Assets.AssetData.Builder.class);
       }
@@ -1152,6 +1185,7 @@ public final class Assets {
                 .alwaysUseFieldBuilders) {
         }
       }
+      @java.lang.Override
       public Builder clear() {
         super.clear();
         payloadCase_ = 0;
@@ -1159,15 +1193,18 @@ public final class Assets {
         return this;
       }
 
+      @java.lang.Override
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return io.bloombox.schema.ledger.Assets.internal_static_bloombox_schema_ledger_AssetData_descriptor;
+        return io.bloombox.schema.ledger.Assets.internal_static_bloombox_ledger_AssetData_descriptor;
       }
 
+      @java.lang.Override
       public io.bloombox.schema.ledger.Assets.AssetData getDefaultInstanceForType() {
         return io.bloombox.schema.ledger.Assets.AssetData.getDefaultInstance();
       }
 
+      @java.lang.Override
       public io.bloombox.schema.ledger.Assets.AssetData build() {
         io.bloombox.schema.ledger.Assets.AssetData result = buildPartial();
         if (!result.isInitialized()) {
@@ -1176,6 +1213,7 @@ public final class Assets {
         return result;
       }
 
+      @java.lang.Override
       public io.bloombox.schema.ledger.Assets.AssetData buildPartial() {
         io.bloombox.schema.ledger.Assets.AssetData result = new io.bloombox.schema.ledger.Assets.AssetData(this);
         if (payloadCase_ == 1) {
@@ -1196,32 +1234,39 @@ public final class Assets {
         return result;
       }
 
+      @java.lang.Override
       public Builder clone() {
         return (Builder) super.clone();
       }
+      @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
         return (Builder) super.setField(field, value);
       }
+      @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
         return (Builder) super.clearField(field);
       }
+      @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
         return (Builder) super.clearOneof(oneof);
       }
+      @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
         return (Builder) super.setRepeatedField(field, index, value);
       }
+      @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
         return (Builder) super.addRepeatedField(field, value);
       }
+      @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
         if (other instanceof io.bloombox.schema.ledger.Assets.AssetData) {
           return mergeFrom((io.bloombox.schema.ledger.Assets.AssetData)other);
@@ -1257,10 +1302,12 @@ public final class Assets {
         return this;
       }
 
+      @java.lang.Override
       public final boolean isInitialized() {
         return true;
       }
 
+      @java.lang.Override
       public Builder mergeFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -1610,21 +1657,23 @@ public final class Assets {
         onChanged();;
         return structBuilder_;
       }
+      @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
         return super.setUnknownFieldsProto3(unknownFields);
       }
 
+      @java.lang.Override
       public final Builder mergeUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
         return super.mergeUnknownFields(unknownFields);
       }
 
 
-      // @@protoc_insertion_point(builder_scope:bloombox.schema.ledger.AssetData)
+      // @@protoc_insertion_point(builder_scope:bloombox.ledger.AssetData)
     }
 
-    // @@protoc_insertion_point(class_scope:bloombox.schema.ledger.AssetData)
+    // @@protoc_insertion_point(class_scope:bloombox.ledger.AssetData)
     private static final io.bloombox.schema.ledger.Assets.AssetData DEFAULT_INSTANCE;
     static {
       DEFAULT_INSTANCE = new io.bloombox.schema.ledger.Assets.AssetData();
@@ -1636,6 +1685,7 @@ public final class Assets {
 
     private static final com.google.protobuf.Parser<AssetData>
         PARSER = new com.google.protobuf.AbstractParser<AssetData>() {
+      @java.lang.Override
       public AssetData parsePartialFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -1653,6 +1703,7 @@ public final class Assets {
       return PARSER;
     }
 
+    @java.lang.Override
     public io.bloombox.schema.ledger.Assets.AssetData getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
@@ -1660,7 +1711,7 @@ public final class Assets {
   }
 
   public interface AssetOwnershipOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:bloombox.schema.ledger.AssetOwnership)
+      // @@protoc_insertion_point(interface_extends:bloombox.ledger.AssetOwnership)
       com.google.protobuf.MessageOrBuilder {
 
     /**
@@ -1668,7 +1719,7 @@ public final class Assets {
      * Identities of the owners of this digital asset, if known and applicable.
      * </pre>
      *
-     * <code>repeated .bloombox.schema.ledger.LedgerIdentity owner = 1;</code>
+     * <code>repeated .bloombox.ledger.LedgerIdentity owner = 1;</code>
      */
     java.util.List<io.bloombox.schema.ledger.Accounts.LedgerIdentity> 
         getOwnerList();
@@ -1677,7 +1728,7 @@ public final class Assets {
      * Identities of the owners of this digital asset, if known and applicable.
      * </pre>
      *
-     * <code>repeated .bloombox.schema.ledger.LedgerIdentity owner = 1;</code>
+     * <code>repeated .bloombox.ledger.LedgerIdentity owner = 1;</code>
      */
     io.bloombox.schema.ledger.Accounts.LedgerIdentity getOwner(int index);
     /**
@@ -1685,7 +1736,7 @@ public final class Assets {
      * Identities of the owners of this digital asset, if known and applicable.
      * </pre>
      *
-     * <code>repeated .bloombox.schema.ledger.LedgerIdentity owner = 1;</code>
+     * <code>repeated .bloombox.ledger.LedgerIdentity owner = 1;</code>
      */
     int getOwnerCount();
     /**
@@ -1693,7 +1744,7 @@ public final class Assets {
      * Identities of the owners of this digital asset, if known and applicable.
      * </pre>
      *
-     * <code>repeated .bloombox.schema.ledger.LedgerIdentity owner = 1;</code>
+     * <code>repeated .bloombox.ledger.LedgerIdentity owner = 1;</code>
      */
     java.util.List<? extends io.bloombox.schema.ledger.Accounts.LedgerIdentityOrBuilder> 
         getOwnerOrBuilderList();
@@ -1702,7 +1753,7 @@ public final class Assets {
      * Identities of the owners of this digital asset, if known and applicable.
      * </pre>
      *
-     * <code>repeated .bloombox.schema.ledger.LedgerIdentity owner = 1;</code>
+     * <code>repeated .bloombox.ledger.LedgerIdentity owner = 1;</code>
      */
     io.bloombox.schema.ledger.Accounts.LedgerIdentityOrBuilder getOwnerOrBuilder(
         int index);
@@ -1712,7 +1763,7 @@ public final class Assets {
      * Previous asset ownership, allowing chained asset history to be expressed.
      * </pre>
      *
-     * <code>.bloombox.schema.ledger.AssetOwnership previous = 2;</code>
+     * <code>.bloombox.ledger.AssetOwnership previous = 2;</code>
      */
     boolean hasPrevious();
     /**
@@ -1720,7 +1771,7 @@ public final class Assets {
      * Previous asset ownership, allowing chained asset history to be expressed.
      * </pre>
      *
-     * <code>.bloombox.schema.ledger.AssetOwnership previous = 2;</code>
+     * <code>.bloombox.ledger.AssetOwnership previous = 2;</code>
      */
     io.bloombox.schema.ledger.Assets.AssetOwnership getPrevious();
     /**
@@ -1728,7 +1779,7 @@ public final class Assets {
      * Previous asset ownership, allowing chained asset history to be expressed.
      * </pre>
      *
-     * <code>.bloombox.schema.ledger.AssetOwnership previous = 2;</code>
+     * <code>.bloombox.ledger.AssetOwnership previous = 2;</code>
      */
     io.bloombox.schema.ledger.Assets.AssetOwnershipOrBuilder getPreviousOrBuilder();
   }
@@ -1738,11 +1789,11 @@ public final class Assets {
    * ledger, but may be more complex (in cases of multiple owners, organizational signers for owners, and so on).
    * </pre>
    *
-   * Protobuf type {@code bloombox.schema.ledger.AssetOwnership}
+   * Protobuf type {@code bloombox.ledger.AssetOwnership}
    */
   public  static final class AssetOwnership extends
       com.google.protobuf.GeneratedMessageV3 implements
-      // @@protoc_insertion_point(message_implements:bloombox.schema.ledger.AssetOwnership)
+      // @@protoc_insertion_point(message_implements:bloombox.ledger.AssetOwnership)
       AssetOwnershipOrBuilder {
   private static final long serialVersionUID = 0L;
     // Use AssetOwnership.newBuilder() to construct.
@@ -1777,13 +1828,6 @@ public final class Assets {
             case 0:
               done = true;
               break;
-            default: {
-              if (!parseUnknownFieldProto3(
-                  input, unknownFields, extensionRegistry, tag)) {
-                done = true;
-              }
-              break;
-            }
             case 10: {
               if (!((mutable_bitField0_ & 0x00000001) == 0x00000001)) {
                 owner_ = new java.util.ArrayList<io.bloombox.schema.ledger.Accounts.LedgerIdentity>();
@@ -1806,6 +1850,13 @@ public final class Assets {
 
               break;
             }
+            default: {
+              if (!parseUnknownFieldProto3(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
           }
         }
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
@@ -1823,12 +1874,13 @@ public final class Assets {
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return io.bloombox.schema.ledger.Assets.internal_static_bloombox_schema_ledger_AssetOwnership_descriptor;
+      return io.bloombox.schema.ledger.Assets.internal_static_bloombox_ledger_AssetOwnership_descriptor;
     }
 
+    @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return io.bloombox.schema.ledger.Assets.internal_static_bloombox_schema_ledger_AssetOwnership_fieldAccessorTable
+      return io.bloombox.schema.ledger.Assets.internal_static_bloombox_ledger_AssetOwnership_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
               io.bloombox.schema.ledger.Assets.AssetOwnership.class, io.bloombox.schema.ledger.Assets.AssetOwnership.Builder.class);
     }
@@ -1841,7 +1893,7 @@ public final class Assets {
      * Identities of the owners of this digital asset, if known and applicable.
      * </pre>
      *
-     * <code>repeated .bloombox.schema.ledger.LedgerIdentity owner = 1;</code>
+     * <code>repeated .bloombox.ledger.LedgerIdentity owner = 1;</code>
      */
     public java.util.List<io.bloombox.schema.ledger.Accounts.LedgerIdentity> getOwnerList() {
       return owner_;
@@ -1851,7 +1903,7 @@ public final class Assets {
      * Identities of the owners of this digital asset, if known and applicable.
      * </pre>
      *
-     * <code>repeated .bloombox.schema.ledger.LedgerIdentity owner = 1;</code>
+     * <code>repeated .bloombox.ledger.LedgerIdentity owner = 1;</code>
      */
     public java.util.List<? extends io.bloombox.schema.ledger.Accounts.LedgerIdentityOrBuilder> 
         getOwnerOrBuilderList() {
@@ -1862,7 +1914,7 @@ public final class Assets {
      * Identities of the owners of this digital asset, if known and applicable.
      * </pre>
      *
-     * <code>repeated .bloombox.schema.ledger.LedgerIdentity owner = 1;</code>
+     * <code>repeated .bloombox.ledger.LedgerIdentity owner = 1;</code>
      */
     public int getOwnerCount() {
       return owner_.size();
@@ -1872,7 +1924,7 @@ public final class Assets {
      * Identities of the owners of this digital asset, if known and applicable.
      * </pre>
      *
-     * <code>repeated .bloombox.schema.ledger.LedgerIdentity owner = 1;</code>
+     * <code>repeated .bloombox.ledger.LedgerIdentity owner = 1;</code>
      */
     public io.bloombox.schema.ledger.Accounts.LedgerIdentity getOwner(int index) {
       return owner_.get(index);
@@ -1882,7 +1934,7 @@ public final class Assets {
      * Identities of the owners of this digital asset, if known and applicable.
      * </pre>
      *
-     * <code>repeated .bloombox.schema.ledger.LedgerIdentity owner = 1;</code>
+     * <code>repeated .bloombox.ledger.LedgerIdentity owner = 1;</code>
      */
     public io.bloombox.schema.ledger.Accounts.LedgerIdentityOrBuilder getOwnerOrBuilder(
         int index) {
@@ -1896,7 +1948,7 @@ public final class Assets {
      * Previous asset ownership, allowing chained asset history to be expressed.
      * </pre>
      *
-     * <code>.bloombox.schema.ledger.AssetOwnership previous = 2;</code>
+     * <code>.bloombox.ledger.AssetOwnership previous = 2;</code>
      */
     public boolean hasPrevious() {
       return previous_ != null;
@@ -1906,7 +1958,7 @@ public final class Assets {
      * Previous asset ownership, allowing chained asset history to be expressed.
      * </pre>
      *
-     * <code>.bloombox.schema.ledger.AssetOwnership previous = 2;</code>
+     * <code>.bloombox.ledger.AssetOwnership previous = 2;</code>
      */
     public io.bloombox.schema.ledger.Assets.AssetOwnership getPrevious() {
       return previous_ == null ? io.bloombox.schema.ledger.Assets.AssetOwnership.getDefaultInstance() : previous_;
@@ -1916,13 +1968,14 @@ public final class Assets {
      * Previous asset ownership, allowing chained asset history to be expressed.
      * </pre>
      *
-     * <code>.bloombox.schema.ledger.AssetOwnership previous = 2;</code>
+     * <code>.bloombox.ledger.AssetOwnership previous = 2;</code>
      */
     public io.bloombox.schema.ledger.Assets.AssetOwnershipOrBuilder getPreviousOrBuilder() {
       return getPrevious();
     }
 
     private byte memoizedIsInitialized = -1;
+    @java.lang.Override
     public final boolean isInitialized() {
       byte isInitialized = memoizedIsInitialized;
       if (isInitialized == 1) return true;
@@ -1932,6 +1985,7 @@ public final class Assets {
       return true;
     }
 
+    @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
       for (int i = 0; i < owner_.size(); i++) {
@@ -1943,6 +1997,7 @@ public final class Assets {
       unknownFields.writeTo(output);
     }
 
+    @java.lang.Override
     public int getSerializedSize() {
       int size = memoizedSize;
       if (size != -1) return size;
@@ -2073,6 +2128,7 @@ public final class Assets {
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
 
+    @java.lang.Override
     public Builder newBuilderForType() { return newBuilder(); }
     public static Builder newBuilder() {
       return DEFAULT_INSTANCE.toBuilder();
@@ -2080,6 +2136,7 @@ public final class Assets {
     public static Builder newBuilder(io.bloombox.schema.ledger.Assets.AssetOwnership prototype) {
       return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
     }
+    @java.lang.Override
     public Builder toBuilder() {
       return this == DEFAULT_INSTANCE
           ? new Builder() : new Builder().mergeFrom(this);
@@ -2097,20 +2154,21 @@ public final class Assets {
      * ledger, but may be more complex (in cases of multiple owners, organizational signers for owners, and so on).
      * </pre>
      *
-     * Protobuf type {@code bloombox.schema.ledger.AssetOwnership}
+     * Protobuf type {@code bloombox.ledger.AssetOwnership}
      */
     public static final class Builder extends
         com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:bloombox.schema.ledger.AssetOwnership)
+        // @@protoc_insertion_point(builder_implements:bloombox.ledger.AssetOwnership)
         io.bloombox.schema.ledger.Assets.AssetOwnershipOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return io.bloombox.schema.ledger.Assets.internal_static_bloombox_schema_ledger_AssetOwnership_descriptor;
+        return io.bloombox.schema.ledger.Assets.internal_static_bloombox_ledger_AssetOwnership_descriptor;
       }
 
+      @java.lang.Override
       protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return io.bloombox.schema.ledger.Assets.internal_static_bloombox_schema_ledger_AssetOwnership_fieldAccessorTable
+        return io.bloombox.schema.ledger.Assets.internal_static_bloombox_ledger_AssetOwnership_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
                 io.bloombox.schema.ledger.Assets.AssetOwnership.class, io.bloombox.schema.ledger.Assets.AssetOwnership.Builder.class);
       }
@@ -2131,6 +2189,7 @@ public final class Assets {
           getOwnerFieldBuilder();
         }
       }
+      @java.lang.Override
       public Builder clear() {
         super.clear();
         if (ownerBuilder_ == null) {
@@ -2148,15 +2207,18 @@ public final class Assets {
         return this;
       }
 
+      @java.lang.Override
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return io.bloombox.schema.ledger.Assets.internal_static_bloombox_schema_ledger_AssetOwnership_descriptor;
+        return io.bloombox.schema.ledger.Assets.internal_static_bloombox_ledger_AssetOwnership_descriptor;
       }
 
+      @java.lang.Override
       public io.bloombox.schema.ledger.Assets.AssetOwnership getDefaultInstanceForType() {
         return io.bloombox.schema.ledger.Assets.AssetOwnership.getDefaultInstance();
       }
 
+      @java.lang.Override
       public io.bloombox.schema.ledger.Assets.AssetOwnership build() {
         io.bloombox.schema.ledger.Assets.AssetOwnership result = buildPartial();
         if (!result.isInitialized()) {
@@ -2165,6 +2227,7 @@ public final class Assets {
         return result;
       }
 
+      @java.lang.Override
       public io.bloombox.schema.ledger.Assets.AssetOwnership buildPartial() {
         io.bloombox.schema.ledger.Assets.AssetOwnership result = new io.bloombox.schema.ledger.Assets.AssetOwnership(this);
         int from_bitField0_ = bitField0_;
@@ -2188,32 +2251,39 @@ public final class Assets {
         return result;
       }
 
+      @java.lang.Override
       public Builder clone() {
         return (Builder) super.clone();
       }
+      @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
         return (Builder) super.setField(field, value);
       }
+      @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
         return (Builder) super.clearField(field);
       }
+      @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
         return (Builder) super.clearOneof(oneof);
       }
+      @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
         return (Builder) super.setRepeatedField(field, index, value);
       }
+      @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
         return (Builder) super.addRepeatedField(field, value);
       }
+      @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
         if (other instanceof io.bloombox.schema.ledger.Assets.AssetOwnership) {
           return mergeFrom((io.bloombox.schema.ledger.Assets.AssetOwnership)other);
@@ -2259,10 +2329,12 @@ public final class Assets {
         return this;
       }
 
+      @java.lang.Override
       public final boolean isInitialized() {
         return true;
       }
 
+      @java.lang.Override
       public Builder mergeFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -2299,7 +2371,7 @@ public final class Assets {
        * Identities of the owners of this digital asset, if known and applicable.
        * </pre>
        *
-       * <code>repeated .bloombox.schema.ledger.LedgerIdentity owner = 1;</code>
+       * <code>repeated .bloombox.ledger.LedgerIdentity owner = 1;</code>
        */
       public java.util.List<io.bloombox.schema.ledger.Accounts.LedgerIdentity> getOwnerList() {
         if (ownerBuilder_ == null) {
@@ -2313,7 +2385,7 @@ public final class Assets {
        * Identities of the owners of this digital asset, if known and applicable.
        * </pre>
        *
-       * <code>repeated .bloombox.schema.ledger.LedgerIdentity owner = 1;</code>
+       * <code>repeated .bloombox.ledger.LedgerIdentity owner = 1;</code>
        */
       public int getOwnerCount() {
         if (ownerBuilder_ == null) {
@@ -2327,7 +2399,7 @@ public final class Assets {
        * Identities of the owners of this digital asset, if known and applicable.
        * </pre>
        *
-       * <code>repeated .bloombox.schema.ledger.LedgerIdentity owner = 1;</code>
+       * <code>repeated .bloombox.ledger.LedgerIdentity owner = 1;</code>
        */
       public io.bloombox.schema.ledger.Accounts.LedgerIdentity getOwner(int index) {
         if (ownerBuilder_ == null) {
@@ -2341,7 +2413,7 @@ public final class Assets {
        * Identities of the owners of this digital asset, if known and applicable.
        * </pre>
        *
-       * <code>repeated .bloombox.schema.ledger.LedgerIdentity owner = 1;</code>
+       * <code>repeated .bloombox.ledger.LedgerIdentity owner = 1;</code>
        */
       public Builder setOwner(
           int index, io.bloombox.schema.ledger.Accounts.LedgerIdentity value) {
@@ -2362,7 +2434,7 @@ public final class Assets {
        * Identities of the owners of this digital asset, if known and applicable.
        * </pre>
        *
-       * <code>repeated .bloombox.schema.ledger.LedgerIdentity owner = 1;</code>
+       * <code>repeated .bloombox.ledger.LedgerIdentity owner = 1;</code>
        */
       public Builder setOwner(
           int index, io.bloombox.schema.ledger.Accounts.LedgerIdentity.Builder builderForValue) {
@@ -2380,7 +2452,7 @@ public final class Assets {
        * Identities of the owners of this digital asset, if known and applicable.
        * </pre>
        *
-       * <code>repeated .bloombox.schema.ledger.LedgerIdentity owner = 1;</code>
+       * <code>repeated .bloombox.ledger.LedgerIdentity owner = 1;</code>
        */
       public Builder addOwner(io.bloombox.schema.ledger.Accounts.LedgerIdentity value) {
         if (ownerBuilder_ == null) {
@@ -2400,7 +2472,7 @@ public final class Assets {
        * Identities of the owners of this digital asset, if known and applicable.
        * </pre>
        *
-       * <code>repeated .bloombox.schema.ledger.LedgerIdentity owner = 1;</code>
+       * <code>repeated .bloombox.ledger.LedgerIdentity owner = 1;</code>
        */
       public Builder addOwner(
           int index, io.bloombox.schema.ledger.Accounts.LedgerIdentity value) {
@@ -2421,7 +2493,7 @@ public final class Assets {
        * Identities of the owners of this digital asset, if known and applicable.
        * </pre>
        *
-       * <code>repeated .bloombox.schema.ledger.LedgerIdentity owner = 1;</code>
+       * <code>repeated .bloombox.ledger.LedgerIdentity owner = 1;</code>
        */
       public Builder addOwner(
           io.bloombox.schema.ledger.Accounts.LedgerIdentity.Builder builderForValue) {
@@ -2439,7 +2511,7 @@ public final class Assets {
        * Identities of the owners of this digital asset, if known and applicable.
        * </pre>
        *
-       * <code>repeated .bloombox.schema.ledger.LedgerIdentity owner = 1;</code>
+       * <code>repeated .bloombox.ledger.LedgerIdentity owner = 1;</code>
        */
       public Builder addOwner(
           int index, io.bloombox.schema.ledger.Accounts.LedgerIdentity.Builder builderForValue) {
@@ -2457,7 +2529,7 @@ public final class Assets {
        * Identities of the owners of this digital asset, if known and applicable.
        * </pre>
        *
-       * <code>repeated .bloombox.schema.ledger.LedgerIdentity owner = 1;</code>
+       * <code>repeated .bloombox.ledger.LedgerIdentity owner = 1;</code>
        */
       public Builder addAllOwner(
           java.lang.Iterable<? extends io.bloombox.schema.ledger.Accounts.LedgerIdentity> values) {
@@ -2476,7 +2548,7 @@ public final class Assets {
        * Identities of the owners of this digital asset, if known and applicable.
        * </pre>
        *
-       * <code>repeated .bloombox.schema.ledger.LedgerIdentity owner = 1;</code>
+       * <code>repeated .bloombox.ledger.LedgerIdentity owner = 1;</code>
        */
       public Builder clearOwner() {
         if (ownerBuilder_ == null) {
@@ -2493,7 +2565,7 @@ public final class Assets {
        * Identities of the owners of this digital asset, if known and applicable.
        * </pre>
        *
-       * <code>repeated .bloombox.schema.ledger.LedgerIdentity owner = 1;</code>
+       * <code>repeated .bloombox.ledger.LedgerIdentity owner = 1;</code>
        */
       public Builder removeOwner(int index) {
         if (ownerBuilder_ == null) {
@@ -2510,7 +2582,7 @@ public final class Assets {
        * Identities of the owners of this digital asset, if known and applicable.
        * </pre>
        *
-       * <code>repeated .bloombox.schema.ledger.LedgerIdentity owner = 1;</code>
+       * <code>repeated .bloombox.ledger.LedgerIdentity owner = 1;</code>
        */
       public io.bloombox.schema.ledger.Accounts.LedgerIdentity.Builder getOwnerBuilder(
           int index) {
@@ -2521,7 +2593,7 @@ public final class Assets {
        * Identities of the owners of this digital asset, if known and applicable.
        * </pre>
        *
-       * <code>repeated .bloombox.schema.ledger.LedgerIdentity owner = 1;</code>
+       * <code>repeated .bloombox.ledger.LedgerIdentity owner = 1;</code>
        */
       public io.bloombox.schema.ledger.Accounts.LedgerIdentityOrBuilder getOwnerOrBuilder(
           int index) {
@@ -2535,7 +2607,7 @@ public final class Assets {
        * Identities of the owners of this digital asset, if known and applicable.
        * </pre>
        *
-       * <code>repeated .bloombox.schema.ledger.LedgerIdentity owner = 1;</code>
+       * <code>repeated .bloombox.ledger.LedgerIdentity owner = 1;</code>
        */
       public java.util.List<? extends io.bloombox.schema.ledger.Accounts.LedgerIdentityOrBuilder> 
            getOwnerOrBuilderList() {
@@ -2550,7 +2622,7 @@ public final class Assets {
        * Identities of the owners of this digital asset, if known and applicable.
        * </pre>
        *
-       * <code>repeated .bloombox.schema.ledger.LedgerIdentity owner = 1;</code>
+       * <code>repeated .bloombox.ledger.LedgerIdentity owner = 1;</code>
        */
       public io.bloombox.schema.ledger.Accounts.LedgerIdentity.Builder addOwnerBuilder() {
         return getOwnerFieldBuilder().addBuilder(
@@ -2561,7 +2633,7 @@ public final class Assets {
        * Identities of the owners of this digital asset, if known and applicable.
        * </pre>
        *
-       * <code>repeated .bloombox.schema.ledger.LedgerIdentity owner = 1;</code>
+       * <code>repeated .bloombox.ledger.LedgerIdentity owner = 1;</code>
        */
       public io.bloombox.schema.ledger.Accounts.LedgerIdentity.Builder addOwnerBuilder(
           int index) {
@@ -2573,7 +2645,7 @@ public final class Assets {
        * Identities of the owners of this digital asset, if known and applicable.
        * </pre>
        *
-       * <code>repeated .bloombox.schema.ledger.LedgerIdentity owner = 1;</code>
+       * <code>repeated .bloombox.ledger.LedgerIdentity owner = 1;</code>
        */
       public java.util.List<io.bloombox.schema.ledger.Accounts.LedgerIdentity.Builder> 
            getOwnerBuilderList() {
@@ -2602,7 +2674,7 @@ public final class Assets {
        * Previous asset ownership, allowing chained asset history to be expressed.
        * </pre>
        *
-       * <code>.bloombox.schema.ledger.AssetOwnership previous = 2;</code>
+       * <code>.bloombox.ledger.AssetOwnership previous = 2;</code>
        */
       public boolean hasPrevious() {
         return previousBuilder_ != null || previous_ != null;
@@ -2612,7 +2684,7 @@ public final class Assets {
        * Previous asset ownership, allowing chained asset history to be expressed.
        * </pre>
        *
-       * <code>.bloombox.schema.ledger.AssetOwnership previous = 2;</code>
+       * <code>.bloombox.ledger.AssetOwnership previous = 2;</code>
        */
       public io.bloombox.schema.ledger.Assets.AssetOwnership getPrevious() {
         if (previousBuilder_ == null) {
@@ -2626,7 +2698,7 @@ public final class Assets {
        * Previous asset ownership, allowing chained asset history to be expressed.
        * </pre>
        *
-       * <code>.bloombox.schema.ledger.AssetOwnership previous = 2;</code>
+       * <code>.bloombox.ledger.AssetOwnership previous = 2;</code>
        */
       public Builder setPrevious(io.bloombox.schema.ledger.Assets.AssetOwnership value) {
         if (previousBuilder_ == null) {
@@ -2646,7 +2718,7 @@ public final class Assets {
        * Previous asset ownership, allowing chained asset history to be expressed.
        * </pre>
        *
-       * <code>.bloombox.schema.ledger.AssetOwnership previous = 2;</code>
+       * <code>.bloombox.ledger.AssetOwnership previous = 2;</code>
        */
       public Builder setPrevious(
           io.bloombox.schema.ledger.Assets.AssetOwnership.Builder builderForValue) {
@@ -2664,7 +2736,7 @@ public final class Assets {
        * Previous asset ownership, allowing chained asset history to be expressed.
        * </pre>
        *
-       * <code>.bloombox.schema.ledger.AssetOwnership previous = 2;</code>
+       * <code>.bloombox.ledger.AssetOwnership previous = 2;</code>
        */
       public Builder mergePrevious(io.bloombox.schema.ledger.Assets.AssetOwnership value) {
         if (previousBuilder_ == null) {
@@ -2686,7 +2758,7 @@ public final class Assets {
        * Previous asset ownership, allowing chained asset history to be expressed.
        * </pre>
        *
-       * <code>.bloombox.schema.ledger.AssetOwnership previous = 2;</code>
+       * <code>.bloombox.ledger.AssetOwnership previous = 2;</code>
        */
       public Builder clearPrevious() {
         if (previousBuilder_ == null) {
@@ -2704,7 +2776,7 @@ public final class Assets {
        * Previous asset ownership, allowing chained asset history to be expressed.
        * </pre>
        *
-       * <code>.bloombox.schema.ledger.AssetOwnership previous = 2;</code>
+       * <code>.bloombox.ledger.AssetOwnership previous = 2;</code>
        */
       public io.bloombox.schema.ledger.Assets.AssetOwnership.Builder getPreviousBuilder() {
         
@@ -2716,7 +2788,7 @@ public final class Assets {
        * Previous asset ownership, allowing chained asset history to be expressed.
        * </pre>
        *
-       * <code>.bloombox.schema.ledger.AssetOwnership previous = 2;</code>
+       * <code>.bloombox.ledger.AssetOwnership previous = 2;</code>
        */
       public io.bloombox.schema.ledger.Assets.AssetOwnershipOrBuilder getPreviousOrBuilder() {
         if (previousBuilder_ != null) {
@@ -2731,7 +2803,7 @@ public final class Assets {
        * Previous asset ownership, allowing chained asset history to be expressed.
        * </pre>
        *
-       * <code>.bloombox.schema.ledger.AssetOwnership previous = 2;</code>
+       * <code>.bloombox.ledger.AssetOwnership previous = 2;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
           io.bloombox.schema.ledger.Assets.AssetOwnership, io.bloombox.schema.ledger.Assets.AssetOwnership.Builder, io.bloombox.schema.ledger.Assets.AssetOwnershipOrBuilder> 
@@ -2746,21 +2818,23 @@ public final class Assets {
         }
         return previousBuilder_;
       }
+      @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
         return super.setUnknownFieldsProto3(unknownFields);
       }
 
+      @java.lang.Override
       public final Builder mergeUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
         return super.mergeUnknownFields(unknownFields);
       }
 
 
-      // @@protoc_insertion_point(builder_scope:bloombox.schema.ledger.AssetOwnership)
+      // @@protoc_insertion_point(builder_scope:bloombox.ledger.AssetOwnership)
     }
 
-    // @@protoc_insertion_point(class_scope:bloombox.schema.ledger.AssetOwnership)
+    // @@protoc_insertion_point(class_scope:bloombox.ledger.AssetOwnership)
     private static final io.bloombox.schema.ledger.Assets.AssetOwnership DEFAULT_INSTANCE;
     static {
       DEFAULT_INSTANCE = new io.bloombox.schema.ledger.Assets.AssetOwnership();
@@ -2772,6 +2846,7 @@ public final class Assets {
 
     private static final com.google.protobuf.Parser<AssetOwnership>
         PARSER = new com.google.protobuf.AbstractParser<AssetOwnership>() {
+      @java.lang.Override
       public AssetOwnership parsePartialFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -2789,6 +2864,7 @@ public final class Assets {
       return PARSER;
     }
 
+    @java.lang.Override
     public io.bloombox.schema.ledger.Assets.AssetOwnership getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
@@ -2796,34 +2872,34 @@ public final class Assets {
   }
 
   public interface DigitalAssetOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:bloombox.schema.ledger.DigitalAsset)
+      // @@protoc_insertion_point(interface_extends:bloombox.ledger.DigitalAsset)
       com.google.protobuf.MessageOrBuilder {
 
     /**
      * <pre>
      * Globally unique ID that identifies the asset, generally with a signed cryptographic hash based on the asset content
-     * itself. Asset IDs can be generated statelessly as long as the private key for the asset's owner is available.
+     * itself. Asset IDs can be generated stateless-ly as long as the private key for the asset's owner is available.
      * </pre>
      *
-     * <code>.bloombox.schema.ledger.AssetKey key = 1;</code>
+     * <code>.bloombox.ledger.AssetKey key = 1;</code>
      */
     boolean hasKey();
     /**
      * <pre>
      * Globally unique ID that identifies the asset, generally with a signed cryptographic hash based on the asset content
-     * itself. Asset IDs can be generated statelessly as long as the private key for the asset's owner is available.
+     * itself. Asset IDs can be generated stateless-ly as long as the private key for the asset's owner is available.
      * </pre>
      *
-     * <code>.bloombox.schema.ledger.AssetKey key = 1;</code>
+     * <code>.bloombox.ledger.AssetKey key = 1;</code>
      */
     io.bloombox.schema.ledger.Assets.AssetKey getKey();
     /**
      * <pre>
      * Globally unique ID that identifies the asset, generally with a signed cryptographic hash based on the asset content
-     * itself. Asset IDs can be generated statelessly as long as the private key for the asset's owner is available.
+     * itself. Asset IDs can be generated stateless-ly as long as the private key for the asset's owner is available.
      * </pre>
      *
-     * <code>.bloombox.schema.ledger.AssetKey key = 1;</code>
+     * <code>.bloombox.ledger.AssetKey key = 1;</code>
      */
     io.bloombox.schema.ledger.Assets.AssetKeyOrBuilder getKeyOrBuilder();
 
@@ -2833,7 +2909,7 @@ public final class Assets {
      * spawned or subdivided from an existing digital asset.
      * </pre>
      *
-     * <code>.bloombox.schema.ledger.DigitalAsset parent = 2;</code>
+     * <code>.bloombox.ledger.DigitalAsset parent = 2;</code>
      */
     boolean hasParent();
     /**
@@ -2842,7 +2918,7 @@ public final class Assets {
      * spawned or subdivided from an existing digital asset.
      * </pre>
      *
-     * <code>.bloombox.schema.ledger.DigitalAsset parent = 2;</code>
+     * <code>.bloombox.ledger.DigitalAsset parent = 2;</code>
      */
     io.bloombox.schema.ledger.Assets.DigitalAsset getParent();
     /**
@@ -2851,7 +2927,7 @@ public final class Assets {
      * spawned or subdivided from an existing digital asset.
      * </pre>
      *
-     * <code>.bloombox.schema.ledger.DigitalAsset parent = 2;</code>
+     * <code>.bloombox.ledger.DigitalAsset parent = 2;</code>
      */
     io.bloombox.schema.ledger.Assets.DigitalAssetOrBuilder getParentOrBuilder();
 
@@ -2861,7 +2937,7 @@ public final class Assets {
      * is always included because it constitutes the asset ID.
      * </pre>
      *
-     * <code>.bloombox.schema.ledger.AssetData data = 3;</code>
+     * <code>.bloombox.ledger.AssetData data = 3;</code>
      */
     boolean hasData();
     /**
@@ -2870,7 +2946,7 @@ public final class Assets {
      * is always included because it constitutes the asset ID.
      * </pre>
      *
-     * <code>.bloombox.schema.ledger.AssetData data = 3;</code>
+     * <code>.bloombox.ledger.AssetData data = 3;</code>
      */
     io.bloombox.schema.ledger.Assets.AssetData getData();
     /**
@@ -2879,7 +2955,7 @@ public final class Assets {
      * is always included because it constitutes the asset ID.
      * </pre>
      *
-     * <code>.bloombox.schema.ledger.AssetData data = 3;</code>
+     * <code>.bloombox.ledger.AssetData data = 3;</code>
      */
     io.bloombox.schema.ledger.Assets.AssetDataOrBuilder getDataOrBuilder();
 
@@ -2888,7 +2964,7 @@ public final class Assets {
      * Identity of the owner(s) of this digital asset, if known and applicable.
      * </pre>
      *
-     * <code>.bloombox.schema.ledger.AssetOwnership owner = 4;</code>
+     * <code>.bloombox.ledger.AssetOwnership owner = 4;</code>
      */
     boolean hasOwner();
     /**
@@ -2896,7 +2972,7 @@ public final class Assets {
      * Identity of the owner(s) of this digital asset, if known and applicable.
      * </pre>
      *
-     * <code>.bloombox.schema.ledger.AssetOwnership owner = 4;</code>
+     * <code>.bloombox.ledger.AssetOwnership owner = 4;</code>
      */
     io.bloombox.schema.ledger.Assets.AssetOwnership getOwner();
     /**
@@ -2904,7 +2980,7 @@ public final class Assets {
      * Identity of the owner(s) of this digital asset, if known and applicable.
      * </pre>
      *
-     * <code>.bloombox.schema.ledger.AssetOwnership owner = 4;</code>
+     * <code>.bloombox.ledger.AssetOwnership owner = 4;</code>
      */
     io.bloombox.schema.ledger.Assets.AssetOwnershipOrBuilder getOwnerOrBuilder();
 
@@ -2914,7 +2990,7 @@ public final class Assets {
      * hash payload carries with it the algorithm that was used.
      * </pre>
      *
-     * <code>.opencannabis.crypto.primitives.integrity.Hash fingerprint = 5;</code>
+     * <code>.opencannabis.crypto.Hash fingerprint = 5;</code>
      */
     boolean hasFingerprint();
     /**
@@ -2923,7 +2999,7 @@ public final class Assets {
      * hash payload carries with it the algorithm that was used.
      * </pre>
      *
-     * <code>.opencannabis.crypto.primitives.integrity.Hash fingerprint = 5;</code>
+     * <code>.opencannabis.crypto.Hash fingerprint = 5;</code>
      */
     io.opencannabis.schema.crypto.primitives.integrity.Hash getFingerprint();
     /**
@@ -2932,7 +3008,7 @@ public final class Assets {
      * hash payload carries with it the algorithm that was used.
      * </pre>
      *
-     * <code>.opencannabis.crypto.primitives.integrity.Hash fingerprint = 5;</code>
+     * <code>.opencannabis.crypto.Hash fingerprint = 5;</code>
      */
     io.opencannabis.schema.crypto.primitives.integrity.HashOrBuilder getFingerprintOrBuilder();
 
@@ -2992,11 +3068,11 @@ public final class Assets {
    * a blockchain or distributed ledger.
    * </pre>
    *
-   * Protobuf type {@code bloombox.schema.ledger.DigitalAsset}
+   * Protobuf type {@code bloombox.ledger.DigitalAsset}
    */
   public  static final class DigitalAsset extends
       com.google.protobuf.GeneratedMessageV3 implements
-      // @@protoc_insertion_point(message_implements:bloombox.schema.ledger.DigitalAsset)
+      // @@protoc_insertion_point(message_implements:bloombox.ledger.DigitalAsset)
       DigitalAssetOrBuilder {
   private static final long serialVersionUID = 0L;
     // Use DigitalAsset.newBuilder() to construct.
@@ -3030,13 +3106,6 @@ public final class Assets {
             case 0:
               done = true;
               break;
-            default: {
-              if (!parseUnknownFieldProto3(
-                  input, unknownFields, extensionRegistry, tag)) {
-                done = true;
-              }
-              break;
-            }
             case 10: {
               io.bloombox.schema.ledger.Assets.AssetKey.Builder subBuilder = null;
               if (key_ != null) {
@@ -3128,6 +3197,13 @@ public final class Assets {
 
               break;
             }
+            default: {
+              if (!parseUnknownFieldProto3(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
           }
         }
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
@@ -3142,12 +3218,13 @@ public final class Assets {
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return io.bloombox.schema.ledger.Assets.internal_static_bloombox_schema_ledger_DigitalAsset_descriptor;
+      return io.bloombox.schema.ledger.Assets.internal_static_bloombox_ledger_DigitalAsset_descriptor;
     }
 
+    @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return io.bloombox.schema.ledger.Assets.internal_static_bloombox_schema_ledger_DigitalAsset_fieldAccessorTable
+      return io.bloombox.schema.ledger.Assets.internal_static_bloombox_ledger_DigitalAsset_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
               io.bloombox.schema.ledger.Assets.DigitalAsset.class, io.bloombox.schema.ledger.Assets.DigitalAsset.Builder.class);
     }
@@ -3157,10 +3234,10 @@ public final class Assets {
     /**
      * <pre>
      * Globally unique ID that identifies the asset, generally with a signed cryptographic hash based on the asset content
-     * itself. Asset IDs can be generated statelessly as long as the private key for the asset's owner is available.
+     * itself. Asset IDs can be generated stateless-ly as long as the private key for the asset's owner is available.
      * </pre>
      *
-     * <code>.bloombox.schema.ledger.AssetKey key = 1;</code>
+     * <code>.bloombox.ledger.AssetKey key = 1;</code>
      */
     public boolean hasKey() {
       return key_ != null;
@@ -3168,10 +3245,10 @@ public final class Assets {
     /**
      * <pre>
      * Globally unique ID that identifies the asset, generally with a signed cryptographic hash based on the asset content
-     * itself. Asset IDs can be generated statelessly as long as the private key for the asset's owner is available.
+     * itself. Asset IDs can be generated stateless-ly as long as the private key for the asset's owner is available.
      * </pre>
      *
-     * <code>.bloombox.schema.ledger.AssetKey key = 1;</code>
+     * <code>.bloombox.ledger.AssetKey key = 1;</code>
      */
     public io.bloombox.schema.ledger.Assets.AssetKey getKey() {
       return key_ == null ? io.bloombox.schema.ledger.Assets.AssetKey.getDefaultInstance() : key_;
@@ -3179,10 +3256,10 @@ public final class Assets {
     /**
      * <pre>
      * Globally unique ID that identifies the asset, generally with a signed cryptographic hash based on the asset content
-     * itself. Asset IDs can be generated statelessly as long as the private key for the asset's owner is available.
+     * itself. Asset IDs can be generated stateless-ly as long as the private key for the asset's owner is available.
      * </pre>
      *
-     * <code>.bloombox.schema.ledger.AssetKey key = 1;</code>
+     * <code>.bloombox.ledger.AssetKey key = 1;</code>
      */
     public io.bloombox.schema.ledger.Assets.AssetKeyOrBuilder getKeyOrBuilder() {
       return getKey();
@@ -3196,7 +3273,7 @@ public final class Assets {
      * spawned or subdivided from an existing digital asset.
      * </pre>
      *
-     * <code>.bloombox.schema.ledger.DigitalAsset parent = 2;</code>
+     * <code>.bloombox.ledger.DigitalAsset parent = 2;</code>
      */
     public boolean hasParent() {
       return parent_ != null;
@@ -3207,7 +3284,7 @@ public final class Assets {
      * spawned or subdivided from an existing digital asset.
      * </pre>
      *
-     * <code>.bloombox.schema.ledger.DigitalAsset parent = 2;</code>
+     * <code>.bloombox.ledger.DigitalAsset parent = 2;</code>
      */
     public io.bloombox.schema.ledger.Assets.DigitalAsset getParent() {
       return parent_ == null ? io.bloombox.schema.ledger.Assets.DigitalAsset.getDefaultInstance() : parent_;
@@ -3218,7 +3295,7 @@ public final class Assets {
      * spawned or subdivided from an existing digital asset.
      * </pre>
      *
-     * <code>.bloombox.schema.ledger.DigitalAsset parent = 2;</code>
+     * <code>.bloombox.ledger.DigitalAsset parent = 2;</code>
      */
     public io.bloombox.schema.ledger.Assets.DigitalAssetOrBuilder getParentOrBuilder() {
       return getParent();
@@ -3232,7 +3309,7 @@ public final class Assets {
      * is always included because it constitutes the asset ID.
      * </pre>
      *
-     * <code>.bloombox.schema.ledger.AssetData data = 3;</code>
+     * <code>.bloombox.ledger.AssetData data = 3;</code>
      */
     public boolean hasData() {
       return data_ != null;
@@ -3243,7 +3320,7 @@ public final class Assets {
      * is always included because it constitutes the asset ID.
      * </pre>
      *
-     * <code>.bloombox.schema.ledger.AssetData data = 3;</code>
+     * <code>.bloombox.ledger.AssetData data = 3;</code>
      */
     public io.bloombox.schema.ledger.Assets.AssetData getData() {
       return data_ == null ? io.bloombox.schema.ledger.Assets.AssetData.getDefaultInstance() : data_;
@@ -3254,7 +3331,7 @@ public final class Assets {
      * is always included because it constitutes the asset ID.
      * </pre>
      *
-     * <code>.bloombox.schema.ledger.AssetData data = 3;</code>
+     * <code>.bloombox.ledger.AssetData data = 3;</code>
      */
     public io.bloombox.schema.ledger.Assets.AssetDataOrBuilder getDataOrBuilder() {
       return getData();
@@ -3267,7 +3344,7 @@ public final class Assets {
      * Identity of the owner(s) of this digital asset, if known and applicable.
      * </pre>
      *
-     * <code>.bloombox.schema.ledger.AssetOwnership owner = 4;</code>
+     * <code>.bloombox.ledger.AssetOwnership owner = 4;</code>
      */
     public boolean hasOwner() {
       return owner_ != null;
@@ -3277,7 +3354,7 @@ public final class Assets {
      * Identity of the owner(s) of this digital asset, if known and applicable.
      * </pre>
      *
-     * <code>.bloombox.schema.ledger.AssetOwnership owner = 4;</code>
+     * <code>.bloombox.ledger.AssetOwnership owner = 4;</code>
      */
     public io.bloombox.schema.ledger.Assets.AssetOwnership getOwner() {
       return owner_ == null ? io.bloombox.schema.ledger.Assets.AssetOwnership.getDefaultInstance() : owner_;
@@ -3287,7 +3364,7 @@ public final class Assets {
      * Identity of the owner(s) of this digital asset, if known and applicable.
      * </pre>
      *
-     * <code>.bloombox.schema.ledger.AssetOwnership owner = 4;</code>
+     * <code>.bloombox.ledger.AssetOwnership owner = 4;</code>
      */
     public io.bloombox.schema.ledger.Assets.AssetOwnershipOrBuilder getOwnerOrBuilder() {
       return getOwner();
@@ -3301,7 +3378,7 @@ public final class Assets {
      * hash payload carries with it the algorithm that was used.
      * </pre>
      *
-     * <code>.opencannabis.crypto.primitives.integrity.Hash fingerprint = 5;</code>
+     * <code>.opencannabis.crypto.Hash fingerprint = 5;</code>
      */
     public boolean hasFingerprint() {
       return fingerprint_ != null;
@@ -3312,7 +3389,7 @@ public final class Assets {
      * hash payload carries with it the algorithm that was used.
      * </pre>
      *
-     * <code>.opencannabis.crypto.primitives.integrity.Hash fingerprint = 5;</code>
+     * <code>.opencannabis.crypto.Hash fingerprint = 5;</code>
      */
     public io.opencannabis.schema.crypto.primitives.integrity.Hash getFingerprint() {
       return fingerprint_ == null ? io.opencannabis.schema.crypto.primitives.integrity.Hash.getDefaultInstance() : fingerprint_;
@@ -3323,7 +3400,7 @@ public final class Assets {
      * hash payload carries with it the algorithm that was used.
      * </pre>
      *
-     * <code>.opencannabis.crypto.primitives.integrity.Hash fingerprint = 5;</code>
+     * <code>.opencannabis.crypto.Hash fingerprint = 5;</code>
      */
     public io.opencannabis.schema.crypto.primitives.integrity.HashOrBuilder getFingerprintOrBuilder() {
       return getFingerprint();
@@ -3396,6 +3473,7 @@ public final class Assets {
     }
 
     private byte memoizedIsInitialized = -1;
+    @java.lang.Override
     public final boolean isInitialized() {
       byte isInitialized = memoizedIsInitialized;
       if (isInitialized == 1) return true;
@@ -3405,6 +3483,7 @@ public final class Assets {
       return true;
     }
 
+    @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
       if (key_ != null) {
@@ -3431,6 +3510,7 @@ public final class Assets {
       unknownFields.writeTo(output);
     }
 
+    @java.lang.Override
     public int getSerializedSize() {
       int size = memoizedSize;
       if (size != -1) return size;
@@ -3629,6 +3709,7 @@ public final class Assets {
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
 
+    @java.lang.Override
     public Builder newBuilderForType() { return newBuilder(); }
     public static Builder newBuilder() {
       return DEFAULT_INSTANCE.toBuilder();
@@ -3636,6 +3717,7 @@ public final class Assets {
     public static Builder newBuilder(io.bloombox.schema.ledger.Assets.DigitalAsset prototype) {
       return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
     }
+    @java.lang.Override
     public Builder toBuilder() {
       return this == DEFAULT_INSTANCE
           ? new Builder() : new Builder().mergeFrom(this);
@@ -3653,20 +3735,21 @@ public final class Assets {
      * a blockchain or distributed ledger.
      * </pre>
      *
-     * Protobuf type {@code bloombox.schema.ledger.DigitalAsset}
+     * Protobuf type {@code bloombox.ledger.DigitalAsset}
      */
     public static final class Builder extends
         com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:bloombox.schema.ledger.DigitalAsset)
+        // @@protoc_insertion_point(builder_implements:bloombox.ledger.DigitalAsset)
         io.bloombox.schema.ledger.Assets.DigitalAssetOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return io.bloombox.schema.ledger.Assets.internal_static_bloombox_schema_ledger_DigitalAsset_descriptor;
+        return io.bloombox.schema.ledger.Assets.internal_static_bloombox_ledger_DigitalAsset_descriptor;
       }
 
+      @java.lang.Override
       protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return io.bloombox.schema.ledger.Assets.internal_static_bloombox_schema_ledger_DigitalAsset_fieldAccessorTable
+        return io.bloombox.schema.ledger.Assets.internal_static_bloombox_ledger_DigitalAsset_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
                 io.bloombox.schema.ledger.Assets.DigitalAsset.class, io.bloombox.schema.ledger.Assets.DigitalAsset.Builder.class);
       }
@@ -3686,6 +3769,7 @@ public final class Assets {
                 .alwaysUseFieldBuilders) {
         }
       }
+      @java.lang.Override
       public Builder clear() {
         super.clear();
         if (keyBuilder_ == null) {
@@ -3733,15 +3817,18 @@ public final class Assets {
         return this;
       }
 
+      @java.lang.Override
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return io.bloombox.schema.ledger.Assets.internal_static_bloombox_schema_ledger_DigitalAsset_descriptor;
+        return io.bloombox.schema.ledger.Assets.internal_static_bloombox_ledger_DigitalAsset_descriptor;
       }
 
+      @java.lang.Override
       public io.bloombox.schema.ledger.Assets.DigitalAsset getDefaultInstanceForType() {
         return io.bloombox.schema.ledger.Assets.DigitalAsset.getDefaultInstance();
       }
 
+      @java.lang.Override
       public io.bloombox.schema.ledger.Assets.DigitalAsset build() {
         io.bloombox.schema.ledger.Assets.DigitalAsset result = buildPartial();
         if (!result.isInitialized()) {
@@ -3750,6 +3837,7 @@ public final class Assets {
         return result;
       }
 
+      @java.lang.Override
       public io.bloombox.schema.ledger.Assets.DigitalAsset buildPartial() {
         io.bloombox.schema.ledger.Assets.DigitalAsset result = new io.bloombox.schema.ledger.Assets.DigitalAsset(this);
         if (keyBuilder_ == null) {
@@ -3791,32 +3879,39 @@ public final class Assets {
         return result;
       }
 
+      @java.lang.Override
       public Builder clone() {
         return (Builder) super.clone();
       }
+      @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
         return (Builder) super.setField(field, value);
       }
+      @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
         return (Builder) super.clearField(field);
       }
+      @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
         return (Builder) super.clearOneof(oneof);
       }
+      @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
         return (Builder) super.setRepeatedField(field, index, value);
       }
+      @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
         return (Builder) super.addRepeatedField(field, value);
       }
+      @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
         if (other instanceof io.bloombox.schema.ledger.Assets.DigitalAsset) {
           return mergeFrom((io.bloombox.schema.ledger.Assets.DigitalAsset)other);
@@ -3854,10 +3949,12 @@ public final class Assets {
         return this;
       }
 
+      @java.lang.Override
       public final boolean isInitialized() {
         return true;
       }
 
+      @java.lang.Override
       public Builder mergeFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -3882,10 +3979,10 @@ public final class Assets {
       /**
        * <pre>
        * Globally unique ID that identifies the asset, generally with a signed cryptographic hash based on the asset content
-       * itself. Asset IDs can be generated statelessly as long as the private key for the asset's owner is available.
+       * itself. Asset IDs can be generated stateless-ly as long as the private key for the asset's owner is available.
        * </pre>
        *
-       * <code>.bloombox.schema.ledger.AssetKey key = 1;</code>
+       * <code>.bloombox.ledger.AssetKey key = 1;</code>
        */
       public boolean hasKey() {
         return keyBuilder_ != null || key_ != null;
@@ -3893,10 +3990,10 @@ public final class Assets {
       /**
        * <pre>
        * Globally unique ID that identifies the asset, generally with a signed cryptographic hash based on the asset content
-       * itself. Asset IDs can be generated statelessly as long as the private key for the asset's owner is available.
+       * itself. Asset IDs can be generated stateless-ly as long as the private key for the asset's owner is available.
        * </pre>
        *
-       * <code>.bloombox.schema.ledger.AssetKey key = 1;</code>
+       * <code>.bloombox.ledger.AssetKey key = 1;</code>
        */
       public io.bloombox.schema.ledger.Assets.AssetKey getKey() {
         if (keyBuilder_ == null) {
@@ -3908,10 +4005,10 @@ public final class Assets {
       /**
        * <pre>
        * Globally unique ID that identifies the asset, generally with a signed cryptographic hash based on the asset content
-       * itself. Asset IDs can be generated statelessly as long as the private key for the asset's owner is available.
+       * itself. Asset IDs can be generated stateless-ly as long as the private key for the asset's owner is available.
        * </pre>
        *
-       * <code>.bloombox.schema.ledger.AssetKey key = 1;</code>
+       * <code>.bloombox.ledger.AssetKey key = 1;</code>
        */
       public Builder setKey(io.bloombox.schema.ledger.Assets.AssetKey value) {
         if (keyBuilder_ == null) {
@@ -3929,10 +4026,10 @@ public final class Assets {
       /**
        * <pre>
        * Globally unique ID that identifies the asset, generally with a signed cryptographic hash based on the asset content
-       * itself. Asset IDs can be generated statelessly as long as the private key for the asset's owner is available.
+       * itself. Asset IDs can be generated stateless-ly as long as the private key for the asset's owner is available.
        * </pre>
        *
-       * <code>.bloombox.schema.ledger.AssetKey key = 1;</code>
+       * <code>.bloombox.ledger.AssetKey key = 1;</code>
        */
       public Builder setKey(
           io.bloombox.schema.ledger.Assets.AssetKey.Builder builderForValue) {
@@ -3948,10 +4045,10 @@ public final class Assets {
       /**
        * <pre>
        * Globally unique ID that identifies the asset, generally with a signed cryptographic hash based on the asset content
-       * itself. Asset IDs can be generated statelessly as long as the private key for the asset's owner is available.
+       * itself. Asset IDs can be generated stateless-ly as long as the private key for the asset's owner is available.
        * </pre>
        *
-       * <code>.bloombox.schema.ledger.AssetKey key = 1;</code>
+       * <code>.bloombox.ledger.AssetKey key = 1;</code>
        */
       public Builder mergeKey(io.bloombox.schema.ledger.Assets.AssetKey value) {
         if (keyBuilder_ == null) {
@@ -3971,10 +4068,10 @@ public final class Assets {
       /**
        * <pre>
        * Globally unique ID that identifies the asset, generally with a signed cryptographic hash based on the asset content
-       * itself. Asset IDs can be generated statelessly as long as the private key for the asset's owner is available.
+       * itself. Asset IDs can be generated stateless-ly as long as the private key for the asset's owner is available.
        * </pre>
        *
-       * <code>.bloombox.schema.ledger.AssetKey key = 1;</code>
+       * <code>.bloombox.ledger.AssetKey key = 1;</code>
        */
       public Builder clearKey() {
         if (keyBuilder_ == null) {
@@ -3990,10 +4087,10 @@ public final class Assets {
       /**
        * <pre>
        * Globally unique ID that identifies the asset, generally with a signed cryptographic hash based on the asset content
-       * itself. Asset IDs can be generated statelessly as long as the private key for the asset's owner is available.
+       * itself. Asset IDs can be generated stateless-ly as long as the private key for the asset's owner is available.
        * </pre>
        *
-       * <code>.bloombox.schema.ledger.AssetKey key = 1;</code>
+       * <code>.bloombox.ledger.AssetKey key = 1;</code>
        */
       public io.bloombox.schema.ledger.Assets.AssetKey.Builder getKeyBuilder() {
         
@@ -4003,10 +4100,10 @@ public final class Assets {
       /**
        * <pre>
        * Globally unique ID that identifies the asset, generally with a signed cryptographic hash based on the asset content
-       * itself. Asset IDs can be generated statelessly as long as the private key for the asset's owner is available.
+       * itself. Asset IDs can be generated stateless-ly as long as the private key for the asset's owner is available.
        * </pre>
        *
-       * <code>.bloombox.schema.ledger.AssetKey key = 1;</code>
+       * <code>.bloombox.ledger.AssetKey key = 1;</code>
        */
       public io.bloombox.schema.ledger.Assets.AssetKeyOrBuilder getKeyOrBuilder() {
         if (keyBuilder_ != null) {
@@ -4019,10 +4116,10 @@ public final class Assets {
       /**
        * <pre>
        * Globally unique ID that identifies the asset, generally with a signed cryptographic hash based on the asset content
-       * itself. Asset IDs can be generated statelessly as long as the private key for the asset's owner is available.
+       * itself. Asset IDs can be generated stateless-ly as long as the private key for the asset's owner is available.
        * </pre>
        *
-       * <code>.bloombox.schema.ledger.AssetKey key = 1;</code>
+       * <code>.bloombox.ledger.AssetKey key = 1;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
           io.bloombox.schema.ledger.Assets.AssetKey, io.bloombox.schema.ledger.Assets.AssetKey.Builder, io.bloombox.schema.ledger.Assets.AssetKeyOrBuilder> 
@@ -4047,7 +4144,7 @@ public final class Assets {
        * spawned or subdivided from an existing digital asset.
        * </pre>
        *
-       * <code>.bloombox.schema.ledger.DigitalAsset parent = 2;</code>
+       * <code>.bloombox.ledger.DigitalAsset parent = 2;</code>
        */
       public boolean hasParent() {
         return parentBuilder_ != null || parent_ != null;
@@ -4058,7 +4155,7 @@ public final class Assets {
        * spawned or subdivided from an existing digital asset.
        * </pre>
        *
-       * <code>.bloombox.schema.ledger.DigitalAsset parent = 2;</code>
+       * <code>.bloombox.ledger.DigitalAsset parent = 2;</code>
        */
       public io.bloombox.schema.ledger.Assets.DigitalAsset getParent() {
         if (parentBuilder_ == null) {
@@ -4073,7 +4170,7 @@ public final class Assets {
        * spawned or subdivided from an existing digital asset.
        * </pre>
        *
-       * <code>.bloombox.schema.ledger.DigitalAsset parent = 2;</code>
+       * <code>.bloombox.ledger.DigitalAsset parent = 2;</code>
        */
       public Builder setParent(io.bloombox.schema.ledger.Assets.DigitalAsset value) {
         if (parentBuilder_ == null) {
@@ -4094,7 +4191,7 @@ public final class Assets {
        * spawned or subdivided from an existing digital asset.
        * </pre>
        *
-       * <code>.bloombox.schema.ledger.DigitalAsset parent = 2;</code>
+       * <code>.bloombox.ledger.DigitalAsset parent = 2;</code>
        */
       public Builder setParent(
           io.bloombox.schema.ledger.Assets.DigitalAsset.Builder builderForValue) {
@@ -4113,7 +4210,7 @@ public final class Assets {
        * spawned or subdivided from an existing digital asset.
        * </pre>
        *
-       * <code>.bloombox.schema.ledger.DigitalAsset parent = 2;</code>
+       * <code>.bloombox.ledger.DigitalAsset parent = 2;</code>
        */
       public Builder mergeParent(io.bloombox.schema.ledger.Assets.DigitalAsset value) {
         if (parentBuilder_ == null) {
@@ -4136,7 +4233,7 @@ public final class Assets {
        * spawned or subdivided from an existing digital asset.
        * </pre>
        *
-       * <code>.bloombox.schema.ledger.DigitalAsset parent = 2;</code>
+       * <code>.bloombox.ledger.DigitalAsset parent = 2;</code>
        */
       public Builder clearParent() {
         if (parentBuilder_ == null) {
@@ -4155,7 +4252,7 @@ public final class Assets {
        * spawned or subdivided from an existing digital asset.
        * </pre>
        *
-       * <code>.bloombox.schema.ledger.DigitalAsset parent = 2;</code>
+       * <code>.bloombox.ledger.DigitalAsset parent = 2;</code>
        */
       public io.bloombox.schema.ledger.Assets.DigitalAsset.Builder getParentBuilder() {
         
@@ -4168,7 +4265,7 @@ public final class Assets {
        * spawned or subdivided from an existing digital asset.
        * </pre>
        *
-       * <code>.bloombox.schema.ledger.DigitalAsset parent = 2;</code>
+       * <code>.bloombox.ledger.DigitalAsset parent = 2;</code>
        */
       public io.bloombox.schema.ledger.Assets.DigitalAssetOrBuilder getParentOrBuilder() {
         if (parentBuilder_ != null) {
@@ -4184,7 +4281,7 @@ public final class Assets {
        * spawned or subdivided from an existing digital asset.
        * </pre>
        *
-       * <code>.bloombox.schema.ledger.DigitalAsset parent = 2;</code>
+       * <code>.bloombox.ledger.DigitalAsset parent = 2;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
           io.bloombox.schema.ledger.Assets.DigitalAsset, io.bloombox.schema.ledger.Assets.DigitalAsset.Builder, io.bloombox.schema.ledger.Assets.DigitalAssetOrBuilder> 
@@ -4209,7 +4306,7 @@ public final class Assets {
        * is always included because it constitutes the asset ID.
        * </pre>
        *
-       * <code>.bloombox.schema.ledger.AssetData data = 3;</code>
+       * <code>.bloombox.ledger.AssetData data = 3;</code>
        */
       public boolean hasData() {
         return dataBuilder_ != null || data_ != null;
@@ -4220,7 +4317,7 @@ public final class Assets {
        * is always included because it constitutes the asset ID.
        * </pre>
        *
-       * <code>.bloombox.schema.ledger.AssetData data = 3;</code>
+       * <code>.bloombox.ledger.AssetData data = 3;</code>
        */
       public io.bloombox.schema.ledger.Assets.AssetData getData() {
         if (dataBuilder_ == null) {
@@ -4235,7 +4332,7 @@ public final class Assets {
        * is always included because it constitutes the asset ID.
        * </pre>
        *
-       * <code>.bloombox.schema.ledger.AssetData data = 3;</code>
+       * <code>.bloombox.ledger.AssetData data = 3;</code>
        */
       public Builder setData(io.bloombox.schema.ledger.Assets.AssetData value) {
         if (dataBuilder_ == null) {
@@ -4256,7 +4353,7 @@ public final class Assets {
        * is always included because it constitutes the asset ID.
        * </pre>
        *
-       * <code>.bloombox.schema.ledger.AssetData data = 3;</code>
+       * <code>.bloombox.ledger.AssetData data = 3;</code>
        */
       public Builder setData(
           io.bloombox.schema.ledger.Assets.AssetData.Builder builderForValue) {
@@ -4275,7 +4372,7 @@ public final class Assets {
        * is always included because it constitutes the asset ID.
        * </pre>
        *
-       * <code>.bloombox.schema.ledger.AssetData data = 3;</code>
+       * <code>.bloombox.ledger.AssetData data = 3;</code>
        */
       public Builder mergeData(io.bloombox.schema.ledger.Assets.AssetData value) {
         if (dataBuilder_ == null) {
@@ -4298,7 +4395,7 @@ public final class Assets {
        * is always included because it constitutes the asset ID.
        * </pre>
        *
-       * <code>.bloombox.schema.ledger.AssetData data = 3;</code>
+       * <code>.bloombox.ledger.AssetData data = 3;</code>
        */
       public Builder clearData() {
         if (dataBuilder_ == null) {
@@ -4317,7 +4414,7 @@ public final class Assets {
        * is always included because it constitutes the asset ID.
        * </pre>
        *
-       * <code>.bloombox.schema.ledger.AssetData data = 3;</code>
+       * <code>.bloombox.ledger.AssetData data = 3;</code>
        */
       public io.bloombox.schema.ledger.Assets.AssetData.Builder getDataBuilder() {
         
@@ -4330,7 +4427,7 @@ public final class Assets {
        * is always included because it constitutes the asset ID.
        * </pre>
        *
-       * <code>.bloombox.schema.ledger.AssetData data = 3;</code>
+       * <code>.bloombox.ledger.AssetData data = 3;</code>
        */
       public io.bloombox.schema.ledger.Assets.AssetDataOrBuilder getDataOrBuilder() {
         if (dataBuilder_ != null) {
@@ -4346,7 +4443,7 @@ public final class Assets {
        * is always included because it constitutes the asset ID.
        * </pre>
        *
-       * <code>.bloombox.schema.ledger.AssetData data = 3;</code>
+       * <code>.bloombox.ledger.AssetData data = 3;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
           io.bloombox.schema.ledger.Assets.AssetData, io.bloombox.schema.ledger.Assets.AssetData.Builder, io.bloombox.schema.ledger.Assets.AssetDataOrBuilder> 
@@ -4370,7 +4467,7 @@ public final class Assets {
        * Identity of the owner(s) of this digital asset, if known and applicable.
        * </pre>
        *
-       * <code>.bloombox.schema.ledger.AssetOwnership owner = 4;</code>
+       * <code>.bloombox.ledger.AssetOwnership owner = 4;</code>
        */
       public boolean hasOwner() {
         return ownerBuilder_ != null || owner_ != null;
@@ -4380,7 +4477,7 @@ public final class Assets {
        * Identity of the owner(s) of this digital asset, if known and applicable.
        * </pre>
        *
-       * <code>.bloombox.schema.ledger.AssetOwnership owner = 4;</code>
+       * <code>.bloombox.ledger.AssetOwnership owner = 4;</code>
        */
       public io.bloombox.schema.ledger.Assets.AssetOwnership getOwner() {
         if (ownerBuilder_ == null) {
@@ -4394,7 +4491,7 @@ public final class Assets {
        * Identity of the owner(s) of this digital asset, if known and applicable.
        * </pre>
        *
-       * <code>.bloombox.schema.ledger.AssetOwnership owner = 4;</code>
+       * <code>.bloombox.ledger.AssetOwnership owner = 4;</code>
        */
       public Builder setOwner(io.bloombox.schema.ledger.Assets.AssetOwnership value) {
         if (ownerBuilder_ == null) {
@@ -4414,7 +4511,7 @@ public final class Assets {
        * Identity of the owner(s) of this digital asset, if known and applicable.
        * </pre>
        *
-       * <code>.bloombox.schema.ledger.AssetOwnership owner = 4;</code>
+       * <code>.bloombox.ledger.AssetOwnership owner = 4;</code>
        */
       public Builder setOwner(
           io.bloombox.schema.ledger.Assets.AssetOwnership.Builder builderForValue) {
@@ -4432,7 +4529,7 @@ public final class Assets {
        * Identity of the owner(s) of this digital asset, if known and applicable.
        * </pre>
        *
-       * <code>.bloombox.schema.ledger.AssetOwnership owner = 4;</code>
+       * <code>.bloombox.ledger.AssetOwnership owner = 4;</code>
        */
       public Builder mergeOwner(io.bloombox.schema.ledger.Assets.AssetOwnership value) {
         if (ownerBuilder_ == null) {
@@ -4454,7 +4551,7 @@ public final class Assets {
        * Identity of the owner(s) of this digital asset, if known and applicable.
        * </pre>
        *
-       * <code>.bloombox.schema.ledger.AssetOwnership owner = 4;</code>
+       * <code>.bloombox.ledger.AssetOwnership owner = 4;</code>
        */
       public Builder clearOwner() {
         if (ownerBuilder_ == null) {
@@ -4472,7 +4569,7 @@ public final class Assets {
        * Identity of the owner(s) of this digital asset, if known and applicable.
        * </pre>
        *
-       * <code>.bloombox.schema.ledger.AssetOwnership owner = 4;</code>
+       * <code>.bloombox.ledger.AssetOwnership owner = 4;</code>
        */
       public io.bloombox.schema.ledger.Assets.AssetOwnership.Builder getOwnerBuilder() {
         
@@ -4484,7 +4581,7 @@ public final class Assets {
        * Identity of the owner(s) of this digital asset, if known and applicable.
        * </pre>
        *
-       * <code>.bloombox.schema.ledger.AssetOwnership owner = 4;</code>
+       * <code>.bloombox.ledger.AssetOwnership owner = 4;</code>
        */
       public io.bloombox.schema.ledger.Assets.AssetOwnershipOrBuilder getOwnerOrBuilder() {
         if (ownerBuilder_ != null) {
@@ -4499,7 +4596,7 @@ public final class Assets {
        * Identity of the owner(s) of this digital asset, if known and applicable.
        * </pre>
        *
-       * <code>.bloombox.schema.ledger.AssetOwnership owner = 4;</code>
+       * <code>.bloombox.ledger.AssetOwnership owner = 4;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
           io.bloombox.schema.ledger.Assets.AssetOwnership, io.bloombox.schema.ledger.Assets.AssetOwnership.Builder, io.bloombox.schema.ledger.Assets.AssetOwnershipOrBuilder> 
@@ -4524,7 +4621,7 @@ public final class Assets {
        * hash payload carries with it the algorithm that was used.
        * </pre>
        *
-       * <code>.opencannabis.crypto.primitives.integrity.Hash fingerprint = 5;</code>
+       * <code>.opencannabis.crypto.Hash fingerprint = 5;</code>
        */
       public boolean hasFingerprint() {
         return fingerprintBuilder_ != null || fingerprint_ != null;
@@ -4535,7 +4632,7 @@ public final class Assets {
        * hash payload carries with it the algorithm that was used.
        * </pre>
        *
-       * <code>.opencannabis.crypto.primitives.integrity.Hash fingerprint = 5;</code>
+       * <code>.opencannabis.crypto.Hash fingerprint = 5;</code>
        */
       public io.opencannabis.schema.crypto.primitives.integrity.Hash getFingerprint() {
         if (fingerprintBuilder_ == null) {
@@ -4550,7 +4647,7 @@ public final class Assets {
        * hash payload carries with it the algorithm that was used.
        * </pre>
        *
-       * <code>.opencannabis.crypto.primitives.integrity.Hash fingerprint = 5;</code>
+       * <code>.opencannabis.crypto.Hash fingerprint = 5;</code>
        */
       public Builder setFingerprint(io.opencannabis.schema.crypto.primitives.integrity.Hash value) {
         if (fingerprintBuilder_ == null) {
@@ -4571,7 +4668,7 @@ public final class Assets {
        * hash payload carries with it the algorithm that was used.
        * </pre>
        *
-       * <code>.opencannabis.crypto.primitives.integrity.Hash fingerprint = 5;</code>
+       * <code>.opencannabis.crypto.Hash fingerprint = 5;</code>
        */
       public Builder setFingerprint(
           io.opencannabis.schema.crypto.primitives.integrity.Hash.Builder builderForValue) {
@@ -4590,7 +4687,7 @@ public final class Assets {
        * hash payload carries with it the algorithm that was used.
        * </pre>
        *
-       * <code>.opencannabis.crypto.primitives.integrity.Hash fingerprint = 5;</code>
+       * <code>.opencannabis.crypto.Hash fingerprint = 5;</code>
        */
       public Builder mergeFingerprint(io.opencannabis.schema.crypto.primitives.integrity.Hash value) {
         if (fingerprintBuilder_ == null) {
@@ -4613,7 +4710,7 @@ public final class Assets {
        * hash payload carries with it the algorithm that was used.
        * </pre>
        *
-       * <code>.opencannabis.crypto.primitives.integrity.Hash fingerprint = 5;</code>
+       * <code>.opencannabis.crypto.Hash fingerprint = 5;</code>
        */
       public Builder clearFingerprint() {
         if (fingerprintBuilder_ == null) {
@@ -4632,7 +4729,7 @@ public final class Assets {
        * hash payload carries with it the algorithm that was used.
        * </pre>
        *
-       * <code>.opencannabis.crypto.primitives.integrity.Hash fingerprint = 5;</code>
+       * <code>.opencannabis.crypto.Hash fingerprint = 5;</code>
        */
       public io.opencannabis.schema.crypto.primitives.integrity.Hash.Builder getFingerprintBuilder() {
         
@@ -4645,7 +4742,7 @@ public final class Assets {
        * hash payload carries with it the algorithm that was used.
        * </pre>
        *
-       * <code>.opencannabis.crypto.primitives.integrity.Hash fingerprint = 5;</code>
+       * <code>.opencannabis.crypto.Hash fingerprint = 5;</code>
        */
       public io.opencannabis.schema.crypto.primitives.integrity.HashOrBuilder getFingerprintOrBuilder() {
         if (fingerprintBuilder_ != null) {
@@ -4661,7 +4758,7 @@ public final class Assets {
        * hash payload carries with it the algorithm that was used.
        * </pre>
        *
-       * <code>.opencannabis.crypto.primitives.integrity.Hash fingerprint = 5;</code>
+       * <code>.opencannabis.crypto.Hash fingerprint = 5;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
           io.opencannabis.schema.crypto.primitives.integrity.Hash, io.opencannabis.schema.crypto.primitives.integrity.Hash.Builder, io.opencannabis.schema.crypto.primitives.integrity.HashOrBuilder> 
@@ -4982,21 +5079,23 @@ public final class Assets {
         }
         return modifiedBuilder_;
       }
+      @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
         return super.setUnknownFieldsProto3(unknownFields);
       }
 
+      @java.lang.Override
       public final Builder mergeUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
         return super.mergeUnknownFields(unknownFields);
       }
 
 
-      // @@protoc_insertion_point(builder_scope:bloombox.schema.ledger.DigitalAsset)
+      // @@protoc_insertion_point(builder_scope:bloombox.ledger.DigitalAsset)
     }
 
-    // @@protoc_insertion_point(class_scope:bloombox.schema.ledger.DigitalAsset)
+    // @@protoc_insertion_point(class_scope:bloombox.ledger.DigitalAsset)
     private static final io.bloombox.schema.ledger.Assets.DigitalAsset DEFAULT_INSTANCE;
     static {
       DEFAULT_INSTANCE = new io.bloombox.schema.ledger.Assets.DigitalAsset();
@@ -5008,6 +5107,7 @@ public final class Assets {
 
     private static final com.google.protobuf.Parser<DigitalAsset>
         PARSER = new com.google.protobuf.AbstractParser<DigitalAsset>() {
+      @java.lang.Override
       public DigitalAsset parsePartialFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -5025,6 +5125,7 @@ public final class Assets {
       return PARSER;
     }
 
+    @java.lang.Override
     public io.bloombox.schema.ledger.Assets.DigitalAsset getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
@@ -5032,25 +5133,25 @@ public final class Assets {
   }
 
   private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_bloombox_schema_ledger_AssetKey_descriptor;
+    internal_static_bloombox_ledger_AssetKey_descriptor;
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_bloombox_schema_ledger_AssetKey_fieldAccessorTable;
+      internal_static_bloombox_ledger_AssetKey_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_bloombox_schema_ledger_AssetData_descriptor;
+    internal_static_bloombox_ledger_AssetData_descriptor;
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_bloombox_schema_ledger_AssetData_fieldAccessorTable;
+      internal_static_bloombox_ledger_AssetData_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_bloombox_schema_ledger_AssetOwnership_descriptor;
+    internal_static_bloombox_ledger_AssetOwnership_descriptor;
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_bloombox_schema_ledger_AssetOwnership_fieldAccessorTable;
+      internal_static_bloombox_ledger_AssetOwnership_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_bloombox_schema_ledger_DigitalAsset_descriptor;
+    internal_static_bloombox_ledger_DigitalAsset_descriptor;
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_bloombox_schema_ledger_DigitalAsset_fieldAccessorTable;
+      internal_static_bloombox_ledger_DigitalAsset_fieldAccessorTable;
 
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
@@ -5060,28 +5161,26 @@ public final class Assets {
       descriptor;
   static {
     java.lang.String[] descriptorData = {
-      "\n\022ledger/Asset.proto\022\026bloombox.schema.le" +
-      "dger\032\024ledger/Account.proto\032\026temporal/Ins" +
-      "tant.proto\032!crypto/primitives/Integrity." +
-      "proto\032\031google/protobuf/any.proto\"\026\n\010Asse" +
-      "tKey\022\n\n\002id\030\001 \001(\t\"`\n\tAssetData\022\r\n\003raw\030\001 \001" +
-      "(\014H\000\022\021\n\007encoded\030\002 \001(\tH\000\022&\n\006struct\030\003 \001(\0132" +
-      "\024.google.protobuf.AnyH\000B\t\n\007payload\"\201\001\n\016A" +
-      "ssetOwnership\0225\n\005owner\030\001 \003(\0132&.bloombox." +
-      "schema.ledger.LedgerIdentity\0228\n\010previous" +
-      "\030\002 \001(\0132&.bloombox.schema.ledger.AssetOwn" +
-      "ership\"\203\003\n\014DigitalAsset\022-\n\003key\030\001 \001(\0132 .b" +
-      "loombox.schema.ledger.AssetKey\0224\n\006parent" +
-      "\030\002 \001(\0132$.bloombox.schema.ledger.DigitalA" +
-      "sset\022/\n\004data\030\003 \001(\0132!.bloombox.schema.led" +
-      "ger.AssetData\0225\n\005owner\030\004 \001(\0132&.bloombox." +
-      "schema.ledger.AssetOwnership\022C\n\013fingerpr" +
-      "int\030\005 \001(\0132..opencannabis.crypto.primitiv" +
-      "es.integrity.Hash\022/\n\007created\030b \001(\0132\036.ope" +
-      "ncannabis.temporal.Instant\0220\n\010modified\030c" +
-      " \001(\0132\036.opencannabis.temporal.InstantB-\n\031" +
-      "io.bloombox.schema.ledgerB\006AssetsH\001P\000\242\002\003" +
-      "BBSb\006proto3"
+      "\n\022ledger/Asset.proto\022\017bloombox.ledger\032\024l" +
+      "edger/Account.proto\032\026temporal/Instant.pr" +
+      "oto\032!crypto/primitives/Integrity.proto\032\031" +
+      "google/protobuf/any.proto\"\026\n\010AssetKey\022\n\n" +
+      "\002id\030\001 \001(\t\"`\n\tAssetData\022\r\n\003raw\030\001 \001(\014H\000\022\021\n" +
+      "\007encoded\030\002 \001(\tH\000\022&\n\006struct\030\003 \001(\0132\024.googl" +
+      "e.protobuf.AnyH\000B\t\n\007payload\"s\n\016AssetOwne" +
+      "rship\022.\n\005owner\030\001 \003(\0132\037.bloombox.ledger.L" +
+      "edgerIdentity\0221\n\010previous\030\002 \001(\0132\037.bloomb" +
+      "ox.ledger.AssetOwnership\"\322\002\n\014DigitalAsse" +
+      "t\022&\n\003key\030\001 \001(\0132\031.bloombox.ledger.AssetKe" +
+      "y\022-\n\006parent\030\002 \001(\0132\035.bloombox.ledger.Digi" +
+      "talAsset\022(\n\004data\030\003 \001(\0132\032.bloombox.ledger" +
+      ".AssetData\022.\n\005owner\030\004 \001(\0132\037.bloombox.led" +
+      "ger.AssetOwnership\022.\n\013fingerprint\030\005 \001(\0132" +
+      "\031.opencannabis.crypto.Hash\022/\n\007created\030b " +
+      "\001(\0132\036.opencannabis.temporal.Instant\0220\n\010m" +
+      "odified\030c \001(\0132\036.opencannabis.temporal.In" +
+      "stantB-\n\031io.bloombox.schema.ledgerB\006Asse" +
+      "tsH\001P\000\242\002\003BBSb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -5099,29 +5198,29 @@ public final class Assets {
           io.opencannabis.schema.crypto.primitives.integrity.Integrity.getDescriptor(),
           com.google.protobuf.AnyProto.getDescriptor(),
         }, assigner);
-    internal_static_bloombox_schema_ledger_AssetKey_descriptor =
+    internal_static_bloombox_ledger_AssetKey_descriptor =
       getDescriptor().getMessageTypes().get(0);
-    internal_static_bloombox_schema_ledger_AssetKey_fieldAccessorTable = new
+    internal_static_bloombox_ledger_AssetKey_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_bloombox_schema_ledger_AssetKey_descriptor,
+        internal_static_bloombox_ledger_AssetKey_descriptor,
         new java.lang.String[] { "Id", });
-    internal_static_bloombox_schema_ledger_AssetData_descriptor =
+    internal_static_bloombox_ledger_AssetData_descriptor =
       getDescriptor().getMessageTypes().get(1);
-    internal_static_bloombox_schema_ledger_AssetData_fieldAccessorTable = new
+    internal_static_bloombox_ledger_AssetData_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_bloombox_schema_ledger_AssetData_descriptor,
+        internal_static_bloombox_ledger_AssetData_descriptor,
         new java.lang.String[] { "Raw", "Encoded", "Struct", "Payload", });
-    internal_static_bloombox_schema_ledger_AssetOwnership_descriptor =
+    internal_static_bloombox_ledger_AssetOwnership_descriptor =
       getDescriptor().getMessageTypes().get(2);
-    internal_static_bloombox_schema_ledger_AssetOwnership_fieldAccessorTable = new
+    internal_static_bloombox_ledger_AssetOwnership_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_bloombox_schema_ledger_AssetOwnership_descriptor,
+        internal_static_bloombox_ledger_AssetOwnership_descriptor,
         new java.lang.String[] { "Owner", "Previous", });
-    internal_static_bloombox_schema_ledger_DigitalAsset_descriptor =
+    internal_static_bloombox_ledger_DigitalAsset_descriptor =
       getDescriptor().getMessageTypes().get(3);
-    internal_static_bloombox_schema_ledger_DigitalAsset_fieldAccessorTable = new
+    internal_static_bloombox_ledger_DigitalAsset_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_bloombox_schema_ledger_DigitalAsset_descriptor,
+        internal_static_bloombox_ledger_DigitalAsset_descriptor,
         new java.lang.String[] { "Key", "Parent", "Data", "Owner", "Fingerprint", "Created", "Modified", });
     io.bloombox.schema.ledger.Accounts.getDescriptor();
     io.opencannabis.schema.temporal.TemporalInstant.getDescriptor();

@@ -1,8 +1,8 @@
 /*
- * Copyright 2018, Bloombox, LLC. All rights reserved.
+ * Copyright 2018, Momentum Ideas, Co. All rights reserved.
  *
  * Source and object computer code contained herein is the private intellectual
- * property of Bloombox, a California Limited Liability Corporation. Use of this
+ * property of Momentum Ideas Co., a Delaware Corporation. Use of this
  * code in source form requires permission in writing before use or the
  * assembly, distribution, or publishing of derivative works, for commercial
  * purposes or any other purpose, from a duly authorized officer of Momentum
@@ -17,20 +17,20 @@
 
 package io.bloombox.schema.services.ledger.v1beta1;
 
-import static io.grpc.stub.ClientCalls.asyncUnaryCall;
-import static io.grpc.stub.ClientCalls.asyncServerStreamingCall;
-import static io.grpc.stub.ClientCalls.asyncClientStreamingCall;
-import static io.grpc.stub.ClientCalls.asyncBidiStreamingCall;
-import static io.grpc.stub.ClientCalls.blockingUnaryCall;
-import static io.grpc.stub.ClientCalls.blockingServerStreamingCall;
-import static io.grpc.stub.ClientCalls.futureUnaryCall;
 import static io.grpc.MethodDescriptor.generateFullMethodName;
-import static io.grpc.stub.ServerCalls.asyncUnaryCall;
-import static io.grpc.stub.ServerCalls.asyncServerStreamingCall;
-import static io.grpc.stub.ServerCalls.asyncClientStreamingCall;
+import static io.grpc.stub.ClientCalls.asyncBidiStreamingCall;
+import static io.grpc.stub.ClientCalls.asyncClientStreamingCall;
+import static io.grpc.stub.ClientCalls.asyncServerStreamingCall;
+import static io.grpc.stub.ClientCalls.asyncUnaryCall;
+import static io.grpc.stub.ClientCalls.blockingServerStreamingCall;
+import static io.grpc.stub.ClientCalls.blockingUnaryCall;
+import static io.grpc.stub.ClientCalls.futureUnaryCall;
 import static io.grpc.stub.ServerCalls.asyncBidiStreamingCall;
-import static io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall;
+import static io.grpc.stub.ServerCalls.asyncClientStreamingCall;
+import static io.grpc.stub.ServerCalls.asyncServerStreamingCall;
+import static io.grpc.stub.ServerCalls.asyncUnaryCall;
 import static io.grpc.stub.ServerCalls.asyncUnimplementedStreamingCall;
+import static io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall;
 
 /**
  * <pre>
@@ -41,111 +41,270 @@ import static io.grpc.stub.ServerCalls.asyncUnimplementedStreamingCall;
  * </pre>
  */
 @javax.annotation.Generated(
-    value = "by gRPC proto compiler (version 1.6.0-SNAPSHOT)",
+    value = "by gRPC proto compiler (version 1.18.0-SNAPSHOT)",
     comments = "Source: ledger/v1beta1/LedgerService_Beta1.proto")
 public final class LedgerGrpc {
 
   private LedgerGrpc() {}
 
-  public static final String SERVICE_NAME = "bloombox.schema.services.ledger.v1beta1.Ledger";
+  public static final String SERVICE_NAME = "bloombox.services.ledger.v1beta1.Ledger";
 
   // Static method descriptors that strictly reflect the proto.
-  @io.grpc.ExperimentalApi("https://github.com/grpc/grpc-java/issues/1901")
-  public static final io.grpc.MethodDescriptor<io.bloombox.schema.services.ledger.v1beta1.RetrieveAsset.Request,
-      io.bloombox.schema.services.ledger.v1beta1.RetrieveAsset.Response> METHOD_GET_ASSET =
-      io.grpc.MethodDescriptor.<io.bloombox.schema.services.ledger.v1beta1.RetrieveAsset.Request, io.bloombox.schema.services.ledger.v1beta1.RetrieveAsset.Response>newBuilder()
-          .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-          .setFullMethodName(generateFullMethodName(
-              "bloombox.schema.services.ledger.v1beta1.Ledger", "GetAsset"))
-          .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-              io.bloombox.schema.services.ledger.v1beta1.RetrieveAsset.Request.getDefaultInstance()))
-          .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-              io.bloombox.schema.services.ledger.v1beta1.RetrieveAsset.Response.getDefaultInstance()))
-          .build();
-  @io.grpc.ExperimentalApi("https://github.com/grpc/grpc-java/issues/1901")
-  public static final io.grpc.MethodDescriptor<io.bloombox.schema.services.ledger.v1beta1.RetrieveTransaction.Request,
-      io.bloombox.schema.services.ledger.v1beta1.RetrieveTransaction.Response> METHOD_GET_TRANSACTION =
-      io.grpc.MethodDescriptor.<io.bloombox.schema.services.ledger.v1beta1.RetrieveTransaction.Request, io.bloombox.schema.services.ledger.v1beta1.RetrieveTransaction.Response>newBuilder()
-          .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-          .setFullMethodName(generateFullMethodName(
-              "bloombox.schema.services.ledger.v1beta1.Ledger", "GetTransaction"))
-          .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-              io.bloombox.schema.services.ledger.v1beta1.RetrieveTransaction.Request.getDefaultInstance()))
-          .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-              io.bloombox.schema.services.ledger.v1beta1.RetrieveTransaction.Response.getDefaultInstance()))
-          .build();
-  @io.grpc.ExperimentalApi("https://github.com/grpc/grpc-java/issues/1901")
-  public static final io.grpc.MethodDescriptor<io.bloombox.schema.services.ledger.v1beta1.AssetHistory.Request,
-      io.bloombox.schema.services.ledger.v1beta1.AssetHistory.Response> METHOD_GET_ASSET_HISTORY =
-      io.grpc.MethodDescriptor.<io.bloombox.schema.services.ledger.v1beta1.AssetHistory.Request, io.bloombox.schema.services.ledger.v1beta1.AssetHistory.Response>newBuilder()
-          .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-          .setFullMethodName(generateFullMethodName(
-              "bloombox.schema.services.ledger.v1beta1.Ledger", "GetAssetHistory"))
-          .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-              io.bloombox.schema.services.ledger.v1beta1.AssetHistory.Request.getDefaultInstance()))
-          .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-              io.bloombox.schema.services.ledger.v1beta1.AssetHistory.Response.getDefaultInstance()))
-          .build();
-  @io.grpc.ExperimentalApi("https://github.com/grpc/grpc-java/issues/1901")
-  public static final io.grpc.MethodDescriptor<io.bloombox.schema.services.ledger.v1beta1.AccountHoldings.Request,
-      io.bloombox.schema.services.ledger.v1beta1.AccountHoldings.Response> METHOD_GET_ACCOUNT_HOLDINGS =
-      io.grpc.MethodDescriptor.<io.bloombox.schema.services.ledger.v1beta1.AccountHoldings.Request, io.bloombox.schema.services.ledger.v1beta1.AccountHoldings.Response>newBuilder()
-          .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-          .setFullMethodName(generateFullMethodName(
-              "bloombox.schema.services.ledger.v1beta1.Ledger", "GetAccountHoldings"))
-          .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-              io.bloombox.schema.services.ledger.v1beta1.AccountHoldings.Request.getDefaultInstance()))
-          .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-              io.bloombox.schema.services.ledger.v1beta1.AccountHoldings.Response.getDefaultInstance()))
-          .build();
-  @io.grpc.ExperimentalApi("https://github.com/grpc/grpc-java/issues/1901")
-  public static final io.grpc.MethodDescriptor<io.bloombox.schema.services.ledger.v1beta1.AccountHistory.Request,
-      io.bloombox.schema.services.ledger.v1beta1.AccountHistory.Response> METHOD_GET_ACCOUNT_HISTORY =
-      io.grpc.MethodDescriptor.<io.bloombox.schema.services.ledger.v1beta1.AccountHistory.Request, io.bloombox.schema.services.ledger.v1beta1.AccountHistory.Response>newBuilder()
-          .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-          .setFullMethodName(generateFullMethodName(
-              "bloombox.schema.services.ledger.v1beta1.Ledger", "GetAccountHistory"))
-          .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-              io.bloombox.schema.services.ledger.v1beta1.AccountHistory.Request.getDefaultInstance()))
-          .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-              io.bloombox.schema.services.ledger.v1beta1.AccountHistory.Response.getDefaultInstance()))
-          .build();
-  @io.grpc.ExperimentalApi("https://github.com/grpc/grpc-java/issues/1901")
-  public static final io.grpc.MethodDescriptor<io.bloombox.schema.services.ledger.v1beta1.AssetCreate.Request,
-      io.bloombox.schema.services.ledger.v1beta1.AssetCreate.Response> METHOD_CREATE =
-      io.grpc.MethodDescriptor.<io.bloombox.schema.services.ledger.v1beta1.AssetCreate.Request, io.bloombox.schema.services.ledger.v1beta1.AssetCreate.Response>newBuilder()
-          .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-          .setFullMethodName(generateFullMethodName(
-              "bloombox.schema.services.ledger.v1beta1.Ledger", "Create"))
-          .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-              io.bloombox.schema.services.ledger.v1beta1.AssetCreate.Request.getDefaultInstance()))
-          .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-              io.bloombox.schema.services.ledger.v1beta1.AssetCreate.Response.getDefaultInstance()))
-          .build();
-  @io.grpc.ExperimentalApi("https://github.com/grpc/grpc-java/issues/1901")
-  public static final io.grpc.MethodDescriptor<io.bloombox.schema.services.ledger.v1beta1.AssetTransfer.Request,
-      io.bloombox.schema.services.ledger.v1beta1.AssetTransfer.Response> METHOD_TRANSFER =
-      io.grpc.MethodDescriptor.<io.bloombox.schema.services.ledger.v1beta1.AssetTransfer.Request, io.bloombox.schema.services.ledger.v1beta1.AssetTransfer.Response>newBuilder()
-          .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-          .setFullMethodName(generateFullMethodName(
-              "bloombox.schema.services.ledger.v1beta1.Ledger", "Transfer"))
-          .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-              io.bloombox.schema.services.ledger.v1beta1.AssetTransfer.Request.getDefaultInstance()))
-          .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-              io.bloombox.schema.services.ledger.v1beta1.AssetTransfer.Response.getDefaultInstance()))
-          .build();
-  @io.grpc.ExperimentalApi("https://github.com/grpc/grpc-java/issues/1901")
-  public static final io.grpc.MethodDescriptor<io.bloombox.schema.ledger.Transactions.Transaction,
-      io.bloombox.schema.services.ledger.v1beta1.InflightTransaction> METHOD_TRANSACT =
-      io.grpc.MethodDescriptor.<io.bloombox.schema.ledger.Transactions.Transaction, io.bloombox.schema.services.ledger.v1beta1.InflightTransaction>newBuilder()
-          .setType(io.grpc.MethodDescriptor.MethodType.SERVER_STREAMING)
-          .setFullMethodName(generateFullMethodName(
-              "bloombox.schema.services.ledger.v1beta1.Ledger", "Transact"))
-          .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-              io.bloombox.schema.ledger.Transactions.Transaction.getDefaultInstance()))
-          .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-              io.bloombox.schema.services.ledger.v1beta1.InflightTransaction.getDefaultInstance()))
-          .build();
+  private static volatile io.grpc.MethodDescriptor<io.bloombox.schema.services.ledger.v1beta1.RetrieveAsset.Request,
+      io.bloombox.schema.services.ledger.v1beta1.RetrieveAsset.Response> getGetAssetMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "GetAsset",
+      requestType = io.bloombox.schema.services.ledger.v1beta1.RetrieveAsset.Request.class,
+      responseType = io.bloombox.schema.services.ledger.v1beta1.RetrieveAsset.Response.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<io.bloombox.schema.services.ledger.v1beta1.RetrieveAsset.Request,
+      io.bloombox.schema.services.ledger.v1beta1.RetrieveAsset.Response> getGetAssetMethod() {
+    io.grpc.MethodDescriptor<io.bloombox.schema.services.ledger.v1beta1.RetrieveAsset.Request, io.bloombox.schema.services.ledger.v1beta1.RetrieveAsset.Response> getGetAssetMethod;
+    if ((getGetAssetMethod = LedgerGrpc.getGetAssetMethod) == null) {
+      synchronized (LedgerGrpc.class) {
+        if ((getGetAssetMethod = LedgerGrpc.getGetAssetMethod) == null) {
+          LedgerGrpc.getGetAssetMethod = getGetAssetMethod = 
+              io.grpc.MethodDescriptor.<io.bloombox.schema.services.ledger.v1beta1.RetrieveAsset.Request, io.bloombox.schema.services.ledger.v1beta1.RetrieveAsset.Response>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(
+                  "bloombox.services.ledger.v1beta1.Ledger", "GetAsset"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  io.bloombox.schema.services.ledger.v1beta1.RetrieveAsset.Request.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  io.bloombox.schema.services.ledger.v1beta1.RetrieveAsset.Response.getDefaultInstance()))
+                  .setSchemaDescriptor(new LedgerMethodDescriptorSupplier("GetAsset"))
+                  .build();
+          }
+        }
+     }
+     return getGetAssetMethod;
+  }
+
+  private static volatile io.grpc.MethodDescriptor<io.bloombox.schema.services.ledger.v1beta1.RetrieveTransaction.Request,
+      io.bloombox.schema.services.ledger.v1beta1.RetrieveTransaction.Response> getGetTransactionMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "GetTransaction",
+      requestType = io.bloombox.schema.services.ledger.v1beta1.RetrieveTransaction.Request.class,
+      responseType = io.bloombox.schema.services.ledger.v1beta1.RetrieveTransaction.Response.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<io.bloombox.schema.services.ledger.v1beta1.RetrieveTransaction.Request,
+      io.bloombox.schema.services.ledger.v1beta1.RetrieveTransaction.Response> getGetTransactionMethod() {
+    io.grpc.MethodDescriptor<io.bloombox.schema.services.ledger.v1beta1.RetrieveTransaction.Request, io.bloombox.schema.services.ledger.v1beta1.RetrieveTransaction.Response> getGetTransactionMethod;
+    if ((getGetTransactionMethod = LedgerGrpc.getGetTransactionMethod) == null) {
+      synchronized (LedgerGrpc.class) {
+        if ((getGetTransactionMethod = LedgerGrpc.getGetTransactionMethod) == null) {
+          LedgerGrpc.getGetTransactionMethod = getGetTransactionMethod = 
+              io.grpc.MethodDescriptor.<io.bloombox.schema.services.ledger.v1beta1.RetrieveTransaction.Request, io.bloombox.schema.services.ledger.v1beta1.RetrieveTransaction.Response>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(
+                  "bloombox.services.ledger.v1beta1.Ledger", "GetTransaction"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  io.bloombox.schema.services.ledger.v1beta1.RetrieveTransaction.Request.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  io.bloombox.schema.services.ledger.v1beta1.RetrieveTransaction.Response.getDefaultInstance()))
+                  .setSchemaDescriptor(new LedgerMethodDescriptorSupplier("GetTransaction"))
+                  .build();
+          }
+        }
+     }
+     return getGetTransactionMethod;
+  }
+
+  private static volatile io.grpc.MethodDescriptor<io.bloombox.schema.services.ledger.v1beta1.AssetHistory.Request,
+      io.bloombox.schema.services.ledger.v1beta1.AssetHistory.Response> getGetAssetHistoryMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "GetAssetHistory",
+      requestType = io.bloombox.schema.services.ledger.v1beta1.AssetHistory.Request.class,
+      responseType = io.bloombox.schema.services.ledger.v1beta1.AssetHistory.Response.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<io.bloombox.schema.services.ledger.v1beta1.AssetHistory.Request,
+      io.bloombox.schema.services.ledger.v1beta1.AssetHistory.Response> getGetAssetHistoryMethod() {
+    io.grpc.MethodDescriptor<io.bloombox.schema.services.ledger.v1beta1.AssetHistory.Request, io.bloombox.schema.services.ledger.v1beta1.AssetHistory.Response> getGetAssetHistoryMethod;
+    if ((getGetAssetHistoryMethod = LedgerGrpc.getGetAssetHistoryMethod) == null) {
+      synchronized (LedgerGrpc.class) {
+        if ((getGetAssetHistoryMethod = LedgerGrpc.getGetAssetHistoryMethod) == null) {
+          LedgerGrpc.getGetAssetHistoryMethod = getGetAssetHistoryMethod = 
+              io.grpc.MethodDescriptor.<io.bloombox.schema.services.ledger.v1beta1.AssetHistory.Request, io.bloombox.schema.services.ledger.v1beta1.AssetHistory.Response>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(
+                  "bloombox.services.ledger.v1beta1.Ledger", "GetAssetHistory"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  io.bloombox.schema.services.ledger.v1beta1.AssetHistory.Request.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  io.bloombox.schema.services.ledger.v1beta1.AssetHistory.Response.getDefaultInstance()))
+                  .setSchemaDescriptor(new LedgerMethodDescriptorSupplier("GetAssetHistory"))
+                  .build();
+          }
+        }
+     }
+     return getGetAssetHistoryMethod;
+  }
+
+  private static volatile io.grpc.MethodDescriptor<io.bloombox.schema.services.ledger.v1beta1.AccountHoldings.Request,
+      io.bloombox.schema.services.ledger.v1beta1.AccountHoldings.Response> getGetAccountHoldingsMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "GetAccountHoldings",
+      requestType = io.bloombox.schema.services.ledger.v1beta1.AccountHoldings.Request.class,
+      responseType = io.bloombox.schema.services.ledger.v1beta1.AccountHoldings.Response.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<io.bloombox.schema.services.ledger.v1beta1.AccountHoldings.Request,
+      io.bloombox.schema.services.ledger.v1beta1.AccountHoldings.Response> getGetAccountHoldingsMethod() {
+    io.grpc.MethodDescriptor<io.bloombox.schema.services.ledger.v1beta1.AccountHoldings.Request, io.bloombox.schema.services.ledger.v1beta1.AccountHoldings.Response> getGetAccountHoldingsMethod;
+    if ((getGetAccountHoldingsMethod = LedgerGrpc.getGetAccountHoldingsMethod) == null) {
+      synchronized (LedgerGrpc.class) {
+        if ((getGetAccountHoldingsMethod = LedgerGrpc.getGetAccountHoldingsMethod) == null) {
+          LedgerGrpc.getGetAccountHoldingsMethod = getGetAccountHoldingsMethod = 
+              io.grpc.MethodDescriptor.<io.bloombox.schema.services.ledger.v1beta1.AccountHoldings.Request, io.bloombox.schema.services.ledger.v1beta1.AccountHoldings.Response>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(
+                  "bloombox.services.ledger.v1beta1.Ledger", "GetAccountHoldings"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  io.bloombox.schema.services.ledger.v1beta1.AccountHoldings.Request.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  io.bloombox.schema.services.ledger.v1beta1.AccountHoldings.Response.getDefaultInstance()))
+                  .setSchemaDescriptor(new LedgerMethodDescriptorSupplier("GetAccountHoldings"))
+                  .build();
+          }
+        }
+     }
+     return getGetAccountHoldingsMethod;
+  }
+
+  private static volatile io.grpc.MethodDescriptor<io.bloombox.schema.services.ledger.v1beta1.AccountHistory.Request,
+      io.bloombox.schema.services.ledger.v1beta1.AccountHistory.Response> getGetAccountHistoryMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "GetAccountHistory",
+      requestType = io.bloombox.schema.services.ledger.v1beta1.AccountHistory.Request.class,
+      responseType = io.bloombox.schema.services.ledger.v1beta1.AccountHistory.Response.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<io.bloombox.schema.services.ledger.v1beta1.AccountHistory.Request,
+      io.bloombox.schema.services.ledger.v1beta1.AccountHistory.Response> getGetAccountHistoryMethod() {
+    io.grpc.MethodDescriptor<io.bloombox.schema.services.ledger.v1beta1.AccountHistory.Request, io.bloombox.schema.services.ledger.v1beta1.AccountHistory.Response> getGetAccountHistoryMethod;
+    if ((getGetAccountHistoryMethod = LedgerGrpc.getGetAccountHistoryMethod) == null) {
+      synchronized (LedgerGrpc.class) {
+        if ((getGetAccountHistoryMethod = LedgerGrpc.getGetAccountHistoryMethod) == null) {
+          LedgerGrpc.getGetAccountHistoryMethod = getGetAccountHistoryMethod = 
+              io.grpc.MethodDescriptor.<io.bloombox.schema.services.ledger.v1beta1.AccountHistory.Request, io.bloombox.schema.services.ledger.v1beta1.AccountHistory.Response>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(
+                  "bloombox.services.ledger.v1beta1.Ledger", "GetAccountHistory"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  io.bloombox.schema.services.ledger.v1beta1.AccountHistory.Request.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  io.bloombox.schema.services.ledger.v1beta1.AccountHistory.Response.getDefaultInstance()))
+                  .setSchemaDescriptor(new LedgerMethodDescriptorSupplier("GetAccountHistory"))
+                  .build();
+          }
+        }
+     }
+     return getGetAccountHistoryMethod;
+  }
+
+  private static volatile io.grpc.MethodDescriptor<io.bloombox.schema.services.ledger.v1beta1.AssetCreate.Request,
+      io.bloombox.schema.services.ledger.v1beta1.AssetCreate.Response> getCreateMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "Create",
+      requestType = io.bloombox.schema.services.ledger.v1beta1.AssetCreate.Request.class,
+      responseType = io.bloombox.schema.services.ledger.v1beta1.AssetCreate.Response.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<io.bloombox.schema.services.ledger.v1beta1.AssetCreate.Request,
+      io.bloombox.schema.services.ledger.v1beta1.AssetCreate.Response> getCreateMethod() {
+    io.grpc.MethodDescriptor<io.bloombox.schema.services.ledger.v1beta1.AssetCreate.Request, io.bloombox.schema.services.ledger.v1beta1.AssetCreate.Response> getCreateMethod;
+    if ((getCreateMethod = LedgerGrpc.getCreateMethod) == null) {
+      synchronized (LedgerGrpc.class) {
+        if ((getCreateMethod = LedgerGrpc.getCreateMethod) == null) {
+          LedgerGrpc.getCreateMethod = getCreateMethod = 
+              io.grpc.MethodDescriptor.<io.bloombox.schema.services.ledger.v1beta1.AssetCreate.Request, io.bloombox.schema.services.ledger.v1beta1.AssetCreate.Response>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(
+                  "bloombox.services.ledger.v1beta1.Ledger", "Create"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  io.bloombox.schema.services.ledger.v1beta1.AssetCreate.Request.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  io.bloombox.schema.services.ledger.v1beta1.AssetCreate.Response.getDefaultInstance()))
+                  .setSchemaDescriptor(new LedgerMethodDescriptorSupplier("Create"))
+                  .build();
+          }
+        }
+     }
+     return getCreateMethod;
+  }
+
+  private static volatile io.grpc.MethodDescriptor<io.bloombox.schema.services.ledger.v1beta1.AssetTransfer.Request,
+      io.bloombox.schema.services.ledger.v1beta1.AssetTransfer.Response> getTransferMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "Transfer",
+      requestType = io.bloombox.schema.services.ledger.v1beta1.AssetTransfer.Request.class,
+      responseType = io.bloombox.schema.services.ledger.v1beta1.AssetTransfer.Response.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<io.bloombox.schema.services.ledger.v1beta1.AssetTransfer.Request,
+      io.bloombox.schema.services.ledger.v1beta1.AssetTransfer.Response> getTransferMethod() {
+    io.grpc.MethodDescriptor<io.bloombox.schema.services.ledger.v1beta1.AssetTransfer.Request, io.bloombox.schema.services.ledger.v1beta1.AssetTransfer.Response> getTransferMethod;
+    if ((getTransferMethod = LedgerGrpc.getTransferMethod) == null) {
+      synchronized (LedgerGrpc.class) {
+        if ((getTransferMethod = LedgerGrpc.getTransferMethod) == null) {
+          LedgerGrpc.getTransferMethod = getTransferMethod = 
+              io.grpc.MethodDescriptor.<io.bloombox.schema.services.ledger.v1beta1.AssetTransfer.Request, io.bloombox.schema.services.ledger.v1beta1.AssetTransfer.Response>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(
+                  "bloombox.services.ledger.v1beta1.Ledger", "Transfer"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  io.bloombox.schema.services.ledger.v1beta1.AssetTransfer.Request.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  io.bloombox.schema.services.ledger.v1beta1.AssetTransfer.Response.getDefaultInstance()))
+                  .setSchemaDescriptor(new LedgerMethodDescriptorSupplier("Transfer"))
+                  .build();
+          }
+        }
+     }
+     return getTransferMethod;
+  }
+
+  private static volatile io.grpc.MethodDescriptor<io.bloombox.schema.ledger.Transactions.Transaction,
+      io.bloombox.schema.services.ledger.v1beta1.InflightTransaction> getTransactMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "Transact",
+      requestType = io.bloombox.schema.ledger.Transactions.Transaction.class,
+      responseType = io.bloombox.schema.services.ledger.v1beta1.InflightTransaction.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.SERVER_STREAMING)
+  public static io.grpc.MethodDescriptor<io.bloombox.schema.ledger.Transactions.Transaction,
+      io.bloombox.schema.services.ledger.v1beta1.InflightTransaction> getTransactMethod() {
+    io.grpc.MethodDescriptor<io.bloombox.schema.ledger.Transactions.Transaction, io.bloombox.schema.services.ledger.v1beta1.InflightTransaction> getTransactMethod;
+    if ((getTransactMethod = LedgerGrpc.getTransactMethod) == null) {
+      synchronized (LedgerGrpc.class) {
+        if ((getTransactMethod = LedgerGrpc.getTransactMethod) == null) {
+          LedgerGrpc.getTransactMethod = getTransactMethod = 
+              io.grpc.MethodDescriptor.<io.bloombox.schema.ledger.Transactions.Transaction, io.bloombox.schema.services.ledger.v1beta1.InflightTransaction>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.SERVER_STREAMING)
+              .setFullMethodName(generateFullMethodName(
+                  "bloombox.services.ledger.v1beta1.Ledger", "Transact"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  io.bloombox.schema.ledger.Transactions.Transaction.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  io.bloombox.schema.services.ledger.v1beta1.InflightTransaction.getDefaultInstance()))
+                  .setSchemaDescriptor(new LedgerMethodDescriptorSupplier("Transact"))
+                  .build();
+          }
+        }
+     }
+     return getTransactMethod;
+  }
 
   /**
    * Creates a new async stub that supports all call types for the service
@@ -187,7 +346,7 @@ public final class LedgerGrpc {
      */
     public void getAsset(io.bloombox.schema.services.ledger.v1beta1.RetrieveAsset.Request request,
         io.grpc.stub.StreamObserver<io.bloombox.schema.services.ledger.v1beta1.RetrieveAsset.Response> responseObserver) {
-      asyncUnimplementedUnaryCall(METHOD_GET_ASSET, responseObserver);
+      asyncUnimplementedUnaryCall(getGetAssetMethod(), responseObserver);
     }
 
     /**
@@ -197,7 +356,7 @@ public final class LedgerGrpc {
      */
     public void getTransaction(io.bloombox.schema.services.ledger.v1beta1.RetrieveTransaction.Request request,
         io.grpc.stub.StreamObserver<io.bloombox.schema.services.ledger.v1beta1.RetrieveTransaction.Response> responseObserver) {
-      asyncUnimplementedUnaryCall(METHOD_GET_TRANSACTION, responseObserver);
+      asyncUnimplementedUnaryCall(getGetTransactionMethod(), responseObserver);
     }
 
     /**
@@ -207,7 +366,7 @@ public final class LedgerGrpc {
      */
     public void getAssetHistory(io.bloombox.schema.services.ledger.v1beta1.AssetHistory.Request request,
         io.grpc.stub.StreamObserver<io.bloombox.schema.services.ledger.v1beta1.AssetHistory.Response> responseObserver) {
-      asyncUnimplementedUnaryCall(METHOD_GET_ASSET_HISTORY, responseObserver);
+      asyncUnimplementedUnaryCall(getGetAssetHistoryMethod(), responseObserver);
     }
 
     /**
@@ -217,7 +376,7 @@ public final class LedgerGrpc {
      */
     public void getAccountHoldings(io.bloombox.schema.services.ledger.v1beta1.AccountHoldings.Request request,
         io.grpc.stub.StreamObserver<io.bloombox.schema.services.ledger.v1beta1.AccountHoldings.Response> responseObserver) {
-      asyncUnimplementedUnaryCall(METHOD_GET_ACCOUNT_HOLDINGS, responseObserver);
+      asyncUnimplementedUnaryCall(getGetAccountHoldingsMethod(), responseObserver);
     }
 
     /**
@@ -227,7 +386,7 @@ public final class LedgerGrpc {
      */
     public void getAccountHistory(io.bloombox.schema.services.ledger.v1beta1.AccountHistory.Request request,
         io.grpc.stub.StreamObserver<io.bloombox.schema.services.ledger.v1beta1.AccountHistory.Response> responseObserver) {
-      asyncUnimplementedUnaryCall(METHOD_GET_ACCOUNT_HISTORY, responseObserver);
+      asyncUnimplementedUnaryCall(getGetAccountHistoryMethod(), responseObserver);
     }
 
     /**
@@ -237,7 +396,7 @@ public final class LedgerGrpc {
      */
     public void create(io.bloombox.schema.services.ledger.v1beta1.AssetCreate.Request request,
         io.grpc.stub.StreamObserver<io.bloombox.schema.services.ledger.v1beta1.AssetCreate.Response> responseObserver) {
-      asyncUnimplementedUnaryCall(METHOD_CREATE, responseObserver);
+      asyncUnimplementedUnaryCall(getCreateMethod(), responseObserver);
     }
 
     /**
@@ -247,7 +406,7 @@ public final class LedgerGrpc {
      */
     public void transfer(io.bloombox.schema.services.ledger.v1beta1.AssetTransfer.Request request,
         io.grpc.stub.StreamObserver<io.bloombox.schema.services.ledger.v1beta1.AssetTransfer.Response> responseObserver) {
-      asyncUnimplementedUnaryCall(METHOD_TRANSFER, responseObserver);
+      asyncUnimplementedUnaryCall(getTransferMethod(), responseObserver);
     }
 
     /**
@@ -257,62 +416,62 @@ public final class LedgerGrpc {
      */
     public void transact(io.bloombox.schema.ledger.Transactions.Transaction request,
         io.grpc.stub.StreamObserver<io.bloombox.schema.services.ledger.v1beta1.InflightTransaction> responseObserver) {
-      asyncUnimplementedUnaryCall(METHOD_TRANSACT, responseObserver);
+      asyncUnimplementedUnaryCall(getTransactMethod(), responseObserver);
     }
 
     @java.lang.Override public final io.grpc.ServerServiceDefinition bindService() {
       return io.grpc.ServerServiceDefinition.builder(getServiceDescriptor())
           .addMethod(
-            METHOD_GET_ASSET,
+            getGetAssetMethod(),
             asyncUnaryCall(
               new MethodHandlers<
                 io.bloombox.schema.services.ledger.v1beta1.RetrieveAsset.Request,
                 io.bloombox.schema.services.ledger.v1beta1.RetrieveAsset.Response>(
                   this, METHODID_GET_ASSET)))
           .addMethod(
-            METHOD_GET_TRANSACTION,
+            getGetTransactionMethod(),
             asyncUnaryCall(
               new MethodHandlers<
                 io.bloombox.schema.services.ledger.v1beta1.RetrieveTransaction.Request,
                 io.bloombox.schema.services.ledger.v1beta1.RetrieveTransaction.Response>(
                   this, METHODID_GET_TRANSACTION)))
           .addMethod(
-            METHOD_GET_ASSET_HISTORY,
+            getGetAssetHistoryMethod(),
             asyncUnaryCall(
               new MethodHandlers<
                 io.bloombox.schema.services.ledger.v1beta1.AssetHistory.Request,
                 io.bloombox.schema.services.ledger.v1beta1.AssetHistory.Response>(
                   this, METHODID_GET_ASSET_HISTORY)))
           .addMethod(
-            METHOD_GET_ACCOUNT_HOLDINGS,
+            getGetAccountHoldingsMethod(),
             asyncUnaryCall(
               new MethodHandlers<
                 io.bloombox.schema.services.ledger.v1beta1.AccountHoldings.Request,
                 io.bloombox.schema.services.ledger.v1beta1.AccountHoldings.Response>(
                   this, METHODID_GET_ACCOUNT_HOLDINGS)))
           .addMethod(
-            METHOD_GET_ACCOUNT_HISTORY,
+            getGetAccountHistoryMethod(),
             asyncUnaryCall(
               new MethodHandlers<
                 io.bloombox.schema.services.ledger.v1beta1.AccountHistory.Request,
                 io.bloombox.schema.services.ledger.v1beta1.AccountHistory.Response>(
                   this, METHODID_GET_ACCOUNT_HISTORY)))
           .addMethod(
-            METHOD_CREATE,
+            getCreateMethod(),
             asyncUnaryCall(
               new MethodHandlers<
                 io.bloombox.schema.services.ledger.v1beta1.AssetCreate.Request,
                 io.bloombox.schema.services.ledger.v1beta1.AssetCreate.Response>(
                   this, METHODID_CREATE)))
           .addMethod(
-            METHOD_TRANSFER,
+            getTransferMethod(),
             asyncUnaryCall(
               new MethodHandlers<
                 io.bloombox.schema.services.ledger.v1beta1.AssetTransfer.Request,
                 io.bloombox.schema.services.ledger.v1beta1.AssetTransfer.Response>(
                   this, METHODID_TRANSFER)))
           .addMethod(
-            METHOD_TRANSACT,
+            getTransactMethod(),
             asyncServerStreamingCall(
               new MethodHandlers<
                 io.bloombox.schema.ledger.Transactions.Transaction,
@@ -354,7 +513,7 @@ public final class LedgerGrpc {
     public void getAsset(io.bloombox.schema.services.ledger.v1beta1.RetrieveAsset.Request request,
         io.grpc.stub.StreamObserver<io.bloombox.schema.services.ledger.v1beta1.RetrieveAsset.Response> responseObserver) {
       asyncUnaryCall(
-          getChannel().newCall(METHOD_GET_ASSET, getCallOptions()), request, responseObserver);
+          getChannel().newCall(getGetAssetMethod(), getCallOptions()), request, responseObserver);
     }
 
     /**
@@ -365,7 +524,7 @@ public final class LedgerGrpc {
     public void getTransaction(io.bloombox.schema.services.ledger.v1beta1.RetrieveTransaction.Request request,
         io.grpc.stub.StreamObserver<io.bloombox.schema.services.ledger.v1beta1.RetrieveTransaction.Response> responseObserver) {
       asyncUnaryCall(
-          getChannel().newCall(METHOD_GET_TRANSACTION, getCallOptions()), request, responseObserver);
+          getChannel().newCall(getGetTransactionMethod(), getCallOptions()), request, responseObserver);
     }
 
     /**
@@ -376,7 +535,7 @@ public final class LedgerGrpc {
     public void getAssetHistory(io.bloombox.schema.services.ledger.v1beta1.AssetHistory.Request request,
         io.grpc.stub.StreamObserver<io.bloombox.schema.services.ledger.v1beta1.AssetHistory.Response> responseObserver) {
       asyncUnaryCall(
-          getChannel().newCall(METHOD_GET_ASSET_HISTORY, getCallOptions()), request, responseObserver);
+          getChannel().newCall(getGetAssetHistoryMethod(), getCallOptions()), request, responseObserver);
     }
 
     /**
@@ -387,7 +546,7 @@ public final class LedgerGrpc {
     public void getAccountHoldings(io.bloombox.schema.services.ledger.v1beta1.AccountHoldings.Request request,
         io.grpc.stub.StreamObserver<io.bloombox.schema.services.ledger.v1beta1.AccountHoldings.Response> responseObserver) {
       asyncUnaryCall(
-          getChannel().newCall(METHOD_GET_ACCOUNT_HOLDINGS, getCallOptions()), request, responseObserver);
+          getChannel().newCall(getGetAccountHoldingsMethod(), getCallOptions()), request, responseObserver);
     }
 
     /**
@@ -398,7 +557,7 @@ public final class LedgerGrpc {
     public void getAccountHistory(io.bloombox.schema.services.ledger.v1beta1.AccountHistory.Request request,
         io.grpc.stub.StreamObserver<io.bloombox.schema.services.ledger.v1beta1.AccountHistory.Response> responseObserver) {
       asyncUnaryCall(
-          getChannel().newCall(METHOD_GET_ACCOUNT_HISTORY, getCallOptions()), request, responseObserver);
+          getChannel().newCall(getGetAccountHistoryMethod(), getCallOptions()), request, responseObserver);
     }
 
     /**
@@ -409,7 +568,7 @@ public final class LedgerGrpc {
     public void create(io.bloombox.schema.services.ledger.v1beta1.AssetCreate.Request request,
         io.grpc.stub.StreamObserver<io.bloombox.schema.services.ledger.v1beta1.AssetCreate.Response> responseObserver) {
       asyncUnaryCall(
-          getChannel().newCall(METHOD_CREATE, getCallOptions()), request, responseObserver);
+          getChannel().newCall(getCreateMethod(), getCallOptions()), request, responseObserver);
     }
 
     /**
@@ -420,7 +579,7 @@ public final class LedgerGrpc {
     public void transfer(io.bloombox.schema.services.ledger.v1beta1.AssetTransfer.Request request,
         io.grpc.stub.StreamObserver<io.bloombox.schema.services.ledger.v1beta1.AssetTransfer.Response> responseObserver) {
       asyncUnaryCall(
-          getChannel().newCall(METHOD_TRANSFER, getCallOptions()), request, responseObserver);
+          getChannel().newCall(getTransferMethod(), getCallOptions()), request, responseObserver);
     }
 
     /**
@@ -431,7 +590,7 @@ public final class LedgerGrpc {
     public void transact(io.bloombox.schema.ledger.Transactions.Transaction request,
         io.grpc.stub.StreamObserver<io.bloombox.schema.services.ledger.v1beta1.InflightTransaction> responseObserver) {
       asyncServerStreamingCall(
-          getChannel().newCall(METHOD_TRANSACT, getCallOptions()), request, responseObserver);
+          getChannel().newCall(getTransactMethod(), getCallOptions()), request, responseObserver);
     }
   }
 
@@ -466,7 +625,7 @@ public final class LedgerGrpc {
      */
     public io.bloombox.schema.services.ledger.v1beta1.RetrieveAsset.Response getAsset(io.bloombox.schema.services.ledger.v1beta1.RetrieveAsset.Request request) {
       return blockingUnaryCall(
-          getChannel(), METHOD_GET_ASSET, getCallOptions(), request);
+          getChannel(), getGetAssetMethod(), getCallOptions(), request);
     }
 
     /**
@@ -476,7 +635,7 @@ public final class LedgerGrpc {
      */
     public io.bloombox.schema.services.ledger.v1beta1.RetrieveTransaction.Response getTransaction(io.bloombox.schema.services.ledger.v1beta1.RetrieveTransaction.Request request) {
       return blockingUnaryCall(
-          getChannel(), METHOD_GET_TRANSACTION, getCallOptions(), request);
+          getChannel(), getGetTransactionMethod(), getCallOptions(), request);
     }
 
     /**
@@ -486,7 +645,7 @@ public final class LedgerGrpc {
      */
     public io.bloombox.schema.services.ledger.v1beta1.AssetHistory.Response getAssetHistory(io.bloombox.schema.services.ledger.v1beta1.AssetHistory.Request request) {
       return blockingUnaryCall(
-          getChannel(), METHOD_GET_ASSET_HISTORY, getCallOptions(), request);
+          getChannel(), getGetAssetHistoryMethod(), getCallOptions(), request);
     }
 
     /**
@@ -496,7 +655,7 @@ public final class LedgerGrpc {
      */
     public io.bloombox.schema.services.ledger.v1beta1.AccountHoldings.Response getAccountHoldings(io.bloombox.schema.services.ledger.v1beta1.AccountHoldings.Request request) {
       return blockingUnaryCall(
-          getChannel(), METHOD_GET_ACCOUNT_HOLDINGS, getCallOptions(), request);
+          getChannel(), getGetAccountHoldingsMethod(), getCallOptions(), request);
     }
 
     /**
@@ -506,7 +665,7 @@ public final class LedgerGrpc {
      */
     public io.bloombox.schema.services.ledger.v1beta1.AccountHistory.Response getAccountHistory(io.bloombox.schema.services.ledger.v1beta1.AccountHistory.Request request) {
       return blockingUnaryCall(
-          getChannel(), METHOD_GET_ACCOUNT_HISTORY, getCallOptions(), request);
+          getChannel(), getGetAccountHistoryMethod(), getCallOptions(), request);
     }
 
     /**
@@ -516,7 +675,7 @@ public final class LedgerGrpc {
      */
     public io.bloombox.schema.services.ledger.v1beta1.AssetCreate.Response create(io.bloombox.schema.services.ledger.v1beta1.AssetCreate.Request request) {
       return blockingUnaryCall(
-          getChannel(), METHOD_CREATE, getCallOptions(), request);
+          getChannel(), getCreateMethod(), getCallOptions(), request);
     }
 
     /**
@@ -526,7 +685,7 @@ public final class LedgerGrpc {
      */
     public io.bloombox.schema.services.ledger.v1beta1.AssetTransfer.Response transfer(io.bloombox.schema.services.ledger.v1beta1.AssetTransfer.Request request) {
       return blockingUnaryCall(
-          getChannel(), METHOD_TRANSFER, getCallOptions(), request);
+          getChannel(), getTransferMethod(), getCallOptions(), request);
     }
 
     /**
@@ -537,7 +696,7 @@ public final class LedgerGrpc {
     public java.util.Iterator<io.bloombox.schema.services.ledger.v1beta1.InflightTransaction> transact(
         io.bloombox.schema.ledger.Transactions.Transaction request) {
       return blockingServerStreamingCall(
-          getChannel(), METHOD_TRANSACT, getCallOptions(), request);
+          getChannel(), getTransactMethod(), getCallOptions(), request);
     }
   }
 
@@ -573,7 +732,7 @@ public final class LedgerGrpc {
     public com.google.common.util.concurrent.ListenableFuture<io.bloombox.schema.services.ledger.v1beta1.RetrieveAsset.Response> getAsset(
         io.bloombox.schema.services.ledger.v1beta1.RetrieveAsset.Request request) {
       return futureUnaryCall(
-          getChannel().newCall(METHOD_GET_ASSET, getCallOptions()), request);
+          getChannel().newCall(getGetAssetMethod(), getCallOptions()), request);
     }
 
     /**
@@ -584,7 +743,7 @@ public final class LedgerGrpc {
     public com.google.common.util.concurrent.ListenableFuture<io.bloombox.schema.services.ledger.v1beta1.RetrieveTransaction.Response> getTransaction(
         io.bloombox.schema.services.ledger.v1beta1.RetrieveTransaction.Request request) {
       return futureUnaryCall(
-          getChannel().newCall(METHOD_GET_TRANSACTION, getCallOptions()), request);
+          getChannel().newCall(getGetTransactionMethod(), getCallOptions()), request);
     }
 
     /**
@@ -595,7 +754,7 @@ public final class LedgerGrpc {
     public com.google.common.util.concurrent.ListenableFuture<io.bloombox.schema.services.ledger.v1beta1.AssetHistory.Response> getAssetHistory(
         io.bloombox.schema.services.ledger.v1beta1.AssetHistory.Request request) {
       return futureUnaryCall(
-          getChannel().newCall(METHOD_GET_ASSET_HISTORY, getCallOptions()), request);
+          getChannel().newCall(getGetAssetHistoryMethod(), getCallOptions()), request);
     }
 
     /**
@@ -606,7 +765,7 @@ public final class LedgerGrpc {
     public com.google.common.util.concurrent.ListenableFuture<io.bloombox.schema.services.ledger.v1beta1.AccountHoldings.Response> getAccountHoldings(
         io.bloombox.schema.services.ledger.v1beta1.AccountHoldings.Request request) {
       return futureUnaryCall(
-          getChannel().newCall(METHOD_GET_ACCOUNT_HOLDINGS, getCallOptions()), request);
+          getChannel().newCall(getGetAccountHoldingsMethod(), getCallOptions()), request);
     }
 
     /**
@@ -617,7 +776,7 @@ public final class LedgerGrpc {
     public com.google.common.util.concurrent.ListenableFuture<io.bloombox.schema.services.ledger.v1beta1.AccountHistory.Response> getAccountHistory(
         io.bloombox.schema.services.ledger.v1beta1.AccountHistory.Request request) {
       return futureUnaryCall(
-          getChannel().newCall(METHOD_GET_ACCOUNT_HISTORY, getCallOptions()), request);
+          getChannel().newCall(getGetAccountHistoryMethod(), getCallOptions()), request);
     }
 
     /**
@@ -628,7 +787,7 @@ public final class LedgerGrpc {
     public com.google.common.util.concurrent.ListenableFuture<io.bloombox.schema.services.ledger.v1beta1.AssetCreate.Response> create(
         io.bloombox.schema.services.ledger.v1beta1.AssetCreate.Request request) {
       return futureUnaryCall(
-          getChannel().newCall(METHOD_CREATE, getCallOptions()), request);
+          getChannel().newCall(getCreateMethod(), getCallOptions()), request);
     }
 
     /**
@@ -639,7 +798,7 @@ public final class LedgerGrpc {
     public com.google.common.util.concurrent.ListenableFuture<io.bloombox.schema.services.ledger.v1beta1.AssetTransfer.Response> transfer(
         io.bloombox.schema.services.ledger.v1beta1.AssetTransfer.Request request) {
       return futureUnaryCall(
-          getChannel().newCall(METHOD_TRANSFER, getCallOptions()), request);
+          getChannel().newCall(getTransferMethod(), getCallOptions()), request);
     }
   }
 
@@ -717,10 +876,38 @@ public final class LedgerGrpc {
     }
   }
 
-  private static final class LedgerDescriptorSupplier implements io.grpc.protobuf.ProtoFileDescriptorSupplier {
+  private static abstract class LedgerBaseDescriptorSupplier
+      implements io.grpc.protobuf.ProtoFileDescriptorSupplier, io.grpc.protobuf.ProtoServiceDescriptorSupplier {
+    LedgerBaseDescriptorSupplier() {}
+
     @java.lang.Override
     public com.google.protobuf.Descriptors.FileDescriptor getFileDescriptor() {
       return io.bloombox.schema.services.ledger.v1beta1.LedgerServiceBeta1.getDescriptor();
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Descriptors.ServiceDescriptor getServiceDescriptor() {
+      return getFileDescriptor().findServiceByName("Ledger");
+    }
+  }
+
+  private static final class LedgerFileDescriptorSupplier
+      extends LedgerBaseDescriptorSupplier {
+    LedgerFileDescriptorSupplier() {}
+  }
+
+  private static final class LedgerMethodDescriptorSupplier
+      extends LedgerBaseDescriptorSupplier
+      implements io.grpc.protobuf.ProtoMethodDescriptorSupplier {
+    private final String methodName;
+
+    LedgerMethodDescriptorSupplier(String methodName) {
+      this.methodName = methodName;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Descriptors.MethodDescriptor getMethodDescriptor() {
+      return getServiceDescriptor().findMethodByName(methodName);
     }
   }
 
@@ -733,15 +920,15 @@ public final class LedgerGrpc {
         result = serviceDescriptor;
         if (result == null) {
           serviceDescriptor = result = io.grpc.ServiceDescriptor.newBuilder(SERVICE_NAME)
-              .setSchemaDescriptor(new LedgerDescriptorSupplier())
-              .addMethod(METHOD_GET_ASSET)
-              .addMethod(METHOD_GET_TRANSACTION)
-              .addMethod(METHOD_GET_ASSET_HISTORY)
-              .addMethod(METHOD_GET_ACCOUNT_HOLDINGS)
-              .addMethod(METHOD_GET_ACCOUNT_HISTORY)
-              .addMethod(METHOD_CREATE)
-              .addMethod(METHOD_TRANSFER)
-              .addMethod(METHOD_TRANSACT)
+              .setSchemaDescriptor(new LedgerFileDescriptorSupplier())
+              .addMethod(getGetAssetMethod())
+              .addMethod(getGetTransactionMethod())
+              .addMethod(getGetAssetHistoryMethod())
+              .addMethod(getGetAccountHoldingsMethod())
+              .addMethod(getGetAccountHistoryMethod())
+              .addMethod(getCreateMethod())
+              .addMethod(getTransferMethod())
+              .addMethod(getTransactMethod())
               .build();
         }
       }

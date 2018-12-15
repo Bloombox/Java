@@ -1,11 +1,12 @@
 /*
- * Copyright 2018, Bloombox, LLC.
+ * Copyright 2018, Momentum Ideas, Co. All rights reserved.
  *
- * Licensed under the Apache License, Version 2.0 (the "License");
- * you may not use this file except in compliance with the License.
- * You may obtain a copy of the License at
- *
- *     http://www.apache.org/licenses/LICENSE-2.0
+ * Source and object computer code contained herein is the private intellectual
+ * property of Momentum Ideas Co., a Delaware Corporation. Use of this
+ * code in source form requires permission in writing before use or the
+ * assembly, distribution, or publishing of derivative works, for commercial
+ * purposes or any other purpose, from a duly authorized officer of Momentum
+ * Ideas Co.
  *
  * Unless required by applicable law or agreed to in writing, software
  * distributed under the License is distributed on an "AS IS" BASIS,
@@ -31,15 +32,15 @@ public final class Integrity {
         (com.google.protobuf.ExtensionRegistryLite) registry);
   }
   static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_opencannabis_crypto_primitives_integrity_Hash_descriptor;
+    internal_static_opencannabis_crypto_Hash_descriptor;
   static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_opencannabis_crypto_primitives_integrity_Hash_fieldAccessorTable;
+      internal_static_opencannabis_crypto_Hash_fieldAccessorTable;
   static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_opencannabis_crypto_primitives_integrity_HashedData_descriptor;
+    internal_static_opencannabis_crypto_HashedData_descriptor;
   static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_opencannabis_crypto_primitives_integrity_HashedData_fieldAccessorTable;
+      internal_static_opencannabis_crypto_HashedData_fieldAccessorTable;
 
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
@@ -49,18 +50,16 @@ public final class Integrity {
       descriptor;
   static {
     java.lang.String[] descriptorData = {
-      "\n!crypto/primitives/Integrity.proto\022(ope" +
-      "ncannabis.crypto.primitives.integrity\"\211\001" +
-      "\n\004Hash\022J\n\talgorithm\030\001 \001(\01627.opencannabis" +
-      ".crypto.primitives.integrity.HashAlgorit" +
-      "hm\022\r\n\003raw\030\002 \001(\014H\000\022\r\n\003hex\030\003 \001(\tH\000\022\r\n\003b64\030" +
-      "\004 \001(\tH\000B\010\n\006digest\"X\n\nHashedData\022\014\n\004data\030" +
-      "\001 \001(\014\022<\n\004hash\030\002 \001(\0132..opencannabis.crypt" +
-      "o.primitives.integrity.Hash*R\n\rHashAlgor" +
-      "ithm\022\010\n\004SHA1\020\000\022\007\n\003MD5\020\001\022\n\n\006SHA256\020\002\022\n\n\006S" +
-      "HA384\020\003\022\n\n\006SHA512\020\004\022\n\n\006MURMUR\020\006B>\n2io.op" +
-      "encannabis.schema.crypto.primitives.inte" +
-      "grityH\001P\001\242\002\003OCSb\006proto3"
+      "\n!crypto/primitives/Integrity.proto\022\023ope" +
+      "ncannabis.crypto\"t\n\004Hash\0225\n\talgorithm\030\001 " +
+      "\001(\0162\".opencannabis.crypto.HashAlgorithm\022" +
+      "\r\n\003raw\030\002 \001(\014H\000\022\r\n\003hex\030\003 \001(\tH\000\022\r\n\003b64\030\004 \001" +
+      "(\tH\000B\010\n\006digest\"C\n\nHashedData\022\014\n\004data\030\001 \001" +
+      "(\014\022\'\n\004hash\030\002 \001(\0132\031.opencannabis.crypto.H" +
+      "ash*R\n\rHashAlgorithm\022\010\n\004SHA1\020\000\022\007\n\003MD5\020\001\022" +
+      "\n\n\006SHA256\020\002\022\n\n\006SHA384\020\003\022\n\n\006SHA512\020\004\022\n\n\006M" +
+      "URMUR\020\006B>\n2io.opencannabis.schema.crypto" +
+      ".primitives.integrityH\001P\001\242\002\003OCSb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -74,17 +73,17 @@ public final class Integrity {
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
         }, assigner);
-    internal_static_opencannabis_crypto_primitives_integrity_Hash_descriptor =
+    internal_static_opencannabis_crypto_Hash_descriptor =
       getDescriptor().getMessageTypes().get(0);
-    internal_static_opencannabis_crypto_primitives_integrity_Hash_fieldAccessorTable = new
+    internal_static_opencannabis_crypto_Hash_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_opencannabis_crypto_primitives_integrity_Hash_descriptor,
+        internal_static_opencannabis_crypto_Hash_descriptor,
         new java.lang.String[] { "Algorithm", "Raw", "Hex", "B64", "Digest", });
-    internal_static_opencannabis_crypto_primitives_integrity_HashedData_descriptor =
+    internal_static_opencannabis_crypto_HashedData_descriptor =
       getDescriptor().getMessageTypes().get(1);
-    internal_static_opencannabis_crypto_primitives_integrity_HashedData_fieldAccessorTable = new
+    internal_static_opencannabis_crypto_HashedData_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_opencannabis_crypto_primitives_integrity_HashedData_descriptor,
+        internal_static_opencannabis_crypto_HashedData_descriptor,
         new java.lang.String[] { "Data", "Hash", });
   }
 

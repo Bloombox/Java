@@ -1,8 +1,8 @@
 /*
- * Copyright 2018, Bloombox, LLC. All rights reserved.
+ * Copyright 2018, Momentum Ideas, Co. All rights reserved.
  *
  * Source and object computer code contained herein is the private intellectual
- * property of Bloombox, a California Limited Liability Corporation. Use of this
+ * property of Momentum Ideas Co., a Delaware Corporation. Use of this
  * code in source form requires permission in writing before use or the
  * assembly, distribution, or publishing of derivative works, for commercial
  * purposes or any other purpose, from a duly authorized officer of Momentum
@@ -32,145 +32,145 @@ public final class DashServiceBeta1 {
         (com.google.protobuf.ExtensionRegistryLite) registry);
   }
   static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_bloombox_schema_services_dash_v1beta1_GetPartnerSettings_descriptor;
+    internal_static_bloombox_services_dash_v1beta1_GetPartnerSettings_descriptor;
   static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_bloombox_schema_services_dash_v1beta1_GetPartnerSettings_fieldAccessorTable;
+      internal_static_bloombox_services_dash_v1beta1_GetPartnerSettings_fieldAccessorTable;
   static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_bloombox_schema_services_dash_v1beta1_GetPartnerSettings_Request_descriptor;
+    internal_static_bloombox_services_dash_v1beta1_GetPartnerSettings_Request_descriptor;
   static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_bloombox_schema_services_dash_v1beta1_GetPartnerSettings_Request_fieldAccessorTable;
+      internal_static_bloombox_services_dash_v1beta1_GetPartnerSettings_Request_fieldAccessorTable;
   static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_bloombox_schema_services_dash_v1beta1_GetPartnerSettings_Response_descriptor;
+    internal_static_bloombox_services_dash_v1beta1_GetPartnerSettings_Response_descriptor;
   static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_bloombox_schema_services_dash_v1beta1_GetPartnerSettings_Response_fieldAccessorTable;
+      internal_static_bloombox_services_dash_v1beta1_GetPartnerSettings_Response_fieldAccessorTable;
   static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_bloombox_schema_services_dash_v1beta1_UpdatePartnerSettings_descriptor;
+    internal_static_bloombox_services_dash_v1beta1_UpdatePartnerSettings_descriptor;
   static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_bloombox_schema_services_dash_v1beta1_UpdatePartnerSettings_fieldAccessorTable;
+      internal_static_bloombox_services_dash_v1beta1_UpdatePartnerSettings_fieldAccessorTable;
   static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_bloombox_schema_services_dash_v1beta1_UpdatePartnerSettings_Request_descriptor;
+    internal_static_bloombox_services_dash_v1beta1_UpdatePartnerSettings_Request_descriptor;
   static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_bloombox_schema_services_dash_v1beta1_UpdatePartnerSettings_Request_fieldAccessorTable;
+      internal_static_bloombox_services_dash_v1beta1_UpdatePartnerSettings_Request_fieldAccessorTable;
   static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_bloombox_schema_services_dash_v1beta1_GetLocationSettings_descriptor;
+    internal_static_bloombox_services_dash_v1beta1_GetLocationSettings_descriptor;
   static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_bloombox_schema_services_dash_v1beta1_GetLocationSettings_fieldAccessorTable;
+      internal_static_bloombox_services_dash_v1beta1_GetLocationSettings_fieldAccessorTable;
   static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_bloombox_schema_services_dash_v1beta1_GetLocationSettings_Request_descriptor;
+    internal_static_bloombox_services_dash_v1beta1_GetLocationSettings_Request_descriptor;
   static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_bloombox_schema_services_dash_v1beta1_GetLocationSettings_Request_fieldAccessorTable;
+      internal_static_bloombox_services_dash_v1beta1_GetLocationSettings_Request_fieldAccessorTable;
   static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_bloombox_schema_services_dash_v1beta1_GetLocationSettings_Response_descriptor;
+    internal_static_bloombox_services_dash_v1beta1_GetLocationSettings_Response_descriptor;
   static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_bloombox_schema_services_dash_v1beta1_GetLocationSettings_Response_fieldAccessorTable;
+      internal_static_bloombox_services_dash_v1beta1_GetLocationSettings_Response_fieldAccessorTable;
   static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_bloombox_schema_services_dash_v1beta1_UpdateLocationSettings_descriptor;
+    internal_static_bloombox_services_dash_v1beta1_UpdateLocationSettings_descriptor;
   static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_bloombox_schema_services_dash_v1beta1_UpdateLocationSettings_fieldAccessorTable;
+      internal_static_bloombox_services_dash_v1beta1_UpdateLocationSettings_fieldAccessorTable;
   static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_bloombox_schema_services_dash_v1beta1_UpdateLocationSettings_Request_descriptor;
+    internal_static_bloombox_services_dash_v1beta1_UpdateLocationSettings_Request_descriptor;
   static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_bloombox_schema_services_dash_v1beta1_UpdateLocationSettings_Request_fieldAccessorTable;
+      internal_static_bloombox_services_dash_v1beta1_UpdateLocationSettings_Request_fieldAccessorTable;
   static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_bloombox_schema_services_dash_v1beta1_ValidateIntegration_descriptor;
+    internal_static_bloombox_services_dash_v1beta1_ValidateIntegration_descriptor;
   static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_bloombox_schema_services_dash_v1beta1_ValidateIntegration_fieldAccessorTable;
+      internal_static_bloombox_services_dash_v1beta1_ValidateIntegration_fieldAccessorTable;
   static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_bloombox_schema_services_dash_v1beta1_ValidateIntegration_Request_descriptor;
+    internal_static_bloombox_services_dash_v1beta1_ValidateIntegration_Request_descriptor;
   static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_bloombox_schema_services_dash_v1beta1_ValidateIntegration_Request_fieldAccessorTable;
+      internal_static_bloombox_services_dash_v1beta1_ValidateIntegration_Request_fieldAccessorTable;
   static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_bloombox_schema_services_dash_v1beta1_ValidateIntegration_Response_descriptor;
+    internal_static_bloombox_services_dash_v1beta1_ValidateIntegration_Response_descriptor;
   static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_bloombox_schema_services_dash_v1beta1_ValidateIntegration_Response_fieldAccessorTable;
+      internal_static_bloombox_services_dash_v1beta1_ValidateIntegration_Response_fieldAccessorTable;
   static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_bloombox_schema_services_dash_v1beta1_TestIntegration_descriptor;
+    internal_static_bloombox_services_dash_v1beta1_TestIntegration_descriptor;
   static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_bloombox_schema_services_dash_v1beta1_TestIntegration_fieldAccessorTable;
+      internal_static_bloombox_services_dash_v1beta1_TestIntegration_fieldAccessorTable;
   static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_bloombox_schema_services_dash_v1beta1_TestIntegration_Request_descriptor;
+    internal_static_bloombox_services_dash_v1beta1_TestIntegration_Request_descriptor;
   static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_bloombox_schema_services_dash_v1beta1_TestIntegration_Request_fieldAccessorTable;
+      internal_static_bloombox_services_dash_v1beta1_TestIntegration_Request_fieldAccessorTable;
   static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_bloombox_schema_services_dash_v1beta1_TestIntegration_Response_descriptor;
+    internal_static_bloombox_services_dash_v1beta1_TestIntegration_Response_descriptor;
   static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_bloombox_schema_services_dash_v1beta1_TestIntegration_Response_fieldAccessorTable;
+      internal_static_bloombox_services_dash_v1beta1_TestIntegration_Response_fieldAccessorTable;
   static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_bloombox_schema_services_dash_v1beta1_TriggerIntegration_descriptor;
+    internal_static_bloombox_services_dash_v1beta1_TriggerIntegration_descriptor;
   static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_bloombox_schema_services_dash_v1beta1_TriggerIntegration_fieldAccessorTable;
+      internal_static_bloombox_services_dash_v1beta1_TriggerIntegration_fieldAccessorTable;
   static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_bloombox_schema_services_dash_v1beta1_TriggerIntegration_Request_descriptor;
+    internal_static_bloombox_services_dash_v1beta1_TriggerIntegration_Request_descriptor;
   static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_bloombox_schema_services_dash_v1beta1_TriggerIntegration_Request_fieldAccessorTable;
+      internal_static_bloombox_services_dash_v1beta1_TriggerIntegration_Request_fieldAccessorTable;
   static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_bloombox_schema_services_dash_v1beta1_TriggerIntegration_Response_descriptor;
+    internal_static_bloombox_services_dash_v1beta1_TriggerIntegration_Response_descriptor;
   static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_bloombox_schema_services_dash_v1beta1_TriggerIntegration_Response_fieldAccessorTable;
+      internal_static_bloombox_services_dash_v1beta1_TriggerIntegration_Response_fieldAccessorTable;
   static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_bloombox_schema_services_dash_v1beta1_GetPartner_descriptor;
+    internal_static_bloombox_services_dash_v1beta1_GetPartner_descriptor;
   static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_bloombox_schema_services_dash_v1beta1_GetPartner_fieldAccessorTable;
+      internal_static_bloombox_services_dash_v1beta1_GetPartner_fieldAccessorTable;
   static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_bloombox_schema_services_dash_v1beta1_GetPartner_Request_descriptor;
+    internal_static_bloombox_services_dash_v1beta1_GetPartner_Request_descriptor;
   static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_bloombox_schema_services_dash_v1beta1_GetPartner_Request_fieldAccessorTable;
+      internal_static_bloombox_services_dash_v1beta1_GetPartner_Request_fieldAccessorTable;
   static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_bloombox_schema_services_dash_v1beta1_GetPartner_Response_descriptor;
+    internal_static_bloombox_services_dash_v1beta1_GetPartner_Response_descriptor;
   static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_bloombox_schema_services_dash_v1beta1_GetPartner_Response_fieldAccessorTable;
+      internal_static_bloombox_services_dash_v1beta1_GetPartner_Response_fieldAccessorTable;
   static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_bloombox_schema_services_dash_v1beta1_ListLocations_descriptor;
+    internal_static_bloombox_services_dash_v1beta1_ListLocations_descriptor;
   static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_bloombox_schema_services_dash_v1beta1_ListLocations_fieldAccessorTable;
+      internal_static_bloombox_services_dash_v1beta1_ListLocations_fieldAccessorTable;
   static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_bloombox_schema_services_dash_v1beta1_ListLocations_Request_descriptor;
+    internal_static_bloombox_services_dash_v1beta1_ListLocations_Request_descriptor;
   static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_bloombox_schema_services_dash_v1beta1_ListLocations_Request_fieldAccessorTable;
+      internal_static_bloombox_services_dash_v1beta1_ListLocations_Request_fieldAccessorTable;
   static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_bloombox_schema_services_dash_v1beta1_ListLocations_Response_descriptor;
+    internal_static_bloombox_services_dash_v1beta1_ListLocations_Response_descriptor;
   static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_bloombox_schema_services_dash_v1beta1_ListLocations_Response_fieldAccessorTable;
+      internal_static_bloombox_services_dash_v1beta1_ListLocations_Response_fieldAccessorTable;
   static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_bloombox_schema_services_dash_v1beta1_GetLocation_descriptor;
+    internal_static_bloombox_services_dash_v1beta1_GetLocation_descriptor;
   static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_bloombox_schema_services_dash_v1beta1_GetLocation_fieldAccessorTable;
+      internal_static_bloombox_services_dash_v1beta1_GetLocation_fieldAccessorTable;
   static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_bloombox_schema_services_dash_v1beta1_GetLocation_Request_descriptor;
+    internal_static_bloombox_services_dash_v1beta1_GetLocation_Request_descriptor;
   static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_bloombox_schema_services_dash_v1beta1_GetLocation_Request_fieldAccessorTable;
+      internal_static_bloombox_services_dash_v1beta1_GetLocation_Request_fieldAccessorTable;
   static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_bloombox_schema_services_dash_v1beta1_GetLocation_Response_descriptor;
+    internal_static_bloombox_services_dash_v1beta1_GetLocation_Response_descriptor;
   static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_bloombox_schema_services_dash_v1beta1_GetLocation_Response_fieldAccessorTable;
+      internal_static_bloombox_services_dash_v1beta1_GetLocation_Response_fieldAccessorTable;
 
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
@@ -180,158 +180,152 @@ public final class DashServiceBeta1 {
       descriptor;
   static {
     java.lang.String[] descriptorData = {
-      "\n$dash/v1beta1/DashService_Beta1.proto\022%" +
-      "bloombox.schema.services.dash.v1beta1\032\025p" +
-      "artner/Partner.proto\032\035partner/PartnerLoc" +
-      "ation.proto\032&partner/settings/PartnerSet" +
-      "tings.proto\032.partner/settings/PartnerLoc" +
-      "ationSettings.proto\032.partner/integration" +
-      "s/IntegrationSettings.proto\032\033google/prot" +
-      "obuf/empty.proto\032\034google/api/annotations" +
-      ".proto\032(protoc-gen-swagger/options/swagg" +
-      "er.proto\"\201\001\n\022GetPartnerSettings\032\032\n\007Reque" +
-      "st\022\017\n\007partner\030\001 \001(\t\032O\n\010Response\022C\n\010setti" +
-      "ngs\030\001 \001(\01321.bloombox.schema.partner.sett" +
-      "ings.PartnerSettings\"x\n\025UpdatePartnerSet" +
-      "tings\032_\n\007Request\022\017\n\007partner\030\001 \001(\t\022C\n\010set" +
-      "tings\030\002 \001(\01321.bloombox.schema.partner.se" +
-      "ttings.PartnerSettings\"\234\001\n\023GetLocationSe" +
-      "ttings\032,\n\007Request\022\017\n\007partner\030\001 \001(\t\022\020\n\010lo" +
-      "cation\030\002 \001(\t\032W\n\010Response\022K\n\010settings\030\001 \001" +
-      "(\01329.bloombox.schema.partner.settings.Pa" +
-      "rtnerLocationSettings\"\223\001\n\026UpdateLocation" +
-      "Settings\032y\n\007Request\022\017\n\007partner\030\001 \001(\t\022\020\n\010" +
-      "location\030\002 \001(\t\022K\n\010settings\030\003 \001(\01329.bloom" +
-      "box.schema.partner.settings.PartnerLocat" +
-      "ionSettings\"\351\001\n\023ValidateIntegration\032v\n\007R" +
-      "equest\022\017\n\007partner\030\001 \001(\t\022\020\n\010location\030\002 \001(" +
-      "\t\022H\n\006vendor\030\003 \001(\01628.bloombox.schema.part" +
-      "ner.integrations.IntegrationPartner\032Z\n\010R" +
-      "esponse\022=\n\003err\030\001 \001(\01620.bloombox.schema.s" +
-      "ervices.dash.v1beta1.DashError\022\017\n\007messag" +
-      "e\030\002 \001(\t\"\345\001\n\017TestIntegration\032v\n\007Request\022\017" +
-      "\n\007partner\030\001 \001(\t\022\020\n\010location\030\002 \001(\t\022H\n\006ven" +
-      "dor\030\003 \001(\01628.bloombox.schema.partner.inte" +
-      "grations.IntegrationPartner\032Z\n\010Response\022" +
-      "=\n\003err\030\001 \001(\01620.bloombox.schema.services." +
-      "dash.v1beta1.DashError\022\017\n\007message\030\002 \001(\t\"" +
-      "\350\001\n\022TriggerIntegration\032v\n\007Request\022\017\n\007par" +
-      "tner\030\001 \001(\t\022\020\n\010location\030\002 \001(\t\022H\n\006vendor\030\003" +
-      " \001(\01628.bloombox.schema.partner.integrati" +
-      "ons.IntegrationPartner\032Z\n\010Response\022=\n\003er" +
-      "r\030\001 \001(\01620.bloombox.schema.services.dash." +
-      "v1beta1.DashError\022\017\n\007message\030\002 \001(\t\"g\n\nGe" +
-      "tPartner\032\032\n\007Request\022\017\n\007partner\030\001 \001(\t\032=\n\010" +
-      "Response\0221\n\007partner\030\001 \001(\0132 .bloombox.sch" +
-      "ema.partner.Partner\"t\n\rListLocations\032\032\n\007" +
-      "Request\022\017\n\007partner\030\001 \001(\t\032G\n\010Response\022;\n\t" +
-      "locations\030\001 \003(\0132(.bloombox.schema.partne" +
-      "r.PartnerLocation\"\203\001\n\013GetLocation\032,\n\007Req" +
-      "uest\022\017\n\007partner\030\001 \001(\t\022\020\n\010location\030\002 \001(\t\032" +
-      "F\n\010Response\022:\n\010location\030\001 \001(\0132(.bloombox" +
-      ".schema.partner.PartnerLocation*\273\002\n\tDash" +
-      "Error\022\014\n\010NO_ERROR\020\000\022\023\n\017PARTNER_INVALID\020\001" +
-      "\022\025\n\021PARTNER_NOT_FOUND\020\002\022\024\n\020LOCATION_INVA" +
-      "LID\020\003\022\026\n\022LOCATION_NOT_FOUND\020\004\022\031\n\025INTEGRA" +
-      "TION_NOT_READY\020\005\022\030\n\024INTEGRATION_DISABLED" +
-      "\020\006\022\030\n\024INTEGRATION_AUTHFAIL\020\007\022 \n\034INTEGRAT" +
-      "ION_SETTINGS_INVALID\020\t\022\025\n\021INTEGRATION_ER" +
-      "ROR\020\n\022\025\n\021PERMISSION_DENIED\020Z\022\023\n\017NOT_IMPL" +
-      "EMENTED\020[\022\022\n\016INTERNAL_ERROR\020c2\217\031\n\tDashbo" +
-      "ard\022\357\001\n\007Partner\0229.bloombox.schema.servic" +
-      "es.dash.v1beta1.GetPartner.Request\032:.blo" +
-      "ombox.schema.services.dash.v1beta1.GetPa" +
-      "rtner.Response\"m\202\323\344\223\002\"\022 /dash/v1beta1/pa" +
-      "rtners/{partner}\222AB\022\013Get Partner\032\'Retrie" +
-      "ve an individual partner\'s record*\nGetPa" +
-      "rtner\022\221\002\n\tLocations\022<.bloombox.schema.se" +
-      "rvices.dash.v1beta1.ListLocations.Reques" +
-      "t\032=.bloombox.schema.services.dash.v1beta" +
-      "1.ListLocations.Response\"\206\001\202\323\344\223\002,\022*/dash" +
-      "/v1beta1/partners/{partner}/locations\222AQ" +
-      "\022\016List Locations\0320Retrieve a list of loc" +
-      "ations for a given partner*\rListLocation" +
-      "s\022\221\002\n\010Location\022:.bloombox.schema.service" +
-      "s.dash.v1beta1.GetLocation.Request\032;.blo" +
-      "ombox.schema.services.dash.v1beta1.GetLo" +
-      "cation.Response\"\213\001\202\323\344\223\0027\0225/dash/v1beta1/" +
-      "partners/{partner}/locations/{location}\222" +
-      "AK\022\014Get Location\032.Retrieve an individual" +
-      " partner location record*\013GetLocation\022\227\002" +
-      "\n\017PartnerSettings\022A.bloombox.schema.serv" +
-      "ices.dash.v1beta1.GetPartnerSettings.Req" +
-      "uest\032B.bloombox.schema.services.dash.v1b" +
-      "eta1.GetPartnerSettings.Response\"}\202\323\344\223\002+" +
-      "\022)/dash/v1beta1/partners/{partner}/setti" +
-      "ngs\222AI\022\024Get Partner Settings\032 Retrieve p" +
-      "artner-level settings.*\017PartnerSettings\022" +
-      "\214\002\n\025PartnerSettingsUpdate\022D.bloombox.sch" +
-      "ema.services.dash.v1beta1.UpdatePartnerS" +
-      "ettings.Request\032\026.google.protobuf.Empty\"" +
-      "\224\001\202\323\344\223\002.\")/dash/v1beta1/partners/{partne" +
-      "r}/settings:\001*\222A]\022\027Update Partner Settin" +
-      "gs\032+Update organization/partner-level se" +
-      "ttings.*\025UpdatePartnerSettings\022\263\002\n\020Locat" +
-      "ionSettings\022B.bloombox.schema.services.d" +
-      "ash.v1beta1.GetLocationSettings.Request\032" +
-      "C.bloombox.schema.services.dash.v1beta1." +
-      "GetLocationSettings.Response\"\225\001\202\323\344\223\002@\022>/" +
-      "dash/v1beta1/partners/{partner}/location" +
-      "s/{location}/settings\222AL\022\025Get Location S" +
-      "ettings\032!Retrieve location-level setting" +
-      "s.*\020LocationSettings\022\242\002\n\026LocationSetting" +
-      "sUpdate\022E.bloombox.schema.services.dash." +
-      "v1beta1.UpdateLocationSettings.Request\032\026" +
-      ".google.protobuf.Empty\"\250\001\202\323\344\223\002C\">/dash/v" +
-      "1beta1/partners/{partner}/locations/{loc" +
-      "ation}/settings:\001*\222A\\\022\030Update Location S" +
-      "ettings\032(Update location/business-level " +
-      "settings.*\026UpdateLocationSettings\022\256\003\n\023In" +
-      "tegrationValidate\022B.bloombox.schema.serv" +
-      "ices.dash.v1beta1.ValidateIntegration.Re" +
-      "quest\032C.bloombox.schema.services.dash.v1" +
-      "beta1.ValidateIntegration.Response\"\215\002\202\323\344" +
-      "\223\002\235\001\">/dash/v1beta1/partners/{partner}/i" +
-      "ntegration/{vendor}/validate:\001*ZX\"S/dash" +
-      "/v1beta1/partners/{partner}/locations/{l" +
-      "ocation}/integration/{vendor}/validate:\001" +
-      "*\222Af\022\035Validate integration settings\0320Mak" +
-      "e sure settings work for a given integra" +
-      "tion.*\023IntegrationValidate\022\207\003\n\017Integrati" +
-      "onTest\022>.bloombox.schema.services.dash.v" +
-      "1beta1.TestIntegration.Request\032?.bloombo" +
-      "x.schema.services.dash.v1beta1.TestInteg" +
-      "ration.Response\"\362\001\202\323\344\223\002\225\001\":/dash/v1beta1" +
-      "/partners/{partner}/integration/{vendor}" +
-      "/test:\001*ZT\"O/dash/v1beta1/partners/{part" +
-      "ner}/locations/{location}/integration/{v" +
-      "endor}/test:\001*\222AS\022\023Test an integration\032+" +
-      "Perform a test for a connected integrati" +
-      "on.*\017IntegrationTest\022\250\003\n\022IntegrationTrig" +
-      "ger\022A.bloombox.schema.services.dash.v1be" +
-      "ta1.TriggerIntegration.Request\032B.bloombo" +
-      "x.schema.services.dash.v1beta1.TriggerIn" +
-      "tegration.Response\"\212\002\202\323\344\223\002\233\001\"=/dash/v1be" +
-      "ta1/partners/{partner}/integration/{vend" +
-      "or}/trigger:\001*ZW\"R/dash/v1beta1/partners" +
-      "/{partner}/locations/{location}/integrat" +
-      "ion/{vendor}/trigger:\001*\222Ae\022\026Trigger an i" +
-      "ntegration\0327Manually notify an integrati" +
-      "on to trigger an execution.*\022Integration" +
-      "TriggerB\214\004\n(io.bloombox.schema.services." +
-      "dash.v1beta1H\001P\001\242\002\003BBS\222A\324\003\022l\n\rDashboard " +
-      "API\032\031https://bloombox.io/terms\"7\n\010Bloomb" +
-      "ox\022\023https://bloombox.io\032\026developers@bloo" +
-      "mbox.io2\007v1beta1\032\022api.bloombox.cloud*\001\0022" +
-      "\020application/json:\020application/jsonZ\320\001\nd" +
-      "\n\013ApiKeyParam\022U\010\002\022JParameter for identif" +
-      "ying API key owned by the invoking proje" +
-      "ct or system.\032\003key \001\nh\n\014ApiKeyHeader\022X\010\002" +
-      "\022GHeader for identifying API key owned b" +
-      "y the invoking project or system.\032\tX-API" +
-      "-Key \001b\021\n\017\n\013ApiKeyParam\022\000b\022\n\020\n\014ApiKeyHea" +
-      "der\022\000r/\n\rBloombox APIs\022\036https://apidocs." +
-      "bloombox.cloudb\006proto3"
+      "\n$dash/v1beta1/DashService_Beta1.proto\022\036" +
+      "bloombox.services.dash.v1beta1\032\025partner/" +
+      "Partner.proto\032\035partner/PartnerLocation.p" +
+      "roto\032&partner/settings/PartnerSettings.p" +
+      "roto\032.partner/settings/PartnerLocationSe" +
+      "ttings.proto\032.partner/integrations/Integ" +
+      "rationSettings.proto\032\033google/protobuf/em" +
+      "pty.proto\032\034google/api/annotations.proto\032" +
+      "(protoc-gen-swagger/options/swagger.prot" +
+      "o\"z\n\022GetPartnerSettings\032\032\n\007Request\022\017\n\007pa" +
+      "rtner\030\001 \001(\t\032H\n\010Response\022<\n\010settings\030\001 \001(" +
+      "\0132*.bloombox.partner.settings.PartnerSet" +
+      "tings\"q\n\025UpdatePartnerSettings\032X\n\007Reques" +
+      "t\022\017\n\007partner\030\001 \001(\t\022<\n\010settings\030\002 \001(\0132*.b" +
+      "loombox.partner.settings.PartnerSettings" +
+      "\"\225\001\n\023GetLocationSettings\032,\n\007Request\022\017\n\007p" +
+      "artner\030\001 \001(\t\022\020\n\010location\030\002 \001(\t\032P\n\010Respon" +
+      "se\022D\n\010settings\030\001 \001(\01322.bloombox.partner." +
+      "settings.PartnerLocationSettings\"\214\001\n\026Upd" +
+      "ateLocationSettings\032r\n\007Request\022\017\n\007partne" +
+      "r\030\001 \001(\t\022\020\n\010location\030\002 \001(\t\022D\n\010settings\030\003 " +
+      "\001(\01322.bloombox.partner.settings.PartnerL" +
+      "ocationSettings\"\333\001\n\023ValidateIntegration\032" +
+      "o\n\007Request\022\017\n\007partner\030\001 \001(\t\022\020\n\010location\030" +
+      "\002 \001(\t\022A\n\006vendor\030\003 \001(\01621.bloombox.partner" +
+      ".integrations.IntegrationPartner\032S\n\010Resp" +
+      "onse\0226\n\003err\030\001 \001(\0162).bloombox.services.da" +
+      "sh.v1beta1.DashError\022\017\n\007message\030\002 \001(\t\"\327\001" +
+      "\n\017TestIntegration\032o\n\007Request\022\017\n\007partner\030" +
+      "\001 \001(\t\022\020\n\010location\030\002 \001(\t\022A\n\006vendor\030\003 \001(\0162" +
+      "1.bloombox.partner.integrations.Integrat" +
+      "ionPartner\032S\n\010Response\0226\n\003err\030\001 \001(\0162).bl" +
+      "oombox.services.dash.v1beta1.DashError\022\017" +
+      "\n\007message\030\002 \001(\t\"\332\001\n\022TriggerIntegration\032o" +
+      "\n\007Request\022\017\n\007partner\030\001 \001(\t\022\020\n\010location\030\002" +
+      " \001(\t\022A\n\006vendor\030\003 \001(\01621.bloombox.partner." +
+      "integrations.IntegrationPartner\032S\n\010Respo" +
+      "nse\0226\n\003err\030\001 \001(\0162).bloombox.services.das" +
+      "h.v1beta1.DashError\022\017\n\007message\030\002 \001(\t\"`\n\n" +
+      "GetPartner\032\032\n\007Request\022\017\n\007partner\030\001 \001(\t\0326" +
+      "\n\010Response\022*\n\007partner\030\001 \001(\0132\031.bloombox.p" +
+      "artner.Partner\"m\n\rListLocations\032\032\n\007Reque" +
+      "st\022\017\n\007partner\030\001 \001(\t\032@\n\010Response\0224\n\tlocat" +
+      "ions\030\001 \003(\0132!.bloombox.partner.PartnerLoc" +
+      "ation\"|\n\013GetLocation\032,\n\007Request\022\017\n\007partn" +
+      "er\030\001 \001(\t\022\020\n\010location\030\002 \001(\t\032?\n\010Response\0223" +
+      "\n\010location\030\001 \001(\0132!.bloombox.partner.Part" +
+      "nerLocation*\273\002\n\tDashError\022\014\n\010NO_ERROR\020\000\022" +
+      "\023\n\017PARTNER_INVALID\020\001\022\025\n\021PARTNER_NOT_FOUN" +
+      "D\020\002\022\024\n\020LOCATION_INVALID\020\003\022\026\n\022LOCATION_NO" +
+      "T_FOUND\020\004\022\031\n\025INTEGRATION_NOT_READY\020\005\022\030\n\024" +
+      "INTEGRATION_DISABLED\020\006\022\030\n\024INTEGRATION_AU" +
+      "THFAIL\020\007\022 \n\034INTEGRATION_SETTINGS_INVALID" +
+      "\020\t\022\025\n\021INTEGRATION_ERROR\020\n\022\025\n\021PERMISSION_" +
+      "DENIED\020Z\022\023\n\017NOT_IMPLEMENTED\020[\022\022\n\016INTERNA" +
+      "L_ERROR\020c2\221\030\n\tDashboard\022\341\001\n\007Partner\0222.bl" +
+      "oombox.services.dash.v1beta1.GetPartner." +
+      "Request\0323.bloombox.services.dash.v1beta1" +
+      ".GetPartner.Response\"m\202\323\344\223\002\"\022 /dash/v1be" +
+      "ta1/partners/{partner}\222AB\022\013Get Partner\032\'" +
+      "Retrieve an individual partner\'s record*" +
+      "\nGetPartner\022\203\002\n\tLocations\0225.bloombox.ser" +
+      "vices.dash.v1beta1.ListLocations.Request" +
+      "\0326.bloombox.services.dash.v1beta1.ListLo" +
+      "cations.Response\"\206\001\202\323\344\223\002,\022*/dash/v1beta1" +
+      "/partners/{partner}/locations\222AQ\022\016List L" +
+      "ocations\0320Retrieve a list of locations f" +
+      "or a given partner*\rListLocations\022\203\002\n\010Lo" +
+      "cation\0223.bloombox.services.dash.v1beta1." +
+      "GetLocation.Request\0324.bloombox.services." +
+      "dash.v1beta1.GetLocation.Response\"\213\001\202\323\344\223" +
+      "\0027\0225/dash/v1beta1/partners/{partner}/loc" +
+      "ations/{location}\222AK\022\014Get Location\032.Retr" +
+      "ieve an individual partner location reco" +
+      "rd*\013GetLocation\022\211\002\n\017PartnerSettings\022:.bl" +
+      "oombox.services.dash.v1beta1.GetPartnerS" +
+      "ettings.Request\032;.bloombox.services.dash" +
+      ".v1beta1.GetPartnerSettings.Response\"}\202\323" +
+      "\344\223\002+\022)/dash/v1beta1/partners/{partner}/s" +
+      "ettings\222AI\022\024Get Partner Settings\032 Retrie" +
+      "ve partner-level settings.*\017PartnerSetti" +
+      "ngs\022\205\002\n\025PartnerSettingsUpdate\022=.bloombox" +
+      ".services.dash.v1beta1.UpdatePartnerSett" +
+      "ings.Request\032\026.google.protobuf.Empty\"\224\001\202" +
+      "\323\344\223\002.\")/dash/v1beta1/partners/{partner}/" +
+      "settings:\001*\222A]\022\027Update Partner Settings\032" +
+      "+Update organization/partner-level setti" +
+      "ngs.*\025UpdatePartnerSettings\022\245\002\n\020Location" +
+      "Settings\022;.bloombox.services.dash.v1beta" +
+      "1.GetLocationSettings.Request\032<.bloombox" +
+      ".services.dash.v1beta1.GetLocationSettin" +
+      "gs.Response\"\225\001\202\323\344\223\002@\022>/dash/v1beta1/part" +
+      "ners/{partner}/locations/{location}/sett" +
+      "ings\222AL\022\025Get Location Settings\032!Retrieve" +
+      " location-level settings.*\020LocationSetti" +
+      "ngs\022\233\002\n\026LocationSettingsUpdate\022>.bloombo" +
+      "x.services.dash.v1beta1.UpdateLocationSe" +
+      "ttings.Request\032\026.google.protobuf.Empty\"\250" +
+      "\001\202\323\344\223\002C\">/dash/v1beta1/partners/{partner" +
+      "}/locations/{location}/settings:\001*\222A\\\022\030U" +
+      "pdate Location Settings\032(Update location" +
+      "/business-level settings.*\026UpdateLocatio" +
+      "nSettings\022\240\003\n\023IntegrationValidate\022;.bloo" +
+      "mbox.services.dash.v1beta1.ValidateInteg" +
+      "ration.Request\032<.bloombox.services.dash." +
+      "v1beta1.ValidateIntegration.Response\"\215\002\202" +
+      "\323\344\223\002\235\001\">/dash/v1beta1/partners/{partner}" +
+      "/integration/{vendor}/validate:\001*ZX\"S/da" +
+      "sh/v1beta1/partners/{partner}/locations/" +
+      "{location}/integration/{vendor}/validate" +
+      ":\001*\222Af\022\035Validate integration settings\0320M" +
+      "ake sure settings work for a given integ" +
+      "ration.*\023IntegrationValidate\022\371\002\n\017Integra" +
+      "tionTest\0227.bloombox.services.dash.v1beta" +
+      "1.TestIntegration.Request\0328.bloombox.ser" +
+      "vices.dash.v1beta1.TestIntegration.Respo" +
+      "nse\"\362\001\202\323\344\223\002\225\001\":/dash/v1beta1/partners/{p" +
+      "artner}/integration/{vendor}/test:\001*ZT\"O" +
+      "/dash/v1beta1/partners/{partner}/locatio" +
+      "ns/{location}/integration/{vendor}/test:" +
+      "\001*\222AS\022\023Test an integration\032+Perform a te" +
+      "st for a connected integration.*\017Integra" +
+      "tionTest\022\232\003\n\022IntegrationTrigger\022:.bloomb" +
+      "ox.services.dash.v1beta1.TriggerIntegrat" +
+      "ion.Request\032;.bloombox.services.dash.v1b" +
+      "eta1.TriggerIntegration.Response\"\212\002\202\323\344\223\002" +
+      "\233\001\"=/dash/v1beta1/partners/{partner}/int" +
+      "egration/{vendor}/trigger:\001*ZW\"R/dash/v1" +
+      "beta1/partners/{partner}/locations/{loca" +
+      "tion}/integration/{vendor}/trigger:\001*\222Ae" +
+      "\022\026Trigger an integration\0327Manually notif" +
+      "y an integration to trigger an execution" +
+      ".*\022IntegrationTriggerB\214\004\n(io.bloombox.sc" +
+      "hema.services.dash.v1beta1H\001P\001\242\002\003BBS\222A\324\003" +
+      "\022l\n\rDashboard API\032\031https://bloombox.io/t" +
+      "erms\"7\n\010Bloombox\022\023https://bloombox.io\032\026d" +
+      "evelopers@bloombox.io2\007v1beta1\032\022api.bloo" +
+      "mbox.cloud*\001\0022\020application/json:\020applica" +
+      "tion/jsonZ\320\001\nd\n\013ApiKeyParam\022U\010\002\022JParamet" +
+      "er for identifying API key owned by the " +
+      "invoking project or system.\032\003key \001\nh\n\014Ap" +
+      "iKeyHeader\022X\010\002\022GHeader for identifying A" +
+      "PI key owned by the invoking project or " +
+      "system.\032\tX-API-Key \001b\021\n\017\n\013ApiKeyParam\022\000b" +
+      "\022\n\020\n\014ApiKeyHeader\022\000r/\n\rBloombox APIs\022\036ht" +
+      "tps://apidocs.bloombox.cloudb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -353,173 +347,173 @@ public final class DashServiceBeta1 {
           com.google.api.AnnotationsProto.getDescriptor(),
           grpc.gateway.protoc_gen_swagger.options.Swagger.getDescriptor(),
         }, assigner);
-    internal_static_bloombox_schema_services_dash_v1beta1_GetPartnerSettings_descriptor =
+    internal_static_bloombox_services_dash_v1beta1_GetPartnerSettings_descriptor =
       getDescriptor().getMessageTypes().get(0);
-    internal_static_bloombox_schema_services_dash_v1beta1_GetPartnerSettings_fieldAccessorTable = new
+    internal_static_bloombox_services_dash_v1beta1_GetPartnerSettings_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_bloombox_schema_services_dash_v1beta1_GetPartnerSettings_descriptor,
+        internal_static_bloombox_services_dash_v1beta1_GetPartnerSettings_descriptor,
         new java.lang.String[] { });
-    internal_static_bloombox_schema_services_dash_v1beta1_GetPartnerSettings_Request_descriptor =
-      internal_static_bloombox_schema_services_dash_v1beta1_GetPartnerSettings_descriptor.getNestedTypes().get(0);
-    internal_static_bloombox_schema_services_dash_v1beta1_GetPartnerSettings_Request_fieldAccessorTable = new
+    internal_static_bloombox_services_dash_v1beta1_GetPartnerSettings_Request_descriptor =
+      internal_static_bloombox_services_dash_v1beta1_GetPartnerSettings_descriptor.getNestedTypes().get(0);
+    internal_static_bloombox_services_dash_v1beta1_GetPartnerSettings_Request_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_bloombox_schema_services_dash_v1beta1_GetPartnerSettings_Request_descriptor,
+        internal_static_bloombox_services_dash_v1beta1_GetPartnerSettings_Request_descriptor,
         new java.lang.String[] { "Partner", });
-    internal_static_bloombox_schema_services_dash_v1beta1_GetPartnerSettings_Response_descriptor =
-      internal_static_bloombox_schema_services_dash_v1beta1_GetPartnerSettings_descriptor.getNestedTypes().get(1);
-    internal_static_bloombox_schema_services_dash_v1beta1_GetPartnerSettings_Response_fieldAccessorTable = new
+    internal_static_bloombox_services_dash_v1beta1_GetPartnerSettings_Response_descriptor =
+      internal_static_bloombox_services_dash_v1beta1_GetPartnerSettings_descriptor.getNestedTypes().get(1);
+    internal_static_bloombox_services_dash_v1beta1_GetPartnerSettings_Response_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_bloombox_schema_services_dash_v1beta1_GetPartnerSettings_Response_descriptor,
+        internal_static_bloombox_services_dash_v1beta1_GetPartnerSettings_Response_descriptor,
         new java.lang.String[] { "Settings", });
-    internal_static_bloombox_schema_services_dash_v1beta1_UpdatePartnerSettings_descriptor =
+    internal_static_bloombox_services_dash_v1beta1_UpdatePartnerSettings_descriptor =
       getDescriptor().getMessageTypes().get(1);
-    internal_static_bloombox_schema_services_dash_v1beta1_UpdatePartnerSettings_fieldAccessorTable = new
+    internal_static_bloombox_services_dash_v1beta1_UpdatePartnerSettings_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_bloombox_schema_services_dash_v1beta1_UpdatePartnerSettings_descriptor,
+        internal_static_bloombox_services_dash_v1beta1_UpdatePartnerSettings_descriptor,
         new java.lang.String[] { });
-    internal_static_bloombox_schema_services_dash_v1beta1_UpdatePartnerSettings_Request_descriptor =
-      internal_static_bloombox_schema_services_dash_v1beta1_UpdatePartnerSettings_descriptor.getNestedTypes().get(0);
-    internal_static_bloombox_schema_services_dash_v1beta1_UpdatePartnerSettings_Request_fieldAccessorTable = new
+    internal_static_bloombox_services_dash_v1beta1_UpdatePartnerSettings_Request_descriptor =
+      internal_static_bloombox_services_dash_v1beta1_UpdatePartnerSettings_descriptor.getNestedTypes().get(0);
+    internal_static_bloombox_services_dash_v1beta1_UpdatePartnerSettings_Request_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_bloombox_schema_services_dash_v1beta1_UpdatePartnerSettings_Request_descriptor,
+        internal_static_bloombox_services_dash_v1beta1_UpdatePartnerSettings_Request_descriptor,
         new java.lang.String[] { "Partner", "Settings", });
-    internal_static_bloombox_schema_services_dash_v1beta1_GetLocationSettings_descriptor =
+    internal_static_bloombox_services_dash_v1beta1_GetLocationSettings_descriptor =
       getDescriptor().getMessageTypes().get(2);
-    internal_static_bloombox_schema_services_dash_v1beta1_GetLocationSettings_fieldAccessorTable = new
+    internal_static_bloombox_services_dash_v1beta1_GetLocationSettings_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_bloombox_schema_services_dash_v1beta1_GetLocationSettings_descriptor,
+        internal_static_bloombox_services_dash_v1beta1_GetLocationSettings_descriptor,
         new java.lang.String[] { });
-    internal_static_bloombox_schema_services_dash_v1beta1_GetLocationSettings_Request_descriptor =
-      internal_static_bloombox_schema_services_dash_v1beta1_GetLocationSettings_descriptor.getNestedTypes().get(0);
-    internal_static_bloombox_schema_services_dash_v1beta1_GetLocationSettings_Request_fieldAccessorTable = new
+    internal_static_bloombox_services_dash_v1beta1_GetLocationSettings_Request_descriptor =
+      internal_static_bloombox_services_dash_v1beta1_GetLocationSettings_descriptor.getNestedTypes().get(0);
+    internal_static_bloombox_services_dash_v1beta1_GetLocationSettings_Request_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_bloombox_schema_services_dash_v1beta1_GetLocationSettings_Request_descriptor,
+        internal_static_bloombox_services_dash_v1beta1_GetLocationSettings_Request_descriptor,
         new java.lang.String[] { "Partner", "Location", });
-    internal_static_bloombox_schema_services_dash_v1beta1_GetLocationSettings_Response_descriptor =
-      internal_static_bloombox_schema_services_dash_v1beta1_GetLocationSettings_descriptor.getNestedTypes().get(1);
-    internal_static_bloombox_schema_services_dash_v1beta1_GetLocationSettings_Response_fieldAccessorTable = new
+    internal_static_bloombox_services_dash_v1beta1_GetLocationSettings_Response_descriptor =
+      internal_static_bloombox_services_dash_v1beta1_GetLocationSettings_descriptor.getNestedTypes().get(1);
+    internal_static_bloombox_services_dash_v1beta1_GetLocationSettings_Response_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_bloombox_schema_services_dash_v1beta1_GetLocationSettings_Response_descriptor,
+        internal_static_bloombox_services_dash_v1beta1_GetLocationSettings_Response_descriptor,
         new java.lang.String[] { "Settings", });
-    internal_static_bloombox_schema_services_dash_v1beta1_UpdateLocationSettings_descriptor =
+    internal_static_bloombox_services_dash_v1beta1_UpdateLocationSettings_descriptor =
       getDescriptor().getMessageTypes().get(3);
-    internal_static_bloombox_schema_services_dash_v1beta1_UpdateLocationSettings_fieldAccessorTable = new
+    internal_static_bloombox_services_dash_v1beta1_UpdateLocationSettings_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_bloombox_schema_services_dash_v1beta1_UpdateLocationSettings_descriptor,
+        internal_static_bloombox_services_dash_v1beta1_UpdateLocationSettings_descriptor,
         new java.lang.String[] { });
-    internal_static_bloombox_schema_services_dash_v1beta1_UpdateLocationSettings_Request_descriptor =
-      internal_static_bloombox_schema_services_dash_v1beta1_UpdateLocationSettings_descriptor.getNestedTypes().get(0);
-    internal_static_bloombox_schema_services_dash_v1beta1_UpdateLocationSettings_Request_fieldAccessorTable = new
+    internal_static_bloombox_services_dash_v1beta1_UpdateLocationSettings_Request_descriptor =
+      internal_static_bloombox_services_dash_v1beta1_UpdateLocationSettings_descriptor.getNestedTypes().get(0);
+    internal_static_bloombox_services_dash_v1beta1_UpdateLocationSettings_Request_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_bloombox_schema_services_dash_v1beta1_UpdateLocationSettings_Request_descriptor,
+        internal_static_bloombox_services_dash_v1beta1_UpdateLocationSettings_Request_descriptor,
         new java.lang.String[] { "Partner", "Location", "Settings", });
-    internal_static_bloombox_schema_services_dash_v1beta1_ValidateIntegration_descriptor =
+    internal_static_bloombox_services_dash_v1beta1_ValidateIntegration_descriptor =
       getDescriptor().getMessageTypes().get(4);
-    internal_static_bloombox_schema_services_dash_v1beta1_ValidateIntegration_fieldAccessorTable = new
+    internal_static_bloombox_services_dash_v1beta1_ValidateIntegration_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_bloombox_schema_services_dash_v1beta1_ValidateIntegration_descriptor,
+        internal_static_bloombox_services_dash_v1beta1_ValidateIntegration_descriptor,
         new java.lang.String[] { });
-    internal_static_bloombox_schema_services_dash_v1beta1_ValidateIntegration_Request_descriptor =
-      internal_static_bloombox_schema_services_dash_v1beta1_ValidateIntegration_descriptor.getNestedTypes().get(0);
-    internal_static_bloombox_schema_services_dash_v1beta1_ValidateIntegration_Request_fieldAccessorTable = new
+    internal_static_bloombox_services_dash_v1beta1_ValidateIntegration_Request_descriptor =
+      internal_static_bloombox_services_dash_v1beta1_ValidateIntegration_descriptor.getNestedTypes().get(0);
+    internal_static_bloombox_services_dash_v1beta1_ValidateIntegration_Request_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_bloombox_schema_services_dash_v1beta1_ValidateIntegration_Request_descriptor,
+        internal_static_bloombox_services_dash_v1beta1_ValidateIntegration_Request_descriptor,
         new java.lang.String[] { "Partner", "Location", "Vendor", });
-    internal_static_bloombox_schema_services_dash_v1beta1_ValidateIntegration_Response_descriptor =
-      internal_static_bloombox_schema_services_dash_v1beta1_ValidateIntegration_descriptor.getNestedTypes().get(1);
-    internal_static_bloombox_schema_services_dash_v1beta1_ValidateIntegration_Response_fieldAccessorTable = new
+    internal_static_bloombox_services_dash_v1beta1_ValidateIntegration_Response_descriptor =
+      internal_static_bloombox_services_dash_v1beta1_ValidateIntegration_descriptor.getNestedTypes().get(1);
+    internal_static_bloombox_services_dash_v1beta1_ValidateIntegration_Response_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_bloombox_schema_services_dash_v1beta1_ValidateIntegration_Response_descriptor,
+        internal_static_bloombox_services_dash_v1beta1_ValidateIntegration_Response_descriptor,
         new java.lang.String[] { "Err", "Message", });
-    internal_static_bloombox_schema_services_dash_v1beta1_TestIntegration_descriptor =
+    internal_static_bloombox_services_dash_v1beta1_TestIntegration_descriptor =
       getDescriptor().getMessageTypes().get(5);
-    internal_static_bloombox_schema_services_dash_v1beta1_TestIntegration_fieldAccessorTable = new
+    internal_static_bloombox_services_dash_v1beta1_TestIntegration_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_bloombox_schema_services_dash_v1beta1_TestIntegration_descriptor,
+        internal_static_bloombox_services_dash_v1beta1_TestIntegration_descriptor,
         new java.lang.String[] { });
-    internal_static_bloombox_schema_services_dash_v1beta1_TestIntegration_Request_descriptor =
-      internal_static_bloombox_schema_services_dash_v1beta1_TestIntegration_descriptor.getNestedTypes().get(0);
-    internal_static_bloombox_schema_services_dash_v1beta1_TestIntegration_Request_fieldAccessorTable = new
+    internal_static_bloombox_services_dash_v1beta1_TestIntegration_Request_descriptor =
+      internal_static_bloombox_services_dash_v1beta1_TestIntegration_descriptor.getNestedTypes().get(0);
+    internal_static_bloombox_services_dash_v1beta1_TestIntegration_Request_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_bloombox_schema_services_dash_v1beta1_TestIntegration_Request_descriptor,
+        internal_static_bloombox_services_dash_v1beta1_TestIntegration_Request_descriptor,
         new java.lang.String[] { "Partner", "Location", "Vendor", });
-    internal_static_bloombox_schema_services_dash_v1beta1_TestIntegration_Response_descriptor =
-      internal_static_bloombox_schema_services_dash_v1beta1_TestIntegration_descriptor.getNestedTypes().get(1);
-    internal_static_bloombox_schema_services_dash_v1beta1_TestIntegration_Response_fieldAccessorTable = new
+    internal_static_bloombox_services_dash_v1beta1_TestIntegration_Response_descriptor =
+      internal_static_bloombox_services_dash_v1beta1_TestIntegration_descriptor.getNestedTypes().get(1);
+    internal_static_bloombox_services_dash_v1beta1_TestIntegration_Response_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_bloombox_schema_services_dash_v1beta1_TestIntegration_Response_descriptor,
+        internal_static_bloombox_services_dash_v1beta1_TestIntegration_Response_descriptor,
         new java.lang.String[] { "Err", "Message", });
-    internal_static_bloombox_schema_services_dash_v1beta1_TriggerIntegration_descriptor =
+    internal_static_bloombox_services_dash_v1beta1_TriggerIntegration_descriptor =
       getDescriptor().getMessageTypes().get(6);
-    internal_static_bloombox_schema_services_dash_v1beta1_TriggerIntegration_fieldAccessorTable = new
+    internal_static_bloombox_services_dash_v1beta1_TriggerIntegration_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_bloombox_schema_services_dash_v1beta1_TriggerIntegration_descriptor,
+        internal_static_bloombox_services_dash_v1beta1_TriggerIntegration_descriptor,
         new java.lang.String[] { });
-    internal_static_bloombox_schema_services_dash_v1beta1_TriggerIntegration_Request_descriptor =
-      internal_static_bloombox_schema_services_dash_v1beta1_TriggerIntegration_descriptor.getNestedTypes().get(0);
-    internal_static_bloombox_schema_services_dash_v1beta1_TriggerIntegration_Request_fieldAccessorTable = new
+    internal_static_bloombox_services_dash_v1beta1_TriggerIntegration_Request_descriptor =
+      internal_static_bloombox_services_dash_v1beta1_TriggerIntegration_descriptor.getNestedTypes().get(0);
+    internal_static_bloombox_services_dash_v1beta1_TriggerIntegration_Request_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_bloombox_schema_services_dash_v1beta1_TriggerIntegration_Request_descriptor,
+        internal_static_bloombox_services_dash_v1beta1_TriggerIntegration_Request_descriptor,
         new java.lang.String[] { "Partner", "Location", "Vendor", });
-    internal_static_bloombox_schema_services_dash_v1beta1_TriggerIntegration_Response_descriptor =
-      internal_static_bloombox_schema_services_dash_v1beta1_TriggerIntegration_descriptor.getNestedTypes().get(1);
-    internal_static_bloombox_schema_services_dash_v1beta1_TriggerIntegration_Response_fieldAccessorTable = new
+    internal_static_bloombox_services_dash_v1beta1_TriggerIntegration_Response_descriptor =
+      internal_static_bloombox_services_dash_v1beta1_TriggerIntegration_descriptor.getNestedTypes().get(1);
+    internal_static_bloombox_services_dash_v1beta1_TriggerIntegration_Response_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_bloombox_schema_services_dash_v1beta1_TriggerIntegration_Response_descriptor,
+        internal_static_bloombox_services_dash_v1beta1_TriggerIntegration_Response_descriptor,
         new java.lang.String[] { "Err", "Message", });
-    internal_static_bloombox_schema_services_dash_v1beta1_GetPartner_descriptor =
+    internal_static_bloombox_services_dash_v1beta1_GetPartner_descriptor =
       getDescriptor().getMessageTypes().get(7);
-    internal_static_bloombox_schema_services_dash_v1beta1_GetPartner_fieldAccessorTable = new
+    internal_static_bloombox_services_dash_v1beta1_GetPartner_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_bloombox_schema_services_dash_v1beta1_GetPartner_descriptor,
+        internal_static_bloombox_services_dash_v1beta1_GetPartner_descriptor,
         new java.lang.String[] { });
-    internal_static_bloombox_schema_services_dash_v1beta1_GetPartner_Request_descriptor =
-      internal_static_bloombox_schema_services_dash_v1beta1_GetPartner_descriptor.getNestedTypes().get(0);
-    internal_static_bloombox_schema_services_dash_v1beta1_GetPartner_Request_fieldAccessorTable = new
+    internal_static_bloombox_services_dash_v1beta1_GetPartner_Request_descriptor =
+      internal_static_bloombox_services_dash_v1beta1_GetPartner_descriptor.getNestedTypes().get(0);
+    internal_static_bloombox_services_dash_v1beta1_GetPartner_Request_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_bloombox_schema_services_dash_v1beta1_GetPartner_Request_descriptor,
+        internal_static_bloombox_services_dash_v1beta1_GetPartner_Request_descriptor,
         new java.lang.String[] { "Partner", });
-    internal_static_bloombox_schema_services_dash_v1beta1_GetPartner_Response_descriptor =
-      internal_static_bloombox_schema_services_dash_v1beta1_GetPartner_descriptor.getNestedTypes().get(1);
-    internal_static_bloombox_schema_services_dash_v1beta1_GetPartner_Response_fieldAccessorTable = new
+    internal_static_bloombox_services_dash_v1beta1_GetPartner_Response_descriptor =
+      internal_static_bloombox_services_dash_v1beta1_GetPartner_descriptor.getNestedTypes().get(1);
+    internal_static_bloombox_services_dash_v1beta1_GetPartner_Response_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_bloombox_schema_services_dash_v1beta1_GetPartner_Response_descriptor,
+        internal_static_bloombox_services_dash_v1beta1_GetPartner_Response_descriptor,
         new java.lang.String[] { "Partner", });
-    internal_static_bloombox_schema_services_dash_v1beta1_ListLocations_descriptor =
+    internal_static_bloombox_services_dash_v1beta1_ListLocations_descriptor =
       getDescriptor().getMessageTypes().get(8);
-    internal_static_bloombox_schema_services_dash_v1beta1_ListLocations_fieldAccessorTable = new
+    internal_static_bloombox_services_dash_v1beta1_ListLocations_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_bloombox_schema_services_dash_v1beta1_ListLocations_descriptor,
+        internal_static_bloombox_services_dash_v1beta1_ListLocations_descriptor,
         new java.lang.String[] { });
-    internal_static_bloombox_schema_services_dash_v1beta1_ListLocations_Request_descriptor =
-      internal_static_bloombox_schema_services_dash_v1beta1_ListLocations_descriptor.getNestedTypes().get(0);
-    internal_static_bloombox_schema_services_dash_v1beta1_ListLocations_Request_fieldAccessorTable = new
+    internal_static_bloombox_services_dash_v1beta1_ListLocations_Request_descriptor =
+      internal_static_bloombox_services_dash_v1beta1_ListLocations_descriptor.getNestedTypes().get(0);
+    internal_static_bloombox_services_dash_v1beta1_ListLocations_Request_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_bloombox_schema_services_dash_v1beta1_ListLocations_Request_descriptor,
+        internal_static_bloombox_services_dash_v1beta1_ListLocations_Request_descriptor,
         new java.lang.String[] { "Partner", });
-    internal_static_bloombox_schema_services_dash_v1beta1_ListLocations_Response_descriptor =
-      internal_static_bloombox_schema_services_dash_v1beta1_ListLocations_descriptor.getNestedTypes().get(1);
-    internal_static_bloombox_schema_services_dash_v1beta1_ListLocations_Response_fieldAccessorTable = new
+    internal_static_bloombox_services_dash_v1beta1_ListLocations_Response_descriptor =
+      internal_static_bloombox_services_dash_v1beta1_ListLocations_descriptor.getNestedTypes().get(1);
+    internal_static_bloombox_services_dash_v1beta1_ListLocations_Response_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_bloombox_schema_services_dash_v1beta1_ListLocations_Response_descriptor,
+        internal_static_bloombox_services_dash_v1beta1_ListLocations_Response_descriptor,
         new java.lang.String[] { "Locations", });
-    internal_static_bloombox_schema_services_dash_v1beta1_GetLocation_descriptor =
+    internal_static_bloombox_services_dash_v1beta1_GetLocation_descriptor =
       getDescriptor().getMessageTypes().get(9);
-    internal_static_bloombox_schema_services_dash_v1beta1_GetLocation_fieldAccessorTable = new
+    internal_static_bloombox_services_dash_v1beta1_GetLocation_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_bloombox_schema_services_dash_v1beta1_GetLocation_descriptor,
+        internal_static_bloombox_services_dash_v1beta1_GetLocation_descriptor,
         new java.lang.String[] { });
-    internal_static_bloombox_schema_services_dash_v1beta1_GetLocation_Request_descriptor =
-      internal_static_bloombox_schema_services_dash_v1beta1_GetLocation_descriptor.getNestedTypes().get(0);
-    internal_static_bloombox_schema_services_dash_v1beta1_GetLocation_Request_fieldAccessorTable = new
+    internal_static_bloombox_services_dash_v1beta1_GetLocation_Request_descriptor =
+      internal_static_bloombox_services_dash_v1beta1_GetLocation_descriptor.getNestedTypes().get(0);
+    internal_static_bloombox_services_dash_v1beta1_GetLocation_Request_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_bloombox_schema_services_dash_v1beta1_GetLocation_Request_descriptor,
+        internal_static_bloombox_services_dash_v1beta1_GetLocation_Request_descriptor,
         new java.lang.String[] { "Partner", "Location", });
-    internal_static_bloombox_schema_services_dash_v1beta1_GetLocation_Response_descriptor =
-      internal_static_bloombox_schema_services_dash_v1beta1_GetLocation_descriptor.getNestedTypes().get(1);
-    internal_static_bloombox_schema_services_dash_v1beta1_GetLocation_Response_fieldAccessorTable = new
+    internal_static_bloombox_services_dash_v1beta1_GetLocation_Response_descriptor =
+      internal_static_bloombox_services_dash_v1beta1_GetLocation_descriptor.getNestedTypes().get(1);
+    internal_static_bloombox_services_dash_v1beta1_GetLocation_Response_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_bloombox_schema_services_dash_v1beta1_GetLocation_Response_descriptor,
+        internal_static_bloombox_services_dash_v1beta1_GetLocation_Response_descriptor,
         new java.lang.String[] { "Location", });
     com.google.protobuf.ExtensionRegistry registry =
         com.google.protobuf.ExtensionRegistry.newInstance();

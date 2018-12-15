@@ -1,11 +1,12 @@
 /*
- * Copyright 2018, Bloombox, LLC.
+ * Copyright 2018, Momentum Ideas, Co. All rights reserved.
  *
- * Licensed under the Apache License, Version 2.0 (the "License");
- * you may not use this file except in compliance with the License.
- * You may obtain a copy of the License at
- *
- *     http://www.apache.org/licenses/LICENSE-2.0
+ * Source and object computer code contained herein is the private intellectual
+ * property of Momentum Ideas Co., a Delaware Corporation. Use of this
+ * code in source form requires permission in writing before use or the
+ * assembly, distribution, or publishing of derivative works, for commercial
+ * purposes or any other purpose, from a duly authorized officer of Momentum
+ * Ideas Co.
  *
  * Unless required by applicable law or agreed to in writing, software
  * distributed under the License is distributed on an "AS IS" BASIS,
@@ -31,7 +32,7 @@ public final class SearchResults {
         (com.google.protobuf.ExtensionRegistryLite) registry);
   }
   public interface ProductSearchResultOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:bloombox.schema.search.ProductSearchResult)
+      // @@protoc_insertion_point(interface_extends:bloombox.search.ProductSearchResult)
       com.google.protobuf.MessageOrBuilder {
 
     /**
@@ -64,11 +65,11 @@ public final class SearchResults {
    * Specifies a product that matched a search.
    * </pre>
    *
-   * Protobuf type {@code bloombox.schema.search.ProductSearchResult}
+   * Protobuf type {@code bloombox.search.ProductSearchResult}
    */
   public  static final class ProductSearchResult extends
       com.google.protobuf.GeneratedMessageV3 implements
-      // @@protoc_insertion_point(message_implements:bloombox.schema.search.ProductSearchResult)
+      // @@protoc_insertion_point(message_implements:bloombox.search.ProductSearchResult)
       ProductSearchResultOrBuilder {
   private static final long serialVersionUID = 0L;
     // Use ProductSearchResult.newBuilder() to construct.
@@ -102,13 +103,6 @@ public final class SearchResults {
             case 0:
               done = true;
               break;
-            default: {
-              if (!parseUnknownFieldProto3(
-                  input, unknownFields, extensionRegistry, tag)) {
-                done = true;
-              }
-              break;
-            }
             case 10: {
               io.opencannabis.schema.menu.MenuProduct.Builder subBuilder = null;
               if (item_ != null) {
@@ -120,6 +114,13 @@ public final class SearchResults {
                 item_ = subBuilder.buildPartial();
               }
 
+              break;
+            }
+            default: {
+              if (!parseUnknownFieldProto3(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
               break;
             }
           }
@@ -136,12 +137,13 @@ public final class SearchResults {
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return io.bloombox.schema.search.SearchResults.internal_static_bloombox_schema_search_ProductSearchResult_descriptor;
+      return io.bloombox.schema.search.SearchResults.internal_static_bloombox_search_ProductSearchResult_descriptor;
     }
 
+    @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return io.bloombox.schema.search.SearchResults.internal_static_bloombox_schema_search_ProductSearchResult_fieldAccessorTable
+      return io.bloombox.schema.search.SearchResults.internal_static_bloombox_search_ProductSearchResult_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
               io.bloombox.schema.search.SearchResults.ProductSearchResult.class, io.bloombox.schema.search.SearchResults.ProductSearchResult.Builder.class);
     }
@@ -180,6 +182,7 @@ public final class SearchResults {
     }
 
     private byte memoizedIsInitialized = -1;
+    @java.lang.Override
     public final boolean isInitialized() {
       byte isInitialized = memoizedIsInitialized;
       if (isInitialized == 1) return true;
@@ -189,6 +192,7 @@ public final class SearchResults {
       return true;
     }
 
+    @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
       if (item_ != null) {
@@ -197,6 +201,7 @@ public final class SearchResults {
       unknownFields.writeTo(output);
     }
 
+    @java.lang.Override
     public int getSerializedSize() {
       int size = memoizedSize;
       if (size != -1) return size;
@@ -317,6 +322,7 @@ public final class SearchResults {
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
 
+    @java.lang.Override
     public Builder newBuilderForType() { return newBuilder(); }
     public static Builder newBuilder() {
       return DEFAULT_INSTANCE.toBuilder();
@@ -324,6 +330,7 @@ public final class SearchResults {
     public static Builder newBuilder(io.bloombox.schema.search.SearchResults.ProductSearchResult prototype) {
       return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
     }
+    @java.lang.Override
     public Builder toBuilder() {
       return this == DEFAULT_INSTANCE
           ? new Builder() : new Builder().mergeFrom(this);
@@ -340,20 +347,21 @@ public final class SearchResults {
      * Specifies a product that matched a search.
      * </pre>
      *
-     * Protobuf type {@code bloombox.schema.search.ProductSearchResult}
+     * Protobuf type {@code bloombox.search.ProductSearchResult}
      */
     public static final class Builder extends
         com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:bloombox.schema.search.ProductSearchResult)
+        // @@protoc_insertion_point(builder_implements:bloombox.search.ProductSearchResult)
         io.bloombox.schema.search.SearchResults.ProductSearchResultOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return io.bloombox.schema.search.SearchResults.internal_static_bloombox_schema_search_ProductSearchResult_descriptor;
+        return io.bloombox.schema.search.SearchResults.internal_static_bloombox_search_ProductSearchResult_descriptor;
       }
 
+      @java.lang.Override
       protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return io.bloombox.schema.search.SearchResults.internal_static_bloombox_schema_search_ProductSearchResult_fieldAccessorTable
+        return io.bloombox.schema.search.SearchResults.internal_static_bloombox_search_ProductSearchResult_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
                 io.bloombox.schema.search.SearchResults.ProductSearchResult.class, io.bloombox.schema.search.SearchResults.ProductSearchResult.Builder.class);
       }
@@ -373,6 +381,7 @@ public final class SearchResults {
                 .alwaysUseFieldBuilders) {
         }
       }
+      @java.lang.Override
       public Builder clear() {
         super.clear();
         if (itemBuilder_ == null) {
@@ -384,15 +393,18 @@ public final class SearchResults {
         return this;
       }
 
+      @java.lang.Override
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return io.bloombox.schema.search.SearchResults.internal_static_bloombox_schema_search_ProductSearchResult_descriptor;
+        return io.bloombox.schema.search.SearchResults.internal_static_bloombox_search_ProductSearchResult_descriptor;
       }
 
+      @java.lang.Override
       public io.bloombox.schema.search.SearchResults.ProductSearchResult getDefaultInstanceForType() {
         return io.bloombox.schema.search.SearchResults.ProductSearchResult.getDefaultInstance();
       }
 
+      @java.lang.Override
       public io.bloombox.schema.search.SearchResults.ProductSearchResult build() {
         io.bloombox.schema.search.SearchResults.ProductSearchResult result = buildPartial();
         if (!result.isInitialized()) {
@@ -401,6 +413,7 @@ public final class SearchResults {
         return result;
       }
 
+      @java.lang.Override
       public io.bloombox.schema.search.SearchResults.ProductSearchResult buildPartial() {
         io.bloombox.schema.search.SearchResults.ProductSearchResult result = new io.bloombox.schema.search.SearchResults.ProductSearchResult(this);
         if (itemBuilder_ == null) {
@@ -412,32 +425,39 @@ public final class SearchResults {
         return result;
       }
 
+      @java.lang.Override
       public Builder clone() {
         return (Builder) super.clone();
       }
+      @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
         return (Builder) super.setField(field, value);
       }
+      @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
         return (Builder) super.clearField(field);
       }
+      @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
         return (Builder) super.clearOneof(oneof);
       }
+      @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
         return (Builder) super.setRepeatedField(field, index, value);
       }
+      @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
         return (Builder) super.addRepeatedField(field, value);
       }
+      @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
         if (other instanceof io.bloombox.schema.search.SearchResults.ProductSearchResult) {
           return mergeFrom((io.bloombox.schema.search.SearchResults.ProductSearchResult)other);
@@ -457,10 +477,12 @@ public final class SearchResults {
         return this;
       }
 
+      @java.lang.Override
       public final boolean isInitialized() {
         return true;
       }
 
+      @java.lang.Override
       public Builder mergeFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -631,21 +653,23 @@ public final class SearchResults {
         }
         return itemBuilder_;
       }
+      @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
         return super.setUnknownFieldsProto3(unknownFields);
       }
 
+      @java.lang.Override
       public final Builder mergeUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
         return super.mergeUnknownFields(unknownFields);
       }
 
 
-      // @@protoc_insertion_point(builder_scope:bloombox.schema.search.ProductSearchResult)
+      // @@protoc_insertion_point(builder_scope:bloombox.search.ProductSearchResult)
     }
 
-    // @@protoc_insertion_point(class_scope:bloombox.schema.search.ProductSearchResult)
+    // @@protoc_insertion_point(class_scope:bloombox.search.ProductSearchResult)
     private static final io.bloombox.schema.search.SearchResults.ProductSearchResult DEFAULT_INSTANCE;
     static {
       DEFAULT_INSTANCE = new io.bloombox.schema.search.SearchResults.ProductSearchResult();
@@ -657,6 +681,7 @@ public final class SearchResults {
 
     private static final com.google.protobuf.Parser<ProductSearchResult>
         PARSER = new com.google.protobuf.AbstractParser<ProductSearchResult>() {
+      @java.lang.Override
       public ProductSearchResult parsePartialFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -674,6 +699,7 @@ public final class SearchResults {
       return PARSER;
     }
 
+    @java.lang.Override
     public io.bloombox.schema.search.SearchResults.ProductSearchResult getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
@@ -681,7 +707,7 @@ public final class SearchResults {
   }
 
   public interface UserSearchResultOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:bloombox.schema.search.UserSearchResult)
+      // @@protoc_insertion_point(interface_extends:bloombox.search.UserSearchResult)
       com.google.protobuf.MessageOrBuilder {
 
     /**
@@ -689,7 +715,7 @@ public final class SearchResults {
      * User profile key.
      * </pre>
      *
-     * <code>.bloombox.schema.identity.UserKey key = 1;</code>
+     * <code>.bloombox.identity.UserKey key = 1;</code>
      */
     boolean hasKey();
     /**
@@ -697,7 +723,7 @@ public final class SearchResults {
      * User profile key.
      * </pre>
      *
-     * <code>.bloombox.schema.identity.UserKey key = 1;</code>
+     * <code>.bloombox.identity.UserKey key = 1;</code>
      */
     io.bloombox.schema.identity.AppUserKey.UserKey getKey();
     /**
@@ -705,7 +731,7 @@ public final class SearchResults {
      * User profile key.
      * </pre>
      *
-     * <code>.bloombox.schema.identity.UserKey key = 1;</code>
+     * <code>.bloombox.identity.UserKey key = 1;</code>
      */
     io.bloombox.schema.identity.AppUserKey.UserKeyOrBuilder getKeyOrBuilder();
 
@@ -714,7 +740,7 @@ public final class SearchResults {
      * User profile record.
      * </pre>
      *
-     * <code>.bloombox.schema.identity.User user = 2;</code>
+     * <code>.bloombox.identity.User user = 2;</code>
      */
     boolean hasUser();
     /**
@@ -722,7 +748,7 @@ public final class SearchResults {
      * User profile record.
      * </pre>
      *
-     * <code>.bloombox.schema.identity.User user = 2;</code>
+     * <code>.bloombox.identity.User user = 2;</code>
      */
     io.bloombox.schema.identity.AppUser.User getUser();
     /**
@@ -730,7 +756,7 @@ public final class SearchResults {
      * User profile record.
      * </pre>
      *
-     * <code>.bloombox.schema.identity.User user = 2;</code>
+     * <code>.bloombox.identity.User user = 2;</code>
      */
     io.bloombox.schema.identity.AppUser.UserOrBuilder getUserOrBuilder();
   }
@@ -739,11 +765,11 @@ public final class SearchResults {
    * Specifies a user or user profile that matched a search.
    * </pre>
    *
-   * Protobuf type {@code bloombox.schema.search.UserSearchResult}
+   * Protobuf type {@code bloombox.search.UserSearchResult}
    */
   public  static final class UserSearchResult extends
       com.google.protobuf.GeneratedMessageV3 implements
-      // @@protoc_insertion_point(message_implements:bloombox.schema.search.UserSearchResult)
+      // @@protoc_insertion_point(message_implements:bloombox.search.UserSearchResult)
       UserSearchResultOrBuilder {
   private static final long serialVersionUID = 0L;
     // Use UserSearchResult.newBuilder() to construct.
@@ -777,13 +803,6 @@ public final class SearchResults {
             case 0:
               done = true;
               break;
-            default: {
-              if (!parseUnknownFieldProto3(
-                  input, unknownFields, extensionRegistry, tag)) {
-                done = true;
-              }
-              break;
-            }
             case 10: {
               io.bloombox.schema.identity.AppUserKey.UserKey.Builder subBuilder = null;
               if (key_ != null) {
@@ -810,6 +829,13 @@ public final class SearchResults {
 
               break;
             }
+            default: {
+              if (!parseUnknownFieldProto3(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
           }
         }
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
@@ -824,12 +850,13 @@ public final class SearchResults {
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return io.bloombox.schema.search.SearchResults.internal_static_bloombox_schema_search_UserSearchResult_descriptor;
+      return io.bloombox.schema.search.SearchResults.internal_static_bloombox_search_UserSearchResult_descriptor;
     }
 
+    @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return io.bloombox.schema.search.SearchResults.internal_static_bloombox_schema_search_UserSearchResult_fieldAccessorTable
+      return io.bloombox.schema.search.SearchResults.internal_static_bloombox_search_UserSearchResult_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
               io.bloombox.schema.search.SearchResults.UserSearchResult.class, io.bloombox.schema.search.SearchResults.UserSearchResult.Builder.class);
     }
@@ -841,7 +868,7 @@ public final class SearchResults {
      * User profile key.
      * </pre>
      *
-     * <code>.bloombox.schema.identity.UserKey key = 1;</code>
+     * <code>.bloombox.identity.UserKey key = 1;</code>
      */
     public boolean hasKey() {
       return key_ != null;
@@ -851,7 +878,7 @@ public final class SearchResults {
      * User profile key.
      * </pre>
      *
-     * <code>.bloombox.schema.identity.UserKey key = 1;</code>
+     * <code>.bloombox.identity.UserKey key = 1;</code>
      */
     public io.bloombox.schema.identity.AppUserKey.UserKey getKey() {
       return key_ == null ? io.bloombox.schema.identity.AppUserKey.UserKey.getDefaultInstance() : key_;
@@ -861,7 +888,7 @@ public final class SearchResults {
      * User profile key.
      * </pre>
      *
-     * <code>.bloombox.schema.identity.UserKey key = 1;</code>
+     * <code>.bloombox.identity.UserKey key = 1;</code>
      */
     public io.bloombox.schema.identity.AppUserKey.UserKeyOrBuilder getKeyOrBuilder() {
       return getKey();
@@ -874,7 +901,7 @@ public final class SearchResults {
      * User profile record.
      * </pre>
      *
-     * <code>.bloombox.schema.identity.User user = 2;</code>
+     * <code>.bloombox.identity.User user = 2;</code>
      */
     public boolean hasUser() {
       return user_ != null;
@@ -884,7 +911,7 @@ public final class SearchResults {
      * User profile record.
      * </pre>
      *
-     * <code>.bloombox.schema.identity.User user = 2;</code>
+     * <code>.bloombox.identity.User user = 2;</code>
      */
     public io.bloombox.schema.identity.AppUser.User getUser() {
       return user_ == null ? io.bloombox.schema.identity.AppUser.User.getDefaultInstance() : user_;
@@ -894,13 +921,14 @@ public final class SearchResults {
      * User profile record.
      * </pre>
      *
-     * <code>.bloombox.schema.identity.User user = 2;</code>
+     * <code>.bloombox.identity.User user = 2;</code>
      */
     public io.bloombox.schema.identity.AppUser.UserOrBuilder getUserOrBuilder() {
       return getUser();
     }
 
     private byte memoizedIsInitialized = -1;
+    @java.lang.Override
     public final boolean isInitialized() {
       byte isInitialized = memoizedIsInitialized;
       if (isInitialized == 1) return true;
@@ -910,6 +938,7 @@ public final class SearchResults {
       return true;
     }
 
+    @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
       if (key_ != null) {
@@ -921,6 +950,7 @@ public final class SearchResults {
       unknownFields.writeTo(output);
     }
 
+    @java.lang.Override
     public int getSerializedSize() {
       int size = memoizedSize;
       if (size != -1) return size;
@@ -1054,6 +1084,7 @@ public final class SearchResults {
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
 
+    @java.lang.Override
     public Builder newBuilderForType() { return newBuilder(); }
     public static Builder newBuilder() {
       return DEFAULT_INSTANCE.toBuilder();
@@ -1061,6 +1092,7 @@ public final class SearchResults {
     public static Builder newBuilder(io.bloombox.schema.search.SearchResults.UserSearchResult prototype) {
       return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
     }
+    @java.lang.Override
     public Builder toBuilder() {
       return this == DEFAULT_INSTANCE
           ? new Builder() : new Builder().mergeFrom(this);
@@ -1077,20 +1109,21 @@ public final class SearchResults {
      * Specifies a user or user profile that matched a search.
      * </pre>
      *
-     * Protobuf type {@code bloombox.schema.search.UserSearchResult}
+     * Protobuf type {@code bloombox.search.UserSearchResult}
      */
     public static final class Builder extends
         com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:bloombox.schema.search.UserSearchResult)
+        // @@protoc_insertion_point(builder_implements:bloombox.search.UserSearchResult)
         io.bloombox.schema.search.SearchResults.UserSearchResultOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return io.bloombox.schema.search.SearchResults.internal_static_bloombox_schema_search_UserSearchResult_descriptor;
+        return io.bloombox.schema.search.SearchResults.internal_static_bloombox_search_UserSearchResult_descriptor;
       }
 
+      @java.lang.Override
       protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return io.bloombox.schema.search.SearchResults.internal_static_bloombox_schema_search_UserSearchResult_fieldAccessorTable
+        return io.bloombox.schema.search.SearchResults.internal_static_bloombox_search_UserSearchResult_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
                 io.bloombox.schema.search.SearchResults.UserSearchResult.class, io.bloombox.schema.search.SearchResults.UserSearchResult.Builder.class);
       }
@@ -1110,6 +1143,7 @@ public final class SearchResults {
                 .alwaysUseFieldBuilders) {
         }
       }
+      @java.lang.Override
       public Builder clear() {
         super.clear();
         if (keyBuilder_ == null) {
@@ -1127,15 +1161,18 @@ public final class SearchResults {
         return this;
       }
 
+      @java.lang.Override
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return io.bloombox.schema.search.SearchResults.internal_static_bloombox_schema_search_UserSearchResult_descriptor;
+        return io.bloombox.schema.search.SearchResults.internal_static_bloombox_search_UserSearchResult_descriptor;
       }
 
+      @java.lang.Override
       public io.bloombox.schema.search.SearchResults.UserSearchResult getDefaultInstanceForType() {
         return io.bloombox.schema.search.SearchResults.UserSearchResult.getDefaultInstance();
       }
 
+      @java.lang.Override
       public io.bloombox.schema.search.SearchResults.UserSearchResult build() {
         io.bloombox.schema.search.SearchResults.UserSearchResult result = buildPartial();
         if (!result.isInitialized()) {
@@ -1144,6 +1181,7 @@ public final class SearchResults {
         return result;
       }
 
+      @java.lang.Override
       public io.bloombox.schema.search.SearchResults.UserSearchResult buildPartial() {
         io.bloombox.schema.search.SearchResults.UserSearchResult result = new io.bloombox.schema.search.SearchResults.UserSearchResult(this);
         if (keyBuilder_ == null) {
@@ -1160,32 +1198,39 @@ public final class SearchResults {
         return result;
       }
 
+      @java.lang.Override
       public Builder clone() {
         return (Builder) super.clone();
       }
+      @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
         return (Builder) super.setField(field, value);
       }
+      @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
         return (Builder) super.clearField(field);
       }
+      @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
         return (Builder) super.clearOneof(oneof);
       }
+      @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
         return (Builder) super.setRepeatedField(field, index, value);
       }
+      @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
         return (Builder) super.addRepeatedField(field, value);
       }
+      @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
         if (other instanceof io.bloombox.schema.search.SearchResults.UserSearchResult) {
           return mergeFrom((io.bloombox.schema.search.SearchResults.UserSearchResult)other);
@@ -1208,10 +1253,12 @@ public final class SearchResults {
         return this;
       }
 
+      @java.lang.Override
       public final boolean isInitialized() {
         return true;
       }
 
+      @java.lang.Override
       public Builder mergeFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -1238,7 +1285,7 @@ public final class SearchResults {
        * User profile key.
        * </pre>
        *
-       * <code>.bloombox.schema.identity.UserKey key = 1;</code>
+       * <code>.bloombox.identity.UserKey key = 1;</code>
        */
       public boolean hasKey() {
         return keyBuilder_ != null || key_ != null;
@@ -1248,7 +1295,7 @@ public final class SearchResults {
        * User profile key.
        * </pre>
        *
-       * <code>.bloombox.schema.identity.UserKey key = 1;</code>
+       * <code>.bloombox.identity.UserKey key = 1;</code>
        */
       public io.bloombox.schema.identity.AppUserKey.UserKey getKey() {
         if (keyBuilder_ == null) {
@@ -1262,7 +1309,7 @@ public final class SearchResults {
        * User profile key.
        * </pre>
        *
-       * <code>.bloombox.schema.identity.UserKey key = 1;</code>
+       * <code>.bloombox.identity.UserKey key = 1;</code>
        */
       public Builder setKey(io.bloombox.schema.identity.AppUserKey.UserKey value) {
         if (keyBuilder_ == null) {
@@ -1282,7 +1329,7 @@ public final class SearchResults {
        * User profile key.
        * </pre>
        *
-       * <code>.bloombox.schema.identity.UserKey key = 1;</code>
+       * <code>.bloombox.identity.UserKey key = 1;</code>
        */
       public Builder setKey(
           io.bloombox.schema.identity.AppUserKey.UserKey.Builder builderForValue) {
@@ -1300,7 +1347,7 @@ public final class SearchResults {
        * User profile key.
        * </pre>
        *
-       * <code>.bloombox.schema.identity.UserKey key = 1;</code>
+       * <code>.bloombox.identity.UserKey key = 1;</code>
        */
       public Builder mergeKey(io.bloombox.schema.identity.AppUserKey.UserKey value) {
         if (keyBuilder_ == null) {
@@ -1322,7 +1369,7 @@ public final class SearchResults {
        * User profile key.
        * </pre>
        *
-       * <code>.bloombox.schema.identity.UserKey key = 1;</code>
+       * <code>.bloombox.identity.UserKey key = 1;</code>
        */
       public Builder clearKey() {
         if (keyBuilder_ == null) {
@@ -1340,7 +1387,7 @@ public final class SearchResults {
        * User profile key.
        * </pre>
        *
-       * <code>.bloombox.schema.identity.UserKey key = 1;</code>
+       * <code>.bloombox.identity.UserKey key = 1;</code>
        */
       public io.bloombox.schema.identity.AppUserKey.UserKey.Builder getKeyBuilder() {
         
@@ -1352,7 +1399,7 @@ public final class SearchResults {
        * User profile key.
        * </pre>
        *
-       * <code>.bloombox.schema.identity.UserKey key = 1;</code>
+       * <code>.bloombox.identity.UserKey key = 1;</code>
        */
       public io.bloombox.schema.identity.AppUserKey.UserKeyOrBuilder getKeyOrBuilder() {
         if (keyBuilder_ != null) {
@@ -1367,7 +1414,7 @@ public final class SearchResults {
        * User profile key.
        * </pre>
        *
-       * <code>.bloombox.schema.identity.UserKey key = 1;</code>
+       * <code>.bloombox.identity.UserKey key = 1;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
           io.bloombox.schema.identity.AppUserKey.UserKey, io.bloombox.schema.identity.AppUserKey.UserKey.Builder, io.bloombox.schema.identity.AppUserKey.UserKeyOrBuilder> 
@@ -1391,7 +1438,7 @@ public final class SearchResults {
        * User profile record.
        * </pre>
        *
-       * <code>.bloombox.schema.identity.User user = 2;</code>
+       * <code>.bloombox.identity.User user = 2;</code>
        */
       public boolean hasUser() {
         return userBuilder_ != null || user_ != null;
@@ -1401,7 +1448,7 @@ public final class SearchResults {
        * User profile record.
        * </pre>
        *
-       * <code>.bloombox.schema.identity.User user = 2;</code>
+       * <code>.bloombox.identity.User user = 2;</code>
        */
       public io.bloombox.schema.identity.AppUser.User getUser() {
         if (userBuilder_ == null) {
@@ -1415,7 +1462,7 @@ public final class SearchResults {
        * User profile record.
        * </pre>
        *
-       * <code>.bloombox.schema.identity.User user = 2;</code>
+       * <code>.bloombox.identity.User user = 2;</code>
        */
       public Builder setUser(io.bloombox.schema.identity.AppUser.User value) {
         if (userBuilder_ == null) {
@@ -1435,7 +1482,7 @@ public final class SearchResults {
        * User profile record.
        * </pre>
        *
-       * <code>.bloombox.schema.identity.User user = 2;</code>
+       * <code>.bloombox.identity.User user = 2;</code>
        */
       public Builder setUser(
           io.bloombox.schema.identity.AppUser.User.Builder builderForValue) {
@@ -1453,7 +1500,7 @@ public final class SearchResults {
        * User profile record.
        * </pre>
        *
-       * <code>.bloombox.schema.identity.User user = 2;</code>
+       * <code>.bloombox.identity.User user = 2;</code>
        */
       public Builder mergeUser(io.bloombox.schema.identity.AppUser.User value) {
         if (userBuilder_ == null) {
@@ -1475,7 +1522,7 @@ public final class SearchResults {
        * User profile record.
        * </pre>
        *
-       * <code>.bloombox.schema.identity.User user = 2;</code>
+       * <code>.bloombox.identity.User user = 2;</code>
        */
       public Builder clearUser() {
         if (userBuilder_ == null) {
@@ -1493,7 +1540,7 @@ public final class SearchResults {
        * User profile record.
        * </pre>
        *
-       * <code>.bloombox.schema.identity.User user = 2;</code>
+       * <code>.bloombox.identity.User user = 2;</code>
        */
       public io.bloombox.schema.identity.AppUser.User.Builder getUserBuilder() {
         
@@ -1505,7 +1552,7 @@ public final class SearchResults {
        * User profile record.
        * </pre>
        *
-       * <code>.bloombox.schema.identity.User user = 2;</code>
+       * <code>.bloombox.identity.User user = 2;</code>
        */
       public io.bloombox.schema.identity.AppUser.UserOrBuilder getUserOrBuilder() {
         if (userBuilder_ != null) {
@@ -1520,7 +1567,7 @@ public final class SearchResults {
        * User profile record.
        * </pre>
        *
-       * <code>.bloombox.schema.identity.User user = 2;</code>
+       * <code>.bloombox.identity.User user = 2;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
           io.bloombox.schema.identity.AppUser.User, io.bloombox.schema.identity.AppUser.User.Builder, io.bloombox.schema.identity.AppUser.UserOrBuilder> 
@@ -1535,21 +1582,23 @@ public final class SearchResults {
         }
         return userBuilder_;
       }
+      @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
         return super.setUnknownFieldsProto3(unknownFields);
       }
 
+      @java.lang.Override
       public final Builder mergeUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
         return super.mergeUnknownFields(unknownFields);
       }
 
 
-      // @@protoc_insertion_point(builder_scope:bloombox.schema.search.UserSearchResult)
+      // @@protoc_insertion_point(builder_scope:bloombox.search.UserSearchResult)
     }
 
-    // @@protoc_insertion_point(class_scope:bloombox.schema.search.UserSearchResult)
+    // @@protoc_insertion_point(class_scope:bloombox.search.UserSearchResult)
     private static final io.bloombox.schema.search.SearchResults.UserSearchResult DEFAULT_INSTANCE;
     static {
       DEFAULT_INSTANCE = new io.bloombox.schema.search.SearchResults.UserSearchResult();
@@ -1561,6 +1610,7 @@ public final class SearchResults {
 
     private static final com.google.protobuf.Parser<UserSearchResult>
         PARSER = new com.google.protobuf.AbstractParser<UserSearchResult>() {
+      @java.lang.Override
       public UserSearchResult parsePartialFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -1578,6 +1628,7 @@ public final class SearchResults {
       return PARSER;
     }
 
+    @java.lang.Override
     public io.bloombox.schema.search.SearchResults.UserSearchResult getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
@@ -1585,7 +1636,7 @@ public final class SearchResults {
   }
 
   public interface PartnerSearchResultOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:bloombox.schema.search.PartnerSearchResult)
+      // @@protoc_insertion_point(interface_extends:bloombox.search.PartnerSearchResult)
       com.google.protobuf.MessageOrBuilder {
 
     /**
@@ -1613,11 +1664,11 @@ public final class SearchResults {
    * Specifies a partner or partner location profile that matched a search.
    * </pre>
    *
-   * Protobuf type {@code bloombox.schema.search.PartnerSearchResult}
+   * Protobuf type {@code bloombox.search.PartnerSearchResult}
    */
   public  static final class PartnerSearchResult extends
       com.google.protobuf.GeneratedMessageV3 implements
-      // @@protoc_insertion_point(message_implements:bloombox.schema.search.PartnerSearchResult)
+      // @@protoc_insertion_point(message_implements:bloombox.search.PartnerSearchResult)
       PartnerSearchResultOrBuilder {
   private static final long serialVersionUID = 0L;
     // Use PartnerSearchResult.newBuilder() to construct.
@@ -1652,17 +1703,17 @@ public final class SearchResults {
             case 0:
               done = true;
               break;
+            case 10: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              scope_ = s;
+              break;
+            }
             default: {
               if (!parseUnknownFieldProto3(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
-              break;
-            }
-            case 10: {
-              java.lang.String s = input.readStringRequireUtf8();
-
-              scope_ = s;
               break;
             }
           }
@@ -1679,12 +1730,13 @@ public final class SearchResults {
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return io.bloombox.schema.search.SearchResults.internal_static_bloombox_schema_search_PartnerSearchResult_descriptor;
+      return io.bloombox.schema.search.SearchResults.internal_static_bloombox_search_PartnerSearchResult_descriptor;
     }
 
+    @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return io.bloombox.schema.search.SearchResults.internal_static_bloombox_schema_search_PartnerSearchResult_fieldAccessorTable
+      return io.bloombox.schema.search.SearchResults.internal_static_bloombox_search_PartnerSearchResult_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
               io.bloombox.schema.search.SearchResults.PartnerSearchResult.class, io.bloombox.schema.search.SearchResults.PartnerSearchResult.Builder.class);
     }
@@ -1734,6 +1786,7 @@ public final class SearchResults {
     }
 
     private byte memoizedIsInitialized = -1;
+    @java.lang.Override
     public final boolean isInitialized() {
       byte isInitialized = memoizedIsInitialized;
       if (isInitialized == 1) return true;
@@ -1743,6 +1796,7 @@ public final class SearchResults {
       return true;
     }
 
+    @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
       if (!getScopeBytes().isEmpty()) {
@@ -1751,6 +1805,7 @@ public final class SearchResults {
       unknownFields.writeTo(output);
     }
 
+    @java.lang.Override
     public int getSerializedSize() {
       int size = memoizedSize;
       if (size != -1) return size;
@@ -1865,6 +1920,7 @@ public final class SearchResults {
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
 
+    @java.lang.Override
     public Builder newBuilderForType() { return newBuilder(); }
     public static Builder newBuilder() {
       return DEFAULT_INSTANCE.toBuilder();
@@ -1872,6 +1928,7 @@ public final class SearchResults {
     public static Builder newBuilder(io.bloombox.schema.search.SearchResults.PartnerSearchResult prototype) {
       return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
     }
+    @java.lang.Override
     public Builder toBuilder() {
       return this == DEFAULT_INSTANCE
           ? new Builder() : new Builder().mergeFrom(this);
@@ -1888,20 +1945,21 @@ public final class SearchResults {
      * Specifies a partner or partner location profile that matched a search.
      * </pre>
      *
-     * Protobuf type {@code bloombox.schema.search.PartnerSearchResult}
+     * Protobuf type {@code bloombox.search.PartnerSearchResult}
      */
     public static final class Builder extends
         com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:bloombox.schema.search.PartnerSearchResult)
+        // @@protoc_insertion_point(builder_implements:bloombox.search.PartnerSearchResult)
         io.bloombox.schema.search.SearchResults.PartnerSearchResultOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return io.bloombox.schema.search.SearchResults.internal_static_bloombox_schema_search_PartnerSearchResult_descriptor;
+        return io.bloombox.schema.search.SearchResults.internal_static_bloombox_search_PartnerSearchResult_descriptor;
       }
 
+      @java.lang.Override
       protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return io.bloombox.schema.search.SearchResults.internal_static_bloombox_schema_search_PartnerSearchResult_fieldAccessorTable
+        return io.bloombox.schema.search.SearchResults.internal_static_bloombox_search_PartnerSearchResult_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
                 io.bloombox.schema.search.SearchResults.PartnerSearchResult.class, io.bloombox.schema.search.SearchResults.PartnerSearchResult.Builder.class);
       }
@@ -1921,6 +1979,7 @@ public final class SearchResults {
                 .alwaysUseFieldBuilders) {
         }
       }
+      @java.lang.Override
       public Builder clear() {
         super.clear();
         scope_ = "";
@@ -1928,15 +1987,18 @@ public final class SearchResults {
         return this;
       }
 
+      @java.lang.Override
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return io.bloombox.schema.search.SearchResults.internal_static_bloombox_schema_search_PartnerSearchResult_descriptor;
+        return io.bloombox.schema.search.SearchResults.internal_static_bloombox_search_PartnerSearchResult_descriptor;
       }
 
+      @java.lang.Override
       public io.bloombox.schema.search.SearchResults.PartnerSearchResult getDefaultInstanceForType() {
         return io.bloombox.schema.search.SearchResults.PartnerSearchResult.getDefaultInstance();
       }
 
+      @java.lang.Override
       public io.bloombox.schema.search.SearchResults.PartnerSearchResult build() {
         io.bloombox.schema.search.SearchResults.PartnerSearchResult result = buildPartial();
         if (!result.isInitialized()) {
@@ -1945,6 +2007,7 @@ public final class SearchResults {
         return result;
       }
 
+      @java.lang.Override
       public io.bloombox.schema.search.SearchResults.PartnerSearchResult buildPartial() {
         io.bloombox.schema.search.SearchResults.PartnerSearchResult result = new io.bloombox.schema.search.SearchResults.PartnerSearchResult(this);
         result.scope_ = scope_;
@@ -1952,32 +2015,39 @@ public final class SearchResults {
         return result;
       }
 
+      @java.lang.Override
       public Builder clone() {
         return (Builder) super.clone();
       }
+      @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
         return (Builder) super.setField(field, value);
       }
+      @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
         return (Builder) super.clearField(field);
       }
+      @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
         return (Builder) super.clearOneof(oneof);
       }
+      @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
         return (Builder) super.setRepeatedField(field, index, value);
       }
+      @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
         return (Builder) super.addRepeatedField(field, value);
       }
+      @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
         if (other instanceof io.bloombox.schema.search.SearchResults.PartnerSearchResult) {
           return mergeFrom((io.bloombox.schema.search.SearchResults.PartnerSearchResult)other);
@@ -1998,10 +2068,12 @@ public final class SearchResults {
         return this;
       }
 
+      @java.lang.Override
       public final boolean isInitialized() {
         return true;
       }
 
+      @java.lang.Override
       public Builder mergeFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -2113,21 +2185,23 @@ public final class SearchResults {
         onChanged();
         return this;
       }
+      @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
         return super.setUnknownFieldsProto3(unknownFields);
       }
 
+      @java.lang.Override
       public final Builder mergeUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
         return super.mergeUnknownFields(unknownFields);
       }
 
 
-      // @@protoc_insertion_point(builder_scope:bloombox.schema.search.PartnerSearchResult)
+      // @@protoc_insertion_point(builder_scope:bloombox.search.PartnerSearchResult)
     }
 
-    // @@protoc_insertion_point(class_scope:bloombox.schema.search.PartnerSearchResult)
+    // @@protoc_insertion_point(class_scope:bloombox.search.PartnerSearchResult)
     private static final io.bloombox.schema.search.SearchResults.PartnerSearchResult DEFAULT_INSTANCE;
     static {
       DEFAULT_INSTANCE = new io.bloombox.schema.search.SearchResults.PartnerSearchResult();
@@ -2139,6 +2213,7 @@ public final class SearchResults {
 
     private static final com.google.protobuf.Parser<PartnerSearchResult>
         PARSER = new com.google.protobuf.AbstractParser<PartnerSearchResult>() {
+      @java.lang.Override
       public PartnerSearchResult parsePartialFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -2156,6 +2231,7 @@ public final class SearchResults {
       return PARSER;
     }
 
+    @java.lang.Override
     public io.bloombox.schema.search.SearchResults.PartnerSearchResult getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
@@ -2163,7 +2239,7 @@ public final class SearchResults {
   }
 
   public interface SearchResultOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:bloombox.schema.search.SearchResult)
+      // @@protoc_insertion_point(interface_extends:bloombox.search.SearchResult)
       com.google.protobuf.MessageOrBuilder {
 
     /**
@@ -2214,7 +2290,7 @@ public final class SearchResults {
      * Resulting data that is a catalog product.
      * </pre>
      *
-     * <code>.bloombox.schema.search.ProductSearchResult product = 10;</code>
+     * <code>.bloombox.search.ProductSearchResult product = 10;</code>
      */
     boolean hasProduct();
     /**
@@ -2222,7 +2298,7 @@ public final class SearchResults {
      * Resulting data that is a catalog product.
      * </pre>
      *
-     * <code>.bloombox.schema.search.ProductSearchResult product = 10;</code>
+     * <code>.bloombox.search.ProductSearchResult product = 10;</code>
      */
     io.bloombox.schema.search.SearchResults.ProductSearchResult getProduct();
     /**
@@ -2230,7 +2306,7 @@ public final class SearchResults {
      * Resulting data that is a catalog product.
      * </pre>
      *
-     * <code>.bloombox.schema.search.ProductSearchResult product = 10;</code>
+     * <code>.bloombox.search.ProductSearchResult product = 10;</code>
      */
     io.bloombox.schema.search.SearchResults.ProductSearchResultOrBuilder getProductOrBuilder();
 
@@ -2239,7 +2315,7 @@ public final class SearchResults {
      * Resulting data that is a user or user profile.
      * </pre>
      *
-     * <code>.bloombox.schema.search.UserSearchResult profile = 11;</code>
+     * <code>.bloombox.search.UserSearchResult profile = 11;</code>
      */
     boolean hasProfile();
     /**
@@ -2247,7 +2323,7 @@ public final class SearchResults {
      * Resulting data that is a user or user profile.
      * </pre>
      *
-     * <code>.bloombox.schema.search.UserSearchResult profile = 11;</code>
+     * <code>.bloombox.search.UserSearchResult profile = 11;</code>
      */
     io.bloombox.schema.search.SearchResults.UserSearchResult getProfile();
     /**
@@ -2255,7 +2331,7 @@ public final class SearchResults {
      * Resulting data that is a user or user profile.
      * </pre>
      *
-     * <code>.bloombox.schema.search.UserSearchResult profile = 11;</code>
+     * <code>.bloombox.search.UserSearchResult profile = 11;</code>
      */
     io.bloombox.schema.search.SearchResults.UserSearchResultOrBuilder getProfileOrBuilder();
 
@@ -2264,7 +2340,7 @@ public final class SearchResults {
      * Resulting data that is a partner or partner location profile.
      * </pre>
      *
-     * <code>.bloombox.schema.search.PartnerSearchResult partner = 12;</code>
+     * <code>.bloombox.search.PartnerSearchResult partner = 12;</code>
      */
     boolean hasPartner();
     /**
@@ -2272,7 +2348,7 @@ public final class SearchResults {
      * Resulting data that is a partner or partner location profile.
      * </pre>
      *
-     * <code>.bloombox.schema.search.PartnerSearchResult partner = 12;</code>
+     * <code>.bloombox.search.PartnerSearchResult partner = 12;</code>
      */
     io.bloombox.schema.search.SearchResults.PartnerSearchResult getPartner();
     /**
@@ -2280,7 +2356,7 @@ public final class SearchResults {
      * Resulting data that is a partner or partner location profile.
      * </pre>
      *
-     * <code>.bloombox.schema.search.PartnerSearchResult partner = 12;</code>
+     * <code>.bloombox.search.PartnerSearchResult partner = 12;</code>
      */
     io.bloombox.schema.search.SearchResults.PartnerSearchResultOrBuilder getPartnerOrBuilder();
 
@@ -2291,11 +2367,11 @@ public final class SearchResults {
    * Specifies an individual matching result to a search operation, regardless of type.
    * </pre>
    *
-   * Protobuf type {@code bloombox.schema.search.SearchResult}
+   * Protobuf type {@code bloombox.search.SearchResult}
    */
   public  static final class SearchResult extends
       com.google.protobuf.GeneratedMessageV3 implements
-      // @@protoc_insertion_point(message_implements:bloombox.schema.search.SearchResult)
+      // @@protoc_insertion_point(message_implements:bloombox.search.SearchResult)
       SearchResultOrBuilder {
   private static final long serialVersionUID = 0L;
     // Use SearchResult.newBuilder() to construct.
@@ -2331,13 +2407,6 @@ public final class SearchResults {
             case 0:
               done = true;
               break;
-            default: {
-              if (!parseUnknownFieldProto3(
-                  input, unknownFields, extensionRegistry, tag)) {
-                done = true;
-              }
-              break;
-            }
             case 8: {
 
               rank_ = input.readUInt32();
@@ -2403,6 +2472,13 @@ public final class SearchResults {
               resultCase_ = 12;
               break;
             }
+            default: {
+              if (!parseUnknownFieldProto3(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
           }
         }
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
@@ -2417,12 +2493,13 @@ public final class SearchResults {
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return io.bloombox.schema.search.SearchResults.internal_static_bloombox_schema_search_SearchResult_descriptor;
+      return io.bloombox.schema.search.SearchResults.internal_static_bloombox_search_SearchResult_descriptor;
     }
 
+    @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return io.bloombox.schema.search.SearchResults.internal_static_bloombox_schema_search_SearchResult_fieldAccessorTable
+      return io.bloombox.schema.search.SearchResults.internal_static_bloombox_search_SearchResult_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
               io.bloombox.schema.search.SearchResults.SearchResult.class, io.bloombox.schema.search.SearchResults.SearchResult.Builder.class);
     }
@@ -2532,7 +2609,7 @@ public final class SearchResults {
      * Resulting data that is a catalog product.
      * </pre>
      *
-     * <code>.bloombox.schema.search.ProductSearchResult product = 10;</code>
+     * <code>.bloombox.search.ProductSearchResult product = 10;</code>
      */
     public boolean hasProduct() {
       return resultCase_ == 10;
@@ -2542,7 +2619,7 @@ public final class SearchResults {
      * Resulting data that is a catalog product.
      * </pre>
      *
-     * <code>.bloombox.schema.search.ProductSearchResult product = 10;</code>
+     * <code>.bloombox.search.ProductSearchResult product = 10;</code>
      */
     public io.bloombox.schema.search.SearchResults.ProductSearchResult getProduct() {
       if (resultCase_ == 10) {
@@ -2555,7 +2632,7 @@ public final class SearchResults {
      * Resulting data that is a catalog product.
      * </pre>
      *
-     * <code>.bloombox.schema.search.ProductSearchResult product = 10;</code>
+     * <code>.bloombox.search.ProductSearchResult product = 10;</code>
      */
     public io.bloombox.schema.search.SearchResults.ProductSearchResultOrBuilder getProductOrBuilder() {
       if (resultCase_ == 10) {
@@ -2570,7 +2647,7 @@ public final class SearchResults {
      * Resulting data that is a user or user profile.
      * </pre>
      *
-     * <code>.bloombox.schema.search.UserSearchResult profile = 11;</code>
+     * <code>.bloombox.search.UserSearchResult profile = 11;</code>
      */
     public boolean hasProfile() {
       return resultCase_ == 11;
@@ -2580,7 +2657,7 @@ public final class SearchResults {
      * Resulting data that is a user or user profile.
      * </pre>
      *
-     * <code>.bloombox.schema.search.UserSearchResult profile = 11;</code>
+     * <code>.bloombox.search.UserSearchResult profile = 11;</code>
      */
     public io.bloombox.schema.search.SearchResults.UserSearchResult getProfile() {
       if (resultCase_ == 11) {
@@ -2593,7 +2670,7 @@ public final class SearchResults {
      * Resulting data that is a user or user profile.
      * </pre>
      *
-     * <code>.bloombox.schema.search.UserSearchResult profile = 11;</code>
+     * <code>.bloombox.search.UserSearchResult profile = 11;</code>
      */
     public io.bloombox.schema.search.SearchResults.UserSearchResultOrBuilder getProfileOrBuilder() {
       if (resultCase_ == 11) {
@@ -2608,7 +2685,7 @@ public final class SearchResults {
      * Resulting data that is a partner or partner location profile.
      * </pre>
      *
-     * <code>.bloombox.schema.search.PartnerSearchResult partner = 12;</code>
+     * <code>.bloombox.search.PartnerSearchResult partner = 12;</code>
      */
     public boolean hasPartner() {
       return resultCase_ == 12;
@@ -2618,7 +2695,7 @@ public final class SearchResults {
      * Resulting data that is a partner or partner location profile.
      * </pre>
      *
-     * <code>.bloombox.schema.search.PartnerSearchResult partner = 12;</code>
+     * <code>.bloombox.search.PartnerSearchResult partner = 12;</code>
      */
     public io.bloombox.schema.search.SearchResults.PartnerSearchResult getPartner() {
       if (resultCase_ == 12) {
@@ -2631,7 +2708,7 @@ public final class SearchResults {
      * Resulting data that is a partner or partner location profile.
      * </pre>
      *
-     * <code>.bloombox.schema.search.PartnerSearchResult partner = 12;</code>
+     * <code>.bloombox.search.PartnerSearchResult partner = 12;</code>
      */
     public io.bloombox.schema.search.SearchResults.PartnerSearchResultOrBuilder getPartnerOrBuilder() {
       if (resultCase_ == 12) {
@@ -2641,6 +2718,7 @@ public final class SearchResults {
     }
 
     private byte memoizedIsInitialized = -1;
+    @java.lang.Override
     public final boolean isInitialized() {
       byte isInitialized = memoizedIsInitialized;
       if (isInitialized == 1) return true;
@@ -2650,6 +2728,7 @@ public final class SearchResults {
       return true;
     }
 
+    @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
       if (rank_ != 0) {
@@ -2673,6 +2752,7 @@ public final class SearchResults {
       unknownFields.writeTo(output);
     }
 
+    @java.lang.Override
     public int getSerializedSize() {
       int size = memoizedSize;
       if (size != -1) return size;
@@ -2859,6 +2939,7 @@ public final class SearchResults {
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
 
+    @java.lang.Override
     public Builder newBuilderForType() { return newBuilder(); }
     public static Builder newBuilder() {
       return DEFAULT_INSTANCE.toBuilder();
@@ -2866,6 +2947,7 @@ public final class SearchResults {
     public static Builder newBuilder(io.bloombox.schema.search.SearchResults.SearchResult prototype) {
       return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
     }
+    @java.lang.Override
     public Builder toBuilder() {
       return this == DEFAULT_INSTANCE
           ? new Builder() : new Builder().mergeFrom(this);
@@ -2882,20 +2964,21 @@ public final class SearchResults {
      * Specifies an individual matching result to a search operation, regardless of type.
      * </pre>
      *
-     * Protobuf type {@code bloombox.schema.search.SearchResult}
+     * Protobuf type {@code bloombox.search.SearchResult}
      */
     public static final class Builder extends
         com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:bloombox.schema.search.SearchResult)
+        // @@protoc_insertion_point(builder_implements:bloombox.search.SearchResult)
         io.bloombox.schema.search.SearchResults.SearchResultOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return io.bloombox.schema.search.SearchResults.internal_static_bloombox_schema_search_SearchResult_descriptor;
+        return io.bloombox.schema.search.SearchResults.internal_static_bloombox_search_SearchResult_descriptor;
       }
 
+      @java.lang.Override
       protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return io.bloombox.schema.search.SearchResults.internal_static_bloombox_schema_search_SearchResult_fieldAccessorTable
+        return io.bloombox.schema.search.SearchResults.internal_static_bloombox_search_SearchResult_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
                 io.bloombox.schema.search.SearchResults.SearchResult.class, io.bloombox.schema.search.SearchResults.SearchResult.Builder.class);
       }
@@ -2915,6 +2998,7 @@ public final class SearchResults {
                 .alwaysUseFieldBuilders) {
         }
       }
+      @java.lang.Override
       public Builder clear() {
         super.clear();
         rank_ = 0;
@@ -2932,15 +3016,18 @@ public final class SearchResults {
         return this;
       }
 
+      @java.lang.Override
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return io.bloombox.schema.search.SearchResults.internal_static_bloombox_schema_search_SearchResult_descriptor;
+        return io.bloombox.schema.search.SearchResults.internal_static_bloombox_search_SearchResult_descriptor;
       }
 
+      @java.lang.Override
       public io.bloombox.schema.search.SearchResults.SearchResult getDefaultInstanceForType() {
         return io.bloombox.schema.search.SearchResults.SearchResult.getDefaultInstance();
       }
 
+      @java.lang.Override
       public io.bloombox.schema.search.SearchResults.SearchResult build() {
         io.bloombox.schema.search.SearchResults.SearchResult result = buildPartial();
         if (!result.isInitialized()) {
@@ -2949,6 +3036,7 @@ public final class SearchResults {
         return result;
       }
 
+      @java.lang.Override
       public io.bloombox.schema.search.SearchResults.SearchResult buildPartial() {
         io.bloombox.schema.search.SearchResults.SearchResult result = new io.bloombox.schema.search.SearchResults.SearchResult(this);
         result.rank_ = rank_;
@@ -2984,32 +3072,39 @@ public final class SearchResults {
         return result;
       }
 
+      @java.lang.Override
       public Builder clone() {
         return (Builder) super.clone();
       }
+      @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
         return (Builder) super.setField(field, value);
       }
+      @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
         return (Builder) super.clearField(field);
       }
+      @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
         return (Builder) super.clearOneof(oneof);
       }
+      @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
         return (Builder) super.setRepeatedField(field, index, value);
       }
+      @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
         return (Builder) super.addRepeatedField(field, value);
       }
+      @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
         if (other instanceof io.bloombox.schema.search.SearchResults.SearchResult) {
           return mergeFrom((io.bloombox.schema.search.SearchResults.SearchResult)other);
@@ -3052,10 +3147,12 @@ public final class SearchResults {
         return this;
       }
 
+      @java.lang.Override
       public final boolean isInitialized() {
         return true;
       }
 
+      @java.lang.Override
       public Builder mergeFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -3325,7 +3422,7 @@ public final class SearchResults {
        * Resulting data that is a catalog product.
        * </pre>
        *
-       * <code>.bloombox.schema.search.ProductSearchResult product = 10;</code>
+       * <code>.bloombox.search.ProductSearchResult product = 10;</code>
        */
       public boolean hasProduct() {
         return resultCase_ == 10;
@@ -3335,7 +3432,7 @@ public final class SearchResults {
        * Resulting data that is a catalog product.
        * </pre>
        *
-       * <code>.bloombox.schema.search.ProductSearchResult product = 10;</code>
+       * <code>.bloombox.search.ProductSearchResult product = 10;</code>
        */
       public io.bloombox.schema.search.SearchResults.ProductSearchResult getProduct() {
         if (productBuilder_ == null) {
@@ -3355,7 +3452,7 @@ public final class SearchResults {
        * Resulting data that is a catalog product.
        * </pre>
        *
-       * <code>.bloombox.schema.search.ProductSearchResult product = 10;</code>
+       * <code>.bloombox.search.ProductSearchResult product = 10;</code>
        */
       public Builder setProduct(io.bloombox.schema.search.SearchResults.ProductSearchResult value) {
         if (productBuilder_ == null) {
@@ -3375,7 +3472,7 @@ public final class SearchResults {
        * Resulting data that is a catalog product.
        * </pre>
        *
-       * <code>.bloombox.schema.search.ProductSearchResult product = 10;</code>
+       * <code>.bloombox.search.ProductSearchResult product = 10;</code>
        */
       public Builder setProduct(
           io.bloombox.schema.search.SearchResults.ProductSearchResult.Builder builderForValue) {
@@ -3393,7 +3490,7 @@ public final class SearchResults {
        * Resulting data that is a catalog product.
        * </pre>
        *
-       * <code>.bloombox.schema.search.ProductSearchResult product = 10;</code>
+       * <code>.bloombox.search.ProductSearchResult product = 10;</code>
        */
       public Builder mergeProduct(io.bloombox.schema.search.SearchResults.ProductSearchResult value) {
         if (productBuilder_ == null) {
@@ -3419,7 +3516,7 @@ public final class SearchResults {
        * Resulting data that is a catalog product.
        * </pre>
        *
-       * <code>.bloombox.schema.search.ProductSearchResult product = 10;</code>
+       * <code>.bloombox.search.ProductSearchResult product = 10;</code>
        */
       public Builder clearProduct() {
         if (productBuilder_ == null) {
@@ -3442,7 +3539,7 @@ public final class SearchResults {
        * Resulting data that is a catalog product.
        * </pre>
        *
-       * <code>.bloombox.schema.search.ProductSearchResult product = 10;</code>
+       * <code>.bloombox.search.ProductSearchResult product = 10;</code>
        */
       public io.bloombox.schema.search.SearchResults.ProductSearchResult.Builder getProductBuilder() {
         return getProductFieldBuilder().getBuilder();
@@ -3452,7 +3549,7 @@ public final class SearchResults {
        * Resulting data that is a catalog product.
        * </pre>
        *
-       * <code>.bloombox.schema.search.ProductSearchResult product = 10;</code>
+       * <code>.bloombox.search.ProductSearchResult product = 10;</code>
        */
       public io.bloombox.schema.search.SearchResults.ProductSearchResultOrBuilder getProductOrBuilder() {
         if ((resultCase_ == 10) && (productBuilder_ != null)) {
@@ -3469,7 +3566,7 @@ public final class SearchResults {
        * Resulting data that is a catalog product.
        * </pre>
        *
-       * <code>.bloombox.schema.search.ProductSearchResult product = 10;</code>
+       * <code>.bloombox.search.ProductSearchResult product = 10;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
           io.bloombox.schema.search.SearchResults.ProductSearchResult, io.bloombox.schema.search.SearchResults.ProductSearchResult.Builder, io.bloombox.schema.search.SearchResults.ProductSearchResultOrBuilder> 
@@ -3497,7 +3594,7 @@ public final class SearchResults {
        * Resulting data that is a user or user profile.
        * </pre>
        *
-       * <code>.bloombox.schema.search.UserSearchResult profile = 11;</code>
+       * <code>.bloombox.search.UserSearchResult profile = 11;</code>
        */
       public boolean hasProfile() {
         return resultCase_ == 11;
@@ -3507,7 +3604,7 @@ public final class SearchResults {
        * Resulting data that is a user or user profile.
        * </pre>
        *
-       * <code>.bloombox.schema.search.UserSearchResult profile = 11;</code>
+       * <code>.bloombox.search.UserSearchResult profile = 11;</code>
        */
       public io.bloombox.schema.search.SearchResults.UserSearchResult getProfile() {
         if (profileBuilder_ == null) {
@@ -3527,7 +3624,7 @@ public final class SearchResults {
        * Resulting data that is a user or user profile.
        * </pre>
        *
-       * <code>.bloombox.schema.search.UserSearchResult profile = 11;</code>
+       * <code>.bloombox.search.UserSearchResult profile = 11;</code>
        */
       public Builder setProfile(io.bloombox.schema.search.SearchResults.UserSearchResult value) {
         if (profileBuilder_ == null) {
@@ -3547,7 +3644,7 @@ public final class SearchResults {
        * Resulting data that is a user or user profile.
        * </pre>
        *
-       * <code>.bloombox.schema.search.UserSearchResult profile = 11;</code>
+       * <code>.bloombox.search.UserSearchResult profile = 11;</code>
        */
       public Builder setProfile(
           io.bloombox.schema.search.SearchResults.UserSearchResult.Builder builderForValue) {
@@ -3565,7 +3662,7 @@ public final class SearchResults {
        * Resulting data that is a user or user profile.
        * </pre>
        *
-       * <code>.bloombox.schema.search.UserSearchResult profile = 11;</code>
+       * <code>.bloombox.search.UserSearchResult profile = 11;</code>
        */
       public Builder mergeProfile(io.bloombox.schema.search.SearchResults.UserSearchResult value) {
         if (profileBuilder_ == null) {
@@ -3591,7 +3688,7 @@ public final class SearchResults {
        * Resulting data that is a user or user profile.
        * </pre>
        *
-       * <code>.bloombox.schema.search.UserSearchResult profile = 11;</code>
+       * <code>.bloombox.search.UserSearchResult profile = 11;</code>
        */
       public Builder clearProfile() {
         if (profileBuilder_ == null) {
@@ -3614,7 +3711,7 @@ public final class SearchResults {
        * Resulting data that is a user or user profile.
        * </pre>
        *
-       * <code>.bloombox.schema.search.UserSearchResult profile = 11;</code>
+       * <code>.bloombox.search.UserSearchResult profile = 11;</code>
        */
       public io.bloombox.schema.search.SearchResults.UserSearchResult.Builder getProfileBuilder() {
         return getProfileFieldBuilder().getBuilder();
@@ -3624,7 +3721,7 @@ public final class SearchResults {
        * Resulting data that is a user or user profile.
        * </pre>
        *
-       * <code>.bloombox.schema.search.UserSearchResult profile = 11;</code>
+       * <code>.bloombox.search.UserSearchResult profile = 11;</code>
        */
       public io.bloombox.schema.search.SearchResults.UserSearchResultOrBuilder getProfileOrBuilder() {
         if ((resultCase_ == 11) && (profileBuilder_ != null)) {
@@ -3641,7 +3738,7 @@ public final class SearchResults {
        * Resulting data that is a user or user profile.
        * </pre>
        *
-       * <code>.bloombox.schema.search.UserSearchResult profile = 11;</code>
+       * <code>.bloombox.search.UserSearchResult profile = 11;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
           io.bloombox.schema.search.SearchResults.UserSearchResult, io.bloombox.schema.search.SearchResults.UserSearchResult.Builder, io.bloombox.schema.search.SearchResults.UserSearchResultOrBuilder> 
@@ -3669,7 +3766,7 @@ public final class SearchResults {
        * Resulting data that is a partner or partner location profile.
        * </pre>
        *
-       * <code>.bloombox.schema.search.PartnerSearchResult partner = 12;</code>
+       * <code>.bloombox.search.PartnerSearchResult partner = 12;</code>
        */
       public boolean hasPartner() {
         return resultCase_ == 12;
@@ -3679,7 +3776,7 @@ public final class SearchResults {
        * Resulting data that is a partner or partner location profile.
        * </pre>
        *
-       * <code>.bloombox.schema.search.PartnerSearchResult partner = 12;</code>
+       * <code>.bloombox.search.PartnerSearchResult partner = 12;</code>
        */
       public io.bloombox.schema.search.SearchResults.PartnerSearchResult getPartner() {
         if (partnerBuilder_ == null) {
@@ -3699,7 +3796,7 @@ public final class SearchResults {
        * Resulting data that is a partner or partner location profile.
        * </pre>
        *
-       * <code>.bloombox.schema.search.PartnerSearchResult partner = 12;</code>
+       * <code>.bloombox.search.PartnerSearchResult partner = 12;</code>
        */
       public Builder setPartner(io.bloombox.schema.search.SearchResults.PartnerSearchResult value) {
         if (partnerBuilder_ == null) {
@@ -3719,7 +3816,7 @@ public final class SearchResults {
        * Resulting data that is a partner or partner location profile.
        * </pre>
        *
-       * <code>.bloombox.schema.search.PartnerSearchResult partner = 12;</code>
+       * <code>.bloombox.search.PartnerSearchResult partner = 12;</code>
        */
       public Builder setPartner(
           io.bloombox.schema.search.SearchResults.PartnerSearchResult.Builder builderForValue) {
@@ -3737,7 +3834,7 @@ public final class SearchResults {
        * Resulting data that is a partner or partner location profile.
        * </pre>
        *
-       * <code>.bloombox.schema.search.PartnerSearchResult partner = 12;</code>
+       * <code>.bloombox.search.PartnerSearchResult partner = 12;</code>
        */
       public Builder mergePartner(io.bloombox.schema.search.SearchResults.PartnerSearchResult value) {
         if (partnerBuilder_ == null) {
@@ -3763,7 +3860,7 @@ public final class SearchResults {
        * Resulting data that is a partner or partner location profile.
        * </pre>
        *
-       * <code>.bloombox.schema.search.PartnerSearchResult partner = 12;</code>
+       * <code>.bloombox.search.PartnerSearchResult partner = 12;</code>
        */
       public Builder clearPartner() {
         if (partnerBuilder_ == null) {
@@ -3786,7 +3883,7 @@ public final class SearchResults {
        * Resulting data that is a partner or partner location profile.
        * </pre>
        *
-       * <code>.bloombox.schema.search.PartnerSearchResult partner = 12;</code>
+       * <code>.bloombox.search.PartnerSearchResult partner = 12;</code>
        */
       public io.bloombox.schema.search.SearchResults.PartnerSearchResult.Builder getPartnerBuilder() {
         return getPartnerFieldBuilder().getBuilder();
@@ -3796,7 +3893,7 @@ public final class SearchResults {
        * Resulting data that is a partner or partner location profile.
        * </pre>
        *
-       * <code>.bloombox.schema.search.PartnerSearchResult partner = 12;</code>
+       * <code>.bloombox.search.PartnerSearchResult partner = 12;</code>
        */
       public io.bloombox.schema.search.SearchResults.PartnerSearchResultOrBuilder getPartnerOrBuilder() {
         if ((resultCase_ == 12) && (partnerBuilder_ != null)) {
@@ -3813,7 +3910,7 @@ public final class SearchResults {
        * Resulting data that is a partner or partner location profile.
        * </pre>
        *
-       * <code>.bloombox.schema.search.PartnerSearchResult partner = 12;</code>
+       * <code>.bloombox.search.PartnerSearchResult partner = 12;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
           io.bloombox.schema.search.SearchResults.PartnerSearchResult, io.bloombox.schema.search.SearchResults.PartnerSearchResult.Builder, io.bloombox.schema.search.SearchResults.PartnerSearchResultOrBuilder> 
@@ -3833,21 +3930,23 @@ public final class SearchResults {
         onChanged();;
         return partnerBuilder_;
       }
+      @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
         return super.setUnknownFieldsProto3(unknownFields);
       }
 
+      @java.lang.Override
       public final Builder mergeUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
         return super.mergeUnknownFields(unknownFields);
       }
 
 
-      // @@protoc_insertion_point(builder_scope:bloombox.schema.search.SearchResult)
+      // @@protoc_insertion_point(builder_scope:bloombox.search.SearchResult)
     }
 
-    // @@protoc_insertion_point(class_scope:bloombox.schema.search.SearchResult)
+    // @@protoc_insertion_point(class_scope:bloombox.search.SearchResult)
     private static final io.bloombox.schema.search.SearchResults.SearchResult DEFAULT_INSTANCE;
     static {
       DEFAULT_INSTANCE = new io.bloombox.schema.search.SearchResults.SearchResult();
@@ -3859,6 +3958,7 @@ public final class SearchResults {
 
     private static final com.google.protobuf.Parser<SearchResult>
         PARSER = new com.google.protobuf.AbstractParser<SearchResult>() {
+      @java.lang.Override
       public SearchResult parsePartialFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -3876,6 +3976,7 @@ public final class SearchResults {
       return PARSER;
     }
 
+    @java.lang.Override
     public io.bloombox.schema.search.SearchResults.SearchResult getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
@@ -3883,25 +3984,25 @@ public final class SearchResults {
   }
 
   private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_bloombox_schema_search_ProductSearchResult_descriptor;
+    internal_static_bloombox_search_ProductSearchResult_descriptor;
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_bloombox_schema_search_ProductSearchResult_fieldAccessorTable;
+      internal_static_bloombox_search_ProductSearchResult_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_bloombox_schema_search_UserSearchResult_descriptor;
+    internal_static_bloombox_search_UserSearchResult_descriptor;
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_bloombox_schema_search_UserSearchResult_fieldAccessorTable;
+      internal_static_bloombox_search_UserSearchResult_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_bloombox_schema_search_PartnerSearchResult_descriptor;
+    internal_static_bloombox_search_PartnerSearchResult_descriptor;
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_bloombox_schema_search_PartnerSearchResult_fieldAccessorTable;
+      internal_static_bloombox_search_PartnerSearchResult_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_bloombox_schema_search_SearchResult_descriptor;
+    internal_static_bloombox_search_SearchResult_descriptor;
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_bloombox_schema_search_SearchResult_fieldAccessorTable;
+      internal_static_bloombox_search_SearchResult_fieldAccessorTable;
 
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
@@ -3911,26 +4012,25 @@ public final class SearchResults {
       descriptor;
   static {
     java.lang.String[] descriptorData = {
-      "\n\031search/SearchResult.proto\022\026bloombox.sc" +
-      "hema.search\032\023identity/User.proto\032\026identi" +
-      "ty/UserKey.proto\032\025base/ProductKey.proto\032" +
-      "\030products/menu/Menu.proto\032 google/protob" +
-      "uf/field_mask.proto\"L\n\023ProductSearchResu" +
-      "lt\0225\n\004item\030\001 \001(\0132\'.opencannabis.products" +
-      ".menu.MenuProduct\"p\n\020UserSearchResult\022.\n" +
-      "\003key\030\001 \001(\0132!.bloombox.schema.identity.Us" +
-      "erKey\022,\n\004user\030\002 \001(\0132\036.bloombox.schema.id" +
-      "entity.User\"$\n\023PartnerSearchResult\022\r\n\005sc" +
-      "ope\030\001 \001(\t\"\242\002\n\014SearchResult\022\014\n\004rank\030\001 \001(\r" +
-      "\022\021\n\trelevance\030\002 \001(\001\022*\n\006fields\030\003 \001(\0132\032.go" +
-      "ogle.protobuf.FieldMask\022>\n\007product\030\n \001(\013" +
-      "2+.bloombox.schema.search.ProductSearchR" +
-      "esultH\000\022;\n\007profile\030\013 \001(\0132(.bloombox.sche" +
-      "ma.search.UserSearchResultH\000\022>\n\007partner\030" +
-      "\014 \001(\0132+.bloombox.schema.search.PartnerSe" +
-      "archResultH\000B\010\n\006resultB4\n\031io.bloombox.sc" +
-      "hema.searchB\rSearchResultsH\001P\000\242\002\003BBSb\006pr" +
-      "oto3"
+      "\n\031search/SearchResult.proto\022\017bloombox.se" +
+      "arch\032\023identity/User.proto\032\026identity/User" +
+      "Key.proto\032\025base/ProductKey.proto\032\030produc" +
+      "ts/menu/Menu.proto\032 google/protobuf/fiel" +
+      "d_mask.proto\"L\n\023ProductSearchResult\0225\n\004i" +
+      "tem\030\001 \001(\0132\'.opencannabis.products.menu.M" +
+      "enuProduct\"b\n\020UserSearchResult\022\'\n\003key\030\001 " +
+      "\001(\0132\032.bloombox.identity.UserKey\022%\n\004user\030" +
+      "\002 \001(\0132\027.bloombox.identity.User\"$\n\023Partne" +
+      "rSearchResult\022\r\n\005scope\030\001 \001(\t\"\215\002\n\014SearchR" +
+      "esult\022\014\n\004rank\030\001 \001(\r\022\021\n\trelevance\030\002 \001(\001\022*" +
+      "\n\006fields\030\003 \001(\0132\032.google.protobuf.FieldMa" +
+      "sk\0227\n\007product\030\n \001(\0132$.bloombox.search.Pr" +
+      "oductSearchResultH\000\0224\n\007profile\030\013 \001(\0132!.b" +
+      "loombox.search.UserSearchResultH\000\0227\n\007par" +
+      "tner\030\014 \001(\0132$.bloombox.search.PartnerSear" +
+      "chResultH\000B\010\n\006resultB4\n\031io.bloombox.sche" +
+      "ma.searchB\rSearchResultsH\001P\000\242\002\003BBSb\006prot" +
+      "o3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -3949,29 +4049,29 @@ public final class SearchResults {
           io.opencannabis.schema.menu.MenuOuterClass.getDescriptor(),
           com.google.protobuf.FieldMaskProto.getDescriptor(),
         }, assigner);
-    internal_static_bloombox_schema_search_ProductSearchResult_descriptor =
+    internal_static_bloombox_search_ProductSearchResult_descriptor =
       getDescriptor().getMessageTypes().get(0);
-    internal_static_bloombox_schema_search_ProductSearchResult_fieldAccessorTable = new
+    internal_static_bloombox_search_ProductSearchResult_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_bloombox_schema_search_ProductSearchResult_descriptor,
+        internal_static_bloombox_search_ProductSearchResult_descriptor,
         new java.lang.String[] { "Item", });
-    internal_static_bloombox_schema_search_UserSearchResult_descriptor =
+    internal_static_bloombox_search_UserSearchResult_descriptor =
       getDescriptor().getMessageTypes().get(1);
-    internal_static_bloombox_schema_search_UserSearchResult_fieldAccessorTable = new
+    internal_static_bloombox_search_UserSearchResult_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_bloombox_schema_search_UserSearchResult_descriptor,
+        internal_static_bloombox_search_UserSearchResult_descriptor,
         new java.lang.String[] { "Key", "User", });
-    internal_static_bloombox_schema_search_PartnerSearchResult_descriptor =
+    internal_static_bloombox_search_PartnerSearchResult_descriptor =
       getDescriptor().getMessageTypes().get(2);
-    internal_static_bloombox_schema_search_PartnerSearchResult_fieldAccessorTable = new
+    internal_static_bloombox_search_PartnerSearchResult_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_bloombox_schema_search_PartnerSearchResult_descriptor,
+        internal_static_bloombox_search_PartnerSearchResult_descriptor,
         new java.lang.String[] { "Scope", });
-    internal_static_bloombox_schema_search_SearchResult_descriptor =
+    internal_static_bloombox_search_SearchResult_descriptor =
       getDescriptor().getMessageTypes().get(3);
-    internal_static_bloombox_schema_search_SearchResult_fieldAccessorTable = new
+    internal_static_bloombox_search_SearchResult_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_bloombox_schema_search_SearchResult_descriptor,
+        internal_static_bloombox_search_SearchResult_descriptor,
         new java.lang.String[] { "Rank", "Relevance", "Fields", "Product", "Profile", "Partner", "Result", });
     io.bloombox.schema.identity.AppUser.getDescriptor();
     io.bloombox.schema.identity.AppUserKey.getDescriptor();

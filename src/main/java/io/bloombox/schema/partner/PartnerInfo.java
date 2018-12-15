@@ -1,11 +1,12 @@
 /*
- * Copyright 2018, Bloombox, LLC.
+ * Copyright 2018, Momentum Ideas, Co. All rights reserved.
  *
- * Licensed under the Apache License, Version 2.0 (the "License");
- * you may not use this file except in compliance with the License.
- * You may obtain a copy of the License at
- *
- *     http://www.apache.org/licenses/LICENSE-2.0
+ * Source and object computer code contained herein is the private intellectual
+ * property of Momentum Ideas Co., a Delaware Corporation. Use of this
+ * code in source form requires permission in writing before use or the
+ * assembly, distribution, or publishing of derivative works, for commercial
+ * purposes or any other purpose, from a duly authorized officer of Momentum
+ * Ideas Co.
  *
  * Unless required by applicable law or agreed to in writing, software
  * distributed under the License is distributed on an "AS IS" BASIS,
@@ -31,7 +32,7 @@ public final class PartnerInfo {
         (com.google.protobuf.ExtensionRegistryLite) registry);
   }
   public interface PartnerFlagsOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:bloombox.schema.partner.PartnerFlags)
+      // @@protoc_insertion_point(interface_extends:bloombox.partner.PartnerFlags)
       com.google.protobuf.MessageOrBuilder {
 
     /**
@@ -87,11 +88,11 @@ public final class PartnerInfo {
    * Specifies flags that may be set on a partner organization account.
    * </pre>
    *
-   * Protobuf type {@code bloombox.schema.partner.PartnerFlags}
+   * Protobuf type {@code bloombox.partner.PartnerFlags}
    */
   public  static final class PartnerFlags extends
       com.google.protobuf.GeneratedMessageV3 implements
-      // @@protoc_insertion_point(message_implements:bloombox.schema.partner.PartnerFlags)
+      // @@protoc_insertion_point(message_implements:bloombox.partner.PartnerFlags)
       PartnerFlagsOrBuilder {
   private static final long serialVersionUID = 0L;
     // Use PartnerFlags.newBuilder() to construct.
@@ -130,13 +131,6 @@ public final class PartnerInfo {
             case 0:
               done = true;
               break;
-            default: {
-              if (!parseUnknownFieldProto3(
-                  input, unknownFields, extensionRegistry, tag)) {
-                done = true;
-              }
-              break;
-            }
             case 8: {
 
               suspended_ = input.readBool();
@@ -162,6 +156,13 @@ public final class PartnerInfo {
               internal_ = input.readBool();
               break;
             }
+            default: {
+              if (!parseUnknownFieldProto3(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
           }
         }
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
@@ -176,12 +177,13 @@ public final class PartnerInfo {
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return io.bloombox.schema.partner.PartnerInfo.internal_static_bloombox_schema_partner_PartnerFlags_descriptor;
+      return io.bloombox.schema.partner.PartnerInfo.internal_static_bloombox_partner_PartnerFlags_descriptor;
     }
 
+    @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return io.bloombox.schema.partner.PartnerInfo.internal_static_bloombox_schema_partner_PartnerFlags_fieldAccessorTable
+      return io.bloombox.schema.partner.PartnerInfo.internal_static_bloombox_partner_PartnerFlags_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
               io.bloombox.schema.partner.PartnerInfo.PartnerFlags.class, io.bloombox.schema.partner.PartnerInfo.PartnerFlags.Builder.class);
     }
@@ -255,6 +257,7 @@ public final class PartnerInfo {
     }
 
     private byte memoizedIsInitialized = -1;
+    @java.lang.Override
     public final boolean isInitialized() {
       byte isInitialized = memoizedIsInitialized;
       if (isInitialized == 1) return true;
@@ -264,6 +267,7 @@ public final class PartnerInfo {
       return true;
     }
 
+    @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
       if (suspended_ != false) {
@@ -284,6 +288,7 @@ public final class PartnerInfo {
       unknownFields.writeTo(output);
     }
 
+    @java.lang.Override
     public int getSerializedSize() {
       int size = memoizedSize;
       if (size != -1) return size;
@@ -436,6 +441,7 @@ public final class PartnerInfo {
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
 
+    @java.lang.Override
     public Builder newBuilderForType() { return newBuilder(); }
     public static Builder newBuilder() {
       return DEFAULT_INSTANCE.toBuilder();
@@ -443,6 +449,7 @@ public final class PartnerInfo {
     public static Builder newBuilder(io.bloombox.schema.partner.PartnerInfo.PartnerFlags prototype) {
       return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
     }
+    @java.lang.Override
     public Builder toBuilder() {
       return this == DEFAULT_INSTANCE
           ? new Builder() : new Builder().mergeFrom(this);
@@ -459,20 +466,21 @@ public final class PartnerInfo {
      * Specifies flags that may be set on a partner organization account.
      * </pre>
      *
-     * Protobuf type {@code bloombox.schema.partner.PartnerFlags}
+     * Protobuf type {@code bloombox.partner.PartnerFlags}
      */
     public static final class Builder extends
         com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:bloombox.schema.partner.PartnerFlags)
+        // @@protoc_insertion_point(builder_implements:bloombox.partner.PartnerFlags)
         io.bloombox.schema.partner.PartnerInfo.PartnerFlagsOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return io.bloombox.schema.partner.PartnerInfo.internal_static_bloombox_schema_partner_PartnerFlags_descriptor;
+        return io.bloombox.schema.partner.PartnerInfo.internal_static_bloombox_partner_PartnerFlags_descriptor;
       }
 
+      @java.lang.Override
       protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return io.bloombox.schema.partner.PartnerInfo.internal_static_bloombox_schema_partner_PartnerFlags_fieldAccessorTable
+        return io.bloombox.schema.partner.PartnerInfo.internal_static_bloombox_partner_PartnerFlags_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
                 io.bloombox.schema.partner.PartnerInfo.PartnerFlags.class, io.bloombox.schema.partner.PartnerInfo.PartnerFlags.Builder.class);
       }
@@ -492,6 +500,7 @@ public final class PartnerInfo {
                 .alwaysUseFieldBuilders) {
         }
       }
+      @java.lang.Override
       public Builder clear() {
         super.clear();
         suspended_ = false;
@@ -507,15 +516,18 @@ public final class PartnerInfo {
         return this;
       }
 
+      @java.lang.Override
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return io.bloombox.schema.partner.PartnerInfo.internal_static_bloombox_schema_partner_PartnerFlags_descriptor;
+        return io.bloombox.schema.partner.PartnerInfo.internal_static_bloombox_partner_PartnerFlags_descriptor;
       }
 
+      @java.lang.Override
       public io.bloombox.schema.partner.PartnerInfo.PartnerFlags getDefaultInstanceForType() {
         return io.bloombox.schema.partner.PartnerInfo.PartnerFlags.getDefaultInstance();
       }
 
+      @java.lang.Override
       public io.bloombox.schema.partner.PartnerInfo.PartnerFlags build() {
         io.bloombox.schema.partner.PartnerInfo.PartnerFlags result = buildPartial();
         if (!result.isInitialized()) {
@@ -524,6 +536,7 @@ public final class PartnerInfo {
         return result;
       }
 
+      @java.lang.Override
       public io.bloombox.schema.partner.PartnerInfo.PartnerFlags buildPartial() {
         io.bloombox.schema.partner.PartnerInfo.PartnerFlags result = new io.bloombox.schema.partner.PartnerInfo.PartnerFlags(this);
         result.suspended_ = suspended_;
@@ -535,32 +548,39 @@ public final class PartnerInfo {
         return result;
       }
 
+      @java.lang.Override
       public Builder clone() {
         return (Builder) super.clone();
       }
+      @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
         return (Builder) super.setField(field, value);
       }
+      @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
         return (Builder) super.clearField(field);
       }
+      @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
         return (Builder) super.clearOneof(oneof);
       }
+      @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
         return (Builder) super.setRepeatedField(field, index, value);
       }
+      @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
         return (Builder) super.addRepeatedField(field, value);
       }
+      @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
         if (other instanceof io.bloombox.schema.partner.PartnerInfo.PartnerFlags) {
           return mergeFrom((io.bloombox.schema.partner.PartnerInfo.PartnerFlags)other);
@@ -592,10 +612,12 @@ public final class PartnerInfo {
         return this;
       }
 
+      @java.lang.Override
       public final boolean isInitialized() {
         return true;
       }
 
+      @java.lang.Override
       public Builder mergeFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -812,21 +834,23 @@ public final class PartnerInfo {
         onChanged();
         return this;
       }
+      @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
         return super.setUnknownFieldsProto3(unknownFields);
       }
 
+      @java.lang.Override
       public final Builder mergeUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
         return super.mergeUnknownFields(unknownFields);
       }
 
 
-      // @@protoc_insertion_point(builder_scope:bloombox.schema.partner.PartnerFlags)
+      // @@protoc_insertion_point(builder_scope:bloombox.partner.PartnerFlags)
     }
 
-    // @@protoc_insertion_point(class_scope:bloombox.schema.partner.PartnerFlags)
+    // @@protoc_insertion_point(class_scope:bloombox.partner.PartnerFlags)
     private static final io.bloombox.schema.partner.PartnerInfo.PartnerFlags DEFAULT_INSTANCE;
     static {
       DEFAULT_INSTANCE = new io.bloombox.schema.partner.PartnerInfo.PartnerFlags();
@@ -838,6 +862,7 @@ public final class PartnerInfo {
 
     private static final com.google.protobuf.Parser<PartnerFlags>
         PARSER = new com.google.protobuf.AbstractParser<PartnerFlags>() {
+      @java.lang.Override
       public PartnerFlags parsePartialFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -855,6 +880,7 @@ public final class PartnerInfo {
       return PARSER;
     }
 
+    @java.lang.Override
     public io.bloombox.schema.partner.PartnerInfo.PartnerFlags getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
@@ -862,10 +888,10 @@ public final class PartnerInfo {
   }
 
   private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_bloombox_schema_partner_PartnerFlags_descriptor;
+    internal_static_bloombox_partner_PartnerFlags_descriptor;
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_bloombox_schema_partner_PartnerFlags_fieldAccessorTable;
+      internal_static_bloombox_partner_PartnerFlags_fieldAccessorTable;
 
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
@@ -875,28 +901,28 @@ public final class PartnerInfo {
       descriptor;
   static {
     java.lang.String[] descriptorData = {
-      "\n\032partner/PartnerFlags.proto\022\027bloombox.s" +
-      "chema.partner\032\016bq_field.proto\"\336\005\n\014Partne" +
-      "rFlags\022\242\001\n\tsuspended\030\001 \001(\010B\216\001\212@\212\001Specifi" +
-      "es that the subject partner organization" +
-      " is currently suspended, organization wi" +
-      "de, and has had access revoked to Bloomb" +
-      "ox systems.\022\260\001\n\007pastdue\030\002 \001(\010B\236\001\212@\232\001Spec" +
-      "ifies that the subject partner organizta" +
-      "ion is currently in a past-due state, wh" +
-      "ere their organization and related acces" +
-      "s has been heavily restricted.\022t\n\004beta\030\003" +
-      " \001(\010Bf\212@cSpecifies that the subject part" +
-      "ner organization has access to beta feat" +
-      "ures, clusters, and systems.\022`\n\007sandbox\030" +
-      "\004 \001(\010BO\212@LSpecifies that the subject par" +
-      "tner organization has internal sandbox a" +
-      "ccess.\022\235\001\n\010internal\030\005 \001(\010B\212\001\212@\206\001Specifie" +
-      "s that the subject partner organization " +
-      "is a testing account held and managed in" +
-      "ternally by Bloombox, or by selected par" +
-      "tners.B3\n\032io.bloombox.schema.partnerB\013Pa" +
-      "rtnerInfoH\001P\000\242\002\003BBSb\006proto3"
+      "\n\032partner/PartnerFlags.proto\022\020bloombox.p" +
+      "artner\032\016bq_field.proto\"\336\005\n\014PartnerFlags\022" +
+      "\242\001\n\tsuspended\030\001 \001(\010B\216\001\212@\212\001Specifies that" +
+      " the subject partner organization is cur" +
+      "rently suspended, organization wide, and" +
+      " has had access revoked to Bloombox syst" +
+      "ems.\022\260\001\n\007pastdue\030\002 \001(\010B\236\001\212@\232\001Specifies t" +
+      "hat the subject partner organiztaion is " +
+      "currently in a past-due state, where the" +
+      "ir organization and related access has b" +
+      "een heavily restricted.\022t\n\004beta\030\003 \001(\010Bf\212" +
+      "@cSpecifies that the subject partner org" +
+      "anization has access to beta features, c" +
+      "lusters, and systems.\022`\n\007sandbox\030\004 \001(\010BO" +
+      "\212@LSpecifies that the subject partner or" +
+      "ganization has internal sandbox access.\022" +
+      "\235\001\n\010internal\030\005 \001(\010B\212\001\212@\206\001Specifies that " +
+      "the subject partner organization is a te" +
+      "sting account held and managed internall" +
+      "y by Bloombox, or by selected partners.B" +
+      "3\n\032io.bloombox.schema.partnerB\013PartnerIn" +
+      "foH\001P\000\242\002\003BBSb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -911,11 +937,11 @@ public final class PartnerInfo {
         new com.google.protobuf.Descriptors.FileDescriptor[] {
           gen_bq_schema.BqField.getDescriptor(),
         }, assigner);
-    internal_static_bloombox_schema_partner_PartnerFlags_descriptor =
+    internal_static_bloombox_partner_PartnerFlags_descriptor =
       getDescriptor().getMessageTypes().get(0);
-    internal_static_bloombox_schema_partner_PartnerFlags_fieldAccessorTable = new
+    internal_static_bloombox_partner_PartnerFlags_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_bloombox_schema_partner_PartnerFlags_descriptor,
+        internal_static_bloombox_partner_PartnerFlags_descriptor,
         new java.lang.String[] { "Suspended", "Pastdue", "Beta", "Sandbox", "Internal", });
     com.google.protobuf.ExtensionRegistry registry =
         com.google.protobuf.ExtensionRegistry.newInstance();

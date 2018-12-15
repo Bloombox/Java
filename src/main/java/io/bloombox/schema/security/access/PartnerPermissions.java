@@ -1,11 +1,12 @@
 /*
- * Copyright 2018, Bloombox, LLC.
+ * Copyright 2018, Momentum Ideas, Co. All rights reserved.
  *
- * Licensed under the Apache License, Version 2.0 (the "License");
- * you may not use this file except in compliance with the License.
- * You may obtain a copy of the License at
- *
- *     http://www.apache.org/licenses/LICENSE-2.0
+ * Source and object computer code contained herein is the private intellectual
+ * property of Momentum Ideas Co., a Delaware Corporation. Use of this
+ * code in source form requires permission in writing before use or the
+ * assembly, distribution, or publishing of derivative works, for commercial
+ * purposes or any other purpose, from a duly authorized officer of Momentum
+ * Ideas Co.
  *
  * Unless required by applicable law or agreed to in writing, software
  * distributed under the License is distributed on an "AS IS" BASIS,
@@ -36,7 +37,7 @@ public final class PartnerPermissions {
    * a location or partner admin.
    * </pre>
    *
-   * Protobuf enum {@code bloombox.schema.security.access.PartnerRole}
+   * Protobuf enum {@code bloombox.security.access.PartnerRole}
    */
   public enum PartnerRole
       implements com.google.protobuf.ProtocolMessageEnum {
@@ -231,11 +232,11 @@ public final class PartnerPermissions {
       this.value = value;
     }
 
-    // @@protoc_insertion_point(enum_scope:bloombox.schema.security.access.PartnerRole)
+    // @@protoc_insertion_point(enum_scope:bloombox.security.access.PartnerRole)
   }
 
   public interface AccessSubjectOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:bloombox.schema.security.access.AccessSubject)
+      // @@protoc_insertion_point(interface_extends:bloombox.security.access.AccessSubject)
       com.google.protobuf.MessageOrBuilder {
 
     /**
@@ -243,7 +244,7 @@ public final class PartnerPermissions {
      * Partner-level access scope.
      * </pre>
      *
-     * <code>.bloombox.schema.partner.PartnerKey partner = 10;</code>
+     * <code>.bloombox.partner.PartnerKey partner = 10;</code>
      */
     boolean hasPartner();
     /**
@@ -251,7 +252,7 @@ public final class PartnerPermissions {
      * Partner-level access scope.
      * </pre>
      *
-     * <code>.bloombox.schema.partner.PartnerKey partner = 10;</code>
+     * <code>.bloombox.partner.PartnerKey partner = 10;</code>
      */
     io.bloombox.schema.partner.PartnerMeta.PartnerKey getPartner();
     /**
@@ -259,7 +260,7 @@ public final class PartnerPermissions {
      * Partner-level access scope.
      * </pre>
      *
-     * <code>.bloombox.schema.partner.PartnerKey partner = 10;</code>
+     * <code>.bloombox.partner.PartnerKey partner = 10;</code>
      */
     io.bloombox.schema.partner.PartnerMeta.PartnerKeyOrBuilder getPartnerOrBuilder();
 
@@ -268,7 +269,7 @@ public final class PartnerPermissions {
      * Partner location-level access scope.
      * </pre>
      *
-     * <code>.bloombox.schema.partner.LocationKey location = 20;</code>
+     * <code>.bloombox.partner.LocationKey location = 20;</code>
      */
     boolean hasLocation();
     /**
@@ -276,7 +277,7 @@ public final class PartnerPermissions {
      * Partner location-level access scope.
      * </pre>
      *
-     * <code>.bloombox.schema.partner.LocationKey location = 20;</code>
+     * <code>.bloombox.partner.LocationKey location = 20;</code>
      */
     io.bloombox.schema.partner.LocationAccountKey.LocationKey getLocation();
     /**
@@ -284,7 +285,7 @@ public final class PartnerPermissions {
      * Partner location-level access scope.
      * </pre>
      *
-     * <code>.bloombox.schema.partner.LocationKey location = 20;</code>
+     * <code>.bloombox.partner.LocationKey location = 20;</code>
      */
     io.bloombox.schema.partner.LocationAccountKey.LocationKeyOrBuilder getLocationOrBuilder();
 
@@ -296,11 +297,11 @@ public final class PartnerPermissions {
    * partner location for which right are being specified.
    * </pre>
    *
-   * Protobuf type {@code bloombox.schema.security.access.AccessSubject}
+   * Protobuf type {@code bloombox.security.access.AccessSubject}
    */
   public  static final class AccessSubject extends
       com.google.protobuf.GeneratedMessageV3 implements
-      // @@protoc_insertion_point(message_implements:bloombox.schema.security.access.AccessSubject)
+      // @@protoc_insertion_point(message_implements:bloombox.security.access.AccessSubject)
       AccessSubjectOrBuilder {
   private static final long serialVersionUID = 0L;
     // Use AccessSubject.newBuilder() to construct.
@@ -334,13 +335,6 @@ public final class PartnerPermissions {
             case 0:
               done = true;
               break;
-            default: {
-              if (!parseUnknownFieldProto3(
-                  input, unknownFields, extensionRegistry, tag)) {
-                done = true;
-              }
-              break;
-            }
             case 82: {
               io.bloombox.schema.partner.PartnerMeta.PartnerKey.Builder subBuilder = null;
               if (accountCase_ == 10) {
@@ -369,6 +363,13 @@ public final class PartnerPermissions {
               accountCase_ = 20;
               break;
             }
+            default: {
+              if (!parseUnknownFieldProto3(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
           }
         }
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
@@ -383,12 +384,13 @@ public final class PartnerPermissions {
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return io.bloombox.schema.security.access.PartnerPermissions.internal_static_bloombox_schema_security_access_AccessSubject_descriptor;
+      return io.bloombox.schema.security.access.PartnerPermissions.internal_static_bloombox_security_access_AccessSubject_descriptor;
     }
 
+    @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return io.bloombox.schema.security.access.PartnerPermissions.internal_static_bloombox_schema_security_access_AccessSubject_fieldAccessorTable
+      return io.bloombox.schema.security.access.PartnerPermissions.internal_static_bloombox_security_access_AccessSubject_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
               io.bloombox.schema.security.access.PartnerPermissions.AccessSubject.class, io.bloombox.schema.security.access.PartnerPermissions.AccessSubject.Builder.class);
     }
@@ -437,7 +439,7 @@ public final class PartnerPermissions {
      * Partner-level access scope.
      * </pre>
      *
-     * <code>.bloombox.schema.partner.PartnerKey partner = 10;</code>
+     * <code>.bloombox.partner.PartnerKey partner = 10;</code>
      */
     public boolean hasPartner() {
       return accountCase_ == 10;
@@ -447,7 +449,7 @@ public final class PartnerPermissions {
      * Partner-level access scope.
      * </pre>
      *
-     * <code>.bloombox.schema.partner.PartnerKey partner = 10;</code>
+     * <code>.bloombox.partner.PartnerKey partner = 10;</code>
      */
     public io.bloombox.schema.partner.PartnerMeta.PartnerKey getPartner() {
       if (accountCase_ == 10) {
@@ -460,7 +462,7 @@ public final class PartnerPermissions {
      * Partner-level access scope.
      * </pre>
      *
-     * <code>.bloombox.schema.partner.PartnerKey partner = 10;</code>
+     * <code>.bloombox.partner.PartnerKey partner = 10;</code>
      */
     public io.bloombox.schema.partner.PartnerMeta.PartnerKeyOrBuilder getPartnerOrBuilder() {
       if (accountCase_ == 10) {
@@ -475,7 +477,7 @@ public final class PartnerPermissions {
      * Partner location-level access scope.
      * </pre>
      *
-     * <code>.bloombox.schema.partner.LocationKey location = 20;</code>
+     * <code>.bloombox.partner.LocationKey location = 20;</code>
      */
     public boolean hasLocation() {
       return accountCase_ == 20;
@@ -485,7 +487,7 @@ public final class PartnerPermissions {
      * Partner location-level access scope.
      * </pre>
      *
-     * <code>.bloombox.schema.partner.LocationKey location = 20;</code>
+     * <code>.bloombox.partner.LocationKey location = 20;</code>
      */
     public io.bloombox.schema.partner.LocationAccountKey.LocationKey getLocation() {
       if (accountCase_ == 20) {
@@ -498,7 +500,7 @@ public final class PartnerPermissions {
      * Partner location-level access scope.
      * </pre>
      *
-     * <code>.bloombox.schema.partner.LocationKey location = 20;</code>
+     * <code>.bloombox.partner.LocationKey location = 20;</code>
      */
     public io.bloombox.schema.partner.LocationAccountKey.LocationKeyOrBuilder getLocationOrBuilder() {
       if (accountCase_ == 20) {
@@ -508,6 +510,7 @@ public final class PartnerPermissions {
     }
 
     private byte memoizedIsInitialized = -1;
+    @java.lang.Override
     public final boolean isInitialized() {
       byte isInitialized = memoizedIsInitialized;
       if (isInitialized == 1) return true;
@@ -517,6 +520,7 @@ public final class PartnerPermissions {
       return true;
     }
 
+    @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
       if (accountCase_ == 10) {
@@ -528,6 +532,7 @@ public final class PartnerPermissions {
       unknownFields.writeTo(output);
     }
 
+    @java.lang.Override
     public int getSerializedSize() {
       int size = memoizedSize;
       if (size != -1) return size;
@@ -670,6 +675,7 @@ public final class PartnerPermissions {
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
 
+    @java.lang.Override
     public Builder newBuilderForType() { return newBuilder(); }
     public static Builder newBuilder() {
       return DEFAULT_INSTANCE.toBuilder();
@@ -677,6 +683,7 @@ public final class PartnerPermissions {
     public static Builder newBuilder(io.bloombox.schema.security.access.PartnerPermissions.AccessSubject prototype) {
       return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
     }
+    @java.lang.Override
     public Builder toBuilder() {
       return this == DEFAULT_INSTANCE
           ? new Builder() : new Builder().mergeFrom(this);
@@ -694,20 +701,21 @@ public final class PartnerPermissions {
      * partner location for which right are being specified.
      * </pre>
      *
-     * Protobuf type {@code bloombox.schema.security.access.AccessSubject}
+     * Protobuf type {@code bloombox.security.access.AccessSubject}
      */
     public static final class Builder extends
         com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:bloombox.schema.security.access.AccessSubject)
+        // @@protoc_insertion_point(builder_implements:bloombox.security.access.AccessSubject)
         io.bloombox.schema.security.access.PartnerPermissions.AccessSubjectOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return io.bloombox.schema.security.access.PartnerPermissions.internal_static_bloombox_schema_security_access_AccessSubject_descriptor;
+        return io.bloombox.schema.security.access.PartnerPermissions.internal_static_bloombox_security_access_AccessSubject_descriptor;
       }
 
+      @java.lang.Override
       protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return io.bloombox.schema.security.access.PartnerPermissions.internal_static_bloombox_schema_security_access_AccessSubject_fieldAccessorTable
+        return io.bloombox.schema.security.access.PartnerPermissions.internal_static_bloombox_security_access_AccessSubject_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
                 io.bloombox.schema.security.access.PartnerPermissions.AccessSubject.class, io.bloombox.schema.security.access.PartnerPermissions.AccessSubject.Builder.class);
       }
@@ -727,6 +735,7 @@ public final class PartnerPermissions {
                 .alwaysUseFieldBuilders) {
         }
       }
+      @java.lang.Override
       public Builder clear() {
         super.clear();
         accountCase_ = 0;
@@ -734,15 +743,18 @@ public final class PartnerPermissions {
         return this;
       }
 
+      @java.lang.Override
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return io.bloombox.schema.security.access.PartnerPermissions.internal_static_bloombox_schema_security_access_AccessSubject_descriptor;
+        return io.bloombox.schema.security.access.PartnerPermissions.internal_static_bloombox_security_access_AccessSubject_descriptor;
       }
 
+      @java.lang.Override
       public io.bloombox.schema.security.access.PartnerPermissions.AccessSubject getDefaultInstanceForType() {
         return io.bloombox.schema.security.access.PartnerPermissions.AccessSubject.getDefaultInstance();
       }
 
+      @java.lang.Override
       public io.bloombox.schema.security.access.PartnerPermissions.AccessSubject build() {
         io.bloombox.schema.security.access.PartnerPermissions.AccessSubject result = buildPartial();
         if (!result.isInitialized()) {
@@ -751,6 +763,7 @@ public final class PartnerPermissions {
         return result;
       }
 
+      @java.lang.Override
       public io.bloombox.schema.security.access.PartnerPermissions.AccessSubject buildPartial() {
         io.bloombox.schema.security.access.PartnerPermissions.AccessSubject result = new io.bloombox.schema.security.access.PartnerPermissions.AccessSubject(this);
         if (accountCase_ == 10) {
@@ -772,32 +785,39 @@ public final class PartnerPermissions {
         return result;
       }
 
+      @java.lang.Override
       public Builder clone() {
         return (Builder) super.clone();
       }
+      @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
         return (Builder) super.setField(field, value);
       }
+      @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
         return (Builder) super.clearField(field);
       }
+      @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
         return (Builder) super.clearOneof(oneof);
       }
+      @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
         return (Builder) super.setRepeatedField(field, index, value);
       }
+      @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
         return (Builder) super.addRepeatedField(field, value);
       }
+      @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
         if (other instanceof io.bloombox.schema.security.access.PartnerPermissions.AccessSubject) {
           return mergeFrom((io.bloombox.schema.security.access.PartnerPermissions.AccessSubject)other);
@@ -827,10 +847,12 @@ public final class PartnerPermissions {
         return this;
       }
 
+      @java.lang.Override
       public final boolean isInitialized() {
         return true;
       }
 
+      @java.lang.Override
       public Builder mergeFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -871,7 +893,7 @@ public final class PartnerPermissions {
        * Partner-level access scope.
        * </pre>
        *
-       * <code>.bloombox.schema.partner.PartnerKey partner = 10;</code>
+       * <code>.bloombox.partner.PartnerKey partner = 10;</code>
        */
       public boolean hasPartner() {
         return accountCase_ == 10;
@@ -881,7 +903,7 @@ public final class PartnerPermissions {
        * Partner-level access scope.
        * </pre>
        *
-       * <code>.bloombox.schema.partner.PartnerKey partner = 10;</code>
+       * <code>.bloombox.partner.PartnerKey partner = 10;</code>
        */
       public io.bloombox.schema.partner.PartnerMeta.PartnerKey getPartner() {
         if (partnerBuilder_ == null) {
@@ -901,7 +923,7 @@ public final class PartnerPermissions {
        * Partner-level access scope.
        * </pre>
        *
-       * <code>.bloombox.schema.partner.PartnerKey partner = 10;</code>
+       * <code>.bloombox.partner.PartnerKey partner = 10;</code>
        */
       public Builder setPartner(io.bloombox.schema.partner.PartnerMeta.PartnerKey value) {
         if (partnerBuilder_ == null) {
@@ -921,7 +943,7 @@ public final class PartnerPermissions {
        * Partner-level access scope.
        * </pre>
        *
-       * <code>.bloombox.schema.partner.PartnerKey partner = 10;</code>
+       * <code>.bloombox.partner.PartnerKey partner = 10;</code>
        */
       public Builder setPartner(
           io.bloombox.schema.partner.PartnerMeta.PartnerKey.Builder builderForValue) {
@@ -939,7 +961,7 @@ public final class PartnerPermissions {
        * Partner-level access scope.
        * </pre>
        *
-       * <code>.bloombox.schema.partner.PartnerKey partner = 10;</code>
+       * <code>.bloombox.partner.PartnerKey partner = 10;</code>
        */
       public Builder mergePartner(io.bloombox.schema.partner.PartnerMeta.PartnerKey value) {
         if (partnerBuilder_ == null) {
@@ -965,7 +987,7 @@ public final class PartnerPermissions {
        * Partner-level access scope.
        * </pre>
        *
-       * <code>.bloombox.schema.partner.PartnerKey partner = 10;</code>
+       * <code>.bloombox.partner.PartnerKey partner = 10;</code>
        */
       public Builder clearPartner() {
         if (partnerBuilder_ == null) {
@@ -988,7 +1010,7 @@ public final class PartnerPermissions {
        * Partner-level access scope.
        * </pre>
        *
-       * <code>.bloombox.schema.partner.PartnerKey partner = 10;</code>
+       * <code>.bloombox.partner.PartnerKey partner = 10;</code>
        */
       public io.bloombox.schema.partner.PartnerMeta.PartnerKey.Builder getPartnerBuilder() {
         return getPartnerFieldBuilder().getBuilder();
@@ -998,7 +1020,7 @@ public final class PartnerPermissions {
        * Partner-level access scope.
        * </pre>
        *
-       * <code>.bloombox.schema.partner.PartnerKey partner = 10;</code>
+       * <code>.bloombox.partner.PartnerKey partner = 10;</code>
        */
       public io.bloombox.schema.partner.PartnerMeta.PartnerKeyOrBuilder getPartnerOrBuilder() {
         if ((accountCase_ == 10) && (partnerBuilder_ != null)) {
@@ -1015,7 +1037,7 @@ public final class PartnerPermissions {
        * Partner-level access scope.
        * </pre>
        *
-       * <code>.bloombox.schema.partner.PartnerKey partner = 10;</code>
+       * <code>.bloombox.partner.PartnerKey partner = 10;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
           io.bloombox.schema.partner.PartnerMeta.PartnerKey, io.bloombox.schema.partner.PartnerMeta.PartnerKey.Builder, io.bloombox.schema.partner.PartnerMeta.PartnerKeyOrBuilder> 
@@ -1043,7 +1065,7 @@ public final class PartnerPermissions {
        * Partner location-level access scope.
        * </pre>
        *
-       * <code>.bloombox.schema.partner.LocationKey location = 20;</code>
+       * <code>.bloombox.partner.LocationKey location = 20;</code>
        */
       public boolean hasLocation() {
         return accountCase_ == 20;
@@ -1053,7 +1075,7 @@ public final class PartnerPermissions {
        * Partner location-level access scope.
        * </pre>
        *
-       * <code>.bloombox.schema.partner.LocationKey location = 20;</code>
+       * <code>.bloombox.partner.LocationKey location = 20;</code>
        */
       public io.bloombox.schema.partner.LocationAccountKey.LocationKey getLocation() {
         if (locationBuilder_ == null) {
@@ -1073,7 +1095,7 @@ public final class PartnerPermissions {
        * Partner location-level access scope.
        * </pre>
        *
-       * <code>.bloombox.schema.partner.LocationKey location = 20;</code>
+       * <code>.bloombox.partner.LocationKey location = 20;</code>
        */
       public Builder setLocation(io.bloombox.schema.partner.LocationAccountKey.LocationKey value) {
         if (locationBuilder_ == null) {
@@ -1093,7 +1115,7 @@ public final class PartnerPermissions {
        * Partner location-level access scope.
        * </pre>
        *
-       * <code>.bloombox.schema.partner.LocationKey location = 20;</code>
+       * <code>.bloombox.partner.LocationKey location = 20;</code>
        */
       public Builder setLocation(
           io.bloombox.schema.partner.LocationAccountKey.LocationKey.Builder builderForValue) {
@@ -1111,7 +1133,7 @@ public final class PartnerPermissions {
        * Partner location-level access scope.
        * </pre>
        *
-       * <code>.bloombox.schema.partner.LocationKey location = 20;</code>
+       * <code>.bloombox.partner.LocationKey location = 20;</code>
        */
       public Builder mergeLocation(io.bloombox.schema.partner.LocationAccountKey.LocationKey value) {
         if (locationBuilder_ == null) {
@@ -1137,7 +1159,7 @@ public final class PartnerPermissions {
        * Partner location-level access scope.
        * </pre>
        *
-       * <code>.bloombox.schema.partner.LocationKey location = 20;</code>
+       * <code>.bloombox.partner.LocationKey location = 20;</code>
        */
       public Builder clearLocation() {
         if (locationBuilder_ == null) {
@@ -1160,7 +1182,7 @@ public final class PartnerPermissions {
        * Partner location-level access scope.
        * </pre>
        *
-       * <code>.bloombox.schema.partner.LocationKey location = 20;</code>
+       * <code>.bloombox.partner.LocationKey location = 20;</code>
        */
       public io.bloombox.schema.partner.LocationAccountKey.LocationKey.Builder getLocationBuilder() {
         return getLocationFieldBuilder().getBuilder();
@@ -1170,7 +1192,7 @@ public final class PartnerPermissions {
        * Partner location-level access scope.
        * </pre>
        *
-       * <code>.bloombox.schema.partner.LocationKey location = 20;</code>
+       * <code>.bloombox.partner.LocationKey location = 20;</code>
        */
       public io.bloombox.schema.partner.LocationAccountKey.LocationKeyOrBuilder getLocationOrBuilder() {
         if ((accountCase_ == 20) && (locationBuilder_ != null)) {
@@ -1187,7 +1209,7 @@ public final class PartnerPermissions {
        * Partner location-level access scope.
        * </pre>
        *
-       * <code>.bloombox.schema.partner.LocationKey location = 20;</code>
+       * <code>.bloombox.partner.LocationKey location = 20;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
           io.bloombox.schema.partner.LocationAccountKey.LocationKey, io.bloombox.schema.partner.LocationAccountKey.LocationKey.Builder, io.bloombox.schema.partner.LocationAccountKey.LocationKeyOrBuilder> 
@@ -1207,21 +1229,23 @@ public final class PartnerPermissions {
         onChanged();;
         return locationBuilder_;
       }
+      @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
         return super.setUnknownFieldsProto3(unknownFields);
       }
 
+      @java.lang.Override
       public final Builder mergeUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
         return super.mergeUnknownFields(unknownFields);
       }
 
 
-      // @@protoc_insertion_point(builder_scope:bloombox.schema.security.access.AccessSubject)
+      // @@protoc_insertion_point(builder_scope:bloombox.security.access.AccessSubject)
     }
 
-    // @@protoc_insertion_point(class_scope:bloombox.schema.security.access.AccessSubject)
+    // @@protoc_insertion_point(class_scope:bloombox.security.access.AccessSubject)
     private static final io.bloombox.schema.security.access.PartnerPermissions.AccessSubject DEFAULT_INSTANCE;
     static {
       DEFAULT_INSTANCE = new io.bloombox.schema.security.access.PartnerPermissions.AccessSubject();
@@ -1233,6 +1257,7 @@ public final class PartnerPermissions {
 
     private static final com.google.protobuf.Parser<AccessSubject>
         PARSER = new com.google.protobuf.AbstractParser<AccessSubject>() {
+      @java.lang.Override
       public AccessSubject parsePartialFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -1250,6 +1275,7 @@ public final class PartnerPermissions {
       return PARSER;
     }
 
+    @java.lang.Override
     public io.bloombox.schema.security.access.PartnerPermissions.AccessSubject getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
@@ -1257,7 +1283,7 @@ public final class PartnerPermissions {
   }
 
   public interface AccessPolicyOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:bloombox.schema.security.access.AccessPolicy)
+      // @@protoc_insertion_point(interface_extends:bloombox.security.access.AccessPolicy)
       com.google.protobuf.MessageOrBuilder {
 
     /**
@@ -1283,7 +1309,7 @@ public final class PartnerPermissions {
      * Partner account or location that we are specifying access rights for.
      * </pre>
      *
-     * <code>.bloombox.schema.security.access.AccessSubject subject = 2;</code>
+     * <code>.bloombox.security.access.AccessSubject subject = 2;</code>
      */
     boolean hasSubject();
     /**
@@ -1291,7 +1317,7 @@ public final class PartnerPermissions {
      * Partner account or location that we are specifying access rights for.
      * </pre>
      *
-     * <code>.bloombox.schema.security.access.AccessSubject subject = 2;</code>
+     * <code>.bloombox.security.access.AccessSubject subject = 2;</code>
      */
     io.bloombox.schema.security.access.PartnerPermissions.AccessSubject getSubject();
     /**
@@ -1299,7 +1325,7 @@ public final class PartnerPermissions {
      * Partner account or location that we are specifying access rights for.
      * </pre>
      *
-     * <code>.bloombox.schema.security.access.AccessSubject subject = 2;</code>
+     * <code>.bloombox.security.access.AccessSubject subject = 2;</code>
      */
     io.bloombox.schema.security.access.PartnerPermissions.AccessSubjectOrBuilder getSubjectOrBuilder();
 
@@ -1308,7 +1334,7 @@ public final class PartnerPermissions {
      * Roles granted as part of this policy.
      * </pre>
      *
-     * <code>repeated .bloombox.schema.security.access.PartnerRole privilege = 3;</code>
+     * <code>repeated .bloombox.security.access.PartnerRole privilege = 3;</code>
      */
     java.util.List<io.bloombox.schema.security.access.PartnerPermissions.PartnerRole> getPrivilegeList();
     /**
@@ -1316,7 +1342,7 @@ public final class PartnerPermissions {
      * Roles granted as part of this policy.
      * </pre>
      *
-     * <code>repeated .bloombox.schema.security.access.PartnerRole privilege = 3;</code>
+     * <code>repeated .bloombox.security.access.PartnerRole privilege = 3;</code>
      */
     int getPrivilegeCount();
     /**
@@ -1324,7 +1350,7 @@ public final class PartnerPermissions {
      * Roles granted as part of this policy.
      * </pre>
      *
-     * <code>repeated .bloombox.schema.security.access.PartnerRole privilege = 3;</code>
+     * <code>repeated .bloombox.security.access.PartnerRole privilege = 3;</code>
      */
     io.bloombox.schema.security.access.PartnerPermissions.PartnerRole getPrivilege(int index);
     /**
@@ -1332,7 +1358,7 @@ public final class PartnerPermissions {
      * Roles granted as part of this policy.
      * </pre>
      *
-     * <code>repeated .bloombox.schema.security.access.PartnerRole privilege = 3;</code>
+     * <code>repeated .bloombox.security.access.PartnerRole privilege = 3;</code>
      */
     java.util.List<java.lang.Integer>
     getPrivilegeValueList();
@@ -1341,7 +1367,7 @@ public final class PartnerPermissions {
      * Roles granted as part of this policy.
      * </pre>
      *
-     * <code>repeated .bloombox.schema.security.access.PartnerRole privilege = 3;</code>
+     * <code>repeated .bloombox.security.access.PartnerRole privilege = 3;</code>
      */
     int getPrivilegeValue(int index);
 
@@ -1350,7 +1376,7 @@ public final class PartnerPermissions {
      * User being granted rights as part of this policy.
      * </pre>
      *
-     * <code>.bloombox.schema.identity.UserKey user = 4;</code>
+     * <code>.bloombox.identity.UserKey user = 4;</code>
      */
     boolean hasUser();
     /**
@@ -1358,7 +1384,7 @@ public final class PartnerPermissions {
      * User being granted rights as part of this policy.
      * </pre>
      *
-     * <code>.bloombox.schema.identity.UserKey user = 4;</code>
+     * <code>.bloombox.identity.UserKey user = 4;</code>
      */
     io.bloombox.schema.identity.AppUserKey.UserKey getUser();
     /**
@@ -1366,7 +1392,7 @@ public final class PartnerPermissions {
      * User being granted rights as part of this policy.
      * </pre>
      *
-     * <code>.bloombox.schema.identity.UserKey user = 4;</code>
+     * <code>.bloombox.identity.UserKey user = 4;</code>
      */
     io.bloombox.schema.identity.AppUserKey.UserKeyOrBuilder getUserOrBuilder();
 
@@ -1375,7 +1401,7 @@ public final class PartnerPermissions {
      * Permissions grantor.
      * </pre>
      *
-     * <code>.bloombox.schema.identity.UserKey grantor = 5;</code>
+     * <code>.bloombox.identity.UserKey grantor = 5;</code>
      */
     boolean hasGrantor();
     /**
@@ -1383,7 +1409,7 @@ public final class PartnerPermissions {
      * Permissions grantor.
      * </pre>
      *
-     * <code>.bloombox.schema.identity.UserKey grantor = 5;</code>
+     * <code>.bloombox.identity.UserKey grantor = 5;</code>
      */
     io.bloombox.schema.identity.AppUserKey.UserKey getGrantor();
     /**
@@ -1391,7 +1417,7 @@ public final class PartnerPermissions {
      * Permissions grantor.
      * </pre>
      *
-     * <code>.bloombox.schema.identity.UserKey grantor = 5;</code>
+     * <code>.bloombox.identity.UserKey grantor = 5;</code>
      */
     io.bloombox.schema.identity.AppUserKey.UserKeyOrBuilder getGrantorOrBuilder();
 
@@ -1451,11 +1477,11 @@ public final class PartnerPermissions {
    * of data, login access at all, etc).
    * </pre>
    *
-   * Protobuf type {@code bloombox.schema.security.access.AccessPolicy}
+   * Protobuf type {@code bloombox.security.access.AccessPolicy}
    */
   public  static final class AccessPolicy extends
       com.google.protobuf.GeneratedMessageV3 implements
-      // @@protoc_insertion_point(message_implements:bloombox.schema.security.access.AccessPolicy)
+      // @@protoc_insertion_point(message_implements:bloombox.security.access.AccessPolicy)
       AccessPolicyOrBuilder {
   private static final long serialVersionUID = 0L;
     // Use AccessPolicy.newBuilder() to construct.
@@ -1491,13 +1517,6 @@ public final class PartnerPermissions {
             case 0:
               done = true;
               break;
-            default: {
-              if (!parseUnknownFieldProto3(
-                  input, unknownFields, extensionRegistry, tag)) {
-                done = true;
-              }
-              break;
-            }
             case 10: {
               java.lang.String s = input.readStringRequireUtf8();
 
@@ -1592,6 +1611,13 @@ public final class PartnerPermissions {
 
               break;
             }
+            default: {
+              if (!parseUnknownFieldProto3(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
           }
         }
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
@@ -1609,12 +1635,13 @@ public final class PartnerPermissions {
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return io.bloombox.schema.security.access.PartnerPermissions.internal_static_bloombox_schema_security_access_AccessPolicy_descriptor;
+      return io.bloombox.schema.security.access.PartnerPermissions.internal_static_bloombox_security_access_AccessPolicy_descriptor;
     }
 
+    @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return io.bloombox.schema.security.access.PartnerPermissions.internal_static_bloombox_schema_security_access_AccessPolicy_fieldAccessorTable
+      return io.bloombox.schema.security.access.PartnerPermissions.internal_static_bloombox_security_access_AccessPolicy_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
               io.bloombox.schema.security.access.PartnerPermissions.AccessPolicy.class, io.bloombox.schema.security.access.PartnerPermissions.AccessPolicy.Builder.class);
     }
@@ -1669,7 +1696,7 @@ public final class PartnerPermissions {
      * Partner account or location that we are specifying access rights for.
      * </pre>
      *
-     * <code>.bloombox.schema.security.access.AccessSubject subject = 2;</code>
+     * <code>.bloombox.security.access.AccessSubject subject = 2;</code>
      */
     public boolean hasSubject() {
       return subject_ != null;
@@ -1679,7 +1706,7 @@ public final class PartnerPermissions {
      * Partner account or location that we are specifying access rights for.
      * </pre>
      *
-     * <code>.bloombox.schema.security.access.AccessSubject subject = 2;</code>
+     * <code>.bloombox.security.access.AccessSubject subject = 2;</code>
      */
     public io.bloombox.schema.security.access.PartnerPermissions.AccessSubject getSubject() {
       return subject_ == null ? io.bloombox.schema.security.access.PartnerPermissions.AccessSubject.getDefaultInstance() : subject_;
@@ -1689,7 +1716,7 @@ public final class PartnerPermissions {
      * Partner account or location that we are specifying access rights for.
      * </pre>
      *
-     * <code>.bloombox.schema.security.access.AccessSubject subject = 2;</code>
+     * <code>.bloombox.security.access.AccessSubject subject = 2;</code>
      */
     public io.bloombox.schema.security.access.PartnerPermissions.AccessSubjectOrBuilder getSubjectOrBuilder() {
       return getSubject();
@@ -1702,6 +1729,7 @@ public final class PartnerPermissions {
             new com.google.protobuf.Internal.ListAdapter.Converter<
                 java.lang.Integer, io.bloombox.schema.security.access.PartnerPermissions.PartnerRole>() {
               public io.bloombox.schema.security.access.PartnerPermissions.PartnerRole convert(java.lang.Integer from) {
+                @SuppressWarnings("deprecation")
                 io.bloombox.schema.security.access.PartnerPermissions.PartnerRole result = io.bloombox.schema.security.access.PartnerPermissions.PartnerRole.valueOf(from);
                 return result == null ? io.bloombox.schema.security.access.PartnerPermissions.PartnerRole.UNRECOGNIZED : result;
               }
@@ -1711,7 +1739,7 @@ public final class PartnerPermissions {
      * Roles granted as part of this policy.
      * </pre>
      *
-     * <code>repeated .bloombox.schema.security.access.PartnerRole privilege = 3;</code>
+     * <code>repeated .bloombox.security.access.PartnerRole privilege = 3;</code>
      */
     public java.util.List<io.bloombox.schema.security.access.PartnerPermissions.PartnerRole> getPrivilegeList() {
       return new com.google.protobuf.Internal.ListAdapter<
@@ -1722,7 +1750,7 @@ public final class PartnerPermissions {
      * Roles granted as part of this policy.
      * </pre>
      *
-     * <code>repeated .bloombox.schema.security.access.PartnerRole privilege = 3;</code>
+     * <code>repeated .bloombox.security.access.PartnerRole privilege = 3;</code>
      */
     public int getPrivilegeCount() {
       return privilege_.size();
@@ -1732,7 +1760,7 @@ public final class PartnerPermissions {
      * Roles granted as part of this policy.
      * </pre>
      *
-     * <code>repeated .bloombox.schema.security.access.PartnerRole privilege = 3;</code>
+     * <code>repeated .bloombox.security.access.PartnerRole privilege = 3;</code>
      */
     public io.bloombox.schema.security.access.PartnerPermissions.PartnerRole getPrivilege(int index) {
       return privilege_converter_.convert(privilege_.get(index));
@@ -1742,7 +1770,7 @@ public final class PartnerPermissions {
      * Roles granted as part of this policy.
      * </pre>
      *
-     * <code>repeated .bloombox.schema.security.access.PartnerRole privilege = 3;</code>
+     * <code>repeated .bloombox.security.access.PartnerRole privilege = 3;</code>
      */
     public java.util.List<java.lang.Integer>
     getPrivilegeValueList() {
@@ -1753,7 +1781,7 @@ public final class PartnerPermissions {
      * Roles granted as part of this policy.
      * </pre>
      *
-     * <code>repeated .bloombox.schema.security.access.PartnerRole privilege = 3;</code>
+     * <code>repeated .bloombox.security.access.PartnerRole privilege = 3;</code>
      */
     public int getPrivilegeValue(int index) {
       return privilege_.get(index);
@@ -1767,7 +1795,7 @@ public final class PartnerPermissions {
      * User being granted rights as part of this policy.
      * </pre>
      *
-     * <code>.bloombox.schema.identity.UserKey user = 4;</code>
+     * <code>.bloombox.identity.UserKey user = 4;</code>
      */
     public boolean hasUser() {
       return user_ != null;
@@ -1777,7 +1805,7 @@ public final class PartnerPermissions {
      * User being granted rights as part of this policy.
      * </pre>
      *
-     * <code>.bloombox.schema.identity.UserKey user = 4;</code>
+     * <code>.bloombox.identity.UserKey user = 4;</code>
      */
     public io.bloombox.schema.identity.AppUserKey.UserKey getUser() {
       return user_ == null ? io.bloombox.schema.identity.AppUserKey.UserKey.getDefaultInstance() : user_;
@@ -1787,7 +1815,7 @@ public final class PartnerPermissions {
      * User being granted rights as part of this policy.
      * </pre>
      *
-     * <code>.bloombox.schema.identity.UserKey user = 4;</code>
+     * <code>.bloombox.identity.UserKey user = 4;</code>
      */
     public io.bloombox.schema.identity.AppUserKey.UserKeyOrBuilder getUserOrBuilder() {
       return getUser();
@@ -1800,7 +1828,7 @@ public final class PartnerPermissions {
      * Permissions grantor.
      * </pre>
      *
-     * <code>.bloombox.schema.identity.UserKey grantor = 5;</code>
+     * <code>.bloombox.identity.UserKey grantor = 5;</code>
      */
     public boolean hasGrantor() {
       return grantor_ != null;
@@ -1810,7 +1838,7 @@ public final class PartnerPermissions {
      * Permissions grantor.
      * </pre>
      *
-     * <code>.bloombox.schema.identity.UserKey grantor = 5;</code>
+     * <code>.bloombox.identity.UserKey grantor = 5;</code>
      */
     public io.bloombox.schema.identity.AppUserKey.UserKey getGrantor() {
       return grantor_ == null ? io.bloombox.schema.identity.AppUserKey.UserKey.getDefaultInstance() : grantor_;
@@ -1820,7 +1848,7 @@ public final class PartnerPermissions {
      * Permissions grantor.
      * </pre>
      *
-     * <code>.bloombox.schema.identity.UserKey grantor = 5;</code>
+     * <code>.bloombox.identity.UserKey grantor = 5;</code>
      */
     public io.bloombox.schema.identity.AppUserKey.UserKeyOrBuilder getGrantorOrBuilder() {
       return getGrantor();
@@ -1893,6 +1921,7 @@ public final class PartnerPermissions {
     }
 
     private byte memoizedIsInitialized = -1;
+    @java.lang.Override
     public final boolean isInitialized() {
       byte isInitialized = memoizedIsInitialized;
       if (isInitialized == 1) return true;
@@ -1902,6 +1931,7 @@ public final class PartnerPermissions {
       return true;
     }
 
+    @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
       getSerializedSize();
@@ -1933,6 +1963,7 @@ public final class PartnerPermissions {
       unknownFields.writeTo(output);
     }
 
+    @java.lang.Override
     public int getSerializedSize() {
       int size = memoizedSize;
       if (size != -1) return size;
@@ -2129,6 +2160,7 @@ public final class PartnerPermissions {
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
 
+    @java.lang.Override
     public Builder newBuilderForType() { return newBuilder(); }
     public static Builder newBuilder() {
       return DEFAULT_INSTANCE.toBuilder();
@@ -2136,6 +2168,7 @@ public final class PartnerPermissions {
     public static Builder newBuilder(io.bloombox.schema.security.access.PartnerPermissions.AccessPolicy prototype) {
       return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
     }
+    @java.lang.Override
     public Builder toBuilder() {
       return this == DEFAULT_INSTANCE
           ? new Builder() : new Builder().mergeFrom(this);
@@ -2153,20 +2186,21 @@ public final class PartnerPermissions {
      * of data, login access at all, etc).
      * </pre>
      *
-     * Protobuf type {@code bloombox.schema.security.access.AccessPolicy}
+     * Protobuf type {@code bloombox.security.access.AccessPolicy}
      */
     public static final class Builder extends
         com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:bloombox.schema.security.access.AccessPolicy)
+        // @@protoc_insertion_point(builder_implements:bloombox.security.access.AccessPolicy)
         io.bloombox.schema.security.access.PartnerPermissions.AccessPolicyOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return io.bloombox.schema.security.access.PartnerPermissions.internal_static_bloombox_schema_security_access_AccessPolicy_descriptor;
+        return io.bloombox.schema.security.access.PartnerPermissions.internal_static_bloombox_security_access_AccessPolicy_descriptor;
       }
 
+      @java.lang.Override
       protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return io.bloombox.schema.security.access.PartnerPermissions.internal_static_bloombox_schema_security_access_AccessPolicy_fieldAccessorTable
+        return io.bloombox.schema.security.access.PartnerPermissions.internal_static_bloombox_security_access_AccessPolicy_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
                 io.bloombox.schema.security.access.PartnerPermissions.AccessPolicy.class, io.bloombox.schema.security.access.PartnerPermissions.AccessPolicy.Builder.class);
       }
@@ -2186,6 +2220,7 @@ public final class PartnerPermissions {
                 .alwaysUseFieldBuilders) {
         }
       }
+      @java.lang.Override
       public Builder clear() {
         super.clear();
         uuid_ = "";
@@ -2225,15 +2260,18 @@ public final class PartnerPermissions {
         return this;
       }
 
+      @java.lang.Override
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return io.bloombox.schema.security.access.PartnerPermissions.internal_static_bloombox_schema_security_access_AccessPolicy_descriptor;
+        return io.bloombox.schema.security.access.PartnerPermissions.internal_static_bloombox_security_access_AccessPolicy_descriptor;
       }
 
+      @java.lang.Override
       public io.bloombox.schema.security.access.PartnerPermissions.AccessPolicy getDefaultInstanceForType() {
         return io.bloombox.schema.security.access.PartnerPermissions.AccessPolicy.getDefaultInstance();
       }
 
+      @java.lang.Override
       public io.bloombox.schema.security.access.PartnerPermissions.AccessPolicy build() {
         io.bloombox.schema.security.access.PartnerPermissions.AccessPolicy result = buildPartial();
         if (!result.isInitialized()) {
@@ -2242,6 +2280,7 @@ public final class PartnerPermissions {
         return result;
       }
 
+      @java.lang.Override
       public io.bloombox.schema.security.access.PartnerPermissions.AccessPolicy buildPartial() {
         io.bloombox.schema.security.access.PartnerPermissions.AccessPolicy result = new io.bloombox.schema.security.access.PartnerPermissions.AccessPolicy(this);
         int from_bitField0_ = bitField0_;
@@ -2282,32 +2321,39 @@ public final class PartnerPermissions {
         return result;
       }
 
+      @java.lang.Override
       public Builder clone() {
         return (Builder) super.clone();
       }
+      @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
         return (Builder) super.setField(field, value);
       }
+      @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
         return (Builder) super.clearField(field);
       }
+      @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
         return (Builder) super.clearOneof(oneof);
       }
+      @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
         return (Builder) super.setRepeatedField(field, index, value);
       }
+      @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
         return (Builder) super.addRepeatedField(field, value);
       }
+      @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
         if (other instanceof io.bloombox.schema.security.access.PartnerPermissions.AccessPolicy) {
           return mergeFrom((io.bloombox.schema.security.access.PartnerPermissions.AccessPolicy)other);
@@ -2353,10 +2399,12 @@ public final class PartnerPermissions {
         return this;
       }
 
+      @java.lang.Override
       public final boolean isInitialized() {
         return true;
       }
 
+      @java.lang.Override
       public Builder mergeFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -2473,7 +2521,7 @@ public final class PartnerPermissions {
        * Partner account or location that we are specifying access rights for.
        * </pre>
        *
-       * <code>.bloombox.schema.security.access.AccessSubject subject = 2;</code>
+       * <code>.bloombox.security.access.AccessSubject subject = 2;</code>
        */
       public boolean hasSubject() {
         return subjectBuilder_ != null || subject_ != null;
@@ -2483,7 +2531,7 @@ public final class PartnerPermissions {
        * Partner account or location that we are specifying access rights for.
        * </pre>
        *
-       * <code>.bloombox.schema.security.access.AccessSubject subject = 2;</code>
+       * <code>.bloombox.security.access.AccessSubject subject = 2;</code>
        */
       public io.bloombox.schema.security.access.PartnerPermissions.AccessSubject getSubject() {
         if (subjectBuilder_ == null) {
@@ -2497,7 +2545,7 @@ public final class PartnerPermissions {
        * Partner account or location that we are specifying access rights for.
        * </pre>
        *
-       * <code>.bloombox.schema.security.access.AccessSubject subject = 2;</code>
+       * <code>.bloombox.security.access.AccessSubject subject = 2;</code>
        */
       public Builder setSubject(io.bloombox.schema.security.access.PartnerPermissions.AccessSubject value) {
         if (subjectBuilder_ == null) {
@@ -2517,7 +2565,7 @@ public final class PartnerPermissions {
        * Partner account or location that we are specifying access rights for.
        * </pre>
        *
-       * <code>.bloombox.schema.security.access.AccessSubject subject = 2;</code>
+       * <code>.bloombox.security.access.AccessSubject subject = 2;</code>
        */
       public Builder setSubject(
           io.bloombox.schema.security.access.PartnerPermissions.AccessSubject.Builder builderForValue) {
@@ -2535,7 +2583,7 @@ public final class PartnerPermissions {
        * Partner account or location that we are specifying access rights for.
        * </pre>
        *
-       * <code>.bloombox.schema.security.access.AccessSubject subject = 2;</code>
+       * <code>.bloombox.security.access.AccessSubject subject = 2;</code>
        */
       public Builder mergeSubject(io.bloombox.schema.security.access.PartnerPermissions.AccessSubject value) {
         if (subjectBuilder_ == null) {
@@ -2557,7 +2605,7 @@ public final class PartnerPermissions {
        * Partner account or location that we are specifying access rights for.
        * </pre>
        *
-       * <code>.bloombox.schema.security.access.AccessSubject subject = 2;</code>
+       * <code>.bloombox.security.access.AccessSubject subject = 2;</code>
        */
       public Builder clearSubject() {
         if (subjectBuilder_ == null) {
@@ -2575,7 +2623,7 @@ public final class PartnerPermissions {
        * Partner account or location that we are specifying access rights for.
        * </pre>
        *
-       * <code>.bloombox.schema.security.access.AccessSubject subject = 2;</code>
+       * <code>.bloombox.security.access.AccessSubject subject = 2;</code>
        */
       public io.bloombox.schema.security.access.PartnerPermissions.AccessSubject.Builder getSubjectBuilder() {
         
@@ -2587,7 +2635,7 @@ public final class PartnerPermissions {
        * Partner account or location that we are specifying access rights for.
        * </pre>
        *
-       * <code>.bloombox.schema.security.access.AccessSubject subject = 2;</code>
+       * <code>.bloombox.security.access.AccessSubject subject = 2;</code>
        */
       public io.bloombox.schema.security.access.PartnerPermissions.AccessSubjectOrBuilder getSubjectOrBuilder() {
         if (subjectBuilder_ != null) {
@@ -2602,7 +2650,7 @@ public final class PartnerPermissions {
        * Partner account or location that we are specifying access rights for.
        * </pre>
        *
-       * <code>.bloombox.schema.security.access.AccessSubject subject = 2;</code>
+       * <code>.bloombox.security.access.AccessSubject subject = 2;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
           io.bloombox.schema.security.access.PartnerPermissions.AccessSubject, io.bloombox.schema.security.access.PartnerPermissions.AccessSubject.Builder, io.bloombox.schema.security.access.PartnerPermissions.AccessSubjectOrBuilder> 
@@ -2631,7 +2679,7 @@ public final class PartnerPermissions {
        * Roles granted as part of this policy.
        * </pre>
        *
-       * <code>repeated .bloombox.schema.security.access.PartnerRole privilege = 3;</code>
+       * <code>repeated .bloombox.security.access.PartnerRole privilege = 3;</code>
        */
       public java.util.List<io.bloombox.schema.security.access.PartnerPermissions.PartnerRole> getPrivilegeList() {
         return new com.google.protobuf.Internal.ListAdapter<
@@ -2642,7 +2690,7 @@ public final class PartnerPermissions {
        * Roles granted as part of this policy.
        * </pre>
        *
-       * <code>repeated .bloombox.schema.security.access.PartnerRole privilege = 3;</code>
+       * <code>repeated .bloombox.security.access.PartnerRole privilege = 3;</code>
        */
       public int getPrivilegeCount() {
         return privilege_.size();
@@ -2652,7 +2700,7 @@ public final class PartnerPermissions {
        * Roles granted as part of this policy.
        * </pre>
        *
-       * <code>repeated .bloombox.schema.security.access.PartnerRole privilege = 3;</code>
+       * <code>repeated .bloombox.security.access.PartnerRole privilege = 3;</code>
        */
       public io.bloombox.schema.security.access.PartnerPermissions.PartnerRole getPrivilege(int index) {
         return privilege_converter_.convert(privilege_.get(index));
@@ -2662,7 +2710,7 @@ public final class PartnerPermissions {
        * Roles granted as part of this policy.
        * </pre>
        *
-       * <code>repeated .bloombox.schema.security.access.PartnerRole privilege = 3;</code>
+       * <code>repeated .bloombox.security.access.PartnerRole privilege = 3;</code>
        */
       public Builder setPrivilege(
           int index, io.bloombox.schema.security.access.PartnerPermissions.PartnerRole value) {
@@ -2679,7 +2727,7 @@ public final class PartnerPermissions {
        * Roles granted as part of this policy.
        * </pre>
        *
-       * <code>repeated .bloombox.schema.security.access.PartnerRole privilege = 3;</code>
+       * <code>repeated .bloombox.security.access.PartnerRole privilege = 3;</code>
        */
       public Builder addPrivilege(io.bloombox.schema.security.access.PartnerPermissions.PartnerRole value) {
         if (value == null) {
@@ -2695,7 +2743,7 @@ public final class PartnerPermissions {
        * Roles granted as part of this policy.
        * </pre>
        *
-       * <code>repeated .bloombox.schema.security.access.PartnerRole privilege = 3;</code>
+       * <code>repeated .bloombox.security.access.PartnerRole privilege = 3;</code>
        */
       public Builder addAllPrivilege(
           java.lang.Iterable<? extends io.bloombox.schema.security.access.PartnerPermissions.PartnerRole> values) {
@@ -2711,7 +2759,7 @@ public final class PartnerPermissions {
        * Roles granted as part of this policy.
        * </pre>
        *
-       * <code>repeated .bloombox.schema.security.access.PartnerRole privilege = 3;</code>
+       * <code>repeated .bloombox.security.access.PartnerRole privilege = 3;</code>
        */
       public Builder clearPrivilege() {
         privilege_ = java.util.Collections.emptyList();
@@ -2724,7 +2772,7 @@ public final class PartnerPermissions {
        * Roles granted as part of this policy.
        * </pre>
        *
-       * <code>repeated .bloombox.schema.security.access.PartnerRole privilege = 3;</code>
+       * <code>repeated .bloombox.security.access.PartnerRole privilege = 3;</code>
        */
       public java.util.List<java.lang.Integer>
       getPrivilegeValueList() {
@@ -2735,7 +2783,7 @@ public final class PartnerPermissions {
        * Roles granted as part of this policy.
        * </pre>
        *
-       * <code>repeated .bloombox.schema.security.access.PartnerRole privilege = 3;</code>
+       * <code>repeated .bloombox.security.access.PartnerRole privilege = 3;</code>
        */
       public int getPrivilegeValue(int index) {
         return privilege_.get(index);
@@ -2745,7 +2793,7 @@ public final class PartnerPermissions {
        * Roles granted as part of this policy.
        * </pre>
        *
-       * <code>repeated .bloombox.schema.security.access.PartnerRole privilege = 3;</code>
+       * <code>repeated .bloombox.security.access.PartnerRole privilege = 3;</code>
        */
       public Builder setPrivilegeValue(
           int index, int value) {
@@ -2759,7 +2807,7 @@ public final class PartnerPermissions {
        * Roles granted as part of this policy.
        * </pre>
        *
-       * <code>repeated .bloombox.schema.security.access.PartnerRole privilege = 3;</code>
+       * <code>repeated .bloombox.security.access.PartnerRole privilege = 3;</code>
        */
       public Builder addPrivilegeValue(int value) {
         ensurePrivilegeIsMutable();
@@ -2772,7 +2820,7 @@ public final class PartnerPermissions {
        * Roles granted as part of this policy.
        * </pre>
        *
-       * <code>repeated .bloombox.schema.security.access.PartnerRole privilege = 3;</code>
+       * <code>repeated .bloombox.security.access.PartnerRole privilege = 3;</code>
        */
       public Builder addAllPrivilegeValue(
           java.lang.Iterable<java.lang.Integer> values) {
@@ -2792,7 +2840,7 @@ public final class PartnerPermissions {
        * User being granted rights as part of this policy.
        * </pre>
        *
-       * <code>.bloombox.schema.identity.UserKey user = 4;</code>
+       * <code>.bloombox.identity.UserKey user = 4;</code>
        */
       public boolean hasUser() {
         return userBuilder_ != null || user_ != null;
@@ -2802,7 +2850,7 @@ public final class PartnerPermissions {
        * User being granted rights as part of this policy.
        * </pre>
        *
-       * <code>.bloombox.schema.identity.UserKey user = 4;</code>
+       * <code>.bloombox.identity.UserKey user = 4;</code>
        */
       public io.bloombox.schema.identity.AppUserKey.UserKey getUser() {
         if (userBuilder_ == null) {
@@ -2816,7 +2864,7 @@ public final class PartnerPermissions {
        * User being granted rights as part of this policy.
        * </pre>
        *
-       * <code>.bloombox.schema.identity.UserKey user = 4;</code>
+       * <code>.bloombox.identity.UserKey user = 4;</code>
        */
       public Builder setUser(io.bloombox.schema.identity.AppUserKey.UserKey value) {
         if (userBuilder_ == null) {
@@ -2836,7 +2884,7 @@ public final class PartnerPermissions {
        * User being granted rights as part of this policy.
        * </pre>
        *
-       * <code>.bloombox.schema.identity.UserKey user = 4;</code>
+       * <code>.bloombox.identity.UserKey user = 4;</code>
        */
       public Builder setUser(
           io.bloombox.schema.identity.AppUserKey.UserKey.Builder builderForValue) {
@@ -2854,7 +2902,7 @@ public final class PartnerPermissions {
        * User being granted rights as part of this policy.
        * </pre>
        *
-       * <code>.bloombox.schema.identity.UserKey user = 4;</code>
+       * <code>.bloombox.identity.UserKey user = 4;</code>
        */
       public Builder mergeUser(io.bloombox.schema.identity.AppUserKey.UserKey value) {
         if (userBuilder_ == null) {
@@ -2876,7 +2924,7 @@ public final class PartnerPermissions {
        * User being granted rights as part of this policy.
        * </pre>
        *
-       * <code>.bloombox.schema.identity.UserKey user = 4;</code>
+       * <code>.bloombox.identity.UserKey user = 4;</code>
        */
       public Builder clearUser() {
         if (userBuilder_ == null) {
@@ -2894,7 +2942,7 @@ public final class PartnerPermissions {
        * User being granted rights as part of this policy.
        * </pre>
        *
-       * <code>.bloombox.schema.identity.UserKey user = 4;</code>
+       * <code>.bloombox.identity.UserKey user = 4;</code>
        */
       public io.bloombox.schema.identity.AppUserKey.UserKey.Builder getUserBuilder() {
         
@@ -2906,7 +2954,7 @@ public final class PartnerPermissions {
        * User being granted rights as part of this policy.
        * </pre>
        *
-       * <code>.bloombox.schema.identity.UserKey user = 4;</code>
+       * <code>.bloombox.identity.UserKey user = 4;</code>
        */
       public io.bloombox.schema.identity.AppUserKey.UserKeyOrBuilder getUserOrBuilder() {
         if (userBuilder_ != null) {
@@ -2921,7 +2969,7 @@ public final class PartnerPermissions {
        * User being granted rights as part of this policy.
        * </pre>
        *
-       * <code>.bloombox.schema.identity.UserKey user = 4;</code>
+       * <code>.bloombox.identity.UserKey user = 4;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
           io.bloombox.schema.identity.AppUserKey.UserKey, io.bloombox.schema.identity.AppUserKey.UserKey.Builder, io.bloombox.schema.identity.AppUserKey.UserKeyOrBuilder> 
@@ -2945,7 +2993,7 @@ public final class PartnerPermissions {
        * Permissions grantor.
        * </pre>
        *
-       * <code>.bloombox.schema.identity.UserKey grantor = 5;</code>
+       * <code>.bloombox.identity.UserKey grantor = 5;</code>
        */
       public boolean hasGrantor() {
         return grantorBuilder_ != null || grantor_ != null;
@@ -2955,7 +3003,7 @@ public final class PartnerPermissions {
        * Permissions grantor.
        * </pre>
        *
-       * <code>.bloombox.schema.identity.UserKey grantor = 5;</code>
+       * <code>.bloombox.identity.UserKey grantor = 5;</code>
        */
       public io.bloombox.schema.identity.AppUserKey.UserKey getGrantor() {
         if (grantorBuilder_ == null) {
@@ -2969,7 +3017,7 @@ public final class PartnerPermissions {
        * Permissions grantor.
        * </pre>
        *
-       * <code>.bloombox.schema.identity.UserKey grantor = 5;</code>
+       * <code>.bloombox.identity.UserKey grantor = 5;</code>
        */
       public Builder setGrantor(io.bloombox.schema.identity.AppUserKey.UserKey value) {
         if (grantorBuilder_ == null) {
@@ -2989,7 +3037,7 @@ public final class PartnerPermissions {
        * Permissions grantor.
        * </pre>
        *
-       * <code>.bloombox.schema.identity.UserKey grantor = 5;</code>
+       * <code>.bloombox.identity.UserKey grantor = 5;</code>
        */
       public Builder setGrantor(
           io.bloombox.schema.identity.AppUserKey.UserKey.Builder builderForValue) {
@@ -3007,7 +3055,7 @@ public final class PartnerPermissions {
        * Permissions grantor.
        * </pre>
        *
-       * <code>.bloombox.schema.identity.UserKey grantor = 5;</code>
+       * <code>.bloombox.identity.UserKey grantor = 5;</code>
        */
       public Builder mergeGrantor(io.bloombox.schema.identity.AppUserKey.UserKey value) {
         if (grantorBuilder_ == null) {
@@ -3029,7 +3077,7 @@ public final class PartnerPermissions {
        * Permissions grantor.
        * </pre>
        *
-       * <code>.bloombox.schema.identity.UserKey grantor = 5;</code>
+       * <code>.bloombox.identity.UserKey grantor = 5;</code>
        */
       public Builder clearGrantor() {
         if (grantorBuilder_ == null) {
@@ -3047,7 +3095,7 @@ public final class PartnerPermissions {
        * Permissions grantor.
        * </pre>
        *
-       * <code>.bloombox.schema.identity.UserKey grantor = 5;</code>
+       * <code>.bloombox.identity.UserKey grantor = 5;</code>
        */
       public io.bloombox.schema.identity.AppUserKey.UserKey.Builder getGrantorBuilder() {
         
@@ -3059,7 +3107,7 @@ public final class PartnerPermissions {
        * Permissions grantor.
        * </pre>
        *
-       * <code>.bloombox.schema.identity.UserKey grantor = 5;</code>
+       * <code>.bloombox.identity.UserKey grantor = 5;</code>
        */
       public io.bloombox.schema.identity.AppUserKey.UserKeyOrBuilder getGrantorOrBuilder() {
         if (grantorBuilder_ != null) {
@@ -3074,7 +3122,7 @@ public final class PartnerPermissions {
        * Permissions grantor.
        * </pre>
        *
-       * <code>.bloombox.schema.identity.UserKey grantor = 5;</code>
+       * <code>.bloombox.identity.UserKey grantor = 5;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
           io.bloombox.schema.identity.AppUserKey.UserKey, io.bloombox.schema.identity.AppUserKey.UserKey.Builder, io.bloombox.schema.identity.AppUserKey.UserKeyOrBuilder> 
@@ -3395,21 +3443,23 @@ public final class PartnerPermissions {
         }
         return createdBuilder_;
       }
+      @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
         return super.setUnknownFieldsProto3(unknownFields);
       }
 
+      @java.lang.Override
       public final Builder mergeUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
         return super.mergeUnknownFields(unknownFields);
       }
 
 
-      // @@protoc_insertion_point(builder_scope:bloombox.schema.security.access.AccessPolicy)
+      // @@protoc_insertion_point(builder_scope:bloombox.security.access.AccessPolicy)
     }
 
-    // @@protoc_insertion_point(class_scope:bloombox.schema.security.access.AccessPolicy)
+    // @@protoc_insertion_point(class_scope:bloombox.security.access.AccessPolicy)
     private static final io.bloombox.schema.security.access.PartnerPermissions.AccessPolicy DEFAULT_INSTANCE;
     static {
       DEFAULT_INSTANCE = new io.bloombox.schema.security.access.PartnerPermissions.AccessPolicy();
@@ -3421,6 +3471,7 @@ public final class PartnerPermissions {
 
     private static final com.google.protobuf.Parser<AccessPolicy>
         PARSER = new com.google.protobuf.AbstractParser<AccessPolicy>() {
+      @java.lang.Override
       public AccessPolicy parsePartialFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -3438,6 +3489,7 @@ public final class PartnerPermissions {
       return PARSER;
     }
 
+    @java.lang.Override
     public io.bloombox.schema.security.access.PartnerPermissions.AccessPolicy getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
@@ -3445,15 +3497,15 @@ public final class PartnerPermissions {
   }
 
   private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_bloombox_schema_security_access_AccessSubject_descriptor;
+    internal_static_bloombox_security_access_AccessSubject_descriptor;
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_bloombox_schema_security_access_AccessSubject_fieldAccessorTable;
+      internal_static_bloombox_security_access_AccessSubject_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_bloombox_schema_security_access_AccessPolicy_descriptor;
+    internal_static_bloombox_security_access_AccessPolicy_descriptor;
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_bloombox_schema_security_access_AccessPolicy_fieldAccessorTable;
+      internal_static_bloombox_security_access_AccessPolicy_fieldAccessorTable;
 
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
@@ -3464,28 +3516,27 @@ public final class PartnerPermissions {
   static {
     java.lang.String[] descriptorData = {
       "\n(security/access/PartnerPermissions.pro" +
-      "to\022\037bloombox.schema.security.access\032\024cor" +
-      "e/Datamodel.proto\032\026identity/UserKey.prot" +
-      "o\032\030partner/PartnerKey.proto\032\031partner/Loc" +
-      "ationKey.proto\032\026temporal/Instant.proto\"\214" +
-      "\001\n\rAccessSubject\0226\n\007partner\030\n \001(\0132#.bloo" +
-      "mbox.schema.partner.PartnerKeyH\000\0228\n\010loca" +
-      "tion\030\024 \001(\0132$.bloombox.schema.partner.Loc" +
-      "ationKeyH\000B\t\n\007account\"\200\003\n\014AccessPolicy\022\024" +
-      "\n\004uuid\030\001 \001(\tB\006\302\265\003\002\010\002\022?\n\007subject\030\002 \001(\0132.." +
-      "bloombox.schema.security.access.AccessSu" +
-      "bject\022?\n\tprivilege\030\003 \003(\0162,.bloombox.sche" +
-      "ma.security.access.PartnerRole\022/\n\004user\030\004" +
-      " \001(\0132!.bloombox.schema.identity.UserKey\022" +
-      "2\n\007grantor\030\005 \001(\0132!.bloombox.schema.ident" +
-      "ity.UserKey\0220\n\010modified\030b \001(\0132\036.opencann" +
-      "abis.temporal.Instant\022/\n\007created\030c \001(\0132\036" +
-      ".opencannabis.temporal.Instant:\020\202\367\002\014\010\001\022\010" +
-      "policies*k\n\013PartnerRole\022\014\n\010READONLY\020\000\022\016\n" +
-      "\nSUPERVISOR\020\001\022\013\n\007BILLING\020\002\022\t\n\005AUDIT\020\003\022\014\n" +
-      "\010EMPLOYEE\020\004\022\r\n\tDEVELOPER\020\005\022\t\n\005ADMIN\020\006BB\n" +
-      "\"io.bloombox.schema.security.accessB\022Par" +
-      "tnerPermissionsH\001P\000\242\002\003BBSb\006proto3"
+      "to\022\030bloombox.security.access\032\024core/Datam" +
+      "odel.proto\032\026identity/UserKey.proto\032\030part" +
+      "ner/PartnerKey.proto\032\031partner/LocationKe" +
+      "y.proto\032\026temporal/Instant.proto\"~\n\rAcces" +
+      "sSubject\022/\n\007partner\030\n \001(\0132\034.bloombox.par" +
+      "tner.PartnerKeyH\000\0221\n\010location\030\024 \001(\0132\035.bl" +
+      "oombox.partner.LocationKeyH\000B\t\n\007account\"" +
+      "\344\002\n\014AccessPolicy\022\024\n\004uuid\030\001 \001(\tB\006\302\265\003\002\010\002\0228" +
+      "\n\007subject\030\002 \001(\0132\'.bloombox.security.acce" +
+      "ss.AccessSubject\0228\n\tprivilege\030\003 \003(\0162%.bl" +
+      "oombox.security.access.PartnerRole\022(\n\004us" +
+      "er\030\004 \001(\0132\032.bloombox.identity.UserKey\022+\n\007" +
+      "grantor\030\005 \001(\0132\032.bloombox.identity.UserKe" +
+      "y\0220\n\010modified\030b \001(\0132\036.opencannabis.tempo" +
+      "ral.Instant\022/\n\007created\030c \001(\0132\036.opencanna" +
+      "bis.temporal.Instant:\020\202\367\002\014\010\001\022\010policies*k" +
+      "\n\013PartnerRole\022\014\n\010READONLY\020\000\022\016\n\nSUPERVISO" +
+      "R\020\001\022\013\n\007BILLING\020\002\022\t\n\005AUDIT\020\003\022\014\n\010EMPLOYEE\020" +
+      "\004\022\r\n\tDEVELOPER\020\005\022\t\n\005ADMIN\020\006BB\n\"io.bloomb" +
+      "ox.schema.security.accessB\022PartnerPermis" +
+      "sionsH\001P\000\242\002\003BBSb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -3504,17 +3555,17 @@ public final class PartnerPermissions {
           io.bloombox.schema.partner.LocationAccountKey.getDescriptor(),
           io.opencannabis.schema.temporal.TemporalInstant.getDescriptor(),
         }, assigner);
-    internal_static_bloombox_schema_security_access_AccessSubject_descriptor =
+    internal_static_bloombox_security_access_AccessSubject_descriptor =
       getDescriptor().getMessageTypes().get(0);
-    internal_static_bloombox_schema_security_access_AccessSubject_fieldAccessorTable = new
+    internal_static_bloombox_security_access_AccessSubject_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_bloombox_schema_security_access_AccessSubject_descriptor,
+        internal_static_bloombox_security_access_AccessSubject_descriptor,
         new java.lang.String[] { "Partner", "Location", "Account", });
-    internal_static_bloombox_schema_security_access_AccessPolicy_descriptor =
+    internal_static_bloombox_security_access_AccessPolicy_descriptor =
       getDescriptor().getMessageTypes().get(1);
-    internal_static_bloombox_schema_security_access_AccessPolicy_fieldAccessorTable = new
+    internal_static_bloombox_security_access_AccessPolicy_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_bloombox_schema_security_access_AccessPolicy_descriptor,
+        internal_static_bloombox_security_access_AccessPolicy_descriptor,
         new java.lang.String[] { "Uuid", "Subject", "Privilege", "User", "Grantor", "Modified", "Created", });
     com.google.protobuf.ExtensionRegistry registry =
         com.google.protobuf.ExtensionRegistry.newInstance();

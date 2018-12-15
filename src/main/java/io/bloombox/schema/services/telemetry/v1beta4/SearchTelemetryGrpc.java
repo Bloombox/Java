@@ -1,8 +1,8 @@
 /*
- * Copyright 2018, Bloombox, LLC. All rights reserved.
+ * Copyright 2018, Momentum Ideas, Co. All rights reserved.
  *
  * Source and object computer code contained herein is the private intellectual
- * property of Bloombox, a California Limited Liability Corporation. Use of this
+ * property of Momentum Ideas Co., a Delaware Corporation. Use of this
  * code in source form requires permission in writing before use or the
  * assembly, distribution, or publishing of derivative works, for commercial
  * purposes or any other purpose, from a duly authorized officer of Momentum
@@ -17,20 +17,20 @@
 
 package io.bloombox.schema.services.telemetry.v1beta4;
 
-import static io.grpc.stub.ClientCalls.asyncUnaryCall;
-import static io.grpc.stub.ClientCalls.asyncServerStreamingCall;
-import static io.grpc.stub.ClientCalls.asyncClientStreamingCall;
-import static io.grpc.stub.ClientCalls.asyncBidiStreamingCall;
-import static io.grpc.stub.ClientCalls.blockingUnaryCall;
-import static io.grpc.stub.ClientCalls.blockingServerStreamingCall;
-import static io.grpc.stub.ClientCalls.futureUnaryCall;
 import static io.grpc.MethodDescriptor.generateFullMethodName;
-import static io.grpc.stub.ServerCalls.asyncUnaryCall;
-import static io.grpc.stub.ServerCalls.asyncServerStreamingCall;
-import static io.grpc.stub.ServerCalls.asyncClientStreamingCall;
+import static io.grpc.stub.ClientCalls.asyncBidiStreamingCall;
+import static io.grpc.stub.ClientCalls.asyncClientStreamingCall;
+import static io.grpc.stub.ClientCalls.asyncServerStreamingCall;
+import static io.grpc.stub.ClientCalls.asyncUnaryCall;
+import static io.grpc.stub.ClientCalls.blockingServerStreamingCall;
+import static io.grpc.stub.ClientCalls.blockingUnaryCall;
+import static io.grpc.stub.ClientCalls.futureUnaryCall;
 import static io.grpc.stub.ServerCalls.asyncBidiStreamingCall;
-import static io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall;
+import static io.grpc.stub.ServerCalls.asyncClientStreamingCall;
+import static io.grpc.stub.ServerCalls.asyncServerStreamingCall;
+import static io.grpc.stub.ServerCalls.asyncUnaryCall;
 import static io.grpc.stub.ServerCalls.asyncUnimplementedStreamingCall;
+import static io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall;
 
 /**
  * <pre>
@@ -39,39 +39,78 @@ import static io.grpc.stub.ServerCalls.asyncUnimplementedStreamingCall;
  * </pre>
  */
 @javax.annotation.Generated(
-    value = "by gRPC proto compiler (version 1.6.0-SNAPSHOT)",
+    value = "by gRPC proto compiler (version 1.18.0-SNAPSHOT)",
     comments = "Source: telemetry/v1beta4/TelemetryService_Beta4.proto")
 public final class SearchTelemetryGrpc {
 
   private SearchTelemetryGrpc() {}
 
-  public static final String SERVICE_NAME = "bloombox.schema.services.telemetry.v1beta4.SearchTelemetry";
+  public static final String SERVICE_NAME = "bloombox.services.telemetry.v1beta4.SearchTelemetry";
 
   // Static method descriptors that strictly reflect the proto.
-  @io.grpc.ExperimentalApi("https://github.com/grpc/grpc-java/issues/1901")
-  public static final io.grpc.MethodDescriptor<io.bloombox.schema.services.telemetry.v1beta4.SearchEvent.Query,
-      com.google.protobuf.Empty> METHOD_QUERY =
-      io.grpc.MethodDescriptor.<io.bloombox.schema.services.telemetry.v1beta4.SearchEvent.Query, com.google.protobuf.Empty>newBuilder()
-          .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-          .setFullMethodName(generateFullMethodName(
-              "bloombox.schema.services.telemetry.v1beta4.SearchTelemetry", "Query"))
-          .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-              io.bloombox.schema.services.telemetry.v1beta4.SearchEvent.Query.getDefaultInstance()))
-          .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-              com.google.protobuf.Empty.getDefaultInstance()))
-          .build();
-  @io.grpc.ExperimentalApi("https://github.com/grpc/grpc-java/issues/1901")
-  public static final io.grpc.MethodDescriptor<io.bloombox.schema.services.telemetry.v1beta4.SearchEvent.Result,
-      com.google.protobuf.Empty> METHOD_RESULT =
-      io.grpc.MethodDescriptor.<io.bloombox.schema.services.telemetry.v1beta4.SearchEvent.Result, com.google.protobuf.Empty>newBuilder()
-          .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-          .setFullMethodName(generateFullMethodName(
-              "bloombox.schema.services.telemetry.v1beta4.SearchTelemetry", "Result"))
-          .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-              io.bloombox.schema.services.telemetry.v1beta4.SearchEvent.Result.getDefaultInstance()))
-          .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-              com.google.protobuf.Empty.getDefaultInstance()))
-          .build();
+  private static volatile io.grpc.MethodDescriptor<io.bloombox.schema.services.telemetry.v1beta4.SearchEvent.Query,
+      com.google.protobuf.Empty> getQueryMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "Query",
+      requestType = io.bloombox.schema.services.telemetry.v1beta4.SearchEvent.Query.class,
+      responseType = com.google.protobuf.Empty.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<io.bloombox.schema.services.telemetry.v1beta4.SearchEvent.Query,
+      com.google.protobuf.Empty> getQueryMethod() {
+    io.grpc.MethodDescriptor<io.bloombox.schema.services.telemetry.v1beta4.SearchEvent.Query, com.google.protobuf.Empty> getQueryMethod;
+    if ((getQueryMethod = SearchTelemetryGrpc.getQueryMethod) == null) {
+      synchronized (SearchTelemetryGrpc.class) {
+        if ((getQueryMethod = SearchTelemetryGrpc.getQueryMethod) == null) {
+          SearchTelemetryGrpc.getQueryMethod = getQueryMethod = 
+              io.grpc.MethodDescriptor.<io.bloombox.schema.services.telemetry.v1beta4.SearchEvent.Query, com.google.protobuf.Empty>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(
+                  "bloombox.services.telemetry.v1beta4.SearchTelemetry", "Query"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  io.bloombox.schema.services.telemetry.v1beta4.SearchEvent.Query.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.google.protobuf.Empty.getDefaultInstance()))
+                  .setSchemaDescriptor(new SearchTelemetryMethodDescriptorSupplier("Query"))
+                  .build();
+          }
+        }
+     }
+     return getQueryMethod;
+  }
+
+  private static volatile io.grpc.MethodDescriptor<io.bloombox.schema.services.telemetry.v1beta4.SearchEvent.Result,
+      com.google.protobuf.Empty> getResultMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "Result",
+      requestType = io.bloombox.schema.services.telemetry.v1beta4.SearchEvent.Result.class,
+      responseType = com.google.protobuf.Empty.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<io.bloombox.schema.services.telemetry.v1beta4.SearchEvent.Result,
+      com.google.protobuf.Empty> getResultMethod() {
+    io.grpc.MethodDescriptor<io.bloombox.schema.services.telemetry.v1beta4.SearchEvent.Result, com.google.protobuf.Empty> getResultMethod;
+    if ((getResultMethod = SearchTelemetryGrpc.getResultMethod) == null) {
+      synchronized (SearchTelemetryGrpc.class) {
+        if ((getResultMethod = SearchTelemetryGrpc.getResultMethod) == null) {
+          SearchTelemetryGrpc.getResultMethod = getResultMethod = 
+              io.grpc.MethodDescriptor.<io.bloombox.schema.services.telemetry.v1beta4.SearchEvent.Result, com.google.protobuf.Empty>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(
+                  "bloombox.services.telemetry.v1beta4.SearchTelemetry", "Result"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  io.bloombox.schema.services.telemetry.v1beta4.SearchEvent.Result.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.google.protobuf.Empty.getDefaultInstance()))
+                  .setSchemaDescriptor(new SearchTelemetryMethodDescriptorSupplier("Result"))
+                  .build();
+          }
+        }
+     }
+     return getResultMethod;
+  }
 
   /**
    * Creates a new async stub that supports all call types for the service
@@ -111,7 +150,7 @@ public final class SearchTelemetryGrpc {
      */
     public void query(io.bloombox.schema.services.telemetry.v1beta4.SearchEvent.Query request,
         io.grpc.stub.StreamObserver<com.google.protobuf.Empty> responseObserver) {
-      asyncUnimplementedUnaryCall(METHOD_QUERY, responseObserver);
+      asyncUnimplementedUnaryCall(getQueryMethod(), responseObserver);
     }
 
     /**
@@ -121,20 +160,20 @@ public final class SearchTelemetryGrpc {
      */
     public void result(io.bloombox.schema.services.telemetry.v1beta4.SearchEvent.Result request,
         io.grpc.stub.StreamObserver<com.google.protobuf.Empty> responseObserver) {
-      asyncUnimplementedUnaryCall(METHOD_RESULT, responseObserver);
+      asyncUnimplementedUnaryCall(getResultMethod(), responseObserver);
     }
 
     @java.lang.Override public final io.grpc.ServerServiceDefinition bindService() {
       return io.grpc.ServerServiceDefinition.builder(getServiceDescriptor())
           .addMethod(
-            METHOD_QUERY,
+            getQueryMethod(),
             asyncUnaryCall(
               new MethodHandlers<
                 io.bloombox.schema.services.telemetry.v1beta4.SearchEvent.Query,
                 com.google.protobuf.Empty>(
                   this, METHODID_QUERY)))
           .addMethod(
-            METHOD_RESULT,
+            getResultMethod(),
             asyncUnaryCall(
               new MethodHandlers<
                 io.bloombox.schema.services.telemetry.v1beta4.SearchEvent.Result,
@@ -174,7 +213,7 @@ public final class SearchTelemetryGrpc {
     public void query(io.bloombox.schema.services.telemetry.v1beta4.SearchEvent.Query request,
         io.grpc.stub.StreamObserver<com.google.protobuf.Empty> responseObserver) {
       asyncUnaryCall(
-          getChannel().newCall(METHOD_QUERY, getCallOptions()), request, responseObserver);
+          getChannel().newCall(getQueryMethod(), getCallOptions()), request, responseObserver);
     }
 
     /**
@@ -185,7 +224,7 @@ public final class SearchTelemetryGrpc {
     public void result(io.bloombox.schema.services.telemetry.v1beta4.SearchEvent.Result request,
         io.grpc.stub.StreamObserver<com.google.protobuf.Empty> responseObserver) {
       asyncUnaryCall(
-          getChannel().newCall(METHOD_RESULT, getCallOptions()), request, responseObserver);
+          getChannel().newCall(getResultMethod(), getCallOptions()), request, responseObserver);
     }
   }
 
@@ -218,7 +257,7 @@ public final class SearchTelemetryGrpc {
      */
     public com.google.protobuf.Empty query(io.bloombox.schema.services.telemetry.v1beta4.SearchEvent.Query request) {
       return blockingUnaryCall(
-          getChannel(), METHOD_QUERY, getCallOptions(), request);
+          getChannel(), getQueryMethod(), getCallOptions(), request);
     }
 
     /**
@@ -228,7 +267,7 @@ public final class SearchTelemetryGrpc {
      */
     public com.google.protobuf.Empty result(io.bloombox.schema.services.telemetry.v1beta4.SearchEvent.Result request) {
       return blockingUnaryCall(
-          getChannel(), METHOD_RESULT, getCallOptions(), request);
+          getChannel(), getResultMethod(), getCallOptions(), request);
     }
   }
 
@@ -262,7 +301,7 @@ public final class SearchTelemetryGrpc {
     public com.google.common.util.concurrent.ListenableFuture<com.google.protobuf.Empty> query(
         io.bloombox.schema.services.telemetry.v1beta4.SearchEvent.Query request) {
       return futureUnaryCall(
-          getChannel().newCall(METHOD_QUERY, getCallOptions()), request);
+          getChannel().newCall(getQueryMethod(), getCallOptions()), request);
     }
 
     /**
@@ -273,7 +312,7 @@ public final class SearchTelemetryGrpc {
     public com.google.common.util.concurrent.ListenableFuture<com.google.protobuf.Empty> result(
         io.bloombox.schema.services.telemetry.v1beta4.SearchEvent.Result request) {
       return futureUnaryCall(
-          getChannel().newCall(METHOD_RESULT, getCallOptions()), request);
+          getChannel().newCall(getResultMethod(), getCallOptions()), request);
     }
   }
 
@@ -321,10 +360,38 @@ public final class SearchTelemetryGrpc {
     }
   }
 
-  private static final class SearchTelemetryDescriptorSupplier implements io.grpc.protobuf.ProtoFileDescriptorSupplier {
+  private static abstract class SearchTelemetryBaseDescriptorSupplier
+      implements io.grpc.protobuf.ProtoFileDescriptorSupplier, io.grpc.protobuf.ProtoServiceDescriptorSupplier {
+    SearchTelemetryBaseDescriptorSupplier() {}
+
     @java.lang.Override
     public com.google.protobuf.Descriptors.FileDescriptor getFileDescriptor() {
       return io.bloombox.schema.services.telemetry.v1beta4.TelemetryServiceBeta4.getDescriptor();
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Descriptors.ServiceDescriptor getServiceDescriptor() {
+      return getFileDescriptor().findServiceByName("SearchTelemetry");
+    }
+  }
+
+  private static final class SearchTelemetryFileDescriptorSupplier
+      extends SearchTelemetryBaseDescriptorSupplier {
+    SearchTelemetryFileDescriptorSupplier() {}
+  }
+
+  private static final class SearchTelemetryMethodDescriptorSupplier
+      extends SearchTelemetryBaseDescriptorSupplier
+      implements io.grpc.protobuf.ProtoMethodDescriptorSupplier {
+    private final String methodName;
+
+    SearchTelemetryMethodDescriptorSupplier(String methodName) {
+      this.methodName = methodName;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Descriptors.MethodDescriptor getMethodDescriptor() {
+      return getServiceDescriptor().findMethodByName(methodName);
     }
   }
 
@@ -337,9 +404,9 @@ public final class SearchTelemetryGrpc {
         result = serviceDescriptor;
         if (result == null) {
           serviceDescriptor = result = io.grpc.ServiceDescriptor.newBuilder(SERVICE_NAME)
-              .setSchemaDescriptor(new SearchTelemetryDescriptorSupplier())
-              .addMethod(METHOD_QUERY)
-              .addMethod(METHOD_RESULT)
+              .setSchemaDescriptor(new SearchTelemetryFileDescriptorSupplier())
+              .addMethod(getQueryMethod())
+              .addMethod(getResultMethod())
               .build();
         }
       }

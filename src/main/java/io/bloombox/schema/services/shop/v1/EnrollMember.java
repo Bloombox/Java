@@ -1,8 +1,8 @@
 /*
- * Copyright 2018, Bloombox, LLC. All rights reserved.
+ * Copyright 2018, Momentum Ideas, Co. All rights reserved.
  *
  * Source and object computer code contained herein is the private intellectual
- * property of Bloombox, a California Limited Liability Corporation. Use of this
+ * property of Momentum Ideas Co., a Delaware Corporation. Use of this
  * code in source form requires permission in writing before use or the
  * assembly, distribution, or publishing of derivative works, for commercial
  * purposes or any other purpose, from a duly authorized officer of Momentum
@@ -25,11 +25,11 @@ package io.bloombox.schema.services.shop.v1;
  * Specifies an RPC operation to enroll/onboard a new user as a member of a retail dispensary.
  * </pre>
  *
- * Protobuf type {@code bloombox.schema.services.shop.v1.EnrollMember}
+ * Protobuf type {@code bloombox.services.shop.v1.EnrollMember}
  */
 public  final class EnrollMember extends
     com.google.protobuf.GeneratedMessageV3 implements
-    // @@protoc_insertion_point(message_implements:bloombox.schema.services.shop.v1.EnrollMember)
+    // @@protoc_insertion_point(message_implements:bloombox.services.shop.v1.EnrollMember)
     EnrollMemberOrBuilder {
 private static final long serialVersionUID = 0L;
   // Use EnrollMember.newBuilder() to construct.
@@ -83,18 +83,19 @@ private static final long serialVersionUID = 0L;
   }
   public static final com.google.protobuf.Descriptors.Descriptor
       getDescriptor() {
-    return io.bloombox.schema.services.shop.v1.ShopServiceV1.internal_static_bloombox_schema_services_shop_v1_EnrollMember_descriptor;
+    return io.bloombox.schema.services.shop.v1.ShopServiceV1.internal_static_bloombox_services_shop_v1_EnrollMember_descriptor;
   }
 
+  @java.lang.Override
   protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internalGetFieldAccessorTable() {
-    return io.bloombox.schema.services.shop.v1.ShopServiceV1.internal_static_bloombox_schema_services_shop_v1_EnrollMember_fieldAccessorTable
+    return io.bloombox.schema.services.shop.v1.ShopServiceV1.internal_static_bloombox_services_shop_v1_EnrollMember_fieldAccessorTable
         .ensureFieldAccessorsInitialized(
             io.bloombox.schema.services.shop.v1.EnrollMember.class, io.bloombox.schema.services.shop.v1.EnrollMember.Builder.class);
   }
 
   public interface RequestOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:bloombox.schema.services.shop.v1.EnrollMember.Request)
+      // @@protoc_insertion_point(interface_extends:bloombox.services.shop.v1.EnrollMember.Request)
       com.google.protobuf.MessageOrBuilder {
 
     /**
@@ -127,7 +128,7 @@ private static final long serialVersionUID = 0L;
      * Source for this enrollment.
      * </pre>
      *
-     * <code>.bloombox.schema.identity.EnrollmentSource source = 2;</code>
+     * <code>.bloombox.identity.EnrollmentSource source = 2;</code>
      */
     int getSourceValue();
     /**
@@ -135,7 +136,7 @@ private static final long serialVersionUID = 0L;
      * Source for this enrollment.
      * </pre>
      *
-     * <code>.bloombox.schema.identity.EnrollmentSource source = 2;</code>
+     * <code>.bloombox.identity.EnrollmentSource source = 2;</code>
      */
     io.bloombox.schema.identity.AppUser.EnrollmentSource getSource();
 
@@ -162,7 +163,7 @@ private static final long serialVersionUID = 0L;
      * Holds information about the user's cannabis recommendation.
      * </pre>
      *
-     * <code>.bloombox.schema.identity.ids.UserDoctorRec doctor_rec = 4;</code>
+     * <code>.bloombox.identity.ids.UserDoctorRec doctor_rec = 4;</code>
      */
     boolean hasDoctorRec();
     /**
@@ -170,7 +171,7 @@ private static final long serialVersionUID = 0L;
      * Holds information about the user's cannabis recommendation.
      * </pre>
      *
-     * <code>.bloombox.schema.identity.ids.UserDoctorRec doctor_rec = 4;</code>
+     * <code>.bloombox.identity.ids.UserDoctorRec doctor_rec = 4;</code>
      */
     io.bloombox.schema.identity.ids.PrescriptionID.UserDoctorRec getDoctorRec();
     /**
@@ -178,7 +179,7 @@ private static final long serialVersionUID = 0L;
      * Holds information about the user's cannabis recommendation.
      * </pre>
      *
-     * <code>.bloombox.schema.identity.ids.UserDoctorRec doctor_rec = 4;</code>
+     * <code>.bloombox.identity.ids.UserDoctorRec doctor_rec = 4;</code>
      */
     io.bloombox.schema.identity.ids.PrescriptionID.UserDoctorRecOrBuilder getDoctorRecOrBuilder();
 
@@ -187,7 +188,7 @@ private static final long serialVersionUID = 0L;
      * Holds information about the user's driver's license.
      * </pre>
      *
-     * <code>.bloombox.schema.identity.ID government_id = 5;</code>
+     * <code>.bloombox.identity.ID government_id = 5;</code>
      */
     boolean hasGovernmentId();
     /**
@@ -195,7 +196,7 @@ private static final long serialVersionUID = 0L;
      * Holds information about the user's driver's license.
      * </pre>
      *
-     * <code>.bloombox.schema.identity.ID government_id = 5;</code>
+     * <code>.bloombox.identity.ID government_id = 5;</code>
      */
     io.bloombox.schema.identity.IdentityID.ID getGovernmentId();
     /**
@@ -203,7 +204,7 @@ private static final long serialVersionUID = 0L;
      * Holds information about the user's driver's license.
      * </pre>
      *
-     * <code>.bloombox.schema.identity.ID government_id = 5;</code>
+     * <code>.bloombox.identity.ID government_id = 5;</code>
      */
     io.bloombox.schema.identity.IdentityID.IDOrBuilder getGovernmentIdOrBuilder();
 
@@ -212,7 +213,7 @@ private static final long serialVersionUID = 0L;
      * Specifies the partner we are enrolling to.
      * </pre>
      *
-     * <code>.bloombox.schema.partner.LocationKey location = 6;</code>
+     * <code>.bloombox.partner.LocationKey location = 6;</code>
      */
     boolean hasLocation();
     /**
@@ -220,7 +221,7 @@ private static final long serialVersionUID = 0L;
      * Specifies the partner we are enrolling to.
      * </pre>
      *
-     * <code>.bloombox.schema.partner.LocationKey location = 6;</code>
+     * <code>.bloombox.partner.LocationKey location = 6;</code>
      */
     io.bloombox.schema.partner.LocationAccountKey.LocationKey getLocation();
     /**
@@ -228,7 +229,7 @@ private static final long serialVersionUID = 0L;
      * Specifies the partner we are enrolling to.
      * </pre>
      *
-     * <code>.bloombox.schema.partner.LocationKey location = 6;</code>
+     * <code>.bloombox.partner.LocationKey location = 6;</code>
      */
     io.bloombox.schema.partner.LocationAccountKey.LocationKeyOrBuilder getLocationOrBuilder();
 
@@ -267,7 +268,7 @@ private static final long serialVersionUID = 0L;
      * Specifies information related to a cannabis consumer's consumption preferences.
      * </pre>
      *
-     * <code>.bloombox.schema.identity.ConsumerProfile consumer_profile = 9;</code>
+     * <code>.bloombox.identity.ConsumerProfile consumer_profile = 9;</code>
      */
     boolean hasConsumerProfile();
     /**
@@ -275,7 +276,7 @@ private static final long serialVersionUID = 0L;
      * Specifies information related to a cannabis consumer's consumption preferences.
      * </pre>
      *
-     * <code>.bloombox.schema.identity.ConsumerProfile consumer_profile = 9;</code>
+     * <code>.bloombox.identity.ConsumerProfile consumer_profile = 9;</code>
      */
     io.bloombox.schema.identity.AppUser.ConsumerProfile getConsumerProfile();
     /**
@@ -283,16 +284,16 @@ private static final long serialVersionUID = 0L;
      * Specifies information related to a cannabis consumer's consumption preferences.
      * </pre>
      *
-     * <code>.bloombox.schema.identity.ConsumerProfile consumer_profile = 9;</code>
+     * <code>.bloombox.identity.ConsumerProfile consumer_profile = 9;</code>
      */
     io.bloombox.schema.identity.AppUser.ConsumerProfileOrBuilder getConsumerProfileOrBuilder();
   }
   /**
-   * Protobuf type {@code bloombox.schema.services.shop.v1.EnrollMember.Request}
+   * Protobuf type {@code bloombox.services.shop.v1.EnrollMember.Request}
    */
   public  static final class Request extends
       com.google.protobuf.GeneratedMessageV3 implements
-      // @@protoc_insertion_point(message_implements:bloombox.schema.services.shop.v1.EnrollMember.Request)
+      // @@protoc_insertion_point(message_implements:bloombox.services.shop.v1.EnrollMember.Request)
       RequestOrBuilder {
   private static final long serialVersionUID = 0L;
     // Use Request.newBuilder() to construct.
@@ -330,13 +331,6 @@ private static final long serialVersionUID = 0L;
             case 0:
               done = true;
               break;
-            default: {
-              if (!parseUnknownFieldProto3(
-                  input, unknownFields, extensionRegistry, tag)) {
-                done = true;
-              }
-              break;
-            }
             case 10: {
               io.opencannabis.schema.person.Person.Builder subBuilder = null;
               if (person_ != null) {
@@ -425,6 +419,13 @@ private static final long serialVersionUID = 0L;
 
               break;
             }
+            default: {
+              if (!parseUnknownFieldProto3(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
           }
         }
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
@@ -439,12 +440,13 @@ private static final long serialVersionUID = 0L;
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return io.bloombox.schema.services.shop.v1.ShopServiceV1.internal_static_bloombox_schema_services_shop_v1_EnrollMember_Request_descriptor;
+      return io.bloombox.schema.services.shop.v1.ShopServiceV1.internal_static_bloombox_services_shop_v1_EnrollMember_Request_descriptor;
     }
 
+    @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return io.bloombox.schema.services.shop.v1.ShopServiceV1.internal_static_bloombox_schema_services_shop_v1_EnrollMember_Request_fieldAccessorTable
+      return io.bloombox.schema.services.shop.v1.ShopServiceV1.internal_static_bloombox_services_shop_v1_EnrollMember_Request_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
               io.bloombox.schema.services.shop.v1.EnrollMember.Request.class, io.bloombox.schema.services.shop.v1.EnrollMember.Request.Builder.class);
     }
@@ -489,7 +491,7 @@ private static final long serialVersionUID = 0L;
      * Source for this enrollment.
      * </pre>
      *
-     * <code>.bloombox.schema.identity.EnrollmentSource source = 2;</code>
+     * <code>.bloombox.identity.EnrollmentSource source = 2;</code>
      */
     public int getSourceValue() {
       return source_;
@@ -499,9 +501,10 @@ private static final long serialVersionUID = 0L;
      * Source for this enrollment.
      * </pre>
      *
-     * <code>.bloombox.schema.identity.EnrollmentSource source = 2;</code>
+     * <code>.bloombox.identity.EnrollmentSource source = 2;</code>
      */
     public io.bloombox.schema.identity.AppUser.EnrollmentSource getSource() {
+      @SuppressWarnings("deprecation")
       io.bloombox.schema.identity.AppUser.EnrollmentSource result = io.bloombox.schema.identity.AppUser.EnrollmentSource.valueOf(source_);
       return result == null ? io.bloombox.schema.identity.AppUser.EnrollmentSource.UNRECOGNIZED : result;
     }
@@ -555,7 +558,7 @@ private static final long serialVersionUID = 0L;
      * Holds information about the user's cannabis recommendation.
      * </pre>
      *
-     * <code>.bloombox.schema.identity.ids.UserDoctorRec doctor_rec = 4;</code>
+     * <code>.bloombox.identity.ids.UserDoctorRec doctor_rec = 4;</code>
      */
     public boolean hasDoctorRec() {
       return doctorRec_ != null;
@@ -565,7 +568,7 @@ private static final long serialVersionUID = 0L;
      * Holds information about the user's cannabis recommendation.
      * </pre>
      *
-     * <code>.bloombox.schema.identity.ids.UserDoctorRec doctor_rec = 4;</code>
+     * <code>.bloombox.identity.ids.UserDoctorRec doctor_rec = 4;</code>
      */
     public io.bloombox.schema.identity.ids.PrescriptionID.UserDoctorRec getDoctorRec() {
       return doctorRec_ == null ? io.bloombox.schema.identity.ids.PrescriptionID.UserDoctorRec.getDefaultInstance() : doctorRec_;
@@ -575,7 +578,7 @@ private static final long serialVersionUID = 0L;
      * Holds information about the user's cannabis recommendation.
      * </pre>
      *
-     * <code>.bloombox.schema.identity.ids.UserDoctorRec doctor_rec = 4;</code>
+     * <code>.bloombox.identity.ids.UserDoctorRec doctor_rec = 4;</code>
      */
     public io.bloombox.schema.identity.ids.PrescriptionID.UserDoctorRecOrBuilder getDoctorRecOrBuilder() {
       return getDoctorRec();
@@ -588,7 +591,7 @@ private static final long serialVersionUID = 0L;
      * Holds information about the user's driver's license.
      * </pre>
      *
-     * <code>.bloombox.schema.identity.ID government_id = 5;</code>
+     * <code>.bloombox.identity.ID government_id = 5;</code>
      */
     public boolean hasGovernmentId() {
       return governmentId_ != null;
@@ -598,7 +601,7 @@ private static final long serialVersionUID = 0L;
      * Holds information about the user's driver's license.
      * </pre>
      *
-     * <code>.bloombox.schema.identity.ID government_id = 5;</code>
+     * <code>.bloombox.identity.ID government_id = 5;</code>
      */
     public io.bloombox.schema.identity.IdentityID.ID getGovernmentId() {
       return governmentId_ == null ? io.bloombox.schema.identity.IdentityID.ID.getDefaultInstance() : governmentId_;
@@ -608,7 +611,7 @@ private static final long serialVersionUID = 0L;
      * Holds information about the user's driver's license.
      * </pre>
      *
-     * <code>.bloombox.schema.identity.ID government_id = 5;</code>
+     * <code>.bloombox.identity.ID government_id = 5;</code>
      */
     public io.bloombox.schema.identity.IdentityID.IDOrBuilder getGovernmentIdOrBuilder() {
       return getGovernmentId();
@@ -621,7 +624,7 @@ private static final long serialVersionUID = 0L;
      * Specifies the partner we are enrolling to.
      * </pre>
      *
-     * <code>.bloombox.schema.partner.LocationKey location = 6;</code>
+     * <code>.bloombox.partner.LocationKey location = 6;</code>
      */
     public boolean hasLocation() {
       return location_ != null;
@@ -631,7 +634,7 @@ private static final long serialVersionUID = 0L;
      * Specifies the partner we are enrolling to.
      * </pre>
      *
-     * <code>.bloombox.schema.partner.LocationKey location = 6;</code>
+     * <code>.bloombox.partner.LocationKey location = 6;</code>
      */
     public io.bloombox.schema.partner.LocationAccountKey.LocationKey getLocation() {
       return location_ == null ? io.bloombox.schema.partner.LocationAccountKey.LocationKey.getDefaultInstance() : location_;
@@ -641,7 +644,7 @@ private static final long serialVersionUID = 0L;
      * Specifies the partner we are enrolling to.
      * </pre>
      *
-     * <code>.bloombox.schema.partner.LocationKey location = 6;</code>
+     * <code>.bloombox.partner.LocationKey location = 6;</code>
      */
     public io.bloombox.schema.partner.LocationAccountKey.LocationKeyOrBuilder getLocationOrBuilder() {
       return getLocation();
@@ -712,7 +715,7 @@ private static final long serialVersionUID = 0L;
      * Specifies information related to a cannabis consumer's consumption preferences.
      * </pre>
      *
-     * <code>.bloombox.schema.identity.ConsumerProfile consumer_profile = 9;</code>
+     * <code>.bloombox.identity.ConsumerProfile consumer_profile = 9;</code>
      */
     public boolean hasConsumerProfile() {
       return consumerProfile_ != null;
@@ -722,7 +725,7 @@ private static final long serialVersionUID = 0L;
      * Specifies information related to a cannabis consumer's consumption preferences.
      * </pre>
      *
-     * <code>.bloombox.schema.identity.ConsumerProfile consumer_profile = 9;</code>
+     * <code>.bloombox.identity.ConsumerProfile consumer_profile = 9;</code>
      */
     public io.bloombox.schema.identity.AppUser.ConsumerProfile getConsumerProfile() {
       return consumerProfile_ == null ? io.bloombox.schema.identity.AppUser.ConsumerProfile.getDefaultInstance() : consumerProfile_;
@@ -732,13 +735,14 @@ private static final long serialVersionUID = 0L;
      * Specifies information related to a cannabis consumer's consumption preferences.
      * </pre>
      *
-     * <code>.bloombox.schema.identity.ConsumerProfile consumer_profile = 9;</code>
+     * <code>.bloombox.identity.ConsumerProfile consumer_profile = 9;</code>
      */
     public io.bloombox.schema.identity.AppUser.ConsumerProfileOrBuilder getConsumerProfileOrBuilder() {
       return getConsumerProfile();
     }
 
     private byte memoizedIsInitialized = -1;
+    @java.lang.Override
     public final boolean isInitialized() {
       byte isInitialized = memoizedIsInitialized;
       if (isInitialized == 1) return true;
@@ -748,6 +752,7 @@ private static final long serialVersionUID = 0L;
       return true;
     }
 
+    @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
       if (person_ != null) {
@@ -780,6 +785,7 @@ private static final long serialVersionUID = 0L;
       unknownFields.writeTo(output);
     }
 
+    @java.lang.Override
     public int getSerializedSize() {
       int size = memoizedSize;
       if (size != -1) return size;
@@ -982,6 +988,7 @@ private static final long serialVersionUID = 0L;
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
 
+    @java.lang.Override
     public Builder newBuilderForType() { return newBuilder(); }
     public static Builder newBuilder() {
       return DEFAULT_INSTANCE.toBuilder();
@@ -989,6 +996,7 @@ private static final long serialVersionUID = 0L;
     public static Builder newBuilder(io.bloombox.schema.services.shop.v1.EnrollMember.Request prototype) {
       return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
     }
+    @java.lang.Override
     public Builder toBuilder() {
       return this == DEFAULT_INSTANCE
           ? new Builder() : new Builder().mergeFrom(this);
@@ -1001,20 +1009,21 @@ private static final long serialVersionUID = 0L;
       return builder;
     }
     /**
-     * Protobuf type {@code bloombox.schema.services.shop.v1.EnrollMember.Request}
+     * Protobuf type {@code bloombox.services.shop.v1.EnrollMember.Request}
      */
     public static final class Builder extends
         com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:bloombox.schema.services.shop.v1.EnrollMember.Request)
+        // @@protoc_insertion_point(builder_implements:bloombox.services.shop.v1.EnrollMember.Request)
         io.bloombox.schema.services.shop.v1.EnrollMember.RequestOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return io.bloombox.schema.services.shop.v1.ShopServiceV1.internal_static_bloombox_schema_services_shop_v1_EnrollMember_Request_descriptor;
+        return io.bloombox.schema.services.shop.v1.ShopServiceV1.internal_static_bloombox_services_shop_v1_EnrollMember_Request_descriptor;
       }
 
+      @java.lang.Override
       protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return io.bloombox.schema.services.shop.v1.ShopServiceV1.internal_static_bloombox_schema_services_shop_v1_EnrollMember_Request_fieldAccessorTable
+        return io.bloombox.schema.services.shop.v1.ShopServiceV1.internal_static_bloombox_services_shop_v1_EnrollMember_Request_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
                 io.bloombox.schema.services.shop.v1.EnrollMember.Request.class, io.bloombox.schema.services.shop.v1.EnrollMember.Request.Builder.class);
       }
@@ -1034,6 +1043,7 @@ private static final long serialVersionUID = 0L;
                 .alwaysUseFieldBuilders) {
         }
       }
+      @java.lang.Override
       public Builder clear() {
         super.clear();
         if (personBuilder_ == null) {
@@ -1077,15 +1087,18 @@ private static final long serialVersionUID = 0L;
         return this;
       }
 
+      @java.lang.Override
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return io.bloombox.schema.services.shop.v1.ShopServiceV1.internal_static_bloombox_schema_services_shop_v1_EnrollMember_Request_descriptor;
+        return io.bloombox.schema.services.shop.v1.ShopServiceV1.internal_static_bloombox_services_shop_v1_EnrollMember_Request_descriptor;
       }
 
+      @java.lang.Override
       public io.bloombox.schema.services.shop.v1.EnrollMember.Request getDefaultInstanceForType() {
         return io.bloombox.schema.services.shop.v1.EnrollMember.Request.getDefaultInstance();
       }
 
+      @java.lang.Override
       public io.bloombox.schema.services.shop.v1.EnrollMember.Request build() {
         io.bloombox.schema.services.shop.v1.EnrollMember.Request result = buildPartial();
         if (!result.isInitialized()) {
@@ -1094,6 +1107,7 @@ private static final long serialVersionUID = 0L;
         return result;
       }
 
+      @java.lang.Override
       public io.bloombox.schema.services.shop.v1.EnrollMember.Request buildPartial() {
         io.bloombox.schema.services.shop.v1.EnrollMember.Request result = new io.bloombox.schema.services.shop.v1.EnrollMember.Request(this);
         if (personBuilder_ == null) {
@@ -1129,32 +1143,39 @@ private static final long serialVersionUID = 0L;
         return result;
       }
 
+      @java.lang.Override
       public Builder clone() {
         return (Builder) super.clone();
       }
+      @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
         return (Builder) super.setField(field, value);
       }
+      @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
         return (Builder) super.clearField(field);
       }
+      @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
         return (Builder) super.clearOneof(oneof);
       }
+      @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
         return (Builder) super.setRepeatedField(field, index, value);
       }
+      @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
         return (Builder) super.addRepeatedField(field, value);
       }
+      @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
         if (other instanceof io.bloombox.schema.services.shop.v1.EnrollMember.Request) {
           return mergeFrom((io.bloombox.schema.services.shop.v1.EnrollMember.Request)other);
@@ -1200,10 +1221,12 @@ private static final long serialVersionUID = 0L;
         return this;
       }
 
+      @java.lang.Override
       public final boolean isInitialized() {
         return true;
       }
 
+      @java.lang.Override
       public Builder mergeFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -1381,7 +1404,7 @@ private static final long serialVersionUID = 0L;
        * Source for this enrollment.
        * </pre>
        *
-       * <code>.bloombox.schema.identity.EnrollmentSource source = 2;</code>
+       * <code>.bloombox.identity.EnrollmentSource source = 2;</code>
        */
       public int getSourceValue() {
         return source_;
@@ -1391,7 +1414,7 @@ private static final long serialVersionUID = 0L;
        * Source for this enrollment.
        * </pre>
        *
-       * <code>.bloombox.schema.identity.EnrollmentSource source = 2;</code>
+       * <code>.bloombox.identity.EnrollmentSource source = 2;</code>
        */
       public Builder setSourceValue(int value) {
         source_ = value;
@@ -1403,9 +1426,10 @@ private static final long serialVersionUID = 0L;
        * Source for this enrollment.
        * </pre>
        *
-       * <code>.bloombox.schema.identity.EnrollmentSource source = 2;</code>
+       * <code>.bloombox.identity.EnrollmentSource source = 2;</code>
        */
       public io.bloombox.schema.identity.AppUser.EnrollmentSource getSource() {
+        @SuppressWarnings("deprecation")
         io.bloombox.schema.identity.AppUser.EnrollmentSource result = io.bloombox.schema.identity.AppUser.EnrollmentSource.valueOf(source_);
         return result == null ? io.bloombox.schema.identity.AppUser.EnrollmentSource.UNRECOGNIZED : result;
       }
@@ -1414,7 +1438,7 @@ private static final long serialVersionUID = 0L;
        * Source for this enrollment.
        * </pre>
        *
-       * <code>.bloombox.schema.identity.EnrollmentSource source = 2;</code>
+       * <code>.bloombox.identity.EnrollmentSource source = 2;</code>
        */
       public Builder setSource(io.bloombox.schema.identity.AppUser.EnrollmentSource value) {
         if (value == null) {
@@ -1430,7 +1454,7 @@ private static final long serialVersionUID = 0L;
        * Source for this enrollment.
        * </pre>
        *
-       * <code>.bloombox.schema.identity.EnrollmentSource source = 2;</code>
+       * <code>.bloombox.identity.EnrollmentSource source = 2;</code>
        */
       public Builder clearSource() {
         
@@ -1536,7 +1560,7 @@ private static final long serialVersionUID = 0L;
        * Holds information about the user's cannabis recommendation.
        * </pre>
        *
-       * <code>.bloombox.schema.identity.ids.UserDoctorRec doctor_rec = 4;</code>
+       * <code>.bloombox.identity.ids.UserDoctorRec doctor_rec = 4;</code>
        */
       public boolean hasDoctorRec() {
         return doctorRecBuilder_ != null || doctorRec_ != null;
@@ -1546,7 +1570,7 @@ private static final long serialVersionUID = 0L;
        * Holds information about the user's cannabis recommendation.
        * </pre>
        *
-       * <code>.bloombox.schema.identity.ids.UserDoctorRec doctor_rec = 4;</code>
+       * <code>.bloombox.identity.ids.UserDoctorRec doctor_rec = 4;</code>
        */
       public io.bloombox.schema.identity.ids.PrescriptionID.UserDoctorRec getDoctorRec() {
         if (doctorRecBuilder_ == null) {
@@ -1560,7 +1584,7 @@ private static final long serialVersionUID = 0L;
        * Holds information about the user's cannabis recommendation.
        * </pre>
        *
-       * <code>.bloombox.schema.identity.ids.UserDoctorRec doctor_rec = 4;</code>
+       * <code>.bloombox.identity.ids.UserDoctorRec doctor_rec = 4;</code>
        */
       public Builder setDoctorRec(io.bloombox.schema.identity.ids.PrescriptionID.UserDoctorRec value) {
         if (doctorRecBuilder_ == null) {
@@ -1580,7 +1604,7 @@ private static final long serialVersionUID = 0L;
        * Holds information about the user's cannabis recommendation.
        * </pre>
        *
-       * <code>.bloombox.schema.identity.ids.UserDoctorRec doctor_rec = 4;</code>
+       * <code>.bloombox.identity.ids.UserDoctorRec doctor_rec = 4;</code>
        */
       public Builder setDoctorRec(
           io.bloombox.schema.identity.ids.PrescriptionID.UserDoctorRec.Builder builderForValue) {
@@ -1598,7 +1622,7 @@ private static final long serialVersionUID = 0L;
        * Holds information about the user's cannabis recommendation.
        * </pre>
        *
-       * <code>.bloombox.schema.identity.ids.UserDoctorRec doctor_rec = 4;</code>
+       * <code>.bloombox.identity.ids.UserDoctorRec doctor_rec = 4;</code>
        */
       public Builder mergeDoctorRec(io.bloombox.schema.identity.ids.PrescriptionID.UserDoctorRec value) {
         if (doctorRecBuilder_ == null) {
@@ -1620,7 +1644,7 @@ private static final long serialVersionUID = 0L;
        * Holds information about the user's cannabis recommendation.
        * </pre>
        *
-       * <code>.bloombox.schema.identity.ids.UserDoctorRec doctor_rec = 4;</code>
+       * <code>.bloombox.identity.ids.UserDoctorRec doctor_rec = 4;</code>
        */
       public Builder clearDoctorRec() {
         if (doctorRecBuilder_ == null) {
@@ -1638,7 +1662,7 @@ private static final long serialVersionUID = 0L;
        * Holds information about the user's cannabis recommendation.
        * </pre>
        *
-       * <code>.bloombox.schema.identity.ids.UserDoctorRec doctor_rec = 4;</code>
+       * <code>.bloombox.identity.ids.UserDoctorRec doctor_rec = 4;</code>
        */
       public io.bloombox.schema.identity.ids.PrescriptionID.UserDoctorRec.Builder getDoctorRecBuilder() {
         
@@ -1650,7 +1674,7 @@ private static final long serialVersionUID = 0L;
        * Holds information about the user's cannabis recommendation.
        * </pre>
        *
-       * <code>.bloombox.schema.identity.ids.UserDoctorRec doctor_rec = 4;</code>
+       * <code>.bloombox.identity.ids.UserDoctorRec doctor_rec = 4;</code>
        */
       public io.bloombox.schema.identity.ids.PrescriptionID.UserDoctorRecOrBuilder getDoctorRecOrBuilder() {
         if (doctorRecBuilder_ != null) {
@@ -1665,7 +1689,7 @@ private static final long serialVersionUID = 0L;
        * Holds information about the user's cannabis recommendation.
        * </pre>
        *
-       * <code>.bloombox.schema.identity.ids.UserDoctorRec doctor_rec = 4;</code>
+       * <code>.bloombox.identity.ids.UserDoctorRec doctor_rec = 4;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
           io.bloombox.schema.identity.ids.PrescriptionID.UserDoctorRec, io.bloombox.schema.identity.ids.PrescriptionID.UserDoctorRec.Builder, io.bloombox.schema.identity.ids.PrescriptionID.UserDoctorRecOrBuilder> 
@@ -1689,7 +1713,7 @@ private static final long serialVersionUID = 0L;
        * Holds information about the user's driver's license.
        * </pre>
        *
-       * <code>.bloombox.schema.identity.ID government_id = 5;</code>
+       * <code>.bloombox.identity.ID government_id = 5;</code>
        */
       public boolean hasGovernmentId() {
         return governmentIdBuilder_ != null || governmentId_ != null;
@@ -1699,7 +1723,7 @@ private static final long serialVersionUID = 0L;
        * Holds information about the user's driver's license.
        * </pre>
        *
-       * <code>.bloombox.schema.identity.ID government_id = 5;</code>
+       * <code>.bloombox.identity.ID government_id = 5;</code>
        */
       public io.bloombox.schema.identity.IdentityID.ID getGovernmentId() {
         if (governmentIdBuilder_ == null) {
@@ -1713,7 +1737,7 @@ private static final long serialVersionUID = 0L;
        * Holds information about the user's driver's license.
        * </pre>
        *
-       * <code>.bloombox.schema.identity.ID government_id = 5;</code>
+       * <code>.bloombox.identity.ID government_id = 5;</code>
        */
       public Builder setGovernmentId(io.bloombox.schema.identity.IdentityID.ID value) {
         if (governmentIdBuilder_ == null) {
@@ -1733,7 +1757,7 @@ private static final long serialVersionUID = 0L;
        * Holds information about the user's driver's license.
        * </pre>
        *
-       * <code>.bloombox.schema.identity.ID government_id = 5;</code>
+       * <code>.bloombox.identity.ID government_id = 5;</code>
        */
       public Builder setGovernmentId(
           io.bloombox.schema.identity.IdentityID.ID.Builder builderForValue) {
@@ -1751,7 +1775,7 @@ private static final long serialVersionUID = 0L;
        * Holds information about the user's driver's license.
        * </pre>
        *
-       * <code>.bloombox.schema.identity.ID government_id = 5;</code>
+       * <code>.bloombox.identity.ID government_id = 5;</code>
        */
       public Builder mergeGovernmentId(io.bloombox.schema.identity.IdentityID.ID value) {
         if (governmentIdBuilder_ == null) {
@@ -1773,7 +1797,7 @@ private static final long serialVersionUID = 0L;
        * Holds information about the user's driver's license.
        * </pre>
        *
-       * <code>.bloombox.schema.identity.ID government_id = 5;</code>
+       * <code>.bloombox.identity.ID government_id = 5;</code>
        */
       public Builder clearGovernmentId() {
         if (governmentIdBuilder_ == null) {
@@ -1791,7 +1815,7 @@ private static final long serialVersionUID = 0L;
        * Holds information about the user's driver's license.
        * </pre>
        *
-       * <code>.bloombox.schema.identity.ID government_id = 5;</code>
+       * <code>.bloombox.identity.ID government_id = 5;</code>
        */
       public io.bloombox.schema.identity.IdentityID.ID.Builder getGovernmentIdBuilder() {
         
@@ -1803,7 +1827,7 @@ private static final long serialVersionUID = 0L;
        * Holds information about the user's driver's license.
        * </pre>
        *
-       * <code>.bloombox.schema.identity.ID government_id = 5;</code>
+       * <code>.bloombox.identity.ID government_id = 5;</code>
        */
       public io.bloombox.schema.identity.IdentityID.IDOrBuilder getGovernmentIdOrBuilder() {
         if (governmentIdBuilder_ != null) {
@@ -1818,7 +1842,7 @@ private static final long serialVersionUID = 0L;
        * Holds information about the user's driver's license.
        * </pre>
        *
-       * <code>.bloombox.schema.identity.ID government_id = 5;</code>
+       * <code>.bloombox.identity.ID government_id = 5;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
           io.bloombox.schema.identity.IdentityID.ID, io.bloombox.schema.identity.IdentityID.ID.Builder, io.bloombox.schema.identity.IdentityID.IDOrBuilder> 
@@ -1842,7 +1866,7 @@ private static final long serialVersionUID = 0L;
        * Specifies the partner we are enrolling to.
        * </pre>
        *
-       * <code>.bloombox.schema.partner.LocationKey location = 6;</code>
+       * <code>.bloombox.partner.LocationKey location = 6;</code>
        */
       public boolean hasLocation() {
         return locationBuilder_ != null || location_ != null;
@@ -1852,7 +1876,7 @@ private static final long serialVersionUID = 0L;
        * Specifies the partner we are enrolling to.
        * </pre>
        *
-       * <code>.bloombox.schema.partner.LocationKey location = 6;</code>
+       * <code>.bloombox.partner.LocationKey location = 6;</code>
        */
       public io.bloombox.schema.partner.LocationAccountKey.LocationKey getLocation() {
         if (locationBuilder_ == null) {
@@ -1866,7 +1890,7 @@ private static final long serialVersionUID = 0L;
        * Specifies the partner we are enrolling to.
        * </pre>
        *
-       * <code>.bloombox.schema.partner.LocationKey location = 6;</code>
+       * <code>.bloombox.partner.LocationKey location = 6;</code>
        */
       public Builder setLocation(io.bloombox.schema.partner.LocationAccountKey.LocationKey value) {
         if (locationBuilder_ == null) {
@@ -1886,7 +1910,7 @@ private static final long serialVersionUID = 0L;
        * Specifies the partner we are enrolling to.
        * </pre>
        *
-       * <code>.bloombox.schema.partner.LocationKey location = 6;</code>
+       * <code>.bloombox.partner.LocationKey location = 6;</code>
        */
       public Builder setLocation(
           io.bloombox.schema.partner.LocationAccountKey.LocationKey.Builder builderForValue) {
@@ -1904,7 +1928,7 @@ private static final long serialVersionUID = 0L;
        * Specifies the partner we are enrolling to.
        * </pre>
        *
-       * <code>.bloombox.schema.partner.LocationKey location = 6;</code>
+       * <code>.bloombox.partner.LocationKey location = 6;</code>
        */
       public Builder mergeLocation(io.bloombox.schema.partner.LocationAccountKey.LocationKey value) {
         if (locationBuilder_ == null) {
@@ -1926,7 +1950,7 @@ private static final long serialVersionUID = 0L;
        * Specifies the partner we are enrolling to.
        * </pre>
        *
-       * <code>.bloombox.schema.partner.LocationKey location = 6;</code>
+       * <code>.bloombox.partner.LocationKey location = 6;</code>
        */
       public Builder clearLocation() {
         if (locationBuilder_ == null) {
@@ -1944,7 +1968,7 @@ private static final long serialVersionUID = 0L;
        * Specifies the partner we are enrolling to.
        * </pre>
        *
-       * <code>.bloombox.schema.partner.LocationKey location = 6;</code>
+       * <code>.bloombox.partner.LocationKey location = 6;</code>
        */
       public io.bloombox.schema.partner.LocationAccountKey.LocationKey.Builder getLocationBuilder() {
         
@@ -1956,7 +1980,7 @@ private static final long serialVersionUID = 0L;
        * Specifies the partner we are enrolling to.
        * </pre>
        *
-       * <code>.bloombox.schema.partner.LocationKey location = 6;</code>
+       * <code>.bloombox.partner.LocationKey location = 6;</code>
        */
       public io.bloombox.schema.partner.LocationAccountKey.LocationKeyOrBuilder getLocationOrBuilder() {
         if (locationBuilder_ != null) {
@@ -1971,7 +1995,7 @@ private static final long serialVersionUID = 0L;
        * Specifies the partner we are enrolling to.
        * </pre>
        *
-       * <code>.bloombox.schema.partner.LocationKey location = 6;</code>
+       * <code>.bloombox.partner.LocationKey location = 6;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
           io.bloombox.schema.partner.LocationAccountKey.LocationKey, io.bloombox.schema.partner.LocationAccountKey.LocationKey.Builder, io.bloombox.schema.partner.LocationAccountKey.LocationKeyOrBuilder> 
@@ -2130,7 +2154,7 @@ private static final long serialVersionUID = 0L;
        * Specifies information related to a cannabis consumer's consumption preferences.
        * </pre>
        *
-       * <code>.bloombox.schema.identity.ConsumerProfile consumer_profile = 9;</code>
+       * <code>.bloombox.identity.ConsumerProfile consumer_profile = 9;</code>
        */
       public boolean hasConsumerProfile() {
         return consumerProfileBuilder_ != null || consumerProfile_ != null;
@@ -2140,7 +2164,7 @@ private static final long serialVersionUID = 0L;
        * Specifies information related to a cannabis consumer's consumption preferences.
        * </pre>
        *
-       * <code>.bloombox.schema.identity.ConsumerProfile consumer_profile = 9;</code>
+       * <code>.bloombox.identity.ConsumerProfile consumer_profile = 9;</code>
        */
       public io.bloombox.schema.identity.AppUser.ConsumerProfile getConsumerProfile() {
         if (consumerProfileBuilder_ == null) {
@@ -2154,7 +2178,7 @@ private static final long serialVersionUID = 0L;
        * Specifies information related to a cannabis consumer's consumption preferences.
        * </pre>
        *
-       * <code>.bloombox.schema.identity.ConsumerProfile consumer_profile = 9;</code>
+       * <code>.bloombox.identity.ConsumerProfile consumer_profile = 9;</code>
        */
       public Builder setConsumerProfile(io.bloombox.schema.identity.AppUser.ConsumerProfile value) {
         if (consumerProfileBuilder_ == null) {
@@ -2174,7 +2198,7 @@ private static final long serialVersionUID = 0L;
        * Specifies information related to a cannabis consumer's consumption preferences.
        * </pre>
        *
-       * <code>.bloombox.schema.identity.ConsumerProfile consumer_profile = 9;</code>
+       * <code>.bloombox.identity.ConsumerProfile consumer_profile = 9;</code>
        */
       public Builder setConsumerProfile(
           io.bloombox.schema.identity.AppUser.ConsumerProfile.Builder builderForValue) {
@@ -2192,7 +2216,7 @@ private static final long serialVersionUID = 0L;
        * Specifies information related to a cannabis consumer's consumption preferences.
        * </pre>
        *
-       * <code>.bloombox.schema.identity.ConsumerProfile consumer_profile = 9;</code>
+       * <code>.bloombox.identity.ConsumerProfile consumer_profile = 9;</code>
        */
       public Builder mergeConsumerProfile(io.bloombox.schema.identity.AppUser.ConsumerProfile value) {
         if (consumerProfileBuilder_ == null) {
@@ -2214,7 +2238,7 @@ private static final long serialVersionUID = 0L;
        * Specifies information related to a cannabis consumer's consumption preferences.
        * </pre>
        *
-       * <code>.bloombox.schema.identity.ConsumerProfile consumer_profile = 9;</code>
+       * <code>.bloombox.identity.ConsumerProfile consumer_profile = 9;</code>
        */
       public Builder clearConsumerProfile() {
         if (consumerProfileBuilder_ == null) {
@@ -2232,7 +2256,7 @@ private static final long serialVersionUID = 0L;
        * Specifies information related to a cannabis consumer's consumption preferences.
        * </pre>
        *
-       * <code>.bloombox.schema.identity.ConsumerProfile consumer_profile = 9;</code>
+       * <code>.bloombox.identity.ConsumerProfile consumer_profile = 9;</code>
        */
       public io.bloombox.schema.identity.AppUser.ConsumerProfile.Builder getConsumerProfileBuilder() {
         
@@ -2244,7 +2268,7 @@ private static final long serialVersionUID = 0L;
        * Specifies information related to a cannabis consumer's consumption preferences.
        * </pre>
        *
-       * <code>.bloombox.schema.identity.ConsumerProfile consumer_profile = 9;</code>
+       * <code>.bloombox.identity.ConsumerProfile consumer_profile = 9;</code>
        */
       public io.bloombox.schema.identity.AppUser.ConsumerProfileOrBuilder getConsumerProfileOrBuilder() {
         if (consumerProfileBuilder_ != null) {
@@ -2259,7 +2283,7 @@ private static final long serialVersionUID = 0L;
        * Specifies information related to a cannabis consumer's consumption preferences.
        * </pre>
        *
-       * <code>.bloombox.schema.identity.ConsumerProfile consumer_profile = 9;</code>
+       * <code>.bloombox.identity.ConsumerProfile consumer_profile = 9;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
           io.bloombox.schema.identity.AppUser.ConsumerProfile, io.bloombox.schema.identity.AppUser.ConsumerProfile.Builder, io.bloombox.schema.identity.AppUser.ConsumerProfileOrBuilder> 
@@ -2274,21 +2298,23 @@ private static final long serialVersionUID = 0L;
         }
         return consumerProfileBuilder_;
       }
+      @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
         return super.setUnknownFieldsProto3(unknownFields);
       }
 
+      @java.lang.Override
       public final Builder mergeUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
         return super.mergeUnknownFields(unknownFields);
       }
 
 
-      // @@protoc_insertion_point(builder_scope:bloombox.schema.services.shop.v1.EnrollMember.Request)
+      // @@protoc_insertion_point(builder_scope:bloombox.services.shop.v1.EnrollMember.Request)
     }
 
-    // @@protoc_insertion_point(class_scope:bloombox.schema.services.shop.v1.EnrollMember.Request)
+    // @@protoc_insertion_point(class_scope:bloombox.services.shop.v1.EnrollMember.Request)
     private static final io.bloombox.schema.services.shop.v1.EnrollMember.Request DEFAULT_INSTANCE;
     static {
       DEFAULT_INSTANCE = new io.bloombox.schema.services.shop.v1.EnrollMember.Request();
@@ -2300,6 +2326,7 @@ private static final long serialVersionUID = 0L;
 
     private static final com.google.protobuf.Parser<Request>
         PARSER = new com.google.protobuf.AbstractParser<Request>() {
+      @java.lang.Override
       public Request parsePartialFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -2317,6 +2344,7 @@ private static final long serialVersionUID = 0L;
       return PARSER;
     }
 
+    @java.lang.Override
     public io.bloombox.schema.services.shop.v1.EnrollMember.Request getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
@@ -2324,7 +2352,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public interface ResponseOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:bloombox.schema.services.shop.v1.EnrollMember.Response)
+      // @@protoc_insertion_point(interface_extends:bloombox.services.shop.v1.EnrollMember.Response)
       com.google.protobuf.MessageOrBuilder {
 
     /**
@@ -2368,7 +2396,7 @@ private static final long serialVersionUID = 0L;
      * Error that prevented a successful response.
      * </pre>
      *
-     * <code>.bloombox.schema.services.shop.v1.EnrollmentError error = 3;</code>
+     * <code>.bloombox.services.shop.v1.EnrollmentError error = 3;</code>
      */
     int getErrorValue();
     /**
@@ -2376,18 +2404,18 @@ private static final long serialVersionUID = 0L;
      * Error that prevented a successful response.
      * </pre>
      *
-     * <code>.bloombox.schema.services.shop.v1.EnrollmentError error = 3;</code>
+     * <code>.bloombox.services.shop.v1.EnrollmentError error = 3;</code>
      */
     io.bloombox.schema.services.shop.v1.EnrollmentError getError();
 
     public io.bloombox.schema.services.shop.v1.EnrollMember.Response.ResultCase getResultCase();
   }
   /**
-   * Protobuf type {@code bloombox.schema.services.shop.v1.EnrollMember.Response}
+   * Protobuf type {@code bloombox.services.shop.v1.EnrollMember.Response}
    */
   public  static final class Response extends
       com.google.protobuf.GeneratedMessageV3 implements
-      // @@protoc_insertion_point(message_implements:bloombox.schema.services.shop.v1.EnrollMember.Response)
+      // @@protoc_insertion_point(message_implements:bloombox.services.shop.v1.EnrollMember.Response)
       ResponseOrBuilder {
   private static final long serialVersionUID = 0L;
     // Use Response.newBuilder() to construct.
@@ -2422,13 +2450,6 @@ private static final long serialVersionUID = 0L;
             case 0:
               done = true;
               break;
-            default: {
-              if (!parseUnknownFieldProto3(
-                  input, unknownFields, extensionRegistry, tag)) {
-                done = true;
-              }
-              break;
-            }
             case 10: {
               java.lang.String s = input.readStringRequireUtf8();
 
@@ -2447,6 +2468,13 @@ private static final long serialVersionUID = 0L;
               result_ = rawValue;
               break;
             }
+            default: {
+              if (!parseUnknownFieldProto3(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
           }
         }
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
@@ -2461,12 +2489,13 @@ private static final long serialVersionUID = 0L;
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return io.bloombox.schema.services.shop.v1.ShopServiceV1.internal_static_bloombox_schema_services_shop_v1_EnrollMember_Response_descriptor;
+      return io.bloombox.schema.services.shop.v1.ShopServiceV1.internal_static_bloombox_services_shop_v1_EnrollMember_Response_descriptor;
     }
 
+    @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return io.bloombox.schema.services.shop.v1.ShopServiceV1.internal_static_bloombox_schema_services_shop_v1_EnrollMember_Response_fieldAccessorTable
+      return io.bloombox.schema.services.shop.v1.ShopServiceV1.internal_static_bloombox_services_shop_v1_EnrollMember_Response_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
               io.bloombox.schema.services.shop.v1.EnrollMember.Response.class, io.bloombox.schema.services.shop.v1.EnrollMember.Response.Builder.class);
     }
@@ -2608,7 +2637,7 @@ private static final long serialVersionUID = 0L;
      * Error that prevented a successful response.
      * </pre>
      *
-     * <code>.bloombox.schema.services.shop.v1.EnrollmentError error = 3;</code>
+     * <code>.bloombox.services.shop.v1.EnrollmentError error = 3;</code>
      */
     public int getErrorValue() {
       if (resultCase_ == 3) {
@@ -2621,10 +2650,11 @@ private static final long serialVersionUID = 0L;
      * Error that prevented a successful response.
      * </pre>
      *
-     * <code>.bloombox.schema.services.shop.v1.EnrollmentError error = 3;</code>
+     * <code>.bloombox.services.shop.v1.EnrollmentError error = 3;</code>
      */
     public io.bloombox.schema.services.shop.v1.EnrollmentError getError() {
       if (resultCase_ == 3) {
+        @SuppressWarnings("deprecation")
         io.bloombox.schema.services.shop.v1.EnrollmentError result = io.bloombox.schema.services.shop.v1.EnrollmentError.valueOf(
             (java.lang.Integer) result_);
         return result == null ? io.bloombox.schema.services.shop.v1.EnrollmentError.UNRECOGNIZED : result;
@@ -2633,6 +2663,7 @@ private static final long serialVersionUID = 0L;
     }
 
     private byte memoizedIsInitialized = -1;
+    @java.lang.Override
     public final boolean isInitialized() {
       byte isInitialized = memoizedIsInitialized;
       if (isInitialized == 1) return true;
@@ -2642,6 +2673,7 @@ private static final long serialVersionUID = 0L;
       return true;
     }
 
+    @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
       if (!getIdBytes().isEmpty()) {
@@ -2656,6 +2688,7 @@ private static final long serialVersionUID = 0L;
       unknownFields.writeTo(output);
     }
 
+    @java.lang.Override
     public int getSerializedSize() {
       int size = memoizedSize;
       if (size != -1) return size;
@@ -2804,6 +2837,7 @@ private static final long serialVersionUID = 0L;
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
 
+    @java.lang.Override
     public Builder newBuilderForType() { return newBuilder(); }
     public static Builder newBuilder() {
       return DEFAULT_INSTANCE.toBuilder();
@@ -2811,6 +2845,7 @@ private static final long serialVersionUID = 0L;
     public static Builder newBuilder(io.bloombox.schema.services.shop.v1.EnrollMember.Response prototype) {
       return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
     }
+    @java.lang.Override
     public Builder toBuilder() {
       return this == DEFAULT_INSTANCE
           ? new Builder() : new Builder().mergeFrom(this);
@@ -2823,20 +2858,21 @@ private static final long serialVersionUID = 0L;
       return builder;
     }
     /**
-     * Protobuf type {@code bloombox.schema.services.shop.v1.EnrollMember.Response}
+     * Protobuf type {@code bloombox.services.shop.v1.EnrollMember.Response}
      */
     public static final class Builder extends
         com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:bloombox.schema.services.shop.v1.EnrollMember.Response)
+        // @@protoc_insertion_point(builder_implements:bloombox.services.shop.v1.EnrollMember.Response)
         io.bloombox.schema.services.shop.v1.EnrollMember.ResponseOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return io.bloombox.schema.services.shop.v1.ShopServiceV1.internal_static_bloombox_schema_services_shop_v1_EnrollMember_Response_descriptor;
+        return io.bloombox.schema.services.shop.v1.ShopServiceV1.internal_static_bloombox_services_shop_v1_EnrollMember_Response_descriptor;
       }
 
+      @java.lang.Override
       protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return io.bloombox.schema.services.shop.v1.ShopServiceV1.internal_static_bloombox_schema_services_shop_v1_EnrollMember_Response_fieldAccessorTable
+        return io.bloombox.schema.services.shop.v1.ShopServiceV1.internal_static_bloombox_services_shop_v1_EnrollMember_Response_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
                 io.bloombox.schema.services.shop.v1.EnrollMember.Response.class, io.bloombox.schema.services.shop.v1.EnrollMember.Response.Builder.class);
       }
@@ -2856,6 +2892,7 @@ private static final long serialVersionUID = 0L;
                 .alwaysUseFieldBuilders) {
         }
       }
+      @java.lang.Override
       public Builder clear() {
         super.clear();
         id_ = "";
@@ -2865,15 +2902,18 @@ private static final long serialVersionUID = 0L;
         return this;
       }
 
+      @java.lang.Override
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return io.bloombox.schema.services.shop.v1.ShopServiceV1.internal_static_bloombox_schema_services_shop_v1_EnrollMember_Response_descriptor;
+        return io.bloombox.schema.services.shop.v1.ShopServiceV1.internal_static_bloombox_services_shop_v1_EnrollMember_Response_descriptor;
       }
 
+      @java.lang.Override
       public io.bloombox.schema.services.shop.v1.EnrollMember.Response getDefaultInstanceForType() {
         return io.bloombox.schema.services.shop.v1.EnrollMember.Response.getDefaultInstance();
       }
 
+      @java.lang.Override
       public io.bloombox.schema.services.shop.v1.EnrollMember.Response build() {
         io.bloombox.schema.services.shop.v1.EnrollMember.Response result = buildPartial();
         if (!result.isInitialized()) {
@@ -2882,6 +2922,7 @@ private static final long serialVersionUID = 0L;
         return result;
       }
 
+      @java.lang.Override
       public io.bloombox.schema.services.shop.v1.EnrollMember.Response buildPartial() {
         io.bloombox.schema.services.shop.v1.EnrollMember.Response result = new io.bloombox.schema.services.shop.v1.EnrollMember.Response(this);
         result.id_ = id_;
@@ -2896,32 +2937,39 @@ private static final long serialVersionUID = 0L;
         return result;
       }
 
+      @java.lang.Override
       public Builder clone() {
         return (Builder) super.clone();
       }
+      @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
         return (Builder) super.setField(field, value);
       }
+      @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
         return (Builder) super.clearField(field);
       }
+      @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
         return (Builder) super.clearOneof(oneof);
       }
+      @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
         return (Builder) super.setRepeatedField(field, index, value);
       }
+      @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
         return (Builder) super.addRepeatedField(field, value);
       }
+      @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
         if (other instanceof io.bloombox.schema.services.shop.v1.EnrollMember.Response) {
           return mergeFrom((io.bloombox.schema.services.shop.v1.EnrollMember.Response)other);
@@ -2957,10 +3005,12 @@ private static final long serialVersionUID = 0L;
         return this;
       }
 
+      @java.lang.Override
       public final boolean isInitialized() {
         return true;
       }
 
+      @java.lang.Override
       public Builder mergeFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -3188,7 +3238,7 @@ private static final long serialVersionUID = 0L;
        * Error that prevented a successful response.
        * </pre>
        *
-       * <code>.bloombox.schema.services.shop.v1.EnrollmentError error = 3;</code>
+       * <code>.bloombox.services.shop.v1.EnrollmentError error = 3;</code>
        */
       public int getErrorValue() {
         if (resultCase_ == 3) {
@@ -3201,7 +3251,7 @@ private static final long serialVersionUID = 0L;
        * Error that prevented a successful response.
        * </pre>
        *
-       * <code>.bloombox.schema.services.shop.v1.EnrollmentError error = 3;</code>
+       * <code>.bloombox.services.shop.v1.EnrollmentError error = 3;</code>
        */
       public Builder setErrorValue(int value) {
         resultCase_ = 3;
@@ -3214,10 +3264,11 @@ private static final long serialVersionUID = 0L;
        * Error that prevented a successful response.
        * </pre>
        *
-       * <code>.bloombox.schema.services.shop.v1.EnrollmentError error = 3;</code>
+       * <code>.bloombox.services.shop.v1.EnrollmentError error = 3;</code>
        */
       public io.bloombox.schema.services.shop.v1.EnrollmentError getError() {
         if (resultCase_ == 3) {
+          @SuppressWarnings("deprecation")
           io.bloombox.schema.services.shop.v1.EnrollmentError result = io.bloombox.schema.services.shop.v1.EnrollmentError.valueOf(
               (java.lang.Integer) result_);
           return result == null ? io.bloombox.schema.services.shop.v1.EnrollmentError.UNRECOGNIZED : result;
@@ -3229,7 +3280,7 @@ private static final long serialVersionUID = 0L;
        * Error that prevented a successful response.
        * </pre>
        *
-       * <code>.bloombox.schema.services.shop.v1.EnrollmentError error = 3;</code>
+       * <code>.bloombox.services.shop.v1.EnrollmentError error = 3;</code>
        */
       public Builder setError(io.bloombox.schema.services.shop.v1.EnrollmentError value) {
         if (value == null) {
@@ -3245,7 +3296,7 @@ private static final long serialVersionUID = 0L;
        * Error that prevented a successful response.
        * </pre>
        *
-       * <code>.bloombox.schema.services.shop.v1.EnrollmentError error = 3;</code>
+       * <code>.bloombox.services.shop.v1.EnrollmentError error = 3;</code>
        */
       public Builder clearError() {
         if (resultCase_ == 3) {
@@ -3255,21 +3306,23 @@ private static final long serialVersionUID = 0L;
         }
         return this;
       }
+      @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
         return super.setUnknownFieldsProto3(unknownFields);
       }
 
+      @java.lang.Override
       public final Builder mergeUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
         return super.mergeUnknownFields(unknownFields);
       }
 
 
-      // @@protoc_insertion_point(builder_scope:bloombox.schema.services.shop.v1.EnrollMember.Response)
+      // @@protoc_insertion_point(builder_scope:bloombox.services.shop.v1.EnrollMember.Response)
     }
 
-    // @@protoc_insertion_point(class_scope:bloombox.schema.services.shop.v1.EnrollMember.Response)
+    // @@protoc_insertion_point(class_scope:bloombox.services.shop.v1.EnrollMember.Response)
     private static final io.bloombox.schema.services.shop.v1.EnrollMember.Response DEFAULT_INSTANCE;
     static {
       DEFAULT_INSTANCE = new io.bloombox.schema.services.shop.v1.EnrollMember.Response();
@@ -3281,6 +3334,7 @@ private static final long serialVersionUID = 0L;
 
     private static final com.google.protobuf.Parser<Response>
         PARSER = new com.google.protobuf.AbstractParser<Response>() {
+      @java.lang.Override
       public Response parsePartialFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -3298,6 +3352,7 @@ private static final long serialVersionUID = 0L;
       return PARSER;
     }
 
+    @java.lang.Override
     public io.bloombox.schema.services.shop.v1.EnrollMember.Response getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
@@ -3305,7 +3360,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public interface OperationOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:bloombox.schema.services.shop.v1.EnrollMember.Operation)
+      // @@protoc_insertion_point(interface_extends:bloombox.services.shop.v1.EnrollMember.Operation)
       com.google.protobuf.MessageOrBuilder {
 
     /**
@@ -3313,7 +3368,7 @@ private static final long serialVersionUID = 0L;
      * Request for member enrollment.
      * </pre>
      *
-     * <code>.bloombox.schema.services.shop.v1.EnrollMember.Request request = 1;</code>
+     * <code>.bloombox.services.shop.v1.EnrollMember.Request request = 1;</code>
      */
     boolean hasRequest();
     /**
@@ -3321,7 +3376,7 @@ private static final long serialVersionUID = 0L;
      * Request for member enrollment.
      * </pre>
      *
-     * <code>.bloombox.schema.services.shop.v1.EnrollMember.Request request = 1;</code>
+     * <code>.bloombox.services.shop.v1.EnrollMember.Request request = 1;</code>
      */
     io.bloombox.schema.services.shop.v1.EnrollMember.Request getRequest();
     /**
@@ -3329,7 +3384,7 @@ private static final long serialVersionUID = 0L;
      * Request for member enrollment.
      * </pre>
      *
-     * <code>.bloombox.schema.services.shop.v1.EnrollMember.Request request = 1;</code>
+     * <code>.bloombox.services.shop.v1.EnrollMember.Request request = 1;</code>
      */
     io.bloombox.schema.services.shop.v1.EnrollMember.RequestOrBuilder getRequestOrBuilder();
 
@@ -3338,7 +3393,7 @@ private static final long serialVersionUID = 0L;
      * Response to a request for member enrollment.
      * </pre>
      *
-     * <code>.bloombox.schema.services.shop.v1.EnrollMember.Response response = 2;</code>
+     * <code>.bloombox.services.shop.v1.EnrollMember.Response response = 2;</code>
      */
     boolean hasResponse();
     /**
@@ -3346,7 +3401,7 @@ private static final long serialVersionUID = 0L;
      * Response to a request for member enrollment.
      * </pre>
      *
-     * <code>.bloombox.schema.services.shop.v1.EnrollMember.Response response = 2;</code>
+     * <code>.bloombox.services.shop.v1.EnrollMember.Response response = 2;</code>
      */
     io.bloombox.schema.services.shop.v1.EnrollMember.Response getResponse();
     /**
@@ -3354,16 +3409,16 @@ private static final long serialVersionUID = 0L;
      * Response to a request for member enrollment.
      * </pre>
      *
-     * <code>.bloombox.schema.services.shop.v1.EnrollMember.Response response = 2;</code>
+     * <code>.bloombox.services.shop.v1.EnrollMember.Response response = 2;</code>
      */
     io.bloombox.schema.services.shop.v1.EnrollMember.ResponseOrBuilder getResponseOrBuilder();
   }
   /**
-   * Protobuf type {@code bloombox.schema.services.shop.v1.EnrollMember.Operation}
+   * Protobuf type {@code bloombox.services.shop.v1.EnrollMember.Operation}
    */
   public  static final class Operation extends
       com.google.protobuf.GeneratedMessageV3 implements
-      // @@protoc_insertion_point(message_implements:bloombox.schema.services.shop.v1.EnrollMember.Operation)
+      // @@protoc_insertion_point(message_implements:bloombox.services.shop.v1.EnrollMember.Operation)
       OperationOrBuilder {
   private static final long serialVersionUID = 0L;
     // Use Operation.newBuilder() to construct.
@@ -3397,13 +3452,6 @@ private static final long serialVersionUID = 0L;
             case 0:
               done = true;
               break;
-            default: {
-              if (!parseUnknownFieldProto3(
-                  input, unknownFields, extensionRegistry, tag)) {
-                done = true;
-              }
-              break;
-            }
             case 10: {
               io.bloombox.schema.services.shop.v1.EnrollMember.Request.Builder subBuilder = null;
               if (request_ != null) {
@@ -3430,6 +3478,13 @@ private static final long serialVersionUID = 0L;
 
               break;
             }
+            default: {
+              if (!parseUnknownFieldProto3(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
           }
         }
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
@@ -3444,12 +3499,13 @@ private static final long serialVersionUID = 0L;
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return io.bloombox.schema.services.shop.v1.ShopServiceV1.internal_static_bloombox_schema_services_shop_v1_EnrollMember_Operation_descriptor;
+      return io.bloombox.schema.services.shop.v1.ShopServiceV1.internal_static_bloombox_services_shop_v1_EnrollMember_Operation_descriptor;
     }
 
+    @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return io.bloombox.schema.services.shop.v1.ShopServiceV1.internal_static_bloombox_schema_services_shop_v1_EnrollMember_Operation_fieldAccessorTable
+      return io.bloombox.schema.services.shop.v1.ShopServiceV1.internal_static_bloombox_services_shop_v1_EnrollMember_Operation_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
               io.bloombox.schema.services.shop.v1.EnrollMember.Operation.class, io.bloombox.schema.services.shop.v1.EnrollMember.Operation.Builder.class);
     }
@@ -3461,7 +3517,7 @@ private static final long serialVersionUID = 0L;
      * Request for member enrollment.
      * </pre>
      *
-     * <code>.bloombox.schema.services.shop.v1.EnrollMember.Request request = 1;</code>
+     * <code>.bloombox.services.shop.v1.EnrollMember.Request request = 1;</code>
      */
     public boolean hasRequest() {
       return request_ != null;
@@ -3471,7 +3527,7 @@ private static final long serialVersionUID = 0L;
      * Request for member enrollment.
      * </pre>
      *
-     * <code>.bloombox.schema.services.shop.v1.EnrollMember.Request request = 1;</code>
+     * <code>.bloombox.services.shop.v1.EnrollMember.Request request = 1;</code>
      */
     public io.bloombox.schema.services.shop.v1.EnrollMember.Request getRequest() {
       return request_ == null ? io.bloombox.schema.services.shop.v1.EnrollMember.Request.getDefaultInstance() : request_;
@@ -3481,7 +3537,7 @@ private static final long serialVersionUID = 0L;
      * Request for member enrollment.
      * </pre>
      *
-     * <code>.bloombox.schema.services.shop.v1.EnrollMember.Request request = 1;</code>
+     * <code>.bloombox.services.shop.v1.EnrollMember.Request request = 1;</code>
      */
     public io.bloombox.schema.services.shop.v1.EnrollMember.RequestOrBuilder getRequestOrBuilder() {
       return getRequest();
@@ -3494,7 +3550,7 @@ private static final long serialVersionUID = 0L;
      * Response to a request for member enrollment.
      * </pre>
      *
-     * <code>.bloombox.schema.services.shop.v1.EnrollMember.Response response = 2;</code>
+     * <code>.bloombox.services.shop.v1.EnrollMember.Response response = 2;</code>
      */
     public boolean hasResponse() {
       return response_ != null;
@@ -3504,7 +3560,7 @@ private static final long serialVersionUID = 0L;
      * Response to a request for member enrollment.
      * </pre>
      *
-     * <code>.bloombox.schema.services.shop.v1.EnrollMember.Response response = 2;</code>
+     * <code>.bloombox.services.shop.v1.EnrollMember.Response response = 2;</code>
      */
     public io.bloombox.schema.services.shop.v1.EnrollMember.Response getResponse() {
       return response_ == null ? io.bloombox.schema.services.shop.v1.EnrollMember.Response.getDefaultInstance() : response_;
@@ -3514,13 +3570,14 @@ private static final long serialVersionUID = 0L;
      * Response to a request for member enrollment.
      * </pre>
      *
-     * <code>.bloombox.schema.services.shop.v1.EnrollMember.Response response = 2;</code>
+     * <code>.bloombox.services.shop.v1.EnrollMember.Response response = 2;</code>
      */
     public io.bloombox.schema.services.shop.v1.EnrollMember.ResponseOrBuilder getResponseOrBuilder() {
       return getResponse();
     }
 
     private byte memoizedIsInitialized = -1;
+    @java.lang.Override
     public final boolean isInitialized() {
       byte isInitialized = memoizedIsInitialized;
       if (isInitialized == 1) return true;
@@ -3530,6 +3587,7 @@ private static final long serialVersionUID = 0L;
       return true;
     }
 
+    @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
       if (request_ != null) {
@@ -3541,6 +3599,7 @@ private static final long serialVersionUID = 0L;
       unknownFields.writeTo(output);
     }
 
+    @java.lang.Override
     public int getSerializedSize() {
       int size = memoizedSize;
       if (size != -1) return size;
@@ -3674,6 +3733,7 @@ private static final long serialVersionUID = 0L;
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
 
+    @java.lang.Override
     public Builder newBuilderForType() { return newBuilder(); }
     public static Builder newBuilder() {
       return DEFAULT_INSTANCE.toBuilder();
@@ -3681,6 +3741,7 @@ private static final long serialVersionUID = 0L;
     public static Builder newBuilder(io.bloombox.schema.services.shop.v1.EnrollMember.Operation prototype) {
       return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
     }
+    @java.lang.Override
     public Builder toBuilder() {
       return this == DEFAULT_INSTANCE
           ? new Builder() : new Builder().mergeFrom(this);
@@ -3693,20 +3754,21 @@ private static final long serialVersionUID = 0L;
       return builder;
     }
     /**
-     * Protobuf type {@code bloombox.schema.services.shop.v1.EnrollMember.Operation}
+     * Protobuf type {@code bloombox.services.shop.v1.EnrollMember.Operation}
      */
     public static final class Builder extends
         com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:bloombox.schema.services.shop.v1.EnrollMember.Operation)
+        // @@protoc_insertion_point(builder_implements:bloombox.services.shop.v1.EnrollMember.Operation)
         io.bloombox.schema.services.shop.v1.EnrollMember.OperationOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return io.bloombox.schema.services.shop.v1.ShopServiceV1.internal_static_bloombox_schema_services_shop_v1_EnrollMember_Operation_descriptor;
+        return io.bloombox.schema.services.shop.v1.ShopServiceV1.internal_static_bloombox_services_shop_v1_EnrollMember_Operation_descriptor;
       }
 
+      @java.lang.Override
       protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return io.bloombox.schema.services.shop.v1.ShopServiceV1.internal_static_bloombox_schema_services_shop_v1_EnrollMember_Operation_fieldAccessorTable
+        return io.bloombox.schema.services.shop.v1.ShopServiceV1.internal_static_bloombox_services_shop_v1_EnrollMember_Operation_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
                 io.bloombox.schema.services.shop.v1.EnrollMember.Operation.class, io.bloombox.schema.services.shop.v1.EnrollMember.Operation.Builder.class);
       }
@@ -3726,6 +3788,7 @@ private static final long serialVersionUID = 0L;
                 .alwaysUseFieldBuilders) {
         }
       }
+      @java.lang.Override
       public Builder clear() {
         super.clear();
         if (requestBuilder_ == null) {
@@ -3743,15 +3806,18 @@ private static final long serialVersionUID = 0L;
         return this;
       }
 
+      @java.lang.Override
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return io.bloombox.schema.services.shop.v1.ShopServiceV1.internal_static_bloombox_schema_services_shop_v1_EnrollMember_Operation_descriptor;
+        return io.bloombox.schema.services.shop.v1.ShopServiceV1.internal_static_bloombox_services_shop_v1_EnrollMember_Operation_descriptor;
       }
 
+      @java.lang.Override
       public io.bloombox.schema.services.shop.v1.EnrollMember.Operation getDefaultInstanceForType() {
         return io.bloombox.schema.services.shop.v1.EnrollMember.Operation.getDefaultInstance();
       }
 
+      @java.lang.Override
       public io.bloombox.schema.services.shop.v1.EnrollMember.Operation build() {
         io.bloombox.schema.services.shop.v1.EnrollMember.Operation result = buildPartial();
         if (!result.isInitialized()) {
@@ -3760,6 +3826,7 @@ private static final long serialVersionUID = 0L;
         return result;
       }
 
+      @java.lang.Override
       public io.bloombox.schema.services.shop.v1.EnrollMember.Operation buildPartial() {
         io.bloombox.schema.services.shop.v1.EnrollMember.Operation result = new io.bloombox.schema.services.shop.v1.EnrollMember.Operation(this);
         if (requestBuilder_ == null) {
@@ -3776,32 +3843,39 @@ private static final long serialVersionUID = 0L;
         return result;
       }
 
+      @java.lang.Override
       public Builder clone() {
         return (Builder) super.clone();
       }
+      @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
         return (Builder) super.setField(field, value);
       }
+      @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
         return (Builder) super.clearField(field);
       }
+      @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
         return (Builder) super.clearOneof(oneof);
       }
+      @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
         return (Builder) super.setRepeatedField(field, index, value);
       }
+      @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
         return (Builder) super.addRepeatedField(field, value);
       }
+      @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
         if (other instanceof io.bloombox.schema.services.shop.v1.EnrollMember.Operation) {
           return mergeFrom((io.bloombox.schema.services.shop.v1.EnrollMember.Operation)other);
@@ -3824,10 +3898,12 @@ private static final long serialVersionUID = 0L;
         return this;
       }
 
+      @java.lang.Override
       public final boolean isInitialized() {
         return true;
       }
 
+      @java.lang.Override
       public Builder mergeFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -3854,7 +3930,7 @@ private static final long serialVersionUID = 0L;
        * Request for member enrollment.
        * </pre>
        *
-       * <code>.bloombox.schema.services.shop.v1.EnrollMember.Request request = 1;</code>
+       * <code>.bloombox.services.shop.v1.EnrollMember.Request request = 1;</code>
        */
       public boolean hasRequest() {
         return requestBuilder_ != null || request_ != null;
@@ -3864,7 +3940,7 @@ private static final long serialVersionUID = 0L;
        * Request for member enrollment.
        * </pre>
        *
-       * <code>.bloombox.schema.services.shop.v1.EnrollMember.Request request = 1;</code>
+       * <code>.bloombox.services.shop.v1.EnrollMember.Request request = 1;</code>
        */
       public io.bloombox.schema.services.shop.v1.EnrollMember.Request getRequest() {
         if (requestBuilder_ == null) {
@@ -3878,7 +3954,7 @@ private static final long serialVersionUID = 0L;
        * Request for member enrollment.
        * </pre>
        *
-       * <code>.bloombox.schema.services.shop.v1.EnrollMember.Request request = 1;</code>
+       * <code>.bloombox.services.shop.v1.EnrollMember.Request request = 1;</code>
        */
       public Builder setRequest(io.bloombox.schema.services.shop.v1.EnrollMember.Request value) {
         if (requestBuilder_ == null) {
@@ -3898,7 +3974,7 @@ private static final long serialVersionUID = 0L;
        * Request for member enrollment.
        * </pre>
        *
-       * <code>.bloombox.schema.services.shop.v1.EnrollMember.Request request = 1;</code>
+       * <code>.bloombox.services.shop.v1.EnrollMember.Request request = 1;</code>
        */
       public Builder setRequest(
           io.bloombox.schema.services.shop.v1.EnrollMember.Request.Builder builderForValue) {
@@ -3916,7 +3992,7 @@ private static final long serialVersionUID = 0L;
        * Request for member enrollment.
        * </pre>
        *
-       * <code>.bloombox.schema.services.shop.v1.EnrollMember.Request request = 1;</code>
+       * <code>.bloombox.services.shop.v1.EnrollMember.Request request = 1;</code>
        */
       public Builder mergeRequest(io.bloombox.schema.services.shop.v1.EnrollMember.Request value) {
         if (requestBuilder_ == null) {
@@ -3938,7 +4014,7 @@ private static final long serialVersionUID = 0L;
        * Request for member enrollment.
        * </pre>
        *
-       * <code>.bloombox.schema.services.shop.v1.EnrollMember.Request request = 1;</code>
+       * <code>.bloombox.services.shop.v1.EnrollMember.Request request = 1;</code>
        */
       public Builder clearRequest() {
         if (requestBuilder_ == null) {
@@ -3956,7 +4032,7 @@ private static final long serialVersionUID = 0L;
        * Request for member enrollment.
        * </pre>
        *
-       * <code>.bloombox.schema.services.shop.v1.EnrollMember.Request request = 1;</code>
+       * <code>.bloombox.services.shop.v1.EnrollMember.Request request = 1;</code>
        */
       public io.bloombox.schema.services.shop.v1.EnrollMember.Request.Builder getRequestBuilder() {
         
@@ -3968,7 +4044,7 @@ private static final long serialVersionUID = 0L;
        * Request for member enrollment.
        * </pre>
        *
-       * <code>.bloombox.schema.services.shop.v1.EnrollMember.Request request = 1;</code>
+       * <code>.bloombox.services.shop.v1.EnrollMember.Request request = 1;</code>
        */
       public io.bloombox.schema.services.shop.v1.EnrollMember.RequestOrBuilder getRequestOrBuilder() {
         if (requestBuilder_ != null) {
@@ -3983,7 +4059,7 @@ private static final long serialVersionUID = 0L;
        * Request for member enrollment.
        * </pre>
        *
-       * <code>.bloombox.schema.services.shop.v1.EnrollMember.Request request = 1;</code>
+       * <code>.bloombox.services.shop.v1.EnrollMember.Request request = 1;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
           io.bloombox.schema.services.shop.v1.EnrollMember.Request, io.bloombox.schema.services.shop.v1.EnrollMember.Request.Builder, io.bloombox.schema.services.shop.v1.EnrollMember.RequestOrBuilder> 
@@ -4007,7 +4083,7 @@ private static final long serialVersionUID = 0L;
        * Response to a request for member enrollment.
        * </pre>
        *
-       * <code>.bloombox.schema.services.shop.v1.EnrollMember.Response response = 2;</code>
+       * <code>.bloombox.services.shop.v1.EnrollMember.Response response = 2;</code>
        */
       public boolean hasResponse() {
         return responseBuilder_ != null || response_ != null;
@@ -4017,7 +4093,7 @@ private static final long serialVersionUID = 0L;
        * Response to a request for member enrollment.
        * </pre>
        *
-       * <code>.bloombox.schema.services.shop.v1.EnrollMember.Response response = 2;</code>
+       * <code>.bloombox.services.shop.v1.EnrollMember.Response response = 2;</code>
        */
       public io.bloombox.schema.services.shop.v1.EnrollMember.Response getResponse() {
         if (responseBuilder_ == null) {
@@ -4031,7 +4107,7 @@ private static final long serialVersionUID = 0L;
        * Response to a request for member enrollment.
        * </pre>
        *
-       * <code>.bloombox.schema.services.shop.v1.EnrollMember.Response response = 2;</code>
+       * <code>.bloombox.services.shop.v1.EnrollMember.Response response = 2;</code>
        */
       public Builder setResponse(io.bloombox.schema.services.shop.v1.EnrollMember.Response value) {
         if (responseBuilder_ == null) {
@@ -4051,7 +4127,7 @@ private static final long serialVersionUID = 0L;
        * Response to a request for member enrollment.
        * </pre>
        *
-       * <code>.bloombox.schema.services.shop.v1.EnrollMember.Response response = 2;</code>
+       * <code>.bloombox.services.shop.v1.EnrollMember.Response response = 2;</code>
        */
       public Builder setResponse(
           io.bloombox.schema.services.shop.v1.EnrollMember.Response.Builder builderForValue) {
@@ -4069,7 +4145,7 @@ private static final long serialVersionUID = 0L;
        * Response to a request for member enrollment.
        * </pre>
        *
-       * <code>.bloombox.schema.services.shop.v1.EnrollMember.Response response = 2;</code>
+       * <code>.bloombox.services.shop.v1.EnrollMember.Response response = 2;</code>
        */
       public Builder mergeResponse(io.bloombox.schema.services.shop.v1.EnrollMember.Response value) {
         if (responseBuilder_ == null) {
@@ -4091,7 +4167,7 @@ private static final long serialVersionUID = 0L;
        * Response to a request for member enrollment.
        * </pre>
        *
-       * <code>.bloombox.schema.services.shop.v1.EnrollMember.Response response = 2;</code>
+       * <code>.bloombox.services.shop.v1.EnrollMember.Response response = 2;</code>
        */
       public Builder clearResponse() {
         if (responseBuilder_ == null) {
@@ -4109,7 +4185,7 @@ private static final long serialVersionUID = 0L;
        * Response to a request for member enrollment.
        * </pre>
        *
-       * <code>.bloombox.schema.services.shop.v1.EnrollMember.Response response = 2;</code>
+       * <code>.bloombox.services.shop.v1.EnrollMember.Response response = 2;</code>
        */
       public io.bloombox.schema.services.shop.v1.EnrollMember.Response.Builder getResponseBuilder() {
         
@@ -4121,7 +4197,7 @@ private static final long serialVersionUID = 0L;
        * Response to a request for member enrollment.
        * </pre>
        *
-       * <code>.bloombox.schema.services.shop.v1.EnrollMember.Response response = 2;</code>
+       * <code>.bloombox.services.shop.v1.EnrollMember.Response response = 2;</code>
        */
       public io.bloombox.schema.services.shop.v1.EnrollMember.ResponseOrBuilder getResponseOrBuilder() {
         if (responseBuilder_ != null) {
@@ -4136,7 +4212,7 @@ private static final long serialVersionUID = 0L;
        * Response to a request for member enrollment.
        * </pre>
        *
-       * <code>.bloombox.schema.services.shop.v1.EnrollMember.Response response = 2;</code>
+       * <code>.bloombox.services.shop.v1.EnrollMember.Response response = 2;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
           io.bloombox.schema.services.shop.v1.EnrollMember.Response, io.bloombox.schema.services.shop.v1.EnrollMember.Response.Builder, io.bloombox.schema.services.shop.v1.EnrollMember.ResponseOrBuilder> 
@@ -4151,21 +4227,23 @@ private static final long serialVersionUID = 0L;
         }
         return responseBuilder_;
       }
+      @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
         return super.setUnknownFieldsProto3(unknownFields);
       }
 
+      @java.lang.Override
       public final Builder mergeUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
         return super.mergeUnknownFields(unknownFields);
       }
 
 
-      // @@protoc_insertion_point(builder_scope:bloombox.schema.services.shop.v1.EnrollMember.Operation)
+      // @@protoc_insertion_point(builder_scope:bloombox.services.shop.v1.EnrollMember.Operation)
     }
 
-    // @@protoc_insertion_point(class_scope:bloombox.schema.services.shop.v1.EnrollMember.Operation)
+    // @@protoc_insertion_point(class_scope:bloombox.services.shop.v1.EnrollMember.Operation)
     private static final io.bloombox.schema.services.shop.v1.EnrollMember.Operation DEFAULT_INSTANCE;
     static {
       DEFAULT_INSTANCE = new io.bloombox.schema.services.shop.v1.EnrollMember.Operation();
@@ -4177,6 +4255,7 @@ private static final long serialVersionUID = 0L;
 
     private static final com.google.protobuf.Parser<Operation>
         PARSER = new com.google.protobuf.AbstractParser<Operation>() {
+      @java.lang.Override
       public Operation parsePartialFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -4194,6 +4273,7 @@ private static final long serialVersionUID = 0L;
       return PARSER;
     }
 
+    @java.lang.Override
     public io.bloombox.schema.services.shop.v1.EnrollMember.Operation getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
@@ -4201,6 +4281,7 @@ private static final long serialVersionUID = 0L;
   }
 
   private byte memoizedIsInitialized = -1;
+  @java.lang.Override
   public final boolean isInitialized() {
     byte isInitialized = memoizedIsInitialized;
     if (isInitialized == 1) return true;
@@ -4210,11 +4291,13 @@ private static final long serialVersionUID = 0L;
     return true;
   }
 
+  @java.lang.Override
   public void writeTo(com.google.protobuf.CodedOutputStream output)
                       throws java.io.IOException {
     unknownFields.writeTo(output);
   }
 
+  @java.lang.Override
   public int getSerializedSize() {
     int size = memoizedSize;
     if (size != -1) return size;
@@ -4322,6 +4405,7 @@ private static final long serialVersionUID = 0L;
         .parseWithIOException(PARSER, input, extensionRegistry);
   }
 
+  @java.lang.Override
   public Builder newBuilderForType() { return newBuilder(); }
   public static Builder newBuilder() {
     return DEFAULT_INSTANCE.toBuilder();
@@ -4329,6 +4413,7 @@ private static final long serialVersionUID = 0L;
   public static Builder newBuilder(io.bloombox.schema.services.shop.v1.EnrollMember prototype) {
     return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
   }
+  @java.lang.Override
   public Builder toBuilder() {
     return this == DEFAULT_INSTANCE
         ? new Builder() : new Builder().mergeFrom(this);
@@ -4345,20 +4430,21 @@ private static final long serialVersionUID = 0L;
    * Specifies an RPC operation to enroll/onboard a new user as a member of a retail dispensary.
    * </pre>
    *
-   * Protobuf type {@code bloombox.schema.services.shop.v1.EnrollMember}
+   * Protobuf type {@code bloombox.services.shop.v1.EnrollMember}
    */
   public static final class Builder extends
       com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-      // @@protoc_insertion_point(builder_implements:bloombox.schema.services.shop.v1.EnrollMember)
+      // @@protoc_insertion_point(builder_implements:bloombox.services.shop.v1.EnrollMember)
       io.bloombox.schema.services.shop.v1.EnrollMemberOrBuilder {
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return io.bloombox.schema.services.shop.v1.ShopServiceV1.internal_static_bloombox_schema_services_shop_v1_EnrollMember_descriptor;
+      return io.bloombox.schema.services.shop.v1.ShopServiceV1.internal_static_bloombox_services_shop_v1_EnrollMember_descriptor;
     }
 
+    @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return io.bloombox.schema.services.shop.v1.ShopServiceV1.internal_static_bloombox_schema_services_shop_v1_EnrollMember_fieldAccessorTable
+      return io.bloombox.schema.services.shop.v1.ShopServiceV1.internal_static_bloombox_services_shop_v1_EnrollMember_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
               io.bloombox.schema.services.shop.v1.EnrollMember.class, io.bloombox.schema.services.shop.v1.EnrollMember.Builder.class);
     }
@@ -4378,20 +4464,24 @@ private static final long serialVersionUID = 0L;
               .alwaysUseFieldBuilders) {
       }
     }
+    @java.lang.Override
     public Builder clear() {
       super.clear();
       return this;
     }
 
+    @java.lang.Override
     public com.google.protobuf.Descriptors.Descriptor
         getDescriptorForType() {
-      return io.bloombox.schema.services.shop.v1.ShopServiceV1.internal_static_bloombox_schema_services_shop_v1_EnrollMember_descriptor;
+      return io.bloombox.schema.services.shop.v1.ShopServiceV1.internal_static_bloombox_services_shop_v1_EnrollMember_descriptor;
     }
 
+    @java.lang.Override
     public io.bloombox.schema.services.shop.v1.EnrollMember getDefaultInstanceForType() {
       return io.bloombox.schema.services.shop.v1.EnrollMember.getDefaultInstance();
     }
 
+    @java.lang.Override
     public io.bloombox.schema.services.shop.v1.EnrollMember build() {
       io.bloombox.schema.services.shop.v1.EnrollMember result = buildPartial();
       if (!result.isInitialized()) {
@@ -4400,38 +4490,46 @@ private static final long serialVersionUID = 0L;
       return result;
     }
 
+    @java.lang.Override
     public io.bloombox.schema.services.shop.v1.EnrollMember buildPartial() {
       io.bloombox.schema.services.shop.v1.EnrollMember result = new io.bloombox.schema.services.shop.v1.EnrollMember(this);
       onBuilt();
       return result;
     }
 
+    @java.lang.Override
     public Builder clone() {
       return (Builder) super.clone();
     }
+    @java.lang.Override
     public Builder setField(
         com.google.protobuf.Descriptors.FieldDescriptor field,
         java.lang.Object value) {
       return (Builder) super.setField(field, value);
     }
+    @java.lang.Override
     public Builder clearField(
         com.google.protobuf.Descriptors.FieldDescriptor field) {
       return (Builder) super.clearField(field);
     }
+    @java.lang.Override
     public Builder clearOneof(
         com.google.protobuf.Descriptors.OneofDescriptor oneof) {
       return (Builder) super.clearOneof(oneof);
     }
+    @java.lang.Override
     public Builder setRepeatedField(
         com.google.protobuf.Descriptors.FieldDescriptor field,
         int index, java.lang.Object value) {
       return (Builder) super.setRepeatedField(field, index, value);
     }
+    @java.lang.Override
     public Builder addRepeatedField(
         com.google.protobuf.Descriptors.FieldDescriptor field,
         java.lang.Object value) {
       return (Builder) super.addRepeatedField(field, value);
     }
+    @java.lang.Override
     public Builder mergeFrom(com.google.protobuf.Message other) {
       if (other instanceof io.bloombox.schema.services.shop.v1.EnrollMember) {
         return mergeFrom((io.bloombox.schema.services.shop.v1.EnrollMember)other);
@@ -4448,10 +4546,12 @@ private static final long serialVersionUID = 0L;
       return this;
     }
 
+    @java.lang.Override
     public final boolean isInitialized() {
       return true;
     }
 
+    @java.lang.Override
     public Builder mergeFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -4469,21 +4569,23 @@ private static final long serialVersionUID = 0L;
       }
       return this;
     }
+    @java.lang.Override
     public final Builder setUnknownFields(
         final com.google.protobuf.UnknownFieldSet unknownFields) {
       return super.setUnknownFieldsProto3(unknownFields);
     }
 
+    @java.lang.Override
     public final Builder mergeUnknownFields(
         final com.google.protobuf.UnknownFieldSet unknownFields) {
       return super.mergeUnknownFields(unknownFields);
     }
 
 
-    // @@protoc_insertion_point(builder_scope:bloombox.schema.services.shop.v1.EnrollMember)
+    // @@protoc_insertion_point(builder_scope:bloombox.services.shop.v1.EnrollMember)
   }
 
-  // @@protoc_insertion_point(class_scope:bloombox.schema.services.shop.v1.EnrollMember)
+  // @@protoc_insertion_point(class_scope:bloombox.services.shop.v1.EnrollMember)
   private static final io.bloombox.schema.services.shop.v1.EnrollMember DEFAULT_INSTANCE;
   static {
     DEFAULT_INSTANCE = new io.bloombox.schema.services.shop.v1.EnrollMember();
@@ -4495,6 +4597,7 @@ private static final long serialVersionUID = 0L;
 
   private static final com.google.protobuf.Parser<EnrollMember>
       PARSER = new com.google.protobuf.AbstractParser<EnrollMember>() {
+    @java.lang.Override
     public EnrollMember parsePartialFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -4512,6 +4615,7 @@ private static final long serialVersionUID = 0L;
     return PARSER;
   }
 
+  @java.lang.Override
   public io.bloombox.schema.services.shop.v1.EnrollMember getDefaultInstanceForType() {
     return DEFAULT_INSTANCE;
   }

@@ -1,11 +1,12 @@
 /*
- * Copyright 2018, Bloombox, LLC.
+ * Copyright 2018, Momentum Ideas, Co. All rights reserved.
  *
- * Licensed under the Apache License, Version 2.0 (the "License");
- * you may not use this file except in compliance with the License.
- * You may obtain a copy of the License at
- *
- *     http://www.apache.org/licenses/LICENSE-2.0
+ * Source and object computer code contained herein is the private intellectual
+ * property of Momentum Ideas Co., a Delaware Corporation. Use of this
+ * code in source form requires permission in writing before use or the
+ * assembly, distribution, or publishing of derivative works, for commercial
+ * purposes or any other purpose, from a duly authorized officer of Momentum
+ * Ideas Co.
  *
  * Unless required by applicable law or agreed to in writing, software
  * distributed under the License is distributed on an "AS IS" BASIS,
@@ -46,16 +47,48 @@ public interface PointOrBuilder extends
    * Elevation of this point, if any.
    * </pre>
    *
-   * <code>double elevation = 3 [(.gen_bq_schema.description) = "Elevation of this point, if any."];</code>
+   * <code>.opencannabis.geo.Distance elevation = 3 [(.gen_bq_schema.description) = "Elevation of this point, if any."];</code>
    */
-  double getElevation();
+  boolean hasElevation();
+  /**
+   * <pre>
+   * Elevation of this point, if any.
+   * </pre>
+   *
+   * <code>.opencannabis.geo.Distance elevation = 3 [(.gen_bq_schema.description) = "Elevation of this point, if any."];</code>
+   */
+  io.opencannabis.schema.geo.Distance getElevation();
+  /**
+   * <pre>
+   * Elevation of this point, if any.
+   * </pre>
+   *
+   * <code>.opencannabis.geo.Distance elevation = 3 [(.gen_bq_schema.description) = "Elevation of this point, if any."];</code>
+   */
+  io.opencannabis.schema.geo.DistanceOrBuilder getElevationOrBuilder();
 
   /**
    * <pre>
    * Accuracy rating attached to this point, if any.
    * </pre>
    *
-   * <code>double accuracy = 4 [(.gen_bq_schema.description) = "Accuracy rating attached to this point, if any."];</code>
+   * <code>.opencannabis.geo.Distance accuracy = 4 [(.gen_bq_schema.description) = "Accuracy rating attached to this point, if any."];</code>
    */
-  double getAccuracy();
+  boolean hasAccuracy();
+  /**
+   * <pre>
+   * Accuracy rating attached to this point, if any.
+   * </pre>
+   *
+   * <code>.opencannabis.geo.Distance accuracy = 4 [(.gen_bq_schema.description) = "Accuracy rating attached to this point, if any."];</code>
+   */
+  io.opencannabis.schema.geo.Distance getAccuracy();
+  /**
+   * <pre>
+   * Accuracy rating attached to this point, if any.
+   * </pre>
+   *
+   * <code>.opencannabis.geo.Distance accuracy = 4 [(.gen_bq_schema.description) = "Accuracy rating attached to this point, if any."];</code>
+   */
+  io.opencannabis.schema.geo.DistanceOrBuilder getAccuracyOrBuilder();
 }

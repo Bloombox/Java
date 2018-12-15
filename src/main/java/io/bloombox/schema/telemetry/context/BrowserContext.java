@@ -1,8 +1,8 @@
 /*
- * Copyright 2018, Bloombox, LLC. All rights reserved.
+ * Copyright 2018, Momentum Ideas, Co. All rights reserved.
  *
  * Source and object computer code contained herein is the private intellectual
- * property of Bloombox, a California Limited Liability Corporation. Use of this
+ * property of Momentum Ideas Co., a Delaware Corporation. Use of this
  * code in source form requires permission in writing before use or the
  * assembly, distribution, or publishing of derivative works, for commercial
  * purposes or any other purpose, from a duly authorized officer of Momentum
@@ -36,7 +36,7 @@ public final class BrowserContext {
    * Specifies types of browsers or known browser engines.
    * </pre>
    *
-   * Protobuf enum {@code bloombox.schema.analytics.context.BrowserType}
+   * Protobuf enum {@code bloombox.analytics.context.BrowserType}
    */
   public enum BrowserType
       implements com.google.protobuf.ProtocolMessageEnum {
@@ -214,11 +214,11 @@ public final class BrowserContext {
       this.value = value;
     }
 
-    // @@protoc_insertion_point(enum_scope:bloombox.schema.analytics.context.BrowserType)
+    // @@protoc_insertion_point(enum_scope:bloombox.analytics.context.BrowserType)
   }
 
   public interface BrowserDeviceContextOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:bloombox.schema.analytics.context.BrowserDeviceContext)
+      // @@protoc_insertion_point(interface_extends:bloombox.analytics.context.BrowserDeviceContext)
       com.google.protobuf.MessageOrBuilder {
 
     /**
@@ -226,7 +226,7 @@ public final class BrowserContext {
      * Specifies the general browser type.
      * </pre>
      *
-     * <code>.bloombox.schema.analytics.context.BrowserType browser_type = 1 [(.gen_bq_schema.require) = true, (.gen_bq_schema.description) = "Specifies the general browser type."];</code>
+     * <code>.bloombox.analytics.context.BrowserType browser_type = 1 [(.gen_bq_schema.require) = true, (.gen_bq_schema.description) = "Specifies the general browser type."];</code>
      */
     int getBrowserTypeValue();
     /**
@@ -234,7 +234,7 @@ public final class BrowserContext {
      * Specifies the general browser type.
      * </pre>
      *
-     * <code>.bloombox.schema.analytics.context.BrowserType browser_type = 1 [(.gen_bq_schema.require) = true, (.gen_bq_schema.description) = "Specifies the general browser type."];</code>
+     * <code>.bloombox.analytics.context.BrowserType browser_type = 1 [(.gen_bq_schema.require) = true, (.gen_bq_schema.description) = "Specifies the general browser type."];</code>
      */
     io.bloombox.schema.telemetry.context.BrowserContext.BrowserType getBrowserType();
 
@@ -331,11 +331,11 @@ public final class BrowserContext {
    * Specifies a structure describing JavaScript code running in a web browser of some kind.
    * </pre>
    *
-   * Protobuf type {@code bloombox.schema.analytics.context.BrowserDeviceContext}
+   * Protobuf type {@code bloombox.analytics.context.BrowserDeviceContext}
    */
   public  static final class BrowserDeviceContext extends
       com.google.protobuf.GeneratedMessageV3 implements
-      // @@protoc_insertion_point(message_implements:bloombox.schema.analytics.context.BrowserDeviceContext)
+      // @@protoc_insertion_point(message_implements:bloombox.analytics.context.BrowserDeviceContext)
       BrowserDeviceContextOrBuilder {
   private static final long serialVersionUID = 0L;
     // Use BrowserDeviceContext.newBuilder() to construct.
@@ -375,13 +375,6 @@ public final class BrowserContext {
             case 0:
               done = true;
               break;
-            default: {
-              if (!parseUnknownFieldProto3(
-                  input, unknownFields, extensionRegistry, tag)) {
-                done = true;
-              }
-              break;
-            }
             case 8: {
               int rawValue = input.readEnum();
 
@@ -428,6 +421,13 @@ public final class BrowserContext {
               colorDepth_ = input.readUInt32();
               break;
             }
+            default: {
+              if (!parseUnknownFieldProto3(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
           }
         }
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
@@ -442,12 +442,13 @@ public final class BrowserContext {
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return io.bloombox.schema.telemetry.context.BrowserContext.internal_static_bloombox_schema_analytics_context_BrowserDeviceContext_descriptor;
+      return io.bloombox.schema.telemetry.context.BrowserContext.internal_static_bloombox_analytics_context_BrowserDeviceContext_descriptor;
     }
 
+    @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return io.bloombox.schema.telemetry.context.BrowserContext.internal_static_bloombox_schema_analytics_context_BrowserDeviceContext_fieldAccessorTable
+      return io.bloombox.schema.telemetry.context.BrowserContext.internal_static_bloombox_analytics_context_BrowserDeviceContext_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
               io.bloombox.schema.telemetry.context.BrowserContext.BrowserDeviceContext.class, io.bloombox.schema.telemetry.context.BrowserContext.BrowserDeviceContext.Builder.class);
     }
@@ -459,7 +460,7 @@ public final class BrowserContext {
      * Specifies the general browser type.
      * </pre>
      *
-     * <code>.bloombox.schema.analytics.context.BrowserType browser_type = 1 [(.gen_bq_schema.require) = true, (.gen_bq_schema.description) = "Specifies the general browser type."];</code>
+     * <code>.bloombox.analytics.context.BrowserType browser_type = 1 [(.gen_bq_schema.require) = true, (.gen_bq_schema.description) = "Specifies the general browser type."];</code>
      */
     public int getBrowserTypeValue() {
       return browserType_;
@@ -469,9 +470,10 @@ public final class BrowserContext {
      * Specifies the general browser type.
      * </pre>
      *
-     * <code>.bloombox.schema.analytics.context.BrowserType browser_type = 1 [(.gen_bq_schema.require) = true, (.gen_bq_schema.description) = "Specifies the general browser type."];</code>
+     * <code>.bloombox.analytics.context.BrowserType browser_type = 1 [(.gen_bq_schema.require) = true, (.gen_bq_schema.description) = "Specifies the general browser type."];</code>
      */
     public io.bloombox.schema.telemetry.context.BrowserContext.BrowserType getBrowserType() {
+      @SuppressWarnings("deprecation")
       io.bloombox.schema.telemetry.context.BrowserContext.BrowserType result = io.bloombox.schema.telemetry.context.BrowserContext.BrowserType.valueOf(browserType_);
       return result == null ? io.bloombox.schema.telemetry.context.BrowserContext.BrowserType.UNRECOGNIZED : result;
     }
@@ -633,6 +635,7 @@ public final class BrowserContext {
     }
 
     private byte memoizedIsInitialized = -1;
+    @java.lang.Override
     public final boolean isInitialized() {
       byte isInitialized = memoizedIsInitialized;
       if (isInitialized == 1) return true;
@@ -642,6 +645,7 @@ public final class BrowserContext {
       return true;
     }
 
+    @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
       if (browserType_ != io.bloombox.schema.telemetry.context.BrowserContext.BrowserType.BROWSER_UNKNOWN.getNumber()) {
@@ -668,6 +672,7 @@ public final class BrowserContext {
       unknownFields.writeTo(output);
     }
 
+    @java.lang.Override
     public int getSerializedSize() {
       int size = memoizedSize;
       if (size != -1) return size;
@@ -833,6 +838,7 @@ public final class BrowserContext {
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
 
+    @java.lang.Override
     public Builder newBuilderForType() { return newBuilder(); }
     public static Builder newBuilder() {
       return DEFAULT_INSTANCE.toBuilder();
@@ -840,6 +846,7 @@ public final class BrowserContext {
     public static Builder newBuilder(io.bloombox.schema.telemetry.context.BrowserContext.BrowserDeviceContext prototype) {
       return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
     }
+    @java.lang.Override
     public Builder toBuilder() {
       return this == DEFAULT_INSTANCE
           ? new Builder() : new Builder().mergeFrom(this);
@@ -856,20 +863,21 @@ public final class BrowserContext {
      * Specifies a structure describing JavaScript code running in a web browser of some kind.
      * </pre>
      *
-     * Protobuf type {@code bloombox.schema.analytics.context.BrowserDeviceContext}
+     * Protobuf type {@code bloombox.analytics.context.BrowserDeviceContext}
      */
     public static final class Builder extends
         com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:bloombox.schema.analytics.context.BrowserDeviceContext)
+        // @@protoc_insertion_point(builder_implements:bloombox.analytics.context.BrowserDeviceContext)
         io.bloombox.schema.telemetry.context.BrowserContext.BrowserDeviceContextOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return io.bloombox.schema.telemetry.context.BrowserContext.internal_static_bloombox_schema_analytics_context_BrowserDeviceContext_descriptor;
+        return io.bloombox.schema.telemetry.context.BrowserContext.internal_static_bloombox_analytics_context_BrowserDeviceContext_descriptor;
       }
 
+      @java.lang.Override
       protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return io.bloombox.schema.telemetry.context.BrowserContext.internal_static_bloombox_schema_analytics_context_BrowserDeviceContext_fieldAccessorTable
+        return io.bloombox.schema.telemetry.context.BrowserContext.internal_static_bloombox_analytics_context_BrowserDeviceContext_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
                 io.bloombox.schema.telemetry.context.BrowserContext.BrowserDeviceContext.class, io.bloombox.schema.telemetry.context.BrowserContext.BrowserDeviceContext.Builder.class);
       }
@@ -889,6 +897,7 @@ public final class BrowserContext {
                 .alwaysUseFieldBuilders) {
         }
       }
+      @java.lang.Override
       public Builder clear() {
         super.clear();
         browserType_ = 0;
@@ -912,15 +921,18 @@ public final class BrowserContext {
         return this;
       }
 
+      @java.lang.Override
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return io.bloombox.schema.telemetry.context.BrowserContext.internal_static_bloombox_schema_analytics_context_BrowserDeviceContext_descriptor;
+        return io.bloombox.schema.telemetry.context.BrowserContext.internal_static_bloombox_analytics_context_BrowserDeviceContext_descriptor;
       }
 
+      @java.lang.Override
       public io.bloombox.schema.telemetry.context.BrowserContext.BrowserDeviceContext getDefaultInstanceForType() {
         return io.bloombox.schema.telemetry.context.BrowserContext.BrowserDeviceContext.getDefaultInstance();
       }
 
+      @java.lang.Override
       public io.bloombox.schema.telemetry.context.BrowserContext.BrowserDeviceContext build() {
         io.bloombox.schema.telemetry.context.BrowserContext.BrowserDeviceContext result = buildPartial();
         if (!result.isInitialized()) {
@@ -929,6 +941,7 @@ public final class BrowserContext {
         return result;
       }
 
+      @java.lang.Override
       public io.bloombox.schema.telemetry.context.BrowserContext.BrowserDeviceContext buildPartial() {
         io.bloombox.schema.telemetry.context.BrowserContext.BrowserDeviceContext result = new io.bloombox.schema.telemetry.context.BrowserContext.BrowserDeviceContext(this);
         result.browserType_ = browserType_;
@@ -946,32 +959,39 @@ public final class BrowserContext {
         return result;
       }
 
+      @java.lang.Override
       public Builder clone() {
         return (Builder) super.clone();
       }
+      @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
         return (Builder) super.setField(field, value);
       }
+      @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
         return (Builder) super.clearField(field);
       }
+      @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
         return (Builder) super.clearOneof(oneof);
       }
+      @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
         return (Builder) super.setRepeatedField(field, index, value);
       }
+      @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
         return (Builder) super.addRepeatedField(field, value);
       }
+      @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
         if (other instanceof io.bloombox.schema.telemetry.context.BrowserContext.BrowserDeviceContext) {
           return mergeFrom((io.bloombox.schema.telemetry.context.BrowserContext.BrowserDeviceContext)other);
@@ -1011,10 +1031,12 @@ public final class BrowserContext {
         return this;
       }
 
+      @java.lang.Override
       public final boolean isInitialized() {
         return true;
       }
 
+      @java.lang.Override
       public Builder mergeFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -1039,7 +1061,7 @@ public final class BrowserContext {
        * Specifies the general browser type.
        * </pre>
        *
-       * <code>.bloombox.schema.analytics.context.BrowserType browser_type = 1 [(.gen_bq_schema.require) = true, (.gen_bq_schema.description) = "Specifies the general browser type."];</code>
+       * <code>.bloombox.analytics.context.BrowserType browser_type = 1 [(.gen_bq_schema.require) = true, (.gen_bq_schema.description) = "Specifies the general browser type."];</code>
        */
       public int getBrowserTypeValue() {
         return browserType_;
@@ -1049,7 +1071,7 @@ public final class BrowserContext {
        * Specifies the general browser type.
        * </pre>
        *
-       * <code>.bloombox.schema.analytics.context.BrowserType browser_type = 1 [(.gen_bq_schema.require) = true, (.gen_bq_schema.description) = "Specifies the general browser type."];</code>
+       * <code>.bloombox.analytics.context.BrowserType browser_type = 1 [(.gen_bq_schema.require) = true, (.gen_bq_schema.description) = "Specifies the general browser type."];</code>
        */
       public Builder setBrowserTypeValue(int value) {
         browserType_ = value;
@@ -1061,9 +1083,10 @@ public final class BrowserContext {
        * Specifies the general browser type.
        * </pre>
        *
-       * <code>.bloombox.schema.analytics.context.BrowserType browser_type = 1 [(.gen_bq_schema.require) = true, (.gen_bq_schema.description) = "Specifies the general browser type."];</code>
+       * <code>.bloombox.analytics.context.BrowserType browser_type = 1 [(.gen_bq_schema.require) = true, (.gen_bq_schema.description) = "Specifies the general browser type."];</code>
        */
       public io.bloombox.schema.telemetry.context.BrowserContext.BrowserType getBrowserType() {
+        @SuppressWarnings("deprecation")
         io.bloombox.schema.telemetry.context.BrowserContext.BrowserType result = io.bloombox.schema.telemetry.context.BrowserContext.BrowserType.valueOf(browserType_);
         return result == null ? io.bloombox.schema.telemetry.context.BrowserContext.BrowserType.UNRECOGNIZED : result;
       }
@@ -1072,7 +1095,7 @@ public final class BrowserContext {
        * Specifies the general browser type.
        * </pre>
        *
-       * <code>.bloombox.schema.analytics.context.BrowserType browser_type = 1 [(.gen_bq_schema.require) = true, (.gen_bq_schema.description) = "Specifies the general browser type."];</code>
+       * <code>.bloombox.analytics.context.BrowserType browser_type = 1 [(.gen_bq_schema.require) = true, (.gen_bq_schema.description) = "Specifies the general browser type."];</code>
        */
       public Builder setBrowserType(io.bloombox.schema.telemetry.context.BrowserContext.BrowserType value) {
         if (value == null) {
@@ -1088,7 +1111,7 @@ public final class BrowserContext {
        * Specifies the general browser type.
        * </pre>
        *
-       * <code>.bloombox.schema.analytics.context.BrowserType browser_type = 1 [(.gen_bq_schema.require) = true, (.gen_bq_schema.description) = "Specifies the general browser type."];</code>
+       * <code>.bloombox.analytics.context.BrowserType browser_type = 1 [(.gen_bq_schema.require) = true, (.gen_bq_schema.description) = "Specifies the general browser type."];</code>
        */
       public Builder clearBrowserType() {
         
@@ -1541,21 +1564,23 @@ public final class BrowserContext {
         onChanged();
         return this;
       }
+      @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
         return super.setUnknownFieldsProto3(unknownFields);
       }
 
+      @java.lang.Override
       public final Builder mergeUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
         return super.mergeUnknownFields(unknownFields);
       }
 
 
-      // @@protoc_insertion_point(builder_scope:bloombox.schema.analytics.context.BrowserDeviceContext)
+      // @@protoc_insertion_point(builder_scope:bloombox.analytics.context.BrowserDeviceContext)
     }
 
-    // @@protoc_insertion_point(class_scope:bloombox.schema.analytics.context.BrowserDeviceContext)
+    // @@protoc_insertion_point(class_scope:bloombox.analytics.context.BrowserDeviceContext)
     private static final io.bloombox.schema.telemetry.context.BrowserContext.BrowserDeviceContext DEFAULT_INSTANCE;
     static {
       DEFAULT_INSTANCE = new io.bloombox.schema.telemetry.context.BrowserContext.BrowserDeviceContext();
@@ -1567,6 +1592,7 @@ public final class BrowserContext {
 
     private static final com.google.protobuf.Parser<BrowserDeviceContext>
         PARSER = new com.google.protobuf.AbstractParser<BrowserDeviceContext>() {
+      @java.lang.Override
       public BrowserDeviceContext parsePartialFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -1584,6 +1610,7 @@ public final class BrowserContext {
       return PARSER;
     }
 
+    @java.lang.Override
     public io.bloombox.schema.telemetry.context.BrowserContext.BrowserDeviceContext getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
@@ -1591,10 +1618,10 @@ public final class BrowserContext {
   }
 
   private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_bloombox_schema_analytics_context_BrowserDeviceContext_descriptor;
+    internal_static_bloombox_analytics_context_BrowserDeviceContext_descriptor;
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_bloombox_schema_analytics_context_BrowserDeviceContext_fieldAccessorTable;
+      internal_static_bloombox_analytics_context_BrowserDeviceContext_fieldAccessorTable;
 
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
@@ -1604,28 +1631,28 @@ public final class BrowserContext {
       descriptor;
   static {
     java.lang.String[] descriptorData = {
-      "\n\037analytics/context/Browser.proto\022!bloom" +
-      "box.schema.analytics.context\032\016bq_field.p" +
-      "roto\032\025structs/Version.proto\"\305\004\n\024BrowserD" +
-      "eviceContext\022o\n\014browser_type\030\001 \001(\0162..blo" +
-      "ombox.schema.analytics.context.BrowserTy" +
-      "peB)\360?\001\212@#Specifies the general browser " +
-      "type.\022T\n\007version\030\002 \001(\0132!.opencannabis.st" +
-      "ructs.VersionSpecB \212@\035Version info for t" +
-      "he browser.\022A\n\010language\030\003 \001(\tB/\212@,Active" +
-      " language, as reported by the browser.\022M" +
-      "\n\nuser_agent\030\004 \001(\tB9\212@6Raw user-agent st" +
-      "ring sent or embedded by the browser.\022F\n" +
-      "\013touchpoints\030\005 \001(\rB1\212@.Maximum touch poi" +
-      "nts for a particular browser.\022N\n\024hardwar" +
-      "e_concurrency\030\006 \001(\rB0\212@-Hardware concurr" +
-      "ency reported by the browser.\022<\n\013color_d" +
-      "epth\030\007 \001(\rB\'\212@$Color depth reported by t" +
-      "he browser.*b\n\013BrowserType\022\023\n\017BROWSER_UN" +
-      "KNOWN\020\000\022\n\n\006CHROME\020\001\022\n\n\006SAFARI\020\002\022\013\n\007FIREF" +
-      "OX\020\003\022\t\n\005OPERA\020\004\022\016\n\nIE_OR_EDGE\020\005B@\n$io.bl" +
-      "oombox.schema.telemetry.contextB\016Browser" +
-      "ContextH\001P\000\242\002\003BBSb\006proto3"
+      "\n\037analytics/context/Browser.proto\022\032bloom" +
+      "box.analytics.context\032\016bq_field.proto\032\025s" +
+      "tructs/Version.proto\"\276\004\n\024BrowserDeviceCo" +
+      "ntext\022h\n\014browser_type\030\001 \001(\0162\'.bloombox.a" +
+      "nalytics.context.BrowserTypeB)\360?\001\212@#Spec" +
+      "ifies the general browser type.\022T\n\007versi" +
+      "on\030\002 \001(\0132!.opencannabis.structs.VersionS" +
+      "pecB \212@\035Version info for the browser.\022A\n" +
+      "\010language\030\003 \001(\tB/\212@,Active language, as " +
+      "reported by the browser.\022M\n\nuser_agent\030\004" +
+      " \001(\tB9\212@6Raw user-agent string sent or e" +
+      "mbedded by the browser.\022F\n\013touchpoints\030\005" +
+      " \001(\rB1\212@.Maximum touch points for a part" +
+      "icular browser.\022N\n\024hardware_concurrency\030" +
+      "\006 \001(\rB0\212@-Hardware concurrency reported " +
+      "by the browser.\022<\n\013color_depth\030\007 \001(\rB\'\212@" +
+      "$Color depth reported by the browser.*b\n" +
+      "\013BrowserType\022\023\n\017BROWSER_UNKNOWN\020\000\022\n\n\006CHR" +
+      "OME\020\001\022\n\n\006SAFARI\020\002\022\013\n\007FIREFOX\020\003\022\t\n\005OPERA\020" +
+      "\004\022\016\n\nIE_OR_EDGE\020\005B@\n$io.bloombox.schema." +
+      "telemetry.contextB\016BrowserContextH\001P\000\242\002\003" +
+      "BBSb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -1641,11 +1668,11 @@ public final class BrowserContext {
           gen_bq_schema.BqField.getDescriptor(),
           io.opencannabis.schema.struct.Version.getDescriptor(),
         }, assigner);
-    internal_static_bloombox_schema_analytics_context_BrowserDeviceContext_descriptor =
+    internal_static_bloombox_analytics_context_BrowserDeviceContext_descriptor =
       getDescriptor().getMessageTypes().get(0);
-    internal_static_bloombox_schema_analytics_context_BrowserDeviceContext_fieldAccessorTable = new
+    internal_static_bloombox_analytics_context_BrowserDeviceContext_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_bloombox_schema_analytics_context_BrowserDeviceContext_descriptor,
+        internal_static_bloombox_analytics_context_BrowserDeviceContext_descriptor,
         new java.lang.String[] { "BrowserType", "Version", "Language", "UserAgent", "Touchpoints", "HardwareConcurrency", "ColorDepth", });
     com.google.protobuf.ExtensionRegistry registry =
         com.google.protobuf.ExtensionRegistry.newInstance();

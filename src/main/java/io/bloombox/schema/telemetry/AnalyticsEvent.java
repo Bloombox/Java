@@ -1,8 +1,8 @@
 /*
- * Copyright 2018, Bloombox, LLC. All rights reserved.
+ * Copyright 2018, Momentum Ideas, Co. All rights reserved.
  *
  * Source and object computer code contained herein is the private intellectual
- * property of Bloombox, a California Limited Liability Corporation. Use of this
+ * property of Momentum Ideas Co., a Delaware Corporation. Use of this
  * code in source form requires permission in writing before use or the
  * assembly, distribution, or publishing of derivative works, for commercial
  * purposes or any other purpose, from a duly authorized officer of Momentum
@@ -32,7 +32,7 @@ public final class AnalyticsEvent {
         (com.google.protobuf.ExtensionRegistryLite) registry);
   }
   public interface EventOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:bloombox.schema.analytics.generic.Event)
+      // @@protoc_insertion_point(interface_extends:bloombox.analytics.generic.Event)
       com.google.protobuf.MessageOrBuilder {
 
     /**
@@ -90,11 +90,11 @@ public final class AnalyticsEvent {
    * Represents a generic event, which can carry an arbitrary payload and is bound to an unenumerated collection.
    * </pre>
    *
-   * Protobuf type {@code bloombox.schema.analytics.generic.Event}
+   * Protobuf type {@code bloombox.analytics.generic.Event}
    */
   public  static final class Event extends
       com.google.protobuf.GeneratedMessageV3 implements
-      // @@protoc_insertion_point(message_implements:bloombox.schema.analytics.generic.Event)
+      // @@protoc_insertion_point(message_implements:bloombox.analytics.generic.Event)
       EventOrBuilder {
   private static final long serialVersionUID = 0L;
     // Use Event.newBuilder() to construct.
@@ -128,13 +128,6 @@ public final class AnalyticsEvent {
             case 0:
               done = true;
               break;
-            default: {
-              if (!parseUnknownFieldProto3(
-                  input, unknownFields, extensionRegistry, tag)) {
-                done = true;
-              }
-              break;
-            }
             case 10: {
               com.google.protobuf.Struct.Builder subBuilder = null;
               if (payload_ != null) {
@@ -161,6 +154,13 @@ public final class AnalyticsEvent {
 
               break;
             }
+            default: {
+              if (!parseUnknownFieldProto3(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
           }
         }
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
@@ -175,12 +175,13 @@ public final class AnalyticsEvent {
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return io.bloombox.schema.telemetry.AnalyticsEvent.internal_static_bloombox_schema_analytics_generic_Event_descriptor;
+      return io.bloombox.schema.telemetry.AnalyticsEvent.internal_static_bloombox_analytics_generic_Event_descriptor;
     }
 
+    @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return io.bloombox.schema.telemetry.AnalyticsEvent.internal_static_bloombox_schema_analytics_generic_Event_fieldAccessorTable
+      return io.bloombox.schema.telemetry.AnalyticsEvent.internal_static_bloombox_analytics_generic_Event_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
               io.bloombox.schema.telemetry.AnalyticsEvent.Event.class, io.bloombox.schema.telemetry.AnalyticsEvent.Event.Builder.class);
     }
@@ -252,6 +253,7 @@ public final class AnalyticsEvent {
     }
 
     private byte memoizedIsInitialized = -1;
+    @java.lang.Override
     public final boolean isInitialized() {
       byte isInitialized = memoizedIsInitialized;
       if (isInitialized == 1) return true;
@@ -261,6 +263,7 @@ public final class AnalyticsEvent {
       return true;
     }
 
+    @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
       if (payload_ != null) {
@@ -272,6 +275,7 @@ public final class AnalyticsEvent {
       unknownFields.writeTo(output);
     }
 
+    @java.lang.Override
     public int getSerializedSize() {
       int size = memoizedSize;
       if (size != -1) return size;
@@ -405,6 +409,7 @@ public final class AnalyticsEvent {
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
 
+    @java.lang.Override
     public Builder newBuilderForType() { return newBuilder(); }
     public static Builder newBuilder() {
       return DEFAULT_INSTANCE.toBuilder();
@@ -412,6 +417,7 @@ public final class AnalyticsEvent {
     public static Builder newBuilder(io.bloombox.schema.telemetry.AnalyticsEvent.Event prototype) {
       return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
     }
+    @java.lang.Override
     public Builder toBuilder() {
       return this == DEFAULT_INSTANCE
           ? new Builder() : new Builder().mergeFrom(this);
@@ -428,20 +434,21 @@ public final class AnalyticsEvent {
      * Represents a generic event, which can carry an arbitrary payload and is bound to an unenumerated collection.
      * </pre>
      *
-     * Protobuf type {@code bloombox.schema.analytics.generic.Event}
+     * Protobuf type {@code bloombox.analytics.generic.Event}
      */
     public static final class Builder extends
         com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:bloombox.schema.analytics.generic.Event)
+        // @@protoc_insertion_point(builder_implements:bloombox.analytics.generic.Event)
         io.bloombox.schema.telemetry.AnalyticsEvent.EventOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return io.bloombox.schema.telemetry.AnalyticsEvent.internal_static_bloombox_schema_analytics_generic_Event_descriptor;
+        return io.bloombox.schema.telemetry.AnalyticsEvent.internal_static_bloombox_analytics_generic_Event_descriptor;
       }
 
+      @java.lang.Override
       protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return io.bloombox.schema.telemetry.AnalyticsEvent.internal_static_bloombox_schema_analytics_generic_Event_fieldAccessorTable
+        return io.bloombox.schema.telemetry.AnalyticsEvent.internal_static_bloombox_analytics_generic_Event_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
                 io.bloombox.schema.telemetry.AnalyticsEvent.Event.class, io.bloombox.schema.telemetry.AnalyticsEvent.Event.Builder.class);
       }
@@ -461,6 +468,7 @@ public final class AnalyticsEvent {
                 .alwaysUseFieldBuilders) {
         }
       }
+      @java.lang.Override
       public Builder clear() {
         super.clear();
         if (payloadBuilder_ == null) {
@@ -478,15 +486,18 @@ public final class AnalyticsEvent {
         return this;
       }
 
+      @java.lang.Override
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return io.bloombox.schema.telemetry.AnalyticsEvent.internal_static_bloombox_schema_analytics_generic_Event_descriptor;
+        return io.bloombox.schema.telemetry.AnalyticsEvent.internal_static_bloombox_analytics_generic_Event_descriptor;
       }
 
+      @java.lang.Override
       public io.bloombox.schema.telemetry.AnalyticsEvent.Event getDefaultInstanceForType() {
         return io.bloombox.schema.telemetry.AnalyticsEvent.Event.getDefaultInstance();
       }
 
+      @java.lang.Override
       public io.bloombox.schema.telemetry.AnalyticsEvent.Event build() {
         io.bloombox.schema.telemetry.AnalyticsEvent.Event result = buildPartial();
         if (!result.isInitialized()) {
@@ -495,6 +506,7 @@ public final class AnalyticsEvent {
         return result;
       }
 
+      @java.lang.Override
       public io.bloombox.schema.telemetry.AnalyticsEvent.Event buildPartial() {
         io.bloombox.schema.telemetry.AnalyticsEvent.Event result = new io.bloombox.schema.telemetry.AnalyticsEvent.Event(this);
         if (payloadBuilder_ == null) {
@@ -511,32 +523,39 @@ public final class AnalyticsEvent {
         return result;
       }
 
+      @java.lang.Override
       public Builder clone() {
         return (Builder) super.clone();
       }
+      @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
         return (Builder) super.setField(field, value);
       }
+      @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
         return (Builder) super.clearField(field);
       }
+      @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
         return (Builder) super.clearOneof(oneof);
       }
+      @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
         return (Builder) super.setRepeatedField(field, index, value);
       }
+      @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
         return (Builder) super.addRepeatedField(field, value);
       }
+      @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
         if (other instanceof io.bloombox.schema.telemetry.AnalyticsEvent.Event) {
           return mergeFrom((io.bloombox.schema.telemetry.AnalyticsEvent.Event)other);
@@ -559,10 +578,12 @@ public final class AnalyticsEvent {
         return this;
       }
 
+      @java.lang.Override
       public final boolean isInitialized() {
         return true;
       }
 
+      @java.lang.Override
       public Builder mergeFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -886,21 +907,23 @@ public final class AnalyticsEvent {
         }
         return occurredBuilder_;
       }
+      @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
         return super.setUnknownFieldsProto3(unknownFields);
       }
 
+      @java.lang.Override
       public final Builder mergeUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
         return super.mergeUnknownFields(unknownFields);
       }
 
 
-      // @@protoc_insertion_point(builder_scope:bloombox.schema.analytics.generic.Event)
+      // @@protoc_insertion_point(builder_scope:bloombox.analytics.generic.Event)
     }
 
-    // @@protoc_insertion_point(class_scope:bloombox.schema.analytics.generic.Event)
+    // @@protoc_insertion_point(class_scope:bloombox.analytics.generic.Event)
     private static final io.bloombox.schema.telemetry.AnalyticsEvent.Event DEFAULT_INSTANCE;
     static {
       DEFAULT_INSTANCE = new io.bloombox.schema.telemetry.AnalyticsEvent.Event();
@@ -912,6 +935,7 @@ public final class AnalyticsEvent {
 
     private static final com.google.protobuf.Parser<Event>
         PARSER = new com.google.protobuf.AbstractParser<Event>() {
+      @java.lang.Override
       public Event parsePartialFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -929,6 +953,7 @@ public final class AnalyticsEvent {
       return PARSER;
     }
 
+    @java.lang.Override
     public io.bloombox.schema.telemetry.AnalyticsEvent.Event getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
@@ -936,10 +961,10 @@ public final class AnalyticsEvent {
   }
 
   private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_bloombox_schema_analytics_generic_Event_descriptor;
+    internal_static_bloombox_analytics_generic_Event_descriptor;
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_bloombox_schema_analytics_generic_Event_fieldAccessorTable;
+      internal_static_bloombox_analytics_generic_Event_fieldAccessorTable;
 
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
@@ -949,14 +974,14 @@ public final class AnalyticsEvent {
       descriptor;
   static {
     java.lang.String[] descriptorData = {
-      "\n\035analytics/generic/Event.proto\022!bloombo" +
-      "x.schema.analytics.generic\032\016bq_field.pro" +
-      "to\032\026temporal/Instant.proto\032\034google/proto" +
-      "buf/struct.proto\"m\n\005Event\022-\n\007payload\030\001 \001" +
-      "(\0132\027.google.protobuf.StructB\003\200@\001\0225\n\010occu" +
-      "rred\030\002 \001(\0132\036.opencannabis.temporal.Insta" +
-      "ntB\003\200@\001B8\n\034io.bloombox.schema.telemetryB" +
-      "\016AnalyticsEventH\001P\000\242\002\003BBSb\006proto3"
+      "\n\035analytics/generic/Event.proto\022\032bloombo" +
+      "x.analytics.generic\032\016bq_field.proto\032\026tem" +
+      "poral/Instant.proto\032\034google/protobuf/str" +
+      "uct.proto\"m\n\005Event\022-\n\007payload\030\001 \001(\0132\027.go" +
+      "ogle.protobuf.StructB\003\200@\001\0225\n\010occurred\030\002 " +
+      "\001(\0132\036.opencannabis.temporal.InstantB\003\200@\001" +
+      "B8\n\034io.bloombox.schema.telemetryB\016Analyt" +
+      "icsEventH\001P\000\242\002\003BBSb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -973,11 +998,11 @@ public final class AnalyticsEvent {
           io.opencannabis.schema.temporal.TemporalInstant.getDescriptor(),
           com.google.protobuf.StructProto.getDescriptor(),
         }, assigner);
-    internal_static_bloombox_schema_analytics_generic_Event_descriptor =
+    internal_static_bloombox_analytics_generic_Event_descriptor =
       getDescriptor().getMessageTypes().get(0);
-    internal_static_bloombox_schema_analytics_generic_Event_fieldAccessorTable = new
+    internal_static_bloombox_analytics_generic_Event_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_bloombox_schema_analytics_generic_Event_descriptor,
+        internal_static_bloombox_analytics_generic_Event_descriptor,
         new java.lang.String[] { "Payload", "Occurred", });
     com.google.protobuf.ExtensionRegistry registry =
         com.google.protobuf.ExtensionRegistry.newInstance();

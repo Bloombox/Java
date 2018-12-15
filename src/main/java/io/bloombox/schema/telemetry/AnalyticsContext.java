@@ -1,8 +1,8 @@
 /*
- * Copyright 2018, Bloombox, LLC. All rights reserved.
+ * Copyright 2018, Momentum Ideas, Co. All rights reserved.
  *
  * Source and object computer code contained herein is the private intellectual
- * property of Bloombox, a California Limited Liability Corporation. Use of this
+ * property of Momentum Ideas Co., a Delaware Corporation. Use of this
  * code in source form requires permission in writing before use or the
  * assembly, distribution, or publishing of derivative works, for commercial
  * purposes or any other purpose, from a duly authorized officer of Momentum
@@ -32,7 +32,7 @@ public final class AnalyticsContext {
         (com.google.protobuf.ExtensionRegistryLite) registry);
   }
   public interface EventPositionOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:bloombox.schema.analytics.EventPosition)
+      // @@protoc_insertion_point(interface_extends:bloombox.analytics.EventPosition)
       com.google.protobuf.MessageOrBuilder {
 
     /**
@@ -108,11 +108,11 @@ public final class AnalyticsContext {
    * Indicates temporal positioning - or, the "when" - for a telemetry event, post-ingest.
    * </pre>
    *
-   * Protobuf type {@code bloombox.schema.analytics.EventPosition}
+   * Protobuf type {@code bloombox.analytics.EventPosition}
    */
   public  static final class EventPosition extends
       com.google.protobuf.GeneratedMessageV3 implements
-      // @@protoc_insertion_point(message_implements:bloombox.schema.analytics.EventPosition)
+      // @@protoc_insertion_point(message_implements:bloombox.analytics.EventPosition)
       EventPositionOrBuilder {
   private static final long serialVersionUID = 0L;
     // Use EventPosition.newBuilder() to construct.
@@ -148,13 +148,6 @@ public final class AnalyticsContext {
             case 0:
               done = true;
               break;
-            default: {
-              if (!parseUnknownFieldProto3(
-                  input, unknownFields, extensionRegistry, tag)) {
-                done = true;
-              }
-              break;
-            }
             case 18: {
               io.opencannabis.schema.temporal.TemporalInstant.Instant.Builder subBuilder = null;
               if (ingest_ != null) {
@@ -191,6 +184,13 @@ public final class AnalyticsContext {
               enriched_ = input.readUInt64();
               break;
             }
+            default: {
+              if (!parseUnknownFieldProto3(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
           }
         }
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
@@ -205,12 +205,13 @@ public final class AnalyticsContext {
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return io.bloombox.schema.telemetry.AnalyticsContext.internal_static_bloombox_schema_analytics_EventPosition_descriptor;
+      return io.bloombox.schema.telemetry.AnalyticsContext.internal_static_bloombox_analytics_EventPosition_descriptor;
     }
 
+    @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return io.bloombox.schema.telemetry.AnalyticsContext.internal_static_bloombox_schema_analytics_EventPosition_fieldAccessorTable
+      return io.bloombox.schema.telemetry.AnalyticsContext.internal_static_bloombox_analytics_EventPosition_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
               io.bloombox.schema.telemetry.AnalyticsContext.EventPosition.class, io.bloombox.schema.telemetry.AnalyticsContext.EventPosition.Builder.class);
     }
@@ -308,6 +309,7 @@ public final class AnalyticsContext {
     }
 
     private byte memoizedIsInitialized = -1;
+    @java.lang.Override
     public final boolean isInitialized() {
       byte isInitialized = memoizedIsInitialized;
       if (isInitialized == 1) return true;
@@ -317,6 +319,7 @@ public final class AnalyticsContext {
       return true;
     }
 
+    @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
       if (ingest_ != null) {
@@ -334,6 +337,7 @@ public final class AnalyticsContext {
       unknownFields.writeTo(output);
     }
 
+    @java.lang.Override
     public int getSerializedSize() {
       int size = memoizedSize;
       if (size != -1) return size;
@@ -485,6 +489,7 @@ public final class AnalyticsContext {
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
 
+    @java.lang.Override
     public Builder newBuilderForType() { return newBuilder(); }
     public static Builder newBuilder() {
       return DEFAULT_INSTANCE.toBuilder();
@@ -492,6 +497,7 @@ public final class AnalyticsContext {
     public static Builder newBuilder(io.bloombox.schema.telemetry.AnalyticsContext.EventPosition prototype) {
       return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
     }
+    @java.lang.Override
     public Builder toBuilder() {
       return this == DEFAULT_INSTANCE
           ? new Builder() : new Builder().mergeFrom(this);
@@ -508,20 +514,21 @@ public final class AnalyticsContext {
      * Indicates temporal positioning - or, the "when" - for a telemetry event, post-ingest.
      * </pre>
      *
-     * Protobuf type {@code bloombox.schema.analytics.EventPosition}
+     * Protobuf type {@code bloombox.analytics.EventPosition}
      */
     public static final class Builder extends
         com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:bloombox.schema.analytics.EventPosition)
+        // @@protoc_insertion_point(builder_implements:bloombox.analytics.EventPosition)
         io.bloombox.schema.telemetry.AnalyticsContext.EventPositionOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return io.bloombox.schema.telemetry.AnalyticsContext.internal_static_bloombox_schema_analytics_EventPosition_descriptor;
+        return io.bloombox.schema.telemetry.AnalyticsContext.internal_static_bloombox_analytics_EventPosition_descriptor;
       }
 
+      @java.lang.Override
       protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return io.bloombox.schema.telemetry.AnalyticsContext.internal_static_bloombox_schema_analytics_EventPosition_fieldAccessorTable
+        return io.bloombox.schema.telemetry.AnalyticsContext.internal_static_bloombox_analytics_EventPosition_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
                 io.bloombox.schema.telemetry.AnalyticsContext.EventPosition.class, io.bloombox.schema.telemetry.AnalyticsContext.EventPosition.Builder.class);
       }
@@ -541,6 +548,7 @@ public final class AnalyticsContext {
                 .alwaysUseFieldBuilders) {
         }
       }
+      @java.lang.Override
       public Builder clear() {
         super.clear();
         if (ingestBuilder_ == null) {
@@ -562,15 +570,18 @@ public final class AnalyticsContext {
         return this;
       }
 
+      @java.lang.Override
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return io.bloombox.schema.telemetry.AnalyticsContext.internal_static_bloombox_schema_analytics_EventPosition_descriptor;
+        return io.bloombox.schema.telemetry.AnalyticsContext.internal_static_bloombox_analytics_EventPosition_descriptor;
       }
 
+      @java.lang.Override
       public io.bloombox.schema.telemetry.AnalyticsContext.EventPosition getDefaultInstanceForType() {
         return io.bloombox.schema.telemetry.AnalyticsContext.EventPosition.getDefaultInstance();
       }
 
+      @java.lang.Override
       public io.bloombox.schema.telemetry.AnalyticsContext.EventPosition build() {
         io.bloombox.schema.telemetry.AnalyticsContext.EventPosition result = buildPartial();
         if (!result.isInitialized()) {
@@ -579,6 +590,7 @@ public final class AnalyticsContext {
         return result;
       }
 
+      @java.lang.Override
       public io.bloombox.schema.telemetry.AnalyticsContext.EventPosition buildPartial() {
         io.bloombox.schema.telemetry.AnalyticsContext.EventPosition result = new io.bloombox.schema.telemetry.AnalyticsContext.EventPosition(this);
         if (ingestBuilder_ == null) {
@@ -597,32 +609,39 @@ public final class AnalyticsContext {
         return result;
       }
 
+      @java.lang.Override
       public Builder clone() {
         return (Builder) super.clone();
       }
+      @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
         return (Builder) super.setField(field, value);
       }
+      @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
         return (Builder) super.clearField(field);
       }
+      @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
         return (Builder) super.clearOneof(oneof);
       }
+      @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
         return (Builder) super.setRepeatedField(field, index, value);
       }
+      @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
         return (Builder) super.addRepeatedField(field, value);
       }
+      @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
         if (other instanceof io.bloombox.schema.telemetry.AnalyticsContext.EventPosition) {
           return mergeFrom((io.bloombox.schema.telemetry.AnalyticsContext.EventPosition)other);
@@ -651,10 +670,12 @@ public final class AnalyticsContext {
         return this;
       }
 
+      @java.lang.Override
       public final boolean isInitialized() {
         return true;
       }
 
+      @java.lang.Override
       public Builder mergeFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -1054,21 +1075,23 @@ public final class AnalyticsContext {
         onChanged();
         return this;
       }
+      @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
         return super.setUnknownFieldsProto3(unknownFields);
       }
 
+      @java.lang.Override
       public final Builder mergeUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
         return super.mergeUnknownFields(unknownFields);
       }
 
 
-      // @@protoc_insertion_point(builder_scope:bloombox.schema.analytics.EventPosition)
+      // @@protoc_insertion_point(builder_scope:bloombox.analytics.EventPosition)
     }
 
-    // @@protoc_insertion_point(class_scope:bloombox.schema.analytics.EventPosition)
+    // @@protoc_insertion_point(class_scope:bloombox.analytics.EventPosition)
     private static final io.bloombox.schema.telemetry.AnalyticsContext.EventPosition DEFAULT_INSTANCE;
     static {
       DEFAULT_INSTANCE = new io.bloombox.schema.telemetry.AnalyticsContext.EventPosition();
@@ -1080,6 +1103,7 @@ public final class AnalyticsContext {
 
     private static final com.google.protobuf.Parser<EventPosition>
         PARSER = new com.google.protobuf.AbstractParser<EventPosition>() {
+      @java.lang.Override
       public EventPosition parsePartialFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -1097,6 +1121,7 @@ public final class AnalyticsContext {
       return PARSER;
     }
 
+    @java.lang.Override
     public io.bloombox.schema.telemetry.AnalyticsContext.EventPosition getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
@@ -1104,7 +1129,7 @@ public final class AnalyticsContext {
   }
 
   public interface EventActorsOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:bloombox.schema.analytics.EventActors)
+      // @@protoc_insertion_point(interface_extends:bloombox.analytics.EventActors)
       com.google.protobuf.MessageOrBuilder {
 
     /**
@@ -1112,7 +1137,7 @@ public final class AnalyticsContext {
      * User account that was logged in when the event was submitted.
      * </pre>
      *
-     * <code>.bloombox.schema.identity.User user = 1 [(.gen_bq_schema.description) = "User account that was logged in when the event was submitted."];</code>
+     * <code>.bloombox.identity.User user = 1 [(.gen_bq_schema.description) = "User account that was logged in when the event was submitted."];</code>
      */
     boolean hasUser();
     /**
@@ -1120,7 +1145,7 @@ public final class AnalyticsContext {
      * User account that was logged in when the event was submitted.
      * </pre>
      *
-     * <code>.bloombox.schema.identity.User user = 1 [(.gen_bq_schema.description) = "User account that was logged in when the event was submitted."];</code>
+     * <code>.bloombox.identity.User user = 1 [(.gen_bq_schema.description) = "User account that was logged in when the event was submitted."];</code>
      */
     io.bloombox.schema.identity.AppUser.User getUser();
     /**
@@ -1128,7 +1153,7 @@ public final class AnalyticsContext {
      * User account that was logged in when the event was submitted.
      * </pre>
      *
-     * <code>.bloombox.schema.identity.User user = 1 [(.gen_bq_schema.description) = "User account that was logged in when the event was submitted."];</code>
+     * <code>.bloombox.identity.User user = 1 [(.gen_bq_schema.description) = "User account that was logged in when the event was submitted."];</code>
      */
     io.bloombox.schema.identity.AppUser.UserOrBuilder getUserOrBuilder();
 
@@ -1137,7 +1162,7 @@ public final class AnalyticsContext {
      * Partner account under which the event was submitted.
      * </pre>
      *
-     * <code>.bloombox.schema.partner.Partner partner = 2 [(.gen_bq_schema.description) = "Partner account under which the event was submitted."];</code>
+     * <code>.bloombox.partner.Partner partner = 2 [(.gen_bq_schema.description) = "Partner account under which the event was submitted."];</code>
      */
     boolean hasPartner();
     /**
@@ -1145,7 +1170,7 @@ public final class AnalyticsContext {
      * Partner account under which the event was submitted.
      * </pre>
      *
-     * <code>.bloombox.schema.partner.Partner partner = 2 [(.gen_bq_schema.description) = "Partner account under which the event was submitted."];</code>
+     * <code>.bloombox.partner.Partner partner = 2 [(.gen_bq_schema.description) = "Partner account under which the event was submitted."];</code>
      */
     io.bloombox.schema.partner.PartnerAccount.Partner getPartner();
     /**
@@ -1153,7 +1178,7 @@ public final class AnalyticsContext {
      * Partner account under which the event was submitted.
      * </pre>
      *
-     * <code>.bloombox.schema.partner.Partner partner = 2 [(.gen_bq_schema.description) = "Partner account under which the event was submitted."];</code>
+     * <code>.bloombox.partner.Partner partner = 2 [(.gen_bq_schema.description) = "Partner account under which the event was submitted."];</code>
      */
     io.bloombox.schema.partner.PartnerAccount.PartnerOrBuilder getPartnerOrBuilder();
 
@@ -1162,7 +1187,7 @@ public final class AnalyticsContext {
      * Location account under which this event was submitted.
      * </pre>
      *
-     * <code>.bloombox.schema.partner.PartnerLocation location = 3 [(.gen_bq_schema.description) = "Location account under which this event was submitted."];</code>
+     * <code>.bloombox.partner.PartnerLocation location = 3 [(.gen_bq_schema.description) = "Location account under which this event was submitted."];</code>
      */
     boolean hasLocation();
     /**
@@ -1170,7 +1195,7 @@ public final class AnalyticsContext {
      * Location account under which this event was submitted.
      * </pre>
      *
-     * <code>.bloombox.schema.partner.PartnerLocation location = 3 [(.gen_bq_schema.description) = "Location account under which this event was submitted."];</code>
+     * <code>.bloombox.partner.PartnerLocation location = 3 [(.gen_bq_schema.description) = "Location account under which this event was submitted."];</code>
      */
     io.bloombox.schema.partner.LocationAccount.PartnerLocation getLocation();
     /**
@@ -1178,7 +1203,7 @@ public final class AnalyticsContext {
      * Location account under which this event was submitted.
      * </pre>
      *
-     * <code>.bloombox.schema.partner.PartnerLocation location = 3 [(.gen_bq_schema.description) = "Location account under which this event was submitted."];</code>
+     * <code>.bloombox.partner.PartnerLocation location = 3 [(.gen_bq_schema.description) = "Location account under which this event was submitted."];</code>
      */
     io.bloombox.schema.partner.LocationAccount.PartnerLocationOrBuilder getLocationOrBuilder();
   }
@@ -1187,11 +1212,11 @@ public final class AnalyticsContext {
    * Specifies full, inflated data records for contextually-related objects, w.r.t. the current event.
    * </pre>
    *
-   * Protobuf type {@code bloombox.schema.analytics.EventActors}
+   * Protobuf type {@code bloombox.analytics.EventActors}
    */
   public  static final class EventActors extends
       com.google.protobuf.GeneratedMessageV3 implements
-      // @@protoc_insertion_point(message_implements:bloombox.schema.analytics.EventActors)
+      // @@protoc_insertion_point(message_implements:bloombox.analytics.EventActors)
       EventActorsOrBuilder {
   private static final long serialVersionUID = 0L;
     // Use EventActors.newBuilder() to construct.
@@ -1225,13 +1250,6 @@ public final class AnalyticsContext {
             case 0:
               done = true;
               break;
-            default: {
-              if (!parseUnknownFieldProto3(
-                  input, unknownFields, extensionRegistry, tag)) {
-                done = true;
-              }
-              break;
-            }
             case 10: {
               io.bloombox.schema.identity.AppUser.User.Builder subBuilder = null;
               if (user_ != null) {
@@ -1271,6 +1289,13 @@ public final class AnalyticsContext {
 
               break;
             }
+            default: {
+              if (!parseUnknownFieldProto3(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
           }
         }
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
@@ -1285,12 +1310,13 @@ public final class AnalyticsContext {
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return io.bloombox.schema.telemetry.AnalyticsContext.internal_static_bloombox_schema_analytics_EventActors_descriptor;
+      return io.bloombox.schema.telemetry.AnalyticsContext.internal_static_bloombox_analytics_EventActors_descriptor;
     }
 
+    @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return io.bloombox.schema.telemetry.AnalyticsContext.internal_static_bloombox_schema_analytics_EventActors_fieldAccessorTable
+      return io.bloombox.schema.telemetry.AnalyticsContext.internal_static_bloombox_analytics_EventActors_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
               io.bloombox.schema.telemetry.AnalyticsContext.EventActors.class, io.bloombox.schema.telemetry.AnalyticsContext.EventActors.Builder.class);
     }
@@ -1302,7 +1328,7 @@ public final class AnalyticsContext {
      * User account that was logged in when the event was submitted.
      * </pre>
      *
-     * <code>.bloombox.schema.identity.User user = 1 [(.gen_bq_schema.description) = "User account that was logged in when the event was submitted."];</code>
+     * <code>.bloombox.identity.User user = 1 [(.gen_bq_schema.description) = "User account that was logged in when the event was submitted."];</code>
      */
     public boolean hasUser() {
       return user_ != null;
@@ -1312,7 +1338,7 @@ public final class AnalyticsContext {
      * User account that was logged in when the event was submitted.
      * </pre>
      *
-     * <code>.bloombox.schema.identity.User user = 1 [(.gen_bq_schema.description) = "User account that was logged in when the event was submitted."];</code>
+     * <code>.bloombox.identity.User user = 1 [(.gen_bq_schema.description) = "User account that was logged in when the event was submitted."];</code>
      */
     public io.bloombox.schema.identity.AppUser.User getUser() {
       return user_ == null ? io.bloombox.schema.identity.AppUser.User.getDefaultInstance() : user_;
@@ -1322,7 +1348,7 @@ public final class AnalyticsContext {
      * User account that was logged in when the event was submitted.
      * </pre>
      *
-     * <code>.bloombox.schema.identity.User user = 1 [(.gen_bq_schema.description) = "User account that was logged in when the event was submitted."];</code>
+     * <code>.bloombox.identity.User user = 1 [(.gen_bq_schema.description) = "User account that was logged in when the event was submitted."];</code>
      */
     public io.bloombox.schema.identity.AppUser.UserOrBuilder getUserOrBuilder() {
       return getUser();
@@ -1335,7 +1361,7 @@ public final class AnalyticsContext {
      * Partner account under which the event was submitted.
      * </pre>
      *
-     * <code>.bloombox.schema.partner.Partner partner = 2 [(.gen_bq_schema.description) = "Partner account under which the event was submitted."];</code>
+     * <code>.bloombox.partner.Partner partner = 2 [(.gen_bq_schema.description) = "Partner account under which the event was submitted."];</code>
      */
     public boolean hasPartner() {
       return partner_ != null;
@@ -1345,7 +1371,7 @@ public final class AnalyticsContext {
      * Partner account under which the event was submitted.
      * </pre>
      *
-     * <code>.bloombox.schema.partner.Partner partner = 2 [(.gen_bq_schema.description) = "Partner account under which the event was submitted."];</code>
+     * <code>.bloombox.partner.Partner partner = 2 [(.gen_bq_schema.description) = "Partner account under which the event was submitted."];</code>
      */
     public io.bloombox.schema.partner.PartnerAccount.Partner getPartner() {
       return partner_ == null ? io.bloombox.schema.partner.PartnerAccount.Partner.getDefaultInstance() : partner_;
@@ -1355,7 +1381,7 @@ public final class AnalyticsContext {
      * Partner account under which the event was submitted.
      * </pre>
      *
-     * <code>.bloombox.schema.partner.Partner partner = 2 [(.gen_bq_schema.description) = "Partner account under which the event was submitted."];</code>
+     * <code>.bloombox.partner.Partner partner = 2 [(.gen_bq_schema.description) = "Partner account under which the event was submitted."];</code>
      */
     public io.bloombox.schema.partner.PartnerAccount.PartnerOrBuilder getPartnerOrBuilder() {
       return getPartner();
@@ -1368,7 +1394,7 @@ public final class AnalyticsContext {
      * Location account under which this event was submitted.
      * </pre>
      *
-     * <code>.bloombox.schema.partner.PartnerLocation location = 3 [(.gen_bq_schema.description) = "Location account under which this event was submitted."];</code>
+     * <code>.bloombox.partner.PartnerLocation location = 3 [(.gen_bq_schema.description) = "Location account under which this event was submitted."];</code>
      */
     public boolean hasLocation() {
       return location_ != null;
@@ -1378,7 +1404,7 @@ public final class AnalyticsContext {
      * Location account under which this event was submitted.
      * </pre>
      *
-     * <code>.bloombox.schema.partner.PartnerLocation location = 3 [(.gen_bq_schema.description) = "Location account under which this event was submitted."];</code>
+     * <code>.bloombox.partner.PartnerLocation location = 3 [(.gen_bq_schema.description) = "Location account under which this event was submitted."];</code>
      */
     public io.bloombox.schema.partner.LocationAccount.PartnerLocation getLocation() {
       return location_ == null ? io.bloombox.schema.partner.LocationAccount.PartnerLocation.getDefaultInstance() : location_;
@@ -1388,13 +1414,14 @@ public final class AnalyticsContext {
      * Location account under which this event was submitted.
      * </pre>
      *
-     * <code>.bloombox.schema.partner.PartnerLocation location = 3 [(.gen_bq_schema.description) = "Location account under which this event was submitted."];</code>
+     * <code>.bloombox.partner.PartnerLocation location = 3 [(.gen_bq_schema.description) = "Location account under which this event was submitted."];</code>
      */
     public io.bloombox.schema.partner.LocationAccount.PartnerLocationOrBuilder getLocationOrBuilder() {
       return getLocation();
     }
 
     private byte memoizedIsInitialized = -1;
+    @java.lang.Override
     public final boolean isInitialized() {
       byte isInitialized = memoizedIsInitialized;
       if (isInitialized == 1) return true;
@@ -1404,6 +1431,7 @@ public final class AnalyticsContext {
       return true;
     }
 
+    @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
       if (user_ != null) {
@@ -1418,6 +1446,7 @@ public final class AnalyticsContext {
       unknownFields.writeTo(output);
     }
 
+    @java.lang.Override
     public int getSerializedSize() {
       int size = memoizedSize;
       if (size != -1) return size;
@@ -1564,6 +1593,7 @@ public final class AnalyticsContext {
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
 
+    @java.lang.Override
     public Builder newBuilderForType() { return newBuilder(); }
     public static Builder newBuilder() {
       return DEFAULT_INSTANCE.toBuilder();
@@ -1571,6 +1601,7 @@ public final class AnalyticsContext {
     public static Builder newBuilder(io.bloombox.schema.telemetry.AnalyticsContext.EventActors prototype) {
       return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
     }
+    @java.lang.Override
     public Builder toBuilder() {
       return this == DEFAULT_INSTANCE
           ? new Builder() : new Builder().mergeFrom(this);
@@ -1587,20 +1618,21 @@ public final class AnalyticsContext {
      * Specifies full, inflated data records for contextually-related objects, w.r.t. the current event.
      * </pre>
      *
-     * Protobuf type {@code bloombox.schema.analytics.EventActors}
+     * Protobuf type {@code bloombox.analytics.EventActors}
      */
     public static final class Builder extends
         com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:bloombox.schema.analytics.EventActors)
+        // @@protoc_insertion_point(builder_implements:bloombox.analytics.EventActors)
         io.bloombox.schema.telemetry.AnalyticsContext.EventActorsOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return io.bloombox.schema.telemetry.AnalyticsContext.internal_static_bloombox_schema_analytics_EventActors_descriptor;
+        return io.bloombox.schema.telemetry.AnalyticsContext.internal_static_bloombox_analytics_EventActors_descriptor;
       }
 
+      @java.lang.Override
       protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return io.bloombox.schema.telemetry.AnalyticsContext.internal_static_bloombox_schema_analytics_EventActors_fieldAccessorTable
+        return io.bloombox.schema.telemetry.AnalyticsContext.internal_static_bloombox_analytics_EventActors_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
                 io.bloombox.schema.telemetry.AnalyticsContext.EventActors.class, io.bloombox.schema.telemetry.AnalyticsContext.EventActors.Builder.class);
       }
@@ -1620,6 +1652,7 @@ public final class AnalyticsContext {
                 .alwaysUseFieldBuilders) {
         }
       }
+      @java.lang.Override
       public Builder clear() {
         super.clear();
         if (userBuilder_ == null) {
@@ -1643,15 +1676,18 @@ public final class AnalyticsContext {
         return this;
       }
 
+      @java.lang.Override
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return io.bloombox.schema.telemetry.AnalyticsContext.internal_static_bloombox_schema_analytics_EventActors_descriptor;
+        return io.bloombox.schema.telemetry.AnalyticsContext.internal_static_bloombox_analytics_EventActors_descriptor;
       }
 
+      @java.lang.Override
       public io.bloombox.schema.telemetry.AnalyticsContext.EventActors getDefaultInstanceForType() {
         return io.bloombox.schema.telemetry.AnalyticsContext.EventActors.getDefaultInstance();
       }
 
+      @java.lang.Override
       public io.bloombox.schema.telemetry.AnalyticsContext.EventActors build() {
         io.bloombox.schema.telemetry.AnalyticsContext.EventActors result = buildPartial();
         if (!result.isInitialized()) {
@@ -1660,6 +1696,7 @@ public final class AnalyticsContext {
         return result;
       }
 
+      @java.lang.Override
       public io.bloombox.schema.telemetry.AnalyticsContext.EventActors buildPartial() {
         io.bloombox.schema.telemetry.AnalyticsContext.EventActors result = new io.bloombox.schema.telemetry.AnalyticsContext.EventActors(this);
         if (userBuilder_ == null) {
@@ -1681,32 +1718,39 @@ public final class AnalyticsContext {
         return result;
       }
 
+      @java.lang.Override
       public Builder clone() {
         return (Builder) super.clone();
       }
+      @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
         return (Builder) super.setField(field, value);
       }
+      @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
         return (Builder) super.clearField(field);
       }
+      @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
         return (Builder) super.clearOneof(oneof);
       }
+      @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
         return (Builder) super.setRepeatedField(field, index, value);
       }
+      @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
         return (Builder) super.addRepeatedField(field, value);
       }
+      @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
         if (other instanceof io.bloombox.schema.telemetry.AnalyticsContext.EventActors) {
           return mergeFrom((io.bloombox.schema.telemetry.AnalyticsContext.EventActors)other);
@@ -1732,10 +1776,12 @@ public final class AnalyticsContext {
         return this;
       }
 
+      @java.lang.Override
       public final boolean isInitialized() {
         return true;
       }
 
+      @java.lang.Override
       public Builder mergeFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -1762,7 +1808,7 @@ public final class AnalyticsContext {
        * User account that was logged in when the event was submitted.
        * </pre>
        *
-       * <code>.bloombox.schema.identity.User user = 1 [(.gen_bq_schema.description) = "User account that was logged in when the event was submitted."];</code>
+       * <code>.bloombox.identity.User user = 1 [(.gen_bq_schema.description) = "User account that was logged in when the event was submitted."];</code>
        */
       public boolean hasUser() {
         return userBuilder_ != null || user_ != null;
@@ -1772,7 +1818,7 @@ public final class AnalyticsContext {
        * User account that was logged in when the event was submitted.
        * </pre>
        *
-       * <code>.bloombox.schema.identity.User user = 1 [(.gen_bq_schema.description) = "User account that was logged in when the event was submitted."];</code>
+       * <code>.bloombox.identity.User user = 1 [(.gen_bq_schema.description) = "User account that was logged in when the event was submitted."];</code>
        */
       public io.bloombox.schema.identity.AppUser.User getUser() {
         if (userBuilder_ == null) {
@@ -1786,7 +1832,7 @@ public final class AnalyticsContext {
        * User account that was logged in when the event was submitted.
        * </pre>
        *
-       * <code>.bloombox.schema.identity.User user = 1 [(.gen_bq_schema.description) = "User account that was logged in when the event was submitted."];</code>
+       * <code>.bloombox.identity.User user = 1 [(.gen_bq_schema.description) = "User account that was logged in when the event was submitted."];</code>
        */
       public Builder setUser(io.bloombox.schema.identity.AppUser.User value) {
         if (userBuilder_ == null) {
@@ -1806,7 +1852,7 @@ public final class AnalyticsContext {
        * User account that was logged in when the event was submitted.
        * </pre>
        *
-       * <code>.bloombox.schema.identity.User user = 1 [(.gen_bq_schema.description) = "User account that was logged in when the event was submitted."];</code>
+       * <code>.bloombox.identity.User user = 1 [(.gen_bq_schema.description) = "User account that was logged in when the event was submitted."];</code>
        */
       public Builder setUser(
           io.bloombox.schema.identity.AppUser.User.Builder builderForValue) {
@@ -1824,7 +1870,7 @@ public final class AnalyticsContext {
        * User account that was logged in when the event was submitted.
        * </pre>
        *
-       * <code>.bloombox.schema.identity.User user = 1 [(.gen_bq_schema.description) = "User account that was logged in when the event was submitted."];</code>
+       * <code>.bloombox.identity.User user = 1 [(.gen_bq_schema.description) = "User account that was logged in when the event was submitted."];</code>
        */
       public Builder mergeUser(io.bloombox.schema.identity.AppUser.User value) {
         if (userBuilder_ == null) {
@@ -1846,7 +1892,7 @@ public final class AnalyticsContext {
        * User account that was logged in when the event was submitted.
        * </pre>
        *
-       * <code>.bloombox.schema.identity.User user = 1 [(.gen_bq_schema.description) = "User account that was logged in when the event was submitted."];</code>
+       * <code>.bloombox.identity.User user = 1 [(.gen_bq_schema.description) = "User account that was logged in when the event was submitted."];</code>
        */
       public Builder clearUser() {
         if (userBuilder_ == null) {
@@ -1864,7 +1910,7 @@ public final class AnalyticsContext {
        * User account that was logged in when the event was submitted.
        * </pre>
        *
-       * <code>.bloombox.schema.identity.User user = 1 [(.gen_bq_schema.description) = "User account that was logged in when the event was submitted."];</code>
+       * <code>.bloombox.identity.User user = 1 [(.gen_bq_schema.description) = "User account that was logged in when the event was submitted."];</code>
        */
       public io.bloombox.schema.identity.AppUser.User.Builder getUserBuilder() {
         
@@ -1876,7 +1922,7 @@ public final class AnalyticsContext {
        * User account that was logged in when the event was submitted.
        * </pre>
        *
-       * <code>.bloombox.schema.identity.User user = 1 [(.gen_bq_schema.description) = "User account that was logged in when the event was submitted."];</code>
+       * <code>.bloombox.identity.User user = 1 [(.gen_bq_schema.description) = "User account that was logged in when the event was submitted."];</code>
        */
       public io.bloombox.schema.identity.AppUser.UserOrBuilder getUserOrBuilder() {
         if (userBuilder_ != null) {
@@ -1891,7 +1937,7 @@ public final class AnalyticsContext {
        * User account that was logged in when the event was submitted.
        * </pre>
        *
-       * <code>.bloombox.schema.identity.User user = 1 [(.gen_bq_schema.description) = "User account that was logged in when the event was submitted."];</code>
+       * <code>.bloombox.identity.User user = 1 [(.gen_bq_schema.description) = "User account that was logged in when the event was submitted."];</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
           io.bloombox.schema.identity.AppUser.User, io.bloombox.schema.identity.AppUser.User.Builder, io.bloombox.schema.identity.AppUser.UserOrBuilder> 
@@ -1915,7 +1961,7 @@ public final class AnalyticsContext {
        * Partner account under which the event was submitted.
        * </pre>
        *
-       * <code>.bloombox.schema.partner.Partner partner = 2 [(.gen_bq_schema.description) = "Partner account under which the event was submitted."];</code>
+       * <code>.bloombox.partner.Partner partner = 2 [(.gen_bq_schema.description) = "Partner account under which the event was submitted."];</code>
        */
       public boolean hasPartner() {
         return partnerBuilder_ != null || partner_ != null;
@@ -1925,7 +1971,7 @@ public final class AnalyticsContext {
        * Partner account under which the event was submitted.
        * </pre>
        *
-       * <code>.bloombox.schema.partner.Partner partner = 2 [(.gen_bq_schema.description) = "Partner account under which the event was submitted."];</code>
+       * <code>.bloombox.partner.Partner partner = 2 [(.gen_bq_schema.description) = "Partner account under which the event was submitted."];</code>
        */
       public io.bloombox.schema.partner.PartnerAccount.Partner getPartner() {
         if (partnerBuilder_ == null) {
@@ -1939,7 +1985,7 @@ public final class AnalyticsContext {
        * Partner account under which the event was submitted.
        * </pre>
        *
-       * <code>.bloombox.schema.partner.Partner partner = 2 [(.gen_bq_schema.description) = "Partner account under which the event was submitted."];</code>
+       * <code>.bloombox.partner.Partner partner = 2 [(.gen_bq_schema.description) = "Partner account under which the event was submitted."];</code>
        */
       public Builder setPartner(io.bloombox.schema.partner.PartnerAccount.Partner value) {
         if (partnerBuilder_ == null) {
@@ -1959,7 +2005,7 @@ public final class AnalyticsContext {
        * Partner account under which the event was submitted.
        * </pre>
        *
-       * <code>.bloombox.schema.partner.Partner partner = 2 [(.gen_bq_schema.description) = "Partner account under which the event was submitted."];</code>
+       * <code>.bloombox.partner.Partner partner = 2 [(.gen_bq_schema.description) = "Partner account under which the event was submitted."];</code>
        */
       public Builder setPartner(
           io.bloombox.schema.partner.PartnerAccount.Partner.Builder builderForValue) {
@@ -1977,7 +2023,7 @@ public final class AnalyticsContext {
        * Partner account under which the event was submitted.
        * </pre>
        *
-       * <code>.bloombox.schema.partner.Partner partner = 2 [(.gen_bq_schema.description) = "Partner account under which the event was submitted."];</code>
+       * <code>.bloombox.partner.Partner partner = 2 [(.gen_bq_schema.description) = "Partner account under which the event was submitted."];</code>
        */
       public Builder mergePartner(io.bloombox.schema.partner.PartnerAccount.Partner value) {
         if (partnerBuilder_ == null) {
@@ -1999,7 +2045,7 @@ public final class AnalyticsContext {
        * Partner account under which the event was submitted.
        * </pre>
        *
-       * <code>.bloombox.schema.partner.Partner partner = 2 [(.gen_bq_schema.description) = "Partner account under which the event was submitted."];</code>
+       * <code>.bloombox.partner.Partner partner = 2 [(.gen_bq_schema.description) = "Partner account under which the event was submitted."];</code>
        */
       public Builder clearPartner() {
         if (partnerBuilder_ == null) {
@@ -2017,7 +2063,7 @@ public final class AnalyticsContext {
        * Partner account under which the event was submitted.
        * </pre>
        *
-       * <code>.bloombox.schema.partner.Partner partner = 2 [(.gen_bq_schema.description) = "Partner account under which the event was submitted."];</code>
+       * <code>.bloombox.partner.Partner partner = 2 [(.gen_bq_schema.description) = "Partner account under which the event was submitted."];</code>
        */
       public io.bloombox.schema.partner.PartnerAccount.Partner.Builder getPartnerBuilder() {
         
@@ -2029,7 +2075,7 @@ public final class AnalyticsContext {
        * Partner account under which the event was submitted.
        * </pre>
        *
-       * <code>.bloombox.schema.partner.Partner partner = 2 [(.gen_bq_schema.description) = "Partner account under which the event was submitted."];</code>
+       * <code>.bloombox.partner.Partner partner = 2 [(.gen_bq_schema.description) = "Partner account under which the event was submitted."];</code>
        */
       public io.bloombox.schema.partner.PartnerAccount.PartnerOrBuilder getPartnerOrBuilder() {
         if (partnerBuilder_ != null) {
@@ -2044,7 +2090,7 @@ public final class AnalyticsContext {
        * Partner account under which the event was submitted.
        * </pre>
        *
-       * <code>.bloombox.schema.partner.Partner partner = 2 [(.gen_bq_schema.description) = "Partner account under which the event was submitted."];</code>
+       * <code>.bloombox.partner.Partner partner = 2 [(.gen_bq_schema.description) = "Partner account under which the event was submitted."];</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
           io.bloombox.schema.partner.PartnerAccount.Partner, io.bloombox.schema.partner.PartnerAccount.Partner.Builder, io.bloombox.schema.partner.PartnerAccount.PartnerOrBuilder> 
@@ -2068,7 +2114,7 @@ public final class AnalyticsContext {
        * Location account under which this event was submitted.
        * </pre>
        *
-       * <code>.bloombox.schema.partner.PartnerLocation location = 3 [(.gen_bq_schema.description) = "Location account under which this event was submitted."];</code>
+       * <code>.bloombox.partner.PartnerLocation location = 3 [(.gen_bq_schema.description) = "Location account under which this event was submitted."];</code>
        */
       public boolean hasLocation() {
         return locationBuilder_ != null || location_ != null;
@@ -2078,7 +2124,7 @@ public final class AnalyticsContext {
        * Location account under which this event was submitted.
        * </pre>
        *
-       * <code>.bloombox.schema.partner.PartnerLocation location = 3 [(.gen_bq_schema.description) = "Location account under which this event was submitted."];</code>
+       * <code>.bloombox.partner.PartnerLocation location = 3 [(.gen_bq_schema.description) = "Location account under which this event was submitted."];</code>
        */
       public io.bloombox.schema.partner.LocationAccount.PartnerLocation getLocation() {
         if (locationBuilder_ == null) {
@@ -2092,7 +2138,7 @@ public final class AnalyticsContext {
        * Location account under which this event was submitted.
        * </pre>
        *
-       * <code>.bloombox.schema.partner.PartnerLocation location = 3 [(.gen_bq_schema.description) = "Location account under which this event was submitted."];</code>
+       * <code>.bloombox.partner.PartnerLocation location = 3 [(.gen_bq_schema.description) = "Location account under which this event was submitted."];</code>
        */
       public Builder setLocation(io.bloombox.schema.partner.LocationAccount.PartnerLocation value) {
         if (locationBuilder_ == null) {
@@ -2112,7 +2158,7 @@ public final class AnalyticsContext {
        * Location account under which this event was submitted.
        * </pre>
        *
-       * <code>.bloombox.schema.partner.PartnerLocation location = 3 [(.gen_bq_schema.description) = "Location account under which this event was submitted."];</code>
+       * <code>.bloombox.partner.PartnerLocation location = 3 [(.gen_bq_schema.description) = "Location account under which this event was submitted."];</code>
        */
       public Builder setLocation(
           io.bloombox.schema.partner.LocationAccount.PartnerLocation.Builder builderForValue) {
@@ -2130,7 +2176,7 @@ public final class AnalyticsContext {
        * Location account under which this event was submitted.
        * </pre>
        *
-       * <code>.bloombox.schema.partner.PartnerLocation location = 3 [(.gen_bq_schema.description) = "Location account under which this event was submitted."];</code>
+       * <code>.bloombox.partner.PartnerLocation location = 3 [(.gen_bq_schema.description) = "Location account under which this event was submitted."];</code>
        */
       public Builder mergeLocation(io.bloombox.schema.partner.LocationAccount.PartnerLocation value) {
         if (locationBuilder_ == null) {
@@ -2152,7 +2198,7 @@ public final class AnalyticsContext {
        * Location account under which this event was submitted.
        * </pre>
        *
-       * <code>.bloombox.schema.partner.PartnerLocation location = 3 [(.gen_bq_schema.description) = "Location account under which this event was submitted."];</code>
+       * <code>.bloombox.partner.PartnerLocation location = 3 [(.gen_bq_schema.description) = "Location account under which this event was submitted."];</code>
        */
       public Builder clearLocation() {
         if (locationBuilder_ == null) {
@@ -2170,7 +2216,7 @@ public final class AnalyticsContext {
        * Location account under which this event was submitted.
        * </pre>
        *
-       * <code>.bloombox.schema.partner.PartnerLocation location = 3 [(.gen_bq_schema.description) = "Location account under which this event was submitted."];</code>
+       * <code>.bloombox.partner.PartnerLocation location = 3 [(.gen_bq_schema.description) = "Location account under which this event was submitted."];</code>
        */
       public io.bloombox.schema.partner.LocationAccount.PartnerLocation.Builder getLocationBuilder() {
         
@@ -2182,7 +2228,7 @@ public final class AnalyticsContext {
        * Location account under which this event was submitted.
        * </pre>
        *
-       * <code>.bloombox.schema.partner.PartnerLocation location = 3 [(.gen_bq_schema.description) = "Location account under which this event was submitted."];</code>
+       * <code>.bloombox.partner.PartnerLocation location = 3 [(.gen_bq_schema.description) = "Location account under which this event was submitted."];</code>
        */
       public io.bloombox.schema.partner.LocationAccount.PartnerLocationOrBuilder getLocationOrBuilder() {
         if (locationBuilder_ != null) {
@@ -2197,7 +2243,7 @@ public final class AnalyticsContext {
        * Location account under which this event was submitted.
        * </pre>
        *
-       * <code>.bloombox.schema.partner.PartnerLocation location = 3 [(.gen_bq_schema.description) = "Location account under which this event was submitted."];</code>
+       * <code>.bloombox.partner.PartnerLocation location = 3 [(.gen_bq_schema.description) = "Location account under which this event was submitted."];</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
           io.bloombox.schema.partner.LocationAccount.PartnerLocation, io.bloombox.schema.partner.LocationAccount.PartnerLocation.Builder, io.bloombox.schema.partner.LocationAccount.PartnerLocationOrBuilder> 
@@ -2212,21 +2258,23 @@ public final class AnalyticsContext {
         }
         return locationBuilder_;
       }
+      @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
         return super.setUnknownFieldsProto3(unknownFields);
       }
 
+      @java.lang.Override
       public final Builder mergeUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
         return super.mergeUnknownFields(unknownFields);
       }
 
 
-      // @@protoc_insertion_point(builder_scope:bloombox.schema.analytics.EventActors)
+      // @@protoc_insertion_point(builder_scope:bloombox.analytics.EventActors)
     }
 
-    // @@protoc_insertion_point(class_scope:bloombox.schema.analytics.EventActors)
+    // @@protoc_insertion_point(class_scope:bloombox.analytics.EventActors)
     private static final io.bloombox.schema.telemetry.AnalyticsContext.EventActors DEFAULT_INSTANCE;
     static {
       DEFAULT_INSTANCE = new io.bloombox.schema.telemetry.AnalyticsContext.EventActors();
@@ -2238,6 +2286,7 @@ public final class AnalyticsContext {
 
     private static final com.google.protobuf.Parser<EventActors>
         PARSER = new com.google.protobuf.AbstractParser<EventActors>() {
+      @java.lang.Override
       public EventActors parsePartialFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -2255,6 +2304,7 @@ public final class AnalyticsContext {
       return PARSER;
     }
 
+    @java.lang.Override
     public io.bloombox.schema.telemetry.AnalyticsContext.EventActors getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
@@ -2262,7 +2312,7 @@ public final class AnalyticsContext {
   }
 
   public interface ContextOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:bloombox.schema.analytics.Context)
+      // @@protoc_insertion_point(interface_extends:bloombox.analytics.Context)
       com.google.protobuf.MessageOrBuilder {
 
     /**
@@ -2270,7 +2320,7 @@ public final class AnalyticsContext {
      * Collection information, specifies event type or category.
      * </pre>
      *
-     * <code>.bloombox.schema.analytics.context.Collection collection = 1 [(.gen_bq_schema.require) = true, (.gen_bq_schema.description) = "Collection information, specifies event type or category."];</code>
+     * <code>.bloombox.analytics.context.Collection collection = 1 [(.gen_bq_schema.require) = true, (.gen_bq_schema.description) = "Collection information, specifies event type or category."];</code>
      */
     boolean hasCollection();
     /**
@@ -2278,7 +2328,7 @@ public final class AnalyticsContext {
      * Collection information, specifies event type or category.
      * </pre>
      *
-     * <code>.bloombox.schema.analytics.context.Collection collection = 1 [(.gen_bq_schema.require) = true, (.gen_bq_schema.description) = "Collection information, specifies event type or category."];</code>
+     * <code>.bloombox.analytics.context.Collection collection = 1 [(.gen_bq_schema.require) = true, (.gen_bq_schema.description) = "Collection information, specifies event type or category."];</code>
      */
     io.bloombox.schema.telemetry.context.AnalyticsCollection.Collection getCollection();
     /**
@@ -2286,7 +2336,7 @@ public final class AnalyticsContext {
      * Collection information, specifies event type or category.
      * </pre>
      *
-     * <code>.bloombox.schema.analytics.context.Collection collection = 1 [(.gen_bq_schema.require) = true, (.gen_bq_schema.description) = "Collection information, specifies event type or category."];</code>
+     * <code>.bloombox.analytics.context.Collection collection = 1 [(.gen_bq_schema.require) = true, (.gen_bq_schema.description) = "Collection information, specifies event type or category."];</code>
      */
     io.bloombox.schema.telemetry.context.AnalyticsCollection.CollectionOrBuilder getCollectionOrBuilder();
 
@@ -2295,7 +2345,7 @@ public final class AnalyticsContext {
      * Specifies the user associated with this event, if known.
      * </pre>
      *
-     * <code>.bloombox.schema.identity.UserKey user_key = 2 [(.gen_bq_schema.description) = "Specifies the user associated with this event, if known."];</code>
+     * <code>.bloombox.identity.UserKey user_key = 2 [(.gen_bq_schema.description) = "Specifies the user associated with this event, if known."];</code>
      */
     boolean hasUserKey();
     /**
@@ -2303,7 +2353,7 @@ public final class AnalyticsContext {
      * Specifies the user associated with this event, if known.
      * </pre>
      *
-     * <code>.bloombox.schema.identity.UserKey user_key = 2 [(.gen_bq_schema.description) = "Specifies the user associated with this event, if known."];</code>
+     * <code>.bloombox.identity.UserKey user_key = 2 [(.gen_bq_schema.description) = "Specifies the user associated with this event, if known."];</code>
      */
     io.bloombox.schema.identity.AppUserKey.UserKey getUserKey();
     /**
@@ -2311,7 +2361,7 @@ public final class AnalyticsContext {
      * Specifies the user associated with this event, if known.
      * </pre>
      *
-     * <code>.bloombox.schema.identity.UserKey user_key = 2 [(.gen_bq_schema.description) = "Specifies the user associated with this event, if known."];</code>
+     * <code>.bloombox.identity.UserKey user_key = 2 [(.gen_bq_schema.description) = "Specifies the user associated with this event, if known."];</code>
      */
     io.bloombox.schema.identity.AppUserKey.UserKeyOrBuilder getUserKeyOrBuilder();
 
@@ -2394,7 +2444,7 @@ public final class AnalyticsContext {
      * Partner and commercial scope of this event.
      * </pre>
      *
-     * <code>.bloombox.schema.analytics.Scope scope = 7 [(.gen_bq_schema.description) = "Partner and commercial scope of this event."];</code>
+     * <code>.bloombox.analytics.Scope scope = 7 [(.gen_bq_schema.description) = "Partner and commercial scope of this event."];</code>
      */
     boolean hasScope();
     /**
@@ -2402,7 +2452,7 @@ public final class AnalyticsContext {
      * Partner and commercial scope of this event.
      * </pre>
      *
-     * <code>.bloombox.schema.analytics.Scope scope = 7 [(.gen_bq_schema.description) = "Partner and commercial scope of this event."];</code>
+     * <code>.bloombox.analytics.Scope scope = 7 [(.gen_bq_schema.description) = "Partner and commercial scope of this event."];</code>
      */
     io.bloombox.schema.telemetry.AnalyticsScope.Scope getScope();
     /**
@@ -2410,7 +2460,7 @@ public final class AnalyticsContext {
      * Partner and commercial scope of this event.
      * </pre>
      *
-     * <code>.bloombox.schema.analytics.Scope scope = 7 [(.gen_bq_schema.description) = "Partner and commercial scope of this event."];</code>
+     * <code>.bloombox.analytics.Scope scope = 7 [(.gen_bq_schema.description) = "Partner and commercial scope of this event."];</code>
      */
     io.bloombox.schema.telemetry.AnalyticsScope.ScopeOrBuilder getScopeOrBuilder();
 
@@ -2419,7 +2469,7 @@ public final class AnalyticsContext {
      * Application version information.
      * </pre>
      *
-     * <code>.bloombox.schema.analytics.context.DeviceApplication app = 8 [(.gen_bq_schema.description) = "Application version information."];</code>
+     * <code>.bloombox.analytics.context.DeviceApplication app = 8 [(.gen_bq_schema.description) = "Application version information."];</code>
      */
     boolean hasApp();
     /**
@@ -2427,7 +2477,7 @@ public final class AnalyticsContext {
      * Application version information.
      * </pre>
      *
-     * <code>.bloombox.schema.analytics.context.DeviceApplication app = 8 [(.gen_bq_schema.description) = "Application version information."];</code>
+     * <code>.bloombox.analytics.context.DeviceApplication app = 8 [(.gen_bq_schema.description) = "Application version information."];</code>
      */
     io.bloombox.schema.telemetry.context.ApplicationContext.DeviceApplication getApp();
     /**
@@ -2435,7 +2485,7 @@ public final class AnalyticsContext {
      * Application version information.
      * </pre>
      *
-     * <code>.bloombox.schema.analytics.context.DeviceApplication app = 8 [(.gen_bq_schema.description) = "Application version information."];</code>
+     * <code>.bloombox.analytics.context.DeviceApplication app = 8 [(.gen_bq_schema.description) = "Application version information."];</code>
      */
     io.bloombox.schema.telemetry.context.ApplicationContext.DeviceApplicationOrBuilder getAppOrBuilder();
 
@@ -2444,7 +2494,7 @@ public final class AnalyticsContext {
      * Library version information.
      * </pre>
      *
-     * <code>.bloombox.schema.analytics.context.DeviceLibrary library = 9 [(.gen_bq_schema.description) = "Library version information."];</code>
+     * <code>.bloombox.analytics.context.DeviceLibrary library = 9 [(.gen_bq_schema.description) = "Library version information."];</code>
      */
     boolean hasLibrary();
     /**
@@ -2452,7 +2502,7 @@ public final class AnalyticsContext {
      * Library version information.
      * </pre>
      *
-     * <code>.bloombox.schema.analytics.context.DeviceLibrary library = 9 [(.gen_bq_schema.description) = "Library version information."];</code>
+     * <code>.bloombox.analytics.context.DeviceLibrary library = 9 [(.gen_bq_schema.description) = "Library version information."];</code>
      */
     io.bloombox.schema.telemetry.context.LibraryContext.DeviceLibrary getLibrary();
     /**
@@ -2460,7 +2510,7 @@ public final class AnalyticsContext {
      * Library version information.
      * </pre>
      *
-     * <code>.bloombox.schema.analytics.context.DeviceLibrary library = 9 [(.gen_bq_schema.description) = "Library version information."];</code>
+     * <code>.bloombox.analytics.context.DeviceLibrary library = 9 [(.gen_bq_schema.description) = "Library version information."];</code>
      */
     io.bloombox.schema.telemetry.context.LibraryContext.DeviceLibraryOrBuilder getLibraryOrBuilder();
 
@@ -2470,7 +2520,7 @@ public final class AnalyticsContext {
      * such as a mobile phone application or embedded device running partner code.
      * </pre>
      *
-     * <code>.bloombox.schema.analytics.context.NativeDeviceContext native = 10 [(.gen_bq_schema.description) = "Specifies information about a native device, when the event is being sent from a native context of some kind, such as a mobile phone application or embedded device running partner code."];</code>
+     * <code>.bloombox.analytics.context.NativeDeviceContext native = 10 [(.gen_bq_schema.description) = "Specifies information about a native device, when the event is being sent from a native context of some kind, such as a mobile phone application or embedded device running partner code."];</code>
      */
     boolean hasNative();
     /**
@@ -2479,7 +2529,7 @@ public final class AnalyticsContext {
      * such as a mobile phone application or embedded device running partner code.
      * </pre>
      *
-     * <code>.bloombox.schema.analytics.context.NativeDeviceContext native = 10 [(.gen_bq_schema.description) = "Specifies information about a native device, when the event is being sent from a native context of some kind, such as a mobile phone application or embedded device running partner code."];</code>
+     * <code>.bloombox.analytics.context.NativeDeviceContext native = 10 [(.gen_bq_schema.description) = "Specifies information about a native device, when the event is being sent from a native context of some kind, such as a mobile phone application or embedded device running partner code."];</code>
      */
     io.bloombox.schema.telemetry.context.DeviceContext.NativeDeviceContext getNative();
     /**
@@ -2488,7 +2538,7 @@ public final class AnalyticsContext {
      * such as a mobile phone application or embedded device running partner code.
      * </pre>
      *
-     * <code>.bloombox.schema.analytics.context.NativeDeviceContext native = 10 [(.gen_bq_schema.description) = "Specifies information about a native device, when the event is being sent from a native context of some kind, such as a mobile phone application or embedded device running partner code."];</code>
+     * <code>.bloombox.analytics.context.NativeDeviceContext native = 10 [(.gen_bq_schema.description) = "Specifies information about a native device, when the event is being sent from a native context of some kind, such as a mobile phone application or embedded device running partner code."];</code>
      */
     io.bloombox.schema.telemetry.context.DeviceContext.NativeDeviceContextOrBuilder getNativeOrBuilder();
 
@@ -2497,7 +2547,7 @@ public final class AnalyticsContext {
      * Specifies information about a web browser, when the event is being sent from some kind of web browsing context.
      * </pre>
      *
-     * <code>.bloombox.schema.analytics.context.BrowserDeviceContext browser = 11 [(.gen_bq_schema.description) = "Specifies information about a web browser, when the event is being sent from some kind of web browsing context."];</code>
+     * <code>.bloombox.analytics.context.BrowserDeviceContext browser = 11 [(.gen_bq_schema.description) = "Specifies information about a web browser, when the event is being sent from some kind of web browsing context."];</code>
      */
     boolean hasBrowser();
     /**
@@ -2505,7 +2555,7 @@ public final class AnalyticsContext {
      * Specifies information about a web browser, when the event is being sent from some kind of web browsing context.
      * </pre>
      *
-     * <code>.bloombox.schema.analytics.context.BrowserDeviceContext browser = 11 [(.gen_bq_schema.description) = "Specifies information about a web browser, when the event is being sent from some kind of web browsing context."];</code>
+     * <code>.bloombox.analytics.context.BrowserDeviceContext browser = 11 [(.gen_bq_schema.description) = "Specifies information about a web browser, when the event is being sent from some kind of web browsing context."];</code>
      */
     io.bloombox.schema.telemetry.context.BrowserContext.BrowserDeviceContext getBrowser();
     /**
@@ -2513,7 +2563,7 @@ public final class AnalyticsContext {
      * Specifies information about a web browser, when the event is being sent from some kind of web browsing context.
      * </pre>
      *
-     * <code>.bloombox.schema.analytics.context.BrowserDeviceContext browser = 11 [(.gen_bq_schema.description) = "Specifies information about a web browser, when the event is being sent from some kind of web browsing context."];</code>
+     * <code>.bloombox.analytics.context.BrowserDeviceContext browser = 11 [(.gen_bq_schema.description) = "Specifies information about a web browser, when the event is being sent from some kind of web browsing context."];</code>
      */
     io.bloombox.schema.telemetry.context.BrowserContext.BrowserDeviceContextOrBuilder getBrowserOrBuilder();
 
@@ -2547,11 +2597,11 @@ public final class AnalyticsContext {
    * Specifies contextual metadata to include with events or exceptions recorded via analytics/telemetry ingest.
    * </pre>
    *
-   * Protobuf type {@code bloombox.schema.analytics.Context}
+   * Protobuf type {@code bloombox.analytics.Context}
    */
   public  static final class Context extends
       com.google.protobuf.GeneratedMessageV3 implements
-      // @@protoc_insertion_point(message_implements:bloombox.schema.analytics.Context)
+      // @@protoc_insertion_point(message_implements:bloombox.analytics.Context)
       ContextOrBuilder {
   private static final long serialVersionUID = 0L;
     // Use Context.newBuilder() to construct.
@@ -2589,13 +2639,6 @@ public final class AnalyticsContext {
             case 0:
               done = true;
               break;
-            default: {
-              if (!parseUnknownFieldProto3(
-                  input, unknownFields, extensionRegistry, tag)) {
-                done = true;
-              }
-              break;
-            }
             case 10: {
               io.bloombox.schema.telemetry.context.AnalyticsCollection.Collection.Builder subBuilder = null;
               if (collection_ != null) {
@@ -2724,6 +2767,13 @@ public final class AnalyticsContext {
 
               break;
             }
+            default: {
+              if (!parseUnknownFieldProto3(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
           }
         }
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
@@ -2738,12 +2788,13 @@ public final class AnalyticsContext {
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return io.bloombox.schema.telemetry.AnalyticsContext.internal_static_bloombox_schema_analytics_Context_descriptor;
+      return io.bloombox.schema.telemetry.AnalyticsContext.internal_static_bloombox_analytics_Context_descriptor;
     }
 
+    @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return io.bloombox.schema.telemetry.AnalyticsContext.internal_static_bloombox_schema_analytics_Context_fieldAccessorTable
+      return io.bloombox.schema.telemetry.AnalyticsContext.internal_static_bloombox_analytics_Context_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
               io.bloombox.schema.telemetry.AnalyticsContext.Context.class, io.bloombox.schema.telemetry.AnalyticsContext.Context.Builder.class);
     }
@@ -2755,7 +2806,7 @@ public final class AnalyticsContext {
      * Collection information, specifies event type or category.
      * </pre>
      *
-     * <code>.bloombox.schema.analytics.context.Collection collection = 1 [(.gen_bq_schema.require) = true, (.gen_bq_schema.description) = "Collection information, specifies event type or category."];</code>
+     * <code>.bloombox.analytics.context.Collection collection = 1 [(.gen_bq_schema.require) = true, (.gen_bq_schema.description) = "Collection information, specifies event type or category."];</code>
      */
     public boolean hasCollection() {
       return collection_ != null;
@@ -2765,7 +2816,7 @@ public final class AnalyticsContext {
      * Collection information, specifies event type or category.
      * </pre>
      *
-     * <code>.bloombox.schema.analytics.context.Collection collection = 1 [(.gen_bq_schema.require) = true, (.gen_bq_schema.description) = "Collection information, specifies event type or category."];</code>
+     * <code>.bloombox.analytics.context.Collection collection = 1 [(.gen_bq_schema.require) = true, (.gen_bq_schema.description) = "Collection information, specifies event type or category."];</code>
      */
     public io.bloombox.schema.telemetry.context.AnalyticsCollection.Collection getCollection() {
       return collection_ == null ? io.bloombox.schema.telemetry.context.AnalyticsCollection.Collection.getDefaultInstance() : collection_;
@@ -2775,7 +2826,7 @@ public final class AnalyticsContext {
      * Collection information, specifies event type or category.
      * </pre>
      *
-     * <code>.bloombox.schema.analytics.context.Collection collection = 1 [(.gen_bq_schema.require) = true, (.gen_bq_schema.description) = "Collection information, specifies event type or category."];</code>
+     * <code>.bloombox.analytics.context.Collection collection = 1 [(.gen_bq_schema.require) = true, (.gen_bq_schema.description) = "Collection information, specifies event type or category."];</code>
      */
     public io.bloombox.schema.telemetry.context.AnalyticsCollection.CollectionOrBuilder getCollectionOrBuilder() {
       return getCollection();
@@ -2788,7 +2839,7 @@ public final class AnalyticsContext {
      * Specifies the user associated with this event, if known.
      * </pre>
      *
-     * <code>.bloombox.schema.identity.UserKey user_key = 2 [(.gen_bq_schema.description) = "Specifies the user associated with this event, if known."];</code>
+     * <code>.bloombox.identity.UserKey user_key = 2 [(.gen_bq_schema.description) = "Specifies the user associated with this event, if known."];</code>
      */
     public boolean hasUserKey() {
       return userKey_ != null;
@@ -2798,7 +2849,7 @@ public final class AnalyticsContext {
      * Specifies the user associated with this event, if known.
      * </pre>
      *
-     * <code>.bloombox.schema.identity.UserKey user_key = 2 [(.gen_bq_schema.description) = "Specifies the user associated with this event, if known."];</code>
+     * <code>.bloombox.identity.UserKey user_key = 2 [(.gen_bq_schema.description) = "Specifies the user associated with this event, if known."];</code>
      */
     public io.bloombox.schema.identity.AppUserKey.UserKey getUserKey() {
       return userKey_ == null ? io.bloombox.schema.identity.AppUserKey.UserKey.getDefaultInstance() : userKey_;
@@ -2808,7 +2859,7 @@ public final class AnalyticsContext {
      * Specifies the user associated with this event, if known.
      * </pre>
      *
-     * <code>.bloombox.schema.identity.UserKey user_key = 2 [(.gen_bq_schema.description) = "Specifies the user associated with this event, if known."];</code>
+     * <code>.bloombox.identity.UserKey user_key = 2 [(.gen_bq_schema.description) = "Specifies the user associated with this event, if known."];</code>
      */
     public io.bloombox.schema.identity.AppUserKey.UserKeyOrBuilder getUserKeyOrBuilder() {
       return getUserKey();
@@ -2991,7 +3042,7 @@ public final class AnalyticsContext {
      * Partner and commercial scope of this event.
      * </pre>
      *
-     * <code>.bloombox.schema.analytics.Scope scope = 7 [(.gen_bq_schema.description) = "Partner and commercial scope of this event."];</code>
+     * <code>.bloombox.analytics.Scope scope = 7 [(.gen_bq_schema.description) = "Partner and commercial scope of this event."];</code>
      */
     public boolean hasScope() {
       return scope_ != null;
@@ -3001,7 +3052,7 @@ public final class AnalyticsContext {
      * Partner and commercial scope of this event.
      * </pre>
      *
-     * <code>.bloombox.schema.analytics.Scope scope = 7 [(.gen_bq_schema.description) = "Partner and commercial scope of this event."];</code>
+     * <code>.bloombox.analytics.Scope scope = 7 [(.gen_bq_schema.description) = "Partner and commercial scope of this event."];</code>
      */
     public io.bloombox.schema.telemetry.AnalyticsScope.Scope getScope() {
       return scope_ == null ? io.bloombox.schema.telemetry.AnalyticsScope.Scope.getDefaultInstance() : scope_;
@@ -3011,7 +3062,7 @@ public final class AnalyticsContext {
      * Partner and commercial scope of this event.
      * </pre>
      *
-     * <code>.bloombox.schema.analytics.Scope scope = 7 [(.gen_bq_schema.description) = "Partner and commercial scope of this event."];</code>
+     * <code>.bloombox.analytics.Scope scope = 7 [(.gen_bq_schema.description) = "Partner and commercial scope of this event."];</code>
      */
     public io.bloombox.schema.telemetry.AnalyticsScope.ScopeOrBuilder getScopeOrBuilder() {
       return getScope();
@@ -3024,7 +3075,7 @@ public final class AnalyticsContext {
      * Application version information.
      * </pre>
      *
-     * <code>.bloombox.schema.analytics.context.DeviceApplication app = 8 [(.gen_bq_schema.description) = "Application version information."];</code>
+     * <code>.bloombox.analytics.context.DeviceApplication app = 8 [(.gen_bq_schema.description) = "Application version information."];</code>
      */
     public boolean hasApp() {
       return app_ != null;
@@ -3034,7 +3085,7 @@ public final class AnalyticsContext {
      * Application version information.
      * </pre>
      *
-     * <code>.bloombox.schema.analytics.context.DeviceApplication app = 8 [(.gen_bq_schema.description) = "Application version information."];</code>
+     * <code>.bloombox.analytics.context.DeviceApplication app = 8 [(.gen_bq_schema.description) = "Application version information."];</code>
      */
     public io.bloombox.schema.telemetry.context.ApplicationContext.DeviceApplication getApp() {
       return app_ == null ? io.bloombox.schema.telemetry.context.ApplicationContext.DeviceApplication.getDefaultInstance() : app_;
@@ -3044,7 +3095,7 @@ public final class AnalyticsContext {
      * Application version information.
      * </pre>
      *
-     * <code>.bloombox.schema.analytics.context.DeviceApplication app = 8 [(.gen_bq_schema.description) = "Application version information."];</code>
+     * <code>.bloombox.analytics.context.DeviceApplication app = 8 [(.gen_bq_schema.description) = "Application version information."];</code>
      */
     public io.bloombox.schema.telemetry.context.ApplicationContext.DeviceApplicationOrBuilder getAppOrBuilder() {
       return getApp();
@@ -3057,7 +3108,7 @@ public final class AnalyticsContext {
      * Library version information.
      * </pre>
      *
-     * <code>.bloombox.schema.analytics.context.DeviceLibrary library = 9 [(.gen_bq_schema.description) = "Library version information."];</code>
+     * <code>.bloombox.analytics.context.DeviceLibrary library = 9 [(.gen_bq_schema.description) = "Library version information."];</code>
      */
     public boolean hasLibrary() {
       return library_ != null;
@@ -3067,7 +3118,7 @@ public final class AnalyticsContext {
      * Library version information.
      * </pre>
      *
-     * <code>.bloombox.schema.analytics.context.DeviceLibrary library = 9 [(.gen_bq_schema.description) = "Library version information."];</code>
+     * <code>.bloombox.analytics.context.DeviceLibrary library = 9 [(.gen_bq_schema.description) = "Library version information."];</code>
      */
     public io.bloombox.schema.telemetry.context.LibraryContext.DeviceLibrary getLibrary() {
       return library_ == null ? io.bloombox.schema.telemetry.context.LibraryContext.DeviceLibrary.getDefaultInstance() : library_;
@@ -3077,7 +3128,7 @@ public final class AnalyticsContext {
      * Library version information.
      * </pre>
      *
-     * <code>.bloombox.schema.analytics.context.DeviceLibrary library = 9 [(.gen_bq_schema.description) = "Library version information."];</code>
+     * <code>.bloombox.analytics.context.DeviceLibrary library = 9 [(.gen_bq_schema.description) = "Library version information."];</code>
      */
     public io.bloombox.schema.telemetry.context.LibraryContext.DeviceLibraryOrBuilder getLibraryOrBuilder() {
       return getLibrary();
@@ -3091,7 +3142,7 @@ public final class AnalyticsContext {
      * such as a mobile phone application or embedded device running partner code.
      * </pre>
      *
-     * <code>.bloombox.schema.analytics.context.NativeDeviceContext native = 10 [(.gen_bq_schema.description) = "Specifies information about a native device, when the event is being sent from a native context of some kind, such as a mobile phone application or embedded device running partner code."];</code>
+     * <code>.bloombox.analytics.context.NativeDeviceContext native = 10 [(.gen_bq_schema.description) = "Specifies information about a native device, when the event is being sent from a native context of some kind, such as a mobile phone application or embedded device running partner code."];</code>
      */
     public boolean hasNative() {
       return native_ != null;
@@ -3102,7 +3153,7 @@ public final class AnalyticsContext {
      * such as a mobile phone application or embedded device running partner code.
      * </pre>
      *
-     * <code>.bloombox.schema.analytics.context.NativeDeviceContext native = 10 [(.gen_bq_schema.description) = "Specifies information about a native device, when the event is being sent from a native context of some kind, such as a mobile phone application or embedded device running partner code."];</code>
+     * <code>.bloombox.analytics.context.NativeDeviceContext native = 10 [(.gen_bq_schema.description) = "Specifies information about a native device, when the event is being sent from a native context of some kind, such as a mobile phone application or embedded device running partner code."];</code>
      */
     public io.bloombox.schema.telemetry.context.DeviceContext.NativeDeviceContext getNative() {
       return native_ == null ? io.bloombox.schema.telemetry.context.DeviceContext.NativeDeviceContext.getDefaultInstance() : native_;
@@ -3113,7 +3164,7 @@ public final class AnalyticsContext {
      * such as a mobile phone application or embedded device running partner code.
      * </pre>
      *
-     * <code>.bloombox.schema.analytics.context.NativeDeviceContext native = 10 [(.gen_bq_schema.description) = "Specifies information about a native device, when the event is being sent from a native context of some kind, such as a mobile phone application or embedded device running partner code."];</code>
+     * <code>.bloombox.analytics.context.NativeDeviceContext native = 10 [(.gen_bq_schema.description) = "Specifies information about a native device, when the event is being sent from a native context of some kind, such as a mobile phone application or embedded device running partner code."];</code>
      */
     public io.bloombox.schema.telemetry.context.DeviceContext.NativeDeviceContextOrBuilder getNativeOrBuilder() {
       return getNative();
@@ -3126,7 +3177,7 @@ public final class AnalyticsContext {
      * Specifies information about a web browser, when the event is being sent from some kind of web browsing context.
      * </pre>
      *
-     * <code>.bloombox.schema.analytics.context.BrowserDeviceContext browser = 11 [(.gen_bq_schema.description) = "Specifies information about a web browser, when the event is being sent from some kind of web browsing context."];</code>
+     * <code>.bloombox.analytics.context.BrowserDeviceContext browser = 11 [(.gen_bq_schema.description) = "Specifies information about a web browser, when the event is being sent from some kind of web browsing context."];</code>
      */
     public boolean hasBrowser() {
       return browser_ != null;
@@ -3136,7 +3187,7 @@ public final class AnalyticsContext {
      * Specifies information about a web browser, when the event is being sent from some kind of web browsing context.
      * </pre>
      *
-     * <code>.bloombox.schema.analytics.context.BrowserDeviceContext browser = 11 [(.gen_bq_schema.description) = "Specifies information about a web browser, when the event is being sent from some kind of web browsing context."];</code>
+     * <code>.bloombox.analytics.context.BrowserDeviceContext browser = 11 [(.gen_bq_schema.description) = "Specifies information about a web browser, when the event is being sent from some kind of web browsing context."];</code>
      */
     public io.bloombox.schema.telemetry.context.BrowserContext.BrowserDeviceContext getBrowser() {
       return browser_ == null ? io.bloombox.schema.telemetry.context.BrowserContext.BrowserDeviceContext.getDefaultInstance() : browser_;
@@ -3146,7 +3197,7 @@ public final class AnalyticsContext {
      * Specifies information about a web browser, when the event is being sent from some kind of web browsing context.
      * </pre>
      *
-     * <code>.bloombox.schema.analytics.context.BrowserDeviceContext browser = 11 [(.gen_bq_schema.description) = "Specifies information about a web browser, when the event is being sent from some kind of web browsing context."];</code>
+     * <code>.bloombox.analytics.context.BrowserDeviceContext browser = 11 [(.gen_bq_schema.description) = "Specifies information about a web browser, when the event is being sent from some kind of web browsing context."];</code>
      */
     public io.bloombox.schema.telemetry.context.BrowserContext.BrowserDeviceContextOrBuilder getBrowserOrBuilder() {
       return getBrowser();
@@ -3186,6 +3237,7 @@ public final class AnalyticsContext {
     }
 
     private byte memoizedIsInitialized = -1;
+    @java.lang.Override
     public final boolean isInitialized() {
       byte isInitialized = memoizedIsInitialized;
       if (isInitialized == 1) return true;
@@ -3195,6 +3247,7 @@ public final class AnalyticsContext {
       return true;
     }
 
+    @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
       if (collection_ != null) {
@@ -3236,6 +3289,7 @@ public final class AnalyticsContext {
       unknownFields.writeTo(output);
     }
 
+    @java.lang.Override
     public int getSerializedSize() {
       int size = memoizedSize;
       if (size != -1) return size;
@@ -3475,6 +3529,7 @@ public final class AnalyticsContext {
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
 
+    @java.lang.Override
     public Builder newBuilderForType() { return newBuilder(); }
     public static Builder newBuilder() {
       return DEFAULT_INSTANCE.toBuilder();
@@ -3482,6 +3537,7 @@ public final class AnalyticsContext {
     public static Builder newBuilder(io.bloombox.schema.telemetry.AnalyticsContext.Context prototype) {
       return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
     }
+    @java.lang.Override
     public Builder toBuilder() {
       return this == DEFAULT_INSTANCE
           ? new Builder() : new Builder().mergeFrom(this);
@@ -3498,20 +3554,21 @@ public final class AnalyticsContext {
      * Specifies contextual metadata to include with events or exceptions recorded via analytics/telemetry ingest.
      * </pre>
      *
-     * Protobuf type {@code bloombox.schema.analytics.Context}
+     * Protobuf type {@code bloombox.analytics.Context}
      */
     public static final class Builder extends
         com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:bloombox.schema.analytics.Context)
+        // @@protoc_insertion_point(builder_implements:bloombox.analytics.Context)
         io.bloombox.schema.telemetry.AnalyticsContext.ContextOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return io.bloombox.schema.telemetry.AnalyticsContext.internal_static_bloombox_schema_analytics_Context_descriptor;
+        return io.bloombox.schema.telemetry.AnalyticsContext.internal_static_bloombox_analytics_Context_descriptor;
       }
 
+      @java.lang.Override
       protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return io.bloombox.schema.telemetry.AnalyticsContext.internal_static_bloombox_schema_analytics_Context_fieldAccessorTable
+        return io.bloombox.schema.telemetry.AnalyticsContext.internal_static_bloombox_analytics_Context_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
                 io.bloombox.schema.telemetry.AnalyticsContext.Context.class, io.bloombox.schema.telemetry.AnalyticsContext.Context.Builder.class);
       }
@@ -3531,6 +3588,7 @@ public final class AnalyticsContext {
                 .alwaysUseFieldBuilders) {
         }
       }
+      @java.lang.Override
       public Builder clear() {
         super.clear();
         if (collectionBuilder_ == null) {
@@ -3592,15 +3650,18 @@ public final class AnalyticsContext {
         return this;
       }
 
+      @java.lang.Override
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return io.bloombox.schema.telemetry.AnalyticsContext.internal_static_bloombox_schema_analytics_Context_descriptor;
+        return io.bloombox.schema.telemetry.AnalyticsContext.internal_static_bloombox_analytics_Context_descriptor;
       }
 
+      @java.lang.Override
       public io.bloombox.schema.telemetry.AnalyticsContext.Context getDefaultInstanceForType() {
         return io.bloombox.schema.telemetry.AnalyticsContext.Context.getDefaultInstance();
       }
 
+      @java.lang.Override
       public io.bloombox.schema.telemetry.AnalyticsContext.Context build() {
         io.bloombox.schema.telemetry.AnalyticsContext.Context result = buildPartial();
         if (!result.isInitialized()) {
@@ -3609,6 +3670,7 @@ public final class AnalyticsContext {
         return result;
       }
 
+      @java.lang.Override
       public io.bloombox.schema.telemetry.AnalyticsContext.Context buildPartial() {
         io.bloombox.schema.telemetry.AnalyticsContext.Context result = new io.bloombox.schema.telemetry.AnalyticsContext.Context(this);
         if (collectionBuilder_ == null) {
@@ -3659,32 +3721,39 @@ public final class AnalyticsContext {
         return result;
       }
 
+      @java.lang.Override
       public Builder clone() {
         return (Builder) super.clone();
       }
+      @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
         return (Builder) super.setField(field, value);
       }
+      @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
         return (Builder) super.clearField(field);
       }
+      @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
         return (Builder) super.clearOneof(oneof);
       }
+      @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
         return (Builder) super.setRepeatedField(field, index, value);
       }
+      @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
         return (Builder) super.addRepeatedField(field, value);
       }
+      @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
         if (other instanceof io.bloombox.schema.telemetry.AnalyticsContext.Context) {
           return mergeFrom((io.bloombox.schema.telemetry.AnalyticsContext.Context)other);
@@ -3741,10 +3810,12 @@ public final class AnalyticsContext {
         return this;
       }
 
+      @java.lang.Override
       public final boolean isInitialized() {
         return true;
       }
 
+      @java.lang.Override
       public Builder mergeFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -3771,7 +3842,7 @@ public final class AnalyticsContext {
        * Collection information, specifies event type or category.
        * </pre>
        *
-       * <code>.bloombox.schema.analytics.context.Collection collection = 1 [(.gen_bq_schema.require) = true, (.gen_bq_schema.description) = "Collection information, specifies event type or category."];</code>
+       * <code>.bloombox.analytics.context.Collection collection = 1 [(.gen_bq_schema.require) = true, (.gen_bq_schema.description) = "Collection information, specifies event type or category."];</code>
        */
       public boolean hasCollection() {
         return collectionBuilder_ != null || collection_ != null;
@@ -3781,7 +3852,7 @@ public final class AnalyticsContext {
        * Collection information, specifies event type or category.
        * </pre>
        *
-       * <code>.bloombox.schema.analytics.context.Collection collection = 1 [(.gen_bq_schema.require) = true, (.gen_bq_schema.description) = "Collection information, specifies event type or category."];</code>
+       * <code>.bloombox.analytics.context.Collection collection = 1 [(.gen_bq_schema.require) = true, (.gen_bq_schema.description) = "Collection information, specifies event type or category."];</code>
        */
       public io.bloombox.schema.telemetry.context.AnalyticsCollection.Collection getCollection() {
         if (collectionBuilder_ == null) {
@@ -3795,7 +3866,7 @@ public final class AnalyticsContext {
        * Collection information, specifies event type or category.
        * </pre>
        *
-       * <code>.bloombox.schema.analytics.context.Collection collection = 1 [(.gen_bq_schema.require) = true, (.gen_bq_schema.description) = "Collection information, specifies event type or category."];</code>
+       * <code>.bloombox.analytics.context.Collection collection = 1 [(.gen_bq_schema.require) = true, (.gen_bq_schema.description) = "Collection information, specifies event type or category."];</code>
        */
       public Builder setCollection(io.bloombox.schema.telemetry.context.AnalyticsCollection.Collection value) {
         if (collectionBuilder_ == null) {
@@ -3815,7 +3886,7 @@ public final class AnalyticsContext {
        * Collection information, specifies event type or category.
        * </pre>
        *
-       * <code>.bloombox.schema.analytics.context.Collection collection = 1 [(.gen_bq_schema.require) = true, (.gen_bq_schema.description) = "Collection information, specifies event type or category."];</code>
+       * <code>.bloombox.analytics.context.Collection collection = 1 [(.gen_bq_schema.require) = true, (.gen_bq_schema.description) = "Collection information, specifies event type or category."];</code>
        */
       public Builder setCollection(
           io.bloombox.schema.telemetry.context.AnalyticsCollection.Collection.Builder builderForValue) {
@@ -3833,7 +3904,7 @@ public final class AnalyticsContext {
        * Collection information, specifies event type or category.
        * </pre>
        *
-       * <code>.bloombox.schema.analytics.context.Collection collection = 1 [(.gen_bq_schema.require) = true, (.gen_bq_schema.description) = "Collection information, specifies event type or category."];</code>
+       * <code>.bloombox.analytics.context.Collection collection = 1 [(.gen_bq_schema.require) = true, (.gen_bq_schema.description) = "Collection information, specifies event type or category."];</code>
        */
       public Builder mergeCollection(io.bloombox.schema.telemetry.context.AnalyticsCollection.Collection value) {
         if (collectionBuilder_ == null) {
@@ -3855,7 +3926,7 @@ public final class AnalyticsContext {
        * Collection information, specifies event type or category.
        * </pre>
        *
-       * <code>.bloombox.schema.analytics.context.Collection collection = 1 [(.gen_bq_schema.require) = true, (.gen_bq_schema.description) = "Collection information, specifies event type or category."];</code>
+       * <code>.bloombox.analytics.context.Collection collection = 1 [(.gen_bq_schema.require) = true, (.gen_bq_schema.description) = "Collection information, specifies event type or category."];</code>
        */
       public Builder clearCollection() {
         if (collectionBuilder_ == null) {
@@ -3873,7 +3944,7 @@ public final class AnalyticsContext {
        * Collection information, specifies event type or category.
        * </pre>
        *
-       * <code>.bloombox.schema.analytics.context.Collection collection = 1 [(.gen_bq_schema.require) = true, (.gen_bq_schema.description) = "Collection information, specifies event type or category."];</code>
+       * <code>.bloombox.analytics.context.Collection collection = 1 [(.gen_bq_schema.require) = true, (.gen_bq_schema.description) = "Collection information, specifies event type or category."];</code>
        */
       public io.bloombox.schema.telemetry.context.AnalyticsCollection.Collection.Builder getCollectionBuilder() {
         
@@ -3885,7 +3956,7 @@ public final class AnalyticsContext {
        * Collection information, specifies event type or category.
        * </pre>
        *
-       * <code>.bloombox.schema.analytics.context.Collection collection = 1 [(.gen_bq_schema.require) = true, (.gen_bq_schema.description) = "Collection information, specifies event type or category."];</code>
+       * <code>.bloombox.analytics.context.Collection collection = 1 [(.gen_bq_schema.require) = true, (.gen_bq_schema.description) = "Collection information, specifies event type or category."];</code>
        */
       public io.bloombox.schema.telemetry.context.AnalyticsCollection.CollectionOrBuilder getCollectionOrBuilder() {
         if (collectionBuilder_ != null) {
@@ -3900,7 +3971,7 @@ public final class AnalyticsContext {
        * Collection information, specifies event type or category.
        * </pre>
        *
-       * <code>.bloombox.schema.analytics.context.Collection collection = 1 [(.gen_bq_schema.require) = true, (.gen_bq_schema.description) = "Collection information, specifies event type or category."];</code>
+       * <code>.bloombox.analytics.context.Collection collection = 1 [(.gen_bq_schema.require) = true, (.gen_bq_schema.description) = "Collection information, specifies event type or category."];</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
           io.bloombox.schema.telemetry.context.AnalyticsCollection.Collection, io.bloombox.schema.telemetry.context.AnalyticsCollection.Collection.Builder, io.bloombox.schema.telemetry.context.AnalyticsCollection.CollectionOrBuilder> 
@@ -3924,7 +3995,7 @@ public final class AnalyticsContext {
        * Specifies the user associated with this event, if known.
        * </pre>
        *
-       * <code>.bloombox.schema.identity.UserKey user_key = 2 [(.gen_bq_schema.description) = "Specifies the user associated with this event, if known."];</code>
+       * <code>.bloombox.identity.UserKey user_key = 2 [(.gen_bq_schema.description) = "Specifies the user associated with this event, if known."];</code>
        */
       public boolean hasUserKey() {
         return userKeyBuilder_ != null || userKey_ != null;
@@ -3934,7 +4005,7 @@ public final class AnalyticsContext {
        * Specifies the user associated with this event, if known.
        * </pre>
        *
-       * <code>.bloombox.schema.identity.UserKey user_key = 2 [(.gen_bq_schema.description) = "Specifies the user associated with this event, if known."];</code>
+       * <code>.bloombox.identity.UserKey user_key = 2 [(.gen_bq_schema.description) = "Specifies the user associated with this event, if known."];</code>
        */
       public io.bloombox.schema.identity.AppUserKey.UserKey getUserKey() {
         if (userKeyBuilder_ == null) {
@@ -3948,7 +4019,7 @@ public final class AnalyticsContext {
        * Specifies the user associated with this event, if known.
        * </pre>
        *
-       * <code>.bloombox.schema.identity.UserKey user_key = 2 [(.gen_bq_schema.description) = "Specifies the user associated with this event, if known."];</code>
+       * <code>.bloombox.identity.UserKey user_key = 2 [(.gen_bq_schema.description) = "Specifies the user associated with this event, if known."];</code>
        */
       public Builder setUserKey(io.bloombox.schema.identity.AppUserKey.UserKey value) {
         if (userKeyBuilder_ == null) {
@@ -3968,7 +4039,7 @@ public final class AnalyticsContext {
        * Specifies the user associated with this event, if known.
        * </pre>
        *
-       * <code>.bloombox.schema.identity.UserKey user_key = 2 [(.gen_bq_schema.description) = "Specifies the user associated with this event, if known."];</code>
+       * <code>.bloombox.identity.UserKey user_key = 2 [(.gen_bq_schema.description) = "Specifies the user associated with this event, if known."];</code>
        */
       public Builder setUserKey(
           io.bloombox.schema.identity.AppUserKey.UserKey.Builder builderForValue) {
@@ -3986,7 +4057,7 @@ public final class AnalyticsContext {
        * Specifies the user associated with this event, if known.
        * </pre>
        *
-       * <code>.bloombox.schema.identity.UserKey user_key = 2 [(.gen_bq_schema.description) = "Specifies the user associated with this event, if known."];</code>
+       * <code>.bloombox.identity.UserKey user_key = 2 [(.gen_bq_schema.description) = "Specifies the user associated with this event, if known."];</code>
        */
       public Builder mergeUserKey(io.bloombox.schema.identity.AppUserKey.UserKey value) {
         if (userKeyBuilder_ == null) {
@@ -4008,7 +4079,7 @@ public final class AnalyticsContext {
        * Specifies the user associated with this event, if known.
        * </pre>
        *
-       * <code>.bloombox.schema.identity.UserKey user_key = 2 [(.gen_bq_schema.description) = "Specifies the user associated with this event, if known."];</code>
+       * <code>.bloombox.identity.UserKey user_key = 2 [(.gen_bq_schema.description) = "Specifies the user associated with this event, if known."];</code>
        */
       public Builder clearUserKey() {
         if (userKeyBuilder_ == null) {
@@ -4026,7 +4097,7 @@ public final class AnalyticsContext {
        * Specifies the user associated with this event, if known.
        * </pre>
        *
-       * <code>.bloombox.schema.identity.UserKey user_key = 2 [(.gen_bq_schema.description) = "Specifies the user associated with this event, if known."];</code>
+       * <code>.bloombox.identity.UserKey user_key = 2 [(.gen_bq_schema.description) = "Specifies the user associated with this event, if known."];</code>
        */
       public io.bloombox.schema.identity.AppUserKey.UserKey.Builder getUserKeyBuilder() {
         
@@ -4038,7 +4109,7 @@ public final class AnalyticsContext {
        * Specifies the user associated with this event, if known.
        * </pre>
        *
-       * <code>.bloombox.schema.identity.UserKey user_key = 2 [(.gen_bq_schema.description) = "Specifies the user associated with this event, if known."];</code>
+       * <code>.bloombox.identity.UserKey user_key = 2 [(.gen_bq_schema.description) = "Specifies the user associated with this event, if known."];</code>
        */
       public io.bloombox.schema.identity.AppUserKey.UserKeyOrBuilder getUserKeyOrBuilder() {
         if (userKeyBuilder_ != null) {
@@ -4053,7 +4124,7 @@ public final class AnalyticsContext {
        * Specifies the user associated with this event, if known.
        * </pre>
        *
-       * <code>.bloombox.schema.identity.UserKey user_key = 2 [(.gen_bq_schema.description) = "Specifies the user associated with this event, if known."];</code>
+       * <code>.bloombox.identity.UserKey user_key = 2 [(.gen_bq_schema.description) = "Specifies the user associated with this event, if known."];</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
           io.bloombox.schema.identity.AppUserKey.UserKey, io.bloombox.schema.identity.AppUserKey.UserKey.Builder, io.bloombox.schema.identity.AppUserKey.UserKeyOrBuilder> 
@@ -4438,7 +4509,7 @@ public final class AnalyticsContext {
        * Partner and commercial scope of this event.
        * </pre>
        *
-       * <code>.bloombox.schema.analytics.Scope scope = 7 [(.gen_bq_schema.description) = "Partner and commercial scope of this event."];</code>
+       * <code>.bloombox.analytics.Scope scope = 7 [(.gen_bq_schema.description) = "Partner and commercial scope of this event."];</code>
        */
       public boolean hasScope() {
         return scopeBuilder_ != null || scope_ != null;
@@ -4448,7 +4519,7 @@ public final class AnalyticsContext {
        * Partner and commercial scope of this event.
        * </pre>
        *
-       * <code>.bloombox.schema.analytics.Scope scope = 7 [(.gen_bq_schema.description) = "Partner and commercial scope of this event."];</code>
+       * <code>.bloombox.analytics.Scope scope = 7 [(.gen_bq_schema.description) = "Partner and commercial scope of this event."];</code>
        */
       public io.bloombox.schema.telemetry.AnalyticsScope.Scope getScope() {
         if (scopeBuilder_ == null) {
@@ -4462,7 +4533,7 @@ public final class AnalyticsContext {
        * Partner and commercial scope of this event.
        * </pre>
        *
-       * <code>.bloombox.schema.analytics.Scope scope = 7 [(.gen_bq_schema.description) = "Partner and commercial scope of this event."];</code>
+       * <code>.bloombox.analytics.Scope scope = 7 [(.gen_bq_schema.description) = "Partner and commercial scope of this event."];</code>
        */
       public Builder setScope(io.bloombox.schema.telemetry.AnalyticsScope.Scope value) {
         if (scopeBuilder_ == null) {
@@ -4482,7 +4553,7 @@ public final class AnalyticsContext {
        * Partner and commercial scope of this event.
        * </pre>
        *
-       * <code>.bloombox.schema.analytics.Scope scope = 7 [(.gen_bq_schema.description) = "Partner and commercial scope of this event."];</code>
+       * <code>.bloombox.analytics.Scope scope = 7 [(.gen_bq_schema.description) = "Partner and commercial scope of this event."];</code>
        */
       public Builder setScope(
           io.bloombox.schema.telemetry.AnalyticsScope.Scope.Builder builderForValue) {
@@ -4500,7 +4571,7 @@ public final class AnalyticsContext {
        * Partner and commercial scope of this event.
        * </pre>
        *
-       * <code>.bloombox.schema.analytics.Scope scope = 7 [(.gen_bq_schema.description) = "Partner and commercial scope of this event."];</code>
+       * <code>.bloombox.analytics.Scope scope = 7 [(.gen_bq_schema.description) = "Partner and commercial scope of this event."];</code>
        */
       public Builder mergeScope(io.bloombox.schema.telemetry.AnalyticsScope.Scope value) {
         if (scopeBuilder_ == null) {
@@ -4522,7 +4593,7 @@ public final class AnalyticsContext {
        * Partner and commercial scope of this event.
        * </pre>
        *
-       * <code>.bloombox.schema.analytics.Scope scope = 7 [(.gen_bq_schema.description) = "Partner and commercial scope of this event."];</code>
+       * <code>.bloombox.analytics.Scope scope = 7 [(.gen_bq_schema.description) = "Partner and commercial scope of this event."];</code>
        */
       public Builder clearScope() {
         if (scopeBuilder_ == null) {
@@ -4540,7 +4611,7 @@ public final class AnalyticsContext {
        * Partner and commercial scope of this event.
        * </pre>
        *
-       * <code>.bloombox.schema.analytics.Scope scope = 7 [(.gen_bq_schema.description) = "Partner and commercial scope of this event."];</code>
+       * <code>.bloombox.analytics.Scope scope = 7 [(.gen_bq_schema.description) = "Partner and commercial scope of this event."];</code>
        */
       public io.bloombox.schema.telemetry.AnalyticsScope.Scope.Builder getScopeBuilder() {
         
@@ -4552,7 +4623,7 @@ public final class AnalyticsContext {
        * Partner and commercial scope of this event.
        * </pre>
        *
-       * <code>.bloombox.schema.analytics.Scope scope = 7 [(.gen_bq_schema.description) = "Partner and commercial scope of this event."];</code>
+       * <code>.bloombox.analytics.Scope scope = 7 [(.gen_bq_schema.description) = "Partner and commercial scope of this event."];</code>
        */
       public io.bloombox.schema.telemetry.AnalyticsScope.ScopeOrBuilder getScopeOrBuilder() {
         if (scopeBuilder_ != null) {
@@ -4567,7 +4638,7 @@ public final class AnalyticsContext {
        * Partner and commercial scope of this event.
        * </pre>
        *
-       * <code>.bloombox.schema.analytics.Scope scope = 7 [(.gen_bq_schema.description) = "Partner and commercial scope of this event."];</code>
+       * <code>.bloombox.analytics.Scope scope = 7 [(.gen_bq_schema.description) = "Partner and commercial scope of this event."];</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
           io.bloombox.schema.telemetry.AnalyticsScope.Scope, io.bloombox.schema.telemetry.AnalyticsScope.Scope.Builder, io.bloombox.schema.telemetry.AnalyticsScope.ScopeOrBuilder> 
@@ -4591,7 +4662,7 @@ public final class AnalyticsContext {
        * Application version information.
        * </pre>
        *
-       * <code>.bloombox.schema.analytics.context.DeviceApplication app = 8 [(.gen_bq_schema.description) = "Application version information."];</code>
+       * <code>.bloombox.analytics.context.DeviceApplication app = 8 [(.gen_bq_schema.description) = "Application version information."];</code>
        */
       public boolean hasApp() {
         return appBuilder_ != null || app_ != null;
@@ -4601,7 +4672,7 @@ public final class AnalyticsContext {
        * Application version information.
        * </pre>
        *
-       * <code>.bloombox.schema.analytics.context.DeviceApplication app = 8 [(.gen_bq_schema.description) = "Application version information."];</code>
+       * <code>.bloombox.analytics.context.DeviceApplication app = 8 [(.gen_bq_schema.description) = "Application version information."];</code>
        */
       public io.bloombox.schema.telemetry.context.ApplicationContext.DeviceApplication getApp() {
         if (appBuilder_ == null) {
@@ -4615,7 +4686,7 @@ public final class AnalyticsContext {
        * Application version information.
        * </pre>
        *
-       * <code>.bloombox.schema.analytics.context.DeviceApplication app = 8 [(.gen_bq_schema.description) = "Application version information."];</code>
+       * <code>.bloombox.analytics.context.DeviceApplication app = 8 [(.gen_bq_schema.description) = "Application version information."];</code>
        */
       public Builder setApp(io.bloombox.schema.telemetry.context.ApplicationContext.DeviceApplication value) {
         if (appBuilder_ == null) {
@@ -4635,7 +4706,7 @@ public final class AnalyticsContext {
        * Application version information.
        * </pre>
        *
-       * <code>.bloombox.schema.analytics.context.DeviceApplication app = 8 [(.gen_bq_schema.description) = "Application version information."];</code>
+       * <code>.bloombox.analytics.context.DeviceApplication app = 8 [(.gen_bq_schema.description) = "Application version information."];</code>
        */
       public Builder setApp(
           io.bloombox.schema.telemetry.context.ApplicationContext.DeviceApplication.Builder builderForValue) {
@@ -4653,7 +4724,7 @@ public final class AnalyticsContext {
        * Application version information.
        * </pre>
        *
-       * <code>.bloombox.schema.analytics.context.DeviceApplication app = 8 [(.gen_bq_schema.description) = "Application version information."];</code>
+       * <code>.bloombox.analytics.context.DeviceApplication app = 8 [(.gen_bq_schema.description) = "Application version information."];</code>
        */
       public Builder mergeApp(io.bloombox.schema.telemetry.context.ApplicationContext.DeviceApplication value) {
         if (appBuilder_ == null) {
@@ -4675,7 +4746,7 @@ public final class AnalyticsContext {
        * Application version information.
        * </pre>
        *
-       * <code>.bloombox.schema.analytics.context.DeviceApplication app = 8 [(.gen_bq_schema.description) = "Application version information."];</code>
+       * <code>.bloombox.analytics.context.DeviceApplication app = 8 [(.gen_bq_schema.description) = "Application version information."];</code>
        */
       public Builder clearApp() {
         if (appBuilder_ == null) {
@@ -4693,7 +4764,7 @@ public final class AnalyticsContext {
        * Application version information.
        * </pre>
        *
-       * <code>.bloombox.schema.analytics.context.DeviceApplication app = 8 [(.gen_bq_schema.description) = "Application version information."];</code>
+       * <code>.bloombox.analytics.context.DeviceApplication app = 8 [(.gen_bq_schema.description) = "Application version information."];</code>
        */
       public io.bloombox.schema.telemetry.context.ApplicationContext.DeviceApplication.Builder getAppBuilder() {
         
@@ -4705,7 +4776,7 @@ public final class AnalyticsContext {
        * Application version information.
        * </pre>
        *
-       * <code>.bloombox.schema.analytics.context.DeviceApplication app = 8 [(.gen_bq_schema.description) = "Application version information."];</code>
+       * <code>.bloombox.analytics.context.DeviceApplication app = 8 [(.gen_bq_schema.description) = "Application version information."];</code>
        */
       public io.bloombox.schema.telemetry.context.ApplicationContext.DeviceApplicationOrBuilder getAppOrBuilder() {
         if (appBuilder_ != null) {
@@ -4720,7 +4791,7 @@ public final class AnalyticsContext {
        * Application version information.
        * </pre>
        *
-       * <code>.bloombox.schema.analytics.context.DeviceApplication app = 8 [(.gen_bq_schema.description) = "Application version information."];</code>
+       * <code>.bloombox.analytics.context.DeviceApplication app = 8 [(.gen_bq_schema.description) = "Application version information."];</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
           io.bloombox.schema.telemetry.context.ApplicationContext.DeviceApplication, io.bloombox.schema.telemetry.context.ApplicationContext.DeviceApplication.Builder, io.bloombox.schema.telemetry.context.ApplicationContext.DeviceApplicationOrBuilder> 
@@ -4744,7 +4815,7 @@ public final class AnalyticsContext {
        * Library version information.
        * </pre>
        *
-       * <code>.bloombox.schema.analytics.context.DeviceLibrary library = 9 [(.gen_bq_schema.description) = "Library version information."];</code>
+       * <code>.bloombox.analytics.context.DeviceLibrary library = 9 [(.gen_bq_schema.description) = "Library version information."];</code>
        */
       public boolean hasLibrary() {
         return libraryBuilder_ != null || library_ != null;
@@ -4754,7 +4825,7 @@ public final class AnalyticsContext {
        * Library version information.
        * </pre>
        *
-       * <code>.bloombox.schema.analytics.context.DeviceLibrary library = 9 [(.gen_bq_schema.description) = "Library version information."];</code>
+       * <code>.bloombox.analytics.context.DeviceLibrary library = 9 [(.gen_bq_schema.description) = "Library version information."];</code>
        */
       public io.bloombox.schema.telemetry.context.LibraryContext.DeviceLibrary getLibrary() {
         if (libraryBuilder_ == null) {
@@ -4768,7 +4839,7 @@ public final class AnalyticsContext {
        * Library version information.
        * </pre>
        *
-       * <code>.bloombox.schema.analytics.context.DeviceLibrary library = 9 [(.gen_bq_schema.description) = "Library version information."];</code>
+       * <code>.bloombox.analytics.context.DeviceLibrary library = 9 [(.gen_bq_schema.description) = "Library version information."];</code>
        */
       public Builder setLibrary(io.bloombox.schema.telemetry.context.LibraryContext.DeviceLibrary value) {
         if (libraryBuilder_ == null) {
@@ -4788,7 +4859,7 @@ public final class AnalyticsContext {
        * Library version information.
        * </pre>
        *
-       * <code>.bloombox.schema.analytics.context.DeviceLibrary library = 9 [(.gen_bq_schema.description) = "Library version information."];</code>
+       * <code>.bloombox.analytics.context.DeviceLibrary library = 9 [(.gen_bq_schema.description) = "Library version information."];</code>
        */
       public Builder setLibrary(
           io.bloombox.schema.telemetry.context.LibraryContext.DeviceLibrary.Builder builderForValue) {
@@ -4806,7 +4877,7 @@ public final class AnalyticsContext {
        * Library version information.
        * </pre>
        *
-       * <code>.bloombox.schema.analytics.context.DeviceLibrary library = 9 [(.gen_bq_schema.description) = "Library version information."];</code>
+       * <code>.bloombox.analytics.context.DeviceLibrary library = 9 [(.gen_bq_schema.description) = "Library version information."];</code>
        */
       public Builder mergeLibrary(io.bloombox.schema.telemetry.context.LibraryContext.DeviceLibrary value) {
         if (libraryBuilder_ == null) {
@@ -4828,7 +4899,7 @@ public final class AnalyticsContext {
        * Library version information.
        * </pre>
        *
-       * <code>.bloombox.schema.analytics.context.DeviceLibrary library = 9 [(.gen_bq_schema.description) = "Library version information."];</code>
+       * <code>.bloombox.analytics.context.DeviceLibrary library = 9 [(.gen_bq_schema.description) = "Library version information."];</code>
        */
       public Builder clearLibrary() {
         if (libraryBuilder_ == null) {
@@ -4846,7 +4917,7 @@ public final class AnalyticsContext {
        * Library version information.
        * </pre>
        *
-       * <code>.bloombox.schema.analytics.context.DeviceLibrary library = 9 [(.gen_bq_schema.description) = "Library version information."];</code>
+       * <code>.bloombox.analytics.context.DeviceLibrary library = 9 [(.gen_bq_schema.description) = "Library version information."];</code>
        */
       public io.bloombox.schema.telemetry.context.LibraryContext.DeviceLibrary.Builder getLibraryBuilder() {
         
@@ -4858,7 +4929,7 @@ public final class AnalyticsContext {
        * Library version information.
        * </pre>
        *
-       * <code>.bloombox.schema.analytics.context.DeviceLibrary library = 9 [(.gen_bq_schema.description) = "Library version information."];</code>
+       * <code>.bloombox.analytics.context.DeviceLibrary library = 9 [(.gen_bq_schema.description) = "Library version information."];</code>
        */
       public io.bloombox.schema.telemetry.context.LibraryContext.DeviceLibraryOrBuilder getLibraryOrBuilder() {
         if (libraryBuilder_ != null) {
@@ -4873,7 +4944,7 @@ public final class AnalyticsContext {
        * Library version information.
        * </pre>
        *
-       * <code>.bloombox.schema.analytics.context.DeviceLibrary library = 9 [(.gen_bq_schema.description) = "Library version information."];</code>
+       * <code>.bloombox.analytics.context.DeviceLibrary library = 9 [(.gen_bq_schema.description) = "Library version information."];</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
           io.bloombox.schema.telemetry.context.LibraryContext.DeviceLibrary, io.bloombox.schema.telemetry.context.LibraryContext.DeviceLibrary.Builder, io.bloombox.schema.telemetry.context.LibraryContext.DeviceLibraryOrBuilder> 
@@ -4898,7 +4969,7 @@ public final class AnalyticsContext {
        * such as a mobile phone application or embedded device running partner code.
        * </pre>
        *
-       * <code>.bloombox.schema.analytics.context.NativeDeviceContext native = 10 [(.gen_bq_schema.description) = "Specifies information about a native device, when the event is being sent from a native context of some kind, such as a mobile phone application or embedded device running partner code."];</code>
+       * <code>.bloombox.analytics.context.NativeDeviceContext native = 10 [(.gen_bq_schema.description) = "Specifies information about a native device, when the event is being sent from a native context of some kind, such as a mobile phone application or embedded device running partner code."];</code>
        */
       public boolean hasNative() {
         return nativeBuilder_ != null || native_ != null;
@@ -4909,7 +4980,7 @@ public final class AnalyticsContext {
        * such as a mobile phone application or embedded device running partner code.
        * </pre>
        *
-       * <code>.bloombox.schema.analytics.context.NativeDeviceContext native = 10 [(.gen_bq_schema.description) = "Specifies information about a native device, when the event is being sent from a native context of some kind, such as a mobile phone application or embedded device running partner code."];</code>
+       * <code>.bloombox.analytics.context.NativeDeviceContext native = 10 [(.gen_bq_schema.description) = "Specifies information about a native device, when the event is being sent from a native context of some kind, such as a mobile phone application or embedded device running partner code."];</code>
        */
       public io.bloombox.schema.telemetry.context.DeviceContext.NativeDeviceContext getNative() {
         if (nativeBuilder_ == null) {
@@ -4924,7 +4995,7 @@ public final class AnalyticsContext {
        * such as a mobile phone application or embedded device running partner code.
        * </pre>
        *
-       * <code>.bloombox.schema.analytics.context.NativeDeviceContext native = 10 [(.gen_bq_schema.description) = "Specifies information about a native device, when the event is being sent from a native context of some kind, such as a mobile phone application or embedded device running partner code."];</code>
+       * <code>.bloombox.analytics.context.NativeDeviceContext native = 10 [(.gen_bq_schema.description) = "Specifies information about a native device, when the event is being sent from a native context of some kind, such as a mobile phone application or embedded device running partner code."];</code>
        */
       public Builder setNative(io.bloombox.schema.telemetry.context.DeviceContext.NativeDeviceContext value) {
         if (nativeBuilder_ == null) {
@@ -4945,7 +5016,7 @@ public final class AnalyticsContext {
        * such as a mobile phone application or embedded device running partner code.
        * </pre>
        *
-       * <code>.bloombox.schema.analytics.context.NativeDeviceContext native = 10 [(.gen_bq_schema.description) = "Specifies information about a native device, when the event is being sent from a native context of some kind, such as a mobile phone application or embedded device running partner code."];</code>
+       * <code>.bloombox.analytics.context.NativeDeviceContext native = 10 [(.gen_bq_schema.description) = "Specifies information about a native device, when the event is being sent from a native context of some kind, such as a mobile phone application or embedded device running partner code."];</code>
        */
       public Builder setNative(
           io.bloombox.schema.telemetry.context.DeviceContext.NativeDeviceContext.Builder builderForValue) {
@@ -4964,7 +5035,7 @@ public final class AnalyticsContext {
        * such as a mobile phone application or embedded device running partner code.
        * </pre>
        *
-       * <code>.bloombox.schema.analytics.context.NativeDeviceContext native = 10 [(.gen_bq_schema.description) = "Specifies information about a native device, when the event is being sent from a native context of some kind, such as a mobile phone application or embedded device running partner code."];</code>
+       * <code>.bloombox.analytics.context.NativeDeviceContext native = 10 [(.gen_bq_schema.description) = "Specifies information about a native device, when the event is being sent from a native context of some kind, such as a mobile phone application or embedded device running partner code."];</code>
        */
       public Builder mergeNative(io.bloombox.schema.telemetry.context.DeviceContext.NativeDeviceContext value) {
         if (nativeBuilder_ == null) {
@@ -4987,7 +5058,7 @@ public final class AnalyticsContext {
        * such as a mobile phone application or embedded device running partner code.
        * </pre>
        *
-       * <code>.bloombox.schema.analytics.context.NativeDeviceContext native = 10 [(.gen_bq_schema.description) = "Specifies information about a native device, when the event is being sent from a native context of some kind, such as a mobile phone application or embedded device running partner code."];</code>
+       * <code>.bloombox.analytics.context.NativeDeviceContext native = 10 [(.gen_bq_schema.description) = "Specifies information about a native device, when the event is being sent from a native context of some kind, such as a mobile phone application or embedded device running partner code."];</code>
        */
       public Builder clearNative() {
         if (nativeBuilder_ == null) {
@@ -5006,7 +5077,7 @@ public final class AnalyticsContext {
        * such as a mobile phone application or embedded device running partner code.
        * </pre>
        *
-       * <code>.bloombox.schema.analytics.context.NativeDeviceContext native = 10 [(.gen_bq_schema.description) = "Specifies information about a native device, when the event is being sent from a native context of some kind, such as a mobile phone application or embedded device running partner code."];</code>
+       * <code>.bloombox.analytics.context.NativeDeviceContext native = 10 [(.gen_bq_schema.description) = "Specifies information about a native device, when the event is being sent from a native context of some kind, such as a mobile phone application or embedded device running partner code."];</code>
        */
       public io.bloombox.schema.telemetry.context.DeviceContext.NativeDeviceContext.Builder getNativeBuilder() {
         
@@ -5019,7 +5090,7 @@ public final class AnalyticsContext {
        * such as a mobile phone application or embedded device running partner code.
        * </pre>
        *
-       * <code>.bloombox.schema.analytics.context.NativeDeviceContext native = 10 [(.gen_bq_schema.description) = "Specifies information about a native device, when the event is being sent from a native context of some kind, such as a mobile phone application or embedded device running partner code."];</code>
+       * <code>.bloombox.analytics.context.NativeDeviceContext native = 10 [(.gen_bq_schema.description) = "Specifies information about a native device, when the event is being sent from a native context of some kind, such as a mobile phone application or embedded device running partner code."];</code>
        */
       public io.bloombox.schema.telemetry.context.DeviceContext.NativeDeviceContextOrBuilder getNativeOrBuilder() {
         if (nativeBuilder_ != null) {
@@ -5035,7 +5106,7 @@ public final class AnalyticsContext {
        * such as a mobile phone application or embedded device running partner code.
        * </pre>
        *
-       * <code>.bloombox.schema.analytics.context.NativeDeviceContext native = 10 [(.gen_bq_schema.description) = "Specifies information about a native device, when the event is being sent from a native context of some kind, such as a mobile phone application or embedded device running partner code."];</code>
+       * <code>.bloombox.analytics.context.NativeDeviceContext native = 10 [(.gen_bq_schema.description) = "Specifies information about a native device, when the event is being sent from a native context of some kind, such as a mobile phone application or embedded device running partner code."];</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
           io.bloombox.schema.telemetry.context.DeviceContext.NativeDeviceContext, io.bloombox.schema.telemetry.context.DeviceContext.NativeDeviceContext.Builder, io.bloombox.schema.telemetry.context.DeviceContext.NativeDeviceContextOrBuilder> 
@@ -5059,7 +5130,7 @@ public final class AnalyticsContext {
        * Specifies information about a web browser, when the event is being sent from some kind of web browsing context.
        * </pre>
        *
-       * <code>.bloombox.schema.analytics.context.BrowserDeviceContext browser = 11 [(.gen_bq_schema.description) = "Specifies information about a web browser, when the event is being sent from some kind of web browsing context."];</code>
+       * <code>.bloombox.analytics.context.BrowserDeviceContext browser = 11 [(.gen_bq_schema.description) = "Specifies information about a web browser, when the event is being sent from some kind of web browsing context."];</code>
        */
       public boolean hasBrowser() {
         return browserBuilder_ != null || browser_ != null;
@@ -5069,7 +5140,7 @@ public final class AnalyticsContext {
        * Specifies information about a web browser, when the event is being sent from some kind of web browsing context.
        * </pre>
        *
-       * <code>.bloombox.schema.analytics.context.BrowserDeviceContext browser = 11 [(.gen_bq_schema.description) = "Specifies information about a web browser, when the event is being sent from some kind of web browsing context."];</code>
+       * <code>.bloombox.analytics.context.BrowserDeviceContext browser = 11 [(.gen_bq_schema.description) = "Specifies information about a web browser, when the event is being sent from some kind of web browsing context."];</code>
        */
       public io.bloombox.schema.telemetry.context.BrowserContext.BrowserDeviceContext getBrowser() {
         if (browserBuilder_ == null) {
@@ -5083,7 +5154,7 @@ public final class AnalyticsContext {
        * Specifies information about a web browser, when the event is being sent from some kind of web browsing context.
        * </pre>
        *
-       * <code>.bloombox.schema.analytics.context.BrowserDeviceContext browser = 11 [(.gen_bq_schema.description) = "Specifies information about a web browser, when the event is being sent from some kind of web browsing context."];</code>
+       * <code>.bloombox.analytics.context.BrowserDeviceContext browser = 11 [(.gen_bq_schema.description) = "Specifies information about a web browser, when the event is being sent from some kind of web browsing context."];</code>
        */
       public Builder setBrowser(io.bloombox.schema.telemetry.context.BrowserContext.BrowserDeviceContext value) {
         if (browserBuilder_ == null) {
@@ -5103,7 +5174,7 @@ public final class AnalyticsContext {
        * Specifies information about a web browser, when the event is being sent from some kind of web browsing context.
        * </pre>
        *
-       * <code>.bloombox.schema.analytics.context.BrowserDeviceContext browser = 11 [(.gen_bq_schema.description) = "Specifies information about a web browser, when the event is being sent from some kind of web browsing context."];</code>
+       * <code>.bloombox.analytics.context.BrowserDeviceContext browser = 11 [(.gen_bq_schema.description) = "Specifies information about a web browser, when the event is being sent from some kind of web browsing context."];</code>
        */
       public Builder setBrowser(
           io.bloombox.schema.telemetry.context.BrowserContext.BrowserDeviceContext.Builder builderForValue) {
@@ -5121,7 +5192,7 @@ public final class AnalyticsContext {
        * Specifies information about a web browser, when the event is being sent from some kind of web browsing context.
        * </pre>
        *
-       * <code>.bloombox.schema.analytics.context.BrowserDeviceContext browser = 11 [(.gen_bq_schema.description) = "Specifies information about a web browser, when the event is being sent from some kind of web browsing context."];</code>
+       * <code>.bloombox.analytics.context.BrowserDeviceContext browser = 11 [(.gen_bq_schema.description) = "Specifies information about a web browser, when the event is being sent from some kind of web browsing context."];</code>
        */
       public Builder mergeBrowser(io.bloombox.schema.telemetry.context.BrowserContext.BrowserDeviceContext value) {
         if (browserBuilder_ == null) {
@@ -5143,7 +5214,7 @@ public final class AnalyticsContext {
        * Specifies information about a web browser, when the event is being sent from some kind of web browsing context.
        * </pre>
        *
-       * <code>.bloombox.schema.analytics.context.BrowserDeviceContext browser = 11 [(.gen_bq_schema.description) = "Specifies information about a web browser, when the event is being sent from some kind of web browsing context."];</code>
+       * <code>.bloombox.analytics.context.BrowserDeviceContext browser = 11 [(.gen_bq_schema.description) = "Specifies information about a web browser, when the event is being sent from some kind of web browsing context."];</code>
        */
       public Builder clearBrowser() {
         if (browserBuilder_ == null) {
@@ -5161,7 +5232,7 @@ public final class AnalyticsContext {
        * Specifies information about a web browser, when the event is being sent from some kind of web browsing context.
        * </pre>
        *
-       * <code>.bloombox.schema.analytics.context.BrowserDeviceContext browser = 11 [(.gen_bq_schema.description) = "Specifies information about a web browser, when the event is being sent from some kind of web browsing context."];</code>
+       * <code>.bloombox.analytics.context.BrowserDeviceContext browser = 11 [(.gen_bq_schema.description) = "Specifies information about a web browser, when the event is being sent from some kind of web browsing context."];</code>
        */
       public io.bloombox.schema.telemetry.context.BrowserContext.BrowserDeviceContext.Builder getBrowserBuilder() {
         
@@ -5173,7 +5244,7 @@ public final class AnalyticsContext {
        * Specifies information about a web browser, when the event is being sent from some kind of web browsing context.
        * </pre>
        *
-       * <code>.bloombox.schema.analytics.context.BrowserDeviceContext browser = 11 [(.gen_bq_schema.description) = "Specifies information about a web browser, when the event is being sent from some kind of web browsing context."];</code>
+       * <code>.bloombox.analytics.context.BrowserDeviceContext browser = 11 [(.gen_bq_schema.description) = "Specifies information about a web browser, when the event is being sent from some kind of web browsing context."];</code>
        */
       public io.bloombox.schema.telemetry.context.BrowserContext.BrowserDeviceContextOrBuilder getBrowserOrBuilder() {
         if (browserBuilder_ != null) {
@@ -5188,7 +5259,7 @@ public final class AnalyticsContext {
        * Specifies information about a web browser, when the event is being sent from some kind of web browsing context.
        * </pre>
        *
-       * <code>.bloombox.schema.analytics.context.BrowserDeviceContext browser = 11 [(.gen_bq_schema.description) = "Specifies information about a web browser, when the event is being sent from some kind of web browsing context."];</code>
+       * <code>.bloombox.analytics.context.BrowserDeviceContext browser = 11 [(.gen_bq_schema.description) = "Specifies information about a web browser, when the event is being sent from some kind of web browsing context."];</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
           io.bloombox.schema.telemetry.context.BrowserContext.BrowserDeviceContext, io.bloombox.schema.telemetry.context.BrowserContext.BrowserDeviceContext.Builder, io.bloombox.schema.telemetry.context.BrowserContext.BrowserDeviceContextOrBuilder> 
@@ -5356,21 +5427,23 @@ public final class AnalyticsContext {
         }
         return locationBuilder_;
       }
+      @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
         return super.setUnknownFieldsProto3(unknownFields);
       }
 
+      @java.lang.Override
       public final Builder mergeUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
         return super.mergeUnknownFields(unknownFields);
       }
 
 
-      // @@protoc_insertion_point(builder_scope:bloombox.schema.analytics.Context)
+      // @@protoc_insertion_point(builder_scope:bloombox.analytics.Context)
     }
 
-    // @@protoc_insertion_point(class_scope:bloombox.schema.analytics.Context)
+    // @@protoc_insertion_point(class_scope:bloombox.analytics.Context)
     private static final io.bloombox.schema.telemetry.AnalyticsContext.Context DEFAULT_INSTANCE;
     static {
       DEFAULT_INSTANCE = new io.bloombox.schema.telemetry.AnalyticsContext.Context();
@@ -5382,6 +5455,7 @@ public final class AnalyticsContext {
 
     private static final com.google.protobuf.Parser<Context>
         PARSER = new com.google.protobuf.AbstractParser<Context>() {
+      @java.lang.Override
       public Context parsePartialFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -5399,6 +5473,7 @@ public final class AnalyticsContext {
       return PARSER;
     }
 
+    @java.lang.Override
     public io.bloombox.schema.telemetry.AnalyticsContext.Context getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
@@ -5406,20 +5481,20 @@ public final class AnalyticsContext {
   }
 
   private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_bloombox_schema_analytics_EventPosition_descriptor;
+    internal_static_bloombox_analytics_EventPosition_descriptor;
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_bloombox_schema_analytics_EventPosition_fieldAccessorTable;
+      internal_static_bloombox_analytics_EventPosition_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_bloombox_schema_analytics_EventActors_descriptor;
+    internal_static_bloombox_analytics_EventActors_descriptor;
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_bloombox_schema_analytics_EventActors_fieldAccessorTable;
+      internal_static_bloombox_analytics_EventActors_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_bloombox_schema_analytics_Context_descriptor;
+    internal_static_bloombox_analytics_Context_descriptor;
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_bloombox_schema_analytics_Context_fieldAccessorTable;
+      internal_static_bloombox_analytics_Context_fieldAccessorTable;
 
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
@@ -5429,83 +5504,81 @@ public final class AnalyticsContext {
       descriptor;
   static {
     java.lang.String[] descriptorData = {
-      "\n\027analytics/Context.proto\022\031bloombox.sche" +
-      "ma.analytics\032\016bq_field.proto\032\022geo/Locati" +
-      "on.proto\032\023identity/User.proto\032\026identity/" +
-      "UserKey.proto\032\026temporal/Instant.proto\032\025p" +
-      "artner/Partner.proto\032\035partner/PartnerLoc" +
-      "ation.proto\032\025analytics/Scope.proto\032\037anal" +
-      "ytics/context/Browser.proto\032\037analytics/c" +
-      "ontext/Library.proto\032\"analytics/context/" +
-      "Collection.proto\032#analytics/context/Appl" +
-      "ication.proto\032$analytics/context/NativeD" +
-      "evice.proto\"\322\004\n\rEventPosition\022\226\001\n\006ingest" +
-      "\030\002 \001(\0132\036.opencannabis.temporal.InstantBf" +
-      "\360?\001\372?\tTIMESTAMP\212@TTimestamp describing w" +
-      "hen this event was ingested by the backe" +
-      "nd telemetry pipeline.\022\244\001\n\010occurred\030\003 \001(" +
-      "\0132\036.opencannabis.temporal.InstantBr\360?\001\372?" +
-      "\tTIMESTAMP\212@`Timestamp describing when t" +
-      "his event occurred, as reported by the s" +
-      "ubmitting device or endpoint.\022\202\001\n\tproces" +
-      "sed\030\004 \001(\004Bo\372?\tTIMESTAMP\212@`Timestamp desc" +
-      "ribing when this event occurred, as repo" +
-      "rted by the submitting device or endpoin" +
-      "t.\022|\n\010enriched\030\005 \001(\004Bj\372?\tTIMESTAMP\212@[Tim" +
-      "estamps describing each instance of this" +
-      " event being enriched by the telemetry p" +
-      "ipeline.\"\340\002\n\013EventActors\022n\n\004user\030\001 \001(\0132\036" +
-      ".bloombox.schema.identity.UserB@\212@=User " +
-      "account that was logged in when the even" +
-      "t was submitted.\022j\n\007partner\030\002 \001(\0132 .bloo" +
-      "mbox.schema.partner.PartnerB7\212@4Partner " +
-      "account under which the event was submit" +
-      "ted.\022u\n\010location\030\003 \001(\0132(.bloombox.schema" +
-      ".partner.PartnerLocationB9\212@6Location ac" +
-      "count under which this event was submitt" +
-      "ed.\"\322\014\n\007Context\022\202\001\n\ncollection\030\001 \001(\0132-.b" +
-      "loombox.schema.analytics.context.Collect" +
-      "ionB?\360?\001\212@9Collection information, speci" +
-      "fies event type or category.\022p\n\010user_key" +
-      "\030\002 \001(\0132!.bloombox.schema.identity.UserKe" +
-      "yB;\212@8Specifies the user associated with" +
-      " this event, if known.\022M\n\013fingerprint\030\003 " +
-      "\001(\tB8\212@5Unique device fingerprint for th" +
-      "is analytics context.\022\227\001\n\005group\030\004 \001(\tB\207\001" +
-      "\212@\203\001Arbitrary group ID for this event. G" +
-      "athers events into buckets of variable s" +
-      "ize, usually used to indicate a user or " +
-      "device session.\022h\n\010hostname\030\005 \001(\tBV\212@SHo" +
-      "stname of the server or client that tran" +
-      "smitted this information, if it is known" +
-      ".\022l\n\nip_address\030\006 \001(\tBX\212@UIP address of " +
-      "the server or client that transmitted th" +
-      "is information, if is is known.\022_\n\005scope" +
-      "\030\007 \001(\0132 .bloombox.schema.analytics.Scope" +
-      "B.\212@+Partner and commercial scope of thi" +
-      "s event.\022f\n\003app\030\010 \001(\01324.bloombox.schema." +
-      "analytics.context.DeviceApplicationB#\212@ " +
-      "Application version information.\022b\n\007libr" +
-      "ary\030\t \001(\01320.bloombox.schema.analytics.co" +
-      "ntext.DeviceLibraryB\037\212@\034Library version " +
-      "information.\022\206\002\n\006native\030\n \001(\01326.bloombox" +
-      ".schema.analytics.context.NativeDeviceCo" +
-      "ntextB\275\001\212@\271\001Specifies information about " +
-      "a native device, when the event is being" +
-      " sent from a native context of some kind" +
-      ", such as a mobile phone application or " +
-      "embedded device running partner code.\022\274\001" +
-      "\n\007browser\030\013 \001(\01327.bloombox.schema.analyt" +
-      "ics.context.BrowserDeviceContextBr\212@oSpe" +
-      "cifies information about a web browser, " +
-      "when the event is being sent from some k" +
-      "ind of web browsing context.\022\231\001\n\010locatio" +
-      "n\030\014 \001(\0132\032.opencannabis.geo.LocationBk\212@h" +
-      "Origin location for this event, as deter" +
-      "mined by geolocation or explicit inclusi" +
-      "on in the event payload.B:\n\034io.bloombox." +
-      "schema.telemetryB\020AnalyticsContextH\001P\000\242\002" +
-      "\003BBSb\006proto3"
+      "\n\027analytics/Context.proto\022\022bloombox.anal" +
+      "ytics\032\016bq_field.proto\032\022geo/Location.prot" +
+      "o\032\023identity/User.proto\032\026identity/UserKey" +
+      ".proto\032\026temporal/Instant.proto\032\025partner/" +
+      "Partner.proto\032\035partner/PartnerLocation.p" +
+      "roto\032\025analytics/Scope.proto\032\037analytics/c" +
+      "ontext/Browser.proto\032\037analytics/context/" +
+      "Library.proto\032\"analytics/context/Collect" +
+      "ion.proto\032#analytics/context/Application" +
+      ".proto\032$analytics/context/NativeDevice.p" +
+      "roto\"\322\004\n\rEventPosition\022\226\001\n\006ingest\030\002 \001(\0132" +
+      "\036.opencannabis.temporal.InstantBf\360?\001\372?\tT" +
+      "IMESTAMP\212@TTimestamp describing when thi" +
+      "s event was ingested by the backend tele" +
+      "metry pipeline.\022\244\001\n\010occurred\030\003 \001(\0132\036.ope" +
+      "ncannabis.temporal.InstantBr\360?\001\372?\tTIMEST" +
+      "AMP\212@`Timestamp describing when this eve" +
+      "nt occurred, as reported by the submitti" +
+      "ng device or endpoint.\022\202\001\n\tprocessed\030\004 \001" +
+      "(\004Bo\372?\tTIMESTAMP\212@`Timestamp describing " +
+      "when this event occurred, as reported by" +
+      " the submitting device or endpoint.\022|\n\010e" +
+      "nriched\030\005 \001(\004Bj\372?\tTIMESTAMP\212@[Timestamps" +
+      " describing each instance of this event " +
+      "being enriched by the telemetry pipeline" +
+      ".\"\313\002\n\013EventActors\022g\n\004user\030\001 \001(\0132\027.bloomb" +
+      "ox.identity.UserB@\212@=User account that w" +
+      "as logged in when the event was submitte" +
+      "d.\022c\n\007partner\030\002 \001(\0132\031.bloombox.partner.P" +
+      "artnerB7\212@4Partner account under which t" +
+      "he event was submitted.\022n\n\010location\030\003 \001(" +
+      "\0132!.bloombox.partner.PartnerLocationB9\212@" +
+      "6Location account under which this event" +
+      " was submitted.\"\240\014\n\007Context\022{\n\ncollectio" +
+      "n\030\001 \001(\0132&.bloombox.analytics.context.Col" +
+      "lectionB?\360?\001\212@9Collection information, s" +
+      "pecifies event type or category.\022i\n\010user" +
+      "_key\030\002 \001(\0132\032.bloombox.identity.UserKeyB;" +
+      "\212@8Specifies the user associated with th" +
+      "is event, if known.\022M\n\013fingerprint\030\003 \001(\t" +
+      "B8\212@5Unique device fingerprint for this " +
+      "analytics context.\022\227\001\n\005group\030\004 \001(\tB\207\001\212@\203" +
+      "\001Arbitrary group ID for this event. Gath" +
+      "ers events into buckets of variable size" +
+      ", usually used to indicate a user or dev" +
+      "ice session.\022h\n\010hostname\030\005 \001(\tBV\212@SHostn" +
+      "ame of the server or client that transmi" +
+      "tted this information, if it is known.\022l" +
+      "\n\nip_address\030\006 \001(\tBX\212@UIP address of the" +
+      " server or client that transmitted this " +
+      "information, if is is known.\022X\n\005scope\030\007 " +
+      "\001(\0132\031.bloombox.analytics.ScopeB.\212@+Partn" +
+      "er and commercial scope of this event.\022_" +
+      "\n\003app\030\010 \001(\0132-.bloombox.analytics.context" +
+      ".DeviceApplicationB#\212@ Application versi" +
+      "on information.\022[\n\007library\030\t \001(\0132).bloom" +
+      "box.analytics.context.DeviceLibraryB\037\212@\034" +
+      "Library version information.\022\377\001\n\006native\030" +
+      "\n \001(\0132/.bloombox.analytics.context.Nativ" +
+      "eDeviceContextB\275\001\212@\271\001Specifies informati" +
+      "on about a native device, when the event" +
+      " is being sent from a native context of " +
+      "some kind, such as a mobile phone applic" +
+      "ation or embedded device running partner" +
+      " code.\022\265\001\n\007browser\030\013 \001(\01320.bloombox.anal" +
+      "ytics.context.BrowserDeviceContextBr\212@oS" +
+      "pecifies information about a web browser" +
+      ", when the event is being sent from some" +
+      " kind of web browsing context.\022\231\001\n\010locat" +
+      "ion\030\014 \001(\0132\032.opencannabis.geo.LocationBk\212" +
+      "@hOrigin location for this event, as det" +
+      "ermined by geolocation or explicit inclu" +
+      "sion in the event payload.B:\n\034io.bloombo" +
+      "x.schema.telemetryB\020AnalyticsContextH\001P\000" +
+      "\242\002\003BBSb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -5532,23 +5605,23 @@ public final class AnalyticsContext {
           io.bloombox.schema.telemetry.context.ApplicationContext.getDescriptor(),
           io.bloombox.schema.telemetry.context.DeviceContext.getDescriptor(),
         }, assigner);
-    internal_static_bloombox_schema_analytics_EventPosition_descriptor =
+    internal_static_bloombox_analytics_EventPosition_descriptor =
       getDescriptor().getMessageTypes().get(0);
-    internal_static_bloombox_schema_analytics_EventPosition_fieldAccessorTable = new
+    internal_static_bloombox_analytics_EventPosition_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_bloombox_schema_analytics_EventPosition_descriptor,
+        internal_static_bloombox_analytics_EventPosition_descriptor,
         new java.lang.String[] { "Ingest", "Occurred", "Processed", "Enriched", });
-    internal_static_bloombox_schema_analytics_EventActors_descriptor =
+    internal_static_bloombox_analytics_EventActors_descriptor =
       getDescriptor().getMessageTypes().get(1);
-    internal_static_bloombox_schema_analytics_EventActors_fieldAccessorTable = new
+    internal_static_bloombox_analytics_EventActors_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_bloombox_schema_analytics_EventActors_descriptor,
+        internal_static_bloombox_analytics_EventActors_descriptor,
         new java.lang.String[] { "User", "Partner", "Location", });
-    internal_static_bloombox_schema_analytics_Context_descriptor =
+    internal_static_bloombox_analytics_Context_descriptor =
       getDescriptor().getMessageTypes().get(2);
-    internal_static_bloombox_schema_analytics_Context_fieldAccessorTable = new
+    internal_static_bloombox_analytics_Context_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_bloombox_schema_analytics_Context_descriptor,
+        internal_static_bloombox_analytics_Context_descriptor,
         new java.lang.String[] { "Collection", "UserKey", "Fingerprint", "Group", "Hostname", "IpAddress", "Scope", "App", "Library", "Native", "Browser", "Location", });
     com.google.protobuf.ExtensionRegistry registry =
         com.google.protobuf.ExtensionRegistry.newInstance();

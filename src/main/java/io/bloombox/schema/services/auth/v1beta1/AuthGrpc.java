@@ -1,8 +1,8 @@
 /*
- * Copyright 2018, Bloombox, LLC. All rights reserved.
+ * Copyright 2018, Momentum Ideas, Co. All rights reserved.
  *
  * Source and object computer code contained herein is the private intellectual
- * property of Bloombox, a California Limited Liability Corporation. Use of this
+ * property of Momentum Ideas Co., a Delaware Corporation. Use of this
  * code in source form requires permission in writing before use or the
  * assembly, distribution, or publishing of derivative works, for commercial
  * purposes or any other purpose, from a duly authorized officer of Momentum
@@ -17,20 +17,20 @@
 
 package io.bloombox.schema.services.auth.v1beta1;
 
-import static io.grpc.stub.ClientCalls.asyncUnaryCall;
-import static io.grpc.stub.ClientCalls.asyncServerStreamingCall;
-import static io.grpc.stub.ClientCalls.asyncClientStreamingCall;
-import static io.grpc.stub.ClientCalls.asyncBidiStreamingCall;
-import static io.grpc.stub.ClientCalls.blockingUnaryCall;
-import static io.grpc.stub.ClientCalls.blockingServerStreamingCall;
-import static io.grpc.stub.ClientCalls.futureUnaryCall;
 import static io.grpc.MethodDescriptor.generateFullMethodName;
-import static io.grpc.stub.ServerCalls.asyncUnaryCall;
-import static io.grpc.stub.ServerCalls.asyncServerStreamingCall;
-import static io.grpc.stub.ServerCalls.asyncClientStreamingCall;
+import static io.grpc.stub.ClientCalls.asyncBidiStreamingCall;
+import static io.grpc.stub.ClientCalls.asyncClientStreamingCall;
+import static io.grpc.stub.ClientCalls.asyncServerStreamingCall;
+import static io.grpc.stub.ClientCalls.asyncUnaryCall;
+import static io.grpc.stub.ClientCalls.blockingServerStreamingCall;
+import static io.grpc.stub.ClientCalls.blockingUnaryCall;
+import static io.grpc.stub.ClientCalls.futureUnaryCall;
 import static io.grpc.stub.ServerCalls.asyncBidiStreamingCall;
-import static io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall;
+import static io.grpc.stub.ServerCalls.asyncClientStreamingCall;
+import static io.grpc.stub.ServerCalls.asyncServerStreamingCall;
+import static io.grpc.stub.ServerCalls.asyncUnaryCall;
 import static io.grpc.stub.ServerCalls.asyncUnimplementedStreamingCall;
+import static io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall;
 
 /**
  * <pre>
@@ -39,123 +39,334 @@ import static io.grpc.stub.ServerCalls.asyncUnimplementedStreamingCall;
  * </pre>
  */
 @javax.annotation.Generated(
-    value = "by gRPC proto compiler (version 1.6.0-SNAPSHOT)",
+    value = "by gRPC proto compiler (version 1.18.0-SNAPSHOT)",
     comments = "Source: auth/v1beta1/AuthService_Beta1.proto")
 public final class AuthGrpc {
 
   private AuthGrpc() {}
 
-  public static final String SERVICE_NAME = "bloombox.schema.services.auth.v1beta1.Auth";
+  public static final String SERVICE_NAME = "bloombox.services.auth.v1beta1.Auth";
 
   // Static method descriptors that strictly reflect the proto.
-  @io.grpc.ExperimentalApi("https://github.com/grpc/grpc-java/issues/1901")
-  public static final io.grpc.MethodDescriptor<com.google.protobuf.Empty,
-      io.bloombox.schema.services.auth.v1beta1.AuthNonce> METHOD_NONCE =
-      io.grpc.MethodDescriptor.<com.google.protobuf.Empty, io.bloombox.schema.services.auth.v1beta1.AuthNonce>newBuilder()
-          .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-          .setFullMethodName(generateFullMethodName(
-              "bloombox.schema.services.auth.v1beta1.Auth", "Nonce"))
-          .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-              com.google.protobuf.Empty.getDefaultInstance()))
-          .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-              io.bloombox.schema.services.auth.v1beta1.AuthNonce.getDefaultInstance()))
-          .build();
-  @io.grpc.ExperimentalApi("https://github.com/grpc/grpc-java/issues/1901")
-  public static final io.grpc.MethodDescriptor<io.bloombox.schema.services.auth.v1beta1.AuthenticateUser.Request,
-      io.bloombox.schema.services.auth.v1beta1.AuthenticateUser.Response> METHOD_AUTHENTICATE =
-      io.grpc.MethodDescriptor.<io.bloombox.schema.services.auth.v1beta1.AuthenticateUser.Request, io.bloombox.schema.services.auth.v1beta1.AuthenticateUser.Response>newBuilder()
-          .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-          .setFullMethodName(generateFullMethodName(
-              "bloombox.schema.services.auth.v1beta1.Auth", "Authenticate"))
-          .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-              io.bloombox.schema.services.auth.v1beta1.AuthenticateUser.Request.getDefaultInstance()))
-          .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-              io.bloombox.schema.services.auth.v1beta1.AuthenticateUser.Response.getDefaultInstance()))
-          .build();
-  @io.grpc.ExperimentalApi("https://github.com/grpc/grpc-java/issues/1901")
-  public static final io.grpc.MethodDescriptor<io.bloombox.schema.services.auth.v1beta1.ConsentFlow.Request,
-      io.bloombox.schema.services.auth.v1beta1.ConsentFlow.Response> METHOD_CONSENT =
-      io.grpc.MethodDescriptor.<io.bloombox.schema.services.auth.v1beta1.ConsentFlow.Request, io.bloombox.schema.services.auth.v1beta1.ConsentFlow.Response>newBuilder()
-          .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-          .setFullMethodName(generateFullMethodName(
-              "bloombox.schema.services.auth.v1beta1.Auth", "Consent"))
-          .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-              io.bloombox.schema.services.auth.v1beta1.ConsentFlow.Request.getDefaultInstance()))
-          .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-              io.bloombox.schema.services.auth.v1beta1.ConsentFlow.Response.getDefaultInstance()))
-          .build();
-  @io.grpc.ExperimentalApi("https://github.com/grpc/grpc-java/issues/1901")
-  public static final io.grpc.MethodDescriptor<io.bloombox.schema.services.auth.v1beta1.ResolveToken.Request,
-      io.bloombox.schema.services.auth.v1beta1.ResolveToken.Response> METHOD_TOKEN =
-      io.grpc.MethodDescriptor.<io.bloombox.schema.services.auth.v1beta1.ResolveToken.Request, io.bloombox.schema.services.auth.v1beta1.ResolveToken.Response>newBuilder()
-          .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-          .setFullMethodName(generateFullMethodName(
-              "bloombox.schema.services.auth.v1beta1.Auth", "Token"))
-          .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-              io.bloombox.schema.services.auth.v1beta1.ResolveToken.Request.getDefaultInstance()))
-          .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-              io.bloombox.schema.services.auth.v1beta1.ResolveToken.Response.getDefaultInstance()))
-          .build();
-  @io.grpc.ExperimentalApi("https://github.com/grpc/grpc-java/issues/1901")
-  public static final io.grpc.MethodDescriptor<io.bloombox.schema.services.auth.v1beta1.ConsentDecision.Accept,
-      com.google.protobuf.Empty> METHOD_ACCEPT =
-      io.grpc.MethodDescriptor.<io.bloombox.schema.services.auth.v1beta1.ConsentDecision.Accept, com.google.protobuf.Empty>newBuilder()
-          .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-          .setFullMethodName(generateFullMethodName(
-              "bloombox.schema.services.auth.v1beta1.Auth", "Accept"))
-          .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-              io.bloombox.schema.services.auth.v1beta1.ConsentDecision.Accept.getDefaultInstance()))
-          .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-              com.google.protobuf.Empty.getDefaultInstance()))
-          .build();
-  @io.grpc.ExperimentalApi("https://github.com/grpc/grpc-java/issues/1901")
-  public static final io.grpc.MethodDescriptor<io.bloombox.schema.services.auth.v1beta1.ConsentDecision.Reject,
-      com.google.protobuf.Empty> METHOD_REJECT =
-      io.grpc.MethodDescriptor.<io.bloombox.schema.services.auth.v1beta1.ConsentDecision.Reject, com.google.protobuf.Empty>newBuilder()
-          .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-          .setFullMethodName(generateFullMethodName(
-              "bloombox.schema.services.auth.v1beta1.Auth", "Reject"))
-          .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-              io.bloombox.schema.services.auth.v1beta1.ConsentDecision.Reject.getDefaultInstance()))
-          .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-              com.google.protobuf.Empty.getDefaultInstance()))
-          .build();
-  @io.grpc.ExperimentalApi("https://github.com/grpc/grpc-java/issues/1901")
-  public static final io.grpc.MethodDescriptor<io.bloombox.schema.services.auth.v1beta1.IdentityConnect.Request,
-      io.bloombox.schema.services.auth.v1beta1.IdentityConnect.Response> METHOD_CONNECT =
-      io.grpc.MethodDescriptor.<io.bloombox.schema.services.auth.v1beta1.IdentityConnect.Request, io.bloombox.schema.services.auth.v1beta1.IdentityConnect.Response>newBuilder()
-          .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-          .setFullMethodName(generateFullMethodName(
-              "bloombox.schema.services.auth.v1beta1.Auth", "Connect"))
-          .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-              io.bloombox.schema.services.auth.v1beta1.IdentityConnect.Request.getDefaultInstance()))
-          .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-              io.bloombox.schema.services.auth.v1beta1.IdentityConnect.Response.getDefaultInstance()))
-          .build();
-  @io.grpc.ExperimentalApi("https://github.com/grpc/grpc-java/issues/1901")
-  public static final io.grpc.MethodDescriptor<io.bloombox.schema.services.auth.v1beta1.UserContext.Request,
-      io.bloombox.schema.services.auth.v1beta1.UserContext.Response> METHOD_CONTEXT =
-      io.grpc.MethodDescriptor.<io.bloombox.schema.services.auth.v1beta1.UserContext.Request, io.bloombox.schema.services.auth.v1beta1.UserContext.Response>newBuilder()
-          .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-          .setFullMethodName(generateFullMethodName(
-              "bloombox.schema.services.auth.v1beta1.Auth", "Context"))
-          .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-              io.bloombox.schema.services.auth.v1beta1.UserContext.Request.getDefaultInstance()))
-          .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-              io.bloombox.schema.services.auth.v1beta1.UserContext.Response.getDefaultInstance()))
-          .build();
-  @io.grpc.ExperimentalApi("https://github.com/grpc/grpc-java/issues/1901")
-  public static final io.grpc.MethodDescriptor<io.bloombox.schema.services.auth.v1beta1.GetProfile.Request,
-      io.bloombox.schema.services.auth.v1beta1.GetProfile.Response> METHOD_PROFILE =
-      io.grpc.MethodDescriptor.<io.bloombox.schema.services.auth.v1beta1.GetProfile.Request, io.bloombox.schema.services.auth.v1beta1.GetProfile.Response>newBuilder()
-          .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-          .setFullMethodName(generateFullMethodName(
-              "bloombox.schema.services.auth.v1beta1.Auth", "Profile"))
-          .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-              io.bloombox.schema.services.auth.v1beta1.GetProfile.Request.getDefaultInstance()))
-          .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-              io.bloombox.schema.services.auth.v1beta1.GetProfile.Response.getDefaultInstance()))
-          .build();
+  private static volatile io.grpc.MethodDescriptor<com.google.protobuf.Empty,
+      io.bloombox.schema.services.auth.v1beta1.AuthNonce> getNonceMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "Nonce",
+      requestType = com.google.protobuf.Empty.class,
+      responseType = io.bloombox.schema.services.auth.v1beta1.AuthNonce.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<com.google.protobuf.Empty,
+      io.bloombox.schema.services.auth.v1beta1.AuthNonce> getNonceMethod() {
+    io.grpc.MethodDescriptor<com.google.protobuf.Empty, io.bloombox.schema.services.auth.v1beta1.AuthNonce> getNonceMethod;
+    if ((getNonceMethod = AuthGrpc.getNonceMethod) == null) {
+      synchronized (AuthGrpc.class) {
+        if ((getNonceMethod = AuthGrpc.getNonceMethod) == null) {
+          AuthGrpc.getNonceMethod = getNonceMethod = 
+              io.grpc.MethodDescriptor.<com.google.protobuf.Empty, io.bloombox.schema.services.auth.v1beta1.AuthNonce>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(
+                  "bloombox.services.auth.v1beta1.Auth", "Nonce"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.google.protobuf.Empty.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  io.bloombox.schema.services.auth.v1beta1.AuthNonce.getDefaultInstance()))
+                  .setSchemaDescriptor(new AuthMethodDescriptorSupplier("Nonce"))
+                  .build();
+          }
+        }
+     }
+     return getNonceMethod;
+  }
+
+  private static volatile io.grpc.MethodDescriptor<io.bloombox.schema.services.auth.v1beta1.AuthenticateUser.Request,
+      io.bloombox.schema.services.auth.v1beta1.AuthenticateUser.Response> getAuthenticateMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "Authenticate",
+      requestType = io.bloombox.schema.services.auth.v1beta1.AuthenticateUser.Request.class,
+      responseType = io.bloombox.schema.services.auth.v1beta1.AuthenticateUser.Response.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<io.bloombox.schema.services.auth.v1beta1.AuthenticateUser.Request,
+      io.bloombox.schema.services.auth.v1beta1.AuthenticateUser.Response> getAuthenticateMethod() {
+    io.grpc.MethodDescriptor<io.bloombox.schema.services.auth.v1beta1.AuthenticateUser.Request, io.bloombox.schema.services.auth.v1beta1.AuthenticateUser.Response> getAuthenticateMethod;
+    if ((getAuthenticateMethod = AuthGrpc.getAuthenticateMethod) == null) {
+      synchronized (AuthGrpc.class) {
+        if ((getAuthenticateMethod = AuthGrpc.getAuthenticateMethod) == null) {
+          AuthGrpc.getAuthenticateMethod = getAuthenticateMethod = 
+              io.grpc.MethodDescriptor.<io.bloombox.schema.services.auth.v1beta1.AuthenticateUser.Request, io.bloombox.schema.services.auth.v1beta1.AuthenticateUser.Response>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(
+                  "bloombox.services.auth.v1beta1.Auth", "Authenticate"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  io.bloombox.schema.services.auth.v1beta1.AuthenticateUser.Request.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  io.bloombox.schema.services.auth.v1beta1.AuthenticateUser.Response.getDefaultInstance()))
+                  .setSchemaDescriptor(new AuthMethodDescriptorSupplier("Authenticate"))
+                  .build();
+          }
+        }
+     }
+     return getAuthenticateMethod;
+  }
+
+  private static volatile io.grpc.MethodDescriptor<io.bloombox.schema.services.auth.v1beta1.ConsentFlow.Request,
+      io.bloombox.schema.services.auth.v1beta1.ConsentFlow.Response> getConsentMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "Consent",
+      requestType = io.bloombox.schema.services.auth.v1beta1.ConsentFlow.Request.class,
+      responseType = io.bloombox.schema.services.auth.v1beta1.ConsentFlow.Response.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<io.bloombox.schema.services.auth.v1beta1.ConsentFlow.Request,
+      io.bloombox.schema.services.auth.v1beta1.ConsentFlow.Response> getConsentMethod() {
+    io.grpc.MethodDescriptor<io.bloombox.schema.services.auth.v1beta1.ConsentFlow.Request, io.bloombox.schema.services.auth.v1beta1.ConsentFlow.Response> getConsentMethod;
+    if ((getConsentMethod = AuthGrpc.getConsentMethod) == null) {
+      synchronized (AuthGrpc.class) {
+        if ((getConsentMethod = AuthGrpc.getConsentMethod) == null) {
+          AuthGrpc.getConsentMethod = getConsentMethod = 
+              io.grpc.MethodDescriptor.<io.bloombox.schema.services.auth.v1beta1.ConsentFlow.Request, io.bloombox.schema.services.auth.v1beta1.ConsentFlow.Response>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(
+                  "bloombox.services.auth.v1beta1.Auth", "Consent"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  io.bloombox.schema.services.auth.v1beta1.ConsentFlow.Request.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  io.bloombox.schema.services.auth.v1beta1.ConsentFlow.Response.getDefaultInstance()))
+                  .setSchemaDescriptor(new AuthMethodDescriptorSupplier("Consent"))
+                  .build();
+          }
+        }
+     }
+     return getConsentMethod;
+  }
+
+  private static volatile io.grpc.MethodDescriptor<io.bloombox.schema.services.auth.v1beta1.ResolveToken.Request,
+      io.bloombox.schema.services.auth.v1beta1.ResolveToken.Response> getTokenMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "Token",
+      requestType = io.bloombox.schema.services.auth.v1beta1.ResolveToken.Request.class,
+      responseType = io.bloombox.schema.services.auth.v1beta1.ResolveToken.Response.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<io.bloombox.schema.services.auth.v1beta1.ResolveToken.Request,
+      io.bloombox.schema.services.auth.v1beta1.ResolveToken.Response> getTokenMethod() {
+    io.grpc.MethodDescriptor<io.bloombox.schema.services.auth.v1beta1.ResolveToken.Request, io.bloombox.schema.services.auth.v1beta1.ResolveToken.Response> getTokenMethod;
+    if ((getTokenMethod = AuthGrpc.getTokenMethod) == null) {
+      synchronized (AuthGrpc.class) {
+        if ((getTokenMethod = AuthGrpc.getTokenMethod) == null) {
+          AuthGrpc.getTokenMethod = getTokenMethod = 
+              io.grpc.MethodDescriptor.<io.bloombox.schema.services.auth.v1beta1.ResolveToken.Request, io.bloombox.schema.services.auth.v1beta1.ResolveToken.Response>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(
+                  "bloombox.services.auth.v1beta1.Auth", "Token"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  io.bloombox.schema.services.auth.v1beta1.ResolveToken.Request.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  io.bloombox.schema.services.auth.v1beta1.ResolveToken.Response.getDefaultInstance()))
+                  .setSchemaDescriptor(new AuthMethodDescriptorSupplier("Token"))
+                  .build();
+          }
+        }
+     }
+     return getTokenMethod;
+  }
+
+  private static volatile io.grpc.MethodDescriptor<io.bloombox.schema.services.auth.v1beta1.ConsentDecision.Accept,
+      com.google.protobuf.Empty> getAcceptMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "Accept",
+      requestType = io.bloombox.schema.services.auth.v1beta1.ConsentDecision.Accept.class,
+      responseType = com.google.protobuf.Empty.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<io.bloombox.schema.services.auth.v1beta1.ConsentDecision.Accept,
+      com.google.protobuf.Empty> getAcceptMethod() {
+    io.grpc.MethodDescriptor<io.bloombox.schema.services.auth.v1beta1.ConsentDecision.Accept, com.google.protobuf.Empty> getAcceptMethod;
+    if ((getAcceptMethod = AuthGrpc.getAcceptMethod) == null) {
+      synchronized (AuthGrpc.class) {
+        if ((getAcceptMethod = AuthGrpc.getAcceptMethod) == null) {
+          AuthGrpc.getAcceptMethod = getAcceptMethod = 
+              io.grpc.MethodDescriptor.<io.bloombox.schema.services.auth.v1beta1.ConsentDecision.Accept, com.google.protobuf.Empty>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(
+                  "bloombox.services.auth.v1beta1.Auth", "Accept"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  io.bloombox.schema.services.auth.v1beta1.ConsentDecision.Accept.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.google.protobuf.Empty.getDefaultInstance()))
+                  .setSchemaDescriptor(new AuthMethodDescriptorSupplier("Accept"))
+                  .build();
+          }
+        }
+     }
+     return getAcceptMethod;
+  }
+
+  private static volatile io.grpc.MethodDescriptor<io.bloombox.schema.services.auth.v1beta1.ConsentDecision.Reject,
+      com.google.protobuf.Empty> getRejectMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "Reject",
+      requestType = io.bloombox.schema.services.auth.v1beta1.ConsentDecision.Reject.class,
+      responseType = com.google.protobuf.Empty.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<io.bloombox.schema.services.auth.v1beta1.ConsentDecision.Reject,
+      com.google.protobuf.Empty> getRejectMethod() {
+    io.grpc.MethodDescriptor<io.bloombox.schema.services.auth.v1beta1.ConsentDecision.Reject, com.google.protobuf.Empty> getRejectMethod;
+    if ((getRejectMethod = AuthGrpc.getRejectMethod) == null) {
+      synchronized (AuthGrpc.class) {
+        if ((getRejectMethod = AuthGrpc.getRejectMethod) == null) {
+          AuthGrpc.getRejectMethod = getRejectMethod = 
+              io.grpc.MethodDescriptor.<io.bloombox.schema.services.auth.v1beta1.ConsentDecision.Reject, com.google.protobuf.Empty>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(
+                  "bloombox.services.auth.v1beta1.Auth", "Reject"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  io.bloombox.schema.services.auth.v1beta1.ConsentDecision.Reject.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.google.protobuf.Empty.getDefaultInstance()))
+                  .setSchemaDescriptor(new AuthMethodDescriptorSupplier("Reject"))
+                  .build();
+          }
+        }
+     }
+     return getRejectMethod;
+  }
+
+  private static volatile io.grpc.MethodDescriptor<io.bloombox.schema.services.auth.v1beta1.IdentityConnect.Request,
+      io.bloombox.schema.services.auth.v1beta1.IdentityConnect.Response> getConnectMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "Connect",
+      requestType = io.bloombox.schema.services.auth.v1beta1.IdentityConnect.Request.class,
+      responseType = io.bloombox.schema.services.auth.v1beta1.IdentityConnect.Response.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<io.bloombox.schema.services.auth.v1beta1.IdentityConnect.Request,
+      io.bloombox.schema.services.auth.v1beta1.IdentityConnect.Response> getConnectMethod() {
+    io.grpc.MethodDescriptor<io.bloombox.schema.services.auth.v1beta1.IdentityConnect.Request, io.bloombox.schema.services.auth.v1beta1.IdentityConnect.Response> getConnectMethod;
+    if ((getConnectMethod = AuthGrpc.getConnectMethod) == null) {
+      synchronized (AuthGrpc.class) {
+        if ((getConnectMethod = AuthGrpc.getConnectMethod) == null) {
+          AuthGrpc.getConnectMethod = getConnectMethod = 
+              io.grpc.MethodDescriptor.<io.bloombox.schema.services.auth.v1beta1.IdentityConnect.Request, io.bloombox.schema.services.auth.v1beta1.IdentityConnect.Response>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(
+                  "bloombox.services.auth.v1beta1.Auth", "Connect"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  io.bloombox.schema.services.auth.v1beta1.IdentityConnect.Request.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  io.bloombox.schema.services.auth.v1beta1.IdentityConnect.Response.getDefaultInstance()))
+                  .setSchemaDescriptor(new AuthMethodDescriptorSupplier("Connect"))
+                  .build();
+          }
+        }
+     }
+     return getConnectMethod;
+  }
+
+  private static volatile io.grpc.MethodDescriptor<io.bloombox.schema.services.auth.v1beta1.UserContext.Request,
+      io.bloombox.schema.services.auth.v1beta1.UserContext.Response> getContextMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "Context",
+      requestType = io.bloombox.schema.services.auth.v1beta1.UserContext.Request.class,
+      responseType = io.bloombox.schema.services.auth.v1beta1.UserContext.Response.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<io.bloombox.schema.services.auth.v1beta1.UserContext.Request,
+      io.bloombox.schema.services.auth.v1beta1.UserContext.Response> getContextMethod() {
+    io.grpc.MethodDescriptor<io.bloombox.schema.services.auth.v1beta1.UserContext.Request, io.bloombox.schema.services.auth.v1beta1.UserContext.Response> getContextMethod;
+    if ((getContextMethod = AuthGrpc.getContextMethod) == null) {
+      synchronized (AuthGrpc.class) {
+        if ((getContextMethod = AuthGrpc.getContextMethod) == null) {
+          AuthGrpc.getContextMethod = getContextMethod = 
+              io.grpc.MethodDescriptor.<io.bloombox.schema.services.auth.v1beta1.UserContext.Request, io.bloombox.schema.services.auth.v1beta1.UserContext.Response>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(
+                  "bloombox.services.auth.v1beta1.Auth", "Context"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  io.bloombox.schema.services.auth.v1beta1.UserContext.Request.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  io.bloombox.schema.services.auth.v1beta1.UserContext.Response.getDefaultInstance()))
+                  .setSchemaDescriptor(new AuthMethodDescriptorSupplier("Context"))
+                  .build();
+          }
+        }
+     }
+     return getContextMethod;
+  }
+
+  private static volatile io.grpc.MethodDescriptor<io.bloombox.schema.services.auth.v1beta1.GetProfile.Request,
+      io.bloombox.schema.services.auth.v1beta1.GetProfile.Response> getProfileMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "Profile",
+      requestType = io.bloombox.schema.services.auth.v1beta1.GetProfile.Request.class,
+      responseType = io.bloombox.schema.services.auth.v1beta1.GetProfile.Response.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<io.bloombox.schema.services.auth.v1beta1.GetProfile.Request,
+      io.bloombox.schema.services.auth.v1beta1.GetProfile.Response> getProfileMethod() {
+    io.grpc.MethodDescriptor<io.bloombox.schema.services.auth.v1beta1.GetProfile.Request, io.bloombox.schema.services.auth.v1beta1.GetProfile.Response> getProfileMethod;
+    if ((getProfileMethod = AuthGrpc.getProfileMethod) == null) {
+      synchronized (AuthGrpc.class) {
+        if ((getProfileMethod = AuthGrpc.getProfileMethod) == null) {
+          AuthGrpc.getProfileMethod = getProfileMethod = 
+              io.grpc.MethodDescriptor.<io.bloombox.schema.services.auth.v1beta1.GetProfile.Request, io.bloombox.schema.services.auth.v1beta1.GetProfile.Response>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(
+                  "bloombox.services.auth.v1beta1.Auth", "Profile"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  io.bloombox.schema.services.auth.v1beta1.GetProfile.Request.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  io.bloombox.schema.services.auth.v1beta1.GetProfile.Response.getDefaultInstance()))
+                  .setSchemaDescriptor(new AuthMethodDescriptorSupplier("Profile"))
+                  .build();
+          }
+        }
+     }
+     return getProfileMethod;
+  }
+
+  private static volatile io.grpc.MethodDescriptor<io.bloombox.schema.services.auth.v1beta1.ProfileUpdate.Request,
+      com.google.protobuf.Empty> getUpdateProfileMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "UpdateProfile",
+      requestType = io.bloombox.schema.services.auth.v1beta1.ProfileUpdate.Request.class,
+      responseType = com.google.protobuf.Empty.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<io.bloombox.schema.services.auth.v1beta1.ProfileUpdate.Request,
+      com.google.protobuf.Empty> getUpdateProfileMethod() {
+    io.grpc.MethodDescriptor<io.bloombox.schema.services.auth.v1beta1.ProfileUpdate.Request, com.google.protobuf.Empty> getUpdateProfileMethod;
+    if ((getUpdateProfileMethod = AuthGrpc.getUpdateProfileMethod) == null) {
+      synchronized (AuthGrpc.class) {
+        if ((getUpdateProfileMethod = AuthGrpc.getUpdateProfileMethod) == null) {
+          AuthGrpc.getUpdateProfileMethod = getUpdateProfileMethod = 
+              io.grpc.MethodDescriptor.<io.bloombox.schema.services.auth.v1beta1.ProfileUpdate.Request, com.google.protobuf.Empty>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(
+                  "bloombox.services.auth.v1beta1.Auth", "UpdateProfile"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  io.bloombox.schema.services.auth.v1beta1.ProfileUpdate.Request.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.google.protobuf.Empty.getDefaultInstance()))
+                  .setSchemaDescriptor(new AuthMethodDescriptorSupplier("UpdateProfile"))
+                  .build();
+          }
+        }
+     }
+     return getUpdateProfileMethod;
+  }
 
   /**
    * Creates a new async stub that supports all call types for the service
@@ -195,7 +406,7 @@ public final class AuthGrpc {
      */
     public void nonce(com.google.protobuf.Empty request,
         io.grpc.stub.StreamObserver<io.bloombox.schema.services.auth.v1beta1.AuthNonce> responseObserver) {
-      asyncUnimplementedUnaryCall(METHOD_NONCE, responseObserver);
+      asyncUnimplementedUnaryCall(getNonceMethod(), responseObserver);
     }
 
     /**
@@ -206,7 +417,7 @@ public final class AuthGrpc {
      */
     public void authenticate(io.bloombox.schema.services.auth.v1beta1.AuthenticateUser.Request request,
         io.grpc.stub.StreamObserver<io.bloombox.schema.services.auth.v1beta1.AuthenticateUser.Response> responseObserver) {
-      asyncUnimplementedUnaryCall(METHOD_AUTHENTICATE, responseObserver);
+      asyncUnimplementedUnaryCall(getAuthenticateMethod(), responseObserver);
     }
 
     /**
@@ -216,7 +427,7 @@ public final class AuthGrpc {
      */
     public void consent(io.bloombox.schema.services.auth.v1beta1.ConsentFlow.Request request,
         io.grpc.stub.StreamObserver<io.bloombox.schema.services.auth.v1beta1.ConsentFlow.Response> responseObserver) {
-      asyncUnimplementedUnaryCall(METHOD_CONSENT, responseObserver);
+      asyncUnimplementedUnaryCall(getConsentMethod(), responseObserver);
     }
 
     /**
@@ -226,7 +437,7 @@ public final class AuthGrpc {
      */
     public void token(io.bloombox.schema.services.auth.v1beta1.ResolveToken.Request request,
         io.grpc.stub.StreamObserver<io.bloombox.schema.services.auth.v1beta1.ResolveToken.Response> responseObserver) {
-      asyncUnimplementedUnaryCall(METHOD_TOKEN, responseObserver);
+      asyncUnimplementedUnaryCall(getTokenMethod(), responseObserver);
     }
 
     /**
@@ -236,7 +447,7 @@ public final class AuthGrpc {
      */
     public void accept(io.bloombox.schema.services.auth.v1beta1.ConsentDecision.Accept request,
         io.grpc.stub.StreamObserver<com.google.protobuf.Empty> responseObserver) {
-      asyncUnimplementedUnaryCall(METHOD_ACCEPT, responseObserver);
+      asyncUnimplementedUnaryCall(getAcceptMethod(), responseObserver);
     }
 
     /**
@@ -246,7 +457,7 @@ public final class AuthGrpc {
      */
     public void reject(io.bloombox.schema.services.auth.v1beta1.ConsentDecision.Reject request,
         io.grpc.stub.StreamObserver<com.google.protobuf.Empty> responseObserver) {
-      asyncUnimplementedUnaryCall(METHOD_REJECT, responseObserver);
+      asyncUnimplementedUnaryCall(getRejectMethod(), responseObserver);
     }
 
     /**
@@ -257,7 +468,7 @@ public final class AuthGrpc {
      */
     public void connect(io.bloombox.schema.services.auth.v1beta1.IdentityConnect.Request request,
         io.grpc.stub.StreamObserver<io.bloombox.schema.services.auth.v1beta1.IdentityConnect.Response> responseObserver) {
-      asyncUnimplementedUnaryCall(METHOD_CONNECT, responseObserver);
+      asyncUnimplementedUnaryCall(getConnectMethod(), responseObserver);
     }
 
     /**
@@ -267,7 +478,7 @@ public final class AuthGrpc {
      */
     public void context(io.bloombox.schema.services.auth.v1beta1.UserContext.Request request,
         io.grpc.stub.StreamObserver<io.bloombox.schema.services.auth.v1beta1.UserContext.Response> responseObserver) {
-      asyncUnimplementedUnaryCall(METHOD_CONTEXT, responseObserver);
+      asyncUnimplementedUnaryCall(getContextMethod(), responseObserver);
     }
 
     /**
@@ -277,74 +488,88 @@ public final class AuthGrpc {
      */
     public void profile(io.bloombox.schema.services.auth.v1beta1.GetProfile.Request request,
         io.grpc.stub.StreamObserver<io.bloombox.schema.services.auth.v1beta1.GetProfile.Response> responseObserver) {
-      asyncUnimplementedUnaryCall(METHOD_PROFILE, responseObserver);
+      asyncUnimplementedUnaryCall(getProfileMethod(), responseObserver);
+    }
+
+    /**
+     */
+    public void updateProfile(io.bloombox.schema.services.auth.v1beta1.ProfileUpdate.Request request,
+        io.grpc.stub.StreamObserver<com.google.protobuf.Empty> responseObserver) {
+      asyncUnimplementedUnaryCall(getUpdateProfileMethod(), responseObserver);
     }
 
     @java.lang.Override public final io.grpc.ServerServiceDefinition bindService() {
       return io.grpc.ServerServiceDefinition.builder(getServiceDescriptor())
           .addMethod(
-            METHOD_NONCE,
+            getNonceMethod(),
             asyncUnaryCall(
               new MethodHandlers<
                 com.google.protobuf.Empty,
                 io.bloombox.schema.services.auth.v1beta1.AuthNonce>(
                   this, METHODID_NONCE)))
           .addMethod(
-            METHOD_AUTHENTICATE,
+            getAuthenticateMethod(),
             asyncUnaryCall(
               new MethodHandlers<
                 io.bloombox.schema.services.auth.v1beta1.AuthenticateUser.Request,
                 io.bloombox.schema.services.auth.v1beta1.AuthenticateUser.Response>(
                   this, METHODID_AUTHENTICATE)))
           .addMethod(
-            METHOD_CONSENT,
+            getConsentMethod(),
             asyncUnaryCall(
               new MethodHandlers<
                 io.bloombox.schema.services.auth.v1beta1.ConsentFlow.Request,
                 io.bloombox.schema.services.auth.v1beta1.ConsentFlow.Response>(
                   this, METHODID_CONSENT)))
           .addMethod(
-            METHOD_TOKEN,
+            getTokenMethod(),
             asyncUnaryCall(
               new MethodHandlers<
                 io.bloombox.schema.services.auth.v1beta1.ResolveToken.Request,
                 io.bloombox.schema.services.auth.v1beta1.ResolveToken.Response>(
                   this, METHODID_TOKEN)))
           .addMethod(
-            METHOD_ACCEPT,
+            getAcceptMethod(),
             asyncUnaryCall(
               new MethodHandlers<
                 io.bloombox.schema.services.auth.v1beta1.ConsentDecision.Accept,
                 com.google.protobuf.Empty>(
                   this, METHODID_ACCEPT)))
           .addMethod(
-            METHOD_REJECT,
+            getRejectMethod(),
             asyncUnaryCall(
               new MethodHandlers<
                 io.bloombox.schema.services.auth.v1beta1.ConsentDecision.Reject,
                 com.google.protobuf.Empty>(
                   this, METHODID_REJECT)))
           .addMethod(
-            METHOD_CONNECT,
+            getConnectMethod(),
             asyncUnaryCall(
               new MethodHandlers<
                 io.bloombox.schema.services.auth.v1beta1.IdentityConnect.Request,
                 io.bloombox.schema.services.auth.v1beta1.IdentityConnect.Response>(
                   this, METHODID_CONNECT)))
           .addMethod(
-            METHOD_CONTEXT,
+            getContextMethod(),
             asyncUnaryCall(
               new MethodHandlers<
                 io.bloombox.schema.services.auth.v1beta1.UserContext.Request,
                 io.bloombox.schema.services.auth.v1beta1.UserContext.Response>(
                   this, METHODID_CONTEXT)))
           .addMethod(
-            METHOD_PROFILE,
+            getProfileMethod(),
             asyncUnaryCall(
               new MethodHandlers<
                 io.bloombox.schema.services.auth.v1beta1.GetProfile.Request,
                 io.bloombox.schema.services.auth.v1beta1.GetProfile.Response>(
                   this, METHODID_PROFILE)))
+          .addMethod(
+            getUpdateProfileMethod(),
+            asyncUnaryCall(
+              new MethodHandlers<
+                io.bloombox.schema.services.auth.v1beta1.ProfileUpdate.Request,
+                com.google.protobuf.Empty>(
+                  this, METHODID_UPDATE_PROFILE)))
           .build();
     }
   }
@@ -379,7 +604,7 @@ public final class AuthGrpc {
     public void nonce(com.google.protobuf.Empty request,
         io.grpc.stub.StreamObserver<io.bloombox.schema.services.auth.v1beta1.AuthNonce> responseObserver) {
       asyncUnaryCall(
-          getChannel().newCall(METHOD_NONCE, getCallOptions()), request, responseObserver);
+          getChannel().newCall(getNonceMethod(), getCallOptions()), request, responseObserver);
     }
 
     /**
@@ -391,7 +616,7 @@ public final class AuthGrpc {
     public void authenticate(io.bloombox.schema.services.auth.v1beta1.AuthenticateUser.Request request,
         io.grpc.stub.StreamObserver<io.bloombox.schema.services.auth.v1beta1.AuthenticateUser.Response> responseObserver) {
       asyncUnaryCall(
-          getChannel().newCall(METHOD_AUTHENTICATE, getCallOptions()), request, responseObserver);
+          getChannel().newCall(getAuthenticateMethod(), getCallOptions()), request, responseObserver);
     }
 
     /**
@@ -402,7 +627,7 @@ public final class AuthGrpc {
     public void consent(io.bloombox.schema.services.auth.v1beta1.ConsentFlow.Request request,
         io.grpc.stub.StreamObserver<io.bloombox.schema.services.auth.v1beta1.ConsentFlow.Response> responseObserver) {
       asyncUnaryCall(
-          getChannel().newCall(METHOD_CONSENT, getCallOptions()), request, responseObserver);
+          getChannel().newCall(getConsentMethod(), getCallOptions()), request, responseObserver);
     }
 
     /**
@@ -413,7 +638,7 @@ public final class AuthGrpc {
     public void token(io.bloombox.schema.services.auth.v1beta1.ResolveToken.Request request,
         io.grpc.stub.StreamObserver<io.bloombox.schema.services.auth.v1beta1.ResolveToken.Response> responseObserver) {
       asyncUnaryCall(
-          getChannel().newCall(METHOD_TOKEN, getCallOptions()), request, responseObserver);
+          getChannel().newCall(getTokenMethod(), getCallOptions()), request, responseObserver);
     }
 
     /**
@@ -424,7 +649,7 @@ public final class AuthGrpc {
     public void accept(io.bloombox.schema.services.auth.v1beta1.ConsentDecision.Accept request,
         io.grpc.stub.StreamObserver<com.google.protobuf.Empty> responseObserver) {
       asyncUnaryCall(
-          getChannel().newCall(METHOD_ACCEPT, getCallOptions()), request, responseObserver);
+          getChannel().newCall(getAcceptMethod(), getCallOptions()), request, responseObserver);
     }
 
     /**
@@ -435,7 +660,7 @@ public final class AuthGrpc {
     public void reject(io.bloombox.schema.services.auth.v1beta1.ConsentDecision.Reject request,
         io.grpc.stub.StreamObserver<com.google.protobuf.Empty> responseObserver) {
       asyncUnaryCall(
-          getChannel().newCall(METHOD_REJECT, getCallOptions()), request, responseObserver);
+          getChannel().newCall(getRejectMethod(), getCallOptions()), request, responseObserver);
     }
 
     /**
@@ -447,7 +672,7 @@ public final class AuthGrpc {
     public void connect(io.bloombox.schema.services.auth.v1beta1.IdentityConnect.Request request,
         io.grpc.stub.StreamObserver<io.bloombox.schema.services.auth.v1beta1.IdentityConnect.Response> responseObserver) {
       asyncUnaryCall(
-          getChannel().newCall(METHOD_CONNECT, getCallOptions()), request, responseObserver);
+          getChannel().newCall(getConnectMethod(), getCallOptions()), request, responseObserver);
     }
 
     /**
@@ -458,7 +683,7 @@ public final class AuthGrpc {
     public void context(io.bloombox.schema.services.auth.v1beta1.UserContext.Request request,
         io.grpc.stub.StreamObserver<io.bloombox.schema.services.auth.v1beta1.UserContext.Response> responseObserver) {
       asyncUnaryCall(
-          getChannel().newCall(METHOD_CONTEXT, getCallOptions()), request, responseObserver);
+          getChannel().newCall(getContextMethod(), getCallOptions()), request, responseObserver);
     }
 
     /**
@@ -469,7 +694,15 @@ public final class AuthGrpc {
     public void profile(io.bloombox.schema.services.auth.v1beta1.GetProfile.Request request,
         io.grpc.stub.StreamObserver<io.bloombox.schema.services.auth.v1beta1.GetProfile.Response> responseObserver) {
       asyncUnaryCall(
-          getChannel().newCall(METHOD_PROFILE, getCallOptions()), request, responseObserver);
+          getChannel().newCall(getProfileMethod(), getCallOptions()), request, responseObserver);
+    }
+
+    /**
+     */
+    public void updateProfile(io.bloombox.schema.services.auth.v1beta1.ProfileUpdate.Request request,
+        io.grpc.stub.StreamObserver<com.google.protobuf.Empty> responseObserver) {
+      asyncUnaryCall(
+          getChannel().newCall(getUpdateProfileMethod(), getCallOptions()), request, responseObserver);
     }
   }
 
@@ -502,7 +735,7 @@ public final class AuthGrpc {
      */
     public io.bloombox.schema.services.auth.v1beta1.AuthNonce nonce(com.google.protobuf.Empty request) {
       return blockingUnaryCall(
-          getChannel(), METHOD_NONCE, getCallOptions(), request);
+          getChannel(), getNonceMethod(), getCallOptions(), request);
     }
 
     /**
@@ -513,7 +746,7 @@ public final class AuthGrpc {
      */
     public io.bloombox.schema.services.auth.v1beta1.AuthenticateUser.Response authenticate(io.bloombox.schema.services.auth.v1beta1.AuthenticateUser.Request request) {
       return blockingUnaryCall(
-          getChannel(), METHOD_AUTHENTICATE, getCallOptions(), request);
+          getChannel(), getAuthenticateMethod(), getCallOptions(), request);
     }
 
     /**
@@ -523,7 +756,7 @@ public final class AuthGrpc {
      */
     public io.bloombox.schema.services.auth.v1beta1.ConsentFlow.Response consent(io.bloombox.schema.services.auth.v1beta1.ConsentFlow.Request request) {
       return blockingUnaryCall(
-          getChannel(), METHOD_CONSENT, getCallOptions(), request);
+          getChannel(), getConsentMethod(), getCallOptions(), request);
     }
 
     /**
@@ -533,7 +766,7 @@ public final class AuthGrpc {
      */
     public io.bloombox.schema.services.auth.v1beta1.ResolveToken.Response token(io.bloombox.schema.services.auth.v1beta1.ResolveToken.Request request) {
       return blockingUnaryCall(
-          getChannel(), METHOD_TOKEN, getCallOptions(), request);
+          getChannel(), getTokenMethod(), getCallOptions(), request);
     }
 
     /**
@@ -543,7 +776,7 @@ public final class AuthGrpc {
      */
     public com.google.protobuf.Empty accept(io.bloombox.schema.services.auth.v1beta1.ConsentDecision.Accept request) {
       return blockingUnaryCall(
-          getChannel(), METHOD_ACCEPT, getCallOptions(), request);
+          getChannel(), getAcceptMethod(), getCallOptions(), request);
     }
 
     /**
@@ -553,7 +786,7 @@ public final class AuthGrpc {
      */
     public com.google.protobuf.Empty reject(io.bloombox.schema.services.auth.v1beta1.ConsentDecision.Reject request) {
       return blockingUnaryCall(
-          getChannel(), METHOD_REJECT, getCallOptions(), request);
+          getChannel(), getRejectMethod(), getCallOptions(), request);
     }
 
     /**
@@ -564,7 +797,7 @@ public final class AuthGrpc {
      */
     public io.bloombox.schema.services.auth.v1beta1.IdentityConnect.Response connect(io.bloombox.schema.services.auth.v1beta1.IdentityConnect.Request request) {
       return blockingUnaryCall(
-          getChannel(), METHOD_CONNECT, getCallOptions(), request);
+          getChannel(), getConnectMethod(), getCallOptions(), request);
     }
 
     /**
@@ -574,7 +807,7 @@ public final class AuthGrpc {
      */
     public io.bloombox.schema.services.auth.v1beta1.UserContext.Response context(io.bloombox.schema.services.auth.v1beta1.UserContext.Request request) {
       return blockingUnaryCall(
-          getChannel(), METHOD_CONTEXT, getCallOptions(), request);
+          getChannel(), getContextMethod(), getCallOptions(), request);
     }
 
     /**
@@ -584,7 +817,14 @@ public final class AuthGrpc {
      */
     public io.bloombox.schema.services.auth.v1beta1.GetProfile.Response profile(io.bloombox.schema.services.auth.v1beta1.GetProfile.Request request) {
       return blockingUnaryCall(
-          getChannel(), METHOD_PROFILE, getCallOptions(), request);
+          getChannel(), getProfileMethod(), getCallOptions(), request);
+    }
+
+    /**
+     */
+    public com.google.protobuf.Empty updateProfile(io.bloombox.schema.services.auth.v1beta1.ProfileUpdate.Request request) {
+      return blockingUnaryCall(
+          getChannel(), getUpdateProfileMethod(), getCallOptions(), request);
     }
   }
 
@@ -618,7 +858,7 @@ public final class AuthGrpc {
     public com.google.common.util.concurrent.ListenableFuture<io.bloombox.schema.services.auth.v1beta1.AuthNonce> nonce(
         com.google.protobuf.Empty request) {
       return futureUnaryCall(
-          getChannel().newCall(METHOD_NONCE, getCallOptions()), request);
+          getChannel().newCall(getNonceMethod(), getCallOptions()), request);
     }
 
     /**
@@ -630,7 +870,7 @@ public final class AuthGrpc {
     public com.google.common.util.concurrent.ListenableFuture<io.bloombox.schema.services.auth.v1beta1.AuthenticateUser.Response> authenticate(
         io.bloombox.schema.services.auth.v1beta1.AuthenticateUser.Request request) {
       return futureUnaryCall(
-          getChannel().newCall(METHOD_AUTHENTICATE, getCallOptions()), request);
+          getChannel().newCall(getAuthenticateMethod(), getCallOptions()), request);
     }
 
     /**
@@ -641,7 +881,7 @@ public final class AuthGrpc {
     public com.google.common.util.concurrent.ListenableFuture<io.bloombox.schema.services.auth.v1beta1.ConsentFlow.Response> consent(
         io.bloombox.schema.services.auth.v1beta1.ConsentFlow.Request request) {
       return futureUnaryCall(
-          getChannel().newCall(METHOD_CONSENT, getCallOptions()), request);
+          getChannel().newCall(getConsentMethod(), getCallOptions()), request);
     }
 
     /**
@@ -652,7 +892,7 @@ public final class AuthGrpc {
     public com.google.common.util.concurrent.ListenableFuture<io.bloombox.schema.services.auth.v1beta1.ResolveToken.Response> token(
         io.bloombox.schema.services.auth.v1beta1.ResolveToken.Request request) {
       return futureUnaryCall(
-          getChannel().newCall(METHOD_TOKEN, getCallOptions()), request);
+          getChannel().newCall(getTokenMethod(), getCallOptions()), request);
     }
 
     /**
@@ -663,7 +903,7 @@ public final class AuthGrpc {
     public com.google.common.util.concurrent.ListenableFuture<com.google.protobuf.Empty> accept(
         io.bloombox.schema.services.auth.v1beta1.ConsentDecision.Accept request) {
       return futureUnaryCall(
-          getChannel().newCall(METHOD_ACCEPT, getCallOptions()), request);
+          getChannel().newCall(getAcceptMethod(), getCallOptions()), request);
     }
 
     /**
@@ -674,7 +914,7 @@ public final class AuthGrpc {
     public com.google.common.util.concurrent.ListenableFuture<com.google.protobuf.Empty> reject(
         io.bloombox.schema.services.auth.v1beta1.ConsentDecision.Reject request) {
       return futureUnaryCall(
-          getChannel().newCall(METHOD_REJECT, getCallOptions()), request);
+          getChannel().newCall(getRejectMethod(), getCallOptions()), request);
     }
 
     /**
@@ -686,7 +926,7 @@ public final class AuthGrpc {
     public com.google.common.util.concurrent.ListenableFuture<io.bloombox.schema.services.auth.v1beta1.IdentityConnect.Response> connect(
         io.bloombox.schema.services.auth.v1beta1.IdentityConnect.Request request) {
       return futureUnaryCall(
-          getChannel().newCall(METHOD_CONNECT, getCallOptions()), request);
+          getChannel().newCall(getConnectMethod(), getCallOptions()), request);
     }
 
     /**
@@ -697,7 +937,7 @@ public final class AuthGrpc {
     public com.google.common.util.concurrent.ListenableFuture<io.bloombox.schema.services.auth.v1beta1.UserContext.Response> context(
         io.bloombox.schema.services.auth.v1beta1.UserContext.Request request) {
       return futureUnaryCall(
-          getChannel().newCall(METHOD_CONTEXT, getCallOptions()), request);
+          getChannel().newCall(getContextMethod(), getCallOptions()), request);
     }
 
     /**
@@ -708,7 +948,15 @@ public final class AuthGrpc {
     public com.google.common.util.concurrent.ListenableFuture<io.bloombox.schema.services.auth.v1beta1.GetProfile.Response> profile(
         io.bloombox.schema.services.auth.v1beta1.GetProfile.Request request) {
       return futureUnaryCall(
-          getChannel().newCall(METHOD_PROFILE, getCallOptions()), request);
+          getChannel().newCall(getProfileMethod(), getCallOptions()), request);
+    }
+
+    /**
+     */
+    public com.google.common.util.concurrent.ListenableFuture<com.google.protobuf.Empty> updateProfile(
+        io.bloombox.schema.services.auth.v1beta1.ProfileUpdate.Request request) {
+      return futureUnaryCall(
+          getChannel().newCall(getUpdateProfileMethod(), getCallOptions()), request);
     }
   }
 
@@ -721,6 +969,7 @@ public final class AuthGrpc {
   private static final int METHODID_CONNECT = 6;
   private static final int METHODID_CONTEXT = 7;
   private static final int METHODID_PROFILE = 8;
+  private static final int METHODID_UPDATE_PROFILE = 9;
 
   private static final class MethodHandlers<Req, Resp> implements
       io.grpc.stub.ServerCalls.UnaryMethod<Req, Resp>,
@@ -775,6 +1024,10 @@ public final class AuthGrpc {
           serviceImpl.profile((io.bloombox.schema.services.auth.v1beta1.GetProfile.Request) request,
               (io.grpc.stub.StreamObserver<io.bloombox.schema.services.auth.v1beta1.GetProfile.Response>) responseObserver);
           break;
+        case METHODID_UPDATE_PROFILE:
+          serviceImpl.updateProfile((io.bloombox.schema.services.auth.v1beta1.ProfileUpdate.Request) request,
+              (io.grpc.stub.StreamObserver<com.google.protobuf.Empty>) responseObserver);
+          break;
         default:
           throw new AssertionError();
       }
@@ -791,10 +1044,38 @@ public final class AuthGrpc {
     }
   }
 
-  private static final class AuthDescriptorSupplier implements io.grpc.protobuf.ProtoFileDescriptorSupplier {
+  private static abstract class AuthBaseDescriptorSupplier
+      implements io.grpc.protobuf.ProtoFileDescriptorSupplier, io.grpc.protobuf.ProtoServiceDescriptorSupplier {
+    AuthBaseDescriptorSupplier() {}
+
     @java.lang.Override
     public com.google.protobuf.Descriptors.FileDescriptor getFileDescriptor() {
       return io.bloombox.schema.services.auth.v1beta1.AuthServiceBeta1.getDescriptor();
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Descriptors.ServiceDescriptor getServiceDescriptor() {
+      return getFileDescriptor().findServiceByName("Auth");
+    }
+  }
+
+  private static final class AuthFileDescriptorSupplier
+      extends AuthBaseDescriptorSupplier {
+    AuthFileDescriptorSupplier() {}
+  }
+
+  private static final class AuthMethodDescriptorSupplier
+      extends AuthBaseDescriptorSupplier
+      implements io.grpc.protobuf.ProtoMethodDescriptorSupplier {
+    private final String methodName;
+
+    AuthMethodDescriptorSupplier(String methodName) {
+      this.methodName = methodName;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Descriptors.MethodDescriptor getMethodDescriptor() {
+      return getServiceDescriptor().findMethodByName(methodName);
     }
   }
 
@@ -807,16 +1088,17 @@ public final class AuthGrpc {
         result = serviceDescriptor;
         if (result == null) {
           serviceDescriptor = result = io.grpc.ServiceDescriptor.newBuilder(SERVICE_NAME)
-              .setSchemaDescriptor(new AuthDescriptorSupplier())
-              .addMethod(METHOD_NONCE)
-              .addMethod(METHOD_AUTHENTICATE)
-              .addMethod(METHOD_CONSENT)
-              .addMethod(METHOD_TOKEN)
-              .addMethod(METHOD_ACCEPT)
-              .addMethod(METHOD_REJECT)
-              .addMethod(METHOD_CONNECT)
-              .addMethod(METHOD_CONTEXT)
-              .addMethod(METHOD_PROFILE)
+              .setSchemaDescriptor(new AuthFileDescriptorSupplier())
+              .addMethod(getNonceMethod())
+              .addMethod(getAuthenticateMethod())
+              .addMethod(getConsentMethod())
+              .addMethod(getTokenMethod())
+              .addMethod(getAcceptMethod())
+              .addMethod(getRejectMethod())
+              .addMethod(getConnectMethod())
+              .addMethod(getContextMethod())
+              .addMethod(getProfileMethod())
+              .addMethod(getUpdateProfileMethod())
               .build();
         }
       }

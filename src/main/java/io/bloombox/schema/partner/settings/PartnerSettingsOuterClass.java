@@ -1,11 +1,12 @@
 /*
- * Copyright 2018, Bloombox, LLC.
+ * Copyright 2018, Momentum Ideas, Co. All rights reserved.
  *
- * Licensed under the Apache License, Version 2.0 (the "License");
- * you may not use this file except in compliance with the License.
- * You may obtain a copy of the License at
- *
- *     http://www.apache.org/licenses/LICENSE-2.0
+ * Source and object computer code contained herein is the private intellectual
+ * property of Momentum Ideas Co., a Delaware Corporation. Use of this
+ * code in source form requires permission in writing before use or the
+ * assembly, distribution, or publishing of derivative works, for commercial
+ * purposes or any other purpose, from a duly authorized officer of Momentum
+ * Ideas Co.
  *
  * Unless required by applicable law or agreed to in writing, software
  * distributed under the License is distributed on an "AS IS" BASIS,
@@ -31,7 +32,7 @@ public final class PartnerSettingsOuterClass {
         (com.google.protobuf.ExtensionRegistryLite) registry);
   }
   public interface PartnerNotificationTargetOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:bloombox.schema.partner.settings.PartnerNotificationTarget)
+      // @@protoc_insertion_point(interface_extends:bloombox.partner.settings.PartnerNotificationTarget)
       com.google.protobuf.MessageOrBuilder {
 
     /**
@@ -100,11 +101,11 @@ public final class PartnerSettingsOuterClass {
    * Specifies an individual notification target for alerting.
    * </pre>
    *
-   * Protobuf type {@code bloombox.schema.partner.settings.PartnerNotificationTarget}
+   * Protobuf type {@code bloombox.partner.settings.PartnerNotificationTarget}
    */
   public  static final class PartnerNotificationTarget extends
       com.google.protobuf.GeneratedMessageV3 implements
-      // @@protoc_insertion_point(message_implements:bloombox.schema.partner.settings.PartnerNotificationTarget)
+      // @@protoc_insertion_point(message_implements:bloombox.partner.settings.PartnerNotificationTarget)
       PartnerNotificationTargetOrBuilder {
   private static final long serialVersionUID = 0L;
     // Use PartnerNotificationTarget.newBuilder() to construct.
@@ -139,13 +140,6 @@ public final class PartnerSettingsOuterClass {
             case 0:
               done = true;
               break;
-            default: {
-              if (!parseUnknownFieldProto3(
-                  input, unknownFields, extensionRegistry, tag)) {
-                done = true;
-              }
-              break;
-            }
             case 8: {
 
               disabled_ = input.readBool();
@@ -179,6 +173,13 @@ public final class PartnerSettingsOuterClass {
               contactCase_ = 11;
               break;
             }
+            default: {
+              if (!parseUnknownFieldProto3(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
           }
         }
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
@@ -193,12 +194,13 @@ public final class PartnerSettingsOuterClass {
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return io.bloombox.schema.partner.settings.PartnerSettingsOuterClass.internal_static_bloombox_schema_partner_settings_PartnerNotificationTarget_descriptor;
+      return io.bloombox.schema.partner.settings.PartnerSettingsOuterClass.internal_static_bloombox_partner_settings_PartnerNotificationTarget_descriptor;
     }
 
+    @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return io.bloombox.schema.partner.settings.PartnerSettingsOuterClass.internal_static_bloombox_schema_partner_settings_PartnerNotificationTarget_fieldAccessorTable
+      return io.bloombox.schema.partner.settings.PartnerSettingsOuterClass.internal_static_bloombox_partner_settings_PartnerNotificationTarget_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
               io.bloombox.schema.partner.settings.PartnerSettingsOuterClass.PartnerNotificationTarget.class, io.bloombox.schema.partner.settings.PartnerSettingsOuterClass.PartnerNotificationTarget.Builder.class);
     }
@@ -331,6 +333,7 @@ public final class PartnerSettingsOuterClass {
     }
 
     private byte memoizedIsInitialized = -1;
+    @java.lang.Override
     public final boolean isInitialized() {
       byte isInitialized = memoizedIsInitialized;
       if (isInitialized == 1) return true;
@@ -340,6 +343,7 @@ public final class PartnerSettingsOuterClass {
       return true;
     }
 
+    @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
       if (disabled_ != false) {
@@ -354,6 +358,7 @@ public final class PartnerSettingsOuterClass {
       unknownFields.writeTo(output);
     }
 
+    @java.lang.Override
     public int getSerializedSize() {
       int size = memoizedSize;
       if (size != -1) return size;
@@ -505,6 +510,7 @@ public final class PartnerSettingsOuterClass {
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
 
+    @java.lang.Override
     public Builder newBuilderForType() { return newBuilder(); }
     public static Builder newBuilder() {
       return DEFAULT_INSTANCE.toBuilder();
@@ -512,6 +518,7 @@ public final class PartnerSettingsOuterClass {
     public static Builder newBuilder(io.bloombox.schema.partner.settings.PartnerSettingsOuterClass.PartnerNotificationTarget prototype) {
       return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
     }
+    @java.lang.Override
     public Builder toBuilder() {
       return this == DEFAULT_INSTANCE
           ? new Builder() : new Builder().mergeFrom(this);
@@ -528,20 +535,21 @@ public final class PartnerSettingsOuterClass {
      * Specifies an individual notification target for alerting.
      * </pre>
      *
-     * Protobuf type {@code bloombox.schema.partner.settings.PartnerNotificationTarget}
+     * Protobuf type {@code bloombox.partner.settings.PartnerNotificationTarget}
      */
     public static final class Builder extends
         com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:bloombox.schema.partner.settings.PartnerNotificationTarget)
+        // @@protoc_insertion_point(builder_implements:bloombox.partner.settings.PartnerNotificationTarget)
         io.bloombox.schema.partner.settings.PartnerSettingsOuterClass.PartnerNotificationTargetOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return io.bloombox.schema.partner.settings.PartnerSettingsOuterClass.internal_static_bloombox_schema_partner_settings_PartnerNotificationTarget_descriptor;
+        return io.bloombox.schema.partner.settings.PartnerSettingsOuterClass.internal_static_bloombox_partner_settings_PartnerNotificationTarget_descriptor;
       }
 
+      @java.lang.Override
       protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return io.bloombox.schema.partner.settings.PartnerSettingsOuterClass.internal_static_bloombox_schema_partner_settings_PartnerNotificationTarget_fieldAccessorTable
+        return io.bloombox.schema.partner.settings.PartnerSettingsOuterClass.internal_static_bloombox_partner_settings_PartnerNotificationTarget_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
                 io.bloombox.schema.partner.settings.PartnerSettingsOuterClass.PartnerNotificationTarget.class, io.bloombox.schema.partner.settings.PartnerSettingsOuterClass.PartnerNotificationTarget.Builder.class);
       }
@@ -561,6 +569,7 @@ public final class PartnerSettingsOuterClass {
                 .alwaysUseFieldBuilders) {
         }
       }
+      @java.lang.Override
       public Builder clear() {
         super.clear();
         disabled_ = false;
@@ -570,15 +579,18 @@ public final class PartnerSettingsOuterClass {
         return this;
       }
 
+      @java.lang.Override
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return io.bloombox.schema.partner.settings.PartnerSettingsOuterClass.internal_static_bloombox_schema_partner_settings_PartnerNotificationTarget_descriptor;
+        return io.bloombox.schema.partner.settings.PartnerSettingsOuterClass.internal_static_bloombox_partner_settings_PartnerNotificationTarget_descriptor;
       }
 
+      @java.lang.Override
       public io.bloombox.schema.partner.settings.PartnerSettingsOuterClass.PartnerNotificationTarget getDefaultInstanceForType() {
         return io.bloombox.schema.partner.settings.PartnerSettingsOuterClass.PartnerNotificationTarget.getDefaultInstance();
       }
 
+      @java.lang.Override
       public io.bloombox.schema.partner.settings.PartnerSettingsOuterClass.PartnerNotificationTarget build() {
         io.bloombox.schema.partner.settings.PartnerSettingsOuterClass.PartnerNotificationTarget result = buildPartial();
         if (!result.isInitialized()) {
@@ -587,6 +599,7 @@ public final class PartnerSettingsOuterClass {
         return result;
       }
 
+      @java.lang.Override
       public io.bloombox.schema.partner.settings.PartnerSettingsOuterClass.PartnerNotificationTarget buildPartial() {
         io.bloombox.schema.partner.settings.PartnerSettingsOuterClass.PartnerNotificationTarget result = new io.bloombox.schema.partner.settings.PartnerSettingsOuterClass.PartnerNotificationTarget(this);
         result.disabled_ = disabled_;
@@ -609,32 +622,39 @@ public final class PartnerSettingsOuterClass {
         return result;
       }
 
+      @java.lang.Override
       public Builder clone() {
         return (Builder) super.clone();
       }
+      @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
         return (Builder) super.setField(field, value);
       }
+      @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
         return (Builder) super.clearField(field);
       }
+      @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
         return (Builder) super.clearOneof(oneof);
       }
+      @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
         return (Builder) super.setRepeatedField(field, index, value);
       }
+      @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
         return (Builder) super.addRepeatedField(field, value);
       }
+      @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
         if (other instanceof io.bloombox.schema.partner.settings.PartnerSettingsOuterClass.PartnerNotificationTarget) {
           return mergeFrom((io.bloombox.schema.partner.settings.PartnerSettingsOuterClass.PartnerNotificationTarget)other);
@@ -667,10 +687,12 @@ public final class PartnerSettingsOuterClass {
         return this;
       }
 
+      @java.lang.Override
       public final boolean isInitialized() {
         return true;
       }
 
+      @java.lang.Override
       public Builder mergeFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -1085,21 +1107,23 @@ public final class PartnerSettingsOuterClass {
         onChanged();;
         return emailBuilder_;
       }
+      @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
         return super.setUnknownFieldsProto3(unknownFields);
       }
 
+      @java.lang.Override
       public final Builder mergeUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
         return super.mergeUnknownFields(unknownFields);
       }
 
 
-      // @@protoc_insertion_point(builder_scope:bloombox.schema.partner.settings.PartnerNotificationTarget)
+      // @@protoc_insertion_point(builder_scope:bloombox.partner.settings.PartnerNotificationTarget)
     }
 
-    // @@protoc_insertion_point(class_scope:bloombox.schema.partner.settings.PartnerNotificationTarget)
+    // @@protoc_insertion_point(class_scope:bloombox.partner.settings.PartnerNotificationTarget)
     private static final io.bloombox.schema.partner.settings.PartnerSettingsOuterClass.PartnerNotificationTarget DEFAULT_INSTANCE;
     static {
       DEFAULT_INSTANCE = new io.bloombox.schema.partner.settings.PartnerSettingsOuterClass.PartnerNotificationTarget();
@@ -1111,6 +1135,7 @@ public final class PartnerSettingsOuterClass {
 
     private static final com.google.protobuf.Parser<PartnerNotificationTarget>
         PARSER = new com.google.protobuf.AbstractParser<PartnerNotificationTarget>() {
+      @java.lang.Override
       public PartnerNotificationTarget parsePartialFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -1128,6 +1153,7 @@ public final class PartnerSettingsOuterClass {
       return PARSER;
     }
 
+    @java.lang.Override
     public io.bloombox.schema.partner.settings.PartnerSettingsOuterClass.PartnerNotificationTarget getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
@@ -1135,7 +1161,7 @@ public final class PartnerSettingsOuterClass {
   }
 
   public interface PartnerEventAlertingSettingsOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:bloombox.schema.partner.settings.PartnerEventAlertingSettings)
+      // @@protoc_insertion_point(interface_extends:bloombox.partner.settings.PartnerEventAlertingSettings)
       com.google.protobuf.MessageOrBuilder {
 
     /**
@@ -1170,11 +1196,11 @@ public final class PartnerSettingsOuterClass {
    * Specifies event-level alerting settings.
    * </pre>
    *
-   * Protobuf type {@code bloombox.schema.partner.settings.PartnerEventAlertingSettings}
+   * Protobuf type {@code bloombox.partner.settings.PartnerEventAlertingSettings}
    */
   public  static final class PartnerEventAlertingSettings extends
       com.google.protobuf.GeneratedMessageV3 implements
-      // @@protoc_insertion_point(message_implements:bloombox.schema.partner.settings.PartnerEventAlertingSettings)
+      // @@protoc_insertion_point(message_implements:bloombox.partner.settings.PartnerEventAlertingSettings)
       PartnerEventAlertingSettingsOrBuilder {
   private static final long serialVersionUID = 0L;
     // Use PartnerEventAlertingSettings.newBuilder() to construct.
@@ -1211,13 +1237,6 @@ public final class PartnerSettingsOuterClass {
             case 0:
               done = true;
               break;
-            default: {
-              if (!parseUnknownFieldProto3(
-                  input, unknownFields, extensionRegistry, tag)) {
-                done = true;
-              }
-              break;
-            }
             case 8: {
 
               promo_ = input.readBool();
@@ -1231,6 +1250,13 @@ public final class PartnerSettingsOuterClass {
             case 24: {
 
               volume_ = input.readBool();
+              break;
+            }
+            default: {
+              if (!parseUnknownFieldProto3(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
               break;
             }
           }
@@ -1247,12 +1273,13 @@ public final class PartnerSettingsOuterClass {
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return io.bloombox.schema.partner.settings.PartnerSettingsOuterClass.internal_static_bloombox_schema_partner_settings_PartnerEventAlertingSettings_descriptor;
+      return io.bloombox.schema.partner.settings.PartnerSettingsOuterClass.internal_static_bloombox_partner_settings_PartnerEventAlertingSettings_descriptor;
     }
 
+    @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return io.bloombox.schema.partner.settings.PartnerSettingsOuterClass.internal_static_bloombox_schema_partner_settings_PartnerEventAlertingSettings_fieldAccessorTable
+      return io.bloombox.schema.partner.settings.PartnerSettingsOuterClass.internal_static_bloombox_partner_settings_PartnerEventAlertingSettings_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
               io.bloombox.schema.partner.settings.PartnerSettingsOuterClass.PartnerEventAlertingSettings.class, io.bloombox.schema.partner.settings.PartnerSettingsOuterClass.PartnerEventAlertingSettings.Builder.class);
     }
@@ -1297,6 +1324,7 @@ public final class PartnerSettingsOuterClass {
     }
 
     private byte memoizedIsInitialized = -1;
+    @java.lang.Override
     public final boolean isInitialized() {
       byte isInitialized = memoizedIsInitialized;
       if (isInitialized == 1) return true;
@@ -1306,6 +1334,7 @@ public final class PartnerSettingsOuterClass {
       return true;
     }
 
+    @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
       if (promo_ != false) {
@@ -1320,6 +1349,7 @@ public final class PartnerSettingsOuterClass {
       unknownFields.writeTo(output);
     }
 
+    @java.lang.Override
     public int getSerializedSize() {
       int size = memoizedSize;
       if (size != -1) return size;
@@ -1454,6 +1484,7 @@ public final class PartnerSettingsOuterClass {
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
 
+    @java.lang.Override
     public Builder newBuilderForType() { return newBuilder(); }
     public static Builder newBuilder() {
       return DEFAULT_INSTANCE.toBuilder();
@@ -1461,6 +1492,7 @@ public final class PartnerSettingsOuterClass {
     public static Builder newBuilder(io.bloombox.schema.partner.settings.PartnerSettingsOuterClass.PartnerEventAlertingSettings prototype) {
       return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
     }
+    @java.lang.Override
     public Builder toBuilder() {
       return this == DEFAULT_INSTANCE
           ? new Builder() : new Builder().mergeFrom(this);
@@ -1477,20 +1509,21 @@ public final class PartnerSettingsOuterClass {
      * Specifies event-level alerting settings.
      * </pre>
      *
-     * Protobuf type {@code bloombox.schema.partner.settings.PartnerEventAlertingSettings}
+     * Protobuf type {@code bloombox.partner.settings.PartnerEventAlertingSettings}
      */
     public static final class Builder extends
         com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:bloombox.schema.partner.settings.PartnerEventAlertingSettings)
+        // @@protoc_insertion_point(builder_implements:bloombox.partner.settings.PartnerEventAlertingSettings)
         io.bloombox.schema.partner.settings.PartnerSettingsOuterClass.PartnerEventAlertingSettingsOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return io.bloombox.schema.partner.settings.PartnerSettingsOuterClass.internal_static_bloombox_schema_partner_settings_PartnerEventAlertingSettings_descriptor;
+        return io.bloombox.schema.partner.settings.PartnerSettingsOuterClass.internal_static_bloombox_partner_settings_PartnerEventAlertingSettings_descriptor;
       }
 
+      @java.lang.Override
       protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return io.bloombox.schema.partner.settings.PartnerSettingsOuterClass.internal_static_bloombox_schema_partner_settings_PartnerEventAlertingSettings_fieldAccessorTable
+        return io.bloombox.schema.partner.settings.PartnerSettingsOuterClass.internal_static_bloombox_partner_settings_PartnerEventAlertingSettings_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
                 io.bloombox.schema.partner.settings.PartnerSettingsOuterClass.PartnerEventAlertingSettings.class, io.bloombox.schema.partner.settings.PartnerSettingsOuterClass.PartnerEventAlertingSettings.Builder.class);
       }
@@ -1510,6 +1543,7 @@ public final class PartnerSettingsOuterClass {
                 .alwaysUseFieldBuilders) {
         }
       }
+      @java.lang.Override
       public Builder clear() {
         super.clear();
         promo_ = false;
@@ -1521,15 +1555,18 @@ public final class PartnerSettingsOuterClass {
         return this;
       }
 
+      @java.lang.Override
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return io.bloombox.schema.partner.settings.PartnerSettingsOuterClass.internal_static_bloombox_schema_partner_settings_PartnerEventAlertingSettings_descriptor;
+        return io.bloombox.schema.partner.settings.PartnerSettingsOuterClass.internal_static_bloombox_partner_settings_PartnerEventAlertingSettings_descriptor;
       }
 
+      @java.lang.Override
       public io.bloombox.schema.partner.settings.PartnerSettingsOuterClass.PartnerEventAlertingSettings getDefaultInstanceForType() {
         return io.bloombox.schema.partner.settings.PartnerSettingsOuterClass.PartnerEventAlertingSettings.getDefaultInstance();
       }
 
+      @java.lang.Override
       public io.bloombox.schema.partner.settings.PartnerSettingsOuterClass.PartnerEventAlertingSettings build() {
         io.bloombox.schema.partner.settings.PartnerSettingsOuterClass.PartnerEventAlertingSettings result = buildPartial();
         if (!result.isInitialized()) {
@@ -1538,6 +1575,7 @@ public final class PartnerSettingsOuterClass {
         return result;
       }
 
+      @java.lang.Override
       public io.bloombox.schema.partner.settings.PartnerSettingsOuterClass.PartnerEventAlertingSettings buildPartial() {
         io.bloombox.schema.partner.settings.PartnerSettingsOuterClass.PartnerEventAlertingSettings result = new io.bloombox.schema.partner.settings.PartnerSettingsOuterClass.PartnerEventAlertingSettings(this);
         result.promo_ = promo_;
@@ -1547,32 +1585,39 @@ public final class PartnerSettingsOuterClass {
         return result;
       }
 
+      @java.lang.Override
       public Builder clone() {
         return (Builder) super.clone();
       }
+      @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
         return (Builder) super.setField(field, value);
       }
+      @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
         return (Builder) super.clearField(field);
       }
+      @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
         return (Builder) super.clearOneof(oneof);
       }
+      @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
         return (Builder) super.setRepeatedField(field, index, value);
       }
+      @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
         return (Builder) super.addRepeatedField(field, value);
       }
+      @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
         if (other instanceof io.bloombox.schema.partner.settings.PartnerSettingsOuterClass.PartnerEventAlertingSettings) {
           return mergeFrom((io.bloombox.schema.partner.settings.PartnerSettingsOuterClass.PartnerEventAlertingSettings)other);
@@ -1598,10 +1643,12 @@ public final class PartnerSettingsOuterClass {
         return this;
       }
 
+      @java.lang.Override
       public final boolean isInitialized() {
         return true;
       }
 
+      @java.lang.Override
       public Builder mergeFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -1733,21 +1780,23 @@ public final class PartnerSettingsOuterClass {
         onChanged();
         return this;
       }
+      @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
         return super.setUnknownFieldsProto3(unknownFields);
       }
 
+      @java.lang.Override
       public final Builder mergeUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
         return super.mergeUnknownFields(unknownFields);
       }
 
 
-      // @@protoc_insertion_point(builder_scope:bloombox.schema.partner.settings.PartnerEventAlertingSettings)
+      // @@protoc_insertion_point(builder_scope:bloombox.partner.settings.PartnerEventAlertingSettings)
     }
 
-    // @@protoc_insertion_point(class_scope:bloombox.schema.partner.settings.PartnerEventAlertingSettings)
+    // @@protoc_insertion_point(class_scope:bloombox.partner.settings.PartnerEventAlertingSettings)
     private static final io.bloombox.schema.partner.settings.PartnerSettingsOuterClass.PartnerEventAlertingSettings DEFAULT_INSTANCE;
     static {
       DEFAULT_INSTANCE = new io.bloombox.schema.partner.settings.PartnerSettingsOuterClass.PartnerEventAlertingSettings();
@@ -1759,6 +1808,7 @@ public final class PartnerSettingsOuterClass {
 
     private static final com.google.protobuf.Parser<PartnerEventAlertingSettings>
         PARSER = new com.google.protobuf.AbstractParser<PartnerEventAlertingSettings>() {
+      @java.lang.Override
       public PartnerEventAlertingSettings parsePartialFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -1776,6 +1826,7 @@ public final class PartnerSettingsOuterClass {
       return PARSER;
     }
 
+    @java.lang.Override
     public io.bloombox.schema.partner.settings.PartnerSettingsOuterClass.PartnerEventAlertingSettings getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
@@ -1783,7 +1834,7 @@ public final class PartnerSettingsOuterClass {
   }
 
   public interface PartnerAlertSettingsOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:bloombox.schema.partner.settings.PartnerAlertSettings)
+      // @@protoc_insertion_point(interface_extends:bloombox.partner.settings.PartnerAlertSettings)
       com.google.protobuf.MessageOrBuilder {
 
     /**
@@ -1791,7 +1842,7 @@ public final class PartnerSettingsOuterClass {
      * Specify event-level alerting settings.
      * </pre>
      *
-     * <code>.bloombox.schema.partner.settings.PartnerEventAlertingSettings events = 1;</code>
+     * <code>.bloombox.partner.settings.PartnerEventAlertingSettings events = 1;</code>
      */
     boolean hasEvents();
     /**
@@ -1799,7 +1850,7 @@ public final class PartnerSettingsOuterClass {
      * Specify event-level alerting settings.
      * </pre>
      *
-     * <code>.bloombox.schema.partner.settings.PartnerEventAlertingSettings events = 1;</code>
+     * <code>.bloombox.partner.settings.PartnerEventAlertingSettings events = 1;</code>
      */
     io.bloombox.schema.partner.settings.PartnerSettingsOuterClass.PartnerEventAlertingSettings getEvents();
     /**
@@ -1807,7 +1858,7 @@ public final class PartnerSettingsOuterClass {
      * Specify event-level alerting settings.
      * </pre>
      *
-     * <code>.bloombox.schema.partner.settings.PartnerEventAlertingSettings events = 1;</code>
+     * <code>.bloombox.partner.settings.PartnerEventAlertingSettings events = 1;</code>
      */
     io.bloombox.schema.partner.settings.PartnerSettingsOuterClass.PartnerEventAlertingSettingsOrBuilder getEventsOrBuilder();
 
@@ -1816,7 +1867,7 @@ public final class PartnerSettingsOuterClass {
      * Notification targets/recipients.
      * </pre>
      *
-     * <code>repeated .bloombox.schema.partner.settings.PartnerNotificationTarget recipients = 2;</code>
+     * <code>repeated .bloombox.partner.settings.PartnerNotificationTarget recipients = 2;</code>
      */
     java.util.List<io.bloombox.schema.partner.settings.PartnerSettingsOuterClass.PartnerNotificationTarget> 
         getRecipientsList();
@@ -1825,7 +1876,7 @@ public final class PartnerSettingsOuterClass {
      * Notification targets/recipients.
      * </pre>
      *
-     * <code>repeated .bloombox.schema.partner.settings.PartnerNotificationTarget recipients = 2;</code>
+     * <code>repeated .bloombox.partner.settings.PartnerNotificationTarget recipients = 2;</code>
      */
     io.bloombox.schema.partner.settings.PartnerSettingsOuterClass.PartnerNotificationTarget getRecipients(int index);
     /**
@@ -1833,7 +1884,7 @@ public final class PartnerSettingsOuterClass {
      * Notification targets/recipients.
      * </pre>
      *
-     * <code>repeated .bloombox.schema.partner.settings.PartnerNotificationTarget recipients = 2;</code>
+     * <code>repeated .bloombox.partner.settings.PartnerNotificationTarget recipients = 2;</code>
      */
     int getRecipientsCount();
     /**
@@ -1841,7 +1892,7 @@ public final class PartnerSettingsOuterClass {
      * Notification targets/recipients.
      * </pre>
      *
-     * <code>repeated .bloombox.schema.partner.settings.PartnerNotificationTarget recipients = 2;</code>
+     * <code>repeated .bloombox.partner.settings.PartnerNotificationTarget recipients = 2;</code>
      */
     java.util.List<? extends io.bloombox.schema.partner.settings.PartnerSettingsOuterClass.PartnerNotificationTargetOrBuilder> 
         getRecipientsOrBuilderList();
@@ -1850,7 +1901,7 @@ public final class PartnerSettingsOuterClass {
      * Notification targets/recipients.
      * </pre>
      *
-     * <code>repeated .bloombox.schema.partner.settings.PartnerNotificationTarget recipients = 2;</code>
+     * <code>repeated .bloombox.partner.settings.PartnerNotificationTarget recipients = 2;</code>
      */
     io.bloombox.schema.partner.settings.PartnerSettingsOuterClass.PartnerNotificationTargetOrBuilder getRecipientsOrBuilder(
         int index);
@@ -1860,11 +1911,11 @@ public final class PartnerSettingsOuterClass {
    * Alerting and notification settings.
    * </pre>
    *
-   * Protobuf type {@code bloombox.schema.partner.settings.PartnerAlertSettings}
+   * Protobuf type {@code bloombox.partner.settings.PartnerAlertSettings}
    */
   public  static final class PartnerAlertSettings extends
       com.google.protobuf.GeneratedMessageV3 implements
-      // @@protoc_insertion_point(message_implements:bloombox.schema.partner.settings.PartnerAlertSettings)
+      // @@protoc_insertion_point(message_implements:bloombox.partner.settings.PartnerAlertSettings)
       PartnerAlertSettingsOrBuilder {
   private static final long serialVersionUID = 0L;
     // Use PartnerAlertSettings.newBuilder() to construct.
@@ -1899,13 +1950,6 @@ public final class PartnerSettingsOuterClass {
             case 0:
               done = true;
               break;
-            default: {
-              if (!parseUnknownFieldProto3(
-                  input, unknownFields, extensionRegistry, tag)) {
-                done = true;
-              }
-              break;
-            }
             case 10: {
               io.bloombox.schema.partner.settings.PartnerSettingsOuterClass.PartnerEventAlertingSettings.Builder subBuilder = null;
               if (events_ != null) {
@@ -1928,6 +1972,13 @@ public final class PartnerSettingsOuterClass {
                   input.readMessage(io.bloombox.schema.partner.settings.PartnerSettingsOuterClass.PartnerNotificationTarget.parser(), extensionRegistry));
               break;
             }
+            default: {
+              if (!parseUnknownFieldProto3(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
           }
         }
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
@@ -1945,12 +1996,13 @@ public final class PartnerSettingsOuterClass {
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return io.bloombox.schema.partner.settings.PartnerSettingsOuterClass.internal_static_bloombox_schema_partner_settings_PartnerAlertSettings_descriptor;
+      return io.bloombox.schema.partner.settings.PartnerSettingsOuterClass.internal_static_bloombox_partner_settings_PartnerAlertSettings_descriptor;
     }
 
+    @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return io.bloombox.schema.partner.settings.PartnerSettingsOuterClass.internal_static_bloombox_schema_partner_settings_PartnerAlertSettings_fieldAccessorTable
+      return io.bloombox.schema.partner.settings.PartnerSettingsOuterClass.internal_static_bloombox_partner_settings_PartnerAlertSettings_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
               io.bloombox.schema.partner.settings.PartnerSettingsOuterClass.PartnerAlertSettings.class, io.bloombox.schema.partner.settings.PartnerSettingsOuterClass.PartnerAlertSettings.Builder.class);
     }
@@ -1963,7 +2015,7 @@ public final class PartnerSettingsOuterClass {
      * Specify event-level alerting settings.
      * </pre>
      *
-     * <code>.bloombox.schema.partner.settings.PartnerEventAlertingSettings events = 1;</code>
+     * <code>.bloombox.partner.settings.PartnerEventAlertingSettings events = 1;</code>
      */
     public boolean hasEvents() {
       return events_ != null;
@@ -1973,7 +2025,7 @@ public final class PartnerSettingsOuterClass {
      * Specify event-level alerting settings.
      * </pre>
      *
-     * <code>.bloombox.schema.partner.settings.PartnerEventAlertingSettings events = 1;</code>
+     * <code>.bloombox.partner.settings.PartnerEventAlertingSettings events = 1;</code>
      */
     public io.bloombox.schema.partner.settings.PartnerSettingsOuterClass.PartnerEventAlertingSettings getEvents() {
       return events_ == null ? io.bloombox.schema.partner.settings.PartnerSettingsOuterClass.PartnerEventAlertingSettings.getDefaultInstance() : events_;
@@ -1983,7 +2035,7 @@ public final class PartnerSettingsOuterClass {
      * Specify event-level alerting settings.
      * </pre>
      *
-     * <code>.bloombox.schema.partner.settings.PartnerEventAlertingSettings events = 1;</code>
+     * <code>.bloombox.partner.settings.PartnerEventAlertingSettings events = 1;</code>
      */
     public io.bloombox.schema.partner.settings.PartnerSettingsOuterClass.PartnerEventAlertingSettingsOrBuilder getEventsOrBuilder() {
       return getEvents();
@@ -1996,7 +2048,7 @@ public final class PartnerSettingsOuterClass {
      * Notification targets/recipients.
      * </pre>
      *
-     * <code>repeated .bloombox.schema.partner.settings.PartnerNotificationTarget recipients = 2;</code>
+     * <code>repeated .bloombox.partner.settings.PartnerNotificationTarget recipients = 2;</code>
      */
     public java.util.List<io.bloombox.schema.partner.settings.PartnerSettingsOuterClass.PartnerNotificationTarget> getRecipientsList() {
       return recipients_;
@@ -2006,7 +2058,7 @@ public final class PartnerSettingsOuterClass {
      * Notification targets/recipients.
      * </pre>
      *
-     * <code>repeated .bloombox.schema.partner.settings.PartnerNotificationTarget recipients = 2;</code>
+     * <code>repeated .bloombox.partner.settings.PartnerNotificationTarget recipients = 2;</code>
      */
     public java.util.List<? extends io.bloombox.schema.partner.settings.PartnerSettingsOuterClass.PartnerNotificationTargetOrBuilder> 
         getRecipientsOrBuilderList() {
@@ -2017,7 +2069,7 @@ public final class PartnerSettingsOuterClass {
      * Notification targets/recipients.
      * </pre>
      *
-     * <code>repeated .bloombox.schema.partner.settings.PartnerNotificationTarget recipients = 2;</code>
+     * <code>repeated .bloombox.partner.settings.PartnerNotificationTarget recipients = 2;</code>
      */
     public int getRecipientsCount() {
       return recipients_.size();
@@ -2027,7 +2079,7 @@ public final class PartnerSettingsOuterClass {
      * Notification targets/recipients.
      * </pre>
      *
-     * <code>repeated .bloombox.schema.partner.settings.PartnerNotificationTarget recipients = 2;</code>
+     * <code>repeated .bloombox.partner.settings.PartnerNotificationTarget recipients = 2;</code>
      */
     public io.bloombox.schema.partner.settings.PartnerSettingsOuterClass.PartnerNotificationTarget getRecipients(int index) {
       return recipients_.get(index);
@@ -2037,7 +2089,7 @@ public final class PartnerSettingsOuterClass {
      * Notification targets/recipients.
      * </pre>
      *
-     * <code>repeated .bloombox.schema.partner.settings.PartnerNotificationTarget recipients = 2;</code>
+     * <code>repeated .bloombox.partner.settings.PartnerNotificationTarget recipients = 2;</code>
      */
     public io.bloombox.schema.partner.settings.PartnerSettingsOuterClass.PartnerNotificationTargetOrBuilder getRecipientsOrBuilder(
         int index) {
@@ -2045,6 +2097,7 @@ public final class PartnerSettingsOuterClass {
     }
 
     private byte memoizedIsInitialized = -1;
+    @java.lang.Override
     public final boolean isInitialized() {
       byte isInitialized = memoizedIsInitialized;
       if (isInitialized == 1) return true;
@@ -2054,6 +2107,7 @@ public final class PartnerSettingsOuterClass {
       return true;
     }
 
+    @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
       if (events_ != null) {
@@ -2065,6 +2119,7 @@ public final class PartnerSettingsOuterClass {
       unknownFields.writeTo(output);
     }
 
+    @java.lang.Override
     public int getSerializedSize() {
       int size = memoizedSize;
       if (size != -1) return size;
@@ -2195,6 +2250,7 @@ public final class PartnerSettingsOuterClass {
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
 
+    @java.lang.Override
     public Builder newBuilderForType() { return newBuilder(); }
     public static Builder newBuilder() {
       return DEFAULT_INSTANCE.toBuilder();
@@ -2202,6 +2258,7 @@ public final class PartnerSettingsOuterClass {
     public static Builder newBuilder(io.bloombox.schema.partner.settings.PartnerSettingsOuterClass.PartnerAlertSettings prototype) {
       return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
     }
+    @java.lang.Override
     public Builder toBuilder() {
       return this == DEFAULT_INSTANCE
           ? new Builder() : new Builder().mergeFrom(this);
@@ -2218,20 +2275,21 @@ public final class PartnerSettingsOuterClass {
      * Alerting and notification settings.
      * </pre>
      *
-     * Protobuf type {@code bloombox.schema.partner.settings.PartnerAlertSettings}
+     * Protobuf type {@code bloombox.partner.settings.PartnerAlertSettings}
      */
     public static final class Builder extends
         com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:bloombox.schema.partner.settings.PartnerAlertSettings)
+        // @@protoc_insertion_point(builder_implements:bloombox.partner.settings.PartnerAlertSettings)
         io.bloombox.schema.partner.settings.PartnerSettingsOuterClass.PartnerAlertSettingsOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return io.bloombox.schema.partner.settings.PartnerSettingsOuterClass.internal_static_bloombox_schema_partner_settings_PartnerAlertSettings_descriptor;
+        return io.bloombox.schema.partner.settings.PartnerSettingsOuterClass.internal_static_bloombox_partner_settings_PartnerAlertSettings_descriptor;
       }
 
+      @java.lang.Override
       protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return io.bloombox.schema.partner.settings.PartnerSettingsOuterClass.internal_static_bloombox_schema_partner_settings_PartnerAlertSettings_fieldAccessorTable
+        return io.bloombox.schema.partner.settings.PartnerSettingsOuterClass.internal_static_bloombox_partner_settings_PartnerAlertSettings_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
                 io.bloombox.schema.partner.settings.PartnerSettingsOuterClass.PartnerAlertSettings.class, io.bloombox.schema.partner.settings.PartnerSettingsOuterClass.PartnerAlertSettings.Builder.class);
       }
@@ -2252,6 +2310,7 @@ public final class PartnerSettingsOuterClass {
           getRecipientsFieldBuilder();
         }
       }
+      @java.lang.Override
       public Builder clear() {
         super.clear();
         if (eventsBuilder_ == null) {
@@ -2269,15 +2328,18 @@ public final class PartnerSettingsOuterClass {
         return this;
       }
 
+      @java.lang.Override
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return io.bloombox.schema.partner.settings.PartnerSettingsOuterClass.internal_static_bloombox_schema_partner_settings_PartnerAlertSettings_descriptor;
+        return io.bloombox.schema.partner.settings.PartnerSettingsOuterClass.internal_static_bloombox_partner_settings_PartnerAlertSettings_descriptor;
       }
 
+      @java.lang.Override
       public io.bloombox.schema.partner.settings.PartnerSettingsOuterClass.PartnerAlertSettings getDefaultInstanceForType() {
         return io.bloombox.schema.partner.settings.PartnerSettingsOuterClass.PartnerAlertSettings.getDefaultInstance();
       }
 
+      @java.lang.Override
       public io.bloombox.schema.partner.settings.PartnerSettingsOuterClass.PartnerAlertSettings build() {
         io.bloombox.schema.partner.settings.PartnerSettingsOuterClass.PartnerAlertSettings result = buildPartial();
         if (!result.isInitialized()) {
@@ -2286,6 +2348,7 @@ public final class PartnerSettingsOuterClass {
         return result;
       }
 
+      @java.lang.Override
       public io.bloombox.schema.partner.settings.PartnerSettingsOuterClass.PartnerAlertSettings buildPartial() {
         io.bloombox.schema.partner.settings.PartnerSettingsOuterClass.PartnerAlertSettings result = new io.bloombox.schema.partner.settings.PartnerSettingsOuterClass.PartnerAlertSettings(this);
         int from_bitField0_ = bitField0_;
@@ -2309,32 +2372,39 @@ public final class PartnerSettingsOuterClass {
         return result;
       }
 
+      @java.lang.Override
       public Builder clone() {
         return (Builder) super.clone();
       }
+      @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
         return (Builder) super.setField(field, value);
       }
+      @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
         return (Builder) super.clearField(field);
       }
+      @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
         return (Builder) super.clearOneof(oneof);
       }
+      @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
         return (Builder) super.setRepeatedField(field, index, value);
       }
+      @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
         return (Builder) super.addRepeatedField(field, value);
       }
+      @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
         if (other instanceof io.bloombox.schema.partner.settings.PartnerSettingsOuterClass.PartnerAlertSettings) {
           return mergeFrom((io.bloombox.schema.partner.settings.PartnerSettingsOuterClass.PartnerAlertSettings)other);
@@ -2380,10 +2450,12 @@ public final class PartnerSettingsOuterClass {
         return this;
       }
 
+      @java.lang.Override
       public final boolean isInitialized() {
         return true;
       }
 
+      @java.lang.Override
       public Builder mergeFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -2411,7 +2483,7 @@ public final class PartnerSettingsOuterClass {
        * Specify event-level alerting settings.
        * </pre>
        *
-       * <code>.bloombox.schema.partner.settings.PartnerEventAlertingSettings events = 1;</code>
+       * <code>.bloombox.partner.settings.PartnerEventAlertingSettings events = 1;</code>
        */
       public boolean hasEvents() {
         return eventsBuilder_ != null || events_ != null;
@@ -2421,7 +2493,7 @@ public final class PartnerSettingsOuterClass {
        * Specify event-level alerting settings.
        * </pre>
        *
-       * <code>.bloombox.schema.partner.settings.PartnerEventAlertingSettings events = 1;</code>
+       * <code>.bloombox.partner.settings.PartnerEventAlertingSettings events = 1;</code>
        */
       public io.bloombox.schema.partner.settings.PartnerSettingsOuterClass.PartnerEventAlertingSettings getEvents() {
         if (eventsBuilder_ == null) {
@@ -2435,7 +2507,7 @@ public final class PartnerSettingsOuterClass {
        * Specify event-level alerting settings.
        * </pre>
        *
-       * <code>.bloombox.schema.partner.settings.PartnerEventAlertingSettings events = 1;</code>
+       * <code>.bloombox.partner.settings.PartnerEventAlertingSettings events = 1;</code>
        */
       public Builder setEvents(io.bloombox.schema.partner.settings.PartnerSettingsOuterClass.PartnerEventAlertingSettings value) {
         if (eventsBuilder_ == null) {
@@ -2455,7 +2527,7 @@ public final class PartnerSettingsOuterClass {
        * Specify event-level alerting settings.
        * </pre>
        *
-       * <code>.bloombox.schema.partner.settings.PartnerEventAlertingSettings events = 1;</code>
+       * <code>.bloombox.partner.settings.PartnerEventAlertingSettings events = 1;</code>
        */
       public Builder setEvents(
           io.bloombox.schema.partner.settings.PartnerSettingsOuterClass.PartnerEventAlertingSettings.Builder builderForValue) {
@@ -2473,7 +2545,7 @@ public final class PartnerSettingsOuterClass {
        * Specify event-level alerting settings.
        * </pre>
        *
-       * <code>.bloombox.schema.partner.settings.PartnerEventAlertingSettings events = 1;</code>
+       * <code>.bloombox.partner.settings.PartnerEventAlertingSettings events = 1;</code>
        */
       public Builder mergeEvents(io.bloombox.schema.partner.settings.PartnerSettingsOuterClass.PartnerEventAlertingSettings value) {
         if (eventsBuilder_ == null) {
@@ -2495,7 +2567,7 @@ public final class PartnerSettingsOuterClass {
        * Specify event-level alerting settings.
        * </pre>
        *
-       * <code>.bloombox.schema.partner.settings.PartnerEventAlertingSettings events = 1;</code>
+       * <code>.bloombox.partner.settings.PartnerEventAlertingSettings events = 1;</code>
        */
       public Builder clearEvents() {
         if (eventsBuilder_ == null) {
@@ -2513,7 +2585,7 @@ public final class PartnerSettingsOuterClass {
        * Specify event-level alerting settings.
        * </pre>
        *
-       * <code>.bloombox.schema.partner.settings.PartnerEventAlertingSettings events = 1;</code>
+       * <code>.bloombox.partner.settings.PartnerEventAlertingSettings events = 1;</code>
        */
       public io.bloombox.schema.partner.settings.PartnerSettingsOuterClass.PartnerEventAlertingSettings.Builder getEventsBuilder() {
         
@@ -2525,7 +2597,7 @@ public final class PartnerSettingsOuterClass {
        * Specify event-level alerting settings.
        * </pre>
        *
-       * <code>.bloombox.schema.partner.settings.PartnerEventAlertingSettings events = 1;</code>
+       * <code>.bloombox.partner.settings.PartnerEventAlertingSettings events = 1;</code>
        */
       public io.bloombox.schema.partner.settings.PartnerSettingsOuterClass.PartnerEventAlertingSettingsOrBuilder getEventsOrBuilder() {
         if (eventsBuilder_ != null) {
@@ -2540,7 +2612,7 @@ public final class PartnerSettingsOuterClass {
        * Specify event-level alerting settings.
        * </pre>
        *
-       * <code>.bloombox.schema.partner.settings.PartnerEventAlertingSettings events = 1;</code>
+       * <code>.bloombox.partner.settings.PartnerEventAlertingSettings events = 1;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
           io.bloombox.schema.partner.settings.PartnerSettingsOuterClass.PartnerEventAlertingSettings, io.bloombox.schema.partner.settings.PartnerSettingsOuterClass.PartnerEventAlertingSettings.Builder, io.bloombox.schema.partner.settings.PartnerSettingsOuterClass.PartnerEventAlertingSettingsOrBuilder> 
@@ -2573,7 +2645,7 @@ public final class PartnerSettingsOuterClass {
        * Notification targets/recipients.
        * </pre>
        *
-       * <code>repeated .bloombox.schema.partner.settings.PartnerNotificationTarget recipients = 2;</code>
+       * <code>repeated .bloombox.partner.settings.PartnerNotificationTarget recipients = 2;</code>
        */
       public java.util.List<io.bloombox.schema.partner.settings.PartnerSettingsOuterClass.PartnerNotificationTarget> getRecipientsList() {
         if (recipientsBuilder_ == null) {
@@ -2587,7 +2659,7 @@ public final class PartnerSettingsOuterClass {
        * Notification targets/recipients.
        * </pre>
        *
-       * <code>repeated .bloombox.schema.partner.settings.PartnerNotificationTarget recipients = 2;</code>
+       * <code>repeated .bloombox.partner.settings.PartnerNotificationTarget recipients = 2;</code>
        */
       public int getRecipientsCount() {
         if (recipientsBuilder_ == null) {
@@ -2601,7 +2673,7 @@ public final class PartnerSettingsOuterClass {
        * Notification targets/recipients.
        * </pre>
        *
-       * <code>repeated .bloombox.schema.partner.settings.PartnerNotificationTarget recipients = 2;</code>
+       * <code>repeated .bloombox.partner.settings.PartnerNotificationTarget recipients = 2;</code>
        */
       public io.bloombox.schema.partner.settings.PartnerSettingsOuterClass.PartnerNotificationTarget getRecipients(int index) {
         if (recipientsBuilder_ == null) {
@@ -2615,7 +2687,7 @@ public final class PartnerSettingsOuterClass {
        * Notification targets/recipients.
        * </pre>
        *
-       * <code>repeated .bloombox.schema.partner.settings.PartnerNotificationTarget recipients = 2;</code>
+       * <code>repeated .bloombox.partner.settings.PartnerNotificationTarget recipients = 2;</code>
        */
       public Builder setRecipients(
           int index, io.bloombox.schema.partner.settings.PartnerSettingsOuterClass.PartnerNotificationTarget value) {
@@ -2636,7 +2708,7 @@ public final class PartnerSettingsOuterClass {
        * Notification targets/recipients.
        * </pre>
        *
-       * <code>repeated .bloombox.schema.partner.settings.PartnerNotificationTarget recipients = 2;</code>
+       * <code>repeated .bloombox.partner.settings.PartnerNotificationTarget recipients = 2;</code>
        */
       public Builder setRecipients(
           int index, io.bloombox.schema.partner.settings.PartnerSettingsOuterClass.PartnerNotificationTarget.Builder builderForValue) {
@@ -2654,7 +2726,7 @@ public final class PartnerSettingsOuterClass {
        * Notification targets/recipients.
        * </pre>
        *
-       * <code>repeated .bloombox.schema.partner.settings.PartnerNotificationTarget recipients = 2;</code>
+       * <code>repeated .bloombox.partner.settings.PartnerNotificationTarget recipients = 2;</code>
        */
       public Builder addRecipients(io.bloombox.schema.partner.settings.PartnerSettingsOuterClass.PartnerNotificationTarget value) {
         if (recipientsBuilder_ == null) {
@@ -2674,7 +2746,7 @@ public final class PartnerSettingsOuterClass {
        * Notification targets/recipients.
        * </pre>
        *
-       * <code>repeated .bloombox.schema.partner.settings.PartnerNotificationTarget recipients = 2;</code>
+       * <code>repeated .bloombox.partner.settings.PartnerNotificationTarget recipients = 2;</code>
        */
       public Builder addRecipients(
           int index, io.bloombox.schema.partner.settings.PartnerSettingsOuterClass.PartnerNotificationTarget value) {
@@ -2695,7 +2767,7 @@ public final class PartnerSettingsOuterClass {
        * Notification targets/recipients.
        * </pre>
        *
-       * <code>repeated .bloombox.schema.partner.settings.PartnerNotificationTarget recipients = 2;</code>
+       * <code>repeated .bloombox.partner.settings.PartnerNotificationTarget recipients = 2;</code>
        */
       public Builder addRecipients(
           io.bloombox.schema.partner.settings.PartnerSettingsOuterClass.PartnerNotificationTarget.Builder builderForValue) {
@@ -2713,7 +2785,7 @@ public final class PartnerSettingsOuterClass {
        * Notification targets/recipients.
        * </pre>
        *
-       * <code>repeated .bloombox.schema.partner.settings.PartnerNotificationTarget recipients = 2;</code>
+       * <code>repeated .bloombox.partner.settings.PartnerNotificationTarget recipients = 2;</code>
        */
       public Builder addRecipients(
           int index, io.bloombox.schema.partner.settings.PartnerSettingsOuterClass.PartnerNotificationTarget.Builder builderForValue) {
@@ -2731,7 +2803,7 @@ public final class PartnerSettingsOuterClass {
        * Notification targets/recipients.
        * </pre>
        *
-       * <code>repeated .bloombox.schema.partner.settings.PartnerNotificationTarget recipients = 2;</code>
+       * <code>repeated .bloombox.partner.settings.PartnerNotificationTarget recipients = 2;</code>
        */
       public Builder addAllRecipients(
           java.lang.Iterable<? extends io.bloombox.schema.partner.settings.PartnerSettingsOuterClass.PartnerNotificationTarget> values) {
@@ -2750,7 +2822,7 @@ public final class PartnerSettingsOuterClass {
        * Notification targets/recipients.
        * </pre>
        *
-       * <code>repeated .bloombox.schema.partner.settings.PartnerNotificationTarget recipients = 2;</code>
+       * <code>repeated .bloombox.partner.settings.PartnerNotificationTarget recipients = 2;</code>
        */
       public Builder clearRecipients() {
         if (recipientsBuilder_ == null) {
@@ -2767,7 +2839,7 @@ public final class PartnerSettingsOuterClass {
        * Notification targets/recipients.
        * </pre>
        *
-       * <code>repeated .bloombox.schema.partner.settings.PartnerNotificationTarget recipients = 2;</code>
+       * <code>repeated .bloombox.partner.settings.PartnerNotificationTarget recipients = 2;</code>
        */
       public Builder removeRecipients(int index) {
         if (recipientsBuilder_ == null) {
@@ -2784,7 +2856,7 @@ public final class PartnerSettingsOuterClass {
        * Notification targets/recipients.
        * </pre>
        *
-       * <code>repeated .bloombox.schema.partner.settings.PartnerNotificationTarget recipients = 2;</code>
+       * <code>repeated .bloombox.partner.settings.PartnerNotificationTarget recipients = 2;</code>
        */
       public io.bloombox.schema.partner.settings.PartnerSettingsOuterClass.PartnerNotificationTarget.Builder getRecipientsBuilder(
           int index) {
@@ -2795,7 +2867,7 @@ public final class PartnerSettingsOuterClass {
        * Notification targets/recipients.
        * </pre>
        *
-       * <code>repeated .bloombox.schema.partner.settings.PartnerNotificationTarget recipients = 2;</code>
+       * <code>repeated .bloombox.partner.settings.PartnerNotificationTarget recipients = 2;</code>
        */
       public io.bloombox.schema.partner.settings.PartnerSettingsOuterClass.PartnerNotificationTargetOrBuilder getRecipientsOrBuilder(
           int index) {
@@ -2809,7 +2881,7 @@ public final class PartnerSettingsOuterClass {
        * Notification targets/recipients.
        * </pre>
        *
-       * <code>repeated .bloombox.schema.partner.settings.PartnerNotificationTarget recipients = 2;</code>
+       * <code>repeated .bloombox.partner.settings.PartnerNotificationTarget recipients = 2;</code>
        */
       public java.util.List<? extends io.bloombox.schema.partner.settings.PartnerSettingsOuterClass.PartnerNotificationTargetOrBuilder> 
            getRecipientsOrBuilderList() {
@@ -2824,7 +2896,7 @@ public final class PartnerSettingsOuterClass {
        * Notification targets/recipients.
        * </pre>
        *
-       * <code>repeated .bloombox.schema.partner.settings.PartnerNotificationTarget recipients = 2;</code>
+       * <code>repeated .bloombox.partner.settings.PartnerNotificationTarget recipients = 2;</code>
        */
       public io.bloombox.schema.partner.settings.PartnerSettingsOuterClass.PartnerNotificationTarget.Builder addRecipientsBuilder() {
         return getRecipientsFieldBuilder().addBuilder(
@@ -2835,7 +2907,7 @@ public final class PartnerSettingsOuterClass {
        * Notification targets/recipients.
        * </pre>
        *
-       * <code>repeated .bloombox.schema.partner.settings.PartnerNotificationTarget recipients = 2;</code>
+       * <code>repeated .bloombox.partner.settings.PartnerNotificationTarget recipients = 2;</code>
        */
       public io.bloombox.schema.partner.settings.PartnerSettingsOuterClass.PartnerNotificationTarget.Builder addRecipientsBuilder(
           int index) {
@@ -2847,7 +2919,7 @@ public final class PartnerSettingsOuterClass {
        * Notification targets/recipients.
        * </pre>
        *
-       * <code>repeated .bloombox.schema.partner.settings.PartnerNotificationTarget recipients = 2;</code>
+       * <code>repeated .bloombox.partner.settings.PartnerNotificationTarget recipients = 2;</code>
        */
       public java.util.List<io.bloombox.schema.partner.settings.PartnerSettingsOuterClass.PartnerNotificationTarget.Builder> 
            getRecipientsBuilderList() {
@@ -2867,21 +2939,23 @@ public final class PartnerSettingsOuterClass {
         }
         return recipientsBuilder_;
       }
+      @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
         return super.setUnknownFieldsProto3(unknownFields);
       }
 
+      @java.lang.Override
       public final Builder mergeUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
         return super.mergeUnknownFields(unknownFields);
       }
 
 
-      // @@protoc_insertion_point(builder_scope:bloombox.schema.partner.settings.PartnerAlertSettings)
+      // @@protoc_insertion_point(builder_scope:bloombox.partner.settings.PartnerAlertSettings)
     }
 
-    // @@protoc_insertion_point(class_scope:bloombox.schema.partner.settings.PartnerAlertSettings)
+    // @@protoc_insertion_point(class_scope:bloombox.partner.settings.PartnerAlertSettings)
     private static final io.bloombox.schema.partner.settings.PartnerSettingsOuterClass.PartnerAlertSettings DEFAULT_INSTANCE;
     static {
       DEFAULT_INSTANCE = new io.bloombox.schema.partner.settings.PartnerSettingsOuterClass.PartnerAlertSettings();
@@ -2893,6 +2967,7 @@ public final class PartnerSettingsOuterClass {
 
     private static final com.google.protobuf.Parser<PartnerAlertSettings>
         PARSER = new com.google.protobuf.AbstractParser<PartnerAlertSettings>() {
+      @java.lang.Override
       public PartnerAlertSettings parsePartialFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -2910,6 +2985,7 @@ public final class PartnerSettingsOuterClass {
       return PARSER;
     }
 
+    @java.lang.Override
     public io.bloombox.schema.partner.settings.PartnerSettingsOuterClass.PartnerAlertSettings getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
@@ -2917,7 +2993,7 @@ public final class PartnerSettingsOuterClass {
   }
 
   public interface BetaSettingsOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:bloombox.schema.partner.settings.BetaSettings)
+      // @@protoc_insertion_point(interface_extends:bloombox.partner.settings.BetaSettings)
       com.google.protobuf.MessageOrBuilder {
 
     /**
@@ -2943,11 +3019,11 @@ public final class PartnerSettingsOuterClass {
    * Beta and sandbox settings.
    * </pre>
    *
-   * Protobuf type {@code bloombox.schema.partner.settings.BetaSettings}
+   * Protobuf type {@code bloombox.partner.settings.BetaSettings}
    */
   public  static final class BetaSettings extends
       com.google.protobuf.GeneratedMessageV3 implements
-      // @@protoc_insertion_point(message_implements:bloombox.schema.partner.settings.BetaSettings)
+      // @@protoc_insertion_point(message_implements:bloombox.partner.settings.BetaSettings)
       BetaSettingsOrBuilder {
   private static final long serialVersionUID = 0L;
     // Use BetaSettings.newBuilder() to construct.
@@ -2983,13 +3059,6 @@ public final class PartnerSettingsOuterClass {
             case 0:
               done = true;
               break;
-            default: {
-              if (!parseUnknownFieldProto3(
-                  input, unknownFields, extensionRegistry, tag)) {
-                done = true;
-              }
-              break;
-            }
             case 8: {
 
               enable_ = input.readBool();
@@ -2998,6 +3067,13 @@ public final class PartnerSettingsOuterClass {
             case 16: {
 
               sandbox_ = input.readBool();
+              break;
+            }
+            default: {
+              if (!parseUnknownFieldProto3(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
               break;
             }
           }
@@ -3014,12 +3090,13 @@ public final class PartnerSettingsOuterClass {
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return io.bloombox.schema.partner.settings.PartnerSettingsOuterClass.internal_static_bloombox_schema_partner_settings_BetaSettings_descriptor;
+      return io.bloombox.schema.partner.settings.PartnerSettingsOuterClass.internal_static_bloombox_partner_settings_BetaSettings_descriptor;
     }
 
+    @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return io.bloombox.schema.partner.settings.PartnerSettingsOuterClass.internal_static_bloombox_schema_partner_settings_BetaSettings_fieldAccessorTable
+      return io.bloombox.schema.partner.settings.PartnerSettingsOuterClass.internal_static_bloombox_partner_settings_BetaSettings_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
               io.bloombox.schema.partner.settings.PartnerSettingsOuterClass.BetaSettings.class, io.bloombox.schema.partner.settings.PartnerSettingsOuterClass.BetaSettings.Builder.class);
     }
@@ -3051,6 +3128,7 @@ public final class PartnerSettingsOuterClass {
     }
 
     private byte memoizedIsInitialized = -1;
+    @java.lang.Override
     public final boolean isInitialized() {
       byte isInitialized = memoizedIsInitialized;
       if (isInitialized == 1) return true;
@@ -3060,6 +3138,7 @@ public final class PartnerSettingsOuterClass {
       return true;
     }
 
+    @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
       if (enable_ != false) {
@@ -3071,6 +3150,7 @@ public final class PartnerSettingsOuterClass {
       unknownFields.writeTo(output);
     }
 
+    @java.lang.Override
     public int getSerializedSize() {
       int size = memoizedSize;
       if (size != -1) return size;
@@ -3196,6 +3276,7 @@ public final class PartnerSettingsOuterClass {
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
 
+    @java.lang.Override
     public Builder newBuilderForType() { return newBuilder(); }
     public static Builder newBuilder() {
       return DEFAULT_INSTANCE.toBuilder();
@@ -3203,6 +3284,7 @@ public final class PartnerSettingsOuterClass {
     public static Builder newBuilder(io.bloombox.schema.partner.settings.PartnerSettingsOuterClass.BetaSettings prototype) {
       return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
     }
+    @java.lang.Override
     public Builder toBuilder() {
       return this == DEFAULT_INSTANCE
           ? new Builder() : new Builder().mergeFrom(this);
@@ -3219,20 +3301,21 @@ public final class PartnerSettingsOuterClass {
      * Beta and sandbox settings.
      * </pre>
      *
-     * Protobuf type {@code bloombox.schema.partner.settings.BetaSettings}
+     * Protobuf type {@code bloombox.partner.settings.BetaSettings}
      */
     public static final class Builder extends
         com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:bloombox.schema.partner.settings.BetaSettings)
+        // @@protoc_insertion_point(builder_implements:bloombox.partner.settings.BetaSettings)
         io.bloombox.schema.partner.settings.PartnerSettingsOuterClass.BetaSettingsOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return io.bloombox.schema.partner.settings.PartnerSettingsOuterClass.internal_static_bloombox_schema_partner_settings_BetaSettings_descriptor;
+        return io.bloombox.schema.partner.settings.PartnerSettingsOuterClass.internal_static_bloombox_partner_settings_BetaSettings_descriptor;
       }
 
+      @java.lang.Override
       protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return io.bloombox.schema.partner.settings.PartnerSettingsOuterClass.internal_static_bloombox_schema_partner_settings_BetaSettings_fieldAccessorTable
+        return io.bloombox.schema.partner.settings.PartnerSettingsOuterClass.internal_static_bloombox_partner_settings_BetaSettings_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
                 io.bloombox.schema.partner.settings.PartnerSettingsOuterClass.BetaSettings.class, io.bloombox.schema.partner.settings.PartnerSettingsOuterClass.BetaSettings.Builder.class);
       }
@@ -3252,6 +3335,7 @@ public final class PartnerSettingsOuterClass {
                 .alwaysUseFieldBuilders) {
         }
       }
+      @java.lang.Override
       public Builder clear() {
         super.clear();
         enable_ = false;
@@ -3261,15 +3345,18 @@ public final class PartnerSettingsOuterClass {
         return this;
       }
 
+      @java.lang.Override
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return io.bloombox.schema.partner.settings.PartnerSettingsOuterClass.internal_static_bloombox_schema_partner_settings_BetaSettings_descriptor;
+        return io.bloombox.schema.partner.settings.PartnerSettingsOuterClass.internal_static_bloombox_partner_settings_BetaSettings_descriptor;
       }
 
+      @java.lang.Override
       public io.bloombox.schema.partner.settings.PartnerSettingsOuterClass.BetaSettings getDefaultInstanceForType() {
         return io.bloombox.schema.partner.settings.PartnerSettingsOuterClass.BetaSettings.getDefaultInstance();
       }
 
+      @java.lang.Override
       public io.bloombox.schema.partner.settings.PartnerSettingsOuterClass.BetaSettings build() {
         io.bloombox.schema.partner.settings.PartnerSettingsOuterClass.BetaSettings result = buildPartial();
         if (!result.isInitialized()) {
@@ -3278,6 +3365,7 @@ public final class PartnerSettingsOuterClass {
         return result;
       }
 
+      @java.lang.Override
       public io.bloombox.schema.partner.settings.PartnerSettingsOuterClass.BetaSettings buildPartial() {
         io.bloombox.schema.partner.settings.PartnerSettingsOuterClass.BetaSettings result = new io.bloombox.schema.partner.settings.PartnerSettingsOuterClass.BetaSettings(this);
         result.enable_ = enable_;
@@ -3286,32 +3374,39 @@ public final class PartnerSettingsOuterClass {
         return result;
       }
 
+      @java.lang.Override
       public Builder clone() {
         return (Builder) super.clone();
       }
+      @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
         return (Builder) super.setField(field, value);
       }
+      @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
         return (Builder) super.clearField(field);
       }
+      @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
         return (Builder) super.clearOneof(oneof);
       }
+      @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
         return (Builder) super.setRepeatedField(field, index, value);
       }
+      @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
         return (Builder) super.addRepeatedField(field, value);
       }
+      @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
         if (other instanceof io.bloombox.schema.partner.settings.PartnerSettingsOuterClass.BetaSettings) {
           return mergeFrom((io.bloombox.schema.partner.settings.PartnerSettingsOuterClass.BetaSettings)other);
@@ -3334,10 +3429,12 @@ public final class PartnerSettingsOuterClass {
         return this;
       }
 
+      @java.lang.Override
       public final boolean isInitialized() {
         return true;
       }
 
+      @java.lang.Override
       public Builder mergeFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -3431,21 +3528,23 @@ public final class PartnerSettingsOuterClass {
         onChanged();
         return this;
       }
+      @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
         return super.setUnknownFieldsProto3(unknownFields);
       }
 
+      @java.lang.Override
       public final Builder mergeUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
         return super.mergeUnknownFields(unknownFields);
       }
 
 
-      // @@protoc_insertion_point(builder_scope:bloombox.schema.partner.settings.BetaSettings)
+      // @@protoc_insertion_point(builder_scope:bloombox.partner.settings.BetaSettings)
     }
 
-    // @@protoc_insertion_point(class_scope:bloombox.schema.partner.settings.BetaSettings)
+    // @@protoc_insertion_point(class_scope:bloombox.partner.settings.BetaSettings)
     private static final io.bloombox.schema.partner.settings.PartnerSettingsOuterClass.BetaSettings DEFAULT_INSTANCE;
     static {
       DEFAULT_INSTANCE = new io.bloombox.schema.partner.settings.PartnerSettingsOuterClass.BetaSettings();
@@ -3457,6 +3556,7 @@ public final class PartnerSettingsOuterClass {
 
     private static final com.google.protobuf.Parser<BetaSettings>
         PARSER = new com.google.protobuf.AbstractParser<BetaSettings>() {
+      @java.lang.Override
       public BetaSettings parsePartialFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -3474,6 +3574,7 @@ public final class PartnerSettingsOuterClass {
       return PARSER;
     }
 
+    @java.lang.Override
     public io.bloombox.schema.partner.settings.PartnerSettingsOuterClass.BetaSettings getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
@@ -3481,7 +3582,7 @@ public final class PartnerSettingsOuterClass {
   }
 
   public interface FeatureStatusOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:bloombox.schema.partner.settings.FeatureStatus)
+      // @@protoc_insertion_point(interface_extends:bloombox.partner.settings.FeatureStatus)
       com.google.protobuf.MessageOrBuilder {
 
     /**
@@ -3534,11 +3635,11 @@ public final class PartnerSettingsOuterClass {
    * Feature activation flags.
    * </pre>
    *
-   * Protobuf type {@code bloombox.schema.partner.settings.FeatureStatus}
+   * Protobuf type {@code bloombox.partner.settings.FeatureStatus}
    */
   public  static final class FeatureStatus extends
       com.google.protobuf.GeneratedMessageV3 implements
-      // @@protoc_insertion_point(message_implements:bloombox.schema.partner.settings.FeatureStatus)
+      // @@protoc_insertion_point(message_implements:bloombox.partner.settings.FeatureStatus)
       FeatureStatusOrBuilder {
   private static final long serialVersionUID = 0L;
     // Use FeatureStatus.newBuilder() to construct.
@@ -3577,13 +3678,6 @@ public final class PartnerSettingsOuterClass {
             case 0:
               done = true;
               break;
-            default: {
-              if (!parseUnknownFieldProto3(
-                  input, unknownFields, extensionRegistry, tag)) {
-                done = true;
-              }
-              break;
-            }
             case 8: {
 
               analytics_ = input.readBool();
@@ -3609,6 +3703,13 @@ public final class PartnerSettingsOuterClass {
               checkin_ = input.readBool();
               break;
             }
+            default: {
+              if (!parseUnknownFieldProto3(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
           }
         }
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
@@ -3623,12 +3724,13 @@ public final class PartnerSettingsOuterClass {
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return io.bloombox.schema.partner.settings.PartnerSettingsOuterClass.internal_static_bloombox_schema_partner_settings_FeatureStatus_descriptor;
+      return io.bloombox.schema.partner.settings.PartnerSettingsOuterClass.internal_static_bloombox_partner_settings_FeatureStatus_descriptor;
     }
 
+    @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return io.bloombox.schema.partner.settings.PartnerSettingsOuterClass.internal_static_bloombox_schema_partner_settings_FeatureStatus_fieldAccessorTable
+      return io.bloombox.schema.partner.settings.PartnerSettingsOuterClass.internal_static_bloombox_partner_settings_FeatureStatus_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
               io.bloombox.schema.partner.settings.PartnerSettingsOuterClass.FeatureStatus.class, io.bloombox.schema.partner.settings.PartnerSettingsOuterClass.FeatureStatus.Builder.class);
     }
@@ -3699,6 +3801,7 @@ public final class PartnerSettingsOuterClass {
     }
 
     private byte memoizedIsInitialized = -1;
+    @java.lang.Override
     public final boolean isInitialized() {
       byte isInitialized = memoizedIsInitialized;
       if (isInitialized == 1) return true;
@@ -3708,6 +3811,7 @@ public final class PartnerSettingsOuterClass {
       return true;
     }
 
+    @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
       if (analytics_ != false) {
@@ -3728,6 +3832,7 @@ public final class PartnerSettingsOuterClass {
       unknownFields.writeTo(output);
     }
 
+    @java.lang.Override
     public int getSerializedSize() {
       int size = memoizedSize;
       if (size != -1) return size;
@@ -3880,6 +3985,7 @@ public final class PartnerSettingsOuterClass {
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
 
+    @java.lang.Override
     public Builder newBuilderForType() { return newBuilder(); }
     public static Builder newBuilder() {
       return DEFAULT_INSTANCE.toBuilder();
@@ -3887,6 +3993,7 @@ public final class PartnerSettingsOuterClass {
     public static Builder newBuilder(io.bloombox.schema.partner.settings.PartnerSettingsOuterClass.FeatureStatus prototype) {
       return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
     }
+    @java.lang.Override
     public Builder toBuilder() {
       return this == DEFAULT_INSTANCE
           ? new Builder() : new Builder().mergeFrom(this);
@@ -3903,20 +4010,21 @@ public final class PartnerSettingsOuterClass {
      * Feature activation flags.
      * </pre>
      *
-     * Protobuf type {@code bloombox.schema.partner.settings.FeatureStatus}
+     * Protobuf type {@code bloombox.partner.settings.FeatureStatus}
      */
     public static final class Builder extends
         com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:bloombox.schema.partner.settings.FeatureStatus)
+        // @@protoc_insertion_point(builder_implements:bloombox.partner.settings.FeatureStatus)
         io.bloombox.schema.partner.settings.PartnerSettingsOuterClass.FeatureStatusOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return io.bloombox.schema.partner.settings.PartnerSettingsOuterClass.internal_static_bloombox_schema_partner_settings_FeatureStatus_descriptor;
+        return io.bloombox.schema.partner.settings.PartnerSettingsOuterClass.internal_static_bloombox_partner_settings_FeatureStatus_descriptor;
       }
 
+      @java.lang.Override
       protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return io.bloombox.schema.partner.settings.PartnerSettingsOuterClass.internal_static_bloombox_schema_partner_settings_FeatureStatus_fieldAccessorTable
+        return io.bloombox.schema.partner.settings.PartnerSettingsOuterClass.internal_static_bloombox_partner_settings_FeatureStatus_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
                 io.bloombox.schema.partner.settings.PartnerSettingsOuterClass.FeatureStatus.class, io.bloombox.schema.partner.settings.PartnerSettingsOuterClass.FeatureStatus.Builder.class);
       }
@@ -3936,6 +4044,7 @@ public final class PartnerSettingsOuterClass {
                 .alwaysUseFieldBuilders) {
         }
       }
+      @java.lang.Override
       public Builder clear() {
         super.clear();
         analytics_ = false;
@@ -3951,15 +4060,18 @@ public final class PartnerSettingsOuterClass {
         return this;
       }
 
+      @java.lang.Override
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return io.bloombox.schema.partner.settings.PartnerSettingsOuterClass.internal_static_bloombox_schema_partner_settings_FeatureStatus_descriptor;
+        return io.bloombox.schema.partner.settings.PartnerSettingsOuterClass.internal_static_bloombox_partner_settings_FeatureStatus_descriptor;
       }
 
+      @java.lang.Override
       public io.bloombox.schema.partner.settings.PartnerSettingsOuterClass.FeatureStatus getDefaultInstanceForType() {
         return io.bloombox.schema.partner.settings.PartnerSettingsOuterClass.FeatureStatus.getDefaultInstance();
       }
 
+      @java.lang.Override
       public io.bloombox.schema.partner.settings.PartnerSettingsOuterClass.FeatureStatus build() {
         io.bloombox.schema.partner.settings.PartnerSettingsOuterClass.FeatureStatus result = buildPartial();
         if (!result.isInitialized()) {
@@ -3968,6 +4080,7 @@ public final class PartnerSettingsOuterClass {
         return result;
       }
 
+      @java.lang.Override
       public io.bloombox.schema.partner.settings.PartnerSettingsOuterClass.FeatureStatus buildPartial() {
         io.bloombox.schema.partner.settings.PartnerSettingsOuterClass.FeatureStatus result = new io.bloombox.schema.partner.settings.PartnerSettingsOuterClass.FeatureStatus(this);
         result.analytics_ = analytics_;
@@ -3979,32 +4092,39 @@ public final class PartnerSettingsOuterClass {
         return result;
       }
 
+      @java.lang.Override
       public Builder clone() {
         return (Builder) super.clone();
       }
+      @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
         return (Builder) super.setField(field, value);
       }
+      @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
         return (Builder) super.clearField(field);
       }
+      @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
         return (Builder) super.clearOneof(oneof);
       }
+      @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
         return (Builder) super.setRepeatedField(field, index, value);
       }
+      @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
         return (Builder) super.addRepeatedField(field, value);
       }
+      @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
         if (other instanceof io.bloombox.schema.partner.settings.PartnerSettingsOuterClass.FeatureStatus) {
           return mergeFrom((io.bloombox.schema.partner.settings.PartnerSettingsOuterClass.FeatureStatus)other);
@@ -4036,10 +4156,12 @@ public final class PartnerSettingsOuterClass {
         return this;
       }
 
+      @java.lang.Override
       public final boolean isInitialized() {
         return true;
       }
 
+      @java.lang.Override
       public Builder mergeFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -4247,21 +4369,23 @@ public final class PartnerSettingsOuterClass {
         onChanged();
         return this;
       }
+      @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
         return super.setUnknownFieldsProto3(unknownFields);
       }
 
+      @java.lang.Override
       public final Builder mergeUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
         return super.mergeUnknownFields(unknownFields);
       }
 
 
-      // @@protoc_insertion_point(builder_scope:bloombox.schema.partner.settings.FeatureStatus)
+      // @@protoc_insertion_point(builder_scope:bloombox.partner.settings.FeatureStatus)
     }
 
-    // @@protoc_insertion_point(class_scope:bloombox.schema.partner.settings.FeatureStatus)
+    // @@protoc_insertion_point(class_scope:bloombox.partner.settings.FeatureStatus)
     private static final io.bloombox.schema.partner.settings.PartnerSettingsOuterClass.FeatureStatus DEFAULT_INSTANCE;
     static {
       DEFAULT_INSTANCE = new io.bloombox.schema.partner.settings.PartnerSettingsOuterClass.FeatureStatus();
@@ -4273,6 +4397,7 @@ public final class PartnerSettingsOuterClass {
 
     private static final com.google.protobuf.Parser<FeatureStatus>
         PARSER = new com.google.protobuf.AbstractParser<FeatureStatus>() {
+      @java.lang.Override
       public FeatureStatus parsePartialFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -4290,6 +4415,7 @@ public final class PartnerSettingsOuterClass {
       return PARSER;
     }
 
+    @java.lang.Override
     public io.bloombox.schema.partner.settings.PartnerSettingsOuterClass.FeatureStatus getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
@@ -4297,7 +4423,7 @@ public final class PartnerSettingsOuterClass {
   }
 
   public interface SearchSettingsOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:bloombox.schema.partner.settings.SearchSettings)
+      // @@protoc_insertion_point(interface_extends:bloombox.partner.settings.SearchSettings)
       com.google.protobuf.MessageOrBuilder {
 
     /**
@@ -4323,11 +4449,11 @@ public final class PartnerSettingsOuterClass {
    * Settings related to search functionality.
    * </pre>
    *
-   * Protobuf type {@code bloombox.schema.partner.settings.SearchSettings}
+   * Protobuf type {@code bloombox.partner.settings.SearchSettings}
    */
   public  static final class SearchSettings extends
       com.google.protobuf.GeneratedMessageV3 implements
-      // @@protoc_insertion_point(message_implements:bloombox.schema.partner.settings.SearchSettings)
+      // @@protoc_insertion_point(message_implements:bloombox.partner.settings.SearchSettings)
       SearchSettingsOrBuilder {
   private static final long serialVersionUID = 0L;
     // Use SearchSettings.newBuilder() to construct.
@@ -4363,13 +4489,6 @@ public final class PartnerSettingsOuterClass {
             case 0:
               done = true;
               break;
-            default: {
-              if (!parseUnknownFieldProto3(
-                  input, unknownFields, extensionRegistry, tag)) {
-                done = true;
-              }
-              break;
-            }
             case 8: {
 
               enabled_ = input.readBool();
@@ -4378,6 +4497,13 @@ public final class PartnerSettingsOuterClass {
             case 16: {
 
               media_ = input.readBool();
+              break;
+            }
+            default: {
+              if (!parseUnknownFieldProto3(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
               break;
             }
           }
@@ -4394,12 +4520,13 @@ public final class PartnerSettingsOuterClass {
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return io.bloombox.schema.partner.settings.PartnerSettingsOuterClass.internal_static_bloombox_schema_partner_settings_SearchSettings_descriptor;
+      return io.bloombox.schema.partner.settings.PartnerSettingsOuterClass.internal_static_bloombox_partner_settings_SearchSettings_descriptor;
     }
 
+    @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return io.bloombox.schema.partner.settings.PartnerSettingsOuterClass.internal_static_bloombox_schema_partner_settings_SearchSettings_fieldAccessorTable
+      return io.bloombox.schema.partner.settings.PartnerSettingsOuterClass.internal_static_bloombox_partner_settings_SearchSettings_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
               io.bloombox.schema.partner.settings.PartnerSettingsOuterClass.SearchSettings.class, io.bloombox.schema.partner.settings.PartnerSettingsOuterClass.SearchSettings.Builder.class);
     }
@@ -4431,6 +4558,7 @@ public final class PartnerSettingsOuterClass {
     }
 
     private byte memoizedIsInitialized = -1;
+    @java.lang.Override
     public final boolean isInitialized() {
       byte isInitialized = memoizedIsInitialized;
       if (isInitialized == 1) return true;
@@ -4440,6 +4568,7 @@ public final class PartnerSettingsOuterClass {
       return true;
     }
 
+    @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
       if (enabled_ != false) {
@@ -4451,6 +4580,7 @@ public final class PartnerSettingsOuterClass {
       unknownFields.writeTo(output);
     }
 
+    @java.lang.Override
     public int getSerializedSize() {
       int size = memoizedSize;
       if (size != -1) return size;
@@ -4576,6 +4706,7 @@ public final class PartnerSettingsOuterClass {
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
 
+    @java.lang.Override
     public Builder newBuilderForType() { return newBuilder(); }
     public static Builder newBuilder() {
       return DEFAULT_INSTANCE.toBuilder();
@@ -4583,6 +4714,7 @@ public final class PartnerSettingsOuterClass {
     public static Builder newBuilder(io.bloombox.schema.partner.settings.PartnerSettingsOuterClass.SearchSettings prototype) {
       return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
     }
+    @java.lang.Override
     public Builder toBuilder() {
       return this == DEFAULT_INSTANCE
           ? new Builder() : new Builder().mergeFrom(this);
@@ -4599,20 +4731,21 @@ public final class PartnerSettingsOuterClass {
      * Settings related to search functionality.
      * </pre>
      *
-     * Protobuf type {@code bloombox.schema.partner.settings.SearchSettings}
+     * Protobuf type {@code bloombox.partner.settings.SearchSettings}
      */
     public static final class Builder extends
         com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:bloombox.schema.partner.settings.SearchSettings)
+        // @@protoc_insertion_point(builder_implements:bloombox.partner.settings.SearchSettings)
         io.bloombox.schema.partner.settings.PartnerSettingsOuterClass.SearchSettingsOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return io.bloombox.schema.partner.settings.PartnerSettingsOuterClass.internal_static_bloombox_schema_partner_settings_SearchSettings_descriptor;
+        return io.bloombox.schema.partner.settings.PartnerSettingsOuterClass.internal_static_bloombox_partner_settings_SearchSettings_descriptor;
       }
 
+      @java.lang.Override
       protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return io.bloombox.schema.partner.settings.PartnerSettingsOuterClass.internal_static_bloombox_schema_partner_settings_SearchSettings_fieldAccessorTable
+        return io.bloombox.schema.partner.settings.PartnerSettingsOuterClass.internal_static_bloombox_partner_settings_SearchSettings_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
                 io.bloombox.schema.partner.settings.PartnerSettingsOuterClass.SearchSettings.class, io.bloombox.schema.partner.settings.PartnerSettingsOuterClass.SearchSettings.Builder.class);
       }
@@ -4632,6 +4765,7 @@ public final class PartnerSettingsOuterClass {
                 .alwaysUseFieldBuilders) {
         }
       }
+      @java.lang.Override
       public Builder clear() {
         super.clear();
         enabled_ = false;
@@ -4641,15 +4775,18 @@ public final class PartnerSettingsOuterClass {
         return this;
       }
 
+      @java.lang.Override
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return io.bloombox.schema.partner.settings.PartnerSettingsOuterClass.internal_static_bloombox_schema_partner_settings_SearchSettings_descriptor;
+        return io.bloombox.schema.partner.settings.PartnerSettingsOuterClass.internal_static_bloombox_partner_settings_SearchSettings_descriptor;
       }
 
+      @java.lang.Override
       public io.bloombox.schema.partner.settings.PartnerSettingsOuterClass.SearchSettings getDefaultInstanceForType() {
         return io.bloombox.schema.partner.settings.PartnerSettingsOuterClass.SearchSettings.getDefaultInstance();
       }
 
+      @java.lang.Override
       public io.bloombox.schema.partner.settings.PartnerSettingsOuterClass.SearchSettings build() {
         io.bloombox.schema.partner.settings.PartnerSettingsOuterClass.SearchSettings result = buildPartial();
         if (!result.isInitialized()) {
@@ -4658,6 +4795,7 @@ public final class PartnerSettingsOuterClass {
         return result;
       }
 
+      @java.lang.Override
       public io.bloombox.schema.partner.settings.PartnerSettingsOuterClass.SearchSettings buildPartial() {
         io.bloombox.schema.partner.settings.PartnerSettingsOuterClass.SearchSettings result = new io.bloombox.schema.partner.settings.PartnerSettingsOuterClass.SearchSettings(this);
         result.enabled_ = enabled_;
@@ -4666,32 +4804,39 @@ public final class PartnerSettingsOuterClass {
         return result;
       }
 
+      @java.lang.Override
       public Builder clone() {
         return (Builder) super.clone();
       }
+      @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
         return (Builder) super.setField(field, value);
       }
+      @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
         return (Builder) super.clearField(field);
       }
+      @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
         return (Builder) super.clearOneof(oneof);
       }
+      @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
         return (Builder) super.setRepeatedField(field, index, value);
       }
+      @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
         return (Builder) super.addRepeatedField(field, value);
       }
+      @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
         if (other instanceof io.bloombox.schema.partner.settings.PartnerSettingsOuterClass.SearchSettings) {
           return mergeFrom((io.bloombox.schema.partner.settings.PartnerSettingsOuterClass.SearchSettings)other);
@@ -4714,10 +4859,12 @@ public final class PartnerSettingsOuterClass {
         return this;
       }
 
+      @java.lang.Override
       public final boolean isInitialized() {
         return true;
       }
 
+      @java.lang.Override
       public Builder mergeFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -4811,21 +4958,23 @@ public final class PartnerSettingsOuterClass {
         onChanged();
         return this;
       }
+      @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
         return super.setUnknownFieldsProto3(unknownFields);
       }
 
+      @java.lang.Override
       public final Builder mergeUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
         return super.mergeUnknownFields(unknownFields);
       }
 
 
-      // @@protoc_insertion_point(builder_scope:bloombox.schema.partner.settings.SearchSettings)
+      // @@protoc_insertion_point(builder_scope:bloombox.partner.settings.SearchSettings)
     }
 
-    // @@protoc_insertion_point(class_scope:bloombox.schema.partner.settings.SearchSettings)
+    // @@protoc_insertion_point(class_scope:bloombox.partner.settings.SearchSettings)
     private static final io.bloombox.schema.partner.settings.PartnerSettingsOuterClass.SearchSettings DEFAULT_INSTANCE;
     static {
       DEFAULT_INSTANCE = new io.bloombox.schema.partner.settings.PartnerSettingsOuterClass.SearchSettings();
@@ -4837,6 +4986,7 @@ public final class PartnerSettingsOuterClass {
 
     private static final com.google.protobuf.Parser<SearchSettings>
         PARSER = new com.google.protobuf.AbstractParser<SearchSettings>() {
+      @java.lang.Override
       public SearchSettings parsePartialFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -4854,6 +5004,7 @@ public final class PartnerSettingsOuterClass {
       return PARSER;
     }
 
+    @java.lang.Override
     public io.bloombox.schema.partner.settings.PartnerSettingsOuterClass.SearchSettings getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
@@ -4861,7 +5012,7 @@ public final class PartnerSettingsOuterClass {
   }
 
   public interface PartnerSettingsOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:bloombox.schema.partner.settings.PartnerSettings)
+      // @@protoc_insertion_point(interface_extends:bloombox.partner.settings.PartnerSettings)
       com.google.protobuf.MessageOrBuilder {
 
     /**
@@ -4869,7 +5020,7 @@ public final class PartnerSettingsOuterClass {
      * Alerting and notification settings.
      * </pre>
      *
-     * <code>.bloombox.schema.partner.settings.PartnerAlertSettings alerts = 1;</code>
+     * <code>.bloombox.partner.settings.PartnerAlertSettings alerts = 1;</code>
      */
     boolean hasAlerts();
     /**
@@ -4877,7 +5028,7 @@ public final class PartnerSettingsOuterClass {
      * Alerting and notification settings.
      * </pre>
      *
-     * <code>.bloombox.schema.partner.settings.PartnerAlertSettings alerts = 1;</code>
+     * <code>.bloombox.partner.settings.PartnerAlertSettings alerts = 1;</code>
      */
     io.bloombox.schema.partner.settings.PartnerSettingsOuterClass.PartnerAlertSettings getAlerts();
     /**
@@ -4885,7 +5036,7 @@ public final class PartnerSettingsOuterClass {
      * Alerting and notification settings.
      * </pre>
      *
-     * <code>.bloombox.schema.partner.settings.PartnerAlertSettings alerts = 1;</code>
+     * <code>.bloombox.partner.settings.PartnerAlertSettings alerts = 1;</code>
      */
     io.bloombox.schema.partner.settings.PartnerSettingsOuterClass.PartnerAlertSettingsOrBuilder getAlertsOrBuilder();
 
@@ -4894,7 +5045,7 @@ public final class PartnerSettingsOuterClass {
      * Beta and sandbox settings.
      * </pre>
      *
-     * <code>.bloombox.schema.partner.settings.BetaSettings beta = 2;</code>
+     * <code>.bloombox.partner.settings.BetaSettings beta = 2;</code>
      */
     boolean hasBeta();
     /**
@@ -4902,7 +5053,7 @@ public final class PartnerSettingsOuterClass {
      * Beta and sandbox settings.
      * </pre>
      *
-     * <code>.bloombox.schema.partner.settings.BetaSettings beta = 2;</code>
+     * <code>.bloombox.partner.settings.BetaSettings beta = 2;</code>
      */
     io.bloombox.schema.partner.settings.PartnerSettingsOuterClass.BetaSettings getBeta();
     /**
@@ -4910,7 +5061,7 @@ public final class PartnerSettingsOuterClass {
      * Beta and sandbox settings.
      * </pre>
      *
-     * <code>.bloombox.schema.partner.settings.BetaSettings beta = 2;</code>
+     * <code>.bloombox.partner.settings.BetaSettings beta = 2;</code>
      */
     io.bloombox.schema.partner.settings.PartnerSettingsOuterClass.BetaSettingsOrBuilder getBetaOrBuilder();
 
@@ -4919,7 +5070,7 @@ public final class PartnerSettingsOuterClass {
      * Feature activation flags.
      * </pre>
      *
-     * <code>.bloombox.schema.partner.settings.FeatureStatus features = 3;</code>
+     * <code>.bloombox.partner.settings.FeatureStatus features = 3;</code>
      */
     boolean hasFeatures();
     /**
@@ -4927,7 +5078,7 @@ public final class PartnerSettingsOuterClass {
      * Feature activation flags.
      * </pre>
      *
-     * <code>.bloombox.schema.partner.settings.FeatureStatus features = 3;</code>
+     * <code>.bloombox.partner.settings.FeatureStatus features = 3;</code>
      */
     io.bloombox.schema.partner.settings.PartnerSettingsOuterClass.FeatureStatus getFeatures();
     /**
@@ -4935,7 +5086,7 @@ public final class PartnerSettingsOuterClass {
      * Feature activation flags.
      * </pre>
      *
-     * <code>.bloombox.schema.partner.settings.FeatureStatus features = 3;</code>
+     * <code>.bloombox.partner.settings.FeatureStatus features = 3;</code>
      */
     io.bloombox.schema.partner.settings.PartnerSettingsOuterClass.FeatureStatusOrBuilder getFeaturesOrBuilder();
 
@@ -4944,7 +5095,7 @@ public final class PartnerSettingsOuterClass {
      * Search settings.
      * </pre>
      *
-     * <code>.bloombox.schema.partner.settings.SearchSettings search = 4;</code>
+     * <code>.bloombox.partner.settings.SearchSettings search = 4;</code>
      */
     boolean hasSearch();
     /**
@@ -4952,7 +5103,7 @@ public final class PartnerSettingsOuterClass {
      * Search settings.
      * </pre>
      *
-     * <code>.bloombox.schema.partner.settings.SearchSettings search = 4;</code>
+     * <code>.bloombox.partner.settings.SearchSettings search = 4;</code>
      */
     io.bloombox.schema.partner.settings.PartnerSettingsOuterClass.SearchSettings getSearch();
     /**
@@ -4960,7 +5111,7 @@ public final class PartnerSettingsOuterClass {
      * Search settings.
      * </pre>
      *
-     * <code>.bloombox.schema.partner.settings.SearchSettings search = 4;</code>
+     * <code>.bloombox.partner.settings.SearchSettings search = 4;</code>
      */
     io.bloombox.schema.partner.settings.PartnerSettingsOuterClass.SearchSettingsOrBuilder getSearchOrBuilder();
 
@@ -4969,7 +5120,7 @@ public final class PartnerSettingsOuterClass {
      * Integration settings for this location.
      * </pre>
      *
-     * <code>.bloombox.schema.partner.integrations.PartnerIntegrationSettings integration = 7;</code>
+     * <code>.bloombox.partner.integrations.PartnerIntegrationSettings integration = 7;</code>
      */
     boolean hasIntegration();
     /**
@@ -4977,7 +5128,7 @@ public final class PartnerSettingsOuterClass {
      * Integration settings for this location.
      * </pre>
      *
-     * <code>.bloombox.schema.partner.integrations.PartnerIntegrationSettings integration = 7;</code>
+     * <code>.bloombox.partner.integrations.PartnerIntegrationSettings integration = 7;</code>
      */
     io.bloombox.schema.partner.integrations.IntegrationSettings.PartnerIntegrationSettings getIntegration();
     /**
@@ -4985,7 +5136,7 @@ public final class PartnerSettingsOuterClass {
      * Integration settings for this location.
      * </pre>
      *
-     * <code>.bloombox.schema.partner.integrations.PartnerIntegrationSettings integration = 7;</code>
+     * <code>.bloombox.partner.integrations.PartnerIntegrationSettings integration = 7;</code>
      */
     io.bloombox.schema.partner.integrations.IntegrationSettings.PartnerIntegrationSettingsOrBuilder getIntegrationOrBuilder();
   }
@@ -4994,11 +5145,11 @@ public final class PartnerSettingsOuterClass {
    * Partner-level account settings.
    * </pre>
    *
-   * Protobuf type {@code bloombox.schema.partner.settings.PartnerSettings}
+   * Protobuf type {@code bloombox.partner.settings.PartnerSettings}
    */
   public  static final class PartnerSettings extends
       com.google.protobuf.GeneratedMessageV3 implements
-      // @@protoc_insertion_point(message_implements:bloombox.schema.partner.settings.PartnerSettings)
+      // @@protoc_insertion_point(message_implements:bloombox.partner.settings.PartnerSettings)
       PartnerSettingsOrBuilder {
   private static final long serialVersionUID = 0L;
     // Use PartnerSettings.newBuilder() to construct.
@@ -5032,13 +5183,6 @@ public final class PartnerSettingsOuterClass {
             case 0:
               done = true;
               break;
-            default: {
-              if (!parseUnknownFieldProto3(
-                  input, unknownFields, extensionRegistry, tag)) {
-                done = true;
-              }
-              break;
-            }
             case 10: {
               io.bloombox.schema.partner.settings.PartnerSettingsOuterClass.PartnerAlertSettings.Builder subBuilder = null;
               if (alerts_ != null) {
@@ -5104,6 +5248,13 @@ public final class PartnerSettingsOuterClass {
 
               break;
             }
+            default: {
+              if (!parseUnknownFieldProto3(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
           }
         }
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
@@ -5118,12 +5269,13 @@ public final class PartnerSettingsOuterClass {
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return io.bloombox.schema.partner.settings.PartnerSettingsOuterClass.internal_static_bloombox_schema_partner_settings_PartnerSettings_descriptor;
+      return io.bloombox.schema.partner.settings.PartnerSettingsOuterClass.internal_static_bloombox_partner_settings_PartnerSettings_descriptor;
     }
 
+    @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return io.bloombox.schema.partner.settings.PartnerSettingsOuterClass.internal_static_bloombox_schema_partner_settings_PartnerSettings_fieldAccessorTable
+      return io.bloombox.schema.partner.settings.PartnerSettingsOuterClass.internal_static_bloombox_partner_settings_PartnerSettings_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
               io.bloombox.schema.partner.settings.PartnerSettingsOuterClass.PartnerSettings.class, io.bloombox.schema.partner.settings.PartnerSettingsOuterClass.PartnerSettings.Builder.class);
     }
@@ -5135,7 +5287,7 @@ public final class PartnerSettingsOuterClass {
      * Alerting and notification settings.
      * </pre>
      *
-     * <code>.bloombox.schema.partner.settings.PartnerAlertSettings alerts = 1;</code>
+     * <code>.bloombox.partner.settings.PartnerAlertSettings alerts = 1;</code>
      */
     public boolean hasAlerts() {
       return alerts_ != null;
@@ -5145,7 +5297,7 @@ public final class PartnerSettingsOuterClass {
      * Alerting and notification settings.
      * </pre>
      *
-     * <code>.bloombox.schema.partner.settings.PartnerAlertSettings alerts = 1;</code>
+     * <code>.bloombox.partner.settings.PartnerAlertSettings alerts = 1;</code>
      */
     public io.bloombox.schema.partner.settings.PartnerSettingsOuterClass.PartnerAlertSettings getAlerts() {
       return alerts_ == null ? io.bloombox.schema.partner.settings.PartnerSettingsOuterClass.PartnerAlertSettings.getDefaultInstance() : alerts_;
@@ -5155,7 +5307,7 @@ public final class PartnerSettingsOuterClass {
      * Alerting and notification settings.
      * </pre>
      *
-     * <code>.bloombox.schema.partner.settings.PartnerAlertSettings alerts = 1;</code>
+     * <code>.bloombox.partner.settings.PartnerAlertSettings alerts = 1;</code>
      */
     public io.bloombox.schema.partner.settings.PartnerSettingsOuterClass.PartnerAlertSettingsOrBuilder getAlertsOrBuilder() {
       return getAlerts();
@@ -5168,7 +5320,7 @@ public final class PartnerSettingsOuterClass {
      * Beta and sandbox settings.
      * </pre>
      *
-     * <code>.bloombox.schema.partner.settings.BetaSettings beta = 2;</code>
+     * <code>.bloombox.partner.settings.BetaSettings beta = 2;</code>
      */
     public boolean hasBeta() {
       return beta_ != null;
@@ -5178,7 +5330,7 @@ public final class PartnerSettingsOuterClass {
      * Beta and sandbox settings.
      * </pre>
      *
-     * <code>.bloombox.schema.partner.settings.BetaSettings beta = 2;</code>
+     * <code>.bloombox.partner.settings.BetaSettings beta = 2;</code>
      */
     public io.bloombox.schema.partner.settings.PartnerSettingsOuterClass.BetaSettings getBeta() {
       return beta_ == null ? io.bloombox.schema.partner.settings.PartnerSettingsOuterClass.BetaSettings.getDefaultInstance() : beta_;
@@ -5188,7 +5340,7 @@ public final class PartnerSettingsOuterClass {
      * Beta and sandbox settings.
      * </pre>
      *
-     * <code>.bloombox.schema.partner.settings.BetaSettings beta = 2;</code>
+     * <code>.bloombox.partner.settings.BetaSettings beta = 2;</code>
      */
     public io.bloombox.schema.partner.settings.PartnerSettingsOuterClass.BetaSettingsOrBuilder getBetaOrBuilder() {
       return getBeta();
@@ -5201,7 +5353,7 @@ public final class PartnerSettingsOuterClass {
      * Feature activation flags.
      * </pre>
      *
-     * <code>.bloombox.schema.partner.settings.FeatureStatus features = 3;</code>
+     * <code>.bloombox.partner.settings.FeatureStatus features = 3;</code>
      */
     public boolean hasFeatures() {
       return features_ != null;
@@ -5211,7 +5363,7 @@ public final class PartnerSettingsOuterClass {
      * Feature activation flags.
      * </pre>
      *
-     * <code>.bloombox.schema.partner.settings.FeatureStatus features = 3;</code>
+     * <code>.bloombox.partner.settings.FeatureStatus features = 3;</code>
      */
     public io.bloombox.schema.partner.settings.PartnerSettingsOuterClass.FeatureStatus getFeatures() {
       return features_ == null ? io.bloombox.schema.partner.settings.PartnerSettingsOuterClass.FeatureStatus.getDefaultInstance() : features_;
@@ -5221,7 +5373,7 @@ public final class PartnerSettingsOuterClass {
      * Feature activation flags.
      * </pre>
      *
-     * <code>.bloombox.schema.partner.settings.FeatureStatus features = 3;</code>
+     * <code>.bloombox.partner.settings.FeatureStatus features = 3;</code>
      */
     public io.bloombox.schema.partner.settings.PartnerSettingsOuterClass.FeatureStatusOrBuilder getFeaturesOrBuilder() {
       return getFeatures();
@@ -5234,7 +5386,7 @@ public final class PartnerSettingsOuterClass {
      * Search settings.
      * </pre>
      *
-     * <code>.bloombox.schema.partner.settings.SearchSettings search = 4;</code>
+     * <code>.bloombox.partner.settings.SearchSettings search = 4;</code>
      */
     public boolean hasSearch() {
       return search_ != null;
@@ -5244,7 +5396,7 @@ public final class PartnerSettingsOuterClass {
      * Search settings.
      * </pre>
      *
-     * <code>.bloombox.schema.partner.settings.SearchSettings search = 4;</code>
+     * <code>.bloombox.partner.settings.SearchSettings search = 4;</code>
      */
     public io.bloombox.schema.partner.settings.PartnerSettingsOuterClass.SearchSettings getSearch() {
       return search_ == null ? io.bloombox.schema.partner.settings.PartnerSettingsOuterClass.SearchSettings.getDefaultInstance() : search_;
@@ -5254,7 +5406,7 @@ public final class PartnerSettingsOuterClass {
      * Search settings.
      * </pre>
      *
-     * <code>.bloombox.schema.partner.settings.SearchSettings search = 4;</code>
+     * <code>.bloombox.partner.settings.SearchSettings search = 4;</code>
      */
     public io.bloombox.schema.partner.settings.PartnerSettingsOuterClass.SearchSettingsOrBuilder getSearchOrBuilder() {
       return getSearch();
@@ -5267,7 +5419,7 @@ public final class PartnerSettingsOuterClass {
      * Integration settings for this location.
      * </pre>
      *
-     * <code>.bloombox.schema.partner.integrations.PartnerIntegrationSettings integration = 7;</code>
+     * <code>.bloombox.partner.integrations.PartnerIntegrationSettings integration = 7;</code>
      */
     public boolean hasIntegration() {
       return integration_ != null;
@@ -5277,7 +5429,7 @@ public final class PartnerSettingsOuterClass {
      * Integration settings for this location.
      * </pre>
      *
-     * <code>.bloombox.schema.partner.integrations.PartnerIntegrationSettings integration = 7;</code>
+     * <code>.bloombox.partner.integrations.PartnerIntegrationSettings integration = 7;</code>
      */
     public io.bloombox.schema.partner.integrations.IntegrationSettings.PartnerIntegrationSettings getIntegration() {
       return integration_ == null ? io.bloombox.schema.partner.integrations.IntegrationSettings.PartnerIntegrationSettings.getDefaultInstance() : integration_;
@@ -5287,13 +5439,14 @@ public final class PartnerSettingsOuterClass {
      * Integration settings for this location.
      * </pre>
      *
-     * <code>.bloombox.schema.partner.integrations.PartnerIntegrationSettings integration = 7;</code>
+     * <code>.bloombox.partner.integrations.PartnerIntegrationSettings integration = 7;</code>
      */
     public io.bloombox.schema.partner.integrations.IntegrationSettings.PartnerIntegrationSettingsOrBuilder getIntegrationOrBuilder() {
       return getIntegration();
     }
 
     private byte memoizedIsInitialized = -1;
+    @java.lang.Override
     public final boolean isInitialized() {
       byte isInitialized = memoizedIsInitialized;
       if (isInitialized == 1) return true;
@@ -5303,6 +5456,7 @@ public final class PartnerSettingsOuterClass {
       return true;
     }
 
+    @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
       if (alerts_ != null) {
@@ -5323,6 +5477,7 @@ public final class PartnerSettingsOuterClass {
       unknownFields.writeTo(output);
     }
 
+    @java.lang.Override
     public int getSerializedSize() {
       int size = memoizedSize;
       if (size != -1) return size;
@@ -5495,6 +5650,7 @@ public final class PartnerSettingsOuterClass {
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
 
+    @java.lang.Override
     public Builder newBuilderForType() { return newBuilder(); }
     public static Builder newBuilder() {
       return DEFAULT_INSTANCE.toBuilder();
@@ -5502,6 +5658,7 @@ public final class PartnerSettingsOuterClass {
     public static Builder newBuilder(io.bloombox.schema.partner.settings.PartnerSettingsOuterClass.PartnerSettings prototype) {
       return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
     }
+    @java.lang.Override
     public Builder toBuilder() {
       return this == DEFAULT_INSTANCE
           ? new Builder() : new Builder().mergeFrom(this);
@@ -5518,20 +5675,21 @@ public final class PartnerSettingsOuterClass {
      * Partner-level account settings.
      * </pre>
      *
-     * Protobuf type {@code bloombox.schema.partner.settings.PartnerSettings}
+     * Protobuf type {@code bloombox.partner.settings.PartnerSettings}
      */
     public static final class Builder extends
         com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:bloombox.schema.partner.settings.PartnerSettings)
+        // @@protoc_insertion_point(builder_implements:bloombox.partner.settings.PartnerSettings)
         io.bloombox.schema.partner.settings.PartnerSettingsOuterClass.PartnerSettingsOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return io.bloombox.schema.partner.settings.PartnerSettingsOuterClass.internal_static_bloombox_schema_partner_settings_PartnerSettings_descriptor;
+        return io.bloombox.schema.partner.settings.PartnerSettingsOuterClass.internal_static_bloombox_partner_settings_PartnerSettings_descriptor;
       }
 
+      @java.lang.Override
       protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return io.bloombox.schema.partner.settings.PartnerSettingsOuterClass.internal_static_bloombox_schema_partner_settings_PartnerSettings_fieldAccessorTable
+        return io.bloombox.schema.partner.settings.PartnerSettingsOuterClass.internal_static_bloombox_partner_settings_PartnerSettings_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
                 io.bloombox.schema.partner.settings.PartnerSettingsOuterClass.PartnerSettings.class, io.bloombox.schema.partner.settings.PartnerSettingsOuterClass.PartnerSettings.Builder.class);
       }
@@ -5551,6 +5709,7 @@ public final class PartnerSettingsOuterClass {
                 .alwaysUseFieldBuilders) {
         }
       }
+      @java.lang.Override
       public Builder clear() {
         super.clear();
         if (alertsBuilder_ == null) {
@@ -5586,15 +5745,18 @@ public final class PartnerSettingsOuterClass {
         return this;
       }
 
+      @java.lang.Override
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return io.bloombox.schema.partner.settings.PartnerSettingsOuterClass.internal_static_bloombox_schema_partner_settings_PartnerSettings_descriptor;
+        return io.bloombox.schema.partner.settings.PartnerSettingsOuterClass.internal_static_bloombox_partner_settings_PartnerSettings_descriptor;
       }
 
+      @java.lang.Override
       public io.bloombox.schema.partner.settings.PartnerSettingsOuterClass.PartnerSettings getDefaultInstanceForType() {
         return io.bloombox.schema.partner.settings.PartnerSettingsOuterClass.PartnerSettings.getDefaultInstance();
       }
 
+      @java.lang.Override
       public io.bloombox.schema.partner.settings.PartnerSettingsOuterClass.PartnerSettings build() {
         io.bloombox.schema.partner.settings.PartnerSettingsOuterClass.PartnerSettings result = buildPartial();
         if (!result.isInitialized()) {
@@ -5603,6 +5765,7 @@ public final class PartnerSettingsOuterClass {
         return result;
       }
 
+      @java.lang.Override
       public io.bloombox.schema.partner.settings.PartnerSettingsOuterClass.PartnerSettings buildPartial() {
         io.bloombox.schema.partner.settings.PartnerSettingsOuterClass.PartnerSettings result = new io.bloombox.schema.partner.settings.PartnerSettingsOuterClass.PartnerSettings(this);
         if (alertsBuilder_ == null) {
@@ -5634,32 +5797,39 @@ public final class PartnerSettingsOuterClass {
         return result;
       }
 
+      @java.lang.Override
       public Builder clone() {
         return (Builder) super.clone();
       }
+      @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
         return (Builder) super.setField(field, value);
       }
+      @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
         return (Builder) super.clearField(field);
       }
+      @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
         return (Builder) super.clearOneof(oneof);
       }
+      @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
         return (Builder) super.setRepeatedField(field, index, value);
       }
+      @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
         return (Builder) super.addRepeatedField(field, value);
       }
+      @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
         if (other instanceof io.bloombox.schema.partner.settings.PartnerSettingsOuterClass.PartnerSettings) {
           return mergeFrom((io.bloombox.schema.partner.settings.PartnerSettingsOuterClass.PartnerSettings)other);
@@ -5691,10 +5861,12 @@ public final class PartnerSettingsOuterClass {
         return this;
       }
 
+      @java.lang.Override
       public final boolean isInitialized() {
         return true;
       }
 
+      @java.lang.Override
       public Builder mergeFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -5721,7 +5893,7 @@ public final class PartnerSettingsOuterClass {
        * Alerting and notification settings.
        * </pre>
        *
-       * <code>.bloombox.schema.partner.settings.PartnerAlertSettings alerts = 1;</code>
+       * <code>.bloombox.partner.settings.PartnerAlertSettings alerts = 1;</code>
        */
       public boolean hasAlerts() {
         return alertsBuilder_ != null || alerts_ != null;
@@ -5731,7 +5903,7 @@ public final class PartnerSettingsOuterClass {
        * Alerting and notification settings.
        * </pre>
        *
-       * <code>.bloombox.schema.partner.settings.PartnerAlertSettings alerts = 1;</code>
+       * <code>.bloombox.partner.settings.PartnerAlertSettings alerts = 1;</code>
        */
       public io.bloombox.schema.partner.settings.PartnerSettingsOuterClass.PartnerAlertSettings getAlerts() {
         if (alertsBuilder_ == null) {
@@ -5745,7 +5917,7 @@ public final class PartnerSettingsOuterClass {
        * Alerting and notification settings.
        * </pre>
        *
-       * <code>.bloombox.schema.partner.settings.PartnerAlertSettings alerts = 1;</code>
+       * <code>.bloombox.partner.settings.PartnerAlertSettings alerts = 1;</code>
        */
       public Builder setAlerts(io.bloombox.schema.partner.settings.PartnerSettingsOuterClass.PartnerAlertSettings value) {
         if (alertsBuilder_ == null) {
@@ -5765,7 +5937,7 @@ public final class PartnerSettingsOuterClass {
        * Alerting and notification settings.
        * </pre>
        *
-       * <code>.bloombox.schema.partner.settings.PartnerAlertSettings alerts = 1;</code>
+       * <code>.bloombox.partner.settings.PartnerAlertSettings alerts = 1;</code>
        */
       public Builder setAlerts(
           io.bloombox.schema.partner.settings.PartnerSettingsOuterClass.PartnerAlertSettings.Builder builderForValue) {
@@ -5783,7 +5955,7 @@ public final class PartnerSettingsOuterClass {
        * Alerting and notification settings.
        * </pre>
        *
-       * <code>.bloombox.schema.partner.settings.PartnerAlertSettings alerts = 1;</code>
+       * <code>.bloombox.partner.settings.PartnerAlertSettings alerts = 1;</code>
        */
       public Builder mergeAlerts(io.bloombox.schema.partner.settings.PartnerSettingsOuterClass.PartnerAlertSettings value) {
         if (alertsBuilder_ == null) {
@@ -5805,7 +5977,7 @@ public final class PartnerSettingsOuterClass {
        * Alerting and notification settings.
        * </pre>
        *
-       * <code>.bloombox.schema.partner.settings.PartnerAlertSettings alerts = 1;</code>
+       * <code>.bloombox.partner.settings.PartnerAlertSettings alerts = 1;</code>
        */
       public Builder clearAlerts() {
         if (alertsBuilder_ == null) {
@@ -5823,7 +5995,7 @@ public final class PartnerSettingsOuterClass {
        * Alerting and notification settings.
        * </pre>
        *
-       * <code>.bloombox.schema.partner.settings.PartnerAlertSettings alerts = 1;</code>
+       * <code>.bloombox.partner.settings.PartnerAlertSettings alerts = 1;</code>
        */
       public io.bloombox.schema.partner.settings.PartnerSettingsOuterClass.PartnerAlertSettings.Builder getAlertsBuilder() {
         
@@ -5835,7 +6007,7 @@ public final class PartnerSettingsOuterClass {
        * Alerting and notification settings.
        * </pre>
        *
-       * <code>.bloombox.schema.partner.settings.PartnerAlertSettings alerts = 1;</code>
+       * <code>.bloombox.partner.settings.PartnerAlertSettings alerts = 1;</code>
        */
       public io.bloombox.schema.partner.settings.PartnerSettingsOuterClass.PartnerAlertSettingsOrBuilder getAlertsOrBuilder() {
         if (alertsBuilder_ != null) {
@@ -5850,7 +6022,7 @@ public final class PartnerSettingsOuterClass {
        * Alerting and notification settings.
        * </pre>
        *
-       * <code>.bloombox.schema.partner.settings.PartnerAlertSettings alerts = 1;</code>
+       * <code>.bloombox.partner.settings.PartnerAlertSettings alerts = 1;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
           io.bloombox.schema.partner.settings.PartnerSettingsOuterClass.PartnerAlertSettings, io.bloombox.schema.partner.settings.PartnerSettingsOuterClass.PartnerAlertSettings.Builder, io.bloombox.schema.partner.settings.PartnerSettingsOuterClass.PartnerAlertSettingsOrBuilder> 
@@ -5874,7 +6046,7 @@ public final class PartnerSettingsOuterClass {
        * Beta and sandbox settings.
        * </pre>
        *
-       * <code>.bloombox.schema.partner.settings.BetaSettings beta = 2;</code>
+       * <code>.bloombox.partner.settings.BetaSettings beta = 2;</code>
        */
       public boolean hasBeta() {
         return betaBuilder_ != null || beta_ != null;
@@ -5884,7 +6056,7 @@ public final class PartnerSettingsOuterClass {
        * Beta and sandbox settings.
        * </pre>
        *
-       * <code>.bloombox.schema.partner.settings.BetaSettings beta = 2;</code>
+       * <code>.bloombox.partner.settings.BetaSettings beta = 2;</code>
        */
       public io.bloombox.schema.partner.settings.PartnerSettingsOuterClass.BetaSettings getBeta() {
         if (betaBuilder_ == null) {
@@ -5898,7 +6070,7 @@ public final class PartnerSettingsOuterClass {
        * Beta and sandbox settings.
        * </pre>
        *
-       * <code>.bloombox.schema.partner.settings.BetaSettings beta = 2;</code>
+       * <code>.bloombox.partner.settings.BetaSettings beta = 2;</code>
        */
       public Builder setBeta(io.bloombox.schema.partner.settings.PartnerSettingsOuterClass.BetaSettings value) {
         if (betaBuilder_ == null) {
@@ -5918,7 +6090,7 @@ public final class PartnerSettingsOuterClass {
        * Beta and sandbox settings.
        * </pre>
        *
-       * <code>.bloombox.schema.partner.settings.BetaSettings beta = 2;</code>
+       * <code>.bloombox.partner.settings.BetaSettings beta = 2;</code>
        */
       public Builder setBeta(
           io.bloombox.schema.partner.settings.PartnerSettingsOuterClass.BetaSettings.Builder builderForValue) {
@@ -5936,7 +6108,7 @@ public final class PartnerSettingsOuterClass {
        * Beta and sandbox settings.
        * </pre>
        *
-       * <code>.bloombox.schema.partner.settings.BetaSettings beta = 2;</code>
+       * <code>.bloombox.partner.settings.BetaSettings beta = 2;</code>
        */
       public Builder mergeBeta(io.bloombox.schema.partner.settings.PartnerSettingsOuterClass.BetaSettings value) {
         if (betaBuilder_ == null) {
@@ -5958,7 +6130,7 @@ public final class PartnerSettingsOuterClass {
        * Beta and sandbox settings.
        * </pre>
        *
-       * <code>.bloombox.schema.partner.settings.BetaSettings beta = 2;</code>
+       * <code>.bloombox.partner.settings.BetaSettings beta = 2;</code>
        */
       public Builder clearBeta() {
         if (betaBuilder_ == null) {
@@ -5976,7 +6148,7 @@ public final class PartnerSettingsOuterClass {
        * Beta and sandbox settings.
        * </pre>
        *
-       * <code>.bloombox.schema.partner.settings.BetaSettings beta = 2;</code>
+       * <code>.bloombox.partner.settings.BetaSettings beta = 2;</code>
        */
       public io.bloombox.schema.partner.settings.PartnerSettingsOuterClass.BetaSettings.Builder getBetaBuilder() {
         
@@ -5988,7 +6160,7 @@ public final class PartnerSettingsOuterClass {
        * Beta and sandbox settings.
        * </pre>
        *
-       * <code>.bloombox.schema.partner.settings.BetaSettings beta = 2;</code>
+       * <code>.bloombox.partner.settings.BetaSettings beta = 2;</code>
        */
       public io.bloombox.schema.partner.settings.PartnerSettingsOuterClass.BetaSettingsOrBuilder getBetaOrBuilder() {
         if (betaBuilder_ != null) {
@@ -6003,7 +6175,7 @@ public final class PartnerSettingsOuterClass {
        * Beta and sandbox settings.
        * </pre>
        *
-       * <code>.bloombox.schema.partner.settings.BetaSettings beta = 2;</code>
+       * <code>.bloombox.partner.settings.BetaSettings beta = 2;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
           io.bloombox.schema.partner.settings.PartnerSettingsOuterClass.BetaSettings, io.bloombox.schema.partner.settings.PartnerSettingsOuterClass.BetaSettings.Builder, io.bloombox.schema.partner.settings.PartnerSettingsOuterClass.BetaSettingsOrBuilder> 
@@ -6027,7 +6199,7 @@ public final class PartnerSettingsOuterClass {
        * Feature activation flags.
        * </pre>
        *
-       * <code>.bloombox.schema.partner.settings.FeatureStatus features = 3;</code>
+       * <code>.bloombox.partner.settings.FeatureStatus features = 3;</code>
        */
       public boolean hasFeatures() {
         return featuresBuilder_ != null || features_ != null;
@@ -6037,7 +6209,7 @@ public final class PartnerSettingsOuterClass {
        * Feature activation flags.
        * </pre>
        *
-       * <code>.bloombox.schema.partner.settings.FeatureStatus features = 3;</code>
+       * <code>.bloombox.partner.settings.FeatureStatus features = 3;</code>
        */
       public io.bloombox.schema.partner.settings.PartnerSettingsOuterClass.FeatureStatus getFeatures() {
         if (featuresBuilder_ == null) {
@@ -6051,7 +6223,7 @@ public final class PartnerSettingsOuterClass {
        * Feature activation flags.
        * </pre>
        *
-       * <code>.bloombox.schema.partner.settings.FeatureStatus features = 3;</code>
+       * <code>.bloombox.partner.settings.FeatureStatus features = 3;</code>
        */
       public Builder setFeatures(io.bloombox.schema.partner.settings.PartnerSettingsOuterClass.FeatureStatus value) {
         if (featuresBuilder_ == null) {
@@ -6071,7 +6243,7 @@ public final class PartnerSettingsOuterClass {
        * Feature activation flags.
        * </pre>
        *
-       * <code>.bloombox.schema.partner.settings.FeatureStatus features = 3;</code>
+       * <code>.bloombox.partner.settings.FeatureStatus features = 3;</code>
        */
       public Builder setFeatures(
           io.bloombox.schema.partner.settings.PartnerSettingsOuterClass.FeatureStatus.Builder builderForValue) {
@@ -6089,7 +6261,7 @@ public final class PartnerSettingsOuterClass {
        * Feature activation flags.
        * </pre>
        *
-       * <code>.bloombox.schema.partner.settings.FeatureStatus features = 3;</code>
+       * <code>.bloombox.partner.settings.FeatureStatus features = 3;</code>
        */
       public Builder mergeFeatures(io.bloombox.schema.partner.settings.PartnerSettingsOuterClass.FeatureStatus value) {
         if (featuresBuilder_ == null) {
@@ -6111,7 +6283,7 @@ public final class PartnerSettingsOuterClass {
        * Feature activation flags.
        * </pre>
        *
-       * <code>.bloombox.schema.partner.settings.FeatureStatus features = 3;</code>
+       * <code>.bloombox.partner.settings.FeatureStatus features = 3;</code>
        */
       public Builder clearFeatures() {
         if (featuresBuilder_ == null) {
@@ -6129,7 +6301,7 @@ public final class PartnerSettingsOuterClass {
        * Feature activation flags.
        * </pre>
        *
-       * <code>.bloombox.schema.partner.settings.FeatureStatus features = 3;</code>
+       * <code>.bloombox.partner.settings.FeatureStatus features = 3;</code>
        */
       public io.bloombox.schema.partner.settings.PartnerSettingsOuterClass.FeatureStatus.Builder getFeaturesBuilder() {
         
@@ -6141,7 +6313,7 @@ public final class PartnerSettingsOuterClass {
        * Feature activation flags.
        * </pre>
        *
-       * <code>.bloombox.schema.partner.settings.FeatureStatus features = 3;</code>
+       * <code>.bloombox.partner.settings.FeatureStatus features = 3;</code>
        */
       public io.bloombox.schema.partner.settings.PartnerSettingsOuterClass.FeatureStatusOrBuilder getFeaturesOrBuilder() {
         if (featuresBuilder_ != null) {
@@ -6156,7 +6328,7 @@ public final class PartnerSettingsOuterClass {
        * Feature activation flags.
        * </pre>
        *
-       * <code>.bloombox.schema.partner.settings.FeatureStatus features = 3;</code>
+       * <code>.bloombox.partner.settings.FeatureStatus features = 3;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
           io.bloombox.schema.partner.settings.PartnerSettingsOuterClass.FeatureStatus, io.bloombox.schema.partner.settings.PartnerSettingsOuterClass.FeatureStatus.Builder, io.bloombox.schema.partner.settings.PartnerSettingsOuterClass.FeatureStatusOrBuilder> 
@@ -6180,7 +6352,7 @@ public final class PartnerSettingsOuterClass {
        * Search settings.
        * </pre>
        *
-       * <code>.bloombox.schema.partner.settings.SearchSettings search = 4;</code>
+       * <code>.bloombox.partner.settings.SearchSettings search = 4;</code>
        */
       public boolean hasSearch() {
         return searchBuilder_ != null || search_ != null;
@@ -6190,7 +6362,7 @@ public final class PartnerSettingsOuterClass {
        * Search settings.
        * </pre>
        *
-       * <code>.bloombox.schema.partner.settings.SearchSettings search = 4;</code>
+       * <code>.bloombox.partner.settings.SearchSettings search = 4;</code>
        */
       public io.bloombox.schema.partner.settings.PartnerSettingsOuterClass.SearchSettings getSearch() {
         if (searchBuilder_ == null) {
@@ -6204,7 +6376,7 @@ public final class PartnerSettingsOuterClass {
        * Search settings.
        * </pre>
        *
-       * <code>.bloombox.schema.partner.settings.SearchSettings search = 4;</code>
+       * <code>.bloombox.partner.settings.SearchSettings search = 4;</code>
        */
       public Builder setSearch(io.bloombox.schema.partner.settings.PartnerSettingsOuterClass.SearchSettings value) {
         if (searchBuilder_ == null) {
@@ -6224,7 +6396,7 @@ public final class PartnerSettingsOuterClass {
        * Search settings.
        * </pre>
        *
-       * <code>.bloombox.schema.partner.settings.SearchSettings search = 4;</code>
+       * <code>.bloombox.partner.settings.SearchSettings search = 4;</code>
        */
       public Builder setSearch(
           io.bloombox.schema.partner.settings.PartnerSettingsOuterClass.SearchSettings.Builder builderForValue) {
@@ -6242,7 +6414,7 @@ public final class PartnerSettingsOuterClass {
        * Search settings.
        * </pre>
        *
-       * <code>.bloombox.schema.partner.settings.SearchSettings search = 4;</code>
+       * <code>.bloombox.partner.settings.SearchSettings search = 4;</code>
        */
       public Builder mergeSearch(io.bloombox.schema.partner.settings.PartnerSettingsOuterClass.SearchSettings value) {
         if (searchBuilder_ == null) {
@@ -6264,7 +6436,7 @@ public final class PartnerSettingsOuterClass {
        * Search settings.
        * </pre>
        *
-       * <code>.bloombox.schema.partner.settings.SearchSettings search = 4;</code>
+       * <code>.bloombox.partner.settings.SearchSettings search = 4;</code>
        */
       public Builder clearSearch() {
         if (searchBuilder_ == null) {
@@ -6282,7 +6454,7 @@ public final class PartnerSettingsOuterClass {
        * Search settings.
        * </pre>
        *
-       * <code>.bloombox.schema.partner.settings.SearchSettings search = 4;</code>
+       * <code>.bloombox.partner.settings.SearchSettings search = 4;</code>
        */
       public io.bloombox.schema.partner.settings.PartnerSettingsOuterClass.SearchSettings.Builder getSearchBuilder() {
         
@@ -6294,7 +6466,7 @@ public final class PartnerSettingsOuterClass {
        * Search settings.
        * </pre>
        *
-       * <code>.bloombox.schema.partner.settings.SearchSettings search = 4;</code>
+       * <code>.bloombox.partner.settings.SearchSettings search = 4;</code>
        */
       public io.bloombox.schema.partner.settings.PartnerSettingsOuterClass.SearchSettingsOrBuilder getSearchOrBuilder() {
         if (searchBuilder_ != null) {
@@ -6309,7 +6481,7 @@ public final class PartnerSettingsOuterClass {
        * Search settings.
        * </pre>
        *
-       * <code>.bloombox.schema.partner.settings.SearchSettings search = 4;</code>
+       * <code>.bloombox.partner.settings.SearchSettings search = 4;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
           io.bloombox.schema.partner.settings.PartnerSettingsOuterClass.SearchSettings, io.bloombox.schema.partner.settings.PartnerSettingsOuterClass.SearchSettings.Builder, io.bloombox.schema.partner.settings.PartnerSettingsOuterClass.SearchSettingsOrBuilder> 
@@ -6333,7 +6505,7 @@ public final class PartnerSettingsOuterClass {
        * Integration settings for this location.
        * </pre>
        *
-       * <code>.bloombox.schema.partner.integrations.PartnerIntegrationSettings integration = 7;</code>
+       * <code>.bloombox.partner.integrations.PartnerIntegrationSettings integration = 7;</code>
        */
       public boolean hasIntegration() {
         return integrationBuilder_ != null || integration_ != null;
@@ -6343,7 +6515,7 @@ public final class PartnerSettingsOuterClass {
        * Integration settings for this location.
        * </pre>
        *
-       * <code>.bloombox.schema.partner.integrations.PartnerIntegrationSettings integration = 7;</code>
+       * <code>.bloombox.partner.integrations.PartnerIntegrationSettings integration = 7;</code>
        */
       public io.bloombox.schema.partner.integrations.IntegrationSettings.PartnerIntegrationSettings getIntegration() {
         if (integrationBuilder_ == null) {
@@ -6357,7 +6529,7 @@ public final class PartnerSettingsOuterClass {
        * Integration settings for this location.
        * </pre>
        *
-       * <code>.bloombox.schema.partner.integrations.PartnerIntegrationSettings integration = 7;</code>
+       * <code>.bloombox.partner.integrations.PartnerIntegrationSettings integration = 7;</code>
        */
       public Builder setIntegration(io.bloombox.schema.partner.integrations.IntegrationSettings.PartnerIntegrationSettings value) {
         if (integrationBuilder_ == null) {
@@ -6377,7 +6549,7 @@ public final class PartnerSettingsOuterClass {
        * Integration settings for this location.
        * </pre>
        *
-       * <code>.bloombox.schema.partner.integrations.PartnerIntegrationSettings integration = 7;</code>
+       * <code>.bloombox.partner.integrations.PartnerIntegrationSettings integration = 7;</code>
        */
       public Builder setIntegration(
           io.bloombox.schema.partner.integrations.IntegrationSettings.PartnerIntegrationSettings.Builder builderForValue) {
@@ -6395,7 +6567,7 @@ public final class PartnerSettingsOuterClass {
        * Integration settings for this location.
        * </pre>
        *
-       * <code>.bloombox.schema.partner.integrations.PartnerIntegrationSettings integration = 7;</code>
+       * <code>.bloombox.partner.integrations.PartnerIntegrationSettings integration = 7;</code>
        */
       public Builder mergeIntegration(io.bloombox.schema.partner.integrations.IntegrationSettings.PartnerIntegrationSettings value) {
         if (integrationBuilder_ == null) {
@@ -6417,7 +6589,7 @@ public final class PartnerSettingsOuterClass {
        * Integration settings for this location.
        * </pre>
        *
-       * <code>.bloombox.schema.partner.integrations.PartnerIntegrationSettings integration = 7;</code>
+       * <code>.bloombox.partner.integrations.PartnerIntegrationSettings integration = 7;</code>
        */
       public Builder clearIntegration() {
         if (integrationBuilder_ == null) {
@@ -6435,7 +6607,7 @@ public final class PartnerSettingsOuterClass {
        * Integration settings for this location.
        * </pre>
        *
-       * <code>.bloombox.schema.partner.integrations.PartnerIntegrationSettings integration = 7;</code>
+       * <code>.bloombox.partner.integrations.PartnerIntegrationSettings integration = 7;</code>
        */
       public io.bloombox.schema.partner.integrations.IntegrationSettings.PartnerIntegrationSettings.Builder getIntegrationBuilder() {
         
@@ -6447,7 +6619,7 @@ public final class PartnerSettingsOuterClass {
        * Integration settings for this location.
        * </pre>
        *
-       * <code>.bloombox.schema.partner.integrations.PartnerIntegrationSettings integration = 7;</code>
+       * <code>.bloombox.partner.integrations.PartnerIntegrationSettings integration = 7;</code>
        */
       public io.bloombox.schema.partner.integrations.IntegrationSettings.PartnerIntegrationSettingsOrBuilder getIntegrationOrBuilder() {
         if (integrationBuilder_ != null) {
@@ -6462,7 +6634,7 @@ public final class PartnerSettingsOuterClass {
        * Integration settings for this location.
        * </pre>
        *
-       * <code>.bloombox.schema.partner.integrations.PartnerIntegrationSettings integration = 7;</code>
+       * <code>.bloombox.partner.integrations.PartnerIntegrationSettings integration = 7;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
           io.bloombox.schema.partner.integrations.IntegrationSettings.PartnerIntegrationSettings, io.bloombox.schema.partner.integrations.IntegrationSettings.PartnerIntegrationSettings.Builder, io.bloombox.schema.partner.integrations.IntegrationSettings.PartnerIntegrationSettingsOrBuilder> 
@@ -6477,21 +6649,23 @@ public final class PartnerSettingsOuterClass {
         }
         return integrationBuilder_;
       }
+      @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
         return super.setUnknownFieldsProto3(unknownFields);
       }
 
+      @java.lang.Override
       public final Builder mergeUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
         return super.mergeUnknownFields(unknownFields);
       }
 
 
-      // @@protoc_insertion_point(builder_scope:bloombox.schema.partner.settings.PartnerSettings)
+      // @@protoc_insertion_point(builder_scope:bloombox.partner.settings.PartnerSettings)
     }
 
-    // @@protoc_insertion_point(class_scope:bloombox.schema.partner.settings.PartnerSettings)
+    // @@protoc_insertion_point(class_scope:bloombox.partner.settings.PartnerSettings)
     private static final io.bloombox.schema.partner.settings.PartnerSettingsOuterClass.PartnerSettings DEFAULT_INSTANCE;
     static {
       DEFAULT_INSTANCE = new io.bloombox.schema.partner.settings.PartnerSettingsOuterClass.PartnerSettings();
@@ -6503,6 +6677,7 @@ public final class PartnerSettingsOuterClass {
 
     private static final com.google.protobuf.Parser<PartnerSettings>
         PARSER = new com.google.protobuf.AbstractParser<PartnerSettings>() {
+      @java.lang.Override
       public PartnerSettings parsePartialFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -6520,6 +6695,7 @@ public final class PartnerSettingsOuterClass {
       return PARSER;
     }
 
+    @java.lang.Override
     public io.bloombox.schema.partner.settings.PartnerSettingsOuterClass.PartnerSettings getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
@@ -6527,40 +6703,40 @@ public final class PartnerSettingsOuterClass {
   }
 
   private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_bloombox_schema_partner_settings_PartnerNotificationTarget_descriptor;
+    internal_static_bloombox_partner_settings_PartnerNotificationTarget_descriptor;
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_bloombox_schema_partner_settings_PartnerNotificationTarget_fieldAccessorTable;
+      internal_static_bloombox_partner_settings_PartnerNotificationTarget_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_bloombox_schema_partner_settings_PartnerEventAlertingSettings_descriptor;
+    internal_static_bloombox_partner_settings_PartnerEventAlertingSettings_descriptor;
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_bloombox_schema_partner_settings_PartnerEventAlertingSettings_fieldAccessorTable;
+      internal_static_bloombox_partner_settings_PartnerEventAlertingSettings_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_bloombox_schema_partner_settings_PartnerAlertSettings_descriptor;
+    internal_static_bloombox_partner_settings_PartnerAlertSettings_descriptor;
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_bloombox_schema_partner_settings_PartnerAlertSettings_fieldAccessorTable;
+      internal_static_bloombox_partner_settings_PartnerAlertSettings_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_bloombox_schema_partner_settings_BetaSettings_descriptor;
+    internal_static_bloombox_partner_settings_BetaSettings_descriptor;
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_bloombox_schema_partner_settings_BetaSettings_fieldAccessorTable;
+      internal_static_bloombox_partner_settings_BetaSettings_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_bloombox_schema_partner_settings_FeatureStatus_descriptor;
+    internal_static_bloombox_partner_settings_FeatureStatus_descriptor;
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_bloombox_schema_partner_settings_FeatureStatus_fieldAccessorTable;
+      internal_static_bloombox_partner_settings_FeatureStatus_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_bloombox_schema_partner_settings_SearchSettings_descriptor;
+    internal_static_bloombox_partner_settings_SearchSettings_descriptor;
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_bloombox_schema_partner_settings_SearchSettings_fieldAccessorTable;
+      internal_static_bloombox_partner_settings_SearchSettings_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_bloombox_schema_partner_settings_PartnerSettings_descriptor;
+    internal_static_bloombox_partner_settings_PartnerSettings_descriptor;
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_bloombox_schema_partner_settings_PartnerSettings_fieldAccessorTable;
+      internal_static_bloombox_partner_settings_PartnerSettings_fieldAccessorTable;
 
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
@@ -6571,36 +6747,35 @@ public final class PartnerSettingsOuterClass {
   static {
     java.lang.String[] descriptorData = {
       "\n&partner/settings/PartnerSettings.proto" +
-      "\022 bloombox.schema.partner.settings\032\031cont" +
-      "act/PhoneNumber.proto\032\032contact/EmailAddr" +
-      "ess.proto\032.partner/integrations/Integrat" +
-      "ionSettings.proto\"\241\001\n\031PartnerNotificatio" +
-      "nTarget\022\020\n\010disabled\030\001 \001(\010\0222\n\005phone\030\n \001(\013" +
-      "2!.opencannabis.contact.PhoneNumberH\000\0223\n" +
-      "\005email\030\013 \001(\0132\".opencannabis.contact.Emai" +
-      "lAddressH\000B\t\n\007contact\"O\n\034PartnerEventAle" +
-      "rtingSettings\022\r\n\005promo\030\001 \001(\010\022\020\n\010security" +
-      "\030\002 \001(\010\022\016\n\006volume\030\003 \001(\010\"\267\001\n\024PartnerAlertS" +
-      "ettings\022N\n\006events\030\001 \001(\0132>.bloombox.schem" +
-      "a.partner.settings.PartnerEventAlertingS" +
-      "ettings\022O\n\nrecipients\030\002 \003(\0132;.bloombox.s" +
-      "chema.partner.settings.PartnerNotificati" +
-      "onTarget\"/\n\014BetaSettings\022\016\n\006enable\030\001 \001(\010" +
-      "\022\017\n\007sandbox\030\002 \001(\010\"`\n\rFeatureStatus\022\021\n\tan" +
-      "alytics\030\001 \001(\010\022\014\n\004beta\030\002 \001(\010\022\017\n\007offline\030\003" +
-      " \001(\010\022\014\n\004shop\030\004 \001(\010\022\017\n\007checkin\030\005 \001(\010\"0\n\016S" +
-      "earchSettings\022\017\n\007enabled\030\001 \001(\010\022\r\n\005media\030" +
-      "\002 \001(\010\"\363\002\n\017PartnerSettings\022F\n\006alerts\030\001 \001(" +
-      "\01326.bloombox.schema.partner.settings.Par" +
-      "tnerAlertSettings\022<\n\004beta\030\002 \001(\0132..bloomb" +
-      "ox.schema.partner.settings.BetaSettings\022" +
-      "A\n\010features\030\003 \001(\0132/.bloombox.schema.part" +
-      "ner.settings.FeatureStatus\022@\n\006search\030\004 \001" +
-      "(\01320.bloombox.schema.partner.settings.Se" +
-      "archSettings\022U\n\013integration\030\007 \001(\0132@.bloo" +
-      "mbox.schema.partner.integrations.Partner" +
-      "IntegrationSettingsB/\n#io.bloombox.schem" +
-      "a.partner.settingsH\001P\000\242\002\003BBSb\006proto3"
+      "\022\031bloombox.partner.settings\032\031contact/Pho" +
+      "neNumber.proto\032\032contact/EmailAddress.pro" +
+      "to\032.partner/integrations/IntegrationSett" +
+      "ings.proto\"\241\001\n\031PartnerNotificationTarget" +
+      "\022\020\n\010disabled\030\001 \001(\010\0222\n\005phone\030\n \001(\0132!.open" +
+      "cannabis.contact.PhoneNumberH\000\0223\n\005email\030" +
+      "\013 \001(\0132\".opencannabis.contact.EmailAddres" +
+      "sH\000B\t\n\007contact\"O\n\034PartnerEventAlertingSe" +
+      "ttings\022\r\n\005promo\030\001 \001(\010\022\020\n\010security\030\002 \001(\010\022" +
+      "\016\n\006volume\030\003 \001(\010\"\251\001\n\024PartnerAlertSettings" +
+      "\022G\n\006events\030\001 \001(\01327.bloombox.partner.sett" +
+      "ings.PartnerEventAlertingSettings\022H\n\nrec" +
+      "ipients\030\002 \003(\01324.bloombox.partner.setting" +
+      "s.PartnerNotificationTarget\"/\n\014BetaSetti" +
+      "ngs\022\016\n\006enable\030\001 \001(\010\022\017\n\007sandbox\030\002 \001(\010\"`\n\r" +
+      "FeatureStatus\022\021\n\tanalytics\030\001 \001(\010\022\014\n\004beta" +
+      "\030\002 \001(\010\022\017\n\007offline\030\003 \001(\010\022\014\n\004shop\030\004 \001(\010\022\017\n" +
+      "\007checkin\030\005 \001(\010\"0\n\016SearchSettings\022\017\n\007enab" +
+      "led\030\001 \001(\010\022\r\n\005media\030\002 \001(\010\"\320\002\n\017PartnerSett" +
+      "ings\022?\n\006alerts\030\001 \001(\0132/.bloombox.partner." +
+      "settings.PartnerAlertSettings\0225\n\004beta\030\002 " +
+      "\001(\0132\'.bloombox.partner.settings.BetaSett" +
+      "ings\022:\n\010features\030\003 \001(\0132(.bloombox.partne" +
+      "r.settings.FeatureStatus\0229\n\006search\030\004 \001(\013" +
+      "2).bloombox.partner.settings.SearchSetti" +
+      "ngs\022N\n\013integration\030\007 \001(\01329.bloombox.part" +
+      "ner.integrations.PartnerIntegrationSetti" +
+      "ngsB/\n#io.bloombox.schema.partner.settin" +
+      "gsH\001P\000\242\002\003BBSb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -6617,47 +6792,47 @@ public final class PartnerSettingsOuterClass {
           io.opencannabis.schema.contact.ContactEmail.getDescriptor(),
           io.bloombox.schema.partner.integrations.IntegrationSettings.getDescriptor(),
         }, assigner);
-    internal_static_bloombox_schema_partner_settings_PartnerNotificationTarget_descriptor =
+    internal_static_bloombox_partner_settings_PartnerNotificationTarget_descriptor =
       getDescriptor().getMessageTypes().get(0);
-    internal_static_bloombox_schema_partner_settings_PartnerNotificationTarget_fieldAccessorTable = new
+    internal_static_bloombox_partner_settings_PartnerNotificationTarget_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_bloombox_schema_partner_settings_PartnerNotificationTarget_descriptor,
+        internal_static_bloombox_partner_settings_PartnerNotificationTarget_descriptor,
         new java.lang.String[] { "Disabled", "Phone", "Email", "Contact", });
-    internal_static_bloombox_schema_partner_settings_PartnerEventAlertingSettings_descriptor =
+    internal_static_bloombox_partner_settings_PartnerEventAlertingSettings_descriptor =
       getDescriptor().getMessageTypes().get(1);
-    internal_static_bloombox_schema_partner_settings_PartnerEventAlertingSettings_fieldAccessorTable = new
+    internal_static_bloombox_partner_settings_PartnerEventAlertingSettings_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_bloombox_schema_partner_settings_PartnerEventAlertingSettings_descriptor,
+        internal_static_bloombox_partner_settings_PartnerEventAlertingSettings_descriptor,
         new java.lang.String[] { "Promo", "Security", "Volume", });
-    internal_static_bloombox_schema_partner_settings_PartnerAlertSettings_descriptor =
+    internal_static_bloombox_partner_settings_PartnerAlertSettings_descriptor =
       getDescriptor().getMessageTypes().get(2);
-    internal_static_bloombox_schema_partner_settings_PartnerAlertSettings_fieldAccessorTable = new
+    internal_static_bloombox_partner_settings_PartnerAlertSettings_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_bloombox_schema_partner_settings_PartnerAlertSettings_descriptor,
+        internal_static_bloombox_partner_settings_PartnerAlertSettings_descriptor,
         new java.lang.String[] { "Events", "Recipients", });
-    internal_static_bloombox_schema_partner_settings_BetaSettings_descriptor =
+    internal_static_bloombox_partner_settings_BetaSettings_descriptor =
       getDescriptor().getMessageTypes().get(3);
-    internal_static_bloombox_schema_partner_settings_BetaSettings_fieldAccessorTable = new
+    internal_static_bloombox_partner_settings_BetaSettings_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_bloombox_schema_partner_settings_BetaSettings_descriptor,
+        internal_static_bloombox_partner_settings_BetaSettings_descriptor,
         new java.lang.String[] { "Enable", "Sandbox", });
-    internal_static_bloombox_schema_partner_settings_FeatureStatus_descriptor =
+    internal_static_bloombox_partner_settings_FeatureStatus_descriptor =
       getDescriptor().getMessageTypes().get(4);
-    internal_static_bloombox_schema_partner_settings_FeatureStatus_fieldAccessorTable = new
+    internal_static_bloombox_partner_settings_FeatureStatus_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_bloombox_schema_partner_settings_FeatureStatus_descriptor,
+        internal_static_bloombox_partner_settings_FeatureStatus_descriptor,
         new java.lang.String[] { "Analytics", "Beta", "Offline", "Shop", "Checkin", });
-    internal_static_bloombox_schema_partner_settings_SearchSettings_descriptor =
+    internal_static_bloombox_partner_settings_SearchSettings_descriptor =
       getDescriptor().getMessageTypes().get(5);
-    internal_static_bloombox_schema_partner_settings_SearchSettings_fieldAccessorTable = new
+    internal_static_bloombox_partner_settings_SearchSettings_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_bloombox_schema_partner_settings_SearchSettings_descriptor,
+        internal_static_bloombox_partner_settings_SearchSettings_descriptor,
         new java.lang.String[] { "Enabled", "Media", });
-    internal_static_bloombox_schema_partner_settings_PartnerSettings_descriptor =
+    internal_static_bloombox_partner_settings_PartnerSettings_descriptor =
       getDescriptor().getMessageTypes().get(6);
-    internal_static_bloombox_schema_partner_settings_PartnerSettings_fieldAccessorTable = new
+    internal_static_bloombox_partner_settings_PartnerSettings_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_bloombox_schema_partner_settings_PartnerSettings_descriptor,
+        internal_static_bloombox_partner_settings_PartnerSettings_descriptor,
         new java.lang.String[] { "Alerts", "Beta", "Features", "Search", "Integration", });
     io.opencannabis.schema.contact.ContactPhone.getDescriptor();
     io.opencannabis.schema.contact.ContactEmail.getDescriptor();

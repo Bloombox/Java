@@ -1,8 +1,8 @@
 /*
- * Copyright 2018, Bloombox, LLC. All rights reserved.
+ * Copyright 2018, Momentum Ideas, Co. All rights reserved.
  *
  * Source and object computer code contained herein is the private intellectual
- * property of Bloombox, a California Limited Liability Corporation. Use of this
+ * property of Momentum Ideas Co., a Delaware Corporation. Use of this
  * code in source form requires permission in writing before use or the
  * assembly, distribution, or publishing of derivative works, for commercial
  * purposes or any other purpose, from a duly authorized officer of Momentum
@@ -32,75 +32,75 @@ public final class TelemetryServiceBeta4 {
         (com.google.protobuf.ExtensionRegistryLite) registry);
   }
   static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_bloombox_schema_services_telemetry_v1beta4_TelemetryResponse_descriptor;
+    internal_static_bloombox_services_telemetry_v1beta4_TelemetryResponse_descriptor;
   static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_bloombox_schema_services_telemetry_v1beta4_TelemetryResponse_fieldAccessorTable;
+      internal_static_bloombox_services_telemetry_v1beta4_TelemetryResponse_fieldAccessorTable;
   static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_bloombox_schema_services_telemetry_v1beta4_TelemetryPing_descriptor;
+    internal_static_bloombox_services_telemetry_v1beta4_TelemetryPing_descriptor;
   static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_bloombox_schema_services_telemetry_v1beta4_TelemetryPing_fieldAccessorTable;
+      internal_static_bloombox_services_telemetry_v1beta4_TelemetryPing_fieldAccessorTable;
   static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_bloombox_schema_services_telemetry_v1beta4_TelemetryPing_Request_descriptor;
+    internal_static_bloombox_services_telemetry_v1beta4_TelemetryPing_Request_descriptor;
   static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_bloombox_schema_services_telemetry_v1beta4_TelemetryPing_Request_fieldAccessorTable;
+      internal_static_bloombox_services_telemetry_v1beta4_TelemetryPing_Request_fieldAccessorTable;
   static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_bloombox_schema_services_telemetry_v1beta4_TelemetryPing_Response_descriptor;
+    internal_static_bloombox_services_telemetry_v1beta4_TelemetryPing_Response_descriptor;
   static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_bloombox_schema_services_telemetry_v1beta4_TelemetryPing_Response_fieldAccessorTable;
+      internal_static_bloombox_services_telemetry_v1beta4_TelemetryPing_Response_fieldAccessorTable;
   static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_bloombox_schema_services_telemetry_v1beta4_TelemetryPing_Operation_descriptor;
+    internal_static_bloombox_services_telemetry_v1beta4_TelemetryPing_Operation_descriptor;
   static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_bloombox_schema_services_telemetry_v1beta4_TelemetryPing_Operation_fieldAccessorTable;
+      internal_static_bloombox_services_telemetry_v1beta4_TelemetryPing_Operation_fieldAccessorTable;
   static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_bloombox_schema_services_telemetry_v1beta4_CommercialEvent_descriptor;
+    internal_static_bloombox_services_telemetry_v1beta4_CommercialEvent_descriptor;
   static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_bloombox_schema_services_telemetry_v1beta4_CommercialEvent_fieldAccessorTable;
+      internal_static_bloombox_services_telemetry_v1beta4_CommercialEvent_fieldAccessorTable;
   static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_bloombox_schema_services_telemetry_v1beta4_CommercialEvent_Impression_descriptor;
+    internal_static_bloombox_services_telemetry_v1beta4_CommercialEvent_Impression_descriptor;
   static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_bloombox_schema_services_telemetry_v1beta4_CommercialEvent_Impression_fieldAccessorTable;
+      internal_static_bloombox_services_telemetry_v1beta4_CommercialEvent_Impression_fieldAccessorTable;
   static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_bloombox_schema_services_telemetry_v1beta4_CommercialEvent_View_descriptor;
+    internal_static_bloombox_services_telemetry_v1beta4_CommercialEvent_View_descriptor;
   static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_bloombox_schema_services_telemetry_v1beta4_CommercialEvent_View_fieldAccessorTable;
+      internal_static_bloombox_services_telemetry_v1beta4_CommercialEvent_View_fieldAccessorTable;
   static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_bloombox_schema_services_telemetry_v1beta4_CommercialEvent_Action_descriptor;
+    internal_static_bloombox_services_telemetry_v1beta4_CommercialEvent_Action_descriptor;
   static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_bloombox_schema_services_telemetry_v1beta4_CommercialEvent_Action_fieldAccessorTable;
+      internal_static_bloombox_services_telemetry_v1beta4_CommercialEvent_Action_fieldAccessorTable;
   static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_bloombox_schema_services_telemetry_v1beta4_IdentityEvent_descriptor;
+    internal_static_bloombox_services_telemetry_v1beta4_IdentityEvent_descriptor;
   static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_bloombox_schema_services_telemetry_v1beta4_IdentityEvent_fieldAccessorTable;
+      internal_static_bloombox_services_telemetry_v1beta4_IdentityEvent_fieldAccessorTable;
   static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_bloombox_schema_services_telemetry_v1beta4_IdentityEvent_Action_descriptor;
+    internal_static_bloombox_services_telemetry_v1beta4_IdentityEvent_Action_descriptor;
   static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_bloombox_schema_services_telemetry_v1beta4_IdentityEvent_Action_fieldAccessorTable;
+      internal_static_bloombox_services_telemetry_v1beta4_IdentityEvent_Action_fieldAccessorTable;
   static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_bloombox_schema_services_telemetry_v1beta4_SearchEvent_descriptor;
+    internal_static_bloombox_services_telemetry_v1beta4_SearchEvent_descriptor;
   static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_bloombox_schema_services_telemetry_v1beta4_SearchEvent_fieldAccessorTable;
+      internal_static_bloombox_services_telemetry_v1beta4_SearchEvent_fieldAccessorTable;
   static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_bloombox_schema_services_telemetry_v1beta4_SearchEvent_Query_descriptor;
+    internal_static_bloombox_services_telemetry_v1beta4_SearchEvent_Query_descriptor;
   static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_bloombox_schema_services_telemetry_v1beta4_SearchEvent_Query_fieldAccessorTable;
+      internal_static_bloombox_services_telemetry_v1beta4_SearchEvent_Query_fieldAccessorTable;
   static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_bloombox_schema_services_telemetry_v1beta4_SearchEvent_Result_descriptor;
+    internal_static_bloombox_services_telemetry_v1beta4_SearchEvent_Result_descriptor;
   static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_bloombox_schema_services_telemetry_v1beta4_SearchEvent_Result_fieldAccessorTable;
+      internal_static_bloombox_services_telemetry_v1beta4_SearchEvent_Result_fieldAccessorTable;
 
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
@@ -111,120 +111,113 @@ public final class TelemetryServiceBeta4 {
   static {
     java.lang.String[] descriptorData = {
       "\n.telemetry/v1beta4/TelemetryService_Bet" +
-      "a4.proto\022*bloombox.schema.services.telem" +
-      "etry.v1beta4\032\025base/ProductKey.proto\032\027ana" +
-      "lytics/Context.proto\032\034services/ServiceSt" +
-      "atus.proto\032&analytics/commerce/ShopAnaly" +
-      "tics.proto\032\'analytics/commerce/OrderAnal" +
-      "ytics.proto\032)analytics/commerce/ProductA" +
-      "nalytics.proto\032)analytics/commerce/Secti" +
-      "onAnalytics.proto\032&analytics/identity/Us" +
-      "erAnalytics.proto\032%analytics/search/Sear" +
-      "chProperty.proto\032+telemetry/v1beta4/Gene" +
-      "ricEvents_Beta4.proto\032\033google/protobuf/e" +
-      "mpty.proto\032\034google/api/annotations.proto" +
-      "\"\251\001\n\021TelemetryResponse\022K\n\006status\030\001 \001(\0162;" +
-      ".bloombox.schema.services.telemetry.v1be" +
-      "ta4.OperationStatus\022\r\n\005count\030\002 \001(\r\0228\n\007se" +
-      "rvice\030\003 \001(\0162\'.bloombox.schema.services.S" +
-      "erviceStatus\"\227\002\n\rTelemetryPing\032\t\n\007Reques" +
-      "t\032C\n\010Response\0227\n\006status\030\001 \001(\0162\'.bloombox" +
-      ".schema.services.ServiceStatus\032\265\001\n\tOpera" +
-      "tion\022R\n\007request\030\001 \001(\0132A.bloombox.schema." +
-      "services.telemetry.v1beta4.TelemetryPing" +
-      ".Request\022T\n\010response\030\002 \001(\0132B.bloombox.sc" +
-      "hema.services.telemetry.v1beta4.Telemetr" +
-      "yPing.Response\"\330\006\n\017CommercialEvent\032\212\002\n\nI" +
-      "mpression\0223\n\007context\030\001 \001(\0132\".bloombox.sc" +
-      "hema.analytics.Context\022@\n\007section\030\n \001(\0132" +
-      "-.bloombox.schema.analytics.section.Impr" +
-      "essionH\000\022@\n\007product\030\013 \001(\0132-.bloombox.sch" +
-      "ema.analytics.product.ImpressionH\000\022:\n\004sh" +
-      "op\030\014 \001(\0132*.bloombox.schema.analytics.sho" +
-      "p.ImpressionH\000B\007\n\005event\032\362\001\n\004View\0223\n\007cont" +
-      "ext\030\001 \001(\0132\".bloombox.schema.analytics.Co" +
-      "ntext\022:\n\007section\030\n \001(\0132\'.bloombox.schema" +
-      ".analytics.section.ViewH\000\022:\n\007product\030\013 \001" +
-      "(\0132\'.bloombox.schema.analytics.product.V" +
-      "iewH\000\0224\n\004shop\030\014 \001(\0132$.bloombox.schema.an" +
-      "alytics.shop.ViewH\000B\007\n\005event\032\302\002\n\006Action\022" +
-      "\014\n\004name\030\001 \001(\t\0223\n\007context\030\002 \001(\0132\".bloombo" +
-      "x.schema.analytics.Context\022<\n\007section\030\n " +
-      "\001(\0132).bloombox.schema.analytics.section." +
-      "ActionH\000\022<\n\007product\030\013 \001(\0132).bloombox.sch" +
-      "ema.analytics.product.ActionH\000\0226\n\004shop\030\014" +
-      " \001(\0132&.bloombox.schema.analytics.shop.Ac" +
-      "tionH\000\0228\n\005order\030\r \001(\0132\'.bloombox.schema." +
-      "analytics.order.ActionH\000B\007\n\005event\"\244\001\n\rId" +
-      "entityEvent\032\222\001\n\006Action\022\014\n\004name\030\001 \001(\t\0223\n\007" +
-      "context\030\002 \001(\0132\".bloombox.schema.analytic" +
-      "s.Context\022<\n\006action\030\n \001(\0132*.bloombox.sch" +
-      "ema.analytics.identity.ActionH\000B\007\n\005event" +
-      "\"\243\003\n\013SearchEvent\032\245\001\n\005Query\022\014\n\004term\030\001 \001(\t" +
-      "\0223\n\007context\030\002 \001(\0132\".bloombox.schema.anal" +
-      "ytics.Context\022B\n\010property\030\003 \001(\01620.bloomb" +
-      "ox.schema.analytics.search.SearchPropert" +
-      "y\022\025\n\rtotal_results\030\004 \001(\r\032\353\001\n\006Result\022\014\n\004t" +
-      "erm\030\001 \001(\t\0223\n\007context\030\002 \001(\0132\".bloombox.sc" +
-      "hema.analytics.Context\022B\n\010property\030\003 \001(\016" +
-      "20.bloombox.schema.analytics.search.Sear" +
-      "chProperty\022\025\n\rtotal_results\030\004 \001(\r\022\027\n\017sel" +
-      "ected_result\030\005 \001(\r\022*\n\003key\030\006 \001(\0132\035.openca" +
-      "nnabis.base.ProductKey*$\n\017OperationStatu" +
-      "s\022\006\n\002OK\020\000\022\t\n\005ERROR\020\001*\336\001\n\016TelemetryError\022" +
-      "\013\n\007UNKNOWN\020\000\022\026\n\022INVALID_COLLECTION\020\001\022\023\n\017" +
-      "INVALID_PARTNER\020\002\022\024\n\020INVALID_LOCATION\020\003\022" +
-      "\022\n\016INVALID_DEVICE\020\004\022\020\n\014INVALID_USER\020\005\022\022\n" +
-      "\016INVALID_CLIENT\020\006\022\025\n\021PARTNER_NOT_FOUND\020\007" +
-      "\022\026\n\022LOCATION_NOT_FOUND\020\010\022\023\n\017INVALID_PAYL" +
-      "OAD\020c2\252\005\n\016EventTelemetry\022\256\001\n\004Ping\022A.bloo" +
-      "mbox.schema.services.telemetry.v1beta4.T" +
-      "elemetryPing.Request\032B.bloombox.schema.s" +
-      "ervices.telemetry.v1beta4.TelemetryPing." +
-      "Response\"\037\202\323\344\223\002\031\022\027/telemetry/v1beta4/pin" +
-      "g\022\231\001\n\005Event\0229.bloombox.schema.services.t" +
-      "elemetry.v1beta4.Event.Request\032\026.google." +
-      "protobuf.Empty\"=\202\323\344\223\0027\"2/telemetry/v1bet" +
-      "a4/{context.collection.name}:event:\001*\022\262\001" +
-      "\n\005Batch\022>.bloombox.schema.services.telem" +
-      "etry.v1beta4.Event.BatchRequest\032=.bloomb" +
-      "ox.schema.services.telemetry.v1beta4.Tel" +
-      "emetryResponse\"*\202\323\344\223\002$\"\037/telemetry/v1bet" +
-      "a4/events:batch:\001*\022\225\001\n\005Error\0225.bloombox." +
-      "schema.services.telemetry.v1beta4.Except" +
-      "ion\032\026.google.protobuf.Empty\"=\202\323\344\223\0027\"2/te" +
-      "lemetry/v1beta4/{context.collection.name" +
-      "}:error:\001*2\270\004\n\023CommercialTelemetry\022\271\001\n\nI" +
-      "mpression\022F.bloombox.schema.services.tel" +
-      "emetry.v1beta4.CommercialEvent.Impressio" +
-      "n\032\026.google.protobuf.Empty\"K\202\323\344\223\002E\"@/tele" +
-      "metry/v1beta4/commerce/{context.scope.co" +
-      "mmercial=*}:impress:\001*\022\252\001\n\004View\022@.bloomb" +
-      "ox.schema.services.telemetry.v1beta4.Com" +
-      "mercialEvent.View\032\026.google.protobuf.Empt" +
-      "y\"H\202\323\344\223\002B\"=/telemetry/v1beta4/commerce/{" +
-      "context.scope.commercial=*}:view:\001*\022\267\001\n\006" +
-      "Action\022B.bloombox.schema.services.teleme" +
-      "try.v1beta4.CommercialEvent.Action\032\026.goo" +
-      "gle.protobuf.Empty\"Q\202\323\344\223\002K\"F/telemetry/v" +
-      "1beta4/commerce/{name}/{context.scope.co" +
-      "mmercial=*}:action:\001*2\305\001\n\021IdentityTeleme" +
-      "try\022\257\001\n\006Action\022@.bloombox.schema.service" +
-      "s.telemetry.v1beta4.IdentityEvent.Action" +
-      "\032\026.google.protobuf.Empty\"K\202\323\344\223\002E\"@/telem" +
-      "etry/v1beta4/identity/{name}/{context.us" +
-      "er_key.uid}:action:\001*2\322\002\n\017SearchTelemetr" +
-      "y\022\234\001\n\005Query\022=.bloombox.schema.services.t" +
-      "elemetry.v1beta4.SearchEvent.Query\032\026.goo" +
-      "gle.protobuf.Empty\"<\202\323\344\223\0026\"1/telemetry/v" +
-      "1beta4/search/{property}/{term}:query:\001*" +
-      "\022\237\001\n\006Result\022>.bloombox.schema.services.t" +
-      "elemetry.v1beta4.SearchEvent.Result\032\026.go" +
-      "ogle.protobuf.Empty\"=\202\323\344\223\0027\"2/telemetry/" +
-      "v1beta4/search/{property}/{term}:result:" +
-      "\001*BM\n-io.bloombox.schema.services.teleme" +
-      "try.v1beta4H\001P\001\242\002\003BBS\252\002\021Telemetry.v1beta" +
-      "4b\006proto3"
+      "a4.proto\022#bloombox.services.telemetry.v1" +
+      "beta4\032\025base/ProductKey.proto\032\027analytics/" +
+      "Context.proto\032\034services/ServiceStatus.pr" +
+      "oto\032&analytics/commerce/ShopAnalytics.pr" +
+      "oto\032\'analytics/commerce/OrderAnalytics.p" +
+      "roto\032)analytics/commerce/ProductAnalytic" +
+      "s.proto\032)analytics/commerce/SectionAnaly" +
+      "tics.proto\032&analytics/identity/UserAnaly" +
+      "tics.proto\032%analytics/search/SearchPrope" +
+      "rty.proto\032+telemetry/v1beta4/GenericEven" +
+      "ts_Beta4.proto\032\033google/protobuf/empty.pr" +
+      "oto\032\034google/api/annotations.proto\"\233\001\n\021Te" +
+      "lemetryResponse\022D\n\006status\030\001 \001(\01624.bloomb" +
+      "ox.services.telemetry.v1beta4.OperationS" +
+      "tatus\022\r\n\005count\030\002 \001(\r\0221\n\007service\030\003 \001(\0162 ." +
+      "bloombox.services.ServiceStatus\"\202\002\n\rTele" +
+      "metryPing\032\t\n\007Request\032<\n\010Response\0220\n\006stat" +
+      "us\030\001 \001(\0162 .bloombox.services.ServiceStat" +
+      "us\032\247\001\n\tOperation\022K\n\007request\030\001 \001(\0132:.bloo" +
+      "mbox.services.telemetry.v1beta4.Telemetr" +
+      "yPing.Request\022M\n\010response\030\002 \001(\0132;.bloomb" +
+      "ox.services.telemetry.v1beta4.TelemetryP" +
+      "ing.Response\"\375\005\n\017CommercialEvent\032\356\001\n\nImp" +
+      "ression\022,\n\007context\030\001 \001(\0132\033.bloombox.anal" +
+      "ytics.Context\0229\n\007section\030\n \001(\0132&.bloombo" +
+      "x.analytics.section.ImpressionH\000\0229\n\007prod" +
+      "uct\030\013 \001(\0132&.bloombox.analytics.product.I" +
+      "mpressionH\000\0223\n\004shop\030\014 \001(\0132#.bloombox.ana" +
+      "lytics.shop.ImpressionH\000B\007\n\005event\032\326\001\n\004Vi" +
+      "ew\022,\n\007context\030\001 \001(\0132\033.bloombox.analytics" +
+      ".Context\0223\n\007section\030\n \001(\0132 .bloombox.ana" +
+      "lytics.section.ViewH\000\0223\n\007product\030\013 \001(\0132 " +
+      ".bloombox.analytics.product.ViewH\000\022-\n\004sh" +
+      "op\030\014 \001(\0132\035.bloombox.analytics.shop.ViewH" +
+      "\000B\007\n\005event\032\237\002\n\006Action\022\014\n\004name\030\001 \001(\t\022,\n\007c" +
+      "ontext\030\002 \001(\0132\033.bloombox.analytics.Contex" +
+      "t\0225\n\007section\030\n \001(\0132\".bloombox.analytics." +
+      "section.ActionH\000\0225\n\007product\030\013 \001(\0132\".bloo" +
+      "mbox.analytics.product.ActionH\000\022/\n\004shop\030" +
+      "\014 \001(\0132\037.bloombox.analytics.shop.ActionH\000" +
+      "\0221\n\005order\030\r \001(\0132 .bloombox.analytics.ord" +
+      "er.ActionH\000B\007\n\005event\"\226\001\n\rIdentityEvent\032\204" +
+      "\001\n\006Action\022\014\n\004name\030\001 \001(\t\022,\n\007context\030\002 \001(\013" +
+      "2\033.bloombox.analytics.Context\0225\n\006action\030" +
+      "\n \001(\0132#.bloombox.analytics.identity.Acti" +
+      "onH\000B\007\n\005event\"\207\003\n\013SearchEvent\032\227\001\n\005Query\022" +
+      "\014\n\004term\030\001 \001(\t\022,\n\007context\030\002 \001(\0132\033.bloombo" +
+      "x.analytics.Context\022;\n\010property\030\003 \001(\0162)." +
+      "bloombox.analytics.search.SearchProperty" +
+      "\022\025\n\rtotal_results\030\004 \001(\r\032\335\001\n\006Result\022\014\n\004te" +
+      "rm\030\001 \001(\t\022,\n\007context\030\002 \001(\0132\033.bloombox.ana" +
+      "lytics.Context\022;\n\010property\030\003 \001(\0162).bloom" +
+      "box.analytics.search.SearchProperty\022\025\n\rt" +
+      "otal_results\030\004 \001(\r\022\027\n\017selected_result\030\005 " +
+      "\001(\r\022*\n\003key\030\006 \001(\0132\035.opencannabis.base.Pro" +
+      "ductKey*$\n\017OperationStatus\022\006\n\002OK\020\000\022\t\n\005ER" +
+      "ROR\020\001*\336\001\n\016TelemetryError\022\013\n\007UNKNOWN\020\000\022\026\n" +
+      "\022INVALID_COLLECTION\020\001\022\023\n\017INVALID_PARTNER" +
+      "\020\002\022\024\n\020INVALID_LOCATION\020\003\022\022\n\016INVALID_DEVI" +
+      "CE\020\004\022\020\n\014INVALID_USER\020\005\022\022\n\016INVALID_CLIENT" +
+      "\020\006\022\025\n\021PARTNER_NOT_FOUND\020\007\022\026\n\022LOCATION_NO" +
+      "T_FOUND\020\010\022\023\n\017INVALID_PAYLOAD\020c2\200\005\n\016Event" +
+      "Telemetry\022\240\001\n\004Ping\022:.bloombox.services.t" +
+      "elemetry.v1beta4.TelemetryPing.Request\032;" +
+      ".bloombox.services.telemetry.v1beta4.Tel" +
+      "emetryPing.Response\"\037\202\323\344\223\002\031\022\027/telemetry/" +
+      "v1beta4/ping\022\222\001\n\005Event\0222.bloombox.servic" +
+      "es.telemetry.v1beta4.Event.Request\032\026.goo" +
+      "gle.protobuf.Empty\"=\202\323\344\223\0027\"2/telemetry/v" +
+      "1beta4/{context.collection.name}:event:\001" +
+      "*\022\244\001\n\005Batch\0227.bloombox.services.telemetr" +
+      "y.v1beta4.Event.BatchRequest\0326.bloombox." +
+      "services.telemetry.v1beta4.TelemetryResp" +
+      "onse\"*\202\323\344\223\002$\"\037/telemetry/v1beta4/events:" +
+      "batch:\001*\022\216\001\n\005Error\022..bloombox.services.t" +
+      "elemetry.v1beta4.Exception\032\026.google.prot" +
+      "obuf.Empty\"=\202\323\344\223\0027\"2/telemetry/v1beta4/{" +
+      "context.collection.name}:error:\001*2\243\004\n\023Co" +
+      "mmercialTelemetry\022\262\001\n\nImpression\022?.bloom" +
+      "box.services.telemetry.v1beta4.Commercia" +
+      "lEvent.Impression\032\026.google.protobuf.Empt" +
+      "y\"K\202\323\344\223\002E\"@/telemetry/v1beta4/commerce/{" +
+      "context.scope.commercial=*}:impress:\001*\022\243" +
+      "\001\n\004View\0229.bloombox.services.telemetry.v1" +
+      "beta4.CommercialEvent.View\032\026.google.prot" +
+      "obuf.Empty\"H\202\323\344\223\002B\"=/telemetry/v1beta4/c" +
+      "ommerce/{context.scope.commercial=*}:vie" +
+      "w:\001*\022\260\001\n\006Action\022;.bloombox.services.tele" +
+      "metry.v1beta4.CommercialEvent.Action\032\026.g" +
+      "oogle.protobuf.Empty\"Q\202\323\344\223\002K\"F/telemetry" +
+      "/v1beta4/commerce/{name}/{context.scope." +
+      "commercial=*}:action:\001*2\276\001\n\021IdentityTele" +
+      "metry\022\250\001\n\006Action\0229.bloombox.services.tel" +
+      "emetry.v1beta4.IdentityEvent.Action\032\026.go" +
+      "ogle.protobuf.Empty\"K\202\323\344\223\002E\"@/telemetry/" +
+      "v1beta4/identity/{name}/{context.user_ke" +
+      "y.uid}:action:\001*2\304\002\n\017SearchTelemetry\022\225\001\n" +
+      "\005Query\0226.bloombox.services.telemetry.v1b" +
+      "eta4.SearchEvent.Query\032\026.google.protobuf" +
+      ".Empty\"<\202\323\344\223\0026\"1/telemetry/v1beta4/searc" +
+      "h/{property}/{term}:query:\001*\022\230\001\n\006Result\022" +
+      "7.bloombox.services.telemetry.v1beta4.Se" +
+      "archEvent.Result\032\026.google.protobuf.Empty" +
+      "\"=\202\323\344\223\0027\"2/telemetry/v1beta4/search/{pro" +
+      "perty}/{term}:result:\001*BM\n-io.bloombox.s" +
+      "chema.services.telemetry.v1beta4H\001P\001\242\002\003B" +
+      "BS\252\002\021Telemetry.v1beta4b\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -250,89 +243,89 @@ public final class TelemetryServiceBeta4 {
           com.google.protobuf.EmptyProto.getDescriptor(),
           com.google.api.AnnotationsProto.getDescriptor(),
         }, assigner);
-    internal_static_bloombox_schema_services_telemetry_v1beta4_TelemetryResponse_descriptor =
+    internal_static_bloombox_services_telemetry_v1beta4_TelemetryResponse_descriptor =
       getDescriptor().getMessageTypes().get(0);
-    internal_static_bloombox_schema_services_telemetry_v1beta4_TelemetryResponse_fieldAccessorTable = new
+    internal_static_bloombox_services_telemetry_v1beta4_TelemetryResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_bloombox_schema_services_telemetry_v1beta4_TelemetryResponse_descriptor,
+        internal_static_bloombox_services_telemetry_v1beta4_TelemetryResponse_descriptor,
         new java.lang.String[] { "Status", "Count", "Service", });
-    internal_static_bloombox_schema_services_telemetry_v1beta4_TelemetryPing_descriptor =
+    internal_static_bloombox_services_telemetry_v1beta4_TelemetryPing_descriptor =
       getDescriptor().getMessageTypes().get(1);
-    internal_static_bloombox_schema_services_telemetry_v1beta4_TelemetryPing_fieldAccessorTable = new
+    internal_static_bloombox_services_telemetry_v1beta4_TelemetryPing_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_bloombox_schema_services_telemetry_v1beta4_TelemetryPing_descriptor,
+        internal_static_bloombox_services_telemetry_v1beta4_TelemetryPing_descriptor,
         new java.lang.String[] { });
-    internal_static_bloombox_schema_services_telemetry_v1beta4_TelemetryPing_Request_descriptor =
-      internal_static_bloombox_schema_services_telemetry_v1beta4_TelemetryPing_descriptor.getNestedTypes().get(0);
-    internal_static_bloombox_schema_services_telemetry_v1beta4_TelemetryPing_Request_fieldAccessorTable = new
+    internal_static_bloombox_services_telemetry_v1beta4_TelemetryPing_Request_descriptor =
+      internal_static_bloombox_services_telemetry_v1beta4_TelemetryPing_descriptor.getNestedTypes().get(0);
+    internal_static_bloombox_services_telemetry_v1beta4_TelemetryPing_Request_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_bloombox_schema_services_telemetry_v1beta4_TelemetryPing_Request_descriptor,
+        internal_static_bloombox_services_telemetry_v1beta4_TelemetryPing_Request_descriptor,
         new java.lang.String[] { });
-    internal_static_bloombox_schema_services_telemetry_v1beta4_TelemetryPing_Response_descriptor =
-      internal_static_bloombox_schema_services_telemetry_v1beta4_TelemetryPing_descriptor.getNestedTypes().get(1);
-    internal_static_bloombox_schema_services_telemetry_v1beta4_TelemetryPing_Response_fieldAccessorTable = new
+    internal_static_bloombox_services_telemetry_v1beta4_TelemetryPing_Response_descriptor =
+      internal_static_bloombox_services_telemetry_v1beta4_TelemetryPing_descriptor.getNestedTypes().get(1);
+    internal_static_bloombox_services_telemetry_v1beta4_TelemetryPing_Response_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_bloombox_schema_services_telemetry_v1beta4_TelemetryPing_Response_descriptor,
+        internal_static_bloombox_services_telemetry_v1beta4_TelemetryPing_Response_descriptor,
         new java.lang.String[] { "Status", });
-    internal_static_bloombox_schema_services_telemetry_v1beta4_TelemetryPing_Operation_descriptor =
-      internal_static_bloombox_schema_services_telemetry_v1beta4_TelemetryPing_descriptor.getNestedTypes().get(2);
-    internal_static_bloombox_schema_services_telemetry_v1beta4_TelemetryPing_Operation_fieldAccessorTable = new
+    internal_static_bloombox_services_telemetry_v1beta4_TelemetryPing_Operation_descriptor =
+      internal_static_bloombox_services_telemetry_v1beta4_TelemetryPing_descriptor.getNestedTypes().get(2);
+    internal_static_bloombox_services_telemetry_v1beta4_TelemetryPing_Operation_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_bloombox_schema_services_telemetry_v1beta4_TelemetryPing_Operation_descriptor,
+        internal_static_bloombox_services_telemetry_v1beta4_TelemetryPing_Operation_descriptor,
         new java.lang.String[] { "Request", "Response", });
-    internal_static_bloombox_schema_services_telemetry_v1beta4_CommercialEvent_descriptor =
+    internal_static_bloombox_services_telemetry_v1beta4_CommercialEvent_descriptor =
       getDescriptor().getMessageTypes().get(2);
-    internal_static_bloombox_schema_services_telemetry_v1beta4_CommercialEvent_fieldAccessorTable = new
+    internal_static_bloombox_services_telemetry_v1beta4_CommercialEvent_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_bloombox_schema_services_telemetry_v1beta4_CommercialEvent_descriptor,
+        internal_static_bloombox_services_telemetry_v1beta4_CommercialEvent_descriptor,
         new java.lang.String[] { });
-    internal_static_bloombox_schema_services_telemetry_v1beta4_CommercialEvent_Impression_descriptor =
-      internal_static_bloombox_schema_services_telemetry_v1beta4_CommercialEvent_descriptor.getNestedTypes().get(0);
-    internal_static_bloombox_schema_services_telemetry_v1beta4_CommercialEvent_Impression_fieldAccessorTable = new
+    internal_static_bloombox_services_telemetry_v1beta4_CommercialEvent_Impression_descriptor =
+      internal_static_bloombox_services_telemetry_v1beta4_CommercialEvent_descriptor.getNestedTypes().get(0);
+    internal_static_bloombox_services_telemetry_v1beta4_CommercialEvent_Impression_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_bloombox_schema_services_telemetry_v1beta4_CommercialEvent_Impression_descriptor,
+        internal_static_bloombox_services_telemetry_v1beta4_CommercialEvent_Impression_descriptor,
         new java.lang.String[] { "Context", "Section", "Product", "Shop", "Event", });
-    internal_static_bloombox_schema_services_telemetry_v1beta4_CommercialEvent_View_descriptor =
-      internal_static_bloombox_schema_services_telemetry_v1beta4_CommercialEvent_descriptor.getNestedTypes().get(1);
-    internal_static_bloombox_schema_services_telemetry_v1beta4_CommercialEvent_View_fieldAccessorTable = new
+    internal_static_bloombox_services_telemetry_v1beta4_CommercialEvent_View_descriptor =
+      internal_static_bloombox_services_telemetry_v1beta4_CommercialEvent_descriptor.getNestedTypes().get(1);
+    internal_static_bloombox_services_telemetry_v1beta4_CommercialEvent_View_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_bloombox_schema_services_telemetry_v1beta4_CommercialEvent_View_descriptor,
+        internal_static_bloombox_services_telemetry_v1beta4_CommercialEvent_View_descriptor,
         new java.lang.String[] { "Context", "Section", "Product", "Shop", "Event", });
-    internal_static_bloombox_schema_services_telemetry_v1beta4_CommercialEvent_Action_descriptor =
-      internal_static_bloombox_schema_services_telemetry_v1beta4_CommercialEvent_descriptor.getNestedTypes().get(2);
-    internal_static_bloombox_schema_services_telemetry_v1beta4_CommercialEvent_Action_fieldAccessorTable = new
+    internal_static_bloombox_services_telemetry_v1beta4_CommercialEvent_Action_descriptor =
+      internal_static_bloombox_services_telemetry_v1beta4_CommercialEvent_descriptor.getNestedTypes().get(2);
+    internal_static_bloombox_services_telemetry_v1beta4_CommercialEvent_Action_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_bloombox_schema_services_telemetry_v1beta4_CommercialEvent_Action_descriptor,
+        internal_static_bloombox_services_telemetry_v1beta4_CommercialEvent_Action_descriptor,
         new java.lang.String[] { "Name", "Context", "Section", "Product", "Shop", "Order", "Event", });
-    internal_static_bloombox_schema_services_telemetry_v1beta4_IdentityEvent_descriptor =
+    internal_static_bloombox_services_telemetry_v1beta4_IdentityEvent_descriptor =
       getDescriptor().getMessageTypes().get(3);
-    internal_static_bloombox_schema_services_telemetry_v1beta4_IdentityEvent_fieldAccessorTable = new
+    internal_static_bloombox_services_telemetry_v1beta4_IdentityEvent_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_bloombox_schema_services_telemetry_v1beta4_IdentityEvent_descriptor,
+        internal_static_bloombox_services_telemetry_v1beta4_IdentityEvent_descriptor,
         new java.lang.String[] { });
-    internal_static_bloombox_schema_services_telemetry_v1beta4_IdentityEvent_Action_descriptor =
-      internal_static_bloombox_schema_services_telemetry_v1beta4_IdentityEvent_descriptor.getNestedTypes().get(0);
-    internal_static_bloombox_schema_services_telemetry_v1beta4_IdentityEvent_Action_fieldAccessorTable = new
+    internal_static_bloombox_services_telemetry_v1beta4_IdentityEvent_Action_descriptor =
+      internal_static_bloombox_services_telemetry_v1beta4_IdentityEvent_descriptor.getNestedTypes().get(0);
+    internal_static_bloombox_services_telemetry_v1beta4_IdentityEvent_Action_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_bloombox_schema_services_telemetry_v1beta4_IdentityEvent_Action_descriptor,
+        internal_static_bloombox_services_telemetry_v1beta4_IdentityEvent_Action_descriptor,
         new java.lang.String[] { "Name", "Context", "Action", "Event", });
-    internal_static_bloombox_schema_services_telemetry_v1beta4_SearchEvent_descriptor =
+    internal_static_bloombox_services_telemetry_v1beta4_SearchEvent_descriptor =
       getDescriptor().getMessageTypes().get(4);
-    internal_static_bloombox_schema_services_telemetry_v1beta4_SearchEvent_fieldAccessorTable = new
+    internal_static_bloombox_services_telemetry_v1beta4_SearchEvent_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_bloombox_schema_services_telemetry_v1beta4_SearchEvent_descriptor,
+        internal_static_bloombox_services_telemetry_v1beta4_SearchEvent_descriptor,
         new java.lang.String[] { });
-    internal_static_bloombox_schema_services_telemetry_v1beta4_SearchEvent_Query_descriptor =
-      internal_static_bloombox_schema_services_telemetry_v1beta4_SearchEvent_descriptor.getNestedTypes().get(0);
-    internal_static_bloombox_schema_services_telemetry_v1beta4_SearchEvent_Query_fieldAccessorTable = new
+    internal_static_bloombox_services_telemetry_v1beta4_SearchEvent_Query_descriptor =
+      internal_static_bloombox_services_telemetry_v1beta4_SearchEvent_descriptor.getNestedTypes().get(0);
+    internal_static_bloombox_services_telemetry_v1beta4_SearchEvent_Query_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_bloombox_schema_services_telemetry_v1beta4_SearchEvent_Query_descriptor,
+        internal_static_bloombox_services_telemetry_v1beta4_SearchEvent_Query_descriptor,
         new java.lang.String[] { "Term", "Context", "Property", "TotalResults", });
-    internal_static_bloombox_schema_services_telemetry_v1beta4_SearchEvent_Result_descriptor =
-      internal_static_bloombox_schema_services_telemetry_v1beta4_SearchEvent_descriptor.getNestedTypes().get(1);
-    internal_static_bloombox_schema_services_telemetry_v1beta4_SearchEvent_Result_fieldAccessorTable = new
+    internal_static_bloombox_services_telemetry_v1beta4_SearchEvent_Result_descriptor =
+      internal_static_bloombox_services_telemetry_v1beta4_SearchEvent_descriptor.getNestedTypes().get(1);
+    internal_static_bloombox_services_telemetry_v1beta4_SearchEvent_Result_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_bloombox_schema_services_telemetry_v1beta4_SearchEvent_Result_descriptor,
+        internal_static_bloombox_services_telemetry_v1beta4_SearchEvent_Result_descriptor,
         new java.lang.String[] { "Term", "Context", "Property", "TotalResults", "SelectedResult", "Key", });
     com.google.protobuf.ExtensionRegistry registry =
         com.google.protobuf.ExtensionRegistry.newInstance();

@@ -1,8 +1,8 @@
 /*
- * Copyright 2018, Bloombox, LLC. All rights reserved.
+ * Copyright 2018, Momentum Ideas, Co. All rights reserved.
  *
  * Source and object computer code contained herein is the private intellectual
- * property of Bloombox, a California Limited Liability Corporation. Use of this
+ * property of Momentum Ideas Co., a Delaware Corporation. Use of this
  * code in source form requires permission in writing before use or the
  * assembly, distribution, or publishing of derivative works, for commercial
  * purposes or any other purpose, from a duly authorized officer of Momentum
@@ -21,7 +21,7 @@
 package io.bloombox.schema.services.marketing.v1beta1;
 
 public interface CampaignSummaryOrBuilder extends
-    // @@protoc_insertion_point(interface_extends:bloombox.schema.services.marketing.v1beta1.CampaignSummary)
+    // @@protoc_insertion_point(interface_extends:bloombox.services.marketing.v1beta1.CampaignSummary)
     com.google.protobuf.MessageOrBuilder {
 
   /**
@@ -29,7 +29,7 @@ public interface CampaignSummaryOrBuilder extends
    * Key for the underlying campaign.
    * </pre>
    *
-   * <code>.bloombox.schema.marketing.CampaignKey key = 1;</code>
+   * <code>.bloombox.marketing.CampaignKey key = 1;</code>
    */
   boolean hasKey();
   /**
@@ -37,7 +37,7 @@ public interface CampaignSummaryOrBuilder extends
    * Key for the underlying campaign.
    * </pre>
    *
-   * <code>.bloombox.schema.marketing.CampaignKey key = 1;</code>
+   * <code>.bloombox.marketing.CampaignKey key = 1;</code>
    */
   io.bloombox.schema.marketing.MarketingCampaign.CampaignKey getKey();
   /**
@@ -45,7 +45,7 @@ public interface CampaignSummaryOrBuilder extends
    * Key for the underlying campaign.
    * </pre>
    *
-   * <code>.bloombox.schema.marketing.CampaignKey key = 1;</code>
+   * <code>.bloombox.marketing.CampaignKey key = 1;</code>
    */
   io.bloombox.schema.marketing.MarketingCampaign.CampaignKeyOrBuilder getKeyOrBuilder();
 
@@ -99,7 +99,7 @@ public interface CampaignSummaryOrBuilder extends
    * Current status of the campaign.
    * </pre>
    *
-   * <code>.bloombox.schema.marketing.CampaignStatus status = 5;</code>
+   * <code>.bloombox.marketing.CampaignStatus status = 5;</code>
    */
   int getStatusValue();
   /**
@@ -107,7 +107,7 @@ public interface CampaignSummaryOrBuilder extends
    * Current status of the campaign.
    * </pre>
    *
-   * <code>.bloombox.schema.marketing.CampaignStatus status = 5;</code>
+   * <code>.bloombox.marketing.CampaignStatus status = 5;</code>
    */
   io.bloombox.schema.marketing.MarketingCampaign.CampaignStatus getStatus();
 
@@ -134,7 +134,7 @@ public interface CampaignSummaryOrBuilder extends
    * Tags for the campaign object.
    * </pre>
    *
-   * <code>repeated .bloombox.schema.marketing.CampaignTag tag = 8;</code>
+   * <code>repeated .bloombox.marketing.CampaignTag tag = 8;</code>
    */
   java.util.List<io.bloombox.schema.marketing.MarketingCampaign.CampaignTag> 
       getTagList();
@@ -143,7 +143,7 @@ public interface CampaignSummaryOrBuilder extends
    * Tags for the campaign object.
    * </pre>
    *
-   * <code>repeated .bloombox.schema.marketing.CampaignTag tag = 8;</code>
+   * <code>repeated .bloombox.marketing.CampaignTag tag = 8;</code>
    */
   io.bloombox.schema.marketing.MarketingCampaign.CampaignTag getTag(int index);
   /**
@@ -151,7 +151,7 @@ public interface CampaignSummaryOrBuilder extends
    * Tags for the campaign object.
    * </pre>
    *
-   * <code>repeated .bloombox.schema.marketing.CampaignTag tag = 8;</code>
+   * <code>repeated .bloombox.marketing.CampaignTag tag = 8;</code>
    */
   int getTagCount();
   /**
@@ -159,7 +159,7 @@ public interface CampaignSummaryOrBuilder extends
    * Tags for the campaign object.
    * </pre>
    *
-   * <code>repeated .bloombox.schema.marketing.CampaignTag tag = 8;</code>
+   * <code>repeated .bloombox.marketing.CampaignTag tag = 8;</code>
    */
   java.util.List<? extends io.bloombox.schema.marketing.MarketingCampaign.CampaignTagOrBuilder> 
       getTagOrBuilderList();
@@ -168,7 +168,7 @@ public interface CampaignSummaryOrBuilder extends
    * Tags for the campaign object.
    * </pre>
    *
-   * <code>repeated .bloombox.schema.marketing.CampaignTag tag = 8;</code>
+   * <code>repeated .bloombox.marketing.CampaignTag tag = 8;</code>
    */
   io.bloombox.schema.marketing.MarketingCampaign.CampaignTagOrBuilder getTagOrBuilder(
       int index);

@@ -1,8 +1,8 @@
 /*
- * Copyright 2018, Bloombox, LLC. All rights reserved.
+ * Copyright 2018, Momentum Ideas, Co. All rights reserved.
  *
  * Source and object computer code contained herein is the private intellectual
- * property of Bloombox, a California Limited Liability Corporation. Use of this
+ * property of Momentum Ideas Co., a Delaware Corporation. Use of this
  * code in source form requires permission in writing before use or the
  * assembly, distribution, or publishing of derivative works, for commercial
  * purposes or any other purpose, from a duly authorized officer of Momentum
@@ -25,7 +25,7 @@ package io.bloombox.schema.services.auth.v1beta1;
  * Enumerates known errors that may be thrown by auth operations.
  * </pre>
  *
- * Protobuf enum {@code bloombox.schema.services.auth.v1beta1.AuthError}
+ * Protobuf enum {@code bloombox.services.auth.v1beta1.AuthError}
  */
 public enum AuthError
     implements com.google.protobuf.ProtocolMessageEnum {
@@ -229,6 +229,30 @@ public enum AuthError
    * <code>INVALID_NONCE = 24;</code>
    */
   INVALID_NONCE(24),
+  /**
+   * <pre>
+   * A signature was required but none was found.
+   * </pre>
+   *
+   * <code>SIGNATURE_REQUIRED = 25;</code>
+   */
+  SIGNATURE_REQUIRED(25),
+  /**
+   * <pre>
+   * The signature was invalid or could not be loaded/decoded.
+   * </pre>
+   *
+   * <code>SIGNATURE_INVALID = 26;</code>
+   */
+  SIGNATURE_INVALID(26),
+  /**
+   * <pre>
+   * The signature did not pass verification.
+   * </pre>
+   *
+   * <code>SIGNATURE_MISMATCH = 27;</code>
+   */
+  SIGNATURE_MISMATCH(27),
   /**
    * <pre>
    * An internal error was encountered.
@@ -442,6 +466,30 @@ public enum AuthError
   public static final int INVALID_NONCE_VALUE = 24;
   /**
    * <pre>
+   * A signature was required but none was found.
+   * </pre>
+   *
+   * <code>SIGNATURE_REQUIRED = 25;</code>
+   */
+  public static final int SIGNATURE_REQUIRED_VALUE = 25;
+  /**
+   * <pre>
+   * The signature was invalid or could not be loaded/decoded.
+   * </pre>
+   *
+   * <code>SIGNATURE_INVALID = 26;</code>
+   */
+  public static final int SIGNATURE_INVALID_VALUE = 26;
+  /**
+   * <pre>
+   * The signature did not pass verification.
+   * </pre>
+   *
+   * <code>SIGNATURE_MISMATCH = 27;</code>
+   */
+  public static final int SIGNATURE_MISMATCH_VALUE = 27;
+  /**
+   * <pre>
    * An internal error was encountered.
    * </pre>
    *
@@ -493,6 +541,9 @@ public enum AuthError
       case 22: return CONSENT_NOT_FOUND;
       case 23: return EXPIRED_CONSENT;
       case 24: return INVALID_NONCE;
+      case 25: return SIGNATURE_REQUIRED;
+      case 26: return SIGNATURE_INVALID;
+      case 27: return SIGNATURE_MISMATCH;
       case 99: return INTERNAL_ERROR;
       default: return null;
     }
@@ -543,6 +594,6 @@ public enum AuthError
     this.value = value;
   }
 
-  // @@protoc_insertion_point(enum_scope:bloombox.schema.services.auth.v1beta1.AuthError)
+  // @@protoc_insertion_point(enum_scope:bloombox.services.auth.v1beta1.AuthError)
 }
 

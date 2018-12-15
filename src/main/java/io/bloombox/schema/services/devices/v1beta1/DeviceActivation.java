@@ -1,8 +1,8 @@
 /*
- * Copyright 2018, Bloombox, LLC. All rights reserved.
+ * Copyright 2018, Momentum Ideas, Co. All rights reserved.
  *
  * Source and object computer code contained herein is the private intellectual
- * property of Bloombox, a California Limited Liability Corporation. Use of this
+ * property of Momentum Ideas Co., a Delaware Corporation. Use of this
  * code in source form requires permission in writing before use or the
  * assembly, distribution, or publishing of derivative works, for commercial
  * purposes or any other purpose, from a duly authorized officer of Momentum
@@ -26,11 +26,11 @@ package io.bloombox.schema.services.devices.v1beta1;
  * and the device's assignment and role information.
  * </pre>
  *
- * Protobuf type {@code bloombox.schema.services.devices.v1beta1.DeviceActivation}
+ * Protobuf type {@code bloombox.services.devices.v1beta1.DeviceActivation}
  */
 public  final class DeviceActivation extends
     com.google.protobuf.GeneratedMessageV3 implements
-    // @@protoc_insertion_point(message_implements:bloombox.schema.services.devices.v1beta1.DeviceActivation)
+    // @@protoc_insertion_point(message_implements:bloombox.services.devices.v1beta1.DeviceActivation)
     DeviceActivationOrBuilder {
 private static final long serialVersionUID = 0L;
   // Use DeviceActivation.newBuilder() to construct.
@@ -66,13 +66,6 @@ private static final long serialVersionUID = 0L;
           case 0:
             done = true;
             break;
-          default: {
-            if (!parseUnknownFieldProto3(
-                input, unknownFields, extensionRegistry, tag)) {
-              done = true;
-            }
-            break;
-          }
           case 10: {
             java.lang.String s = input.readStringRequireUtf8();
 
@@ -150,6 +143,13 @@ private static final long serialVersionUID = 0L;
 
             break;
           }
+          default: {
+            if (!parseUnknownFieldProto3(
+                input, unknownFields, extensionRegistry, tag)) {
+              done = true;
+            }
+            break;
+          }
         }
       }
     } catch (com.google.protobuf.InvalidProtocolBufferException e) {
@@ -164,12 +164,13 @@ private static final long serialVersionUID = 0L;
   }
   public static final com.google.protobuf.Descriptors.Descriptor
       getDescriptor() {
-    return io.bloombox.schema.services.devices.v1beta1.DevicesServiceBeta1.internal_static_bloombox_schema_services_devices_v1beta1_DeviceActivation_descriptor;
+    return io.bloombox.schema.services.devices.v1beta1.DevicesServiceBeta1.internal_static_bloombox_services_devices_v1beta1_DeviceActivation_descriptor;
   }
 
+  @java.lang.Override
   protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internalGetFieldAccessorTable() {
-    return io.bloombox.schema.services.devices.v1beta1.DevicesServiceBeta1.internal_static_bloombox_schema_services_devices_v1beta1_DeviceActivation_fieldAccessorTable
+    return io.bloombox.schema.services.devices.v1beta1.DevicesServiceBeta1.internal_static_bloombox_services_devices_v1beta1_DeviceActivation_fieldAccessorTable
         .ensureFieldAccessorsInitialized(
             io.bloombox.schema.services.devices.v1beta1.DeviceActivation.class, io.bloombox.schema.services.devices.v1beta1.DeviceActivation.Builder.class);
   }
@@ -265,7 +266,7 @@ private static final long serialVersionUID = 0L;
    * Assignment information for the device.
    * </pre>
    *
-   * <code>.bloombox.schema.services.devices.v1beta1.DeviceAssignment assignment = 3;</code>
+   * <code>.bloombox.services.devices.v1beta1.DeviceAssignment assignment = 3;</code>
    */
   public boolean hasAssignment() {
     return assignment_ != null;
@@ -275,7 +276,7 @@ private static final long serialVersionUID = 0L;
    * Assignment information for the device.
    * </pre>
    *
-   * <code>.bloombox.schema.services.devices.v1beta1.DeviceAssignment assignment = 3;</code>
+   * <code>.bloombox.services.devices.v1beta1.DeviceAssignment assignment = 3;</code>
    */
   public io.bloombox.schema.services.devices.v1beta1.DeviceAssignment getAssignment() {
     return assignment_ == null ? io.bloombox.schema.services.devices.v1beta1.DeviceAssignment.getDefaultInstance() : assignment_;
@@ -285,7 +286,7 @@ private static final long serialVersionUID = 0L;
    * Assignment information for the device.
    * </pre>
    *
-   * <code>.bloombox.schema.services.devices.v1beta1.DeviceAssignment assignment = 3;</code>
+   * <code>.bloombox.services.devices.v1beta1.DeviceAssignment assignment = 3;</code>
    */
   public io.bloombox.schema.services.devices.v1beta1.DeviceAssignmentOrBuilder getAssignmentOrBuilder() {
     return getAssignment();
@@ -299,7 +300,7 @@ private static final long serialVersionUID = 0L;
    * allows the device access to assigned information and credentials.
    * </pre>
    *
-   * <code>.bloombox.schema.security.DeviceTicket ticket = 4;</code>
+   * <code>.bloombox.security.DeviceTicket ticket = 4;</code>
    */
   public boolean hasTicket() {
     return ticket_ != null;
@@ -310,7 +311,7 @@ private static final long serialVersionUID = 0L;
    * allows the device access to assigned information and credentials.
    * </pre>
    *
-   * <code>.bloombox.schema.security.DeviceTicket ticket = 4;</code>
+   * <code>.bloombox.security.DeviceTicket ticket = 4;</code>
    */
   public io.bloombox.schema.security.DeviceSecurity.DeviceTicket getTicket() {
     return ticket_ == null ? io.bloombox.schema.security.DeviceSecurity.DeviceTicket.getDefaultInstance() : ticket_;
@@ -321,7 +322,7 @@ private static final long serialVersionUID = 0L;
    * allows the device access to assigned information and credentials.
    * </pre>
    *
-   * <code>.bloombox.schema.security.DeviceTicket ticket = 4;</code>
+   * <code>.bloombox.security.DeviceTicket ticket = 4;</code>
    */
   public io.bloombox.schema.security.DeviceSecurity.DeviceTicketOrBuilder getTicketOrBuilder() {
     return getTicket();
@@ -335,7 +336,7 @@ private static final long serialVersionUID = 0L;
    * direct use of Firebase.
    * </pre>
    *
-   * <code>.bloombox.schema.services.devices.v1beta1.DeviceEndpoints endpoints = 5;</code>
+   * <code>.bloombox.services.devices.v1beta1.DeviceEndpoints endpoints = 5;</code>
    */
   public boolean hasEndpoints() {
     return endpoints_ != null;
@@ -346,7 +347,7 @@ private static final long serialVersionUID = 0L;
    * direct use of Firebase.
    * </pre>
    *
-   * <code>.bloombox.schema.services.devices.v1beta1.DeviceEndpoints endpoints = 5;</code>
+   * <code>.bloombox.services.devices.v1beta1.DeviceEndpoints endpoints = 5;</code>
    */
   public io.bloombox.schema.services.devices.v1beta1.DeviceEndpoints getEndpoints() {
     return endpoints_ == null ? io.bloombox.schema.services.devices.v1beta1.DeviceEndpoints.getDefaultInstance() : endpoints_;
@@ -357,7 +358,7 @@ private static final long serialVersionUID = 0L;
    * direct use of Firebase.
    * </pre>
    *
-   * <code>.bloombox.schema.services.devices.v1beta1.DeviceEndpoints endpoints = 5;</code>
+   * <code>.bloombox.services.devices.v1beta1.DeviceEndpoints endpoints = 5;</code>
    */
   public io.bloombox.schema.services.devices.v1beta1.DeviceEndpointsOrBuilder getEndpointsOrBuilder() {
     return getEndpoints();
@@ -407,7 +408,7 @@ private static final long serialVersionUID = 0L;
    * Platform server-side systems.
    * </pre>
    *
-   * <code>.bloombox.schema.services.devices.v1beta1.DeviceKeys credentials = 7;</code>
+   * <code>.bloombox.services.devices.v1beta1.DeviceKeys credentials = 7;</code>
    */
   public boolean hasCredentials() {
     return credentials_ != null;
@@ -418,7 +419,7 @@ private static final long serialVersionUID = 0L;
    * Platform server-side systems.
    * </pre>
    *
-   * <code>.bloombox.schema.services.devices.v1beta1.DeviceKeys credentials = 7;</code>
+   * <code>.bloombox.services.devices.v1beta1.DeviceKeys credentials = 7;</code>
    */
   public io.bloombox.schema.services.devices.v1beta1.DeviceKeys getCredentials() {
     return credentials_ == null ? io.bloombox.schema.services.devices.v1beta1.DeviceKeys.getDefaultInstance() : credentials_;
@@ -429,13 +430,14 @@ private static final long serialVersionUID = 0L;
    * Platform server-side systems.
    * </pre>
    *
-   * <code>.bloombox.schema.services.devices.v1beta1.DeviceKeys credentials = 7;</code>
+   * <code>.bloombox.services.devices.v1beta1.DeviceKeys credentials = 7;</code>
    */
   public io.bloombox.schema.services.devices.v1beta1.DeviceKeysOrBuilder getCredentialsOrBuilder() {
     return getCredentials();
   }
 
   private byte memoizedIsInitialized = -1;
+  @java.lang.Override
   public final boolean isInitialized() {
     byte isInitialized = memoizedIsInitialized;
     if (isInitialized == 1) return true;
@@ -445,6 +447,7 @@ private static final long serialVersionUID = 0L;
     return true;
   }
 
+  @java.lang.Override
   public void writeTo(com.google.protobuf.CodedOutputStream output)
                       throws java.io.IOException {
     if (!getUuidBytes().isEmpty()) {
@@ -471,6 +474,7 @@ private static final long serialVersionUID = 0L;
     unknownFields.writeTo(output);
   }
 
+  @java.lang.Override
   public int getSerializedSize() {
     int size = memoizedSize;
     if (size != -1) return size;
@@ -657,6 +661,7 @@ private static final long serialVersionUID = 0L;
         .parseWithIOException(PARSER, input, extensionRegistry);
   }
 
+  @java.lang.Override
   public Builder newBuilderForType() { return newBuilder(); }
   public static Builder newBuilder() {
     return DEFAULT_INSTANCE.toBuilder();
@@ -664,6 +669,7 @@ private static final long serialVersionUID = 0L;
   public static Builder newBuilder(io.bloombox.schema.services.devices.v1beta1.DeviceActivation prototype) {
     return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
   }
+  @java.lang.Override
   public Builder toBuilder() {
     return this == DEFAULT_INSTANCE
         ? new Builder() : new Builder().mergeFrom(this);
@@ -681,20 +687,21 @@ private static final long serialVersionUID = 0L;
    * and the device's assignment and role information.
    * </pre>
    *
-   * Protobuf type {@code bloombox.schema.services.devices.v1beta1.DeviceActivation}
+   * Protobuf type {@code bloombox.services.devices.v1beta1.DeviceActivation}
    */
   public static final class Builder extends
       com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-      // @@protoc_insertion_point(builder_implements:bloombox.schema.services.devices.v1beta1.DeviceActivation)
+      // @@protoc_insertion_point(builder_implements:bloombox.services.devices.v1beta1.DeviceActivation)
       io.bloombox.schema.services.devices.v1beta1.DeviceActivationOrBuilder {
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return io.bloombox.schema.services.devices.v1beta1.DevicesServiceBeta1.internal_static_bloombox_schema_services_devices_v1beta1_DeviceActivation_descriptor;
+      return io.bloombox.schema.services.devices.v1beta1.DevicesServiceBeta1.internal_static_bloombox_services_devices_v1beta1_DeviceActivation_descriptor;
     }
 
+    @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return io.bloombox.schema.services.devices.v1beta1.DevicesServiceBeta1.internal_static_bloombox_schema_services_devices_v1beta1_DeviceActivation_fieldAccessorTable
+      return io.bloombox.schema.services.devices.v1beta1.DevicesServiceBeta1.internal_static_bloombox_services_devices_v1beta1_DeviceActivation_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
               io.bloombox.schema.services.devices.v1beta1.DeviceActivation.class, io.bloombox.schema.services.devices.v1beta1.DeviceActivation.Builder.class);
     }
@@ -714,6 +721,7 @@ private static final long serialVersionUID = 0L;
               .alwaysUseFieldBuilders) {
       }
     }
+    @java.lang.Override
     public Builder clear() {
       super.clear();
       uuid_ = "";
@@ -753,15 +761,18 @@ private static final long serialVersionUID = 0L;
       return this;
     }
 
+    @java.lang.Override
     public com.google.protobuf.Descriptors.Descriptor
         getDescriptorForType() {
-      return io.bloombox.schema.services.devices.v1beta1.DevicesServiceBeta1.internal_static_bloombox_schema_services_devices_v1beta1_DeviceActivation_descriptor;
+      return io.bloombox.schema.services.devices.v1beta1.DevicesServiceBeta1.internal_static_bloombox_services_devices_v1beta1_DeviceActivation_descriptor;
     }
 
+    @java.lang.Override
     public io.bloombox.schema.services.devices.v1beta1.DeviceActivation getDefaultInstanceForType() {
       return io.bloombox.schema.services.devices.v1beta1.DeviceActivation.getDefaultInstance();
     }
 
+    @java.lang.Override
     public io.bloombox.schema.services.devices.v1beta1.DeviceActivation build() {
       io.bloombox.schema.services.devices.v1beta1.DeviceActivation result = buildPartial();
       if (!result.isInitialized()) {
@@ -770,6 +781,7 @@ private static final long serialVersionUID = 0L;
       return result;
     }
 
+    @java.lang.Override
     public io.bloombox.schema.services.devices.v1beta1.DeviceActivation buildPartial() {
       io.bloombox.schema.services.devices.v1beta1.DeviceActivation result = new io.bloombox.schema.services.devices.v1beta1.DeviceActivation(this);
       result.uuid_ = uuid_;
@@ -803,32 +815,39 @@ private static final long serialVersionUID = 0L;
       return result;
     }
 
+    @java.lang.Override
     public Builder clone() {
       return (Builder) super.clone();
     }
+    @java.lang.Override
     public Builder setField(
         com.google.protobuf.Descriptors.FieldDescriptor field,
         java.lang.Object value) {
       return (Builder) super.setField(field, value);
     }
+    @java.lang.Override
     public Builder clearField(
         com.google.protobuf.Descriptors.FieldDescriptor field) {
       return (Builder) super.clearField(field);
     }
+    @java.lang.Override
     public Builder clearOneof(
         com.google.protobuf.Descriptors.OneofDescriptor oneof) {
       return (Builder) super.clearOneof(oneof);
     }
+    @java.lang.Override
     public Builder setRepeatedField(
         com.google.protobuf.Descriptors.FieldDescriptor field,
         int index, java.lang.Object value) {
       return (Builder) super.setRepeatedField(field, index, value);
     }
+    @java.lang.Override
     public Builder addRepeatedField(
         com.google.protobuf.Descriptors.FieldDescriptor field,
         java.lang.Object value) {
       return (Builder) super.addRepeatedField(field, value);
     }
+    @java.lang.Override
     public Builder mergeFrom(com.google.protobuf.Message other) {
       if (other instanceof io.bloombox.schema.services.devices.v1beta1.DeviceActivation) {
         return mergeFrom((io.bloombox.schema.services.devices.v1beta1.DeviceActivation)other);
@@ -868,10 +887,12 @@ private static final long serialVersionUID = 0L;
       return this;
     }
 
+    @java.lang.Override
     public final boolean isInitialized() {
       return true;
     }
 
+    @java.lang.Override
     public Builder mergeFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -1076,7 +1097,7 @@ private static final long serialVersionUID = 0L;
      * Assignment information for the device.
      * </pre>
      *
-     * <code>.bloombox.schema.services.devices.v1beta1.DeviceAssignment assignment = 3;</code>
+     * <code>.bloombox.services.devices.v1beta1.DeviceAssignment assignment = 3;</code>
      */
     public boolean hasAssignment() {
       return assignmentBuilder_ != null || assignment_ != null;
@@ -1086,7 +1107,7 @@ private static final long serialVersionUID = 0L;
      * Assignment information for the device.
      * </pre>
      *
-     * <code>.bloombox.schema.services.devices.v1beta1.DeviceAssignment assignment = 3;</code>
+     * <code>.bloombox.services.devices.v1beta1.DeviceAssignment assignment = 3;</code>
      */
     public io.bloombox.schema.services.devices.v1beta1.DeviceAssignment getAssignment() {
       if (assignmentBuilder_ == null) {
@@ -1100,7 +1121,7 @@ private static final long serialVersionUID = 0L;
      * Assignment information for the device.
      * </pre>
      *
-     * <code>.bloombox.schema.services.devices.v1beta1.DeviceAssignment assignment = 3;</code>
+     * <code>.bloombox.services.devices.v1beta1.DeviceAssignment assignment = 3;</code>
      */
     public Builder setAssignment(io.bloombox.schema.services.devices.v1beta1.DeviceAssignment value) {
       if (assignmentBuilder_ == null) {
@@ -1120,7 +1141,7 @@ private static final long serialVersionUID = 0L;
      * Assignment information for the device.
      * </pre>
      *
-     * <code>.bloombox.schema.services.devices.v1beta1.DeviceAssignment assignment = 3;</code>
+     * <code>.bloombox.services.devices.v1beta1.DeviceAssignment assignment = 3;</code>
      */
     public Builder setAssignment(
         io.bloombox.schema.services.devices.v1beta1.DeviceAssignment.Builder builderForValue) {
@@ -1138,7 +1159,7 @@ private static final long serialVersionUID = 0L;
      * Assignment information for the device.
      * </pre>
      *
-     * <code>.bloombox.schema.services.devices.v1beta1.DeviceAssignment assignment = 3;</code>
+     * <code>.bloombox.services.devices.v1beta1.DeviceAssignment assignment = 3;</code>
      */
     public Builder mergeAssignment(io.bloombox.schema.services.devices.v1beta1.DeviceAssignment value) {
       if (assignmentBuilder_ == null) {
@@ -1160,7 +1181,7 @@ private static final long serialVersionUID = 0L;
      * Assignment information for the device.
      * </pre>
      *
-     * <code>.bloombox.schema.services.devices.v1beta1.DeviceAssignment assignment = 3;</code>
+     * <code>.bloombox.services.devices.v1beta1.DeviceAssignment assignment = 3;</code>
      */
     public Builder clearAssignment() {
       if (assignmentBuilder_ == null) {
@@ -1178,7 +1199,7 @@ private static final long serialVersionUID = 0L;
      * Assignment information for the device.
      * </pre>
      *
-     * <code>.bloombox.schema.services.devices.v1beta1.DeviceAssignment assignment = 3;</code>
+     * <code>.bloombox.services.devices.v1beta1.DeviceAssignment assignment = 3;</code>
      */
     public io.bloombox.schema.services.devices.v1beta1.DeviceAssignment.Builder getAssignmentBuilder() {
       
@@ -1190,7 +1211,7 @@ private static final long serialVersionUID = 0L;
      * Assignment information for the device.
      * </pre>
      *
-     * <code>.bloombox.schema.services.devices.v1beta1.DeviceAssignment assignment = 3;</code>
+     * <code>.bloombox.services.devices.v1beta1.DeviceAssignment assignment = 3;</code>
      */
     public io.bloombox.schema.services.devices.v1beta1.DeviceAssignmentOrBuilder getAssignmentOrBuilder() {
       if (assignmentBuilder_ != null) {
@@ -1205,7 +1226,7 @@ private static final long serialVersionUID = 0L;
      * Assignment information for the device.
      * </pre>
      *
-     * <code>.bloombox.schema.services.devices.v1beta1.DeviceAssignment assignment = 3;</code>
+     * <code>.bloombox.services.devices.v1beta1.DeviceAssignment assignment = 3;</code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<
         io.bloombox.schema.services.devices.v1beta1.DeviceAssignment, io.bloombox.schema.services.devices.v1beta1.DeviceAssignment.Builder, io.bloombox.schema.services.devices.v1beta1.DeviceAssignmentOrBuilder> 
@@ -1230,7 +1251,7 @@ private static final long serialVersionUID = 0L;
      * allows the device access to assigned information and credentials.
      * </pre>
      *
-     * <code>.bloombox.schema.security.DeviceTicket ticket = 4;</code>
+     * <code>.bloombox.security.DeviceTicket ticket = 4;</code>
      */
     public boolean hasTicket() {
       return ticketBuilder_ != null || ticket_ != null;
@@ -1241,7 +1262,7 @@ private static final long serialVersionUID = 0L;
      * allows the device access to assigned information and credentials.
      * </pre>
      *
-     * <code>.bloombox.schema.security.DeviceTicket ticket = 4;</code>
+     * <code>.bloombox.security.DeviceTicket ticket = 4;</code>
      */
     public io.bloombox.schema.security.DeviceSecurity.DeviceTicket getTicket() {
       if (ticketBuilder_ == null) {
@@ -1256,7 +1277,7 @@ private static final long serialVersionUID = 0L;
      * allows the device access to assigned information and credentials.
      * </pre>
      *
-     * <code>.bloombox.schema.security.DeviceTicket ticket = 4;</code>
+     * <code>.bloombox.security.DeviceTicket ticket = 4;</code>
      */
     public Builder setTicket(io.bloombox.schema.security.DeviceSecurity.DeviceTicket value) {
       if (ticketBuilder_ == null) {
@@ -1277,7 +1298,7 @@ private static final long serialVersionUID = 0L;
      * allows the device access to assigned information and credentials.
      * </pre>
      *
-     * <code>.bloombox.schema.security.DeviceTicket ticket = 4;</code>
+     * <code>.bloombox.security.DeviceTicket ticket = 4;</code>
      */
     public Builder setTicket(
         io.bloombox.schema.security.DeviceSecurity.DeviceTicket.Builder builderForValue) {
@@ -1296,7 +1317,7 @@ private static final long serialVersionUID = 0L;
      * allows the device access to assigned information and credentials.
      * </pre>
      *
-     * <code>.bloombox.schema.security.DeviceTicket ticket = 4;</code>
+     * <code>.bloombox.security.DeviceTicket ticket = 4;</code>
      */
     public Builder mergeTicket(io.bloombox.schema.security.DeviceSecurity.DeviceTicket value) {
       if (ticketBuilder_ == null) {
@@ -1319,7 +1340,7 @@ private static final long serialVersionUID = 0L;
      * allows the device access to assigned information and credentials.
      * </pre>
      *
-     * <code>.bloombox.schema.security.DeviceTicket ticket = 4;</code>
+     * <code>.bloombox.security.DeviceTicket ticket = 4;</code>
      */
     public Builder clearTicket() {
       if (ticketBuilder_ == null) {
@@ -1338,7 +1359,7 @@ private static final long serialVersionUID = 0L;
      * allows the device access to assigned information and credentials.
      * </pre>
      *
-     * <code>.bloombox.schema.security.DeviceTicket ticket = 4;</code>
+     * <code>.bloombox.security.DeviceTicket ticket = 4;</code>
      */
     public io.bloombox.schema.security.DeviceSecurity.DeviceTicket.Builder getTicketBuilder() {
       
@@ -1351,7 +1372,7 @@ private static final long serialVersionUID = 0L;
      * allows the device access to assigned information and credentials.
      * </pre>
      *
-     * <code>.bloombox.schema.security.DeviceTicket ticket = 4;</code>
+     * <code>.bloombox.security.DeviceTicket ticket = 4;</code>
      */
     public io.bloombox.schema.security.DeviceSecurity.DeviceTicketOrBuilder getTicketOrBuilder() {
       if (ticketBuilder_ != null) {
@@ -1367,7 +1388,7 @@ private static final long serialVersionUID = 0L;
      * allows the device access to assigned information and credentials.
      * </pre>
      *
-     * <code>.bloombox.schema.security.DeviceTicket ticket = 4;</code>
+     * <code>.bloombox.security.DeviceTicket ticket = 4;</code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<
         io.bloombox.schema.security.DeviceSecurity.DeviceTicket, io.bloombox.schema.security.DeviceSecurity.DeviceTicket.Builder, io.bloombox.schema.security.DeviceSecurity.DeviceTicketOrBuilder> 
@@ -1392,7 +1413,7 @@ private static final long serialVersionUID = 0L;
      * direct use of Firebase.
      * </pre>
      *
-     * <code>.bloombox.schema.services.devices.v1beta1.DeviceEndpoints endpoints = 5;</code>
+     * <code>.bloombox.services.devices.v1beta1.DeviceEndpoints endpoints = 5;</code>
      */
     public boolean hasEndpoints() {
       return endpointsBuilder_ != null || endpoints_ != null;
@@ -1403,7 +1424,7 @@ private static final long serialVersionUID = 0L;
      * direct use of Firebase.
      * </pre>
      *
-     * <code>.bloombox.schema.services.devices.v1beta1.DeviceEndpoints endpoints = 5;</code>
+     * <code>.bloombox.services.devices.v1beta1.DeviceEndpoints endpoints = 5;</code>
      */
     public io.bloombox.schema.services.devices.v1beta1.DeviceEndpoints getEndpoints() {
       if (endpointsBuilder_ == null) {
@@ -1418,7 +1439,7 @@ private static final long serialVersionUID = 0L;
      * direct use of Firebase.
      * </pre>
      *
-     * <code>.bloombox.schema.services.devices.v1beta1.DeviceEndpoints endpoints = 5;</code>
+     * <code>.bloombox.services.devices.v1beta1.DeviceEndpoints endpoints = 5;</code>
      */
     public Builder setEndpoints(io.bloombox.schema.services.devices.v1beta1.DeviceEndpoints value) {
       if (endpointsBuilder_ == null) {
@@ -1439,7 +1460,7 @@ private static final long serialVersionUID = 0L;
      * direct use of Firebase.
      * </pre>
      *
-     * <code>.bloombox.schema.services.devices.v1beta1.DeviceEndpoints endpoints = 5;</code>
+     * <code>.bloombox.services.devices.v1beta1.DeviceEndpoints endpoints = 5;</code>
      */
     public Builder setEndpoints(
         io.bloombox.schema.services.devices.v1beta1.DeviceEndpoints.Builder builderForValue) {
@@ -1458,7 +1479,7 @@ private static final long serialVersionUID = 0L;
      * direct use of Firebase.
      * </pre>
      *
-     * <code>.bloombox.schema.services.devices.v1beta1.DeviceEndpoints endpoints = 5;</code>
+     * <code>.bloombox.services.devices.v1beta1.DeviceEndpoints endpoints = 5;</code>
      */
     public Builder mergeEndpoints(io.bloombox.schema.services.devices.v1beta1.DeviceEndpoints value) {
       if (endpointsBuilder_ == null) {
@@ -1481,7 +1502,7 @@ private static final long serialVersionUID = 0L;
      * direct use of Firebase.
      * </pre>
      *
-     * <code>.bloombox.schema.services.devices.v1beta1.DeviceEndpoints endpoints = 5;</code>
+     * <code>.bloombox.services.devices.v1beta1.DeviceEndpoints endpoints = 5;</code>
      */
     public Builder clearEndpoints() {
       if (endpointsBuilder_ == null) {
@@ -1500,7 +1521,7 @@ private static final long serialVersionUID = 0L;
      * direct use of Firebase.
      * </pre>
      *
-     * <code>.bloombox.schema.services.devices.v1beta1.DeviceEndpoints endpoints = 5;</code>
+     * <code>.bloombox.services.devices.v1beta1.DeviceEndpoints endpoints = 5;</code>
      */
     public io.bloombox.schema.services.devices.v1beta1.DeviceEndpoints.Builder getEndpointsBuilder() {
       
@@ -1513,7 +1534,7 @@ private static final long serialVersionUID = 0L;
      * direct use of Firebase.
      * </pre>
      *
-     * <code>.bloombox.schema.services.devices.v1beta1.DeviceEndpoints endpoints = 5;</code>
+     * <code>.bloombox.services.devices.v1beta1.DeviceEndpoints endpoints = 5;</code>
      */
     public io.bloombox.schema.services.devices.v1beta1.DeviceEndpointsOrBuilder getEndpointsOrBuilder() {
       if (endpointsBuilder_ != null) {
@@ -1529,7 +1550,7 @@ private static final long serialVersionUID = 0L;
      * direct use of Firebase.
      * </pre>
      *
-     * <code>.bloombox.schema.services.devices.v1beta1.DeviceEndpoints endpoints = 5;</code>
+     * <code>.bloombox.services.devices.v1beta1.DeviceEndpoints endpoints = 5;</code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<
         io.bloombox.schema.services.devices.v1beta1.DeviceEndpoints, io.bloombox.schema.services.devices.v1beta1.DeviceEndpoints.Builder, io.bloombox.schema.services.devices.v1beta1.DeviceEndpointsOrBuilder> 
@@ -1716,7 +1737,7 @@ private static final long serialVersionUID = 0L;
      * Platform server-side systems.
      * </pre>
      *
-     * <code>.bloombox.schema.services.devices.v1beta1.DeviceKeys credentials = 7;</code>
+     * <code>.bloombox.services.devices.v1beta1.DeviceKeys credentials = 7;</code>
      */
     public boolean hasCredentials() {
       return credentialsBuilder_ != null || credentials_ != null;
@@ -1727,7 +1748,7 @@ private static final long serialVersionUID = 0L;
      * Platform server-side systems.
      * </pre>
      *
-     * <code>.bloombox.schema.services.devices.v1beta1.DeviceKeys credentials = 7;</code>
+     * <code>.bloombox.services.devices.v1beta1.DeviceKeys credentials = 7;</code>
      */
     public io.bloombox.schema.services.devices.v1beta1.DeviceKeys getCredentials() {
       if (credentialsBuilder_ == null) {
@@ -1742,7 +1763,7 @@ private static final long serialVersionUID = 0L;
      * Platform server-side systems.
      * </pre>
      *
-     * <code>.bloombox.schema.services.devices.v1beta1.DeviceKeys credentials = 7;</code>
+     * <code>.bloombox.services.devices.v1beta1.DeviceKeys credentials = 7;</code>
      */
     public Builder setCredentials(io.bloombox.schema.services.devices.v1beta1.DeviceKeys value) {
       if (credentialsBuilder_ == null) {
@@ -1763,7 +1784,7 @@ private static final long serialVersionUID = 0L;
      * Platform server-side systems.
      * </pre>
      *
-     * <code>.bloombox.schema.services.devices.v1beta1.DeviceKeys credentials = 7;</code>
+     * <code>.bloombox.services.devices.v1beta1.DeviceKeys credentials = 7;</code>
      */
     public Builder setCredentials(
         io.bloombox.schema.services.devices.v1beta1.DeviceKeys.Builder builderForValue) {
@@ -1782,7 +1803,7 @@ private static final long serialVersionUID = 0L;
      * Platform server-side systems.
      * </pre>
      *
-     * <code>.bloombox.schema.services.devices.v1beta1.DeviceKeys credentials = 7;</code>
+     * <code>.bloombox.services.devices.v1beta1.DeviceKeys credentials = 7;</code>
      */
     public Builder mergeCredentials(io.bloombox.schema.services.devices.v1beta1.DeviceKeys value) {
       if (credentialsBuilder_ == null) {
@@ -1805,7 +1826,7 @@ private static final long serialVersionUID = 0L;
      * Platform server-side systems.
      * </pre>
      *
-     * <code>.bloombox.schema.services.devices.v1beta1.DeviceKeys credentials = 7;</code>
+     * <code>.bloombox.services.devices.v1beta1.DeviceKeys credentials = 7;</code>
      */
     public Builder clearCredentials() {
       if (credentialsBuilder_ == null) {
@@ -1824,7 +1845,7 @@ private static final long serialVersionUID = 0L;
      * Platform server-side systems.
      * </pre>
      *
-     * <code>.bloombox.schema.services.devices.v1beta1.DeviceKeys credentials = 7;</code>
+     * <code>.bloombox.services.devices.v1beta1.DeviceKeys credentials = 7;</code>
      */
     public io.bloombox.schema.services.devices.v1beta1.DeviceKeys.Builder getCredentialsBuilder() {
       
@@ -1837,7 +1858,7 @@ private static final long serialVersionUID = 0L;
      * Platform server-side systems.
      * </pre>
      *
-     * <code>.bloombox.schema.services.devices.v1beta1.DeviceKeys credentials = 7;</code>
+     * <code>.bloombox.services.devices.v1beta1.DeviceKeys credentials = 7;</code>
      */
     public io.bloombox.schema.services.devices.v1beta1.DeviceKeysOrBuilder getCredentialsOrBuilder() {
       if (credentialsBuilder_ != null) {
@@ -1853,7 +1874,7 @@ private static final long serialVersionUID = 0L;
      * Platform server-side systems.
      * </pre>
      *
-     * <code>.bloombox.schema.services.devices.v1beta1.DeviceKeys credentials = 7;</code>
+     * <code>.bloombox.services.devices.v1beta1.DeviceKeys credentials = 7;</code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<
         io.bloombox.schema.services.devices.v1beta1.DeviceKeys, io.bloombox.schema.services.devices.v1beta1.DeviceKeys.Builder, io.bloombox.schema.services.devices.v1beta1.DeviceKeysOrBuilder> 
@@ -1868,21 +1889,23 @@ private static final long serialVersionUID = 0L;
       }
       return credentialsBuilder_;
     }
+    @java.lang.Override
     public final Builder setUnknownFields(
         final com.google.protobuf.UnknownFieldSet unknownFields) {
       return super.setUnknownFieldsProto3(unknownFields);
     }
 
+    @java.lang.Override
     public final Builder mergeUnknownFields(
         final com.google.protobuf.UnknownFieldSet unknownFields) {
       return super.mergeUnknownFields(unknownFields);
     }
 
 
-    // @@protoc_insertion_point(builder_scope:bloombox.schema.services.devices.v1beta1.DeviceActivation)
+    // @@protoc_insertion_point(builder_scope:bloombox.services.devices.v1beta1.DeviceActivation)
   }
 
-  // @@protoc_insertion_point(class_scope:bloombox.schema.services.devices.v1beta1.DeviceActivation)
+  // @@protoc_insertion_point(class_scope:bloombox.services.devices.v1beta1.DeviceActivation)
   private static final io.bloombox.schema.services.devices.v1beta1.DeviceActivation DEFAULT_INSTANCE;
   static {
     DEFAULT_INSTANCE = new io.bloombox.schema.services.devices.v1beta1.DeviceActivation();
@@ -1894,6 +1917,7 @@ private static final long serialVersionUID = 0L;
 
   private static final com.google.protobuf.Parser<DeviceActivation>
       PARSER = new com.google.protobuf.AbstractParser<DeviceActivation>() {
+    @java.lang.Override
     public DeviceActivation parsePartialFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -1911,6 +1935,7 @@ private static final long serialVersionUID = 0L;
     return PARSER;
   }
 
+  @java.lang.Override
   public io.bloombox.schema.services.devices.v1beta1.DeviceActivation getDefaultInstanceForType() {
     return DEFAULT_INSTANCE;
   }

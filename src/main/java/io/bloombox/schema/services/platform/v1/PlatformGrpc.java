@@ -1,8 +1,8 @@
 /*
- * Copyright 2018, Bloombox, LLC. All rights reserved.
+ * Copyright 2018, Momentum Ideas, Co. All rights reserved.
  *
  * Source and object computer code contained herein is the private intellectual
- * property of Bloombox, a California Limited Liability Corporation. Use of this
+ * property of Momentum Ideas Co., a Delaware Corporation. Use of this
  * code in source form requires permission in writing before use or the
  * assembly, distribution, or publishing of derivative works, for commercial
  * purposes or any other purpose, from a duly authorized officer of Momentum
@@ -17,20 +17,20 @@
 
 package io.bloombox.schema.services.platform.v1;
 
-import static io.grpc.stub.ClientCalls.asyncUnaryCall;
-import static io.grpc.stub.ClientCalls.asyncServerStreamingCall;
-import static io.grpc.stub.ClientCalls.asyncClientStreamingCall;
-import static io.grpc.stub.ClientCalls.asyncBidiStreamingCall;
-import static io.grpc.stub.ClientCalls.blockingUnaryCall;
-import static io.grpc.stub.ClientCalls.blockingServerStreamingCall;
-import static io.grpc.stub.ClientCalls.futureUnaryCall;
 import static io.grpc.MethodDescriptor.generateFullMethodName;
-import static io.grpc.stub.ServerCalls.asyncUnaryCall;
-import static io.grpc.stub.ServerCalls.asyncServerStreamingCall;
-import static io.grpc.stub.ServerCalls.asyncClientStreamingCall;
+import static io.grpc.stub.ClientCalls.asyncBidiStreamingCall;
+import static io.grpc.stub.ClientCalls.asyncClientStreamingCall;
+import static io.grpc.stub.ClientCalls.asyncServerStreamingCall;
+import static io.grpc.stub.ClientCalls.asyncUnaryCall;
+import static io.grpc.stub.ClientCalls.blockingServerStreamingCall;
+import static io.grpc.stub.ClientCalls.blockingUnaryCall;
+import static io.grpc.stub.ClientCalls.futureUnaryCall;
 import static io.grpc.stub.ServerCalls.asyncBidiStreamingCall;
-import static io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall;
+import static io.grpc.stub.ServerCalls.asyncClientStreamingCall;
+import static io.grpc.stub.ServerCalls.asyncServerStreamingCall;
+import static io.grpc.stub.ServerCalls.asyncUnaryCall;
 import static io.grpc.stub.ServerCalls.asyncUnimplementedStreamingCall;
+import static io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall;
 
 /**
  * <pre>
@@ -39,75 +39,174 @@ import static io.grpc.stub.ServerCalls.asyncUnimplementedStreamingCall;
  * </pre>
  */
 @javax.annotation.Generated(
-    value = "by gRPC proto compiler (version 1.6.0-SNAPSHOT)",
+    value = "by gRPC proto compiler (version 1.18.0-SNAPSHOT)",
     comments = "Source: platform/v1/PlatformService_v1.proto")
 public final class PlatformGrpc {
 
   private PlatformGrpc() {}
 
-  public static final String SERVICE_NAME = "bloombox.schema.services.platform.v1.Platform";
+  public static final String SERVICE_NAME = "bloombox.services.platform.v1.Platform";
 
   // Static method descriptors that strictly reflect the proto.
-  @io.grpc.ExperimentalApi("https://github.com/grpc/grpc-java/issues/1901")
-  public static final io.grpc.MethodDescriptor<io.bloombox.schema.services.platform.v1.Ping.Request,
-      io.bloombox.schema.services.platform.v1.Ping.Response> METHOD_PING =
-      io.grpc.MethodDescriptor.<io.bloombox.schema.services.platform.v1.Ping.Request, io.bloombox.schema.services.platform.v1.Ping.Response>newBuilder()
-          .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-          .setFullMethodName(generateFullMethodName(
-              "bloombox.schema.services.platform.v1.Platform", "Ping"))
-          .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-              io.bloombox.schema.services.platform.v1.Ping.Request.getDefaultInstance()))
-          .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-              io.bloombox.schema.services.platform.v1.Ping.Response.getDefaultInstance()))
-          .build();
-  @io.grpc.ExperimentalApi("https://github.com/grpc/grpc-java/issues/1901")
-  public static final io.grpc.MethodDescriptor<com.google.protobuf.Empty,
-      com.google.protobuf.Empty> METHOD_HEALTH =
-      io.grpc.MethodDescriptor.<com.google.protobuf.Empty, com.google.protobuf.Empty>newBuilder()
-          .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-          .setFullMethodName(generateFullMethodName(
-              "bloombox.schema.services.platform.v1.Platform", "Health"))
-          .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-              com.google.protobuf.Empty.getDefaultInstance()))
-          .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-              com.google.protobuf.Empty.getDefaultInstance()))
-          .build();
-  @io.grpc.ExperimentalApi("https://github.com/grpc/grpc-java/issues/1901")
-  public static final io.grpc.MethodDescriptor<io.bloombox.schema.services.platform.v1.DomainResolve.Request,
-      io.bloombox.schema.services.platform.v1.DomainResolve.Response> METHOD_RESOLVE =
-      io.grpc.MethodDescriptor.<io.bloombox.schema.services.platform.v1.DomainResolve.Request, io.bloombox.schema.services.platform.v1.DomainResolve.Response>newBuilder()
-          .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-          .setFullMethodName(generateFullMethodName(
-              "bloombox.schema.services.platform.v1.Platform", "Resolve"))
-          .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-              io.bloombox.schema.services.platform.v1.DomainResolve.Request.getDefaultInstance()))
-          .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-              io.bloombox.schema.services.platform.v1.DomainResolve.Response.getDefaultInstance()))
-          .build();
-  @io.grpc.ExperimentalApi("https://github.com/grpc/grpc-java/issues/1901")
-  public static final io.grpc.MethodDescriptor<io.bloombox.schema.services.platform.v1.DomainInfo.Request,
-      io.bloombox.schema.services.platform.v1.DomainInfo.Response> METHOD_DOMAINS =
-      io.grpc.MethodDescriptor.<io.bloombox.schema.services.platform.v1.DomainInfo.Request, io.bloombox.schema.services.platform.v1.DomainInfo.Response>newBuilder()
-          .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-          .setFullMethodName(generateFullMethodName(
-              "bloombox.schema.services.platform.v1.Platform", "Domains"))
-          .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-              io.bloombox.schema.services.platform.v1.DomainInfo.Request.getDefaultInstance()))
-          .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-              io.bloombox.schema.services.platform.v1.DomainInfo.Response.getDefaultInstance()))
-          .build();
-  @io.grpc.ExperimentalApi("https://github.com/grpc/grpc-java/issues/1901")
-  public static final io.grpc.MethodDescriptor<io.bloombox.schema.services.platform.v1.BrandInfo.Request,
-      io.bloombox.schema.services.platform.v1.BrandInfo.Response> METHOD_BRAND =
-      io.grpc.MethodDescriptor.<io.bloombox.schema.services.platform.v1.BrandInfo.Request, io.bloombox.schema.services.platform.v1.BrandInfo.Response>newBuilder()
-          .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-          .setFullMethodName(generateFullMethodName(
-              "bloombox.schema.services.platform.v1.Platform", "Brand"))
-          .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-              io.bloombox.schema.services.platform.v1.BrandInfo.Request.getDefaultInstance()))
-          .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-              io.bloombox.schema.services.platform.v1.BrandInfo.Response.getDefaultInstance()))
-          .build();
+  private static volatile io.grpc.MethodDescriptor<io.bloombox.schema.services.platform.v1.Ping.Request,
+      io.bloombox.schema.services.platform.v1.Ping.Response> getPingMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "Ping",
+      requestType = io.bloombox.schema.services.platform.v1.Ping.Request.class,
+      responseType = io.bloombox.schema.services.platform.v1.Ping.Response.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<io.bloombox.schema.services.platform.v1.Ping.Request,
+      io.bloombox.schema.services.platform.v1.Ping.Response> getPingMethod() {
+    io.grpc.MethodDescriptor<io.bloombox.schema.services.platform.v1.Ping.Request, io.bloombox.schema.services.platform.v1.Ping.Response> getPingMethod;
+    if ((getPingMethod = PlatformGrpc.getPingMethod) == null) {
+      synchronized (PlatformGrpc.class) {
+        if ((getPingMethod = PlatformGrpc.getPingMethod) == null) {
+          PlatformGrpc.getPingMethod = getPingMethod = 
+              io.grpc.MethodDescriptor.<io.bloombox.schema.services.platform.v1.Ping.Request, io.bloombox.schema.services.platform.v1.Ping.Response>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(
+                  "bloombox.services.platform.v1.Platform", "Ping"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  io.bloombox.schema.services.platform.v1.Ping.Request.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  io.bloombox.schema.services.platform.v1.Ping.Response.getDefaultInstance()))
+                  .setSchemaDescriptor(new PlatformMethodDescriptorSupplier("Ping"))
+                  .build();
+          }
+        }
+     }
+     return getPingMethod;
+  }
+
+  private static volatile io.grpc.MethodDescriptor<com.google.protobuf.Empty,
+      com.google.protobuf.Empty> getHealthMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "Health",
+      requestType = com.google.protobuf.Empty.class,
+      responseType = com.google.protobuf.Empty.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<com.google.protobuf.Empty,
+      com.google.protobuf.Empty> getHealthMethod() {
+    io.grpc.MethodDescriptor<com.google.protobuf.Empty, com.google.protobuf.Empty> getHealthMethod;
+    if ((getHealthMethod = PlatformGrpc.getHealthMethod) == null) {
+      synchronized (PlatformGrpc.class) {
+        if ((getHealthMethod = PlatformGrpc.getHealthMethod) == null) {
+          PlatformGrpc.getHealthMethod = getHealthMethod = 
+              io.grpc.MethodDescriptor.<com.google.protobuf.Empty, com.google.protobuf.Empty>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(
+                  "bloombox.services.platform.v1.Platform", "Health"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.google.protobuf.Empty.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.google.protobuf.Empty.getDefaultInstance()))
+                  .setSchemaDescriptor(new PlatformMethodDescriptorSupplier("Health"))
+                  .build();
+          }
+        }
+     }
+     return getHealthMethod;
+  }
+
+  private static volatile io.grpc.MethodDescriptor<io.bloombox.schema.services.platform.v1.DomainResolve.Request,
+      io.bloombox.schema.services.platform.v1.DomainResolve.Response> getResolveMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "Resolve",
+      requestType = io.bloombox.schema.services.platform.v1.DomainResolve.Request.class,
+      responseType = io.bloombox.schema.services.platform.v1.DomainResolve.Response.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<io.bloombox.schema.services.platform.v1.DomainResolve.Request,
+      io.bloombox.schema.services.platform.v1.DomainResolve.Response> getResolveMethod() {
+    io.grpc.MethodDescriptor<io.bloombox.schema.services.platform.v1.DomainResolve.Request, io.bloombox.schema.services.platform.v1.DomainResolve.Response> getResolveMethod;
+    if ((getResolveMethod = PlatformGrpc.getResolveMethod) == null) {
+      synchronized (PlatformGrpc.class) {
+        if ((getResolveMethod = PlatformGrpc.getResolveMethod) == null) {
+          PlatformGrpc.getResolveMethod = getResolveMethod = 
+              io.grpc.MethodDescriptor.<io.bloombox.schema.services.platform.v1.DomainResolve.Request, io.bloombox.schema.services.platform.v1.DomainResolve.Response>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(
+                  "bloombox.services.platform.v1.Platform", "Resolve"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  io.bloombox.schema.services.platform.v1.DomainResolve.Request.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  io.bloombox.schema.services.platform.v1.DomainResolve.Response.getDefaultInstance()))
+                  .setSchemaDescriptor(new PlatformMethodDescriptorSupplier("Resolve"))
+                  .build();
+          }
+        }
+     }
+     return getResolveMethod;
+  }
+
+  private static volatile io.grpc.MethodDescriptor<io.bloombox.schema.services.platform.v1.DomainInfo.Request,
+      io.bloombox.schema.services.platform.v1.DomainInfo.Response> getDomainsMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "Domains",
+      requestType = io.bloombox.schema.services.platform.v1.DomainInfo.Request.class,
+      responseType = io.bloombox.schema.services.platform.v1.DomainInfo.Response.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<io.bloombox.schema.services.platform.v1.DomainInfo.Request,
+      io.bloombox.schema.services.platform.v1.DomainInfo.Response> getDomainsMethod() {
+    io.grpc.MethodDescriptor<io.bloombox.schema.services.platform.v1.DomainInfo.Request, io.bloombox.schema.services.platform.v1.DomainInfo.Response> getDomainsMethod;
+    if ((getDomainsMethod = PlatformGrpc.getDomainsMethod) == null) {
+      synchronized (PlatformGrpc.class) {
+        if ((getDomainsMethod = PlatformGrpc.getDomainsMethod) == null) {
+          PlatformGrpc.getDomainsMethod = getDomainsMethod = 
+              io.grpc.MethodDescriptor.<io.bloombox.schema.services.platform.v1.DomainInfo.Request, io.bloombox.schema.services.platform.v1.DomainInfo.Response>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(
+                  "bloombox.services.platform.v1.Platform", "Domains"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  io.bloombox.schema.services.platform.v1.DomainInfo.Request.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  io.bloombox.schema.services.platform.v1.DomainInfo.Response.getDefaultInstance()))
+                  .setSchemaDescriptor(new PlatformMethodDescriptorSupplier("Domains"))
+                  .build();
+          }
+        }
+     }
+     return getDomainsMethod;
+  }
+
+  private static volatile io.grpc.MethodDescriptor<io.bloombox.schema.services.platform.v1.BrandInfo.Request,
+      io.bloombox.schema.services.platform.v1.BrandInfo.Response> getBrandMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "Brand",
+      requestType = io.bloombox.schema.services.platform.v1.BrandInfo.Request.class,
+      responseType = io.bloombox.schema.services.platform.v1.BrandInfo.Response.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<io.bloombox.schema.services.platform.v1.BrandInfo.Request,
+      io.bloombox.schema.services.platform.v1.BrandInfo.Response> getBrandMethod() {
+    io.grpc.MethodDescriptor<io.bloombox.schema.services.platform.v1.BrandInfo.Request, io.bloombox.schema.services.platform.v1.BrandInfo.Response> getBrandMethod;
+    if ((getBrandMethod = PlatformGrpc.getBrandMethod) == null) {
+      synchronized (PlatformGrpc.class) {
+        if ((getBrandMethod = PlatformGrpc.getBrandMethod) == null) {
+          PlatformGrpc.getBrandMethod = getBrandMethod = 
+              io.grpc.MethodDescriptor.<io.bloombox.schema.services.platform.v1.BrandInfo.Request, io.bloombox.schema.services.platform.v1.BrandInfo.Response>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(
+                  "bloombox.services.platform.v1.Platform", "Brand"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  io.bloombox.schema.services.platform.v1.BrandInfo.Request.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  io.bloombox.schema.services.platform.v1.BrandInfo.Response.getDefaultInstance()))
+                  .setSchemaDescriptor(new PlatformMethodDescriptorSupplier("Brand"))
+                  .build();
+          }
+        }
+     }
+     return getBrandMethod;
+  }
 
   /**
    * Creates a new async stub that supports all call types for the service
@@ -147,7 +246,7 @@ public final class PlatformGrpc {
      */
     public void ping(io.bloombox.schema.services.platform.v1.Ping.Request request,
         io.grpc.stub.StreamObserver<io.bloombox.schema.services.platform.v1.Ping.Response> responseObserver) {
-      asyncUnimplementedUnaryCall(METHOD_PING, responseObserver);
+      asyncUnimplementedUnaryCall(getPingMethod(), responseObserver);
     }
 
     /**
@@ -157,7 +256,7 @@ public final class PlatformGrpc {
      */
     public void health(com.google.protobuf.Empty request,
         io.grpc.stub.StreamObserver<com.google.protobuf.Empty> responseObserver) {
-      asyncUnimplementedUnaryCall(METHOD_HEALTH, responseObserver);
+      asyncUnimplementedUnaryCall(getHealthMethod(), responseObserver);
     }
 
     /**
@@ -167,7 +266,7 @@ public final class PlatformGrpc {
      */
     public void resolve(io.bloombox.schema.services.platform.v1.DomainResolve.Request request,
         io.grpc.stub.StreamObserver<io.bloombox.schema.services.platform.v1.DomainResolve.Response> responseObserver) {
-      asyncUnimplementedUnaryCall(METHOD_RESOLVE, responseObserver);
+      asyncUnimplementedUnaryCall(getResolveMethod(), responseObserver);
     }
 
     /**
@@ -177,7 +276,7 @@ public final class PlatformGrpc {
      */
     public void domains(io.bloombox.schema.services.platform.v1.DomainInfo.Request request,
         io.grpc.stub.StreamObserver<io.bloombox.schema.services.platform.v1.DomainInfo.Response> responseObserver) {
-      asyncUnimplementedUnaryCall(METHOD_DOMAINS, responseObserver);
+      asyncUnimplementedUnaryCall(getDomainsMethod(), responseObserver);
     }
 
     /**
@@ -187,41 +286,41 @@ public final class PlatformGrpc {
      */
     public void brand(io.bloombox.schema.services.platform.v1.BrandInfo.Request request,
         io.grpc.stub.StreamObserver<io.bloombox.schema.services.platform.v1.BrandInfo.Response> responseObserver) {
-      asyncUnimplementedUnaryCall(METHOD_BRAND, responseObserver);
+      asyncUnimplementedUnaryCall(getBrandMethod(), responseObserver);
     }
 
     @java.lang.Override public final io.grpc.ServerServiceDefinition bindService() {
       return io.grpc.ServerServiceDefinition.builder(getServiceDescriptor())
           .addMethod(
-            METHOD_PING,
+            getPingMethod(),
             asyncUnaryCall(
               new MethodHandlers<
                 io.bloombox.schema.services.platform.v1.Ping.Request,
                 io.bloombox.schema.services.platform.v1.Ping.Response>(
                   this, METHODID_PING)))
           .addMethod(
-            METHOD_HEALTH,
+            getHealthMethod(),
             asyncUnaryCall(
               new MethodHandlers<
                 com.google.protobuf.Empty,
                 com.google.protobuf.Empty>(
                   this, METHODID_HEALTH)))
           .addMethod(
-            METHOD_RESOLVE,
+            getResolveMethod(),
             asyncUnaryCall(
               new MethodHandlers<
                 io.bloombox.schema.services.platform.v1.DomainResolve.Request,
                 io.bloombox.schema.services.platform.v1.DomainResolve.Response>(
                   this, METHODID_RESOLVE)))
           .addMethod(
-            METHOD_DOMAINS,
+            getDomainsMethod(),
             asyncUnaryCall(
               new MethodHandlers<
                 io.bloombox.schema.services.platform.v1.DomainInfo.Request,
                 io.bloombox.schema.services.platform.v1.DomainInfo.Response>(
                   this, METHODID_DOMAINS)))
           .addMethod(
-            METHOD_BRAND,
+            getBrandMethod(),
             asyncUnaryCall(
               new MethodHandlers<
                 io.bloombox.schema.services.platform.v1.BrandInfo.Request,
@@ -261,7 +360,7 @@ public final class PlatformGrpc {
     public void ping(io.bloombox.schema.services.platform.v1.Ping.Request request,
         io.grpc.stub.StreamObserver<io.bloombox.schema.services.platform.v1.Ping.Response> responseObserver) {
       asyncUnaryCall(
-          getChannel().newCall(METHOD_PING, getCallOptions()), request, responseObserver);
+          getChannel().newCall(getPingMethod(), getCallOptions()), request, responseObserver);
     }
 
     /**
@@ -272,7 +371,7 @@ public final class PlatformGrpc {
     public void health(com.google.protobuf.Empty request,
         io.grpc.stub.StreamObserver<com.google.protobuf.Empty> responseObserver) {
       asyncUnaryCall(
-          getChannel().newCall(METHOD_HEALTH, getCallOptions()), request, responseObserver);
+          getChannel().newCall(getHealthMethod(), getCallOptions()), request, responseObserver);
     }
 
     /**
@@ -283,7 +382,7 @@ public final class PlatformGrpc {
     public void resolve(io.bloombox.schema.services.platform.v1.DomainResolve.Request request,
         io.grpc.stub.StreamObserver<io.bloombox.schema.services.platform.v1.DomainResolve.Response> responseObserver) {
       asyncUnaryCall(
-          getChannel().newCall(METHOD_RESOLVE, getCallOptions()), request, responseObserver);
+          getChannel().newCall(getResolveMethod(), getCallOptions()), request, responseObserver);
     }
 
     /**
@@ -294,7 +393,7 @@ public final class PlatformGrpc {
     public void domains(io.bloombox.schema.services.platform.v1.DomainInfo.Request request,
         io.grpc.stub.StreamObserver<io.bloombox.schema.services.platform.v1.DomainInfo.Response> responseObserver) {
       asyncUnaryCall(
-          getChannel().newCall(METHOD_DOMAINS, getCallOptions()), request, responseObserver);
+          getChannel().newCall(getDomainsMethod(), getCallOptions()), request, responseObserver);
     }
 
     /**
@@ -305,7 +404,7 @@ public final class PlatformGrpc {
     public void brand(io.bloombox.schema.services.platform.v1.BrandInfo.Request request,
         io.grpc.stub.StreamObserver<io.bloombox.schema.services.platform.v1.BrandInfo.Response> responseObserver) {
       asyncUnaryCall(
-          getChannel().newCall(METHOD_BRAND, getCallOptions()), request, responseObserver);
+          getChannel().newCall(getBrandMethod(), getCallOptions()), request, responseObserver);
     }
   }
 
@@ -338,7 +437,7 @@ public final class PlatformGrpc {
      */
     public io.bloombox.schema.services.platform.v1.Ping.Response ping(io.bloombox.schema.services.platform.v1.Ping.Request request) {
       return blockingUnaryCall(
-          getChannel(), METHOD_PING, getCallOptions(), request);
+          getChannel(), getPingMethod(), getCallOptions(), request);
     }
 
     /**
@@ -348,7 +447,7 @@ public final class PlatformGrpc {
      */
     public com.google.protobuf.Empty health(com.google.protobuf.Empty request) {
       return blockingUnaryCall(
-          getChannel(), METHOD_HEALTH, getCallOptions(), request);
+          getChannel(), getHealthMethod(), getCallOptions(), request);
     }
 
     /**
@@ -358,7 +457,7 @@ public final class PlatformGrpc {
      */
     public io.bloombox.schema.services.platform.v1.DomainResolve.Response resolve(io.bloombox.schema.services.platform.v1.DomainResolve.Request request) {
       return blockingUnaryCall(
-          getChannel(), METHOD_RESOLVE, getCallOptions(), request);
+          getChannel(), getResolveMethod(), getCallOptions(), request);
     }
 
     /**
@@ -368,7 +467,7 @@ public final class PlatformGrpc {
      */
     public io.bloombox.schema.services.platform.v1.DomainInfo.Response domains(io.bloombox.schema.services.platform.v1.DomainInfo.Request request) {
       return blockingUnaryCall(
-          getChannel(), METHOD_DOMAINS, getCallOptions(), request);
+          getChannel(), getDomainsMethod(), getCallOptions(), request);
     }
 
     /**
@@ -378,7 +477,7 @@ public final class PlatformGrpc {
      */
     public io.bloombox.schema.services.platform.v1.BrandInfo.Response brand(io.bloombox.schema.services.platform.v1.BrandInfo.Request request) {
       return blockingUnaryCall(
-          getChannel(), METHOD_BRAND, getCallOptions(), request);
+          getChannel(), getBrandMethod(), getCallOptions(), request);
     }
   }
 
@@ -412,7 +511,7 @@ public final class PlatformGrpc {
     public com.google.common.util.concurrent.ListenableFuture<io.bloombox.schema.services.platform.v1.Ping.Response> ping(
         io.bloombox.schema.services.platform.v1.Ping.Request request) {
       return futureUnaryCall(
-          getChannel().newCall(METHOD_PING, getCallOptions()), request);
+          getChannel().newCall(getPingMethod(), getCallOptions()), request);
     }
 
     /**
@@ -423,7 +522,7 @@ public final class PlatformGrpc {
     public com.google.common.util.concurrent.ListenableFuture<com.google.protobuf.Empty> health(
         com.google.protobuf.Empty request) {
       return futureUnaryCall(
-          getChannel().newCall(METHOD_HEALTH, getCallOptions()), request);
+          getChannel().newCall(getHealthMethod(), getCallOptions()), request);
     }
 
     /**
@@ -434,7 +533,7 @@ public final class PlatformGrpc {
     public com.google.common.util.concurrent.ListenableFuture<io.bloombox.schema.services.platform.v1.DomainResolve.Response> resolve(
         io.bloombox.schema.services.platform.v1.DomainResolve.Request request) {
       return futureUnaryCall(
-          getChannel().newCall(METHOD_RESOLVE, getCallOptions()), request);
+          getChannel().newCall(getResolveMethod(), getCallOptions()), request);
     }
 
     /**
@@ -445,7 +544,7 @@ public final class PlatformGrpc {
     public com.google.common.util.concurrent.ListenableFuture<io.bloombox.schema.services.platform.v1.DomainInfo.Response> domains(
         io.bloombox.schema.services.platform.v1.DomainInfo.Request request) {
       return futureUnaryCall(
-          getChannel().newCall(METHOD_DOMAINS, getCallOptions()), request);
+          getChannel().newCall(getDomainsMethod(), getCallOptions()), request);
     }
 
     /**
@@ -456,7 +555,7 @@ public final class PlatformGrpc {
     public com.google.common.util.concurrent.ListenableFuture<io.bloombox.schema.services.platform.v1.BrandInfo.Response> brand(
         io.bloombox.schema.services.platform.v1.BrandInfo.Request request) {
       return futureUnaryCall(
-          getChannel().newCall(METHOD_BRAND, getCallOptions()), request);
+          getChannel().newCall(getBrandMethod(), getCallOptions()), request);
     }
   }
 
@@ -519,10 +618,38 @@ public final class PlatformGrpc {
     }
   }
 
-  private static final class PlatformDescriptorSupplier implements io.grpc.protobuf.ProtoFileDescriptorSupplier {
+  private static abstract class PlatformBaseDescriptorSupplier
+      implements io.grpc.protobuf.ProtoFileDescriptorSupplier, io.grpc.protobuf.ProtoServiceDescriptorSupplier {
+    PlatformBaseDescriptorSupplier() {}
+
     @java.lang.Override
     public com.google.protobuf.Descriptors.FileDescriptor getFileDescriptor() {
       return io.bloombox.schema.services.platform.v1.PlatformServiceV1.getDescriptor();
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Descriptors.ServiceDescriptor getServiceDescriptor() {
+      return getFileDescriptor().findServiceByName("Platform");
+    }
+  }
+
+  private static final class PlatformFileDescriptorSupplier
+      extends PlatformBaseDescriptorSupplier {
+    PlatformFileDescriptorSupplier() {}
+  }
+
+  private static final class PlatformMethodDescriptorSupplier
+      extends PlatformBaseDescriptorSupplier
+      implements io.grpc.protobuf.ProtoMethodDescriptorSupplier {
+    private final String methodName;
+
+    PlatformMethodDescriptorSupplier(String methodName) {
+      this.methodName = methodName;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Descriptors.MethodDescriptor getMethodDescriptor() {
+      return getServiceDescriptor().findMethodByName(methodName);
     }
   }
 
@@ -535,12 +662,12 @@ public final class PlatformGrpc {
         result = serviceDescriptor;
         if (result == null) {
           serviceDescriptor = result = io.grpc.ServiceDescriptor.newBuilder(SERVICE_NAME)
-              .setSchemaDescriptor(new PlatformDescriptorSupplier())
-              .addMethod(METHOD_PING)
-              .addMethod(METHOD_HEALTH)
-              .addMethod(METHOD_RESOLVE)
-              .addMethod(METHOD_DOMAINS)
-              .addMethod(METHOD_BRAND)
+              .setSchemaDescriptor(new PlatformFileDescriptorSupplier())
+              .addMethod(getPingMethod())
+              .addMethod(getHealthMethod())
+              .addMethod(getResolveMethod())
+              .addMethod(getDomainsMethod())
+              .addMethod(getBrandMethod())
               .build();
         }
       }

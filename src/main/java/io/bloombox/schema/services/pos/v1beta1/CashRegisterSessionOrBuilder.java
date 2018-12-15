@@ -1,8 +1,8 @@
 /*
- * Copyright 2018, Bloombox, LLC. All rights reserved.
+ * Copyright 2018, Momentum Ideas, Co. All rights reserved.
  *
  * Source and object computer code contained herein is the private intellectual
- * property of Bloombox, a California Limited Liability Corporation. Use of this
+ * property of Momentum Ideas Co., a Delaware Corporation. Use of this
  * code in source form requires permission in writing before use or the
  * assembly, distribution, or publishing of derivative works, for commercial
  * purposes or any other purpose, from a duly authorized officer of Momentum
@@ -21,7 +21,7 @@
 package io.bloombox.schema.services.pos.v1beta1;
 
 public interface CashRegisterSessionOrBuilder extends
-    // @@protoc_insertion_point(interface_extends:bloombox.schema.services.pos.v1beta1.CashRegisterSession)
+    // @@protoc_insertion_point(interface_extends:bloombox.services.pos.v1beta1.CashRegisterSession)
     com.google.protobuf.MessageOrBuilder {
 
   /**
@@ -47,7 +47,7 @@ public interface CashRegisterSessionOrBuilder extends
    * Specifies the staff user logged in via this operation.
    * </pre>
    *
-   * <code>.bloombox.schema.identity.StaffUser user = 2;</code>
+   * <code>.bloombox.identity.StaffUser user = 2;</code>
    */
   boolean hasUser();
   /**
@@ -55,7 +55,7 @@ public interface CashRegisterSessionOrBuilder extends
    * Specifies the staff user logged in via this operation.
    * </pre>
    *
-   * <code>.bloombox.schema.identity.StaffUser user = 2;</code>
+   * <code>.bloombox.identity.StaffUser user = 2;</code>
    */
   io.bloombox.schema.identity.AppStaff.StaffUser getUser();
   /**
@@ -63,7 +63,7 @@ public interface CashRegisterSessionOrBuilder extends
    * Specifies the staff user logged in via this operation.
    * </pre>
    *
-   * <code>.bloombox.schema.identity.StaffUser user = 2;</code>
+   * <code>.bloombox.identity.StaffUser user = 2;</code>
    */
   io.bloombox.schema.identity.AppStaff.StaffUserOrBuilder getUserOrBuilder();
 
@@ -72,7 +72,7 @@ public interface CashRegisterSessionOrBuilder extends
    * Specifies the current/active status of a particular point of sale session.
    * </pre>
    *
-   * <code>.opencannabis.commerce.SessionStatus status = 3;</code>
+   * <code>.bloombox.pos.SessionStatus status = 3;</code>
    */
   int getStatusValue();
   /**
@@ -80,7 +80,7 @@ public interface CashRegisterSessionOrBuilder extends
    * Specifies the current/active status of a particular point of sale session.
    * </pre>
    *
-   * <code>.opencannabis.commerce.SessionStatus status = 3;</code>
+   * <code>.bloombox.pos.SessionStatus status = 3;</code>
    */
   io.opencannabis.schema.commerce.CommercialPOS.SessionStatus getStatus();
 
@@ -89,7 +89,7 @@ public interface CashRegisterSessionOrBuilder extends
    * Rendered access rights for this partner location.
    * </pre>
    *
-   * <code>.bloombox.schema.identity.IndustryProfile rights = 5;</code>
+   * <code>.bloombox.identity.IndustryProfile rights = 5;</code>
    */
   boolean hasRights();
   /**
@@ -97,7 +97,7 @@ public interface CashRegisterSessionOrBuilder extends
    * Rendered access rights for this partner location.
    * </pre>
    *
-   * <code>.bloombox.schema.identity.IndustryProfile rights = 5;</code>
+   * <code>.bloombox.identity.IndustryProfile rights = 5;</code>
    */
   io.bloombox.schema.identity.AppUser.IndustryProfile getRights();
   /**
@@ -105,7 +105,7 @@ public interface CashRegisterSessionOrBuilder extends
    * Rendered access rights for this partner location.
    * </pre>
    *
-   * <code>.bloombox.schema.identity.IndustryProfile rights = 5;</code>
+   * <code>.bloombox.identity.IndustryProfile rights = 5;</code>
    */
   io.bloombox.schema.identity.AppUser.IndustryProfileOrBuilder getRightsOrBuilder();
 
@@ -114,7 +114,7 @@ public interface CashRegisterSessionOrBuilder extends
    * Authorization grants/tokens issued in response to this authentication transaction.
    * </pre>
    *
-   * <code>repeated .bloombox.schema.services.pos.v1beta1.RegisterSessionToken authorization = 6;</code>
+   * <code>repeated .bloombox.services.pos.v1beta1.RegisterSessionToken authorization = 6;</code>
    */
   java.util.List<io.bloombox.schema.services.pos.v1beta1.RegisterSessionToken> 
       getAuthorizationList();
@@ -123,7 +123,7 @@ public interface CashRegisterSessionOrBuilder extends
    * Authorization grants/tokens issued in response to this authentication transaction.
    * </pre>
    *
-   * <code>repeated .bloombox.schema.services.pos.v1beta1.RegisterSessionToken authorization = 6;</code>
+   * <code>repeated .bloombox.services.pos.v1beta1.RegisterSessionToken authorization = 6;</code>
    */
   io.bloombox.schema.services.pos.v1beta1.RegisterSessionToken getAuthorization(int index);
   /**
@@ -131,7 +131,7 @@ public interface CashRegisterSessionOrBuilder extends
    * Authorization grants/tokens issued in response to this authentication transaction.
    * </pre>
    *
-   * <code>repeated .bloombox.schema.services.pos.v1beta1.RegisterSessionToken authorization = 6;</code>
+   * <code>repeated .bloombox.services.pos.v1beta1.RegisterSessionToken authorization = 6;</code>
    */
   int getAuthorizationCount();
   /**
@@ -139,7 +139,7 @@ public interface CashRegisterSessionOrBuilder extends
    * Authorization grants/tokens issued in response to this authentication transaction.
    * </pre>
    *
-   * <code>repeated .bloombox.schema.services.pos.v1beta1.RegisterSessionToken authorization = 6;</code>
+   * <code>repeated .bloombox.services.pos.v1beta1.RegisterSessionToken authorization = 6;</code>
    */
   java.util.List<? extends io.bloombox.schema.services.pos.v1beta1.RegisterSessionTokenOrBuilder> 
       getAuthorizationOrBuilderList();
@@ -148,7 +148,7 @@ public interface CashRegisterSessionOrBuilder extends
    * Authorization grants/tokens issued in response to this authentication transaction.
    * </pre>
    *
-   * <code>repeated .bloombox.schema.services.pos.v1beta1.RegisterSessionToken authorization = 6;</code>
+   * <code>repeated .bloombox.services.pos.v1beta1.RegisterSessionToken authorization = 6;</code>
    */
   io.bloombox.schema.services.pos.v1beta1.RegisterSessionTokenOrBuilder getAuthorizationOrBuilder(
       int index);
@@ -158,7 +158,7 @@ public interface CashRegisterSessionOrBuilder extends
    * Messaging session configuration, if applicable.
    * </pre>
    *
-   * <code>.bloombox.schema.services.pos.v1beta1.CashRegisterSession.MessagingSession messaging = 7;</code>
+   * <code>.bloombox.services.pos.v1beta1.CashRegisterSession.MessagingSession messaging = 7;</code>
    */
   boolean hasMessaging();
   /**
@@ -166,7 +166,7 @@ public interface CashRegisterSessionOrBuilder extends
    * Messaging session configuration, if applicable.
    * </pre>
    *
-   * <code>.bloombox.schema.services.pos.v1beta1.CashRegisterSession.MessagingSession messaging = 7;</code>
+   * <code>.bloombox.services.pos.v1beta1.CashRegisterSession.MessagingSession messaging = 7;</code>
    */
   io.bloombox.schema.services.pos.v1beta1.CashRegisterSession.MessagingSession getMessaging();
   /**
@@ -174,7 +174,7 @@ public interface CashRegisterSessionOrBuilder extends
    * Messaging session configuration, if applicable.
    * </pre>
    *
-   * <code>.bloombox.schema.services.pos.v1beta1.CashRegisterSession.MessagingSession messaging = 7;</code>
+   * <code>.bloombox.services.pos.v1beta1.CashRegisterSession.MessagingSession messaging = 7;</code>
    */
   io.bloombox.schema.services.pos.v1beta1.CashRegisterSession.MessagingSessionOrBuilder getMessagingOrBuilder();
 

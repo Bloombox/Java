@@ -1,8 +1,8 @@
 /*
- * Copyright 2018, Bloombox, LLC. All rights reserved.
+ * Copyright 2018, Momentum Ideas, Co. All rights reserved.
  *
  * Source and object computer code contained herein is the private intellectual
- * property of Bloombox, a California Limited Liability Corporation. Use of this
+ * property of Momentum Ideas Co., a Delaware Corporation. Use of this
  * code in source form requires permission in writing before use or the
  * assembly, distribution, or publishing of derivative works, for commercial
  * purposes or any other purpose, from a duly authorized officer of Momentum
@@ -26,11 +26,11 @@ package io.bloombox.schema.services.ledger.v1beta1;
  * an individual actor key.
  * </pre>
  *
- * Protobuf type {@code bloombox.schema.services.ledger.v1beta1.AccountHoldings}
+ * Protobuf type {@code bloombox.services.ledger.v1beta1.AccountHoldings}
  */
 public  final class AccountHoldings extends
     com.google.protobuf.GeneratedMessageV3 implements
-    // @@protoc_insertion_point(message_implements:bloombox.schema.services.ledger.v1beta1.AccountHoldings)
+    // @@protoc_insertion_point(message_implements:bloombox.services.ledger.v1beta1.AccountHoldings)
     AccountHoldingsOrBuilder {
 private static final long serialVersionUID = 0L;
   // Use AccountHoldings.newBuilder() to construct.
@@ -84,18 +84,19 @@ private static final long serialVersionUID = 0L;
   }
   public static final com.google.protobuf.Descriptors.Descriptor
       getDescriptor() {
-    return io.bloombox.schema.services.ledger.v1beta1.LedgerServiceBeta1.internal_static_bloombox_schema_services_ledger_v1beta1_AccountHoldings_descriptor;
+    return io.bloombox.schema.services.ledger.v1beta1.LedgerServiceBeta1.internal_static_bloombox_services_ledger_v1beta1_AccountHoldings_descriptor;
   }
 
+  @java.lang.Override
   protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internalGetFieldAccessorTable() {
-    return io.bloombox.schema.services.ledger.v1beta1.LedgerServiceBeta1.internal_static_bloombox_schema_services_ledger_v1beta1_AccountHoldings_fieldAccessorTable
+    return io.bloombox.schema.services.ledger.v1beta1.LedgerServiceBeta1.internal_static_bloombox_services_ledger_v1beta1_AccountHoldings_fieldAccessorTable
         .ensureFieldAccessorsInitialized(
             io.bloombox.schema.services.ledger.v1beta1.AccountHoldings.class, io.bloombox.schema.services.ledger.v1beta1.AccountHoldings.Builder.class);
   }
 
   public interface RequestOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:bloombox.schema.services.ledger.v1beta1.AccountHoldings.Request)
+      // @@protoc_insertion_point(interface_extends:bloombox.services.ledger.v1beta1.AccountHoldings.Request)
       com.google.protobuf.MessageOrBuilder {
 
     /**
@@ -103,7 +104,7 @@ private static final long serialVersionUID = 0L;
      * Account we are requesting holdings for.
      * </pre>
      *
-     * <code>.bloombox.schema.ledger.LedgerIdentity account = 1;</code>
+     * <code>.bloombox.ledger.LedgerIdentity account = 1;</code>
      */
     boolean hasAccount();
     /**
@@ -111,7 +112,7 @@ private static final long serialVersionUID = 0L;
      * Account we are requesting holdings for.
      * </pre>
      *
-     * <code>.bloombox.schema.ledger.LedgerIdentity account = 1;</code>
+     * <code>.bloombox.ledger.LedgerIdentity account = 1;</code>
      */
     io.bloombox.schema.ledger.Accounts.LedgerIdentity getAccount();
     /**
@@ -119,7 +120,7 @@ private static final long serialVersionUID = 0L;
      * Account we are requesting holdings for.
      * </pre>
      *
-     * <code>.bloombox.schema.ledger.LedgerIdentity account = 1;</code>
+     * <code>.bloombox.ledger.LedgerIdentity account = 1;</code>
      */
     io.bloombox.schema.ledger.Accounts.LedgerIdentityOrBuilder getAccountOrBuilder();
   }
@@ -128,11 +129,11 @@ private static final long serialVersionUID = 0L;
    * Specifies a request to retrieve an individual account's current holdings.
    * </pre>
    *
-   * Protobuf type {@code bloombox.schema.services.ledger.v1beta1.AccountHoldings.Request}
+   * Protobuf type {@code bloombox.services.ledger.v1beta1.AccountHoldings.Request}
    */
   public  static final class Request extends
       com.google.protobuf.GeneratedMessageV3 implements
-      // @@protoc_insertion_point(message_implements:bloombox.schema.services.ledger.v1beta1.AccountHoldings.Request)
+      // @@protoc_insertion_point(message_implements:bloombox.services.ledger.v1beta1.AccountHoldings.Request)
       RequestOrBuilder {
   private static final long serialVersionUID = 0L;
     // Use Request.newBuilder() to construct.
@@ -166,13 +167,6 @@ private static final long serialVersionUID = 0L;
             case 0:
               done = true;
               break;
-            default: {
-              if (!parseUnknownFieldProto3(
-                  input, unknownFields, extensionRegistry, tag)) {
-                done = true;
-              }
-              break;
-            }
             case 10: {
               io.bloombox.schema.ledger.Accounts.LedgerIdentity.Builder subBuilder = null;
               if (account_ != null) {
@@ -184,6 +178,13 @@ private static final long serialVersionUID = 0L;
                 account_ = subBuilder.buildPartial();
               }
 
+              break;
+            }
+            default: {
+              if (!parseUnknownFieldProto3(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
               break;
             }
           }
@@ -200,12 +201,13 @@ private static final long serialVersionUID = 0L;
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return io.bloombox.schema.services.ledger.v1beta1.LedgerServiceBeta1.internal_static_bloombox_schema_services_ledger_v1beta1_AccountHoldings_Request_descriptor;
+      return io.bloombox.schema.services.ledger.v1beta1.LedgerServiceBeta1.internal_static_bloombox_services_ledger_v1beta1_AccountHoldings_Request_descriptor;
     }
 
+    @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return io.bloombox.schema.services.ledger.v1beta1.LedgerServiceBeta1.internal_static_bloombox_schema_services_ledger_v1beta1_AccountHoldings_Request_fieldAccessorTable
+      return io.bloombox.schema.services.ledger.v1beta1.LedgerServiceBeta1.internal_static_bloombox_services_ledger_v1beta1_AccountHoldings_Request_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
               io.bloombox.schema.services.ledger.v1beta1.AccountHoldings.Request.class, io.bloombox.schema.services.ledger.v1beta1.AccountHoldings.Request.Builder.class);
     }
@@ -217,7 +219,7 @@ private static final long serialVersionUID = 0L;
      * Account we are requesting holdings for.
      * </pre>
      *
-     * <code>.bloombox.schema.ledger.LedgerIdentity account = 1;</code>
+     * <code>.bloombox.ledger.LedgerIdentity account = 1;</code>
      */
     public boolean hasAccount() {
       return account_ != null;
@@ -227,7 +229,7 @@ private static final long serialVersionUID = 0L;
      * Account we are requesting holdings for.
      * </pre>
      *
-     * <code>.bloombox.schema.ledger.LedgerIdentity account = 1;</code>
+     * <code>.bloombox.ledger.LedgerIdentity account = 1;</code>
      */
     public io.bloombox.schema.ledger.Accounts.LedgerIdentity getAccount() {
       return account_ == null ? io.bloombox.schema.ledger.Accounts.LedgerIdentity.getDefaultInstance() : account_;
@@ -237,13 +239,14 @@ private static final long serialVersionUID = 0L;
      * Account we are requesting holdings for.
      * </pre>
      *
-     * <code>.bloombox.schema.ledger.LedgerIdentity account = 1;</code>
+     * <code>.bloombox.ledger.LedgerIdentity account = 1;</code>
      */
     public io.bloombox.schema.ledger.Accounts.LedgerIdentityOrBuilder getAccountOrBuilder() {
       return getAccount();
     }
 
     private byte memoizedIsInitialized = -1;
+    @java.lang.Override
     public final boolean isInitialized() {
       byte isInitialized = memoizedIsInitialized;
       if (isInitialized == 1) return true;
@@ -253,6 +256,7 @@ private static final long serialVersionUID = 0L;
       return true;
     }
 
+    @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
       if (account_ != null) {
@@ -261,6 +265,7 @@ private static final long serialVersionUID = 0L;
       unknownFields.writeTo(output);
     }
 
+    @java.lang.Override
     public int getSerializedSize() {
       int size = memoizedSize;
       if (size != -1) return size;
@@ -381,6 +386,7 @@ private static final long serialVersionUID = 0L;
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
 
+    @java.lang.Override
     public Builder newBuilderForType() { return newBuilder(); }
     public static Builder newBuilder() {
       return DEFAULT_INSTANCE.toBuilder();
@@ -388,6 +394,7 @@ private static final long serialVersionUID = 0L;
     public static Builder newBuilder(io.bloombox.schema.services.ledger.v1beta1.AccountHoldings.Request prototype) {
       return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
     }
+    @java.lang.Override
     public Builder toBuilder() {
       return this == DEFAULT_INSTANCE
           ? new Builder() : new Builder().mergeFrom(this);
@@ -404,20 +411,21 @@ private static final long serialVersionUID = 0L;
      * Specifies a request to retrieve an individual account's current holdings.
      * </pre>
      *
-     * Protobuf type {@code bloombox.schema.services.ledger.v1beta1.AccountHoldings.Request}
+     * Protobuf type {@code bloombox.services.ledger.v1beta1.AccountHoldings.Request}
      */
     public static final class Builder extends
         com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:bloombox.schema.services.ledger.v1beta1.AccountHoldings.Request)
+        // @@protoc_insertion_point(builder_implements:bloombox.services.ledger.v1beta1.AccountHoldings.Request)
         io.bloombox.schema.services.ledger.v1beta1.AccountHoldings.RequestOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return io.bloombox.schema.services.ledger.v1beta1.LedgerServiceBeta1.internal_static_bloombox_schema_services_ledger_v1beta1_AccountHoldings_Request_descriptor;
+        return io.bloombox.schema.services.ledger.v1beta1.LedgerServiceBeta1.internal_static_bloombox_services_ledger_v1beta1_AccountHoldings_Request_descriptor;
       }
 
+      @java.lang.Override
       protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return io.bloombox.schema.services.ledger.v1beta1.LedgerServiceBeta1.internal_static_bloombox_schema_services_ledger_v1beta1_AccountHoldings_Request_fieldAccessorTable
+        return io.bloombox.schema.services.ledger.v1beta1.LedgerServiceBeta1.internal_static_bloombox_services_ledger_v1beta1_AccountHoldings_Request_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
                 io.bloombox.schema.services.ledger.v1beta1.AccountHoldings.Request.class, io.bloombox.schema.services.ledger.v1beta1.AccountHoldings.Request.Builder.class);
       }
@@ -437,6 +445,7 @@ private static final long serialVersionUID = 0L;
                 .alwaysUseFieldBuilders) {
         }
       }
+      @java.lang.Override
       public Builder clear() {
         super.clear();
         if (accountBuilder_ == null) {
@@ -448,15 +457,18 @@ private static final long serialVersionUID = 0L;
         return this;
       }
 
+      @java.lang.Override
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return io.bloombox.schema.services.ledger.v1beta1.LedgerServiceBeta1.internal_static_bloombox_schema_services_ledger_v1beta1_AccountHoldings_Request_descriptor;
+        return io.bloombox.schema.services.ledger.v1beta1.LedgerServiceBeta1.internal_static_bloombox_services_ledger_v1beta1_AccountHoldings_Request_descriptor;
       }
 
+      @java.lang.Override
       public io.bloombox.schema.services.ledger.v1beta1.AccountHoldings.Request getDefaultInstanceForType() {
         return io.bloombox.schema.services.ledger.v1beta1.AccountHoldings.Request.getDefaultInstance();
       }
 
+      @java.lang.Override
       public io.bloombox.schema.services.ledger.v1beta1.AccountHoldings.Request build() {
         io.bloombox.schema.services.ledger.v1beta1.AccountHoldings.Request result = buildPartial();
         if (!result.isInitialized()) {
@@ -465,6 +477,7 @@ private static final long serialVersionUID = 0L;
         return result;
       }
 
+      @java.lang.Override
       public io.bloombox.schema.services.ledger.v1beta1.AccountHoldings.Request buildPartial() {
         io.bloombox.schema.services.ledger.v1beta1.AccountHoldings.Request result = new io.bloombox.schema.services.ledger.v1beta1.AccountHoldings.Request(this);
         if (accountBuilder_ == null) {
@@ -476,32 +489,39 @@ private static final long serialVersionUID = 0L;
         return result;
       }
 
+      @java.lang.Override
       public Builder clone() {
         return (Builder) super.clone();
       }
+      @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
         return (Builder) super.setField(field, value);
       }
+      @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
         return (Builder) super.clearField(field);
       }
+      @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
         return (Builder) super.clearOneof(oneof);
       }
+      @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
         return (Builder) super.setRepeatedField(field, index, value);
       }
+      @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
         return (Builder) super.addRepeatedField(field, value);
       }
+      @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
         if (other instanceof io.bloombox.schema.services.ledger.v1beta1.AccountHoldings.Request) {
           return mergeFrom((io.bloombox.schema.services.ledger.v1beta1.AccountHoldings.Request)other);
@@ -521,10 +541,12 @@ private static final long serialVersionUID = 0L;
         return this;
       }
 
+      @java.lang.Override
       public final boolean isInitialized() {
         return true;
       }
 
+      @java.lang.Override
       public Builder mergeFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -551,7 +573,7 @@ private static final long serialVersionUID = 0L;
        * Account we are requesting holdings for.
        * </pre>
        *
-       * <code>.bloombox.schema.ledger.LedgerIdentity account = 1;</code>
+       * <code>.bloombox.ledger.LedgerIdentity account = 1;</code>
        */
       public boolean hasAccount() {
         return accountBuilder_ != null || account_ != null;
@@ -561,7 +583,7 @@ private static final long serialVersionUID = 0L;
        * Account we are requesting holdings for.
        * </pre>
        *
-       * <code>.bloombox.schema.ledger.LedgerIdentity account = 1;</code>
+       * <code>.bloombox.ledger.LedgerIdentity account = 1;</code>
        */
       public io.bloombox.schema.ledger.Accounts.LedgerIdentity getAccount() {
         if (accountBuilder_ == null) {
@@ -575,7 +597,7 @@ private static final long serialVersionUID = 0L;
        * Account we are requesting holdings for.
        * </pre>
        *
-       * <code>.bloombox.schema.ledger.LedgerIdentity account = 1;</code>
+       * <code>.bloombox.ledger.LedgerIdentity account = 1;</code>
        */
       public Builder setAccount(io.bloombox.schema.ledger.Accounts.LedgerIdentity value) {
         if (accountBuilder_ == null) {
@@ -595,7 +617,7 @@ private static final long serialVersionUID = 0L;
        * Account we are requesting holdings for.
        * </pre>
        *
-       * <code>.bloombox.schema.ledger.LedgerIdentity account = 1;</code>
+       * <code>.bloombox.ledger.LedgerIdentity account = 1;</code>
        */
       public Builder setAccount(
           io.bloombox.schema.ledger.Accounts.LedgerIdentity.Builder builderForValue) {
@@ -613,7 +635,7 @@ private static final long serialVersionUID = 0L;
        * Account we are requesting holdings for.
        * </pre>
        *
-       * <code>.bloombox.schema.ledger.LedgerIdentity account = 1;</code>
+       * <code>.bloombox.ledger.LedgerIdentity account = 1;</code>
        */
       public Builder mergeAccount(io.bloombox.schema.ledger.Accounts.LedgerIdentity value) {
         if (accountBuilder_ == null) {
@@ -635,7 +657,7 @@ private static final long serialVersionUID = 0L;
        * Account we are requesting holdings for.
        * </pre>
        *
-       * <code>.bloombox.schema.ledger.LedgerIdentity account = 1;</code>
+       * <code>.bloombox.ledger.LedgerIdentity account = 1;</code>
        */
       public Builder clearAccount() {
         if (accountBuilder_ == null) {
@@ -653,7 +675,7 @@ private static final long serialVersionUID = 0L;
        * Account we are requesting holdings for.
        * </pre>
        *
-       * <code>.bloombox.schema.ledger.LedgerIdentity account = 1;</code>
+       * <code>.bloombox.ledger.LedgerIdentity account = 1;</code>
        */
       public io.bloombox.schema.ledger.Accounts.LedgerIdentity.Builder getAccountBuilder() {
         
@@ -665,7 +687,7 @@ private static final long serialVersionUID = 0L;
        * Account we are requesting holdings for.
        * </pre>
        *
-       * <code>.bloombox.schema.ledger.LedgerIdentity account = 1;</code>
+       * <code>.bloombox.ledger.LedgerIdentity account = 1;</code>
        */
       public io.bloombox.schema.ledger.Accounts.LedgerIdentityOrBuilder getAccountOrBuilder() {
         if (accountBuilder_ != null) {
@@ -680,7 +702,7 @@ private static final long serialVersionUID = 0L;
        * Account we are requesting holdings for.
        * </pre>
        *
-       * <code>.bloombox.schema.ledger.LedgerIdentity account = 1;</code>
+       * <code>.bloombox.ledger.LedgerIdentity account = 1;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
           io.bloombox.schema.ledger.Accounts.LedgerIdentity, io.bloombox.schema.ledger.Accounts.LedgerIdentity.Builder, io.bloombox.schema.ledger.Accounts.LedgerIdentityOrBuilder> 
@@ -695,21 +717,23 @@ private static final long serialVersionUID = 0L;
         }
         return accountBuilder_;
       }
+      @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
         return super.setUnknownFieldsProto3(unknownFields);
       }
 
+      @java.lang.Override
       public final Builder mergeUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
         return super.mergeUnknownFields(unknownFields);
       }
 
 
-      // @@protoc_insertion_point(builder_scope:bloombox.schema.services.ledger.v1beta1.AccountHoldings.Request)
+      // @@protoc_insertion_point(builder_scope:bloombox.services.ledger.v1beta1.AccountHoldings.Request)
     }
 
-    // @@protoc_insertion_point(class_scope:bloombox.schema.services.ledger.v1beta1.AccountHoldings.Request)
+    // @@protoc_insertion_point(class_scope:bloombox.services.ledger.v1beta1.AccountHoldings.Request)
     private static final io.bloombox.schema.services.ledger.v1beta1.AccountHoldings.Request DEFAULT_INSTANCE;
     static {
       DEFAULT_INSTANCE = new io.bloombox.schema.services.ledger.v1beta1.AccountHoldings.Request();
@@ -721,6 +745,7 @@ private static final long serialVersionUID = 0L;
 
     private static final com.google.protobuf.Parser<Request>
         PARSER = new com.google.protobuf.AbstractParser<Request>() {
+      @java.lang.Override
       public Request parsePartialFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -738,6 +763,7 @@ private static final long serialVersionUID = 0L;
       return PARSER;
     }
 
+    @java.lang.Override
     public io.bloombox.schema.services.ledger.v1beta1.AccountHoldings.Request getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
@@ -745,7 +771,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public interface ResponseOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:bloombox.schema.services.ledger.v1beta1.AccountHoldings.Response)
+      // @@protoc_insertion_point(interface_extends:bloombox.services.ledger.v1beta1.AccountHoldings.Response)
       com.google.protobuf.MessageOrBuilder {
 
     /**
@@ -753,7 +779,7 @@ private static final long serialVersionUID = 0L;
      * Resulting assets, returned because they are held by the specified account.
      * </pre>
      *
-     * <code>repeated .bloombox.schema.ledger.AssetKey asset = 1;</code>
+     * <code>repeated .bloombox.ledger.AssetKey asset = 1;</code>
      */
     java.util.List<io.bloombox.schema.ledger.Assets.AssetKey> 
         getAssetList();
@@ -762,7 +788,7 @@ private static final long serialVersionUID = 0L;
      * Resulting assets, returned because they are held by the specified account.
      * </pre>
      *
-     * <code>repeated .bloombox.schema.ledger.AssetKey asset = 1;</code>
+     * <code>repeated .bloombox.ledger.AssetKey asset = 1;</code>
      */
     io.bloombox.schema.ledger.Assets.AssetKey getAsset(int index);
     /**
@@ -770,7 +796,7 @@ private static final long serialVersionUID = 0L;
      * Resulting assets, returned because they are held by the specified account.
      * </pre>
      *
-     * <code>repeated .bloombox.schema.ledger.AssetKey asset = 1;</code>
+     * <code>repeated .bloombox.ledger.AssetKey asset = 1;</code>
      */
     int getAssetCount();
     /**
@@ -778,7 +804,7 @@ private static final long serialVersionUID = 0L;
      * Resulting assets, returned because they are held by the specified account.
      * </pre>
      *
-     * <code>repeated .bloombox.schema.ledger.AssetKey asset = 1;</code>
+     * <code>repeated .bloombox.ledger.AssetKey asset = 1;</code>
      */
     java.util.List<? extends io.bloombox.schema.ledger.Assets.AssetKeyOrBuilder> 
         getAssetOrBuilderList();
@@ -787,7 +813,7 @@ private static final long serialVersionUID = 0L;
      * Resulting assets, returned because they are held by the specified account.
      * </pre>
      *
-     * <code>repeated .bloombox.schema.ledger.AssetKey asset = 1;</code>
+     * <code>repeated .bloombox.ledger.AssetKey asset = 1;</code>
      */
     io.bloombox.schema.ledger.Assets.AssetKeyOrBuilder getAssetOrBuilder(
         int index);
@@ -797,11 +823,11 @@ private static final long serialVersionUID = 0L;
    * Specifies a response to a request to retrieve an individual account's current holdings.
    * </pre>
    *
-   * Protobuf type {@code bloombox.schema.services.ledger.v1beta1.AccountHoldings.Response}
+   * Protobuf type {@code bloombox.services.ledger.v1beta1.AccountHoldings.Response}
    */
   public  static final class Response extends
       com.google.protobuf.GeneratedMessageV3 implements
-      // @@protoc_insertion_point(message_implements:bloombox.schema.services.ledger.v1beta1.AccountHoldings.Response)
+      // @@protoc_insertion_point(message_implements:bloombox.services.ledger.v1beta1.AccountHoldings.Response)
       ResponseOrBuilder {
   private static final long serialVersionUID = 0L;
     // Use Response.newBuilder() to construct.
@@ -836,13 +862,6 @@ private static final long serialVersionUID = 0L;
             case 0:
               done = true;
               break;
-            default: {
-              if (!parseUnknownFieldProto3(
-                  input, unknownFields, extensionRegistry, tag)) {
-                done = true;
-              }
-              break;
-            }
             case 10: {
               if (!((mutable_bitField0_ & 0x00000001) == 0x00000001)) {
                 asset_ = new java.util.ArrayList<io.bloombox.schema.ledger.Assets.AssetKey>();
@@ -850,6 +869,13 @@ private static final long serialVersionUID = 0L;
               }
               asset_.add(
                   input.readMessage(io.bloombox.schema.ledger.Assets.AssetKey.parser(), extensionRegistry));
+              break;
+            }
+            default: {
+              if (!parseUnknownFieldProto3(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
               break;
             }
           }
@@ -869,12 +895,13 @@ private static final long serialVersionUID = 0L;
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return io.bloombox.schema.services.ledger.v1beta1.LedgerServiceBeta1.internal_static_bloombox_schema_services_ledger_v1beta1_AccountHoldings_Response_descriptor;
+      return io.bloombox.schema.services.ledger.v1beta1.LedgerServiceBeta1.internal_static_bloombox_services_ledger_v1beta1_AccountHoldings_Response_descriptor;
     }
 
+    @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return io.bloombox.schema.services.ledger.v1beta1.LedgerServiceBeta1.internal_static_bloombox_schema_services_ledger_v1beta1_AccountHoldings_Response_fieldAccessorTable
+      return io.bloombox.schema.services.ledger.v1beta1.LedgerServiceBeta1.internal_static_bloombox_services_ledger_v1beta1_AccountHoldings_Response_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
               io.bloombox.schema.services.ledger.v1beta1.AccountHoldings.Response.class, io.bloombox.schema.services.ledger.v1beta1.AccountHoldings.Response.Builder.class);
     }
@@ -886,7 +913,7 @@ private static final long serialVersionUID = 0L;
      * Resulting assets, returned because they are held by the specified account.
      * </pre>
      *
-     * <code>repeated .bloombox.schema.ledger.AssetKey asset = 1;</code>
+     * <code>repeated .bloombox.ledger.AssetKey asset = 1;</code>
      */
     public java.util.List<io.bloombox.schema.ledger.Assets.AssetKey> getAssetList() {
       return asset_;
@@ -896,7 +923,7 @@ private static final long serialVersionUID = 0L;
      * Resulting assets, returned because they are held by the specified account.
      * </pre>
      *
-     * <code>repeated .bloombox.schema.ledger.AssetKey asset = 1;</code>
+     * <code>repeated .bloombox.ledger.AssetKey asset = 1;</code>
      */
     public java.util.List<? extends io.bloombox.schema.ledger.Assets.AssetKeyOrBuilder> 
         getAssetOrBuilderList() {
@@ -907,7 +934,7 @@ private static final long serialVersionUID = 0L;
      * Resulting assets, returned because they are held by the specified account.
      * </pre>
      *
-     * <code>repeated .bloombox.schema.ledger.AssetKey asset = 1;</code>
+     * <code>repeated .bloombox.ledger.AssetKey asset = 1;</code>
      */
     public int getAssetCount() {
       return asset_.size();
@@ -917,7 +944,7 @@ private static final long serialVersionUID = 0L;
      * Resulting assets, returned because they are held by the specified account.
      * </pre>
      *
-     * <code>repeated .bloombox.schema.ledger.AssetKey asset = 1;</code>
+     * <code>repeated .bloombox.ledger.AssetKey asset = 1;</code>
      */
     public io.bloombox.schema.ledger.Assets.AssetKey getAsset(int index) {
       return asset_.get(index);
@@ -927,7 +954,7 @@ private static final long serialVersionUID = 0L;
      * Resulting assets, returned because they are held by the specified account.
      * </pre>
      *
-     * <code>repeated .bloombox.schema.ledger.AssetKey asset = 1;</code>
+     * <code>repeated .bloombox.ledger.AssetKey asset = 1;</code>
      */
     public io.bloombox.schema.ledger.Assets.AssetKeyOrBuilder getAssetOrBuilder(
         int index) {
@@ -935,6 +962,7 @@ private static final long serialVersionUID = 0L;
     }
 
     private byte memoizedIsInitialized = -1;
+    @java.lang.Override
     public final boolean isInitialized() {
       byte isInitialized = memoizedIsInitialized;
       if (isInitialized == 1) return true;
@@ -944,6 +972,7 @@ private static final long serialVersionUID = 0L;
       return true;
     }
 
+    @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
       for (int i = 0; i < asset_.size(); i++) {
@@ -952,6 +981,7 @@ private static final long serialVersionUID = 0L;
       unknownFields.writeTo(output);
     }
 
+    @java.lang.Override
     public int getSerializedSize() {
       int size = memoizedSize;
       if (size != -1) return size;
@@ -1069,6 +1099,7 @@ private static final long serialVersionUID = 0L;
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
 
+    @java.lang.Override
     public Builder newBuilderForType() { return newBuilder(); }
     public static Builder newBuilder() {
       return DEFAULT_INSTANCE.toBuilder();
@@ -1076,6 +1107,7 @@ private static final long serialVersionUID = 0L;
     public static Builder newBuilder(io.bloombox.schema.services.ledger.v1beta1.AccountHoldings.Response prototype) {
       return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
     }
+    @java.lang.Override
     public Builder toBuilder() {
       return this == DEFAULT_INSTANCE
           ? new Builder() : new Builder().mergeFrom(this);
@@ -1092,20 +1124,21 @@ private static final long serialVersionUID = 0L;
      * Specifies a response to a request to retrieve an individual account's current holdings.
      * </pre>
      *
-     * Protobuf type {@code bloombox.schema.services.ledger.v1beta1.AccountHoldings.Response}
+     * Protobuf type {@code bloombox.services.ledger.v1beta1.AccountHoldings.Response}
      */
     public static final class Builder extends
         com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:bloombox.schema.services.ledger.v1beta1.AccountHoldings.Response)
+        // @@protoc_insertion_point(builder_implements:bloombox.services.ledger.v1beta1.AccountHoldings.Response)
         io.bloombox.schema.services.ledger.v1beta1.AccountHoldings.ResponseOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return io.bloombox.schema.services.ledger.v1beta1.LedgerServiceBeta1.internal_static_bloombox_schema_services_ledger_v1beta1_AccountHoldings_Response_descriptor;
+        return io.bloombox.schema.services.ledger.v1beta1.LedgerServiceBeta1.internal_static_bloombox_services_ledger_v1beta1_AccountHoldings_Response_descriptor;
       }
 
+      @java.lang.Override
       protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return io.bloombox.schema.services.ledger.v1beta1.LedgerServiceBeta1.internal_static_bloombox_schema_services_ledger_v1beta1_AccountHoldings_Response_fieldAccessorTable
+        return io.bloombox.schema.services.ledger.v1beta1.LedgerServiceBeta1.internal_static_bloombox_services_ledger_v1beta1_AccountHoldings_Response_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
                 io.bloombox.schema.services.ledger.v1beta1.AccountHoldings.Response.class, io.bloombox.schema.services.ledger.v1beta1.AccountHoldings.Response.Builder.class);
       }
@@ -1126,6 +1159,7 @@ private static final long serialVersionUID = 0L;
           getAssetFieldBuilder();
         }
       }
+      @java.lang.Override
       public Builder clear() {
         super.clear();
         if (assetBuilder_ == null) {
@@ -1137,15 +1171,18 @@ private static final long serialVersionUID = 0L;
         return this;
       }
 
+      @java.lang.Override
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return io.bloombox.schema.services.ledger.v1beta1.LedgerServiceBeta1.internal_static_bloombox_schema_services_ledger_v1beta1_AccountHoldings_Response_descriptor;
+        return io.bloombox.schema.services.ledger.v1beta1.LedgerServiceBeta1.internal_static_bloombox_services_ledger_v1beta1_AccountHoldings_Response_descriptor;
       }
 
+      @java.lang.Override
       public io.bloombox.schema.services.ledger.v1beta1.AccountHoldings.Response getDefaultInstanceForType() {
         return io.bloombox.schema.services.ledger.v1beta1.AccountHoldings.Response.getDefaultInstance();
       }
 
+      @java.lang.Override
       public io.bloombox.schema.services.ledger.v1beta1.AccountHoldings.Response build() {
         io.bloombox.schema.services.ledger.v1beta1.AccountHoldings.Response result = buildPartial();
         if (!result.isInitialized()) {
@@ -1154,6 +1191,7 @@ private static final long serialVersionUID = 0L;
         return result;
       }
 
+      @java.lang.Override
       public io.bloombox.schema.services.ledger.v1beta1.AccountHoldings.Response buildPartial() {
         io.bloombox.schema.services.ledger.v1beta1.AccountHoldings.Response result = new io.bloombox.schema.services.ledger.v1beta1.AccountHoldings.Response(this);
         int from_bitField0_ = bitField0_;
@@ -1170,32 +1208,39 @@ private static final long serialVersionUID = 0L;
         return result;
       }
 
+      @java.lang.Override
       public Builder clone() {
         return (Builder) super.clone();
       }
+      @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
         return (Builder) super.setField(field, value);
       }
+      @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
         return (Builder) super.clearField(field);
       }
+      @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
         return (Builder) super.clearOneof(oneof);
       }
+      @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
         return (Builder) super.setRepeatedField(field, index, value);
       }
+      @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
         return (Builder) super.addRepeatedField(field, value);
       }
+      @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
         if (other instanceof io.bloombox.schema.services.ledger.v1beta1.AccountHoldings.Response) {
           return mergeFrom((io.bloombox.schema.services.ledger.v1beta1.AccountHoldings.Response)other);
@@ -1238,10 +1283,12 @@ private static final long serialVersionUID = 0L;
         return this;
       }
 
+      @java.lang.Override
       public final boolean isInitialized() {
         return true;
       }
 
+      @java.lang.Override
       public Builder mergeFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -1278,7 +1325,7 @@ private static final long serialVersionUID = 0L;
        * Resulting assets, returned because they are held by the specified account.
        * </pre>
        *
-       * <code>repeated .bloombox.schema.ledger.AssetKey asset = 1;</code>
+       * <code>repeated .bloombox.ledger.AssetKey asset = 1;</code>
        */
       public java.util.List<io.bloombox.schema.ledger.Assets.AssetKey> getAssetList() {
         if (assetBuilder_ == null) {
@@ -1292,7 +1339,7 @@ private static final long serialVersionUID = 0L;
        * Resulting assets, returned because they are held by the specified account.
        * </pre>
        *
-       * <code>repeated .bloombox.schema.ledger.AssetKey asset = 1;</code>
+       * <code>repeated .bloombox.ledger.AssetKey asset = 1;</code>
        */
       public int getAssetCount() {
         if (assetBuilder_ == null) {
@@ -1306,7 +1353,7 @@ private static final long serialVersionUID = 0L;
        * Resulting assets, returned because they are held by the specified account.
        * </pre>
        *
-       * <code>repeated .bloombox.schema.ledger.AssetKey asset = 1;</code>
+       * <code>repeated .bloombox.ledger.AssetKey asset = 1;</code>
        */
       public io.bloombox.schema.ledger.Assets.AssetKey getAsset(int index) {
         if (assetBuilder_ == null) {
@@ -1320,7 +1367,7 @@ private static final long serialVersionUID = 0L;
        * Resulting assets, returned because they are held by the specified account.
        * </pre>
        *
-       * <code>repeated .bloombox.schema.ledger.AssetKey asset = 1;</code>
+       * <code>repeated .bloombox.ledger.AssetKey asset = 1;</code>
        */
       public Builder setAsset(
           int index, io.bloombox.schema.ledger.Assets.AssetKey value) {
@@ -1341,7 +1388,7 @@ private static final long serialVersionUID = 0L;
        * Resulting assets, returned because they are held by the specified account.
        * </pre>
        *
-       * <code>repeated .bloombox.schema.ledger.AssetKey asset = 1;</code>
+       * <code>repeated .bloombox.ledger.AssetKey asset = 1;</code>
        */
       public Builder setAsset(
           int index, io.bloombox.schema.ledger.Assets.AssetKey.Builder builderForValue) {
@@ -1359,7 +1406,7 @@ private static final long serialVersionUID = 0L;
        * Resulting assets, returned because they are held by the specified account.
        * </pre>
        *
-       * <code>repeated .bloombox.schema.ledger.AssetKey asset = 1;</code>
+       * <code>repeated .bloombox.ledger.AssetKey asset = 1;</code>
        */
       public Builder addAsset(io.bloombox.schema.ledger.Assets.AssetKey value) {
         if (assetBuilder_ == null) {
@@ -1379,7 +1426,7 @@ private static final long serialVersionUID = 0L;
        * Resulting assets, returned because they are held by the specified account.
        * </pre>
        *
-       * <code>repeated .bloombox.schema.ledger.AssetKey asset = 1;</code>
+       * <code>repeated .bloombox.ledger.AssetKey asset = 1;</code>
        */
       public Builder addAsset(
           int index, io.bloombox.schema.ledger.Assets.AssetKey value) {
@@ -1400,7 +1447,7 @@ private static final long serialVersionUID = 0L;
        * Resulting assets, returned because they are held by the specified account.
        * </pre>
        *
-       * <code>repeated .bloombox.schema.ledger.AssetKey asset = 1;</code>
+       * <code>repeated .bloombox.ledger.AssetKey asset = 1;</code>
        */
       public Builder addAsset(
           io.bloombox.schema.ledger.Assets.AssetKey.Builder builderForValue) {
@@ -1418,7 +1465,7 @@ private static final long serialVersionUID = 0L;
        * Resulting assets, returned because they are held by the specified account.
        * </pre>
        *
-       * <code>repeated .bloombox.schema.ledger.AssetKey asset = 1;</code>
+       * <code>repeated .bloombox.ledger.AssetKey asset = 1;</code>
        */
       public Builder addAsset(
           int index, io.bloombox.schema.ledger.Assets.AssetKey.Builder builderForValue) {
@@ -1436,7 +1483,7 @@ private static final long serialVersionUID = 0L;
        * Resulting assets, returned because they are held by the specified account.
        * </pre>
        *
-       * <code>repeated .bloombox.schema.ledger.AssetKey asset = 1;</code>
+       * <code>repeated .bloombox.ledger.AssetKey asset = 1;</code>
        */
       public Builder addAllAsset(
           java.lang.Iterable<? extends io.bloombox.schema.ledger.Assets.AssetKey> values) {
@@ -1455,7 +1502,7 @@ private static final long serialVersionUID = 0L;
        * Resulting assets, returned because they are held by the specified account.
        * </pre>
        *
-       * <code>repeated .bloombox.schema.ledger.AssetKey asset = 1;</code>
+       * <code>repeated .bloombox.ledger.AssetKey asset = 1;</code>
        */
       public Builder clearAsset() {
         if (assetBuilder_ == null) {
@@ -1472,7 +1519,7 @@ private static final long serialVersionUID = 0L;
        * Resulting assets, returned because they are held by the specified account.
        * </pre>
        *
-       * <code>repeated .bloombox.schema.ledger.AssetKey asset = 1;</code>
+       * <code>repeated .bloombox.ledger.AssetKey asset = 1;</code>
        */
       public Builder removeAsset(int index) {
         if (assetBuilder_ == null) {
@@ -1489,7 +1536,7 @@ private static final long serialVersionUID = 0L;
        * Resulting assets, returned because they are held by the specified account.
        * </pre>
        *
-       * <code>repeated .bloombox.schema.ledger.AssetKey asset = 1;</code>
+       * <code>repeated .bloombox.ledger.AssetKey asset = 1;</code>
        */
       public io.bloombox.schema.ledger.Assets.AssetKey.Builder getAssetBuilder(
           int index) {
@@ -1500,7 +1547,7 @@ private static final long serialVersionUID = 0L;
        * Resulting assets, returned because they are held by the specified account.
        * </pre>
        *
-       * <code>repeated .bloombox.schema.ledger.AssetKey asset = 1;</code>
+       * <code>repeated .bloombox.ledger.AssetKey asset = 1;</code>
        */
       public io.bloombox.schema.ledger.Assets.AssetKeyOrBuilder getAssetOrBuilder(
           int index) {
@@ -1514,7 +1561,7 @@ private static final long serialVersionUID = 0L;
        * Resulting assets, returned because they are held by the specified account.
        * </pre>
        *
-       * <code>repeated .bloombox.schema.ledger.AssetKey asset = 1;</code>
+       * <code>repeated .bloombox.ledger.AssetKey asset = 1;</code>
        */
       public java.util.List<? extends io.bloombox.schema.ledger.Assets.AssetKeyOrBuilder> 
            getAssetOrBuilderList() {
@@ -1529,7 +1576,7 @@ private static final long serialVersionUID = 0L;
        * Resulting assets, returned because they are held by the specified account.
        * </pre>
        *
-       * <code>repeated .bloombox.schema.ledger.AssetKey asset = 1;</code>
+       * <code>repeated .bloombox.ledger.AssetKey asset = 1;</code>
        */
       public io.bloombox.schema.ledger.Assets.AssetKey.Builder addAssetBuilder() {
         return getAssetFieldBuilder().addBuilder(
@@ -1540,7 +1587,7 @@ private static final long serialVersionUID = 0L;
        * Resulting assets, returned because they are held by the specified account.
        * </pre>
        *
-       * <code>repeated .bloombox.schema.ledger.AssetKey asset = 1;</code>
+       * <code>repeated .bloombox.ledger.AssetKey asset = 1;</code>
        */
       public io.bloombox.schema.ledger.Assets.AssetKey.Builder addAssetBuilder(
           int index) {
@@ -1552,7 +1599,7 @@ private static final long serialVersionUID = 0L;
        * Resulting assets, returned because they are held by the specified account.
        * </pre>
        *
-       * <code>repeated .bloombox.schema.ledger.AssetKey asset = 1;</code>
+       * <code>repeated .bloombox.ledger.AssetKey asset = 1;</code>
        */
       public java.util.List<io.bloombox.schema.ledger.Assets.AssetKey.Builder> 
            getAssetBuilderList() {
@@ -1572,21 +1619,23 @@ private static final long serialVersionUID = 0L;
         }
         return assetBuilder_;
       }
+      @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
         return super.setUnknownFieldsProto3(unknownFields);
       }
 
+      @java.lang.Override
       public final Builder mergeUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
         return super.mergeUnknownFields(unknownFields);
       }
 
 
-      // @@protoc_insertion_point(builder_scope:bloombox.schema.services.ledger.v1beta1.AccountHoldings.Response)
+      // @@protoc_insertion_point(builder_scope:bloombox.services.ledger.v1beta1.AccountHoldings.Response)
     }
 
-    // @@protoc_insertion_point(class_scope:bloombox.schema.services.ledger.v1beta1.AccountHoldings.Response)
+    // @@protoc_insertion_point(class_scope:bloombox.services.ledger.v1beta1.AccountHoldings.Response)
     private static final io.bloombox.schema.services.ledger.v1beta1.AccountHoldings.Response DEFAULT_INSTANCE;
     static {
       DEFAULT_INSTANCE = new io.bloombox.schema.services.ledger.v1beta1.AccountHoldings.Response();
@@ -1598,6 +1647,7 @@ private static final long serialVersionUID = 0L;
 
     private static final com.google.protobuf.Parser<Response>
         PARSER = new com.google.protobuf.AbstractParser<Response>() {
+      @java.lang.Override
       public Response parsePartialFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -1615,6 +1665,7 @@ private static final long serialVersionUID = 0L;
       return PARSER;
     }
 
+    @java.lang.Override
     public io.bloombox.schema.services.ledger.v1beta1.AccountHoldings.Response getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
@@ -1622,7 +1673,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public interface OperationOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:bloombox.schema.services.ledger.v1beta1.AccountHoldings.Operation)
+      // @@protoc_insertion_point(interface_extends:bloombox.services.ledger.v1beta1.AccountHoldings.Operation)
       com.google.protobuf.MessageOrBuilder {
 
     /**
@@ -1630,7 +1681,7 @@ private static final long serialVersionUID = 0L;
      * Request for account holdings.
      * </pre>
      *
-     * <code>.bloombox.schema.services.ledger.v1beta1.AccountHoldings.Request request = 1;</code>
+     * <code>.bloombox.services.ledger.v1beta1.AccountHoldings.Request request = 1;</code>
      */
     boolean hasRequest();
     /**
@@ -1638,7 +1689,7 @@ private static final long serialVersionUID = 0L;
      * Request for account holdings.
      * </pre>
      *
-     * <code>.bloombox.schema.services.ledger.v1beta1.AccountHoldings.Request request = 1;</code>
+     * <code>.bloombox.services.ledger.v1beta1.AccountHoldings.Request request = 1;</code>
      */
     io.bloombox.schema.services.ledger.v1beta1.AccountHoldings.Request getRequest();
     /**
@@ -1646,7 +1697,7 @@ private static final long serialVersionUID = 0L;
      * Request for account holdings.
      * </pre>
      *
-     * <code>.bloombox.schema.services.ledger.v1beta1.AccountHoldings.Request request = 1;</code>
+     * <code>.bloombox.services.ledger.v1beta1.AccountHoldings.Request request = 1;</code>
      */
     io.bloombox.schema.services.ledger.v1beta1.AccountHoldings.RequestOrBuilder getRequestOrBuilder();
 
@@ -1655,7 +1706,7 @@ private static final long serialVersionUID = 0L;
      * Response to a request for account holdings.
      * </pre>
      *
-     * <code>.bloombox.schema.services.ledger.v1beta1.AccountHoldings.Response response = 2;</code>
+     * <code>.bloombox.services.ledger.v1beta1.AccountHoldings.Response response = 2;</code>
      */
     boolean hasResponse();
     /**
@@ -1663,7 +1714,7 @@ private static final long serialVersionUID = 0L;
      * Response to a request for account holdings.
      * </pre>
      *
-     * <code>.bloombox.schema.services.ledger.v1beta1.AccountHoldings.Response response = 2;</code>
+     * <code>.bloombox.services.ledger.v1beta1.AccountHoldings.Response response = 2;</code>
      */
     io.bloombox.schema.services.ledger.v1beta1.AccountHoldings.Response getResponse();
     /**
@@ -1671,7 +1722,7 @@ private static final long serialVersionUID = 0L;
      * Response to a request for account holdings.
      * </pre>
      *
-     * <code>.bloombox.schema.services.ledger.v1beta1.AccountHoldings.Response response = 2;</code>
+     * <code>.bloombox.services.ledger.v1beta1.AccountHoldings.Response response = 2;</code>
      */
     io.bloombox.schema.services.ledger.v1beta1.AccountHoldings.ResponseOrBuilder getResponseOrBuilder();
   }
@@ -1680,11 +1731,11 @@ private static final long serialVersionUID = 0L;
    * Specifies a complete request/response cycle to retrieve an individual account's current holdings.
    * </pre>
    *
-   * Protobuf type {@code bloombox.schema.services.ledger.v1beta1.AccountHoldings.Operation}
+   * Protobuf type {@code bloombox.services.ledger.v1beta1.AccountHoldings.Operation}
    */
   public  static final class Operation extends
       com.google.protobuf.GeneratedMessageV3 implements
-      // @@protoc_insertion_point(message_implements:bloombox.schema.services.ledger.v1beta1.AccountHoldings.Operation)
+      // @@protoc_insertion_point(message_implements:bloombox.services.ledger.v1beta1.AccountHoldings.Operation)
       OperationOrBuilder {
   private static final long serialVersionUID = 0L;
     // Use Operation.newBuilder() to construct.
@@ -1718,13 +1769,6 @@ private static final long serialVersionUID = 0L;
             case 0:
               done = true;
               break;
-            default: {
-              if (!parseUnknownFieldProto3(
-                  input, unknownFields, extensionRegistry, tag)) {
-                done = true;
-              }
-              break;
-            }
             case 10: {
               io.bloombox.schema.services.ledger.v1beta1.AccountHoldings.Request.Builder subBuilder = null;
               if (request_ != null) {
@@ -1751,6 +1795,13 @@ private static final long serialVersionUID = 0L;
 
               break;
             }
+            default: {
+              if (!parseUnknownFieldProto3(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
           }
         }
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
@@ -1765,12 +1816,13 @@ private static final long serialVersionUID = 0L;
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return io.bloombox.schema.services.ledger.v1beta1.LedgerServiceBeta1.internal_static_bloombox_schema_services_ledger_v1beta1_AccountHoldings_Operation_descriptor;
+      return io.bloombox.schema.services.ledger.v1beta1.LedgerServiceBeta1.internal_static_bloombox_services_ledger_v1beta1_AccountHoldings_Operation_descriptor;
     }
 
+    @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return io.bloombox.schema.services.ledger.v1beta1.LedgerServiceBeta1.internal_static_bloombox_schema_services_ledger_v1beta1_AccountHoldings_Operation_fieldAccessorTable
+      return io.bloombox.schema.services.ledger.v1beta1.LedgerServiceBeta1.internal_static_bloombox_services_ledger_v1beta1_AccountHoldings_Operation_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
               io.bloombox.schema.services.ledger.v1beta1.AccountHoldings.Operation.class, io.bloombox.schema.services.ledger.v1beta1.AccountHoldings.Operation.Builder.class);
     }
@@ -1782,7 +1834,7 @@ private static final long serialVersionUID = 0L;
      * Request for account holdings.
      * </pre>
      *
-     * <code>.bloombox.schema.services.ledger.v1beta1.AccountHoldings.Request request = 1;</code>
+     * <code>.bloombox.services.ledger.v1beta1.AccountHoldings.Request request = 1;</code>
      */
     public boolean hasRequest() {
       return request_ != null;
@@ -1792,7 +1844,7 @@ private static final long serialVersionUID = 0L;
      * Request for account holdings.
      * </pre>
      *
-     * <code>.bloombox.schema.services.ledger.v1beta1.AccountHoldings.Request request = 1;</code>
+     * <code>.bloombox.services.ledger.v1beta1.AccountHoldings.Request request = 1;</code>
      */
     public io.bloombox.schema.services.ledger.v1beta1.AccountHoldings.Request getRequest() {
       return request_ == null ? io.bloombox.schema.services.ledger.v1beta1.AccountHoldings.Request.getDefaultInstance() : request_;
@@ -1802,7 +1854,7 @@ private static final long serialVersionUID = 0L;
      * Request for account holdings.
      * </pre>
      *
-     * <code>.bloombox.schema.services.ledger.v1beta1.AccountHoldings.Request request = 1;</code>
+     * <code>.bloombox.services.ledger.v1beta1.AccountHoldings.Request request = 1;</code>
      */
     public io.bloombox.schema.services.ledger.v1beta1.AccountHoldings.RequestOrBuilder getRequestOrBuilder() {
       return getRequest();
@@ -1815,7 +1867,7 @@ private static final long serialVersionUID = 0L;
      * Response to a request for account holdings.
      * </pre>
      *
-     * <code>.bloombox.schema.services.ledger.v1beta1.AccountHoldings.Response response = 2;</code>
+     * <code>.bloombox.services.ledger.v1beta1.AccountHoldings.Response response = 2;</code>
      */
     public boolean hasResponse() {
       return response_ != null;
@@ -1825,7 +1877,7 @@ private static final long serialVersionUID = 0L;
      * Response to a request for account holdings.
      * </pre>
      *
-     * <code>.bloombox.schema.services.ledger.v1beta1.AccountHoldings.Response response = 2;</code>
+     * <code>.bloombox.services.ledger.v1beta1.AccountHoldings.Response response = 2;</code>
      */
     public io.bloombox.schema.services.ledger.v1beta1.AccountHoldings.Response getResponse() {
       return response_ == null ? io.bloombox.schema.services.ledger.v1beta1.AccountHoldings.Response.getDefaultInstance() : response_;
@@ -1835,13 +1887,14 @@ private static final long serialVersionUID = 0L;
      * Response to a request for account holdings.
      * </pre>
      *
-     * <code>.bloombox.schema.services.ledger.v1beta1.AccountHoldings.Response response = 2;</code>
+     * <code>.bloombox.services.ledger.v1beta1.AccountHoldings.Response response = 2;</code>
      */
     public io.bloombox.schema.services.ledger.v1beta1.AccountHoldings.ResponseOrBuilder getResponseOrBuilder() {
       return getResponse();
     }
 
     private byte memoizedIsInitialized = -1;
+    @java.lang.Override
     public final boolean isInitialized() {
       byte isInitialized = memoizedIsInitialized;
       if (isInitialized == 1) return true;
@@ -1851,6 +1904,7 @@ private static final long serialVersionUID = 0L;
       return true;
     }
 
+    @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
       if (request_ != null) {
@@ -1862,6 +1916,7 @@ private static final long serialVersionUID = 0L;
       unknownFields.writeTo(output);
     }
 
+    @java.lang.Override
     public int getSerializedSize() {
       int size = memoizedSize;
       if (size != -1) return size;
@@ -1995,6 +2050,7 @@ private static final long serialVersionUID = 0L;
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
 
+    @java.lang.Override
     public Builder newBuilderForType() { return newBuilder(); }
     public static Builder newBuilder() {
       return DEFAULT_INSTANCE.toBuilder();
@@ -2002,6 +2058,7 @@ private static final long serialVersionUID = 0L;
     public static Builder newBuilder(io.bloombox.schema.services.ledger.v1beta1.AccountHoldings.Operation prototype) {
       return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
     }
+    @java.lang.Override
     public Builder toBuilder() {
       return this == DEFAULT_INSTANCE
           ? new Builder() : new Builder().mergeFrom(this);
@@ -2018,20 +2075,21 @@ private static final long serialVersionUID = 0L;
      * Specifies a complete request/response cycle to retrieve an individual account's current holdings.
      * </pre>
      *
-     * Protobuf type {@code bloombox.schema.services.ledger.v1beta1.AccountHoldings.Operation}
+     * Protobuf type {@code bloombox.services.ledger.v1beta1.AccountHoldings.Operation}
      */
     public static final class Builder extends
         com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:bloombox.schema.services.ledger.v1beta1.AccountHoldings.Operation)
+        // @@protoc_insertion_point(builder_implements:bloombox.services.ledger.v1beta1.AccountHoldings.Operation)
         io.bloombox.schema.services.ledger.v1beta1.AccountHoldings.OperationOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return io.bloombox.schema.services.ledger.v1beta1.LedgerServiceBeta1.internal_static_bloombox_schema_services_ledger_v1beta1_AccountHoldings_Operation_descriptor;
+        return io.bloombox.schema.services.ledger.v1beta1.LedgerServiceBeta1.internal_static_bloombox_services_ledger_v1beta1_AccountHoldings_Operation_descriptor;
       }
 
+      @java.lang.Override
       protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return io.bloombox.schema.services.ledger.v1beta1.LedgerServiceBeta1.internal_static_bloombox_schema_services_ledger_v1beta1_AccountHoldings_Operation_fieldAccessorTable
+        return io.bloombox.schema.services.ledger.v1beta1.LedgerServiceBeta1.internal_static_bloombox_services_ledger_v1beta1_AccountHoldings_Operation_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
                 io.bloombox.schema.services.ledger.v1beta1.AccountHoldings.Operation.class, io.bloombox.schema.services.ledger.v1beta1.AccountHoldings.Operation.Builder.class);
       }
@@ -2051,6 +2109,7 @@ private static final long serialVersionUID = 0L;
                 .alwaysUseFieldBuilders) {
         }
       }
+      @java.lang.Override
       public Builder clear() {
         super.clear();
         if (requestBuilder_ == null) {
@@ -2068,15 +2127,18 @@ private static final long serialVersionUID = 0L;
         return this;
       }
 
+      @java.lang.Override
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return io.bloombox.schema.services.ledger.v1beta1.LedgerServiceBeta1.internal_static_bloombox_schema_services_ledger_v1beta1_AccountHoldings_Operation_descriptor;
+        return io.bloombox.schema.services.ledger.v1beta1.LedgerServiceBeta1.internal_static_bloombox_services_ledger_v1beta1_AccountHoldings_Operation_descriptor;
       }
 
+      @java.lang.Override
       public io.bloombox.schema.services.ledger.v1beta1.AccountHoldings.Operation getDefaultInstanceForType() {
         return io.bloombox.schema.services.ledger.v1beta1.AccountHoldings.Operation.getDefaultInstance();
       }
 
+      @java.lang.Override
       public io.bloombox.schema.services.ledger.v1beta1.AccountHoldings.Operation build() {
         io.bloombox.schema.services.ledger.v1beta1.AccountHoldings.Operation result = buildPartial();
         if (!result.isInitialized()) {
@@ -2085,6 +2147,7 @@ private static final long serialVersionUID = 0L;
         return result;
       }
 
+      @java.lang.Override
       public io.bloombox.schema.services.ledger.v1beta1.AccountHoldings.Operation buildPartial() {
         io.bloombox.schema.services.ledger.v1beta1.AccountHoldings.Operation result = new io.bloombox.schema.services.ledger.v1beta1.AccountHoldings.Operation(this);
         if (requestBuilder_ == null) {
@@ -2101,32 +2164,39 @@ private static final long serialVersionUID = 0L;
         return result;
       }
 
+      @java.lang.Override
       public Builder clone() {
         return (Builder) super.clone();
       }
+      @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
         return (Builder) super.setField(field, value);
       }
+      @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
         return (Builder) super.clearField(field);
       }
+      @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
         return (Builder) super.clearOneof(oneof);
       }
+      @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
         return (Builder) super.setRepeatedField(field, index, value);
       }
+      @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
         return (Builder) super.addRepeatedField(field, value);
       }
+      @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
         if (other instanceof io.bloombox.schema.services.ledger.v1beta1.AccountHoldings.Operation) {
           return mergeFrom((io.bloombox.schema.services.ledger.v1beta1.AccountHoldings.Operation)other);
@@ -2149,10 +2219,12 @@ private static final long serialVersionUID = 0L;
         return this;
       }
 
+      @java.lang.Override
       public final boolean isInitialized() {
         return true;
       }
 
+      @java.lang.Override
       public Builder mergeFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -2179,7 +2251,7 @@ private static final long serialVersionUID = 0L;
        * Request for account holdings.
        * </pre>
        *
-       * <code>.bloombox.schema.services.ledger.v1beta1.AccountHoldings.Request request = 1;</code>
+       * <code>.bloombox.services.ledger.v1beta1.AccountHoldings.Request request = 1;</code>
        */
       public boolean hasRequest() {
         return requestBuilder_ != null || request_ != null;
@@ -2189,7 +2261,7 @@ private static final long serialVersionUID = 0L;
        * Request for account holdings.
        * </pre>
        *
-       * <code>.bloombox.schema.services.ledger.v1beta1.AccountHoldings.Request request = 1;</code>
+       * <code>.bloombox.services.ledger.v1beta1.AccountHoldings.Request request = 1;</code>
        */
       public io.bloombox.schema.services.ledger.v1beta1.AccountHoldings.Request getRequest() {
         if (requestBuilder_ == null) {
@@ -2203,7 +2275,7 @@ private static final long serialVersionUID = 0L;
        * Request for account holdings.
        * </pre>
        *
-       * <code>.bloombox.schema.services.ledger.v1beta1.AccountHoldings.Request request = 1;</code>
+       * <code>.bloombox.services.ledger.v1beta1.AccountHoldings.Request request = 1;</code>
        */
       public Builder setRequest(io.bloombox.schema.services.ledger.v1beta1.AccountHoldings.Request value) {
         if (requestBuilder_ == null) {
@@ -2223,7 +2295,7 @@ private static final long serialVersionUID = 0L;
        * Request for account holdings.
        * </pre>
        *
-       * <code>.bloombox.schema.services.ledger.v1beta1.AccountHoldings.Request request = 1;</code>
+       * <code>.bloombox.services.ledger.v1beta1.AccountHoldings.Request request = 1;</code>
        */
       public Builder setRequest(
           io.bloombox.schema.services.ledger.v1beta1.AccountHoldings.Request.Builder builderForValue) {
@@ -2241,7 +2313,7 @@ private static final long serialVersionUID = 0L;
        * Request for account holdings.
        * </pre>
        *
-       * <code>.bloombox.schema.services.ledger.v1beta1.AccountHoldings.Request request = 1;</code>
+       * <code>.bloombox.services.ledger.v1beta1.AccountHoldings.Request request = 1;</code>
        */
       public Builder mergeRequest(io.bloombox.schema.services.ledger.v1beta1.AccountHoldings.Request value) {
         if (requestBuilder_ == null) {
@@ -2263,7 +2335,7 @@ private static final long serialVersionUID = 0L;
        * Request for account holdings.
        * </pre>
        *
-       * <code>.bloombox.schema.services.ledger.v1beta1.AccountHoldings.Request request = 1;</code>
+       * <code>.bloombox.services.ledger.v1beta1.AccountHoldings.Request request = 1;</code>
        */
       public Builder clearRequest() {
         if (requestBuilder_ == null) {
@@ -2281,7 +2353,7 @@ private static final long serialVersionUID = 0L;
        * Request for account holdings.
        * </pre>
        *
-       * <code>.bloombox.schema.services.ledger.v1beta1.AccountHoldings.Request request = 1;</code>
+       * <code>.bloombox.services.ledger.v1beta1.AccountHoldings.Request request = 1;</code>
        */
       public io.bloombox.schema.services.ledger.v1beta1.AccountHoldings.Request.Builder getRequestBuilder() {
         
@@ -2293,7 +2365,7 @@ private static final long serialVersionUID = 0L;
        * Request for account holdings.
        * </pre>
        *
-       * <code>.bloombox.schema.services.ledger.v1beta1.AccountHoldings.Request request = 1;</code>
+       * <code>.bloombox.services.ledger.v1beta1.AccountHoldings.Request request = 1;</code>
        */
       public io.bloombox.schema.services.ledger.v1beta1.AccountHoldings.RequestOrBuilder getRequestOrBuilder() {
         if (requestBuilder_ != null) {
@@ -2308,7 +2380,7 @@ private static final long serialVersionUID = 0L;
        * Request for account holdings.
        * </pre>
        *
-       * <code>.bloombox.schema.services.ledger.v1beta1.AccountHoldings.Request request = 1;</code>
+       * <code>.bloombox.services.ledger.v1beta1.AccountHoldings.Request request = 1;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
           io.bloombox.schema.services.ledger.v1beta1.AccountHoldings.Request, io.bloombox.schema.services.ledger.v1beta1.AccountHoldings.Request.Builder, io.bloombox.schema.services.ledger.v1beta1.AccountHoldings.RequestOrBuilder> 
@@ -2332,7 +2404,7 @@ private static final long serialVersionUID = 0L;
        * Response to a request for account holdings.
        * </pre>
        *
-       * <code>.bloombox.schema.services.ledger.v1beta1.AccountHoldings.Response response = 2;</code>
+       * <code>.bloombox.services.ledger.v1beta1.AccountHoldings.Response response = 2;</code>
        */
       public boolean hasResponse() {
         return responseBuilder_ != null || response_ != null;
@@ -2342,7 +2414,7 @@ private static final long serialVersionUID = 0L;
        * Response to a request for account holdings.
        * </pre>
        *
-       * <code>.bloombox.schema.services.ledger.v1beta1.AccountHoldings.Response response = 2;</code>
+       * <code>.bloombox.services.ledger.v1beta1.AccountHoldings.Response response = 2;</code>
        */
       public io.bloombox.schema.services.ledger.v1beta1.AccountHoldings.Response getResponse() {
         if (responseBuilder_ == null) {
@@ -2356,7 +2428,7 @@ private static final long serialVersionUID = 0L;
        * Response to a request for account holdings.
        * </pre>
        *
-       * <code>.bloombox.schema.services.ledger.v1beta1.AccountHoldings.Response response = 2;</code>
+       * <code>.bloombox.services.ledger.v1beta1.AccountHoldings.Response response = 2;</code>
        */
       public Builder setResponse(io.bloombox.schema.services.ledger.v1beta1.AccountHoldings.Response value) {
         if (responseBuilder_ == null) {
@@ -2376,7 +2448,7 @@ private static final long serialVersionUID = 0L;
        * Response to a request for account holdings.
        * </pre>
        *
-       * <code>.bloombox.schema.services.ledger.v1beta1.AccountHoldings.Response response = 2;</code>
+       * <code>.bloombox.services.ledger.v1beta1.AccountHoldings.Response response = 2;</code>
        */
       public Builder setResponse(
           io.bloombox.schema.services.ledger.v1beta1.AccountHoldings.Response.Builder builderForValue) {
@@ -2394,7 +2466,7 @@ private static final long serialVersionUID = 0L;
        * Response to a request for account holdings.
        * </pre>
        *
-       * <code>.bloombox.schema.services.ledger.v1beta1.AccountHoldings.Response response = 2;</code>
+       * <code>.bloombox.services.ledger.v1beta1.AccountHoldings.Response response = 2;</code>
        */
       public Builder mergeResponse(io.bloombox.schema.services.ledger.v1beta1.AccountHoldings.Response value) {
         if (responseBuilder_ == null) {
@@ -2416,7 +2488,7 @@ private static final long serialVersionUID = 0L;
        * Response to a request for account holdings.
        * </pre>
        *
-       * <code>.bloombox.schema.services.ledger.v1beta1.AccountHoldings.Response response = 2;</code>
+       * <code>.bloombox.services.ledger.v1beta1.AccountHoldings.Response response = 2;</code>
        */
       public Builder clearResponse() {
         if (responseBuilder_ == null) {
@@ -2434,7 +2506,7 @@ private static final long serialVersionUID = 0L;
        * Response to a request for account holdings.
        * </pre>
        *
-       * <code>.bloombox.schema.services.ledger.v1beta1.AccountHoldings.Response response = 2;</code>
+       * <code>.bloombox.services.ledger.v1beta1.AccountHoldings.Response response = 2;</code>
        */
       public io.bloombox.schema.services.ledger.v1beta1.AccountHoldings.Response.Builder getResponseBuilder() {
         
@@ -2446,7 +2518,7 @@ private static final long serialVersionUID = 0L;
        * Response to a request for account holdings.
        * </pre>
        *
-       * <code>.bloombox.schema.services.ledger.v1beta1.AccountHoldings.Response response = 2;</code>
+       * <code>.bloombox.services.ledger.v1beta1.AccountHoldings.Response response = 2;</code>
        */
       public io.bloombox.schema.services.ledger.v1beta1.AccountHoldings.ResponseOrBuilder getResponseOrBuilder() {
         if (responseBuilder_ != null) {
@@ -2461,7 +2533,7 @@ private static final long serialVersionUID = 0L;
        * Response to a request for account holdings.
        * </pre>
        *
-       * <code>.bloombox.schema.services.ledger.v1beta1.AccountHoldings.Response response = 2;</code>
+       * <code>.bloombox.services.ledger.v1beta1.AccountHoldings.Response response = 2;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
           io.bloombox.schema.services.ledger.v1beta1.AccountHoldings.Response, io.bloombox.schema.services.ledger.v1beta1.AccountHoldings.Response.Builder, io.bloombox.schema.services.ledger.v1beta1.AccountHoldings.ResponseOrBuilder> 
@@ -2476,21 +2548,23 @@ private static final long serialVersionUID = 0L;
         }
         return responseBuilder_;
       }
+      @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
         return super.setUnknownFieldsProto3(unknownFields);
       }
 
+      @java.lang.Override
       public final Builder mergeUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
         return super.mergeUnknownFields(unknownFields);
       }
 
 
-      // @@protoc_insertion_point(builder_scope:bloombox.schema.services.ledger.v1beta1.AccountHoldings.Operation)
+      // @@protoc_insertion_point(builder_scope:bloombox.services.ledger.v1beta1.AccountHoldings.Operation)
     }
 
-    // @@protoc_insertion_point(class_scope:bloombox.schema.services.ledger.v1beta1.AccountHoldings.Operation)
+    // @@protoc_insertion_point(class_scope:bloombox.services.ledger.v1beta1.AccountHoldings.Operation)
     private static final io.bloombox.schema.services.ledger.v1beta1.AccountHoldings.Operation DEFAULT_INSTANCE;
     static {
       DEFAULT_INSTANCE = new io.bloombox.schema.services.ledger.v1beta1.AccountHoldings.Operation();
@@ -2502,6 +2576,7 @@ private static final long serialVersionUID = 0L;
 
     private static final com.google.protobuf.Parser<Operation>
         PARSER = new com.google.protobuf.AbstractParser<Operation>() {
+      @java.lang.Override
       public Operation parsePartialFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -2519,6 +2594,7 @@ private static final long serialVersionUID = 0L;
       return PARSER;
     }
 
+    @java.lang.Override
     public io.bloombox.schema.services.ledger.v1beta1.AccountHoldings.Operation getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
@@ -2526,6 +2602,7 @@ private static final long serialVersionUID = 0L;
   }
 
   private byte memoizedIsInitialized = -1;
+  @java.lang.Override
   public final boolean isInitialized() {
     byte isInitialized = memoizedIsInitialized;
     if (isInitialized == 1) return true;
@@ -2535,11 +2612,13 @@ private static final long serialVersionUID = 0L;
     return true;
   }
 
+  @java.lang.Override
   public void writeTo(com.google.protobuf.CodedOutputStream output)
                       throws java.io.IOException {
     unknownFields.writeTo(output);
   }
 
+  @java.lang.Override
   public int getSerializedSize() {
     int size = memoizedSize;
     if (size != -1) return size;
@@ -2647,6 +2726,7 @@ private static final long serialVersionUID = 0L;
         .parseWithIOException(PARSER, input, extensionRegistry);
   }
 
+  @java.lang.Override
   public Builder newBuilderForType() { return newBuilder(); }
   public static Builder newBuilder() {
     return DEFAULT_INSTANCE.toBuilder();
@@ -2654,6 +2734,7 @@ private static final long serialVersionUID = 0L;
   public static Builder newBuilder(io.bloombox.schema.services.ledger.v1beta1.AccountHoldings prototype) {
     return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
   }
+  @java.lang.Override
   public Builder toBuilder() {
     return this == DEFAULT_INSTANCE
         ? new Builder() : new Builder().mergeFrom(this);
@@ -2671,20 +2752,21 @@ private static final long serialVersionUID = 0L;
    * an individual actor key.
    * </pre>
    *
-   * Protobuf type {@code bloombox.schema.services.ledger.v1beta1.AccountHoldings}
+   * Protobuf type {@code bloombox.services.ledger.v1beta1.AccountHoldings}
    */
   public static final class Builder extends
       com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-      // @@protoc_insertion_point(builder_implements:bloombox.schema.services.ledger.v1beta1.AccountHoldings)
+      // @@protoc_insertion_point(builder_implements:bloombox.services.ledger.v1beta1.AccountHoldings)
       io.bloombox.schema.services.ledger.v1beta1.AccountHoldingsOrBuilder {
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return io.bloombox.schema.services.ledger.v1beta1.LedgerServiceBeta1.internal_static_bloombox_schema_services_ledger_v1beta1_AccountHoldings_descriptor;
+      return io.bloombox.schema.services.ledger.v1beta1.LedgerServiceBeta1.internal_static_bloombox_services_ledger_v1beta1_AccountHoldings_descriptor;
     }
 
+    @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return io.bloombox.schema.services.ledger.v1beta1.LedgerServiceBeta1.internal_static_bloombox_schema_services_ledger_v1beta1_AccountHoldings_fieldAccessorTable
+      return io.bloombox.schema.services.ledger.v1beta1.LedgerServiceBeta1.internal_static_bloombox_services_ledger_v1beta1_AccountHoldings_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
               io.bloombox.schema.services.ledger.v1beta1.AccountHoldings.class, io.bloombox.schema.services.ledger.v1beta1.AccountHoldings.Builder.class);
     }
@@ -2704,20 +2786,24 @@ private static final long serialVersionUID = 0L;
               .alwaysUseFieldBuilders) {
       }
     }
+    @java.lang.Override
     public Builder clear() {
       super.clear();
       return this;
     }
 
+    @java.lang.Override
     public com.google.protobuf.Descriptors.Descriptor
         getDescriptorForType() {
-      return io.bloombox.schema.services.ledger.v1beta1.LedgerServiceBeta1.internal_static_bloombox_schema_services_ledger_v1beta1_AccountHoldings_descriptor;
+      return io.bloombox.schema.services.ledger.v1beta1.LedgerServiceBeta1.internal_static_bloombox_services_ledger_v1beta1_AccountHoldings_descriptor;
     }
 
+    @java.lang.Override
     public io.bloombox.schema.services.ledger.v1beta1.AccountHoldings getDefaultInstanceForType() {
       return io.bloombox.schema.services.ledger.v1beta1.AccountHoldings.getDefaultInstance();
     }
 
+    @java.lang.Override
     public io.bloombox.schema.services.ledger.v1beta1.AccountHoldings build() {
       io.bloombox.schema.services.ledger.v1beta1.AccountHoldings result = buildPartial();
       if (!result.isInitialized()) {
@@ -2726,38 +2812,46 @@ private static final long serialVersionUID = 0L;
       return result;
     }
 
+    @java.lang.Override
     public io.bloombox.schema.services.ledger.v1beta1.AccountHoldings buildPartial() {
       io.bloombox.schema.services.ledger.v1beta1.AccountHoldings result = new io.bloombox.schema.services.ledger.v1beta1.AccountHoldings(this);
       onBuilt();
       return result;
     }
 
+    @java.lang.Override
     public Builder clone() {
       return (Builder) super.clone();
     }
+    @java.lang.Override
     public Builder setField(
         com.google.protobuf.Descriptors.FieldDescriptor field,
         java.lang.Object value) {
       return (Builder) super.setField(field, value);
     }
+    @java.lang.Override
     public Builder clearField(
         com.google.protobuf.Descriptors.FieldDescriptor field) {
       return (Builder) super.clearField(field);
     }
+    @java.lang.Override
     public Builder clearOneof(
         com.google.protobuf.Descriptors.OneofDescriptor oneof) {
       return (Builder) super.clearOneof(oneof);
     }
+    @java.lang.Override
     public Builder setRepeatedField(
         com.google.protobuf.Descriptors.FieldDescriptor field,
         int index, java.lang.Object value) {
       return (Builder) super.setRepeatedField(field, index, value);
     }
+    @java.lang.Override
     public Builder addRepeatedField(
         com.google.protobuf.Descriptors.FieldDescriptor field,
         java.lang.Object value) {
       return (Builder) super.addRepeatedField(field, value);
     }
+    @java.lang.Override
     public Builder mergeFrom(com.google.protobuf.Message other) {
       if (other instanceof io.bloombox.schema.services.ledger.v1beta1.AccountHoldings) {
         return mergeFrom((io.bloombox.schema.services.ledger.v1beta1.AccountHoldings)other);
@@ -2774,10 +2868,12 @@ private static final long serialVersionUID = 0L;
       return this;
     }
 
+    @java.lang.Override
     public final boolean isInitialized() {
       return true;
     }
 
+    @java.lang.Override
     public Builder mergeFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -2795,21 +2891,23 @@ private static final long serialVersionUID = 0L;
       }
       return this;
     }
+    @java.lang.Override
     public final Builder setUnknownFields(
         final com.google.protobuf.UnknownFieldSet unknownFields) {
       return super.setUnknownFieldsProto3(unknownFields);
     }
 
+    @java.lang.Override
     public final Builder mergeUnknownFields(
         final com.google.protobuf.UnknownFieldSet unknownFields) {
       return super.mergeUnknownFields(unknownFields);
     }
 
 
-    // @@protoc_insertion_point(builder_scope:bloombox.schema.services.ledger.v1beta1.AccountHoldings)
+    // @@protoc_insertion_point(builder_scope:bloombox.services.ledger.v1beta1.AccountHoldings)
   }
 
-  // @@protoc_insertion_point(class_scope:bloombox.schema.services.ledger.v1beta1.AccountHoldings)
+  // @@protoc_insertion_point(class_scope:bloombox.services.ledger.v1beta1.AccountHoldings)
   private static final io.bloombox.schema.services.ledger.v1beta1.AccountHoldings DEFAULT_INSTANCE;
   static {
     DEFAULT_INSTANCE = new io.bloombox.schema.services.ledger.v1beta1.AccountHoldings();
@@ -2821,6 +2919,7 @@ private static final long serialVersionUID = 0L;
 
   private static final com.google.protobuf.Parser<AccountHoldings>
       PARSER = new com.google.protobuf.AbstractParser<AccountHoldings>() {
+    @java.lang.Override
     public AccountHoldings parsePartialFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -2838,6 +2937,7 @@ private static final long serialVersionUID = 0L;
     return PARSER;
   }
 
+  @java.lang.Override
   public io.bloombox.schema.services.ledger.v1beta1.AccountHoldings getDefaultInstanceForType() {
     return DEFAULT_INSTANCE;
   }

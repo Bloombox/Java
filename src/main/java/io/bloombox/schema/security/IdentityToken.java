@@ -1,11 +1,12 @@
 /*
- * Copyright 2018, Bloombox, LLC.
+ * Copyright 2018, Momentum Ideas, Co. All rights reserved.
  *
- * Licensed under the Apache License, Version 2.0 (the "License");
- * you may not use this file except in compliance with the License.
- * You may obtain a copy of the License at
- *
- *     http://www.apache.org/licenses/LICENSE-2.0
+ * Source and object computer code contained herein is the private intellectual
+ * property of Momentum Ideas Co., a Delaware Corporation. Use of this
+ * code in source form requires permission in writing before use or the
+ * assembly, distribution, or publishing of derivative works, for commercial
+ * purposes or any other purpose, from a duly authorized officer of Momentum
+ * Ideas Co.
  *
  * Unless required by applicable law or agreed to in writing, software
  * distributed under the License is distributed on an "AS IS" BASIS,
@@ -25,11 +26,11 @@ package io.bloombox.schema.security;
  * authorization, only identity.
  * </pre>
  *
- * Protobuf type {@code bloombox.schema.security.IdentityToken}
+ * Protobuf type {@code bloombox.security.IdentityToken}
  */
 public  final class IdentityToken extends
     com.google.protobuf.GeneratedMessageV3 implements
-    // @@protoc_insertion_point(message_implements:bloombox.schema.security.IdentityToken)
+    // @@protoc_insertion_point(message_implements:bloombox.security.IdentityToken)
     IdentityTokenOrBuilder {
 private static final long serialVersionUID = 0L;
   // Use IdentityToken.newBuilder() to construct.
@@ -66,13 +67,6 @@ private static final long serialVersionUID = 0L;
           case 0:
             done = true;
             break;
-          default: {
-            if (!parseUnknownFieldProto3(
-                input, unknownFields, extensionRegistry, tag)) {
-              done = true;
-            }
-            break;
-          }
           case 10: {
             java.lang.String s = input.readStringRequireUtf8();
 
@@ -91,6 +85,13 @@ private static final long serialVersionUID = 0L;
             issuer_ = rawValue;
             break;
           }
+          default: {
+            if (!parseUnknownFieldProto3(
+                input, unknownFields, extensionRegistry, tag)) {
+              done = true;
+            }
+            break;
+          }
         }
       }
     } catch (com.google.protobuf.InvalidProtocolBufferException e) {
@@ -105,12 +106,13 @@ private static final long serialVersionUID = 0L;
   }
   public static final com.google.protobuf.Descriptors.Descriptor
       getDescriptor() {
-    return io.bloombox.schema.security.IdentityTokenOuterClass.internal_static_bloombox_schema_security_IdentityToken_descriptor;
+    return io.bloombox.schema.security.IdentityTokenOuterClass.internal_static_bloombox_security_IdentityToken_descriptor;
   }
 
+  @java.lang.Override
   protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internalGetFieldAccessorTable() {
-    return io.bloombox.schema.security.IdentityTokenOuterClass.internal_static_bloombox_schema_security_IdentityToken_fieldAccessorTable
+    return io.bloombox.schema.security.IdentityTokenOuterClass.internal_static_bloombox_security_IdentityToken_fieldAccessorTable
         .ensureFieldAccessorsInitialized(
             io.bloombox.schema.security.IdentityToken.class, io.bloombox.schema.security.IdentityToken.Builder.class);
   }
@@ -206,7 +208,7 @@ private static final long serialVersionUID = 0L;
    * Token issuer, or authorizing IdP (Identity Provider).
    * </pre>
    *
-   * <code>.bloombox.schema.security.IdentityTokenIssuer issuer = 3;</code>
+   * <code>.bloombox.security.IdentityTokenIssuer issuer = 3;</code>
    */
   public int getIssuerValue() {
     return issuer_;
@@ -216,14 +218,16 @@ private static final long serialVersionUID = 0L;
    * Token issuer, or authorizing IdP (Identity Provider).
    * </pre>
    *
-   * <code>.bloombox.schema.security.IdentityTokenIssuer issuer = 3;</code>
+   * <code>.bloombox.security.IdentityTokenIssuer issuer = 3;</code>
    */
   public io.bloombox.schema.security.IdentityTokenIssuer getIssuer() {
+    @SuppressWarnings("deprecation")
     io.bloombox.schema.security.IdentityTokenIssuer result = io.bloombox.schema.security.IdentityTokenIssuer.valueOf(issuer_);
     return result == null ? io.bloombox.schema.security.IdentityTokenIssuer.UNRECOGNIZED : result;
   }
 
   private byte memoizedIsInitialized = -1;
+  @java.lang.Override
   public final boolean isInitialized() {
     byte isInitialized = memoizedIsInitialized;
     if (isInitialized == 1) return true;
@@ -233,6 +237,7 @@ private static final long serialVersionUID = 0L;
     return true;
   }
 
+  @java.lang.Override
   public void writeTo(com.google.protobuf.CodedOutputStream output)
                       throws java.io.IOException {
     if (!getUidBytes().isEmpty()) {
@@ -247,6 +252,7 @@ private static final long serialVersionUID = 0L;
     unknownFields.writeTo(output);
   }
 
+  @java.lang.Override
   public int getSerializedSize() {
     int size = memoizedSize;
     if (size != -1) return size;
@@ -375,6 +381,7 @@ private static final long serialVersionUID = 0L;
         .parseWithIOException(PARSER, input, extensionRegistry);
   }
 
+  @java.lang.Override
   public Builder newBuilderForType() { return newBuilder(); }
   public static Builder newBuilder() {
     return DEFAULT_INSTANCE.toBuilder();
@@ -382,6 +389,7 @@ private static final long serialVersionUID = 0L;
   public static Builder newBuilder(io.bloombox.schema.security.IdentityToken prototype) {
     return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
   }
+  @java.lang.Override
   public Builder toBuilder() {
     return this == DEFAULT_INSTANCE
         ? new Builder() : new Builder().mergeFrom(this);
@@ -399,20 +407,21 @@ private static final long serialVersionUID = 0L;
    * authorization, only identity.
    * </pre>
    *
-   * Protobuf type {@code bloombox.schema.security.IdentityToken}
+   * Protobuf type {@code bloombox.security.IdentityToken}
    */
   public static final class Builder extends
       com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-      // @@protoc_insertion_point(builder_implements:bloombox.schema.security.IdentityToken)
+      // @@protoc_insertion_point(builder_implements:bloombox.security.IdentityToken)
       io.bloombox.schema.security.IdentityTokenOrBuilder {
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return io.bloombox.schema.security.IdentityTokenOuterClass.internal_static_bloombox_schema_security_IdentityToken_descriptor;
+      return io.bloombox.schema.security.IdentityTokenOuterClass.internal_static_bloombox_security_IdentityToken_descriptor;
     }
 
+    @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return io.bloombox.schema.security.IdentityTokenOuterClass.internal_static_bloombox_schema_security_IdentityToken_fieldAccessorTable
+      return io.bloombox.schema.security.IdentityTokenOuterClass.internal_static_bloombox_security_IdentityToken_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
               io.bloombox.schema.security.IdentityToken.class, io.bloombox.schema.security.IdentityToken.Builder.class);
     }
@@ -432,6 +441,7 @@ private static final long serialVersionUID = 0L;
               .alwaysUseFieldBuilders) {
       }
     }
+    @java.lang.Override
     public Builder clear() {
       super.clear();
       uid_ = "";
@@ -443,15 +453,18 @@ private static final long serialVersionUID = 0L;
       return this;
     }
 
+    @java.lang.Override
     public com.google.protobuf.Descriptors.Descriptor
         getDescriptorForType() {
-      return io.bloombox.schema.security.IdentityTokenOuterClass.internal_static_bloombox_schema_security_IdentityToken_descriptor;
+      return io.bloombox.schema.security.IdentityTokenOuterClass.internal_static_bloombox_security_IdentityToken_descriptor;
     }
 
+    @java.lang.Override
     public io.bloombox.schema.security.IdentityToken getDefaultInstanceForType() {
       return io.bloombox.schema.security.IdentityToken.getDefaultInstance();
     }
 
+    @java.lang.Override
     public io.bloombox.schema.security.IdentityToken build() {
       io.bloombox.schema.security.IdentityToken result = buildPartial();
       if (!result.isInitialized()) {
@@ -460,6 +473,7 @@ private static final long serialVersionUID = 0L;
       return result;
     }
 
+    @java.lang.Override
     public io.bloombox.schema.security.IdentityToken buildPartial() {
       io.bloombox.schema.security.IdentityToken result = new io.bloombox.schema.security.IdentityToken(this);
       result.uid_ = uid_;
@@ -469,32 +483,39 @@ private static final long serialVersionUID = 0L;
       return result;
     }
 
+    @java.lang.Override
     public Builder clone() {
       return (Builder) super.clone();
     }
+    @java.lang.Override
     public Builder setField(
         com.google.protobuf.Descriptors.FieldDescriptor field,
         java.lang.Object value) {
       return (Builder) super.setField(field, value);
     }
+    @java.lang.Override
     public Builder clearField(
         com.google.protobuf.Descriptors.FieldDescriptor field) {
       return (Builder) super.clearField(field);
     }
+    @java.lang.Override
     public Builder clearOneof(
         com.google.protobuf.Descriptors.OneofDescriptor oneof) {
       return (Builder) super.clearOneof(oneof);
     }
+    @java.lang.Override
     public Builder setRepeatedField(
         com.google.protobuf.Descriptors.FieldDescriptor field,
         int index, java.lang.Object value) {
       return (Builder) super.setRepeatedField(field, index, value);
     }
+    @java.lang.Override
     public Builder addRepeatedField(
         com.google.protobuf.Descriptors.FieldDescriptor field,
         java.lang.Object value) {
       return (Builder) super.addRepeatedField(field, value);
     }
+    @java.lang.Override
     public Builder mergeFrom(com.google.protobuf.Message other) {
       if (other instanceof io.bloombox.schema.security.IdentityToken) {
         return mergeFrom((io.bloombox.schema.security.IdentityToken)other);
@@ -522,10 +543,12 @@ private static final long serialVersionUID = 0L;
       return this;
     }
 
+    @java.lang.Override
     public final boolean isInitialized() {
       return true;
     }
 
+    @java.lang.Override
     public Builder mergeFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -728,7 +751,7 @@ private static final long serialVersionUID = 0L;
      * Token issuer, or authorizing IdP (Identity Provider).
      * </pre>
      *
-     * <code>.bloombox.schema.security.IdentityTokenIssuer issuer = 3;</code>
+     * <code>.bloombox.security.IdentityTokenIssuer issuer = 3;</code>
      */
     public int getIssuerValue() {
       return issuer_;
@@ -738,7 +761,7 @@ private static final long serialVersionUID = 0L;
      * Token issuer, or authorizing IdP (Identity Provider).
      * </pre>
      *
-     * <code>.bloombox.schema.security.IdentityTokenIssuer issuer = 3;</code>
+     * <code>.bloombox.security.IdentityTokenIssuer issuer = 3;</code>
      */
     public Builder setIssuerValue(int value) {
       issuer_ = value;
@@ -750,9 +773,10 @@ private static final long serialVersionUID = 0L;
      * Token issuer, or authorizing IdP (Identity Provider).
      * </pre>
      *
-     * <code>.bloombox.schema.security.IdentityTokenIssuer issuer = 3;</code>
+     * <code>.bloombox.security.IdentityTokenIssuer issuer = 3;</code>
      */
     public io.bloombox.schema.security.IdentityTokenIssuer getIssuer() {
+      @SuppressWarnings("deprecation")
       io.bloombox.schema.security.IdentityTokenIssuer result = io.bloombox.schema.security.IdentityTokenIssuer.valueOf(issuer_);
       return result == null ? io.bloombox.schema.security.IdentityTokenIssuer.UNRECOGNIZED : result;
     }
@@ -761,7 +785,7 @@ private static final long serialVersionUID = 0L;
      * Token issuer, or authorizing IdP (Identity Provider).
      * </pre>
      *
-     * <code>.bloombox.schema.security.IdentityTokenIssuer issuer = 3;</code>
+     * <code>.bloombox.security.IdentityTokenIssuer issuer = 3;</code>
      */
     public Builder setIssuer(io.bloombox.schema.security.IdentityTokenIssuer value) {
       if (value == null) {
@@ -777,7 +801,7 @@ private static final long serialVersionUID = 0L;
      * Token issuer, or authorizing IdP (Identity Provider).
      * </pre>
      *
-     * <code>.bloombox.schema.security.IdentityTokenIssuer issuer = 3;</code>
+     * <code>.bloombox.security.IdentityTokenIssuer issuer = 3;</code>
      */
     public Builder clearIssuer() {
       
@@ -785,21 +809,23 @@ private static final long serialVersionUID = 0L;
       onChanged();
       return this;
     }
+    @java.lang.Override
     public final Builder setUnknownFields(
         final com.google.protobuf.UnknownFieldSet unknownFields) {
       return super.setUnknownFieldsProto3(unknownFields);
     }
 
+    @java.lang.Override
     public final Builder mergeUnknownFields(
         final com.google.protobuf.UnknownFieldSet unknownFields) {
       return super.mergeUnknownFields(unknownFields);
     }
 
 
-    // @@protoc_insertion_point(builder_scope:bloombox.schema.security.IdentityToken)
+    // @@protoc_insertion_point(builder_scope:bloombox.security.IdentityToken)
   }
 
-  // @@protoc_insertion_point(class_scope:bloombox.schema.security.IdentityToken)
+  // @@protoc_insertion_point(class_scope:bloombox.security.IdentityToken)
   private static final io.bloombox.schema.security.IdentityToken DEFAULT_INSTANCE;
   static {
     DEFAULT_INSTANCE = new io.bloombox.schema.security.IdentityToken();
@@ -811,6 +837,7 @@ private static final long serialVersionUID = 0L;
 
   private static final com.google.protobuf.Parser<IdentityToken>
       PARSER = new com.google.protobuf.AbstractParser<IdentityToken>() {
+    @java.lang.Override
     public IdentityToken parsePartialFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -828,6 +855,7 @@ private static final long serialVersionUID = 0L;
     return PARSER;
   }
 
+  @java.lang.Override
   public io.bloombox.schema.security.IdentityToken getDefaultInstanceForType() {
     return DEFAULT_INSTANCE;
   }
