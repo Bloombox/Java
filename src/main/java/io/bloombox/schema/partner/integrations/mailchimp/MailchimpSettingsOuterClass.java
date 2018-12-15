@@ -1,11 +1,12 @@
 /*
- * Copyright 2018, Bloombox, LLC.
+ * Copyright 2018, Momentum Ideas, Co. All rights reserved.
  *
- * Licensed under the Apache License, Version 2.0 (the "License");
- * you may not use this file except in compliance with the License.
- * You may obtain a copy of the License at
- *
- *     http://www.apache.org/licenses/LICENSE-2.0
+ * Source and object computer code contained herein is the private intellectual
+ * property of Momentum Ideas Co., a Delaware Corporation. Use of this
+ * code in source form requires permission in writing before use or the
+ * assembly, distribution, or publishing of derivative works, for commercial
+ * purposes or any other purpose, from a duly authorized officer of Momentum
+ * Ideas Co.
  *
  * Unless required by applicable law or agreed to in writing, software
  * distributed under the License is distributed on an "AS IS" BASIS,
@@ -31,7 +32,7 @@ public final class MailchimpSettingsOuterClass {
         (com.google.protobuf.ExtensionRegistryLite) registry);
   }
   public interface MailchimpIntegrationFeaturesOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:bloombox.schema.partner.integrations.mailchimp.MailchimpIntegrationFeatures)
+      // @@protoc_insertion_point(interface_extends:bloombox.partner.integrations.mailchimp.MailchimpIntegrationFeatures)
       com.google.protobuf.MessageOrBuilder {
 
     /**
@@ -66,11 +67,11 @@ public final class MailchimpSettingsOuterClass {
    * Specifies MailChimp integration features to enable or disable.
    * </pre>
    *
-   * Protobuf type {@code bloombox.schema.partner.integrations.mailchimp.MailchimpIntegrationFeatures}
+   * Protobuf type {@code bloombox.partner.integrations.mailchimp.MailchimpIntegrationFeatures}
    */
   public  static final class MailchimpIntegrationFeatures extends
       com.google.protobuf.GeneratedMessageV3 implements
-      // @@protoc_insertion_point(message_implements:bloombox.schema.partner.integrations.mailchimp.MailchimpIntegrationFeatures)
+      // @@protoc_insertion_point(message_implements:bloombox.partner.integrations.mailchimp.MailchimpIntegrationFeatures)
       MailchimpIntegrationFeaturesOrBuilder {
   private static final long serialVersionUID = 0L;
     // Use MailchimpIntegrationFeatures.newBuilder() to construct.
@@ -107,13 +108,6 @@ public final class MailchimpSettingsOuterClass {
             case 0:
               done = true;
               break;
-            default: {
-              if (!parseUnknownFieldProto3(
-                  input, unknownFields, extensionRegistry, tag)) {
-                done = true;
-              }
-              break;
-            }
             case 8: {
 
               signups_ = input.readBool();
@@ -127,6 +121,13 @@ public final class MailchimpSettingsOuterClass {
             case 24: {
 
               ordering_ = input.readBool();
+              break;
+            }
+            default: {
+              if (!parseUnknownFieldProto3(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
               break;
             }
           }
@@ -143,12 +144,13 @@ public final class MailchimpSettingsOuterClass {
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return io.bloombox.schema.partner.integrations.mailchimp.MailchimpSettingsOuterClass.internal_static_bloombox_schema_partner_integrations_mailchimp_MailchimpIntegrationFeatures_descriptor;
+      return io.bloombox.schema.partner.integrations.mailchimp.MailchimpSettingsOuterClass.internal_static_bloombox_partner_integrations_mailchimp_MailchimpIntegrationFeatures_descriptor;
     }
 
+    @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return io.bloombox.schema.partner.integrations.mailchimp.MailchimpSettingsOuterClass.internal_static_bloombox_schema_partner_integrations_mailchimp_MailchimpIntegrationFeatures_fieldAccessorTable
+      return io.bloombox.schema.partner.integrations.mailchimp.MailchimpSettingsOuterClass.internal_static_bloombox_partner_integrations_mailchimp_MailchimpIntegrationFeatures_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
               io.bloombox.schema.partner.integrations.mailchimp.MailchimpSettingsOuterClass.MailchimpIntegrationFeatures.class, io.bloombox.schema.partner.integrations.mailchimp.MailchimpSettingsOuterClass.MailchimpIntegrationFeatures.Builder.class);
     }
@@ -193,6 +195,7 @@ public final class MailchimpSettingsOuterClass {
     }
 
     private byte memoizedIsInitialized = -1;
+    @java.lang.Override
     public final boolean isInitialized() {
       byte isInitialized = memoizedIsInitialized;
       if (isInitialized == 1) return true;
@@ -202,6 +205,7 @@ public final class MailchimpSettingsOuterClass {
       return true;
     }
 
+    @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
       if (signups_ != false) {
@@ -216,6 +220,7 @@ public final class MailchimpSettingsOuterClass {
       unknownFields.writeTo(output);
     }
 
+    @java.lang.Override
     public int getSerializedSize() {
       int size = memoizedSize;
       if (size != -1) return size;
@@ -350,6 +355,7 @@ public final class MailchimpSettingsOuterClass {
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
 
+    @java.lang.Override
     public Builder newBuilderForType() { return newBuilder(); }
     public static Builder newBuilder() {
       return DEFAULT_INSTANCE.toBuilder();
@@ -357,6 +363,7 @@ public final class MailchimpSettingsOuterClass {
     public static Builder newBuilder(io.bloombox.schema.partner.integrations.mailchimp.MailchimpSettingsOuterClass.MailchimpIntegrationFeatures prototype) {
       return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
     }
+    @java.lang.Override
     public Builder toBuilder() {
       return this == DEFAULT_INSTANCE
           ? new Builder() : new Builder().mergeFrom(this);
@@ -373,20 +380,21 @@ public final class MailchimpSettingsOuterClass {
      * Specifies MailChimp integration features to enable or disable.
      * </pre>
      *
-     * Protobuf type {@code bloombox.schema.partner.integrations.mailchimp.MailchimpIntegrationFeatures}
+     * Protobuf type {@code bloombox.partner.integrations.mailchimp.MailchimpIntegrationFeatures}
      */
     public static final class Builder extends
         com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:bloombox.schema.partner.integrations.mailchimp.MailchimpIntegrationFeatures)
+        // @@protoc_insertion_point(builder_implements:bloombox.partner.integrations.mailchimp.MailchimpIntegrationFeatures)
         io.bloombox.schema.partner.integrations.mailchimp.MailchimpSettingsOuterClass.MailchimpIntegrationFeaturesOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return io.bloombox.schema.partner.integrations.mailchimp.MailchimpSettingsOuterClass.internal_static_bloombox_schema_partner_integrations_mailchimp_MailchimpIntegrationFeatures_descriptor;
+        return io.bloombox.schema.partner.integrations.mailchimp.MailchimpSettingsOuterClass.internal_static_bloombox_partner_integrations_mailchimp_MailchimpIntegrationFeatures_descriptor;
       }
 
+      @java.lang.Override
       protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return io.bloombox.schema.partner.integrations.mailchimp.MailchimpSettingsOuterClass.internal_static_bloombox_schema_partner_integrations_mailchimp_MailchimpIntegrationFeatures_fieldAccessorTable
+        return io.bloombox.schema.partner.integrations.mailchimp.MailchimpSettingsOuterClass.internal_static_bloombox_partner_integrations_mailchimp_MailchimpIntegrationFeatures_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
                 io.bloombox.schema.partner.integrations.mailchimp.MailchimpSettingsOuterClass.MailchimpIntegrationFeatures.class, io.bloombox.schema.partner.integrations.mailchimp.MailchimpSettingsOuterClass.MailchimpIntegrationFeatures.Builder.class);
       }
@@ -406,6 +414,7 @@ public final class MailchimpSettingsOuterClass {
                 .alwaysUseFieldBuilders) {
         }
       }
+      @java.lang.Override
       public Builder clear() {
         super.clear();
         signups_ = false;
@@ -417,15 +426,18 @@ public final class MailchimpSettingsOuterClass {
         return this;
       }
 
+      @java.lang.Override
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return io.bloombox.schema.partner.integrations.mailchimp.MailchimpSettingsOuterClass.internal_static_bloombox_schema_partner_integrations_mailchimp_MailchimpIntegrationFeatures_descriptor;
+        return io.bloombox.schema.partner.integrations.mailchimp.MailchimpSettingsOuterClass.internal_static_bloombox_partner_integrations_mailchimp_MailchimpIntegrationFeatures_descriptor;
       }
 
+      @java.lang.Override
       public io.bloombox.schema.partner.integrations.mailchimp.MailchimpSettingsOuterClass.MailchimpIntegrationFeatures getDefaultInstanceForType() {
         return io.bloombox.schema.partner.integrations.mailchimp.MailchimpSettingsOuterClass.MailchimpIntegrationFeatures.getDefaultInstance();
       }
 
+      @java.lang.Override
       public io.bloombox.schema.partner.integrations.mailchimp.MailchimpSettingsOuterClass.MailchimpIntegrationFeatures build() {
         io.bloombox.schema.partner.integrations.mailchimp.MailchimpSettingsOuterClass.MailchimpIntegrationFeatures result = buildPartial();
         if (!result.isInitialized()) {
@@ -434,6 +446,7 @@ public final class MailchimpSettingsOuterClass {
         return result;
       }
 
+      @java.lang.Override
       public io.bloombox.schema.partner.integrations.mailchimp.MailchimpSettingsOuterClass.MailchimpIntegrationFeatures buildPartial() {
         io.bloombox.schema.partner.integrations.mailchimp.MailchimpSettingsOuterClass.MailchimpIntegrationFeatures result = new io.bloombox.schema.partner.integrations.mailchimp.MailchimpSettingsOuterClass.MailchimpIntegrationFeatures(this);
         result.signups_ = signups_;
@@ -443,32 +456,39 @@ public final class MailchimpSettingsOuterClass {
         return result;
       }
 
+      @java.lang.Override
       public Builder clone() {
         return (Builder) super.clone();
       }
+      @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
         return (Builder) super.setField(field, value);
       }
+      @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
         return (Builder) super.clearField(field);
       }
+      @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
         return (Builder) super.clearOneof(oneof);
       }
+      @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
         return (Builder) super.setRepeatedField(field, index, value);
       }
+      @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
         return (Builder) super.addRepeatedField(field, value);
       }
+      @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
         if (other instanceof io.bloombox.schema.partner.integrations.mailchimp.MailchimpSettingsOuterClass.MailchimpIntegrationFeatures) {
           return mergeFrom((io.bloombox.schema.partner.integrations.mailchimp.MailchimpSettingsOuterClass.MailchimpIntegrationFeatures)other);
@@ -494,10 +514,12 @@ public final class MailchimpSettingsOuterClass {
         return this;
       }
 
+      @java.lang.Override
       public final boolean isInitialized() {
         return true;
       }
 
+      @java.lang.Override
       public Builder mergeFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -629,21 +651,23 @@ public final class MailchimpSettingsOuterClass {
         onChanged();
         return this;
       }
+      @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
         return super.setUnknownFieldsProto3(unknownFields);
       }
 
+      @java.lang.Override
       public final Builder mergeUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
         return super.mergeUnknownFields(unknownFields);
       }
 
 
-      // @@protoc_insertion_point(builder_scope:bloombox.schema.partner.integrations.mailchimp.MailchimpIntegrationFeatures)
+      // @@protoc_insertion_point(builder_scope:bloombox.partner.integrations.mailchimp.MailchimpIntegrationFeatures)
     }
 
-    // @@protoc_insertion_point(class_scope:bloombox.schema.partner.integrations.mailchimp.MailchimpIntegrationFeatures)
+    // @@protoc_insertion_point(class_scope:bloombox.partner.integrations.mailchimp.MailchimpIntegrationFeatures)
     private static final io.bloombox.schema.partner.integrations.mailchimp.MailchimpSettingsOuterClass.MailchimpIntegrationFeatures DEFAULT_INSTANCE;
     static {
       DEFAULT_INSTANCE = new io.bloombox.schema.partner.integrations.mailchimp.MailchimpSettingsOuterClass.MailchimpIntegrationFeatures();
@@ -655,6 +679,7 @@ public final class MailchimpSettingsOuterClass {
 
     private static final com.google.protobuf.Parser<MailchimpIntegrationFeatures>
         PARSER = new com.google.protobuf.AbstractParser<MailchimpIntegrationFeatures>() {
+      @java.lang.Override
       public MailchimpIntegrationFeatures parsePartialFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -672,6 +697,7 @@ public final class MailchimpSettingsOuterClass {
       return PARSER;
     }
 
+    @java.lang.Override
     public io.bloombox.schema.partner.integrations.mailchimp.MailchimpSettingsOuterClass.MailchimpIntegrationFeatures getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
@@ -679,7 +705,7 @@ public final class MailchimpSettingsOuterClass {
   }
 
   public interface MailchimpListsOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:bloombox.schema.partner.integrations.mailchimp.MailchimpLists)
+      // @@protoc_insertion_point(interface_extends:bloombox.partner.integrations.mailchimp.MailchimpLists)
       com.google.protobuf.MessageOrBuilder {
 
     /**
@@ -723,11 +749,11 @@ public final class MailchimpSettingsOuterClass {
    * MailChimp list mappings to use for signup integration.
    * </pre>
    *
-   * Protobuf type {@code bloombox.schema.partner.integrations.mailchimp.MailchimpLists}
+   * Protobuf type {@code bloombox.partner.integrations.mailchimp.MailchimpLists}
    */
   public  static final class MailchimpLists extends
       com.google.protobuf.GeneratedMessageV3 implements
-      // @@protoc_insertion_point(message_implements:bloombox.schema.partner.integrations.mailchimp.MailchimpLists)
+      // @@protoc_insertion_point(message_implements:bloombox.partner.integrations.mailchimp.MailchimpLists)
       MailchimpListsOrBuilder {
   private static final long serialVersionUID = 0L;
     // Use MailchimpLists.newBuilder() to construct.
@@ -763,13 +789,6 @@ public final class MailchimpSettingsOuterClass {
             case 0:
               done = true;
               break;
-            default: {
-              if (!parseUnknownFieldProto3(
-                  input, unknownFields, extensionRegistry, tag)) {
-                done = true;
-              }
-              break;
-            }
             case 10: {
               java.lang.String s = input.readStringRequireUtf8();
 
@@ -780,6 +799,13 @@ public final class MailchimpSettingsOuterClass {
               java.lang.String s = input.readStringRequireUtf8();
 
               marketing_ = s;
+              break;
+            }
+            default: {
+              if (!parseUnknownFieldProto3(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
               break;
             }
           }
@@ -796,12 +822,13 @@ public final class MailchimpSettingsOuterClass {
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return io.bloombox.schema.partner.integrations.mailchimp.MailchimpSettingsOuterClass.internal_static_bloombox_schema_partner_integrations_mailchimp_MailchimpLists_descriptor;
+      return io.bloombox.schema.partner.integrations.mailchimp.MailchimpSettingsOuterClass.internal_static_bloombox_partner_integrations_mailchimp_MailchimpLists_descriptor;
     }
 
+    @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return io.bloombox.schema.partner.integrations.mailchimp.MailchimpSettingsOuterClass.internal_static_bloombox_schema_partner_integrations_mailchimp_MailchimpLists_fieldAccessorTable
+      return io.bloombox.schema.partner.integrations.mailchimp.MailchimpSettingsOuterClass.internal_static_bloombox_partner_integrations_mailchimp_MailchimpLists_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
               io.bloombox.schema.partner.integrations.mailchimp.MailchimpSettingsOuterClass.MailchimpLists.class, io.bloombox.schema.partner.integrations.mailchimp.MailchimpSettingsOuterClass.MailchimpLists.Builder.class);
     }
@@ -891,6 +918,7 @@ public final class MailchimpSettingsOuterClass {
     }
 
     private byte memoizedIsInitialized = -1;
+    @java.lang.Override
     public final boolean isInitialized() {
       byte isInitialized = memoizedIsInitialized;
       if (isInitialized == 1) return true;
@@ -900,6 +928,7 @@ public final class MailchimpSettingsOuterClass {
       return true;
     }
 
+    @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
       if (!getCommsBytes().isEmpty()) {
@@ -911,6 +940,7 @@ public final class MailchimpSettingsOuterClass {
       unknownFields.writeTo(output);
     }
 
+    @java.lang.Override
     public int getSerializedSize() {
       int size = memoizedSize;
       if (size != -1) return size;
@@ -1032,6 +1062,7 @@ public final class MailchimpSettingsOuterClass {
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
 
+    @java.lang.Override
     public Builder newBuilderForType() { return newBuilder(); }
     public static Builder newBuilder() {
       return DEFAULT_INSTANCE.toBuilder();
@@ -1039,6 +1070,7 @@ public final class MailchimpSettingsOuterClass {
     public static Builder newBuilder(io.bloombox.schema.partner.integrations.mailchimp.MailchimpSettingsOuterClass.MailchimpLists prototype) {
       return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
     }
+    @java.lang.Override
     public Builder toBuilder() {
       return this == DEFAULT_INSTANCE
           ? new Builder() : new Builder().mergeFrom(this);
@@ -1055,20 +1087,21 @@ public final class MailchimpSettingsOuterClass {
      * MailChimp list mappings to use for signup integration.
      * </pre>
      *
-     * Protobuf type {@code bloombox.schema.partner.integrations.mailchimp.MailchimpLists}
+     * Protobuf type {@code bloombox.partner.integrations.mailchimp.MailchimpLists}
      */
     public static final class Builder extends
         com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:bloombox.schema.partner.integrations.mailchimp.MailchimpLists)
+        // @@protoc_insertion_point(builder_implements:bloombox.partner.integrations.mailchimp.MailchimpLists)
         io.bloombox.schema.partner.integrations.mailchimp.MailchimpSettingsOuterClass.MailchimpListsOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return io.bloombox.schema.partner.integrations.mailchimp.MailchimpSettingsOuterClass.internal_static_bloombox_schema_partner_integrations_mailchimp_MailchimpLists_descriptor;
+        return io.bloombox.schema.partner.integrations.mailchimp.MailchimpSettingsOuterClass.internal_static_bloombox_partner_integrations_mailchimp_MailchimpLists_descriptor;
       }
 
+      @java.lang.Override
       protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return io.bloombox.schema.partner.integrations.mailchimp.MailchimpSettingsOuterClass.internal_static_bloombox_schema_partner_integrations_mailchimp_MailchimpLists_fieldAccessorTable
+        return io.bloombox.schema.partner.integrations.mailchimp.MailchimpSettingsOuterClass.internal_static_bloombox_partner_integrations_mailchimp_MailchimpLists_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
                 io.bloombox.schema.partner.integrations.mailchimp.MailchimpSettingsOuterClass.MailchimpLists.class, io.bloombox.schema.partner.integrations.mailchimp.MailchimpSettingsOuterClass.MailchimpLists.Builder.class);
       }
@@ -1088,6 +1121,7 @@ public final class MailchimpSettingsOuterClass {
                 .alwaysUseFieldBuilders) {
         }
       }
+      @java.lang.Override
       public Builder clear() {
         super.clear();
         comms_ = "";
@@ -1097,15 +1131,18 @@ public final class MailchimpSettingsOuterClass {
         return this;
       }
 
+      @java.lang.Override
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return io.bloombox.schema.partner.integrations.mailchimp.MailchimpSettingsOuterClass.internal_static_bloombox_schema_partner_integrations_mailchimp_MailchimpLists_descriptor;
+        return io.bloombox.schema.partner.integrations.mailchimp.MailchimpSettingsOuterClass.internal_static_bloombox_partner_integrations_mailchimp_MailchimpLists_descriptor;
       }
 
+      @java.lang.Override
       public io.bloombox.schema.partner.integrations.mailchimp.MailchimpSettingsOuterClass.MailchimpLists getDefaultInstanceForType() {
         return io.bloombox.schema.partner.integrations.mailchimp.MailchimpSettingsOuterClass.MailchimpLists.getDefaultInstance();
       }
 
+      @java.lang.Override
       public io.bloombox.schema.partner.integrations.mailchimp.MailchimpSettingsOuterClass.MailchimpLists build() {
         io.bloombox.schema.partner.integrations.mailchimp.MailchimpSettingsOuterClass.MailchimpLists result = buildPartial();
         if (!result.isInitialized()) {
@@ -1114,6 +1151,7 @@ public final class MailchimpSettingsOuterClass {
         return result;
       }
 
+      @java.lang.Override
       public io.bloombox.schema.partner.integrations.mailchimp.MailchimpSettingsOuterClass.MailchimpLists buildPartial() {
         io.bloombox.schema.partner.integrations.mailchimp.MailchimpSettingsOuterClass.MailchimpLists result = new io.bloombox.schema.partner.integrations.mailchimp.MailchimpSettingsOuterClass.MailchimpLists(this);
         result.comms_ = comms_;
@@ -1122,32 +1160,39 @@ public final class MailchimpSettingsOuterClass {
         return result;
       }
 
+      @java.lang.Override
       public Builder clone() {
         return (Builder) super.clone();
       }
+      @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
         return (Builder) super.setField(field, value);
       }
+      @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
         return (Builder) super.clearField(field);
       }
+      @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
         return (Builder) super.clearOneof(oneof);
       }
+      @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
         return (Builder) super.setRepeatedField(field, index, value);
       }
+      @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
         return (Builder) super.addRepeatedField(field, value);
       }
+      @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
         if (other instanceof io.bloombox.schema.partner.integrations.mailchimp.MailchimpSettingsOuterClass.MailchimpLists) {
           return mergeFrom((io.bloombox.schema.partner.integrations.mailchimp.MailchimpSettingsOuterClass.MailchimpLists)other);
@@ -1172,10 +1217,12 @@ public final class MailchimpSettingsOuterClass {
         return this;
       }
 
+      @java.lang.Override
       public final boolean isInitialized() {
         return true;
       }
 
+      @java.lang.Override
       public Builder mergeFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -1371,21 +1418,23 @@ public final class MailchimpSettingsOuterClass {
         onChanged();
         return this;
       }
+      @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
         return super.setUnknownFieldsProto3(unknownFields);
       }
 
+      @java.lang.Override
       public final Builder mergeUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
         return super.mergeUnknownFields(unknownFields);
       }
 
 
-      // @@protoc_insertion_point(builder_scope:bloombox.schema.partner.integrations.mailchimp.MailchimpLists)
+      // @@protoc_insertion_point(builder_scope:bloombox.partner.integrations.mailchimp.MailchimpLists)
     }
 
-    // @@protoc_insertion_point(class_scope:bloombox.schema.partner.integrations.mailchimp.MailchimpLists)
+    // @@protoc_insertion_point(class_scope:bloombox.partner.integrations.mailchimp.MailchimpLists)
     private static final io.bloombox.schema.partner.integrations.mailchimp.MailchimpSettingsOuterClass.MailchimpLists DEFAULT_INSTANCE;
     static {
       DEFAULT_INSTANCE = new io.bloombox.schema.partner.integrations.mailchimp.MailchimpSettingsOuterClass.MailchimpLists();
@@ -1397,6 +1446,7 @@ public final class MailchimpSettingsOuterClass {
 
     private static final com.google.protobuf.Parser<MailchimpLists>
         PARSER = new com.google.protobuf.AbstractParser<MailchimpLists>() {
+      @java.lang.Override
       public MailchimpLists parsePartialFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -1414,6 +1464,7 @@ public final class MailchimpSettingsOuterClass {
       return PARSER;
     }
 
+    @java.lang.Override
     public io.bloombox.schema.partner.integrations.mailchimp.MailchimpSettingsOuterClass.MailchimpLists getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
@@ -1421,7 +1472,7 @@ public final class MailchimpSettingsOuterClass {
   }
 
   public interface MailchimpSettingsOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:bloombox.schema.partner.integrations.mailchimp.MailchimpSettings)
+      // @@protoc_insertion_point(interface_extends:bloombox.partner.integrations.mailchimp.MailchimpSettings)
       com.google.protobuf.MessageOrBuilder {
 
     /**
@@ -1447,7 +1498,7 @@ public final class MailchimpSettingsOuterClass {
      * Flags indicating features that should be enabled or disabled.
      * </pre>
      *
-     * <code>.bloombox.schema.partner.integrations.mailchimp.MailchimpIntegrationFeatures features = 10;</code>
+     * <code>.bloombox.partner.integrations.mailchimp.MailchimpIntegrationFeatures features = 10;</code>
      */
     boolean hasFeatures();
     /**
@@ -1455,7 +1506,7 @@ public final class MailchimpSettingsOuterClass {
      * Flags indicating features that should be enabled or disabled.
      * </pre>
      *
-     * <code>.bloombox.schema.partner.integrations.mailchimp.MailchimpIntegrationFeatures features = 10;</code>
+     * <code>.bloombox.partner.integrations.mailchimp.MailchimpIntegrationFeatures features = 10;</code>
      */
     io.bloombox.schema.partner.integrations.mailchimp.MailchimpSettingsOuterClass.MailchimpIntegrationFeatures getFeatures();
     /**
@@ -1463,7 +1514,7 @@ public final class MailchimpSettingsOuterClass {
      * Flags indicating features that should be enabled or disabled.
      * </pre>
      *
-     * <code>.bloombox.schema.partner.integrations.mailchimp.MailchimpIntegrationFeatures features = 10;</code>
+     * <code>.bloombox.partner.integrations.mailchimp.MailchimpIntegrationFeatures features = 10;</code>
      */
     io.bloombox.schema.partner.integrations.mailchimp.MailchimpSettingsOuterClass.MailchimpIntegrationFeaturesOrBuilder getFeaturesOrBuilder();
 
@@ -1472,7 +1523,7 @@ public final class MailchimpSettingsOuterClass {
      * Lists to use for various bindings in MailChimp.
      * </pre>
      *
-     * <code>.bloombox.schema.partner.integrations.mailchimp.MailchimpLists lists = 11;</code>
+     * <code>.bloombox.partner.integrations.mailchimp.MailchimpLists lists = 11;</code>
      */
     boolean hasLists();
     /**
@@ -1480,7 +1531,7 @@ public final class MailchimpSettingsOuterClass {
      * Lists to use for various bindings in MailChimp.
      * </pre>
      *
-     * <code>.bloombox.schema.partner.integrations.mailchimp.MailchimpLists lists = 11;</code>
+     * <code>.bloombox.partner.integrations.mailchimp.MailchimpLists lists = 11;</code>
      */
     io.bloombox.schema.partner.integrations.mailchimp.MailchimpSettingsOuterClass.MailchimpLists getLists();
     /**
@@ -1488,7 +1539,7 @@ public final class MailchimpSettingsOuterClass {
      * Lists to use for various bindings in MailChimp.
      * </pre>
      *
-     * <code>.bloombox.schema.partner.integrations.mailchimp.MailchimpLists lists = 11;</code>
+     * <code>.bloombox.partner.integrations.mailchimp.MailchimpLists lists = 11;</code>
      */
     io.bloombox.schema.partner.integrations.mailchimp.MailchimpSettingsOuterClass.MailchimpListsOrBuilder getListsOrBuilder();
   }
@@ -1497,11 +1548,11 @@ public final class MailchimpSettingsOuterClass {
    * Specifies MailChimp integration settings.
    * </pre>
    *
-   * Protobuf type {@code bloombox.schema.partner.integrations.mailchimp.MailchimpSettings}
+   * Protobuf type {@code bloombox.partner.integrations.mailchimp.MailchimpSettings}
    */
   public  static final class MailchimpSettings extends
       com.google.protobuf.GeneratedMessageV3 implements
-      // @@protoc_insertion_point(message_implements:bloombox.schema.partner.integrations.mailchimp.MailchimpSettings)
+      // @@protoc_insertion_point(message_implements:bloombox.partner.integrations.mailchimp.MailchimpSettings)
       MailchimpSettingsOrBuilder {
   private static final long serialVersionUID = 0L;
     // Use MailchimpSettings.newBuilder() to construct.
@@ -1536,13 +1587,6 @@ public final class MailchimpSettingsOuterClass {
             case 0:
               done = true;
               break;
-            default: {
-              if (!parseUnknownFieldProto3(
-                  input, unknownFields, extensionRegistry, tag)) {
-                done = true;
-              }
-              break;
-            }
             case 10: {
               java.lang.String s = input.readStringRequireUtf8();
 
@@ -1575,6 +1619,13 @@ public final class MailchimpSettingsOuterClass {
 
               break;
             }
+            default: {
+              if (!parseUnknownFieldProto3(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
           }
         }
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
@@ -1589,12 +1640,13 @@ public final class MailchimpSettingsOuterClass {
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return io.bloombox.schema.partner.integrations.mailchimp.MailchimpSettingsOuterClass.internal_static_bloombox_schema_partner_integrations_mailchimp_MailchimpSettings_descriptor;
+      return io.bloombox.schema.partner.integrations.mailchimp.MailchimpSettingsOuterClass.internal_static_bloombox_partner_integrations_mailchimp_MailchimpSettings_descriptor;
     }
 
+    @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return io.bloombox.schema.partner.integrations.mailchimp.MailchimpSettingsOuterClass.internal_static_bloombox_schema_partner_integrations_mailchimp_MailchimpSettings_fieldAccessorTable
+      return io.bloombox.schema.partner.integrations.mailchimp.MailchimpSettingsOuterClass.internal_static_bloombox_partner_integrations_mailchimp_MailchimpSettings_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
               io.bloombox.schema.partner.integrations.mailchimp.MailchimpSettingsOuterClass.MailchimpSettings.class, io.bloombox.schema.partner.integrations.mailchimp.MailchimpSettingsOuterClass.MailchimpSettings.Builder.class);
     }
@@ -1648,7 +1700,7 @@ public final class MailchimpSettingsOuterClass {
      * Flags indicating features that should be enabled or disabled.
      * </pre>
      *
-     * <code>.bloombox.schema.partner.integrations.mailchimp.MailchimpIntegrationFeatures features = 10;</code>
+     * <code>.bloombox.partner.integrations.mailchimp.MailchimpIntegrationFeatures features = 10;</code>
      */
     public boolean hasFeatures() {
       return features_ != null;
@@ -1658,7 +1710,7 @@ public final class MailchimpSettingsOuterClass {
      * Flags indicating features that should be enabled or disabled.
      * </pre>
      *
-     * <code>.bloombox.schema.partner.integrations.mailchimp.MailchimpIntegrationFeatures features = 10;</code>
+     * <code>.bloombox.partner.integrations.mailchimp.MailchimpIntegrationFeatures features = 10;</code>
      */
     public io.bloombox.schema.partner.integrations.mailchimp.MailchimpSettingsOuterClass.MailchimpIntegrationFeatures getFeatures() {
       return features_ == null ? io.bloombox.schema.partner.integrations.mailchimp.MailchimpSettingsOuterClass.MailchimpIntegrationFeatures.getDefaultInstance() : features_;
@@ -1668,7 +1720,7 @@ public final class MailchimpSettingsOuterClass {
      * Flags indicating features that should be enabled or disabled.
      * </pre>
      *
-     * <code>.bloombox.schema.partner.integrations.mailchimp.MailchimpIntegrationFeatures features = 10;</code>
+     * <code>.bloombox.partner.integrations.mailchimp.MailchimpIntegrationFeatures features = 10;</code>
      */
     public io.bloombox.schema.partner.integrations.mailchimp.MailchimpSettingsOuterClass.MailchimpIntegrationFeaturesOrBuilder getFeaturesOrBuilder() {
       return getFeatures();
@@ -1681,7 +1733,7 @@ public final class MailchimpSettingsOuterClass {
      * Lists to use for various bindings in MailChimp.
      * </pre>
      *
-     * <code>.bloombox.schema.partner.integrations.mailchimp.MailchimpLists lists = 11;</code>
+     * <code>.bloombox.partner.integrations.mailchimp.MailchimpLists lists = 11;</code>
      */
     public boolean hasLists() {
       return lists_ != null;
@@ -1691,7 +1743,7 @@ public final class MailchimpSettingsOuterClass {
      * Lists to use for various bindings in MailChimp.
      * </pre>
      *
-     * <code>.bloombox.schema.partner.integrations.mailchimp.MailchimpLists lists = 11;</code>
+     * <code>.bloombox.partner.integrations.mailchimp.MailchimpLists lists = 11;</code>
      */
     public io.bloombox.schema.partner.integrations.mailchimp.MailchimpSettingsOuterClass.MailchimpLists getLists() {
       return lists_ == null ? io.bloombox.schema.partner.integrations.mailchimp.MailchimpSettingsOuterClass.MailchimpLists.getDefaultInstance() : lists_;
@@ -1701,13 +1753,14 @@ public final class MailchimpSettingsOuterClass {
      * Lists to use for various bindings in MailChimp.
      * </pre>
      *
-     * <code>.bloombox.schema.partner.integrations.mailchimp.MailchimpLists lists = 11;</code>
+     * <code>.bloombox.partner.integrations.mailchimp.MailchimpLists lists = 11;</code>
      */
     public io.bloombox.schema.partner.integrations.mailchimp.MailchimpSettingsOuterClass.MailchimpListsOrBuilder getListsOrBuilder() {
       return getLists();
     }
 
     private byte memoizedIsInitialized = -1;
+    @java.lang.Override
     public final boolean isInitialized() {
       byte isInitialized = memoizedIsInitialized;
       if (isInitialized == 1) return true;
@@ -1717,6 +1770,7 @@ public final class MailchimpSettingsOuterClass {
       return true;
     }
 
+    @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
       if (!getApiKeyBytes().isEmpty()) {
@@ -1731,6 +1785,7 @@ public final class MailchimpSettingsOuterClass {
       unknownFields.writeTo(output);
     }
 
+    @java.lang.Override
     public int getSerializedSize() {
       int size = memoizedSize;
       if (size != -1) return size;
@@ -1871,6 +1926,7 @@ public final class MailchimpSettingsOuterClass {
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
 
+    @java.lang.Override
     public Builder newBuilderForType() { return newBuilder(); }
     public static Builder newBuilder() {
       return DEFAULT_INSTANCE.toBuilder();
@@ -1878,6 +1934,7 @@ public final class MailchimpSettingsOuterClass {
     public static Builder newBuilder(io.bloombox.schema.partner.integrations.mailchimp.MailchimpSettingsOuterClass.MailchimpSettings prototype) {
       return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
     }
+    @java.lang.Override
     public Builder toBuilder() {
       return this == DEFAULT_INSTANCE
           ? new Builder() : new Builder().mergeFrom(this);
@@ -1894,20 +1951,21 @@ public final class MailchimpSettingsOuterClass {
      * Specifies MailChimp integration settings.
      * </pre>
      *
-     * Protobuf type {@code bloombox.schema.partner.integrations.mailchimp.MailchimpSettings}
+     * Protobuf type {@code bloombox.partner.integrations.mailchimp.MailchimpSettings}
      */
     public static final class Builder extends
         com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:bloombox.schema.partner.integrations.mailchimp.MailchimpSettings)
+        // @@protoc_insertion_point(builder_implements:bloombox.partner.integrations.mailchimp.MailchimpSettings)
         io.bloombox.schema.partner.integrations.mailchimp.MailchimpSettingsOuterClass.MailchimpSettingsOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return io.bloombox.schema.partner.integrations.mailchimp.MailchimpSettingsOuterClass.internal_static_bloombox_schema_partner_integrations_mailchimp_MailchimpSettings_descriptor;
+        return io.bloombox.schema.partner.integrations.mailchimp.MailchimpSettingsOuterClass.internal_static_bloombox_partner_integrations_mailchimp_MailchimpSettings_descriptor;
       }
 
+      @java.lang.Override
       protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return io.bloombox.schema.partner.integrations.mailchimp.MailchimpSettingsOuterClass.internal_static_bloombox_schema_partner_integrations_mailchimp_MailchimpSettings_fieldAccessorTable
+        return io.bloombox.schema.partner.integrations.mailchimp.MailchimpSettingsOuterClass.internal_static_bloombox_partner_integrations_mailchimp_MailchimpSettings_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
                 io.bloombox.schema.partner.integrations.mailchimp.MailchimpSettingsOuterClass.MailchimpSettings.class, io.bloombox.schema.partner.integrations.mailchimp.MailchimpSettingsOuterClass.MailchimpSettings.Builder.class);
       }
@@ -1927,6 +1985,7 @@ public final class MailchimpSettingsOuterClass {
                 .alwaysUseFieldBuilders) {
         }
       }
+      @java.lang.Override
       public Builder clear() {
         super.clear();
         apiKey_ = "";
@@ -1946,15 +2005,18 @@ public final class MailchimpSettingsOuterClass {
         return this;
       }
 
+      @java.lang.Override
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return io.bloombox.schema.partner.integrations.mailchimp.MailchimpSettingsOuterClass.internal_static_bloombox_schema_partner_integrations_mailchimp_MailchimpSettings_descriptor;
+        return io.bloombox.schema.partner.integrations.mailchimp.MailchimpSettingsOuterClass.internal_static_bloombox_partner_integrations_mailchimp_MailchimpSettings_descriptor;
       }
 
+      @java.lang.Override
       public io.bloombox.schema.partner.integrations.mailchimp.MailchimpSettingsOuterClass.MailchimpSettings getDefaultInstanceForType() {
         return io.bloombox.schema.partner.integrations.mailchimp.MailchimpSettingsOuterClass.MailchimpSettings.getDefaultInstance();
       }
 
+      @java.lang.Override
       public io.bloombox.schema.partner.integrations.mailchimp.MailchimpSettingsOuterClass.MailchimpSettings build() {
         io.bloombox.schema.partner.integrations.mailchimp.MailchimpSettingsOuterClass.MailchimpSettings result = buildPartial();
         if (!result.isInitialized()) {
@@ -1963,6 +2025,7 @@ public final class MailchimpSettingsOuterClass {
         return result;
       }
 
+      @java.lang.Override
       public io.bloombox.schema.partner.integrations.mailchimp.MailchimpSettingsOuterClass.MailchimpSettings buildPartial() {
         io.bloombox.schema.partner.integrations.mailchimp.MailchimpSettingsOuterClass.MailchimpSettings result = new io.bloombox.schema.partner.integrations.mailchimp.MailchimpSettingsOuterClass.MailchimpSettings(this);
         result.apiKey_ = apiKey_;
@@ -1980,32 +2043,39 @@ public final class MailchimpSettingsOuterClass {
         return result;
       }
 
+      @java.lang.Override
       public Builder clone() {
         return (Builder) super.clone();
       }
+      @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
         return (Builder) super.setField(field, value);
       }
+      @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
         return (Builder) super.clearField(field);
       }
+      @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
         return (Builder) super.clearOneof(oneof);
       }
+      @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
         return (Builder) super.setRepeatedField(field, index, value);
       }
+      @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
         return (Builder) super.addRepeatedField(field, value);
       }
+      @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
         if (other instanceof io.bloombox.schema.partner.integrations.mailchimp.MailchimpSettingsOuterClass.MailchimpSettings) {
           return mergeFrom((io.bloombox.schema.partner.integrations.mailchimp.MailchimpSettingsOuterClass.MailchimpSettings)other);
@@ -2032,10 +2102,12 @@ public final class MailchimpSettingsOuterClass {
         return this;
       }
 
+      @java.lang.Override
       public final boolean isInitialized() {
         return true;
       }
 
+      @java.lang.Override
       public Builder mergeFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -2151,7 +2223,7 @@ public final class MailchimpSettingsOuterClass {
        * Flags indicating features that should be enabled or disabled.
        * </pre>
        *
-       * <code>.bloombox.schema.partner.integrations.mailchimp.MailchimpIntegrationFeatures features = 10;</code>
+       * <code>.bloombox.partner.integrations.mailchimp.MailchimpIntegrationFeatures features = 10;</code>
        */
       public boolean hasFeatures() {
         return featuresBuilder_ != null || features_ != null;
@@ -2161,7 +2233,7 @@ public final class MailchimpSettingsOuterClass {
        * Flags indicating features that should be enabled or disabled.
        * </pre>
        *
-       * <code>.bloombox.schema.partner.integrations.mailchimp.MailchimpIntegrationFeatures features = 10;</code>
+       * <code>.bloombox.partner.integrations.mailchimp.MailchimpIntegrationFeatures features = 10;</code>
        */
       public io.bloombox.schema.partner.integrations.mailchimp.MailchimpSettingsOuterClass.MailchimpIntegrationFeatures getFeatures() {
         if (featuresBuilder_ == null) {
@@ -2175,7 +2247,7 @@ public final class MailchimpSettingsOuterClass {
        * Flags indicating features that should be enabled or disabled.
        * </pre>
        *
-       * <code>.bloombox.schema.partner.integrations.mailchimp.MailchimpIntegrationFeatures features = 10;</code>
+       * <code>.bloombox.partner.integrations.mailchimp.MailchimpIntegrationFeatures features = 10;</code>
        */
       public Builder setFeatures(io.bloombox.schema.partner.integrations.mailchimp.MailchimpSettingsOuterClass.MailchimpIntegrationFeatures value) {
         if (featuresBuilder_ == null) {
@@ -2195,7 +2267,7 @@ public final class MailchimpSettingsOuterClass {
        * Flags indicating features that should be enabled or disabled.
        * </pre>
        *
-       * <code>.bloombox.schema.partner.integrations.mailchimp.MailchimpIntegrationFeatures features = 10;</code>
+       * <code>.bloombox.partner.integrations.mailchimp.MailchimpIntegrationFeatures features = 10;</code>
        */
       public Builder setFeatures(
           io.bloombox.schema.partner.integrations.mailchimp.MailchimpSettingsOuterClass.MailchimpIntegrationFeatures.Builder builderForValue) {
@@ -2213,7 +2285,7 @@ public final class MailchimpSettingsOuterClass {
        * Flags indicating features that should be enabled or disabled.
        * </pre>
        *
-       * <code>.bloombox.schema.partner.integrations.mailchimp.MailchimpIntegrationFeatures features = 10;</code>
+       * <code>.bloombox.partner.integrations.mailchimp.MailchimpIntegrationFeatures features = 10;</code>
        */
       public Builder mergeFeatures(io.bloombox.schema.partner.integrations.mailchimp.MailchimpSettingsOuterClass.MailchimpIntegrationFeatures value) {
         if (featuresBuilder_ == null) {
@@ -2235,7 +2307,7 @@ public final class MailchimpSettingsOuterClass {
        * Flags indicating features that should be enabled or disabled.
        * </pre>
        *
-       * <code>.bloombox.schema.partner.integrations.mailchimp.MailchimpIntegrationFeatures features = 10;</code>
+       * <code>.bloombox.partner.integrations.mailchimp.MailchimpIntegrationFeatures features = 10;</code>
        */
       public Builder clearFeatures() {
         if (featuresBuilder_ == null) {
@@ -2253,7 +2325,7 @@ public final class MailchimpSettingsOuterClass {
        * Flags indicating features that should be enabled or disabled.
        * </pre>
        *
-       * <code>.bloombox.schema.partner.integrations.mailchimp.MailchimpIntegrationFeatures features = 10;</code>
+       * <code>.bloombox.partner.integrations.mailchimp.MailchimpIntegrationFeatures features = 10;</code>
        */
       public io.bloombox.schema.partner.integrations.mailchimp.MailchimpSettingsOuterClass.MailchimpIntegrationFeatures.Builder getFeaturesBuilder() {
         
@@ -2265,7 +2337,7 @@ public final class MailchimpSettingsOuterClass {
        * Flags indicating features that should be enabled or disabled.
        * </pre>
        *
-       * <code>.bloombox.schema.partner.integrations.mailchimp.MailchimpIntegrationFeatures features = 10;</code>
+       * <code>.bloombox.partner.integrations.mailchimp.MailchimpIntegrationFeatures features = 10;</code>
        */
       public io.bloombox.schema.partner.integrations.mailchimp.MailchimpSettingsOuterClass.MailchimpIntegrationFeaturesOrBuilder getFeaturesOrBuilder() {
         if (featuresBuilder_ != null) {
@@ -2280,7 +2352,7 @@ public final class MailchimpSettingsOuterClass {
        * Flags indicating features that should be enabled or disabled.
        * </pre>
        *
-       * <code>.bloombox.schema.partner.integrations.mailchimp.MailchimpIntegrationFeatures features = 10;</code>
+       * <code>.bloombox.partner.integrations.mailchimp.MailchimpIntegrationFeatures features = 10;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
           io.bloombox.schema.partner.integrations.mailchimp.MailchimpSettingsOuterClass.MailchimpIntegrationFeatures, io.bloombox.schema.partner.integrations.mailchimp.MailchimpSettingsOuterClass.MailchimpIntegrationFeatures.Builder, io.bloombox.schema.partner.integrations.mailchimp.MailchimpSettingsOuterClass.MailchimpIntegrationFeaturesOrBuilder> 
@@ -2304,7 +2376,7 @@ public final class MailchimpSettingsOuterClass {
        * Lists to use for various bindings in MailChimp.
        * </pre>
        *
-       * <code>.bloombox.schema.partner.integrations.mailchimp.MailchimpLists lists = 11;</code>
+       * <code>.bloombox.partner.integrations.mailchimp.MailchimpLists lists = 11;</code>
        */
       public boolean hasLists() {
         return listsBuilder_ != null || lists_ != null;
@@ -2314,7 +2386,7 @@ public final class MailchimpSettingsOuterClass {
        * Lists to use for various bindings in MailChimp.
        * </pre>
        *
-       * <code>.bloombox.schema.partner.integrations.mailchimp.MailchimpLists lists = 11;</code>
+       * <code>.bloombox.partner.integrations.mailchimp.MailchimpLists lists = 11;</code>
        */
       public io.bloombox.schema.partner.integrations.mailchimp.MailchimpSettingsOuterClass.MailchimpLists getLists() {
         if (listsBuilder_ == null) {
@@ -2328,7 +2400,7 @@ public final class MailchimpSettingsOuterClass {
        * Lists to use for various bindings in MailChimp.
        * </pre>
        *
-       * <code>.bloombox.schema.partner.integrations.mailchimp.MailchimpLists lists = 11;</code>
+       * <code>.bloombox.partner.integrations.mailchimp.MailchimpLists lists = 11;</code>
        */
       public Builder setLists(io.bloombox.schema.partner.integrations.mailchimp.MailchimpSettingsOuterClass.MailchimpLists value) {
         if (listsBuilder_ == null) {
@@ -2348,7 +2420,7 @@ public final class MailchimpSettingsOuterClass {
        * Lists to use for various bindings in MailChimp.
        * </pre>
        *
-       * <code>.bloombox.schema.partner.integrations.mailchimp.MailchimpLists lists = 11;</code>
+       * <code>.bloombox.partner.integrations.mailchimp.MailchimpLists lists = 11;</code>
        */
       public Builder setLists(
           io.bloombox.schema.partner.integrations.mailchimp.MailchimpSettingsOuterClass.MailchimpLists.Builder builderForValue) {
@@ -2366,7 +2438,7 @@ public final class MailchimpSettingsOuterClass {
        * Lists to use for various bindings in MailChimp.
        * </pre>
        *
-       * <code>.bloombox.schema.partner.integrations.mailchimp.MailchimpLists lists = 11;</code>
+       * <code>.bloombox.partner.integrations.mailchimp.MailchimpLists lists = 11;</code>
        */
       public Builder mergeLists(io.bloombox.schema.partner.integrations.mailchimp.MailchimpSettingsOuterClass.MailchimpLists value) {
         if (listsBuilder_ == null) {
@@ -2388,7 +2460,7 @@ public final class MailchimpSettingsOuterClass {
        * Lists to use for various bindings in MailChimp.
        * </pre>
        *
-       * <code>.bloombox.schema.partner.integrations.mailchimp.MailchimpLists lists = 11;</code>
+       * <code>.bloombox.partner.integrations.mailchimp.MailchimpLists lists = 11;</code>
        */
       public Builder clearLists() {
         if (listsBuilder_ == null) {
@@ -2406,7 +2478,7 @@ public final class MailchimpSettingsOuterClass {
        * Lists to use for various bindings in MailChimp.
        * </pre>
        *
-       * <code>.bloombox.schema.partner.integrations.mailchimp.MailchimpLists lists = 11;</code>
+       * <code>.bloombox.partner.integrations.mailchimp.MailchimpLists lists = 11;</code>
        */
       public io.bloombox.schema.partner.integrations.mailchimp.MailchimpSettingsOuterClass.MailchimpLists.Builder getListsBuilder() {
         
@@ -2418,7 +2490,7 @@ public final class MailchimpSettingsOuterClass {
        * Lists to use for various bindings in MailChimp.
        * </pre>
        *
-       * <code>.bloombox.schema.partner.integrations.mailchimp.MailchimpLists lists = 11;</code>
+       * <code>.bloombox.partner.integrations.mailchimp.MailchimpLists lists = 11;</code>
        */
       public io.bloombox.schema.partner.integrations.mailchimp.MailchimpSettingsOuterClass.MailchimpListsOrBuilder getListsOrBuilder() {
         if (listsBuilder_ != null) {
@@ -2433,7 +2505,7 @@ public final class MailchimpSettingsOuterClass {
        * Lists to use for various bindings in MailChimp.
        * </pre>
        *
-       * <code>.bloombox.schema.partner.integrations.mailchimp.MailchimpLists lists = 11;</code>
+       * <code>.bloombox.partner.integrations.mailchimp.MailchimpLists lists = 11;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
           io.bloombox.schema.partner.integrations.mailchimp.MailchimpSettingsOuterClass.MailchimpLists, io.bloombox.schema.partner.integrations.mailchimp.MailchimpSettingsOuterClass.MailchimpLists.Builder, io.bloombox.schema.partner.integrations.mailchimp.MailchimpSettingsOuterClass.MailchimpListsOrBuilder> 
@@ -2448,21 +2520,23 @@ public final class MailchimpSettingsOuterClass {
         }
         return listsBuilder_;
       }
+      @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
         return super.setUnknownFieldsProto3(unknownFields);
       }
 
+      @java.lang.Override
       public final Builder mergeUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
         return super.mergeUnknownFields(unknownFields);
       }
 
 
-      // @@protoc_insertion_point(builder_scope:bloombox.schema.partner.integrations.mailchimp.MailchimpSettings)
+      // @@protoc_insertion_point(builder_scope:bloombox.partner.integrations.mailchimp.MailchimpSettings)
     }
 
-    // @@protoc_insertion_point(class_scope:bloombox.schema.partner.integrations.mailchimp.MailchimpSettings)
+    // @@protoc_insertion_point(class_scope:bloombox.partner.integrations.mailchimp.MailchimpSettings)
     private static final io.bloombox.schema.partner.integrations.mailchimp.MailchimpSettingsOuterClass.MailchimpSettings DEFAULT_INSTANCE;
     static {
       DEFAULT_INSTANCE = new io.bloombox.schema.partner.integrations.mailchimp.MailchimpSettingsOuterClass.MailchimpSettings();
@@ -2474,6 +2548,7 @@ public final class MailchimpSettingsOuterClass {
 
     private static final com.google.protobuf.Parser<MailchimpSettings>
         PARSER = new com.google.protobuf.AbstractParser<MailchimpSettings>() {
+      @java.lang.Override
       public MailchimpSettings parsePartialFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -2491,6 +2566,7 @@ public final class MailchimpSettingsOuterClass {
       return PARSER;
     }
 
+    @java.lang.Override
     public io.bloombox.schema.partner.integrations.mailchimp.MailchimpSettingsOuterClass.MailchimpSettings getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
@@ -2498,20 +2574,20 @@ public final class MailchimpSettingsOuterClass {
   }
 
   private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_bloombox_schema_partner_integrations_mailchimp_MailchimpIntegrationFeatures_descriptor;
+    internal_static_bloombox_partner_integrations_mailchimp_MailchimpIntegrationFeatures_descriptor;
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_bloombox_schema_partner_integrations_mailchimp_MailchimpIntegrationFeatures_fieldAccessorTable;
+      internal_static_bloombox_partner_integrations_mailchimp_MailchimpIntegrationFeatures_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_bloombox_schema_partner_integrations_mailchimp_MailchimpLists_descriptor;
+    internal_static_bloombox_partner_integrations_mailchimp_MailchimpLists_descriptor;
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_bloombox_schema_partner_integrations_mailchimp_MailchimpLists_fieldAccessorTable;
+      internal_static_bloombox_partner_integrations_mailchimp_MailchimpLists_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_bloombox_schema_partner_integrations_mailchimp_MailchimpSettings_descriptor;
+    internal_static_bloombox_partner_integrations_mailchimp_MailchimpSettings_descriptor;
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_bloombox_schema_partner_integrations_mailchimp_MailchimpSettings_fieldAccessorTable;
+      internal_static_bloombox_partner_integrations_mailchimp_MailchimpSettings_fieldAccessorTable;
 
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
@@ -2522,18 +2598,18 @@ public final class MailchimpSettingsOuterClass {
   static {
     java.lang.String[] descriptorData = {
       "\n,partner/integrations/MailchimpSettings" +
-      ".proto\022.bloombox.schema.partner.integrat" +
-      "ions.mailchimp\"S\n\034MailchimpIntegrationFe" +
-      "atures\022\017\n\007signups\030\001 \001(\010\022\020\n\010segments\030\002 \001(" +
-      "\010\022\020\n\010ordering\030\003 \001(\010\"2\n\016MailchimpLists\022\r\n" +
-      "\005comms\030\001 \001(\t\022\021\n\tmarketing\030\002 \001(\t\"\323\001\n\021Mail" +
-      "chimpSettings\022\017\n\007api_key\030\001 \001(\t\022^\n\010featur" +
-      "es\030\n \001(\0132L.bloombox.schema.partner.integ" +
-      "rations.mailchimp.MailchimpIntegrationFe" +
-      "atures\022M\n\005lists\030\013 \001(\0132>.bloombox.schema." +
-      "partner.integrations.mailchimp.Mailchimp" +
-      "ListsB=\n1io.bloombox.schema.partner.inte" +
-      "grations.mailchimpH\001P\000\242\002\003BBSb\006proto3"
+      ".proto\022\'bloombox.partner.integrations.ma" +
+      "ilchimp\"S\n\034MailchimpIntegrationFeatures\022" +
+      "\017\n\007signups\030\001 \001(\010\022\020\n\010segments\030\002 \001(\010\022\020\n\010or" +
+      "dering\030\003 \001(\010\"2\n\016MailchimpLists\022\r\n\005comms\030" +
+      "\001 \001(\t\022\021\n\tmarketing\030\002 \001(\t\"\305\001\n\021MailchimpSe" +
+      "ttings\022\017\n\007api_key\030\001 \001(\t\022W\n\010features\030\n \001(" +
+      "\0132E.bloombox.partner.integrations.mailch" +
+      "imp.MailchimpIntegrationFeatures\022F\n\005list" +
+      "s\030\013 \001(\01327.bloombox.partner.integrations." +
+      "mailchimp.MailchimpListsB=\n1io.bloombox." +
+      "schema.partner.integrations.mailchimpH\001P" +
+      "\000\242\002\003BBSb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -2547,23 +2623,23 @@ public final class MailchimpSettingsOuterClass {
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
         }, assigner);
-    internal_static_bloombox_schema_partner_integrations_mailchimp_MailchimpIntegrationFeatures_descriptor =
+    internal_static_bloombox_partner_integrations_mailchimp_MailchimpIntegrationFeatures_descriptor =
       getDescriptor().getMessageTypes().get(0);
-    internal_static_bloombox_schema_partner_integrations_mailchimp_MailchimpIntegrationFeatures_fieldAccessorTable = new
+    internal_static_bloombox_partner_integrations_mailchimp_MailchimpIntegrationFeatures_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_bloombox_schema_partner_integrations_mailchimp_MailchimpIntegrationFeatures_descriptor,
+        internal_static_bloombox_partner_integrations_mailchimp_MailchimpIntegrationFeatures_descriptor,
         new java.lang.String[] { "Signups", "Segments", "Ordering", });
-    internal_static_bloombox_schema_partner_integrations_mailchimp_MailchimpLists_descriptor =
+    internal_static_bloombox_partner_integrations_mailchimp_MailchimpLists_descriptor =
       getDescriptor().getMessageTypes().get(1);
-    internal_static_bloombox_schema_partner_integrations_mailchimp_MailchimpLists_fieldAccessorTable = new
+    internal_static_bloombox_partner_integrations_mailchimp_MailchimpLists_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_bloombox_schema_partner_integrations_mailchimp_MailchimpLists_descriptor,
+        internal_static_bloombox_partner_integrations_mailchimp_MailchimpLists_descriptor,
         new java.lang.String[] { "Comms", "Marketing", });
-    internal_static_bloombox_schema_partner_integrations_mailchimp_MailchimpSettings_descriptor =
+    internal_static_bloombox_partner_integrations_mailchimp_MailchimpSettings_descriptor =
       getDescriptor().getMessageTypes().get(2);
-    internal_static_bloombox_schema_partner_integrations_mailchimp_MailchimpSettings_fieldAccessorTable = new
+    internal_static_bloombox_partner_integrations_mailchimp_MailchimpSettings_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_bloombox_schema_partner_integrations_mailchimp_MailchimpSettings_descriptor,
+        internal_static_bloombox_partner_integrations_mailchimp_MailchimpSettings_descriptor,
         new java.lang.String[] { "ApiKey", "Features", "Lists", });
   }
 

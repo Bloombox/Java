@@ -1,8 +1,8 @@
 /*
- * Copyright 2018, Bloombox, LLC. All rights reserved.
+ * Copyright 2018, Momentum Ideas, Co. All rights reserved.
  *
  * Source and object computer code contained herein is the private intellectual
- * property of Bloombox, a California Limited Liability Corporation. Use of this
+ * property of Momentum Ideas Co., a Delaware Corporation. Use of this
  * code in source form requires permission in writing before use or the
  * assembly, distribution, or publishing of derivative works, for commercial
  * purposes or any other purpose, from a duly authorized officer of Momentum
@@ -17,20 +17,20 @@
 
 package io.bloombox.schema.services.partners.v1beta1;
 
-import static io.grpc.stub.ClientCalls.asyncUnaryCall;
-import static io.grpc.stub.ClientCalls.asyncServerStreamingCall;
-import static io.grpc.stub.ClientCalls.asyncClientStreamingCall;
-import static io.grpc.stub.ClientCalls.asyncBidiStreamingCall;
-import static io.grpc.stub.ClientCalls.blockingUnaryCall;
-import static io.grpc.stub.ClientCalls.blockingServerStreamingCall;
-import static io.grpc.stub.ClientCalls.futureUnaryCall;
 import static io.grpc.MethodDescriptor.generateFullMethodName;
-import static io.grpc.stub.ServerCalls.asyncUnaryCall;
-import static io.grpc.stub.ServerCalls.asyncServerStreamingCall;
-import static io.grpc.stub.ServerCalls.asyncClientStreamingCall;
+import static io.grpc.stub.ClientCalls.asyncBidiStreamingCall;
+import static io.grpc.stub.ClientCalls.asyncClientStreamingCall;
+import static io.grpc.stub.ClientCalls.asyncServerStreamingCall;
+import static io.grpc.stub.ClientCalls.asyncUnaryCall;
+import static io.grpc.stub.ClientCalls.blockingServerStreamingCall;
+import static io.grpc.stub.ClientCalls.blockingUnaryCall;
+import static io.grpc.stub.ClientCalls.futureUnaryCall;
 import static io.grpc.stub.ServerCalls.asyncBidiStreamingCall;
-import static io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall;
+import static io.grpc.stub.ServerCalls.asyncClientStreamingCall;
+import static io.grpc.stub.ServerCalls.asyncServerStreamingCall;
+import static io.grpc.stub.ServerCalls.asyncUnaryCall;
 import static io.grpc.stub.ServerCalls.asyncUnimplementedStreamingCall;
+import static io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall;
 
 /**
  * <pre>
@@ -38,63 +38,142 @@ import static io.grpc.stub.ServerCalls.asyncUnimplementedStreamingCall;
  * </pre>
  */
 @javax.annotation.Generated(
-    value = "by gRPC proto compiler (version 1.6.0-SNAPSHOT)",
+    value = "by gRPC proto compiler (version 1.18.0-SNAPSHOT)",
     comments = "Source: partners/v1beta1/PartnersService_Beta1.proto")
 public final class PartnersGrpc {
 
   private PartnersGrpc() {}
 
-  public static final String SERVICE_NAME = "bloombox.schema.services.partners.v1beta1.Partners";
+  public static final String SERVICE_NAME = "bloombox.services.partners.v1beta1.Partners";
 
   // Static method descriptors that strictly reflect the proto.
-  @io.grpc.ExperimentalApi("https://github.com/grpc/grpc-java/issues/1901")
-  public static final io.grpc.MethodDescriptor<io.bloombox.schema.services.partners.v1beta1.PartnerList.Request,
-      io.bloombox.schema.services.partners.v1beta1.PartnerList.Response> METHOD_LIST =
-      io.grpc.MethodDescriptor.<io.bloombox.schema.services.partners.v1beta1.PartnerList.Request, io.bloombox.schema.services.partners.v1beta1.PartnerList.Response>newBuilder()
-          .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-          .setFullMethodName(generateFullMethodName(
-              "bloombox.schema.services.partners.v1beta1.Partners", "List"))
-          .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-              io.bloombox.schema.services.partners.v1beta1.PartnerList.Request.getDefaultInstance()))
-          .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-              io.bloombox.schema.services.partners.v1beta1.PartnerList.Response.getDefaultInstance()))
-          .build();
-  @io.grpc.ExperimentalApi("https://github.com/grpc/grpc-java/issues/1901")
-  public static final io.grpc.MethodDescriptor<io.bloombox.schema.services.partners.v1beta1.PartnerGet.Request,
-      io.bloombox.schema.services.partners.v1beta1.PartnerGet.Response> METHOD_RETRIEVE =
-      io.grpc.MethodDescriptor.<io.bloombox.schema.services.partners.v1beta1.PartnerGet.Request, io.bloombox.schema.services.partners.v1beta1.PartnerGet.Response>newBuilder()
-          .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-          .setFullMethodName(generateFullMethodName(
-              "bloombox.schema.services.partners.v1beta1.Partners", "Retrieve"))
-          .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-              io.bloombox.schema.services.partners.v1beta1.PartnerGet.Request.getDefaultInstance()))
-          .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-              io.bloombox.schema.services.partners.v1beta1.PartnerGet.Response.getDefaultInstance()))
-          .build();
-  @io.grpc.ExperimentalApi("https://github.com/grpc/grpc-java/issues/1901")
-  public static final io.grpc.MethodDescriptor<io.bloombox.schema.services.partners.v1beta1.LocationList.Request,
-      io.bloombox.schema.services.partners.v1beta1.LocationList.Response> METHOD_LOCATIONS =
-      io.grpc.MethodDescriptor.<io.bloombox.schema.services.partners.v1beta1.LocationList.Request, io.bloombox.schema.services.partners.v1beta1.LocationList.Response>newBuilder()
-          .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-          .setFullMethodName(generateFullMethodName(
-              "bloombox.schema.services.partners.v1beta1.Partners", "Locations"))
-          .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-              io.bloombox.schema.services.partners.v1beta1.LocationList.Request.getDefaultInstance()))
-          .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-              io.bloombox.schema.services.partners.v1beta1.LocationList.Response.getDefaultInstance()))
-          .build();
-  @io.grpc.ExperimentalApi("https://github.com/grpc/grpc-java/issues/1901")
-  public static final io.grpc.MethodDescriptor<io.bloombox.schema.services.partners.v1beta1.LocationGet.Request,
-      io.bloombox.schema.services.partners.v1beta1.LocationGet.Response> METHOD_LOCATION =
-      io.grpc.MethodDescriptor.<io.bloombox.schema.services.partners.v1beta1.LocationGet.Request, io.bloombox.schema.services.partners.v1beta1.LocationGet.Response>newBuilder()
-          .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-          .setFullMethodName(generateFullMethodName(
-              "bloombox.schema.services.partners.v1beta1.Partners", "Location"))
-          .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-              io.bloombox.schema.services.partners.v1beta1.LocationGet.Request.getDefaultInstance()))
-          .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-              io.bloombox.schema.services.partners.v1beta1.LocationGet.Response.getDefaultInstance()))
-          .build();
+  private static volatile io.grpc.MethodDescriptor<io.bloombox.schema.services.partners.v1beta1.PartnerList.Request,
+      io.bloombox.schema.services.partners.v1beta1.PartnerList.Response> getListMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "List",
+      requestType = io.bloombox.schema.services.partners.v1beta1.PartnerList.Request.class,
+      responseType = io.bloombox.schema.services.partners.v1beta1.PartnerList.Response.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<io.bloombox.schema.services.partners.v1beta1.PartnerList.Request,
+      io.bloombox.schema.services.partners.v1beta1.PartnerList.Response> getListMethod() {
+    io.grpc.MethodDescriptor<io.bloombox.schema.services.partners.v1beta1.PartnerList.Request, io.bloombox.schema.services.partners.v1beta1.PartnerList.Response> getListMethod;
+    if ((getListMethod = PartnersGrpc.getListMethod) == null) {
+      synchronized (PartnersGrpc.class) {
+        if ((getListMethod = PartnersGrpc.getListMethod) == null) {
+          PartnersGrpc.getListMethod = getListMethod = 
+              io.grpc.MethodDescriptor.<io.bloombox.schema.services.partners.v1beta1.PartnerList.Request, io.bloombox.schema.services.partners.v1beta1.PartnerList.Response>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(
+                  "bloombox.services.partners.v1beta1.Partners", "List"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  io.bloombox.schema.services.partners.v1beta1.PartnerList.Request.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  io.bloombox.schema.services.partners.v1beta1.PartnerList.Response.getDefaultInstance()))
+                  .setSchemaDescriptor(new PartnersMethodDescriptorSupplier("List"))
+                  .build();
+          }
+        }
+     }
+     return getListMethod;
+  }
+
+  private static volatile io.grpc.MethodDescriptor<io.bloombox.schema.services.partners.v1beta1.PartnerGet.Request,
+      io.bloombox.schema.services.partners.v1beta1.PartnerGet.Response> getRetrieveMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "Retrieve",
+      requestType = io.bloombox.schema.services.partners.v1beta1.PartnerGet.Request.class,
+      responseType = io.bloombox.schema.services.partners.v1beta1.PartnerGet.Response.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<io.bloombox.schema.services.partners.v1beta1.PartnerGet.Request,
+      io.bloombox.schema.services.partners.v1beta1.PartnerGet.Response> getRetrieveMethod() {
+    io.grpc.MethodDescriptor<io.bloombox.schema.services.partners.v1beta1.PartnerGet.Request, io.bloombox.schema.services.partners.v1beta1.PartnerGet.Response> getRetrieveMethod;
+    if ((getRetrieveMethod = PartnersGrpc.getRetrieveMethod) == null) {
+      synchronized (PartnersGrpc.class) {
+        if ((getRetrieveMethod = PartnersGrpc.getRetrieveMethod) == null) {
+          PartnersGrpc.getRetrieveMethod = getRetrieveMethod = 
+              io.grpc.MethodDescriptor.<io.bloombox.schema.services.partners.v1beta1.PartnerGet.Request, io.bloombox.schema.services.partners.v1beta1.PartnerGet.Response>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(
+                  "bloombox.services.partners.v1beta1.Partners", "Retrieve"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  io.bloombox.schema.services.partners.v1beta1.PartnerGet.Request.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  io.bloombox.schema.services.partners.v1beta1.PartnerGet.Response.getDefaultInstance()))
+                  .setSchemaDescriptor(new PartnersMethodDescriptorSupplier("Retrieve"))
+                  .build();
+          }
+        }
+     }
+     return getRetrieveMethod;
+  }
+
+  private static volatile io.grpc.MethodDescriptor<io.bloombox.schema.services.partners.v1beta1.LocationList.Request,
+      io.bloombox.schema.services.partners.v1beta1.LocationList.Response> getLocationsMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "Locations",
+      requestType = io.bloombox.schema.services.partners.v1beta1.LocationList.Request.class,
+      responseType = io.bloombox.schema.services.partners.v1beta1.LocationList.Response.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<io.bloombox.schema.services.partners.v1beta1.LocationList.Request,
+      io.bloombox.schema.services.partners.v1beta1.LocationList.Response> getLocationsMethod() {
+    io.grpc.MethodDescriptor<io.bloombox.schema.services.partners.v1beta1.LocationList.Request, io.bloombox.schema.services.partners.v1beta1.LocationList.Response> getLocationsMethod;
+    if ((getLocationsMethod = PartnersGrpc.getLocationsMethod) == null) {
+      synchronized (PartnersGrpc.class) {
+        if ((getLocationsMethod = PartnersGrpc.getLocationsMethod) == null) {
+          PartnersGrpc.getLocationsMethod = getLocationsMethod = 
+              io.grpc.MethodDescriptor.<io.bloombox.schema.services.partners.v1beta1.LocationList.Request, io.bloombox.schema.services.partners.v1beta1.LocationList.Response>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(
+                  "bloombox.services.partners.v1beta1.Partners", "Locations"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  io.bloombox.schema.services.partners.v1beta1.LocationList.Request.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  io.bloombox.schema.services.partners.v1beta1.LocationList.Response.getDefaultInstance()))
+                  .setSchemaDescriptor(new PartnersMethodDescriptorSupplier("Locations"))
+                  .build();
+          }
+        }
+     }
+     return getLocationsMethod;
+  }
+
+  private static volatile io.grpc.MethodDescriptor<io.bloombox.schema.services.partners.v1beta1.LocationGet.Request,
+      io.bloombox.schema.services.partners.v1beta1.LocationGet.Response> getLocationMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "Location",
+      requestType = io.bloombox.schema.services.partners.v1beta1.LocationGet.Request.class,
+      responseType = io.bloombox.schema.services.partners.v1beta1.LocationGet.Response.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<io.bloombox.schema.services.partners.v1beta1.LocationGet.Request,
+      io.bloombox.schema.services.partners.v1beta1.LocationGet.Response> getLocationMethod() {
+    io.grpc.MethodDescriptor<io.bloombox.schema.services.partners.v1beta1.LocationGet.Request, io.bloombox.schema.services.partners.v1beta1.LocationGet.Response> getLocationMethod;
+    if ((getLocationMethod = PartnersGrpc.getLocationMethod) == null) {
+      synchronized (PartnersGrpc.class) {
+        if ((getLocationMethod = PartnersGrpc.getLocationMethod) == null) {
+          PartnersGrpc.getLocationMethod = getLocationMethod = 
+              io.grpc.MethodDescriptor.<io.bloombox.schema.services.partners.v1beta1.LocationGet.Request, io.bloombox.schema.services.partners.v1beta1.LocationGet.Response>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(
+                  "bloombox.services.partners.v1beta1.Partners", "Location"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  io.bloombox.schema.services.partners.v1beta1.LocationGet.Request.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  io.bloombox.schema.services.partners.v1beta1.LocationGet.Response.getDefaultInstance()))
+                  .setSchemaDescriptor(new PartnersMethodDescriptorSupplier("Location"))
+                  .build();
+          }
+        }
+     }
+     return getLocationMethod;
+  }
 
   /**
    * Creates a new async stub that supports all call types for the service
@@ -133,7 +212,7 @@ public final class PartnersGrpc {
      */
     public void list(io.bloombox.schema.services.partners.v1beta1.PartnerList.Request request,
         io.grpc.stub.StreamObserver<io.bloombox.schema.services.partners.v1beta1.PartnerList.Response> responseObserver) {
-      asyncUnimplementedUnaryCall(METHOD_LIST, responseObserver);
+      asyncUnimplementedUnaryCall(getListMethod(), responseObserver);
     }
 
     /**
@@ -143,7 +222,7 @@ public final class PartnersGrpc {
      */
     public void retrieve(io.bloombox.schema.services.partners.v1beta1.PartnerGet.Request request,
         io.grpc.stub.StreamObserver<io.bloombox.schema.services.partners.v1beta1.PartnerGet.Response> responseObserver) {
-      asyncUnimplementedUnaryCall(METHOD_RETRIEVE, responseObserver);
+      asyncUnimplementedUnaryCall(getRetrieveMethod(), responseObserver);
     }
 
     /**
@@ -153,7 +232,7 @@ public final class PartnersGrpc {
      */
     public void locations(io.bloombox.schema.services.partners.v1beta1.LocationList.Request request,
         io.grpc.stub.StreamObserver<io.bloombox.schema.services.partners.v1beta1.LocationList.Response> responseObserver) {
-      asyncUnimplementedUnaryCall(METHOD_LOCATIONS, responseObserver);
+      asyncUnimplementedUnaryCall(getLocationsMethod(), responseObserver);
     }
 
     /**
@@ -163,34 +242,34 @@ public final class PartnersGrpc {
      */
     public void location(io.bloombox.schema.services.partners.v1beta1.LocationGet.Request request,
         io.grpc.stub.StreamObserver<io.bloombox.schema.services.partners.v1beta1.LocationGet.Response> responseObserver) {
-      asyncUnimplementedUnaryCall(METHOD_LOCATION, responseObserver);
+      asyncUnimplementedUnaryCall(getLocationMethod(), responseObserver);
     }
 
     @java.lang.Override public final io.grpc.ServerServiceDefinition bindService() {
       return io.grpc.ServerServiceDefinition.builder(getServiceDescriptor())
           .addMethod(
-            METHOD_LIST,
+            getListMethod(),
             asyncUnaryCall(
               new MethodHandlers<
                 io.bloombox.schema.services.partners.v1beta1.PartnerList.Request,
                 io.bloombox.schema.services.partners.v1beta1.PartnerList.Response>(
                   this, METHODID_LIST)))
           .addMethod(
-            METHOD_RETRIEVE,
+            getRetrieveMethod(),
             asyncUnaryCall(
               new MethodHandlers<
                 io.bloombox.schema.services.partners.v1beta1.PartnerGet.Request,
                 io.bloombox.schema.services.partners.v1beta1.PartnerGet.Response>(
                   this, METHODID_RETRIEVE)))
           .addMethod(
-            METHOD_LOCATIONS,
+            getLocationsMethod(),
             asyncUnaryCall(
               new MethodHandlers<
                 io.bloombox.schema.services.partners.v1beta1.LocationList.Request,
                 io.bloombox.schema.services.partners.v1beta1.LocationList.Response>(
                   this, METHODID_LOCATIONS)))
           .addMethod(
-            METHOD_LOCATION,
+            getLocationMethod(),
             asyncUnaryCall(
               new MethodHandlers<
                 io.bloombox.schema.services.partners.v1beta1.LocationGet.Request,
@@ -229,7 +308,7 @@ public final class PartnersGrpc {
     public void list(io.bloombox.schema.services.partners.v1beta1.PartnerList.Request request,
         io.grpc.stub.StreamObserver<io.bloombox.schema.services.partners.v1beta1.PartnerList.Response> responseObserver) {
       asyncUnaryCall(
-          getChannel().newCall(METHOD_LIST, getCallOptions()), request, responseObserver);
+          getChannel().newCall(getListMethod(), getCallOptions()), request, responseObserver);
     }
 
     /**
@@ -240,7 +319,7 @@ public final class PartnersGrpc {
     public void retrieve(io.bloombox.schema.services.partners.v1beta1.PartnerGet.Request request,
         io.grpc.stub.StreamObserver<io.bloombox.schema.services.partners.v1beta1.PartnerGet.Response> responseObserver) {
       asyncUnaryCall(
-          getChannel().newCall(METHOD_RETRIEVE, getCallOptions()), request, responseObserver);
+          getChannel().newCall(getRetrieveMethod(), getCallOptions()), request, responseObserver);
     }
 
     /**
@@ -251,7 +330,7 @@ public final class PartnersGrpc {
     public void locations(io.bloombox.schema.services.partners.v1beta1.LocationList.Request request,
         io.grpc.stub.StreamObserver<io.bloombox.schema.services.partners.v1beta1.LocationList.Response> responseObserver) {
       asyncUnaryCall(
-          getChannel().newCall(METHOD_LOCATIONS, getCallOptions()), request, responseObserver);
+          getChannel().newCall(getLocationsMethod(), getCallOptions()), request, responseObserver);
     }
 
     /**
@@ -262,7 +341,7 @@ public final class PartnersGrpc {
     public void location(io.bloombox.schema.services.partners.v1beta1.LocationGet.Request request,
         io.grpc.stub.StreamObserver<io.bloombox.schema.services.partners.v1beta1.LocationGet.Response> responseObserver) {
       asyncUnaryCall(
-          getChannel().newCall(METHOD_LOCATION, getCallOptions()), request, responseObserver);
+          getChannel().newCall(getLocationMethod(), getCallOptions()), request, responseObserver);
     }
   }
 
@@ -294,7 +373,7 @@ public final class PartnersGrpc {
      */
     public io.bloombox.schema.services.partners.v1beta1.PartnerList.Response list(io.bloombox.schema.services.partners.v1beta1.PartnerList.Request request) {
       return blockingUnaryCall(
-          getChannel(), METHOD_LIST, getCallOptions(), request);
+          getChannel(), getListMethod(), getCallOptions(), request);
     }
 
     /**
@@ -304,7 +383,7 @@ public final class PartnersGrpc {
      */
     public io.bloombox.schema.services.partners.v1beta1.PartnerGet.Response retrieve(io.bloombox.schema.services.partners.v1beta1.PartnerGet.Request request) {
       return blockingUnaryCall(
-          getChannel(), METHOD_RETRIEVE, getCallOptions(), request);
+          getChannel(), getRetrieveMethod(), getCallOptions(), request);
     }
 
     /**
@@ -314,7 +393,7 @@ public final class PartnersGrpc {
      */
     public io.bloombox.schema.services.partners.v1beta1.LocationList.Response locations(io.bloombox.schema.services.partners.v1beta1.LocationList.Request request) {
       return blockingUnaryCall(
-          getChannel(), METHOD_LOCATIONS, getCallOptions(), request);
+          getChannel(), getLocationsMethod(), getCallOptions(), request);
     }
 
     /**
@@ -324,7 +403,7 @@ public final class PartnersGrpc {
      */
     public io.bloombox.schema.services.partners.v1beta1.LocationGet.Response location(io.bloombox.schema.services.partners.v1beta1.LocationGet.Request request) {
       return blockingUnaryCall(
-          getChannel(), METHOD_LOCATION, getCallOptions(), request);
+          getChannel(), getLocationMethod(), getCallOptions(), request);
     }
   }
 
@@ -357,7 +436,7 @@ public final class PartnersGrpc {
     public com.google.common.util.concurrent.ListenableFuture<io.bloombox.schema.services.partners.v1beta1.PartnerList.Response> list(
         io.bloombox.schema.services.partners.v1beta1.PartnerList.Request request) {
       return futureUnaryCall(
-          getChannel().newCall(METHOD_LIST, getCallOptions()), request);
+          getChannel().newCall(getListMethod(), getCallOptions()), request);
     }
 
     /**
@@ -368,7 +447,7 @@ public final class PartnersGrpc {
     public com.google.common.util.concurrent.ListenableFuture<io.bloombox.schema.services.partners.v1beta1.PartnerGet.Response> retrieve(
         io.bloombox.schema.services.partners.v1beta1.PartnerGet.Request request) {
       return futureUnaryCall(
-          getChannel().newCall(METHOD_RETRIEVE, getCallOptions()), request);
+          getChannel().newCall(getRetrieveMethod(), getCallOptions()), request);
     }
 
     /**
@@ -379,7 +458,7 @@ public final class PartnersGrpc {
     public com.google.common.util.concurrent.ListenableFuture<io.bloombox.schema.services.partners.v1beta1.LocationList.Response> locations(
         io.bloombox.schema.services.partners.v1beta1.LocationList.Request request) {
       return futureUnaryCall(
-          getChannel().newCall(METHOD_LOCATIONS, getCallOptions()), request);
+          getChannel().newCall(getLocationsMethod(), getCallOptions()), request);
     }
 
     /**
@@ -390,7 +469,7 @@ public final class PartnersGrpc {
     public com.google.common.util.concurrent.ListenableFuture<io.bloombox.schema.services.partners.v1beta1.LocationGet.Response> location(
         io.bloombox.schema.services.partners.v1beta1.LocationGet.Request request) {
       return futureUnaryCall(
-          getChannel().newCall(METHOD_LOCATION, getCallOptions()), request);
+          getChannel().newCall(getLocationMethod(), getCallOptions()), request);
     }
   }
 
@@ -448,10 +527,38 @@ public final class PartnersGrpc {
     }
   }
 
-  private static final class PartnersDescriptorSupplier implements io.grpc.protobuf.ProtoFileDescriptorSupplier {
+  private static abstract class PartnersBaseDescriptorSupplier
+      implements io.grpc.protobuf.ProtoFileDescriptorSupplier, io.grpc.protobuf.ProtoServiceDescriptorSupplier {
+    PartnersBaseDescriptorSupplier() {}
+
     @java.lang.Override
     public com.google.protobuf.Descriptors.FileDescriptor getFileDescriptor() {
       return io.bloombox.schema.services.partners.v1beta1.PartnersServiceBeta1.getDescriptor();
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Descriptors.ServiceDescriptor getServiceDescriptor() {
+      return getFileDescriptor().findServiceByName("Partners");
+    }
+  }
+
+  private static final class PartnersFileDescriptorSupplier
+      extends PartnersBaseDescriptorSupplier {
+    PartnersFileDescriptorSupplier() {}
+  }
+
+  private static final class PartnersMethodDescriptorSupplier
+      extends PartnersBaseDescriptorSupplier
+      implements io.grpc.protobuf.ProtoMethodDescriptorSupplier {
+    private final String methodName;
+
+    PartnersMethodDescriptorSupplier(String methodName) {
+      this.methodName = methodName;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Descriptors.MethodDescriptor getMethodDescriptor() {
+      return getServiceDescriptor().findMethodByName(methodName);
     }
   }
 
@@ -464,11 +571,11 @@ public final class PartnersGrpc {
         result = serviceDescriptor;
         if (result == null) {
           serviceDescriptor = result = io.grpc.ServiceDescriptor.newBuilder(SERVICE_NAME)
-              .setSchemaDescriptor(new PartnersDescriptorSupplier())
-              .addMethod(METHOD_LIST)
-              .addMethod(METHOD_RETRIEVE)
-              .addMethod(METHOD_LOCATIONS)
-              .addMethod(METHOD_LOCATION)
+              .setSchemaDescriptor(new PartnersFileDescriptorSupplier())
+              .addMethod(getListMethod())
+              .addMethod(getRetrieveMethod())
+              .addMethod(getLocationsMethod())
+              .addMethod(getLocationMethod())
               .build();
         }
       }

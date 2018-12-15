@@ -1,8 +1,8 @@
 /*
- * Copyright 2018, Bloombox, LLC. All rights reserved.
+ * Copyright 2018, Momentum Ideas, Co. All rights reserved.
  *
  * Source and object computer code contained herein is the private intellectual
- * property of Bloombox, a California Limited Liability Corporation. Use of this
+ * property of Momentum Ideas Co., a Delaware Corporation. Use of this
  * code in source form requires permission in writing before use or the
  * assembly, distribution, or publishing of derivative works, for commercial
  * purposes or any other purpose, from a duly authorized officer of Momentum
@@ -21,7 +21,7 @@
 package io.bloombox.schema.services.auth.v1beta1;
 
 public interface AccountAssertionOrBuilder extends
-    // @@protoc_insertion_point(interface_extends:bloombox.schema.services.auth.v1beta1.AccountAssertion)
+    // @@protoc_insertion_point(interface_extends:bloombox.services.auth.v1beta1.AccountAssertion)
     com.google.protobuf.MessageOrBuilder {
 
   /**
@@ -29,7 +29,7 @@ public interface AccountAssertionOrBuilder extends
    * Email/Password-based account login.
    * </pre>
    *
-   * <code>.bloombox.schema.services.auth.v1beta1.EmailPasswordAssertion email_password = 1;</code>
+   * <code>.bloombox.services.auth.v1beta1.EmailPasswordAssertion email_password = 1;</code>
    */
   boolean hasEmailPassword();
   /**
@@ -37,7 +37,7 @@ public interface AccountAssertionOrBuilder extends
    * Email/Password-based account login.
    * </pre>
    *
-   * <code>.bloombox.schema.services.auth.v1beta1.EmailPasswordAssertion email_password = 1;</code>
+   * <code>.bloombox.services.auth.v1beta1.EmailPasswordAssertion email_password = 1;</code>
    */
   io.bloombox.schema.services.auth.v1beta1.EmailPasswordAssertion getEmailPassword();
   /**
@@ -45,7 +45,7 @@ public interface AccountAssertionOrBuilder extends
    * Email/Password-based account login.
    * </pre>
    *
-   * <code>.bloombox.schema.services.auth.v1beta1.EmailPasswordAssertion email_password = 1;</code>
+   * <code>.bloombox.services.auth.v1beta1.EmailPasswordAssertion email_password = 1;</code>
    */
   io.bloombox.schema.services.auth.v1beta1.EmailPasswordAssertionOrBuilder getEmailPasswordOrBuilder();
 
@@ -54,7 +54,7 @@ public interface AccountAssertionOrBuilder extends
    * Firebase account login.
    * </pre>
    *
-   * <code>.bloombox.schema.services.auth.v1beta1.FirebaseTokenAssertion firebase = 2;</code>
+   * <code>.bloombox.services.auth.v1beta1.FirebaseTokenAssertion firebase = 2;</code>
    */
   boolean hasFirebase();
   /**
@@ -62,7 +62,7 @@ public interface AccountAssertionOrBuilder extends
    * Firebase account login.
    * </pre>
    *
-   * <code>.bloombox.schema.services.auth.v1beta1.FirebaseTokenAssertion firebase = 2;</code>
+   * <code>.bloombox.services.auth.v1beta1.FirebaseTokenAssertion firebase = 2;</code>
    */
   io.bloombox.schema.services.auth.v1beta1.FirebaseTokenAssertion getFirebase();
   /**
@@ -70,7 +70,7 @@ public interface AccountAssertionOrBuilder extends
    * Firebase account login.
    * </pre>
    *
-   * <code>.bloombox.schema.services.auth.v1beta1.FirebaseTokenAssertion firebase = 2;</code>
+   * <code>.bloombox.services.auth.v1beta1.FirebaseTokenAssertion firebase = 2;</code>
    */
   io.bloombox.schema.services.auth.v1beta1.FirebaseTokenAssertionOrBuilder getFirebaseOrBuilder();
 

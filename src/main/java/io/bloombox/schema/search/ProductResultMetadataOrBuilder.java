@@ -1,11 +1,12 @@
 /*
- * Copyright 2018, Bloombox, LLC.
+ * Copyright 2018, Momentum Ideas, Co. All rights reserved.
  *
- * Licensed under the Apache License, Version 2.0 (the "License");
- * you may not use this file except in compliance with the License.
- * You may obtain a copy of the License at
- *
- *     http://www.apache.org/licenses/LICENSE-2.0
+ * Source and object computer code contained herein is the private intellectual
+ * property of Momentum Ideas Co., a Delaware Corporation. Use of this
+ * code in source form requires permission in writing before use or the
+ * assembly, distribution, or publishing of derivative works, for commercial
+ * purposes or any other purpose, from a duly authorized officer of Momentum
+ * Ideas Co.
  *
  * Unless required by applicable law or agreed to in writing, software
  * distributed under the License is distributed on an "AS IS" BASIS,
@@ -20,7 +21,7 @@
 package io.bloombox.schema.search;
 
 public interface ProductResultMetadataOrBuilder extends
-    // @@protoc_insertion_point(interface_extends:bloombox.schema.search.ProductResultMetadata)
+    // @@protoc_insertion_point(interface_extends:bloombox.search.ProductResultMetadata)
     com.google.protobuf.MessageOrBuilder {
 
   /**
@@ -28,7 +29,7 @@ public interface ProductResultMetadataOrBuilder extends
    * Price bounds.
    * </pre>
    *
-   * <code>.bloombox.schema.search.ProductResultBound price = 1;</code>
+   * <code>.bloombox.search.ProductResultBound price = 1;</code>
    */
   boolean hasPrice();
   /**
@@ -36,7 +37,7 @@ public interface ProductResultMetadataOrBuilder extends
    * Price bounds.
    * </pre>
    *
-   * <code>.bloombox.schema.search.ProductResultBound price = 1;</code>
+   * <code>.bloombox.search.ProductResultBound price = 1;</code>
    */
   io.bloombox.schema.search.ProductResultBound getPrice();
   /**
@@ -44,7 +45,7 @@ public interface ProductResultMetadataOrBuilder extends
    * Price bounds.
    * </pre>
    *
-   * <code>.bloombox.schema.search.ProductResultBound price = 1;</code>
+   * <code>.bloombox.search.ProductResultBound price = 1;</code>
    */
   io.bloombox.schema.search.ProductResultBoundOrBuilder getPriceOrBuilder();
 
@@ -53,7 +54,7 @@ public interface ProductResultMetadataOrBuilder extends
    * THC bounds.
    * </pre>
    *
-   * <code>.bloombox.schema.search.ProductResultBound thc = 2;</code>
+   * <code>.bloombox.search.ProductResultBound thc = 2;</code>
    */
   boolean hasThc();
   /**
@@ -61,7 +62,7 @@ public interface ProductResultMetadataOrBuilder extends
    * THC bounds.
    * </pre>
    *
-   * <code>.bloombox.schema.search.ProductResultBound thc = 2;</code>
+   * <code>.bloombox.search.ProductResultBound thc = 2;</code>
    */
   io.bloombox.schema.search.ProductResultBound getThc();
   /**
@@ -69,7 +70,7 @@ public interface ProductResultMetadataOrBuilder extends
    * THC bounds.
    * </pre>
    *
-   * <code>.bloombox.schema.search.ProductResultBound thc = 2;</code>
+   * <code>.bloombox.search.ProductResultBound thc = 2;</code>
    */
   io.bloombox.schema.search.ProductResultBoundOrBuilder getThcOrBuilder();
 
@@ -78,7 +79,7 @@ public interface ProductResultMetadataOrBuilder extends
    * CBD bounds.
    * </pre>
    *
-   * <code>.bloombox.schema.search.ProductResultBound cbd = 3;</code>
+   * <code>.bloombox.search.ProductResultBound cbd = 3;</code>
    */
   boolean hasCbd();
   /**
@@ -86,7 +87,7 @@ public interface ProductResultMetadataOrBuilder extends
    * CBD bounds.
    * </pre>
    *
-   * <code>.bloombox.schema.search.ProductResultBound cbd = 3;</code>
+   * <code>.bloombox.search.ProductResultBound cbd = 3;</code>
    */
   io.bloombox.schema.search.ProductResultBound getCbd();
   /**
@@ -94,7 +95,7 @@ public interface ProductResultMetadataOrBuilder extends
    * CBD bounds.
    * </pre>
    *
-   * <code>.bloombox.schema.search.ProductResultBound cbd = 3;</code>
+   * <code>.bloombox.search.ProductResultBound cbd = 3;</code>
    */
   io.bloombox.schema.search.ProductResultBoundOrBuilder getCbdOrBuilder();
 }

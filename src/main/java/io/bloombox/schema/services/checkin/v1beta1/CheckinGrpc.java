@@ -1,8 +1,8 @@
 /*
- * Copyright 2018, Bloombox, LLC. All rights reserved.
+ * Copyright 2018, Momentum Ideas, Co. All rights reserved.
  *
  * Source and object computer code contained herein is the private intellectual
- * property of Bloombox, a California Limited Liability Corporation. Use of this
+ * property of Momentum Ideas Co., a Delaware Corporation. Use of this
  * code in source form requires permission in writing before use or the
  * assembly, distribution, or publishing of derivative works, for commercial
  * purposes or any other purpose, from a duly authorized officer of Momentum
@@ -17,20 +17,20 @@
 
 package io.bloombox.schema.services.checkin.v1beta1;
 
-import static io.grpc.stub.ClientCalls.asyncUnaryCall;
-import static io.grpc.stub.ClientCalls.asyncServerStreamingCall;
-import static io.grpc.stub.ClientCalls.asyncClientStreamingCall;
-import static io.grpc.stub.ClientCalls.asyncBidiStreamingCall;
-import static io.grpc.stub.ClientCalls.blockingUnaryCall;
-import static io.grpc.stub.ClientCalls.blockingServerStreamingCall;
-import static io.grpc.stub.ClientCalls.futureUnaryCall;
 import static io.grpc.MethodDescriptor.generateFullMethodName;
-import static io.grpc.stub.ServerCalls.asyncUnaryCall;
-import static io.grpc.stub.ServerCalls.asyncServerStreamingCall;
-import static io.grpc.stub.ServerCalls.asyncClientStreamingCall;
+import static io.grpc.stub.ClientCalls.asyncBidiStreamingCall;
+import static io.grpc.stub.ClientCalls.asyncClientStreamingCall;
+import static io.grpc.stub.ClientCalls.asyncServerStreamingCall;
+import static io.grpc.stub.ClientCalls.asyncUnaryCall;
+import static io.grpc.stub.ClientCalls.blockingServerStreamingCall;
+import static io.grpc.stub.ClientCalls.blockingUnaryCall;
+import static io.grpc.stub.ClientCalls.futureUnaryCall;
 import static io.grpc.stub.ServerCalls.asyncBidiStreamingCall;
-import static io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall;
+import static io.grpc.stub.ServerCalls.asyncClientStreamingCall;
+import static io.grpc.stub.ServerCalls.asyncServerStreamingCall;
+import static io.grpc.stub.ServerCalls.asyncUnaryCall;
 import static io.grpc.stub.ServerCalls.asyncUnimplementedStreamingCall;
+import static io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall;
 
 /**
  * <pre>
@@ -39,51 +39,110 @@ import static io.grpc.stub.ServerCalls.asyncUnimplementedStreamingCall;
  * </pre>
  */
 @javax.annotation.Generated(
-    value = "by gRPC proto compiler (version 1.6.0-SNAPSHOT)",
+    value = "by gRPC proto compiler (version 1.18.0-SNAPSHOT)",
     comments = "Source: checkin/v1beta1/CheckinService_Beta1.proto")
 public final class CheckinGrpc {
 
   private CheckinGrpc() {}
 
-  public static final String SERVICE_NAME = "bloombox.schema.services.checkin.v1beta1.Checkin";
+  public static final String SERVICE_NAME = "bloombox.services.checkin.v1beta1.Checkin";
 
   // Static method descriptors that strictly reflect the proto.
-  @io.grpc.ExperimentalApi("https://github.com/grpc/grpc-java/issues/1901")
-  public static final io.grpc.MethodDescriptor<io.bloombox.schema.services.checkin.v1beta1.Ping.Request,
-      io.bloombox.schema.services.checkin.v1beta1.Ping.Response> METHOD_PING =
-      io.grpc.MethodDescriptor.<io.bloombox.schema.services.checkin.v1beta1.Ping.Request, io.bloombox.schema.services.checkin.v1beta1.Ping.Response>newBuilder()
-          .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-          .setFullMethodName(generateFullMethodName(
-              "bloombox.schema.services.checkin.v1beta1.Checkin", "Ping"))
-          .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-              io.bloombox.schema.services.checkin.v1beta1.Ping.Request.getDefaultInstance()))
-          .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-              io.bloombox.schema.services.checkin.v1beta1.Ping.Response.getDefaultInstance()))
-          .build();
-  @io.grpc.ExperimentalApi("https://github.com/grpc/grpc-java/issues/1901")
-  public static final io.grpc.MethodDescriptor<io.bloombox.schema.services.checkin.v1beta1.IDCheckin.Request,
-      io.bloombox.schema.services.checkin.v1beta1.CheckinResponse> METHOD_IDENTIFICATION =
-      io.grpc.MethodDescriptor.<io.bloombox.schema.services.checkin.v1beta1.IDCheckin.Request, io.bloombox.schema.services.checkin.v1beta1.CheckinResponse>newBuilder()
-          .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-          .setFullMethodName(generateFullMethodName(
-              "bloombox.schema.services.checkin.v1beta1.Checkin", "Identification"))
-          .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-              io.bloombox.schema.services.checkin.v1beta1.IDCheckin.Request.getDefaultInstance()))
-          .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-              io.bloombox.schema.services.checkin.v1beta1.CheckinResponse.getDefaultInstance()))
-          .build();
-  @io.grpc.ExperimentalApi("https://github.com/grpc/grpc-java/issues/1901")
-  public static final io.grpc.MethodDescriptor<io.bloombox.schema.services.checkin.v1beta1.CardCheckin.Request,
-      io.bloombox.schema.services.checkin.v1beta1.CheckinResponse> METHOD_CARD =
-      io.grpc.MethodDescriptor.<io.bloombox.schema.services.checkin.v1beta1.CardCheckin.Request, io.bloombox.schema.services.checkin.v1beta1.CheckinResponse>newBuilder()
-          .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-          .setFullMethodName(generateFullMethodName(
-              "bloombox.schema.services.checkin.v1beta1.Checkin", "Card"))
-          .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-              io.bloombox.schema.services.checkin.v1beta1.CardCheckin.Request.getDefaultInstance()))
-          .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-              io.bloombox.schema.services.checkin.v1beta1.CheckinResponse.getDefaultInstance()))
-          .build();
+  private static volatile io.grpc.MethodDescriptor<io.bloombox.schema.services.checkin.v1beta1.Ping.Request,
+      io.bloombox.schema.services.checkin.v1beta1.Ping.Response> getPingMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "Ping",
+      requestType = io.bloombox.schema.services.checkin.v1beta1.Ping.Request.class,
+      responseType = io.bloombox.schema.services.checkin.v1beta1.Ping.Response.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<io.bloombox.schema.services.checkin.v1beta1.Ping.Request,
+      io.bloombox.schema.services.checkin.v1beta1.Ping.Response> getPingMethod() {
+    io.grpc.MethodDescriptor<io.bloombox.schema.services.checkin.v1beta1.Ping.Request, io.bloombox.schema.services.checkin.v1beta1.Ping.Response> getPingMethod;
+    if ((getPingMethod = CheckinGrpc.getPingMethod) == null) {
+      synchronized (CheckinGrpc.class) {
+        if ((getPingMethod = CheckinGrpc.getPingMethod) == null) {
+          CheckinGrpc.getPingMethod = getPingMethod = 
+              io.grpc.MethodDescriptor.<io.bloombox.schema.services.checkin.v1beta1.Ping.Request, io.bloombox.schema.services.checkin.v1beta1.Ping.Response>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(
+                  "bloombox.services.checkin.v1beta1.Checkin", "Ping"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  io.bloombox.schema.services.checkin.v1beta1.Ping.Request.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  io.bloombox.schema.services.checkin.v1beta1.Ping.Response.getDefaultInstance()))
+                  .setSchemaDescriptor(new CheckinMethodDescriptorSupplier("Ping"))
+                  .build();
+          }
+        }
+     }
+     return getPingMethod;
+  }
+
+  private static volatile io.grpc.MethodDescriptor<io.bloombox.schema.services.checkin.v1beta1.IDCheckin.Request,
+      io.bloombox.schema.services.checkin.v1beta1.CheckinResponse> getIdentificationMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "Identification",
+      requestType = io.bloombox.schema.services.checkin.v1beta1.IDCheckin.Request.class,
+      responseType = io.bloombox.schema.services.checkin.v1beta1.CheckinResponse.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<io.bloombox.schema.services.checkin.v1beta1.IDCheckin.Request,
+      io.bloombox.schema.services.checkin.v1beta1.CheckinResponse> getIdentificationMethod() {
+    io.grpc.MethodDescriptor<io.bloombox.schema.services.checkin.v1beta1.IDCheckin.Request, io.bloombox.schema.services.checkin.v1beta1.CheckinResponse> getIdentificationMethod;
+    if ((getIdentificationMethod = CheckinGrpc.getIdentificationMethod) == null) {
+      synchronized (CheckinGrpc.class) {
+        if ((getIdentificationMethod = CheckinGrpc.getIdentificationMethod) == null) {
+          CheckinGrpc.getIdentificationMethod = getIdentificationMethod = 
+              io.grpc.MethodDescriptor.<io.bloombox.schema.services.checkin.v1beta1.IDCheckin.Request, io.bloombox.schema.services.checkin.v1beta1.CheckinResponse>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(
+                  "bloombox.services.checkin.v1beta1.Checkin", "Identification"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  io.bloombox.schema.services.checkin.v1beta1.IDCheckin.Request.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  io.bloombox.schema.services.checkin.v1beta1.CheckinResponse.getDefaultInstance()))
+                  .setSchemaDescriptor(new CheckinMethodDescriptorSupplier("Identification"))
+                  .build();
+          }
+        }
+     }
+     return getIdentificationMethod;
+  }
+
+  private static volatile io.grpc.MethodDescriptor<io.bloombox.schema.services.checkin.v1beta1.CardCheckin.Request,
+      io.bloombox.schema.services.checkin.v1beta1.CheckinResponse> getCardMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "Card",
+      requestType = io.bloombox.schema.services.checkin.v1beta1.CardCheckin.Request.class,
+      responseType = io.bloombox.schema.services.checkin.v1beta1.CheckinResponse.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<io.bloombox.schema.services.checkin.v1beta1.CardCheckin.Request,
+      io.bloombox.schema.services.checkin.v1beta1.CheckinResponse> getCardMethod() {
+    io.grpc.MethodDescriptor<io.bloombox.schema.services.checkin.v1beta1.CardCheckin.Request, io.bloombox.schema.services.checkin.v1beta1.CheckinResponse> getCardMethod;
+    if ((getCardMethod = CheckinGrpc.getCardMethod) == null) {
+      synchronized (CheckinGrpc.class) {
+        if ((getCardMethod = CheckinGrpc.getCardMethod) == null) {
+          CheckinGrpc.getCardMethod = getCardMethod = 
+              io.grpc.MethodDescriptor.<io.bloombox.schema.services.checkin.v1beta1.CardCheckin.Request, io.bloombox.schema.services.checkin.v1beta1.CheckinResponse>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(
+                  "bloombox.services.checkin.v1beta1.Checkin", "Card"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  io.bloombox.schema.services.checkin.v1beta1.CardCheckin.Request.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  io.bloombox.schema.services.checkin.v1beta1.CheckinResponse.getDefaultInstance()))
+                  .setSchemaDescriptor(new CheckinMethodDescriptorSupplier("Card"))
+                  .build();
+          }
+        }
+     }
+     return getCardMethod;
+  }
 
   /**
    * Creates a new async stub that supports all call types for the service
@@ -123,7 +182,7 @@ public final class CheckinGrpc {
      */
     public void ping(io.bloombox.schema.services.checkin.v1beta1.Ping.Request request,
         io.grpc.stub.StreamObserver<io.bloombox.schema.services.checkin.v1beta1.Ping.Response> responseObserver) {
-      asyncUnimplementedUnaryCall(METHOD_PING, responseObserver);
+      asyncUnimplementedUnaryCall(getPingMethod(), responseObserver);
     }
 
     /**
@@ -133,7 +192,7 @@ public final class CheckinGrpc {
      */
     public void identification(io.bloombox.schema.services.checkin.v1beta1.IDCheckin.Request request,
         io.grpc.stub.StreamObserver<io.bloombox.schema.services.checkin.v1beta1.CheckinResponse> responseObserver) {
-      asyncUnimplementedUnaryCall(METHOD_IDENTIFICATION, responseObserver);
+      asyncUnimplementedUnaryCall(getIdentificationMethod(), responseObserver);
     }
 
     /**
@@ -143,27 +202,27 @@ public final class CheckinGrpc {
      */
     public void card(io.bloombox.schema.services.checkin.v1beta1.CardCheckin.Request request,
         io.grpc.stub.StreamObserver<io.bloombox.schema.services.checkin.v1beta1.CheckinResponse> responseObserver) {
-      asyncUnimplementedUnaryCall(METHOD_CARD, responseObserver);
+      asyncUnimplementedUnaryCall(getCardMethod(), responseObserver);
     }
 
     @java.lang.Override public final io.grpc.ServerServiceDefinition bindService() {
       return io.grpc.ServerServiceDefinition.builder(getServiceDescriptor())
           .addMethod(
-            METHOD_PING,
+            getPingMethod(),
             asyncUnaryCall(
               new MethodHandlers<
                 io.bloombox.schema.services.checkin.v1beta1.Ping.Request,
                 io.bloombox.schema.services.checkin.v1beta1.Ping.Response>(
                   this, METHODID_PING)))
           .addMethod(
-            METHOD_IDENTIFICATION,
+            getIdentificationMethod(),
             asyncUnaryCall(
               new MethodHandlers<
                 io.bloombox.schema.services.checkin.v1beta1.IDCheckin.Request,
                 io.bloombox.schema.services.checkin.v1beta1.CheckinResponse>(
                   this, METHODID_IDENTIFICATION)))
           .addMethod(
-            METHOD_CARD,
+            getCardMethod(),
             asyncUnaryCall(
               new MethodHandlers<
                 io.bloombox.schema.services.checkin.v1beta1.CardCheckin.Request,
@@ -203,7 +262,7 @@ public final class CheckinGrpc {
     public void ping(io.bloombox.schema.services.checkin.v1beta1.Ping.Request request,
         io.grpc.stub.StreamObserver<io.bloombox.schema.services.checkin.v1beta1.Ping.Response> responseObserver) {
       asyncUnaryCall(
-          getChannel().newCall(METHOD_PING, getCallOptions()), request, responseObserver);
+          getChannel().newCall(getPingMethod(), getCallOptions()), request, responseObserver);
     }
 
     /**
@@ -214,7 +273,7 @@ public final class CheckinGrpc {
     public void identification(io.bloombox.schema.services.checkin.v1beta1.IDCheckin.Request request,
         io.grpc.stub.StreamObserver<io.bloombox.schema.services.checkin.v1beta1.CheckinResponse> responseObserver) {
       asyncUnaryCall(
-          getChannel().newCall(METHOD_IDENTIFICATION, getCallOptions()), request, responseObserver);
+          getChannel().newCall(getIdentificationMethod(), getCallOptions()), request, responseObserver);
     }
 
     /**
@@ -225,7 +284,7 @@ public final class CheckinGrpc {
     public void card(io.bloombox.schema.services.checkin.v1beta1.CardCheckin.Request request,
         io.grpc.stub.StreamObserver<io.bloombox.schema.services.checkin.v1beta1.CheckinResponse> responseObserver) {
       asyncUnaryCall(
-          getChannel().newCall(METHOD_CARD, getCallOptions()), request, responseObserver);
+          getChannel().newCall(getCardMethod(), getCallOptions()), request, responseObserver);
     }
   }
 
@@ -258,7 +317,7 @@ public final class CheckinGrpc {
      */
     public io.bloombox.schema.services.checkin.v1beta1.Ping.Response ping(io.bloombox.schema.services.checkin.v1beta1.Ping.Request request) {
       return blockingUnaryCall(
-          getChannel(), METHOD_PING, getCallOptions(), request);
+          getChannel(), getPingMethod(), getCallOptions(), request);
     }
 
     /**
@@ -268,7 +327,7 @@ public final class CheckinGrpc {
      */
     public io.bloombox.schema.services.checkin.v1beta1.CheckinResponse identification(io.bloombox.schema.services.checkin.v1beta1.IDCheckin.Request request) {
       return blockingUnaryCall(
-          getChannel(), METHOD_IDENTIFICATION, getCallOptions(), request);
+          getChannel(), getIdentificationMethod(), getCallOptions(), request);
     }
 
     /**
@@ -278,7 +337,7 @@ public final class CheckinGrpc {
      */
     public io.bloombox.schema.services.checkin.v1beta1.CheckinResponse card(io.bloombox.schema.services.checkin.v1beta1.CardCheckin.Request request) {
       return blockingUnaryCall(
-          getChannel(), METHOD_CARD, getCallOptions(), request);
+          getChannel(), getCardMethod(), getCallOptions(), request);
     }
   }
 
@@ -312,7 +371,7 @@ public final class CheckinGrpc {
     public com.google.common.util.concurrent.ListenableFuture<io.bloombox.schema.services.checkin.v1beta1.Ping.Response> ping(
         io.bloombox.schema.services.checkin.v1beta1.Ping.Request request) {
       return futureUnaryCall(
-          getChannel().newCall(METHOD_PING, getCallOptions()), request);
+          getChannel().newCall(getPingMethod(), getCallOptions()), request);
     }
 
     /**
@@ -323,7 +382,7 @@ public final class CheckinGrpc {
     public com.google.common.util.concurrent.ListenableFuture<io.bloombox.schema.services.checkin.v1beta1.CheckinResponse> identification(
         io.bloombox.schema.services.checkin.v1beta1.IDCheckin.Request request) {
       return futureUnaryCall(
-          getChannel().newCall(METHOD_IDENTIFICATION, getCallOptions()), request);
+          getChannel().newCall(getIdentificationMethod(), getCallOptions()), request);
     }
 
     /**
@@ -334,7 +393,7 @@ public final class CheckinGrpc {
     public com.google.common.util.concurrent.ListenableFuture<io.bloombox.schema.services.checkin.v1beta1.CheckinResponse> card(
         io.bloombox.schema.services.checkin.v1beta1.CardCheckin.Request request) {
       return futureUnaryCall(
-          getChannel().newCall(METHOD_CARD, getCallOptions()), request);
+          getChannel().newCall(getCardMethod(), getCallOptions()), request);
     }
   }
 
@@ -387,10 +446,38 @@ public final class CheckinGrpc {
     }
   }
 
-  private static final class CheckinDescriptorSupplier implements io.grpc.protobuf.ProtoFileDescriptorSupplier {
+  private static abstract class CheckinBaseDescriptorSupplier
+      implements io.grpc.protobuf.ProtoFileDescriptorSupplier, io.grpc.protobuf.ProtoServiceDescriptorSupplier {
+    CheckinBaseDescriptorSupplier() {}
+
     @java.lang.Override
     public com.google.protobuf.Descriptors.FileDescriptor getFileDescriptor() {
       return io.bloombox.schema.services.checkin.v1beta1.CheckinServiceBeta1.getDescriptor();
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Descriptors.ServiceDescriptor getServiceDescriptor() {
+      return getFileDescriptor().findServiceByName("Checkin");
+    }
+  }
+
+  private static final class CheckinFileDescriptorSupplier
+      extends CheckinBaseDescriptorSupplier {
+    CheckinFileDescriptorSupplier() {}
+  }
+
+  private static final class CheckinMethodDescriptorSupplier
+      extends CheckinBaseDescriptorSupplier
+      implements io.grpc.protobuf.ProtoMethodDescriptorSupplier {
+    private final String methodName;
+
+    CheckinMethodDescriptorSupplier(String methodName) {
+      this.methodName = methodName;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Descriptors.MethodDescriptor getMethodDescriptor() {
+      return getServiceDescriptor().findMethodByName(methodName);
     }
   }
 
@@ -403,10 +490,10 @@ public final class CheckinGrpc {
         result = serviceDescriptor;
         if (result == null) {
           serviceDescriptor = result = io.grpc.ServiceDescriptor.newBuilder(SERVICE_NAME)
-              .setSchemaDescriptor(new CheckinDescriptorSupplier())
-              .addMethod(METHOD_PING)
-              .addMethod(METHOD_IDENTIFICATION)
-              .addMethod(METHOD_CARD)
+              .setSchemaDescriptor(new CheckinFileDescriptorSupplier())
+              .addMethod(getPingMethod())
+              .addMethod(getIdentificationMethod())
+              .addMethod(getCardMethod())
               .build();
         }
       }

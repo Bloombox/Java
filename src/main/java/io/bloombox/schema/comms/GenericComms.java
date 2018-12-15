@@ -1,11 +1,12 @@
 /*
- * Copyright 2018, Bloombox, LLC.
+ * Copyright 2018, Momentum Ideas, Co. All rights reserved.
  *
- * Licensed under the Apache License, Version 2.0 (the "License");
- * you may not use this file except in compliance with the License.
- * You may obtain a copy of the License at
- *
- *     http://www.apache.org/licenses/LICENSE-2.0
+ * Source and object computer code contained herein is the private intellectual
+ * property of Momentum Ideas Co., a Delaware Corporation. Use of this
+ * code in source form requires permission in writing before use or the
+ * assembly, distribution, or publishing of derivative works, for commercial
+ * purposes or any other purpose, from a duly authorized officer of Momentum
+ * Ideas Co.
  *
  * Unless required by applicable law or agreed to in writing, software
  * distributed under the License is distributed on an "AS IS" BASIS,
@@ -35,7 +36,7 @@ public final class GenericComms {
    * Communication channel types.
    * </pre>
    *
-   * Protobuf enum {@code bloombox.schema.comms.Channel}
+   * Protobuf enum {@code bloombox.comms.Channel}
    */
   public enum Channel
       implements com.google.protobuf.ProtocolMessageEnum {
@@ -162,7 +163,7 @@ public final class GenericComms {
       this.value = value;
     }
 
-    // @@protoc_insertion_point(enum_scope:bloombox.schema.comms.Channel)
+    // @@protoc_insertion_point(enum_scope:bloombox.comms.Channel)
   }
 
 
@@ -174,10 +175,10 @@ public final class GenericComms {
       descriptor;
   static {
     java.lang.String[] descriptorData = {
-      "\n\021comms/Comms.proto\022\025bloombox.schema.com" +
-      "ms*.\n\007Channel\022\017\n\013UNSPECIFIED\020\000\022\t\n\005EMAIL\020" +
-      "\001\022\007\n\003SMS\020\002B2\n\030io.bloombox.schema.commsB\014" +
-      "GenericCommsH\001P\000\242\002\003BBSb\006proto3"
+      "\n\021comms/Comms.proto\022\016bloombox.comms*.\n\007C" +
+      "hannel\022\017\n\013UNSPECIFIED\020\000\022\t\n\005EMAIL\020\001\022\007\n\003SM" +
+      "S\020\002B2\n\030io.bloombox.schema.commsB\014Generic" +
+      "CommsH\001P\000\242\002\003BBSb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {

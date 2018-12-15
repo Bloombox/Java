@@ -1,8 +1,8 @@
 /*
- * Copyright 2018, Bloombox, LLC. All rights reserved.
+ * Copyright 2018, Momentum Ideas, Co. All rights reserved.
  *
  * Source and object computer code contained herein is the private intellectual
- * property of Bloombox, a California Limited Liability Corporation. Use of this
+ * property of Momentum Ideas Co., a Delaware Corporation. Use of this
  * code in source form requires permission in writing before use or the
  * assembly, distribution, or publishing of derivative works, for commercial
  * purposes or any other purpose, from a duly authorized officer of Momentum
@@ -25,11 +25,11 @@ package io.bloombox.schema.services.media.v1beta1;
  * Specifies an RPC structure and operation to list media items for a given partner/location scope.
  * </pre>
  *
- * Protobuf type {@code bloombox.schema.services.media.v1beta1.ListMedia}
+ * Protobuf type {@code bloombox.services.media.v1beta1.ListMedia}
  */
 public  final class ListMedia extends
     com.google.protobuf.GeneratedMessageV3 implements
-    // @@protoc_insertion_point(message_implements:bloombox.schema.services.media.v1beta1.ListMedia)
+    // @@protoc_insertion_point(message_implements:bloombox.services.media.v1beta1.ListMedia)
     ListMediaOrBuilder {
 private static final long serialVersionUID = 0L;
   // Use ListMedia.newBuilder() to construct.
@@ -83,18 +83,19 @@ private static final long serialVersionUID = 0L;
   }
   public static final com.google.protobuf.Descriptors.Descriptor
       getDescriptor() {
-    return io.bloombox.schema.services.media.v1beta1.MediaServiceBeta1.internal_static_bloombox_schema_services_media_v1beta1_ListMedia_descriptor;
+    return io.bloombox.schema.services.media.v1beta1.MediaServiceBeta1.internal_static_bloombox_services_media_v1beta1_ListMedia_descriptor;
   }
 
+  @java.lang.Override
   protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internalGetFieldAccessorTable() {
-    return io.bloombox.schema.services.media.v1beta1.MediaServiceBeta1.internal_static_bloombox_schema_services_media_v1beta1_ListMedia_fieldAccessorTable
+    return io.bloombox.schema.services.media.v1beta1.MediaServiceBeta1.internal_static_bloombox_services_media_v1beta1_ListMedia_fieldAccessorTable
         .ensureFieldAccessorsInitialized(
             io.bloombox.schema.services.media.v1beta1.ListMedia.class, io.bloombox.schema.services.media.v1beta1.ListMedia.Builder.class);
   }
 
   public interface RequestOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:bloombox.schema.services.media.v1beta1.ListMedia.Request)
+      // @@protoc_insertion_point(interface_extends:bloombox.services.media.v1beta1.ListMedia.Request)
       com.google.protobuf.MessageOrBuilder {
 
     /**
@@ -120,11 +121,11 @@ private static final long serialVersionUID = 0L;
    * Request to list media items for a given scope.
    * </pre>
    *
-   * Protobuf type {@code bloombox.schema.services.media.v1beta1.ListMedia.Request}
+   * Protobuf type {@code bloombox.services.media.v1beta1.ListMedia.Request}
    */
   public  static final class Request extends
       com.google.protobuf.GeneratedMessageV3 implements
-      // @@protoc_insertion_point(message_implements:bloombox.schema.services.media.v1beta1.ListMedia.Request)
+      // @@protoc_insertion_point(message_implements:bloombox.services.media.v1beta1.ListMedia.Request)
       RequestOrBuilder {
   private static final long serialVersionUID = 0L;
     // Use Request.newBuilder() to construct.
@@ -159,17 +160,17 @@ private static final long serialVersionUID = 0L;
             case 0:
               done = true;
               break;
+            case 10: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              scope_ = s;
+              break;
+            }
             default: {
               if (!parseUnknownFieldProto3(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
-              break;
-            }
-            case 10: {
-              java.lang.String s = input.readStringRequireUtf8();
-
-              scope_ = s;
               break;
             }
           }
@@ -186,12 +187,13 @@ private static final long serialVersionUID = 0L;
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return io.bloombox.schema.services.media.v1beta1.MediaServiceBeta1.internal_static_bloombox_schema_services_media_v1beta1_ListMedia_Request_descriptor;
+      return io.bloombox.schema.services.media.v1beta1.MediaServiceBeta1.internal_static_bloombox_services_media_v1beta1_ListMedia_Request_descriptor;
     }
 
+    @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return io.bloombox.schema.services.media.v1beta1.MediaServiceBeta1.internal_static_bloombox_schema_services_media_v1beta1_ListMedia_Request_fieldAccessorTable
+      return io.bloombox.schema.services.media.v1beta1.MediaServiceBeta1.internal_static_bloombox_services_media_v1beta1_ListMedia_Request_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
               io.bloombox.schema.services.media.v1beta1.ListMedia.Request.class, io.bloombox.schema.services.media.v1beta1.ListMedia.Request.Builder.class);
     }
@@ -239,6 +241,7 @@ private static final long serialVersionUID = 0L;
     }
 
     private byte memoizedIsInitialized = -1;
+    @java.lang.Override
     public final boolean isInitialized() {
       byte isInitialized = memoizedIsInitialized;
       if (isInitialized == 1) return true;
@@ -248,6 +251,7 @@ private static final long serialVersionUID = 0L;
       return true;
     }
 
+    @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
       if (!getScopeBytes().isEmpty()) {
@@ -256,6 +260,7 @@ private static final long serialVersionUID = 0L;
       unknownFields.writeTo(output);
     }
 
+    @java.lang.Override
     public int getSerializedSize() {
       int size = memoizedSize;
       if (size != -1) return size;
@@ -370,6 +375,7 @@ private static final long serialVersionUID = 0L;
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
 
+    @java.lang.Override
     public Builder newBuilderForType() { return newBuilder(); }
     public static Builder newBuilder() {
       return DEFAULT_INSTANCE.toBuilder();
@@ -377,6 +383,7 @@ private static final long serialVersionUID = 0L;
     public static Builder newBuilder(io.bloombox.schema.services.media.v1beta1.ListMedia.Request prototype) {
       return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
     }
+    @java.lang.Override
     public Builder toBuilder() {
       return this == DEFAULT_INSTANCE
           ? new Builder() : new Builder().mergeFrom(this);
@@ -393,20 +400,21 @@ private static final long serialVersionUID = 0L;
      * Request to list media items for a given scope.
      * </pre>
      *
-     * Protobuf type {@code bloombox.schema.services.media.v1beta1.ListMedia.Request}
+     * Protobuf type {@code bloombox.services.media.v1beta1.ListMedia.Request}
      */
     public static final class Builder extends
         com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:bloombox.schema.services.media.v1beta1.ListMedia.Request)
+        // @@protoc_insertion_point(builder_implements:bloombox.services.media.v1beta1.ListMedia.Request)
         io.bloombox.schema.services.media.v1beta1.ListMedia.RequestOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return io.bloombox.schema.services.media.v1beta1.MediaServiceBeta1.internal_static_bloombox_schema_services_media_v1beta1_ListMedia_Request_descriptor;
+        return io.bloombox.schema.services.media.v1beta1.MediaServiceBeta1.internal_static_bloombox_services_media_v1beta1_ListMedia_Request_descriptor;
       }
 
+      @java.lang.Override
       protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return io.bloombox.schema.services.media.v1beta1.MediaServiceBeta1.internal_static_bloombox_schema_services_media_v1beta1_ListMedia_Request_fieldAccessorTable
+        return io.bloombox.schema.services.media.v1beta1.MediaServiceBeta1.internal_static_bloombox_services_media_v1beta1_ListMedia_Request_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
                 io.bloombox.schema.services.media.v1beta1.ListMedia.Request.class, io.bloombox.schema.services.media.v1beta1.ListMedia.Request.Builder.class);
       }
@@ -426,6 +434,7 @@ private static final long serialVersionUID = 0L;
                 .alwaysUseFieldBuilders) {
         }
       }
+      @java.lang.Override
       public Builder clear() {
         super.clear();
         scope_ = "";
@@ -433,15 +442,18 @@ private static final long serialVersionUID = 0L;
         return this;
       }
 
+      @java.lang.Override
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return io.bloombox.schema.services.media.v1beta1.MediaServiceBeta1.internal_static_bloombox_schema_services_media_v1beta1_ListMedia_Request_descriptor;
+        return io.bloombox.schema.services.media.v1beta1.MediaServiceBeta1.internal_static_bloombox_services_media_v1beta1_ListMedia_Request_descriptor;
       }
 
+      @java.lang.Override
       public io.bloombox.schema.services.media.v1beta1.ListMedia.Request getDefaultInstanceForType() {
         return io.bloombox.schema.services.media.v1beta1.ListMedia.Request.getDefaultInstance();
       }
 
+      @java.lang.Override
       public io.bloombox.schema.services.media.v1beta1.ListMedia.Request build() {
         io.bloombox.schema.services.media.v1beta1.ListMedia.Request result = buildPartial();
         if (!result.isInitialized()) {
@@ -450,6 +462,7 @@ private static final long serialVersionUID = 0L;
         return result;
       }
 
+      @java.lang.Override
       public io.bloombox.schema.services.media.v1beta1.ListMedia.Request buildPartial() {
         io.bloombox.schema.services.media.v1beta1.ListMedia.Request result = new io.bloombox.schema.services.media.v1beta1.ListMedia.Request(this);
         result.scope_ = scope_;
@@ -457,32 +470,39 @@ private static final long serialVersionUID = 0L;
         return result;
       }
 
+      @java.lang.Override
       public Builder clone() {
         return (Builder) super.clone();
       }
+      @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
         return (Builder) super.setField(field, value);
       }
+      @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
         return (Builder) super.clearField(field);
       }
+      @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
         return (Builder) super.clearOneof(oneof);
       }
+      @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
         return (Builder) super.setRepeatedField(field, index, value);
       }
+      @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
         return (Builder) super.addRepeatedField(field, value);
       }
+      @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
         if (other instanceof io.bloombox.schema.services.media.v1beta1.ListMedia.Request) {
           return mergeFrom((io.bloombox.schema.services.media.v1beta1.ListMedia.Request)other);
@@ -503,10 +523,12 @@ private static final long serialVersionUID = 0L;
         return this;
       }
 
+      @java.lang.Override
       public final boolean isInitialized() {
         return true;
       }
 
+      @java.lang.Override
       public Builder mergeFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -613,21 +635,23 @@ private static final long serialVersionUID = 0L;
         onChanged();
         return this;
       }
+      @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
         return super.setUnknownFieldsProto3(unknownFields);
       }
 
+      @java.lang.Override
       public final Builder mergeUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
         return super.mergeUnknownFields(unknownFields);
       }
 
 
-      // @@protoc_insertion_point(builder_scope:bloombox.schema.services.media.v1beta1.ListMedia.Request)
+      // @@protoc_insertion_point(builder_scope:bloombox.services.media.v1beta1.ListMedia.Request)
     }
 
-    // @@protoc_insertion_point(class_scope:bloombox.schema.services.media.v1beta1.ListMedia.Request)
+    // @@protoc_insertion_point(class_scope:bloombox.services.media.v1beta1.ListMedia.Request)
     private static final io.bloombox.schema.services.media.v1beta1.ListMedia.Request DEFAULT_INSTANCE;
     static {
       DEFAULT_INSTANCE = new io.bloombox.schema.services.media.v1beta1.ListMedia.Request();
@@ -639,6 +663,7 @@ private static final long serialVersionUID = 0L;
 
     private static final com.google.protobuf.Parser<Request>
         PARSER = new com.google.protobuf.AbstractParser<Request>() {
+      @java.lang.Override
       public Request parsePartialFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -656,6 +681,7 @@ private static final long serialVersionUID = 0L;
       return PARSER;
     }
 
+    @java.lang.Override
     public io.bloombox.schema.services.media.v1beta1.ListMedia.Request getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
@@ -663,7 +689,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public interface ResponseOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:bloombox.schema.services.media.v1beta1.ListMedia.Response)
+      // @@protoc_insertion_point(interface_extends:bloombox.services.media.v1beta1.ListMedia.Response)
       com.google.protobuf.MessageOrBuilder {
 
     /**
@@ -715,11 +741,11 @@ private static final long serialVersionUID = 0L;
    * Response containing a list of media items.
    * </pre>
    *
-   * Protobuf type {@code bloombox.schema.services.media.v1beta1.ListMedia.Response}
+   * Protobuf type {@code bloombox.services.media.v1beta1.ListMedia.Response}
    */
   public  static final class Response extends
       com.google.protobuf.GeneratedMessageV3 implements
-      // @@protoc_insertion_point(message_implements:bloombox.schema.services.media.v1beta1.ListMedia.Response)
+      // @@protoc_insertion_point(message_implements:bloombox.services.media.v1beta1.ListMedia.Response)
       ResponseOrBuilder {
   private static final long serialVersionUID = 0L;
     // Use Response.newBuilder() to construct.
@@ -754,13 +780,6 @@ private static final long serialVersionUID = 0L;
             case 0:
               done = true;
               break;
-            default: {
-              if (!parseUnknownFieldProto3(
-                  input, unknownFields, extensionRegistry, tag)) {
-                done = true;
-              }
-              break;
-            }
             case 10: {
               if (!((mutable_bitField0_ & 0x00000001) == 0x00000001)) {
                 media_ = new java.util.ArrayList<io.opencannabis.schema.media.AttachedMedia.MediaItem>();
@@ -768,6 +787,13 @@ private static final long serialVersionUID = 0L;
               }
               media_.add(
                   input.readMessage(io.opencannabis.schema.media.AttachedMedia.MediaItem.parser(), extensionRegistry));
+              break;
+            }
+            default: {
+              if (!parseUnknownFieldProto3(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
               break;
             }
           }
@@ -787,12 +813,13 @@ private static final long serialVersionUID = 0L;
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return io.bloombox.schema.services.media.v1beta1.MediaServiceBeta1.internal_static_bloombox_schema_services_media_v1beta1_ListMedia_Response_descriptor;
+      return io.bloombox.schema.services.media.v1beta1.MediaServiceBeta1.internal_static_bloombox_services_media_v1beta1_ListMedia_Response_descriptor;
     }
 
+    @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return io.bloombox.schema.services.media.v1beta1.MediaServiceBeta1.internal_static_bloombox_schema_services_media_v1beta1_ListMedia_Response_fieldAccessorTable
+      return io.bloombox.schema.services.media.v1beta1.MediaServiceBeta1.internal_static_bloombox_services_media_v1beta1_ListMedia_Response_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
               io.bloombox.schema.services.media.v1beta1.ListMedia.Response.class, io.bloombox.schema.services.media.v1beta1.ListMedia.Response.Builder.class);
     }
@@ -853,6 +880,7 @@ private static final long serialVersionUID = 0L;
     }
 
     private byte memoizedIsInitialized = -1;
+    @java.lang.Override
     public final boolean isInitialized() {
       byte isInitialized = memoizedIsInitialized;
       if (isInitialized == 1) return true;
@@ -862,6 +890,7 @@ private static final long serialVersionUID = 0L;
       return true;
     }
 
+    @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
       for (int i = 0; i < media_.size(); i++) {
@@ -870,6 +899,7 @@ private static final long serialVersionUID = 0L;
       unknownFields.writeTo(output);
     }
 
+    @java.lang.Override
     public int getSerializedSize() {
       int size = memoizedSize;
       if (size != -1) return size;
@@ -987,6 +1017,7 @@ private static final long serialVersionUID = 0L;
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
 
+    @java.lang.Override
     public Builder newBuilderForType() { return newBuilder(); }
     public static Builder newBuilder() {
       return DEFAULT_INSTANCE.toBuilder();
@@ -994,6 +1025,7 @@ private static final long serialVersionUID = 0L;
     public static Builder newBuilder(io.bloombox.schema.services.media.v1beta1.ListMedia.Response prototype) {
       return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
     }
+    @java.lang.Override
     public Builder toBuilder() {
       return this == DEFAULT_INSTANCE
           ? new Builder() : new Builder().mergeFrom(this);
@@ -1010,20 +1042,21 @@ private static final long serialVersionUID = 0L;
      * Response containing a list of media items.
      * </pre>
      *
-     * Protobuf type {@code bloombox.schema.services.media.v1beta1.ListMedia.Response}
+     * Protobuf type {@code bloombox.services.media.v1beta1.ListMedia.Response}
      */
     public static final class Builder extends
         com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:bloombox.schema.services.media.v1beta1.ListMedia.Response)
+        // @@protoc_insertion_point(builder_implements:bloombox.services.media.v1beta1.ListMedia.Response)
         io.bloombox.schema.services.media.v1beta1.ListMedia.ResponseOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return io.bloombox.schema.services.media.v1beta1.MediaServiceBeta1.internal_static_bloombox_schema_services_media_v1beta1_ListMedia_Response_descriptor;
+        return io.bloombox.schema.services.media.v1beta1.MediaServiceBeta1.internal_static_bloombox_services_media_v1beta1_ListMedia_Response_descriptor;
       }
 
+      @java.lang.Override
       protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return io.bloombox.schema.services.media.v1beta1.MediaServiceBeta1.internal_static_bloombox_schema_services_media_v1beta1_ListMedia_Response_fieldAccessorTable
+        return io.bloombox.schema.services.media.v1beta1.MediaServiceBeta1.internal_static_bloombox_services_media_v1beta1_ListMedia_Response_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
                 io.bloombox.schema.services.media.v1beta1.ListMedia.Response.class, io.bloombox.schema.services.media.v1beta1.ListMedia.Response.Builder.class);
       }
@@ -1044,6 +1077,7 @@ private static final long serialVersionUID = 0L;
           getMediaFieldBuilder();
         }
       }
+      @java.lang.Override
       public Builder clear() {
         super.clear();
         if (mediaBuilder_ == null) {
@@ -1055,15 +1089,18 @@ private static final long serialVersionUID = 0L;
         return this;
       }
 
+      @java.lang.Override
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return io.bloombox.schema.services.media.v1beta1.MediaServiceBeta1.internal_static_bloombox_schema_services_media_v1beta1_ListMedia_Response_descriptor;
+        return io.bloombox.schema.services.media.v1beta1.MediaServiceBeta1.internal_static_bloombox_services_media_v1beta1_ListMedia_Response_descriptor;
       }
 
+      @java.lang.Override
       public io.bloombox.schema.services.media.v1beta1.ListMedia.Response getDefaultInstanceForType() {
         return io.bloombox.schema.services.media.v1beta1.ListMedia.Response.getDefaultInstance();
       }
 
+      @java.lang.Override
       public io.bloombox.schema.services.media.v1beta1.ListMedia.Response build() {
         io.bloombox.schema.services.media.v1beta1.ListMedia.Response result = buildPartial();
         if (!result.isInitialized()) {
@@ -1072,6 +1109,7 @@ private static final long serialVersionUID = 0L;
         return result;
       }
 
+      @java.lang.Override
       public io.bloombox.schema.services.media.v1beta1.ListMedia.Response buildPartial() {
         io.bloombox.schema.services.media.v1beta1.ListMedia.Response result = new io.bloombox.schema.services.media.v1beta1.ListMedia.Response(this);
         int from_bitField0_ = bitField0_;
@@ -1088,32 +1126,39 @@ private static final long serialVersionUID = 0L;
         return result;
       }
 
+      @java.lang.Override
       public Builder clone() {
         return (Builder) super.clone();
       }
+      @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
         return (Builder) super.setField(field, value);
       }
+      @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
         return (Builder) super.clearField(field);
       }
+      @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
         return (Builder) super.clearOneof(oneof);
       }
+      @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
         return (Builder) super.setRepeatedField(field, index, value);
       }
+      @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
         return (Builder) super.addRepeatedField(field, value);
       }
+      @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
         if (other instanceof io.bloombox.schema.services.media.v1beta1.ListMedia.Response) {
           return mergeFrom((io.bloombox.schema.services.media.v1beta1.ListMedia.Response)other);
@@ -1156,10 +1201,12 @@ private static final long serialVersionUID = 0L;
         return this;
       }
 
+      @java.lang.Override
       public final boolean isInitialized() {
         return true;
       }
 
+      @java.lang.Override
       public Builder mergeFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -1490,21 +1537,23 @@ private static final long serialVersionUID = 0L;
         }
         return mediaBuilder_;
       }
+      @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
         return super.setUnknownFieldsProto3(unknownFields);
       }
 
+      @java.lang.Override
       public final Builder mergeUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
         return super.mergeUnknownFields(unknownFields);
       }
 
 
-      // @@protoc_insertion_point(builder_scope:bloombox.schema.services.media.v1beta1.ListMedia.Response)
+      // @@protoc_insertion_point(builder_scope:bloombox.services.media.v1beta1.ListMedia.Response)
     }
 
-    // @@protoc_insertion_point(class_scope:bloombox.schema.services.media.v1beta1.ListMedia.Response)
+    // @@protoc_insertion_point(class_scope:bloombox.services.media.v1beta1.ListMedia.Response)
     private static final io.bloombox.schema.services.media.v1beta1.ListMedia.Response DEFAULT_INSTANCE;
     static {
       DEFAULT_INSTANCE = new io.bloombox.schema.services.media.v1beta1.ListMedia.Response();
@@ -1516,6 +1565,7 @@ private static final long serialVersionUID = 0L;
 
     private static final com.google.protobuf.Parser<Response>
         PARSER = new com.google.protobuf.AbstractParser<Response>() {
+      @java.lang.Override
       public Response parsePartialFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -1533,6 +1583,7 @@ private static final long serialVersionUID = 0L;
       return PARSER;
     }
 
+    @java.lang.Override
     public io.bloombox.schema.services.media.v1beta1.ListMedia.Response getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
@@ -1540,6 +1591,7 @@ private static final long serialVersionUID = 0L;
   }
 
   private byte memoizedIsInitialized = -1;
+  @java.lang.Override
   public final boolean isInitialized() {
     byte isInitialized = memoizedIsInitialized;
     if (isInitialized == 1) return true;
@@ -1549,11 +1601,13 @@ private static final long serialVersionUID = 0L;
     return true;
   }
 
+  @java.lang.Override
   public void writeTo(com.google.protobuf.CodedOutputStream output)
                       throws java.io.IOException {
     unknownFields.writeTo(output);
   }
 
+  @java.lang.Override
   public int getSerializedSize() {
     int size = memoizedSize;
     if (size != -1) return size;
@@ -1661,6 +1715,7 @@ private static final long serialVersionUID = 0L;
         .parseWithIOException(PARSER, input, extensionRegistry);
   }
 
+  @java.lang.Override
   public Builder newBuilderForType() { return newBuilder(); }
   public static Builder newBuilder() {
     return DEFAULT_INSTANCE.toBuilder();
@@ -1668,6 +1723,7 @@ private static final long serialVersionUID = 0L;
   public static Builder newBuilder(io.bloombox.schema.services.media.v1beta1.ListMedia prototype) {
     return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
   }
+  @java.lang.Override
   public Builder toBuilder() {
     return this == DEFAULT_INSTANCE
         ? new Builder() : new Builder().mergeFrom(this);
@@ -1684,20 +1740,21 @@ private static final long serialVersionUID = 0L;
    * Specifies an RPC structure and operation to list media items for a given partner/location scope.
    * </pre>
    *
-   * Protobuf type {@code bloombox.schema.services.media.v1beta1.ListMedia}
+   * Protobuf type {@code bloombox.services.media.v1beta1.ListMedia}
    */
   public static final class Builder extends
       com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-      // @@protoc_insertion_point(builder_implements:bloombox.schema.services.media.v1beta1.ListMedia)
+      // @@protoc_insertion_point(builder_implements:bloombox.services.media.v1beta1.ListMedia)
       io.bloombox.schema.services.media.v1beta1.ListMediaOrBuilder {
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return io.bloombox.schema.services.media.v1beta1.MediaServiceBeta1.internal_static_bloombox_schema_services_media_v1beta1_ListMedia_descriptor;
+      return io.bloombox.schema.services.media.v1beta1.MediaServiceBeta1.internal_static_bloombox_services_media_v1beta1_ListMedia_descriptor;
     }
 
+    @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return io.bloombox.schema.services.media.v1beta1.MediaServiceBeta1.internal_static_bloombox_schema_services_media_v1beta1_ListMedia_fieldAccessorTable
+      return io.bloombox.schema.services.media.v1beta1.MediaServiceBeta1.internal_static_bloombox_services_media_v1beta1_ListMedia_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
               io.bloombox.schema.services.media.v1beta1.ListMedia.class, io.bloombox.schema.services.media.v1beta1.ListMedia.Builder.class);
     }
@@ -1717,20 +1774,24 @@ private static final long serialVersionUID = 0L;
               .alwaysUseFieldBuilders) {
       }
     }
+    @java.lang.Override
     public Builder clear() {
       super.clear();
       return this;
     }
 
+    @java.lang.Override
     public com.google.protobuf.Descriptors.Descriptor
         getDescriptorForType() {
-      return io.bloombox.schema.services.media.v1beta1.MediaServiceBeta1.internal_static_bloombox_schema_services_media_v1beta1_ListMedia_descriptor;
+      return io.bloombox.schema.services.media.v1beta1.MediaServiceBeta1.internal_static_bloombox_services_media_v1beta1_ListMedia_descriptor;
     }
 
+    @java.lang.Override
     public io.bloombox.schema.services.media.v1beta1.ListMedia getDefaultInstanceForType() {
       return io.bloombox.schema.services.media.v1beta1.ListMedia.getDefaultInstance();
     }
 
+    @java.lang.Override
     public io.bloombox.schema.services.media.v1beta1.ListMedia build() {
       io.bloombox.schema.services.media.v1beta1.ListMedia result = buildPartial();
       if (!result.isInitialized()) {
@@ -1739,38 +1800,46 @@ private static final long serialVersionUID = 0L;
       return result;
     }
 
+    @java.lang.Override
     public io.bloombox.schema.services.media.v1beta1.ListMedia buildPartial() {
       io.bloombox.schema.services.media.v1beta1.ListMedia result = new io.bloombox.schema.services.media.v1beta1.ListMedia(this);
       onBuilt();
       return result;
     }
 
+    @java.lang.Override
     public Builder clone() {
       return (Builder) super.clone();
     }
+    @java.lang.Override
     public Builder setField(
         com.google.protobuf.Descriptors.FieldDescriptor field,
         java.lang.Object value) {
       return (Builder) super.setField(field, value);
     }
+    @java.lang.Override
     public Builder clearField(
         com.google.protobuf.Descriptors.FieldDescriptor field) {
       return (Builder) super.clearField(field);
     }
+    @java.lang.Override
     public Builder clearOneof(
         com.google.protobuf.Descriptors.OneofDescriptor oneof) {
       return (Builder) super.clearOneof(oneof);
     }
+    @java.lang.Override
     public Builder setRepeatedField(
         com.google.protobuf.Descriptors.FieldDescriptor field,
         int index, java.lang.Object value) {
       return (Builder) super.setRepeatedField(field, index, value);
     }
+    @java.lang.Override
     public Builder addRepeatedField(
         com.google.protobuf.Descriptors.FieldDescriptor field,
         java.lang.Object value) {
       return (Builder) super.addRepeatedField(field, value);
     }
+    @java.lang.Override
     public Builder mergeFrom(com.google.protobuf.Message other) {
       if (other instanceof io.bloombox.schema.services.media.v1beta1.ListMedia) {
         return mergeFrom((io.bloombox.schema.services.media.v1beta1.ListMedia)other);
@@ -1787,10 +1856,12 @@ private static final long serialVersionUID = 0L;
       return this;
     }
 
+    @java.lang.Override
     public final boolean isInitialized() {
       return true;
     }
 
+    @java.lang.Override
     public Builder mergeFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -1808,21 +1879,23 @@ private static final long serialVersionUID = 0L;
       }
       return this;
     }
+    @java.lang.Override
     public final Builder setUnknownFields(
         final com.google.protobuf.UnknownFieldSet unknownFields) {
       return super.setUnknownFieldsProto3(unknownFields);
     }
 
+    @java.lang.Override
     public final Builder mergeUnknownFields(
         final com.google.protobuf.UnknownFieldSet unknownFields) {
       return super.mergeUnknownFields(unknownFields);
     }
 
 
-    // @@protoc_insertion_point(builder_scope:bloombox.schema.services.media.v1beta1.ListMedia)
+    // @@protoc_insertion_point(builder_scope:bloombox.services.media.v1beta1.ListMedia)
   }
 
-  // @@protoc_insertion_point(class_scope:bloombox.schema.services.media.v1beta1.ListMedia)
+  // @@protoc_insertion_point(class_scope:bloombox.services.media.v1beta1.ListMedia)
   private static final io.bloombox.schema.services.media.v1beta1.ListMedia DEFAULT_INSTANCE;
   static {
     DEFAULT_INSTANCE = new io.bloombox.schema.services.media.v1beta1.ListMedia();
@@ -1834,6 +1907,7 @@ private static final long serialVersionUID = 0L;
 
   private static final com.google.protobuf.Parser<ListMedia>
       PARSER = new com.google.protobuf.AbstractParser<ListMedia>() {
+    @java.lang.Override
     public ListMedia parsePartialFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -1851,6 +1925,7 @@ private static final long serialVersionUID = 0L;
     return PARSER;
   }
 
+  @java.lang.Override
   public io.bloombox.schema.services.media.v1beta1.ListMedia getDefaultInstanceForType() {
     return DEFAULT_INSTANCE;
   }

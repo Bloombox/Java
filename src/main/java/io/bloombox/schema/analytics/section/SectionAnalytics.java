@@ -1,8 +1,8 @@
 /*
- * Copyright 2018, Bloombox, LLC. All rights reserved.
+ * Copyright 2018, Momentum Ideas, Co. All rights reserved.
  *
  * Source and object computer code contained herein is the private intellectual
- * property of Bloombox, a California Limited Liability Corporation. Use of this
+ * property of Momentum Ideas Co., a Delaware Corporation. Use of this
  * code in source form requires permission in writing before use or the
  * assembly, distribution, or publishing of derivative works, for commercial
  * purposes or any other purpose, from a duly authorized officer of Momentum
@@ -36,7 +36,7 @@ public final class SectionAnalytics {
    * Specifies actions that may be taken within a menu section.
    * </pre>
    *
-   * Protobuf enum {@code bloombox.schema.analytics.section.SectionAction}
+   * Protobuf enum {@code bloombox.analytics.section.SectionAction}
    */
   public enum SectionAction
       implements com.google.protobuf.ProtocolMessageEnum {
@@ -163,11 +163,11 @@ public final class SectionAnalytics {
       this.value = value;
     }
 
-    // @@protoc_insertion_point(enum_scope:bloombox.schema.analytics.section.SectionAction)
+    // @@protoc_insertion_point(enum_scope:bloombox.analytics.section.SectionAction)
   }
 
   public interface ImpressionOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:bloombox.schema.analytics.section.Impression)
+      // @@protoc_insertion_point(interface_extends:bloombox.analytics.section.Impression)
       com.google.protobuf.MessageOrBuilder {
 
     /**
@@ -225,11 +225,11 @@ public final class SectionAnalytics {
    * Specifies a section impression event, wherein a user has been presented a particular menu section.
    * </pre>
    *
-   * Protobuf type {@code bloombox.schema.analytics.section.Impression}
+   * Protobuf type {@code bloombox.analytics.section.Impression}
    */
   public  static final class Impression extends
       com.google.protobuf.GeneratedMessageV3 implements
-      // @@protoc_insertion_point(message_implements:bloombox.schema.analytics.section.Impression)
+      // @@protoc_insertion_point(message_implements:bloombox.analytics.section.Impression)
       ImpressionOrBuilder {
   private static final long serialVersionUID = 0L;
     // Use Impression.newBuilder() to construct.
@@ -263,13 +263,6 @@ public final class SectionAnalytics {
             case 0:
               done = true;
               break;
-            default: {
-              if (!parseUnknownFieldProto3(
-                  input, unknownFields, extensionRegistry, tag)) {
-                done = true;
-              }
-              break;
-            }
             case 10: {
               io.opencannabis.schema.menu.section.SectionSpec.Builder subBuilder = null;
               if (spec_ != null) {
@@ -296,6 +289,13 @@ public final class SectionAnalytics {
 
               break;
             }
+            default: {
+              if (!parseUnknownFieldProto3(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
           }
         }
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
@@ -310,12 +310,13 @@ public final class SectionAnalytics {
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return io.bloombox.schema.analytics.section.SectionAnalytics.internal_static_bloombox_schema_analytics_section_Impression_descriptor;
+      return io.bloombox.schema.analytics.section.SectionAnalytics.internal_static_bloombox_analytics_section_Impression_descriptor;
     }
 
+    @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return io.bloombox.schema.analytics.section.SectionAnalytics.internal_static_bloombox_schema_analytics_section_Impression_fieldAccessorTable
+      return io.bloombox.schema.analytics.section.SectionAnalytics.internal_static_bloombox_analytics_section_Impression_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
               io.bloombox.schema.analytics.section.SectionAnalytics.Impression.class, io.bloombox.schema.analytics.section.SectionAnalytics.Impression.Builder.class);
     }
@@ -387,6 +388,7 @@ public final class SectionAnalytics {
     }
 
     private byte memoizedIsInitialized = -1;
+    @java.lang.Override
     public final boolean isInitialized() {
       byte isInitialized = memoizedIsInitialized;
       if (isInitialized == 1) return true;
@@ -396,6 +398,7 @@ public final class SectionAnalytics {
       return true;
     }
 
+    @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
       if (spec_ != null) {
@@ -407,6 +410,7 @@ public final class SectionAnalytics {
       unknownFields.writeTo(output);
     }
 
+    @java.lang.Override
     public int getSerializedSize() {
       int size = memoizedSize;
       if (size != -1) return size;
@@ -540,6 +544,7 @@ public final class SectionAnalytics {
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
 
+    @java.lang.Override
     public Builder newBuilderForType() { return newBuilder(); }
     public static Builder newBuilder() {
       return DEFAULT_INSTANCE.toBuilder();
@@ -547,6 +552,7 @@ public final class SectionAnalytics {
     public static Builder newBuilder(io.bloombox.schema.analytics.section.SectionAnalytics.Impression prototype) {
       return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
     }
+    @java.lang.Override
     public Builder toBuilder() {
       return this == DEFAULT_INSTANCE
           ? new Builder() : new Builder().mergeFrom(this);
@@ -563,20 +569,21 @@ public final class SectionAnalytics {
      * Specifies a section impression event, wherein a user has been presented a particular menu section.
      * </pre>
      *
-     * Protobuf type {@code bloombox.schema.analytics.section.Impression}
+     * Protobuf type {@code bloombox.analytics.section.Impression}
      */
     public static final class Builder extends
         com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:bloombox.schema.analytics.section.Impression)
+        // @@protoc_insertion_point(builder_implements:bloombox.analytics.section.Impression)
         io.bloombox.schema.analytics.section.SectionAnalytics.ImpressionOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return io.bloombox.schema.analytics.section.SectionAnalytics.internal_static_bloombox_schema_analytics_section_Impression_descriptor;
+        return io.bloombox.schema.analytics.section.SectionAnalytics.internal_static_bloombox_analytics_section_Impression_descriptor;
       }
 
+      @java.lang.Override
       protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return io.bloombox.schema.analytics.section.SectionAnalytics.internal_static_bloombox_schema_analytics_section_Impression_fieldAccessorTable
+        return io.bloombox.schema.analytics.section.SectionAnalytics.internal_static_bloombox_analytics_section_Impression_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
                 io.bloombox.schema.analytics.section.SectionAnalytics.Impression.class, io.bloombox.schema.analytics.section.SectionAnalytics.Impression.Builder.class);
       }
@@ -596,6 +603,7 @@ public final class SectionAnalytics {
                 .alwaysUseFieldBuilders) {
         }
       }
+      @java.lang.Override
       public Builder clear() {
         super.clear();
         if (specBuilder_ == null) {
@@ -613,15 +621,18 @@ public final class SectionAnalytics {
         return this;
       }
 
+      @java.lang.Override
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return io.bloombox.schema.analytics.section.SectionAnalytics.internal_static_bloombox_schema_analytics_section_Impression_descriptor;
+        return io.bloombox.schema.analytics.section.SectionAnalytics.internal_static_bloombox_analytics_section_Impression_descriptor;
       }
 
+      @java.lang.Override
       public io.bloombox.schema.analytics.section.SectionAnalytics.Impression getDefaultInstanceForType() {
         return io.bloombox.schema.analytics.section.SectionAnalytics.Impression.getDefaultInstance();
       }
 
+      @java.lang.Override
       public io.bloombox.schema.analytics.section.SectionAnalytics.Impression build() {
         io.bloombox.schema.analytics.section.SectionAnalytics.Impression result = buildPartial();
         if (!result.isInitialized()) {
@@ -630,6 +641,7 @@ public final class SectionAnalytics {
         return result;
       }
 
+      @java.lang.Override
       public io.bloombox.schema.analytics.section.SectionAnalytics.Impression buildPartial() {
         io.bloombox.schema.analytics.section.SectionAnalytics.Impression result = new io.bloombox.schema.analytics.section.SectionAnalytics.Impression(this);
         if (specBuilder_ == null) {
@@ -646,32 +658,39 @@ public final class SectionAnalytics {
         return result;
       }
 
+      @java.lang.Override
       public Builder clone() {
         return (Builder) super.clone();
       }
+      @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
         return (Builder) super.setField(field, value);
       }
+      @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
         return (Builder) super.clearField(field);
       }
+      @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
         return (Builder) super.clearOneof(oneof);
       }
+      @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
         return (Builder) super.setRepeatedField(field, index, value);
       }
+      @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
         return (Builder) super.addRepeatedField(field, value);
       }
+      @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
         if (other instanceof io.bloombox.schema.analytics.section.SectionAnalytics.Impression) {
           return mergeFrom((io.bloombox.schema.analytics.section.SectionAnalytics.Impression)other);
@@ -694,10 +713,12 @@ public final class SectionAnalytics {
         return this;
       }
 
+      @java.lang.Override
       public final boolean isInitialized() {
         return true;
       }
 
+      @java.lang.Override
       public Builder mergeFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -1021,21 +1042,23 @@ public final class SectionAnalytics {
         }
         return occurredBuilder_;
       }
+      @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
         return super.setUnknownFieldsProto3(unknownFields);
       }
 
+      @java.lang.Override
       public final Builder mergeUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
         return super.mergeUnknownFields(unknownFields);
       }
 
 
-      // @@protoc_insertion_point(builder_scope:bloombox.schema.analytics.section.Impression)
+      // @@protoc_insertion_point(builder_scope:bloombox.analytics.section.Impression)
     }
 
-    // @@protoc_insertion_point(class_scope:bloombox.schema.analytics.section.Impression)
+    // @@protoc_insertion_point(class_scope:bloombox.analytics.section.Impression)
     private static final io.bloombox.schema.analytics.section.SectionAnalytics.Impression DEFAULT_INSTANCE;
     static {
       DEFAULT_INSTANCE = new io.bloombox.schema.analytics.section.SectionAnalytics.Impression();
@@ -1047,6 +1070,7 @@ public final class SectionAnalytics {
 
     private static final com.google.protobuf.Parser<Impression>
         PARSER = new com.google.protobuf.AbstractParser<Impression>() {
+      @java.lang.Override
       public Impression parsePartialFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -1064,6 +1088,7 @@ public final class SectionAnalytics {
       return PARSER;
     }
 
+    @java.lang.Override
     public io.bloombox.schema.analytics.section.SectionAnalytics.Impression getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
@@ -1071,7 +1096,7 @@ public final class SectionAnalytics {
   }
 
   public interface ViewOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:bloombox.schema.analytics.section.View)
+      // @@protoc_insertion_point(interface_extends:bloombox.analytics.section.View)
       com.google.protobuf.MessageOrBuilder {
 
     /**
@@ -1138,11 +1163,11 @@ public final class SectionAnalytics {
    * Specifies a section view event, wherein a user has navigated to a particular menu section.
    * </pre>
    *
-   * Protobuf type {@code bloombox.schema.analytics.section.View}
+   * Protobuf type {@code bloombox.analytics.section.View}
    */
   public  static final class View extends
       com.google.protobuf.GeneratedMessageV3 implements
-      // @@protoc_insertion_point(message_implements:bloombox.schema.analytics.section.View)
+      // @@protoc_insertion_point(message_implements:bloombox.analytics.section.View)
       ViewOrBuilder {
   private static final long serialVersionUID = 0L;
     // Use View.newBuilder() to construct.
@@ -1177,13 +1202,6 @@ public final class SectionAnalytics {
             case 0:
               done = true;
               break;
-            default: {
-              if (!parseUnknownFieldProto3(
-                  input, unknownFields, extensionRegistry, tag)) {
-                done = true;
-              }
-              break;
-            }
             case 10: {
               io.opencannabis.schema.menu.section.SectionSpec.Builder subBuilder = null;
               if (spec_ != null) {
@@ -1215,6 +1233,13 @@ public final class SectionAnalytics {
 
               break;
             }
+            default: {
+              if (!parseUnknownFieldProto3(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
           }
         }
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
@@ -1229,12 +1254,13 @@ public final class SectionAnalytics {
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return io.bloombox.schema.analytics.section.SectionAnalytics.internal_static_bloombox_schema_analytics_section_View_descriptor;
+      return io.bloombox.schema.analytics.section.SectionAnalytics.internal_static_bloombox_analytics_section_View_descriptor;
     }
 
+    @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return io.bloombox.schema.analytics.section.SectionAnalytics.internal_static_bloombox_schema_analytics_section_View_fieldAccessorTable
+      return io.bloombox.schema.analytics.section.SectionAnalytics.internal_static_bloombox_analytics_section_View_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
               io.bloombox.schema.analytics.section.SectionAnalytics.View.class, io.bloombox.schema.analytics.section.SectionAnalytics.View.Builder.class);
     }
@@ -1319,6 +1345,7 @@ public final class SectionAnalytics {
     }
 
     private byte memoizedIsInitialized = -1;
+    @java.lang.Override
     public final boolean isInitialized() {
       byte isInitialized = memoizedIsInitialized;
       if (isInitialized == 1) return true;
@@ -1328,6 +1355,7 @@ public final class SectionAnalytics {
       return true;
     }
 
+    @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
       if (spec_ != null) {
@@ -1342,6 +1370,7 @@ public final class SectionAnalytics {
       unknownFields.writeTo(output);
     }
 
+    @java.lang.Override
     public int getSerializedSize() {
       int size = memoizedSize;
       if (size != -1) return size;
@@ -1484,6 +1513,7 @@ public final class SectionAnalytics {
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
 
+    @java.lang.Override
     public Builder newBuilderForType() { return newBuilder(); }
     public static Builder newBuilder() {
       return DEFAULT_INSTANCE.toBuilder();
@@ -1491,6 +1521,7 @@ public final class SectionAnalytics {
     public static Builder newBuilder(io.bloombox.schema.analytics.section.SectionAnalytics.View prototype) {
       return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
     }
+    @java.lang.Override
     public Builder toBuilder() {
       return this == DEFAULT_INSTANCE
           ? new Builder() : new Builder().mergeFrom(this);
@@ -1507,20 +1538,21 @@ public final class SectionAnalytics {
      * Specifies a section view event, wherein a user has navigated to a particular menu section.
      * </pre>
      *
-     * Protobuf type {@code bloombox.schema.analytics.section.View}
+     * Protobuf type {@code bloombox.analytics.section.View}
      */
     public static final class Builder extends
         com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:bloombox.schema.analytics.section.View)
+        // @@protoc_insertion_point(builder_implements:bloombox.analytics.section.View)
         io.bloombox.schema.analytics.section.SectionAnalytics.ViewOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return io.bloombox.schema.analytics.section.SectionAnalytics.internal_static_bloombox_schema_analytics_section_View_descriptor;
+        return io.bloombox.schema.analytics.section.SectionAnalytics.internal_static_bloombox_analytics_section_View_descriptor;
       }
 
+      @java.lang.Override
       protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return io.bloombox.schema.analytics.section.SectionAnalytics.internal_static_bloombox_schema_analytics_section_View_fieldAccessorTable
+        return io.bloombox.schema.analytics.section.SectionAnalytics.internal_static_bloombox_analytics_section_View_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
                 io.bloombox.schema.analytics.section.SectionAnalytics.View.class, io.bloombox.schema.analytics.section.SectionAnalytics.View.Builder.class);
       }
@@ -1540,6 +1572,7 @@ public final class SectionAnalytics {
                 .alwaysUseFieldBuilders) {
         }
       }
+      @java.lang.Override
       public Builder clear() {
         super.clear();
         if (specBuilder_ == null) {
@@ -1559,15 +1592,18 @@ public final class SectionAnalytics {
         return this;
       }
 
+      @java.lang.Override
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return io.bloombox.schema.analytics.section.SectionAnalytics.internal_static_bloombox_schema_analytics_section_View_descriptor;
+        return io.bloombox.schema.analytics.section.SectionAnalytics.internal_static_bloombox_analytics_section_View_descriptor;
       }
 
+      @java.lang.Override
       public io.bloombox.schema.analytics.section.SectionAnalytics.View getDefaultInstanceForType() {
         return io.bloombox.schema.analytics.section.SectionAnalytics.View.getDefaultInstance();
       }
 
+      @java.lang.Override
       public io.bloombox.schema.analytics.section.SectionAnalytics.View build() {
         io.bloombox.schema.analytics.section.SectionAnalytics.View result = buildPartial();
         if (!result.isInitialized()) {
@@ -1576,6 +1612,7 @@ public final class SectionAnalytics {
         return result;
       }
 
+      @java.lang.Override
       public io.bloombox.schema.analytics.section.SectionAnalytics.View buildPartial() {
         io.bloombox.schema.analytics.section.SectionAnalytics.View result = new io.bloombox.schema.analytics.section.SectionAnalytics.View(this);
         if (specBuilder_ == null) {
@@ -1593,32 +1630,39 @@ public final class SectionAnalytics {
         return result;
       }
 
+      @java.lang.Override
       public Builder clone() {
         return (Builder) super.clone();
       }
+      @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
         return (Builder) super.setField(field, value);
       }
+      @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
         return (Builder) super.clearField(field);
       }
+      @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
         return (Builder) super.clearOneof(oneof);
       }
+      @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
         return (Builder) super.setRepeatedField(field, index, value);
       }
+      @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
         return (Builder) super.addRepeatedField(field, value);
       }
+      @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
         if (other instanceof io.bloombox.schema.analytics.section.SectionAnalytics.View) {
           return mergeFrom((io.bloombox.schema.analytics.section.SectionAnalytics.View)other);
@@ -1644,10 +1688,12 @@ public final class SectionAnalytics {
         return this;
       }
 
+      @java.lang.Override
       public final boolean isInitialized() {
         return true;
       }
 
+      @java.lang.Override
       public Builder mergeFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -2009,21 +2055,23 @@ public final class SectionAnalytics {
         }
         return occurredBuilder_;
       }
+      @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
         return super.setUnknownFieldsProto3(unknownFields);
       }
 
+      @java.lang.Override
       public final Builder mergeUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
         return super.mergeUnknownFields(unknownFields);
       }
 
 
-      // @@protoc_insertion_point(builder_scope:bloombox.schema.analytics.section.View)
+      // @@protoc_insertion_point(builder_scope:bloombox.analytics.section.View)
     }
 
-    // @@protoc_insertion_point(class_scope:bloombox.schema.analytics.section.View)
+    // @@protoc_insertion_point(class_scope:bloombox.analytics.section.View)
     private static final io.bloombox.schema.analytics.section.SectionAnalytics.View DEFAULT_INSTANCE;
     static {
       DEFAULT_INSTANCE = new io.bloombox.schema.analytics.section.SectionAnalytics.View();
@@ -2035,6 +2083,7 @@ public final class SectionAnalytics {
 
     private static final com.google.protobuf.Parser<View>
         PARSER = new com.google.protobuf.AbstractParser<View>() {
+      @java.lang.Override
       public View parsePartialFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -2052,6 +2101,7 @@ public final class SectionAnalytics {
       return PARSER;
     }
 
+    @java.lang.Override
     public io.bloombox.schema.analytics.section.SectionAnalytics.View getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
@@ -2059,7 +2109,7 @@ public final class SectionAnalytics {
   }
 
   public interface ActionOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:bloombox.schema.analytics.section.Action)
+      // @@protoc_insertion_point(interface_extends:bloombox.analytics.section.Action)
       com.google.protobuf.MessageOrBuilder {
 
     /**
@@ -2092,7 +2142,7 @@ public final class SectionAnalytics {
      * Action that was taken within the section.
      * </pre>
      *
-     * <code>.bloombox.schema.analytics.section.SectionAction verb = 2;</code>
+     * <code>.bloombox.analytics.section.SectionAction verb = 2;</code>
      */
     int getVerbValue();
     /**
@@ -2100,7 +2150,7 @@ public final class SectionAnalytics {
      * Action that was taken within the section.
      * </pre>
      *
-     * <code>.bloombox.schema.analytics.section.SectionAction verb = 2;</code>
+     * <code>.bloombox.analytics.section.SectionAction verb = 2;</code>
      */
     io.bloombox.schema.analytics.section.SectionAnalytics.SectionAction getVerb();
 
@@ -2135,11 +2185,11 @@ public final class SectionAnalytics {
    * view of a particular menu section.
    * </pre>
    *
-   * Protobuf type {@code bloombox.schema.analytics.section.Action}
+   * Protobuf type {@code bloombox.analytics.section.Action}
    */
   public  static final class Action extends
       com.google.protobuf.GeneratedMessageV3 implements
-      // @@protoc_insertion_point(message_implements:bloombox.schema.analytics.section.Action)
+      // @@protoc_insertion_point(message_implements:bloombox.analytics.section.Action)
       ActionOrBuilder {
   private static final long serialVersionUID = 0L;
     // Use Action.newBuilder() to construct.
@@ -2174,13 +2224,6 @@ public final class SectionAnalytics {
             case 0:
               done = true;
               break;
-            default: {
-              if (!parseUnknownFieldProto3(
-                  input, unknownFields, extensionRegistry, tag)) {
-                done = true;
-              }
-              break;
-            }
             case 10: {
               io.opencannabis.schema.menu.section.SectionSpec.Builder subBuilder = null;
               if (spec_ != null) {
@@ -2213,6 +2256,13 @@ public final class SectionAnalytics {
 
               break;
             }
+            default: {
+              if (!parseUnknownFieldProto3(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
           }
         }
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
@@ -2227,12 +2277,13 @@ public final class SectionAnalytics {
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return io.bloombox.schema.analytics.section.SectionAnalytics.internal_static_bloombox_schema_analytics_section_Action_descriptor;
+      return io.bloombox.schema.analytics.section.SectionAnalytics.internal_static_bloombox_analytics_section_Action_descriptor;
     }
 
+    @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return io.bloombox.schema.analytics.section.SectionAnalytics.internal_static_bloombox_schema_analytics_section_Action_fieldAccessorTable
+      return io.bloombox.schema.analytics.section.SectionAnalytics.internal_static_bloombox_analytics_section_Action_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
               io.bloombox.schema.analytics.section.SectionAnalytics.Action.class, io.bloombox.schema.analytics.section.SectionAnalytics.Action.Builder.class);
     }
@@ -2277,7 +2328,7 @@ public final class SectionAnalytics {
      * Action that was taken within the section.
      * </pre>
      *
-     * <code>.bloombox.schema.analytics.section.SectionAction verb = 2;</code>
+     * <code>.bloombox.analytics.section.SectionAction verb = 2;</code>
      */
     public int getVerbValue() {
       return verb_;
@@ -2287,9 +2338,10 @@ public final class SectionAnalytics {
      * Action that was taken within the section.
      * </pre>
      *
-     * <code>.bloombox.schema.analytics.section.SectionAction verb = 2;</code>
+     * <code>.bloombox.analytics.section.SectionAction verb = 2;</code>
      */
     public io.bloombox.schema.analytics.section.SectionAnalytics.SectionAction getVerb() {
+      @SuppressWarnings("deprecation")
       io.bloombox.schema.analytics.section.SectionAnalytics.SectionAction result = io.bloombox.schema.analytics.section.SectionAnalytics.SectionAction.valueOf(verb_);
       return result == null ? io.bloombox.schema.analytics.section.SectionAnalytics.SectionAction.UNRECOGNIZED : result;
     }
@@ -2328,6 +2380,7 @@ public final class SectionAnalytics {
     }
 
     private byte memoizedIsInitialized = -1;
+    @java.lang.Override
     public final boolean isInitialized() {
       byte isInitialized = memoizedIsInitialized;
       if (isInitialized == 1) return true;
@@ -2337,6 +2390,7 @@ public final class SectionAnalytics {
       return true;
     }
 
+    @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
       if (spec_ != null) {
@@ -2351,6 +2405,7 @@ public final class SectionAnalytics {
       unknownFields.writeTo(output);
     }
 
+    @java.lang.Override
     public int getSerializedSize() {
       int size = memoizedSize;
       if (size != -1) return size;
@@ -2491,6 +2546,7 @@ public final class SectionAnalytics {
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
 
+    @java.lang.Override
     public Builder newBuilderForType() { return newBuilder(); }
     public static Builder newBuilder() {
       return DEFAULT_INSTANCE.toBuilder();
@@ -2498,6 +2554,7 @@ public final class SectionAnalytics {
     public static Builder newBuilder(io.bloombox.schema.analytics.section.SectionAnalytics.Action prototype) {
       return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
     }
+    @java.lang.Override
     public Builder toBuilder() {
       return this == DEFAULT_INSTANCE
           ? new Builder() : new Builder().mergeFrom(this);
@@ -2515,20 +2572,21 @@ public final class SectionAnalytics {
      * view of a particular menu section.
      * </pre>
      *
-     * Protobuf type {@code bloombox.schema.analytics.section.Action}
+     * Protobuf type {@code bloombox.analytics.section.Action}
      */
     public static final class Builder extends
         com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:bloombox.schema.analytics.section.Action)
+        // @@protoc_insertion_point(builder_implements:bloombox.analytics.section.Action)
         io.bloombox.schema.analytics.section.SectionAnalytics.ActionOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return io.bloombox.schema.analytics.section.SectionAnalytics.internal_static_bloombox_schema_analytics_section_Action_descriptor;
+        return io.bloombox.schema.analytics.section.SectionAnalytics.internal_static_bloombox_analytics_section_Action_descriptor;
       }
 
+      @java.lang.Override
       protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return io.bloombox.schema.analytics.section.SectionAnalytics.internal_static_bloombox_schema_analytics_section_Action_fieldAccessorTable
+        return io.bloombox.schema.analytics.section.SectionAnalytics.internal_static_bloombox_analytics_section_Action_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
                 io.bloombox.schema.analytics.section.SectionAnalytics.Action.class, io.bloombox.schema.analytics.section.SectionAnalytics.Action.Builder.class);
       }
@@ -2548,6 +2606,7 @@ public final class SectionAnalytics {
                 .alwaysUseFieldBuilders) {
         }
       }
+      @java.lang.Override
       public Builder clear() {
         super.clear();
         if (specBuilder_ == null) {
@@ -2567,15 +2626,18 @@ public final class SectionAnalytics {
         return this;
       }
 
+      @java.lang.Override
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return io.bloombox.schema.analytics.section.SectionAnalytics.internal_static_bloombox_schema_analytics_section_Action_descriptor;
+        return io.bloombox.schema.analytics.section.SectionAnalytics.internal_static_bloombox_analytics_section_Action_descriptor;
       }
 
+      @java.lang.Override
       public io.bloombox.schema.analytics.section.SectionAnalytics.Action getDefaultInstanceForType() {
         return io.bloombox.schema.analytics.section.SectionAnalytics.Action.getDefaultInstance();
       }
 
+      @java.lang.Override
       public io.bloombox.schema.analytics.section.SectionAnalytics.Action build() {
         io.bloombox.schema.analytics.section.SectionAnalytics.Action result = buildPartial();
         if (!result.isInitialized()) {
@@ -2584,6 +2646,7 @@ public final class SectionAnalytics {
         return result;
       }
 
+      @java.lang.Override
       public io.bloombox.schema.analytics.section.SectionAnalytics.Action buildPartial() {
         io.bloombox.schema.analytics.section.SectionAnalytics.Action result = new io.bloombox.schema.analytics.section.SectionAnalytics.Action(this);
         if (specBuilder_ == null) {
@@ -2601,32 +2664,39 @@ public final class SectionAnalytics {
         return result;
       }
 
+      @java.lang.Override
       public Builder clone() {
         return (Builder) super.clone();
       }
+      @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
         return (Builder) super.setField(field, value);
       }
+      @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
         return (Builder) super.clearField(field);
       }
+      @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
         return (Builder) super.clearOneof(oneof);
       }
+      @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
         return (Builder) super.setRepeatedField(field, index, value);
       }
+      @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
         return (Builder) super.addRepeatedField(field, value);
       }
+      @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
         if (other instanceof io.bloombox.schema.analytics.section.SectionAnalytics.Action) {
           return mergeFrom((io.bloombox.schema.analytics.section.SectionAnalytics.Action)other);
@@ -2652,10 +2722,12 @@ public final class SectionAnalytics {
         return this;
       }
 
+      @java.lang.Override
       public final boolean isInitialized() {
         return true;
       }
 
+      @java.lang.Override
       public Builder mergeFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -2833,7 +2905,7 @@ public final class SectionAnalytics {
        * Action that was taken within the section.
        * </pre>
        *
-       * <code>.bloombox.schema.analytics.section.SectionAction verb = 2;</code>
+       * <code>.bloombox.analytics.section.SectionAction verb = 2;</code>
        */
       public int getVerbValue() {
         return verb_;
@@ -2843,7 +2915,7 @@ public final class SectionAnalytics {
        * Action that was taken within the section.
        * </pre>
        *
-       * <code>.bloombox.schema.analytics.section.SectionAction verb = 2;</code>
+       * <code>.bloombox.analytics.section.SectionAction verb = 2;</code>
        */
       public Builder setVerbValue(int value) {
         verb_ = value;
@@ -2855,9 +2927,10 @@ public final class SectionAnalytics {
        * Action that was taken within the section.
        * </pre>
        *
-       * <code>.bloombox.schema.analytics.section.SectionAction verb = 2;</code>
+       * <code>.bloombox.analytics.section.SectionAction verb = 2;</code>
        */
       public io.bloombox.schema.analytics.section.SectionAnalytics.SectionAction getVerb() {
+        @SuppressWarnings("deprecation")
         io.bloombox.schema.analytics.section.SectionAnalytics.SectionAction result = io.bloombox.schema.analytics.section.SectionAnalytics.SectionAction.valueOf(verb_);
         return result == null ? io.bloombox.schema.analytics.section.SectionAnalytics.SectionAction.UNRECOGNIZED : result;
       }
@@ -2866,7 +2939,7 @@ public final class SectionAnalytics {
        * Action that was taken within the section.
        * </pre>
        *
-       * <code>.bloombox.schema.analytics.section.SectionAction verb = 2;</code>
+       * <code>.bloombox.analytics.section.SectionAction verb = 2;</code>
        */
       public Builder setVerb(io.bloombox.schema.analytics.section.SectionAnalytics.SectionAction value) {
         if (value == null) {
@@ -2882,7 +2955,7 @@ public final class SectionAnalytics {
        * Action that was taken within the section.
        * </pre>
        *
-       * <code>.bloombox.schema.analytics.section.SectionAction verb = 2;</code>
+       * <code>.bloombox.analytics.section.SectionAction verb = 2;</code>
        */
       public Builder clearVerb() {
         
@@ -3043,21 +3116,23 @@ public final class SectionAnalytics {
         }
         return occurredBuilder_;
       }
+      @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
         return super.setUnknownFieldsProto3(unknownFields);
       }
 
+      @java.lang.Override
       public final Builder mergeUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
         return super.mergeUnknownFields(unknownFields);
       }
 
 
-      // @@protoc_insertion_point(builder_scope:bloombox.schema.analytics.section.Action)
+      // @@protoc_insertion_point(builder_scope:bloombox.analytics.section.Action)
     }
 
-    // @@protoc_insertion_point(class_scope:bloombox.schema.analytics.section.Action)
+    // @@protoc_insertion_point(class_scope:bloombox.analytics.section.Action)
     private static final io.bloombox.schema.analytics.section.SectionAnalytics.Action DEFAULT_INSTANCE;
     static {
       DEFAULT_INSTANCE = new io.bloombox.schema.analytics.section.SectionAnalytics.Action();
@@ -3069,6 +3144,7 @@ public final class SectionAnalytics {
 
     private static final com.google.protobuf.Parser<Action>
         PARSER = new com.google.protobuf.AbstractParser<Action>() {
+      @java.lang.Override
       public Action parsePartialFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -3086,6 +3162,7 @@ public final class SectionAnalytics {
       return PARSER;
     }
 
+    @java.lang.Override
     public io.bloombox.schema.analytics.section.SectionAnalytics.Action getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
@@ -3093,20 +3170,20 @@ public final class SectionAnalytics {
   }
 
   private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_bloombox_schema_analytics_section_Impression_descriptor;
+    internal_static_bloombox_analytics_section_Impression_descriptor;
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_bloombox_schema_analytics_section_Impression_fieldAccessorTable;
+      internal_static_bloombox_analytics_section_Impression_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_bloombox_schema_analytics_section_View_descriptor;
+    internal_static_bloombox_analytics_section_View_descriptor;
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_bloombox_schema_analytics_section_View_fieldAccessorTable;
+      internal_static_bloombox_analytics_section_View_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_bloombox_schema_analytics_section_Action_descriptor;
+    internal_static_bloombox_analytics_section_Action_descriptor;
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_bloombox_schema_analytics_section_Action_fieldAccessorTable;
+      internal_static_bloombox_analytics_section_Action_fieldAccessorTable;
 
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
@@ -3117,23 +3194,23 @@ public final class SectionAnalytics {
   static {
     java.lang.String[] descriptorData = {
       "\n)analytics/commerce/SectionAnalytics.pr" +
-      "oto\022!bloombox.schema.analytics.section\032\026" +
-      "temporal/Instant.proto\032\033products/menu/Se" +
-      "ction.proto\"}\n\nImpression\022=\n\004spec\030\001 \001(\0132" +
-      "/.opencannabis.products.menu.section.Sec" +
-      "tionSpec\0220\n\010occurred\030\002 \001(\0132\036.opencannabi" +
-      "s.temporal.Instant\"\214\001\n\004View\022=\n\004spec\030\001 \001(" +
-      "\0132/.opencannabis.products.menu.section.S" +
-      "ectionSpec\022\023\n\013interactive\030\002 \001(\010\0220\n\010occur" +
-      "red\030\003 \001(\0132\036.opencannabis.temporal.Instan" +
-      "t\"\271\001\n\006Action\022=\n\004spec\030\001 \001(\0132/.opencannabi" +
-      "s.products.menu.section.SectionSpec\022>\n\004v" +
-      "erb\030\002 \001(\01620.bloombox.schema.analytics.se" +
-      "ction.SectionAction\0220\n\010occurred\030\003 \001(\0132\036." +
-      "opencannabis.temporal.Instant*/\n\rSection" +
-      "Action\022\010\n\004VIEW\020\000\022\010\n\004SORT\020\001\022\n\n\006FILTER\020\002BB" +
-      "\n$io.bloombox.schema.analytics.sectionB\020" +
-      "SectionAnalyticsH\001P\000\242\002\003BBSb\006proto3"
+      "oto\022\032bloombox.analytics.section\032\026tempora" +
+      "l/Instant.proto\032\033products/menu/Section.p" +
+      "roto\"}\n\nImpression\022=\n\004spec\030\001 \001(\0132/.openc" +
+      "annabis.products.menu.section.SectionSpe" +
+      "c\0220\n\010occurred\030\002 \001(\0132\036.opencannabis.tempo" +
+      "ral.Instant\"\214\001\n\004View\022=\n\004spec\030\001 \001(\0132/.ope" +
+      "ncannabis.products.menu.section.SectionS" +
+      "pec\022\023\n\013interactive\030\002 \001(\010\0220\n\010occurred\030\003 \001" +
+      "(\0132\036.opencannabis.temporal.Instant\"\262\001\n\006A" +
+      "ction\022=\n\004spec\030\001 \001(\0132/.opencannabis.produ" +
+      "cts.menu.section.SectionSpec\0227\n\004verb\030\002 \001" +
+      "(\0162).bloombox.analytics.section.SectionA" +
+      "ction\0220\n\010occurred\030\003 \001(\0132\036.opencannabis.t" +
+      "emporal.Instant*/\n\rSectionAction\022\010\n\004VIEW" +
+      "\020\000\022\010\n\004SORT\020\001\022\n\n\006FILTER\020\002BB\n$io.bloombox." +
+      "schema.analytics.sectionB\020SectionAnalyti" +
+      "csH\001P\000\242\002\003BBSb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -3149,23 +3226,23 @@ public final class SectionAnalytics {
           io.opencannabis.schema.temporal.TemporalInstant.getDescriptor(),
           io.opencannabis.schema.menu.section.SectionOuterClass.getDescriptor(),
         }, assigner);
-    internal_static_bloombox_schema_analytics_section_Impression_descriptor =
+    internal_static_bloombox_analytics_section_Impression_descriptor =
       getDescriptor().getMessageTypes().get(0);
-    internal_static_bloombox_schema_analytics_section_Impression_fieldAccessorTable = new
+    internal_static_bloombox_analytics_section_Impression_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_bloombox_schema_analytics_section_Impression_descriptor,
+        internal_static_bloombox_analytics_section_Impression_descriptor,
         new java.lang.String[] { "Spec", "Occurred", });
-    internal_static_bloombox_schema_analytics_section_View_descriptor =
+    internal_static_bloombox_analytics_section_View_descriptor =
       getDescriptor().getMessageTypes().get(1);
-    internal_static_bloombox_schema_analytics_section_View_fieldAccessorTable = new
+    internal_static_bloombox_analytics_section_View_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_bloombox_schema_analytics_section_View_descriptor,
+        internal_static_bloombox_analytics_section_View_descriptor,
         new java.lang.String[] { "Spec", "Interactive", "Occurred", });
-    internal_static_bloombox_schema_analytics_section_Action_descriptor =
+    internal_static_bloombox_analytics_section_Action_descriptor =
       getDescriptor().getMessageTypes().get(2);
-    internal_static_bloombox_schema_analytics_section_Action_fieldAccessorTable = new
+    internal_static_bloombox_analytics_section_Action_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_bloombox_schema_analytics_section_Action_descriptor,
+        internal_static_bloombox_analytics_section_Action_descriptor,
         new java.lang.String[] { "Spec", "Verb", "Occurred", });
     io.opencannabis.schema.temporal.TemporalInstant.getDescriptor();
     io.opencannabis.schema.menu.section.SectionOuterClass.getDescriptor();

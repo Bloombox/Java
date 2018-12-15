@@ -1,11 +1,12 @@
 /*
- * Copyright 2018, Bloombox, LLC.
+ * Copyright 2018, Momentum Ideas, Co. All rights reserved.
  *
- * Licensed under the Apache License, Version 2.0 (the "License");
- * you may not use this file except in compliance with the License.
- * You may obtain a copy of the License at
- *
- *     http://www.apache.org/licenses/LICENSE-2.0
+ * Source and object computer code contained herein is the private intellectual
+ * property of Momentum Ideas Co., a Delaware Corporation. Use of this
+ * code in source form requires permission in writing before use or the
+ * assembly, distribution, or publishing of derivative works, for commercial
+ * purposes or any other purpose, from a duly authorized officer of Momentum
+ * Ideas Co.
  *
  * Unless required by applicable law or agreed to in writing, software
  * distributed under the License is distributed on an "AS IS" BASIS,
@@ -31,7 +32,7 @@ public final class LocationAccount {
         (com.google.protobuf.ExtensionRegistryLite) registry);
   }
   public interface PartnerLocationOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:bloombox.schema.partner.PartnerLocation)
+      // @@protoc_insertion_point(interface_extends:bloombox.partner.PartnerLocation)
       com.google.protobuf.MessageOrBuilder {
 
     /**
@@ -57,7 +58,7 @@ public final class LocationAccount {
      * Partner record that owns this location.
      * </pre>
      *
-     * <code>.bloombox.schema.partner.PartnerKey partner = 2 [(.gen_bq_schema.ignore) = true];</code>
+     * <code>.bloombox.partner.PartnerKey partner = 2 [(.gen_bq_schema.ignore) = true];</code>
      */
     boolean hasPartner();
     /**
@@ -65,7 +66,7 @@ public final class LocationAccount {
      * Partner record that owns this location.
      * </pre>
      *
-     * <code>.bloombox.schema.partner.PartnerKey partner = 2 [(.gen_bq_schema.ignore) = true];</code>
+     * <code>.bloombox.partner.PartnerKey partner = 2 [(.gen_bq_schema.ignore) = true];</code>
      */
     io.bloombox.schema.partner.PartnerMeta.PartnerKey getPartner();
     /**
@@ -73,7 +74,7 @@ public final class LocationAccount {
      * Partner record that owns this location.
      * </pre>
      *
-     * <code>.bloombox.schema.partner.PartnerKey partner = 2 [(.gen_bq_schema.ignore) = true];</code>
+     * <code>.bloombox.partner.PartnerKey partner = 2 [(.gen_bq_schema.ignore) = true];</code>
      */
     io.bloombox.schema.partner.PartnerMeta.PartnerKeyOrBuilder getPartnerOrBuilder();
 
@@ -118,7 +119,7 @@ public final class LocationAccount {
      * Flags that specify conditions applied to this partner location.
      * </pre>
      *
-     * <code>.bloombox.schema.partner.PartnerFlags flags = 5 [(.gen_bq_schema.description) = "Flags that specify conditions applied to this partner location.", (.core.field) = { ... }</code>
+     * <code>.bloombox.partner.PartnerFlags flags = 5 [(.gen_bq_schema.description) = "Flags that specify conditions applied to this partner location.", (.core.field) = { ... }</code>
      */
     boolean hasFlags();
     /**
@@ -126,7 +127,7 @@ public final class LocationAccount {
      * Flags that specify conditions applied to this partner location.
      * </pre>
      *
-     * <code>.bloombox.schema.partner.PartnerFlags flags = 5 [(.gen_bq_schema.description) = "Flags that specify conditions applied to this partner location.", (.core.field) = { ... }</code>
+     * <code>.bloombox.partner.PartnerFlags flags = 5 [(.gen_bq_schema.description) = "Flags that specify conditions applied to this partner location.", (.core.field) = { ... }</code>
      */
     io.bloombox.schema.partner.PartnerInfo.PartnerFlags getFlags();
     /**
@@ -134,7 +135,7 @@ public final class LocationAccount {
      * Flags that specify conditions applied to this partner location.
      * </pre>
      *
-     * <code>.bloombox.schema.partner.PartnerFlags flags = 5 [(.gen_bq_schema.description) = "Flags that specify conditions applied to this partner location.", (.core.field) = { ... }</code>
+     * <code>.bloombox.partner.PartnerFlags flags = 5 [(.gen_bq_schema.description) = "Flags that specify conditions applied to this partner location.", (.core.field) = { ... }</code>
      */
     io.bloombox.schema.partner.PartnerInfo.PartnerFlagsOrBuilder getFlagsOrBuilder();
 
@@ -193,7 +194,7 @@ public final class LocationAccount {
      * Settings for this partner location.
      * </pre>
      *
-     * <code>.bloombox.schema.partner.settings.PartnerLocationSettings settings = 8 [(.gen_bq_schema.ignore) = true, (.core.collection) = { ... }</code>
+     * <code>.bloombox.partner.settings.PartnerLocationSettings settings = 8 [(.gen_bq_schema.ignore) = true, (.core.collection) = { ... }</code>
      */
     boolean hasSettings();
     /**
@@ -201,7 +202,7 @@ public final class LocationAccount {
      * Settings for this partner location.
      * </pre>
      *
-     * <code>.bloombox.schema.partner.settings.PartnerLocationSettings settings = 8 [(.gen_bq_schema.ignore) = true, (.core.collection) = { ... }</code>
+     * <code>.bloombox.partner.settings.PartnerLocationSettings settings = 8 [(.gen_bq_schema.ignore) = true, (.core.collection) = { ... }</code>
      */
     io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.PartnerLocationSettings getSettings();
     /**
@@ -209,7 +210,7 @@ public final class LocationAccount {
      * Settings for this partner location.
      * </pre>
      *
-     * <code>.bloombox.schema.partner.settings.PartnerLocationSettings settings = 8 [(.gen_bq_schema.ignore) = true, (.core.collection) = { ... }</code>
+     * <code>.bloombox.partner.settings.PartnerLocationSettings settings = 8 [(.gen_bq_schema.ignore) = true, (.core.collection) = { ... }</code>
      */
     io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.PartnerLocationSettingsOrBuilder getSettingsOrBuilder();
 
@@ -269,11 +270,11 @@ public final class LocationAccount {
    * with Bloombox.
    * </pre>
    *
-   * Protobuf type {@code bloombox.schema.partner.PartnerLocation}
+   * Protobuf type {@code bloombox.partner.PartnerLocation}
    */
   public  static final class PartnerLocation extends
       com.google.protobuf.GeneratedMessageV3 implements
-      // @@protoc_insertion_point(message_implements:bloombox.schema.partner.PartnerLocation)
+      // @@protoc_insertion_point(message_implements:bloombox.partner.PartnerLocation)
       PartnerLocationOrBuilder {
   private static final long serialVersionUID = 0L;
     // Use PartnerLocation.newBuilder() to construct.
@@ -310,13 +311,6 @@ public final class LocationAccount {
             case 0:
               done = true;
               break;
-            default: {
-              if (!parseUnknownFieldProto3(
-                  input, unknownFields, extensionRegistry, tag)) {
-                done = true;
-              }
-              break;
-            }
             case 10: {
               java.lang.String s = input.readStringRequireUtf8();
 
@@ -426,6 +420,13 @@ public final class LocationAccount {
 
               break;
             }
+            default: {
+              if (!parseUnknownFieldProto3(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
           }
         }
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
@@ -440,12 +441,13 @@ public final class LocationAccount {
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return io.bloombox.schema.partner.LocationAccount.internal_static_bloombox_schema_partner_PartnerLocation_descriptor;
+      return io.bloombox.schema.partner.LocationAccount.internal_static_bloombox_partner_PartnerLocation_descriptor;
     }
 
+    @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return io.bloombox.schema.partner.LocationAccount.internal_static_bloombox_schema_partner_PartnerLocation_fieldAccessorTable
+      return io.bloombox.schema.partner.LocationAccount.internal_static_bloombox_partner_PartnerLocation_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
               io.bloombox.schema.partner.LocationAccount.PartnerLocation.class, io.bloombox.schema.partner.LocationAccount.PartnerLocation.Builder.class);
     }
@@ -499,7 +501,7 @@ public final class LocationAccount {
      * Partner record that owns this location.
      * </pre>
      *
-     * <code>.bloombox.schema.partner.PartnerKey partner = 2 [(.gen_bq_schema.ignore) = true];</code>
+     * <code>.bloombox.partner.PartnerKey partner = 2 [(.gen_bq_schema.ignore) = true];</code>
      */
     public boolean hasPartner() {
       return partner_ != null;
@@ -509,7 +511,7 @@ public final class LocationAccount {
      * Partner record that owns this location.
      * </pre>
      *
-     * <code>.bloombox.schema.partner.PartnerKey partner = 2 [(.gen_bq_schema.ignore) = true];</code>
+     * <code>.bloombox.partner.PartnerKey partner = 2 [(.gen_bq_schema.ignore) = true];</code>
      */
     public io.bloombox.schema.partner.PartnerMeta.PartnerKey getPartner() {
       return partner_ == null ? io.bloombox.schema.partner.PartnerMeta.PartnerKey.getDefaultInstance() : partner_;
@@ -519,7 +521,7 @@ public final class LocationAccount {
      * Partner record that owns this location.
      * </pre>
      *
-     * <code>.bloombox.schema.partner.PartnerKey partner = 2 [(.gen_bq_schema.ignore) = true];</code>
+     * <code>.bloombox.partner.PartnerKey partner = 2 [(.gen_bq_schema.ignore) = true];</code>
      */
     public io.bloombox.schema.partner.PartnerMeta.PartnerKeyOrBuilder getPartnerOrBuilder() {
       return getPartner();
@@ -616,7 +618,7 @@ public final class LocationAccount {
      * Flags that specify conditions applied to this partner location.
      * </pre>
      *
-     * <code>.bloombox.schema.partner.PartnerFlags flags = 5 [(.gen_bq_schema.description) = "Flags that specify conditions applied to this partner location.", (.core.field) = { ... }</code>
+     * <code>.bloombox.partner.PartnerFlags flags = 5 [(.gen_bq_schema.description) = "Flags that specify conditions applied to this partner location.", (.core.field) = { ... }</code>
      */
     public boolean hasFlags() {
       return flags_ != null;
@@ -626,7 +628,7 @@ public final class LocationAccount {
      * Flags that specify conditions applied to this partner location.
      * </pre>
      *
-     * <code>.bloombox.schema.partner.PartnerFlags flags = 5 [(.gen_bq_schema.description) = "Flags that specify conditions applied to this partner location.", (.core.field) = { ... }</code>
+     * <code>.bloombox.partner.PartnerFlags flags = 5 [(.gen_bq_schema.description) = "Flags that specify conditions applied to this partner location.", (.core.field) = { ... }</code>
      */
     public io.bloombox.schema.partner.PartnerInfo.PartnerFlags getFlags() {
       return flags_ == null ? io.bloombox.schema.partner.PartnerInfo.PartnerFlags.getDefaultInstance() : flags_;
@@ -636,7 +638,7 @@ public final class LocationAccount {
      * Flags that specify conditions applied to this partner location.
      * </pre>
      *
-     * <code>.bloombox.schema.partner.PartnerFlags flags = 5 [(.gen_bq_schema.description) = "Flags that specify conditions applied to this partner location.", (.core.field) = { ... }</code>
+     * <code>.bloombox.partner.PartnerFlags flags = 5 [(.gen_bq_schema.description) = "Flags that specify conditions applied to this partner location.", (.core.field) = { ... }</code>
      */
     public io.bloombox.schema.partner.PartnerInfo.PartnerFlagsOrBuilder getFlagsOrBuilder() {
       return getFlags();
@@ -715,7 +717,7 @@ public final class LocationAccount {
      * Settings for this partner location.
      * </pre>
      *
-     * <code>.bloombox.schema.partner.settings.PartnerLocationSettings settings = 8 [(.gen_bq_schema.ignore) = true, (.core.collection) = { ... }</code>
+     * <code>.bloombox.partner.settings.PartnerLocationSettings settings = 8 [(.gen_bq_schema.ignore) = true, (.core.collection) = { ... }</code>
      */
     public boolean hasSettings() {
       return settings_ != null;
@@ -725,7 +727,7 @@ public final class LocationAccount {
      * Settings for this partner location.
      * </pre>
      *
-     * <code>.bloombox.schema.partner.settings.PartnerLocationSettings settings = 8 [(.gen_bq_schema.ignore) = true, (.core.collection) = { ... }</code>
+     * <code>.bloombox.partner.settings.PartnerLocationSettings settings = 8 [(.gen_bq_schema.ignore) = true, (.core.collection) = { ... }</code>
      */
     public io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.PartnerLocationSettings getSettings() {
       return settings_ == null ? io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.PartnerLocationSettings.getDefaultInstance() : settings_;
@@ -735,7 +737,7 @@ public final class LocationAccount {
      * Settings for this partner location.
      * </pre>
      *
-     * <code>.bloombox.schema.partner.settings.PartnerLocationSettings settings = 8 [(.gen_bq_schema.ignore) = true, (.core.collection) = { ... }</code>
+     * <code>.bloombox.partner.settings.PartnerLocationSettings settings = 8 [(.gen_bq_schema.ignore) = true, (.core.collection) = { ... }</code>
      */
     public io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.PartnerLocationSettingsOrBuilder getSettingsOrBuilder() {
       return getSettings();
@@ -808,6 +810,7 @@ public final class LocationAccount {
     }
 
     private byte memoizedIsInitialized = -1;
+    @java.lang.Override
     public final boolean isInitialized() {
       byte isInitialized = memoizedIsInitialized;
       if (isInitialized == 1) return true;
@@ -817,6 +820,7 @@ public final class LocationAccount {
       return true;
     }
 
+    @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
       if (!getCodeBytes().isEmpty()) {
@@ -852,6 +856,7 @@ public final class LocationAccount {
       unknownFields.writeTo(output);
     }
 
+    @java.lang.Override
     public int getSerializedSize() {
       int size = memoizedSize;
       if (size != -1) return size;
@@ -1071,6 +1076,7 @@ public final class LocationAccount {
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
 
+    @java.lang.Override
     public Builder newBuilderForType() { return newBuilder(); }
     public static Builder newBuilder() {
       return DEFAULT_INSTANCE.toBuilder();
@@ -1078,6 +1084,7 @@ public final class LocationAccount {
     public static Builder newBuilder(io.bloombox.schema.partner.LocationAccount.PartnerLocation prototype) {
       return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
     }
+    @java.lang.Override
     public Builder toBuilder() {
       return this == DEFAULT_INSTANCE
           ? new Builder() : new Builder().mergeFrom(this);
@@ -1095,20 +1102,21 @@ public final class LocationAccount {
      * with Bloombox.
      * </pre>
      *
-     * Protobuf type {@code bloombox.schema.partner.PartnerLocation}
+     * Protobuf type {@code bloombox.partner.PartnerLocation}
      */
     public static final class Builder extends
         com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:bloombox.schema.partner.PartnerLocation)
+        // @@protoc_insertion_point(builder_implements:bloombox.partner.PartnerLocation)
         io.bloombox.schema.partner.LocationAccount.PartnerLocationOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return io.bloombox.schema.partner.LocationAccount.internal_static_bloombox_schema_partner_PartnerLocation_descriptor;
+        return io.bloombox.schema.partner.LocationAccount.internal_static_bloombox_partner_PartnerLocation_descriptor;
       }
 
+      @java.lang.Override
       protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return io.bloombox.schema.partner.LocationAccount.internal_static_bloombox_schema_partner_PartnerLocation_fieldAccessorTable
+        return io.bloombox.schema.partner.LocationAccount.internal_static_bloombox_partner_PartnerLocation_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
                 io.bloombox.schema.partner.LocationAccount.PartnerLocation.class, io.bloombox.schema.partner.LocationAccount.PartnerLocation.Builder.class);
       }
@@ -1128,6 +1136,7 @@ public final class LocationAccount {
                 .alwaysUseFieldBuilders) {
         }
       }
+      @java.lang.Override
       public Builder clear() {
         super.clear();
         code_ = "";
@@ -1181,15 +1190,18 @@ public final class LocationAccount {
         return this;
       }
 
+      @java.lang.Override
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return io.bloombox.schema.partner.LocationAccount.internal_static_bloombox_schema_partner_PartnerLocation_descriptor;
+        return io.bloombox.schema.partner.LocationAccount.internal_static_bloombox_partner_PartnerLocation_descriptor;
       }
 
+      @java.lang.Override
       public io.bloombox.schema.partner.LocationAccount.PartnerLocation getDefaultInstanceForType() {
         return io.bloombox.schema.partner.LocationAccount.PartnerLocation.getDefaultInstance();
       }
 
+      @java.lang.Override
       public io.bloombox.schema.partner.LocationAccount.PartnerLocation build() {
         io.bloombox.schema.partner.LocationAccount.PartnerLocation result = buildPartial();
         if (!result.isInitialized()) {
@@ -1198,6 +1210,7 @@ public final class LocationAccount {
         return result;
       }
 
+      @java.lang.Override
       public io.bloombox.schema.partner.LocationAccount.PartnerLocation buildPartial() {
         io.bloombox.schema.partner.LocationAccount.PartnerLocation result = new io.bloombox.schema.partner.LocationAccount.PartnerLocation(this);
         result.code_ = code_;
@@ -1242,32 +1255,39 @@ public final class LocationAccount {
         return result;
       }
 
+      @java.lang.Override
       public Builder clone() {
         return (Builder) super.clone();
       }
+      @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
         return (Builder) super.setField(field, value);
       }
+      @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
         return (Builder) super.clearField(field);
       }
+      @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
         return (Builder) super.clearOneof(oneof);
       }
+      @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
         return (Builder) super.setRepeatedField(field, index, value);
       }
+      @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
         return (Builder) super.addRepeatedField(field, value);
       }
+      @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
         if (other instanceof io.bloombox.schema.partner.LocationAccount.PartnerLocation) {
           return mergeFrom((io.bloombox.schema.partner.LocationAccount.PartnerLocation)other);
@@ -1317,10 +1337,12 @@ public final class LocationAccount {
         return this;
       }
 
+      @java.lang.Override
       public final boolean isInitialized() {
         return true;
       }
 
+      @java.lang.Override
       public Builder mergeFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -1436,7 +1458,7 @@ public final class LocationAccount {
        * Partner record that owns this location.
        * </pre>
        *
-       * <code>.bloombox.schema.partner.PartnerKey partner = 2 [(.gen_bq_schema.ignore) = true];</code>
+       * <code>.bloombox.partner.PartnerKey partner = 2 [(.gen_bq_schema.ignore) = true];</code>
        */
       public boolean hasPartner() {
         return partnerBuilder_ != null || partner_ != null;
@@ -1446,7 +1468,7 @@ public final class LocationAccount {
        * Partner record that owns this location.
        * </pre>
        *
-       * <code>.bloombox.schema.partner.PartnerKey partner = 2 [(.gen_bq_schema.ignore) = true];</code>
+       * <code>.bloombox.partner.PartnerKey partner = 2 [(.gen_bq_schema.ignore) = true];</code>
        */
       public io.bloombox.schema.partner.PartnerMeta.PartnerKey getPartner() {
         if (partnerBuilder_ == null) {
@@ -1460,7 +1482,7 @@ public final class LocationAccount {
        * Partner record that owns this location.
        * </pre>
        *
-       * <code>.bloombox.schema.partner.PartnerKey partner = 2 [(.gen_bq_schema.ignore) = true];</code>
+       * <code>.bloombox.partner.PartnerKey partner = 2 [(.gen_bq_schema.ignore) = true];</code>
        */
       public Builder setPartner(io.bloombox.schema.partner.PartnerMeta.PartnerKey value) {
         if (partnerBuilder_ == null) {
@@ -1480,7 +1502,7 @@ public final class LocationAccount {
        * Partner record that owns this location.
        * </pre>
        *
-       * <code>.bloombox.schema.partner.PartnerKey partner = 2 [(.gen_bq_schema.ignore) = true];</code>
+       * <code>.bloombox.partner.PartnerKey partner = 2 [(.gen_bq_schema.ignore) = true];</code>
        */
       public Builder setPartner(
           io.bloombox.schema.partner.PartnerMeta.PartnerKey.Builder builderForValue) {
@@ -1498,7 +1520,7 @@ public final class LocationAccount {
        * Partner record that owns this location.
        * </pre>
        *
-       * <code>.bloombox.schema.partner.PartnerKey partner = 2 [(.gen_bq_schema.ignore) = true];</code>
+       * <code>.bloombox.partner.PartnerKey partner = 2 [(.gen_bq_schema.ignore) = true];</code>
        */
       public Builder mergePartner(io.bloombox.schema.partner.PartnerMeta.PartnerKey value) {
         if (partnerBuilder_ == null) {
@@ -1520,7 +1542,7 @@ public final class LocationAccount {
        * Partner record that owns this location.
        * </pre>
        *
-       * <code>.bloombox.schema.partner.PartnerKey partner = 2 [(.gen_bq_schema.ignore) = true];</code>
+       * <code>.bloombox.partner.PartnerKey partner = 2 [(.gen_bq_schema.ignore) = true];</code>
        */
       public Builder clearPartner() {
         if (partnerBuilder_ == null) {
@@ -1538,7 +1560,7 @@ public final class LocationAccount {
        * Partner record that owns this location.
        * </pre>
        *
-       * <code>.bloombox.schema.partner.PartnerKey partner = 2 [(.gen_bq_schema.ignore) = true];</code>
+       * <code>.bloombox.partner.PartnerKey partner = 2 [(.gen_bq_schema.ignore) = true];</code>
        */
       public io.bloombox.schema.partner.PartnerMeta.PartnerKey.Builder getPartnerBuilder() {
         
@@ -1550,7 +1572,7 @@ public final class LocationAccount {
        * Partner record that owns this location.
        * </pre>
        *
-       * <code>.bloombox.schema.partner.PartnerKey partner = 2 [(.gen_bq_schema.ignore) = true];</code>
+       * <code>.bloombox.partner.PartnerKey partner = 2 [(.gen_bq_schema.ignore) = true];</code>
        */
       public io.bloombox.schema.partner.PartnerMeta.PartnerKeyOrBuilder getPartnerOrBuilder() {
         if (partnerBuilder_ != null) {
@@ -1565,7 +1587,7 @@ public final class LocationAccount {
        * Partner record that owns this location.
        * </pre>
        *
-       * <code>.bloombox.schema.partner.PartnerKey partner = 2 [(.gen_bq_schema.ignore) = true];</code>
+       * <code>.bloombox.partner.PartnerKey partner = 2 [(.gen_bq_schema.ignore) = true];</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
           io.bloombox.schema.partner.PartnerMeta.PartnerKey, io.bloombox.schema.partner.PartnerMeta.PartnerKey.Builder, io.bloombox.schema.partner.PartnerMeta.PartnerKeyOrBuilder> 
@@ -1767,7 +1789,7 @@ public final class LocationAccount {
        * Flags that specify conditions applied to this partner location.
        * </pre>
        *
-       * <code>.bloombox.schema.partner.PartnerFlags flags = 5 [(.gen_bq_schema.description) = "Flags that specify conditions applied to this partner location.", (.core.field) = { ... }</code>
+       * <code>.bloombox.partner.PartnerFlags flags = 5 [(.gen_bq_schema.description) = "Flags that specify conditions applied to this partner location.", (.core.field) = { ... }</code>
        */
       public boolean hasFlags() {
         return flagsBuilder_ != null || flags_ != null;
@@ -1777,7 +1799,7 @@ public final class LocationAccount {
        * Flags that specify conditions applied to this partner location.
        * </pre>
        *
-       * <code>.bloombox.schema.partner.PartnerFlags flags = 5 [(.gen_bq_schema.description) = "Flags that specify conditions applied to this partner location.", (.core.field) = { ... }</code>
+       * <code>.bloombox.partner.PartnerFlags flags = 5 [(.gen_bq_schema.description) = "Flags that specify conditions applied to this partner location.", (.core.field) = { ... }</code>
        */
       public io.bloombox.schema.partner.PartnerInfo.PartnerFlags getFlags() {
         if (flagsBuilder_ == null) {
@@ -1791,7 +1813,7 @@ public final class LocationAccount {
        * Flags that specify conditions applied to this partner location.
        * </pre>
        *
-       * <code>.bloombox.schema.partner.PartnerFlags flags = 5 [(.gen_bq_schema.description) = "Flags that specify conditions applied to this partner location.", (.core.field) = { ... }</code>
+       * <code>.bloombox.partner.PartnerFlags flags = 5 [(.gen_bq_schema.description) = "Flags that specify conditions applied to this partner location.", (.core.field) = { ... }</code>
        */
       public Builder setFlags(io.bloombox.schema.partner.PartnerInfo.PartnerFlags value) {
         if (flagsBuilder_ == null) {
@@ -1811,7 +1833,7 @@ public final class LocationAccount {
        * Flags that specify conditions applied to this partner location.
        * </pre>
        *
-       * <code>.bloombox.schema.partner.PartnerFlags flags = 5 [(.gen_bq_schema.description) = "Flags that specify conditions applied to this partner location.", (.core.field) = { ... }</code>
+       * <code>.bloombox.partner.PartnerFlags flags = 5 [(.gen_bq_schema.description) = "Flags that specify conditions applied to this partner location.", (.core.field) = { ... }</code>
        */
       public Builder setFlags(
           io.bloombox.schema.partner.PartnerInfo.PartnerFlags.Builder builderForValue) {
@@ -1829,7 +1851,7 @@ public final class LocationAccount {
        * Flags that specify conditions applied to this partner location.
        * </pre>
        *
-       * <code>.bloombox.schema.partner.PartnerFlags flags = 5 [(.gen_bq_schema.description) = "Flags that specify conditions applied to this partner location.", (.core.field) = { ... }</code>
+       * <code>.bloombox.partner.PartnerFlags flags = 5 [(.gen_bq_schema.description) = "Flags that specify conditions applied to this partner location.", (.core.field) = { ... }</code>
        */
       public Builder mergeFlags(io.bloombox.schema.partner.PartnerInfo.PartnerFlags value) {
         if (flagsBuilder_ == null) {
@@ -1851,7 +1873,7 @@ public final class LocationAccount {
        * Flags that specify conditions applied to this partner location.
        * </pre>
        *
-       * <code>.bloombox.schema.partner.PartnerFlags flags = 5 [(.gen_bq_schema.description) = "Flags that specify conditions applied to this partner location.", (.core.field) = { ... }</code>
+       * <code>.bloombox.partner.PartnerFlags flags = 5 [(.gen_bq_schema.description) = "Flags that specify conditions applied to this partner location.", (.core.field) = { ... }</code>
        */
       public Builder clearFlags() {
         if (flagsBuilder_ == null) {
@@ -1869,7 +1891,7 @@ public final class LocationAccount {
        * Flags that specify conditions applied to this partner location.
        * </pre>
        *
-       * <code>.bloombox.schema.partner.PartnerFlags flags = 5 [(.gen_bq_schema.description) = "Flags that specify conditions applied to this partner location.", (.core.field) = { ... }</code>
+       * <code>.bloombox.partner.PartnerFlags flags = 5 [(.gen_bq_schema.description) = "Flags that specify conditions applied to this partner location.", (.core.field) = { ... }</code>
        */
       public io.bloombox.schema.partner.PartnerInfo.PartnerFlags.Builder getFlagsBuilder() {
         
@@ -1881,7 +1903,7 @@ public final class LocationAccount {
        * Flags that specify conditions applied to this partner location.
        * </pre>
        *
-       * <code>.bloombox.schema.partner.PartnerFlags flags = 5 [(.gen_bq_schema.description) = "Flags that specify conditions applied to this partner location.", (.core.field) = { ... }</code>
+       * <code>.bloombox.partner.PartnerFlags flags = 5 [(.gen_bq_schema.description) = "Flags that specify conditions applied to this partner location.", (.core.field) = { ... }</code>
        */
       public io.bloombox.schema.partner.PartnerInfo.PartnerFlagsOrBuilder getFlagsOrBuilder() {
         if (flagsBuilder_ != null) {
@@ -1896,7 +1918,7 @@ public final class LocationAccount {
        * Flags that specify conditions applied to this partner location.
        * </pre>
        *
-       * <code>.bloombox.schema.partner.PartnerFlags flags = 5 [(.gen_bq_schema.description) = "Flags that specify conditions applied to this partner location.", (.core.field) = { ... }</code>
+       * <code>.bloombox.partner.PartnerFlags flags = 5 [(.gen_bq_schema.description) = "Flags that specify conditions applied to this partner location.", (.core.field) = { ... }</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
           io.bloombox.schema.partner.PartnerInfo.PartnerFlags, io.bloombox.schema.partner.PartnerInfo.PartnerFlags.Builder, io.bloombox.schema.partner.PartnerInfo.PartnerFlagsOrBuilder> 
@@ -2226,7 +2248,7 @@ public final class LocationAccount {
        * Settings for this partner location.
        * </pre>
        *
-       * <code>.bloombox.schema.partner.settings.PartnerLocationSettings settings = 8 [(.gen_bq_schema.ignore) = true, (.core.collection) = { ... }</code>
+       * <code>.bloombox.partner.settings.PartnerLocationSettings settings = 8 [(.gen_bq_schema.ignore) = true, (.core.collection) = { ... }</code>
        */
       public boolean hasSettings() {
         return settingsBuilder_ != null || settings_ != null;
@@ -2236,7 +2258,7 @@ public final class LocationAccount {
        * Settings for this partner location.
        * </pre>
        *
-       * <code>.bloombox.schema.partner.settings.PartnerLocationSettings settings = 8 [(.gen_bq_schema.ignore) = true, (.core.collection) = { ... }</code>
+       * <code>.bloombox.partner.settings.PartnerLocationSettings settings = 8 [(.gen_bq_schema.ignore) = true, (.core.collection) = { ... }</code>
        */
       public io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.PartnerLocationSettings getSettings() {
         if (settingsBuilder_ == null) {
@@ -2250,7 +2272,7 @@ public final class LocationAccount {
        * Settings for this partner location.
        * </pre>
        *
-       * <code>.bloombox.schema.partner.settings.PartnerLocationSettings settings = 8 [(.gen_bq_schema.ignore) = true, (.core.collection) = { ... }</code>
+       * <code>.bloombox.partner.settings.PartnerLocationSettings settings = 8 [(.gen_bq_schema.ignore) = true, (.core.collection) = { ... }</code>
        */
       public Builder setSettings(io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.PartnerLocationSettings value) {
         if (settingsBuilder_ == null) {
@@ -2270,7 +2292,7 @@ public final class LocationAccount {
        * Settings for this partner location.
        * </pre>
        *
-       * <code>.bloombox.schema.partner.settings.PartnerLocationSettings settings = 8 [(.gen_bq_schema.ignore) = true, (.core.collection) = { ... }</code>
+       * <code>.bloombox.partner.settings.PartnerLocationSettings settings = 8 [(.gen_bq_schema.ignore) = true, (.core.collection) = { ... }</code>
        */
       public Builder setSettings(
           io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.PartnerLocationSettings.Builder builderForValue) {
@@ -2288,7 +2310,7 @@ public final class LocationAccount {
        * Settings for this partner location.
        * </pre>
        *
-       * <code>.bloombox.schema.partner.settings.PartnerLocationSettings settings = 8 [(.gen_bq_schema.ignore) = true, (.core.collection) = { ... }</code>
+       * <code>.bloombox.partner.settings.PartnerLocationSettings settings = 8 [(.gen_bq_schema.ignore) = true, (.core.collection) = { ... }</code>
        */
       public Builder mergeSettings(io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.PartnerLocationSettings value) {
         if (settingsBuilder_ == null) {
@@ -2310,7 +2332,7 @@ public final class LocationAccount {
        * Settings for this partner location.
        * </pre>
        *
-       * <code>.bloombox.schema.partner.settings.PartnerLocationSettings settings = 8 [(.gen_bq_schema.ignore) = true, (.core.collection) = { ... }</code>
+       * <code>.bloombox.partner.settings.PartnerLocationSettings settings = 8 [(.gen_bq_schema.ignore) = true, (.core.collection) = { ... }</code>
        */
       public Builder clearSettings() {
         if (settingsBuilder_ == null) {
@@ -2328,7 +2350,7 @@ public final class LocationAccount {
        * Settings for this partner location.
        * </pre>
        *
-       * <code>.bloombox.schema.partner.settings.PartnerLocationSettings settings = 8 [(.gen_bq_schema.ignore) = true, (.core.collection) = { ... }</code>
+       * <code>.bloombox.partner.settings.PartnerLocationSettings settings = 8 [(.gen_bq_schema.ignore) = true, (.core.collection) = { ... }</code>
        */
       public io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.PartnerLocationSettings.Builder getSettingsBuilder() {
         
@@ -2340,7 +2362,7 @@ public final class LocationAccount {
        * Settings for this partner location.
        * </pre>
        *
-       * <code>.bloombox.schema.partner.settings.PartnerLocationSettings settings = 8 [(.gen_bq_schema.ignore) = true, (.core.collection) = { ... }</code>
+       * <code>.bloombox.partner.settings.PartnerLocationSettings settings = 8 [(.gen_bq_schema.ignore) = true, (.core.collection) = { ... }</code>
        */
       public io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.PartnerLocationSettingsOrBuilder getSettingsOrBuilder() {
         if (settingsBuilder_ != null) {
@@ -2355,7 +2377,7 @@ public final class LocationAccount {
        * Settings for this partner location.
        * </pre>
        *
-       * <code>.bloombox.schema.partner.settings.PartnerLocationSettings settings = 8 [(.gen_bq_schema.ignore) = true, (.core.collection) = { ... }</code>
+       * <code>.bloombox.partner.settings.PartnerLocationSettings settings = 8 [(.gen_bq_schema.ignore) = true, (.core.collection) = { ... }</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
           io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.PartnerLocationSettings, io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.PartnerLocationSettings.Builder, io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.PartnerLocationSettingsOrBuilder> 
@@ -2676,21 +2698,23 @@ public final class LocationAccount {
         }
         return modifiedBuilder_;
       }
+      @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
         return super.setUnknownFieldsProto3(unknownFields);
       }
 
+      @java.lang.Override
       public final Builder mergeUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
         return super.mergeUnknownFields(unknownFields);
       }
 
 
-      // @@protoc_insertion_point(builder_scope:bloombox.schema.partner.PartnerLocation)
+      // @@protoc_insertion_point(builder_scope:bloombox.partner.PartnerLocation)
     }
 
-    // @@protoc_insertion_point(class_scope:bloombox.schema.partner.PartnerLocation)
+    // @@protoc_insertion_point(class_scope:bloombox.partner.PartnerLocation)
     private static final io.bloombox.schema.partner.LocationAccount.PartnerLocation DEFAULT_INSTANCE;
     static {
       DEFAULT_INSTANCE = new io.bloombox.schema.partner.LocationAccount.PartnerLocation();
@@ -2702,6 +2726,7 @@ public final class LocationAccount {
 
     private static final com.google.protobuf.Parser<PartnerLocation>
         PARSER = new com.google.protobuf.AbstractParser<PartnerLocation>() {
+      @java.lang.Override
       public PartnerLocation parsePartialFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -2719,6 +2744,7 @@ public final class LocationAccount {
       return PARSER;
     }
 
+    @java.lang.Override
     public io.bloombox.schema.partner.LocationAccount.PartnerLocation getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
@@ -2726,10 +2752,10 @@ public final class LocationAccount {
   }
 
   private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_bloombox_schema_partner_PartnerLocation_descriptor;
+    internal_static_bloombox_partner_PartnerLocation_descriptor;
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_bloombox_schema_partner_PartnerLocation_fieldAccessorTable;
+      internal_static_bloombox_partner_PartnerLocation_fieldAccessorTable;
 
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
@@ -2739,41 +2765,41 @@ public final class LocationAccount {
       descriptor;
   static {
     java.lang.String[] descriptorData = {
-      "\n\035partner/PartnerLocation.proto\022\027bloombo" +
-      "x.schema.partner\032\016bq_field.proto\032\024core/D" +
-      "atamodel.proto\032\024media/MediaKey.proto\032\026te" +
-      "mporal/Instant.proto\032\031contact/ContactInf" +
-      "o.proto\032\030partner/PartnerKey.proto\032\032partn" +
-      "er/PartnerFlags.proto\032.partner/settings/" +
-      "PartnerLocationSettings.proto\"\241\010\n\017Partne" +
-      "rLocation\022m\n\004code\030\001 \001(\tB_\302\265\003\002\010\002\212@VShort," +
-      " unique string that identifies this loca" +
-      "tion, scoped to the parent organization." +
-      "\0229\n\007partner\030\002 \001(\0132#.bloombox.schema.part" +
-      "ner.PartnerKeyB\003\200@\001\022G\n\004name\030\003 \001(\tB9\212@6Na" +
-      "me of this location, in human-readable v" +
-      "erbose form.\022u\n\005label\030\004 \001(\tBf\212@cLabel fo" +
-      "r this location in the administrative da" +
-      "shboard. If this is not specified, `name" +
-      "` is shown.\022~\n\005flags\030\005 \001(\0132%.bloombox.sc" +
-      "hema.partner.PartnerFlagsBH\302\265\003\002\010\004\212@?Flag" +
-      "s that specify conditions applied to thi" +
-      "s partner location.\022]\n\007contact\030\007 \001(\0132!.o" +
-      "pencannabis.contact.ContactInfoB)\212@&Cont" +
-      "act information for this location.\022\222\001\n\010b" +
-      "randing\030\006 \001(\0132\034.opencannabis.media.Media" +
-      "KeyBb\212@_Branding specific to this locati" +
-      "on. Partner-level branding is used if th" +
-      "is is left unspecified.\022T\n\010settings\030\010 \001(" +
-      "\01329.bloombox.schema.partner.settings.Par" +
-      "tnerLocationSettingsB\007\200@\001\322\265\003\000\022_\n\007created" +
-      "\030d \001(\0132\036.opencannabis.temporal.InstantB." +
-      "\212@+Timestamp for when this record was cr" +
-      "eated.\022f\n\010modified\030e \001(\0132\036.opencannabis." +
-      "temporal.InstantB4\212@1Timestamp for when " +
-      "this record was last modified.:\021\202\367\002\r\010\001\022\t" +
-      "locationsB7\n\032io.bloombox.schema.partnerB" +
-      "\017LocationAccountH\001P\000\242\002\003BBSb\006proto3"
+      "\n\035partner/PartnerLocation.proto\022\020bloombo" +
+      "x.partner\032\016bq_field.proto\032\024core/Datamode" +
+      "l.proto\032\024media/MediaKey.proto\032\026temporal/" +
+      "Instant.proto\032\031contact/ContactInfo.proto" +
+      "\032\030partner/PartnerKey.proto\032\032partner/Part" +
+      "nerFlags.proto\032.partner/settings/Partner" +
+      "LocationSettings.proto\"\214\010\n\017PartnerLocati" +
+      "on\022m\n\004code\030\001 \001(\tB_\302\265\003\002\010\002\212@VShort, unique" +
+      " string that identifies this location, s" +
+      "coped to the parent organization.\0222\n\007par" +
+      "tner\030\002 \001(\0132\034.bloombox.partner.PartnerKey" +
+      "B\003\200@\001\022G\n\004name\030\003 \001(\tB9\212@6Name of this loc" +
+      "ation, in human-readable verbose form.\022u" +
+      "\n\005label\030\004 \001(\tBf\212@cLabel for this locatio" +
+      "n in the administrative dashboard. If th" +
+      "is is not specified, `name` is shown.\022w\n" +
+      "\005flags\030\005 \001(\0132\036.bloombox.partner.PartnerF" +
+      "lagsBH\302\265\003\002\010\004\212@?Flags that specify condit" +
+      "ions applied to this partner location.\022]" +
+      "\n\007contact\030\007 \001(\0132!.opencannabis.contact.C" +
+      "ontactInfoB)\212@&Contact information for t" +
+      "his location.\022\222\001\n\010branding\030\006 \001(\0132\034.openc" +
+      "annabis.media.MediaKeyBb\212@_Branding spec" +
+      "ific to this location. Partner-level bra" +
+      "nding is used if this is left unspecifie" +
+      "d.\022M\n\010settings\030\010 \001(\01322.bloombox.partner." +
+      "settings.PartnerLocationSettingsB\007\200@\001\322\265\003" +
+      "\000\022_\n\007created\030d \001(\0132\036.opencannabis.tempor" +
+      "al.InstantB.\212@+Timestamp for when this r" +
+      "ecord was created.\022f\n\010modified\030e \001(\0132\036.o" +
+      "pencannabis.temporal.InstantB4\212@1Timesta" +
+      "mp for when this record was last modifie" +
+      "d.:\021\202\367\002\r\010\001\022\tlocationsB7\n\032io.bloombox.sch" +
+      "ema.partnerB\017LocationAccountH\001P\000\242\002\003BBSb\006" +
+      "proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -2795,11 +2821,11 @@ public final class LocationAccount {
           io.bloombox.schema.partner.PartnerInfo.getDescriptor(),
           io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.getDescriptor(),
         }, assigner);
-    internal_static_bloombox_schema_partner_PartnerLocation_descriptor =
+    internal_static_bloombox_partner_PartnerLocation_descriptor =
       getDescriptor().getMessageTypes().get(0);
-    internal_static_bloombox_schema_partner_PartnerLocation_fieldAccessorTable = new
+    internal_static_bloombox_partner_PartnerLocation_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_bloombox_schema_partner_PartnerLocation_descriptor,
+        internal_static_bloombox_partner_PartnerLocation_descriptor,
         new java.lang.String[] { "Code", "Partner", "Name", "Label", "Flags", "Contact", "Branding", "Settings", "Created", "Modified", });
     com.google.protobuf.ExtensionRegistry registry =
         com.google.protobuf.ExtensionRegistry.newInstance();

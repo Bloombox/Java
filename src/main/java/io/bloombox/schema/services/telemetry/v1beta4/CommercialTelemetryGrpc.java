@@ -1,8 +1,8 @@
 /*
- * Copyright 2018, Bloombox, LLC. All rights reserved.
+ * Copyright 2018, Momentum Ideas, Co. All rights reserved.
  *
  * Source and object computer code contained herein is the private intellectual
- * property of Bloombox, a California Limited Liability Corporation. Use of this
+ * property of Momentum Ideas Co., a Delaware Corporation. Use of this
  * code in source form requires permission in writing before use or the
  * assembly, distribution, or publishing of derivative works, for commercial
  * purposes or any other purpose, from a duly authorized officer of Momentum
@@ -17,20 +17,20 @@
 
 package io.bloombox.schema.services.telemetry.v1beta4;
 
-import static io.grpc.stub.ClientCalls.asyncUnaryCall;
-import static io.grpc.stub.ClientCalls.asyncServerStreamingCall;
-import static io.grpc.stub.ClientCalls.asyncClientStreamingCall;
-import static io.grpc.stub.ClientCalls.asyncBidiStreamingCall;
-import static io.grpc.stub.ClientCalls.blockingUnaryCall;
-import static io.grpc.stub.ClientCalls.blockingServerStreamingCall;
-import static io.grpc.stub.ClientCalls.futureUnaryCall;
 import static io.grpc.MethodDescriptor.generateFullMethodName;
-import static io.grpc.stub.ServerCalls.asyncUnaryCall;
-import static io.grpc.stub.ServerCalls.asyncServerStreamingCall;
-import static io.grpc.stub.ServerCalls.asyncClientStreamingCall;
+import static io.grpc.stub.ClientCalls.asyncBidiStreamingCall;
+import static io.grpc.stub.ClientCalls.asyncClientStreamingCall;
+import static io.grpc.stub.ClientCalls.asyncServerStreamingCall;
+import static io.grpc.stub.ClientCalls.asyncUnaryCall;
+import static io.grpc.stub.ClientCalls.blockingServerStreamingCall;
+import static io.grpc.stub.ClientCalls.blockingUnaryCall;
+import static io.grpc.stub.ClientCalls.futureUnaryCall;
 import static io.grpc.stub.ServerCalls.asyncBidiStreamingCall;
-import static io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall;
+import static io.grpc.stub.ServerCalls.asyncClientStreamingCall;
+import static io.grpc.stub.ServerCalls.asyncServerStreamingCall;
+import static io.grpc.stub.ServerCalls.asyncUnaryCall;
 import static io.grpc.stub.ServerCalls.asyncUnimplementedStreamingCall;
+import static io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall;
 
 /**
  * <pre>
@@ -39,51 +39,110 @@ import static io.grpc.stub.ServerCalls.asyncUnimplementedStreamingCall;
  * </pre>
  */
 @javax.annotation.Generated(
-    value = "by gRPC proto compiler (version 1.6.0-SNAPSHOT)",
+    value = "by gRPC proto compiler (version 1.18.0-SNAPSHOT)",
     comments = "Source: telemetry/v1beta4/TelemetryService_Beta4.proto")
 public final class CommercialTelemetryGrpc {
 
   private CommercialTelemetryGrpc() {}
 
-  public static final String SERVICE_NAME = "bloombox.schema.services.telemetry.v1beta4.CommercialTelemetry";
+  public static final String SERVICE_NAME = "bloombox.services.telemetry.v1beta4.CommercialTelemetry";
 
   // Static method descriptors that strictly reflect the proto.
-  @io.grpc.ExperimentalApi("https://github.com/grpc/grpc-java/issues/1901")
-  public static final io.grpc.MethodDescriptor<io.bloombox.schema.services.telemetry.v1beta4.CommercialEvent.Impression,
-      com.google.protobuf.Empty> METHOD_IMPRESSION =
-      io.grpc.MethodDescriptor.<io.bloombox.schema.services.telemetry.v1beta4.CommercialEvent.Impression, com.google.protobuf.Empty>newBuilder()
-          .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-          .setFullMethodName(generateFullMethodName(
-              "bloombox.schema.services.telemetry.v1beta4.CommercialTelemetry", "Impression"))
-          .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-              io.bloombox.schema.services.telemetry.v1beta4.CommercialEvent.Impression.getDefaultInstance()))
-          .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-              com.google.protobuf.Empty.getDefaultInstance()))
-          .build();
-  @io.grpc.ExperimentalApi("https://github.com/grpc/grpc-java/issues/1901")
-  public static final io.grpc.MethodDescriptor<io.bloombox.schema.services.telemetry.v1beta4.CommercialEvent.View,
-      com.google.protobuf.Empty> METHOD_VIEW =
-      io.grpc.MethodDescriptor.<io.bloombox.schema.services.telemetry.v1beta4.CommercialEvent.View, com.google.protobuf.Empty>newBuilder()
-          .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-          .setFullMethodName(generateFullMethodName(
-              "bloombox.schema.services.telemetry.v1beta4.CommercialTelemetry", "View"))
-          .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-              io.bloombox.schema.services.telemetry.v1beta4.CommercialEvent.View.getDefaultInstance()))
-          .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-              com.google.protobuf.Empty.getDefaultInstance()))
-          .build();
-  @io.grpc.ExperimentalApi("https://github.com/grpc/grpc-java/issues/1901")
-  public static final io.grpc.MethodDescriptor<io.bloombox.schema.services.telemetry.v1beta4.CommercialEvent.Action,
-      com.google.protobuf.Empty> METHOD_ACTION =
-      io.grpc.MethodDescriptor.<io.bloombox.schema.services.telemetry.v1beta4.CommercialEvent.Action, com.google.protobuf.Empty>newBuilder()
-          .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-          .setFullMethodName(generateFullMethodName(
-              "bloombox.schema.services.telemetry.v1beta4.CommercialTelemetry", "Action"))
-          .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-              io.bloombox.schema.services.telemetry.v1beta4.CommercialEvent.Action.getDefaultInstance()))
-          .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-              com.google.protobuf.Empty.getDefaultInstance()))
-          .build();
+  private static volatile io.grpc.MethodDescriptor<io.bloombox.schema.services.telemetry.v1beta4.CommercialEvent.Impression,
+      com.google.protobuf.Empty> getImpressionMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "Impression",
+      requestType = io.bloombox.schema.services.telemetry.v1beta4.CommercialEvent.Impression.class,
+      responseType = com.google.protobuf.Empty.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<io.bloombox.schema.services.telemetry.v1beta4.CommercialEvent.Impression,
+      com.google.protobuf.Empty> getImpressionMethod() {
+    io.grpc.MethodDescriptor<io.bloombox.schema.services.telemetry.v1beta4.CommercialEvent.Impression, com.google.protobuf.Empty> getImpressionMethod;
+    if ((getImpressionMethod = CommercialTelemetryGrpc.getImpressionMethod) == null) {
+      synchronized (CommercialTelemetryGrpc.class) {
+        if ((getImpressionMethod = CommercialTelemetryGrpc.getImpressionMethod) == null) {
+          CommercialTelemetryGrpc.getImpressionMethod = getImpressionMethod = 
+              io.grpc.MethodDescriptor.<io.bloombox.schema.services.telemetry.v1beta4.CommercialEvent.Impression, com.google.protobuf.Empty>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(
+                  "bloombox.services.telemetry.v1beta4.CommercialTelemetry", "Impression"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  io.bloombox.schema.services.telemetry.v1beta4.CommercialEvent.Impression.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.google.protobuf.Empty.getDefaultInstance()))
+                  .setSchemaDescriptor(new CommercialTelemetryMethodDescriptorSupplier("Impression"))
+                  .build();
+          }
+        }
+     }
+     return getImpressionMethod;
+  }
+
+  private static volatile io.grpc.MethodDescriptor<io.bloombox.schema.services.telemetry.v1beta4.CommercialEvent.View,
+      com.google.protobuf.Empty> getViewMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "View",
+      requestType = io.bloombox.schema.services.telemetry.v1beta4.CommercialEvent.View.class,
+      responseType = com.google.protobuf.Empty.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<io.bloombox.schema.services.telemetry.v1beta4.CommercialEvent.View,
+      com.google.protobuf.Empty> getViewMethod() {
+    io.grpc.MethodDescriptor<io.bloombox.schema.services.telemetry.v1beta4.CommercialEvent.View, com.google.protobuf.Empty> getViewMethod;
+    if ((getViewMethod = CommercialTelemetryGrpc.getViewMethod) == null) {
+      synchronized (CommercialTelemetryGrpc.class) {
+        if ((getViewMethod = CommercialTelemetryGrpc.getViewMethod) == null) {
+          CommercialTelemetryGrpc.getViewMethod = getViewMethod = 
+              io.grpc.MethodDescriptor.<io.bloombox.schema.services.telemetry.v1beta4.CommercialEvent.View, com.google.protobuf.Empty>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(
+                  "bloombox.services.telemetry.v1beta4.CommercialTelemetry", "View"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  io.bloombox.schema.services.telemetry.v1beta4.CommercialEvent.View.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.google.protobuf.Empty.getDefaultInstance()))
+                  .setSchemaDescriptor(new CommercialTelemetryMethodDescriptorSupplier("View"))
+                  .build();
+          }
+        }
+     }
+     return getViewMethod;
+  }
+
+  private static volatile io.grpc.MethodDescriptor<io.bloombox.schema.services.telemetry.v1beta4.CommercialEvent.Action,
+      com.google.protobuf.Empty> getActionMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "Action",
+      requestType = io.bloombox.schema.services.telemetry.v1beta4.CommercialEvent.Action.class,
+      responseType = com.google.protobuf.Empty.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<io.bloombox.schema.services.telemetry.v1beta4.CommercialEvent.Action,
+      com.google.protobuf.Empty> getActionMethod() {
+    io.grpc.MethodDescriptor<io.bloombox.schema.services.telemetry.v1beta4.CommercialEvent.Action, com.google.protobuf.Empty> getActionMethod;
+    if ((getActionMethod = CommercialTelemetryGrpc.getActionMethod) == null) {
+      synchronized (CommercialTelemetryGrpc.class) {
+        if ((getActionMethod = CommercialTelemetryGrpc.getActionMethod) == null) {
+          CommercialTelemetryGrpc.getActionMethod = getActionMethod = 
+              io.grpc.MethodDescriptor.<io.bloombox.schema.services.telemetry.v1beta4.CommercialEvent.Action, com.google.protobuf.Empty>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(
+                  "bloombox.services.telemetry.v1beta4.CommercialTelemetry", "Action"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  io.bloombox.schema.services.telemetry.v1beta4.CommercialEvent.Action.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.google.protobuf.Empty.getDefaultInstance()))
+                  .setSchemaDescriptor(new CommercialTelemetryMethodDescriptorSupplier("Action"))
+                  .build();
+          }
+        }
+     }
+     return getActionMethod;
+  }
 
   /**
    * Creates a new async stub that supports all call types for the service
@@ -123,7 +182,7 @@ public final class CommercialTelemetryGrpc {
      */
     public void impression(io.bloombox.schema.services.telemetry.v1beta4.CommercialEvent.Impression request,
         io.grpc.stub.StreamObserver<com.google.protobuf.Empty> responseObserver) {
-      asyncUnimplementedUnaryCall(METHOD_IMPRESSION, responseObserver);
+      asyncUnimplementedUnaryCall(getImpressionMethod(), responseObserver);
     }
 
     /**
@@ -133,7 +192,7 @@ public final class CommercialTelemetryGrpc {
      */
     public void view(io.bloombox.schema.services.telemetry.v1beta4.CommercialEvent.View request,
         io.grpc.stub.StreamObserver<com.google.protobuf.Empty> responseObserver) {
-      asyncUnimplementedUnaryCall(METHOD_VIEW, responseObserver);
+      asyncUnimplementedUnaryCall(getViewMethod(), responseObserver);
     }
 
     /**
@@ -143,27 +202,27 @@ public final class CommercialTelemetryGrpc {
      */
     public void action(io.bloombox.schema.services.telemetry.v1beta4.CommercialEvent.Action request,
         io.grpc.stub.StreamObserver<com.google.protobuf.Empty> responseObserver) {
-      asyncUnimplementedUnaryCall(METHOD_ACTION, responseObserver);
+      asyncUnimplementedUnaryCall(getActionMethod(), responseObserver);
     }
 
     @java.lang.Override public final io.grpc.ServerServiceDefinition bindService() {
       return io.grpc.ServerServiceDefinition.builder(getServiceDescriptor())
           .addMethod(
-            METHOD_IMPRESSION,
+            getImpressionMethod(),
             asyncUnaryCall(
               new MethodHandlers<
                 io.bloombox.schema.services.telemetry.v1beta4.CommercialEvent.Impression,
                 com.google.protobuf.Empty>(
                   this, METHODID_IMPRESSION)))
           .addMethod(
-            METHOD_VIEW,
+            getViewMethod(),
             asyncUnaryCall(
               new MethodHandlers<
                 io.bloombox.schema.services.telemetry.v1beta4.CommercialEvent.View,
                 com.google.protobuf.Empty>(
                   this, METHODID_VIEW)))
           .addMethod(
-            METHOD_ACTION,
+            getActionMethod(),
             asyncUnaryCall(
               new MethodHandlers<
                 io.bloombox.schema.services.telemetry.v1beta4.CommercialEvent.Action,
@@ -203,7 +262,7 @@ public final class CommercialTelemetryGrpc {
     public void impression(io.bloombox.schema.services.telemetry.v1beta4.CommercialEvent.Impression request,
         io.grpc.stub.StreamObserver<com.google.protobuf.Empty> responseObserver) {
       asyncUnaryCall(
-          getChannel().newCall(METHOD_IMPRESSION, getCallOptions()), request, responseObserver);
+          getChannel().newCall(getImpressionMethod(), getCallOptions()), request, responseObserver);
     }
 
     /**
@@ -214,7 +273,7 @@ public final class CommercialTelemetryGrpc {
     public void view(io.bloombox.schema.services.telemetry.v1beta4.CommercialEvent.View request,
         io.grpc.stub.StreamObserver<com.google.protobuf.Empty> responseObserver) {
       asyncUnaryCall(
-          getChannel().newCall(METHOD_VIEW, getCallOptions()), request, responseObserver);
+          getChannel().newCall(getViewMethod(), getCallOptions()), request, responseObserver);
     }
 
     /**
@@ -225,7 +284,7 @@ public final class CommercialTelemetryGrpc {
     public void action(io.bloombox.schema.services.telemetry.v1beta4.CommercialEvent.Action request,
         io.grpc.stub.StreamObserver<com.google.protobuf.Empty> responseObserver) {
       asyncUnaryCall(
-          getChannel().newCall(METHOD_ACTION, getCallOptions()), request, responseObserver);
+          getChannel().newCall(getActionMethod(), getCallOptions()), request, responseObserver);
     }
   }
 
@@ -258,7 +317,7 @@ public final class CommercialTelemetryGrpc {
      */
     public com.google.protobuf.Empty impression(io.bloombox.schema.services.telemetry.v1beta4.CommercialEvent.Impression request) {
       return blockingUnaryCall(
-          getChannel(), METHOD_IMPRESSION, getCallOptions(), request);
+          getChannel(), getImpressionMethod(), getCallOptions(), request);
     }
 
     /**
@@ -268,7 +327,7 @@ public final class CommercialTelemetryGrpc {
      */
     public com.google.protobuf.Empty view(io.bloombox.schema.services.telemetry.v1beta4.CommercialEvent.View request) {
       return blockingUnaryCall(
-          getChannel(), METHOD_VIEW, getCallOptions(), request);
+          getChannel(), getViewMethod(), getCallOptions(), request);
     }
 
     /**
@@ -278,7 +337,7 @@ public final class CommercialTelemetryGrpc {
      */
     public com.google.protobuf.Empty action(io.bloombox.schema.services.telemetry.v1beta4.CommercialEvent.Action request) {
       return blockingUnaryCall(
-          getChannel(), METHOD_ACTION, getCallOptions(), request);
+          getChannel(), getActionMethod(), getCallOptions(), request);
     }
   }
 
@@ -312,7 +371,7 @@ public final class CommercialTelemetryGrpc {
     public com.google.common.util.concurrent.ListenableFuture<com.google.protobuf.Empty> impression(
         io.bloombox.schema.services.telemetry.v1beta4.CommercialEvent.Impression request) {
       return futureUnaryCall(
-          getChannel().newCall(METHOD_IMPRESSION, getCallOptions()), request);
+          getChannel().newCall(getImpressionMethod(), getCallOptions()), request);
     }
 
     /**
@@ -323,7 +382,7 @@ public final class CommercialTelemetryGrpc {
     public com.google.common.util.concurrent.ListenableFuture<com.google.protobuf.Empty> view(
         io.bloombox.schema.services.telemetry.v1beta4.CommercialEvent.View request) {
       return futureUnaryCall(
-          getChannel().newCall(METHOD_VIEW, getCallOptions()), request);
+          getChannel().newCall(getViewMethod(), getCallOptions()), request);
     }
 
     /**
@@ -334,7 +393,7 @@ public final class CommercialTelemetryGrpc {
     public com.google.common.util.concurrent.ListenableFuture<com.google.protobuf.Empty> action(
         io.bloombox.schema.services.telemetry.v1beta4.CommercialEvent.Action request) {
       return futureUnaryCall(
-          getChannel().newCall(METHOD_ACTION, getCallOptions()), request);
+          getChannel().newCall(getActionMethod(), getCallOptions()), request);
     }
   }
 
@@ -387,10 +446,38 @@ public final class CommercialTelemetryGrpc {
     }
   }
 
-  private static final class CommercialTelemetryDescriptorSupplier implements io.grpc.protobuf.ProtoFileDescriptorSupplier {
+  private static abstract class CommercialTelemetryBaseDescriptorSupplier
+      implements io.grpc.protobuf.ProtoFileDescriptorSupplier, io.grpc.protobuf.ProtoServiceDescriptorSupplier {
+    CommercialTelemetryBaseDescriptorSupplier() {}
+
     @java.lang.Override
     public com.google.protobuf.Descriptors.FileDescriptor getFileDescriptor() {
       return io.bloombox.schema.services.telemetry.v1beta4.TelemetryServiceBeta4.getDescriptor();
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Descriptors.ServiceDescriptor getServiceDescriptor() {
+      return getFileDescriptor().findServiceByName("CommercialTelemetry");
+    }
+  }
+
+  private static final class CommercialTelemetryFileDescriptorSupplier
+      extends CommercialTelemetryBaseDescriptorSupplier {
+    CommercialTelemetryFileDescriptorSupplier() {}
+  }
+
+  private static final class CommercialTelemetryMethodDescriptorSupplier
+      extends CommercialTelemetryBaseDescriptorSupplier
+      implements io.grpc.protobuf.ProtoMethodDescriptorSupplier {
+    private final String methodName;
+
+    CommercialTelemetryMethodDescriptorSupplier(String methodName) {
+      this.methodName = methodName;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Descriptors.MethodDescriptor getMethodDescriptor() {
+      return getServiceDescriptor().findMethodByName(methodName);
     }
   }
 
@@ -403,10 +490,10 @@ public final class CommercialTelemetryGrpc {
         result = serviceDescriptor;
         if (result == null) {
           serviceDescriptor = result = io.grpc.ServiceDescriptor.newBuilder(SERVICE_NAME)
-              .setSchemaDescriptor(new CommercialTelemetryDescriptorSupplier())
-              .addMethod(METHOD_IMPRESSION)
-              .addMethod(METHOD_VIEW)
-              .addMethod(METHOD_ACTION)
+              .setSchemaDescriptor(new CommercialTelemetryFileDescriptorSupplier())
+              .addMethod(getImpressionMethod())
+              .addMethod(getViewMethod())
+              .addMethod(getActionMethod())
               .build();
         }
       }

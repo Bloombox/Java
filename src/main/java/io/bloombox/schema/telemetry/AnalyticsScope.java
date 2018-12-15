@@ -1,8 +1,8 @@
 /*
- * Copyright 2018, Bloombox, LLC. All rights reserved.
+ * Copyright 2018, Momentum Ideas, Co. All rights reserved.
  *
  * Source and object computer code contained herein is the private intellectual
- * property of Bloombox, a California Limited Liability Corporation. Use of this
+ * property of Momentum Ideas Co., a Delaware Corporation. Use of this
  * code in source form requires permission in writing before use or the
  * assembly, distribution, or publishing of derivative works, for commercial
  * purposes or any other purpose, from a duly authorized officer of Momentum
@@ -32,7 +32,7 @@ public final class AnalyticsScope {
         (com.google.protobuf.ExtensionRegistryLite) registry);
   }
   public interface ScopeOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:bloombox.schema.analytics.Scope)
+      // @@protoc_insertion_point(interface_extends:bloombox.analytics.Scope)
       com.google.protobuf.MessageOrBuilder {
 
     /**
@@ -100,11 +100,11 @@ public final class AnalyticsScope {
    * transaction), among others.
    * </pre>
    *
-   * Protobuf type {@code bloombox.schema.analytics.Scope}
+   * Protobuf type {@code bloombox.analytics.Scope}
    */
   public  static final class Scope extends
       com.google.protobuf.GeneratedMessageV3 implements
-      // @@protoc_insertion_point(message_implements:bloombox.schema.analytics.Scope)
+      // @@protoc_insertion_point(message_implements:bloombox.analytics.Scope)
       ScopeOrBuilder {
   private static final long serialVersionUID = 0L;
     // Use Scope.newBuilder() to construct.
@@ -141,13 +141,6 @@ public final class AnalyticsScope {
             case 0:
               done = true;
               break;
-            default: {
-              if (!parseUnknownFieldProto3(
-                  input, unknownFields, extensionRegistry, tag)) {
-                done = true;
-              }
-              break;
-            }
             case 10: {
               java.lang.String s = input.readStringRequireUtf8();
 
@@ -166,6 +159,13 @@ public final class AnalyticsScope {
               order_ = s;
               break;
             }
+            default: {
+              if (!parseUnknownFieldProto3(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
           }
         }
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
@@ -180,12 +180,13 @@ public final class AnalyticsScope {
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return io.bloombox.schema.telemetry.AnalyticsScope.internal_static_bloombox_schema_analytics_Scope_descriptor;
+      return io.bloombox.schema.telemetry.AnalyticsScope.internal_static_bloombox_analytics_Scope_descriptor;
     }
 
+    @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return io.bloombox.schema.telemetry.AnalyticsScope.internal_static_bloombox_schema_analytics_Scope_fieldAccessorTable
+      return io.bloombox.schema.telemetry.AnalyticsScope.internal_static_bloombox_analytics_Scope_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
               io.bloombox.schema.telemetry.AnalyticsScope.Scope.class, io.bloombox.schema.telemetry.AnalyticsScope.Scope.Builder.class);
     }
@@ -321,6 +322,7 @@ public final class AnalyticsScope {
     }
 
     private byte memoizedIsInitialized = -1;
+    @java.lang.Override
     public final boolean isInitialized() {
       byte isInitialized = memoizedIsInitialized;
       if (isInitialized == 1) return true;
@@ -330,6 +332,7 @@ public final class AnalyticsScope {
       return true;
     }
 
+    @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
       if (!getPartnerBytes().isEmpty()) {
@@ -344,6 +347,7 @@ public final class AnalyticsScope {
       unknownFields.writeTo(output);
     }
 
+    @java.lang.Override
     public int getSerializedSize() {
       int size = memoizedSize;
       if (size != -1) return size;
@@ -472,6 +476,7 @@ public final class AnalyticsScope {
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
 
+    @java.lang.Override
     public Builder newBuilderForType() { return newBuilder(); }
     public static Builder newBuilder() {
       return DEFAULT_INSTANCE.toBuilder();
@@ -479,6 +484,7 @@ public final class AnalyticsScope {
     public static Builder newBuilder(io.bloombox.schema.telemetry.AnalyticsScope.Scope prototype) {
       return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
     }
+    @java.lang.Override
     public Builder toBuilder() {
       return this == DEFAULT_INSTANCE
           ? new Builder() : new Builder().mergeFrom(this);
@@ -497,20 +503,21 @@ public final class AnalyticsScope {
      * transaction), among others.
      * </pre>
      *
-     * Protobuf type {@code bloombox.schema.analytics.Scope}
+     * Protobuf type {@code bloombox.analytics.Scope}
      */
     public static final class Builder extends
         com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:bloombox.schema.analytics.Scope)
+        // @@protoc_insertion_point(builder_implements:bloombox.analytics.Scope)
         io.bloombox.schema.telemetry.AnalyticsScope.ScopeOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return io.bloombox.schema.telemetry.AnalyticsScope.internal_static_bloombox_schema_analytics_Scope_descriptor;
+        return io.bloombox.schema.telemetry.AnalyticsScope.internal_static_bloombox_analytics_Scope_descriptor;
       }
 
+      @java.lang.Override
       protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return io.bloombox.schema.telemetry.AnalyticsScope.internal_static_bloombox_schema_analytics_Scope_fieldAccessorTable
+        return io.bloombox.schema.telemetry.AnalyticsScope.internal_static_bloombox_analytics_Scope_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
                 io.bloombox.schema.telemetry.AnalyticsScope.Scope.class, io.bloombox.schema.telemetry.AnalyticsScope.Scope.Builder.class);
       }
@@ -530,6 +537,7 @@ public final class AnalyticsScope {
                 .alwaysUseFieldBuilders) {
         }
       }
+      @java.lang.Override
       public Builder clear() {
         super.clear();
         partner_ = "";
@@ -541,15 +549,18 @@ public final class AnalyticsScope {
         return this;
       }
 
+      @java.lang.Override
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return io.bloombox.schema.telemetry.AnalyticsScope.internal_static_bloombox_schema_analytics_Scope_descriptor;
+        return io.bloombox.schema.telemetry.AnalyticsScope.internal_static_bloombox_analytics_Scope_descriptor;
       }
 
+      @java.lang.Override
       public io.bloombox.schema.telemetry.AnalyticsScope.Scope getDefaultInstanceForType() {
         return io.bloombox.schema.telemetry.AnalyticsScope.Scope.getDefaultInstance();
       }
 
+      @java.lang.Override
       public io.bloombox.schema.telemetry.AnalyticsScope.Scope build() {
         io.bloombox.schema.telemetry.AnalyticsScope.Scope result = buildPartial();
         if (!result.isInitialized()) {
@@ -558,6 +569,7 @@ public final class AnalyticsScope {
         return result;
       }
 
+      @java.lang.Override
       public io.bloombox.schema.telemetry.AnalyticsScope.Scope buildPartial() {
         io.bloombox.schema.telemetry.AnalyticsScope.Scope result = new io.bloombox.schema.telemetry.AnalyticsScope.Scope(this);
         result.partner_ = partner_;
@@ -567,32 +579,39 @@ public final class AnalyticsScope {
         return result;
       }
 
+      @java.lang.Override
       public Builder clone() {
         return (Builder) super.clone();
       }
+      @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
         return (Builder) super.setField(field, value);
       }
+      @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
         return (Builder) super.clearField(field);
       }
+      @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
         return (Builder) super.clearOneof(oneof);
       }
+      @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
         return (Builder) super.setRepeatedField(field, index, value);
       }
+      @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
         return (Builder) super.addRepeatedField(field, value);
       }
+      @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
         if (other instanceof io.bloombox.schema.telemetry.AnalyticsScope.Scope) {
           return mergeFrom((io.bloombox.schema.telemetry.AnalyticsScope.Scope)other);
@@ -621,10 +640,12 @@ public final class AnalyticsScope {
         return this;
       }
 
+      @java.lang.Override
       public final boolean isInitialized() {
         return true;
       }
 
+      @java.lang.Override
       public Builder mergeFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -919,21 +940,23 @@ public final class AnalyticsScope {
         onChanged();
         return this;
       }
+      @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
         return super.setUnknownFieldsProto3(unknownFields);
       }
 
+      @java.lang.Override
       public final Builder mergeUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
         return super.mergeUnknownFields(unknownFields);
       }
 
 
-      // @@protoc_insertion_point(builder_scope:bloombox.schema.analytics.Scope)
+      // @@protoc_insertion_point(builder_scope:bloombox.analytics.Scope)
     }
 
-    // @@protoc_insertion_point(class_scope:bloombox.schema.analytics.Scope)
+    // @@protoc_insertion_point(class_scope:bloombox.analytics.Scope)
     private static final io.bloombox.schema.telemetry.AnalyticsScope.Scope DEFAULT_INSTANCE;
     static {
       DEFAULT_INSTANCE = new io.bloombox.schema.telemetry.AnalyticsScope.Scope();
@@ -945,6 +968,7 @@ public final class AnalyticsScope {
 
     private static final com.google.protobuf.Parser<Scope>
         PARSER = new com.google.protobuf.AbstractParser<Scope>() {
+      @java.lang.Override
       public Scope parsePartialFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -962,6 +986,7 @@ public final class AnalyticsScope {
       return PARSER;
     }
 
+    @java.lang.Override
     public io.bloombox.schema.telemetry.AnalyticsScope.Scope getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
@@ -969,10 +994,10 @@ public final class AnalyticsScope {
   }
 
   private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_bloombox_schema_analytics_Scope_descriptor;
+    internal_static_bloombox_analytics_Scope_descriptor;
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_bloombox_schema_analytics_Scope_fieldAccessorTable;
+      internal_static_bloombox_analytics_Scope_fieldAccessorTable;
 
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
@@ -982,22 +1007,22 @@ public final class AnalyticsScope {
       descriptor;
   static {
     java.lang.String[] descriptorData = {
-      "\n\025analytics/Scope.proto\022\031bloombox.schema" +
-      ".analytics\032\016bq_field.proto\"\371\003\n\005Scope\022\310\001\n" +
-      "\007partner\030\001 \001(\tB\266\001\212@\262\001Partner scope. Spec" +
-      "ifies, each-if-applicable and only in th" +
-      "e following order-of-scope, the partner " +
-      "code, location code, and partner co-loca" +
-      "ted device UUID that reported an event.\022" +
-      "\240\001\n\ncommercial\030\002 \001(\tB\213\001\212@\207\001Commercial sc" +
-      "ope. Specifies, each-if-applicable and o" +
-      "nly in the following order-of-scope, the" +
-      " section name, product key, and order ke" +
-      "y.\022\201\001\n\005order\030\003 \001(\tBr\212@oOrder scope. Spec" +
-      "ifies, only if there is an active order," +
-      " the order ID that was active when the e" +
-      "vent was sent.B8\n\034io.bloombox.schema.tel" +
-      "emetryB\016AnalyticsScopeH\001P\000\242\002\003BBSb\006proto3"
+      "\n\025analytics/Scope.proto\022\022bloombox.analyt" +
+      "ics\032\016bq_field.proto\"\371\003\n\005Scope\022\310\001\n\007partne" +
+      "r\030\001 \001(\tB\266\001\212@\262\001Partner scope. Specifies, " +
+      "each-if-applicable and only in the follo" +
+      "wing order-of-scope, the partner code, l" +
+      "ocation code, and partner co-located dev" +
+      "ice UUID that reported an event.\022\240\001\n\ncom" +
+      "mercial\030\002 \001(\tB\213\001\212@\207\001Commercial scope. Sp" +
+      "ecifies, each-if-applicable and only in " +
+      "the following order-of-scope, the sectio" +
+      "n name, product key, and order key.\022\201\001\n\005" +
+      "order\030\003 \001(\tBr\212@oOrder scope. Specifies, " +
+      "only if there is an active order, the or" +
+      "der ID that was active when the event wa" +
+      "s sent.B8\n\034io.bloombox.schema.telemetryB" +
+      "\016AnalyticsScopeH\001P\000\242\002\003BBSb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -1012,11 +1037,11 @@ public final class AnalyticsScope {
         new com.google.protobuf.Descriptors.FileDescriptor[] {
           gen_bq_schema.BqField.getDescriptor(),
         }, assigner);
-    internal_static_bloombox_schema_analytics_Scope_descriptor =
+    internal_static_bloombox_analytics_Scope_descriptor =
       getDescriptor().getMessageTypes().get(0);
-    internal_static_bloombox_schema_analytics_Scope_fieldAccessorTable = new
+    internal_static_bloombox_analytics_Scope_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_bloombox_schema_analytics_Scope_descriptor,
+        internal_static_bloombox_analytics_Scope_descriptor,
         new java.lang.String[] { "Partner", "Commercial", "Order", });
     com.google.protobuf.ExtensionRegistry registry =
         com.google.protobuf.ExtensionRegistry.newInstance();

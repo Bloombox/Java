@@ -1,8 +1,8 @@
 /*
- * Copyright 2018, Bloombox, LLC. All rights reserved.
+ * Copyright 2018, Momentum Ideas, Co. All rights reserved.
  *
  * Source and object computer code contained herein is the private intellectual
- * property of Bloombox, a California Limited Liability Corporation. Use of this
+ * property of Momentum Ideas Co., a Delaware Corporation. Use of this
  * code in source form requires permission in writing before use or the
  * assembly, distribution, or publishing of derivative works, for commercial
  * purposes or any other purpose, from a duly authorized officer of Momentum
@@ -32,125 +32,125 @@ public final class WalletServiceV1 {
         (com.google.protobuf.ExtensionRegistryLite) registry);
   }
   static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_bloombox_schema_services_wallet_v1_CardProvision_descriptor;
+    internal_static_bloombox_services_wallet_v1_CardProvision_descriptor;
   static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_bloombox_schema_services_wallet_v1_CardProvision_fieldAccessorTable;
+      internal_static_bloombox_services_wallet_v1_CardProvision_fieldAccessorTable;
   static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_bloombox_schema_services_wallet_v1_CardProvision_Request_descriptor;
+    internal_static_bloombox_services_wallet_v1_CardProvision_Request_descriptor;
   static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_bloombox_schema_services_wallet_v1_CardProvision_Request_fieldAccessorTable;
+      internal_static_bloombox_services_wallet_v1_CardProvision_Request_fieldAccessorTable;
   static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_bloombox_schema_services_wallet_v1_CardProvision_Response_descriptor;
+    internal_static_bloombox_services_wallet_v1_CardProvision_Response_descriptor;
   static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_bloombox_schema_services_wallet_v1_CardProvision_Response_fieldAccessorTable;
+      internal_static_bloombox_services_wallet_v1_CardProvision_Response_fieldAccessorTable;
   static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_bloombox_schema_services_wallet_v1_CardProvision_Operation_descriptor;
+    internal_static_bloombox_services_wallet_v1_CardProvision_Operation_descriptor;
   static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_bloombox_schema_services_wallet_v1_CardProvision_Operation_fieldAccessorTable;
+      internal_static_bloombox_services_wallet_v1_CardProvision_Operation_fieldAccessorTable;
   static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_bloombox_schema_services_wallet_v1_CardIssuance_descriptor;
+    internal_static_bloombox_services_wallet_v1_CardIssuance_descriptor;
   static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_bloombox_schema_services_wallet_v1_CardIssuance_fieldAccessorTable;
+      internal_static_bloombox_services_wallet_v1_CardIssuance_fieldAccessorTable;
   static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_bloombox_schema_services_wallet_v1_CardIssuance_Request_descriptor;
+    internal_static_bloombox_services_wallet_v1_CardIssuance_Request_descriptor;
   static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_bloombox_schema_services_wallet_v1_CardIssuance_Request_fieldAccessorTable;
+      internal_static_bloombox_services_wallet_v1_CardIssuance_Request_fieldAccessorTable;
   static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_bloombox_schema_services_wallet_v1_CardIssuance_Response_descriptor;
+    internal_static_bloombox_services_wallet_v1_CardIssuance_Response_descriptor;
   static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_bloombox_schema_services_wallet_v1_CardIssuance_Response_fieldAccessorTable;
+      internal_static_bloombox_services_wallet_v1_CardIssuance_Response_fieldAccessorTable;
   static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_bloombox_schema_services_wallet_v1_CardIssuance_Operation_descriptor;
+    internal_static_bloombox_services_wallet_v1_CardIssuance_Operation_descriptor;
   static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_bloombox_schema_services_wallet_v1_CardIssuance_Operation_fieldAccessorTable;
+      internal_static_bloombox_services_wallet_v1_CardIssuance_Operation_fieldAccessorTable;
   static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_bloombox_schema_services_wallet_v1_CardActivate_descriptor;
+    internal_static_bloombox_services_wallet_v1_CardActivate_descriptor;
   static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_bloombox_schema_services_wallet_v1_CardActivate_fieldAccessorTable;
+      internal_static_bloombox_services_wallet_v1_CardActivate_fieldAccessorTable;
   static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_bloombox_schema_services_wallet_v1_CardActivate_Request_descriptor;
+    internal_static_bloombox_services_wallet_v1_CardActivate_Request_descriptor;
   static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_bloombox_schema_services_wallet_v1_CardActivate_Request_fieldAccessorTable;
+      internal_static_bloombox_services_wallet_v1_CardActivate_Request_fieldAccessorTable;
   static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_bloombox_schema_services_wallet_v1_CardRetrieve_descriptor;
+    internal_static_bloombox_services_wallet_v1_CardRetrieve_descriptor;
   static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_bloombox_schema_services_wallet_v1_CardRetrieve_fieldAccessorTable;
+      internal_static_bloombox_services_wallet_v1_CardRetrieve_fieldAccessorTable;
   static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_bloombox_schema_services_wallet_v1_CardRetrieve_Request_descriptor;
+    internal_static_bloombox_services_wallet_v1_CardRetrieve_Request_descriptor;
   static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_bloombox_schema_services_wallet_v1_CardRetrieve_Request_fieldAccessorTable;
+      internal_static_bloombox_services_wallet_v1_CardRetrieve_Request_fieldAccessorTable;
   static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_bloombox_schema_services_wallet_v1_CardRetrieve_Response_descriptor;
+    internal_static_bloombox_services_wallet_v1_CardRetrieve_Response_descriptor;
   static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_bloombox_schema_services_wallet_v1_CardRetrieve_Response_fieldAccessorTable;
+      internal_static_bloombox_services_wallet_v1_CardRetrieve_Response_fieldAccessorTable;
   static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_bloombox_schema_services_wallet_v1_CardEnroll_descriptor;
+    internal_static_bloombox_services_wallet_v1_CardEnroll_descriptor;
   static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_bloombox_schema_services_wallet_v1_CardEnroll_fieldAccessorTable;
+      internal_static_bloombox_services_wallet_v1_CardEnroll_fieldAccessorTable;
   static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_bloombox_schema_services_wallet_v1_CardEnroll_CardSpec_descriptor;
+    internal_static_bloombox_services_wallet_v1_CardEnroll_CardSpec_descriptor;
   static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_bloombox_schema_services_wallet_v1_CardEnroll_CardSpec_fieldAccessorTable;
+      internal_static_bloombox_services_wallet_v1_CardEnroll_CardSpec_fieldAccessorTable;
   static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_bloombox_schema_services_wallet_v1_CardEnroll_Request_descriptor;
+    internal_static_bloombox_services_wallet_v1_CardEnroll_Request_descriptor;
   static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_bloombox_schema_services_wallet_v1_CardEnroll_Request_fieldAccessorTable;
+      internal_static_bloombox_services_wallet_v1_CardEnroll_Request_fieldAccessorTable;
   static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_bloombox_schema_services_wallet_v1_CardEnroll_Response_descriptor;
+    internal_static_bloombox_services_wallet_v1_CardEnroll_Response_descriptor;
   static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_bloombox_schema_services_wallet_v1_CardEnroll_Response_fieldAccessorTable;
+      internal_static_bloombox_services_wallet_v1_CardEnroll_Response_fieldAccessorTable;
   static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_bloombox_schema_services_wallet_v1_CardList_descriptor;
+    internal_static_bloombox_services_wallet_v1_CardList_descriptor;
   static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_bloombox_schema_services_wallet_v1_CardList_fieldAccessorTable;
+      internal_static_bloombox_services_wallet_v1_CardList_fieldAccessorTable;
   static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_bloombox_schema_services_wallet_v1_CardList_Request_descriptor;
+    internal_static_bloombox_services_wallet_v1_CardList_Request_descriptor;
   static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_bloombox_schema_services_wallet_v1_CardList_Request_fieldAccessorTable;
+      internal_static_bloombox_services_wallet_v1_CardList_Request_fieldAccessorTable;
   static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_bloombox_schema_services_wallet_v1_CardList_Response_descriptor;
+    internal_static_bloombox_services_wallet_v1_CardList_Response_descriptor;
   static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_bloombox_schema_services_wallet_v1_CardList_Response_fieldAccessorTable;
+      internal_static_bloombox_services_wallet_v1_CardList_Response_fieldAccessorTable;
   static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_bloombox_schema_services_wallet_v1_CardList_Operation_descriptor;
+    internal_static_bloombox_services_wallet_v1_CardList_Operation_descriptor;
   static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_bloombox_schema_services_wallet_v1_CardList_Operation_fieldAccessorTable;
+      internal_static_bloombox_services_wallet_v1_CardList_Operation_fieldAccessorTable;
   static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_bloombox_schema_services_wallet_v1_CardVoid_descriptor;
+    internal_static_bloombox_services_wallet_v1_CardVoid_descriptor;
   static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_bloombox_schema_services_wallet_v1_CardVoid_fieldAccessorTable;
+      internal_static_bloombox_services_wallet_v1_CardVoid_fieldAccessorTable;
   static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_bloombox_schema_services_wallet_v1_CardVoid_Request_descriptor;
+    internal_static_bloombox_services_wallet_v1_CardVoid_Request_descriptor;
   static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_bloombox_schema_services_wallet_v1_CardVoid_Request_fieldAccessorTable;
+      internal_static_bloombox_services_wallet_v1_CardVoid_Request_fieldAccessorTable;
   static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_bloombox_schema_services_wallet_v1_CardVoid_Operation_descriptor;
+    internal_static_bloombox_services_wallet_v1_CardVoid_Operation_descriptor;
   static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_bloombox_schema_services_wallet_v1_CardVoid_Operation_fieldAccessorTable;
+      internal_static_bloombox_services_wallet_v1_CardVoid_Operation_fieldAccessorTable;
 
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
@@ -160,148 +160,142 @@ public final class WalletServiceV1 {
       descriptor;
   static {
     java.lang.String[] descriptorData = {
-      "\n wallet/v1/WalletService_v1.proto\022\"bloo" +
-      "mbox.schema.services.wallet.v1\032\033google/p" +
-      "rotobuf/empty.proto\032\034google/api/annotati" +
-      "ons.proto\032(protoc-gen-swagger/options/sw" +
-      "agger.proto\032\026identity/UserKey.proto\032\030par" +
-      "tner/PartnerKey.proto\032\031partner/LocationK" +
-      "ey.proto\032\030identity/pass/Pass.proto\032\033iden" +
-      "tity/pass/PassKey.proto\032\026crypto/Signatur" +
-      "e.proto\032\037crypto/primitives/Keypair.proto" +
-      "\"\233\004\n\rCardProvision\032\220\002\n\007Request\022/\n\004user\030\001" +
-      " \001(\0132!.bloombox.schema.identity.UserKey\022" +
-      "6\n\007partner\030\002 \001(\0132#.bloombox.schema.partn" +
-      "er.PartnerKeyH\000\0228\n\010location\030\003 \001(\0132$.bloo" +
-      "mbox.schema.partner.LocationKeyH\000\022\022\n\010ide" +
-      "ntity\030\004 \001(\010H\000\022C\n\npublic_key\030\005 \001(\0132/.open" +
-      "cannabis.crypto.primitives.pki.KeyMateri" +
-      "alB\t\n\007context\032O\n\010Response\0224\n\004card\030\001 \001(\0132" +
-      "&.bloombox.schema.identity.pass.PassKey\022" +
-      "\r\n\005nonce\030\002 \001(\t\032\245\001\n\tOperation\022J\n\007request\030" +
-      "\001 \001(\01329.bloombox.schema.services.wallet." +
-      "v1.CardProvision.Request\022L\n\010response\030\002 \001" +
-      "(\0132:.bloombox.schema.services.wallet.v1." +
-      "CardProvision.Response\"\250\003\n\014CardIssuance\032" +
-      "\262\001\n\007Request\022/\n\004user\030\001 \001(\0132!.bloombox.sch" +
-      "ema.identity.UserKey\0224\n\004card\030\002 \001(\0132&.blo" +
-      "ombox.schema.identity.pass.PassKey\022\r\n\005no" +
-      "nce\030\003 \001(\t\0221\n\tsignature\030\004 \001(\0132\036.opencanna" +
-      "bis.crypto.Signature\032=\n\010Response\0221\n\004card" +
-      "\030\001 \001(\0132#.bloombox.schema.identity.pass.P" +
-      "ass\032\243\001\n\tOperation\022I\n\007request\030\001 \001(\01328.blo" +
-      "ombox.schema.services.wallet.v1.CardIssu" +
-      "ance.Request\022K\n\010response\030\002 \001(\01329.bloombo" +
-      "x.schema.services.wallet.v1.CardIssuance" +
-      ".Response\"`\n\014CardActivate\032P\n\007Request\022\017\n\007" +
-      "library\030\001 \001(\t\022\021\n\tpass_type\030\002 \001(\t\022\016\n\006seri" +
-      "al\030\003 \001(\t\022\021\n\tpushToken\030\004 \001(\t\"Y\n\014CardRetri" +
-      "eve\032,\n\007Request\022\021\n\tpass_type\030\002 \001(\t\022\016\n\006ser" +
-      "ial\030\003 \001(\t\032\033\n\010Response\022\017\n\007payload\030\001 \001(\014\"\376" +
-      "\002\n\nCardEnroll\032\242\001\n\010CardSpec\022\021\n\tfull_name\030" +
-      "\001 \001(\t\022\022\n\ngiven_name\030\002 \001(\t\022\023\n\013family_name" +
-      "\030\003 \001(\t\022\025\n\remail_address\030\004 \001(\t\022\023\n\013postal_" +
-      "code\030\005 \001(\t\022\030\n\020ISO_country_code\030\006 \001(\t\022\024\n\014" +
-      "phone_number\030\007 \001(\t\032\253\001\n\007Request\022\021\n\tpass_t" +
-      "ype\030\001 \001(\t\022\016\n\006serial\030\002 \001(\t\022\035\n\025personaliza" +
-      "tion_token\030\003 \001(\t\022^\n\035required_personaliza" +
-      "tion_info\030\004 \001(\01327.bloombox.schema.servic" +
-      "es.wallet.v1.CardEnroll.CardSpec\032\035\n\010Resp" +
-      "onse\022\021\n\tsignature\030\001 \001(\014\"\257\002\n\010CardList\032K\n\007" +
-      "Request\022\017\n\007library\030\001 \001(\t\022\021\n\tpass_type\030\002 " +
-      "\001(\t\022\034\n\024passes_updated_since\030\003 \001(\t\0328\n\010Res" +
-      "ponse\022\024\n\014last_updated\030\001 \001(\t\022\026\n\016serial_nu" +
-      "mbers\030\002 \003(\t\032\233\001\n\tOperation\022E\n\007request\030\001 \001" +
-      "(\01324.bloombox.schema.services.wallet.v1." +
-      "CardList.Request\022G\n\010response\030\002 \001(\01325.blo" +
-      "ombox.schema.services.wallet.v1.CardList" +
-      ".Response\"\256\001\n\010CardVoid\032=\n\007Request\022\017\n\007lib" +
-      "rary\030\001 \001(\t\022\021\n\tpass_type\030\002 \001(\t\022\016\n\006serial\030" +
-      "\003 \001(\t\032c\n\tOperation\022E\n\007request\030\001 \001(\01324.bl" +
-      "oombox.schema.services.wallet.v1.CardVoi" +
-      "d.Request\022\017\n\007success\030\002 \001(\010*\303\001\n\013WalletErr" +
-      "or\022\014\n\010NO_ERROR\020\000\022\023\n\017INVALID_PARTNER\020\001\022\024\n" +
-      "\020INVALID_LOCATION\020\002\022\022\n\016INVALID_DEVICE\020\003\022" +
-      "\021\n\rINVALID_TOKEN\020\004\022\025\n\021PARTNER_NOT_FOUND\020" +
-      "\005\022\026\n\022LOCATION_NOT_FOUND\020\006\022\021\n\rACCESS_DENI" +
-      "ED\020b\022\022\n\016INTERNAL_ERROR\020c2\231\017\n\006Wallet\022\223\002\n\r" +
-      "ProvisionCard\0229.bloombox.schema.services" +
-      ".wallet.v1.CardProvision.Request\032:.bloom" +
-      "box.schema.services.wallet.v1.CardProvis" +
-      "ion.Response\"\212\001\202\323\344\223\002#\"!/wallet/v1beta1/{" +
-      "user.uid}/passes\222A^\022\016Provision Card\032=Pro" +
-      "vision a new digital pass card record, f" +
-      "or later issuance.*\rProvisionCard\022\235\002\n\tIs" +
-      "sueCard\0228.bloombox.schema.services.walle" +
-      "t.v1.CardIssuance.Request\0329.bloombox.sch" +
-      "ema.services.wallet.v1.CardIssuance.Resp" +
-      "onse\"\232\001\202\323\344\223\0022\"-/wallet/v1beta1/{user.uid" +
-      "}/passes/{card.uuid}:\001*\222A_\022\nIssue Card\032F" +
-      "Issue, or re-issue, a previously-provisi" +
-      "oned digital pass card record.*\tIssueCar" +
-      "d\022\242\002\n\tListCards\0224.bloombox.schema.servic" +
-      "es.wallet.v1.CardList.Request\0325.bloombox" +
-      ".schema.services.wallet.v1.CardList.Resp" +
-      "onse\"\247\001\202\323\344\223\002=\022;/wallet/v1beta1/devices/{" +
-      "library}/registrations/{pass_type}\222Aa\022\nL" +
-      "ist Cards\032HList cards for a given user, " +
-      "potentially in a given partnership conte" +
-      "xt.*\tListCards\022\376\001\n\014ActivateCard\0228.bloomb" +
-      "ox.schema.services.wallet.v1.CardActivat" +
-      "e.Request\032\026.google.protobuf.Empty\"\233\001\202\323\344\223" +
-      "\002I\"D/wallet/v1beta1/devices/{library}/re" +
-      "gistrations/{pass_type}/{serial}:\001*\222AI\022\r" +
-      "Activate Card\032*Register a wallet pass fo" +
-      "r remote updates.*\014ActivateCard\022\216\002\n\014Retr" +
-      "ieveCard\0228.bloombox.schema.services.wall" +
-      "et.v1.CardRetrieve.Request\0329.bloombox.sc" +
-      "hema.services.wallet.v1.CardRetrieve.Res" +
-      "ponse\"\210\001\202\323\344\223\002-\022+/wallet/v1beta1/passes/{" +
-      "pass_type}/{serial}\222AR\022\rRetrieve Card\0323R" +
-      "etrieve the latest version of a given wa" +
-      "llet pass.*\014RetrieveCard\022\242\002\n\017Personalize" +
-      "Card\0226.bloombox.schema.services.wallet.v" +
-      "1.CardEnroll.Request\0327.bloombox.schema.s" +
-      "ervices.wallet.v1.CardEnroll.Response\"\235\001" +
-      "\202\323\344\223\0029\"7/wallet/v1beta1/passes/{pass_typ" +
-      "e}/{serial}/personalize\222A[\022\020Personalize " +
-      "Card\0326Enroll a personalized wallet pass " +
-      "in rewards programs.*\017PersonalizeCard\022\374\001" +
-      "\n\020DecommissionCard\0224.bloombox.schema.ser" +
-      "vices.wallet.v1.CardVoid.Request\032\026.googl" +
-      "e.protobuf.Empty\"\231\001\202\323\344\223\002F*D/wallet/v1bet" +
-      "a1/devices/{library}/registrations/{pass" +
-      "_type}/{serial}\222AJ\022\tVoid Card\032+Decommiss" +
-      "ion an existing digital pass card.*\020Deco" +
-      "mmissionCardB\326\010\n%io.bloombox.schema.serv" +
-      "ices.wallet.v1H\001P\001\242\002\003BBS\222A\241\010\022i\n\nWallet A" +
-      "PI\032\031https://bloombox.io/terms\"7\n\010Bloombo" +
-      "x\022\023https://bloombox.io\032\026developers@bloom" +
-      "box.io2\007v1beta1\032\022api.bloombox.cloud*\001\0022\020" +
-      "application/json:\020application/jsonZ\240\006\nd\n" +
-      "\013ApiKeyParam\022U\010\002\022JParameter for identify" +
-      "ing API key owned by the invoking projec" +
-      "t or system.\032\003key \001\nh\n\014ApiKeyHeader\022X\010\002\022" +
-      "GHeader for identifying API key owned by" +
-      " the invoking project or system.\032\tX-API-" +
-      "Key \001\n\315\004\n\006OAuth2\022\302\004\010\003\022]Bloombox Identity" +
-      "-powered OAuth2 access, authorized on be" +
-      "half of an end-user or organization.(\0042," +
-      "https://authorize.bloombox.cloud/oauth2/" +
-      "auth:-https://authorize.bloombox.cloud/o" +
-      "auth2/tokenB\377\002\n1\n\007offline\022&Offline acces" +
-      "s to authorized user data\n9\n\006openid\022/OID" +
-      "C (OpenID Connect) access for seamless l" +
-      "ogon\n0\n\005email\022\'Read access to the user\'s" +
-      " email address\n/\n\005phone\022&Read access to " +
-      "the user\'s phone number\n9\n\006notify\022/Abili" +
-      "ty to notify the user for important even" +
-      "ts\n1\n\014profile:read\022!Read access to the u" +
-      "ser\'s profile\n>\n\022profile.basic:read\022(Rea" +
-      "d access to the user\'s public profileb\021\n" +
-      "\017\n\013ApiKeyParam\022\000b\022\n\020\n\014ApiKeyHeader\022\000r/\n\r" +
-      "Bloombox APIs\022\036https://apidocs.bloombox." +
-      "cloudb\006proto3"
+      "\n wallet/v1/WalletService_v1.proto\022\033bloo" +
+      "mbox.services.wallet.v1\032\033google/protobuf" +
+      "/empty.proto\032\034google/api/annotations.pro" +
+      "to\032(protoc-gen-swagger/options/swagger.p" +
+      "roto\032\026identity/UserKey.proto\032\030partner/Pa" +
+      "rtnerKey.proto\032\031partner/LocationKey.prot" +
+      "o\032\030identity/pass/Pass.proto\032\033identity/pa" +
+      "ss/PassKey.proto\032\026crypto/Signature.proto" +
+      "\032\034crypto/primitives/Keys.proto\"\342\003\n\rCardP" +
+      "rovision\032\354\001\n\007Request\022(\n\004user\030\001 \001(\0132\032.blo" +
+      "ombox.identity.UserKey\022/\n\007partner\030\002 \001(\0132" +
+      "\034.bloombox.partner.PartnerKeyH\000\0221\n\010locat" +
+      "ion\030\003 \001(\0132\035.bloombox.partner.LocationKey" +
+      "H\000\022\022\n\010identity\030\004 \001(\010H\000\0224\n\npublic_key\030\005 \001" +
+      "(\0132 .opencannabis.crypto.KeyMaterialB\t\n\007" +
+      "context\032H\n\010Response\022-\n\004card\030\001 \001(\0132\037.bloo" +
+      "mbox.identity.pass.PassKey\022\r\n\005nonce\030\002 \001(" +
+      "\t\032\227\001\n\tOperation\022C\n\007request\030\001 \001(\01322.bloom" +
+      "box.services.wallet.v1.CardProvision.Req" +
+      "uest\022E\n\010response\030\002 \001(\01323.bloombox.servic" +
+      "es.wallet.v1.CardProvision.Response\"\205\003\n\014" +
+      "CardIssuance\032\244\001\n\007Request\022(\n\004user\030\001 \001(\0132\032" +
+      ".bloombox.identity.UserKey\022-\n\004card\030\002 \001(\013" +
+      "2\037.bloombox.identity.pass.PassKey\022\r\n\005non" +
+      "ce\030\003 \001(\t\0221\n\tsignature\030\004 \001(\0132\036.opencannab" +
+      "is.crypto.Signature\0326\n\010Response\022*\n\004card\030" +
+      "\001 \001(\0132\034.bloombox.identity.pass.Pass\032\225\001\n\t" +
+      "Operation\022B\n\007request\030\001 \001(\01321.bloombox.se" +
+      "rvices.wallet.v1.CardIssuance.Request\022D\n" +
+      "\010response\030\002 \001(\01322.bloombox.services.wall" +
+      "et.v1.CardIssuance.Response\"`\n\014CardActiv" +
+      "ate\032P\n\007Request\022\017\n\007library\030\001 \001(\t\022\021\n\tpass_" +
+      "type\030\002 \001(\t\022\016\n\006serial\030\003 \001(\t\022\021\n\tpushToken\030" +
+      "\004 \001(\t\"Y\n\014CardRetrieve\032,\n\007Request\022\021\n\tpass" +
+      "_type\030\002 \001(\t\022\016\n\006serial\030\003 \001(\t\032\033\n\010Response\022" +
+      "\017\n\007payload\030\001 \001(\014\"\367\002\n\nCardEnroll\032\242\001\n\010Card" +
+      "Spec\022\021\n\tfull_name\030\001 \001(\t\022\022\n\ngiven_name\030\002 " +
+      "\001(\t\022\023\n\013family_name\030\003 \001(\t\022\025\n\remail_addres" +
+      "s\030\004 \001(\t\022\023\n\013postal_code\030\005 \001(\t\022\030\n\020ISO_coun" +
+      "try_code\030\006 \001(\t\022\024\n\014phone_number\030\007 \001(\t\032\244\001\n" +
+      "\007Request\022\021\n\tpass_type\030\001 \001(\t\022\016\n\006serial\030\002 " +
+      "\001(\t\022\035\n\025personalization_token\030\003 \001(\t\022W\n\035re" +
+      "quired_personalization_info\030\004 \001(\01320.bloo" +
+      "mbox.services.wallet.v1.CardEnroll.CardS" +
+      "pec\032\035\n\010Response\022\021\n\tsignature\030\001 \001(\014\"\241\002\n\010C" +
+      "ardList\032K\n\007Request\022\017\n\007library\030\001 \001(\t\022\021\n\tp" +
+      "ass_type\030\002 \001(\t\022\034\n\024passes_updated_since\030\003" +
+      " \001(\t\0328\n\010Response\022\024\n\014last_updated\030\001 \001(\t\022\026" +
+      "\n\016serial_numbers\030\002 \003(\t\032\215\001\n\tOperation\022>\n\007" +
+      "request\030\001 \001(\0132-.bloombox.services.wallet" +
+      ".v1.CardList.Request\022@\n\010response\030\002 \001(\0132." +
+      ".bloombox.services.wallet.v1.CardList.Re" +
+      "sponse\"\247\001\n\010CardVoid\032=\n\007Request\022\017\n\007librar" +
+      "y\030\001 \001(\t\022\021\n\tpass_type\030\002 \001(\t\022\016\n\006serial\030\003 \001" +
+      "(\t\032\\\n\tOperation\022>\n\007request\030\001 \001(\0132-.bloom" +
+      "box.services.wallet.v1.CardVoid.Request\022" +
+      "\017\n\007success\030\002 \001(\010*\303\001\n\013WalletError\022\014\n\010NO_E" +
+      "RROR\020\000\022\023\n\017INVALID_PARTNER\020\001\022\024\n\020INVALID_L" +
+      "OCATION\020\002\022\022\n\016INVALID_DEVICE\020\003\022\021\n\rINVALID" +
+      "_TOKEN\020\004\022\025\n\021PARTNER_NOT_FOUND\020\005\022\026\n\022LOCAT" +
+      "ION_NOT_FOUND\020\006\022\021\n\rACCESS_DENIED\020b\022\022\n\016IN" +
+      "TERNAL_ERROR\020c2\305\016\n\006Wallet\022\205\002\n\rProvisionC" +
+      "ard\0222.bloombox.services.wallet.v1.CardPr" +
+      "ovision.Request\0323.bloombox.services.wall" +
+      "et.v1.CardProvision.Response\"\212\001\202\323\344\223\002#\"!/" +
+      "wallet/v1beta1/{user.uid}/passes\222A^\022\016Pro" +
+      "vision Card\032=Provision a new digital pas" +
+      "s card record, for later issuance.*\rProv" +
+      "isionCard\022\217\002\n\tIssueCard\0221.bloombox.servi" +
+      "ces.wallet.v1.CardIssuance.Request\0322.blo" +
+      "ombox.services.wallet.v1.CardIssuance.Re" +
+      "sponse\"\232\001\202\323\344\223\0022\"-/wallet/v1beta1/{user.u" +
+      "id}/passes/{card.uuid}:\001*\222A_\022\nIssue Card" +
+      "\032FIssue, or re-issue, a previously-provi" +
+      "sioned digital pass card record.*\tIssueC" +
+      "ard\022\224\002\n\tListCards\022-.bloombox.services.wa" +
+      "llet.v1.CardList.Request\032..bloombox.serv" +
+      "ices.wallet.v1.CardList.Response\"\247\001\202\323\344\223\002" +
+      "=\022;/wallet/v1beta1/devices/{library}/reg" +
+      "istrations/{pass_type}\222Aa\022\nList Cards\032HL" +
+      "ist cards for a given user, potentially " +
+      "in a given partnership context.*\tListCar" +
+      "ds\022\367\001\n\014ActivateCard\0221.bloombox.services." +
+      "wallet.v1.CardActivate.Request\032\026.google." +
+      "protobuf.Empty\"\233\001\202\323\344\223\002I\"D/wallet/v1beta1" +
+      "/devices/{library}/registrations/{pass_t" +
+      "ype}/{serial}:\001*\222AI\022\rActivate Card\032*Regi" +
+      "ster a wallet pass for remote updates.*\014" +
+      "ActivateCard\022\200\002\n\014RetrieveCard\0221.bloombox" +
+      ".services.wallet.v1.CardRetrieve.Request" +
+      "\0322.bloombox.services.wallet.v1.CardRetri" +
+      "eve.Response\"\210\001\202\323\344\223\002-\022+/wallet/v1beta1/p" +
+      "asses/{pass_type}/{serial}\222AR\022\rRetrieve " +
+      "Card\0323Retrieve the latest version of a g" +
+      "iven wallet pass.*\014RetrieveCard\022\224\002\n\017Pers" +
+      "onalizeCard\022/.bloombox.services.wallet.v" +
+      "1.CardEnroll.Request\0320.bloombox.services" +
+      ".wallet.v1.CardEnroll.Response\"\235\001\202\323\344\223\0029\"" +
+      "7/wallet/v1beta1/passes/{pass_type}/{ser" +
+      "ial}/personalize\222A[\022\020Personalize Card\0326E" +
+      "nroll a personalized wallet pass in rewa" +
+      "rds programs.*\017PersonalizeCard\022\365\001\n\020Decom" +
+      "missionCard\022-.bloombox.services.wallet.v" +
+      "1.CardVoid.Request\032\026.google.protobuf.Emp" +
+      "ty\"\231\001\202\323\344\223\002F*D/wallet/v1beta1/devices/{li" +
+      "brary}/registrations/{pass_type}/{serial" +
+      "}\222AJ\022\tVoid Card\032+Decommission an existin" +
+      "g digital pass card.*\020DecommissionCardB\326" +
+      "\010\n%io.bloombox.schema.services.wallet.v1" +
+      "H\001P\001\242\002\003BBS\222A\241\010\022i\n\nWallet API\032\031https://bl" +
+      "oombox.io/terms\"7\n\010Bloombox\022\023https://blo" +
+      "ombox.io\032\026developers@bloombox.io2\007v1beta" +
+      "1\032\022api.bloombox.cloud*\001\0022\020application/js" +
+      "on:\020application/jsonZ\240\006\nd\n\013ApiKeyParam\022U" +
+      "\010\002\022JParameter for identifying API key ow" +
+      "ned by the invoking project or system.\032\003" +
+      "key \001\nh\n\014ApiKeyHeader\022X\010\002\022GHeader for id" +
+      "entifying API key owned by the invoking " +
+      "project or system.\032\tX-API-Key \001\n\315\004\n\006OAut" +
+      "h2\022\302\004\010\003\022]Bloombox Identity-powered OAuth" +
+      "2 access, authorized on behalf of an end" +
+      "-user or organization.(\0042,https://author" +
+      "ize.bloombox.cloud/oauth2/auth:-https://" +
+      "authorize.bloombox.cloud/oauth2/tokenB\377\002" +
+      "\n1\n\007offline\022&Offline access to authorize" +
+      "d user data\n9\n\006openid\022/OIDC (OpenID Conn" +
+      "ect) access for seamless logon\n0\n\005email\022" +
+      "\'Read access to the user\'s email address" +
+      "\n/\n\005phone\022&Read access to the user\'s pho" +
+      "ne number\n9\n\006notify\022/Ability to notify t" +
+      "he user for important events\n1\n\014profile:" +
+      "read\022!Read access to the user\'s profile\n" +
+      ">\n\022profile.basic:read\022(Read access to th" +
+      "e user\'s public profileb\021\n\017\n\013ApiKeyParam" +
+      "\022\000b\022\n\020\n\014ApiKeyHeader\022\000r/\n\rBloombox APIs\022" +
+      "\036https://apidocs.bloombox.cloudb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -323,151 +317,151 @@ public final class WalletServiceV1 {
           io.bloombox.schema.pass.PassID.getDescriptor(),
           io.bloombox.schema.pass.PassIDKey.getDescriptor(),
           io.opencannabis.schema.crypto.SignatureOuterClass.getDescriptor(),
-          io.opencannabis.schema.crypto.primitives.pki.KeypairOuterClass.getDescriptor(),
+          io.opencannabis.schema.crypto.primitives.Keys.getDescriptor(),
         }, assigner);
-    internal_static_bloombox_schema_services_wallet_v1_CardProvision_descriptor =
+    internal_static_bloombox_services_wallet_v1_CardProvision_descriptor =
       getDescriptor().getMessageTypes().get(0);
-    internal_static_bloombox_schema_services_wallet_v1_CardProvision_fieldAccessorTable = new
+    internal_static_bloombox_services_wallet_v1_CardProvision_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_bloombox_schema_services_wallet_v1_CardProvision_descriptor,
+        internal_static_bloombox_services_wallet_v1_CardProvision_descriptor,
         new java.lang.String[] { });
-    internal_static_bloombox_schema_services_wallet_v1_CardProvision_Request_descriptor =
-      internal_static_bloombox_schema_services_wallet_v1_CardProvision_descriptor.getNestedTypes().get(0);
-    internal_static_bloombox_schema_services_wallet_v1_CardProvision_Request_fieldAccessorTable = new
+    internal_static_bloombox_services_wallet_v1_CardProvision_Request_descriptor =
+      internal_static_bloombox_services_wallet_v1_CardProvision_descriptor.getNestedTypes().get(0);
+    internal_static_bloombox_services_wallet_v1_CardProvision_Request_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_bloombox_schema_services_wallet_v1_CardProvision_Request_descriptor,
+        internal_static_bloombox_services_wallet_v1_CardProvision_Request_descriptor,
         new java.lang.String[] { "User", "Partner", "Location", "Identity", "PublicKey", "Context", });
-    internal_static_bloombox_schema_services_wallet_v1_CardProvision_Response_descriptor =
-      internal_static_bloombox_schema_services_wallet_v1_CardProvision_descriptor.getNestedTypes().get(1);
-    internal_static_bloombox_schema_services_wallet_v1_CardProvision_Response_fieldAccessorTable = new
+    internal_static_bloombox_services_wallet_v1_CardProvision_Response_descriptor =
+      internal_static_bloombox_services_wallet_v1_CardProvision_descriptor.getNestedTypes().get(1);
+    internal_static_bloombox_services_wallet_v1_CardProvision_Response_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_bloombox_schema_services_wallet_v1_CardProvision_Response_descriptor,
+        internal_static_bloombox_services_wallet_v1_CardProvision_Response_descriptor,
         new java.lang.String[] { "Card", "Nonce", });
-    internal_static_bloombox_schema_services_wallet_v1_CardProvision_Operation_descriptor =
-      internal_static_bloombox_schema_services_wallet_v1_CardProvision_descriptor.getNestedTypes().get(2);
-    internal_static_bloombox_schema_services_wallet_v1_CardProvision_Operation_fieldAccessorTable = new
+    internal_static_bloombox_services_wallet_v1_CardProvision_Operation_descriptor =
+      internal_static_bloombox_services_wallet_v1_CardProvision_descriptor.getNestedTypes().get(2);
+    internal_static_bloombox_services_wallet_v1_CardProvision_Operation_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_bloombox_schema_services_wallet_v1_CardProvision_Operation_descriptor,
+        internal_static_bloombox_services_wallet_v1_CardProvision_Operation_descriptor,
         new java.lang.String[] { "Request", "Response", });
-    internal_static_bloombox_schema_services_wallet_v1_CardIssuance_descriptor =
+    internal_static_bloombox_services_wallet_v1_CardIssuance_descriptor =
       getDescriptor().getMessageTypes().get(1);
-    internal_static_bloombox_schema_services_wallet_v1_CardIssuance_fieldAccessorTable = new
+    internal_static_bloombox_services_wallet_v1_CardIssuance_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_bloombox_schema_services_wallet_v1_CardIssuance_descriptor,
+        internal_static_bloombox_services_wallet_v1_CardIssuance_descriptor,
         new java.lang.String[] { });
-    internal_static_bloombox_schema_services_wallet_v1_CardIssuance_Request_descriptor =
-      internal_static_bloombox_schema_services_wallet_v1_CardIssuance_descriptor.getNestedTypes().get(0);
-    internal_static_bloombox_schema_services_wallet_v1_CardIssuance_Request_fieldAccessorTable = new
+    internal_static_bloombox_services_wallet_v1_CardIssuance_Request_descriptor =
+      internal_static_bloombox_services_wallet_v1_CardIssuance_descriptor.getNestedTypes().get(0);
+    internal_static_bloombox_services_wallet_v1_CardIssuance_Request_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_bloombox_schema_services_wallet_v1_CardIssuance_Request_descriptor,
+        internal_static_bloombox_services_wallet_v1_CardIssuance_Request_descriptor,
         new java.lang.String[] { "User", "Card", "Nonce", "Signature", });
-    internal_static_bloombox_schema_services_wallet_v1_CardIssuance_Response_descriptor =
-      internal_static_bloombox_schema_services_wallet_v1_CardIssuance_descriptor.getNestedTypes().get(1);
-    internal_static_bloombox_schema_services_wallet_v1_CardIssuance_Response_fieldAccessorTable = new
+    internal_static_bloombox_services_wallet_v1_CardIssuance_Response_descriptor =
+      internal_static_bloombox_services_wallet_v1_CardIssuance_descriptor.getNestedTypes().get(1);
+    internal_static_bloombox_services_wallet_v1_CardIssuance_Response_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_bloombox_schema_services_wallet_v1_CardIssuance_Response_descriptor,
+        internal_static_bloombox_services_wallet_v1_CardIssuance_Response_descriptor,
         new java.lang.String[] { "Card", });
-    internal_static_bloombox_schema_services_wallet_v1_CardIssuance_Operation_descriptor =
-      internal_static_bloombox_schema_services_wallet_v1_CardIssuance_descriptor.getNestedTypes().get(2);
-    internal_static_bloombox_schema_services_wallet_v1_CardIssuance_Operation_fieldAccessorTable = new
+    internal_static_bloombox_services_wallet_v1_CardIssuance_Operation_descriptor =
+      internal_static_bloombox_services_wallet_v1_CardIssuance_descriptor.getNestedTypes().get(2);
+    internal_static_bloombox_services_wallet_v1_CardIssuance_Operation_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_bloombox_schema_services_wallet_v1_CardIssuance_Operation_descriptor,
+        internal_static_bloombox_services_wallet_v1_CardIssuance_Operation_descriptor,
         new java.lang.String[] { "Request", "Response", });
-    internal_static_bloombox_schema_services_wallet_v1_CardActivate_descriptor =
+    internal_static_bloombox_services_wallet_v1_CardActivate_descriptor =
       getDescriptor().getMessageTypes().get(2);
-    internal_static_bloombox_schema_services_wallet_v1_CardActivate_fieldAccessorTable = new
+    internal_static_bloombox_services_wallet_v1_CardActivate_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_bloombox_schema_services_wallet_v1_CardActivate_descriptor,
+        internal_static_bloombox_services_wallet_v1_CardActivate_descriptor,
         new java.lang.String[] { });
-    internal_static_bloombox_schema_services_wallet_v1_CardActivate_Request_descriptor =
-      internal_static_bloombox_schema_services_wallet_v1_CardActivate_descriptor.getNestedTypes().get(0);
-    internal_static_bloombox_schema_services_wallet_v1_CardActivate_Request_fieldAccessorTable = new
+    internal_static_bloombox_services_wallet_v1_CardActivate_Request_descriptor =
+      internal_static_bloombox_services_wallet_v1_CardActivate_descriptor.getNestedTypes().get(0);
+    internal_static_bloombox_services_wallet_v1_CardActivate_Request_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_bloombox_schema_services_wallet_v1_CardActivate_Request_descriptor,
+        internal_static_bloombox_services_wallet_v1_CardActivate_Request_descriptor,
         new java.lang.String[] { "Library", "PassType", "Serial", "PushToken", });
-    internal_static_bloombox_schema_services_wallet_v1_CardRetrieve_descriptor =
+    internal_static_bloombox_services_wallet_v1_CardRetrieve_descriptor =
       getDescriptor().getMessageTypes().get(3);
-    internal_static_bloombox_schema_services_wallet_v1_CardRetrieve_fieldAccessorTable = new
+    internal_static_bloombox_services_wallet_v1_CardRetrieve_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_bloombox_schema_services_wallet_v1_CardRetrieve_descriptor,
+        internal_static_bloombox_services_wallet_v1_CardRetrieve_descriptor,
         new java.lang.String[] { });
-    internal_static_bloombox_schema_services_wallet_v1_CardRetrieve_Request_descriptor =
-      internal_static_bloombox_schema_services_wallet_v1_CardRetrieve_descriptor.getNestedTypes().get(0);
-    internal_static_bloombox_schema_services_wallet_v1_CardRetrieve_Request_fieldAccessorTable = new
+    internal_static_bloombox_services_wallet_v1_CardRetrieve_Request_descriptor =
+      internal_static_bloombox_services_wallet_v1_CardRetrieve_descriptor.getNestedTypes().get(0);
+    internal_static_bloombox_services_wallet_v1_CardRetrieve_Request_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_bloombox_schema_services_wallet_v1_CardRetrieve_Request_descriptor,
+        internal_static_bloombox_services_wallet_v1_CardRetrieve_Request_descriptor,
         new java.lang.String[] { "PassType", "Serial", });
-    internal_static_bloombox_schema_services_wallet_v1_CardRetrieve_Response_descriptor =
-      internal_static_bloombox_schema_services_wallet_v1_CardRetrieve_descriptor.getNestedTypes().get(1);
-    internal_static_bloombox_schema_services_wallet_v1_CardRetrieve_Response_fieldAccessorTable = new
+    internal_static_bloombox_services_wallet_v1_CardRetrieve_Response_descriptor =
+      internal_static_bloombox_services_wallet_v1_CardRetrieve_descriptor.getNestedTypes().get(1);
+    internal_static_bloombox_services_wallet_v1_CardRetrieve_Response_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_bloombox_schema_services_wallet_v1_CardRetrieve_Response_descriptor,
+        internal_static_bloombox_services_wallet_v1_CardRetrieve_Response_descriptor,
         new java.lang.String[] { "Payload", });
-    internal_static_bloombox_schema_services_wallet_v1_CardEnroll_descriptor =
+    internal_static_bloombox_services_wallet_v1_CardEnroll_descriptor =
       getDescriptor().getMessageTypes().get(4);
-    internal_static_bloombox_schema_services_wallet_v1_CardEnroll_fieldAccessorTable = new
+    internal_static_bloombox_services_wallet_v1_CardEnroll_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_bloombox_schema_services_wallet_v1_CardEnroll_descriptor,
+        internal_static_bloombox_services_wallet_v1_CardEnroll_descriptor,
         new java.lang.String[] { });
-    internal_static_bloombox_schema_services_wallet_v1_CardEnroll_CardSpec_descriptor =
-      internal_static_bloombox_schema_services_wallet_v1_CardEnroll_descriptor.getNestedTypes().get(0);
-    internal_static_bloombox_schema_services_wallet_v1_CardEnroll_CardSpec_fieldAccessorTable = new
+    internal_static_bloombox_services_wallet_v1_CardEnroll_CardSpec_descriptor =
+      internal_static_bloombox_services_wallet_v1_CardEnroll_descriptor.getNestedTypes().get(0);
+    internal_static_bloombox_services_wallet_v1_CardEnroll_CardSpec_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_bloombox_schema_services_wallet_v1_CardEnroll_CardSpec_descriptor,
+        internal_static_bloombox_services_wallet_v1_CardEnroll_CardSpec_descriptor,
         new java.lang.String[] { "FullName", "GivenName", "FamilyName", "EmailAddress", "PostalCode", "ISOCountryCode", "PhoneNumber", });
-    internal_static_bloombox_schema_services_wallet_v1_CardEnroll_Request_descriptor =
-      internal_static_bloombox_schema_services_wallet_v1_CardEnroll_descriptor.getNestedTypes().get(1);
-    internal_static_bloombox_schema_services_wallet_v1_CardEnroll_Request_fieldAccessorTable = new
+    internal_static_bloombox_services_wallet_v1_CardEnroll_Request_descriptor =
+      internal_static_bloombox_services_wallet_v1_CardEnroll_descriptor.getNestedTypes().get(1);
+    internal_static_bloombox_services_wallet_v1_CardEnroll_Request_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_bloombox_schema_services_wallet_v1_CardEnroll_Request_descriptor,
+        internal_static_bloombox_services_wallet_v1_CardEnroll_Request_descriptor,
         new java.lang.String[] { "PassType", "Serial", "PersonalizationToken", "RequiredPersonalizationInfo", });
-    internal_static_bloombox_schema_services_wallet_v1_CardEnroll_Response_descriptor =
-      internal_static_bloombox_schema_services_wallet_v1_CardEnroll_descriptor.getNestedTypes().get(2);
-    internal_static_bloombox_schema_services_wallet_v1_CardEnroll_Response_fieldAccessorTable = new
+    internal_static_bloombox_services_wallet_v1_CardEnroll_Response_descriptor =
+      internal_static_bloombox_services_wallet_v1_CardEnroll_descriptor.getNestedTypes().get(2);
+    internal_static_bloombox_services_wallet_v1_CardEnroll_Response_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_bloombox_schema_services_wallet_v1_CardEnroll_Response_descriptor,
+        internal_static_bloombox_services_wallet_v1_CardEnroll_Response_descriptor,
         new java.lang.String[] { "Signature", });
-    internal_static_bloombox_schema_services_wallet_v1_CardList_descriptor =
+    internal_static_bloombox_services_wallet_v1_CardList_descriptor =
       getDescriptor().getMessageTypes().get(5);
-    internal_static_bloombox_schema_services_wallet_v1_CardList_fieldAccessorTable = new
+    internal_static_bloombox_services_wallet_v1_CardList_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_bloombox_schema_services_wallet_v1_CardList_descriptor,
+        internal_static_bloombox_services_wallet_v1_CardList_descriptor,
         new java.lang.String[] { });
-    internal_static_bloombox_schema_services_wallet_v1_CardList_Request_descriptor =
-      internal_static_bloombox_schema_services_wallet_v1_CardList_descriptor.getNestedTypes().get(0);
-    internal_static_bloombox_schema_services_wallet_v1_CardList_Request_fieldAccessorTable = new
+    internal_static_bloombox_services_wallet_v1_CardList_Request_descriptor =
+      internal_static_bloombox_services_wallet_v1_CardList_descriptor.getNestedTypes().get(0);
+    internal_static_bloombox_services_wallet_v1_CardList_Request_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_bloombox_schema_services_wallet_v1_CardList_Request_descriptor,
+        internal_static_bloombox_services_wallet_v1_CardList_Request_descriptor,
         new java.lang.String[] { "Library", "PassType", "PassesUpdatedSince", });
-    internal_static_bloombox_schema_services_wallet_v1_CardList_Response_descriptor =
-      internal_static_bloombox_schema_services_wallet_v1_CardList_descriptor.getNestedTypes().get(1);
-    internal_static_bloombox_schema_services_wallet_v1_CardList_Response_fieldAccessorTable = new
+    internal_static_bloombox_services_wallet_v1_CardList_Response_descriptor =
+      internal_static_bloombox_services_wallet_v1_CardList_descriptor.getNestedTypes().get(1);
+    internal_static_bloombox_services_wallet_v1_CardList_Response_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_bloombox_schema_services_wallet_v1_CardList_Response_descriptor,
+        internal_static_bloombox_services_wallet_v1_CardList_Response_descriptor,
         new java.lang.String[] { "LastUpdated", "SerialNumbers", });
-    internal_static_bloombox_schema_services_wallet_v1_CardList_Operation_descriptor =
-      internal_static_bloombox_schema_services_wallet_v1_CardList_descriptor.getNestedTypes().get(2);
-    internal_static_bloombox_schema_services_wallet_v1_CardList_Operation_fieldAccessorTable = new
+    internal_static_bloombox_services_wallet_v1_CardList_Operation_descriptor =
+      internal_static_bloombox_services_wallet_v1_CardList_descriptor.getNestedTypes().get(2);
+    internal_static_bloombox_services_wallet_v1_CardList_Operation_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_bloombox_schema_services_wallet_v1_CardList_Operation_descriptor,
+        internal_static_bloombox_services_wallet_v1_CardList_Operation_descriptor,
         new java.lang.String[] { "Request", "Response", });
-    internal_static_bloombox_schema_services_wallet_v1_CardVoid_descriptor =
+    internal_static_bloombox_services_wallet_v1_CardVoid_descriptor =
       getDescriptor().getMessageTypes().get(6);
-    internal_static_bloombox_schema_services_wallet_v1_CardVoid_fieldAccessorTable = new
+    internal_static_bloombox_services_wallet_v1_CardVoid_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_bloombox_schema_services_wallet_v1_CardVoid_descriptor,
+        internal_static_bloombox_services_wallet_v1_CardVoid_descriptor,
         new java.lang.String[] { });
-    internal_static_bloombox_schema_services_wallet_v1_CardVoid_Request_descriptor =
-      internal_static_bloombox_schema_services_wallet_v1_CardVoid_descriptor.getNestedTypes().get(0);
-    internal_static_bloombox_schema_services_wallet_v1_CardVoid_Request_fieldAccessorTable = new
+    internal_static_bloombox_services_wallet_v1_CardVoid_Request_descriptor =
+      internal_static_bloombox_services_wallet_v1_CardVoid_descriptor.getNestedTypes().get(0);
+    internal_static_bloombox_services_wallet_v1_CardVoid_Request_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_bloombox_schema_services_wallet_v1_CardVoid_Request_descriptor,
+        internal_static_bloombox_services_wallet_v1_CardVoid_Request_descriptor,
         new java.lang.String[] { "Library", "PassType", "Serial", });
-    internal_static_bloombox_schema_services_wallet_v1_CardVoid_Operation_descriptor =
-      internal_static_bloombox_schema_services_wallet_v1_CardVoid_descriptor.getNestedTypes().get(1);
-    internal_static_bloombox_schema_services_wallet_v1_CardVoid_Operation_fieldAccessorTable = new
+    internal_static_bloombox_services_wallet_v1_CardVoid_Operation_descriptor =
+      internal_static_bloombox_services_wallet_v1_CardVoid_descriptor.getNestedTypes().get(1);
+    internal_static_bloombox_services_wallet_v1_CardVoid_Operation_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_bloombox_schema_services_wallet_v1_CardVoid_Operation_descriptor,
+        internal_static_bloombox_services_wallet_v1_CardVoid_Operation_descriptor,
         new java.lang.String[] { "Request", "Success", });
     com.google.protobuf.ExtensionRegistry registry =
         com.google.protobuf.ExtensionRegistry.newInstance();
@@ -485,7 +479,7 @@ public final class WalletServiceV1 {
     io.bloombox.schema.pass.PassID.getDescriptor();
     io.bloombox.schema.pass.PassIDKey.getDescriptor();
     io.opencannabis.schema.crypto.SignatureOuterClass.getDescriptor();
-    io.opencannabis.schema.crypto.primitives.pki.KeypairOuterClass.getDescriptor();
+    io.opencannabis.schema.crypto.primitives.Keys.getDescriptor();
   }
 
   // @@protoc_insertion_point(outer_class_scope)

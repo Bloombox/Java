@@ -1,11 +1,12 @@
 /*
- * Copyright 2018, Bloombox, LLC.
+ * Copyright 2018, Momentum Ideas, Co. All rights reserved.
  *
- * Licensed under the Apache License, Version 2.0 (the "License");
- * you may not use this file except in compliance with the License.
- * You may obtain a copy of the License at
- *
- *     http://www.apache.org/licenses/LICENSE-2.0
+ * Source and object computer code contained herein is the private intellectual
+ * property of Momentum Ideas Co., a Delaware Corporation. Use of this
+ * code in source form requires permission in writing before use or the
+ * assembly, distribution, or publishing of derivative works, for commercial
+ * purposes or any other purpose, from a duly authorized officer of Momentum
+ * Ideas Co.
  *
  * Unless required by applicable law or agreed to in writing, software
  * distributed under the License is distributed on an "AS IS" BASIS,
@@ -35,7 +36,7 @@ public final class PartnerAccount {
    * Channel through which a partner interacts with Bloombox.
    * </pre>
    *
-   * Protobuf enum {@code bloombox.schema.partner.PartnerChannel}
+   * Protobuf enum {@code bloombox.partner.PartnerChannel}
    */
   public enum PartnerChannel
       implements com.google.protobuf.ProtocolMessageEnum {
@@ -128,11 +129,11 @@ public final class PartnerAccount {
       this.value = value;
     }
 
-    // @@protoc_insertion_point(enum_scope:bloombox.schema.partner.PartnerChannel)
+    // @@protoc_insertion_point(enum_scope:bloombox.partner.PartnerChannel)
   }
 
   public interface PartnerOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:bloombox.schema.partner.Partner)
+      // @@protoc_insertion_point(interface_extends:bloombox.partner.Partner)
       com.google.protobuf.MessageOrBuilder {
 
     /**
@@ -176,7 +177,7 @@ public final class PartnerAccount {
      * Flags for various things about this partner account.
      * </pre>
      *
-     * <code>.bloombox.schema.partner.PartnerFlags flags = 3 [(.gen_bq_schema.description) = "Flags for various things about this partner account.", (.core.field) = { ... }</code>
+     * <code>.bloombox.partner.PartnerFlags flags = 3 [(.gen_bq_schema.description) = "Flags for various things about this partner account.", (.core.field) = { ... }</code>
      */
     boolean hasFlags();
     /**
@@ -184,7 +185,7 @@ public final class PartnerAccount {
      * Flags for various things about this partner account.
      * </pre>
      *
-     * <code>.bloombox.schema.partner.PartnerFlags flags = 3 [(.gen_bq_schema.description) = "Flags for various things about this partner account.", (.core.field) = { ... }</code>
+     * <code>.bloombox.partner.PartnerFlags flags = 3 [(.gen_bq_schema.description) = "Flags for various things about this partner account.", (.core.field) = { ... }</code>
      */
     io.bloombox.schema.partner.PartnerInfo.PartnerFlags getFlags();
     /**
@@ -192,7 +193,7 @@ public final class PartnerAccount {
      * Flags for various things about this partner account.
      * </pre>
      *
-     * <code>.bloombox.schema.partner.PartnerFlags flags = 3 [(.gen_bq_schema.description) = "Flags for various things about this partner account.", (.core.field) = { ... }</code>
+     * <code>.bloombox.partner.PartnerFlags flags = 3 [(.gen_bq_schema.description) = "Flags for various things about this partner account.", (.core.field) = { ... }</code>
      */
     io.bloombox.schema.partner.PartnerInfo.PartnerFlagsOrBuilder getFlagsOrBuilder();
 
@@ -269,7 +270,7 @@ public final class PartnerAccount {
      * Channel through which this partner organization interacts with Bloombox.
      * </pre>
      *
-     * <code>.bloombox.schema.partner.PartnerChannel channel = 7 [(.gen_bq_schema.description) = "Channel through which this partner organization interacts with Bloombox."];</code>
+     * <code>.bloombox.partner.PartnerChannel channel = 7 [(.gen_bq_schema.description) = "Channel through which this partner organization interacts with Bloombox."];</code>
      */
     int getChannelValue();
     /**
@@ -277,7 +278,7 @@ public final class PartnerAccount {
      * Channel through which this partner organization interacts with Bloombox.
      * </pre>
      *
-     * <code>.bloombox.schema.partner.PartnerChannel channel = 7 [(.gen_bq_schema.description) = "Channel through which this partner organization interacts with Bloombox."];</code>
+     * <code>.bloombox.partner.PartnerChannel channel = 7 [(.gen_bq_schema.description) = "Channel through which this partner organization interacts with Bloombox."];</code>
      */
     io.bloombox.schema.partner.PartnerAccount.PartnerChannel getChannel();
 
@@ -286,7 +287,7 @@ public final class PartnerAccount {
      * Settings for this partner.
      * </pre>
      *
-     * <code>.bloombox.schema.partner.settings.PartnerSettings settings = 8 [(.gen_bq_schema.ignore) = true, (.core.collection) = { ... }</code>
+     * <code>.bloombox.partner.settings.PartnerSettings settings = 8 [(.gen_bq_schema.ignore) = true, (.core.collection) = { ... }</code>
      */
     boolean hasSettings();
     /**
@@ -294,7 +295,7 @@ public final class PartnerAccount {
      * Settings for this partner.
      * </pre>
      *
-     * <code>.bloombox.schema.partner.settings.PartnerSettings settings = 8 [(.gen_bq_schema.ignore) = true, (.core.collection) = { ... }</code>
+     * <code>.bloombox.partner.settings.PartnerSettings settings = 8 [(.gen_bq_schema.ignore) = true, (.core.collection) = { ... }</code>
      */
     io.bloombox.schema.partner.settings.PartnerSettingsOuterClass.PartnerSettings getSettings();
     /**
@@ -302,7 +303,7 @@ public final class PartnerAccount {
      * Settings for this partner.
      * </pre>
      *
-     * <code>.bloombox.schema.partner.settings.PartnerSettings settings = 8 [(.gen_bq_schema.ignore) = true, (.core.collection) = { ... }</code>
+     * <code>.bloombox.partner.settings.PartnerSettings settings = 8 [(.gen_bq_schema.ignore) = true, (.core.collection) = { ... }</code>
      */
     io.bloombox.schema.partner.settings.PartnerSettingsOuterClass.PartnerSettingsOrBuilder getSettingsOrBuilder();
 
@@ -311,7 +312,7 @@ public final class PartnerAccount {
      * Location records attached to this partner.
      * </pre>
      *
-     * <code>repeated .bloombox.schema.partner.PartnerLocation location = 9 [(.gen_bq_schema.ignore) = true, (.core.collection) = { ... }</code>
+     * <code>repeated .bloombox.partner.PartnerLocation location = 9 [(.gen_bq_schema.ignore) = true, (.core.collection) = { ... }</code>
      */
     java.util.List<io.bloombox.schema.partner.LocationAccount.PartnerLocation> 
         getLocationList();
@@ -320,7 +321,7 @@ public final class PartnerAccount {
      * Location records attached to this partner.
      * </pre>
      *
-     * <code>repeated .bloombox.schema.partner.PartnerLocation location = 9 [(.gen_bq_schema.ignore) = true, (.core.collection) = { ... }</code>
+     * <code>repeated .bloombox.partner.PartnerLocation location = 9 [(.gen_bq_schema.ignore) = true, (.core.collection) = { ... }</code>
      */
     io.bloombox.schema.partner.LocationAccount.PartnerLocation getLocation(int index);
     /**
@@ -328,7 +329,7 @@ public final class PartnerAccount {
      * Location records attached to this partner.
      * </pre>
      *
-     * <code>repeated .bloombox.schema.partner.PartnerLocation location = 9 [(.gen_bq_schema.ignore) = true, (.core.collection) = { ... }</code>
+     * <code>repeated .bloombox.partner.PartnerLocation location = 9 [(.gen_bq_schema.ignore) = true, (.core.collection) = { ... }</code>
      */
     int getLocationCount();
     /**
@@ -336,7 +337,7 @@ public final class PartnerAccount {
      * Location records attached to this partner.
      * </pre>
      *
-     * <code>repeated .bloombox.schema.partner.PartnerLocation location = 9 [(.gen_bq_schema.ignore) = true, (.core.collection) = { ... }</code>
+     * <code>repeated .bloombox.partner.PartnerLocation location = 9 [(.gen_bq_schema.ignore) = true, (.core.collection) = { ... }</code>
      */
     java.util.List<? extends io.bloombox.schema.partner.LocationAccount.PartnerLocationOrBuilder> 
         getLocationOrBuilderList();
@@ -345,7 +346,7 @@ public final class PartnerAccount {
      * Location records attached to this partner.
      * </pre>
      *
-     * <code>repeated .bloombox.schema.partner.PartnerLocation location = 9 [(.gen_bq_schema.ignore) = true, (.core.collection) = { ... }</code>
+     * <code>repeated .bloombox.partner.PartnerLocation location = 9 [(.gen_bq_schema.ignore) = true, (.core.collection) = { ... }</code>
      */
     io.bloombox.schema.partner.LocationAccount.PartnerLocationOrBuilder getLocationOrBuilder(
         int index);
@@ -355,7 +356,7 @@ public final class PartnerAccount {
      * Access policy records attached to this partner.
      * </pre>
      *
-     * <code>repeated .bloombox.schema.security.access.AccessPolicy policy = 10 [(.gen_bq_schema.ignore) = true, (.core.collection) = { ... }</code>
+     * <code>repeated .bloombox.security.access.AccessPolicy policy = 10 [(.gen_bq_schema.ignore) = true, (.core.collection) = { ... }</code>
      */
     java.util.List<io.bloombox.schema.security.access.PartnerPermissions.AccessPolicy> 
         getPolicyList();
@@ -364,7 +365,7 @@ public final class PartnerAccount {
      * Access policy records attached to this partner.
      * </pre>
      *
-     * <code>repeated .bloombox.schema.security.access.AccessPolicy policy = 10 [(.gen_bq_schema.ignore) = true, (.core.collection) = { ... }</code>
+     * <code>repeated .bloombox.security.access.AccessPolicy policy = 10 [(.gen_bq_schema.ignore) = true, (.core.collection) = { ... }</code>
      */
     io.bloombox.schema.security.access.PartnerPermissions.AccessPolicy getPolicy(int index);
     /**
@@ -372,7 +373,7 @@ public final class PartnerAccount {
      * Access policy records attached to this partner.
      * </pre>
      *
-     * <code>repeated .bloombox.schema.security.access.AccessPolicy policy = 10 [(.gen_bq_schema.ignore) = true, (.core.collection) = { ... }</code>
+     * <code>repeated .bloombox.security.access.AccessPolicy policy = 10 [(.gen_bq_schema.ignore) = true, (.core.collection) = { ... }</code>
      */
     int getPolicyCount();
     /**
@@ -380,7 +381,7 @@ public final class PartnerAccount {
      * Access policy records attached to this partner.
      * </pre>
      *
-     * <code>repeated .bloombox.schema.security.access.AccessPolicy policy = 10 [(.gen_bq_schema.ignore) = true, (.core.collection) = { ... }</code>
+     * <code>repeated .bloombox.security.access.AccessPolicy policy = 10 [(.gen_bq_schema.ignore) = true, (.core.collection) = { ... }</code>
      */
     java.util.List<? extends io.bloombox.schema.security.access.PartnerPermissions.AccessPolicyOrBuilder> 
         getPolicyOrBuilderList();
@@ -389,7 +390,7 @@ public final class PartnerAccount {
      * Access policy records attached to this partner.
      * </pre>
      *
-     * <code>repeated .bloombox.schema.security.access.AccessPolicy policy = 10 [(.gen_bq_schema.ignore) = true, (.core.collection) = { ... }</code>
+     * <code>repeated .bloombox.security.access.AccessPolicy policy = 10 [(.gen_bq_schema.ignore) = true, (.core.collection) = { ... }</code>
      */
     io.bloombox.schema.security.access.PartnerPermissions.AccessPolicyOrBuilder getPolicyOrBuilder(
         int index);
@@ -451,11 +452,11 @@ public final class PartnerAccount {
    * a URL as a slug.
    * </pre>
    *
-   * Protobuf type {@code bloombox.schema.partner.Partner}
+   * Protobuf type {@code bloombox.partner.Partner}
    */
   public  static final class Partner extends
       com.google.protobuf.GeneratedMessageV3 implements
-      // @@protoc_insertion_point(message_implements:bloombox.schema.partner.Partner)
+      // @@protoc_insertion_point(message_implements:bloombox.partner.Partner)
       PartnerOrBuilder {
   private static final long serialVersionUID = 0L;
     // Use Partner.newBuilder() to construct.
@@ -495,13 +496,6 @@ public final class PartnerAccount {
             case 0:
               done = true;
               break;
-            default: {
-              if (!parseUnknownFieldProto3(
-                  input, unknownFields, extensionRegistry, tag)) {
-                done = true;
-              }
-              break;
-            }
             case 10: {
               java.lang.String s = input.readStringRequireUtf8();
 
@@ -622,6 +616,13 @@ public final class PartnerAccount {
 
               break;
             }
+            default: {
+              if (!parseUnknownFieldProto3(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
           }
         }
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
@@ -642,12 +643,13 @@ public final class PartnerAccount {
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return io.bloombox.schema.partner.PartnerAccount.internal_static_bloombox_schema_partner_Partner_descriptor;
+      return io.bloombox.schema.partner.PartnerAccount.internal_static_bloombox_partner_Partner_descriptor;
     }
 
+    @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return io.bloombox.schema.partner.PartnerAccount.internal_static_bloombox_schema_partner_Partner_fieldAccessorTable
+      return io.bloombox.schema.partner.PartnerAccount.internal_static_bloombox_partner_Partner_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
               io.bloombox.schema.partner.PartnerAccount.Partner.class, io.bloombox.schema.partner.PartnerAccount.Partner.Builder.class);
     }
@@ -744,7 +746,7 @@ public final class PartnerAccount {
      * Flags for various things about this partner account.
      * </pre>
      *
-     * <code>.bloombox.schema.partner.PartnerFlags flags = 3 [(.gen_bq_schema.description) = "Flags for various things about this partner account.", (.core.field) = { ... }</code>
+     * <code>.bloombox.partner.PartnerFlags flags = 3 [(.gen_bq_schema.description) = "Flags for various things about this partner account.", (.core.field) = { ... }</code>
      */
     public boolean hasFlags() {
       return flags_ != null;
@@ -754,7 +756,7 @@ public final class PartnerAccount {
      * Flags for various things about this partner account.
      * </pre>
      *
-     * <code>.bloombox.schema.partner.PartnerFlags flags = 3 [(.gen_bq_schema.description) = "Flags for various things about this partner account.", (.core.field) = { ... }</code>
+     * <code>.bloombox.partner.PartnerFlags flags = 3 [(.gen_bq_schema.description) = "Flags for various things about this partner account.", (.core.field) = { ... }</code>
      */
     public io.bloombox.schema.partner.PartnerInfo.PartnerFlags getFlags() {
       return flags_ == null ? io.bloombox.schema.partner.PartnerInfo.PartnerFlags.getDefaultInstance() : flags_;
@@ -764,7 +766,7 @@ public final class PartnerAccount {
      * Flags for various things about this partner account.
      * </pre>
      *
-     * <code>.bloombox.schema.partner.PartnerFlags flags = 3 [(.gen_bq_schema.description) = "Flags for various things about this partner account.", (.core.field) = { ... }</code>
+     * <code>.bloombox.partner.PartnerFlags flags = 3 [(.gen_bq_schema.description) = "Flags for various things about this partner account.", (.core.field) = { ... }</code>
      */
     public io.bloombox.schema.partner.PartnerInfo.PartnerFlagsOrBuilder getFlagsOrBuilder() {
       return getFlags();
@@ -885,7 +887,7 @@ public final class PartnerAccount {
      * Channel through which this partner organization interacts with Bloombox.
      * </pre>
      *
-     * <code>.bloombox.schema.partner.PartnerChannel channel = 7 [(.gen_bq_schema.description) = "Channel through which this partner organization interacts with Bloombox."];</code>
+     * <code>.bloombox.partner.PartnerChannel channel = 7 [(.gen_bq_schema.description) = "Channel through which this partner organization interacts with Bloombox."];</code>
      */
     public int getChannelValue() {
       return channel_;
@@ -895,9 +897,10 @@ public final class PartnerAccount {
      * Channel through which this partner organization interacts with Bloombox.
      * </pre>
      *
-     * <code>.bloombox.schema.partner.PartnerChannel channel = 7 [(.gen_bq_schema.description) = "Channel through which this partner organization interacts with Bloombox."];</code>
+     * <code>.bloombox.partner.PartnerChannel channel = 7 [(.gen_bq_schema.description) = "Channel through which this partner organization interacts with Bloombox."];</code>
      */
     public io.bloombox.schema.partner.PartnerAccount.PartnerChannel getChannel() {
+      @SuppressWarnings("deprecation")
       io.bloombox.schema.partner.PartnerAccount.PartnerChannel result = io.bloombox.schema.partner.PartnerAccount.PartnerChannel.valueOf(channel_);
       return result == null ? io.bloombox.schema.partner.PartnerAccount.PartnerChannel.UNRECOGNIZED : result;
     }
@@ -909,7 +912,7 @@ public final class PartnerAccount {
      * Settings for this partner.
      * </pre>
      *
-     * <code>.bloombox.schema.partner.settings.PartnerSettings settings = 8 [(.gen_bq_schema.ignore) = true, (.core.collection) = { ... }</code>
+     * <code>.bloombox.partner.settings.PartnerSettings settings = 8 [(.gen_bq_schema.ignore) = true, (.core.collection) = { ... }</code>
      */
     public boolean hasSettings() {
       return settings_ != null;
@@ -919,7 +922,7 @@ public final class PartnerAccount {
      * Settings for this partner.
      * </pre>
      *
-     * <code>.bloombox.schema.partner.settings.PartnerSettings settings = 8 [(.gen_bq_schema.ignore) = true, (.core.collection) = { ... }</code>
+     * <code>.bloombox.partner.settings.PartnerSettings settings = 8 [(.gen_bq_schema.ignore) = true, (.core.collection) = { ... }</code>
      */
     public io.bloombox.schema.partner.settings.PartnerSettingsOuterClass.PartnerSettings getSettings() {
       return settings_ == null ? io.bloombox.schema.partner.settings.PartnerSettingsOuterClass.PartnerSettings.getDefaultInstance() : settings_;
@@ -929,7 +932,7 @@ public final class PartnerAccount {
      * Settings for this partner.
      * </pre>
      *
-     * <code>.bloombox.schema.partner.settings.PartnerSettings settings = 8 [(.gen_bq_schema.ignore) = true, (.core.collection) = { ... }</code>
+     * <code>.bloombox.partner.settings.PartnerSettings settings = 8 [(.gen_bq_schema.ignore) = true, (.core.collection) = { ... }</code>
      */
     public io.bloombox.schema.partner.settings.PartnerSettingsOuterClass.PartnerSettingsOrBuilder getSettingsOrBuilder() {
       return getSettings();
@@ -942,7 +945,7 @@ public final class PartnerAccount {
      * Location records attached to this partner.
      * </pre>
      *
-     * <code>repeated .bloombox.schema.partner.PartnerLocation location = 9 [(.gen_bq_schema.ignore) = true, (.core.collection) = { ... }</code>
+     * <code>repeated .bloombox.partner.PartnerLocation location = 9 [(.gen_bq_schema.ignore) = true, (.core.collection) = { ... }</code>
      */
     public java.util.List<io.bloombox.schema.partner.LocationAccount.PartnerLocation> getLocationList() {
       return location_;
@@ -952,7 +955,7 @@ public final class PartnerAccount {
      * Location records attached to this partner.
      * </pre>
      *
-     * <code>repeated .bloombox.schema.partner.PartnerLocation location = 9 [(.gen_bq_schema.ignore) = true, (.core.collection) = { ... }</code>
+     * <code>repeated .bloombox.partner.PartnerLocation location = 9 [(.gen_bq_schema.ignore) = true, (.core.collection) = { ... }</code>
      */
     public java.util.List<? extends io.bloombox.schema.partner.LocationAccount.PartnerLocationOrBuilder> 
         getLocationOrBuilderList() {
@@ -963,7 +966,7 @@ public final class PartnerAccount {
      * Location records attached to this partner.
      * </pre>
      *
-     * <code>repeated .bloombox.schema.partner.PartnerLocation location = 9 [(.gen_bq_schema.ignore) = true, (.core.collection) = { ... }</code>
+     * <code>repeated .bloombox.partner.PartnerLocation location = 9 [(.gen_bq_schema.ignore) = true, (.core.collection) = { ... }</code>
      */
     public int getLocationCount() {
       return location_.size();
@@ -973,7 +976,7 @@ public final class PartnerAccount {
      * Location records attached to this partner.
      * </pre>
      *
-     * <code>repeated .bloombox.schema.partner.PartnerLocation location = 9 [(.gen_bq_schema.ignore) = true, (.core.collection) = { ... }</code>
+     * <code>repeated .bloombox.partner.PartnerLocation location = 9 [(.gen_bq_schema.ignore) = true, (.core.collection) = { ... }</code>
      */
     public io.bloombox.schema.partner.LocationAccount.PartnerLocation getLocation(int index) {
       return location_.get(index);
@@ -983,7 +986,7 @@ public final class PartnerAccount {
      * Location records attached to this partner.
      * </pre>
      *
-     * <code>repeated .bloombox.schema.partner.PartnerLocation location = 9 [(.gen_bq_schema.ignore) = true, (.core.collection) = { ... }</code>
+     * <code>repeated .bloombox.partner.PartnerLocation location = 9 [(.gen_bq_schema.ignore) = true, (.core.collection) = { ... }</code>
      */
     public io.bloombox.schema.partner.LocationAccount.PartnerLocationOrBuilder getLocationOrBuilder(
         int index) {
@@ -997,7 +1000,7 @@ public final class PartnerAccount {
      * Access policy records attached to this partner.
      * </pre>
      *
-     * <code>repeated .bloombox.schema.security.access.AccessPolicy policy = 10 [(.gen_bq_schema.ignore) = true, (.core.collection) = { ... }</code>
+     * <code>repeated .bloombox.security.access.AccessPolicy policy = 10 [(.gen_bq_schema.ignore) = true, (.core.collection) = { ... }</code>
      */
     public java.util.List<io.bloombox.schema.security.access.PartnerPermissions.AccessPolicy> getPolicyList() {
       return policy_;
@@ -1007,7 +1010,7 @@ public final class PartnerAccount {
      * Access policy records attached to this partner.
      * </pre>
      *
-     * <code>repeated .bloombox.schema.security.access.AccessPolicy policy = 10 [(.gen_bq_schema.ignore) = true, (.core.collection) = { ... }</code>
+     * <code>repeated .bloombox.security.access.AccessPolicy policy = 10 [(.gen_bq_schema.ignore) = true, (.core.collection) = { ... }</code>
      */
     public java.util.List<? extends io.bloombox.schema.security.access.PartnerPermissions.AccessPolicyOrBuilder> 
         getPolicyOrBuilderList() {
@@ -1018,7 +1021,7 @@ public final class PartnerAccount {
      * Access policy records attached to this partner.
      * </pre>
      *
-     * <code>repeated .bloombox.schema.security.access.AccessPolicy policy = 10 [(.gen_bq_schema.ignore) = true, (.core.collection) = { ... }</code>
+     * <code>repeated .bloombox.security.access.AccessPolicy policy = 10 [(.gen_bq_schema.ignore) = true, (.core.collection) = { ... }</code>
      */
     public int getPolicyCount() {
       return policy_.size();
@@ -1028,7 +1031,7 @@ public final class PartnerAccount {
      * Access policy records attached to this partner.
      * </pre>
      *
-     * <code>repeated .bloombox.schema.security.access.AccessPolicy policy = 10 [(.gen_bq_schema.ignore) = true, (.core.collection) = { ... }</code>
+     * <code>repeated .bloombox.security.access.AccessPolicy policy = 10 [(.gen_bq_schema.ignore) = true, (.core.collection) = { ... }</code>
      */
     public io.bloombox.schema.security.access.PartnerPermissions.AccessPolicy getPolicy(int index) {
       return policy_.get(index);
@@ -1038,7 +1041,7 @@ public final class PartnerAccount {
      * Access policy records attached to this partner.
      * </pre>
      *
-     * <code>repeated .bloombox.schema.security.access.AccessPolicy policy = 10 [(.gen_bq_schema.ignore) = true, (.core.collection) = { ... }</code>
+     * <code>repeated .bloombox.security.access.AccessPolicy policy = 10 [(.gen_bq_schema.ignore) = true, (.core.collection) = { ... }</code>
      */
     public io.bloombox.schema.security.access.PartnerPermissions.AccessPolicyOrBuilder getPolicyOrBuilder(
         int index) {
@@ -1112,6 +1115,7 @@ public final class PartnerAccount {
     }
 
     private byte memoizedIsInitialized = -1;
+    @java.lang.Override
     public final boolean isInitialized() {
       byte isInitialized = memoizedIsInitialized;
       if (isInitialized == 1) return true;
@@ -1121,6 +1125,7 @@ public final class PartnerAccount {
       return true;
     }
 
+    @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
       if (!getCodeBytes().isEmpty()) {
@@ -1162,6 +1167,7 @@ public final class PartnerAccount {
       unknownFields.writeTo(output);
     }
 
+    @java.lang.Override
     public int getSerializedSize() {
       int size = memoizedSize;
       if (size != -1) return size;
@@ -1395,6 +1401,7 @@ public final class PartnerAccount {
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
 
+    @java.lang.Override
     public Builder newBuilderForType() { return newBuilder(); }
     public static Builder newBuilder() {
       return DEFAULT_INSTANCE.toBuilder();
@@ -1402,6 +1409,7 @@ public final class PartnerAccount {
     public static Builder newBuilder(io.bloombox.schema.partner.PartnerAccount.Partner prototype) {
       return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
     }
+    @java.lang.Override
     public Builder toBuilder() {
       return this == DEFAULT_INSTANCE
           ? new Builder() : new Builder().mergeFrom(this);
@@ -1420,20 +1428,21 @@ public final class PartnerAccount {
      * a URL as a slug.
      * </pre>
      *
-     * Protobuf type {@code bloombox.schema.partner.Partner}
+     * Protobuf type {@code bloombox.partner.Partner}
      */
     public static final class Builder extends
         com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:bloombox.schema.partner.Partner)
+        // @@protoc_insertion_point(builder_implements:bloombox.partner.Partner)
         io.bloombox.schema.partner.PartnerAccount.PartnerOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return io.bloombox.schema.partner.PartnerAccount.internal_static_bloombox_schema_partner_Partner_descriptor;
+        return io.bloombox.schema.partner.PartnerAccount.internal_static_bloombox_partner_Partner_descriptor;
       }
 
+      @java.lang.Override
       protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return io.bloombox.schema.partner.PartnerAccount.internal_static_bloombox_schema_partner_Partner_fieldAccessorTable
+        return io.bloombox.schema.partner.PartnerAccount.internal_static_bloombox_partner_Partner_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
                 io.bloombox.schema.partner.PartnerAccount.Partner.class, io.bloombox.schema.partner.PartnerAccount.Partner.Builder.class);
       }
@@ -1455,6 +1464,7 @@ public final class PartnerAccount {
           getPolicyFieldBuilder();
         }
       }
+      @java.lang.Override
       public Builder clear() {
         super.clear();
         code_ = "";
@@ -1516,15 +1526,18 @@ public final class PartnerAccount {
         return this;
       }
 
+      @java.lang.Override
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return io.bloombox.schema.partner.PartnerAccount.internal_static_bloombox_schema_partner_Partner_descriptor;
+        return io.bloombox.schema.partner.PartnerAccount.internal_static_bloombox_partner_Partner_descriptor;
       }
 
+      @java.lang.Override
       public io.bloombox.schema.partner.PartnerAccount.Partner getDefaultInstanceForType() {
         return io.bloombox.schema.partner.PartnerAccount.Partner.getDefaultInstance();
       }
 
+      @java.lang.Override
       public io.bloombox.schema.partner.PartnerAccount.Partner build() {
         io.bloombox.schema.partner.PartnerAccount.Partner result = buildPartial();
         if (!result.isInitialized()) {
@@ -1533,6 +1546,7 @@ public final class PartnerAccount {
         return result;
       }
 
+      @java.lang.Override
       public io.bloombox.schema.partner.PartnerAccount.Partner buildPartial() {
         io.bloombox.schema.partner.PartnerAccount.Partner result = new io.bloombox.schema.partner.PartnerAccount.Partner(this);
         int from_bitField0_ = bitField0_;
@@ -1594,32 +1608,39 @@ public final class PartnerAccount {
         return result;
       }
 
+      @java.lang.Override
       public Builder clone() {
         return (Builder) super.clone();
       }
+      @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
         return (Builder) super.setField(field, value);
       }
+      @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
         return (Builder) super.clearField(field);
       }
+      @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
         return (Builder) super.clearOneof(oneof);
       }
+      @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
         return (Builder) super.setRepeatedField(field, index, value);
       }
+      @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
         return (Builder) super.addRepeatedField(field, value);
       }
+      @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
         if (other instanceof io.bloombox.schema.partner.PartnerAccount.Partner) {
           return mergeFrom((io.bloombox.schema.partner.PartnerAccount.Partner)other);
@@ -1721,10 +1742,12 @@ public final class PartnerAccount {
         return this;
       }
 
+      @java.lang.Override
       public final boolean isInitialized() {
         return true;
       }
 
+      @java.lang.Override
       public Builder mergeFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -1930,7 +1953,7 @@ public final class PartnerAccount {
        * Flags for various things about this partner account.
        * </pre>
        *
-       * <code>.bloombox.schema.partner.PartnerFlags flags = 3 [(.gen_bq_schema.description) = "Flags for various things about this partner account.", (.core.field) = { ... }</code>
+       * <code>.bloombox.partner.PartnerFlags flags = 3 [(.gen_bq_schema.description) = "Flags for various things about this partner account.", (.core.field) = { ... }</code>
        */
       public boolean hasFlags() {
         return flagsBuilder_ != null || flags_ != null;
@@ -1940,7 +1963,7 @@ public final class PartnerAccount {
        * Flags for various things about this partner account.
        * </pre>
        *
-       * <code>.bloombox.schema.partner.PartnerFlags flags = 3 [(.gen_bq_schema.description) = "Flags for various things about this partner account.", (.core.field) = { ... }</code>
+       * <code>.bloombox.partner.PartnerFlags flags = 3 [(.gen_bq_schema.description) = "Flags for various things about this partner account.", (.core.field) = { ... }</code>
        */
       public io.bloombox.schema.partner.PartnerInfo.PartnerFlags getFlags() {
         if (flagsBuilder_ == null) {
@@ -1954,7 +1977,7 @@ public final class PartnerAccount {
        * Flags for various things about this partner account.
        * </pre>
        *
-       * <code>.bloombox.schema.partner.PartnerFlags flags = 3 [(.gen_bq_schema.description) = "Flags for various things about this partner account.", (.core.field) = { ... }</code>
+       * <code>.bloombox.partner.PartnerFlags flags = 3 [(.gen_bq_schema.description) = "Flags for various things about this partner account.", (.core.field) = { ... }</code>
        */
       public Builder setFlags(io.bloombox.schema.partner.PartnerInfo.PartnerFlags value) {
         if (flagsBuilder_ == null) {
@@ -1974,7 +1997,7 @@ public final class PartnerAccount {
        * Flags for various things about this partner account.
        * </pre>
        *
-       * <code>.bloombox.schema.partner.PartnerFlags flags = 3 [(.gen_bq_schema.description) = "Flags for various things about this partner account.", (.core.field) = { ... }</code>
+       * <code>.bloombox.partner.PartnerFlags flags = 3 [(.gen_bq_schema.description) = "Flags for various things about this partner account.", (.core.field) = { ... }</code>
        */
       public Builder setFlags(
           io.bloombox.schema.partner.PartnerInfo.PartnerFlags.Builder builderForValue) {
@@ -1992,7 +2015,7 @@ public final class PartnerAccount {
        * Flags for various things about this partner account.
        * </pre>
        *
-       * <code>.bloombox.schema.partner.PartnerFlags flags = 3 [(.gen_bq_schema.description) = "Flags for various things about this partner account.", (.core.field) = { ... }</code>
+       * <code>.bloombox.partner.PartnerFlags flags = 3 [(.gen_bq_schema.description) = "Flags for various things about this partner account.", (.core.field) = { ... }</code>
        */
       public Builder mergeFlags(io.bloombox.schema.partner.PartnerInfo.PartnerFlags value) {
         if (flagsBuilder_ == null) {
@@ -2014,7 +2037,7 @@ public final class PartnerAccount {
        * Flags for various things about this partner account.
        * </pre>
        *
-       * <code>.bloombox.schema.partner.PartnerFlags flags = 3 [(.gen_bq_schema.description) = "Flags for various things about this partner account.", (.core.field) = { ... }</code>
+       * <code>.bloombox.partner.PartnerFlags flags = 3 [(.gen_bq_schema.description) = "Flags for various things about this partner account.", (.core.field) = { ... }</code>
        */
       public Builder clearFlags() {
         if (flagsBuilder_ == null) {
@@ -2032,7 +2055,7 @@ public final class PartnerAccount {
        * Flags for various things about this partner account.
        * </pre>
        *
-       * <code>.bloombox.schema.partner.PartnerFlags flags = 3 [(.gen_bq_schema.description) = "Flags for various things about this partner account.", (.core.field) = { ... }</code>
+       * <code>.bloombox.partner.PartnerFlags flags = 3 [(.gen_bq_schema.description) = "Flags for various things about this partner account.", (.core.field) = { ... }</code>
        */
       public io.bloombox.schema.partner.PartnerInfo.PartnerFlags.Builder getFlagsBuilder() {
         
@@ -2044,7 +2067,7 @@ public final class PartnerAccount {
        * Flags for various things about this partner account.
        * </pre>
        *
-       * <code>.bloombox.schema.partner.PartnerFlags flags = 3 [(.gen_bq_schema.description) = "Flags for various things about this partner account.", (.core.field) = { ... }</code>
+       * <code>.bloombox.partner.PartnerFlags flags = 3 [(.gen_bq_schema.description) = "Flags for various things about this partner account.", (.core.field) = { ... }</code>
        */
       public io.bloombox.schema.partner.PartnerInfo.PartnerFlagsOrBuilder getFlagsOrBuilder() {
         if (flagsBuilder_ != null) {
@@ -2059,7 +2082,7 @@ public final class PartnerAccount {
        * Flags for various things about this partner account.
        * </pre>
        *
-       * <code>.bloombox.schema.partner.PartnerFlags flags = 3 [(.gen_bq_schema.description) = "Flags for various things about this partner account.", (.core.field) = { ... }</code>
+       * <code>.bloombox.partner.PartnerFlags flags = 3 [(.gen_bq_schema.description) = "Flags for various things about this partner account.", (.core.field) = { ... }</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
           io.bloombox.schema.partner.PartnerInfo.PartnerFlags, io.bloombox.schema.partner.PartnerInfo.PartnerFlags.Builder, io.bloombox.schema.partner.PartnerInfo.PartnerFlagsOrBuilder> 
@@ -2476,7 +2499,7 @@ public final class PartnerAccount {
        * Channel through which this partner organization interacts with Bloombox.
        * </pre>
        *
-       * <code>.bloombox.schema.partner.PartnerChannel channel = 7 [(.gen_bq_schema.description) = "Channel through which this partner organization interacts with Bloombox."];</code>
+       * <code>.bloombox.partner.PartnerChannel channel = 7 [(.gen_bq_schema.description) = "Channel through which this partner organization interacts with Bloombox."];</code>
        */
       public int getChannelValue() {
         return channel_;
@@ -2486,7 +2509,7 @@ public final class PartnerAccount {
        * Channel through which this partner organization interacts with Bloombox.
        * </pre>
        *
-       * <code>.bloombox.schema.partner.PartnerChannel channel = 7 [(.gen_bq_schema.description) = "Channel through which this partner organization interacts with Bloombox."];</code>
+       * <code>.bloombox.partner.PartnerChannel channel = 7 [(.gen_bq_schema.description) = "Channel through which this partner organization interacts with Bloombox."];</code>
        */
       public Builder setChannelValue(int value) {
         channel_ = value;
@@ -2498,9 +2521,10 @@ public final class PartnerAccount {
        * Channel through which this partner organization interacts with Bloombox.
        * </pre>
        *
-       * <code>.bloombox.schema.partner.PartnerChannel channel = 7 [(.gen_bq_schema.description) = "Channel through which this partner organization interacts with Bloombox."];</code>
+       * <code>.bloombox.partner.PartnerChannel channel = 7 [(.gen_bq_schema.description) = "Channel through which this partner organization interacts with Bloombox."];</code>
        */
       public io.bloombox.schema.partner.PartnerAccount.PartnerChannel getChannel() {
+        @SuppressWarnings("deprecation")
         io.bloombox.schema.partner.PartnerAccount.PartnerChannel result = io.bloombox.schema.partner.PartnerAccount.PartnerChannel.valueOf(channel_);
         return result == null ? io.bloombox.schema.partner.PartnerAccount.PartnerChannel.UNRECOGNIZED : result;
       }
@@ -2509,7 +2533,7 @@ public final class PartnerAccount {
        * Channel through which this partner organization interacts with Bloombox.
        * </pre>
        *
-       * <code>.bloombox.schema.partner.PartnerChannel channel = 7 [(.gen_bq_schema.description) = "Channel through which this partner organization interacts with Bloombox."];</code>
+       * <code>.bloombox.partner.PartnerChannel channel = 7 [(.gen_bq_schema.description) = "Channel through which this partner organization interacts with Bloombox."];</code>
        */
       public Builder setChannel(io.bloombox.schema.partner.PartnerAccount.PartnerChannel value) {
         if (value == null) {
@@ -2525,7 +2549,7 @@ public final class PartnerAccount {
        * Channel through which this partner organization interacts with Bloombox.
        * </pre>
        *
-       * <code>.bloombox.schema.partner.PartnerChannel channel = 7 [(.gen_bq_schema.description) = "Channel through which this partner organization interacts with Bloombox."];</code>
+       * <code>.bloombox.partner.PartnerChannel channel = 7 [(.gen_bq_schema.description) = "Channel through which this partner organization interacts with Bloombox."];</code>
        */
       public Builder clearChannel() {
         
@@ -2542,7 +2566,7 @@ public final class PartnerAccount {
        * Settings for this partner.
        * </pre>
        *
-       * <code>.bloombox.schema.partner.settings.PartnerSettings settings = 8 [(.gen_bq_schema.ignore) = true, (.core.collection) = { ... }</code>
+       * <code>.bloombox.partner.settings.PartnerSettings settings = 8 [(.gen_bq_schema.ignore) = true, (.core.collection) = { ... }</code>
        */
       public boolean hasSettings() {
         return settingsBuilder_ != null || settings_ != null;
@@ -2552,7 +2576,7 @@ public final class PartnerAccount {
        * Settings for this partner.
        * </pre>
        *
-       * <code>.bloombox.schema.partner.settings.PartnerSettings settings = 8 [(.gen_bq_schema.ignore) = true, (.core.collection) = { ... }</code>
+       * <code>.bloombox.partner.settings.PartnerSettings settings = 8 [(.gen_bq_schema.ignore) = true, (.core.collection) = { ... }</code>
        */
       public io.bloombox.schema.partner.settings.PartnerSettingsOuterClass.PartnerSettings getSettings() {
         if (settingsBuilder_ == null) {
@@ -2566,7 +2590,7 @@ public final class PartnerAccount {
        * Settings for this partner.
        * </pre>
        *
-       * <code>.bloombox.schema.partner.settings.PartnerSettings settings = 8 [(.gen_bq_schema.ignore) = true, (.core.collection) = { ... }</code>
+       * <code>.bloombox.partner.settings.PartnerSettings settings = 8 [(.gen_bq_schema.ignore) = true, (.core.collection) = { ... }</code>
        */
       public Builder setSettings(io.bloombox.schema.partner.settings.PartnerSettingsOuterClass.PartnerSettings value) {
         if (settingsBuilder_ == null) {
@@ -2586,7 +2610,7 @@ public final class PartnerAccount {
        * Settings for this partner.
        * </pre>
        *
-       * <code>.bloombox.schema.partner.settings.PartnerSettings settings = 8 [(.gen_bq_schema.ignore) = true, (.core.collection) = { ... }</code>
+       * <code>.bloombox.partner.settings.PartnerSettings settings = 8 [(.gen_bq_schema.ignore) = true, (.core.collection) = { ... }</code>
        */
       public Builder setSettings(
           io.bloombox.schema.partner.settings.PartnerSettingsOuterClass.PartnerSettings.Builder builderForValue) {
@@ -2604,7 +2628,7 @@ public final class PartnerAccount {
        * Settings for this partner.
        * </pre>
        *
-       * <code>.bloombox.schema.partner.settings.PartnerSettings settings = 8 [(.gen_bq_schema.ignore) = true, (.core.collection) = { ... }</code>
+       * <code>.bloombox.partner.settings.PartnerSettings settings = 8 [(.gen_bq_schema.ignore) = true, (.core.collection) = { ... }</code>
        */
       public Builder mergeSettings(io.bloombox.schema.partner.settings.PartnerSettingsOuterClass.PartnerSettings value) {
         if (settingsBuilder_ == null) {
@@ -2626,7 +2650,7 @@ public final class PartnerAccount {
        * Settings for this partner.
        * </pre>
        *
-       * <code>.bloombox.schema.partner.settings.PartnerSettings settings = 8 [(.gen_bq_schema.ignore) = true, (.core.collection) = { ... }</code>
+       * <code>.bloombox.partner.settings.PartnerSettings settings = 8 [(.gen_bq_schema.ignore) = true, (.core.collection) = { ... }</code>
        */
       public Builder clearSettings() {
         if (settingsBuilder_ == null) {
@@ -2644,7 +2668,7 @@ public final class PartnerAccount {
        * Settings for this partner.
        * </pre>
        *
-       * <code>.bloombox.schema.partner.settings.PartnerSettings settings = 8 [(.gen_bq_schema.ignore) = true, (.core.collection) = { ... }</code>
+       * <code>.bloombox.partner.settings.PartnerSettings settings = 8 [(.gen_bq_schema.ignore) = true, (.core.collection) = { ... }</code>
        */
       public io.bloombox.schema.partner.settings.PartnerSettingsOuterClass.PartnerSettings.Builder getSettingsBuilder() {
         
@@ -2656,7 +2680,7 @@ public final class PartnerAccount {
        * Settings for this partner.
        * </pre>
        *
-       * <code>.bloombox.schema.partner.settings.PartnerSettings settings = 8 [(.gen_bq_schema.ignore) = true, (.core.collection) = { ... }</code>
+       * <code>.bloombox.partner.settings.PartnerSettings settings = 8 [(.gen_bq_schema.ignore) = true, (.core.collection) = { ... }</code>
        */
       public io.bloombox.schema.partner.settings.PartnerSettingsOuterClass.PartnerSettingsOrBuilder getSettingsOrBuilder() {
         if (settingsBuilder_ != null) {
@@ -2671,7 +2695,7 @@ public final class PartnerAccount {
        * Settings for this partner.
        * </pre>
        *
-       * <code>.bloombox.schema.partner.settings.PartnerSettings settings = 8 [(.gen_bq_schema.ignore) = true, (.core.collection) = { ... }</code>
+       * <code>.bloombox.partner.settings.PartnerSettings settings = 8 [(.gen_bq_schema.ignore) = true, (.core.collection) = { ... }</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
           io.bloombox.schema.partner.settings.PartnerSettingsOuterClass.PartnerSettings, io.bloombox.schema.partner.settings.PartnerSettingsOuterClass.PartnerSettings.Builder, io.bloombox.schema.partner.settings.PartnerSettingsOuterClass.PartnerSettingsOrBuilder> 
@@ -2704,7 +2728,7 @@ public final class PartnerAccount {
        * Location records attached to this partner.
        * </pre>
        *
-       * <code>repeated .bloombox.schema.partner.PartnerLocation location = 9 [(.gen_bq_schema.ignore) = true, (.core.collection) = { ... }</code>
+       * <code>repeated .bloombox.partner.PartnerLocation location = 9 [(.gen_bq_schema.ignore) = true, (.core.collection) = { ... }</code>
        */
       public java.util.List<io.bloombox.schema.partner.LocationAccount.PartnerLocation> getLocationList() {
         if (locationBuilder_ == null) {
@@ -2718,7 +2742,7 @@ public final class PartnerAccount {
        * Location records attached to this partner.
        * </pre>
        *
-       * <code>repeated .bloombox.schema.partner.PartnerLocation location = 9 [(.gen_bq_schema.ignore) = true, (.core.collection) = { ... }</code>
+       * <code>repeated .bloombox.partner.PartnerLocation location = 9 [(.gen_bq_schema.ignore) = true, (.core.collection) = { ... }</code>
        */
       public int getLocationCount() {
         if (locationBuilder_ == null) {
@@ -2732,7 +2756,7 @@ public final class PartnerAccount {
        * Location records attached to this partner.
        * </pre>
        *
-       * <code>repeated .bloombox.schema.partner.PartnerLocation location = 9 [(.gen_bq_schema.ignore) = true, (.core.collection) = { ... }</code>
+       * <code>repeated .bloombox.partner.PartnerLocation location = 9 [(.gen_bq_schema.ignore) = true, (.core.collection) = { ... }</code>
        */
       public io.bloombox.schema.partner.LocationAccount.PartnerLocation getLocation(int index) {
         if (locationBuilder_ == null) {
@@ -2746,7 +2770,7 @@ public final class PartnerAccount {
        * Location records attached to this partner.
        * </pre>
        *
-       * <code>repeated .bloombox.schema.partner.PartnerLocation location = 9 [(.gen_bq_schema.ignore) = true, (.core.collection) = { ... }</code>
+       * <code>repeated .bloombox.partner.PartnerLocation location = 9 [(.gen_bq_schema.ignore) = true, (.core.collection) = { ... }</code>
        */
       public Builder setLocation(
           int index, io.bloombox.schema.partner.LocationAccount.PartnerLocation value) {
@@ -2767,7 +2791,7 @@ public final class PartnerAccount {
        * Location records attached to this partner.
        * </pre>
        *
-       * <code>repeated .bloombox.schema.partner.PartnerLocation location = 9 [(.gen_bq_schema.ignore) = true, (.core.collection) = { ... }</code>
+       * <code>repeated .bloombox.partner.PartnerLocation location = 9 [(.gen_bq_schema.ignore) = true, (.core.collection) = { ... }</code>
        */
       public Builder setLocation(
           int index, io.bloombox.schema.partner.LocationAccount.PartnerLocation.Builder builderForValue) {
@@ -2785,7 +2809,7 @@ public final class PartnerAccount {
        * Location records attached to this partner.
        * </pre>
        *
-       * <code>repeated .bloombox.schema.partner.PartnerLocation location = 9 [(.gen_bq_schema.ignore) = true, (.core.collection) = { ... }</code>
+       * <code>repeated .bloombox.partner.PartnerLocation location = 9 [(.gen_bq_schema.ignore) = true, (.core.collection) = { ... }</code>
        */
       public Builder addLocation(io.bloombox.schema.partner.LocationAccount.PartnerLocation value) {
         if (locationBuilder_ == null) {
@@ -2805,7 +2829,7 @@ public final class PartnerAccount {
        * Location records attached to this partner.
        * </pre>
        *
-       * <code>repeated .bloombox.schema.partner.PartnerLocation location = 9 [(.gen_bq_schema.ignore) = true, (.core.collection) = { ... }</code>
+       * <code>repeated .bloombox.partner.PartnerLocation location = 9 [(.gen_bq_schema.ignore) = true, (.core.collection) = { ... }</code>
        */
       public Builder addLocation(
           int index, io.bloombox.schema.partner.LocationAccount.PartnerLocation value) {
@@ -2826,7 +2850,7 @@ public final class PartnerAccount {
        * Location records attached to this partner.
        * </pre>
        *
-       * <code>repeated .bloombox.schema.partner.PartnerLocation location = 9 [(.gen_bq_schema.ignore) = true, (.core.collection) = { ... }</code>
+       * <code>repeated .bloombox.partner.PartnerLocation location = 9 [(.gen_bq_schema.ignore) = true, (.core.collection) = { ... }</code>
        */
       public Builder addLocation(
           io.bloombox.schema.partner.LocationAccount.PartnerLocation.Builder builderForValue) {
@@ -2844,7 +2868,7 @@ public final class PartnerAccount {
        * Location records attached to this partner.
        * </pre>
        *
-       * <code>repeated .bloombox.schema.partner.PartnerLocation location = 9 [(.gen_bq_schema.ignore) = true, (.core.collection) = { ... }</code>
+       * <code>repeated .bloombox.partner.PartnerLocation location = 9 [(.gen_bq_schema.ignore) = true, (.core.collection) = { ... }</code>
        */
       public Builder addLocation(
           int index, io.bloombox.schema.partner.LocationAccount.PartnerLocation.Builder builderForValue) {
@@ -2862,7 +2886,7 @@ public final class PartnerAccount {
        * Location records attached to this partner.
        * </pre>
        *
-       * <code>repeated .bloombox.schema.partner.PartnerLocation location = 9 [(.gen_bq_schema.ignore) = true, (.core.collection) = { ... }</code>
+       * <code>repeated .bloombox.partner.PartnerLocation location = 9 [(.gen_bq_schema.ignore) = true, (.core.collection) = { ... }</code>
        */
       public Builder addAllLocation(
           java.lang.Iterable<? extends io.bloombox.schema.partner.LocationAccount.PartnerLocation> values) {
@@ -2881,7 +2905,7 @@ public final class PartnerAccount {
        * Location records attached to this partner.
        * </pre>
        *
-       * <code>repeated .bloombox.schema.partner.PartnerLocation location = 9 [(.gen_bq_schema.ignore) = true, (.core.collection) = { ... }</code>
+       * <code>repeated .bloombox.partner.PartnerLocation location = 9 [(.gen_bq_schema.ignore) = true, (.core.collection) = { ... }</code>
        */
       public Builder clearLocation() {
         if (locationBuilder_ == null) {
@@ -2898,7 +2922,7 @@ public final class PartnerAccount {
        * Location records attached to this partner.
        * </pre>
        *
-       * <code>repeated .bloombox.schema.partner.PartnerLocation location = 9 [(.gen_bq_schema.ignore) = true, (.core.collection) = { ... }</code>
+       * <code>repeated .bloombox.partner.PartnerLocation location = 9 [(.gen_bq_schema.ignore) = true, (.core.collection) = { ... }</code>
        */
       public Builder removeLocation(int index) {
         if (locationBuilder_ == null) {
@@ -2915,7 +2939,7 @@ public final class PartnerAccount {
        * Location records attached to this partner.
        * </pre>
        *
-       * <code>repeated .bloombox.schema.partner.PartnerLocation location = 9 [(.gen_bq_schema.ignore) = true, (.core.collection) = { ... }</code>
+       * <code>repeated .bloombox.partner.PartnerLocation location = 9 [(.gen_bq_schema.ignore) = true, (.core.collection) = { ... }</code>
        */
       public io.bloombox.schema.partner.LocationAccount.PartnerLocation.Builder getLocationBuilder(
           int index) {
@@ -2926,7 +2950,7 @@ public final class PartnerAccount {
        * Location records attached to this partner.
        * </pre>
        *
-       * <code>repeated .bloombox.schema.partner.PartnerLocation location = 9 [(.gen_bq_schema.ignore) = true, (.core.collection) = { ... }</code>
+       * <code>repeated .bloombox.partner.PartnerLocation location = 9 [(.gen_bq_schema.ignore) = true, (.core.collection) = { ... }</code>
        */
       public io.bloombox.schema.partner.LocationAccount.PartnerLocationOrBuilder getLocationOrBuilder(
           int index) {
@@ -2940,7 +2964,7 @@ public final class PartnerAccount {
        * Location records attached to this partner.
        * </pre>
        *
-       * <code>repeated .bloombox.schema.partner.PartnerLocation location = 9 [(.gen_bq_schema.ignore) = true, (.core.collection) = { ... }</code>
+       * <code>repeated .bloombox.partner.PartnerLocation location = 9 [(.gen_bq_schema.ignore) = true, (.core.collection) = { ... }</code>
        */
       public java.util.List<? extends io.bloombox.schema.partner.LocationAccount.PartnerLocationOrBuilder> 
            getLocationOrBuilderList() {
@@ -2955,7 +2979,7 @@ public final class PartnerAccount {
        * Location records attached to this partner.
        * </pre>
        *
-       * <code>repeated .bloombox.schema.partner.PartnerLocation location = 9 [(.gen_bq_schema.ignore) = true, (.core.collection) = { ... }</code>
+       * <code>repeated .bloombox.partner.PartnerLocation location = 9 [(.gen_bq_schema.ignore) = true, (.core.collection) = { ... }</code>
        */
       public io.bloombox.schema.partner.LocationAccount.PartnerLocation.Builder addLocationBuilder() {
         return getLocationFieldBuilder().addBuilder(
@@ -2966,7 +2990,7 @@ public final class PartnerAccount {
        * Location records attached to this partner.
        * </pre>
        *
-       * <code>repeated .bloombox.schema.partner.PartnerLocation location = 9 [(.gen_bq_schema.ignore) = true, (.core.collection) = { ... }</code>
+       * <code>repeated .bloombox.partner.PartnerLocation location = 9 [(.gen_bq_schema.ignore) = true, (.core.collection) = { ... }</code>
        */
       public io.bloombox.schema.partner.LocationAccount.PartnerLocation.Builder addLocationBuilder(
           int index) {
@@ -2978,7 +3002,7 @@ public final class PartnerAccount {
        * Location records attached to this partner.
        * </pre>
        *
-       * <code>repeated .bloombox.schema.partner.PartnerLocation location = 9 [(.gen_bq_schema.ignore) = true, (.core.collection) = { ... }</code>
+       * <code>repeated .bloombox.partner.PartnerLocation location = 9 [(.gen_bq_schema.ignore) = true, (.core.collection) = { ... }</code>
        */
       public java.util.List<io.bloombox.schema.partner.LocationAccount.PartnerLocation.Builder> 
            getLocationBuilderList() {
@@ -3016,7 +3040,7 @@ public final class PartnerAccount {
        * Access policy records attached to this partner.
        * </pre>
        *
-       * <code>repeated .bloombox.schema.security.access.AccessPolicy policy = 10 [(.gen_bq_schema.ignore) = true, (.core.collection) = { ... }</code>
+       * <code>repeated .bloombox.security.access.AccessPolicy policy = 10 [(.gen_bq_schema.ignore) = true, (.core.collection) = { ... }</code>
        */
       public java.util.List<io.bloombox.schema.security.access.PartnerPermissions.AccessPolicy> getPolicyList() {
         if (policyBuilder_ == null) {
@@ -3030,7 +3054,7 @@ public final class PartnerAccount {
        * Access policy records attached to this partner.
        * </pre>
        *
-       * <code>repeated .bloombox.schema.security.access.AccessPolicy policy = 10 [(.gen_bq_schema.ignore) = true, (.core.collection) = { ... }</code>
+       * <code>repeated .bloombox.security.access.AccessPolicy policy = 10 [(.gen_bq_schema.ignore) = true, (.core.collection) = { ... }</code>
        */
       public int getPolicyCount() {
         if (policyBuilder_ == null) {
@@ -3044,7 +3068,7 @@ public final class PartnerAccount {
        * Access policy records attached to this partner.
        * </pre>
        *
-       * <code>repeated .bloombox.schema.security.access.AccessPolicy policy = 10 [(.gen_bq_schema.ignore) = true, (.core.collection) = { ... }</code>
+       * <code>repeated .bloombox.security.access.AccessPolicy policy = 10 [(.gen_bq_schema.ignore) = true, (.core.collection) = { ... }</code>
        */
       public io.bloombox.schema.security.access.PartnerPermissions.AccessPolicy getPolicy(int index) {
         if (policyBuilder_ == null) {
@@ -3058,7 +3082,7 @@ public final class PartnerAccount {
        * Access policy records attached to this partner.
        * </pre>
        *
-       * <code>repeated .bloombox.schema.security.access.AccessPolicy policy = 10 [(.gen_bq_schema.ignore) = true, (.core.collection) = { ... }</code>
+       * <code>repeated .bloombox.security.access.AccessPolicy policy = 10 [(.gen_bq_schema.ignore) = true, (.core.collection) = { ... }</code>
        */
       public Builder setPolicy(
           int index, io.bloombox.schema.security.access.PartnerPermissions.AccessPolicy value) {
@@ -3079,7 +3103,7 @@ public final class PartnerAccount {
        * Access policy records attached to this partner.
        * </pre>
        *
-       * <code>repeated .bloombox.schema.security.access.AccessPolicy policy = 10 [(.gen_bq_schema.ignore) = true, (.core.collection) = { ... }</code>
+       * <code>repeated .bloombox.security.access.AccessPolicy policy = 10 [(.gen_bq_schema.ignore) = true, (.core.collection) = { ... }</code>
        */
       public Builder setPolicy(
           int index, io.bloombox.schema.security.access.PartnerPermissions.AccessPolicy.Builder builderForValue) {
@@ -3097,7 +3121,7 @@ public final class PartnerAccount {
        * Access policy records attached to this partner.
        * </pre>
        *
-       * <code>repeated .bloombox.schema.security.access.AccessPolicy policy = 10 [(.gen_bq_schema.ignore) = true, (.core.collection) = { ... }</code>
+       * <code>repeated .bloombox.security.access.AccessPolicy policy = 10 [(.gen_bq_schema.ignore) = true, (.core.collection) = { ... }</code>
        */
       public Builder addPolicy(io.bloombox.schema.security.access.PartnerPermissions.AccessPolicy value) {
         if (policyBuilder_ == null) {
@@ -3117,7 +3141,7 @@ public final class PartnerAccount {
        * Access policy records attached to this partner.
        * </pre>
        *
-       * <code>repeated .bloombox.schema.security.access.AccessPolicy policy = 10 [(.gen_bq_schema.ignore) = true, (.core.collection) = { ... }</code>
+       * <code>repeated .bloombox.security.access.AccessPolicy policy = 10 [(.gen_bq_schema.ignore) = true, (.core.collection) = { ... }</code>
        */
       public Builder addPolicy(
           int index, io.bloombox.schema.security.access.PartnerPermissions.AccessPolicy value) {
@@ -3138,7 +3162,7 @@ public final class PartnerAccount {
        * Access policy records attached to this partner.
        * </pre>
        *
-       * <code>repeated .bloombox.schema.security.access.AccessPolicy policy = 10 [(.gen_bq_schema.ignore) = true, (.core.collection) = { ... }</code>
+       * <code>repeated .bloombox.security.access.AccessPolicy policy = 10 [(.gen_bq_schema.ignore) = true, (.core.collection) = { ... }</code>
        */
       public Builder addPolicy(
           io.bloombox.schema.security.access.PartnerPermissions.AccessPolicy.Builder builderForValue) {
@@ -3156,7 +3180,7 @@ public final class PartnerAccount {
        * Access policy records attached to this partner.
        * </pre>
        *
-       * <code>repeated .bloombox.schema.security.access.AccessPolicy policy = 10 [(.gen_bq_schema.ignore) = true, (.core.collection) = { ... }</code>
+       * <code>repeated .bloombox.security.access.AccessPolicy policy = 10 [(.gen_bq_schema.ignore) = true, (.core.collection) = { ... }</code>
        */
       public Builder addPolicy(
           int index, io.bloombox.schema.security.access.PartnerPermissions.AccessPolicy.Builder builderForValue) {
@@ -3174,7 +3198,7 @@ public final class PartnerAccount {
        * Access policy records attached to this partner.
        * </pre>
        *
-       * <code>repeated .bloombox.schema.security.access.AccessPolicy policy = 10 [(.gen_bq_schema.ignore) = true, (.core.collection) = { ... }</code>
+       * <code>repeated .bloombox.security.access.AccessPolicy policy = 10 [(.gen_bq_schema.ignore) = true, (.core.collection) = { ... }</code>
        */
       public Builder addAllPolicy(
           java.lang.Iterable<? extends io.bloombox.schema.security.access.PartnerPermissions.AccessPolicy> values) {
@@ -3193,7 +3217,7 @@ public final class PartnerAccount {
        * Access policy records attached to this partner.
        * </pre>
        *
-       * <code>repeated .bloombox.schema.security.access.AccessPolicy policy = 10 [(.gen_bq_schema.ignore) = true, (.core.collection) = { ... }</code>
+       * <code>repeated .bloombox.security.access.AccessPolicy policy = 10 [(.gen_bq_schema.ignore) = true, (.core.collection) = { ... }</code>
        */
       public Builder clearPolicy() {
         if (policyBuilder_ == null) {
@@ -3210,7 +3234,7 @@ public final class PartnerAccount {
        * Access policy records attached to this partner.
        * </pre>
        *
-       * <code>repeated .bloombox.schema.security.access.AccessPolicy policy = 10 [(.gen_bq_schema.ignore) = true, (.core.collection) = { ... }</code>
+       * <code>repeated .bloombox.security.access.AccessPolicy policy = 10 [(.gen_bq_schema.ignore) = true, (.core.collection) = { ... }</code>
        */
       public Builder removePolicy(int index) {
         if (policyBuilder_ == null) {
@@ -3227,7 +3251,7 @@ public final class PartnerAccount {
        * Access policy records attached to this partner.
        * </pre>
        *
-       * <code>repeated .bloombox.schema.security.access.AccessPolicy policy = 10 [(.gen_bq_schema.ignore) = true, (.core.collection) = { ... }</code>
+       * <code>repeated .bloombox.security.access.AccessPolicy policy = 10 [(.gen_bq_schema.ignore) = true, (.core.collection) = { ... }</code>
        */
       public io.bloombox.schema.security.access.PartnerPermissions.AccessPolicy.Builder getPolicyBuilder(
           int index) {
@@ -3238,7 +3262,7 @@ public final class PartnerAccount {
        * Access policy records attached to this partner.
        * </pre>
        *
-       * <code>repeated .bloombox.schema.security.access.AccessPolicy policy = 10 [(.gen_bq_schema.ignore) = true, (.core.collection) = { ... }</code>
+       * <code>repeated .bloombox.security.access.AccessPolicy policy = 10 [(.gen_bq_schema.ignore) = true, (.core.collection) = { ... }</code>
        */
       public io.bloombox.schema.security.access.PartnerPermissions.AccessPolicyOrBuilder getPolicyOrBuilder(
           int index) {
@@ -3252,7 +3276,7 @@ public final class PartnerAccount {
        * Access policy records attached to this partner.
        * </pre>
        *
-       * <code>repeated .bloombox.schema.security.access.AccessPolicy policy = 10 [(.gen_bq_schema.ignore) = true, (.core.collection) = { ... }</code>
+       * <code>repeated .bloombox.security.access.AccessPolicy policy = 10 [(.gen_bq_schema.ignore) = true, (.core.collection) = { ... }</code>
        */
       public java.util.List<? extends io.bloombox.schema.security.access.PartnerPermissions.AccessPolicyOrBuilder> 
            getPolicyOrBuilderList() {
@@ -3267,7 +3291,7 @@ public final class PartnerAccount {
        * Access policy records attached to this partner.
        * </pre>
        *
-       * <code>repeated .bloombox.schema.security.access.AccessPolicy policy = 10 [(.gen_bq_schema.ignore) = true, (.core.collection) = { ... }</code>
+       * <code>repeated .bloombox.security.access.AccessPolicy policy = 10 [(.gen_bq_schema.ignore) = true, (.core.collection) = { ... }</code>
        */
       public io.bloombox.schema.security.access.PartnerPermissions.AccessPolicy.Builder addPolicyBuilder() {
         return getPolicyFieldBuilder().addBuilder(
@@ -3278,7 +3302,7 @@ public final class PartnerAccount {
        * Access policy records attached to this partner.
        * </pre>
        *
-       * <code>repeated .bloombox.schema.security.access.AccessPolicy policy = 10 [(.gen_bq_schema.ignore) = true, (.core.collection) = { ... }</code>
+       * <code>repeated .bloombox.security.access.AccessPolicy policy = 10 [(.gen_bq_schema.ignore) = true, (.core.collection) = { ... }</code>
        */
       public io.bloombox.schema.security.access.PartnerPermissions.AccessPolicy.Builder addPolicyBuilder(
           int index) {
@@ -3290,7 +3314,7 @@ public final class PartnerAccount {
        * Access policy records attached to this partner.
        * </pre>
        *
-       * <code>repeated .bloombox.schema.security.access.AccessPolicy policy = 10 [(.gen_bq_schema.ignore) = true, (.core.collection) = { ... }</code>
+       * <code>repeated .bloombox.security.access.AccessPolicy policy = 10 [(.gen_bq_schema.ignore) = true, (.core.collection) = { ... }</code>
        */
       public java.util.List<io.bloombox.schema.security.access.PartnerPermissions.AccessPolicy.Builder> 
            getPolicyBuilderList() {
@@ -3616,21 +3640,23 @@ public final class PartnerAccount {
         }
         return modifiedBuilder_;
       }
+      @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
         return super.setUnknownFieldsProto3(unknownFields);
       }
 
+      @java.lang.Override
       public final Builder mergeUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
         return super.mergeUnknownFields(unknownFields);
       }
 
 
-      // @@protoc_insertion_point(builder_scope:bloombox.schema.partner.Partner)
+      // @@protoc_insertion_point(builder_scope:bloombox.partner.Partner)
     }
 
-    // @@protoc_insertion_point(class_scope:bloombox.schema.partner.Partner)
+    // @@protoc_insertion_point(class_scope:bloombox.partner.Partner)
     private static final io.bloombox.schema.partner.PartnerAccount.Partner DEFAULT_INSTANCE;
     static {
       DEFAULT_INSTANCE = new io.bloombox.schema.partner.PartnerAccount.Partner();
@@ -3642,6 +3668,7 @@ public final class PartnerAccount {
 
     private static final com.google.protobuf.Parser<Partner>
         PARSER = new com.google.protobuf.AbstractParser<Partner>() {
+      @java.lang.Override
       public Partner parsePartialFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -3659,6 +3686,7 @@ public final class PartnerAccount {
       return PARSER;
     }
 
+    @java.lang.Override
     public io.bloombox.schema.partner.PartnerAccount.Partner getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
@@ -3666,10 +3694,10 @@ public final class PartnerAccount {
   }
 
   private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_bloombox_schema_partner_Partner_descriptor;
+    internal_static_bloombox_partner_Partner_descriptor;
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_bloombox_schema_partner_Partner_fieldAccessorTable;
+      internal_static_bloombox_partner_Partner_fieldAccessorTable;
 
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
@@ -3679,45 +3707,44 @@ public final class PartnerAccount {
       descriptor;
   static {
     java.lang.String[] descriptorData = {
-      "\n\025partner/Partner.proto\022\027bloombox.schema" +
-      ".partner\032\016bq_field.proto\032\024core/Datamodel" +
-      ".proto\032\025media/MediaItem.proto\032\026temporal/" +
-      "Instant.proto\032\031contact/ContactInfo.proto" +
-      "\032\032partner/PartnerFlags.proto\032\035partner/Pa" +
-      "rtnerLocation.proto\032&partner/settings/Pa" +
-      "rtnerSettings.proto\032(security/access/Par" +
-      "tnerPermissions.proto\"\375\010\n\007Partner\022W\n\004cod" +
-      "e\030\001 \001(\tBI\302\265\003\002\010\002\212@@Short string that uniq" +
-      "uely identifies this partner organizatio" +
-      "n.\022I\n\004name\030\002 \001(\tB;\212@8Full human-readable" +
-      " label for this partner organization.\022s\n" +
-      "\005flags\030\003 \001(\0132%.bloombox.schema.partner.P" +
-      "artnerFlagsB=\302\265\003\002\010\004\212@4Flags for various " +
-      "things about this partner account.\022>\n\nle" +
-      "gal_name\030\004 \001(\tB*\212@\'Legal name of the par" +
-      "tner organization.\022a\n\007contact\030\005 \001(\0132!.op" +
-      "encannabis.contact.ContactInfoB-\212@*Conta" +
-      "ct information for this organization.\022_\n" +
-      "\010branding\030\006 \001(\0132\035.opencannabis.media.Med" +
-      "iaItemB.\212@+Branding information for this" +
-      " organization.\022\205\001\n\007channel\030\007 \001(\0162\'.bloom" +
-      "box.schema.partner.PartnerChannelBK\212@HCh" +
-      "annel through which this partner organiz" +
-      "ation interacts with Bloombox.\022L\n\010settin" +
-      "gs\030\010 \001(\01321.bloombox.schema.partner.setti" +
-      "ngs.PartnerSettingsB\007\200@\001\322\265\003\000\022P\n\010location" +
-      "\030\t \003(\0132(.bloombox.schema.partner.Partner" +
-      "LocationB\024\200@\001\322\265\003\r\010\001\032\tlocations\022R\n\006policy" +
-      "\030\n \003(\0132-.bloombox.schema.security.access" +
-      ".AccessPolicyB\023\200@\001\322\265\003\014\010\001\032\010policies\022_\n\007cr" +
-      "eated\030d \001(\0132\036.opencannabis.temporal.Inst" +
-      "antB.\212@+Timestamp for when this record w" +
-      "as created.\022f\n\010modified\030e \001(\0132\036.opencann" +
-      "abis.temporal.InstantB4\212@1Timestamp for " +
-      "when this record was last modified.:\020\202\367\002" +
-      "\014\010\002\022\010partners*\034\n\016PartnerChannel\022\n\n\006DIREC" +
-      "T\020\000B6\n\032io.bloombox.schema.partnerB\016Partn" +
-      "erAccountH\001P\000\242\002\003BBSb\006proto3"
+      "\n\025partner/Partner.proto\022\020bloombox.partne" +
+      "r\032\016bq_field.proto\032\024core/Datamodel.proto\032" +
+      "\025media/MediaItem.proto\032\026temporal/Instant" +
+      ".proto\032\031contact/ContactInfo.proto\032\032partn" +
+      "er/PartnerFlags.proto\032\035partner/PartnerLo" +
+      "cation.proto\032&partner/settings/PartnerSe" +
+      "ttings.proto\032(security/access/PartnerPer" +
+      "missions.proto\"\331\010\n\007Partner\022W\n\004code\030\001 \001(\t" +
+      "BI\302\265\003\002\010\002\212@@Short string that uniquely id" +
+      "entifies this partner organization.\022I\n\004n" +
+      "ame\030\002 \001(\tB;\212@8Full human-readable label " +
+      "for this partner organization.\022l\n\005flags\030" +
+      "\003 \001(\0132\036.bloombox.partner.PartnerFlagsB=\302" +
+      "\265\003\002\010\004\212@4Flags for various things about t" +
+      "his partner account.\022>\n\nlegal_name\030\004 \001(\t" +
+      "B*\212@\'Legal name of the partner organizat" +
+      "ion.\022a\n\007contact\030\005 \001(\0132!.opencannabis.con" +
+      "tact.ContactInfoB-\212@*Contact information" +
+      " for this organization.\022_\n\010branding\030\006 \001(" +
+      "\0132\035.opencannabis.media.MediaItemB.\212@+Bra" +
+      "nding information for this organization." +
+      "\022~\n\007channel\030\007 \001(\0162 .bloombox.partner.Par" +
+      "tnerChannelBK\212@HChannel through which th" +
+      "is partner organization interacts with B" +
+      "loombox.\022E\n\010settings\030\010 \001(\0132*.bloombox.pa" +
+      "rtner.settings.PartnerSettingsB\007\200@\001\322\265\003\000\022" +
+      "I\n\010location\030\t \003(\0132!.bloombox.partner.Par" +
+      "tnerLocationB\024\200@\001\322\265\003\r\010\001\032\tlocations\022K\n\006po" +
+      "licy\030\n \003(\0132&.bloombox.security.access.Ac" +
+      "cessPolicyB\023\200@\001\322\265\003\014\010\001\032\010policies\022_\n\007creat" +
+      "ed\030d \001(\0132\036.opencannabis.temporal.Instant" +
+      "B.\212@+Timestamp for when this record was " +
+      "created.\022f\n\010modified\030e \001(\0132\036.opencannabi" +
+      "s.temporal.InstantB4\212@1Timestamp for whe" +
+      "n this record was last modified.:\020\202\367\002\014\010\002" +
+      "\022\010partners*\034\n\016PartnerChannel\022\n\n\006DIRECT\020\000" +
+      "B6\n\032io.bloombox.schema.partnerB\016PartnerA" +
+      "ccountH\001P\000\242\002\003BBSb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -3740,11 +3767,11 @@ public final class PartnerAccount {
           io.bloombox.schema.partner.settings.PartnerSettingsOuterClass.getDescriptor(),
           io.bloombox.schema.security.access.PartnerPermissions.getDescriptor(),
         }, assigner);
-    internal_static_bloombox_schema_partner_Partner_descriptor =
+    internal_static_bloombox_partner_Partner_descriptor =
       getDescriptor().getMessageTypes().get(0);
-    internal_static_bloombox_schema_partner_Partner_fieldAccessorTable = new
+    internal_static_bloombox_partner_Partner_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_bloombox_schema_partner_Partner_descriptor,
+        internal_static_bloombox_partner_Partner_descriptor,
         new java.lang.String[] { "Code", "Name", "Flags", "LegalName", "Contact", "Branding", "Channel", "Settings", "Location", "Policy", "Created", "Modified", });
     com.google.protobuf.ExtensionRegistry registry =
         com.google.protobuf.ExtensionRegistry.newInstance();

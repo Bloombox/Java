@@ -1,11 +1,12 @@
 /*
- * Copyright 2018, Bloombox, LLC.
+ * Copyright 2018, Momentum Ideas, Co. All rights reserved.
  *
- * Licensed under the Apache License, Version 2.0 (the "License");
- * you may not use this file except in compliance with the License.
- * You may obtain a copy of the License at
- *
- *     http://www.apache.org/licenses/LICENSE-2.0
+ * Source and object computer code contained herein is the private intellectual
+ * property of Momentum Ideas Co., a Delaware Corporation. Use of this
+ * code in source form requires permission in writing before use or the
+ * assembly, distribution, or publishing of derivative works, for commercial
+ * purposes or any other purpose, from a duly authorized officer of Momentum
+ * Ideas Co.
  *
  * Unless required by applicable law or agreed to in writing, software
  * distributed under the License is distributed on an "AS IS" BASIS,
@@ -31,10 +32,10 @@ public final class IdentityTokenOuterClass {
         (com.google.protobuf.ExtensionRegistryLite) registry);
   }
   static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_bloombox_schema_security_IdentityToken_descriptor;
+    internal_static_bloombox_security_IdentityToken_descriptor;
   static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_bloombox_schema_security_IdentityToken_fieldAccessorTable;
+      internal_static_bloombox_security_IdentityToken_fieldAccessorTable;
 
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
@@ -44,14 +45,14 @@ public final class IdentityTokenOuterClass {
       descriptor;
   static {
     java.lang.String[] descriptorData = {
-      "\n\034security/IdentityToken.proto\022\030bloombox" +
-      ".schema.security\"l\n\rIdentityToken\022\013\n\003uid" +
-      "\030\001 \001(\t\022\017\n\007encoded\030\002 \001(\t\022=\n\006issuer\030\003 \001(\0162" +
-      "-.bloombox.schema.security.IdentityToken" +
-      "Issuer*b\n\023IdentityTokenIssuer\022\014\n\010INTERNA" +
-      "L\020\000\022\014\n\010FIREBASE\020\001\022\t\n\005AUTH0\020\002\022\n\n\006GOOGLE\020\003" +
-      "\022\n\n\006DOMAIN\020\004\022\014\n\010EXTERNAL\020\005B\'\n\033io.bloombo" +
-      "x.schema.securityH\001P\001\242\002\003BBSb\006proto3"
+      "\n\034security/IdentityToken.proto\022\021bloombox" +
+      ".security\"e\n\rIdentityToken\022\013\n\003uid\030\001 \001(\t\022" +
+      "\017\n\007encoded\030\002 \001(\t\0226\n\006issuer\030\003 \001(\0162&.bloom" +
+      "box.security.IdentityTokenIssuer*b\n\023Iden" +
+      "tityTokenIssuer\022\014\n\010INTERNAL\020\000\022\014\n\010FIREBAS" +
+      "E\020\001\022\t\n\005AUTH0\020\002\022\n\n\006GOOGLE\020\003\022\n\n\006DOMAIN\020\004\022\014" +
+      "\n\010EXTERNAL\020\005B\'\n\033io.bloombox.schema.secur" +
+      "ityH\001P\001\242\002\003BBSb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -65,11 +66,11 @@ public final class IdentityTokenOuterClass {
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
         }, assigner);
-    internal_static_bloombox_schema_security_IdentityToken_descriptor =
+    internal_static_bloombox_security_IdentityToken_descriptor =
       getDescriptor().getMessageTypes().get(0);
-    internal_static_bloombox_schema_security_IdentityToken_fieldAccessorTable = new
+    internal_static_bloombox_security_IdentityToken_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_bloombox_schema_security_IdentityToken_descriptor,
+        internal_static_bloombox_security_IdentityToken_descriptor,
         new java.lang.String[] { "Uid", "Encoded", "Issuer", });
   }
 

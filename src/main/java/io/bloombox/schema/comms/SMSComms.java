@@ -1,11 +1,12 @@
 /*
- * Copyright 2018, Bloombox, LLC.
+ * Copyright 2018, Momentum Ideas, Co. All rights reserved.
  *
- * Licensed under the Apache License, Version 2.0 (the "License");
- * you may not use this file except in compliance with the License.
- * You may obtain a copy of the License at
- *
- *     http://www.apache.org/licenses/LICENSE-2.0
+ * Source and object computer code contained herein is the private intellectual
+ * property of Momentum Ideas Co., a Delaware Corporation. Use of this
+ * code in source form requires permission in writing before use or the
+ * assembly, distribution, or publishing of derivative works, for commercial
+ * purposes or any other purpose, from a duly authorized officer of Momentum
+ * Ideas Co.
  *
  * Unless required by applicable law or agreed to in writing, software
  * distributed under the License is distributed on an "AS IS" BASIS,
@@ -31,7 +32,7 @@ public final class SMSComms {
         (com.google.protobuf.ExtensionRegistryLite) registry);
   }
   public interface SMSContentOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:bloombox.schema.comms.SMSContent)
+      // @@protoc_insertion_point(interface_extends:bloombox.comms.SMSContent)
       com.google.protobuf.MessageOrBuilder {
 
     /**
@@ -119,11 +120,11 @@ public final class SMSComms {
    * Specifies SMS content for a given ad group.
    * </pre>
    *
-   * Protobuf type {@code bloombox.schema.comms.SMSContent}
+   * Protobuf type {@code bloombox.comms.SMSContent}
    */
   public  static final class SMSContent extends
       com.google.protobuf.GeneratedMessageV3 implements
-      // @@protoc_insertion_point(message_implements:bloombox.schema.comms.SMSContent)
+      // @@protoc_insertion_point(message_implements:bloombox.comms.SMSContent)
       SMSContentOrBuilder {
   private static final long serialVersionUID = 0L;
     // Use SMSContent.newBuilder() to construct.
@@ -160,13 +161,6 @@ public final class SMSComms {
             case 0:
               done = true;
               break;
-            default: {
-              if (!parseUnknownFieldProto3(
-                  input, unknownFields, extensionRegistry, tag)) {
-                done = true;
-              }
-              break;
-            }
             case 10: {
               java.lang.String s = input.readStringRequireUtf8();
 
@@ -188,6 +182,13 @@ public final class SMSComms {
                   input.readMessage(io.opencannabis.schema.media.MediaItemKey.MediaKey.parser(), extensionRegistry));
               break;
             }
+            default: {
+              if (!parseUnknownFieldProto3(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
           }
         }
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
@@ -205,12 +206,13 @@ public final class SMSComms {
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return io.bloombox.schema.comms.SMSComms.internal_static_bloombox_schema_comms_SMSContent_descriptor;
+      return io.bloombox.schema.comms.SMSComms.internal_static_bloombox_comms_SMSContent_descriptor;
     }
 
+    @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return io.bloombox.schema.comms.SMSComms.internal_static_bloombox_schema_comms_SMSContent_fieldAccessorTable
+      return io.bloombox.schema.comms.SMSComms.internal_static_bloombox_comms_SMSContent_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
               io.bloombox.schema.comms.SMSComms.SMSContent.class, io.bloombox.schema.comms.SMSComms.SMSContent.Builder.class);
     }
@@ -356,6 +358,7 @@ public final class SMSComms {
     }
 
     private byte memoizedIsInitialized = -1;
+    @java.lang.Override
     public final boolean isInitialized() {
       byte isInitialized = memoizedIsInitialized;
       if (isInitialized == 1) return true;
@@ -365,6 +368,7 @@ public final class SMSComms {
       return true;
     }
 
+    @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
       if (!getSubjectBytes().isEmpty()) {
@@ -379,6 +383,7 @@ public final class SMSComms {
       unknownFields.writeTo(output);
     }
 
+    @java.lang.Override
     public int getSerializedSize() {
       int size = memoizedSize;
       if (size != -1) return size;
@@ -510,6 +515,7 @@ public final class SMSComms {
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
 
+    @java.lang.Override
     public Builder newBuilderForType() { return newBuilder(); }
     public static Builder newBuilder() {
       return DEFAULT_INSTANCE.toBuilder();
@@ -517,6 +523,7 @@ public final class SMSComms {
     public static Builder newBuilder(io.bloombox.schema.comms.SMSComms.SMSContent prototype) {
       return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
     }
+    @java.lang.Override
     public Builder toBuilder() {
       return this == DEFAULT_INSTANCE
           ? new Builder() : new Builder().mergeFrom(this);
@@ -533,20 +540,21 @@ public final class SMSComms {
      * Specifies SMS content for a given ad group.
      * </pre>
      *
-     * Protobuf type {@code bloombox.schema.comms.SMSContent}
+     * Protobuf type {@code bloombox.comms.SMSContent}
      */
     public static final class Builder extends
         com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:bloombox.schema.comms.SMSContent)
+        // @@protoc_insertion_point(builder_implements:bloombox.comms.SMSContent)
         io.bloombox.schema.comms.SMSComms.SMSContentOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return io.bloombox.schema.comms.SMSComms.internal_static_bloombox_schema_comms_SMSContent_descriptor;
+        return io.bloombox.schema.comms.SMSComms.internal_static_bloombox_comms_SMSContent_descriptor;
       }
 
+      @java.lang.Override
       protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return io.bloombox.schema.comms.SMSComms.internal_static_bloombox_schema_comms_SMSContent_fieldAccessorTable
+        return io.bloombox.schema.comms.SMSComms.internal_static_bloombox_comms_SMSContent_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
                 io.bloombox.schema.comms.SMSComms.SMSContent.class, io.bloombox.schema.comms.SMSComms.SMSContent.Builder.class);
       }
@@ -567,6 +575,7 @@ public final class SMSComms {
           getMediaFieldBuilder();
         }
       }
+      @java.lang.Override
       public Builder clear() {
         super.clear();
         subject_ = "";
@@ -582,15 +591,18 @@ public final class SMSComms {
         return this;
       }
 
+      @java.lang.Override
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return io.bloombox.schema.comms.SMSComms.internal_static_bloombox_schema_comms_SMSContent_descriptor;
+        return io.bloombox.schema.comms.SMSComms.internal_static_bloombox_comms_SMSContent_descriptor;
       }
 
+      @java.lang.Override
       public io.bloombox.schema.comms.SMSComms.SMSContent getDefaultInstanceForType() {
         return io.bloombox.schema.comms.SMSComms.SMSContent.getDefaultInstance();
       }
 
+      @java.lang.Override
       public io.bloombox.schema.comms.SMSComms.SMSContent build() {
         io.bloombox.schema.comms.SMSComms.SMSContent result = buildPartial();
         if (!result.isInitialized()) {
@@ -599,6 +611,7 @@ public final class SMSComms {
         return result;
       }
 
+      @java.lang.Override
       public io.bloombox.schema.comms.SMSComms.SMSContent buildPartial() {
         io.bloombox.schema.comms.SMSComms.SMSContent result = new io.bloombox.schema.comms.SMSComms.SMSContent(this);
         int from_bitField0_ = bitField0_;
@@ -619,32 +632,39 @@ public final class SMSComms {
         return result;
       }
 
+      @java.lang.Override
       public Builder clone() {
         return (Builder) super.clone();
       }
+      @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
         return (Builder) super.setField(field, value);
       }
+      @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
         return (Builder) super.clearField(field);
       }
+      @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
         return (Builder) super.clearOneof(oneof);
       }
+      @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
         return (Builder) super.setRepeatedField(field, index, value);
       }
+      @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
         return (Builder) super.addRepeatedField(field, value);
       }
+      @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
         if (other instanceof io.bloombox.schema.comms.SMSComms.SMSContent) {
           return mergeFrom((io.bloombox.schema.comms.SMSComms.SMSContent)other);
@@ -695,10 +715,12 @@ public final class SMSComms {
         return this;
       }
 
+      @java.lang.Override
       public final boolean isInitialized() {
         return true;
       }
 
+      @java.lang.Override
       public Builder mergeFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -1207,21 +1229,23 @@ public final class SMSComms {
         }
         return mediaBuilder_;
       }
+      @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
         return super.setUnknownFieldsProto3(unknownFields);
       }
 
+      @java.lang.Override
       public final Builder mergeUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
         return super.mergeUnknownFields(unknownFields);
       }
 
 
-      // @@protoc_insertion_point(builder_scope:bloombox.schema.comms.SMSContent)
+      // @@protoc_insertion_point(builder_scope:bloombox.comms.SMSContent)
     }
 
-    // @@protoc_insertion_point(class_scope:bloombox.schema.comms.SMSContent)
+    // @@protoc_insertion_point(class_scope:bloombox.comms.SMSContent)
     private static final io.bloombox.schema.comms.SMSComms.SMSContent DEFAULT_INSTANCE;
     static {
       DEFAULT_INSTANCE = new io.bloombox.schema.comms.SMSComms.SMSContent();
@@ -1233,6 +1257,7 @@ public final class SMSComms {
 
     private static final com.google.protobuf.Parser<SMSContent>
         PARSER = new com.google.protobuf.AbstractParser<SMSContent>() {
+      @java.lang.Override
       public SMSContent parsePartialFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -1250,6 +1275,7 @@ public final class SMSComms {
       return PARSER;
     }
 
+    @java.lang.Override
     public io.bloombox.schema.comms.SMSComms.SMSContent getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
@@ -1257,7 +1283,7 @@ public final class SMSComms {
   }
 
   public interface SMSMessageOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:bloombox.schema.comms.SMSMessage)
+      // @@protoc_insertion_point(interface_extends:bloombox.comms.SMSMessage)
       com.google.protobuf.MessageOrBuilder {
 
     /**
@@ -1315,7 +1341,7 @@ public final class SMSComms {
      * Content for the SMS message.
      * </pre>
      *
-     * <code>.bloombox.schema.comms.SMSContent content = 3;</code>
+     * <code>.bloombox.comms.SMSContent content = 3;</code>
      */
     boolean hasContent();
     /**
@@ -1323,7 +1349,7 @@ public final class SMSComms {
      * Content for the SMS message.
      * </pre>
      *
-     * <code>.bloombox.schema.comms.SMSContent content = 3;</code>
+     * <code>.bloombox.comms.SMSContent content = 3;</code>
      */
     io.bloombox.schema.comms.SMSComms.SMSContent getContent();
     /**
@@ -1331,7 +1357,7 @@ public final class SMSComms {
      * Content for the SMS message.
      * </pre>
      *
-     * <code>.bloombox.schema.comms.SMSContent content = 3;</code>
+     * <code>.bloombox.comms.SMSContent content = 3;</code>
      */
     io.bloombox.schema.comms.SMSComms.SMSContentOrBuilder getContentOrBuilder();
   }
@@ -1340,11 +1366,11 @@ public final class SMSComms {
    * Specifies the structure of an individual SMS message.
    * </pre>
    *
-   * Protobuf type {@code bloombox.schema.comms.SMSMessage}
+   * Protobuf type {@code bloombox.comms.SMSMessage}
    */
   public  static final class SMSMessage extends
       com.google.protobuf.GeneratedMessageV3 implements
-      // @@protoc_insertion_point(message_implements:bloombox.schema.comms.SMSMessage)
+      // @@protoc_insertion_point(message_implements:bloombox.comms.SMSMessage)
       SMSMessageOrBuilder {
   private static final long serialVersionUID = 0L;
     // Use SMSMessage.newBuilder() to construct.
@@ -1378,13 +1404,6 @@ public final class SMSComms {
             case 0:
               done = true;
               break;
-            default: {
-              if (!parseUnknownFieldProto3(
-                  input, unknownFields, extensionRegistry, tag)) {
-                done = true;
-              }
-              break;
-            }
             case 10: {
               io.opencannabis.schema.contact.ContactPhone.PhoneNumber.Builder subBuilder = null;
               if (sender_ != null) {
@@ -1424,6 +1443,13 @@ public final class SMSComms {
 
               break;
             }
+            default: {
+              if (!parseUnknownFieldProto3(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
           }
         }
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
@@ -1438,12 +1464,13 @@ public final class SMSComms {
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return io.bloombox.schema.comms.SMSComms.internal_static_bloombox_schema_comms_SMSMessage_descriptor;
+      return io.bloombox.schema.comms.SMSComms.internal_static_bloombox_comms_SMSMessage_descriptor;
     }
 
+    @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return io.bloombox.schema.comms.SMSComms.internal_static_bloombox_schema_comms_SMSMessage_fieldAccessorTable
+      return io.bloombox.schema.comms.SMSComms.internal_static_bloombox_comms_SMSMessage_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
               io.bloombox.schema.comms.SMSComms.SMSMessage.class, io.bloombox.schema.comms.SMSComms.SMSMessage.Builder.class);
     }
@@ -1521,7 +1548,7 @@ public final class SMSComms {
      * Content for the SMS message.
      * </pre>
      *
-     * <code>.bloombox.schema.comms.SMSContent content = 3;</code>
+     * <code>.bloombox.comms.SMSContent content = 3;</code>
      */
     public boolean hasContent() {
       return content_ != null;
@@ -1531,7 +1558,7 @@ public final class SMSComms {
      * Content for the SMS message.
      * </pre>
      *
-     * <code>.bloombox.schema.comms.SMSContent content = 3;</code>
+     * <code>.bloombox.comms.SMSContent content = 3;</code>
      */
     public io.bloombox.schema.comms.SMSComms.SMSContent getContent() {
       return content_ == null ? io.bloombox.schema.comms.SMSComms.SMSContent.getDefaultInstance() : content_;
@@ -1541,13 +1568,14 @@ public final class SMSComms {
      * Content for the SMS message.
      * </pre>
      *
-     * <code>.bloombox.schema.comms.SMSContent content = 3;</code>
+     * <code>.bloombox.comms.SMSContent content = 3;</code>
      */
     public io.bloombox.schema.comms.SMSComms.SMSContentOrBuilder getContentOrBuilder() {
       return getContent();
     }
 
     private byte memoizedIsInitialized = -1;
+    @java.lang.Override
     public final boolean isInitialized() {
       byte isInitialized = memoizedIsInitialized;
       if (isInitialized == 1) return true;
@@ -1557,6 +1585,7 @@ public final class SMSComms {
       return true;
     }
 
+    @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
       if (sender_ != null) {
@@ -1571,6 +1600,7 @@ public final class SMSComms {
       unknownFields.writeTo(output);
     }
 
+    @java.lang.Override
     public int getSerializedSize() {
       int size = memoizedSize;
       if (size != -1) return size;
@@ -1717,6 +1747,7 @@ public final class SMSComms {
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
 
+    @java.lang.Override
     public Builder newBuilderForType() { return newBuilder(); }
     public static Builder newBuilder() {
       return DEFAULT_INSTANCE.toBuilder();
@@ -1724,6 +1755,7 @@ public final class SMSComms {
     public static Builder newBuilder(io.bloombox.schema.comms.SMSComms.SMSMessage prototype) {
       return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
     }
+    @java.lang.Override
     public Builder toBuilder() {
       return this == DEFAULT_INSTANCE
           ? new Builder() : new Builder().mergeFrom(this);
@@ -1740,20 +1772,21 @@ public final class SMSComms {
      * Specifies the structure of an individual SMS message.
      * </pre>
      *
-     * Protobuf type {@code bloombox.schema.comms.SMSMessage}
+     * Protobuf type {@code bloombox.comms.SMSMessage}
      */
     public static final class Builder extends
         com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:bloombox.schema.comms.SMSMessage)
+        // @@protoc_insertion_point(builder_implements:bloombox.comms.SMSMessage)
         io.bloombox.schema.comms.SMSComms.SMSMessageOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return io.bloombox.schema.comms.SMSComms.internal_static_bloombox_schema_comms_SMSMessage_descriptor;
+        return io.bloombox.schema.comms.SMSComms.internal_static_bloombox_comms_SMSMessage_descriptor;
       }
 
+      @java.lang.Override
       protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return io.bloombox.schema.comms.SMSComms.internal_static_bloombox_schema_comms_SMSMessage_fieldAccessorTable
+        return io.bloombox.schema.comms.SMSComms.internal_static_bloombox_comms_SMSMessage_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
                 io.bloombox.schema.comms.SMSComms.SMSMessage.class, io.bloombox.schema.comms.SMSComms.SMSMessage.Builder.class);
       }
@@ -1773,6 +1806,7 @@ public final class SMSComms {
                 .alwaysUseFieldBuilders) {
         }
       }
+      @java.lang.Override
       public Builder clear() {
         super.clear();
         if (senderBuilder_ == null) {
@@ -1796,15 +1830,18 @@ public final class SMSComms {
         return this;
       }
 
+      @java.lang.Override
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return io.bloombox.schema.comms.SMSComms.internal_static_bloombox_schema_comms_SMSMessage_descriptor;
+        return io.bloombox.schema.comms.SMSComms.internal_static_bloombox_comms_SMSMessage_descriptor;
       }
 
+      @java.lang.Override
       public io.bloombox.schema.comms.SMSComms.SMSMessage getDefaultInstanceForType() {
         return io.bloombox.schema.comms.SMSComms.SMSMessage.getDefaultInstance();
       }
 
+      @java.lang.Override
       public io.bloombox.schema.comms.SMSComms.SMSMessage build() {
         io.bloombox.schema.comms.SMSComms.SMSMessage result = buildPartial();
         if (!result.isInitialized()) {
@@ -1813,6 +1850,7 @@ public final class SMSComms {
         return result;
       }
 
+      @java.lang.Override
       public io.bloombox.schema.comms.SMSComms.SMSMessage buildPartial() {
         io.bloombox.schema.comms.SMSComms.SMSMessage result = new io.bloombox.schema.comms.SMSComms.SMSMessage(this);
         if (senderBuilder_ == null) {
@@ -1834,32 +1872,39 @@ public final class SMSComms {
         return result;
       }
 
+      @java.lang.Override
       public Builder clone() {
         return (Builder) super.clone();
       }
+      @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
         return (Builder) super.setField(field, value);
       }
+      @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
         return (Builder) super.clearField(field);
       }
+      @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
         return (Builder) super.clearOneof(oneof);
       }
+      @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
         return (Builder) super.setRepeatedField(field, index, value);
       }
+      @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
         return (Builder) super.addRepeatedField(field, value);
       }
+      @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
         if (other instanceof io.bloombox.schema.comms.SMSComms.SMSMessage) {
           return mergeFrom((io.bloombox.schema.comms.SMSComms.SMSMessage)other);
@@ -1885,10 +1930,12 @@ public final class SMSComms {
         return this;
       }
 
+      @java.lang.Override
       public final boolean isInitialized() {
         return true;
       }
 
+      @java.lang.Override
       public Builder mergeFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -2221,7 +2268,7 @@ public final class SMSComms {
        * Content for the SMS message.
        * </pre>
        *
-       * <code>.bloombox.schema.comms.SMSContent content = 3;</code>
+       * <code>.bloombox.comms.SMSContent content = 3;</code>
        */
       public boolean hasContent() {
         return contentBuilder_ != null || content_ != null;
@@ -2231,7 +2278,7 @@ public final class SMSComms {
        * Content for the SMS message.
        * </pre>
        *
-       * <code>.bloombox.schema.comms.SMSContent content = 3;</code>
+       * <code>.bloombox.comms.SMSContent content = 3;</code>
        */
       public io.bloombox.schema.comms.SMSComms.SMSContent getContent() {
         if (contentBuilder_ == null) {
@@ -2245,7 +2292,7 @@ public final class SMSComms {
        * Content for the SMS message.
        * </pre>
        *
-       * <code>.bloombox.schema.comms.SMSContent content = 3;</code>
+       * <code>.bloombox.comms.SMSContent content = 3;</code>
        */
       public Builder setContent(io.bloombox.schema.comms.SMSComms.SMSContent value) {
         if (contentBuilder_ == null) {
@@ -2265,7 +2312,7 @@ public final class SMSComms {
        * Content for the SMS message.
        * </pre>
        *
-       * <code>.bloombox.schema.comms.SMSContent content = 3;</code>
+       * <code>.bloombox.comms.SMSContent content = 3;</code>
        */
       public Builder setContent(
           io.bloombox.schema.comms.SMSComms.SMSContent.Builder builderForValue) {
@@ -2283,7 +2330,7 @@ public final class SMSComms {
        * Content for the SMS message.
        * </pre>
        *
-       * <code>.bloombox.schema.comms.SMSContent content = 3;</code>
+       * <code>.bloombox.comms.SMSContent content = 3;</code>
        */
       public Builder mergeContent(io.bloombox.schema.comms.SMSComms.SMSContent value) {
         if (contentBuilder_ == null) {
@@ -2305,7 +2352,7 @@ public final class SMSComms {
        * Content for the SMS message.
        * </pre>
        *
-       * <code>.bloombox.schema.comms.SMSContent content = 3;</code>
+       * <code>.bloombox.comms.SMSContent content = 3;</code>
        */
       public Builder clearContent() {
         if (contentBuilder_ == null) {
@@ -2323,7 +2370,7 @@ public final class SMSComms {
        * Content for the SMS message.
        * </pre>
        *
-       * <code>.bloombox.schema.comms.SMSContent content = 3;</code>
+       * <code>.bloombox.comms.SMSContent content = 3;</code>
        */
       public io.bloombox.schema.comms.SMSComms.SMSContent.Builder getContentBuilder() {
         
@@ -2335,7 +2382,7 @@ public final class SMSComms {
        * Content for the SMS message.
        * </pre>
        *
-       * <code>.bloombox.schema.comms.SMSContent content = 3;</code>
+       * <code>.bloombox.comms.SMSContent content = 3;</code>
        */
       public io.bloombox.schema.comms.SMSComms.SMSContentOrBuilder getContentOrBuilder() {
         if (contentBuilder_ != null) {
@@ -2350,7 +2397,7 @@ public final class SMSComms {
        * Content for the SMS message.
        * </pre>
        *
-       * <code>.bloombox.schema.comms.SMSContent content = 3;</code>
+       * <code>.bloombox.comms.SMSContent content = 3;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
           io.bloombox.schema.comms.SMSComms.SMSContent, io.bloombox.schema.comms.SMSComms.SMSContent.Builder, io.bloombox.schema.comms.SMSComms.SMSContentOrBuilder> 
@@ -2365,21 +2412,23 @@ public final class SMSComms {
         }
         return contentBuilder_;
       }
+      @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
         return super.setUnknownFieldsProto3(unknownFields);
       }
 
+      @java.lang.Override
       public final Builder mergeUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
         return super.mergeUnknownFields(unknownFields);
       }
 
 
-      // @@protoc_insertion_point(builder_scope:bloombox.schema.comms.SMSMessage)
+      // @@protoc_insertion_point(builder_scope:bloombox.comms.SMSMessage)
     }
 
-    // @@protoc_insertion_point(class_scope:bloombox.schema.comms.SMSMessage)
+    // @@protoc_insertion_point(class_scope:bloombox.comms.SMSMessage)
     private static final io.bloombox.schema.comms.SMSComms.SMSMessage DEFAULT_INSTANCE;
     static {
       DEFAULT_INSTANCE = new io.bloombox.schema.comms.SMSComms.SMSMessage();
@@ -2391,6 +2440,7 @@ public final class SMSComms {
 
     private static final com.google.protobuf.Parser<SMSMessage>
         PARSER = new com.google.protobuf.AbstractParser<SMSMessage>() {
+      @java.lang.Override
       public SMSMessage parsePartialFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -2408,6 +2458,7 @@ public final class SMSComms {
       return PARSER;
     }
 
+    @java.lang.Override
     public io.bloombox.schema.comms.SMSComms.SMSMessage getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
@@ -2415,7 +2466,7 @@ public final class SMSComms {
   }
 
   public interface SMSTransmissionOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:bloombox.schema.comms.SMSTransmission)
+      // @@protoc_insertion_point(interface_extends:bloombox.comms.SMSTransmission)
       com.google.protobuf.MessageOrBuilder {
 
     /**
@@ -2423,7 +2474,7 @@ public final class SMSComms {
      * Message payload to transmit in this operation.
      * </pre>
      *
-     * <code>.bloombox.schema.comms.SMSMessage message = 1;</code>
+     * <code>.bloombox.comms.SMSMessage message = 1;</code>
      */
     boolean hasMessage();
     /**
@@ -2431,7 +2482,7 @@ public final class SMSComms {
      * Message payload to transmit in this operation.
      * </pre>
      *
-     * <code>.bloombox.schema.comms.SMSMessage message = 1;</code>
+     * <code>.bloombox.comms.SMSMessage message = 1;</code>
      */
     io.bloombox.schema.comms.SMSComms.SMSMessage getMessage();
     /**
@@ -2439,7 +2490,7 @@ public final class SMSComms {
      * Message payload to transmit in this operation.
      * </pre>
      *
-     * <code>.bloombox.schema.comms.SMSMessage message = 1;</code>
+     * <code>.bloombox.comms.SMSMessage message = 1;</code>
      */
     io.bloombox.schema.comms.SMSComms.SMSMessageOrBuilder getMessageOrBuilder();
   }
@@ -2448,11 +2499,11 @@ public final class SMSComms {
    * Specifies the structure of a transmission operation for an individual SMS message.
    * </pre>
    *
-   * Protobuf type {@code bloombox.schema.comms.SMSTransmission}
+   * Protobuf type {@code bloombox.comms.SMSTransmission}
    */
   public  static final class SMSTransmission extends
       com.google.protobuf.GeneratedMessageV3 implements
-      // @@protoc_insertion_point(message_implements:bloombox.schema.comms.SMSTransmission)
+      // @@protoc_insertion_point(message_implements:bloombox.comms.SMSTransmission)
       SMSTransmissionOrBuilder {
   private static final long serialVersionUID = 0L;
     // Use SMSTransmission.newBuilder() to construct.
@@ -2486,13 +2537,6 @@ public final class SMSComms {
             case 0:
               done = true;
               break;
-            default: {
-              if (!parseUnknownFieldProto3(
-                  input, unknownFields, extensionRegistry, tag)) {
-                done = true;
-              }
-              break;
-            }
             case 10: {
               io.bloombox.schema.comms.SMSComms.SMSMessage.Builder subBuilder = null;
               if (message_ != null) {
@@ -2504,6 +2548,13 @@ public final class SMSComms {
                 message_ = subBuilder.buildPartial();
               }
 
+              break;
+            }
+            default: {
+              if (!parseUnknownFieldProto3(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
               break;
             }
           }
@@ -2520,12 +2571,13 @@ public final class SMSComms {
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return io.bloombox.schema.comms.SMSComms.internal_static_bloombox_schema_comms_SMSTransmission_descriptor;
+      return io.bloombox.schema.comms.SMSComms.internal_static_bloombox_comms_SMSTransmission_descriptor;
     }
 
+    @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return io.bloombox.schema.comms.SMSComms.internal_static_bloombox_schema_comms_SMSTransmission_fieldAccessorTable
+      return io.bloombox.schema.comms.SMSComms.internal_static_bloombox_comms_SMSTransmission_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
               io.bloombox.schema.comms.SMSComms.SMSTransmission.class, io.bloombox.schema.comms.SMSComms.SMSTransmission.Builder.class);
     }
@@ -2537,7 +2589,7 @@ public final class SMSComms {
      * Message payload to transmit in this operation.
      * </pre>
      *
-     * <code>.bloombox.schema.comms.SMSMessage message = 1;</code>
+     * <code>.bloombox.comms.SMSMessage message = 1;</code>
      */
     public boolean hasMessage() {
       return message_ != null;
@@ -2547,7 +2599,7 @@ public final class SMSComms {
      * Message payload to transmit in this operation.
      * </pre>
      *
-     * <code>.bloombox.schema.comms.SMSMessage message = 1;</code>
+     * <code>.bloombox.comms.SMSMessage message = 1;</code>
      */
     public io.bloombox.schema.comms.SMSComms.SMSMessage getMessage() {
       return message_ == null ? io.bloombox.schema.comms.SMSComms.SMSMessage.getDefaultInstance() : message_;
@@ -2557,13 +2609,14 @@ public final class SMSComms {
      * Message payload to transmit in this operation.
      * </pre>
      *
-     * <code>.bloombox.schema.comms.SMSMessage message = 1;</code>
+     * <code>.bloombox.comms.SMSMessage message = 1;</code>
      */
     public io.bloombox.schema.comms.SMSComms.SMSMessageOrBuilder getMessageOrBuilder() {
       return getMessage();
     }
 
     private byte memoizedIsInitialized = -1;
+    @java.lang.Override
     public final boolean isInitialized() {
       byte isInitialized = memoizedIsInitialized;
       if (isInitialized == 1) return true;
@@ -2573,6 +2626,7 @@ public final class SMSComms {
       return true;
     }
 
+    @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
       if (message_ != null) {
@@ -2581,6 +2635,7 @@ public final class SMSComms {
       unknownFields.writeTo(output);
     }
 
+    @java.lang.Override
     public int getSerializedSize() {
       int size = memoizedSize;
       if (size != -1) return size;
@@ -2701,6 +2756,7 @@ public final class SMSComms {
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
 
+    @java.lang.Override
     public Builder newBuilderForType() { return newBuilder(); }
     public static Builder newBuilder() {
       return DEFAULT_INSTANCE.toBuilder();
@@ -2708,6 +2764,7 @@ public final class SMSComms {
     public static Builder newBuilder(io.bloombox.schema.comms.SMSComms.SMSTransmission prototype) {
       return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
     }
+    @java.lang.Override
     public Builder toBuilder() {
       return this == DEFAULT_INSTANCE
           ? new Builder() : new Builder().mergeFrom(this);
@@ -2724,20 +2781,21 @@ public final class SMSComms {
      * Specifies the structure of a transmission operation for an individual SMS message.
      * </pre>
      *
-     * Protobuf type {@code bloombox.schema.comms.SMSTransmission}
+     * Protobuf type {@code bloombox.comms.SMSTransmission}
      */
     public static final class Builder extends
         com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:bloombox.schema.comms.SMSTransmission)
+        // @@protoc_insertion_point(builder_implements:bloombox.comms.SMSTransmission)
         io.bloombox.schema.comms.SMSComms.SMSTransmissionOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return io.bloombox.schema.comms.SMSComms.internal_static_bloombox_schema_comms_SMSTransmission_descriptor;
+        return io.bloombox.schema.comms.SMSComms.internal_static_bloombox_comms_SMSTransmission_descriptor;
       }
 
+      @java.lang.Override
       protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return io.bloombox.schema.comms.SMSComms.internal_static_bloombox_schema_comms_SMSTransmission_fieldAccessorTable
+        return io.bloombox.schema.comms.SMSComms.internal_static_bloombox_comms_SMSTransmission_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
                 io.bloombox.schema.comms.SMSComms.SMSTransmission.class, io.bloombox.schema.comms.SMSComms.SMSTransmission.Builder.class);
       }
@@ -2757,6 +2815,7 @@ public final class SMSComms {
                 .alwaysUseFieldBuilders) {
         }
       }
+      @java.lang.Override
       public Builder clear() {
         super.clear();
         if (messageBuilder_ == null) {
@@ -2768,15 +2827,18 @@ public final class SMSComms {
         return this;
       }
 
+      @java.lang.Override
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return io.bloombox.schema.comms.SMSComms.internal_static_bloombox_schema_comms_SMSTransmission_descriptor;
+        return io.bloombox.schema.comms.SMSComms.internal_static_bloombox_comms_SMSTransmission_descriptor;
       }
 
+      @java.lang.Override
       public io.bloombox.schema.comms.SMSComms.SMSTransmission getDefaultInstanceForType() {
         return io.bloombox.schema.comms.SMSComms.SMSTransmission.getDefaultInstance();
       }
 
+      @java.lang.Override
       public io.bloombox.schema.comms.SMSComms.SMSTransmission build() {
         io.bloombox.schema.comms.SMSComms.SMSTransmission result = buildPartial();
         if (!result.isInitialized()) {
@@ -2785,6 +2847,7 @@ public final class SMSComms {
         return result;
       }
 
+      @java.lang.Override
       public io.bloombox.schema.comms.SMSComms.SMSTransmission buildPartial() {
         io.bloombox.schema.comms.SMSComms.SMSTransmission result = new io.bloombox.schema.comms.SMSComms.SMSTransmission(this);
         if (messageBuilder_ == null) {
@@ -2796,32 +2859,39 @@ public final class SMSComms {
         return result;
       }
 
+      @java.lang.Override
       public Builder clone() {
         return (Builder) super.clone();
       }
+      @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
         return (Builder) super.setField(field, value);
       }
+      @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
         return (Builder) super.clearField(field);
       }
+      @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
         return (Builder) super.clearOneof(oneof);
       }
+      @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
         return (Builder) super.setRepeatedField(field, index, value);
       }
+      @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
         return (Builder) super.addRepeatedField(field, value);
       }
+      @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
         if (other instanceof io.bloombox.schema.comms.SMSComms.SMSTransmission) {
           return mergeFrom((io.bloombox.schema.comms.SMSComms.SMSTransmission)other);
@@ -2841,10 +2911,12 @@ public final class SMSComms {
         return this;
       }
 
+      @java.lang.Override
       public final boolean isInitialized() {
         return true;
       }
 
+      @java.lang.Override
       public Builder mergeFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -2871,7 +2943,7 @@ public final class SMSComms {
        * Message payload to transmit in this operation.
        * </pre>
        *
-       * <code>.bloombox.schema.comms.SMSMessage message = 1;</code>
+       * <code>.bloombox.comms.SMSMessage message = 1;</code>
        */
       public boolean hasMessage() {
         return messageBuilder_ != null || message_ != null;
@@ -2881,7 +2953,7 @@ public final class SMSComms {
        * Message payload to transmit in this operation.
        * </pre>
        *
-       * <code>.bloombox.schema.comms.SMSMessage message = 1;</code>
+       * <code>.bloombox.comms.SMSMessage message = 1;</code>
        */
       public io.bloombox.schema.comms.SMSComms.SMSMessage getMessage() {
         if (messageBuilder_ == null) {
@@ -2895,7 +2967,7 @@ public final class SMSComms {
        * Message payload to transmit in this operation.
        * </pre>
        *
-       * <code>.bloombox.schema.comms.SMSMessage message = 1;</code>
+       * <code>.bloombox.comms.SMSMessage message = 1;</code>
        */
       public Builder setMessage(io.bloombox.schema.comms.SMSComms.SMSMessage value) {
         if (messageBuilder_ == null) {
@@ -2915,7 +2987,7 @@ public final class SMSComms {
        * Message payload to transmit in this operation.
        * </pre>
        *
-       * <code>.bloombox.schema.comms.SMSMessage message = 1;</code>
+       * <code>.bloombox.comms.SMSMessage message = 1;</code>
        */
       public Builder setMessage(
           io.bloombox.schema.comms.SMSComms.SMSMessage.Builder builderForValue) {
@@ -2933,7 +3005,7 @@ public final class SMSComms {
        * Message payload to transmit in this operation.
        * </pre>
        *
-       * <code>.bloombox.schema.comms.SMSMessage message = 1;</code>
+       * <code>.bloombox.comms.SMSMessage message = 1;</code>
        */
       public Builder mergeMessage(io.bloombox.schema.comms.SMSComms.SMSMessage value) {
         if (messageBuilder_ == null) {
@@ -2955,7 +3027,7 @@ public final class SMSComms {
        * Message payload to transmit in this operation.
        * </pre>
        *
-       * <code>.bloombox.schema.comms.SMSMessage message = 1;</code>
+       * <code>.bloombox.comms.SMSMessage message = 1;</code>
        */
       public Builder clearMessage() {
         if (messageBuilder_ == null) {
@@ -2973,7 +3045,7 @@ public final class SMSComms {
        * Message payload to transmit in this operation.
        * </pre>
        *
-       * <code>.bloombox.schema.comms.SMSMessage message = 1;</code>
+       * <code>.bloombox.comms.SMSMessage message = 1;</code>
        */
       public io.bloombox.schema.comms.SMSComms.SMSMessage.Builder getMessageBuilder() {
         
@@ -2985,7 +3057,7 @@ public final class SMSComms {
        * Message payload to transmit in this operation.
        * </pre>
        *
-       * <code>.bloombox.schema.comms.SMSMessage message = 1;</code>
+       * <code>.bloombox.comms.SMSMessage message = 1;</code>
        */
       public io.bloombox.schema.comms.SMSComms.SMSMessageOrBuilder getMessageOrBuilder() {
         if (messageBuilder_ != null) {
@@ -3000,7 +3072,7 @@ public final class SMSComms {
        * Message payload to transmit in this operation.
        * </pre>
        *
-       * <code>.bloombox.schema.comms.SMSMessage message = 1;</code>
+       * <code>.bloombox.comms.SMSMessage message = 1;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
           io.bloombox.schema.comms.SMSComms.SMSMessage, io.bloombox.schema.comms.SMSComms.SMSMessage.Builder, io.bloombox.schema.comms.SMSComms.SMSMessageOrBuilder> 
@@ -3015,21 +3087,23 @@ public final class SMSComms {
         }
         return messageBuilder_;
       }
+      @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
         return super.setUnknownFieldsProto3(unknownFields);
       }
 
+      @java.lang.Override
       public final Builder mergeUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
         return super.mergeUnknownFields(unknownFields);
       }
 
 
-      // @@protoc_insertion_point(builder_scope:bloombox.schema.comms.SMSTransmission)
+      // @@protoc_insertion_point(builder_scope:bloombox.comms.SMSTransmission)
     }
 
-    // @@protoc_insertion_point(class_scope:bloombox.schema.comms.SMSTransmission)
+    // @@protoc_insertion_point(class_scope:bloombox.comms.SMSTransmission)
     private static final io.bloombox.schema.comms.SMSComms.SMSTransmission DEFAULT_INSTANCE;
     static {
       DEFAULT_INSTANCE = new io.bloombox.schema.comms.SMSComms.SMSTransmission();
@@ -3041,6 +3115,7 @@ public final class SMSComms {
 
     private static final com.google.protobuf.Parser<SMSTransmission>
         PARSER = new com.google.protobuf.AbstractParser<SMSTransmission>() {
+      @java.lang.Override
       public SMSTransmission parsePartialFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -3058,6 +3133,7 @@ public final class SMSComms {
       return PARSER;
     }
 
+    @java.lang.Override
     public io.bloombox.schema.comms.SMSComms.SMSTransmission getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
@@ -3065,7 +3141,7 @@ public final class SMSComms {
   }
 
   public interface SMSBatchOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:bloombox.schema.comms.SMSBatch)
+      // @@protoc_insertion_point(interface_extends:bloombox.comms.SMSBatch)
       com.google.protobuf.MessageOrBuilder {
 
     /**
@@ -3073,7 +3149,7 @@ public final class SMSComms {
      * Transmission operations for this batch.
      * </pre>
      *
-     * <code>repeated .bloombox.schema.comms.SMSTransmission op = 1;</code>
+     * <code>repeated .bloombox.comms.SMSTransmission op = 1;</code>
      */
     java.util.List<io.bloombox.schema.comms.SMSComms.SMSTransmission> 
         getOpList();
@@ -3082,7 +3158,7 @@ public final class SMSComms {
      * Transmission operations for this batch.
      * </pre>
      *
-     * <code>repeated .bloombox.schema.comms.SMSTransmission op = 1;</code>
+     * <code>repeated .bloombox.comms.SMSTransmission op = 1;</code>
      */
     io.bloombox.schema.comms.SMSComms.SMSTransmission getOp(int index);
     /**
@@ -3090,7 +3166,7 @@ public final class SMSComms {
      * Transmission operations for this batch.
      * </pre>
      *
-     * <code>repeated .bloombox.schema.comms.SMSTransmission op = 1;</code>
+     * <code>repeated .bloombox.comms.SMSTransmission op = 1;</code>
      */
     int getOpCount();
     /**
@@ -3098,7 +3174,7 @@ public final class SMSComms {
      * Transmission operations for this batch.
      * </pre>
      *
-     * <code>repeated .bloombox.schema.comms.SMSTransmission op = 1;</code>
+     * <code>repeated .bloombox.comms.SMSTransmission op = 1;</code>
      */
     java.util.List<? extends io.bloombox.schema.comms.SMSComms.SMSTransmissionOrBuilder> 
         getOpOrBuilderList();
@@ -3107,7 +3183,7 @@ public final class SMSComms {
      * Transmission operations for this batch.
      * </pre>
      *
-     * <code>repeated .bloombox.schema.comms.SMSTransmission op = 1;</code>
+     * <code>repeated .bloombox.comms.SMSTransmission op = 1;</code>
      */
     io.bloombox.schema.comms.SMSComms.SMSTransmissionOrBuilder getOpOrBuilder(
         int index);
@@ -3117,11 +3193,11 @@ public final class SMSComms {
    * Specifies the structure of a batch of SMS transmission operations.
    * </pre>
    *
-   * Protobuf type {@code bloombox.schema.comms.SMSBatch}
+   * Protobuf type {@code bloombox.comms.SMSBatch}
    */
   public  static final class SMSBatch extends
       com.google.protobuf.GeneratedMessageV3 implements
-      // @@protoc_insertion_point(message_implements:bloombox.schema.comms.SMSBatch)
+      // @@protoc_insertion_point(message_implements:bloombox.comms.SMSBatch)
       SMSBatchOrBuilder {
   private static final long serialVersionUID = 0L;
     // Use SMSBatch.newBuilder() to construct.
@@ -3156,13 +3232,6 @@ public final class SMSComms {
             case 0:
               done = true;
               break;
-            default: {
-              if (!parseUnknownFieldProto3(
-                  input, unknownFields, extensionRegistry, tag)) {
-                done = true;
-              }
-              break;
-            }
             case 10: {
               if (!((mutable_bitField0_ & 0x00000001) == 0x00000001)) {
                 op_ = new java.util.ArrayList<io.bloombox.schema.comms.SMSComms.SMSTransmission>();
@@ -3170,6 +3239,13 @@ public final class SMSComms {
               }
               op_.add(
                   input.readMessage(io.bloombox.schema.comms.SMSComms.SMSTransmission.parser(), extensionRegistry));
+              break;
+            }
+            default: {
+              if (!parseUnknownFieldProto3(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
               break;
             }
           }
@@ -3189,12 +3265,13 @@ public final class SMSComms {
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return io.bloombox.schema.comms.SMSComms.internal_static_bloombox_schema_comms_SMSBatch_descriptor;
+      return io.bloombox.schema.comms.SMSComms.internal_static_bloombox_comms_SMSBatch_descriptor;
     }
 
+    @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return io.bloombox.schema.comms.SMSComms.internal_static_bloombox_schema_comms_SMSBatch_fieldAccessorTable
+      return io.bloombox.schema.comms.SMSComms.internal_static_bloombox_comms_SMSBatch_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
               io.bloombox.schema.comms.SMSComms.SMSBatch.class, io.bloombox.schema.comms.SMSComms.SMSBatch.Builder.class);
     }
@@ -3206,7 +3283,7 @@ public final class SMSComms {
      * Transmission operations for this batch.
      * </pre>
      *
-     * <code>repeated .bloombox.schema.comms.SMSTransmission op = 1;</code>
+     * <code>repeated .bloombox.comms.SMSTransmission op = 1;</code>
      */
     public java.util.List<io.bloombox.schema.comms.SMSComms.SMSTransmission> getOpList() {
       return op_;
@@ -3216,7 +3293,7 @@ public final class SMSComms {
      * Transmission operations for this batch.
      * </pre>
      *
-     * <code>repeated .bloombox.schema.comms.SMSTransmission op = 1;</code>
+     * <code>repeated .bloombox.comms.SMSTransmission op = 1;</code>
      */
     public java.util.List<? extends io.bloombox.schema.comms.SMSComms.SMSTransmissionOrBuilder> 
         getOpOrBuilderList() {
@@ -3227,7 +3304,7 @@ public final class SMSComms {
      * Transmission operations for this batch.
      * </pre>
      *
-     * <code>repeated .bloombox.schema.comms.SMSTransmission op = 1;</code>
+     * <code>repeated .bloombox.comms.SMSTransmission op = 1;</code>
      */
     public int getOpCount() {
       return op_.size();
@@ -3237,7 +3314,7 @@ public final class SMSComms {
      * Transmission operations for this batch.
      * </pre>
      *
-     * <code>repeated .bloombox.schema.comms.SMSTransmission op = 1;</code>
+     * <code>repeated .bloombox.comms.SMSTransmission op = 1;</code>
      */
     public io.bloombox.schema.comms.SMSComms.SMSTransmission getOp(int index) {
       return op_.get(index);
@@ -3247,7 +3324,7 @@ public final class SMSComms {
      * Transmission operations for this batch.
      * </pre>
      *
-     * <code>repeated .bloombox.schema.comms.SMSTransmission op = 1;</code>
+     * <code>repeated .bloombox.comms.SMSTransmission op = 1;</code>
      */
     public io.bloombox.schema.comms.SMSComms.SMSTransmissionOrBuilder getOpOrBuilder(
         int index) {
@@ -3255,6 +3332,7 @@ public final class SMSComms {
     }
 
     private byte memoizedIsInitialized = -1;
+    @java.lang.Override
     public final boolean isInitialized() {
       byte isInitialized = memoizedIsInitialized;
       if (isInitialized == 1) return true;
@@ -3264,6 +3342,7 @@ public final class SMSComms {
       return true;
     }
 
+    @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
       for (int i = 0; i < op_.size(); i++) {
@@ -3272,6 +3351,7 @@ public final class SMSComms {
       unknownFields.writeTo(output);
     }
 
+    @java.lang.Override
     public int getSerializedSize() {
       int size = memoizedSize;
       if (size != -1) return size;
@@ -3389,6 +3469,7 @@ public final class SMSComms {
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
 
+    @java.lang.Override
     public Builder newBuilderForType() { return newBuilder(); }
     public static Builder newBuilder() {
       return DEFAULT_INSTANCE.toBuilder();
@@ -3396,6 +3477,7 @@ public final class SMSComms {
     public static Builder newBuilder(io.bloombox.schema.comms.SMSComms.SMSBatch prototype) {
       return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
     }
+    @java.lang.Override
     public Builder toBuilder() {
       return this == DEFAULT_INSTANCE
           ? new Builder() : new Builder().mergeFrom(this);
@@ -3412,20 +3494,21 @@ public final class SMSComms {
      * Specifies the structure of a batch of SMS transmission operations.
      * </pre>
      *
-     * Protobuf type {@code bloombox.schema.comms.SMSBatch}
+     * Protobuf type {@code bloombox.comms.SMSBatch}
      */
     public static final class Builder extends
         com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:bloombox.schema.comms.SMSBatch)
+        // @@protoc_insertion_point(builder_implements:bloombox.comms.SMSBatch)
         io.bloombox.schema.comms.SMSComms.SMSBatchOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return io.bloombox.schema.comms.SMSComms.internal_static_bloombox_schema_comms_SMSBatch_descriptor;
+        return io.bloombox.schema.comms.SMSComms.internal_static_bloombox_comms_SMSBatch_descriptor;
       }
 
+      @java.lang.Override
       protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return io.bloombox.schema.comms.SMSComms.internal_static_bloombox_schema_comms_SMSBatch_fieldAccessorTable
+        return io.bloombox.schema.comms.SMSComms.internal_static_bloombox_comms_SMSBatch_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
                 io.bloombox.schema.comms.SMSComms.SMSBatch.class, io.bloombox.schema.comms.SMSComms.SMSBatch.Builder.class);
       }
@@ -3446,6 +3529,7 @@ public final class SMSComms {
           getOpFieldBuilder();
         }
       }
+      @java.lang.Override
       public Builder clear() {
         super.clear();
         if (opBuilder_ == null) {
@@ -3457,15 +3541,18 @@ public final class SMSComms {
         return this;
       }
 
+      @java.lang.Override
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return io.bloombox.schema.comms.SMSComms.internal_static_bloombox_schema_comms_SMSBatch_descriptor;
+        return io.bloombox.schema.comms.SMSComms.internal_static_bloombox_comms_SMSBatch_descriptor;
       }
 
+      @java.lang.Override
       public io.bloombox.schema.comms.SMSComms.SMSBatch getDefaultInstanceForType() {
         return io.bloombox.schema.comms.SMSComms.SMSBatch.getDefaultInstance();
       }
 
+      @java.lang.Override
       public io.bloombox.schema.comms.SMSComms.SMSBatch build() {
         io.bloombox.schema.comms.SMSComms.SMSBatch result = buildPartial();
         if (!result.isInitialized()) {
@@ -3474,6 +3561,7 @@ public final class SMSComms {
         return result;
       }
 
+      @java.lang.Override
       public io.bloombox.schema.comms.SMSComms.SMSBatch buildPartial() {
         io.bloombox.schema.comms.SMSComms.SMSBatch result = new io.bloombox.schema.comms.SMSComms.SMSBatch(this);
         int from_bitField0_ = bitField0_;
@@ -3490,32 +3578,39 @@ public final class SMSComms {
         return result;
       }
 
+      @java.lang.Override
       public Builder clone() {
         return (Builder) super.clone();
       }
+      @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
         return (Builder) super.setField(field, value);
       }
+      @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
         return (Builder) super.clearField(field);
       }
+      @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
         return (Builder) super.clearOneof(oneof);
       }
+      @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
         return (Builder) super.setRepeatedField(field, index, value);
       }
+      @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
         return (Builder) super.addRepeatedField(field, value);
       }
+      @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
         if (other instanceof io.bloombox.schema.comms.SMSComms.SMSBatch) {
           return mergeFrom((io.bloombox.schema.comms.SMSComms.SMSBatch)other);
@@ -3558,10 +3653,12 @@ public final class SMSComms {
         return this;
       }
 
+      @java.lang.Override
       public final boolean isInitialized() {
         return true;
       }
 
+      @java.lang.Override
       public Builder mergeFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -3598,7 +3695,7 @@ public final class SMSComms {
        * Transmission operations for this batch.
        * </pre>
        *
-       * <code>repeated .bloombox.schema.comms.SMSTransmission op = 1;</code>
+       * <code>repeated .bloombox.comms.SMSTransmission op = 1;</code>
        */
       public java.util.List<io.bloombox.schema.comms.SMSComms.SMSTransmission> getOpList() {
         if (opBuilder_ == null) {
@@ -3612,7 +3709,7 @@ public final class SMSComms {
        * Transmission operations for this batch.
        * </pre>
        *
-       * <code>repeated .bloombox.schema.comms.SMSTransmission op = 1;</code>
+       * <code>repeated .bloombox.comms.SMSTransmission op = 1;</code>
        */
       public int getOpCount() {
         if (opBuilder_ == null) {
@@ -3626,7 +3723,7 @@ public final class SMSComms {
        * Transmission operations for this batch.
        * </pre>
        *
-       * <code>repeated .bloombox.schema.comms.SMSTransmission op = 1;</code>
+       * <code>repeated .bloombox.comms.SMSTransmission op = 1;</code>
        */
       public io.bloombox.schema.comms.SMSComms.SMSTransmission getOp(int index) {
         if (opBuilder_ == null) {
@@ -3640,7 +3737,7 @@ public final class SMSComms {
        * Transmission operations for this batch.
        * </pre>
        *
-       * <code>repeated .bloombox.schema.comms.SMSTransmission op = 1;</code>
+       * <code>repeated .bloombox.comms.SMSTransmission op = 1;</code>
        */
       public Builder setOp(
           int index, io.bloombox.schema.comms.SMSComms.SMSTransmission value) {
@@ -3661,7 +3758,7 @@ public final class SMSComms {
        * Transmission operations for this batch.
        * </pre>
        *
-       * <code>repeated .bloombox.schema.comms.SMSTransmission op = 1;</code>
+       * <code>repeated .bloombox.comms.SMSTransmission op = 1;</code>
        */
       public Builder setOp(
           int index, io.bloombox.schema.comms.SMSComms.SMSTransmission.Builder builderForValue) {
@@ -3679,7 +3776,7 @@ public final class SMSComms {
        * Transmission operations for this batch.
        * </pre>
        *
-       * <code>repeated .bloombox.schema.comms.SMSTransmission op = 1;</code>
+       * <code>repeated .bloombox.comms.SMSTransmission op = 1;</code>
        */
       public Builder addOp(io.bloombox.schema.comms.SMSComms.SMSTransmission value) {
         if (opBuilder_ == null) {
@@ -3699,7 +3796,7 @@ public final class SMSComms {
        * Transmission operations for this batch.
        * </pre>
        *
-       * <code>repeated .bloombox.schema.comms.SMSTransmission op = 1;</code>
+       * <code>repeated .bloombox.comms.SMSTransmission op = 1;</code>
        */
       public Builder addOp(
           int index, io.bloombox.schema.comms.SMSComms.SMSTransmission value) {
@@ -3720,7 +3817,7 @@ public final class SMSComms {
        * Transmission operations for this batch.
        * </pre>
        *
-       * <code>repeated .bloombox.schema.comms.SMSTransmission op = 1;</code>
+       * <code>repeated .bloombox.comms.SMSTransmission op = 1;</code>
        */
       public Builder addOp(
           io.bloombox.schema.comms.SMSComms.SMSTransmission.Builder builderForValue) {
@@ -3738,7 +3835,7 @@ public final class SMSComms {
        * Transmission operations for this batch.
        * </pre>
        *
-       * <code>repeated .bloombox.schema.comms.SMSTransmission op = 1;</code>
+       * <code>repeated .bloombox.comms.SMSTransmission op = 1;</code>
        */
       public Builder addOp(
           int index, io.bloombox.schema.comms.SMSComms.SMSTransmission.Builder builderForValue) {
@@ -3756,7 +3853,7 @@ public final class SMSComms {
        * Transmission operations for this batch.
        * </pre>
        *
-       * <code>repeated .bloombox.schema.comms.SMSTransmission op = 1;</code>
+       * <code>repeated .bloombox.comms.SMSTransmission op = 1;</code>
        */
       public Builder addAllOp(
           java.lang.Iterable<? extends io.bloombox.schema.comms.SMSComms.SMSTransmission> values) {
@@ -3775,7 +3872,7 @@ public final class SMSComms {
        * Transmission operations for this batch.
        * </pre>
        *
-       * <code>repeated .bloombox.schema.comms.SMSTransmission op = 1;</code>
+       * <code>repeated .bloombox.comms.SMSTransmission op = 1;</code>
        */
       public Builder clearOp() {
         if (opBuilder_ == null) {
@@ -3792,7 +3889,7 @@ public final class SMSComms {
        * Transmission operations for this batch.
        * </pre>
        *
-       * <code>repeated .bloombox.schema.comms.SMSTransmission op = 1;</code>
+       * <code>repeated .bloombox.comms.SMSTransmission op = 1;</code>
        */
       public Builder removeOp(int index) {
         if (opBuilder_ == null) {
@@ -3809,7 +3906,7 @@ public final class SMSComms {
        * Transmission operations for this batch.
        * </pre>
        *
-       * <code>repeated .bloombox.schema.comms.SMSTransmission op = 1;</code>
+       * <code>repeated .bloombox.comms.SMSTransmission op = 1;</code>
        */
       public io.bloombox.schema.comms.SMSComms.SMSTransmission.Builder getOpBuilder(
           int index) {
@@ -3820,7 +3917,7 @@ public final class SMSComms {
        * Transmission operations for this batch.
        * </pre>
        *
-       * <code>repeated .bloombox.schema.comms.SMSTransmission op = 1;</code>
+       * <code>repeated .bloombox.comms.SMSTransmission op = 1;</code>
        */
       public io.bloombox.schema.comms.SMSComms.SMSTransmissionOrBuilder getOpOrBuilder(
           int index) {
@@ -3834,7 +3931,7 @@ public final class SMSComms {
        * Transmission operations for this batch.
        * </pre>
        *
-       * <code>repeated .bloombox.schema.comms.SMSTransmission op = 1;</code>
+       * <code>repeated .bloombox.comms.SMSTransmission op = 1;</code>
        */
       public java.util.List<? extends io.bloombox.schema.comms.SMSComms.SMSTransmissionOrBuilder> 
            getOpOrBuilderList() {
@@ -3849,7 +3946,7 @@ public final class SMSComms {
        * Transmission operations for this batch.
        * </pre>
        *
-       * <code>repeated .bloombox.schema.comms.SMSTransmission op = 1;</code>
+       * <code>repeated .bloombox.comms.SMSTransmission op = 1;</code>
        */
       public io.bloombox.schema.comms.SMSComms.SMSTransmission.Builder addOpBuilder() {
         return getOpFieldBuilder().addBuilder(
@@ -3860,7 +3957,7 @@ public final class SMSComms {
        * Transmission operations for this batch.
        * </pre>
        *
-       * <code>repeated .bloombox.schema.comms.SMSTransmission op = 1;</code>
+       * <code>repeated .bloombox.comms.SMSTransmission op = 1;</code>
        */
       public io.bloombox.schema.comms.SMSComms.SMSTransmission.Builder addOpBuilder(
           int index) {
@@ -3872,7 +3969,7 @@ public final class SMSComms {
        * Transmission operations for this batch.
        * </pre>
        *
-       * <code>repeated .bloombox.schema.comms.SMSTransmission op = 1;</code>
+       * <code>repeated .bloombox.comms.SMSTransmission op = 1;</code>
        */
       public java.util.List<io.bloombox.schema.comms.SMSComms.SMSTransmission.Builder> 
            getOpBuilderList() {
@@ -3892,21 +3989,23 @@ public final class SMSComms {
         }
         return opBuilder_;
       }
+      @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
         return super.setUnknownFieldsProto3(unknownFields);
       }
 
+      @java.lang.Override
       public final Builder mergeUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
         return super.mergeUnknownFields(unknownFields);
       }
 
 
-      // @@protoc_insertion_point(builder_scope:bloombox.schema.comms.SMSBatch)
+      // @@protoc_insertion_point(builder_scope:bloombox.comms.SMSBatch)
     }
 
-    // @@protoc_insertion_point(class_scope:bloombox.schema.comms.SMSBatch)
+    // @@protoc_insertion_point(class_scope:bloombox.comms.SMSBatch)
     private static final io.bloombox.schema.comms.SMSComms.SMSBatch DEFAULT_INSTANCE;
     static {
       DEFAULT_INSTANCE = new io.bloombox.schema.comms.SMSComms.SMSBatch();
@@ -3918,6 +4017,7 @@ public final class SMSComms {
 
     private static final com.google.protobuf.Parser<SMSBatch>
         PARSER = new com.google.protobuf.AbstractParser<SMSBatch>() {
+      @java.lang.Override
       public SMSBatch parsePartialFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -3935,6 +4035,7 @@ public final class SMSComms {
       return PARSER;
     }
 
+    @java.lang.Override
     public io.bloombox.schema.comms.SMSComms.SMSBatch getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
@@ -3942,7 +4043,7 @@ public final class SMSComms {
   }
 
   public interface SMSSettingsOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:bloombox.schema.comms.SMSSettings)
+      // @@protoc_insertion_point(interface_extends:bloombox.comms.SMSSettings)
       com.google.protobuf.MessageOrBuilder {
 
     /**
@@ -3975,11 +4076,11 @@ public final class SMSComms {
    * SMS-specific settings.
    * </pre>
    *
-   * Protobuf type {@code bloombox.schema.comms.SMSSettings}
+   * Protobuf type {@code bloombox.comms.SMSSettings}
    */
   public  static final class SMSSettings extends
       com.google.protobuf.GeneratedMessageV3 implements
-      // @@protoc_insertion_point(message_implements:bloombox.schema.comms.SMSSettings)
+      // @@protoc_insertion_point(message_implements:bloombox.comms.SMSSettings)
       SMSSettingsOrBuilder {
   private static final long serialVersionUID = 0L;
     // Use SMSSettings.newBuilder() to construct.
@@ -4013,13 +4114,6 @@ public final class SMSComms {
             case 0:
               done = true;
               break;
-            default: {
-              if (!parseUnknownFieldProto3(
-                  input, unknownFields, extensionRegistry, tag)) {
-                done = true;
-              }
-              break;
-            }
             case 10: {
               io.opencannabis.schema.contact.ContactPhone.PhoneNumber.Builder subBuilder = null;
               if (sender_ != null) {
@@ -4031,6 +4125,13 @@ public final class SMSComms {
                 sender_ = subBuilder.buildPartial();
               }
 
+              break;
+            }
+            default: {
+              if (!parseUnknownFieldProto3(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
               break;
             }
           }
@@ -4047,12 +4148,13 @@ public final class SMSComms {
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return io.bloombox.schema.comms.SMSComms.internal_static_bloombox_schema_comms_SMSSettings_descriptor;
+      return io.bloombox.schema.comms.SMSComms.internal_static_bloombox_comms_SMSSettings_descriptor;
     }
 
+    @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return io.bloombox.schema.comms.SMSComms.internal_static_bloombox_schema_comms_SMSSettings_fieldAccessorTable
+      return io.bloombox.schema.comms.SMSComms.internal_static_bloombox_comms_SMSSettings_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
               io.bloombox.schema.comms.SMSComms.SMSSettings.class, io.bloombox.schema.comms.SMSComms.SMSSettings.Builder.class);
     }
@@ -4091,6 +4193,7 @@ public final class SMSComms {
     }
 
     private byte memoizedIsInitialized = -1;
+    @java.lang.Override
     public final boolean isInitialized() {
       byte isInitialized = memoizedIsInitialized;
       if (isInitialized == 1) return true;
@@ -4100,6 +4203,7 @@ public final class SMSComms {
       return true;
     }
 
+    @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
       if (sender_ != null) {
@@ -4108,6 +4212,7 @@ public final class SMSComms {
       unknownFields.writeTo(output);
     }
 
+    @java.lang.Override
     public int getSerializedSize() {
       int size = memoizedSize;
       if (size != -1) return size;
@@ -4228,6 +4333,7 @@ public final class SMSComms {
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
 
+    @java.lang.Override
     public Builder newBuilderForType() { return newBuilder(); }
     public static Builder newBuilder() {
       return DEFAULT_INSTANCE.toBuilder();
@@ -4235,6 +4341,7 @@ public final class SMSComms {
     public static Builder newBuilder(io.bloombox.schema.comms.SMSComms.SMSSettings prototype) {
       return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
     }
+    @java.lang.Override
     public Builder toBuilder() {
       return this == DEFAULT_INSTANCE
           ? new Builder() : new Builder().mergeFrom(this);
@@ -4251,20 +4358,21 @@ public final class SMSComms {
      * SMS-specific settings.
      * </pre>
      *
-     * Protobuf type {@code bloombox.schema.comms.SMSSettings}
+     * Protobuf type {@code bloombox.comms.SMSSettings}
      */
     public static final class Builder extends
         com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:bloombox.schema.comms.SMSSettings)
+        // @@protoc_insertion_point(builder_implements:bloombox.comms.SMSSettings)
         io.bloombox.schema.comms.SMSComms.SMSSettingsOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return io.bloombox.schema.comms.SMSComms.internal_static_bloombox_schema_comms_SMSSettings_descriptor;
+        return io.bloombox.schema.comms.SMSComms.internal_static_bloombox_comms_SMSSettings_descriptor;
       }
 
+      @java.lang.Override
       protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return io.bloombox.schema.comms.SMSComms.internal_static_bloombox_schema_comms_SMSSettings_fieldAccessorTable
+        return io.bloombox.schema.comms.SMSComms.internal_static_bloombox_comms_SMSSettings_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
                 io.bloombox.schema.comms.SMSComms.SMSSettings.class, io.bloombox.schema.comms.SMSComms.SMSSettings.Builder.class);
       }
@@ -4284,6 +4392,7 @@ public final class SMSComms {
                 .alwaysUseFieldBuilders) {
         }
       }
+      @java.lang.Override
       public Builder clear() {
         super.clear();
         if (senderBuilder_ == null) {
@@ -4295,15 +4404,18 @@ public final class SMSComms {
         return this;
       }
 
+      @java.lang.Override
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return io.bloombox.schema.comms.SMSComms.internal_static_bloombox_schema_comms_SMSSettings_descriptor;
+        return io.bloombox.schema.comms.SMSComms.internal_static_bloombox_comms_SMSSettings_descriptor;
       }
 
+      @java.lang.Override
       public io.bloombox.schema.comms.SMSComms.SMSSettings getDefaultInstanceForType() {
         return io.bloombox.schema.comms.SMSComms.SMSSettings.getDefaultInstance();
       }
 
+      @java.lang.Override
       public io.bloombox.schema.comms.SMSComms.SMSSettings build() {
         io.bloombox.schema.comms.SMSComms.SMSSettings result = buildPartial();
         if (!result.isInitialized()) {
@@ -4312,6 +4424,7 @@ public final class SMSComms {
         return result;
       }
 
+      @java.lang.Override
       public io.bloombox.schema.comms.SMSComms.SMSSettings buildPartial() {
         io.bloombox.schema.comms.SMSComms.SMSSettings result = new io.bloombox.schema.comms.SMSComms.SMSSettings(this);
         if (senderBuilder_ == null) {
@@ -4323,32 +4436,39 @@ public final class SMSComms {
         return result;
       }
 
+      @java.lang.Override
       public Builder clone() {
         return (Builder) super.clone();
       }
+      @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
         return (Builder) super.setField(field, value);
       }
+      @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
         return (Builder) super.clearField(field);
       }
+      @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
         return (Builder) super.clearOneof(oneof);
       }
+      @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
         return (Builder) super.setRepeatedField(field, index, value);
       }
+      @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
         return (Builder) super.addRepeatedField(field, value);
       }
+      @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
         if (other instanceof io.bloombox.schema.comms.SMSComms.SMSSettings) {
           return mergeFrom((io.bloombox.schema.comms.SMSComms.SMSSettings)other);
@@ -4368,10 +4488,12 @@ public final class SMSComms {
         return this;
       }
 
+      @java.lang.Override
       public final boolean isInitialized() {
         return true;
       }
 
+      @java.lang.Override
       public Builder mergeFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -4542,21 +4664,23 @@ public final class SMSComms {
         }
         return senderBuilder_;
       }
+      @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
         return super.setUnknownFieldsProto3(unknownFields);
       }
 
+      @java.lang.Override
       public final Builder mergeUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
         return super.mergeUnknownFields(unknownFields);
       }
 
 
-      // @@protoc_insertion_point(builder_scope:bloombox.schema.comms.SMSSettings)
+      // @@protoc_insertion_point(builder_scope:bloombox.comms.SMSSettings)
     }
 
-    // @@protoc_insertion_point(class_scope:bloombox.schema.comms.SMSSettings)
+    // @@protoc_insertion_point(class_scope:bloombox.comms.SMSSettings)
     private static final io.bloombox.schema.comms.SMSComms.SMSSettings DEFAULT_INSTANCE;
     static {
       DEFAULT_INSTANCE = new io.bloombox.schema.comms.SMSComms.SMSSettings();
@@ -4568,6 +4692,7 @@ public final class SMSComms {
 
     private static final com.google.protobuf.Parser<SMSSettings>
         PARSER = new com.google.protobuf.AbstractParser<SMSSettings>() {
+      @java.lang.Override
       public SMSSettings parsePartialFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -4585,6 +4710,7 @@ public final class SMSComms {
       return PARSER;
     }
 
+    @java.lang.Override
     public io.bloombox.schema.comms.SMSComms.SMSSettings getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
@@ -4592,30 +4718,30 @@ public final class SMSComms {
   }
 
   private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_bloombox_schema_comms_SMSContent_descriptor;
+    internal_static_bloombox_comms_SMSContent_descriptor;
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_bloombox_schema_comms_SMSContent_fieldAccessorTable;
+      internal_static_bloombox_comms_SMSContent_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_bloombox_schema_comms_SMSMessage_descriptor;
+    internal_static_bloombox_comms_SMSMessage_descriptor;
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_bloombox_schema_comms_SMSMessage_fieldAccessorTable;
+      internal_static_bloombox_comms_SMSMessage_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_bloombox_schema_comms_SMSTransmission_descriptor;
+    internal_static_bloombox_comms_SMSTransmission_descriptor;
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_bloombox_schema_comms_SMSTransmission_fieldAccessorTable;
+      internal_static_bloombox_comms_SMSTransmission_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_bloombox_schema_comms_SMSBatch_descriptor;
+    internal_static_bloombox_comms_SMSBatch_descriptor;
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_bloombox_schema_comms_SMSBatch_fieldAccessorTable;
+      internal_static_bloombox_comms_SMSBatch_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_bloombox_schema_comms_SMSSettings_descriptor;
+    internal_static_bloombox_comms_SMSSettings_descriptor;
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_bloombox_schema_comms_SMSSettings_fieldAccessorTable;
+      internal_static_bloombox_comms_SMSSettings_fieldAccessorTable;
 
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
@@ -4625,22 +4751,22 @@ public final class SMSComms {
       descriptor;
   static {
     java.lang.String[] descriptorData = {
-      "\n\017comms/SMS.proto\022\025bloombox.schema.comms" +
-      "\032\024core/Datamodel.proto\032\024media/MediaKey.p" +
-      "roto\032\031contact/PhoneNumber.proto\"[\n\nSMSCo" +
-      "ntent\022\017\n\007subject\030\001 \001(\t\022\017\n\007content\030\002 \001(\t\022" +
-      "+\n\005media\030\003 \003(\0132\034.opencannabis.media.Medi" +
-      "aKey\"\251\001\n\nSMSMessage\0221\n\006sender\030\001 \001(\0132!.op" +
-      "encannabis.contact.PhoneNumber\0224\n\trecipi" +
-      "ent\030\002 \001(\0132!.opencannabis.contact.PhoneNu" +
-      "mber\0222\n\007content\030\003 \001(\0132!.bloombox.schema." +
-      "comms.SMSContent\"E\n\017SMSTransmission\0222\n\007m" +
-      "essage\030\001 \001(\0132!.bloombox.schema.comms.SMS" +
-      "Message\">\n\010SMSBatch\0222\n\002op\030\001 \003(\0132&.bloomb" +
-      "ox.schema.comms.SMSTransmission\"@\n\013SMSSe" +
-      "ttings\0221\n\006sender\030\001 \001(\0132!.opencannabis.co" +
-      "ntact.PhoneNumberB.\n\030io.bloombox.schema." +
-      "commsB\010SMSCommsH\001P\000\242\002\003BBSb\006proto3"
+      "\n\017comms/SMS.proto\022\016bloombox.comms\032\024core/" +
+      "Datamodel.proto\032\024media/MediaKey.proto\032\031c" +
+      "ontact/PhoneNumber.proto\"[\n\nSMSContent\022\017" +
+      "\n\007subject\030\001 \001(\t\022\017\n\007content\030\002 \001(\t\022+\n\005medi" +
+      "a\030\003 \003(\0132\034.opencannabis.media.MediaKey\"\242\001" +
+      "\n\nSMSMessage\0221\n\006sender\030\001 \001(\0132!.opencanna" +
+      "bis.contact.PhoneNumber\0224\n\trecipient\030\002 \001" +
+      "(\0132!.opencannabis.contact.PhoneNumber\022+\n" +
+      "\007content\030\003 \001(\0132\032.bloombox.comms.SMSConte" +
+      "nt\">\n\017SMSTransmission\022+\n\007message\030\001 \001(\0132\032" +
+      ".bloombox.comms.SMSMessage\"7\n\010SMSBatch\022+" +
+      "\n\002op\030\001 \003(\0132\037.bloombox.comms.SMSTransmiss" +
+      "ion\"@\n\013SMSSettings\0221\n\006sender\030\001 \001(\0132!.ope" +
+      "ncannabis.contact.PhoneNumberB.\n\030io.bloo" +
+      "mbox.schema.commsB\010SMSCommsH\001P\000\242\002\003BBSb\006p" +
+      "roto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -4657,35 +4783,35 @@ public final class SMSComms {
           io.opencannabis.schema.media.MediaItemKey.getDescriptor(),
           io.opencannabis.schema.contact.ContactPhone.getDescriptor(),
         }, assigner);
-    internal_static_bloombox_schema_comms_SMSContent_descriptor =
+    internal_static_bloombox_comms_SMSContent_descriptor =
       getDescriptor().getMessageTypes().get(0);
-    internal_static_bloombox_schema_comms_SMSContent_fieldAccessorTable = new
+    internal_static_bloombox_comms_SMSContent_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_bloombox_schema_comms_SMSContent_descriptor,
+        internal_static_bloombox_comms_SMSContent_descriptor,
         new java.lang.String[] { "Subject", "Content", "Media", });
-    internal_static_bloombox_schema_comms_SMSMessage_descriptor =
+    internal_static_bloombox_comms_SMSMessage_descriptor =
       getDescriptor().getMessageTypes().get(1);
-    internal_static_bloombox_schema_comms_SMSMessage_fieldAccessorTable = new
+    internal_static_bloombox_comms_SMSMessage_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_bloombox_schema_comms_SMSMessage_descriptor,
+        internal_static_bloombox_comms_SMSMessage_descriptor,
         new java.lang.String[] { "Sender", "Recipient", "Content", });
-    internal_static_bloombox_schema_comms_SMSTransmission_descriptor =
+    internal_static_bloombox_comms_SMSTransmission_descriptor =
       getDescriptor().getMessageTypes().get(2);
-    internal_static_bloombox_schema_comms_SMSTransmission_fieldAccessorTable = new
+    internal_static_bloombox_comms_SMSTransmission_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_bloombox_schema_comms_SMSTransmission_descriptor,
+        internal_static_bloombox_comms_SMSTransmission_descriptor,
         new java.lang.String[] { "Message", });
-    internal_static_bloombox_schema_comms_SMSBatch_descriptor =
+    internal_static_bloombox_comms_SMSBatch_descriptor =
       getDescriptor().getMessageTypes().get(3);
-    internal_static_bloombox_schema_comms_SMSBatch_fieldAccessorTable = new
+    internal_static_bloombox_comms_SMSBatch_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_bloombox_schema_comms_SMSBatch_descriptor,
+        internal_static_bloombox_comms_SMSBatch_descriptor,
         new java.lang.String[] { "Op", });
-    internal_static_bloombox_schema_comms_SMSSettings_descriptor =
+    internal_static_bloombox_comms_SMSSettings_descriptor =
       getDescriptor().getMessageTypes().get(4);
-    internal_static_bloombox_schema_comms_SMSSettings_fieldAccessorTable = new
+    internal_static_bloombox_comms_SMSSettings_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_bloombox_schema_comms_SMSSettings_descriptor,
+        internal_static_bloombox_comms_SMSSettings_descriptor,
         new java.lang.String[] { "Sender", });
     core.Datamodel.getDescriptor();
     io.opencannabis.schema.media.MediaItemKey.getDescriptor();

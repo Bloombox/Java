@@ -1,11 +1,12 @@
 /*
- * Copyright 2018, Bloombox, LLC.
+ * Copyright 2018, Momentum Ideas, Co. All rights reserved.
  *
- * Licensed under the Apache License, Version 2.0 (the "License");
- * you may not use this file except in compliance with the License.
- * You may obtain a copy of the License at
- *
- *     http://www.apache.org/licenses/LICENSE-2.0
+ * Source and object computer code contained herein is the private intellectual
+ * property of Momentum Ideas Co., a Delaware Corporation. Use of this
+ * code in source form requires permission in writing before use or the
+ * assembly, distribution, or publishing of derivative works, for commercial
+ * purposes or any other purpose, from a duly authorized officer of Momentum
+ * Ideas Co.
  *
  * Unless required by applicable law or agreed to in writing, software
  * distributed under the License is distributed on an "AS IS" BASIS,
@@ -39,8 +40,6 @@ private static final long serialVersionUID = 0L;
   private Point() {
     latitude_ = 0D;
     longitude_ = 0D;
-    elevation_ = 0D;
-    accuracy_ = 0D;
   }
 
   @java.lang.Override
@@ -67,13 +66,6 @@ private static final long serialVersionUID = 0L;
           case 0:
             done = true;
             break;
-          default: {
-            if (!parseUnknownFieldProto3(
-                input, unknownFields, extensionRegistry, tag)) {
-              done = true;
-            }
-            break;
-          }
           case 9: {
 
             latitude_ = input.readDouble();
@@ -84,14 +76,37 @@ private static final long serialVersionUID = 0L;
             longitude_ = input.readDouble();
             break;
           }
-          case 25: {
+          case 26: {
+            io.opencannabis.schema.geo.Distance.Builder subBuilder = null;
+            if (elevation_ != null) {
+              subBuilder = elevation_.toBuilder();
+            }
+            elevation_ = input.readMessage(io.opencannabis.schema.geo.Distance.parser(), extensionRegistry);
+            if (subBuilder != null) {
+              subBuilder.mergeFrom(elevation_);
+              elevation_ = subBuilder.buildPartial();
+            }
 
-            elevation_ = input.readDouble();
             break;
           }
-          case 33: {
+          case 34: {
+            io.opencannabis.schema.geo.Distance.Builder subBuilder = null;
+            if (accuracy_ != null) {
+              subBuilder = accuracy_.toBuilder();
+            }
+            accuracy_ = input.readMessage(io.opencannabis.schema.geo.Distance.parser(), extensionRegistry);
+            if (subBuilder != null) {
+              subBuilder.mergeFrom(accuracy_);
+              accuracy_ = subBuilder.buildPartial();
+            }
 
-            accuracy_ = input.readDouble();
+            break;
+          }
+          default: {
+            if (!parseUnknownFieldProto3(
+                input, unknownFields, extensionRegistry, tag)) {
+              done = true;
+            }
             break;
           }
         }
@@ -111,6 +126,7 @@ private static final long serialVersionUID = 0L;
     return io.opencannabis.schema.geo.PointOuterClass.internal_static_opencannabis_geo_Point_descriptor;
   }
 
+  @java.lang.Override
   protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internalGetFieldAccessorTable() {
     return io.opencannabis.schema.geo.PointOuterClass.internal_static_opencannabis_geo_Point_fieldAccessorTable
@@ -145,32 +161,73 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int ELEVATION_FIELD_NUMBER = 3;
-  private double elevation_;
+  private io.opencannabis.schema.geo.Distance elevation_;
   /**
    * <pre>
    * Elevation of this point, if any.
    * </pre>
    *
-   * <code>double elevation = 3 [(.gen_bq_schema.description) = "Elevation of this point, if any."];</code>
+   * <code>.opencannabis.geo.Distance elevation = 3 [(.gen_bq_schema.description) = "Elevation of this point, if any."];</code>
    */
-  public double getElevation() {
-    return elevation_;
+  public boolean hasElevation() {
+    return elevation_ != null;
+  }
+  /**
+   * <pre>
+   * Elevation of this point, if any.
+   * </pre>
+   *
+   * <code>.opencannabis.geo.Distance elevation = 3 [(.gen_bq_schema.description) = "Elevation of this point, if any."];</code>
+   */
+  public io.opencannabis.schema.geo.Distance getElevation() {
+    return elevation_ == null ? io.opencannabis.schema.geo.Distance.getDefaultInstance() : elevation_;
+  }
+  /**
+   * <pre>
+   * Elevation of this point, if any.
+   * </pre>
+   *
+   * <code>.opencannabis.geo.Distance elevation = 3 [(.gen_bq_schema.description) = "Elevation of this point, if any."];</code>
+   */
+  public io.opencannabis.schema.geo.DistanceOrBuilder getElevationOrBuilder() {
+    return getElevation();
   }
 
   public static final int ACCURACY_FIELD_NUMBER = 4;
-  private double accuracy_;
+  private io.opencannabis.schema.geo.Distance accuracy_;
   /**
    * <pre>
    * Accuracy rating attached to this point, if any.
    * </pre>
    *
-   * <code>double accuracy = 4 [(.gen_bq_schema.description) = "Accuracy rating attached to this point, if any."];</code>
+   * <code>.opencannabis.geo.Distance accuracy = 4 [(.gen_bq_schema.description) = "Accuracy rating attached to this point, if any."];</code>
    */
-  public double getAccuracy() {
-    return accuracy_;
+  public boolean hasAccuracy() {
+    return accuracy_ != null;
+  }
+  /**
+   * <pre>
+   * Accuracy rating attached to this point, if any.
+   * </pre>
+   *
+   * <code>.opencannabis.geo.Distance accuracy = 4 [(.gen_bq_schema.description) = "Accuracy rating attached to this point, if any."];</code>
+   */
+  public io.opencannabis.schema.geo.Distance getAccuracy() {
+    return accuracy_ == null ? io.opencannabis.schema.geo.Distance.getDefaultInstance() : accuracy_;
+  }
+  /**
+   * <pre>
+   * Accuracy rating attached to this point, if any.
+   * </pre>
+   *
+   * <code>.opencannabis.geo.Distance accuracy = 4 [(.gen_bq_schema.description) = "Accuracy rating attached to this point, if any."];</code>
+   */
+  public io.opencannabis.schema.geo.DistanceOrBuilder getAccuracyOrBuilder() {
+    return getAccuracy();
   }
 
   private byte memoizedIsInitialized = -1;
+  @java.lang.Override
   public final boolean isInitialized() {
     byte isInitialized = memoizedIsInitialized;
     if (isInitialized == 1) return true;
@@ -180,6 +237,7 @@ private static final long serialVersionUID = 0L;
     return true;
   }
 
+  @java.lang.Override
   public void writeTo(com.google.protobuf.CodedOutputStream output)
                       throws java.io.IOException {
     if (latitude_ != 0D) {
@@ -188,15 +246,16 @@ private static final long serialVersionUID = 0L;
     if (longitude_ != 0D) {
       output.writeDouble(2, longitude_);
     }
-    if (elevation_ != 0D) {
-      output.writeDouble(3, elevation_);
+    if (elevation_ != null) {
+      output.writeMessage(3, getElevation());
     }
-    if (accuracy_ != 0D) {
-      output.writeDouble(4, accuracy_);
+    if (accuracy_ != null) {
+      output.writeMessage(4, getAccuracy());
     }
     unknownFields.writeTo(output);
   }
 
+  @java.lang.Override
   public int getSerializedSize() {
     int size = memoizedSize;
     if (size != -1) return size;
@@ -210,13 +269,13 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeDoubleSize(2, longitude_);
     }
-    if (elevation_ != 0D) {
+    if (elevation_ != null) {
       size += com.google.protobuf.CodedOutputStream
-        .computeDoubleSize(3, elevation_);
+        .computeMessageSize(3, getElevation());
     }
-    if (accuracy_ != 0D) {
+    if (accuracy_ != null) {
       size += com.google.protobuf.CodedOutputStream
-        .computeDoubleSize(4, accuracy_);
+        .computeMessageSize(4, getAccuracy());
     }
     size += unknownFields.getSerializedSize();
     memoizedSize = size;
@@ -242,14 +301,16 @@ private static final long serialVersionUID = 0L;
         java.lang.Double.doubleToLongBits(getLongitude())
         == java.lang.Double.doubleToLongBits(
             other.getLongitude()));
-    result = result && (
-        java.lang.Double.doubleToLongBits(getElevation())
-        == java.lang.Double.doubleToLongBits(
-            other.getElevation()));
-    result = result && (
-        java.lang.Double.doubleToLongBits(getAccuracy())
-        == java.lang.Double.doubleToLongBits(
-            other.getAccuracy()));
+    result = result && (hasElevation() == other.hasElevation());
+    if (hasElevation()) {
+      result = result && getElevation()
+          .equals(other.getElevation());
+    }
+    result = result && (hasAccuracy() == other.hasAccuracy());
+    if (hasAccuracy()) {
+      result = result && getAccuracy()
+          .equals(other.getAccuracy());
+    }
     result = result && unknownFields.equals(other.unknownFields);
     return result;
   }
@@ -267,12 +328,14 @@ private static final long serialVersionUID = 0L;
     hash = (37 * hash) + LONGITUDE_FIELD_NUMBER;
     hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
         java.lang.Double.doubleToLongBits(getLongitude()));
-    hash = (37 * hash) + ELEVATION_FIELD_NUMBER;
-    hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
-        java.lang.Double.doubleToLongBits(getElevation()));
-    hash = (37 * hash) + ACCURACY_FIELD_NUMBER;
-    hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
-        java.lang.Double.doubleToLongBits(getAccuracy()));
+    if (hasElevation()) {
+      hash = (37 * hash) + ELEVATION_FIELD_NUMBER;
+      hash = (53 * hash) + getElevation().hashCode();
+    }
+    if (hasAccuracy()) {
+      hash = (37 * hash) + ACCURACY_FIELD_NUMBER;
+      hash = (53 * hash) + getAccuracy().hashCode();
+    }
     hash = (29 * hash) + unknownFields.hashCode();
     memoizedHashCode = hash;
     return hash;
@@ -348,6 +411,7 @@ private static final long serialVersionUID = 0L;
         .parseWithIOException(PARSER, input, extensionRegistry);
   }
 
+  @java.lang.Override
   public Builder newBuilderForType() { return newBuilder(); }
   public static Builder newBuilder() {
     return DEFAULT_INSTANCE.toBuilder();
@@ -355,6 +419,7 @@ private static final long serialVersionUID = 0L;
   public static Builder newBuilder(io.opencannabis.schema.geo.Point prototype) {
     return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
   }
+  @java.lang.Override
   public Builder toBuilder() {
     return this == DEFAULT_INSTANCE
         ? new Builder() : new Builder().mergeFrom(this);
@@ -383,6 +448,7 @@ private static final long serialVersionUID = 0L;
       return io.opencannabis.schema.geo.PointOuterClass.internal_static_opencannabis_geo_Point_descriptor;
     }
 
+    @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
       return io.opencannabis.schema.geo.PointOuterClass.internal_static_opencannabis_geo_Point_fieldAccessorTable
@@ -405,28 +471,40 @@ private static final long serialVersionUID = 0L;
               .alwaysUseFieldBuilders) {
       }
     }
+    @java.lang.Override
     public Builder clear() {
       super.clear();
       latitude_ = 0D;
 
       longitude_ = 0D;
 
-      elevation_ = 0D;
-
-      accuracy_ = 0D;
-
+      if (elevationBuilder_ == null) {
+        elevation_ = null;
+      } else {
+        elevation_ = null;
+        elevationBuilder_ = null;
+      }
+      if (accuracyBuilder_ == null) {
+        accuracy_ = null;
+      } else {
+        accuracy_ = null;
+        accuracyBuilder_ = null;
+      }
       return this;
     }
 
+    @java.lang.Override
     public com.google.protobuf.Descriptors.Descriptor
         getDescriptorForType() {
       return io.opencannabis.schema.geo.PointOuterClass.internal_static_opencannabis_geo_Point_descriptor;
     }
 
+    @java.lang.Override
     public io.opencannabis.schema.geo.Point getDefaultInstanceForType() {
       return io.opencannabis.schema.geo.Point.getDefaultInstance();
     }
 
+    @java.lang.Override
     public io.opencannabis.schema.geo.Point build() {
       io.opencannabis.schema.geo.Point result = buildPartial();
       if (!result.isInitialized()) {
@@ -435,42 +513,58 @@ private static final long serialVersionUID = 0L;
       return result;
     }
 
+    @java.lang.Override
     public io.opencannabis.schema.geo.Point buildPartial() {
       io.opencannabis.schema.geo.Point result = new io.opencannabis.schema.geo.Point(this);
       result.latitude_ = latitude_;
       result.longitude_ = longitude_;
-      result.elevation_ = elevation_;
-      result.accuracy_ = accuracy_;
+      if (elevationBuilder_ == null) {
+        result.elevation_ = elevation_;
+      } else {
+        result.elevation_ = elevationBuilder_.build();
+      }
+      if (accuracyBuilder_ == null) {
+        result.accuracy_ = accuracy_;
+      } else {
+        result.accuracy_ = accuracyBuilder_.build();
+      }
       onBuilt();
       return result;
     }
 
+    @java.lang.Override
     public Builder clone() {
       return (Builder) super.clone();
     }
+    @java.lang.Override
     public Builder setField(
         com.google.protobuf.Descriptors.FieldDescriptor field,
         java.lang.Object value) {
       return (Builder) super.setField(field, value);
     }
+    @java.lang.Override
     public Builder clearField(
         com.google.protobuf.Descriptors.FieldDescriptor field) {
       return (Builder) super.clearField(field);
     }
+    @java.lang.Override
     public Builder clearOneof(
         com.google.protobuf.Descriptors.OneofDescriptor oneof) {
       return (Builder) super.clearOneof(oneof);
     }
+    @java.lang.Override
     public Builder setRepeatedField(
         com.google.protobuf.Descriptors.FieldDescriptor field,
         int index, java.lang.Object value) {
       return (Builder) super.setRepeatedField(field, index, value);
     }
+    @java.lang.Override
     public Builder addRepeatedField(
         com.google.protobuf.Descriptors.FieldDescriptor field,
         java.lang.Object value) {
       return (Builder) super.addRepeatedField(field, value);
     }
+    @java.lang.Override
     public Builder mergeFrom(com.google.protobuf.Message other) {
       if (other instanceof io.opencannabis.schema.geo.Point) {
         return mergeFrom((io.opencannabis.schema.geo.Point)other);
@@ -488,21 +582,23 @@ private static final long serialVersionUID = 0L;
       if (other.getLongitude() != 0D) {
         setLongitude(other.getLongitude());
       }
-      if (other.getElevation() != 0D) {
-        setElevation(other.getElevation());
+      if (other.hasElevation()) {
+        mergeElevation(other.getElevation());
       }
-      if (other.getAccuracy() != 0D) {
-        setAccuracy(other.getAccuracy());
+      if (other.hasAccuracy()) {
+        mergeAccuracy(other.getAccuracy());
       }
       this.mergeUnknownFields(other.unknownFields);
       onChanged();
       return this;
     }
 
+    @java.lang.Override
     public final boolean isInitialized() {
       return true;
     }
 
+    @java.lang.Override
     public Builder mergeFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -597,28 +693,51 @@ private static final long serialVersionUID = 0L;
       return this;
     }
 
-    private double elevation_ ;
+    private io.opencannabis.schema.geo.Distance elevation_ = null;
+    private com.google.protobuf.SingleFieldBuilderV3<
+        io.opencannabis.schema.geo.Distance, io.opencannabis.schema.geo.Distance.Builder, io.opencannabis.schema.geo.DistanceOrBuilder> elevationBuilder_;
     /**
      * <pre>
      * Elevation of this point, if any.
      * </pre>
      *
-     * <code>double elevation = 3 [(.gen_bq_schema.description) = "Elevation of this point, if any."];</code>
+     * <code>.opencannabis.geo.Distance elevation = 3 [(.gen_bq_schema.description) = "Elevation of this point, if any."];</code>
      */
-    public double getElevation() {
-      return elevation_;
+    public boolean hasElevation() {
+      return elevationBuilder_ != null || elevation_ != null;
     }
     /**
      * <pre>
      * Elevation of this point, if any.
      * </pre>
      *
-     * <code>double elevation = 3 [(.gen_bq_schema.description) = "Elevation of this point, if any."];</code>
+     * <code>.opencannabis.geo.Distance elevation = 3 [(.gen_bq_schema.description) = "Elevation of this point, if any."];</code>
      */
-    public Builder setElevation(double value) {
-      
-      elevation_ = value;
-      onChanged();
+    public io.opencannabis.schema.geo.Distance getElevation() {
+      if (elevationBuilder_ == null) {
+        return elevation_ == null ? io.opencannabis.schema.geo.Distance.getDefaultInstance() : elevation_;
+      } else {
+        return elevationBuilder_.getMessage();
+      }
+    }
+    /**
+     * <pre>
+     * Elevation of this point, if any.
+     * </pre>
+     *
+     * <code>.opencannabis.geo.Distance elevation = 3 [(.gen_bq_schema.description) = "Elevation of this point, if any."];</code>
+     */
+    public Builder setElevation(io.opencannabis.schema.geo.Distance value) {
+      if (elevationBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        elevation_ = value;
+        onChanged();
+      } else {
+        elevationBuilder_.setMessage(value);
+      }
+
       return this;
     }
     /**
@@ -626,37 +745,152 @@ private static final long serialVersionUID = 0L;
      * Elevation of this point, if any.
      * </pre>
      *
-     * <code>double elevation = 3 [(.gen_bq_schema.description) = "Elevation of this point, if any."];</code>
+     * <code>.opencannabis.geo.Distance elevation = 3 [(.gen_bq_schema.description) = "Elevation of this point, if any."];</code>
+     */
+    public Builder setElevation(
+        io.opencannabis.schema.geo.Distance.Builder builderForValue) {
+      if (elevationBuilder_ == null) {
+        elevation_ = builderForValue.build();
+        onChanged();
+      } else {
+        elevationBuilder_.setMessage(builderForValue.build());
+      }
+
+      return this;
+    }
+    /**
+     * <pre>
+     * Elevation of this point, if any.
+     * </pre>
+     *
+     * <code>.opencannabis.geo.Distance elevation = 3 [(.gen_bq_schema.description) = "Elevation of this point, if any."];</code>
+     */
+    public Builder mergeElevation(io.opencannabis.schema.geo.Distance value) {
+      if (elevationBuilder_ == null) {
+        if (elevation_ != null) {
+          elevation_ =
+            io.opencannabis.schema.geo.Distance.newBuilder(elevation_).mergeFrom(value).buildPartial();
+        } else {
+          elevation_ = value;
+        }
+        onChanged();
+      } else {
+        elevationBuilder_.mergeFrom(value);
+      }
+
+      return this;
+    }
+    /**
+     * <pre>
+     * Elevation of this point, if any.
+     * </pre>
+     *
+     * <code>.opencannabis.geo.Distance elevation = 3 [(.gen_bq_schema.description) = "Elevation of this point, if any."];</code>
      */
     public Builder clearElevation() {
-      
-      elevation_ = 0D;
-      onChanged();
+      if (elevationBuilder_ == null) {
+        elevation_ = null;
+        onChanged();
+      } else {
+        elevation_ = null;
+        elevationBuilder_ = null;
+      }
+
       return this;
+    }
+    /**
+     * <pre>
+     * Elevation of this point, if any.
+     * </pre>
+     *
+     * <code>.opencannabis.geo.Distance elevation = 3 [(.gen_bq_schema.description) = "Elevation of this point, if any."];</code>
+     */
+    public io.opencannabis.schema.geo.Distance.Builder getElevationBuilder() {
+      
+      onChanged();
+      return getElevationFieldBuilder().getBuilder();
+    }
+    /**
+     * <pre>
+     * Elevation of this point, if any.
+     * </pre>
+     *
+     * <code>.opencannabis.geo.Distance elevation = 3 [(.gen_bq_schema.description) = "Elevation of this point, if any."];</code>
+     */
+    public io.opencannabis.schema.geo.DistanceOrBuilder getElevationOrBuilder() {
+      if (elevationBuilder_ != null) {
+        return elevationBuilder_.getMessageOrBuilder();
+      } else {
+        return elevation_ == null ?
+            io.opencannabis.schema.geo.Distance.getDefaultInstance() : elevation_;
+      }
+    }
+    /**
+     * <pre>
+     * Elevation of this point, if any.
+     * </pre>
+     *
+     * <code>.opencannabis.geo.Distance elevation = 3 [(.gen_bq_schema.description) = "Elevation of this point, if any."];</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        io.opencannabis.schema.geo.Distance, io.opencannabis.schema.geo.Distance.Builder, io.opencannabis.schema.geo.DistanceOrBuilder> 
+        getElevationFieldBuilder() {
+      if (elevationBuilder_ == null) {
+        elevationBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            io.opencannabis.schema.geo.Distance, io.opencannabis.schema.geo.Distance.Builder, io.opencannabis.schema.geo.DistanceOrBuilder>(
+                getElevation(),
+                getParentForChildren(),
+                isClean());
+        elevation_ = null;
+      }
+      return elevationBuilder_;
     }
 
-    private double accuracy_ ;
+    private io.opencannabis.schema.geo.Distance accuracy_ = null;
+    private com.google.protobuf.SingleFieldBuilderV3<
+        io.opencannabis.schema.geo.Distance, io.opencannabis.schema.geo.Distance.Builder, io.opencannabis.schema.geo.DistanceOrBuilder> accuracyBuilder_;
     /**
      * <pre>
      * Accuracy rating attached to this point, if any.
      * </pre>
      *
-     * <code>double accuracy = 4 [(.gen_bq_schema.description) = "Accuracy rating attached to this point, if any."];</code>
+     * <code>.opencannabis.geo.Distance accuracy = 4 [(.gen_bq_schema.description) = "Accuracy rating attached to this point, if any."];</code>
      */
-    public double getAccuracy() {
-      return accuracy_;
+    public boolean hasAccuracy() {
+      return accuracyBuilder_ != null || accuracy_ != null;
     }
     /**
      * <pre>
      * Accuracy rating attached to this point, if any.
      * </pre>
      *
-     * <code>double accuracy = 4 [(.gen_bq_schema.description) = "Accuracy rating attached to this point, if any."];</code>
+     * <code>.opencannabis.geo.Distance accuracy = 4 [(.gen_bq_schema.description) = "Accuracy rating attached to this point, if any."];</code>
      */
-    public Builder setAccuracy(double value) {
-      
-      accuracy_ = value;
-      onChanged();
+    public io.opencannabis.schema.geo.Distance getAccuracy() {
+      if (accuracyBuilder_ == null) {
+        return accuracy_ == null ? io.opencannabis.schema.geo.Distance.getDefaultInstance() : accuracy_;
+      } else {
+        return accuracyBuilder_.getMessage();
+      }
+    }
+    /**
+     * <pre>
+     * Accuracy rating attached to this point, if any.
+     * </pre>
+     *
+     * <code>.opencannabis.geo.Distance accuracy = 4 [(.gen_bq_schema.description) = "Accuracy rating attached to this point, if any."];</code>
+     */
+    public Builder setAccuracy(io.opencannabis.schema.geo.Distance value) {
+      if (accuracyBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        accuracy_ = value;
+        onChanged();
+      } else {
+        accuracyBuilder_.setMessage(value);
+      }
+
       return this;
     }
     /**
@@ -664,19 +898,113 @@ private static final long serialVersionUID = 0L;
      * Accuracy rating attached to this point, if any.
      * </pre>
      *
-     * <code>double accuracy = 4 [(.gen_bq_schema.description) = "Accuracy rating attached to this point, if any."];</code>
+     * <code>.opencannabis.geo.Distance accuracy = 4 [(.gen_bq_schema.description) = "Accuracy rating attached to this point, if any."];</code>
+     */
+    public Builder setAccuracy(
+        io.opencannabis.schema.geo.Distance.Builder builderForValue) {
+      if (accuracyBuilder_ == null) {
+        accuracy_ = builderForValue.build();
+        onChanged();
+      } else {
+        accuracyBuilder_.setMessage(builderForValue.build());
+      }
+
+      return this;
+    }
+    /**
+     * <pre>
+     * Accuracy rating attached to this point, if any.
+     * </pre>
+     *
+     * <code>.opencannabis.geo.Distance accuracy = 4 [(.gen_bq_schema.description) = "Accuracy rating attached to this point, if any."];</code>
+     */
+    public Builder mergeAccuracy(io.opencannabis.schema.geo.Distance value) {
+      if (accuracyBuilder_ == null) {
+        if (accuracy_ != null) {
+          accuracy_ =
+            io.opencannabis.schema.geo.Distance.newBuilder(accuracy_).mergeFrom(value).buildPartial();
+        } else {
+          accuracy_ = value;
+        }
+        onChanged();
+      } else {
+        accuracyBuilder_.mergeFrom(value);
+      }
+
+      return this;
+    }
+    /**
+     * <pre>
+     * Accuracy rating attached to this point, if any.
+     * </pre>
+     *
+     * <code>.opencannabis.geo.Distance accuracy = 4 [(.gen_bq_schema.description) = "Accuracy rating attached to this point, if any."];</code>
      */
     public Builder clearAccuracy() {
-      
-      accuracy_ = 0D;
-      onChanged();
+      if (accuracyBuilder_ == null) {
+        accuracy_ = null;
+        onChanged();
+      } else {
+        accuracy_ = null;
+        accuracyBuilder_ = null;
+      }
+
       return this;
     }
+    /**
+     * <pre>
+     * Accuracy rating attached to this point, if any.
+     * </pre>
+     *
+     * <code>.opencannabis.geo.Distance accuracy = 4 [(.gen_bq_schema.description) = "Accuracy rating attached to this point, if any."];</code>
+     */
+    public io.opencannabis.schema.geo.Distance.Builder getAccuracyBuilder() {
+      
+      onChanged();
+      return getAccuracyFieldBuilder().getBuilder();
+    }
+    /**
+     * <pre>
+     * Accuracy rating attached to this point, if any.
+     * </pre>
+     *
+     * <code>.opencannabis.geo.Distance accuracy = 4 [(.gen_bq_schema.description) = "Accuracy rating attached to this point, if any."];</code>
+     */
+    public io.opencannabis.schema.geo.DistanceOrBuilder getAccuracyOrBuilder() {
+      if (accuracyBuilder_ != null) {
+        return accuracyBuilder_.getMessageOrBuilder();
+      } else {
+        return accuracy_ == null ?
+            io.opencannabis.schema.geo.Distance.getDefaultInstance() : accuracy_;
+      }
+    }
+    /**
+     * <pre>
+     * Accuracy rating attached to this point, if any.
+     * </pre>
+     *
+     * <code>.opencannabis.geo.Distance accuracy = 4 [(.gen_bq_schema.description) = "Accuracy rating attached to this point, if any."];</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        io.opencannabis.schema.geo.Distance, io.opencannabis.schema.geo.Distance.Builder, io.opencannabis.schema.geo.DistanceOrBuilder> 
+        getAccuracyFieldBuilder() {
+      if (accuracyBuilder_ == null) {
+        accuracyBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            io.opencannabis.schema.geo.Distance, io.opencannabis.schema.geo.Distance.Builder, io.opencannabis.schema.geo.DistanceOrBuilder>(
+                getAccuracy(),
+                getParentForChildren(),
+                isClean());
+        accuracy_ = null;
+      }
+      return accuracyBuilder_;
+    }
+    @java.lang.Override
     public final Builder setUnknownFields(
         final com.google.protobuf.UnknownFieldSet unknownFields) {
       return super.setUnknownFieldsProto3(unknownFields);
     }
 
+    @java.lang.Override
     public final Builder mergeUnknownFields(
         final com.google.protobuf.UnknownFieldSet unknownFields) {
       return super.mergeUnknownFields(unknownFields);
@@ -698,6 +1026,7 @@ private static final long serialVersionUID = 0L;
 
   private static final com.google.protobuf.Parser<Point>
       PARSER = new com.google.protobuf.AbstractParser<Point>() {
+    @java.lang.Override
     public Point parsePartialFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -715,6 +1044,7 @@ private static final long serialVersionUID = 0L;
     return PARSER;
   }
 
+  @java.lang.Override
   public io.opencannabis.schema.geo.Point getDefaultInstanceForType() {
     return DEFAULT_INSTANCE;
   }

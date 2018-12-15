@@ -1,8 +1,8 @@
 /*
- * Copyright 2018, Bloombox, LLC. All rights reserved.
+ * Copyright 2018, Momentum Ideas, Co. All rights reserved.
  *
  * Source and object computer code contained herein is the private intellectual
- * property of Bloombox, a California Limited Liability Corporation. Use of this
+ * property of Momentum Ideas Co., a Delaware Corporation. Use of this
  * code in source form requires permission in writing before use or the
  * assembly, distribution, or publishing of derivative works, for commercial
  * purposes or any other purpose, from a duly authorized officer of Momentum
@@ -32,165 +32,165 @@ public final class ShopServiceV1 {
         (com.google.protobuf.ExtensionRegistryLite) registry);
   }
   static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_bloombox_schema_services_shop_v1_Ping_descriptor;
+    internal_static_bloombox_services_shop_v1_Ping_descriptor;
   static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_bloombox_schema_services_shop_v1_Ping_fieldAccessorTable;
+      internal_static_bloombox_services_shop_v1_Ping_fieldAccessorTable;
   static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_bloombox_schema_services_shop_v1_Ping_Request_descriptor;
+    internal_static_bloombox_services_shop_v1_Ping_Request_descriptor;
   static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_bloombox_schema_services_shop_v1_Ping_Request_fieldAccessorTable;
+      internal_static_bloombox_services_shop_v1_Ping_Request_fieldAccessorTable;
   static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_bloombox_schema_services_shop_v1_Ping_Response_descriptor;
+    internal_static_bloombox_services_shop_v1_Ping_Response_descriptor;
   static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_bloombox_schema_services_shop_v1_Ping_Response_fieldAccessorTable;
+      internal_static_bloombox_services_shop_v1_Ping_Response_fieldAccessorTable;
   static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_bloombox_schema_services_shop_v1_Ping_Operation_descriptor;
+    internal_static_bloombox_services_shop_v1_Ping_Operation_descriptor;
   static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_bloombox_schema_services_shop_v1_Ping_Operation_fieldAccessorTable;
+      internal_static_bloombox_services_shop_v1_Ping_Operation_fieldAccessorTable;
   static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_bloombox_schema_services_shop_v1_ShopInfo_descriptor;
+    internal_static_bloombox_services_shop_v1_ShopInfo_descriptor;
   static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_bloombox_schema_services_shop_v1_ShopInfo_fieldAccessorTable;
+      internal_static_bloombox_services_shop_v1_ShopInfo_fieldAccessorTable;
   static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_bloombox_schema_services_shop_v1_ShopInfo_Request_descriptor;
+    internal_static_bloombox_services_shop_v1_ShopInfo_Request_descriptor;
   static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_bloombox_schema_services_shop_v1_ShopInfo_Request_fieldAccessorTable;
+      internal_static_bloombox_services_shop_v1_ShopInfo_Request_fieldAccessorTable;
   static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_bloombox_schema_services_shop_v1_ShopInfo_Response_descriptor;
+    internal_static_bloombox_services_shop_v1_ShopInfo_Response_descriptor;
   static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_bloombox_schema_services_shop_v1_ShopInfo_Response_fieldAccessorTable;
+      internal_static_bloombox_services_shop_v1_ShopInfo_Response_fieldAccessorTable;
   static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_bloombox_schema_services_shop_v1_ShopInfo_Operation_descriptor;
+    internal_static_bloombox_services_shop_v1_ShopInfo_Operation_descriptor;
   static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_bloombox_schema_services_shop_v1_ShopInfo_Operation_fieldAccessorTable;
+      internal_static_bloombox_services_shop_v1_ShopInfo_Operation_fieldAccessorTable;
   static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_bloombox_schema_services_shop_v1_EnrollMember_descriptor;
+    internal_static_bloombox_services_shop_v1_EnrollMember_descriptor;
   static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_bloombox_schema_services_shop_v1_EnrollMember_fieldAccessorTable;
+      internal_static_bloombox_services_shop_v1_EnrollMember_fieldAccessorTable;
   static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_bloombox_schema_services_shop_v1_EnrollMember_Request_descriptor;
+    internal_static_bloombox_services_shop_v1_EnrollMember_Request_descriptor;
   static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_bloombox_schema_services_shop_v1_EnrollMember_Request_fieldAccessorTable;
+      internal_static_bloombox_services_shop_v1_EnrollMember_Request_fieldAccessorTable;
   static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_bloombox_schema_services_shop_v1_EnrollMember_Response_descriptor;
+    internal_static_bloombox_services_shop_v1_EnrollMember_Response_descriptor;
   static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_bloombox_schema_services_shop_v1_EnrollMember_Response_fieldAccessorTable;
+      internal_static_bloombox_services_shop_v1_EnrollMember_Response_fieldAccessorTable;
   static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_bloombox_schema_services_shop_v1_EnrollMember_Operation_descriptor;
+    internal_static_bloombox_services_shop_v1_EnrollMember_Operation_descriptor;
   static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_bloombox_schema_services_shop_v1_EnrollMember_Operation_fieldAccessorTable;
+      internal_static_bloombox_services_shop_v1_EnrollMember_Operation_fieldAccessorTable;
   static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_bloombox_schema_services_shop_v1_VerifyMember_descriptor;
+    internal_static_bloombox_services_shop_v1_VerifyMember_descriptor;
   static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_bloombox_schema_services_shop_v1_VerifyMember_fieldAccessorTable;
+      internal_static_bloombox_services_shop_v1_VerifyMember_fieldAccessorTable;
   static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_bloombox_schema_services_shop_v1_VerifyMember_Request_descriptor;
+    internal_static_bloombox_services_shop_v1_VerifyMember_Request_descriptor;
   static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_bloombox_schema_services_shop_v1_VerifyMember_Request_fieldAccessorTable;
+      internal_static_bloombox_services_shop_v1_VerifyMember_Request_fieldAccessorTable;
   static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_bloombox_schema_services_shop_v1_VerifyMember_Response_descriptor;
+    internal_static_bloombox_services_shop_v1_VerifyMember_Response_descriptor;
   static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_bloombox_schema_services_shop_v1_VerifyMember_Response_fieldAccessorTable;
+      internal_static_bloombox_services_shop_v1_VerifyMember_Response_fieldAccessorTable;
   static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_bloombox_schema_services_shop_v1_VerifyMember_Operation_descriptor;
+    internal_static_bloombox_services_shop_v1_VerifyMember_Operation_descriptor;
   static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_bloombox_schema_services_shop_v1_VerifyMember_Operation_fieldAccessorTable;
+      internal_static_bloombox_services_shop_v1_VerifyMember_Operation_fieldAccessorTable;
   static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_bloombox_schema_services_shop_v1_CheckZipcode_descriptor;
+    internal_static_bloombox_services_shop_v1_CheckZipcode_descriptor;
   static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_bloombox_schema_services_shop_v1_CheckZipcode_fieldAccessorTable;
+      internal_static_bloombox_services_shop_v1_CheckZipcode_fieldAccessorTable;
   static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_bloombox_schema_services_shop_v1_CheckZipcode_Request_descriptor;
+    internal_static_bloombox_services_shop_v1_CheckZipcode_Request_descriptor;
   static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_bloombox_schema_services_shop_v1_CheckZipcode_Request_fieldAccessorTable;
+      internal_static_bloombox_services_shop_v1_CheckZipcode_Request_fieldAccessorTable;
   static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_bloombox_schema_services_shop_v1_CheckZipcode_Response_descriptor;
+    internal_static_bloombox_services_shop_v1_CheckZipcode_Response_descriptor;
   static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_bloombox_schema_services_shop_v1_CheckZipcode_Response_fieldAccessorTable;
+      internal_static_bloombox_services_shop_v1_CheckZipcode_Response_fieldAccessorTable;
   static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_bloombox_schema_services_shop_v1_CheckZipcode_Operation_descriptor;
+    internal_static_bloombox_services_shop_v1_CheckZipcode_Operation_descriptor;
   static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_bloombox_schema_services_shop_v1_CheckZipcode_Operation_fieldAccessorTable;
+      internal_static_bloombox_services_shop_v1_CheckZipcode_Operation_fieldAccessorTable;
   static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_bloombox_schema_services_shop_v1_ShareOrder_descriptor;
+    internal_static_bloombox_services_shop_v1_ShareOrder_descriptor;
   static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_bloombox_schema_services_shop_v1_ShareOrder_fieldAccessorTable;
+      internal_static_bloombox_services_shop_v1_ShareOrder_fieldAccessorTable;
   static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_bloombox_schema_services_shop_v1_ShareOrder_Request_descriptor;
+    internal_static_bloombox_services_shop_v1_ShareOrder_Request_descriptor;
   static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_bloombox_schema_services_shop_v1_ShareOrder_Request_fieldAccessorTable;
+      internal_static_bloombox_services_shop_v1_ShareOrder_Request_fieldAccessorTable;
   static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_bloombox_schema_services_shop_v1_ShareOrder_Response_descriptor;
+    internal_static_bloombox_services_shop_v1_ShareOrder_Response_descriptor;
   static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_bloombox_schema_services_shop_v1_ShareOrder_Response_fieldAccessorTable;
+      internal_static_bloombox_services_shop_v1_ShareOrder_Response_fieldAccessorTable;
   static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_bloombox_schema_services_shop_v1_ShareOrder_Operation_descriptor;
+    internal_static_bloombox_services_shop_v1_ShareOrder_Operation_descriptor;
   static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_bloombox_schema_services_shop_v1_ShareOrder_Operation_fieldAccessorTable;
+      internal_static_bloombox_services_shop_v1_ShareOrder_Operation_fieldAccessorTable;
   static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_bloombox_schema_services_shop_v1_SubmitOrder_descriptor;
+    internal_static_bloombox_services_shop_v1_SubmitOrder_descriptor;
   static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_bloombox_schema_services_shop_v1_SubmitOrder_fieldAccessorTable;
+      internal_static_bloombox_services_shop_v1_SubmitOrder_fieldAccessorTable;
   static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_bloombox_schema_services_shop_v1_SubmitOrder_Request_descriptor;
+    internal_static_bloombox_services_shop_v1_SubmitOrder_Request_descriptor;
   static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_bloombox_schema_services_shop_v1_SubmitOrder_Request_fieldAccessorTable;
+      internal_static_bloombox_services_shop_v1_SubmitOrder_Request_fieldAccessorTable;
   static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_bloombox_schema_services_shop_v1_SubmitOrder_Response_descriptor;
+    internal_static_bloombox_services_shop_v1_SubmitOrder_Response_descriptor;
   static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_bloombox_schema_services_shop_v1_SubmitOrder_Response_fieldAccessorTable;
+      internal_static_bloombox_services_shop_v1_SubmitOrder_Response_fieldAccessorTable;
   static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_bloombox_schema_services_shop_v1_SubmitOrder_Operation_descriptor;
+    internal_static_bloombox_services_shop_v1_SubmitOrder_Operation_descriptor;
   static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_bloombox_schema_services_shop_v1_SubmitOrder_Operation_fieldAccessorTable;
+      internal_static_bloombox_services_shop_v1_SubmitOrder_Operation_fieldAccessorTable;
   static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_bloombox_schema_services_shop_v1_GetOrder_descriptor;
+    internal_static_bloombox_services_shop_v1_GetOrder_descriptor;
   static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_bloombox_schema_services_shop_v1_GetOrder_fieldAccessorTable;
+      internal_static_bloombox_services_shop_v1_GetOrder_fieldAccessorTable;
   static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_bloombox_schema_services_shop_v1_GetOrder_Request_descriptor;
+    internal_static_bloombox_services_shop_v1_GetOrder_Request_descriptor;
   static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_bloombox_schema_services_shop_v1_GetOrder_Request_fieldAccessorTable;
+      internal_static_bloombox_services_shop_v1_GetOrder_Request_fieldAccessorTable;
   static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_bloombox_schema_services_shop_v1_GetOrder_Response_descriptor;
+    internal_static_bloombox_services_shop_v1_GetOrder_Response_descriptor;
   static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_bloombox_schema_services_shop_v1_GetOrder_Response_fieldAccessorTable;
+      internal_static_bloombox_services_shop_v1_GetOrder_Response_fieldAccessorTable;
   static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_bloombox_schema_services_shop_v1_GetOrder_Operation_descriptor;
+    internal_static_bloombox_services_shop_v1_GetOrder_Operation_descriptor;
   static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_bloombox_schema_services_shop_v1_GetOrder_Operation_fieldAccessorTable;
+      internal_static_bloombox_services_shop_v1_GetOrder_Operation_fieldAccessorTable;
 
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
@@ -200,170 +200,161 @@ public final class ShopServiceV1 {
       descriptor;
   static {
     java.lang.String[] descriptorData = {
-      "\n\034shop/v1/ShopService_v1.proto\022 bloombox" +
-      ".schema.services.shop.v1\032\023identity/User." +
-      "proto\032\023person/Person.proto\032\024commerce/Ord" +
-      "er.proto\032\027commerce/Customer.proto\032\021ident" +
-      "ity/ID.proto\032 identity/ids/UserDoctorRec" +
-      ".proto\032\034services/ServiceStatus.proto\032\031pa" +
-      "rtner/LocationKey.proto\032.partner/setting" +
-      "s/PartnerLocationSettings.proto\032\032contact" +
-      "/EmailAddress.proto\032\031contact/PhoneNumber" +
-      ".proto\032\034google/api/annotations.proto\"\350\001\n" +
-      "\004Ping\032\t\n\007Request\032C\n\010Response\0227\n\006status\030\001" +
-      " \001(\0162\'.bloombox.schema.services.ServiceS" +
-      "tatus\032\217\001\n\tOperation\022?\n\007request\030\001 \001(\0132..b" +
-      "loombox.schema.services.shop.v1.Ping.Req" +
-      "uest\022A\n\010response\030\002 \001(\0132/.bloombox.schema" +
-      ".services.shop.v1.Ping.Response\"\266\002\n\010Shop" +
-      "Info\032A\n\007Request\0226\n\010location\030\001 \001(\0132$.bloo" +
-      "mbox.schema.partner.LocationKey\032M\n\010Respo" +
-      "nse\022A\n\013shop_status\030\001 \001(\0162,.bloombox.sche" +
-      "ma.partner.settings.ShopStatus\032\227\001\n\tOpera" +
-      "tion\022C\n\007request\030\001 \001(\01322.bloombox.schema." +
-      "services.shop.v1.ShopInfo.Request\022E\n\010res" +
-      "ponse\030\002 \001(\01323.bloombox.schema.services.s" +
-      "hop.v1.ShopInfo.Response\"\310\005\n\014EnrollMembe" +
-      "r\032\231\003\n\007Request\022+\n\006person\030\001 \001(\0132\033.opencann" +
-      "abis.person.Person\022:\n\006source\030\002 \001(\0162*.blo" +
-      "ombox.schema.identity.EnrollmentSource\022\017" +
-      "\n\007channel\030\003 \001(\t\022?\n\ndoctor_rec\030\004 \001(\0132+.bl" +
-      "oombox.schema.identity.ids.UserDoctorRec" +
-      "\0223\n\rgovernment_id\030\005 \001(\0132\034.bloombox.schem" +
-      "a.identity.ID\0226\n\010location\030\006 \001(\0132$.bloomb" +
-      "ox.schema.partner.LocationKey\022\020\n\010passwor" +
-      "d\030\007 \001(\t\022\017\n\007dry_run\030\010 \001(\010\022C\n\020consumer_pro" +
-      "file\030\t \001(\0132).bloombox.schema.identity.Co" +
-      "nsumerProfile\032z\n\010Response\022\n\n\002id\030\001 \001(\t\022\024\n" +
-      "\nforeign_id\030\002 \001(\tH\000\022B\n\005error\030\003 \001(\01621.blo" +
-      "ombox.schema.services.shop.v1.Enrollment" +
-      "ErrorH\000B\010\n\006result\032\237\001\n\tOperation\022G\n\007reque" +
-      "st\030\001 \001(\01326.bloombox.schema.services.shop" +
-      ".v1.EnrollMember.Request\022I\n\010response\030\002 \001" +
-      "(\01327.bloombox.schema.services.shop.v1.En" +
-      "rollMember.Response\"\250\003\n\014VerifyMember\032X\n\007" +
-      "Request\022\025\n\remail_address\030\001 \001(\t\0226\n\010locati" +
-      "on\030\002 \001(\0132$.bloombox.schema.partner.Locat" +
-      "ionKey\032\233\001\n\010Response\022\020\n\010verified\030\001 \001(\010\0223\n" +
-      "\010customer\030\002 \001(\0132\037.opencannabis.commerce." +
-      "CustomerH\000\022>\n\005error\030\003 \001(\0162-.bloombox.sch" +
-      "ema.services.shop.v1.VerifyErrorH\000B\010\n\006re" +
-      "sult\032\237\001\n\tOperation\022G\n\007request\030\001 \001(\01326.bl" +
-      "oombox.schema.services.shop.v1.VerifyMem" +
-      "ber.Request\022I\n\010response\030\002 \001(\01327.bloombox" +
-      ".schema.services.shop.v1.VerifyMember.Re" +
-      "sponse\"\275\002\n\014CheckZipcode\032R\n\007Request\022\017\n\007zi" +
-      "pcode\030\001 \001(\t\0226\n\010location\030\002 \001(\0132$.bloombox" +
-      ".schema.partner.LocationKey\0327\n\010Response\022" +
-      "\021\n\tsupported\030\001 \001(\010\022\030\n\020delivery_minimum\030\002" +
-      " \001(\002\032\237\001\n\tOperation\022G\n\007request\030\001 \001(\01326.bl" +
-      "oombox.schema.services.shop.v1.CheckZipc" +
-      "ode.Request\022I\n\010response\030\002 \001(\01327.bloombox" +
-      ".schema.services.shop.v1.CheckZipcode.Re" +
-      "sponse\"\330\003\n\nShareOrder\032\342\001\n\007Request\0229\n\rema" +
-      "il_address\030\001 \001(\0132\".opencannabis.contact." +
-      "EmailAddress\0227\n\014phone_number\030\002 \001(\0132!.ope" +
-      "ncannabis.contact.PhoneNumber\022+\n\005order\030\003" +
-      " \001(\0132\034.opencannabis.commerce.Order\0226\n\010lo" +
-      "cation\030\004 \001(\0132$.bloombox.schema.partner.L" +
-      "ocationKey\032G\n\010Response\022;\n\005error\030\001 \001(\0162,." +
-      "bloombox.schema.services.shop.v1.ShareEr" +
-      "ror\032\233\001\n\tOperation\022E\n\007request\030\001 \001(\01324.blo" +
-      "ombox.schema.services.shop.v1.ShareOrder" +
-      ".Request\022G\n\010response\030\002 \001(\01325.bloombox.sc" +
-      "hema.services.shop.v1.ShareOrder.Respons" +
-      "e\"\370\002\n\013SubmitOrder\032n\n\007Request\022+\n\005order\030\001 " +
-      "\001(\0132\034.opencannabis.commerce.Order\0226\n\010loc" +
-      "ation\030\002 \001(\0132$.bloombox.schema.partner.Lo" +
-      "cationKey\032Y\n\010Response\022;\n\005error\030\001 \001(\0162,.b" +
-      "loombox.schema.services.shop.v1.OrderErr" +
-      "or\022\020\n\010order_id\030\002 \001(\t\032\235\001\n\tOperation\022F\n\007re" +
-      "quest\030\001 \001(\01325.bloombox.schema.services.s" +
-      "hop.v1.SubmitOrder.Request\022H\n\010response\030\002" +
-      " \001(\01326.bloombox.schema.services.shop.v1." +
-      "SubmitOrder.Response\"\201\003\n\010GetOrder\032S\n\007Req" +
-      "uest\022\020\n\010order_id\030\001 \001(\t\0226\n\010location\030\002 \001(\013" +
-      "2$.bloombox.schema.partner.LocationKey\032\205" +
-      "\001\n\010Response\022\017\n\007success\030\001 \001(\010\022+\n\005order\030\002 " +
-      "\001(\0132\034.opencannabis.commerce.Order\022;\n\005err" +
-      "or\030\003 \001(\0162,.bloombox.schema.services.shop" +
-      ".v1.OrderError\032\227\001\n\tOperation\022C\n\007request\030" +
-      "\001 \001(\01322.bloombox.schema.services.shop.v1" +
-      ".GetOrder.Request\022E\n\010response\030\002 \001(\01323.bl" +
-      "oombox.schema.services.shop.v1.GetOrder." +
-      "Response*d\n\013VerifyError\022\r\n\tNOT_FOUND\020\000\022\017" +
-      "\n\013REC_EXPIRED\020\001\022\016\n\nID_EXPIRED\020\002\022\023\n\017INVAL" +
-      "ID_PAYLOAD\020\003\022\020\n\014NOT_ELIGIBLE\020\004*\313\002\n\nOrder" +
-      "Error\022\014\n\010NO_ERROR\020\000\022\021\n\rINVALID_ORDER\020\001\022\025" +
-      "\n\021USER_NOT_ELIGIBLE\020\002\022\030\n\024ZIPCODE_NOT_ELI" +
-      "GIBLE\020\003\022\026\n\022ZIPCODE_NOT_ACTIVE\020\004\022\033\n\027ZIPCO" +
-      "DE_MINIMUM_NOT_MET\020\005\022\023\n\017INVALID_PARTNER\020" +
-      "\006\022\024\n\020INVALID_LOCATION\020\007\022\024\n\020INVALID_CUSTO" +
-      "MER\020\010\022\027\n\023MISSING_DESTINATION\020\t\022\021\n\rSHOP_N" +
-      "OT_OPEN\020\n\022\032\n\026GLOBAL_MINIMUM_NOT_MET\020\013\022\030\n" +
-      "\024MEMBERSHIP_NOT_FOUND\020\014\022\023\n\017DUPLICATE_ORD" +
-      "ER\020\r*\247\003\n\017EnrollmentError\022\027\n\023NO_ENROLLMEN" +
-      "T_ERROR\020\000\022\021\n\rINVALID_EMAIL\020\001\022\020\n\014INVALID_" +
-      "NAME\020\002\022\021\n\rINVALID_PHONE\020\003\022\031\n\025INVALID_DAT" +
-      "E_OF_BIRTH\020\004\022\022\n\016INVALID_REC_ID\020\005\022\032\n\026INVA" +
-      "LID_REC_EXPIRATION\020\006\022\033\n\027INVALID_REC_DOCT" +
-      "OR_NAME\020\007\022\034\n\030INVALID_REC_DOCTOR_PHONE\020\010\022" +
-      "\023\n\017INVALID_USDL_ID\020\t\022\033\n\027INVALID_USDL_EXP" +
-      "IRATION\020\013\022\035\n\031INVALID_USDL_JURISDICTION\020\014" +
-      "\022\024\n\020ACCOUNT_CONFLICT\020\r\022\032\n\026ACCOUNT_CONFLI" +
-      "CT_EMAIL\020\016\022\032\n\026ACCOUNT_CONFLICT_PHONE\020\017\022\036" +
-      "\n\032INVALID_ENROLLMENT_PAYLOAD\020c* \n\nShareE" +
-      "rror\022\022\n\016NO_SHARE_ERROR\020\0002\200\017\n\004Shop\022~\n\004Pin" +
-      "g\022..bloombox.schema.services.shop.v1.Pin" +
-      "g.Request\032/.bloombox.schema.services.sho" +
-      "p.v1.Ping.Response\"\025\202\323\344\223\002\017\022\r/shop/v1/pin" +
-      "g\022\312\001\n\010ShopInfo\0222.bloombox.schema.service" +
-      "s.shop.v1.ShopInfo.Request\0323.bloombox.sc" +
-      "hema.services.shop.v1.ShopInfo.Response\"" +
-      "U\202\323\344\223\002O\022M/shop/v1/partners/{location.par" +
-      "tner.code}/locations/{location.code}/sho" +
-      "p/info\022\356\001\n\014EnrollMember\0226.bloombox.schem" +
-      "a.services.shop.v1.EnrollMember.Request\032" +
-      "7.bloombox.schema.services.shop.v1.Enrol" +
-      "lMember.Response\"m\202\323\344\223\002g\"K/shop/v1/partn" +
-      "ers/{location.partner.code}/locations/{l" +
-      "ocation.code}/members:\001*Z\025\"\020/shop/v1/mem" +
-      "bers:\001*\022\337\001\n\014CheckZipcode\0226.bloombox.sche" +
-      "ma.services.shop.v1.CheckZipcode.Request" +
-      "\0327.bloombox.schema.services.shop.v1.Chec" +
-      "kZipcode.Response\"^\202\323\344\223\002X\022V/shop/v1/part" +
-      "ners/{location.partner.code}/locations/{" +
-      "location.code}/zipcheck/{zipcode}\022\353\001\n\014Ve" +
-      "rifyMember\0226.bloombox.schema.services.sh" +
-      "op.v1.VerifyMember.Request\0327.bloombox.sc" +
-      "hema.services.shop.v1.VerifyMember.Respo" +
-      "nse\"j\202\323\344\223\002d\022b/shop/v1/partners/{location" +
-      ".partner.code}/locations/{location.code}" +
-      "/members/{email_address}/verify\022\271\002\n\013Subm" +
-      "itOrder\0225.bloombox.schema.services.shop." +
-      "v1.SubmitOrder.Request\0326.bloombox.schema" +
-      ".services.shop.v1.SubmitOrder.Response\"\272" +
-      "\001\202\323\344\223\002\263\001\"J/shop/v1/partners/{location.pa" +
-      "rtner.code}/locations/{location.code}/or" +
-      "ders:\005orderZ^\"U/shop/v1/partners/{locati" +
+      "\n\034shop/v1/ShopService_v1.proto\022\031bloombox" +
+      ".services.shop.v1\032\023identity/User.proto\032\023" +
+      "person/Person.proto\032\024commerce/Order.prot" +
+      "o\032\027commerce/Customer.proto\032\021identity/ID." +
+      "proto\032 identity/ids/UserDoctorRec.proto\032" +
+      "\034services/ServiceStatus.proto\032\031partner/L" +
+      "ocationKey.proto\032.partner/settings/Partn" +
+      "erLocationSettings.proto\032\032contact/EmailA" +
+      "ddress.proto\032\031contact/PhoneNumber.proto\032" +
+      "\034google/api/annotations.proto\"\323\001\n\004Ping\032\t" +
+      "\n\007Request\032<\n\010Response\0220\n\006status\030\001 \001(\0162 ." +
+      "bloombox.services.ServiceStatus\032\201\001\n\tOper" +
+      "ation\0228\n\007request\030\001 \001(\0132\'.bloombox.servic" +
+      "es.shop.v1.Ping.Request\022:\n\010response\030\002 \001(" +
+      "\0132(.bloombox.services.shop.v1.Ping.Respo" +
+      "nse\"\232\002\n\010ShopInfo\032:\n\007Request\022/\n\010location\030" +
+      "\001 \001(\0132\035.bloombox.partner.LocationKey\032F\n\010" +
+      "Response\022:\n\013shop_status\030\001 \001(\0162%.bloombox" +
+      ".partner.settings.ShopStatus\032\211\001\n\tOperati" +
+      "on\022<\n\007request\030\001 \001(\0132+.bloombox.services." +
+      "shop.v1.ShopInfo.Request\022>\n\010response\030\002 \001" +
+      "(\0132,.bloombox.services.shop.v1.ShopInfo." +
+      "Response\"\220\005\n\014EnrollMember\032\366\002\n\007Request\022+\n" +
+      "\006person\030\001 \001(\0132\033.opencannabis.person.Pers" +
+      "on\0223\n\006source\030\002 \001(\0162#.bloombox.identity.E" +
+      "nrollmentSource\022\017\n\007channel\030\003 \001(\t\0228\n\ndoct" +
+      "or_rec\030\004 \001(\0132$.bloombox.identity.ids.Use" +
+      "rDoctorRec\022,\n\rgovernment_id\030\005 \001(\0132\025.bloo" +
+      "mbox.identity.ID\022/\n\010location\030\006 \001(\0132\035.blo" +
+      "ombox.partner.LocationKey\022\020\n\010password\030\007 " +
+      "\001(\t\022\017\n\007dry_run\030\010 \001(\010\022<\n\020consumer_profile" +
+      "\030\t \001(\0132\".bloombox.identity.ConsumerProfi" +
+      "le\032s\n\010Response\022\n\n\002id\030\001 \001(\t\022\024\n\nforeign_id" +
+      "\030\002 \001(\tH\000\022;\n\005error\030\003 \001(\0162*.bloombox.servi" +
+      "ces.shop.v1.EnrollmentErrorH\000B\010\n\006result\032" +
+      "\221\001\n\tOperation\022@\n\007request\030\001 \001(\0132/.bloombo" +
+      "x.services.shop.v1.EnrollMember.Request\022" +
+      "B\n\010response\030\002 \001(\01320.bloombox.services.sh" +
+      "op.v1.EnrollMember.Response\"\214\003\n\014VerifyMe" +
+      "mber\032Q\n\007Request\022\025\n\remail_address\030\001 \001(\t\022/" +
+      "\n\010location\030\002 \001(\0132\035.bloombox.partner.Loca" +
+      "tionKey\032\224\001\n\010Response\022\020\n\010verified\030\001 \001(\010\0223" +
+      "\n\010customer\030\002 \001(\0132\037.opencannabis.commerce" +
+      ".CustomerH\000\0227\n\005error\030\003 \001(\0162&.bloombox.se" +
+      "rvices.shop.v1.VerifyErrorH\000B\010\n\006result\032\221" +
+      "\001\n\tOperation\022@\n\007request\030\001 \001(\0132/.bloombox" +
+      ".services.shop.v1.VerifyMember.Request\022B" +
+      "\n\010response\030\002 \001(\01320.bloombox.services.sho" +
+      "p.v1.VerifyMember.Response\"\250\002\n\014CheckZipc" +
+      "ode\032K\n\007Request\022\017\n\007zipcode\030\001 \001(\t\022/\n\010locat" +
+      "ion\030\002 \001(\0132\035.bloombox.partner.LocationKey" +
+      "\0327\n\010Response\022\021\n\tsupported\030\001 \001(\010\022\030\n\020deliv" +
+      "ery_minimum\030\002 \001(\002\032\221\001\n\tOperation\022@\n\007reque" +
+      "st\030\001 \001(\0132/.bloombox.services.shop.v1.Che" +
+      "ckZipcode.Request\022B\n\010response\030\002 \001(\01320.bl" +
+      "oombox.services.shop.v1.CheckZipcode.Res" +
+      "ponse\"\274\003\n\nShareOrder\032\333\001\n\007Request\0229\n\remai" +
+      "l_address\030\001 \001(\0132\".opencannabis.contact.E" +
+      "mailAddress\0227\n\014phone_number\030\002 \001(\0132!.open" +
+      "cannabis.contact.PhoneNumber\022+\n\005order\030\003 " +
+      "\001(\0132\034.opencannabis.commerce.Order\022/\n\010loc" +
+      "ation\030\004 \001(\0132\035.bloombox.partner.LocationK" +
+      "ey\032@\n\010Response\0224\n\005error\030\001 \001(\0162%.bloombox" +
+      ".services.shop.v1.ShareError\032\215\001\n\tOperati" +
+      "on\022>\n\007request\030\001 \001(\0132-.bloombox.services." +
+      "shop.v1.ShareOrder.Request\022@\n\010response\030\002" +
+      " \001(\0132..bloombox.services.shop.v1.ShareOr" +
+      "der.Response\"\334\002\n\013SubmitOrder\032g\n\007Request\022" +
+      "+\n\005order\030\001 \001(\0132\034.opencannabis.commerce.O" +
+      "rder\022/\n\010location\030\002 \001(\0132\035.bloombox.partne" +
+      "r.LocationKey\032R\n\010Response\0224\n\005error\030\001 \001(\016" +
+      "2%.bloombox.services.shop.v1.OrderError\022" +
+      "\020\n\010order_id\030\002 \001(\t\032\217\001\n\tOperation\022?\n\007reque" +
+      "st\030\001 \001(\0132..bloombox.services.shop.v1.Sub" +
+      "mitOrder.Request\022A\n\010response\030\002 \001(\0132/.blo" +
+      "ombox.services.shop.v1.SubmitOrder.Respo" +
+      "nse\"\344\002\n\010GetOrder\032L\n\007Request\022\020\n\010order_id\030" +
+      "\001 \001(\t\022/\n\010location\030\002 \001(\0132\035.bloombox.partn" +
+      "er.LocationKey\032~\n\010Response\022\017\n\007success\030\001 " +
+      "\001(\010\022+\n\005order\030\002 \001(\0132\034.opencannabis.commer" +
+      "ce.Order\0224\n\005error\030\003 \001(\0162%.bloombox.servi" +
+      "ces.shop.v1.OrderError\032\211\001\n\tOperation\022<\n\007" +
+      "request\030\001 \001(\0132+.bloombox.services.shop.v" +
+      "1.GetOrder.Request\022>\n\010response\030\002 \001(\0132,.b" +
+      "loombox.services.shop.v1.GetOrder.Respon" +
+      "se*d\n\013VerifyError\022\r\n\tNOT_FOUND\020\000\022\017\n\013REC_" +
+      "EXPIRED\020\001\022\016\n\nID_EXPIRED\020\002\022\023\n\017INVALID_PAY" +
+      "LOAD\020\003\022\020\n\014NOT_ELIGIBLE\020\004*\313\002\n\nOrderError\022" +
+      "\014\n\010NO_ERROR\020\000\022\021\n\rINVALID_ORDER\020\001\022\025\n\021USER" +
+      "_NOT_ELIGIBLE\020\002\022\030\n\024ZIPCODE_NOT_ELIGIBLE\020" +
+      "\003\022\026\n\022ZIPCODE_NOT_ACTIVE\020\004\022\033\n\027ZIPCODE_MIN" +
+      "IMUM_NOT_MET\020\005\022\023\n\017INVALID_PARTNER\020\006\022\024\n\020I" +
+      "NVALID_LOCATION\020\007\022\024\n\020INVALID_CUSTOMER\020\010\022" +
+      "\027\n\023MISSING_DESTINATION\020\t\022\021\n\rSHOP_NOT_OPE" +
+      "N\020\n\022\032\n\026GLOBAL_MINIMUM_NOT_MET\020\013\022\030\n\024MEMBE" +
+      "RSHIP_NOT_FOUND\020\014\022\023\n\017DUPLICATE_ORDER\020\r*\247" +
+      "\003\n\017EnrollmentError\022\027\n\023NO_ENROLLMENT_ERRO" +
+      "R\020\000\022\021\n\rINVALID_EMAIL\020\001\022\020\n\014INVALID_NAME\020\002" +
+      "\022\021\n\rINVALID_PHONE\020\003\022\031\n\025INVALID_DATE_OF_B" +
+      "IRTH\020\004\022\022\n\016INVALID_REC_ID\020\005\022\032\n\026INVALID_RE" +
+      "C_EXPIRATION\020\006\022\033\n\027INVALID_REC_DOCTOR_NAM" +
+      "E\020\007\022\034\n\030INVALID_REC_DOCTOR_PHONE\020\010\022\023\n\017INV" +
+      "ALID_USDL_ID\020\t\022\033\n\027INVALID_USDL_EXPIRATIO" +
+      "N\020\013\022\035\n\031INVALID_USDL_JURISDICTION\020\014\022\024\n\020AC" +
+      "COUNT_CONFLICT\020\r\022\032\n\026ACCOUNT_CONFLICT_EMA" +
+      "IL\020\016\022\032\n\026ACCOUNT_CONFLICT_PHONE\020\017\022\036\n\032INVA" +
+      "LID_ENROLLMENT_PAYLOAD\020c* \n\nShareError\022\022" +
+      "\n\016NO_SHARE_ERROR\020\0002\220\016\n\004Shop\022p\n\004Ping\022\'.bl" +
+      "oombox.services.shop.v1.Ping.Request\032(.b" +
+      "loombox.services.shop.v1.Ping.Response\"\025" +
+      "\202\323\344\223\002\017\022\r/shop/v1/ping\022\274\001\n\010ShopInfo\022+.blo" +
+      "ombox.services.shop.v1.ShopInfo.Request\032" +
+      ",.bloombox.services.shop.v1.ShopInfo.Res" +
+      "ponse\"U\202\323\344\223\002O\022M/shop/v1/partners/{locati" +
       "on.partner.code}/locations/{location.cod" +
-      "e}/orders/{order.id}:\005order\022\360\001\n\010GetOrder" +
-      "\0222.bloombox.schema.services.shop.v1.GetO" +
-      "rder.Request\0323.bloombox.schema.services." +
-      "shop.v1.GetOrder.Response\"{\202\323\344\223\002u\022U/shop" +
-      "/v1/partners/{location.partner.code}/loc" +
-      "ations/{location.code}/orders/{order_id}" +
-      "Z\034\022\032/shop/v1/orders/{order_id}\022\272\002\n\nShare" +
-      "Order\0224.bloombox.schema.services.shop.v1" +
-      ".ShareOrder.Request\0325.bloombox.schema.se" +
-      "rvices.shop.v1.ShareOrder.Response\"\276\001\202\323\344" +
-      "\223\002\267\001\"P/shop/v1/partners/{location.partne" +
-      "r.code}/locations/{location.code}/orders" +
-      "/share:\001*Z`\"[/shop/v1/partners/{location" +
-      ".partner.code}/locations/{location.code}" +
-      "/orders/{order.id}/share:\001*B/\n#io.bloomb" +
-      "ox.schema.services.shop.v1H\001P\001\242\002\003BBSb\006pr" +
-      "oto3"
+      "e}/shop/info\022\340\001\n\014EnrollMember\022/.bloombox" +
+      ".services.shop.v1.EnrollMember.Request\0320" +
+      ".bloombox.services.shop.v1.EnrollMember." +
+      "Response\"m\202\323\344\223\002g\"K/shop/v1/partners/{loc" +
+      "ation.partner.code}/locations/{location." +
+      "code}/members:\001*Z\025\"\020/shop/v1/members:\001*\022" +
+      "\321\001\n\014CheckZipcode\022/.bloombox.services.sho" +
+      "p.v1.CheckZipcode.Request\0320.bloombox.ser" +
+      "vices.shop.v1.CheckZipcode.Response\"^\202\323\344" +
+      "\223\002X\022V/shop/v1/partners/{location.partner" +
+      ".code}/locations/{location.code}/zipchec" +
+      "k/{zipcode}\022\335\001\n\014VerifyMember\022/.bloombox." +
+      "services.shop.v1.VerifyMember.Request\0320." +
+      "bloombox.services.shop.v1.VerifyMember.R" +
+      "esponse\"j\202\323\344\223\002d\022b/shop/v1/partners/{loca" +
+      "tion.partner.code}/locations/{location.c" +
+      "ode}/members/{email_address}/verify\022\253\002\n\013" +
+      "SubmitOrder\022..bloombox.services.shop.v1." +
+      "SubmitOrder.Request\032/.bloombox.services." +
+      "shop.v1.SubmitOrder.Response\"\272\001\202\323\344\223\002\263\001\"J" +
+      "/shop/v1/partners/{location.partner.code" +
+      "}/locations/{location.code}/orders:\005orde" +
+      "rZ^\"U/shop/v1/partners/{location.partner" +
+      ".code}/locations/{location.code}/orders/" +
+      "{order.id}:\005order\022\342\001\n\010GetOrder\022+.bloombo" +
+      "x.services.shop.v1.GetOrder.Request\032,.bl" +
+      "oombox.services.shop.v1.GetOrder.Respons" +
+      "e\"{\202\323\344\223\002u\022U/shop/v1/partners/{location.p" +
+      "artner.code}/locations/{location.code}/o" +
+      "rders/{order_id}Z\034\022\032/shop/v1/orders/{ord" +
+      "er_id}\022\254\002\n\nShareOrder\022-.bloombox.service" +
+      "s.shop.v1.ShareOrder.Request\032..bloombox." +
+      "services.shop.v1.ShareOrder.Response\"\276\001\202" +
+      "\323\344\223\002\267\001\"P/shop/v1/partners/{location.part" +
+      "ner.code}/locations/{location.code}/orde" +
+      "rs/share:\001*Z`\"[/shop/v1/partners/{locati" +
+      "on.partner.code}/locations/{location.cod" +
+      "e}/orders/{order.id}/share:\001*B/\n#io.bloo" +
+      "mbox.schema.services.shop.v1H\001P\001\242\002\003BBSb\006" +
+      "proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -389,197 +380,197 @@ public final class ShopServiceV1 {
           io.opencannabis.schema.contact.ContactPhone.getDescriptor(),
           com.google.api.AnnotationsProto.getDescriptor(),
         }, assigner);
-    internal_static_bloombox_schema_services_shop_v1_Ping_descriptor =
+    internal_static_bloombox_services_shop_v1_Ping_descriptor =
       getDescriptor().getMessageTypes().get(0);
-    internal_static_bloombox_schema_services_shop_v1_Ping_fieldAccessorTable = new
+    internal_static_bloombox_services_shop_v1_Ping_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_bloombox_schema_services_shop_v1_Ping_descriptor,
+        internal_static_bloombox_services_shop_v1_Ping_descriptor,
         new java.lang.String[] { });
-    internal_static_bloombox_schema_services_shop_v1_Ping_Request_descriptor =
-      internal_static_bloombox_schema_services_shop_v1_Ping_descriptor.getNestedTypes().get(0);
-    internal_static_bloombox_schema_services_shop_v1_Ping_Request_fieldAccessorTable = new
+    internal_static_bloombox_services_shop_v1_Ping_Request_descriptor =
+      internal_static_bloombox_services_shop_v1_Ping_descriptor.getNestedTypes().get(0);
+    internal_static_bloombox_services_shop_v1_Ping_Request_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_bloombox_schema_services_shop_v1_Ping_Request_descriptor,
+        internal_static_bloombox_services_shop_v1_Ping_Request_descriptor,
         new java.lang.String[] { });
-    internal_static_bloombox_schema_services_shop_v1_Ping_Response_descriptor =
-      internal_static_bloombox_schema_services_shop_v1_Ping_descriptor.getNestedTypes().get(1);
-    internal_static_bloombox_schema_services_shop_v1_Ping_Response_fieldAccessorTable = new
+    internal_static_bloombox_services_shop_v1_Ping_Response_descriptor =
+      internal_static_bloombox_services_shop_v1_Ping_descriptor.getNestedTypes().get(1);
+    internal_static_bloombox_services_shop_v1_Ping_Response_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_bloombox_schema_services_shop_v1_Ping_Response_descriptor,
+        internal_static_bloombox_services_shop_v1_Ping_Response_descriptor,
         new java.lang.String[] { "Status", });
-    internal_static_bloombox_schema_services_shop_v1_Ping_Operation_descriptor =
-      internal_static_bloombox_schema_services_shop_v1_Ping_descriptor.getNestedTypes().get(2);
-    internal_static_bloombox_schema_services_shop_v1_Ping_Operation_fieldAccessorTable = new
+    internal_static_bloombox_services_shop_v1_Ping_Operation_descriptor =
+      internal_static_bloombox_services_shop_v1_Ping_descriptor.getNestedTypes().get(2);
+    internal_static_bloombox_services_shop_v1_Ping_Operation_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_bloombox_schema_services_shop_v1_Ping_Operation_descriptor,
+        internal_static_bloombox_services_shop_v1_Ping_Operation_descriptor,
         new java.lang.String[] { "Request", "Response", });
-    internal_static_bloombox_schema_services_shop_v1_ShopInfo_descriptor =
+    internal_static_bloombox_services_shop_v1_ShopInfo_descriptor =
       getDescriptor().getMessageTypes().get(1);
-    internal_static_bloombox_schema_services_shop_v1_ShopInfo_fieldAccessorTable = new
+    internal_static_bloombox_services_shop_v1_ShopInfo_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_bloombox_schema_services_shop_v1_ShopInfo_descriptor,
+        internal_static_bloombox_services_shop_v1_ShopInfo_descriptor,
         new java.lang.String[] { });
-    internal_static_bloombox_schema_services_shop_v1_ShopInfo_Request_descriptor =
-      internal_static_bloombox_schema_services_shop_v1_ShopInfo_descriptor.getNestedTypes().get(0);
-    internal_static_bloombox_schema_services_shop_v1_ShopInfo_Request_fieldAccessorTable = new
+    internal_static_bloombox_services_shop_v1_ShopInfo_Request_descriptor =
+      internal_static_bloombox_services_shop_v1_ShopInfo_descriptor.getNestedTypes().get(0);
+    internal_static_bloombox_services_shop_v1_ShopInfo_Request_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_bloombox_schema_services_shop_v1_ShopInfo_Request_descriptor,
+        internal_static_bloombox_services_shop_v1_ShopInfo_Request_descriptor,
         new java.lang.String[] { "Location", });
-    internal_static_bloombox_schema_services_shop_v1_ShopInfo_Response_descriptor =
-      internal_static_bloombox_schema_services_shop_v1_ShopInfo_descriptor.getNestedTypes().get(1);
-    internal_static_bloombox_schema_services_shop_v1_ShopInfo_Response_fieldAccessorTable = new
+    internal_static_bloombox_services_shop_v1_ShopInfo_Response_descriptor =
+      internal_static_bloombox_services_shop_v1_ShopInfo_descriptor.getNestedTypes().get(1);
+    internal_static_bloombox_services_shop_v1_ShopInfo_Response_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_bloombox_schema_services_shop_v1_ShopInfo_Response_descriptor,
+        internal_static_bloombox_services_shop_v1_ShopInfo_Response_descriptor,
         new java.lang.String[] { "ShopStatus", });
-    internal_static_bloombox_schema_services_shop_v1_ShopInfo_Operation_descriptor =
-      internal_static_bloombox_schema_services_shop_v1_ShopInfo_descriptor.getNestedTypes().get(2);
-    internal_static_bloombox_schema_services_shop_v1_ShopInfo_Operation_fieldAccessorTable = new
+    internal_static_bloombox_services_shop_v1_ShopInfo_Operation_descriptor =
+      internal_static_bloombox_services_shop_v1_ShopInfo_descriptor.getNestedTypes().get(2);
+    internal_static_bloombox_services_shop_v1_ShopInfo_Operation_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_bloombox_schema_services_shop_v1_ShopInfo_Operation_descriptor,
+        internal_static_bloombox_services_shop_v1_ShopInfo_Operation_descriptor,
         new java.lang.String[] { "Request", "Response", });
-    internal_static_bloombox_schema_services_shop_v1_EnrollMember_descriptor =
+    internal_static_bloombox_services_shop_v1_EnrollMember_descriptor =
       getDescriptor().getMessageTypes().get(2);
-    internal_static_bloombox_schema_services_shop_v1_EnrollMember_fieldAccessorTable = new
+    internal_static_bloombox_services_shop_v1_EnrollMember_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_bloombox_schema_services_shop_v1_EnrollMember_descriptor,
+        internal_static_bloombox_services_shop_v1_EnrollMember_descriptor,
         new java.lang.String[] { });
-    internal_static_bloombox_schema_services_shop_v1_EnrollMember_Request_descriptor =
-      internal_static_bloombox_schema_services_shop_v1_EnrollMember_descriptor.getNestedTypes().get(0);
-    internal_static_bloombox_schema_services_shop_v1_EnrollMember_Request_fieldAccessorTable = new
+    internal_static_bloombox_services_shop_v1_EnrollMember_Request_descriptor =
+      internal_static_bloombox_services_shop_v1_EnrollMember_descriptor.getNestedTypes().get(0);
+    internal_static_bloombox_services_shop_v1_EnrollMember_Request_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_bloombox_schema_services_shop_v1_EnrollMember_Request_descriptor,
+        internal_static_bloombox_services_shop_v1_EnrollMember_Request_descriptor,
         new java.lang.String[] { "Person", "Source", "Channel", "DoctorRec", "GovernmentId", "Location", "Password", "DryRun", "ConsumerProfile", });
-    internal_static_bloombox_schema_services_shop_v1_EnrollMember_Response_descriptor =
-      internal_static_bloombox_schema_services_shop_v1_EnrollMember_descriptor.getNestedTypes().get(1);
-    internal_static_bloombox_schema_services_shop_v1_EnrollMember_Response_fieldAccessorTable = new
+    internal_static_bloombox_services_shop_v1_EnrollMember_Response_descriptor =
+      internal_static_bloombox_services_shop_v1_EnrollMember_descriptor.getNestedTypes().get(1);
+    internal_static_bloombox_services_shop_v1_EnrollMember_Response_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_bloombox_schema_services_shop_v1_EnrollMember_Response_descriptor,
+        internal_static_bloombox_services_shop_v1_EnrollMember_Response_descriptor,
         new java.lang.String[] { "Id", "ForeignId", "Error", "Result", });
-    internal_static_bloombox_schema_services_shop_v1_EnrollMember_Operation_descriptor =
-      internal_static_bloombox_schema_services_shop_v1_EnrollMember_descriptor.getNestedTypes().get(2);
-    internal_static_bloombox_schema_services_shop_v1_EnrollMember_Operation_fieldAccessorTable = new
+    internal_static_bloombox_services_shop_v1_EnrollMember_Operation_descriptor =
+      internal_static_bloombox_services_shop_v1_EnrollMember_descriptor.getNestedTypes().get(2);
+    internal_static_bloombox_services_shop_v1_EnrollMember_Operation_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_bloombox_schema_services_shop_v1_EnrollMember_Operation_descriptor,
+        internal_static_bloombox_services_shop_v1_EnrollMember_Operation_descriptor,
         new java.lang.String[] { "Request", "Response", });
-    internal_static_bloombox_schema_services_shop_v1_VerifyMember_descriptor =
+    internal_static_bloombox_services_shop_v1_VerifyMember_descriptor =
       getDescriptor().getMessageTypes().get(3);
-    internal_static_bloombox_schema_services_shop_v1_VerifyMember_fieldAccessorTable = new
+    internal_static_bloombox_services_shop_v1_VerifyMember_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_bloombox_schema_services_shop_v1_VerifyMember_descriptor,
+        internal_static_bloombox_services_shop_v1_VerifyMember_descriptor,
         new java.lang.String[] { });
-    internal_static_bloombox_schema_services_shop_v1_VerifyMember_Request_descriptor =
-      internal_static_bloombox_schema_services_shop_v1_VerifyMember_descriptor.getNestedTypes().get(0);
-    internal_static_bloombox_schema_services_shop_v1_VerifyMember_Request_fieldAccessorTable = new
+    internal_static_bloombox_services_shop_v1_VerifyMember_Request_descriptor =
+      internal_static_bloombox_services_shop_v1_VerifyMember_descriptor.getNestedTypes().get(0);
+    internal_static_bloombox_services_shop_v1_VerifyMember_Request_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_bloombox_schema_services_shop_v1_VerifyMember_Request_descriptor,
+        internal_static_bloombox_services_shop_v1_VerifyMember_Request_descriptor,
         new java.lang.String[] { "EmailAddress", "Location", });
-    internal_static_bloombox_schema_services_shop_v1_VerifyMember_Response_descriptor =
-      internal_static_bloombox_schema_services_shop_v1_VerifyMember_descriptor.getNestedTypes().get(1);
-    internal_static_bloombox_schema_services_shop_v1_VerifyMember_Response_fieldAccessorTable = new
+    internal_static_bloombox_services_shop_v1_VerifyMember_Response_descriptor =
+      internal_static_bloombox_services_shop_v1_VerifyMember_descriptor.getNestedTypes().get(1);
+    internal_static_bloombox_services_shop_v1_VerifyMember_Response_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_bloombox_schema_services_shop_v1_VerifyMember_Response_descriptor,
+        internal_static_bloombox_services_shop_v1_VerifyMember_Response_descriptor,
         new java.lang.String[] { "Verified", "Customer", "Error", "Result", });
-    internal_static_bloombox_schema_services_shop_v1_VerifyMember_Operation_descriptor =
-      internal_static_bloombox_schema_services_shop_v1_VerifyMember_descriptor.getNestedTypes().get(2);
-    internal_static_bloombox_schema_services_shop_v1_VerifyMember_Operation_fieldAccessorTable = new
+    internal_static_bloombox_services_shop_v1_VerifyMember_Operation_descriptor =
+      internal_static_bloombox_services_shop_v1_VerifyMember_descriptor.getNestedTypes().get(2);
+    internal_static_bloombox_services_shop_v1_VerifyMember_Operation_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_bloombox_schema_services_shop_v1_VerifyMember_Operation_descriptor,
+        internal_static_bloombox_services_shop_v1_VerifyMember_Operation_descriptor,
         new java.lang.String[] { "Request", "Response", });
-    internal_static_bloombox_schema_services_shop_v1_CheckZipcode_descriptor =
+    internal_static_bloombox_services_shop_v1_CheckZipcode_descriptor =
       getDescriptor().getMessageTypes().get(4);
-    internal_static_bloombox_schema_services_shop_v1_CheckZipcode_fieldAccessorTable = new
+    internal_static_bloombox_services_shop_v1_CheckZipcode_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_bloombox_schema_services_shop_v1_CheckZipcode_descriptor,
+        internal_static_bloombox_services_shop_v1_CheckZipcode_descriptor,
         new java.lang.String[] { });
-    internal_static_bloombox_schema_services_shop_v1_CheckZipcode_Request_descriptor =
-      internal_static_bloombox_schema_services_shop_v1_CheckZipcode_descriptor.getNestedTypes().get(0);
-    internal_static_bloombox_schema_services_shop_v1_CheckZipcode_Request_fieldAccessorTable = new
+    internal_static_bloombox_services_shop_v1_CheckZipcode_Request_descriptor =
+      internal_static_bloombox_services_shop_v1_CheckZipcode_descriptor.getNestedTypes().get(0);
+    internal_static_bloombox_services_shop_v1_CheckZipcode_Request_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_bloombox_schema_services_shop_v1_CheckZipcode_Request_descriptor,
+        internal_static_bloombox_services_shop_v1_CheckZipcode_Request_descriptor,
         new java.lang.String[] { "Zipcode", "Location", });
-    internal_static_bloombox_schema_services_shop_v1_CheckZipcode_Response_descriptor =
-      internal_static_bloombox_schema_services_shop_v1_CheckZipcode_descriptor.getNestedTypes().get(1);
-    internal_static_bloombox_schema_services_shop_v1_CheckZipcode_Response_fieldAccessorTable = new
+    internal_static_bloombox_services_shop_v1_CheckZipcode_Response_descriptor =
+      internal_static_bloombox_services_shop_v1_CheckZipcode_descriptor.getNestedTypes().get(1);
+    internal_static_bloombox_services_shop_v1_CheckZipcode_Response_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_bloombox_schema_services_shop_v1_CheckZipcode_Response_descriptor,
+        internal_static_bloombox_services_shop_v1_CheckZipcode_Response_descriptor,
         new java.lang.String[] { "Supported", "DeliveryMinimum", });
-    internal_static_bloombox_schema_services_shop_v1_CheckZipcode_Operation_descriptor =
-      internal_static_bloombox_schema_services_shop_v1_CheckZipcode_descriptor.getNestedTypes().get(2);
-    internal_static_bloombox_schema_services_shop_v1_CheckZipcode_Operation_fieldAccessorTable = new
+    internal_static_bloombox_services_shop_v1_CheckZipcode_Operation_descriptor =
+      internal_static_bloombox_services_shop_v1_CheckZipcode_descriptor.getNestedTypes().get(2);
+    internal_static_bloombox_services_shop_v1_CheckZipcode_Operation_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_bloombox_schema_services_shop_v1_CheckZipcode_Operation_descriptor,
+        internal_static_bloombox_services_shop_v1_CheckZipcode_Operation_descriptor,
         new java.lang.String[] { "Request", "Response", });
-    internal_static_bloombox_schema_services_shop_v1_ShareOrder_descriptor =
+    internal_static_bloombox_services_shop_v1_ShareOrder_descriptor =
       getDescriptor().getMessageTypes().get(5);
-    internal_static_bloombox_schema_services_shop_v1_ShareOrder_fieldAccessorTable = new
+    internal_static_bloombox_services_shop_v1_ShareOrder_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_bloombox_schema_services_shop_v1_ShareOrder_descriptor,
+        internal_static_bloombox_services_shop_v1_ShareOrder_descriptor,
         new java.lang.String[] { });
-    internal_static_bloombox_schema_services_shop_v1_ShareOrder_Request_descriptor =
-      internal_static_bloombox_schema_services_shop_v1_ShareOrder_descriptor.getNestedTypes().get(0);
-    internal_static_bloombox_schema_services_shop_v1_ShareOrder_Request_fieldAccessorTable = new
+    internal_static_bloombox_services_shop_v1_ShareOrder_Request_descriptor =
+      internal_static_bloombox_services_shop_v1_ShareOrder_descriptor.getNestedTypes().get(0);
+    internal_static_bloombox_services_shop_v1_ShareOrder_Request_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_bloombox_schema_services_shop_v1_ShareOrder_Request_descriptor,
+        internal_static_bloombox_services_shop_v1_ShareOrder_Request_descriptor,
         new java.lang.String[] { "EmailAddress", "PhoneNumber", "Order", "Location", });
-    internal_static_bloombox_schema_services_shop_v1_ShareOrder_Response_descriptor =
-      internal_static_bloombox_schema_services_shop_v1_ShareOrder_descriptor.getNestedTypes().get(1);
-    internal_static_bloombox_schema_services_shop_v1_ShareOrder_Response_fieldAccessorTable = new
+    internal_static_bloombox_services_shop_v1_ShareOrder_Response_descriptor =
+      internal_static_bloombox_services_shop_v1_ShareOrder_descriptor.getNestedTypes().get(1);
+    internal_static_bloombox_services_shop_v1_ShareOrder_Response_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_bloombox_schema_services_shop_v1_ShareOrder_Response_descriptor,
+        internal_static_bloombox_services_shop_v1_ShareOrder_Response_descriptor,
         new java.lang.String[] { "Error", });
-    internal_static_bloombox_schema_services_shop_v1_ShareOrder_Operation_descriptor =
-      internal_static_bloombox_schema_services_shop_v1_ShareOrder_descriptor.getNestedTypes().get(2);
-    internal_static_bloombox_schema_services_shop_v1_ShareOrder_Operation_fieldAccessorTable = new
+    internal_static_bloombox_services_shop_v1_ShareOrder_Operation_descriptor =
+      internal_static_bloombox_services_shop_v1_ShareOrder_descriptor.getNestedTypes().get(2);
+    internal_static_bloombox_services_shop_v1_ShareOrder_Operation_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_bloombox_schema_services_shop_v1_ShareOrder_Operation_descriptor,
+        internal_static_bloombox_services_shop_v1_ShareOrder_Operation_descriptor,
         new java.lang.String[] { "Request", "Response", });
-    internal_static_bloombox_schema_services_shop_v1_SubmitOrder_descriptor =
+    internal_static_bloombox_services_shop_v1_SubmitOrder_descriptor =
       getDescriptor().getMessageTypes().get(6);
-    internal_static_bloombox_schema_services_shop_v1_SubmitOrder_fieldAccessorTable = new
+    internal_static_bloombox_services_shop_v1_SubmitOrder_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_bloombox_schema_services_shop_v1_SubmitOrder_descriptor,
+        internal_static_bloombox_services_shop_v1_SubmitOrder_descriptor,
         new java.lang.String[] { });
-    internal_static_bloombox_schema_services_shop_v1_SubmitOrder_Request_descriptor =
-      internal_static_bloombox_schema_services_shop_v1_SubmitOrder_descriptor.getNestedTypes().get(0);
-    internal_static_bloombox_schema_services_shop_v1_SubmitOrder_Request_fieldAccessorTable = new
+    internal_static_bloombox_services_shop_v1_SubmitOrder_Request_descriptor =
+      internal_static_bloombox_services_shop_v1_SubmitOrder_descriptor.getNestedTypes().get(0);
+    internal_static_bloombox_services_shop_v1_SubmitOrder_Request_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_bloombox_schema_services_shop_v1_SubmitOrder_Request_descriptor,
+        internal_static_bloombox_services_shop_v1_SubmitOrder_Request_descriptor,
         new java.lang.String[] { "Order", "Location", });
-    internal_static_bloombox_schema_services_shop_v1_SubmitOrder_Response_descriptor =
-      internal_static_bloombox_schema_services_shop_v1_SubmitOrder_descriptor.getNestedTypes().get(1);
-    internal_static_bloombox_schema_services_shop_v1_SubmitOrder_Response_fieldAccessorTable = new
+    internal_static_bloombox_services_shop_v1_SubmitOrder_Response_descriptor =
+      internal_static_bloombox_services_shop_v1_SubmitOrder_descriptor.getNestedTypes().get(1);
+    internal_static_bloombox_services_shop_v1_SubmitOrder_Response_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_bloombox_schema_services_shop_v1_SubmitOrder_Response_descriptor,
+        internal_static_bloombox_services_shop_v1_SubmitOrder_Response_descriptor,
         new java.lang.String[] { "Error", "OrderId", });
-    internal_static_bloombox_schema_services_shop_v1_SubmitOrder_Operation_descriptor =
-      internal_static_bloombox_schema_services_shop_v1_SubmitOrder_descriptor.getNestedTypes().get(2);
-    internal_static_bloombox_schema_services_shop_v1_SubmitOrder_Operation_fieldAccessorTable = new
+    internal_static_bloombox_services_shop_v1_SubmitOrder_Operation_descriptor =
+      internal_static_bloombox_services_shop_v1_SubmitOrder_descriptor.getNestedTypes().get(2);
+    internal_static_bloombox_services_shop_v1_SubmitOrder_Operation_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_bloombox_schema_services_shop_v1_SubmitOrder_Operation_descriptor,
+        internal_static_bloombox_services_shop_v1_SubmitOrder_Operation_descriptor,
         new java.lang.String[] { "Request", "Response", });
-    internal_static_bloombox_schema_services_shop_v1_GetOrder_descriptor =
+    internal_static_bloombox_services_shop_v1_GetOrder_descriptor =
       getDescriptor().getMessageTypes().get(7);
-    internal_static_bloombox_schema_services_shop_v1_GetOrder_fieldAccessorTable = new
+    internal_static_bloombox_services_shop_v1_GetOrder_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_bloombox_schema_services_shop_v1_GetOrder_descriptor,
+        internal_static_bloombox_services_shop_v1_GetOrder_descriptor,
         new java.lang.String[] { });
-    internal_static_bloombox_schema_services_shop_v1_GetOrder_Request_descriptor =
-      internal_static_bloombox_schema_services_shop_v1_GetOrder_descriptor.getNestedTypes().get(0);
-    internal_static_bloombox_schema_services_shop_v1_GetOrder_Request_fieldAccessorTable = new
+    internal_static_bloombox_services_shop_v1_GetOrder_Request_descriptor =
+      internal_static_bloombox_services_shop_v1_GetOrder_descriptor.getNestedTypes().get(0);
+    internal_static_bloombox_services_shop_v1_GetOrder_Request_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_bloombox_schema_services_shop_v1_GetOrder_Request_descriptor,
+        internal_static_bloombox_services_shop_v1_GetOrder_Request_descriptor,
         new java.lang.String[] { "OrderId", "Location", });
-    internal_static_bloombox_schema_services_shop_v1_GetOrder_Response_descriptor =
-      internal_static_bloombox_schema_services_shop_v1_GetOrder_descriptor.getNestedTypes().get(1);
-    internal_static_bloombox_schema_services_shop_v1_GetOrder_Response_fieldAccessorTable = new
+    internal_static_bloombox_services_shop_v1_GetOrder_Response_descriptor =
+      internal_static_bloombox_services_shop_v1_GetOrder_descriptor.getNestedTypes().get(1);
+    internal_static_bloombox_services_shop_v1_GetOrder_Response_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_bloombox_schema_services_shop_v1_GetOrder_Response_descriptor,
+        internal_static_bloombox_services_shop_v1_GetOrder_Response_descriptor,
         new java.lang.String[] { "Success", "Order", "Error", });
-    internal_static_bloombox_schema_services_shop_v1_GetOrder_Operation_descriptor =
-      internal_static_bloombox_schema_services_shop_v1_GetOrder_descriptor.getNestedTypes().get(2);
-    internal_static_bloombox_schema_services_shop_v1_GetOrder_Operation_fieldAccessorTable = new
+    internal_static_bloombox_services_shop_v1_GetOrder_Operation_descriptor =
+      internal_static_bloombox_services_shop_v1_GetOrder_descriptor.getNestedTypes().get(2);
+    internal_static_bloombox_services_shop_v1_GetOrder_Operation_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_bloombox_schema_services_shop_v1_GetOrder_Operation_descriptor,
+        internal_static_bloombox_services_shop_v1_GetOrder_Operation_descriptor,
         new java.lang.String[] { "Request", "Response", });
     com.google.protobuf.ExtensionRegistry registry =
         com.google.protobuf.ExtensionRegistry.newInstance();

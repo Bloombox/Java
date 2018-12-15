@@ -1,11 +1,12 @@
 /*
- * Copyright 2018, Bloombox, LLC.
+ * Copyright 2018, Momentum Ideas, Co. All rights reserved.
  *
- * Licensed under the Apache License, Version 2.0 (the "License");
- * you may not use this file except in compliance with the License.
- * You may obtain a copy of the License at
- *
- *     http://www.apache.org/licenses/LICENSE-2.0
+ * Source and object computer code contained herein is the private intellectual
+ * property of Momentum Ideas Co., a Delaware Corporation. Use of this
+ * code in source form requires permission in writing before use or the
+ * assembly, distribution, or publishing of derivative works, for commercial
+ * purposes or any other purpose, from a duly authorized officer of Momentum
+ * Ideas Co.
  *
  * Unless required by applicable law or agreed to in writing, software
  * distributed under the License is distributed on an "AS IS" BASIS,
@@ -31,7 +32,7 @@ public final class PrescriptionID {
         (com.google.protobuf.ExtensionRegistryLite) registry);
   }
   public interface UserDoctorRecOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:bloombox.schema.identity.ids.UserDoctorRec)
+      // @@protoc_insertion_point(interface_extends:bloombox.identity.ids.UserDoctorRec)
       com.google.protobuf.MessageOrBuilder {
 
     /**
@@ -178,11 +179,11 @@ public final class PrescriptionID {
    * Doctor recommendation to allow a consumer to purchase cannabis in a restricted market.
    * </pre>
    *
-   * Protobuf type {@code bloombox.schema.identity.ids.UserDoctorRec}
+   * Protobuf type {@code bloombox.identity.ids.UserDoctorRec}
    */
   public  static final class UserDoctorRec extends
       com.google.protobuf.GeneratedMessageV3 implements
-      // @@protoc_insertion_point(message_implements:bloombox.schema.identity.ids.UserDoctorRec)
+      // @@protoc_insertion_point(message_implements:bloombox.identity.ids.UserDoctorRec)
       UserDoctorRecOrBuilder {
   private static final long serialVersionUID = 0L;
     // Use UserDoctorRec.newBuilder() to construct.
@@ -221,13 +222,6 @@ public final class PrescriptionID {
             case 0:
               done = true;
               break;
-            default: {
-              if (!parseUnknownFieldProto3(
-                  input, unknownFields, extensionRegistry, tag)) {
-                done = true;
-              }
-              break;
-            }
             case 10: {
               java.lang.String s = input.readStringRequireUtf8();
 
@@ -284,6 +278,13 @@ public final class PrescriptionID {
 
               break;
             }
+            default: {
+              if (!parseUnknownFieldProto3(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
           }
         }
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
@@ -298,12 +299,13 @@ public final class PrescriptionID {
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return io.bloombox.schema.identity.ids.PrescriptionID.internal_static_bloombox_schema_identity_ids_UserDoctorRec_descriptor;
+      return io.bloombox.schema.identity.ids.PrescriptionID.internal_static_bloombox_identity_ids_UserDoctorRec_descriptor;
     }
 
+    @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return io.bloombox.schema.identity.ids.PrescriptionID.internal_static_bloombox_schema_identity_ids_UserDoctorRec_fieldAccessorTable
+      return io.bloombox.schema.identity.ids.PrescriptionID.internal_static_bloombox_identity_ids_UserDoctorRec_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
               io.bloombox.schema.identity.ids.PrescriptionID.UserDoctorRec.class, io.bloombox.schema.identity.ids.PrescriptionID.UserDoctorRec.Builder.class);
     }
@@ -445,6 +447,7 @@ public final class PrescriptionID {
      * <code>.opencannabis.geo.usa.USState state = 4 [(.gen_bq_schema.description) = "US state where the recommendation is valid."];</code>
      */
     public io.opencannabis.schema.geo.usa.USState getState() {
+      @SuppressWarnings("deprecation")
       io.opencannabis.schema.geo.usa.USState result = io.opencannabis.schema.geo.usa.USState.valueOf(state_);
       return result == null ? io.opencannabis.schema.geo.usa.USState.UNRECOGNIZED : result;
     }
@@ -567,6 +570,7 @@ public final class PrescriptionID {
     }
 
     private byte memoizedIsInitialized = -1;
+    @java.lang.Override
     public final boolean isInitialized() {
       byte isInitialized = memoizedIsInitialized;
       if (isInitialized == 1) return true;
@@ -576,6 +580,7 @@ public final class PrescriptionID {
       return true;
     }
 
+    @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
       if (!getIdBytes().isEmpty()) {
@@ -602,6 +607,7 @@ public final class PrescriptionID {
       unknownFields.writeTo(output);
     }
 
+    @java.lang.Override
     public int getSerializedSize() {
       int size = memoizedSize;
       if (size != -1) return size;
@@ -770,6 +776,7 @@ public final class PrescriptionID {
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
 
+    @java.lang.Override
     public Builder newBuilderForType() { return newBuilder(); }
     public static Builder newBuilder() {
       return DEFAULT_INSTANCE.toBuilder();
@@ -777,6 +784,7 @@ public final class PrescriptionID {
     public static Builder newBuilder(io.bloombox.schema.identity.ids.PrescriptionID.UserDoctorRec prototype) {
       return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
     }
+    @java.lang.Override
     public Builder toBuilder() {
       return this == DEFAULT_INSTANCE
           ? new Builder() : new Builder().mergeFrom(this);
@@ -793,20 +801,21 @@ public final class PrescriptionID {
      * Doctor recommendation to allow a consumer to purchase cannabis in a restricted market.
      * </pre>
      *
-     * Protobuf type {@code bloombox.schema.identity.ids.UserDoctorRec}
+     * Protobuf type {@code bloombox.identity.ids.UserDoctorRec}
      */
     public static final class Builder extends
         com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:bloombox.schema.identity.ids.UserDoctorRec)
+        // @@protoc_insertion_point(builder_implements:bloombox.identity.ids.UserDoctorRec)
         io.bloombox.schema.identity.ids.PrescriptionID.UserDoctorRecOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return io.bloombox.schema.identity.ids.PrescriptionID.internal_static_bloombox_schema_identity_ids_UserDoctorRec_descriptor;
+        return io.bloombox.schema.identity.ids.PrescriptionID.internal_static_bloombox_identity_ids_UserDoctorRec_descriptor;
       }
 
+      @java.lang.Override
       protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return io.bloombox.schema.identity.ids.PrescriptionID.internal_static_bloombox_schema_identity_ids_UserDoctorRec_fieldAccessorTable
+        return io.bloombox.schema.identity.ids.PrescriptionID.internal_static_bloombox_identity_ids_UserDoctorRec_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
                 io.bloombox.schema.identity.ids.PrescriptionID.UserDoctorRec.class, io.bloombox.schema.identity.ids.PrescriptionID.UserDoctorRec.Builder.class);
       }
@@ -826,6 +835,7 @@ public final class PrescriptionID {
                 .alwaysUseFieldBuilders) {
         }
       }
+      @java.lang.Override
       public Builder clear() {
         super.clear();
         id_ = "";
@@ -853,15 +863,18 @@ public final class PrescriptionID {
         return this;
       }
 
+      @java.lang.Override
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return io.bloombox.schema.identity.ids.PrescriptionID.internal_static_bloombox_schema_identity_ids_UserDoctorRec_descriptor;
+        return io.bloombox.schema.identity.ids.PrescriptionID.internal_static_bloombox_identity_ids_UserDoctorRec_descriptor;
       }
 
+      @java.lang.Override
       public io.bloombox.schema.identity.ids.PrescriptionID.UserDoctorRec getDefaultInstanceForType() {
         return io.bloombox.schema.identity.ids.PrescriptionID.UserDoctorRec.getDefaultInstance();
       }
 
+      @java.lang.Override
       public io.bloombox.schema.identity.ids.PrescriptionID.UserDoctorRec build() {
         io.bloombox.schema.identity.ids.PrescriptionID.UserDoctorRec result = buildPartial();
         if (!result.isInitialized()) {
@@ -870,6 +883,7 @@ public final class PrescriptionID {
         return result;
       }
 
+      @java.lang.Override
       public io.bloombox.schema.identity.ids.PrescriptionID.UserDoctorRec buildPartial() {
         io.bloombox.schema.identity.ids.PrescriptionID.UserDoctorRec result = new io.bloombox.schema.identity.ids.PrescriptionID.UserDoctorRec(this);
         result.id_ = id_;
@@ -891,32 +905,39 @@ public final class PrescriptionID {
         return result;
       }
 
+      @java.lang.Override
       public Builder clone() {
         return (Builder) super.clone();
       }
+      @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
         return (Builder) super.setField(field, value);
       }
+      @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
         return (Builder) super.clearField(field);
       }
+      @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
         return (Builder) super.clearOneof(oneof);
       }
+      @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
         return (Builder) super.setRepeatedField(field, index, value);
       }
+      @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
         return (Builder) super.addRepeatedField(field, value);
       }
+      @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
         if (other instanceof io.bloombox.schema.identity.ids.PrescriptionID.UserDoctorRec) {
           return mergeFrom((io.bloombox.schema.identity.ids.PrescriptionID.UserDoctorRec)other);
@@ -958,10 +979,12 @@ public final class PrescriptionID {
         return this;
       }
 
+      @java.lang.Override
       public final boolean isInitialized() {
         return true;
       }
 
+      @java.lang.Override
       public Builder mergeFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -1342,6 +1365,7 @@ public final class PrescriptionID {
        * <code>.opencannabis.geo.usa.USState state = 4 [(.gen_bq_schema.description) = "US state where the recommendation is valid."];</code>
        */
       public io.opencannabis.schema.geo.usa.USState getState() {
+        @SuppressWarnings("deprecation")
         io.opencannabis.schema.geo.usa.USState result = io.opencannabis.schema.geo.usa.USState.valueOf(state_);
         return result == null ? io.opencannabis.schema.geo.usa.USState.UNRECOGNIZED : result;
       }
@@ -1705,21 +1729,23 @@ public final class PrescriptionID {
         }
         return doctorBuilder_;
       }
+      @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
         return super.setUnknownFieldsProto3(unknownFields);
       }
 
+      @java.lang.Override
       public final Builder mergeUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
         return super.mergeUnknownFields(unknownFields);
       }
 
 
-      // @@protoc_insertion_point(builder_scope:bloombox.schema.identity.ids.UserDoctorRec)
+      // @@protoc_insertion_point(builder_scope:bloombox.identity.ids.UserDoctorRec)
     }
 
-    // @@protoc_insertion_point(class_scope:bloombox.schema.identity.ids.UserDoctorRec)
+    // @@protoc_insertion_point(class_scope:bloombox.identity.ids.UserDoctorRec)
     private static final io.bloombox.schema.identity.ids.PrescriptionID.UserDoctorRec DEFAULT_INSTANCE;
     static {
       DEFAULT_INSTANCE = new io.bloombox.schema.identity.ids.PrescriptionID.UserDoctorRec();
@@ -1731,6 +1757,7 @@ public final class PrescriptionID {
 
     private static final com.google.protobuf.Parser<UserDoctorRec>
         PARSER = new com.google.protobuf.AbstractParser<UserDoctorRec>() {
+      @java.lang.Override
       public UserDoctorRec parsePartialFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -1748,6 +1775,7 @@ public final class PrescriptionID {
       return PARSER;
     }
 
+    @java.lang.Override
     public io.bloombox.schema.identity.ids.PrescriptionID.UserDoctorRec getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
@@ -1755,10 +1783,10 @@ public final class PrescriptionID {
   }
 
   private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_bloombox_schema_identity_ids_UserDoctorRec_descriptor;
+    internal_static_bloombox_identity_ids_UserDoctorRec_descriptor;
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_bloombox_schema_identity_ids_UserDoctorRec_fieldAccessorTable;
+      internal_static_bloombox_identity_ids_UserDoctorRec_fieldAccessorTable;
 
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
@@ -1768,24 +1796,24 @@ public final class PrescriptionID {
       descriptor;
   static {
     java.lang.String[] descriptorData = {
-      "\n identity/ids/UserDoctorRec.proto\022\034bloo" +
-      "mbox.schema.identity.ids\032\016bq_field.proto" +
-      "\032\024core/Datamodel.proto\032\021geo/USState.prot" +
-      "o\032\023person/Person.proto\032\023temporal/Date.pr" +
-      "oto\"\337\003\n\rUserDoctorRec\022+\n\002id\030\001 \001(\tB\037\302\265\003\002\010" +
-      "\002\212@\026ID number/unique code.\022`\n\017expiration" +
-      "_date\030\002 \001(\0132\033.opencannabis.temporal.Date" +
-      "B*\212@\'Expiration date for the recommendat" +
-      "ion.\022&\n\007barcode\030\003 \001(\tB\025\212@\022Raw barcode va" +
-      "lue.\022\\\n\005state\030\004 \001(\0162\035.opencannabis.geo.u" +
-      "sa.USStateB.\212@+US state where the recomm" +
-      "endation is valid.\0223\n\007country\030\005 \001(\tB\"\212@\037" +
-      "Country for the recommendation.\022)\n\tdocto" +
-      "r_id\030\006 \001(\tB\026\212@\023Doctor\'s unique ID.\022Y\n\006do" +
-      "ctor\030\007 \001(\0132\033.opencannabis.person.PersonB" +
-      ",\212@)Personal information about the physi" +
-      "cian.B;\n\037io.bloombox.schema.identity.ids" +
-      "B\016PrescriptionIDH\001P\000\242\002\003BBSb\006proto3"
+      "\n identity/ids/UserDoctorRec.proto\022\025bloo" +
+      "mbox.identity.ids\032\016bq_field.proto\032\024core/" +
+      "Datamodel.proto\032\021geo/USState.proto\032\023pers" +
+      "on/Person.proto\032\023temporal/Date.proto\"\337\003\n" +
+      "\rUserDoctorRec\022+\n\002id\030\001 \001(\tB\037\302\265\003\002\010\002\212@\026ID " +
+      "number/unique code.\022`\n\017expiration_date\030\002" +
+      " \001(\0132\033.opencannabis.temporal.DateB*\212@\'Ex" +
+      "piration date for the recommendation.\022&\n" +
+      "\007barcode\030\003 \001(\tB\025\212@\022Raw barcode value.\022\\\n" +
+      "\005state\030\004 \001(\0162\035.opencannabis.geo.usa.USSt" +
+      "ateB.\212@+US state where the recommendatio" +
+      "n is valid.\0223\n\007country\030\005 \001(\tB\"\212@\037Country" +
+      " for the recommendation.\022)\n\tdoctor_id\030\006 " +
+      "\001(\tB\026\212@\023Doctor\'s unique ID.\022Y\n\006doctor\030\007 " +
+      "\001(\0132\033.opencannabis.person.PersonB,\212@)Per" +
+      "sonal information about the physician.B;" +
+      "\n\037io.bloombox.schema.identity.idsB\016Presc" +
+      "riptionIDH\001P\000\242\002\003BBSb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -1804,11 +1832,11 @@ public final class PrescriptionID {
           io.opencannabis.schema.person.PersonOuterClass.getDescriptor(),
           io.opencannabis.schema.temporal.TemporalDate.getDescriptor(),
         }, assigner);
-    internal_static_bloombox_schema_identity_ids_UserDoctorRec_descriptor =
+    internal_static_bloombox_identity_ids_UserDoctorRec_descriptor =
       getDescriptor().getMessageTypes().get(0);
-    internal_static_bloombox_schema_identity_ids_UserDoctorRec_fieldAccessorTable = new
+    internal_static_bloombox_identity_ids_UserDoctorRec_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_bloombox_schema_identity_ids_UserDoctorRec_descriptor,
+        internal_static_bloombox_identity_ids_UserDoctorRec_descriptor,
         new java.lang.String[] { "Id", "ExpirationDate", "Barcode", "State", "Country", "DoctorId", "Doctor", });
     com.google.protobuf.ExtensionRegistry registry =
         com.google.protobuf.ExtensionRegistry.newInstance();

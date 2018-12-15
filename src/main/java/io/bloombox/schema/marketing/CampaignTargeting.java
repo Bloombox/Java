@@ -1,11 +1,12 @@
 /*
- * Copyright 2018, Bloombox, LLC.
+ * Copyright 2018, Momentum Ideas, Co. All rights reserved.
  *
- * Licensed under the Apache License, Version 2.0 (the "License");
- * you may not use this file except in compliance with the License.
- * You may obtain a copy of the License at
- *
- *     http://www.apache.org/licenses/LICENSE-2.0
+ * Source and object computer code contained herein is the private intellectual
+ * property of Momentum Ideas Co., a Delaware Corporation. Use of this
+ * code in source form requires permission in writing before use or the
+ * assembly, distribution, or publishing of derivative works, for commercial
+ * purposes or any other purpose, from a duly authorized officer of Momentum
+ * Ideas Co.
  *
  * Unless required by applicable law or agreed to in writing, software
  * distributed under the License is distributed on an "AS IS" BASIS,
@@ -31,7 +32,7 @@ public final class CampaignTargeting {
         (com.google.protobuf.ExtensionRegistryLite) registry);
   }
   public interface AgeTargetingOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:bloombox.schema.marketing.AgeTargeting)
+      // @@protoc_insertion_point(interface_extends:bloombox.marketing.AgeTargeting)
       com.google.protobuf.MessageOrBuilder {
 
     /**
@@ -66,11 +67,11 @@ public final class CampaignTargeting {
    * Specifies an age range as a targeting parameter.
    * </pre>
    *
-   * Protobuf type {@code bloombox.schema.marketing.AgeTargeting}
+   * Protobuf type {@code bloombox.marketing.AgeTargeting}
    */
   public  static final class AgeTargeting extends
       com.google.protobuf.GeneratedMessageV3 implements
-      // @@protoc_insertion_point(message_implements:bloombox.schema.marketing.AgeTargeting)
+      // @@protoc_insertion_point(message_implements:bloombox.marketing.AgeTargeting)
       AgeTargetingOrBuilder {
   private static final long serialVersionUID = 0L;
     // Use AgeTargeting.newBuilder() to construct.
@@ -107,13 +108,6 @@ public final class CampaignTargeting {
             case 0:
               done = true;
               break;
-            default: {
-              if (!parseUnknownFieldProto3(
-                  input, unknownFields, extensionRegistry, tag)) {
-                done = true;
-              }
-              break;
-            }
             case 8: {
 
               strict_ = input.readBool();
@@ -127,6 +121,13 @@ public final class CampaignTargeting {
             case 24: {
 
               maximum_ = input.readUInt32();
+              break;
+            }
+            default: {
+              if (!parseUnknownFieldProto3(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
               break;
             }
           }
@@ -143,12 +144,13 @@ public final class CampaignTargeting {
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return io.bloombox.schema.marketing.CampaignTargeting.internal_static_bloombox_schema_marketing_AgeTargeting_descriptor;
+      return io.bloombox.schema.marketing.CampaignTargeting.internal_static_bloombox_marketing_AgeTargeting_descriptor;
     }
 
+    @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return io.bloombox.schema.marketing.CampaignTargeting.internal_static_bloombox_schema_marketing_AgeTargeting_fieldAccessorTable
+      return io.bloombox.schema.marketing.CampaignTargeting.internal_static_bloombox_marketing_AgeTargeting_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
               io.bloombox.schema.marketing.CampaignTargeting.AgeTargeting.class, io.bloombox.schema.marketing.CampaignTargeting.AgeTargeting.Builder.class);
     }
@@ -193,6 +195,7 @@ public final class CampaignTargeting {
     }
 
     private byte memoizedIsInitialized = -1;
+    @java.lang.Override
     public final boolean isInitialized() {
       byte isInitialized = memoizedIsInitialized;
       if (isInitialized == 1) return true;
@@ -202,6 +205,7 @@ public final class CampaignTargeting {
       return true;
     }
 
+    @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
       if (strict_ != false) {
@@ -216,6 +220,7 @@ public final class CampaignTargeting {
       unknownFields.writeTo(output);
     }
 
+    @java.lang.Override
     public int getSerializedSize() {
       int size = memoizedSize;
       if (size != -1) return size;
@@ -348,6 +353,7 @@ public final class CampaignTargeting {
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
 
+    @java.lang.Override
     public Builder newBuilderForType() { return newBuilder(); }
     public static Builder newBuilder() {
       return DEFAULT_INSTANCE.toBuilder();
@@ -355,6 +361,7 @@ public final class CampaignTargeting {
     public static Builder newBuilder(io.bloombox.schema.marketing.CampaignTargeting.AgeTargeting prototype) {
       return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
     }
+    @java.lang.Override
     public Builder toBuilder() {
       return this == DEFAULT_INSTANCE
           ? new Builder() : new Builder().mergeFrom(this);
@@ -371,20 +378,21 @@ public final class CampaignTargeting {
      * Specifies an age range as a targeting parameter.
      * </pre>
      *
-     * Protobuf type {@code bloombox.schema.marketing.AgeTargeting}
+     * Protobuf type {@code bloombox.marketing.AgeTargeting}
      */
     public static final class Builder extends
         com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:bloombox.schema.marketing.AgeTargeting)
+        // @@protoc_insertion_point(builder_implements:bloombox.marketing.AgeTargeting)
         io.bloombox.schema.marketing.CampaignTargeting.AgeTargetingOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return io.bloombox.schema.marketing.CampaignTargeting.internal_static_bloombox_schema_marketing_AgeTargeting_descriptor;
+        return io.bloombox.schema.marketing.CampaignTargeting.internal_static_bloombox_marketing_AgeTargeting_descriptor;
       }
 
+      @java.lang.Override
       protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return io.bloombox.schema.marketing.CampaignTargeting.internal_static_bloombox_schema_marketing_AgeTargeting_fieldAccessorTable
+        return io.bloombox.schema.marketing.CampaignTargeting.internal_static_bloombox_marketing_AgeTargeting_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
                 io.bloombox.schema.marketing.CampaignTargeting.AgeTargeting.class, io.bloombox.schema.marketing.CampaignTargeting.AgeTargeting.Builder.class);
       }
@@ -404,6 +412,7 @@ public final class CampaignTargeting {
                 .alwaysUseFieldBuilders) {
         }
       }
+      @java.lang.Override
       public Builder clear() {
         super.clear();
         strict_ = false;
@@ -415,15 +424,18 @@ public final class CampaignTargeting {
         return this;
       }
 
+      @java.lang.Override
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return io.bloombox.schema.marketing.CampaignTargeting.internal_static_bloombox_schema_marketing_AgeTargeting_descriptor;
+        return io.bloombox.schema.marketing.CampaignTargeting.internal_static_bloombox_marketing_AgeTargeting_descriptor;
       }
 
+      @java.lang.Override
       public io.bloombox.schema.marketing.CampaignTargeting.AgeTargeting getDefaultInstanceForType() {
         return io.bloombox.schema.marketing.CampaignTargeting.AgeTargeting.getDefaultInstance();
       }
 
+      @java.lang.Override
       public io.bloombox.schema.marketing.CampaignTargeting.AgeTargeting build() {
         io.bloombox.schema.marketing.CampaignTargeting.AgeTargeting result = buildPartial();
         if (!result.isInitialized()) {
@@ -432,6 +444,7 @@ public final class CampaignTargeting {
         return result;
       }
 
+      @java.lang.Override
       public io.bloombox.schema.marketing.CampaignTargeting.AgeTargeting buildPartial() {
         io.bloombox.schema.marketing.CampaignTargeting.AgeTargeting result = new io.bloombox.schema.marketing.CampaignTargeting.AgeTargeting(this);
         result.strict_ = strict_;
@@ -441,32 +454,39 @@ public final class CampaignTargeting {
         return result;
       }
 
+      @java.lang.Override
       public Builder clone() {
         return (Builder) super.clone();
       }
+      @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
         return (Builder) super.setField(field, value);
       }
+      @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
         return (Builder) super.clearField(field);
       }
+      @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
         return (Builder) super.clearOneof(oneof);
       }
+      @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
         return (Builder) super.setRepeatedField(field, index, value);
       }
+      @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
         return (Builder) super.addRepeatedField(field, value);
       }
+      @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
         if (other instanceof io.bloombox.schema.marketing.CampaignTargeting.AgeTargeting) {
           return mergeFrom((io.bloombox.schema.marketing.CampaignTargeting.AgeTargeting)other);
@@ -492,10 +512,12 @@ public final class CampaignTargeting {
         return this;
       }
 
+      @java.lang.Override
       public final boolean isInitialized() {
         return true;
       }
 
+      @java.lang.Override
       public Builder mergeFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -627,21 +649,23 @@ public final class CampaignTargeting {
         onChanged();
         return this;
       }
+      @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
         return super.setUnknownFieldsProto3(unknownFields);
       }
 
+      @java.lang.Override
       public final Builder mergeUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
         return super.mergeUnknownFields(unknownFields);
       }
 
 
-      // @@protoc_insertion_point(builder_scope:bloombox.schema.marketing.AgeTargeting)
+      // @@protoc_insertion_point(builder_scope:bloombox.marketing.AgeTargeting)
     }
 
-    // @@protoc_insertion_point(class_scope:bloombox.schema.marketing.AgeTargeting)
+    // @@protoc_insertion_point(class_scope:bloombox.marketing.AgeTargeting)
     private static final io.bloombox.schema.marketing.CampaignTargeting.AgeTargeting DEFAULT_INSTANCE;
     static {
       DEFAULT_INSTANCE = new io.bloombox.schema.marketing.CampaignTargeting.AgeTargeting();
@@ -653,6 +677,7 @@ public final class CampaignTargeting {
 
     private static final com.google.protobuf.Parser<AgeTargeting>
         PARSER = new com.google.protobuf.AbstractParser<AgeTargeting>() {
+      @java.lang.Override
       public AgeTargeting parsePartialFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -670,6 +695,7 @@ public final class CampaignTargeting {
       return PARSER;
     }
 
+    @java.lang.Override
     public io.bloombox.schema.marketing.CampaignTargeting.AgeTargeting getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
@@ -677,7 +703,7 @@ public final class CampaignTargeting {
   }
 
   public interface GenderTargetingOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:bloombox.schema.marketing.GenderTargeting)
+      // @@protoc_insertion_point(interface_extends:bloombox.marketing.GenderTargeting)
       com.google.protobuf.MessageOrBuilder {
 
     /**
@@ -702,11 +728,11 @@ public final class CampaignTargeting {
    * Target a specific gender.
    * </pre>
    *
-   * Protobuf type {@code bloombox.schema.marketing.GenderTargeting}
+   * Protobuf type {@code bloombox.marketing.GenderTargeting}
    */
   public  static final class GenderTargeting extends
       com.google.protobuf.GeneratedMessageV3 implements
-      // @@protoc_insertion_point(message_implements:bloombox.schema.marketing.GenderTargeting)
+      // @@protoc_insertion_point(message_implements:bloombox.marketing.GenderTargeting)
       GenderTargetingOrBuilder {
   private static final long serialVersionUID = 0L;
     // Use GenderTargeting.newBuilder() to construct.
@@ -741,17 +767,17 @@ public final class CampaignTargeting {
             case 0:
               done = true;
               break;
+            case 8: {
+              int rawValue = input.readEnum();
+
+              target_ = rawValue;
+              break;
+            }
             default: {
               if (!parseUnknownFieldProto3(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
-              break;
-            }
-            case 8: {
-              int rawValue = input.readEnum();
-
-              target_ = rawValue;
               break;
             }
           }
@@ -768,12 +794,13 @@ public final class CampaignTargeting {
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return io.bloombox.schema.marketing.CampaignTargeting.internal_static_bloombox_schema_marketing_GenderTargeting_descriptor;
+      return io.bloombox.schema.marketing.CampaignTargeting.internal_static_bloombox_marketing_GenderTargeting_descriptor;
     }
 
+    @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return io.bloombox.schema.marketing.CampaignTargeting.internal_static_bloombox_schema_marketing_GenderTargeting_fieldAccessorTable
+      return io.bloombox.schema.marketing.CampaignTargeting.internal_static_bloombox_marketing_GenderTargeting_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
               io.bloombox.schema.marketing.CampaignTargeting.GenderTargeting.class, io.bloombox.schema.marketing.CampaignTargeting.GenderTargeting.Builder.class);
     }
@@ -798,11 +825,13 @@ public final class CampaignTargeting {
      * <code>.opencannabis.person.Gender target = 1;</code>
      */
     public io.opencannabis.schema.person.Gender getTarget() {
+      @SuppressWarnings("deprecation")
       io.opencannabis.schema.person.Gender result = io.opencannabis.schema.person.Gender.valueOf(target_);
       return result == null ? io.opencannabis.schema.person.Gender.UNRECOGNIZED : result;
     }
 
     private byte memoizedIsInitialized = -1;
+    @java.lang.Override
     public final boolean isInitialized() {
       byte isInitialized = memoizedIsInitialized;
       if (isInitialized == 1) return true;
@@ -812,6 +841,7 @@ public final class CampaignTargeting {
       return true;
     }
 
+    @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
       if (target_ != io.opencannabis.schema.person.Gender.UNSPECIFIED.getNumber()) {
@@ -820,6 +850,7 @@ public final class CampaignTargeting {
       unknownFields.writeTo(output);
     }
 
+    @java.lang.Override
     public int getSerializedSize() {
       int size = memoizedSize;
       if (size != -1) return size;
@@ -934,6 +965,7 @@ public final class CampaignTargeting {
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
 
+    @java.lang.Override
     public Builder newBuilderForType() { return newBuilder(); }
     public static Builder newBuilder() {
       return DEFAULT_INSTANCE.toBuilder();
@@ -941,6 +973,7 @@ public final class CampaignTargeting {
     public static Builder newBuilder(io.bloombox.schema.marketing.CampaignTargeting.GenderTargeting prototype) {
       return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
     }
+    @java.lang.Override
     public Builder toBuilder() {
       return this == DEFAULT_INSTANCE
           ? new Builder() : new Builder().mergeFrom(this);
@@ -957,20 +990,21 @@ public final class CampaignTargeting {
      * Target a specific gender.
      * </pre>
      *
-     * Protobuf type {@code bloombox.schema.marketing.GenderTargeting}
+     * Protobuf type {@code bloombox.marketing.GenderTargeting}
      */
     public static final class Builder extends
         com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:bloombox.schema.marketing.GenderTargeting)
+        // @@protoc_insertion_point(builder_implements:bloombox.marketing.GenderTargeting)
         io.bloombox.schema.marketing.CampaignTargeting.GenderTargetingOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return io.bloombox.schema.marketing.CampaignTargeting.internal_static_bloombox_schema_marketing_GenderTargeting_descriptor;
+        return io.bloombox.schema.marketing.CampaignTargeting.internal_static_bloombox_marketing_GenderTargeting_descriptor;
       }
 
+      @java.lang.Override
       protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return io.bloombox.schema.marketing.CampaignTargeting.internal_static_bloombox_schema_marketing_GenderTargeting_fieldAccessorTable
+        return io.bloombox.schema.marketing.CampaignTargeting.internal_static_bloombox_marketing_GenderTargeting_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
                 io.bloombox.schema.marketing.CampaignTargeting.GenderTargeting.class, io.bloombox.schema.marketing.CampaignTargeting.GenderTargeting.Builder.class);
       }
@@ -990,6 +1024,7 @@ public final class CampaignTargeting {
                 .alwaysUseFieldBuilders) {
         }
       }
+      @java.lang.Override
       public Builder clear() {
         super.clear();
         target_ = 0;
@@ -997,15 +1032,18 @@ public final class CampaignTargeting {
         return this;
       }
 
+      @java.lang.Override
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return io.bloombox.schema.marketing.CampaignTargeting.internal_static_bloombox_schema_marketing_GenderTargeting_descriptor;
+        return io.bloombox.schema.marketing.CampaignTargeting.internal_static_bloombox_marketing_GenderTargeting_descriptor;
       }
 
+      @java.lang.Override
       public io.bloombox.schema.marketing.CampaignTargeting.GenderTargeting getDefaultInstanceForType() {
         return io.bloombox.schema.marketing.CampaignTargeting.GenderTargeting.getDefaultInstance();
       }
 
+      @java.lang.Override
       public io.bloombox.schema.marketing.CampaignTargeting.GenderTargeting build() {
         io.bloombox.schema.marketing.CampaignTargeting.GenderTargeting result = buildPartial();
         if (!result.isInitialized()) {
@@ -1014,6 +1052,7 @@ public final class CampaignTargeting {
         return result;
       }
 
+      @java.lang.Override
       public io.bloombox.schema.marketing.CampaignTargeting.GenderTargeting buildPartial() {
         io.bloombox.schema.marketing.CampaignTargeting.GenderTargeting result = new io.bloombox.schema.marketing.CampaignTargeting.GenderTargeting(this);
         result.target_ = target_;
@@ -1021,32 +1060,39 @@ public final class CampaignTargeting {
         return result;
       }
 
+      @java.lang.Override
       public Builder clone() {
         return (Builder) super.clone();
       }
+      @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
         return (Builder) super.setField(field, value);
       }
+      @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
         return (Builder) super.clearField(field);
       }
+      @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
         return (Builder) super.clearOneof(oneof);
       }
+      @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
         return (Builder) super.setRepeatedField(field, index, value);
       }
+      @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
         return (Builder) super.addRepeatedField(field, value);
       }
+      @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
         if (other instanceof io.bloombox.schema.marketing.CampaignTargeting.GenderTargeting) {
           return mergeFrom((io.bloombox.schema.marketing.CampaignTargeting.GenderTargeting)other);
@@ -1066,10 +1112,12 @@ public final class CampaignTargeting {
         return this;
       }
 
+      @java.lang.Override
       public final boolean isInitialized() {
         return true;
       }
 
+      @java.lang.Override
       public Builder mergeFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -1119,6 +1167,7 @@ public final class CampaignTargeting {
        * <code>.opencannabis.person.Gender target = 1;</code>
        */
       public io.opencannabis.schema.person.Gender getTarget() {
+        @SuppressWarnings("deprecation")
         io.opencannabis.schema.person.Gender result = io.opencannabis.schema.person.Gender.valueOf(target_);
         return result == null ? io.opencannabis.schema.person.Gender.UNRECOGNIZED : result;
       }
@@ -1151,21 +1200,23 @@ public final class CampaignTargeting {
         onChanged();
         return this;
       }
+      @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
         return super.setUnknownFieldsProto3(unknownFields);
       }
 
+      @java.lang.Override
       public final Builder mergeUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
         return super.mergeUnknownFields(unknownFields);
       }
 
 
-      // @@protoc_insertion_point(builder_scope:bloombox.schema.marketing.GenderTargeting)
+      // @@protoc_insertion_point(builder_scope:bloombox.marketing.GenderTargeting)
     }
 
-    // @@protoc_insertion_point(class_scope:bloombox.schema.marketing.GenderTargeting)
+    // @@protoc_insertion_point(class_scope:bloombox.marketing.GenderTargeting)
     private static final io.bloombox.schema.marketing.CampaignTargeting.GenderTargeting DEFAULT_INSTANCE;
     static {
       DEFAULT_INSTANCE = new io.bloombox.schema.marketing.CampaignTargeting.GenderTargeting();
@@ -1177,6 +1228,7 @@ public final class CampaignTargeting {
 
     private static final com.google.protobuf.Parser<GenderTargeting>
         PARSER = new com.google.protobuf.AbstractParser<GenderTargeting>() {
+      @java.lang.Override
       public GenderTargeting parsePartialFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -1194,6 +1246,7 @@ public final class CampaignTargeting {
       return PARSER;
     }
 
+    @java.lang.Override
     public io.bloombox.schema.marketing.CampaignTargeting.GenderTargeting getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
@@ -1201,7 +1254,7 @@ public final class CampaignTargeting {
   }
 
   public interface PreferenceTargetingOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:bloombox.schema.marketing.PreferenceTargeting)
+      // @@protoc_insertion_point(interface_extends:bloombox.marketing.PreferenceTargeting)
       com.google.protobuf.MessageOrBuilder {
 
     /**
@@ -1209,7 +1262,7 @@ public final class CampaignTargeting {
      * Menu preferences, stated by a user, to target by a given campaign.
      * </pre>
      *
-     * <code>.bloombox.schema.identity.MenuPreferences menu = 1;</code>
+     * <code>.bloombox.identity.MenuPreferences menu = 1;</code>
      */
     boolean hasMenu();
     /**
@@ -1217,7 +1270,7 @@ public final class CampaignTargeting {
      * Menu preferences, stated by a user, to target by a given campaign.
      * </pre>
      *
-     * <code>.bloombox.schema.identity.MenuPreferences menu = 1;</code>
+     * <code>.bloombox.identity.MenuPreferences menu = 1;</code>
      */
     io.bloombox.schema.identity.AppUser.MenuPreferences getMenu();
     /**
@@ -1225,7 +1278,7 @@ public final class CampaignTargeting {
      * Menu preferences, stated by a user, to target by a given campaign.
      * </pre>
      *
-     * <code>.bloombox.schema.identity.MenuPreferences menu = 1;</code>
+     * <code>.bloombox.identity.MenuPreferences menu = 1;</code>
      */
     io.bloombox.schema.identity.AppUser.MenuPreferencesOrBuilder getMenuOrBuilder();
   }
@@ -1234,11 +1287,11 @@ public final class CampaignTargeting {
    * Specifies menu preferences to target users by.
    * </pre>
    *
-   * Protobuf type {@code bloombox.schema.marketing.PreferenceTargeting}
+   * Protobuf type {@code bloombox.marketing.PreferenceTargeting}
    */
   public  static final class PreferenceTargeting extends
       com.google.protobuf.GeneratedMessageV3 implements
-      // @@protoc_insertion_point(message_implements:bloombox.schema.marketing.PreferenceTargeting)
+      // @@protoc_insertion_point(message_implements:bloombox.marketing.PreferenceTargeting)
       PreferenceTargetingOrBuilder {
   private static final long serialVersionUID = 0L;
     // Use PreferenceTargeting.newBuilder() to construct.
@@ -1272,13 +1325,6 @@ public final class CampaignTargeting {
             case 0:
               done = true;
               break;
-            default: {
-              if (!parseUnknownFieldProto3(
-                  input, unknownFields, extensionRegistry, tag)) {
-                done = true;
-              }
-              break;
-            }
             case 10: {
               io.bloombox.schema.identity.AppUser.MenuPreferences.Builder subBuilder = null;
               if (menu_ != null) {
@@ -1290,6 +1336,13 @@ public final class CampaignTargeting {
                 menu_ = subBuilder.buildPartial();
               }
 
+              break;
+            }
+            default: {
+              if (!parseUnknownFieldProto3(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
               break;
             }
           }
@@ -1306,12 +1359,13 @@ public final class CampaignTargeting {
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return io.bloombox.schema.marketing.CampaignTargeting.internal_static_bloombox_schema_marketing_PreferenceTargeting_descriptor;
+      return io.bloombox.schema.marketing.CampaignTargeting.internal_static_bloombox_marketing_PreferenceTargeting_descriptor;
     }
 
+    @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return io.bloombox.schema.marketing.CampaignTargeting.internal_static_bloombox_schema_marketing_PreferenceTargeting_fieldAccessorTable
+      return io.bloombox.schema.marketing.CampaignTargeting.internal_static_bloombox_marketing_PreferenceTargeting_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
               io.bloombox.schema.marketing.CampaignTargeting.PreferenceTargeting.class, io.bloombox.schema.marketing.CampaignTargeting.PreferenceTargeting.Builder.class);
     }
@@ -1323,7 +1377,7 @@ public final class CampaignTargeting {
      * Menu preferences, stated by a user, to target by a given campaign.
      * </pre>
      *
-     * <code>.bloombox.schema.identity.MenuPreferences menu = 1;</code>
+     * <code>.bloombox.identity.MenuPreferences menu = 1;</code>
      */
     public boolean hasMenu() {
       return menu_ != null;
@@ -1333,7 +1387,7 @@ public final class CampaignTargeting {
      * Menu preferences, stated by a user, to target by a given campaign.
      * </pre>
      *
-     * <code>.bloombox.schema.identity.MenuPreferences menu = 1;</code>
+     * <code>.bloombox.identity.MenuPreferences menu = 1;</code>
      */
     public io.bloombox.schema.identity.AppUser.MenuPreferences getMenu() {
       return menu_ == null ? io.bloombox.schema.identity.AppUser.MenuPreferences.getDefaultInstance() : menu_;
@@ -1343,13 +1397,14 @@ public final class CampaignTargeting {
      * Menu preferences, stated by a user, to target by a given campaign.
      * </pre>
      *
-     * <code>.bloombox.schema.identity.MenuPreferences menu = 1;</code>
+     * <code>.bloombox.identity.MenuPreferences menu = 1;</code>
      */
     public io.bloombox.schema.identity.AppUser.MenuPreferencesOrBuilder getMenuOrBuilder() {
       return getMenu();
     }
 
     private byte memoizedIsInitialized = -1;
+    @java.lang.Override
     public final boolean isInitialized() {
       byte isInitialized = memoizedIsInitialized;
       if (isInitialized == 1) return true;
@@ -1359,6 +1414,7 @@ public final class CampaignTargeting {
       return true;
     }
 
+    @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
       if (menu_ != null) {
@@ -1367,6 +1423,7 @@ public final class CampaignTargeting {
       unknownFields.writeTo(output);
     }
 
+    @java.lang.Override
     public int getSerializedSize() {
       int size = memoizedSize;
       if (size != -1) return size;
@@ -1487,6 +1544,7 @@ public final class CampaignTargeting {
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
 
+    @java.lang.Override
     public Builder newBuilderForType() { return newBuilder(); }
     public static Builder newBuilder() {
       return DEFAULT_INSTANCE.toBuilder();
@@ -1494,6 +1552,7 @@ public final class CampaignTargeting {
     public static Builder newBuilder(io.bloombox.schema.marketing.CampaignTargeting.PreferenceTargeting prototype) {
       return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
     }
+    @java.lang.Override
     public Builder toBuilder() {
       return this == DEFAULT_INSTANCE
           ? new Builder() : new Builder().mergeFrom(this);
@@ -1510,20 +1569,21 @@ public final class CampaignTargeting {
      * Specifies menu preferences to target users by.
      * </pre>
      *
-     * Protobuf type {@code bloombox.schema.marketing.PreferenceTargeting}
+     * Protobuf type {@code bloombox.marketing.PreferenceTargeting}
      */
     public static final class Builder extends
         com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:bloombox.schema.marketing.PreferenceTargeting)
+        // @@protoc_insertion_point(builder_implements:bloombox.marketing.PreferenceTargeting)
         io.bloombox.schema.marketing.CampaignTargeting.PreferenceTargetingOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return io.bloombox.schema.marketing.CampaignTargeting.internal_static_bloombox_schema_marketing_PreferenceTargeting_descriptor;
+        return io.bloombox.schema.marketing.CampaignTargeting.internal_static_bloombox_marketing_PreferenceTargeting_descriptor;
       }
 
+      @java.lang.Override
       protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return io.bloombox.schema.marketing.CampaignTargeting.internal_static_bloombox_schema_marketing_PreferenceTargeting_fieldAccessorTable
+        return io.bloombox.schema.marketing.CampaignTargeting.internal_static_bloombox_marketing_PreferenceTargeting_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
                 io.bloombox.schema.marketing.CampaignTargeting.PreferenceTargeting.class, io.bloombox.schema.marketing.CampaignTargeting.PreferenceTargeting.Builder.class);
       }
@@ -1543,6 +1603,7 @@ public final class CampaignTargeting {
                 .alwaysUseFieldBuilders) {
         }
       }
+      @java.lang.Override
       public Builder clear() {
         super.clear();
         if (menuBuilder_ == null) {
@@ -1554,15 +1615,18 @@ public final class CampaignTargeting {
         return this;
       }
 
+      @java.lang.Override
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return io.bloombox.schema.marketing.CampaignTargeting.internal_static_bloombox_schema_marketing_PreferenceTargeting_descriptor;
+        return io.bloombox.schema.marketing.CampaignTargeting.internal_static_bloombox_marketing_PreferenceTargeting_descriptor;
       }
 
+      @java.lang.Override
       public io.bloombox.schema.marketing.CampaignTargeting.PreferenceTargeting getDefaultInstanceForType() {
         return io.bloombox.schema.marketing.CampaignTargeting.PreferenceTargeting.getDefaultInstance();
       }
 
+      @java.lang.Override
       public io.bloombox.schema.marketing.CampaignTargeting.PreferenceTargeting build() {
         io.bloombox.schema.marketing.CampaignTargeting.PreferenceTargeting result = buildPartial();
         if (!result.isInitialized()) {
@@ -1571,6 +1635,7 @@ public final class CampaignTargeting {
         return result;
       }
 
+      @java.lang.Override
       public io.bloombox.schema.marketing.CampaignTargeting.PreferenceTargeting buildPartial() {
         io.bloombox.schema.marketing.CampaignTargeting.PreferenceTargeting result = new io.bloombox.schema.marketing.CampaignTargeting.PreferenceTargeting(this);
         if (menuBuilder_ == null) {
@@ -1582,32 +1647,39 @@ public final class CampaignTargeting {
         return result;
       }
 
+      @java.lang.Override
       public Builder clone() {
         return (Builder) super.clone();
       }
+      @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
         return (Builder) super.setField(field, value);
       }
+      @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
         return (Builder) super.clearField(field);
       }
+      @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
         return (Builder) super.clearOneof(oneof);
       }
+      @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
         return (Builder) super.setRepeatedField(field, index, value);
       }
+      @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
         return (Builder) super.addRepeatedField(field, value);
       }
+      @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
         if (other instanceof io.bloombox.schema.marketing.CampaignTargeting.PreferenceTargeting) {
           return mergeFrom((io.bloombox.schema.marketing.CampaignTargeting.PreferenceTargeting)other);
@@ -1627,10 +1699,12 @@ public final class CampaignTargeting {
         return this;
       }
 
+      @java.lang.Override
       public final boolean isInitialized() {
         return true;
       }
 
+      @java.lang.Override
       public Builder mergeFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -1657,7 +1731,7 @@ public final class CampaignTargeting {
        * Menu preferences, stated by a user, to target by a given campaign.
        * </pre>
        *
-       * <code>.bloombox.schema.identity.MenuPreferences menu = 1;</code>
+       * <code>.bloombox.identity.MenuPreferences menu = 1;</code>
        */
       public boolean hasMenu() {
         return menuBuilder_ != null || menu_ != null;
@@ -1667,7 +1741,7 @@ public final class CampaignTargeting {
        * Menu preferences, stated by a user, to target by a given campaign.
        * </pre>
        *
-       * <code>.bloombox.schema.identity.MenuPreferences menu = 1;</code>
+       * <code>.bloombox.identity.MenuPreferences menu = 1;</code>
        */
       public io.bloombox.schema.identity.AppUser.MenuPreferences getMenu() {
         if (menuBuilder_ == null) {
@@ -1681,7 +1755,7 @@ public final class CampaignTargeting {
        * Menu preferences, stated by a user, to target by a given campaign.
        * </pre>
        *
-       * <code>.bloombox.schema.identity.MenuPreferences menu = 1;</code>
+       * <code>.bloombox.identity.MenuPreferences menu = 1;</code>
        */
       public Builder setMenu(io.bloombox.schema.identity.AppUser.MenuPreferences value) {
         if (menuBuilder_ == null) {
@@ -1701,7 +1775,7 @@ public final class CampaignTargeting {
        * Menu preferences, stated by a user, to target by a given campaign.
        * </pre>
        *
-       * <code>.bloombox.schema.identity.MenuPreferences menu = 1;</code>
+       * <code>.bloombox.identity.MenuPreferences menu = 1;</code>
        */
       public Builder setMenu(
           io.bloombox.schema.identity.AppUser.MenuPreferences.Builder builderForValue) {
@@ -1719,7 +1793,7 @@ public final class CampaignTargeting {
        * Menu preferences, stated by a user, to target by a given campaign.
        * </pre>
        *
-       * <code>.bloombox.schema.identity.MenuPreferences menu = 1;</code>
+       * <code>.bloombox.identity.MenuPreferences menu = 1;</code>
        */
       public Builder mergeMenu(io.bloombox.schema.identity.AppUser.MenuPreferences value) {
         if (menuBuilder_ == null) {
@@ -1741,7 +1815,7 @@ public final class CampaignTargeting {
        * Menu preferences, stated by a user, to target by a given campaign.
        * </pre>
        *
-       * <code>.bloombox.schema.identity.MenuPreferences menu = 1;</code>
+       * <code>.bloombox.identity.MenuPreferences menu = 1;</code>
        */
       public Builder clearMenu() {
         if (menuBuilder_ == null) {
@@ -1759,7 +1833,7 @@ public final class CampaignTargeting {
        * Menu preferences, stated by a user, to target by a given campaign.
        * </pre>
        *
-       * <code>.bloombox.schema.identity.MenuPreferences menu = 1;</code>
+       * <code>.bloombox.identity.MenuPreferences menu = 1;</code>
        */
       public io.bloombox.schema.identity.AppUser.MenuPreferences.Builder getMenuBuilder() {
         
@@ -1771,7 +1845,7 @@ public final class CampaignTargeting {
        * Menu preferences, stated by a user, to target by a given campaign.
        * </pre>
        *
-       * <code>.bloombox.schema.identity.MenuPreferences menu = 1;</code>
+       * <code>.bloombox.identity.MenuPreferences menu = 1;</code>
        */
       public io.bloombox.schema.identity.AppUser.MenuPreferencesOrBuilder getMenuOrBuilder() {
         if (menuBuilder_ != null) {
@@ -1786,7 +1860,7 @@ public final class CampaignTargeting {
        * Menu preferences, stated by a user, to target by a given campaign.
        * </pre>
        *
-       * <code>.bloombox.schema.identity.MenuPreferences menu = 1;</code>
+       * <code>.bloombox.identity.MenuPreferences menu = 1;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
           io.bloombox.schema.identity.AppUser.MenuPreferences, io.bloombox.schema.identity.AppUser.MenuPreferences.Builder, io.bloombox.schema.identity.AppUser.MenuPreferencesOrBuilder> 
@@ -1801,21 +1875,23 @@ public final class CampaignTargeting {
         }
         return menuBuilder_;
       }
+      @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
         return super.setUnknownFieldsProto3(unknownFields);
       }
 
+      @java.lang.Override
       public final Builder mergeUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
         return super.mergeUnknownFields(unknownFields);
       }
 
 
-      // @@protoc_insertion_point(builder_scope:bloombox.schema.marketing.PreferenceTargeting)
+      // @@protoc_insertion_point(builder_scope:bloombox.marketing.PreferenceTargeting)
     }
 
-    // @@protoc_insertion_point(class_scope:bloombox.schema.marketing.PreferenceTargeting)
+    // @@protoc_insertion_point(class_scope:bloombox.marketing.PreferenceTargeting)
     private static final io.bloombox.schema.marketing.CampaignTargeting.PreferenceTargeting DEFAULT_INSTANCE;
     static {
       DEFAULT_INSTANCE = new io.bloombox.schema.marketing.CampaignTargeting.PreferenceTargeting();
@@ -1827,6 +1903,7 @@ public final class CampaignTargeting {
 
     private static final com.google.protobuf.Parser<PreferenceTargeting>
         PARSER = new com.google.protobuf.AbstractParser<PreferenceTargeting>() {
+      @java.lang.Override
       public PreferenceTargeting parsePartialFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -1844,6 +1921,7 @@ public final class CampaignTargeting {
       return PARSER;
     }
 
+    @java.lang.Override
     public io.bloombox.schema.marketing.CampaignTargeting.PreferenceTargeting getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
@@ -1851,7 +1929,7 @@ public final class CampaignTargeting {
   }
 
   public interface TargetingPolicyOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:bloombox.schema.marketing.TargetingPolicy)
+      // @@protoc_insertion_point(interface_extends:bloombox.marketing.TargetingPolicy)
       com.google.protobuf.MessageOrBuilder {
 
     /**
@@ -1868,7 +1946,7 @@ public final class CampaignTargeting {
      * Age-based user targeting.
      * </pre>
      *
-     * <code>.bloombox.schema.marketing.AgeTargeting age = 2;</code>
+     * <code>.bloombox.marketing.AgeTargeting age = 2;</code>
      */
     boolean hasAge();
     /**
@@ -1876,7 +1954,7 @@ public final class CampaignTargeting {
      * Age-based user targeting.
      * </pre>
      *
-     * <code>.bloombox.schema.marketing.AgeTargeting age = 2;</code>
+     * <code>.bloombox.marketing.AgeTargeting age = 2;</code>
      */
     io.bloombox.schema.marketing.CampaignTargeting.AgeTargeting getAge();
     /**
@@ -1884,7 +1962,7 @@ public final class CampaignTargeting {
      * Age-based user targeting.
      * </pre>
      *
-     * <code>.bloombox.schema.marketing.AgeTargeting age = 2;</code>
+     * <code>.bloombox.marketing.AgeTargeting age = 2;</code>
      */
     io.bloombox.schema.marketing.CampaignTargeting.AgeTargetingOrBuilder getAgeOrBuilder();
 
@@ -1893,7 +1971,7 @@ public final class CampaignTargeting {
      * Gender-based user targeting.
      * </pre>
      *
-     * <code>.bloombox.schema.marketing.GenderTargeting gender = 3;</code>
+     * <code>.bloombox.marketing.GenderTargeting gender = 3;</code>
      */
     boolean hasGender();
     /**
@@ -1901,7 +1979,7 @@ public final class CampaignTargeting {
      * Gender-based user targeting.
      * </pre>
      *
-     * <code>.bloombox.schema.marketing.GenderTargeting gender = 3;</code>
+     * <code>.bloombox.marketing.GenderTargeting gender = 3;</code>
      */
     io.bloombox.schema.marketing.CampaignTargeting.GenderTargeting getGender();
     /**
@@ -1909,7 +1987,7 @@ public final class CampaignTargeting {
      * Gender-based user targeting.
      * </pre>
      *
-     * <code>.bloombox.schema.marketing.GenderTargeting gender = 3;</code>
+     * <code>.bloombox.marketing.GenderTargeting gender = 3;</code>
      */
     io.bloombox.schema.marketing.CampaignTargeting.GenderTargetingOrBuilder getGenderOrBuilder();
 
@@ -1918,7 +1996,7 @@ public final class CampaignTargeting {
      * Menu-preference-based targeting.
      * </pre>
      *
-     * <code>.bloombox.schema.marketing.PreferenceTargeting preferences = 4;</code>
+     * <code>.bloombox.marketing.PreferenceTargeting preferences = 4;</code>
      */
     boolean hasPreferences();
     /**
@@ -1926,7 +2004,7 @@ public final class CampaignTargeting {
      * Menu-preference-based targeting.
      * </pre>
      *
-     * <code>.bloombox.schema.marketing.PreferenceTargeting preferences = 4;</code>
+     * <code>.bloombox.marketing.PreferenceTargeting preferences = 4;</code>
      */
     io.bloombox.schema.marketing.CampaignTargeting.PreferenceTargeting getPreferences();
     /**
@@ -1934,7 +2012,7 @@ public final class CampaignTargeting {
      * Menu-preference-based targeting.
      * </pre>
      *
-     * <code>.bloombox.schema.marketing.PreferenceTargeting preferences = 4;</code>
+     * <code>.bloombox.marketing.PreferenceTargeting preferences = 4;</code>
      */
     io.bloombox.schema.marketing.CampaignTargeting.PreferenceTargetingOrBuilder getPreferencesOrBuilder();
 
@@ -1945,11 +2023,11 @@ public final class CampaignTargeting {
    * Targeting policy block, that binds a targeting configuration to a campaign.
    * </pre>
    *
-   * Protobuf type {@code bloombox.schema.marketing.TargetingPolicy}
+   * Protobuf type {@code bloombox.marketing.TargetingPolicy}
    */
   public  static final class TargetingPolicy extends
       com.google.protobuf.GeneratedMessageV3 implements
-      // @@protoc_insertion_point(message_implements:bloombox.schema.marketing.TargetingPolicy)
+      // @@protoc_insertion_point(message_implements:bloombox.marketing.TargetingPolicy)
       TargetingPolicyOrBuilder {
   private static final long serialVersionUID = 0L;
     // Use TargetingPolicy.newBuilder() to construct.
@@ -1984,13 +2062,6 @@ public final class CampaignTargeting {
             case 0:
               done = true;
               break;
-            default: {
-              if (!parseUnknownFieldProto3(
-                  input, unknownFields, extensionRegistry, tag)) {
-                done = true;
-              }
-              break;
-            }
             case 8: {
 
               enabled_ = input.readBool();
@@ -2038,6 +2109,13 @@ public final class CampaignTargeting {
               policyCase_ = 4;
               break;
             }
+            default: {
+              if (!parseUnknownFieldProto3(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
           }
         }
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
@@ -2052,12 +2130,13 @@ public final class CampaignTargeting {
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return io.bloombox.schema.marketing.CampaignTargeting.internal_static_bloombox_schema_marketing_TargetingPolicy_descriptor;
+      return io.bloombox.schema.marketing.CampaignTargeting.internal_static_bloombox_marketing_TargetingPolicy_descriptor;
     }
 
+    @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return io.bloombox.schema.marketing.CampaignTargeting.internal_static_bloombox_schema_marketing_TargetingPolicy_fieldAccessorTable
+      return io.bloombox.schema.marketing.CampaignTargeting.internal_static_bloombox_marketing_TargetingPolicy_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
               io.bloombox.schema.marketing.CampaignTargeting.TargetingPolicy.class, io.bloombox.schema.marketing.CampaignTargeting.TargetingPolicy.Builder.class);
     }
@@ -2121,7 +2200,7 @@ public final class CampaignTargeting {
      * Age-based user targeting.
      * </pre>
      *
-     * <code>.bloombox.schema.marketing.AgeTargeting age = 2;</code>
+     * <code>.bloombox.marketing.AgeTargeting age = 2;</code>
      */
     public boolean hasAge() {
       return policyCase_ == 2;
@@ -2131,7 +2210,7 @@ public final class CampaignTargeting {
      * Age-based user targeting.
      * </pre>
      *
-     * <code>.bloombox.schema.marketing.AgeTargeting age = 2;</code>
+     * <code>.bloombox.marketing.AgeTargeting age = 2;</code>
      */
     public io.bloombox.schema.marketing.CampaignTargeting.AgeTargeting getAge() {
       if (policyCase_ == 2) {
@@ -2144,7 +2223,7 @@ public final class CampaignTargeting {
      * Age-based user targeting.
      * </pre>
      *
-     * <code>.bloombox.schema.marketing.AgeTargeting age = 2;</code>
+     * <code>.bloombox.marketing.AgeTargeting age = 2;</code>
      */
     public io.bloombox.schema.marketing.CampaignTargeting.AgeTargetingOrBuilder getAgeOrBuilder() {
       if (policyCase_ == 2) {
@@ -2159,7 +2238,7 @@ public final class CampaignTargeting {
      * Gender-based user targeting.
      * </pre>
      *
-     * <code>.bloombox.schema.marketing.GenderTargeting gender = 3;</code>
+     * <code>.bloombox.marketing.GenderTargeting gender = 3;</code>
      */
     public boolean hasGender() {
       return policyCase_ == 3;
@@ -2169,7 +2248,7 @@ public final class CampaignTargeting {
      * Gender-based user targeting.
      * </pre>
      *
-     * <code>.bloombox.schema.marketing.GenderTargeting gender = 3;</code>
+     * <code>.bloombox.marketing.GenderTargeting gender = 3;</code>
      */
     public io.bloombox.schema.marketing.CampaignTargeting.GenderTargeting getGender() {
       if (policyCase_ == 3) {
@@ -2182,7 +2261,7 @@ public final class CampaignTargeting {
      * Gender-based user targeting.
      * </pre>
      *
-     * <code>.bloombox.schema.marketing.GenderTargeting gender = 3;</code>
+     * <code>.bloombox.marketing.GenderTargeting gender = 3;</code>
      */
     public io.bloombox.schema.marketing.CampaignTargeting.GenderTargetingOrBuilder getGenderOrBuilder() {
       if (policyCase_ == 3) {
@@ -2197,7 +2276,7 @@ public final class CampaignTargeting {
      * Menu-preference-based targeting.
      * </pre>
      *
-     * <code>.bloombox.schema.marketing.PreferenceTargeting preferences = 4;</code>
+     * <code>.bloombox.marketing.PreferenceTargeting preferences = 4;</code>
      */
     public boolean hasPreferences() {
       return policyCase_ == 4;
@@ -2207,7 +2286,7 @@ public final class CampaignTargeting {
      * Menu-preference-based targeting.
      * </pre>
      *
-     * <code>.bloombox.schema.marketing.PreferenceTargeting preferences = 4;</code>
+     * <code>.bloombox.marketing.PreferenceTargeting preferences = 4;</code>
      */
     public io.bloombox.schema.marketing.CampaignTargeting.PreferenceTargeting getPreferences() {
       if (policyCase_ == 4) {
@@ -2220,7 +2299,7 @@ public final class CampaignTargeting {
      * Menu-preference-based targeting.
      * </pre>
      *
-     * <code>.bloombox.schema.marketing.PreferenceTargeting preferences = 4;</code>
+     * <code>.bloombox.marketing.PreferenceTargeting preferences = 4;</code>
      */
     public io.bloombox.schema.marketing.CampaignTargeting.PreferenceTargetingOrBuilder getPreferencesOrBuilder() {
       if (policyCase_ == 4) {
@@ -2230,6 +2309,7 @@ public final class CampaignTargeting {
     }
 
     private byte memoizedIsInitialized = -1;
+    @java.lang.Override
     public final boolean isInitialized() {
       byte isInitialized = memoizedIsInitialized;
       if (isInitialized == 1) return true;
@@ -2239,6 +2319,7 @@ public final class CampaignTargeting {
       return true;
     }
 
+    @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
       if (enabled_ != false) {
@@ -2256,6 +2337,7 @@ public final class CampaignTargeting {
       unknownFields.writeTo(output);
     }
 
+    @java.lang.Override
     public int getSerializedSize() {
       int size = memoizedSize;
       if (size != -1) return size;
@@ -2419,6 +2501,7 @@ public final class CampaignTargeting {
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
 
+    @java.lang.Override
     public Builder newBuilderForType() { return newBuilder(); }
     public static Builder newBuilder() {
       return DEFAULT_INSTANCE.toBuilder();
@@ -2426,6 +2509,7 @@ public final class CampaignTargeting {
     public static Builder newBuilder(io.bloombox.schema.marketing.CampaignTargeting.TargetingPolicy prototype) {
       return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
     }
+    @java.lang.Override
     public Builder toBuilder() {
       return this == DEFAULT_INSTANCE
           ? new Builder() : new Builder().mergeFrom(this);
@@ -2442,20 +2526,21 @@ public final class CampaignTargeting {
      * Targeting policy block, that binds a targeting configuration to a campaign.
      * </pre>
      *
-     * Protobuf type {@code bloombox.schema.marketing.TargetingPolicy}
+     * Protobuf type {@code bloombox.marketing.TargetingPolicy}
      */
     public static final class Builder extends
         com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:bloombox.schema.marketing.TargetingPolicy)
+        // @@protoc_insertion_point(builder_implements:bloombox.marketing.TargetingPolicy)
         io.bloombox.schema.marketing.CampaignTargeting.TargetingPolicyOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return io.bloombox.schema.marketing.CampaignTargeting.internal_static_bloombox_schema_marketing_TargetingPolicy_descriptor;
+        return io.bloombox.schema.marketing.CampaignTargeting.internal_static_bloombox_marketing_TargetingPolicy_descriptor;
       }
 
+      @java.lang.Override
       protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return io.bloombox.schema.marketing.CampaignTargeting.internal_static_bloombox_schema_marketing_TargetingPolicy_fieldAccessorTable
+        return io.bloombox.schema.marketing.CampaignTargeting.internal_static_bloombox_marketing_TargetingPolicy_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
                 io.bloombox.schema.marketing.CampaignTargeting.TargetingPolicy.class, io.bloombox.schema.marketing.CampaignTargeting.TargetingPolicy.Builder.class);
       }
@@ -2475,6 +2560,7 @@ public final class CampaignTargeting {
                 .alwaysUseFieldBuilders) {
         }
       }
+      @java.lang.Override
       public Builder clear() {
         super.clear();
         enabled_ = false;
@@ -2484,15 +2570,18 @@ public final class CampaignTargeting {
         return this;
       }
 
+      @java.lang.Override
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return io.bloombox.schema.marketing.CampaignTargeting.internal_static_bloombox_schema_marketing_TargetingPolicy_descriptor;
+        return io.bloombox.schema.marketing.CampaignTargeting.internal_static_bloombox_marketing_TargetingPolicy_descriptor;
       }
 
+      @java.lang.Override
       public io.bloombox.schema.marketing.CampaignTargeting.TargetingPolicy getDefaultInstanceForType() {
         return io.bloombox.schema.marketing.CampaignTargeting.TargetingPolicy.getDefaultInstance();
       }
 
+      @java.lang.Override
       public io.bloombox.schema.marketing.CampaignTargeting.TargetingPolicy build() {
         io.bloombox.schema.marketing.CampaignTargeting.TargetingPolicy result = buildPartial();
         if (!result.isInitialized()) {
@@ -2501,6 +2590,7 @@ public final class CampaignTargeting {
         return result;
       }
 
+      @java.lang.Override
       public io.bloombox.schema.marketing.CampaignTargeting.TargetingPolicy buildPartial() {
         io.bloombox.schema.marketing.CampaignTargeting.TargetingPolicy result = new io.bloombox.schema.marketing.CampaignTargeting.TargetingPolicy(this);
         result.enabled_ = enabled_;
@@ -2530,32 +2620,39 @@ public final class CampaignTargeting {
         return result;
       }
 
+      @java.lang.Override
       public Builder clone() {
         return (Builder) super.clone();
       }
+      @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
         return (Builder) super.setField(field, value);
       }
+      @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
         return (Builder) super.clearField(field);
       }
+      @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
         return (Builder) super.clearOneof(oneof);
       }
+      @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
         return (Builder) super.setRepeatedField(field, index, value);
       }
+      @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
         return (Builder) super.addRepeatedField(field, value);
       }
+      @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
         if (other instanceof io.bloombox.schema.marketing.CampaignTargeting.TargetingPolicy) {
           return mergeFrom((io.bloombox.schema.marketing.CampaignTargeting.TargetingPolicy)other);
@@ -2592,10 +2689,12 @@ public final class CampaignTargeting {
         return this;
       }
 
+      @java.lang.Override
       public final boolean isInitialized() {
         return true;
       }
 
+      @java.lang.Override
       public Builder mergeFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -2674,7 +2773,7 @@ public final class CampaignTargeting {
        * Age-based user targeting.
        * </pre>
        *
-       * <code>.bloombox.schema.marketing.AgeTargeting age = 2;</code>
+       * <code>.bloombox.marketing.AgeTargeting age = 2;</code>
        */
       public boolean hasAge() {
         return policyCase_ == 2;
@@ -2684,7 +2783,7 @@ public final class CampaignTargeting {
        * Age-based user targeting.
        * </pre>
        *
-       * <code>.bloombox.schema.marketing.AgeTargeting age = 2;</code>
+       * <code>.bloombox.marketing.AgeTargeting age = 2;</code>
        */
       public io.bloombox.schema.marketing.CampaignTargeting.AgeTargeting getAge() {
         if (ageBuilder_ == null) {
@@ -2704,7 +2803,7 @@ public final class CampaignTargeting {
        * Age-based user targeting.
        * </pre>
        *
-       * <code>.bloombox.schema.marketing.AgeTargeting age = 2;</code>
+       * <code>.bloombox.marketing.AgeTargeting age = 2;</code>
        */
       public Builder setAge(io.bloombox.schema.marketing.CampaignTargeting.AgeTargeting value) {
         if (ageBuilder_ == null) {
@@ -2724,7 +2823,7 @@ public final class CampaignTargeting {
        * Age-based user targeting.
        * </pre>
        *
-       * <code>.bloombox.schema.marketing.AgeTargeting age = 2;</code>
+       * <code>.bloombox.marketing.AgeTargeting age = 2;</code>
        */
       public Builder setAge(
           io.bloombox.schema.marketing.CampaignTargeting.AgeTargeting.Builder builderForValue) {
@@ -2742,7 +2841,7 @@ public final class CampaignTargeting {
        * Age-based user targeting.
        * </pre>
        *
-       * <code>.bloombox.schema.marketing.AgeTargeting age = 2;</code>
+       * <code>.bloombox.marketing.AgeTargeting age = 2;</code>
        */
       public Builder mergeAge(io.bloombox.schema.marketing.CampaignTargeting.AgeTargeting value) {
         if (ageBuilder_ == null) {
@@ -2768,7 +2867,7 @@ public final class CampaignTargeting {
        * Age-based user targeting.
        * </pre>
        *
-       * <code>.bloombox.schema.marketing.AgeTargeting age = 2;</code>
+       * <code>.bloombox.marketing.AgeTargeting age = 2;</code>
        */
       public Builder clearAge() {
         if (ageBuilder_ == null) {
@@ -2791,7 +2890,7 @@ public final class CampaignTargeting {
        * Age-based user targeting.
        * </pre>
        *
-       * <code>.bloombox.schema.marketing.AgeTargeting age = 2;</code>
+       * <code>.bloombox.marketing.AgeTargeting age = 2;</code>
        */
       public io.bloombox.schema.marketing.CampaignTargeting.AgeTargeting.Builder getAgeBuilder() {
         return getAgeFieldBuilder().getBuilder();
@@ -2801,7 +2900,7 @@ public final class CampaignTargeting {
        * Age-based user targeting.
        * </pre>
        *
-       * <code>.bloombox.schema.marketing.AgeTargeting age = 2;</code>
+       * <code>.bloombox.marketing.AgeTargeting age = 2;</code>
        */
       public io.bloombox.schema.marketing.CampaignTargeting.AgeTargetingOrBuilder getAgeOrBuilder() {
         if ((policyCase_ == 2) && (ageBuilder_ != null)) {
@@ -2818,7 +2917,7 @@ public final class CampaignTargeting {
        * Age-based user targeting.
        * </pre>
        *
-       * <code>.bloombox.schema.marketing.AgeTargeting age = 2;</code>
+       * <code>.bloombox.marketing.AgeTargeting age = 2;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
           io.bloombox.schema.marketing.CampaignTargeting.AgeTargeting, io.bloombox.schema.marketing.CampaignTargeting.AgeTargeting.Builder, io.bloombox.schema.marketing.CampaignTargeting.AgeTargetingOrBuilder> 
@@ -2846,7 +2945,7 @@ public final class CampaignTargeting {
        * Gender-based user targeting.
        * </pre>
        *
-       * <code>.bloombox.schema.marketing.GenderTargeting gender = 3;</code>
+       * <code>.bloombox.marketing.GenderTargeting gender = 3;</code>
        */
       public boolean hasGender() {
         return policyCase_ == 3;
@@ -2856,7 +2955,7 @@ public final class CampaignTargeting {
        * Gender-based user targeting.
        * </pre>
        *
-       * <code>.bloombox.schema.marketing.GenderTargeting gender = 3;</code>
+       * <code>.bloombox.marketing.GenderTargeting gender = 3;</code>
        */
       public io.bloombox.schema.marketing.CampaignTargeting.GenderTargeting getGender() {
         if (genderBuilder_ == null) {
@@ -2876,7 +2975,7 @@ public final class CampaignTargeting {
        * Gender-based user targeting.
        * </pre>
        *
-       * <code>.bloombox.schema.marketing.GenderTargeting gender = 3;</code>
+       * <code>.bloombox.marketing.GenderTargeting gender = 3;</code>
        */
       public Builder setGender(io.bloombox.schema.marketing.CampaignTargeting.GenderTargeting value) {
         if (genderBuilder_ == null) {
@@ -2896,7 +2995,7 @@ public final class CampaignTargeting {
        * Gender-based user targeting.
        * </pre>
        *
-       * <code>.bloombox.schema.marketing.GenderTargeting gender = 3;</code>
+       * <code>.bloombox.marketing.GenderTargeting gender = 3;</code>
        */
       public Builder setGender(
           io.bloombox.schema.marketing.CampaignTargeting.GenderTargeting.Builder builderForValue) {
@@ -2914,7 +3013,7 @@ public final class CampaignTargeting {
        * Gender-based user targeting.
        * </pre>
        *
-       * <code>.bloombox.schema.marketing.GenderTargeting gender = 3;</code>
+       * <code>.bloombox.marketing.GenderTargeting gender = 3;</code>
        */
       public Builder mergeGender(io.bloombox.schema.marketing.CampaignTargeting.GenderTargeting value) {
         if (genderBuilder_ == null) {
@@ -2940,7 +3039,7 @@ public final class CampaignTargeting {
        * Gender-based user targeting.
        * </pre>
        *
-       * <code>.bloombox.schema.marketing.GenderTargeting gender = 3;</code>
+       * <code>.bloombox.marketing.GenderTargeting gender = 3;</code>
        */
       public Builder clearGender() {
         if (genderBuilder_ == null) {
@@ -2963,7 +3062,7 @@ public final class CampaignTargeting {
        * Gender-based user targeting.
        * </pre>
        *
-       * <code>.bloombox.schema.marketing.GenderTargeting gender = 3;</code>
+       * <code>.bloombox.marketing.GenderTargeting gender = 3;</code>
        */
       public io.bloombox.schema.marketing.CampaignTargeting.GenderTargeting.Builder getGenderBuilder() {
         return getGenderFieldBuilder().getBuilder();
@@ -2973,7 +3072,7 @@ public final class CampaignTargeting {
        * Gender-based user targeting.
        * </pre>
        *
-       * <code>.bloombox.schema.marketing.GenderTargeting gender = 3;</code>
+       * <code>.bloombox.marketing.GenderTargeting gender = 3;</code>
        */
       public io.bloombox.schema.marketing.CampaignTargeting.GenderTargetingOrBuilder getGenderOrBuilder() {
         if ((policyCase_ == 3) && (genderBuilder_ != null)) {
@@ -2990,7 +3089,7 @@ public final class CampaignTargeting {
        * Gender-based user targeting.
        * </pre>
        *
-       * <code>.bloombox.schema.marketing.GenderTargeting gender = 3;</code>
+       * <code>.bloombox.marketing.GenderTargeting gender = 3;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
           io.bloombox.schema.marketing.CampaignTargeting.GenderTargeting, io.bloombox.schema.marketing.CampaignTargeting.GenderTargeting.Builder, io.bloombox.schema.marketing.CampaignTargeting.GenderTargetingOrBuilder> 
@@ -3018,7 +3117,7 @@ public final class CampaignTargeting {
        * Menu-preference-based targeting.
        * </pre>
        *
-       * <code>.bloombox.schema.marketing.PreferenceTargeting preferences = 4;</code>
+       * <code>.bloombox.marketing.PreferenceTargeting preferences = 4;</code>
        */
       public boolean hasPreferences() {
         return policyCase_ == 4;
@@ -3028,7 +3127,7 @@ public final class CampaignTargeting {
        * Menu-preference-based targeting.
        * </pre>
        *
-       * <code>.bloombox.schema.marketing.PreferenceTargeting preferences = 4;</code>
+       * <code>.bloombox.marketing.PreferenceTargeting preferences = 4;</code>
        */
       public io.bloombox.schema.marketing.CampaignTargeting.PreferenceTargeting getPreferences() {
         if (preferencesBuilder_ == null) {
@@ -3048,7 +3147,7 @@ public final class CampaignTargeting {
        * Menu-preference-based targeting.
        * </pre>
        *
-       * <code>.bloombox.schema.marketing.PreferenceTargeting preferences = 4;</code>
+       * <code>.bloombox.marketing.PreferenceTargeting preferences = 4;</code>
        */
       public Builder setPreferences(io.bloombox.schema.marketing.CampaignTargeting.PreferenceTargeting value) {
         if (preferencesBuilder_ == null) {
@@ -3068,7 +3167,7 @@ public final class CampaignTargeting {
        * Menu-preference-based targeting.
        * </pre>
        *
-       * <code>.bloombox.schema.marketing.PreferenceTargeting preferences = 4;</code>
+       * <code>.bloombox.marketing.PreferenceTargeting preferences = 4;</code>
        */
       public Builder setPreferences(
           io.bloombox.schema.marketing.CampaignTargeting.PreferenceTargeting.Builder builderForValue) {
@@ -3086,7 +3185,7 @@ public final class CampaignTargeting {
        * Menu-preference-based targeting.
        * </pre>
        *
-       * <code>.bloombox.schema.marketing.PreferenceTargeting preferences = 4;</code>
+       * <code>.bloombox.marketing.PreferenceTargeting preferences = 4;</code>
        */
       public Builder mergePreferences(io.bloombox.schema.marketing.CampaignTargeting.PreferenceTargeting value) {
         if (preferencesBuilder_ == null) {
@@ -3112,7 +3211,7 @@ public final class CampaignTargeting {
        * Menu-preference-based targeting.
        * </pre>
        *
-       * <code>.bloombox.schema.marketing.PreferenceTargeting preferences = 4;</code>
+       * <code>.bloombox.marketing.PreferenceTargeting preferences = 4;</code>
        */
       public Builder clearPreferences() {
         if (preferencesBuilder_ == null) {
@@ -3135,7 +3234,7 @@ public final class CampaignTargeting {
        * Menu-preference-based targeting.
        * </pre>
        *
-       * <code>.bloombox.schema.marketing.PreferenceTargeting preferences = 4;</code>
+       * <code>.bloombox.marketing.PreferenceTargeting preferences = 4;</code>
        */
       public io.bloombox.schema.marketing.CampaignTargeting.PreferenceTargeting.Builder getPreferencesBuilder() {
         return getPreferencesFieldBuilder().getBuilder();
@@ -3145,7 +3244,7 @@ public final class CampaignTargeting {
        * Menu-preference-based targeting.
        * </pre>
        *
-       * <code>.bloombox.schema.marketing.PreferenceTargeting preferences = 4;</code>
+       * <code>.bloombox.marketing.PreferenceTargeting preferences = 4;</code>
        */
       public io.bloombox.schema.marketing.CampaignTargeting.PreferenceTargetingOrBuilder getPreferencesOrBuilder() {
         if ((policyCase_ == 4) && (preferencesBuilder_ != null)) {
@@ -3162,7 +3261,7 @@ public final class CampaignTargeting {
        * Menu-preference-based targeting.
        * </pre>
        *
-       * <code>.bloombox.schema.marketing.PreferenceTargeting preferences = 4;</code>
+       * <code>.bloombox.marketing.PreferenceTargeting preferences = 4;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
           io.bloombox.schema.marketing.CampaignTargeting.PreferenceTargeting, io.bloombox.schema.marketing.CampaignTargeting.PreferenceTargeting.Builder, io.bloombox.schema.marketing.CampaignTargeting.PreferenceTargetingOrBuilder> 
@@ -3182,21 +3281,23 @@ public final class CampaignTargeting {
         onChanged();;
         return preferencesBuilder_;
       }
+      @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
         return super.setUnknownFieldsProto3(unknownFields);
       }
 
+      @java.lang.Override
       public final Builder mergeUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
         return super.mergeUnknownFields(unknownFields);
       }
 
 
-      // @@protoc_insertion_point(builder_scope:bloombox.schema.marketing.TargetingPolicy)
+      // @@protoc_insertion_point(builder_scope:bloombox.marketing.TargetingPolicy)
     }
 
-    // @@protoc_insertion_point(class_scope:bloombox.schema.marketing.TargetingPolicy)
+    // @@protoc_insertion_point(class_scope:bloombox.marketing.TargetingPolicy)
     private static final io.bloombox.schema.marketing.CampaignTargeting.TargetingPolicy DEFAULT_INSTANCE;
     static {
       DEFAULT_INSTANCE = new io.bloombox.schema.marketing.CampaignTargeting.TargetingPolicy();
@@ -3208,6 +3309,7 @@ public final class CampaignTargeting {
 
     private static final com.google.protobuf.Parser<TargetingPolicy>
         PARSER = new com.google.protobuf.AbstractParser<TargetingPolicy>() {
+      @java.lang.Override
       public TargetingPolicy parsePartialFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -3225,6 +3327,7 @@ public final class CampaignTargeting {
       return PARSER;
     }
 
+    @java.lang.Override
     public io.bloombox.schema.marketing.CampaignTargeting.TargetingPolicy getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
@@ -3232,25 +3335,25 @@ public final class CampaignTargeting {
   }
 
   private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_bloombox_schema_marketing_AgeTargeting_descriptor;
+    internal_static_bloombox_marketing_AgeTargeting_descriptor;
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_bloombox_schema_marketing_AgeTargeting_fieldAccessorTable;
+      internal_static_bloombox_marketing_AgeTargeting_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_bloombox_schema_marketing_GenderTargeting_descriptor;
+    internal_static_bloombox_marketing_GenderTargeting_descriptor;
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_bloombox_schema_marketing_GenderTargeting_fieldAccessorTable;
+      internal_static_bloombox_marketing_GenderTargeting_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_bloombox_schema_marketing_PreferenceTargeting_descriptor;
+    internal_static_bloombox_marketing_PreferenceTargeting_descriptor;
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_bloombox_schema_marketing_PreferenceTargeting_fieldAccessorTable;
+      internal_static_bloombox_marketing_PreferenceTargeting_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_bloombox_schema_marketing_TargetingPolicy_descriptor;
+    internal_static_bloombox_marketing_TargetingPolicy_descriptor;
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_bloombox_schema_marketing_TargetingPolicy_fieldAccessorTable;
+      internal_static_bloombox_marketing_TargetingPolicy_fieldAccessorTable;
 
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
@@ -3260,22 +3363,21 @@ public final class CampaignTargeting {
       descriptor;
   static {
     java.lang.String[] descriptorData = {
-      "\n\031marketing/Targeting.proto\022\031bloombox.sc" +
-      "hema.marketing\032\023person/Person.proto\032\023ide" +
-      "ntity/User.proto\"@\n\014AgeTargeting\022\016\n\006stri" +
-      "ct\030\001 \001(\010\022\017\n\007minimum\030\002 \001(\r\022\017\n\007maximum\030\003 \001" +
-      "(\r\">\n\017GenderTargeting\022+\n\006target\030\001 \001(\0162\033." +
-      "opencannabis.person.Gender\"N\n\023Preference" +
-      "Targeting\0227\n\004menu\030\001 \001(\0132).bloombox.schem" +
-      "a.identity.MenuPreferences\"\351\001\n\017Targeting" +
-      "Policy\022\017\n\007enabled\030\001 \001(\010\0226\n\003age\030\002 \001(\0132\'.b" +
-      "loombox.schema.marketing.AgeTargetingH\000\022" +
-      "<\n\006gender\030\003 \001(\0132*.bloombox.schema.market" +
-      "ing.GenderTargetingH\000\022E\n\013preferences\030\004 \001" +
-      "(\0132..bloombox.schema.marketing.Preferenc" +
-      "eTargetingH\000B\010\n\006policyB;\n\034io.bloombox.sc" +
-      "hema.marketingB\021CampaignTargetingH\001P\000\242\002\003" +
-      "BBSb\006proto3"
+      "\n\031marketing/Targeting.proto\022\022bloombox.ma" +
+      "rketing\032\023person/Person.proto\032\023identity/U" +
+      "ser.proto\"@\n\014AgeTargeting\022\016\n\006strict\030\001 \001(" +
+      "\010\022\017\n\007minimum\030\002 \001(\r\022\017\n\007maximum\030\003 \001(\r\">\n\017G" +
+      "enderTargeting\022+\n\006target\030\001 \001(\0162\033.opencan" +
+      "nabis.person.Gender\"G\n\023PreferenceTargeti" +
+      "ng\0220\n\004menu\030\001 \001(\0132\".bloombox.identity.Men" +
+      "uPreferences\"\324\001\n\017TargetingPolicy\022\017\n\007enab" +
+      "led\030\001 \001(\010\022/\n\003age\030\002 \001(\0132 .bloombox.market" +
+      "ing.AgeTargetingH\000\0225\n\006gender\030\003 \001(\0132#.blo" +
+      "ombox.marketing.GenderTargetingH\000\022>\n\013pre" +
+      "ferences\030\004 \001(\0132\'.bloombox.marketing.Pref" +
+      "erenceTargetingH\000B\010\n\006policyB;\n\034io.bloomb" +
+      "ox.schema.marketingB\021CampaignTargetingH\001" +
+      "P\000\242\002\003BBSb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -3291,29 +3393,29 @@ public final class CampaignTargeting {
           io.opencannabis.schema.person.PersonOuterClass.getDescriptor(),
           io.bloombox.schema.identity.AppUser.getDescriptor(),
         }, assigner);
-    internal_static_bloombox_schema_marketing_AgeTargeting_descriptor =
+    internal_static_bloombox_marketing_AgeTargeting_descriptor =
       getDescriptor().getMessageTypes().get(0);
-    internal_static_bloombox_schema_marketing_AgeTargeting_fieldAccessorTable = new
+    internal_static_bloombox_marketing_AgeTargeting_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_bloombox_schema_marketing_AgeTargeting_descriptor,
+        internal_static_bloombox_marketing_AgeTargeting_descriptor,
         new java.lang.String[] { "Strict", "Minimum", "Maximum", });
-    internal_static_bloombox_schema_marketing_GenderTargeting_descriptor =
+    internal_static_bloombox_marketing_GenderTargeting_descriptor =
       getDescriptor().getMessageTypes().get(1);
-    internal_static_bloombox_schema_marketing_GenderTargeting_fieldAccessorTable = new
+    internal_static_bloombox_marketing_GenderTargeting_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_bloombox_schema_marketing_GenderTargeting_descriptor,
+        internal_static_bloombox_marketing_GenderTargeting_descriptor,
         new java.lang.String[] { "Target", });
-    internal_static_bloombox_schema_marketing_PreferenceTargeting_descriptor =
+    internal_static_bloombox_marketing_PreferenceTargeting_descriptor =
       getDescriptor().getMessageTypes().get(2);
-    internal_static_bloombox_schema_marketing_PreferenceTargeting_fieldAccessorTable = new
+    internal_static_bloombox_marketing_PreferenceTargeting_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_bloombox_schema_marketing_PreferenceTargeting_descriptor,
+        internal_static_bloombox_marketing_PreferenceTargeting_descriptor,
         new java.lang.String[] { "Menu", });
-    internal_static_bloombox_schema_marketing_TargetingPolicy_descriptor =
+    internal_static_bloombox_marketing_TargetingPolicy_descriptor =
       getDescriptor().getMessageTypes().get(3);
-    internal_static_bloombox_schema_marketing_TargetingPolicy_fieldAccessorTable = new
+    internal_static_bloombox_marketing_TargetingPolicy_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_bloombox_schema_marketing_TargetingPolicy_descriptor,
+        internal_static_bloombox_marketing_TargetingPolicy_descriptor,
         new java.lang.String[] { "Enabled", "Age", "Gender", "Preferences", "Policy", });
     io.opencannabis.schema.person.PersonOuterClass.getDescriptor();
     io.bloombox.schema.identity.AppUser.getDescriptor();

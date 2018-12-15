@@ -1,11 +1,12 @@
 /*
- * Copyright 2018, Bloombox, LLC.
+ * Copyright 2018, Momentum Ideas, Co. All rights reserved.
  *
- * Licensed under the Apache License, Version 2.0 (the "License");
- * you may not use this file except in compliance with the License.
- * You may obtain a copy of the License at
- *
- *     http://www.apache.org/licenses/LICENSE-2.0
+ * Source and object computer code contained herein is the private intellectual
+ * property of Momentum Ideas Co., a Delaware Corporation. Use of this
+ * code in source form requires permission in writing before use or the
+ * assembly, distribution, or publishing of derivative works, for commercial
+ * purposes or any other purpose, from a duly authorized officer of Momentum
+ * Ideas Co.
  *
  * Unless required by applicable law or agreed to in writing, software
  * distributed under the License is distributed on an "AS IS" BASIS,
@@ -35,7 +36,7 @@ public final class PartnerDevices {
    * Specifies types of partner co-located devices.
    * </pre>
    *
-   * Protobuf enum {@code bloombox.schema.partner.PartnerDeviceType}
+   * Protobuf enum {@code bloombox.partner.PartnerDeviceType}
    */
   public enum PartnerDeviceType
       implements com.google.protobuf.ProtocolMessageEnum {
@@ -230,11 +231,11 @@ public final class PartnerDevices {
       this.value = value;
     }
 
-    // @@protoc_insertion_point(enum_scope:bloombox.schema.partner.PartnerDeviceType)
+    // @@protoc_insertion_point(enum_scope:bloombox.partner.PartnerDeviceType)
   }
 
   public interface PartnerDeviceKeyOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:bloombox.schema.partner.PartnerDeviceKey)
+      // @@protoc_insertion_point(interface_extends:bloombox.partner.PartnerDeviceKey)
       com.google.protobuf.MessageOrBuilder {
 
     /**
@@ -242,7 +243,7 @@ public final class PartnerDevices {
      * Partner location that owns/co-locates this device.
      * </pre>
      *
-     * <code>.bloombox.schema.partner.LocationKey location = 1;</code>
+     * <code>.bloombox.partner.LocationKey location = 1;</code>
      */
     boolean hasLocation();
     /**
@@ -250,7 +251,7 @@ public final class PartnerDevices {
      * Partner location that owns/co-locates this device.
      * </pre>
      *
-     * <code>.bloombox.schema.partner.LocationKey location = 1;</code>
+     * <code>.bloombox.partner.LocationKey location = 1;</code>
      */
     io.bloombox.schema.partner.LocationAccountKey.LocationKey getLocation();
     /**
@@ -258,7 +259,7 @@ public final class PartnerDevices {
      * Partner location that owns/co-locates this device.
      * </pre>
      *
-     * <code>.bloombox.schema.partner.LocationKey location = 1;</code>
+     * <code>.bloombox.partner.LocationKey location = 1;</code>
      */
     io.bloombox.schema.partner.LocationAccountKey.LocationKeyOrBuilder getLocationOrBuilder();
 
@@ -285,11 +286,11 @@ public final class PartnerDevices {
    * Specifies the structure of a key for a given partner device.
    * </pre>
    *
-   * Protobuf type {@code bloombox.schema.partner.PartnerDeviceKey}
+   * Protobuf type {@code bloombox.partner.PartnerDeviceKey}
    */
   public  static final class PartnerDeviceKey extends
       com.google.protobuf.GeneratedMessageV3 implements
-      // @@protoc_insertion_point(message_implements:bloombox.schema.partner.PartnerDeviceKey)
+      // @@protoc_insertion_point(message_implements:bloombox.partner.PartnerDeviceKey)
       PartnerDeviceKeyOrBuilder {
   private static final long serialVersionUID = 0L;
     // Use PartnerDeviceKey.newBuilder() to construct.
@@ -324,13 +325,6 @@ public final class PartnerDevices {
             case 0:
               done = true;
               break;
-            default: {
-              if (!parseUnknownFieldProto3(
-                  input, unknownFields, extensionRegistry, tag)) {
-                done = true;
-              }
-              break;
-            }
             case 10: {
               io.bloombox.schema.partner.LocationAccountKey.LocationKey.Builder subBuilder = null;
               if (location_ != null) {
@@ -350,6 +344,13 @@ public final class PartnerDevices {
               uuid_ = s;
               break;
             }
+            default: {
+              if (!parseUnknownFieldProto3(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
           }
         }
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
@@ -364,12 +365,13 @@ public final class PartnerDevices {
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return io.bloombox.schema.partner.PartnerDevices.internal_static_bloombox_schema_partner_PartnerDeviceKey_descriptor;
+      return io.bloombox.schema.partner.PartnerDevices.internal_static_bloombox_partner_PartnerDeviceKey_descriptor;
     }
 
+    @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return io.bloombox.schema.partner.PartnerDevices.internal_static_bloombox_schema_partner_PartnerDeviceKey_fieldAccessorTable
+      return io.bloombox.schema.partner.PartnerDevices.internal_static_bloombox_partner_PartnerDeviceKey_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
               io.bloombox.schema.partner.PartnerDevices.PartnerDeviceKey.class, io.bloombox.schema.partner.PartnerDevices.PartnerDeviceKey.Builder.class);
     }
@@ -381,7 +383,7 @@ public final class PartnerDevices {
      * Partner location that owns/co-locates this device.
      * </pre>
      *
-     * <code>.bloombox.schema.partner.LocationKey location = 1;</code>
+     * <code>.bloombox.partner.LocationKey location = 1;</code>
      */
     public boolean hasLocation() {
       return location_ != null;
@@ -391,7 +393,7 @@ public final class PartnerDevices {
      * Partner location that owns/co-locates this device.
      * </pre>
      *
-     * <code>.bloombox.schema.partner.LocationKey location = 1;</code>
+     * <code>.bloombox.partner.LocationKey location = 1;</code>
      */
     public io.bloombox.schema.partner.LocationAccountKey.LocationKey getLocation() {
       return location_ == null ? io.bloombox.schema.partner.LocationAccountKey.LocationKey.getDefaultInstance() : location_;
@@ -401,7 +403,7 @@ public final class PartnerDevices {
      * Partner location that owns/co-locates this device.
      * </pre>
      *
-     * <code>.bloombox.schema.partner.LocationKey location = 1;</code>
+     * <code>.bloombox.partner.LocationKey location = 1;</code>
      */
     public io.bloombox.schema.partner.LocationAccountKey.LocationKeyOrBuilder getLocationOrBuilder() {
       return getLocation();
@@ -450,6 +452,7 @@ public final class PartnerDevices {
     }
 
     private byte memoizedIsInitialized = -1;
+    @java.lang.Override
     public final boolean isInitialized() {
       byte isInitialized = memoizedIsInitialized;
       if (isInitialized == 1) return true;
@@ -459,6 +462,7 @@ public final class PartnerDevices {
       return true;
     }
 
+    @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
       if (location_ != null) {
@@ -470,6 +474,7 @@ public final class PartnerDevices {
       unknownFields.writeTo(output);
     }
 
+    @java.lang.Override
     public int getSerializedSize() {
       int size = memoizedSize;
       if (size != -1) return size;
@@ -597,6 +602,7 @@ public final class PartnerDevices {
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
 
+    @java.lang.Override
     public Builder newBuilderForType() { return newBuilder(); }
     public static Builder newBuilder() {
       return DEFAULT_INSTANCE.toBuilder();
@@ -604,6 +610,7 @@ public final class PartnerDevices {
     public static Builder newBuilder(io.bloombox.schema.partner.PartnerDevices.PartnerDeviceKey prototype) {
       return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
     }
+    @java.lang.Override
     public Builder toBuilder() {
       return this == DEFAULT_INSTANCE
           ? new Builder() : new Builder().mergeFrom(this);
@@ -620,20 +627,21 @@ public final class PartnerDevices {
      * Specifies the structure of a key for a given partner device.
      * </pre>
      *
-     * Protobuf type {@code bloombox.schema.partner.PartnerDeviceKey}
+     * Protobuf type {@code bloombox.partner.PartnerDeviceKey}
      */
     public static final class Builder extends
         com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:bloombox.schema.partner.PartnerDeviceKey)
+        // @@protoc_insertion_point(builder_implements:bloombox.partner.PartnerDeviceKey)
         io.bloombox.schema.partner.PartnerDevices.PartnerDeviceKeyOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return io.bloombox.schema.partner.PartnerDevices.internal_static_bloombox_schema_partner_PartnerDeviceKey_descriptor;
+        return io.bloombox.schema.partner.PartnerDevices.internal_static_bloombox_partner_PartnerDeviceKey_descriptor;
       }
 
+      @java.lang.Override
       protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return io.bloombox.schema.partner.PartnerDevices.internal_static_bloombox_schema_partner_PartnerDeviceKey_fieldAccessorTable
+        return io.bloombox.schema.partner.PartnerDevices.internal_static_bloombox_partner_PartnerDeviceKey_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
                 io.bloombox.schema.partner.PartnerDevices.PartnerDeviceKey.class, io.bloombox.schema.partner.PartnerDevices.PartnerDeviceKey.Builder.class);
       }
@@ -653,6 +661,7 @@ public final class PartnerDevices {
                 .alwaysUseFieldBuilders) {
         }
       }
+      @java.lang.Override
       public Builder clear() {
         super.clear();
         if (locationBuilder_ == null) {
@@ -666,15 +675,18 @@ public final class PartnerDevices {
         return this;
       }
 
+      @java.lang.Override
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return io.bloombox.schema.partner.PartnerDevices.internal_static_bloombox_schema_partner_PartnerDeviceKey_descriptor;
+        return io.bloombox.schema.partner.PartnerDevices.internal_static_bloombox_partner_PartnerDeviceKey_descriptor;
       }
 
+      @java.lang.Override
       public io.bloombox.schema.partner.PartnerDevices.PartnerDeviceKey getDefaultInstanceForType() {
         return io.bloombox.schema.partner.PartnerDevices.PartnerDeviceKey.getDefaultInstance();
       }
 
+      @java.lang.Override
       public io.bloombox.schema.partner.PartnerDevices.PartnerDeviceKey build() {
         io.bloombox.schema.partner.PartnerDevices.PartnerDeviceKey result = buildPartial();
         if (!result.isInitialized()) {
@@ -683,6 +695,7 @@ public final class PartnerDevices {
         return result;
       }
 
+      @java.lang.Override
       public io.bloombox.schema.partner.PartnerDevices.PartnerDeviceKey buildPartial() {
         io.bloombox.schema.partner.PartnerDevices.PartnerDeviceKey result = new io.bloombox.schema.partner.PartnerDevices.PartnerDeviceKey(this);
         if (locationBuilder_ == null) {
@@ -695,32 +708,39 @@ public final class PartnerDevices {
         return result;
       }
 
+      @java.lang.Override
       public Builder clone() {
         return (Builder) super.clone();
       }
+      @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
         return (Builder) super.setField(field, value);
       }
+      @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
         return (Builder) super.clearField(field);
       }
+      @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
         return (Builder) super.clearOneof(oneof);
       }
+      @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
         return (Builder) super.setRepeatedField(field, index, value);
       }
+      @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
         return (Builder) super.addRepeatedField(field, value);
       }
+      @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
         if (other instanceof io.bloombox.schema.partner.PartnerDevices.PartnerDeviceKey) {
           return mergeFrom((io.bloombox.schema.partner.PartnerDevices.PartnerDeviceKey)other);
@@ -744,10 +764,12 @@ public final class PartnerDevices {
         return this;
       }
 
+      @java.lang.Override
       public final boolean isInitialized() {
         return true;
       }
 
+      @java.lang.Override
       public Builder mergeFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -774,7 +796,7 @@ public final class PartnerDevices {
        * Partner location that owns/co-locates this device.
        * </pre>
        *
-       * <code>.bloombox.schema.partner.LocationKey location = 1;</code>
+       * <code>.bloombox.partner.LocationKey location = 1;</code>
        */
       public boolean hasLocation() {
         return locationBuilder_ != null || location_ != null;
@@ -784,7 +806,7 @@ public final class PartnerDevices {
        * Partner location that owns/co-locates this device.
        * </pre>
        *
-       * <code>.bloombox.schema.partner.LocationKey location = 1;</code>
+       * <code>.bloombox.partner.LocationKey location = 1;</code>
        */
       public io.bloombox.schema.partner.LocationAccountKey.LocationKey getLocation() {
         if (locationBuilder_ == null) {
@@ -798,7 +820,7 @@ public final class PartnerDevices {
        * Partner location that owns/co-locates this device.
        * </pre>
        *
-       * <code>.bloombox.schema.partner.LocationKey location = 1;</code>
+       * <code>.bloombox.partner.LocationKey location = 1;</code>
        */
       public Builder setLocation(io.bloombox.schema.partner.LocationAccountKey.LocationKey value) {
         if (locationBuilder_ == null) {
@@ -818,7 +840,7 @@ public final class PartnerDevices {
        * Partner location that owns/co-locates this device.
        * </pre>
        *
-       * <code>.bloombox.schema.partner.LocationKey location = 1;</code>
+       * <code>.bloombox.partner.LocationKey location = 1;</code>
        */
       public Builder setLocation(
           io.bloombox.schema.partner.LocationAccountKey.LocationKey.Builder builderForValue) {
@@ -836,7 +858,7 @@ public final class PartnerDevices {
        * Partner location that owns/co-locates this device.
        * </pre>
        *
-       * <code>.bloombox.schema.partner.LocationKey location = 1;</code>
+       * <code>.bloombox.partner.LocationKey location = 1;</code>
        */
       public Builder mergeLocation(io.bloombox.schema.partner.LocationAccountKey.LocationKey value) {
         if (locationBuilder_ == null) {
@@ -858,7 +880,7 @@ public final class PartnerDevices {
        * Partner location that owns/co-locates this device.
        * </pre>
        *
-       * <code>.bloombox.schema.partner.LocationKey location = 1;</code>
+       * <code>.bloombox.partner.LocationKey location = 1;</code>
        */
       public Builder clearLocation() {
         if (locationBuilder_ == null) {
@@ -876,7 +898,7 @@ public final class PartnerDevices {
        * Partner location that owns/co-locates this device.
        * </pre>
        *
-       * <code>.bloombox.schema.partner.LocationKey location = 1;</code>
+       * <code>.bloombox.partner.LocationKey location = 1;</code>
        */
       public io.bloombox.schema.partner.LocationAccountKey.LocationKey.Builder getLocationBuilder() {
         
@@ -888,7 +910,7 @@ public final class PartnerDevices {
        * Partner location that owns/co-locates this device.
        * </pre>
        *
-       * <code>.bloombox.schema.partner.LocationKey location = 1;</code>
+       * <code>.bloombox.partner.LocationKey location = 1;</code>
        */
       public io.bloombox.schema.partner.LocationAccountKey.LocationKeyOrBuilder getLocationOrBuilder() {
         if (locationBuilder_ != null) {
@@ -903,7 +925,7 @@ public final class PartnerDevices {
        * Partner location that owns/co-locates this device.
        * </pre>
        *
-       * <code>.bloombox.schema.partner.LocationKey location = 1;</code>
+       * <code>.bloombox.partner.LocationKey location = 1;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
           io.bloombox.schema.partner.LocationAccountKey.LocationKey, io.bloombox.schema.partner.LocationAccountKey.LocationKey.Builder, io.bloombox.schema.partner.LocationAccountKey.LocationKeyOrBuilder> 
@@ -1007,21 +1029,23 @@ public final class PartnerDevices {
         onChanged();
         return this;
       }
+      @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
         return super.setUnknownFieldsProto3(unknownFields);
       }
 
+      @java.lang.Override
       public final Builder mergeUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
         return super.mergeUnknownFields(unknownFields);
       }
 
 
-      // @@protoc_insertion_point(builder_scope:bloombox.schema.partner.PartnerDeviceKey)
+      // @@protoc_insertion_point(builder_scope:bloombox.partner.PartnerDeviceKey)
     }
 
-    // @@protoc_insertion_point(class_scope:bloombox.schema.partner.PartnerDeviceKey)
+    // @@protoc_insertion_point(class_scope:bloombox.partner.PartnerDeviceKey)
     private static final io.bloombox.schema.partner.PartnerDevices.PartnerDeviceKey DEFAULT_INSTANCE;
     static {
       DEFAULT_INSTANCE = new io.bloombox.schema.partner.PartnerDevices.PartnerDeviceKey();
@@ -1033,6 +1057,7 @@ public final class PartnerDevices {
 
     private static final com.google.protobuf.Parser<PartnerDeviceKey>
         PARSER = new com.google.protobuf.AbstractParser<PartnerDeviceKey>() {
+      @java.lang.Override
       public PartnerDeviceKey parsePartialFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -1050,6 +1075,7 @@ public final class PartnerDevices {
       return PARSER;
     }
 
+    @java.lang.Override
     public io.bloombox.schema.partner.PartnerDevices.PartnerDeviceKey getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
@@ -1057,7 +1083,7 @@ public final class PartnerDevices {
   }
 
   public interface PartnerDeviceOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:bloombox.schema.partner.PartnerDevice)
+      // @@protoc_insertion_point(interface_extends:bloombox.partner.PartnerDevice)
       com.google.protobuf.MessageOrBuilder {
 
     /**
@@ -1083,7 +1109,7 @@ public final class PartnerDevices {
      * Partner that owns this device.
      * </pre>
      *
-     * <code>.bloombox.schema.partner.LocationKey location = 2;</code>
+     * <code>.bloombox.partner.LocationKey location = 2;</code>
      */
     boolean hasLocation();
     /**
@@ -1091,7 +1117,7 @@ public final class PartnerDevices {
      * Partner that owns this device.
      * </pre>
      *
-     * <code>.bloombox.schema.partner.LocationKey location = 2;</code>
+     * <code>.bloombox.partner.LocationKey location = 2;</code>
      */
     io.bloombox.schema.partner.LocationAccountKey.LocationKey getLocation();
     /**
@@ -1099,7 +1125,7 @@ public final class PartnerDevices {
      * Partner that owns this device.
      * </pre>
      *
-     * <code>.bloombox.schema.partner.LocationKey location = 2;</code>
+     * <code>.bloombox.partner.LocationKey location = 2;</code>
      */
     io.bloombox.schema.partner.LocationAccountKey.LocationKeyOrBuilder getLocationOrBuilder();
 
@@ -1108,7 +1134,7 @@ public final class PartnerDevices {
      * Type of the device this record represents.
      * </pre>
      *
-     * <code>.bloombox.schema.partner.PartnerDeviceType type = 3;</code>
+     * <code>.bloombox.partner.PartnerDeviceType type = 3;</code>
      */
     int getTypeValue();
     /**
@@ -1116,7 +1142,7 @@ public final class PartnerDevices {
      * Type of the device this record represents.
      * </pre>
      *
-     * <code>.bloombox.schema.partner.PartnerDeviceType type = 3;</code>
+     * <code>.bloombox.partner.PartnerDeviceType type = 3;</code>
      */
     io.bloombox.schema.partner.PartnerDevices.PartnerDeviceType getType();
 
@@ -1125,7 +1151,7 @@ public final class PartnerDevices {
      * Flags for this device.
      * </pre>
      *
-     * <code>.bloombox.schema.partner.PartnerDeviceFlags flags = 4;</code>
+     * <code>.bloombox.partner.PartnerDeviceFlags flags = 4;</code>
      */
     boolean hasFlags();
     /**
@@ -1133,7 +1159,7 @@ public final class PartnerDevices {
      * Flags for this device.
      * </pre>
      *
-     * <code>.bloombox.schema.partner.PartnerDeviceFlags flags = 4;</code>
+     * <code>.bloombox.partner.PartnerDeviceFlags flags = 4;</code>
      */
     io.bloombox.schema.partner.PartnerDevices.PartnerDeviceFlags getFlags();
     /**
@@ -1141,7 +1167,7 @@ public final class PartnerDevices {
      * Flags for this device.
      * </pre>
      *
-     * <code>.bloombox.schema.partner.PartnerDeviceFlags flags = 4;</code>
+     * <code>.bloombox.partner.PartnerDeviceFlags flags = 4;</code>
      */
     io.bloombox.schema.partner.PartnerDevices.PartnerDeviceFlagsOrBuilder getFlagsOrBuilder();
 
@@ -1225,11 +1251,11 @@ public final class PartnerDevices {
    * Specifies the structure of partner co-located device records.
    * </pre>
    *
-   * Protobuf type {@code bloombox.schema.partner.PartnerDevice}
+   * Protobuf type {@code bloombox.partner.PartnerDevice}
    */
   public  static final class PartnerDevice extends
       com.google.protobuf.GeneratedMessageV3 implements
-      // @@protoc_insertion_point(message_implements:bloombox.schema.partner.PartnerDevice)
+      // @@protoc_insertion_point(message_implements:bloombox.partner.PartnerDevice)
       PartnerDeviceOrBuilder {
   private static final long serialVersionUID = 0L;
     // Use PartnerDevice.newBuilder() to construct.
@@ -1265,13 +1291,6 @@ public final class PartnerDevices {
             case 0:
               done = true;
               break;
-            default: {
-              if (!parseUnknownFieldProto3(
-                  input, unknownFields, extensionRegistry, tag)) {
-                done = true;
-              }
-              break;
-            }
             case 10: {
               java.lang.String s = input.readStringRequireUtf8();
 
@@ -1349,6 +1368,13 @@ public final class PartnerDevices {
 
               break;
             }
+            default: {
+              if (!parseUnknownFieldProto3(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
           }
         }
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
@@ -1363,12 +1389,13 @@ public final class PartnerDevices {
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return io.bloombox.schema.partner.PartnerDevices.internal_static_bloombox_schema_partner_PartnerDevice_descriptor;
+      return io.bloombox.schema.partner.PartnerDevices.internal_static_bloombox_partner_PartnerDevice_descriptor;
     }
 
+    @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return io.bloombox.schema.partner.PartnerDevices.internal_static_bloombox_schema_partner_PartnerDevice_fieldAccessorTable
+      return io.bloombox.schema.partner.PartnerDevices.internal_static_bloombox_partner_PartnerDevice_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
               io.bloombox.schema.partner.PartnerDevices.PartnerDevice.class, io.bloombox.schema.partner.PartnerDevices.PartnerDevice.Builder.class);
     }
@@ -1422,7 +1449,7 @@ public final class PartnerDevices {
      * Partner that owns this device.
      * </pre>
      *
-     * <code>.bloombox.schema.partner.LocationKey location = 2;</code>
+     * <code>.bloombox.partner.LocationKey location = 2;</code>
      */
     public boolean hasLocation() {
       return location_ != null;
@@ -1432,7 +1459,7 @@ public final class PartnerDevices {
      * Partner that owns this device.
      * </pre>
      *
-     * <code>.bloombox.schema.partner.LocationKey location = 2;</code>
+     * <code>.bloombox.partner.LocationKey location = 2;</code>
      */
     public io.bloombox.schema.partner.LocationAccountKey.LocationKey getLocation() {
       return location_ == null ? io.bloombox.schema.partner.LocationAccountKey.LocationKey.getDefaultInstance() : location_;
@@ -1442,7 +1469,7 @@ public final class PartnerDevices {
      * Partner that owns this device.
      * </pre>
      *
-     * <code>.bloombox.schema.partner.LocationKey location = 2;</code>
+     * <code>.bloombox.partner.LocationKey location = 2;</code>
      */
     public io.bloombox.schema.partner.LocationAccountKey.LocationKeyOrBuilder getLocationOrBuilder() {
       return getLocation();
@@ -1455,7 +1482,7 @@ public final class PartnerDevices {
      * Type of the device this record represents.
      * </pre>
      *
-     * <code>.bloombox.schema.partner.PartnerDeviceType type = 3;</code>
+     * <code>.bloombox.partner.PartnerDeviceType type = 3;</code>
      */
     public int getTypeValue() {
       return type_;
@@ -1465,9 +1492,10 @@ public final class PartnerDevices {
      * Type of the device this record represents.
      * </pre>
      *
-     * <code>.bloombox.schema.partner.PartnerDeviceType type = 3;</code>
+     * <code>.bloombox.partner.PartnerDeviceType type = 3;</code>
      */
     public io.bloombox.schema.partner.PartnerDevices.PartnerDeviceType getType() {
+      @SuppressWarnings("deprecation")
       io.bloombox.schema.partner.PartnerDevices.PartnerDeviceType result = io.bloombox.schema.partner.PartnerDevices.PartnerDeviceType.valueOf(type_);
       return result == null ? io.bloombox.schema.partner.PartnerDevices.PartnerDeviceType.UNRECOGNIZED : result;
     }
@@ -1479,7 +1507,7 @@ public final class PartnerDevices {
      * Flags for this device.
      * </pre>
      *
-     * <code>.bloombox.schema.partner.PartnerDeviceFlags flags = 4;</code>
+     * <code>.bloombox.partner.PartnerDeviceFlags flags = 4;</code>
      */
     public boolean hasFlags() {
       return flags_ != null;
@@ -1489,7 +1517,7 @@ public final class PartnerDevices {
      * Flags for this device.
      * </pre>
      *
-     * <code>.bloombox.schema.partner.PartnerDeviceFlags flags = 4;</code>
+     * <code>.bloombox.partner.PartnerDeviceFlags flags = 4;</code>
      */
     public io.bloombox.schema.partner.PartnerDevices.PartnerDeviceFlags getFlags() {
       return flags_ == null ? io.bloombox.schema.partner.PartnerDevices.PartnerDeviceFlags.getDefaultInstance() : flags_;
@@ -1499,7 +1527,7 @@ public final class PartnerDevices {
      * Flags for this device.
      * </pre>
      *
-     * <code>.bloombox.schema.partner.PartnerDeviceFlags flags = 4;</code>
+     * <code>.bloombox.partner.PartnerDeviceFlags flags = 4;</code>
      */
     public io.bloombox.schema.partner.PartnerDevices.PartnerDeviceFlagsOrBuilder getFlagsOrBuilder() {
       return getFlags();
@@ -1605,6 +1633,7 @@ public final class PartnerDevices {
     }
 
     private byte memoizedIsInitialized = -1;
+    @java.lang.Override
     public final boolean isInitialized() {
       byte isInitialized = memoizedIsInitialized;
       if (isInitialized == 1) return true;
@@ -1614,6 +1643,7 @@ public final class PartnerDevices {
       return true;
     }
 
+    @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
       if (!getUuidBytes().isEmpty()) {
@@ -1640,6 +1670,7 @@ public final class PartnerDevices {
       unknownFields.writeTo(output);
     }
 
+    @java.lang.Override
     public int getSerializedSize() {
       int size = memoizedSize;
       if (size != -1) return size;
@@ -1826,6 +1857,7 @@ public final class PartnerDevices {
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
 
+    @java.lang.Override
     public Builder newBuilderForType() { return newBuilder(); }
     public static Builder newBuilder() {
       return DEFAULT_INSTANCE.toBuilder();
@@ -1833,6 +1865,7 @@ public final class PartnerDevices {
     public static Builder newBuilder(io.bloombox.schema.partner.PartnerDevices.PartnerDevice prototype) {
       return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
     }
+    @java.lang.Override
     public Builder toBuilder() {
       return this == DEFAULT_INSTANCE
           ? new Builder() : new Builder().mergeFrom(this);
@@ -1849,20 +1882,21 @@ public final class PartnerDevices {
      * Specifies the structure of partner co-located device records.
      * </pre>
      *
-     * Protobuf type {@code bloombox.schema.partner.PartnerDevice}
+     * Protobuf type {@code bloombox.partner.PartnerDevice}
      */
     public static final class Builder extends
         com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:bloombox.schema.partner.PartnerDevice)
+        // @@protoc_insertion_point(builder_implements:bloombox.partner.PartnerDevice)
         io.bloombox.schema.partner.PartnerDevices.PartnerDeviceOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return io.bloombox.schema.partner.PartnerDevices.internal_static_bloombox_schema_partner_PartnerDevice_descriptor;
+        return io.bloombox.schema.partner.PartnerDevices.internal_static_bloombox_partner_PartnerDevice_descriptor;
       }
 
+      @java.lang.Override
       protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return io.bloombox.schema.partner.PartnerDevices.internal_static_bloombox_schema_partner_PartnerDevice_fieldAccessorTable
+        return io.bloombox.schema.partner.PartnerDevices.internal_static_bloombox_partner_PartnerDevice_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
                 io.bloombox.schema.partner.PartnerDevices.PartnerDevice.class, io.bloombox.schema.partner.PartnerDevices.PartnerDevice.Builder.class);
       }
@@ -1882,6 +1916,7 @@ public final class PartnerDevices {
                 .alwaysUseFieldBuilders) {
         }
       }
+      @java.lang.Override
       public Builder clear() {
         super.clear();
         uuid_ = "";
@@ -1921,15 +1956,18 @@ public final class PartnerDevices {
         return this;
       }
 
+      @java.lang.Override
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return io.bloombox.schema.partner.PartnerDevices.internal_static_bloombox_schema_partner_PartnerDevice_descriptor;
+        return io.bloombox.schema.partner.PartnerDevices.internal_static_bloombox_partner_PartnerDevice_descriptor;
       }
 
+      @java.lang.Override
       public io.bloombox.schema.partner.PartnerDevices.PartnerDevice getDefaultInstanceForType() {
         return io.bloombox.schema.partner.PartnerDevices.PartnerDevice.getDefaultInstance();
       }
 
+      @java.lang.Override
       public io.bloombox.schema.partner.PartnerDevices.PartnerDevice build() {
         io.bloombox.schema.partner.PartnerDevices.PartnerDevice result = buildPartial();
         if (!result.isInitialized()) {
@@ -1938,6 +1976,7 @@ public final class PartnerDevices {
         return result;
       }
 
+      @java.lang.Override
       public io.bloombox.schema.partner.PartnerDevices.PartnerDevice buildPartial() {
         io.bloombox.schema.partner.PartnerDevices.PartnerDevice result = new io.bloombox.schema.partner.PartnerDevices.PartnerDevice(this);
         result.uuid_ = uuid_;
@@ -1971,32 +2010,39 @@ public final class PartnerDevices {
         return result;
       }
 
+      @java.lang.Override
       public Builder clone() {
         return (Builder) super.clone();
       }
+      @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
         return (Builder) super.setField(field, value);
       }
+      @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
         return (Builder) super.clearField(field);
       }
+      @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
         return (Builder) super.clearOneof(oneof);
       }
+      @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
         return (Builder) super.setRepeatedField(field, index, value);
       }
+      @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
         return (Builder) super.addRepeatedField(field, value);
       }
+      @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
         if (other instanceof io.bloombox.schema.partner.PartnerDevices.PartnerDevice) {
           return mergeFrom((io.bloombox.schema.partner.PartnerDevices.PartnerDevice)other);
@@ -2035,10 +2081,12 @@ public final class PartnerDevices {
         return this;
       }
 
+      @java.lang.Override
       public final boolean isInitialized() {
         return true;
       }
 
+      @java.lang.Override
       public Builder mergeFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -2154,7 +2202,7 @@ public final class PartnerDevices {
        * Partner that owns this device.
        * </pre>
        *
-       * <code>.bloombox.schema.partner.LocationKey location = 2;</code>
+       * <code>.bloombox.partner.LocationKey location = 2;</code>
        */
       public boolean hasLocation() {
         return locationBuilder_ != null || location_ != null;
@@ -2164,7 +2212,7 @@ public final class PartnerDevices {
        * Partner that owns this device.
        * </pre>
        *
-       * <code>.bloombox.schema.partner.LocationKey location = 2;</code>
+       * <code>.bloombox.partner.LocationKey location = 2;</code>
        */
       public io.bloombox.schema.partner.LocationAccountKey.LocationKey getLocation() {
         if (locationBuilder_ == null) {
@@ -2178,7 +2226,7 @@ public final class PartnerDevices {
        * Partner that owns this device.
        * </pre>
        *
-       * <code>.bloombox.schema.partner.LocationKey location = 2;</code>
+       * <code>.bloombox.partner.LocationKey location = 2;</code>
        */
       public Builder setLocation(io.bloombox.schema.partner.LocationAccountKey.LocationKey value) {
         if (locationBuilder_ == null) {
@@ -2198,7 +2246,7 @@ public final class PartnerDevices {
        * Partner that owns this device.
        * </pre>
        *
-       * <code>.bloombox.schema.partner.LocationKey location = 2;</code>
+       * <code>.bloombox.partner.LocationKey location = 2;</code>
        */
       public Builder setLocation(
           io.bloombox.schema.partner.LocationAccountKey.LocationKey.Builder builderForValue) {
@@ -2216,7 +2264,7 @@ public final class PartnerDevices {
        * Partner that owns this device.
        * </pre>
        *
-       * <code>.bloombox.schema.partner.LocationKey location = 2;</code>
+       * <code>.bloombox.partner.LocationKey location = 2;</code>
        */
       public Builder mergeLocation(io.bloombox.schema.partner.LocationAccountKey.LocationKey value) {
         if (locationBuilder_ == null) {
@@ -2238,7 +2286,7 @@ public final class PartnerDevices {
        * Partner that owns this device.
        * </pre>
        *
-       * <code>.bloombox.schema.partner.LocationKey location = 2;</code>
+       * <code>.bloombox.partner.LocationKey location = 2;</code>
        */
       public Builder clearLocation() {
         if (locationBuilder_ == null) {
@@ -2256,7 +2304,7 @@ public final class PartnerDevices {
        * Partner that owns this device.
        * </pre>
        *
-       * <code>.bloombox.schema.partner.LocationKey location = 2;</code>
+       * <code>.bloombox.partner.LocationKey location = 2;</code>
        */
       public io.bloombox.schema.partner.LocationAccountKey.LocationKey.Builder getLocationBuilder() {
         
@@ -2268,7 +2316,7 @@ public final class PartnerDevices {
        * Partner that owns this device.
        * </pre>
        *
-       * <code>.bloombox.schema.partner.LocationKey location = 2;</code>
+       * <code>.bloombox.partner.LocationKey location = 2;</code>
        */
       public io.bloombox.schema.partner.LocationAccountKey.LocationKeyOrBuilder getLocationOrBuilder() {
         if (locationBuilder_ != null) {
@@ -2283,7 +2331,7 @@ public final class PartnerDevices {
        * Partner that owns this device.
        * </pre>
        *
-       * <code>.bloombox.schema.partner.LocationKey location = 2;</code>
+       * <code>.bloombox.partner.LocationKey location = 2;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
           io.bloombox.schema.partner.LocationAccountKey.LocationKey, io.bloombox.schema.partner.LocationAccountKey.LocationKey.Builder, io.bloombox.schema.partner.LocationAccountKey.LocationKeyOrBuilder> 
@@ -2305,7 +2353,7 @@ public final class PartnerDevices {
        * Type of the device this record represents.
        * </pre>
        *
-       * <code>.bloombox.schema.partner.PartnerDeviceType type = 3;</code>
+       * <code>.bloombox.partner.PartnerDeviceType type = 3;</code>
        */
       public int getTypeValue() {
         return type_;
@@ -2315,7 +2363,7 @@ public final class PartnerDevices {
        * Type of the device this record represents.
        * </pre>
        *
-       * <code>.bloombox.schema.partner.PartnerDeviceType type = 3;</code>
+       * <code>.bloombox.partner.PartnerDeviceType type = 3;</code>
        */
       public Builder setTypeValue(int value) {
         type_ = value;
@@ -2327,9 +2375,10 @@ public final class PartnerDevices {
        * Type of the device this record represents.
        * </pre>
        *
-       * <code>.bloombox.schema.partner.PartnerDeviceType type = 3;</code>
+       * <code>.bloombox.partner.PartnerDeviceType type = 3;</code>
        */
       public io.bloombox.schema.partner.PartnerDevices.PartnerDeviceType getType() {
+        @SuppressWarnings("deprecation")
         io.bloombox.schema.partner.PartnerDevices.PartnerDeviceType result = io.bloombox.schema.partner.PartnerDevices.PartnerDeviceType.valueOf(type_);
         return result == null ? io.bloombox.schema.partner.PartnerDevices.PartnerDeviceType.UNRECOGNIZED : result;
       }
@@ -2338,7 +2387,7 @@ public final class PartnerDevices {
        * Type of the device this record represents.
        * </pre>
        *
-       * <code>.bloombox.schema.partner.PartnerDeviceType type = 3;</code>
+       * <code>.bloombox.partner.PartnerDeviceType type = 3;</code>
        */
       public Builder setType(io.bloombox.schema.partner.PartnerDevices.PartnerDeviceType value) {
         if (value == null) {
@@ -2354,7 +2403,7 @@ public final class PartnerDevices {
        * Type of the device this record represents.
        * </pre>
        *
-       * <code>.bloombox.schema.partner.PartnerDeviceType type = 3;</code>
+       * <code>.bloombox.partner.PartnerDeviceType type = 3;</code>
        */
       public Builder clearType() {
         
@@ -2371,7 +2420,7 @@ public final class PartnerDevices {
        * Flags for this device.
        * </pre>
        *
-       * <code>.bloombox.schema.partner.PartnerDeviceFlags flags = 4;</code>
+       * <code>.bloombox.partner.PartnerDeviceFlags flags = 4;</code>
        */
       public boolean hasFlags() {
         return flagsBuilder_ != null || flags_ != null;
@@ -2381,7 +2430,7 @@ public final class PartnerDevices {
        * Flags for this device.
        * </pre>
        *
-       * <code>.bloombox.schema.partner.PartnerDeviceFlags flags = 4;</code>
+       * <code>.bloombox.partner.PartnerDeviceFlags flags = 4;</code>
        */
       public io.bloombox.schema.partner.PartnerDevices.PartnerDeviceFlags getFlags() {
         if (flagsBuilder_ == null) {
@@ -2395,7 +2444,7 @@ public final class PartnerDevices {
        * Flags for this device.
        * </pre>
        *
-       * <code>.bloombox.schema.partner.PartnerDeviceFlags flags = 4;</code>
+       * <code>.bloombox.partner.PartnerDeviceFlags flags = 4;</code>
        */
       public Builder setFlags(io.bloombox.schema.partner.PartnerDevices.PartnerDeviceFlags value) {
         if (flagsBuilder_ == null) {
@@ -2415,7 +2464,7 @@ public final class PartnerDevices {
        * Flags for this device.
        * </pre>
        *
-       * <code>.bloombox.schema.partner.PartnerDeviceFlags flags = 4;</code>
+       * <code>.bloombox.partner.PartnerDeviceFlags flags = 4;</code>
        */
       public Builder setFlags(
           io.bloombox.schema.partner.PartnerDevices.PartnerDeviceFlags.Builder builderForValue) {
@@ -2433,7 +2482,7 @@ public final class PartnerDevices {
        * Flags for this device.
        * </pre>
        *
-       * <code>.bloombox.schema.partner.PartnerDeviceFlags flags = 4;</code>
+       * <code>.bloombox.partner.PartnerDeviceFlags flags = 4;</code>
        */
       public Builder mergeFlags(io.bloombox.schema.partner.PartnerDevices.PartnerDeviceFlags value) {
         if (flagsBuilder_ == null) {
@@ -2455,7 +2504,7 @@ public final class PartnerDevices {
        * Flags for this device.
        * </pre>
        *
-       * <code>.bloombox.schema.partner.PartnerDeviceFlags flags = 4;</code>
+       * <code>.bloombox.partner.PartnerDeviceFlags flags = 4;</code>
        */
       public Builder clearFlags() {
         if (flagsBuilder_ == null) {
@@ -2473,7 +2522,7 @@ public final class PartnerDevices {
        * Flags for this device.
        * </pre>
        *
-       * <code>.bloombox.schema.partner.PartnerDeviceFlags flags = 4;</code>
+       * <code>.bloombox.partner.PartnerDeviceFlags flags = 4;</code>
        */
       public io.bloombox.schema.partner.PartnerDevices.PartnerDeviceFlags.Builder getFlagsBuilder() {
         
@@ -2485,7 +2534,7 @@ public final class PartnerDevices {
        * Flags for this device.
        * </pre>
        *
-       * <code>.bloombox.schema.partner.PartnerDeviceFlags flags = 4;</code>
+       * <code>.bloombox.partner.PartnerDeviceFlags flags = 4;</code>
        */
       public io.bloombox.schema.partner.PartnerDevices.PartnerDeviceFlagsOrBuilder getFlagsOrBuilder() {
         if (flagsBuilder_ != null) {
@@ -2500,7 +2549,7 @@ public final class PartnerDevices {
        * Flags for this device.
        * </pre>
        *
-       * <code>.bloombox.schema.partner.PartnerDeviceFlags flags = 4;</code>
+       * <code>.bloombox.partner.PartnerDeviceFlags flags = 4;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
           io.bloombox.schema.partner.PartnerDevices.PartnerDeviceFlags, io.bloombox.schema.partner.PartnerDevices.PartnerDeviceFlags.Builder, io.bloombox.schema.partner.PartnerDevices.PartnerDeviceFlagsOrBuilder> 
@@ -2974,21 +3023,23 @@ public final class PartnerDevices {
         }
         return registeredBuilder_;
       }
+      @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
         return super.setUnknownFieldsProto3(unknownFields);
       }
 
+      @java.lang.Override
       public final Builder mergeUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
         return super.mergeUnknownFields(unknownFields);
       }
 
 
-      // @@protoc_insertion_point(builder_scope:bloombox.schema.partner.PartnerDevice)
+      // @@protoc_insertion_point(builder_scope:bloombox.partner.PartnerDevice)
     }
 
-    // @@protoc_insertion_point(class_scope:bloombox.schema.partner.PartnerDevice)
+    // @@protoc_insertion_point(class_scope:bloombox.partner.PartnerDevice)
     private static final io.bloombox.schema.partner.PartnerDevices.PartnerDevice DEFAULT_INSTANCE;
     static {
       DEFAULT_INSTANCE = new io.bloombox.schema.partner.PartnerDevices.PartnerDevice();
@@ -3000,6 +3051,7 @@ public final class PartnerDevices {
 
     private static final com.google.protobuf.Parser<PartnerDevice>
         PARSER = new com.google.protobuf.AbstractParser<PartnerDevice>() {
+      @java.lang.Override
       public PartnerDevice parsePartialFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -3017,6 +3069,7 @@ public final class PartnerDevices {
       return PARSER;
     }
 
+    @java.lang.Override
     public io.bloombox.schema.partner.PartnerDevices.PartnerDevice getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
@@ -3024,7 +3077,7 @@ public final class PartnerDevices {
   }
 
   public interface PartnerDeviceFlagsOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:bloombox.schema.partner.PartnerDeviceFlags)
+      // @@protoc_insertion_point(interface_extends:bloombox.partner.PartnerDeviceFlags)
       com.google.protobuf.MessageOrBuilder {
 
     /**
@@ -3068,11 +3121,11 @@ public final class PartnerDevices {
    * Enumerates flags that may be applied to partner co-located devices.
    * </pre>
    *
-   * Protobuf type {@code bloombox.schema.partner.PartnerDeviceFlags}
+   * Protobuf type {@code bloombox.partner.PartnerDeviceFlags}
    */
   public  static final class PartnerDeviceFlags extends
       com.google.protobuf.GeneratedMessageV3 implements
-      // @@protoc_insertion_point(message_implements:bloombox.schema.partner.PartnerDeviceFlags)
+      // @@protoc_insertion_point(message_implements:bloombox.partner.PartnerDeviceFlags)
       PartnerDeviceFlagsOrBuilder {
   private static final long serialVersionUID = 0L;
     // Use PartnerDeviceFlags.newBuilder() to construct.
@@ -3110,13 +3163,6 @@ public final class PartnerDevices {
             case 0:
               done = true;
               break;
-            default: {
-              if (!parseUnknownFieldProto3(
-                  input, unknownFields, extensionRegistry, tag)) {
-                done = true;
-              }
-              break;
-            }
             case 8: {
 
               active_ = input.readBool();
@@ -3137,6 +3183,13 @@ public final class PartnerDevices {
               sandbox_ = input.readBool();
               break;
             }
+            default: {
+              if (!parseUnknownFieldProto3(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
           }
         }
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
@@ -3151,12 +3204,13 @@ public final class PartnerDevices {
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return io.bloombox.schema.partner.PartnerDevices.internal_static_bloombox_schema_partner_PartnerDeviceFlags_descriptor;
+      return io.bloombox.schema.partner.PartnerDevices.internal_static_bloombox_partner_PartnerDeviceFlags_descriptor;
     }
 
+    @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return io.bloombox.schema.partner.PartnerDevices.internal_static_bloombox_schema_partner_PartnerDeviceFlags_fieldAccessorTable
+      return io.bloombox.schema.partner.PartnerDevices.internal_static_bloombox_partner_PartnerDeviceFlags_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
               io.bloombox.schema.partner.PartnerDevices.PartnerDeviceFlags.class, io.bloombox.schema.partner.PartnerDevices.PartnerDeviceFlags.Builder.class);
     }
@@ -3214,6 +3268,7 @@ public final class PartnerDevices {
     }
 
     private byte memoizedIsInitialized = -1;
+    @java.lang.Override
     public final boolean isInitialized() {
       byte isInitialized = memoizedIsInitialized;
       if (isInitialized == 1) return true;
@@ -3223,6 +3278,7 @@ public final class PartnerDevices {
       return true;
     }
 
+    @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
       if (active_ != false) {
@@ -3240,6 +3296,7 @@ public final class PartnerDevices {
       unknownFields.writeTo(output);
     }
 
+    @java.lang.Override
     public int getSerializedSize() {
       int size = memoizedSize;
       if (size != -1) return size;
@@ -3383,6 +3440,7 @@ public final class PartnerDevices {
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
 
+    @java.lang.Override
     public Builder newBuilderForType() { return newBuilder(); }
     public static Builder newBuilder() {
       return DEFAULT_INSTANCE.toBuilder();
@@ -3390,6 +3448,7 @@ public final class PartnerDevices {
     public static Builder newBuilder(io.bloombox.schema.partner.PartnerDevices.PartnerDeviceFlags prototype) {
       return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
     }
+    @java.lang.Override
     public Builder toBuilder() {
       return this == DEFAULT_INSTANCE
           ? new Builder() : new Builder().mergeFrom(this);
@@ -3406,20 +3465,21 @@ public final class PartnerDevices {
      * Enumerates flags that may be applied to partner co-located devices.
      * </pre>
      *
-     * Protobuf type {@code bloombox.schema.partner.PartnerDeviceFlags}
+     * Protobuf type {@code bloombox.partner.PartnerDeviceFlags}
      */
     public static final class Builder extends
         com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:bloombox.schema.partner.PartnerDeviceFlags)
+        // @@protoc_insertion_point(builder_implements:bloombox.partner.PartnerDeviceFlags)
         io.bloombox.schema.partner.PartnerDevices.PartnerDeviceFlagsOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return io.bloombox.schema.partner.PartnerDevices.internal_static_bloombox_schema_partner_PartnerDeviceFlags_descriptor;
+        return io.bloombox.schema.partner.PartnerDevices.internal_static_bloombox_partner_PartnerDeviceFlags_descriptor;
       }
 
+      @java.lang.Override
       protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return io.bloombox.schema.partner.PartnerDevices.internal_static_bloombox_schema_partner_PartnerDeviceFlags_fieldAccessorTable
+        return io.bloombox.schema.partner.PartnerDevices.internal_static_bloombox_partner_PartnerDeviceFlags_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
                 io.bloombox.schema.partner.PartnerDevices.PartnerDeviceFlags.class, io.bloombox.schema.partner.PartnerDevices.PartnerDeviceFlags.Builder.class);
       }
@@ -3439,6 +3499,7 @@ public final class PartnerDevices {
                 .alwaysUseFieldBuilders) {
         }
       }
+      @java.lang.Override
       public Builder clear() {
         super.clear();
         active_ = false;
@@ -3452,15 +3513,18 @@ public final class PartnerDevices {
         return this;
       }
 
+      @java.lang.Override
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return io.bloombox.schema.partner.PartnerDevices.internal_static_bloombox_schema_partner_PartnerDeviceFlags_descriptor;
+        return io.bloombox.schema.partner.PartnerDevices.internal_static_bloombox_partner_PartnerDeviceFlags_descriptor;
       }
 
+      @java.lang.Override
       public io.bloombox.schema.partner.PartnerDevices.PartnerDeviceFlags getDefaultInstanceForType() {
         return io.bloombox.schema.partner.PartnerDevices.PartnerDeviceFlags.getDefaultInstance();
       }
 
+      @java.lang.Override
       public io.bloombox.schema.partner.PartnerDevices.PartnerDeviceFlags build() {
         io.bloombox.schema.partner.PartnerDevices.PartnerDeviceFlags result = buildPartial();
         if (!result.isInitialized()) {
@@ -3469,6 +3533,7 @@ public final class PartnerDevices {
         return result;
       }
 
+      @java.lang.Override
       public io.bloombox.schema.partner.PartnerDevices.PartnerDeviceFlags buildPartial() {
         io.bloombox.schema.partner.PartnerDevices.PartnerDeviceFlags result = new io.bloombox.schema.partner.PartnerDevices.PartnerDeviceFlags(this);
         result.active_ = active_;
@@ -3479,32 +3544,39 @@ public final class PartnerDevices {
         return result;
       }
 
+      @java.lang.Override
       public Builder clone() {
         return (Builder) super.clone();
       }
+      @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
         return (Builder) super.setField(field, value);
       }
+      @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
         return (Builder) super.clearField(field);
       }
+      @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
         return (Builder) super.clearOneof(oneof);
       }
+      @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
         return (Builder) super.setRepeatedField(field, index, value);
       }
+      @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
         return (Builder) super.addRepeatedField(field, value);
       }
+      @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
         if (other instanceof io.bloombox.schema.partner.PartnerDevices.PartnerDeviceFlags) {
           return mergeFrom((io.bloombox.schema.partner.PartnerDevices.PartnerDeviceFlags)other);
@@ -3533,10 +3605,12 @@ public final class PartnerDevices {
         return this;
       }
 
+      @java.lang.Override
       public final boolean isInitialized() {
         return true;
       }
 
+      @java.lang.Override
       public Builder mergeFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -3706,21 +3780,23 @@ public final class PartnerDevices {
         onChanged();
         return this;
       }
+      @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
         return super.setUnknownFieldsProto3(unknownFields);
       }
 
+      @java.lang.Override
       public final Builder mergeUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
         return super.mergeUnknownFields(unknownFields);
       }
 
 
-      // @@protoc_insertion_point(builder_scope:bloombox.schema.partner.PartnerDeviceFlags)
+      // @@protoc_insertion_point(builder_scope:bloombox.partner.PartnerDeviceFlags)
     }
 
-    // @@protoc_insertion_point(class_scope:bloombox.schema.partner.PartnerDeviceFlags)
+    // @@protoc_insertion_point(class_scope:bloombox.partner.PartnerDeviceFlags)
     private static final io.bloombox.schema.partner.PartnerDevices.PartnerDeviceFlags DEFAULT_INSTANCE;
     static {
       DEFAULT_INSTANCE = new io.bloombox.schema.partner.PartnerDevices.PartnerDeviceFlags();
@@ -3732,6 +3808,7 @@ public final class PartnerDevices {
 
     private static final com.google.protobuf.Parser<PartnerDeviceFlags>
         PARSER = new com.google.protobuf.AbstractParser<PartnerDeviceFlags>() {
+      @java.lang.Override
       public PartnerDeviceFlags parsePartialFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -3749,6 +3826,7 @@ public final class PartnerDevices {
       return PARSER;
     }
 
+    @java.lang.Override
     public io.bloombox.schema.partner.PartnerDevices.PartnerDeviceFlags getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
@@ -3756,20 +3834,20 @@ public final class PartnerDevices {
   }
 
   private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_bloombox_schema_partner_PartnerDeviceKey_descriptor;
+    internal_static_bloombox_partner_PartnerDeviceKey_descriptor;
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_bloombox_schema_partner_PartnerDeviceKey_fieldAccessorTable;
+      internal_static_bloombox_partner_PartnerDeviceKey_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_bloombox_schema_partner_PartnerDevice_descriptor;
+    internal_static_bloombox_partner_PartnerDevice_descriptor;
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_bloombox_schema_partner_PartnerDevice_fieldAccessorTable;
+      internal_static_bloombox_partner_PartnerDevice_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_bloombox_schema_partner_PartnerDeviceFlags_descriptor;
+    internal_static_bloombox_partner_PartnerDeviceFlags_descriptor;
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_bloombox_schema_partner_PartnerDeviceFlags_fieldAccessorTable;
+      internal_static_bloombox_partner_PartnerDeviceFlags_fieldAccessorTable;
 
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
@@ -3779,29 +3857,28 @@ public final class PartnerDevices {
       descriptor;
   static {
     java.lang.String[] descriptorData = {
-      "\n\033partner/PartnerDevice.proto\022\027bloombox." +
-      "schema.partner\032\024core/Datamodel.proto\032\026te" +
-      "mporal/Instant.proto\032\023device/Device.prot" +
-      "o\032\031partner/LocationKey.proto\"`\n\020PartnerD" +
-      "eviceKey\0226\n\010location\030\001 \001(\0132$.bloombox.sc" +
-      "hema.partner.LocationKey\022\024\n\004uuid\030\002 \001(\tB\006" +
-      "\302\265\003\002\010\002\"\342\002\n\rPartnerDevice\022\024\n\004uuid\030\001 \001(\tB\006" +
-      "\302\265\003\002\010\002\0226\n\010location\030\002 \001(\0132$.bloombox.sche" +
-      "ma.partner.LocationKey\0228\n\004type\030\003 \001(\0162*.b" +
-      "loombox.schema.partner.PartnerDeviceType" +
-      "\022:\n\005flags\030\004 \001(\0132+.bloombox.schema.partne" +
-      "r.PartnerDeviceFlags\022+\n\006device\030\005 \001(\0132\033.o" +
-      "pencannabis.device.Device\022,\n\004seen\030\006 \001(\0132" +
-      "\036.opencannabis.temporal.Instant\0222\n\nregis" +
-      "tered\030\007 \001(\0132\036.opencannabis.temporal.Inst" +
-      "ant\"V\n\022PartnerDeviceFlags\022\016\n\006active\030\001 \001(" +
-      "\010\022\021\n\tsuspended\030\002 \001(\010\022\014\n\004beta\030\003 \001(\010\022\017\n\007sa" +
-      "ndbox\030\004 \001(\010*\223\001\n\021PartnerDeviceType\022\033\n\027UNS" +
-      "PECIFIED_DEVICE_TYPE\020\000\022\014\n\010INTERNAL\020\001\022\017\n\013" +
-      "MENU_TABLET\020\n\022\013\n\007MENU_TV\020\013\022\023\n\017CHECKIN_ST" +
-      "ATION\020\024\022\016\n\nCHECKIN_TV\020\025\022\020\n\014POS_REGISTER\020" +
-      "\036B6\n\032io.bloombox.schema.partnerB\016Partner" +
-      "DevicesH\001P\000\242\002\003BBSb\006proto3"
+      "\n\033partner/PartnerDevice.proto\022\020bloombox." +
+      "partner\032\024core/Datamodel.proto\032\026temporal/" +
+      "Instant.proto\032\023device/Device.proto\032\031part" +
+      "ner/LocationKey.proto\"Y\n\020PartnerDeviceKe" +
+      "y\022/\n\010location\030\001 \001(\0132\035.bloombox.partner.L" +
+      "ocationKey\022\024\n\004uuid\030\002 \001(\tB\006\302\265\003\002\010\002\"\315\002\n\rPar" +
+      "tnerDevice\022\024\n\004uuid\030\001 \001(\tB\006\302\265\003\002\010\002\022/\n\010loca" +
+      "tion\030\002 \001(\0132\035.bloombox.partner.LocationKe" +
+      "y\0221\n\004type\030\003 \001(\0162#.bloombox.partner.Partn" +
+      "erDeviceType\0223\n\005flags\030\004 \001(\0132$.bloombox.p" +
+      "artner.PartnerDeviceFlags\022+\n\006device\030\005 \001(" +
+      "\0132\033.opencannabis.device.Device\022,\n\004seen\030\006" +
+      " \001(\0132\036.opencannabis.temporal.Instant\0222\n\n" +
+      "registered\030\007 \001(\0132\036.opencannabis.temporal" +
+      ".Instant\"V\n\022PartnerDeviceFlags\022\016\n\006active" +
+      "\030\001 \001(\010\022\021\n\tsuspended\030\002 \001(\010\022\014\n\004beta\030\003 \001(\010\022" +
+      "\017\n\007sandbox\030\004 \001(\010*\223\001\n\021PartnerDeviceType\022\033" +
+      "\n\027UNSPECIFIED_DEVICE_TYPE\020\000\022\014\n\010INTERNAL\020" +
+      "\001\022\017\n\013MENU_TABLET\020\n\022\013\n\007MENU_TV\020\013\022\023\n\017CHECK" +
+      "IN_STATION\020\024\022\016\n\nCHECKIN_TV\020\025\022\020\n\014POS_REGI" +
+      "STER\020\036B6\n\032io.bloombox.schema.partnerB\016Pa" +
+      "rtnerDevicesH\001P\000\242\002\003BBSb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -3819,23 +3896,23 @@ public final class PartnerDevices {
           io.opencannabis.schema.device.DeviceOuterClass.getDescriptor(),
           io.bloombox.schema.partner.LocationAccountKey.getDescriptor(),
         }, assigner);
-    internal_static_bloombox_schema_partner_PartnerDeviceKey_descriptor =
+    internal_static_bloombox_partner_PartnerDeviceKey_descriptor =
       getDescriptor().getMessageTypes().get(0);
-    internal_static_bloombox_schema_partner_PartnerDeviceKey_fieldAccessorTable = new
+    internal_static_bloombox_partner_PartnerDeviceKey_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_bloombox_schema_partner_PartnerDeviceKey_descriptor,
+        internal_static_bloombox_partner_PartnerDeviceKey_descriptor,
         new java.lang.String[] { "Location", "Uuid", });
-    internal_static_bloombox_schema_partner_PartnerDevice_descriptor =
+    internal_static_bloombox_partner_PartnerDevice_descriptor =
       getDescriptor().getMessageTypes().get(1);
-    internal_static_bloombox_schema_partner_PartnerDevice_fieldAccessorTable = new
+    internal_static_bloombox_partner_PartnerDevice_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_bloombox_schema_partner_PartnerDevice_descriptor,
+        internal_static_bloombox_partner_PartnerDevice_descriptor,
         new java.lang.String[] { "Uuid", "Location", "Type", "Flags", "Device", "Seen", "Registered", });
-    internal_static_bloombox_schema_partner_PartnerDeviceFlags_descriptor =
+    internal_static_bloombox_partner_PartnerDeviceFlags_descriptor =
       getDescriptor().getMessageTypes().get(2);
-    internal_static_bloombox_schema_partner_PartnerDeviceFlags_fieldAccessorTable = new
+    internal_static_bloombox_partner_PartnerDeviceFlags_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_bloombox_schema_partner_PartnerDeviceFlags_descriptor,
+        internal_static_bloombox_partner_PartnerDeviceFlags_descriptor,
         new java.lang.String[] { "Active", "Suspended", "Beta", "Sandbox", });
     com.google.protobuf.ExtensionRegistry registry =
         com.google.protobuf.ExtensionRegistry.newInstance();

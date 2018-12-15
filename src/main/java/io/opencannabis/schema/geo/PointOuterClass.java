@@ -1,11 +1,12 @@
 /*
- * Copyright 2018, Bloombox, LLC.
+ * Copyright 2018, Momentum Ideas, Co. All rights reserved.
  *
- * Licensed under the Apache License, Version 2.0 (the "License");
- * you may not use this file except in compliance with the License.
- * You may obtain a copy of the License at
- *
- *     http://www.apache.org/licenses/LICENSE-2.0
+ * Source and object computer code contained herein is the private intellectual
+ * property of Momentum Ideas Co., a Delaware Corporation. Use of this
+ * code in source form requires permission in writing before use or the
+ * assembly, distribution, or publishing of derivative works, for commercial
+ * purposes or any other purpose, from a duly authorized officer of Momentum
+ * Ideas Co.
  *
  * Unless required by applicable law or agreed to in writing, software
  * distributed under the License is distributed on an "AS IS" BASIS,
@@ -45,14 +46,16 @@ public final class PointOuterClass {
   static {
     java.lang.String[] descriptorData = {
       "\n\017geo/Point.proto\022\020opencannabis.geo\032\016bq_" +
-      "field.proto\"\357\001\n\005Point\0222\n\010latitude\030\001 \001(\001B" +
-      " \212@\035Latitude value of this point.\0224\n\tlon" +
-      "gitude\030\002 \001(\001B!\212@\036Longitude value of this" +
-      " point.\0226\n\televation\030\003 \001(\001B#\212@ Elevation" +
-      " of this point, if any.\022D\n\010accuracy\030\004 \001(" +
-      "\001B2\212@/Accuracy rating attached to this p" +
-      "oint, if any.B&\n\032io.opencannabis.schema." +
-      "geoH\001P\001\242\002\003OCSb\006proto3"
+      "field.proto\032\022geo/Distance.proto\"\247\002\n\005Poin" +
+      "t\0222\n\010latitude\030\001 \001(\001B \212@\035Latitude value o" +
+      "f this point.\0224\n\tlongitude\030\002 \001(\001B!\212@\036Lon" +
+      "gitude value of this point.\022R\n\televation" +
+      "\030\003 \001(\0132\032.opencannabis.geo.DistanceB#\212@ E" +
+      "levation of this point, if any.\022`\n\010accur" +
+      "acy\030\004 \001(\0132\032.opencannabis.geo.DistanceB2\212" +
+      "@/Accuracy rating attached to this point" +
+      ", if any.B&\n\032io.opencannabis.schema.geoH" +
+      "\001P\001\242\002\003OCSb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -66,6 +69,7 @@ public final class PointOuterClass {
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
           gen_bq_schema.BqField.getDescriptor(),
+          io.opencannabis.schema.geo.DistanceOuterClass.getDescriptor(),
         }, assigner);
     internal_static_opencannabis_geo_Point_descriptor =
       getDescriptor().getMessageTypes().get(0);
@@ -79,6 +83,7 @@ public final class PointOuterClass {
     com.google.protobuf.Descriptors.FileDescriptor
         .internalUpdateFileDescriptor(descriptor, registry);
     gen_bq_schema.BqField.getDescriptor();
+    io.opencannabis.schema.geo.DistanceOuterClass.getDescriptor();
   }
 
   // @@protoc_insertion_point(outer_class_scope)

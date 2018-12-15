@@ -1,8 +1,8 @@
 /*
- * Copyright 2018, Bloombox, LLC. All rights reserved.
+ * Copyright 2018, Momentum Ideas, Co. All rights reserved.
  *
  * Source and object computer code contained herein is the private intellectual
- * property of Bloombox, a California Limited Liability Corporation. Use of this
+ * property of Momentum Ideas Co., a Delaware Corporation. Use of this
  * code in source form requires permission in writing before use or the
  * assembly, distribution, or publishing of derivative works, for commercial
  * purposes or any other purpose, from a duly authorized officer of Momentum
@@ -26,11 +26,11 @@ package io.bloombox.schema.services.marketing.v1beta1;
  * in Bloombox, is a containing group of ad parameters. Individual ads are calculated from these parameters.
  * </pre>
  *
- * Protobuf type {@code bloombox.schema.services.marketing.v1beta1.AdGroupCreate}
+ * Protobuf type {@code bloombox.services.marketing.v1beta1.AdGroupCreate}
  */
 public  final class AdGroupCreate extends
     com.google.protobuf.GeneratedMessageV3 implements
-    // @@protoc_insertion_point(message_implements:bloombox.schema.services.marketing.v1beta1.AdGroupCreate)
+    // @@protoc_insertion_point(message_implements:bloombox.services.marketing.v1beta1.AdGroupCreate)
     AdGroupCreateOrBuilder {
 private static final long serialVersionUID = 0L;
   // Use AdGroupCreate.newBuilder() to construct.
@@ -84,18 +84,19 @@ private static final long serialVersionUID = 0L;
   }
   public static final com.google.protobuf.Descriptors.Descriptor
       getDescriptor() {
-    return io.bloombox.schema.services.marketing.v1beta1.MarketingServiceBeta1.internal_static_bloombox_schema_services_marketing_v1beta1_AdGroupCreate_descriptor;
+    return io.bloombox.schema.services.marketing.v1beta1.MarketingServiceBeta1.internal_static_bloombox_services_marketing_v1beta1_AdGroupCreate_descriptor;
   }
 
+  @java.lang.Override
   protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internalGetFieldAccessorTable() {
-    return io.bloombox.schema.services.marketing.v1beta1.MarketingServiceBeta1.internal_static_bloombox_schema_services_marketing_v1beta1_AdGroupCreate_fieldAccessorTable
+    return io.bloombox.schema.services.marketing.v1beta1.MarketingServiceBeta1.internal_static_bloombox_services_marketing_v1beta1_AdGroupCreate_fieldAccessorTable
         .ensureFieldAccessorsInitialized(
             io.bloombox.schema.services.marketing.v1beta1.AdGroupCreate.class, io.bloombox.schema.services.marketing.v1beta1.AdGroupCreate.Builder.class);
   }
 
   public interface RequestOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:bloombox.schema.services.marketing.v1beta1.AdGroupCreate.Request)
+      // @@protoc_insertion_point(interface_extends:bloombox.services.marketing.v1beta1.AdGroupCreate.Request)
       com.google.protobuf.MessageOrBuilder {
 
     /**
@@ -121,7 +122,7 @@ private static final long serialVersionUID = 0L;
      * Marketing communication channel to employ.
      * </pre>
      *
-     * <code>.bloombox.schema.comms.Channel channel = 2;</code>
+     * <code>.bloombox.comms.Channel channel = 2;</code>
      */
     int getChannelValue();
     /**
@@ -129,7 +130,7 @@ private static final long serialVersionUID = 0L;
      * Marketing communication channel to employ.
      * </pre>
      *
-     * <code>.bloombox.schema.comms.Channel channel = 2;</code>
+     * <code>.bloombox.comms.Channel channel = 2;</code>
      */
     io.bloombox.schema.comms.GenericComms.Channel getChannel();
 
@@ -138,7 +139,7 @@ private static final long serialVersionUID = 0L;
      * Initial creative record to use.
      * </pre>
      *
-     * <code>.bloombox.schema.marketing.Creative creative = 3;</code>
+     * <code>.bloombox.marketing.Creative creative = 3;</code>
      */
     boolean hasCreative();
     /**
@@ -146,7 +147,7 @@ private static final long serialVersionUID = 0L;
      * Initial creative record to use.
      * </pre>
      *
-     * <code>.bloombox.schema.marketing.Creative creative = 3;</code>
+     * <code>.bloombox.marketing.Creative creative = 3;</code>
      */
     io.bloombox.schema.marketing.MarketingCampaign.Creative getCreative();
     /**
@@ -154,7 +155,7 @@ private static final long serialVersionUID = 0L;
      * Initial creative record to use.
      * </pre>
      *
-     * <code>.bloombox.schema.marketing.Creative creative = 3;</code>
+     * <code>.bloombox.marketing.Creative creative = 3;</code>
      */
     io.bloombox.schema.marketing.MarketingCampaign.CreativeOrBuilder getCreativeOrBuilder();
   }
@@ -163,11 +164,11 @@ private static final long serialVersionUID = 0L;
    * Request to create a new adgroup and attach it to a specific campaign.
    * </pre>
    *
-   * Protobuf type {@code bloombox.schema.services.marketing.v1beta1.AdGroupCreate.Request}
+   * Protobuf type {@code bloombox.services.marketing.v1beta1.AdGroupCreate.Request}
    */
   public  static final class Request extends
       com.google.protobuf.GeneratedMessageV3 implements
-      // @@protoc_insertion_point(message_implements:bloombox.schema.services.marketing.v1beta1.AdGroupCreate.Request)
+      // @@protoc_insertion_point(message_implements:bloombox.services.marketing.v1beta1.AdGroupCreate.Request)
       RequestOrBuilder {
   private static final long serialVersionUID = 0L;
     // Use Request.newBuilder() to construct.
@@ -203,13 +204,6 @@ private static final long serialVersionUID = 0L;
             case 0:
               done = true;
               break;
-            default: {
-              if (!parseUnknownFieldProto3(
-                  input, unknownFields, extensionRegistry, tag)) {
-                done = true;
-              }
-              break;
-            }
             case 10: {
               java.lang.String s = input.readStringRequireUtf8();
 
@@ -235,6 +229,13 @@ private static final long serialVersionUID = 0L;
 
               break;
             }
+            default: {
+              if (!parseUnknownFieldProto3(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
           }
         }
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
@@ -249,12 +250,13 @@ private static final long serialVersionUID = 0L;
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return io.bloombox.schema.services.marketing.v1beta1.MarketingServiceBeta1.internal_static_bloombox_schema_services_marketing_v1beta1_AdGroupCreate_Request_descriptor;
+      return io.bloombox.schema.services.marketing.v1beta1.MarketingServiceBeta1.internal_static_bloombox_services_marketing_v1beta1_AdGroupCreate_Request_descriptor;
     }
 
+    @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return io.bloombox.schema.services.marketing.v1beta1.MarketingServiceBeta1.internal_static_bloombox_schema_services_marketing_v1beta1_AdGroupCreate_Request_fieldAccessorTable
+      return io.bloombox.schema.services.marketing.v1beta1.MarketingServiceBeta1.internal_static_bloombox_services_marketing_v1beta1_AdGroupCreate_Request_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
               io.bloombox.schema.services.marketing.v1beta1.AdGroupCreate.Request.class, io.bloombox.schema.services.marketing.v1beta1.AdGroupCreate.Request.Builder.class);
     }
@@ -308,7 +310,7 @@ private static final long serialVersionUID = 0L;
      * Marketing communication channel to employ.
      * </pre>
      *
-     * <code>.bloombox.schema.comms.Channel channel = 2;</code>
+     * <code>.bloombox.comms.Channel channel = 2;</code>
      */
     public int getChannelValue() {
       return channel_;
@@ -318,9 +320,10 @@ private static final long serialVersionUID = 0L;
      * Marketing communication channel to employ.
      * </pre>
      *
-     * <code>.bloombox.schema.comms.Channel channel = 2;</code>
+     * <code>.bloombox.comms.Channel channel = 2;</code>
      */
     public io.bloombox.schema.comms.GenericComms.Channel getChannel() {
+      @SuppressWarnings("deprecation")
       io.bloombox.schema.comms.GenericComms.Channel result = io.bloombox.schema.comms.GenericComms.Channel.valueOf(channel_);
       return result == null ? io.bloombox.schema.comms.GenericComms.Channel.UNRECOGNIZED : result;
     }
@@ -332,7 +335,7 @@ private static final long serialVersionUID = 0L;
      * Initial creative record to use.
      * </pre>
      *
-     * <code>.bloombox.schema.marketing.Creative creative = 3;</code>
+     * <code>.bloombox.marketing.Creative creative = 3;</code>
      */
     public boolean hasCreative() {
       return creative_ != null;
@@ -342,7 +345,7 @@ private static final long serialVersionUID = 0L;
      * Initial creative record to use.
      * </pre>
      *
-     * <code>.bloombox.schema.marketing.Creative creative = 3;</code>
+     * <code>.bloombox.marketing.Creative creative = 3;</code>
      */
     public io.bloombox.schema.marketing.MarketingCampaign.Creative getCreative() {
       return creative_ == null ? io.bloombox.schema.marketing.MarketingCampaign.Creative.getDefaultInstance() : creative_;
@@ -352,13 +355,14 @@ private static final long serialVersionUID = 0L;
      * Initial creative record to use.
      * </pre>
      *
-     * <code>.bloombox.schema.marketing.Creative creative = 3;</code>
+     * <code>.bloombox.marketing.Creative creative = 3;</code>
      */
     public io.bloombox.schema.marketing.MarketingCampaign.CreativeOrBuilder getCreativeOrBuilder() {
       return getCreative();
     }
 
     private byte memoizedIsInitialized = -1;
+    @java.lang.Override
     public final boolean isInitialized() {
       byte isInitialized = memoizedIsInitialized;
       if (isInitialized == 1) return true;
@@ -368,6 +372,7 @@ private static final long serialVersionUID = 0L;
       return true;
     }
 
+    @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
       if (!getCampaignIdBytes().isEmpty()) {
@@ -382,6 +387,7 @@ private static final long serialVersionUID = 0L;
       unknownFields.writeTo(output);
     }
 
+    @java.lang.Override
     public int getSerializedSize() {
       int size = memoizedSize;
       if (size != -1) return size;
@@ -516,6 +522,7 @@ private static final long serialVersionUID = 0L;
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
 
+    @java.lang.Override
     public Builder newBuilderForType() { return newBuilder(); }
     public static Builder newBuilder() {
       return DEFAULT_INSTANCE.toBuilder();
@@ -523,6 +530,7 @@ private static final long serialVersionUID = 0L;
     public static Builder newBuilder(io.bloombox.schema.services.marketing.v1beta1.AdGroupCreate.Request prototype) {
       return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
     }
+    @java.lang.Override
     public Builder toBuilder() {
       return this == DEFAULT_INSTANCE
           ? new Builder() : new Builder().mergeFrom(this);
@@ -539,20 +547,21 @@ private static final long serialVersionUID = 0L;
      * Request to create a new adgroup and attach it to a specific campaign.
      * </pre>
      *
-     * Protobuf type {@code bloombox.schema.services.marketing.v1beta1.AdGroupCreate.Request}
+     * Protobuf type {@code bloombox.services.marketing.v1beta1.AdGroupCreate.Request}
      */
     public static final class Builder extends
         com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:bloombox.schema.services.marketing.v1beta1.AdGroupCreate.Request)
+        // @@protoc_insertion_point(builder_implements:bloombox.services.marketing.v1beta1.AdGroupCreate.Request)
         io.bloombox.schema.services.marketing.v1beta1.AdGroupCreate.RequestOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return io.bloombox.schema.services.marketing.v1beta1.MarketingServiceBeta1.internal_static_bloombox_schema_services_marketing_v1beta1_AdGroupCreate_Request_descriptor;
+        return io.bloombox.schema.services.marketing.v1beta1.MarketingServiceBeta1.internal_static_bloombox_services_marketing_v1beta1_AdGroupCreate_Request_descriptor;
       }
 
+      @java.lang.Override
       protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return io.bloombox.schema.services.marketing.v1beta1.MarketingServiceBeta1.internal_static_bloombox_schema_services_marketing_v1beta1_AdGroupCreate_Request_fieldAccessorTable
+        return io.bloombox.schema.services.marketing.v1beta1.MarketingServiceBeta1.internal_static_bloombox_services_marketing_v1beta1_AdGroupCreate_Request_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
                 io.bloombox.schema.services.marketing.v1beta1.AdGroupCreate.Request.class, io.bloombox.schema.services.marketing.v1beta1.AdGroupCreate.Request.Builder.class);
       }
@@ -572,6 +581,7 @@ private static final long serialVersionUID = 0L;
                 .alwaysUseFieldBuilders) {
         }
       }
+      @java.lang.Override
       public Builder clear() {
         super.clear();
         campaignId_ = "";
@@ -587,15 +597,18 @@ private static final long serialVersionUID = 0L;
         return this;
       }
 
+      @java.lang.Override
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return io.bloombox.schema.services.marketing.v1beta1.MarketingServiceBeta1.internal_static_bloombox_schema_services_marketing_v1beta1_AdGroupCreate_Request_descriptor;
+        return io.bloombox.schema.services.marketing.v1beta1.MarketingServiceBeta1.internal_static_bloombox_services_marketing_v1beta1_AdGroupCreate_Request_descriptor;
       }
 
+      @java.lang.Override
       public io.bloombox.schema.services.marketing.v1beta1.AdGroupCreate.Request getDefaultInstanceForType() {
         return io.bloombox.schema.services.marketing.v1beta1.AdGroupCreate.Request.getDefaultInstance();
       }
 
+      @java.lang.Override
       public io.bloombox.schema.services.marketing.v1beta1.AdGroupCreate.Request build() {
         io.bloombox.schema.services.marketing.v1beta1.AdGroupCreate.Request result = buildPartial();
         if (!result.isInitialized()) {
@@ -604,6 +617,7 @@ private static final long serialVersionUID = 0L;
         return result;
       }
 
+      @java.lang.Override
       public io.bloombox.schema.services.marketing.v1beta1.AdGroupCreate.Request buildPartial() {
         io.bloombox.schema.services.marketing.v1beta1.AdGroupCreate.Request result = new io.bloombox.schema.services.marketing.v1beta1.AdGroupCreate.Request(this);
         result.campaignId_ = campaignId_;
@@ -617,32 +631,39 @@ private static final long serialVersionUID = 0L;
         return result;
       }
 
+      @java.lang.Override
       public Builder clone() {
         return (Builder) super.clone();
       }
+      @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
         return (Builder) super.setField(field, value);
       }
+      @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
         return (Builder) super.clearField(field);
       }
+      @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
         return (Builder) super.clearOneof(oneof);
       }
+      @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
         return (Builder) super.setRepeatedField(field, index, value);
       }
+      @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
         return (Builder) super.addRepeatedField(field, value);
       }
+      @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
         if (other instanceof io.bloombox.schema.services.marketing.v1beta1.AdGroupCreate.Request) {
           return mergeFrom((io.bloombox.schema.services.marketing.v1beta1.AdGroupCreate.Request)other);
@@ -669,10 +690,12 @@ private static final long serialVersionUID = 0L;
         return this;
       }
 
+      @java.lang.Override
       public final boolean isInitialized() {
         return true;
       }
 
+      @java.lang.Override
       public Builder mergeFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -786,7 +809,7 @@ private static final long serialVersionUID = 0L;
        * Marketing communication channel to employ.
        * </pre>
        *
-       * <code>.bloombox.schema.comms.Channel channel = 2;</code>
+       * <code>.bloombox.comms.Channel channel = 2;</code>
        */
       public int getChannelValue() {
         return channel_;
@@ -796,7 +819,7 @@ private static final long serialVersionUID = 0L;
        * Marketing communication channel to employ.
        * </pre>
        *
-       * <code>.bloombox.schema.comms.Channel channel = 2;</code>
+       * <code>.bloombox.comms.Channel channel = 2;</code>
        */
       public Builder setChannelValue(int value) {
         channel_ = value;
@@ -808,9 +831,10 @@ private static final long serialVersionUID = 0L;
        * Marketing communication channel to employ.
        * </pre>
        *
-       * <code>.bloombox.schema.comms.Channel channel = 2;</code>
+       * <code>.bloombox.comms.Channel channel = 2;</code>
        */
       public io.bloombox.schema.comms.GenericComms.Channel getChannel() {
+        @SuppressWarnings("deprecation")
         io.bloombox.schema.comms.GenericComms.Channel result = io.bloombox.schema.comms.GenericComms.Channel.valueOf(channel_);
         return result == null ? io.bloombox.schema.comms.GenericComms.Channel.UNRECOGNIZED : result;
       }
@@ -819,7 +843,7 @@ private static final long serialVersionUID = 0L;
        * Marketing communication channel to employ.
        * </pre>
        *
-       * <code>.bloombox.schema.comms.Channel channel = 2;</code>
+       * <code>.bloombox.comms.Channel channel = 2;</code>
        */
       public Builder setChannel(io.bloombox.schema.comms.GenericComms.Channel value) {
         if (value == null) {
@@ -835,7 +859,7 @@ private static final long serialVersionUID = 0L;
        * Marketing communication channel to employ.
        * </pre>
        *
-       * <code>.bloombox.schema.comms.Channel channel = 2;</code>
+       * <code>.bloombox.comms.Channel channel = 2;</code>
        */
       public Builder clearChannel() {
         
@@ -852,7 +876,7 @@ private static final long serialVersionUID = 0L;
        * Initial creative record to use.
        * </pre>
        *
-       * <code>.bloombox.schema.marketing.Creative creative = 3;</code>
+       * <code>.bloombox.marketing.Creative creative = 3;</code>
        */
       public boolean hasCreative() {
         return creativeBuilder_ != null || creative_ != null;
@@ -862,7 +886,7 @@ private static final long serialVersionUID = 0L;
        * Initial creative record to use.
        * </pre>
        *
-       * <code>.bloombox.schema.marketing.Creative creative = 3;</code>
+       * <code>.bloombox.marketing.Creative creative = 3;</code>
        */
       public io.bloombox.schema.marketing.MarketingCampaign.Creative getCreative() {
         if (creativeBuilder_ == null) {
@@ -876,7 +900,7 @@ private static final long serialVersionUID = 0L;
        * Initial creative record to use.
        * </pre>
        *
-       * <code>.bloombox.schema.marketing.Creative creative = 3;</code>
+       * <code>.bloombox.marketing.Creative creative = 3;</code>
        */
       public Builder setCreative(io.bloombox.schema.marketing.MarketingCampaign.Creative value) {
         if (creativeBuilder_ == null) {
@@ -896,7 +920,7 @@ private static final long serialVersionUID = 0L;
        * Initial creative record to use.
        * </pre>
        *
-       * <code>.bloombox.schema.marketing.Creative creative = 3;</code>
+       * <code>.bloombox.marketing.Creative creative = 3;</code>
        */
       public Builder setCreative(
           io.bloombox.schema.marketing.MarketingCampaign.Creative.Builder builderForValue) {
@@ -914,7 +938,7 @@ private static final long serialVersionUID = 0L;
        * Initial creative record to use.
        * </pre>
        *
-       * <code>.bloombox.schema.marketing.Creative creative = 3;</code>
+       * <code>.bloombox.marketing.Creative creative = 3;</code>
        */
       public Builder mergeCreative(io.bloombox.schema.marketing.MarketingCampaign.Creative value) {
         if (creativeBuilder_ == null) {
@@ -936,7 +960,7 @@ private static final long serialVersionUID = 0L;
        * Initial creative record to use.
        * </pre>
        *
-       * <code>.bloombox.schema.marketing.Creative creative = 3;</code>
+       * <code>.bloombox.marketing.Creative creative = 3;</code>
        */
       public Builder clearCreative() {
         if (creativeBuilder_ == null) {
@@ -954,7 +978,7 @@ private static final long serialVersionUID = 0L;
        * Initial creative record to use.
        * </pre>
        *
-       * <code>.bloombox.schema.marketing.Creative creative = 3;</code>
+       * <code>.bloombox.marketing.Creative creative = 3;</code>
        */
       public io.bloombox.schema.marketing.MarketingCampaign.Creative.Builder getCreativeBuilder() {
         
@@ -966,7 +990,7 @@ private static final long serialVersionUID = 0L;
        * Initial creative record to use.
        * </pre>
        *
-       * <code>.bloombox.schema.marketing.Creative creative = 3;</code>
+       * <code>.bloombox.marketing.Creative creative = 3;</code>
        */
       public io.bloombox.schema.marketing.MarketingCampaign.CreativeOrBuilder getCreativeOrBuilder() {
         if (creativeBuilder_ != null) {
@@ -981,7 +1005,7 @@ private static final long serialVersionUID = 0L;
        * Initial creative record to use.
        * </pre>
        *
-       * <code>.bloombox.schema.marketing.Creative creative = 3;</code>
+       * <code>.bloombox.marketing.Creative creative = 3;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
           io.bloombox.schema.marketing.MarketingCampaign.Creative, io.bloombox.schema.marketing.MarketingCampaign.Creative.Builder, io.bloombox.schema.marketing.MarketingCampaign.CreativeOrBuilder> 
@@ -996,21 +1020,23 @@ private static final long serialVersionUID = 0L;
         }
         return creativeBuilder_;
       }
+      @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
         return super.setUnknownFieldsProto3(unknownFields);
       }
 
+      @java.lang.Override
       public final Builder mergeUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
         return super.mergeUnknownFields(unknownFields);
       }
 
 
-      // @@protoc_insertion_point(builder_scope:bloombox.schema.services.marketing.v1beta1.AdGroupCreate.Request)
+      // @@protoc_insertion_point(builder_scope:bloombox.services.marketing.v1beta1.AdGroupCreate.Request)
     }
 
-    // @@protoc_insertion_point(class_scope:bloombox.schema.services.marketing.v1beta1.AdGroupCreate.Request)
+    // @@protoc_insertion_point(class_scope:bloombox.services.marketing.v1beta1.AdGroupCreate.Request)
     private static final io.bloombox.schema.services.marketing.v1beta1.AdGroupCreate.Request DEFAULT_INSTANCE;
     static {
       DEFAULT_INSTANCE = new io.bloombox.schema.services.marketing.v1beta1.AdGroupCreate.Request();
@@ -1022,6 +1048,7 @@ private static final long serialVersionUID = 0L;
 
     private static final com.google.protobuf.Parser<Request>
         PARSER = new com.google.protobuf.AbstractParser<Request>() {
+      @java.lang.Override
       public Request parsePartialFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -1039,6 +1066,7 @@ private static final long serialVersionUID = 0L;
       return PARSER;
     }
 
+    @java.lang.Override
     public io.bloombox.schema.services.marketing.v1beta1.AdGroupCreate.Request getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
@@ -1046,7 +1074,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public interface ResponseOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:bloombox.schema.services.marketing.v1beta1.AdGroupCreate.Response)
+      // @@protoc_insertion_point(interface_extends:bloombox.services.marketing.v1beta1.AdGroupCreate.Response)
       com.google.protobuf.MessageOrBuilder {
 
     /**
@@ -1072,11 +1100,11 @@ private static final long serialVersionUID = 0L;
    * Response to a request to create a new adgroup and attach it to a specific campaign.
    * </pre>
    *
-   * Protobuf type {@code bloombox.schema.services.marketing.v1beta1.AdGroupCreate.Response}
+   * Protobuf type {@code bloombox.services.marketing.v1beta1.AdGroupCreate.Response}
    */
   public  static final class Response extends
       com.google.protobuf.GeneratedMessageV3 implements
-      // @@protoc_insertion_point(message_implements:bloombox.schema.services.marketing.v1beta1.AdGroupCreate.Response)
+      // @@protoc_insertion_point(message_implements:bloombox.services.marketing.v1beta1.AdGroupCreate.Response)
       ResponseOrBuilder {
   private static final long serialVersionUID = 0L;
     // Use Response.newBuilder() to construct.
@@ -1111,17 +1139,17 @@ private static final long serialVersionUID = 0L;
             case 0:
               done = true;
               break;
+            case 10: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              adgroupId_ = s;
+              break;
+            }
             default: {
               if (!parseUnknownFieldProto3(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
-              break;
-            }
-            case 10: {
-              java.lang.String s = input.readStringRequireUtf8();
-
-              adgroupId_ = s;
               break;
             }
           }
@@ -1138,12 +1166,13 @@ private static final long serialVersionUID = 0L;
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return io.bloombox.schema.services.marketing.v1beta1.MarketingServiceBeta1.internal_static_bloombox_schema_services_marketing_v1beta1_AdGroupCreate_Response_descriptor;
+      return io.bloombox.schema.services.marketing.v1beta1.MarketingServiceBeta1.internal_static_bloombox_services_marketing_v1beta1_AdGroupCreate_Response_descriptor;
     }
 
+    @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return io.bloombox.schema.services.marketing.v1beta1.MarketingServiceBeta1.internal_static_bloombox_schema_services_marketing_v1beta1_AdGroupCreate_Response_fieldAccessorTable
+      return io.bloombox.schema.services.marketing.v1beta1.MarketingServiceBeta1.internal_static_bloombox_services_marketing_v1beta1_AdGroupCreate_Response_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
               io.bloombox.schema.services.marketing.v1beta1.AdGroupCreate.Response.class, io.bloombox.schema.services.marketing.v1beta1.AdGroupCreate.Response.Builder.class);
     }
@@ -1191,6 +1220,7 @@ private static final long serialVersionUID = 0L;
     }
 
     private byte memoizedIsInitialized = -1;
+    @java.lang.Override
     public final boolean isInitialized() {
       byte isInitialized = memoizedIsInitialized;
       if (isInitialized == 1) return true;
@@ -1200,6 +1230,7 @@ private static final long serialVersionUID = 0L;
       return true;
     }
 
+    @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
       if (!getAdgroupIdBytes().isEmpty()) {
@@ -1208,6 +1239,7 @@ private static final long serialVersionUID = 0L;
       unknownFields.writeTo(output);
     }
 
+    @java.lang.Override
     public int getSerializedSize() {
       int size = memoizedSize;
       if (size != -1) return size;
@@ -1322,6 +1354,7 @@ private static final long serialVersionUID = 0L;
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
 
+    @java.lang.Override
     public Builder newBuilderForType() { return newBuilder(); }
     public static Builder newBuilder() {
       return DEFAULT_INSTANCE.toBuilder();
@@ -1329,6 +1362,7 @@ private static final long serialVersionUID = 0L;
     public static Builder newBuilder(io.bloombox.schema.services.marketing.v1beta1.AdGroupCreate.Response prototype) {
       return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
     }
+    @java.lang.Override
     public Builder toBuilder() {
       return this == DEFAULT_INSTANCE
           ? new Builder() : new Builder().mergeFrom(this);
@@ -1345,20 +1379,21 @@ private static final long serialVersionUID = 0L;
      * Response to a request to create a new adgroup and attach it to a specific campaign.
      * </pre>
      *
-     * Protobuf type {@code bloombox.schema.services.marketing.v1beta1.AdGroupCreate.Response}
+     * Protobuf type {@code bloombox.services.marketing.v1beta1.AdGroupCreate.Response}
      */
     public static final class Builder extends
         com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:bloombox.schema.services.marketing.v1beta1.AdGroupCreate.Response)
+        // @@protoc_insertion_point(builder_implements:bloombox.services.marketing.v1beta1.AdGroupCreate.Response)
         io.bloombox.schema.services.marketing.v1beta1.AdGroupCreate.ResponseOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return io.bloombox.schema.services.marketing.v1beta1.MarketingServiceBeta1.internal_static_bloombox_schema_services_marketing_v1beta1_AdGroupCreate_Response_descriptor;
+        return io.bloombox.schema.services.marketing.v1beta1.MarketingServiceBeta1.internal_static_bloombox_services_marketing_v1beta1_AdGroupCreate_Response_descriptor;
       }
 
+      @java.lang.Override
       protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return io.bloombox.schema.services.marketing.v1beta1.MarketingServiceBeta1.internal_static_bloombox_schema_services_marketing_v1beta1_AdGroupCreate_Response_fieldAccessorTable
+        return io.bloombox.schema.services.marketing.v1beta1.MarketingServiceBeta1.internal_static_bloombox_services_marketing_v1beta1_AdGroupCreate_Response_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
                 io.bloombox.schema.services.marketing.v1beta1.AdGroupCreate.Response.class, io.bloombox.schema.services.marketing.v1beta1.AdGroupCreate.Response.Builder.class);
       }
@@ -1378,6 +1413,7 @@ private static final long serialVersionUID = 0L;
                 .alwaysUseFieldBuilders) {
         }
       }
+      @java.lang.Override
       public Builder clear() {
         super.clear();
         adgroupId_ = "";
@@ -1385,15 +1421,18 @@ private static final long serialVersionUID = 0L;
         return this;
       }
 
+      @java.lang.Override
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return io.bloombox.schema.services.marketing.v1beta1.MarketingServiceBeta1.internal_static_bloombox_schema_services_marketing_v1beta1_AdGroupCreate_Response_descriptor;
+        return io.bloombox.schema.services.marketing.v1beta1.MarketingServiceBeta1.internal_static_bloombox_services_marketing_v1beta1_AdGroupCreate_Response_descriptor;
       }
 
+      @java.lang.Override
       public io.bloombox.schema.services.marketing.v1beta1.AdGroupCreate.Response getDefaultInstanceForType() {
         return io.bloombox.schema.services.marketing.v1beta1.AdGroupCreate.Response.getDefaultInstance();
       }
 
+      @java.lang.Override
       public io.bloombox.schema.services.marketing.v1beta1.AdGroupCreate.Response build() {
         io.bloombox.schema.services.marketing.v1beta1.AdGroupCreate.Response result = buildPartial();
         if (!result.isInitialized()) {
@@ -1402,6 +1441,7 @@ private static final long serialVersionUID = 0L;
         return result;
       }
 
+      @java.lang.Override
       public io.bloombox.schema.services.marketing.v1beta1.AdGroupCreate.Response buildPartial() {
         io.bloombox.schema.services.marketing.v1beta1.AdGroupCreate.Response result = new io.bloombox.schema.services.marketing.v1beta1.AdGroupCreate.Response(this);
         result.adgroupId_ = adgroupId_;
@@ -1409,32 +1449,39 @@ private static final long serialVersionUID = 0L;
         return result;
       }
 
+      @java.lang.Override
       public Builder clone() {
         return (Builder) super.clone();
       }
+      @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
         return (Builder) super.setField(field, value);
       }
+      @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
         return (Builder) super.clearField(field);
       }
+      @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
         return (Builder) super.clearOneof(oneof);
       }
+      @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
         return (Builder) super.setRepeatedField(field, index, value);
       }
+      @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
         return (Builder) super.addRepeatedField(field, value);
       }
+      @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
         if (other instanceof io.bloombox.schema.services.marketing.v1beta1.AdGroupCreate.Response) {
           return mergeFrom((io.bloombox.schema.services.marketing.v1beta1.AdGroupCreate.Response)other);
@@ -1455,10 +1502,12 @@ private static final long serialVersionUID = 0L;
         return this;
       }
 
+      @java.lang.Override
       public final boolean isInitialized() {
         return true;
       }
 
+      @java.lang.Override
       public Builder mergeFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -1565,21 +1614,23 @@ private static final long serialVersionUID = 0L;
         onChanged();
         return this;
       }
+      @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
         return super.setUnknownFieldsProto3(unknownFields);
       }
 
+      @java.lang.Override
       public final Builder mergeUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
         return super.mergeUnknownFields(unknownFields);
       }
 
 
-      // @@protoc_insertion_point(builder_scope:bloombox.schema.services.marketing.v1beta1.AdGroupCreate.Response)
+      // @@protoc_insertion_point(builder_scope:bloombox.services.marketing.v1beta1.AdGroupCreate.Response)
     }
 
-    // @@protoc_insertion_point(class_scope:bloombox.schema.services.marketing.v1beta1.AdGroupCreate.Response)
+    // @@protoc_insertion_point(class_scope:bloombox.services.marketing.v1beta1.AdGroupCreate.Response)
     private static final io.bloombox.schema.services.marketing.v1beta1.AdGroupCreate.Response DEFAULT_INSTANCE;
     static {
       DEFAULT_INSTANCE = new io.bloombox.schema.services.marketing.v1beta1.AdGroupCreate.Response();
@@ -1591,6 +1642,7 @@ private static final long serialVersionUID = 0L;
 
     private static final com.google.protobuf.Parser<Response>
         PARSER = new com.google.protobuf.AbstractParser<Response>() {
+      @java.lang.Override
       public Response parsePartialFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -1608,6 +1660,7 @@ private static final long serialVersionUID = 0L;
       return PARSER;
     }
 
+    @java.lang.Override
     public io.bloombox.schema.services.marketing.v1beta1.AdGroupCreate.Response getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
@@ -1615,6 +1668,7 @@ private static final long serialVersionUID = 0L;
   }
 
   private byte memoizedIsInitialized = -1;
+  @java.lang.Override
   public final boolean isInitialized() {
     byte isInitialized = memoizedIsInitialized;
     if (isInitialized == 1) return true;
@@ -1624,11 +1678,13 @@ private static final long serialVersionUID = 0L;
     return true;
   }
 
+  @java.lang.Override
   public void writeTo(com.google.protobuf.CodedOutputStream output)
                       throws java.io.IOException {
     unknownFields.writeTo(output);
   }
 
+  @java.lang.Override
   public int getSerializedSize() {
     int size = memoizedSize;
     if (size != -1) return size;
@@ -1736,6 +1792,7 @@ private static final long serialVersionUID = 0L;
         .parseWithIOException(PARSER, input, extensionRegistry);
   }
 
+  @java.lang.Override
   public Builder newBuilderForType() { return newBuilder(); }
   public static Builder newBuilder() {
     return DEFAULT_INSTANCE.toBuilder();
@@ -1743,6 +1800,7 @@ private static final long serialVersionUID = 0L;
   public static Builder newBuilder(io.bloombox.schema.services.marketing.v1beta1.AdGroupCreate prototype) {
     return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
   }
+  @java.lang.Override
   public Builder toBuilder() {
     return this == DEFAULT_INSTANCE
         ? new Builder() : new Builder().mergeFrom(this);
@@ -1760,20 +1818,21 @@ private static final long serialVersionUID = 0L;
    * in Bloombox, is a containing group of ad parameters. Individual ads are calculated from these parameters.
    * </pre>
    *
-   * Protobuf type {@code bloombox.schema.services.marketing.v1beta1.AdGroupCreate}
+   * Protobuf type {@code bloombox.services.marketing.v1beta1.AdGroupCreate}
    */
   public static final class Builder extends
       com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-      // @@protoc_insertion_point(builder_implements:bloombox.schema.services.marketing.v1beta1.AdGroupCreate)
+      // @@protoc_insertion_point(builder_implements:bloombox.services.marketing.v1beta1.AdGroupCreate)
       io.bloombox.schema.services.marketing.v1beta1.AdGroupCreateOrBuilder {
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return io.bloombox.schema.services.marketing.v1beta1.MarketingServiceBeta1.internal_static_bloombox_schema_services_marketing_v1beta1_AdGroupCreate_descriptor;
+      return io.bloombox.schema.services.marketing.v1beta1.MarketingServiceBeta1.internal_static_bloombox_services_marketing_v1beta1_AdGroupCreate_descriptor;
     }
 
+    @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return io.bloombox.schema.services.marketing.v1beta1.MarketingServiceBeta1.internal_static_bloombox_schema_services_marketing_v1beta1_AdGroupCreate_fieldAccessorTable
+      return io.bloombox.schema.services.marketing.v1beta1.MarketingServiceBeta1.internal_static_bloombox_services_marketing_v1beta1_AdGroupCreate_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
               io.bloombox.schema.services.marketing.v1beta1.AdGroupCreate.class, io.bloombox.schema.services.marketing.v1beta1.AdGroupCreate.Builder.class);
     }
@@ -1793,20 +1852,24 @@ private static final long serialVersionUID = 0L;
               .alwaysUseFieldBuilders) {
       }
     }
+    @java.lang.Override
     public Builder clear() {
       super.clear();
       return this;
     }
 
+    @java.lang.Override
     public com.google.protobuf.Descriptors.Descriptor
         getDescriptorForType() {
-      return io.bloombox.schema.services.marketing.v1beta1.MarketingServiceBeta1.internal_static_bloombox_schema_services_marketing_v1beta1_AdGroupCreate_descriptor;
+      return io.bloombox.schema.services.marketing.v1beta1.MarketingServiceBeta1.internal_static_bloombox_services_marketing_v1beta1_AdGroupCreate_descriptor;
     }
 
+    @java.lang.Override
     public io.bloombox.schema.services.marketing.v1beta1.AdGroupCreate getDefaultInstanceForType() {
       return io.bloombox.schema.services.marketing.v1beta1.AdGroupCreate.getDefaultInstance();
     }
 
+    @java.lang.Override
     public io.bloombox.schema.services.marketing.v1beta1.AdGroupCreate build() {
       io.bloombox.schema.services.marketing.v1beta1.AdGroupCreate result = buildPartial();
       if (!result.isInitialized()) {
@@ -1815,38 +1878,46 @@ private static final long serialVersionUID = 0L;
       return result;
     }
 
+    @java.lang.Override
     public io.bloombox.schema.services.marketing.v1beta1.AdGroupCreate buildPartial() {
       io.bloombox.schema.services.marketing.v1beta1.AdGroupCreate result = new io.bloombox.schema.services.marketing.v1beta1.AdGroupCreate(this);
       onBuilt();
       return result;
     }
 
+    @java.lang.Override
     public Builder clone() {
       return (Builder) super.clone();
     }
+    @java.lang.Override
     public Builder setField(
         com.google.protobuf.Descriptors.FieldDescriptor field,
         java.lang.Object value) {
       return (Builder) super.setField(field, value);
     }
+    @java.lang.Override
     public Builder clearField(
         com.google.protobuf.Descriptors.FieldDescriptor field) {
       return (Builder) super.clearField(field);
     }
+    @java.lang.Override
     public Builder clearOneof(
         com.google.protobuf.Descriptors.OneofDescriptor oneof) {
       return (Builder) super.clearOneof(oneof);
     }
+    @java.lang.Override
     public Builder setRepeatedField(
         com.google.protobuf.Descriptors.FieldDescriptor field,
         int index, java.lang.Object value) {
       return (Builder) super.setRepeatedField(field, index, value);
     }
+    @java.lang.Override
     public Builder addRepeatedField(
         com.google.protobuf.Descriptors.FieldDescriptor field,
         java.lang.Object value) {
       return (Builder) super.addRepeatedField(field, value);
     }
+    @java.lang.Override
     public Builder mergeFrom(com.google.protobuf.Message other) {
       if (other instanceof io.bloombox.schema.services.marketing.v1beta1.AdGroupCreate) {
         return mergeFrom((io.bloombox.schema.services.marketing.v1beta1.AdGroupCreate)other);
@@ -1863,10 +1934,12 @@ private static final long serialVersionUID = 0L;
       return this;
     }
 
+    @java.lang.Override
     public final boolean isInitialized() {
       return true;
     }
 
+    @java.lang.Override
     public Builder mergeFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -1884,21 +1957,23 @@ private static final long serialVersionUID = 0L;
       }
       return this;
     }
+    @java.lang.Override
     public final Builder setUnknownFields(
         final com.google.protobuf.UnknownFieldSet unknownFields) {
       return super.setUnknownFieldsProto3(unknownFields);
     }
 
+    @java.lang.Override
     public final Builder mergeUnknownFields(
         final com.google.protobuf.UnknownFieldSet unknownFields) {
       return super.mergeUnknownFields(unknownFields);
     }
 
 
-    // @@protoc_insertion_point(builder_scope:bloombox.schema.services.marketing.v1beta1.AdGroupCreate)
+    // @@protoc_insertion_point(builder_scope:bloombox.services.marketing.v1beta1.AdGroupCreate)
   }
 
-  // @@protoc_insertion_point(class_scope:bloombox.schema.services.marketing.v1beta1.AdGroupCreate)
+  // @@protoc_insertion_point(class_scope:bloombox.services.marketing.v1beta1.AdGroupCreate)
   private static final io.bloombox.schema.services.marketing.v1beta1.AdGroupCreate DEFAULT_INSTANCE;
   static {
     DEFAULT_INSTANCE = new io.bloombox.schema.services.marketing.v1beta1.AdGroupCreate();
@@ -1910,6 +1985,7 @@ private static final long serialVersionUID = 0L;
 
   private static final com.google.protobuf.Parser<AdGroupCreate>
       PARSER = new com.google.protobuf.AbstractParser<AdGroupCreate>() {
+    @java.lang.Override
     public AdGroupCreate parsePartialFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -1927,6 +2003,7 @@ private static final long serialVersionUID = 0L;
     return PARSER;
   }
 
+  @java.lang.Override
   public io.bloombox.schema.services.marketing.v1beta1.AdGroupCreate getDefaultInstanceForType() {
     return DEFAULT_INSTANCE;
   }

@@ -1,8 +1,8 @@
 /*
- * Copyright 2018, Bloombox, LLC. All rights reserved.
+ * Copyright 2018, Momentum Ideas, Co. All rights reserved.
  *
  * Source and object computer code contained herein is the private intellectual
- * property of Bloombox, a California Limited Liability Corporation. Use of this
+ * property of Momentum Ideas Co., a Delaware Corporation. Use of this
  * code in source form requires permission in writing before use or the
  * assembly, distribution, or publishing of derivative works, for commercial
  * purposes or any other purpose, from a duly authorized officer of Momentum
@@ -36,7 +36,7 @@ public final class UserAnalytics {
    * Specifies actions that may be taken by a user. See also: `ShopAction`.
    * </pre>
    *
-   * Protobuf enum {@code bloombox.schema.analytics.identity.UserAction}
+   * Protobuf enum {@code bloombox.analytics.identity.UserAction}
    */
   public enum UserAction
       implements com.google.protobuf.ProtocolMessageEnum {
@@ -303,11 +303,11 @@ public final class UserAnalytics {
       this.value = value;
     }
 
-    // @@protoc_insertion_point(enum_scope:bloombox.schema.analytics.identity.UserAction)
+    // @@protoc_insertion_point(enum_scope:bloombox.analytics.identity.UserAction)
   }
 
   public interface ActionOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:bloombox.schema.analytics.identity.Action)
+      // @@protoc_insertion_point(interface_extends:bloombox.analytics.identity.Action)
       com.google.protobuf.MessageOrBuilder {
 
     /**
@@ -333,7 +333,7 @@ public final class UserAnalytics {
      * Action that was taken upon or regarding the order.
      * </pre>
      *
-     * <code>.bloombox.schema.analytics.identity.UserAction verb = 2;</code>
+     * <code>.bloombox.analytics.identity.UserAction verb = 2;</code>
      */
     int getVerbValue();
     /**
@@ -341,7 +341,7 @@ public final class UserAnalytics {
      * Action that was taken upon or regarding the order.
      * </pre>
      *
-     * <code>.bloombox.schema.analytics.identity.UserAction verb = 2;</code>
+     * <code>.bloombox.analytics.identity.UserAction verb = 2;</code>
      */
     io.bloombox.schema.analytics.user.UserAnalytics.UserAction getVerb();
 
@@ -376,11 +376,11 @@ public final class UserAnalytics {
    * with regards to a particular system, or their account or preferences.
    * </pre>
    *
-   * Protobuf type {@code bloombox.schema.analytics.identity.Action}
+   * Protobuf type {@code bloombox.analytics.identity.Action}
    */
   public  static final class Action extends
       com.google.protobuf.GeneratedMessageV3 implements
-      // @@protoc_insertion_point(message_implements:bloombox.schema.analytics.identity.Action)
+      // @@protoc_insertion_point(message_implements:bloombox.analytics.identity.Action)
       ActionOrBuilder {
   private static final long serialVersionUID = 0L;
     // Use Action.newBuilder() to construct.
@@ -416,13 +416,6 @@ public final class UserAnalytics {
             case 0:
               done = true;
               break;
-            default: {
-              if (!parseUnknownFieldProto3(
-                  input, unknownFields, extensionRegistry, tag)) {
-                done = true;
-              }
-              break;
-            }
             case 10: {
               java.lang.String s = input.readStringRequireUtf8();
 
@@ -448,6 +441,13 @@ public final class UserAnalytics {
 
               break;
             }
+            default: {
+              if (!parseUnknownFieldProto3(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
           }
         }
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
@@ -462,12 +462,13 @@ public final class UserAnalytics {
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return io.bloombox.schema.analytics.user.UserAnalytics.internal_static_bloombox_schema_analytics_identity_Action_descriptor;
+      return io.bloombox.schema.analytics.user.UserAnalytics.internal_static_bloombox_analytics_identity_Action_descriptor;
     }
 
+    @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return io.bloombox.schema.analytics.user.UserAnalytics.internal_static_bloombox_schema_analytics_identity_Action_fieldAccessorTable
+      return io.bloombox.schema.analytics.user.UserAnalytics.internal_static_bloombox_analytics_identity_Action_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
               io.bloombox.schema.analytics.user.UserAnalytics.Action.class, io.bloombox.schema.analytics.user.UserAnalytics.Action.Builder.class);
     }
@@ -521,7 +522,7 @@ public final class UserAnalytics {
      * Action that was taken upon or regarding the order.
      * </pre>
      *
-     * <code>.bloombox.schema.analytics.identity.UserAction verb = 2;</code>
+     * <code>.bloombox.analytics.identity.UserAction verb = 2;</code>
      */
     public int getVerbValue() {
       return verb_;
@@ -531,9 +532,10 @@ public final class UserAnalytics {
      * Action that was taken upon or regarding the order.
      * </pre>
      *
-     * <code>.bloombox.schema.analytics.identity.UserAction verb = 2;</code>
+     * <code>.bloombox.analytics.identity.UserAction verb = 2;</code>
      */
     public io.bloombox.schema.analytics.user.UserAnalytics.UserAction getVerb() {
+      @SuppressWarnings("deprecation")
       io.bloombox.schema.analytics.user.UserAnalytics.UserAction result = io.bloombox.schema.analytics.user.UserAnalytics.UserAction.valueOf(verb_);
       return result == null ? io.bloombox.schema.analytics.user.UserAnalytics.UserAction.UNRECOGNIZED : result;
     }
@@ -572,6 +574,7 @@ public final class UserAnalytics {
     }
 
     private byte memoizedIsInitialized = -1;
+    @java.lang.Override
     public final boolean isInitialized() {
       byte isInitialized = memoizedIsInitialized;
       if (isInitialized == 1) return true;
@@ -581,6 +584,7 @@ public final class UserAnalytics {
       return true;
     }
 
+    @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
       if (!getIdentityBytes().isEmpty()) {
@@ -595,6 +599,7 @@ public final class UserAnalytics {
       unknownFields.writeTo(output);
     }
 
+    @java.lang.Override
     public int getSerializedSize() {
       int size = memoizedSize;
       if (size != -1) return size;
@@ -729,6 +734,7 @@ public final class UserAnalytics {
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
 
+    @java.lang.Override
     public Builder newBuilderForType() { return newBuilder(); }
     public static Builder newBuilder() {
       return DEFAULT_INSTANCE.toBuilder();
@@ -736,6 +742,7 @@ public final class UserAnalytics {
     public static Builder newBuilder(io.bloombox.schema.analytics.user.UserAnalytics.Action prototype) {
       return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
     }
+    @java.lang.Override
     public Builder toBuilder() {
       return this == DEFAULT_INSTANCE
           ? new Builder() : new Builder().mergeFrom(this);
@@ -753,20 +760,21 @@ public final class UserAnalytics {
      * with regards to a particular system, or their account or preferences.
      * </pre>
      *
-     * Protobuf type {@code bloombox.schema.analytics.identity.Action}
+     * Protobuf type {@code bloombox.analytics.identity.Action}
      */
     public static final class Builder extends
         com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:bloombox.schema.analytics.identity.Action)
+        // @@protoc_insertion_point(builder_implements:bloombox.analytics.identity.Action)
         io.bloombox.schema.analytics.user.UserAnalytics.ActionOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return io.bloombox.schema.analytics.user.UserAnalytics.internal_static_bloombox_schema_analytics_identity_Action_descriptor;
+        return io.bloombox.schema.analytics.user.UserAnalytics.internal_static_bloombox_analytics_identity_Action_descriptor;
       }
 
+      @java.lang.Override
       protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return io.bloombox.schema.analytics.user.UserAnalytics.internal_static_bloombox_schema_analytics_identity_Action_fieldAccessorTable
+        return io.bloombox.schema.analytics.user.UserAnalytics.internal_static_bloombox_analytics_identity_Action_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
                 io.bloombox.schema.analytics.user.UserAnalytics.Action.class, io.bloombox.schema.analytics.user.UserAnalytics.Action.Builder.class);
       }
@@ -786,6 +794,7 @@ public final class UserAnalytics {
                 .alwaysUseFieldBuilders) {
         }
       }
+      @java.lang.Override
       public Builder clear() {
         super.clear();
         identity_ = "";
@@ -801,15 +810,18 @@ public final class UserAnalytics {
         return this;
       }
 
+      @java.lang.Override
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return io.bloombox.schema.analytics.user.UserAnalytics.internal_static_bloombox_schema_analytics_identity_Action_descriptor;
+        return io.bloombox.schema.analytics.user.UserAnalytics.internal_static_bloombox_analytics_identity_Action_descriptor;
       }
 
+      @java.lang.Override
       public io.bloombox.schema.analytics.user.UserAnalytics.Action getDefaultInstanceForType() {
         return io.bloombox.schema.analytics.user.UserAnalytics.Action.getDefaultInstance();
       }
 
+      @java.lang.Override
       public io.bloombox.schema.analytics.user.UserAnalytics.Action build() {
         io.bloombox.schema.analytics.user.UserAnalytics.Action result = buildPartial();
         if (!result.isInitialized()) {
@@ -818,6 +830,7 @@ public final class UserAnalytics {
         return result;
       }
 
+      @java.lang.Override
       public io.bloombox.schema.analytics.user.UserAnalytics.Action buildPartial() {
         io.bloombox.schema.analytics.user.UserAnalytics.Action result = new io.bloombox.schema.analytics.user.UserAnalytics.Action(this);
         result.identity_ = identity_;
@@ -831,32 +844,39 @@ public final class UserAnalytics {
         return result;
       }
 
+      @java.lang.Override
       public Builder clone() {
         return (Builder) super.clone();
       }
+      @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
         return (Builder) super.setField(field, value);
       }
+      @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
         return (Builder) super.clearField(field);
       }
+      @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
         return (Builder) super.clearOneof(oneof);
       }
+      @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
         return (Builder) super.setRepeatedField(field, index, value);
       }
+      @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
         return (Builder) super.addRepeatedField(field, value);
       }
+      @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
         if (other instanceof io.bloombox.schema.analytics.user.UserAnalytics.Action) {
           return mergeFrom((io.bloombox.schema.analytics.user.UserAnalytics.Action)other);
@@ -883,10 +903,12 @@ public final class UserAnalytics {
         return this;
       }
 
+      @java.lang.Override
       public final boolean isInitialized() {
         return true;
       }
 
+      @java.lang.Override
       public Builder mergeFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -1000,7 +1022,7 @@ public final class UserAnalytics {
        * Action that was taken upon or regarding the order.
        * </pre>
        *
-       * <code>.bloombox.schema.analytics.identity.UserAction verb = 2;</code>
+       * <code>.bloombox.analytics.identity.UserAction verb = 2;</code>
        */
       public int getVerbValue() {
         return verb_;
@@ -1010,7 +1032,7 @@ public final class UserAnalytics {
        * Action that was taken upon or regarding the order.
        * </pre>
        *
-       * <code>.bloombox.schema.analytics.identity.UserAction verb = 2;</code>
+       * <code>.bloombox.analytics.identity.UserAction verb = 2;</code>
        */
       public Builder setVerbValue(int value) {
         verb_ = value;
@@ -1022,9 +1044,10 @@ public final class UserAnalytics {
        * Action that was taken upon or regarding the order.
        * </pre>
        *
-       * <code>.bloombox.schema.analytics.identity.UserAction verb = 2;</code>
+       * <code>.bloombox.analytics.identity.UserAction verb = 2;</code>
        */
       public io.bloombox.schema.analytics.user.UserAnalytics.UserAction getVerb() {
+        @SuppressWarnings("deprecation")
         io.bloombox.schema.analytics.user.UserAnalytics.UserAction result = io.bloombox.schema.analytics.user.UserAnalytics.UserAction.valueOf(verb_);
         return result == null ? io.bloombox.schema.analytics.user.UserAnalytics.UserAction.UNRECOGNIZED : result;
       }
@@ -1033,7 +1056,7 @@ public final class UserAnalytics {
        * Action that was taken upon or regarding the order.
        * </pre>
        *
-       * <code>.bloombox.schema.analytics.identity.UserAction verb = 2;</code>
+       * <code>.bloombox.analytics.identity.UserAction verb = 2;</code>
        */
       public Builder setVerb(io.bloombox.schema.analytics.user.UserAnalytics.UserAction value) {
         if (value == null) {
@@ -1049,7 +1072,7 @@ public final class UserAnalytics {
        * Action that was taken upon or regarding the order.
        * </pre>
        *
-       * <code>.bloombox.schema.analytics.identity.UserAction verb = 2;</code>
+       * <code>.bloombox.analytics.identity.UserAction verb = 2;</code>
        */
       public Builder clearVerb() {
         
@@ -1210,21 +1233,23 @@ public final class UserAnalytics {
         }
         return occurredBuilder_;
       }
+      @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
         return super.setUnknownFieldsProto3(unknownFields);
       }
 
+      @java.lang.Override
       public final Builder mergeUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
         return super.mergeUnknownFields(unknownFields);
       }
 
 
-      // @@protoc_insertion_point(builder_scope:bloombox.schema.analytics.identity.Action)
+      // @@protoc_insertion_point(builder_scope:bloombox.analytics.identity.Action)
     }
 
-    // @@protoc_insertion_point(class_scope:bloombox.schema.analytics.identity.Action)
+    // @@protoc_insertion_point(class_scope:bloombox.analytics.identity.Action)
     private static final io.bloombox.schema.analytics.user.UserAnalytics.Action DEFAULT_INSTANCE;
     static {
       DEFAULT_INSTANCE = new io.bloombox.schema.analytics.user.UserAnalytics.Action();
@@ -1236,6 +1261,7 @@ public final class UserAnalytics {
 
     private static final com.google.protobuf.Parser<Action>
         PARSER = new com.google.protobuf.AbstractParser<Action>() {
+      @java.lang.Override
       public Action parsePartialFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -1253,6 +1279,7 @@ public final class UserAnalytics {
       return PARSER;
     }
 
+    @java.lang.Override
     public io.bloombox.schema.analytics.user.UserAnalytics.Action getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
@@ -1260,10 +1287,10 @@ public final class UserAnalytics {
   }
 
   private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_bloombox_schema_analytics_identity_Action_descriptor;
+    internal_static_bloombox_analytics_identity_Action_descriptor;
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_bloombox_schema_analytics_identity_Action_fieldAccessorTable;
+      internal_static_bloombox_analytics_identity_Action_fieldAccessorTable;
 
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
@@ -1274,17 +1301,17 @@ public final class UserAnalytics {
   static {
     java.lang.String[] descriptorData = {
       "\n&analytics/identity/UserAnalytics.proto" +
-      "\022\"bloombox.schema.analytics.identity\032\026te" +
-      "mporal/Instant.proto\"\212\001\n\006Action\022\020\n\010ident" +
-      "ity\030\001 \001(\t\022<\n\004verb\030\002 \001(\0162..bloombox.schem" +
-      "a.analytics.identity.UserAction\0220\n\010occur" +
-      "red\030\003 \001(\0132\036.opencannabis.temporal.Instan" +
-      "t*\230\001\n\nUserAction\022\n\n\006ENGAGE\020\000\022\n\n\006ENROLL\020\n" +
-      "\022\014\n\010ACTIVATE\020\013\022\010\n\004JOIN\020\014\022\n\n\006VERIFY\020\r\022\013\n\007" +
-      "CHECKIN\020\016\022\017\n\013PREFERENCES\020\017\022\014\n\010PURCHASE\020\020" +
-      "\022\t\n\005ORDER\020\021\022\n\n\006OPT_IN\020\022\022\013\n\007OPT_OUT\020\023B<\n!" +
-      "io.bloombox.schema.analytics.userB\rUserA" +
-      "nalyticsH\001P\000\242\002\003BBSb\006proto3"
+      "\022\033bloombox.analytics.identity\032\026temporal/" +
+      "Instant.proto\"\203\001\n\006Action\022\020\n\010identity\030\001 \001" +
+      "(\t\0225\n\004verb\030\002 \001(\0162\'.bloombox.analytics.id" +
+      "entity.UserAction\0220\n\010occurred\030\003 \001(\0132\036.op" +
+      "encannabis.temporal.Instant*\230\001\n\nUserActi" +
+      "on\022\n\n\006ENGAGE\020\000\022\n\n\006ENROLL\020\n\022\014\n\010ACTIVATE\020\013" +
+      "\022\010\n\004JOIN\020\014\022\n\n\006VERIFY\020\r\022\013\n\007CHECKIN\020\016\022\017\n\013P" +
+      "REFERENCES\020\017\022\014\n\010PURCHASE\020\020\022\t\n\005ORDER\020\021\022\n\n" +
+      "\006OPT_IN\020\022\022\013\n\007OPT_OUT\020\023B<\n!io.bloombox.sc" +
+      "hema.analytics.userB\rUserAnalyticsH\001P\000\242\002" +
+      "\003BBSb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -1299,11 +1326,11 @@ public final class UserAnalytics {
         new com.google.protobuf.Descriptors.FileDescriptor[] {
           io.opencannabis.schema.temporal.TemporalInstant.getDescriptor(),
         }, assigner);
-    internal_static_bloombox_schema_analytics_identity_Action_descriptor =
+    internal_static_bloombox_analytics_identity_Action_descriptor =
       getDescriptor().getMessageTypes().get(0);
-    internal_static_bloombox_schema_analytics_identity_Action_fieldAccessorTable = new
+    internal_static_bloombox_analytics_identity_Action_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_bloombox_schema_analytics_identity_Action_descriptor,
+        internal_static_bloombox_analytics_identity_Action_descriptor,
         new java.lang.String[] { "Identity", "Verb", "Occurred", });
     io.opencannabis.schema.temporal.TemporalInstant.getDescriptor();
   }

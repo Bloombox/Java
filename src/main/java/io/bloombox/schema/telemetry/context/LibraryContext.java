@@ -1,8 +1,8 @@
 /*
- * Copyright 2018, Bloombox, LLC. All rights reserved.
+ * Copyright 2018, Momentum Ideas, Co. All rights reserved.
  *
  * Source and object computer code contained herein is the private intellectual
- * property of Bloombox, a California Limited Liability Corporation. Use of this
+ * property of Momentum Ideas Co., a Delaware Corporation. Use of this
  * code in source form requires permission in writing before use or the
  * assembly, distribution, or publishing of derivative works, for commercial
  * purposes or any other purpose, from a duly authorized officer of Momentum
@@ -36,7 +36,7 @@ public final class LibraryContext {
    * Specifies known API client libraries, produced internally by Bloombox.
    * </pre>
    *
-   * Protobuf enum {@code bloombox.schema.analytics.context.APIClient}
+   * Protobuf enum {@code bloombox.analytics.context.APIClient}
    */
   public enum APIClient
       implements com.google.protobuf.ProtocolMessageEnum {
@@ -180,11 +180,11 @@ public final class LibraryContext {
       this.value = value;
     }
 
-    // @@protoc_insertion_point(enum_scope:bloombox.schema.analytics.context.APIClient)
+    // @@protoc_insertion_point(enum_scope:bloombox.analytics.context.APIClient)
   }
 
   public interface DeviceLibraryOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:bloombox.schema.analytics.context.DeviceLibrary)
+      // @@protoc_insertion_point(interface_extends:bloombox.analytics.context.DeviceLibrary)
       com.google.protobuf.MessageOrBuilder {
 
     /**
@@ -235,7 +235,7 @@ public final class LibraryContext {
      * Specifies, if applicable, the internally-produced client library in use.
      * </pre>
      *
-     * <code>.bloombox.schema.analytics.context.APIClient client = 3 [(.gen_bq_schema.description) = "Specifies which internal Bloombox library sent this event, if any."];</code>
+     * <code>.bloombox.analytics.context.APIClient client = 3 [(.gen_bq_schema.description) = "Specifies which internal Bloombox library sent this event, if any."];</code>
      */
     int getClientValue();
     /**
@@ -243,7 +243,7 @@ public final class LibraryContext {
      * Specifies, if applicable, the internally-produced client library in use.
      * </pre>
      *
-     * <code>.bloombox.schema.analytics.context.APIClient client = 3 [(.gen_bq_schema.description) = "Specifies which internal Bloombox library sent this event, if any."];</code>
+     * <code>.bloombox.analytics.context.APIClient client = 3 [(.gen_bq_schema.description) = "Specifies which internal Bloombox library sent this event, if any."];</code>
      */
     io.bloombox.schema.telemetry.context.LibraryContext.APIClient getClient();
   }
@@ -252,11 +252,11 @@ public final class LibraryContext {
    * Specifies information about the library being used to transmit data.
    * </pre>
    *
-   * Protobuf type {@code bloombox.schema.analytics.context.DeviceLibrary}
+   * Protobuf type {@code bloombox.analytics.context.DeviceLibrary}
    */
   public  static final class DeviceLibrary extends
       com.google.protobuf.GeneratedMessageV3 implements
-      // @@protoc_insertion_point(message_implements:bloombox.schema.analytics.context.DeviceLibrary)
+      // @@protoc_insertion_point(message_implements:bloombox.analytics.context.DeviceLibrary)
       DeviceLibraryOrBuilder {
   private static final long serialVersionUID = 0L;
     // Use DeviceLibrary.newBuilder() to construct.
@@ -292,13 +292,6 @@ public final class LibraryContext {
             case 0:
               done = true;
               break;
-            default: {
-              if (!parseUnknownFieldProto3(
-                  input, unknownFields, extensionRegistry, tag)) {
-                done = true;
-              }
-              break;
-            }
             case 10: {
               java.lang.String s = input.readStringRequireUtf8();
 
@@ -324,6 +317,13 @@ public final class LibraryContext {
               client_ = rawValue;
               break;
             }
+            default: {
+              if (!parseUnknownFieldProto3(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
           }
         }
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
@@ -338,12 +338,13 @@ public final class LibraryContext {
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return io.bloombox.schema.telemetry.context.LibraryContext.internal_static_bloombox_schema_analytics_context_DeviceLibrary_descriptor;
+      return io.bloombox.schema.telemetry.context.LibraryContext.internal_static_bloombox_analytics_context_DeviceLibrary_descriptor;
     }
 
+    @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return io.bloombox.schema.telemetry.context.LibraryContext.internal_static_bloombox_schema_analytics_context_DeviceLibrary_fieldAccessorTable
+      return io.bloombox.schema.telemetry.context.LibraryContext.internal_static_bloombox_analytics_context_DeviceLibrary_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
               io.bloombox.schema.telemetry.context.LibraryContext.DeviceLibrary.class, io.bloombox.schema.telemetry.context.LibraryContext.DeviceLibrary.Builder.class);
     }
@@ -430,7 +431,7 @@ public final class LibraryContext {
      * Specifies, if applicable, the internally-produced client library in use.
      * </pre>
      *
-     * <code>.bloombox.schema.analytics.context.APIClient client = 3 [(.gen_bq_schema.description) = "Specifies which internal Bloombox library sent this event, if any."];</code>
+     * <code>.bloombox.analytics.context.APIClient client = 3 [(.gen_bq_schema.description) = "Specifies which internal Bloombox library sent this event, if any."];</code>
      */
     public int getClientValue() {
       return client_;
@@ -440,14 +441,16 @@ public final class LibraryContext {
      * Specifies, if applicable, the internally-produced client library in use.
      * </pre>
      *
-     * <code>.bloombox.schema.analytics.context.APIClient client = 3 [(.gen_bq_schema.description) = "Specifies which internal Bloombox library sent this event, if any."];</code>
+     * <code>.bloombox.analytics.context.APIClient client = 3 [(.gen_bq_schema.description) = "Specifies which internal Bloombox library sent this event, if any."];</code>
      */
     public io.bloombox.schema.telemetry.context.LibraryContext.APIClient getClient() {
+      @SuppressWarnings("deprecation")
       io.bloombox.schema.telemetry.context.LibraryContext.APIClient result = io.bloombox.schema.telemetry.context.LibraryContext.APIClient.valueOf(client_);
       return result == null ? io.bloombox.schema.telemetry.context.LibraryContext.APIClient.UNRECOGNIZED : result;
     }
 
     private byte memoizedIsInitialized = -1;
+    @java.lang.Override
     public final boolean isInitialized() {
       byte isInitialized = memoizedIsInitialized;
       if (isInitialized == 1) return true;
@@ -457,6 +460,7 @@ public final class LibraryContext {
       return true;
     }
 
+    @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
       if (!getVariantBytes().isEmpty()) {
@@ -471,6 +475,7 @@ public final class LibraryContext {
       unknownFields.writeTo(output);
     }
 
+    @java.lang.Override
     public int getSerializedSize() {
       int size = memoizedSize;
       if (size != -1) return size;
@@ -605,6 +610,7 @@ public final class LibraryContext {
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
 
+    @java.lang.Override
     public Builder newBuilderForType() { return newBuilder(); }
     public static Builder newBuilder() {
       return DEFAULT_INSTANCE.toBuilder();
@@ -612,6 +618,7 @@ public final class LibraryContext {
     public static Builder newBuilder(io.bloombox.schema.telemetry.context.LibraryContext.DeviceLibrary prototype) {
       return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
     }
+    @java.lang.Override
     public Builder toBuilder() {
       return this == DEFAULT_INSTANCE
           ? new Builder() : new Builder().mergeFrom(this);
@@ -628,20 +635,21 @@ public final class LibraryContext {
      * Specifies information about the library being used to transmit data.
      * </pre>
      *
-     * Protobuf type {@code bloombox.schema.analytics.context.DeviceLibrary}
+     * Protobuf type {@code bloombox.analytics.context.DeviceLibrary}
      */
     public static final class Builder extends
         com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:bloombox.schema.analytics.context.DeviceLibrary)
+        // @@protoc_insertion_point(builder_implements:bloombox.analytics.context.DeviceLibrary)
         io.bloombox.schema.telemetry.context.LibraryContext.DeviceLibraryOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return io.bloombox.schema.telemetry.context.LibraryContext.internal_static_bloombox_schema_analytics_context_DeviceLibrary_descriptor;
+        return io.bloombox.schema.telemetry.context.LibraryContext.internal_static_bloombox_analytics_context_DeviceLibrary_descriptor;
       }
 
+      @java.lang.Override
       protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return io.bloombox.schema.telemetry.context.LibraryContext.internal_static_bloombox_schema_analytics_context_DeviceLibrary_fieldAccessorTable
+        return io.bloombox.schema.telemetry.context.LibraryContext.internal_static_bloombox_analytics_context_DeviceLibrary_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
                 io.bloombox.schema.telemetry.context.LibraryContext.DeviceLibrary.class, io.bloombox.schema.telemetry.context.LibraryContext.DeviceLibrary.Builder.class);
       }
@@ -661,6 +669,7 @@ public final class LibraryContext {
                 .alwaysUseFieldBuilders) {
         }
       }
+      @java.lang.Override
       public Builder clear() {
         super.clear();
         variant_ = "";
@@ -676,15 +685,18 @@ public final class LibraryContext {
         return this;
       }
 
+      @java.lang.Override
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return io.bloombox.schema.telemetry.context.LibraryContext.internal_static_bloombox_schema_analytics_context_DeviceLibrary_descriptor;
+        return io.bloombox.schema.telemetry.context.LibraryContext.internal_static_bloombox_analytics_context_DeviceLibrary_descriptor;
       }
 
+      @java.lang.Override
       public io.bloombox.schema.telemetry.context.LibraryContext.DeviceLibrary getDefaultInstanceForType() {
         return io.bloombox.schema.telemetry.context.LibraryContext.DeviceLibrary.getDefaultInstance();
       }
 
+      @java.lang.Override
       public io.bloombox.schema.telemetry.context.LibraryContext.DeviceLibrary build() {
         io.bloombox.schema.telemetry.context.LibraryContext.DeviceLibrary result = buildPartial();
         if (!result.isInitialized()) {
@@ -693,6 +705,7 @@ public final class LibraryContext {
         return result;
       }
 
+      @java.lang.Override
       public io.bloombox.schema.telemetry.context.LibraryContext.DeviceLibrary buildPartial() {
         io.bloombox.schema.telemetry.context.LibraryContext.DeviceLibrary result = new io.bloombox.schema.telemetry.context.LibraryContext.DeviceLibrary(this);
         result.variant_ = variant_;
@@ -706,32 +719,39 @@ public final class LibraryContext {
         return result;
       }
 
+      @java.lang.Override
       public Builder clone() {
         return (Builder) super.clone();
       }
+      @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
         return (Builder) super.setField(field, value);
       }
+      @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
         return (Builder) super.clearField(field);
       }
+      @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
         return (Builder) super.clearOneof(oneof);
       }
+      @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
         return (Builder) super.setRepeatedField(field, index, value);
       }
+      @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
         return (Builder) super.addRepeatedField(field, value);
       }
+      @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
         if (other instanceof io.bloombox.schema.telemetry.context.LibraryContext.DeviceLibrary) {
           return mergeFrom((io.bloombox.schema.telemetry.context.LibraryContext.DeviceLibrary)other);
@@ -758,10 +778,12 @@ public final class LibraryContext {
         return this;
       }
 
+      @java.lang.Override
       public final boolean isInitialized() {
         return true;
       }
 
+      @java.lang.Override
       public Builder mergeFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -1028,7 +1050,7 @@ public final class LibraryContext {
        * Specifies, if applicable, the internally-produced client library in use.
        * </pre>
        *
-       * <code>.bloombox.schema.analytics.context.APIClient client = 3 [(.gen_bq_schema.description) = "Specifies which internal Bloombox library sent this event, if any."];</code>
+       * <code>.bloombox.analytics.context.APIClient client = 3 [(.gen_bq_schema.description) = "Specifies which internal Bloombox library sent this event, if any."];</code>
        */
       public int getClientValue() {
         return client_;
@@ -1038,7 +1060,7 @@ public final class LibraryContext {
        * Specifies, if applicable, the internally-produced client library in use.
        * </pre>
        *
-       * <code>.bloombox.schema.analytics.context.APIClient client = 3 [(.gen_bq_schema.description) = "Specifies which internal Bloombox library sent this event, if any."];</code>
+       * <code>.bloombox.analytics.context.APIClient client = 3 [(.gen_bq_schema.description) = "Specifies which internal Bloombox library sent this event, if any."];</code>
        */
       public Builder setClientValue(int value) {
         client_ = value;
@@ -1050,9 +1072,10 @@ public final class LibraryContext {
        * Specifies, if applicable, the internally-produced client library in use.
        * </pre>
        *
-       * <code>.bloombox.schema.analytics.context.APIClient client = 3 [(.gen_bq_schema.description) = "Specifies which internal Bloombox library sent this event, if any."];</code>
+       * <code>.bloombox.analytics.context.APIClient client = 3 [(.gen_bq_schema.description) = "Specifies which internal Bloombox library sent this event, if any."];</code>
        */
       public io.bloombox.schema.telemetry.context.LibraryContext.APIClient getClient() {
+        @SuppressWarnings("deprecation")
         io.bloombox.schema.telemetry.context.LibraryContext.APIClient result = io.bloombox.schema.telemetry.context.LibraryContext.APIClient.valueOf(client_);
         return result == null ? io.bloombox.schema.telemetry.context.LibraryContext.APIClient.UNRECOGNIZED : result;
       }
@@ -1061,7 +1084,7 @@ public final class LibraryContext {
        * Specifies, if applicable, the internally-produced client library in use.
        * </pre>
        *
-       * <code>.bloombox.schema.analytics.context.APIClient client = 3 [(.gen_bq_schema.description) = "Specifies which internal Bloombox library sent this event, if any."];</code>
+       * <code>.bloombox.analytics.context.APIClient client = 3 [(.gen_bq_schema.description) = "Specifies which internal Bloombox library sent this event, if any."];</code>
        */
       public Builder setClient(io.bloombox.schema.telemetry.context.LibraryContext.APIClient value) {
         if (value == null) {
@@ -1077,7 +1100,7 @@ public final class LibraryContext {
        * Specifies, if applicable, the internally-produced client library in use.
        * </pre>
        *
-       * <code>.bloombox.schema.analytics.context.APIClient client = 3 [(.gen_bq_schema.description) = "Specifies which internal Bloombox library sent this event, if any."];</code>
+       * <code>.bloombox.analytics.context.APIClient client = 3 [(.gen_bq_schema.description) = "Specifies which internal Bloombox library sent this event, if any."];</code>
        */
       public Builder clearClient() {
         
@@ -1085,21 +1108,23 @@ public final class LibraryContext {
         onChanged();
         return this;
       }
+      @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
         return super.setUnknownFieldsProto3(unknownFields);
       }
 
+      @java.lang.Override
       public final Builder mergeUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
         return super.mergeUnknownFields(unknownFields);
       }
 
 
-      // @@protoc_insertion_point(builder_scope:bloombox.schema.analytics.context.DeviceLibrary)
+      // @@protoc_insertion_point(builder_scope:bloombox.analytics.context.DeviceLibrary)
     }
 
-    // @@protoc_insertion_point(class_scope:bloombox.schema.analytics.context.DeviceLibrary)
+    // @@protoc_insertion_point(class_scope:bloombox.analytics.context.DeviceLibrary)
     private static final io.bloombox.schema.telemetry.context.LibraryContext.DeviceLibrary DEFAULT_INSTANCE;
     static {
       DEFAULT_INSTANCE = new io.bloombox.schema.telemetry.context.LibraryContext.DeviceLibrary();
@@ -1111,6 +1136,7 @@ public final class LibraryContext {
 
     private static final com.google.protobuf.Parser<DeviceLibrary>
         PARSER = new com.google.protobuf.AbstractParser<DeviceLibrary>() {
+      @java.lang.Override
       public DeviceLibrary parsePartialFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -1128,6 +1154,7 @@ public final class LibraryContext {
       return PARSER;
     }
 
+    @java.lang.Override
     public io.bloombox.schema.telemetry.context.LibraryContext.DeviceLibrary getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
@@ -1135,10 +1162,10 @@ public final class LibraryContext {
   }
 
   private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_bloombox_schema_analytics_context_DeviceLibrary_descriptor;
+    internal_static_bloombox_analytics_context_DeviceLibrary_descriptor;
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_bloombox_schema_analytics_context_DeviceLibrary_fieldAccessorTable;
+      internal_static_bloombox_analytics_context_DeviceLibrary_fieldAccessorTable;
 
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
@@ -1148,22 +1175,21 @@ public final class LibraryContext {
       descriptor;
   static {
     java.lang.String[] descriptorData = {
-      "\n\037analytics/context/Library.proto\022!bloom" +
-      "box.schema.analytics.context\032\016bq_field.p" +
-      "roto\032\025structs/Version.proto\"\344\002\n\rDeviceLi" +
-      "brary\022O\n\007variant\030\001 \001(\tB>\360?\001\212@8Variant na" +
-      "me of the library being used to transmit" +
-      " data.\022|\n\007version\030\002 \001(\0132!.opencannabis.s" +
-      "tructs.VersionSpecBH\360?\001\212@BVersion specif" +
-      "ication for the library being used to tr" +
-      "ansmit data.\022\203\001\n\006client\030\003 \001(\0162,.bloombox" +
-      ".schema.analytics.context.APIClientBE\212@B" +
-      "Specifies which internal Bloombox librar" +
-      "y sent this event, if any.*C\n\tAPIClient\022" +
-      "\020\n\014UNIDENTIFIED\020\000\022\017\n\013JAVA_SCRIPT\020\001\022\t\n\005SW" +
-      "IFT\020\002\022\010\n\004JAVA\020\003B@\n$io.bloombox.schema.te" +
-      "lemetry.contextB\016LibraryContextH\001P\000\242\002\003BB" +
-      "Sb\006proto3"
+      "\n\037analytics/context/Library.proto\022\032bloom" +
+      "box.analytics.context\032\016bq_field.proto\032\025s" +
+      "tructs/Version.proto\"\334\002\n\rDeviceLibrary\022O" +
+      "\n\007variant\030\001 \001(\tB>\360?\001\212@8Variant name of t" +
+      "he library being used to transmit data.\022" +
+      "|\n\007version\030\002 \001(\0132!.opencannabis.structs." +
+      "VersionSpecBH\360?\001\212@BVersion specification" +
+      " for the library being used to transmit " +
+      "data.\022|\n\006client\030\003 \001(\0162%.bloombox.analyti" +
+      "cs.context.APIClientBE\212@BSpecifies which" +
+      " internal Bloombox library sent this eve" +
+      "nt, if any.*C\n\tAPIClient\022\020\n\014UNIDENTIFIED" +
+      "\020\000\022\017\n\013JAVA_SCRIPT\020\001\022\t\n\005SWIFT\020\002\022\010\n\004JAVA\020\003" +
+      "B@\n$io.bloombox.schema.telemetry.context" +
+      "B\016LibraryContextH\001P\000\242\002\003BBSb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -1179,11 +1205,11 @@ public final class LibraryContext {
           gen_bq_schema.BqField.getDescriptor(),
           io.opencannabis.schema.struct.Version.getDescriptor(),
         }, assigner);
-    internal_static_bloombox_schema_analytics_context_DeviceLibrary_descriptor =
+    internal_static_bloombox_analytics_context_DeviceLibrary_descriptor =
       getDescriptor().getMessageTypes().get(0);
-    internal_static_bloombox_schema_analytics_context_DeviceLibrary_fieldAccessorTable = new
+    internal_static_bloombox_analytics_context_DeviceLibrary_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_bloombox_schema_analytics_context_DeviceLibrary_descriptor,
+        internal_static_bloombox_analytics_context_DeviceLibrary_descriptor,
         new java.lang.String[] { "Variant", "Version", "Client", });
     com.google.protobuf.ExtensionRegistry registry =
         com.google.protobuf.ExtensionRegistry.newInstance();

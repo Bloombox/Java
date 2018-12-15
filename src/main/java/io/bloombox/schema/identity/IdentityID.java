@@ -1,11 +1,12 @@
 /*
- * Copyright 2018, Bloombox, LLC.
+ * Copyright 2018, Momentum Ideas, Co. All rights reserved.
  *
- * Licensed under the Apache License, Version 2.0 (the "License");
- * you may not use this file except in compliance with the License.
- * You may obtain a copy of the License at
- *
- *     http://www.apache.org/licenses/LICENSE-2.0
+ * Source and object computer code contained herein is the private intellectual
+ * property of Momentum Ideas Co., a Delaware Corporation. Use of this
+ * code in source form requires permission in writing before use or the
+ * assembly, distribution, or publishing of derivative works, for commercial
+ * purposes or any other purpose, from a duly authorized officer of Momentum
+ * Ideas Co.
  *
  * Unless required by applicable law or agreed to in writing, software
  * distributed under the License is distributed on an "AS IS" BASIS,
@@ -35,7 +36,7 @@ public final class IdentityID {
    * Enumerates supported types of user-provided, government-issued ID.
    * </pre>
    *
-   * Protobuf enum {@code bloombox.schema.identity.IDType}
+   * Protobuf enum {@code bloombox.identity.IDType}
    */
   public enum IDType
       implements com.google.protobuf.ProtocolMessageEnum {
@@ -145,11 +146,11 @@ public final class IdentityID {
       this.value = value;
     }
 
-    // @@protoc_insertion_point(enum_scope:bloombox.schema.identity.IDType)
+    // @@protoc_insertion_point(enum_scope:bloombox.identity.IDType)
   }
 
   public interface IDReferenceOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:bloombox.schema.identity.IDReference)
+      // @@protoc_insertion_point(interface_extends:bloombox.identity.IDReference)
       com.google.protobuf.MessageOrBuilder {
 
     /**
@@ -157,7 +158,7 @@ public final class IdentityID {
      * Type of ID we're specifying.
      * </pre>
      *
-     * <code>.bloombox.schema.identity.IDType type = 1 [(.gen_bq_schema.description) = "Type of ID we&#92;'re specifying."];</code>
+     * <code>.bloombox.identity.IDType type = 1 [(.gen_bq_schema.description) = "Type of ID we&#92;'re specifying."];</code>
      */
     int getTypeValue();
     /**
@@ -165,7 +166,7 @@ public final class IdentityID {
      * Type of ID we're specifying.
      * </pre>
      *
-     * <code>.bloombox.schema.identity.IDType type = 1 [(.gen_bq_schema.description) = "Type of ID we&#92;'re specifying."];</code>
+     * <code>.bloombox.identity.IDType type = 1 [(.gen_bq_schema.description) = "Type of ID we&#92;'re specifying."];</code>
      */
     io.bloombox.schema.identity.IdentityID.IDType getType();
 
@@ -224,7 +225,7 @@ public final class IdentityID {
      * United States Driver's License.
      * </pre>
      *
-     * <code>.bloombox.schema.identity.ids.USDLReference license = 20 [(.gen_bq_schema.description) = "United States Driver&#92;'s License."];</code>
+     * <code>.bloombox.identity.ids.USDLReference license = 20 [(.gen_bq_schema.description) = "United States Driver&#92;'s License."];</code>
      */
     boolean hasLicense();
     /**
@@ -232,7 +233,7 @@ public final class IdentityID {
      * United States Driver's License.
      * </pre>
      *
-     * <code>.bloombox.schema.identity.ids.USDLReference license = 20 [(.gen_bq_schema.description) = "United States Driver&#92;'s License."];</code>
+     * <code>.bloombox.identity.ids.USDLReference license = 20 [(.gen_bq_schema.description) = "United States Driver&#92;'s License."];</code>
      */
     io.bloombox.schema.identity.ids.DriversLicenseID.USDLReference getLicense();
     /**
@@ -240,7 +241,7 @@ public final class IdentityID {
      * United States Driver's License.
      * </pre>
      *
-     * <code>.bloombox.schema.identity.ids.USDLReference license = 20 [(.gen_bq_schema.description) = "United States Driver&#92;'s License."];</code>
+     * <code>.bloombox.identity.ids.USDLReference license = 20 [(.gen_bq_schema.description) = "United States Driver&#92;'s License."];</code>
      */
     io.bloombox.schema.identity.ids.DriversLicenseID.USDLReferenceOrBuilder getLicenseOrBuilder();
 
@@ -249,7 +250,7 @@ public final class IdentityID {
      * National passport.
      * </pre>
      *
-     * <code>.bloombox.schema.identity.ids.PassportReference passport = 21 [(.gen_bq_schema.description) = "National passport."];</code>
+     * <code>.bloombox.identity.ids.PassportReference passport = 21 [(.gen_bq_schema.description) = "National passport."];</code>
      */
     boolean hasPassport();
     /**
@@ -257,7 +258,7 @@ public final class IdentityID {
      * National passport.
      * </pre>
      *
-     * <code>.bloombox.schema.identity.ids.PassportReference passport = 21 [(.gen_bq_schema.description) = "National passport."];</code>
+     * <code>.bloombox.identity.ids.PassportReference passport = 21 [(.gen_bq_schema.description) = "National passport."];</code>
      */
     io.bloombox.schema.identity.ids.PassportID.PassportReference getPassport();
     /**
@@ -265,7 +266,7 @@ public final class IdentityID {
      * National passport.
      * </pre>
      *
-     * <code>.bloombox.schema.identity.ids.PassportReference passport = 21 [(.gen_bq_schema.description) = "National passport."];</code>
+     * <code>.bloombox.identity.ids.PassportReference passport = 21 [(.gen_bq_schema.description) = "National passport."];</code>
      */
     io.bloombox.schema.identity.ids.PassportID.PassportReferenceOrBuilder getPassportOrBuilder();
 
@@ -273,14 +274,14 @@ public final class IdentityID {
   }
   /**
    * <pre>
-   * Refererence to a government-issued ID.
+   * Reference to a government-issued ID.
    * </pre>
    *
-   * Protobuf type {@code bloombox.schema.identity.IDReference}
+   * Protobuf type {@code bloombox.identity.IDReference}
    */
   public  static final class IDReference extends
       com.google.protobuf.GeneratedMessageV3 implements
-      // @@protoc_insertion_point(message_implements:bloombox.schema.identity.IDReference)
+      // @@protoc_insertion_point(message_implements:bloombox.identity.IDReference)
       IDReferenceOrBuilder {
   private static final long serialVersionUID = 0L;
     // Use IDReference.newBuilder() to construct.
@@ -315,13 +316,6 @@ public final class IdentityID {
             case 0:
               done = true;
               break;
-            default: {
-              if (!parseUnknownFieldProto3(
-                  input, unknownFields, extensionRegistry, tag)) {
-                done = true;
-              }
-              break;
-            }
             case 8: {
               int rawValue = input.readEnum();
 
@@ -382,6 +376,13 @@ public final class IdentityID {
               documentCase_ = 21;
               break;
             }
+            default: {
+              if (!parseUnknownFieldProto3(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
           }
         }
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
@@ -396,12 +397,13 @@ public final class IdentityID {
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return io.bloombox.schema.identity.IdentityID.internal_static_bloombox_schema_identity_IDReference_descriptor;
+      return io.bloombox.schema.identity.IdentityID.internal_static_bloombox_identity_IDReference_descriptor;
     }
 
+    @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return io.bloombox.schema.identity.IdentityID.internal_static_bloombox_schema_identity_IDReference_fieldAccessorTable
+      return io.bloombox.schema.identity.IdentityID.internal_static_bloombox_identity_IDReference_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
               io.bloombox.schema.identity.IdentityID.IDReference.class, io.bloombox.schema.identity.IdentityID.IDReference.Builder.class);
     }
@@ -451,7 +453,7 @@ public final class IdentityID {
      * Type of ID we're specifying.
      * </pre>
      *
-     * <code>.bloombox.schema.identity.IDType type = 1 [(.gen_bq_schema.description) = "Type of ID we&#92;'re specifying."];</code>
+     * <code>.bloombox.identity.IDType type = 1 [(.gen_bq_schema.description) = "Type of ID we&#92;'re specifying."];</code>
      */
     public int getTypeValue() {
       return type_;
@@ -461,9 +463,10 @@ public final class IdentityID {
      * Type of ID we're specifying.
      * </pre>
      *
-     * <code>.bloombox.schema.identity.IDType type = 1 [(.gen_bq_schema.description) = "Type of ID we&#92;'re specifying."];</code>
+     * <code>.bloombox.identity.IDType type = 1 [(.gen_bq_schema.description) = "Type of ID we&#92;'re specifying."];</code>
      */
     public io.bloombox.schema.identity.IdentityID.IDType getType() {
+      @SuppressWarnings("deprecation")
       io.bloombox.schema.identity.IdentityID.IDType result = io.bloombox.schema.identity.IdentityID.IDType.valueOf(type_);
       return result == null ? io.bloombox.schema.identity.IdentityID.IDType.UNRECOGNIZED : result;
     }
@@ -540,7 +543,7 @@ public final class IdentityID {
      * United States Driver's License.
      * </pre>
      *
-     * <code>.bloombox.schema.identity.ids.USDLReference license = 20 [(.gen_bq_schema.description) = "United States Driver&#92;'s License."];</code>
+     * <code>.bloombox.identity.ids.USDLReference license = 20 [(.gen_bq_schema.description) = "United States Driver&#92;'s License."];</code>
      */
     public boolean hasLicense() {
       return documentCase_ == 20;
@@ -550,7 +553,7 @@ public final class IdentityID {
      * United States Driver's License.
      * </pre>
      *
-     * <code>.bloombox.schema.identity.ids.USDLReference license = 20 [(.gen_bq_schema.description) = "United States Driver&#92;'s License."];</code>
+     * <code>.bloombox.identity.ids.USDLReference license = 20 [(.gen_bq_schema.description) = "United States Driver&#92;'s License."];</code>
      */
     public io.bloombox.schema.identity.ids.DriversLicenseID.USDLReference getLicense() {
       if (documentCase_ == 20) {
@@ -563,7 +566,7 @@ public final class IdentityID {
      * United States Driver's License.
      * </pre>
      *
-     * <code>.bloombox.schema.identity.ids.USDLReference license = 20 [(.gen_bq_schema.description) = "United States Driver&#92;'s License."];</code>
+     * <code>.bloombox.identity.ids.USDLReference license = 20 [(.gen_bq_schema.description) = "United States Driver&#92;'s License."];</code>
      */
     public io.bloombox.schema.identity.ids.DriversLicenseID.USDLReferenceOrBuilder getLicenseOrBuilder() {
       if (documentCase_ == 20) {
@@ -578,7 +581,7 @@ public final class IdentityID {
      * National passport.
      * </pre>
      *
-     * <code>.bloombox.schema.identity.ids.PassportReference passport = 21 [(.gen_bq_schema.description) = "National passport."];</code>
+     * <code>.bloombox.identity.ids.PassportReference passport = 21 [(.gen_bq_schema.description) = "National passport."];</code>
      */
     public boolean hasPassport() {
       return documentCase_ == 21;
@@ -588,7 +591,7 @@ public final class IdentityID {
      * National passport.
      * </pre>
      *
-     * <code>.bloombox.schema.identity.ids.PassportReference passport = 21 [(.gen_bq_schema.description) = "National passport."];</code>
+     * <code>.bloombox.identity.ids.PassportReference passport = 21 [(.gen_bq_schema.description) = "National passport."];</code>
      */
     public io.bloombox.schema.identity.ids.PassportID.PassportReference getPassport() {
       if (documentCase_ == 21) {
@@ -601,7 +604,7 @@ public final class IdentityID {
      * National passport.
      * </pre>
      *
-     * <code>.bloombox.schema.identity.ids.PassportReference passport = 21 [(.gen_bq_schema.description) = "National passport."];</code>
+     * <code>.bloombox.identity.ids.PassportReference passport = 21 [(.gen_bq_schema.description) = "National passport."];</code>
      */
     public io.bloombox.schema.identity.ids.PassportID.PassportReferenceOrBuilder getPassportOrBuilder() {
       if (documentCase_ == 21) {
@@ -611,6 +614,7 @@ public final class IdentityID {
     }
 
     private byte memoizedIsInitialized = -1;
+    @java.lang.Override
     public final boolean isInitialized() {
       byte isInitialized = memoizedIsInitialized;
       if (isInitialized == 1) return true;
@@ -620,6 +624,7 @@ public final class IdentityID {
       return true;
     }
 
+    @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
       if (type_ != io.bloombox.schema.identity.IdentityID.IDType.USDL.getNumber()) {
@@ -640,6 +645,7 @@ public final class IdentityID {
       unknownFields.writeTo(output);
     }
 
+    @java.lang.Override
     public int getSerializedSize() {
       int size = memoizedSize;
       if (size != -1) return size;
@@ -815,6 +821,7 @@ public final class IdentityID {
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
 
+    @java.lang.Override
     public Builder newBuilderForType() { return newBuilder(); }
     public static Builder newBuilder() {
       return DEFAULT_INSTANCE.toBuilder();
@@ -822,6 +829,7 @@ public final class IdentityID {
     public static Builder newBuilder(io.bloombox.schema.identity.IdentityID.IDReference prototype) {
       return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
     }
+    @java.lang.Override
     public Builder toBuilder() {
       return this == DEFAULT_INSTANCE
           ? new Builder() : new Builder().mergeFrom(this);
@@ -835,23 +843,24 @@ public final class IdentityID {
     }
     /**
      * <pre>
-     * Refererence to a government-issued ID.
+     * Reference to a government-issued ID.
      * </pre>
      *
-     * Protobuf type {@code bloombox.schema.identity.IDReference}
+     * Protobuf type {@code bloombox.identity.IDReference}
      */
     public static final class Builder extends
         com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:bloombox.schema.identity.IDReference)
+        // @@protoc_insertion_point(builder_implements:bloombox.identity.IDReference)
         io.bloombox.schema.identity.IdentityID.IDReferenceOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return io.bloombox.schema.identity.IdentityID.internal_static_bloombox_schema_identity_IDReference_descriptor;
+        return io.bloombox.schema.identity.IdentityID.internal_static_bloombox_identity_IDReference_descriptor;
       }
 
+      @java.lang.Override
       protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return io.bloombox.schema.identity.IdentityID.internal_static_bloombox_schema_identity_IDReference_fieldAccessorTable
+        return io.bloombox.schema.identity.IdentityID.internal_static_bloombox_identity_IDReference_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
                 io.bloombox.schema.identity.IdentityID.IDReference.class, io.bloombox.schema.identity.IdentityID.IDReference.Builder.class);
       }
@@ -871,6 +880,7 @@ public final class IdentityID {
                 .alwaysUseFieldBuilders) {
         }
       }
+      @java.lang.Override
       public Builder clear() {
         super.clear();
         type_ = 0;
@@ -892,15 +902,18 @@ public final class IdentityID {
         return this;
       }
 
+      @java.lang.Override
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return io.bloombox.schema.identity.IdentityID.internal_static_bloombox_schema_identity_IDReference_descriptor;
+        return io.bloombox.schema.identity.IdentityID.internal_static_bloombox_identity_IDReference_descriptor;
       }
 
+      @java.lang.Override
       public io.bloombox.schema.identity.IdentityID.IDReference getDefaultInstanceForType() {
         return io.bloombox.schema.identity.IdentityID.IDReference.getDefaultInstance();
       }
 
+      @java.lang.Override
       public io.bloombox.schema.identity.IdentityID.IDReference build() {
         io.bloombox.schema.identity.IdentityID.IDReference result = buildPartial();
         if (!result.isInitialized()) {
@@ -909,6 +922,7 @@ public final class IdentityID {
         return result;
       }
 
+      @java.lang.Override
       public io.bloombox.schema.identity.IdentityID.IDReference buildPartial() {
         io.bloombox.schema.identity.IdentityID.IDReference result = new io.bloombox.schema.identity.IdentityID.IDReference(this);
         result.type_ = type_;
@@ -941,32 +955,39 @@ public final class IdentityID {
         return result;
       }
 
+      @java.lang.Override
       public Builder clone() {
         return (Builder) super.clone();
       }
+      @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
         return (Builder) super.setField(field, value);
       }
+      @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
         return (Builder) super.clearField(field);
       }
+      @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
         return (Builder) super.clearOneof(oneof);
       }
+      @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
         return (Builder) super.setRepeatedField(field, index, value);
       }
+      @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
         return (Builder) super.addRepeatedField(field, value);
       }
+      @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
         if (other instanceof io.bloombox.schema.identity.IdentityID.IDReference) {
           return mergeFrom((io.bloombox.schema.identity.IdentityID.IDReference)other);
@@ -1005,10 +1026,12 @@ public final class IdentityID {
         return this;
       }
 
+      @java.lang.Override
       public final boolean isInitialized() {
         return true;
       }
 
+      @java.lang.Override
       public Builder mergeFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -1048,7 +1071,7 @@ public final class IdentityID {
        * Type of ID we're specifying.
        * </pre>
        *
-       * <code>.bloombox.schema.identity.IDType type = 1 [(.gen_bq_schema.description) = "Type of ID we&#92;'re specifying."];</code>
+       * <code>.bloombox.identity.IDType type = 1 [(.gen_bq_schema.description) = "Type of ID we&#92;'re specifying."];</code>
        */
       public int getTypeValue() {
         return type_;
@@ -1058,7 +1081,7 @@ public final class IdentityID {
        * Type of ID we're specifying.
        * </pre>
        *
-       * <code>.bloombox.schema.identity.IDType type = 1 [(.gen_bq_schema.description) = "Type of ID we&#92;'re specifying."];</code>
+       * <code>.bloombox.identity.IDType type = 1 [(.gen_bq_schema.description) = "Type of ID we&#92;'re specifying."];</code>
        */
       public Builder setTypeValue(int value) {
         type_ = value;
@@ -1070,9 +1093,10 @@ public final class IdentityID {
        * Type of ID we're specifying.
        * </pre>
        *
-       * <code>.bloombox.schema.identity.IDType type = 1 [(.gen_bq_schema.description) = "Type of ID we&#92;'re specifying."];</code>
+       * <code>.bloombox.identity.IDType type = 1 [(.gen_bq_schema.description) = "Type of ID we&#92;'re specifying."];</code>
        */
       public io.bloombox.schema.identity.IdentityID.IDType getType() {
+        @SuppressWarnings("deprecation")
         io.bloombox.schema.identity.IdentityID.IDType result = io.bloombox.schema.identity.IdentityID.IDType.valueOf(type_);
         return result == null ? io.bloombox.schema.identity.IdentityID.IDType.UNRECOGNIZED : result;
       }
@@ -1081,7 +1105,7 @@ public final class IdentityID {
        * Type of ID we're specifying.
        * </pre>
        *
-       * <code>.bloombox.schema.identity.IDType type = 1 [(.gen_bq_schema.description) = "Type of ID we&#92;'re specifying."];</code>
+       * <code>.bloombox.identity.IDType type = 1 [(.gen_bq_schema.description) = "Type of ID we&#92;'re specifying."];</code>
        */
       public Builder setType(io.bloombox.schema.identity.IdentityID.IDType value) {
         if (value == null) {
@@ -1097,7 +1121,7 @@ public final class IdentityID {
        * Type of ID we're specifying.
        * </pre>
        *
-       * <code>.bloombox.schema.identity.IDType type = 1 [(.gen_bq_schema.description) = "Type of ID we&#92;'re specifying."];</code>
+       * <code>.bloombox.identity.IDType type = 1 [(.gen_bq_schema.description) = "Type of ID we&#92;'re specifying."];</code>
        */
       public Builder clearType() {
         
@@ -1419,7 +1443,7 @@ public final class IdentityID {
        * United States Driver's License.
        * </pre>
        *
-       * <code>.bloombox.schema.identity.ids.USDLReference license = 20 [(.gen_bq_schema.description) = "United States Driver&#92;'s License."];</code>
+       * <code>.bloombox.identity.ids.USDLReference license = 20 [(.gen_bq_schema.description) = "United States Driver&#92;'s License."];</code>
        */
       public boolean hasLicense() {
         return documentCase_ == 20;
@@ -1429,7 +1453,7 @@ public final class IdentityID {
        * United States Driver's License.
        * </pre>
        *
-       * <code>.bloombox.schema.identity.ids.USDLReference license = 20 [(.gen_bq_schema.description) = "United States Driver&#92;'s License."];</code>
+       * <code>.bloombox.identity.ids.USDLReference license = 20 [(.gen_bq_schema.description) = "United States Driver&#92;'s License."];</code>
        */
       public io.bloombox.schema.identity.ids.DriversLicenseID.USDLReference getLicense() {
         if (licenseBuilder_ == null) {
@@ -1449,7 +1473,7 @@ public final class IdentityID {
        * United States Driver's License.
        * </pre>
        *
-       * <code>.bloombox.schema.identity.ids.USDLReference license = 20 [(.gen_bq_schema.description) = "United States Driver&#92;'s License."];</code>
+       * <code>.bloombox.identity.ids.USDLReference license = 20 [(.gen_bq_schema.description) = "United States Driver&#92;'s License."];</code>
        */
       public Builder setLicense(io.bloombox.schema.identity.ids.DriversLicenseID.USDLReference value) {
         if (licenseBuilder_ == null) {
@@ -1469,7 +1493,7 @@ public final class IdentityID {
        * United States Driver's License.
        * </pre>
        *
-       * <code>.bloombox.schema.identity.ids.USDLReference license = 20 [(.gen_bq_schema.description) = "United States Driver&#92;'s License."];</code>
+       * <code>.bloombox.identity.ids.USDLReference license = 20 [(.gen_bq_schema.description) = "United States Driver&#92;'s License."];</code>
        */
       public Builder setLicense(
           io.bloombox.schema.identity.ids.DriversLicenseID.USDLReference.Builder builderForValue) {
@@ -1487,7 +1511,7 @@ public final class IdentityID {
        * United States Driver's License.
        * </pre>
        *
-       * <code>.bloombox.schema.identity.ids.USDLReference license = 20 [(.gen_bq_schema.description) = "United States Driver&#92;'s License."];</code>
+       * <code>.bloombox.identity.ids.USDLReference license = 20 [(.gen_bq_schema.description) = "United States Driver&#92;'s License."];</code>
        */
       public Builder mergeLicense(io.bloombox.schema.identity.ids.DriversLicenseID.USDLReference value) {
         if (licenseBuilder_ == null) {
@@ -1513,7 +1537,7 @@ public final class IdentityID {
        * United States Driver's License.
        * </pre>
        *
-       * <code>.bloombox.schema.identity.ids.USDLReference license = 20 [(.gen_bq_schema.description) = "United States Driver&#92;'s License."];</code>
+       * <code>.bloombox.identity.ids.USDLReference license = 20 [(.gen_bq_schema.description) = "United States Driver&#92;'s License."];</code>
        */
       public Builder clearLicense() {
         if (licenseBuilder_ == null) {
@@ -1536,7 +1560,7 @@ public final class IdentityID {
        * United States Driver's License.
        * </pre>
        *
-       * <code>.bloombox.schema.identity.ids.USDLReference license = 20 [(.gen_bq_schema.description) = "United States Driver&#92;'s License."];</code>
+       * <code>.bloombox.identity.ids.USDLReference license = 20 [(.gen_bq_schema.description) = "United States Driver&#92;'s License."];</code>
        */
       public io.bloombox.schema.identity.ids.DriversLicenseID.USDLReference.Builder getLicenseBuilder() {
         return getLicenseFieldBuilder().getBuilder();
@@ -1546,7 +1570,7 @@ public final class IdentityID {
        * United States Driver's License.
        * </pre>
        *
-       * <code>.bloombox.schema.identity.ids.USDLReference license = 20 [(.gen_bq_schema.description) = "United States Driver&#92;'s License."];</code>
+       * <code>.bloombox.identity.ids.USDLReference license = 20 [(.gen_bq_schema.description) = "United States Driver&#92;'s License."];</code>
        */
       public io.bloombox.schema.identity.ids.DriversLicenseID.USDLReferenceOrBuilder getLicenseOrBuilder() {
         if ((documentCase_ == 20) && (licenseBuilder_ != null)) {
@@ -1563,7 +1587,7 @@ public final class IdentityID {
        * United States Driver's License.
        * </pre>
        *
-       * <code>.bloombox.schema.identity.ids.USDLReference license = 20 [(.gen_bq_schema.description) = "United States Driver&#92;'s License."];</code>
+       * <code>.bloombox.identity.ids.USDLReference license = 20 [(.gen_bq_schema.description) = "United States Driver&#92;'s License."];</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
           io.bloombox.schema.identity.ids.DriversLicenseID.USDLReference, io.bloombox.schema.identity.ids.DriversLicenseID.USDLReference.Builder, io.bloombox.schema.identity.ids.DriversLicenseID.USDLReferenceOrBuilder> 
@@ -1591,7 +1615,7 @@ public final class IdentityID {
        * National passport.
        * </pre>
        *
-       * <code>.bloombox.schema.identity.ids.PassportReference passport = 21 [(.gen_bq_schema.description) = "National passport."];</code>
+       * <code>.bloombox.identity.ids.PassportReference passport = 21 [(.gen_bq_schema.description) = "National passport."];</code>
        */
       public boolean hasPassport() {
         return documentCase_ == 21;
@@ -1601,7 +1625,7 @@ public final class IdentityID {
        * National passport.
        * </pre>
        *
-       * <code>.bloombox.schema.identity.ids.PassportReference passport = 21 [(.gen_bq_schema.description) = "National passport."];</code>
+       * <code>.bloombox.identity.ids.PassportReference passport = 21 [(.gen_bq_schema.description) = "National passport."];</code>
        */
       public io.bloombox.schema.identity.ids.PassportID.PassportReference getPassport() {
         if (passportBuilder_ == null) {
@@ -1621,7 +1645,7 @@ public final class IdentityID {
        * National passport.
        * </pre>
        *
-       * <code>.bloombox.schema.identity.ids.PassportReference passport = 21 [(.gen_bq_schema.description) = "National passport."];</code>
+       * <code>.bloombox.identity.ids.PassportReference passport = 21 [(.gen_bq_schema.description) = "National passport."];</code>
        */
       public Builder setPassport(io.bloombox.schema.identity.ids.PassportID.PassportReference value) {
         if (passportBuilder_ == null) {
@@ -1641,7 +1665,7 @@ public final class IdentityID {
        * National passport.
        * </pre>
        *
-       * <code>.bloombox.schema.identity.ids.PassportReference passport = 21 [(.gen_bq_schema.description) = "National passport."];</code>
+       * <code>.bloombox.identity.ids.PassportReference passport = 21 [(.gen_bq_schema.description) = "National passport."];</code>
        */
       public Builder setPassport(
           io.bloombox.schema.identity.ids.PassportID.PassportReference.Builder builderForValue) {
@@ -1659,7 +1683,7 @@ public final class IdentityID {
        * National passport.
        * </pre>
        *
-       * <code>.bloombox.schema.identity.ids.PassportReference passport = 21 [(.gen_bq_schema.description) = "National passport."];</code>
+       * <code>.bloombox.identity.ids.PassportReference passport = 21 [(.gen_bq_schema.description) = "National passport."];</code>
        */
       public Builder mergePassport(io.bloombox.schema.identity.ids.PassportID.PassportReference value) {
         if (passportBuilder_ == null) {
@@ -1685,7 +1709,7 @@ public final class IdentityID {
        * National passport.
        * </pre>
        *
-       * <code>.bloombox.schema.identity.ids.PassportReference passport = 21 [(.gen_bq_schema.description) = "National passport."];</code>
+       * <code>.bloombox.identity.ids.PassportReference passport = 21 [(.gen_bq_schema.description) = "National passport."];</code>
        */
       public Builder clearPassport() {
         if (passportBuilder_ == null) {
@@ -1708,7 +1732,7 @@ public final class IdentityID {
        * National passport.
        * </pre>
        *
-       * <code>.bloombox.schema.identity.ids.PassportReference passport = 21 [(.gen_bq_schema.description) = "National passport."];</code>
+       * <code>.bloombox.identity.ids.PassportReference passport = 21 [(.gen_bq_schema.description) = "National passport."];</code>
        */
       public io.bloombox.schema.identity.ids.PassportID.PassportReference.Builder getPassportBuilder() {
         return getPassportFieldBuilder().getBuilder();
@@ -1718,7 +1742,7 @@ public final class IdentityID {
        * National passport.
        * </pre>
        *
-       * <code>.bloombox.schema.identity.ids.PassportReference passport = 21 [(.gen_bq_schema.description) = "National passport."];</code>
+       * <code>.bloombox.identity.ids.PassportReference passport = 21 [(.gen_bq_schema.description) = "National passport."];</code>
        */
       public io.bloombox.schema.identity.ids.PassportID.PassportReferenceOrBuilder getPassportOrBuilder() {
         if ((documentCase_ == 21) && (passportBuilder_ != null)) {
@@ -1735,7 +1759,7 @@ public final class IdentityID {
        * National passport.
        * </pre>
        *
-       * <code>.bloombox.schema.identity.ids.PassportReference passport = 21 [(.gen_bq_schema.description) = "National passport."];</code>
+       * <code>.bloombox.identity.ids.PassportReference passport = 21 [(.gen_bq_schema.description) = "National passport."];</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
           io.bloombox.schema.identity.ids.PassportID.PassportReference, io.bloombox.schema.identity.ids.PassportID.PassportReference.Builder, io.bloombox.schema.identity.ids.PassportID.PassportReferenceOrBuilder> 
@@ -1755,21 +1779,23 @@ public final class IdentityID {
         onChanged();;
         return passportBuilder_;
       }
+      @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
         return super.setUnknownFieldsProto3(unknownFields);
       }
 
+      @java.lang.Override
       public final Builder mergeUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
         return super.mergeUnknownFields(unknownFields);
       }
 
 
-      // @@protoc_insertion_point(builder_scope:bloombox.schema.identity.IDReference)
+      // @@protoc_insertion_point(builder_scope:bloombox.identity.IDReference)
     }
 
-    // @@protoc_insertion_point(class_scope:bloombox.schema.identity.IDReference)
+    // @@protoc_insertion_point(class_scope:bloombox.identity.IDReference)
     private static final io.bloombox.schema.identity.IdentityID.IDReference DEFAULT_INSTANCE;
     static {
       DEFAULT_INSTANCE = new io.bloombox.schema.identity.IdentityID.IDReference();
@@ -1781,6 +1807,7 @@ public final class IdentityID {
 
     private static final com.google.protobuf.Parser<IDReference>
         PARSER = new com.google.protobuf.AbstractParser<IDReference>() {
+      @java.lang.Override
       public IDReference parsePartialFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -1798,6 +1825,7 @@ public final class IdentityID {
       return PARSER;
     }
 
+    @java.lang.Override
     public io.bloombox.schema.identity.IdentityID.IDReference getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
@@ -1805,7 +1833,7 @@ public final class IdentityID {
   }
 
   public interface IDOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:bloombox.schema.identity.ID)
+      // @@protoc_insertion_point(interface_extends:bloombox.identity.ID)
       com.google.protobuf.MessageOrBuilder {
 
     /**
@@ -1813,7 +1841,7 @@ public final class IdentityID {
      * Type of ID we're specifying.
      * </pre>
      *
-     * <code>.bloombox.schema.identity.IDType type = 1 [(.gen_bq_schema.description) = "Type of ID we&#92;'re specifying."];</code>
+     * <code>.bloombox.identity.IDType type = 1 [(.gen_bq_schema.description) = "Type of ID we&#92;'re specifying."];</code>
      */
     int getTypeValue();
     /**
@@ -1821,7 +1849,7 @@ public final class IdentityID {
      * Type of ID we're specifying.
      * </pre>
      *
-     * <code>.bloombox.schema.identity.IDType type = 1 [(.gen_bq_schema.description) = "Type of ID we&#92;'re specifying."];</code>
+     * <code>.bloombox.identity.IDType type = 1 [(.gen_bq_schema.description) = "Type of ID we&#92;'re specifying."];</code>
      */
     io.bloombox.schema.identity.IdentityID.IDType getType();
 
@@ -1895,10 +1923,37 @@ public final class IdentityID {
 
     /**
      * <pre>
+     * Whether or not this ID has been verified in some way.
+     * </pre>
+     *
+     * <code>bool verified = 5 [(.gen_bq_schema.description) = "Whether or not this ID has been verified in some manner."];</code>
+     */
+    boolean getVerified();
+
+    /**
+     * <pre>
+     * Globally-provisioned ID for this identification document.
+     * </pre>
+     *
+     * <code>string global_id = 6 [(.gen_bq_schema.description) = "Globally-unique ID provisioned to this identification document."];</code>
+     */
+    java.lang.String getGlobalId();
+    /**
+     * <pre>
+     * Globally-provisioned ID for this identification document.
+     * </pre>
+     *
+     * <code>string global_id = 6 [(.gen_bq_schema.description) = "Globally-unique ID provisioned to this identification document."];</code>
+     */
+    com.google.protobuf.ByteString
+        getGlobalIdBytes();
+
+    /**
+     * <pre>
      * United States Driver's License.
      * </pre>
      *
-     * <code>.bloombox.schema.identity.ids.USDL license = 20 [(.gen_bq_schema.description) = "United States Driver&#92;'s License."];</code>
+     * <code>.bloombox.identity.ids.USDL license = 20 [(.gen_bq_schema.description) = "United States Driver&#92;'s License."];</code>
      */
     boolean hasLicense();
     /**
@@ -1906,7 +1961,7 @@ public final class IdentityID {
      * United States Driver's License.
      * </pre>
      *
-     * <code>.bloombox.schema.identity.ids.USDL license = 20 [(.gen_bq_schema.description) = "United States Driver&#92;'s License."];</code>
+     * <code>.bloombox.identity.ids.USDL license = 20 [(.gen_bq_schema.description) = "United States Driver&#92;'s License."];</code>
      */
     io.bloombox.schema.identity.ids.DriversLicenseID.USDL getLicense();
     /**
@@ -1914,7 +1969,7 @@ public final class IdentityID {
      * United States Driver's License.
      * </pre>
      *
-     * <code>.bloombox.schema.identity.ids.USDL license = 20 [(.gen_bq_schema.description) = "United States Driver&#92;'s License."];</code>
+     * <code>.bloombox.identity.ids.USDL license = 20 [(.gen_bq_schema.description) = "United States Driver&#92;'s License."];</code>
      */
     io.bloombox.schema.identity.ids.DriversLicenseID.USDLOrBuilder getLicenseOrBuilder();
 
@@ -1923,7 +1978,7 @@ public final class IdentityID {
      * National passport.
      * </pre>
      *
-     * <code>.bloombox.schema.identity.ids.Passport passport = 21 [(.gen_bq_schema.description) = "National passport."];</code>
+     * <code>.bloombox.identity.ids.Passport passport = 21 [(.gen_bq_schema.description) = "National passport."];</code>
      */
     boolean hasPassport();
     /**
@@ -1931,7 +1986,7 @@ public final class IdentityID {
      * National passport.
      * </pre>
      *
-     * <code>.bloombox.schema.identity.ids.Passport passport = 21 [(.gen_bq_schema.description) = "National passport."];</code>
+     * <code>.bloombox.identity.ids.Passport passport = 21 [(.gen_bq_schema.description) = "National passport."];</code>
      */
     io.bloombox.schema.identity.ids.PassportID.Passport getPassport();
     /**
@@ -1939,7 +1994,7 @@ public final class IdentityID {
      * National passport.
      * </pre>
      *
-     * <code>.bloombox.schema.identity.ids.Passport passport = 21 [(.gen_bq_schema.description) = "National passport."];</code>
+     * <code>.bloombox.identity.ids.Passport passport = 21 [(.gen_bq_schema.description) = "National passport."];</code>
      */
     io.bloombox.schema.identity.ids.PassportID.PassportOrBuilder getPassportOrBuilder();
 
@@ -1950,11 +2005,11 @@ public final class IdentityID {
    * Specifies an object for expressing a user's government ID information.
    * </pre>
    *
-   * Protobuf type {@code bloombox.schema.identity.ID}
+   * Protobuf type {@code bloombox.identity.ID}
    */
   public  static final class ID extends
       com.google.protobuf.GeneratedMessageV3 implements
-      // @@protoc_insertion_point(message_implements:bloombox.schema.identity.ID)
+      // @@protoc_insertion_point(message_implements:bloombox.identity.ID)
       IDOrBuilder {
   private static final long serialVersionUID = 0L;
     // Use ID.newBuilder() to construct.
@@ -1964,6 +2019,8 @@ public final class IdentityID {
     private ID() {
       type_ = 0;
       id_ = "";
+      verified_ = false;
+      globalId_ = "";
     }
 
     @java.lang.Override
@@ -1990,13 +2047,6 @@ public final class IdentityID {
             case 0:
               done = true;
               break;
-            default: {
-              if (!parseUnknownFieldProto3(
-                  input, unknownFields, extensionRegistry, tag)) {
-                done = true;
-              }
-              break;
-            }
             case 8: {
               int rawValue = input.readEnum();
 
@@ -2035,6 +2085,17 @@ public final class IdentityID {
 
               break;
             }
+            case 40: {
+
+              verified_ = input.readBool();
+              break;
+            }
+            case 50: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              globalId_ = s;
+              break;
+            }
             case 162: {
               io.bloombox.schema.identity.ids.DriversLicenseID.USDL.Builder subBuilder = null;
               if (documentCase_ == 20) {
@@ -2063,6 +2124,13 @@ public final class IdentityID {
               documentCase_ = 21;
               break;
             }
+            default: {
+              if (!parseUnknownFieldProto3(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
           }
         }
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
@@ -2077,12 +2145,13 @@ public final class IdentityID {
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return io.bloombox.schema.identity.IdentityID.internal_static_bloombox_schema_identity_ID_descriptor;
+      return io.bloombox.schema.identity.IdentityID.internal_static_bloombox_identity_ID_descriptor;
     }
 
+    @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return io.bloombox.schema.identity.IdentityID.internal_static_bloombox_schema_identity_ID_fieldAccessorTable
+      return io.bloombox.schema.identity.IdentityID.internal_static_bloombox_identity_ID_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
               io.bloombox.schema.identity.IdentityID.ID.class, io.bloombox.schema.identity.IdentityID.ID.Builder.class);
     }
@@ -2132,7 +2201,7 @@ public final class IdentityID {
      * Type of ID we're specifying.
      * </pre>
      *
-     * <code>.bloombox.schema.identity.IDType type = 1 [(.gen_bq_schema.description) = "Type of ID we&#92;'re specifying."];</code>
+     * <code>.bloombox.identity.IDType type = 1 [(.gen_bq_schema.description) = "Type of ID we&#92;'re specifying."];</code>
      */
     public int getTypeValue() {
       return type_;
@@ -2142,9 +2211,10 @@ public final class IdentityID {
      * Type of ID we're specifying.
      * </pre>
      *
-     * <code>.bloombox.schema.identity.IDType type = 1 [(.gen_bq_schema.description) = "Type of ID we&#92;'re specifying."];</code>
+     * <code>.bloombox.identity.IDType type = 1 [(.gen_bq_schema.description) = "Type of ID we&#92;'re specifying."];</code>
      */
     public io.bloombox.schema.identity.IdentityID.IDType getType() {
+      @SuppressWarnings("deprecation")
       io.bloombox.schema.identity.IdentityID.IDType result = io.bloombox.schema.identity.IdentityID.IDType.valueOf(type_);
       return result == null ? io.bloombox.schema.identity.IdentityID.IDType.UNRECOGNIZED : result;
     }
@@ -2257,13 +2327,68 @@ public final class IdentityID {
       return getBirthDate();
     }
 
+    public static final int VERIFIED_FIELD_NUMBER = 5;
+    private boolean verified_;
+    /**
+     * <pre>
+     * Whether or not this ID has been verified in some way.
+     * </pre>
+     *
+     * <code>bool verified = 5 [(.gen_bq_schema.description) = "Whether or not this ID has been verified in some manner."];</code>
+     */
+    public boolean getVerified() {
+      return verified_;
+    }
+
+    public static final int GLOBAL_ID_FIELD_NUMBER = 6;
+    private volatile java.lang.Object globalId_;
+    /**
+     * <pre>
+     * Globally-provisioned ID for this identification document.
+     * </pre>
+     *
+     * <code>string global_id = 6 [(.gen_bq_schema.description) = "Globally-unique ID provisioned to this identification document."];</code>
+     */
+    public java.lang.String getGlobalId() {
+      java.lang.Object ref = globalId_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        globalId_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * Globally-provisioned ID for this identification document.
+     * </pre>
+     *
+     * <code>string global_id = 6 [(.gen_bq_schema.description) = "Globally-unique ID provisioned to this identification document."];</code>
+     */
+    public com.google.protobuf.ByteString
+        getGlobalIdBytes() {
+      java.lang.Object ref = globalId_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        globalId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
     public static final int LICENSE_FIELD_NUMBER = 20;
     /**
      * <pre>
      * United States Driver's License.
      * </pre>
      *
-     * <code>.bloombox.schema.identity.ids.USDL license = 20 [(.gen_bq_schema.description) = "United States Driver&#92;'s License."];</code>
+     * <code>.bloombox.identity.ids.USDL license = 20 [(.gen_bq_schema.description) = "United States Driver&#92;'s License."];</code>
      */
     public boolean hasLicense() {
       return documentCase_ == 20;
@@ -2273,7 +2398,7 @@ public final class IdentityID {
      * United States Driver's License.
      * </pre>
      *
-     * <code>.bloombox.schema.identity.ids.USDL license = 20 [(.gen_bq_schema.description) = "United States Driver&#92;'s License."];</code>
+     * <code>.bloombox.identity.ids.USDL license = 20 [(.gen_bq_schema.description) = "United States Driver&#92;'s License."];</code>
      */
     public io.bloombox.schema.identity.ids.DriversLicenseID.USDL getLicense() {
       if (documentCase_ == 20) {
@@ -2286,7 +2411,7 @@ public final class IdentityID {
      * United States Driver's License.
      * </pre>
      *
-     * <code>.bloombox.schema.identity.ids.USDL license = 20 [(.gen_bq_schema.description) = "United States Driver&#92;'s License."];</code>
+     * <code>.bloombox.identity.ids.USDL license = 20 [(.gen_bq_schema.description) = "United States Driver&#92;'s License."];</code>
      */
     public io.bloombox.schema.identity.ids.DriversLicenseID.USDLOrBuilder getLicenseOrBuilder() {
       if (documentCase_ == 20) {
@@ -2301,7 +2426,7 @@ public final class IdentityID {
      * National passport.
      * </pre>
      *
-     * <code>.bloombox.schema.identity.ids.Passport passport = 21 [(.gen_bq_schema.description) = "National passport."];</code>
+     * <code>.bloombox.identity.ids.Passport passport = 21 [(.gen_bq_schema.description) = "National passport."];</code>
      */
     public boolean hasPassport() {
       return documentCase_ == 21;
@@ -2311,7 +2436,7 @@ public final class IdentityID {
      * National passport.
      * </pre>
      *
-     * <code>.bloombox.schema.identity.ids.Passport passport = 21 [(.gen_bq_schema.description) = "National passport."];</code>
+     * <code>.bloombox.identity.ids.Passport passport = 21 [(.gen_bq_schema.description) = "National passport."];</code>
      */
     public io.bloombox.schema.identity.ids.PassportID.Passport getPassport() {
       if (documentCase_ == 21) {
@@ -2324,7 +2449,7 @@ public final class IdentityID {
      * National passport.
      * </pre>
      *
-     * <code>.bloombox.schema.identity.ids.Passport passport = 21 [(.gen_bq_schema.description) = "National passport."];</code>
+     * <code>.bloombox.identity.ids.Passport passport = 21 [(.gen_bq_schema.description) = "National passport."];</code>
      */
     public io.bloombox.schema.identity.ids.PassportID.PassportOrBuilder getPassportOrBuilder() {
       if (documentCase_ == 21) {
@@ -2334,6 +2459,7 @@ public final class IdentityID {
     }
 
     private byte memoizedIsInitialized = -1;
+    @java.lang.Override
     public final boolean isInitialized() {
       byte isInitialized = memoizedIsInitialized;
       if (isInitialized == 1) return true;
@@ -2343,6 +2469,7 @@ public final class IdentityID {
       return true;
     }
 
+    @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
       if (type_ != io.bloombox.schema.identity.IdentityID.IDType.USDL.getNumber()) {
@@ -2357,6 +2484,12 @@ public final class IdentityID {
       if (birthDate_ != null) {
         output.writeMessage(4, getBirthDate());
       }
+      if (verified_ != false) {
+        output.writeBool(5, verified_);
+      }
+      if (!getGlobalIdBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 6, globalId_);
+      }
       if (documentCase_ == 20) {
         output.writeMessage(20, (io.bloombox.schema.identity.ids.DriversLicenseID.USDL) document_);
       }
@@ -2366,6 +2499,7 @@ public final class IdentityID {
       unknownFields.writeTo(output);
     }
 
+    @java.lang.Override
     public int getSerializedSize() {
       int size = memoizedSize;
       if (size != -1) return size;
@@ -2385,6 +2519,13 @@ public final class IdentityID {
       if (birthDate_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(4, getBirthDate());
+      }
+      if (verified_ != false) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBoolSize(5, verified_);
+      }
+      if (!getGlobalIdBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(6, globalId_);
       }
       if (documentCase_ == 20) {
         size += com.google.protobuf.CodedOutputStream
@@ -2423,6 +2564,10 @@ public final class IdentityID {
         result = result && getBirthDate()
             .equals(other.getBirthDate());
       }
+      result = result && (getVerified()
+          == other.getVerified());
+      result = result && getGlobalId()
+          .equals(other.getGlobalId());
       result = result && getDocumentCase().equals(
           other.getDocumentCase());
       if (!result) return false;
@@ -2461,6 +2606,11 @@ public final class IdentityID {
         hash = (37 * hash) + BIRTH_DATE_FIELD_NUMBER;
         hash = (53 * hash) + getBirthDate().hashCode();
       }
+      hash = (37 * hash) + VERIFIED_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+          getVerified());
+      hash = (37 * hash) + GLOBAL_ID_FIELD_NUMBER;
+      hash = (53 * hash) + getGlobalId().hashCode();
       switch (documentCase_) {
         case 20:
           hash = (37 * hash) + LICENSE_FIELD_NUMBER;
@@ -2548,6 +2698,7 @@ public final class IdentityID {
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
 
+    @java.lang.Override
     public Builder newBuilderForType() { return newBuilder(); }
     public static Builder newBuilder() {
       return DEFAULT_INSTANCE.toBuilder();
@@ -2555,6 +2706,7 @@ public final class IdentityID {
     public static Builder newBuilder(io.bloombox.schema.identity.IdentityID.ID prototype) {
       return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
     }
+    @java.lang.Override
     public Builder toBuilder() {
       return this == DEFAULT_INSTANCE
           ? new Builder() : new Builder().mergeFrom(this);
@@ -2571,20 +2723,21 @@ public final class IdentityID {
      * Specifies an object for expressing a user's government ID information.
      * </pre>
      *
-     * Protobuf type {@code bloombox.schema.identity.ID}
+     * Protobuf type {@code bloombox.identity.ID}
      */
     public static final class Builder extends
         com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:bloombox.schema.identity.ID)
+        // @@protoc_insertion_point(builder_implements:bloombox.identity.ID)
         io.bloombox.schema.identity.IdentityID.IDOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return io.bloombox.schema.identity.IdentityID.internal_static_bloombox_schema_identity_ID_descriptor;
+        return io.bloombox.schema.identity.IdentityID.internal_static_bloombox_identity_ID_descriptor;
       }
 
+      @java.lang.Override
       protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return io.bloombox.schema.identity.IdentityID.internal_static_bloombox_schema_identity_ID_fieldAccessorTable
+        return io.bloombox.schema.identity.IdentityID.internal_static_bloombox_identity_ID_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
                 io.bloombox.schema.identity.IdentityID.ID.class, io.bloombox.schema.identity.IdentityID.ID.Builder.class);
       }
@@ -2604,6 +2757,7 @@ public final class IdentityID {
                 .alwaysUseFieldBuilders) {
         }
       }
+      @java.lang.Override
       public Builder clear() {
         super.clear();
         type_ = 0;
@@ -2622,20 +2776,27 @@ public final class IdentityID {
           birthDate_ = null;
           birthDateBuilder_ = null;
         }
+        verified_ = false;
+
+        globalId_ = "";
+
         documentCase_ = 0;
         document_ = null;
         return this;
       }
 
+      @java.lang.Override
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return io.bloombox.schema.identity.IdentityID.internal_static_bloombox_schema_identity_ID_descriptor;
+        return io.bloombox.schema.identity.IdentityID.internal_static_bloombox_identity_ID_descriptor;
       }
 
+      @java.lang.Override
       public io.bloombox.schema.identity.IdentityID.ID getDefaultInstanceForType() {
         return io.bloombox.schema.identity.IdentityID.ID.getDefaultInstance();
       }
 
+      @java.lang.Override
       public io.bloombox.schema.identity.IdentityID.ID build() {
         io.bloombox.schema.identity.IdentityID.ID result = buildPartial();
         if (!result.isInitialized()) {
@@ -2644,6 +2805,7 @@ public final class IdentityID {
         return result;
       }
 
+      @java.lang.Override
       public io.bloombox.schema.identity.IdentityID.ID buildPartial() {
         io.bloombox.schema.identity.IdentityID.ID result = new io.bloombox.schema.identity.IdentityID.ID(this);
         result.type_ = type_;
@@ -2658,6 +2820,8 @@ public final class IdentityID {
         } else {
           result.birthDate_ = birthDateBuilder_.build();
         }
+        result.verified_ = verified_;
+        result.globalId_ = globalId_;
         if (documentCase_ == 20) {
           if (licenseBuilder_ == null) {
             result.document_ = document_;
@@ -2677,32 +2841,39 @@ public final class IdentityID {
         return result;
       }
 
+      @java.lang.Override
       public Builder clone() {
         return (Builder) super.clone();
       }
+      @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
         return (Builder) super.setField(field, value);
       }
+      @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
         return (Builder) super.clearField(field);
       }
+      @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
         return (Builder) super.clearOneof(oneof);
       }
+      @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
         return (Builder) super.setRepeatedField(field, index, value);
       }
+      @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
         return (Builder) super.addRepeatedField(field, value);
       }
+      @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
         if (other instanceof io.bloombox.schema.identity.IdentityID.ID) {
           return mergeFrom((io.bloombox.schema.identity.IdentityID.ID)other);
@@ -2727,6 +2898,13 @@ public final class IdentityID {
         if (other.hasBirthDate()) {
           mergeBirthDate(other.getBirthDate());
         }
+        if (other.getVerified() != false) {
+          setVerified(other.getVerified());
+        }
+        if (!other.getGlobalId().isEmpty()) {
+          globalId_ = other.globalId_;
+          onChanged();
+        }
         switch (other.getDocumentCase()) {
           case LICENSE: {
             mergeLicense(other.getLicense());
@@ -2745,10 +2923,12 @@ public final class IdentityID {
         return this;
       }
 
+      @java.lang.Override
       public final boolean isInitialized() {
         return true;
       }
 
+      @java.lang.Override
       public Builder mergeFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -2788,7 +2968,7 @@ public final class IdentityID {
        * Type of ID we're specifying.
        * </pre>
        *
-       * <code>.bloombox.schema.identity.IDType type = 1 [(.gen_bq_schema.description) = "Type of ID we&#92;'re specifying."];</code>
+       * <code>.bloombox.identity.IDType type = 1 [(.gen_bq_schema.description) = "Type of ID we&#92;'re specifying."];</code>
        */
       public int getTypeValue() {
         return type_;
@@ -2798,7 +2978,7 @@ public final class IdentityID {
        * Type of ID we're specifying.
        * </pre>
        *
-       * <code>.bloombox.schema.identity.IDType type = 1 [(.gen_bq_schema.description) = "Type of ID we&#92;'re specifying."];</code>
+       * <code>.bloombox.identity.IDType type = 1 [(.gen_bq_schema.description) = "Type of ID we&#92;'re specifying."];</code>
        */
       public Builder setTypeValue(int value) {
         type_ = value;
@@ -2810,9 +2990,10 @@ public final class IdentityID {
        * Type of ID we're specifying.
        * </pre>
        *
-       * <code>.bloombox.schema.identity.IDType type = 1 [(.gen_bq_schema.description) = "Type of ID we&#92;'re specifying."];</code>
+       * <code>.bloombox.identity.IDType type = 1 [(.gen_bq_schema.description) = "Type of ID we&#92;'re specifying."];</code>
        */
       public io.bloombox.schema.identity.IdentityID.IDType getType() {
+        @SuppressWarnings("deprecation")
         io.bloombox.schema.identity.IdentityID.IDType result = io.bloombox.schema.identity.IdentityID.IDType.valueOf(type_);
         return result == null ? io.bloombox.schema.identity.IdentityID.IDType.UNRECOGNIZED : result;
       }
@@ -2821,7 +3002,7 @@ public final class IdentityID {
        * Type of ID we're specifying.
        * </pre>
        *
-       * <code>.bloombox.schema.identity.IDType type = 1 [(.gen_bq_schema.description) = "Type of ID we&#92;'re specifying."];</code>
+       * <code>.bloombox.identity.IDType type = 1 [(.gen_bq_schema.description) = "Type of ID we&#92;'re specifying."];</code>
        */
       public Builder setType(io.bloombox.schema.identity.IdentityID.IDType value) {
         if (value == null) {
@@ -2837,7 +3018,7 @@ public final class IdentityID {
        * Type of ID we're specifying.
        * </pre>
        *
-       * <code>.bloombox.schema.identity.IDType type = 1 [(.gen_bq_schema.description) = "Type of ID we&#92;'re specifying."];</code>
+       * <code>.bloombox.identity.IDType type = 1 [(.gen_bq_schema.description) = "Type of ID we&#92;'re specifying."];</code>
        */
       public Builder clearType() {
         
@@ -3241,6 +3422,133 @@ public final class IdentityID {
         return birthDateBuilder_;
       }
 
+      private boolean verified_ ;
+      /**
+       * <pre>
+       * Whether or not this ID has been verified in some way.
+       * </pre>
+       *
+       * <code>bool verified = 5 [(.gen_bq_schema.description) = "Whether or not this ID has been verified in some manner."];</code>
+       */
+      public boolean getVerified() {
+        return verified_;
+      }
+      /**
+       * <pre>
+       * Whether or not this ID has been verified in some way.
+       * </pre>
+       *
+       * <code>bool verified = 5 [(.gen_bq_schema.description) = "Whether or not this ID has been verified in some manner."];</code>
+       */
+      public Builder setVerified(boolean value) {
+        
+        verified_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Whether or not this ID has been verified in some way.
+       * </pre>
+       *
+       * <code>bool verified = 5 [(.gen_bq_schema.description) = "Whether or not this ID has been verified in some manner."];</code>
+       */
+      public Builder clearVerified() {
+        
+        verified_ = false;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object globalId_ = "";
+      /**
+       * <pre>
+       * Globally-provisioned ID for this identification document.
+       * </pre>
+       *
+       * <code>string global_id = 6 [(.gen_bq_schema.description) = "Globally-unique ID provisioned to this identification document."];</code>
+       */
+      public java.lang.String getGlobalId() {
+        java.lang.Object ref = globalId_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          globalId_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Globally-provisioned ID for this identification document.
+       * </pre>
+       *
+       * <code>string global_id = 6 [(.gen_bq_schema.description) = "Globally-unique ID provisioned to this identification document."];</code>
+       */
+      public com.google.protobuf.ByteString
+          getGlobalIdBytes() {
+        java.lang.Object ref = globalId_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          globalId_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Globally-provisioned ID for this identification document.
+       * </pre>
+       *
+       * <code>string global_id = 6 [(.gen_bq_schema.description) = "Globally-unique ID provisioned to this identification document."];</code>
+       */
+      public Builder setGlobalId(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        globalId_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Globally-provisioned ID for this identification document.
+       * </pre>
+       *
+       * <code>string global_id = 6 [(.gen_bq_schema.description) = "Globally-unique ID provisioned to this identification document."];</code>
+       */
+      public Builder clearGlobalId() {
+        
+        globalId_ = getDefaultInstance().getGlobalId();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Globally-provisioned ID for this identification document.
+       * </pre>
+       *
+       * <code>string global_id = 6 [(.gen_bq_schema.description) = "Globally-unique ID provisioned to this identification document."];</code>
+       */
+      public Builder setGlobalIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        globalId_ = value;
+        onChanged();
+        return this;
+      }
+
       private com.google.protobuf.SingleFieldBuilderV3<
           io.bloombox.schema.identity.ids.DriversLicenseID.USDL, io.bloombox.schema.identity.ids.DriversLicenseID.USDL.Builder, io.bloombox.schema.identity.ids.DriversLicenseID.USDLOrBuilder> licenseBuilder_;
       /**
@@ -3248,7 +3556,7 @@ public final class IdentityID {
        * United States Driver's License.
        * </pre>
        *
-       * <code>.bloombox.schema.identity.ids.USDL license = 20 [(.gen_bq_schema.description) = "United States Driver&#92;'s License."];</code>
+       * <code>.bloombox.identity.ids.USDL license = 20 [(.gen_bq_schema.description) = "United States Driver&#92;'s License."];</code>
        */
       public boolean hasLicense() {
         return documentCase_ == 20;
@@ -3258,7 +3566,7 @@ public final class IdentityID {
        * United States Driver's License.
        * </pre>
        *
-       * <code>.bloombox.schema.identity.ids.USDL license = 20 [(.gen_bq_schema.description) = "United States Driver&#92;'s License."];</code>
+       * <code>.bloombox.identity.ids.USDL license = 20 [(.gen_bq_schema.description) = "United States Driver&#92;'s License."];</code>
        */
       public io.bloombox.schema.identity.ids.DriversLicenseID.USDL getLicense() {
         if (licenseBuilder_ == null) {
@@ -3278,7 +3586,7 @@ public final class IdentityID {
        * United States Driver's License.
        * </pre>
        *
-       * <code>.bloombox.schema.identity.ids.USDL license = 20 [(.gen_bq_schema.description) = "United States Driver&#92;'s License."];</code>
+       * <code>.bloombox.identity.ids.USDL license = 20 [(.gen_bq_schema.description) = "United States Driver&#92;'s License."];</code>
        */
       public Builder setLicense(io.bloombox.schema.identity.ids.DriversLicenseID.USDL value) {
         if (licenseBuilder_ == null) {
@@ -3298,7 +3606,7 @@ public final class IdentityID {
        * United States Driver's License.
        * </pre>
        *
-       * <code>.bloombox.schema.identity.ids.USDL license = 20 [(.gen_bq_schema.description) = "United States Driver&#92;'s License."];</code>
+       * <code>.bloombox.identity.ids.USDL license = 20 [(.gen_bq_schema.description) = "United States Driver&#92;'s License."];</code>
        */
       public Builder setLicense(
           io.bloombox.schema.identity.ids.DriversLicenseID.USDL.Builder builderForValue) {
@@ -3316,7 +3624,7 @@ public final class IdentityID {
        * United States Driver's License.
        * </pre>
        *
-       * <code>.bloombox.schema.identity.ids.USDL license = 20 [(.gen_bq_schema.description) = "United States Driver&#92;'s License."];</code>
+       * <code>.bloombox.identity.ids.USDL license = 20 [(.gen_bq_schema.description) = "United States Driver&#92;'s License."];</code>
        */
       public Builder mergeLicense(io.bloombox.schema.identity.ids.DriversLicenseID.USDL value) {
         if (licenseBuilder_ == null) {
@@ -3342,7 +3650,7 @@ public final class IdentityID {
        * United States Driver's License.
        * </pre>
        *
-       * <code>.bloombox.schema.identity.ids.USDL license = 20 [(.gen_bq_schema.description) = "United States Driver&#92;'s License."];</code>
+       * <code>.bloombox.identity.ids.USDL license = 20 [(.gen_bq_schema.description) = "United States Driver&#92;'s License."];</code>
        */
       public Builder clearLicense() {
         if (licenseBuilder_ == null) {
@@ -3365,7 +3673,7 @@ public final class IdentityID {
        * United States Driver's License.
        * </pre>
        *
-       * <code>.bloombox.schema.identity.ids.USDL license = 20 [(.gen_bq_schema.description) = "United States Driver&#92;'s License."];</code>
+       * <code>.bloombox.identity.ids.USDL license = 20 [(.gen_bq_schema.description) = "United States Driver&#92;'s License."];</code>
        */
       public io.bloombox.schema.identity.ids.DriversLicenseID.USDL.Builder getLicenseBuilder() {
         return getLicenseFieldBuilder().getBuilder();
@@ -3375,7 +3683,7 @@ public final class IdentityID {
        * United States Driver's License.
        * </pre>
        *
-       * <code>.bloombox.schema.identity.ids.USDL license = 20 [(.gen_bq_schema.description) = "United States Driver&#92;'s License."];</code>
+       * <code>.bloombox.identity.ids.USDL license = 20 [(.gen_bq_schema.description) = "United States Driver&#92;'s License."];</code>
        */
       public io.bloombox.schema.identity.ids.DriversLicenseID.USDLOrBuilder getLicenseOrBuilder() {
         if ((documentCase_ == 20) && (licenseBuilder_ != null)) {
@@ -3392,7 +3700,7 @@ public final class IdentityID {
        * United States Driver's License.
        * </pre>
        *
-       * <code>.bloombox.schema.identity.ids.USDL license = 20 [(.gen_bq_schema.description) = "United States Driver&#92;'s License."];</code>
+       * <code>.bloombox.identity.ids.USDL license = 20 [(.gen_bq_schema.description) = "United States Driver&#92;'s License."];</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
           io.bloombox.schema.identity.ids.DriversLicenseID.USDL, io.bloombox.schema.identity.ids.DriversLicenseID.USDL.Builder, io.bloombox.schema.identity.ids.DriversLicenseID.USDLOrBuilder> 
@@ -3420,7 +3728,7 @@ public final class IdentityID {
        * National passport.
        * </pre>
        *
-       * <code>.bloombox.schema.identity.ids.Passport passport = 21 [(.gen_bq_schema.description) = "National passport."];</code>
+       * <code>.bloombox.identity.ids.Passport passport = 21 [(.gen_bq_schema.description) = "National passport."];</code>
        */
       public boolean hasPassport() {
         return documentCase_ == 21;
@@ -3430,7 +3738,7 @@ public final class IdentityID {
        * National passport.
        * </pre>
        *
-       * <code>.bloombox.schema.identity.ids.Passport passport = 21 [(.gen_bq_schema.description) = "National passport."];</code>
+       * <code>.bloombox.identity.ids.Passport passport = 21 [(.gen_bq_schema.description) = "National passport."];</code>
        */
       public io.bloombox.schema.identity.ids.PassportID.Passport getPassport() {
         if (passportBuilder_ == null) {
@@ -3450,7 +3758,7 @@ public final class IdentityID {
        * National passport.
        * </pre>
        *
-       * <code>.bloombox.schema.identity.ids.Passport passport = 21 [(.gen_bq_schema.description) = "National passport."];</code>
+       * <code>.bloombox.identity.ids.Passport passport = 21 [(.gen_bq_schema.description) = "National passport."];</code>
        */
       public Builder setPassport(io.bloombox.schema.identity.ids.PassportID.Passport value) {
         if (passportBuilder_ == null) {
@@ -3470,7 +3778,7 @@ public final class IdentityID {
        * National passport.
        * </pre>
        *
-       * <code>.bloombox.schema.identity.ids.Passport passport = 21 [(.gen_bq_schema.description) = "National passport."];</code>
+       * <code>.bloombox.identity.ids.Passport passport = 21 [(.gen_bq_schema.description) = "National passport."];</code>
        */
       public Builder setPassport(
           io.bloombox.schema.identity.ids.PassportID.Passport.Builder builderForValue) {
@@ -3488,7 +3796,7 @@ public final class IdentityID {
        * National passport.
        * </pre>
        *
-       * <code>.bloombox.schema.identity.ids.Passport passport = 21 [(.gen_bq_schema.description) = "National passport."];</code>
+       * <code>.bloombox.identity.ids.Passport passport = 21 [(.gen_bq_schema.description) = "National passport."];</code>
        */
       public Builder mergePassport(io.bloombox.schema.identity.ids.PassportID.Passport value) {
         if (passportBuilder_ == null) {
@@ -3514,7 +3822,7 @@ public final class IdentityID {
        * National passport.
        * </pre>
        *
-       * <code>.bloombox.schema.identity.ids.Passport passport = 21 [(.gen_bq_schema.description) = "National passport."];</code>
+       * <code>.bloombox.identity.ids.Passport passport = 21 [(.gen_bq_schema.description) = "National passport."];</code>
        */
       public Builder clearPassport() {
         if (passportBuilder_ == null) {
@@ -3537,7 +3845,7 @@ public final class IdentityID {
        * National passport.
        * </pre>
        *
-       * <code>.bloombox.schema.identity.ids.Passport passport = 21 [(.gen_bq_schema.description) = "National passport."];</code>
+       * <code>.bloombox.identity.ids.Passport passport = 21 [(.gen_bq_schema.description) = "National passport."];</code>
        */
       public io.bloombox.schema.identity.ids.PassportID.Passport.Builder getPassportBuilder() {
         return getPassportFieldBuilder().getBuilder();
@@ -3547,7 +3855,7 @@ public final class IdentityID {
        * National passport.
        * </pre>
        *
-       * <code>.bloombox.schema.identity.ids.Passport passport = 21 [(.gen_bq_schema.description) = "National passport."];</code>
+       * <code>.bloombox.identity.ids.Passport passport = 21 [(.gen_bq_schema.description) = "National passport."];</code>
        */
       public io.bloombox.schema.identity.ids.PassportID.PassportOrBuilder getPassportOrBuilder() {
         if ((documentCase_ == 21) && (passportBuilder_ != null)) {
@@ -3564,7 +3872,7 @@ public final class IdentityID {
        * National passport.
        * </pre>
        *
-       * <code>.bloombox.schema.identity.ids.Passport passport = 21 [(.gen_bq_schema.description) = "National passport."];</code>
+       * <code>.bloombox.identity.ids.Passport passport = 21 [(.gen_bq_schema.description) = "National passport."];</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
           io.bloombox.schema.identity.ids.PassportID.Passport, io.bloombox.schema.identity.ids.PassportID.Passport.Builder, io.bloombox.schema.identity.ids.PassportID.PassportOrBuilder> 
@@ -3584,21 +3892,23 @@ public final class IdentityID {
         onChanged();;
         return passportBuilder_;
       }
+      @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
         return super.setUnknownFieldsProto3(unknownFields);
       }
 
+      @java.lang.Override
       public final Builder mergeUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
         return super.mergeUnknownFields(unknownFields);
       }
 
 
-      // @@protoc_insertion_point(builder_scope:bloombox.schema.identity.ID)
+      // @@protoc_insertion_point(builder_scope:bloombox.identity.ID)
     }
 
-    // @@protoc_insertion_point(class_scope:bloombox.schema.identity.ID)
+    // @@protoc_insertion_point(class_scope:bloombox.identity.ID)
     private static final io.bloombox.schema.identity.IdentityID.ID DEFAULT_INSTANCE;
     static {
       DEFAULT_INSTANCE = new io.bloombox.schema.identity.IdentityID.ID();
@@ -3610,6 +3920,7 @@ public final class IdentityID {
 
     private static final com.google.protobuf.Parser<ID>
         PARSER = new com.google.protobuf.AbstractParser<ID>() {
+      @java.lang.Override
       public ID parsePartialFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -3627,6 +3938,7 @@ public final class IdentityID {
       return PARSER;
     }
 
+    @java.lang.Override
     public io.bloombox.schema.identity.IdentityID.ID getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
@@ -3634,15 +3946,15 @@ public final class IdentityID {
   }
 
   private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_bloombox_schema_identity_IDReference_descriptor;
+    internal_static_bloombox_identity_IDReference_descriptor;
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_bloombox_schema_identity_IDReference_fieldAccessorTable;
+      internal_static_bloombox_identity_IDReference_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_bloombox_schema_identity_ID_descriptor;
+    internal_static_bloombox_identity_ID_descriptor;
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_bloombox_schema_identity_ID_fieldAccessorTable;
+      internal_static_bloombox_identity_ID_fieldAccessorTable;
 
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
@@ -3652,37 +3964,40 @@ public final class IdentityID {
       descriptor;
   static {
     java.lang.String[] descriptorData = {
-      "\n\021identity/ID.proto\022\030bloombox.schema.ide" +
-      "ntity\032\016bq_field.proto\032\023temporal/Date.pro" +
-      "to\032\027identity/ids/USDL.proto\032\033identity/id" +
-      "s/Passport.proto\"\334\003\n\013IDReference\022O\n\004type" +
-      "\030\001 \001(\0162 .bloombox.schema.identity.IDType" +
-      "B\037\212@\034Type of ID we\'re specifying.\022W\n\013exp" +
-      "ire_date\030\002 \001(\0132\033.opencannabis.temporal.D" +
-      "ateB%\212@\"Expiration date for this documen" +
-      "t.\022W\n\nbirth_date\030\003 \001(\0132\033.opencannabis.te" +
-      "mporal.DateB&\212@#Birth date listed on thi" +
-      "s document.\022b\n\007license\030\024 \001(\0132+.bloombox." +
-      "schema.identity.ids.USDLReferenceB\"\212@\037Un" +
-      "ited States Driver\'s License.H\000\022Z\n\010passp" +
-      "ort\030\025 \001(\0132/.bloombox.schema.identity.ids" +
-      ".PassportReferenceB\025\212@\022National passport" +
-      ".H\000B\n\n\010document\"\211\004\n\002ID\022O\n\004type\030\001 \001(\0162 .b" +
-      "loombox.schema.identity.IDTypeB\037\212@\034Type " +
-      "of ID we\'re specifying.\022F\n\002id\030\002 \001(\tB:\212@7" +
-      "ID number or string identifying this ide" +
-      "ntity document.\022W\n\013expire_date\030\003 \001(\0132\033.o" +
-      "pencannabis.temporal.DateB%\212@\"Expiration" +
-      " date for this document.\022W\n\nbirth_date\030\004" +
-      " \001(\0132\033.opencannabis.temporal.DateB&\212@#Bi" +
-      "rth date listed on this document.\022Y\n\007lic" +
-      "ense\030\024 \001(\0132\".bloombox.schema.identity.id" +
-      "s.USDLB\"\212@\037United States Driver\'s Licens" +
-      "e.H\000\022Q\n\010passport\030\025 \001(\0132&.bloombox.schema" +
-      ".identity.ids.PassportB\025\212@\022National pass" +
-      "port.H\000B\n\n\010document* \n\006IDType\022\010\n\004USDL\020\000\022" +
-      "\014\n\010PASSPORT\020\001B3\n\033io.bloombox.schema.iden" +
-      "tityB\nIdentityIDH\001P\000\242\002\003BBSb\006proto3"
+      "\n\021identity/ID.proto\022\021bloombox.identity\032\016" +
+      "bq_field.proto\032\023temporal/Date.proto\032\027ide" +
+      "ntity/ids/USDL.proto\032\033identity/ids/Passp" +
+      "ort.proto\"\307\003\n\013IDReference\022H\n\004type\030\001 \001(\0162" +
+      "\031.bloombox.identity.IDTypeB\037\212@\034Type of I" +
+      "D we\'re specifying.\022W\n\013expire_date\030\002 \001(\013" +
+      "2\033.opencannabis.temporal.DateB%\212@\"Expira" +
+      "tion date for this document.\022W\n\nbirth_da" +
+      "te\030\003 \001(\0132\033.opencannabis.temporal.DateB&\212" +
+      "@#Birth date listed on this document.\022[\n" +
+      "\007license\030\024 \001(\0132$.bloombox.identity.ids.U" +
+      "SDLReferenceB\"\212@\037United States Driver\'s " +
+      "License.H\000\022S\n\010passport\030\025 \001(\0132(.bloombox." +
+      "identity.ids.PassportReferenceB\025\212@\022Natio" +
+      "nal passport.H\000B\n\n\010document\"\232\005\n\002ID\022H\n\004ty" +
+      "pe\030\001 \001(\0162\031.bloombox.identity.IDTypeB\037\212@\034" +
+      "Type of ID we\'re specifying.\022F\n\002id\030\002 \001(\t" +
+      "B:\212@7ID number or string identifying thi" +
+      "s identity document.\022W\n\013expire_date\030\003 \001(" +
+      "\0132\033.opencannabis.temporal.DateB%\212@\"Expir" +
+      "ation date for this document.\022W\n\nbirth_d" +
+      "ate\030\004 \001(\0132\033.opencannabis.temporal.DateB&" +
+      "\212@#Birth date listed on this document.\022M" +
+      "\n\010verified\030\005 \001(\010B;\212@8Whether or not this" +
+      " ID has been verified in some manner.\022U\n" +
+      "\tglobal_id\030\006 \001(\tBB\212@?Globally-unique ID " +
+      "provisioned to this identification docum" +
+      "ent.\022R\n\007license\030\024 \001(\0132\033.bloombox.identit" +
+      "y.ids.USDLB\"\212@\037United States Driver\'s Li" +
+      "cense.H\000\022J\n\010passport\030\025 \001(\0132\037.bloombox.id" +
+      "entity.ids.PassportB\025\212@\022National passpor" +
+      "t.H\000B\n\n\010document* \n\006IDType\022\010\n\004USDL\020\000\022\014\n\010" +
+      "PASSPORT\020\001B3\n\033io.bloombox.schema.identit" +
+      "yB\nIdentityIDH\001P\000\242\002\003BBSb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -3700,18 +4015,18 @@ public final class IdentityID {
           io.bloombox.schema.identity.ids.DriversLicenseID.getDescriptor(),
           io.bloombox.schema.identity.ids.PassportID.getDescriptor(),
         }, assigner);
-    internal_static_bloombox_schema_identity_IDReference_descriptor =
+    internal_static_bloombox_identity_IDReference_descriptor =
       getDescriptor().getMessageTypes().get(0);
-    internal_static_bloombox_schema_identity_IDReference_fieldAccessorTable = new
+    internal_static_bloombox_identity_IDReference_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_bloombox_schema_identity_IDReference_descriptor,
+        internal_static_bloombox_identity_IDReference_descriptor,
         new java.lang.String[] { "Type", "ExpireDate", "BirthDate", "License", "Passport", "Document", });
-    internal_static_bloombox_schema_identity_ID_descriptor =
+    internal_static_bloombox_identity_ID_descriptor =
       getDescriptor().getMessageTypes().get(1);
-    internal_static_bloombox_schema_identity_ID_fieldAccessorTable = new
+    internal_static_bloombox_identity_ID_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_bloombox_schema_identity_ID_descriptor,
-        new java.lang.String[] { "Type", "Id", "ExpireDate", "BirthDate", "License", "Passport", "Document", });
+        internal_static_bloombox_identity_ID_descriptor,
+        new java.lang.String[] { "Type", "Id", "ExpireDate", "BirthDate", "Verified", "GlobalId", "License", "Passport", "Document", });
     com.google.protobuf.ExtensionRegistry registry =
         com.google.protobuf.ExtensionRegistry.newInstance();
     registry.add(gen_bq_schema.BqField.description);

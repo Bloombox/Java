@@ -1,11 +1,12 @@
 /*
- * Copyright 2018, Bloombox, LLC.
+ * Copyright 2018, Momentum Ideas, Co. All rights reserved.
  *
- * Licensed under the Apache License, Version 2.0 (the "License");
- * you may not use this file except in compliance with the License.
- * You may obtain a copy of the License at
- *
- *     http://www.apache.org/licenses/LICENSE-2.0
+ * Source and object computer code contained herein is the private intellectual
+ * property of Momentum Ideas Co., a Delaware Corporation. Use of this
+ * code in source form requires permission in writing before use or the
+ * assembly, distribution, or publishing of derivative works, for commercial
+ * purposes or any other purpose, from a duly authorized officer of Momentum
+ * Ideas Co.
  *
  * Unless required by applicable law or agreed to in writing, software
  * distributed under the License is distributed on an "AS IS" BASIS,
@@ -35,7 +36,7 @@ public final class AppUser {
    * Types of media that may be attached to a user.
    * </pre>
    *
-   * Protobuf enum {@code bloombox.schema.identity.UserMediaType}
+   * Protobuf enum {@code bloombox.identity.UserMediaType}
    */
   public enum UserMediaType
       implements com.google.protobuf.ProtocolMessageEnum {
@@ -162,7 +163,7 @@ public final class AppUser {
       this.value = value;
     }
 
-    // @@protoc_insertion_point(enum_scope:bloombox.schema.identity.UserMediaType)
+    // @@protoc_insertion_point(enum_scope:bloombox.identity.UserMediaType)
   }
 
   /**
@@ -170,7 +171,7 @@ public final class AppUser {
    * Enumerates providers through which users may authenticate.
    * </pre>
    *
-   * Protobuf enum {@code bloombox.schema.identity.IdentityProvider}
+   * Protobuf enum {@code bloombox.identity.IdentityProvider}
    */
   public enum IdentityProvider
       implements com.google.protobuf.ProtocolMessageEnum {
@@ -331,7 +332,7 @@ public final class AppUser {
       this.value = value;
     }
 
-    // @@protoc_insertion_point(enum_scope:bloombox.schema.identity.IdentityProvider)
+    // @@protoc_insertion_point(enum_scope:bloombox.identity.IdentityProvider)
   }
 
   /**
@@ -339,7 +340,7 @@ public final class AppUser {
    * Enumerates sources for user enrollments.
    * </pre>
    *
-   * Protobuf enum {@code bloombox.schema.identity.EnrollmentSource}
+   * Protobuf enum {@code bloombox.identity.EnrollmentSource}
    */
   public enum EnrollmentSource
       implements com.google.protobuf.ProtocolMessageEnum {
@@ -517,7 +518,7 @@ public final class AppUser {
       this.value = value;
     }
 
-    // @@protoc_insertion_point(enum_scope:bloombox.schema.identity.EnrollmentSource)
+    // @@protoc_insertion_point(enum_scope:bloombox.identity.EnrollmentSource)
   }
 
   /**
@@ -525,7 +526,7 @@ public final class AppUser {
    * Enumerates sources for user referrals
    * </pre>
    *
-   * Protobuf enum {@code bloombox.schema.identity.ReferralSource}
+   * Protobuf enum {@code bloombox.identity.ReferralSource}
    */
   public enum ReferralSource
       implements com.google.protobuf.ProtocolMessageEnum {
@@ -686,7 +687,7 @@ public final class AppUser {
       this.value = value;
     }
 
-    // @@protoc_insertion_point(enum_scope:bloombox.schema.identity.ReferralSource)
+    // @@protoc_insertion_point(enum_scope:bloombox.identity.ReferralSource)
   }
 
   /**
@@ -694,7 +695,7 @@ public final class AppUser {
    * Specifies the type of consumer profile in use for an account.
    * </pre>
    *
-   * Protobuf enum {@code bloombox.schema.identity.ConsumerType}
+   * Protobuf enum {@code bloombox.identity.ConsumerType}
    */
   public enum ConsumerType
       implements com.google.protobuf.ProtocolMessageEnum {
@@ -841,11 +842,11 @@ public final class AppUser {
       this.value = value;
     }
 
-    // @@protoc_insertion_point(enum_scope:bloombox.schema.identity.ConsumerType)
+    // @@protoc_insertion_point(enum_scope:bloombox.identity.ConsumerType)
   }
 
   public interface UserOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:bloombox.schema.identity.User)
+      // @@protoc_insertion_point(interface_extends:bloombox.identity.User)
       com.google.protobuf.MessageOrBuilder {
 
     /**
@@ -871,7 +872,7 @@ public final class AppUser {
      * Boolean flags for this user.
      * </pre>
      *
-     * <code>.bloombox.schema.identity.UserFlags flags = 2 [(.gen_bq_schema.description) = "Boolean flags for this user.", (.core.field) = { ... }</code>
+     * <code>.bloombox.identity.UserFlags flags = 2 [(.gen_bq_schema.description) = "Boolean flags for this user.", (.core.field) = { ... }</code>
      */
     boolean hasFlags();
     /**
@@ -879,7 +880,7 @@ public final class AppUser {
      * Boolean flags for this user.
      * </pre>
      *
-     * <code>.bloombox.schema.identity.UserFlags flags = 2 [(.gen_bq_schema.description) = "Boolean flags for this user.", (.core.field) = { ... }</code>
+     * <code>.bloombox.identity.UserFlags flags = 2 [(.gen_bq_schema.description) = "Boolean flags for this user.", (.core.field) = { ... }</code>
      */
     io.bloombox.schema.identity.AppUser.UserFlags getFlags();
     /**
@@ -887,7 +888,7 @@ public final class AppUser {
      * Boolean flags for this user.
      * </pre>
      *
-     * <code>.bloombox.schema.identity.UserFlags flags = 2 [(.gen_bq_schema.description) = "Boolean flags for this user.", (.core.field) = { ... }</code>
+     * <code>.bloombox.identity.UserFlags flags = 2 [(.gen_bq_schema.description) = "Boolean flags for this user.", (.core.field) = { ... }</code>
      */
     io.bloombox.schema.identity.AppUser.UserFlagsOrBuilder getFlagsOrBuilder();
 
@@ -921,7 +922,7 @@ public final class AppUser {
      * Government ID associated with this user.
      * </pre>
      *
-     * <code>repeated .bloombox.schema.identity.ID identification = 20 [(.gen_bq_schema.ignore) = true, (.gen_bq_schema.description) = "Government ID associated with this user.", (.core.collection) = { ... }</code>
+     * <code>repeated .bloombox.identity.ID identification = 20 [(.gen_bq_schema.ignore) = true, (.gen_bq_schema.description) = "Government ID associated with this user.", (.core.collection) = { ... }</code>
      */
     java.util.List<io.bloombox.schema.identity.IdentityID.ID> 
         getIdentificationList();
@@ -930,7 +931,7 @@ public final class AppUser {
      * Government ID associated with this user.
      * </pre>
      *
-     * <code>repeated .bloombox.schema.identity.ID identification = 20 [(.gen_bq_schema.ignore) = true, (.gen_bq_schema.description) = "Government ID associated with this user.", (.core.collection) = { ... }</code>
+     * <code>repeated .bloombox.identity.ID identification = 20 [(.gen_bq_schema.ignore) = true, (.gen_bq_schema.description) = "Government ID associated with this user.", (.core.collection) = { ... }</code>
      */
     io.bloombox.schema.identity.IdentityID.ID getIdentification(int index);
     /**
@@ -938,7 +939,7 @@ public final class AppUser {
      * Government ID associated with this user.
      * </pre>
      *
-     * <code>repeated .bloombox.schema.identity.ID identification = 20 [(.gen_bq_schema.ignore) = true, (.gen_bq_schema.description) = "Government ID associated with this user.", (.core.collection) = { ... }</code>
+     * <code>repeated .bloombox.identity.ID identification = 20 [(.gen_bq_schema.ignore) = true, (.gen_bq_schema.description) = "Government ID associated with this user.", (.core.collection) = { ... }</code>
      */
     int getIdentificationCount();
     /**
@@ -946,7 +947,7 @@ public final class AppUser {
      * Government ID associated with this user.
      * </pre>
      *
-     * <code>repeated .bloombox.schema.identity.ID identification = 20 [(.gen_bq_schema.ignore) = true, (.gen_bq_schema.description) = "Government ID associated with this user.", (.core.collection) = { ... }</code>
+     * <code>repeated .bloombox.identity.ID identification = 20 [(.gen_bq_schema.ignore) = true, (.gen_bq_schema.description) = "Government ID associated with this user.", (.core.collection) = { ... }</code>
      */
     java.util.List<? extends io.bloombox.schema.identity.IdentityID.IDOrBuilder> 
         getIdentificationOrBuilderList();
@@ -955,7 +956,7 @@ public final class AppUser {
      * Government ID associated with this user.
      * </pre>
      *
-     * <code>repeated .bloombox.schema.identity.ID identification = 20 [(.gen_bq_schema.ignore) = true, (.gen_bq_schema.description) = "Government ID associated with this user.", (.core.collection) = { ... }</code>
+     * <code>repeated .bloombox.identity.ID identification = 20 [(.gen_bq_schema.ignore) = true, (.gen_bq_schema.description) = "Government ID associated with this user.", (.core.collection) = { ... }</code>
      */
     io.bloombox.schema.identity.IdentityID.IDOrBuilder getIdentificationOrBuilder(
         int index);
@@ -965,7 +966,7 @@ public final class AppUser {
      * Doctor's recommendations associated with this user.
      * </pre>
      *
-     * <code>repeated .bloombox.schema.identity.ids.UserDoctorRec doctor_rec = 21 [(.gen_bq_schema.ignore) = true, (.gen_bq_schema.description) = "Doctor&#92;'s recommendations associated with this user.", (.core.collection) = { ... }</code>
+     * <code>repeated .bloombox.identity.ids.UserDoctorRec doctor_rec = 21 [(.gen_bq_schema.ignore) = true, (.gen_bq_schema.description) = "Doctor&#92;'s recommendations associated with this user.", (.core.collection) = { ... }</code>
      */
     java.util.List<io.bloombox.schema.identity.ids.PrescriptionID.UserDoctorRec> 
         getDoctorRecList();
@@ -974,7 +975,7 @@ public final class AppUser {
      * Doctor's recommendations associated with this user.
      * </pre>
      *
-     * <code>repeated .bloombox.schema.identity.ids.UserDoctorRec doctor_rec = 21 [(.gen_bq_schema.ignore) = true, (.gen_bq_schema.description) = "Doctor&#92;'s recommendations associated with this user.", (.core.collection) = { ... }</code>
+     * <code>repeated .bloombox.identity.ids.UserDoctorRec doctor_rec = 21 [(.gen_bq_schema.ignore) = true, (.gen_bq_schema.description) = "Doctor&#92;'s recommendations associated with this user.", (.core.collection) = { ... }</code>
      */
     io.bloombox.schema.identity.ids.PrescriptionID.UserDoctorRec getDoctorRec(int index);
     /**
@@ -982,7 +983,7 @@ public final class AppUser {
      * Doctor's recommendations associated with this user.
      * </pre>
      *
-     * <code>repeated .bloombox.schema.identity.ids.UserDoctorRec doctor_rec = 21 [(.gen_bq_schema.ignore) = true, (.gen_bq_schema.description) = "Doctor&#92;'s recommendations associated with this user.", (.core.collection) = { ... }</code>
+     * <code>repeated .bloombox.identity.ids.UserDoctorRec doctor_rec = 21 [(.gen_bq_schema.ignore) = true, (.gen_bq_schema.description) = "Doctor&#92;'s recommendations associated with this user.", (.core.collection) = { ... }</code>
      */
     int getDoctorRecCount();
     /**
@@ -990,7 +991,7 @@ public final class AppUser {
      * Doctor's recommendations associated with this user.
      * </pre>
      *
-     * <code>repeated .bloombox.schema.identity.ids.UserDoctorRec doctor_rec = 21 [(.gen_bq_schema.ignore) = true, (.gen_bq_schema.description) = "Doctor&#92;'s recommendations associated with this user.", (.core.collection) = { ... }</code>
+     * <code>repeated .bloombox.identity.ids.UserDoctorRec doctor_rec = 21 [(.gen_bq_schema.ignore) = true, (.gen_bq_schema.description) = "Doctor&#92;'s recommendations associated with this user.", (.core.collection) = { ... }</code>
      */
     java.util.List<? extends io.bloombox.schema.identity.ids.PrescriptionID.UserDoctorRecOrBuilder> 
         getDoctorRecOrBuilderList();
@@ -999,7 +1000,7 @@ public final class AppUser {
      * Doctor's recommendations associated with this user.
      * </pre>
      *
-     * <code>repeated .bloombox.schema.identity.ids.UserDoctorRec doctor_rec = 21 [(.gen_bq_schema.ignore) = true, (.gen_bq_schema.description) = "Doctor&#92;'s recommendations associated with this user.", (.core.collection) = { ... }</code>
+     * <code>repeated .bloombox.identity.ids.UserDoctorRec doctor_rec = 21 [(.gen_bq_schema.ignore) = true, (.gen_bq_schema.description) = "Doctor&#92;'s recommendations associated with this user.", (.core.collection) = { ... }</code>
      */
     io.bloombox.schema.identity.ids.PrescriptionID.UserDoctorRecOrBuilder getDoctorRecOrBuilder(
         int index);
@@ -1059,7 +1060,7 @@ public final class AppUser {
      * Identities associated with this user.
      * </pre>
      *
-     * <code>map&lt;string, .bloombox.schema.identity.UserIdentity&gt; identities = 40 [(.gen_bq_schema.ignore) = true, (.gen_bq_schema.description) = "Identities associated with this user."];</code>
+     * <code>map&lt;string, .bloombox.identity.UserIdentity&gt; identities = 40 [(.gen_bq_schema.ignore) = true, (.gen_bq_schema.description) = "Identities associated with this user."];</code>
      */
     int getIdentitiesCount();
     /**
@@ -1067,7 +1068,7 @@ public final class AppUser {
      * Identities associated with this user.
      * </pre>
      *
-     * <code>map&lt;string, .bloombox.schema.identity.UserIdentity&gt; identities = 40 [(.gen_bq_schema.ignore) = true, (.gen_bq_schema.description) = "Identities associated with this user."];</code>
+     * <code>map&lt;string, .bloombox.identity.UserIdentity&gt; identities = 40 [(.gen_bq_schema.ignore) = true, (.gen_bq_schema.description) = "Identities associated with this user."];</code>
      */
     boolean containsIdentities(
         java.lang.String key);
@@ -1082,7 +1083,7 @@ public final class AppUser {
      * Identities associated with this user.
      * </pre>
      *
-     * <code>map&lt;string, .bloombox.schema.identity.UserIdentity&gt; identities = 40 [(.gen_bq_schema.ignore) = true, (.gen_bq_schema.description) = "Identities associated with this user."];</code>
+     * <code>map&lt;string, .bloombox.identity.UserIdentity&gt; identities = 40 [(.gen_bq_schema.ignore) = true, (.gen_bq_schema.description) = "Identities associated with this user."];</code>
      */
     java.util.Map<java.lang.String, io.bloombox.schema.identity.AppUser.UserIdentity>
     getIdentitiesMap();
@@ -1091,7 +1092,7 @@ public final class AppUser {
      * Identities associated with this user.
      * </pre>
      *
-     * <code>map&lt;string, .bloombox.schema.identity.UserIdentity&gt; identities = 40 [(.gen_bq_schema.ignore) = true, (.gen_bq_schema.description) = "Identities associated with this user."];</code>
+     * <code>map&lt;string, .bloombox.identity.UserIdentity&gt; identities = 40 [(.gen_bq_schema.ignore) = true, (.gen_bq_schema.description) = "Identities associated with this user."];</code>
      */
 
     io.bloombox.schema.identity.AppUser.UserIdentity getIdentitiesOrDefault(
@@ -1102,7 +1103,7 @@ public final class AppUser {
      * Identities associated with this user.
      * </pre>
      *
-     * <code>map&lt;string, .bloombox.schema.identity.UserIdentity&gt; identities = 40 [(.gen_bq_schema.ignore) = true, (.gen_bq_schema.description) = "Identities associated with this user."];</code>
+     * <code>map&lt;string, .bloombox.identity.UserIdentity&gt; identities = 40 [(.gen_bq_schema.ignore) = true, (.gen_bq_schema.description) = "Identities associated with this user."];</code>
      */
 
     io.bloombox.schema.identity.AppUser.UserIdentity getIdentitiesOrThrow(
@@ -1167,7 +1168,7 @@ public final class AppUser {
      * Consumer profile for this user.
      * </pre>
      *
-     * <code>.bloombox.schema.identity.ConsumerProfile consumer = 100 [(.gen_bq_schema.description) = "Consumer profile for this user."];</code>
+     * <code>.bloombox.identity.ConsumerProfile consumer = 100 [(.gen_bq_schema.description) = "Consumer profile for this user."];</code>
      */
     boolean hasConsumer();
     /**
@@ -1175,7 +1176,7 @@ public final class AppUser {
      * Consumer profile for this user.
      * </pre>
      *
-     * <code>.bloombox.schema.identity.ConsumerProfile consumer = 100 [(.gen_bq_schema.description) = "Consumer profile for this user."];</code>
+     * <code>.bloombox.identity.ConsumerProfile consumer = 100 [(.gen_bq_schema.description) = "Consumer profile for this user."];</code>
      */
     io.bloombox.schema.identity.AppUser.ConsumerProfile getConsumer();
     /**
@@ -1183,7 +1184,7 @@ public final class AppUser {
      * Consumer profile for this user.
      * </pre>
      *
-     * <code>.bloombox.schema.identity.ConsumerProfile consumer = 100 [(.gen_bq_schema.description) = "Consumer profile for this user."];</code>
+     * <code>.bloombox.identity.ConsumerProfile consumer = 100 [(.gen_bq_schema.description) = "Consumer profile for this user."];</code>
      */
     io.bloombox.schema.identity.AppUser.ConsumerProfileOrBuilder getConsumerOrBuilder();
 
@@ -1192,7 +1193,7 @@ public final class AppUser {
      * Industry profile for this user.
      * </pre>
      *
-     * <code>.bloombox.schema.identity.IndustryProfile industry = 101 [(.gen_bq_schema.description) = "Industry profile for this user."];</code>
+     * <code>.bloombox.identity.IndustryProfile industry = 101 [(.gen_bq_schema.description) = "Industry profile for this user."];</code>
      */
     boolean hasIndustry();
     /**
@@ -1200,7 +1201,7 @@ public final class AppUser {
      * Industry profile for this user.
      * </pre>
      *
-     * <code>.bloombox.schema.identity.IndustryProfile industry = 101 [(.gen_bq_schema.description) = "Industry profile for this user."];</code>
+     * <code>.bloombox.identity.IndustryProfile industry = 101 [(.gen_bq_schema.description) = "Industry profile for this user."];</code>
      */
     io.bloombox.schema.identity.AppUser.IndustryProfile getIndustry();
     /**
@@ -1208,7 +1209,7 @@ public final class AppUser {
      * Industry profile for this user.
      * </pre>
      *
-     * <code>.bloombox.schema.identity.IndustryProfile industry = 101 [(.gen_bq_schema.description) = "Industry profile for this user."];</code>
+     * <code>.bloombox.identity.IndustryProfile industry = 101 [(.gen_bq_schema.description) = "Industry profile for this user."];</code>
      */
     io.bloombox.schema.identity.AppUser.IndustryProfileOrBuilder getIndustryOrBuilder();
   }
@@ -1217,11 +1218,11 @@ public final class AppUser {
    * Represents an individual who uses software.
    * </pre>
    *
-   * Protobuf type {@code bloombox.schema.identity.User}
+   * Protobuf type {@code bloombox.identity.User}
    */
   public  static final class User extends
       com.google.protobuf.GeneratedMessageV3 implements
-      // @@protoc_insertion_point(message_implements:bloombox.schema.identity.User)
+      // @@protoc_insertion_point(message_implements:bloombox.identity.User)
       UserOrBuilder {
   private static final long serialVersionUID = 0L;
     // Use User.newBuilder() to construct.
@@ -1258,13 +1259,6 @@ public final class AppUser {
             case 0:
               done = true;
               break;
-            default: {
-              if (!parseUnknownFieldProto3(
-                  input, unknownFields, extensionRegistry, tag)) {
-                done = true;
-              }
-              break;
-            }
             case 10: {
               java.lang.String s = input.readStringRequireUtf8();
 
@@ -1393,6 +1387,13 @@ public final class AppUser {
 
               break;
             }
+            default: {
+              if (!parseUnknownFieldProto3(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
           }
         }
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
@@ -1413,10 +1414,11 @@ public final class AppUser {
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return io.bloombox.schema.identity.AppUser.internal_static_bloombox_schema_identity_User_descriptor;
+      return io.bloombox.schema.identity.AppUser.internal_static_bloombox_identity_User_descriptor;
     }
 
     @SuppressWarnings({"rawtypes"})
+    @java.lang.Override
     protected com.google.protobuf.MapField internalGetMapField(
         int number) {
       switch (number) {
@@ -1429,9 +1431,10 @@ public final class AppUser {
               "Invalid map field number: " + number);
       }
     }
+    @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return io.bloombox.schema.identity.AppUser.internal_static_bloombox_schema_identity_User_fieldAccessorTable
+      return io.bloombox.schema.identity.AppUser.internal_static_bloombox_identity_User_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
               io.bloombox.schema.identity.AppUser.User.class, io.bloombox.schema.identity.AppUser.User.Builder.class);
     }
@@ -1486,7 +1489,7 @@ public final class AppUser {
      * Boolean flags for this user.
      * </pre>
      *
-     * <code>.bloombox.schema.identity.UserFlags flags = 2 [(.gen_bq_schema.description) = "Boolean flags for this user.", (.core.field) = { ... }</code>
+     * <code>.bloombox.identity.UserFlags flags = 2 [(.gen_bq_schema.description) = "Boolean flags for this user.", (.core.field) = { ... }</code>
      */
     public boolean hasFlags() {
       return flags_ != null;
@@ -1496,7 +1499,7 @@ public final class AppUser {
      * Boolean flags for this user.
      * </pre>
      *
-     * <code>.bloombox.schema.identity.UserFlags flags = 2 [(.gen_bq_schema.description) = "Boolean flags for this user.", (.core.field) = { ... }</code>
+     * <code>.bloombox.identity.UserFlags flags = 2 [(.gen_bq_schema.description) = "Boolean flags for this user.", (.core.field) = { ... }</code>
      */
     public io.bloombox.schema.identity.AppUser.UserFlags getFlags() {
       return flags_ == null ? io.bloombox.schema.identity.AppUser.UserFlags.getDefaultInstance() : flags_;
@@ -1506,7 +1509,7 @@ public final class AppUser {
      * Boolean flags for this user.
      * </pre>
      *
-     * <code>.bloombox.schema.identity.UserFlags flags = 2 [(.gen_bq_schema.description) = "Boolean flags for this user.", (.core.field) = { ... }</code>
+     * <code>.bloombox.identity.UserFlags flags = 2 [(.gen_bq_schema.description) = "Boolean flags for this user.", (.core.field) = { ... }</code>
      */
     public io.bloombox.schema.identity.AppUser.UserFlagsOrBuilder getFlagsOrBuilder() {
       return getFlags();
@@ -1552,7 +1555,7 @@ public final class AppUser {
      * Government ID associated with this user.
      * </pre>
      *
-     * <code>repeated .bloombox.schema.identity.ID identification = 20 [(.gen_bq_schema.ignore) = true, (.gen_bq_schema.description) = "Government ID associated with this user.", (.core.collection) = { ... }</code>
+     * <code>repeated .bloombox.identity.ID identification = 20 [(.gen_bq_schema.ignore) = true, (.gen_bq_schema.description) = "Government ID associated with this user.", (.core.collection) = { ... }</code>
      */
     public java.util.List<io.bloombox.schema.identity.IdentityID.ID> getIdentificationList() {
       return identification_;
@@ -1562,7 +1565,7 @@ public final class AppUser {
      * Government ID associated with this user.
      * </pre>
      *
-     * <code>repeated .bloombox.schema.identity.ID identification = 20 [(.gen_bq_schema.ignore) = true, (.gen_bq_schema.description) = "Government ID associated with this user.", (.core.collection) = { ... }</code>
+     * <code>repeated .bloombox.identity.ID identification = 20 [(.gen_bq_schema.ignore) = true, (.gen_bq_schema.description) = "Government ID associated with this user.", (.core.collection) = { ... }</code>
      */
     public java.util.List<? extends io.bloombox.schema.identity.IdentityID.IDOrBuilder> 
         getIdentificationOrBuilderList() {
@@ -1573,7 +1576,7 @@ public final class AppUser {
      * Government ID associated with this user.
      * </pre>
      *
-     * <code>repeated .bloombox.schema.identity.ID identification = 20 [(.gen_bq_schema.ignore) = true, (.gen_bq_schema.description) = "Government ID associated with this user.", (.core.collection) = { ... }</code>
+     * <code>repeated .bloombox.identity.ID identification = 20 [(.gen_bq_schema.ignore) = true, (.gen_bq_schema.description) = "Government ID associated with this user.", (.core.collection) = { ... }</code>
      */
     public int getIdentificationCount() {
       return identification_.size();
@@ -1583,7 +1586,7 @@ public final class AppUser {
      * Government ID associated with this user.
      * </pre>
      *
-     * <code>repeated .bloombox.schema.identity.ID identification = 20 [(.gen_bq_schema.ignore) = true, (.gen_bq_schema.description) = "Government ID associated with this user.", (.core.collection) = { ... }</code>
+     * <code>repeated .bloombox.identity.ID identification = 20 [(.gen_bq_schema.ignore) = true, (.gen_bq_schema.description) = "Government ID associated with this user.", (.core.collection) = { ... }</code>
      */
     public io.bloombox.schema.identity.IdentityID.ID getIdentification(int index) {
       return identification_.get(index);
@@ -1593,7 +1596,7 @@ public final class AppUser {
      * Government ID associated with this user.
      * </pre>
      *
-     * <code>repeated .bloombox.schema.identity.ID identification = 20 [(.gen_bq_schema.ignore) = true, (.gen_bq_schema.description) = "Government ID associated with this user.", (.core.collection) = { ... }</code>
+     * <code>repeated .bloombox.identity.ID identification = 20 [(.gen_bq_schema.ignore) = true, (.gen_bq_schema.description) = "Government ID associated with this user.", (.core.collection) = { ... }</code>
      */
     public io.bloombox.schema.identity.IdentityID.IDOrBuilder getIdentificationOrBuilder(
         int index) {
@@ -1607,7 +1610,7 @@ public final class AppUser {
      * Doctor's recommendations associated with this user.
      * </pre>
      *
-     * <code>repeated .bloombox.schema.identity.ids.UserDoctorRec doctor_rec = 21 [(.gen_bq_schema.ignore) = true, (.gen_bq_schema.description) = "Doctor&#92;'s recommendations associated with this user.", (.core.collection) = { ... }</code>
+     * <code>repeated .bloombox.identity.ids.UserDoctorRec doctor_rec = 21 [(.gen_bq_schema.ignore) = true, (.gen_bq_schema.description) = "Doctor&#92;'s recommendations associated with this user.", (.core.collection) = { ... }</code>
      */
     public java.util.List<io.bloombox.schema.identity.ids.PrescriptionID.UserDoctorRec> getDoctorRecList() {
       return doctorRec_;
@@ -1617,7 +1620,7 @@ public final class AppUser {
      * Doctor's recommendations associated with this user.
      * </pre>
      *
-     * <code>repeated .bloombox.schema.identity.ids.UserDoctorRec doctor_rec = 21 [(.gen_bq_schema.ignore) = true, (.gen_bq_schema.description) = "Doctor&#92;'s recommendations associated with this user.", (.core.collection) = { ... }</code>
+     * <code>repeated .bloombox.identity.ids.UserDoctorRec doctor_rec = 21 [(.gen_bq_schema.ignore) = true, (.gen_bq_schema.description) = "Doctor&#92;'s recommendations associated with this user.", (.core.collection) = { ... }</code>
      */
     public java.util.List<? extends io.bloombox.schema.identity.ids.PrescriptionID.UserDoctorRecOrBuilder> 
         getDoctorRecOrBuilderList() {
@@ -1628,7 +1631,7 @@ public final class AppUser {
      * Doctor's recommendations associated with this user.
      * </pre>
      *
-     * <code>repeated .bloombox.schema.identity.ids.UserDoctorRec doctor_rec = 21 [(.gen_bq_schema.ignore) = true, (.gen_bq_schema.description) = "Doctor&#92;'s recommendations associated with this user.", (.core.collection) = { ... }</code>
+     * <code>repeated .bloombox.identity.ids.UserDoctorRec doctor_rec = 21 [(.gen_bq_schema.ignore) = true, (.gen_bq_schema.description) = "Doctor&#92;'s recommendations associated with this user.", (.core.collection) = { ... }</code>
      */
     public int getDoctorRecCount() {
       return doctorRec_.size();
@@ -1638,7 +1641,7 @@ public final class AppUser {
      * Doctor's recommendations associated with this user.
      * </pre>
      *
-     * <code>repeated .bloombox.schema.identity.ids.UserDoctorRec doctor_rec = 21 [(.gen_bq_schema.ignore) = true, (.gen_bq_schema.description) = "Doctor&#92;'s recommendations associated with this user.", (.core.collection) = { ... }</code>
+     * <code>repeated .bloombox.identity.ids.UserDoctorRec doctor_rec = 21 [(.gen_bq_schema.ignore) = true, (.gen_bq_schema.description) = "Doctor&#92;'s recommendations associated with this user.", (.core.collection) = { ... }</code>
      */
     public io.bloombox.schema.identity.ids.PrescriptionID.UserDoctorRec getDoctorRec(int index) {
       return doctorRec_.get(index);
@@ -1648,7 +1651,7 @@ public final class AppUser {
      * Doctor's recommendations associated with this user.
      * </pre>
      *
-     * <code>repeated .bloombox.schema.identity.ids.UserDoctorRec doctor_rec = 21 [(.gen_bq_schema.ignore) = true, (.gen_bq_schema.description) = "Doctor&#92;'s recommendations associated with this user.", (.core.collection) = { ... }</code>
+     * <code>repeated .bloombox.identity.ids.UserDoctorRec doctor_rec = 21 [(.gen_bq_schema.ignore) = true, (.gen_bq_schema.description) = "Doctor&#92;'s recommendations associated with this user.", (.core.collection) = { ... }</code>
      */
     public io.bloombox.schema.identity.ids.PrescriptionID.UserDoctorRecOrBuilder getDoctorRecOrBuilder(
         int index) {
@@ -1727,7 +1730,7 @@ public final class AppUser {
           java.lang.String, io.bloombox.schema.identity.AppUser.UserIdentity> defaultEntry =
               com.google.protobuf.MapEntry
               .<java.lang.String, io.bloombox.schema.identity.AppUser.UserIdentity>newDefaultInstance(
-                  io.bloombox.schema.identity.AppUser.internal_static_bloombox_schema_identity_User_IdentitiesEntry_descriptor, 
+                  io.bloombox.schema.identity.AppUser.internal_static_bloombox_identity_User_IdentitiesEntry_descriptor, 
                   com.google.protobuf.WireFormat.FieldType.STRING,
                   "",
                   com.google.protobuf.WireFormat.FieldType.MESSAGE,
@@ -1752,7 +1755,7 @@ public final class AppUser {
      * Identities associated with this user.
      * </pre>
      *
-     * <code>map&lt;string, .bloombox.schema.identity.UserIdentity&gt; identities = 40 [(.gen_bq_schema.ignore) = true, (.gen_bq_schema.description) = "Identities associated with this user."];</code>
+     * <code>map&lt;string, .bloombox.identity.UserIdentity&gt; identities = 40 [(.gen_bq_schema.ignore) = true, (.gen_bq_schema.description) = "Identities associated with this user."];</code>
      */
 
     public boolean containsIdentities(
@@ -1772,7 +1775,7 @@ public final class AppUser {
      * Identities associated with this user.
      * </pre>
      *
-     * <code>map&lt;string, .bloombox.schema.identity.UserIdentity&gt; identities = 40 [(.gen_bq_schema.ignore) = true, (.gen_bq_schema.description) = "Identities associated with this user."];</code>
+     * <code>map&lt;string, .bloombox.identity.UserIdentity&gt; identities = 40 [(.gen_bq_schema.ignore) = true, (.gen_bq_schema.description) = "Identities associated with this user."];</code>
      */
 
     public java.util.Map<java.lang.String, io.bloombox.schema.identity.AppUser.UserIdentity> getIdentitiesMap() {
@@ -1783,7 +1786,7 @@ public final class AppUser {
      * Identities associated with this user.
      * </pre>
      *
-     * <code>map&lt;string, .bloombox.schema.identity.UserIdentity&gt; identities = 40 [(.gen_bq_schema.ignore) = true, (.gen_bq_schema.description) = "Identities associated with this user."];</code>
+     * <code>map&lt;string, .bloombox.identity.UserIdentity&gt; identities = 40 [(.gen_bq_schema.ignore) = true, (.gen_bq_schema.description) = "Identities associated with this user."];</code>
      */
 
     public io.bloombox.schema.identity.AppUser.UserIdentity getIdentitiesOrDefault(
@@ -1799,7 +1802,7 @@ public final class AppUser {
      * Identities associated with this user.
      * </pre>
      *
-     * <code>map&lt;string, .bloombox.schema.identity.UserIdentity&gt; identities = 40 [(.gen_bq_schema.ignore) = true, (.gen_bq_schema.description) = "Identities associated with this user."];</code>
+     * <code>map&lt;string, .bloombox.identity.UserIdentity&gt; identities = 40 [(.gen_bq_schema.ignore) = true, (.gen_bq_schema.description) = "Identities associated with this user."];</code>
      */
 
     public io.bloombox.schema.identity.AppUser.UserIdentity getIdentitiesOrThrow(
@@ -1819,7 +1822,7 @@ public final class AppUser {
           java.lang.String, io.opencannabis.schema.media.AttachedMedia.MediaItem> defaultEntry =
               com.google.protobuf.MapEntry
               .<java.lang.String, io.opencannabis.schema.media.AttachedMedia.MediaItem>newDefaultInstance(
-                  io.bloombox.schema.identity.AppUser.internal_static_bloombox_schema_identity_User_MediaEntry_descriptor, 
+                  io.bloombox.schema.identity.AppUser.internal_static_bloombox_identity_User_MediaEntry_descriptor, 
                   com.google.protobuf.WireFormat.FieldType.STRING,
                   "",
                   com.google.protobuf.WireFormat.FieldType.MESSAGE,
@@ -1912,7 +1915,7 @@ public final class AppUser {
      * Consumer profile for this user.
      * </pre>
      *
-     * <code>.bloombox.schema.identity.ConsumerProfile consumer = 100 [(.gen_bq_schema.description) = "Consumer profile for this user."];</code>
+     * <code>.bloombox.identity.ConsumerProfile consumer = 100 [(.gen_bq_schema.description) = "Consumer profile for this user."];</code>
      */
     public boolean hasConsumer() {
       return consumer_ != null;
@@ -1922,7 +1925,7 @@ public final class AppUser {
      * Consumer profile for this user.
      * </pre>
      *
-     * <code>.bloombox.schema.identity.ConsumerProfile consumer = 100 [(.gen_bq_schema.description) = "Consumer profile for this user."];</code>
+     * <code>.bloombox.identity.ConsumerProfile consumer = 100 [(.gen_bq_schema.description) = "Consumer profile for this user."];</code>
      */
     public io.bloombox.schema.identity.AppUser.ConsumerProfile getConsumer() {
       return consumer_ == null ? io.bloombox.schema.identity.AppUser.ConsumerProfile.getDefaultInstance() : consumer_;
@@ -1932,7 +1935,7 @@ public final class AppUser {
      * Consumer profile for this user.
      * </pre>
      *
-     * <code>.bloombox.schema.identity.ConsumerProfile consumer = 100 [(.gen_bq_schema.description) = "Consumer profile for this user."];</code>
+     * <code>.bloombox.identity.ConsumerProfile consumer = 100 [(.gen_bq_schema.description) = "Consumer profile for this user."];</code>
      */
     public io.bloombox.schema.identity.AppUser.ConsumerProfileOrBuilder getConsumerOrBuilder() {
       return getConsumer();
@@ -1945,7 +1948,7 @@ public final class AppUser {
      * Industry profile for this user.
      * </pre>
      *
-     * <code>.bloombox.schema.identity.IndustryProfile industry = 101 [(.gen_bq_schema.description) = "Industry profile for this user."];</code>
+     * <code>.bloombox.identity.IndustryProfile industry = 101 [(.gen_bq_schema.description) = "Industry profile for this user."];</code>
      */
     public boolean hasIndustry() {
       return industry_ != null;
@@ -1955,7 +1958,7 @@ public final class AppUser {
      * Industry profile for this user.
      * </pre>
      *
-     * <code>.bloombox.schema.identity.IndustryProfile industry = 101 [(.gen_bq_schema.description) = "Industry profile for this user."];</code>
+     * <code>.bloombox.identity.IndustryProfile industry = 101 [(.gen_bq_schema.description) = "Industry profile for this user."];</code>
      */
     public io.bloombox.schema.identity.AppUser.IndustryProfile getIndustry() {
       return industry_ == null ? io.bloombox.schema.identity.AppUser.IndustryProfile.getDefaultInstance() : industry_;
@@ -1965,13 +1968,14 @@ public final class AppUser {
      * Industry profile for this user.
      * </pre>
      *
-     * <code>.bloombox.schema.identity.IndustryProfile industry = 101 [(.gen_bq_schema.description) = "Industry profile for this user."];</code>
+     * <code>.bloombox.identity.IndustryProfile industry = 101 [(.gen_bq_schema.description) = "Industry profile for this user."];</code>
      */
     public io.bloombox.schema.identity.AppUser.IndustryProfileOrBuilder getIndustryOrBuilder() {
       return getIndustry();
     }
 
     private byte memoizedIsInitialized = -1;
+    @java.lang.Override
     public final boolean isInitialized() {
       byte isInitialized = memoizedIsInitialized;
       if (isInitialized == 1) return true;
@@ -1981,6 +1985,7 @@ public final class AppUser {
       return true;
     }
 
+    @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
       if (!getUidBytes().isEmpty()) {
@@ -2025,6 +2030,7 @@ public final class AppUser {
       unknownFields.writeTo(output);
     }
 
+    @java.lang.Override
     public int getSerializedSize() {
       int size = memoizedSize;
       if (size != -1) return size;
@@ -2269,6 +2275,7 @@ public final class AppUser {
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
 
+    @java.lang.Override
     public Builder newBuilderForType() { return newBuilder(); }
     public static Builder newBuilder() {
       return DEFAULT_INSTANCE.toBuilder();
@@ -2276,6 +2283,7 @@ public final class AppUser {
     public static Builder newBuilder(io.bloombox.schema.identity.AppUser.User prototype) {
       return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
     }
+    @java.lang.Override
     public Builder toBuilder() {
       return this == DEFAULT_INSTANCE
           ? new Builder() : new Builder().mergeFrom(this);
@@ -2292,15 +2300,15 @@ public final class AppUser {
      * Represents an individual who uses software.
      * </pre>
      *
-     * Protobuf type {@code bloombox.schema.identity.User}
+     * Protobuf type {@code bloombox.identity.User}
      */
     public static final class Builder extends
         com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:bloombox.schema.identity.User)
+        // @@protoc_insertion_point(builder_implements:bloombox.identity.User)
         io.bloombox.schema.identity.AppUser.UserOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return io.bloombox.schema.identity.AppUser.internal_static_bloombox_schema_identity_User_descriptor;
+        return io.bloombox.schema.identity.AppUser.internal_static_bloombox_identity_User_descriptor;
       }
 
       @SuppressWarnings({"rawtypes"})
@@ -2329,9 +2337,10 @@ public final class AppUser {
                 "Invalid map field number: " + number);
         }
       }
+      @java.lang.Override
       protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return io.bloombox.schema.identity.AppUser.internal_static_bloombox_schema_identity_User_fieldAccessorTable
+        return io.bloombox.schema.identity.AppUser.internal_static_bloombox_identity_User_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
                 io.bloombox.schema.identity.AppUser.User.class, io.bloombox.schema.identity.AppUser.User.Builder.class);
       }
@@ -2353,6 +2362,7 @@ public final class AppUser {
           getDoctorRecFieldBuilder();
         }
       }
+      @java.lang.Override
       public Builder clear() {
         super.clear();
         uid_ = "";
@@ -2410,15 +2420,18 @@ public final class AppUser {
         return this;
       }
 
+      @java.lang.Override
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return io.bloombox.schema.identity.AppUser.internal_static_bloombox_schema_identity_User_descriptor;
+        return io.bloombox.schema.identity.AppUser.internal_static_bloombox_identity_User_descriptor;
       }
 
+      @java.lang.Override
       public io.bloombox.schema.identity.AppUser.User getDefaultInstanceForType() {
         return io.bloombox.schema.identity.AppUser.User.getDefaultInstance();
       }
 
+      @java.lang.Override
       public io.bloombox.schema.identity.AppUser.User build() {
         io.bloombox.schema.identity.AppUser.User result = buildPartial();
         if (!result.isInitialized()) {
@@ -2427,6 +2440,7 @@ public final class AppUser {
         return result;
       }
 
+      @java.lang.Override
       public io.bloombox.schema.identity.AppUser.User buildPartial() {
         io.bloombox.schema.identity.AppUser.User result = new io.bloombox.schema.identity.AppUser.User(this);
         int from_bitField0_ = bitField0_;
@@ -2489,32 +2503,39 @@ public final class AppUser {
         return result;
       }
 
+      @java.lang.Override
       public Builder clone() {
         return (Builder) super.clone();
       }
+      @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
         return (Builder) super.setField(field, value);
       }
+      @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
         return (Builder) super.clearField(field);
       }
+      @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
         return (Builder) super.clearOneof(oneof);
       }
+      @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
         return (Builder) super.setRepeatedField(field, index, value);
       }
+      @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
         return (Builder) super.addRepeatedField(field, value);
       }
+      @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
         if (other instanceof io.bloombox.schema.identity.AppUser.User) {
           return mergeFrom((io.bloombox.schema.identity.AppUser.User)other);
@@ -2609,10 +2630,12 @@ public final class AppUser {
         return this;
       }
 
+      @java.lang.Override
       public final boolean isInitialized() {
         return true;
       }
 
+      @java.lang.Override
       public Builder mergeFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -2729,7 +2752,7 @@ public final class AppUser {
        * Boolean flags for this user.
        * </pre>
        *
-       * <code>.bloombox.schema.identity.UserFlags flags = 2 [(.gen_bq_schema.description) = "Boolean flags for this user.", (.core.field) = { ... }</code>
+       * <code>.bloombox.identity.UserFlags flags = 2 [(.gen_bq_schema.description) = "Boolean flags for this user.", (.core.field) = { ... }</code>
        */
       public boolean hasFlags() {
         return flagsBuilder_ != null || flags_ != null;
@@ -2739,7 +2762,7 @@ public final class AppUser {
        * Boolean flags for this user.
        * </pre>
        *
-       * <code>.bloombox.schema.identity.UserFlags flags = 2 [(.gen_bq_schema.description) = "Boolean flags for this user.", (.core.field) = { ... }</code>
+       * <code>.bloombox.identity.UserFlags flags = 2 [(.gen_bq_schema.description) = "Boolean flags for this user.", (.core.field) = { ... }</code>
        */
       public io.bloombox.schema.identity.AppUser.UserFlags getFlags() {
         if (flagsBuilder_ == null) {
@@ -2753,7 +2776,7 @@ public final class AppUser {
        * Boolean flags for this user.
        * </pre>
        *
-       * <code>.bloombox.schema.identity.UserFlags flags = 2 [(.gen_bq_schema.description) = "Boolean flags for this user.", (.core.field) = { ... }</code>
+       * <code>.bloombox.identity.UserFlags flags = 2 [(.gen_bq_schema.description) = "Boolean flags for this user.", (.core.field) = { ... }</code>
        */
       public Builder setFlags(io.bloombox.schema.identity.AppUser.UserFlags value) {
         if (flagsBuilder_ == null) {
@@ -2773,7 +2796,7 @@ public final class AppUser {
        * Boolean flags for this user.
        * </pre>
        *
-       * <code>.bloombox.schema.identity.UserFlags flags = 2 [(.gen_bq_schema.description) = "Boolean flags for this user.", (.core.field) = { ... }</code>
+       * <code>.bloombox.identity.UserFlags flags = 2 [(.gen_bq_schema.description) = "Boolean flags for this user.", (.core.field) = { ... }</code>
        */
       public Builder setFlags(
           io.bloombox.schema.identity.AppUser.UserFlags.Builder builderForValue) {
@@ -2791,7 +2814,7 @@ public final class AppUser {
        * Boolean flags for this user.
        * </pre>
        *
-       * <code>.bloombox.schema.identity.UserFlags flags = 2 [(.gen_bq_schema.description) = "Boolean flags for this user.", (.core.field) = { ... }</code>
+       * <code>.bloombox.identity.UserFlags flags = 2 [(.gen_bq_schema.description) = "Boolean flags for this user.", (.core.field) = { ... }</code>
        */
       public Builder mergeFlags(io.bloombox.schema.identity.AppUser.UserFlags value) {
         if (flagsBuilder_ == null) {
@@ -2813,7 +2836,7 @@ public final class AppUser {
        * Boolean flags for this user.
        * </pre>
        *
-       * <code>.bloombox.schema.identity.UserFlags flags = 2 [(.gen_bq_schema.description) = "Boolean flags for this user.", (.core.field) = { ... }</code>
+       * <code>.bloombox.identity.UserFlags flags = 2 [(.gen_bq_schema.description) = "Boolean flags for this user.", (.core.field) = { ... }</code>
        */
       public Builder clearFlags() {
         if (flagsBuilder_ == null) {
@@ -2831,7 +2854,7 @@ public final class AppUser {
        * Boolean flags for this user.
        * </pre>
        *
-       * <code>.bloombox.schema.identity.UserFlags flags = 2 [(.gen_bq_schema.description) = "Boolean flags for this user.", (.core.field) = { ... }</code>
+       * <code>.bloombox.identity.UserFlags flags = 2 [(.gen_bq_schema.description) = "Boolean flags for this user.", (.core.field) = { ... }</code>
        */
       public io.bloombox.schema.identity.AppUser.UserFlags.Builder getFlagsBuilder() {
         
@@ -2843,7 +2866,7 @@ public final class AppUser {
        * Boolean flags for this user.
        * </pre>
        *
-       * <code>.bloombox.schema.identity.UserFlags flags = 2 [(.gen_bq_schema.description) = "Boolean flags for this user.", (.core.field) = { ... }</code>
+       * <code>.bloombox.identity.UserFlags flags = 2 [(.gen_bq_schema.description) = "Boolean flags for this user.", (.core.field) = { ... }</code>
        */
       public io.bloombox.schema.identity.AppUser.UserFlagsOrBuilder getFlagsOrBuilder() {
         if (flagsBuilder_ != null) {
@@ -2858,7 +2881,7 @@ public final class AppUser {
        * Boolean flags for this user.
        * </pre>
        *
-       * <code>.bloombox.schema.identity.UserFlags flags = 2 [(.gen_bq_schema.description) = "Boolean flags for this user.", (.core.field) = { ... }</code>
+       * <code>.bloombox.identity.UserFlags flags = 2 [(.gen_bq_schema.description) = "Boolean flags for this user.", (.core.field) = { ... }</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
           io.bloombox.schema.identity.AppUser.UserFlags, io.bloombox.schema.identity.AppUser.UserFlags.Builder, io.bloombox.schema.identity.AppUser.UserFlagsOrBuilder> 
@@ -3044,7 +3067,7 @@ public final class AppUser {
        * Government ID associated with this user.
        * </pre>
        *
-       * <code>repeated .bloombox.schema.identity.ID identification = 20 [(.gen_bq_schema.ignore) = true, (.gen_bq_schema.description) = "Government ID associated with this user.", (.core.collection) = { ... }</code>
+       * <code>repeated .bloombox.identity.ID identification = 20 [(.gen_bq_schema.ignore) = true, (.gen_bq_schema.description) = "Government ID associated with this user.", (.core.collection) = { ... }</code>
        */
       public java.util.List<io.bloombox.schema.identity.IdentityID.ID> getIdentificationList() {
         if (identificationBuilder_ == null) {
@@ -3058,7 +3081,7 @@ public final class AppUser {
        * Government ID associated with this user.
        * </pre>
        *
-       * <code>repeated .bloombox.schema.identity.ID identification = 20 [(.gen_bq_schema.ignore) = true, (.gen_bq_schema.description) = "Government ID associated with this user.", (.core.collection) = { ... }</code>
+       * <code>repeated .bloombox.identity.ID identification = 20 [(.gen_bq_schema.ignore) = true, (.gen_bq_schema.description) = "Government ID associated with this user.", (.core.collection) = { ... }</code>
        */
       public int getIdentificationCount() {
         if (identificationBuilder_ == null) {
@@ -3072,7 +3095,7 @@ public final class AppUser {
        * Government ID associated with this user.
        * </pre>
        *
-       * <code>repeated .bloombox.schema.identity.ID identification = 20 [(.gen_bq_schema.ignore) = true, (.gen_bq_schema.description) = "Government ID associated with this user.", (.core.collection) = { ... }</code>
+       * <code>repeated .bloombox.identity.ID identification = 20 [(.gen_bq_schema.ignore) = true, (.gen_bq_schema.description) = "Government ID associated with this user.", (.core.collection) = { ... }</code>
        */
       public io.bloombox.schema.identity.IdentityID.ID getIdentification(int index) {
         if (identificationBuilder_ == null) {
@@ -3086,7 +3109,7 @@ public final class AppUser {
        * Government ID associated with this user.
        * </pre>
        *
-       * <code>repeated .bloombox.schema.identity.ID identification = 20 [(.gen_bq_schema.ignore) = true, (.gen_bq_schema.description) = "Government ID associated with this user.", (.core.collection) = { ... }</code>
+       * <code>repeated .bloombox.identity.ID identification = 20 [(.gen_bq_schema.ignore) = true, (.gen_bq_schema.description) = "Government ID associated with this user.", (.core.collection) = { ... }</code>
        */
       public Builder setIdentification(
           int index, io.bloombox.schema.identity.IdentityID.ID value) {
@@ -3107,7 +3130,7 @@ public final class AppUser {
        * Government ID associated with this user.
        * </pre>
        *
-       * <code>repeated .bloombox.schema.identity.ID identification = 20 [(.gen_bq_schema.ignore) = true, (.gen_bq_schema.description) = "Government ID associated with this user.", (.core.collection) = { ... }</code>
+       * <code>repeated .bloombox.identity.ID identification = 20 [(.gen_bq_schema.ignore) = true, (.gen_bq_schema.description) = "Government ID associated with this user.", (.core.collection) = { ... }</code>
        */
       public Builder setIdentification(
           int index, io.bloombox.schema.identity.IdentityID.ID.Builder builderForValue) {
@@ -3125,7 +3148,7 @@ public final class AppUser {
        * Government ID associated with this user.
        * </pre>
        *
-       * <code>repeated .bloombox.schema.identity.ID identification = 20 [(.gen_bq_schema.ignore) = true, (.gen_bq_schema.description) = "Government ID associated with this user.", (.core.collection) = { ... }</code>
+       * <code>repeated .bloombox.identity.ID identification = 20 [(.gen_bq_schema.ignore) = true, (.gen_bq_schema.description) = "Government ID associated with this user.", (.core.collection) = { ... }</code>
        */
       public Builder addIdentification(io.bloombox.schema.identity.IdentityID.ID value) {
         if (identificationBuilder_ == null) {
@@ -3145,7 +3168,7 @@ public final class AppUser {
        * Government ID associated with this user.
        * </pre>
        *
-       * <code>repeated .bloombox.schema.identity.ID identification = 20 [(.gen_bq_schema.ignore) = true, (.gen_bq_schema.description) = "Government ID associated with this user.", (.core.collection) = { ... }</code>
+       * <code>repeated .bloombox.identity.ID identification = 20 [(.gen_bq_schema.ignore) = true, (.gen_bq_schema.description) = "Government ID associated with this user.", (.core.collection) = { ... }</code>
        */
       public Builder addIdentification(
           int index, io.bloombox.schema.identity.IdentityID.ID value) {
@@ -3166,7 +3189,7 @@ public final class AppUser {
        * Government ID associated with this user.
        * </pre>
        *
-       * <code>repeated .bloombox.schema.identity.ID identification = 20 [(.gen_bq_schema.ignore) = true, (.gen_bq_schema.description) = "Government ID associated with this user.", (.core.collection) = { ... }</code>
+       * <code>repeated .bloombox.identity.ID identification = 20 [(.gen_bq_schema.ignore) = true, (.gen_bq_schema.description) = "Government ID associated with this user.", (.core.collection) = { ... }</code>
        */
       public Builder addIdentification(
           io.bloombox.schema.identity.IdentityID.ID.Builder builderForValue) {
@@ -3184,7 +3207,7 @@ public final class AppUser {
        * Government ID associated with this user.
        * </pre>
        *
-       * <code>repeated .bloombox.schema.identity.ID identification = 20 [(.gen_bq_schema.ignore) = true, (.gen_bq_schema.description) = "Government ID associated with this user.", (.core.collection) = { ... }</code>
+       * <code>repeated .bloombox.identity.ID identification = 20 [(.gen_bq_schema.ignore) = true, (.gen_bq_schema.description) = "Government ID associated with this user.", (.core.collection) = { ... }</code>
        */
       public Builder addIdentification(
           int index, io.bloombox.schema.identity.IdentityID.ID.Builder builderForValue) {
@@ -3202,7 +3225,7 @@ public final class AppUser {
        * Government ID associated with this user.
        * </pre>
        *
-       * <code>repeated .bloombox.schema.identity.ID identification = 20 [(.gen_bq_schema.ignore) = true, (.gen_bq_schema.description) = "Government ID associated with this user.", (.core.collection) = { ... }</code>
+       * <code>repeated .bloombox.identity.ID identification = 20 [(.gen_bq_schema.ignore) = true, (.gen_bq_schema.description) = "Government ID associated with this user.", (.core.collection) = { ... }</code>
        */
       public Builder addAllIdentification(
           java.lang.Iterable<? extends io.bloombox.schema.identity.IdentityID.ID> values) {
@@ -3221,7 +3244,7 @@ public final class AppUser {
        * Government ID associated with this user.
        * </pre>
        *
-       * <code>repeated .bloombox.schema.identity.ID identification = 20 [(.gen_bq_schema.ignore) = true, (.gen_bq_schema.description) = "Government ID associated with this user.", (.core.collection) = { ... }</code>
+       * <code>repeated .bloombox.identity.ID identification = 20 [(.gen_bq_schema.ignore) = true, (.gen_bq_schema.description) = "Government ID associated with this user.", (.core.collection) = { ... }</code>
        */
       public Builder clearIdentification() {
         if (identificationBuilder_ == null) {
@@ -3238,7 +3261,7 @@ public final class AppUser {
        * Government ID associated with this user.
        * </pre>
        *
-       * <code>repeated .bloombox.schema.identity.ID identification = 20 [(.gen_bq_schema.ignore) = true, (.gen_bq_schema.description) = "Government ID associated with this user.", (.core.collection) = { ... }</code>
+       * <code>repeated .bloombox.identity.ID identification = 20 [(.gen_bq_schema.ignore) = true, (.gen_bq_schema.description) = "Government ID associated with this user.", (.core.collection) = { ... }</code>
        */
       public Builder removeIdentification(int index) {
         if (identificationBuilder_ == null) {
@@ -3255,7 +3278,7 @@ public final class AppUser {
        * Government ID associated with this user.
        * </pre>
        *
-       * <code>repeated .bloombox.schema.identity.ID identification = 20 [(.gen_bq_schema.ignore) = true, (.gen_bq_schema.description) = "Government ID associated with this user.", (.core.collection) = { ... }</code>
+       * <code>repeated .bloombox.identity.ID identification = 20 [(.gen_bq_schema.ignore) = true, (.gen_bq_schema.description) = "Government ID associated with this user.", (.core.collection) = { ... }</code>
        */
       public io.bloombox.schema.identity.IdentityID.ID.Builder getIdentificationBuilder(
           int index) {
@@ -3266,7 +3289,7 @@ public final class AppUser {
        * Government ID associated with this user.
        * </pre>
        *
-       * <code>repeated .bloombox.schema.identity.ID identification = 20 [(.gen_bq_schema.ignore) = true, (.gen_bq_schema.description) = "Government ID associated with this user.", (.core.collection) = { ... }</code>
+       * <code>repeated .bloombox.identity.ID identification = 20 [(.gen_bq_schema.ignore) = true, (.gen_bq_schema.description) = "Government ID associated with this user.", (.core.collection) = { ... }</code>
        */
       public io.bloombox.schema.identity.IdentityID.IDOrBuilder getIdentificationOrBuilder(
           int index) {
@@ -3280,7 +3303,7 @@ public final class AppUser {
        * Government ID associated with this user.
        * </pre>
        *
-       * <code>repeated .bloombox.schema.identity.ID identification = 20 [(.gen_bq_schema.ignore) = true, (.gen_bq_schema.description) = "Government ID associated with this user.", (.core.collection) = { ... }</code>
+       * <code>repeated .bloombox.identity.ID identification = 20 [(.gen_bq_schema.ignore) = true, (.gen_bq_schema.description) = "Government ID associated with this user.", (.core.collection) = { ... }</code>
        */
       public java.util.List<? extends io.bloombox.schema.identity.IdentityID.IDOrBuilder> 
            getIdentificationOrBuilderList() {
@@ -3295,7 +3318,7 @@ public final class AppUser {
        * Government ID associated with this user.
        * </pre>
        *
-       * <code>repeated .bloombox.schema.identity.ID identification = 20 [(.gen_bq_schema.ignore) = true, (.gen_bq_schema.description) = "Government ID associated with this user.", (.core.collection) = { ... }</code>
+       * <code>repeated .bloombox.identity.ID identification = 20 [(.gen_bq_schema.ignore) = true, (.gen_bq_schema.description) = "Government ID associated with this user.", (.core.collection) = { ... }</code>
        */
       public io.bloombox.schema.identity.IdentityID.ID.Builder addIdentificationBuilder() {
         return getIdentificationFieldBuilder().addBuilder(
@@ -3306,7 +3329,7 @@ public final class AppUser {
        * Government ID associated with this user.
        * </pre>
        *
-       * <code>repeated .bloombox.schema.identity.ID identification = 20 [(.gen_bq_schema.ignore) = true, (.gen_bq_schema.description) = "Government ID associated with this user.", (.core.collection) = { ... }</code>
+       * <code>repeated .bloombox.identity.ID identification = 20 [(.gen_bq_schema.ignore) = true, (.gen_bq_schema.description) = "Government ID associated with this user.", (.core.collection) = { ... }</code>
        */
       public io.bloombox.schema.identity.IdentityID.ID.Builder addIdentificationBuilder(
           int index) {
@@ -3318,7 +3341,7 @@ public final class AppUser {
        * Government ID associated with this user.
        * </pre>
        *
-       * <code>repeated .bloombox.schema.identity.ID identification = 20 [(.gen_bq_schema.ignore) = true, (.gen_bq_schema.description) = "Government ID associated with this user.", (.core.collection) = { ... }</code>
+       * <code>repeated .bloombox.identity.ID identification = 20 [(.gen_bq_schema.ignore) = true, (.gen_bq_schema.description) = "Government ID associated with this user.", (.core.collection) = { ... }</code>
        */
       public java.util.List<io.bloombox.schema.identity.IdentityID.ID.Builder> 
            getIdentificationBuilderList() {
@@ -3356,7 +3379,7 @@ public final class AppUser {
        * Doctor's recommendations associated with this user.
        * </pre>
        *
-       * <code>repeated .bloombox.schema.identity.ids.UserDoctorRec doctor_rec = 21 [(.gen_bq_schema.ignore) = true, (.gen_bq_schema.description) = "Doctor&#92;'s recommendations associated with this user.", (.core.collection) = { ... }</code>
+       * <code>repeated .bloombox.identity.ids.UserDoctorRec doctor_rec = 21 [(.gen_bq_schema.ignore) = true, (.gen_bq_schema.description) = "Doctor&#92;'s recommendations associated with this user.", (.core.collection) = { ... }</code>
        */
       public java.util.List<io.bloombox.schema.identity.ids.PrescriptionID.UserDoctorRec> getDoctorRecList() {
         if (doctorRecBuilder_ == null) {
@@ -3370,7 +3393,7 @@ public final class AppUser {
        * Doctor's recommendations associated with this user.
        * </pre>
        *
-       * <code>repeated .bloombox.schema.identity.ids.UserDoctorRec doctor_rec = 21 [(.gen_bq_schema.ignore) = true, (.gen_bq_schema.description) = "Doctor&#92;'s recommendations associated with this user.", (.core.collection) = { ... }</code>
+       * <code>repeated .bloombox.identity.ids.UserDoctorRec doctor_rec = 21 [(.gen_bq_schema.ignore) = true, (.gen_bq_schema.description) = "Doctor&#92;'s recommendations associated with this user.", (.core.collection) = { ... }</code>
        */
       public int getDoctorRecCount() {
         if (doctorRecBuilder_ == null) {
@@ -3384,7 +3407,7 @@ public final class AppUser {
        * Doctor's recommendations associated with this user.
        * </pre>
        *
-       * <code>repeated .bloombox.schema.identity.ids.UserDoctorRec doctor_rec = 21 [(.gen_bq_schema.ignore) = true, (.gen_bq_schema.description) = "Doctor&#92;'s recommendations associated with this user.", (.core.collection) = { ... }</code>
+       * <code>repeated .bloombox.identity.ids.UserDoctorRec doctor_rec = 21 [(.gen_bq_schema.ignore) = true, (.gen_bq_schema.description) = "Doctor&#92;'s recommendations associated with this user.", (.core.collection) = { ... }</code>
        */
       public io.bloombox.schema.identity.ids.PrescriptionID.UserDoctorRec getDoctorRec(int index) {
         if (doctorRecBuilder_ == null) {
@@ -3398,7 +3421,7 @@ public final class AppUser {
        * Doctor's recommendations associated with this user.
        * </pre>
        *
-       * <code>repeated .bloombox.schema.identity.ids.UserDoctorRec doctor_rec = 21 [(.gen_bq_schema.ignore) = true, (.gen_bq_schema.description) = "Doctor&#92;'s recommendations associated with this user.", (.core.collection) = { ... }</code>
+       * <code>repeated .bloombox.identity.ids.UserDoctorRec doctor_rec = 21 [(.gen_bq_schema.ignore) = true, (.gen_bq_schema.description) = "Doctor&#92;'s recommendations associated with this user.", (.core.collection) = { ... }</code>
        */
       public Builder setDoctorRec(
           int index, io.bloombox.schema.identity.ids.PrescriptionID.UserDoctorRec value) {
@@ -3419,7 +3442,7 @@ public final class AppUser {
        * Doctor's recommendations associated with this user.
        * </pre>
        *
-       * <code>repeated .bloombox.schema.identity.ids.UserDoctorRec doctor_rec = 21 [(.gen_bq_schema.ignore) = true, (.gen_bq_schema.description) = "Doctor&#92;'s recommendations associated with this user.", (.core.collection) = { ... }</code>
+       * <code>repeated .bloombox.identity.ids.UserDoctorRec doctor_rec = 21 [(.gen_bq_schema.ignore) = true, (.gen_bq_schema.description) = "Doctor&#92;'s recommendations associated with this user.", (.core.collection) = { ... }</code>
        */
       public Builder setDoctorRec(
           int index, io.bloombox.schema.identity.ids.PrescriptionID.UserDoctorRec.Builder builderForValue) {
@@ -3437,7 +3460,7 @@ public final class AppUser {
        * Doctor's recommendations associated with this user.
        * </pre>
        *
-       * <code>repeated .bloombox.schema.identity.ids.UserDoctorRec doctor_rec = 21 [(.gen_bq_schema.ignore) = true, (.gen_bq_schema.description) = "Doctor&#92;'s recommendations associated with this user.", (.core.collection) = { ... }</code>
+       * <code>repeated .bloombox.identity.ids.UserDoctorRec doctor_rec = 21 [(.gen_bq_schema.ignore) = true, (.gen_bq_schema.description) = "Doctor&#92;'s recommendations associated with this user.", (.core.collection) = { ... }</code>
        */
       public Builder addDoctorRec(io.bloombox.schema.identity.ids.PrescriptionID.UserDoctorRec value) {
         if (doctorRecBuilder_ == null) {
@@ -3457,7 +3480,7 @@ public final class AppUser {
        * Doctor's recommendations associated with this user.
        * </pre>
        *
-       * <code>repeated .bloombox.schema.identity.ids.UserDoctorRec doctor_rec = 21 [(.gen_bq_schema.ignore) = true, (.gen_bq_schema.description) = "Doctor&#92;'s recommendations associated with this user.", (.core.collection) = { ... }</code>
+       * <code>repeated .bloombox.identity.ids.UserDoctorRec doctor_rec = 21 [(.gen_bq_schema.ignore) = true, (.gen_bq_schema.description) = "Doctor&#92;'s recommendations associated with this user.", (.core.collection) = { ... }</code>
        */
       public Builder addDoctorRec(
           int index, io.bloombox.schema.identity.ids.PrescriptionID.UserDoctorRec value) {
@@ -3478,7 +3501,7 @@ public final class AppUser {
        * Doctor's recommendations associated with this user.
        * </pre>
        *
-       * <code>repeated .bloombox.schema.identity.ids.UserDoctorRec doctor_rec = 21 [(.gen_bq_schema.ignore) = true, (.gen_bq_schema.description) = "Doctor&#92;'s recommendations associated with this user.", (.core.collection) = { ... }</code>
+       * <code>repeated .bloombox.identity.ids.UserDoctorRec doctor_rec = 21 [(.gen_bq_schema.ignore) = true, (.gen_bq_schema.description) = "Doctor&#92;'s recommendations associated with this user.", (.core.collection) = { ... }</code>
        */
       public Builder addDoctorRec(
           io.bloombox.schema.identity.ids.PrescriptionID.UserDoctorRec.Builder builderForValue) {
@@ -3496,7 +3519,7 @@ public final class AppUser {
        * Doctor's recommendations associated with this user.
        * </pre>
        *
-       * <code>repeated .bloombox.schema.identity.ids.UserDoctorRec doctor_rec = 21 [(.gen_bq_schema.ignore) = true, (.gen_bq_schema.description) = "Doctor&#92;'s recommendations associated with this user.", (.core.collection) = { ... }</code>
+       * <code>repeated .bloombox.identity.ids.UserDoctorRec doctor_rec = 21 [(.gen_bq_schema.ignore) = true, (.gen_bq_schema.description) = "Doctor&#92;'s recommendations associated with this user.", (.core.collection) = { ... }</code>
        */
       public Builder addDoctorRec(
           int index, io.bloombox.schema.identity.ids.PrescriptionID.UserDoctorRec.Builder builderForValue) {
@@ -3514,7 +3537,7 @@ public final class AppUser {
        * Doctor's recommendations associated with this user.
        * </pre>
        *
-       * <code>repeated .bloombox.schema.identity.ids.UserDoctorRec doctor_rec = 21 [(.gen_bq_schema.ignore) = true, (.gen_bq_schema.description) = "Doctor&#92;'s recommendations associated with this user.", (.core.collection) = { ... }</code>
+       * <code>repeated .bloombox.identity.ids.UserDoctorRec doctor_rec = 21 [(.gen_bq_schema.ignore) = true, (.gen_bq_schema.description) = "Doctor&#92;'s recommendations associated with this user.", (.core.collection) = { ... }</code>
        */
       public Builder addAllDoctorRec(
           java.lang.Iterable<? extends io.bloombox.schema.identity.ids.PrescriptionID.UserDoctorRec> values) {
@@ -3533,7 +3556,7 @@ public final class AppUser {
        * Doctor's recommendations associated with this user.
        * </pre>
        *
-       * <code>repeated .bloombox.schema.identity.ids.UserDoctorRec doctor_rec = 21 [(.gen_bq_schema.ignore) = true, (.gen_bq_schema.description) = "Doctor&#92;'s recommendations associated with this user.", (.core.collection) = { ... }</code>
+       * <code>repeated .bloombox.identity.ids.UserDoctorRec doctor_rec = 21 [(.gen_bq_schema.ignore) = true, (.gen_bq_schema.description) = "Doctor&#92;'s recommendations associated with this user.", (.core.collection) = { ... }</code>
        */
       public Builder clearDoctorRec() {
         if (doctorRecBuilder_ == null) {
@@ -3550,7 +3573,7 @@ public final class AppUser {
        * Doctor's recommendations associated with this user.
        * </pre>
        *
-       * <code>repeated .bloombox.schema.identity.ids.UserDoctorRec doctor_rec = 21 [(.gen_bq_schema.ignore) = true, (.gen_bq_schema.description) = "Doctor&#92;'s recommendations associated with this user.", (.core.collection) = { ... }</code>
+       * <code>repeated .bloombox.identity.ids.UserDoctorRec doctor_rec = 21 [(.gen_bq_schema.ignore) = true, (.gen_bq_schema.description) = "Doctor&#92;'s recommendations associated with this user.", (.core.collection) = { ... }</code>
        */
       public Builder removeDoctorRec(int index) {
         if (doctorRecBuilder_ == null) {
@@ -3567,7 +3590,7 @@ public final class AppUser {
        * Doctor's recommendations associated with this user.
        * </pre>
        *
-       * <code>repeated .bloombox.schema.identity.ids.UserDoctorRec doctor_rec = 21 [(.gen_bq_schema.ignore) = true, (.gen_bq_schema.description) = "Doctor&#92;'s recommendations associated with this user.", (.core.collection) = { ... }</code>
+       * <code>repeated .bloombox.identity.ids.UserDoctorRec doctor_rec = 21 [(.gen_bq_schema.ignore) = true, (.gen_bq_schema.description) = "Doctor&#92;'s recommendations associated with this user.", (.core.collection) = { ... }</code>
        */
       public io.bloombox.schema.identity.ids.PrescriptionID.UserDoctorRec.Builder getDoctorRecBuilder(
           int index) {
@@ -3578,7 +3601,7 @@ public final class AppUser {
        * Doctor's recommendations associated with this user.
        * </pre>
        *
-       * <code>repeated .bloombox.schema.identity.ids.UserDoctorRec doctor_rec = 21 [(.gen_bq_schema.ignore) = true, (.gen_bq_schema.description) = "Doctor&#92;'s recommendations associated with this user.", (.core.collection) = { ... }</code>
+       * <code>repeated .bloombox.identity.ids.UserDoctorRec doctor_rec = 21 [(.gen_bq_schema.ignore) = true, (.gen_bq_schema.description) = "Doctor&#92;'s recommendations associated with this user.", (.core.collection) = { ... }</code>
        */
       public io.bloombox.schema.identity.ids.PrescriptionID.UserDoctorRecOrBuilder getDoctorRecOrBuilder(
           int index) {
@@ -3592,7 +3615,7 @@ public final class AppUser {
        * Doctor's recommendations associated with this user.
        * </pre>
        *
-       * <code>repeated .bloombox.schema.identity.ids.UserDoctorRec doctor_rec = 21 [(.gen_bq_schema.ignore) = true, (.gen_bq_schema.description) = "Doctor&#92;'s recommendations associated with this user.", (.core.collection) = { ... }</code>
+       * <code>repeated .bloombox.identity.ids.UserDoctorRec doctor_rec = 21 [(.gen_bq_schema.ignore) = true, (.gen_bq_schema.description) = "Doctor&#92;'s recommendations associated with this user.", (.core.collection) = { ... }</code>
        */
       public java.util.List<? extends io.bloombox.schema.identity.ids.PrescriptionID.UserDoctorRecOrBuilder> 
            getDoctorRecOrBuilderList() {
@@ -3607,7 +3630,7 @@ public final class AppUser {
        * Doctor's recommendations associated with this user.
        * </pre>
        *
-       * <code>repeated .bloombox.schema.identity.ids.UserDoctorRec doctor_rec = 21 [(.gen_bq_schema.ignore) = true, (.gen_bq_schema.description) = "Doctor&#92;'s recommendations associated with this user.", (.core.collection) = { ... }</code>
+       * <code>repeated .bloombox.identity.ids.UserDoctorRec doctor_rec = 21 [(.gen_bq_schema.ignore) = true, (.gen_bq_schema.description) = "Doctor&#92;'s recommendations associated with this user.", (.core.collection) = { ... }</code>
        */
       public io.bloombox.schema.identity.ids.PrescriptionID.UserDoctorRec.Builder addDoctorRecBuilder() {
         return getDoctorRecFieldBuilder().addBuilder(
@@ -3618,7 +3641,7 @@ public final class AppUser {
        * Doctor's recommendations associated with this user.
        * </pre>
        *
-       * <code>repeated .bloombox.schema.identity.ids.UserDoctorRec doctor_rec = 21 [(.gen_bq_schema.ignore) = true, (.gen_bq_schema.description) = "Doctor&#92;'s recommendations associated with this user.", (.core.collection) = { ... }</code>
+       * <code>repeated .bloombox.identity.ids.UserDoctorRec doctor_rec = 21 [(.gen_bq_schema.ignore) = true, (.gen_bq_schema.description) = "Doctor&#92;'s recommendations associated with this user.", (.core.collection) = { ... }</code>
        */
       public io.bloombox.schema.identity.ids.PrescriptionID.UserDoctorRec.Builder addDoctorRecBuilder(
           int index) {
@@ -3630,7 +3653,7 @@ public final class AppUser {
        * Doctor's recommendations associated with this user.
        * </pre>
        *
-       * <code>repeated .bloombox.schema.identity.ids.UserDoctorRec doctor_rec = 21 [(.gen_bq_schema.ignore) = true, (.gen_bq_schema.description) = "Doctor&#92;'s recommendations associated with this user.", (.core.collection) = { ... }</code>
+       * <code>repeated .bloombox.identity.ids.UserDoctorRec doctor_rec = 21 [(.gen_bq_schema.ignore) = true, (.gen_bq_schema.description) = "Doctor&#92;'s recommendations associated with this user.", (.core.collection) = { ... }</code>
        */
       public java.util.List<io.bloombox.schema.identity.ids.PrescriptionID.UserDoctorRec.Builder> 
            getDoctorRecBuilderList() {
@@ -3988,7 +4011,7 @@ public final class AppUser {
        * Identities associated with this user.
        * </pre>
        *
-       * <code>map&lt;string, .bloombox.schema.identity.UserIdentity&gt; identities = 40 [(.gen_bq_schema.ignore) = true, (.gen_bq_schema.description) = "Identities associated with this user."];</code>
+       * <code>map&lt;string, .bloombox.identity.UserIdentity&gt; identities = 40 [(.gen_bq_schema.ignore) = true, (.gen_bq_schema.description) = "Identities associated with this user."];</code>
        */
 
       public boolean containsIdentities(
@@ -4008,7 +4031,7 @@ public final class AppUser {
        * Identities associated with this user.
        * </pre>
        *
-       * <code>map&lt;string, .bloombox.schema.identity.UserIdentity&gt; identities = 40 [(.gen_bq_schema.ignore) = true, (.gen_bq_schema.description) = "Identities associated with this user."];</code>
+       * <code>map&lt;string, .bloombox.identity.UserIdentity&gt; identities = 40 [(.gen_bq_schema.ignore) = true, (.gen_bq_schema.description) = "Identities associated with this user."];</code>
        */
 
       public java.util.Map<java.lang.String, io.bloombox.schema.identity.AppUser.UserIdentity> getIdentitiesMap() {
@@ -4019,7 +4042,7 @@ public final class AppUser {
        * Identities associated with this user.
        * </pre>
        *
-       * <code>map&lt;string, .bloombox.schema.identity.UserIdentity&gt; identities = 40 [(.gen_bq_schema.ignore) = true, (.gen_bq_schema.description) = "Identities associated with this user."];</code>
+       * <code>map&lt;string, .bloombox.identity.UserIdentity&gt; identities = 40 [(.gen_bq_schema.ignore) = true, (.gen_bq_schema.description) = "Identities associated with this user."];</code>
        */
 
       public io.bloombox.schema.identity.AppUser.UserIdentity getIdentitiesOrDefault(
@@ -4035,7 +4058,7 @@ public final class AppUser {
        * Identities associated with this user.
        * </pre>
        *
-       * <code>map&lt;string, .bloombox.schema.identity.UserIdentity&gt; identities = 40 [(.gen_bq_schema.ignore) = true, (.gen_bq_schema.description) = "Identities associated with this user."];</code>
+       * <code>map&lt;string, .bloombox.identity.UserIdentity&gt; identities = 40 [(.gen_bq_schema.ignore) = true, (.gen_bq_schema.description) = "Identities associated with this user."];</code>
        */
 
       public io.bloombox.schema.identity.AppUser.UserIdentity getIdentitiesOrThrow(
@@ -4059,7 +4082,7 @@ public final class AppUser {
        * Identities associated with this user.
        * </pre>
        *
-       * <code>map&lt;string, .bloombox.schema.identity.UserIdentity&gt; identities = 40 [(.gen_bq_schema.ignore) = true, (.gen_bq_schema.description) = "Identities associated with this user."];</code>
+       * <code>map&lt;string, .bloombox.identity.UserIdentity&gt; identities = 40 [(.gen_bq_schema.ignore) = true, (.gen_bq_schema.description) = "Identities associated with this user."];</code>
        */
 
       public Builder removeIdentities(
@@ -4082,7 +4105,7 @@ public final class AppUser {
        * Identities associated with this user.
        * </pre>
        *
-       * <code>map&lt;string, .bloombox.schema.identity.UserIdentity&gt; identities = 40 [(.gen_bq_schema.ignore) = true, (.gen_bq_schema.description) = "Identities associated with this user."];</code>
+       * <code>map&lt;string, .bloombox.identity.UserIdentity&gt; identities = 40 [(.gen_bq_schema.ignore) = true, (.gen_bq_schema.description) = "Identities associated with this user."];</code>
        */
       public Builder putIdentities(
           java.lang.String key,
@@ -4098,7 +4121,7 @@ public final class AppUser {
        * Identities associated with this user.
        * </pre>
        *
-       * <code>map&lt;string, .bloombox.schema.identity.UserIdentity&gt; identities = 40 [(.gen_bq_schema.ignore) = true, (.gen_bq_schema.description) = "Identities associated with this user."];</code>
+       * <code>map&lt;string, .bloombox.identity.UserIdentity&gt; identities = 40 [(.gen_bq_schema.ignore) = true, (.gen_bq_schema.description) = "Identities associated with this user."];</code>
        */
 
       public Builder putAllIdentities(
@@ -4267,7 +4290,7 @@ public final class AppUser {
        * Consumer profile for this user.
        * </pre>
        *
-       * <code>.bloombox.schema.identity.ConsumerProfile consumer = 100 [(.gen_bq_schema.description) = "Consumer profile for this user."];</code>
+       * <code>.bloombox.identity.ConsumerProfile consumer = 100 [(.gen_bq_schema.description) = "Consumer profile for this user."];</code>
        */
       public boolean hasConsumer() {
         return consumerBuilder_ != null || consumer_ != null;
@@ -4277,7 +4300,7 @@ public final class AppUser {
        * Consumer profile for this user.
        * </pre>
        *
-       * <code>.bloombox.schema.identity.ConsumerProfile consumer = 100 [(.gen_bq_schema.description) = "Consumer profile for this user."];</code>
+       * <code>.bloombox.identity.ConsumerProfile consumer = 100 [(.gen_bq_schema.description) = "Consumer profile for this user."];</code>
        */
       public io.bloombox.schema.identity.AppUser.ConsumerProfile getConsumer() {
         if (consumerBuilder_ == null) {
@@ -4291,7 +4314,7 @@ public final class AppUser {
        * Consumer profile for this user.
        * </pre>
        *
-       * <code>.bloombox.schema.identity.ConsumerProfile consumer = 100 [(.gen_bq_schema.description) = "Consumer profile for this user."];</code>
+       * <code>.bloombox.identity.ConsumerProfile consumer = 100 [(.gen_bq_schema.description) = "Consumer profile for this user."];</code>
        */
       public Builder setConsumer(io.bloombox.schema.identity.AppUser.ConsumerProfile value) {
         if (consumerBuilder_ == null) {
@@ -4311,7 +4334,7 @@ public final class AppUser {
        * Consumer profile for this user.
        * </pre>
        *
-       * <code>.bloombox.schema.identity.ConsumerProfile consumer = 100 [(.gen_bq_schema.description) = "Consumer profile for this user."];</code>
+       * <code>.bloombox.identity.ConsumerProfile consumer = 100 [(.gen_bq_schema.description) = "Consumer profile for this user."];</code>
        */
       public Builder setConsumer(
           io.bloombox.schema.identity.AppUser.ConsumerProfile.Builder builderForValue) {
@@ -4329,7 +4352,7 @@ public final class AppUser {
        * Consumer profile for this user.
        * </pre>
        *
-       * <code>.bloombox.schema.identity.ConsumerProfile consumer = 100 [(.gen_bq_schema.description) = "Consumer profile for this user."];</code>
+       * <code>.bloombox.identity.ConsumerProfile consumer = 100 [(.gen_bq_schema.description) = "Consumer profile for this user."];</code>
        */
       public Builder mergeConsumer(io.bloombox.schema.identity.AppUser.ConsumerProfile value) {
         if (consumerBuilder_ == null) {
@@ -4351,7 +4374,7 @@ public final class AppUser {
        * Consumer profile for this user.
        * </pre>
        *
-       * <code>.bloombox.schema.identity.ConsumerProfile consumer = 100 [(.gen_bq_schema.description) = "Consumer profile for this user."];</code>
+       * <code>.bloombox.identity.ConsumerProfile consumer = 100 [(.gen_bq_schema.description) = "Consumer profile for this user."];</code>
        */
       public Builder clearConsumer() {
         if (consumerBuilder_ == null) {
@@ -4369,7 +4392,7 @@ public final class AppUser {
        * Consumer profile for this user.
        * </pre>
        *
-       * <code>.bloombox.schema.identity.ConsumerProfile consumer = 100 [(.gen_bq_schema.description) = "Consumer profile for this user."];</code>
+       * <code>.bloombox.identity.ConsumerProfile consumer = 100 [(.gen_bq_schema.description) = "Consumer profile for this user."];</code>
        */
       public io.bloombox.schema.identity.AppUser.ConsumerProfile.Builder getConsumerBuilder() {
         
@@ -4381,7 +4404,7 @@ public final class AppUser {
        * Consumer profile for this user.
        * </pre>
        *
-       * <code>.bloombox.schema.identity.ConsumerProfile consumer = 100 [(.gen_bq_schema.description) = "Consumer profile for this user."];</code>
+       * <code>.bloombox.identity.ConsumerProfile consumer = 100 [(.gen_bq_schema.description) = "Consumer profile for this user."];</code>
        */
       public io.bloombox.schema.identity.AppUser.ConsumerProfileOrBuilder getConsumerOrBuilder() {
         if (consumerBuilder_ != null) {
@@ -4396,7 +4419,7 @@ public final class AppUser {
        * Consumer profile for this user.
        * </pre>
        *
-       * <code>.bloombox.schema.identity.ConsumerProfile consumer = 100 [(.gen_bq_schema.description) = "Consumer profile for this user."];</code>
+       * <code>.bloombox.identity.ConsumerProfile consumer = 100 [(.gen_bq_schema.description) = "Consumer profile for this user."];</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
           io.bloombox.schema.identity.AppUser.ConsumerProfile, io.bloombox.schema.identity.AppUser.ConsumerProfile.Builder, io.bloombox.schema.identity.AppUser.ConsumerProfileOrBuilder> 
@@ -4420,7 +4443,7 @@ public final class AppUser {
        * Industry profile for this user.
        * </pre>
        *
-       * <code>.bloombox.schema.identity.IndustryProfile industry = 101 [(.gen_bq_schema.description) = "Industry profile for this user."];</code>
+       * <code>.bloombox.identity.IndustryProfile industry = 101 [(.gen_bq_schema.description) = "Industry profile for this user."];</code>
        */
       public boolean hasIndustry() {
         return industryBuilder_ != null || industry_ != null;
@@ -4430,7 +4453,7 @@ public final class AppUser {
        * Industry profile for this user.
        * </pre>
        *
-       * <code>.bloombox.schema.identity.IndustryProfile industry = 101 [(.gen_bq_schema.description) = "Industry profile for this user."];</code>
+       * <code>.bloombox.identity.IndustryProfile industry = 101 [(.gen_bq_schema.description) = "Industry profile for this user."];</code>
        */
       public io.bloombox.schema.identity.AppUser.IndustryProfile getIndustry() {
         if (industryBuilder_ == null) {
@@ -4444,7 +4467,7 @@ public final class AppUser {
        * Industry profile for this user.
        * </pre>
        *
-       * <code>.bloombox.schema.identity.IndustryProfile industry = 101 [(.gen_bq_schema.description) = "Industry profile for this user."];</code>
+       * <code>.bloombox.identity.IndustryProfile industry = 101 [(.gen_bq_schema.description) = "Industry profile for this user."];</code>
        */
       public Builder setIndustry(io.bloombox.schema.identity.AppUser.IndustryProfile value) {
         if (industryBuilder_ == null) {
@@ -4464,7 +4487,7 @@ public final class AppUser {
        * Industry profile for this user.
        * </pre>
        *
-       * <code>.bloombox.schema.identity.IndustryProfile industry = 101 [(.gen_bq_schema.description) = "Industry profile for this user."];</code>
+       * <code>.bloombox.identity.IndustryProfile industry = 101 [(.gen_bq_schema.description) = "Industry profile for this user."];</code>
        */
       public Builder setIndustry(
           io.bloombox.schema.identity.AppUser.IndustryProfile.Builder builderForValue) {
@@ -4482,7 +4505,7 @@ public final class AppUser {
        * Industry profile for this user.
        * </pre>
        *
-       * <code>.bloombox.schema.identity.IndustryProfile industry = 101 [(.gen_bq_schema.description) = "Industry profile for this user."];</code>
+       * <code>.bloombox.identity.IndustryProfile industry = 101 [(.gen_bq_schema.description) = "Industry profile for this user."];</code>
        */
       public Builder mergeIndustry(io.bloombox.schema.identity.AppUser.IndustryProfile value) {
         if (industryBuilder_ == null) {
@@ -4504,7 +4527,7 @@ public final class AppUser {
        * Industry profile for this user.
        * </pre>
        *
-       * <code>.bloombox.schema.identity.IndustryProfile industry = 101 [(.gen_bq_schema.description) = "Industry profile for this user."];</code>
+       * <code>.bloombox.identity.IndustryProfile industry = 101 [(.gen_bq_schema.description) = "Industry profile for this user."];</code>
        */
       public Builder clearIndustry() {
         if (industryBuilder_ == null) {
@@ -4522,7 +4545,7 @@ public final class AppUser {
        * Industry profile for this user.
        * </pre>
        *
-       * <code>.bloombox.schema.identity.IndustryProfile industry = 101 [(.gen_bq_schema.description) = "Industry profile for this user."];</code>
+       * <code>.bloombox.identity.IndustryProfile industry = 101 [(.gen_bq_schema.description) = "Industry profile for this user."];</code>
        */
       public io.bloombox.schema.identity.AppUser.IndustryProfile.Builder getIndustryBuilder() {
         
@@ -4534,7 +4557,7 @@ public final class AppUser {
        * Industry profile for this user.
        * </pre>
        *
-       * <code>.bloombox.schema.identity.IndustryProfile industry = 101 [(.gen_bq_schema.description) = "Industry profile for this user."];</code>
+       * <code>.bloombox.identity.IndustryProfile industry = 101 [(.gen_bq_schema.description) = "Industry profile for this user."];</code>
        */
       public io.bloombox.schema.identity.AppUser.IndustryProfileOrBuilder getIndustryOrBuilder() {
         if (industryBuilder_ != null) {
@@ -4549,7 +4572,7 @@ public final class AppUser {
        * Industry profile for this user.
        * </pre>
        *
-       * <code>.bloombox.schema.identity.IndustryProfile industry = 101 [(.gen_bq_schema.description) = "Industry profile for this user."];</code>
+       * <code>.bloombox.identity.IndustryProfile industry = 101 [(.gen_bq_schema.description) = "Industry profile for this user."];</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
           io.bloombox.schema.identity.AppUser.IndustryProfile, io.bloombox.schema.identity.AppUser.IndustryProfile.Builder, io.bloombox.schema.identity.AppUser.IndustryProfileOrBuilder> 
@@ -4564,21 +4587,23 @@ public final class AppUser {
         }
         return industryBuilder_;
       }
+      @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
         return super.setUnknownFieldsProto3(unknownFields);
       }
 
+      @java.lang.Override
       public final Builder mergeUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
         return super.mergeUnknownFields(unknownFields);
       }
 
 
-      // @@protoc_insertion_point(builder_scope:bloombox.schema.identity.User)
+      // @@protoc_insertion_point(builder_scope:bloombox.identity.User)
     }
 
-    // @@protoc_insertion_point(class_scope:bloombox.schema.identity.User)
+    // @@protoc_insertion_point(class_scope:bloombox.identity.User)
     private static final io.bloombox.schema.identity.AppUser.User DEFAULT_INSTANCE;
     static {
       DEFAULT_INSTANCE = new io.bloombox.schema.identity.AppUser.User();
@@ -4590,6 +4615,7 @@ public final class AppUser {
 
     private static final com.google.protobuf.Parser<User>
         PARSER = new com.google.protobuf.AbstractParser<User>() {
+      @java.lang.Override
       public User parsePartialFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -4607,6 +4633,7 @@ public final class AppUser {
       return PARSER;
     }
 
+    @java.lang.Override
     public io.bloombox.schema.identity.AppUser.User getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
@@ -4614,7 +4641,7 @@ public final class AppUser {
   }
 
   public interface UserFlagsOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:bloombox.schema.identity.UserFlags)
+      // @@protoc_insertion_point(interface_extends:bloombox.identity.UserFlags)
       com.google.protobuf.MessageOrBuilder {
 
     /**
@@ -4667,11 +4694,11 @@ public final class AppUser {
    * Boolean flags that may be set on a user account.
    * </pre>
    *
-   * Protobuf type {@code bloombox.schema.identity.UserFlags}
+   * Protobuf type {@code bloombox.identity.UserFlags}
    */
   public  static final class UserFlags extends
       com.google.protobuf.GeneratedMessageV3 implements
-      // @@protoc_insertion_point(message_implements:bloombox.schema.identity.UserFlags)
+      // @@protoc_insertion_point(message_implements:bloombox.identity.UserFlags)
       UserFlagsOrBuilder {
   private static final long serialVersionUID = 0L;
     // Use UserFlags.newBuilder() to construct.
@@ -4710,13 +4737,6 @@ public final class AppUser {
             case 0:
               done = true;
               break;
-            default: {
-              if (!parseUnknownFieldProto3(
-                  input, unknownFields, extensionRegistry, tag)) {
-                done = true;
-              }
-              break;
-            }
             case 8: {
 
               validated_ = input.readBool();
@@ -4742,6 +4762,13 @@ public final class AppUser {
               sandbox_ = input.readBool();
               break;
             }
+            default: {
+              if (!parseUnknownFieldProto3(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
           }
         }
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
@@ -4756,12 +4783,13 @@ public final class AppUser {
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return io.bloombox.schema.identity.AppUser.internal_static_bloombox_schema_identity_UserFlags_descriptor;
+      return io.bloombox.schema.identity.AppUser.internal_static_bloombox_identity_UserFlags_descriptor;
     }
 
+    @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return io.bloombox.schema.identity.AppUser.internal_static_bloombox_schema_identity_UserFlags_fieldAccessorTable
+      return io.bloombox.schema.identity.AppUser.internal_static_bloombox_identity_UserFlags_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
               io.bloombox.schema.identity.AppUser.UserFlags.class, io.bloombox.schema.identity.AppUser.UserFlags.Builder.class);
     }
@@ -4832,6 +4860,7 @@ public final class AppUser {
     }
 
     private byte memoizedIsInitialized = -1;
+    @java.lang.Override
     public final boolean isInitialized() {
       byte isInitialized = memoizedIsInitialized;
       if (isInitialized == 1) return true;
@@ -4841,6 +4870,7 @@ public final class AppUser {
       return true;
     }
 
+    @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
       if (validated_ != false) {
@@ -4861,6 +4891,7 @@ public final class AppUser {
       unknownFields.writeTo(output);
     }
 
+    @java.lang.Override
     public int getSerializedSize() {
       int size = memoizedSize;
       if (size != -1) return size;
@@ -5013,6 +5044,7 @@ public final class AppUser {
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
 
+    @java.lang.Override
     public Builder newBuilderForType() { return newBuilder(); }
     public static Builder newBuilder() {
       return DEFAULT_INSTANCE.toBuilder();
@@ -5020,6 +5052,7 @@ public final class AppUser {
     public static Builder newBuilder(io.bloombox.schema.identity.AppUser.UserFlags prototype) {
       return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
     }
+    @java.lang.Override
     public Builder toBuilder() {
       return this == DEFAULT_INSTANCE
           ? new Builder() : new Builder().mergeFrom(this);
@@ -5036,20 +5069,21 @@ public final class AppUser {
      * Boolean flags that may be set on a user account.
      * </pre>
      *
-     * Protobuf type {@code bloombox.schema.identity.UserFlags}
+     * Protobuf type {@code bloombox.identity.UserFlags}
      */
     public static final class Builder extends
         com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:bloombox.schema.identity.UserFlags)
+        // @@protoc_insertion_point(builder_implements:bloombox.identity.UserFlags)
         io.bloombox.schema.identity.AppUser.UserFlagsOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return io.bloombox.schema.identity.AppUser.internal_static_bloombox_schema_identity_UserFlags_descriptor;
+        return io.bloombox.schema.identity.AppUser.internal_static_bloombox_identity_UserFlags_descriptor;
       }
 
+      @java.lang.Override
       protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return io.bloombox.schema.identity.AppUser.internal_static_bloombox_schema_identity_UserFlags_fieldAccessorTable
+        return io.bloombox.schema.identity.AppUser.internal_static_bloombox_identity_UserFlags_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
                 io.bloombox.schema.identity.AppUser.UserFlags.class, io.bloombox.schema.identity.AppUser.UserFlags.Builder.class);
       }
@@ -5069,6 +5103,7 @@ public final class AppUser {
                 .alwaysUseFieldBuilders) {
         }
       }
+      @java.lang.Override
       public Builder clear() {
         super.clear();
         validated_ = false;
@@ -5084,15 +5119,18 @@ public final class AppUser {
         return this;
       }
 
+      @java.lang.Override
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return io.bloombox.schema.identity.AppUser.internal_static_bloombox_schema_identity_UserFlags_descriptor;
+        return io.bloombox.schema.identity.AppUser.internal_static_bloombox_identity_UserFlags_descriptor;
       }
 
+      @java.lang.Override
       public io.bloombox.schema.identity.AppUser.UserFlags getDefaultInstanceForType() {
         return io.bloombox.schema.identity.AppUser.UserFlags.getDefaultInstance();
       }
 
+      @java.lang.Override
       public io.bloombox.schema.identity.AppUser.UserFlags build() {
         io.bloombox.schema.identity.AppUser.UserFlags result = buildPartial();
         if (!result.isInitialized()) {
@@ -5101,6 +5139,7 @@ public final class AppUser {
         return result;
       }
 
+      @java.lang.Override
       public io.bloombox.schema.identity.AppUser.UserFlags buildPartial() {
         io.bloombox.schema.identity.AppUser.UserFlags result = new io.bloombox.schema.identity.AppUser.UserFlags(this);
         result.validated_ = validated_;
@@ -5112,32 +5151,39 @@ public final class AppUser {
         return result;
       }
 
+      @java.lang.Override
       public Builder clone() {
         return (Builder) super.clone();
       }
+      @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
         return (Builder) super.setField(field, value);
       }
+      @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
         return (Builder) super.clearField(field);
       }
+      @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
         return (Builder) super.clearOneof(oneof);
       }
+      @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
         return (Builder) super.setRepeatedField(field, index, value);
       }
+      @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
         return (Builder) super.addRepeatedField(field, value);
       }
+      @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
         if (other instanceof io.bloombox.schema.identity.AppUser.UserFlags) {
           return mergeFrom((io.bloombox.schema.identity.AppUser.UserFlags)other);
@@ -5169,10 +5215,12 @@ public final class AppUser {
         return this;
       }
 
+      @java.lang.Override
       public final boolean isInitialized() {
         return true;
       }
 
+      @java.lang.Override
       public Builder mergeFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -5380,21 +5428,23 @@ public final class AppUser {
         onChanged();
         return this;
       }
+      @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
         return super.setUnknownFieldsProto3(unknownFields);
       }
 
+      @java.lang.Override
       public final Builder mergeUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
         return super.mergeUnknownFields(unknownFields);
       }
 
 
-      // @@protoc_insertion_point(builder_scope:bloombox.schema.identity.UserFlags)
+      // @@protoc_insertion_point(builder_scope:bloombox.identity.UserFlags)
     }
 
-    // @@protoc_insertion_point(class_scope:bloombox.schema.identity.UserFlags)
+    // @@protoc_insertion_point(class_scope:bloombox.identity.UserFlags)
     private static final io.bloombox.schema.identity.AppUser.UserFlags DEFAULT_INSTANCE;
     static {
       DEFAULT_INSTANCE = new io.bloombox.schema.identity.AppUser.UserFlags();
@@ -5406,6 +5456,7 @@ public final class AppUser {
 
     private static final com.google.protobuf.Parser<UserFlags>
         PARSER = new com.google.protobuf.AbstractParser<UserFlags>() {
+      @java.lang.Override
       public UserFlags parsePartialFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -5423,6 +5474,7 @@ public final class AppUser {
       return PARSER;
     }
 
+    @java.lang.Override
     public io.bloombox.schema.identity.AppUser.UserFlags getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
@@ -5430,7 +5482,7 @@ public final class AppUser {
   }
 
   public interface UserIdentityOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:bloombox.schema.identity.UserIdentity)
+      // @@protoc_insertion_point(interface_extends:bloombox.identity.UserIdentity)
       com.google.protobuf.MessageOrBuilder {
 
     /**
@@ -5438,7 +5490,7 @@ public final class AppUser {
      * Provider for this external/foreign account.
      * </pre>
      *
-     * <code>.bloombox.schema.identity.IdentityProvider provider = 1 [(.gen_bq_schema.description) = "Provider for this external/foreign account."];</code>
+     * <code>.bloombox.identity.IdentityProvider provider = 1 [(.gen_bq_schema.description) = "Provider for this external/foreign account."];</code>
      */
     int getProviderValue();
     /**
@@ -5446,7 +5498,7 @@ public final class AppUser {
      * Provider for this external/foreign account.
      * </pre>
      *
-     * <code>.bloombox.schema.identity.IdentityProvider provider = 1 [(.gen_bq_schema.description) = "Provider for this external/foreign account."];</code>
+     * <code>.bloombox.identity.IdentityProvider provider = 1 [(.gen_bq_schema.description) = "Provider for this external/foreign account."];</code>
      */
     io.bloombox.schema.identity.AppUser.IdentityProvider getProvider();
 
@@ -5498,11 +5550,11 @@ public final class AppUser {
    * Represents an identity that may be associated with a user account.
    * </pre>
    *
-   * Protobuf type {@code bloombox.schema.identity.UserIdentity}
+   * Protobuf type {@code bloombox.identity.UserIdentity}
    */
   public  static final class UserIdentity extends
       com.google.protobuf.GeneratedMessageV3 implements
-      // @@protoc_insertion_point(message_implements:bloombox.schema.identity.UserIdentity)
+      // @@protoc_insertion_point(message_implements:bloombox.identity.UserIdentity)
       UserIdentityOrBuilder {
   private static final long serialVersionUID = 0L;
     // Use UserIdentity.newBuilder() to construct.
@@ -5538,13 +5590,6 @@ public final class AppUser {
             case 0:
               done = true;
               break;
-            default: {
-              if (!parseUnknownFieldProto3(
-                  input, unknownFields, extensionRegistry, tag)) {
-                done = true;
-              }
-              break;
-            }
             case 8: {
               int rawValue = input.readEnum();
 
@@ -5570,6 +5615,13 @@ public final class AppUser {
 
               break;
             }
+            default: {
+              if (!parseUnknownFieldProto3(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
           }
         }
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
@@ -5584,12 +5636,13 @@ public final class AppUser {
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return io.bloombox.schema.identity.AppUser.internal_static_bloombox_schema_identity_UserIdentity_descriptor;
+      return io.bloombox.schema.identity.AppUser.internal_static_bloombox_identity_UserIdentity_descriptor;
     }
 
+    @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return io.bloombox.schema.identity.AppUser.internal_static_bloombox_schema_identity_UserIdentity_fieldAccessorTable
+      return io.bloombox.schema.identity.AppUser.internal_static_bloombox_identity_UserIdentity_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
               io.bloombox.schema.identity.AppUser.UserIdentity.class, io.bloombox.schema.identity.AppUser.UserIdentity.Builder.class);
     }
@@ -5601,7 +5654,7 @@ public final class AppUser {
      * Provider for this external/foreign account.
      * </pre>
      *
-     * <code>.bloombox.schema.identity.IdentityProvider provider = 1 [(.gen_bq_schema.description) = "Provider for this external/foreign account."];</code>
+     * <code>.bloombox.identity.IdentityProvider provider = 1 [(.gen_bq_schema.description) = "Provider for this external/foreign account."];</code>
      */
     public int getProviderValue() {
       return provider_;
@@ -5611,9 +5664,10 @@ public final class AppUser {
      * Provider for this external/foreign account.
      * </pre>
      *
-     * <code>.bloombox.schema.identity.IdentityProvider provider = 1 [(.gen_bq_schema.description) = "Provider for this external/foreign account."];</code>
+     * <code>.bloombox.identity.IdentityProvider provider = 1 [(.gen_bq_schema.description) = "Provider for this external/foreign account."];</code>
      */
     public io.bloombox.schema.identity.AppUser.IdentityProvider getProvider() {
+      @SuppressWarnings("deprecation")
       io.bloombox.schema.identity.AppUser.IdentityProvider result = io.bloombox.schema.identity.AppUser.IdentityProvider.valueOf(provider_);
       return result == null ? io.bloombox.schema.identity.AppUser.IdentityProvider.UNRECOGNIZED : result;
     }
@@ -5694,6 +5748,7 @@ public final class AppUser {
     }
 
     private byte memoizedIsInitialized = -1;
+    @java.lang.Override
     public final boolean isInitialized() {
       byte isInitialized = memoizedIsInitialized;
       if (isInitialized == 1) return true;
@@ -5703,6 +5758,7 @@ public final class AppUser {
       return true;
     }
 
+    @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
       if (provider_ != io.bloombox.schema.identity.AppUser.IdentityProvider.EMAIL.getNumber()) {
@@ -5717,6 +5773,7 @@ public final class AppUser {
       unknownFields.writeTo(output);
     }
 
+    @java.lang.Override
     public int getSerializedSize() {
       int size = memoizedSize;
       if (size != -1) return size;
@@ -5851,6 +5908,7 @@ public final class AppUser {
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
 
+    @java.lang.Override
     public Builder newBuilderForType() { return newBuilder(); }
     public static Builder newBuilder() {
       return DEFAULT_INSTANCE.toBuilder();
@@ -5858,6 +5916,7 @@ public final class AppUser {
     public static Builder newBuilder(io.bloombox.schema.identity.AppUser.UserIdentity prototype) {
       return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
     }
+    @java.lang.Override
     public Builder toBuilder() {
       return this == DEFAULT_INSTANCE
           ? new Builder() : new Builder().mergeFrom(this);
@@ -5874,20 +5933,21 @@ public final class AppUser {
      * Represents an identity that may be associated with a user account.
      * </pre>
      *
-     * Protobuf type {@code bloombox.schema.identity.UserIdentity}
+     * Protobuf type {@code bloombox.identity.UserIdentity}
      */
     public static final class Builder extends
         com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:bloombox.schema.identity.UserIdentity)
+        // @@protoc_insertion_point(builder_implements:bloombox.identity.UserIdentity)
         io.bloombox.schema.identity.AppUser.UserIdentityOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return io.bloombox.schema.identity.AppUser.internal_static_bloombox_schema_identity_UserIdentity_descriptor;
+        return io.bloombox.schema.identity.AppUser.internal_static_bloombox_identity_UserIdentity_descriptor;
       }
 
+      @java.lang.Override
       protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return io.bloombox.schema.identity.AppUser.internal_static_bloombox_schema_identity_UserIdentity_fieldAccessorTable
+        return io.bloombox.schema.identity.AppUser.internal_static_bloombox_identity_UserIdentity_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
                 io.bloombox.schema.identity.AppUser.UserIdentity.class, io.bloombox.schema.identity.AppUser.UserIdentity.Builder.class);
       }
@@ -5907,6 +5967,7 @@ public final class AppUser {
                 .alwaysUseFieldBuilders) {
         }
       }
+      @java.lang.Override
       public Builder clear() {
         super.clear();
         provider_ = 0;
@@ -5922,15 +5983,18 @@ public final class AppUser {
         return this;
       }
 
+      @java.lang.Override
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return io.bloombox.schema.identity.AppUser.internal_static_bloombox_schema_identity_UserIdentity_descriptor;
+        return io.bloombox.schema.identity.AppUser.internal_static_bloombox_identity_UserIdentity_descriptor;
       }
 
+      @java.lang.Override
       public io.bloombox.schema.identity.AppUser.UserIdentity getDefaultInstanceForType() {
         return io.bloombox.schema.identity.AppUser.UserIdentity.getDefaultInstance();
       }
 
+      @java.lang.Override
       public io.bloombox.schema.identity.AppUser.UserIdentity build() {
         io.bloombox.schema.identity.AppUser.UserIdentity result = buildPartial();
         if (!result.isInitialized()) {
@@ -5939,6 +6003,7 @@ public final class AppUser {
         return result;
       }
 
+      @java.lang.Override
       public io.bloombox.schema.identity.AppUser.UserIdentity buildPartial() {
         io.bloombox.schema.identity.AppUser.UserIdentity result = new io.bloombox.schema.identity.AppUser.UserIdentity(this);
         result.provider_ = provider_;
@@ -5952,32 +6017,39 @@ public final class AppUser {
         return result;
       }
 
+      @java.lang.Override
       public Builder clone() {
         return (Builder) super.clone();
       }
+      @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
         return (Builder) super.setField(field, value);
       }
+      @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
         return (Builder) super.clearField(field);
       }
+      @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
         return (Builder) super.clearOneof(oneof);
       }
+      @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
         return (Builder) super.setRepeatedField(field, index, value);
       }
+      @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
         return (Builder) super.addRepeatedField(field, value);
       }
+      @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
         if (other instanceof io.bloombox.schema.identity.AppUser.UserIdentity) {
           return mergeFrom((io.bloombox.schema.identity.AppUser.UserIdentity)other);
@@ -6004,10 +6076,12 @@ public final class AppUser {
         return this;
       }
 
+      @java.lang.Override
       public final boolean isInitialized() {
         return true;
       }
 
+      @java.lang.Override
       public Builder mergeFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -6032,7 +6106,7 @@ public final class AppUser {
        * Provider for this external/foreign account.
        * </pre>
        *
-       * <code>.bloombox.schema.identity.IdentityProvider provider = 1 [(.gen_bq_schema.description) = "Provider for this external/foreign account."];</code>
+       * <code>.bloombox.identity.IdentityProvider provider = 1 [(.gen_bq_schema.description) = "Provider for this external/foreign account."];</code>
        */
       public int getProviderValue() {
         return provider_;
@@ -6042,7 +6116,7 @@ public final class AppUser {
        * Provider for this external/foreign account.
        * </pre>
        *
-       * <code>.bloombox.schema.identity.IdentityProvider provider = 1 [(.gen_bq_schema.description) = "Provider for this external/foreign account."];</code>
+       * <code>.bloombox.identity.IdentityProvider provider = 1 [(.gen_bq_schema.description) = "Provider for this external/foreign account."];</code>
        */
       public Builder setProviderValue(int value) {
         provider_ = value;
@@ -6054,9 +6128,10 @@ public final class AppUser {
        * Provider for this external/foreign account.
        * </pre>
        *
-       * <code>.bloombox.schema.identity.IdentityProvider provider = 1 [(.gen_bq_schema.description) = "Provider for this external/foreign account."];</code>
+       * <code>.bloombox.identity.IdentityProvider provider = 1 [(.gen_bq_schema.description) = "Provider for this external/foreign account."];</code>
        */
       public io.bloombox.schema.identity.AppUser.IdentityProvider getProvider() {
+        @SuppressWarnings("deprecation")
         io.bloombox.schema.identity.AppUser.IdentityProvider result = io.bloombox.schema.identity.AppUser.IdentityProvider.valueOf(provider_);
         return result == null ? io.bloombox.schema.identity.AppUser.IdentityProvider.UNRECOGNIZED : result;
       }
@@ -6065,7 +6140,7 @@ public final class AppUser {
        * Provider for this external/foreign account.
        * </pre>
        *
-       * <code>.bloombox.schema.identity.IdentityProvider provider = 1 [(.gen_bq_schema.description) = "Provider for this external/foreign account."];</code>
+       * <code>.bloombox.identity.IdentityProvider provider = 1 [(.gen_bq_schema.description) = "Provider for this external/foreign account."];</code>
        */
       public Builder setProvider(io.bloombox.schema.identity.AppUser.IdentityProvider value) {
         if (value == null) {
@@ -6081,7 +6156,7 @@ public final class AppUser {
        * Provider for this external/foreign account.
        * </pre>
        *
-       * <code>.bloombox.schema.identity.IdentityProvider provider = 1 [(.gen_bq_schema.description) = "Provider for this external/foreign account."];</code>
+       * <code>.bloombox.identity.IdentityProvider provider = 1 [(.gen_bq_schema.description) = "Provider for this external/foreign account."];</code>
        */
       public Builder clearProvider() {
         
@@ -6331,21 +6406,23 @@ public final class AppUser {
         }
         return seenBuilder_;
       }
+      @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
         return super.setUnknownFieldsProto3(unknownFields);
       }
 
+      @java.lang.Override
       public final Builder mergeUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
         return super.mergeUnknownFields(unknownFields);
       }
 
 
-      // @@protoc_insertion_point(builder_scope:bloombox.schema.identity.UserIdentity)
+      // @@protoc_insertion_point(builder_scope:bloombox.identity.UserIdentity)
     }
 
-    // @@protoc_insertion_point(class_scope:bloombox.schema.identity.UserIdentity)
+    // @@protoc_insertion_point(class_scope:bloombox.identity.UserIdentity)
     private static final io.bloombox.schema.identity.AppUser.UserIdentity DEFAULT_INSTANCE;
     static {
       DEFAULT_INSTANCE = new io.bloombox.schema.identity.AppUser.UserIdentity();
@@ -6357,6 +6434,7 @@ public final class AppUser {
 
     private static final com.google.protobuf.Parser<UserIdentity>
         PARSER = new com.google.protobuf.AbstractParser<UserIdentity>() {
+      @java.lang.Override
       public UserIdentity parsePartialFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -6374,6 +6452,7 @@ public final class AppUser {
       return PARSER;
     }
 
+    @java.lang.Override
     public io.bloombox.schema.identity.AppUser.UserIdentity getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
@@ -6381,7 +6460,7 @@ public final class AppUser {
   }
 
   public interface ConsumerProfileOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:bloombox.schema.identity.ConsumerProfile)
+      // @@protoc_insertion_point(interface_extends:bloombox.identity.ConsumerProfile)
       com.google.protobuf.MessageOrBuilder {
 
     /**
@@ -6433,7 +6512,7 @@ public final class AppUser {
      * Specifies enrollment source attribution information.
      * </pre>
      *
-     * <code>.bloombox.schema.identity.EnrollmentSource enrollment_source = 3 [(.gen_bq_schema.description) = "Specifies enrollment source attribution information."];</code>
+     * <code>.bloombox.identity.EnrollmentSource enrollment_source = 3 [(.gen_bq_schema.description) = "Specifies enrollment source attribution information."];</code>
      */
     int getEnrollmentSourceValue();
     /**
@@ -6441,7 +6520,7 @@ public final class AppUser {
      * Specifies enrollment source attribution information.
      * </pre>
      *
-     * <code>.bloombox.schema.identity.EnrollmentSource enrollment_source = 3 [(.gen_bq_schema.description) = "Specifies enrollment source attribution information."];</code>
+     * <code>.bloombox.identity.EnrollmentSource enrollment_source = 3 [(.gen_bq_schema.description) = "Specifies enrollment source attribution information."];</code>
      */
     io.bloombox.schema.identity.AppUser.EnrollmentSource getEnrollmentSource();
 
@@ -6468,7 +6547,7 @@ public final class AppUser {
      * Preferences attached to a consumer account.
      * </pre>
      *
-     * <code>.bloombox.schema.identity.ConsumerPreferences preferences = 5 [(.gen_bq_schema.description) = "Preferences attached to a consumer account."];</code>
+     * <code>.bloombox.identity.ConsumerPreferences preferences = 5 [(.gen_bq_schema.description) = "Preferences attached to a consumer account."];</code>
      */
     boolean hasPreferences();
     /**
@@ -6476,7 +6555,7 @@ public final class AppUser {
      * Preferences attached to a consumer account.
      * </pre>
      *
-     * <code>.bloombox.schema.identity.ConsumerPreferences preferences = 5 [(.gen_bq_schema.description) = "Preferences attached to a consumer account."];</code>
+     * <code>.bloombox.identity.ConsumerPreferences preferences = 5 [(.gen_bq_schema.description) = "Preferences attached to a consumer account."];</code>
      */
     io.bloombox.schema.identity.AppUser.ConsumerPreferences getPreferences();
     /**
@@ -6484,7 +6563,7 @@ public final class AppUser {
      * Preferences attached to a consumer account.
      * </pre>
      *
-     * <code>.bloombox.schema.identity.ConsumerPreferences preferences = 5 [(.gen_bq_schema.description) = "Preferences attached to a consumer account."];</code>
+     * <code>.bloombox.identity.ConsumerPreferences preferences = 5 [(.gen_bq_schema.description) = "Preferences attached to a consumer account."];</code>
      */
     io.bloombox.schema.identity.AppUser.ConsumerPreferencesOrBuilder getPreferencesOrBuilder();
 
@@ -6493,7 +6572,7 @@ public final class AppUser {
      * Specifies the primary consumer type for this account.
      * </pre>
      *
-     * <code>.bloombox.schema.identity.ConsumerType type = 6 [(.gen_bq_schema.description) = "Specifies the primary consumer type for this account."];</code>
+     * <code>.bloombox.identity.ConsumerType type = 6 [(.gen_bq_schema.description) = "Specifies the primary consumer type for this account."];</code>
      */
     int getTypeValue();
     /**
@@ -6501,7 +6580,7 @@ public final class AppUser {
      * Specifies the primary consumer type for this account.
      * </pre>
      *
-     * <code>.bloombox.schema.identity.ConsumerType type = 6 [(.gen_bq_schema.description) = "Specifies the primary consumer type for this account."];</code>
+     * <code>.bloombox.identity.ConsumerType type = 6 [(.gen_bq_schema.description) = "Specifies the primary consumer type for this account."];</code>
      */
     io.bloombox.schema.identity.AppUser.ConsumerType getType();
 
@@ -6510,7 +6589,7 @@ public final class AppUser {
      * Specifies referral source attribution information.
      * </pre>
      *
-     * <code>.bloombox.schema.identity.ReferralSource referral_source = 7 [(.gen_bq_schema.description) = "Specifies referral source attribution information."];</code>
+     * <code>.bloombox.identity.ReferralSource referral_source = 7 [(.gen_bq_schema.description) = "Specifies referral source attribution information."];</code>
      */
     int getReferralSourceValue();
     /**
@@ -6518,7 +6597,7 @@ public final class AppUser {
      * Specifies referral source attribution information.
      * </pre>
      *
-     * <code>.bloombox.schema.identity.ReferralSource referral_source = 7 [(.gen_bq_schema.description) = "Specifies referral source attribution information."];</code>
+     * <code>.bloombox.identity.ReferralSource referral_source = 7 [(.gen_bq_schema.description) = "Specifies referral source attribution information."];</code>
      */
     io.bloombox.schema.identity.AppUser.ReferralSource getReferralSource();
 
@@ -6545,11 +6624,11 @@ public final class AppUser {
    * User profile information for a cannabis consumer.
    * </pre>
    *
-   * Protobuf type {@code bloombox.schema.identity.ConsumerProfile}
+   * Protobuf type {@code bloombox.identity.ConsumerProfile}
    */
   public  static final class ConsumerProfile extends
       com.google.protobuf.GeneratedMessageV3 implements
-      // @@protoc_insertion_point(message_implements:bloombox.schema.identity.ConsumerProfile)
+      // @@protoc_insertion_point(message_implements:bloombox.identity.ConsumerProfile)
       ConsumerProfileOrBuilder {
   private static final long serialVersionUID = 0L;
     // Use ConsumerProfile.newBuilder() to construct.
@@ -6590,13 +6669,6 @@ public final class AppUser {
             case 0:
               done = true;
               break;
-            default: {
-              if (!parseUnknownFieldProto3(
-                  input, unknownFields, extensionRegistry, tag)) {
-                done = true;
-              }
-              break;
-            }
             case 8: {
 
               active_ = input.readBool();
@@ -6654,6 +6726,13 @@ public final class AppUser {
               referralDetail_ = s;
               break;
             }
+            default: {
+              if (!parseUnknownFieldProto3(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
           }
         }
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
@@ -6671,12 +6750,13 @@ public final class AppUser {
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return io.bloombox.schema.identity.AppUser.internal_static_bloombox_schema_identity_ConsumerProfile_descriptor;
+      return io.bloombox.schema.identity.AppUser.internal_static_bloombox_identity_ConsumerProfile_descriptor;
     }
 
+    @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return io.bloombox.schema.identity.AppUser.internal_static_bloombox_schema_identity_ConsumerProfile_fieldAccessorTable
+      return io.bloombox.schema.identity.AppUser.internal_static_bloombox_identity_ConsumerProfile_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
               io.bloombox.schema.identity.AppUser.ConsumerProfile.class, io.bloombox.schema.identity.AppUser.ConsumerProfile.Builder.class);
     }
@@ -6747,7 +6827,7 @@ public final class AppUser {
      * Specifies enrollment source attribution information.
      * </pre>
      *
-     * <code>.bloombox.schema.identity.EnrollmentSource enrollment_source = 3 [(.gen_bq_schema.description) = "Specifies enrollment source attribution information."];</code>
+     * <code>.bloombox.identity.EnrollmentSource enrollment_source = 3 [(.gen_bq_schema.description) = "Specifies enrollment source attribution information."];</code>
      */
     public int getEnrollmentSourceValue() {
       return enrollmentSource_;
@@ -6757,9 +6837,10 @@ public final class AppUser {
      * Specifies enrollment source attribution information.
      * </pre>
      *
-     * <code>.bloombox.schema.identity.EnrollmentSource enrollment_source = 3 [(.gen_bq_schema.description) = "Specifies enrollment source attribution information."];</code>
+     * <code>.bloombox.identity.EnrollmentSource enrollment_source = 3 [(.gen_bq_schema.description) = "Specifies enrollment source attribution information."];</code>
      */
     public io.bloombox.schema.identity.AppUser.EnrollmentSource getEnrollmentSource() {
+      @SuppressWarnings("deprecation")
       io.bloombox.schema.identity.AppUser.EnrollmentSource result = io.bloombox.schema.identity.AppUser.EnrollmentSource.valueOf(enrollmentSource_);
       return result == null ? io.bloombox.schema.identity.AppUser.EnrollmentSource.UNRECOGNIZED : result;
     }
@@ -6813,7 +6894,7 @@ public final class AppUser {
      * Preferences attached to a consumer account.
      * </pre>
      *
-     * <code>.bloombox.schema.identity.ConsumerPreferences preferences = 5 [(.gen_bq_schema.description) = "Preferences attached to a consumer account."];</code>
+     * <code>.bloombox.identity.ConsumerPreferences preferences = 5 [(.gen_bq_schema.description) = "Preferences attached to a consumer account."];</code>
      */
     public boolean hasPreferences() {
       return preferences_ != null;
@@ -6823,7 +6904,7 @@ public final class AppUser {
      * Preferences attached to a consumer account.
      * </pre>
      *
-     * <code>.bloombox.schema.identity.ConsumerPreferences preferences = 5 [(.gen_bq_schema.description) = "Preferences attached to a consumer account."];</code>
+     * <code>.bloombox.identity.ConsumerPreferences preferences = 5 [(.gen_bq_schema.description) = "Preferences attached to a consumer account."];</code>
      */
     public io.bloombox.schema.identity.AppUser.ConsumerPreferences getPreferences() {
       return preferences_ == null ? io.bloombox.schema.identity.AppUser.ConsumerPreferences.getDefaultInstance() : preferences_;
@@ -6833,7 +6914,7 @@ public final class AppUser {
      * Preferences attached to a consumer account.
      * </pre>
      *
-     * <code>.bloombox.schema.identity.ConsumerPreferences preferences = 5 [(.gen_bq_schema.description) = "Preferences attached to a consumer account."];</code>
+     * <code>.bloombox.identity.ConsumerPreferences preferences = 5 [(.gen_bq_schema.description) = "Preferences attached to a consumer account."];</code>
      */
     public io.bloombox.schema.identity.AppUser.ConsumerPreferencesOrBuilder getPreferencesOrBuilder() {
       return getPreferences();
@@ -6846,7 +6927,7 @@ public final class AppUser {
      * Specifies the primary consumer type for this account.
      * </pre>
      *
-     * <code>.bloombox.schema.identity.ConsumerType type = 6 [(.gen_bq_schema.description) = "Specifies the primary consumer type for this account."];</code>
+     * <code>.bloombox.identity.ConsumerType type = 6 [(.gen_bq_schema.description) = "Specifies the primary consumer type for this account."];</code>
      */
     public int getTypeValue() {
       return type_;
@@ -6856,9 +6937,10 @@ public final class AppUser {
      * Specifies the primary consumer type for this account.
      * </pre>
      *
-     * <code>.bloombox.schema.identity.ConsumerType type = 6 [(.gen_bq_schema.description) = "Specifies the primary consumer type for this account."];</code>
+     * <code>.bloombox.identity.ConsumerType type = 6 [(.gen_bq_schema.description) = "Specifies the primary consumer type for this account."];</code>
      */
     public io.bloombox.schema.identity.AppUser.ConsumerType getType() {
+      @SuppressWarnings("deprecation")
       io.bloombox.schema.identity.AppUser.ConsumerType result = io.bloombox.schema.identity.AppUser.ConsumerType.valueOf(type_);
       return result == null ? io.bloombox.schema.identity.AppUser.ConsumerType.UNRECOGNIZED : result;
     }
@@ -6870,7 +6952,7 @@ public final class AppUser {
      * Specifies referral source attribution information.
      * </pre>
      *
-     * <code>.bloombox.schema.identity.ReferralSource referral_source = 7 [(.gen_bq_schema.description) = "Specifies referral source attribution information."];</code>
+     * <code>.bloombox.identity.ReferralSource referral_source = 7 [(.gen_bq_schema.description) = "Specifies referral source attribution information."];</code>
      */
     public int getReferralSourceValue() {
       return referralSource_;
@@ -6880,9 +6962,10 @@ public final class AppUser {
      * Specifies referral source attribution information.
      * </pre>
      *
-     * <code>.bloombox.schema.identity.ReferralSource referral_source = 7 [(.gen_bq_schema.description) = "Specifies referral source attribution information."];</code>
+     * <code>.bloombox.identity.ReferralSource referral_source = 7 [(.gen_bq_schema.description) = "Specifies referral source attribution information."];</code>
      */
     public io.bloombox.schema.identity.AppUser.ReferralSource getReferralSource() {
+      @SuppressWarnings("deprecation")
       io.bloombox.schema.identity.AppUser.ReferralSource result = io.bloombox.schema.identity.AppUser.ReferralSource.valueOf(referralSource_);
       return result == null ? io.bloombox.schema.identity.AppUser.ReferralSource.UNRECOGNIZED : result;
     }
@@ -6930,6 +7013,7 @@ public final class AppUser {
     }
 
     private byte memoizedIsInitialized = -1;
+    @java.lang.Override
     public final boolean isInitialized() {
       byte isInitialized = memoizedIsInitialized;
       if (isInitialized == 1) return true;
@@ -6939,6 +7023,7 @@ public final class AppUser {
       return true;
     }
 
+    @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
       if (active_ != false) {
@@ -6968,6 +7053,7 @@ public final class AppUser {
       unknownFields.writeTo(output);
     }
 
+    @java.lang.Override
     public int getSerializedSize() {
       int size = memoizedSize;
       if (size != -1) return size;
@@ -7146,6 +7232,7 @@ public final class AppUser {
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
 
+    @java.lang.Override
     public Builder newBuilderForType() { return newBuilder(); }
     public static Builder newBuilder() {
       return DEFAULT_INSTANCE.toBuilder();
@@ -7153,6 +7240,7 @@ public final class AppUser {
     public static Builder newBuilder(io.bloombox.schema.identity.AppUser.ConsumerProfile prototype) {
       return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
     }
+    @java.lang.Override
     public Builder toBuilder() {
       return this == DEFAULT_INSTANCE
           ? new Builder() : new Builder().mergeFrom(this);
@@ -7169,20 +7257,21 @@ public final class AppUser {
      * User profile information for a cannabis consumer.
      * </pre>
      *
-     * Protobuf type {@code bloombox.schema.identity.ConsumerProfile}
+     * Protobuf type {@code bloombox.identity.ConsumerProfile}
      */
     public static final class Builder extends
         com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:bloombox.schema.identity.ConsumerProfile)
+        // @@protoc_insertion_point(builder_implements:bloombox.identity.ConsumerProfile)
         io.bloombox.schema.identity.AppUser.ConsumerProfileOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return io.bloombox.schema.identity.AppUser.internal_static_bloombox_schema_identity_ConsumerProfile_descriptor;
+        return io.bloombox.schema.identity.AppUser.internal_static_bloombox_identity_ConsumerProfile_descriptor;
       }
 
+      @java.lang.Override
       protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return io.bloombox.schema.identity.AppUser.internal_static_bloombox_schema_identity_ConsumerProfile_fieldAccessorTable
+        return io.bloombox.schema.identity.AppUser.internal_static_bloombox_identity_ConsumerProfile_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
                 io.bloombox.schema.identity.AppUser.ConsumerProfile.class, io.bloombox.schema.identity.AppUser.ConsumerProfile.Builder.class);
       }
@@ -7202,6 +7291,7 @@ public final class AppUser {
                 .alwaysUseFieldBuilders) {
         }
       }
+      @java.lang.Override
       public Builder clear() {
         super.clear();
         active_ = false;
@@ -7227,15 +7317,18 @@ public final class AppUser {
         return this;
       }
 
+      @java.lang.Override
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return io.bloombox.schema.identity.AppUser.internal_static_bloombox_schema_identity_ConsumerProfile_descriptor;
+        return io.bloombox.schema.identity.AppUser.internal_static_bloombox_identity_ConsumerProfile_descriptor;
       }
 
+      @java.lang.Override
       public io.bloombox.schema.identity.AppUser.ConsumerProfile getDefaultInstanceForType() {
         return io.bloombox.schema.identity.AppUser.ConsumerProfile.getDefaultInstance();
       }
 
+      @java.lang.Override
       public io.bloombox.schema.identity.AppUser.ConsumerProfile build() {
         io.bloombox.schema.identity.AppUser.ConsumerProfile result = buildPartial();
         if (!result.isInitialized()) {
@@ -7244,6 +7337,7 @@ public final class AppUser {
         return result;
       }
 
+      @java.lang.Override
       public io.bloombox.schema.identity.AppUser.ConsumerProfile buildPartial() {
         io.bloombox.schema.identity.AppUser.ConsumerProfile result = new io.bloombox.schema.identity.AppUser.ConsumerProfile(this);
         int from_bitField0_ = bitField0_;
@@ -7269,32 +7363,39 @@ public final class AppUser {
         return result;
       }
 
+      @java.lang.Override
       public Builder clone() {
         return (Builder) super.clone();
       }
+      @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
         return (Builder) super.setField(field, value);
       }
+      @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
         return (Builder) super.clearField(field);
       }
+      @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
         return (Builder) super.clearOneof(oneof);
       }
+      @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
         return (Builder) super.setRepeatedField(field, index, value);
       }
+      @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
         return (Builder) super.addRepeatedField(field, value);
       }
+      @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
         if (other instanceof io.bloombox.schema.identity.AppUser.ConsumerProfile) {
           return mergeFrom((io.bloombox.schema.identity.AppUser.ConsumerProfile)other);
@@ -7344,10 +7445,12 @@ public final class AppUser {
         return this;
       }
 
+      @java.lang.Override
       public final boolean isInitialized() {
         return true;
       }
 
+      @java.lang.Override
       public Builder mergeFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -7541,7 +7644,7 @@ public final class AppUser {
        * Specifies enrollment source attribution information.
        * </pre>
        *
-       * <code>.bloombox.schema.identity.EnrollmentSource enrollment_source = 3 [(.gen_bq_schema.description) = "Specifies enrollment source attribution information."];</code>
+       * <code>.bloombox.identity.EnrollmentSource enrollment_source = 3 [(.gen_bq_schema.description) = "Specifies enrollment source attribution information."];</code>
        */
       public int getEnrollmentSourceValue() {
         return enrollmentSource_;
@@ -7551,7 +7654,7 @@ public final class AppUser {
        * Specifies enrollment source attribution information.
        * </pre>
        *
-       * <code>.bloombox.schema.identity.EnrollmentSource enrollment_source = 3 [(.gen_bq_schema.description) = "Specifies enrollment source attribution information."];</code>
+       * <code>.bloombox.identity.EnrollmentSource enrollment_source = 3 [(.gen_bq_schema.description) = "Specifies enrollment source attribution information."];</code>
        */
       public Builder setEnrollmentSourceValue(int value) {
         enrollmentSource_ = value;
@@ -7563,9 +7666,10 @@ public final class AppUser {
        * Specifies enrollment source attribution information.
        * </pre>
        *
-       * <code>.bloombox.schema.identity.EnrollmentSource enrollment_source = 3 [(.gen_bq_schema.description) = "Specifies enrollment source attribution information."];</code>
+       * <code>.bloombox.identity.EnrollmentSource enrollment_source = 3 [(.gen_bq_schema.description) = "Specifies enrollment source attribution information."];</code>
        */
       public io.bloombox.schema.identity.AppUser.EnrollmentSource getEnrollmentSource() {
+        @SuppressWarnings("deprecation")
         io.bloombox.schema.identity.AppUser.EnrollmentSource result = io.bloombox.schema.identity.AppUser.EnrollmentSource.valueOf(enrollmentSource_);
         return result == null ? io.bloombox.schema.identity.AppUser.EnrollmentSource.UNRECOGNIZED : result;
       }
@@ -7574,7 +7678,7 @@ public final class AppUser {
        * Specifies enrollment source attribution information.
        * </pre>
        *
-       * <code>.bloombox.schema.identity.EnrollmentSource enrollment_source = 3 [(.gen_bq_schema.description) = "Specifies enrollment source attribution information."];</code>
+       * <code>.bloombox.identity.EnrollmentSource enrollment_source = 3 [(.gen_bq_schema.description) = "Specifies enrollment source attribution information."];</code>
        */
       public Builder setEnrollmentSource(io.bloombox.schema.identity.AppUser.EnrollmentSource value) {
         if (value == null) {
@@ -7590,7 +7694,7 @@ public final class AppUser {
        * Specifies enrollment source attribution information.
        * </pre>
        *
-       * <code>.bloombox.schema.identity.EnrollmentSource enrollment_source = 3 [(.gen_bq_schema.description) = "Specifies enrollment source attribution information."];</code>
+       * <code>.bloombox.identity.EnrollmentSource enrollment_source = 3 [(.gen_bq_schema.description) = "Specifies enrollment source attribution information."];</code>
        */
       public Builder clearEnrollmentSource() {
         
@@ -7696,7 +7800,7 @@ public final class AppUser {
        * Preferences attached to a consumer account.
        * </pre>
        *
-       * <code>.bloombox.schema.identity.ConsumerPreferences preferences = 5 [(.gen_bq_schema.description) = "Preferences attached to a consumer account."];</code>
+       * <code>.bloombox.identity.ConsumerPreferences preferences = 5 [(.gen_bq_schema.description) = "Preferences attached to a consumer account."];</code>
        */
       public boolean hasPreferences() {
         return preferencesBuilder_ != null || preferences_ != null;
@@ -7706,7 +7810,7 @@ public final class AppUser {
        * Preferences attached to a consumer account.
        * </pre>
        *
-       * <code>.bloombox.schema.identity.ConsumerPreferences preferences = 5 [(.gen_bq_schema.description) = "Preferences attached to a consumer account."];</code>
+       * <code>.bloombox.identity.ConsumerPreferences preferences = 5 [(.gen_bq_schema.description) = "Preferences attached to a consumer account."];</code>
        */
       public io.bloombox.schema.identity.AppUser.ConsumerPreferences getPreferences() {
         if (preferencesBuilder_ == null) {
@@ -7720,7 +7824,7 @@ public final class AppUser {
        * Preferences attached to a consumer account.
        * </pre>
        *
-       * <code>.bloombox.schema.identity.ConsumerPreferences preferences = 5 [(.gen_bq_schema.description) = "Preferences attached to a consumer account."];</code>
+       * <code>.bloombox.identity.ConsumerPreferences preferences = 5 [(.gen_bq_schema.description) = "Preferences attached to a consumer account."];</code>
        */
       public Builder setPreferences(io.bloombox.schema.identity.AppUser.ConsumerPreferences value) {
         if (preferencesBuilder_ == null) {
@@ -7740,7 +7844,7 @@ public final class AppUser {
        * Preferences attached to a consumer account.
        * </pre>
        *
-       * <code>.bloombox.schema.identity.ConsumerPreferences preferences = 5 [(.gen_bq_schema.description) = "Preferences attached to a consumer account."];</code>
+       * <code>.bloombox.identity.ConsumerPreferences preferences = 5 [(.gen_bq_schema.description) = "Preferences attached to a consumer account."];</code>
        */
       public Builder setPreferences(
           io.bloombox.schema.identity.AppUser.ConsumerPreferences.Builder builderForValue) {
@@ -7758,7 +7862,7 @@ public final class AppUser {
        * Preferences attached to a consumer account.
        * </pre>
        *
-       * <code>.bloombox.schema.identity.ConsumerPreferences preferences = 5 [(.gen_bq_schema.description) = "Preferences attached to a consumer account."];</code>
+       * <code>.bloombox.identity.ConsumerPreferences preferences = 5 [(.gen_bq_schema.description) = "Preferences attached to a consumer account."];</code>
        */
       public Builder mergePreferences(io.bloombox.schema.identity.AppUser.ConsumerPreferences value) {
         if (preferencesBuilder_ == null) {
@@ -7780,7 +7884,7 @@ public final class AppUser {
        * Preferences attached to a consumer account.
        * </pre>
        *
-       * <code>.bloombox.schema.identity.ConsumerPreferences preferences = 5 [(.gen_bq_schema.description) = "Preferences attached to a consumer account."];</code>
+       * <code>.bloombox.identity.ConsumerPreferences preferences = 5 [(.gen_bq_schema.description) = "Preferences attached to a consumer account."];</code>
        */
       public Builder clearPreferences() {
         if (preferencesBuilder_ == null) {
@@ -7798,7 +7902,7 @@ public final class AppUser {
        * Preferences attached to a consumer account.
        * </pre>
        *
-       * <code>.bloombox.schema.identity.ConsumerPreferences preferences = 5 [(.gen_bq_schema.description) = "Preferences attached to a consumer account."];</code>
+       * <code>.bloombox.identity.ConsumerPreferences preferences = 5 [(.gen_bq_schema.description) = "Preferences attached to a consumer account."];</code>
        */
       public io.bloombox.schema.identity.AppUser.ConsumerPreferences.Builder getPreferencesBuilder() {
         
@@ -7810,7 +7914,7 @@ public final class AppUser {
        * Preferences attached to a consumer account.
        * </pre>
        *
-       * <code>.bloombox.schema.identity.ConsumerPreferences preferences = 5 [(.gen_bq_schema.description) = "Preferences attached to a consumer account."];</code>
+       * <code>.bloombox.identity.ConsumerPreferences preferences = 5 [(.gen_bq_schema.description) = "Preferences attached to a consumer account."];</code>
        */
       public io.bloombox.schema.identity.AppUser.ConsumerPreferencesOrBuilder getPreferencesOrBuilder() {
         if (preferencesBuilder_ != null) {
@@ -7825,7 +7929,7 @@ public final class AppUser {
        * Preferences attached to a consumer account.
        * </pre>
        *
-       * <code>.bloombox.schema.identity.ConsumerPreferences preferences = 5 [(.gen_bq_schema.description) = "Preferences attached to a consumer account."];</code>
+       * <code>.bloombox.identity.ConsumerPreferences preferences = 5 [(.gen_bq_schema.description) = "Preferences attached to a consumer account."];</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
           io.bloombox.schema.identity.AppUser.ConsumerPreferences, io.bloombox.schema.identity.AppUser.ConsumerPreferences.Builder, io.bloombox.schema.identity.AppUser.ConsumerPreferencesOrBuilder> 
@@ -7847,7 +7951,7 @@ public final class AppUser {
        * Specifies the primary consumer type for this account.
        * </pre>
        *
-       * <code>.bloombox.schema.identity.ConsumerType type = 6 [(.gen_bq_schema.description) = "Specifies the primary consumer type for this account."];</code>
+       * <code>.bloombox.identity.ConsumerType type = 6 [(.gen_bq_schema.description) = "Specifies the primary consumer type for this account."];</code>
        */
       public int getTypeValue() {
         return type_;
@@ -7857,7 +7961,7 @@ public final class AppUser {
        * Specifies the primary consumer type for this account.
        * </pre>
        *
-       * <code>.bloombox.schema.identity.ConsumerType type = 6 [(.gen_bq_schema.description) = "Specifies the primary consumer type for this account."];</code>
+       * <code>.bloombox.identity.ConsumerType type = 6 [(.gen_bq_schema.description) = "Specifies the primary consumer type for this account."];</code>
        */
       public Builder setTypeValue(int value) {
         type_ = value;
@@ -7869,9 +7973,10 @@ public final class AppUser {
        * Specifies the primary consumer type for this account.
        * </pre>
        *
-       * <code>.bloombox.schema.identity.ConsumerType type = 6 [(.gen_bq_schema.description) = "Specifies the primary consumer type for this account."];</code>
+       * <code>.bloombox.identity.ConsumerType type = 6 [(.gen_bq_schema.description) = "Specifies the primary consumer type for this account."];</code>
        */
       public io.bloombox.schema.identity.AppUser.ConsumerType getType() {
+        @SuppressWarnings("deprecation")
         io.bloombox.schema.identity.AppUser.ConsumerType result = io.bloombox.schema.identity.AppUser.ConsumerType.valueOf(type_);
         return result == null ? io.bloombox.schema.identity.AppUser.ConsumerType.UNRECOGNIZED : result;
       }
@@ -7880,7 +7985,7 @@ public final class AppUser {
        * Specifies the primary consumer type for this account.
        * </pre>
        *
-       * <code>.bloombox.schema.identity.ConsumerType type = 6 [(.gen_bq_schema.description) = "Specifies the primary consumer type for this account."];</code>
+       * <code>.bloombox.identity.ConsumerType type = 6 [(.gen_bq_schema.description) = "Specifies the primary consumer type for this account."];</code>
        */
       public Builder setType(io.bloombox.schema.identity.AppUser.ConsumerType value) {
         if (value == null) {
@@ -7896,7 +8001,7 @@ public final class AppUser {
        * Specifies the primary consumer type for this account.
        * </pre>
        *
-       * <code>.bloombox.schema.identity.ConsumerType type = 6 [(.gen_bq_schema.description) = "Specifies the primary consumer type for this account."];</code>
+       * <code>.bloombox.identity.ConsumerType type = 6 [(.gen_bq_schema.description) = "Specifies the primary consumer type for this account."];</code>
        */
       public Builder clearType() {
         
@@ -7911,7 +8016,7 @@ public final class AppUser {
        * Specifies referral source attribution information.
        * </pre>
        *
-       * <code>.bloombox.schema.identity.ReferralSource referral_source = 7 [(.gen_bq_schema.description) = "Specifies referral source attribution information."];</code>
+       * <code>.bloombox.identity.ReferralSource referral_source = 7 [(.gen_bq_schema.description) = "Specifies referral source attribution information."];</code>
        */
       public int getReferralSourceValue() {
         return referralSource_;
@@ -7921,7 +8026,7 @@ public final class AppUser {
        * Specifies referral source attribution information.
        * </pre>
        *
-       * <code>.bloombox.schema.identity.ReferralSource referral_source = 7 [(.gen_bq_schema.description) = "Specifies referral source attribution information."];</code>
+       * <code>.bloombox.identity.ReferralSource referral_source = 7 [(.gen_bq_schema.description) = "Specifies referral source attribution information."];</code>
        */
       public Builder setReferralSourceValue(int value) {
         referralSource_ = value;
@@ -7933,9 +8038,10 @@ public final class AppUser {
        * Specifies referral source attribution information.
        * </pre>
        *
-       * <code>.bloombox.schema.identity.ReferralSource referral_source = 7 [(.gen_bq_schema.description) = "Specifies referral source attribution information."];</code>
+       * <code>.bloombox.identity.ReferralSource referral_source = 7 [(.gen_bq_schema.description) = "Specifies referral source attribution information."];</code>
        */
       public io.bloombox.schema.identity.AppUser.ReferralSource getReferralSource() {
+        @SuppressWarnings("deprecation")
         io.bloombox.schema.identity.AppUser.ReferralSource result = io.bloombox.schema.identity.AppUser.ReferralSource.valueOf(referralSource_);
         return result == null ? io.bloombox.schema.identity.AppUser.ReferralSource.UNRECOGNIZED : result;
       }
@@ -7944,7 +8050,7 @@ public final class AppUser {
        * Specifies referral source attribution information.
        * </pre>
        *
-       * <code>.bloombox.schema.identity.ReferralSource referral_source = 7 [(.gen_bq_schema.description) = "Specifies referral source attribution information."];</code>
+       * <code>.bloombox.identity.ReferralSource referral_source = 7 [(.gen_bq_schema.description) = "Specifies referral source attribution information."];</code>
        */
       public Builder setReferralSource(io.bloombox.schema.identity.AppUser.ReferralSource value) {
         if (value == null) {
@@ -7960,7 +8066,7 @@ public final class AppUser {
        * Specifies referral source attribution information.
        * </pre>
        *
-       * <code>.bloombox.schema.identity.ReferralSource referral_source = 7 [(.gen_bq_schema.description) = "Specifies referral source attribution information."];</code>
+       * <code>.bloombox.identity.ReferralSource referral_source = 7 [(.gen_bq_schema.description) = "Specifies referral source attribution information."];</code>
        */
       public Builder clearReferralSource() {
         
@@ -8057,21 +8163,23 @@ public final class AppUser {
         onChanged();
         return this;
       }
+      @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
         return super.setUnknownFieldsProto3(unknownFields);
       }
 
+      @java.lang.Override
       public final Builder mergeUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
         return super.mergeUnknownFields(unknownFields);
       }
 
 
-      // @@protoc_insertion_point(builder_scope:bloombox.schema.identity.ConsumerProfile)
+      // @@protoc_insertion_point(builder_scope:bloombox.identity.ConsumerProfile)
     }
 
-    // @@protoc_insertion_point(class_scope:bloombox.schema.identity.ConsumerProfile)
+    // @@protoc_insertion_point(class_scope:bloombox.identity.ConsumerProfile)
     private static final io.bloombox.schema.identity.AppUser.ConsumerProfile DEFAULT_INSTANCE;
     static {
       DEFAULT_INSTANCE = new io.bloombox.schema.identity.AppUser.ConsumerProfile();
@@ -8083,6 +8191,7 @@ public final class AppUser {
 
     private static final com.google.protobuf.Parser<ConsumerProfile>
         PARSER = new com.google.protobuf.AbstractParser<ConsumerProfile>() {
+      @java.lang.Override
       public ConsumerProfile parsePartialFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -8100,6 +8209,7 @@ public final class AppUser {
       return PARSER;
     }
 
+    @java.lang.Override
     public io.bloombox.schema.identity.AppUser.ConsumerProfile getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
@@ -8107,7 +8217,7 @@ public final class AppUser {
   }
 
   public interface MenuPreferencesOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:bloombox.schema.identity.MenuPreferences)
+      // @@protoc_insertion_point(interface_extends:bloombox.identity.MenuPreferences)
       com.google.protobuf.MessageOrBuilder {
 
     /**
@@ -8359,11 +8469,11 @@ public final class AppUser {
    * Consumer preferences related to menus and products.
    * </pre>
    *
-   * Protobuf type {@code bloombox.schema.identity.MenuPreferences}
+   * Protobuf type {@code bloombox.identity.MenuPreferences}
    */
   public  static final class MenuPreferences extends
       com.google.protobuf.GeneratedMessageV3 implements
-      // @@protoc_insertion_point(message_implements:bloombox.schema.identity.MenuPreferences)
+      // @@protoc_insertion_point(message_implements:bloombox.identity.MenuPreferences)
       MenuPreferencesOrBuilder {
   private static final long serialVersionUID = 0L;
     // Use MenuPreferences.newBuilder() to construct.
@@ -8404,13 +8514,6 @@ public final class AppUser {
             case 0:
               done = true;
               break;
-            default: {
-              if (!parseUnknownFieldProto3(
-                  input, unknownFields, extensionRegistry, tag)) {
-                done = true;
-              }
-              break;
-            }
             case 8: {
               int rawValue = input.readEnum();
               if (!((mutable_bitField0_ & 0x00000001) == 0x00000001)) {
@@ -8538,6 +8641,13 @@ public final class AppUser {
               input.popLimit(oldLimit);
               break;
             }
+            default: {
+              if (!parseUnknownFieldProto3(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
           }
         }
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
@@ -8567,12 +8677,13 @@ public final class AppUser {
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return io.bloombox.schema.identity.AppUser.internal_static_bloombox_schema_identity_MenuPreferences_descriptor;
+      return io.bloombox.schema.identity.AppUser.internal_static_bloombox_identity_MenuPreferences_descriptor;
     }
 
+    @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return io.bloombox.schema.identity.AppUser.internal_static_bloombox_schema_identity_MenuPreferences_fieldAccessorTable
+      return io.bloombox.schema.identity.AppUser.internal_static_bloombox_identity_MenuPreferences_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
               io.bloombox.schema.identity.AppUser.MenuPreferences.class, io.bloombox.schema.identity.AppUser.MenuPreferences.Builder.class);
     }
@@ -8585,6 +8696,7 @@ public final class AppUser {
             new com.google.protobuf.Internal.ListAdapter.Converter<
                 java.lang.Integer, io.opencannabis.schema.menu.section.Section>() {
               public io.opencannabis.schema.menu.section.Section convert(java.lang.Integer from) {
+                @SuppressWarnings("deprecation")
                 io.opencannabis.schema.menu.section.Section result = io.opencannabis.schema.menu.section.Section.valueOf(from);
                 return result == null ? io.opencannabis.schema.menu.section.Section.UNRECOGNIZED : result;
               }
@@ -8650,6 +8762,7 @@ public final class AppUser {
             new com.google.protobuf.Internal.ListAdapter.Converter<
                 java.lang.Integer, io.opencannabis.schema.product.struct.testing.Feeling>() {
               public io.opencannabis.schema.product.struct.testing.Feeling convert(java.lang.Integer from) {
+                @SuppressWarnings("deprecation")
                 io.opencannabis.schema.product.struct.testing.Feeling result = io.opencannabis.schema.product.struct.testing.Feeling.valueOf(from);
                 return result == null ? io.opencannabis.schema.product.struct.testing.Feeling.UNRECOGNIZED : result;
               }
@@ -8715,6 +8828,7 @@ public final class AppUser {
             new com.google.protobuf.Internal.ListAdapter.Converter<
                 java.lang.Integer, io.opencannabis.schema.product.struct.testing.TasteNote>() {
               public io.opencannabis.schema.product.struct.testing.TasteNote convert(java.lang.Integer from) {
+                @SuppressWarnings("deprecation")
                 io.opencannabis.schema.product.struct.testing.TasteNote result = io.opencannabis.schema.product.struct.testing.TasteNote.valueOf(from);
                 return result == null ? io.opencannabis.schema.product.struct.testing.TasteNote.UNRECOGNIZED : result;
               }
@@ -8793,6 +8907,7 @@ public final class AppUser {
      * <code>.opencannabis.structs.labtesting.PotencyEstimate desired_potency = 4 [(.gen_bq_schema.description) = "Desired potency level."];</code>
      */
     public io.opencannabis.schema.product.struct.testing.PotencyEstimate getDesiredPotency() {
+      @SuppressWarnings("deprecation")
       io.opencannabis.schema.product.struct.testing.PotencyEstimate result = io.opencannabis.schema.product.struct.testing.PotencyEstimate.valueOf(desiredPotency_);
       return result == null ? io.opencannabis.schema.product.struct.testing.PotencyEstimate.UNRECOGNIZED : result;
     }
@@ -8817,6 +8932,7 @@ public final class AppUser {
      * <code>.opencannabis.structs.labtesting.CannabinoidRatio cannabinoid_ratio = 5 [(.gen_bq_schema.description) = "Desired cannabinoid ratio."];</code>
      */
     public io.opencannabis.schema.product.struct.testing.CannabinoidRatio getCannabinoidRatio() {
+      @SuppressWarnings("deprecation")
       io.opencannabis.schema.product.struct.testing.CannabinoidRatio result = io.opencannabis.schema.product.struct.testing.CannabinoidRatio.valueOf(cannabinoidRatio_);
       return result == null ? io.opencannabis.schema.product.struct.testing.CannabinoidRatio.UNRECOGNIZED : result;
     }
@@ -8828,6 +8944,7 @@ public final class AppUser {
             new com.google.protobuf.Internal.ListAdapter.Converter<
                 java.lang.Integer, io.opencannabis.schema.product.struct.Species>() {
               public io.opencannabis.schema.product.struct.Species convert(java.lang.Integer from) {
+                @SuppressWarnings("deprecation")
                 io.opencannabis.schema.product.struct.Species result = io.opencannabis.schema.product.struct.Species.valueOf(from);
                 return result == null ? io.opencannabis.schema.product.struct.Species.UNRECOGNIZED : result;
               }
@@ -8893,6 +9010,7 @@ public final class AppUser {
             new com.google.protobuf.Internal.ListAdapter.Converter<
                 java.lang.Integer, io.opencannabis.schema.product.struct.Grow>() {
               public io.opencannabis.schema.product.struct.Grow convert(java.lang.Integer from) {
+                @SuppressWarnings("deprecation")
                 io.opencannabis.schema.product.struct.Grow result = io.opencannabis.schema.product.struct.Grow.valueOf(from);
                 return result == null ? io.opencannabis.schema.product.struct.Grow.UNRECOGNIZED : result;
               }
@@ -8952,6 +9070,7 @@ public final class AppUser {
     private int growMemoizedSerializedSize;
 
     private byte memoizedIsInitialized = -1;
+    @java.lang.Override
     public final boolean isInitialized() {
       byte isInitialized = memoizedIsInitialized;
       if (isInitialized == 1) return true;
@@ -8961,6 +9080,7 @@ public final class AppUser {
       return true;
     }
 
+    @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
       getSerializedSize();
@@ -9008,6 +9128,7 @@ public final class AppUser {
       unknownFields.writeTo(output);
     }
 
+    @java.lang.Override
     public int getSerializedSize() {
       int size = memoizedSize;
       if (size != -1) return size;
@@ -9214,6 +9335,7 @@ public final class AppUser {
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
 
+    @java.lang.Override
     public Builder newBuilderForType() { return newBuilder(); }
     public static Builder newBuilder() {
       return DEFAULT_INSTANCE.toBuilder();
@@ -9221,6 +9343,7 @@ public final class AppUser {
     public static Builder newBuilder(io.bloombox.schema.identity.AppUser.MenuPreferences prototype) {
       return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
     }
+    @java.lang.Override
     public Builder toBuilder() {
       return this == DEFAULT_INSTANCE
           ? new Builder() : new Builder().mergeFrom(this);
@@ -9237,20 +9360,21 @@ public final class AppUser {
      * Consumer preferences related to menus and products.
      * </pre>
      *
-     * Protobuf type {@code bloombox.schema.identity.MenuPreferences}
+     * Protobuf type {@code bloombox.identity.MenuPreferences}
      */
     public static final class Builder extends
         com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:bloombox.schema.identity.MenuPreferences)
+        // @@protoc_insertion_point(builder_implements:bloombox.identity.MenuPreferences)
         io.bloombox.schema.identity.AppUser.MenuPreferencesOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return io.bloombox.schema.identity.AppUser.internal_static_bloombox_schema_identity_MenuPreferences_descriptor;
+        return io.bloombox.schema.identity.AppUser.internal_static_bloombox_identity_MenuPreferences_descriptor;
       }
 
+      @java.lang.Override
       protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return io.bloombox.schema.identity.AppUser.internal_static_bloombox_schema_identity_MenuPreferences_fieldAccessorTable
+        return io.bloombox.schema.identity.AppUser.internal_static_bloombox_identity_MenuPreferences_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
                 io.bloombox.schema.identity.AppUser.MenuPreferences.class, io.bloombox.schema.identity.AppUser.MenuPreferences.Builder.class);
       }
@@ -9270,6 +9394,7 @@ public final class AppUser {
                 .alwaysUseFieldBuilders) {
         }
       }
+      @java.lang.Override
       public Builder clear() {
         super.clear();
         section_ = java.util.Collections.emptyList();
@@ -9289,15 +9414,18 @@ public final class AppUser {
         return this;
       }
 
+      @java.lang.Override
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return io.bloombox.schema.identity.AppUser.internal_static_bloombox_schema_identity_MenuPreferences_descriptor;
+        return io.bloombox.schema.identity.AppUser.internal_static_bloombox_identity_MenuPreferences_descriptor;
       }
 
+      @java.lang.Override
       public io.bloombox.schema.identity.AppUser.MenuPreferences getDefaultInstanceForType() {
         return io.bloombox.schema.identity.AppUser.MenuPreferences.getDefaultInstance();
       }
 
+      @java.lang.Override
       public io.bloombox.schema.identity.AppUser.MenuPreferences build() {
         io.bloombox.schema.identity.AppUser.MenuPreferences result = buildPartial();
         if (!result.isInitialized()) {
@@ -9306,6 +9434,7 @@ public final class AppUser {
         return result;
       }
 
+      @java.lang.Override
       public io.bloombox.schema.identity.AppUser.MenuPreferences buildPartial() {
         io.bloombox.schema.identity.AppUser.MenuPreferences result = new io.bloombox.schema.identity.AppUser.MenuPreferences(this);
         int from_bitField0_ = bitField0_;
@@ -9342,32 +9471,39 @@ public final class AppUser {
         return result;
       }
 
+      @java.lang.Override
       public Builder clone() {
         return (Builder) super.clone();
       }
+      @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
         return (Builder) super.setField(field, value);
       }
+      @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
         return (Builder) super.clearField(field);
       }
+      @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
         return (Builder) super.clearOneof(oneof);
       }
+      @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
         return (Builder) super.setRepeatedField(field, index, value);
       }
+      @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
         return (Builder) super.addRepeatedField(field, value);
       }
+      @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
         if (other instanceof io.bloombox.schema.identity.AppUser.MenuPreferences) {
           return mergeFrom((io.bloombox.schema.identity.AppUser.MenuPreferences)other);
@@ -9440,10 +9576,12 @@ public final class AppUser {
         return this;
       }
 
+      @java.lang.Override
       public final boolean isInitialized() {
         return true;
       }
 
+      @java.lang.Override
       public Builder mergeFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -9992,6 +10130,7 @@ public final class AppUser {
        * <code>.opencannabis.structs.labtesting.PotencyEstimate desired_potency = 4 [(.gen_bq_schema.description) = "Desired potency level."];</code>
        */
       public io.opencannabis.schema.product.struct.testing.PotencyEstimate getDesiredPotency() {
+        @SuppressWarnings("deprecation")
         io.opencannabis.schema.product.struct.testing.PotencyEstimate result = io.opencannabis.schema.product.struct.testing.PotencyEstimate.valueOf(desiredPotency_);
         return result == null ? io.opencannabis.schema.product.struct.testing.PotencyEstimate.UNRECOGNIZED : result;
       }
@@ -10056,6 +10195,7 @@ public final class AppUser {
        * <code>.opencannabis.structs.labtesting.CannabinoidRatio cannabinoid_ratio = 5 [(.gen_bq_schema.description) = "Desired cannabinoid ratio."];</code>
        */
       public io.opencannabis.schema.product.struct.testing.CannabinoidRatio getCannabinoidRatio() {
+        @SuppressWarnings("deprecation")
         io.opencannabis.schema.product.struct.testing.CannabinoidRatio result = io.opencannabis.schema.product.struct.testing.CannabinoidRatio.valueOf(cannabinoidRatio_);
         return result == null ? io.opencannabis.schema.product.struct.testing.CannabinoidRatio.UNRECOGNIZED : result;
       }
@@ -10420,21 +10560,23 @@ public final class AppUser {
         onChanged();
         return this;
       }
+      @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
         return super.setUnknownFieldsProto3(unknownFields);
       }
 
+      @java.lang.Override
       public final Builder mergeUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
         return super.mergeUnknownFields(unknownFields);
       }
 
 
-      // @@protoc_insertion_point(builder_scope:bloombox.schema.identity.MenuPreferences)
+      // @@protoc_insertion_point(builder_scope:bloombox.identity.MenuPreferences)
     }
 
-    // @@protoc_insertion_point(class_scope:bloombox.schema.identity.MenuPreferences)
+    // @@protoc_insertion_point(class_scope:bloombox.identity.MenuPreferences)
     private static final io.bloombox.schema.identity.AppUser.MenuPreferences DEFAULT_INSTANCE;
     static {
       DEFAULT_INSTANCE = new io.bloombox.schema.identity.AppUser.MenuPreferences();
@@ -10446,6 +10588,7 @@ public final class AppUser {
 
     private static final com.google.protobuf.Parser<MenuPreferences>
         PARSER = new com.google.protobuf.AbstractParser<MenuPreferences>() {
+      @java.lang.Override
       public MenuPreferences parsePartialFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -10463,14 +10606,1396 @@ public final class AppUser {
       return PARSER;
     }
 
+    @java.lang.Override
     public io.bloombox.schema.identity.AppUser.MenuPreferences getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
 
   }
 
+  public interface ProductTypePreferenceOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:bloombox.identity.ProductTypePreference)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * Specifies a major kind of cannabis product that a consumer might have a preference for.
+     * </pre>
+     *
+     * <code>.opencannabis.base.ProductKind major = 1;</code>
+     */
+    int getMajorValue();
+    /**
+     * <pre>
+     * Specifies a major kind of cannabis product that a consumer might have a preference for.
+     * </pre>
+     *
+     * <code>.opencannabis.base.ProductKind major = 1;</code>
+     */
+    io.opencannabis.schema.base.BaseProductKind.ProductKind getMajor();
+
+    /**
+     * <pre>
+     * Declares a specific sub-type for a major type of 'Apothecary'.
+     * </pre>
+     *
+     * <code>.opencannabis.products.ApothecaryType apothecary = 10;</code>
+     */
+    int getApothecaryValue();
+    /**
+     * <pre>
+     * Declares a specific sub-type for a major type of 'Apothecary'.
+     * </pre>
+     *
+     * <code>.opencannabis.products.ApothecaryType apothecary = 10;</code>
+     */
+    io.opencannabis.schema.product.ApothecaryProduct.ApothecaryType getApothecary();
+
+    /**
+     * <pre>
+     * Declares a specific sub-type for a major type of 'Cartridge'.
+     * </pre>
+     *
+     * <code>.opencannabis.products.CartridgeType cartridge = 11;</code>
+     */
+    int getCartridgeValue();
+    /**
+     * <pre>
+     * Declares a specific sub-type for a major type of 'Cartridge'.
+     * </pre>
+     *
+     * <code>.opencannabis.products.CartridgeType cartridge = 11;</code>
+     */
+    io.opencannabis.schema.product.CartridgeProduct.CartridgeType getCartridge();
+
+    /**
+     * <pre>
+     * Declares a specific sub-type for a major type of 'Edible'.
+     * </pre>
+     *
+     * <code>.opencannabis.products.EdibleType edible = 12;</code>
+     */
+    int getEdibleValue();
+    /**
+     * <pre>
+     * Declares a specific sub-type for a major type of 'Edible'.
+     * </pre>
+     *
+     * <code>.opencannabis.products.EdibleType edible = 12;</code>
+     */
+    io.opencannabis.schema.product.EdibleProduct.EdibleType getEdible();
+
+    /**
+     * <pre>
+     * Declares a specific sub-type for a major type of 'Extract'.
+     * </pre>
+     *
+     * <code>.opencannabis.products.ExtractType extract = 13;</code>
+     */
+    int getExtractValue();
+    /**
+     * <pre>
+     * Declares a specific sub-type for a major type of 'Extract'.
+     * </pre>
+     *
+     * <code>.opencannabis.products.ExtractType extract = 13;</code>
+     */
+    io.opencannabis.schema.product.ExtractProduct.ExtractType getExtract();
+
+    /**
+     * <pre>
+     * Declares a specific sub-type for a major type of 'Plant'.
+     * </pre>
+     *
+     * <code>.opencannabis.products.PlantType plant = 14;</code>
+     */
+    int getPlantValue();
+    /**
+     * <pre>
+     * Declares a specific sub-type for a major type of 'Plant'.
+     * </pre>
+     *
+     * <code>.opencannabis.products.PlantType plant = 14;</code>
+     */
+    io.opencannabis.schema.product.PlantProduct.PlantType getPlant();
+
+    public io.bloombox.schema.identity.AppUser.ProductTypePreference.MinorCase getMinorCase();
+  }
+  /**
+   * <pre>
+   * Specifies preferences for the consumer, related to the types of products they enjoy.
+   * </pre>
+   *
+   * Protobuf type {@code bloombox.identity.ProductTypePreference}
+   */
+  public  static final class ProductTypePreference extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:bloombox.identity.ProductTypePreference)
+      ProductTypePreferenceOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use ProductTypePreference.newBuilder() to construct.
+    private ProductTypePreference(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private ProductTypePreference() {
+      major_ = 0;
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private ProductTypePreference(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 8: {
+              int rawValue = input.readEnum();
+
+              major_ = rawValue;
+              break;
+            }
+            case 80: {
+              int rawValue = input.readEnum();
+              minorCase_ = 10;
+              minor_ = rawValue;
+              break;
+            }
+            case 88: {
+              int rawValue = input.readEnum();
+              minorCase_ = 11;
+              minor_ = rawValue;
+              break;
+            }
+            case 96: {
+              int rawValue = input.readEnum();
+              minorCase_ = 12;
+              minor_ = rawValue;
+              break;
+            }
+            case 104: {
+              int rawValue = input.readEnum();
+              minorCase_ = 13;
+              minor_ = rawValue;
+              break;
+            }
+            case 112: {
+              int rawValue = input.readEnum();
+              minorCase_ = 14;
+              minor_ = rawValue;
+              break;
+            }
+            default: {
+              if (!parseUnknownFieldProto3(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return io.bloombox.schema.identity.AppUser.internal_static_bloombox_identity_ProductTypePreference_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return io.bloombox.schema.identity.AppUser.internal_static_bloombox_identity_ProductTypePreference_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              io.bloombox.schema.identity.AppUser.ProductTypePreference.class, io.bloombox.schema.identity.AppUser.ProductTypePreference.Builder.class);
+    }
+
+    private int minorCase_ = 0;
+    private java.lang.Object minor_;
+    public enum MinorCase
+        implements com.google.protobuf.Internal.EnumLite {
+      APOTHECARY(10),
+      CARTRIDGE(11),
+      EDIBLE(12),
+      EXTRACT(13),
+      PLANT(14),
+      MINOR_NOT_SET(0);
+      private final int value;
+      private MinorCase(int value) {
+        this.value = value;
+      }
+      /**
+       * @deprecated Use {@link #forNumber(int)} instead.
+       */
+      @java.lang.Deprecated
+      public static MinorCase valueOf(int value) {
+        return forNumber(value);
+      }
+
+      public static MinorCase forNumber(int value) {
+        switch (value) {
+          case 10: return APOTHECARY;
+          case 11: return CARTRIDGE;
+          case 12: return EDIBLE;
+          case 13: return EXTRACT;
+          case 14: return PLANT;
+          case 0: return MINOR_NOT_SET;
+          default: return null;
+        }
+      }
+      public int getNumber() {
+        return this.value;
+      }
+    };
+
+    public MinorCase
+    getMinorCase() {
+      return MinorCase.forNumber(
+          minorCase_);
+    }
+
+    public static final int MAJOR_FIELD_NUMBER = 1;
+    private int major_;
+    /**
+     * <pre>
+     * Specifies a major kind of cannabis product that a consumer might have a preference for.
+     * </pre>
+     *
+     * <code>.opencannabis.base.ProductKind major = 1;</code>
+     */
+    public int getMajorValue() {
+      return major_;
+    }
+    /**
+     * <pre>
+     * Specifies a major kind of cannabis product that a consumer might have a preference for.
+     * </pre>
+     *
+     * <code>.opencannabis.base.ProductKind major = 1;</code>
+     */
+    public io.opencannabis.schema.base.BaseProductKind.ProductKind getMajor() {
+      @SuppressWarnings("deprecation")
+      io.opencannabis.schema.base.BaseProductKind.ProductKind result = io.opencannabis.schema.base.BaseProductKind.ProductKind.valueOf(major_);
+      return result == null ? io.opencannabis.schema.base.BaseProductKind.ProductKind.UNRECOGNIZED : result;
+    }
+
+    public static final int APOTHECARY_FIELD_NUMBER = 10;
+    /**
+     * <pre>
+     * Declares a specific sub-type for a major type of 'Apothecary'.
+     * </pre>
+     *
+     * <code>.opencannabis.products.ApothecaryType apothecary = 10;</code>
+     */
+    public int getApothecaryValue() {
+      if (minorCase_ == 10) {
+        return (java.lang.Integer) minor_;
+      }
+      return 0;
+    }
+    /**
+     * <pre>
+     * Declares a specific sub-type for a major type of 'Apothecary'.
+     * </pre>
+     *
+     * <code>.opencannabis.products.ApothecaryType apothecary = 10;</code>
+     */
+    public io.opencannabis.schema.product.ApothecaryProduct.ApothecaryType getApothecary() {
+      if (minorCase_ == 10) {
+        @SuppressWarnings("deprecation")
+        io.opencannabis.schema.product.ApothecaryProduct.ApothecaryType result = io.opencannabis.schema.product.ApothecaryProduct.ApothecaryType.valueOf(
+            (java.lang.Integer) minor_);
+        return result == null ? io.opencannabis.schema.product.ApothecaryProduct.ApothecaryType.UNRECOGNIZED : result;
+      }
+      return io.opencannabis.schema.product.ApothecaryProduct.ApothecaryType.UNSPECIFIED_APOTHECARY;
+    }
+
+    public static final int CARTRIDGE_FIELD_NUMBER = 11;
+    /**
+     * <pre>
+     * Declares a specific sub-type for a major type of 'Cartridge'.
+     * </pre>
+     *
+     * <code>.opencannabis.products.CartridgeType cartridge = 11;</code>
+     */
+    public int getCartridgeValue() {
+      if (minorCase_ == 11) {
+        return (java.lang.Integer) minor_;
+      }
+      return 0;
+    }
+    /**
+     * <pre>
+     * Declares a specific sub-type for a major type of 'Cartridge'.
+     * </pre>
+     *
+     * <code>.opencannabis.products.CartridgeType cartridge = 11;</code>
+     */
+    public io.opencannabis.schema.product.CartridgeProduct.CartridgeType getCartridge() {
+      if (minorCase_ == 11) {
+        @SuppressWarnings("deprecation")
+        io.opencannabis.schema.product.CartridgeProduct.CartridgeType result = io.opencannabis.schema.product.CartridgeProduct.CartridgeType.valueOf(
+            (java.lang.Integer) minor_);
+        return result == null ? io.opencannabis.schema.product.CartridgeProduct.CartridgeType.UNRECOGNIZED : result;
+      }
+      return io.opencannabis.schema.product.CartridgeProduct.CartridgeType.UNSPECIFIED_CARTRIDGE;
+    }
+
+    public static final int EDIBLE_FIELD_NUMBER = 12;
+    /**
+     * <pre>
+     * Declares a specific sub-type for a major type of 'Edible'.
+     * </pre>
+     *
+     * <code>.opencannabis.products.EdibleType edible = 12;</code>
+     */
+    public int getEdibleValue() {
+      if (minorCase_ == 12) {
+        return (java.lang.Integer) minor_;
+      }
+      return 0;
+    }
+    /**
+     * <pre>
+     * Declares a specific sub-type for a major type of 'Edible'.
+     * </pre>
+     *
+     * <code>.opencannabis.products.EdibleType edible = 12;</code>
+     */
+    public io.opencannabis.schema.product.EdibleProduct.EdibleType getEdible() {
+      if (minorCase_ == 12) {
+        @SuppressWarnings("deprecation")
+        io.opencannabis.schema.product.EdibleProduct.EdibleType result = io.opencannabis.schema.product.EdibleProduct.EdibleType.valueOf(
+            (java.lang.Integer) minor_);
+        return result == null ? io.opencannabis.schema.product.EdibleProduct.EdibleType.UNRECOGNIZED : result;
+      }
+      return io.opencannabis.schema.product.EdibleProduct.EdibleType.UNSPECIFIED_EDIBLE;
+    }
+
+    public static final int EXTRACT_FIELD_NUMBER = 13;
+    /**
+     * <pre>
+     * Declares a specific sub-type for a major type of 'Extract'.
+     * </pre>
+     *
+     * <code>.opencannabis.products.ExtractType extract = 13;</code>
+     */
+    public int getExtractValue() {
+      if (minorCase_ == 13) {
+        return (java.lang.Integer) minor_;
+      }
+      return 0;
+    }
+    /**
+     * <pre>
+     * Declares a specific sub-type for a major type of 'Extract'.
+     * </pre>
+     *
+     * <code>.opencannabis.products.ExtractType extract = 13;</code>
+     */
+    public io.opencannabis.schema.product.ExtractProduct.ExtractType getExtract() {
+      if (minorCase_ == 13) {
+        @SuppressWarnings("deprecation")
+        io.opencannabis.schema.product.ExtractProduct.ExtractType result = io.opencannabis.schema.product.ExtractProduct.ExtractType.valueOf(
+            (java.lang.Integer) minor_);
+        return result == null ? io.opencannabis.schema.product.ExtractProduct.ExtractType.UNRECOGNIZED : result;
+      }
+      return io.opencannabis.schema.product.ExtractProduct.ExtractType.UNSPECIFIED_EXTRACT;
+    }
+
+    public static final int PLANT_FIELD_NUMBER = 14;
+    /**
+     * <pre>
+     * Declares a specific sub-type for a major type of 'Plant'.
+     * </pre>
+     *
+     * <code>.opencannabis.products.PlantType plant = 14;</code>
+     */
+    public int getPlantValue() {
+      if (minorCase_ == 14) {
+        return (java.lang.Integer) minor_;
+      }
+      return 0;
+    }
+    /**
+     * <pre>
+     * Declares a specific sub-type for a major type of 'Plant'.
+     * </pre>
+     *
+     * <code>.opencannabis.products.PlantType plant = 14;</code>
+     */
+    public io.opencannabis.schema.product.PlantProduct.PlantType getPlant() {
+      if (minorCase_ == 14) {
+        @SuppressWarnings("deprecation")
+        io.opencannabis.schema.product.PlantProduct.PlantType result = io.opencannabis.schema.product.PlantProduct.PlantType.valueOf(
+            (java.lang.Integer) minor_);
+        return result == null ? io.opencannabis.schema.product.PlantProduct.PlantType.UNRECOGNIZED : result;
+      }
+      return io.opencannabis.schema.product.PlantProduct.PlantType.UNSPECIFIED_PLANT;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (major_ != io.opencannabis.schema.base.BaseProductKind.ProductKind.FLOWERS.getNumber()) {
+        output.writeEnum(1, major_);
+      }
+      if (minorCase_ == 10) {
+        output.writeEnum(10, ((java.lang.Integer) minor_));
+      }
+      if (minorCase_ == 11) {
+        output.writeEnum(11, ((java.lang.Integer) minor_));
+      }
+      if (minorCase_ == 12) {
+        output.writeEnum(12, ((java.lang.Integer) minor_));
+      }
+      if (minorCase_ == 13) {
+        output.writeEnum(13, ((java.lang.Integer) minor_));
+      }
+      if (minorCase_ == 14) {
+        output.writeEnum(14, ((java.lang.Integer) minor_));
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (major_ != io.opencannabis.schema.base.BaseProductKind.ProductKind.FLOWERS.getNumber()) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeEnumSize(1, major_);
+      }
+      if (minorCase_ == 10) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeEnumSize(10, ((java.lang.Integer) minor_));
+      }
+      if (minorCase_ == 11) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeEnumSize(11, ((java.lang.Integer) minor_));
+      }
+      if (minorCase_ == 12) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeEnumSize(12, ((java.lang.Integer) minor_));
+      }
+      if (minorCase_ == 13) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeEnumSize(13, ((java.lang.Integer) minor_));
+      }
+      if (minorCase_ == 14) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeEnumSize(14, ((java.lang.Integer) minor_));
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof io.bloombox.schema.identity.AppUser.ProductTypePreference)) {
+        return super.equals(obj);
+      }
+      io.bloombox.schema.identity.AppUser.ProductTypePreference other = (io.bloombox.schema.identity.AppUser.ProductTypePreference) obj;
+
+      boolean result = true;
+      result = result && major_ == other.major_;
+      result = result && getMinorCase().equals(
+          other.getMinorCase());
+      if (!result) return false;
+      switch (minorCase_) {
+        case 10:
+          result = result && getApothecaryValue()
+              == other.getApothecaryValue();
+          break;
+        case 11:
+          result = result && getCartridgeValue()
+              == other.getCartridgeValue();
+          break;
+        case 12:
+          result = result && getEdibleValue()
+              == other.getEdibleValue();
+          break;
+        case 13:
+          result = result && getExtractValue()
+              == other.getExtractValue();
+          break;
+        case 14:
+          result = result && getPlantValue()
+              == other.getPlantValue();
+          break;
+        case 0:
+        default:
+      }
+      result = result && unknownFields.equals(other.unknownFields);
+      return result;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + MAJOR_FIELD_NUMBER;
+      hash = (53 * hash) + major_;
+      switch (minorCase_) {
+        case 10:
+          hash = (37 * hash) + APOTHECARY_FIELD_NUMBER;
+          hash = (53 * hash) + getApothecaryValue();
+          break;
+        case 11:
+          hash = (37 * hash) + CARTRIDGE_FIELD_NUMBER;
+          hash = (53 * hash) + getCartridgeValue();
+          break;
+        case 12:
+          hash = (37 * hash) + EDIBLE_FIELD_NUMBER;
+          hash = (53 * hash) + getEdibleValue();
+          break;
+        case 13:
+          hash = (37 * hash) + EXTRACT_FIELD_NUMBER;
+          hash = (53 * hash) + getExtractValue();
+          break;
+        case 14:
+          hash = (37 * hash) + PLANT_FIELD_NUMBER;
+          hash = (53 * hash) + getPlantValue();
+          break;
+        case 0:
+        default:
+      }
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static io.bloombox.schema.identity.AppUser.ProductTypePreference parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static io.bloombox.schema.identity.AppUser.ProductTypePreference parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static io.bloombox.schema.identity.AppUser.ProductTypePreference parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static io.bloombox.schema.identity.AppUser.ProductTypePreference parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static io.bloombox.schema.identity.AppUser.ProductTypePreference parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static io.bloombox.schema.identity.AppUser.ProductTypePreference parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static io.bloombox.schema.identity.AppUser.ProductTypePreference parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static io.bloombox.schema.identity.AppUser.ProductTypePreference parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static io.bloombox.schema.identity.AppUser.ProductTypePreference parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static io.bloombox.schema.identity.AppUser.ProductTypePreference parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static io.bloombox.schema.identity.AppUser.ProductTypePreference parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static io.bloombox.schema.identity.AppUser.ProductTypePreference parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(io.bloombox.schema.identity.AppUser.ProductTypePreference prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * Specifies preferences for the consumer, related to the types of products they enjoy.
+     * </pre>
+     *
+     * Protobuf type {@code bloombox.identity.ProductTypePreference}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:bloombox.identity.ProductTypePreference)
+        io.bloombox.schema.identity.AppUser.ProductTypePreferenceOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return io.bloombox.schema.identity.AppUser.internal_static_bloombox_identity_ProductTypePreference_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return io.bloombox.schema.identity.AppUser.internal_static_bloombox_identity_ProductTypePreference_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                io.bloombox.schema.identity.AppUser.ProductTypePreference.class, io.bloombox.schema.identity.AppUser.ProductTypePreference.Builder.class);
+      }
+
+      // Construct using io.bloombox.schema.identity.AppUser.ProductTypePreference.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        major_ = 0;
+
+        minorCase_ = 0;
+        minor_ = null;
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return io.bloombox.schema.identity.AppUser.internal_static_bloombox_identity_ProductTypePreference_descriptor;
+      }
+
+      @java.lang.Override
+      public io.bloombox.schema.identity.AppUser.ProductTypePreference getDefaultInstanceForType() {
+        return io.bloombox.schema.identity.AppUser.ProductTypePreference.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public io.bloombox.schema.identity.AppUser.ProductTypePreference build() {
+        io.bloombox.schema.identity.AppUser.ProductTypePreference result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public io.bloombox.schema.identity.AppUser.ProductTypePreference buildPartial() {
+        io.bloombox.schema.identity.AppUser.ProductTypePreference result = new io.bloombox.schema.identity.AppUser.ProductTypePreference(this);
+        result.major_ = major_;
+        if (minorCase_ == 10) {
+          result.minor_ = minor_;
+        }
+        if (minorCase_ == 11) {
+          result.minor_ = minor_;
+        }
+        if (minorCase_ == 12) {
+          result.minor_ = minor_;
+        }
+        if (minorCase_ == 13) {
+          result.minor_ = minor_;
+        }
+        if (minorCase_ == 14) {
+          result.minor_ = minor_;
+        }
+        result.minorCase_ = minorCase_;
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return (Builder) super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return (Builder) super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return (Builder) super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return (Builder) super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return (Builder) super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return (Builder) super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof io.bloombox.schema.identity.AppUser.ProductTypePreference) {
+          return mergeFrom((io.bloombox.schema.identity.AppUser.ProductTypePreference)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(io.bloombox.schema.identity.AppUser.ProductTypePreference other) {
+        if (other == io.bloombox.schema.identity.AppUser.ProductTypePreference.getDefaultInstance()) return this;
+        if (other.major_ != 0) {
+          setMajorValue(other.getMajorValue());
+        }
+        switch (other.getMinorCase()) {
+          case APOTHECARY: {
+            setApothecaryValue(other.getApothecaryValue());
+            break;
+          }
+          case CARTRIDGE: {
+            setCartridgeValue(other.getCartridgeValue());
+            break;
+          }
+          case EDIBLE: {
+            setEdibleValue(other.getEdibleValue());
+            break;
+          }
+          case EXTRACT: {
+            setExtractValue(other.getExtractValue());
+            break;
+          }
+          case PLANT: {
+            setPlantValue(other.getPlantValue());
+            break;
+          }
+          case MINOR_NOT_SET: {
+            break;
+          }
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        io.bloombox.schema.identity.AppUser.ProductTypePreference parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (io.bloombox.schema.identity.AppUser.ProductTypePreference) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+      private int minorCase_ = 0;
+      private java.lang.Object minor_;
+      public MinorCase
+          getMinorCase() {
+        return MinorCase.forNumber(
+            minorCase_);
+      }
+
+      public Builder clearMinor() {
+        minorCase_ = 0;
+        minor_ = null;
+        onChanged();
+        return this;
+      }
+
+
+      private int major_ = 0;
+      /**
+       * <pre>
+       * Specifies a major kind of cannabis product that a consumer might have a preference for.
+       * </pre>
+       *
+       * <code>.opencannabis.base.ProductKind major = 1;</code>
+       */
+      public int getMajorValue() {
+        return major_;
+      }
+      /**
+       * <pre>
+       * Specifies a major kind of cannabis product that a consumer might have a preference for.
+       * </pre>
+       *
+       * <code>.opencannabis.base.ProductKind major = 1;</code>
+       */
+      public Builder setMajorValue(int value) {
+        major_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Specifies a major kind of cannabis product that a consumer might have a preference for.
+       * </pre>
+       *
+       * <code>.opencannabis.base.ProductKind major = 1;</code>
+       */
+      public io.opencannabis.schema.base.BaseProductKind.ProductKind getMajor() {
+        @SuppressWarnings("deprecation")
+        io.opencannabis.schema.base.BaseProductKind.ProductKind result = io.opencannabis.schema.base.BaseProductKind.ProductKind.valueOf(major_);
+        return result == null ? io.opencannabis.schema.base.BaseProductKind.ProductKind.UNRECOGNIZED : result;
+      }
+      /**
+       * <pre>
+       * Specifies a major kind of cannabis product that a consumer might have a preference for.
+       * </pre>
+       *
+       * <code>.opencannabis.base.ProductKind major = 1;</code>
+       */
+      public Builder setMajor(io.opencannabis.schema.base.BaseProductKind.ProductKind value) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        
+        major_ = value.getNumber();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Specifies a major kind of cannabis product that a consumer might have a preference for.
+       * </pre>
+       *
+       * <code>.opencannabis.base.ProductKind major = 1;</code>
+       */
+      public Builder clearMajor() {
+        
+        major_ = 0;
+        onChanged();
+        return this;
+      }
+
+      /**
+       * <pre>
+       * Declares a specific sub-type for a major type of 'Apothecary'.
+       * </pre>
+       *
+       * <code>.opencannabis.products.ApothecaryType apothecary = 10;</code>
+       */
+      public int getApothecaryValue() {
+        if (minorCase_ == 10) {
+          return ((java.lang.Integer) minor_).intValue();
+        }
+        return 0;
+      }
+      /**
+       * <pre>
+       * Declares a specific sub-type for a major type of 'Apothecary'.
+       * </pre>
+       *
+       * <code>.opencannabis.products.ApothecaryType apothecary = 10;</code>
+       */
+      public Builder setApothecaryValue(int value) {
+        minorCase_ = 10;
+        minor_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Declares a specific sub-type for a major type of 'Apothecary'.
+       * </pre>
+       *
+       * <code>.opencannabis.products.ApothecaryType apothecary = 10;</code>
+       */
+      public io.opencannabis.schema.product.ApothecaryProduct.ApothecaryType getApothecary() {
+        if (minorCase_ == 10) {
+          @SuppressWarnings("deprecation")
+          io.opencannabis.schema.product.ApothecaryProduct.ApothecaryType result = io.opencannabis.schema.product.ApothecaryProduct.ApothecaryType.valueOf(
+              (java.lang.Integer) minor_);
+          return result == null ? io.opencannabis.schema.product.ApothecaryProduct.ApothecaryType.UNRECOGNIZED : result;
+        }
+        return io.opencannabis.schema.product.ApothecaryProduct.ApothecaryType.UNSPECIFIED_APOTHECARY;
+      }
+      /**
+       * <pre>
+       * Declares a specific sub-type for a major type of 'Apothecary'.
+       * </pre>
+       *
+       * <code>.opencannabis.products.ApothecaryType apothecary = 10;</code>
+       */
+      public Builder setApothecary(io.opencannabis.schema.product.ApothecaryProduct.ApothecaryType value) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        minorCase_ = 10;
+        minor_ = value.getNumber();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Declares a specific sub-type for a major type of 'Apothecary'.
+       * </pre>
+       *
+       * <code>.opencannabis.products.ApothecaryType apothecary = 10;</code>
+       */
+      public Builder clearApothecary() {
+        if (minorCase_ == 10) {
+          minorCase_ = 0;
+          minor_ = null;
+          onChanged();
+        }
+        return this;
+      }
+
+      /**
+       * <pre>
+       * Declares a specific sub-type for a major type of 'Cartridge'.
+       * </pre>
+       *
+       * <code>.opencannabis.products.CartridgeType cartridge = 11;</code>
+       */
+      public int getCartridgeValue() {
+        if (minorCase_ == 11) {
+          return ((java.lang.Integer) minor_).intValue();
+        }
+        return 0;
+      }
+      /**
+       * <pre>
+       * Declares a specific sub-type for a major type of 'Cartridge'.
+       * </pre>
+       *
+       * <code>.opencannabis.products.CartridgeType cartridge = 11;</code>
+       */
+      public Builder setCartridgeValue(int value) {
+        minorCase_ = 11;
+        minor_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Declares a specific sub-type for a major type of 'Cartridge'.
+       * </pre>
+       *
+       * <code>.opencannabis.products.CartridgeType cartridge = 11;</code>
+       */
+      public io.opencannabis.schema.product.CartridgeProduct.CartridgeType getCartridge() {
+        if (minorCase_ == 11) {
+          @SuppressWarnings("deprecation")
+          io.opencannabis.schema.product.CartridgeProduct.CartridgeType result = io.opencannabis.schema.product.CartridgeProduct.CartridgeType.valueOf(
+              (java.lang.Integer) minor_);
+          return result == null ? io.opencannabis.schema.product.CartridgeProduct.CartridgeType.UNRECOGNIZED : result;
+        }
+        return io.opencannabis.schema.product.CartridgeProduct.CartridgeType.UNSPECIFIED_CARTRIDGE;
+      }
+      /**
+       * <pre>
+       * Declares a specific sub-type for a major type of 'Cartridge'.
+       * </pre>
+       *
+       * <code>.opencannabis.products.CartridgeType cartridge = 11;</code>
+       */
+      public Builder setCartridge(io.opencannabis.schema.product.CartridgeProduct.CartridgeType value) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        minorCase_ = 11;
+        minor_ = value.getNumber();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Declares a specific sub-type for a major type of 'Cartridge'.
+       * </pre>
+       *
+       * <code>.opencannabis.products.CartridgeType cartridge = 11;</code>
+       */
+      public Builder clearCartridge() {
+        if (minorCase_ == 11) {
+          minorCase_ = 0;
+          minor_ = null;
+          onChanged();
+        }
+        return this;
+      }
+
+      /**
+       * <pre>
+       * Declares a specific sub-type for a major type of 'Edible'.
+       * </pre>
+       *
+       * <code>.opencannabis.products.EdibleType edible = 12;</code>
+       */
+      public int getEdibleValue() {
+        if (minorCase_ == 12) {
+          return ((java.lang.Integer) minor_).intValue();
+        }
+        return 0;
+      }
+      /**
+       * <pre>
+       * Declares a specific sub-type for a major type of 'Edible'.
+       * </pre>
+       *
+       * <code>.opencannabis.products.EdibleType edible = 12;</code>
+       */
+      public Builder setEdibleValue(int value) {
+        minorCase_ = 12;
+        minor_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Declares a specific sub-type for a major type of 'Edible'.
+       * </pre>
+       *
+       * <code>.opencannabis.products.EdibleType edible = 12;</code>
+       */
+      public io.opencannabis.schema.product.EdibleProduct.EdibleType getEdible() {
+        if (minorCase_ == 12) {
+          @SuppressWarnings("deprecation")
+          io.opencannabis.schema.product.EdibleProduct.EdibleType result = io.opencannabis.schema.product.EdibleProduct.EdibleType.valueOf(
+              (java.lang.Integer) minor_);
+          return result == null ? io.opencannabis.schema.product.EdibleProduct.EdibleType.UNRECOGNIZED : result;
+        }
+        return io.opencannabis.schema.product.EdibleProduct.EdibleType.UNSPECIFIED_EDIBLE;
+      }
+      /**
+       * <pre>
+       * Declares a specific sub-type for a major type of 'Edible'.
+       * </pre>
+       *
+       * <code>.opencannabis.products.EdibleType edible = 12;</code>
+       */
+      public Builder setEdible(io.opencannabis.schema.product.EdibleProduct.EdibleType value) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        minorCase_ = 12;
+        minor_ = value.getNumber();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Declares a specific sub-type for a major type of 'Edible'.
+       * </pre>
+       *
+       * <code>.opencannabis.products.EdibleType edible = 12;</code>
+       */
+      public Builder clearEdible() {
+        if (minorCase_ == 12) {
+          minorCase_ = 0;
+          minor_ = null;
+          onChanged();
+        }
+        return this;
+      }
+
+      /**
+       * <pre>
+       * Declares a specific sub-type for a major type of 'Extract'.
+       * </pre>
+       *
+       * <code>.opencannabis.products.ExtractType extract = 13;</code>
+       */
+      public int getExtractValue() {
+        if (minorCase_ == 13) {
+          return ((java.lang.Integer) minor_).intValue();
+        }
+        return 0;
+      }
+      /**
+       * <pre>
+       * Declares a specific sub-type for a major type of 'Extract'.
+       * </pre>
+       *
+       * <code>.opencannabis.products.ExtractType extract = 13;</code>
+       */
+      public Builder setExtractValue(int value) {
+        minorCase_ = 13;
+        minor_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Declares a specific sub-type for a major type of 'Extract'.
+       * </pre>
+       *
+       * <code>.opencannabis.products.ExtractType extract = 13;</code>
+       */
+      public io.opencannabis.schema.product.ExtractProduct.ExtractType getExtract() {
+        if (minorCase_ == 13) {
+          @SuppressWarnings("deprecation")
+          io.opencannabis.schema.product.ExtractProduct.ExtractType result = io.opencannabis.schema.product.ExtractProduct.ExtractType.valueOf(
+              (java.lang.Integer) minor_);
+          return result == null ? io.opencannabis.schema.product.ExtractProduct.ExtractType.UNRECOGNIZED : result;
+        }
+        return io.opencannabis.schema.product.ExtractProduct.ExtractType.UNSPECIFIED_EXTRACT;
+      }
+      /**
+       * <pre>
+       * Declares a specific sub-type for a major type of 'Extract'.
+       * </pre>
+       *
+       * <code>.opencannabis.products.ExtractType extract = 13;</code>
+       */
+      public Builder setExtract(io.opencannabis.schema.product.ExtractProduct.ExtractType value) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        minorCase_ = 13;
+        minor_ = value.getNumber();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Declares a specific sub-type for a major type of 'Extract'.
+       * </pre>
+       *
+       * <code>.opencannabis.products.ExtractType extract = 13;</code>
+       */
+      public Builder clearExtract() {
+        if (minorCase_ == 13) {
+          minorCase_ = 0;
+          minor_ = null;
+          onChanged();
+        }
+        return this;
+      }
+
+      /**
+       * <pre>
+       * Declares a specific sub-type for a major type of 'Plant'.
+       * </pre>
+       *
+       * <code>.opencannabis.products.PlantType plant = 14;</code>
+       */
+      public int getPlantValue() {
+        if (minorCase_ == 14) {
+          return ((java.lang.Integer) minor_).intValue();
+        }
+        return 0;
+      }
+      /**
+       * <pre>
+       * Declares a specific sub-type for a major type of 'Plant'.
+       * </pre>
+       *
+       * <code>.opencannabis.products.PlantType plant = 14;</code>
+       */
+      public Builder setPlantValue(int value) {
+        minorCase_ = 14;
+        minor_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Declares a specific sub-type for a major type of 'Plant'.
+       * </pre>
+       *
+       * <code>.opencannabis.products.PlantType plant = 14;</code>
+       */
+      public io.opencannabis.schema.product.PlantProduct.PlantType getPlant() {
+        if (minorCase_ == 14) {
+          @SuppressWarnings("deprecation")
+          io.opencannabis.schema.product.PlantProduct.PlantType result = io.opencannabis.schema.product.PlantProduct.PlantType.valueOf(
+              (java.lang.Integer) minor_);
+          return result == null ? io.opencannabis.schema.product.PlantProduct.PlantType.UNRECOGNIZED : result;
+        }
+        return io.opencannabis.schema.product.PlantProduct.PlantType.UNSPECIFIED_PLANT;
+      }
+      /**
+       * <pre>
+       * Declares a specific sub-type for a major type of 'Plant'.
+       * </pre>
+       *
+       * <code>.opencannabis.products.PlantType plant = 14;</code>
+       */
+      public Builder setPlant(io.opencannabis.schema.product.PlantProduct.PlantType value) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        minorCase_ = 14;
+        minor_ = value.getNumber();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Declares a specific sub-type for a major type of 'Plant'.
+       * </pre>
+       *
+       * <code>.opencannabis.products.PlantType plant = 14;</code>
+       */
+      public Builder clearPlant() {
+        if (minorCase_ == 14) {
+          minorCase_ = 0;
+          minor_ = null;
+          onChanged();
+        }
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFieldsProto3(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:bloombox.identity.ProductTypePreference)
+    }
+
+    // @@protoc_insertion_point(class_scope:bloombox.identity.ProductTypePreference)
+    private static final io.bloombox.schema.identity.AppUser.ProductTypePreference DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new io.bloombox.schema.identity.AppUser.ProductTypePreference();
+    }
+
+    public static io.bloombox.schema.identity.AppUser.ProductTypePreference getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<ProductTypePreference>
+        PARSER = new com.google.protobuf.AbstractParser<ProductTypePreference>() {
+      @java.lang.Override
+      public ProductTypePreference parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new ProductTypePreference(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<ProductTypePreference> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<ProductTypePreference> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public io.bloombox.schema.identity.AppUser.ProductTypePreference getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
   public interface ConsumerPreferencesOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:bloombox.schema.identity.ConsumerPreferences)
+      // @@protoc_insertion_point(interface_extends:bloombox.identity.ConsumerPreferences)
       com.google.protobuf.MessageOrBuilder {
 
     /**
@@ -10478,7 +12003,7 @@ public final class AppUser {
      * Preferred menu sections/product types, and so on.
      * </pre>
      *
-     * <code>.bloombox.schema.identity.MenuPreferences menu = 10 [(.gen_bq_schema.description) = "Preferred menu sections/product types, and so on."];</code>
+     * <code>.bloombox.identity.MenuPreferences menu = 10 [(.gen_bq_schema.description) = "Preferred menu sections/product types, and so on."];</code>
      */
     boolean hasMenu();
     /**
@@ -10486,7 +12011,7 @@ public final class AppUser {
      * Preferred menu sections/product types, and so on.
      * </pre>
      *
-     * <code>.bloombox.schema.identity.MenuPreferences menu = 10 [(.gen_bq_schema.description) = "Preferred menu sections/product types, and so on."];</code>
+     * <code>.bloombox.identity.MenuPreferences menu = 10 [(.gen_bq_schema.description) = "Preferred menu sections/product types, and so on."];</code>
      */
     io.bloombox.schema.identity.AppUser.MenuPreferences getMenu();
     /**
@@ -10494,20 +12019,106 @@ public final class AppUser {
      * Preferred menu sections/product types, and so on.
      * </pre>
      *
-     * <code>.bloombox.schema.identity.MenuPreferences menu = 10 [(.gen_bq_schema.description) = "Preferred menu sections/product types, and so on."];</code>
+     * <code>.bloombox.identity.MenuPreferences menu = 10 [(.gen_bq_schema.description) = "Preferred menu sections/product types, and so on."];</code>
      */
     io.bloombox.schema.identity.AppUser.MenuPreferencesOrBuilder getMenuOrBuilder();
+
+    /**
+     * <pre>
+     * Preferred biodelivery method for this consumer.
+     * </pre>
+     *
+     * <code>repeated .bloombox.consumption.BiodeliveryMethod method = 11;</code>
+     */
+    java.util.List<io.bloombox.schema.consumption.Biodelivery.BiodeliveryMethod> getMethodList();
+    /**
+     * <pre>
+     * Preferred biodelivery method for this consumer.
+     * </pre>
+     *
+     * <code>repeated .bloombox.consumption.BiodeliveryMethod method = 11;</code>
+     */
+    int getMethodCount();
+    /**
+     * <pre>
+     * Preferred biodelivery method for this consumer.
+     * </pre>
+     *
+     * <code>repeated .bloombox.consumption.BiodeliveryMethod method = 11;</code>
+     */
+    io.bloombox.schema.consumption.Biodelivery.BiodeliveryMethod getMethod(int index);
+    /**
+     * <pre>
+     * Preferred biodelivery method for this consumer.
+     * </pre>
+     *
+     * <code>repeated .bloombox.consumption.BiodeliveryMethod method = 11;</code>
+     */
+    java.util.List<java.lang.Integer>
+    getMethodValueList();
+    /**
+     * <pre>
+     * Preferred biodelivery method for this consumer.
+     * </pre>
+     *
+     * <code>repeated .bloombox.consumption.BiodeliveryMethod method = 11;</code>
+     */
+    int getMethodValue(int index);
+
+    /**
+     * <pre>
+     * Preferred cannabis product types for this consumer.
+     * </pre>
+     *
+     * <code>repeated .bloombox.identity.ProductTypePreference kind = 12;</code>
+     */
+    java.util.List<io.bloombox.schema.identity.AppUser.ProductTypePreference> 
+        getKindList();
+    /**
+     * <pre>
+     * Preferred cannabis product types for this consumer.
+     * </pre>
+     *
+     * <code>repeated .bloombox.identity.ProductTypePreference kind = 12;</code>
+     */
+    io.bloombox.schema.identity.AppUser.ProductTypePreference getKind(int index);
+    /**
+     * <pre>
+     * Preferred cannabis product types for this consumer.
+     * </pre>
+     *
+     * <code>repeated .bloombox.identity.ProductTypePreference kind = 12;</code>
+     */
+    int getKindCount();
+    /**
+     * <pre>
+     * Preferred cannabis product types for this consumer.
+     * </pre>
+     *
+     * <code>repeated .bloombox.identity.ProductTypePreference kind = 12;</code>
+     */
+    java.util.List<? extends io.bloombox.schema.identity.AppUser.ProductTypePreferenceOrBuilder> 
+        getKindOrBuilderList();
+    /**
+     * <pre>
+     * Preferred cannabis product types for this consumer.
+     * </pre>
+     *
+     * <code>repeated .bloombox.identity.ProductTypePreference kind = 12;</code>
+     */
+    io.bloombox.schema.identity.AppUser.ProductTypePreferenceOrBuilder getKindOrBuilder(
+        int index);
   }
   /**
    * <pre>
    * Specifies preferences related to a user's profile as a cannabis consumer.
    * </pre>
    *
-   * Protobuf type {@code bloombox.schema.identity.ConsumerPreferences}
+   * Protobuf type {@code bloombox.identity.ConsumerPreferences}
    */
   public  static final class ConsumerPreferences extends
       com.google.protobuf.GeneratedMessageV3 implements
-      // @@protoc_insertion_point(message_implements:bloombox.schema.identity.ConsumerPreferences)
+      // @@protoc_insertion_point(message_implements:bloombox.identity.ConsumerPreferences)
       ConsumerPreferencesOrBuilder {
   private static final long serialVersionUID = 0L;
     // Use ConsumerPreferences.newBuilder() to construct.
@@ -10515,6 +12126,8 @@ public final class AppUser {
       super(builder);
     }
     private ConsumerPreferences() {
+      method_ = java.util.Collections.emptyList();
+      kind_ = java.util.Collections.emptyList();
     }
 
     @java.lang.Override
@@ -10541,13 +12154,6 @@ public final class AppUser {
             case 0:
               done = true;
               break;
-            default: {
-              if (!parseUnknownFieldProto3(
-                  input, unknownFields, extensionRegistry, tag)) {
-                done = true;
-              }
-              break;
-            }
             case 82: {
               io.bloombox.schema.identity.AppUser.MenuPreferences.Builder subBuilder = null;
               if (menu_ != null) {
@@ -10561,6 +12167,45 @@ public final class AppUser {
 
               break;
             }
+            case 88: {
+              int rawValue = input.readEnum();
+              if (!((mutable_bitField0_ & 0x00000002) == 0x00000002)) {
+                method_ = new java.util.ArrayList<java.lang.Integer>();
+                mutable_bitField0_ |= 0x00000002;
+              }
+              method_.add(rawValue);
+              break;
+            }
+            case 90: {
+              int length = input.readRawVarint32();
+              int oldLimit = input.pushLimit(length);
+              while(input.getBytesUntilLimit() > 0) {
+                int rawValue = input.readEnum();
+                if (!((mutable_bitField0_ & 0x00000002) == 0x00000002)) {
+                  method_ = new java.util.ArrayList<java.lang.Integer>();
+                  mutable_bitField0_ |= 0x00000002;
+                }
+                method_.add(rawValue);
+              }
+              input.popLimit(oldLimit);
+              break;
+            }
+            case 98: {
+              if (!((mutable_bitField0_ & 0x00000004) == 0x00000004)) {
+                kind_ = new java.util.ArrayList<io.bloombox.schema.identity.AppUser.ProductTypePreference>();
+                mutable_bitField0_ |= 0x00000004;
+              }
+              kind_.add(
+                  input.readMessage(io.bloombox.schema.identity.AppUser.ProductTypePreference.parser(), extensionRegistry));
+              break;
+            }
+            default: {
+              if (!parseUnknownFieldProto3(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
           }
         }
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
@@ -10569,22 +12214,30 @@ public final class AppUser {
         throw new com.google.protobuf.InvalidProtocolBufferException(
             e).setUnfinishedMessage(this);
       } finally {
+        if (((mutable_bitField0_ & 0x00000002) == 0x00000002)) {
+          method_ = java.util.Collections.unmodifiableList(method_);
+        }
+        if (((mutable_bitField0_ & 0x00000004) == 0x00000004)) {
+          kind_ = java.util.Collections.unmodifiableList(kind_);
+        }
         this.unknownFields = unknownFields.build();
         makeExtensionsImmutable();
       }
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return io.bloombox.schema.identity.AppUser.internal_static_bloombox_schema_identity_ConsumerPreferences_descriptor;
+      return io.bloombox.schema.identity.AppUser.internal_static_bloombox_identity_ConsumerPreferences_descriptor;
     }
 
+    @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return io.bloombox.schema.identity.AppUser.internal_static_bloombox_schema_identity_ConsumerPreferences_fieldAccessorTable
+      return io.bloombox.schema.identity.AppUser.internal_static_bloombox_identity_ConsumerPreferences_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
               io.bloombox.schema.identity.AppUser.ConsumerPreferences.class, io.bloombox.schema.identity.AppUser.ConsumerPreferences.Builder.class);
     }
 
+    private int bitField0_;
     public static final int MENU_FIELD_NUMBER = 10;
     private io.bloombox.schema.identity.AppUser.MenuPreferences menu_;
     /**
@@ -10592,7 +12245,7 @@ public final class AppUser {
      * Preferred menu sections/product types, and so on.
      * </pre>
      *
-     * <code>.bloombox.schema.identity.MenuPreferences menu = 10 [(.gen_bq_schema.description) = "Preferred menu sections/product types, and so on."];</code>
+     * <code>.bloombox.identity.MenuPreferences menu = 10 [(.gen_bq_schema.description) = "Preferred menu sections/product types, and so on."];</code>
      */
     public boolean hasMenu() {
       return menu_ != null;
@@ -10602,7 +12255,7 @@ public final class AppUser {
      * Preferred menu sections/product types, and so on.
      * </pre>
      *
-     * <code>.bloombox.schema.identity.MenuPreferences menu = 10 [(.gen_bq_schema.description) = "Preferred menu sections/product types, and so on."];</code>
+     * <code>.bloombox.identity.MenuPreferences menu = 10 [(.gen_bq_schema.description) = "Preferred menu sections/product types, and so on."];</code>
      */
     public io.bloombox.schema.identity.AppUser.MenuPreferences getMenu() {
       return menu_ == null ? io.bloombox.schema.identity.AppUser.MenuPreferences.getDefaultInstance() : menu_;
@@ -10612,13 +12265,135 @@ public final class AppUser {
      * Preferred menu sections/product types, and so on.
      * </pre>
      *
-     * <code>.bloombox.schema.identity.MenuPreferences menu = 10 [(.gen_bq_schema.description) = "Preferred menu sections/product types, and so on."];</code>
+     * <code>.bloombox.identity.MenuPreferences menu = 10 [(.gen_bq_schema.description) = "Preferred menu sections/product types, and so on."];</code>
      */
     public io.bloombox.schema.identity.AppUser.MenuPreferencesOrBuilder getMenuOrBuilder() {
       return getMenu();
     }
 
+    public static final int METHOD_FIELD_NUMBER = 11;
+    private java.util.List<java.lang.Integer> method_;
+    private static final com.google.protobuf.Internal.ListAdapter.Converter<
+        java.lang.Integer, io.bloombox.schema.consumption.Biodelivery.BiodeliveryMethod> method_converter_ =
+            new com.google.protobuf.Internal.ListAdapter.Converter<
+                java.lang.Integer, io.bloombox.schema.consumption.Biodelivery.BiodeliveryMethod>() {
+              public io.bloombox.schema.consumption.Biodelivery.BiodeliveryMethod convert(java.lang.Integer from) {
+                @SuppressWarnings("deprecation")
+                io.bloombox.schema.consumption.Biodelivery.BiodeliveryMethod result = io.bloombox.schema.consumption.Biodelivery.BiodeliveryMethod.valueOf(from);
+                return result == null ? io.bloombox.schema.consumption.Biodelivery.BiodeliveryMethod.UNRECOGNIZED : result;
+              }
+            };
+    /**
+     * <pre>
+     * Preferred biodelivery method for this consumer.
+     * </pre>
+     *
+     * <code>repeated .bloombox.consumption.BiodeliveryMethod method = 11;</code>
+     */
+    public java.util.List<io.bloombox.schema.consumption.Biodelivery.BiodeliveryMethod> getMethodList() {
+      return new com.google.protobuf.Internal.ListAdapter<
+          java.lang.Integer, io.bloombox.schema.consumption.Biodelivery.BiodeliveryMethod>(method_, method_converter_);
+    }
+    /**
+     * <pre>
+     * Preferred biodelivery method for this consumer.
+     * </pre>
+     *
+     * <code>repeated .bloombox.consumption.BiodeliveryMethod method = 11;</code>
+     */
+    public int getMethodCount() {
+      return method_.size();
+    }
+    /**
+     * <pre>
+     * Preferred biodelivery method for this consumer.
+     * </pre>
+     *
+     * <code>repeated .bloombox.consumption.BiodeliveryMethod method = 11;</code>
+     */
+    public io.bloombox.schema.consumption.Biodelivery.BiodeliveryMethod getMethod(int index) {
+      return method_converter_.convert(method_.get(index));
+    }
+    /**
+     * <pre>
+     * Preferred biodelivery method for this consumer.
+     * </pre>
+     *
+     * <code>repeated .bloombox.consumption.BiodeliveryMethod method = 11;</code>
+     */
+    public java.util.List<java.lang.Integer>
+    getMethodValueList() {
+      return method_;
+    }
+    /**
+     * <pre>
+     * Preferred biodelivery method for this consumer.
+     * </pre>
+     *
+     * <code>repeated .bloombox.consumption.BiodeliveryMethod method = 11;</code>
+     */
+    public int getMethodValue(int index) {
+      return method_.get(index);
+    }
+    private int methodMemoizedSerializedSize;
+
+    public static final int KIND_FIELD_NUMBER = 12;
+    private java.util.List<io.bloombox.schema.identity.AppUser.ProductTypePreference> kind_;
+    /**
+     * <pre>
+     * Preferred cannabis product types for this consumer.
+     * </pre>
+     *
+     * <code>repeated .bloombox.identity.ProductTypePreference kind = 12;</code>
+     */
+    public java.util.List<io.bloombox.schema.identity.AppUser.ProductTypePreference> getKindList() {
+      return kind_;
+    }
+    /**
+     * <pre>
+     * Preferred cannabis product types for this consumer.
+     * </pre>
+     *
+     * <code>repeated .bloombox.identity.ProductTypePreference kind = 12;</code>
+     */
+    public java.util.List<? extends io.bloombox.schema.identity.AppUser.ProductTypePreferenceOrBuilder> 
+        getKindOrBuilderList() {
+      return kind_;
+    }
+    /**
+     * <pre>
+     * Preferred cannabis product types for this consumer.
+     * </pre>
+     *
+     * <code>repeated .bloombox.identity.ProductTypePreference kind = 12;</code>
+     */
+    public int getKindCount() {
+      return kind_.size();
+    }
+    /**
+     * <pre>
+     * Preferred cannabis product types for this consumer.
+     * </pre>
+     *
+     * <code>repeated .bloombox.identity.ProductTypePreference kind = 12;</code>
+     */
+    public io.bloombox.schema.identity.AppUser.ProductTypePreference getKind(int index) {
+      return kind_.get(index);
+    }
+    /**
+     * <pre>
+     * Preferred cannabis product types for this consumer.
+     * </pre>
+     *
+     * <code>repeated .bloombox.identity.ProductTypePreference kind = 12;</code>
+     */
+    public io.bloombox.schema.identity.AppUser.ProductTypePreferenceOrBuilder getKindOrBuilder(
+        int index) {
+      return kind_.get(index);
+    }
+
     private byte memoizedIsInitialized = -1;
+    @java.lang.Override
     public final boolean isInitialized() {
       byte isInitialized = memoizedIsInitialized;
       if (isInitialized == 1) return true;
@@ -10628,14 +12403,27 @@ public final class AppUser {
       return true;
     }
 
+    @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
+      getSerializedSize();
       if (menu_ != null) {
         output.writeMessage(10, getMenu());
+      }
+      if (getMethodList().size() > 0) {
+        output.writeUInt32NoTag(90);
+        output.writeUInt32NoTag(methodMemoizedSerializedSize);
+      }
+      for (int i = 0; i < method_.size(); i++) {
+        output.writeEnumNoTag(method_.get(i));
+      }
+      for (int i = 0; i < kind_.size(); i++) {
+        output.writeMessage(12, kind_.get(i));
       }
       unknownFields.writeTo(output);
     }
 
+    @java.lang.Override
     public int getSerializedSize() {
       int size = memoizedSize;
       if (size != -1) return size;
@@ -10644,6 +12432,22 @@ public final class AppUser {
       if (menu_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(10, getMenu());
+      }
+      {
+        int dataSize = 0;
+        for (int i = 0; i < method_.size(); i++) {
+          dataSize += com.google.protobuf.CodedOutputStream
+            .computeEnumSizeNoTag(method_.get(i));
+        }
+        size += dataSize;
+        if (!getMethodList().isEmpty()) {  size += 1;
+          size += com.google.protobuf.CodedOutputStream
+            .computeUInt32SizeNoTag(dataSize);
+        }methodMemoizedSerializedSize = dataSize;
+      }
+      for (int i = 0; i < kind_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(12, kind_.get(i));
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -10666,6 +12470,9 @@ public final class AppUser {
         result = result && getMenu()
             .equals(other.getMenu());
       }
+      result = result && method_.equals(other.method_);
+      result = result && getKindList()
+          .equals(other.getKindList());
       result = result && unknownFields.equals(other.unknownFields);
       return result;
     }
@@ -10680,6 +12487,14 @@ public final class AppUser {
       if (hasMenu()) {
         hash = (37 * hash) + MENU_FIELD_NUMBER;
         hash = (53 * hash) + getMenu().hashCode();
+      }
+      if (getMethodCount() > 0) {
+        hash = (37 * hash) + METHOD_FIELD_NUMBER;
+        hash = (53 * hash) + method_.hashCode();
+      }
+      if (getKindCount() > 0) {
+        hash = (37 * hash) + KIND_FIELD_NUMBER;
+        hash = (53 * hash) + getKindList().hashCode();
       }
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
@@ -10756,6 +12571,7 @@ public final class AppUser {
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
 
+    @java.lang.Override
     public Builder newBuilderForType() { return newBuilder(); }
     public static Builder newBuilder() {
       return DEFAULT_INSTANCE.toBuilder();
@@ -10763,6 +12579,7 @@ public final class AppUser {
     public static Builder newBuilder(io.bloombox.schema.identity.AppUser.ConsumerPreferences prototype) {
       return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
     }
+    @java.lang.Override
     public Builder toBuilder() {
       return this == DEFAULT_INSTANCE
           ? new Builder() : new Builder().mergeFrom(this);
@@ -10779,20 +12596,21 @@ public final class AppUser {
      * Specifies preferences related to a user's profile as a cannabis consumer.
      * </pre>
      *
-     * Protobuf type {@code bloombox.schema.identity.ConsumerPreferences}
+     * Protobuf type {@code bloombox.identity.ConsumerPreferences}
      */
     public static final class Builder extends
         com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:bloombox.schema.identity.ConsumerPreferences)
+        // @@protoc_insertion_point(builder_implements:bloombox.identity.ConsumerPreferences)
         io.bloombox.schema.identity.AppUser.ConsumerPreferencesOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return io.bloombox.schema.identity.AppUser.internal_static_bloombox_schema_identity_ConsumerPreferences_descriptor;
+        return io.bloombox.schema.identity.AppUser.internal_static_bloombox_identity_ConsumerPreferences_descriptor;
       }
 
+      @java.lang.Override
       protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return io.bloombox.schema.identity.AppUser.internal_static_bloombox_schema_identity_ConsumerPreferences_fieldAccessorTable
+        return io.bloombox.schema.identity.AppUser.internal_static_bloombox_identity_ConsumerPreferences_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
                 io.bloombox.schema.identity.AppUser.ConsumerPreferences.class, io.bloombox.schema.identity.AppUser.ConsumerPreferences.Builder.class);
       }
@@ -10810,8 +12628,10 @@ public final class AppUser {
       private void maybeForceBuilderInitialization() {
         if (com.google.protobuf.GeneratedMessageV3
                 .alwaysUseFieldBuilders) {
+          getKindFieldBuilder();
         }
       }
+      @java.lang.Override
       public Builder clear() {
         super.clear();
         if (menuBuilder_ == null) {
@@ -10820,18 +12640,29 @@ public final class AppUser {
           menu_ = null;
           menuBuilder_ = null;
         }
+        method_ = java.util.Collections.emptyList();
+        bitField0_ = (bitField0_ & ~0x00000002);
+        if (kindBuilder_ == null) {
+          kind_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000004);
+        } else {
+          kindBuilder_.clear();
+        }
         return this;
       }
 
+      @java.lang.Override
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return io.bloombox.schema.identity.AppUser.internal_static_bloombox_schema_identity_ConsumerPreferences_descriptor;
+        return io.bloombox.schema.identity.AppUser.internal_static_bloombox_identity_ConsumerPreferences_descriptor;
       }
 
+      @java.lang.Override
       public io.bloombox.schema.identity.AppUser.ConsumerPreferences getDefaultInstanceForType() {
         return io.bloombox.schema.identity.AppUser.ConsumerPreferences.getDefaultInstance();
       }
 
+      @java.lang.Override
       public io.bloombox.schema.identity.AppUser.ConsumerPreferences build() {
         io.bloombox.schema.identity.AppUser.ConsumerPreferences result = buildPartial();
         if (!result.isInitialized()) {
@@ -10840,43 +12671,68 @@ public final class AppUser {
         return result;
       }
 
+      @java.lang.Override
       public io.bloombox.schema.identity.AppUser.ConsumerPreferences buildPartial() {
         io.bloombox.schema.identity.AppUser.ConsumerPreferences result = new io.bloombox.schema.identity.AppUser.ConsumerPreferences(this);
+        int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
         if (menuBuilder_ == null) {
           result.menu_ = menu_;
         } else {
           result.menu_ = menuBuilder_.build();
         }
+        if (((bitField0_ & 0x00000002) == 0x00000002)) {
+          method_ = java.util.Collections.unmodifiableList(method_);
+          bitField0_ = (bitField0_ & ~0x00000002);
+        }
+        result.method_ = method_;
+        if (kindBuilder_ == null) {
+          if (((bitField0_ & 0x00000004) == 0x00000004)) {
+            kind_ = java.util.Collections.unmodifiableList(kind_);
+            bitField0_ = (bitField0_ & ~0x00000004);
+          }
+          result.kind_ = kind_;
+        } else {
+          result.kind_ = kindBuilder_.build();
+        }
+        result.bitField0_ = to_bitField0_;
         onBuilt();
         return result;
       }
 
+      @java.lang.Override
       public Builder clone() {
         return (Builder) super.clone();
       }
+      @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
         return (Builder) super.setField(field, value);
       }
+      @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
         return (Builder) super.clearField(field);
       }
+      @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
         return (Builder) super.clearOneof(oneof);
       }
+      @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
         return (Builder) super.setRepeatedField(field, index, value);
       }
+      @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
         return (Builder) super.addRepeatedField(field, value);
       }
+      @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
         if (other instanceof io.bloombox.schema.identity.AppUser.ConsumerPreferences) {
           return mergeFrom((io.bloombox.schema.identity.AppUser.ConsumerPreferences)other);
@@ -10891,15 +12747,53 @@ public final class AppUser {
         if (other.hasMenu()) {
           mergeMenu(other.getMenu());
         }
+        if (!other.method_.isEmpty()) {
+          if (method_.isEmpty()) {
+            method_ = other.method_;
+            bitField0_ = (bitField0_ & ~0x00000002);
+          } else {
+            ensureMethodIsMutable();
+            method_.addAll(other.method_);
+          }
+          onChanged();
+        }
+        if (kindBuilder_ == null) {
+          if (!other.kind_.isEmpty()) {
+            if (kind_.isEmpty()) {
+              kind_ = other.kind_;
+              bitField0_ = (bitField0_ & ~0x00000004);
+            } else {
+              ensureKindIsMutable();
+              kind_.addAll(other.kind_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.kind_.isEmpty()) {
+            if (kindBuilder_.isEmpty()) {
+              kindBuilder_.dispose();
+              kindBuilder_ = null;
+              kind_ = other.kind_;
+              bitField0_ = (bitField0_ & ~0x00000004);
+              kindBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getKindFieldBuilder() : null;
+            } else {
+              kindBuilder_.addAllMessages(other.kind_);
+            }
+          }
+        }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
         return this;
       }
 
+      @java.lang.Override
       public final boolean isInitialized() {
         return true;
       }
 
+      @java.lang.Override
       public Builder mergeFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -10917,6 +12811,7 @@ public final class AppUser {
         }
         return this;
       }
+      private int bitField0_;
 
       private io.bloombox.schema.identity.AppUser.MenuPreferences menu_ = null;
       private com.google.protobuf.SingleFieldBuilderV3<
@@ -10926,7 +12821,7 @@ public final class AppUser {
        * Preferred menu sections/product types, and so on.
        * </pre>
        *
-       * <code>.bloombox.schema.identity.MenuPreferences menu = 10 [(.gen_bq_schema.description) = "Preferred menu sections/product types, and so on."];</code>
+       * <code>.bloombox.identity.MenuPreferences menu = 10 [(.gen_bq_schema.description) = "Preferred menu sections/product types, and so on."];</code>
        */
       public boolean hasMenu() {
         return menuBuilder_ != null || menu_ != null;
@@ -10936,7 +12831,7 @@ public final class AppUser {
        * Preferred menu sections/product types, and so on.
        * </pre>
        *
-       * <code>.bloombox.schema.identity.MenuPreferences menu = 10 [(.gen_bq_schema.description) = "Preferred menu sections/product types, and so on."];</code>
+       * <code>.bloombox.identity.MenuPreferences menu = 10 [(.gen_bq_schema.description) = "Preferred menu sections/product types, and so on."];</code>
        */
       public io.bloombox.schema.identity.AppUser.MenuPreferences getMenu() {
         if (menuBuilder_ == null) {
@@ -10950,7 +12845,7 @@ public final class AppUser {
        * Preferred menu sections/product types, and so on.
        * </pre>
        *
-       * <code>.bloombox.schema.identity.MenuPreferences menu = 10 [(.gen_bq_schema.description) = "Preferred menu sections/product types, and so on."];</code>
+       * <code>.bloombox.identity.MenuPreferences menu = 10 [(.gen_bq_schema.description) = "Preferred menu sections/product types, and so on."];</code>
        */
       public Builder setMenu(io.bloombox.schema.identity.AppUser.MenuPreferences value) {
         if (menuBuilder_ == null) {
@@ -10970,7 +12865,7 @@ public final class AppUser {
        * Preferred menu sections/product types, and so on.
        * </pre>
        *
-       * <code>.bloombox.schema.identity.MenuPreferences menu = 10 [(.gen_bq_schema.description) = "Preferred menu sections/product types, and so on."];</code>
+       * <code>.bloombox.identity.MenuPreferences menu = 10 [(.gen_bq_schema.description) = "Preferred menu sections/product types, and so on."];</code>
        */
       public Builder setMenu(
           io.bloombox.schema.identity.AppUser.MenuPreferences.Builder builderForValue) {
@@ -10988,7 +12883,7 @@ public final class AppUser {
        * Preferred menu sections/product types, and so on.
        * </pre>
        *
-       * <code>.bloombox.schema.identity.MenuPreferences menu = 10 [(.gen_bq_schema.description) = "Preferred menu sections/product types, and so on."];</code>
+       * <code>.bloombox.identity.MenuPreferences menu = 10 [(.gen_bq_schema.description) = "Preferred menu sections/product types, and so on."];</code>
        */
       public Builder mergeMenu(io.bloombox.schema.identity.AppUser.MenuPreferences value) {
         if (menuBuilder_ == null) {
@@ -11010,7 +12905,7 @@ public final class AppUser {
        * Preferred menu sections/product types, and so on.
        * </pre>
        *
-       * <code>.bloombox.schema.identity.MenuPreferences menu = 10 [(.gen_bq_schema.description) = "Preferred menu sections/product types, and so on."];</code>
+       * <code>.bloombox.identity.MenuPreferences menu = 10 [(.gen_bq_schema.description) = "Preferred menu sections/product types, and so on."];</code>
        */
       public Builder clearMenu() {
         if (menuBuilder_ == null) {
@@ -11028,7 +12923,7 @@ public final class AppUser {
        * Preferred menu sections/product types, and so on.
        * </pre>
        *
-       * <code>.bloombox.schema.identity.MenuPreferences menu = 10 [(.gen_bq_schema.description) = "Preferred menu sections/product types, and so on."];</code>
+       * <code>.bloombox.identity.MenuPreferences menu = 10 [(.gen_bq_schema.description) = "Preferred menu sections/product types, and so on."];</code>
        */
       public io.bloombox.schema.identity.AppUser.MenuPreferences.Builder getMenuBuilder() {
         
@@ -11040,7 +12935,7 @@ public final class AppUser {
        * Preferred menu sections/product types, and so on.
        * </pre>
        *
-       * <code>.bloombox.schema.identity.MenuPreferences menu = 10 [(.gen_bq_schema.description) = "Preferred menu sections/product types, and so on."];</code>
+       * <code>.bloombox.identity.MenuPreferences menu = 10 [(.gen_bq_schema.description) = "Preferred menu sections/product types, and so on."];</code>
        */
       public io.bloombox.schema.identity.AppUser.MenuPreferencesOrBuilder getMenuOrBuilder() {
         if (menuBuilder_ != null) {
@@ -11055,7 +12950,7 @@ public final class AppUser {
        * Preferred menu sections/product types, and so on.
        * </pre>
        *
-       * <code>.bloombox.schema.identity.MenuPreferences menu = 10 [(.gen_bq_schema.description) = "Preferred menu sections/product types, and so on."];</code>
+       * <code>.bloombox.identity.MenuPreferences menu = 10 [(.gen_bq_schema.description) = "Preferred menu sections/product types, and so on."];</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
           io.bloombox.schema.identity.AppUser.MenuPreferences, io.bloombox.schema.identity.AppUser.MenuPreferences.Builder, io.bloombox.schema.identity.AppUser.MenuPreferencesOrBuilder> 
@@ -11070,21 +12965,501 @@ public final class AppUser {
         }
         return menuBuilder_;
       }
+
+      private java.util.List<java.lang.Integer> method_ =
+        java.util.Collections.emptyList();
+      private void ensureMethodIsMutable() {
+        if (!((bitField0_ & 0x00000002) == 0x00000002)) {
+          method_ = new java.util.ArrayList<java.lang.Integer>(method_);
+          bitField0_ |= 0x00000002;
+        }
+      }
+      /**
+       * <pre>
+       * Preferred biodelivery method for this consumer.
+       * </pre>
+       *
+       * <code>repeated .bloombox.consumption.BiodeliveryMethod method = 11;</code>
+       */
+      public java.util.List<io.bloombox.schema.consumption.Biodelivery.BiodeliveryMethod> getMethodList() {
+        return new com.google.protobuf.Internal.ListAdapter<
+            java.lang.Integer, io.bloombox.schema.consumption.Biodelivery.BiodeliveryMethod>(method_, method_converter_);
+      }
+      /**
+       * <pre>
+       * Preferred biodelivery method for this consumer.
+       * </pre>
+       *
+       * <code>repeated .bloombox.consumption.BiodeliveryMethod method = 11;</code>
+       */
+      public int getMethodCount() {
+        return method_.size();
+      }
+      /**
+       * <pre>
+       * Preferred biodelivery method for this consumer.
+       * </pre>
+       *
+       * <code>repeated .bloombox.consumption.BiodeliveryMethod method = 11;</code>
+       */
+      public io.bloombox.schema.consumption.Biodelivery.BiodeliveryMethod getMethod(int index) {
+        return method_converter_.convert(method_.get(index));
+      }
+      /**
+       * <pre>
+       * Preferred biodelivery method for this consumer.
+       * </pre>
+       *
+       * <code>repeated .bloombox.consumption.BiodeliveryMethod method = 11;</code>
+       */
+      public Builder setMethod(
+          int index, io.bloombox.schema.consumption.Biodelivery.BiodeliveryMethod value) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        ensureMethodIsMutable();
+        method_.set(index, value.getNumber());
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Preferred biodelivery method for this consumer.
+       * </pre>
+       *
+       * <code>repeated .bloombox.consumption.BiodeliveryMethod method = 11;</code>
+       */
+      public Builder addMethod(io.bloombox.schema.consumption.Biodelivery.BiodeliveryMethod value) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        ensureMethodIsMutable();
+        method_.add(value.getNumber());
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Preferred biodelivery method for this consumer.
+       * </pre>
+       *
+       * <code>repeated .bloombox.consumption.BiodeliveryMethod method = 11;</code>
+       */
+      public Builder addAllMethod(
+          java.lang.Iterable<? extends io.bloombox.schema.consumption.Biodelivery.BiodeliveryMethod> values) {
+        ensureMethodIsMutable();
+        for (io.bloombox.schema.consumption.Biodelivery.BiodeliveryMethod value : values) {
+          method_.add(value.getNumber());
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Preferred biodelivery method for this consumer.
+       * </pre>
+       *
+       * <code>repeated .bloombox.consumption.BiodeliveryMethod method = 11;</code>
+       */
+      public Builder clearMethod() {
+        method_ = java.util.Collections.emptyList();
+        bitField0_ = (bitField0_ & ~0x00000002);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Preferred biodelivery method for this consumer.
+       * </pre>
+       *
+       * <code>repeated .bloombox.consumption.BiodeliveryMethod method = 11;</code>
+       */
+      public java.util.List<java.lang.Integer>
+      getMethodValueList() {
+        return java.util.Collections.unmodifiableList(method_);
+      }
+      /**
+       * <pre>
+       * Preferred biodelivery method for this consumer.
+       * </pre>
+       *
+       * <code>repeated .bloombox.consumption.BiodeliveryMethod method = 11;</code>
+       */
+      public int getMethodValue(int index) {
+        return method_.get(index);
+      }
+      /**
+       * <pre>
+       * Preferred biodelivery method for this consumer.
+       * </pre>
+       *
+       * <code>repeated .bloombox.consumption.BiodeliveryMethod method = 11;</code>
+       */
+      public Builder setMethodValue(
+          int index, int value) {
+        ensureMethodIsMutable();
+        method_.set(index, value);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Preferred biodelivery method for this consumer.
+       * </pre>
+       *
+       * <code>repeated .bloombox.consumption.BiodeliveryMethod method = 11;</code>
+       */
+      public Builder addMethodValue(int value) {
+        ensureMethodIsMutable();
+        method_.add(value);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Preferred biodelivery method for this consumer.
+       * </pre>
+       *
+       * <code>repeated .bloombox.consumption.BiodeliveryMethod method = 11;</code>
+       */
+      public Builder addAllMethodValue(
+          java.lang.Iterable<java.lang.Integer> values) {
+        ensureMethodIsMutable();
+        for (int value : values) {
+          method_.add(value);
+        }
+        onChanged();
+        return this;
+      }
+
+      private java.util.List<io.bloombox.schema.identity.AppUser.ProductTypePreference> kind_ =
+        java.util.Collections.emptyList();
+      private void ensureKindIsMutable() {
+        if (!((bitField0_ & 0x00000004) == 0x00000004)) {
+          kind_ = new java.util.ArrayList<io.bloombox.schema.identity.AppUser.ProductTypePreference>(kind_);
+          bitField0_ |= 0x00000004;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          io.bloombox.schema.identity.AppUser.ProductTypePreference, io.bloombox.schema.identity.AppUser.ProductTypePreference.Builder, io.bloombox.schema.identity.AppUser.ProductTypePreferenceOrBuilder> kindBuilder_;
+
+      /**
+       * <pre>
+       * Preferred cannabis product types for this consumer.
+       * </pre>
+       *
+       * <code>repeated .bloombox.identity.ProductTypePreference kind = 12;</code>
+       */
+      public java.util.List<io.bloombox.schema.identity.AppUser.ProductTypePreference> getKindList() {
+        if (kindBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(kind_);
+        } else {
+          return kindBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <pre>
+       * Preferred cannabis product types for this consumer.
+       * </pre>
+       *
+       * <code>repeated .bloombox.identity.ProductTypePreference kind = 12;</code>
+       */
+      public int getKindCount() {
+        if (kindBuilder_ == null) {
+          return kind_.size();
+        } else {
+          return kindBuilder_.getCount();
+        }
+      }
+      /**
+       * <pre>
+       * Preferred cannabis product types for this consumer.
+       * </pre>
+       *
+       * <code>repeated .bloombox.identity.ProductTypePreference kind = 12;</code>
+       */
+      public io.bloombox.schema.identity.AppUser.ProductTypePreference getKind(int index) {
+        if (kindBuilder_ == null) {
+          return kind_.get(index);
+        } else {
+          return kindBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <pre>
+       * Preferred cannabis product types for this consumer.
+       * </pre>
+       *
+       * <code>repeated .bloombox.identity.ProductTypePreference kind = 12;</code>
+       */
+      public Builder setKind(
+          int index, io.bloombox.schema.identity.AppUser.ProductTypePreference value) {
+        if (kindBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureKindIsMutable();
+          kind_.set(index, value);
+          onChanged();
+        } else {
+          kindBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Preferred cannabis product types for this consumer.
+       * </pre>
+       *
+       * <code>repeated .bloombox.identity.ProductTypePreference kind = 12;</code>
+       */
+      public Builder setKind(
+          int index, io.bloombox.schema.identity.AppUser.ProductTypePreference.Builder builderForValue) {
+        if (kindBuilder_ == null) {
+          ensureKindIsMutable();
+          kind_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          kindBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Preferred cannabis product types for this consumer.
+       * </pre>
+       *
+       * <code>repeated .bloombox.identity.ProductTypePreference kind = 12;</code>
+       */
+      public Builder addKind(io.bloombox.schema.identity.AppUser.ProductTypePreference value) {
+        if (kindBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureKindIsMutable();
+          kind_.add(value);
+          onChanged();
+        } else {
+          kindBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Preferred cannabis product types for this consumer.
+       * </pre>
+       *
+       * <code>repeated .bloombox.identity.ProductTypePreference kind = 12;</code>
+       */
+      public Builder addKind(
+          int index, io.bloombox.schema.identity.AppUser.ProductTypePreference value) {
+        if (kindBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureKindIsMutable();
+          kind_.add(index, value);
+          onChanged();
+        } else {
+          kindBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Preferred cannabis product types for this consumer.
+       * </pre>
+       *
+       * <code>repeated .bloombox.identity.ProductTypePreference kind = 12;</code>
+       */
+      public Builder addKind(
+          io.bloombox.schema.identity.AppUser.ProductTypePreference.Builder builderForValue) {
+        if (kindBuilder_ == null) {
+          ensureKindIsMutable();
+          kind_.add(builderForValue.build());
+          onChanged();
+        } else {
+          kindBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Preferred cannabis product types for this consumer.
+       * </pre>
+       *
+       * <code>repeated .bloombox.identity.ProductTypePreference kind = 12;</code>
+       */
+      public Builder addKind(
+          int index, io.bloombox.schema.identity.AppUser.ProductTypePreference.Builder builderForValue) {
+        if (kindBuilder_ == null) {
+          ensureKindIsMutable();
+          kind_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          kindBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Preferred cannabis product types for this consumer.
+       * </pre>
+       *
+       * <code>repeated .bloombox.identity.ProductTypePreference kind = 12;</code>
+       */
+      public Builder addAllKind(
+          java.lang.Iterable<? extends io.bloombox.schema.identity.AppUser.ProductTypePreference> values) {
+        if (kindBuilder_ == null) {
+          ensureKindIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, kind_);
+          onChanged();
+        } else {
+          kindBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Preferred cannabis product types for this consumer.
+       * </pre>
+       *
+       * <code>repeated .bloombox.identity.ProductTypePreference kind = 12;</code>
+       */
+      public Builder clearKind() {
+        if (kindBuilder_ == null) {
+          kind_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000004);
+          onChanged();
+        } else {
+          kindBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Preferred cannabis product types for this consumer.
+       * </pre>
+       *
+       * <code>repeated .bloombox.identity.ProductTypePreference kind = 12;</code>
+       */
+      public Builder removeKind(int index) {
+        if (kindBuilder_ == null) {
+          ensureKindIsMutable();
+          kind_.remove(index);
+          onChanged();
+        } else {
+          kindBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Preferred cannabis product types for this consumer.
+       * </pre>
+       *
+       * <code>repeated .bloombox.identity.ProductTypePreference kind = 12;</code>
+       */
+      public io.bloombox.schema.identity.AppUser.ProductTypePreference.Builder getKindBuilder(
+          int index) {
+        return getKindFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <pre>
+       * Preferred cannabis product types for this consumer.
+       * </pre>
+       *
+       * <code>repeated .bloombox.identity.ProductTypePreference kind = 12;</code>
+       */
+      public io.bloombox.schema.identity.AppUser.ProductTypePreferenceOrBuilder getKindOrBuilder(
+          int index) {
+        if (kindBuilder_ == null) {
+          return kind_.get(index);  } else {
+          return kindBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <pre>
+       * Preferred cannabis product types for this consumer.
+       * </pre>
+       *
+       * <code>repeated .bloombox.identity.ProductTypePreference kind = 12;</code>
+       */
+      public java.util.List<? extends io.bloombox.schema.identity.AppUser.ProductTypePreferenceOrBuilder> 
+           getKindOrBuilderList() {
+        if (kindBuilder_ != null) {
+          return kindBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(kind_);
+        }
+      }
+      /**
+       * <pre>
+       * Preferred cannabis product types for this consumer.
+       * </pre>
+       *
+       * <code>repeated .bloombox.identity.ProductTypePreference kind = 12;</code>
+       */
+      public io.bloombox.schema.identity.AppUser.ProductTypePreference.Builder addKindBuilder() {
+        return getKindFieldBuilder().addBuilder(
+            io.bloombox.schema.identity.AppUser.ProductTypePreference.getDefaultInstance());
+      }
+      /**
+       * <pre>
+       * Preferred cannabis product types for this consumer.
+       * </pre>
+       *
+       * <code>repeated .bloombox.identity.ProductTypePreference kind = 12;</code>
+       */
+      public io.bloombox.schema.identity.AppUser.ProductTypePreference.Builder addKindBuilder(
+          int index) {
+        return getKindFieldBuilder().addBuilder(
+            index, io.bloombox.schema.identity.AppUser.ProductTypePreference.getDefaultInstance());
+      }
+      /**
+       * <pre>
+       * Preferred cannabis product types for this consumer.
+       * </pre>
+       *
+       * <code>repeated .bloombox.identity.ProductTypePreference kind = 12;</code>
+       */
+      public java.util.List<io.bloombox.schema.identity.AppUser.ProductTypePreference.Builder> 
+           getKindBuilderList() {
+        return getKindFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          io.bloombox.schema.identity.AppUser.ProductTypePreference, io.bloombox.schema.identity.AppUser.ProductTypePreference.Builder, io.bloombox.schema.identity.AppUser.ProductTypePreferenceOrBuilder> 
+          getKindFieldBuilder() {
+        if (kindBuilder_ == null) {
+          kindBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              io.bloombox.schema.identity.AppUser.ProductTypePreference, io.bloombox.schema.identity.AppUser.ProductTypePreference.Builder, io.bloombox.schema.identity.AppUser.ProductTypePreferenceOrBuilder>(
+                  kind_,
+                  ((bitField0_ & 0x00000004) == 0x00000004),
+                  getParentForChildren(),
+                  isClean());
+          kind_ = null;
+        }
+        return kindBuilder_;
+      }
+      @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
         return super.setUnknownFieldsProto3(unknownFields);
       }
 
+      @java.lang.Override
       public final Builder mergeUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
         return super.mergeUnknownFields(unknownFields);
       }
 
 
-      // @@protoc_insertion_point(builder_scope:bloombox.schema.identity.ConsumerPreferences)
+      // @@protoc_insertion_point(builder_scope:bloombox.identity.ConsumerPreferences)
     }
 
-    // @@protoc_insertion_point(class_scope:bloombox.schema.identity.ConsumerPreferences)
+    // @@protoc_insertion_point(class_scope:bloombox.identity.ConsumerPreferences)
     private static final io.bloombox.schema.identity.AppUser.ConsumerPreferences DEFAULT_INSTANCE;
     static {
       DEFAULT_INSTANCE = new io.bloombox.schema.identity.AppUser.ConsumerPreferences();
@@ -11096,6 +13471,7 @@ public final class AppUser {
 
     private static final com.google.protobuf.Parser<ConsumerPreferences>
         PARSER = new com.google.protobuf.AbstractParser<ConsumerPreferences>() {
+      @java.lang.Override
       public ConsumerPreferences parsePartialFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -11113,6 +13489,7 @@ public final class AppUser {
       return PARSER;
     }
 
+    @java.lang.Override
     public io.bloombox.schema.identity.AppUser.ConsumerPreferences getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
@@ -11120,7 +13497,7 @@ public final class AppUser {
   }
 
   public interface ConsumerMembershipOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:bloombox.schema.identity.ConsumerMembership)
+      // @@protoc_insertion_point(interface_extends:bloombox.identity.ConsumerMembership)
       com.google.protobuf.MessageOrBuilder {
 
     /**
@@ -11128,7 +13505,7 @@ public final class AppUser {
      * Referral source for this enrollment.
      * </pre>
      *
-     * <code>.bloombox.schema.identity.EnrollmentSource referral_source = 1 [(.gen_bq_schema.description) = "Referral source for this enrollment."];</code>
+     * <code>.bloombox.identity.EnrollmentSource referral_source = 1 [(.gen_bq_schema.description) = "Referral source for this enrollment."];</code>
      */
     int getReferralSourceValue();
     /**
@@ -11136,7 +13513,7 @@ public final class AppUser {
      * Referral source for this enrollment.
      * </pre>
      *
-     * <code>.bloombox.schema.identity.EnrollmentSource referral_source = 1 [(.gen_bq_schema.description) = "Referral source for this enrollment."];</code>
+     * <code>.bloombox.identity.EnrollmentSource referral_source = 1 [(.gen_bq_schema.description) = "Referral source for this enrollment."];</code>
      */
     io.bloombox.schema.identity.AppUser.EnrollmentSource getReferralSource();
 
@@ -11231,7 +13608,7 @@ public final class AppUser {
      * Key representing this user's membership at this location.
      * </pre>
      *
-     * <code>.bloombox.schema.identity.MembershipKey key = 6 [(.gen_bq_schema.description) = "Membership key representing this user&#92;'s membership at this location."];</code>
+     * <code>.bloombox.identity.MembershipKey key = 6 [(.gen_bq_schema.description) = "Membership key representing this user&#92;'s membership at this location."];</code>
      */
     boolean hasKey();
     /**
@@ -11239,7 +13616,7 @@ public final class AppUser {
      * Key representing this user's membership at this location.
      * </pre>
      *
-     * <code>.bloombox.schema.identity.MembershipKey key = 6 [(.gen_bq_schema.description) = "Membership key representing this user&#92;'s membership at this location."];</code>
+     * <code>.bloombox.identity.MembershipKey key = 6 [(.gen_bq_schema.description) = "Membership key representing this user&#92;'s membership at this location."];</code>
      */
     io.bloombox.schema.identity.AppMemberKey.MembershipKey getKey();
     /**
@@ -11247,7 +13624,7 @@ public final class AppUser {
      * Key representing this user's membership at this location.
      * </pre>
      *
-     * <code>.bloombox.schema.identity.MembershipKey key = 6 [(.gen_bq_schema.description) = "Membership key representing this user&#92;'s membership at this location."];</code>
+     * <code>.bloombox.identity.MembershipKey key = 6 [(.gen_bq_schema.description) = "Membership key representing this user&#92;'s membership at this location."];</code>
      */
     io.bloombox.schema.identity.AppMemberKey.MembershipKeyOrBuilder getKeyOrBuilder();
   }
@@ -11256,11 +13633,11 @@ public final class AppUser {
    * Represents a consumer's membership at a particular dispensary.
    * </pre>
    *
-   * Protobuf type {@code bloombox.schema.identity.ConsumerMembership}
+   * Protobuf type {@code bloombox.identity.ConsumerMembership}
    */
   public  static final class ConsumerMembership extends
       com.google.protobuf.GeneratedMessageV3 implements
-      // @@protoc_insertion_point(message_implements:bloombox.schema.identity.ConsumerMembership)
+      // @@protoc_insertion_point(message_implements:bloombox.identity.ConsumerMembership)
       ConsumerMembershipOrBuilder {
   private static final long serialVersionUID = 0L;
     // Use ConsumerMembership.newBuilder() to construct.
@@ -11297,13 +13674,6 @@ public final class AppUser {
             case 0:
               done = true;
               break;
-            default: {
-              if (!parseUnknownFieldProto3(
-                  input, unknownFields, extensionRegistry, tag)) {
-                done = true;
-              }
-              break;
-            }
             case 8: {
               int rawValue = input.readEnum();
 
@@ -11361,6 +13731,13 @@ public final class AppUser {
 
               break;
             }
+            default: {
+              if (!parseUnknownFieldProto3(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
           }
         }
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
@@ -11375,12 +13752,13 @@ public final class AppUser {
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return io.bloombox.schema.identity.AppUser.internal_static_bloombox_schema_identity_ConsumerMembership_descriptor;
+      return io.bloombox.schema.identity.AppUser.internal_static_bloombox_identity_ConsumerMembership_descriptor;
     }
 
+    @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return io.bloombox.schema.identity.AppUser.internal_static_bloombox_schema_identity_ConsumerMembership_fieldAccessorTable
+      return io.bloombox.schema.identity.AppUser.internal_static_bloombox_identity_ConsumerMembership_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
               io.bloombox.schema.identity.AppUser.ConsumerMembership.class, io.bloombox.schema.identity.AppUser.ConsumerMembership.Builder.class);
     }
@@ -11392,7 +13770,7 @@ public final class AppUser {
      * Referral source for this enrollment.
      * </pre>
      *
-     * <code>.bloombox.schema.identity.EnrollmentSource referral_source = 1 [(.gen_bq_schema.description) = "Referral source for this enrollment."];</code>
+     * <code>.bloombox.identity.EnrollmentSource referral_source = 1 [(.gen_bq_schema.description) = "Referral source for this enrollment."];</code>
      */
     public int getReferralSourceValue() {
       return referralSource_;
@@ -11402,9 +13780,10 @@ public final class AppUser {
      * Referral source for this enrollment.
      * </pre>
      *
-     * <code>.bloombox.schema.identity.EnrollmentSource referral_source = 1 [(.gen_bq_schema.description) = "Referral source for this enrollment."];</code>
+     * <code>.bloombox.identity.EnrollmentSource referral_source = 1 [(.gen_bq_schema.description) = "Referral source for this enrollment."];</code>
      */
     public io.bloombox.schema.identity.AppUser.EnrollmentSource getReferralSource() {
+      @SuppressWarnings("deprecation")
       io.bloombox.schema.identity.AppUser.EnrollmentSource result = io.bloombox.schema.identity.AppUser.EnrollmentSource.valueOf(referralSource_);
       return result == null ? io.bloombox.schema.identity.AppUser.EnrollmentSource.UNRECOGNIZED : result;
     }
@@ -11566,7 +13945,7 @@ public final class AppUser {
      * Key representing this user's membership at this location.
      * </pre>
      *
-     * <code>.bloombox.schema.identity.MembershipKey key = 6 [(.gen_bq_schema.description) = "Membership key representing this user&#92;'s membership at this location."];</code>
+     * <code>.bloombox.identity.MembershipKey key = 6 [(.gen_bq_schema.description) = "Membership key representing this user&#92;'s membership at this location."];</code>
      */
     public boolean hasKey() {
       return key_ != null;
@@ -11576,7 +13955,7 @@ public final class AppUser {
      * Key representing this user's membership at this location.
      * </pre>
      *
-     * <code>.bloombox.schema.identity.MembershipKey key = 6 [(.gen_bq_schema.description) = "Membership key representing this user&#92;'s membership at this location."];</code>
+     * <code>.bloombox.identity.MembershipKey key = 6 [(.gen_bq_schema.description) = "Membership key representing this user&#92;'s membership at this location."];</code>
      */
     public io.bloombox.schema.identity.AppMemberKey.MembershipKey getKey() {
       return key_ == null ? io.bloombox.schema.identity.AppMemberKey.MembershipKey.getDefaultInstance() : key_;
@@ -11586,13 +13965,14 @@ public final class AppUser {
      * Key representing this user's membership at this location.
      * </pre>
      *
-     * <code>.bloombox.schema.identity.MembershipKey key = 6 [(.gen_bq_schema.description) = "Membership key representing this user&#92;'s membership at this location."];</code>
+     * <code>.bloombox.identity.MembershipKey key = 6 [(.gen_bq_schema.description) = "Membership key representing this user&#92;'s membership at this location."];</code>
      */
     public io.bloombox.schema.identity.AppMemberKey.MembershipKeyOrBuilder getKeyOrBuilder() {
       return getKey();
     }
 
     private byte memoizedIsInitialized = -1;
+    @java.lang.Override
     public final boolean isInitialized() {
       byte isInitialized = memoizedIsInitialized;
       if (isInitialized == 1) return true;
@@ -11602,6 +13982,7 @@ public final class AppUser {
       return true;
     }
 
+    @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
       if (referralSource_ != io.bloombox.schema.identity.AppUser.EnrollmentSource.UNSPECIFIED.getNumber()) {
@@ -11625,6 +14006,7 @@ public final class AppUser {
       unknownFields.writeTo(output);
     }
 
+    @java.lang.Override
     public int getSerializedSize() {
       int size = memoizedSize;
       if (size != -1) return size;
@@ -11792,6 +14174,7 @@ public final class AppUser {
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
 
+    @java.lang.Override
     public Builder newBuilderForType() { return newBuilder(); }
     public static Builder newBuilder() {
       return DEFAULT_INSTANCE.toBuilder();
@@ -11799,6 +14182,7 @@ public final class AppUser {
     public static Builder newBuilder(io.bloombox.schema.identity.AppUser.ConsumerMembership prototype) {
       return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
     }
+    @java.lang.Override
     public Builder toBuilder() {
       return this == DEFAULT_INSTANCE
           ? new Builder() : new Builder().mergeFrom(this);
@@ -11815,20 +14199,21 @@ public final class AppUser {
      * Represents a consumer's membership at a particular dispensary.
      * </pre>
      *
-     * Protobuf type {@code bloombox.schema.identity.ConsumerMembership}
+     * Protobuf type {@code bloombox.identity.ConsumerMembership}
      */
     public static final class Builder extends
         com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:bloombox.schema.identity.ConsumerMembership)
+        // @@protoc_insertion_point(builder_implements:bloombox.identity.ConsumerMembership)
         io.bloombox.schema.identity.AppUser.ConsumerMembershipOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return io.bloombox.schema.identity.AppUser.internal_static_bloombox_schema_identity_ConsumerMembership_descriptor;
+        return io.bloombox.schema.identity.AppUser.internal_static_bloombox_identity_ConsumerMembership_descriptor;
       }
 
+      @java.lang.Override
       protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return io.bloombox.schema.identity.AppUser.internal_static_bloombox_schema_identity_ConsumerMembership_fieldAccessorTable
+        return io.bloombox.schema.identity.AppUser.internal_static_bloombox_identity_ConsumerMembership_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
                 io.bloombox.schema.identity.AppUser.ConsumerMembership.class, io.bloombox.schema.identity.AppUser.ConsumerMembership.Builder.class);
       }
@@ -11848,6 +14233,7 @@ public final class AppUser {
                 .alwaysUseFieldBuilders) {
         }
       }
+      @java.lang.Override
       public Builder clear() {
         super.clear();
         referralSource_ = 0;
@@ -11877,15 +14263,18 @@ public final class AppUser {
         return this;
       }
 
+      @java.lang.Override
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return io.bloombox.schema.identity.AppUser.internal_static_bloombox_schema_identity_ConsumerMembership_descriptor;
+        return io.bloombox.schema.identity.AppUser.internal_static_bloombox_identity_ConsumerMembership_descriptor;
       }
 
+      @java.lang.Override
       public io.bloombox.schema.identity.AppUser.ConsumerMembership getDefaultInstanceForType() {
         return io.bloombox.schema.identity.AppUser.ConsumerMembership.getDefaultInstance();
       }
 
+      @java.lang.Override
       public io.bloombox.schema.identity.AppUser.ConsumerMembership build() {
         io.bloombox.schema.identity.AppUser.ConsumerMembership result = buildPartial();
         if (!result.isInitialized()) {
@@ -11894,6 +14283,7 @@ public final class AppUser {
         return result;
       }
 
+      @java.lang.Override
       public io.bloombox.schema.identity.AppUser.ConsumerMembership buildPartial() {
         io.bloombox.schema.identity.AppUser.ConsumerMembership result = new io.bloombox.schema.identity.AppUser.ConsumerMembership(this);
         result.referralSource_ = referralSource_;
@@ -11918,32 +14308,39 @@ public final class AppUser {
         return result;
       }
 
+      @java.lang.Override
       public Builder clone() {
         return (Builder) super.clone();
       }
+      @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
         return (Builder) super.setField(field, value);
       }
+      @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
         return (Builder) super.clearField(field);
       }
+      @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
         return (Builder) super.clearOneof(oneof);
       }
+      @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
         return (Builder) super.setRepeatedField(field, index, value);
       }
+      @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
         return (Builder) super.addRepeatedField(field, value);
       }
+      @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
         if (other instanceof io.bloombox.schema.identity.AppUser.ConsumerMembership) {
           return mergeFrom((io.bloombox.schema.identity.AppUser.ConsumerMembership)other);
@@ -11980,10 +14377,12 @@ public final class AppUser {
         return this;
       }
 
+      @java.lang.Override
       public final boolean isInitialized() {
         return true;
       }
 
+      @java.lang.Override
       public Builder mergeFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -12008,7 +14407,7 @@ public final class AppUser {
        * Referral source for this enrollment.
        * </pre>
        *
-       * <code>.bloombox.schema.identity.EnrollmentSource referral_source = 1 [(.gen_bq_schema.description) = "Referral source for this enrollment."];</code>
+       * <code>.bloombox.identity.EnrollmentSource referral_source = 1 [(.gen_bq_schema.description) = "Referral source for this enrollment."];</code>
        */
       public int getReferralSourceValue() {
         return referralSource_;
@@ -12018,7 +14417,7 @@ public final class AppUser {
        * Referral source for this enrollment.
        * </pre>
        *
-       * <code>.bloombox.schema.identity.EnrollmentSource referral_source = 1 [(.gen_bq_schema.description) = "Referral source for this enrollment."];</code>
+       * <code>.bloombox.identity.EnrollmentSource referral_source = 1 [(.gen_bq_schema.description) = "Referral source for this enrollment."];</code>
        */
       public Builder setReferralSourceValue(int value) {
         referralSource_ = value;
@@ -12030,9 +14429,10 @@ public final class AppUser {
        * Referral source for this enrollment.
        * </pre>
        *
-       * <code>.bloombox.schema.identity.EnrollmentSource referral_source = 1 [(.gen_bq_schema.description) = "Referral source for this enrollment."];</code>
+       * <code>.bloombox.identity.EnrollmentSource referral_source = 1 [(.gen_bq_schema.description) = "Referral source for this enrollment."];</code>
        */
       public io.bloombox.schema.identity.AppUser.EnrollmentSource getReferralSource() {
+        @SuppressWarnings("deprecation")
         io.bloombox.schema.identity.AppUser.EnrollmentSource result = io.bloombox.schema.identity.AppUser.EnrollmentSource.valueOf(referralSource_);
         return result == null ? io.bloombox.schema.identity.AppUser.EnrollmentSource.UNRECOGNIZED : result;
       }
@@ -12041,7 +14441,7 @@ public final class AppUser {
        * Referral source for this enrollment.
        * </pre>
        *
-       * <code>.bloombox.schema.identity.EnrollmentSource referral_source = 1 [(.gen_bq_schema.description) = "Referral source for this enrollment."];</code>
+       * <code>.bloombox.identity.EnrollmentSource referral_source = 1 [(.gen_bq_schema.description) = "Referral source for this enrollment."];</code>
        */
       public Builder setReferralSource(io.bloombox.schema.identity.AppUser.EnrollmentSource value) {
         if (value == null) {
@@ -12057,7 +14457,7 @@ public final class AppUser {
        * Referral source for this enrollment.
        * </pre>
        *
-       * <code>.bloombox.schema.identity.EnrollmentSource referral_source = 1 [(.gen_bq_schema.description) = "Referral source for this enrollment."];</code>
+       * <code>.bloombox.identity.EnrollmentSource referral_source = 1 [(.gen_bq_schema.description) = "Referral source for this enrollment."];</code>
        */
       public Builder clearReferralSource() {
         
@@ -12558,7 +14958,7 @@ public final class AppUser {
        * Key representing this user's membership at this location.
        * </pre>
        *
-       * <code>.bloombox.schema.identity.MembershipKey key = 6 [(.gen_bq_schema.description) = "Membership key representing this user&#92;'s membership at this location."];</code>
+       * <code>.bloombox.identity.MembershipKey key = 6 [(.gen_bq_schema.description) = "Membership key representing this user&#92;'s membership at this location."];</code>
        */
       public boolean hasKey() {
         return keyBuilder_ != null || key_ != null;
@@ -12568,7 +14968,7 @@ public final class AppUser {
        * Key representing this user's membership at this location.
        * </pre>
        *
-       * <code>.bloombox.schema.identity.MembershipKey key = 6 [(.gen_bq_schema.description) = "Membership key representing this user&#92;'s membership at this location."];</code>
+       * <code>.bloombox.identity.MembershipKey key = 6 [(.gen_bq_schema.description) = "Membership key representing this user&#92;'s membership at this location."];</code>
        */
       public io.bloombox.schema.identity.AppMemberKey.MembershipKey getKey() {
         if (keyBuilder_ == null) {
@@ -12582,7 +14982,7 @@ public final class AppUser {
        * Key representing this user's membership at this location.
        * </pre>
        *
-       * <code>.bloombox.schema.identity.MembershipKey key = 6 [(.gen_bq_schema.description) = "Membership key representing this user&#92;'s membership at this location."];</code>
+       * <code>.bloombox.identity.MembershipKey key = 6 [(.gen_bq_schema.description) = "Membership key representing this user&#92;'s membership at this location."];</code>
        */
       public Builder setKey(io.bloombox.schema.identity.AppMemberKey.MembershipKey value) {
         if (keyBuilder_ == null) {
@@ -12602,7 +15002,7 @@ public final class AppUser {
        * Key representing this user's membership at this location.
        * </pre>
        *
-       * <code>.bloombox.schema.identity.MembershipKey key = 6 [(.gen_bq_schema.description) = "Membership key representing this user&#92;'s membership at this location."];</code>
+       * <code>.bloombox.identity.MembershipKey key = 6 [(.gen_bq_schema.description) = "Membership key representing this user&#92;'s membership at this location."];</code>
        */
       public Builder setKey(
           io.bloombox.schema.identity.AppMemberKey.MembershipKey.Builder builderForValue) {
@@ -12620,7 +15020,7 @@ public final class AppUser {
        * Key representing this user's membership at this location.
        * </pre>
        *
-       * <code>.bloombox.schema.identity.MembershipKey key = 6 [(.gen_bq_schema.description) = "Membership key representing this user&#92;'s membership at this location."];</code>
+       * <code>.bloombox.identity.MembershipKey key = 6 [(.gen_bq_schema.description) = "Membership key representing this user&#92;'s membership at this location."];</code>
        */
       public Builder mergeKey(io.bloombox.schema.identity.AppMemberKey.MembershipKey value) {
         if (keyBuilder_ == null) {
@@ -12642,7 +15042,7 @@ public final class AppUser {
        * Key representing this user's membership at this location.
        * </pre>
        *
-       * <code>.bloombox.schema.identity.MembershipKey key = 6 [(.gen_bq_schema.description) = "Membership key representing this user&#92;'s membership at this location."];</code>
+       * <code>.bloombox.identity.MembershipKey key = 6 [(.gen_bq_schema.description) = "Membership key representing this user&#92;'s membership at this location."];</code>
        */
       public Builder clearKey() {
         if (keyBuilder_ == null) {
@@ -12660,7 +15060,7 @@ public final class AppUser {
        * Key representing this user's membership at this location.
        * </pre>
        *
-       * <code>.bloombox.schema.identity.MembershipKey key = 6 [(.gen_bq_schema.description) = "Membership key representing this user&#92;'s membership at this location."];</code>
+       * <code>.bloombox.identity.MembershipKey key = 6 [(.gen_bq_schema.description) = "Membership key representing this user&#92;'s membership at this location."];</code>
        */
       public io.bloombox.schema.identity.AppMemberKey.MembershipKey.Builder getKeyBuilder() {
         
@@ -12672,7 +15072,7 @@ public final class AppUser {
        * Key representing this user's membership at this location.
        * </pre>
        *
-       * <code>.bloombox.schema.identity.MembershipKey key = 6 [(.gen_bq_schema.description) = "Membership key representing this user&#92;'s membership at this location."];</code>
+       * <code>.bloombox.identity.MembershipKey key = 6 [(.gen_bq_schema.description) = "Membership key representing this user&#92;'s membership at this location."];</code>
        */
       public io.bloombox.schema.identity.AppMemberKey.MembershipKeyOrBuilder getKeyOrBuilder() {
         if (keyBuilder_ != null) {
@@ -12687,7 +15087,7 @@ public final class AppUser {
        * Key representing this user's membership at this location.
        * </pre>
        *
-       * <code>.bloombox.schema.identity.MembershipKey key = 6 [(.gen_bq_schema.description) = "Membership key representing this user&#92;'s membership at this location."];</code>
+       * <code>.bloombox.identity.MembershipKey key = 6 [(.gen_bq_schema.description) = "Membership key representing this user&#92;'s membership at this location."];</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
           io.bloombox.schema.identity.AppMemberKey.MembershipKey, io.bloombox.schema.identity.AppMemberKey.MembershipKey.Builder, io.bloombox.schema.identity.AppMemberKey.MembershipKeyOrBuilder> 
@@ -12702,21 +15102,23 @@ public final class AppUser {
         }
         return keyBuilder_;
       }
+      @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
         return super.setUnknownFieldsProto3(unknownFields);
       }
 
+      @java.lang.Override
       public final Builder mergeUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
         return super.mergeUnknownFields(unknownFields);
       }
 
 
-      // @@protoc_insertion_point(builder_scope:bloombox.schema.identity.ConsumerMembership)
+      // @@protoc_insertion_point(builder_scope:bloombox.identity.ConsumerMembership)
     }
 
-    // @@protoc_insertion_point(class_scope:bloombox.schema.identity.ConsumerMembership)
+    // @@protoc_insertion_point(class_scope:bloombox.identity.ConsumerMembership)
     private static final io.bloombox.schema.identity.AppUser.ConsumerMembership DEFAULT_INSTANCE;
     static {
       DEFAULT_INSTANCE = new io.bloombox.schema.identity.AppUser.ConsumerMembership();
@@ -12728,6 +15130,7 @@ public final class AppUser {
 
     private static final com.google.protobuf.Parser<ConsumerMembership>
         PARSER = new com.google.protobuf.AbstractParser<ConsumerMembership>() {
+      @java.lang.Override
       public ConsumerMembership parsePartialFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -12745,6 +15148,7 @@ public final class AppUser {
       return PARSER;
     }
 
+    @java.lang.Override
     public io.bloombox.schema.identity.AppUser.ConsumerMembership getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
@@ -12752,7 +15156,7 @@ public final class AppUser {
   }
 
   public interface IndustryProfileOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:bloombox.schema.identity.IndustryProfile)
+      // @@protoc_insertion_point(interface_extends:bloombox.identity.IndustryProfile)
       com.google.protobuf.MessageOrBuilder {
 
     /**
@@ -12769,7 +15173,7 @@ public final class AppUser {
      * Map of partner accesses levels to partner codes.
      * </pre>
      *
-     * <code>map&lt;string, .bloombox.schema.security.access.AccessPolicy&gt; partners = 2 [(.gen_bq_schema.description) = "Map of partner accesses levels to partner and location codes."];</code>
+     * <code>map&lt;string, .bloombox.security.access.AccessPolicy&gt; partners = 2 [(.gen_bq_schema.description) = "Map of partner accesses levels to partner and location codes."];</code>
      */
     int getPartnersCount();
     /**
@@ -12777,7 +15181,7 @@ public final class AppUser {
      * Map of partner accesses levels to partner codes.
      * </pre>
      *
-     * <code>map&lt;string, .bloombox.schema.security.access.AccessPolicy&gt; partners = 2 [(.gen_bq_schema.description) = "Map of partner accesses levels to partner and location codes."];</code>
+     * <code>map&lt;string, .bloombox.security.access.AccessPolicy&gt; partners = 2 [(.gen_bq_schema.description) = "Map of partner accesses levels to partner and location codes."];</code>
      */
     boolean containsPartners(
         java.lang.String key);
@@ -12792,7 +15196,7 @@ public final class AppUser {
      * Map of partner accesses levels to partner codes.
      * </pre>
      *
-     * <code>map&lt;string, .bloombox.schema.security.access.AccessPolicy&gt; partners = 2 [(.gen_bq_schema.description) = "Map of partner accesses levels to partner and location codes."];</code>
+     * <code>map&lt;string, .bloombox.security.access.AccessPolicy&gt; partners = 2 [(.gen_bq_schema.description) = "Map of partner accesses levels to partner and location codes."];</code>
      */
     java.util.Map<java.lang.String, io.bloombox.schema.security.access.PartnerPermissions.AccessPolicy>
     getPartnersMap();
@@ -12801,7 +15205,7 @@ public final class AppUser {
      * Map of partner accesses levels to partner codes.
      * </pre>
      *
-     * <code>map&lt;string, .bloombox.schema.security.access.AccessPolicy&gt; partners = 2 [(.gen_bq_schema.description) = "Map of partner accesses levels to partner and location codes."];</code>
+     * <code>map&lt;string, .bloombox.security.access.AccessPolicy&gt; partners = 2 [(.gen_bq_schema.description) = "Map of partner accesses levels to partner and location codes."];</code>
      */
 
     io.bloombox.schema.security.access.PartnerPermissions.AccessPolicy getPartnersOrDefault(
@@ -12812,7 +15216,7 @@ public final class AppUser {
      * Map of partner accesses levels to partner codes.
      * </pre>
      *
-     * <code>map&lt;string, .bloombox.schema.security.access.AccessPolicy&gt; partners = 2 [(.gen_bq_schema.description) = "Map of partner accesses levels to partner and location codes."];</code>
+     * <code>map&lt;string, .bloombox.security.access.AccessPolicy&gt; partners = 2 [(.gen_bq_schema.description) = "Map of partner accesses levels to partner and location codes."];</code>
      */
 
     io.bloombox.schema.security.access.PartnerPermissions.AccessPolicy getPartnersOrThrow(
@@ -12823,7 +15227,7 @@ public final class AppUser {
      * Settings for the user's industry profile.
      * </pre>
      *
-     * <code>.bloombox.schema.identity.industry.StaffSettings settings = 3;</code>
+     * <code>.bloombox.identity.industry.StaffSettings settings = 3;</code>
      */
     boolean hasSettings();
     /**
@@ -12831,7 +15235,7 @@ public final class AppUser {
      * Settings for the user's industry profile.
      * </pre>
      *
-     * <code>.bloombox.schema.identity.industry.StaffSettings settings = 3;</code>
+     * <code>.bloombox.identity.industry.StaffSettings settings = 3;</code>
      */
     io.bloombox.schema.identity.industry.UserStaffSettings.StaffSettings getSettings();
     /**
@@ -12839,7 +15243,7 @@ public final class AppUser {
      * Settings for the user's industry profile.
      * </pre>
      *
-     * <code>.bloombox.schema.identity.industry.StaffSettings settings = 3;</code>
+     * <code>.bloombox.identity.industry.StaffSettings settings = 3;</code>
      */
     io.bloombox.schema.identity.industry.UserStaffSettings.StaffSettingsOrBuilder getSettingsOrBuilder();
   }
@@ -12848,11 +15252,11 @@ public final class AppUser {
    * Profile for a cannabis industry professional of some sort.
    * </pre>
    *
-   * Protobuf type {@code bloombox.schema.identity.IndustryProfile}
+   * Protobuf type {@code bloombox.identity.IndustryProfile}
    */
   public  static final class IndustryProfile extends
       com.google.protobuf.GeneratedMessageV3 implements
-      // @@protoc_insertion_point(message_implements:bloombox.schema.identity.IndustryProfile)
+      // @@protoc_insertion_point(message_implements:bloombox.identity.IndustryProfile)
       IndustryProfileOrBuilder {
   private static final long serialVersionUID = 0L;
     // Use IndustryProfile.newBuilder() to construct.
@@ -12887,13 +15291,6 @@ public final class AppUser {
             case 0:
               done = true;
               break;
-            default: {
-              if (!parseUnknownFieldProto3(
-                  input, unknownFields, extensionRegistry, tag)) {
-                done = true;
-              }
-              break;
-            }
             case 8: {
 
               active_ = input.readBool();
@@ -12925,6 +15322,13 @@ public final class AppUser {
 
               break;
             }
+            default: {
+              if (!parseUnknownFieldProto3(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
           }
         }
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
@@ -12939,10 +15343,11 @@ public final class AppUser {
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return io.bloombox.schema.identity.AppUser.internal_static_bloombox_schema_identity_IndustryProfile_descriptor;
+      return io.bloombox.schema.identity.AppUser.internal_static_bloombox_identity_IndustryProfile_descriptor;
     }
 
     @SuppressWarnings({"rawtypes"})
+    @java.lang.Override
     protected com.google.protobuf.MapField internalGetMapField(
         int number) {
       switch (number) {
@@ -12953,9 +15358,10 @@ public final class AppUser {
               "Invalid map field number: " + number);
       }
     }
+    @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return io.bloombox.schema.identity.AppUser.internal_static_bloombox_schema_identity_IndustryProfile_fieldAccessorTable
+      return io.bloombox.schema.identity.AppUser.internal_static_bloombox_identity_IndustryProfile_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
               io.bloombox.schema.identity.AppUser.IndustryProfile.class, io.bloombox.schema.identity.AppUser.IndustryProfile.Builder.class);
     }
@@ -12980,7 +15386,7 @@ public final class AppUser {
           java.lang.String, io.bloombox.schema.security.access.PartnerPermissions.AccessPolicy> defaultEntry =
               com.google.protobuf.MapEntry
               .<java.lang.String, io.bloombox.schema.security.access.PartnerPermissions.AccessPolicy>newDefaultInstance(
-                  io.bloombox.schema.identity.AppUser.internal_static_bloombox_schema_identity_IndustryProfile_PartnersEntry_descriptor, 
+                  io.bloombox.schema.identity.AppUser.internal_static_bloombox_identity_IndustryProfile_PartnersEntry_descriptor, 
                   com.google.protobuf.WireFormat.FieldType.STRING,
                   "",
                   com.google.protobuf.WireFormat.FieldType.MESSAGE,
@@ -13005,7 +15411,7 @@ public final class AppUser {
      * Map of partner accesses levels to partner codes.
      * </pre>
      *
-     * <code>map&lt;string, .bloombox.schema.security.access.AccessPolicy&gt; partners = 2 [(.gen_bq_schema.description) = "Map of partner accesses levels to partner and location codes."];</code>
+     * <code>map&lt;string, .bloombox.security.access.AccessPolicy&gt; partners = 2 [(.gen_bq_schema.description) = "Map of partner accesses levels to partner and location codes."];</code>
      */
 
     public boolean containsPartners(
@@ -13025,7 +15431,7 @@ public final class AppUser {
      * Map of partner accesses levels to partner codes.
      * </pre>
      *
-     * <code>map&lt;string, .bloombox.schema.security.access.AccessPolicy&gt; partners = 2 [(.gen_bq_schema.description) = "Map of partner accesses levels to partner and location codes."];</code>
+     * <code>map&lt;string, .bloombox.security.access.AccessPolicy&gt; partners = 2 [(.gen_bq_schema.description) = "Map of partner accesses levels to partner and location codes."];</code>
      */
 
     public java.util.Map<java.lang.String, io.bloombox.schema.security.access.PartnerPermissions.AccessPolicy> getPartnersMap() {
@@ -13036,7 +15442,7 @@ public final class AppUser {
      * Map of partner accesses levels to partner codes.
      * </pre>
      *
-     * <code>map&lt;string, .bloombox.schema.security.access.AccessPolicy&gt; partners = 2 [(.gen_bq_schema.description) = "Map of partner accesses levels to partner and location codes."];</code>
+     * <code>map&lt;string, .bloombox.security.access.AccessPolicy&gt; partners = 2 [(.gen_bq_schema.description) = "Map of partner accesses levels to partner and location codes."];</code>
      */
 
     public io.bloombox.schema.security.access.PartnerPermissions.AccessPolicy getPartnersOrDefault(
@@ -13052,7 +15458,7 @@ public final class AppUser {
      * Map of partner accesses levels to partner codes.
      * </pre>
      *
-     * <code>map&lt;string, .bloombox.schema.security.access.AccessPolicy&gt; partners = 2 [(.gen_bq_schema.description) = "Map of partner accesses levels to partner and location codes."];</code>
+     * <code>map&lt;string, .bloombox.security.access.AccessPolicy&gt; partners = 2 [(.gen_bq_schema.description) = "Map of partner accesses levels to partner and location codes."];</code>
      */
 
     public io.bloombox.schema.security.access.PartnerPermissions.AccessPolicy getPartnersOrThrow(
@@ -13073,7 +15479,7 @@ public final class AppUser {
      * Settings for the user's industry profile.
      * </pre>
      *
-     * <code>.bloombox.schema.identity.industry.StaffSettings settings = 3;</code>
+     * <code>.bloombox.identity.industry.StaffSettings settings = 3;</code>
      */
     public boolean hasSettings() {
       return settings_ != null;
@@ -13083,7 +15489,7 @@ public final class AppUser {
      * Settings for the user's industry profile.
      * </pre>
      *
-     * <code>.bloombox.schema.identity.industry.StaffSettings settings = 3;</code>
+     * <code>.bloombox.identity.industry.StaffSettings settings = 3;</code>
      */
     public io.bloombox.schema.identity.industry.UserStaffSettings.StaffSettings getSettings() {
       return settings_ == null ? io.bloombox.schema.identity.industry.UserStaffSettings.StaffSettings.getDefaultInstance() : settings_;
@@ -13093,13 +15499,14 @@ public final class AppUser {
      * Settings for the user's industry profile.
      * </pre>
      *
-     * <code>.bloombox.schema.identity.industry.StaffSettings settings = 3;</code>
+     * <code>.bloombox.identity.industry.StaffSettings settings = 3;</code>
      */
     public io.bloombox.schema.identity.industry.UserStaffSettings.StaffSettingsOrBuilder getSettingsOrBuilder() {
       return getSettings();
     }
 
     private byte memoizedIsInitialized = -1;
+    @java.lang.Override
     public final boolean isInitialized() {
       byte isInitialized = memoizedIsInitialized;
       if (isInitialized == 1) return true;
@@ -13109,6 +15516,7 @@ public final class AppUser {
       return true;
     }
 
+    @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
       if (active_ != false) {
@@ -13126,6 +15534,7 @@ public final class AppUser {
       unknownFields.writeTo(output);
     }
 
+    @java.lang.Override
     public int getSerializedSize() {
       int size = memoizedSize;
       if (size != -1) return size;
@@ -13271,6 +15680,7 @@ public final class AppUser {
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
 
+    @java.lang.Override
     public Builder newBuilderForType() { return newBuilder(); }
     public static Builder newBuilder() {
       return DEFAULT_INSTANCE.toBuilder();
@@ -13278,6 +15688,7 @@ public final class AppUser {
     public static Builder newBuilder(io.bloombox.schema.identity.AppUser.IndustryProfile prototype) {
       return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
     }
+    @java.lang.Override
     public Builder toBuilder() {
       return this == DEFAULT_INSTANCE
           ? new Builder() : new Builder().mergeFrom(this);
@@ -13294,15 +15705,15 @@ public final class AppUser {
      * Profile for a cannabis industry professional of some sort.
      * </pre>
      *
-     * Protobuf type {@code bloombox.schema.identity.IndustryProfile}
+     * Protobuf type {@code bloombox.identity.IndustryProfile}
      */
     public static final class Builder extends
         com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:bloombox.schema.identity.IndustryProfile)
+        // @@protoc_insertion_point(builder_implements:bloombox.identity.IndustryProfile)
         io.bloombox.schema.identity.AppUser.IndustryProfileOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return io.bloombox.schema.identity.AppUser.internal_static_bloombox_schema_identity_IndustryProfile_descriptor;
+        return io.bloombox.schema.identity.AppUser.internal_static_bloombox_identity_IndustryProfile_descriptor;
       }
 
       @SuppressWarnings({"rawtypes"})
@@ -13327,9 +15738,10 @@ public final class AppUser {
                 "Invalid map field number: " + number);
         }
       }
+      @java.lang.Override
       protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return io.bloombox.schema.identity.AppUser.internal_static_bloombox_schema_identity_IndustryProfile_fieldAccessorTable
+        return io.bloombox.schema.identity.AppUser.internal_static_bloombox_identity_IndustryProfile_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
                 io.bloombox.schema.identity.AppUser.IndustryProfile.class, io.bloombox.schema.identity.AppUser.IndustryProfile.Builder.class);
       }
@@ -13349,6 +15761,7 @@ public final class AppUser {
                 .alwaysUseFieldBuilders) {
         }
       }
+      @java.lang.Override
       public Builder clear() {
         super.clear();
         active_ = false;
@@ -13363,15 +15776,18 @@ public final class AppUser {
         return this;
       }
 
+      @java.lang.Override
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return io.bloombox.schema.identity.AppUser.internal_static_bloombox_schema_identity_IndustryProfile_descriptor;
+        return io.bloombox.schema.identity.AppUser.internal_static_bloombox_identity_IndustryProfile_descriptor;
       }
 
+      @java.lang.Override
       public io.bloombox.schema.identity.AppUser.IndustryProfile getDefaultInstanceForType() {
         return io.bloombox.schema.identity.AppUser.IndustryProfile.getDefaultInstance();
       }
 
+      @java.lang.Override
       public io.bloombox.schema.identity.AppUser.IndustryProfile build() {
         io.bloombox.schema.identity.AppUser.IndustryProfile result = buildPartial();
         if (!result.isInitialized()) {
@@ -13380,6 +15796,7 @@ public final class AppUser {
         return result;
       }
 
+      @java.lang.Override
       public io.bloombox.schema.identity.AppUser.IndustryProfile buildPartial() {
         io.bloombox.schema.identity.AppUser.IndustryProfile result = new io.bloombox.schema.identity.AppUser.IndustryProfile(this);
         int from_bitField0_ = bitField0_;
@@ -13397,32 +15814,39 @@ public final class AppUser {
         return result;
       }
 
+      @java.lang.Override
       public Builder clone() {
         return (Builder) super.clone();
       }
+      @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
         return (Builder) super.setField(field, value);
       }
+      @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
         return (Builder) super.clearField(field);
       }
+      @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
         return (Builder) super.clearOneof(oneof);
       }
+      @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
         return (Builder) super.setRepeatedField(field, index, value);
       }
+      @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
         return (Builder) super.addRepeatedField(field, value);
       }
+      @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
         if (other instanceof io.bloombox.schema.identity.AppUser.IndustryProfile) {
           return mergeFrom((io.bloombox.schema.identity.AppUser.IndustryProfile)other);
@@ -13447,10 +15871,12 @@ public final class AppUser {
         return this;
       }
 
+      @java.lang.Override
       public final boolean isInitialized() {
         return true;
       }
 
+      @java.lang.Override
       public Builder mergeFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -13539,7 +15965,7 @@ public final class AppUser {
        * Map of partner accesses levels to partner codes.
        * </pre>
        *
-       * <code>map&lt;string, .bloombox.schema.security.access.AccessPolicy&gt; partners = 2 [(.gen_bq_schema.description) = "Map of partner accesses levels to partner and location codes."];</code>
+       * <code>map&lt;string, .bloombox.security.access.AccessPolicy&gt; partners = 2 [(.gen_bq_schema.description) = "Map of partner accesses levels to partner and location codes."];</code>
        */
 
       public boolean containsPartners(
@@ -13559,7 +15985,7 @@ public final class AppUser {
        * Map of partner accesses levels to partner codes.
        * </pre>
        *
-       * <code>map&lt;string, .bloombox.schema.security.access.AccessPolicy&gt; partners = 2 [(.gen_bq_schema.description) = "Map of partner accesses levels to partner and location codes."];</code>
+       * <code>map&lt;string, .bloombox.security.access.AccessPolicy&gt; partners = 2 [(.gen_bq_schema.description) = "Map of partner accesses levels to partner and location codes."];</code>
        */
 
       public java.util.Map<java.lang.String, io.bloombox.schema.security.access.PartnerPermissions.AccessPolicy> getPartnersMap() {
@@ -13570,7 +15996,7 @@ public final class AppUser {
        * Map of partner accesses levels to partner codes.
        * </pre>
        *
-       * <code>map&lt;string, .bloombox.schema.security.access.AccessPolicy&gt; partners = 2 [(.gen_bq_schema.description) = "Map of partner accesses levels to partner and location codes."];</code>
+       * <code>map&lt;string, .bloombox.security.access.AccessPolicy&gt; partners = 2 [(.gen_bq_schema.description) = "Map of partner accesses levels to partner and location codes."];</code>
        */
 
       public io.bloombox.schema.security.access.PartnerPermissions.AccessPolicy getPartnersOrDefault(
@@ -13586,7 +16012,7 @@ public final class AppUser {
        * Map of partner accesses levels to partner codes.
        * </pre>
        *
-       * <code>map&lt;string, .bloombox.schema.security.access.AccessPolicy&gt; partners = 2 [(.gen_bq_schema.description) = "Map of partner accesses levels to partner and location codes."];</code>
+       * <code>map&lt;string, .bloombox.security.access.AccessPolicy&gt; partners = 2 [(.gen_bq_schema.description) = "Map of partner accesses levels to partner and location codes."];</code>
        */
 
       public io.bloombox.schema.security.access.PartnerPermissions.AccessPolicy getPartnersOrThrow(
@@ -13610,7 +16036,7 @@ public final class AppUser {
        * Map of partner accesses levels to partner codes.
        * </pre>
        *
-       * <code>map&lt;string, .bloombox.schema.security.access.AccessPolicy&gt; partners = 2 [(.gen_bq_schema.description) = "Map of partner accesses levels to partner and location codes."];</code>
+       * <code>map&lt;string, .bloombox.security.access.AccessPolicy&gt; partners = 2 [(.gen_bq_schema.description) = "Map of partner accesses levels to partner and location codes."];</code>
        */
 
       public Builder removePartners(
@@ -13633,7 +16059,7 @@ public final class AppUser {
        * Map of partner accesses levels to partner codes.
        * </pre>
        *
-       * <code>map&lt;string, .bloombox.schema.security.access.AccessPolicy&gt; partners = 2 [(.gen_bq_schema.description) = "Map of partner accesses levels to partner and location codes."];</code>
+       * <code>map&lt;string, .bloombox.security.access.AccessPolicy&gt; partners = 2 [(.gen_bq_schema.description) = "Map of partner accesses levels to partner and location codes."];</code>
        */
       public Builder putPartners(
           java.lang.String key,
@@ -13649,7 +16075,7 @@ public final class AppUser {
        * Map of partner accesses levels to partner codes.
        * </pre>
        *
-       * <code>map&lt;string, .bloombox.schema.security.access.AccessPolicy&gt; partners = 2 [(.gen_bq_schema.description) = "Map of partner accesses levels to partner and location codes."];</code>
+       * <code>map&lt;string, .bloombox.security.access.AccessPolicy&gt; partners = 2 [(.gen_bq_schema.description) = "Map of partner accesses levels to partner and location codes."];</code>
        */
 
       public Builder putAllPartners(
@@ -13667,7 +16093,7 @@ public final class AppUser {
        * Settings for the user's industry profile.
        * </pre>
        *
-       * <code>.bloombox.schema.identity.industry.StaffSettings settings = 3;</code>
+       * <code>.bloombox.identity.industry.StaffSettings settings = 3;</code>
        */
       public boolean hasSettings() {
         return settingsBuilder_ != null || settings_ != null;
@@ -13677,7 +16103,7 @@ public final class AppUser {
        * Settings for the user's industry profile.
        * </pre>
        *
-       * <code>.bloombox.schema.identity.industry.StaffSettings settings = 3;</code>
+       * <code>.bloombox.identity.industry.StaffSettings settings = 3;</code>
        */
       public io.bloombox.schema.identity.industry.UserStaffSettings.StaffSettings getSettings() {
         if (settingsBuilder_ == null) {
@@ -13691,7 +16117,7 @@ public final class AppUser {
        * Settings for the user's industry profile.
        * </pre>
        *
-       * <code>.bloombox.schema.identity.industry.StaffSettings settings = 3;</code>
+       * <code>.bloombox.identity.industry.StaffSettings settings = 3;</code>
        */
       public Builder setSettings(io.bloombox.schema.identity.industry.UserStaffSettings.StaffSettings value) {
         if (settingsBuilder_ == null) {
@@ -13711,7 +16137,7 @@ public final class AppUser {
        * Settings for the user's industry profile.
        * </pre>
        *
-       * <code>.bloombox.schema.identity.industry.StaffSettings settings = 3;</code>
+       * <code>.bloombox.identity.industry.StaffSettings settings = 3;</code>
        */
       public Builder setSettings(
           io.bloombox.schema.identity.industry.UserStaffSettings.StaffSettings.Builder builderForValue) {
@@ -13729,7 +16155,7 @@ public final class AppUser {
        * Settings for the user's industry profile.
        * </pre>
        *
-       * <code>.bloombox.schema.identity.industry.StaffSettings settings = 3;</code>
+       * <code>.bloombox.identity.industry.StaffSettings settings = 3;</code>
        */
       public Builder mergeSettings(io.bloombox.schema.identity.industry.UserStaffSettings.StaffSettings value) {
         if (settingsBuilder_ == null) {
@@ -13751,7 +16177,7 @@ public final class AppUser {
        * Settings for the user's industry profile.
        * </pre>
        *
-       * <code>.bloombox.schema.identity.industry.StaffSettings settings = 3;</code>
+       * <code>.bloombox.identity.industry.StaffSettings settings = 3;</code>
        */
       public Builder clearSettings() {
         if (settingsBuilder_ == null) {
@@ -13769,7 +16195,7 @@ public final class AppUser {
        * Settings for the user's industry profile.
        * </pre>
        *
-       * <code>.bloombox.schema.identity.industry.StaffSettings settings = 3;</code>
+       * <code>.bloombox.identity.industry.StaffSettings settings = 3;</code>
        */
       public io.bloombox.schema.identity.industry.UserStaffSettings.StaffSettings.Builder getSettingsBuilder() {
         
@@ -13781,7 +16207,7 @@ public final class AppUser {
        * Settings for the user's industry profile.
        * </pre>
        *
-       * <code>.bloombox.schema.identity.industry.StaffSettings settings = 3;</code>
+       * <code>.bloombox.identity.industry.StaffSettings settings = 3;</code>
        */
       public io.bloombox.schema.identity.industry.UserStaffSettings.StaffSettingsOrBuilder getSettingsOrBuilder() {
         if (settingsBuilder_ != null) {
@@ -13796,7 +16222,7 @@ public final class AppUser {
        * Settings for the user's industry profile.
        * </pre>
        *
-       * <code>.bloombox.schema.identity.industry.StaffSettings settings = 3;</code>
+       * <code>.bloombox.identity.industry.StaffSettings settings = 3;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
           io.bloombox.schema.identity.industry.UserStaffSettings.StaffSettings, io.bloombox.schema.identity.industry.UserStaffSettings.StaffSettings.Builder, io.bloombox.schema.identity.industry.UserStaffSettings.StaffSettingsOrBuilder> 
@@ -13811,21 +16237,23 @@ public final class AppUser {
         }
         return settingsBuilder_;
       }
+      @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
         return super.setUnknownFieldsProto3(unknownFields);
       }
 
+      @java.lang.Override
       public final Builder mergeUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
         return super.mergeUnknownFields(unknownFields);
       }
 
 
-      // @@protoc_insertion_point(builder_scope:bloombox.schema.identity.IndustryProfile)
+      // @@protoc_insertion_point(builder_scope:bloombox.identity.IndustryProfile)
     }
 
-    // @@protoc_insertion_point(class_scope:bloombox.schema.identity.IndustryProfile)
+    // @@protoc_insertion_point(class_scope:bloombox.identity.IndustryProfile)
     private static final io.bloombox.schema.identity.AppUser.IndustryProfile DEFAULT_INSTANCE;
     static {
       DEFAULT_INSTANCE = new io.bloombox.schema.identity.AppUser.IndustryProfile();
@@ -13837,6 +16265,7 @@ public final class AppUser {
 
     private static final com.google.protobuf.Parser<IndustryProfile>
         PARSER = new com.google.protobuf.AbstractParser<IndustryProfile>() {
+      @java.lang.Override
       public IndustryProfile parsePartialFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -13854,6 +16283,7 @@ public final class AppUser {
       return PARSER;
     }
 
+    @java.lang.Override
     public io.bloombox.schema.identity.AppUser.IndustryProfile getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
@@ -13861,60 +16291,65 @@ public final class AppUser {
   }
 
   private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_bloombox_schema_identity_User_descriptor;
+    internal_static_bloombox_identity_User_descriptor;
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_bloombox_schema_identity_User_fieldAccessorTable;
+      internal_static_bloombox_identity_User_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_bloombox_schema_identity_User_IdentitiesEntry_descriptor;
+    internal_static_bloombox_identity_User_IdentitiesEntry_descriptor;
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_bloombox_schema_identity_User_IdentitiesEntry_fieldAccessorTable;
+      internal_static_bloombox_identity_User_IdentitiesEntry_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_bloombox_schema_identity_User_MediaEntry_descriptor;
+    internal_static_bloombox_identity_User_MediaEntry_descriptor;
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_bloombox_schema_identity_User_MediaEntry_fieldAccessorTable;
+      internal_static_bloombox_identity_User_MediaEntry_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_bloombox_schema_identity_UserFlags_descriptor;
+    internal_static_bloombox_identity_UserFlags_descriptor;
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_bloombox_schema_identity_UserFlags_fieldAccessorTable;
+      internal_static_bloombox_identity_UserFlags_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_bloombox_schema_identity_UserIdentity_descriptor;
+    internal_static_bloombox_identity_UserIdentity_descriptor;
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_bloombox_schema_identity_UserIdentity_fieldAccessorTable;
+      internal_static_bloombox_identity_UserIdentity_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_bloombox_schema_identity_ConsumerProfile_descriptor;
+    internal_static_bloombox_identity_ConsumerProfile_descriptor;
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_bloombox_schema_identity_ConsumerProfile_fieldAccessorTable;
+      internal_static_bloombox_identity_ConsumerProfile_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_bloombox_schema_identity_MenuPreferences_descriptor;
+    internal_static_bloombox_identity_MenuPreferences_descriptor;
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_bloombox_schema_identity_MenuPreferences_fieldAccessorTable;
+      internal_static_bloombox_identity_MenuPreferences_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_bloombox_schema_identity_ConsumerPreferences_descriptor;
+    internal_static_bloombox_identity_ProductTypePreference_descriptor;
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_bloombox_schema_identity_ConsumerPreferences_fieldAccessorTable;
+      internal_static_bloombox_identity_ProductTypePreference_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_bloombox_schema_identity_ConsumerMembership_descriptor;
+    internal_static_bloombox_identity_ConsumerPreferences_descriptor;
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_bloombox_schema_identity_ConsumerMembership_fieldAccessorTable;
+      internal_static_bloombox_identity_ConsumerPreferences_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_bloombox_schema_identity_IndustryProfile_descriptor;
+    internal_static_bloombox_identity_ConsumerMembership_descriptor;
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_bloombox_schema_identity_IndustryProfile_fieldAccessorTable;
+      internal_static_bloombox_identity_ConsumerMembership_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_bloombox_schema_identity_IndustryProfile_PartnersEntry_descriptor;
+    internal_static_bloombox_identity_IndustryProfile_descriptor;
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_bloombox_schema_identity_IndustryProfile_PartnersEntry_fieldAccessorTable;
+      internal_static_bloombox_identity_IndustryProfile_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_bloombox_identity_IndustryProfile_PartnersEntry_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_bloombox_identity_IndustryProfile_PartnersEntry_fieldAccessorTable;
 
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
@@ -13924,146 +16359,159 @@ public final class AppUser {
       descriptor;
   static {
     java.lang.String[] descriptorData = {
-      "\n\023identity/User.proto\022\030bloombox.schema.i" +
-      "dentity\032\016bq_field.proto\032\024core/Datamodel." +
-      "proto\032\025media/MediaItem.proto\032\026temporal/I" +
-      "nstant.proto\032\023person/Person.proto\032\021ident" +
-      "ity/ID.proto\032 identity/ids/UserDoctorRec" +
-      ".proto\032\034identity/MembershipKey.proto\032%id" +
-      "entity/industry/StaffSettings.proto\032\033pro" +
-      "ducts/menu/Section.proto\032\022structs/Grow.p" +
-      "roto\032\025structs/Species.proto\032$structs/lab" +
-      "testing/TestResults.proto\032(security/acce" +
-      "ss/PartnerPermissions.proto\"\223\n\n\004User\022-\n\003" +
-      "uid\030\001 \001(\tB \302\265\003\002\010\002\212@\027Unique ID for the us" +
-      "er.\022Y\n\005flags\030\002 \001(\0132#.bloombox.schema.ide" +
-      "ntity.UserFlagsB%\302\265\003\002\010\004\212@\034Boolean flags " +
-      "for this user.\022Z\n\006person\030\003 \001(\0132\033.opencan" +
-      "nabis.person.PersonB-\212@*Person\'s informa" +
-      "tion that backs this user.\022z\n\016identifica" +
-      "tion\030\024 \003(\0132\034.bloombox.schema.identity.ID" +
-      "BD\200@\001\212@(Government ID associated with th" +
-      "is user.\322\265\003\022\010\001\032\016identification\022\217\001\n\ndocto" +
-      "r_rec\030\025 \003(\0132+.bloombox.schema.identity.i" +
-      "ds.UserDoctorRecBN\200@\001\212@3Doctor\'s recomme" +
-      "ndations associated with this user.\322\265\003\021\010" +
-      "\001\032\rprescriptions\022m\n\004seen\030\036 \001(\0132\036.opencan" +
-      "nabis.temporal.InstantB?\212@<Last time thi" +
-      "s user was seen, via auth/login/enrollme" +
-      "nt etc.\022\\\n\006signup\030\037 \001(\0132\036.opencannabis.t" +
-      "emporal.InstantB,\212@)Timestamp for when t" +
-      "his user was created.\022o\n\nidentities\030( \003(" +
-      "\0132..bloombox.schema.identity.User.Identi" +
-      "tiesEntryB+\200@\001\212@%Identities associated w" +
-      "ith this user.\022`\n\005media\030) \003(\0132).bloombox" +
-      ".schema.identity.User.MediaEntryB&\200@\001\212@ " +
-      "Media associated with this user.\022_\n\010cons" +
-      "umer\030d \001(\0132).bloombox.schema.identity.Co" +
-      "nsumerProfileB\"\212@\037Consumer profile for t" +
-      "his user.\022_\n\010industry\030e \001(\0132).bloombox.s" +
-      "chema.identity.IndustryProfileB\"\212@\037Indus" +
-      "try profile for this user.\032Y\n\017Identities" +
-      "Entry\022\013\n\003key\030\001 \001(\t\0225\n\005value\030\002 \001(\0132&.bloo" +
-      "mbox.schema.identity.UserIdentity:\0028\001\032K\n" +
-      "\nMediaEntry\022\013\n\003key\030\001 \001(\t\022,\n\005value\030\002 \001(\0132" +
-      "\035.opencannabis.media.MediaItem:\0028\001:\r\202\367\002\t" +
-      "\010\002\022\005users\"\367\002\n\tUserFlags\022D\n\tvalidated\030\001 \001" +
-      "(\010B1\212@.Indicates that the account has be" +
-      "en validated.\022H\n\tsuspended\030\002 \001(\010B5\212@2Ind" +
-      "icates that the account is currently sus" +
-      "pended.\022B\n\005admin\030\003 \001(\010B3\212@0Indicates tha" +
-      "t the account has admin privileges.\022G\n\004b" +
-      "eta\030\004 \001(\010B9\212@6Indicates that the account" +
-      " has access to beta systems.\022M\n\007sandbox\030" +
-      "\005 \001(\010B<\212@9Indicates that the account has" +
-      " access to sandbox systems.\"\345\002\n\014UserIden" +
-      "tity\022l\n\010provider\030\001 \001(\0162*.bloombox.schema" +
-      ".identity.IdentityProviderB.\212@+Provider " +
-      "for this external/foreign account.\022L\n\002id" +
-      "\030\002 \001(\tB@\302\265\003\002\010\002\212@7Unique ID for this acco" +
-      "unt with the specified provider.\022\204\001\n\004see" +
-      "n\030\003 \001(\0132\036.opencannabis.temporal.InstantB" +
-      "V\212@STimestamp for when this identity was" +
-      " last user to authenticate the underlyin" +
-      "g user.:\022\202\367\002\016\010\002\022\nidentities\"\220\006\n\017Consumer" +
-      "Profile\0220\n\006active\030\001 \001(\010B \212@\035Profile acti" +
-      "ve/inactive flag.\022N\n\025favorite_dispensari" +
-      "es\030\002 \003(\tB/\212@,Enumerates favorite dispens" +
-      "aries for a user.\022~\n\021enrollment_source\030\003" +
-      " \001(\0162*.bloombox.schema.identity.Enrollme" +
-      "ntSourceB7\212@4Specifies enrollment source" +
-      " attribution information.\022a\n\022enrollment_" +
-      "channel\030\004 \001(\tBE\212@BArbitrary string for t" +
-      "he channel through which this user enrol" +
-      "led.\022r\n\013preferences\030\005 \001(\0132-.bloombox.sch" +
-      "ema.identity.ConsumerPreferencesB.\212@+Pre" +
-      "ferences attached to a consumer account." +
-      "\022n\n\004type\030\006 \001(\0162&.bloombox.schema.identit" +
-      "y.ConsumerTypeB8\212@5Specifies the primary" +
-      " consumer type for this account.\022x\n\017refe" +
-      "rral_source\030\007 \001(\0162(.bloombox.schema.iden" +
-      "tity.ReferralSourceB5\212@2Specifies referr" +
-      "al source attribution information.\022:\n\017re" +
-      "ferral_detail\030\010 \001(\tB!\212@\036Specifies the re" +
-      "ferrer\'s name.\"\250\005\n\017MenuPreferences\022j\n\007se" +
-      "ction\030\001 \003(\0162+.opencannabis.products.menu" +
-      ".section.SectionB,\212@)Preferred menu sect" +
-      "ions or product types.\022h\n\007feeling\030\002 \003(\0162" +
-      "(.opencannabis.structs.labtesting.Feelin" +
-      "gB-\212@*Preferred feelings or experiential" +
-      " states.\022[\n\ntaste_note\030\003 \003(\0162*.opencanna" +
-      "bis.structs.labtesting.TasteNoteB\033\212@\030Pre" +
-      "ferred tasting notes.\022d\n\017desired_potency" +
-      "\030\004 \001(\01620.opencannabis.structs.labtesting" +
-      ".PotencyEstimateB\031\212@\026Desired potency lev" +
-      "el.\022k\n\021cannabinoid_ratio\030\005 \001(\01621.opencan" +
-      "nabis.structs.labtesting.CannabinoidRati" +
-      "oB\035\212@\032Desired cannabinoid ratio.\022K\n\007spec" +
-      "ies\030\006 \003(\0162\035.opencannabis.structs.Species" +
-      "B\033\212@\030Preferred species types.\022B\n\004grow\030\007 " +
-      "\003(\0162\032.opencannabis.structs.GrowB\030\212@\025Pref" +
-      "erred grow types.\"\204\001\n\023ConsumerPreference" +
-      "s\022m\n\004menu\030\n \001(\0132).bloombox.schema.identi" +
-      "ty.MenuPreferencesB4\212@1Preferred menu se" +
-      "ctions/product types, and so on.\"\212\005\n\022Con" +
-      "sumerMembership\022l\n\017referral_source\030\001 \001(\016" +
-      "2*.bloombox.schema.identity.EnrollmentSo" +
-      "urceB\'\212@$Referral source for this enroll" +
-      "ment.\022^\n\020referral_channel\030\002 \001(\tBD\212@ARefe" +
-      "rral channel token - an artbirary, end-s" +
-      "ystem provided value.\022b\n\014signed_up_at\030\003 " +
-      "\001(\0132\036.opencannabis.temporal.InstantB,\212@)" +
-      "Timestamp for when this profile enrolled" +
-      ".\022_\n\004seen\030\004 \001(\0132\036.opencannabis.temporal." +
-      "InstantB1\212@.Timestamp for when this prof" +
-      "ile was last seen.\022b\n\nforeign_id\030\005 \001(\tBN" +
-      "\212@KForeign ID for this membership, in th" +
-      "e partner-colocated membership system.\022}" +
-      "\n\003key\030\006 \001(\0132\'.bloombox.schema.identity.M" +
-      "embershipKeyBG\212@DMembership key represen" +
-      "ting this user\'s membership at this loca" +
-      "tion.\"\367\002\n\017IndustryProfile\0222\n\006active\030\001 \001(" +
-      "\010B\"\212@\037Profile inactive/active status.\022\213\001" +
-      "\n\010partners\030\002 \003(\01327.bloombox.schema.ident" +
-      "ity.IndustryProfile.PartnersEntryB@\212@=Ma" +
-      "p of partner accesses levels to partner " +
-      "and location codes.\022B\n\010settings\030\003 \001(\01320." +
-      "bloombox.schema.identity.industry.StaffS" +
-      "ettings\032^\n\rPartnersEntry\022\013\n\003key\030\001 \001(\t\022<\n" +
-      "\005value\030\002 \001(\0132-.bloombox.schema.security." +
-      "access.AccessPolicy:\0028\001*A\n\rUserMediaType" +
-      "\022\013\n\007PICTURE\020\000\022\023\n\017DRIVERS_LICENSE\020\001\022\016\n\nDO" +
-      "CTOR_REC\020\002*O\n\020IdentityProvider\022\t\n\005EMAIL\020" +
-      "\000\022\n\n\006GOOGLE\020\001\022\014\n\010FACEBOOK\020\002\022\013\n\007TWITTER\020\003" +
-      "\022\t\n\005PHONE\020\004*l\n\020EnrollmentSource\022\017\n\013UNSPE" +
-      "CIFIED\020\000\022\n\n\006ONLINE\020\001\022\020\n\014INTERNAL_APP\020\002\022\017" +
-      "\n\013PARTNER_APP\020\003\022\014\n\010IN_STORE\020\004\022\n\n\006IMPORT\020" +
-      "\005*U\n\016ReferralSource\022\013\n\007UNKNOWN\020\000\022\013\n\007OUTD" +
-      "OOR\020\001\022\013\n\007DIGITAL\020\002\022\020\n\014SOCIAL_MEDIA\020\003\022\n\n\006" +
-      "FRIEND\020\004*Q\n\014ConsumerType\022\017\n\013UNVALIDATED\020" +
-      "\000\022\020\n\014RECREATIONAL\020\001\022\r\n\tADULT_USE\020\001\022\013\n\007ME" +
-      "DICAL\020\002\032\002\020\001B0\n\033io.bloombox.schema.identi" +
-      "tyB\007AppUserH\001P\000\242\002\003BBSb\006proto3"
+      "\n\023identity/User.proto\022\021bloombox.identity" +
+      "\032\016bq_field.proto\032\024core/Datamodel.proto\032\026" +
+      "base/ProductKind.proto\032\025media/MediaItem." +
+      "proto\032\026temporal/Instant.proto\032\'analytics" +
+      "/consumption/Biodelivery.proto\032\023person/P" +
+      "erson.proto\032\021identity/ID.proto\032 identity" +
+      "/ids/UserDoctorRec.proto\032\034identity/Membe" +
+      "rshipKey.proto\032%identity/industry/StaffS" +
+      "ettings.proto\032\031products/Apothecary.proto" +
+      "\032\030products/Cartridge.proto\032\026products/Ext" +
+      "ract.proto\032\025products/Edible.proto\032\024produ" +
+      "cts/Plant.proto\032\033products/menu/Section.p" +
+      "roto\032\022structs/Grow.proto\032\025structs/Specie" +
+      "s.proto\032$structs/labtesting/TestResults." +
+      "proto\032(security/access/PartnerPermission" +
+      "s.proto\"\333\t\n\004User\022-\n\003uid\030\001 \001(\tB \302\265\003\002\010\002\212@\027" +
+      "Unique ID for the user.\022R\n\005flags\030\002 \001(\0132\034" +
+      ".bloombox.identity.UserFlagsB%\302\265\003\002\010\004\212@\034B" +
+      "oolean flags for this user.\022Z\n\006person\030\003 " +
+      "\001(\0132\033.opencannabis.person.PersonB-\212@*Per" +
+      "son\'s information that backs this user.\022" +
+      "s\n\016identification\030\024 \003(\0132\025.bloombox.ident" +
+      "ity.IDBD\200@\001\212@(Government ID associated w" +
+      "ith this user.\322\265\003\022\010\001\032\016identification\022\210\001\n" +
+      "\ndoctor_rec\030\025 \003(\0132$.bloombox.identity.id" +
+      "s.UserDoctorRecBN\200@\001\212@3Doctor\'s recommen" +
+      "dations associated with this user.\322\265\003\021\010\001" +
+      "\032\rprescriptions\022m\n\004seen\030\036 \001(\0132\036.opencann" +
+      "abis.temporal.InstantB?\212@<Last time this" +
+      " user was seen, via auth/login/enrollmen" +
+      "t etc.\022\\\n\006signup\030\037 \001(\0132\036.opencannabis.te" +
+      "mporal.InstantB,\212@)Timestamp for when th" +
+      "is user was created.\022h\n\nidentities\030( \003(\013" +
+      "2\'.bloombox.identity.User.IdentitiesEntr" +
+      "yB+\200@\001\212@%Identities associated with this" +
+      " user.\022Y\n\005media\030) \003(\0132\".bloombox.identit" +
+      "y.User.MediaEntryB&\200@\001\212@ Media associate" +
+      "d with this user.\022X\n\010consumer\030d \001(\0132\".bl" +
+      "oombox.identity.ConsumerProfileB\"\212@\037Cons" +
+      "umer profile for this user.\022X\n\010industry\030" +
+      "e \001(\0132\".bloombox.identity.IndustryProfil" +
+      "eB\"\212@\037Industry profile for this user.\032R\n" +
+      "\017IdentitiesEntry\022\013\n\003key\030\001 \001(\t\022.\n\005value\030\002" +
+      " \001(\0132\037.bloombox.identity.UserIdentity:\0028" +
+      "\001\032K\n\nMediaEntry\022\013\n\003key\030\001 \001(\t\022,\n\005value\030\002 " +
+      "\001(\0132\035.opencannabis.media.MediaItem:\0028\001:\r" +
+      "\202\367\002\t\010\002\022\005users\"\367\002\n\tUserFlags\022D\n\tvalidated" +
+      "\030\001 \001(\010B1\212@.Indicates that the account ha" +
+      "s been validated.\022H\n\tsuspended\030\002 \001(\010B5\212@" +
+      "2Indicates that the account is currently" +
+      " suspended.\022B\n\005admin\030\003 \001(\010B3\212@0Indicates" +
+      " that the account has admin privileges.\022" +
+      "G\n\004beta\030\004 \001(\010B9\212@6Indicates that the acc" +
+      "ount has access to beta systems.\022M\n\007sand" +
+      "box\030\005 \001(\010B<\212@9Indicates that the account" +
+      " has access to sandbox systems.\"\336\002\n\014User" +
+      "Identity\022e\n\010provider\030\001 \001(\0162#.bloombox.id" +
+      "entity.IdentityProviderB.\212@+Provider for" +
+      " this external/foreign account.\022L\n\002id\030\002 " +
+      "\001(\tB@\302\265\003\002\010\002\212@7Unique ID for this account" +
+      " with the specified provider.\022\204\001\n\004seen\030\003" +
+      " \001(\0132\036.opencannabis.temporal.InstantBV\212@" +
+      "STimestamp for when this identity was la" +
+      "st user to authenticate the underlying u" +
+      "ser.:\022\202\367\002\016\010\002\022\nidentities\"\364\005\n\017ConsumerPro" +
+      "file\0220\n\006active\030\001 \001(\010B \212@\035Profile active/" +
+      "inactive flag.\022N\n\025favorite_dispensaries\030" +
+      "\002 \003(\tB/\212@,Enumerates favorite dispensari" +
+      "es for a user.\022w\n\021enrollment_source\030\003 \001(" +
+      "\0162#.bloombox.identity.EnrollmentSourceB7" +
+      "\212@4Specifies enrollment source attributi" +
+      "on information.\022a\n\022enrollment_channel\030\004 " +
+      "\001(\tBE\212@BArbitrary string for the channel" +
+      " through which this user enrolled.\022k\n\013pr" +
+      "eferences\030\005 \001(\0132&.bloombox.identity.Cons" +
+      "umerPreferencesB.\212@+Preferences attached" +
+      " to a consumer account.\022g\n\004type\030\006 \001(\0162\037." +
+      "bloombox.identity.ConsumerTypeB8\212@5Speci" +
+      "fies the primary consumer type for this " +
+      "account.\022q\n\017referral_source\030\007 \001(\0162!.bloo" +
+      "mbox.identity.ReferralSourceB5\212@2Specifi" +
+      "es referral source attribution informati" +
+      "on.\022:\n\017referral_detail\030\010 \001(\tB!\212@\036Specifi" +
+      "es the referrer\'s name.\"\250\005\n\017MenuPreferen" +
+      "ces\022j\n\007section\030\001 \003(\0162+.opencannabis.prod" +
+      "ucts.menu.section.SectionB,\212@)Preferred " +
+      "menu sections or product types.\022h\n\007feeli" +
+      "ng\030\002 \003(\0162(.opencannabis.structs.labtesti" +
+      "ng.FeelingB-\212@*Preferred feelings or exp" +
+      "eriential states.\022[\n\ntaste_note\030\003 \003(\0162*." +
+      "opencannabis.structs.labtesting.TasteNot" +
+      "eB\033\212@\030Preferred tasting notes.\022d\n\017desire" +
+      "d_potency\030\004 \001(\01620.opencannabis.structs.l" +
+      "abtesting.PotencyEstimateB\031\212@\026Desired po" +
+      "tency level.\022k\n\021cannabinoid_ratio\030\005 \001(\0162" +
+      "1.opencannabis.structs.labtesting.Cannab" +
+      "inoidRatioB\035\212@\032Desired cannabinoid ratio" +
+      ".\022K\n\007species\030\006 \003(\0162\035.opencannabis.struct" +
+      "s.SpeciesB\033\212@\030Preferred species types.\022B" +
+      "\n\004grow\030\007 \003(\0162\032.opencannabis.structs.Grow" +
+      "B\030\212@\025Preferred grow types.\"\346\002\n\025ProductTy" +
+      "pePreference\022-\n\005major\030\001 \001(\0162\036.opencannab" +
+      "is.base.ProductKind\022;\n\napothecary\030\n \001(\0162" +
+      "%.opencannabis.products.ApothecaryTypeH\000" +
+      "\0229\n\tcartridge\030\013 \001(\0162$.opencannabis.produ" +
+      "cts.CartridgeTypeH\000\0223\n\006edible\030\014 \001(\0162!.op" +
+      "encannabis.products.EdibleTypeH\000\0225\n\007extr" +
+      "act\030\r \001(\0162\".opencannabis.products.Extrac" +
+      "tTypeH\000\0221\n\005plant\030\016 \001(\0162 .opencannabis.pr" +
+      "oducts.PlantTypeH\000B\007\n\005minor\"\356\001\n\023Consumer" +
+      "Preferences\022f\n\004menu\030\n \001(\0132\".bloombox.ide" +
+      "ntity.MenuPreferencesB4\212@1Preferred menu" +
+      " sections/product types, and so on.\0227\n\006m" +
+      "ethod\030\013 \003(\0162\'.bloombox.consumption.Biode" +
+      "liveryMethod\0226\n\004kind\030\014 \003(\0132(.bloombox.id" +
+      "entity.ProductTypePreference\"\374\004\n\022Consume" +
+      "rMembership\022e\n\017referral_source\030\001 \001(\0162#.b" +
+      "loombox.identity.EnrollmentSourceB\'\212@$Re" +
+      "ferral source for this enrollment.\022^\n\020re" +
+      "ferral_channel\030\002 \001(\tBD\212@AReferral channe" +
+      "l token - an artbirary, end-system provi" +
+      "ded value.\022b\n\014signed_up_at\030\003 \001(\0132\036.openc" +
+      "annabis.temporal.InstantB,\212@)Timestamp f" +
+      "or when this profile enrolled.\022_\n\004seen\030\004" +
+      " \001(\0132\036.opencannabis.temporal.InstantB1\212@" +
+      ".Timestamp for when this profile was las" +
+      "t seen.\022b\n\nforeign_id\030\005 \001(\tBN\212@KForeign " +
+      "ID for this membership, in the partner-c" +
+      "olocated membership system.\022v\n\003key\030\006 \001(\013" +
+      "2 .bloombox.identity.MembershipKeyBG\212@DM" +
+      "embership key representing this user\'s m" +
+      "embership at this location.\"\342\002\n\017Industry" +
+      "Profile\0222\n\006active\030\001 \001(\010B\"\212@\037Profile inac" +
+      "tive/active status.\022\204\001\n\010partners\030\002 \003(\01320" +
+      ".bloombox.identity.IndustryProfile.Partn" +
+      "ersEntryB@\212@=Map of partner accesses lev" +
+      "els to partner and location codes.\022;\n\010se" +
+      "ttings\030\003 \001(\0132).bloombox.identity.industr" +
+      "y.StaffSettings\032W\n\rPartnersEntry\022\013\n\003key\030" +
+      "\001 \001(\t\0225\n\005value\030\002 \001(\0132&.bloombox.security" +
+      ".access.AccessPolicy:\0028\001*A\n\rUserMediaTyp" +
+      "e\022\013\n\007PICTURE\020\000\022\023\n\017DRIVERS_LICENSE\020\001\022\016\n\nD" +
+      "OCTOR_REC\020\002*O\n\020IdentityProvider\022\t\n\005EMAIL" +
+      "\020\000\022\n\n\006GOOGLE\020\001\022\014\n\010FACEBOOK\020\002\022\013\n\007TWITTER\020" +
+      "\003\022\t\n\005PHONE\020\004*l\n\020EnrollmentSource\022\017\n\013UNSP" +
+      "ECIFIED\020\000\022\n\n\006ONLINE\020\001\022\020\n\014INTERNAL_APP\020\002\022" +
+      "\017\n\013PARTNER_APP\020\003\022\014\n\010IN_STORE\020\004\022\n\n\006IMPORT" +
+      "\020\005*U\n\016ReferralSource\022\013\n\007UNKNOWN\020\000\022\013\n\007OUT" +
+      "DOOR\020\001\022\013\n\007DIGITAL\020\002\022\020\n\014SOCIAL_MEDIA\020\003\022\n\n" +
+      "\006FRIEND\020\004*Q\n\014ConsumerType\022\017\n\013UNVALIDATED" +
+      "\020\000\022\020\n\014RECREATIONAL\020\001\022\r\n\tADULT_USE\020\001\022\013\n\007M" +
+      "EDICAL\020\002\032\002\020\001B0\n\033io.bloombox.schema.ident" +
+      "ityB\007AppUserH\001P\000\242\002\003BBSb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -14078,84 +16526,97 @@ public final class AppUser {
         new com.google.protobuf.Descriptors.FileDescriptor[] {
           gen_bq_schema.BqField.getDescriptor(),
           core.Datamodel.getDescriptor(),
+          io.opencannabis.schema.base.BaseProductKind.getDescriptor(),
           io.opencannabis.schema.media.AttachedMedia.getDescriptor(),
           io.opencannabis.schema.temporal.TemporalInstant.getDescriptor(),
+          io.bloombox.schema.consumption.Biodelivery.getDescriptor(),
           io.opencannabis.schema.person.PersonOuterClass.getDescriptor(),
           io.bloombox.schema.identity.IdentityID.getDescriptor(),
           io.bloombox.schema.identity.ids.PrescriptionID.getDescriptor(),
           io.bloombox.schema.identity.AppMemberKey.getDescriptor(),
           io.bloombox.schema.identity.industry.UserStaffSettings.getDescriptor(),
+          io.opencannabis.schema.product.ApothecaryProduct.getDescriptor(),
+          io.opencannabis.schema.product.CartridgeProduct.getDescriptor(),
+          io.opencannabis.schema.product.ExtractProduct.getDescriptor(),
+          io.opencannabis.schema.product.EdibleProduct.getDescriptor(),
+          io.opencannabis.schema.product.PlantProduct.getDescriptor(),
           io.opencannabis.schema.menu.section.SectionOuterClass.getDescriptor(),
           io.opencannabis.schema.product.struct.MaterialGrow.getDescriptor(),
           io.opencannabis.schema.product.struct.MaterialSpecies.getDescriptor(),
           io.opencannabis.schema.product.struct.testing.LabTesting.getDescriptor(),
           io.bloombox.schema.security.access.PartnerPermissions.getDescriptor(),
         }, assigner);
-    internal_static_bloombox_schema_identity_User_descriptor =
+    internal_static_bloombox_identity_User_descriptor =
       getDescriptor().getMessageTypes().get(0);
-    internal_static_bloombox_schema_identity_User_fieldAccessorTable = new
+    internal_static_bloombox_identity_User_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_bloombox_schema_identity_User_descriptor,
+        internal_static_bloombox_identity_User_descriptor,
         new java.lang.String[] { "Uid", "Flags", "Person", "Identification", "DoctorRec", "Seen", "Signup", "Identities", "Media", "Consumer", "Industry", });
-    internal_static_bloombox_schema_identity_User_IdentitiesEntry_descriptor =
-      internal_static_bloombox_schema_identity_User_descriptor.getNestedTypes().get(0);
-    internal_static_bloombox_schema_identity_User_IdentitiesEntry_fieldAccessorTable = new
+    internal_static_bloombox_identity_User_IdentitiesEntry_descriptor =
+      internal_static_bloombox_identity_User_descriptor.getNestedTypes().get(0);
+    internal_static_bloombox_identity_User_IdentitiesEntry_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_bloombox_schema_identity_User_IdentitiesEntry_descriptor,
+        internal_static_bloombox_identity_User_IdentitiesEntry_descriptor,
         new java.lang.String[] { "Key", "Value", });
-    internal_static_bloombox_schema_identity_User_MediaEntry_descriptor =
-      internal_static_bloombox_schema_identity_User_descriptor.getNestedTypes().get(1);
-    internal_static_bloombox_schema_identity_User_MediaEntry_fieldAccessorTable = new
+    internal_static_bloombox_identity_User_MediaEntry_descriptor =
+      internal_static_bloombox_identity_User_descriptor.getNestedTypes().get(1);
+    internal_static_bloombox_identity_User_MediaEntry_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_bloombox_schema_identity_User_MediaEntry_descriptor,
+        internal_static_bloombox_identity_User_MediaEntry_descriptor,
         new java.lang.String[] { "Key", "Value", });
-    internal_static_bloombox_schema_identity_UserFlags_descriptor =
+    internal_static_bloombox_identity_UserFlags_descriptor =
       getDescriptor().getMessageTypes().get(1);
-    internal_static_bloombox_schema_identity_UserFlags_fieldAccessorTable = new
+    internal_static_bloombox_identity_UserFlags_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_bloombox_schema_identity_UserFlags_descriptor,
+        internal_static_bloombox_identity_UserFlags_descriptor,
         new java.lang.String[] { "Validated", "Suspended", "Admin", "Beta", "Sandbox", });
-    internal_static_bloombox_schema_identity_UserIdentity_descriptor =
+    internal_static_bloombox_identity_UserIdentity_descriptor =
       getDescriptor().getMessageTypes().get(2);
-    internal_static_bloombox_schema_identity_UserIdentity_fieldAccessorTable = new
+    internal_static_bloombox_identity_UserIdentity_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_bloombox_schema_identity_UserIdentity_descriptor,
+        internal_static_bloombox_identity_UserIdentity_descriptor,
         new java.lang.String[] { "Provider", "Id", "Seen", });
-    internal_static_bloombox_schema_identity_ConsumerProfile_descriptor =
+    internal_static_bloombox_identity_ConsumerProfile_descriptor =
       getDescriptor().getMessageTypes().get(3);
-    internal_static_bloombox_schema_identity_ConsumerProfile_fieldAccessorTable = new
+    internal_static_bloombox_identity_ConsumerProfile_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_bloombox_schema_identity_ConsumerProfile_descriptor,
+        internal_static_bloombox_identity_ConsumerProfile_descriptor,
         new java.lang.String[] { "Active", "FavoriteDispensaries", "EnrollmentSource", "EnrollmentChannel", "Preferences", "Type", "ReferralSource", "ReferralDetail", });
-    internal_static_bloombox_schema_identity_MenuPreferences_descriptor =
+    internal_static_bloombox_identity_MenuPreferences_descriptor =
       getDescriptor().getMessageTypes().get(4);
-    internal_static_bloombox_schema_identity_MenuPreferences_fieldAccessorTable = new
+    internal_static_bloombox_identity_MenuPreferences_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_bloombox_schema_identity_MenuPreferences_descriptor,
+        internal_static_bloombox_identity_MenuPreferences_descriptor,
         new java.lang.String[] { "Section", "Feeling", "TasteNote", "DesiredPotency", "CannabinoidRatio", "Species", "Grow", });
-    internal_static_bloombox_schema_identity_ConsumerPreferences_descriptor =
+    internal_static_bloombox_identity_ProductTypePreference_descriptor =
       getDescriptor().getMessageTypes().get(5);
-    internal_static_bloombox_schema_identity_ConsumerPreferences_fieldAccessorTable = new
+    internal_static_bloombox_identity_ProductTypePreference_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_bloombox_schema_identity_ConsumerPreferences_descriptor,
-        new java.lang.String[] { "Menu", });
-    internal_static_bloombox_schema_identity_ConsumerMembership_descriptor =
+        internal_static_bloombox_identity_ProductTypePreference_descriptor,
+        new java.lang.String[] { "Major", "Apothecary", "Cartridge", "Edible", "Extract", "Plant", "Minor", });
+    internal_static_bloombox_identity_ConsumerPreferences_descriptor =
       getDescriptor().getMessageTypes().get(6);
-    internal_static_bloombox_schema_identity_ConsumerMembership_fieldAccessorTable = new
+    internal_static_bloombox_identity_ConsumerPreferences_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_bloombox_schema_identity_ConsumerMembership_descriptor,
-        new java.lang.String[] { "ReferralSource", "ReferralChannel", "SignedUpAt", "Seen", "ForeignId", "Key", });
-    internal_static_bloombox_schema_identity_IndustryProfile_descriptor =
+        internal_static_bloombox_identity_ConsumerPreferences_descriptor,
+        new java.lang.String[] { "Menu", "Method", "Kind", });
+    internal_static_bloombox_identity_ConsumerMembership_descriptor =
       getDescriptor().getMessageTypes().get(7);
-    internal_static_bloombox_schema_identity_IndustryProfile_fieldAccessorTable = new
+    internal_static_bloombox_identity_ConsumerMembership_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_bloombox_schema_identity_IndustryProfile_descriptor,
+        internal_static_bloombox_identity_ConsumerMembership_descriptor,
+        new java.lang.String[] { "ReferralSource", "ReferralChannel", "SignedUpAt", "Seen", "ForeignId", "Key", });
+    internal_static_bloombox_identity_IndustryProfile_descriptor =
+      getDescriptor().getMessageTypes().get(8);
+    internal_static_bloombox_identity_IndustryProfile_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_bloombox_identity_IndustryProfile_descriptor,
         new java.lang.String[] { "Active", "Partners", "Settings", });
-    internal_static_bloombox_schema_identity_IndustryProfile_PartnersEntry_descriptor =
-      internal_static_bloombox_schema_identity_IndustryProfile_descriptor.getNestedTypes().get(0);
-    internal_static_bloombox_schema_identity_IndustryProfile_PartnersEntry_fieldAccessorTable = new
+    internal_static_bloombox_identity_IndustryProfile_PartnersEntry_descriptor =
+      internal_static_bloombox_identity_IndustryProfile_descriptor.getNestedTypes().get(0);
+    internal_static_bloombox_identity_IndustryProfile_PartnersEntry_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_bloombox_schema_identity_IndustryProfile_PartnersEntry_descriptor,
+        internal_static_bloombox_identity_IndustryProfile_PartnersEntry_descriptor,
         new java.lang.String[] { "Key", "Value", });
     com.google.protobuf.ExtensionRegistry registry =
         com.google.protobuf.ExtensionRegistry.newInstance();
@@ -14168,13 +16629,20 @@ public final class AppUser {
         .internalUpdateFileDescriptor(descriptor, registry);
     gen_bq_schema.BqField.getDescriptor();
     core.Datamodel.getDescriptor();
+    io.opencannabis.schema.base.BaseProductKind.getDescriptor();
     io.opencannabis.schema.media.AttachedMedia.getDescriptor();
     io.opencannabis.schema.temporal.TemporalInstant.getDescriptor();
+    io.bloombox.schema.consumption.Biodelivery.getDescriptor();
     io.opencannabis.schema.person.PersonOuterClass.getDescriptor();
     io.bloombox.schema.identity.IdentityID.getDescriptor();
     io.bloombox.schema.identity.ids.PrescriptionID.getDescriptor();
     io.bloombox.schema.identity.AppMemberKey.getDescriptor();
     io.bloombox.schema.identity.industry.UserStaffSettings.getDescriptor();
+    io.opencannabis.schema.product.ApothecaryProduct.getDescriptor();
+    io.opencannabis.schema.product.CartridgeProduct.getDescriptor();
+    io.opencannabis.schema.product.ExtractProduct.getDescriptor();
+    io.opencannabis.schema.product.EdibleProduct.getDescriptor();
+    io.opencannabis.schema.product.PlantProduct.getDescriptor();
     io.opencannabis.schema.menu.section.SectionOuterClass.getDescriptor();
     io.opencannabis.schema.product.struct.MaterialGrow.getDescriptor();
     io.opencannabis.schema.product.struct.MaterialSpecies.getDescriptor();

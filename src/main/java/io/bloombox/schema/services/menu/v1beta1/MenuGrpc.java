@@ -1,8 +1,8 @@
 /*
- * Copyright 2018, Bloombox, LLC. All rights reserved.
+ * Copyright 2018, Momentum Ideas, Co. All rights reserved.
  *
  * Source and object computer code contained herein is the private intellectual
- * property of Bloombox, a California Limited Liability Corporation. Use of this
+ * property of Momentum Ideas Co., a Delaware Corporation. Use of this
  * code in source form requires permission in writing before use or the
  * assembly, distribution, or publishing of derivative works, for commercial
  * purposes or any other purpose, from a duly authorized officer of Momentum
@@ -17,20 +17,20 @@
 
 package io.bloombox.schema.services.menu.v1beta1;
 
-import static io.grpc.stub.ClientCalls.asyncUnaryCall;
-import static io.grpc.stub.ClientCalls.asyncServerStreamingCall;
-import static io.grpc.stub.ClientCalls.asyncClientStreamingCall;
-import static io.grpc.stub.ClientCalls.asyncBidiStreamingCall;
-import static io.grpc.stub.ClientCalls.blockingUnaryCall;
-import static io.grpc.stub.ClientCalls.blockingServerStreamingCall;
-import static io.grpc.stub.ClientCalls.futureUnaryCall;
 import static io.grpc.MethodDescriptor.generateFullMethodName;
-import static io.grpc.stub.ServerCalls.asyncUnaryCall;
-import static io.grpc.stub.ServerCalls.asyncServerStreamingCall;
-import static io.grpc.stub.ServerCalls.asyncClientStreamingCall;
+import static io.grpc.stub.ClientCalls.asyncBidiStreamingCall;
+import static io.grpc.stub.ClientCalls.asyncClientStreamingCall;
+import static io.grpc.stub.ClientCalls.asyncServerStreamingCall;
+import static io.grpc.stub.ClientCalls.asyncUnaryCall;
+import static io.grpc.stub.ClientCalls.blockingServerStreamingCall;
+import static io.grpc.stub.ClientCalls.blockingUnaryCall;
+import static io.grpc.stub.ClientCalls.futureUnaryCall;
 import static io.grpc.stub.ServerCalls.asyncBidiStreamingCall;
-import static io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall;
+import static io.grpc.stub.ServerCalls.asyncClientStreamingCall;
+import static io.grpc.stub.ServerCalls.asyncServerStreamingCall;
+import static io.grpc.stub.ServerCalls.asyncUnaryCall;
 import static io.grpc.stub.ServerCalls.asyncUnimplementedStreamingCall;
+import static io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall;
 
 /**
  * <pre>
@@ -38,147 +38,366 @@ import static io.grpc.stub.ServerCalls.asyncUnimplementedStreamingCall;
  * </pre>
  */
 @javax.annotation.Generated(
-    value = "by gRPC proto compiler (version 1.6.0-SNAPSHOT)",
+    value = "by gRPC proto compiler (version 1.18.0-SNAPSHOT)",
     comments = "Source: menu/v1beta1/MenuService_Beta1.proto")
 public final class MenuGrpc {
 
   private MenuGrpc() {}
 
-  public static final String SERVICE_NAME = "bloombox.schema.services.menu.v1beta1.Menu";
+  public static final String SERVICE_NAME = "bloombox.services.menu.v1beta1.Menu";
 
   // Static method descriptors that strictly reflect the proto.
-  @io.grpc.ExperimentalApi("https://github.com/grpc/grpc-java/issues/1901")
-  public static final io.grpc.MethodDescriptor<io.bloombox.schema.services.menu.v1beta1.GetMenu.Request,
-      io.bloombox.schema.services.menu.v1beta1.GetMenu.Response> METHOD_RETRIEVE =
-      io.grpc.MethodDescriptor.<io.bloombox.schema.services.menu.v1beta1.GetMenu.Request, io.bloombox.schema.services.menu.v1beta1.GetMenu.Response>newBuilder()
-          .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-          .setFullMethodName(generateFullMethodName(
-              "bloombox.schema.services.menu.v1beta1.Menu", "Retrieve"))
-          .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-              io.bloombox.schema.services.menu.v1beta1.GetMenu.Request.getDefaultInstance()))
-          .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-              io.bloombox.schema.services.menu.v1beta1.GetMenu.Response.getDefaultInstance()))
-          .build();
-  @io.grpc.ExperimentalApi("https://github.com/grpc/grpc-java/issues/1901")
-  public static final io.grpc.MethodDescriptor<io.bloombox.schema.services.menu.v1beta1.GetMenu.Request,
-      io.bloombox.schema.services.menu.v1beta1.GetMenu.Response> METHOD_SECTION =
-      io.grpc.MethodDescriptor.<io.bloombox.schema.services.menu.v1beta1.GetMenu.Request, io.bloombox.schema.services.menu.v1beta1.GetMenu.Response>newBuilder()
-          .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-          .setFullMethodName(generateFullMethodName(
-              "bloombox.schema.services.menu.v1beta1.Menu", "Section"))
-          .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-              io.bloombox.schema.services.menu.v1beta1.GetMenu.Request.getDefaultInstance()))
-          .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-              io.bloombox.schema.services.menu.v1beta1.GetMenu.Response.getDefaultInstance()))
-          .build();
-  @io.grpc.ExperimentalApi("https://github.com/grpc/grpc-java/issues/1901")
-  public static final io.grpc.MethodDescriptor<io.bloombox.schema.services.menu.v1beta1.GetFeatured.Request,
-      io.bloombox.schema.services.menu.v1beta1.GetFeatured.Response> METHOD_FEATURED =
-      io.grpc.MethodDescriptor.<io.bloombox.schema.services.menu.v1beta1.GetFeatured.Request, io.bloombox.schema.services.menu.v1beta1.GetFeatured.Response>newBuilder()
-          .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-          .setFullMethodName(generateFullMethodName(
-              "bloombox.schema.services.menu.v1beta1.Menu", "Featured"))
-          .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-              io.bloombox.schema.services.menu.v1beta1.GetFeatured.Request.getDefaultInstance()))
-          .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-              io.bloombox.schema.services.menu.v1beta1.GetFeatured.Response.getDefaultInstance()))
-          .build();
-  @io.grpc.ExperimentalApi("https://github.com/grpc/grpc-java/issues/1901")
-  public static final io.grpc.MethodDescriptor<io.bloombox.schema.services.menu.v1beta1.GetProduct.Request,
-      io.bloombox.schema.services.menu.v1beta1.GetProduct.Response> METHOD_PRODUCTS =
-      io.grpc.MethodDescriptor.<io.bloombox.schema.services.menu.v1beta1.GetProduct.Request, io.bloombox.schema.services.menu.v1beta1.GetProduct.Response>newBuilder()
-          .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-          .setFullMethodName(generateFullMethodName(
-              "bloombox.schema.services.menu.v1beta1.Menu", "Products"))
-          .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-              io.bloombox.schema.services.menu.v1beta1.GetProduct.Request.getDefaultInstance()))
-          .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-              io.bloombox.schema.services.menu.v1beta1.GetProduct.Response.getDefaultInstance()))
-          .build();
-  @io.grpc.ExperimentalApi("https://github.com/grpc/grpc-java/issues/1901")
-  public static final io.grpc.MethodDescriptor<io.bloombox.schema.services.menu.v1beta1.SearchMenu.Request,
-      io.bloombox.schema.services.menu.v1beta1.SearchMenu.Response> METHOD_SEARCH =
-      io.grpc.MethodDescriptor.<io.bloombox.schema.services.menu.v1beta1.SearchMenu.Request, io.bloombox.schema.services.menu.v1beta1.SearchMenu.Response>newBuilder()
-          .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-          .setFullMethodName(generateFullMethodName(
-              "bloombox.schema.services.menu.v1beta1.Menu", "Search"))
-          .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-              io.bloombox.schema.services.menu.v1beta1.SearchMenu.Request.getDefaultInstance()))
-          .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-              io.bloombox.schema.services.menu.v1beta1.SearchMenu.Response.getDefaultInstance()))
-          .build();
-  @io.grpc.ExperimentalApi("https://github.com/grpc/grpc-java/issues/1901")
-  public static final io.grpc.MethodDescriptor<io.bloombox.schema.services.menu.v1beta1.CreateProduct.Request,
-      io.bloombox.schema.services.menu.v1beta1.CreateProduct.Response> METHOD_CREATE =
-      io.grpc.MethodDescriptor.<io.bloombox.schema.services.menu.v1beta1.CreateProduct.Request, io.bloombox.schema.services.menu.v1beta1.CreateProduct.Response>newBuilder()
-          .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-          .setFullMethodName(generateFullMethodName(
-              "bloombox.schema.services.menu.v1beta1.Menu", "Create"))
-          .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-              io.bloombox.schema.services.menu.v1beta1.CreateProduct.Request.getDefaultInstance()))
-          .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-              io.bloombox.schema.services.menu.v1beta1.CreateProduct.Response.getDefaultInstance()))
-          .build();
-  @io.grpc.ExperimentalApi("https://github.com/grpc/grpc-java/issues/1901")
-  public static final io.grpc.MethodDescriptor<io.bloombox.schema.services.menu.v1beta1.UpdateProduct.Request,
-      com.google.protobuf.Empty> METHOD_UPDATE =
-      io.grpc.MethodDescriptor.<io.bloombox.schema.services.menu.v1beta1.UpdateProduct.Request, com.google.protobuf.Empty>newBuilder()
-          .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-          .setFullMethodName(generateFullMethodName(
-              "bloombox.schema.services.menu.v1beta1.Menu", "Update"))
-          .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-              io.bloombox.schema.services.menu.v1beta1.UpdateProduct.Request.getDefaultInstance()))
-          .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-              com.google.protobuf.Empty.getDefaultInstance()))
-          .build();
-  @io.grpc.ExperimentalApi("https://github.com/grpc/grpc-java/issues/1901")
-  public static final io.grpc.MethodDescriptor<io.bloombox.schema.services.menu.v1beta1.DeleteProduct.Request,
-      com.google.protobuf.Empty> METHOD_REMOVE =
-      io.grpc.MethodDescriptor.<io.bloombox.schema.services.menu.v1beta1.DeleteProduct.Request, com.google.protobuf.Empty>newBuilder()
-          .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-          .setFullMethodName(generateFullMethodName(
-              "bloombox.schema.services.menu.v1beta1.Menu", "Remove"))
-          .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-              io.bloombox.schema.services.menu.v1beta1.DeleteProduct.Request.getDefaultInstance()))
-          .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-              com.google.protobuf.Empty.getDefaultInstance()))
-          .build();
-  @io.grpc.ExperimentalApi("https://github.com/grpc/grpc-java/issues/1901")
-  public static final io.grpc.MethodDescriptor<io.bloombox.schema.services.menu.v1beta1.ProductStock.Request,
-      com.google.protobuf.Empty> METHOD_PRODUCT_STATUS =
-      io.grpc.MethodDescriptor.<io.bloombox.schema.services.menu.v1beta1.ProductStock.Request, com.google.protobuf.Empty>newBuilder()
-          .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-          .setFullMethodName(generateFullMethodName(
-              "bloombox.schema.services.menu.v1beta1.Menu", "ProductStatus"))
-          .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-              io.bloombox.schema.services.menu.v1beta1.ProductStock.Request.getDefaultInstance()))
-          .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-              com.google.protobuf.Empty.getDefaultInstance()))
-          .build();
-  @io.grpc.ExperimentalApi("https://github.com/grpc/grpc-java/issues/1901")
-  public static final io.grpc.MethodDescriptor<io.bloombox.schema.services.menu.v1beta1.ProductStock.Request,
-      com.google.protobuf.Empty> METHOD_IN_STOCK =
-      io.grpc.MethodDescriptor.<io.bloombox.schema.services.menu.v1beta1.ProductStock.Request, com.google.protobuf.Empty>newBuilder()
-          .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-          .setFullMethodName(generateFullMethodName(
-              "bloombox.schema.services.menu.v1beta1.Menu", "InStock"))
-          .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-              io.bloombox.schema.services.menu.v1beta1.ProductStock.Request.getDefaultInstance()))
-          .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-              com.google.protobuf.Empty.getDefaultInstance()))
-          .build();
-  @io.grpc.ExperimentalApi("https://github.com/grpc/grpc-java/issues/1901")
-  public static final io.grpc.MethodDescriptor<io.bloombox.schema.services.menu.v1beta1.ProductStock.Request,
-      com.google.protobuf.Empty> METHOD_OUT_OF_STOCK =
-      io.grpc.MethodDescriptor.<io.bloombox.schema.services.menu.v1beta1.ProductStock.Request, com.google.protobuf.Empty>newBuilder()
-          .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-          .setFullMethodName(generateFullMethodName(
-              "bloombox.schema.services.menu.v1beta1.Menu", "OutOfStock"))
-          .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-              io.bloombox.schema.services.menu.v1beta1.ProductStock.Request.getDefaultInstance()))
-          .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-              com.google.protobuf.Empty.getDefaultInstance()))
-          .build();
+  private static volatile io.grpc.MethodDescriptor<io.bloombox.schema.services.menu.v1beta1.GetMenu.Request,
+      io.bloombox.schema.services.menu.v1beta1.GetMenu.Response> getRetrieveMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "Retrieve",
+      requestType = io.bloombox.schema.services.menu.v1beta1.GetMenu.Request.class,
+      responseType = io.bloombox.schema.services.menu.v1beta1.GetMenu.Response.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<io.bloombox.schema.services.menu.v1beta1.GetMenu.Request,
+      io.bloombox.schema.services.menu.v1beta1.GetMenu.Response> getRetrieveMethod() {
+    io.grpc.MethodDescriptor<io.bloombox.schema.services.menu.v1beta1.GetMenu.Request, io.bloombox.schema.services.menu.v1beta1.GetMenu.Response> getRetrieveMethod;
+    if ((getRetrieveMethod = MenuGrpc.getRetrieveMethod) == null) {
+      synchronized (MenuGrpc.class) {
+        if ((getRetrieveMethod = MenuGrpc.getRetrieveMethod) == null) {
+          MenuGrpc.getRetrieveMethod = getRetrieveMethod = 
+              io.grpc.MethodDescriptor.<io.bloombox.schema.services.menu.v1beta1.GetMenu.Request, io.bloombox.schema.services.menu.v1beta1.GetMenu.Response>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(
+                  "bloombox.services.menu.v1beta1.Menu", "Retrieve"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  io.bloombox.schema.services.menu.v1beta1.GetMenu.Request.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  io.bloombox.schema.services.menu.v1beta1.GetMenu.Response.getDefaultInstance()))
+                  .setSchemaDescriptor(new MenuMethodDescriptorSupplier("Retrieve"))
+                  .build();
+          }
+        }
+     }
+     return getRetrieveMethod;
+  }
+
+  private static volatile io.grpc.MethodDescriptor<io.bloombox.schema.services.menu.v1beta1.GetMenu.Request,
+      io.bloombox.schema.services.menu.v1beta1.GetMenu.Response> getSectionMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "Section",
+      requestType = io.bloombox.schema.services.menu.v1beta1.GetMenu.Request.class,
+      responseType = io.bloombox.schema.services.menu.v1beta1.GetMenu.Response.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<io.bloombox.schema.services.menu.v1beta1.GetMenu.Request,
+      io.bloombox.schema.services.menu.v1beta1.GetMenu.Response> getSectionMethod() {
+    io.grpc.MethodDescriptor<io.bloombox.schema.services.menu.v1beta1.GetMenu.Request, io.bloombox.schema.services.menu.v1beta1.GetMenu.Response> getSectionMethod;
+    if ((getSectionMethod = MenuGrpc.getSectionMethod) == null) {
+      synchronized (MenuGrpc.class) {
+        if ((getSectionMethod = MenuGrpc.getSectionMethod) == null) {
+          MenuGrpc.getSectionMethod = getSectionMethod = 
+              io.grpc.MethodDescriptor.<io.bloombox.schema.services.menu.v1beta1.GetMenu.Request, io.bloombox.schema.services.menu.v1beta1.GetMenu.Response>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(
+                  "bloombox.services.menu.v1beta1.Menu", "Section"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  io.bloombox.schema.services.menu.v1beta1.GetMenu.Request.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  io.bloombox.schema.services.menu.v1beta1.GetMenu.Response.getDefaultInstance()))
+                  .setSchemaDescriptor(new MenuMethodDescriptorSupplier("Section"))
+                  .build();
+          }
+        }
+     }
+     return getSectionMethod;
+  }
+
+  private static volatile io.grpc.MethodDescriptor<io.bloombox.schema.services.menu.v1beta1.GetFeatured.Request,
+      io.bloombox.schema.services.menu.v1beta1.GetFeatured.Response> getFeaturedMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "Featured",
+      requestType = io.bloombox.schema.services.menu.v1beta1.GetFeatured.Request.class,
+      responseType = io.bloombox.schema.services.menu.v1beta1.GetFeatured.Response.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<io.bloombox.schema.services.menu.v1beta1.GetFeatured.Request,
+      io.bloombox.schema.services.menu.v1beta1.GetFeatured.Response> getFeaturedMethod() {
+    io.grpc.MethodDescriptor<io.bloombox.schema.services.menu.v1beta1.GetFeatured.Request, io.bloombox.schema.services.menu.v1beta1.GetFeatured.Response> getFeaturedMethod;
+    if ((getFeaturedMethod = MenuGrpc.getFeaturedMethod) == null) {
+      synchronized (MenuGrpc.class) {
+        if ((getFeaturedMethod = MenuGrpc.getFeaturedMethod) == null) {
+          MenuGrpc.getFeaturedMethod = getFeaturedMethod = 
+              io.grpc.MethodDescriptor.<io.bloombox.schema.services.menu.v1beta1.GetFeatured.Request, io.bloombox.schema.services.menu.v1beta1.GetFeatured.Response>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(
+                  "bloombox.services.menu.v1beta1.Menu", "Featured"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  io.bloombox.schema.services.menu.v1beta1.GetFeatured.Request.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  io.bloombox.schema.services.menu.v1beta1.GetFeatured.Response.getDefaultInstance()))
+                  .setSchemaDescriptor(new MenuMethodDescriptorSupplier("Featured"))
+                  .build();
+          }
+        }
+     }
+     return getFeaturedMethod;
+  }
+
+  private static volatile io.grpc.MethodDescriptor<io.bloombox.schema.services.menu.v1beta1.GetProduct.Request,
+      io.bloombox.schema.services.menu.v1beta1.GetProduct.Response> getProductsMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "Products",
+      requestType = io.bloombox.schema.services.menu.v1beta1.GetProduct.Request.class,
+      responseType = io.bloombox.schema.services.menu.v1beta1.GetProduct.Response.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<io.bloombox.schema.services.menu.v1beta1.GetProduct.Request,
+      io.bloombox.schema.services.menu.v1beta1.GetProduct.Response> getProductsMethod() {
+    io.grpc.MethodDescriptor<io.bloombox.schema.services.menu.v1beta1.GetProduct.Request, io.bloombox.schema.services.menu.v1beta1.GetProduct.Response> getProductsMethod;
+    if ((getProductsMethod = MenuGrpc.getProductsMethod) == null) {
+      synchronized (MenuGrpc.class) {
+        if ((getProductsMethod = MenuGrpc.getProductsMethod) == null) {
+          MenuGrpc.getProductsMethod = getProductsMethod = 
+              io.grpc.MethodDescriptor.<io.bloombox.schema.services.menu.v1beta1.GetProduct.Request, io.bloombox.schema.services.menu.v1beta1.GetProduct.Response>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(
+                  "bloombox.services.menu.v1beta1.Menu", "Products"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  io.bloombox.schema.services.menu.v1beta1.GetProduct.Request.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  io.bloombox.schema.services.menu.v1beta1.GetProduct.Response.getDefaultInstance()))
+                  .setSchemaDescriptor(new MenuMethodDescriptorSupplier("Products"))
+                  .build();
+          }
+        }
+     }
+     return getProductsMethod;
+  }
+
+  private static volatile io.grpc.MethodDescriptor<io.bloombox.schema.services.menu.v1beta1.SearchMenu.Request,
+      io.bloombox.schema.services.menu.v1beta1.SearchMenu.Response> getSearchMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "Search",
+      requestType = io.bloombox.schema.services.menu.v1beta1.SearchMenu.Request.class,
+      responseType = io.bloombox.schema.services.menu.v1beta1.SearchMenu.Response.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<io.bloombox.schema.services.menu.v1beta1.SearchMenu.Request,
+      io.bloombox.schema.services.menu.v1beta1.SearchMenu.Response> getSearchMethod() {
+    io.grpc.MethodDescriptor<io.bloombox.schema.services.menu.v1beta1.SearchMenu.Request, io.bloombox.schema.services.menu.v1beta1.SearchMenu.Response> getSearchMethod;
+    if ((getSearchMethod = MenuGrpc.getSearchMethod) == null) {
+      synchronized (MenuGrpc.class) {
+        if ((getSearchMethod = MenuGrpc.getSearchMethod) == null) {
+          MenuGrpc.getSearchMethod = getSearchMethod = 
+              io.grpc.MethodDescriptor.<io.bloombox.schema.services.menu.v1beta1.SearchMenu.Request, io.bloombox.schema.services.menu.v1beta1.SearchMenu.Response>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(
+                  "bloombox.services.menu.v1beta1.Menu", "Search"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  io.bloombox.schema.services.menu.v1beta1.SearchMenu.Request.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  io.bloombox.schema.services.menu.v1beta1.SearchMenu.Response.getDefaultInstance()))
+                  .setSchemaDescriptor(new MenuMethodDescriptorSupplier("Search"))
+                  .build();
+          }
+        }
+     }
+     return getSearchMethod;
+  }
+
+  private static volatile io.grpc.MethodDescriptor<io.bloombox.schema.services.menu.v1beta1.CreateProduct.Request,
+      io.bloombox.schema.services.menu.v1beta1.CreateProduct.Response> getCreateMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "Create",
+      requestType = io.bloombox.schema.services.menu.v1beta1.CreateProduct.Request.class,
+      responseType = io.bloombox.schema.services.menu.v1beta1.CreateProduct.Response.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<io.bloombox.schema.services.menu.v1beta1.CreateProduct.Request,
+      io.bloombox.schema.services.menu.v1beta1.CreateProduct.Response> getCreateMethod() {
+    io.grpc.MethodDescriptor<io.bloombox.schema.services.menu.v1beta1.CreateProduct.Request, io.bloombox.schema.services.menu.v1beta1.CreateProduct.Response> getCreateMethod;
+    if ((getCreateMethod = MenuGrpc.getCreateMethod) == null) {
+      synchronized (MenuGrpc.class) {
+        if ((getCreateMethod = MenuGrpc.getCreateMethod) == null) {
+          MenuGrpc.getCreateMethod = getCreateMethod = 
+              io.grpc.MethodDescriptor.<io.bloombox.schema.services.menu.v1beta1.CreateProduct.Request, io.bloombox.schema.services.menu.v1beta1.CreateProduct.Response>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(
+                  "bloombox.services.menu.v1beta1.Menu", "Create"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  io.bloombox.schema.services.menu.v1beta1.CreateProduct.Request.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  io.bloombox.schema.services.menu.v1beta1.CreateProduct.Response.getDefaultInstance()))
+                  .setSchemaDescriptor(new MenuMethodDescriptorSupplier("Create"))
+                  .build();
+          }
+        }
+     }
+     return getCreateMethod;
+  }
+
+  private static volatile io.grpc.MethodDescriptor<io.bloombox.schema.services.menu.v1beta1.UpdateProduct.Request,
+      com.google.protobuf.Empty> getUpdateMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "Update",
+      requestType = io.bloombox.schema.services.menu.v1beta1.UpdateProduct.Request.class,
+      responseType = com.google.protobuf.Empty.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<io.bloombox.schema.services.menu.v1beta1.UpdateProduct.Request,
+      com.google.protobuf.Empty> getUpdateMethod() {
+    io.grpc.MethodDescriptor<io.bloombox.schema.services.menu.v1beta1.UpdateProduct.Request, com.google.protobuf.Empty> getUpdateMethod;
+    if ((getUpdateMethod = MenuGrpc.getUpdateMethod) == null) {
+      synchronized (MenuGrpc.class) {
+        if ((getUpdateMethod = MenuGrpc.getUpdateMethod) == null) {
+          MenuGrpc.getUpdateMethod = getUpdateMethod = 
+              io.grpc.MethodDescriptor.<io.bloombox.schema.services.menu.v1beta1.UpdateProduct.Request, com.google.protobuf.Empty>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(
+                  "bloombox.services.menu.v1beta1.Menu", "Update"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  io.bloombox.schema.services.menu.v1beta1.UpdateProduct.Request.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.google.protobuf.Empty.getDefaultInstance()))
+                  .setSchemaDescriptor(new MenuMethodDescriptorSupplier("Update"))
+                  .build();
+          }
+        }
+     }
+     return getUpdateMethod;
+  }
+
+  private static volatile io.grpc.MethodDescriptor<io.bloombox.schema.services.menu.v1beta1.DeleteProduct.Request,
+      com.google.protobuf.Empty> getRemoveMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "Remove",
+      requestType = io.bloombox.schema.services.menu.v1beta1.DeleteProduct.Request.class,
+      responseType = com.google.protobuf.Empty.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<io.bloombox.schema.services.menu.v1beta1.DeleteProduct.Request,
+      com.google.protobuf.Empty> getRemoveMethod() {
+    io.grpc.MethodDescriptor<io.bloombox.schema.services.menu.v1beta1.DeleteProduct.Request, com.google.protobuf.Empty> getRemoveMethod;
+    if ((getRemoveMethod = MenuGrpc.getRemoveMethod) == null) {
+      synchronized (MenuGrpc.class) {
+        if ((getRemoveMethod = MenuGrpc.getRemoveMethod) == null) {
+          MenuGrpc.getRemoveMethod = getRemoveMethod = 
+              io.grpc.MethodDescriptor.<io.bloombox.schema.services.menu.v1beta1.DeleteProduct.Request, com.google.protobuf.Empty>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(
+                  "bloombox.services.menu.v1beta1.Menu", "Remove"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  io.bloombox.schema.services.menu.v1beta1.DeleteProduct.Request.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.google.protobuf.Empty.getDefaultInstance()))
+                  .setSchemaDescriptor(new MenuMethodDescriptorSupplier("Remove"))
+                  .build();
+          }
+        }
+     }
+     return getRemoveMethod;
+  }
+
+  private static volatile io.grpc.MethodDescriptor<io.bloombox.schema.services.menu.v1beta1.ProductStock.Request,
+      com.google.protobuf.Empty> getProductStatusMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "ProductStatus",
+      requestType = io.bloombox.schema.services.menu.v1beta1.ProductStock.Request.class,
+      responseType = com.google.protobuf.Empty.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<io.bloombox.schema.services.menu.v1beta1.ProductStock.Request,
+      com.google.protobuf.Empty> getProductStatusMethod() {
+    io.grpc.MethodDescriptor<io.bloombox.schema.services.menu.v1beta1.ProductStock.Request, com.google.protobuf.Empty> getProductStatusMethod;
+    if ((getProductStatusMethod = MenuGrpc.getProductStatusMethod) == null) {
+      synchronized (MenuGrpc.class) {
+        if ((getProductStatusMethod = MenuGrpc.getProductStatusMethod) == null) {
+          MenuGrpc.getProductStatusMethod = getProductStatusMethod = 
+              io.grpc.MethodDescriptor.<io.bloombox.schema.services.menu.v1beta1.ProductStock.Request, com.google.protobuf.Empty>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(
+                  "bloombox.services.menu.v1beta1.Menu", "ProductStatus"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  io.bloombox.schema.services.menu.v1beta1.ProductStock.Request.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.google.protobuf.Empty.getDefaultInstance()))
+                  .setSchemaDescriptor(new MenuMethodDescriptorSupplier("ProductStatus"))
+                  .build();
+          }
+        }
+     }
+     return getProductStatusMethod;
+  }
+
+  private static volatile io.grpc.MethodDescriptor<io.bloombox.schema.services.menu.v1beta1.ProductStock.Request,
+      com.google.protobuf.Empty> getInStockMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "InStock",
+      requestType = io.bloombox.schema.services.menu.v1beta1.ProductStock.Request.class,
+      responseType = com.google.protobuf.Empty.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<io.bloombox.schema.services.menu.v1beta1.ProductStock.Request,
+      com.google.protobuf.Empty> getInStockMethod() {
+    io.grpc.MethodDescriptor<io.bloombox.schema.services.menu.v1beta1.ProductStock.Request, com.google.protobuf.Empty> getInStockMethod;
+    if ((getInStockMethod = MenuGrpc.getInStockMethod) == null) {
+      synchronized (MenuGrpc.class) {
+        if ((getInStockMethod = MenuGrpc.getInStockMethod) == null) {
+          MenuGrpc.getInStockMethod = getInStockMethod = 
+              io.grpc.MethodDescriptor.<io.bloombox.schema.services.menu.v1beta1.ProductStock.Request, com.google.protobuf.Empty>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(
+                  "bloombox.services.menu.v1beta1.Menu", "InStock"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  io.bloombox.schema.services.menu.v1beta1.ProductStock.Request.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.google.protobuf.Empty.getDefaultInstance()))
+                  .setSchemaDescriptor(new MenuMethodDescriptorSupplier("InStock"))
+                  .build();
+          }
+        }
+     }
+     return getInStockMethod;
+  }
+
+  private static volatile io.grpc.MethodDescriptor<io.bloombox.schema.services.menu.v1beta1.ProductStock.Request,
+      com.google.protobuf.Empty> getOutOfStockMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "OutOfStock",
+      requestType = io.bloombox.schema.services.menu.v1beta1.ProductStock.Request.class,
+      responseType = com.google.protobuf.Empty.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<io.bloombox.schema.services.menu.v1beta1.ProductStock.Request,
+      com.google.protobuf.Empty> getOutOfStockMethod() {
+    io.grpc.MethodDescriptor<io.bloombox.schema.services.menu.v1beta1.ProductStock.Request, com.google.protobuf.Empty> getOutOfStockMethod;
+    if ((getOutOfStockMethod = MenuGrpc.getOutOfStockMethod) == null) {
+      synchronized (MenuGrpc.class) {
+        if ((getOutOfStockMethod = MenuGrpc.getOutOfStockMethod) == null) {
+          MenuGrpc.getOutOfStockMethod = getOutOfStockMethod = 
+              io.grpc.MethodDescriptor.<io.bloombox.schema.services.menu.v1beta1.ProductStock.Request, com.google.protobuf.Empty>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(
+                  "bloombox.services.menu.v1beta1.Menu", "OutOfStock"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  io.bloombox.schema.services.menu.v1beta1.ProductStock.Request.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.google.protobuf.Empty.getDefaultInstance()))
+                  .setSchemaDescriptor(new MenuMethodDescriptorSupplier("OutOfStock"))
+                  .build();
+          }
+        }
+     }
+     return getOutOfStockMethod;
+  }
 
   /**
    * Creates a new async stub that supports all call types for the service
@@ -217,7 +436,7 @@ public final class MenuGrpc {
      */
     public void retrieve(io.bloombox.schema.services.menu.v1beta1.GetMenu.Request request,
         io.grpc.stub.StreamObserver<io.bloombox.schema.services.menu.v1beta1.GetMenu.Response> responseObserver) {
-      asyncUnimplementedUnaryCall(METHOD_RETRIEVE, responseObserver);
+      asyncUnimplementedUnaryCall(getRetrieveMethod(), responseObserver);
     }
 
     /**
@@ -227,7 +446,7 @@ public final class MenuGrpc {
      */
     public void section(io.bloombox.schema.services.menu.v1beta1.GetMenu.Request request,
         io.grpc.stub.StreamObserver<io.bloombox.schema.services.menu.v1beta1.GetMenu.Response> responseObserver) {
-      asyncUnimplementedUnaryCall(METHOD_SECTION, responseObserver);
+      asyncUnimplementedUnaryCall(getSectionMethod(), responseObserver);
     }
 
     /**
@@ -237,7 +456,7 @@ public final class MenuGrpc {
      */
     public void featured(io.bloombox.schema.services.menu.v1beta1.GetFeatured.Request request,
         io.grpc.stub.StreamObserver<io.bloombox.schema.services.menu.v1beta1.GetFeatured.Response> responseObserver) {
-      asyncUnimplementedUnaryCall(METHOD_FEATURED, responseObserver);
+      asyncUnimplementedUnaryCall(getFeaturedMethod(), responseObserver);
     }
 
     /**
@@ -247,7 +466,7 @@ public final class MenuGrpc {
      */
     public void products(io.bloombox.schema.services.menu.v1beta1.GetProduct.Request request,
         io.grpc.stub.StreamObserver<io.bloombox.schema.services.menu.v1beta1.GetProduct.Response> responseObserver) {
-      asyncUnimplementedUnaryCall(METHOD_PRODUCTS, responseObserver);
+      asyncUnimplementedUnaryCall(getProductsMethod(), responseObserver);
     }
 
     /**
@@ -257,7 +476,7 @@ public final class MenuGrpc {
      */
     public void search(io.bloombox.schema.services.menu.v1beta1.SearchMenu.Request request,
         io.grpc.stub.StreamObserver<io.bloombox.schema.services.menu.v1beta1.SearchMenu.Response> responseObserver) {
-      asyncUnimplementedUnaryCall(METHOD_SEARCH, responseObserver);
+      asyncUnimplementedUnaryCall(getSearchMethod(), responseObserver);
     }
 
     /**
@@ -267,7 +486,7 @@ public final class MenuGrpc {
      */
     public void create(io.bloombox.schema.services.menu.v1beta1.CreateProduct.Request request,
         io.grpc.stub.StreamObserver<io.bloombox.schema.services.menu.v1beta1.CreateProduct.Response> responseObserver) {
-      asyncUnimplementedUnaryCall(METHOD_CREATE, responseObserver);
+      asyncUnimplementedUnaryCall(getCreateMethod(), responseObserver);
     }
 
     /**
@@ -277,7 +496,7 @@ public final class MenuGrpc {
      */
     public void update(io.bloombox.schema.services.menu.v1beta1.UpdateProduct.Request request,
         io.grpc.stub.StreamObserver<com.google.protobuf.Empty> responseObserver) {
-      asyncUnimplementedUnaryCall(METHOD_UPDATE, responseObserver);
+      asyncUnimplementedUnaryCall(getUpdateMethod(), responseObserver);
     }
 
     /**
@@ -287,7 +506,7 @@ public final class MenuGrpc {
      */
     public void remove(io.bloombox.schema.services.menu.v1beta1.DeleteProduct.Request request,
         io.grpc.stub.StreamObserver<com.google.protobuf.Empty> responseObserver) {
-      asyncUnimplementedUnaryCall(METHOD_REMOVE, responseObserver);
+      asyncUnimplementedUnaryCall(getRemoveMethod(), responseObserver);
     }
 
     /**
@@ -297,7 +516,7 @@ public final class MenuGrpc {
      */
     public void productStatus(io.bloombox.schema.services.menu.v1beta1.ProductStock.Request request,
         io.grpc.stub.StreamObserver<com.google.protobuf.Empty> responseObserver) {
-      asyncUnimplementedUnaryCall(METHOD_PRODUCT_STATUS, responseObserver);
+      asyncUnimplementedUnaryCall(getProductStatusMethod(), responseObserver);
     }
 
     /**
@@ -307,7 +526,7 @@ public final class MenuGrpc {
      */
     public void inStock(io.bloombox.schema.services.menu.v1beta1.ProductStock.Request request,
         io.grpc.stub.StreamObserver<com.google.protobuf.Empty> responseObserver) {
-      asyncUnimplementedUnaryCall(METHOD_IN_STOCK, responseObserver);
+      asyncUnimplementedUnaryCall(getInStockMethod(), responseObserver);
     }
 
     /**
@@ -317,83 +536,83 @@ public final class MenuGrpc {
      */
     public void outOfStock(io.bloombox.schema.services.menu.v1beta1.ProductStock.Request request,
         io.grpc.stub.StreamObserver<com.google.protobuf.Empty> responseObserver) {
-      asyncUnimplementedUnaryCall(METHOD_OUT_OF_STOCK, responseObserver);
+      asyncUnimplementedUnaryCall(getOutOfStockMethod(), responseObserver);
     }
 
     @java.lang.Override public final io.grpc.ServerServiceDefinition bindService() {
       return io.grpc.ServerServiceDefinition.builder(getServiceDescriptor())
           .addMethod(
-            METHOD_RETRIEVE,
+            getRetrieveMethod(),
             asyncUnaryCall(
               new MethodHandlers<
                 io.bloombox.schema.services.menu.v1beta1.GetMenu.Request,
                 io.bloombox.schema.services.menu.v1beta1.GetMenu.Response>(
                   this, METHODID_RETRIEVE)))
           .addMethod(
-            METHOD_SECTION,
+            getSectionMethod(),
             asyncUnaryCall(
               new MethodHandlers<
                 io.bloombox.schema.services.menu.v1beta1.GetMenu.Request,
                 io.bloombox.schema.services.menu.v1beta1.GetMenu.Response>(
                   this, METHODID_SECTION)))
           .addMethod(
-            METHOD_FEATURED,
+            getFeaturedMethod(),
             asyncUnaryCall(
               new MethodHandlers<
                 io.bloombox.schema.services.menu.v1beta1.GetFeatured.Request,
                 io.bloombox.schema.services.menu.v1beta1.GetFeatured.Response>(
                   this, METHODID_FEATURED)))
           .addMethod(
-            METHOD_PRODUCTS,
+            getProductsMethod(),
             asyncUnaryCall(
               new MethodHandlers<
                 io.bloombox.schema.services.menu.v1beta1.GetProduct.Request,
                 io.bloombox.schema.services.menu.v1beta1.GetProduct.Response>(
                   this, METHODID_PRODUCTS)))
           .addMethod(
-            METHOD_SEARCH,
+            getSearchMethod(),
             asyncUnaryCall(
               new MethodHandlers<
                 io.bloombox.schema.services.menu.v1beta1.SearchMenu.Request,
                 io.bloombox.schema.services.menu.v1beta1.SearchMenu.Response>(
                   this, METHODID_SEARCH)))
           .addMethod(
-            METHOD_CREATE,
+            getCreateMethod(),
             asyncUnaryCall(
               new MethodHandlers<
                 io.bloombox.schema.services.menu.v1beta1.CreateProduct.Request,
                 io.bloombox.schema.services.menu.v1beta1.CreateProduct.Response>(
                   this, METHODID_CREATE)))
           .addMethod(
-            METHOD_UPDATE,
+            getUpdateMethod(),
             asyncUnaryCall(
               new MethodHandlers<
                 io.bloombox.schema.services.menu.v1beta1.UpdateProduct.Request,
                 com.google.protobuf.Empty>(
                   this, METHODID_UPDATE)))
           .addMethod(
-            METHOD_REMOVE,
+            getRemoveMethod(),
             asyncUnaryCall(
               new MethodHandlers<
                 io.bloombox.schema.services.menu.v1beta1.DeleteProduct.Request,
                 com.google.protobuf.Empty>(
                   this, METHODID_REMOVE)))
           .addMethod(
-            METHOD_PRODUCT_STATUS,
+            getProductStatusMethod(),
             asyncUnaryCall(
               new MethodHandlers<
                 io.bloombox.schema.services.menu.v1beta1.ProductStock.Request,
                 com.google.protobuf.Empty>(
                   this, METHODID_PRODUCT_STATUS)))
           .addMethod(
-            METHOD_IN_STOCK,
+            getInStockMethod(),
             asyncUnaryCall(
               new MethodHandlers<
                 io.bloombox.schema.services.menu.v1beta1.ProductStock.Request,
                 com.google.protobuf.Empty>(
                   this, METHODID_IN_STOCK)))
           .addMethod(
-            METHOD_OUT_OF_STOCK,
+            getOutOfStockMethod(),
             asyncUnaryCall(
               new MethodHandlers<
                 io.bloombox.schema.services.menu.v1beta1.ProductStock.Request,
@@ -432,7 +651,7 @@ public final class MenuGrpc {
     public void retrieve(io.bloombox.schema.services.menu.v1beta1.GetMenu.Request request,
         io.grpc.stub.StreamObserver<io.bloombox.schema.services.menu.v1beta1.GetMenu.Response> responseObserver) {
       asyncUnaryCall(
-          getChannel().newCall(METHOD_RETRIEVE, getCallOptions()), request, responseObserver);
+          getChannel().newCall(getRetrieveMethod(), getCallOptions()), request, responseObserver);
     }
 
     /**
@@ -443,7 +662,7 @@ public final class MenuGrpc {
     public void section(io.bloombox.schema.services.menu.v1beta1.GetMenu.Request request,
         io.grpc.stub.StreamObserver<io.bloombox.schema.services.menu.v1beta1.GetMenu.Response> responseObserver) {
       asyncUnaryCall(
-          getChannel().newCall(METHOD_SECTION, getCallOptions()), request, responseObserver);
+          getChannel().newCall(getSectionMethod(), getCallOptions()), request, responseObserver);
     }
 
     /**
@@ -454,7 +673,7 @@ public final class MenuGrpc {
     public void featured(io.bloombox.schema.services.menu.v1beta1.GetFeatured.Request request,
         io.grpc.stub.StreamObserver<io.bloombox.schema.services.menu.v1beta1.GetFeatured.Response> responseObserver) {
       asyncUnaryCall(
-          getChannel().newCall(METHOD_FEATURED, getCallOptions()), request, responseObserver);
+          getChannel().newCall(getFeaturedMethod(), getCallOptions()), request, responseObserver);
     }
 
     /**
@@ -465,7 +684,7 @@ public final class MenuGrpc {
     public void products(io.bloombox.schema.services.menu.v1beta1.GetProduct.Request request,
         io.grpc.stub.StreamObserver<io.bloombox.schema.services.menu.v1beta1.GetProduct.Response> responseObserver) {
       asyncUnaryCall(
-          getChannel().newCall(METHOD_PRODUCTS, getCallOptions()), request, responseObserver);
+          getChannel().newCall(getProductsMethod(), getCallOptions()), request, responseObserver);
     }
 
     /**
@@ -476,7 +695,7 @@ public final class MenuGrpc {
     public void search(io.bloombox.schema.services.menu.v1beta1.SearchMenu.Request request,
         io.grpc.stub.StreamObserver<io.bloombox.schema.services.menu.v1beta1.SearchMenu.Response> responseObserver) {
       asyncUnaryCall(
-          getChannel().newCall(METHOD_SEARCH, getCallOptions()), request, responseObserver);
+          getChannel().newCall(getSearchMethod(), getCallOptions()), request, responseObserver);
     }
 
     /**
@@ -487,7 +706,7 @@ public final class MenuGrpc {
     public void create(io.bloombox.schema.services.menu.v1beta1.CreateProduct.Request request,
         io.grpc.stub.StreamObserver<io.bloombox.schema.services.menu.v1beta1.CreateProduct.Response> responseObserver) {
       asyncUnaryCall(
-          getChannel().newCall(METHOD_CREATE, getCallOptions()), request, responseObserver);
+          getChannel().newCall(getCreateMethod(), getCallOptions()), request, responseObserver);
     }
 
     /**
@@ -498,7 +717,7 @@ public final class MenuGrpc {
     public void update(io.bloombox.schema.services.menu.v1beta1.UpdateProduct.Request request,
         io.grpc.stub.StreamObserver<com.google.protobuf.Empty> responseObserver) {
       asyncUnaryCall(
-          getChannel().newCall(METHOD_UPDATE, getCallOptions()), request, responseObserver);
+          getChannel().newCall(getUpdateMethod(), getCallOptions()), request, responseObserver);
     }
 
     /**
@@ -509,7 +728,7 @@ public final class MenuGrpc {
     public void remove(io.bloombox.schema.services.menu.v1beta1.DeleteProduct.Request request,
         io.grpc.stub.StreamObserver<com.google.protobuf.Empty> responseObserver) {
       asyncUnaryCall(
-          getChannel().newCall(METHOD_REMOVE, getCallOptions()), request, responseObserver);
+          getChannel().newCall(getRemoveMethod(), getCallOptions()), request, responseObserver);
     }
 
     /**
@@ -520,7 +739,7 @@ public final class MenuGrpc {
     public void productStatus(io.bloombox.schema.services.menu.v1beta1.ProductStock.Request request,
         io.grpc.stub.StreamObserver<com.google.protobuf.Empty> responseObserver) {
       asyncUnaryCall(
-          getChannel().newCall(METHOD_PRODUCT_STATUS, getCallOptions()), request, responseObserver);
+          getChannel().newCall(getProductStatusMethod(), getCallOptions()), request, responseObserver);
     }
 
     /**
@@ -531,7 +750,7 @@ public final class MenuGrpc {
     public void inStock(io.bloombox.schema.services.menu.v1beta1.ProductStock.Request request,
         io.grpc.stub.StreamObserver<com.google.protobuf.Empty> responseObserver) {
       asyncUnaryCall(
-          getChannel().newCall(METHOD_IN_STOCK, getCallOptions()), request, responseObserver);
+          getChannel().newCall(getInStockMethod(), getCallOptions()), request, responseObserver);
     }
 
     /**
@@ -542,7 +761,7 @@ public final class MenuGrpc {
     public void outOfStock(io.bloombox.schema.services.menu.v1beta1.ProductStock.Request request,
         io.grpc.stub.StreamObserver<com.google.protobuf.Empty> responseObserver) {
       asyncUnaryCall(
-          getChannel().newCall(METHOD_OUT_OF_STOCK, getCallOptions()), request, responseObserver);
+          getChannel().newCall(getOutOfStockMethod(), getCallOptions()), request, responseObserver);
     }
   }
 
@@ -574,7 +793,7 @@ public final class MenuGrpc {
      */
     public io.bloombox.schema.services.menu.v1beta1.GetMenu.Response retrieve(io.bloombox.schema.services.menu.v1beta1.GetMenu.Request request) {
       return blockingUnaryCall(
-          getChannel(), METHOD_RETRIEVE, getCallOptions(), request);
+          getChannel(), getRetrieveMethod(), getCallOptions(), request);
     }
 
     /**
@@ -584,7 +803,7 @@ public final class MenuGrpc {
      */
     public io.bloombox.schema.services.menu.v1beta1.GetMenu.Response section(io.bloombox.schema.services.menu.v1beta1.GetMenu.Request request) {
       return blockingUnaryCall(
-          getChannel(), METHOD_SECTION, getCallOptions(), request);
+          getChannel(), getSectionMethod(), getCallOptions(), request);
     }
 
     /**
@@ -594,7 +813,7 @@ public final class MenuGrpc {
      */
     public io.bloombox.schema.services.menu.v1beta1.GetFeatured.Response featured(io.bloombox.schema.services.menu.v1beta1.GetFeatured.Request request) {
       return blockingUnaryCall(
-          getChannel(), METHOD_FEATURED, getCallOptions(), request);
+          getChannel(), getFeaturedMethod(), getCallOptions(), request);
     }
 
     /**
@@ -604,7 +823,7 @@ public final class MenuGrpc {
      */
     public io.bloombox.schema.services.menu.v1beta1.GetProduct.Response products(io.bloombox.schema.services.menu.v1beta1.GetProduct.Request request) {
       return blockingUnaryCall(
-          getChannel(), METHOD_PRODUCTS, getCallOptions(), request);
+          getChannel(), getProductsMethod(), getCallOptions(), request);
     }
 
     /**
@@ -614,7 +833,7 @@ public final class MenuGrpc {
      */
     public io.bloombox.schema.services.menu.v1beta1.SearchMenu.Response search(io.bloombox.schema.services.menu.v1beta1.SearchMenu.Request request) {
       return blockingUnaryCall(
-          getChannel(), METHOD_SEARCH, getCallOptions(), request);
+          getChannel(), getSearchMethod(), getCallOptions(), request);
     }
 
     /**
@@ -624,7 +843,7 @@ public final class MenuGrpc {
      */
     public io.bloombox.schema.services.menu.v1beta1.CreateProduct.Response create(io.bloombox.schema.services.menu.v1beta1.CreateProduct.Request request) {
       return blockingUnaryCall(
-          getChannel(), METHOD_CREATE, getCallOptions(), request);
+          getChannel(), getCreateMethod(), getCallOptions(), request);
     }
 
     /**
@@ -634,7 +853,7 @@ public final class MenuGrpc {
      */
     public com.google.protobuf.Empty update(io.bloombox.schema.services.menu.v1beta1.UpdateProduct.Request request) {
       return blockingUnaryCall(
-          getChannel(), METHOD_UPDATE, getCallOptions(), request);
+          getChannel(), getUpdateMethod(), getCallOptions(), request);
     }
 
     /**
@@ -644,7 +863,7 @@ public final class MenuGrpc {
      */
     public com.google.protobuf.Empty remove(io.bloombox.schema.services.menu.v1beta1.DeleteProduct.Request request) {
       return blockingUnaryCall(
-          getChannel(), METHOD_REMOVE, getCallOptions(), request);
+          getChannel(), getRemoveMethod(), getCallOptions(), request);
     }
 
     /**
@@ -654,7 +873,7 @@ public final class MenuGrpc {
      */
     public com.google.protobuf.Empty productStatus(io.bloombox.schema.services.menu.v1beta1.ProductStock.Request request) {
       return blockingUnaryCall(
-          getChannel(), METHOD_PRODUCT_STATUS, getCallOptions(), request);
+          getChannel(), getProductStatusMethod(), getCallOptions(), request);
     }
 
     /**
@@ -664,7 +883,7 @@ public final class MenuGrpc {
      */
     public com.google.protobuf.Empty inStock(io.bloombox.schema.services.menu.v1beta1.ProductStock.Request request) {
       return blockingUnaryCall(
-          getChannel(), METHOD_IN_STOCK, getCallOptions(), request);
+          getChannel(), getInStockMethod(), getCallOptions(), request);
     }
 
     /**
@@ -674,7 +893,7 @@ public final class MenuGrpc {
      */
     public com.google.protobuf.Empty outOfStock(io.bloombox.schema.services.menu.v1beta1.ProductStock.Request request) {
       return blockingUnaryCall(
-          getChannel(), METHOD_OUT_OF_STOCK, getCallOptions(), request);
+          getChannel(), getOutOfStockMethod(), getCallOptions(), request);
     }
   }
 
@@ -707,7 +926,7 @@ public final class MenuGrpc {
     public com.google.common.util.concurrent.ListenableFuture<io.bloombox.schema.services.menu.v1beta1.GetMenu.Response> retrieve(
         io.bloombox.schema.services.menu.v1beta1.GetMenu.Request request) {
       return futureUnaryCall(
-          getChannel().newCall(METHOD_RETRIEVE, getCallOptions()), request);
+          getChannel().newCall(getRetrieveMethod(), getCallOptions()), request);
     }
 
     /**
@@ -718,7 +937,7 @@ public final class MenuGrpc {
     public com.google.common.util.concurrent.ListenableFuture<io.bloombox.schema.services.menu.v1beta1.GetMenu.Response> section(
         io.bloombox.schema.services.menu.v1beta1.GetMenu.Request request) {
       return futureUnaryCall(
-          getChannel().newCall(METHOD_SECTION, getCallOptions()), request);
+          getChannel().newCall(getSectionMethod(), getCallOptions()), request);
     }
 
     /**
@@ -729,7 +948,7 @@ public final class MenuGrpc {
     public com.google.common.util.concurrent.ListenableFuture<io.bloombox.schema.services.menu.v1beta1.GetFeatured.Response> featured(
         io.bloombox.schema.services.menu.v1beta1.GetFeatured.Request request) {
       return futureUnaryCall(
-          getChannel().newCall(METHOD_FEATURED, getCallOptions()), request);
+          getChannel().newCall(getFeaturedMethod(), getCallOptions()), request);
     }
 
     /**
@@ -740,7 +959,7 @@ public final class MenuGrpc {
     public com.google.common.util.concurrent.ListenableFuture<io.bloombox.schema.services.menu.v1beta1.GetProduct.Response> products(
         io.bloombox.schema.services.menu.v1beta1.GetProduct.Request request) {
       return futureUnaryCall(
-          getChannel().newCall(METHOD_PRODUCTS, getCallOptions()), request);
+          getChannel().newCall(getProductsMethod(), getCallOptions()), request);
     }
 
     /**
@@ -751,7 +970,7 @@ public final class MenuGrpc {
     public com.google.common.util.concurrent.ListenableFuture<io.bloombox.schema.services.menu.v1beta1.SearchMenu.Response> search(
         io.bloombox.schema.services.menu.v1beta1.SearchMenu.Request request) {
       return futureUnaryCall(
-          getChannel().newCall(METHOD_SEARCH, getCallOptions()), request);
+          getChannel().newCall(getSearchMethod(), getCallOptions()), request);
     }
 
     /**
@@ -762,7 +981,7 @@ public final class MenuGrpc {
     public com.google.common.util.concurrent.ListenableFuture<io.bloombox.schema.services.menu.v1beta1.CreateProduct.Response> create(
         io.bloombox.schema.services.menu.v1beta1.CreateProduct.Request request) {
       return futureUnaryCall(
-          getChannel().newCall(METHOD_CREATE, getCallOptions()), request);
+          getChannel().newCall(getCreateMethod(), getCallOptions()), request);
     }
 
     /**
@@ -773,7 +992,7 @@ public final class MenuGrpc {
     public com.google.common.util.concurrent.ListenableFuture<com.google.protobuf.Empty> update(
         io.bloombox.schema.services.menu.v1beta1.UpdateProduct.Request request) {
       return futureUnaryCall(
-          getChannel().newCall(METHOD_UPDATE, getCallOptions()), request);
+          getChannel().newCall(getUpdateMethod(), getCallOptions()), request);
     }
 
     /**
@@ -784,7 +1003,7 @@ public final class MenuGrpc {
     public com.google.common.util.concurrent.ListenableFuture<com.google.protobuf.Empty> remove(
         io.bloombox.schema.services.menu.v1beta1.DeleteProduct.Request request) {
       return futureUnaryCall(
-          getChannel().newCall(METHOD_REMOVE, getCallOptions()), request);
+          getChannel().newCall(getRemoveMethod(), getCallOptions()), request);
     }
 
     /**
@@ -795,7 +1014,7 @@ public final class MenuGrpc {
     public com.google.common.util.concurrent.ListenableFuture<com.google.protobuf.Empty> productStatus(
         io.bloombox.schema.services.menu.v1beta1.ProductStock.Request request) {
       return futureUnaryCall(
-          getChannel().newCall(METHOD_PRODUCT_STATUS, getCallOptions()), request);
+          getChannel().newCall(getProductStatusMethod(), getCallOptions()), request);
     }
 
     /**
@@ -806,7 +1025,7 @@ public final class MenuGrpc {
     public com.google.common.util.concurrent.ListenableFuture<com.google.protobuf.Empty> inStock(
         io.bloombox.schema.services.menu.v1beta1.ProductStock.Request request) {
       return futureUnaryCall(
-          getChannel().newCall(METHOD_IN_STOCK, getCallOptions()), request);
+          getChannel().newCall(getInStockMethod(), getCallOptions()), request);
     }
 
     /**
@@ -817,7 +1036,7 @@ public final class MenuGrpc {
     public com.google.common.util.concurrent.ListenableFuture<com.google.protobuf.Empty> outOfStock(
         io.bloombox.schema.services.menu.v1beta1.ProductStock.Request request) {
       return futureUnaryCall(
-          getChannel().newCall(METHOD_OUT_OF_STOCK, getCallOptions()), request);
+          getChannel().newCall(getOutOfStockMethod(), getCallOptions()), request);
     }
   }
 
@@ -910,10 +1129,38 @@ public final class MenuGrpc {
     }
   }
 
-  private static final class MenuDescriptorSupplier implements io.grpc.protobuf.ProtoFileDescriptorSupplier {
+  private static abstract class MenuBaseDescriptorSupplier
+      implements io.grpc.protobuf.ProtoFileDescriptorSupplier, io.grpc.protobuf.ProtoServiceDescriptorSupplier {
+    MenuBaseDescriptorSupplier() {}
+
     @java.lang.Override
     public com.google.protobuf.Descriptors.FileDescriptor getFileDescriptor() {
       return io.bloombox.schema.services.menu.v1beta1.MenuServiceBeta1.getDescriptor();
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Descriptors.ServiceDescriptor getServiceDescriptor() {
+      return getFileDescriptor().findServiceByName("Menu");
+    }
+  }
+
+  private static final class MenuFileDescriptorSupplier
+      extends MenuBaseDescriptorSupplier {
+    MenuFileDescriptorSupplier() {}
+  }
+
+  private static final class MenuMethodDescriptorSupplier
+      extends MenuBaseDescriptorSupplier
+      implements io.grpc.protobuf.ProtoMethodDescriptorSupplier {
+    private final String methodName;
+
+    MenuMethodDescriptorSupplier(String methodName) {
+      this.methodName = methodName;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Descriptors.MethodDescriptor getMethodDescriptor() {
+      return getServiceDescriptor().findMethodByName(methodName);
     }
   }
 
@@ -926,18 +1173,18 @@ public final class MenuGrpc {
         result = serviceDescriptor;
         if (result == null) {
           serviceDescriptor = result = io.grpc.ServiceDescriptor.newBuilder(SERVICE_NAME)
-              .setSchemaDescriptor(new MenuDescriptorSupplier())
-              .addMethod(METHOD_RETRIEVE)
-              .addMethod(METHOD_SECTION)
-              .addMethod(METHOD_FEATURED)
-              .addMethod(METHOD_PRODUCTS)
-              .addMethod(METHOD_SEARCH)
-              .addMethod(METHOD_CREATE)
-              .addMethod(METHOD_UPDATE)
-              .addMethod(METHOD_REMOVE)
-              .addMethod(METHOD_PRODUCT_STATUS)
-              .addMethod(METHOD_IN_STOCK)
-              .addMethod(METHOD_OUT_OF_STOCK)
+              .setSchemaDescriptor(new MenuFileDescriptorSupplier())
+              .addMethod(getRetrieveMethod())
+              .addMethod(getSectionMethod())
+              .addMethod(getFeaturedMethod())
+              .addMethod(getProductsMethod())
+              .addMethod(getSearchMethod())
+              .addMethod(getCreateMethod())
+              .addMethod(getUpdateMethod())
+              .addMethod(getRemoveMethod())
+              .addMethod(getProductStatusMethod())
+              .addMethod(getInStockMethod())
+              .addMethod(getOutOfStockMethod())
               .build();
         }
       }

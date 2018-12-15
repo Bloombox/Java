@@ -1,11 +1,12 @@
 /*
- * Copyright 2018, Bloombox, LLC.
+ * Copyright 2018, Momentum Ideas, Co. All rights reserved.
  *
- * Licensed under the Apache License, Version 2.0 (the "License");
- * you may not use this file except in compliance with the License.
- * You may obtain a copy of the License at
- *
- *     http://www.apache.org/licenses/LICENSE-2.0
+ * Source and object computer code contained herein is the private intellectual
+ * property of Momentum Ideas Co., a Delaware Corporation. Use of this
+ * code in source form requires permission in writing before use or the
+ * assembly, distribution, or publishing of derivative works, for commercial
+ * purposes or any other purpose, from a duly authorized officer of Momentum
+ * Ideas Co.
  *
  * Unless required by applicable law or agreed to in writing, software
  * distributed under the License is distributed on an "AS IS" BASIS,
@@ -36,7 +37,7 @@ public final class Licensure {
    * "permanent," meaning they do not have expiration parameters built in besides regular compliance.
    * </pre>
    *
-   * Protobuf enum {@code bloombox.schema.licensure.LicenseType}
+   * Protobuf enum {@code bloombox.licensure.LicenseType}
    */
   public enum LicenseType
       implements com.google.protobuf.ProtocolMessageEnum {
@@ -175,7 +176,7 @@ public final class Licensure {
       this.value = value;
     }
 
-    // @@protoc_insertion_point(enum_scope:bloombox.schema.licensure.LicenseType)
+    // @@protoc_insertion_point(enum_scope:bloombox.licensure.LicenseType)
   }
 
   /**
@@ -184,7 +185,7 @@ public final class Licensure {
    * of a given organization or individual in the supply chain.
    * </pre>
    *
-   * Protobuf enum {@code bloombox.schema.licensure.LicensePrivilege}
+   * Protobuf enum {@code bloombox.licensure.LicensePrivilege}
    */
   public enum LicensePrivilege
       implements com.google.protobuf.ProtocolMessageEnum {
@@ -458,7 +459,7 @@ public final class Licensure {
       this.value = value;
     }
 
-    // @@protoc_insertion_point(enum_scope:bloombox.schema.licensure.LicensePrivilege)
+    // @@protoc_insertion_point(enum_scope:bloombox.licensure.LicensePrivilege)
   }
 
   /**
@@ -467,7 +468,7 @@ public final class Licensure {
    * are enumerated here with descriptions.
    * </pre>
    *
-   * Protobuf enum {@code bloombox.schema.licensure.LicenseStatus}
+   * Protobuf enum {@code bloombox.licensure.LicenseStatus}
    */
   public enum LicenseStatus
       implements com.google.protobuf.ProtocolMessageEnum {
@@ -665,11 +666,11 @@ public final class Licensure {
       this.value = value;
     }
 
-    // @@protoc_insertion_point(enum_scope:bloombox.schema.licensure.LicenseStatus)
+    // @@protoc_insertion_point(enum_scope:bloombox.licensure.LicenseStatus)
   }
 
   public interface LicensingAuthorityOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:bloombox.schema.licensure.LicensingAuthority)
+      // @@protoc_insertion_point(interface_extends:bloombox.licensure.LicensingAuthority)
       com.google.protobuf.MessageOrBuilder {
 
     /**
@@ -677,7 +678,7 @@ public final class Licensure {
      * Specifies a license issued by a "local" (or municipal) jurisdiction, which is to say, a township or city.
      * </pre>
      *
-     * <code>.bloombox.schema.licensure.LicensingAuthority.LocalLicense local = 1;</code>
+     * <code>.bloombox.licensure.LicensingAuthority.LocalLicense local = 1;</code>
      */
     boolean hasLocal();
     /**
@@ -685,7 +686,7 @@ public final class Licensure {
      * Specifies a license issued by a "local" (or municipal) jurisdiction, which is to say, a township or city.
      * </pre>
      *
-     * <code>.bloombox.schema.licensure.LicensingAuthority.LocalLicense local = 1;</code>
+     * <code>.bloombox.licensure.LicensingAuthority.LocalLicense local = 1;</code>
      */
     io.bloombox.schema.licensure.Licensure.LicensingAuthority.LocalLicense getLocal();
     /**
@@ -693,7 +694,7 @@ public final class Licensure {
      * Specifies a license issued by a "local" (or municipal) jurisdiction, which is to say, a township or city.
      * </pre>
      *
-     * <code>.bloombox.schema.licensure.LicensingAuthority.LocalLicense local = 1;</code>
+     * <code>.bloombox.licensure.LicensingAuthority.LocalLicense local = 1;</code>
      */
     io.bloombox.schema.licensure.Licensure.LicensingAuthority.LocalLicenseOrBuilder getLocalOrBuilder();
 
@@ -702,7 +703,7 @@ public final class Licensure {
      * Specifies a license issued by a semi-local (provincial) jurisdiction, which is to say, a county.
      * </pre>
      *
-     * <code>.bloombox.schema.licensure.LicensingAuthority.CountyLicense county = 2;</code>
+     * <code>.bloombox.licensure.LicensingAuthority.CountyLicense county = 2;</code>
      */
     boolean hasCounty();
     /**
@@ -710,7 +711,7 @@ public final class Licensure {
      * Specifies a license issued by a semi-local (provincial) jurisdiction, which is to say, a county.
      * </pre>
      *
-     * <code>.bloombox.schema.licensure.LicensingAuthority.CountyLicense county = 2;</code>
+     * <code>.bloombox.licensure.LicensingAuthority.CountyLicense county = 2;</code>
      */
     io.bloombox.schema.licensure.Licensure.LicensingAuthority.CountyLicense getCounty();
     /**
@@ -718,7 +719,7 @@ public final class Licensure {
      * Specifies a license issued by a semi-local (provincial) jurisdiction, which is to say, a county.
      * </pre>
      *
-     * <code>.bloombox.schema.licensure.LicensingAuthority.CountyLicense county = 2;</code>
+     * <code>.bloombox.licensure.LicensingAuthority.CountyLicense county = 2;</code>
      */
     io.bloombox.schema.licensure.Licensure.LicensingAuthority.CountyLicenseOrBuilder getCountyOrBuilder();
 
@@ -727,7 +728,7 @@ public final class Licensure {
      * Specifies a license issued by a regional jurisdiction, which is to say, a state.
      * </pre>
      *
-     * <code>.bloombox.schema.licensure.LicensingAuthority.StateLicense state = 3;</code>
+     * <code>.bloombox.licensure.LicensingAuthority.StateLicense state = 3;</code>
      */
     boolean hasState();
     /**
@@ -735,7 +736,7 @@ public final class Licensure {
      * Specifies a license issued by a regional jurisdiction, which is to say, a state.
      * </pre>
      *
-     * <code>.bloombox.schema.licensure.LicensingAuthority.StateLicense state = 3;</code>
+     * <code>.bloombox.licensure.LicensingAuthority.StateLicense state = 3;</code>
      */
     io.bloombox.schema.licensure.Licensure.LicensingAuthority.StateLicense getState();
     /**
@@ -743,7 +744,7 @@ public final class Licensure {
      * Specifies a license issued by a regional jurisdiction, which is to say, a state.
      * </pre>
      *
-     * <code>.bloombox.schema.licensure.LicensingAuthority.StateLicense state = 3;</code>
+     * <code>.bloombox.licensure.LicensingAuthority.StateLicense state = 3;</code>
      */
     io.bloombox.schema.licensure.Licensure.LicensingAuthority.StateLicenseOrBuilder getStateOrBuilder();
 
@@ -756,11 +757,11 @@ public final class Licensure {
    * the subject license.
    * </pre>
    *
-   * Protobuf type {@code bloombox.schema.licensure.LicensingAuthority}
+   * Protobuf type {@code bloombox.licensure.LicensingAuthority}
    */
   public  static final class LicensingAuthority extends
       com.google.protobuf.GeneratedMessageV3 implements
-      // @@protoc_insertion_point(message_implements:bloombox.schema.licensure.LicensingAuthority)
+      // @@protoc_insertion_point(message_implements:bloombox.licensure.LicensingAuthority)
       LicensingAuthorityOrBuilder {
   private static final long serialVersionUID = 0L;
     // Use LicensingAuthority.newBuilder() to construct.
@@ -794,13 +795,6 @@ public final class Licensure {
             case 0:
               done = true;
               break;
-            default: {
-              if (!parseUnknownFieldProto3(
-                  input, unknownFields, extensionRegistry, tag)) {
-                done = true;
-              }
-              break;
-            }
             case 10: {
               io.bloombox.schema.licensure.Licensure.LicensingAuthority.LocalLicense.Builder subBuilder = null;
               if (jurisdictionCase_ == 1) {
@@ -843,6 +837,13 @@ public final class Licensure {
               jurisdictionCase_ = 3;
               break;
             }
+            default: {
+              if (!parseUnknownFieldProto3(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
           }
         }
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
@@ -857,18 +858,19 @@ public final class Licensure {
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return io.bloombox.schema.licensure.Licensure.internal_static_bloombox_schema_licensure_LicensingAuthority_descriptor;
+      return io.bloombox.schema.licensure.Licensure.internal_static_bloombox_licensure_LicensingAuthority_descriptor;
     }
 
+    @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return io.bloombox.schema.licensure.Licensure.internal_static_bloombox_schema_licensure_LicensingAuthority_fieldAccessorTable
+      return io.bloombox.schema.licensure.Licensure.internal_static_bloombox_licensure_LicensingAuthority_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
               io.bloombox.schema.licensure.Licensure.LicensingAuthority.class, io.bloombox.schema.licensure.Licensure.LicensingAuthority.Builder.class);
     }
 
     public interface LocalLicenseOrBuilder extends
-        // @@protoc_insertion_point(interface_extends:bloombox.schema.licensure.LicensingAuthority.LocalLicense)
+        // @@protoc_insertion_point(interface_extends:bloombox.licensure.LicensingAuthority.LocalLicense)
         com.google.protobuf.MessageOrBuilder {
 
       /**
@@ -922,7 +924,7 @@ public final class Licensure {
        *
        * <code>.opencannabis.geo.usa.ca.CaliforniaCounty california_county = 3;</code>
        */
-      opencannabis.geo.usa.ca.CACounty.CaliforniaCounty getCaliforniaCounty();
+      io.opencannabis.schema.geo.usa.California.CaliforniaCounty getCaliforniaCounty();
 
       /**
        * <pre>
@@ -969,11 +971,11 @@ public final class Licensure {
      * authorize industrial cannabis privileges.
      * </pre>
      *
-     * Protobuf type {@code bloombox.schema.licensure.LicensingAuthority.LocalLicense}
+     * Protobuf type {@code bloombox.licensure.LicensingAuthority.LocalLicense}
      */
     public  static final class LocalLicense extends
         com.google.protobuf.GeneratedMessageV3 implements
-        // @@protoc_insertion_point(message_implements:bloombox.schema.licensure.LicensingAuthority.LocalLicense)
+        // @@protoc_insertion_point(message_implements:bloombox.licensure.LicensingAuthority.LocalLicense)
         LocalLicenseOrBuilder {
     private static final long serialVersionUID = 0L;
       // Use LocalLicense.newBuilder() to construct.
@@ -1008,13 +1010,6 @@ public final class Licensure {
               case 0:
                 done = true;
                 break;
-              default: {
-                if (!parseUnknownFieldProto3(
-                    input, unknownFields, extensionRegistry, tag)) {
-                  done = true;
-                }
-                break;
-              }
               case 10: {
                 java.lang.String s = input.readStringRequireUtf8();
 
@@ -1045,6 +1040,13 @@ public final class Licensure {
                 province_ = rawValue;
                 break;
               }
+              default: {
+                if (!parseUnknownFieldProto3(
+                    input, unknownFields, extensionRegistry, tag)) {
+                  done = true;
+                }
+                break;
+              }
             }
           }
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
@@ -1059,12 +1061,13 @@ public final class Licensure {
       }
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return io.bloombox.schema.licensure.Licensure.internal_static_bloombox_schema_licensure_LicensingAuthority_LocalLicense_descriptor;
+        return io.bloombox.schema.licensure.Licensure.internal_static_bloombox_licensure_LicensingAuthority_LocalLicense_descriptor;
       }
 
+      @java.lang.Override
       protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return io.bloombox.schema.licensure.Licensure.internal_static_bloombox_schema_licensure_LicensingAuthority_LocalLicense_fieldAccessorTable
+        return io.bloombox.schema.licensure.Licensure.internal_static_bloombox_licensure_LicensingAuthority_LocalLicense_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
                 io.bloombox.schema.licensure.Licensure.LicensingAuthority.LocalLicense.class, io.bloombox.schema.licensure.Licensure.LicensingAuthority.LocalLicense.Builder.class);
       }
@@ -1259,13 +1262,14 @@ public final class Licensure {
        *
        * <code>.opencannabis.geo.usa.ca.CaliforniaCounty california_county = 3;</code>
        */
-      public opencannabis.geo.usa.ca.CACounty.CaliforniaCounty getCaliforniaCounty() {
+      public io.opencannabis.schema.geo.usa.California.CaliforniaCounty getCaliforniaCounty() {
         if (countyCase_ == 3) {
-          opencannabis.geo.usa.ca.CACounty.CaliforniaCounty result = opencannabis.geo.usa.ca.CACounty.CaliforniaCounty.valueOf(
+          @SuppressWarnings("deprecation")
+          io.opencannabis.schema.geo.usa.California.CaliforniaCounty result = io.opencannabis.schema.geo.usa.California.CaliforniaCounty.valueOf(
               (java.lang.Integer) county_);
-          return result == null ? opencannabis.geo.usa.ca.CACounty.CaliforniaCounty.UNRECOGNIZED : result;
+          return result == null ? io.opencannabis.schema.geo.usa.California.CaliforniaCounty.UNRECOGNIZED : result;
         }
-        return opencannabis.geo.usa.ca.CACounty.CaliforniaCounty.UNKNOWN_COUNTY;
+        return io.opencannabis.schema.geo.usa.California.CaliforniaCounty.UNKNOWN_COUNTY;
       }
 
       public static final int PROVINCE_NAME_FIELD_NUMBER = 4;
@@ -1342,6 +1346,7 @@ public final class Licensure {
        */
       public io.opencannabis.schema.geo.usa.USState getUsState() {
         if (provinceCase_ == 5) {
+          @SuppressWarnings("deprecation")
           io.opencannabis.schema.geo.usa.USState result = io.opencannabis.schema.geo.usa.USState.valueOf(
               (java.lang.Integer) province_);
           return result == null ? io.opencannabis.schema.geo.usa.USState.UNRECOGNIZED : result;
@@ -1350,6 +1355,7 @@ public final class Licensure {
       }
 
       private byte memoizedIsInitialized = -1;
+      @java.lang.Override
       public final boolean isInitialized() {
         byte isInitialized = memoizedIsInitialized;
         if (isInitialized == 1) return true;
@@ -1359,6 +1365,7 @@ public final class Licensure {
         return true;
       }
 
+      @java.lang.Override
       public void writeTo(com.google.protobuf.CodedOutputStream output)
                           throws java.io.IOException {
         if (!getMunicipalityBytes().isEmpty()) {
@@ -1379,6 +1386,7 @@ public final class Licensure {
         unknownFields.writeTo(output);
       }
 
+      @java.lang.Override
       public int getSerializedSize() {
         int size = memoizedSize;
         if (size != -1) return size;
@@ -1561,6 +1569,7 @@ public final class Licensure {
             .parseWithIOException(PARSER, input, extensionRegistry);
       }
 
+      @java.lang.Override
       public Builder newBuilderForType() { return newBuilder(); }
       public static Builder newBuilder() {
         return DEFAULT_INSTANCE.toBuilder();
@@ -1568,6 +1577,7 @@ public final class Licensure {
       public static Builder newBuilder(io.bloombox.schema.licensure.Licensure.LicensingAuthority.LocalLicense prototype) {
         return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
       }
+      @java.lang.Override
       public Builder toBuilder() {
         return this == DEFAULT_INSTANCE
             ? new Builder() : new Builder().mergeFrom(this);
@@ -1585,20 +1595,21 @@ public final class Licensure {
        * authorize industrial cannabis privileges.
        * </pre>
        *
-       * Protobuf type {@code bloombox.schema.licensure.LicensingAuthority.LocalLicense}
+       * Protobuf type {@code bloombox.licensure.LicensingAuthority.LocalLicense}
        */
       public static final class Builder extends
           com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-          // @@protoc_insertion_point(builder_implements:bloombox.schema.licensure.LicensingAuthority.LocalLicense)
+          // @@protoc_insertion_point(builder_implements:bloombox.licensure.LicensingAuthority.LocalLicense)
           io.bloombox.schema.licensure.Licensure.LicensingAuthority.LocalLicenseOrBuilder {
         public static final com.google.protobuf.Descriptors.Descriptor
             getDescriptor() {
-          return io.bloombox.schema.licensure.Licensure.internal_static_bloombox_schema_licensure_LicensingAuthority_LocalLicense_descriptor;
+          return io.bloombox.schema.licensure.Licensure.internal_static_bloombox_licensure_LicensingAuthority_LocalLicense_descriptor;
         }
 
+        @java.lang.Override
         protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
             internalGetFieldAccessorTable() {
-          return io.bloombox.schema.licensure.Licensure.internal_static_bloombox_schema_licensure_LicensingAuthority_LocalLicense_fieldAccessorTable
+          return io.bloombox.schema.licensure.Licensure.internal_static_bloombox_licensure_LicensingAuthority_LocalLicense_fieldAccessorTable
               .ensureFieldAccessorsInitialized(
                   io.bloombox.schema.licensure.Licensure.LicensingAuthority.LocalLicense.class, io.bloombox.schema.licensure.Licensure.LicensingAuthority.LocalLicense.Builder.class);
         }
@@ -1618,6 +1629,7 @@ public final class Licensure {
                   .alwaysUseFieldBuilders) {
           }
         }
+        @java.lang.Override
         public Builder clear() {
           super.clear();
           municipality_ = "";
@@ -1629,15 +1641,18 @@ public final class Licensure {
           return this;
         }
 
+        @java.lang.Override
         public com.google.protobuf.Descriptors.Descriptor
             getDescriptorForType() {
-          return io.bloombox.schema.licensure.Licensure.internal_static_bloombox_schema_licensure_LicensingAuthority_LocalLicense_descriptor;
+          return io.bloombox.schema.licensure.Licensure.internal_static_bloombox_licensure_LicensingAuthority_LocalLicense_descriptor;
         }
 
+        @java.lang.Override
         public io.bloombox.schema.licensure.Licensure.LicensingAuthority.LocalLicense getDefaultInstanceForType() {
           return io.bloombox.schema.licensure.Licensure.LicensingAuthority.LocalLicense.getDefaultInstance();
         }
 
+        @java.lang.Override
         public io.bloombox.schema.licensure.Licensure.LicensingAuthority.LocalLicense build() {
           io.bloombox.schema.licensure.Licensure.LicensingAuthority.LocalLicense result = buildPartial();
           if (!result.isInitialized()) {
@@ -1646,6 +1661,7 @@ public final class Licensure {
           return result;
         }
 
+        @java.lang.Override
         public io.bloombox.schema.licensure.Licensure.LicensingAuthority.LocalLicense buildPartial() {
           io.bloombox.schema.licensure.Licensure.LicensingAuthority.LocalLicense result = new io.bloombox.schema.licensure.Licensure.LicensingAuthority.LocalLicense(this);
           result.municipality_ = municipality_;
@@ -1667,32 +1683,39 @@ public final class Licensure {
           return result;
         }
 
+        @java.lang.Override
         public Builder clone() {
           return (Builder) super.clone();
         }
+        @java.lang.Override
         public Builder setField(
             com.google.protobuf.Descriptors.FieldDescriptor field,
             java.lang.Object value) {
           return (Builder) super.setField(field, value);
         }
+        @java.lang.Override
         public Builder clearField(
             com.google.protobuf.Descriptors.FieldDescriptor field) {
           return (Builder) super.clearField(field);
         }
+        @java.lang.Override
         public Builder clearOneof(
             com.google.protobuf.Descriptors.OneofDescriptor oneof) {
           return (Builder) super.clearOneof(oneof);
         }
+        @java.lang.Override
         public Builder setRepeatedField(
             com.google.protobuf.Descriptors.FieldDescriptor field,
             int index, java.lang.Object value) {
           return (Builder) super.setRepeatedField(field, index, value);
         }
+        @java.lang.Override
         public Builder addRepeatedField(
             com.google.protobuf.Descriptors.FieldDescriptor field,
             java.lang.Object value) {
           return (Builder) super.addRepeatedField(field, value);
         }
+        @java.lang.Override
         public Builder mergeFrom(com.google.protobuf.Message other) {
           if (other instanceof io.bloombox.schema.licensure.Licensure.LicensingAuthority.LocalLicense) {
             return mergeFrom((io.bloombox.schema.licensure.Licensure.LicensingAuthority.LocalLicense)other);
@@ -1743,10 +1766,12 @@ public final class Licensure {
           return this;
         }
 
+        @java.lang.Override
         public final boolean isInitialized() {
           return true;
         }
 
+        @java.lang.Override
         public Builder mergeFrom(
             com.google.protobuf.CodedInputStream input,
             com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -2017,13 +2042,14 @@ public final class Licensure {
          *
          * <code>.opencannabis.geo.usa.ca.CaliforniaCounty california_county = 3;</code>
          */
-        public opencannabis.geo.usa.ca.CACounty.CaliforniaCounty getCaliforniaCounty() {
+        public io.opencannabis.schema.geo.usa.California.CaliforniaCounty getCaliforniaCounty() {
           if (countyCase_ == 3) {
-            opencannabis.geo.usa.ca.CACounty.CaliforniaCounty result = opencannabis.geo.usa.ca.CACounty.CaliforniaCounty.valueOf(
+            @SuppressWarnings("deprecation")
+            io.opencannabis.schema.geo.usa.California.CaliforniaCounty result = io.opencannabis.schema.geo.usa.California.CaliforniaCounty.valueOf(
                 (java.lang.Integer) county_);
-            return result == null ? opencannabis.geo.usa.ca.CACounty.CaliforniaCounty.UNRECOGNIZED : result;
+            return result == null ? io.opencannabis.schema.geo.usa.California.CaliforniaCounty.UNRECOGNIZED : result;
           }
-          return opencannabis.geo.usa.ca.CACounty.CaliforniaCounty.UNKNOWN_COUNTY;
+          return io.opencannabis.schema.geo.usa.California.CaliforniaCounty.UNKNOWN_COUNTY;
         }
         /**
          * <pre>
@@ -2032,7 +2058,7 @@ public final class Licensure {
          *
          * <code>.opencannabis.geo.usa.ca.CaliforniaCounty california_county = 3;</code>
          */
-        public Builder setCaliforniaCounty(opencannabis.geo.usa.ca.CACounty.CaliforniaCounty value) {
+        public Builder setCaliforniaCounty(io.opencannabis.schema.geo.usa.California.CaliforniaCounty value) {
           if (value == null) {
             throw new NullPointerException();
           }
@@ -2192,6 +2218,7 @@ public final class Licensure {
          */
         public io.opencannabis.schema.geo.usa.USState getUsState() {
           if (provinceCase_ == 5) {
+            @SuppressWarnings("deprecation")
             io.opencannabis.schema.geo.usa.USState result = io.opencannabis.schema.geo.usa.USState.valueOf(
                 (java.lang.Integer) province_);
             return result == null ? io.opencannabis.schema.geo.usa.USState.UNRECOGNIZED : result;
@@ -2229,21 +2256,23 @@ public final class Licensure {
           }
           return this;
         }
+        @java.lang.Override
         public final Builder setUnknownFields(
             final com.google.protobuf.UnknownFieldSet unknownFields) {
           return super.setUnknownFieldsProto3(unknownFields);
         }
 
+        @java.lang.Override
         public final Builder mergeUnknownFields(
             final com.google.protobuf.UnknownFieldSet unknownFields) {
           return super.mergeUnknownFields(unknownFields);
         }
 
 
-        // @@protoc_insertion_point(builder_scope:bloombox.schema.licensure.LicensingAuthority.LocalLicense)
+        // @@protoc_insertion_point(builder_scope:bloombox.licensure.LicensingAuthority.LocalLicense)
       }
 
-      // @@protoc_insertion_point(class_scope:bloombox.schema.licensure.LicensingAuthority.LocalLicense)
+      // @@protoc_insertion_point(class_scope:bloombox.licensure.LicensingAuthority.LocalLicense)
       private static final io.bloombox.schema.licensure.Licensure.LicensingAuthority.LocalLicense DEFAULT_INSTANCE;
       static {
         DEFAULT_INSTANCE = new io.bloombox.schema.licensure.Licensure.LicensingAuthority.LocalLicense();
@@ -2255,6 +2284,7 @@ public final class Licensure {
 
       private static final com.google.protobuf.Parser<LocalLicense>
           PARSER = new com.google.protobuf.AbstractParser<LocalLicense>() {
+        @java.lang.Override
         public LocalLicense parsePartialFrom(
             com.google.protobuf.CodedInputStream input,
             com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -2272,6 +2302,7 @@ public final class Licensure {
         return PARSER;
       }
 
+      @java.lang.Override
       public io.bloombox.schema.licensure.Licensure.LicensingAuthority.LocalLicense getDefaultInstanceForType() {
         return DEFAULT_INSTANCE;
       }
@@ -2279,7 +2310,7 @@ public final class Licensure {
     }
 
     public interface CountyLicenseOrBuilder extends
-        // @@protoc_insertion_point(interface_extends:bloombox.schema.licensure.LicensingAuthority.CountyLicense)
+        // @@protoc_insertion_point(interface_extends:bloombox.licensure.LicensingAuthority.CountyLicense)
         com.google.protobuf.MessageOrBuilder {
 
       /**
@@ -2315,7 +2346,7 @@ public final class Licensure {
        *
        * <code>.opencannabis.geo.usa.ca.CaliforniaCounty california_county = 2;</code>
        */
-      opencannabis.geo.usa.ca.CACounty.CaliforniaCounty getCaliforniaCounty();
+      io.opencannabis.schema.geo.usa.California.CaliforniaCounty getCaliforniaCounty();
 
       /**
        * <pre>
@@ -2362,11 +2393,11 @@ public final class Licensure {
      * authority to authorize industrial cannabis privileges.
      * </pre>
      *
-     * Protobuf type {@code bloombox.schema.licensure.LicensingAuthority.CountyLicense}
+     * Protobuf type {@code bloombox.licensure.LicensingAuthority.CountyLicense}
      */
     public  static final class CountyLicense extends
         com.google.protobuf.GeneratedMessageV3 implements
-        // @@protoc_insertion_point(message_implements:bloombox.schema.licensure.LicensingAuthority.CountyLicense)
+        // @@protoc_insertion_point(message_implements:bloombox.licensure.LicensingAuthority.CountyLicense)
         CountyLicenseOrBuilder {
     private static final long serialVersionUID = 0L;
       // Use CountyLicense.newBuilder() to construct.
@@ -2400,13 +2431,6 @@ public final class Licensure {
               case 0:
                 done = true;
                 break;
-              default: {
-                if (!parseUnknownFieldProto3(
-                    input, unknownFields, extensionRegistry, tag)) {
-                  done = true;
-                }
-                break;
-              }
               case 10: {
                 java.lang.String s = input.readStringRequireUtf8();
                 countyCase_ = 1;
@@ -2431,6 +2455,13 @@ public final class Licensure {
                 province_ = rawValue;
                 break;
               }
+              default: {
+                if (!parseUnknownFieldProto3(
+                    input, unknownFields, extensionRegistry, tag)) {
+                  done = true;
+                }
+                break;
+              }
             }
           }
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
@@ -2445,12 +2476,13 @@ public final class Licensure {
       }
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return io.bloombox.schema.licensure.Licensure.internal_static_bloombox_schema_licensure_LicensingAuthority_CountyLicense_descriptor;
+        return io.bloombox.schema.licensure.Licensure.internal_static_bloombox_licensure_LicensingAuthority_CountyLicense_descriptor;
       }
 
+      @java.lang.Override
       protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return io.bloombox.schema.licensure.Licensure.internal_static_bloombox_schema_licensure_LicensingAuthority_CountyLicense_fieldAccessorTable
+        return io.bloombox.schema.licensure.Licensure.internal_static_bloombox_licensure_LicensingAuthority_CountyLicense_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
                 io.bloombox.schema.licensure.Licensure.LicensingAuthority.CountyLicense.class, io.bloombox.schema.licensure.Licensure.LicensingAuthority.CountyLicense.Builder.class);
       }
@@ -2603,13 +2635,14 @@ public final class Licensure {
        *
        * <code>.opencannabis.geo.usa.ca.CaliforniaCounty california_county = 2;</code>
        */
-      public opencannabis.geo.usa.ca.CACounty.CaliforniaCounty getCaliforniaCounty() {
+      public io.opencannabis.schema.geo.usa.California.CaliforniaCounty getCaliforniaCounty() {
         if (countyCase_ == 2) {
-          opencannabis.geo.usa.ca.CACounty.CaliforniaCounty result = opencannabis.geo.usa.ca.CACounty.CaliforniaCounty.valueOf(
+          @SuppressWarnings("deprecation")
+          io.opencannabis.schema.geo.usa.California.CaliforniaCounty result = io.opencannabis.schema.geo.usa.California.CaliforniaCounty.valueOf(
               (java.lang.Integer) county_);
-          return result == null ? opencannabis.geo.usa.ca.CACounty.CaliforniaCounty.UNRECOGNIZED : result;
+          return result == null ? io.opencannabis.schema.geo.usa.California.CaliforniaCounty.UNRECOGNIZED : result;
         }
-        return opencannabis.geo.usa.ca.CACounty.CaliforniaCounty.UNKNOWN_COUNTY;
+        return io.opencannabis.schema.geo.usa.California.CaliforniaCounty.UNKNOWN_COUNTY;
       }
 
       public static final int PROVINCE_NAME_FIELD_NUMBER = 4;
@@ -2686,6 +2719,7 @@ public final class Licensure {
        */
       public io.opencannabis.schema.geo.usa.USState getUsState() {
         if (provinceCase_ == 5) {
+          @SuppressWarnings("deprecation")
           io.opencannabis.schema.geo.usa.USState result = io.opencannabis.schema.geo.usa.USState.valueOf(
               (java.lang.Integer) province_);
           return result == null ? io.opencannabis.schema.geo.usa.USState.UNRECOGNIZED : result;
@@ -2694,6 +2728,7 @@ public final class Licensure {
       }
 
       private byte memoizedIsInitialized = -1;
+      @java.lang.Override
       public final boolean isInitialized() {
         byte isInitialized = memoizedIsInitialized;
         if (isInitialized == 1) return true;
@@ -2703,6 +2738,7 @@ public final class Licensure {
         return true;
       }
 
+      @java.lang.Override
       public void writeTo(com.google.protobuf.CodedOutputStream output)
                           throws java.io.IOException {
         if (countyCase_ == 1) {
@@ -2720,6 +2756,7 @@ public final class Licensure {
         unknownFields.writeTo(output);
       }
 
+      @java.lang.Override
       public int getSerializedSize() {
         int size = memoizedSize;
         if (size != -1) return size;
@@ -2895,6 +2932,7 @@ public final class Licensure {
             .parseWithIOException(PARSER, input, extensionRegistry);
       }
 
+      @java.lang.Override
       public Builder newBuilderForType() { return newBuilder(); }
       public static Builder newBuilder() {
         return DEFAULT_INSTANCE.toBuilder();
@@ -2902,6 +2940,7 @@ public final class Licensure {
       public static Builder newBuilder(io.bloombox.schema.licensure.Licensure.LicensingAuthority.CountyLicense prototype) {
         return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
       }
+      @java.lang.Override
       public Builder toBuilder() {
         return this == DEFAULT_INSTANCE
             ? new Builder() : new Builder().mergeFrom(this);
@@ -2919,20 +2958,21 @@ public final class Licensure {
        * authority to authorize industrial cannabis privileges.
        * </pre>
        *
-       * Protobuf type {@code bloombox.schema.licensure.LicensingAuthority.CountyLicense}
+       * Protobuf type {@code bloombox.licensure.LicensingAuthority.CountyLicense}
        */
       public static final class Builder extends
           com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-          // @@protoc_insertion_point(builder_implements:bloombox.schema.licensure.LicensingAuthority.CountyLicense)
+          // @@protoc_insertion_point(builder_implements:bloombox.licensure.LicensingAuthority.CountyLicense)
           io.bloombox.schema.licensure.Licensure.LicensingAuthority.CountyLicenseOrBuilder {
         public static final com.google.protobuf.Descriptors.Descriptor
             getDescriptor() {
-          return io.bloombox.schema.licensure.Licensure.internal_static_bloombox_schema_licensure_LicensingAuthority_CountyLicense_descriptor;
+          return io.bloombox.schema.licensure.Licensure.internal_static_bloombox_licensure_LicensingAuthority_CountyLicense_descriptor;
         }
 
+        @java.lang.Override
         protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
             internalGetFieldAccessorTable() {
-          return io.bloombox.schema.licensure.Licensure.internal_static_bloombox_schema_licensure_LicensingAuthority_CountyLicense_fieldAccessorTable
+          return io.bloombox.schema.licensure.Licensure.internal_static_bloombox_licensure_LicensingAuthority_CountyLicense_fieldAccessorTable
               .ensureFieldAccessorsInitialized(
                   io.bloombox.schema.licensure.Licensure.LicensingAuthority.CountyLicense.class, io.bloombox.schema.licensure.Licensure.LicensingAuthority.CountyLicense.Builder.class);
         }
@@ -2952,6 +2992,7 @@ public final class Licensure {
                   .alwaysUseFieldBuilders) {
           }
         }
+        @java.lang.Override
         public Builder clear() {
           super.clear();
           countyCase_ = 0;
@@ -2961,15 +3002,18 @@ public final class Licensure {
           return this;
         }
 
+        @java.lang.Override
         public com.google.protobuf.Descriptors.Descriptor
             getDescriptorForType() {
-          return io.bloombox.schema.licensure.Licensure.internal_static_bloombox_schema_licensure_LicensingAuthority_CountyLicense_descriptor;
+          return io.bloombox.schema.licensure.Licensure.internal_static_bloombox_licensure_LicensingAuthority_CountyLicense_descriptor;
         }
 
+        @java.lang.Override
         public io.bloombox.schema.licensure.Licensure.LicensingAuthority.CountyLicense getDefaultInstanceForType() {
           return io.bloombox.schema.licensure.Licensure.LicensingAuthority.CountyLicense.getDefaultInstance();
         }
 
+        @java.lang.Override
         public io.bloombox.schema.licensure.Licensure.LicensingAuthority.CountyLicense build() {
           io.bloombox.schema.licensure.Licensure.LicensingAuthority.CountyLicense result = buildPartial();
           if (!result.isInitialized()) {
@@ -2978,6 +3022,7 @@ public final class Licensure {
           return result;
         }
 
+        @java.lang.Override
         public io.bloombox.schema.licensure.Licensure.LicensingAuthority.CountyLicense buildPartial() {
           io.bloombox.schema.licensure.Licensure.LicensingAuthority.CountyLicense result = new io.bloombox.schema.licensure.Licensure.LicensingAuthority.CountyLicense(this);
           if (countyCase_ == 1) {
@@ -2998,32 +3043,39 @@ public final class Licensure {
           return result;
         }
 
+        @java.lang.Override
         public Builder clone() {
           return (Builder) super.clone();
         }
+        @java.lang.Override
         public Builder setField(
             com.google.protobuf.Descriptors.FieldDescriptor field,
             java.lang.Object value) {
           return (Builder) super.setField(field, value);
         }
+        @java.lang.Override
         public Builder clearField(
             com.google.protobuf.Descriptors.FieldDescriptor field) {
           return (Builder) super.clearField(field);
         }
+        @java.lang.Override
         public Builder clearOneof(
             com.google.protobuf.Descriptors.OneofDescriptor oneof) {
           return (Builder) super.clearOneof(oneof);
         }
+        @java.lang.Override
         public Builder setRepeatedField(
             com.google.protobuf.Descriptors.FieldDescriptor field,
             int index, java.lang.Object value) {
           return (Builder) super.setRepeatedField(field, index, value);
         }
+        @java.lang.Override
         public Builder addRepeatedField(
             com.google.protobuf.Descriptors.FieldDescriptor field,
             java.lang.Object value) {
           return (Builder) super.addRepeatedField(field, value);
         }
+        @java.lang.Override
         public Builder mergeFrom(com.google.protobuf.Message other) {
           if (other instanceof io.bloombox.schema.licensure.Licensure.LicensingAuthority.CountyLicense) {
             return mergeFrom((io.bloombox.schema.licensure.Licensure.LicensingAuthority.CountyLicense)other);
@@ -3070,10 +3122,12 @@ public final class Licensure {
           return this;
         }
 
+        @java.lang.Override
         public final boolean isInitialized() {
           return true;
         }
 
+        @java.lang.Override
         public Builder mergeFrom(
             com.google.protobuf.CodedInputStream input,
             com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -3255,13 +3309,14 @@ public final class Licensure {
          *
          * <code>.opencannabis.geo.usa.ca.CaliforniaCounty california_county = 2;</code>
          */
-        public opencannabis.geo.usa.ca.CACounty.CaliforniaCounty getCaliforniaCounty() {
+        public io.opencannabis.schema.geo.usa.California.CaliforniaCounty getCaliforniaCounty() {
           if (countyCase_ == 2) {
-            opencannabis.geo.usa.ca.CACounty.CaliforniaCounty result = opencannabis.geo.usa.ca.CACounty.CaliforniaCounty.valueOf(
+            @SuppressWarnings("deprecation")
+            io.opencannabis.schema.geo.usa.California.CaliforniaCounty result = io.opencannabis.schema.geo.usa.California.CaliforniaCounty.valueOf(
                 (java.lang.Integer) county_);
-            return result == null ? opencannabis.geo.usa.ca.CACounty.CaliforniaCounty.UNRECOGNIZED : result;
+            return result == null ? io.opencannabis.schema.geo.usa.California.CaliforniaCounty.UNRECOGNIZED : result;
           }
-          return opencannabis.geo.usa.ca.CACounty.CaliforniaCounty.UNKNOWN_COUNTY;
+          return io.opencannabis.schema.geo.usa.California.CaliforniaCounty.UNKNOWN_COUNTY;
         }
         /**
          * <pre>
@@ -3270,7 +3325,7 @@ public final class Licensure {
          *
          * <code>.opencannabis.geo.usa.ca.CaliforniaCounty california_county = 2;</code>
          */
-        public Builder setCaliforniaCounty(opencannabis.geo.usa.ca.CACounty.CaliforniaCounty value) {
+        public Builder setCaliforniaCounty(io.opencannabis.schema.geo.usa.California.CaliforniaCounty value) {
           if (value == null) {
             throw new NullPointerException();
           }
@@ -3430,6 +3485,7 @@ public final class Licensure {
          */
         public io.opencannabis.schema.geo.usa.USState getUsState() {
           if (provinceCase_ == 5) {
+            @SuppressWarnings("deprecation")
             io.opencannabis.schema.geo.usa.USState result = io.opencannabis.schema.geo.usa.USState.valueOf(
                 (java.lang.Integer) province_);
             return result == null ? io.opencannabis.schema.geo.usa.USState.UNRECOGNIZED : result;
@@ -3467,21 +3523,23 @@ public final class Licensure {
           }
           return this;
         }
+        @java.lang.Override
         public final Builder setUnknownFields(
             final com.google.protobuf.UnknownFieldSet unknownFields) {
           return super.setUnknownFieldsProto3(unknownFields);
         }
 
+        @java.lang.Override
         public final Builder mergeUnknownFields(
             final com.google.protobuf.UnknownFieldSet unknownFields) {
           return super.mergeUnknownFields(unknownFields);
         }
 
 
-        // @@protoc_insertion_point(builder_scope:bloombox.schema.licensure.LicensingAuthority.CountyLicense)
+        // @@protoc_insertion_point(builder_scope:bloombox.licensure.LicensingAuthority.CountyLicense)
       }
 
-      // @@protoc_insertion_point(class_scope:bloombox.schema.licensure.LicensingAuthority.CountyLicense)
+      // @@protoc_insertion_point(class_scope:bloombox.licensure.LicensingAuthority.CountyLicense)
       private static final io.bloombox.schema.licensure.Licensure.LicensingAuthority.CountyLicense DEFAULT_INSTANCE;
       static {
         DEFAULT_INSTANCE = new io.bloombox.schema.licensure.Licensure.LicensingAuthority.CountyLicense();
@@ -3493,6 +3551,7 @@ public final class Licensure {
 
       private static final com.google.protobuf.Parser<CountyLicense>
           PARSER = new com.google.protobuf.AbstractParser<CountyLicense>() {
+        @java.lang.Override
         public CountyLicense parsePartialFrom(
             com.google.protobuf.CodedInputStream input,
             com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -3510,6 +3569,7 @@ public final class Licensure {
         return PARSER;
       }
 
+      @java.lang.Override
       public io.bloombox.schema.licensure.Licensure.LicensingAuthority.CountyLicense getDefaultInstanceForType() {
         return DEFAULT_INSTANCE;
       }
@@ -3517,7 +3577,7 @@ public final class Licensure {
     }
 
     public interface StateLicenseOrBuilder extends
-        // @@protoc_insertion_point(interface_extends:bloombox.schema.licensure.LicensingAuthority.StateLicense)
+        // @@protoc_insertion_point(interface_extends:bloombox.licensure.LicensingAuthority.StateLicense)
         com.google.protobuf.MessageOrBuilder {
 
       /**
@@ -3588,7 +3648,7 @@ public final class Licensure {
        *
        * <code>.opencannabis.regulatory.usa.ca.CaliforniaAgency california_agency = 4;</code>
        */
-      opencannabis.regulatory.usa.ca.CAAgency.CaliforniaAgency getCaliforniaAgency();
+      io.opencannabis.schema.regulatory.usa.California.CaliforniaAgency getCaliforniaAgency();
 
       public io.bloombox.schema.licensure.Licensure.LicensingAuthority.StateLicense.ProvinceCase getProvinceCase();
 
@@ -3600,11 +3660,11 @@ public final class Licensure {
      * statutory authority to authorize industrial cannabis privileges.
      * </pre>
      *
-     * Protobuf type {@code bloombox.schema.licensure.LicensingAuthority.StateLicense}
+     * Protobuf type {@code bloombox.licensure.LicensingAuthority.StateLicense}
      */
     public  static final class StateLicense extends
         com.google.protobuf.GeneratedMessageV3 implements
-        // @@protoc_insertion_point(message_implements:bloombox.schema.licensure.LicensingAuthority.StateLicense)
+        // @@protoc_insertion_point(message_implements:bloombox.licensure.LicensingAuthority.StateLicense)
         StateLicenseOrBuilder {
     private static final long serialVersionUID = 0L;
       // Use StateLicense.newBuilder() to construct.
@@ -3638,13 +3698,6 @@ public final class Licensure {
               case 0:
                 done = true;
                 break;
-              default: {
-                if (!parseUnknownFieldProto3(
-                    input, unknownFields, extensionRegistry, tag)) {
-                  done = true;
-                }
-                break;
-              }
               case 10: {
                 java.lang.String s = input.readStringRequireUtf8();
                 provinceCase_ = 1;
@@ -3669,6 +3722,13 @@ public final class Licensure {
                 agency_ = rawValue;
                 break;
               }
+              default: {
+                if (!parseUnknownFieldProto3(
+                    input, unknownFields, extensionRegistry, tag)) {
+                  done = true;
+                }
+                break;
+              }
             }
           }
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
@@ -3683,12 +3743,13 @@ public final class Licensure {
       }
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return io.bloombox.schema.licensure.Licensure.internal_static_bloombox_schema_licensure_LicensingAuthority_StateLicense_descriptor;
+        return io.bloombox.schema.licensure.Licensure.internal_static_bloombox_licensure_LicensingAuthority_StateLicense_descriptor;
       }
 
+      @java.lang.Override
       protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return io.bloombox.schema.licensure.Licensure.internal_static_bloombox_schema_licensure_LicensingAuthority_StateLicense_fieldAccessorTable
+        return io.bloombox.schema.licensure.Licensure.internal_static_bloombox_licensure_LicensingAuthority_StateLicense_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
                 io.bloombox.schema.licensure.Licensure.LicensingAuthority.StateLicense.class, io.bloombox.schema.licensure.Licensure.LicensingAuthority.StateLicense.Builder.class);
       }
@@ -3843,6 +3904,7 @@ public final class Licensure {
        */
       public io.opencannabis.schema.geo.usa.USState getUsState() {
         if (provinceCase_ == 2) {
+          @SuppressWarnings("deprecation")
           io.opencannabis.schema.geo.usa.USState result = io.opencannabis.schema.geo.usa.USState.valueOf(
               (java.lang.Integer) province_);
           return result == null ? io.opencannabis.schema.geo.usa.USState.UNRECOGNIZED : result;
@@ -3922,16 +3984,18 @@ public final class Licensure {
        *
        * <code>.opencannabis.regulatory.usa.ca.CaliforniaAgency california_agency = 4;</code>
        */
-      public opencannabis.regulatory.usa.ca.CAAgency.CaliforniaAgency getCaliforniaAgency() {
+      public io.opencannabis.schema.regulatory.usa.California.CaliforniaAgency getCaliforniaAgency() {
         if (agencyCase_ == 4) {
-          opencannabis.regulatory.usa.ca.CAAgency.CaliforniaAgency result = opencannabis.regulatory.usa.ca.CAAgency.CaliforniaAgency.valueOf(
+          @SuppressWarnings("deprecation")
+          io.opencannabis.schema.regulatory.usa.California.CaliforniaAgency result = io.opencannabis.schema.regulatory.usa.California.CaliforniaAgency.valueOf(
               (java.lang.Integer) agency_);
-          return result == null ? opencannabis.regulatory.usa.ca.CAAgency.CaliforniaAgency.UNRECOGNIZED : result;
+          return result == null ? io.opencannabis.schema.regulatory.usa.California.CaliforniaAgency.UNRECOGNIZED : result;
         }
-        return opencannabis.regulatory.usa.ca.CAAgency.CaliforniaAgency.UNKNOWN_AGENCY;
+        return io.opencannabis.schema.regulatory.usa.California.CaliforniaAgency.UNKNOWN_AGENCY;
       }
 
       private byte memoizedIsInitialized = -1;
+      @java.lang.Override
       public final boolean isInitialized() {
         byte isInitialized = memoizedIsInitialized;
         if (isInitialized == 1) return true;
@@ -3941,6 +4005,7 @@ public final class Licensure {
         return true;
       }
 
+      @java.lang.Override
       public void writeTo(com.google.protobuf.CodedOutputStream output)
                           throws java.io.IOException {
         if (provinceCase_ == 1) {
@@ -3958,6 +4023,7 @@ public final class Licensure {
         unknownFields.writeTo(output);
       }
 
+      @java.lang.Override
       public int getSerializedSize() {
         int size = memoizedSize;
         if (size != -1) return size;
@@ -4133,6 +4199,7 @@ public final class Licensure {
             .parseWithIOException(PARSER, input, extensionRegistry);
       }
 
+      @java.lang.Override
       public Builder newBuilderForType() { return newBuilder(); }
       public static Builder newBuilder() {
         return DEFAULT_INSTANCE.toBuilder();
@@ -4140,6 +4207,7 @@ public final class Licensure {
       public static Builder newBuilder(io.bloombox.schema.licensure.Licensure.LicensingAuthority.StateLicense prototype) {
         return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
       }
+      @java.lang.Override
       public Builder toBuilder() {
         return this == DEFAULT_INSTANCE
             ? new Builder() : new Builder().mergeFrom(this);
@@ -4157,20 +4225,21 @@ public final class Licensure {
        * statutory authority to authorize industrial cannabis privileges.
        * </pre>
        *
-       * Protobuf type {@code bloombox.schema.licensure.LicensingAuthority.StateLicense}
+       * Protobuf type {@code bloombox.licensure.LicensingAuthority.StateLicense}
        */
       public static final class Builder extends
           com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-          // @@protoc_insertion_point(builder_implements:bloombox.schema.licensure.LicensingAuthority.StateLicense)
+          // @@protoc_insertion_point(builder_implements:bloombox.licensure.LicensingAuthority.StateLicense)
           io.bloombox.schema.licensure.Licensure.LicensingAuthority.StateLicenseOrBuilder {
         public static final com.google.protobuf.Descriptors.Descriptor
             getDescriptor() {
-          return io.bloombox.schema.licensure.Licensure.internal_static_bloombox_schema_licensure_LicensingAuthority_StateLicense_descriptor;
+          return io.bloombox.schema.licensure.Licensure.internal_static_bloombox_licensure_LicensingAuthority_StateLicense_descriptor;
         }
 
+        @java.lang.Override
         protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
             internalGetFieldAccessorTable() {
-          return io.bloombox.schema.licensure.Licensure.internal_static_bloombox_schema_licensure_LicensingAuthority_StateLicense_fieldAccessorTable
+          return io.bloombox.schema.licensure.Licensure.internal_static_bloombox_licensure_LicensingAuthority_StateLicense_fieldAccessorTable
               .ensureFieldAccessorsInitialized(
                   io.bloombox.schema.licensure.Licensure.LicensingAuthority.StateLicense.class, io.bloombox.schema.licensure.Licensure.LicensingAuthority.StateLicense.Builder.class);
         }
@@ -4190,6 +4259,7 @@ public final class Licensure {
                   .alwaysUseFieldBuilders) {
           }
         }
+        @java.lang.Override
         public Builder clear() {
           super.clear();
           provinceCase_ = 0;
@@ -4199,15 +4269,18 @@ public final class Licensure {
           return this;
         }
 
+        @java.lang.Override
         public com.google.protobuf.Descriptors.Descriptor
             getDescriptorForType() {
-          return io.bloombox.schema.licensure.Licensure.internal_static_bloombox_schema_licensure_LicensingAuthority_StateLicense_descriptor;
+          return io.bloombox.schema.licensure.Licensure.internal_static_bloombox_licensure_LicensingAuthority_StateLicense_descriptor;
         }
 
+        @java.lang.Override
         public io.bloombox.schema.licensure.Licensure.LicensingAuthority.StateLicense getDefaultInstanceForType() {
           return io.bloombox.schema.licensure.Licensure.LicensingAuthority.StateLicense.getDefaultInstance();
         }
 
+        @java.lang.Override
         public io.bloombox.schema.licensure.Licensure.LicensingAuthority.StateLicense build() {
           io.bloombox.schema.licensure.Licensure.LicensingAuthority.StateLicense result = buildPartial();
           if (!result.isInitialized()) {
@@ -4216,6 +4289,7 @@ public final class Licensure {
           return result;
         }
 
+        @java.lang.Override
         public io.bloombox.schema.licensure.Licensure.LicensingAuthority.StateLicense buildPartial() {
           io.bloombox.schema.licensure.Licensure.LicensingAuthority.StateLicense result = new io.bloombox.schema.licensure.Licensure.LicensingAuthority.StateLicense(this);
           if (provinceCase_ == 1) {
@@ -4236,32 +4310,39 @@ public final class Licensure {
           return result;
         }
 
+        @java.lang.Override
         public Builder clone() {
           return (Builder) super.clone();
         }
+        @java.lang.Override
         public Builder setField(
             com.google.protobuf.Descriptors.FieldDescriptor field,
             java.lang.Object value) {
           return (Builder) super.setField(field, value);
         }
+        @java.lang.Override
         public Builder clearField(
             com.google.protobuf.Descriptors.FieldDescriptor field) {
           return (Builder) super.clearField(field);
         }
+        @java.lang.Override
         public Builder clearOneof(
             com.google.protobuf.Descriptors.OneofDescriptor oneof) {
           return (Builder) super.clearOneof(oneof);
         }
+        @java.lang.Override
         public Builder setRepeatedField(
             com.google.protobuf.Descriptors.FieldDescriptor field,
             int index, java.lang.Object value) {
           return (Builder) super.setRepeatedField(field, index, value);
         }
+        @java.lang.Override
         public Builder addRepeatedField(
             com.google.protobuf.Descriptors.FieldDescriptor field,
             java.lang.Object value) {
           return (Builder) super.addRepeatedField(field, value);
         }
+        @java.lang.Override
         public Builder mergeFrom(com.google.protobuf.Message other) {
           if (other instanceof io.bloombox.schema.licensure.Licensure.LicensingAuthority.StateLicense) {
             return mergeFrom((io.bloombox.schema.licensure.Licensure.LicensingAuthority.StateLicense)other);
@@ -4308,10 +4389,12 @@ public final class Licensure {
           return this;
         }
 
+        @java.lang.Override
         public final boolean isInitialized() {
           return true;
         }
 
+        @java.lang.Override
         public Builder mergeFrom(
             com.google.protobuf.CodedInputStream input,
             com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -4495,6 +4578,7 @@ public final class Licensure {
          */
         public io.opencannabis.schema.geo.usa.USState getUsState() {
           if (provinceCase_ == 2) {
+            @SuppressWarnings("deprecation")
             io.opencannabis.schema.geo.usa.USState result = io.opencannabis.schema.geo.usa.USState.valueOf(
                 (java.lang.Integer) province_);
             return result == null ? io.opencannabis.schema.geo.usa.USState.UNRECOGNIZED : result;
@@ -4666,13 +4750,14 @@ public final class Licensure {
          *
          * <code>.opencannabis.regulatory.usa.ca.CaliforniaAgency california_agency = 4;</code>
          */
-        public opencannabis.regulatory.usa.ca.CAAgency.CaliforniaAgency getCaliforniaAgency() {
+        public io.opencannabis.schema.regulatory.usa.California.CaliforniaAgency getCaliforniaAgency() {
           if (agencyCase_ == 4) {
-            opencannabis.regulatory.usa.ca.CAAgency.CaliforniaAgency result = opencannabis.regulatory.usa.ca.CAAgency.CaliforniaAgency.valueOf(
+            @SuppressWarnings("deprecation")
+            io.opencannabis.schema.regulatory.usa.California.CaliforniaAgency result = io.opencannabis.schema.regulatory.usa.California.CaliforniaAgency.valueOf(
                 (java.lang.Integer) agency_);
-            return result == null ? opencannabis.regulatory.usa.ca.CAAgency.CaliforniaAgency.UNRECOGNIZED : result;
+            return result == null ? io.opencannabis.schema.regulatory.usa.California.CaliforniaAgency.UNRECOGNIZED : result;
           }
-          return opencannabis.regulatory.usa.ca.CAAgency.CaliforniaAgency.UNKNOWN_AGENCY;
+          return io.opencannabis.schema.regulatory.usa.California.CaliforniaAgency.UNKNOWN_AGENCY;
         }
         /**
          * <pre>
@@ -4681,7 +4766,7 @@ public final class Licensure {
          *
          * <code>.opencannabis.regulatory.usa.ca.CaliforniaAgency california_agency = 4;</code>
          */
-        public Builder setCaliforniaAgency(opencannabis.regulatory.usa.ca.CAAgency.CaliforniaAgency value) {
+        public Builder setCaliforniaAgency(io.opencannabis.schema.regulatory.usa.California.CaliforniaAgency value) {
           if (value == null) {
             throw new NullPointerException();
           }
@@ -4705,21 +4790,23 @@ public final class Licensure {
           }
           return this;
         }
+        @java.lang.Override
         public final Builder setUnknownFields(
             final com.google.protobuf.UnknownFieldSet unknownFields) {
           return super.setUnknownFieldsProto3(unknownFields);
         }
 
+        @java.lang.Override
         public final Builder mergeUnknownFields(
             final com.google.protobuf.UnknownFieldSet unknownFields) {
           return super.mergeUnknownFields(unknownFields);
         }
 
 
-        // @@protoc_insertion_point(builder_scope:bloombox.schema.licensure.LicensingAuthority.StateLicense)
+        // @@protoc_insertion_point(builder_scope:bloombox.licensure.LicensingAuthority.StateLicense)
       }
 
-      // @@protoc_insertion_point(class_scope:bloombox.schema.licensure.LicensingAuthority.StateLicense)
+      // @@protoc_insertion_point(class_scope:bloombox.licensure.LicensingAuthority.StateLicense)
       private static final io.bloombox.schema.licensure.Licensure.LicensingAuthority.StateLicense DEFAULT_INSTANCE;
       static {
         DEFAULT_INSTANCE = new io.bloombox.schema.licensure.Licensure.LicensingAuthority.StateLicense();
@@ -4731,6 +4818,7 @@ public final class Licensure {
 
       private static final com.google.protobuf.Parser<StateLicense>
           PARSER = new com.google.protobuf.AbstractParser<StateLicense>() {
+        @java.lang.Override
         public StateLicense parsePartialFrom(
             com.google.protobuf.CodedInputStream input,
             com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -4748,6 +4836,7 @@ public final class Licensure {
         return PARSER;
       }
 
+      @java.lang.Override
       public io.bloombox.schema.licensure.Licensure.LicensingAuthority.StateLicense getDefaultInstanceForType() {
         return DEFAULT_INSTANCE;
       }
@@ -4800,7 +4889,7 @@ public final class Licensure {
      * Specifies a license issued by a "local" (or municipal) jurisdiction, which is to say, a township or city.
      * </pre>
      *
-     * <code>.bloombox.schema.licensure.LicensingAuthority.LocalLicense local = 1;</code>
+     * <code>.bloombox.licensure.LicensingAuthority.LocalLicense local = 1;</code>
      */
     public boolean hasLocal() {
       return jurisdictionCase_ == 1;
@@ -4810,7 +4899,7 @@ public final class Licensure {
      * Specifies a license issued by a "local" (or municipal) jurisdiction, which is to say, a township or city.
      * </pre>
      *
-     * <code>.bloombox.schema.licensure.LicensingAuthority.LocalLicense local = 1;</code>
+     * <code>.bloombox.licensure.LicensingAuthority.LocalLicense local = 1;</code>
      */
     public io.bloombox.schema.licensure.Licensure.LicensingAuthority.LocalLicense getLocal() {
       if (jurisdictionCase_ == 1) {
@@ -4823,7 +4912,7 @@ public final class Licensure {
      * Specifies a license issued by a "local" (or municipal) jurisdiction, which is to say, a township or city.
      * </pre>
      *
-     * <code>.bloombox.schema.licensure.LicensingAuthority.LocalLicense local = 1;</code>
+     * <code>.bloombox.licensure.LicensingAuthority.LocalLicense local = 1;</code>
      */
     public io.bloombox.schema.licensure.Licensure.LicensingAuthority.LocalLicenseOrBuilder getLocalOrBuilder() {
       if (jurisdictionCase_ == 1) {
@@ -4838,7 +4927,7 @@ public final class Licensure {
      * Specifies a license issued by a semi-local (provincial) jurisdiction, which is to say, a county.
      * </pre>
      *
-     * <code>.bloombox.schema.licensure.LicensingAuthority.CountyLicense county = 2;</code>
+     * <code>.bloombox.licensure.LicensingAuthority.CountyLicense county = 2;</code>
      */
     public boolean hasCounty() {
       return jurisdictionCase_ == 2;
@@ -4848,7 +4937,7 @@ public final class Licensure {
      * Specifies a license issued by a semi-local (provincial) jurisdiction, which is to say, a county.
      * </pre>
      *
-     * <code>.bloombox.schema.licensure.LicensingAuthority.CountyLicense county = 2;</code>
+     * <code>.bloombox.licensure.LicensingAuthority.CountyLicense county = 2;</code>
      */
     public io.bloombox.schema.licensure.Licensure.LicensingAuthority.CountyLicense getCounty() {
       if (jurisdictionCase_ == 2) {
@@ -4861,7 +4950,7 @@ public final class Licensure {
      * Specifies a license issued by a semi-local (provincial) jurisdiction, which is to say, a county.
      * </pre>
      *
-     * <code>.bloombox.schema.licensure.LicensingAuthority.CountyLicense county = 2;</code>
+     * <code>.bloombox.licensure.LicensingAuthority.CountyLicense county = 2;</code>
      */
     public io.bloombox.schema.licensure.Licensure.LicensingAuthority.CountyLicenseOrBuilder getCountyOrBuilder() {
       if (jurisdictionCase_ == 2) {
@@ -4876,7 +4965,7 @@ public final class Licensure {
      * Specifies a license issued by a regional jurisdiction, which is to say, a state.
      * </pre>
      *
-     * <code>.bloombox.schema.licensure.LicensingAuthority.StateLicense state = 3;</code>
+     * <code>.bloombox.licensure.LicensingAuthority.StateLicense state = 3;</code>
      */
     public boolean hasState() {
       return jurisdictionCase_ == 3;
@@ -4886,7 +4975,7 @@ public final class Licensure {
      * Specifies a license issued by a regional jurisdiction, which is to say, a state.
      * </pre>
      *
-     * <code>.bloombox.schema.licensure.LicensingAuthority.StateLicense state = 3;</code>
+     * <code>.bloombox.licensure.LicensingAuthority.StateLicense state = 3;</code>
      */
     public io.bloombox.schema.licensure.Licensure.LicensingAuthority.StateLicense getState() {
       if (jurisdictionCase_ == 3) {
@@ -4899,7 +4988,7 @@ public final class Licensure {
      * Specifies a license issued by a regional jurisdiction, which is to say, a state.
      * </pre>
      *
-     * <code>.bloombox.schema.licensure.LicensingAuthority.StateLicense state = 3;</code>
+     * <code>.bloombox.licensure.LicensingAuthority.StateLicense state = 3;</code>
      */
     public io.bloombox.schema.licensure.Licensure.LicensingAuthority.StateLicenseOrBuilder getStateOrBuilder() {
       if (jurisdictionCase_ == 3) {
@@ -4909,6 +4998,7 @@ public final class Licensure {
     }
 
     private byte memoizedIsInitialized = -1;
+    @java.lang.Override
     public final boolean isInitialized() {
       byte isInitialized = memoizedIsInitialized;
       if (isInitialized == 1) return true;
@@ -4918,6 +5008,7 @@ public final class Licensure {
       return true;
     }
 
+    @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
       if (jurisdictionCase_ == 1) {
@@ -4932,6 +5023,7 @@ public final class Licensure {
       unknownFields.writeTo(output);
     }
 
+    @java.lang.Override
     public int getSerializedSize() {
       int size = memoizedSize;
       if (size != -1) return size;
@@ -5086,6 +5178,7 @@ public final class Licensure {
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
 
+    @java.lang.Override
     public Builder newBuilderForType() { return newBuilder(); }
     public static Builder newBuilder() {
       return DEFAULT_INSTANCE.toBuilder();
@@ -5093,6 +5186,7 @@ public final class Licensure {
     public static Builder newBuilder(io.bloombox.schema.licensure.Licensure.LicensingAuthority prototype) {
       return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
     }
+    @java.lang.Override
     public Builder toBuilder() {
       return this == DEFAULT_INSTANCE
           ? new Builder() : new Builder().mergeFrom(this);
@@ -5111,20 +5205,21 @@ public final class Licensure {
      * the subject license.
      * </pre>
      *
-     * Protobuf type {@code bloombox.schema.licensure.LicensingAuthority}
+     * Protobuf type {@code bloombox.licensure.LicensingAuthority}
      */
     public static final class Builder extends
         com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:bloombox.schema.licensure.LicensingAuthority)
+        // @@protoc_insertion_point(builder_implements:bloombox.licensure.LicensingAuthority)
         io.bloombox.schema.licensure.Licensure.LicensingAuthorityOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return io.bloombox.schema.licensure.Licensure.internal_static_bloombox_schema_licensure_LicensingAuthority_descriptor;
+        return io.bloombox.schema.licensure.Licensure.internal_static_bloombox_licensure_LicensingAuthority_descriptor;
       }
 
+      @java.lang.Override
       protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return io.bloombox.schema.licensure.Licensure.internal_static_bloombox_schema_licensure_LicensingAuthority_fieldAccessorTable
+        return io.bloombox.schema.licensure.Licensure.internal_static_bloombox_licensure_LicensingAuthority_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
                 io.bloombox.schema.licensure.Licensure.LicensingAuthority.class, io.bloombox.schema.licensure.Licensure.LicensingAuthority.Builder.class);
       }
@@ -5144,6 +5239,7 @@ public final class Licensure {
                 .alwaysUseFieldBuilders) {
         }
       }
+      @java.lang.Override
       public Builder clear() {
         super.clear();
         jurisdictionCase_ = 0;
@@ -5151,15 +5247,18 @@ public final class Licensure {
         return this;
       }
 
+      @java.lang.Override
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return io.bloombox.schema.licensure.Licensure.internal_static_bloombox_schema_licensure_LicensingAuthority_descriptor;
+        return io.bloombox.schema.licensure.Licensure.internal_static_bloombox_licensure_LicensingAuthority_descriptor;
       }
 
+      @java.lang.Override
       public io.bloombox.schema.licensure.Licensure.LicensingAuthority getDefaultInstanceForType() {
         return io.bloombox.schema.licensure.Licensure.LicensingAuthority.getDefaultInstance();
       }
 
+      @java.lang.Override
       public io.bloombox.schema.licensure.Licensure.LicensingAuthority build() {
         io.bloombox.schema.licensure.Licensure.LicensingAuthority result = buildPartial();
         if (!result.isInitialized()) {
@@ -5168,6 +5267,7 @@ public final class Licensure {
         return result;
       }
 
+      @java.lang.Override
       public io.bloombox.schema.licensure.Licensure.LicensingAuthority buildPartial() {
         io.bloombox.schema.licensure.Licensure.LicensingAuthority result = new io.bloombox.schema.licensure.Licensure.LicensingAuthority(this);
         if (jurisdictionCase_ == 1) {
@@ -5196,32 +5296,39 @@ public final class Licensure {
         return result;
       }
 
+      @java.lang.Override
       public Builder clone() {
         return (Builder) super.clone();
       }
+      @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
         return (Builder) super.setField(field, value);
       }
+      @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
         return (Builder) super.clearField(field);
       }
+      @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
         return (Builder) super.clearOneof(oneof);
       }
+      @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
         return (Builder) super.setRepeatedField(field, index, value);
       }
+      @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
         return (Builder) super.addRepeatedField(field, value);
       }
+      @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
         if (other instanceof io.bloombox.schema.licensure.Licensure.LicensingAuthority) {
           return mergeFrom((io.bloombox.schema.licensure.Licensure.LicensingAuthority)other);
@@ -5255,10 +5362,12 @@ public final class Licensure {
         return this;
       }
 
+      @java.lang.Override
       public final boolean isInitialized() {
         return true;
       }
 
+      @java.lang.Override
       public Builder mergeFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -5299,7 +5408,7 @@ public final class Licensure {
        * Specifies a license issued by a "local" (or municipal) jurisdiction, which is to say, a township or city.
        * </pre>
        *
-       * <code>.bloombox.schema.licensure.LicensingAuthority.LocalLicense local = 1;</code>
+       * <code>.bloombox.licensure.LicensingAuthority.LocalLicense local = 1;</code>
        */
       public boolean hasLocal() {
         return jurisdictionCase_ == 1;
@@ -5309,7 +5418,7 @@ public final class Licensure {
        * Specifies a license issued by a "local" (or municipal) jurisdiction, which is to say, a township or city.
        * </pre>
        *
-       * <code>.bloombox.schema.licensure.LicensingAuthority.LocalLicense local = 1;</code>
+       * <code>.bloombox.licensure.LicensingAuthority.LocalLicense local = 1;</code>
        */
       public io.bloombox.schema.licensure.Licensure.LicensingAuthority.LocalLicense getLocal() {
         if (localBuilder_ == null) {
@@ -5329,7 +5438,7 @@ public final class Licensure {
        * Specifies a license issued by a "local" (or municipal) jurisdiction, which is to say, a township or city.
        * </pre>
        *
-       * <code>.bloombox.schema.licensure.LicensingAuthority.LocalLicense local = 1;</code>
+       * <code>.bloombox.licensure.LicensingAuthority.LocalLicense local = 1;</code>
        */
       public Builder setLocal(io.bloombox.schema.licensure.Licensure.LicensingAuthority.LocalLicense value) {
         if (localBuilder_ == null) {
@@ -5349,7 +5458,7 @@ public final class Licensure {
        * Specifies a license issued by a "local" (or municipal) jurisdiction, which is to say, a township or city.
        * </pre>
        *
-       * <code>.bloombox.schema.licensure.LicensingAuthority.LocalLicense local = 1;</code>
+       * <code>.bloombox.licensure.LicensingAuthority.LocalLicense local = 1;</code>
        */
       public Builder setLocal(
           io.bloombox.schema.licensure.Licensure.LicensingAuthority.LocalLicense.Builder builderForValue) {
@@ -5367,7 +5476,7 @@ public final class Licensure {
        * Specifies a license issued by a "local" (or municipal) jurisdiction, which is to say, a township or city.
        * </pre>
        *
-       * <code>.bloombox.schema.licensure.LicensingAuthority.LocalLicense local = 1;</code>
+       * <code>.bloombox.licensure.LicensingAuthority.LocalLicense local = 1;</code>
        */
       public Builder mergeLocal(io.bloombox.schema.licensure.Licensure.LicensingAuthority.LocalLicense value) {
         if (localBuilder_ == null) {
@@ -5393,7 +5502,7 @@ public final class Licensure {
        * Specifies a license issued by a "local" (or municipal) jurisdiction, which is to say, a township or city.
        * </pre>
        *
-       * <code>.bloombox.schema.licensure.LicensingAuthority.LocalLicense local = 1;</code>
+       * <code>.bloombox.licensure.LicensingAuthority.LocalLicense local = 1;</code>
        */
       public Builder clearLocal() {
         if (localBuilder_ == null) {
@@ -5416,7 +5525,7 @@ public final class Licensure {
        * Specifies a license issued by a "local" (or municipal) jurisdiction, which is to say, a township or city.
        * </pre>
        *
-       * <code>.bloombox.schema.licensure.LicensingAuthority.LocalLicense local = 1;</code>
+       * <code>.bloombox.licensure.LicensingAuthority.LocalLicense local = 1;</code>
        */
       public io.bloombox.schema.licensure.Licensure.LicensingAuthority.LocalLicense.Builder getLocalBuilder() {
         return getLocalFieldBuilder().getBuilder();
@@ -5426,7 +5535,7 @@ public final class Licensure {
        * Specifies a license issued by a "local" (or municipal) jurisdiction, which is to say, a township or city.
        * </pre>
        *
-       * <code>.bloombox.schema.licensure.LicensingAuthority.LocalLicense local = 1;</code>
+       * <code>.bloombox.licensure.LicensingAuthority.LocalLicense local = 1;</code>
        */
       public io.bloombox.schema.licensure.Licensure.LicensingAuthority.LocalLicenseOrBuilder getLocalOrBuilder() {
         if ((jurisdictionCase_ == 1) && (localBuilder_ != null)) {
@@ -5443,7 +5552,7 @@ public final class Licensure {
        * Specifies a license issued by a "local" (or municipal) jurisdiction, which is to say, a township or city.
        * </pre>
        *
-       * <code>.bloombox.schema.licensure.LicensingAuthority.LocalLicense local = 1;</code>
+       * <code>.bloombox.licensure.LicensingAuthority.LocalLicense local = 1;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
           io.bloombox.schema.licensure.Licensure.LicensingAuthority.LocalLicense, io.bloombox.schema.licensure.Licensure.LicensingAuthority.LocalLicense.Builder, io.bloombox.schema.licensure.Licensure.LicensingAuthority.LocalLicenseOrBuilder> 
@@ -5471,7 +5580,7 @@ public final class Licensure {
        * Specifies a license issued by a semi-local (provincial) jurisdiction, which is to say, a county.
        * </pre>
        *
-       * <code>.bloombox.schema.licensure.LicensingAuthority.CountyLicense county = 2;</code>
+       * <code>.bloombox.licensure.LicensingAuthority.CountyLicense county = 2;</code>
        */
       public boolean hasCounty() {
         return jurisdictionCase_ == 2;
@@ -5481,7 +5590,7 @@ public final class Licensure {
        * Specifies a license issued by a semi-local (provincial) jurisdiction, which is to say, a county.
        * </pre>
        *
-       * <code>.bloombox.schema.licensure.LicensingAuthority.CountyLicense county = 2;</code>
+       * <code>.bloombox.licensure.LicensingAuthority.CountyLicense county = 2;</code>
        */
       public io.bloombox.schema.licensure.Licensure.LicensingAuthority.CountyLicense getCounty() {
         if (countyBuilder_ == null) {
@@ -5501,7 +5610,7 @@ public final class Licensure {
        * Specifies a license issued by a semi-local (provincial) jurisdiction, which is to say, a county.
        * </pre>
        *
-       * <code>.bloombox.schema.licensure.LicensingAuthority.CountyLicense county = 2;</code>
+       * <code>.bloombox.licensure.LicensingAuthority.CountyLicense county = 2;</code>
        */
       public Builder setCounty(io.bloombox.schema.licensure.Licensure.LicensingAuthority.CountyLicense value) {
         if (countyBuilder_ == null) {
@@ -5521,7 +5630,7 @@ public final class Licensure {
        * Specifies a license issued by a semi-local (provincial) jurisdiction, which is to say, a county.
        * </pre>
        *
-       * <code>.bloombox.schema.licensure.LicensingAuthority.CountyLicense county = 2;</code>
+       * <code>.bloombox.licensure.LicensingAuthority.CountyLicense county = 2;</code>
        */
       public Builder setCounty(
           io.bloombox.schema.licensure.Licensure.LicensingAuthority.CountyLicense.Builder builderForValue) {
@@ -5539,7 +5648,7 @@ public final class Licensure {
        * Specifies a license issued by a semi-local (provincial) jurisdiction, which is to say, a county.
        * </pre>
        *
-       * <code>.bloombox.schema.licensure.LicensingAuthority.CountyLicense county = 2;</code>
+       * <code>.bloombox.licensure.LicensingAuthority.CountyLicense county = 2;</code>
        */
       public Builder mergeCounty(io.bloombox.schema.licensure.Licensure.LicensingAuthority.CountyLicense value) {
         if (countyBuilder_ == null) {
@@ -5565,7 +5674,7 @@ public final class Licensure {
        * Specifies a license issued by a semi-local (provincial) jurisdiction, which is to say, a county.
        * </pre>
        *
-       * <code>.bloombox.schema.licensure.LicensingAuthority.CountyLicense county = 2;</code>
+       * <code>.bloombox.licensure.LicensingAuthority.CountyLicense county = 2;</code>
        */
       public Builder clearCounty() {
         if (countyBuilder_ == null) {
@@ -5588,7 +5697,7 @@ public final class Licensure {
        * Specifies a license issued by a semi-local (provincial) jurisdiction, which is to say, a county.
        * </pre>
        *
-       * <code>.bloombox.schema.licensure.LicensingAuthority.CountyLicense county = 2;</code>
+       * <code>.bloombox.licensure.LicensingAuthority.CountyLicense county = 2;</code>
        */
       public io.bloombox.schema.licensure.Licensure.LicensingAuthority.CountyLicense.Builder getCountyBuilder() {
         return getCountyFieldBuilder().getBuilder();
@@ -5598,7 +5707,7 @@ public final class Licensure {
        * Specifies a license issued by a semi-local (provincial) jurisdiction, which is to say, a county.
        * </pre>
        *
-       * <code>.bloombox.schema.licensure.LicensingAuthority.CountyLicense county = 2;</code>
+       * <code>.bloombox.licensure.LicensingAuthority.CountyLicense county = 2;</code>
        */
       public io.bloombox.schema.licensure.Licensure.LicensingAuthority.CountyLicenseOrBuilder getCountyOrBuilder() {
         if ((jurisdictionCase_ == 2) && (countyBuilder_ != null)) {
@@ -5615,7 +5724,7 @@ public final class Licensure {
        * Specifies a license issued by a semi-local (provincial) jurisdiction, which is to say, a county.
        * </pre>
        *
-       * <code>.bloombox.schema.licensure.LicensingAuthority.CountyLicense county = 2;</code>
+       * <code>.bloombox.licensure.LicensingAuthority.CountyLicense county = 2;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
           io.bloombox.schema.licensure.Licensure.LicensingAuthority.CountyLicense, io.bloombox.schema.licensure.Licensure.LicensingAuthority.CountyLicense.Builder, io.bloombox.schema.licensure.Licensure.LicensingAuthority.CountyLicenseOrBuilder> 
@@ -5643,7 +5752,7 @@ public final class Licensure {
        * Specifies a license issued by a regional jurisdiction, which is to say, a state.
        * </pre>
        *
-       * <code>.bloombox.schema.licensure.LicensingAuthority.StateLicense state = 3;</code>
+       * <code>.bloombox.licensure.LicensingAuthority.StateLicense state = 3;</code>
        */
       public boolean hasState() {
         return jurisdictionCase_ == 3;
@@ -5653,7 +5762,7 @@ public final class Licensure {
        * Specifies a license issued by a regional jurisdiction, which is to say, a state.
        * </pre>
        *
-       * <code>.bloombox.schema.licensure.LicensingAuthority.StateLicense state = 3;</code>
+       * <code>.bloombox.licensure.LicensingAuthority.StateLicense state = 3;</code>
        */
       public io.bloombox.schema.licensure.Licensure.LicensingAuthority.StateLicense getState() {
         if (stateBuilder_ == null) {
@@ -5673,7 +5782,7 @@ public final class Licensure {
        * Specifies a license issued by a regional jurisdiction, which is to say, a state.
        * </pre>
        *
-       * <code>.bloombox.schema.licensure.LicensingAuthority.StateLicense state = 3;</code>
+       * <code>.bloombox.licensure.LicensingAuthority.StateLicense state = 3;</code>
        */
       public Builder setState(io.bloombox.schema.licensure.Licensure.LicensingAuthority.StateLicense value) {
         if (stateBuilder_ == null) {
@@ -5693,7 +5802,7 @@ public final class Licensure {
        * Specifies a license issued by a regional jurisdiction, which is to say, a state.
        * </pre>
        *
-       * <code>.bloombox.schema.licensure.LicensingAuthority.StateLicense state = 3;</code>
+       * <code>.bloombox.licensure.LicensingAuthority.StateLicense state = 3;</code>
        */
       public Builder setState(
           io.bloombox.schema.licensure.Licensure.LicensingAuthority.StateLicense.Builder builderForValue) {
@@ -5711,7 +5820,7 @@ public final class Licensure {
        * Specifies a license issued by a regional jurisdiction, which is to say, a state.
        * </pre>
        *
-       * <code>.bloombox.schema.licensure.LicensingAuthority.StateLicense state = 3;</code>
+       * <code>.bloombox.licensure.LicensingAuthority.StateLicense state = 3;</code>
        */
       public Builder mergeState(io.bloombox.schema.licensure.Licensure.LicensingAuthority.StateLicense value) {
         if (stateBuilder_ == null) {
@@ -5737,7 +5846,7 @@ public final class Licensure {
        * Specifies a license issued by a regional jurisdiction, which is to say, a state.
        * </pre>
        *
-       * <code>.bloombox.schema.licensure.LicensingAuthority.StateLicense state = 3;</code>
+       * <code>.bloombox.licensure.LicensingAuthority.StateLicense state = 3;</code>
        */
       public Builder clearState() {
         if (stateBuilder_ == null) {
@@ -5760,7 +5869,7 @@ public final class Licensure {
        * Specifies a license issued by a regional jurisdiction, which is to say, a state.
        * </pre>
        *
-       * <code>.bloombox.schema.licensure.LicensingAuthority.StateLicense state = 3;</code>
+       * <code>.bloombox.licensure.LicensingAuthority.StateLicense state = 3;</code>
        */
       public io.bloombox.schema.licensure.Licensure.LicensingAuthority.StateLicense.Builder getStateBuilder() {
         return getStateFieldBuilder().getBuilder();
@@ -5770,7 +5879,7 @@ public final class Licensure {
        * Specifies a license issued by a regional jurisdiction, which is to say, a state.
        * </pre>
        *
-       * <code>.bloombox.schema.licensure.LicensingAuthority.StateLicense state = 3;</code>
+       * <code>.bloombox.licensure.LicensingAuthority.StateLicense state = 3;</code>
        */
       public io.bloombox.schema.licensure.Licensure.LicensingAuthority.StateLicenseOrBuilder getStateOrBuilder() {
         if ((jurisdictionCase_ == 3) && (stateBuilder_ != null)) {
@@ -5787,7 +5896,7 @@ public final class Licensure {
        * Specifies a license issued by a regional jurisdiction, which is to say, a state.
        * </pre>
        *
-       * <code>.bloombox.schema.licensure.LicensingAuthority.StateLicense state = 3;</code>
+       * <code>.bloombox.licensure.LicensingAuthority.StateLicense state = 3;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
           io.bloombox.schema.licensure.Licensure.LicensingAuthority.StateLicense, io.bloombox.schema.licensure.Licensure.LicensingAuthority.StateLicense.Builder, io.bloombox.schema.licensure.Licensure.LicensingAuthority.StateLicenseOrBuilder> 
@@ -5807,21 +5916,23 @@ public final class Licensure {
         onChanged();;
         return stateBuilder_;
       }
+      @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
         return super.setUnknownFieldsProto3(unknownFields);
       }
 
+      @java.lang.Override
       public final Builder mergeUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
         return super.mergeUnknownFields(unknownFields);
       }
 
 
-      // @@protoc_insertion_point(builder_scope:bloombox.schema.licensure.LicensingAuthority)
+      // @@protoc_insertion_point(builder_scope:bloombox.licensure.LicensingAuthority)
     }
 
-    // @@protoc_insertion_point(class_scope:bloombox.schema.licensure.LicensingAuthority)
+    // @@protoc_insertion_point(class_scope:bloombox.licensure.LicensingAuthority)
     private static final io.bloombox.schema.licensure.Licensure.LicensingAuthority DEFAULT_INSTANCE;
     static {
       DEFAULT_INSTANCE = new io.bloombox.schema.licensure.Licensure.LicensingAuthority();
@@ -5833,6 +5944,7 @@ public final class Licensure {
 
     private static final com.google.protobuf.Parser<LicensingAuthority>
         PARSER = new com.google.protobuf.AbstractParser<LicensingAuthority>() {
+      @java.lang.Override
       public LicensingAuthority parsePartialFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -5850,6 +5962,7 @@ public final class Licensure {
       return PARSER;
     }
 
+    @java.lang.Override
     public io.bloombox.schema.licensure.Licensure.LicensingAuthority getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
@@ -5857,7 +5970,7 @@ public final class Licensure {
   }
 
   public interface LicenseKeyOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:bloombox.schema.licensure.LicenseKey)
+      // @@protoc_insertion_point(interface_extends:bloombox.licensure.LicenseKey)
       com.google.protobuf.MessageOrBuilder {
 
     /**
@@ -5906,11 +6019,11 @@ public final class Licensure {
    * UUID value, and a reference to any jurisdictionally-issued document or license codes.
    * </pre>
    *
-   * Protobuf type {@code bloombox.schema.licensure.LicenseKey}
+   * Protobuf type {@code bloombox.licensure.LicenseKey}
    */
   public  static final class LicenseKey extends
       com.google.protobuf.GeneratedMessageV3 implements
-      // @@protoc_insertion_point(message_implements:bloombox.schema.licensure.LicenseKey)
+      // @@protoc_insertion_point(message_implements:bloombox.licensure.LicenseKey)
       LicenseKeyOrBuilder {
   private static final long serialVersionUID = 0L;
     // Use LicenseKey.newBuilder() to construct.
@@ -5946,13 +6059,6 @@ public final class Licensure {
             case 0:
               done = true;
               break;
-            default: {
-              if (!parseUnknownFieldProto3(
-                  input, unknownFields, extensionRegistry, tag)) {
-                done = true;
-              }
-              break;
-            }
             case 10: {
               java.lang.String s = input.readStringRequireUtf8();
 
@@ -5963,6 +6069,13 @@ public final class Licensure {
               java.lang.String s = input.readStringRequireUtf8();
 
               jid_ = s;
+              break;
+            }
+            default: {
+              if (!parseUnknownFieldProto3(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
               break;
             }
           }
@@ -5979,12 +6092,13 @@ public final class Licensure {
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return io.bloombox.schema.licensure.Licensure.internal_static_bloombox_schema_licensure_LicenseKey_descriptor;
+      return io.bloombox.schema.licensure.Licensure.internal_static_bloombox_licensure_LicenseKey_descriptor;
     }
 
+    @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return io.bloombox.schema.licensure.Licensure.internal_static_bloombox_schema_licensure_LicenseKey_fieldAccessorTable
+      return io.bloombox.schema.licensure.Licensure.internal_static_bloombox_licensure_LicenseKey_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
               io.bloombox.schema.licensure.Licensure.LicenseKey.class, io.bloombox.schema.licensure.Licensure.LicenseKey.Builder.class);
     }
@@ -6078,6 +6192,7 @@ public final class Licensure {
     }
 
     private byte memoizedIsInitialized = -1;
+    @java.lang.Override
     public final boolean isInitialized() {
       byte isInitialized = memoizedIsInitialized;
       if (isInitialized == 1) return true;
@@ -6087,6 +6202,7 @@ public final class Licensure {
       return true;
     }
 
+    @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
       if (!getIdBytes().isEmpty()) {
@@ -6098,6 +6214,7 @@ public final class Licensure {
       unknownFields.writeTo(output);
     }
 
+    @java.lang.Override
     public int getSerializedSize() {
       int size = memoizedSize;
       if (size != -1) return size;
@@ -6219,6 +6336,7 @@ public final class Licensure {
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
 
+    @java.lang.Override
     public Builder newBuilderForType() { return newBuilder(); }
     public static Builder newBuilder() {
       return DEFAULT_INSTANCE.toBuilder();
@@ -6226,6 +6344,7 @@ public final class Licensure {
     public static Builder newBuilder(io.bloombox.schema.licensure.Licensure.LicenseKey prototype) {
       return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
     }
+    @java.lang.Override
     public Builder toBuilder() {
       return this == DEFAULT_INSTANCE
           ? new Builder() : new Builder().mergeFrom(this);
@@ -6243,20 +6362,21 @@ public final class Licensure {
      * UUID value, and a reference to any jurisdictionally-issued document or license codes.
      * </pre>
      *
-     * Protobuf type {@code bloombox.schema.licensure.LicenseKey}
+     * Protobuf type {@code bloombox.licensure.LicenseKey}
      */
     public static final class Builder extends
         com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:bloombox.schema.licensure.LicenseKey)
+        // @@protoc_insertion_point(builder_implements:bloombox.licensure.LicenseKey)
         io.bloombox.schema.licensure.Licensure.LicenseKeyOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return io.bloombox.schema.licensure.Licensure.internal_static_bloombox_schema_licensure_LicenseKey_descriptor;
+        return io.bloombox.schema.licensure.Licensure.internal_static_bloombox_licensure_LicenseKey_descriptor;
       }
 
+      @java.lang.Override
       protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return io.bloombox.schema.licensure.Licensure.internal_static_bloombox_schema_licensure_LicenseKey_fieldAccessorTable
+        return io.bloombox.schema.licensure.Licensure.internal_static_bloombox_licensure_LicenseKey_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
                 io.bloombox.schema.licensure.Licensure.LicenseKey.class, io.bloombox.schema.licensure.Licensure.LicenseKey.Builder.class);
       }
@@ -6276,6 +6396,7 @@ public final class Licensure {
                 .alwaysUseFieldBuilders) {
         }
       }
+      @java.lang.Override
       public Builder clear() {
         super.clear();
         id_ = "";
@@ -6285,15 +6406,18 @@ public final class Licensure {
         return this;
       }
 
+      @java.lang.Override
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return io.bloombox.schema.licensure.Licensure.internal_static_bloombox_schema_licensure_LicenseKey_descriptor;
+        return io.bloombox.schema.licensure.Licensure.internal_static_bloombox_licensure_LicenseKey_descriptor;
       }
 
+      @java.lang.Override
       public io.bloombox.schema.licensure.Licensure.LicenseKey getDefaultInstanceForType() {
         return io.bloombox.schema.licensure.Licensure.LicenseKey.getDefaultInstance();
       }
 
+      @java.lang.Override
       public io.bloombox.schema.licensure.Licensure.LicenseKey build() {
         io.bloombox.schema.licensure.Licensure.LicenseKey result = buildPartial();
         if (!result.isInitialized()) {
@@ -6302,6 +6426,7 @@ public final class Licensure {
         return result;
       }
 
+      @java.lang.Override
       public io.bloombox.schema.licensure.Licensure.LicenseKey buildPartial() {
         io.bloombox.schema.licensure.Licensure.LicenseKey result = new io.bloombox.schema.licensure.Licensure.LicenseKey(this);
         result.id_ = id_;
@@ -6310,32 +6435,39 @@ public final class Licensure {
         return result;
       }
 
+      @java.lang.Override
       public Builder clone() {
         return (Builder) super.clone();
       }
+      @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
         return (Builder) super.setField(field, value);
       }
+      @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
         return (Builder) super.clearField(field);
       }
+      @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
         return (Builder) super.clearOneof(oneof);
       }
+      @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
         return (Builder) super.setRepeatedField(field, index, value);
       }
+      @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
         return (Builder) super.addRepeatedField(field, value);
       }
+      @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
         if (other instanceof io.bloombox.schema.licensure.Licensure.LicenseKey) {
           return mergeFrom((io.bloombox.schema.licensure.Licensure.LicenseKey)other);
@@ -6360,10 +6492,12 @@ public final class Licensure {
         return this;
       }
 
+      @java.lang.Override
       public final boolean isInitialized() {
         return true;
       }
 
+      @java.lang.Override
       public Builder mergeFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -6569,21 +6703,23 @@ public final class Licensure {
         onChanged();
         return this;
       }
+      @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
         return super.setUnknownFieldsProto3(unknownFields);
       }
 
+      @java.lang.Override
       public final Builder mergeUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
         return super.mergeUnknownFields(unknownFields);
       }
 
 
-      // @@protoc_insertion_point(builder_scope:bloombox.schema.licensure.LicenseKey)
+      // @@protoc_insertion_point(builder_scope:bloombox.licensure.LicenseKey)
     }
 
-    // @@protoc_insertion_point(class_scope:bloombox.schema.licensure.LicenseKey)
+    // @@protoc_insertion_point(class_scope:bloombox.licensure.LicenseKey)
     private static final io.bloombox.schema.licensure.Licensure.LicenseKey DEFAULT_INSTANCE;
     static {
       DEFAULT_INSTANCE = new io.bloombox.schema.licensure.Licensure.LicenseKey();
@@ -6595,6 +6731,7 @@ public final class Licensure {
 
     private static final com.google.protobuf.Parser<LicenseKey>
         PARSER = new com.google.protobuf.AbstractParser<LicenseKey>() {
+      @java.lang.Override
       public LicenseKey parsePartialFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -6612,6 +6749,7 @@ public final class Licensure {
       return PARSER;
     }
 
+    @java.lang.Override
     public io.bloombox.schema.licensure.Licensure.LicenseKey getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
@@ -6619,7 +6757,7 @@ public final class Licensure {
   }
 
   public interface LicenseEventOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:bloombox.schema.licensure.LicenseEvent)
+      // @@protoc_insertion_point(interface_extends:bloombox.licensure.LicenseEvent)
       com.google.protobuf.MessageOrBuilder {
 
     /**
@@ -6627,7 +6765,7 @@ public final class Licensure {
      * Status for the license after this event takes place.
      * </pre>
      *
-     * <code>.bloombox.schema.licensure.LicenseStatus status = 1;</code>
+     * <code>.bloombox.licensure.LicenseStatus status = 1;</code>
      */
     int getStatusValue();
     /**
@@ -6635,7 +6773,7 @@ public final class Licensure {
      * Status for the license after this event takes place.
      * </pre>
      *
-     * <code>.bloombox.schema.licensure.LicenseStatus status = 1;</code>
+     * <code>.bloombox.licensure.LicenseStatus status = 1;</code>
      */
     io.bloombox.schema.licensure.Licensure.LicenseStatus getStatus();
 
@@ -6645,7 +6783,7 @@ public final class Licensure {
      * considered unchanged from the previous license event.
      * </pre>
      *
-     * <code>repeated .bloombox.schema.licensure.LicensePrivilege privilege = 2;</code>
+     * <code>repeated .bloombox.licensure.LicensePrivilege privilege = 2;</code>
      */
     java.util.List<io.bloombox.schema.licensure.Licensure.LicensePrivilege> getPrivilegeList();
     /**
@@ -6654,7 +6792,7 @@ public final class Licensure {
      * considered unchanged from the previous license event.
      * </pre>
      *
-     * <code>repeated .bloombox.schema.licensure.LicensePrivilege privilege = 2;</code>
+     * <code>repeated .bloombox.licensure.LicensePrivilege privilege = 2;</code>
      */
     int getPrivilegeCount();
     /**
@@ -6663,7 +6801,7 @@ public final class Licensure {
      * considered unchanged from the previous license event.
      * </pre>
      *
-     * <code>repeated .bloombox.schema.licensure.LicensePrivilege privilege = 2;</code>
+     * <code>repeated .bloombox.licensure.LicensePrivilege privilege = 2;</code>
      */
     io.bloombox.schema.licensure.Licensure.LicensePrivilege getPrivilege(int index);
     /**
@@ -6672,7 +6810,7 @@ public final class Licensure {
      * considered unchanged from the previous license event.
      * </pre>
      *
-     * <code>repeated .bloombox.schema.licensure.LicensePrivilege privilege = 2;</code>
+     * <code>repeated .bloombox.licensure.LicensePrivilege privilege = 2;</code>
      */
     java.util.List<java.lang.Integer>
     getPrivilegeValueList();
@@ -6682,7 +6820,7 @@ public final class Licensure {
      * considered unchanged from the previous license event.
      * </pre>
      *
-     * <code>repeated .bloombox.schema.licensure.LicensePrivilege privilege = 2;</code>
+     * <code>repeated .bloombox.licensure.LicensePrivilege privilege = 2;</code>
      */
     int getPrivilegeValue(int index);
 
@@ -6735,11 +6873,11 @@ public final class Licensure {
    * can be reconstructed from a set of license events.
    * </pre>
    *
-   * Protobuf type {@code bloombox.schema.licensure.LicenseEvent}
+   * Protobuf type {@code bloombox.licensure.LicenseEvent}
    */
   public  static final class LicenseEvent extends
       com.google.protobuf.GeneratedMessageV3 implements
-      // @@protoc_insertion_point(message_implements:bloombox.schema.licensure.LicenseEvent)
+      // @@protoc_insertion_point(message_implements:bloombox.licensure.LicenseEvent)
       LicenseEventOrBuilder {
   private static final long serialVersionUID = 0L;
     // Use LicenseEvent.newBuilder() to construct.
@@ -6776,13 +6914,6 @@ public final class Licensure {
             case 0:
               done = true;
               break;
-            default: {
-              if (!parseUnknownFieldProto3(
-                  input, unknownFields, extensionRegistry, tag)) {
-                done = true;
-              }
-              break;
-            }
             case 8: {
               int rawValue = input.readEnum();
 
@@ -6831,6 +6962,13 @@ public final class Licensure {
 
               break;
             }
+            default: {
+              if (!parseUnknownFieldProto3(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
           }
         }
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
@@ -6848,12 +6986,13 @@ public final class Licensure {
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return io.bloombox.schema.licensure.Licensure.internal_static_bloombox_schema_licensure_LicenseEvent_descriptor;
+      return io.bloombox.schema.licensure.Licensure.internal_static_bloombox_licensure_LicenseEvent_descriptor;
     }
 
+    @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return io.bloombox.schema.licensure.Licensure.internal_static_bloombox_schema_licensure_LicenseEvent_fieldAccessorTable
+      return io.bloombox.schema.licensure.Licensure.internal_static_bloombox_licensure_LicenseEvent_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
               io.bloombox.schema.licensure.Licensure.LicenseEvent.class, io.bloombox.schema.licensure.Licensure.LicenseEvent.Builder.class);
     }
@@ -6866,7 +7005,7 @@ public final class Licensure {
      * Status for the license after this event takes place.
      * </pre>
      *
-     * <code>.bloombox.schema.licensure.LicenseStatus status = 1;</code>
+     * <code>.bloombox.licensure.LicenseStatus status = 1;</code>
      */
     public int getStatusValue() {
       return status_;
@@ -6876,9 +7015,10 @@ public final class Licensure {
      * Status for the license after this event takes place.
      * </pre>
      *
-     * <code>.bloombox.schema.licensure.LicenseStatus status = 1;</code>
+     * <code>.bloombox.licensure.LicenseStatus status = 1;</code>
      */
     public io.bloombox.schema.licensure.Licensure.LicenseStatus getStatus() {
+      @SuppressWarnings("deprecation")
       io.bloombox.schema.licensure.Licensure.LicenseStatus result = io.bloombox.schema.licensure.Licensure.LicenseStatus.valueOf(status_);
       return result == null ? io.bloombox.schema.licensure.Licensure.LicenseStatus.UNRECOGNIZED : result;
     }
@@ -6890,6 +7030,7 @@ public final class Licensure {
             new com.google.protobuf.Internal.ListAdapter.Converter<
                 java.lang.Integer, io.bloombox.schema.licensure.Licensure.LicensePrivilege>() {
               public io.bloombox.schema.licensure.Licensure.LicensePrivilege convert(java.lang.Integer from) {
+                @SuppressWarnings("deprecation")
                 io.bloombox.schema.licensure.Licensure.LicensePrivilege result = io.bloombox.schema.licensure.Licensure.LicensePrivilege.valueOf(from);
                 return result == null ? io.bloombox.schema.licensure.Licensure.LicensePrivilege.UNRECOGNIZED : result;
               }
@@ -6900,7 +7041,7 @@ public final class Licensure {
      * considered unchanged from the previous license event.
      * </pre>
      *
-     * <code>repeated .bloombox.schema.licensure.LicensePrivilege privilege = 2;</code>
+     * <code>repeated .bloombox.licensure.LicensePrivilege privilege = 2;</code>
      */
     public java.util.List<io.bloombox.schema.licensure.Licensure.LicensePrivilege> getPrivilegeList() {
       return new com.google.protobuf.Internal.ListAdapter<
@@ -6912,7 +7053,7 @@ public final class Licensure {
      * considered unchanged from the previous license event.
      * </pre>
      *
-     * <code>repeated .bloombox.schema.licensure.LicensePrivilege privilege = 2;</code>
+     * <code>repeated .bloombox.licensure.LicensePrivilege privilege = 2;</code>
      */
     public int getPrivilegeCount() {
       return privilege_.size();
@@ -6923,7 +7064,7 @@ public final class Licensure {
      * considered unchanged from the previous license event.
      * </pre>
      *
-     * <code>repeated .bloombox.schema.licensure.LicensePrivilege privilege = 2;</code>
+     * <code>repeated .bloombox.licensure.LicensePrivilege privilege = 2;</code>
      */
     public io.bloombox.schema.licensure.Licensure.LicensePrivilege getPrivilege(int index) {
       return privilege_converter_.convert(privilege_.get(index));
@@ -6934,7 +7075,7 @@ public final class Licensure {
      * considered unchanged from the previous license event.
      * </pre>
      *
-     * <code>repeated .bloombox.schema.licensure.LicensePrivilege privilege = 2;</code>
+     * <code>repeated .bloombox.licensure.LicensePrivilege privilege = 2;</code>
      */
     public java.util.List<java.lang.Integer>
     getPrivilegeValueList() {
@@ -6946,7 +7087,7 @@ public final class Licensure {
      * considered unchanged from the previous license event.
      * </pre>
      *
-     * <code>repeated .bloombox.schema.licensure.LicensePrivilege privilege = 2;</code>
+     * <code>repeated .bloombox.licensure.LicensePrivilege privilege = 2;</code>
      */
     public int getPrivilegeValue(int index) {
       return privilege_.get(index);
@@ -7029,6 +7170,7 @@ public final class Licensure {
     }
 
     private byte memoizedIsInitialized = -1;
+    @java.lang.Override
     public final boolean isInitialized() {
       byte isInitialized = memoizedIsInitialized;
       if (isInitialized == 1) return true;
@@ -7038,6 +7180,7 @@ public final class Licensure {
       return true;
     }
 
+    @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
       getSerializedSize();
@@ -7060,6 +7203,7 @@ public final class Licensure {
       unknownFields.writeTo(output);
     }
 
+    @java.lang.Override
     public int getSerializedSize() {
       int size = memoizedSize;
       if (size != -1) return size;
@@ -7211,6 +7355,7 @@ public final class Licensure {
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
 
+    @java.lang.Override
     public Builder newBuilderForType() { return newBuilder(); }
     public static Builder newBuilder() {
       return DEFAULT_INSTANCE.toBuilder();
@@ -7218,6 +7363,7 @@ public final class Licensure {
     public static Builder newBuilder(io.bloombox.schema.licensure.Licensure.LicenseEvent prototype) {
       return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
     }
+    @java.lang.Override
     public Builder toBuilder() {
       return this == DEFAULT_INSTANCE
           ? new Builder() : new Builder().mergeFrom(this);
@@ -7235,20 +7381,21 @@ public final class Licensure {
      * can be reconstructed from a set of license events.
      * </pre>
      *
-     * Protobuf type {@code bloombox.schema.licensure.LicenseEvent}
+     * Protobuf type {@code bloombox.licensure.LicenseEvent}
      */
     public static final class Builder extends
         com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:bloombox.schema.licensure.LicenseEvent)
+        // @@protoc_insertion_point(builder_implements:bloombox.licensure.LicenseEvent)
         io.bloombox.schema.licensure.Licensure.LicenseEventOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return io.bloombox.schema.licensure.Licensure.internal_static_bloombox_schema_licensure_LicenseEvent_descriptor;
+        return io.bloombox.schema.licensure.Licensure.internal_static_bloombox_licensure_LicenseEvent_descriptor;
       }
 
+      @java.lang.Override
       protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return io.bloombox.schema.licensure.Licensure.internal_static_bloombox_schema_licensure_LicenseEvent_fieldAccessorTable
+        return io.bloombox.schema.licensure.Licensure.internal_static_bloombox_licensure_LicenseEvent_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
                 io.bloombox.schema.licensure.Licensure.LicenseEvent.class, io.bloombox.schema.licensure.Licensure.LicenseEvent.Builder.class);
       }
@@ -7268,6 +7415,7 @@ public final class Licensure {
                 .alwaysUseFieldBuilders) {
         }
       }
+      @java.lang.Override
       public Builder clear() {
         super.clear();
         status_ = 0;
@@ -7285,15 +7433,18 @@ public final class Licensure {
         return this;
       }
 
+      @java.lang.Override
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return io.bloombox.schema.licensure.Licensure.internal_static_bloombox_schema_licensure_LicenseEvent_descriptor;
+        return io.bloombox.schema.licensure.Licensure.internal_static_bloombox_licensure_LicenseEvent_descriptor;
       }
 
+      @java.lang.Override
       public io.bloombox.schema.licensure.Licensure.LicenseEvent getDefaultInstanceForType() {
         return io.bloombox.schema.licensure.Licensure.LicenseEvent.getDefaultInstance();
       }
 
+      @java.lang.Override
       public io.bloombox.schema.licensure.Licensure.LicenseEvent build() {
         io.bloombox.schema.licensure.Licensure.LicenseEvent result = buildPartial();
         if (!result.isInitialized()) {
@@ -7302,6 +7453,7 @@ public final class Licensure {
         return result;
       }
 
+      @java.lang.Override
       public io.bloombox.schema.licensure.Licensure.LicenseEvent buildPartial() {
         io.bloombox.schema.licensure.Licensure.LicenseEvent result = new io.bloombox.schema.licensure.Licensure.LicenseEvent(this);
         int from_bitField0_ = bitField0_;
@@ -7323,32 +7475,39 @@ public final class Licensure {
         return result;
       }
 
+      @java.lang.Override
       public Builder clone() {
         return (Builder) super.clone();
       }
+      @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
         return (Builder) super.setField(field, value);
       }
+      @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
         return (Builder) super.clearField(field);
       }
+      @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
         return (Builder) super.clearOneof(oneof);
       }
+      @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
         return (Builder) super.setRepeatedField(field, index, value);
       }
+      @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
         return (Builder) super.addRepeatedField(field, value);
       }
+      @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
         if (other instanceof io.bloombox.schema.licensure.Licensure.LicenseEvent) {
           return mergeFrom((io.bloombox.schema.licensure.Licensure.LicenseEvent)other);
@@ -7385,10 +7544,12 @@ public final class Licensure {
         return this;
       }
 
+      @java.lang.Override
       public final boolean isInitialized() {
         return true;
       }
 
+      @java.lang.Override
       public Builder mergeFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -7414,7 +7575,7 @@ public final class Licensure {
        * Status for the license after this event takes place.
        * </pre>
        *
-       * <code>.bloombox.schema.licensure.LicenseStatus status = 1;</code>
+       * <code>.bloombox.licensure.LicenseStatus status = 1;</code>
        */
       public int getStatusValue() {
         return status_;
@@ -7424,7 +7585,7 @@ public final class Licensure {
        * Status for the license after this event takes place.
        * </pre>
        *
-       * <code>.bloombox.schema.licensure.LicenseStatus status = 1;</code>
+       * <code>.bloombox.licensure.LicenseStatus status = 1;</code>
        */
       public Builder setStatusValue(int value) {
         status_ = value;
@@ -7436,9 +7597,10 @@ public final class Licensure {
        * Status for the license after this event takes place.
        * </pre>
        *
-       * <code>.bloombox.schema.licensure.LicenseStatus status = 1;</code>
+       * <code>.bloombox.licensure.LicenseStatus status = 1;</code>
        */
       public io.bloombox.schema.licensure.Licensure.LicenseStatus getStatus() {
+        @SuppressWarnings("deprecation")
         io.bloombox.schema.licensure.Licensure.LicenseStatus result = io.bloombox.schema.licensure.Licensure.LicenseStatus.valueOf(status_);
         return result == null ? io.bloombox.schema.licensure.Licensure.LicenseStatus.UNRECOGNIZED : result;
       }
@@ -7447,7 +7609,7 @@ public final class Licensure {
        * Status for the license after this event takes place.
        * </pre>
        *
-       * <code>.bloombox.schema.licensure.LicenseStatus status = 1;</code>
+       * <code>.bloombox.licensure.LicenseStatus status = 1;</code>
        */
       public Builder setStatus(io.bloombox.schema.licensure.Licensure.LicenseStatus value) {
         if (value == null) {
@@ -7463,7 +7625,7 @@ public final class Licensure {
        * Status for the license after this event takes place.
        * </pre>
        *
-       * <code>.bloombox.schema.licensure.LicenseStatus status = 1;</code>
+       * <code>.bloombox.licensure.LicenseStatus status = 1;</code>
        */
       public Builder clearStatus() {
         
@@ -7486,7 +7648,7 @@ public final class Licensure {
        * considered unchanged from the previous license event.
        * </pre>
        *
-       * <code>repeated .bloombox.schema.licensure.LicensePrivilege privilege = 2;</code>
+       * <code>repeated .bloombox.licensure.LicensePrivilege privilege = 2;</code>
        */
       public java.util.List<io.bloombox.schema.licensure.Licensure.LicensePrivilege> getPrivilegeList() {
         return new com.google.protobuf.Internal.ListAdapter<
@@ -7498,7 +7660,7 @@ public final class Licensure {
        * considered unchanged from the previous license event.
        * </pre>
        *
-       * <code>repeated .bloombox.schema.licensure.LicensePrivilege privilege = 2;</code>
+       * <code>repeated .bloombox.licensure.LicensePrivilege privilege = 2;</code>
        */
       public int getPrivilegeCount() {
         return privilege_.size();
@@ -7509,7 +7671,7 @@ public final class Licensure {
        * considered unchanged from the previous license event.
        * </pre>
        *
-       * <code>repeated .bloombox.schema.licensure.LicensePrivilege privilege = 2;</code>
+       * <code>repeated .bloombox.licensure.LicensePrivilege privilege = 2;</code>
        */
       public io.bloombox.schema.licensure.Licensure.LicensePrivilege getPrivilege(int index) {
         return privilege_converter_.convert(privilege_.get(index));
@@ -7520,7 +7682,7 @@ public final class Licensure {
        * considered unchanged from the previous license event.
        * </pre>
        *
-       * <code>repeated .bloombox.schema.licensure.LicensePrivilege privilege = 2;</code>
+       * <code>repeated .bloombox.licensure.LicensePrivilege privilege = 2;</code>
        */
       public Builder setPrivilege(
           int index, io.bloombox.schema.licensure.Licensure.LicensePrivilege value) {
@@ -7538,7 +7700,7 @@ public final class Licensure {
        * considered unchanged from the previous license event.
        * </pre>
        *
-       * <code>repeated .bloombox.schema.licensure.LicensePrivilege privilege = 2;</code>
+       * <code>repeated .bloombox.licensure.LicensePrivilege privilege = 2;</code>
        */
       public Builder addPrivilege(io.bloombox.schema.licensure.Licensure.LicensePrivilege value) {
         if (value == null) {
@@ -7555,7 +7717,7 @@ public final class Licensure {
        * considered unchanged from the previous license event.
        * </pre>
        *
-       * <code>repeated .bloombox.schema.licensure.LicensePrivilege privilege = 2;</code>
+       * <code>repeated .bloombox.licensure.LicensePrivilege privilege = 2;</code>
        */
       public Builder addAllPrivilege(
           java.lang.Iterable<? extends io.bloombox.schema.licensure.Licensure.LicensePrivilege> values) {
@@ -7572,7 +7734,7 @@ public final class Licensure {
        * considered unchanged from the previous license event.
        * </pre>
        *
-       * <code>repeated .bloombox.schema.licensure.LicensePrivilege privilege = 2;</code>
+       * <code>repeated .bloombox.licensure.LicensePrivilege privilege = 2;</code>
        */
       public Builder clearPrivilege() {
         privilege_ = java.util.Collections.emptyList();
@@ -7586,7 +7748,7 @@ public final class Licensure {
        * considered unchanged from the previous license event.
        * </pre>
        *
-       * <code>repeated .bloombox.schema.licensure.LicensePrivilege privilege = 2;</code>
+       * <code>repeated .bloombox.licensure.LicensePrivilege privilege = 2;</code>
        */
       public java.util.List<java.lang.Integer>
       getPrivilegeValueList() {
@@ -7598,7 +7760,7 @@ public final class Licensure {
        * considered unchanged from the previous license event.
        * </pre>
        *
-       * <code>repeated .bloombox.schema.licensure.LicensePrivilege privilege = 2;</code>
+       * <code>repeated .bloombox.licensure.LicensePrivilege privilege = 2;</code>
        */
       public int getPrivilegeValue(int index) {
         return privilege_.get(index);
@@ -7609,7 +7771,7 @@ public final class Licensure {
        * considered unchanged from the previous license event.
        * </pre>
        *
-       * <code>repeated .bloombox.schema.licensure.LicensePrivilege privilege = 2;</code>
+       * <code>repeated .bloombox.licensure.LicensePrivilege privilege = 2;</code>
        */
       public Builder setPrivilegeValue(
           int index, int value) {
@@ -7624,7 +7786,7 @@ public final class Licensure {
        * considered unchanged from the previous license event.
        * </pre>
        *
-       * <code>repeated .bloombox.schema.licensure.LicensePrivilege privilege = 2;</code>
+       * <code>repeated .bloombox.licensure.LicensePrivilege privilege = 2;</code>
        */
       public Builder addPrivilegeValue(int value) {
         ensurePrivilegeIsMutable();
@@ -7638,7 +7800,7 @@ public final class Licensure {
        * considered unchanged from the previous license event.
        * </pre>
        *
-       * <code>repeated .bloombox.schema.licensure.LicensePrivilege privilege = 2;</code>
+       * <code>repeated .bloombox.licensure.LicensePrivilege privilege = 2;</code>
        */
       public Builder addAllPrivilegeValue(
           java.lang.Iterable<java.lang.Integer> values) {
@@ -7891,21 +8053,23 @@ public final class Licensure {
         }
         return occurredBuilder_;
       }
+      @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
         return super.setUnknownFieldsProto3(unknownFields);
       }
 
+      @java.lang.Override
       public final Builder mergeUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
         return super.mergeUnknownFields(unknownFields);
       }
 
 
-      // @@protoc_insertion_point(builder_scope:bloombox.schema.licensure.LicenseEvent)
+      // @@protoc_insertion_point(builder_scope:bloombox.licensure.LicenseEvent)
     }
 
-    // @@protoc_insertion_point(class_scope:bloombox.schema.licensure.LicenseEvent)
+    // @@protoc_insertion_point(class_scope:bloombox.licensure.LicenseEvent)
     private static final io.bloombox.schema.licensure.Licensure.LicenseEvent DEFAULT_INSTANCE;
     static {
       DEFAULT_INSTANCE = new io.bloombox.schema.licensure.Licensure.LicenseEvent();
@@ -7917,6 +8081,7 @@ public final class Licensure {
 
     private static final com.google.protobuf.Parser<LicenseEvent>
         PARSER = new com.google.protobuf.AbstractParser<LicenseEvent>() {
+      @java.lang.Override
       public LicenseEvent parsePartialFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -7934,6 +8099,7 @@ public final class Licensure {
       return PARSER;
     }
 
+    @java.lang.Override
     public io.bloombox.schema.licensure.Licensure.LicenseEvent getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
@@ -7941,7 +8107,7 @@ public final class Licensure {
   }
 
   public interface LicenseTimestampsOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:bloombox.schema.licensure.LicenseTimestamps)
+      // @@protoc_insertion_point(interface_extends:bloombox.licensure.LicenseTimestamps)
       com.google.protobuf.MessageOrBuilder {
 
     /**
@@ -8100,11 +8266,11 @@ public final class Licensure {
    * only updated by changes in the license content or privileges.
    * </pre>
    *
-   * Protobuf type {@code bloombox.schema.licensure.LicenseTimestamps}
+   * Protobuf type {@code bloombox.licensure.LicenseTimestamps}
    */
   public  static final class LicenseTimestamps extends
       com.google.protobuf.GeneratedMessageV3 implements
-      // @@protoc_insertion_point(message_implements:bloombox.schema.licensure.LicenseTimestamps)
+      // @@protoc_insertion_point(message_implements:bloombox.licensure.LicenseTimestamps)
       LicenseTimestampsOrBuilder {
   private static final long serialVersionUID = 0L;
     // Use LicenseTimestamps.newBuilder() to construct.
@@ -8138,13 +8304,6 @@ public final class Licensure {
             case 0:
               done = true;
               break;
-            default: {
-              if (!parseUnknownFieldProto3(
-                  input, unknownFields, extensionRegistry, tag)) {
-                done = true;
-              }
-              break;
-            }
             case 10: {
               io.opencannabis.schema.temporal.TemporalDate.Date.Builder subBuilder = null;
               if (submitted_ != null) {
@@ -8223,6 +8382,13 @@ public final class Licensure {
 
               break;
             }
+            default: {
+              if (!parseUnknownFieldProto3(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
           }
         }
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
@@ -8237,12 +8403,13 @@ public final class Licensure {
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return io.bloombox.schema.licensure.Licensure.internal_static_bloombox_schema_licensure_LicenseTimestamps_descriptor;
+      return io.bloombox.schema.licensure.Licensure.internal_static_bloombox_licensure_LicenseTimestamps_descriptor;
     }
 
+    @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return io.bloombox.schema.licensure.Licensure.internal_static_bloombox_schema_licensure_LicenseTimestamps_fieldAccessorTable
+      return io.bloombox.schema.licensure.Licensure.internal_static_bloombox_licensure_LicenseTimestamps_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
               io.bloombox.schema.licensure.Licensure.LicenseTimestamps.class, io.bloombox.schema.licensure.Licensure.LicenseTimestamps.Builder.class);
     }
@@ -8446,6 +8613,7 @@ public final class Licensure {
     }
 
     private byte memoizedIsInitialized = -1;
+    @java.lang.Override
     public final boolean isInitialized() {
       byte isInitialized = memoizedIsInitialized;
       if (isInitialized == 1) return true;
@@ -8455,6 +8623,7 @@ public final class Licensure {
       return true;
     }
 
+    @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
       if (submitted_ != null) {
@@ -8478,6 +8647,7 @@ public final class Licensure {
       unknownFields.writeTo(output);
     }
 
+    @java.lang.Override
     public int getSerializedSize() {
       int size = memoizedSize;
       if (size != -1) return size;
@@ -8663,6 +8833,7 @@ public final class Licensure {
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
 
+    @java.lang.Override
     public Builder newBuilderForType() { return newBuilder(); }
     public static Builder newBuilder() {
       return DEFAULT_INSTANCE.toBuilder();
@@ -8670,6 +8841,7 @@ public final class Licensure {
     public static Builder newBuilder(io.bloombox.schema.licensure.Licensure.LicenseTimestamps prototype) {
       return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
     }
+    @java.lang.Override
     public Builder toBuilder() {
       return this == DEFAULT_INSTANCE
           ? new Builder() : new Builder().mergeFrom(this);
@@ -8687,20 +8859,21 @@ public final class Licensure {
      * only updated by changes in the license content or privileges.
      * </pre>
      *
-     * Protobuf type {@code bloombox.schema.licensure.LicenseTimestamps}
+     * Protobuf type {@code bloombox.licensure.LicenseTimestamps}
      */
     public static final class Builder extends
         com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:bloombox.schema.licensure.LicenseTimestamps)
+        // @@protoc_insertion_point(builder_implements:bloombox.licensure.LicenseTimestamps)
         io.bloombox.schema.licensure.Licensure.LicenseTimestampsOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return io.bloombox.schema.licensure.Licensure.internal_static_bloombox_schema_licensure_LicenseTimestamps_descriptor;
+        return io.bloombox.schema.licensure.Licensure.internal_static_bloombox_licensure_LicenseTimestamps_descriptor;
       }
 
+      @java.lang.Override
       protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return io.bloombox.schema.licensure.Licensure.internal_static_bloombox_schema_licensure_LicenseTimestamps_fieldAccessorTable
+        return io.bloombox.schema.licensure.Licensure.internal_static_bloombox_licensure_LicenseTimestamps_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
                 io.bloombox.schema.licensure.Licensure.LicenseTimestamps.class, io.bloombox.schema.licensure.Licensure.LicenseTimestamps.Builder.class);
       }
@@ -8720,6 +8893,7 @@ public final class Licensure {
                 .alwaysUseFieldBuilders) {
         }
       }
+      @java.lang.Override
       public Builder clear() {
         super.clear();
         if (submittedBuilder_ == null) {
@@ -8761,15 +8935,18 @@ public final class Licensure {
         return this;
       }
 
+      @java.lang.Override
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return io.bloombox.schema.licensure.Licensure.internal_static_bloombox_schema_licensure_LicenseTimestamps_descriptor;
+        return io.bloombox.schema.licensure.Licensure.internal_static_bloombox_licensure_LicenseTimestamps_descriptor;
       }
 
+      @java.lang.Override
       public io.bloombox.schema.licensure.Licensure.LicenseTimestamps getDefaultInstanceForType() {
         return io.bloombox.schema.licensure.Licensure.LicenseTimestamps.getDefaultInstance();
       }
 
+      @java.lang.Override
       public io.bloombox.schema.licensure.Licensure.LicenseTimestamps build() {
         io.bloombox.schema.licensure.Licensure.LicenseTimestamps result = buildPartial();
         if (!result.isInitialized()) {
@@ -8778,6 +8955,7 @@ public final class Licensure {
         return result;
       }
 
+      @java.lang.Override
       public io.bloombox.schema.licensure.Licensure.LicenseTimestamps buildPartial() {
         io.bloombox.schema.licensure.Licensure.LicenseTimestamps result = new io.bloombox.schema.licensure.Licensure.LicenseTimestamps(this);
         if (submittedBuilder_ == null) {
@@ -8814,32 +8992,39 @@ public final class Licensure {
         return result;
       }
 
+      @java.lang.Override
       public Builder clone() {
         return (Builder) super.clone();
       }
+      @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
         return (Builder) super.setField(field, value);
       }
+      @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
         return (Builder) super.clearField(field);
       }
+      @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
         return (Builder) super.clearOneof(oneof);
       }
+      @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
         return (Builder) super.setRepeatedField(field, index, value);
       }
+      @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
         return (Builder) super.addRepeatedField(field, value);
       }
+      @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
         if (other instanceof io.bloombox.schema.licensure.Licensure.LicenseTimestamps) {
           return mergeFrom((io.bloombox.schema.licensure.Licensure.LicenseTimestamps)other);
@@ -8874,10 +9059,12 @@ public final class Licensure {
         return this;
       }
 
+      @java.lang.Override
       public final boolean isInitialized() {
         return true;
       }
 
+      @java.lang.Override
       public Builder mergeFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -9813,21 +10000,23 @@ public final class Licensure {
         }
         return modifiedBuilder_;
       }
+      @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
         return super.setUnknownFieldsProto3(unknownFields);
       }
 
+      @java.lang.Override
       public final Builder mergeUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
         return super.mergeUnknownFields(unknownFields);
       }
 
 
-      // @@protoc_insertion_point(builder_scope:bloombox.schema.licensure.LicenseTimestamps)
+      // @@protoc_insertion_point(builder_scope:bloombox.licensure.LicenseTimestamps)
     }
 
-    // @@protoc_insertion_point(class_scope:bloombox.schema.licensure.LicenseTimestamps)
+    // @@protoc_insertion_point(class_scope:bloombox.licensure.LicenseTimestamps)
     private static final io.bloombox.schema.licensure.Licensure.LicenseTimestamps DEFAULT_INSTANCE;
     static {
       DEFAULT_INSTANCE = new io.bloombox.schema.licensure.Licensure.LicenseTimestamps();
@@ -9839,6 +10028,7 @@ public final class Licensure {
 
     private static final com.google.protobuf.Parser<LicenseTimestamps>
         PARSER = new com.google.protobuf.AbstractParser<LicenseTimestamps>() {
+      @java.lang.Override
       public LicenseTimestamps parsePartialFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -9856,6 +10046,7 @@ public final class Licensure {
       return PARSER;
     }
 
+    @java.lang.Override
     public io.bloombox.schema.licensure.Licensure.LicenseTimestamps getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
@@ -9863,7 +10054,7 @@ public final class Licensure {
   }
 
   public interface RegulatoryLicenseOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:bloombox.schema.licensure.RegulatoryLicense)
+      // @@protoc_insertion_point(interface_extends:bloombox.licensure.RegulatoryLicense)
       com.google.protobuf.MessageOrBuilder {
 
     /**
@@ -9872,7 +10063,7 @@ public final class Licensure {
      * allocated and issued by the licensing agency.
      * </pre>
      *
-     * <code>.bloombox.schema.licensure.LicenseKey key = 1 [(.core.field) = { ... }</code>
+     * <code>.bloombox.licensure.LicenseKey key = 1 [(.core.field) = { ... }</code>
      */
     boolean hasKey();
     /**
@@ -9881,7 +10072,7 @@ public final class Licensure {
      * allocated and issued by the licensing agency.
      * </pre>
      *
-     * <code>.bloombox.schema.licensure.LicenseKey key = 1 [(.core.field) = { ... }</code>
+     * <code>.bloombox.licensure.LicenseKey key = 1 [(.core.field) = { ... }</code>
      */
     io.bloombox.schema.licensure.Licensure.LicenseKey getKey();
     /**
@@ -9890,7 +10081,7 @@ public final class Licensure {
      * allocated and issued by the licensing agency.
      * </pre>
      *
-     * <code>.bloombox.schema.licensure.LicenseKey key = 1 [(.core.field) = { ... }</code>
+     * <code>.bloombox.licensure.LicenseKey key = 1 [(.core.field) = { ... }</code>
      */
     io.bloombox.schema.licensure.Licensure.LicenseKeyOrBuilder getKeyOrBuilder();
 
@@ -9900,7 +10091,7 @@ public final class Licensure {
      * generally, this value is either 'temporary' or 'permanent'.
      * </pre>
      *
-     * <code>.bloombox.schema.licensure.LicenseType type = 2;</code>
+     * <code>.bloombox.licensure.LicenseType type = 2;</code>
      */
     int getTypeValue();
     /**
@@ -9909,7 +10100,7 @@ public final class Licensure {
      * generally, this value is either 'temporary' or 'permanent'.
      * </pre>
      *
-     * <code>.bloombox.schema.licensure.LicenseType type = 2;</code>
+     * <code>.bloombox.licensure.LicenseType type = 2;</code>
      */
     io.bloombox.schema.licensure.Licensure.LicenseType getType();
 
@@ -9919,7 +10110,7 @@ public final class Licensure {
      * this governing body that the privileges embedded in this license apply to the licensee.
      * </pre>
      *
-     * <code>.bloombox.schema.licensure.LicensingAuthority authority = 3;</code>
+     * <code>.bloombox.licensure.LicensingAuthority authority = 3;</code>
      */
     boolean hasAuthority();
     /**
@@ -9928,7 +10119,7 @@ public final class Licensure {
      * this governing body that the privileges embedded in this license apply to the licensee.
      * </pre>
      *
-     * <code>.bloombox.schema.licensure.LicensingAuthority authority = 3;</code>
+     * <code>.bloombox.licensure.LicensingAuthority authority = 3;</code>
      */
     io.bloombox.schema.licensure.Licensure.LicensingAuthority getAuthority();
     /**
@@ -9937,7 +10128,7 @@ public final class Licensure {
      * this governing body that the privileges embedded in this license apply to the licensee.
      * </pre>
      *
-     * <code>.bloombox.schema.licensure.LicensingAuthority authority = 3;</code>
+     * <code>.bloombox.licensure.LicensingAuthority authority = 3;</code>
      */
     io.bloombox.schema.licensure.Licensure.LicensingAuthorityOrBuilder getAuthorityOrBuilder();
 
@@ -9947,7 +10138,7 @@ public final class Licensure {
      * Docs about each state are available on the declared type.
      * </pre>
      *
-     * <code>.bloombox.schema.licensure.LicenseStatus status = 4;</code>
+     * <code>.bloombox.licensure.LicenseStatus status = 4;</code>
      */
     int getStatusValue();
     /**
@@ -9956,7 +10147,7 @@ public final class Licensure {
      * Docs about each state are available on the declared type.
      * </pre>
      *
-     * <code>.bloombox.schema.licensure.LicenseStatus status = 4;</code>
+     * <code>.bloombox.licensure.LicenseStatus status = 4;</code>
      */
     io.bloombox.schema.licensure.Licensure.LicenseStatus getStatus();
 
@@ -9966,7 +10157,7 @@ public final class Licensure {
      * allocated, this property is left empty, and begins with an entry after the first mutation of a license record.
      * </pre>
      *
-     * <code>repeated .bloombox.schema.licensure.LicenseEvent event = 5;</code>
+     * <code>repeated .bloombox.licensure.LicenseEvent event = 5;</code>
      */
     java.util.List<io.bloombox.schema.licensure.Licensure.LicenseEvent> 
         getEventList();
@@ -9976,7 +10167,7 @@ public final class Licensure {
      * allocated, this property is left empty, and begins with an entry after the first mutation of a license record.
      * </pre>
      *
-     * <code>repeated .bloombox.schema.licensure.LicenseEvent event = 5;</code>
+     * <code>repeated .bloombox.licensure.LicenseEvent event = 5;</code>
      */
     io.bloombox.schema.licensure.Licensure.LicenseEvent getEvent(int index);
     /**
@@ -9985,7 +10176,7 @@ public final class Licensure {
      * allocated, this property is left empty, and begins with an entry after the first mutation of a license record.
      * </pre>
      *
-     * <code>repeated .bloombox.schema.licensure.LicenseEvent event = 5;</code>
+     * <code>repeated .bloombox.licensure.LicenseEvent event = 5;</code>
      */
     int getEventCount();
     /**
@@ -9994,7 +10185,7 @@ public final class Licensure {
      * allocated, this property is left empty, and begins with an entry after the first mutation of a license record.
      * </pre>
      *
-     * <code>repeated .bloombox.schema.licensure.LicenseEvent event = 5;</code>
+     * <code>repeated .bloombox.licensure.LicenseEvent event = 5;</code>
      */
     java.util.List<? extends io.bloombox.schema.licensure.Licensure.LicenseEventOrBuilder> 
         getEventOrBuilderList();
@@ -10004,7 +10195,7 @@ public final class Licensure {
      * allocated, this property is left empty, and begins with an entry after the first mutation of a license record.
      * </pre>
      *
-     * <code>repeated .bloombox.schema.licensure.LicenseEvent event = 5;</code>
+     * <code>repeated .bloombox.licensure.LicenseEvent event = 5;</code>
      */
     io.bloombox.schema.licensure.Licensure.LicenseEventOrBuilder getEventOrBuilder(
         int index);
@@ -10015,7 +10206,7 @@ public final class Licensure {
      * to govern behavior and obtain authorization for various actions.
      * </pre>
      *
-     * <code>repeated .bloombox.schema.licensure.LicensePrivilege privilege = 6;</code>
+     * <code>repeated .bloombox.licensure.LicensePrivilege privilege = 6;</code>
      */
     java.util.List<io.bloombox.schema.licensure.Licensure.LicensePrivilege> getPrivilegeList();
     /**
@@ -10024,7 +10215,7 @@ public final class Licensure {
      * to govern behavior and obtain authorization for various actions.
      * </pre>
      *
-     * <code>repeated .bloombox.schema.licensure.LicensePrivilege privilege = 6;</code>
+     * <code>repeated .bloombox.licensure.LicensePrivilege privilege = 6;</code>
      */
     int getPrivilegeCount();
     /**
@@ -10033,7 +10224,7 @@ public final class Licensure {
      * to govern behavior and obtain authorization for various actions.
      * </pre>
      *
-     * <code>repeated .bloombox.schema.licensure.LicensePrivilege privilege = 6;</code>
+     * <code>repeated .bloombox.licensure.LicensePrivilege privilege = 6;</code>
      */
     io.bloombox.schema.licensure.Licensure.LicensePrivilege getPrivilege(int index);
     /**
@@ -10042,7 +10233,7 @@ public final class Licensure {
      * to govern behavior and obtain authorization for various actions.
      * </pre>
      *
-     * <code>repeated .bloombox.schema.licensure.LicensePrivilege privilege = 6;</code>
+     * <code>repeated .bloombox.licensure.LicensePrivilege privilege = 6;</code>
      */
     java.util.List<java.lang.Integer>
     getPrivilegeValueList();
@@ -10052,7 +10243,7 @@ public final class Licensure {
      * to govern behavior and obtain authorization for various actions.
      * </pre>
      *
-     * <code>repeated .bloombox.schema.licensure.LicensePrivilege privilege = 6;</code>
+     * <code>repeated .bloombox.licensure.LicensePrivilege privilege = 6;</code>
      */
     int getPrivilegeValue(int index);
 
@@ -10061,7 +10252,7 @@ public final class Licensure {
      * Timestamps that record when various actions or states became active.
      * </pre>
      *
-     * <code>.bloombox.schema.licensure.LicenseTimestamps timestamps = 7;</code>
+     * <code>.bloombox.licensure.LicenseTimestamps timestamps = 7;</code>
      */
     boolean hasTimestamps();
     /**
@@ -10069,7 +10260,7 @@ public final class Licensure {
      * Timestamps that record when various actions or states became active.
      * </pre>
      *
-     * <code>.bloombox.schema.licensure.LicenseTimestamps timestamps = 7;</code>
+     * <code>.bloombox.licensure.LicenseTimestamps timestamps = 7;</code>
      */
     io.bloombox.schema.licensure.Licensure.LicenseTimestamps getTimestamps();
     /**
@@ -10077,7 +10268,7 @@ public final class Licensure {
      * Timestamps that record when various actions or states became active.
      * </pre>
      *
-     * <code>.bloombox.schema.licensure.LicenseTimestamps timestamps = 7;</code>
+     * <code>.bloombox.licensure.LicenseTimestamps timestamps = 7;</code>
      */
     io.bloombox.schema.licensure.Licensure.LicenseTimestampsOrBuilder getTimestampsOrBuilder();
   }
@@ -10088,11 +10279,11 @@ public final class Licensure {
    * jurisdiction. Licenses are generally considered sub-objects to existing licensee records.
    * </pre>
    *
-   * Protobuf type {@code bloombox.schema.licensure.RegulatoryLicense}
+   * Protobuf type {@code bloombox.licensure.RegulatoryLicense}
    */
   public  static final class RegulatoryLicense extends
       com.google.protobuf.GeneratedMessageV3 implements
-      // @@protoc_insertion_point(message_implements:bloombox.schema.licensure.RegulatoryLicense)
+      // @@protoc_insertion_point(message_implements:bloombox.licensure.RegulatoryLicense)
       RegulatoryLicenseOrBuilder {
   private static final long serialVersionUID = 0L;
     // Use RegulatoryLicense.newBuilder() to construct.
@@ -10130,13 +10321,6 @@ public final class Licensure {
             case 0:
               done = true;
               break;
-            default: {
-              if (!parseUnknownFieldProto3(
-                  input, unknownFields, extensionRegistry, tag)) {
-                done = true;
-              }
-              break;
-            }
             case 10: {
               io.bloombox.schema.licensure.Licensure.LicenseKey.Builder subBuilder = null;
               if (key_ != null) {
@@ -10220,6 +10404,13 @@ public final class Licensure {
 
               break;
             }
+            default: {
+              if (!parseUnknownFieldProto3(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
           }
         }
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
@@ -10240,12 +10431,13 @@ public final class Licensure {
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return io.bloombox.schema.licensure.Licensure.internal_static_bloombox_schema_licensure_RegulatoryLicense_descriptor;
+      return io.bloombox.schema.licensure.Licensure.internal_static_bloombox_licensure_RegulatoryLicense_descriptor;
     }
 
+    @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return io.bloombox.schema.licensure.Licensure.internal_static_bloombox_schema_licensure_RegulatoryLicense_fieldAccessorTable
+      return io.bloombox.schema.licensure.Licensure.internal_static_bloombox_licensure_RegulatoryLicense_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
               io.bloombox.schema.licensure.Licensure.RegulatoryLicense.class, io.bloombox.schema.licensure.Licensure.RegulatoryLicense.Builder.class);
     }
@@ -10259,7 +10451,7 @@ public final class Licensure {
      * allocated and issued by the licensing agency.
      * </pre>
      *
-     * <code>.bloombox.schema.licensure.LicenseKey key = 1 [(.core.field) = { ... }</code>
+     * <code>.bloombox.licensure.LicenseKey key = 1 [(.core.field) = { ... }</code>
      */
     public boolean hasKey() {
       return key_ != null;
@@ -10270,7 +10462,7 @@ public final class Licensure {
      * allocated and issued by the licensing agency.
      * </pre>
      *
-     * <code>.bloombox.schema.licensure.LicenseKey key = 1 [(.core.field) = { ... }</code>
+     * <code>.bloombox.licensure.LicenseKey key = 1 [(.core.field) = { ... }</code>
      */
     public io.bloombox.schema.licensure.Licensure.LicenseKey getKey() {
       return key_ == null ? io.bloombox.schema.licensure.Licensure.LicenseKey.getDefaultInstance() : key_;
@@ -10281,7 +10473,7 @@ public final class Licensure {
      * allocated and issued by the licensing agency.
      * </pre>
      *
-     * <code>.bloombox.schema.licensure.LicenseKey key = 1 [(.core.field) = { ... }</code>
+     * <code>.bloombox.licensure.LicenseKey key = 1 [(.core.field) = { ... }</code>
      */
     public io.bloombox.schema.licensure.Licensure.LicenseKeyOrBuilder getKeyOrBuilder() {
       return getKey();
@@ -10295,7 +10487,7 @@ public final class Licensure {
      * generally, this value is either 'temporary' or 'permanent'.
      * </pre>
      *
-     * <code>.bloombox.schema.licensure.LicenseType type = 2;</code>
+     * <code>.bloombox.licensure.LicenseType type = 2;</code>
      */
     public int getTypeValue() {
       return type_;
@@ -10306,9 +10498,10 @@ public final class Licensure {
      * generally, this value is either 'temporary' or 'permanent'.
      * </pre>
      *
-     * <code>.bloombox.schema.licensure.LicenseType type = 2;</code>
+     * <code>.bloombox.licensure.LicenseType type = 2;</code>
      */
     public io.bloombox.schema.licensure.Licensure.LicenseType getType() {
+      @SuppressWarnings("deprecation")
       io.bloombox.schema.licensure.Licensure.LicenseType result = io.bloombox.schema.licensure.Licensure.LicenseType.valueOf(type_);
       return result == null ? io.bloombox.schema.licensure.Licensure.LicenseType.UNRECOGNIZED : result;
     }
@@ -10321,7 +10514,7 @@ public final class Licensure {
      * this governing body that the privileges embedded in this license apply to the licensee.
      * </pre>
      *
-     * <code>.bloombox.schema.licensure.LicensingAuthority authority = 3;</code>
+     * <code>.bloombox.licensure.LicensingAuthority authority = 3;</code>
      */
     public boolean hasAuthority() {
       return authority_ != null;
@@ -10332,7 +10525,7 @@ public final class Licensure {
      * this governing body that the privileges embedded in this license apply to the licensee.
      * </pre>
      *
-     * <code>.bloombox.schema.licensure.LicensingAuthority authority = 3;</code>
+     * <code>.bloombox.licensure.LicensingAuthority authority = 3;</code>
      */
     public io.bloombox.schema.licensure.Licensure.LicensingAuthority getAuthority() {
       return authority_ == null ? io.bloombox.schema.licensure.Licensure.LicensingAuthority.getDefaultInstance() : authority_;
@@ -10343,7 +10536,7 @@ public final class Licensure {
      * this governing body that the privileges embedded in this license apply to the licensee.
      * </pre>
      *
-     * <code>.bloombox.schema.licensure.LicensingAuthority authority = 3;</code>
+     * <code>.bloombox.licensure.LicensingAuthority authority = 3;</code>
      */
     public io.bloombox.schema.licensure.Licensure.LicensingAuthorityOrBuilder getAuthorityOrBuilder() {
       return getAuthority();
@@ -10357,7 +10550,7 @@ public final class Licensure {
      * Docs about each state are available on the declared type.
      * </pre>
      *
-     * <code>.bloombox.schema.licensure.LicenseStatus status = 4;</code>
+     * <code>.bloombox.licensure.LicenseStatus status = 4;</code>
      */
     public int getStatusValue() {
       return status_;
@@ -10368,9 +10561,10 @@ public final class Licensure {
      * Docs about each state are available on the declared type.
      * </pre>
      *
-     * <code>.bloombox.schema.licensure.LicenseStatus status = 4;</code>
+     * <code>.bloombox.licensure.LicenseStatus status = 4;</code>
      */
     public io.bloombox.schema.licensure.Licensure.LicenseStatus getStatus() {
+      @SuppressWarnings("deprecation")
       io.bloombox.schema.licensure.Licensure.LicenseStatus result = io.bloombox.schema.licensure.Licensure.LicenseStatus.valueOf(status_);
       return result == null ? io.bloombox.schema.licensure.Licensure.LicenseStatus.UNRECOGNIZED : result;
     }
@@ -10383,7 +10577,7 @@ public final class Licensure {
      * allocated, this property is left empty, and begins with an entry after the first mutation of a license record.
      * </pre>
      *
-     * <code>repeated .bloombox.schema.licensure.LicenseEvent event = 5;</code>
+     * <code>repeated .bloombox.licensure.LicenseEvent event = 5;</code>
      */
     public java.util.List<io.bloombox.schema.licensure.Licensure.LicenseEvent> getEventList() {
       return event_;
@@ -10394,7 +10588,7 @@ public final class Licensure {
      * allocated, this property is left empty, and begins with an entry after the first mutation of a license record.
      * </pre>
      *
-     * <code>repeated .bloombox.schema.licensure.LicenseEvent event = 5;</code>
+     * <code>repeated .bloombox.licensure.LicenseEvent event = 5;</code>
      */
     public java.util.List<? extends io.bloombox.schema.licensure.Licensure.LicenseEventOrBuilder> 
         getEventOrBuilderList() {
@@ -10406,7 +10600,7 @@ public final class Licensure {
      * allocated, this property is left empty, and begins with an entry after the first mutation of a license record.
      * </pre>
      *
-     * <code>repeated .bloombox.schema.licensure.LicenseEvent event = 5;</code>
+     * <code>repeated .bloombox.licensure.LicenseEvent event = 5;</code>
      */
     public int getEventCount() {
       return event_.size();
@@ -10417,7 +10611,7 @@ public final class Licensure {
      * allocated, this property is left empty, and begins with an entry after the first mutation of a license record.
      * </pre>
      *
-     * <code>repeated .bloombox.schema.licensure.LicenseEvent event = 5;</code>
+     * <code>repeated .bloombox.licensure.LicenseEvent event = 5;</code>
      */
     public io.bloombox.schema.licensure.Licensure.LicenseEvent getEvent(int index) {
       return event_.get(index);
@@ -10428,7 +10622,7 @@ public final class Licensure {
      * allocated, this property is left empty, and begins with an entry after the first mutation of a license record.
      * </pre>
      *
-     * <code>repeated .bloombox.schema.licensure.LicenseEvent event = 5;</code>
+     * <code>repeated .bloombox.licensure.LicenseEvent event = 5;</code>
      */
     public io.bloombox.schema.licensure.Licensure.LicenseEventOrBuilder getEventOrBuilder(
         int index) {
@@ -10442,6 +10636,7 @@ public final class Licensure {
             new com.google.protobuf.Internal.ListAdapter.Converter<
                 java.lang.Integer, io.bloombox.schema.licensure.Licensure.LicensePrivilege>() {
               public io.bloombox.schema.licensure.Licensure.LicensePrivilege convert(java.lang.Integer from) {
+                @SuppressWarnings("deprecation")
                 io.bloombox.schema.licensure.Licensure.LicensePrivilege result = io.bloombox.schema.licensure.Licensure.LicensePrivilege.valueOf(from);
                 return result == null ? io.bloombox.schema.licensure.Licensure.LicensePrivilege.UNRECOGNIZED : result;
               }
@@ -10452,7 +10647,7 @@ public final class Licensure {
      * to govern behavior and obtain authorization for various actions.
      * </pre>
      *
-     * <code>repeated .bloombox.schema.licensure.LicensePrivilege privilege = 6;</code>
+     * <code>repeated .bloombox.licensure.LicensePrivilege privilege = 6;</code>
      */
     public java.util.List<io.bloombox.schema.licensure.Licensure.LicensePrivilege> getPrivilegeList() {
       return new com.google.protobuf.Internal.ListAdapter<
@@ -10464,7 +10659,7 @@ public final class Licensure {
      * to govern behavior and obtain authorization for various actions.
      * </pre>
      *
-     * <code>repeated .bloombox.schema.licensure.LicensePrivilege privilege = 6;</code>
+     * <code>repeated .bloombox.licensure.LicensePrivilege privilege = 6;</code>
      */
     public int getPrivilegeCount() {
       return privilege_.size();
@@ -10475,7 +10670,7 @@ public final class Licensure {
      * to govern behavior and obtain authorization for various actions.
      * </pre>
      *
-     * <code>repeated .bloombox.schema.licensure.LicensePrivilege privilege = 6;</code>
+     * <code>repeated .bloombox.licensure.LicensePrivilege privilege = 6;</code>
      */
     public io.bloombox.schema.licensure.Licensure.LicensePrivilege getPrivilege(int index) {
       return privilege_converter_.convert(privilege_.get(index));
@@ -10486,7 +10681,7 @@ public final class Licensure {
      * to govern behavior and obtain authorization for various actions.
      * </pre>
      *
-     * <code>repeated .bloombox.schema.licensure.LicensePrivilege privilege = 6;</code>
+     * <code>repeated .bloombox.licensure.LicensePrivilege privilege = 6;</code>
      */
     public java.util.List<java.lang.Integer>
     getPrivilegeValueList() {
@@ -10498,7 +10693,7 @@ public final class Licensure {
      * to govern behavior and obtain authorization for various actions.
      * </pre>
      *
-     * <code>repeated .bloombox.schema.licensure.LicensePrivilege privilege = 6;</code>
+     * <code>repeated .bloombox.licensure.LicensePrivilege privilege = 6;</code>
      */
     public int getPrivilegeValue(int index) {
       return privilege_.get(index);
@@ -10512,7 +10707,7 @@ public final class Licensure {
      * Timestamps that record when various actions or states became active.
      * </pre>
      *
-     * <code>.bloombox.schema.licensure.LicenseTimestamps timestamps = 7;</code>
+     * <code>.bloombox.licensure.LicenseTimestamps timestamps = 7;</code>
      */
     public boolean hasTimestamps() {
       return timestamps_ != null;
@@ -10522,7 +10717,7 @@ public final class Licensure {
      * Timestamps that record when various actions or states became active.
      * </pre>
      *
-     * <code>.bloombox.schema.licensure.LicenseTimestamps timestamps = 7;</code>
+     * <code>.bloombox.licensure.LicenseTimestamps timestamps = 7;</code>
      */
     public io.bloombox.schema.licensure.Licensure.LicenseTimestamps getTimestamps() {
       return timestamps_ == null ? io.bloombox.schema.licensure.Licensure.LicenseTimestamps.getDefaultInstance() : timestamps_;
@@ -10532,13 +10727,14 @@ public final class Licensure {
      * Timestamps that record when various actions or states became active.
      * </pre>
      *
-     * <code>.bloombox.schema.licensure.LicenseTimestamps timestamps = 7;</code>
+     * <code>.bloombox.licensure.LicenseTimestamps timestamps = 7;</code>
      */
     public io.bloombox.schema.licensure.Licensure.LicenseTimestampsOrBuilder getTimestampsOrBuilder() {
       return getTimestamps();
     }
 
     private byte memoizedIsInitialized = -1;
+    @java.lang.Override
     public final boolean isInitialized() {
       byte isInitialized = memoizedIsInitialized;
       if (isInitialized == 1) return true;
@@ -10548,6 +10744,7 @@ public final class Licensure {
       return true;
     }
 
+    @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
       getSerializedSize();
@@ -10579,6 +10776,7 @@ public final class Licensure {
       unknownFields.writeTo(output);
     }
 
+    @java.lang.Override
     public int getSerializedSize() {
       int size = memoizedSize;
       if (size != -1) return size;
@@ -10766,6 +10964,7 @@ public final class Licensure {
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
 
+    @java.lang.Override
     public Builder newBuilderForType() { return newBuilder(); }
     public static Builder newBuilder() {
       return DEFAULT_INSTANCE.toBuilder();
@@ -10773,6 +10972,7 @@ public final class Licensure {
     public static Builder newBuilder(io.bloombox.schema.licensure.Licensure.RegulatoryLicense prototype) {
       return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
     }
+    @java.lang.Override
     public Builder toBuilder() {
       return this == DEFAULT_INSTANCE
           ? new Builder() : new Builder().mergeFrom(this);
@@ -10791,20 +10991,21 @@ public final class Licensure {
      * jurisdiction. Licenses are generally considered sub-objects to existing licensee records.
      * </pre>
      *
-     * Protobuf type {@code bloombox.schema.licensure.RegulatoryLicense}
+     * Protobuf type {@code bloombox.licensure.RegulatoryLicense}
      */
     public static final class Builder extends
         com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:bloombox.schema.licensure.RegulatoryLicense)
+        // @@protoc_insertion_point(builder_implements:bloombox.licensure.RegulatoryLicense)
         io.bloombox.schema.licensure.Licensure.RegulatoryLicenseOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return io.bloombox.schema.licensure.Licensure.internal_static_bloombox_schema_licensure_RegulatoryLicense_descriptor;
+        return io.bloombox.schema.licensure.Licensure.internal_static_bloombox_licensure_RegulatoryLicense_descriptor;
       }
 
+      @java.lang.Override
       protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return io.bloombox.schema.licensure.Licensure.internal_static_bloombox_schema_licensure_RegulatoryLicense_fieldAccessorTable
+        return io.bloombox.schema.licensure.Licensure.internal_static_bloombox_licensure_RegulatoryLicense_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
                 io.bloombox.schema.licensure.Licensure.RegulatoryLicense.class, io.bloombox.schema.licensure.Licensure.RegulatoryLicense.Builder.class);
       }
@@ -10825,6 +11026,7 @@ public final class Licensure {
           getEventFieldBuilder();
         }
       }
+      @java.lang.Override
       public Builder clear() {
         super.clear();
         if (keyBuilder_ == null) {
@@ -10860,15 +11062,18 @@ public final class Licensure {
         return this;
       }
 
+      @java.lang.Override
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return io.bloombox.schema.licensure.Licensure.internal_static_bloombox_schema_licensure_RegulatoryLicense_descriptor;
+        return io.bloombox.schema.licensure.Licensure.internal_static_bloombox_licensure_RegulatoryLicense_descriptor;
       }
 
+      @java.lang.Override
       public io.bloombox.schema.licensure.Licensure.RegulatoryLicense getDefaultInstanceForType() {
         return io.bloombox.schema.licensure.Licensure.RegulatoryLicense.getDefaultInstance();
       }
 
+      @java.lang.Override
       public io.bloombox.schema.licensure.Licensure.RegulatoryLicense build() {
         io.bloombox.schema.licensure.Licensure.RegulatoryLicense result = buildPartial();
         if (!result.isInitialized()) {
@@ -10877,6 +11082,7 @@ public final class Licensure {
         return result;
       }
 
+      @java.lang.Override
       public io.bloombox.schema.licensure.Licensure.RegulatoryLicense buildPartial() {
         io.bloombox.schema.licensure.Licensure.RegulatoryLicense result = new io.bloombox.schema.licensure.Licensure.RegulatoryLicense(this);
         int from_bitField0_ = bitField0_;
@@ -10917,32 +11123,39 @@ public final class Licensure {
         return result;
       }
 
+      @java.lang.Override
       public Builder clone() {
         return (Builder) super.clone();
       }
+      @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
         return (Builder) super.setField(field, value);
       }
+      @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
         return (Builder) super.clearField(field);
       }
+      @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
         return (Builder) super.clearOneof(oneof);
       }
+      @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
         return (Builder) super.setRepeatedField(field, index, value);
       }
+      @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
         return (Builder) super.addRepeatedField(field, value);
       }
+      @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
         if (other instanceof io.bloombox.schema.licensure.Licensure.RegulatoryLicense) {
           return mergeFrom((io.bloombox.schema.licensure.Licensure.RegulatoryLicense)other);
@@ -11010,10 +11223,12 @@ public final class Licensure {
         return this;
       }
 
+      @java.lang.Override
       public final boolean isInitialized() {
         return true;
       }
 
+      @java.lang.Override
       public Builder mergeFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -11042,7 +11257,7 @@ public final class Licensure {
        * allocated and issued by the licensing agency.
        * </pre>
        *
-       * <code>.bloombox.schema.licensure.LicenseKey key = 1 [(.core.field) = { ... }</code>
+       * <code>.bloombox.licensure.LicenseKey key = 1 [(.core.field) = { ... }</code>
        */
       public boolean hasKey() {
         return keyBuilder_ != null || key_ != null;
@@ -11053,7 +11268,7 @@ public final class Licensure {
        * allocated and issued by the licensing agency.
        * </pre>
        *
-       * <code>.bloombox.schema.licensure.LicenseKey key = 1 [(.core.field) = { ... }</code>
+       * <code>.bloombox.licensure.LicenseKey key = 1 [(.core.field) = { ... }</code>
        */
       public io.bloombox.schema.licensure.Licensure.LicenseKey getKey() {
         if (keyBuilder_ == null) {
@@ -11068,7 +11283,7 @@ public final class Licensure {
        * allocated and issued by the licensing agency.
        * </pre>
        *
-       * <code>.bloombox.schema.licensure.LicenseKey key = 1 [(.core.field) = { ... }</code>
+       * <code>.bloombox.licensure.LicenseKey key = 1 [(.core.field) = { ... }</code>
        */
       public Builder setKey(io.bloombox.schema.licensure.Licensure.LicenseKey value) {
         if (keyBuilder_ == null) {
@@ -11089,7 +11304,7 @@ public final class Licensure {
        * allocated and issued by the licensing agency.
        * </pre>
        *
-       * <code>.bloombox.schema.licensure.LicenseKey key = 1 [(.core.field) = { ... }</code>
+       * <code>.bloombox.licensure.LicenseKey key = 1 [(.core.field) = { ... }</code>
        */
       public Builder setKey(
           io.bloombox.schema.licensure.Licensure.LicenseKey.Builder builderForValue) {
@@ -11108,7 +11323,7 @@ public final class Licensure {
        * allocated and issued by the licensing agency.
        * </pre>
        *
-       * <code>.bloombox.schema.licensure.LicenseKey key = 1 [(.core.field) = { ... }</code>
+       * <code>.bloombox.licensure.LicenseKey key = 1 [(.core.field) = { ... }</code>
        */
       public Builder mergeKey(io.bloombox.schema.licensure.Licensure.LicenseKey value) {
         if (keyBuilder_ == null) {
@@ -11131,7 +11346,7 @@ public final class Licensure {
        * allocated and issued by the licensing agency.
        * </pre>
        *
-       * <code>.bloombox.schema.licensure.LicenseKey key = 1 [(.core.field) = { ... }</code>
+       * <code>.bloombox.licensure.LicenseKey key = 1 [(.core.field) = { ... }</code>
        */
       public Builder clearKey() {
         if (keyBuilder_ == null) {
@@ -11150,7 +11365,7 @@ public final class Licensure {
        * allocated and issued by the licensing agency.
        * </pre>
        *
-       * <code>.bloombox.schema.licensure.LicenseKey key = 1 [(.core.field) = { ... }</code>
+       * <code>.bloombox.licensure.LicenseKey key = 1 [(.core.field) = { ... }</code>
        */
       public io.bloombox.schema.licensure.Licensure.LicenseKey.Builder getKeyBuilder() {
         
@@ -11163,7 +11378,7 @@ public final class Licensure {
        * allocated and issued by the licensing agency.
        * </pre>
        *
-       * <code>.bloombox.schema.licensure.LicenseKey key = 1 [(.core.field) = { ... }</code>
+       * <code>.bloombox.licensure.LicenseKey key = 1 [(.core.field) = { ... }</code>
        */
       public io.bloombox.schema.licensure.Licensure.LicenseKeyOrBuilder getKeyOrBuilder() {
         if (keyBuilder_ != null) {
@@ -11179,7 +11394,7 @@ public final class Licensure {
        * allocated and issued by the licensing agency.
        * </pre>
        *
-       * <code>.bloombox.schema.licensure.LicenseKey key = 1 [(.core.field) = { ... }</code>
+       * <code>.bloombox.licensure.LicenseKey key = 1 [(.core.field) = { ... }</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
           io.bloombox.schema.licensure.Licensure.LicenseKey, io.bloombox.schema.licensure.Licensure.LicenseKey.Builder, io.bloombox.schema.licensure.Licensure.LicenseKeyOrBuilder> 
@@ -11202,7 +11417,7 @@ public final class Licensure {
        * generally, this value is either 'temporary' or 'permanent'.
        * </pre>
        *
-       * <code>.bloombox.schema.licensure.LicenseType type = 2;</code>
+       * <code>.bloombox.licensure.LicenseType type = 2;</code>
        */
       public int getTypeValue() {
         return type_;
@@ -11213,7 +11428,7 @@ public final class Licensure {
        * generally, this value is either 'temporary' or 'permanent'.
        * </pre>
        *
-       * <code>.bloombox.schema.licensure.LicenseType type = 2;</code>
+       * <code>.bloombox.licensure.LicenseType type = 2;</code>
        */
       public Builder setTypeValue(int value) {
         type_ = value;
@@ -11226,9 +11441,10 @@ public final class Licensure {
        * generally, this value is either 'temporary' or 'permanent'.
        * </pre>
        *
-       * <code>.bloombox.schema.licensure.LicenseType type = 2;</code>
+       * <code>.bloombox.licensure.LicenseType type = 2;</code>
        */
       public io.bloombox.schema.licensure.Licensure.LicenseType getType() {
+        @SuppressWarnings("deprecation")
         io.bloombox.schema.licensure.Licensure.LicenseType result = io.bloombox.schema.licensure.Licensure.LicenseType.valueOf(type_);
         return result == null ? io.bloombox.schema.licensure.Licensure.LicenseType.UNRECOGNIZED : result;
       }
@@ -11238,7 +11454,7 @@ public final class Licensure {
        * generally, this value is either 'temporary' or 'permanent'.
        * </pre>
        *
-       * <code>.bloombox.schema.licensure.LicenseType type = 2;</code>
+       * <code>.bloombox.licensure.LicenseType type = 2;</code>
        */
       public Builder setType(io.bloombox.schema.licensure.Licensure.LicenseType value) {
         if (value == null) {
@@ -11255,7 +11471,7 @@ public final class Licensure {
        * generally, this value is either 'temporary' or 'permanent'.
        * </pre>
        *
-       * <code>.bloombox.schema.licensure.LicenseType type = 2;</code>
+       * <code>.bloombox.licensure.LicenseType type = 2;</code>
        */
       public Builder clearType() {
         
@@ -11273,7 +11489,7 @@ public final class Licensure {
        * this governing body that the privileges embedded in this license apply to the licensee.
        * </pre>
        *
-       * <code>.bloombox.schema.licensure.LicensingAuthority authority = 3;</code>
+       * <code>.bloombox.licensure.LicensingAuthority authority = 3;</code>
        */
       public boolean hasAuthority() {
         return authorityBuilder_ != null || authority_ != null;
@@ -11284,7 +11500,7 @@ public final class Licensure {
        * this governing body that the privileges embedded in this license apply to the licensee.
        * </pre>
        *
-       * <code>.bloombox.schema.licensure.LicensingAuthority authority = 3;</code>
+       * <code>.bloombox.licensure.LicensingAuthority authority = 3;</code>
        */
       public io.bloombox.schema.licensure.Licensure.LicensingAuthority getAuthority() {
         if (authorityBuilder_ == null) {
@@ -11299,7 +11515,7 @@ public final class Licensure {
        * this governing body that the privileges embedded in this license apply to the licensee.
        * </pre>
        *
-       * <code>.bloombox.schema.licensure.LicensingAuthority authority = 3;</code>
+       * <code>.bloombox.licensure.LicensingAuthority authority = 3;</code>
        */
       public Builder setAuthority(io.bloombox.schema.licensure.Licensure.LicensingAuthority value) {
         if (authorityBuilder_ == null) {
@@ -11320,7 +11536,7 @@ public final class Licensure {
        * this governing body that the privileges embedded in this license apply to the licensee.
        * </pre>
        *
-       * <code>.bloombox.schema.licensure.LicensingAuthority authority = 3;</code>
+       * <code>.bloombox.licensure.LicensingAuthority authority = 3;</code>
        */
       public Builder setAuthority(
           io.bloombox.schema.licensure.Licensure.LicensingAuthority.Builder builderForValue) {
@@ -11339,7 +11555,7 @@ public final class Licensure {
        * this governing body that the privileges embedded in this license apply to the licensee.
        * </pre>
        *
-       * <code>.bloombox.schema.licensure.LicensingAuthority authority = 3;</code>
+       * <code>.bloombox.licensure.LicensingAuthority authority = 3;</code>
        */
       public Builder mergeAuthority(io.bloombox.schema.licensure.Licensure.LicensingAuthority value) {
         if (authorityBuilder_ == null) {
@@ -11362,7 +11578,7 @@ public final class Licensure {
        * this governing body that the privileges embedded in this license apply to the licensee.
        * </pre>
        *
-       * <code>.bloombox.schema.licensure.LicensingAuthority authority = 3;</code>
+       * <code>.bloombox.licensure.LicensingAuthority authority = 3;</code>
        */
       public Builder clearAuthority() {
         if (authorityBuilder_ == null) {
@@ -11381,7 +11597,7 @@ public final class Licensure {
        * this governing body that the privileges embedded in this license apply to the licensee.
        * </pre>
        *
-       * <code>.bloombox.schema.licensure.LicensingAuthority authority = 3;</code>
+       * <code>.bloombox.licensure.LicensingAuthority authority = 3;</code>
        */
       public io.bloombox.schema.licensure.Licensure.LicensingAuthority.Builder getAuthorityBuilder() {
         
@@ -11394,7 +11610,7 @@ public final class Licensure {
        * this governing body that the privileges embedded in this license apply to the licensee.
        * </pre>
        *
-       * <code>.bloombox.schema.licensure.LicensingAuthority authority = 3;</code>
+       * <code>.bloombox.licensure.LicensingAuthority authority = 3;</code>
        */
       public io.bloombox.schema.licensure.Licensure.LicensingAuthorityOrBuilder getAuthorityOrBuilder() {
         if (authorityBuilder_ != null) {
@@ -11410,7 +11626,7 @@ public final class Licensure {
        * this governing body that the privileges embedded in this license apply to the licensee.
        * </pre>
        *
-       * <code>.bloombox.schema.licensure.LicensingAuthority authority = 3;</code>
+       * <code>.bloombox.licensure.LicensingAuthority authority = 3;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
           io.bloombox.schema.licensure.Licensure.LicensingAuthority, io.bloombox.schema.licensure.Licensure.LicensingAuthority.Builder, io.bloombox.schema.licensure.Licensure.LicensingAuthorityOrBuilder> 
@@ -11433,7 +11649,7 @@ public final class Licensure {
        * Docs about each state are available on the declared type.
        * </pre>
        *
-       * <code>.bloombox.schema.licensure.LicenseStatus status = 4;</code>
+       * <code>.bloombox.licensure.LicenseStatus status = 4;</code>
        */
       public int getStatusValue() {
         return status_;
@@ -11444,7 +11660,7 @@ public final class Licensure {
        * Docs about each state are available on the declared type.
        * </pre>
        *
-       * <code>.bloombox.schema.licensure.LicenseStatus status = 4;</code>
+       * <code>.bloombox.licensure.LicenseStatus status = 4;</code>
        */
       public Builder setStatusValue(int value) {
         status_ = value;
@@ -11457,9 +11673,10 @@ public final class Licensure {
        * Docs about each state are available on the declared type.
        * </pre>
        *
-       * <code>.bloombox.schema.licensure.LicenseStatus status = 4;</code>
+       * <code>.bloombox.licensure.LicenseStatus status = 4;</code>
        */
       public io.bloombox.schema.licensure.Licensure.LicenseStatus getStatus() {
+        @SuppressWarnings("deprecation")
         io.bloombox.schema.licensure.Licensure.LicenseStatus result = io.bloombox.schema.licensure.Licensure.LicenseStatus.valueOf(status_);
         return result == null ? io.bloombox.schema.licensure.Licensure.LicenseStatus.UNRECOGNIZED : result;
       }
@@ -11469,7 +11686,7 @@ public final class Licensure {
        * Docs about each state are available on the declared type.
        * </pre>
        *
-       * <code>.bloombox.schema.licensure.LicenseStatus status = 4;</code>
+       * <code>.bloombox.licensure.LicenseStatus status = 4;</code>
        */
       public Builder setStatus(io.bloombox.schema.licensure.Licensure.LicenseStatus value) {
         if (value == null) {
@@ -11486,7 +11703,7 @@ public final class Licensure {
        * Docs about each state are available on the declared type.
        * </pre>
        *
-       * <code>.bloombox.schema.licensure.LicenseStatus status = 4;</code>
+       * <code>.bloombox.licensure.LicenseStatus status = 4;</code>
        */
       public Builder clearStatus() {
         
@@ -11513,7 +11730,7 @@ public final class Licensure {
        * allocated, this property is left empty, and begins with an entry after the first mutation of a license record.
        * </pre>
        *
-       * <code>repeated .bloombox.schema.licensure.LicenseEvent event = 5;</code>
+       * <code>repeated .bloombox.licensure.LicenseEvent event = 5;</code>
        */
       public java.util.List<io.bloombox.schema.licensure.Licensure.LicenseEvent> getEventList() {
         if (eventBuilder_ == null) {
@@ -11528,7 +11745,7 @@ public final class Licensure {
        * allocated, this property is left empty, and begins with an entry after the first mutation of a license record.
        * </pre>
        *
-       * <code>repeated .bloombox.schema.licensure.LicenseEvent event = 5;</code>
+       * <code>repeated .bloombox.licensure.LicenseEvent event = 5;</code>
        */
       public int getEventCount() {
         if (eventBuilder_ == null) {
@@ -11543,7 +11760,7 @@ public final class Licensure {
        * allocated, this property is left empty, and begins with an entry after the first mutation of a license record.
        * </pre>
        *
-       * <code>repeated .bloombox.schema.licensure.LicenseEvent event = 5;</code>
+       * <code>repeated .bloombox.licensure.LicenseEvent event = 5;</code>
        */
       public io.bloombox.schema.licensure.Licensure.LicenseEvent getEvent(int index) {
         if (eventBuilder_ == null) {
@@ -11558,7 +11775,7 @@ public final class Licensure {
        * allocated, this property is left empty, and begins with an entry after the first mutation of a license record.
        * </pre>
        *
-       * <code>repeated .bloombox.schema.licensure.LicenseEvent event = 5;</code>
+       * <code>repeated .bloombox.licensure.LicenseEvent event = 5;</code>
        */
       public Builder setEvent(
           int index, io.bloombox.schema.licensure.Licensure.LicenseEvent value) {
@@ -11580,7 +11797,7 @@ public final class Licensure {
        * allocated, this property is left empty, and begins with an entry after the first mutation of a license record.
        * </pre>
        *
-       * <code>repeated .bloombox.schema.licensure.LicenseEvent event = 5;</code>
+       * <code>repeated .bloombox.licensure.LicenseEvent event = 5;</code>
        */
       public Builder setEvent(
           int index, io.bloombox.schema.licensure.Licensure.LicenseEvent.Builder builderForValue) {
@@ -11599,7 +11816,7 @@ public final class Licensure {
        * allocated, this property is left empty, and begins with an entry after the first mutation of a license record.
        * </pre>
        *
-       * <code>repeated .bloombox.schema.licensure.LicenseEvent event = 5;</code>
+       * <code>repeated .bloombox.licensure.LicenseEvent event = 5;</code>
        */
       public Builder addEvent(io.bloombox.schema.licensure.Licensure.LicenseEvent value) {
         if (eventBuilder_ == null) {
@@ -11620,7 +11837,7 @@ public final class Licensure {
        * allocated, this property is left empty, and begins with an entry after the first mutation of a license record.
        * </pre>
        *
-       * <code>repeated .bloombox.schema.licensure.LicenseEvent event = 5;</code>
+       * <code>repeated .bloombox.licensure.LicenseEvent event = 5;</code>
        */
       public Builder addEvent(
           int index, io.bloombox.schema.licensure.Licensure.LicenseEvent value) {
@@ -11642,7 +11859,7 @@ public final class Licensure {
        * allocated, this property is left empty, and begins with an entry after the first mutation of a license record.
        * </pre>
        *
-       * <code>repeated .bloombox.schema.licensure.LicenseEvent event = 5;</code>
+       * <code>repeated .bloombox.licensure.LicenseEvent event = 5;</code>
        */
       public Builder addEvent(
           io.bloombox.schema.licensure.Licensure.LicenseEvent.Builder builderForValue) {
@@ -11661,7 +11878,7 @@ public final class Licensure {
        * allocated, this property is left empty, and begins with an entry after the first mutation of a license record.
        * </pre>
        *
-       * <code>repeated .bloombox.schema.licensure.LicenseEvent event = 5;</code>
+       * <code>repeated .bloombox.licensure.LicenseEvent event = 5;</code>
        */
       public Builder addEvent(
           int index, io.bloombox.schema.licensure.Licensure.LicenseEvent.Builder builderForValue) {
@@ -11680,7 +11897,7 @@ public final class Licensure {
        * allocated, this property is left empty, and begins with an entry after the first mutation of a license record.
        * </pre>
        *
-       * <code>repeated .bloombox.schema.licensure.LicenseEvent event = 5;</code>
+       * <code>repeated .bloombox.licensure.LicenseEvent event = 5;</code>
        */
       public Builder addAllEvent(
           java.lang.Iterable<? extends io.bloombox.schema.licensure.Licensure.LicenseEvent> values) {
@@ -11700,7 +11917,7 @@ public final class Licensure {
        * allocated, this property is left empty, and begins with an entry after the first mutation of a license record.
        * </pre>
        *
-       * <code>repeated .bloombox.schema.licensure.LicenseEvent event = 5;</code>
+       * <code>repeated .bloombox.licensure.LicenseEvent event = 5;</code>
        */
       public Builder clearEvent() {
         if (eventBuilder_ == null) {
@@ -11718,7 +11935,7 @@ public final class Licensure {
        * allocated, this property is left empty, and begins with an entry after the first mutation of a license record.
        * </pre>
        *
-       * <code>repeated .bloombox.schema.licensure.LicenseEvent event = 5;</code>
+       * <code>repeated .bloombox.licensure.LicenseEvent event = 5;</code>
        */
       public Builder removeEvent(int index) {
         if (eventBuilder_ == null) {
@@ -11736,7 +11953,7 @@ public final class Licensure {
        * allocated, this property is left empty, and begins with an entry after the first mutation of a license record.
        * </pre>
        *
-       * <code>repeated .bloombox.schema.licensure.LicenseEvent event = 5;</code>
+       * <code>repeated .bloombox.licensure.LicenseEvent event = 5;</code>
        */
       public io.bloombox.schema.licensure.Licensure.LicenseEvent.Builder getEventBuilder(
           int index) {
@@ -11748,7 +11965,7 @@ public final class Licensure {
        * allocated, this property is left empty, and begins with an entry after the first mutation of a license record.
        * </pre>
        *
-       * <code>repeated .bloombox.schema.licensure.LicenseEvent event = 5;</code>
+       * <code>repeated .bloombox.licensure.LicenseEvent event = 5;</code>
        */
       public io.bloombox.schema.licensure.Licensure.LicenseEventOrBuilder getEventOrBuilder(
           int index) {
@@ -11763,7 +11980,7 @@ public final class Licensure {
        * allocated, this property is left empty, and begins with an entry after the first mutation of a license record.
        * </pre>
        *
-       * <code>repeated .bloombox.schema.licensure.LicenseEvent event = 5;</code>
+       * <code>repeated .bloombox.licensure.LicenseEvent event = 5;</code>
        */
       public java.util.List<? extends io.bloombox.schema.licensure.Licensure.LicenseEventOrBuilder> 
            getEventOrBuilderList() {
@@ -11779,7 +11996,7 @@ public final class Licensure {
        * allocated, this property is left empty, and begins with an entry after the first mutation of a license record.
        * </pre>
        *
-       * <code>repeated .bloombox.schema.licensure.LicenseEvent event = 5;</code>
+       * <code>repeated .bloombox.licensure.LicenseEvent event = 5;</code>
        */
       public io.bloombox.schema.licensure.Licensure.LicenseEvent.Builder addEventBuilder() {
         return getEventFieldBuilder().addBuilder(
@@ -11791,7 +12008,7 @@ public final class Licensure {
        * allocated, this property is left empty, and begins with an entry after the first mutation of a license record.
        * </pre>
        *
-       * <code>repeated .bloombox.schema.licensure.LicenseEvent event = 5;</code>
+       * <code>repeated .bloombox.licensure.LicenseEvent event = 5;</code>
        */
       public io.bloombox.schema.licensure.Licensure.LicenseEvent.Builder addEventBuilder(
           int index) {
@@ -11804,7 +12021,7 @@ public final class Licensure {
        * allocated, this property is left empty, and begins with an entry after the first mutation of a license record.
        * </pre>
        *
-       * <code>repeated .bloombox.schema.licensure.LicenseEvent event = 5;</code>
+       * <code>repeated .bloombox.licensure.LicenseEvent event = 5;</code>
        */
       public java.util.List<io.bloombox.schema.licensure.Licensure.LicenseEvent.Builder> 
            getEventBuilderList() {
@@ -11839,7 +12056,7 @@ public final class Licensure {
        * to govern behavior and obtain authorization for various actions.
        * </pre>
        *
-       * <code>repeated .bloombox.schema.licensure.LicensePrivilege privilege = 6;</code>
+       * <code>repeated .bloombox.licensure.LicensePrivilege privilege = 6;</code>
        */
       public java.util.List<io.bloombox.schema.licensure.Licensure.LicensePrivilege> getPrivilegeList() {
         return new com.google.protobuf.Internal.ListAdapter<
@@ -11851,7 +12068,7 @@ public final class Licensure {
        * to govern behavior and obtain authorization for various actions.
        * </pre>
        *
-       * <code>repeated .bloombox.schema.licensure.LicensePrivilege privilege = 6;</code>
+       * <code>repeated .bloombox.licensure.LicensePrivilege privilege = 6;</code>
        */
       public int getPrivilegeCount() {
         return privilege_.size();
@@ -11862,7 +12079,7 @@ public final class Licensure {
        * to govern behavior and obtain authorization for various actions.
        * </pre>
        *
-       * <code>repeated .bloombox.schema.licensure.LicensePrivilege privilege = 6;</code>
+       * <code>repeated .bloombox.licensure.LicensePrivilege privilege = 6;</code>
        */
       public io.bloombox.schema.licensure.Licensure.LicensePrivilege getPrivilege(int index) {
         return privilege_converter_.convert(privilege_.get(index));
@@ -11873,7 +12090,7 @@ public final class Licensure {
        * to govern behavior and obtain authorization for various actions.
        * </pre>
        *
-       * <code>repeated .bloombox.schema.licensure.LicensePrivilege privilege = 6;</code>
+       * <code>repeated .bloombox.licensure.LicensePrivilege privilege = 6;</code>
        */
       public Builder setPrivilege(
           int index, io.bloombox.schema.licensure.Licensure.LicensePrivilege value) {
@@ -11891,7 +12108,7 @@ public final class Licensure {
        * to govern behavior and obtain authorization for various actions.
        * </pre>
        *
-       * <code>repeated .bloombox.schema.licensure.LicensePrivilege privilege = 6;</code>
+       * <code>repeated .bloombox.licensure.LicensePrivilege privilege = 6;</code>
        */
       public Builder addPrivilege(io.bloombox.schema.licensure.Licensure.LicensePrivilege value) {
         if (value == null) {
@@ -11908,7 +12125,7 @@ public final class Licensure {
        * to govern behavior and obtain authorization for various actions.
        * </pre>
        *
-       * <code>repeated .bloombox.schema.licensure.LicensePrivilege privilege = 6;</code>
+       * <code>repeated .bloombox.licensure.LicensePrivilege privilege = 6;</code>
        */
       public Builder addAllPrivilege(
           java.lang.Iterable<? extends io.bloombox.schema.licensure.Licensure.LicensePrivilege> values) {
@@ -11925,7 +12142,7 @@ public final class Licensure {
        * to govern behavior and obtain authorization for various actions.
        * </pre>
        *
-       * <code>repeated .bloombox.schema.licensure.LicensePrivilege privilege = 6;</code>
+       * <code>repeated .bloombox.licensure.LicensePrivilege privilege = 6;</code>
        */
       public Builder clearPrivilege() {
         privilege_ = java.util.Collections.emptyList();
@@ -11939,7 +12156,7 @@ public final class Licensure {
        * to govern behavior and obtain authorization for various actions.
        * </pre>
        *
-       * <code>repeated .bloombox.schema.licensure.LicensePrivilege privilege = 6;</code>
+       * <code>repeated .bloombox.licensure.LicensePrivilege privilege = 6;</code>
        */
       public java.util.List<java.lang.Integer>
       getPrivilegeValueList() {
@@ -11951,7 +12168,7 @@ public final class Licensure {
        * to govern behavior and obtain authorization for various actions.
        * </pre>
        *
-       * <code>repeated .bloombox.schema.licensure.LicensePrivilege privilege = 6;</code>
+       * <code>repeated .bloombox.licensure.LicensePrivilege privilege = 6;</code>
        */
       public int getPrivilegeValue(int index) {
         return privilege_.get(index);
@@ -11962,7 +12179,7 @@ public final class Licensure {
        * to govern behavior and obtain authorization for various actions.
        * </pre>
        *
-       * <code>repeated .bloombox.schema.licensure.LicensePrivilege privilege = 6;</code>
+       * <code>repeated .bloombox.licensure.LicensePrivilege privilege = 6;</code>
        */
       public Builder setPrivilegeValue(
           int index, int value) {
@@ -11977,7 +12194,7 @@ public final class Licensure {
        * to govern behavior and obtain authorization for various actions.
        * </pre>
        *
-       * <code>repeated .bloombox.schema.licensure.LicensePrivilege privilege = 6;</code>
+       * <code>repeated .bloombox.licensure.LicensePrivilege privilege = 6;</code>
        */
       public Builder addPrivilegeValue(int value) {
         ensurePrivilegeIsMutable();
@@ -11991,7 +12208,7 @@ public final class Licensure {
        * to govern behavior and obtain authorization for various actions.
        * </pre>
        *
-       * <code>repeated .bloombox.schema.licensure.LicensePrivilege privilege = 6;</code>
+       * <code>repeated .bloombox.licensure.LicensePrivilege privilege = 6;</code>
        */
       public Builder addAllPrivilegeValue(
           java.lang.Iterable<java.lang.Integer> values) {
@@ -12011,7 +12228,7 @@ public final class Licensure {
        * Timestamps that record when various actions or states became active.
        * </pre>
        *
-       * <code>.bloombox.schema.licensure.LicenseTimestamps timestamps = 7;</code>
+       * <code>.bloombox.licensure.LicenseTimestamps timestamps = 7;</code>
        */
       public boolean hasTimestamps() {
         return timestampsBuilder_ != null || timestamps_ != null;
@@ -12021,7 +12238,7 @@ public final class Licensure {
        * Timestamps that record when various actions or states became active.
        * </pre>
        *
-       * <code>.bloombox.schema.licensure.LicenseTimestamps timestamps = 7;</code>
+       * <code>.bloombox.licensure.LicenseTimestamps timestamps = 7;</code>
        */
       public io.bloombox.schema.licensure.Licensure.LicenseTimestamps getTimestamps() {
         if (timestampsBuilder_ == null) {
@@ -12035,7 +12252,7 @@ public final class Licensure {
        * Timestamps that record when various actions or states became active.
        * </pre>
        *
-       * <code>.bloombox.schema.licensure.LicenseTimestamps timestamps = 7;</code>
+       * <code>.bloombox.licensure.LicenseTimestamps timestamps = 7;</code>
        */
       public Builder setTimestamps(io.bloombox.schema.licensure.Licensure.LicenseTimestamps value) {
         if (timestampsBuilder_ == null) {
@@ -12055,7 +12272,7 @@ public final class Licensure {
        * Timestamps that record when various actions or states became active.
        * </pre>
        *
-       * <code>.bloombox.schema.licensure.LicenseTimestamps timestamps = 7;</code>
+       * <code>.bloombox.licensure.LicenseTimestamps timestamps = 7;</code>
        */
       public Builder setTimestamps(
           io.bloombox.schema.licensure.Licensure.LicenseTimestamps.Builder builderForValue) {
@@ -12073,7 +12290,7 @@ public final class Licensure {
        * Timestamps that record when various actions or states became active.
        * </pre>
        *
-       * <code>.bloombox.schema.licensure.LicenseTimestamps timestamps = 7;</code>
+       * <code>.bloombox.licensure.LicenseTimestamps timestamps = 7;</code>
        */
       public Builder mergeTimestamps(io.bloombox.schema.licensure.Licensure.LicenseTimestamps value) {
         if (timestampsBuilder_ == null) {
@@ -12095,7 +12312,7 @@ public final class Licensure {
        * Timestamps that record when various actions or states became active.
        * </pre>
        *
-       * <code>.bloombox.schema.licensure.LicenseTimestamps timestamps = 7;</code>
+       * <code>.bloombox.licensure.LicenseTimestamps timestamps = 7;</code>
        */
       public Builder clearTimestamps() {
         if (timestampsBuilder_ == null) {
@@ -12113,7 +12330,7 @@ public final class Licensure {
        * Timestamps that record when various actions or states became active.
        * </pre>
        *
-       * <code>.bloombox.schema.licensure.LicenseTimestamps timestamps = 7;</code>
+       * <code>.bloombox.licensure.LicenseTimestamps timestamps = 7;</code>
        */
       public io.bloombox.schema.licensure.Licensure.LicenseTimestamps.Builder getTimestampsBuilder() {
         
@@ -12125,7 +12342,7 @@ public final class Licensure {
        * Timestamps that record when various actions or states became active.
        * </pre>
        *
-       * <code>.bloombox.schema.licensure.LicenseTimestamps timestamps = 7;</code>
+       * <code>.bloombox.licensure.LicenseTimestamps timestamps = 7;</code>
        */
       public io.bloombox.schema.licensure.Licensure.LicenseTimestampsOrBuilder getTimestampsOrBuilder() {
         if (timestampsBuilder_ != null) {
@@ -12140,7 +12357,7 @@ public final class Licensure {
        * Timestamps that record when various actions or states became active.
        * </pre>
        *
-       * <code>.bloombox.schema.licensure.LicenseTimestamps timestamps = 7;</code>
+       * <code>.bloombox.licensure.LicenseTimestamps timestamps = 7;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
           io.bloombox.schema.licensure.Licensure.LicenseTimestamps, io.bloombox.schema.licensure.Licensure.LicenseTimestamps.Builder, io.bloombox.schema.licensure.Licensure.LicenseTimestampsOrBuilder> 
@@ -12155,21 +12372,23 @@ public final class Licensure {
         }
         return timestampsBuilder_;
       }
+      @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
         return super.setUnknownFieldsProto3(unknownFields);
       }
 
+      @java.lang.Override
       public final Builder mergeUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
         return super.mergeUnknownFields(unknownFields);
       }
 
 
-      // @@protoc_insertion_point(builder_scope:bloombox.schema.licensure.RegulatoryLicense)
+      // @@protoc_insertion_point(builder_scope:bloombox.licensure.RegulatoryLicense)
     }
 
-    // @@protoc_insertion_point(class_scope:bloombox.schema.licensure.RegulatoryLicense)
+    // @@protoc_insertion_point(class_scope:bloombox.licensure.RegulatoryLicense)
     private static final io.bloombox.schema.licensure.Licensure.RegulatoryLicense DEFAULT_INSTANCE;
     static {
       DEFAULT_INSTANCE = new io.bloombox.schema.licensure.Licensure.RegulatoryLicense();
@@ -12181,6 +12400,7 @@ public final class Licensure {
 
     private static final com.google.protobuf.Parser<RegulatoryLicense>
         PARSER = new com.google.protobuf.AbstractParser<RegulatoryLicense>() {
+      @java.lang.Override
       public RegulatoryLicense parsePartialFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -12198,6 +12418,7 @@ public final class Licensure {
       return PARSER;
     }
 
+    @java.lang.Override
     public io.bloombox.schema.licensure.Licensure.RegulatoryLicense getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
@@ -12205,45 +12426,45 @@ public final class Licensure {
   }
 
   private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_bloombox_schema_licensure_LicensingAuthority_descriptor;
+    internal_static_bloombox_licensure_LicensingAuthority_descriptor;
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_bloombox_schema_licensure_LicensingAuthority_fieldAccessorTable;
+      internal_static_bloombox_licensure_LicensingAuthority_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_bloombox_schema_licensure_LicensingAuthority_LocalLicense_descriptor;
+    internal_static_bloombox_licensure_LicensingAuthority_LocalLicense_descriptor;
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_bloombox_schema_licensure_LicensingAuthority_LocalLicense_fieldAccessorTable;
+      internal_static_bloombox_licensure_LicensingAuthority_LocalLicense_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_bloombox_schema_licensure_LicensingAuthority_CountyLicense_descriptor;
+    internal_static_bloombox_licensure_LicensingAuthority_CountyLicense_descriptor;
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_bloombox_schema_licensure_LicensingAuthority_CountyLicense_fieldAccessorTable;
+      internal_static_bloombox_licensure_LicensingAuthority_CountyLicense_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_bloombox_schema_licensure_LicensingAuthority_StateLicense_descriptor;
+    internal_static_bloombox_licensure_LicensingAuthority_StateLicense_descriptor;
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_bloombox_schema_licensure_LicensingAuthority_StateLicense_fieldAccessorTable;
+      internal_static_bloombox_licensure_LicensingAuthority_StateLicense_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_bloombox_schema_licensure_LicenseKey_descriptor;
+    internal_static_bloombox_licensure_LicenseKey_descriptor;
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_bloombox_schema_licensure_LicenseKey_fieldAccessorTable;
+      internal_static_bloombox_licensure_LicenseKey_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_bloombox_schema_licensure_LicenseEvent_descriptor;
+    internal_static_bloombox_licensure_LicenseEvent_descriptor;
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_bloombox_schema_licensure_LicenseEvent_fieldAccessorTable;
+      internal_static_bloombox_licensure_LicenseEvent_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_bloombox_schema_licensure_LicenseTimestamps_descriptor;
+    internal_static_bloombox_licensure_LicenseTimestamps_descriptor;
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_bloombox_schema_licensure_LicenseTimestamps_fieldAccessorTable;
+      internal_static_bloombox_licensure_LicenseTimestamps_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_bloombox_schema_licensure_RegulatoryLicense_descriptor;
+    internal_static_bloombox_licensure_RegulatoryLicense_descriptor;
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_bloombox_schema_licensure_RegulatoryLicense_fieldAccessorTable;
+      internal_static_bloombox_licensure_RegulatoryLicense_fieldAccessorTable;
 
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
@@ -12253,70 +12474,68 @@ public final class Licensure {
       descriptor;
   static {
     java.lang.String[] descriptorData = {
-      "\n\031licensing/Licensure.proto\022\031bloombox.sc" +
-      "hema.licensure\032\024core/Datamodel.proto\032\021ge" +
-      "o/USState.proto\032\031geo/usa/ca/CACounty.pro" +
-      "to\032\023temporal/Date.proto\032\026temporal/Instan" +
-      "t.proto\032 regulatory/usa/ca/CAAgency.prot" +
-      "o\"\232\007\n\022LicensingAuthority\022K\n\005local\030\001 \001(\0132" +
-      ":.bloombox.schema.licensure.LicensingAut" +
-      "hority.LocalLicenseH\000\022M\n\006county\030\002 \001(\0132;." +
-      "bloombox.schema.licensure.LicensingAutho" +
-      "rity.CountyLicenseH\000\022K\n\005state\030\003 \001(\0132:.bl" +
-      "oombox.schema.licensure.LicensingAuthori" +
-      "ty.StateLicenseH\000\032\345\001\n\014LocalLicense\022\024\n\014mu" +
-      "nicipality\030\001 \001(\t\022\025\n\013county_name\030\002 \001(\tH\000\022" +
-      "F\n\021california_county\030\003 \001(\0162).opencannabi" +
-      "s.geo.usa.ca.CaliforniaCountyH\000\022\027\n\rprovi" +
-      "nce_name\030\004 \001(\tH\001\0221\n\010us_state\030\005 \001(\0162\035.ope" +
-      "ncannabis.geo.usa.USStateH\001B\010\n\006countyB\n\n" +
-      "\010province\032\311\001\n\rCountyLicense\022\016\n\004name\030\001 \001(" +
-      "\tH\000\022F\n\021california_county\030\002 \001(\0162).opencan" +
-      "nabis.geo.usa.ca.CaliforniaCountyH\000\022\027\n\rp" +
-      "rovince_name\030\004 \001(\tH\001\0221\n\010us_state\030\005 \001(\0162\035" +
-      ".opencannabis.geo.usa.USStateH\001B\010\n\006count" +
-      "yB\n\n\010province\032\326\001\n\014StateLicense\022\027\n\rprovin" +
-      "ce_name\030\001 \001(\tH\000\0221\n\010us_state\030\002 \001(\0162\035.open" +
-      "cannabis.geo.usa.USStateH\000\022\025\n\013agency_nam" +
-      "e\030\003 \001(\tH\001\022M\n\021california_agency\030\004 \001(\01620.o" +
-      "pencannabis.regulatory.usa.ca.California" +
-      "AgencyH\001B\n\n\010provinceB\010\n\006agencyB\016\n\014jurisd" +
-      "iction\"-\n\nLicenseKey\022\022\n\002id\030\001 \001(\tB\006\302\265\003\002\010\002" +
-      "\022\013\n\003jid\030\002 \001(\t\"\313\001\n\014LicenseEvent\0228\n\006status" +
-      "\030\001 \001(\0162(.bloombox.schema.licensure.Licen" +
-      "seStatus\022>\n\tprivilege\030\002 \003(\0162+.bloombox.s" +
-      "chema.licensure.LicensePrivilege\022\017\n\007mess" +
-      "age\030\003 \001(\t\0220\n\010occurred\030\004 \001(\0132\036.opencannab" +
-      "is.temporal.Instant\"\264\002\n\021LicenseTimestamp" +
-      "s\022.\n\tsubmitted\030\001 \001(\0132\033.opencannabis.temp" +
-      "oral.Date\022+\n\006issued\030\002 \001(\0132\033.opencannabis" +
-      ".temporal.Date\022-\n\010received\030\003 \001(\0132\033.openc" +
-      "annabis.temporal.Date\0220\n\010verified\030\004 \001(\0132" +
-      "\036.opencannabis.temporal.Instant\022/\n\007appli" +
-      "ed\030\005 \001(\0132\036.opencannabis.temporal.Instant" +
-      "\0220\n\010modified\030\006 \001(\0132\036.opencannabis.tempor" +
-      "al.Instant\"\315\003\n\021RegulatoryLicense\022:\n\003key\030" +
-      "\001 \001(\0132%.bloombox.schema.licensure.Licens" +
-      "eKeyB\006\302\265\003\002\010\001\0224\n\004type\030\002 \001(\0162&.bloombox.sc" +
-      "hema.licensure.LicenseType\022@\n\tauthority\030" +
-      "\003 \001(\0132-.bloombox.schema.licensure.Licens" +
-      "ingAuthority\0228\n\006status\030\004 \001(\0162(.bloombox." +
-      "schema.licensure.LicenseStatus\0226\n\005event\030" +
-      "\005 \003(\0132\'.bloombox.schema.licensure.Licens" +
-      "eEvent\022>\n\tprivilege\030\006 \003(\0162+.bloombox.sch" +
-      "ema.licensure.LicensePrivilege\022@\n\ntimest" +
-      "amps\030\007 \001(\0132,.bloombox.schema.licensure.L" +
-      "icenseTimestamps:\020\202\367\002\014\010\002\022\010licenses*9\n\013Li" +
-      "censeType\022\r\n\tPERMANENT\020\000\022\r\n\tTEMPORARY\020\001\022" +
-      "\014\n\010COMPOUND\020\002*\263\001\n\020LicensePrivilege\022\023\n\017UN" +
-      "KNOWN_LICENSE\020\000\022\017\n\013CULTIVATION\020\001\022\020\n\014DIST" +
-      "RIBUTION\020\002\022\r\n\tTRANSPORT\020\003\022\016\n\nLABORATORY\020" +
-      "\004\022\021\n\rMANUFACTURING\020\005\022\n\n\006RETAIL\020\006\022\014\n\010DELI" +
-      "VERY\020\007\022\n\n\006EVENTS\020\010\022\017\n\013CONSUMPTION\020\t*a\n\rL" +
-      "icenseStatus\022\013\n\007PENDING\020\000\022\n\n\006ACTIVE\020\001\022\013\n" +
-      "\007REVOKED\020\002\022\013\n\007EXPIRED\020\003\022\r\n\tSUSPENDED\020\004\022\016" +
-      "\n\nSUPERSEDED\020\005B3\n\034io.bloombox.schema.lic" +
-      "ensureB\tLicensureH\001P\000\242\002\003BBSb\006proto3"
+      "\n\031licensing/Licensure.proto\022\022bloombox.li" +
+      "censure\032\024core/Datamodel.proto\032\021geo/USSta" +
+      "te.proto\032\031geo/usa/ca/CACounty.proto\032\023tem" +
+      "poral/Date.proto\032\026temporal/Instant.proto" +
+      "\032 regulatory/usa/ca/CAAgency.proto\"\205\007\n\022L" +
+      "icensingAuthority\022D\n\005local\030\001 \001(\01323.bloom" +
+      "box.licensure.LicensingAuthority.LocalLi" +
+      "censeH\000\022F\n\006county\030\002 \001(\01324.bloombox.licen" +
+      "sure.LicensingAuthority.CountyLicenseH\000\022" +
+      "D\n\005state\030\003 \001(\01323.bloombox.licensure.Lice" +
+      "nsingAuthority.StateLicenseH\000\032\345\001\n\014LocalL" +
+      "icense\022\024\n\014municipality\030\001 \001(\t\022\025\n\013county_n" +
+      "ame\030\002 \001(\tH\000\022F\n\021california_county\030\003 \001(\0162)" +
+      ".opencannabis.geo.usa.ca.CaliforniaCount" +
+      "yH\000\022\027\n\rprovince_name\030\004 \001(\tH\001\0221\n\010us_state" +
+      "\030\005 \001(\0162\035.opencannabis.geo.usa.USStateH\001B" +
+      "\010\n\006countyB\n\n\010province\032\311\001\n\rCountyLicense\022" +
+      "\016\n\004name\030\001 \001(\tH\000\022F\n\021california_county\030\002 \001" +
+      "(\0162).opencannabis.geo.usa.ca.CaliforniaC" +
+      "ountyH\000\022\027\n\rprovince_name\030\004 \001(\tH\001\0221\n\010us_s" +
+      "tate\030\005 \001(\0162\035.opencannabis.geo.usa.USStat" +
+      "eH\001B\010\n\006countyB\n\n\010province\032\326\001\n\014StateLicen" +
+      "se\022\027\n\rprovince_name\030\001 \001(\tH\000\0221\n\010us_state\030" +
+      "\002 \001(\0162\035.opencannabis.geo.usa.USStateH\000\022\025" +
+      "\n\013agency_name\030\003 \001(\tH\001\022M\n\021california_agen" +
+      "cy\030\004 \001(\01620.opencannabis.regulatory.usa.c" +
+      "a.CaliforniaAgencyH\001B\n\n\010provinceB\010\n\006agen" +
+      "cyB\016\n\014jurisdiction\"-\n\nLicenseKey\022\022\n\002id\030\001" +
+      " \001(\tB\006\302\265\003\002\010\002\022\013\n\003jid\030\002 \001(\t\"\275\001\n\014LicenseEve" +
+      "nt\0221\n\006status\030\001 \001(\0162!.bloombox.licensure." +
+      "LicenseStatus\0227\n\tprivilege\030\002 \003(\0162$.bloom" +
+      "box.licensure.LicensePrivilege\022\017\n\007messag" +
+      "e\030\003 \001(\t\0220\n\010occurred\030\004 \001(\0132\036.opencannabis" +
+      ".temporal.Instant\"\264\002\n\021LicenseTimestamps\022" +
+      ".\n\tsubmitted\030\001 \001(\0132\033.opencannabis.tempor" +
+      "al.Date\022+\n\006issued\030\002 \001(\0132\033.opencannabis.t" +
+      "emporal.Date\022-\n\010received\030\003 \001(\0132\033.opencan" +
+      "nabis.temporal.Date\0220\n\010verified\030\004 \001(\0132\036." +
+      "opencannabis.temporal.Instant\022/\n\007applied" +
+      "\030\005 \001(\0132\036.opencannabis.temporal.Instant\0220" +
+      "\n\010modified\030\006 \001(\0132\036.opencannabis.temporal" +
+      ".Instant\"\234\003\n\021RegulatoryLicense\0223\n\003key\030\001 " +
+      "\001(\0132\036.bloombox.licensure.LicenseKeyB\006\302\265\003" +
+      "\002\010\001\022-\n\004type\030\002 \001(\0162\037.bloombox.licensure.L" +
+      "icenseType\0229\n\tauthority\030\003 \001(\0132&.bloombox" +
+      ".licensure.LicensingAuthority\0221\n\006status\030" +
+      "\004 \001(\0162!.bloombox.licensure.LicenseStatus" +
+      "\022/\n\005event\030\005 \003(\0132 .bloombox.licensure.Lic" +
+      "enseEvent\0227\n\tprivilege\030\006 \003(\0162$.bloombox." +
+      "licensure.LicensePrivilege\0229\n\ntimestamps" +
+      "\030\007 \001(\0132%.bloombox.licensure.LicenseTimes" +
+      "tamps:\020\202\367\002\014\010\002\022\010licenses*9\n\013LicenseType\022\r" +
+      "\n\tPERMANENT\020\000\022\r\n\tTEMPORARY\020\001\022\014\n\010COMPOUND" +
+      "\020\002*\263\001\n\020LicensePrivilege\022\023\n\017UNKNOWN_LICEN" +
+      "SE\020\000\022\017\n\013CULTIVATION\020\001\022\020\n\014DISTRIBUTION\020\002\022" +
+      "\r\n\tTRANSPORT\020\003\022\016\n\nLABORATORY\020\004\022\021\n\rMANUFA" +
+      "CTURING\020\005\022\n\n\006RETAIL\020\006\022\014\n\010DELIVERY\020\007\022\n\n\006E" +
+      "VENTS\020\010\022\017\n\013CONSUMPTION\020\t*a\n\rLicenseStatu" +
+      "s\022\013\n\007PENDING\020\000\022\n\n\006ACTIVE\020\001\022\013\n\007REVOKED\020\002\022" +
+      "\013\n\007EXPIRED\020\003\022\r\n\tSUSPENDED\020\004\022\016\n\nSUPERSEDE" +
+      "D\020\005B3\n\034io.bloombox.schema.licensureB\tLic" +
+      "ensureH\001P\000\242\002\003BBSb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -12331,58 +12550,58 @@ public final class Licensure {
         new com.google.protobuf.Descriptors.FileDescriptor[] {
           core.Datamodel.getDescriptor(),
           io.opencannabis.schema.geo.usa.USStateOuterClass.getDescriptor(),
-          opencannabis.geo.usa.ca.CACounty.getDescriptor(),
+          io.opencannabis.schema.geo.usa.California.getDescriptor(),
           io.opencannabis.schema.temporal.TemporalDate.getDescriptor(),
           io.opencannabis.schema.temporal.TemporalInstant.getDescriptor(),
-          opencannabis.regulatory.usa.ca.CAAgency.getDescriptor(),
+          io.opencannabis.schema.regulatory.usa.California.getDescriptor(),
         }, assigner);
-    internal_static_bloombox_schema_licensure_LicensingAuthority_descriptor =
+    internal_static_bloombox_licensure_LicensingAuthority_descriptor =
       getDescriptor().getMessageTypes().get(0);
-    internal_static_bloombox_schema_licensure_LicensingAuthority_fieldAccessorTable = new
+    internal_static_bloombox_licensure_LicensingAuthority_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_bloombox_schema_licensure_LicensingAuthority_descriptor,
+        internal_static_bloombox_licensure_LicensingAuthority_descriptor,
         new java.lang.String[] { "Local", "County", "State", "Jurisdiction", });
-    internal_static_bloombox_schema_licensure_LicensingAuthority_LocalLicense_descriptor =
-      internal_static_bloombox_schema_licensure_LicensingAuthority_descriptor.getNestedTypes().get(0);
-    internal_static_bloombox_schema_licensure_LicensingAuthority_LocalLicense_fieldAccessorTable = new
+    internal_static_bloombox_licensure_LicensingAuthority_LocalLicense_descriptor =
+      internal_static_bloombox_licensure_LicensingAuthority_descriptor.getNestedTypes().get(0);
+    internal_static_bloombox_licensure_LicensingAuthority_LocalLicense_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_bloombox_schema_licensure_LicensingAuthority_LocalLicense_descriptor,
+        internal_static_bloombox_licensure_LicensingAuthority_LocalLicense_descriptor,
         new java.lang.String[] { "Municipality", "CountyName", "CaliforniaCounty", "ProvinceName", "UsState", "County", "Province", });
-    internal_static_bloombox_schema_licensure_LicensingAuthority_CountyLicense_descriptor =
-      internal_static_bloombox_schema_licensure_LicensingAuthority_descriptor.getNestedTypes().get(1);
-    internal_static_bloombox_schema_licensure_LicensingAuthority_CountyLicense_fieldAccessorTable = new
+    internal_static_bloombox_licensure_LicensingAuthority_CountyLicense_descriptor =
+      internal_static_bloombox_licensure_LicensingAuthority_descriptor.getNestedTypes().get(1);
+    internal_static_bloombox_licensure_LicensingAuthority_CountyLicense_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_bloombox_schema_licensure_LicensingAuthority_CountyLicense_descriptor,
+        internal_static_bloombox_licensure_LicensingAuthority_CountyLicense_descriptor,
         new java.lang.String[] { "Name", "CaliforniaCounty", "ProvinceName", "UsState", "County", "Province", });
-    internal_static_bloombox_schema_licensure_LicensingAuthority_StateLicense_descriptor =
-      internal_static_bloombox_schema_licensure_LicensingAuthority_descriptor.getNestedTypes().get(2);
-    internal_static_bloombox_schema_licensure_LicensingAuthority_StateLicense_fieldAccessorTable = new
+    internal_static_bloombox_licensure_LicensingAuthority_StateLicense_descriptor =
+      internal_static_bloombox_licensure_LicensingAuthority_descriptor.getNestedTypes().get(2);
+    internal_static_bloombox_licensure_LicensingAuthority_StateLicense_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_bloombox_schema_licensure_LicensingAuthority_StateLicense_descriptor,
+        internal_static_bloombox_licensure_LicensingAuthority_StateLicense_descriptor,
         new java.lang.String[] { "ProvinceName", "UsState", "AgencyName", "CaliforniaAgency", "Province", "Agency", });
-    internal_static_bloombox_schema_licensure_LicenseKey_descriptor =
+    internal_static_bloombox_licensure_LicenseKey_descriptor =
       getDescriptor().getMessageTypes().get(1);
-    internal_static_bloombox_schema_licensure_LicenseKey_fieldAccessorTable = new
+    internal_static_bloombox_licensure_LicenseKey_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_bloombox_schema_licensure_LicenseKey_descriptor,
+        internal_static_bloombox_licensure_LicenseKey_descriptor,
         new java.lang.String[] { "Id", "Jid", });
-    internal_static_bloombox_schema_licensure_LicenseEvent_descriptor =
+    internal_static_bloombox_licensure_LicenseEvent_descriptor =
       getDescriptor().getMessageTypes().get(2);
-    internal_static_bloombox_schema_licensure_LicenseEvent_fieldAccessorTable = new
+    internal_static_bloombox_licensure_LicenseEvent_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_bloombox_schema_licensure_LicenseEvent_descriptor,
+        internal_static_bloombox_licensure_LicenseEvent_descriptor,
         new java.lang.String[] { "Status", "Privilege", "Message", "Occurred", });
-    internal_static_bloombox_schema_licensure_LicenseTimestamps_descriptor =
+    internal_static_bloombox_licensure_LicenseTimestamps_descriptor =
       getDescriptor().getMessageTypes().get(3);
-    internal_static_bloombox_schema_licensure_LicenseTimestamps_fieldAccessorTable = new
+    internal_static_bloombox_licensure_LicenseTimestamps_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_bloombox_schema_licensure_LicenseTimestamps_descriptor,
+        internal_static_bloombox_licensure_LicenseTimestamps_descriptor,
         new java.lang.String[] { "Submitted", "Issued", "Received", "Verified", "Applied", "Modified", });
-    internal_static_bloombox_schema_licensure_RegulatoryLicense_descriptor =
+    internal_static_bloombox_licensure_RegulatoryLicense_descriptor =
       getDescriptor().getMessageTypes().get(4);
-    internal_static_bloombox_schema_licensure_RegulatoryLicense_fieldAccessorTable = new
+    internal_static_bloombox_licensure_RegulatoryLicense_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_bloombox_schema_licensure_RegulatoryLicense_descriptor,
+        internal_static_bloombox_licensure_RegulatoryLicense_descriptor,
         new java.lang.String[] { "Key", "Type", "Authority", "Status", "Event", "Privilege", "Timestamps", });
     com.google.protobuf.ExtensionRegistry registry =
         com.google.protobuf.ExtensionRegistry.newInstance();
@@ -12392,10 +12611,10 @@ public final class Licensure {
         .internalUpdateFileDescriptor(descriptor, registry);
     core.Datamodel.getDescriptor();
     io.opencannabis.schema.geo.usa.USStateOuterClass.getDescriptor();
-    opencannabis.geo.usa.ca.CACounty.getDescriptor();
+    io.opencannabis.schema.geo.usa.California.getDescriptor();
     io.opencannabis.schema.temporal.TemporalDate.getDescriptor();
     io.opencannabis.schema.temporal.TemporalInstant.getDescriptor();
-    opencannabis.regulatory.usa.ca.CAAgency.getDescriptor();
+    io.opencannabis.schema.regulatory.usa.California.getDescriptor();
   }
 
   // @@protoc_insertion_point(outer_class_scope)

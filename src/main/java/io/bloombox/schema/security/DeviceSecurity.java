@@ -1,11 +1,12 @@
 /*
- * Copyright 2018, Bloombox, LLC.
+ * Copyright 2018, Momentum Ideas, Co. All rights reserved.
  *
- * Licensed under the Apache License, Version 2.0 (the "License");
- * you may not use this file except in compliance with the License.
- * You may obtain a copy of the License at
- *
- *     http://www.apache.org/licenses/LICENSE-2.0
+ * Source and object computer code contained herein is the private intellectual
+ * property of Momentum Ideas Co., a Delaware Corporation. Use of this
+ * code in source form requires permission in writing before use or the
+ * assembly, distribution, or publishing of derivative works, for commercial
+ * purposes or any other purpose, from a duly authorized officer of Momentum
+ * Ideas Co.
  *
  * Unless required by applicable law or agreed to in writing, software
  * distributed under the License is distributed on an "AS IS" BASIS,
@@ -31,7 +32,7 @@ public final class DeviceSecurity {
         (com.google.protobuf.ExtensionRegistryLite) registry);
   }
   public interface DeviceTicketOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:bloombox.schema.security.DeviceTicket)
+      // @@protoc_insertion_point(interface_extends:bloombox.security.DeviceTicket)
       com.google.protobuf.MessageOrBuilder {
 
     /**
@@ -39,7 +40,7 @@ public final class DeviceSecurity {
      * Authentication token, usable by this device to authenticate to the API, etc.
      * </pre>
      *
-     * <code>.bloombox.schema.security.AuthToken token = 1;</code>
+     * <code>.bloombox.security.AuthToken token = 1;</code>
      */
     boolean hasToken();
     /**
@@ -47,7 +48,7 @@ public final class DeviceSecurity {
      * Authentication token, usable by this device to authenticate to the API, etc.
      * </pre>
      *
-     * <code>.bloombox.schema.security.AuthToken token = 1;</code>
+     * <code>.bloombox.security.AuthToken token = 1;</code>
      */
     io.bloombox.schema.security.AuthToken getToken();
     /**
@@ -55,7 +56,7 @@ public final class DeviceSecurity {
      * Authentication token, usable by this device to authenticate to the API, etc.
      * </pre>
      *
-     * <code>.bloombox.schema.security.AuthToken token = 1;</code>
+     * <code>.bloombox.security.AuthToken token = 1;</code>
      */
     io.bloombox.schema.security.AuthTokenOrBuilder getTokenOrBuilder();
 
@@ -139,11 +140,11 @@ public final class DeviceSecurity {
    * Specifies an auth token issued to a device, or some other machine-based actor.
    * </pre>
    *
-   * Protobuf type {@code bloombox.schema.security.DeviceTicket}
+   * Protobuf type {@code bloombox.security.DeviceTicket}
    */
   public  static final class DeviceTicket extends
       com.google.protobuf.GeneratedMessageV3 implements
-      // @@protoc_insertion_point(message_implements:bloombox.schema.security.DeviceTicket)
+      // @@protoc_insertion_point(message_implements:bloombox.security.DeviceTicket)
       DeviceTicketOrBuilder {
   private static final long serialVersionUID = 0L;
     // Use DeviceTicket.newBuilder() to construct.
@@ -177,13 +178,6 @@ public final class DeviceSecurity {
             case 0:
               done = true;
               break;
-            default: {
-              if (!parseUnknownFieldProto3(
-                  input, unknownFields, extensionRegistry, tag)) {
-                done = true;
-              }
-              break;
-            }
             case 10: {
               io.bloombox.schema.security.AuthToken.Builder subBuilder = null;
               if (token_ != null) {
@@ -236,6 +230,13 @@ public final class DeviceSecurity {
 
               break;
             }
+            default: {
+              if (!parseUnknownFieldProto3(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
           }
         }
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
@@ -250,12 +251,13 @@ public final class DeviceSecurity {
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return io.bloombox.schema.security.DeviceSecurity.internal_static_bloombox_schema_security_DeviceTicket_descriptor;
+      return io.bloombox.schema.security.DeviceSecurity.internal_static_bloombox_security_DeviceTicket_descriptor;
     }
 
+    @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return io.bloombox.schema.security.DeviceSecurity.internal_static_bloombox_schema_security_DeviceTicket_fieldAccessorTable
+      return io.bloombox.schema.security.DeviceSecurity.internal_static_bloombox_security_DeviceTicket_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
               io.bloombox.schema.security.DeviceSecurity.DeviceTicket.class, io.bloombox.schema.security.DeviceSecurity.DeviceTicket.Builder.class);
     }
@@ -267,7 +269,7 @@ public final class DeviceSecurity {
      * Authentication token, usable by this device to authenticate to the API, etc.
      * </pre>
      *
-     * <code>.bloombox.schema.security.AuthToken token = 1;</code>
+     * <code>.bloombox.security.AuthToken token = 1;</code>
      */
     public boolean hasToken() {
       return token_ != null;
@@ -277,7 +279,7 @@ public final class DeviceSecurity {
      * Authentication token, usable by this device to authenticate to the API, etc.
      * </pre>
      *
-     * <code>.bloombox.schema.security.AuthToken token = 1;</code>
+     * <code>.bloombox.security.AuthToken token = 1;</code>
      */
     public io.bloombox.schema.security.AuthToken getToken() {
       return token_ == null ? io.bloombox.schema.security.AuthToken.getDefaultInstance() : token_;
@@ -287,7 +289,7 @@ public final class DeviceSecurity {
      * Authentication token, usable by this device to authenticate to the API, etc.
      * </pre>
      *
-     * <code>.bloombox.schema.security.AuthToken token = 1;</code>
+     * <code>.bloombox.security.AuthToken token = 1;</code>
      */
     public io.bloombox.schema.security.AuthTokenOrBuilder getTokenOrBuilder() {
       return getToken();
@@ -393,6 +395,7 @@ public final class DeviceSecurity {
     }
 
     private byte memoizedIsInitialized = -1;
+    @java.lang.Override
     public final boolean isInitialized() {
       byte isInitialized = memoizedIsInitialized;
       if (isInitialized == 1) return true;
@@ -402,6 +405,7 @@ public final class DeviceSecurity {
       return true;
     }
 
+    @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
       if (token_ != null) {
@@ -419,6 +423,7 @@ public final class DeviceSecurity {
       unknownFields.writeTo(output);
     }
 
+    @java.lang.Override
     public int getSerializedSize() {
       int size = memoizedSize;
       if (size != -1) return size;
@@ -578,6 +583,7 @@ public final class DeviceSecurity {
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
 
+    @java.lang.Override
     public Builder newBuilderForType() { return newBuilder(); }
     public static Builder newBuilder() {
       return DEFAULT_INSTANCE.toBuilder();
@@ -585,6 +591,7 @@ public final class DeviceSecurity {
     public static Builder newBuilder(io.bloombox.schema.security.DeviceSecurity.DeviceTicket prototype) {
       return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
     }
+    @java.lang.Override
     public Builder toBuilder() {
       return this == DEFAULT_INSTANCE
           ? new Builder() : new Builder().mergeFrom(this);
@@ -601,20 +608,21 @@ public final class DeviceSecurity {
      * Specifies an auth token issued to a device, or some other machine-based actor.
      * </pre>
      *
-     * Protobuf type {@code bloombox.schema.security.DeviceTicket}
+     * Protobuf type {@code bloombox.security.DeviceTicket}
      */
     public static final class Builder extends
         com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:bloombox.schema.security.DeviceTicket)
+        // @@protoc_insertion_point(builder_implements:bloombox.security.DeviceTicket)
         io.bloombox.schema.security.DeviceSecurity.DeviceTicketOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return io.bloombox.schema.security.DeviceSecurity.internal_static_bloombox_schema_security_DeviceTicket_descriptor;
+        return io.bloombox.schema.security.DeviceSecurity.internal_static_bloombox_security_DeviceTicket_descriptor;
       }
 
+      @java.lang.Override
       protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return io.bloombox.schema.security.DeviceSecurity.internal_static_bloombox_schema_security_DeviceTicket_fieldAccessorTable
+        return io.bloombox.schema.security.DeviceSecurity.internal_static_bloombox_security_DeviceTicket_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
                 io.bloombox.schema.security.DeviceSecurity.DeviceTicket.class, io.bloombox.schema.security.DeviceSecurity.DeviceTicket.Builder.class);
       }
@@ -634,6 +642,7 @@ public final class DeviceSecurity {
                 .alwaysUseFieldBuilders) {
         }
       }
+      @java.lang.Override
       public Builder clear() {
         super.clear();
         if (tokenBuilder_ == null) {
@@ -663,15 +672,18 @@ public final class DeviceSecurity {
         return this;
       }
 
+      @java.lang.Override
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return io.bloombox.schema.security.DeviceSecurity.internal_static_bloombox_schema_security_DeviceTicket_descriptor;
+        return io.bloombox.schema.security.DeviceSecurity.internal_static_bloombox_security_DeviceTicket_descriptor;
       }
 
+      @java.lang.Override
       public io.bloombox.schema.security.DeviceSecurity.DeviceTicket getDefaultInstanceForType() {
         return io.bloombox.schema.security.DeviceSecurity.DeviceTicket.getDefaultInstance();
       }
 
+      @java.lang.Override
       public io.bloombox.schema.security.DeviceSecurity.DeviceTicket build() {
         io.bloombox.schema.security.DeviceSecurity.DeviceTicket result = buildPartial();
         if (!result.isInitialized()) {
@@ -680,6 +692,7 @@ public final class DeviceSecurity {
         return result;
       }
 
+      @java.lang.Override
       public io.bloombox.schema.security.DeviceSecurity.DeviceTicket buildPartial() {
         io.bloombox.schema.security.DeviceSecurity.DeviceTicket result = new io.bloombox.schema.security.DeviceSecurity.DeviceTicket(this);
         if (tokenBuilder_ == null) {
@@ -706,32 +719,39 @@ public final class DeviceSecurity {
         return result;
       }
 
+      @java.lang.Override
       public Builder clone() {
         return (Builder) super.clone();
       }
+      @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
         return (Builder) super.setField(field, value);
       }
+      @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
         return (Builder) super.clearField(field);
       }
+      @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
         return (Builder) super.clearOneof(oneof);
       }
+      @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
         return (Builder) super.setRepeatedField(field, index, value);
       }
+      @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
         return (Builder) super.addRepeatedField(field, value);
       }
+      @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
         if (other instanceof io.bloombox.schema.security.DeviceSecurity.DeviceTicket) {
           return mergeFrom((io.bloombox.schema.security.DeviceSecurity.DeviceTicket)other);
@@ -760,10 +780,12 @@ public final class DeviceSecurity {
         return this;
       }
 
+      @java.lang.Override
       public final boolean isInitialized() {
         return true;
       }
 
+      @java.lang.Override
       public Builder mergeFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -790,7 +812,7 @@ public final class DeviceSecurity {
        * Authentication token, usable by this device to authenticate to the API, etc.
        * </pre>
        *
-       * <code>.bloombox.schema.security.AuthToken token = 1;</code>
+       * <code>.bloombox.security.AuthToken token = 1;</code>
        */
       public boolean hasToken() {
         return tokenBuilder_ != null || token_ != null;
@@ -800,7 +822,7 @@ public final class DeviceSecurity {
        * Authentication token, usable by this device to authenticate to the API, etc.
        * </pre>
        *
-       * <code>.bloombox.schema.security.AuthToken token = 1;</code>
+       * <code>.bloombox.security.AuthToken token = 1;</code>
        */
       public io.bloombox.schema.security.AuthToken getToken() {
         if (tokenBuilder_ == null) {
@@ -814,7 +836,7 @@ public final class DeviceSecurity {
        * Authentication token, usable by this device to authenticate to the API, etc.
        * </pre>
        *
-       * <code>.bloombox.schema.security.AuthToken token = 1;</code>
+       * <code>.bloombox.security.AuthToken token = 1;</code>
        */
       public Builder setToken(io.bloombox.schema.security.AuthToken value) {
         if (tokenBuilder_ == null) {
@@ -834,7 +856,7 @@ public final class DeviceSecurity {
        * Authentication token, usable by this device to authenticate to the API, etc.
        * </pre>
        *
-       * <code>.bloombox.schema.security.AuthToken token = 1;</code>
+       * <code>.bloombox.security.AuthToken token = 1;</code>
        */
       public Builder setToken(
           io.bloombox.schema.security.AuthToken.Builder builderForValue) {
@@ -852,7 +874,7 @@ public final class DeviceSecurity {
        * Authentication token, usable by this device to authenticate to the API, etc.
        * </pre>
        *
-       * <code>.bloombox.schema.security.AuthToken token = 1;</code>
+       * <code>.bloombox.security.AuthToken token = 1;</code>
        */
       public Builder mergeToken(io.bloombox.schema.security.AuthToken value) {
         if (tokenBuilder_ == null) {
@@ -874,7 +896,7 @@ public final class DeviceSecurity {
        * Authentication token, usable by this device to authenticate to the API, etc.
        * </pre>
        *
-       * <code>.bloombox.schema.security.AuthToken token = 1;</code>
+       * <code>.bloombox.security.AuthToken token = 1;</code>
        */
       public Builder clearToken() {
         if (tokenBuilder_ == null) {
@@ -892,7 +914,7 @@ public final class DeviceSecurity {
        * Authentication token, usable by this device to authenticate to the API, etc.
        * </pre>
        *
-       * <code>.bloombox.schema.security.AuthToken token = 1;</code>
+       * <code>.bloombox.security.AuthToken token = 1;</code>
        */
       public io.bloombox.schema.security.AuthToken.Builder getTokenBuilder() {
         
@@ -904,7 +926,7 @@ public final class DeviceSecurity {
        * Authentication token, usable by this device to authenticate to the API, etc.
        * </pre>
        *
-       * <code>.bloombox.schema.security.AuthToken token = 1;</code>
+       * <code>.bloombox.security.AuthToken token = 1;</code>
        */
       public io.bloombox.schema.security.AuthTokenOrBuilder getTokenOrBuilder() {
         if (tokenBuilder_ != null) {
@@ -919,7 +941,7 @@ public final class DeviceSecurity {
        * Authentication token, usable by this device to authenticate to the API, etc.
        * </pre>
        *
-       * <code>.bloombox.schema.security.AuthToken token = 1;</code>
+       * <code>.bloombox.security.AuthToken token = 1;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
           io.bloombox.schema.security.AuthToken, io.bloombox.schema.security.AuthToken.Builder, io.bloombox.schema.security.AuthTokenOrBuilder> 
@@ -1393,21 +1415,23 @@ public final class DeviceSecurity {
         }
         return expiresBuilder_;
       }
+      @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
         return super.setUnknownFieldsProto3(unknownFields);
       }
 
+      @java.lang.Override
       public final Builder mergeUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
         return super.mergeUnknownFields(unknownFields);
       }
 
 
-      // @@protoc_insertion_point(builder_scope:bloombox.schema.security.DeviceTicket)
+      // @@protoc_insertion_point(builder_scope:bloombox.security.DeviceTicket)
     }
 
-    // @@protoc_insertion_point(class_scope:bloombox.schema.security.DeviceTicket)
+    // @@protoc_insertion_point(class_scope:bloombox.security.DeviceTicket)
     private static final io.bloombox.schema.security.DeviceSecurity.DeviceTicket DEFAULT_INSTANCE;
     static {
       DEFAULT_INSTANCE = new io.bloombox.schema.security.DeviceSecurity.DeviceTicket();
@@ -1419,6 +1443,7 @@ public final class DeviceSecurity {
 
     private static final com.google.protobuf.Parser<DeviceTicket>
         PARSER = new com.google.protobuf.AbstractParser<DeviceTicket>() {
+      @java.lang.Override
       public DeviceTicket parsePartialFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -1436,6 +1461,7 @@ public final class DeviceSecurity {
       return PARSER;
     }
 
+    @java.lang.Override
     public io.bloombox.schema.security.DeviceSecurity.DeviceTicket getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
@@ -1443,10 +1469,10 @@ public final class DeviceSecurity {
   }
 
   private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_bloombox_schema_security_DeviceTicket_descriptor;
+    internal_static_bloombox_security_DeviceTicket_descriptor;
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_bloombox_schema_security_DeviceTicket_fieldAccessorTable;
+      internal_static_bloombox_security_DeviceTicket_fieldAccessorTable;
 
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
@@ -1456,16 +1482,16 @@ public final class DeviceSecurity {
       descriptor;
   static {
     java.lang.String[] descriptorData = {
-      "\n\033security/DeviceTicket.proto\022\030bloombox." +
-      "schema.security\032\023device/Device.proto\032\024se" +
-      "curity/Token.proto\032\026temporal/Instant.pro" +
-      "to\"\320\001\n\014DeviceTicket\0222\n\005token\030\001 \001(\0132#.blo" +
-      "ombox.schema.security.AuthToken\022+\n\006devic" +
-      "e\030\002 \001(\0132\033.opencannabis.device.Device\022.\n\006" +
-      "issued\030\003 \001(\0132\036.opencannabis.temporal.Ins" +
-      "tant\022/\n\007expires\030\004 \001(\0132\036.opencannabis.tem" +
-      "poral.InstantB7\n\033io.bloombox.schema.secu" +
-      "rityB\016DeviceSecurityH\001P\000\242\002\003BBSb\006proto3"
+      "\n\033security/DeviceTicket.proto\022\021bloombox." +
+      "security\032\023device/Device.proto\032\024security/" +
+      "Token.proto\032\026temporal/Instant.proto\"\311\001\n\014" +
+      "DeviceTicket\022+\n\005token\030\001 \001(\0132\034.bloombox.s" +
+      "ecurity.AuthToken\022+\n\006device\030\002 \001(\0132\033.open" +
+      "cannabis.device.Device\022.\n\006issued\030\003 \001(\0132\036" +
+      ".opencannabis.temporal.Instant\022/\n\007expire" +
+      "s\030\004 \001(\0132\036.opencannabis.temporal.InstantB" +
+      "7\n\033io.bloombox.schema.securityB\016DeviceSe" +
+      "curityH\001P\000\242\002\003BBSb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -1482,11 +1508,11 @@ public final class DeviceSecurity {
           io.bloombox.schema.security.Token.getDescriptor(),
           io.opencannabis.schema.temporal.TemporalInstant.getDescriptor(),
         }, assigner);
-    internal_static_bloombox_schema_security_DeviceTicket_descriptor =
+    internal_static_bloombox_security_DeviceTicket_descriptor =
       getDescriptor().getMessageTypes().get(0);
-    internal_static_bloombox_schema_security_DeviceTicket_fieldAccessorTable = new
+    internal_static_bloombox_security_DeviceTicket_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_bloombox_schema_security_DeviceTicket_descriptor,
+        internal_static_bloombox_security_DeviceTicket_descriptor,
         new java.lang.String[] { "Token", "Device", "Issued", "Expires", });
     io.opencannabis.schema.device.DeviceOuterClass.getDescriptor();
     io.bloombox.schema.security.Token.getDescriptor();

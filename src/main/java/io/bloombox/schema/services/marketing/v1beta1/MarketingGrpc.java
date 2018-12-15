@@ -1,8 +1,8 @@
 /*
- * Copyright 2018, Bloombox, LLC. All rights reserved.
+ * Copyright 2018, Momentum Ideas, Co. All rights reserved.
  *
  * Source and object computer code contained herein is the private intellectual
- * property of Bloombox, a California Limited Liability Corporation. Use of this
+ * property of Momentum Ideas Co., a Delaware Corporation. Use of this
  * code in source form requires permission in writing before use or the
  * assembly, distribution, or publishing of derivative works, for commercial
  * purposes or any other purpose, from a duly authorized officer of Momentum
@@ -17,20 +17,20 @@
 
 package io.bloombox.schema.services.marketing.v1beta1;
 
-import static io.grpc.stub.ClientCalls.asyncUnaryCall;
-import static io.grpc.stub.ClientCalls.asyncServerStreamingCall;
-import static io.grpc.stub.ClientCalls.asyncClientStreamingCall;
-import static io.grpc.stub.ClientCalls.asyncBidiStreamingCall;
-import static io.grpc.stub.ClientCalls.blockingUnaryCall;
-import static io.grpc.stub.ClientCalls.blockingServerStreamingCall;
-import static io.grpc.stub.ClientCalls.futureUnaryCall;
 import static io.grpc.MethodDescriptor.generateFullMethodName;
-import static io.grpc.stub.ServerCalls.asyncUnaryCall;
-import static io.grpc.stub.ServerCalls.asyncServerStreamingCall;
-import static io.grpc.stub.ServerCalls.asyncClientStreamingCall;
+import static io.grpc.stub.ClientCalls.asyncBidiStreamingCall;
+import static io.grpc.stub.ClientCalls.asyncClientStreamingCall;
+import static io.grpc.stub.ClientCalls.asyncServerStreamingCall;
+import static io.grpc.stub.ClientCalls.asyncUnaryCall;
+import static io.grpc.stub.ClientCalls.blockingServerStreamingCall;
+import static io.grpc.stub.ClientCalls.blockingUnaryCall;
+import static io.grpc.stub.ClientCalls.futureUnaryCall;
 import static io.grpc.stub.ServerCalls.asyncBidiStreamingCall;
-import static io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall;
+import static io.grpc.stub.ServerCalls.asyncClientStreamingCall;
+import static io.grpc.stub.ServerCalls.asyncServerStreamingCall;
+import static io.grpc.stub.ServerCalls.asyncUnaryCall;
 import static io.grpc.stub.ServerCalls.asyncUnimplementedStreamingCall;
+import static io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall;
 
 /**
  * <pre>
@@ -39,135 +39,334 @@ import static io.grpc.stub.ServerCalls.asyncUnimplementedStreamingCall;
  * </pre>
  */
 @javax.annotation.Generated(
-    value = "by gRPC proto compiler (version 1.6.0-SNAPSHOT)",
+    value = "by gRPC proto compiler (version 1.18.0-SNAPSHOT)",
     comments = "Source: marketing/v1beta1/MarketingService_Beta1.proto")
 public final class MarketingGrpc {
 
   private MarketingGrpc() {}
 
-  public static final String SERVICE_NAME = "bloombox.schema.services.marketing.v1beta1.Marketing";
+  public static final String SERVICE_NAME = "bloombox.services.marketing.v1beta1.Marketing";
 
   // Static method descriptors that strictly reflect the proto.
-  @io.grpc.ExperimentalApi("https://github.com/grpc/grpc-java/issues/1901")
-  public static final io.grpc.MethodDescriptor<io.bloombox.schema.services.marketing.v1beta1.CampaignCreate.Request,
-      io.bloombox.schema.services.marketing.v1beta1.CampaignCreate.Response> METHOD_CREATE_CAMPAIGN =
-      io.grpc.MethodDescriptor.<io.bloombox.schema.services.marketing.v1beta1.CampaignCreate.Request, io.bloombox.schema.services.marketing.v1beta1.CampaignCreate.Response>newBuilder()
-          .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-          .setFullMethodName(generateFullMethodName(
-              "bloombox.schema.services.marketing.v1beta1.Marketing", "CreateCampaign"))
-          .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-              io.bloombox.schema.services.marketing.v1beta1.CampaignCreate.Request.getDefaultInstance()))
-          .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-              io.bloombox.schema.services.marketing.v1beta1.CampaignCreate.Response.getDefaultInstance()))
-          .build();
-  @io.grpc.ExperimentalApi("https://github.com/grpc/grpc-java/issues/1901")
-  public static final io.grpc.MethodDescriptor<io.bloombox.schema.services.marketing.v1beta1.CampaignGet.Request,
-      io.bloombox.schema.services.marketing.v1beta1.CampaignGet.Response> METHOD_GET_CAMPAIGN =
-      io.grpc.MethodDescriptor.<io.bloombox.schema.services.marketing.v1beta1.CampaignGet.Request, io.bloombox.schema.services.marketing.v1beta1.CampaignGet.Response>newBuilder()
-          .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-          .setFullMethodName(generateFullMethodName(
-              "bloombox.schema.services.marketing.v1beta1.Marketing", "GetCampaign"))
-          .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-              io.bloombox.schema.services.marketing.v1beta1.CampaignGet.Request.getDefaultInstance()))
-          .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-              io.bloombox.schema.services.marketing.v1beta1.CampaignGet.Response.getDefaultInstance()))
-          .build();
-  @io.grpc.ExperimentalApi("https://github.com/grpc/grpc-java/issues/1901")
-  public static final io.grpc.MethodDescriptor<io.bloombox.schema.services.marketing.v1beta1.CampaignList.Request,
-      io.bloombox.schema.services.marketing.v1beta1.CampaignList.Response> METHOD_LIST_CAMPAIGNS =
-      io.grpc.MethodDescriptor.<io.bloombox.schema.services.marketing.v1beta1.CampaignList.Request, io.bloombox.schema.services.marketing.v1beta1.CampaignList.Response>newBuilder()
-          .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-          .setFullMethodName(generateFullMethodName(
-              "bloombox.schema.services.marketing.v1beta1.Marketing", "ListCampaigns"))
-          .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-              io.bloombox.schema.services.marketing.v1beta1.CampaignList.Request.getDefaultInstance()))
-          .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-              io.bloombox.schema.services.marketing.v1beta1.CampaignList.Response.getDefaultInstance()))
-          .build();
-  @io.grpc.ExperimentalApi("https://github.com/grpc/grpc-java/issues/1901")
-  public static final io.grpc.MethodDescriptor<io.bloombox.schema.services.marketing.v1beta1.CampaignUpdate.Request,
-      com.google.protobuf.Empty> METHOD_UPDATE_CAMPAIGN =
-      io.grpc.MethodDescriptor.<io.bloombox.schema.services.marketing.v1beta1.CampaignUpdate.Request, com.google.protobuf.Empty>newBuilder()
-          .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-          .setFullMethodName(generateFullMethodName(
-              "bloombox.schema.services.marketing.v1beta1.Marketing", "UpdateCampaign"))
-          .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-              io.bloombox.schema.services.marketing.v1beta1.CampaignUpdate.Request.getDefaultInstance()))
-          .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-              com.google.protobuf.Empty.getDefaultInstance()))
-          .build();
-  @io.grpc.ExperimentalApi("https://github.com/grpc/grpc-java/issues/1901")
-  public static final io.grpc.MethodDescriptor<io.bloombox.schema.services.marketing.v1beta1.CampaignValidate.Request,
-      com.google.protobuf.Empty> METHOD_VALIDATE_CAMPAIGN =
-      io.grpc.MethodDescriptor.<io.bloombox.schema.services.marketing.v1beta1.CampaignValidate.Request, com.google.protobuf.Empty>newBuilder()
-          .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-          .setFullMethodName(generateFullMethodName(
-              "bloombox.schema.services.marketing.v1beta1.Marketing", "ValidateCampaign"))
-          .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-              io.bloombox.schema.services.marketing.v1beta1.CampaignValidate.Request.getDefaultInstance()))
-          .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-              com.google.protobuf.Empty.getDefaultInstance()))
-          .build();
-  @io.grpc.ExperimentalApi("https://github.com/grpc/grpc-java/issues/1901")
-  public static final io.grpc.MethodDescriptor<io.bloombox.schema.services.marketing.v1beta1.CampaignSend.Request,
-      com.google.protobuf.Empty> METHOD_SEND_CAMPAIGN =
-      io.grpc.MethodDescriptor.<io.bloombox.schema.services.marketing.v1beta1.CampaignSend.Request, com.google.protobuf.Empty>newBuilder()
-          .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-          .setFullMethodName(generateFullMethodName(
-              "bloombox.schema.services.marketing.v1beta1.Marketing", "SendCampaign"))
-          .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-              io.bloombox.schema.services.marketing.v1beta1.CampaignSend.Request.getDefaultInstance()))
-          .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-              com.google.protobuf.Empty.getDefaultInstance()))
-          .build();
-  @io.grpc.ExperimentalApi("https://github.com/grpc/grpc-java/issues/1901")
-  public static final io.grpc.MethodDescriptor<io.bloombox.schema.services.marketing.v1beta1.AdGroupList.Request,
-      io.bloombox.schema.services.marketing.v1beta1.AdGroupList.Response> METHOD_ADGROUPS =
-      io.grpc.MethodDescriptor.<io.bloombox.schema.services.marketing.v1beta1.AdGroupList.Request, io.bloombox.schema.services.marketing.v1beta1.AdGroupList.Response>newBuilder()
-          .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-          .setFullMethodName(generateFullMethodName(
-              "bloombox.schema.services.marketing.v1beta1.Marketing", "Adgroups"))
-          .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-              io.bloombox.schema.services.marketing.v1beta1.AdGroupList.Request.getDefaultInstance()))
-          .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-              io.bloombox.schema.services.marketing.v1beta1.AdGroupList.Response.getDefaultInstance()))
-          .build();
-  @io.grpc.ExperimentalApi("https://github.com/grpc/grpc-java/issues/1901")
-  public static final io.grpc.MethodDescriptor<io.bloombox.schema.services.marketing.v1beta1.AdGroupCreate.Request,
-      io.bloombox.schema.services.marketing.v1beta1.AdGroupCreate.Response> METHOD_CREATE_ADGROUP =
-      io.grpc.MethodDescriptor.<io.bloombox.schema.services.marketing.v1beta1.AdGroupCreate.Request, io.bloombox.schema.services.marketing.v1beta1.AdGroupCreate.Response>newBuilder()
-          .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-          .setFullMethodName(generateFullMethodName(
-              "bloombox.schema.services.marketing.v1beta1.Marketing", "CreateAdgroup"))
-          .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-              io.bloombox.schema.services.marketing.v1beta1.AdGroupCreate.Request.getDefaultInstance()))
-          .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-              io.bloombox.schema.services.marketing.v1beta1.AdGroupCreate.Response.getDefaultInstance()))
-          .build();
-  @io.grpc.ExperimentalApi("https://github.com/grpc/grpc-java/issues/1901")
-  public static final io.grpc.MethodDescriptor<io.bloombox.schema.services.marketing.v1beta1.AdGroupGet.Request,
-      io.bloombox.schema.services.marketing.v1beta1.AdGroupGet.Response> METHOD_ADGROUP =
-      io.grpc.MethodDescriptor.<io.bloombox.schema.services.marketing.v1beta1.AdGroupGet.Request, io.bloombox.schema.services.marketing.v1beta1.AdGroupGet.Response>newBuilder()
-          .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-          .setFullMethodName(generateFullMethodName(
-              "bloombox.schema.services.marketing.v1beta1.Marketing", "Adgroup"))
-          .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-              io.bloombox.schema.services.marketing.v1beta1.AdGroupGet.Request.getDefaultInstance()))
-          .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-              io.bloombox.schema.services.marketing.v1beta1.AdGroupGet.Response.getDefaultInstance()))
-          .build();
-  @io.grpc.ExperimentalApi("https://github.com/grpc/grpc-java/issues/1901")
-  public static final io.grpc.MethodDescriptor<io.bloombox.schema.services.marketing.v1beta1.AdGroupUpdate.Request,
-      com.google.protobuf.Empty> METHOD_UPDATE_ADGROUP =
-      io.grpc.MethodDescriptor.<io.bloombox.schema.services.marketing.v1beta1.AdGroupUpdate.Request, com.google.protobuf.Empty>newBuilder()
-          .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-          .setFullMethodName(generateFullMethodName(
-              "bloombox.schema.services.marketing.v1beta1.Marketing", "UpdateAdgroup"))
-          .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-              io.bloombox.schema.services.marketing.v1beta1.AdGroupUpdate.Request.getDefaultInstance()))
-          .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-              com.google.protobuf.Empty.getDefaultInstance()))
-          .build();
+  private static volatile io.grpc.MethodDescriptor<io.bloombox.schema.services.marketing.v1beta1.CampaignCreate.Request,
+      io.bloombox.schema.services.marketing.v1beta1.CampaignCreate.Response> getCreateCampaignMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "CreateCampaign",
+      requestType = io.bloombox.schema.services.marketing.v1beta1.CampaignCreate.Request.class,
+      responseType = io.bloombox.schema.services.marketing.v1beta1.CampaignCreate.Response.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<io.bloombox.schema.services.marketing.v1beta1.CampaignCreate.Request,
+      io.bloombox.schema.services.marketing.v1beta1.CampaignCreate.Response> getCreateCampaignMethod() {
+    io.grpc.MethodDescriptor<io.bloombox.schema.services.marketing.v1beta1.CampaignCreate.Request, io.bloombox.schema.services.marketing.v1beta1.CampaignCreate.Response> getCreateCampaignMethod;
+    if ((getCreateCampaignMethod = MarketingGrpc.getCreateCampaignMethod) == null) {
+      synchronized (MarketingGrpc.class) {
+        if ((getCreateCampaignMethod = MarketingGrpc.getCreateCampaignMethod) == null) {
+          MarketingGrpc.getCreateCampaignMethod = getCreateCampaignMethod = 
+              io.grpc.MethodDescriptor.<io.bloombox.schema.services.marketing.v1beta1.CampaignCreate.Request, io.bloombox.schema.services.marketing.v1beta1.CampaignCreate.Response>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(
+                  "bloombox.services.marketing.v1beta1.Marketing", "CreateCampaign"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  io.bloombox.schema.services.marketing.v1beta1.CampaignCreate.Request.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  io.bloombox.schema.services.marketing.v1beta1.CampaignCreate.Response.getDefaultInstance()))
+                  .setSchemaDescriptor(new MarketingMethodDescriptorSupplier("CreateCampaign"))
+                  .build();
+          }
+        }
+     }
+     return getCreateCampaignMethod;
+  }
+
+  private static volatile io.grpc.MethodDescriptor<io.bloombox.schema.services.marketing.v1beta1.CampaignGet.Request,
+      io.bloombox.schema.services.marketing.v1beta1.CampaignGet.Response> getGetCampaignMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "GetCampaign",
+      requestType = io.bloombox.schema.services.marketing.v1beta1.CampaignGet.Request.class,
+      responseType = io.bloombox.schema.services.marketing.v1beta1.CampaignGet.Response.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<io.bloombox.schema.services.marketing.v1beta1.CampaignGet.Request,
+      io.bloombox.schema.services.marketing.v1beta1.CampaignGet.Response> getGetCampaignMethod() {
+    io.grpc.MethodDescriptor<io.bloombox.schema.services.marketing.v1beta1.CampaignGet.Request, io.bloombox.schema.services.marketing.v1beta1.CampaignGet.Response> getGetCampaignMethod;
+    if ((getGetCampaignMethod = MarketingGrpc.getGetCampaignMethod) == null) {
+      synchronized (MarketingGrpc.class) {
+        if ((getGetCampaignMethod = MarketingGrpc.getGetCampaignMethod) == null) {
+          MarketingGrpc.getGetCampaignMethod = getGetCampaignMethod = 
+              io.grpc.MethodDescriptor.<io.bloombox.schema.services.marketing.v1beta1.CampaignGet.Request, io.bloombox.schema.services.marketing.v1beta1.CampaignGet.Response>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(
+                  "bloombox.services.marketing.v1beta1.Marketing", "GetCampaign"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  io.bloombox.schema.services.marketing.v1beta1.CampaignGet.Request.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  io.bloombox.schema.services.marketing.v1beta1.CampaignGet.Response.getDefaultInstance()))
+                  .setSchemaDescriptor(new MarketingMethodDescriptorSupplier("GetCampaign"))
+                  .build();
+          }
+        }
+     }
+     return getGetCampaignMethod;
+  }
+
+  private static volatile io.grpc.MethodDescriptor<io.bloombox.schema.services.marketing.v1beta1.CampaignList.Request,
+      io.bloombox.schema.services.marketing.v1beta1.CampaignList.Response> getListCampaignsMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "ListCampaigns",
+      requestType = io.bloombox.schema.services.marketing.v1beta1.CampaignList.Request.class,
+      responseType = io.bloombox.schema.services.marketing.v1beta1.CampaignList.Response.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<io.bloombox.schema.services.marketing.v1beta1.CampaignList.Request,
+      io.bloombox.schema.services.marketing.v1beta1.CampaignList.Response> getListCampaignsMethod() {
+    io.grpc.MethodDescriptor<io.bloombox.schema.services.marketing.v1beta1.CampaignList.Request, io.bloombox.schema.services.marketing.v1beta1.CampaignList.Response> getListCampaignsMethod;
+    if ((getListCampaignsMethod = MarketingGrpc.getListCampaignsMethod) == null) {
+      synchronized (MarketingGrpc.class) {
+        if ((getListCampaignsMethod = MarketingGrpc.getListCampaignsMethod) == null) {
+          MarketingGrpc.getListCampaignsMethod = getListCampaignsMethod = 
+              io.grpc.MethodDescriptor.<io.bloombox.schema.services.marketing.v1beta1.CampaignList.Request, io.bloombox.schema.services.marketing.v1beta1.CampaignList.Response>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(
+                  "bloombox.services.marketing.v1beta1.Marketing", "ListCampaigns"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  io.bloombox.schema.services.marketing.v1beta1.CampaignList.Request.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  io.bloombox.schema.services.marketing.v1beta1.CampaignList.Response.getDefaultInstance()))
+                  .setSchemaDescriptor(new MarketingMethodDescriptorSupplier("ListCampaigns"))
+                  .build();
+          }
+        }
+     }
+     return getListCampaignsMethod;
+  }
+
+  private static volatile io.grpc.MethodDescriptor<io.bloombox.schema.services.marketing.v1beta1.CampaignUpdate.Request,
+      com.google.protobuf.Empty> getUpdateCampaignMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "UpdateCampaign",
+      requestType = io.bloombox.schema.services.marketing.v1beta1.CampaignUpdate.Request.class,
+      responseType = com.google.protobuf.Empty.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<io.bloombox.schema.services.marketing.v1beta1.CampaignUpdate.Request,
+      com.google.protobuf.Empty> getUpdateCampaignMethod() {
+    io.grpc.MethodDescriptor<io.bloombox.schema.services.marketing.v1beta1.CampaignUpdate.Request, com.google.protobuf.Empty> getUpdateCampaignMethod;
+    if ((getUpdateCampaignMethod = MarketingGrpc.getUpdateCampaignMethod) == null) {
+      synchronized (MarketingGrpc.class) {
+        if ((getUpdateCampaignMethod = MarketingGrpc.getUpdateCampaignMethod) == null) {
+          MarketingGrpc.getUpdateCampaignMethod = getUpdateCampaignMethod = 
+              io.grpc.MethodDescriptor.<io.bloombox.schema.services.marketing.v1beta1.CampaignUpdate.Request, com.google.protobuf.Empty>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(
+                  "bloombox.services.marketing.v1beta1.Marketing", "UpdateCampaign"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  io.bloombox.schema.services.marketing.v1beta1.CampaignUpdate.Request.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.google.protobuf.Empty.getDefaultInstance()))
+                  .setSchemaDescriptor(new MarketingMethodDescriptorSupplier("UpdateCampaign"))
+                  .build();
+          }
+        }
+     }
+     return getUpdateCampaignMethod;
+  }
+
+  private static volatile io.grpc.MethodDescriptor<io.bloombox.schema.services.marketing.v1beta1.CampaignValidate.Request,
+      com.google.protobuf.Empty> getValidateCampaignMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "ValidateCampaign",
+      requestType = io.bloombox.schema.services.marketing.v1beta1.CampaignValidate.Request.class,
+      responseType = com.google.protobuf.Empty.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<io.bloombox.schema.services.marketing.v1beta1.CampaignValidate.Request,
+      com.google.protobuf.Empty> getValidateCampaignMethod() {
+    io.grpc.MethodDescriptor<io.bloombox.schema.services.marketing.v1beta1.CampaignValidate.Request, com.google.protobuf.Empty> getValidateCampaignMethod;
+    if ((getValidateCampaignMethod = MarketingGrpc.getValidateCampaignMethod) == null) {
+      synchronized (MarketingGrpc.class) {
+        if ((getValidateCampaignMethod = MarketingGrpc.getValidateCampaignMethod) == null) {
+          MarketingGrpc.getValidateCampaignMethod = getValidateCampaignMethod = 
+              io.grpc.MethodDescriptor.<io.bloombox.schema.services.marketing.v1beta1.CampaignValidate.Request, com.google.protobuf.Empty>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(
+                  "bloombox.services.marketing.v1beta1.Marketing", "ValidateCampaign"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  io.bloombox.schema.services.marketing.v1beta1.CampaignValidate.Request.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.google.protobuf.Empty.getDefaultInstance()))
+                  .setSchemaDescriptor(new MarketingMethodDescriptorSupplier("ValidateCampaign"))
+                  .build();
+          }
+        }
+     }
+     return getValidateCampaignMethod;
+  }
+
+  private static volatile io.grpc.MethodDescriptor<io.bloombox.schema.services.marketing.v1beta1.CampaignSend.Request,
+      com.google.protobuf.Empty> getSendCampaignMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "SendCampaign",
+      requestType = io.bloombox.schema.services.marketing.v1beta1.CampaignSend.Request.class,
+      responseType = com.google.protobuf.Empty.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<io.bloombox.schema.services.marketing.v1beta1.CampaignSend.Request,
+      com.google.protobuf.Empty> getSendCampaignMethod() {
+    io.grpc.MethodDescriptor<io.bloombox.schema.services.marketing.v1beta1.CampaignSend.Request, com.google.protobuf.Empty> getSendCampaignMethod;
+    if ((getSendCampaignMethod = MarketingGrpc.getSendCampaignMethod) == null) {
+      synchronized (MarketingGrpc.class) {
+        if ((getSendCampaignMethod = MarketingGrpc.getSendCampaignMethod) == null) {
+          MarketingGrpc.getSendCampaignMethod = getSendCampaignMethod = 
+              io.grpc.MethodDescriptor.<io.bloombox.schema.services.marketing.v1beta1.CampaignSend.Request, com.google.protobuf.Empty>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(
+                  "bloombox.services.marketing.v1beta1.Marketing", "SendCampaign"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  io.bloombox.schema.services.marketing.v1beta1.CampaignSend.Request.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.google.protobuf.Empty.getDefaultInstance()))
+                  .setSchemaDescriptor(new MarketingMethodDescriptorSupplier("SendCampaign"))
+                  .build();
+          }
+        }
+     }
+     return getSendCampaignMethod;
+  }
+
+  private static volatile io.grpc.MethodDescriptor<io.bloombox.schema.services.marketing.v1beta1.AdGroupList.Request,
+      io.bloombox.schema.services.marketing.v1beta1.AdGroupList.Response> getAdgroupsMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "Adgroups",
+      requestType = io.bloombox.schema.services.marketing.v1beta1.AdGroupList.Request.class,
+      responseType = io.bloombox.schema.services.marketing.v1beta1.AdGroupList.Response.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<io.bloombox.schema.services.marketing.v1beta1.AdGroupList.Request,
+      io.bloombox.schema.services.marketing.v1beta1.AdGroupList.Response> getAdgroupsMethod() {
+    io.grpc.MethodDescriptor<io.bloombox.schema.services.marketing.v1beta1.AdGroupList.Request, io.bloombox.schema.services.marketing.v1beta1.AdGroupList.Response> getAdgroupsMethod;
+    if ((getAdgroupsMethod = MarketingGrpc.getAdgroupsMethod) == null) {
+      synchronized (MarketingGrpc.class) {
+        if ((getAdgroupsMethod = MarketingGrpc.getAdgroupsMethod) == null) {
+          MarketingGrpc.getAdgroupsMethod = getAdgroupsMethod = 
+              io.grpc.MethodDescriptor.<io.bloombox.schema.services.marketing.v1beta1.AdGroupList.Request, io.bloombox.schema.services.marketing.v1beta1.AdGroupList.Response>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(
+                  "bloombox.services.marketing.v1beta1.Marketing", "Adgroups"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  io.bloombox.schema.services.marketing.v1beta1.AdGroupList.Request.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  io.bloombox.schema.services.marketing.v1beta1.AdGroupList.Response.getDefaultInstance()))
+                  .setSchemaDescriptor(new MarketingMethodDescriptorSupplier("Adgroups"))
+                  .build();
+          }
+        }
+     }
+     return getAdgroupsMethod;
+  }
+
+  private static volatile io.grpc.MethodDescriptor<io.bloombox.schema.services.marketing.v1beta1.AdGroupCreate.Request,
+      io.bloombox.schema.services.marketing.v1beta1.AdGroupCreate.Response> getCreateAdgroupMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "CreateAdgroup",
+      requestType = io.bloombox.schema.services.marketing.v1beta1.AdGroupCreate.Request.class,
+      responseType = io.bloombox.schema.services.marketing.v1beta1.AdGroupCreate.Response.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<io.bloombox.schema.services.marketing.v1beta1.AdGroupCreate.Request,
+      io.bloombox.schema.services.marketing.v1beta1.AdGroupCreate.Response> getCreateAdgroupMethod() {
+    io.grpc.MethodDescriptor<io.bloombox.schema.services.marketing.v1beta1.AdGroupCreate.Request, io.bloombox.schema.services.marketing.v1beta1.AdGroupCreate.Response> getCreateAdgroupMethod;
+    if ((getCreateAdgroupMethod = MarketingGrpc.getCreateAdgroupMethod) == null) {
+      synchronized (MarketingGrpc.class) {
+        if ((getCreateAdgroupMethod = MarketingGrpc.getCreateAdgroupMethod) == null) {
+          MarketingGrpc.getCreateAdgroupMethod = getCreateAdgroupMethod = 
+              io.grpc.MethodDescriptor.<io.bloombox.schema.services.marketing.v1beta1.AdGroupCreate.Request, io.bloombox.schema.services.marketing.v1beta1.AdGroupCreate.Response>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(
+                  "bloombox.services.marketing.v1beta1.Marketing", "CreateAdgroup"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  io.bloombox.schema.services.marketing.v1beta1.AdGroupCreate.Request.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  io.bloombox.schema.services.marketing.v1beta1.AdGroupCreate.Response.getDefaultInstance()))
+                  .setSchemaDescriptor(new MarketingMethodDescriptorSupplier("CreateAdgroup"))
+                  .build();
+          }
+        }
+     }
+     return getCreateAdgroupMethod;
+  }
+
+  private static volatile io.grpc.MethodDescriptor<io.bloombox.schema.services.marketing.v1beta1.AdGroupGet.Request,
+      io.bloombox.schema.services.marketing.v1beta1.AdGroupGet.Response> getAdgroupMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "Adgroup",
+      requestType = io.bloombox.schema.services.marketing.v1beta1.AdGroupGet.Request.class,
+      responseType = io.bloombox.schema.services.marketing.v1beta1.AdGroupGet.Response.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<io.bloombox.schema.services.marketing.v1beta1.AdGroupGet.Request,
+      io.bloombox.schema.services.marketing.v1beta1.AdGroupGet.Response> getAdgroupMethod() {
+    io.grpc.MethodDescriptor<io.bloombox.schema.services.marketing.v1beta1.AdGroupGet.Request, io.bloombox.schema.services.marketing.v1beta1.AdGroupGet.Response> getAdgroupMethod;
+    if ((getAdgroupMethod = MarketingGrpc.getAdgroupMethod) == null) {
+      synchronized (MarketingGrpc.class) {
+        if ((getAdgroupMethod = MarketingGrpc.getAdgroupMethod) == null) {
+          MarketingGrpc.getAdgroupMethod = getAdgroupMethod = 
+              io.grpc.MethodDescriptor.<io.bloombox.schema.services.marketing.v1beta1.AdGroupGet.Request, io.bloombox.schema.services.marketing.v1beta1.AdGroupGet.Response>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(
+                  "bloombox.services.marketing.v1beta1.Marketing", "Adgroup"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  io.bloombox.schema.services.marketing.v1beta1.AdGroupGet.Request.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  io.bloombox.schema.services.marketing.v1beta1.AdGroupGet.Response.getDefaultInstance()))
+                  .setSchemaDescriptor(new MarketingMethodDescriptorSupplier("Adgroup"))
+                  .build();
+          }
+        }
+     }
+     return getAdgroupMethod;
+  }
+
+  private static volatile io.grpc.MethodDescriptor<io.bloombox.schema.services.marketing.v1beta1.AdGroupUpdate.Request,
+      com.google.protobuf.Empty> getUpdateAdgroupMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "UpdateAdgroup",
+      requestType = io.bloombox.schema.services.marketing.v1beta1.AdGroupUpdate.Request.class,
+      responseType = com.google.protobuf.Empty.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<io.bloombox.schema.services.marketing.v1beta1.AdGroupUpdate.Request,
+      com.google.protobuf.Empty> getUpdateAdgroupMethod() {
+    io.grpc.MethodDescriptor<io.bloombox.schema.services.marketing.v1beta1.AdGroupUpdate.Request, com.google.protobuf.Empty> getUpdateAdgroupMethod;
+    if ((getUpdateAdgroupMethod = MarketingGrpc.getUpdateAdgroupMethod) == null) {
+      synchronized (MarketingGrpc.class) {
+        if ((getUpdateAdgroupMethod = MarketingGrpc.getUpdateAdgroupMethod) == null) {
+          MarketingGrpc.getUpdateAdgroupMethod = getUpdateAdgroupMethod = 
+              io.grpc.MethodDescriptor.<io.bloombox.schema.services.marketing.v1beta1.AdGroupUpdate.Request, com.google.protobuf.Empty>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(
+                  "bloombox.services.marketing.v1beta1.Marketing", "UpdateAdgroup"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  io.bloombox.schema.services.marketing.v1beta1.AdGroupUpdate.Request.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.google.protobuf.Empty.getDefaultInstance()))
+                  .setSchemaDescriptor(new MarketingMethodDescriptorSupplier("UpdateAdgroup"))
+                  .build();
+          }
+        }
+     }
+     return getUpdateAdgroupMethod;
+  }
 
   /**
    * Creates a new async stub that supports all call types for the service
@@ -207,7 +406,7 @@ public final class MarketingGrpc {
      */
     public void createCampaign(io.bloombox.schema.services.marketing.v1beta1.CampaignCreate.Request request,
         io.grpc.stub.StreamObserver<io.bloombox.schema.services.marketing.v1beta1.CampaignCreate.Response> responseObserver) {
-      asyncUnimplementedUnaryCall(METHOD_CREATE_CAMPAIGN, responseObserver);
+      asyncUnimplementedUnaryCall(getCreateCampaignMethod(), responseObserver);
     }
 
     /**
@@ -217,7 +416,7 @@ public final class MarketingGrpc {
      */
     public void getCampaign(io.bloombox.schema.services.marketing.v1beta1.CampaignGet.Request request,
         io.grpc.stub.StreamObserver<io.bloombox.schema.services.marketing.v1beta1.CampaignGet.Response> responseObserver) {
-      asyncUnimplementedUnaryCall(METHOD_GET_CAMPAIGN, responseObserver);
+      asyncUnimplementedUnaryCall(getGetCampaignMethod(), responseObserver);
     }
 
     /**
@@ -227,7 +426,7 @@ public final class MarketingGrpc {
      */
     public void listCampaigns(io.bloombox.schema.services.marketing.v1beta1.CampaignList.Request request,
         io.grpc.stub.StreamObserver<io.bloombox.schema.services.marketing.v1beta1.CampaignList.Response> responseObserver) {
-      asyncUnimplementedUnaryCall(METHOD_LIST_CAMPAIGNS, responseObserver);
+      asyncUnimplementedUnaryCall(getListCampaignsMethod(), responseObserver);
     }
 
     /**
@@ -237,7 +436,7 @@ public final class MarketingGrpc {
      */
     public void updateCampaign(io.bloombox.schema.services.marketing.v1beta1.CampaignUpdate.Request request,
         io.grpc.stub.StreamObserver<com.google.protobuf.Empty> responseObserver) {
-      asyncUnimplementedUnaryCall(METHOD_UPDATE_CAMPAIGN, responseObserver);
+      asyncUnimplementedUnaryCall(getUpdateCampaignMethod(), responseObserver);
     }
 
     /**
@@ -247,7 +446,7 @@ public final class MarketingGrpc {
      */
     public void validateCampaign(io.bloombox.schema.services.marketing.v1beta1.CampaignValidate.Request request,
         io.grpc.stub.StreamObserver<com.google.protobuf.Empty> responseObserver) {
-      asyncUnimplementedUnaryCall(METHOD_VALIDATE_CAMPAIGN, responseObserver);
+      asyncUnimplementedUnaryCall(getValidateCampaignMethod(), responseObserver);
     }
 
     /**
@@ -257,7 +456,7 @@ public final class MarketingGrpc {
      */
     public void sendCampaign(io.bloombox.schema.services.marketing.v1beta1.CampaignSend.Request request,
         io.grpc.stub.StreamObserver<com.google.protobuf.Empty> responseObserver) {
-      asyncUnimplementedUnaryCall(METHOD_SEND_CAMPAIGN, responseObserver);
+      asyncUnimplementedUnaryCall(getSendCampaignMethod(), responseObserver);
     }
 
     /**
@@ -267,7 +466,7 @@ public final class MarketingGrpc {
      */
     public void adgroups(io.bloombox.schema.services.marketing.v1beta1.AdGroupList.Request request,
         io.grpc.stub.StreamObserver<io.bloombox.schema.services.marketing.v1beta1.AdGroupList.Response> responseObserver) {
-      asyncUnimplementedUnaryCall(METHOD_ADGROUPS, responseObserver);
+      asyncUnimplementedUnaryCall(getAdgroupsMethod(), responseObserver);
     }
 
     /**
@@ -277,7 +476,7 @@ public final class MarketingGrpc {
      */
     public void createAdgroup(io.bloombox.schema.services.marketing.v1beta1.AdGroupCreate.Request request,
         io.grpc.stub.StreamObserver<io.bloombox.schema.services.marketing.v1beta1.AdGroupCreate.Response> responseObserver) {
-      asyncUnimplementedUnaryCall(METHOD_CREATE_ADGROUP, responseObserver);
+      asyncUnimplementedUnaryCall(getCreateAdgroupMethod(), responseObserver);
     }
 
     /**
@@ -287,7 +486,7 @@ public final class MarketingGrpc {
      */
     public void adgroup(io.bloombox.schema.services.marketing.v1beta1.AdGroupGet.Request request,
         io.grpc.stub.StreamObserver<io.bloombox.schema.services.marketing.v1beta1.AdGroupGet.Response> responseObserver) {
-      asyncUnimplementedUnaryCall(METHOD_ADGROUP, responseObserver);
+      asyncUnimplementedUnaryCall(getAdgroupMethod(), responseObserver);
     }
 
     /**
@@ -297,76 +496,76 @@ public final class MarketingGrpc {
      */
     public void updateAdgroup(io.bloombox.schema.services.marketing.v1beta1.AdGroupUpdate.Request request,
         io.grpc.stub.StreamObserver<com.google.protobuf.Empty> responseObserver) {
-      asyncUnimplementedUnaryCall(METHOD_UPDATE_ADGROUP, responseObserver);
+      asyncUnimplementedUnaryCall(getUpdateAdgroupMethod(), responseObserver);
     }
 
     @java.lang.Override public final io.grpc.ServerServiceDefinition bindService() {
       return io.grpc.ServerServiceDefinition.builder(getServiceDescriptor())
           .addMethod(
-            METHOD_CREATE_CAMPAIGN,
+            getCreateCampaignMethod(),
             asyncUnaryCall(
               new MethodHandlers<
                 io.bloombox.schema.services.marketing.v1beta1.CampaignCreate.Request,
                 io.bloombox.schema.services.marketing.v1beta1.CampaignCreate.Response>(
                   this, METHODID_CREATE_CAMPAIGN)))
           .addMethod(
-            METHOD_GET_CAMPAIGN,
+            getGetCampaignMethod(),
             asyncUnaryCall(
               new MethodHandlers<
                 io.bloombox.schema.services.marketing.v1beta1.CampaignGet.Request,
                 io.bloombox.schema.services.marketing.v1beta1.CampaignGet.Response>(
                   this, METHODID_GET_CAMPAIGN)))
           .addMethod(
-            METHOD_LIST_CAMPAIGNS,
+            getListCampaignsMethod(),
             asyncUnaryCall(
               new MethodHandlers<
                 io.bloombox.schema.services.marketing.v1beta1.CampaignList.Request,
                 io.bloombox.schema.services.marketing.v1beta1.CampaignList.Response>(
                   this, METHODID_LIST_CAMPAIGNS)))
           .addMethod(
-            METHOD_UPDATE_CAMPAIGN,
+            getUpdateCampaignMethod(),
             asyncUnaryCall(
               new MethodHandlers<
                 io.bloombox.schema.services.marketing.v1beta1.CampaignUpdate.Request,
                 com.google.protobuf.Empty>(
                   this, METHODID_UPDATE_CAMPAIGN)))
           .addMethod(
-            METHOD_VALIDATE_CAMPAIGN,
+            getValidateCampaignMethod(),
             asyncUnaryCall(
               new MethodHandlers<
                 io.bloombox.schema.services.marketing.v1beta1.CampaignValidate.Request,
                 com.google.protobuf.Empty>(
                   this, METHODID_VALIDATE_CAMPAIGN)))
           .addMethod(
-            METHOD_SEND_CAMPAIGN,
+            getSendCampaignMethod(),
             asyncUnaryCall(
               new MethodHandlers<
                 io.bloombox.schema.services.marketing.v1beta1.CampaignSend.Request,
                 com.google.protobuf.Empty>(
                   this, METHODID_SEND_CAMPAIGN)))
           .addMethod(
-            METHOD_ADGROUPS,
+            getAdgroupsMethod(),
             asyncUnaryCall(
               new MethodHandlers<
                 io.bloombox.schema.services.marketing.v1beta1.AdGroupList.Request,
                 io.bloombox.schema.services.marketing.v1beta1.AdGroupList.Response>(
                   this, METHODID_ADGROUPS)))
           .addMethod(
-            METHOD_CREATE_ADGROUP,
+            getCreateAdgroupMethod(),
             asyncUnaryCall(
               new MethodHandlers<
                 io.bloombox.schema.services.marketing.v1beta1.AdGroupCreate.Request,
                 io.bloombox.schema.services.marketing.v1beta1.AdGroupCreate.Response>(
                   this, METHODID_CREATE_ADGROUP)))
           .addMethod(
-            METHOD_ADGROUP,
+            getAdgroupMethod(),
             asyncUnaryCall(
               new MethodHandlers<
                 io.bloombox.schema.services.marketing.v1beta1.AdGroupGet.Request,
                 io.bloombox.schema.services.marketing.v1beta1.AdGroupGet.Response>(
                   this, METHODID_ADGROUP)))
           .addMethod(
-            METHOD_UPDATE_ADGROUP,
+            getUpdateAdgroupMethod(),
             asyncUnaryCall(
               new MethodHandlers<
                 io.bloombox.schema.services.marketing.v1beta1.AdGroupUpdate.Request,
@@ -406,7 +605,7 @@ public final class MarketingGrpc {
     public void createCampaign(io.bloombox.schema.services.marketing.v1beta1.CampaignCreate.Request request,
         io.grpc.stub.StreamObserver<io.bloombox.schema.services.marketing.v1beta1.CampaignCreate.Response> responseObserver) {
       asyncUnaryCall(
-          getChannel().newCall(METHOD_CREATE_CAMPAIGN, getCallOptions()), request, responseObserver);
+          getChannel().newCall(getCreateCampaignMethod(), getCallOptions()), request, responseObserver);
     }
 
     /**
@@ -417,7 +616,7 @@ public final class MarketingGrpc {
     public void getCampaign(io.bloombox.schema.services.marketing.v1beta1.CampaignGet.Request request,
         io.grpc.stub.StreamObserver<io.bloombox.schema.services.marketing.v1beta1.CampaignGet.Response> responseObserver) {
       asyncUnaryCall(
-          getChannel().newCall(METHOD_GET_CAMPAIGN, getCallOptions()), request, responseObserver);
+          getChannel().newCall(getGetCampaignMethod(), getCallOptions()), request, responseObserver);
     }
 
     /**
@@ -428,7 +627,7 @@ public final class MarketingGrpc {
     public void listCampaigns(io.bloombox.schema.services.marketing.v1beta1.CampaignList.Request request,
         io.grpc.stub.StreamObserver<io.bloombox.schema.services.marketing.v1beta1.CampaignList.Response> responseObserver) {
       asyncUnaryCall(
-          getChannel().newCall(METHOD_LIST_CAMPAIGNS, getCallOptions()), request, responseObserver);
+          getChannel().newCall(getListCampaignsMethod(), getCallOptions()), request, responseObserver);
     }
 
     /**
@@ -439,7 +638,7 @@ public final class MarketingGrpc {
     public void updateCampaign(io.bloombox.schema.services.marketing.v1beta1.CampaignUpdate.Request request,
         io.grpc.stub.StreamObserver<com.google.protobuf.Empty> responseObserver) {
       asyncUnaryCall(
-          getChannel().newCall(METHOD_UPDATE_CAMPAIGN, getCallOptions()), request, responseObserver);
+          getChannel().newCall(getUpdateCampaignMethod(), getCallOptions()), request, responseObserver);
     }
 
     /**
@@ -450,7 +649,7 @@ public final class MarketingGrpc {
     public void validateCampaign(io.bloombox.schema.services.marketing.v1beta1.CampaignValidate.Request request,
         io.grpc.stub.StreamObserver<com.google.protobuf.Empty> responseObserver) {
       asyncUnaryCall(
-          getChannel().newCall(METHOD_VALIDATE_CAMPAIGN, getCallOptions()), request, responseObserver);
+          getChannel().newCall(getValidateCampaignMethod(), getCallOptions()), request, responseObserver);
     }
 
     /**
@@ -461,7 +660,7 @@ public final class MarketingGrpc {
     public void sendCampaign(io.bloombox.schema.services.marketing.v1beta1.CampaignSend.Request request,
         io.grpc.stub.StreamObserver<com.google.protobuf.Empty> responseObserver) {
       asyncUnaryCall(
-          getChannel().newCall(METHOD_SEND_CAMPAIGN, getCallOptions()), request, responseObserver);
+          getChannel().newCall(getSendCampaignMethod(), getCallOptions()), request, responseObserver);
     }
 
     /**
@@ -472,7 +671,7 @@ public final class MarketingGrpc {
     public void adgroups(io.bloombox.schema.services.marketing.v1beta1.AdGroupList.Request request,
         io.grpc.stub.StreamObserver<io.bloombox.schema.services.marketing.v1beta1.AdGroupList.Response> responseObserver) {
       asyncUnaryCall(
-          getChannel().newCall(METHOD_ADGROUPS, getCallOptions()), request, responseObserver);
+          getChannel().newCall(getAdgroupsMethod(), getCallOptions()), request, responseObserver);
     }
 
     /**
@@ -483,7 +682,7 @@ public final class MarketingGrpc {
     public void createAdgroup(io.bloombox.schema.services.marketing.v1beta1.AdGroupCreate.Request request,
         io.grpc.stub.StreamObserver<io.bloombox.schema.services.marketing.v1beta1.AdGroupCreate.Response> responseObserver) {
       asyncUnaryCall(
-          getChannel().newCall(METHOD_CREATE_ADGROUP, getCallOptions()), request, responseObserver);
+          getChannel().newCall(getCreateAdgroupMethod(), getCallOptions()), request, responseObserver);
     }
 
     /**
@@ -494,7 +693,7 @@ public final class MarketingGrpc {
     public void adgroup(io.bloombox.schema.services.marketing.v1beta1.AdGroupGet.Request request,
         io.grpc.stub.StreamObserver<io.bloombox.schema.services.marketing.v1beta1.AdGroupGet.Response> responseObserver) {
       asyncUnaryCall(
-          getChannel().newCall(METHOD_ADGROUP, getCallOptions()), request, responseObserver);
+          getChannel().newCall(getAdgroupMethod(), getCallOptions()), request, responseObserver);
     }
 
     /**
@@ -505,7 +704,7 @@ public final class MarketingGrpc {
     public void updateAdgroup(io.bloombox.schema.services.marketing.v1beta1.AdGroupUpdate.Request request,
         io.grpc.stub.StreamObserver<com.google.protobuf.Empty> responseObserver) {
       asyncUnaryCall(
-          getChannel().newCall(METHOD_UPDATE_ADGROUP, getCallOptions()), request, responseObserver);
+          getChannel().newCall(getUpdateAdgroupMethod(), getCallOptions()), request, responseObserver);
     }
   }
 
@@ -538,7 +737,7 @@ public final class MarketingGrpc {
      */
     public io.bloombox.schema.services.marketing.v1beta1.CampaignCreate.Response createCampaign(io.bloombox.schema.services.marketing.v1beta1.CampaignCreate.Request request) {
       return blockingUnaryCall(
-          getChannel(), METHOD_CREATE_CAMPAIGN, getCallOptions(), request);
+          getChannel(), getCreateCampaignMethod(), getCallOptions(), request);
     }
 
     /**
@@ -548,7 +747,7 @@ public final class MarketingGrpc {
      */
     public io.bloombox.schema.services.marketing.v1beta1.CampaignGet.Response getCampaign(io.bloombox.schema.services.marketing.v1beta1.CampaignGet.Request request) {
       return blockingUnaryCall(
-          getChannel(), METHOD_GET_CAMPAIGN, getCallOptions(), request);
+          getChannel(), getGetCampaignMethod(), getCallOptions(), request);
     }
 
     /**
@@ -558,7 +757,7 @@ public final class MarketingGrpc {
      */
     public io.bloombox.schema.services.marketing.v1beta1.CampaignList.Response listCampaigns(io.bloombox.schema.services.marketing.v1beta1.CampaignList.Request request) {
       return blockingUnaryCall(
-          getChannel(), METHOD_LIST_CAMPAIGNS, getCallOptions(), request);
+          getChannel(), getListCampaignsMethod(), getCallOptions(), request);
     }
 
     /**
@@ -568,7 +767,7 @@ public final class MarketingGrpc {
      */
     public com.google.protobuf.Empty updateCampaign(io.bloombox.schema.services.marketing.v1beta1.CampaignUpdate.Request request) {
       return blockingUnaryCall(
-          getChannel(), METHOD_UPDATE_CAMPAIGN, getCallOptions(), request);
+          getChannel(), getUpdateCampaignMethod(), getCallOptions(), request);
     }
 
     /**
@@ -578,7 +777,7 @@ public final class MarketingGrpc {
      */
     public com.google.protobuf.Empty validateCampaign(io.bloombox.schema.services.marketing.v1beta1.CampaignValidate.Request request) {
       return blockingUnaryCall(
-          getChannel(), METHOD_VALIDATE_CAMPAIGN, getCallOptions(), request);
+          getChannel(), getValidateCampaignMethod(), getCallOptions(), request);
     }
 
     /**
@@ -588,7 +787,7 @@ public final class MarketingGrpc {
      */
     public com.google.protobuf.Empty sendCampaign(io.bloombox.schema.services.marketing.v1beta1.CampaignSend.Request request) {
       return blockingUnaryCall(
-          getChannel(), METHOD_SEND_CAMPAIGN, getCallOptions(), request);
+          getChannel(), getSendCampaignMethod(), getCallOptions(), request);
     }
 
     /**
@@ -598,7 +797,7 @@ public final class MarketingGrpc {
      */
     public io.bloombox.schema.services.marketing.v1beta1.AdGroupList.Response adgroups(io.bloombox.schema.services.marketing.v1beta1.AdGroupList.Request request) {
       return blockingUnaryCall(
-          getChannel(), METHOD_ADGROUPS, getCallOptions(), request);
+          getChannel(), getAdgroupsMethod(), getCallOptions(), request);
     }
 
     /**
@@ -608,7 +807,7 @@ public final class MarketingGrpc {
      */
     public io.bloombox.schema.services.marketing.v1beta1.AdGroupCreate.Response createAdgroup(io.bloombox.schema.services.marketing.v1beta1.AdGroupCreate.Request request) {
       return blockingUnaryCall(
-          getChannel(), METHOD_CREATE_ADGROUP, getCallOptions(), request);
+          getChannel(), getCreateAdgroupMethod(), getCallOptions(), request);
     }
 
     /**
@@ -618,7 +817,7 @@ public final class MarketingGrpc {
      */
     public io.bloombox.schema.services.marketing.v1beta1.AdGroupGet.Response adgroup(io.bloombox.schema.services.marketing.v1beta1.AdGroupGet.Request request) {
       return blockingUnaryCall(
-          getChannel(), METHOD_ADGROUP, getCallOptions(), request);
+          getChannel(), getAdgroupMethod(), getCallOptions(), request);
     }
 
     /**
@@ -628,7 +827,7 @@ public final class MarketingGrpc {
      */
     public com.google.protobuf.Empty updateAdgroup(io.bloombox.schema.services.marketing.v1beta1.AdGroupUpdate.Request request) {
       return blockingUnaryCall(
-          getChannel(), METHOD_UPDATE_ADGROUP, getCallOptions(), request);
+          getChannel(), getUpdateAdgroupMethod(), getCallOptions(), request);
     }
   }
 
@@ -662,7 +861,7 @@ public final class MarketingGrpc {
     public com.google.common.util.concurrent.ListenableFuture<io.bloombox.schema.services.marketing.v1beta1.CampaignCreate.Response> createCampaign(
         io.bloombox.schema.services.marketing.v1beta1.CampaignCreate.Request request) {
       return futureUnaryCall(
-          getChannel().newCall(METHOD_CREATE_CAMPAIGN, getCallOptions()), request);
+          getChannel().newCall(getCreateCampaignMethod(), getCallOptions()), request);
     }
 
     /**
@@ -673,7 +872,7 @@ public final class MarketingGrpc {
     public com.google.common.util.concurrent.ListenableFuture<io.bloombox.schema.services.marketing.v1beta1.CampaignGet.Response> getCampaign(
         io.bloombox.schema.services.marketing.v1beta1.CampaignGet.Request request) {
       return futureUnaryCall(
-          getChannel().newCall(METHOD_GET_CAMPAIGN, getCallOptions()), request);
+          getChannel().newCall(getGetCampaignMethod(), getCallOptions()), request);
     }
 
     /**
@@ -684,7 +883,7 @@ public final class MarketingGrpc {
     public com.google.common.util.concurrent.ListenableFuture<io.bloombox.schema.services.marketing.v1beta1.CampaignList.Response> listCampaigns(
         io.bloombox.schema.services.marketing.v1beta1.CampaignList.Request request) {
       return futureUnaryCall(
-          getChannel().newCall(METHOD_LIST_CAMPAIGNS, getCallOptions()), request);
+          getChannel().newCall(getListCampaignsMethod(), getCallOptions()), request);
     }
 
     /**
@@ -695,7 +894,7 @@ public final class MarketingGrpc {
     public com.google.common.util.concurrent.ListenableFuture<com.google.protobuf.Empty> updateCampaign(
         io.bloombox.schema.services.marketing.v1beta1.CampaignUpdate.Request request) {
       return futureUnaryCall(
-          getChannel().newCall(METHOD_UPDATE_CAMPAIGN, getCallOptions()), request);
+          getChannel().newCall(getUpdateCampaignMethod(), getCallOptions()), request);
     }
 
     /**
@@ -706,7 +905,7 @@ public final class MarketingGrpc {
     public com.google.common.util.concurrent.ListenableFuture<com.google.protobuf.Empty> validateCampaign(
         io.bloombox.schema.services.marketing.v1beta1.CampaignValidate.Request request) {
       return futureUnaryCall(
-          getChannel().newCall(METHOD_VALIDATE_CAMPAIGN, getCallOptions()), request);
+          getChannel().newCall(getValidateCampaignMethod(), getCallOptions()), request);
     }
 
     /**
@@ -717,7 +916,7 @@ public final class MarketingGrpc {
     public com.google.common.util.concurrent.ListenableFuture<com.google.protobuf.Empty> sendCampaign(
         io.bloombox.schema.services.marketing.v1beta1.CampaignSend.Request request) {
       return futureUnaryCall(
-          getChannel().newCall(METHOD_SEND_CAMPAIGN, getCallOptions()), request);
+          getChannel().newCall(getSendCampaignMethod(), getCallOptions()), request);
     }
 
     /**
@@ -728,7 +927,7 @@ public final class MarketingGrpc {
     public com.google.common.util.concurrent.ListenableFuture<io.bloombox.schema.services.marketing.v1beta1.AdGroupList.Response> adgroups(
         io.bloombox.schema.services.marketing.v1beta1.AdGroupList.Request request) {
       return futureUnaryCall(
-          getChannel().newCall(METHOD_ADGROUPS, getCallOptions()), request);
+          getChannel().newCall(getAdgroupsMethod(), getCallOptions()), request);
     }
 
     /**
@@ -739,7 +938,7 @@ public final class MarketingGrpc {
     public com.google.common.util.concurrent.ListenableFuture<io.bloombox.schema.services.marketing.v1beta1.AdGroupCreate.Response> createAdgroup(
         io.bloombox.schema.services.marketing.v1beta1.AdGroupCreate.Request request) {
       return futureUnaryCall(
-          getChannel().newCall(METHOD_CREATE_ADGROUP, getCallOptions()), request);
+          getChannel().newCall(getCreateAdgroupMethod(), getCallOptions()), request);
     }
 
     /**
@@ -750,7 +949,7 @@ public final class MarketingGrpc {
     public com.google.common.util.concurrent.ListenableFuture<io.bloombox.schema.services.marketing.v1beta1.AdGroupGet.Response> adgroup(
         io.bloombox.schema.services.marketing.v1beta1.AdGroupGet.Request request) {
       return futureUnaryCall(
-          getChannel().newCall(METHOD_ADGROUP, getCallOptions()), request);
+          getChannel().newCall(getAdgroupMethod(), getCallOptions()), request);
     }
 
     /**
@@ -761,7 +960,7 @@ public final class MarketingGrpc {
     public com.google.common.util.concurrent.ListenableFuture<com.google.protobuf.Empty> updateAdgroup(
         io.bloombox.schema.services.marketing.v1beta1.AdGroupUpdate.Request request) {
       return futureUnaryCall(
-          getChannel().newCall(METHOD_UPDATE_ADGROUP, getCallOptions()), request);
+          getChannel().newCall(getUpdateAdgroupMethod(), getCallOptions()), request);
     }
   }
 
@@ -849,10 +1048,38 @@ public final class MarketingGrpc {
     }
   }
 
-  private static final class MarketingDescriptorSupplier implements io.grpc.protobuf.ProtoFileDescriptorSupplier {
+  private static abstract class MarketingBaseDescriptorSupplier
+      implements io.grpc.protobuf.ProtoFileDescriptorSupplier, io.grpc.protobuf.ProtoServiceDescriptorSupplier {
+    MarketingBaseDescriptorSupplier() {}
+
     @java.lang.Override
     public com.google.protobuf.Descriptors.FileDescriptor getFileDescriptor() {
       return io.bloombox.schema.services.marketing.v1beta1.MarketingServiceBeta1.getDescriptor();
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Descriptors.ServiceDescriptor getServiceDescriptor() {
+      return getFileDescriptor().findServiceByName("Marketing");
+    }
+  }
+
+  private static final class MarketingFileDescriptorSupplier
+      extends MarketingBaseDescriptorSupplier {
+    MarketingFileDescriptorSupplier() {}
+  }
+
+  private static final class MarketingMethodDescriptorSupplier
+      extends MarketingBaseDescriptorSupplier
+      implements io.grpc.protobuf.ProtoMethodDescriptorSupplier {
+    private final String methodName;
+
+    MarketingMethodDescriptorSupplier(String methodName) {
+      this.methodName = methodName;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Descriptors.MethodDescriptor getMethodDescriptor() {
+      return getServiceDescriptor().findMethodByName(methodName);
     }
   }
 
@@ -865,17 +1092,17 @@ public final class MarketingGrpc {
         result = serviceDescriptor;
         if (result == null) {
           serviceDescriptor = result = io.grpc.ServiceDescriptor.newBuilder(SERVICE_NAME)
-              .setSchemaDescriptor(new MarketingDescriptorSupplier())
-              .addMethod(METHOD_CREATE_CAMPAIGN)
-              .addMethod(METHOD_GET_CAMPAIGN)
-              .addMethod(METHOD_LIST_CAMPAIGNS)
-              .addMethod(METHOD_UPDATE_CAMPAIGN)
-              .addMethod(METHOD_VALIDATE_CAMPAIGN)
-              .addMethod(METHOD_SEND_CAMPAIGN)
-              .addMethod(METHOD_ADGROUPS)
-              .addMethod(METHOD_CREATE_ADGROUP)
-              .addMethod(METHOD_ADGROUP)
-              .addMethod(METHOD_UPDATE_ADGROUP)
+              .setSchemaDescriptor(new MarketingFileDescriptorSupplier())
+              .addMethod(getCreateCampaignMethod())
+              .addMethod(getGetCampaignMethod())
+              .addMethod(getListCampaignsMethod())
+              .addMethod(getUpdateCampaignMethod())
+              .addMethod(getValidateCampaignMethod())
+              .addMethod(getSendCampaignMethod())
+              .addMethod(getAdgroupsMethod())
+              .addMethod(getCreateAdgroupMethod())
+              .addMethod(getAdgroupMethod())
+              .addMethod(getUpdateAdgroupMethod())
               .build();
         }
       }

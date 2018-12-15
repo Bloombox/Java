@@ -1,8 +1,8 @@
 /*
- * Copyright 2018, Bloombox, LLC. All rights reserved.
+ * Copyright 2018, Momentum Ideas, Co. All rights reserved.
  *
  * Source and object computer code contained herein is the private intellectual
- * property of Bloombox, a California Limited Liability Corporation. Use of this
+ * property of Momentum Ideas Co., a Delaware Corporation. Use of this
  * code in source form requires permission in writing before use or the
  * assembly, distribution, or publishing of derivative works, for commercial
  * purposes or any other purpose, from a duly authorized officer of Momentum
@@ -40,11 +40,11 @@ public final class ServiceStatusOuterClass {
       descriptor;
   static {
     java.lang.String[] descriptorData = {
-      "\n\034services/ServiceStatus.proto\022\030bloombox" +
-      ".schema.services*?\n\rServiceStatus\022\013\n\007UNK" +
-      "NOWN\020\000\022\006\n\002UP\020\001\022\010\n\004DOWN\020\002\022\017\n\013MAINTENANCE\020" +
-      "\003B\'\n\033io.bloombox.schema.servicesH\001P\001\242\002\003B" +
-      "BSb\006proto3"
+      "\n\034services/ServiceStatus.proto\022\021bloombox" +
+      ".services*?\n\rServiceStatus\022\013\n\007UNKNOWN\020\000\022" +
+      "\006\n\002UP\020\001\022\010\n\004DOWN\020\002\022\017\n\013MAINTENANCE\020\003B\'\n\033io" +
+      ".bloombox.schema.servicesH\001P\001\242\002\003BBSb\006pro" +
+      "to3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {

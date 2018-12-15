@@ -1,11 +1,12 @@
 /*
- * Copyright 2018, Bloombox, LLC.
+ * Copyright 2018, Momentum Ideas, Co. All rights reserved.
  *
- * Licensed under the Apache License, Version 2.0 (the "License");
- * you may not use this file except in compliance with the License.
- * You may obtain a copy of the License at
- *
- *     http://www.apache.org/licenses/LICENSE-2.0
+ * Source and object computer code contained herein is the private intellectual
+ * property of Momentum Ideas Co., a Delaware Corporation. Use of this
+ * code in source form requires permission in writing before use or the
+ * assembly, distribution, or publishing of derivative works, for commercial
+ * purposes or any other purpose, from a duly authorized officer of Momentum
+ * Ideas Co.
  *
  * Unless required by applicable law or agreed to in writing, software
  * distributed under the License is distributed on an "AS IS" BASIS,
@@ -35,7 +36,7 @@ public final class IdentityMedia {
    * Known types of document media that can be attached to an ID.
    * </pre>
    *
-   * Protobuf enum {@code bloombox.schema.identity.IDMedia}
+   * Protobuf enum {@code bloombox.identity.IDMedia}
    */
   public enum IDMedia
       implements com.google.protobuf.ProtocolMessageEnum {
@@ -162,11 +163,11 @@ public final class IdentityMedia {
       this.value = value;
     }
 
-    // @@protoc_insertion_point(enum_scope:bloombox.schema.identity.IDMedia)
+    // @@protoc_insertion_point(enum_scope:bloombox.identity.IDMedia)
   }
 
   public interface IDMediaAttachmentOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:bloombox.schema.identity.IDMediaAttachment)
+      // @@protoc_insertion_point(interface_extends:bloombox.identity.IDMediaAttachment)
       com.google.protobuf.MessageOrBuilder {
 
     /**
@@ -174,7 +175,7 @@ public final class IdentityMedia {
      * Specifies the kind of media being attached.
      * </pre>
      *
-     * <code>.bloombox.schema.identity.IDMedia type = 1;</code>
+     * <code>.bloombox.identity.IDMedia type = 1;</code>
      */
     int getTypeValue();
     /**
@@ -182,7 +183,7 @@ public final class IdentityMedia {
      * Specifies the kind of media being attached.
      * </pre>
      *
-     * <code>.bloombox.schema.identity.IDMedia type = 1;</code>
+     * <code>.bloombox.identity.IDMedia type = 1;</code>
      */
     io.bloombox.schema.identity.IdentityMedia.IDMedia getType();
 
@@ -235,11 +236,11 @@ public final class IdentityMedia {
    * Media attachment that binds some document media to a particular driver's license.
    * </pre>
    *
-   * Protobuf type {@code bloombox.schema.identity.IDMediaAttachment}
+   * Protobuf type {@code bloombox.identity.IDMediaAttachment}
    */
   public  static final class IDMediaAttachment extends
       com.google.protobuf.GeneratedMessageV3 implements
-      // @@protoc_insertion_point(message_implements:bloombox.schema.identity.IDMediaAttachment)
+      // @@protoc_insertion_point(message_implements:bloombox.identity.IDMediaAttachment)
       IDMediaAttachmentOrBuilder {
   private static final long serialVersionUID = 0L;
     // Use IDMediaAttachment.newBuilder() to construct.
@@ -278,13 +279,6 @@ public final class IdentityMedia {
             case 0:
               done = true;
               break;
-            default: {
-              if (!parseUnknownFieldProto3(
-                  input, unknownFields, extensionRegistry, tag)) {
-                done = true;
-              }
-              break;
-            }
             case 8: {
               int rawValue = input.readEnum();
 
@@ -312,6 +306,13 @@ public final class IdentityMedia {
               quality_ = input.readDouble();
               break;
             }
+            default: {
+              if (!parseUnknownFieldProto3(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
           }
         }
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
@@ -326,12 +327,13 @@ public final class IdentityMedia {
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return io.bloombox.schema.identity.IdentityMedia.internal_static_bloombox_schema_identity_IDMediaAttachment_descriptor;
+      return io.bloombox.schema.identity.IdentityMedia.internal_static_bloombox_identity_IDMediaAttachment_descriptor;
     }
 
+    @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return io.bloombox.schema.identity.IdentityMedia.internal_static_bloombox_schema_identity_IDMediaAttachment_fieldAccessorTable
+      return io.bloombox.schema.identity.IdentityMedia.internal_static_bloombox_identity_IDMediaAttachment_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
               io.bloombox.schema.identity.IdentityMedia.IDMediaAttachment.class, io.bloombox.schema.identity.IdentityMedia.IDMediaAttachment.Builder.class);
     }
@@ -343,7 +345,7 @@ public final class IdentityMedia {
      * Specifies the kind of media being attached.
      * </pre>
      *
-     * <code>.bloombox.schema.identity.IDMedia type = 1;</code>
+     * <code>.bloombox.identity.IDMedia type = 1;</code>
      */
     public int getTypeValue() {
       return type_;
@@ -353,9 +355,10 @@ public final class IdentityMedia {
      * Specifies the kind of media being attached.
      * </pre>
      *
-     * <code>.bloombox.schema.identity.IDMedia type = 1;</code>
+     * <code>.bloombox.identity.IDMedia type = 1;</code>
      */
     public io.bloombox.schema.identity.IdentityMedia.IDMedia getType() {
+      @SuppressWarnings("deprecation")
       io.bloombox.schema.identity.IdentityMedia.IDMedia result = io.bloombox.schema.identity.IdentityMedia.IDMedia.valueOf(type_);
       return result == null ? io.bloombox.schema.identity.IdentityMedia.IDMedia.UNRECOGNIZED : result;
     }
@@ -380,6 +383,7 @@ public final class IdentityMedia {
      * <code>.opencannabis.media.MediaOrientation orientation = 2;</code>
      */
     public io.opencannabis.schema.media.MediaItemOrientation.MediaOrientation getOrientation() {
+      @SuppressWarnings("deprecation")
       io.opencannabis.schema.media.MediaItemOrientation.MediaOrientation result = io.opencannabis.schema.media.MediaItemOrientation.MediaOrientation.valueOf(orientation_);
       return result == null ? io.opencannabis.schema.media.MediaItemOrientation.MediaOrientation.UNRECOGNIZED : result;
     }
@@ -424,6 +428,7 @@ public final class IdentityMedia {
     }
 
     private byte memoizedIsInitialized = -1;
+    @java.lang.Override
     public final boolean isInitialized() {
       byte isInitialized = memoizedIsInitialized;
       if (isInitialized == 1) return true;
@@ -433,6 +438,7 @@ public final class IdentityMedia {
       return true;
     }
 
+    @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
       if (type_ != io.bloombox.schema.identity.IdentityMedia.IDMedia.DOCUMENT_FRONT.getNumber()) {
@@ -453,6 +459,7 @@ public final class IdentityMedia {
       unknownFields.writeTo(output);
     }
 
+    @java.lang.Override
     public int getSerializedSize() {
       int size = memoizedSize;
       if (size != -1) return size;
@@ -601,6 +608,7 @@ public final class IdentityMedia {
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
 
+    @java.lang.Override
     public Builder newBuilderForType() { return newBuilder(); }
     public static Builder newBuilder() {
       return DEFAULT_INSTANCE.toBuilder();
@@ -608,6 +616,7 @@ public final class IdentityMedia {
     public static Builder newBuilder(io.bloombox.schema.identity.IdentityMedia.IDMediaAttachment prototype) {
       return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
     }
+    @java.lang.Override
     public Builder toBuilder() {
       return this == DEFAULT_INSTANCE
           ? new Builder() : new Builder().mergeFrom(this);
@@ -624,20 +633,21 @@ public final class IdentityMedia {
      * Media attachment that binds some document media to a particular driver's license.
      * </pre>
      *
-     * Protobuf type {@code bloombox.schema.identity.IDMediaAttachment}
+     * Protobuf type {@code bloombox.identity.IDMediaAttachment}
      */
     public static final class Builder extends
         com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:bloombox.schema.identity.IDMediaAttachment)
+        // @@protoc_insertion_point(builder_implements:bloombox.identity.IDMediaAttachment)
         io.bloombox.schema.identity.IdentityMedia.IDMediaAttachmentOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return io.bloombox.schema.identity.IdentityMedia.internal_static_bloombox_schema_identity_IDMediaAttachment_descriptor;
+        return io.bloombox.schema.identity.IdentityMedia.internal_static_bloombox_identity_IDMediaAttachment_descriptor;
       }
 
+      @java.lang.Override
       protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return io.bloombox.schema.identity.IdentityMedia.internal_static_bloombox_schema_identity_IDMediaAttachment_fieldAccessorTable
+        return io.bloombox.schema.identity.IdentityMedia.internal_static_bloombox_identity_IDMediaAttachment_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
                 io.bloombox.schema.identity.IdentityMedia.IDMediaAttachment.class, io.bloombox.schema.identity.IdentityMedia.IDMediaAttachment.Builder.class);
       }
@@ -657,6 +667,7 @@ public final class IdentityMedia {
                 .alwaysUseFieldBuilders) {
         }
       }
+      @java.lang.Override
       public Builder clear() {
         super.clear();
         type_ = 0;
@@ -672,15 +683,18 @@ public final class IdentityMedia {
         return this;
       }
 
+      @java.lang.Override
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return io.bloombox.schema.identity.IdentityMedia.internal_static_bloombox_schema_identity_IDMediaAttachment_descriptor;
+        return io.bloombox.schema.identity.IdentityMedia.internal_static_bloombox_identity_IDMediaAttachment_descriptor;
       }
 
+      @java.lang.Override
       public io.bloombox.schema.identity.IdentityMedia.IDMediaAttachment getDefaultInstanceForType() {
         return io.bloombox.schema.identity.IdentityMedia.IDMediaAttachment.getDefaultInstance();
       }
 
+      @java.lang.Override
       public io.bloombox.schema.identity.IdentityMedia.IDMediaAttachment build() {
         io.bloombox.schema.identity.IdentityMedia.IDMediaAttachment result = buildPartial();
         if (!result.isInitialized()) {
@@ -689,6 +703,7 @@ public final class IdentityMedia {
         return result;
       }
 
+      @java.lang.Override
       public io.bloombox.schema.identity.IdentityMedia.IDMediaAttachment buildPartial() {
         io.bloombox.schema.identity.IdentityMedia.IDMediaAttachment result = new io.bloombox.schema.identity.IdentityMedia.IDMediaAttachment(this);
         result.type_ = type_;
@@ -700,32 +715,39 @@ public final class IdentityMedia {
         return result;
       }
 
+      @java.lang.Override
       public Builder clone() {
         return (Builder) super.clone();
       }
+      @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
         return (Builder) super.setField(field, value);
       }
+      @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
         return (Builder) super.clearField(field);
       }
+      @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
         return (Builder) super.clearOneof(oneof);
       }
+      @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
         return (Builder) super.setRepeatedField(field, index, value);
       }
+      @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
         return (Builder) super.addRepeatedField(field, value);
       }
+      @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
         if (other instanceof io.bloombox.schema.identity.IdentityMedia.IDMediaAttachment) {
           return mergeFrom((io.bloombox.schema.identity.IdentityMedia.IDMediaAttachment)other);
@@ -757,10 +779,12 @@ public final class IdentityMedia {
         return this;
       }
 
+      @java.lang.Override
       public final boolean isInitialized() {
         return true;
       }
 
+      @java.lang.Override
       public Builder mergeFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -785,7 +809,7 @@ public final class IdentityMedia {
        * Specifies the kind of media being attached.
        * </pre>
        *
-       * <code>.bloombox.schema.identity.IDMedia type = 1;</code>
+       * <code>.bloombox.identity.IDMedia type = 1;</code>
        */
       public int getTypeValue() {
         return type_;
@@ -795,7 +819,7 @@ public final class IdentityMedia {
        * Specifies the kind of media being attached.
        * </pre>
        *
-       * <code>.bloombox.schema.identity.IDMedia type = 1;</code>
+       * <code>.bloombox.identity.IDMedia type = 1;</code>
        */
       public Builder setTypeValue(int value) {
         type_ = value;
@@ -807,9 +831,10 @@ public final class IdentityMedia {
        * Specifies the kind of media being attached.
        * </pre>
        *
-       * <code>.bloombox.schema.identity.IDMedia type = 1;</code>
+       * <code>.bloombox.identity.IDMedia type = 1;</code>
        */
       public io.bloombox.schema.identity.IdentityMedia.IDMedia getType() {
+        @SuppressWarnings("deprecation")
         io.bloombox.schema.identity.IdentityMedia.IDMedia result = io.bloombox.schema.identity.IdentityMedia.IDMedia.valueOf(type_);
         return result == null ? io.bloombox.schema.identity.IdentityMedia.IDMedia.UNRECOGNIZED : result;
       }
@@ -818,7 +843,7 @@ public final class IdentityMedia {
        * Specifies the kind of media being attached.
        * </pre>
        *
-       * <code>.bloombox.schema.identity.IDMedia type = 1;</code>
+       * <code>.bloombox.identity.IDMedia type = 1;</code>
        */
       public Builder setType(io.bloombox.schema.identity.IdentityMedia.IDMedia value) {
         if (value == null) {
@@ -834,7 +859,7 @@ public final class IdentityMedia {
        * Specifies the kind of media being attached.
        * </pre>
        *
-       * <code>.bloombox.schema.identity.IDMedia type = 1;</code>
+       * <code>.bloombox.identity.IDMedia type = 1;</code>
        */
       public Builder clearType() {
         
@@ -874,6 +899,7 @@ public final class IdentityMedia {
        * <code>.opencannabis.media.MediaOrientation orientation = 2;</code>
        */
       public io.opencannabis.schema.media.MediaItemOrientation.MediaOrientation getOrientation() {
+        @SuppressWarnings("deprecation")
         io.opencannabis.schema.media.MediaItemOrientation.MediaOrientation result = io.opencannabis.schema.media.MediaItemOrientation.MediaOrientation.valueOf(orientation_);
         return result == null ? io.opencannabis.schema.media.MediaItemOrientation.MediaOrientation.UNRECOGNIZED : result;
       }
@@ -1023,21 +1049,23 @@ public final class IdentityMedia {
         onChanged();
         return this;
       }
+      @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
         return super.setUnknownFieldsProto3(unknownFields);
       }
 
+      @java.lang.Override
       public final Builder mergeUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
         return super.mergeUnknownFields(unknownFields);
       }
 
 
-      // @@protoc_insertion_point(builder_scope:bloombox.schema.identity.IDMediaAttachment)
+      // @@protoc_insertion_point(builder_scope:bloombox.identity.IDMediaAttachment)
     }
 
-    // @@protoc_insertion_point(class_scope:bloombox.schema.identity.IDMediaAttachment)
+    // @@protoc_insertion_point(class_scope:bloombox.identity.IDMediaAttachment)
     private static final io.bloombox.schema.identity.IdentityMedia.IDMediaAttachment DEFAULT_INSTANCE;
     static {
       DEFAULT_INSTANCE = new io.bloombox.schema.identity.IdentityMedia.IDMediaAttachment();
@@ -1049,6 +1077,7 @@ public final class IdentityMedia {
 
     private static final com.google.protobuf.Parser<IDMediaAttachment>
         PARSER = new com.google.protobuf.AbstractParser<IDMediaAttachment>() {
+      @java.lang.Override
       public IDMediaAttachment parsePartialFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -1066,6 +1095,7 @@ public final class IdentityMedia {
       return PARSER;
     }
 
+    @java.lang.Override
     public io.bloombox.schema.identity.IdentityMedia.IDMediaAttachment getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
@@ -1073,10 +1103,10 @@ public final class IdentityMedia {
   }
 
   private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_bloombox_schema_identity_IDMediaAttachment_descriptor;
+    internal_static_bloombox_identity_IDMediaAttachment_descriptor;
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_bloombox_schema_identity_IDMediaAttachment_fieldAccessorTable;
+      internal_static_bloombox_identity_IDMediaAttachment_fieldAccessorTable;
 
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
@@ -1086,16 +1116,16 @@ public final class IdentityMedia {
       descriptor;
   static {
     java.lang.String[] descriptorData = {
-      "\n\026identity/IDMedia.proto\022\030bloombox.schem" +
-      "a.identity\032\034media/MediaOrientation.proto" +
-      "\"\262\001\n\021IDMediaAttachment\022/\n\004type\030\001 \001(\0162!.b" +
-      "loombox.schema.identity.IDMedia\0229\n\013orien" +
-      "tation\030\002 \001(\0162$.opencannabis.media.MediaO" +
-      "rientation\022\014\n\004data\030\003 \001(\014\022\022\n\nimage_type\030\004" +
-      " \001(\r\022\017\n\007quality\030\005 \001(\001*>\n\007IDMedia\022\022\n\016DOCU" +
-      "MENT_FRONT\020\000\022\021\n\rDOCUMENT_REAR\020\001\022\014\n\010PORTR" +
-      "AIT\020\002B6\n\033io.bloombox.schema.identityB\rId" +
-      "entityMediaH\001P\000\242\002\003BBSb\006proto3"
+      "\n\026identity/IDMedia.proto\022\021bloombox.ident" +
+      "ity\032\034media/MediaOrientation.proto\"\253\001\n\021ID" +
+      "MediaAttachment\022(\n\004type\030\001 \001(\0162\032.bloombox" +
+      ".identity.IDMedia\0229\n\013orientation\030\002 \001(\0162$" +
+      ".opencannabis.media.MediaOrientation\022\014\n\004" +
+      "data\030\003 \001(\014\022\022\n\nimage_type\030\004 \001(\r\022\017\n\007qualit" +
+      "y\030\005 \001(\001*>\n\007IDMedia\022\022\n\016DOCUMENT_FRONT\020\000\022\021" +
+      "\n\rDOCUMENT_REAR\020\001\022\014\n\010PORTRAIT\020\002B6\n\033io.bl" +
+      "oombox.schema.identityB\rIdentityMediaH\001P" +
+      "\000\242\002\003BBSb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -1110,11 +1140,11 @@ public final class IdentityMedia {
         new com.google.protobuf.Descriptors.FileDescriptor[] {
           io.opencannabis.schema.media.MediaItemOrientation.getDescriptor(),
         }, assigner);
-    internal_static_bloombox_schema_identity_IDMediaAttachment_descriptor =
+    internal_static_bloombox_identity_IDMediaAttachment_descriptor =
       getDescriptor().getMessageTypes().get(0);
-    internal_static_bloombox_schema_identity_IDMediaAttachment_fieldAccessorTable = new
+    internal_static_bloombox_identity_IDMediaAttachment_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_bloombox_schema_identity_IDMediaAttachment_descriptor,
+        internal_static_bloombox_identity_IDMediaAttachment_descriptor,
         new java.lang.String[] { "Type", "Orientation", "Data", "ImageType", "Quality", });
     io.opencannabis.schema.media.MediaItemOrientation.getDescriptor();
   }

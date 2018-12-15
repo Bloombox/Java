@@ -1,8 +1,8 @@
 /*
- * Copyright 2018, Bloombox, LLC. All rights reserved.
+ * Copyright 2018, Momentum Ideas, Co. All rights reserved.
  *
  * Source and object computer code contained herein is the private intellectual
- * property of Bloombox, a California Limited Liability Corporation. Use of this
+ * property of Momentum Ideas Co., a Delaware Corporation. Use of this
  * code in source form requires permission in writing before use or the
  * assembly, distribution, or publishing of derivative works, for commercial
  * purposes or any other purpose, from a duly authorized officer of Momentum
@@ -26,11 +26,11 @@ package io.bloombox.schema.services.auth.v1beta1;
  * like to proceed with the next sensible action.
  * </pre>
  *
- * Protobuf type {@code bloombox.schema.services.auth.v1beta1.ConsentDecision}
+ * Protobuf type {@code bloombox.services.auth.v1beta1.ConsentDecision}
  */
 public  final class ConsentDecision extends
     com.google.protobuf.GeneratedMessageV3 implements
-    // @@protoc_insertion_point(message_implements:bloombox.schema.services.auth.v1beta1.ConsentDecision)
+    // @@protoc_insertion_point(message_implements:bloombox.services.auth.v1beta1.ConsentDecision)
     ConsentDecisionOrBuilder {
 private static final long serialVersionUID = 0L;
   // Use ConsentDecision.newBuilder() to construct.
@@ -84,18 +84,19 @@ private static final long serialVersionUID = 0L;
   }
   public static final com.google.protobuf.Descriptors.Descriptor
       getDescriptor() {
-    return io.bloombox.schema.services.auth.v1beta1.AuthServiceBeta1.internal_static_bloombox_schema_services_auth_v1beta1_ConsentDecision_descriptor;
+    return io.bloombox.schema.services.auth.v1beta1.AuthServiceBeta1.internal_static_bloombox_services_auth_v1beta1_ConsentDecision_descriptor;
   }
 
+  @java.lang.Override
   protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internalGetFieldAccessorTable() {
-    return io.bloombox.schema.services.auth.v1beta1.AuthServiceBeta1.internal_static_bloombox_schema_services_auth_v1beta1_ConsentDecision_fieldAccessorTable
+    return io.bloombox.schema.services.auth.v1beta1.AuthServiceBeta1.internal_static_bloombox_services_auth_v1beta1_ConsentDecision_fieldAccessorTable
         .ensureFieldAccessorsInitialized(
             io.bloombox.schema.services.auth.v1beta1.ConsentDecision.class, io.bloombox.schema.services.auth.v1beta1.ConsentDecision.Builder.class);
   }
 
   public interface AcceptOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:bloombox.schema.services.auth.v1beta1.ConsentDecision.Accept)
+      // @@protoc_insertion_point(interface_extends:bloombox.services.auth.v1beta1.ConsentDecision.Accept)
       com.google.protobuf.MessageOrBuilder {
 
     /**
@@ -174,11 +175,11 @@ private static final long serialVersionUID = 0L;
    * Request indicating an acceptance of the consent challenge - or, 'authorizing' a consent flow.
    * </pre>
    *
-   * Protobuf type {@code bloombox.schema.services.auth.v1beta1.ConsentDecision.Accept}
+   * Protobuf type {@code bloombox.services.auth.v1beta1.ConsentDecision.Accept}
    */
   public  static final class Accept extends
       com.google.protobuf.GeneratedMessageV3 implements
-      // @@protoc_insertion_point(message_implements:bloombox.schema.services.auth.v1beta1.ConsentDecision.Accept)
+      // @@protoc_insertion_point(message_implements:bloombox.services.auth.v1beta1.ConsentDecision.Accept)
       AcceptOrBuilder {
   private static final long serialVersionUID = 0L;
     // Use Accept.newBuilder() to construct.
@@ -215,13 +216,6 @@ private static final long serialVersionUID = 0L;
             case 0:
               done = true;
               break;
-            default: {
-              if (!parseUnknownFieldProto3(
-                  input, unknownFields, extensionRegistry, tag)) {
-                done = true;
-              }
-              break;
-            }
             case 10: {
               java.lang.String s = input.readStringRequireUtf8();
 
@@ -243,6 +237,13 @@ private static final long serialVersionUID = 0L;
               scope_.add(s);
               break;
             }
+            default: {
+              if (!parseUnknownFieldProto3(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
           }
         }
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
@@ -260,12 +261,13 @@ private static final long serialVersionUID = 0L;
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return io.bloombox.schema.services.auth.v1beta1.AuthServiceBeta1.internal_static_bloombox_schema_services_auth_v1beta1_ConsentDecision_Accept_descriptor;
+      return io.bloombox.schema.services.auth.v1beta1.AuthServiceBeta1.internal_static_bloombox_services_auth_v1beta1_ConsentDecision_Accept_descriptor;
     }
 
+    @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return io.bloombox.schema.services.auth.v1beta1.AuthServiceBeta1.internal_static_bloombox_schema_services_auth_v1beta1_ConsentDecision_Accept_fieldAccessorTable
+      return io.bloombox.schema.services.auth.v1beta1.AuthServiceBeta1.internal_static_bloombox_services_auth_v1beta1_ConsentDecision_Accept_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
               io.bloombox.schema.services.auth.v1beta1.ConsentDecision.Accept.class, io.bloombox.schema.services.auth.v1beta1.ConsentDecision.Accept.Builder.class);
     }
@@ -401,6 +403,7 @@ private static final long serialVersionUID = 0L;
     }
 
     private byte memoizedIsInitialized = -1;
+    @java.lang.Override
     public final boolean isInitialized() {
       byte isInitialized = memoizedIsInitialized;
       if (isInitialized == 1) return true;
@@ -410,6 +413,7 @@ private static final long serialVersionUID = 0L;
       return true;
     }
 
+    @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
       if (!getUidBytes().isEmpty()) {
@@ -424,6 +428,7 @@ private static final long serialVersionUID = 0L;
       unknownFields.writeTo(output);
     }
 
+    @java.lang.Override
     public int getSerializedSize() {
       int size = memoizedSize;
       if (size != -1) return size;
@@ -559,6 +564,7 @@ private static final long serialVersionUID = 0L;
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
 
+    @java.lang.Override
     public Builder newBuilderForType() { return newBuilder(); }
     public static Builder newBuilder() {
       return DEFAULT_INSTANCE.toBuilder();
@@ -566,6 +572,7 @@ private static final long serialVersionUID = 0L;
     public static Builder newBuilder(io.bloombox.schema.services.auth.v1beta1.ConsentDecision.Accept prototype) {
       return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
     }
+    @java.lang.Override
     public Builder toBuilder() {
       return this == DEFAULT_INSTANCE
           ? new Builder() : new Builder().mergeFrom(this);
@@ -582,20 +589,21 @@ private static final long serialVersionUID = 0L;
      * Request indicating an acceptance of the consent challenge - or, 'authorizing' a consent flow.
      * </pre>
      *
-     * Protobuf type {@code bloombox.schema.services.auth.v1beta1.ConsentDecision.Accept}
+     * Protobuf type {@code bloombox.services.auth.v1beta1.ConsentDecision.Accept}
      */
     public static final class Builder extends
         com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:bloombox.schema.services.auth.v1beta1.ConsentDecision.Accept)
+        // @@protoc_insertion_point(builder_implements:bloombox.services.auth.v1beta1.ConsentDecision.Accept)
         io.bloombox.schema.services.auth.v1beta1.ConsentDecision.AcceptOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return io.bloombox.schema.services.auth.v1beta1.AuthServiceBeta1.internal_static_bloombox_schema_services_auth_v1beta1_ConsentDecision_Accept_descriptor;
+        return io.bloombox.schema.services.auth.v1beta1.AuthServiceBeta1.internal_static_bloombox_services_auth_v1beta1_ConsentDecision_Accept_descriptor;
       }
 
+      @java.lang.Override
       protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return io.bloombox.schema.services.auth.v1beta1.AuthServiceBeta1.internal_static_bloombox_schema_services_auth_v1beta1_ConsentDecision_Accept_fieldAccessorTable
+        return io.bloombox.schema.services.auth.v1beta1.AuthServiceBeta1.internal_static_bloombox_services_auth_v1beta1_ConsentDecision_Accept_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
                 io.bloombox.schema.services.auth.v1beta1.ConsentDecision.Accept.class, io.bloombox.schema.services.auth.v1beta1.ConsentDecision.Accept.Builder.class);
       }
@@ -615,6 +623,7 @@ private static final long serialVersionUID = 0L;
                 .alwaysUseFieldBuilders) {
         }
       }
+      @java.lang.Override
       public Builder clear() {
         super.clear();
         uid_ = "";
@@ -626,15 +635,18 @@ private static final long serialVersionUID = 0L;
         return this;
       }
 
+      @java.lang.Override
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return io.bloombox.schema.services.auth.v1beta1.AuthServiceBeta1.internal_static_bloombox_schema_services_auth_v1beta1_ConsentDecision_Accept_descriptor;
+        return io.bloombox.schema.services.auth.v1beta1.AuthServiceBeta1.internal_static_bloombox_services_auth_v1beta1_ConsentDecision_Accept_descriptor;
       }
 
+      @java.lang.Override
       public io.bloombox.schema.services.auth.v1beta1.ConsentDecision.Accept getDefaultInstanceForType() {
         return io.bloombox.schema.services.auth.v1beta1.ConsentDecision.Accept.getDefaultInstance();
       }
 
+      @java.lang.Override
       public io.bloombox.schema.services.auth.v1beta1.ConsentDecision.Accept build() {
         io.bloombox.schema.services.auth.v1beta1.ConsentDecision.Accept result = buildPartial();
         if (!result.isInitialized()) {
@@ -643,6 +655,7 @@ private static final long serialVersionUID = 0L;
         return result;
       }
 
+      @java.lang.Override
       public io.bloombox.schema.services.auth.v1beta1.ConsentDecision.Accept buildPartial() {
         io.bloombox.schema.services.auth.v1beta1.ConsentDecision.Accept result = new io.bloombox.schema.services.auth.v1beta1.ConsentDecision.Accept(this);
         int from_bitField0_ = bitField0_;
@@ -659,32 +672,39 @@ private static final long serialVersionUID = 0L;
         return result;
       }
 
+      @java.lang.Override
       public Builder clone() {
         return (Builder) super.clone();
       }
+      @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
         return (Builder) super.setField(field, value);
       }
+      @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
         return (Builder) super.clearField(field);
       }
+      @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
         return (Builder) super.clearOneof(oneof);
       }
+      @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
         return (Builder) super.setRepeatedField(field, index, value);
       }
+      @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
         return (Builder) super.addRepeatedField(field, value);
       }
+      @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
         if (other instanceof io.bloombox.schema.services.auth.v1beta1.ConsentDecision.Accept) {
           return mergeFrom((io.bloombox.schema.services.auth.v1beta1.ConsentDecision.Accept)other);
@@ -719,10 +739,12 @@ private static final long serialVersionUID = 0L;
         return this;
       }
 
+      @java.lang.Override
       public final boolean isInitialized() {
         return true;
       }
 
+      @java.lang.Override
       public Builder mergeFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -1049,21 +1071,23 @@ private static final long serialVersionUID = 0L;
         onChanged();
         return this;
       }
+      @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
         return super.setUnknownFieldsProto3(unknownFields);
       }
 
+      @java.lang.Override
       public final Builder mergeUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
         return super.mergeUnknownFields(unknownFields);
       }
 
 
-      // @@protoc_insertion_point(builder_scope:bloombox.schema.services.auth.v1beta1.ConsentDecision.Accept)
+      // @@protoc_insertion_point(builder_scope:bloombox.services.auth.v1beta1.ConsentDecision.Accept)
     }
 
-    // @@protoc_insertion_point(class_scope:bloombox.schema.services.auth.v1beta1.ConsentDecision.Accept)
+    // @@protoc_insertion_point(class_scope:bloombox.services.auth.v1beta1.ConsentDecision.Accept)
     private static final io.bloombox.schema.services.auth.v1beta1.ConsentDecision.Accept DEFAULT_INSTANCE;
     static {
       DEFAULT_INSTANCE = new io.bloombox.schema.services.auth.v1beta1.ConsentDecision.Accept();
@@ -1075,6 +1099,7 @@ private static final long serialVersionUID = 0L;
 
     private static final com.google.protobuf.Parser<Accept>
         PARSER = new com.google.protobuf.AbstractParser<Accept>() {
+      @java.lang.Override
       public Accept parsePartialFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -1092,6 +1117,7 @@ private static final long serialVersionUID = 0L;
       return PARSER;
     }
 
+    @java.lang.Override
     public io.bloombox.schema.services.auth.v1beta1.ConsentDecision.Accept getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
@@ -1099,7 +1125,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public interface RejectOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:bloombox.schema.services.auth.v1beta1.ConsentDecision.Reject)
+      // @@protoc_insertion_point(interface_extends:bloombox.services.auth.v1beta1.ConsentDecision.Reject)
       com.google.protobuf.MessageOrBuilder {
 
     /**
@@ -1143,11 +1169,11 @@ private static final long serialVersionUID = 0L;
    * Request indicating a rejection of the consent challenge - or, 'denying' a consent flow.
    * </pre>
    *
-   * Protobuf type {@code bloombox.schema.services.auth.v1beta1.ConsentDecision.Reject}
+   * Protobuf type {@code bloombox.services.auth.v1beta1.ConsentDecision.Reject}
    */
   public  static final class Reject extends
       com.google.protobuf.GeneratedMessageV3 implements
-      // @@protoc_insertion_point(message_implements:bloombox.schema.services.auth.v1beta1.ConsentDecision.Reject)
+      // @@protoc_insertion_point(message_implements:bloombox.services.auth.v1beta1.ConsentDecision.Reject)
       RejectOrBuilder {
   private static final long serialVersionUID = 0L;
     // Use Reject.newBuilder() to construct.
@@ -1183,13 +1209,6 @@ private static final long serialVersionUID = 0L;
             case 0:
               done = true;
               break;
-            default: {
-              if (!parseUnknownFieldProto3(
-                  input, unknownFields, extensionRegistry, tag)) {
-                done = true;
-              }
-              break;
-            }
             case 10: {
               java.lang.String s = input.readStringRequireUtf8();
 
@@ -1200,6 +1219,13 @@ private static final long serialVersionUID = 0L;
               java.lang.String s = input.readStringRequireUtf8();
 
               consent_ = s;
+              break;
+            }
+            default: {
+              if (!parseUnknownFieldProto3(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
               break;
             }
           }
@@ -1216,12 +1242,13 @@ private static final long serialVersionUID = 0L;
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return io.bloombox.schema.services.auth.v1beta1.AuthServiceBeta1.internal_static_bloombox_schema_services_auth_v1beta1_ConsentDecision_Reject_descriptor;
+      return io.bloombox.schema.services.auth.v1beta1.AuthServiceBeta1.internal_static_bloombox_services_auth_v1beta1_ConsentDecision_Reject_descriptor;
     }
 
+    @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return io.bloombox.schema.services.auth.v1beta1.AuthServiceBeta1.internal_static_bloombox_schema_services_auth_v1beta1_ConsentDecision_Reject_fieldAccessorTable
+      return io.bloombox.schema.services.auth.v1beta1.AuthServiceBeta1.internal_static_bloombox_services_auth_v1beta1_ConsentDecision_Reject_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
               io.bloombox.schema.services.auth.v1beta1.ConsentDecision.Reject.class, io.bloombox.schema.services.auth.v1beta1.ConsentDecision.Reject.Builder.class);
     }
@@ -1311,6 +1338,7 @@ private static final long serialVersionUID = 0L;
     }
 
     private byte memoizedIsInitialized = -1;
+    @java.lang.Override
     public final boolean isInitialized() {
       byte isInitialized = memoizedIsInitialized;
       if (isInitialized == 1) return true;
@@ -1320,6 +1348,7 @@ private static final long serialVersionUID = 0L;
       return true;
     }
 
+    @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
       if (!getUidBytes().isEmpty()) {
@@ -1331,6 +1360,7 @@ private static final long serialVersionUID = 0L;
       unknownFields.writeTo(output);
     }
 
+    @java.lang.Override
     public int getSerializedSize() {
       int size = memoizedSize;
       if (size != -1) return size;
@@ -1452,6 +1482,7 @@ private static final long serialVersionUID = 0L;
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
 
+    @java.lang.Override
     public Builder newBuilderForType() { return newBuilder(); }
     public static Builder newBuilder() {
       return DEFAULT_INSTANCE.toBuilder();
@@ -1459,6 +1490,7 @@ private static final long serialVersionUID = 0L;
     public static Builder newBuilder(io.bloombox.schema.services.auth.v1beta1.ConsentDecision.Reject prototype) {
       return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
     }
+    @java.lang.Override
     public Builder toBuilder() {
       return this == DEFAULT_INSTANCE
           ? new Builder() : new Builder().mergeFrom(this);
@@ -1475,20 +1507,21 @@ private static final long serialVersionUID = 0L;
      * Request indicating a rejection of the consent challenge - or, 'denying' a consent flow.
      * </pre>
      *
-     * Protobuf type {@code bloombox.schema.services.auth.v1beta1.ConsentDecision.Reject}
+     * Protobuf type {@code bloombox.services.auth.v1beta1.ConsentDecision.Reject}
      */
     public static final class Builder extends
         com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:bloombox.schema.services.auth.v1beta1.ConsentDecision.Reject)
+        // @@protoc_insertion_point(builder_implements:bloombox.services.auth.v1beta1.ConsentDecision.Reject)
         io.bloombox.schema.services.auth.v1beta1.ConsentDecision.RejectOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return io.bloombox.schema.services.auth.v1beta1.AuthServiceBeta1.internal_static_bloombox_schema_services_auth_v1beta1_ConsentDecision_Reject_descriptor;
+        return io.bloombox.schema.services.auth.v1beta1.AuthServiceBeta1.internal_static_bloombox_services_auth_v1beta1_ConsentDecision_Reject_descriptor;
       }
 
+      @java.lang.Override
       protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return io.bloombox.schema.services.auth.v1beta1.AuthServiceBeta1.internal_static_bloombox_schema_services_auth_v1beta1_ConsentDecision_Reject_fieldAccessorTable
+        return io.bloombox.schema.services.auth.v1beta1.AuthServiceBeta1.internal_static_bloombox_services_auth_v1beta1_ConsentDecision_Reject_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
                 io.bloombox.schema.services.auth.v1beta1.ConsentDecision.Reject.class, io.bloombox.schema.services.auth.v1beta1.ConsentDecision.Reject.Builder.class);
       }
@@ -1508,6 +1541,7 @@ private static final long serialVersionUID = 0L;
                 .alwaysUseFieldBuilders) {
         }
       }
+      @java.lang.Override
       public Builder clear() {
         super.clear();
         uid_ = "";
@@ -1517,15 +1551,18 @@ private static final long serialVersionUID = 0L;
         return this;
       }
 
+      @java.lang.Override
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return io.bloombox.schema.services.auth.v1beta1.AuthServiceBeta1.internal_static_bloombox_schema_services_auth_v1beta1_ConsentDecision_Reject_descriptor;
+        return io.bloombox.schema.services.auth.v1beta1.AuthServiceBeta1.internal_static_bloombox_services_auth_v1beta1_ConsentDecision_Reject_descriptor;
       }
 
+      @java.lang.Override
       public io.bloombox.schema.services.auth.v1beta1.ConsentDecision.Reject getDefaultInstanceForType() {
         return io.bloombox.schema.services.auth.v1beta1.ConsentDecision.Reject.getDefaultInstance();
       }
 
+      @java.lang.Override
       public io.bloombox.schema.services.auth.v1beta1.ConsentDecision.Reject build() {
         io.bloombox.schema.services.auth.v1beta1.ConsentDecision.Reject result = buildPartial();
         if (!result.isInitialized()) {
@@ -1534,6 +1571,7 @@ private static final long serialVersionUID = 0L;
         return result;
       }
 
+      @java.lang.Override
       public io.bloombox.schema.services.auth.v1beta1.ConsentDecision.Reject buildPartial() {
         io.bloombox.schema.services.auth.v1beta1.ConsentDecision.Reject result = new io.bloombox.schema.services.auth.v1beta1.ConsentDecision.Reject(this);
         result.uid_ = uid_;
@@ -1542,32 +1580,39 @@ private static final long serialVersionUID = 0L;
         return result;
       }
 
+      @java.lang.Override
       public Builder clone() {
         return (Builder) super.clone();
       }
+      @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
         return (Builder) super.setField(field, value);
       }
+      @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
         return (Builder) super.clearField(field);
       }
+      @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
         return (Builder) super.clearOneof(oneof);
       }
+      @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
         return (Builder) super.setRepeatedField(field, index, value);
       }
+      @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
         return (Builder) super.addRepeatedField(field, value);
       }
+      @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
         if (other instanceof io.bloombox.schema.services.auth.v1beta1.ConsentDecision.Reject) {
           return mergeFrom((io.bloombox.schema.services.auth.v1beta1.ConsentDecision.Reject)other);
@@ -1592,10 +1637,12 @@ private static final long serialVersionUID = 0L;
         return this;
       }
 
+      @java.lang.Override
       public final boolean isInitialized() {
         return true;
       }
 
+      @java.lang.Override
       public Builder mergeFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -1791,21 +1838,23 @@ private static final long serialVersionUID = 0L;
         onChanged();
         return this;
       }
+      @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
         return super.setUnknownFieldsProto3(unknownFields);
       }
 
+      @java.lang.Override
       public final Builder mergeUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
         return super.mergeUnknownFields(unknownFields);
       }
 
 
-      // @@protoc_insertion_point(builder_scope:bloombox.schema.services.auth.v1beta1.ConsentDecision.Reject)
+      // @@protoc_insertion_point(builder_scope:bloombox.services.auth.v1beta1.ConsentDecision.Reject)
     }
 
-    // @@protoc_insertion_point(class_scope:bloombox.schema.services.auth.v1beta1.ConsentDecision.Reject)
+    // @@protoc_insertion_point(class_scope:bloombox.services.auth.v1beta1.ConsentDecision.Reject)
     private static final io.bloombox.schema.services.auth.v1beta1.ConsentDecision.Reject DEFAULT_INSTANCE;
     static {
       DEFAULT_INSTANCE = new io.bloombox.schema.services.auth.v1beta1.ConsentDecision.Reject();
@@ -1817,6 +1866,7 @@ private static final long serialVersionUID = 0L;
 
     private static final com.google.protobuf.Parser<Reject>
         PARSER = new com.google.protobuf.AbstractParser<Reject>() {
+      @java.lang.Override
       public Reject parsePartialFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -1834,6 +1884,7 @@ private static final long serialVersionUID = 0L;
       return PARSER;
     }
 
+    @java.lang.Override
     public io.bloombox.schema.services.auth.v1beta1.ConsentDecision.Reject getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
@@ -1841,7 +1892,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public interface ResponseOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:bloombox.schema.services.auth.v1beta1.ConsentDecision.Response)
+      // @@protoc_insertion_point(interface_extends:bloombox.services.auth.v1beta1.ConsentDecision.Response)
       com.google.protobuf.MessageOrBuilder {
   }
   /**
@@ -1849,11 +1900,11 @@ private static final long serialVersionUID = 0L;
    * Specifies the response payload for a consent decision indication.
    * </pre>
    *
-   * Protobuf type {@code bloombox.schema.services.auth.v1beta1.ConsentDecision.Response}
+   * Protobuf type {@code bloombox.services.auth.v1beta1.ConsentDecision.Response}
    */
   public  static final class Response extends
       com.google.protobuf.GeneratedMessageV3 implements
-      // @@protoc_insertion_point(message_implements:bloombox.schema.services.auth.v1beta1.ConsentDecision.Response)
+      // @@protoc_insertion_point(message_implements:bloombox.services.auth.v1beta1.ConsentDecision.Response)
       ResponseOrBuilder {
   private static final long serialVersionUID = 0L;
     // Use Response.newBuilder() to construct.
@@ -1907,17 +1958,19 @@ private static final long serialVersionUID = 0L;
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return io.bloombox.schema.services.auth.v1beta1.AuthServiceBeta1.internal_static_bloombox_schema_services_auth_v1beta1_ConsentDecision_Response_descriptor;
+      return io.bloombox.schema.services.auth.v1beta1.AuthServiceBeta1.internal_static_bloombox_services_auth_v1beta1_ConsentDecision_Response_descriptor;
     }
 
+    @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return io.bloombox.schema.services.auth.v1beta1.AuthServiceBeta1.internal_static_bloombox_schema_services_auth_v1beta1_ConsentDecision_Response_fieldAccessorTable
+      return io.bloombox.schema.services.auth.v1beta1.AuthServiceBeta1.internal_static_bloombox_services_auth_v1beta1_ConsentDecision_Response_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
               io.bloombox.schema.services.auth.v1beta1.ConsentDecision.Response.class, io.bloombox.schema.services.auth.v1beta1.ConsentDecision.Response.Builder.class);
     }
 
     private byte memoizedIsInitialized = -1;
+    @java.lang.Override
     public final boolean isInitialized() {
       byte isInitialized = memoizedIsInitialized;
       if (isInitialized == 1) return true;
@@ -1927,11 +1980,13 @@ private static final long serialVersionUID = 0L;
       return true;
     }
 
+    @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
       unknownFields.writeTo(output);
     }
 
+    @java.lang.Override
     public int getSerializedSize() {
       int size = memoizedSize;
       if (size != -1) return size;
@@ -2039,6 +2094,7 @@ private static final long serialVersionUID = 0L;
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
 
+    @java.lang.Override
     public Builder newBuilderForType() { return newBuilder(); }
     public static Builder newBuilder() {
       return DEFAULT_INSTANCE.toBuilder();
@@ -2046,6 +2102,7 @@ private static final long serialVersionUID = 0L;
     public static Builder newBuilder(io.bloombox.schema.services.auth.v1beta1.ConsentDecision.Response prototype) {
       return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
     }
+    @java.lang.Override
     public Builder toBuilder() {
       return this == DEFAULT_INSTANCE
           ? new Builder() : new Builder().mergeFrom(this);
@@ -2062,20 +2119,21 @@ private static final long serialVersionUID = 0L;
      * Specifies the response payload for a consent decision indication.
      * </pre>
      *
-     * Protobuf type {@code bloombox.schema.services.auth.v1beta1.ConsentDecision.Response}
+     * Protobuf type {@code bloombox.services.auth.v1beta1.ConsentDecision.Response}
      */
     public static final class Builder extends
         com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:bloombox.schema.services.auth.v1beta1.ConsentDecision.Response)
+        // @@protoc_insertion_point(builder_implements:bloombox.services.auth.v1beta1.ConsentDecision.Response)
         io.bloombox.schema.services.auth.v1beta1.ConsentDecision.ResponseOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return io.bloombox.schema.services.auth.v1beta1.AuthServiceBeta1.internal_static_bloombox_schema_services_auth_v1beta1_ConsentDecision_Response_descriptor;
+        return io.bloombox.schema.services.auth.v1beta1.AuthServiceBeta1.internal_static_bloombox_services_auth_v1beta1_ConsentDecision_Response_descriptor;
       }
 
+      @java.lang.Override
       protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return io.bloombox.schema.services.auth.v1beta1.AuthServiceBeta1.internal_static_bloombox_schema_services_auth_v1beta1_ConsentDecision_Response_fieldAccessorTable
+        return io.bloombox.schema.services.auth.v1beta1.AuthServiceBeta1.internal_static_bloombox_services_auth_v1beta1_ConsentDecision_Response_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
                 io.bloombox.schema.services.auth.v1beta1.ConsentDecision.Response.class, io.bloombox.schema.services.auth.v1beta1.ConsentDecision.Response.Builder.class);
       }
@@ -2095,20 +2153,24 @@ private static final long serialVersionUID = 0L;
                 .alwaysUseFieldBuilders) {
         }
       }
+      @java.lang.Override
       public Builder clear() {
         super.clear();
         return this;
       }
 
+      @java.lang.Override
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return io.bloombox.schema.services.auth.v1beta1.AuthServiceBeta1.internal_static_bloombox_schema_services_auth_v1beta1_ConsentDecision_Response_descriptor;
+        return io.bloombox.schema.services.auth.v1beta1.AuthServiceBeta1.internal_static_bloombox_services_auth_v1beta1_ConsentDecision_Response_descriptor;
       }
 
+      @java.lang.Override
       public io.bloombox.schema.services.auth.v1beta1.ConsentDecision.Response getDefaultInstanceForType() {
         return io.bloombox.schema.services.auth.v1beta1.ConsentDecision.Response.getDefaultInstance();
       }
 
+      @java.lang.Override
       public io.bloombox.schema.services.auth.v1beta1.ConsentDecision.Response build() {
         io.bloombox.schema.services.auth.v1beta1.ConsentDecision.Response result = buildPartial();
         if (!result.isInitialized()) {
@@ -2117,38 +2179,46 @@ private static final long serialVersionUID = 0L;
         return result;
       }
 
+      @java.lang.Override
       public io.bloombox.schema.services.auth.v1beta1.ConsentDecision.Response buildPartial() {
         io.bloombox.schema.services.auth.v1beta1.ConsentDecision.Response result = new io.bloombox.schema.services.auth.v1beta1.ConsentDecision.Response(this);
         onBuilt();
         return result;
       }
 
+      @java.lang.Override
       public Builder clone() {
         return (Builder) super.clone();
       }
+      @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
         return (Builder) super.setField(field, value);
       }
+      @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
         return (Builder) super.clearField(field);
       }
+      @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
         return (Builder) super.clearOneof(oneof);
       }
+      @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
         return (Builder) super.setRepeatedField(field, index, value);
       }
+      @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
         return (Builder) super.addRepeatedField(field, value);
       }
+      @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
         if (other instanceof io.bloombox.schema.services.auth.v1beta1.ConsentDecision.Response) {
           return mergeFrom((io.bloombox.schema.services.auth.v1beta1.ConsentDecision.Response)other);
@@ -2165,10 +2235,12 @@ private static final long serialVersionUID = 0L;
         return this;
       }
 
+      @java.lang.Override
       public final boolean isInitialized() {
         return true;
       }
 
+      @java.lang.Override
       public Builder mergeFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -2186,21 +2258,23 @@ private static final long serialVersionUID = 0L;
         }
         return this;
       }
+      @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
         return super.setUnknownFieldsProto3(unknownFields);
       }
 
+      @java.lang.Override
       public final Builder mergeUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
         return super.mergeUnknownFields(unknownFields);
       }
 
 
-      // @@protoc_insertion_point(builder_scope:bloombox.schema.services.auth.v1beta1.ConsentDecision.Response)
+      // @@protoc_insertion_point(builder_scope:bloombox.services.auth.v1beta1.ConsentDecision.Response)
     }
 
-    // @@protoc_insertion_point(class_scope:bloombox.schema.services.auth.v1beta1.ConsentDecision.Response)
+    // @@protoc_insertion_point(class_scope:bloombox.services.auth.v1beta1.ConsentDecision.Response)
     private static final io.bloombox.schema.services.auth.v1beta1.ConsentDecision.Response DEFAULT_INSTANCE;
     static {
       DEFAULT_INSTANCE = new io.bloombox.schema.services.auth.v1beta1.ConsentDecision.Response();
@@ -2212,6 +2286,7 @@ private static final long serialVersionUID = 0L;
 
     private static final com.google.protobuf.Parser<Response>
         PARSER = new com.google.protobuf.AbstractParser<Response>() {
+      @java.lang.Override
       public Response parsePartialFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -2229,6 +2304,7 @@ private static final long serialVersionUID = 0L;
       return PARSER;
     }
 
+    @java.lang.Override
     public io.bloombox.schema.services.auth.v1beta1.ConsentDecision.Response getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
@@ -2236,6 +2312,7 @@ private static final long serialVersionUID = 0L;
   }
 
   private byte memoizedIsInitialized = -1;
+  @java.lang.Override
   public final boolean isInitialized() {
     byte isInitialized = memoizedIsInitialized;
     if (isInitialized == 1) return true;
@@ -2245,11 +2322,13 @@ private static final long serialVersionUID = 0L;
     return true;
   }
 
+  @java.lang.Override
   public void writeTo(com.google.protobuf.CodedOutputStream output)
                       throws java.io.IOException {
     unknownFields.writeTo(output);
   }
 
+  @java.lang.Override
   public int getSerializedSize() {
     int size = memoizedSize;
     if (size != -1) return size;
@@ -2357,6 +2436,7 @@ private static final long serialVersionUID = 0L;
         .parseWithIOException(PARSER, input, extensionRegistry);
   }
 
+  @java.lang.Override
   public Builder newBuilderForType() { return newBuilder(); }
   public static Builder newBuilder() {
     return DEFAULT_INSTANCE.toBuilder();
@@ -2364,6 +2444,7 @@ private static final long serialVersionUID = 0L;
   public static Builder newBuilder(io.bloombox.schema.services.auth.v1beta1.ConsentDecision prototype) {
     return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
   }
+  @java.lang.Override
   public Builder toBuilder() {
     return this == DEFAULT_INSTANCE
         ? new Builder() : new Builder().mergeFrom(this);
@@ -2381,20 +2462,21 @@ private static final long serialVersionUID = 0L;
    * like to proceed with the next sensible action.
    * </pre>
    *
-   * Protobuf type {@code bloombox.schema.services.auth.v1beta1.ConsentDecision}
+   * Protobuf type {@code bloombox.services.auth.v1beta1.ConsentDecision}
    */
   public static final class Builder extends
       com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-      // @@protoc_insertion_point(builder_implements:bloombox.schema.services.auth.v1beta1.ConsentDecision)
+      // @@protoc_insertion_point(builder_implements:bloombox.services.auth.v1beta1.ConsentDecision)
       io.bloombox.schema.services.auth.v1beta1.ConsentDecisionOrBuilder {
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return io.bloombox.schema.services.auth.v1beta1.AuthServiceBeta1.internal_static_bloombox_schema_services_auth_v1beta1_ConsentDecision_descriptor;
+      return io.bloombox.schema.services.auth.v1beta1.AuthServiceBeta1.internal_static_bloombox_services_auth_v1beta1_ConsentDecision_descriptor;
     }
 
+    @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return io.bloombox.schema.services.auth.v1beta1.AuthServiceBeta1.internal_static_bloombox_schema_services_auth_v1beta1_ConsentDecision_fieldAccessorTable
+      return io.bloombox.schema.services.auth.v1beta1.AuthServiceBeta1.internal_static_bloombox_services_auth_v1beta1_ConsentDecision_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
               io.bloombox.schema.services.auth.v1beta1.ConsentDecision.class, io.bloombox.schema.services.auth.v1beta1.ConsentDecision.Builder.class);
     }
@@ -2414,20 +2496,24 @@ private static final long serialVersionUID = 0L;
               .alwaysUseFieldBuilders) {
       }
     }
+    @java.lang.Override
     public Builder clear() {
       super.clear();
       return this;
     }
 
+    @java.lang.Override
     public com.google.protobuf.Descriptors.Descriptor
         getDescriptorForType() {
-      return io.bloombox.schema.services.auth.v1beta1.AuthServiceBeta1.internal_static_bloombox_schema_services_auth_v1beta1_ConsentDecision_descriptor;
+      return io.bloombox.schema.services.auth.v1beta1.AuthServiceBeta1.internal_static_bloombox_services_auth_v1beta1_ConsentDecision_descriptor;
     }
 
+    @java.lang.Override
     public io.bloombox.schema.services.auth.v1beta1.ConsentDecision getDefaultInstanceForType() {
       return io.bloombox.schema.services.auth.v1beta1.ConsentDecision.getDefaultInstance();
     }
 
+    @java.lang.Override
     public io.bloombox.schema.services.auth.v1beta1.ConsentDecision build() {
       io.bloombox.schema.services.auth.v1beta1.ConsentDecision result = buildPartial();
       if (!result.isInitialized()) {
@@ -2436,38 +2522,46 @@ private static final long serialVersionUID = 0L;
       return result;
     }
 
+    @java.lang.Override
     public io.bloombox.schema.services.auth.v1beta1.ConsentDecision buildPartial() {
       io.bloombox.schema.services.auth.v1beta1.ConsentDecision result = new io.bloombox.schema.services.auth.v1beta1.ConsentDecision(this);
       onBuilt();
       return result;
     }
 
+    @java.lang.Override
     public Builder clone() {
       return (Builder) super.clone();
     }
+    @java.lang.Override
     public Builder setField(
         com.google.protobuf.Descriptors.FieldDescriptor field,
         java.lang.Object value) {
       return (Builder) super.setField(field, value);
     }
+    @java.lang.Override
     public Builder clearField(
         com.google.protobuf.Descriptors.FieldDescriptor field) {
       return (Builder) super.clearField(field);
     }
+    @java.lang.Override
     public Builder clearOneof(
         com.google.protobuf.Descriptors.OneofDescriptor oneof) {
       return (Builder) super.clearOneof(oneof);
     }
+    @java.lang.Override
     public Builder setRepeatedField(
         com.google.protobuf.Descriptors.FieldDescriptor field,
         int index, java.lang.Object value) {
       return (Builder) super.setRepeatedField(field, index, value);
     }
+    @java.lang.Override
     public Builder addRepeatedField(
         com.google.protobuf.Descriptors.FieldDescriptor field,
         java.lang.Object value) {
       return (Builder) super.addRepeatedField(field, value);
     }
+    @java.lang.Override
     public Builder mergeFrom(com.google.protobuf.Message other) {
       if (other instanceof io.bloombox.schema.services.auth.v1beta1.ConsentDecision) {
         return mergeFrom((io.bloombox.schema.services.auth.v1beta1.ConsentDecision)other);
@@ -2484,10 +2578,12 @@ private static final long serialVersionUID = 0L;
       return this;
     }
 
+    @java.lang.Override
     public final boolean isInitialized() {
       return true;
     }
 
+    @java.lang.Override
     public Builder mergeFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -2505,21 +2601,23 @@ private static final long serialVersionUID = 0L;
       }
       return this;
     }
+    @java.lang.Override
     public final Builder setUnknownFields(
         final com.google.protobuf.UnknownFieldSet unknownFields) {
       return super.setUnknownFieldsProto3(unknownFields);
     }
 
+    @java.lang.Override
     public final Builder mergeUnknownFields(
         final com.google.protobuf.UnknownFieldSet unknownFields) {
       return super.mergeUnknownFields(unknownFields);
     }
 
 
-    // @@protoc_insertion_point(builder_scope:bloombox.schema.services.auth.v1beta1.ConsentDecision)
+    // @@protoc_insertion_point(builder_scope:bloombox.services.auth.v1beta1.ConsentDecision)
   }
 
-  // @@protoc_insertion_point(class_scope:bloombox.schema.services.auth.v1beta1.ConsentDecision)
+  // @@protoc_insertion_point(class_scope:bloombox.services.auth.v1beta1.ConsentDecision)
   private static final io.bloombox.schema.services.auth.v1beta1.ConsentDecision DEFAULT_INSTANCE;
   static {
     DEFAULT_INSTANCE = new io.bloombox.schema.services.auth.v1beta1.ConsentDecision();
@@ -2531,6 +2629,7 @@ private static final long serialVersionUID = 0L;
 
   private static final com.google.protobuf.Parser<ConsentDecision>
       PARSER = new com.google.protobuf.AbstractParser<ConsentDecision>() {
+    @java.lang.Override
     public ConsentDecision parsePartialFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -2548,6 +2647,7 @@ private static final long serialVersionUID = 0L;
     return PARSER;
   }
 
+  @java.lang.Override
   public io.bloombox.schema.services.auth.v1beta1.ConsentDecision getDefaultInstanceForType() {
     return DEFAULT_INSTANCE;
   }

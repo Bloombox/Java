@@ -1,11 +1,12 @@
 /*
- * Copyright 2018, Bloombox, LLC.
+ * Copyright 2018, Momentum Ideas, Co. All rights reserved.
  *
- * Licensed under the Apache License, Version 2.0 (the "License");
- * you may not use this file except in compliance with the License.
- * You may obtain a copy of the License at
- *
- *     http://www.apache.org/licenses/LICENSE-2.0
+ * Source and object computer code contained herein is the private intellectual
+ * property of Momentum Ideas Co., a Delaware Corporation. Use of this
+ * code in source form requires permission in writing before use or the
+ * assembly, distribution, or publishing of derivative works, for commercial
+ * purposes or any other purpose, from a duly authorized officer of Momentum
+ * Ideas Co.
  *
  * Unless required by applicable law or agreed to in writing, software
  * distributed under the License is distributed on an "AS IS" BASIS,
@@ -371,13 +372,6 @@ public final class Colors {
             case 0:
               done = true;
               break;
-            default: {
-              if (!parseUnknownFieldProto3(
-                  input, unknownFields, extensionRegistry, tag)) {
-                done = true;
-              }
-              break;
-            }
             case 8: {
 
               r_ = input.readUInt64();
@@ -398,6 +392,13 @@ public final class Colors {
               a_ = input.readUInt64();
               break;
             }
+            default: {
+              if (!parseUnknownFieldProto3(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
           }
         }
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
@@ -415,6 +416,7 @@ public final class Colors {
       return io.opencannabis.schema.content.Colors.internal_static_opencannabis_content_RGBAColorSpec_descriptor;
     }
 
+    @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
       return io.opencannabis.schema.content.Colors.internal_static_opencannabis_content_RGBAColorSpec_fieldAccessorTable
@@ -475,6 +477,7 @@ public final class Colors {
     }
 
     private byte memoizedIsInitialized = -1;
+    @java.lang.Override
     public final boolean isInitialized() {
       byte isInitialized = memoizedIsInitialized;
       if (isInitialized == 1) return true;
@@ -484,6 +487,7 @@ public final class Colors {
       return true;
     }
 
+    @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
       if (r_ != 0L) {
@@ -501,6 +505,7 @@ public final class Colors {
       unknownFields.writeTo(output);
     }
 
+    @java.lang.Override
     public int getSerializedSize() {
       int size = memoizedSize;
       if (size != -1) return size;
@@ -644,6 +649,7 @@ public final class Colors {
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
 
+    @java.lang.Override
     public Builder newBuilderForType() { return newBuilder(); }
     public static Builder newBuilder() {
       return DEFAULT_INSTANCE.toBuilder();
@@ -651,6 +657,7 @@ public final class Colors {
     public static Builder newBuilder(io.opencannabis.schema.content.Colors.RGBAColorSpec prototype) {
       return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
     }
+    @java.lang.Override
     public Builder toBuilder() {
       return this == DEFAULT_INSTANCE
           ? new Builder() : new Builder().mergeFrom(this);
@@ -678,6 +685,7 @@ public final class Colors {
         return io.opencannabis.schema.content.Colors.internal_static_opencannabis_content_RGBAColorSpec_descriptor;
       }
 
+      @java.lang.Override
       protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
           internalGetFieldAccessorTable() {
         return io.opencannabis.schema.content.Colors.internal_static_opencannabis_content_RGBAColorSpec_fieldAccessorTable
@@ -700,6 +708,7 @@ public final class Colors {
                 .alwaysUseFieldBuilders) {
         }
       }
+      @java.lang.Override
       public Builder clear() {
         super.clear();
         r_ = 0L;
@@ -713,15 +722,18 @@ public final class Colors {
         return this;
       }
 
+      @java.lang.Override
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
         return io.opencannabis.schema.content.Colors.internal_static_opencannabis_content_RGBAColorSpec_descriptor;
       }
 
+      @java.lang.Override
       public io.opencannabis.schema.content.Colors.RGBAColorSpec getDefaultInstanceForType() {
         return io.opencannabis.schema.content.Colors.RGBAColorSpec.getDefaultInstance();
       }
 
+      @java.lang.Override
       public io.opencannabis.schema.content.Colors.RGBAColorSpec build() {
         io.opencannabis.schema.content.Colors.RGBAColorSpec result = buildPartial();
         if (!result.isInitialized()) {
@@ -730,6 +742,7 @@ public final class Colors {
         return result;
       }
 
+      @java.lang.Override
       public io.opencannabis.schema.content.Colors.RGBAColorSpec buildPartial() {
         io.opencannabis.schema.content.Colors.RGBAColorSpec result = new io.opencannabis.schema.content.Colors.RGBAColorSpec(this);
         result.r_ = r_;
@@ -740,32 +753,39 @@ public final class Colors {
         return result;
       }
 
+      @java.lang.Override
       public Builder clone() {
         return (Builder) super.clone();
       }
+      @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
         return (Builder) super.setField(field, value);
       }
+      @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
         return (Builder) super.clearField(field);
       }
+      @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
         return (Builder) super.clearOneof(oneof);
       }
+      @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
         return (Builder) super.setRepeatedField(field, index, value);
       }
+      @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
         return (Builder) super.addRepeatedField(field, value);
       }
+      @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
         if (other instanceof io.opencannabis.schema.content.Colors.RGBAColorSpec) {
           return mergeFrom((io.opencannabis.schema.content.Colors.RGBAColorSpec)other);
@@ -794,10 +814,12 @@ public final class Colors {
         return this;
       }
 
+      @java.lang.Override
       public final boolean isInitialized() {
         return true;
       }
 
+      @java.lang.Override
       public Builder mergeFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -967,11 +989,13 @@ public final class Colors {
         onChanged();
         return this;
       }
+      @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
         return super.setUnknownFieldsProto3(unknownFields);
       }
 
+      @java.lang.Override
       public final Builder mergeUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
         return super.mergeUnknownFields(unknownFields);
@@ -993,6 +1017,7 @@ public final class Colors {
 
     private static final com.google.protobuf.Parser<RGBAColorSpec>
         PARSER = new com.google.protobuf.AbstractParser<RGBAColorSpec>() {
+      @java.lang.Override
       public RGBAColorSpec parsePartialFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -1010,6 +1035,7 @@ public final class Colors {
       return PARSER;
     }
 
+    @java.lang.Override
     public io.opencannabis.schema.content.Colors.RGBAColorSpec getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
@@ -1093,13 +1119,6 @@ public final class Colors {
             case 0:
               done = true;
               break;
-            default: {
-              if (!parseUnknownFieldProto3(
-                  input, unknownFields, extensionRegistry, tag)) {
-                done = true;
-              }
-              break;
-            }
             case 8: {
 
               h_ = input.readUInt64();
@@ -1113,6 +1132,13 @@ public final class Colors {
             case 24: {
 
               b_ = input.readUInt64();
+              break;
+            }
+            default: {
+              if (!parseUnknownFieldProto3(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
               break;
             }
           }
@@ -1132,6 +1158,7 @@ public final class Colors {
       return io.opencannabis.schema.content.Colors.internal_static_opencannabis_content_HSBColorSpec_descriptor;
     }
 
+    @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
       return io.opencannabis.schema.content.Colors.internal_static_opencannabis_content_HSBColorSpec_fieldAccessorTable
@@ -1179,6 +1206,7 @@ public final class Colors {
     }
 
     private byte memoizedIsInitialized = -1;
+    @java.lang.Override
     public final boolean isInitialized() {
       byte isInitialized = memoizedIsInitialized;
       if (isInitialized == 1) return true;
@@ -1188,6 +1216,7 @@ public final class Colors {
       return true;
     }
 
+    @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
       if (h_ != 0L) {
@@ -1202,6 +1231,7 @@ public final class Colors {
       unknownFields.writeTo(output);
     }
 
+    @java.lang.Override
     public int getSerializedSize() {
       int size = memoizedSize;
       if (size != -1) return size;
@@ -1336,6 +1366,7 @@ public final class Colors {
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
 
+    @java.lang.Override
     public Builder newBuilderForType() { return newBuilder(); }
     public static Builder newBuilder() {
       return DEFAULT_INSTANCE.toBuilder();
@@ -1343,6 +1374,7 @@ public final class Colors {
     public static Builder newBuilder(io.opencannabis.schema.content.Colors.HSBColorSpec prototype) {
       return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
     }
+    @java.lang.Override
     public Builder toBuilder() {
       return this == DEFAULT_INSTANCE
           ? new Builder() : new Builder().mergeFrom(this);
@@ -1370,6 +1402,7 @@ public final class Colors {
         return io.opencannabis.schema.content.Colors.internal_static_opencannabis_content_HSBColorSpec_descriptor;
       }
 
+      @java.lang.Override
       protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
           internalGetFieldAccessorTable() {
         return io.opencannabis.schema.content.Colors.internal_static_opencannabis_content_HSBColorSpec_fieldAccessorTable
@@ -1392,6 +1425,7 @@ public final class Colors {
                 .alwaysUseFieldBuilders) {
         }
       }
+      @java.lang.Override
       public Builder clear() {
         super.clear();
         h_ = 0L;
@@ -1403,15 +1437,18 @@ public final class Colors {
         return this;
       }
 
+      @java.lang.Override
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
         return io.opencannabis.schema.content.Colors.internal_static_opencannabis_content_HSBColorSpec_descriptor;
       }
 
+      @java.lang.Override
       public io.opencannabis.schema.content.Colors.HSBColorSpec getDefaultInstanceForType() {
         return io.opencannabis.schema.content.Colors.HSBColorSpec.getDefaultInstance();
       }
 
+      @java.lang.Override
       public io.opencannabis.schema.content.Colors.HSBColorSpec build() {
         io.opencannabis.schema.content.Colors.HSBColorSpec result = buildPartial();
         if (!result.isInitialized()) {
@@ -1420,6 +1457,7 @@ public final class Colors {
         return result;
       }
 
+      @java.lang.Override
       public io.opencannabis.schema.content.Colors.HSBColorSpec buildPartial() {
         io.opencannabis.schema.content.Colors.HSBColorSpec result = new io.opencannabis.schema.content.Colors.HSBColorSpec(this);
         result.h_ = h_;
@@ -1429,32 +1467,39 @@ public final class Colors {
         return result;
       }
 
+      @java.lang.Override
       public Builder clone() {
         return (Builder) super.clone();
       }
+      @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
         return (Builder) super.setField(field, value);
       }
+      @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
         return (Builder) super.clearField(field);
       }
+      @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
         return (Builder) super.clearOneof(oneof);
       }
+      @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
         return (Builder) super.setRepeatedField(field, index, value);
       }
+      @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
         return (Builder) super.addRepeatedField(field, value);
       }
+      @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
         if (other instanceof io.opencannabis.schema.content.Colors.HSBColorSpec) {
           return mergeFrom((io.opencannabis.schema.content.Colors.HSBColorSpec)other);
@@ -1480,10 +1525,12 @@ public final class Colors {
         return this;
       }
 
+      @java.lang.Override
       public final boolean isInitialized() {
         return true;
       }
 
+      @java.lang.Override
       public Builder mergeFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -1615,11 +1662,13 @@ public final class Colors {
         onChanged();
         return this;
       }
+      @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
         return super.setUnknownFieldsProto3(unknownFields);
       }
 
+      @java.lang.Override
       public final Builder mergeUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
         return super.mergeUnknownFields(unknownFields);
@@ -1641,6 +1690,7 @@ public final class Colors {
 
     private static final com.google.protobuf.Parser<HSBColorSpec>
         PARSER = new com.google.protobuf.AbstractParser<HSBColorSpec>() {
+      @java.lang.Override
       public HSBColorSpec parsePartialFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -1658,6 +1708,7 @@ public final class Colors {
       return PARSER;
     }
 
+    @java.lang.Override
     public io.opencannabis.schema.content.Colors.HSBColorSpec getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
@@ -1751,13 +1802,6 @@ public final class Colors {
             case 0:
               done = true;
               break;
-            default: {
-              if (!parseUnknownFieldProto3(
-                  input, unknownFields, extensionRegistry, tag)) {
-                done = true;
-              }
-              break;
-            }
             case 8: {
 
               c_ = input.readUInt64();
@@ -1778,6 +1822,13 @@ public final class Colors {
               k_ = input.readUInt64();
               break;
             }
+            default: {
+              if (!parseUnknownFieldProto3(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
           }
         }
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
@@ -1795,6 +1846,7 @@ public final class Colors {
       return io.opencannabis.schema.content.Colors.internal_static_opencannabis_content_CMYKColorSpec_descriptor;
     }
 
+    @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
       return io.opencannabis.schema.content.Colors.internal_static_opencannabis_content_CMYKColorSpec_fieldAccessorTable
@@ -1855,6 +1907,7 @@ public final class Colors {
     }
 
     private byte memoizedIsInitialized = -1;
+    @java.lang.Override
     public final boolean isInitialized() {
       byte isInitialized = memoizedIsInitialized;
       if (isInitialized == 1) return true;
@@ -1864,6 +1917,7 @@ public final class Colors {
       return true;
     }
 
+    @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
       if (c_ != 0L) {
@@ -1881,6 +1935,7 @@ public final class Colors {
       unknownFields.writeTo(output);
     }
 
+    @java.lang.Override
     public int getSerializedSize() {
       int size = memoizedSize;
       if (size != -1) return size;
@@ -2024,6 +2079,7 @@ public final class Colors {
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
 
+    @java.lang.Override
     public Builder newBuilderForType() { return newBuilder(); }
     public static Builder newBuilder() {
       return DEFAULT_INSTANCE.toBuilder();
@@ -2031,6 +2087,7 @@ public final class Colors {
     public static Builder newBuilder(io.opencannabis.schema.content.Colors.CMYKColorSpec prototype) {
       return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
     }
+    @java.lang.Override
     public Builder toBuilder() {
       return this == DEFAULT_INSTANCE
           ? new Builder() : new Builder().mergeFrom(this);
@@ -2058,6 +2115,7 @@ public final class Colors {
         return io.opencannabis.schema.content.Colors.internal_static_opencannabis_content_CMYKColorSpec_descriptor;
       }
 
+      @java.lang.Override
       protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
           internalGetFieldAccessorTable() {
         return io.opencannabis.schema.content.Colors.internal_static_opencannabis_content_CMYKColorSpec_fieldAccessorTable
@@ -2080,6 +2138,7 @@ public final class Colors {
                 .alwaysUseFieldBuilders) {
         }
       }
+      @java.lang.Override
       public Builder clear() {
         super.clear();
         c_ = 0L;
@@ -2093,15 +2152,18 @@ public final class Colors {
         return this;
       }
 
+      @java.lang.Override
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
         return io.opencannabis.schema.content.Colors.internal_static_opencannabis_content_CMYKColorSpec_descriptor;
       }
 
+      @java.lang.Override
       public io.opencannabis.schema.content.Colors.CMYKColorSpec getDefaultInstanceForType() {
         return io.opencannabis.schema.content.Colors.CMYKColorSpec.getDefaultInstance();
       }
 
+      @java.lang.Override
       public io.opencannabis.schema.content.Colors.CMYKColorSpec build() {
         io.opencannabis.schema.content.Colors.CMYKColorSpec result = buildPartial();
         if (!result.isInitialized()) {
@@ -2110,6 +2172,7 @@ public final class Colors {
         return result;
       }
 
+      @java.lang.Override
       public io.opencannabis.schema.content.Colors.CMYKColorSpec buildPartial() {
         io.opencannabis.schema.content.Colors.CMYKColorSpec result = new io.opencannabis.schema.content.Colors.CMYKColorSpec(this);
         result.c_ = c_;
@@ -2120,32 +2183,39 @@ public final class Colors {
         return result;
       }
 
+      @java.lang.Override
       public Builder clone() {
         return (Builder) super.clone();
       }
+      @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
         return (Builder) super.setField(field, value);
       }
+      @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
         return (Builder) super.clearField(field);
       }
+      @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
         return (Builder) super.clearOneof(oneof);
       }
+      @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
         return (Builder) super.setRepeatedField(field, index, value);
       }
+      @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
         return (Builder) super.addRepeatedField(field, value);
       }
+      @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
         if (other instanceof io.opencannabis.schema.content.Colors.CMYKColorSpec) {
           return mergeFrom((io.opencannabis.schema.content.Colors.CMYKColorSpec)other);
@@ -2174,10 +2244,12 @@ public final class Colors {
         return this;
       }
 
+      @java.lang.Override
       public final boolean isInitialized() {
         return true;
       }
 
+      @java.lang.Override
       public Builder mergeFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -2347,11 +2419,13 @@ public final class Colors {
         onChanged();
         return this;
       }
+      @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
         return super.setUnknownFieldsProto3(unknownFields);
       }
 
+      @java.lang.Override
       public final Builder mergeUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
         return super.mergeUnknownFields(unknownFields);
@@ -2373,6 +2447,7 @@ public final class Colors {
 
     private static final com.google.protobuf.Parser<CMYKColorSpec>
         PARSER = new com.google.protobuf.AbstractParser<CMYKColorSpec>() {
+      @java.lang.Override
       public CMYKColorSpec parsePartialFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -2390,6 +2465,7 @@ public final class Colors {
       return PARSER;
     }
 
+    @java.lang.Override
     public io.opencannabis.schema.content.Colors.CMYKColorSpec getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
@@ -2555,13 +2631,6 @@ public final class Colors {
             case 0:
               done = true;
               break;
-            default: {
-              if (!parseUnknownFieldProto3(
-                  input, unknownFields, extensionRegistry, tag)) {
-                done = true;
-              }
-              break;
-            }
             case 8: {
               int rawValue = input.readEnum();
               specCase_ = 1;
@@ -2616,6 +2685,13 @@ public final class Colors {
               specCase_ = 5;
               break;
             }
+            default: {
+              if (!parseUnknownFieldProto3(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
           }
         }
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
@@ -2633,6 +2709,7 @@ public final class Colors {
       return io.opencannabis.schema.content.Colors.internal_static_opencannabis_content_Color_descriptor;
     }
 
+    @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
       return io.opencannabis.schema.content.Colors.internal_static_opencannabis_content_Color_fieldAccessorTable
@@ -2707,6 +2784,7 @@ public final class Colors {
      */
     public io.opencannabis.schema.content.Colors.StandardColor getStandard() {
       if (specCase_ == 1) {
+        @SuppressWarnings("deprecation")
         io.opencannabis.schema.content.Colors.StandardColor result = io.opencannabis.schema.content.Colors.StandardColor.valueOf(
             (java.lang.Integer) spec_);
         return result == null ? io.opencannabis.schema.content.Colors.StandardColor.UNRECOGNIZED : result;
@@ -2880,6 +2958,7 @@ public final class Colors {
     }
 
     private byte memoizedIsInitialized = -1;
+    @java.lang.Override
     public final boolean isInitialized() {
       byte isInitialized = memoizedIsInitialized;
       if (isInitialized == 1) return true;
@@ -2889,6 +2968,7 @@ public final class Colors {
       return true;
     }
 
+    @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
       if (specCase_ == 1) {
@@ -2909,6 +2989,7 @@ public final class Colors {
       unknownFields.writeTo(output);
     }
 
+    @java.lang.Override
     public int getSerializedSize() {
       int size = memoizedSize;
       if (size != -1) return size;
@@ -3086,6 +3167,7 @@ public final class Colors {
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
 
+    @java.lang.Override
     public Builder newBuilderForType() { return newBuilder(); }
     public static Builder newBuilder() {
       return DEFAULT_INSTANCE.toBuilder();
@@ -3093,6 +3175,7 @@ public final class Colors {
     public static Builder newBuilder(io.opencannabis.schema.content.Colors.Color prototype) {
       return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
     }
+    @java.lang.Override
     public Builder toBuilder() {
       return this == DEFAULT_INSTANCE
           ? new Builder() : new Builder().mergeFrom(this);
@@ -3120,6 +3203,7 @@ public final class Colors {
         return io.opencannabis.schema.content.Colors.internal_static_opencannabis_content_Color_descriptor;
       }
 
+      @java.lang.Override
       protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
           internalGetFieldAccessorTable() {
         return io.opencannabis.schema.content.Colors.internal_static_opencannabis_content_Color_fieldAccessorTable
@@ -3142,6 +3226,7 @@ public final class Colors {
                 .alwaysUseFieldBuilders) {
         }
       }
+      @java.lang.Override
       public Builder clear() {
         super.clear();
         specCase_ = 0;
@@ -3149,15 +3234,18 @@ public final class Colors {
         return this;
       }
 
+      @java.lang.Override
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
         return io.opencannabis.schema.content.Colors.internal_static_opencannabis_content_Color_descriptor;
       }
 
+      @java.lang.Override
       public io.opencannabis.schema.content.Colors.Color getDefaultInstanceForType() {
         return io.opencannabis.schema.content.Colors.Color.getDefaultInstance();
       }
 
+      @java.lang.Override
       public io.opencannabis.schema.content.Colors.Color build() {
         io.opencannabis.schema.content.Colors.Color result = buildPartial();
         if (!result.isInitialized()) {
@@ -3166,6 +3254,7 @@ public final class Colors {
         return result;
       }
 
+      @java.lang.Override
       public io.opencannabis.schema.content.Colors.Color buildPartial() {
         io.opencannabis.schema.content.Colors.Color result = new io.opencannabis.schema.content.Colors.Color(this);
         if (specCase_ == 1) {
@@ -3200,32 +3289,39 @@ public final class Colors {
         return result;
       }
 
+      @java.lang.Override
       public Builder clone() {
         return (Builder) super.clone();
       }
+      @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
         return (Builder) super.setField(field, value);
       }
+      @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
         return (Builder) super.clearField(field);
       }
+      @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
         return (Builder) super.clearOneof(oneof);
       }
+      @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
         return (Builder) super.setRepeatedField(field, index, value);
       }
+      @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
         return (Builder) super.addRepeatedField(field, value);
       }
+      @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
         if (other instanceof io.opencannabis.schema.content.Colors.Color) {
           return mergeFrom((io.opencannabis.schema.content.Colors.Color)other);
@@ -3269,10 +3365,12 @@ public final class Colors {
         return this;
       }
 
+      @java.lang.Override
       public final boolean isInitialized() {
         return true;
       }
 
+      @java.lang.Override
       public Builder mergeFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -3341,6 +3439,7 @@ public final class Colors {
        */
       public io.opencannabis.schema.content.Colors.StandardColor getStandard() {
         if (specCase_ == 1) {
+          @SuppressWarnings("deprecation")
           io.opencannabis.schema.content.Colors.StandardColor result = io.opencannabis.schema.content.Colors.StandardColor.valueOf(
               (java.lang.Integer) spec_);
           return result == null ? io.opencannabis.schema.content.Colors.StandardColor.UNRECOGNIZED : result;
@@ -3994,11 +4093,13 @@ public final class Colors {
         onChanged();;
         return cmykBuilder_;
       }
+      @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
         return super.setUnknownFieldsProto3(unknownFields);
       }
 
+      @java.lang.Override
       public final Builder mergeUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
         return super.mergeUnknownFields(unknownFields);
@@ -4020,6 +4121,7 @@ public final class Colors {
 
     private static final com.google.protobuf.Parser<Color>
         PARSER = new com.google.protobuf.AbstractParser<Color>() {
+      @java.lang.Override
       public Color parsePartialFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -4037,6 +4139,7 @@ public final class Colors {
       return PARSER;
     }
 
+    @java.lang.Override
     public io.opencannabis.schema.content.Colors.Color getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
@@ -4210,13 +4313,6 @@ public final class Colors {
             case 0:
               done = true;
               break;
-            default: {
-              if (!parseUnknownFieldProto3(
-                  input, unknownFields, extensionRegistry, tag)) {
-                done = true;
-              }
-              break;
-            }
             case 10: {
               io.opencannabis.schema.content.Colors.Color.Builder subBuilder = null;
               if (primary_ != null) {
@@ -4265,6 +4361,13 @@ public final class Colors {
                   input.readMessage(io.opencannabis.schema.content.Colors.Color.parser(), extensionRegistry));
               break;
             }
+            default: {
+              if (!parseUnknownFieldProto3(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
           }
         }
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
@@ -4285,6 +4388,7 @@ public final class Colors {
       return io.opencannabis.schema.content.Colors.internal_static_opencannabis_content_ColorScheme_descriptor;
     }
 
+    @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
       return io.opencannabis.schema.content.Colors.internal_static_opencannabis_content_ColorScheme_fieldAccessorTable
@@ -4448,6 +4552,7 @@ public final class Colors {
     }
 
     private byte memoizedIsInitialized = -1;
+    @java.lang.Override
     public final boolean isInitialized() {
       byte isInitialized = memoizedIsInitialized;
       if (isInitialized == 1) return true;
@@ -4457,6 +4562,7 @@ public final class Colors {
       return true;
     }
 
+    @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
       if (primary_ != null) {
@@ -4474,6 +4580,7 @@ public final class Colors {
       unknownFields.writeTo(output);
     }
 
+    @java.lang.Override
     public int getSerializedSize() {
       int size = memoizedSize;
       if (size != -1) return size;
@@ -4630,6 +4737,7 @@ public final class Colors {
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
 
+    @java.lang.Override
     public Builder newBuilderForType() { return newBuilder(); }
     public static Builder newBuilder() {
       return DEFAULT_INSTANCE.toBuilder();
@@ -4637,6 +4745,7 @@ public final class Colors {
     public static Builder newBuilder(io.opencannabis.schema.content.Colors.ColorScheme prototype) {
       return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
     }
+    @java.lang.Override
     public Builder toBuilder() {
       return this == DEFAULT_INSTANCE
           ? new Builder() : new Builder().mergeFrom(this);
@@ -4664,6 +4773,7 @@ public final class Colors {
         return io.opencannabis.schema.content.Colors.internal_static_opencannabis_content_ColorScheme_descriptor;
       }
 
+      @java.lang.Override
       protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
           internalGetFieldAccessorTable() {
         return io.opencannabis.schema.content.Colors.internal_static_opencannabis_content_ColorScheme_fieldAccessorTable
@@ -4687,6 +4797,7 @@ public final class Colors {
           getShadesFieldBuilder();
         }
       }
+      @java.lang.Override
       public Builder clear() {
         super.clear();
         if (primaryBuilder_ == null) {
@@ -4716,15 +4827,18 @@ public final class Colors {
         return this;
       }
 
+      @java.lang.Override
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
         return io.opencannabis.schema.content.Colors.internal_static_opencannabis_content_ColorScheme_descriptor;
       }
 
+      @java.lang.Override
       public io.opencannabis.schema.content.Colors.ColorScheme getDefaultInstanceForType() {
         return io.opencannabis.schema.content.Colors.ColorScheme.getDefaultInstance();
       }
 
+      @java.lang.Override
       public io.opencannabis.schema.content.Colors.ColorScheme build() {
         io.opencannabis.schema.content.Colors.ColorScheme result = buildPartial();
         if (!result.isInitialized()) {
@@ -4733,6 +4847,7 @@ public final class Colors {
         return result;
       }
 
+      @java.lang.Override
       public io.opencannabis.schema.content.Colors.ColorScheme buildPartial() {
         io.opencannabis.schema.content.Colors.ColorScheme result = new io.opencannabis.schema.content.Colors.ColorScheme(this);
         int from_bitField0_ = bitField0_;
@@ -4766,32 +4881,39 @@ public final class Colors {
         return result;
       }
 
+      @java.lang.Override
       public Builder clone() {
         return (Builder) super.clone();
       }
+      @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
         return (Builder) super.setField(field, value);
       }
+      @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
         return (Builder) super.clearField(field);
       }
+      @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
         return (Builder) super.clearOneof(oneof);
       }
+      @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
         return (Builder) super.setRepeatedField(field, index, value);
       }
+      @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
         return (Builder) super.addRepeatedField(field, value);
       }
+      @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
         if (other instanceof io.opencannabis.schema.content.Colors.ColorScheme) {
           return mergeFrom((io.opencannabis.schema.content.Colors.ColorScheme)other);
@@ -4843,10 +4965,12 @@ public final class Colors {
         return this;
       }
 
+      @java.lang.Override
       public final boolean isInitialized() {
         return true;
       }
 
+      @java.lang.Override
       public Builder mergeFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -5636,11 +5760,13 @@ public final class Colors {
         }
         return shadesBuilder_;
       }
+      @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
         return super.setUnknownFieldsProto3(unknownFields);
       }
 
+      @java.lang.Override
       public final Builder mergeUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
         return super.mergeUnknownFields(unknownFields);
@@ -5662,6 +5788,7 @@ public final class Colors {
 
     private static final com.google.protobuf.Parser<ColorScheme>
         PARSER = new com.google.protobuf.AbstractParser<ColorScheme>() {
+      @java.lang.Override
       public ColorScheme parsePartialFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -5679,6 +5806,7 @@ public final class Colors {
       return PARSER;
     }
 
+    @java.lang.Override
     public io.opencannabis.schema.content.Colors.ColorScheme getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }

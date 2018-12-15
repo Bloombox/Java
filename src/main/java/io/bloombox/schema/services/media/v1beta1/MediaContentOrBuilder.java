@@ -1,8 +1,8 @@
 /*
- * Copyright 2018, Bloombox, LLC. All rights reserved.
+ * Copyright 2018, Momentum Ideas, Co. All rights reserved.
  *
  * Source and object computer code contained herein is the private intellectual
- * property of Bloombox, a California Limited Liability Corporation. Use of this
+ * property of Momentum Ideas Co., a Delaware Corporation. Use of this
  * code in source form requires permission in writing before use or the
  * assembly, distribution, or publishing of derivative works, for commercial
  * purposes or any other purpose, from a duly authorized officer of Momentum
@@ -21,7 +21,7 @@
 package io.bloombox.schema.services.media.v1beta1;
 
 public interface MediaContentOrBuilder extends
-    // @@protoc_insertion_point(interface_extends:bloombox.schema.services.media.v1beta1.MediaContent)
+    // @@protoc_insertion_point(interface_extends:bloombox.services.media.v1beta1.MediaContent)
     com.google.protobuf.MessageOrBuilder {
 
   /**
@@ -54,7 +54,7 @@ public interface MediaContentOrBuilder extends
    * Information about the file being uploaded, including the filename and content mime type.
    * </pre>
    *
-   * <code>.bloombox.schema.services.media.v1beta1.MediaFile file = 2;</code>
+   * <code>.bloombox.services.media.v1beta1.MediaFile file = 2;</code>
    */
   boolean hasFile();
   /**
@@ -62,7 +62,7 @@ public interface MediaContentOrBuilder extends
    * Information about the file being uploaded, including the filename and content mime type.
    * </pre>
    *
-   * <code>.bloombox.schema.services.media.v1beta1.MediaFile file = 2;</code>
+   * <code>.bloombox.services.media.v1beta1.MediaFile file = 2;</code>
    */
   io.bloombox.schema.services.media.v1beta1.MediaFile getFile();
   /**
@@ -70,7 +70,7 @@ public interface MediaContentOrBuilder extends
    * Information about the file being uploaded, including the filename and content mime type.
    * </pre>
    *
-   * <code>.bloombox.schema.services.media.v1beta1.MediaFile file = 2;</code>
+   * <code>.bloombox.services.media.v1beta1.MediaFile file = 2;</code>
    */
   io.bloombox.schema.services.media.v1beta1.MediaFileOrBuilder getFileOrBuilder();
 

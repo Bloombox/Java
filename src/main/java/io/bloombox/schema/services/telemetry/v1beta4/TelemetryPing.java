@@ -1,8 +1,8 @@
 /*
- * Copyright 2018, Bloombox, LLC. All rights reserved.
+ * Copyright 2018, Momentum Ideas, Co. All rights reserved.
  *
  * Source and object computer code contained herein is the private intellectual
- * property of Bloombox, a California Limited Liability Corporation. Use of this
+ * property of Momentum Ideas Co., a Delaware Corporation. Use of this
  * code in source form requires permission in writing before use or the
  * assembly, distribution, or publishing of derivative works, for commercial
  * purposes or any other purpose, from a duly authorized officer of Momentum
@@ -25,11 +25,11 @@ package io.bloombox.schema.services.telemetry.v1beta4;
  * Specifies an RPC operation to retrieve status information for the telemetry service.
  * </pre>
  *
- * Protobuf type {@code bloombox.schema.services.telemetry.v1beta4.TelemetryPing}
+ * Protobuf type {@code bloombox.services.telemetry.v1beta4.TelemetryPing}
  */
 public  final class TelemetryPing extends
     com.google.protobuf.GeneratedMessageV3 implements
-    // @@protoc_insertion_point(message_implements:bloombox.schema.services.telemetry.v1beta4.TelemetryPing)
+    // @@protoc_insertion_point(message_implements:bloombox.services.telemetry.v1beta4.TelemetryPing)
     TelemetryPingOrBuilder {
 private static final long serialVersionUID = 0L;
   // Use TelemetryPing.newBuilder() to construct.
@@ -83,18 +83,19 @@ private static final long serialVersionUID = 0L;
   }
   public static final com.google.protobuf.Descriptors.Descriptor
       getDescriptor() {
-    return io.bloombox.schema.services.telemetry.v1beta4.TelemetryServiceBeta4.internal_static_bloombox_schema_services_telemetry_v1beta4_TelemetryPing_descriptor;
+    return io.bloombox.schema.services.telemetry.v1beta4.TelemetryServiceBeta4.internal_static_bloombox_services_telemetry_v1beta4_TelemetryPing_descriptor;
   }
 
+  @java.lang.Override
   protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internalGetFieldAccessorTable() {
-    return io.bloombox.schema.services.telemetry.v1beta4.TelemetryServiceBeta4.internal_static_bloombox_schema_services_telemetry_v1beta4_TelemetryPing_fieldAccessorTable
+    return io.bloombox.schema.services.telemetry.v1beta4.TelemetryServiceBeta4.internal_static_bloombox_services_telemetry_v1beta4_TelemetryPing_fieldAccessorTable
         .ensureFieldAccessorsInitialized(
             io.bloombox.schema.services.telemetry.v1beta4.TelemetryPing.class, io.bloombox.schema.services.telemetry.v1beta4.TelemetryPing.Builder.class);
   }
 
   public interface RequestOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:bloombox.schema.services.telemetry.v1beta4.TelemetryPing.Request)
+      // @@protoc_insertion_point(interface_extends:bloombox.services.telemetry.v1beta4.TelemetryPing.Request)
       com.google.protobuf.MessageOrBuilder {
   }
   /**
@@ -102,11 +103,11 @@ private static final long serialVersionUID = 0L;
    * Specifies a request to ping the service.
    * </pre>
    *
-   * Protobuf type {@code bloombox.schema.services.telemetry.v1beta4.TelemetryPing.Request}
+   * Protobuf type {@code bloombox.services.telemetry.v1beta4.TelemetryPing.Request}
    */
   public  static final class Request extends
       com.google.protobuf.GeneratedMessageV3 implements
-      // @@protoc_insertion_point(message_implements:bloombox.schema.services.telemetry.v1beta4.TelemetryPing.Request)
+      // @@protoc_insertion_point(message_implements:bloombox.services.telemetry.v1beta4.TelemetryPing.Request)
       RequestOrBuilder {
   private static final long serialVersionUID = 0L;
     // Use Request.newBuilder() to construct.
@@ -160,17 +161,19 @@ private static final long serialVersionUID = 0L;
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return io.bloombox.schema.services.telemetry.v1beta4.TelemetryServiceBeta4.internal_static_bloombox_schema_services_telemetry_v1beta4_TelemetryPing_Request_descriptor;
+      return io.bloombox.schema.services.telemetry.v1beta4.TelemetryServiceBeta4.internal_static_bloombox_services_telemetry_v1beta4_TelemetryPing_Request_descriptor;
     }
 
+    @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return io.bloombox.schema.services.telemetry.v1beta4.TelemetryServiceBeta4.internal_static_bloombox_schema_services_telemetry_v1beta4_TelemetryPing_Request_fieldAccessorTable
+      return io.bloombox.schema.services.telemetry.v1beta4.TelemetryServiceBeta4.internal_static_bloombox_services_telemetry_v1beta4_TelemetryPing_Request_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
               io.bloombox.schema.services.telemetry.v1beta4.TelemetryPing.Request.class, io.bloombox.schema.services.telemetry.v1beta4.TelemetryPing.Request.Builder.class);
     }
 
     private byte memoizedIsInitialized = -1;
+    @java.lang.Override
     public final boolean isInitialized() {
       byte isInitialized = memoizedIsInitialized;
       if (isInitialized == 1) return true;
@@ -180,11 +183,13 @@ private static final long serialVersionUID = 0L;
       return true;
     }
 
+    @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
       unknownFields.writeTo(output);
     }
 
+    @java.lang.Override
     public int getSerializedSize() {
       int size = memoizedSize;
       if (size != -1) return size;
@@ -292,6 +297,7 @@ private static final long serialVersionUID = 0L;
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
 
+    @java.lang.Override
     public Builder newBuilderForType() { return newBuilder(); }
     public static Builder newBuilder() {
       return DEFAULT_INSTANCE.toBuilder();
@@ -299,6 +305,7 @@ private static final long serialVersionUID = 0L;
     public static Builder newBuilder(io.bloombox.schema.services.telemetry.v1beta4.TelemetryPing.Request prototype) {
       return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
     }
+    @java.lang.Override
     public Builder toBuilder() {
       return this == DEFAULT_INSTANCE
           ? new Builder() : new Builder().mergeFrom(this);
@@ -315,20 +322,21 @@ private static final long serialVersionUID = 0L;
      * Specifies a request to ping the service.
      * </pre>
      *
-     * Protobuf type {@code bloombox.schema.services.telemetry.v1beta4.TelemetryPing.Request}
+     * Protobuf type {@code bloombox.services.telemetry.v1beta4.TelemetryPing.Request}
      */
     public static final class Builder extends
         com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:bloombox.schema.services.telemetry.v1beta4.TelemetryPing.Request)
+        // @@protoc_insertion_point(builder_implements:bloombox.services.telemetry.v1beta4.TelemetryPing.Request)
         io.bloombox.schema.services.telemetry.v1beta4.TelemetryPing.RequestOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return io.bloombox.schema.services.telemetry.v1beta4.TelemetryServiceBeta4.internal_static_bloombox_schema_services_telemetry_v1beta4_TelemetryPing_Request_descriptor;
+        return io.bloombox.schema.services.telemetry.v1beta4.TelemetryServiceBeta4.internal_static_bloombox_services_telemetry_v1beta4_TelemetryPing_Request_descriptor;
       }
 
+      @java.lang.Override
       protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return io.bloombox.schema.services.telemetry.v1beta4.TelemetryServiceBeta4.internal_static_bloombox_schema_services_telemetry_v1beta4_TelemetryPing_Request_fieldAccessorTable
+        return io.bloombox.schema.services.telemetry.v1beta4.TelemetryServiceBeta4.internal_static_bloombox_services_telemetry_v1beta4_TelemetryPing_Request_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
                 io.bloombox.schema.services.telemetry.v1beta4.TelemetryPing.Request.class, io.bloombox.schema.services.telemetry.v1beta4.TelemetryPing.Request.Builder.class);
       }
@@ -348,20 +356,24 @@ private static final long serialVersionUID = 0L;
                 .alwaysUseFieldBuilders) {
         }
       }
+      @java.lang.Override
       public Builder clear() {
         super.clear();
         return this;
       }
 
+      @java.lang.Override
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return io.bloombox.schema.services.telemetry.v1beta4.TelemetryServiceBeta4.internal_static_bloombox_schema_services_telemetry_v1beta4_TelemetryPing_Request_descriptor;
+        return io.bloombox.schema.services.telemetry.v1beta4.TelemetryServiceBeta4.internal_static_bloombox_services_telemetry_v1beta4_TelemetryPing_Request_descriptor;
       }
 
+      @java.lang.Override
       public io.bloombox.schema.services.telemetry.v1beta4.TelemetryPing.Request getDefaultInstanceForType() {
         return io.bloombox.schema.services.telemetry.v1beta4.TelemetryPing.Request.getDefaultInstance();
       }
 
+      @java.lang.Override
       public io.bloombox.schema.services.telemetry.v1beta4.TelemetryPing.Request build() {
         io.bloombox.schema.services.telemetry.v1beta4.TelemetryPing.Request result = buildPartial();
         if (!result.isInitialized()) {
@@ -370,38 +382,46 @@ private static final long serialVersionUID = 0L;
         return result;
       }
 
+      @java.lang.Override
       public io.bloombox.schema.services.telemetry.v1beta4.TelemetryPing.Request buildPartial() {
         io.bloombox.schema.services.telemetry.v1beta4.TelemetryPing.Request result = new io.bloombox.schema.services.telemetry.v1beta4.TelemetryPing.Request(this);
         onBuilt();
         return result;
       }
 
+      @java.lang.Override
       public Builder clone() {
         return (Builder) super.clone();
       }
+      @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
         return (Builder) super.setField(field, value);
       }
+      @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
         return (Builder) super.clearField(field);
       }
+      @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
         return (Builder) super.clearOneof(oneof);
       }
+      @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
         return (Builder) super.setRepeatedField(field, index, value);
       }
+      @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
         return (Builder) super.addRepeatedField(field, value);
       }
+      @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
         if (other instanceof io.bloombox.schema.services.telemetry.v1beta4.TelemetryPing.Request) {
           return mergeFrom((io.bloombox.schema.services.telemetry.v1beta4.TelemetryPing.Request)other);
@@ -418,10 +438,12 @@ private static final long serialVersionUID = 0L;
         return this;
       }
 
+      @java.lang.Override
       public final boolean isInitialized() {
         return true;
       }
 
+      @java.lang.Override
       public Builder mergeFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -439,21 +461,23 @@ private static final long serialVersionUID = 0L;
         }
         return this;
       }
+      @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
         return super.setUnknownFieldsProto3(unknownFields);
       }
 
+      @java.lang.Override
       public final Builder mergeUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
         return super.mergeUnknownFields(unknownFields);
       }
 
 
-      // @@protoc_insertion_point(builder_scope:bloombox.schema.services.telemetry.v1beta4.TelemetryPing.Request)
+      // @@protoc_insertion_point(builder_scope:bloombox.services.telemetry.v1beta4.TelemetryPing.Request)
     }
 
-    // @@protoc_insertion_point(class_scope:bloombox.schema.services.telemetry.v1beta4.TelemetryPing.Request)
+    // @@protoc_insertion_point(class_scope:bloombox.services.telemetry.v1beta4.TelemetryPing.Request)
     private static final io.bloombox.schema.services.telemetry.v1beta4.TelemetryPing.Request DEFAULT_INSTANCE;
     static {
       DEFAULT_INSTANCE = new io.bloombox.schema.services.telemetry.v1beta4.TelemetryPing.Request();
@@ -465,6 +489,7 @@ private static final long serialVersionUID = 0L;
 
     private static final com.google.protobuf.Parser<Request>
         PARSER = new com.google.protobuf.AbstractParser<Request>() {
+      @java.lang.Override
       public Request parsePartialFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -482,6 +507,7 @@ private static final long serialVersionUID = 0L;
       return PARSER;
     }
 
+    @java.lang.Override
     public io.bloombox.schema.services.telemetry.v1beta4.TelemetryPing.Request getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
@@ -489,7 +515,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public interface ResponseOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:bloombox.schema.services.telemetry.v1beta4.TelemetryPing.Response)
+      // @@protoc_insertion_point(interface_extends:bloombox.services.telemetry.v1beta4.TelemetryPing.Response)
       com.google.protobuf.MessageOrBuilder {
 
     /**
@@ -497,7 +523,7 @@ private static final long serialVersionUID = 0L;
      * Current service status.
      * </pre>
      *
-     * <code>.bloombox.schema.services.ServiceStatus status = 1;</code>
+     * <code>.bloombox.services.ServiceStatus status = 1;</code>
      */
     int getStatusValue();
     /**
@@ -505,7 +531,7 @@ private static final long serialVersionUID = 0L;
      * Current service status.
      * </pre>
      *
-     * <code>.bloombox.schema.services.ServiceStatus status = 1;</code>
+     * <code>.bloombox.services.ServiceStatus status = 1;</code>
      */
     io.bloombox.schema.services.ServiceStatus getStatus();
   }
@@ -514,11 +540,11 @@ private static final long serialVersionUID = 0L;
    * Specifies a response to a service ping.
    * </pre>
    *
-   * Protobuf type {@code bloombox.schema.services.telemetry.v1beta4.TelemetryPing.Response}
+   * Protobuf type {@code bloombox.services.telemetry.v1beta4.TelemetryPing.Response}
    */
   public  static final class Response extends
       com.google.protobuf.GeneratedMessageV3 implements
-      // @@protoc_insertion_point(message_implements:bloombox.schema.services.telemetry.v1beta4.TelemetryPing.Response)
+      // @@protoc_insertion_point(message_implements:bloombox.services.telemetry.v1beta4.TelemetryPing.Response)
       ResponseOrBuilder {
   private static final long serialVersionUID = 0L;
     // Use Response.newBuilder() to construct.
@@ -553,17 +579,17 @@ private static final long serialVersionUID = 0L;
             case 0:
               done = true;
               break;
+            case 8: {
+              int rawValue = input.readEnum();
+
+              status_ = rawValue;
+              break;
+            }
             default: {
               if (!parseUnknownFieldProto3(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
-              break;
-            }
-            case 8: {
-              int rawValue = input.readEnum();
-
-              status_ = rawValue;
               break;
             }
           }
@@ -580,12 +606,13 @@ private static final long serialVersionUID = 0L;
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return io.bloombox.schema.services.telemetry.v1beta4.TelemetryServiceBeta4.internal_static_bloombox_schema_services_telemetry_v1beta4_TelemetryPing_Response_descriptor;
+      return io.bloombox.schema.services.telemetry.v1beta4.TelemetryServiceBeta4.internal_static_bloombox_services_telemetry_v1beta4_TelemetryPing_Response_descriptor;
     }
 
+    @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return io.bloombox.schema.services.telemetry.v1beta4.TelemetryServiceBeta4.internal_static_bloombox_schema_services_telemetry_v1beta4_TelemetryPing_Response_fieldAccessorTable
+      return io.bloombox.schema.services.telemetry.v1beta4.TelemetryServiceBeta4.internal_static_bloombox_services_telemetry_v1beta4_TelemetryPing_Response_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
               io.bloombox.schema.services.telemetry.v1beta4.TelemetryPing.Response.class, io.bloombox.schema.services.telemetry.v1beta4.TelemetryPing.Response.Builder.class);
     }
@@ -597,7 +624,7 @@ private static final long serialVersionUID = 0L;
      * Current service status.
      * </pre>
      *
-     * <code>.bloombox.schema.services.ServiceStatus status = 1;</code>
+     * <code>.bloombox.services.ServiceStatus status = 1;</code>
      */
     public int getStatusValue() {
       return status_;
@@ -607,14 +634,16 @@ private static final long serialVersionUID = 0L;
      * Current service status.
      * </pre>
      *
-     * <code>.bloombox.schema.services.ServiceStatus status = 1;</code>
+     * <code>.bloombox.services.ServiceStatus status = 1;</code>
      */
     public io.bloombox.schema.services.ServiceStatus getStatus() {
+      @SuppressWarnings("deprecation")
       io.bloombox.schema.services.ServiceStatus result = io.bloombox.schema.services.ServiceStatus.valueOf(status_);
       return result == null ? io.bloombox.schema.services.ServiceStatus.UNRECOGNIZED : result;
     }
 
     private byte memoizedIsInitialized = -1;
+    @java.lang.Override
     public final boolean isInitialized() {
       byte isInitialized = memoizedIsInitialized;
       if (isInitialized == 1) return true;
@@ -624,6 +653,7 @@ private static final long serialVersionUID = 0L;
       return true;
     }
 
+    @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
       if (status_ != io.bloombox.schema.services.ServiceStatus.UNKNOWN.getNumber()) {
@@ -632,6 +662,7 @@ private static final long serialVersionUID = 0L;
       unknownFields.writeTo(output);
     }
 
+    @java.lang.Override
     public int getSerializedSize() {
       int size = memoizedSize;
       if (size != -1) return size;
@@ -746,6 +777,7 @@ private static final long serialVersionUID = 0L;
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
 
+    @java.lang.Override
     public Builder newBuilderForType() { return newBuilder(); }
     public static Builder newBuilder() {
       return DEFAULT_INSTANCE.toBuilder();
@@ -753,6 +785,7 @@ private static final long serialVersionUID = 0L;
     public static Builder newBuilder(io.bloombox.schema.services.telemetry.v1beta4.TelemetryPing.Response prototype) {
       return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
     }
+    @java.lang.Override
     public Builder toBuilder() {
       return this == DEFAULT_INSTANCE
           ? new Builder() : new Builder().mergeFrom(this);
@@ -769,20 +802,21 @@ private static final long serialVersionUID = 0L;
      * Specifies a response to a service ping.
      * </pre>
      *
-     * Protobuf type {@code bloombox.schema.services.telemetry.v1beta4.TelemetryPing.Response}
+     * Protobuf type {@code bloombox.services.telemetry.v1beta4.TelemetryPing.Response}
      */
     public static final class Builder extends
         com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:bloombox.schema.services.telemetry.v1beta4.TelemetryPing.Response)
+        // @@protoc_insertion_point(builder_implements:bloombox.services.telemetry.v1beta4.TelemetryPing.Response)
         io.bloombox.schema.services.telemetry.v1beta4.TelemetryPing.ResponseOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return io.bloombox.schema.services.telemetry.v1beta4.TelemetryServiceBeta4.internal_static_bloombox_schema_services_telemetry_v1beta4_TelemetryPing_Response_descriptor;
+        return io.bloombox.schema.services.telemetry.v1beta4.TelemetryServiceBeta4.internal_static_bloombox_services_telemetry_v1beta4_TelemetryPing_Response_descriptor;
       }
 
+      @java.lang.Override
       protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return io.bloombox.schema.services.telemetry.v1beta4.TelemetryServiceBeta4.internal_static_bloombox_schema_services_telemetry_v1beta4_TelemetryPing_Response_fieldAccessorTable
+        return io.bloombox.schema.services.telemetry.v1beta4.TelemetryServiceBeta4.internal_static_bloombox_services_telemetry_v1beta4_TelemetryPing_Response_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
                 io.bloombox.schema.services.telemetry.v1beta4.TelemetryPing.Response.class, io.bloombox.schema.services.telemetry.v1beta4.TelemetryPing.Response.Builder.class);
       }
@@ -802,6 +836,7 @@ private static final long serialVersionUID = 0L;
                 .alwaysUseFieldBuilders) {
         }
       }
+      @java.lang.Override
       public Builder clear() {
         super.clear();
         status_ = 0;
@@ -809,15 +844,18 @@ private static final long serialVersionUID = 0L;
         return this;
       }
 
+      @java.lang.Override
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return io.bloombox.schema.services.telemetry.v1beta4.TelemetryServiceBeta4.internal_static_bloombox_schema_services_telemetry_v1beta4_TelemetryPing_Response_descriptor;
+        return io.bloombox.schema.services.telemetry.v1beta4.TelemetryServiceBeta4.internal_static_bloombox_services_telemetry_v1beta4_TelemetryPing_Response_descriptor;
       }
 
+      @java.lang.Override
       public io.bloombox.schema.services.telemetry.v1beta4.TelemetryPing.Response getDefaultInstanceForType() {
         return io.bloombox.schema.services.telemetry.v1beta4.TelemetryPing.Response.getDefaultInstance();
       }
 
+      @java.lang.Override
       public io.bloombox.schema.services.telemetry.v1beta4.TelemetryPing.Response build() {
         io.bloombox.schema.services.telemetry.v1beta4.TelemetryPing.Response result = buildPartial();
         if (!result.isInitialized()) {
@@ -826,6 +864,7 @@ private static final long serialVersionUID = 0L;
         return result;
       }
 
+      @java.lang.Override
       public io.bloombox.schema.services.telemetry.v1beta4.TelemetryPing.Response buildPartial() {
         io.bloombox.schema.services.telemetry.v1beta4.TelemetryPing.Response result = new io.bloombox.schema.services.telemetry.v1beta4.TelemetryPing.Response(this);
         result.status_ = status_;
@@ -833,32 +872,39 @@ private static final long serialVersionUID = 0L;
         return result;
       }
 
+      @java.lang.Override
       public Builder clone() {
         return (Builder) super.clone();
       }
+      @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
         return (Builder) super.setField(field, value);
       }
+      @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
         return (Builder) super.clearField(field);
       }
+      @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
         return (Builder) super.clearOneof(oneof);
       }
+      @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
         return (Builder) super.setRepeatedField(field, index, value);
       }
+      @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
         return (Builder) super.addRepeatedField(field, value);
       }
+      @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
         if (other instanceof io.bloombox.schema.services.telemetry.v1beta4.TelemetryPing.Response) {
           return mergeFrom((io.bloombox.schema.services.telemetry.v1beta4.TelemetryPing.Response)other);
@@ -878,10 +924,12 @@ private static final long serialVersionUID = 0L;
         return this;
       }
 
+      @java.lang.Override
       public final boolean isInitialized() {
         return true;
       }
 
+      @java.lang.Override
       public Builder mergeFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -906,7 +954,7 @@ private static final long serialVersionUID = 0L;
        * Current service status.
        * </pre>
        *
-       * <code>.bloombox.schema.services.ServiceStatus status = 1;</code>
+       * <code>.bloombox.services.ServiceStatus status = 1;</code>
        */
       public int getStatusValue() {
         return status_;
@@ -916,7 +964,7 @@ private static final long serialVersionUID = 0L;
        * Current service status.
        * </pre>
        *
-       * <code>.bloombox.schema.services.ServiceStatus status = 1;</code>
+       * <code>.bloombox.services.ServiceStatus status = 1;</code>
        */
       public Builder setStatusValue(int value) {
         status_ = value;
@@ -928,9 +976,10 @@ private static final long serialVersionUID = 0L;
        * Current service status.
        * </pre>
        *
-       * <code>.bloombox.schema.services.ServiceStatus status = 1;</code>
+       * <code>.bloombox.services.ServiceStatus status = 1;</code>
        */
       public io.bloombox.schema.services.ServiceStatus getStatus() {
+        @SuppressWarnings("deprecation")
         io.bloombox.schema.services.ServiceStatus result = io.bloombox.schema.services.ServiceStatus.valueOf(status_);
         return result == null ? io.bloombox.schema.services.ServiceStatus.UNRECOGNIZED : result;
       }
@@ -939,7 +988,7 @@ private static final long serialVersionUID = 0L;
        * Current service status.
        * </pre>
        *
-       * <code>.bloombox.schema.services.ServiceStatus status = 1;</code>
+       * <code>.bloombox.services.ServiceStatus status = 1;</code>
        */
       public Builder setStatus(io.bloombox.schema.services.ServiceStatus value) {
         if (value == null) {
@@ -955,7 +1004,7 @@ private static final long serialVersionUID = 0L;
        * Current service status.
        * </pre>
        *
-       * <code>.bloombox.schema.services.ServiceStatus status = 1;</code>
+       * <code>.bloombox.services.ServiceStatus status = 1;</code>
        */
       public Builder clearStatus() {
         
@@ -963,21 +1012,23 @@ private static final long serialVersionUID = 0L;
         onChanged();
         return this;
       }
+      @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
         return super.setUnknownFieldsProto3(unknownFields);
       }
 
+      @java.lang.Override
       public final Builder mergeUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
         return super.mergeUnknownFields(unknownFields);
       }
 
 
-      // @@protoc_insertion_point(builder_scope:bloombox.schema.services.telemetry.v1beta4.TelemetryPing.Response)
+      // @@protoc_insertion_point(builder_scope:bloombox.services.telemetry.v1beta4.TelemetryPing.Response)
     }
 
-    // @@protoc_insertion_point(class_scope:bloombox.schema.services.telemetry.v1beta4.TelemetryPing.Response)
+    // @@protoc_insertion_point(class_scope:bloombox.services.telemetry.v1beta4.TelemetryPing.Response)
     private static final io.bloombox.schema.services.telemetry.v1beta4.TelemetryPing.Response DEFAULT_INSTANCE;
     static {
       DEFAULT_INSTANCE = new io.bloombox.schema.services.telemetry.v1beta4.TelemetryPing.Response();
@@ -989,6 +1040,7 @@ private static final long serialVersionUID = 0L;
 
     private static final com.google.protobuf.Parser<Response>
         PARSER = new com.google.protobuf.AbstractParser<Response>() {
+      @java.lang.Override
       public Response parsePartialFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -1006,6 +1058,7 @@ private static final long serialVersionUID = 0L;
       return PARSER;
     }
 
+    @java.lang.Override
     public io.bloombox.schema.services.telemetry.v1beta4.TelemetryPing.Response getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
@@ -1013,7 +1066,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public interface OperationOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:bloombox.schema.services.telemetry.v1beta4.TelemetryPing.Operation)
+      // @@protoc_insertion_point(interface_extends:bloombox.services.telemetry.v1beta4.TelemetryPing.Operation)
       com.google.protobuf.MessageOrBuilder {
 
     /**
@@ -1021,7 +1074,7 @@ private static final long serialVersionUID = 0L;
      * Request for service status.
      * </pre>
      *
-     * <code>.bloombox.schema.services.telemetry.v1beta4.TelemetryPing.Request request = 1;</code>
+     * <code>.bloombox.services.telemetry.v1beta4.TelemetryPing.Request request = 1;</code>
      */
     boolean hasRequest();
     /**
@@ -1029,7 +1082,7 @@ private static final long serialVersionUID = 0L;
      * Request for service status.
      * </pre>
      *
-     * <code>.bloombox.schema.services.telemetry.v1beta4.TelemetryPing.Request request = 1;</code>
+     * <code>.bloombox.services.telemetry.v1beta4.TelemetryPing.Request request = 1;</code>
      */
     io.bloombox.schema.services.telemetry.v1beta4.TelemetryPing.Request getRequest();
     /**
@@ -1037,7 +1090,7 @@ private static final long serialVersionUID = 0L;
      * Request for service status.
      * </pre>
      *
-     * <code>.bloombox.schema.services.telemetry.v1beta4.TelemetryPing.Request request = 1;</code>
+     * <code>.bloombox.services.telemetry.v1beta4.TelemetryPing.Request request = 1;</code>
      */
     io.bloombox.schema.services.telemetry.v1beta4.TelemetryPing.RequestOrBuilder getRequestOrBuilder();
 
@@ -1046,7 +1099,7 @@ private static final long serialVersionUID = 0L;
      * Response to a request for service status.
      * </pre>
      *
-     * <code>.bloombox.schema.services.telemetry.v1beta4.TelemetryPing.Response response = 2;</code>
+     * <code>.bloombox.services.telemetry.v1beta4.TelemetryPing.Response response = 2;</code>
      */
     boolean hasResponse();
     /**
@@ -1054,7 +1107,7 @@ private static final long serialVersionUID = 0L;
      * Response to a request for service status.
      * </pre>
      *
-     * <code>.bloombox.schema.services.telemetry.v1beta4.TelemetryPing.Response response = 2;</code>
+     * <code>.bloombox.services.telemetry.v1beta4.TelemetryPing.Response response = 2;</code>
      */
     io.bloombox.schema.services.telemetry.v1beta4.TelemetryPing.Response getResponse();
     /**
@@ -1062,7 +1115,7 @@ private static final long serialVersionUID = 0L;
      * Response to a request for service status.
      * </pre>
      *
-     * <code>.bloombox.schema.services.telemetry.v1beta4.TelemetryPing.Response response = 2;</code>
+     * <code>.bloombox.services.telemetry.v1beta4.TelemetryPing.Response response = 2;</code>
      */
     io.bloombox.schema.services.telemetry.v1beta4.TelemetryPing.ResponseOrBuilder getResponseOrBuilder();
   }
@@ -1071,11 +1124,11 @@ private static final long serialVersionUID = 0L;
    * Specifies an entire ping operation.
    * </pre>
    *
-   * Protobuf type {@code bloombox.schema.services.telemetry.v1beta4.TelemetryPing.Operation}
+   * Protobuf type {@code bloombox.services.telemetry.v1beta4.TelemetryPing.Operation}
    */
   public  static final class Operation extends
       com.google.protobuf.GeneratedMessageV3 implements
-      // @@protoc_insertion_point(message_implements:bloombox.schema.services.telemetry.v1beta4.TelemetryPing.Operation)
+      // @@protoc_insertion_point(message_implements:bloombox.services.telemetry.v1beta4.TelemetryPing.Operation)
       OperationOrBuilder {
   private static final long serialVersionUID = 0L;
     // Use Operation.newBuilder() to construct.
@@ -1109,13 +1162,6 @@ private static final long serialVersionUID = 0L;
             case 0:
               done = true;
               break;
-            default: {
-              if (!parseUnknownFieldProto3(
-                  input, unknownFields, extensionRegistry, tag)) {
-                done = true;
-              }
-              break;
-            }
             case 10: {
               io.bloombox.schema.services.telemetry.v1beta4.TelemetryPing.Request.Builder subBuilder = null;
               if (request_ != null) {
@@ -1142,6 +1188,13 @@ private static final long serialVersionUID = 0L;
 
               break;
             }
+            default: {
+              if (!parseUnknownFieldProto3(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
           }
         }
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
@@ -1156,12 +1209,13 @@ private static final long serialVersionUID = 0L;
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return io.bloombox.schema.services.telemetry.v1beta4.TelemetryServiceBeta4.internal_static_bloombox_schema_services_telemetry_v1beta4_TelemetryPing_Operation_descriptor;
+      return io.bloombox.schema.services.telemetry.v1beta4.TelemetryServiceBeta4.internal_static_bloombox_services_telemetry_v1beta4_TelemetryPing_Operation_descriptor;
     }
 
+    @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return io.bloombox.schema.services.telemetry.v1beta4.TelemetryServiceBeta4.internal_static_bloombox_schema_services_telemetry_v1beta4_TelemetryPing_Operation_fieldAccessorTable
+      return io.bloombox.schema.services.telemetry.v1beta4.TelemetryServiceBeta4.internal_static_bloombox_services_telemetry_v1beta4_TelemetryPing_Operation_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
               io.bloombox.schema.services.telemetry.v1beta4.TelemetryPing.Operation.class, io.bloombox.schema.services.telemetry.v1beta4.TelemetryPing.Operation.Builder.class);
     }
@@ -1173,7 +1227,7 @@ private static final long serialVersionUID = 0L;
      * Request for service status.
      * </pre>
      *
-     * <code>.bloombox.schema.services.telemetry.v1beta4.TelemetryPing.Request request = 1;</code>
+     * <code>.bloombox.services.telemetry.v1beta4.TelemetryPing.Request request = 1;</code>
      */
     public boolean hasRequest() {
       return request_ != null;
@@ -1183,7 +1237,7 @@ private static final long serialVersionUID = 0L;
      * Request for service status.
      * </pre>
      *
-     * <code>.bloombox.schema.services.telemetry.v1beta4.TelemetryPing.Request request = 1;</code>
+     * <code>.bloombox.services.telemetry.v1beta4.TelemetryPing.Request request = 1;</code>
      */
     public io.bloombox.schema.services.telemetry.v1beta4.TelemetryPing.Request getRequest() {
       return request_ == null ? io.bloombox.schema.services.telemetry.v1beta4.TelemetryPing.Request.getDefaultInstance() : request_;
@@ -1193,7 +1247,7 @@ private static final long serialVersionUID = 0L;
      * Request for service status.
      * </pre>
      *
-     * <code>.bloombox.schema.services.telemetry.v1beta4.TelemetryPing.Request request = 1;</code>
+     * <code>.bloombox.services.telemetry.v1beta4.TelemetryPing.Request request = 1;</code>
      */
     public io.bloombox.schema.services.telemetry.v1beta4.TelemetryPing.RequestOrBuilder getRequestOrBuilder() {
       return getRequest();
@@ -1206,7 +1260,7 @@ private static final long serialVersionUID = 0L;
      * Response to a request for service status.
      * </pre>
      *
-     * <code>.bloombox.schema.services.telemetry.v1beta4.TelemetryPing.Response response = 2;</code>
+     * <code>.bloombox.services.telemetry.v1beta4.TelemetryPing.Response response = 2;</code>
      */
     public boolean hasResponse() {
       return response_ != null;
@@ -1216,7 +1270,7 @@ private static final long serialVersionUID = 0L;
      * Response to a request for service status.
      * </pre>
      *
-     * <code>.bloombox.schema.services.telemetry.v1beta4.TelemetryPing.Response response = 2;</code>
+     * <code>.bloombox.services.telemetry.v1beta4.TelemetryPing.Response response = 2;</code>
      */
     public io.bloombox.schema.services.telemetry.v1beta4.TelemetryPing.Response getResponse() {
       return response_ == null ? io.bloombox.schema.services.telemetry.v1beta4.TelemetryPing.Response.getDefaultInstance() : response_;
@@ -1226,13 +1280,14 @@ private static final long serialVersionUID = 0L;
      * Response to a request for service status.
      * </pre>
      *
-     * <code>.bloombox.schema.services.telemetry.v1beta4.TelemetryPing.Response response = 2;</code>
+     * <code>.bloombox.services.telemetry.v1beta4.TelemetryPing.Response response = 2;</code>
      */
     public io.bloombox.schema.services.telemetry.v1beta4.TelemetryPing.ResponseOrBuilder getResponseOrBuilder() {
       return getResponse();
     }
 
     private byte memoizedIsInitialized = -1;
+    @java.lang.Override
     public final boolean isInitialized() {
       byte isInitialized = memoizedIsInitialized;
       if (isInitialized == 1) return true;
@@ -1242,6 +1297,7 @@ private static final long serialVersionUID = 0L;
       return true;
     }
 
+    @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
       if (request_ != null) {
@@ -1253,6 +1309,7 @@ private static final long serialVersionUID = 0L;
       unknownFields.writeTo(output);
     }
 
+    @java.lang.Override
     public int getSerializedSize() {
       int size = memoizedSize;
       if (size != -1) return size;
@@ -1386,6 +1443,7 @@ private static final long serialVersionUID = 0L;
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
 
+    @java.lang.Override
     public Builder newBuilderForType() { return newBuilder(); }
     public static Builder newBuilder() {
       return DEFAULT_INSTANCE.toBuilder();
@@ -1393,6 +1451,7 @@ private static final long serialVersionUID = 0L;
     public static Builder newBuilder(io.bloombox.schema.services.telemetry.v1beta4.TelemetryPing.Operation prototype) {
       return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
     }
+    @java.lang.Override
     public Builder toBuilder() {
       return this == DEFAULT_INSTANCE
           ? new Builder() : new Builder().mergeFrom(this);
@@ -1409,20 +1468,21 @@ private static final long serialVersionUID = 0L;
      * Specifies an entire ping operation.
      * </pre>
      *
-     * Protobuf type {@code bloombox.schema.services.telemetry.v1beta4.TelemetryPing.Operation}
+     * Protobuf type {@code bloombox.services.telemetry.v1beta4.TelemetryPing.Operation}
      */
     public static final class Builder extends
         com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:bloombox.schema.services.telemetry.v1beta4.TelemetryPing.Operation)
+        // @@protoc_insertion_point(builder_implements:bloombox.services.telemetry.v1beta4.TelemetryPing.Operation)
         io.bloombox.schema.services.telemetry.v1beta4.TelemetryPing.OperationOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return io.bloombox.schema.services.telemetry.v1beta4.TelemetryServiceBeta4.internal_static_bloombox_schema_services_telemetry_v1beta4_TelemetryPing_Operation_descriptor;
+        return io.bloombox.schema.services.telemetry.v1beta4.TelemetryServiceBeta4.internal_static_bloombox_services_telemetry_v1beta4_TelemetryPing_Operation_descriptor;
       }
 
+      @java.lang.Override
       protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return io.bloombox.schema.services.telemetry.v1beta4.TelemetryServiceBeta4.internal_static_bloombox_schema_services_telemetry_v1beta4_TelemetryPing_Operation_fieldAccessorTable
+        return io.bloombox.schema.services.telemetry.v1beta4.TelemetryServiceBeta4.internal_static_bloombox_services_telemetry_v1beta4_TelemetryPing_Operation_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
                 io.bloombox.schema.services.telemetry.v1beta4.TelemetryPing.Operation.class, io.bloombox.schema.services.telemetry.v1beta4.TelemetryPing.Operation.Builder.class);
       }
@@ -1442,6 +1502,7 @@ private static final long serialVersionUID = 0L;
                 .alwaysUseFieldBuilders) {
         }
       }
+      @java.lang.Override
       public Builder clear() {
         super.clear();
         if (requestBuilder_ == null) {
@@ -1459,15 +1520,18 @@ private static final long serialVersionUID = 0L;
         return this;
       }
 
+      @java.lang.Override
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return io.bloombox.schema.services.telemetry.v1beta4.TelemetryServiceBeta4.internal_static_bloombox_schema_services_telemetry_v1beta4_TelemetryPing_Operation_descriptor;
+        return io.bloombox.schema.services.telemetry.v1beta4.TelemetryServiceBeta4.internal_static_bloombox_services_telemetry_v1beta4_TelemetryPing_Operation_descriptor;
       }
 
+      @java.lang.Override
       public io.bloombox.schema.services.telemetry.v1beta4.TelemetryPing.Operation getDefaultInstanceForType() {
         return io.bloombox.schema.services.telemetry.v1beta4.TelemetryPing.Operation.getDefaultInstance();
       }
 
+      @java.lang.Override
       public io.bloombox.schema.services.telemetry.v1beta4.TelemetryPing.Operation build() {
         io.bloombox.schema.services.telemetry.v1beta4.TelemetryPing.Operation result = buildPartial();
         if (!result.isInitialized()) {
@@ -1476,6 +1540,7 @@ private static final long serialVersionUID = 0L;
         return result;
       }
 
+      @java.lang.Override
       public io.bloombox.schema.services.telemetry.v1beta4.TelemetryPing.Operation buildPartial() {
         io.bloombox.schema.services.telemetry.v1beta4.TelemetryPing.Operation result = new io.bloombox.schema.services.telemetry.v1beta4.TelemetryPing.Operation(this);
         if (requestBuilder_ == null) {
@@ -1492,32 +1557,39 @@ private static final long serialVersionUID = 0L;
         return result;
       }
 
+      @java.lang.Override
       public Builder clone() {
         return (Builder) super.clone();
       }
+      @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
         return (Builder) super.setField(field, value);
       }
+      @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
         return (Builder) super.clearField(field);
       }
+      @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
         return (Builder) super.clearOneof(oneof);
       }
+      @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
         return (Builder) super.setRepeatedField(field, index, value);
       }
+      @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
         return (Builder) super.addRepeatedField(field, value);
       }
+      @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
         if (other instanceof io.bloombox.schema.services.telemetry.v1beta4.TelemetryPing.Operation) {
           return mergeFrom((io.bloombox.schema.services.telemetry.v1beta4.TelemetryPing.Operation)other);
@@ -1540,10 +1612,12 @@ private static final long serialVersionUID = 0L;
         return this;
       }
 
+      @java.lang.Override
       public final boolean isInitialized() {
         return true;
       }
 
+      @java.lang.Override
       public Builder mergeFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -1570,7 +1644,7 @@ private static final long serialVersionUID = 0L;
        * Request for service status.
        * </pre>
        *
-       * <code>.bloombox.schema.services.telemetry.v1beta4.TelemetryPing.Request request = 1;</code>
+       * <code>.bloombox.services.telemetry.v1beta4.TelemetryPing.Request request = 1;</code>
        */
       public boolean hasRequest() {
         return requestBuilder_ != null || request_ != null;
@@ -1580,7 +1654,7 @@ private static final long serialVersionUID = 0L;
        * Request for service status.
        * </pre>
        *
-       * <code>.bloombox.schema.services.telemetry.v1beta4.TelemetryPing.Request request = 1;</code>
+       * <code>.bloombox.services.telemetry.v1beta4.TelemetryPing.Request request = 1;</code>
        */
       public io.bloombox.schema.services.telemetry.v1beta4.TelemetryPing.Request getRequest() {
         if (requestBuilder_ == null) {
@@ -1594,7 +1668,7 @@ private static final long serialVersionUID = 0L;
        * Request for service status.
        * </pre>
        *
-       * <code>.bloombox.schema.services.telemetry.v1beta4.TelemetryPing.Request request = 1;</code>
+       * <code>.bloombox.services.telemetry.v1beta4.TelemetryPing.Request request = 1;</code>
        */
       public Builder setRequest(io.bloombox.schema.services.telemetry.v1beta4.TelemetryPing.Request value) {
         if (requestBuilder_ == null) {
@@ -1614,7 +1688,7 @@ private static final long serialVersionUID = 0L;
        * Request for service status.
        * </pre>
        *
-       * <code>.bloombox.schema.services.telemetry.v1beta4.TelemetryPing.Request request = 1;</code>
+       * <code>.bloombox.services.telemetry.v1beta4.TelemetryPing.Request request = 1;</code>
        */
       public Builder setRequest(
           io.bloombox.schema.services.telemetry.v1beta4.TelemetryPing.Request.Builder builderForValue) {
@@ -1632,7 +1706,7 @@ private static final long serialVersionUID = 0L;
        * Request for service status.
        * </pre>
        *
-       * <code>.bloombox.schema.services.telemetry.v1beta4.TelemetryPing.Request request = 1;</code>
+       * <code>.bloombox.services.telemetry.v1beta4.TelemetryPing.Request request = 1;</code>
        */
       public Builder mergeRequest(io.bloombox.schema.services.telemetry.v1beta4.TelemetryPing.Request value) {
         if (requestBuilder_ == null) {
@@ -1654,7 +1728,7 @@ private static final long serialVersionUID = 0L;
        * Request for service status.
        * </pre>
        *
-       * <code>.bloombox.schema.services.telemetry.v1beta4.TelemetryPing.Request request = 1;</code>
+       * <code>.bloombox.services.telemetry.v1beta4.TelemetryPing.Request request = 1;</code>
        */
       public Builder clearRequest() {
         if (requestBuilder_ == null) {
@@ -1672,7 +1746,7 @@ private static final long serialVersionUID = 0L;
        * Request for service status.
        * </pre>
        *
-       * <code>.bloombox.schema.services.telemetry.v1beta4.TelemetryPing.Request request = 1;</code>
+       * <code>.bloombox.services.telemetry.v1beta4.TelemetryPing.Request request = 1;</code>
        */
       public io.bloombox.schema.services.telemetry.v1beta4.TelemetryPing.Request.Builder getRequestBuilder() {
         
@@ -1684,7 +1758,7 @@ private static final long serialVersionUID = 0L;
        * Request for service status.
        * </pre>
        *
-       * <code>.bloombox.schema.services.telemetry.v1beta4.TelemetryPing.Request request = 1;</code>
+       * <code>.bloombox.services.telemetry.v1beta4.TelemetryPing.Request request = 1;</code>
        */
       public io.bloombox.schema.services.telemetry.v1beta4.TelemetryPing.RequestOrBuilder getRequestOrBuilder() {
         if (requestBuilder_ != null) {
@@ -1699,7 +1773,7 @@ private static final long serialVersionUID = 0L;
        * Request for service status.
        * </pre>
        *
-       * <code>.bloombox.schema.services.telemetry.v1beta4.TelemetryPing.Request request = 1;</code>
+       * <code>.bloombox.services.telemetry.v1beta4.TelemetryPing.Request request = 1;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
           io.bloombox.schema.services.telemetry.v1beta4.TelemetryPing.Request, io.bloombox.schema.services.telemetry.v1beta4.TelemetryPing.Request.Builder, io.bloombox.schema.services.telemetry.v1beta4.TelemetryPing.RequestOrBuilder> 
@@ -1723,7 +1797,7 @@ private static final long serialVersionUID = 0L;
        * Response to a request for service status.
        * </pre>
        *
-       * <code>.bloombox.schema.services.telemetry.v1beta4.TelemetryPing.Response response = 2;</code>
+       * <code>.bloombox.services.telemetry.v1beta4.TelemetryPing.Response response = 2;</code>
        */
       public boolean hasResponse() {
         return responseBuilder_ != null || response_ != null;
@@ -1733,7 +1807,7 @@ private static final long serialVersionUID = 0L;
        * Response to a request for service status.
        * </pre>
        *
-       * <code>.bloombox.schema.services.telemetry.v1beta4.TelemetryPing.Response response = 2;</code>
+       * <code>.bloombox.services.telemetry.v1beta4.TelemetryPing.Response response = 2;</code>
        */
       public io.bloombox.schema.services.telemetry.v1beta4.TelemetryPing.Response getResponse() {
         if (responseBuilder_ == null) {
@@ -1747,7 +1821,7 @@ private static final long serialVersionUID = 0L;
        * Response to a request for service status.
        * </pre>
        *
-       * <code>.bloombox.schema.services.telemetry.v1beta4.TelemetryPing.Response response = 2;</code>
+       * <code>.bloombox.services.telemetry.v1beta4.TelemetryPing.Response response = 2;</code>
        */
       public Builder setResponse(io.bloombox.schema.services.telemetry.v1beta4.TelemetryPing.Response value) {
         if (responseBuilder_ == null) {
@@ -1767,7 +1841,7 @@ private static final long serialVersionUID = 0L;
        * Response to a request for service status.
        * </pre>
        *
-       * <code>.bloombox.schema.services.telemetry.v1beta4.TelemetryPing.Response response = 2;</code>
+       * <code>.bloombox.services.telemetry.v1beta4.TelemetryPing.Response response = 2;</code>
        */
       public Builder setResponse(
           io.bloombox.schema.services.telemetry.v1beta4.TelemetryPing.Response.Builder builderForValue) {
@@ -1785,7 +1859,7 @@ private static final long serialVersionUID = 0L;
        * Response to a request for service status.
        * </pre>
        *
-       * <code>.bloombox.schema.services.telemetry.v1beta4.TelemetryPing.Response response = 2;</code>
+       * <code>.bloombox.services.telemetry.v1beta4.TelemetryPing.Response response = 2;</code>
        */
       public Builder mergeResponse(io.bloombox.schema.services.telemetry.v1beta4.TelemetryPing.Response value) {
         if (responseBuilder_ == null) {
@@ -1807,7 +1881,7 @@ private static final long serialVersionUID = 0L;
        * Response to a request for service status.
        * </pre>
        *
-       * <code>.bloombox.schema.services.telemetry.v1beta4.TelemetryPing.Response response = 2;</code>
+       * <code>.bloombox.services.telemetry.v1beta4.TelemetryPing.Response response = 2;</code>
        */
       public Builder clearResponse() {
         if (responseBuilder_ == null) {
@@ -1825,7 +1899,7 @@ private static final long serialVersionUID = 0L;
        * Response to a request for service status.
        * </pre>
        *
-       * <code>.bloombox.schema.services.telemetry.v1beta4.TelemetryPing.Response response = 2;</code>
+       * <code>.bloombox.services.telemetry.v1beta4.TelemetryPing.Response response = 2;</code>
        */
       public io.bloombox.schema.services.telemetry.v1beta4.TelemetryPing.Response.Builder getResponseBuilder() {
         
@@ -1837,7 +1911,7 @@ private static final long serialVersionUID = 0L;
        * Response to a request for service status.
        * </pre>
        *
-       * <code>.bloombox.schema.services.telemetry.v1beta4.TelemetryPing.Response response = 2;</code>
+       * <code>.bloombox.services.telemetry.v1beta4.TelemetryPing.Response response = 2;</code>
        */
       public io.bloombox.schema.services.telemetry.v1beta4.TelemetryPing.ResponseOrBuilder getResponseOrBuilder() {
         if (responseBuilder_ != null) {
@@ -1852,7 +1926,7 @@ private static final long serialVersionUID = 0L;
        * Response to a request for service status.
        * </pre>
        *
-       * <code>.bloombox.schema.services.telemetry.v1beta4.TelemetryPing.Response response = 2;</code>
+       * <code>.bloombox.services.telemetry.v1beta4.TelemetryPing.Response response = 2;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
           io.bloombox.schema.services.telemetry.v1beta4.TelemetryPing.Response, io.bloombox.schema.services.telemetry.v1beta4.TelemetryPing.Response.Builder, io.bloombox.schema.services.telemetry.v1beta4.TelemetryPing.ResponseOrBuilder> 
@@ -1867,21 +1941,23 @@ private static final long serialVersionUID = 0L;
         }
         return responseBuilder_;
       }
+      @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
         return super.setUnknownFieldsProto3(unknownFields);
       }
 
+      @java.lang.Override
       public final Builder mergeUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
         return super.mergeUnknownFields(unknownFields);
       }
 
 
-      // @@protoc_insertion_point(builder_scope:bloombox.schema.services.telemetry.v1beta4.TelemetryPing.Operation)
+      // @@protoc_insertion_point(builder_scope:bloombox.services.telemetry.v1beta4.TelemetryPing.Operation)
     }
 
-    // @@protoc_insertion_point(class_scope:bloombox.schema.services.telemetry.v1beta4.TelemetryPing.Operation)
+    // @@protoc_insertion_point(class_scope:bloombox.services.telemetry.v1beta4.TelemetryPing.Operation)
     private static final io.bloombox.schema.services.telemetry.v1beta4.TelemetryPing.Operation DEFAULT_INSTANCE;
     static {
       DEFAULT_INSTANCE = new io.bloombox.schema.services.telemetry.v1beta4.TelemetryPing.Operation();
@@ -1893,6 +1969,7 @@ private static final long serialVersionUID = 0L;
 
     private static final com.google.protobuf.Parser<Operation>
         PARSER = new com.google.protobuf.AbstractParser<Operation>() {
+      @java.lang.Override
       public Operation parsePartialFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -1910,6 +1987,7 @@ private static final long serialVersionUID = 0L;
       return PARSER;
     }
 
+    @java.lang.Override
     public io.bloombox.schema.services.telemetry.v1beta4.TelemetryPing.Operation getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
@@ -1917,6 +1995,7 @@ private static final long serialVersionUID = 0L;
   }
 
   private byte memoizedIsInitialized = -1;
+  @java.lang.Override
   public final boolean isInitialized() {
     byte isInitialized = memoizedIsInitialized;
     if (isInitialized == 1) return true;
@@ -1926,11 +2005,13 @@ private static final long serialVersionUID = 0L;
     return true;
   }
 
+  @java.lang.Override
   public void writeTo(com.google.protobuf.CodedOutputStream output)
                       throws java.io.IOException {
     unknownFields.writeTo(output);
   }
 
+  @java.lang.Override
   public int getSerializedSize() {
     int size = memoizedSize;
     if (size != -1) return size;
@@ -2038,6 +2119,7 @@ private static final long serialVersionUID = 0L;
         .parseWithIOException(PARSER, input, extensionRegistry);
   }
 
+  @java.lang.Override
   public Builder newBuilderForType() { return newBuilder(); }
   public static Builder newBuilder() {
     return DEFAULT_INSTANCE.toBuilder();
@@ -2045,6 +2127,7 @@ private static final long serialVersionUID = 0L;
   public static Builder newBuilder(io.bloombox.schema.services.telemetry.v1beta4.TelemetryPing prototype) {
     return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
   }
+  @java.lang.Override
   public Builder toBuilder() {
     return this == DEFAULT_INSTANCE
         ? new Builder() : new Builder().mergeFrom(this);
@@ -2061,20 +2144,21 @@ private static final long serialVersionUID = 0L;
    * Specifies an RPC operation to retrieve status information for the telemetry service.
    * </pre>
    *
-   * Protobuf type {@code bloombox.schema.services.telemetry.v1beta4.TelemetryPing}
+   * Protobuf type {@code bloombox.services.telemetry.v1beta4.TelemetryPing}
    */
   public static final class Builder extends
       com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-      // @@protoc_insertion_point(builder_implements:bloombox.schema.services.telemetry.v1beta4.TelemetryPing)
+      // @@protoc_insertion_point(builder_implements:bloombox.services.telemetry.v1beta4.TelemetryPing)
       io.bloombox.schema.services.telemetry.v1beta4.TelemetryPingOrBuilder {
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return io.bloombox.schema.services.telemetry.v1beta4.TelemetryServiceBeta4.internal_static_bloombox_schema_services_telemetry_v1beta4_TelemetryPing_descriptor;
+      return io.bloombox.schema.services.telemetry.v1beta4.TelemetryServiceBeta4.internal_static_bloombox_services_telemetry_v1beta4_TelemetryPing_descriptor;
     }
 
+    @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return io.bloombox.schema.services.telemetry.v1beta4.TelemetryServiceBeta4.internal_static_bloombox_schema_services_telemetry_v1beta4_TelemetryPing_fieldAccessorTable
+      return io.bloombox.schema.services.telemetry.v1beta4.TelemetryServiceBeta4.internal_static_bloombox_services_telemetry_v1beta4_TelemetryPing_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
               io.bloombox.schema.services.telemetry.v1beta4.TelemetryPing.class, io.bloombox.schema.services.telemetry.v1beta4.TelemetryPing.Builder.class);
     }
@@ -2094,20 +2178,24 @@ private static final long serialVersionUID = 0L;
               .alwaysUseFieldBuilders) {
       }
     }
+    @java.lang.Override
     public Builder clear() {
       super.clear();
       return this;
     }
 
+    @java.lang.Override
     public com.google.protobuf.Descriptors.Descriptor
         getDescriptorForType() {
-      return io.bloombox.schema.services.telemetry.v1beta4.TelemetryServiceBeta4.internal_static_bloombox_schema_services_telemetry_v1beta4_TelemetryPing_descriptor;
+      return io.bloombox.schema.services.telemetry.v1beta4.TelemetryServiceBeta4.internal_static_bloombox_services_telemetry_v1beta4_TelemetryPing_descriptor;
     }
 
+    @java.lang.Override
     public io.bloombox.schema.services.telemetry.v1beta4.TelemetryPing getDefaultInstanceForType() {
       return io.bloombox.schema.services.telemetry.v1beta4.TelemetryPing.getDefaultInstance();
     }
 
+    @java.lang.Override
     public io.bloombox.schema.services.telemetry.v1beta4.TelemetryPing build() {
       io.bloombox.schema.services.telemetry.v1beta4.TelemetryPing result = buildPartial();
       if (!result.isInitialized()) {
@@ -2116,38 +2204,46 @@ private static final long serialVersionUID = 0L;
       return result;
     }
 
+    @java.lang.Override
     public io.bloombox.schema.services.telemetry.v1beta4.TelemetryPing buildPartial() {
       io.bloombox.schema.services.telemetry.v1beta4.TelemetryPing result = new io.bloombox.schema.services.telemetry.v1beta4.TelemetryPing(this);
       onBuilt();
       return result;
     }
 
+    @java.lang.Override
     public Builder clone() {
       return (Builder) super.clone();
     }
+    @java.lang.Override
     public Builder setField(
         com.google.protobuf.Descriptors.FieldDescriptor field,
         java.lang.Object value) {
       return (Builder) super.setField(field, value);
     }
+    @java.lang.Override
     public Builder clearField(
         com.google.protobuf.Descriptors.FieldDescriptor field) {
       return (Builder) super.clearField(field);
     }
+    @java.lang.Override
     public Builder clearOneof(
         com.google.protobuf.Descriptors.OneofDescriptor oneof) {
       return (Builder) super.clearOneof(oneof);
     }
+    @java.lang.Override
     public Builder setRepeatedField(
         com.google.protobuf.Descriptors.FieldDescriptor field,
         int index, java.lang.Object value) {
       return (Builder) super.setRepeatedField(field, index, value);
     }
+    @java.lang.Override
     public Builder addRepeatedField(
         com.google.protobuf.Descriptors.FieldDescriptor field,
         java.lang.Object value) {
       return (Builder) super.addRepeatedField(field, value);
     }
+    @java.lang.Override
     public Builder mergeFrom(com.google.protobuf.Message other) {
       if (other instanceof io.bloombox.schema.services.telemetry.v1beta4.TelemetryPing) {
         return mergeFrom((io.bloombox.schema.services.telemetry.v1beta4.TelemetryPing)other);
@@ -2164,10 +2260,12 @@ private static final long serialVersionUID = 0L;
       return this;
     }
 
+    @java.lang.Override
     public final boolean isInitialized() {
       return true;
     }
 
+    @java.lang.Override
     public Builder mergeFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -2185,21 +2283,23 @@ private static final long serialVersionUID = 0L;
       }
       return this;
     }
+    @java.lang.Override
     public final Builder setUnknownFields(
         final com.google.protobuf.UnknownFieldSet unknownFields) {
       return super.setUnknownFieldsProto3(unknownFields);
     }
 
+    @java.lang.Override
     public final Builder mergeUnknownFields(
         final com.google.protobuf.UnknownFieldSet unknownFields) {
       return super.mergeUnknownFields(unknownFields);
     }
 
 
-    // @@protoc_insertion_point(builder_scope:bloombox.schema.services.telemetry.v1beta4.TelemetryPing)
+    // @@protoc_insertion_point(builder_scope:bloombox.services.telemetry.v1beta4.TelemetryPing)
   }
 
-  // @@protoc_insertion_point(class_scope:bloombox.schema.services.telemetry.v1beta4.TelemetryPing)
+  // @@protoc_insertion_point(class_scope:bloombox.services.telemetry.v1beta4.TelemetryPing)
   private static final io.bloombox.schema.services.telemetry.v1beta4.TelemetryPing DEFAULT_INSTANCE;
   static {
     DEFAULT_INSTANCE = new io.bloombox.schema.services.telemetry.v1beta4.TelemetryPing();
@@ -2211,6 +2311,7 @@ private static final long serialVersionUID = 0L;
 
   private static final com.google.protobuf.Parser<TelemetryPing>
       PARSER = new com.google.protobuf.AbstractParser<TelemetryPing>() {
+    @java.lang.Override
     public TelemetryPing parsePartialFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -2228,6 +2329,7 @@ private static final long serialVersionUID = 0L;
     return PARSER;
   }
 
+  @java.lang.Override
   public io.bloombox.schema.services.telemetry.v1beta4.TelemetryPing getDefaultInstanceForType() {
     return DEFAULT_INSTANCE;
   }

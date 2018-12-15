@@ -1,11 +1,12 @@
 /*
- * Copyright 2018, Bloombox, LLC.
+ * Copyright 2018, Momentum Ideas, Co. All rights reserved.
  *
- * Licensed under the Apache License, Version 2.0 (the "License");
- * you may not use this file except in compliance with the License.
- * You may obtain a copy of the License at
- *
- *     http://www.apache.org/licenses/LICENSE-2.0
+ * Source and object computer code contained herein is the private intellectual
+ * property of Momentum Ideas Co., a Delaware Corporation. Use of this
+ * code in source form requires permission in writing before use or the
+ * assembly, distribution, or publishing of derivative works, for commercial
+ * purposes or any other purpose, from a duly authorized officer of Momentum
+ * Ideas Co.
  *
  * Unless required by applicable law or agreed to in writing, software
  * distributed under the License is distributed on an "AS IS" BASIS,
@@ -31,7 +32,7 @@ public final class CommsTask {
         (com.google.protobuf.ExtensionRegistryLite) registry);
   }
   public interface SendOperationOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:bloombox.schema.comms.SendOperation)
+      // @@protoc_insertion_point(interface_extends:bloombox.comms.SendOperation)
       com.google.protobuf.MessageOrBuilder {
 
     /**
@@ -57,7 +58,7 @@ public final class CommsTask {
      * Channel for which this send operation is operating.
      * </pre>
      *
-     * <code>.bloombox.schema.comms.Channel channel = 2;</code>
+     * <code>.bloombox.comms.Channel channel = 2;</code>
      */
     int getChannelValue();
     /**
@@ -65,7 +66,7 @@ public final class CommsTask {
      * Channel for which this send operation is operating.
      * </pre>
      *
-     * <code>.bloombox.schema.comms.Channel channel = 2;</code>
+     * <code>.bloombox.comms.Channel channel = 2;</code>
      */
     io.bloombox.schema.comms.GenericComms.Channel getChannel();
 
@@ -74,7 +75,7 @@ public final class CommsTask {
      * Status for this operation.
      * </pre>
      *
-     * <code>.bloombox.schema.comms.SendOperation.Status status = 3;</code>
+     * <code>.bloombox.comms.SendOperation.Status status = 3;</code>
      */
     int getStatusValue();
     /**
@@ -82,7 +83,7 @@ public final class CommsTask {
      * Status for this operation.
      * </pre>
      *
-     * <code>.bloombox.schema.comms.SendOperation.Status status = 3;</code>
+     * <code>.bloombox.comms.SendOperation.Status status = 3;</code>
      */
     io.bloombox.schema.comms.CommsTask.SendOperation.Status getStatus();
 
@@ -100,7 +101,7 @@ public final class CommsTask {
      * Batch of SMS send operations.
      * </pre>
      *
-     * <code>.bloombox.schema.comms.SMSTransmission sms = 10;</code>
+     * <code>.bloombox.comms.SMSTransmission sms = 10;</code>
      */
     boolean hasSms();
     /**
@@ -108,7 +109,7 @@ public final class CommsTask {
      * Batch of SMS send operations.
      * </pre>
      *
-     * <code>.bloombox.schema.comms.SMSTransmission sms = 10;</code>
+     * <code>.bloombox.comms.SMSTransmission sms = 10;</code>
      */
     io.bloombox.schema.comms.SMSComms.SMSTransmission getSms();
     /**
@@ -116,7 +117,7 @@ public final class CommsTask {
      * Batch of SMS send operations.
      * </pre>
      *
-     * <code>.bloombox.schema.comms.SMSTransmission sms = 10;</code>
+     * <code>.bloombox.comms.SMSTransmission sms = 10;</code>
      */
     io.bloombox.schema.comms.SMSComms.SMSTransmissionOrBuilder getSmsOrBuilder();
 
@@ -125,7 +126,7 @@ public final class CommsTask {
      * Batch of email send operations.
      * </pre>
      *
-     * <code>.bloombox.schema.comms.EmailTransmission email = 11;</code>
+     * <code>.bloombox.comms.EmailTransmission email = 11;</code>
      */
     boolean hasEmail();
     /**
@@ -133,7 +134,7 @@ public final class CommsTask {
      * Batch of email send operations.
      * </pre>
      *
-     * <code>.bloombox.schema.comms.EmailTransmission email = 11;</code>
+     * <code>.bloombox.comms.EmailTransmission email = 11;</code>
      */
     io.bloombox.schema.comms.EmailComms.EmailTransmission getEmail();
     /**
@@ -141,7 +142,7 @@ public final class CommsTask {
      * Batch of email send operations.
      * </pre>
      *
-     * <code>.bloombox.schema.comms.EmailTransmission email = 11;</code>
+     * <code>.bloombox.comms.EmailTransmission email = 11;</code>
      */
     io.bloombox.schema.comms.EmailComms.EmailTransmissionOrBuilder getEmailOrBuilder();
 
@@ -152,11 +153,11 @@ public final class CommsTask {
    * Send a batch of either SMS or email messages.
    * </pre>
    *
-   * Protobuf type {@code bloombox.schema.comms.SendOperation}
+   * Protobuf type {@code bloombox.comms.SendOperation}
    */
   public  static final class SendOperation extends
       com.google.protobuf.GeneratedMessageV3 implements
-      // @@protoc_insertion_point(message_implements:bloombox.schema.comms.SendOperation)
+      // @@protoc_insertion_point(message_implements:bloombox.comms.SendOperation)
       SendOperationOrBuilder {
   private static final long serialVersionUID = 0L;
     // Use SendOperation.newBuilder() to construct.
@@ -194,13 +195,6 @@ public final class CommsTask {
             case 0:
               done = true;
               break;
-            default: {
-              if (!parseUnknownFieldProto3(
-                  input, unknownFields, extensionRegistry, tag)) {
-                done = true;
-              }
-              break;
-            }
             case 10: {
               java.lang.String s = input.readStringRequireUtf8();
 
@@ -252,6 +246,13 @@ public final class CommsTask {
               operationCase_ = 11;
               break;
             }
+            default: {
+              if (!parseUnknownFieldProto3(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
           }
         }
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
@@ -266,12 +267,13 @@ public final class CommsTask {
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return io.bloombox.schema.comms.CommsTask.internal_static_bloombox_schema_comms_SendOperation_descriptor;
+      return io.bloombox.schema.comms.CommsTask.internal_static_bloombox_comms_SendOperation_descriptor;
     }
 
+    @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return io.bloombox.schema.comms.CommsTask.internal_static_bloombox_schema_comms_SendOperation_fieldAccessorTable
+      return io.bloombox.schema.comms.CommsTask.internal_static_bloombox_comms_SendOperation_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
               io.bloombox.schema.comms.CommsTask.SendOperation.class, io.bloombox.schema.comms.CommsTask.SendOperation.Builder.class);
     }
@@ -281,7 +283,7 @@ public final class CommsTask {
      * Statuses that a send operation may assume.
      * </pre>
      *
-     * Protobuf enum {@code bloombox.schema.comms.SendOperation.Status}
+     * Protobuf enum {@code bloombox.comms.SendOperation.Status}
      */
     public enum Status
         implements com.google.protobuf.ProtocolMessageEnum {
@@ -425,7 +427,7 @@ public final class CommsTask {
         this.value = value;
       }
 
-      // @@protoc_insertion_point(enum_scope:bloombox.schema.comms.SendOperation.Status)
+      // @@protoc_insertion_point(enum_scope:bloombox.comms.SendOperation.Status)
     }
 
     private int operationCase_ = 0;
@@ -515,7 +517,7 @@ public final class CommsTask {
      * Channel for which this send operation is operating.
      * </pre>
      *
-     * <code>.bloombox.schema.comms.Channel channel = 2;</code>
+     * <code>.bloombox.comms.Channel channel = 2;</code>
      */
     public int getChannelValue() {
       return channel_;
@@ -525,9 +527,10 @@ public final class CommsTask {
      * Channel for which this send operation is operating.
      * </pre>
      *
-     * <code>.bloombox.schema.comms.Channel channel = 2;</code>
+     * <code>.bloombox.comms.Channel channel = 2;</code>
      */
     public io.bloombox.schema.comms.GenericComms.Channel getChannel() {
+      @SuppressWarnings("deprecation")
       io.bloombox.schema.comms.GenericComms.Channel result = io.bloombox.schema.comms.GenericComms.Channel.valueOf(channel_);
       return result == null ? io.bloombox.schema.comms.GenericComms.Channel.UNRECOGNIZED : result;
     }
@@ -539,7 +542,7 @@ public final class CommsTask {
      * Status for this operation.
      * </pre>
      *
-     * <code>.bloombox.schema.comms.SendOperation.Status status = 3;</code>
+     * <code>.bloombox.comms.SendOperation.Status status = 3;</code>
      */
     public int getStatusValue() {
       return status_;
@@ -549,9 +552,10 @@ public final class CommsTask {
      * Status for this operation.
      * </pre>
      *
-     * <code>.bloombox.schema.comms.SendOperation.Status status = 3;</code>
+     * <code>.bloombox.comms.SendOperation.Status status = 3;</code>
      */
     public io.bloombox.schema.comms.CommsTask.SendOperation.Status getStatus() {
+      @SuppressWarnings("deprecation")
       io.bloombox.schema.comms.CommsTask.SendOperation.Status result = io.bloombox.schema.comms.CommsTask.SendOperation.Status.valueOf(status_);
       return result == null ? io.bloombox.schema.comms.CommsTask.SendOperation.Status.UNRECOGNIZED : result;
     }
@@ -575,7 +579,7 @@ public final class CommsTask {
      * Batch of SMS send operations.
      * </pre>
      *
-     * <code>.bloombox.schema.comms.SMSTransmission sms = 10;</code>
+     * <code>.bloombox.comms.SMSTransmission sms = 10;</code>
      */
     public boolean hasSms() {
       return operationCase_ == 10;
@@ -585,7 +589,7 @@ public final class CommsTask {
      * Batch of SMS send operations.
      * </pre>
      *
-     * <code>.bloombox.schema.comms.SMSTransmission sms = 10;</code>
+     * <code>.bloombox.comms.SMSTransmission sms = 10;</code>
      */
     public io.bloombox.schema.comms.SMSComms.SMSTransmission getSms() {
       if (operationCase_ == 10) {
@@ -598,7 +602,7 @@ public final class CommsTask {
      * Batch of SMS send operations.
      * </pre>
      *
-     * <code>.bloombox.schema.comms.SMSTransmission sms = 10;</code>
+     * <code>.bloombox.comms.SMSTransmission sms = 10;</code>
      */
     public io.bloombox.schema.comms.SMSComms.SMSTransmissionOrBuilder getSmsOrBuilder() {
       if (operationCase_ == 10) {
@@ -613,7 +617,7 @@ public final class CommsTask {
      * Batch of email send operations.
      * </pre>
      *
-     * <code>.bloombox.schema.comms.EmailTransmission email = 11;</code>
+     * <code>.bloombox.comms.EmailTransmission email = 11;</code>
      */
     public boolean hasEmail() {
       return operationCase_ == 11;
@@ -623,7 +627,7 @@ public final class CommsTask {
      * Batch of email send operations.
      * </pre>
      *
-     * <code>.bloombox.schema.comms.EmailTransmission email = 11;</code>
+     * <code>.bloombox.comms.EmailTransmission email = 11;</code>
      */
     public io.bloombox.schema.comms.EmailComms.EmailTransmission getEmail() {
       if (operationCase_ == 11) {
@@ -636,7 +640,7 @@ public final class CommsTask {
      * Batch of email send operations.
      * </pre>
      *
-     * <code>.bloombox.schema.comms.EmailTransmission email = 11;</code>
+     * <code>.bloombox.comms.EmailTransmission email = 11;</code>
      */
     public io.bloombox.schema.comms.EmailComms.EmailTransmissionOrBuilder getEmailOrBuilder() {
       if (operationCase_ == 11) {
@@ -646,6 +650,7 @@ public final class CommsTask {
     }
 
     private byte memoizedIsInitialized = -1;
+    @java.lang.Override
     public final boolean isInitialized() {
       byte isInitialized = memoizedIsInitialized;
       if (isInitialized == 1) return true;
@@ -655,6 +660,7 @@ public final class CommsTask {
       return true;
     }
 
+    @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
       if (!getUuidBytes().isEmpty()) {
@@ -678,6 +684,7 @@ public final class CommsTask {
       unknownFields.writeTo(output);
     }
 
+    @java.lang.Override
     public int getSerializedSize() {
       int size = memoizedSize;
       if (size != -1) return size;
@@ -850,6 +857,7 @@ public final class CommsTask {
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
 
+    @java.lang.Override
     public Builder newBuilderForType() { return newBuilder(); }
     public static Builder newBuilder() {
       return DEFAULT_INSTANCE.toBuilder();
@@ -857,6 +865,7 @@ public final class CommsTask {
     public static Builder newBuilder(io.bloombox.schema.comms.CommsTask.SendOperation prototype) {
       return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
     }
+    @java.lang.Override
     public Builder toBuilder() {
       return this == DEFAULT_INSTANCE
           ? new Builder() : new Builder().mergeFrom(this);
@@ -873,20 +882,21 @@ public final class CommsTask {
      * Send a batch of either SMS or email messages.
      * </pre>
      *
-     * Protobuf type {@code bloombox.schema.comms.SendOperation}
+     * Protobuf type {@code bloombox.comms.SendOperation}
      */
     public static final class Builder extends
         com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:bloombox.schema.comms.SendOperation)
+        // @@protoc_insertion_point(builder_implements:bloombox.comms.SendOperation)
         io.bloombox.schema.comms.CommsTask.SendOperationOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return io.bloombox.schema.comms.CommsTask.internal_static_bloombox_schema_comms_SendOperation_descriptor;
+        return io.bloombox.schema.comms.CommsTask.internal_static_bloombox_comms_SendOperation_descriptor;
       }
 
+      @java.lang.Override
       protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return io.bloombox.schema.comms.CommsTask.internal_static_bloombox_schema_comms_SendOperation_fieldAccessorTable
+        return io.bloombox.schema.comms.CommsTask.internal_static_bloombox_comms_SendOperation_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
                 io.bloombox.schema.comms.CommsTask.SendOperation.class, io.bloombox.schema.comms.CommsTask.SendOperation.Builder.class);
       }
@@ -906,6 +916,7 @@ public final class CommsTask {
                 .alwaysUseFieldBuilders) {
         }
       }
+      @java.lang.Override
       public Builder clear() {
         super.clear();
         uuid_ = "";
@@ -921,15 +932,18 @@ public final class CommsTask {
         return this;
       }
 
+      @java.lang.Override
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return io.bloombox.schema.comms.CommsTask.internal_static_bloombox_schema_comms_SendOperation_descriptor;
+        return io.bloombox.schema.comms.CommsTask.internal_static_bloombox_comms_SendOperation_descriptor;
       }
 
+      @java.lang.Override
       public io.bloombox.schema.comms.CommsTask.SendOperation getDefaultInstanceForType() {
         return io.bloombox.schema.comms.CommsTask.SendOperation.getDefaultInstance();
       }
 
+      @java.lang.Override
       public io.bloombox.schema.comms.CommsTask.SendOperation build() {
         io.bloombox.schema.comms.CommsTask.SendOperation result = buildPartial();
         if (!result.isInitialized()) {
@@ -938,6 +952,7 @@ public final class CommsTask {
         return result;
       }
 
+      @java.lang.Override
       public io.bloombox.schema.comms.CommsTask.SendOperation buildPartial() {
         io.bloombox.schema.comms.CommsTask.SendOperation result = new io.bloombox.schema.comms.CommsTask.SendOperation(this);
         result.uuid_ = uuid_;
@@ -963,32 +978,39 @@ public final class CommsTask {
         return result;
       }
 
+      @java.lang.Override
       public Builder clone() {
         return (Builder) super.clone();
       }
+      @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
         return (Builder) super.setField(field, value);
       }
+      @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
         return (Builder) super.clearField(field);
       }
+      @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
         return (Builder) super.clearOneof(oneof);
       }
+      @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
         return (Builder) super.setRepeatedField(field, index, value);
       }
+      @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
         return (Builder) super.addRepeatedField(field, value);
       }
+      @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
         if (other instanceof io.bloombox.schema.comms.CommsTask.SendOperation) {
           return mergeFrom((io.bloombox.schema.comms.CommsTask.SendOperation)other);
@@ -1031,10 +1053,12 @@ public final class CommsTask {
         return this;
       }
 
+      @java.lang.Override
       public final boolean isInitialized() {
         return true;
       }
 
+      @java.lang.Override
       public Builder mergeFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -1163,7 +1187,7 @@ public final class CommsTask {
        * Channel for which this send operation is operating.
        * </pre>
        *
-       * <code>.bloombox.schema.comms.Channel channel = 2;</code>
+       * <code>.bloombox.comms.Channel channel = 2;</code>
        */
       public int getChannelValue() {
         return channel_;
@@ -1173,7 +1197,7 @@ public final class CommsTask {
        * Channel for which this send operation is operating.
        * </pre>
        *
-       * <code>.bloombox.schema.comms.Channel channel = 2;</code>
+       * <code>.bloombox.comms.Channel channel = 2;</code>
        */
       public Builder setChannelValue(int value) {
         channel_ = value;
@@ -1185,9 +1209,10 @@ public final class CommsTask {
        * Channel for which this send operation is operating.
        * </pre>
        *
-       * <code>.bloombox.schema.comms.Channel channel = 2;</code>
+       * <code>.bloombox.comms.Channel channel = 2;</code>
        */
       public io.bloombox.schema.comms.GenericComms.Channel getChannel() {
+        @SuppressWarnings("deprecation")
         io.bloombox.schema.comms.GenericComms.Channel result = io.bloombox.schema.comms.GenericComms.Channel.valueOf(channel_);
         return result == null ? io.bloombox.schema.comms.GenericComms.Channel.UNRECOGNIZED : result;
       }
@@ -1196,7 +1221,7 @@ public final class CommsTask {
        * Channel for which this send operation is operating.
        * </pre>
        *
-       * <code>.bloombox.schema.comms.Channel channel = 2;</code>
+       * <code>.bloombox.comms.Channel channel = 2;</code>
        */
       public Builder setChannel(io.bloombox.schema.comms.GenericComms.Channel value) {
         if (value == null) {
@@ -1212,7 +1237,7 @@ public final class CommsTask {
        * Channel for which this send operation is operating.
        * </pre>
        *
-       * <code>.bloombox.schema.comms.Channel channel = 2;</code>
+       * <code>.bloombox.comms.Channel channel = 2;</code>
        */
       public Builder clearChannel() {
         
@@ -1227,7 +1252,7 @@ public final class CommsTask {
        * Status for this operation.
        * </pre>
        *
-       * <code>.bloombox.schema.comms.SendOperation.Status status = 3;</code>
+       * <code>.bloombox.comms.SendOperation.Status status = 3;</code>
        */
       public int getStatusValue() {
         return status_;
@@ -1237,7 +1262,7 @@ public final class CommsTask {
        * Status for this operation.
        * </pre>
        *
-       * <code>.bloombox.schema.comms.SendOperation.Status status = 3;</code>
+       * <code>.bloombox.comms.SendOperation.Status status = 3;</code>
        */
       public Builder setStatusValue(int value) {
         status_ = value;
@@ -1249,9 +1274,10 @@ public final class CommsTask {
        * Status for this operation.
        * </pre>
        *
-       * <code>.bloombox.schema.comms.SendOperation.Status status = 3;</code>
+       * <code>.bloombox.comms.SendOperation.Status status = 3;</code>
        */
       public io.bloombox.schema.comms.CommsTask.SendOperation.Status getStatus() {
+        @SuppressWarnings("deprecation")
         io.bloombox.schema.comms.CommsTask.SendOperation.Status result = io.bloombox.schema.comms.CommsTask.SendOperation.Status.valueOf(status_);
         return result == null ? io.bloombox.schema.comms.CommsTask.SendOperation.Status.UNRECOGNIZED : result;
       }
@@ -1260,7 +1286,7 @@ public final class CommsTask {
        * Status for this operation.
        * </pre>
        *
-       * <code>.bloombox.schema.comms.SendOperation.Status status = 3;</code>
+       * <code>.bloombox.comms.SendOperation.Status status = 3;</code>
        */
       public Builder setStatus(io.bloombox.schema.comms.CommsTask.SendOperation.Status value) {
         if (value == null) {
@@ -1276,7 +1302,7 @@ public final class CommsTask {
        * Status for this operation.
        * </pre>
        *
-       * <code>.bloombox.schema.comms.SendOperation.Status status = 3;</code>
+       * <code>.bloombox.comms.SendOperation.Status status = 3;</code>
        */
       public Builder clearStatus() {
         
@@ -1330,7 +1356,7 @@ public final class CommsTask {
        * Batch of SMS send operations.
        * </pre>
        *
-       * <code>.bloombox.schema.comms.SMSTransmission sms = 10;</code>
+       * <code>.bloombox.comms.SMSTransmission sms = 10;</code>
        */
       public boolean hasSms() {
         return operationCase_ == 10;
@@ -1340,7 +1366,7 @@ public final class CommsTask {
        * Batch of SMS send operations.
        * </pre>
        *
-       * <code>.bloombox.schema.comms.SMSTransmission sms = 10;</code>
+       * <code>.bloombox.comms.SMSTransmission sms = 10;</code>
        */
       public io.bloombox.schema.comms.SMSComms.SMSTransmission getSms() {
         if (smsBuilder_ == null) {
@@ -1360,7 +1386,7 @@ public final class CommsTask {
        * Batch of SMS send operations.
        * </pre>
        *
-       * <code>.bloombox.schema.comms.SMSTransmission sms = 10;</code>
+       * <code>.bloombox.comms.SMSTransmission sms = 10;</code>
        */
       public Builder setSms(io.bloombox.schema.comms.SMSComms.SMSTransmission value) {
         if (smsBuilder_ == null) {
@@ -1380,7 +1406,7 @@ public final class CommsTask {
        * Batch of SMS send operations.
        * </pre>
        *
-       * <code>.bloombox.schema.comms.SMSTransmission sms = 10;</code>
+       * <code>.bloombox.comms.SMSTransmission sms = 10;</code>
        */
       public Builder setSms(
           io.bloombox.schema.comms.SMSComms.SMSTransmission.Builder builderForValue) {
@@ -1398,7 +1424,7 @@ public final class CommsTask {
        * Batch of SMS send operations.
        * </pre>
        *
-       * <code>.bloombox.schema.comms.SMSTransmission sms = 10;</code>
+       * <code>.bloombox.comms.SMSTransmission sms = 10;</code>
        */
       public Builder mergeSms(io.bloombox.schema.comms.SMSComms.SMSTransmission value) {
         if (smsBuilder_ == null) {
@@ -1424,7 +1450,7 @@ public final class CommsTask {
        * Batch of SMS send operations.
        * </pre>
        *
-       * <code>.bloombox.schema.comms.SMSTransmission sms = 10;</code>
+       * <code>.bloombox.comms.SMSTransmission sms = 10;</code>
        */
       public Builder clearSms() {
         if (smsBuilder_ == null) {
@@ -1447,7 +1473,7 @@ public final class CommsTask {
        * Batch of SMS send operations.
        * </pre>
        *
-       * <code>.bloombox.schema.comms.SMSTransmission sms = 10;</code>
+       * <code>.bloombox.comms.SMSTransmission sms = 10;</code>
        */
       public io.bloombox.schema.comms.SMSComms.SMSTransmission.Builder getSmsBuilder() {
         return getSmsFieldBuilder().getBuilder();
@@ -1457,7 +1483,7 @@ public final class CommsTask {
        * Batch of SMS send operations.
        * </pre>
        *
-       * <code>.bloombox.schema.comms.SMSTransmission sms = 10;</code>
+       * <code>.bloombox.comms.SMSTransmission sms = 10;</code>
        */
       public io.bloombox.schema.comms.SMSComms.SMSTransmissionOrBuilder getSmsOrBuilder() {
         if ((operationCase_ == 10) && (smsBuilder_ != null)) {
@@ -1474,7 +1500,7 @@ public final class CommsTask {
        * Batch of SMS send operations.
        * </pre>
        *
-       * <code>.bloombox.schema.comms.SMSTransmission sms = 10;</code>
+       * <code>.bloombox.comms.SMSTransmission sms = 10;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
           io.bloombox.schema.comms.SMSComms.SMSTransmission, io.bloombox.schema.comms.SMSComms.SMSTransmission.Builder, io.bloombox.schema.comms.SMSComms.SMSTransmissionOrBuilder> 
@@ -1502,7 +1528,7 @@ public final class CommsTask {
        * Batch of email send operations.
        * </pre>
        *
-       * <code>.bloombox.schema.comms.EmailTransmission email = 11;</code>
+       * <code>.bloombox.comms.EmailTransmission email = 11;</code>
        */
       public boolean hasEmail() {
         return operationCase_ == 11;
@@ -1512,7 +1538,7 @@ public final class CommsTask {
        * Batch of email send operations.
        * </pre>
        *
-       * <code>.bloombox.schema.comms.EmailTransmission email = 11;</code>
+       * <code>.bloombox.comms.EmailTransmission email = 11;</code>
        */
       public io.bloombox.schema.comms.EmailComms.EmailTransmission getEmail() {
         if (emailBuilder_ == null) {
@@ -1532,7 +1558,7 @@ public final class CommsTask {
        * Batch of email send operations.
        * </pre>
        *
-       * <code>.bloombox.schema.comms.EmailTransmission email = 11;</code>
+       * <code>.bloombox.comms.EmailTransmission email = 11;</code>
        */
       public Builder setEmail(io.bloombox.schema.comms.EmailComms.EmailTransmission value) {
         if (emailBuilder_ == null) {
@@ -1552,7 +1578,7 @@ public final class CommsTask {
        * Batch of email send operations.
        * </pre>
        *
-       * <code>.bloombox.schema.comms.EmailTransmission email = 11;</code>
+       * <code>.bloombox.comms.EmailTransmission email = 11;</code>
        */
       public Builder setEmail(
           io.bloombox.schema.comms.EmailComms.EmailTransmission.Builder builderForValue) {
@@ -1570,7 +1596,7 @@ public final class CommsTask {
        * Batch of email send operations.
        * </pre>
        *
-       * <code>.bloombox.schema.comms.EmailTransmission email = 11;</code>
+       * <code>.bloombox.comms.EmailTransmission email = 11;</code>
        */
       public Builder mergeEmail(io.bloombox.schema.comms.EmailComms.EmailTransmission value) {
         if (emailBuilder_ == null) {
@@ -1596,7 +1622,7 @@ public final class CommsTask {
        * Batch of email send operations.
        * </pre>
        *
-       * <code>.bloombox.schema.comms.EmailTransmission email = 11;</code>
+       * <code>.bloombox.comms.EmailTransmission email = 11;</code>
        */
       public Builder clearEmail() {
         if (emailBuilder_ == null) {
@@ -1619,7 +1645,7 @@ public final class CommsTask {
        * Batch of email send operations.
        * </pre>
        *
-       * <code>.bloombox.schema.comms.EmailTransmission email = 11;</code>
+       * <code>.bloombox.comms.EmailTransmission email = 11;</code>
        */
       public io.bloombox.schema.comms.EmailComms.EmailTransmission.Builder getEmailBuilder() {
         return getEmailFieldBuilder().getBuilder();
@@ -1629,7 +1655,7 @@ public final class CommsTask {
        * Batch of email send operations.
        * </pre>
        *
-       * <code>.bloombox.schema.comms.EmailTransmission email = 11;</code>
+       * <code>.bloombox.comms.EmailTransmission email = 11;</code>
        */
       public io.bloombox.schema.comms.EmailComms.EmailTransmissionOrBuilder getEmailOrBuilder() {
         if ((operationCase_ == 11) && (emailBuilder_ != null)) {
@@ -1646,7 +1672,7 @@ public final class CommsTask {
        * Batch of email send operations.
        * </pre>
        *
-       * <code>.bloombox.schema.comms.EmailTransmission email = 11;</code>
+       * <code>.bloombox.comms.EmailTransmission email = 11;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
           io.bloombox.schema.comms.EmailComms.EmailTransmission, io.bloombox.schema.comms.EmailComms.EmailTransmission.Builder, io.bloombox.schema.comms.EmailComms.EmailTransmissionOrBuilder> 
@@ -1666,21 +1692,23 @@ public final class CommsTask {
         onChanged();;
         return emailBuilder_;
       }
+      @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
         return super.setUnknownFieldsProto3(unknownFields);
       }
 
+      @java.lang.Override
       public final Builder mergeUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
         return super.mergeUnknownFields(unknownFields);
       }
 
 
-      // @@protoc_insertion_point(builder_scope:bloombox.schema.comms.SendOperation)
+      // @@protoc_insertion_point(builder_scope:bloombox.comms.SendOperation)
     }
 
-    // @@protoc_insertion_point(class_scope:bloombox.schema.comms.SendOperation)
+    // @@protoc_insertion_point(class_scope:bloombox.comms.SendOperation)
     private static final io.bloombox.schema.comms.CommsTask.SendOperation DEFAULT_INSTANCE;
     static {
       DEFAULT_INSTANCE = new io.bloombox.schema.comms.CommsTask.SendOperation();
@@ -1692,6 +1720,7 @@ public final class CommsTask {
 
     private static final com.google.protobuf.Parser<SendOperation>
         PARSER = new com.google.protobuf.AbstractParser<SendOperation>() {
+      @java.lang.Override
       public SendOperation parsePartialFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -1709,6 +1738,7 @@ public final class CommsTask {
       return PARSER;
     }
 
+    @java.lang.Override
     public io.bloombox.schema.comms.CommsTask.SendOperation getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
@@ -1716,7 +1746,7 @@ public final class CommsTask {
   }
 
   public interface TriggerOperationOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:bloombox.schema.comms.TriggerOperation)
+      // @@protoc_insertion_point(interface_extends:bloombox.comms.TriggerOperation)
       com.google.protobuf.MessageOrBuilder {
 
     /**
@@ -1846,7 +1876,7 @@ public final class CommsTask {
      * Communication channels to execute for the subject campaign.
      * </pre>
      *
-     * <code>repeated .bloombox.schema.comms.Channel channel = 7;</code>
+     * <code>repeated .bloombox.comms.Channel channel = 7;</code>
      */
     java.util.List<io.bloombox.schema.comms.GenericComms.Channel> getChannelList();
     /**
@@ -1854,7 +1884,7 @@ public final class CommsTask {
      * Communication channels to execute for the subject campaign.
      * </pre>
      *
-     * <code>repeated .bloombox.schema.comms.Channel channel = 7;</code>
+     * <code>repeated .bloombox.comms.Channel channel = 7;</code>
      */
     int getChannelCount();
     /**
@@ -1862,7 +1892,7 @@ public final class CommsTask {
      * Communication channels to execute for the subject campaign.
      * </pre>
      *
-     * <code>repeated .bloombox.schema.comms.Channel channel = 7;</code>
+     * <code>repeated .bloombox.comms.Channel channel = 7;</code>
      */
     io.bloombox.schema.comms.GenericComms.Channel getChannel(int index);
     /**
@@ -1870,7 +1900,7 @@ public final class CommsTask {
      * Communication channels to execute for the subject campaign.
      * </pre>
      *
-     * <code>repeated .bloombox.schema.comms.Channel channel = 7;</code>
+     * <code>repeated .bloombox.comms.Channel channel = 7;</code>
      */
     java.util.List<java.lang.Integer>
     getChannelValueList();
@@ -1879,7 +1909,7 @@ public final class CommsTask {
      * Communication channels to execute for the subject campaign.
      * </pre>
      *
-     * <code>repeated .bloombox.schema.comms.Channel channel = 7;</code>
+     * <code>repeated .bloombox.comms.Channel channel = 7;</code>
      */
     int getChannelValue(int index);
 
@@ -1888,7 +1918,7 @@ public final class CommsTask {
      * Attached/constituent send operations.
      * </pre>
      *
-     * <code>repeated .bloombox.schema.comms.SendOperation op = 8;</code>
+     * <code>repeated .bloombox.comms.SendOperation op = 8;</code>
      */
     java.util.List<io.bloombox.schema.comms.CommsTask.SendOperation> 
         getOpList();
@@ -1897,7 +1927,7 @@ public final class CommsTask {
      * Attached/constituent send operations.
      * </pre>
      *
-     * <code>repeated .bloombox.schema.comms.SendOperation op = 8;</code>
+     * <code>repeated .bloombox.comms.SendOperation op = 8;</code>
      */
     io.bloombox.schema.comms.CommsTask.SendOperation getOp(int index);
     /**
@@ -1905,7 +1935,7 @@ public final class CommsTask {
      * Attached/constituent send operations.
      * </pre>
      *
-     * <code>repeated .bloombox.schema.comms.SendOperation op = 8;</code>
+     * <code>repeated .bloombox.comms.SendOperation op = 8;</code>
      */
     int getOpCount();
     /**
@@ -1913,7 +1943,7 @@ public final class CommsTask {
      * Attached/constituent send operations.
      * </pre>
      *
-     * <code>repeated .bloombox.schema.comms.SendOperation op = 8;</code>
+     * <code>repeated .bloombox.comms.SendOperation op = 8;</code>
      */
     java.util.List<? extends io.bloombox.schema.comms.CommsTask.SendOperationOrBuilder> 
         getOpOrBuilderList();
@@ -1922,7 +1952,7 @@ public final class CommsTask {
      * Attached/constituent send operations.
      * </pre>
      *
-     * <code>repeated .bloombox.schema.comms.SendOperation op = 8;</code>
+     * <code>repeated .bloombox.comms.SendOperation op = 8;</code>
      */
     io.bloombox.schema.comms.CommsTask.SendOperationOrBuilder getOpOrBuilder(
         int index);
@@ -1941,11 +1971,11 @@ public final class CommsTask {
    * Specifies an operation to merge campaign targeting parameters and trigger execution.
    * </pre>
    *
-   * Protobuf type {@code bloombox.schema.comms.TriggerOperation}
+   * Protobuf type {@code bloombox.comms.TriggerOperation}
    */
   public  static final class TriggerOperation extends
       com.google.protobuf.GeneratedMessageV3 implements
-      // @@protoc_insertion_point(message_implements:bloombox.schema.comms.TriggerOperation)
+      // @@protoc_insertion_point(message_implements:bloombox.comms.TriggerOperation)
       TriggerOperationOrBuilder {
   private static final long serialVersionUID = 0L;
     // Use TriggerOperation.newBuilder() to construct.
@@ -1986,13 +2016,6 @@ public final class CommsTask {
             case 0:
               done = true;
               break;
-            default: {
-              if (!parseUnknownFieldProto3(
-                  input, unknownFields, extensionRegistry, tag)) {
-                done = true;
-              }
-              break;
-            }
             case 10: {
               java.lang.String s = input.readStringRequireUtf8();
 
@@ -2080,6 +2103,13 @@ public final class CommsTask {
               dryRun_ = input.readBool();
               break;
             }
+            default: {
+              if (!parseUnknownFieldProto3(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
           }
         }
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
@@ -2100,12 +2130,13 @@ public final class CommsTask {
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return io.bloombox.schema.comms.CommsTask.internal_static_bloombox_schema_comms_TriggerOperation_descriptor;
+      return io.bloombox.schema.comms.CommsTask.internal_static_bloombox_comms_TriggerOperation_descriptor;
     }
 
+    @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return io.bloombox.schema.comms.CommsTask.internal_static_bloombox_schema_comms_TriggerOperation_fieldAccessorTable
+      return io.bloombox.schema.comms.CommsTask.internal_static_bloombox_comms_TriggerOperation_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
               io.bloombox.schema.comms.CommsTask.TriggerOperation.class, io.bloombox.schema.comms.CommsTask.TriggerOperation.Builder.class);
     }
@@ -2352,6 +2383,7 @@ public final class CommsTask {
             new com.google.protobuf.Internal.ListAdapter.Converter<
                 java.lang.Integer, io.bloombox.schema.comms.GenericComms.Channel>() {
               public io.bloombox.schema.comms.GenericComms.Channel convert(java.lang.Integer from) {
+                @SuppressWarnings("deprecation")
                 io.bloombox.schema.comms.GenericComms.Channel result = io.bloombox.schema.comms.GenericComms.Channel.valueOf(from);
                 return result == null ? io.bloombox.schema.comms.GenericComms.Channel.UNRECOGNIZED : result;
               }
@@ -2361,7 +2393,7 @@ public final class CommsTask {
      * Communication channels to execute for the subject campaign.
      * </pre>
      *
-     * <code>repeated .bloombox.schema.comms.Channel channel = 7;</code>
+     * <code>repeated .bloombox.comms.Channel channel = 7;</code>
      */
     public java.util.List<io.bloombox.schema.comms.GenericComms.Channel> getChannelList() {
       return new com.google.protobuf.Internal.ListAdapter<
@@ -2372,7 +2404,7 @@ public final class CommsTask {
      * Communication channels to execute for the subject campaign.
      * </pre>
      *
-     * <code>repeated .bloombox.schema.comms.Channel channel = 7;</code>
+     * <code>repeated .bloombox.comms.Channel channel = 7;</code>
      */
     public int getChannelCount() {
       return channel_.size();
@@ -2382,7 +2414,7 @@ public final class CommsTask {
      * Communication channels to execute for the subject campaign.
      * </pre>
      *
-     * <code>repeated .bloombox.schema.comms.Channel channel = 7;</code>
+     * <code>repeated .bloombox.comms.Channel channel = 7;</code>
      */
     public io.bloombox.schema.comms.GenericComms.Channel getChannel(int index) {
       return channel_converter_.convert(channel_.get(index));
@@ -2392,7 +2424,7 @@ public final class CommsTask {
      * Communication channels to execute for the subject campaign.
      * </pre>
      *
-     * <code>repeated .bloombox.schema.comms.Channel channel = 7;</code>
+     * <code>repeated .bloombox.comms.Channel channel = 7;</code>
      */
     public java.util.List<java.lang.Integer>
     getChannelValueList() {
@@ -2403,7 +2435,7 @@ public final class CommsTask {
      * Communication channels to execute for the subject campaign.
      * </pre>
      *
-     * <code>repeated .bloombox.schema.comms.Channel channel = 7;</code>
+     * <code>repeated .bloombox.comms.Channel channel = 7;</code>
      */
     public int getChannelValue(int index) {
       return channel_.get(index);
@@ -2417,7 +2449,7 @@ public final class CommsTask {
      * Attached/constituent send operations.
      * </pre>
      *
-     * <code>repeated .bloombox.schema.comms.SendOperation op = 8;</code>
+     * <code>repeated .bloombox.comms.SendOperation op = 8;</code>
      */
     public java.util.List<io.bloombox.schema.comms.CommsTask.SendOperation> getOpList() {
       return op_;
@@ -2427,7 +2459,7 @@ public final class CommsTask {
      * Attached/constituent send operations.
      * </pre>
      *
-     * <code>repeated .bloombox.schema.comms.SendOperation op = 8;</code>
+     * <code>repeated .bloombox.comms.SendOperation op = 8;</code>
      */
     public java.util.List<? extends io.bloombox.schema.comms.CommsTask.SendOperationOrBuilder> 
         getOpOrBuilderList() {
@@ -2438,7 +2470,7 @@ public final class CommsTask {
      * Attached/constituent send operations.
      * </pre>
      *
-     * <code>repeated .bloombox.schema.comms.SendOperation op = 8;</code>
+     * <code>repeated .bloombox.comms.SendOperation op = 8;</code>
      */
     public int getOpCount() {
       return op_.size();
@@ -2448,7 +2480,7 @@ public final class CommsTask {
      * Attached/constituent send operations.
      * </pre>
      *
-     * <code>repeated .bloombox.schema.comms.SendOperation op = 8;</code>
+     * <code>repeated .bloombox.comms.SendOperation op = 8;</code>
      */
     public io.bloombox.schema.comms.CommsTask.SendOperation getOp(int index) {
       return op_.get(index);
@@ -2458,7 +2490,7 @@ public final class CommsTask {
      * Attached/constituent send operations.
      * </pre>
      *
-     * <code>repeated .bloombox.schema.comms.SendOperation op = 8;</code>
+     * <code>repeated .bloombox.comms.SendOperation op = 8;</code>
      */
     public io.bloombox.schema.comms.CommsTask.SendOperationOrBuilder getOpOrBuilder(
         int index) {
@@ -2479,6 +2511,7 @@ public final class CommsTask {
     }
 
     private byte memoizedIsInitialized = -1;
+    @java.lang.Override
     public final boolean isInitialized() {
       byte isInitialized = memoizedIsInitialized;
       if (isInitialized == 1) return true;
@@ -2488,6 +2521,7 @@ public final class CommsTask {
       return true;
     }
 
+    @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
       getSerializedSize();
@@ -2525,6 +2559,7 @@ public final class CommsTask {
       unknownFields.writeTo(output);
     }
 
+    @java.lang.Override
     public int getSerializedSize() {
       int size = memoizedSize;
       if (size != -1) return size;
@@ -2722,6 +2757,7 @@ public final class CommsTask {
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
 
+    @java.lang.Override
     public Builder newBuilderForType() { return newBuilder(); }
     public static Builder newBuilder() {
       return DEFAULT_INSTANCE.toBuilder();
@@ -2729,6 +2765,7 @@ public final class CommsTask {
     public static Builder newBuilder(io.bloombox.schema.comms.CommsTask.TriggerOperation prototype) {
       return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
     }
+    @java.lang.Override
     public Builder toBuilder() {
       return this == DEFAULT_INSTANCE
           ? new Builder() : new Builder().mergeFrom(this);
@@ -2745,20 +2782,21 @@ public final class CommsTask {
      * Specifies an operation to merge campaign targeting parameters and trigger execution.
      * </pre>
      *
-     * Protobuf type {@code bloombox.schema.comms.TriggerOperation}
+     * Protobuf type {@code bloombox.comms.TriggerOperation}
      */
     public static final class Builder extends
         com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:bloombox.schema.comms.TriggerOperation)
+        // @@protoc_insertion_point(builder_implements:bloombox.comms.TriggerOperation)
         io.bloombox.schema.comms.CommsTask.TriggerOperationOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return io.bloombox.schema.comms.CommsTask.internal_static_bloombox_schema_comms_TriggerOperation_descriptor;
+        return io.bloombox.schema.comms.CommsTask.internal_static_bloombox_comms_TriggerOperation_descriptor;
       }
 
+      @java.lang.Override
       protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return io.bloombox.schema.comms.CommsTask.internal_static_bloombox_schema_comms_TriggerOperation_fieldAccessorTable
+        return io.bloombox.schema.comms.CommsTask.internal_static_bloombox_comms_TriggerOperation_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
                 io.bloombox.schema.comms.CommsTask.TriggerOperation.class, io.bloombox.schema.comms.CommsTask.TriggerOperation.Builder.class);
       }
@@ -2779,6 +2817,7 @@ public final class CommsTask {
           getOpFieldBuilder();
         }
       }
+      @java.lang.Override
       public Builder clear() {
         super.clear();
         uuid_ = "";
@@ -2814,15 +2853,18 @@ public final class CommsTask {
         return this;
       }
 
+      @java.lang.Override
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return io.bloombox.schema.comms.CommsTask.internal_static_bloombox_schema_comms_TriggerOperation_descriptor;
+        return io.bloombox.schema.comms.CommsTask.internal_static_bloombox_comms_TriggerOperation_descriptor;
       }
 
+      @java.lang.Override
       public io.bloombox.schema.comms.CommsTask.TriggerOperation getDefaultInstanceForType() {
         return io.bloombox.schema.comms.CommsTask.TriggerOperation.getDefaultInstance();
       }
 
+      @java.lang.Override
       public io.bloombox.schema.comms.CommsTask.TriggerOperation build() {
         io.bloombox.schema.comms.CommsTask.TriggerOperation result = buildPartial();
         if (!result.isInitialized()) {
@@ -2831,6 +2873,7 @@ public final class CommsTask {
         return result;
       }
 
+      @java.lang.Override
       public io.bloombox.schema.comms.CommsTask.TriggerOperation buildPartial() {
         io.bloombox.schema.comms.CommsTask.TriggerOperation result = new io.bloombox.schema.comms.CommsTask.TriggerOperation(this);
         int from_bitField0_ = bitField0_;
@@ -2869,32 +2912,39 @@ public final class CommsTask {
         return result;
       }
 
+      @java.lang.Override
       public Builder clone() {
         return (Builder) super.clone();
       }
+      @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
         return (Builder) super.setField(field, value);
       }
+      @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
         return (Builder) super.clearField(field);
       }
+      @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
         return (Builder) super.clearOneof(oneof);
       }
+      @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
         return (Builder) super.setRepeatedField(field, index, value);
       }
+      @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
         return (Builder) super.addRepeatedField(field, value);
       }
+      @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
         if (other instanceof io.bloombox.schema.comms.CommsTask.TriggerOperation) {
           return mergeFrom((io.bloombox.schema.comms.CommsTask.TriggerOperation)other);
@@ -2972,10 +3022,12 @@ public final class CommsTask {
         return this;
       }
 
+      @java.lang.Override
       public final boolean isInitialized() {
         return true;
       }
 
+      @java.lang.Override
       public Builder mergeFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -3670,7 +3722,7 @@ public final class CommsTask {
        * Communication channels to execute for the subject campaign.
        * </pre>
        *
-       * <code>repeated .bloombox.schema.comms.Channel channel = 7;</code>
+       * <code>repeated .bloombox.comms.Channel channel = 7;</code>
        */
       public java.util.List<io.bloombox.schema.comms.GenericComms.Channel> getChannelList() {
         return new com.google.protobuf.Internal.ListAdapter<
@@ -3681,7 +3733,7 @@ public final class CommsTask {
        * Communication channels to execute for the subject campaign.
        * </pre>
        *
-       * <code>repeated .bloombox.schema.comms.Channel channel = 7;</code>
+       * <code>repeated .bloombox.comms.Channel channel = 7;</code>
        */
       public int getChannelCount() {
         return channel_.size();
@@ -3691,7 +3743,7 @@ public final class CommsTask {
        * Communication channels to execute for the subject campaign.
        * </pre>
        *
-       * <code>repeated .bloombox.schema.comms.Channel channel = 7;</code>
+       * <code>repeated .bloombox.comms.Channel channel = 7;</code>
        */
       public io.bloombox.schema.comms.GenericComms.Channel getChannel(int index) {
         return channel_converter_.convert(channel_.get(index));
@@ -3701,7 +3753,7 @@ public final class CommsTask {
        * Communication channels to execute for the subject campaign.
        * </pre>
        *
-       * <code>repeated .bloombox.schema.comms.Channel channel = 7;</code>
+       * <code>repeated .bloombox.comms.Channel channel = 7;</code>
        */
       public Builder setChannel(
           int index, io.bloombox.schema.comms.GenericComms.Channel value) {
@@ -3718,7 +3770,7 @@ public final class CommsTask {
        * Communication channels to execute for the subject campaign.
        * </pre>
        *
-       * <code>repeated .bloombox.schema.comms.Channel channel = 7;</code>
+       * <code>repeated .bloombox.comms.Channel channel = 7;</code>
        */
       public Builder addChannel(io.bloombox.schema.comms.GenericComms.Channel value) {
         if (value == null) {
@@ -3734,7 +3786,7 @@ public final class CommsTask {
        * Communication channels to execute for the subject campaign.
        * </pre>
        *
-       * <code>repeated .bloombox.schema.comms.Channel channel = 7;</code>
+       * <code>repeated .bloombox.comms.Channel channel = 7;</code>
        */
       public Builder addAllChannel(
           java.lang.Iterable<? extends io.bloombox.schema.comms.GenericComms.Channel> values) {
@@ -3750,7 +3802,7 @@ public final class CommsTask {
        * Communication channels to execute for the subject campaign.
        * </pre>
        *
-       * <code>repeated .bloombox.schema.comms.Channel channel = 7;</code>
+       * <code>repeated .bloombox.comms.Channel channel = 7;</code>
        */
       public Builder clearChannel() {
         channel_ = java.util.Collections.emptyList();
@@ -3763,7 +3815,7 @@ public final class CommsTask {
        * Communication channels to execute for the subject campaign.
        * </pre>
        *
-       * <code>repeated .bloombox.schema.comms.Channel channel = 7;</code>
+       * <code>repeated .bloombox.comms.Channel channel = 7;</code>
        */
       public java.util.List<java.lang.Integer>
       getChannelValueList() {
@@ -3774,7 +3826,7 @@ public final class CommsTask {
        * Communication channels to execute for the subject campaign.
        * </pre>
        *
-       * <code>repeated .bloombox.schema.comms.Channel channel = 7;</code>
+       * <code>repeated .bloombox.comms.Channel channel = 7;</code>
        */
       public int getChannelValue(int index) {
         return channel_.get(index);
@@ -3784,7 +3836,7 @@ public final class CommsTask {
        * Communication channels to execute for the subject campaign.
        * </pre>
        *
-       * <code>repeated .bloombox.schema.comms.Channel channel = 7;</code>
+       * <code>repeated .bloombox.comms.Channel channel = 7;</code>
        */
       public Builder setChannelValue(
           int index, int value) {
@@ -3798,7 +3850,7 @@ public final class CommsTask {
        * Communication channels to execute for the subject campaign.
        * </pre>
        *
-       * <code>repeated .bloombox.schema.comms.Channel channel = 7;</code>
+       * <code>repeated .bloombox.comms.Channel channel = 7;</code>
        */
       public Builder addChannelValue(int value) {
         ensureChannelIsMutable();
@@ -3811,7 +3863,7 @@ public final class CommsTask {
        * Communication channels to execute for the subject campaign.
        * </pre>
        *
-       * <code>repeated .bloombox.schema.comms.Channel channel = 7;</code>
+       * <code>repeated .bloombox.comms.Channel channel = 7;</code>
        */
       public Builder addAllChannelValue(
           java.lang.Iterable<java.lang.Integer> values) {
@@ -3840,7 +3892,7 @@ public final class CommsTask {
        * Attached/constituent send operations.
        * </pre>
        *
-       * <code>repeated .bloombox.schema.comms.SendOperation op = 8;</code>
+       * <code>repeated .bloombox.comms.SendOperation op = 8;</code>
        */
       public java.util.List<io.bloombox.schema.comms.CommsTask.SendOperation> getOpList() {
         if (opBuilder_ == null) {
@@ -3854,7 +3906,7 @@ public final class CommsTask {
        * Attached/constituent send operations.
        * </pre>
        *
-       * <code>repeated .bloombox.schema.comms.SendOperation op = 8;</code>
+       * <code>repeated .bloombox.comms.SendOperation op = 8;</code>
        */
       public int getOpCount() {
         if (opBuilder_ == null) {
@@ -3868,7 +3920,7 @@ public final class CommsTask {
        * Attached/constituent send operations.
        * </pre>
        *
-       * <code>repeated .bloombox.schema.comms.SendOperation op = 8;</code>
+       * <code>repeated .bloombox.comms.SendOperation op = 8;</code>
        */
       public io.bloombox.schema.comms.CommsTask.SendOperation getOp(int index) {
         if (opBuilder_ == null) {
@@ -3882,7 +3934,7 @@ public final class CommsTask {
        * Attached/constituent send operations.
        * </pre>
        *
-       * <code>repeated .bloombox.schema.comms.SendOperation op = 8;</code>
+       * <code>repeated .bloombox.comms.SendOperation op = 8;</code>
        */
       public Builder setOp(
           int index, io.bloombox.schema.comms.CommsTask.SendOperation value) {
@@ -3903,7 +3955,7 @@ public final class CommsTask {
        * Attached/constituent send operations.
        * </pre>
        *
-       * <code>repeated .bloombox.schema.comms.SendOperation op = 8;</code>
+       * <code>repeated .bloombox.comms.SendOperation op = 8;</code>
        */
       public Builder setOp(
           int index, io.bloombox.schema.comms.CommsTask.SendOperation.Builder builderForValue) {
@@ -3921,7 +3973,7 @@ public final class CommsTask {
        * Attached/constituent send operations.
        * </pre>
        *
-       * <code>repeated .bloombox.schema.comms.SendOperation op = 8;</code>
+       * <code>repeated .bloombox.comms.SendOperation op = 8;</code>
        */
       public Builder addOp(io.bloombox.schema.comms.CommsTask.SendOperation value) {
         if (opBuilder_ == null) {
@@ -3941,7 +3993,7 @@ public final class CommsTask {
        * Attached/constituent send operations.
        * </pre>
        *
-       * <code>repeated .bloombox.schema.comms.SendOperation op = 8;</code>
+       * <code>repeated .bloombox.comms.SendOperation op = 8;</code>
        */
       public Builder addOp(
           int index, io.bloombox.schema.comms.CommsTask.SendOperation value) {
@@ -3962,7 +4014,7 @@ public final class CommsTask {
        * Attached/constituent send operations.
        * </pre>
        *
-       * <code>repeated .bloombox.schema.comms.SendOperation op = 8;</code>
+       * <code>repeated .bloombox.comms.SendOperation op = 8;</code>
        */
       public Builder addOp(
           io.bloombox.schema.comms.CommsTask.SendOperation.Builder builderForValue) {
@@ -3980,7 +4032,7 @@ public final class CommsTask {
        * Attached/constituent send operations.
        * </pre>
        *
-       * <code>repeated .bloombox.schema.comms.SendOperation op = 8;</code>
+       * <code>repeated .bloombox.comms.SendOperation op = 8;</code>
        */
       public Builder addOp(
           int index, io.bloombox.schema.comms.CommsTask.SendOperation.Builder builderForValue) {
@@ -3998,7 +4050,7 @@ public final class CommsTask {
        * Attached/constituent send operations.
        * </pre>
        *
-       * <code>repeated .bloombox.schema.comms.SendOperation op = 8;</code>
+       * <code>repeated .bloombox.comms.SendOperation op = 8;</code>
        */
       public Builder addAllOp(
           java.lang.Iterable<? extends io.bloombox.schema.comms.CommsTask.SendOperation> values) {
@@ -4017,7 +4069,7 @@ public final class CommsTask {
        * Attached/constituent send operations.
        * </pre>
        *
-       * <code>repeated .bloombox.schema.comms.SendOperation op = 8;</code>
+       * <code>repeated .bloombox.comms.SendOperation op = 8;</code>
        */
       public Builder clearOp() {
         if (opBuilder_ == null) {
@@ -4034,7 +4086,7 @@ public final class CommsTask {
        * Attached/constituent send operations.
        * </pre>
        *
-       * <code>repeated .bloombox.schema.comms.SendOperation op = 8;</code>
+       * <code>repeated .bloombox.comms.SendOperation op = 8;</code>
        */
       public Builder removeOp(int index) {
         if (opBuilder_ == null) {
@@ -4051,7 +4103,7 @@ public final class CommsTask {
        * Attached/constituent send operations.
        * </pre>
        *
-       * <code>repeated .bloombox.schema.comms.SendOperation op = 8;</code>
+       * <code>repeated .bloombox.comms.SendOperation op = 8;</code>
        */
       public io.bloombox.schema.comms.CommsTask.SendOperation.Builder getOpBuilder(
           int index) {
@@ -4062,7 +4114,7 @@ public final class CommsTask {
        * Attached/constituent send operations.
        * </pre>
        *
-       * <code>repeated .bloombox.schema.comms.SendOperation op = 8;</code>
+       * <code>repeated .bloombox.comms.SendOperation op = 8;</code>
        */
       public io.bloombox.schema.comms.CommsTask.SendOperationOrBuilder getOpOrBuilder(
           int index) {
@@ -4076,7 +4128,7 @@ public final class CommsTask {
        * Attached/constituent send operations.
        * </pre>
        *
-       * <code>repeated .bloombox.schema.comms.SendOperation op = 8;</code>
+       * <code>repeated .bloombox.comms.SendOperation op = 8;</code>
        */
       public java.util.List<? extends io.bloombox.schema.comms.CommsTask.SendOperationOrBuilder> 
            getOpOrBuilderList() {
@@ -4091,7 +4143,7 @@ public final class CommsTask {
        * Attached/constituent send operations.
        * </pre>
        *
-       * <code>repeated .bloombox.schema.comms.SendOperation op = 8;</code>
+       * <code>repeated .bloombox.comms.SendOperation op = 8;</code>
        */
       public io.bloombox.schema.comms.CommsTask.SendOperation.Builder addOpBuilder() {
         return getOpFieldBuilder().addBuilder(
@@ -4102,7 +4154,7 @@ public final class CommsTask {
        * Attached/constituent send operations.
        * </pre>
        *
-       * <code>repeated .bloombox.schema.comms.SendOperation op = 8;</code>
+       * <code>repeated .bloombox.comms.SendOperation op = 8;</code>
        */
       public io.bloombox.schema.comms.CommsTask.SendOperation.Builder addOpBuilder(
           int index) {
@@ -4114,7 +4166,7 @@ public final class CommsTask {
        * Attached/constituent send operations.
        * </pre>
        *
-       * <code>repeated .bloombox.schema.comms.SendOperation op = 8;</code>
+       * <code>repeated .bloombox.comms.SendOperation op = 8;</code>
        */
       public java.util.List<io.bloombox.schema.comms.CommsTask.SendOperation.Builder> 
            getOpBuilderList() {
@@ -4172,21 +4224,23 @@ public final class CommsTask {
         onChanged();
         return this;
       }
+      @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
         return super.setUnknownFieldsProto3(unknownFields);
       }
 
+      @java.lang.Override
       public final Builder mergeUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
         return super.mergeUnknownFields(unknownFields);
       }
 
 
-      // @@protoc_insertion_point(builder_scope:bloombox.schema.comms.TriggerOperation)
+      // @@protoc_insertion_point(builder_scope:bloombox.comms.TriggerOperation)
     }
 
-    // @@protoc_insertion_point(class_scope:bloombox.schema.comms.TriggerOperation)
+    // @@protoc_insertion_point(class_scope:bloombox.comms.TriggerOperation)
     private static final io.bloombox.schema.comms.CommsTask.TriggerOperation DEFAULT_INSTANCE;
     static {
       DEFAULT_INSTANCE = new io.bloombox.schema.comms.CommsTask.TriggerOperation();
@@ -4198,6 +4252,7 @@ public final class CommsTask {
 
     private static final com.google.protobuf.Parser<TriggerOperation>
         PARSER = new com.google.protobuf.AbstractParser<TriggerOperation>() {
+      @java.lang.Override
       public TriggerOperation parsePartialFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -4215,6 +4270,7 @@ public final class CommsTask {
       return PARSER;
     }
 
+    @java.lang.Override
     public io.bloombox.schema.comms.CommsTask.TriggerOperation getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
@@ -4222,7 +4278,7 @@ public final class CommsTask {
   }
 
   public interface AdEngineOperationOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:bloombox.schema.comms.AdEngineOperation)
+      // @@protoc_insertion_point(interface_extends:bloombox.comms.AdEngineOperation)
       com.google.protobuf.MessageOrBuilder {
 
     /**
@@ -4248,7 +4304,7 @@ public final class CommsTask {
      * Campaign that we are executing this operation against, with adgroups included.
      * </pre>
      *
-     * <code>.bloombox.schema.marketing.Campaign campaign = 2;</code>
+     * <code>.bloombox.marketing.Campaign campaign = 2;</code>
      */
     boolean hasCampaign();
     /**
@@ -4256,7 +4312,7 @@ public final class CommsTask {
      * Campaign that we are executing this operation against, with adgroups included.
      * </pre>
      *
-     * <code>.bloombox.schema.marketing.Campaign campaign = 2;</code>
+     * <code>.bloombox.marketing.Campaign campaign = 2;</code>
      */
     io.bloombox.schema.marketing.MarketingCampaign.Campaign getCampaign();
     /**
@@ -4264,7 +4320,7 @@ public final class CommsTask {
      * Campaign that we are executing this operation against, with adgroups included.
      * </pre>
      *
-     * <code>.bloombox.schema.marketing.Campaign campaign = 2;</code>
+     * <code>.bloombox.marketing.Campaign campaign = 2;</code>
      */
     io.bloombox.schema.marketing.MarketingCampaign.CampaignOrBuilder getCampaignOrBuilder();
 
@@ -4273,7 +4329,7 @@ public final class CommsTask {
      * Communication channels to execute for the subject campaign.
      * </pre>
      *
-     * <code>repeated .bloombox.schema.comms.Channel channel = 7;</code>
+     * <code>repeated .bloombox.comms.Channel channel = 7;</code>
      */
     java.util.List<io.bloombox.schema.comms.GenericComms.Channel> getChannelList();
     /**
@@ -4281,7 +4337,7 @@ public final class CommsTask {
      * Communication channels to execute for the subject campaign.
      * </pre>
      *
-     * <code>repeated .bloombox.schema.comms.Channel channel = 7;</code>
+     * <code>repeated .bloombox.comms.Channel channel = 7;</code>
      */
     int getChannelCount();
     /**
@@ -4289,7 +4345,7 @@ public final class CommsTask {
      * Communication channels to execute for the subject campaign.
      * </pre>
      *
-     * <code>repeated .bloombox.schema.comms.Channel channel = 7;</code>
+     * <code>repeated .bloombox.comms.Channel channel = 7;</code>
      */
     io.bloombox.schema.comms.GenericComms.Channel getChannel(int index);
     /**
@@ -4297,7 +4353,7 @@ public final class CommsTask {
      * Communication channels to execute for the subject campaign.
      * </pre>
      *
-     * <code>repeated .bloombox.schema.comms.Channel channel = 7;</code>
+     * <code>repeated .bloombox.comms.Channel channel = 7;</code>
      */
     java.util.List<java.lang.Integer>
     getChannelValueList();
@@ -4306,7 +4362,7 @@ public final class CommsTask {
      * Communication channels to execute for the subject campaign.
      * </pre>
      *
-     * <code>repeated .bloombox.schema.comms.Channel channel = 7;</code>
+     * <code>repeated .bloombox.comms.Channel channel = 7;</code>
      */
     int getChannelValue(int index);
 
@@ -4315,7 +4371,7 @@ public final class CommsTask {
      * Membership record for this user at the partner location in question.
      * </pre>
      *
-     * <code>.bloombox.schema.identity.ConsumerMembership membership = 8;</code>
+     * <code>.bloombox.identity.ConsumerMembership membership = 8;</code>
      */
     boolean hasMembership();
     /**
@@ -4323,7 +4379,7 @@ public final class CommsTask {
      * Membership record for this user at the partner location in question.
      * </pre>
      *
-     * <code>.bloombox.schema.identity.ConsumerMembership membership = 8;</code>
+     * <code>.bloombox.identity.ConsumerMembership membership = 8;</code>
      */
     io.bloombox.schema.identity.AppUser.ConsumerMembership getMembership();
     /**
@@ -4331,7 +4387,7 @@ public final class CommsTask {
      * Membership record for this user at the partner location in question.
      * </pre>
      *
-     * <code>.bloombox.schema.identity.ConsumerMembership membership = 8;</code>
+     * <code>.bloombox.identity.ConsumerMembership membership = 8;</code>
      */
     io.bloombox.schema.identity.AppUser.ConsumerMembershipOrBuilder getMembershipOrBuilder();
 
@@ -4340,7 +4396,7 @@ public final class CommsTask {
      * Key for the user's account.
      * </pre>
      *
-     * <code>.bloombox.schema.identity.UserKey user = 9;</code>
+     * <code>.bloombox.identity.UserKey user = 9;</code>
      */
     boolean hasUser();
     /**
@@ -4348,7 +4404,7 @@ public final class CommsTask {
      * Key for the user's account.
      * </pre>
      *
-     * <code>.bloombox.schema.identity.UserKey user = 9;</code>
+     * <code>.bloombox.identity.UserKey user = 9;</code>
      */
     io.bloombox.schema.identity.AppUserKey.UserKey getUser();
     /**
@@ -4356,7 +4412,7 @@ public final class CommsTask {
      * Key for the user's account.
      * </pre>
      *
-     * <code>.bloombox.schema.identity.UserKey user = 9;</code>
+     * <code>.bloombox.identity.UserKey user = 9;</code>
      */
     io.bloombox.schema.identity.AppUserKey.UserKeyOrBuilder getUserOrBuilder();
 
@@ -4400,11 +4456,11 @@ public final class CommsTask {
    * and enqueued for transmission if targeting parameters don't exclude their profile.
    * </pre>
    *
-   * Protobuf type {@code bloombox.schema.comms.AdEngineOperation}
+   * Protobuf type {@code bloombox.comms.AdEngineOperation}
    */
   public  static final class AdEngineOperation extends
       com.google.protobuf.GeneratedMessageV3 implements
-      // @@protoc_insertion_point(message_implements:bloombox.schema.comms.AdEngineOperation)
+      // @@protoc_insertion_point(message_implements:bloombox.comms.AdEngineOperation)
       AdEngineOperationOrBuilder {
   private static final long serialVersionUID = 0L;
     // Use AdEngineOperation.newBuilder() to construct.
@@ -4441,13 +4497,6 @@ public final class CommsTask {
             case 0:
               done = true;
               break;
-            default: {
-              if (!parseUnknownFieldProto3(
-                  input, unknownFields, extensionRegistry, tag)) {
-                done = true;
-              }
-              break;
-            }
             case 10: {
               java.lang.String s = input.readStringRequireUtf8();
 
@@ -4534,6 +4583,13 @@ public final class CommsTask {
               dryRun_ = input.readBool();
               break;
             }
+            default: {
+              if (!parseUnknownFieldProto3(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
           }
         }
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
@@ -4551,12 +4607,13 @@ public final class CommsTask {
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return io.bloombox.schema.comms.CommsTask.internal_static_bloombox_schema_comms_AdEngineOperation_descriptor;
+      return io.bloombox.schema.comms.CommsTask.internal_static_bloombox_comms_AdEngineOperation_descriptor;
     }
 
+    @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return io.bloombox.schema.comms.CommsTask.internal_static_bloombox_schema_comms_AdEngineOperation_fieldAccessorTable
+      return io.bloombox.schema.comms.CommsTask.internal_static_bloombox_comms_AdEngineOperation_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
               io.bloombox.schema.comms.CommsTask.AdEngineOperation.class, io.bloombox.schema.comms.CommsTask.AdEngineOperation.Builder.class);
     }
@@ -4611,7 +4668,7 @@ public final class CommsTask {
      * Campaign that we are executing this operation against, with adgroups included.
      * </pre>
      *
-     * <code>.bloombox.schema.marketing.Campaign campaign = 2;</code>
+     * <code>.bloombox.marketing.Campaign campaign = 2;</code>
      */
     public boolean hasCampaign() {
       return campaign_ != null;
@@ -4621,7 +4678,7 @@ public final class CommsTask {
      * Campaign that we are executing this operation against, with adgroups included.
      * </pre>
      *
-     * <code>.bloombox.schema.marketing.Campaign campaign = 2;</code>
+     * <code>.bloombox.marketing.Campaign campaign = 2;</code>
      */
     public io.bloombox.schema.marketing.MarketingCampaign.Campaign getCampaign() {
       return campaign_ == null ? io.bloombox.schema.marketing.MarketingCampaign.Campaign.getDefaultInstance() : campaign_;
@@ -4631,7 +4688,7 @@ public final class CommsTask {
      * Campaign that we are executing this operation against, with adgroups included.
      * </pre>
      *
-     * <code>.bloombox.schema.marketing.Campaign campaign = 2;</code>
+     * <code>.bloombox.marketing.Campaign campaign = 2;</code>
      */
     public io.bloombox.schema.marketing.MarketingCampaign.CampaignOrBuilder getCampaignOrBuilder() {
       return getCampaign();
@@ -4644,6 +4701,7 @@ public final class CommsTask {
             new com.google.protobuf.Internal.ListAdapter.Converter<
                 java.lang.Integer, io.bloombox.schema.comms.GenericComms.Channel>() {
               public io.bloombox.schema.comms.GenericComms.Channel convert(java.lang.Integer from) {
+                @SuppressWarnings("deprecation")
                 io.bloombox.schema.comms.GenericComms.Channel result = io.bloombox.schema.comms.GenericComms.Channel.valueOf(from);
                 return result == null ? io.bloombox.schema.comms.GenericComms.Channel.UNRECOGNIZED : result;
               }
@@ -4653,7 +4711,7 @@ public final class CommsTask {
      * Communication channels to execute for the subject campaign.
      * </pre>
      *
-     * <code>repeated .bloombox.schema.comms.Channel channel = 7;</code>
+     * <code>repeated .bloombox.comms.Channel channel = 7;</code>
      */
     public java.util.List<io.bloombox.schema.comms.GenericComms.Channel> getChannelList() {
       return new com.google.protobuf.Internal.ListAdapter<
@@ -4664,7 +4722,7 @@ public final class CommsTask {
      * Communication channels to execute for the subject campaign.
      * </pre>
      *
-     * <code>repeated .bloombox.schema.comms.Channel channel = 7;</code>
+     * <code>repeated .bloombox.comms.Channel channel = 7;</code>
      */
     public int getChannelCount() {
       return channel_.size();
@@ -4674,7 +4732,7 @@ public final class CommsTask {
      * Communication channels to execute for the subject campaign.
      * </pre>
      *
-     * <code>repeated .bloombox.schema.comms.Channel channel = 7;</code>
+     * <code>repeated .bloombox.comms.Channel channel = 7;</code>
      */
     public io.bloombox.schema.comms.GenericComms.Channel getChannel(int index) {
       return channel_converter_.convert(channel_.get(index));
@@ -4684,7 +4742,7 @@ public final class CommsTask {
      * Communication channels to execute for the subject campaign.
      * </pre>
      *
-     * <code>repeated .bloombox.schema.comms.Channel channel = 7;</code>
+     * <code>repeated .bloombox.comms.Channel channel = 7;</code>
      */
     public java.util.List<java.lang.Integer>
     getChannelValueList() {
@@ -4695,7 +4753,7 @@ public final class CommsTask {
      * Communication channels to execute for the subject campaign.
      * </pre>
      *
-     * <code>repeated .bloombox.schema.comms.Channel channel = 7;</code>
+     * <code>repeated .bloombox.comms.Channel channel = 7;</code>
      */
     public int getChannelValue(int index) {
       return channel_.get(index);
@@ -4709,7 +4767,7 @@ public final class CommsTask {
      * Membership record for this user at the partner location in question.
      * </pre>
      *
-     * <code>.bloombox.schema.identity.ConsumerMembership membership = 8;</code>
+     * <code>.bloombox.identity.ConsumerMembership membership = 8;</code>
      */
     public boolean hasMembership() {
       return membership_ != null;
@@ -4719,7 +4777,7 @@ public final class CommsTask {
      * Membership record for this user at the partner location in question.
      * </pre>
      *
-     * <code>.bloombox.schema.identity.ConsumerMembership membership = 8;</code>
+     * <code>.bloombox.identity.ConsumerMembership membership = 8;</code>
      */
     public io.bloombox.schema.identity.AppUser.ConsumerMembership getMembership() {
       return membership_ == null ? io.bloombox.schema.identity.AppUser.ConsumerMembership.getDefaultInstance() : membership_;
@@ -4729,7 +4787,7 @@ public final class CommsTask {
      * Membership record for this user at the partner location in question.
      * </pre>
      *
-     * <code>.bloombox.schema.identity.ConsumerMembership membership = 8;</code>
+     * <code>.bloombox.identity.ConsumerMembership membership = 8;</code>
      */
     public io.bloombox.schema.identity.AppUser.ConsumerMembershipOrBuilder getMembershipOrBuilder() {
       return getMembership();
@@ -4742,7 +4800,7 @@ public final class CommsTask {
      * Key for the user's account.
      * </pre>
      *
-     * <code>.bloombox.schema.identity.UserKey user = 9;</code>
+     * <code>.bloombox.identity.UserKey user = 9;</code>
      */
     public boolean hasUser() {
       return user_ != null;
@@ -4752,7 +4810,7 @@ public final class CommsTask {
      * Key for the user's account.
      * </pre>
      *
-     * <code>.bloombox.schema.identity.UserKey user = 9;</code>
+     * <code>.bloombox.identity.UserKey user = 9;</code>
      */
     public io.bloombox.schema.identity.AppUserKey.UserKey getUser() {
       return user_ == null ? io.bloombox.schema.identity.AppUserKey.UserKey.getDefaultInstance() : user_;
@@ -4762,7 +4820,7 @@ public final class CommsTask {
      * Key for the user's account.
      * </pre>
      *
-     * <code>.bloombox.schema.identity.UserKey user = 9;</code>
+     * <code>.bloombox.identity.UserKey user = 9;</code>
      */
     public io.bloombox.schema.identity.AppUserKey.UserKeyOrBuilder getUserOrBuilder() {
       return getUser();
@@ -4815,6 +4873,7 @@ public final class CommsTask {
     }
 
     private byte memoizedIsInitialized = -1;
+    @java.lang.Override
     public final boolean isInitialized() {
       byte isInitialized = memoizedIsInitialized;
       if (isInitialized == 1) return true;
@@ -4824,6 +4883,7 @@ public final class CommsTask {
       return true;
     }
 
+    @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
       getSerializedSize();
@@ -4855,6 +4915,7 @@ public final class CommsTask {
       unknownFields.writeTo(output);
     }
 
+    @java.lang.Override
     public int getSerializedSize() {
       int size = memoizedSize;
       if (size != -1) return size;
@@ -5047,6 +5108,7 @@ public final class CommsTask {
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
 
+    @java.lang.Override
     public Builder newBuilderForType() { return newBuilder(); }
     public static Builder newBuilder() {
       return DEFAULT_INSTANCE.toBuilder();
@@ -5054,6 +5116,7 @@ public final class CommsTask {
     public static Builder newBuilder(io.bloombox.schema.comms.CommsTask.AdEngineOperation prototype) {
       return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
     }
+    @java.lang.Override
     public Builder toBuilder() {
       return this == DEFAULT_INSTANCE
           ? new Builder() : new Builder().mergeFrom(this);
@@ -5071,20 +5134,21 @@ public final class CommsTask {
      * and enqueued for transmission if targeting parameters don't exclude their profile.
      * </pre>
      *
-     * Protobuf type {@code bloombox.schema.comms.AdEngineOperation}
+     * Protobuf type {@code bloombox.comms.AdEngineOperation}
      */
     public static final class Builder extends
         com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:bloombox.schema.comms.AdEngineOperation)
+        // @@protoc_insertion_point(builder_implements:bloombox.comms.AdEngineOperation)
         io.bloombox.schema.comms.CommsTask.AdEngineOperationOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return io.bloombox.schema.comms.CommsTask.internal_static_bloombox_schema_comms_AdEngineOperation_descriptor;
+        return io.bloombox.schema.comms.CommsTask.internal_static_bloombox_comms_AdEngineOperation_descriptor;
       }
 
+      @java.lang.Override
       protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return io.bloombox.schema.comms.CommsTask.internal_static_bloombox_schema_comms_AdEngineOperation_fieldAccessorTable
+        return io.bloombox.schema.comms.CommsTask.internal_static_bloombox_comms_AdEngineOperation_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
                 io.bloombox.schema.comms.CommsTask.AdEngineOperation.class, io.bloombox.schema.comms.CommsTask.AdEngineOperation.Builder.class);
       }
@@ -5104,6 +5168,7 @@ public final class CommsTask {
                 .alwaysUseFieldBuilders) {
         }
       }
+      @java.lang.Override
       public Builder clear() {
         super.clear();
         execution_ = "";
@@ -5139,15 +5204,18 @@ public final class CommsTask {
         return this;
       }
 
+      @java.lang.Override
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return io.bloombox.schema.comms.CommsTask.internal_static_bloombox_schema_comms_AdEngineOperation_descriptor;
+        return io.bloombox.schema.comms.CommsTask.internal_static_bloombox_comms_AdEngineOperation_descriptor;
       }
 
+      @java.lang.Override
       public io.bloombox.schema.comms.CommsTask.AdEngineOperation getDefaultInstanceForType() {
         return io.bloombox.schema.comms.CommsTask.AdEngineOperation.getDefaultInstance();
       }
 
+      @java.lang.Override
       public io.bloombox.schema.comms.CommsTask.AdEngineOperation build() {
         io.bloombox.schema.comms.CommsTask.AdEngineOperation result = buildPartial();
         if (!result.isInitialized()) {
@@ -5156,6 +5224,7 @@ public final class CommsTask {
         return result;
       }
 
+      @java.lang.Override
       public io.bloombox.schema.comms.CommsTask.AdEngineOperation buildPartial() {
         io.bloombox.schema.comms.CommsTask.AdEngineOperation result = new io.bloombox.schema.comms.CommsTask.AdEngineOperation(this);
         int from_bitField0_ = bitField0_;
@@ -5192,32 +5261,39 @@ public final class CommsTask {
         return result;
       }
 
+      @java.lang.Override
       public Builder clone() {
         return (Builder) super.clone();
       }
+      @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
         return (Builder) super.setField(field, value);
       }
+      @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
         return (Builder) super.clearField(field);
       }
+      @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
         return (Builder) super.clearOneof(oneof);
       }
+      @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
         return (Builder) super.setRepeatedField(field, index, value);
       }
+      @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
         return (Builder) super.addRepeatedField(field, value);
       }
+      @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
         if (other instanceof io.bloombox.schema.comms.CommsTask.AdEngineOperation) {
           return mergeFrom((io.bloombox.schema.comms.CommsTask.AdEngineOperation)other);
@@ -5263,10 +5339,12 @@ public final class CommsTask {
         return this;
       }
 
+      @java.lang.Override
       public final boolean isInitialized() {
         return true;
       }
 
+      @java.lang.Override
       public Builder mergeFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -5383,7 +5461,7 @@ public final class CommsTask {
        * Campaign that we are executing this operation against, with adgroups included.
        * </pre>
        *
-       * <code>.bloombox.schema.marketing.Campaign campaign = 2;</code>
+       * <code>.bloombox.marketing.Campaign campaign = 2;</code>
        */
       public boolean hasCampaign() {
         return campaignBuilder_ != null || campaign_ != null;
@@ -5393,7 +5471,7 @@ public final class CommsTask {
        * Campaign that we are executing this operation against, with adgroups included.
        * </pre>
        *
-       * <code>.bloombox.schema.marketing.Campaign campaign = 2;</code>
+       * <code>.bloombox.marketing.Campaign campaign = 2;</code>
        */
       public io.bloombox.schema.marketing.MarketingCampaign.Campaign getCampaign() {
         if (campaignBuilder_ == null) {
@@ -5407,7 +5485,7 @@ public final class CommsTask {
        * Campaign that we are executing this operation against, with adgroups included.
        * </pre>
        *
-       * <code>.bloombox.schema.marketing.Campaign campaign = 2;</code>
+       * <code>.bloombox.marketing.Campaign campaign = 2;</code>
        */
       public Builder setCampaign(io.bloombox.schema.marketing.MarketingCampaign.Campaign value) {
         if (campaignBuilder_ == null) {
@@ -5427,7 +5505,7 @@ public final class CommsTask {
        * Campaign that we are executing this operation against, with adgroups included.
        * </pre>
        *
-       * <code>.bloombox.schema.marketing.Campaign campaign = 2;</code>
+       * <code>.bloombox.marketing.Campaign campaign = 2;</code>
        */
       public Builder setCampaign(
           io.bloombox.schema.marketing.MarketingCampaign.Campaign.Builder builderForValue) {
@@ -5445,7 +5523,7 @@ public final class CommsTask {
        * Campaign that we are executing this operation against, with adgroups included.
        * </pre>
        *
-       * <code>.bloombox.schema.marketing.Campaign campaign = 2;</code>
+       * <code>.bloombox.marketing.Campaign campaign = 2;</code>
        */
       public Builder mergeCampaign(io.bloombox.schema.marketing.MarketingCampaign.Campaign value) {
         if (campaignBuilder_ == null) {
@@ -5467,7 +5545,7 @@ public final class CommsTask {
        * Campaign that we are executing this operation against, with adgroups included.
        * </pre>
        *
-       * <code>.bloombox.schema.marketing.Campaign campaign = 2;</code>
+       * <code>.bloombox.marketing.Campaign campaign = 2;</code>
        */
       public Builder clearCampaign() {
         if (campaignBuilder_ == null) {
@@ -5485,7 +5563,7 @@ public final class CommsTask {
        * Campaign that we are executing this operation against, with adgroups included.
        * </pre>
        *
-       * <code>.bloombox.schema.marketing.Campaign campaign = 2;</code>
+       * <code>.bloombox.marketing.Campaign campaign = 2;</code>
        */
       public io.bloombox.schema.marketing.MarketingCampaign.Campaign.Builder getCampaignBuilder() {
         
@@ -5497,7 +5575,7 @@ public final class CommsTask {
        * Campaign that we are executing this operation against, with adgroups included.
        * </pre>
        *
-       * <code>.bloombox.schema.marketing.Campaign campaign = 2;</code>
+       * <code>.bloombox.marketing.Campaign campaign = 2;</code>
        */
       public io.bloombox.schema.marketing.MarketingCampaign.CampaignOrBuilder getCampaignOrBuilder() {
         if (campaignBuilder_ != null) {
@@ -5512,7 +5590,7 @@ public final class CommsTask {
        * Campaign that we are executing this operation against, with adgroups included.
        * </pre>
        *
-       * <code>.bloombox.schema.marketing.Campaign campaign = 2;</code>
+       * <code>.bloombox.marketing.Campaign campaign = 2;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
           io.bloombox.schema.marketing.MarketingCampaign.Campaign, io.bloombox.schema.marketing.MarketingCampaign.Campaign.Builder, io.bloombox.schema.marketing.MarketingCampaign.CampaignOrBuilder> 
@@ -5541,7 +5619,7 @@ public final class CommsTask {
        * Communication channels to execute for the subject campaign.
        * </pre>
        *
-       * <code>repeated .bloombox.schema.comms.Channel channel = 7;</code>
+       * <code>repeated .bloombox.comms.Channel channel = 7;</code>
        */
       public java.util.List<io.bloombox.schema.comms.GenericComms.Channel> getChannelList() {
         return new com.google.protobuf.Internal.ListAdapter<
@@ -5552,7 +5630,7 @@ public final class CommsTask {
        * Communication channels to execute for the subject campaign.
        * </pre>
        *
-       * <code>repeated .bloombox.schema.comms.Channel channel = 7;</code>
+       * <code>repeated .bloombox.comms.Channel channel = 7;</code>
        */
       public int getChannelCount() {
         return channel_.size();
@@ -5562,7 +5640,7 @@ public final class CommsTask {
        * Communication channels to execute for the subject campaign.
        * </pre>
        *
-       * <code>repeated .bloombox.schema.comms.Channel channel = 7;</code>
+       * <code>repeated .bloombox.comms.Channel channel = 7;</code>
        */
       public io.bloombox.schema.comms.GenericComms.Channel getChannel(int index) {
         return channel_converter_.convert(channel_.get(index));
@@ -5572,7 +5650,7 @@ public final class CommsTask {
        * Communication channels to execute for the subject campaign.
        * </pre>
        *
-       * <code>repeated .bloombox.schema.comms.Channel channel = 7;</code>
+       * <code>repeated .bloombox.comms.Channel channel = 7;</code>
        */
       public Builder setChannel(
           int index, io.bloombox.schema.comms.GenericComms.Channel value) {
@@ -5589,7 +5667,7 @@ public final class CommsTask {
        * Communication channels to execute for the subject campaign.
        * </pre>
        *
-       * <code>repeated .bloombox.schema.comms.Channel channel = 7;</code>
+       * <code>repeated .bloombox.comms.Channel channel = 7;</code>
        */
       public Builder addChannel(io.bloombox.schema.comms.GenericComms.Channel value) {
         if (value == null) {
@@ -5605,7 +5683,7 @@ public final class CommsTask {
        * Communication channels to execute for the subject campaign.
        * </pre>
        *
-       * <code>repeated .bloombox.schema.comms.Channel channel = 7;</code>
+       * <code>repeated .bloombox.comms.Channel channel = 7;</code>
        */
       public Builder addAllChannel(
           java.lang.Iterable<? extends io.bloombox.schema.comms.GenericComms.Channel> values) {
@@ -5621,7 +5699,7 @@ public final class CommsTask {
        * Communication channels to execute for the subject campaign.
        * </pre>
        *
-       * <code>repeated .bloombox.schema.comms.Channel channel = 7;</code>
+       * <code>repeated .bloombox.comms.Channel channel = 7;</code>
        */
       public Builder clearChannel() {
         channel_ = java.util.Collections.emptyList();
@@ -5634,7 +5712,7 @@ public final class CommsTask {
        * Communication channels to execute for the subject campaign.
        * </pre>
        *
-       * <code>repeated .bloombox.schema.comms.Channel channel = 7;</code>
+       * <code>repeated .bloombox.comms.Channel channel = 7;</code>
        */
       public java.util.List<java.lang.Integer>
       getChannelValueList() {
@@ -5645,7 +5723,7 @@ public final class CommsTask {
        * Communication channels to execute for the subject campaign.
        * </pre>
        *
-       * <code>repeated .bloombox.schema.comms.Channel channel = 7;</code>
+       * <code>repeated .bloombox.comms.Channel channel = 7;</code>
        */
       public int getChannelValue(int index) {
         return channel_.get(index);
@@ -5655,7 +5733,7 @@ public final class CommsTask {
        * Communication channels to execute for the subject campaign.
        * </pre>
        *
-       * <code>repeated .bloombox.schema.comms.Channel channel = 7;</code>
+       * <code>repeated .bloombox.comms.Channel channel = 7;</code>
        */
       public Builder setChannelValue(
           int index, int value) {
@@ -5669,7 +5747,7 @@ public final class CommsTask {
        * Communication channels to execute for the subject campaign.
        * </pre>
        *
-       * <code>repeated .bloombox.schema.comms.Channel channel = 7;</code>
+       * <code>repeated .bloombox.comms.Channel channel = 7;</code>
        */
       public Builder addChannelValue(int value) {
         ensureChannelIsMutable();
@@ -5682,7 +5760,7 @@ public final class CommsTask {
        * Communication channels to execute for the subject campaign.
        * </pre>
        *
-       * <code>repeated .bloombox.schema.comms.Channel channel = 7;</code>
+       * <code>repeated .bloombox.comms.Channel channel = 7;</code>
        */
       public Builder addAllChannelValue(
           java.lang.Iterable<java.lang.Integer> values) {
@@ -5702,7 +5780,7 @@ public final class CommsTask {
        * Membership record for this user at the partner location in question.
        * </pre>
        *
-       * <code>.bloombox.schema.identity.ConsumerMembership membership = 8;</code>
+       * <code>.bloombox.identity.ConsumerMembership membership = 8;</code>
        */
       public boolean hasMembership() {
         return membershipBuilder_ != null || membership_ != null;
@@ -5712,7 +5790,7 @@ public final class CommsTask {
        * Membership record for this user at the partner location in question.
        * </pre>
        *
-       * <code>.bloombox.schema.identity.ConsumerMembership membership = 8;</code>
+       * <code>.bloombox.identity.ConsumerMembership membership = 8;</code>
        */
       public io.bloombox.schema.identity.AppUser.ConsumerMembership getMembership() {
         if (membershipBuilder_ == null) {
@@ -5726,7 +5804,7 @@ public final class CommsTask {
        * Membership record for this user at the partner location in question.
        * </pre>
        *
-       * <code>.bloombox.schema.identity.ConsumerMembership membership = 8;</code>
+       * <code>.bloombox.identity.ConsumerMembership membership = 8;</code>
        */
       public Builder setMembership(io.bloombox.schema.identity.AppUser.ConsumerMembership value) {
         if (membershipBuilder_ == null) {
@@ -5746,7 +5824,7 @@ public final class CommsTask {
        * Membership record for this user at the partner location in question.
        * </pre>
        *
-       * <code>.bloombox.schema.identity.ConsumerMembership membership = 8;</code>
+       * <code>.bloombox.identity.ConsumerMembership membership = 8;</code>
        */
       public Builder setMembership(
           io.bloombox.schema.identity.AppUser.ConsumerMembership.Builder builderForValue) {
@@ -5764,7 +5842,7 @@ public final class CommsTask {
        * Membership record for this user at the partner location in question.
        * </pre>
        *
-       * <code>.bloombox.schema.identity.ConsumerMembership membership = 8;</code>
+       * <code>.bloombox.identity.ConsumerMembership membership = 8;</code>
        */
       public Builder mergeMembership(io.bloombox.schema.identity.AppUser.ConsumerMembership value) {
         if (membershipBuilder_ == null) {
@@ -5786,7 +5864,7 @@ public final class CommsTask {
        * Membership record for this user at the partner location in question.
        * </pre>
        *
-       * <code>.bloombox.schema.identity.ConsumerMembership membership = 8;</code>
+       * <code>.bloombox.identity.ConsumerMembership membership = 8;</code>
        */
       public Builder clearMembership() {
         if (membershipBuilder_ == null) {
@@ -5804,7 +5882,7 @@ public final class CommsTask {
        * Membership record for this user at the partner location in question.
        * </pre>
        *
-       * <code>.bloombox.schema.identity.ConsumerMembership membership = 8;</code>
+       * <code>.bloombox.identity.ConsumerMembership membership = 8;</code>
        */
       public io.bloombox.schema.identity.AppUser.ConsumerMembership.Builder getMembershipBuilder() {
         
@@ -5816,7 +5894,7 @@ public final class CommsTask {
        * Membership record for this user at the partner location in question.
        * </pre>
        *
-       * <code>.bloombox.schema.identity.ConsumerMembership membership = 8;</code>
+       * <code>.bloombox.identity.ConsumerMembership membership = 8;</code>
        */
       public io.bloombox.schema.identity.AppUser.ConsumerMembershipOrBuilder getMembershipOrBuilder() {
         if (membershipBuilder_ != null) {
@@ -5831,7 +5909,7 @@ public final class CommsTask {
        * Membership record for this user at the partner location in question.
        * </pre>
        *
-       * <code>.bloombox.schema.identity.ConsumerMembership membership = 8;</code>
+       * <code>.bloombox.identity.ConsumerMembership membership = 8;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
           io.bloombox.schema.identity.AppUser.ConsumerMembership, io.bloombox.schema.identity.AppUser.ConsumerMembership.Builder, io.bloombox.schema.identity.AppUser.ConsumerMembershipOrBuilder> 
@@ -5855,7 +5933,7 @@ public final class CommsTask {
        * Key for the user's account.
        * </pre>
        *
-       * <code>.bloombox.schema.identity.UserKey user = 9;</code>
+       * <code>.bloombox.identity.UserKey user = 9;</code>
        */
       public boolean hasUser() {
         return userBuilder_ != null || user_ != null;
@@ -5865,7 +5943,7 @@ public final class CommsTask {
        * Key for the user's account.
        * </pre>
        *
-       * <code>.bloombox.schema.identity.UserKey user = 9;</code>
+       * <code>.bloombox.identity.UserKey user = 9;</code>
        */
       public io.bloombox.schema.identity.AppUserKey.UserKey getUser() {
         if (userBuilder_ == null) {
@@ -5879,7 +5957,7 @@ public final class CommsTask {
        * Key for the user's account.
        * </pre>
        *
-       * <code>.bloombox.schema.identity.UserKey user = 9;</code>
+       * <code>.bloombox.identity.UserKey user = 9;</code>
        */
       public Builder setUser(io.bloombox.schema.identity.AppUserKey.UserKey value) {
         if (userBuilder_ == null) {
@@ -5899,7 +5977,7 @@ public final class CommsTask {
        * Key for the user's account.
        * </pre>
        *
-       * <code>.bloombox.schema.identity.UserKey user = 9;</code>
+       * <code>.bloombox.identity.UserKey user = 9;</code>
        */
       public Builder setUser(
           io.bloombox.schema.identity.AppUserKey.UserKey.Builder builderForValue) {
@@ -5917,7 +5995,7 @@ public final class CommsTask {
        * Key for the user's account.
        * </pre>
        *
-       * <code>.bloombox.schema.identity.UserKey user = 9;</code>
+       * <code>.bloombox.identity.UserKey user = 9;</code>
        */
       public Builder mergeUser(io.bloombox.schema.identity.AppUserKey.UserKey value) {
         if (userBuilder_ == null) {
@@ -5939,7 +6017,7 @@ public final class CommsTask {
        * Key for the user's account.
        * </pre>
        *
-       * <code>.bloombox.schema.identity.UserKey user = 9;</code>
+       * <code>.bloombox.identity.UserKey user = 9;</code>
        */
       public Builder clearUser() {
         if (userBuilder_ == null) {
@@ -5957,7 +6035,7 @@ public final class CommsTask {
        * Key for the user's account.
        * </pre>
        *
-       * <code>.bloombox.schema.identity.UserKey user = 9;</code>
+       * <code>.bloombox.identity.UserKey user = 9;</code>
        */
       public io.bloombox.schema.identity.AppUserKey.UserKey.Builder getUserBuilder() {
         
@@ -5969,7 +6047,7 @@ public final class CommsTask {
        * Key for the user's account.
        * </pre>
        *
-       * <code>.bloombox.schema.identity.UserKey user = 9;</code>
+       * <code>.bloombox.identity.UserKey user = 9;</code>
        */
       public io.bloombox.schema.identity.AppUserKey.UserKeyOrBuilder getUserOrBuilder() {
         if (userBuilder_ != null) {
@@ -5984,7 +6062,7 @@ public final class CommsTask {
        * Key for the user's account.
        * </pre>
        *
-       * <code>.bloombox.schema.identity.UserKey user = 9;</code>
+       * <code>.bloombox.identity.UserKey user = 9;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
           io.bloombox.schema.identity.AppUserKey.UserKey, io.bloombox.schema.identity.AppUserKey.UserKey.Builder, io.bloombox.schema.identity.AppUserKey.UserKeyOrBuilder> 
@@ -6190,21 +6268,23 @@ public final class CommsTask {
         onChanged();
         return this;
       }
+      @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
         return super.setUnknownFieldsProto3(unknownFields);
       }
 
+      @java.lang.Override
       public final Builder mergeUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
         return super.mergeUnknownFields(unknownFields);
       }
 
 
-      // @@protoc_insertion_point(builder_scope:bloombox.schema.comms.AdEngineOperation)
+      // @@protoc_insertion_point(builder_scope:bloombox.comms.AdEngineOperation)
     }
 
-    // @@protoc_insertion_point(class_scope:bloombox.schema.comms.AdEngineOperation)
+    // @@protoc_insertion_point(class_scope:bloombox.comms.AdEngineOperation)
     private static final io.bloombox.schema.comms.CommsTask.AdEngineOperation DEFAULT_INSTANCE;
     static {
       DEFAULT_INSTANCE = new io.bloombox.schema.comms.CommsTask.AdEngineOperation();
@@ -6216,6 +6296,7 @@ public final class CommsTask {
 
     private static final com.google.protobuf.Parser<AdEngineOperation>
         PARSER = new com.google.protobuf.AbstractParser<AdEngineOperation>() {
+      @java.lang.Override
       public AdEngineOperation parsePartialFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -6233,6 +6314,7 @@ public final class CommsTask {
       return PARSER;
     }
 
+    @java.lang.Override
     public io.bloombox.schema.comms.CommsTask.AdEngineOperation getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
@@ -6240,20 +6322,20 @@ public final class CommsTask {
   }
 
   private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_bloombox_schema_comms_SendOperation_descriptor;
+    internal_static_bloombox_comms_SendOperation_descriptor;
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_bloombox_schema_comms_SendOperation_fieldAccessorTable;
+      internal_static_bloombox_comms_SendOperation_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_bloombox_schema_comms_TriggerOperation_descriptor;
+    internal_static_bloombox_comms_TriggerOperation_descriptor;
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_bloombox_schema_comms_TriggerOperation_fieldAccessorTable;
+      internal_static_bloombox_comms_TriggerOperation_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_bloombox_schema_comms_AdEngineOperation_descriptor;
+    internal_static_bloombox_comms_AdEngineOperation_descriptor;
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_bloombox_schema_comms_AdEngineOperation_fieldAccessorTable;
+      internal_static_bloombox_comms_AdEngineOperation_fieldAccessorTable;
 
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
@@ -6263,39 +6345,37 @@ public final class CommsTask {
       descriptor;
   static {
     java.lang.String[] descriptorData = {
-      "\n\025comms/CommsTask.proto\022\025bloombox.schema" +
-      ".comms\032\024core/Datamodel.proto\032\017comms/SMS." +
-      "proto\032\021comms/Email.proto\032\021comms/Comms.pr" +
-      "oto\032\023identity/User.proto\032\026identity/UserK" +
-      "ey.proto\032\030marketing/Campaign.proto\032\026temp" +
-      "oral/Instant.proto\"\345\002\n\rSendOperation\022\014\n\004" +
-      "uuid\030\001 \001(\t\022/\n\007channel\030\002 \001(\0162\036.bloombox.s" +
-      "chema.comms.Channel\022;\n\006status\030\003 \001(\0162+.bl" +
-      "oombox.schema.comms.SendOperation.Status" +
-      "\022\017\n\007dry_run\030\004 \001(\010\0225\n\003sms\030\n \001(\0132&.bloombo" +
-      "x.schema.comms.SMSTransmissionH\000\0229\n\005emai" +
-      "l\030\013 \001(\0132(.bloombox.schema.comms.EmailTra" +
-      "nsmissionH\000\"7\n\006Status\022\013\n\007PENDING\020\000\022\013\n\007SE" +
-      "NDING\020\001\022\t\n\005ERROR\020\002\022\010\n\004DONE\020\003:\017\202\367\002\013\010\001\022\007ba" +
-      "tchesB\013\n\toperation\"\314\002\n\020TriggerOperation\022" +
-      "\024\n\004uuid\030\001 \001(\tB\006\302\265\003\002\010\002\022\017\n\007partner\030\002 \001(\t\022\020" +
-      "\n\010location\030\003 \001(\t\022\020\n\010campaign\030\004 \001(\t\0221\n\tsu" +
-      "bmitted\030\005 \001(\0132\036.opencannabis.temporal.In" +
-      "stant\0222\n\nnot_before\030\006 \001(\0132\036.opencannabis" +
-      ".temporal.Instant\022/\n\007channel\030\007 \003(\0162\036.blo" +
-      "ombox.schema.comms.Channel\0220\n\002op\030\010 \003(\0132$" +
-      ".bloombox.schema.comms.SendOperation\022\017\n\007" +
-      "dry_run\030\t \001(\010:\022\202\367\002\016\010\001\022\nexecutions\"\306\002\n\021Ad" +
-      "EngineOperation\022\021\n\texecution\030\001 \001(\t\0225\n\010ca" +
-      "mpaign\030\002 \001(\0132#.bloombox.schema.marketing" +
-      ".Campaign\022/\n\007channel\030\007 \003(\0162\036.bloombox.sc" +
-      "hema.comms.Channel\022@\n\nmembership\030\010 \001(\0132," +
-      ".bloombox.schema.identity.ConsumerMember" +
-      "ship\022/\n\004user\030\t \001(\0132!.bloombox.schema.ide" +
-      "ntity.UserKey\0222\n\nnot_before\030\n \001(\0132\036.open" +
-      "cannabis.temporal.Instant\022\017\n\007dry_run\030\013 \001" +
-      "(\010B/\n\030io.bloombox.schema.commsB\tCommsTas" +
-      "kH\001P\000\242\002\003BBSb\006proto3"
+      "\n\025comms/CommsTask.proto\022\016bloombox.comms\032" +
+      "\024core/Datamodel.proto\032\017comms/SMS.proto\032\021" +
+      "comms/Email.proto\032\021comms/Comms.proto\032\023id" +
+      "entity/User.proto\032\026identity/UserKey.prot" +
+      "o\032\030marketing/Campaign.proto\032\026temporal/In" +
+      "stant.proto\"\311\002\n\rSendOperation\022\014\n\004uuid\030\001 " +
+      "\001(\t\022(\n\007channel\030\002 \001(\0162\027.bloombox.comms.Ch" +
+      "annel\0224\n\006status\030\003 \001(\0162$.bloombox.comms.S" +
+      "endOperation.Status\022\017\n\007dry_run\030\004 \001(\010\022.\n\003" +
+      "sms\030\n \001(\0132\037.bloombox.comms.SMSTransmissi" +
+      "onH\000\0222\n\005email\030\013 \001(\0132!.bloombox.comms.Ema" +
+      "ilTransmissionH\000\"7\n\006Status\022\013\n\007PENDING\020\000\022" +
+      "\013\n\007SENDING\020\001\022\t\n\005ERROR\020\002\022\010\n\004DONE\020\003:\017\202\367\002\013\010" +
+      "\001\022\007batchesB\013\n\toperation\"\276\002\n\020TriggerOpera" +
+      "tion\022\024\n\004uuid\030\001 \001(\tB\006\302\265\003\002\010\002\022\017\n\007partner\030\002 " +
+      "\001(\t\022\020\n\010location\030\003 \001(\t\022\020\n\010campaign\030\004 \001(\t\022" +
+      "1\n\tsubmitted\030\005 \001(\0132\036.opencannabis.tempor" +
+      "al.Instant\0222\n\nnot_before\030\006 \001(\0132\036.opencan" +
+      "nabis.temporal.Instant\022(\n\007channel\030\007 \003(\0162" +
+      "\027.bloombox.comms.Channel\022)\n\002op\030\010 \003(\0132\035.b" +
+      "loombox.comms.SendOperation\022\017\n\007dry_run\030\t" +
+      " \001(\010:\022\202\367\002\016\010\001\022\nexecutions\"\252\002\n\021AdEngineOpe" +
+      "ration\022\021\n\texecution\030\001 \001(\t\022.\n\010campaign\030\002 " +
+      "\001(\0132\034.bloombox.marketing.Campaign\022(\n\007cha" +
+      "nnel\030\007 \003(\0162\027.bloombox.comms.Channel\0229\n\nm" +
+      "embership\030\010 \001(\0132%.bloombox.identity.Cons" +
+      "umerMembership\022(\n\004user\030\t \001(\0132\032.bloombox." +
+      "identity.UserKey\0222\n\nnot_before\030\n \001(\0132\036.o" +
+      "pencannabis.temporal.Instant\022\017\n\007dry_run\030" +
+      "\013 \001(\010B/\n\030io.bloombox.schema.commsB\tComms" +
+      "TaskH\001P\000\242\002\003BBSb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -6317,23 +6397,23 @@ public final class CommsTask {
           io.bloombox.schema.marketing.MarketingCampaign.getDescriptor(),
           io.opencannabis.schema.temporal.TemporalInstant.getDescriptor(),
         }, assigner);
-    internal_static_bloombox_schema_comms_SendOperation_descriptor =
+    internal_static_bloombox_comms_SendOperation_descriptor =
       getDescriptor().getMessageTypes().get(0);
-    internal_static_bloombox_schema_comms_SendOperation_fieldAccessorTable = new
+    internal_static_bloombox_comms_SendOperation_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_bloombox_schema_comms_SendOperation_descriptor,
+        internal_static_bloombox_comms_SendOperation_descriptor,
         new java.lang.String[] { "Uuid", "Channel", "Status", "DryRun", "Sms", "Email", "Operation", });
-    internal_static_bloombox_schema_comms_TriggerOperation_descriptor =
+    internal_static_bloombox_comms_TriggerOperation_descriptor =
       getDescriptor().getMessageTypes().get(1);
-    internal_static_bloombox_schema_comms_TriggerOperation_fieldAccessorTable = new
+    internal_static_bloombox_comms_TriggerOperation_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_bloombox_schema_comms_TriggerOperation_descriptor,
+        internal_static_bloombox_comms_TriggerOperation_descriptor,
         new java.lang.String[] { "Uuid", "Partner", "Location", "Campaign", "Submitted", "NotBefore", "Channel", "Op", "DryRun", });
-    internal_static_bloombox_schema_comms_AdEngineOperation_descriptor =
+    internal_static_bloombox_comms_AdEngineOperation_descriptor =
       getDescriptor().getMessageTypes().get(2);
-    internal_static_bloombox_schema_comms_AdEngineOperation_fieldAccessorTable = new
+    internal_static_bloombox_comms_AdEngineOperation_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_bloombox_schema_comms_AdEngineOperation_descriptor,
+        internal_static_bloombox_comms_AdEngineOperation_descriptor,
         new java.lang.String[] { "Execution", "Campaign", "Channel", "Membership", "User", "NotBefore", "DryRun", });
     com.google.protobuf.ExtensionRegistry registry =
         com.google.protobuf.ExtensionRegistry.newInstance();

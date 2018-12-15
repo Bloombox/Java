@@ -1,8 +1,8 @@
 /*
- * Copyright 2018, Bloombox, LLC. All rights reserved.
+ * Copyright 2018, Momentum Ideas, Co. All rights reserved.
  *
  * Source and object computer code contained herein is the private intellectual
- * property of Bloombox, a California Limited Liability Corporation. Use of this
+ * property of Momentum Ideas Co., a Delaware Corporation. Use of this
  * code in source form requires permission in writing before use or the
  * assembly, distribution, or publishing of derivative works, for commercial
  * purposes or any other purpose, from a duly authorized officer of Momentum
@@ -25,11 +25,11 @@ package io.bloombox.schema.services.platform.v1;
  * Specifies an RPC operation to retrieve system health status for automated external systems.
  * </pre>
  *
- * Protobuf type {@code bloombox.schema.services.platform.v1.Healthcheck}
+ * Protobuf type {@code bloombox.services.platform.v1.Healthcheck}
  */
 public  final class Healthcheck extends
     com.google.protobuf.GeneratedMessageV3 implements
-    // @@protoc_insertion_point(message_implements:bloombox.schema.services.platform.v1.Healthcheck)
+    // @@protoc_insertion_point(message_implements:bloombox.services.platform.v1.Healthcheck)
     HealthcheckOrBuilder {
 private static final long serialVersionUID = 0L;
   // Use Healthcheck.newBuilder() to construct.
@@ -83,18 +83,19 @@ private static final long serialVersionUID = 0L;
   }
   public static final com.google.protobuf.Descriptors.Descriptor
       getDescriptor() {
-    return io.bloombox.schema.services.platform.v1.PlatformServiceV1.internal_static_bloombox_schema_services_platform_v1_Healthcheck_descriptor;
+    return io.bloombox.schema.services.platform.v1.PlatformServiceV1.internal_static_bloombox_services_platform_v1_Healthcheck_descriptor;
   }
 
+  @java.lang.Override
   protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internalGetFieldAccessorTable() {
-    return io.bloombox.schema.services.platform.v1.PlatformServiceV1.internal_static_bloombox_schema_services_platform_v1_Healthcheck_fieldAccessorTable
+    return io.bloombox.schema.services.platform.v1.PlatformServiceV1.internal_static_bloombox_services_platform_v1_Healthcheck_fieldAccessorTable
         .ensureFieldAccessorsInitialized(
             io.bloombox.schema.services.platform.v1.Healthcheck.class, io.bloombox.schema.services.platform.v1.Healthcheck.Builder.class);
   }
 
   public interface RequestOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:bloombox.schema.services.platform.v1.Healthcheck.Request)
+      // @@protoc_insertion_point(interface_extends:bloombox.services.platform.v1.Healthcheck.Request)
       com.google.protobuf.MessageOrBuilder {
 
     /**
@@ -120,11 +121,11 @@ private static final long serialVersionUID = 0L;
    * Specifies a healthcheck request.
    * </pre>
    *
-   * Protobuf type {@code bloombox.schema.services.platform.v1.Healthcheck.Request}
+   * Protobuf type {@code bloombox.services.platform.v1.Healthcheck.Request}
    */
   public  static final class Request extends
       com.google.protobuf.GeneratedMessageV3 implements
-      // @@protoc_insertion_point(message_implements:bloombox.schema.services.platform.v1.Healthcheck.Request)
+      // @@protoc_insertion_point(message_implements:bloombox.services.platform.v1.Healthcheck.Request)
       RequestOrBuilder {
   private static final long serialVersionUID = 0L;
     // Use Request.newBuilder() to construct.
@@ -159,17 +160,17 @@ private static final long serialVersionUID = 0L;
             case 0:
               done = true;
               break;
+            case 10: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              probe_ = s;
+              break;
+            }
             default: {
               if (!parseUnknownFieldProto3(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
-              break;
-            }
-            case 10: {
-              java.lang.String s = input.readStringRequireUtf8();
-
-              probe_ = s;
               break;
             }
           }
@@ -186,12 +187,13 @@ private static final long serialVersionUID = 0L;
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return io.bloombox.schema.services.platform.v1.PlatformServiceV1.internal_static_bloombox_schema_services_platform_v1_Healthcheck_Request_descriptor;
+      return io.bloombox.schema.services.platform.v1.PlatformServiceV1.internal_static_bloombox_services_platform_v1_Healthcheck_Request_descriptor;
     }
 
+    @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return io.bloombox.schema.services.platform.v1.PlatformServiceV1.internal_static_bloombox_schema_services_platform_v1_Healthcheck_Request_fieldAccessorTable
+      return io.bloombox.schema.services.platform.v1.PlatformServiceV1.internal_static_bloombox_services_platform_v1_Healthcheck_Request_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
               io.bloombox.schema.services.platform.v1.Healthcheck.Request.class, io.bloombox.schema.services.platform.v1.Healthcheck.Request.Builder.class);
     }
@@ -239,6 +241,7 @@ private static final long serialVersionUID = 0L;
     }
 
     private byte memoizedIsInitialized = -1;
+    @java.lang.Override
     public final boolean isInitialized() {
       byte isInitialized = memoizedIsInitialized;
       if (isInitialized == 1) return true;
@@ -248,6 +251,7 @@ private static final long serialVersionUID = 0L;
       return true;
     }
 
+    @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
       if (!getProbeBytes().isEmpty()) {
@@ -256,6 +260,7 @@ private static final long serialVersionUID = 0L;
       unknownFields.writeTo(output);
     }
 
+    @java.lang.Override
     public int getSerializedSize() {
       int size = memoizedSize;
       if (size != -1) return size;
@@ -370,6 +375,7 @@ private static final long serialVersionUID = 0L;
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
 
+    @java.lang.Override
     public Builder newBuilderForType() { return newBuilder(); }
     public static Builder newBuilder() {
       return DEFAULT_INSTANCE.toBuilder();
@@ -377,6 +383,7 @@ private static final long serialVersionUID = 0L;
     public static Builder newBuilder(io.bloombox.schema.services.platform.v1.Healthcheck.Request prototype) {
       return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
     }
+    @java.lang.Override
     public Builder toBuilder() {
       return this == DEFAULT_INSTANCE
           ? new Builder() : new Builder().mergeFrom(this);
@@ -393,20 +400,21 @@ private static final long serialVersionUID = 0L;
      * Specifies a healthcheck request.
      * </pre>
      *
-     * Protobuf type {@code bloombox.schema.services.platform.v1.Healthcheck.Request}
+     * Protobuf type {@code bloombox.services.platform.v1.Healthcheck.Request}
      */
     public static final class Builder extends
         com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:bloombox.schema.services.platform.v1.Healthcheck.Request)
+        // @@protoc_insertion_point(builder_implements:bloombox.services.platform.v1.Healthcheck.Request)
         io.bloombox.schema.services.platform.v1.Healthcheck.RequestOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return io.bloombox.schema.services.platform.v1.PlatformServiceV1.internal_static_bloombox_schema_services_platform_v1_Healthcheck_Request_descriptor;
+        return io.bloombox.schema.services.platform.v1.PlatformServiceV1.internal_static_bloombox_services_platform_v1_Healthcheck_Request_descriptor;
       }
 
+      @java.lang.Override
       protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return io.bloombox.schema.services.platform.v1.PlatformServiceV1.internal_static_bloombox_schema_services_platform_v1_Healthcheck_Request_fieldAccessorTable
+        return io.bloombox.schema.services.platform.v1.PlatformServiceV1.internal_static_bloombox_services_platform_v1_Healthcheck_Request_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
                 io.bloombox.schema.services.platform.v1.Healthcheck.Request.class, io.bloombox.schema.services.platform.v1.Healthcheck.Request.Builder.class);
       }
@@ -426,6 +434,7 @@ private static final long serialVersionUID = 0L;
                 .alwaysUseFieldBuilders) {
         }
       }
+      @java.lang.Override
       public Builder clear() {
         super.clear();
         probe_ = "";
@@ -433,15 +442,18 @@ private static final long serialVersionUID = 0L;
         return this;
       }
 
+      @java.lang.Override
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return io.bloombox.schema.services.platform.v1.PlatformServiceV1.internal_static_bloombox_schema_services_platform_v1_Healthcheck_Request_descriptor;
+        return io.bloombox.schema.services.platform.v1.PlatformServiceV1.internal_static_bloombox_services_platform_v1_Healthcheck_Request_descriptor;
       }
 
+      @java.lang.Override
       public io.bloombox.schema.services.platform.v1.Healthcheck.Request getDefaultInstanceForType() {
         return io.bloombox.schema.services.platform.v1.Healthcheck.Request.getDefaultInstance();
       }
 
+      @java.lang.Override
       public io.bloombox.schema.services.platform.v1.Healthcheck.Request build() {
         io.bloombox.schema.services.platform.v1.Healthcheck.Request result = buildPartial();
         if (!result.isInitialized()) {
@@ -450,6 +462,7 @@ private static final long serialVersionUID = 0L;
         return result;
       }
 
+      @java.lang.Override
       public io.bloombox.schema.services.platform.v1.Healthcheck.Request buildPartial() {
         io.bloombox.schema.services.platform.v1.Healthcheck.Request result = new io.bloombox.schema.services.platform.v1.Healthcheck.Request(this);
         result.probe_ = probe_;
@@ -457,32 +470,39 @@ private static final long serialVersionUID = 0L;
         return result;
       }
 
+      @java.lang.Override
       public Builder clone() {
         return (Builder) super.clone();
       }
+      @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
         return (Builder) super.setField(field, value);
       }
+      @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
         return (Builder) super.clearField(field);
       }
+      @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
         return (Builder) super.clearOneof(oneof);
       }
+      @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
         return (Builder) super.setRepeatedField(field, index, value);
       }
+      @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
         return (Builder) super.addRepeatedField(field, value);
       }
+      @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
         if (other instanceof io.bloombox.schema.services.platform.v1.Healthcheck.Request) {
           return mergeFrom((io.bloombox.schema.services.platform.v1.Healthcheck.Request)other);
@@ -503,10 +523,12 @@ private static final long serialVersionUID = 0L;
         return this;
       }
 
+      @java.lang.Override
       public final boolean isInitialized() {
         return true;
       }
 
+      @java.lang.Override
       public Builder mergeFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -613,21 +635,23 @@ private static final long serialVersionUID = 0L;
         onChanged();
         return this;
       }
+      @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
         return super.setUnknownFieldsProto3(unknownFields);
       }
 
+      @java.lang.Override
       public final Builder mergeUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
         return super.mergeUnknownFields(unknownFields);
       }
 
 
-      // @@protoc_insertion_point(builder_scope:bloombox.schema.services.platform.v1.Healthcheck.Request)
+      // @@protoc_insertion_point(builder_scope:bloombox.services.platform.v1.Healthcheck.Request)
     }
 
-    // @@protoc_insertion_point(class_scope:bloombox.schema.services.platform.v1.Healthcheck.Request)
+    // @@protoc_insertion_point(class_scope:bloombox.services.platform.v1.Healthcheck.Request)
     private static final io.bloombox.schema.services.platform.v1.Healthcheck.Request DEFAULT_INSTANCE;
     static {
       DEFAULT_INSTANCE = new io.bloombox.schema.services.platform.v1.Healthcheck.Request();
@@ -639,6 +663,7 @@ private static final long serialVersionUID = 0L;
 
     private static final com.google.protobuf.Parser<Request>
         PARSER = new com.google.protobuf.AbstractParser<Request>() {
+      @java.lang.Override
       public Request parsePartialFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -656,6 +681,7 @@ private static final long serialVersionUID = 0L;
       return PARSER;
     }
 
+    @java.lang.Override
     public io.bloombox.schema.services.platform.v1.Healthcheck.Request getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
@@ -663,6 +689,7 @@ private static final long serialVersionUID = 0L;
   }
 
   private byte memoizedIsInitialized = -1;
+  @java.lang.Override
   public final boolean isInitialized() {
     byte isInitialized = memoizedIsInitialized;
     if (isInitialized == 1) return true;
@@ -672,11 +699,13 @@ private static final long serialVersionUID = 0L;
     return true;
   }
 
+  @java.lang.Override
   public void writeTo(com.google.protobuf.CodedOutputStream output)
                       throws java.io.IOException {
     unknownFields.writeTo(output);
   }
 
+  @java.lang.Override
   public int getSerializedSize() {
     int size = memoizedSize;
     if (size != -1) return size;
@@ -784,6 +813,7 @@ private static final long serialVersionUID = 0L;
         .parseWithIOException(PARSER, input, extensionRegistry);
   }
 
+  @java.lang.Override
   public Builder newBuilderForType() { return newBuilder(); }
   public static Builder newBuilder() {
     return DEFAULT_INSTANCE.toBuilder();
@@ -791,6 +821,7 @@ private static final long serialVersionUID = 0L;
   public static Builder newBuilder(io.bloombox.schema.services.platform.v1.Healthcheck prototype) {
     return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
   }
+  @java.lang.Override
   public Builder toBuilder() {
     return this == DEFAULT_INSTANCE
         ? new Builder() : new Builder().mergeFrom(this);
@@ -807,20 +838,21 @@ private static final long serialVersionUID = 0L;
    * Specifies an RPC operation to retrieve system health status for automated external systems.
    * </pre>
    *
-   * Protobuf type {@code bloombox.schema.services.platform.v1.Healthcheck}
+   * Protobuf type {@code bloombox.services.platform.v1.Healthcheck}
    */
   public static final class Builder extends
       com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-      // @@protoc_insertion_point(builder_implements:bloombox.schema.services.platform.v1.Healthcheck)
+      // @@protoc_insertion_point(builder_implements:bloombox.services.platform.v1.Healthcheck)
       io.bloombox.schema.services.platform.v1.HealthcheckOrBuilder {
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return io.bloombox.schema.services.platform.v1.PlatformServiceV1.internal_static_bloombox_schema_services_platform_v1_Healthcheck_descriptor;
+      return io.bloombox.schema.services.platform.v1.PlatformServiceV1.internal_static_bloombox_services_platform_v1_Healthcheck_descriptor;
     }
 
+    @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return io.bloombox.schema.services.platform.v1.PlatformServiceV1.internal_static_bloombox_schema_services_platform_v1_Healthcheck_fieldAccessorTable
+      return io.bloombox.schema.services.platform.v1.PlatformServiceV1.internal_static_bloombox_services_platform_v1_Healthcheck_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
               io.bloombox.schema.services.platform.v1.Healthcheck.class, io.bloombox.schema.services.platform.v1.Healthcheck.Builder.class);
     }
@@ -840,20 +872,24 @@ private static final long serialVersionUID = 0L;
               .alwaysUseFieldBuilders) {
       }
     }
+    @java.lang.Override
     public Builder clear() {
       super.clear();
       return this;
     }
 
+    @java.lang.Override
     public com.google.protobuf.Descriptors.Descriptor
         getDescriptorForType() {
-      return io.bloombox.schema.services.platform.v1.PlatformServiceV1.internal_static_bloombox_schema_services_platform_v1_Healthcheck_descriptor;
+      return io.bloombox.schema.services.platform.v1.PlatformServiceV1.internal_static_bloombox_services_platform_v1_Healthcheck_descriptor;
     }
 
+    @java.lang.Override
     public io.bloombox.schema.services.platform.v1.Healthcheck getDefaultInstanceForType() {
       return io.bloombox.schema.services.platform.v1.Healthcheck.getDefaultInstance();
     }
 
+    @java.lang.Override
     public io.bloombox.schema.services.platform.v1.Healthcheck build() {
       io.bloombox.schema.services.platform.v1.Healthcheck result = buildPartial();
       if (!result.isInitialized()) {
@@ -862,38 +898,46 @@ private static final long serialVersionUID = 0L;
       return result;
     }
 
+    @java.lang.Override
     public io.bloombox.schema.services.platform.v1.Healthcheck buildPartial() {
       io.bloombox.schema.services.platform.v1.Healthcheck result = new io.bloombox.schema.services.platform.v1.Healthcheck(this);
       onBuilt();
       return result;
     }
 
+    @java.lang.Override
     public Builder clone() {
       return (Builder) super.clone();
     }
+    @java.lang.Override
     public Builder setField(
         com.google.protobuf.Descriptors.FieldDescriptor field,
         java.lang.Object value) {
       return (Builder) super.setField(field, value);
     }
+    @java.lang.Override
     public Builder clearField(
         com.google.protobuf.Descriptors.FieldDescriptor field) {
       return (Builder) super.clearField(field);
     }
+    @java.lang.Override
     public Builder clearOneof(
         com.google.protobuf.Descriptors.OneofDescriptor oneof) {
       return (Builder) super.clearOneof(oneof);
     }
+    @java.lang.Override
     public Builder setRepeatedField(
         com.google.protobuf.Descriptors.FieldDescriptor field,
         int index, java.lang.Object value) {
       return (Builder) super.setRepeatedField(field, index, value);
     }
+    @java.lang.Override
     public Builder addRepeatedField(
         com.google.protobuf.Descriptors.FieldDescriptor field,
         java.lang.Object value) {
       return (Builder) super.addRepeatedField(field, value);
     }
+    @java.lang.Override
     public Builder mergeFrom(com.google.protobuf.Message other) {
       if (other instanceof io.bloombox.schema.services.platform.v1.Healthcheck) {
         return mergeFrom((io.bloombox.schema.services.platform.v1.Healthcheck)other);
@@ -910,10 +954,12 @@ private static final long serialVersionUID = 0L;
       return this;
     }
 
+    @java.lang.Override
     public final boolean isInitialized() {
       return true;
     }
 
+    @java.lang.Override
     public Builder mergeFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -931,21 +977,23 @@ private static final long serialVersionUID = 0L;
       }
       return this;
     }
+    @java.lang.Override
     public final Builder setUnknownFields(
         final com.google.protobuf.UnknownFieldSet unknownFields) {
       return super.setUnknownFieldsProto3(unknownFields);
     }
 
+    @java.lang.Override
     public final Builder mergeUnknownFields(
         final com.google.protobuf.UnknownFieldSet unknownFields) {
       return super.mergeUnknownFields(unknownFields);
     }
 
 
-    // @@protoc_insertion_point(builder_scope:bloombox.schema.services.platform.v1.Healthcheck)
+    // @@protoc_insertion_point(builder_scope:bloombox.services.platform.v1.Healthcheck)
   }
 
-  // @@protoc_insertion_point(class_scope:bloombox.schema.services.platform.v1.Healthcheck)
+  // @@protoc_insertion_point(class_scope:bloombox.services.platform.v1.Healthcheck)
   private static final io.bloombox.schema.services.platform.v1.Healthcheck DEFAULT_INSTANCE;
   static {
     DEFAULT_INSTANCE = new io.bloombox.schema.services.platform.v1.Healthcheck();
@@ -957,6 +1005,7 @@ private static final long serialVersionUID = 0L;
 
   private static final com.google.protobuf.Parser<Healthcheck>
       PARSER = new com.google.protobuf.AbstractParser<Healthcheck>() {
+    @java.lang.Override
     public Healthcheck parsePartialFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -974,6 +1023,7 @@ private static final long serialVersionUID = 0L;
     return PARSER;
   }
 
+  @java.lang.Override
   public io.bloombox.schema.services.platform.v1.Healthcheck getDefaultInstanceForType() {
     return DEFAULT_INSTANCE;
   }

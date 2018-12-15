@@ -1,11 +1,12 @@
 /*
- * Copyright 2018, Bloombox, LLC.
+ * Copyright 2018, Momentum Ideas, Co. All rights reserved.
  *
- * Licensed under the Apache License, Version 2.0 (the "License");
- * you may not use this file except in compliance with the License.
- * You may obtain a copy of the License at
- *
- *     http://www.apache.org/licenses/LICENSE-2.0
+ * Source and object computer code contained herein is the private intellectual
+ * property of Momentum Ideas Co., a Delaware Corporation. Use of this
+ * code in source form requires permission in writing before use or the
+ * assembly, distribution, or publishing of derivative works, for commercial
+ * purposes or any other purpose, from a duly authorized officer of Momentum
+ * Ideas Co.
  *
  * Unless required by applicable law or agreed to in writing, software
  * distributed under the License is distributed on an "AS IS" BASIS,
@@ -35,7 +36,7 @@ public final class PassID {
    * Enumerates statuses that a digital pass record may be in.
    * </pre>
    *
-   * Protobuf enum {@code bloombox.schema.identity.pass.PassStatus}
+   * Protobuf enum {@code bloombox.identity.pass.PassStatus}
    */
   public enum PassStatus
       implements com.google.protobuf.ProtocolMessageEnum {
@@ -213,11 +214,11 @@ public final class PassID {
       this.value = value;
     }
 
-    // @@protoc_insertion_point(enum_scope:bloombox.schema.identity.pass.PassStatus)
+    // @@protoc_insertion_point(enum_scope:bloombox.identity.pass.PassStatus)
   }
 
   public interface PassOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:bloombox.schema.identity.pass.Pass)
+      // @@protoc_insertion_point(interface_extends:bloombox.identity.pass.Pass)
       com.google.protobuf.MessageOrBuilder {
 
     /**
@@ -225,7 +226,7 @@ public final class PassID {
      * Specifies the key for a digital pass record.
      * </pre>
      *
-     * <code>.bloombox.schema.identity.pass.PassKey key = 1 [(.core.field) = { ... }</code>
+     * <code>.bloombox.identity.pass.PassKey key = 1 [(.core.field) = { ... }</code>
      */
     boolean hasKey();
     /**
@@ -233,7 +234,7 @@ public final class PassID {
      * Specifies the key for a digital pass record.
      * </pre>
      *
-     * <code>.bloombox.schema.identity.pass.PassKey key = 1 [(.core.field) = { ... }</code>
+     * <code>.bloombox.identity.pass.PassKey key = 1 [(.core.field) = { ... }</code>
      */
     io.bloombox.schema.pass.PassIDKey.PassKey getKey();
     /**
@@ -241,7 +242,7 @@ public final class PassID {
      * Specifies the key for a digital pass record.
      * </pre>
      *
-     * <code>.bloombox.schema.identity.pass.PassKey key = 1 [(.core.field) = { ... }</code>
+     * <code>.bloombox.identity.pass.PassKey key = 1 [(.core.field) = { ... }</code>
      */
     io.bloombox.schema.pass.PassIDKey.PassKeyOrBuilder getKeyOrBuilder();
 
@@ -313,7 +314,7 @@ public final class PassID {
      * Current status of this pass.
      * </pre>
      *
-     * <code>.bloombox.schema.identity.pass.PassStatus status = 7;</code>
+     * <code>.bloombox.identity.pass.PassStatus status = 7;</code>
      */
     int getStatusValue();
     /**
@@ -321,7 +322,7 @@ public final class PassID {
      * Current status of this pass.
      * </pre>
      *
-     * <code>.bloombox.schema.identity.pass.PassStatus status = 7;</code>
+     * <code>.bloombox.identity.pass.PassStatus status = 7;</code>
      */
     io.bloombox.schema.pass.PassID.PassStatus getStatus();
 
@@ -530,11 +531,11 @@ public final class PassID {
    * Specifies the structure of a digital pass record.
    * </pre>
    *
-   * Protobuf type {@code bloombox.schema.identity.pass.Pass}
+   * Protobuf type {@code bloombox.identity.pass.Pass}
    */
   public  static final class Pass extends
       com.google.protobuf.GeneratedMessageV3 implements
-      // @@protoc_insertion_point(message_implements:bloombox.schema.identity.pass.Pass)
+      // @@protoc_insertion_point(message_implements:bloombox.identity.pass.Pass)
       PassOrBuilder {
   private static final long serialVersionUID = 0L;
     // Use Pass.newBuilder() to construct.
@@ -574,13 +575,6 @@ public final class PassID {
             case 0:
               done = true;
               break;
-            default: {
-              if (!parseUnknownFieldProto3(
-                  input, unknownFields, extensionRegistry, tag)) {
-                done = true;
-              }
-              break;
-            }
             case 10: {
               io.bloombox.schema.pass.PassIDKey.PassKey.Builder subBuilder = null;
               if (key_ != null) {
@@ -731,6 +725,13 @@ public final class PassID {
 
               break;
             }
+            default: {
+              if (!parseUnknownFieldProto3(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
           }
         }
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
@@ -745,12 +746,13 @@ public final class PassID {
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return io.bloombox.schema.pass.PassID.internal_static_bloombox_schema_identity_pass_Pass_descriptor;
+      return io.bloombox.schema.pass.PassID.internal_static_bloombox_identity_pass_Pass_descriptor;
     }
 
+    @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return io.bloombox.schema.pass.PassID.internal_static_bloombox_schema_identity_pass_Pass_fieldAccessorTable
+      return io.bloombox.schema.pass.PassID.internal_static_bloombox_identity_pass_Pass_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
               io.bloombox.schema.pass.PassID.Pass.class, io.bloombox.schema.pass.PassID.Pass.Builder.class);
     }
@@ -762,7 +764,7 @@ public final class PassID {
      * Specifies the key for a digital pass record.
      * </pre>
      *
-     * <code>.bloombox.schema.identity.pass.PassKey key = 1 [(.core.field) = { ... }</code>
+     * <code>.bloombox.identity.pass.PassKey key = 1 [(.core.field) = { ... }</code>
      */
     public boolean hasKey() {
       return key_ != null;
@@ -772,7 +774,7 @@ public final class PassID {
      * Specifies the key for a digital pass record.
      * </pre>
      *
-     * <code>.bloombox.schema.identity.pass.PassKey key = 1 [(.core.field) = { ... }</code>
+     * <code>.bloombox.identity.pass.PassKey key = 1 [(.core.field) = { ... }</code>
      */
     public io.bloombox.schema.pass.PassIDKey.PassKey getKey() {
       return key_ == null ? io.bloombox.schema.pass.PassIDKey.PassKey.getDefaultInstance() : key_;
@@ -782,7 +784,7 @@ public final class PassID {
      * Specifies the key for a digital pass record.
      * </pre>
      *
-     * <code>.bloombox.schema.identity.pass.PassKey key = 1 [(.core.field) = { ... }</code>
+     * <code>.bloombox.identity.pass.PassKey key = 1 [(.core.field) = { ... }</code>
      */
     public io.bloombox.schema.pass.PassIDKey.PassKeyOrBuilder getKeyOrBuilder() {
       return getKey();
@@ -918,7 +920,7 @@ public final class PassID {
      * Current status of this pass.
      * </pre>
      *
-     * <code>.bloombox.schema.identity.pass.PassStatus status = 7;</code>
+     * <code>.bloombox.identity.pass.PassStatus status = 7;</code>
      */
     public int getStatusValue() {
       return status_;
@@ -928,9 +930,10 @@ public final class PassID {
      * Current status of this pass.
      * </pre>
      *
-     * <code>.bloombox.schema.identity.pass.PassStatus status = 7;</code>
+     * <code>.bloombox.identity.pass.PassStatus status = 7;</code>
      */
     public io.bloombox.schema.pass.PassID.PassStatus getStatus() {
+      @SuppressWarnings("deprecation")
       io.bloombox.schema.pass.PassID.PassStatus result = io.bloombox.schema.pass.PassID.PassStatus.valueOf(status_);
       return result == null ? io.bloombox.schema.pass.PassID.PassStatus.UNRECOGNIZED : result;
     }
@@ -1200,6 +1203,7 @@ public final class PassID {
     }
 
     private byte memoizedIsInitialized = -1;
+    @java.lang.Override
     public final boolean isInitialized() {
       byte isInitialized = memoizedIsInitialized;
       if (isInitialized == 1) return true;
@@ -1209,6 +1213,7 @@ public final class PassID {
       return true;
     }
 
+    @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
       if (key_ != null) {
@@ -1259,6 +1264,7 @@ public final class PassID {
       unknownFields.writeTo(output);
     }
 
+    @java.lang.Override
     public int getSerializedSize() {
       int size = memoizedSize;
       if (size != -1) return size;
@@ -1531,6 +1537,7 @@ public final class PassID {
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
 
+    @java.lang.Override
     public Builder newBuilderForType() { return newBuilder(); }
     public static Builder newBuilder() {
       return DEFAULT_INSTANCE.toBuilder();
@@ -1538,6 +1545,7 @@ public final class PassID {
     public static Builder newBuilder(io.bloombox.schema.pass.PassID.Pass prototype) {
       return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
     }
+    @java.lang.Override
     public Builder toBuilder() {
       return this == DEFAULT_INSTANCE
           ? new Builder() : new Builder().mergeFrom(this);
@@ -1554,20 +1562,21 @@ public final class PassID {
      * Specifies the structure of a digital pass record.
      * </pre>
      *
-     * Protobuf type {@code bloombox.schema.identity.pass.Pass}
+     * Protobuf type {@code bloombox.identity.pass.Pass}
      */
     public static final class Builder extends
         com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:bloombox.schema.identity.pass.Pass)
+        // @@protoc_insertion_point(builder_implements:bloombox.identity.pass.Pass)
         io.bloombox.schema.pass.PassID.PassOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return io.bloombox.schema.pass.PassID.internal_static_bloombox_schema_identity_pass_Pass_descriptor;
+        return io.bloombox.schema.pass.PassID.internal_static_bloombox_identity_pass_Pass_descriptor;
       }
 
+      @java.lang.Override
       protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return io.bloombox.schema.pass.PassID.internal_static_bloombox_schema_identity_pass_Pass_fieldAccessorTable
+        return io.bloombox.schema.pass.PassID.internal_static_bloombox_identity_pass_Pass_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
                 io.bloombox.schema.pass.PassID.Pass.class, io.bloombox.schema.pass.PassID.Pass.Builder.class);
       }
@@ -1587,6 +1596,7 @@ public final class PassID {
                 .alwaysUseFieldBuilders) {
         }
       }
+      @java.lang.Override
       public Builder clear() {
         super.clear();
         if (keyBuilder_ == null) {
@@ -1658,15 +1668,18 @@ public final class PassID {
         return this;
       }
 
+      @java.lang.Override
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return io.bloombox.schema.pass.PassID.internal_static_bloombox_schema_identity_pass_Pass_descriptor;
+        return io.bloombox.schema.pass.PassID.internal_static_bloombox_identity_pass_Pass_descriptor;
       }
 
+      @java.lang.Override
       public io.bloombox.schema.pass.PassID.Pass getDefaultInstanceForType() {
         return io.bloombox.schema.pass.PassID.Pass.getDefaultInstance();
       }
 
+      @java.lang.Override
       public io.bloombox.schema.pass.PassID.Pass build() {
         io.bloombox.schema.pass.PassID.Pass result = buildPartial();
         if (!result.isInitialized()) {
@@ -1675,6 +1688,7 @@ public final class PassID {
         return result;
       }
 
+      @java.lang.Override
       public io.bloombox.schema.pass.PassID.Pass buildPartial() {
         io.bloombox.schema.pass.PassID.Pass result = new io.bloombox.schema.pass.PassID.Pass(this);
         if (keyBuilder_ == null) {
@@ -1732,32 +1746,39 @@ public final class PassID {
         return result;
       }
 
+      @java.lang.Override
       public Builder clone() {
         return (Builder) super.clone();
       }
+      @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
         return (Builder) super.setField(field, value);
       }
+      @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
         return (Builder) super.clearField(field);
       }
+      @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
         return (Builder) super.clearOneof(oneof);
       }
+      @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
         return (Builder) super.setRepeatedField(field, index, value);
       }
+      @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
         return (Builder) super.addRepeatedField(field, value);
       }
+      @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
         if (other instanceof io.bloombox.schema.pass.PassID.Pass) {
           return mergeFrom((io.bloombox.schema.pass.PassID.Pass)other);
@@ -1821,10 +1842,12 @@ public final class PassID {
         return this;
       }
 
+      @java.lang.Override
       public final boolean isInitialized() {
         return true;
       }
 
+      @java.lang.Override
       public Builder mergeFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -1851,7 +1874,7 @@ public final class PassID {
        * Specifies the key for a digital pass record.
        * </pre>
        *
-       * <code>.bloombox.schema.identity.pass.PassKey key = 1 [(.core.field) = { ... }</code>
+       * <code>.bloombox.identity.pass.PassKey key = 1 [(.core.field) = { ... }</code>
        */
       public boolean hasKey() {
         return keyBuilder_ != null || key_ != null;
@@ -1861,7 +1884,7 @@ public final class PassID {
        * Specifies the key for a digital pass record.
        * </pre>
        *
-       * <code>.bloombox.schema.identity.pass.PassKey key = 1 [(.core.field) = { ... }</code>
+       * <code>.bloombox.identity.pass.PassKey key = 1 [(.core.field) = { ... }</code>
        */
       public io.bloombox.schema.pass.PassIDKey.PassKey getKey() {
         if (keyBuilder_ == null) {
@@ -1875,7 +1898,7 @@ public final class PassID {
        * Specifies the key for a digital pass record.
        * </pre>
        *
-       * <code>.bloombox.schema.identity.pass.PassKey key = 1 [(.core.field) = { ... }</code>
+       * <code>.bloombox.identity.pass.PassKey key = 1 [(.core.field) = { ... }</code>
        */
       public Builder setKey(io.bloombox.schema.pass.PassIDKey.PassKey value) {
         if (keyBuilder_ == null) {
@@ -1895,7 +1918,7 @@ public final class PassID {
        * Specifies the key for a digital pass record.
        * </pre>
        *
-       * <code>.bloombox.schema.identity.pass.PassKey key = 1 [(.core.field) = { ... }</code>
+       * <code>.bloombox.identity.pass.PassKey key = 1 [(.core.field) = { ... }</code>
        */
       public Builder setKey(
           io.bloombox.schema.pass.PassIDKey.PassKey.Builder builderForValue) {
@@ -1913,7 +1936,7 @@ public final class PassID {
        * Specifies the key for a digital pass record.
        * </pre>
        *
-       * <code>.bloombox.schema.identity.pass.PassKey key = 1 [(.core.field) = { ... }</code>
+       * <code>.bloombox.identity.pass.PassKey key = 1 [(.core.field) = { ... }</code>
        */
       public Builder mergeKey(io.bloombox.schema.pass.PassIDKey.PassKey value) {
         if (keyBuilder_ == null) {
@@ -1935,7 +1958,7 @@ public final class PassID {
        * Specifies the key for a digital pass record.
        * </pre>
        *
-       * <code>.bloombox.schema.identity.pass.PassKey key = 1 [(.core.field) = { ... }</code>
+       * <code>.bloombox.identity.pass.PassKey key = 1 [(.core.field) = { ... }</code>
        */
       public Builder clearKey() {
         if (keyBuilder_ == null) {
@@ -1953,7 +1976,7 @@ public final class PassID {
        * Specifies the key for a digital pass record.
        * </pre>
        *
-       * <code>.bloombox.schema.identity.pass.PassKey key = 1 [(.core.field) = { ... }</code>
+       * <code>.bloombox.identity.pass.PassKey key = 1 [(.core.field) = { ... }</code>
        */
       public io.bloombox.schema.pass.PassIDKey.PassKey.Builder getKeyBuilder() {
         
@@ -1965,7 +1988,7 @@ public final class PassID {
        * Specifies the key for a digital pass record.
        * </pre>
        *
-       * <code>.bloombox.schema.identity.pass.PassKey key = 1 [(.core.field) = { ... }</code>
+       * <code>.bloombox.identity.pass.PassKey key = 1 [(.core.field) = { ... }</code>
        */
       public io.bloombox.schema.pass.PassIDKey.PassKeyOrBuilder getKeyOrBuilder() {
         if (keyBuilder_ != null) {
@@ -1980,7 +2003,7 @@ public final class PassID {
        * Specifies the key for a digital pass record.
        * </pre>
        *
-       * <code>.bloombox.schema.identity.pass.PassKey key = 1 [(.core.field) = { ... }</code>
+       * <code>.bloombox.identity.pass.PassKey key = 1 [(.core.field) = { ... }</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
           io.bloombox.schema.pass.PassIDKey.PassKey, io.bloombox.schema.pass.PassIDKey.PassKey.Builder, io.bloombox.schema.pass.PassIDKey.PassKeyOrBuilder> 
@@ -2294,7 +2317,7 @@ public final class PassID {
        * Current status of this pass.
        * </pre>
        *
-       * <code>.bloombox.schema.identity.pass.PassStatus status = 7;</code>
+       * <code>.bloombox.identity.pass.PassStatus status = 7;</code>
        */
       public int getStatusValue() {
         return status_;
@@ -2304,7 +2327,7 @@ public final class PassID {
        * Current status of this pass.
        * </pre>
        *
-       * <code>.bloombox.schema.identity.pass.PassStatus status = 7;</code>
+       * <code>.bloombox.identity.pass.PassStatus status = 7;</code>
        */
       public Builder setStatusValue(int value) {
         status_ = value;
@@ -2316,9 +2339,10 @@ public final class PassID {
        * Current status of this pass.
        * </pre>
        *
-       * <code>.bloombox.schema.identity.pass.PassStatus status = 7;</code>
+       * <code>.bloombox.identity.pass.PassStatus status = 7;</code>
        */
       public io.bloombox.schema.pass.PassID.PassStatus getStatus() {
+        @SuppressWarnings("deprecation")
         io.bloombox.schema.pass.PassID.PassStatus result = io.bloombox.schema.pass.PassID.PassStatus.valueOf(status_);
         return result == null ? io.bloombox.schema.pass.PassID.PassStatus.UNRECOGNIZED : result;
       }
@@ -2327,7 +2351,7 @@ public final class PassID {
        * Current status of this pass.
        * </pre>
        *
-       * <code>.bloombox.schema.identity.pass.PassStatus status = 7;</code>
+       * <code>.bloombox.identity.pass.PassStatus status = 7;</code>
        */
       public Builder setStatus(io.bloombox.schema.pass.PassID.PassStatus value) {
         if (value == null) {
@@ -2343,7 +2367,7 @@ public final class PassID {
        * Current status of this pass.
        * </pre>
        *
-       * <code>.bloombox.schema.identity.pass.PassStatus status = 7;</code>
+       * <code>.bloombox.identity.pass.PassStatus status = 7;</code>
        */
       public Builder clearStatus() {
         
@@ -3575,21 +3599,23 @@ public final class PassID {
         }
         return enrollBuilder_;
       }
+      @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
         return super.setUnknownFieldsProto3(unknownFields);
       }
 
+      @java.lang.Override
       public final Builder mergeUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
         return super.mergeUnknownFields(unknownFields);
       }
 
 
-      // @@protoc_insertion_point(builder_scope:bloombox.schema.identity.pass.Pass)
+      // @@protoc_insertion_point(builder_scope:bloombox.identity.pass.Pass)
     }
 
-    // @@protoc_insertion_point(class_scope:bloombox.schema.identity.pass.Pass)
+    // @@protoc_insertion_point(class_scope:bloombox.identity.pass.Pass)
     private static final io.bloombox.schema.pass.PassID.Pass DEFAULT_INSTANCE;
     static {
       DEFAULT_INSTANCE = new io.bloombox.schema.pass.PassID.Pass();
@@ -3601,6 +3627,7 @@ public final class PassID {
 
     private static final com.google.protobuf.Parser<Pass>
         PARSER = new com.google.protobuf.AbstractParser<Pass>() {
+      @java.lang.Override
       public Pass parsePartialFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -3618,6 +3645,7 @@ public final class PassID {
       return PARSER;
     }
 
+    @java.lang.Override
     public io.bloombox.schema.pass.PassID.Pass getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
@@ -3625,10 +3653,10 @@ public final class PassID {
   }
 
   private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_bloombox_schema_identity_pass_Pass_descriptor;
+    internal_static_bloombox_identity_pass_Pass_descriptor;
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_bloombox_schema_identity_pass_Pass_fieldAccessorTable;
+      internal_static_bloombox_identity_pass_Pass_fieldAccessorTable;
 
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
@@ -3638,29 +3666,28 @@ public final class PassID {
       descriptor;
   static {
     java.lang.String[] descriptorData = {
-      "\n\030identity/pass/Pass.proto\022\035bloombox.sch" +
-      "ema.identity.pass\032\024core/Datamodel.proto\032" +
-      "\033identity/pass/PassKey.proto\032\026temporal/I" +
-      "nstant.proto\"\342\004\n\004Pass\022;\n\003key\030\001 \001(\0132&.blo" +
-      "ombox.schema.identity.pass.PassKeyB\006\302\265\003\002" +
-      "\010\001\022\r\n\005token\030\002 \001(\t\022\013\n\003uri\030\003 \001(\t\022\016\n\006active" +
-      "\030\004 \001(\010\022\026\n\016personalizable\030\005 \001(\010\022\024\n\014person" +
-      "alized\030\006 \001(\010\0229\n\006status\030\007 \001(\0162).bloombox." +
-      "schema.identity.pass.PassStatus\0223\n\013provi" +
-      "sioned\030\010 \001(\0132\036.opencannabis.temporal.Ins" +
-      "tant\022.\n\006issued\030\t \001(\0132\036.opencannabis.temp" +
-      "oral.Instant\0221\n\tactivated\030\n \001(\0132\036.openca" +
-      "nnabis.temporal.Instant\0221\n\tsuspended\030\013 \001" +
-      "(\0132\036.opencannabis.temporal.Instant\022.\n\006ba" +
-      "nned\030\014 \001(\0132\036.opencannabis.temporal.Insta" +
-      "nt\022,\n\004seen\030\r \001(\0132\036.opencannabis.temporal" +
-      ".Instant\022/\n\007checkin\030\016 \001(\0132\036.opencannabis" +
-      ".temporal.Instant\022.\n\006enroll\030\017 \001(\0132\036.open" +
-      "cannabis.temporal.Instant*d\n\nPassStatus\022" +
-      "\017\n\013PROVISIONED\020\000\022\n\n\006ISSUED\020\001\022\n\n\006ACTIVE\020\002" +
-      "\022\022\n\016DECOMMISSIONED\020\003\022\r\n\tSUSPENDED\020\004\022\n\n\006B" +
-      "ANNED\020\005B+\n\027io.bloombox.schema.passB\006Pass" +
-      "IDH\001P\000\242\002\003BBSb\006proto3"
+      "\n\030identity/pass/Pass.proto\022\026bloombox.ide" +
+      "ntity.pass\032\024core/Datamodel.proto\032\033identi" +
+      "ty/pass/PassKey.proto\032\026temporal/Instant." +
+      "proto\"\324\004\n\004Pass\0224\n\003key\030\001 \001(\0132\037.bloombox.i" +
+      "dentity.pass.PassKeyB\006\302\265\003\002\010\001\022\r\n\005token\030\002 " +
+      "\001(\t\022\013\n\003uri\030\003 \001(\t\022\016\n\006active\030\004 \001(\010\022\026\n\016pers" +
+      "onalizable\030\005 \001(\010\022\024\n\014personalized\030\006 \001(\010\0222" +
+      "\n\006status\030\007 \001(\0162\".bloombox.identity.pass." +
+      "PassStatus\0223\n\013provisioned\030\010 \001(\0132\036.openca" +
+      "nnabis.temporal.Instant\022.\n\006issued\030\t \001(\0132" +
+      "\036.opencannabis.temporal.Instant\0221\n\tactiv" +
+      "ated\030\n \001(\0132\036.opencannabis.temporal.Insta" +
+      "nt\0221\n\tsuspended\030\013 \001(\0132\036.opencannabis.tem" +
+      "poral.Instant\022.\n\006banned\030\014 \001(\0132\036.opencann" +
+      "abis.temporal.Instant\022,\n\004seen\030\r \001(\0132\036.op" +
+      "encannabis.temporal.Instant\022/\n\007checkin\030\016" +
+      " \001(\0132\036.opencannabis.temporal.Instant\022.\n\006" +
+      "enroll\030\017 \001(\0132\036.opencannabis.temporal.Ins" +
+      "tant*d\n\nPassStatus\022\017\n\013PROVISIONED\020\000\022\n\n\006I" +
+      "SSUED\020\001\022\n\n\006ACTIVE\020\002\022\022\n\016DECOMMISSIONED\020\003\022" +
+      "\r\n\tSUSPENDED\020\004\022\n\n\006BANNED\020\005B+\n\027io.bloombo" +
+      "x.schema.passB\006PassIDH\001P\000\242\002\003BBSb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -3677,11 +3704,11 @@ public final class PassID {
           io.bloombox.schema.pass.PassIDKey.getDescriptor(),
           io.opencannabis.schema.temporal.TemporalInstant.getDescriptor(),
         }, assigner);
-    internal_static_bloombox_schema_identity_pass_Pass_descriptor =
+    internal_static_bloombox_identity_pass_Pass_descriptor =
       getDescriptor().getMessageTypes().get(0);
-    internal_static_bloombox_schema_identity_pass_Pass_fieldAccessorTable = new
+    internal_static_bloombox_identity_pass_Pass_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_bloombox_schema_identity_pass_Pass_descriptor,
+        internal_static_bloombox_identity_pass_Pass_descriptor,
         new java.lang.String[] { "Key", "Token", "Uri", "Active", "Personalizable", "Personalized", "Status", "Provisioned", "Issued", "Activated", "Suspended", "Banned", "Seen", "Checkin", "Enroll", });
     com.google.protobuf.ExtensionRegistry registry =
         com.google.protobuf.ExtensionRegistry.newInstance();

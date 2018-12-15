@@ -1,11 +1,12 @@
 /*
- * Copyright 2018, Bloombox, LLC.
+ * Copyright 2018, Momentum Ideas, Co. All rights reserved.
  *
- * Licensed under the Apache License, Version 2.0 (the "License");
- * you may not use this file except in compliance with the License.
- * You may obtain a copy of the License at
- *
- *     http://www.apache.org/licenses/LICENSE-2.0
+ * Source and object computer code contained herein is the private intellectual
+ * property of Momentum Ideas Co., a Delaware Corporation. Use of this
+ * code in source form requires permission in writing before use or the
+ * assembly, distribution, or publishing of derivative works, for commercial
+ * purposes or any other purpose, from a duly authorized officer of Momentum
+ * Ideas Co.
  *
  * Unless required by applicable law or agreed to in writing, software
  * distributed under the License is distributed on an "AS IS" BASIS,
@@ -31,7 +32,7 @@ public final class Transactions {
         (com.google.protobuf.ExtensionRegistryLite) registry);
   }
   public interface CreateOperationOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:bloombox.schema.ledger.CreateOperation)
+      // @@protoc_insertion_point(interface_extends:bloombox.ledger.CreateOperation)
       com.google.protobuf.MessageOrBuilder {
 
     /**
@@ -40,7 +41,7 @@ public final class Transactions {
      * the particular asset being stored.
      * </pre>
      *
-     * <code>.bloombox.schema.ledger.DigitalAsset asset = 1;</code>
+     * <code>.bloombox.ledger.DigitalAsset asset = 1;</code>
      */
     boolean hasAsset();
     /**
@@ -49,7 +50,7 @@ public final class Transactions {
      * the particular asset being stored.
      * </pre>
      *
-     * <code>.bloombox.schema.ledger.DigitalAsset asset = 1;</code>
+     * <code>.bloombox.ledger.DigitalAsset asset = 1;</code>
      */
     io.bloombox.schema.ledger.Assets.DigitalAsset getAsset();
     /**
@@ -58,7 +59,7 @@ public final class Transactions {
      * the particular asset being stored.
      * </pre>
      *
-     * <code>.bloombox.schema.ledger.DigitalAsset asset = 1;</code>
+     * <code>.bloombox.ledger.DigitalAsset asset = 1;</code>
      */
     io.bloombox.schema.ledger.Assets.DigitalAssetOrBuilder getAssetOrBuilder();
 
@@ -68,7 +69,7 @@ public final class Transactions {
      * the final owner of the digital asset after execution.
      * </pre>
      *
-     * <code>.bloombox.schema.ledger.LedgerIdentity owner = 2;</code>
+     * <code>.bloombox.ledger.LedgerIdentity owner = 2;</code>
      */
     boolean hasOwner();
     /**
@@ -77,7 +78,7 @@ public final class Transactions {
      * the final owner of the digital asset after execution.
      * </pre>
      *
-     * <code>.bloombox.schema.ledger.LedgerIdentity owner = 2;</code>
+     * <code>.bloombox.ledger.LedgerIdentity owner = 2;</code>
      */
     io.bloombox.schema.ledger.Accounts.LedgerIdentity getOwner();
     /**
@@ -86,7 +87,7 @@ public final class Transactions {
      * the final owner of the digital asset after execution.
      * </pre>
      *
-     * <code>.bloombox.schema.ledger.LedgerIdentity owner = 2;</code>
+     * <code>.bloombox.ledger.LedgerIdentity owner = 2;</code>
      */
     io.bloombox.schema.ledger.Accounts.LedgerIdentityOrBuilder getOwnerOrBuilder();
   }
@@ -96,11 +97,11 @@ public final class Transactions {
    * owner-to-be of those assets commits the transaction, signed with their private key.
    * </pre>
    *
-   * Protobuf type {@code bloombox.schema.ledger.CreateOperation}
+   * Protobuf type {@code bloombox.ledger.CreateOperation}
    */
   public  static final class CreateOperation extends
       com.google.protobuf.GeneratedMessageV3 implements
-      // @@protoc_insertion_point(message_implements:bloombox.schema.ledger.CreateOperation)
+      // @@protoc_insertion_point(message_implements:bloombox.ledger.CreateOperation)
       CreateOperationOrBuilder {
   private static final long serialVersionUID = 0L;
     // Use CreateOperation.newBuilder() to construct.
@@ -134,13 +135,6 @@ public final class Transactions {
             case 0:
               done = true;
               break;
-            default: {
-              if (!parseUnknownFieldProto3(
-                  input, unknownFields, extensionRegistry, tag)) {
-                done = true;
-              }
-              break;
-            }
             case 10: {
               io.bloombox.schema.ledger.Assets.DigitalAsset.Builder subBuilder = null;
               if (asset_ != null) {
@@ -167,6 +161,13 @@ public final class Transactions {
 
               break;
             }
+            default: {
+              if (!parseUnknownFieldProto3(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
           }
         }
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
@@ -181,12 +182,13 @@ public final class Transactions {
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return io.bloombox.schema.ledger.Transactions.internal_static_bloombox_schema_ledger_CreateOperation_descriptor;
+      return io.bloombox.schema.ledger.Transactions.internal_static_bloombox_ledger_CreateOperation_descriptor;
     }
 
+    @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return io.bloombox.schema.ledger.Transactions.internal_static_bloombox_schema_ledger_CreateOperation_fieldAccessorTable
+      return io.bloombox.schema.ledger.Transactions.internal_static_bloombox_ledger_CreateOperation_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
               io.bloombox.schema.ledger.Transactions.CreateOperation.class, io.bloombox.schema.ledger.Transactions.CreateOperation.Builder.class);
     }
@@ -199,7 +201,7 @@ public final class Transactions {
      * the particular asset being stored.
      * </pre>
      *
-     * <code>.bloombox.schema.ledger.DigitalAsset asset = 1;</code>
+     * <code>.bloombox.ledger.DigitalAsset asset = 1;</code>
      */
     public boolean hasAsset() {
       return asset_ != null;
@@ -210,7 +212,7 @@ public final class Transactions {
      * the particular asset being stored.
      * </pre>
      *
-     * <code>.bloombox.schema.ledger.DigitalAsset asset = 1;</code>
+     * <code>.bloombox.ledger.DigitalAsset asset = 1;</code>
      */
     public io.bloombox.schema.ledger.Assets.DigitalAsset getAsset() {
       return asset_ == null ? io.bloombox.schema.ledger.Assets.DigitalAsset.getDefaultInstance() : asset_;
@@ -221,7 +223,7 @@ public final class Transactions {
      * the particular asset being stored.
      * </pre>
      *
-     * <code>.bloombox.schema.ledger.DigitalAsset asset = 1;</code>
+     * <code>.bloombox.ledger.DigitalAsset asset = 1;</code>
      */
     public io.bloombox.schema.ledger.Assets.DigitalAssetOrBuilder getAssetOrBuilder() {
       return getAsset();
@@ -235,7 +237,7 @@ public final class Transactions {
      * the final owner of the digital asset after execution.
      * </pre>
      *
-     * <code>.bloombox.schema.ledger.LedgerIdentity owner = 2;</code>
+     * <code>.bloombox.ledger.LedgerIdentity owner = 2;</code>
      */
     public boolean hasOwner() {
       return owner_ != null;
@@ -246,7 +248,7 @@ public final class Transactions {
      * the final owner of the digital asset after execution.
      * </pre>
      *
-     * <code>.bloombox.schema.ledger.LedgerIdentity owner = 2;</code>
+     * <code>.bloombox.ledger.LedgerIdentity owner = 2;</code>
      */
     public io.bloombox.schema.ledger.Accounts.LedgerIdentity getOwner() {
       return owner_ == null ? io.bloombox.schema.ledger.Accounts.LedgerIdentity.getDefaultInstance() : owner_;
@@ -257,13 +259,14 @@ public final class Transactions {
      * the final owner of the digital asset after execution.
      * </pre>
      *
-     * <code>.bloombox.schema.ledger.LedgerIdentity owner = 2;</code>
+     * <code>.bloombox.ledger.LedgerIdentity owner = 2;</code>
      */
     public io.bloombox.schema.ledger.Accounts.LedgerIdentityOrBuilder getOwnerOrBuilder() {
       return getOwner();
     }
 
     private byte memoizedIsInitialized = -1;
+    @java.lang.Override
     public final boolean isInitialized() {
       byte isInitialized = memoizedIsInitialized;
       if (isInitialized == 1) return true;
@@ -273,6 +276,7 @@ public final class Transactions {
       return true;
     }
 
+    @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
       if (asset_ != null) {
@@ -284,6 +288,7 @@ public final class Transactions {
       unknownFields.writeTo(output);
     }
 
+    @java.lang.Override
     public int getSerializedSize() {
       int size = memoizedSize;
       if (size != -1) return size;
@@ -417,6 +422,7 @@ public final class Transactions {
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
 
+    @java.lang.Override
     public Builder newBuilderForType() { return newBuilder(); }
     public static Builder newBuilder() {
       return DEFAULT_INSTANCE.toBuilder();
@@ -424,6 +430,7 @@ public final class Transactions {
     public static Builder newBuilder(io.bloombox.schema.ledger.Transactions.CreateOperation prototype) {
       return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
     }
+    @java.lang.Override
     public Builder toBuilder() {
       return this == DEFAULT_INSTANCE
           ? new Builder() : new Builder().mergeFrom(this);
@@ -441,20 +448,21 @@ public final class Transactions {
      * owner-to-be of those assets commits the transaction, signed with their private key.
      * </pre>
      *
-     * Protobuf type {@code bloombox.schema.ledger.CreateOperation}
+     * Protobuf type {@code bloombox.ledger.CreateOperation}
      */
     public static final class Builder extends
         com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:bloombox.schema.ledger.CreateOperation)
+        // @@protoc_insertion_point(builder_implements:bloombox.ledger.CreateOperation)
         io.bloombox.schema.ledger.Transactions.CreateOperationOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return io.bloombox.schema.ledger.Transactions.internal_static_bloombox_schema_ledger_CreateOperation_descriptor;
+        return io.bloombox.schema.ledger.Transactions.internal_static_bloombox_ledger_CreateOperation_descriptor;
       }
 
+      @java.lang.Override
       protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return io.bloombox.schema.ledger.Transactions.internal_static_bloombox_schema_ledger_CreateOperation_fieldAccessorTable
+        return io.bloombox.schema.ledger.Transactions.internal_static_bloombox_ledger_CreateOperation_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
                 io.bloombox.schema.ledger.Transactions.CreateOperation.class, io.bloombox.schema.ledger.Transactions.CreateOperation.Builder.class);
       }
@@ -474,6 +482,7 @@ public final class Transactions {
                 .alwaysUseFieldBuilders) {
         }
       }
+      @java.lang.Override
       public Builder clear() {
         super.clear();
         if (assetBuilder_ == null) {
@@ -491,15 +500,18 @@ public final class Transactions {
         return this;
       }
 
+      @java.lang.Override
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return io.bloombox.schema.ledger.Transactions.internal_static_bloombox_schema_ledger_CreateOperation_descriptor;
+        return io.bloombox.schema.ledger.Transactions.internal_static_bloombox_ledger_CreateOperation_descriptor;
       }
 
+      @java.lang.Override
       public io.bloombox.schema.ledger.Transactions.CreateOperation getDefaultInstanceForType() {
         return io.bloombox.schema.ledger.Transactions.CreateOperation.getDefaultInstance();
       }
 
+      @java.lang.Override
       public io.bloombox.schema.ledger.Transactions.CreateOperation build() {
         io.bloombox.schema.ledger.Transactions.CreateOperation result = buildPartial();
         if (!result.isInitialized()) {
@@ -508,6 +520,7 @@ public final class Transactions {
         return result;
       }
 
+      @java.lang.Override
       public io.bloombox.schema.ledger.Transactions.CreateOperation buildPartial() {
         io.bloombox.schema.ledger.Transactions.CreateOperation result = new io.bloombox.schema.ledger.Transactions.CreateOperation(this);
         if (assetBuilder_ == null) {
@@ -524,32 +537,39 @@ public final class Transactions {
         return result;
       }
 
+      @java.lang.Override
       public Builder clone() {
         return (Builder) super.clone();
       }
+      @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
         return (Builder) super.setField(field, value);
       }
+      @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
         return (Builder) super.clearField(field);
       }
+      @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
         return (Builder) super.clearOneof(oneof);
       }
+      @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
         return (Builder) super.setRepeatedField(field, index, value);
       }
+      @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
         return (Builder) super.addRepeatedField(field, value);
       }
+      @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
         if (other instanceof io.bloombox.schema.ledger.Transactions.CreateOperation) {
           return mergeFrom((io.bloombox.schema.ledger.Transactions.CreateOperation)other);
@@ -572,10 +592,12 @@ public final class Transactions {
         return this;
       }
 
+      @java.lang.Override
       public final boolean isInitialized() {
         return true;
       }
 
+      @java.lang.Override
       public Builder mergeFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -603,7 +625,7 @@ public final class Transactions {
        * the particular asset being stored.
        * </pre>
        *
-       * <code>.bloombox.schema.ledger.DigitalAsset asset = 1;</code>
+       * <code>.bloombox.ledger.DigitalAsset asset = 1;</code>
        */
       public boolean hasAsset() {
         return assetBuilder_ != null || asset_ != null;
@@ -614,7 +636,7 @@ public final class Transactions {
        * the particular asset being stored.
        * </pre>
        *
-       * <code>.bloombox.schema.ledger.DigitalAsset asset = 1;</code>
+       * <code>.bloombox.ledger.DigitalAsset asset = 1;</code>
        */
       public io.bloombox.schema.ledger.Assets.DigitalAsset getAsset() {
         if (assetBuilder_ == null) {
@@ -629,7 +651,7 @@ public final class Transactions {
        * the particular asset being stored.
        * </pre>
        *
-       * <code>.bloombox.schema.ledger.DigitalAsset asset = 1;</code>
+       * <code>.bloombox.ledger.DigitalAsset asset = 1;</code>
        */
       public Builder setAsset(io.bloombox.schema.ledger.Assets.DigitalAsset value) {
         if (assetBuilder_ == null) {
@@ -650,7 +672,7 @@ public final class Transactions {
        * the particular asset being stored.
        * </pre>
        *
-       * <code>.bloombox.schema.ledger.DigitalAsset asset = 1;</code>
+       * <code>.bloombox.ledger.DigitalAsset asset = 1;</code>
        */
       public Builder setAsset(
           io.bloombox.schema.ledger.Assets.DigitalAsset.Builder builderForValue) {
@@ -669,7 +691,7 @@ public final class Transactions {
        * the particular asset being stored.
        * </pre>
        *
-       * <code>.bloombox.schema.ledger.DigitalAsset asset = 1;</code>
+       * <code>.bloombox.ledger.DigitalAsset asset = 1;</code>
        */
       public Builder mergeAsset(io.bloombox.schema.ledger.Assets.DigitalAsset value) {
         if (assetBuilder_ == null) {
@@ -692,7 +714,7 @@ public final class Transactions {
        * the particular asset being stored.
        * </pre>
        *
-       * <code>.bloombox.schema.ledger.DigitalAsset asset = 1;</code>
+       * <code>.bloombox.ledger.DigitalAsset asset = 1;</code>
        */
       public Builder clearAsset() {
         if (assetBuilder_ == null) {
@@ -711,7 +733,7 @@ public final class Transactions {
        * the particular asset being stored.
        * </pre>
        *
-       * <code>.bloombox.schema.ledger.DigitalAsset asset = 1;</code>
+       * <code>.bloombox.ledger.DigitalAsset asset = 1;</code>
        */
       public io.bloombox.schema.ledger.Assets.DigitalAsset.Builder getAssetBuilder() {
         
@@ -724,7 +746,7 @@ public final class Transactions {
        * the particular asset being stored.
        * </pre>
        *
-       * <code>.bloombox.schema.ledger.DigitalAsset asset = 1;</code>
+       * <code>.bloombox.ledger.DigitalAsset asset = 1;</code>
        */
       public io.bloombox.schema.ledger.Assets.DigitalAssetOrBuilder getAssetOrBuilder() {
         if (assetBuilder_ != null) {
@@ -740,7 +762,7 @@ public final class Transactions {
        * the particular asset being stored.
        * </pre>
        *
-       * <code>.bloombox.schema.ledger.DigitalAsset asset = 1;</code>
+       * <code>.bloombox.ledger.DigitalAsset asset = 1;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
           io.bloombox.schema.ledger.Assets.DigitalAsset, io.bloombox.schema.ledger.Assets.DigitalAsset.Builder, io.bloombox.schema.ledger.Assets.DigitalAssetOrBuilder> 
@@ -765,7 +787,7 @@ public final class Transactions {
        * the final owner of the digital asset after execution.
        * </pre>
        *
-       * <code>.bloombox.schema.ledger.LedgerIdentity owner = 2;</code>
+       * <code>.bloombox.ledger.LedgerIdentity owner = 2;</code>
        */
       public boolean hasOwner() {
         return ownerBuilder_ != null || owner_ != null;
@@ -776,7 +798,7 @@ public final class Transactions {
        * the final owner of the digital asset after execution.
        * </pre>
        *
-       * <code>.bloombox.schema.ledger.LedgerIdentity owner = 2;</code>
+       * <code>.bloombox.ledger.LedgerIdentity owner = 2;</code>
        */
       public io.bloombox.schema.ledger.Accounts.LedgerIdentity getOwner() {
         if (ownerBuilder_ == null) {
@@ -791,7 +813,7 @@ public final class Transactions {
        * the final owner of the digital asset after execution.
        * </pre>
        *
-       * <code>.bloombox.schema.ledger.LedgerIdentity owner = 2;</code>
+       * <code>.bloombox.ledger.LedgerIdentity owner = 2;</code>
        */
       public Builder setOwner(io.bloombox.schema.ledger.Accounts.LedgerIdentity value) {
         if (ownerBuilder_ == null) {
@@ -812,7 +834,7 @@ public final class Transactions {
        * the final owner of the digital asset after execution.
        * </pre>
        *
-       * <code>.bloombox.schema.ledger.LedgerIdentity owner = 2;</code>
+       * <code>.bloombox.ledger.LedgerIdentity owner = 2;</code>
        */
       public Builder setOwner(
           io.bloombox.schema.ledger.Accounts.LedgerIdentity.Builder builderForValue) {
@@ -831,7 +853,7 @@ public final class Transactions {
        * the final owner of the digital asset after execution.
        * </pre>
        *
-       * <code>.bloombox.schema.ledger.LedgerIdentity owner = 2;</code>
+       * <code>.bloombox.ledger.LedgerIdentity owner = 2;</code>
        */
       public Builder mergeOwner(io.bloombox.schema.ledger.Accounts.LedgerIdentity value) {
         if (ownerBuilder_ == null) {
@@ -854,7 +876,7 @@ public final class Transactions {
        * the final owner of the digital asset after execution.
        * </pre>
        *
-       * <code>.bloombox.schema.ledger.LedgerIdentity owner = 2;</code>
+       * <code>.bloombox.ledger.LedgerIdentity owner = 2;</code>
        */
       public Builder clearOwner() {
         if (ownerBuilder_ == null) {
@@ -873,7 +895,7 @@ public final class Transactions {
        * the final owner of the digital asset after execution.
        * </pre>
        *
-       * <code>.bloombox.schema.ledger.LedgerIdentity owner = 2;</code>
+       * <code>.bloombox.ledger.LedgerIdentity owner = 2;</code>
        */
       public io.bloombox.schema.ledger.Accounts.LedgerIdentity.Builder getOwnerBuilder() {
         
@@ -886,7 +908,7 @@ public final class Transactions {
        * the final owner of the digital asset after execution.
        * </pre>
        *
-       * <code>.bloombox.schema.ledger.LedgerIdentity owner = 2;</code>
+       * <code>.bloombox.ledger.LedgerIdentity owner = 2;</code>
        */
       public io.bloombox.schema.ledger.Accounts.LedgerIdentityOrBuilder getOwnerOrBuilder() {
         if (ownerBuilder_ != null) {
@@ -902,7 +924,7 @@ public final class Transactions {
        * the final owner of the digital asset after execution.
        * </pre>
        *
-       * <code>.bloombox.schema.ledger.LedgerIdentity owner = 2;</code>
+       * <code>.bloombox.ledger.LedgerIdentity owner = 2;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
           io.bloombox.schema.ledger.Accounts.LedgerIdentity, io.bloombox.schema.ledger.Accounts.LedgerIdentity.Builder, io.bloombox.schema.ledger.Accounts.LedgerIdentityOrBuilder> 
@@ -917,21 +939,23 @@ public final class Transactions {
         }
         return ownerBuilder_;
       }
+      @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
         return super.setUnknownFieldsProto3(unknownFields);
       }
 
+      @java.lang.Override
       public final Builder mergeUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
         return super.mergeUnknownFields(unknownFields);
       }
 
 
-      // @@protoc_insertion_point(builder_scope:bloombox.schema.ledger.CreateOperation)
+      // @@protoc_insertion_point(builder_scope:bloombox.ledger.CreateOperation)
     }
 
-    // @@protoc_insertion_point(class_scope:bloombox.schema.ledger.CreateOperation)
+    // @@protoc_insertion_point(class_scope:bloombox.ledger.CreateOperation)
     private static final io.bloombox.schema.ledger.Transactions.CreateOperation DEFAULT_INSTANCE;
     static {
       DEFAULT_INSTANCE = new io.bloombox.schema.ledger.Transactions.CreateOperation();
@@ -943,6 +967,7 @@ public final class Transactions {
 
     private static final com.google.protobuf.Parser<CreateOperation>
         PARSER = new com.google.protobuf.AbstractParser<CreateOperation>() {
+      @java.lang.Override
       public CreateOperation parsePartialFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -960,6 +985,7 @@ public final class Transactions {
       return PARSER;
     }
 
+    @java.lang.Override
     public io.bloombox.schema.ledger.Transactions.CreateOperation getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
@@ -967,7 +993,7 @@ public final class Transactions {
   }
 
   public interface TransferOperationOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:bloombox.schema.ledger.TransferOperation)
+      // @@protoc_insertion_point(interface_extends:bloombox.ledger.TransferOperation)
       com.google.protobuf.MessageOrBuilder {
 
     /**
@@ -976,7 +1002,7 @@ public final class Transactions {
      * reference. It is worth noting here that an asset's ID is equal to the CREATE transaction's ID that created it.
      * </pre>
      *
-     * <code>.bloombox.schema.ledger.AssetKey asset = 1;</code>
+     * <code>.bloombox.ledger.AssetKey asset = 1;</code>
      */
     boolean hasAsset();
     /**
@@ -985,7 +1011,7 @@ public final class Transactions {
      * reference. It is worth noting here that an asset's ID is equal to the CREATE transaction's ID that created it.
      * </pre>
      *
-     * <code>.bloombox.schema.ledger.AssetKey asset = 1;</code>
+     * <code>.bloombox.ledger.AssetKey asset = 1;</code>
      */
     io.bloombox.schema.ledger.Assets.AssetKey getAsset();
     /**
@@ -994,7 +1020,7 @@ public final class Transactions {
      * reference. It is worth noting here that an asset's ID is equal to the CREATE transaction's ID that created it.
      * </pre>
      *
-     * <code>.bloombox.schema.ledger.AssetKey asset = 1;</code>
+     * <code>.bloombox.ledger.AssetKey asset = 1;</code>
      */
     io.bloombox.schema.ledger.Assets.AssetKeyOrBuilder getAssetOrBuilder();
 
@@ -1004,7 +1030,7 @@ public final class Transactions {
      * authorized owner of the asset in its current state, in order to fully authorize the underlying asset's transfer.
      * </pre>
      *
-     * <code>.bloombox.schema.ledger.LedgerIdentity source = 2;</code>
+     * <code>.bloombox.ledger.LedgerIdentity source = 2;</code>
      */
     boolean hasSource();
     /**
@@ -1013,7 +1039,7 @@ public final class Transactions {
      * authorized owner of the asset in its current state, in order to fully authorize the underlying asset's transfer.
      * </pre>
      *
-     * <code>.bloombox.schema.ledger.LedgerIdentity source = 2;</code>
+     * <code>.bloombox.ledger.LedgerIdentity source = 2;</code>
      */
     io.bloombox.schema.ledger.Accounts.LedgerIdentity getSource();
     /**
@@ -1022,7 +1048,7 @@ public final class Transactions {
      * authorized owner of the asset in its current state, in order to fully authorize the underlying asset's transfer.
      * </pre>
      *
-     * <code>.bloombox.schema.ledger.LedgerIdentity source = 2;</code>
+     * <code>.bloombox.ledger.LedgerIdentity source = 2;</code>
      */
     io.bloombox.schema.ledger.Accounts.LedgerIdentityOrBuilder getSourceOrBuilder();
 
@@ -1032,7 +1058,7 @@ public final class Transactions {
      * accepted to the ledger. That is to say, this is the "recipient" in the transaction.
      * </pre>
      *
-     * <code>.bloombox.schema.ledger.LedgerIdentity target = 3;</code>
+     * <code>.bloombox.ledger.LedgerIdentity target = 3;</code>
      */
     boolean hasTarget();
     /**
@@ -1041,7 +1067,7 @@ public final class Transactions {
      * accepted to the ledger. That is to say, this is the "recipient" in the transaction.
      * </pre>
      *
-     * <code>.bloombox.schema.ledger.LedgerIdentity target = 3;</code>
+     * <code>.bloombox.ledger.LedgerIdentity target = 3;</code>
      */
     io.bloombox.schema.ledger.Accounts.LedgerIdentity getTarget();
     /**
@@ -1050,7 +1076,7 @@ public final class Transactions {
      * accepted to the ledger. That is to say, this is the "recipient" in the transaction.
      * </pre>
      *
-     * <code>.bloombox.schema.ledger.LedgerIdentity target = 3;</code>
+     * <code>.bloombox.ledger.LedgerIdentity target = 3;</code>
      */
     io.bloombox.schema.ledger.Accounts.LedgerIdentityOrBuilder getTargetOrBuilder();
   }
@@ -1060,11 +1086,11 @@ public final class Transactions {
    * follow a CREATE transaction in the lifecycle of an asset.
    * </pre>
    *
-   * Protobuf type {@code bloombox.schema.ledger.TransferOperation}
+   * Protobuf type {@code bloombox.ledger.TransferOperation}
    */
   public  static final class TransferOperation extends
       com.google.protobuf.GeneratedMessageV3 implements
-      // @@protoc_insertion_point(message_implements:bloombox.schema.ledger.TransferOperation)
+      // @@protoc_insertion_point(message_implements:bloombox.ledger.TransferOperation)
       TransferOperationOrBuilder {
   private static final long serialVersionUID = 0L;
     // Use TransferOperation.newBuilder() to construct.
@@ -1098,13 +1124,6 @@ public final class Transactions {
             case 0:
               done = true;
               break;
-            default: {
-              if (!parseUnknownFieldProto3(
-                  input, unknownFields, extensionRegistry, tag)) {
-                done = true;
-              }
-              break;
-            }
             case 10: {
               io.bloombox.schema.ledger.Assets.AssetKey.Builder subBuilder = null;
               if (asset_ != null) {
@@ -1144,6 +1163,13 @@ public final class Transactions {
 
               break;
             }
+            default: {
+              if (!parseUnknownFieldProto3(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
           }
         }
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
@@ -1158,12 +1184,13 @@ public final class Transactions {
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return io.bloombox.schema.ledger.Transactions.internal_static_bloombox_schema_ledger_TransferOperation_descriptor;
+      return io.bloombox.schema.ledger.Transactions.internal_static_bloombox_ledger_TransferOperation_descriptor;
     }
 
+    @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return io.bloombox.schema.ledger.Transactions.internal_static_bloombox_schema_ledger_TransferOperation_fieldAccessorTable
+      return io.bloombox.schema.ledger.Transactions.internal_static_bloombox_ledger_TransferOperation_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
               io.bloombox.schema.ledger.Transactions.TransferOperation.class, io.bloombox.schema.ledger.Transactions.TransferOperation.Builder.class);
     }
@@ -1176,7 +1203,7 @@ public final class Transactions {
      * reference. It is worth noting here that an asset's ID is equal to the CREATE transaction's ID that created it.
      * </pre>
      *
-     * <code>.bloombox.schema.ledger.AssetKey asset = 1;</code>
+     * <code>.bloombox.ledger.AssetKey asset = 1;</code>
      */
     public boolean hasAsset() {
       return asset_ != null;
@@ -1187,7 +1214,7 @@ public final class Transactions {
      * reference. It is worth noting here that an asset's ID is equal to the CREATE transaction's ID that created it.
      * </pre>
      *
-     * <code>.bloombox.schema.ledger.AssetKey asset = 1;</code>
+     * <code>.bloombox.ledger.AssetKey asset = 1;</code>
      */
     public io.bloombox.schema.ledger.Assets.AssetKey getAsset() {
       return asset_ == null ? io.bloombox.schema.ledger.Assets.AssetKey.getDefaultInstance() : asset_;
@@ -1198,7 +1225,7 @@ public final class Transactions {
      * reference. It is worth noting here that an asset's ID is equal to the CREATE transaction's ID that created it.
      * </pre>
      *
-     * <code>.bloombox.schema.ledger.AssetKey asset = 1;</code>
+     * <code>.bloombox.ledger.AssetKey asset = 1;</code>
      */
     public io.bloombox.schema.ledger.Assets.AssetKeyOrBuilder getAssetOrBuilder() {
       return getAsset();
@@ -1212,7 +1239,7 @@ public final class Transactions {
      * authorized owner of the asset in its current state, in order to fully authorize the underlying asset's transfer.
      * </pre>
      *
-     * <code>.bloombox.schema.ledger.LedgerIdentity source = 2;</code>
+     * <code>.bloombox.ledger.LedgerIdentity source = 2;</code>
      */
     public boolean hasSource() {
       return source_ != null;
@@ -1223,7 +1250,7 @@ public final class Transactions {
      * authorized owner of the asset in its current state, in order to fully authorize the underlying asset's transfer.
      * </pre>
      *
-     * <code>.bloombox.schema.ledger.LedgerIdentity source = 2;</code>
+     * <code>.bloombox.ledger.LedgerIdentity source = 2;</code>
      */
     public io.bloombox.schema.ledger.Accounts.LedgerIdentity getSource() {
       return source_ == null ? io.bloombox.schema.ledger.Accounts.LedgerIdentity.getDefaultInstance() : source_;
@@ -1234,7 +1261,7 @@ public final class Transactions {
      * authorized owner of the asset in its current state, in order to fully authorize the underlying asset's transfer.
      * </pre>
      *
-     * <code>.bloombox.schema.ledger.LedgerIdentity source = 2;</code>
+     * <code>.bloombox.ledger.LedgerIdentity source = 2;</code>
      */
     public io.bloombox.schema.ledger.Accounts.LedgerIdentityOrBuilder getSourceOrBuilder() {
       return getSource();
@@ -1248,7 +1275,7 @@ public final class Transactions {
      * accepted to the ledger. That is to say, this is the "recipient" in the transaction.
      * </pre>
      *
-     * <code>.bloombox.schema.ledger.LedgerIdentity target = 3;</code>
+     * <code>.bloombox.ledger.LedgerIdentity target = 3;</code>
      */
     public boolean hasTarget() {
       return target_ != null;
@@ -1259,7 +1286,7 @@ public final class Transactions {
      * accepted to the ledger. That is to say, this is the "recipient" in the transaction.
      * </pre>
      *
-     * <code>.bloombox.schema.ledger.LedgerIdentity target = 3;</code>
+     * <code>.bloombox.ledger.LedgerIdentity target = 3;</code>
      */
     public io.bloombox.schema.ledger.Accounts.LedgerIdentity getTarget() {
       return target_ == null ? io.bloombox.schema.ledger.Accounts.LedgerIdentity.getDefaultInstance() : target_;
@@ -1270,13 +1297,14 @@ public final class Transactions {
      * accepted to the ledger. That is to say, this is the "recipient" in the transaction.
      * </pre>
      *
-     * <code>.bloombox.schema.ledger.LedgerIdentity target = 3;</code>
+     * <code>.bloombox.ledger.LedgerIdentity target = 3;</code>
      */
     public io.bloombox.schema.ledger.Accounts.LedgerIdentityOrBuilder getTargetOrBuilder() {
       return getTarget();
     }
 
     private byte memoizedIsInitialized = -1;
+    @java.lang.Override
     public final boolean isInitialized() {
       byte isInitialized = memoizedIsInitialized;
       if (isInitialized == 1) return true;
@@ -1286,6 +1314,7 @@ public final class Transactions {
       return true;
     }
 
+    @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
       if (asset_ != null) {
@@ -1300,6 +1329,7 @@ public final class Transactions {
       unknownFields.writeTo(output);
     }
 
+    @java.lang.Override
     public int getSerializedSize() {
       int size = memoizedSize;
       if (size != -1) return size;
@@ -1446,6 +1476,7 @@ public final class Transactions {
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
 
+    @java.lang.Override
     public Builder newBuilderForType() { return newBuilder(); }
     public static Builder newBuilder() {
       return DEFAULT_INSTANCE.toBuilder();
@@ -1453,6 +1484,7 @@ public final class Transactions {
     public static Builder newBuilder(io.bloombox.schema.ledger.Transactions.TransferOperation prototype) {
       return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
     }
+    @java.lang.Override
     public Builder toBuilder() {
       return this == DEFAULT_INSTANCE
           ? new Builder() : new Builder().mergeFrom(this);
@@ -1470,20 +1502,21 @@ public final class Transactions {
      * follow a CREATE transaction in the lifecycle of an asset.
      * </pre>
      *
-     * Protobuf type {@code bloombox.schema.ledger.TransferOperation}
+     * Protobuf type {@code bloombox.ledger.TransferOperation}
      */
     public static final class Builder extends
         com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:bloombox.schema.ledger.TransferOperation)
+        // @@protoc_insertion_point(builder_implements:bloombox.ledger.TransferOperation)
         io.bloombox.schema.ledger.Transactions.TransferOperationOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return io.bloombox.schema.ledger.Transactions.internal_static_bloombox_schema_ledger_TransferOperation_descriptor;
+        return io.bloombox.schema.ledger.Transactions.internal_static_bloombox_ledger_TransferOperation_descriptor;
       }
 
+      @java.lang.Override
       protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return io.bloombox.schema.ledger.Transactions.internal_static_bloombox_schema_ledger_TransferOperation_fieldAccessorTable
+        return io.bloombox.schema.ledger.Transactions.internal_static_bloombox_ledger_TransferOperation_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
                 io.bloombox.schema.ledger.Transactions.TransferOperation.class, io.bloombox.schema.ledger.Transactions.TransferOperation.Builder.class);
       }
@@ -1503,6 +1536,7 @@ public final class Transactions {
                 .alwaysUseFieldBuilders) {
         }
       }
+      @java.lang.Override
       public Builder clear() {
         super.clear();
         if (assetBuilder_ == null) {
@@ -1526,15 +1560,18 @@ public final class Transactions {
         return this;
       }
 
+      @java.lang.Override
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return io.bloombox.schema.ledger.Transactions.internal_static_bloombox_schema_ledger_TransferOperation_descriptor;
+        return io.bloombox.schema.ledger.Transactions.internal_static_bloombox_ledger_TransferOperation_descriptor;
       }
 
+      @java.lang.Override
       public io.bloombox.schema.ledger.Transactions.TransferOperation getDefaultInstanceForType() {
         return io.bloombox.schema.ledger.Transactions.TransferOperation.getDefaultInstance();
       }
 
+      @java.lang.Override
       public io.bloombox.schema.ledger.Transactions.TransferOperation build() {
         io.bloombox.schema.ledger.Transactions.TransferOperation result = buildPartial();
         if (!result.isInitialized()) {
@@ -1543,6 +1580,7 @@ public final class Transactions {
         return result;
       }
 
+      @java.lang.Override
       public io.bloombox.schema.ledger.Transactions.TransferOperation buildPartial() {
         io.bloombox.schema.ledger.Transactions.TransferOperation result = new io.bloombox.schema.ledger.Transactions.TransferOperation(this);
         if (assetBuilder_ == null) {
@@ -1564,32 +1602,39 @@ public final class Transactions {
         return result;
       }
 
+      @java.lang.Override
       public Builder clone() {
         return (Builder) super.clone();
       }
+      @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
         return (Builder) super.setField(field, value);
       }
+      @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
         return (Builder) super.clearField(field);
       }
+      @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
         return (Builder) super.clearOneof(oneof);
       }
+      @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
         return (Builder) super.setRepeatedField(field, index, value);
       }
+      @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
         return (Builder) super.addRepeatedField(field, value);
       }
+      @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
         if (other instanceof io.bloombox.schema.ledger.Transactions.TransferOperation) {
           return mergeFrom((io.bloombox.schema.ledger.Transactions.TransferOperation)other);
@@ -1615,10 +1660,12 @@ public final class Transactions {
         return this;
       }
 
+      @java.lang.Override
       public final boolean isInitialized() {
         return true;
       }
 
+      @java.lang.Override
       public Builder mergeFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -1646,7 +1693,7 @@ public final class Transactions {
        * reference. It is worth noting here that an asset's ID is equal to the CREATE transaction's ID that created it.
        * </pre>
        *
-       * <code>.bloombox.schema.ledger.AssetKey asset = 1;</code>
+       * <code>.bloombox.ledger.AssetKey asset = 1;</code>
        */
       public boolean hasAsset() {
         return assetBuilder_ != null || asset_ != null;
@@ -1657,7 +1704,7 @@ public final class Transactions {
        * reference. It is worth noting here that an asset's ID is equal to the CREATE transaction's ID that created it.
        * </pre>
        *
-       * <code>.bloombox.schema.ledger.AssetKey asset = 1;</code>
+       * <code>.bloombox.ledger.AssetKey asset = 1;</code>
        */
       public io.bloombox.schema.ledger.Assets.AssetKey getAsset() {
         if (assetBuilder_ == null) {
@@ -1672,7 +1719,7 @@ public final class Transactions {
        * reference. It is worth noting here that an asset's ID is equal to the CREATE transaction's ID that created it.
        * </pre>
        *
-       * <code>.bloombox.schema.ledger.AssetKey asset = 1;</code>
+       * <code>.bloombox.ledger.AssetKey asset = 1;</code>
        */
       public Builder setAsset(io.bloombox.schema.ledger.Assets.AssetKey value) {
         if (assetBuilder_ == null) {
@@ -1693,7 +1740,7 @@ public final class Transactions {
        * reference. It is worth noting here that an asset's ID is equal to the CREATE transaction's ID that created it.
        * </pre>
        *
-       * <code>.bloombox.schema.ledger.AssetKey asset = 1;</code>
+       * <code>.bloombox.ledger.AssetKey asset = 1;</code>
        */
       public Builder setAsset(
           io.bloombox.schema.ledger.Assets.AssetKey.Builder builderForValue) {
@@ -1712,7 +1759,7 @@ public final class Transactions {
        * reference. It is worth noting here that an asset's ID is equal to the CREATE transaction's ID that created it.
        * </pre>
        *
-       * <code>.bloombox.schema.ledger.AssetKey asset = 1;</code>
+       * <code>.bloombox.ledger.AssetKey asset = 1;</code>
        */
       public Builder mergeAsset(io.bloombox.schema.ledger.Assets.AssetKey value) {
         if (assetBuilder_ == null) {
@@ -1735,7 +1782,7 @@ public final class Transactions {
        * reference. It is worth noting here that an asset's ID is equal to the CREATE transaction's ID that created it.
        * </pre>
        *
-       * <code>.bloombox.schema.ledger.AssetKey asset = 1;</code>
+       * <code>.bloombox.ledger.AssetKey asset = 1;</code>
        */
       public Builder clearAsset() {
         if (assetBuilder_ == null) {
@@ -1754,7 +1801,7 @@ public final class Transactions {
        * reference. It is worth noting here that an asset's ID is equal to the CREATE transaction's ID that created it.
        * </pre>
        *
-       * <code>.bloombox.schema.ledger.AssetKey asset = 1;</code>
+       * <code>.bloombox.ledger.AssetKey asset = 1;</code>
        */
       public io.bloombox.schema.ledger.Assets.AssetKey.Builder getAssetBuilder() {
         
@@ -1767,7 +1814,7 @@ public final class Transactions {
        * reference. It is worth noting here that an asset's ID is equal to the CREATE transaction's ID that created it.
        * </pre>
        *
-       * <code>.bloombox.schema.ledger.AssetKey asset = 1;</code>
+       * <code>.bloombox.ledger.AssetKey asset = 1;</code>
        */
       public io.bloombox.schema.ledger.Assets.AssetKeyOrBuilder getAssetOrBuilder() {
         if (assetBuilder_ != null) {
@@ -1783,7 +1830,7 @@ public final class Transactions {
        * reference. It is worth noting here that an asset's ID is equal to the CREATE transaction's ID that created it.
        * </pre>
        *
-       * <code>.bloombox.schema.ledger.AssetKey asset = 1;</code>
+       * <code>.bloombox.ledger.AssetKey asset = 1;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
           io.bloombox.schema.ledger.Assets.AssetKey, io.bloombox.schema.ledger.Assets.AssetKey.Builder, io.bloombox.schema.ledger.Assets.AssetKeyOrBuilder> 
@@ -1808,7 +1855,7 @@ public final class Transactions {
        * authorized owner of the asset in its current state, in order to fully authorize the underlying asset's transfer.
        * </pre>
        *
-       * <code>.bloombox.schema.ledger.LedgerIdentity source = 2;</code>
+       * <code>.bloombox.ledger.LedgerIdentity source = 2;</code>
        */
       public boolean hasSource() {
         return sourceBuilder_ != null || source_ != null;
@@ -1819,7 +1866,7 @@ public final class Transactions {
        * authorized owner of the asset in its current state, in order to fully authorize the underlying asset's transfer.
        * </pre>
        *
-       * <code>.bloombox.schema.ledger.LedgerIdentity source = 2;</code>
+       * <code>.bloombox.ledger.LedgerIdentity source = 2;</code>
        */
       public io.bloombox.schema.ledger.Accounts.LedgerIdentity getSource() {
         if (sourceBuilder_ == null) {
@@ -1834,7 +1881,7 @@ public final class Transactions {
        * authorized owner of the asset in its current state, in order to fully authorize the underlying asset's transfer.
        * </pre>
        *
-       * <code>.bloombox.schema.ledger.LedgerIdentity source = 2;</code>
+       * <code>.bloombox.ledger.LedgerIdentity source = 2;</code>
        */
       public Builder setSource(io.bloombox.schema.ledger.Accounts.LedgerIdentity value) {
         if (sourceBuilder_ == null) {
@@ -1855,7 +1902,7 @@ public final class Transactions {
        * authorized owner of the asset in its current state, in order to fully authorize the underlying asset's transfer.
        * </pre>
        *
-       * <code>.bloombox.schema.ledger.LedgerIdentity source = 2;</code>
+       * <code>.bloombox.ledger.LedgerIdentity source = 2;</code>
        */
       public Builder setSource(
           io.bloombox.schema.ledger.Accounts.LedgerIdentity.Builder builderForValue) {
@@ -1874,7 +1921,7 @@ public final class Transactions {
        * authorized owner of the asset in its current state, in order to fully authorize the underlying asset's transfer.
        * </pre>
        *
-       * <code>.bloombox.schema.ledger.LedgerIdentity source = 2;</code>
+       * <code>.bloombox.ledger.LedgerIdentity source = 2;</code>
        */
       public Builder mergeSource(io.bloombox.schema.ledger.Accounts.LedgerIdentity value) {
         if (sourceBuilder_ == null) {
@@ -1897,7 +1944,7 @@ public final class Transactions {
        * authorized owner of the asset in its current state, in order to fully authorize the underlying asset's transfer.
        * </pre>
        *
-       * <code>.bloombox.schema.ledger.LedgerIdentity source = 2;</code>
+       * <code>.bloombox.ledger.LedgerIdentity source = 2;</code>
        */
       public Builder clearSource() {
         if (sourceBuilder_ == null) {
@@ -1916,7 +1963,7 @@ public final class Transactions {
        * authorized owner of the asset in its current state, in order to fully authorize the underlying asset's transfer.
        * </pre>
        *
-       * <code>.bloombox.schema.ledger.LedgerIdentity source = 2;</code>
+       * <code>.bloombox.ledger.LedgerIdentity source = 2;</code>
        */
       public io.bloombox.schema.ledger.Accounts.LedgerIdentity.Builder getSourceBuilder() {
         
@@ -1929,7 +1976,7 @@ public final class Transactions {
        * authorized owner of the asset in its current state, in order to fully authorize the underlying asset's transfer.
        * </pre>
        *
-       * <code>.bloombox.schema.ledger.LedgerIdentity source = 2;</code>
+       * <code>.bloombox.ledger.LedgerIdentity source = 2;</code>
        */
       public io.bloombox.schema.ledger.Accounts.LedgerIdentityOrBuilder getSourceOrBuilder() {
         if (sourceBuilder_ != null) {
@@ -1945,7 +1992,7 @@ public final class Transactions {
        * authorized owner of the asset in its current state, in order to fully authorize the underlying asset's transfer.
        * </pre>
        *
-       * <code>.bloombox.schema.ledger.LedgerIdentity source = 2;</code>
+       * <code>.bloombox.ledger.LedgerIdentity source = 2;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
           io.bloombox.schema.ledger.Accounts.LedgerIdentity, io.bloombox.schema.ledger.Accounts.LedgerIdentity.Builder, io.bloombox.schema.ledger.Accounts.LedgerIdentityOrBuilder> 
@@ -1970,7 +2017,7 @@ public final class Transactions {
        * accepted to the ledger. That is to say, this is the "recipient" in the transaction.
        * </pre>
        *
-       * <code>.bloombox.schema.ledger.LedgerIdentity target = 3;</code>
+       * <code>.bloombox.ledger.LedgerIdentity target = 3;</code>
        */
       public boolean hasTarget() {
         return targetBuilder_ != null || target_ != null;
@@ -1981,7 +2028,7 @@ public final class Transactions {
        * accepted to the ledger. That is to say, this is the "recipient" in the transaction.
        * </pre>
        *
-       * <code>.bloombox.schema.ledger.LedgerIdentity target = 3;</code>
+       * <code>.bloombox.ledger.LedgerIdentity target = 3;</code>
        */
       public io.bloombox.schema.ledger.Accounts.LedgerIdentity getTarget() {
         if (targetBuilder_ == null) {
@@ -1996,7 +2043,7 @@ public final class Transactions {
        * accepted to the ledger. That is to say, this is the "recipient" in the transaction.
        * </pre>
        *
-       * <code>.bloombox.schema.ledger.LedgerIdentity target = 3;</code>
+       * <code>.bloombox.ledger.LedgerIdentity target = 3;</code>
        */
       public Builder setTarget(io.bloombox.schema.ledger.Accounts.LedgerIdentity value) {
         if (targetBuilder_ == null) {
@@ -2017,7 +2064,7 @@ public final class Transactions {
        * accepted to the ledger. That is to say, this is the "recipient" in the transaction.
        * </pre>
        *
-       * <code>.bloombox.schema.ledger.LedgerIdentity target = 3;</code>
+       * <code>.bloombox.ledger.LedgerIdentity target = 3;</code>
        */
       public Builder setTarget(
           io.bloombox.schema.ledger.Accounts.LedgerIdentity.Builder builderForValue) {
@@ -2036,7 +2083,7 @@ public final class Transactions {
        * accepted to the ledger. That is to say, this is the "recipient" in the transaction.
        * </pre>
        *
-       * <code>.bloombox.schema.ledger.LedgerIdentity target = 3;</code>
+       * <code>.bloombox.ledger.LedgerIdentity target = 3;</code>
        */
       public Builder mergeTarget(io.bloombox.schema.ledger.Accounts.LedgerIdentity value) {
         if (targetBuilder_ == null) {
@@ -2059,7 +2106,7 @@ public final class Transactions {
        * accepted to the ledger. That is to say, this is the "recipient" in the transaction.
        * </pre>
        *
-       * <code>.bloombox.schema.ledger.LedgerIdentity target = 3;</code>
+       * <code>.bloombox.ledger.LedgerIdentity target = 3;</code>
        */
       public Builder clearTarget() {
         if (targetBuilder_ == null) {
@@ -2078,7 +2125,7 @@ public final class Transactions {
        * accepted to the ledger. That is to say, this is the "recipient" in the transaction.
        * </pre>
        *
-       * <code>.bloombox.schema.ledger.LedgerIdentity target = 3;</code>
+       * <code>.bloombox.ledger.LedgerIdentity target = 3;</code>
        */
       public io.bloombox.schema.ledger.Accounts.LedgerIdentity.Builder getTargetBuilder() {
         
@@ -2091,7 +2138,7 @@ public final class Transactions {
        * accepted to the ledger. That is to say, this is the "recipient" in the transaction.
        * </pre>
        *
-       * <code>.bloombox.schema.ledger.LedgerIdentity target = 3;</code>
+       * <code>.bloombox.ledger.LedgerIdentity target = 3;</code>
        */
       public io.bloombox.schema.ledger.Accounts.LedgerIdentityOrBuilder getTargetOrBuilder() {
         if (targetBuilder_ != null) {
@@ -2107,7 +2154,7 @@ public final class Transactions {
        * accepted to the ledger. That is to say, this is the "recipient" in the transaction.
        * </pre>
        *
-       * <code>.bloombox.schema.ledger.LedgerIdentity target = 3;</code>
+       * <code>.bloombox.ledger.LedgerIdentity target = 3;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
           io.bloombox.schema.ledger.Accounts.LedgerIdentity, io.bloombox.schema.ledger.Accounts.LedgerIdentity.Builder, io.bloombox.schema.ledger.Accounts.LedgerIdentityOrBuilder> 
@@ -2122,21 +2169,23 @@ public final class Transactions {
         }
         return targetBuilder_;
       }
+      @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
         return super.setUnknownFieldsProto3(unknownFields);
       }
 
+      @java.lang.Override
       public final Builder mergeUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
         return super.mergeUnknownFields(unknownFields);
       }
 
 
-      // @@protoc_insertion_point(builder_scope:bloombox.schema.ledger.TransferOperation)
+      // @@protoc_insertion_point(builder_scope:bloombox.ledger.TransferOperation)
     }
 
-    // @@protoc_insertion_point(class_scope:bloombox.schema.ledger.TransferOperation)
+    // @@protoc_insertion_point(class_scope:bloombox.ledger.TransferOperation)
     private static final io.bloombox.schema.ledger.Transactions.TransferOperation DEFAULT_INSTANCE;
     static {
       DEFAULT_INSTANCE = new io.bloombox.schema.ledger.Transactions.TransferOperation();
@@ -2148,6 +2197,7 @@ public final class Transactions {
 
     private static final com.google.protobuf.Parser<TransferOperation>
         PARSER = new com.google.protobuf.AbstractParser<TransferOperation>() {
+      @java.lang.Override
       public TransferOperation parsePartialFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -2165,6 +2215,7 @@ public final class Transactions {
       return PARSER;
     }
 
+    @java.lang.Override
     public io.bloombox.schema.ledger.Transactions.TransferOperation getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
@@ -2172,7 +2223,7 @@ public final class Transactions {
   }
 
   public interface TransactionKeyOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:bloombox.schema.ledger.TransactionKey)
+      // @@protoc_insertion_point(interface_extends:bloombox.ledger.TransactionKey)
       com.google.protobuf.MessageOrBuilder {
 
     /**
@@ -2221,11 +2272,11 @@ public final class Transactions {
    * allocated outside of the transaction's commitment lifecycle (i.e. to track an in-flight transaction).
    * </pre>
    *
-   * Protobuf type {@code bloombox.schema.ledger.TransactionKey}
+   * Protobuf type {@code bloombox.ledger.TransactionKey}
    */
   public  static final class TransactionKey extends
       com.google.protobuf.GeneratedMessageV3 implements
-      // @@protoc_insertion_point(message_implements:bloombox.schema.ledger.TransactionKey)
+      // @@protoc_insertion_point(message_implements:bloombox.ledger.TransactionKey)
       TransactionKeyOrBuilder {
   private static final long serialVersionUID = 0L;
     // Use TransactionKey.newBuilder() to construct.
@@ -2261,13 +2312,6 @@ public final class Transactions {
             case 0:
               done = true;
               break;
-            default: {
-              if (!parseUnknownFieldProto3(
-                  input, unknownFields, extensionRegistry, tag)) {
-                done = true;
-              }
-              break;
-            }
             case 10: {
               java.lang.String s = input.readStringRequireUtf8();
 
@@ -2278,6 +2322,13 @@ public final class Transactions {
               java.lang.String s = input.readStringRequireUtf8();
 
               id_ = s;
+              break;
+            }
+            default: {
+              if (!parseUnknownFieldProto3(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
               break;
             }
           }
@@ -2294,12 +2345,13 @@ public final class Transactions {
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return io.bloombox.schema.ledger.Transactions.internal_static_bloombox_schema_ledger_TransactionKey_descriptor;
+      return io.bloombox.schema.ledger.Transactions.internal_static_bloombox_ledger_TransactionKey_descriptor;
     }
 
+    @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return io.bloombox.schema.ledger.Transactions.internal_static_bloombox_schema_ledger_TransactionKey_fieldAccessorTable
+      return io.bloombox.schema.ledger.Transactions.internal_static_bloombox_ledger_TransactionKey_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
               io.bloombox.schema.ledger.Transactions.TransactionKey.class, io.bloombox.schema.ledger.Transactions.TransactionKey.Builder.class);
     }
@@ -2393,6 +2445,7 @@ public final class Transactions {
     }
 
     private byte memoizedIsInitialized = -1;
+    @java.lang.Override
     public final boolean isInitialized() {
       byte isInitialized = memoizedIsInitialized;
       if (isInitialized == 1) return true;
@@ -2402,6 +2455,7 @@ public final class Transactions {
       return true;
     }
 
+    @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
       if (!getXidBytes().isEmpty()) {
@@ -2413,6 +2467,7 @@ public final class Transactions {
       unknownFields.writeTo(output);
     }
 
+    @java.lang.Override
     public int getSerializedSize() {
       int size = memoizedSize;
       if (size != -1) return size;
@@ -2534,6 +2589,7 @@ public final class Transactions {
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
 
+    @java.lang.Override
     public Builder newBuilderForType() { return newBuilder(); }
     public static Builder newBuilder() {
       return DEFAULT_INSTANCE.toBuilder();
@@ -2541,6 +2597,7 @@ public final class Transactions {
     public static Builder newBuilder(io.bloombox.schema.ledger.Transactions.TransactionKey prototype) {
       return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
     }
+    @java.lang.Override
     public Builder toBuilder() {
       return this == DEFAULT_INSTANCE
           ? new Builder() : new Builder().mergeFrom(this);
@@ -2558,20 +2615,21 @@ public final class Transactions {
      * allocated outside of the transaction's commitment lifecycle (i.e. to track an in-flight transaction).
      * </pre>
      *
-     * Protobuf type {@code bloombox.schema.ledger.TransactionKey}
+     * Protobuf type {@code bloombox.ledger.TransactionKey}
      */
     public static final class Builder extends
         com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:bloombox.schema.ledger.TransactionKey)
+        // @@protoc_insertion_point(builder_implements:bloombox.ledger.TransactionKey)
         io.bloombox.schema.ledger.Transactions.TransactionKeyOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return io.bloombox.schema.ledger.Transactions.internal_static_bloombox_schema_ledger_TransactionKey_descriptor;
+        return io.bloombox.schema.ledger.Transactions.internal_static_bloombox_ledger_TransactionKey_descriptor;
       }
 
+      @java.lang.Override
       protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return io.bloombox.schema.ledger.Transactions.internal_static_bloombox_schema_ledger_TransactionKey_fieldAccessorTable
+        return io.bloombox.schema.ledger.Transactions.internal_static_bloombox_ledger_TransactionKey_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
                 io.bloombox.schema.ledger.Transactions.TransactionKey.class, io.bloombox.schema.ledger.Transactions.TransactionKey.Builder.class);
       }
@@ -2591,6 +2649,7 @@ public final class Transactions {
                 .alwaysUseFieldBuilders) {
         }
       }
+      @java.lang.Override
       public Builder clear() {
         super.clear();
         xid_ = "";
@@ -2600,15 +2659,18 @@ public final class Transactions {
         return this;
       }
 
+      @java.lang.Override
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return io.bloombox.schema.ledger.Transactions.internal_static_bloombox_schema_ledger_TransactionKey_descriptor;
+        return io.bloombox.schema.ledger.Transactions.internal_static_bloombox_ledger_TransactionKey_descriptor;
       }
 
+      @java.lang.Override
       public io.bloombox.schema.ledger.Transactions.TransactionKey getDefaultInstanceForType() {
         return io.bloombox.schema.ledger.Transactions.TransactionKey.getDefaultInstance();
       }
 
+      @java.lang.Override
       public io.bloombox.schema.ledger.Transactions.TransactionKey build() {
         io.bloombox.schema.ledger.Transactions.TransactionKey result = buildPartial();
         if (!result.isInitialized()) {
@@ -2617,6 +2679,7 @@ public final class Transactions {
         return result;
       }
 
+      @java.lang.Override
       public io.bloombox.schema.ledger.Transactions.TransactionKey buildPartial() {
         io.bloombox.schema.ledger.Transactions.TransactionKey result = new io.bloombox.schema.ledger.Transactions.TransactionKey(this);
         result.xid_ = xid_;
@@ -2625,32 +2688,39 @@ public final class Transactions {
         return result;
       }
 
+      @java.lang.Override
       public Builder clone() {
         return (Builder) super.clone();
       }
+      @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
         return (Builder) super.setField(field, value);
       }
+      @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
         return (Builder) super.clearField(field);
       }
+      @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
         return (Builder) super.clearOneof(oneof);
       }
+      @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
         return (Builder) super.setRepeatedField(field, index, value);
       }
+      @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
         return (Builder) super.addRepeatedField(field, value);
       }
+      @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
         if (other instanceof io.bloombox.schema.ledger.Transactions.TransactionKey) {
           return mergeFrom((io.bloombox.schema.ledger.Transactions.TransactionKey)other);
@@ -2675,10 +2745,12 @@ public final class Transactions {
         return this;
       }
 
+      @java.lang.Override
       public final boolean isInitialized() {
         return true;
       }
 
+      @java.lang.Override
       public Builder mergeFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -2884,21 +2956,23 @@ public final class Transactions {
         onChanged();
         return this;
       }
+      @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
         return super.setUnknownFieldsProto3(unknownFields);
       }
 
+      @java.lang.Override
       public final Builder mergeUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
         return super.mergeUnknownFields(unknownFields);
       }
 
 
-      // @@protoc_insertion_point(builder_scope:bloombox.schema.ledger.TransactionKey)
+      // @@protoc_insertion_point(builder_scope:bloombox.ledger.TransactionKey)
     }
 
-    // @@protoc_insertion_point(class_scope:bloombox.schema.ledger.TransactionKey)
+    // @@protoc_insertion_point(class_scope:bloombox.ledger.TransactionKey)
     private static final io.bloombox.schema.ledger.Transactions.TransactionKey DEFAULT_INSTANCE;
     static {
       DEFAULT_INSTANCE = new io.bloombox.schema.ledger.Transactions.TransactionKey();
@@ -2910,6 +2984,7 @@ public final class Transactions {
 
     private static final com.google.protobuf.Parser<TransactionKey>
         PARSER = new com.google.protobuf.AbstractParser<TransactionKey>() {
+      @java.lang.Override
       public TransactionKey parsePartialFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -2927,6 +3002,7 @@ public final class Transactions {
       return PARSER;
     }
 
+    @java.lang.Override
     public io.bloombox.schema.ledger.Transactions.TransactionKey getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
@@ -2934,7 +3010,7 @@ public final class Transactions {
   }
 
   public interface TransactionOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:bloombox.schema.ledger.Transaction)
+      // @@protoc_insertion_point(interface_extends:bloombox.ledger.Transaction)
       com.google.protobuf.MessageOrBuilder {
 
     /**
@@ -2943,7 +3019,7 @@ public final class Transactions {
      * an XID (external ID, which is independent of the transaction content and committment status).
      * </pre>
      *
-     * <code>.bloombox.schema.ledger.TransactionKey key = 1;</code>
+     * <code>.bloombox.ledger.TransactionKey key = 1;</code>
      */
     boolean hasKey();
     /**
@@ -2952,7 +3028,7 @@ public final class Transactions {
      * an XID (external ID, which is independent of the transaction content and committment status).
      * </pre>
      *
-     * <code>.bloombox.schema.ledger.TransactionKey key = 1;</code>
+     * <code>.bloombox.ledger.TransactionKey key = 1;</code>
      */
     io.bloombox.schema.ledger.Transactions.TransactionKey getKey();
     /**
@@ -2961,7 +3037,7 @@ public final class Transactions {
      * an XID (external ID, which is independent of the transaction content and committment status).
      * </pre>
      *
-     * <code>.bloombox.schema.ledger.TransactionKey key = 1;</code>
+     * <code>.bloombox.ledger.TransactionKey key = 1;</code>
      */
     io.bloombox.schema.ledger.Transactions.TransactionKeyOrBuilder getKeyOrBuilder();
 
@@ -2971,7 +3047,7 @@ public final class Transactions {
      * digital assets, and TRANSFER transactions perform their interchange.
      * </pre>
      *
-     * <code>.bloombox.schema.ledger.Transaction.Operation operation = 2;</code>
+     * <code>.bloombox.ledger.Transaction.Operation operation = 2;</code>
      */
     int getOperationValue();
     /**
@@ -2980,7 +3056,7 @@ public final class Transactions {
      * digital assets, and TRANSFER transactions perform their interchange.
      * </pre>
      *
-     * <code>.bloombox.schema.ledger.Transaction.Operation operation = 2;</code>
+     * <code>.bloombox.ledger.Transaction.Operation operation = 2;</code>
      */
     io.bloombox.schema.ledger.Transactions.Transaction.Operation getOperation();
 
@@ -2989,7 +3065,7 @@ public final class Transactions {
      * Specifies a payload for an asset CREATE transaction.
      * </pre>
      *
-     * <code>.bloombox.schema.ledger.CreateOperation issuance = 10;</code>
+     * <code>.bloombox.ledger.CreateOperation issuance = 10;</code>
      */
     boolean hasIssuance();
     /**
@@ -2997,7 +3073,7 @@ public final class Transactions {
      * Specifies a payload for an asset CREATE transaction.
      * </pre>
      *
-     * <code>.bloombox.schema.ledger.CreateOperation issuance = 10;</code>
+     * <code>.bloombox.ledger.CreateOperation issuance = 10;</code>
      */
     io.bloombox.schema.ledger.Transactions.CreateOperation getIssuance();
     /**
@@ -3005,7 +3081,7 @@ public final class Transactions {
      * Specifies a payload for an asset CREATE transaction.
      * </pre>
      *
-     * <code>.bloombox.schema.ledger.CreateOperation issuance = 10;</code>
+     * <code>.bloombox.ledger.CreateOperation issuance = 10;</code>
      */
     io.bloombox.schema.ledger.Transactions.CreateOperationOrBuilder getIssuanceOrBuilder();
 
@@ -3014,7 +3090,7 @@ public final class Transactions {
      * Specifies a payload for an asset TRANSFER transaction.
      * </pre>
      *
-     * <code>.bloombox.schema.ledger.TransferOperation interchange = 11;</code>
+     * <code>.bloombox.ledger.TransferOperation interchange = 11;</code>
      */
     boolean hasInterchange();
     /**
@@ -3022,7 +3098,7 @@ public final class Transactions {
      * Specifies a payload for an asset TRANSFER transaction.
      * </pre>
      *
-     * <code>.bloombox.schema.ledger.TransferOperation interchange = 11;</code>
+     * <code>.bloombox.ledger.TransferOperation interchange = 11;</code>
      */
     io.bloombox.schema.ledger.Transactions.TransferOperation getInterchange();
     /**
@@ -3030,7 +3106,7 @@ public final class Transactions {
      * Specifies a payload for an asset TRANSFER transaction.
      * </pre>
      *
-     * <code>.bloombox.schema.ledger.TransferOperation interchange = 11;</code>
+     * <code>.bloombox.ledger.TransferOperation interchange = 11;</code>
      */
     io.bloombox.schema.ledger.Transactions.TransferOperationOrBuilder getInterchangeOrBuilder();
 
@@ -3092,11 +3168,11 @@ public final class Transactions {
    * for a transaction, by operating as a generic container of both CREATE and TRANSFER operations.
    * </pre>
    *
-   * Protobuf type {@code bloombox.schema.ledger.Transaction}
+   * Protobuf type {@code bloombox.ledger.Transaction}
    */
   public  static final class Transaction extends
       com.google.protobuf.GeneratedMessageV3 implements
-      // @@protoc_insertion_point(message_implements:bloombox.schema.ledger.Transaction)
+      // @@protoc_insertion_point(message_implements:bloombox.ledger.Transaction)
       TransactionOrBuilder {
   private static final long serialVersionUID = 0L;
     // Use Transaction.newBuilder() to construct.
@@ -3131,13 +3207,6 @@ public final class Transactions {
             case 0:
               done = true;
               break;
-            default: {
-              if (!parseUnknownFieldProto3(
-                  input, unknownFields, extensionRegistry, tag)) {
-                done = true;
-              }
-              break;
-            }
             case 10: {
               io.bloombox.schema.ledger.Transactions.TransactionKey.Builder subBuilder = null;
               if (key_ != null) {
@@ -3211,6 +3280,13 @@ public final class Transactions {
 
               break;
             }
+            default: {
+              if (!parseUnknownFieldProto3(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
           }
         }
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
@@ -3225,12 +3301,13 @@ public final class Transactions {
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return io.bloombox.schema.ledger.Transactions.internal_static_bloombox_schema_ledger_Transaction_descriptor;
+      return io.bloombox.schema.ledger.Transactions.internal_static_bloombox_ledger_Transaction_descriptor;
     }
 
+    @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return io.bloombox.schema.ledger.Transactions.internal_static_bloombox_schema_ledger_Transaction_fieldAccessorTable
+      return io.bloombox.schema.ledger.Transactions.internal_static_bloombox_ledger_Transaction_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
               io.bloombox.schema.ledger.Transactions.Transaction.class, io.bloombox.schema.ledger.Transactions.Transaction.Builder.class);
     }
@@ -3241,7 +3318,7 @@ public final class Transactions {
      * types include CREATE and TRANSFER.
      * </pre>
      *
-     * Protobuf enum {@code bloombox.schema.ledger.Transaction.Operation}
+     * Protobuf enum {@code bloombox.ledger.Transaction.Operation}
      */
     public enum Operation
         implements com.google.protobuf.ProtocolMessageEnum {
@@ -3351,7 +3428,7 @@ public final class Transactions {
         this.value = value;
       }
 
-      // @@protoc_insertion_point(enum_scope:bloombox.schema.ledger.Transaction.Operation)
+      // @@protoc_insertion_point(enum_scope:bloombox.ledger.Transaction.Operation)
     }
 
     private int txnCase_ = 0;
@@ -3400,7 +3477,7 @@ public final class Transactions {
      * an XID (external ID, which is independent of the transaction content and committment status).
      * </pre>
      *
-     * <code>.bloombox.schema.ledger.TransactionKey key = 1;</code>
+     * <code>.bloombox.ledger.TransactionKey key = 1;</code>
      */
     public boolean hasKey() {
       return key_ != null;
@@ -3411,7 +3488,7 @@ public final class Transactions {
      * an XID (external ID, which is independent of the transaction content and committment status).
      * </pre>
      *
-     * <code>.bloombox.schema.ledger.TransactionKey key = 1;</code>
+     * <code>.bloombox.ledger.TransactionKey key = 1;</code>
      */
     public io.bloombox.schema.ledger.Transactions.TransactionKey getKey() {
       return key_ == null ? io.bloombox.schema.ledger.Transactions.TransactionKey.getDefaultInstance() : key_;
@@ -3422,7 +3499,7 @@ public final class Transactions {
      * an XID (external ID, which is independent of the transaction content and committment status).
      * </pre>
      *
-     * <code>.bloombox.schema.ledger.TransactionKey key = 1;</code>
+     * <code>.bloombox.ledger.TransactionKey key = 1;</code>
      */
     public io.bloombox.schema.ledger.Transactions.TransactionKeyOrBuilder getKeyOrBuilder() {
       return getKey();
@@ -3436,7 +3513,7 @@ public final class Transactions {
      * digital assets, and TRANSFER transactions perform their interchange.
      * </pre>
      *
-     * <code>.bloombox.schema.ledger.Transaction.Operation operation = 2;</code>
+     * <code>.bloombox.ledger.Transaction.Operation operation = 2;</code>
      */
     public int getOperationValue() {
       return operation_;
@@ -3447,9 +3524,10 @@ public final class Transactions {
      * digital assets, and TRANSFER transactions perform their interchange.
      * </pre>
      *
-     * <code>.bloombox.schema.ledger.Transaction.Operation operation = 2;</code>
+     * <code>.bloombox.ledger.Transaction.Operation operation = 2;</code>
      */
     public io.bloombox.schema.ledger.Transactions.Transaction.Operation getOperation() {
+      @SuppressWarnings("deprecation")
       io.bloombox.schema.ledger.Transactions.Transaction.Operation result = io.bloombox.schema.ledger.Transactions.Transaction.Operation.valueOf(operation_);
       return result == null ? io.bloombox.schema.ledger.Transactions.Transaction.Operation.UNRECOGNIZED : result;
     }
@@ -3460,7 +3538,7 @@ public final class Transactions {
      * Specifies a payload for an asset CREATE transaction.
      * </pre>
      *
-     * <code>.bloombox.schema.ledger.CreateOperation issuance = 10;</code>
+     * <code>.bloombox.ledger.CreateOperation issuance = 10;</code>
      */
     public boolean hasIssuance() {
       return txnCase_ == 10;
@@ -3470,7 +3548,7 @@ public final class Transactions {
      * Specifies a payload for an asset CREATE transaction.
      * </pre>
      *
-     * <code>.bloombox.schema.ledger.CreateOperation issuance = 10;</code>
+     * <code>.bloombox.ledger.CreateOperation issuance = 10;</code>
      */
     public io.bloombox.schema.ledger.Transactions.CreateOperation getIssuance() {
       if (txnCase_ == 10) {
@@ -3483,7 +3561,7 @@ public final class Transactions {
      * Specifies a payload for an asset CREATE transaction.
      * </pre>
      *
-     * <code>.bloombox.schema.ledger.CreateOperation issuance = 10;</code>
+     * <code>.bloombox.ledger.CreateOperation issuance = 10;</code>
      */
     public io.bloombox.schema.ledger.Transactions.CreateOperationOrBuilder getIssuanceOrBuilder() {
       if (txnCase_ == 10) {
@@ -3498,7 +3576,7 @@ public final class Transactions {
      * Specifies a payload for an asset TRANSFER transaction.
      * </pre>
      *
-     * <code>.bloombox.schema.ledger.TransferOperation interchange = 11;</code>
+     * <code>.bloombox.ledger.TransferOperation interchange = 11;</code>
      */
     public boolean hasInterchange() {
       return txnCase_ == 11;
@@ -3508,7 +3586,7 @@ public final class Transactions {
      * Specifies a payload for an asset TRANSFER transaction.
      * </pre>
      *
-     * <code>.bloombox.schema.ledger.TransferOperation interchange = 11;</code>
+     * <code>.bloombox.ledger.TransferOperation interchange = 11;</code>
      */
     public io.bloombox.schema.ledger.Transactions.TransferOperation getInterchange() {
       if (txnCase_ == 11) {
@@ -3521,7 +3599,7 @@ public final class Transactions {
      * Specifies a payload for an asset TRANSFER transaction.
      * </pre>
      *
-     * <code>.bloombox.schema.ledger.TransferOperation interchange = 11;</code>
+     * <code>.bloombox.ledger.TransferOperation interchange = 11;</code>
      */
     public io.bloombox.schema.ledger.Transactions.TransferOperationOrBuilder getInterchangeOrBuilder() {
       if (txnCase_ == 11) {
@@ -3597,6 +3675,7 @@ public final class Transactions {
     }
 
     private byte memoizedIsInitialized = -1;
+    @java.lang.Override
     public final boolean isInitialized() {
       byte isInitialized = memoizedIsInitialized;
       if (isInitialized == 1) return true;
@@ -3606,6 +3685,7 @@ public final class Transactions {
       return true;
     }
 
+    @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
       if (key_ != null) {
@@ -3629,6 +3709,7 @@ public final class Transactions {
       unknownFields.writeTo(output);
     }
 
+    @java.lang.Override
     public int getSerializedSize() {
       int size = memoizedSize;
       if (size != -1) return size;
@@ -3817,6 +3898,7 @@ public final class Transactions {
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
 
+    @java.lang.Override
     public Builder newBuilderForType() { return newBuilder(); }
     public static Builder newBuilder() {
       return DEFAULT_INSTANCE.toBuilder();
@@ -3824,6 +3906,7 @@ public final class Transactions {
     public static Builder newBuilder(io.bloombox.schema.ledger.Transactions.Transaction prototype) {
       return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
     }
+    @java.lang.Override
     public Builder toBuilder() {
       return this == DEFAULT_INSTANCE
           ? new Builder() : new Builder().mergeFrom(this);
@@ -3841,20 +3924,21 @@ public final class Transactions {
      * for a transaction, by operating as a generic container of both CREATE and TRANSFER operations.
      * </pre>
      *
-     * Protobuf type {@code bloombox.schema.ledger.Transaction}
+     * Protobuf type {@code bloombox.ledger.Transaction}
      */
     public static final class Builder extends
         com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:bloombox.schema.ledger.Transaction)
+        // @@protoc_insertion_point(builder_implements:bloombox.ledger.Transaction)
         io.bloombox.schema.ledger.Transactions.TransactionOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return io.bloombox.schema.ledger.Transactions.internal_static_bloombox_schema_ledger_Transaction_descriptor;
+        return io.bloombox.schema.ledger.Transactions.internal_static_bloombox_ledger_Transaction_descriptor;
       }
 
+      @java.lang.Override
       protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return io.bloombox.schema.ledger.Transactions.internal_static_bloombox_schema_ledger_Transaction_fieldAccessorTable
+        return io.bloombox.schema.ledger.Transactions.internal_static_bloombox_ledger_Transaction_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
                 io.bloombox.schema.ledger.Transactions.Transaction.class, io.bloombox.schema.ledger.Transactions.Transaction.Builder.class);
       }
@@ -3874,6 +3958,7 @@ public final class Transactions {
                 .alwaysUseFieldBuilders) {
         }
       }
+      @java.lang.Override
       public Builder clear() {
         super.clear();
         if (keyBuilder_ == null) {
@@ -3901,15 +3986,18 @@ public final class Transactions {
         return this;
       }
 
+      @java.lang.Override
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return io.bloombox.schema.ledger.Transactions.internal_static_bloombox_schema_ledger_Transaction_descriptor;
+        return io.bloombox.schema.ledger.Transactions.internal_static_bloombox_ledger_Transaction_descriptor;
       }
 
+      @java.lang.Override
       public io.bloombox.schema.ledger.Transactions.Transaction getDefaultInstanceForType() {
         return io.bloombox.schema.ledger.Transactions.Transaction.getDefaultInstance();
       }
 
+      @java.lang.Override
       public io.bloombox.schema.ledger.Transactions.Transaction build() {
         io.bloombox.schema.ledger.Transactions.Transaction result = buildPartial();
         if (!result.isInitialized()) {
@@ -3918,6 +4006,7 @@ public final class Transactions {
         return result;
       }
 
+      @java.lang.Override
       public io.bloombox.schema.ledger.Transactions.Transaction buildPartial() {
         io.bloombox.schema.ledger.Transactions.Transaction result = new io.bloombox.schema.ledger.Transactions.Transaction(this);
         if (keyBuilder_ == null) {
@@ -3955,32 +4044,39 @@ public final class Transactions {
         return result;
       }
 
+      @java.lang.Override
       public Builder clone() {
         return (Builder) super.clone();
       }
+      @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
         return (Builder) super.setField(field, value);
       }
+      @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
         return (Builder) super.clearField(field);
       }
+      @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
         return (Builder) super.clearOneof(oneof);
       }
+      @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
         return (Builder) super.setRepeatedField(field, index, value);
       }
+      @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
         return (Builder) super.addRepeatedField(field, value);
       }
+      @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
         if (other instanceof io.bloombox.schema.ledger.Transactions.Transaction) {
           return mergeFrom((io.bloombox.schema.ledger.Transactions.Transaction)other);
@@ -4022,10 +4118,12 @@ public final class Transactions {
         return this;
       }
 
+      @java.lang.Override
       public final boolean isInitialized() {
         return true;
       }
 
+      @java.lang.Override
       public Builder mergeFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -4068,7 +4166,7 @@ public final class Transactions {
        * an XID (external ID, which is independent of the transaction content and committment status).
        * </pre>
        *
-       * <code>.bloombox.schema.ledger.TransactionKey key = 1;</code>
+       * <code>.bloombox.ledger.TransactionKey key = 1;</code>
        */
       public boolean hasKey() {
         return keyBuilder_ != null || key_ != null;
@@ -4079,7 +4177,7 @@ public final class Transactions {
        * an XID (external ID, which is independent of the transaction content and committment status).
        * </pre>
        *
-       * <code>.bloombox.schema.ledger.TransactionKey key = 1;</code>
+       * <code>.bloombox.ledger.TransactionKey key = 1;</code>
        */
       public io.bloombox.schema.ledger.Transactions.TransactionKey getKey() {
         if (keyBuilder_ == null) {
@@ -4094,7 +4192,7 @@ public final class Transactions {
        * an XID (external ID, which is independent of the transaction content and committment status).
        * </pre>
        *
-       * <code>.bloombox.schema.ledger.TransactionKey key = 1;</code>
+       * <code>.bloombox.ledger.TransactionKey key = 1;</code>
        */
       public Builder setKey(io.bloombox.schema.ledger.Transactions.TransactionKey value) {
         if (keyBuilder_ == null) {
@@ -4115,7 +4213,7 @@ public final class Transactions {
        * an XID (external ID, which is independent of the transaction content and committment status).
        * </pre>
        *
-       * <code>.bloombox.schema.ledger.TransactionKey key = 1;</code>
+       * <code>.bloombox.ledger.TransactionKey key = 1;</code>
        */
       public Builder setKey(
           io.bloombox.schema.ledger.Transactions.TransactionKey.Builder builderForValue) {
@@ -4134,7 +4232,7 @@ public final class Transactions {
        * an XID (external ID, which is independent of the transaction content and committment status).
        * </pre>
        *
-       * <code>.bloombox.schema.ledger.TransactionKey key = 1;</code>
+       * <code>.bloombox.ledger.TransactionKey key = 1;</code>
        */
       public Builder mergeKey(io.bloombox.schema.ledger.Transactions.TransactionKey value) {
         if (keyBuilder_ == null) {
@@ -4157,7 +4255,7 @@ public final class Transactions {
        * an XID (external ID, which is independent of the transaction content and committment status).
        * </pre>
        *
-       * <code>.bloombox.schema.ledger.TransactionKey key = 1;</code>
+       * <code>.bloombox.ledger.TransactionKey key = 1;</code>
        */
       public Builder clearKey() {
         if (keyBuilder_ == null) {
@@ -4176,7 +4274,7 @@ public final class Transactions {
        * an XID (external ID, which is independent of the transaction content and committment status).
        * </pre>
        *
-       * <code>.bloombox.schema.ledger.TransactionKey key = 1;</code>
+       * <code>.bloombox.ledger.TransactionKey key = 1;</code>
        */
       public io.bloombox.schema.ledger.Transactions.TransactionKey.Builder getKeyBuilder() {
         
@@ -4189,7 +4287,7 @@ public final class Transactions {
        * an XID (external ID, which is independent of the transaction content and committment status).
        * </pre>
        *
-       * <code>.bloombox.schema.ledger.TransactionKey key = 1;</code>
+       * <code>.bloombox.ledger.TransactionKey key = 1;</code>
        */
       public io.bloombox.schema.ledger.Transactions.TransactionKeyOrBuilder getKeyOrBuilder() {
         if (keyBuilder_ != null) {
@@ -4205,7 +4303,7 @@ public final class Transactions {
        * an XID (external ID, which is independent of the transaction content and committment status).
        * </pre>
        *
-       * <code>.bloombox.schema.ledger.TransactionKey key = 1;</code>
+       * <code>.bloombox.ledger.TransactionKey key = 1;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
           io.bloombox.schema.ledger.Transactions.TransactionKey, io.bloombox.schema.ledger.Transactions.TransactionKey.Builder, io.bloombox.schema.ledger.Transactions.TransactionKeyOrBuilder> 
@@ -4228,7 +4326,7 @@ public final class Transactions {
        * digital assets, and TRANSFER transactions perform their interchange.
        * </pre>
        *
-       * <code>.bloombox.schema.ledger.Transaction.Operation operation = 2;</code>
+       * <code>.bloombox.ledger.Transaction.Operation operation = 2;</code>
        */
       public int getOperationValue() {
         return operation_;
@@ -4239,7 +4337,7 @@ public final class Transactions {
        * digital assets, and TRANSFER transactions perform their interchange.
        * </pre>
        *
-       * <code>.bloombox.schema.ledger.Transaction.Operation operation = 2;</code>
+       * <code>.bloombox.ledger.Transaction.Operation operation = 2;</code>
        */
       public Builder setOperationValue(int value) {
         operation_ = value;
@@ -4252,9 +4350,10 @@ public final class Transactions {
        * digital assets, and TRANSFER transactions perform their interchange.
        * </pre>
        *
-       * <code>.bloombox.schema.ledger.Transaction.Operation operation = 2;</code>
+       * <code>.bloombox.ledger.Transaction.Operation operation = 2;</code>
        */
       public io.bloombox.schema.ledger.Transactions.Transaction.Operation getOperation() {
+        @SuppressWarnings("deprecation")
         io.bloombox.schema.ledger.Transactions.Transaction.Operation result = io.bloombox.schema.ledger.Transactions.Transaction.Operation.valueOf(operation_);
         return result == null ? io.bloombox.schema.ledger.Transactions.Transaction.Operation.UNRECOGNIZED : result;
       }
@@ -4264,7 +4363,7 @@ public final class Transactions {
        * digital assets, and TRANSFER transactions perform their interchange.
        * </pre>
        *
-       * <code>.bloombox.schema.ledger.Transaction.Operation operation = 2;</code>
+       * <code>.bloombox.ledger.Transaction.Operation operation = 2;</code>
        */
       public Builder setOperation(io.bloombox.schema.ledger.Transactions.Transaction.Operation value) {
         if (value == null) {
@@ -4281,7 +4380,7 @@ public final class Transactions {
        * digital assets, and TRANSFER transactions perform their interchange.
        * </pre>
        *
-       * <code>.bloombox.schema.ledger.Transaction.Operation operation = 2;</code>
+       * <code>.bloombox.ledger.Transaction.Operation operation = 2;</code>
        */
       public Builder clearOperation() {
         
@@ -4297,7 +4396,7 @@ public final class Transactions {
        * Specifies a payload for an asset CREATE transaction.
        * </pre>
        *
-       * <code>.bloombox.schema.ledger.CreateOperation issuance = 10;</code>
+       * <code>.bloombox.ledger.CreateOperation issuance = 10;</code>
        */
       public boolean hasIssuance() {
         return txnCase_ == 10;
@@ -4307,7 +4406,7 @@ public final class Transactions {
        * Specifies a payload for an asset CREATE transaction.
        * </pre>
        *
-       * <code>.bloombox.schema.ledger.CreateOperation issuance = 10;</code>
+       * <code>.bloombox.ledger.CreateOperation issuance = 10;</code>
        */
       public io.bloombox.schema.ledger.Transactions.CreateOperation getIssuance() {
         if (issuanceBuilder_ == null) {
@@ -4327,7 +4426,7 @@ public final class Transactions {
        * Specifies a payload for an asset CREATE transaction.
        * </pre>
        *
-       * <code>.bloombox.schema.ledger.CreateOperation issuance = 10;</code>
+       * <code>.bloombox.ledger.CreateOperation issuance = 10;</code>
        */
       public Builder setIssuance(io.bloombox.schema.ledger.Transactions.CreateOperation value) {
         if (issuanceBuilder_ == null) {
@@ -4347,7 +4446,7 @@ public final class Transactions {
        * Specifies a payload for an asset CREATE transaction.
        * </pre>
        *
-       * <code>.bloombox.schema.ledger.CreateOperation issuance = 10;</code>
+       * <code>.bloombox.ledger.CreateOperation issuance = 10;</code>
        */
       public Builder setIssuance(
           io.bloombox.schema.ledger.Transactions.CreateOperation.Builder builderForValue) {
@@ -4365,7 +4464,7 @@ public final class Transactions {
        * Specifies a payload for an asset CREATE transaction.
        * </pre>
        *
-       * <code>.bloombox.schema.ledger.CreateOperation issuance = 10;</code>
+       * <code>.bloombox.ledger.CreateOperation issuance = 10;</code>
        */
       public Builder mergeIssuance(io.bloombox.schema.ledger.Transactions.CreateOperation value) {
         if (issuanceBuilder_ == null) {
@@ -4391,7 +4490,7 @@ public final class Transactions {
        * Specifies a payload for an asset CREATE transaction.
        * </pre>
        *
-       * <code>.bloombox.schema.ledger.CreateOperation issuance = 10;</code>
+       * <code>.bloombox.ledger.CreateOperation issuance = 10;</code>
        */
       public Builder clearIssuance() {
         if (issuanceBuilder_ == null) {
@@ -4414,7 +4513,7 @@ public final class Transactions {
        * Specifies a payload for an asset CREATE transaction.
        * </pre>
        *
-       * <code>.bloombox.schema.ledger.CreateOperation issuance = 10;</code>
+       * <code>.bloombox.ledger.CreateOperation issuance = 10;</code>
        */
       public io.bloombox.schema.ledger.Transactions.CreateOperation.Builder getIssuanceBuilder() {
         return getIssuanceFieldBuilder().getBuilder();
@@ -4424,7 +4523,7 @@ public final class Transactions {
        * Specifies a payload for an asset CREATE transaction.
        * </pre>
        *
-       * <code>.bloombox.schema.ledger.CreateOperation issuance = 10;</code>
+       * <code>.bloombox.ledger.CreateOperation issuance = 10;</code>
        */
       public io.bloombox.schema.ledger.Transactions.CreateOperationOrBuilder getIssuanceOrBuilder() {
         if ((txnCase_ == 10) && (issuanceBuilder_ != null)) {
@@ -4441,7 +4540,7 @@ public final class Transactions {
        * Specifies a payload for an asset CREATE transaction.
        * </pre>
        *
-       * <code>.bloombox.schema.ledger.CreateOperation issuance = 10;</code>
+       * <code>.bloombox.ledger.CreateOperation issuance = 10;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
           io.bloombox.schema.ledger.Transactions.CreateOperation, io.bloombox.schema.ledger.Transactions.CreateOperation.Builder, io.bloombox.schema.ledger.Transactions.CreateOperationOrBuilder> 
@@ -4469,7 +4568,7 @@ public final class Transactions {
        * Specifies a payload for an asset TRANSFER transaction.
        * </pre>
        *
-       * <code>.bloombox.schema.ledger.TransferOperation interchange = 11;</code>
+       * <code>.bloombox.ledger.TransferOperation interchange = 11;</code>
        */
       public boolean hasInterchange() {
         return txnCase_ == 11;
@@ -4479,7 +4578,7 @@ public final class Transactions {
        * Specifies a payload for an asset TRANSFER transaction.
        * </pre>
        *
-       * <code>.bloombox.schema.ledger.TransferOperation interchange = 11;</code>
+       * <code>.bloombox.ledger.TransferOperation interchange = 11;</code>
        */
       public io.bloombox.schema.ledger.Transactions.TransferOperation getInterchange() {
         if (interchangeBuilder_ == null) {
@@ -4499,7 +4598,7 @@ public final class Transactions {
        * Specifies a payload for an asset TRANSFER transaction.
        * </pre>
        *
-       * <code>.bloombox.schema.ledger.TransferOperation interchange = 11;</code>
+       * <code>.bloombox.ledger.TransferOperation interchange = 11;</code>
        */
       public Builder setInterchange(io.bloombox.schema.ledger.Transactions.TransferOperation value) {
         if (interchangeBuilder_ == null) {
@@ -4519,7 +4618,7 @@ public final class Transactions {
        * Specifies a payload for an asset TRANSFER transaction.
        * </pre>
        *
-       * <code>.bloombox.schema.ledger.TransferOperation interchange = 11;</code>
+       * <code>.bloombox.ledger.TransferOperation interchange = 11;</code>
        */
       public Builder setInterchange(
           io.bloombox.schema.ledger.Transactions.TransferOperation.Builder builderForValue) {
@@ -4537,7 +4636,7 @@ public final class Transactions {
        * Specifies a payload for an asset TRANSFER transaction.
        * </pre>
        *
-       * <code>.bloombox.schema.ledger.TransferOperation interchange = 11;</code>
+       * <code>.bloombox.ledger.TransferOperation interchange = 11;</code>
        */
       public Builder mergeInterchange(io.bloombox.schema.ledger.Transactions.TransferOperation value) {
         if (interchangeBuilder_ == null) {
@@ -4563,7 +4662,7 @@ public final class Transactions {
        * Specifies a payload for an asset TRANSFER transaction.
        * </pre>
        *
-       * <code>.bloombox.schema.ledger.TransferOperation interchange = 11;</code>
+       * <code>.bloombox.ledger.TransferOperation interchange = 11;</code>
        */
       public Builder clearInterchange() {
         if (interchangeBuilder_ == null) {
@@ -4586,7 +4685,7 @@ public final class Transactions {
        * Specifies a payload for an asset TRANSFER transaction.
        * </pre>
        *
-       * <code>.bloombox.schema.ledger.TransferOperation interchange = 11;</code>
+       * <code>.bloombox.ledger.TransferOperation interchange = 11;</code>
        */
       public io.bloombox.schema.ledger.Transactions.TransferOperation.Builder getInterchangeBuilder() {
         return getInterchangeFieldBuilder().getBuilder();
@@ -4596,7 +4695,7 @@ public final class Transactions {
        * Specifies a payload for an asset TRANSFER transaction.
        * </pre>
        *
-       * <code>.bloombox.schema.ledger.TransferOperation interchange = 11;</code>
+       * <code>.bloombox.ledger.TransferOperation interchange = 11;</code>
        */
       public io.bloombox.schema.ledger.Transactions.TransferOperationOrBuilder getInterchangeOrBuilder() {
         if ((txnCase_ == 11) && (interchangeBuilder_ != null)) {
@@ -4613,7 +4712,7 @@ public final class Transactions {
        * Specifies a payload for an asset TRANSFER transaction.
        * </pre>
        *
-       * <code>.bloombox.schema.ledger.TransferOperation interchange = 11;</code>
+       * <code>.bloombox.ledger.TransferOperation interchange = 11;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
           io.bloombox.schema.ledger.Transactions.TransferOperation, io.bloombox.schema.ledger.Transactions.TransferOperation.Builder, io.bloombox.schema.ledger.Transactions.TransferOperationOrBuilder> 
@@ -4939,21 +5038,23 @@ public final class Transactions {
         }
         return modifiedBuilder_;
       }
+      @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
         return super.setUnknownFieldsProto3(unknownFields);
       }
 
+      @java.lang.Override
       public final Builder mergeUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
         return super.mergeUnknownFields(unknownFields);
       }
 
 
-      // @@protoc_insertion_point(builder_scope:bloombox.schema.ledger.Transaction)
+      // @@protoc_insertion_point(builder_scope:bloombox.ledger.Transaction)
     }
 
-    // @@protoc_insertion_point(class_scope:bloombox.schema.ledger.Transaction)
+    // @@protoc_insertion_point(class_scope:bloombox.ledger.Transaction)
     private static final io.bloombox.schema.ledger.Transactions.Transaction DEFAULT_INSTANCE;
     static {
       DEFAULT_INSTANCE = new io.bloombox.schema.ledger.Transactions.Transaction();
@@ -4965,6 +5066,7 @@ public final class Transactions {
 
     private static final com.google.protobuf.Parser<Transaction>
         PARSER = new com.google.protobuf.AbstractParser<Transaction>() {
+      @java.lang.Override
       public Transaction parsePartialFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -4982,6 +5084,7 @@ public final class Transactions {
       return PARSER;
     }
 
+    @java.lang.Override
     public io.bloombox.schema.ledger.Transactions.Transaction getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
@@ -4989,25 +5092,25 @@ public final class Transactions {
   }
 
   private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_bloombox_schema_ledger_CreateOperation_descriptor;
+    internal_static_bloombox_ledger_CreateOperation_descriptor;
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_bloombox_schema_ledger_CreateOperation_fieldAccessorTable;
+      internal_static_bloombox_ledger_CreateOperation_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_bloombox_schema_ledger_TransferOperation_descriptor;
+    internal_static_bloombox_ledger_TransferOperation_descriptor;
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_bloombox_schema_ledger_TransferOperation_fieldAccessorTable;
+      internal_static_bloombox_ledger_TransferOperation_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_bloombox_schema_ledger_TransactionKey_descriptor;
+    internal_static_bloombox_ledger_TransactionKey_descriptor;
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_bloombox_schema_ledger_TransactionKey_fieldAccessorTable;
+      internal_static_bloombox_ledger_TransactionKey_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_bloombox_schema_ledger_Transaction_descriptor;
+    internal_static_bloombox_ledger_Transaction_descriptor;
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_bloombox_schema_ledger_Transaction_fieldAccessorTable;
+      internal_static_bloombox_ledger_Transaction_fieldAccessorTable;
 
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
@@ -5017,30 +5120,28 @@ public final class Transactions {
       descriptor;
   static {
     java.lang.String[] descriptorData = {
-      "\n\030ledger/Transaction.proto\022\026bloombox.sch" +
-      "ema.ledger\032\022ledger/Asset.proto\032\024ledger/A" +
-      "ccount.proto\032\026temporal/Instant.proto\"}\n\017" +
-      "CreateOperation\0223\n\005asset\030\001 \001(\0132$.bloombo" +
-      "x.schema.ledger.DigitalAsset\0225\n\005owner\030\002 " +
-      "\001(\0132&.bloombox.schema.ledger.LedgerIdent" +
-      "ity\"\264\001\n\021TransferOperation\022/\n\005asset\030\001 \001(\013" +
-      "2 .bloombox.schema.ledger.AssetKey\0226\n\006so" +
-      "urce\030\002 \001(\0132&.bloombox.schema.ledger.Ledg" +
-      "erIdentity\0226\n\006target\030\003 \001(\0132&.bloombox.sc" +
-      "hema.ledger.LedgerIdentity\")\n\016Transactio" +
-      "nKey\022\013\n\003xid\030\001 \001(\t\022\n\n\002id\030\002 \001(\t\"\224\003\n\013Transa" +
-      "ction\0223\n\003key\030\001 \001(\0132&.bloombox.schema.led" +
-      "ger.TransactionKey\022@\n\toperation\030\002 \001(\0162-." +
-      "bloombox.schema.ledger.Transaction.Opera" +
-      "tion\022;\n\010issuance\030\n \001(\0132\'.bloombox.schema" +
-      ".ledger.CreateOperationH\000\022@\n\013interchange" +
-      "\030\013 \001(\0132).bloombox.schema.ledger.Transfer" +
-      "OperationH\000\022/\n\007created\030b \001(\0132\036.opencanna" +
-      "bis.temporal.Instant\0220\n\010modified\030c \001(\0132\036" +
-      ".opencannabis.temporal.Instant\"%\n\tOperat" +
-      "ion\022\n\n\006CREATE\020\000\022\014\n\010TRANSFER\020\001B\005\n\003txnB3\n\031" +
-      "io.bloombox.schema.ledgerB\014TransactionsH" +
-      "\001P\000\242\002\003BBSb\006proto3"
+      "\n\030ledger/Transaction.proto\022\017bloombox.led" +
+      "ger\032\022ledger/Asset.proto\032\024ledger/Account." +
+      "proto\032\026temporal/Instant.proto\"o\n\017CreateO" +
+      "peration\022,\n\005asset\030\001 \001(\0132\035.bloombox.ledge" +
+      "r.DigitalAsset\022.\n\005owner\030\002 \001(\0132\037.bloombox" +
+      ".ledger.LedgerIdentity\"\237\001\n\021TransferOpera" +
+      "tion\022(\n\005asset\030\001 \001(\0132\031.bloombox.ledger.As" +
+      "setKey\022/\n\006source\030\002 \001(\0132\037.bloombox.ledger" +
+      ".LedgerIdentity\022/\n\006target\030\003 \001(\0132\037.bloomb" +
+      "ox.ledger.LedgerIdentity\")\n\016TransactionK" +
+      "ey\022\013\n\003xid\030\001 \001(\t\022\n\n\002id\030\002 \001(\t\"\370\002\n\013Transact" +
+      "ion\022,\n\003key\030\001 \001(\0132\037.bloombox.ledger.Trans" +
+      "actionKey\0229\n\toperation\030\002 \001(\0162&.bloombox." +
+      "ledger.Transaction.Operation\0224\n\010issuance" +
+      "\030\n \001(\0132 .bloombox.ledger.CreateOperation" +
+      "H\000\0229\n\013interchange\030\013 \001(\0132\".bloombox.ledge" +
+      "r.TransferOperationH\000\022/\n\007created\030b \001(\0132\036" +
+      ".opencannabis.temporal.Instant\0220\n\010modifi" +
+      "ed\030c \001(\0132\036.opencannabis.temporal.Instant" +
+      "\"%\n\tOperation\022\n\n\006CREATE\020\000\022\014\n\010TRANSFER\020\001B" +
+      "\005\n\003txnB3\n\031io.bloombox.schema.ledgerB\014Tra" +
+      "nsactionsH\001P\000\242\002\003BBSb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -5057,29 +5158,29 @@ public final class Transactions {
           io.bloombox.schema.ledger.Accounts.getDescriptor(),
           io.opencannabis.schema.temporal.TemporalInstant.getDescriptor(),
         }, assigner);
-    internal_static_bloombox_schema_ledger_CreateOperation_descriptor =
+    internal_static_bloombox_ledger_CreateOperation_descriptor =
       getDescriptor().getMessageTypes().get(0);
-    internal_static_bloombox_schema_ledger_CreateOperation_fieldAccessorTable = new
+    internal_static_bloombox_ledger_CreateOperation_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_bloombox_schema_ledger_CreateOperation_descriptor,
+        internal_static_bloombox_ledger_CreateOperation_descriptor,
         new java.lang.String[] { "Asset", "Owner", });
-    internal_static_bloombox_schema_ledger_TransferOperation_descriptor =
+    internal_static_bloombox_ledger_TransferOperation_descriptor =
       getDescriptor().getMessageTypes().get(1);
-    internal_static_bloombox_schema_ledger_TransferOperation_fieldAccessorTable = new
+    internal_static_bloombox_ledger_TransferOperation_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_bloombox_schema_ledger_TransferOperation_descriptor,
+        internal_static_bloombox_ledger_TransferOperation_descriptor,
         new java.lang.String[] { "Asset", "Source", "Target", });
-    internal_static_bloombox_schema_ledger_TransactionKey_descriptor =
+    internal_static_bloombox_ledger_TransactionKey_descriptor =
       getDescriptor().getMessageTypes().get(2);
-    internal_static_bloombox_schema_ledger_TransactionKey_fieldAccessorTable = new
+    internal_static_bloombox_ledger_TransactionKey_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_bloombox_schema_ledger_TransactionKey_descriptor,
+        internal_static_bloombox_ledger_TransactionKey_descriptor,
         new java.lang.String[] { "Xid", "Id", });
-    internal_static_bloombox_schema_ledger_Transaction_descriptor =
+    internal_static_bloombox_ledger_Transaction_descriptor =
       getDescriptor().getMessageTypes().get(3);
-    internal_static_bloombox_schema_ledger_Transaction_fieldAccessorTable = new
+    internal_static_bloombox_ledger_Transaction_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_bloombox_schema_ledger_Transaction_descriptor,
+        internal_static_bloombox_ledger_Transaction_descriptor,
         new java.lang.String[] { "Key", "Operation", "Issuance", "Interchange", "Created", "Modified", "Txn", });
     io.bloombox.schema.ledger.Assets.getDescriptor();
     io.bloombox.schema.ledger.Accounts.getDescriptor();

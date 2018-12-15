@@ -1,8 +1,8 @@
 /*
- * Copyright 2018, Bloombox, LLC. All rights reserved.
+ * Copyright 2018, Momentum Ideas, Co. All rights reserved.
  *
  * Source and object computer code contained herein is the private intellectual
- * property of Bloombox, a California Limited Liability Corporation. Use of this
+ * property of Momentum Ideas Co., a Delaware Corporation. Use of this
  * code in source form requires permission in writing before use or the
  * assembly, distribution, or publishing of derivative works, for commercial
  * purposes or any other purpose, from a duly authorized officer of Momentum
@@ -25,11 +25,11 @@ package io.bloombox.schema.services.pos.v1beta1;
  * Specifies an RPC operation to search member accounts by ID, contact info, or name.
  * </pre>
  *
- * Protobuf type {@code bloombox.schema.services.pos.v1beta1.MemberSearch}
+ * Protobuf type {@code bloombox.services.pos.v1beta1.MemberSearch}
  */
 public  final class MemberSearch extends
     com.google.protobuf.GeneratedMessageV3 implements
-    // @@protoc_insertion_point(message_implements:bloombox.schema.services.pos.v1beta1.MemberSearch)
+    // @@protoc_insertion_point(message_implements:bloombox.services.pos.v1beta1.MemberSearch)
     MemberSearchOrBuilder {
 private static final long serialVersionUID = 0L;
   // Use MemberSearch.newBuilder() to construct.
@@ -83,18 +83,19 @@ private static final long serialVersionUID = 0L;
   }
   public static final com.google.protobuf.Descriptors.Descriptor
       getDescriptor() {
-    return io.bloombox.schema.services.pos.v1beta1.POSServiceBeta1.internal_static_bloombox_schema_services_pos_v1beta1_MemberSearch_descriptor;
+    return io.bloombox.schema.services.pos.v1beta1.POSServiceBeta1.internal_static_bloombox_services_pos_v1beta1_MemberSearch_descriptor;
   }
 
+  @java.lang.Override
   protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internalGetFieldAccessorTable() {
-    return io.bloombox.schema.services.pos.v1beta1.POSServiceBeta1.internal_static_bloombox_schema_services_pos_v1beta1_MemberSearch_fieldAccessorTable
+    return io.bloombox.schema.services.pos.v1beta1.POSServiceBeta1.internal_static_bloombox_services_pos_v1beta1_MemberSearch_fieldAccessorTable
         .ensureFieldAccessorsInitialized(
             io.bloombox.schema.services.pos.v1beta1.MemberSearch.class, io.bloombox.schema.services.pos.v1beta1.MemberSearch.Builder.class);
   }
 
   public interface MemberPredicateOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:bloombox.schema.services.pos.v1beta1.MemberSearch.MemberPredicate)
+      // @@protoc_insertion_point(interface_extends:bloombox.services.pos.v1beta1.MemberSearch.MemberPredicate)
       com.google.protobuf.MessageOrBuilder {
 
     /**
@@ -138,11 +139,11 @@ private static final long serialVersionUID = 0L;
    * Criteria to qualify a search for a member account.
    * </pre>
    *
-   * Protobuf type {@code bloombox.schema.services.pos.v1beta1.MemberSearch.MemberPredicate}
+   * Protobuf type {@code bloombox.services.pos.v1beta1.MemberSearch.MemberPredicate}
    */
   public  static final class MemberPredicate extends
       com.google.protobuf.GeneratedMessageV3 implements
-      // @@protoc_insertion_point(message_implements:bloombox.schema.services.pos.v1beta1.MemberSearch.MemberPredicate)
+      // @@protoc_insertion_point(message_implements:bloombox.services.pos.v1beta1.MemberSearch.MemberPredicate)
       MemberPredicateOrBuilder {
   private static final long serialVersionUID = 0L;
     // Use MemberPredicate.newBuilder() to construct.
@@ -178,13 +179,6 @@ private static final long serialVersionUID = 0L;
             case 0:
               done = true;
               break;
-            default: {
-              if (!parseUnknownFieldProto3(
-                  input, unknownFields, extensionRegistry, tag)) {
-                done = true;
-              }
-              break;
-            }
             case 10: {
               java.lang.String s = input.readStringRequireUtf8();
 
@@ -195,6 +189,13 @@ private static final long serialVersionUID = 0L;
               java.lang.String s = input.readStringRequireUtf8();
 
               phone_ = s;
+              break;
+            }
+            default: {
+              if (!parseUnknownFieldProto3(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
               break;
             }
           }
@@ -211,12 +212,13 @@ private static final long serialVersionUID = 0L;
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return io.bloombox.schema.services.pos.v1beta1.POSServiceBeta1.internal_static_bloombox_schema_services_pos_v1beta1_MemberSearch_MemberPredicate_descriptor;
+      return io.bloombox.schema.services.pos.v1beta1.POSServiceBeta1.internal_static_bloombox_services_pos_v1beta1_MemberSearch_MemberPredicate_descriptor;
     }
 
+    @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return io.bloombox.schema.services.pos.v1beta1.POSServiceBeta1.internal_static_bloombox_schema_services_pos_v1beta1_MemberSearch_MemberPredicate_fieldAccessorTable
+      return io.bloombox.schema.services.pos.v1beta1.POSServiceBeta1.internal_static_bloombox_services_pos_v1beta1_MemberSearch_MemberPredicate_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
               io.bloombox.schema.services.pos.v1beta1.MemberSearch.MemberPredicate.class, io.bloombox.schema.services.pos.v1beta1.MemberSearch.MemberPredicate.Builder.class);
     }
@@ -306,6 +308,7 @@ private static final long serialVersionUID = 0L;
     }
 
     private byte memoizedIsInitialized = -1;
+    @java.lang.Override
     public final boolean isInitialized() {
       byte isInitialized = memoizedIsInitialized;
       if (isInitialized == 1) return true;
@@ -315,6 +318,7 @@ private static final long serialVersionUID = 0L;
       return true;
     }
 
+    @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
       if (!getEmailBytes().isEmpty()) {
@@ -326,6 +330,7 @@ private static final long serialVersionUID = 0L;
       unknownFields.writeTo(output);
     }
 
+    @java.lang.Override
     public int getSerializedSize() {
       int size = memoizedSize;
       if (size != -1) return size;
@@ -447,6 +452,7 @@ private static final long serialVersionUID = 0L;
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
 
+    @java.lang.Override
     public Builder newBuilderForType() { return newBuilder(); }
     public static Builder newBuilder() {
       return DEFAULT_INSTANCE.toBuilder();
@@ -454,6 +460,7 @@ private static final long serialVersionUID = 0L;
     public static Builder newBuilder(io.bloombox.schema.services.pos.v1beta1.MemberSearch.MemberPredicate prototype) {
       return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
     }
+    @java.lang.Override
     public Builder toBuilder() {
       return this == DEFAULT_INSTANCE
           ? new Builder() : new Builder().mergeFrom(this);
@@ -470,20 +477,21 @@ private static final long serialVersionUID = 0L;
      * Criteria to qualify a search for a member account.
      * </pre>
      *
-     * Protobuf type {@code bloombox.schema.services.pos.v1beta1.MemberSearch.MemberPredicate}
+     * Protobuf type {@code bloombox.services.pos.v1beta1.MemberSearch.MemberPredicate}
      */
     public static final class Builder extends
         com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:bloombox.schema.services.pos.v1beta1.MemberSearch.MemberPredicate)
+        // @@protoc_insertion_point(builder_implements:bloombox.services.pos.v1beta1.MemberSearch.MemberPredicate)
         io.bloombox.schema.services.pos.v1beta1.MemberSearch.MemberPredicateOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return io.bloombox.schema.services.pos.v1beta1.POSServiceBeta1.internal_static_bloombox_schema_services_pos_v1beta1_MemberSearch_MemberPredicate_descriptor;
+        return io.bloombox.schema.services.pos.v1beta1.POSServiceBeta1.internal_static_bloombox_services_pos_v1beta1_MemberSearch_MemberPredicate_descriptor;
       }
 
+      @java.lang.Override
       protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return io.bloombox.schema.services.pos.v1beta1.POSServiceBeta1.internal_static_bloombox_schema_services_pos_v1beta1_MemberSearch_MemberPredicate_fieldAccessorTable
+        return io.bloombox.schema.services.pos.v1beta1.POSServiceBeta1.internal_static_bloombox_services_pos_v1beta1_MemberSearch_MemberPredicate_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
                 io.bloombox.schema.services.pos.v1beta1.MemberSearch.MemberPredicate.class, io.bloombox.schema.services.pos.v1beta1.MemberSearch.MemberPredicate.Builder.class);
       }
@@ -503,6 +511,7 @@ private static final long serialVersionUID = 0L;
                 .alwaysUseFieldBuilders) {
         }
       }
+      @java.lang.Override
       public Builder clear() {
         super.clear();
         email_ = "";
@@ -512,15 +521,18 @@ private static final long serialVersionUID = 0L;
         return this;
       }
 
+      @java.lang.Override
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return io.bloombox.schema.services.pos.v1beta1.POSServiceBeta1.internal_static_bloombox_schema_services_pos_v1beta1_MemberSearch_MemberPredicate_descriptor;
+        return io.bloombox.schema.services.pos.v1beta1.POSServiceBeta1.internal_static_bloombox_services_pos_v1beta1_MemberSearch_MemberPredicate_descriptor;
       }
 
+      @java.lang.Override
       public io.bloombox.schema.services.pos.v1beta1.MemberSearch.MemberPredicate getDefaultInstanceForType() {
         return io.bloombox.schema.services.pos.v1beta1.MemberSearch.MemberPredicate.getDefaultInstance();
       }
 
+      @java.lang.Override
       public io.bloombox.schema.services.pos.v1beta1.MemberSearch.MemberPredicate build() {
         io.bloombox.schema.services.pos.v1beta1.MemberSearch.MemberPredicate result = buildPartial();
         if (!result.isInitialized()) {
@@ -529,6 +541,7 @@ private static final long serialVersionUID = 0L;
         return result;
       }
 
+      @java.lang.Override
       public io.bloombox.schema.services.pos.v1beta1.MemberSearch.MemberPredicate buildPartial() {
         io.bloombox.schema.services.pos.v1beta1.MemberSearch.MemberPredicate result = new io.bloombox.schema.services.pos.v1beta1.MemberSearch.MemberPredicate(this);
         result.email_ = email_;
@@ -537,32 +550,39 @@ private static final long serialVersionUID = 0L;
         return result;
       }
 
+      @java.lang.Override
       public Builder clone() {
         return (Builder) super.clone();
       }
+      @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
         return (Builder) super.setField(field, value);
       }
+      @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
         return (Builder) super.clearField(field);
       }
+      @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
         return (Builder) super.clearOneof(oneof);
       }
+      @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
         return (Builder) super.setRepeatedField(field, index, value);
       }
+      @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
         return (Builder) super.addRepeatedField(field, value);
       }
+      @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
         if (other instanceof io.bloombox.schema.services.pos.v1beta1.MemberSearch.MemberPredicate) {
           return mergeFrom((io.bloombox.schema.services.pos.v1beta1.MemberSearch.MemberPredicate)other);
@@ -587,10 +607,12 @@ private static final long serialVersionUID = 0L;
         return this;
       }
 
+      @java.lang.Override
       public final boolean isInitialized() {
         return true;
       }
 
+      @java.lang.Override
       public Builder mergeFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -786,21 +808,23 @@ private static final long serialVersionUID = 0L;
         onChanged();
         return this;
       }
+      @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
         return super.setUnknownFieldsProto3(unknownFields);
       }
 
+      @java.lang.Override
       public final Builder mergeUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
         return super.mergeUnknownFields(unknownFields);
       }
 
 
-      // @@protoc_insertion_point(builder_scope:bloombox.schema.services.pos.v1beta1.MemberSearch.MemberPredicate)
+      // @@protoc_insertion_point(builder_scope:bloombox.services.pos.v1beta1.MemberSearch.MemberPredicate)
     }
 
-    // @@protoc_insertion_point(class_scope:bloombox.schema.services.pos.v1beta1.MemberSearch.MemberPredicate)
+    // @@protoc_insertion_point(class_scope:bloombox.services.pos.v1beta1.MemberSearch.MemberPredicate)
     private static final io.bloombox.schema.services.pos.v1beta1.MemberSearch.MemberPredicate DEFAULT_INSTANCE;
     static {
       DEFAULT_INSTANCE = new io.bloombox.schema.services.pos.v1beta1.MemberSearch.MemberPredicate();
@@ -812,6 +836,7 @@ private static final long serialVersionUID = 0L;
 
     private static final com.google.protobuf.Parser<MemberPredicate>
         PARSER = new com.google.protobuf.AbstractParser<MemberPredicate>() {
+      @java.lang.Override
       public MemberPredicate parsePartialFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -829,6 +854,7 @@ private static final long serialVersionUID = 0L;
       return PARSER;
     }
 
+    @java.lang.Override
     public io.bloombox.schema.services.pos.v1beta1.MemberSearch.MemberPredicate getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
@@ -836,7 +862,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public interface DigitalPassOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:bloombox.schema.services.pos.v1beta1.MemberSearch.DigitalPass)
+      // @@protoc_insertion_point(interface_extends:bloombox.services.pos.v1beta1.MemberSearch.DigitalPass)
       com.google.protobuf.MessageOrBuilder {
 
     /**
@@ -844,7 +870,7 @@ private static final long serialVersionUID = 0L;
      * Specifies the scanned/received information from the pass.
      * </pre>
      *
-     * <code>.bloombox.schema.identity.pass.DigitalPassKey pass = 1;</code>
+     * <code>.bloombox.identity.pass.DigitalPassKey pass = 1;</code>
      */
     boolean hasPass();
     /**
@@ -852,7 +878,7 @@ private static final long serialVersionUID = 0L;
      * Specifies the scanned/received information from the pass.
      * </pre>
      *
-     * <code>.bloombox.schema.identity.pass.DigitalPassKey pass = 1;</code>
+     * <code>.bloombox.identity.pass.DigitalPassKey pass = 1;</code>
      */
     io.bloombox.schema.pass.PassIDKey.DigitalPassKey getPass();
     /**
@@ -860,7 +886,7 @@ private static final long serialVersionUID = 0L;
      * Specifies the scanned/received information from the pass.
      * </pre>
      *
-     * <code>.bloombox.schema.identity.pass.DigitalPassKey pass = 1;</code>
+     * <code>.bloombox.identity.pass.DigitalPassKey pass = 1;</code>
      */
     io.bloombox.schema.pass.PassIDKey.DigitalPassKeyOrBuilder getPassOrBuilder();
 
@@ -869,7 +895,7 @@ private static final long serialVersionUID = 0L;
      * Cryptographic signature hash from the physical device that scanned the pass.
      * </pre>
      *
-     * <code>.opencannabis.crypto.primitives.integrity.Hash challenge = 2;</code>
+     * <code>.opencannabis.crypto.Hash challenge = 2;</code>
      */
     boolean hasChallenge();
     /**
@@ -877,7 +903,7 @@ private static final long serialVersionUID = 0L;
      * Cryptographic signature hash from the physical device that scanned the pass.
      * </pre>
      *
-     * <code>.opencannabis.crypto.primitives.integrity.Hash challenge = 2;</code>
+     * <code>.opencannabis.crypto.Hash challenge = 2;</code>
      */
     io.opencannabis.schema.crypto.primitives.integrity.Hash getChallenge();
     /**
@@ -885,7 +911,7 @@ private static final long serialVersionUID = 0L;
      * Cryptographic signature hash from the physical device that scanned the pass.
      * </pre>
      *
-     * <code>.opencannabis.crypto.primitives.integrity.Hash challenge = 2;</code>
+     * <code>.opencannabis.crypto.Hash challenge = 2;</code>
      */
     io.opencannabis.schema.crypto.primitives.integrity.HashOrBuilder getChallengeOrBuilder();
   }
@@ -894,11 +920,11 @@ private static final long serialVersionUID = 0L;
    * Criteria to qualify a search via a digital pass.
    * </pre>
    *
-   * Protobuf type {@code bloombox.schema.services.pos.v1beta1.MemberSearch.DigitalPass}
+   * Protobuf type {@code bloombox.services.pos.v1beta1.MemberSearch.DigitalPass}
    */
   public  static final class DigitalPass extends
       com.google.protobuf.GeneratedMessageV3 implements
-      // @@protoc_insertion_point(message_implements:bloombox.schema.services.pos.v1beta1.MemberSearch.DigitalPass)
+      // @@protoc_insertion_point(message_implements:bloombox.services.pos.v1beta1.MemberSearch.DigitalPass)
       DigitalPassOrBuilder {
   private static final long serialVersionUID = 0L;
     // Use DigitalPass.newBuilder() to construct.
@@ -932,13 +958,6 @@ private static final long serialVersionUID = 0L;
             case 0:
               done = true;
               break;
-            default: {
-              if (!parseUnknownFieldProto3(
-                  input, unknownFields, extensionRegistry, tag)) {
-                done = true;
-              }
-              break;
-            }
             case 10: {
               io.bloombox.schema.pass.PassIDKey.DigitalPassKey.Builder subBuilder = null;
               if (pass_ != null) {
@@ -965,6 +984,13 @@ private static final long serialVersionUID = 0L;
 
               break;
             }
+            default: {
+              if (!parseUnknownFieldProto3(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
           }
         }
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
@@ -979,12 +1005,13 @@ private static final long serialVersionUID = 0L;
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return io.bloombox.schema.services.pos.v1beta1.POSServiceBeta1.internal_static_bloombox_schema_services_pos_v1beta1_MemberSearch_DigitalPass_descriptor;
+      return io.bloombox.schema.services.pos.v1beta1.POSServiceBeta1.internal_static_bloombox_services_pos_v1beta1_MemberSearch_DigitalPass_descriptor;
     }
 
+    @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return io.bloombox.schema.services.pos.v1beta1.POSServiceBeta1.internal_static_bloombox_schema_services_pos_v1beta1_MemberSearch_DigitalPass_fieldAccessorTable
+      return io.bloombox.schema.services.pos.v1beta1.POSServiceBeta1.internal_static_bloombox_services_pos_v1beta1_MemberSearch_DigitalPass_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
               io.bloombox.schema.services.pos.v1beta1.MemberSearch.DigitalPass.class, io.bloombox.schema.services.pos.v1beta1.MemberSearch.DigitalPass.Builder.class);
     }
@@ -996,7 +1023,7 @@ private static final long serialVersionUID = 0L;
      * Specifies the scanned/received information from the pass.
      * </pre>
      *
-     * <code>.bloombox.schema.identity.pass.DigitalPassKey pass = 1;</code>
+     * <code>.bloombox.identity.pass.DigitalPassKey pass = 1;</code>
      */
     public boolean hasPass() {
       return pass_ != null;
@@ -1006,7 +1033,7 @@ private static final long serialVersionUID = 0L;
      * Specifies the scanned/received information from the pass.
      * </pre>
      *
-     * <code>.bloombox.schema.identity.pass.DigitalPassKey pass = 1;</code>
+     * <code>.bloombox.identity.pass.DigitalPassKey pass = 1;</code>
      */
     public io.bloombox.schema.pass.PassIDKey.DigitalPassKey getPass() {
       return pass_ == null ? io.bloombox.schema.pass.PassIDKey.DigitalPassKey.getDefaultInstance() : pass_;
@@ -1016,7 +1043,7 @@ private static final long serialVersionUID = 0L;
      * Specifies the scanned/received information from the pass.
      * </pre>
      *
-     * <code>.bloombox.schema.identity.pass.DigitalPassKey pass = 1;</code>
+     * <code>.bloombox.identity.pass.DigitalPassKey pass = 1;</code>
      */
     public io.bloombox.schema.pass.PassIDKey.DigitalPassKeyOrBuilder getPassOrBuilder() {
       return getPass();
@@ -1029,7 +1056,7 @@ private static final long serialVersionUID = 0L;
      * Cryptographic signature hash from the physical device that scanned the pass.
      * </pre>
      *
-     * <code>.opencannabis.crypto.primitives.integrity.Hash challenge = 2;</code>
+     * <code>.opencannabis.crypto.Hash challenge = 2;</code>
      */
     public boolean hasChallenge() {
       return challenge_ != null;
@@ -1039,7 +1066,7 @@ private static final long serialVersionUID = 0L;
      * Cryptographic signature hash from the physical device that scanned the pass.
      * </pre>
      *
-     * <code>.opencannabis.crypto.primitives.integrity.Hash challenge = 2;</code>
+     * <code>.opencannabis.crypto.Hash challenge = 2;</code>
      */
     public io.opencannabis.schema.crypto.primitives.integrity.Hash getChallenge() {
       return challenge_ == null ? io.opencannabis.schema.crypto.primitives.integrity.Hash.getDefaultInstance() : challenge_;
@@ -1049,13 +1076,14 @@ private static final long serialVersionUID = 0L;
      * Cryptographic signature hash from the physical device that scanned the pass.
      * </pre>
      *
-     * <code>.opencannabis.crypto.primitives.integrity.Hash challenge = 2;</code>
+     * <code>.opencannabis.crypto.Hash challenge = 2;</code>
      */
     public io.opencannabis.schema.crypto.primitives.integrity.HashOrBuilder getChallengeOrBuilder() {
       return getChallenge();
     }
 
     private byte memoizedIsInitialized = -1;
+    @java.lang.Override
     public final boolean isInitialized() {
       byte isInitialized = memoizedIsInitialized;
       if (isInitialized == 1) return true;
@@ -1065,6 +1093,7 @@ private static final long serialVersionUID = 0L;
       return true;
     }
 
+    @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
       if (pass_ != null) {
@@ -1076,6 +1105,7 @@ private static final long serialVersionUID = 0L;
       unknownFields.writeTo(output);
     }
 
+    @java.lang.Override
     public int getSerializedSize() {
       int size = memoizedSize;
       if (size != -1) return size;
@@ -1209,6 +1239,7 @@ private static final long serialVersionUID = 0L;
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
 
+    @java.lang.Override
     public Builder newBuilderForType() { return newBuilder(); }
     public static Builder newBuilder() {
       return DEFAULT_INSTANCE.toBuilder();
@@ -1216,6 +1247,7 @@ private static final long serialVersionUID = 0L;
     public static Builder newBuilder(io.bloombox.schema.services.pos.v1beta1.MemberSearch.DigitalPass prototype) {
       return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
     }
+    @java.lang.Override
     public Builder toBuilder() {
       return this == DEFAULT_INSTANCE
           ? new Builder() : new Builder().mergeFrom(this);
@@ -1232,20 +1264,21 @@ private static final long serialVersionUID = 0L;
      * Criteria to qualify a search via a digital pass.
      * </pre>
      *
-     * Protobuf type {@code bloombox.schema.services.pos.v1beta1.MemberSearch.DigitalPass}
+     * Protobuf type {@code bloombox.services.pos.v1beta1.MemberSearch.DigitalPass}
      */
     public static final class Builder extends
         com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:bloombox.schema.services.pos.v1beta1.MemberSearch.DigitalPass)
+        // @@protoc_insertion_point(builder_implements:bloombox.services.pos.v1beta1.MemberSearch.DigitalPass)
         io.bloombox.schema.services.pos.v1beta1.MemberSearch.DigitalPassOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return io.bloombox.schema.services.pos.v1beta1.POSServiceBeta1.internal_static_bloombox_schema_services_pos_v1beta1_MemberSearch_DigitalPass_descriptor;
+        return io.bloombox.schema.services.pos.v1beta1.POSServiceBeta1.internal_static_bloombox_services_pos_v1beta1_MemberSearch_DigitalPass_descriptor;
       }
 
+      @java.lang.Override
       protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return io.bloombox.schema.services.pos.v1beta1.POSServiceBeta1.internal_static_bloombox_schema_services_pos_v1beta1_MemberSearch_DigitalPass_fieldAccessorTable
+        return io.bloombox.schema.services.pos.v1beta1.POSServiceBeta1.internal_static_bloombox_services_pos_v1beta1_MemberSearch_DigitalPass_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
                 io.bloombox.schema.services.pos.v1beta1.MemberSearch.DigitalPass.class, io.bloombox.schema.services.pos.v1beta1.MemberSearch.DigitalPass.Builder.class);
       }
@@ -1265,6 +1298,7 @@ private static final long serialVersionUID = 0L;
                 .alwaysUseFieldBuilders) {
         }
       }
+      @java.lang.Override
       public Builder clear() {
         super.clear();
         if (passBuilder_ == null) {
@@ -1282,15 +1316,18 @@ private static final long serialVersionUID = 0L;
         return this;
       }
 
+      @java.lang.Override
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return io.bloombox.schema.services.pos.v1beta1.POSServiceBeta1.internal_static_bloombox_schema_services_pos_v1beta1_MemberSearch_DigitalPass_descriptor;
+        return io.bloombox.schema.services.pos.v1beta1.POSServiceBeta1.internal_static_bloombox_services_pos_v1beta1_MemberSearch_DigitalPass_descriptor;
       }
 
+      @java.lang.Override
       public io.bloombox.schema.services.pos.v1beta1.MemberSearch.DigitalPass getDefaultInstanceForType() {
         return io.bloombox.schema.services.pos.v1beta1.MemberSearch.DigitalPass.getDefaultInstance();
       }
 
+      @java.lang.Override
       public io.bloombox.schema.services.pos.v1beta1.MemberSearch.DigitalPass build() {
         io.bloombox.schema.services.pos.v1beta1.MemberSearch.DigitalPass result = buildPartial();
         if (!result.isInitialized()) {
@@ -1299,6 +1336,7 @@ private static final long serialVersionUID = 0L;
         return result;
       }
 
+      @java.lang.Override
       public io.bloombox.schema.services.pos.v1beta1.MemberSearch.DigitalPass buildPartial() {
         io.bloombox.schema.services.pos.v1beta1.MemberSearch.DigitalPass result = new io.bloombox.schema.services.pos.v1beta1.MemberSearch.DigitalPass(this);
         if (passBuilder_ == null) {
@@ -1315,32 +1353,39 @@ private static final long serialVersionUID = 0L;
         return result;
       }
 
+      @java.lang.Override
       public Builder clone() {
         return (Builder) super.clone();
       }
+      @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
         return (Builder) super.setField(field, value);
       }
+      @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
         return (Builder) super.clearField(field);
       }
+      @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
         return (Builder) super.clearOneof(oneof);
       }
+      @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
         return (Builder) super.setRepeatedField(field, index, value);
       }
+      @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
         return (Builder) super.addRepeatedField(field, value);
       }
+      @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
         if (other instanceof io.bloombox.schema.services.pos.v1beta1.MemberSearch.DigitalPass) {
           return mergeFrom((io.bloombox.schema.services.pos.v1beta1.MemberSearch.DigitalPass)other);
@@ -1363,10 +1408,12 @@ private static final long serialVersionUID = 0L;
         return this;
       }
 
+      @java.lang.Override
       public final boolean isInitialized() {
         return true;
       }
 
+      @java.lang.Override
       public Builder mergeFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -1393,7 +1440,7 @@ private static final long serialVersionUID = 0L;
        * Specifies the scanned/received information from the pass.
        * </pre>
        *
-       * <code>.bloombox.schema.identity.pass.DigitalPassKey pass = 1;</code>
+       * <code>.bloombox.identity.pass.DigitalPassKey pass = 1;</code>
        */
       public boolean hasPass() {
         return passBuilder_ != null || pass_ != null;
@@ -1403,7 +1450,7 @@ private static final long serialVersionUID = 0L;
        * Specifies the scanned/received information from the pass.
        * </pre>
        *
-       * <code>.bloombox.schema.identity.pass.DigitalPassKey pass = 1;</code>
+       * <code>.bloombox.identity.pass.DigitalPassKey pass = 1;</code>
        */
       public io.bloombox.schema.pass.PassIDKey.DigitalPassKey getPass() {
         if (passBuilder_ == null) {
@@ -1417,7 +1464,7 @@ private static final long serialVersionUID = 0L;
        * Specifies the scanned/received information from the pass.
        * </pre>
        *
-       * <code>.bloombox.schema.identity.pass.DigitalPassKey pass = 1;</code>
+       * <code>.bloombox.identity.pass.DigitalPassKey pass = 1;</code>
        */
       public Builder setPass(io.bloombox.schema.pass.PassIDKey.DigitalPassKey value) {
         if (passBuilder_ == null) {
@@ -1437,7 +1484,7 @@ private static final long serialVersionUID = 0L;
        * Specifies the scanned/received information from the pass.
        * </pre>
        *
-       * <code>.bloombox.schema.identity.pass.DigitalPassKey pass = 1;</code>
+       * <code>.bloombox.identity.pass.DigitalPassKey pass = 1;</code>
        */
       public Builder setPass(
           io.bloombox.schema.pass.PassIDKey.DigitalPassKey.Builder builderForValue) {
@@ -1455,7 +1502,7 @@ private static final long serialVersionUID = 0L;
        * Specifies the scanned/received information from the pass.
        * </pre>
        *
-       * <code>.bloombox.schema.identity.pass.DigitalPassKey pass = 1;</code>
+       * <code>.bloombox.identity.pass.DigitalPassKey pass = 1;</code>
        */
       public Builder mergePass(io.bloombox.schema.pass.PassIDKey.DigitalPassKey value) {
         if (passBuilder_ == null) {
@@ -1477,7 +1524,7 @@ private static final long serialVersionUID = 0L;
        * Specifies the scanned/received information from the pass.
        * </pre>
        *
-       * <code>.bloombox.schema.identity.pass.DigitalPassKey pass = 1;</code>
+       * <code>.bloombox.identity.pass.DigitalPassKey pass = 1;</code>
        */
       public Builder clearPass() {
         if (passBuilder_ == null) {
@@ -1495,7 +1542,7 @@ private static final long serialVersionUID = 0L;
        * Specifies the scanned/received information from the pass.
        * </pre>
        *
-       * <code>.bloombox.schema.identity.pass.DigitalPassKey pass = 1;</code>
+       * <code>.bloombox.identity.pass.DigitalPassKey pass = 1;</code>
        */
       public io.bloombox.schema.pass.PassIDKey.DigitalPassKey.Builder getPassBuilder() {
         
@@ -1507,7 +1554,7 @@ private static final long serialVersionUID = 0L;
        * Specifies the scanned/received information from the pass.
        * </pre>
        *
-       * <code>.bloombox.schema.identity.pass.DigitalPassKey pass = 1;</code>
+       * <code>.bloombox.identity.pass.DigitalPassKey pass = 1;</code>
        */
       public io.bloombox.schema.pass.PassIDKey.DigitalPassKeyOrBuilder getPassOrBuilder() {
         if (passBuilder_ != null) {
@@ -1522,7 +1569,7 @@ private static final long serialVersionUID = 0L;
        * Specifies the scanned/received information from the pass.
        * </pre>
        *
-       * <code>.bloombox.schema.identity.pass.DigitalPassKey pass = 1;</code>
+       * <code>.bloombox.identity.pass.DigitalPassKey pass = 1;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
           io.bloombox.schema.pass.PassIDKey.DigitalPassKey, io.bloombox.schema.pass.PassIDKey.DigitalPassKey.Builder, io.bloombox.schema.pass.PassIDKey.DigitalPassKeyOrBuilder> 
@@ -1546,7 +1593,7 @@ private static final long serialVersionUID = 0L;
        * Cryptographic signature hash from the physical device that scanned the pass.
        * </pre>
        *
-       * <code>.opencannabis.crypto.primitives.integrity.Hash challenge = 2;</code>
+       * <code>.opencannabis.crypto.Hash challenge = 2;</code>
        */
       public boolean hasChallenge() {
         return challengeBuilder_ != null || challenge_ != null;
@@ -1556,7 +1603,7 @@ private static final long serialVersionUID = 0L;
        * Cryptographic signature hash from the physical device that scanned the pass.
        * </pre>
        *
-       * <code>.opencannabis.crypto.primitives.integrity.Hash challenge = 2;</code>
+       * <code>.opencannabis.crypto.Hash challenge = 2;</code>
        */
       public io.opencannabis.schema.crypto.primitives.integrity.Hash getChallenge() {
         if (challengeBuilder_ == null) {
@@ -1570,7 +1617,7 @@ private static final long serialVersionUID = 0L;
        * Cryptographic signature hash from the physical device that scanned the pass.
        * </pre>
        *
-       * <code>.opencannabis.crypto.primitives.integrity.Hash challenge = 2;</code>
+       * <code>.opencannabis.crypto.Hash challenge = 2;</code>
        */
       public Builder setChallenge(io.opencannabis.schema.crypto.primitives.integrity.Hash value) {
         if (challengeBuilder_ == null) {
@@ -1590,7 +1637,7 @@ private static final long serialVersionUID = 0L;
        * Cryptographic signature hash from the physical device that scanned the pass.
        * </pre>
        *
-       * <code>.opencannabis.crypto.primitives.integrity.Hash challenge = 2;</code>
+       * <code>.opencannabis.crypto.Hash challenge = 2;</code>
        */
       public Builder setChallenge(
           io.opencannabis.schema.crypto.primitives.integrity.Hash.Builder builderForValue) {
@@ -1608,7 +1655,7 @@ private static final long serialVersionUID = 0L;
        * Cryptographic signature hash from the physical device that scanned the pass.
        * </pre>
        *
-       * <code>.opencannabis.crypto.primitives.integrity.Hash challenge = 2;</code>
+       * <code>.opencannabis.crypto.Hash challenge = 2;</code>
        */
       public Builder mergeChallenge(io.opencannabis.schema.crypto.primitives.integrity.Hash value) {
         if (challengeBuilder_ == null) {
@@ -1630,7 +1677,7 @@ private static final long serialVersionUID = 0L;
        * Cryptographic signature hash from the physical device that scanned the pass.
        * </pre>
        *
-       * <code>.opencannabis.crypto.primitives.integrity.Hash challenge = 2;</code>
+       * <code>.opencannabis.crypto.Hash challenge = 2;</code>
        */
       public Builder clearChallenge() {
         if (challengeBuilder_ == null) {
@@ -1648,7 +1695,7 @@ private static final long serialVersionUID = 0L;
        * Cryptographic signature hash from the physical device that scanned the pass.
        * </pre>
        *
-       * <code>.opencannabis.crypto.primitives.integrity.Hash challenge = 2;</code>
+       * <code>.opencannabis.crypto.Hash challenge = 2;</code>
        */
       public io.opencannabis.schema.crypto.primitives.integrity.Hash.Builder getChallengeBuilder() {
         
@@ -1660,7 +1707,7 @@ private static final long serialVersionUID = 0L;
        * Cryptographic signature hash from the physical device that scanned the pass.
        * </pre>
        *
-       * <code>.opencannabis.crypto.primitives.integrity.Hash challenge = 2;</code>
+       * <code>.opencannabis.crypto.Hash challenge = 2;</code>
        */
       public io.opencannabis.schema.crypto.primitives.integrity.HashOrBuilder getChallengeOrBuilder() {
         if (challengeBuilder_ != null) {
@@ -1675,7 +1722,7 @@ private static final long serialVersionUID = 0L;
        * Cryptographic signature hash from the physical device that scanned the pass.
        * </pre>
        *
-       * <code>.opencannabis.crypto.primitives.integrity.Hash challenge = 2;</code>
+       * <code>.opencannabis.crypto.Hash challenge = 2;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
           io.opencannabis.schema.crypto.primitives.integrity.Hash, io.opencannabis.schema.crypto.primitives.integrity.Hash.Builder, io.opencannabis.schema.crypto.primitives.integrity.HashOrBuilder> 
@@ -1690,21 +1737,23 @@ private static final long serialVersionUID = 0L;
         }
         return challengeBuilder_;
       }
+      @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
         return super.setUnknownFieldsProto3(unknownFields);
       }
 
+      @java.lang.Override
       public final Builder mergeUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
         return super.mergeUnknownFields(unknownFields);
       }
 
 
-      // @@protoc_insertion_point(builder_scope:bloombox.schema.services.pos.v1beta1.MemberSearch.DigitalPass)
+      // @@protoc_insertion_point(builder_scope:bloombox.services.pos.v1beta1.MemberSearch.DigitalPass)
     }
 
-    // @@protoc_insertion_point(class_scope:bloombox.schema.services.pos.v1beta1.MemberSearch.DigitalPass)
+    // @@protoc_insertion_point(class_scope:bloombox.services.pos.v1beta1.MemberSearch.DigitalPass)
     private static final io.bloombox.schema.services.pos.v1beta1.MemberSearch.DigitalPass DEFAULT_INSTANCE;
     static {
       DEFAULT_INSTANCE = new io.bloombox.schema.services.pos.v1beta1.MemberSearch.DigitalPass();
@@ -1716,6 +1765,7 @@ private static final long serialVersionUID = 0L;
 
     private static final com.google.protobuf.Parser<DigitalPass>
         PARSER = new com.google.protobuf.AbstractParser<DigitalPass>() {
+      @java.lang.Override
       public DigitalPass parsePartialFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -1733,6 +1783,7 @@ private static final long serialVersionUID = 0L;
       return PARSER;
     }
 
+    @java.lang.Override
     public io.bloombox.schema.services.pos.v1beta1.MemberSearch.DigitalPass getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
@@ -1740,7 +1791,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public interface RequestOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:bloombox.schema.services.pos.v1beta1.MemberSearch.Request)
+      // @@protoc_insertion_point(interface_extends:bloombox.services.pos.v1beta1.MemberSearch.Request)
       com.google.protobuf.MessageOrBuilder {
 
     /**
@@ -1810,7 +1861,7 @@ private static final long serialVersionUID = 0L;
      * Search criteria.
      * </pre>
      *
-     * <code>.bloombox.schema.services.pos.v1beta1.MemberSearch.MemberPredicate search = 20;</code>
+     * <code>.bloombox.services.pos.v1beta1.MemberSearch.MemberPredicate search = 20;</code>
      */
     boolean hasSearch();
     /**
@@ -1818,7 +1869,7 @@ private static final long serialVersionUID = 0L;
      * Search criteria.
      * </pre>
      *
-     * <code>.bloombox.schema.services.pos.v1beta1.MemberSearch.MemberPredicate search = 20;</code>
+     * <code>.bloombox.services.pos.v1beta1.MemberSearch.MemberPredicate search = 20;</code>
      */
     io.bloombox.schema.services.pos.v1beta1.MemberSearch.MemberPredicate getSearch();
     /**
@@ -1826,7 +1877,7 @@ private static final long serialVersionUID = 0L;
      * Search criteria.
      * </pre>
      *
-     * <code>.bloombox.schema.services.pos.v1beta1.MemberSearch.MemberPredicate search = 20;</code>
+     * <code>.bloombox.services.pos.v1beta1.MemberSearch.MemberPredicate search = 20;</code>
      */
     io.bloombox.schema.services.pos.v1beta1.MemberSearch.MemberPredicateOrBuilder getSearchOrBuilder();
 
@@ -1835,7 +1886,7 @@ private static final long serialVersionUID = 0L;
      * Identification presented by the user.
      * </pre>
      *
-     * <code>.bloombox.schema.identity.IDReference identification = 21;</code>
+     * <code>.bloombox.identity.IDReference identification = 21;</code>
      */
     boolean hasIdentification();
     /**
@@ -1843,7 +1894,7 @@ private static final long serialVersionUID = 0L;
      * Identification presented by the user.
      * </pre>
      *
-     * <code>.bloombox.schema.identity.IDReference identification = 21;</code>
+     * <code>.bloombox.identity.IDReference identification = 21;</code>
      */
     io.bloombox.schema.identity.IdentityID.IDReference getIdentification();
     /**
@@ -1851,7 +1902,7 @@ private static final long serialVersionUID = 0L;
      * Identification presented by the user.
      * </pre>
      *
-     * <code>.bloombox.schema.identity.IDReference identification = 21;</code>
+     * <code>.bloombox.identity.IDReference identification = 21;</code>
      */
     io.bloombox.schema.identity.IdentityID.IDReferenceOrBuilder getIdentificationOrBuilder();
 
@@ -1878,7 +1929,7 @@ private static final long serialVersionUID = 0L;
      * Specifies a members-resolve request being requested based on a digital wallet pass.
      * </pre>
      *
-     * <code>.bloombox.schema.services.pos.v1beta1.MemberSearch.DigitalPass wallet = 24;</code>
+     * <code>.bloombox.services.pos.v1beta1.MemberSearch.DigitalPass wallet = 24;</code>
      */
     boolean hasWallet();
     /**
@@ -1886,7 +1937,7 @@ private static final long serialVersionUID = 0L;
      * Specifies a members-resolve request being requested based on a digital wallet pass.
      * </pre>
      *
-     * <code>.bloombox.schema.services.pos.v1beta1.MemberSearch.DigitalPass wallet = 24;</code>
+     * <code>.bloombox.services.pos.v1beta1.MemberSearch.DigitalPass wallet = 24;</code>
      */
     io.bloombox.schema.services.pos.v1beta1.MemberSearch.DigitalPass getWallet();
     /**
@@ -1894,7 +1945,7 @@ private static final long serialVersionUID = 0L;
      * Specifies a members-resolve request being requested based on a digital wallet pass.
      * </pre>
      *
-     * <code>.bloombox.schema.services.pos.v1beta1.MemberSearch.DigitalPass wallet = 24;</code>
+     * <code>.bloombox.services.pos.v1beta1.MemberSearch.DigitalPass wallet = 24;</code>
      */
     io.bloombox.schema.services.pos.v1beta1.MemberSearch.DigitalPassOrBuilder getWalletOrBuilder();
 
@@ -1905,11 +1956,11 @@ private static final long serialVersionUID = 0L;
    * Request to search for a member account.
    * </pre>
    *
-   * Protobuf type {@code bloombox.schema.services.pos.v1beta1.MemberSearch.Request}
+   * Protobuf type {@code bloombox.services.pos.v1beta1.MemberSearch.Request}
    */
   public  static final class Request extends
       com.google.protobuf.GeneratedMessageV3 implements
-      // @@protoc_insertion_point(message_implements:bloombox.schema.services.pos.v1beta1.MemberSearch.Request)
+      // @@protoc_insertion_point(message_implements:bloombox.services.pos.v1beta1.MemberSearch.Request)
       RequestOrBuilder {
   private static final long serialVersionUID = 0L;
     // Use Request.newBuilder() to construct.
@@ -1946,13 +1997,6 @@ private static final long serialVersionUID = 0L;
             case 0:
               done = true;
               break;
-            default: {
-              if (!parseUnknownFieldProto3(
-                  input, unknownFields, extensionRegistry, tag)) {
-                done = true;
-              }
-              break;
-            }
             case 10: {
               java.lang.String s = input.readStringRequireUtf8();
 
@@ -2025,6 +2069,13 @@ private static final long serialVersionUID = 0L;
               specCase_ = 24;
               break;
             }
+            default: {
+              if (!parseUnknownFieldProto3(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
           }
         }
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
@@ -2042,12 +2093,13 @@ private static final long serialVersionUID = 0L;
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return io.bloombox.schema.services.pos.v1beta1.POSServiceBeta1.internal_static_bloombox_schema_services_pos_v1beta1_MemberSearch_Request_descriptor;
+      return io.bloombox.schema.services.pos.v1beta1.POSServiceBeta1.internal_static_bloombox_services_pos_v1beta1_MemberSearch_Request_descriptor;
     }
 
+    @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return io.bloombox.schema.services.pos.v1beta1.POSServiceBeta1.internal_static_bloombox_schema_services_pos_v1beta1_MemberSearch_Request_fieldAccessorTable
+      return io.bloombox.schema.services.pos.v1beta1.POSServiceBeta1.internal_static_bloombox_services_pos_v1beta1_MemberSearch_Request_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
               io.bloombox.schema.services.pos.v1beta1.MemberSearch.Request.class, io.bloombox.schema.services.pos.v1beta1.MemberSearch.Request.Builder.class);
     }
@@ -2203,7 +2255,7 @@ private static final long serialVersionUID = 0L;
      * Search criteria.
      * </pre>
      *
-     * <code>.bloombox.schema.services.pos.v1beta1.MemberSearch.MemberPredicate search = 20;</code>
+     * <code>.bloombox.services.pos.v1beta1.MemberSearch.MemberPredicate search = 20;</code>
      */
     public boolean hasSearch() {
       return specCase_ == 20;
@@ -2213,7 +2265,7 @@ private static final long serialVersionUID = 0L;
      * Search criteria.
      * </pre>
      *
-     * <code>.bloombox.schema.services.pos.v1beta1.MemberSearch.MemberPredicate search = 20;</code>
+     * <code>.bloombox.services.pos.v1beta1.MemberSearch.MemberPredicate search = 20;</code>
      */
     public io.bloombox.schema.services.pos.v1beta1.MemberSearch.MemberPredicate getSearch() {
       if (specCase_ == 20) {
@@ -2226,7 +2278,7 @@ private static final long serialVersionUID = 0L;
      * Search criteria.
      * </pre>
      *
-     * <code>.bloombox.schema.services.pos.v1beta1.MemberSearch.MemberPredicate search = 20;</code>
+     * <code>.bloombox.services.pos.v1beta1.MemberSearch.MemberPredicate search = 20;</code>
      */
     public io.bloombox.schema.services.pos.v1beta1.MemberSearch.MemberPredicateOrBuilder getSearchOrBuilder() {
       if (specCase_ == 20) {
@@ -2241,7 +2293,7 @@ private static final long serialVersionUID = 0L;
      * Identification presented by the user.
      * </pre>
      *
-     * <code>.bloombox.schema.identity.IDReference identification = 21;</code>
+     * <code>.bloombox.identity.IDReference identification = 21;</code>
      */
     public boolean hasIdentification() {
       return specCase_ == 21;
@@ -2251,7 +2303,7 @@ private static final long serialVersionUID = 0L;
      * Identification presented by the user.
      * </pre>
      *
-     * <code>.bloombox.schema.identity.IDReference identification = 21;</code>
+     * <code>.bloombox.identity.IDReference identification = 21;</code>
      */
     public io.bloombox.schema.identity.IdentityID.IDReference getIdentification() {
       if (specCase_ == 21) {
@@ -2264,7 +2316,7 @@ private static final long serialVersionUID = 0L;
      * Identification presented by the user.
      * </pre>
      *
-     * <code>.bloombox.schema.identity.IDReference identification = 21;</code>
+     * <code>.bloombox.identity.IDReference identification = 21;</code>
      */
     public io.bloombox.schema.identity.IdentityID.IDReferenceOrBuilder getIdentificationOrBuilder() {
       if (specCase_ == 21) {
@@ -2309,7 +2361,7 @@ private static final long serialVersionUID = 0L;
      * Specifies a members-resolve request being requested based on a digital wallet pass.
      * </pre>
      *
-     * <code>.bloombox.schema.services.pos.v1beta1.MemberSearch.DigitalPass wallet = 24;</code>
+     * <code>.bloombox.services.pos.v1beta1.MemberSearch.DigitalPass wallet = 24;</code>
      */
     public boolean hasWallet() {
       return specCase_ == 24;
@@ -2319,7 +2371,7 @@ private static final long serialVersionUID = 0L;
      * Specifies a members-resolve request being requested based on a digital wallet pass.
      * </pre>
      *
-     * <code>.bloombox.schema.services.pos.v1beta1.MemberSearch.DigitalPass wallet = 24;</code>
+     * <code>.bloombox.services.pos.v1beta1.MemberSearch.DigitalPass wallet = 24;</code>
      */
     public io.bloombox.schema.services.pos.v1beta1.MemberSearch.DigitalPass getWallet() {
       if (specCase_ == 24) {
@@ -2332,7 +2384,7 @@ private static final long serialVersionUID = 0L;
      * Specifies a members-resolve request being requested based on a digital wallet pass.
      * </pre>
      *
-     * <code>.bloombox.schema.services.pos.v1beta1.MemberSearch.DigitalPass wallet = 24;</code>
+     * <code>.bloombox.services.pos.v1beta1.MemberSearch.DigitalPass wallet = 24;</code>
      */
     public io.bloombox.schema.services.pos.v1beta1.MemberSearch.DigitalPassOrBuilder getWalletOrBuilder() {
       if (specCase_ == 24) {
@@ -2342,6 +2394,7 @@ private static final long serialVersionUID = 0L;
     }
 
     private byte memoizedIsInitialized = -1;
+    @java.lang.Override
     public final boolean isInitialized() {
       byte isInitialized = memoizedIsInitialized;
       if (isInitialized == 1) return true;
@@ -2351,6 +2404,7 @@ private static final long serialVersionUID = 0L;
       return true;
     }
 
+    @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
       if (!getCursorBytes().isEmpty()) {
@@ -2382,6 +2436,7 @@ private static final long serialVersionUID = 0L;
       unknownFields.writeTo(output);
     }
 
+    @java.lang.Override
     public int getSerializedSize() {
       int size = memoizedSize;
       if (size != -1) return size;
@@ -2593,6 +2648,7 @@ private static final long serialVersionUID = 0L;
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
 
+    @java.lang.Override
     public Builder newBuilderForType() { return newBuilder(); }
     public static Builder newBuilder() {
       return DEFAULT_INSTANCE.toBuilder();
@@ -2600,6 +2656,7 @@ private static final long serialVersionUID = 0L;
     public static Builder newBuilder(io.bloombox.schema.services.pos.v1beta1.MemberSearch.Request prototype) {
       return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
     }
+    @java.lang.Override
     public Builder toBuilder() {
       return this == DEFAULT_INSTANCE
           ? new Builder() : new Builder().mergeFrom(this);
@@ -2616,20 +2673,21 @@ private static final long serialVersionUID = 0L;
      * Request to search for a member account.
      * </pre>
      *
-     * Protobuf type {@code bloombox.schema.services.pos.v1beta1.MemberSearch.Request}
+     * Protobuf type {@code bloombox.services.pos.v1beta1.MemberSearch.Request}
      */
     public static final class Builder extends
         com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:bloombox.schema.services.pos.v1beta1.MemberSearch.Request)
+        // @@protoc_insertion_point(builder_implements:bloombox.services.pos.v1beta1.MemberSearch.Request)
         io.bloombox.schema.services.pos.v1beta1.MemberSearch.RequestOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return io.bloombox.schema.services.pos.v1beta1.POSServiceBeta1.internal_static_bloombox_schema_services_pos_v1beta1_MemberSearch_Request_descriptor;
+        return io.bloombox.schema.services.pos.v1beta1.POSServiceBeta1.internal_static_bloombox_services_pos_v1beta1_MemberSearch_Request_descriptor;
       }
 
+      @java.lang.Override
       protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return io.bloombox.schema.services.pos.v1beta1.POSServiceBeta1.internal_static_bloombox_schema_services_pos_v1beta1_MemberSearch_Request_fieldAccessorTable
+        return io.bloombox.schema.services.pos.v1beta1.POSServiceBeta1.internal_static_bloombox_services_pos_v1beta1_MemberSearch_Request_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
                 io.bloombox.schema.services.pos.v1beta1.MemberSearch.Request.class, io.bloombox.schema.services.pos.v1beta1.MemberSearch.Request.Builder.class);
       }
@@ -2649,6 +2707,7 @@ private static final long serialVersionUID = 0L;
                 .alwaysUseFieldBuilders) {
         }
       }
+      @java.lang.Override
       public Builder clear() {
         super.clear();
         cursor_ = "";
@@ -2662,15 +2721,18 @@ private static final long serialVersionUID = 0L;
         return this;
       }
 
+      @java.lang.Override
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return io.bloombox.schema.services.pos.v1beta1.POSServiceBeta1.internal_static_bloombox_schema_services_pos_v1beta1_MemberSearch_Request_descriptor;
+        return io.bloombox.schema.services.pos.v1beta1.POSServiceBeta1.internal_static_bloombox_services_pos_v1beta1_MemberSearch_Request_descriptor;
       }
 
+      @java.lang.Override
       public io.bloombox.schema.services.pos.v1beta1.MemberSearch.Request getDefaultInstanceForType() {
         return io.bloombox.schema.services.pos.v1beta1.MemberSearch.Request.getDefaultInstance();
       }
 
+      @java.lang.Override
       public io.bloombox.schema.services.pos.v1beta1.MemberSearch.Request build() {
         io.bloombox.schema.services.pos.v1beta1.MemberSearch.Request result = buildPartial();
         if (!result.isInitialized()) {
@@ -2679,6 +2741,7 @@ private static final long serialVersionUID = 0L;
         return result;
       }
 
+      @java.lang.Override
       public io.bloombox.schema.services.pos.v1beta1.MemberSearch.Request buildPartial() {
         io.bloombox.schema.services.pos.v1beta1.MemberSearch.Request result = new io.bloombox.schema.services.pos.v1beta1.MemberSearch.Request(this);
         int from_bitField0_ = bitField0_;
@@ -2723,32 +2786,39 @@ private static final long serialVersionUID = 0L;
         return result;
       }
 
+      @java.lang.Override
       public Builder clone() {
         return (Builder) super.clone();
       }
+      @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
         return (Builder) super.setField(field, value);
       }
+      @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
         return (Builder) super.clearField(field);
       }
+      @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
         return (Builder) super.clearOneof(oneof);
       }
+      @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
         return (Builder) super.setRepeatedField(field, index, value);
       }
+      @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
         return (Builder) super.addRepeatedField(field, value);
       }
+      @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
         if (other instanceof io.bloombox.schema.services.pos.v1beta1.MemberSearch.Request) {
           return mergeFrom((io.bloombox.schema.services.pos.v1beta1.MemberSearch.Request)other);
@@ -2807,10 +2877,12 @@ private static final long serialVersionUID = 0L;
         return this;
       }
 
+      @java.lang.Override
       public final boolean isInitialized() {
         return true;
       }
 
+      @java.lang.Override
       public Builder mergeFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -3109,7 +3181,7 @@ private static final long serialVersionUID = 0L;
        * Search criteria.
        * </pre>
        *
-       * <code>.bloombox.schema.services.pos.v1beta1.MemberSearch.MemberPredicate search = 20;</code>
+       * <code>.bloombox.services.pos.v1beta1.MemberSearch.MemberPredicate search = 20;</code>
        */
       public boolean hasSearch() {
         return specCase_ == 20;
@@ -3119,7 +3191,7 @@ private static final long serialVersionUID = 0L;
        * Search criteria.
        * </pre>
        *
-       * <code>.bloombox.schema.services.pos.v1beta1.MemberSearch.MemberPredicate search = 20;</code>
+       * <code>.bloombox.services.pos.v1beta1.MemberSearch.MemberPredicate search = 20;</code>
        */
       public io.bloombox.schema.services.pos.v1beta1.MemberSearch.MemberPredicate getSearch() {
         if (searchBuilder_ == null) {
@@ -3139,7 +3211,7 @@ private static final long serialVersionUID = 0L;
        * Search criteria.
        * </pre>
        *
-       * <code>.bloombox.schema.services.pos.v1beta1.MemberSearch.MemberPredicate search = 20;</code>
+       * <code>.bloombox.services.pos.v1beta1.MemberSearch.MemberPredicate search = 20;</code>
        */
       public Builder setSearch(io.bloombox.schema.services.pos.v1beta1.MemberSearch.MemberPredicate value) {
         if (searchBuilder_ == null) {
@@ -3159,7 +3231,7 @@ private static final long serialVersionUID = 0L;
        * Search criteria.
        * </pre>
        *
-       * <code>.bloombox.schema.services.pos.v1beta1.MemberSearch.MemberPredicate search = 20;</code>
+       * <code>.bloombox.services.pos.v1beta1.MemberSearch.MemberPredicate search = 20;</code>
        */
       public Builder setSearch(
           io.bloombox.schema.services.pos.v1beta1.MemberSearch.MemberPredicate.Builder builderForValue) {
@@ -3177,7 +3249,7 @@ private static final long serialVersionUID = 0L;
        * Search criteria.
        * </pre>
        *
-       * <code>.bloombox.schema.services.pos.v1beta1.MemberSearch.MemberPredicate search = 20;</code>
+       * <code>.bloombox.services.pos.v1beta1.MemberSearch.MemberPredicate search = 20;</code>
        */
       public Builder mergeSearch(io.bloombox.schema.services.pos.v1beta1.MemberSearch.MemberPredicate value) {
         if (searchBuilder_ == null) {
@@ -3203,7 +3275,7 @@ private static final long serialVersionUID = 0L;
        * Search criteria.
        * </pre>
        *
-       * <code>.bloombox.schema.services.pos.v1beta1.MemberSearch.MemberPredicate search = 20;</code>
+       * <code>.bloombox.services.pos.v1beta1.MemberSearch.MemberPredicate search = 20;</code>
        */
       public Builder clearSearch() {
         if (searchBuilder_ == null) {
@@ -3226,7 +3298,7 @@ private static final long serialVersionUID = 0L;
        * Search criteria.
        * </pre>
        *
-       * <code>.bloombox.schema.services.pos.v1beta1.MemberSearch.MemberPredicate search = 20;</code>
+       * <code>.bloombox.services.pos.v1beta1.MemberSearch.MemberPredicate search = 20;</code>
        */
       public io.bloombox.schema.services.pos.v1beta1.MemberSearch.MemberPredicate.Builder getSearchBuilder() {
         return getSearchFieldBuilder().getBuilder();
@@ -3236,7 +3308,7 @@ private static final long serialVersionUID = 0L;
        * Search criteria.
        * </pre>
        *
-       * <code>.bloombox.schema.services.pos.v1beta1.MemberSearch.MemberPredicate search = 20;</code>
+       * <code>.bloombox.services.pos.v1beta1.MemberSearch.MemberPredicate search = 20;</code>
        */
       public io.bloombox.schema.services.pos.v1beta1.MemberSearch.MemberPredicateOrBuilder getSearchOrBuilder() {
         if ((specCase_ == 20) && (searchBuilder_ != null)) {
@@ -3253,7 +3325,7 @@ private static final long serialVersionUID = 0L;
        * Search criteria.
        * </pre>
        *
-       * <code>.bloombox.schema.services.pos.v1beta1.MemberSearch.MemberPredicate search = 20;</code>
+       * <code>.bloombox.services.pos.v1beta1.MemberSearch.MemberPredicate search = 20;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
           io.bloombox.schema.services.pos.v1beta1.MemberSearch.MemberPredicate, io.bloombox.schema.services.pos.v1beta1.MemberSearch.MemberPredicate.Builder, io.bloombox.schema.services.pos.v1beta1.MemberSearch.MemberPredicateOrBuilder> 
@@ -3281,7 +3353,7 @@ private static final long serialVersionUID = 0L;
        * Identification presented by the user.
        * </pre>
        *
-       * <code>.bloombox.schema.identity.IDReference identification = 21;</code>
+       * <code>.bloombox.identity.IDReference identification = 21;</code>
        */
       public boolean hasIdentification() {
         return specCase_ == 21;
@@ -3291,7 +3363,7 @@ private static final long serialVersionUID = 0L;
        * Identification presented by the user.
        * </pre>
        *
-       * <code>.bloombox.schema.identity.IDReference identification = 21;</code>
+       * <code>.bloombox.identity.IDReference identification = 21;</code>
        */
       public io.bloombox.schema.identity.IdentityID.IDReference getIdentification() {
         if (identificationBuilder_ == null) {
@@ -3311,7 +3383,7 @@ private static final long serialVersionUID = 0L;
        * Identification presented by the user.
        * </pre>
        *
-       * <code>.bloombox.schema.identity.IDReference identification = 21;</code>
+       * <code>.bloombox.identity.IDReference identification = 21;</code>
        */
       public Builder setIdentification(io.bloombox.schema.identity.IdentityID.IDReference value) {
         if (identificationBuilder_ == null) {
@@ -3331,7 +3403,7 @@ private static final long serialVersionUID = 0L;
        * Identification presented by the user.
        * </pre>
        *
-       * <code>.bloombox.schema.identity.IDReference identification = 21;</code>
+       * <code>.bloombox.identity.IDReference identification = 21;</code>
        */
       public Builder setIdentification(
           io.bloombox.schema.identity.IdentityID.IDReference.Builder builderForValue) {
@@ -3349,7 +3421,7 @@ private static final long serialVersionUID = 0L;
        * Identification presented by the user.
        * </pre>
        *
-       * <code>.bloombox.schema.identity.IDReference identification = 21;</code>
+       * <code>.bloombox.identity.IDReference identification = 21;</code>
        */
       public Builder mergeIdentification(io.bloombox.schema.identity.IdentityID.IDReference value) {
         if (identificationBuilder_ == null) {
@@ -3375,7 +3447,7 @@ private static final long serialVersionUID = 0L;
        * Identification presented by the user.
        * </pre>
        *
-       * <code>.bloombox.schema.identity.IDReference identification = 21;</code>
+       * <code>.bloombox.identity.IDReference identification = 21;</code>
        */
       public Builder clearIdentification() {
         if (identificationBuilder_ == null) {
@@ -3398,7 +3470,7 @@ private static final long serialVersionUID = 0L;
        * Identification presented by the user.
        * </pre>
        *
-       * <code>.bloombox.schema.identity.IDReference identification = 21;</code>
+       * <code>.bloombox.identity.IDReference identification = 21;</code>
        */
       public io.bloombox.schema.identity.IdentityID.IDReference.Builder getIdentificationBuilder() {
         return getIdentificationFieldBuilder().getBuilder();
@@ -3408,7 +3480,7 @@ private static final long serialVersionUID = 0L;
        * Identification presented by the user.
        * </pre>
        *
-       * <code>.bloombox.schema.identity.IDReference identification = 21;</code>
+       * <code>.bloombox.identity.IDReference identification = 21;</code>
        */
       public io.bloombox.schema.identity.IdentityID.IDReferenceOrBuilder getIdentificationOrBuilder() {
         if ((specCase_ == 21) && (identificationBuilder_ != null)) {
@@ -3425,7 +3497,7 @@ private static final long serialVersionUID = 0L;
        * Identification presented by the user.
        * </pre>
        *
-       * <code>.bloombox.schema.identity.IDReference identification = 21;</code>
+       * <code>.bloombox.identity.IDReference identification = 21;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
           io.bloombox.schema.identity.IdentityID.IDReference, io.bloombox.schema.identity.IdentityID.IDReference.Builder, io.bloombox.schema.identity.IdentityID.IDReferenceOrBuilder> 
@@ -3537,7 +3609,7 @@ private static final long serialVersionUID = 0L;
        * Specifies a members-resolve request being requested based on a digital wallet pass.
        * </pre>
        *
-       * <code>.bloombox.schema.services.pos.v1beta1.MemberSearch.DigitalPass wallet = 24;</code>
+       * <code>.bloombox.services.pos.v1beta1.MemberSearch.DigitalPass wallet = 24;</code>
        */
       public boolean hasWallet() {
         return specCase_ == 24;
@@ -3547,7 +3619,7 @@ private static final long serialVersionUID = 0L;
        * Specifies a members-resolve request being requested based on a digital wallet pass.
        * </pre>
        *
-       * <code>.bloombox.schema.services.pos.v1beta1.MemberSearch.DigitalPass wallet = 24;</code>
+       * <code>.bloombox.services.pos.v1beta1.MemberSearch.DigitalPass wallet = 24;</code>
        */
       public io.bloombox.schema.services.pos.v1beta1.MemberSearch.DigitalPass getWallet() {
         if (walletBuilder_ == null) {
@@ -3567,7 +3639,7 @@ private static final long serialVersionUID = 0L;
        * Specifies a members-resolve request being requested based on a digital wallet pass.
        * </pre>
        *
-       * <code>.bloombox.schema.services.pos.v1beta1.MemberSearch.DigitalPass wallet = 24;</code>
+       * <code>.bloombox.services.pos.v1beta1.MemberSearch.DigitalPass wallet = 24;</code>
        */
       public Builder setWallet(io.bloombox.schema.services.pos.v1beta1.MemberSearch.DigitalPass value) {
         if (walletBuilder_ == null) {
@@ -3587,7 +3659,7 @@ private static final long serialVersionUID = 0L;
        * Specifies a members-resolve request being requested based on a digital wallet pass.
        * </pre>
        *
-       * <code>.bloombox.schema.services.pos.v1beta1.MemberSearch.DigitalPass wallet = 24;</code>
+       * <code>.bloombox.services.pos.v1beta1.MemberSearch.DigitalPass wallet = 24;</code>
        */
       public Builder setWallet(
           io.bloombox.schema.services.pos.v1beta1.MemberSearch.DigitalPass.Builder builderForValue) {
@@ -3605,7 +3677,7 @@ private static final long serialVersionUID = 0L;
        * Specifies a members-resolve request being requested based on a digital wallet pass.
        * </pre>
        *
-       * <code>.bloombox.schema.services.pos.v1beta1.MemberSearch.DigitalPass wallet = 24;</code>
+       * <code>.bloombox.services.pos.v1beta1.MemberSearch.DigitalPass wallet = 24;</code>
        */
       public Builder mergeWallet(io.bloombox.schema.services.pos.v1beta1.MemberSearch.DigitalPass value) {
         if (walletBuilder_ == null) {
@@ -3631,7 +3703,7 @@ private static final long serialVersionUID = 0L;
        * Specifies a members-resolve request being requested based on a digital wallet pass.
        * </pre>
        *
-       * <code>.bloombox.schema.services.pos.v1beta1.MemberSearch.DigitalPass wallet = 24;</code>
+       * <code>.bloombox.services.pos.v1beta1.MemberSearch.DigitalPass wallet = 24;</code>
        */
       public Builder clearWallet() {
         if (walletBuilder_ == null) {
@@ -3654,7 +3726,7 @@ private static final long serialVersionUID = 0L;
        * Specifies a members-resolve request being requested based on a digital wallet pass.
        * </pre>
        *
-       * <code>.bloombox.schema.services.pos.v1beta1.MemberSearch.DigitalPass wallet = 24;</code>
+       * <code>.bloombox.services.pos.v1beta1.MemberSearch.DigitalPass wallet = 24;</code>
        */
       public io.bloombox.schema.services.pos.v1beta1.MemberSearch.DigitalPass.Builder getWalletBuilder() {
         return getWalletFieldBuilder().getBuilder();
@@ -3664,7 +3736,7 @@ private static final long serialVersionUID = 0L;
        * Specifies a members-resolve request being requested based on a digital wallet pass.
        * </pre>
        *
-       * <code>.bloombox.schema.services.pos.v1beta1.MemberSearch.DigitalPass wallet = 24;</code>
+       * <code>.bloombox.services.pos.v1beta1.MemberSearch.DigitalPass wallet = 24;</code>
        */
       public io.bloombox.schema.services.pos.v1beta1.MemberSearch.DigitalPassOrBuilder getWalletOrBuilder() {
         if ((specCase_ == 24) && (walletBuilder_ != null)) {
@@ -3681,7 +3753,7 @@ private static final long serialVersionUID = 0L;
        * Specifies a members-resolve request being requested based on a digital wallet pass.
        * </pre>
        *
-       * <code>.bloombox.schema.services.pos.v1beta1.MemberSearch.DigitalPass wallet = 24;</code>
+       * <code>.bloombox.services.pos.v1beta1.MemberSearch.DigitalPass wallet = 24;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
           io.bloombox.schema.services.pos.v1beta1.MemberSearch.DigitalPass, io.bloombox.schema.services.pos.v1beta1.MemberSearch.DigitalPass.Builder, io.bloombox.schema.services.pos.v1beta1.MemberSearch.DigitalPassOrBuilder> 
@@ -3701,21 +3773,23 @@ private static final long serialVersionUID = 0L;
         onChanged();;
         return walletBuilder_;
       }
+      @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
         return super.setUnknownFieldsProto3(unknownFields);
       }
 
+      @java.lang.Override
       public final Builder mergeUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
         return super.mergeUnknownFields(unknownFields);
       }
 
 
-      // @@protoc_insertion_point(builder_scope:bloombox.schema.services.pos.v1beta1.MemberSearch.Request)
+      // @@protoc_insertion_point(builder_scope:bloombox.services.pos.v1beta1.MemberSearch.Request)
     }
 
-    // @@protoc_insertion_point(class_scope:bloombox.schema.services.pos.v1beta1.MemberSearch.Request)
+    // @@protoc_insertion_point(class_scope:bloombox.services.pos.v1beta1.MemberSearch.Request)
     private static final io.bloombox.schema.services.pos.v1beta1.MemberSearch.Request DEFAULT_INSTANCE;
     static {
       DEFAULT_INSTANCE = new io.bloombox.schema.services.pos.v1beta1.MemberSearch.Request();
@@ -3727,6 +3801,7 @@ private static final long serialVersionUID = 0L;
 
     private static final com.google.protobuf.Parser<Request>
         PARSER = new com.google.protobuf.AbstractParser<Request>() {
+      @java.lang.Override
       public Request parsePartialFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -3744,6 +3819,7 @@ private static final long serialVersionUID = 0L;
       return PARSER;
     }
 
+    @java.lang.Override
     public io.bloombox.schema.services.pos.v1beta1.MemberSearch.Request getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
@@ -3751,7 +3827,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public interface ResponseOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:bloombox.schema.services.pos.v1beta1.MemberSearch.Response)
+      // @@protoc_insertion_point(interface_extends:bloombox.services.pos.v1beta1.MemberSearch.Response)
       com.google.protobuf.MessageOrBuilder {
 
     /**
@@ -3795,7 +3871,7 @@ private static final long serialVersionUID = 0L;
      * Matching member accounts.
      * </pre>
      *
-     * <code>repeated .bloombox.schema.identity.MembershipReference member = 4;</code>
+     * <code>repeated .bloombox.identity.MembershipReference member = 4;</code>
      */
     java.util.List<io.bloombox.schema.identity.AppMemberKey.MembershipReference> 
         getMemberList();
@@ -3804,7 +3880,7 @@ private static final long serialVersionUID = 0L;
      * Matching member accounts.
      * </pre>
      *
-     * <code>repeated .bloombox.schema.identity.MembershipReference member = 4;</code>
+     * <code>repeated .bloombox.identity.MembershipReference member = 4;</code>
      */
     io.bloombox.schema.identity.AppMemberKey.MembershipReference getMember(int index);
     /**
@@ -3812,7 +3888,7 @@ private static final long serialVersionUID = 0L;
      * Matching member accounts.
      * </pre>
      *
-     * <code>repeated .bloombox.schema.identity.MembershipReference member = 4;</code>
+     * <code>repeated .bloombox.identity.MembershipReference member = 4;</code>
      */
     int getMemberCount();
     /**
@@ -3820,7 +3896,7 @@ private static final long serialVersionUID = 0L;
      * Matching member accounts.
      * </pre>
      *
-     * <code>repeated .bloombox.schema.identity.MembershipReference member = 4;</code>
+     * <code>repeated .bloombox.identity.MembershipReference member = 4;</code>
      */
     java.util.List<? extends io.bloombox.schema.identity.AppMemberKey.MembershipReferenceOrBuilder> 
         getMemberOrBuilderList();
@@ -3829,7 +3905,7 @@ private static final long serialVersionUID = 0L;
      * Matching member accounts.
      * </pre>
      *
-     * <code>repeated .bloombox.schema.identity.MembershipReference member = 4;</code>
+     * <code>repeated .bloombox.identity.MembershipReference member = 4;</code>
      */
     io.bloombox.schema.identity.AppMemberKey.MembershipReferenceOrBuilder getMemberOrBuilder(
         int index);
@@ -3839,11 +3915,11 @@ private static final long serialVersionUID = 0L;
    * Specifies the structure of a response to a request to search for member accounts.
    * </pre>
    *
-   * Protobuf type {@code bloombox.schema.services.pos.v1beta1.MemberSearch.Response}
+   * Protobuf type {@code bloombox.services.pos.v1beta1.MemberSearch.Response}
    */
   public  static final class Response extends
       com.google.protobuf.GeneratedMessageV3 implements
-      // @@protoc_insertion_point(message_implements:bloombox.schema.services.pos.v1beta1.MemberSearch.Response)
+      // @@protoc_insertion_point(message_implements:bloombox.services.pos.v1beta1.MemberSearch.Response)
       ResponseOrBuilder {
   private static final long serialVersionUID = 0L;
     // Use Response.newBuilder() to construct.
@@ -3881,13 +3957,6 @@ private static final long serialVersionUID = 0L;
             case 0:
               done = true;
               break;
-            default: {
-              if (!parseUnknownFieldProto3(
-                  input, unknownFields, extensionRegistry, tag)) {
-                done = true;
-              }
-              break;
-            }
             case 10: {
               java.lang.String s = input.readStringRequireUtf8();
 
@@ -3913,6 +3982,13 @@ private static final long serialVersionUID = 0L;
                   input.readMessage(io.bloombox.schema.identity.AppMemberKey.MembershipReference.parser(), extensionRegistry));
               break;
             }
+            default: {
+              if (!parseUnknownFieldProto3(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
           }
         }
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
@@ -3930,12 +4006,13 @@ private static final long serialVersionUID = 0L;
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return io.bloombox.schema.services.pos.v1beta1.POSServiceBeta1.internal_static_bloombox_schema_services_pos_v1beta1_MemberSearch_Response_descriptor;
+      return io.bloombox.schema.services.pos.v1beta1.POSServiceBeta1.internal_static_bloombox_services_pos_v1beta1_MemberSearch_Response_descriptor;
     }
 
+    @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return io.bloombox.schema.services.pos.v1beta1.POSServiceBeta1.internal_static_bloombox_schema_services_pos_v1beta1_MemberSearch_Response_fieldAccessorTable
+      return io.bloombox.schema.services.pos.v1beta1.POSServiceBeta1.internal_static_bloombox_services_pos_v1beta1_MemberSearch_Response_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
               io.bloombox.schema.services.pos.v1beta1.MemberSearch.Response.class, io.bloombox.schema.services.pos.v1beta1.MemberSearch.Response.Builder.class);
     }
@@ -4016,7 +4093,7 @@ private static final long serialVersionUID = 0L;
      * Matching member accounts.
      * </pre>
      *
-     * <code>repeated .bloombox.schema.identity.MembershipReference member = 4;</code>
+     * <code>repeated .bloombox.identity.MembershipReference member = 4;</code>
      */
     public java.util.List<io.bloombox.schema.identity.AppMemberKey.MembershipReference> getMemberList() {
       return member_;
@@ -4026,7 +4103,7 @@ private static final long serialVersionUID = 0L;
      * Matching member accounts.
      * </pre>
      *
-     * <code>repeated .bloombox.schema.identity.MembershipReference member = 4;</code>
+     * <code>repeated .bloombox.identity.MembershipReference member = 4;</code>
      */
     public java.util.List<? extends io.bloombox.schema.identity.AppMemberKey.MembershipReferenceOrBuilder> 
         getMemberOrBuilderList() {
@@ -4037,7 +4114,7 @@ private static final long serialVersionUID = 0L;
      * Matching member accounts.
      * </pre>
      *
-     * <code>repeated .bloombox.schema.identity.MembershipReference member = 4;</code>
+     * <code>repeated .bloombox.identity.MembershipReference member = 4;</code>
      */
     public int getMemberCount() {
       return member_.size();
@@ -4047,7 +4124,7 @@ private static final long serialVersionUID = 0L;
      * Matching member accounts.
      * </pre>
      *
-     * <code>repeated .bloombox.schema.identity.MembershipReference member = 4;</code>
+     * <code>repeated .bloombox.identity.MembershipReference member = 4;</code>
      */
     public io.bloombox.schema.identity.AppMemberKey.MembershipReference getMember(int index) {
       return member_.get(index);
@@ -4057,7 +4134,7 @@ private static final long serialVersionUID = 0L;
      * Matching member accounts.
      * </pre>
      *
-     * <code>repeated .bloombox.schema.identity.MembershipReference member = 4;</code>
+     * <code>repeated .bloombox.identity.MembershipReference member = 4;</code>
      */
     public io.bloombox.schema.identity.AppMemberKey.MembershipReferenceOrBuilder getMemberOrBuilder(
         int index) {
@@ -4065,6 +4142,7 @@ private static final long serialVersionUID = 0L;
     }
 
     private byte memoizedIsInitialized = -1;
+    @java.lang.Override
     public final boolean isInitialized() {
       byte isInitialized = memoizedIsInitialized;
       if (isInitialized == 1) return true;
@@ -4074,6 +4152,7 @@ private static final long serialVersionUID = 0L;
       return true;
     }
 
+    @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
       if (!getCursorBytes().isEmpty()) {
@@ -4091,6 +4170,7 @@ private static final long serialVersionUID = 0L;
       unknownFields.writeTo(output);
     }
 
+    @java.lang.Override
     public int getSerializedSize() {
       int size = memoizedSize;
       if (size != -1) return size;
@@ -4231,6 +4311,7 @@ private static final long serialVersionUID = 0L;
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
 
+    @java.lang.Override
     public Builder newBuilderForType() { return newBuilder(); }
     public static Builder newBuilder() {
       return DEFAULT_INSTANCE.toBuilder();
@@ -4238,6 +4319,7 @@ private static final long serialVersionUID = 0L;
     public static Builder newBuilder(io.bloombox.schema.services.pos.v1beta1.MemberSearch.Response prototype) {
       return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
     }
+    @java.lang.Override
     public Builder toBuilder() {
       return this == DEFAULT_INSTANCE
           ? new Builder() : new Builder().mergeFrom(this);
@@ -4254,20 +4336,21 @@ private static final long serialVersionUID = 0L;
      * Specifies the structure of a response to a request to search for member accounts.
      * </pre>
      *
-     * Protobuf type {@code bloombox.schema.services.pos.v1beta1.MemberSearch.Response}
+     * Protobuf type {@code bloombox.services.pos.v1beta1.MemberSearch.Response}
      */
     public static final class Builder extends
         com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:bloombox.schema.services.pos.v1beta1.MemberSearch.Response)
+        // @@protoc_insertion_point(builder_implements:bloombox.services.pos.v1beta1.MemberSearch.Response)
         io.bloombox.schema.services.pos.v1beta1.MemberSearch.ResponseOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return io.bloombox.schema.services.pos.v1beta1.POSServiceBeta1.internal_static_bloombox_schema_services_pos_v1beta1_MemberSearch_Response_descriptor;
+        return io.bloombox.schema.services.pos.v1beta1.POSServiceBeta1.internal_static_bloombox_services_pos_v1beta1_MemberSearch_Response_descriptor;
       }
 
+      @java.lang.Override
       protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return io.bloombox.schema.services.pos.v1beta1.POSServiceBeta1.internal_static_bloombox_schema_services_pos_v1beta1_MemberSearch_Response_fieldAccessorTable
+        return io.bloombox.schema.services.pos.v1beta1.POSServiceBeta1.internal_static_bloombox_services_pos_v1beta1_MemberSearch_Response_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
                 io.bloombox.schema.services.pos.v1beta1.MemberSearch.Response.class, io.bloombox.schema.services.pos.v1beta1.MemberSearch.Response.Builder.class);
       }
@@ -4288,6 +4371,7 @@ private static final long serialVersionUID = 0L;
           getMemberFieldBuilder();
         }
       }
+      @java.lang.Override
       public Builder clear() {
         super.clear();
         cursor_ = "";
@@ -4305,15 +4389,18 @@ private static final long serialVersionUID = 0L;
         return this;
       }
 
+      @java.lang.Override
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return io.bloombox.schema.services.pos.v1beta1.POSServiceBeta1.internal_static_bloombox_schema_services_pos_v1beta1_MemberSearch_Response_descriptor;
+        return io.bloombox.schema.services.pos.v1beta1.POSServiceBeta1.internal_static_bloombox_services_pos_v1beta1_MemberSearch_Response_descriptor;
       }
 
+      @java.lang.Override
       public io.bloombox.schema.services.pos.v1beta1.MemberSearch.Response getDefaultInstanceForType() {
         return io.bloombox.schema.services.pos.v1beta1.MemberSearch.Response.getDefaultInstance();
       }
 
+      @java.lang.Override
       public io.bloombox.schema.services.pos.v1beta1.MemberSearch.Response build() {
         io.bloombox.schema.services.pos.v1beta1.MemberSearch.Response result = buildPartial();
         if (!result.isInitialized()) {
@@ -4322,6 +4409,7 @@ private static final long serialVersionUID = 0L;
         return result;
       }
 
+      @java.lang.Override
       public io.bloombox.schema.services.pos.v1beta1.MemberSearch.Response buildPartial() {
         io.bloombox.schema.services.pos.v1beta1.MemberSearch.Response result = new io.bloombox.schema.services.pos.v1beta1.MemberSearch.Response(this);
         int from_bitField0_ = bitField0_;
@@ -4343,32 +4431,39 @@ private static final long serialVersionUID = 0L;
         return result;
       }
 
+      @java.lang.Override
       public Builder clone() {
         return (Builder) super.clone();
       }
+      @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
         return (Builder) super.setField(field, value);
       }
+      @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
         return (Builder) super.clearField(field);
       }
+      @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
         return (Builder) super.clearOneof(oneof);
       }
+      @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
         return (Builder) super.setRepeatedField(field, index, value);
       }
+      @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
         return (Builder) super.addRepeatedField(field, value);
       }
+      @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
         if (other instanceof io.bloombox.schema.services.pos.v1beta1.MemberSearch.Response) {
           return mergeFrom((io.bloombox.schema.services.pos.v1beta1.MemberSearch.Response)other);
@@ -4421,10 +4516,12 @@ private static final long serialVersionUID = 0L;
         return this;
       }
 
+      @java.lang.Override
       public final boolean isInitialized() {
         return true;
       }
 
+      @java.lang.Override
       public Builder mergeFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -4626,7 +4723,7 @@ private static final long serialVersionUID = 0L;
        * Matching member accounts.
        * </pre>
        *
-       * <code>repeated .bloombox.schema.identity.MembershipReference member = 4;</code>
+       * <code>repeated .bloombox.identity.MembershipReference member = 4;</code>
        */
       public java.util.List<io.bloombox.schema.identity.AppMemberKey.MembershipReference> getMemberList() {
         if (memberBuilder_ == null) {
@@ -4640,7 +4737,7 @@ private static final long serialVersionUID = 0L;
        * Matching member accounts.
        * </pre>
        *
-       * <code>repeated .bloombox.schema.identity.MembershipReference member = 4;</code>
+       * <code>repeated .bloombox.identity.MembershipReference member = 4;</code>
        */
       public int getMemberCount() {
         if (memberBuilder_ == null) {
@@ -4654,7 +4751,7 @@ private static final long serialVersionUID = 0L;
        * Matching member accounts.
        * </pre>
        *
-       * <code>repeated .bloombox.schema.identity.MembershipReference member = 4;</code>
+       * <code>repeated .bloombox.identity.MembershipReference member = 4;</code>
        */
       public io.bloombox.schema.identity.AppMemberKey.MembershipReference getMember(int index) {
         if (memberBuilder_ == null) {
@@ -4668,7 +4765,7 @@ private static final long serialVersionUID = 0L;
        * Matching member accounts.
        * </pre>
        *
-       * <code>repeated .bloombox.schema.identity.MembershipReference member = 4;</code>
+       * <code>repeated .bloombox.identity.MembershipReference member = 4;</code>
        */
       public Builder setMember(
           int index, io.bloombox.schema.identity.AppMemberKey.MembershipReference value) {
@@ -4689,7 +4786,7 @@ private static final long serialVersionUID = 0L;
        * Matching member accounts.
        * </pre>
        *
-       * <code>repeated .bloombox.schema.identity.MembershipReference member = 4;</code>
+       * <code>repeated .bloombox.identity.MembershipReference member = 4;</code>
        */
       public Builder setMember(
           int index, io.bloombox.schema.identity.AppMemberKey.MembershipReference.Builder builderForValue) {
@@ -4707,7 +4804,7 @@ private static final long serialVersionUID = 0L;
        * Matching member accounts.
        * </pre>
        *
-       * <code>repeated .bloombox.schema.identity.MembershipReference member = 4;</code>
+       * <code>repeated .bloombox.identity.MembershipReference member = 4;</code>
        */
       public Builder addMember(io.bloombox.schema.identity.AppMemberKey.MembershipReference value) {
         if (memberBuilder_ == null) {
@@ -4727,7 +4824,7 @@ private static final long serialVersionUID = 0L;
        * Matching member accounts.
        * </pre>
        *
-       * <code>repeated .bloombox.schema.identity.MembershipReference member = 4;</code>
+       * <code>repeated .bloombox.identity.MembershipReference member = 4;</code>
        */
       public Builder addMember(
           int index, io.bloombox.schema.identity.AppMemberKey.MembershipReference value) {
@@ -4748,7 +4845,7 @@ private static final long serialVersionUID = 0L;
        * Matching member accounts.
        * </pre>
        *
-       * <code>repeated .bloombox.schema.identity.MembershipReference member = 4;</code>
+       * <code>repeated .bloombox.identity.MembershipReference member = 4;</code>
        */
       public Builder addMember(
           io.bloombox.schema.identity.AppMemberKey.MembershipReference.Builder builderForValue) {
@@ -4766,7 +4863,7 @@ private static final long serialVersionUID = 0L;
        * Matching member accounts.
        * </pre>
        *
-       * <code>repeated .bloombox.schema.identity.MembershipReference member = 4;</code>
+       * <code>repeated .bloombox.identity.MembershipReference member = 4;</code>
        */
       public Builder addMember(
           int index, io.bloombox.schema.identity.AppMemberKey.MembershipReference.Builder builderForValue) {
@@ -4784,7 +4881,7 @@ private static final long serialVersionUID = 0L;
        * Matching member accounts.
        * </pre>
        *
-       * <code>repeated .bloombox.schema.identity.MembershipReference member = 4;</code>
+       * <code>repeated .bloombox.identity.MembershipReference member = 4;</code>
        */
       public Builder addAllMember(
           java.lang.Iterable<? extends io.bloombox.schema.identity.AppMemberKey.MembershipReference> values) {
@@ -4803,7 +4900,7 @@ private static final long serialVersionUID = 0L;
        * Matching member accounts.
        * </pre>
        *
-       * <code>repeated .bloombox.schema.identity.MembershipReference member = 4;</code>
+       * <code>repeated .bloombox.identity.MembershipReference member = 4;</code>
        */
       public Builder clearMember() {
         if (memberBuilder_ == null) {
@@ -4820,7 +4917,7 @@ private static final long serialVersionUID = 0L;
        * Matching member accounts.
        * </pre>
        *
-       * <code>repeated .bloombox.schema.identity.MembershipReference member = 4;</code>
+       * <code>repeated .bloombox.identity.MembershipReference member = 4;</code>
        */
       public Builder removeMember(int index) {
         if (memberBuilder_ == null) {
@@ -4837,7 +4934,7 @@ private static final long serialVersionUID = 0L;
        * Matching member accounts.
        * </pre>
        *
-       * <code>repeated .bloombox.schema.identity.MembershipReference member = 4;</code>
+       * <code>repeated .bloombox.identity.MembershipReference member = 4;</code>
        */
       public io.bloombox.schema.identity.AppMemberKey.MembershipReference.Builder getMemberBuilder(
           int index) {
@@ -4848,7 +4945,7 @@ private static final long serialVersionUID = 0L;
        * Matching member accounts.
        * </pre>
        *
-       * <code>repeated .bloombox.schema.identity.MembershipReference member = 4;</code>
+       * <code>repeated .bloombox.identity.MembershipReference member = 4;</code>
        */
       public io.bloombox.schema.identity.AppMemberKey.MembershipReferenceOrBuilder getMemberOrBuilder(
           int index) {
@@ -4862,7 +4959,7 @@ private static final long serialVersionUID = 0L;
        * Matching member accounts.
        * </pre>
        *
-       * <code>repeated .bloombox.schema.identity.MembershipReference member = 4;</code>
+       * <code>repeated .bloombox.identity.MembershipReference member = 4;</code>
        */
       public java.util.List<? extends io.bloombox.schema.identity.AppMemberKey.MembershipReferenceOrBuilder> 
            getMemberOrBuilderList() {
@@ -4877,7 +4974,7 @@ private static final long serialVersionUID = 0L;
        * Matching member accounts.
        * </pre>
        *
-       * <code>repeated .bloombox.schema.identity.MembershipReference member = 4;</code>
+       * <code>repeated .bloombox.identity.MembershipReference member = 4;</code>
        */
       public io.bloombox.schema.identity.AppMemberKey.MembershipReference.Builder addMemberBuilder() {
         return getMemberFieldBuilder().addBuilder(
@@ -4888,7 +4985,7 @@ private static final long serialVersionUID = 0L;
        * Matching member accounts.
        * </pre>
        *
-       * <code>repeated .bloombox.schema.identity.MembershipReference member = 4;</code>
+       * <code>repeated .bloombox.identity.MembershipReference member = 4;</code>
        */
       public io.bloombox.schema.identity.AppMemberKey.MembershipReference.Builder addMemberBuilder(
           int index) {
@@ -4900,7 +4997,7 @@ private static final long serialVersionUID = 0L;
        * Matching member accounts.
        * </pre>
        *
-       * <code>repeated .bloombox.schema.identity.MembershipReference member = 4;</code>
+       * <code>repeated .bloombox.identity.MembershipReference member = 4;</code>
        */
       public java.util.List<io.bloombox.schema.identity.AppMemberKey.MembershipReference.Builder> 
            getMemberBuilderList() {
@@ -4920,21 +5017,23 @@ private static final long serialVersionUID = 0L;
         }
         return memberBuilder_;
       }
+      @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
         return super.setUnknownFieldsProto3(unknownFields);
       }
 
+      @java.lang.Override
       public final Builder mergeUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
         return super.mergeUnknownFields(unknownFields);
       }
 
 
-      // @@protoc_insertion_point(builder_scope:bloombox.schema.services.pos.v1beta1.MemberSearch.Response)
+      // @@protoc_insertion_point(builder_scope:bloombox.services.pos.v1beta1.MemberSearch.Response)
     }
 
-    // @@protoc_insertion_point(class_scope:bloombox.schema.services.pos.v1beta1.MemberSearch.Response)
+    // @@protoc_insertion_point(class_scope:bloombox.services.pos.v1beta1.MemberSearch.Response)
     private static final io.bloombox.schema.services.pos.v1beta1.MemberSearch.Response DEFAULT_INSTANCE;
     static {
       DEFAULT_INSTANCE = new io.bloombox.schema.services.pos.v1beta1.MemberSearch.Response();
@@ -4946,6 +5045,7 @@ private static final long serialVersionUID = 0L;
 
     private static final com.google.protobuf.Parser<Response>
         PARSER = new com.google.protobuf.AbstractParser<Response>() {
+      @java.lang.Override
       public Response parsePartialFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -4963,6 +5063,7 @@ private static final long serialVersionUID = 0L;
       return PARSER;
     }
 
+    @java.lang.Override
     public io.bloombox.schema.services.pos.v1beta1.MemberSearch.Response getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
@@ -4970,7 +5071,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public interface OperationOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:bloombox.schema.services.pos.v1beta1.MemberSearch.Operation)
+      // @@protoc_insertion_point(interface_extends:bloombox.services.pos.v1beta1.MemberSearch.Operation)
       com.google.protobuf.MessageOrBuilder {
 
     /**
@@ -4978,7 +5079,7 @@ private static final long serialVersionUID = 0L;
      * Request to search for members.
      * </pre>
      *
-     * <code>.bloombox.schema.services.pos.v1beta1.MemberSearch.Request request = 1;</code>
+     * <code>.bloombox.services.pos.v1beta1.MemberSearch.Request request = 1;</code>
      */
     boolean hasRequest();
     /**
@@ -4986,7 +5087,7 @@ private static final long serialVersionUID = 0L;
      * Request to search for members.
      * </pre>
      *
-     * <code>.bloombox.schema.services.pos.v1beta1.MemberSearch.Request request = 1;</code>
+     * <code>.bloombox.services.pos.v1beta1.MemberSearch.Request request = 1;</code>
      */
     io.bloombox.schema.services.pos.v1beta1.MemberSearch.Request getRequest();
     /**
@@ -4994,7 +5095,7 @@ private static final long serialVersionUID = 0L;
      * Request to search for members.
      * </pre>
      *
-     * <code>.bloombox.schema.services.pos.v1beta1.MemberSearch.Request request = 1;</code>
+     * <code>.bloombox.services.pos.v1beta1.MemberSearch.Request request = 1;</code>
      */
     io.bloombox.schema.services.pos.v1beta1.MemberSearch.RequestOrBuilder getRequestOrBuilder();
 
@@ -5003,7 +5104,7 @@ private static final long serialVersionUID = 0L;
      * Response to a request to search for members.
      * </pre>
      *
-     * <code>.bloombox.schema.services.pos.v1beta1.MemberSearch.Response response = 2;</code>
+     * <code>.bloombox.services.pos.v1beta1.MemberSearch.Response response = 2;</code>
      */
     boolean hasResponse();
     /**
@@ -5011,7 +5112,7 @@ private static final long serialVersionUID = 0L;
      * Response to a request to search for members.
      * </pre>
      *
-     * <code>.bloombox.schema.services.pos.v1beta1.MemberSearch.Response response = 2;</code>
+     * <code>.bloombox.services.pos.v1beta1.MemberSearch.Response response = 2;</code>
      */
     io.bloombox.schema.services.pos.v1beta1.MemberSearch.Response getResponse();
     /**
@@ -5019,7 +5120,7 @@ private static final long serialVersionUID = 0L;
      * Response to a request to search for members.
      * </pre>
      *
-     * <code>.bloombox.schema.services.pos.v1beta1.MemberSearch.Response response = 2;</code>
+     * <code>.bloombox.services.pos.v1beta1.MemberSearch.Response response = 2;</code>
      */
     io.bloombox.schema.services.pos.v1beta1.MemberSearch.ResponseOrBuilder getResponseOrBuilder();
   }
@@ -5028,11 +5129,11 @@ private static final long serialVersionUID = 0L;
    * Specifies one complete member search operation.
    * </pre>
    *
-   * Protobuf type {@code bloombox.schema.services.pos.v1beta1.MemberSearch.Operation}
+   * Protobuf type {@code bloombox.services.pos.v1beta1.MemberSearch.Operation}
    */
   public  static final class Operation extends
       com.google.protobuf.GeneratedMessageV3 implements
-      // @@protoc_insertion_point(message_implements:bloombox.schema.services.pos.v1beta1.MemberSearch.Operation)
+      // @@protoc_insertion_point(message_implements:bloombox.services.pos.v1beta1.MemberSearch.Operation)
       OperationOrBuilder {
   private static final long serialVersionUID = 0L;
     // Use Operation.newBuilder() to construct.
@@ -5066,13 +5167,6 @@ private static final long serialVersionUID = 0L;
             case 0:
               done = true;
               break;
-            default: {
-              if (!parseUnknownFieldProto3(
-                  input, unknownFields, extensionRegistry, tag)) {
-                done = true;
-              }
-              break;
-            }
             case 10: {
               io.bloombox.schema.services.pos.v1beta1.MemberSearch.Request.Builder subBuilder = null;
               if (request_ != null) {
@@ -5099,6 +5193,13 @@ private static final long serialVersionUID = 0L;
 
               break;
             }
+            default: {
+              if (!parseUnknownFieldProto3(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
           }
         }
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
@@ -5113,12 +5214,13 @@ private static final long serialVersionUID = 0L;
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return io.bloombox.schema.services.pos.v1beta1.POSServiceBeta1.internal_static_bloombox_schema_services_pos_v1beta1_MemberSearch_Operation_descriptor;
+      return io.bloombox.schema.services.pos.v1beta1.POSServiceBeta1.internal_static_bloombox_services_pos_v1beta1_MemberSearch_Operation_descriptor;
     }
 
+    @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return io.bloombox.schema.services.pos.v1beta1.POSServiceBeta1.internal_static_bloombox_schema_services_pos_v1beta1_MemberSearch_Operation_fieldAccessorTable
+      return io.bloombox.schema.services.pos.v1beta1.POSServiceBeta1.internal_static_bloombox_services_pos_v1beta1_MemberSearch_Operation_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
               io.bloombox.schema.services.pos.v1beta1.MemberSearch.Operation.class, io.bloombox.schema.services.pos.v1beta1.MemberSearch.Operation.Builder.class);
     }
@@ -5130,7 +5232,7 @@ private static final long serialVersionUID = 0L;
      * Request to search for members.
      * </pre>
      *
-     * <code>.bloombox.schema.services.pos.v1beta1.MemberSearch.Request request = 1;</code>
+     * <code>.bloombox.services.pos.v1beta1.MemberSearch.Request request = 1;</code>
      */
     public boolean hasRequest() {
       return request_ != null;
@@ -5140,7 +5242,7 @@ private static final long serialVersionUID = 0L;
      * Request to search for members.
      * </pre>
      *
-     * <code>.bloombox.schema.services.pos.v1beta1.MemberSearch.Request request = 1;</code>
+     * <code>.bloombox.services.pos.v1beta1.MemberSearch.Request request = 1;</code>
      */
     public io.bloombox.schema.services.pos.v1beta1.MemberSearch.Request getRequest() {
       return request_ == null ? io.bloombox.schema.services.pos.v1beta1.MemberSearch.Request.getDefaultInstance() : request_;
@@ -5150,7 +5252,7 @@ private static final long serialVersionUID = 0L;
      * Request to search for members.
      * </pre>
      *
-     * <code>.bloombox.schema.services.pos.v1beta1.MemberSearch.Request request = 1;</code>
+     * <code>.bloombox.services.pos.v1beta1.MemberSearch.Request request = 1;</code>
      */
     public io.bloombox.schema.services.pos.v1beta1.MemberSearch.RequestOrBuilder getRequestOrBuilder() {
       return getRequest();
@@ -5163,7 +5265,7 @@ private static final long serialVersionUID = 0L;
      * Response to a request to search for members.
      * </pre>
      *
-     * <code>.bloombox.schema.services.pos.v1beta1.MemberSearch.Response response = 2;</code>
+     * <code>.bloombox.services.pos.v1beta1.MemberSearch.Response response = 2;</code>
      */
     public boolean hasResponse() {
       return response_ != null;
@@ -5173,7 +5275,7 @@ private static final long serialVersionUID = 0L;
      * Response to a request to search for members.
      * </pre>
      *
-     * <code>.bloombox.schema.services.pos.v1beta1.MemberSearch.Response response = 2;</code>
+     * <code>.bloombox.services.pos.v1beta1.MemberSearch.Response response = 2;</code>
      */
     public io.bloombox.schema.services.pos.v1beta1.MemberSearch.Response getResponse() {
       return response_ == null ? io.bloombox.schema.services.pos.v1beta1.MemberSearch.Response.getDefaultInstance() : response_;
@@ -5183,13 +5285,14 @@ private static final long serialVersionUID = 0L;
      * Response to a request to search for members.
      * </pre>
      *
-     * <code>.bloombox.schema.services.pos.v1beta1.MemberSearch.Response response = 2;</code>
+     * <code>.bloombox.services.pos.v1beta1.MemberSearch.Response response = 2;</code>
      */
     public io.bloombox.schema.services.pos.v1beta1.MemberSearch.ResponseOrBuilder getResponseOrBuilder() {
       return getResponse();
     }
 
     private byte memoizedIsInitialized = -1;
+    @java.lang.Override
     public final boolean isInitialized() {
       byte isInitialized = memoizedIsInitialized;
       if (isInitialized == 1) return true;
@@ -5199,6 +5302,7 @@ private static final long serialVersionUID = 0L;
       return true;
     }
 
+    @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
       if (request_ != null) {
@@ -5210,6 +5314,7 @@ private static final long serialVersionUID = 0L;
       unknownFields.writeTo(output);
     }
 
+    @java.lang.Override
     public int getSerializedSize() {
       int size = memoizedSize;
       if (size != -1) return size;
@@ -5343,6 +5448,7 @@ private static final long serialVersionUID = 0L;
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
 
+    @java.lang.Override
     public Builder newBuilderForType() { return newBuilder(); }
     public static Builder newBuilder() {
       return DEFAULT_INSTANCE.toBuilder();
@@ -5350,6 +5456,7 @@ private static final long serialVersionUID = 0L;
     public static Builder newBuilder(io.bloombox.schema.services.pos.v1beta1.MemberSearch.Operation prototype) {
       return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
     }
+    @java.lang.Override
     public Builder toBuilder() {
       return this == DEFAULT_INSTANCE
           ? new Builder() : new Builder().mergeFrom(this);
@@ -5366,20 +5473,21 @@ private static final long serialVersionUID = 0L;
      * Specifies one complete member search operation.
      * </pre>
      *
-     * Protobuf type {@code bloombox.schema.services.pos.v1beta1.MemberSearch.Operation}
+     * Protobuf type {@code bloombox.services.pos.v1beta1.MemberSearch.Operation}
      */
     public static final class Builder extends
         com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:bloombox.schema.services.pos.v1beta1.MemberSearch.Operation)
+        // @@protoc_insertion_point(builder_implements:bloombox.services.pos.v1beta1.MemberSearch.Operation)
         io.bloombox.schema.services.pos.v1beta1.MemberSearch.OperationOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return io.bloombox.schema.services.pos.v1beta1.POSServiceBeta1.internal_static_bloombox_schema_services_pos_v1beta1_MemberSearch_Operation_descriptor;
+        return io.bloombox.schema.services.pos.v1beta1.POSServiceBeta1.internal_static_bloombox_services_pos_v1beta1_MemberSearch_Operation_descriptor;
       }
 
+      @java.lang.Override
       protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return io.bloombox.schema.services.pos.v1beta1.POSServiceBeta1.internal_static_bloombox_schema_services_pos_v1beta1_MemberSearch_Operation_fieldAccessorTable
+        return io.bloombox.schema.services.pos.v1beta1.POSServiceBeta1.internal_static_bloombox_services_pos_v1beta1_MemberSearch_Operation_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
                 io.bloombox.schema.services.pos.v1beta1.MemberSearch.Operation.class, io.bloombox.schema.services.pos.v1beta1.MemberSearch.Operation.Builder.class);
       }
@@ -5399,6 +5507,7 @@ private static final long serialVersionUID = 0L;
                 .alwaysUseFieldBuilders) {
         }
       }
+      @java.lang.Override
       public Builder clear() {
         super.clear();
         if (requestBuilder_ == null) {
@@ -5416,15 +5525,18 @@ private static final long serialVersionUID = 0L;
         return this;
       }
 
+      @java.lang.Override
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return io.bloombox.schema.services.pos.v1beta1.POSServiceBeta1.internal_static_bloombox_schema_services_pos_v1beta1_MemberSearch_Operation_descriptor;
+        return io.bloombox.schema.services.pos.v1beta1.POSServiceBeta1.internal_static_bloombox_services_pos_v1beta1_MemberSearch_Operation_descriptor;
       }
 
+      @java.lang.Override
       public io.bloombox.schema.services.pos.v1beta1.MemberSearch.Operation getDefaultInstanceForType() {
         return io.bloombox.schema.services.pos.v1beta1.MemberSearch.Operation.getDefaultInstance();
       }
 
+      @java.lang.Override
       public io.bloombox.schema.services.pos.v1beta1.MemberSearch.Operation build() {
         io.bloombox.schema.services.pos.v1beta1.MemberSearch.Operation result = buildPartial();
         if (!result.isInitialized()) {
@@ -5433,6 +5545,7 @@ private static final long serialVersionUID = 0L;
         return result;
       }
 
+      @java.lang.Override
       public io.bloombox.schema.services.pos.v1beta1.MemberSearch.Operation buildPartial() {
         io.bloombox.schema.services.pos.v1beta1.MemberSearch.Operation result = new io.bloombox.schema.services.pos.v1beta1.MemberSearch.Operation(this);
         if (requestBuilder_ == null) {
@@ -5449,32 +5562,39 @@ private static final long serialVersionUID = 0L;
         return result;
       }
 
+      @java.lang.Override
       public Builder clone() {
         return (Builder) super.clone();
       }
+      @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
         return (Builder) super.setField(field, value);
       }
+      @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
         return (Builder) super.clearField(field);
       }
+      @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
         return (Builder) super.clearOneof(oneof);
       }
+      @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
         return (Builder) super.setRepeatedField(field, index, value);
       }
+      @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
         return (Builder) super.addRepeatedField(field, value);
       }
+      @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
         if (other instanceof io.bloombox.schema.services.pos.v1beta1.MemberSearch.Operation) {
           return mergeFrom((io.bloombox.schema.services.pos.v1beta1.MemberSearch.Operation)other);
@@ -5497,10 +5617,12 @@ private static final long serialVersionUID = 0L;
         return this;
       }
 
+      @java.lang.Override
       public final boolean isInitialized() {
         return true;
       }
 
+      @java.lang.Override
       public Builder mergeFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -5527,7 +5649,7 @@ private static final long serialVersionUID = 0L;
        * Request to search for members.
        * </pre>
        *
-       * <code>.bloombox.schema.services.pos.v1beta1.MemberSearch.Request request = 1;</code>
+       * <code>.bloombox.services.pos.v1beta1.MemberSearch.Request request = 1;</code>
        */
       public boolean hasRequest() {
         return requestBuilder_ != null || request_ != null;
@@ -5537,7 +5659,7 @@ private static final long serialVersionUID = 0L;
        * Request to search for members.
        * </pre>
        *
-       * <code>.bloombox.schema.services.pos.v1beta1.MemberSearch.Request request = 1;</code>
+       * <code>.bloombox.services.pos.v1beta1.MemberSearch.Request request = 1;</code>
        */
       public io.bloombox.schema.services.pos.v1beta1.MemberSearch.Request getRequest() {
         if (requestBuilder_ == null) {
@@ -5551,7 +5673,7 @@ private static final long serialVersionUID = 0L;
        * Request to search for members.
        * </pre>
        *
-       * <code>.bloombox.schema.services.pos.v1beta1.MemberSearch.Request request = 1;</code>
+       * <code>.bloombox.services.pos.v1beta1.MemberSearch.Request request = 1;</code>
        */
       public Builder setRequest(io.bloombox.schema.services.pos.v1beta1.MemberSearch.Request value) {
         if (requestBuilder_ == null) {
@@ -5571,7 +5693,7 @@ private static final long serialVersionUID = 0L;
        * Request to search for members.
        * </pre>
        *
-       * <code>.bloombox.schema.services.pos.v1beta1.MemberSearch.Request request = 1;</code>
+       * <code>.bloombox.services.pos.v1beta1.MemberSearch.Request request = 1;</code>
        */
       public Builder setRequest(
           io.bloombox.schema.services.pos.v1beta1.MemberSearch.Request.Builder builderForValue) {
@@ -5589,7 +5711,7 @@ private static final long serialVersionUID = 0L;
        * Request to search for members.
        * </pre>
        *
-       * <code>.bloombox.schema.services.pos.v1beta1.MemberSearch.Request request = 1;</code>
+       * <code>.bloombox.services.pos.v1beta1.MemberSearch.Request request = 1;</code>
        */
       public Builder mergeRequest(io.bloombox.schema.services.pos.v1beta1.MemberSearch.Request value) {
         if (requestBuilder_ == null) {
@@ -5611,7 +5733,7 @@ private static final long serialVersionUID = 0L;
        * Request to search for members.
        * </pre>
        *
-       * <code>.bloombox.schema.services.pos.v1beta1.MemberSearch.Request request = 1;</code>
+       * <code>.bloombox.services.pos.v1beta1.MemberSearch.Request request = 1;</code>
        */
       public Builder clearRequest() {
         if (requestBuilder_ == null) {
@@ -5629,7 +5751,7 @@ private static final long serialVersionUID = 0L;
        * Request to search for members.
        * </pre>
        *
-       * <code>.bloombox.schema.services.pos.v1beta1.MemberSearch.Request request = 1;</code>
+       * <code>.bloombox.services.pos.v1beta1.MemberSearch.Request request = 1;</code>
        */
       public io.bloombox.schema.services.pos.v1beta1.MemberSearch.Request.Builder getRequestBuilder() {
         
@@ -5641,7 +5763,7 @@ private static final long serialVersionUID = 0L;
        * Request to search for members.
        * </pre>
        *
-       * <code>.bloombox.schema.services.pos.v1beta1.MemberSearch.Request request = 1;</code>
+       * <code>.bloombox.services.pos.v1beta1.MemberSearch.Request request = 1;</code>
        */
       public io.bloombox.schema.services.pos.v1beta1.MemberSearch.RequestOrBuilder getRequestOrBuilder() {
         if (requestBuilder_ != null) {
@@ -5656,7 +5778,7 @@ private static final long serialVersionUID = 0L;
        * Request to search for members.
        * </pre>
        *
-       * <code>.bloombox.schema.services.pos.v1beta1.MemberSearch.Request request = 1;</code>
+       * <code>.bloombox.services.pos.v1beta1.MemberSearch.Request request = 1;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
           io.bloombox.schema.services.pos.v1beta1.MemberSearch.Request, io.bloombox.schema.services.pos.v1beta1.MemberSearch.Request.Builder, io.bloombox.schema.services.pos.v1beta1.MemberSearch.RequestOrBuilder> 
@@ -5680,7 +5802,7 @@ private static final long serialVersionUID = 0L;
        * Response to a request to search for members.
        * </pre>
        *
-       * <code>.bloombox.schema.services.pos.v1beta1.MemberSearch.Response response = 2;</code>
+       * <code>.bloombox.services.pos.v1beta1.MemberSearch.Response response = 2;</code>
        */
       public boolean hasResponse() {
         return responseBuilder_ != null || response_ != null;
@@ -5690,7 +5812,7 @@ private static final long serialVersionUID = 0L;
        * Response to a request to search for members.
        * </pre>
        *
-       * <code>.bloombox.schema.services.pos.v1beta1.MemberSearch.Response response = 2;</code>
+       * <code>.bloombox.services.pos.v1beta1.MemberSearch.Response response = 2;</code>
        */
       public io.bloombox.schema.services.pos.v1beta1.MemberSearch.Response getResponse() {
         if (responseBuilder_ == null) {
@@ -5704,7 +5826,7 @@ private static final long serialVersionUID = 0L;
        * Response to a request to search for members.
        * </pre>
        *
-       * <code>.bloombox.schema.services.pos.v1beta1.MemberSearch.Response response = 2;</code>
+       * <code>.bloombox.services.pos.v1beta1.MemberSearch.Response response = 2;</code>
        */
       public Builder setResponse(io.bloombox.schema.services.pos.v1beta1.MemberSearch.Response value) {
         if (responseBuilder_ == null) {
@@ -5724,7 +5846,7 @@ private static final long serialVersionUID = 0L;
        * Response to a request to search for members.
        * </pre>
        *
-       * <code>.bloombox.schema.services.pos.v1beta1.MemberSearch.Response response = 2;</code>
+       * <code>.bloombox.services.pos.v1beta1.MemberSearch.Response response = 2;</code>
        */
       public Builder setResponse(
           io.bloombox.schema.services.pos.v1beta1.MemberSearch.Response.Builder builderForValue) {
@@ -5742,7 +5864,7 @@ private static final long serialVersionUID = 0L;
        * Response to a request to search for members.
        * </pre>
        *
-       * <code>.bloombox.schema.services.pos.v1beta1.MemberSearch.Response response = 2;</code>
+       * <code>.bloombox.services.pos.v1beta1.MemberSearch.Response response = 2;</code>
        */
       public Builder mergeResponse(io.bloombox.schema.services.pos.v1beta1.MemberSearch.Response value) {
         if (responseBuilder_ == null) {
@@ -5764,7 +5886,7 @@ private static final long serialVersionUID = 0L;
        * Response to a request to search for members.
        * </pre>
        *
-       * <code>.bloombox.schema.services.pos.v1beta1.MemberSearch.Response response = 2;</code>
+       * <code>.bloombox.services.pos.v1beta1.MemberSearch.Response response = 2;</code>
        */
       public Builder clearResponse() {
         if (responseBuilder_ == null) {
@@ -5782,7 +5904,7 @@ private static final long serialVersionUID = 0L;
        * Response to a request to search for members.
        * </pre>
        *
-       * <code>.bloombox.schema.services.pos.v1beta1.MemberSearch.Response response = 2;</code>
+       * <code>.bloombox.services.pos.v1beta1.MemberSearch.Response response = 2;</code>
        */
       public io.bloombox.schema.services.pos.v1beta1.MemberSearch.Response.Builder getResponseBuilder() {
         
@@ -5794,7 +5916,7 @@ private static final long serialVersionUID = 0L;
        * Response to a request to search for members.
        * </pre>
        *
-       * <code>.bloombox.schema.services.pos.v1beta1.MemberSearch.Response response = 2;</code>
+       * <code>.bloombox.services.pos.v1beta1.MemberSearch.Response response = 2;</code>
        */
       public io.bloombox.schema.services.pos.v1beta1.MemberSearch.ResponseOrBuilder getResponseOrBuilder() {
         if (responseBuilder_ != null) {
@@ -5809,7 +5931,7 @@ private static final long serialVersionUID = 0L;
        * Response to a request to search for members.
        * </pre>
        *
-       * <code>.bloombox.schema.services.pos.v1beta1.MemberSearch.Response response = 2;</code>
+       * <code>.bloombox.services.pos.v1beta1.MemberSearch.Response response = 2;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
           io.bloombox.schema.services.pos.v1beta1.MemberSearch.Response, io.bloombox.schema.services.pos.v1beta1.MemberSearch.Response.Builder, io.bloombox.schema.services.pos.v1beta1.MemberSearch.ResponseOrBuilder> 
@@ -5824,21 +5946,23 @@ private static final long serialVersionUID = 0L;
         }
         return responseBuilder_;
       }
+      @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
         return super.setUnknownFieldsProto3(unknownFields);
       }
 
+      @java.lang.Override
       public final Builder mergeUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
         return super.mergeUnknownFields(unknownFields);
       }
 
 
-      // @@protoc_insertion_point(builder_scope:bloombox.schema.services.pos.v1beta1.MemberSearch.Operation)
+      // @@protoc_insertion_point(builder_scope:bloombox.services.pos.v1beta1.MemberSearch.Operation)
     }
 
-    // @@protoc_insertion_point(class_scope:bloombox.schema.services.pos.v1beta1.MemberSearch.Operation)
+    // @@protoc_insertion_point(class_scope:bloombox.services.pos.v1beta1.MemberSearch.Operation)
     private static final io.bloombox.schema.services.pos.v1beta1.MemberSearch.Operation DEFAULT_INSTANCE;
     static {
       DEFAULT_INSTANCE = new io.bloombox.schema.services.pos.v1beta1.MemberSearch.Operation();
@@ -5850,6 +5974,7 @@ private static final long serialVersionUID = 0L;
 
     private static final com.google.protobuf.Parser<Operation>
         PARSER = new com.google.protobuf.AbstractParser<Operation>() {
+      @java.lang.Override
       public Operation parsePartialFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -5867,6 +5992,7 @@ private static final long serialVersionUID = 0L;
       return PARSER;
     }
 
+    @java.lang.Override
     public io.bloombox.schema.services.pos.v1beta1.MemberSearch.Operation getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
@@ -5874,6 +6000,7 @@ private static final long serialVersionUID = 0L;
   }
 
   private byte memoizedIsInitialized = -1;
+  @java.lang.Override
   public final boolean isInitialized() {
     byte isInitialized = memoizedIsInitialized;
     if (isInitialized == 1) return true;
@@ -5883,11 +6010,13 @@ private static final long serialVersionUID = 0L;
     return true;
   }
 
+  @java.lang.Override
   public void writeTo(com.google.protobuf.CodedOutputStream output)
                       throws java.io.IOException {
     unknownFields.writeTo(output);
   }
 
+  @java.lang.Override
   public int getSerializedSize() {
     int size = memoizedSize;
     if (size != -1) return size;
@@ -5995,6 +6124,7 @@ private static final long serialVersionUID = 0L;
         .parseWithIOException(PARSER, input, extensionRegistry);
   }
 
+  @java.lang.Override
   public Builder newBuilderForType() { return newBuilder(); }
   public static Builder newBuilder() {
     return DEFAULT_INSTANCE.toBuilder();
@@ -6002,6 +6132,7 @@ private static final long serialVersionUID = 0L;
   public static Builder newBuilder(io.bloombox.schema.services.pos.v1beta1.MemberSearch prototype) {
     return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
   }
+  @java.lang.Override
   public Builder toBuilder() {
     return this == DEFAULT_INSTANCE
         ? new Builder() : new Builder().mergeFrom(this);
@@ -6018,20 +6149,21 @@ private static final long serialVersionUID = 0L;
    * Specifies an RPC operation to search member accounts by ID, contact info, or name.
    * </pre>
    *
-   * Protobuf type {@code bloombox.schema.services.pos.v1beta1.MemberSearch}
+   * Protobuf type {@code bloombox.services.pos.v1beta1.MemberSearch}
    */
   public static final class Builder extends
       com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-      // @@protoc_insertion_point(builder_implements:bloombox.schema.services.pos.v1beta1.MemberSearch)
+      // @@protoc_insertion_point(builder_implements:bloombox.services.pos.v1beta1.MemberSearch)
       io.bloombox.schema.services.pos.v1beta1.MemberSearchOrBuilder {
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return io.bloombox.schema.services.pos.v1beta1.POSServiceBeta1.internal_static_bloombox_schema_services_pos_v1beta1_MemberSearch_descriptor;
+      return io.bloombox.schema.services.pos.v1beta1.POSServiceBeta1.internal_static_bloombox_services_pos_v1beta1_MemberSearch_descriptor;
     }
 
+    @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return io.bloombox.schema.services.pos.v1beta1.POSServiceBeta1.internal_static_bloombox_schema_services_pos_v1beta1_MemberSearch_fieldAccessorTable
+      return io.bloombox.schema.services.pos.v1beta1.POSServiceBeta1.internal_static_bloombox_services_pos_v1beta1_MemberSearch_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
               io.bloombox.schema.services.pos.v1beta1.MemberSearch.class, io.bloombox.schema.services.pos.v1beta1.MemberSearch.Builder.class);
     }
@@ -6051,20 +6183,24 @@ private static final long serialVersionUID = 0L;
               .alwaysUseFieldBuilders) {
       }
     }
+    @java.lang.Override
     public Builder clear() {
       super.clear();
       return this;
     }
 
+    @java.lang.Override
     public com.google.protobuf.Descriptors.Descriptor
         getDescriptorForType() {
-      return io.bloombox.schema.services.pos.v1beta1.POSServiceBeta1.internal_static_bloombox_schema_services_pos_v1beta1_MemberSearch_descriptor;
+      return io.bloombox.schema.services.pos.v1beta1.POSServiceBeta1.internal_static_bloombox_services_pos_v1beta1_MemberSearch_descriptor;
     }
 
+    @java.lang.Override
     public io.bloombox.schema.services.pos.v1beta1.MemberSearch getDefaultInstanceForType() {
       return io.bloombox.schema.services.pos.v1beta1.MemberSearch.getDefaultInstance();
     }
 
+    @java.lang.Override
     public io.bloombox.schema.services.pos.v1beta1.MemberSearch build() {
       io.bloombox.schema.services.pos.v1beta1.MemberSearch result = buildPartial();
       if (!result.isInitialized()) {
@@ -6073,38 +6209,46 @@ private static final long serialVersionUID = 0L;
       return result;
     }
 
+    @java.lang.Override
     public io.bloombox.schema.services.pos.v1beta1.MemberSearch buildPartial() {
       io.bloombox.schema.services.pos.v1beta1.MemberSearch result = new io.bloombox.schema.services.pos.v1beta1.MemberSearch(this);
       onBuilt();
       return result;
     }
 
+    @java.lang.Override
     public Builder clone() {
       return (Builder) super.clone();
     }
+    @java.lang.Override
     public Builder setField(
         com.google.protobuf.Descriptors.FieldDescriptor field,
         java.lang.Object value) {
       return (Builder) super.setField(field, value);
     }
+    @java.lang.Override
     public Builder clearField(
         com.google.protobuf.Descriptors.FieldDescriptor field) {
       return (Builder) super.clearField(field);
     }
+    @java.lang.Override
     public Builder clearOneof(
         com.google.protobuf.Descriptors.OneofDescriptor oneof) {
       return (Builder) super.clearOneof(oneof);
     }
+    @java.lang.Override
     public Builder setRepeatedField(
         com.google.protobuf.Descriptors.FieldDescriptor field,
         int index, java.lang.Object value) {
       return (Builder) super.setRepeatedField(field, index, value);
     }
+    @java.lang.Override
     public Builder addRepeatedField(
         com.google.protobuf.Descriptors.FieldDescriptor field,
         java.lang.Object value) {
       return (Builder) super.addRepeatedField(field, value);
     }
+    @java.lang.Override
     public Builder mergeFrom(com.google.protobuf.Message other) {
       if (other instanceof io.bloombox.schema.services.pos.v1beta1.MemberSearch) {
         return mergeFrom((io.bloombox.schema.services.pos.v1beta1.MemberSearch)other);
@@ -6121,10 +6265,12 @@ private static final long serialVersionUID = 0L;
       return this;
     }
 
+    @java.lang.Override
     public final boolean isInitialized() {
       return true;
     }
 
+    @java.lang.Override
     public Builder mergeFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -6142,21 +6288,23 @@ private static final long serialVersionUID = 0L;
       }
       return this;
     }
+    @java.lang.Override
     public final Builder setUnknownFields(
         final com.google.protobuf.UnknownFieldSet unknownFields) {
       return super.setUnknownFieldsProto3(unknownFields);
     }
 
+    @java.lang.Override
     public final Builder mergeUnknownFields(
         final com.google.protobuf.UnknownFieldSet unknownFields) {
       return super.mergeUnknownFields(unknownFields);
     }
 
 
-    // @@protoc_insertion_point(builder_scope:bloombox.schema.services.pos.v1beta1.MemberSearch)
+    // @@protoc_insertion_point(builder_scope:bloombox.services.pos.v1beta1.MemberSearch)
   }
 
-  // @@protoc_insertion_point(class_scope:bloombox.schema.services.pos.v1beta1.MemberSearch)
+  // @@protoc_insertion_point(class_scope:bloombox.services.pos.v1beta1.MemberSearch)
   private static final io.bloombox.schema.services.pos.v1beta1.MemberSearch DEFAULT_INSTANCE;
   static {
     DEFAULT_INSTANCE = new io.bloombox.schema.services.pos.v1beta1.MemberSearch();
@@ -6168,6 +6316,7 @@ private static final long serialVersionUID = 0L;
 
   private static final com.google.protobuf.Parser<MemberSearch>
       PARSER = new com.google.protobuf.AbstractParser<MemberSearch>() {
+    @java.lang.Override
     public MemberSearch parsePartialFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -6185,6 +6334,7 @@ private static final long serialVersionUID = 0L;
     return PARSER;
   }
 
+  @java.lang.Override
   public io.bloombox.schema.services.pos.v1beta1.MemberSearch getDefaultInstanceForType() {
     return DEFAULT_INSTANCE;
   }

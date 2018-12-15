@@ -1,8 +1,8 @@
 /*
- * Copyright 2018, Bloombox, LLC. All rights reserved.
+ * Copyright 2018, Momentum Ideas, Co. All rights reserved.
  *
  * Source and object computer code contained herein is the private intellectual
- * property of Bloombox, a California Limited Liability Corporation. Use of this
+ * property of Momentum Ideas Co., a Delaware Corporation. Use of this
  * code in source form requires permission in writing before use or the
  * assembly, distribution, or publishing of derivative works, for commercial
  * purposes or any other purpose, from a duly authorized officer of Momentum
@@ -25,11 +25,11 @@ package io.bloombox.schema.services.marketing.v1beta1;
  * Represents an RPC operation to perform a validation routine on a campaign, to check if it is ready to be sent.
  * </pre>
  *
- * Protobuf type {@code bloombox.schema.services.marketing.v1beta1.CampaignValidate}
+ * Protobuf type {@code bloombox.services.marketing.v1beta1.CampaignValidate}
  */
 public  final class CampaignValidate extends
     com.google.protobuf.GeneratedMessageV3 implements
-    // @@protoc_insertion_point(message_implements:bloombox.schema.services.marketing.v1beta1.CampaignValidate)
+    // @@protoc_insertion_point(message_implements:bloombox.services.marketing.v1beta1.CampaignValidate)
     CampaignValidateOrBuilder {
 private static final long serialVersionUID = 0L;
   // Use CampaignValidate.newBuilder() to construct.
@@ -83,18 +83,19 @@ private static final long serialVersionUID = 0L;
   }
   public static final com.google.protobuf.Descriptors.Descriptor
       getDescriptor() {
-    return io.bloombox.schema.services.marketing.v1beta1.MarketingServiceBeta1.internal_static_bloombox_schema_services_marketing_v1beta1_CampaignValidate_descriptor;
+    return io.bloombox.schema.services.marketing.v1beta1.MarketingServiceBeta1.internal_static_bloombox_services_marketing_v1beta1_CampaignValidate_descriptor;
   }
 
+  @java.lang.Override
   protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internalGetFieldAccessorTable() {
-    return io.bloombox.schema.services.marketing.v1beta1.MarketingServiceBeta1.internal_static_bloombox_schema_services_marketing_v1beta1_CampaignValidate_fieldAccessorTable
+    return io.bloombox.schema.services.marketing.v1beta1.MarketingServiceBeta1.internal_static_bloombox_services_marketing_v1beta1_CampaignValidate_fieldAccessorTable
         .ensureFieldAccessorsInitialized(
             io.bloombox.schema.services.marketing.v1beta1.CampaignValidate.class, io.bloombox.schema.services.marketing.v1beta1.CampaignValidate.Builder.class);
   }
 
   public interface RequestOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:bloombox.schema.services.marketing.v1beta1.CampaignValidate.Request)
+      // @@protoc_insertion_point(interface_extends:bloombox.services.marketing.v1beta1.CampaignValidate.Request)
       com.google.protobuf.MessageOrBuilder {
 
     /**
@@ -120,11 +121,11 @@ private static final long serialVersionUID = 0L;
    * Request to perform validation on a marketing campaign.
    * </pre>
    *
-   * Protobuf type {@code bloombox.schema.services.marketing.v1beta1.CampaignValidate.Request}
+   * Protobuf type {@code bloombox.services.marketing.v1beta1.CampaignValidate.Request}
    */
   public  static final class Request extends
       com.google.protobuf.GeneratedMessageV3 implements
-      // @@protoc_insertion_point(message_implements:bloombox.schema.services.marketing.v1beta1.CampaignValidate.Request)
+      // @@protoc_insertion_point(message_implements:bloombox.services.marketing.v1beta1.CampaignValidate.Request)
       RequestOrBuilder {
   private static final long serialVersionUID = 0L;
     // Use Request.newBuilder() to construct.
@@ -159,17 +160,17 @@ private static final long serialVersionUID = 0L;
             case 0:
               done = true;
               break;
+            case 10: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              campaignId_ = s;
+              break;
+            }
             default: {
               if (!parseUnknownFieldProto3(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
-              break;
-            }
-            case 10: {
-              java.lang.String s = input.readStringRequireUtf8();
-
-              campaignId_ = s;
               break;
             }
           }
@@ -186,12 +187,13 @@ private static final long serialVersionUID = 0L;
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return io.bloombox.schema.services.marketing.v1beta1.MarketingServiceBeta1.internal_static_bloombox_schema_services_marketing_v1beta1_CampaignValidate_Request_descriptor;
+      return io.bloombox.schema.services.marketing.v1beta1.MarketingServiceBeta1.internal_static_bloombox_services_marketing_v1beta1_CampaignValidate_Request_descriptor;
     }
 
+    @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return io.bloombox.schema.services.marketing.v1beta1.MarketingServiceBeta1.internal_static_bloombox_schema_services_marketing_v1beta1_CampaignValidate_Request_fieldAccessorTable
+      return io.bloombox.schema.services.marketing.v1beta1.MarketingServiceBeta1.internal_static_bloombox_services_marketing_v1beta1_CampaignValidate_Request_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
               io.bloombox.schema.services.marketing.v1beta1.CampaignValidate.Request.class, io.bloombox.schema.services.marketing.v1beta1.CampaignValidate.Request.Builder.class);
     }
@@ -239,6 +241,7 @@ private static final long serialVersionUID = 0L;
     }
 
     private byte memoizedIsInitialized = -1;
+    @java.lang.Override
     public final boolean isInitialized() {
       byte isInitialized = memoizedIsInitialized;
       if (isInitialized == 1) return true;
@@ -248,6 +251,7 @@ private static final long serialVersionUID = 0L;
       return true;
     }
 
+    @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
       if (!getCampaignIdBytes().isEmpty()) {
@@ -256,6 +260,7 @@ private static final long serialVersionUID = 0L;
       unknownFields.writeTo(output);
     }
 
+    @java.lang.Override
     public int getSerializedSize() {
       int size = memoizedSize;
       if (size != -1) return size;
@@ -370,6 +375,7 @@ private static final long serialVersionUID = 0L;
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
 
+    @java.lang.Override
     public Builder newBuilderForType() { return newBuilder(); }
     public static Builder newBuilder() {
       return DEFAULT_INSTANCE.toBuilder();
@@ -377,6 +383,7 @@ private static final long serialVersionUID = 0L;
     public static Builder newBuilder(io.bloombox.schema.services.marketing.v1beta1.CampaignValidate.Request prototype) {
       return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
     }
+    @java.lang.Override
     public Builder toBuilder() {
       return this == DEFAULT_INSTANCE
           ? new Builder() : new Builder().mergeFrom(this);
@@ -393,20 +400,21 @@ private static final long serialVersionUID = 0L;
      * Request to perform validation on a marketing campaign.
      * </pre>
      *
-     * Protobuf type {@code bloombox.schema.services.marketing.v1beta1.CampaignValidate.Request}
+     * Protobuf type {@code bloombox.services.marketing.v1beta1.CampaignValidate.Request}
      */
     public static final class Builder extends
         com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:bloombox.schema.services.marketing.v1beta1.CampaignValidate.Request)
+        // @@protoc_insertion_point(builder_implements:bloombox.services.marketing.v1beta1.CampaignValidate.Request)
         io.bloombox.schema.services.marketing.v1beta1.CampaignValidate.RequestOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return io.bloombox.schema.services.marketing.v1beta1.MarketingServiceBeta1.internal_static_bloombox_schema_services_marketing_v1beta1_CampaignValidate_Request_descriptor;
+        return io.bloombox.schema.services.marketing.v1beta1.MarketingServiceBeta1.internal_static_bloombox_services_marketing_v1beta1_CampaignValidate_Request_descriptor;
       }
 
+      @java.lang.Override
       protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return io.bloombox.schema.services.marketing.v1beta1.MarketingServiceBeta1.internal_static_bloombox_schema_services_marketing_v1beta1_CampaignValidate_Request_fieldAccessorTable
+        return io.bloombox.schema.services.marketing.v1beta1.MarketingServiceBeta1.internal_static_bloombox_services_marketing_v1beta1_CampaignValidate_Request_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
                 io.bloombox.schema.services.marketing.v1beta1.CampaignValidate.Request.class, io.bloombox.schema.services.marketing.v1beta1.CampaignValidate.Request.Builder.class);
       }
@@ -426,6 +434,7 @@ private static final long serialVersionUID = 0L;
                 .alwaysUseFieldBuilders) {
         }
       }
+      @java.lang.Override
       public Builder clear() {
         super.clear();
         campaignId_ = "";
@@ -433,15 +442,18 @@ private static final long serialVersionUID = 0L;
         return this;
       }
 
+      @java.lang.Override
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return io.bloombox.schema.services.marketing.v1beta1.MarketingServiceBeta1.internal_static_bloombox_schema_services_marketing_v1beta1_CampaignValidate_Request_descriptor;
+        return io.bloombox.schema.services.marketing.v1beta1.MarketingServiceBeta1.internal_static_bloombox_services_marketing_v1beta1_CampaignValidate_Request_descriptor;
       }
 
+      @java.lang.Override
       public io.bloombox.schema.services.marketing.v1beta1.CampaignValidate.Request getDefaultInstanceForType() {
         return io.bloombox.schema.services.marketing.v1beta1.CampaignValidate.Request.getDefaultInstance();
       }
 
+      @java.lang.Override
       public io.bloombox.schema.services.marketing.v1beta1.CampaignValidate.Request build() {
         io.bloombox.schema.services.marketing.v1beta1.CampaignValidate.Request result = buildPartial();
         if (!result.isInitialized()) {
@@ -450,6 +462,7 @@ private static final long serialVersionUID = 0L;
         return result;
       }
 
+      @java.lang.Override
       public io.bloombox.schema.services.marketing.v1beta1.CampaignValidate.Request buildPartial() {
         io.bloombox.schema.services.marketing.v1beta1.CampaignValidate.Request result = new io.bloombox.schema.services.marketing.v1beta1.CampaignValidate.Request(this);
         result.campaignId_ = campaignId_;
@@ -457,32 +470,39 @@ private static final long serialVersionUID = 0L;
         return result;
       }
 
+      @java.lang.Override
       public Builder clone() {
         return (Builder) super.clone();
       }
+      @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
         return (Builder) super.setField(field, value);
       }
+      @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
         return (Builder) super.clearField(field);
       }
+      @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
         return (Builder) super.clearOneof(oneof);
       }
+      @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
         return (Builder) super.setRepeatedField(field, index, value);
       }
+      @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
         return (Builder) super.addRepeatedField(field, value);
       }
+      @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
         if (other instanceof io.bloombox.schema.services.marketing.v1beta1.CampaignValidate.Request) {
           return mergeFrom((io.bloombox.schema.services.marketing.v1beta1.CampaignValidate.Request)other);
@@ -503,10 +523,12 @@ private static final long serialVersionUID = 0L;
         return this;
       }
 
+      @java.lang.Override
       public final boolean isInitialized() {
         return true;
       }
 
+      @java.lang.Override
       public Builder mergeFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -613,21 +635,23 @@ private static final long serialVersionUID = 0L;
         onChanged();
         return this;
       }
+      @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
         return super.setUnknownFieldsProto3(unknownFields);
       }
 
+      @java.lang.Override
       public final Builder mergeUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
         return super.mergeUnknownFields(unknownFields);
       }
 
 
-      // @@protoc_insertion_point(builder_scope:bloombox.schema.services.marketing.v1beta1.CampaignValidate.Request)
+      // @@protoc_insertion_point(builder_scope:bloombox.services.marketing.v1beta1.CampaignValidate.Request)
     }
 
-    // @@protoc_insertion_point(class_scope:bloombox.schema.services.marketing.v1beta1.CampaignValidate.Request)
+    // @@protoc_insertion_point(class_scope:bloombox.services.marketing.v1beta1.CampaignValidate.Request)
     private static final io.bloombox.schema.services.marketing.v1beta1.CampaignValidate.Request DEFAULT_INSTANCE;
     static {
       DEFAULT_INSTANCE = new io.bloombox.schema.services.marketing.v1beta1.CampaignValidate.Request();
@@ -639,6 +663,7 @@ private static final long serialVersionUID = 0L;
 
     private static final com.google.protobuf.Parser<Request>
         PARSER = new com.google.protobuf.AbstractParser<Request>() {
+      @java.lang.Override
       public Request parsePartialFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -656,6 +681,7 @@ private static final long serialVersionUID = 0L;
       return PARSER;
     }
 
+    @java.lang.Override
     public io.bloombox.schema.services.marketing.v1beta1.CampaignValidate.Request getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
@@ -663,7 +689,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public interface ResponseOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:bloombox.schema.services.marketing.v1beta1.CampaignValidate.Response)
+      // @@protoc_insertion_point(interface_extends:bloombox.services.marketing.v1beta1.CampaignValidate.Response)
       com.google.protobuf.MessageOrBuilder {
 
     /**
@@ -671,7 +697,7 @@ private static final long serialVersionUID = 0L;
      * Error encountered during campaign validation, if any, or `NO_ERROR`.
      * </pre>
      *
-     * <code>.bloombox.schema.services.marketing.v1beta1.MarketingError err = 1;</code>
+     * <code>.bloombox.services.marketing.v1beta1.MarketingError err = 1;</code>
      */
     int getErrValue();
     /**
@@ -679,7 +705,7 @@ private static final long serialVersionUID = 0L;
      * Error encountered during campaign validation, if any, or `NO_ERROR`.
      * </pre>
      *
-     * <code>.bloombox.schema.services.marketing.v1beta1.MarketingError err = 1;</code>
+     * <code>.bloombox.services.marketing.v1beta1.MarketingError err = 1;</code>
      */
     io.bloombox.schema.services.marketing.v1beta1.MarketingError getErr();
   }
@@ -688,11 +714,11 @@ private static final long serialVersionUID = 0L;
    * Response to a request to perform validation on a marketing campaign.
    * </pre>
    *
-   * Protobuf type {@code bloombox.schema.services.marketing.v1beta1.CampaignValidate.Response}
+   * Protobuf type {@code bloombox.services.marketing.v1beta1.CampaignValidate.Response}
    */
   public  static final class Response extends
       com.google.protobuf.GeneratedMessageV3 implements
-      // @@protoc_insertion_point(message_implements:bloombox.schema.services.marketing.v1beta1.CampaignValidate.Response)
+      // @@protoc_insertion_point(message_implements:bloombox.services.marketing.v1beta1.CampaignValidate.Response)
       ResponseOrBuilder {
   private static final long serialVersionUID = 0L;
     // Use Response.newBuilder() to construct.
@@ -727,17 +753,17 @@ private static final long serialVersionUID = 0L;
             case 0:
               done = true;
               break;
+            case 8: {
+              int rawValue = input.readEnum();
+
+              err_ = rawValue;
+              break;
+            }
             default: {
               if (!parseUnknownFieldProto3(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
-              break;
-            }
-            case 8: {
-              int rawValue = input.readEnum();
-
-              err_ = rawValue;
               break;
             }
           }
@@ -754,12 +780,13 @@ private static final long serialVersionUID = 0L;
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return io.bloombox.schema.services.marketing.v1beta1.MarketingServiceBeta1.internal_static_bloombox_schema_services_marketing_v1beta1_CampaignValidate_Response_descriptor;
+      return io.bloombox.schema.services.marketing.v1beta1.MarketingServiceBeta1.internal_static_bloombox_services_marketing_v1beta1_CampaignValidate_Response_descriptor;
     }
 
+    @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return io.bloombox.schema.services.marketing.v1beta1.MarketingServiceBeta1.internal_static_bloombox_schema_services_marketing_v1beta1_CampaignValidate_Response_fieldAccessorTable
+      return io.bloombox.schema.services.marketing.v1beta1.MarketingServiceBeta1.internal_static_bloombox_services_marketing_v1beta1_CampaignValidate_Response_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
               io.bloombox.schema.services.marketing.v1beta1.CampaignValidate.Response.class, io.bloombox.schema.services.marketing.v1beta1.CampaignValidate.Response.Builder.class);
     }
@@ -771,7 +798,7 @@ private static final long serialVersionUID = 0L;
      * Error encountered during campaign validation, if any, or `NO_ERROR`.
      * </pre>
      *
-     * <code>.bloombox.schema.services.marketing.v1beta1.MarketingError err = 1;</code>
+     * <code>.bloombox.services.marketing.v1beta1.MarketingError err = 1;</code>
      */
     public int getErrValue() {
       return err_;
@@ -781,14 +808,16 @@ private static final long serialVersionUID = 0L;
      * Error encountered during campaign validation, if any, or `NO_ERROR`.
      * </pre>
      *
-     * <code>.bloombox.schema.services.marketing.v1beta1.MarketingError err = 1;</code>
+     * <code>.bloombox.services.marketing.v1beta1.MarketingError err = 1;</code>
      */
     public io.bloombox.schema.services.marketing.v1beta1.MarketingError getErr() {
+      @SuppressWarnings("deprecation")
       io.bloombox.schema.services.marketing.v1beta1.MarketingError result = io.bloombox.schema.services.marketing.v1beta1.MarketingError.valueOf(err_);
       return result == null ? io.bloombox.schema.services.marketing.v1beta1.MarketingError.UNRECOGNIZED : result;
     }
 
     private byte memoizedIsInitialized = -1;
+    @java.lang.Override
     public final boolean isInitialized() {
       byte isInitialized = memoizedIsInitialized;
       if (isInitialized == 1) return true;
@@ -798,6 +827,7 @@ private static final long serialVersionUID = 0L;
       return true;
     }
 
+    @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
       if (err_ != io.bloombox.schema.services.marketing.v1beta1.MarketingError.NO_ERROR.getNumber()) {
@@ -806,6 +836,7 @@ private static final long serialVersionUID = 0L;
       unknownFields.writeTo(output);
     }
 
+    @java.lang.Override
     public int getSerializedSize() {
       int size = memoizedSize;
       if (size != -1) return size;
@@ -920,6 +951,7 @@ private static final long serialVersionUID = 0L;
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
 
+    @java.lang.Override
     public Builder newBuilderForType() { return newBuilder(); }
     public static Builder newBuilder() {
       return DEFAULT_INSTANCE.toBuilder();
@@ -927,6 +959,7 @@ private static final long serialVersionUID = 0L;
     public static Builder newBuilder(io.bloombox.schema.services.marketing.v1beta1.CampaignValidate.Response prototype) {
       return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
     }
+    @java.lang.Override
     public Builder toBuilder() {
       return this == DEFAULT_INSTANCE
           ? new Builder() : new Builder().mergeFrom(this);
@@ -943,20 +976,21 @@ private static final long serialVersionUID = 0L;
      * Response to a request to perform validation on a marketing campaign.
      * </pre>
      *
-     * Protobuf type {@code bloombox.schema.services.marketing.v1beta1.CampaignValidate.Response}
+     * Protobuf type {@code bloombox.services.marketing.v1beta1.CampaignValidate.Response}
      */
     public static final class Builder extends
         com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:bloombox.schema.services.marketing.v1beta1.CampaignValidate.Response)
+        // @@protoc_insertion_point(builder_implements:bloombox.services.marketing.v1beta1.CampaignValidate.Response)
         io.bloombox.schema.services.marketing.v1beta1.CampaignValidate.ResponseOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return io.bloombox.schema.services.marketing.v1beta1.MarketingServiceBeta1.internal_static_bloombox_schema_services_marketing_v1beta1_CampaignValidate_Response_descriptor;
+        return io.bloombox.schema.services.marketing.v1beta1.MarketingServiceBeta1.internal_static_bloombox_services_marketing_v1beta1_CampaignValidate_Response_descriptor;
       }
 
+      @java.lang.Override
       protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return io.bloombox.schema.services.marketing.v1beta1.MarketingServiceBeta1.internal_static_bloombox_schema_services_marketing_v1beta1_CampaignValidate_Response_fieldAccessorTable
+        return io.bloombox.schema.services.marketing.v1beta1.MarketingServiceBeta1.internal_static_bloombox_services_marketing_v1beta1_CampaignValidate_Response_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
                 io.bloombox.schema.services.marketing.v1beta1.CampaignValidate.Response.class, io.bloombox.schema.services.marketing.v1beta1.CampaignValidate.Response.Builder.class);
       }
@@ -976,6 +1010,7 @@ private static final long serialVersionUID = 0L;
                 .alwaysUseFieldBuilders) {
         }
       }
+      @java.lang.Override
       public Builder clear() {
         super.clear();
         err_ = 0;
@@ -983,15 +1018,18 @@ private static final long serialVersionUID = 0L;
         return this;
       }
 
+      @java.lang.Override
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return io.bloombox.schema.services.marketing.v1beta1.MarketingServiceBeta1.internal_static_bloombox_schema_services_marketing_v1beta1_CampaignValidate_Response_descriptor;
+        return io.bloombox.schema.services.marketing.v1beta1.MarketingServiceBeta1.internal_static_bloombox_services_marketing_v1beta1_CampaignValidate_Response_descriptor;
       }
 
+      @java.lang.Override
       public io.bloombox.schema.services.marketing.v1beta1.CampaignValidate.Response getDefaultInstanceForType() {
         return io.bloombox.schema.services.marketing.v1beta1.CampaignValidate.Response.getDefaultInstance();
       }
 
+      @java.lang.Override
       public io.bloombox.schema.services.marketing.v1beta1.CampaignValidate.Response build() {
         io.bloombox.schema.services.marketing.v1beta1.CampaignValidate.Response result = buildPartial();
         if (!result.isInitialized()) {
@@ -1000,6 +1038,7 @@ private static final long serialVersionUID = 0L;
         return result;
       }
 
+      @java.lang.Override
       public io.bloombox.schema.services.marketing.v1beta1.CampaignValidate.Response buildPartial() {
         io.bloombox.schema.services.marketing.v1beta1.CampaignValidate.Response result = new io.bloombox.schema.services.marketing.v1beta1.CampaignValidate.Response(this);
         result.err_ = err_;
@@ -1007,32 +1046,39 @@ private static final long serialVersionUID = 0L;
         return result;
       }
 
+      @java.lang.Override
       public Builder clone() {
         return (Builder) super.clone();
       }
+      @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
         return (Builder) super.setField(field, value);
       }
+      @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
         return (Builder) super.clearField(field);
       }
+      @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
         return (Builder) super.clearOneof(oneof);
       }
+      @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
         return (Builder) super.setRepeatedField(field, index, value);
       }
+      @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
         return (Builder) super.addRepeatedField(field, value);
       }
+      @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
         if (other instanceof io.bloombox.schema.services.marketing.v1beta1.CampaignValidate.Response) {
           return mergeFrom((io.bloombox.schema.services.marketing.v1beta1.CampaignValidate.Response)other);
@@ -1052,10 +1098,12 @@ private static final long serialVersionUID = 0L;
         return this;
       }
 
+      @java.lang.Override
       public final boolean isInitialized() {
         return true;
       }
 
+      @java.lang.Override
       public Builder mergeFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -1080,7 +1128,7 @@ private static final long serialVersionUID = 0L;
        * Error encountered during campaign validation, if any, or `NO_ERROR`.
        * </pre>
        *
-       * <code>.bloombox.schema.services.marketing.v1beta1.MarketingError err = 1;</code>
+       * <code>.bloombox.services.marketing.v1beta1.MarketingError err = 1;</code>
        */
       public int getErrValue() {
         return err_;
@@ -1090,7 +1138,7 @@ private static final long serialVersionUID = 0L;
        * Error encountered during campaign validation, if any, or `NO_ERROR`.
        * </pre>
        *
-       * <code>.bloombox.schema.services.marketing.v1beta1.MarketingError err = 1;</code>
+       * <code>.bloombox.services.marketing.v1beta1.MarketingError err = 1;</code>
        */
       public Builder setErrValue(int value) {
         err_ = value;
@@ -1102,9 +1150,10 @@ private static final long serialVersionUID = 0L;
        * Error encountered during campaign validation, if any, or `NO_ERROR`.
        * </pre>
        *
-       * <code>.bloombox.schema.services.marketing.v1beta1.MarketingError err = 1;</code>
+       * <code>.bloombox.services.marketing.v1beta1.MarketingError err = 1;</code>
        */
       public io.bloombox.schema.services.marketing.v1beta1.MarketingError getErr() {
+        @SuppressWarnings("deprecation")
         io.bloombox.schema.services.marketing.v1beta1.MarketingError result = io.bloombox.schema.services.marketing.v1beta1.MarketingError.valueOf(err_);
         return result == null ? io.bloombox.schema.services.marketing.v1beta1.MarketingError.UNRECOGNIZED : result;
       }
@@ -1113,7 +1162,7 @@ private static final long serialVersionUID = 0L;
        * Error encountered during campaign validation, if any, or `NO_ERROR`.
        * </pre>
        *
-       * <code>.bloombox.schema.services.marketing.v1beta1.MarketingError err = 1;</code>
+       * <code>.bloombox.services.marketing.v1beta1.MarketingError err = 1;</code>
        */
       public Builder setErr(io.bloombox.schema.services.marketing.v1beta1.MarketingError value) {
         if (value == null) {
@@ -1129,7 +1178,7 @@ private static final long serialVersionUID = 0L;
        * Error encountered during campaign validation, if any, or `NO_ERROR`.
        * </pre>
        *
-       * <code>.bloombox.schema.services.marketing.v1beta1.MarketingError err = 1;</code>
+       * <code>.bloombox.services.marketing.v1beta1.MarketingError err = 1;</code>
        */
       public Builder clearErr() {
         
@@ -1137,21 +1186,23 @@ private static final long serialVersionUID = 0L;
         onChanged();
         return this;
       }
+      @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
         return super.setUnknownFieldsProto3(unknownFields);
       }
 
+      @java.lang.Override
       public final Builder mergeUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
         return super.mergeUnknownFields(unknownFields);
       }
 
 
-      // @@protoc_insertion_point(builder_scope:bloombox.schema.services.marketing.v1beta1.CampaignValidate.Response)
+      // @@protoc_insertion_point(builder_scope:bloombox.services.marketing.v1beta1.CampaignValidate.Response)
     }
 
-    // @@protoc_insertion_point(class_scope:bloombox.schema.services.marketing.v1beta1.CampaignValidate.Response)
+    // @@protoc_insertion_point(class_scope:bloombox.services.marketing.v1beta1.CampaignValidate.Response)
     private static final io.bloombox.schema.services.marketing.v1beta1.CampaignValidate.Response DEFAULT_INSTANCE;
     static {
       DEFAULT_INSTANCE = new io.bloombox.schema.services.marketing.v1beta1.CampaignValidate.Response();
@@ -1163,6 +1214,7 @@ private static final long serialVersionUID = 0L;
 
     private static final com.google.protobuf.Parser<Response>
         PARSER = new com.google.protobuf.AbstractParser<Response>() {
+      @java.lang.Override
       public Response parsePartialFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -1180,6 +1232,7 @@ private static final long serialVersionUID = 0L;
       return PARSER;
     }
 
+    @java.lang.Override
     public io.bloombox.schema.services.marketing.v1beta1.CampaignValidate.Response getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
@@ -1187,6 +1240,7 @@ private static final long serialVersionUID = 0L;
   }
 
   private byte memoizedIsInitialized = -1;
+  @java.lang.Override
   public final boolean isInitialized() {
     byte isInitialized = memoizedIsInitialized;
     if (isInitialized == 1) return true;
@@ -1196,11 +1250,13 @@ private static final long serialVersionUID = 0L;
     return true;
   }
 
+  @java.lang.Override
   public void writeTo(com.google.protobuf.CodedOutputStream output)
                       throws java.io.IOException {
     unknownFields.writeTo(output);
   }
 
+  @java.lang.Override
   public int getSerializedSize() {
     int size = memoizedSize;
     if (size != -1) return size;
@@ -1308,6 +1364,7 @@ private static final long serialVersionUID = 0L;
         .parseWithIOException(PARSER, input, extensionRegistry);
   }
 
+  @java.lang.Override
   public Builder newBuilderForType() { return newBuilder(); }
   public static Builder newBuilder() {
     return DEFAULT_INSTANCE.toBuilder();
@@ -1315,6 +1372,7 @@ private static final long serialVersionUID = 0L;
   public static Builder newBuilder(io.bloombox.schema.services.marketing.v1beta1.CampaignValidate prototype) {
     return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
   }
+  @java.lang.Override
   public Builder toBuilder() {
     return this == DEFAULT_INSTANCE
         ? new Builder() : new Builder().mergeFrom(this);
@@ -1331,20 +1389,21 @@ private static final long serialVersionUID = 0L;
    * Represents an RPC operation to perform a validation routine on a campaign, to check if it is ready to be sent.
    * </pre>
    *
-   * Protobuf type {@code bloombox.schema.services.marketing.v1beta1.CampaignValidate}
+   * Protobuf type {@code bloombox.services.marketing.v1beta1.CampaignValidate}
    */
   public static final class Builder extends
       com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-      // @@protoc_insertion_point(builder_implements:bloombox.schema.services.marketing.v1beta1.CampaignValidate)
+      // @@protoc_insertion_point(builder_implements:bloombox.services.marketing.v1beta1.CampaignValidate)
       io.bloombox.schema.services.marketing.v1beta1.CampaignValidateOrBuilder {
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return io.bloombox.schema.services.marketing.v1beta1.MarketingServiceBeta1.internal_static_bloombox_schema_services_marketing_v1beta1_CampaignValidate_descriptor;
+      return io.bloombox.schema.services.marketing.v1beta1.MarketingServiceBeta1.internal_static_bloombox_services_marketing_v1beta1_CampaignValidate_descriptor;
     }
 
+    @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return io.bloombox.schema.services.marketing.v1beta1.MarketingServiceBeta1.internal_static_bloombox_schema_services_marketing_v1beta1_CampaignValidate_fieldAccessorTable
+      return io.bloombox.schema.services.marketing.v1beta1.MarketingServiceBeta1.internal_static_bloombox_services_marketing_v1beta1_CampaignValidate_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
               io.bloombox.schema.services.marketing.v1beta1.CampaignValidate.class, io.bloombox.schema.services.marketing.v1beta1.CampaignValidate.Builder.class);
     }
@@ -1364,20 +1423,24 @@ private static final long serialVersionUID = 0L;
               .alwaysUseFieldBuilders) {
       }
     }
+    @java.lang.Override
     public Builder clear() {
       super.clear();
       return this;
     }
 
+    @java.lang.Override
     public com.google.protobuf.Descriptors.Descriptor
         getDescriptorForType() {
-      return io.bloombox.schema.services.marketing.v1beta1.MarketingServiceBeta1.internal_static_bloombox_schema_services_marketing_v1beta1_CampaignValidate_descriptor;
+      return io.bloombox.schema.services.marketing.v1beta1.MarketingServiceBeta1.internal_static_bloombox_services_marketing_v1beta1_CampaignValidate_descriptor;
     }
 
+    @java.lang.Override
     public io.bloombox.schema.services.marketing.v1beta1.CampaignValidate getDefaultInstanceForType() {
       return io.bloombox.schema.services.marketing.v1beta1.CampaignValidate.getDefaultInstance();
     }
 
+    @java.lang.Override
     public io.bloombox.schema.services.marketing.v1beta1.CampaignValidate build() {
       io.bloombox.schema.services.marketing.v1beta1.CampaignValidate result = buildPartial();
       if (!result.isInitialized()) {
@@ -1386,38 +1449,46 @@ private static final long serialVersionUID = 0L;
       return result;
     }
 
+    @java.lang.Override
     public io.bloombox.schema.services.marketing.v1beta1.CampaignValidate buildPartial() {
       io.bloombox.schema.services.marketing.v1beta1.CampaignValidate result = new io.bloombox.schema.services.marketing.v1beta1.CampaignValidate(this);
       onBuilt();
       return result;
     }
 
+    @java.lang.Override
     public Builder clone() {
       return (Builder) super.clone();
     }
+    @java.lang.Override
     public Builder setField(
         com.google.protobuf.Descriptors.FieldDescriptor field,
         java.lang.Object value) {
       return (Builder) super.setField(field, value);
     }
+    @java.lang.Override
     public Builder clearField(
         com.google.protobuf.Descriptors.FieldDescriptor field) {
       return (Builder) super.clearField(field);
     }
+    @java.lang.Override
     public Builder clearOneof(
         com.google.protobuf.Descriptors.OneofDescriptor oneof) {
       return (Builder) super.clearOneof(oneof);
     }
+    @java.lang.Override
     public Builder setRepeatedField(
         com.google.protobuf.Descriptors.FieldDescriptor field,
         int index, java.lang.Object value) {
       return (Builder) super.setRepeatedField(field, index, value);
     }
+    @java.lang.Override
     public Builder addRepeatedField(
         com.google.protobuf.Descriptors.FieldDescriptor field,
         java.lang.Object value) {
       return (Builder) super.addRepeatedField(field, value);
     }
+    @java.lang.Override
     public Builder mergeFrom(com.google.protobuf.Message other) {
       if (other instanceof io.bloombox.schema.services.marketing.v1beta1.CampaignValidate) {
         return mergeFrom((io.bloombox.schema.services.marketing.v1beta1.CampaignValidate)other);
@@ -1434,10 +1505,12 @@ private static final long serialVersionUID = 0L;
       return this;
     }
 
+    @java.lang.Override
     public final boolean isInitialized() {
       return true;
     }
 
+    @java.lang.Override
     public Builder mergeFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -1455,21 +1528,23 @@ private static final long serialVersionUID = 0L;
       }
       return this;
     }
+    @java.lang.Override
     public final Builder setUnknownFields(
         final com.google.protobuf.UnknownFieldSet unknownFields) {
       return super.setUnknownFieldsProto3(unknownFields);
     }
 
+    @java.lang.Override
     public final Builder mergeUnknownFields(
         final com.google.protobuf.UnknownFieldSet unknownFields) {
       return super.mergeUnknownFields(unknownFields);
     }
 
 
-    // @@protoc_insertion_point(builder_scope:bloombox.schema.services.marketing.v1beta1.CampaignValidate)
+    // @@protoc_insertion_point(builder_scope:bloombox.services.marketing.v1beta1.CampaignValidate)
   }
 
-  // @@protoc_insertion_point(class_scope:bloombox.schema.services.marketing.v1beta1.CampaignValidate)
+  // @@protoc_insertion_point(class_scope:bloombox.services.marketing.v1beta1.CampaignValidate)
   private static final io.bloombox.schema.services.marketing.v1beta1.CampaignValidate DEFAULT_INSTANCE;
   static {
     DEFAULT_INSTANCE = new io.bloombox.schema.services.marketing.v1beta1.CampaignValidate();
@@ -1481,6 +1556,7 @@ private static final long serialVersionUID = 0L;
 
   private static final com.google.protobuf.Parser<CampaignValidate>
       PARSER = new com.google.protobuf.AbstractParser<CampaignValidate>() {
+    @java.lang.Override
     public CampaignValidate parsePartialFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -1498,6 +1574,7 @@ private static final long serialVersionUID = 0L;
     return PARSER;
   }
 
+  @java.lang.Override
   public io.bloombox.schema.services.marketing.v1beta1.CampaignValidate getDefaultInstanceForType() {
     return DEFAULT_INSTANCE;
   }

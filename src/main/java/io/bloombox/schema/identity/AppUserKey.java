@@ -1,11 +1,12 @@
 /*
- * Copyright 2018, Bloombox, LLC.
+ * Copyright 2018, Momentum Ideas, Co. All rights reserved.
  *
- * Licensed under the Apache License, Version 2.0 (the "License");
- * you may not use this file except in compliance with the License.
- * You may obtain a copy of the License at
- *
- *     http://www.apache.org/licenses/LICENSE-2.0
+ * Source and object computer code contained herein is the private intellectual
+ * property of Momentum Ideas Co., a Delaware Corporation. Use of this
+ * code in source form requires permission in writing before use or the
+ * assembly, distribution, or publishing of derivative works, for commercial
+ * purposes or any other purpose, from a duly authorized officer of Momentum
+ * Ideas Co.
  *
  * Unless required by applicable law or agreed to in writing, software
  * distributed under the License is distributed on an "AS IS" BASIS,
@@ -31,7 +32,7 @@ public final class AppUserKey {
         (com.google.protobuf.ExtensionRegistryLite) registry);
   }
   public interface UserKeyOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:bloombox.schema.identity.UserKey)
+      // @@protoc_insertion_point(interface_extends:bloombox.identity.UserKey)
       com.google.protobuf.MessageOrBuilder {
 
     /**
@@ -75,11 +76,11 @@ public final class AppUserKey {
    * Represents a key that refers to a user account.
    * </pre>
    *
-   * Protobuf type {@code bloombox.schema.identity.UserKey}
+   * Protobuf type {@code bloombox.identity.UserKey}
    */
   public  static final class UserKey extends
       com.google.protobuf.GeneratedMessageV3 implements
-      // @@protoc_insertion_point(message_implements:bloombox.schema.identity.UserKey)
+      // @@protoc_insertion_point(message_implements:bloombox.identity.UserKey)
       UserKeyOrBuilder {
   private static final long serialVersionUID = 0L;
     // Use UserKey.newBuilder() to construct.
@@ -115,13 +116,6 @@ public final class AppUserKey {
             case 0:
               done = true;
               break;
-            default: {
-              if (!parseUnknownFieldProto3(
-                  input, unknownFields, extensionRegistry, tag)) {
-                done = true;
-              }
-              break;
-            }
             case 10: {
               java.lang.String s = input.readStringRequireUtf8();
 
@@ -132,6 +126,13 @@ public final class AppUserKey {
               java.lang.String s = input.readStringRequireUtf8();
 
               identity_ = s;
+              break;
+            }
+            default: {
+              if (!parseUnknownFieldProto3(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
               break;
             }
           }
@@ -148,12 +149,13 @@ public final class AppUserKey {
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return io.bloombox.schema.identity.AppUserKey.internal_static_bloombox_schema_identity_UserKey_descriptor;
+      return io.bloombox.schema.identity.AppUserKey.internal_static_bloombox_identity_UserKey_descriptor;
     }
 
+    @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return io.bloombox.schema.identity.AppUserKey.internal_static_bloombox_schema_identity_UserKey_fieldAccessorTable
+      return io.bloombox.schema.identity.AppUserKey.internal_static_bloombox_identity_UserKey_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
               io.bloombox.schema.identity.AppUserKey.UserKey.class, io.bloombox.schema.identity.AppUserKey.UserKey.Builder.class);
     }
@@ -243,6 +245,7 @@ public final class AppUserKey {
     }
 
     private byte memoizedIsInitialized = -1;
+    @java.lang.Override
     public final boolean isInitialized() {
       byte isInitialized = memoizedIsInitialized;
       if (isInitialized == 1) return true;
@@ -252,6 +255,7 @@ public final class AppUserKey {
       return true;
     }
 
+    @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
       if (!getUidBytes().isEmpty()) {
@@ -263,6 +267,7 @@ public final class AppUserKey {
       unknownFields.writeTo(output);
     }
 
+    @java.lang.Override
     public int getSerializedSize() {
       int size = memoizedSize;
       if (size != -1) return size;
@@ -384,6 +389,7 @@ public final class AppUserKey {
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
 
+    @java.lang.Override
     public Builder newBuilderForType() { return newBuilder(); }
     public static Builder newBuilder() {
       return DEFAULT_INSTANCE.toBuilder();
@@ -391,6 +397,7 @@ public final class AppUserKey {
     public static Builder newBuilder(io.bloombox.schema.identity.AppUserKey.UserKey prototype) {
       return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
     }
+    @java.lang.Override
     public Builder toBuilder() {
       return this == DEFAULT_INSTANCE
           ? new Builder() : new Builder().mergeFrom(this);
@@ -407,20 +414,21 @@ public final class AppUserKey {
      * Represents a key that refers to a user account.
      * </pre>
      *
-     * Protobuf type {@code bloombox.schema.identity.UserKey}
+     * Protobuf type {@code bloombox.identity.UserKey}
      */
     public static final class Builder extends
         com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:bloombox.schema.identity.UserKey)
+        // @@protoc_insertion_point(builder_implements:bloombox.identity.UserKey)
         io.bloombox.schema.identity.AppUserKey.UserKeyOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return io.bloombox.schema.identity.AppUserKey.internal_static_bloombox_schema_identity_UserKey_descriptor;
+        return io.bloombox.schema.identity.AppUserKey.internal_static_bloombox_identity_UserKey_descriptor;
       }
 
+      @java.lang.Override
       protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return io.bloombox.schema.identity.AppUserKey.internal_static_bloombox_schema_identity_UserKey_fieldAccessorTable
+        return io.bloombox.schema.identity.AppUserKey.internal_static_bloombox_identity_UserKey_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
                 io.bloombox.schema.identity.AppUserKey.UserKey.class, io.bloombox.schema.identity.AppUserKey.UserKey.Builder.class);
       }
@@ -440,6 +448,7 @@ public final class AppUserKey {
                 .alwaysUseFieldBuilders) {
         }
       }
+      @java.lang.Override
       public Builder clear() {
         super.clear();
         uid_ = "";
@@ -449,15 +458,18 @@ public final class AppUserKey {
         return this;
       }
 
+      @java.lang.Override
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return io.bloombox.schema.identity.AppUserKey.internal_static_bloombox_schema_identity_UserKey_descriptor;
+        return io.bloombox.schema.identity.AppUserKey.internal_static_bloombox_identity_UserKey_descriptor;
       }
 
+      @java.lang.Override
       public io.bloombox.schema.identity.AppUserKey.UserKey getDefaultInstanceForType() {
         return io.bloombox.schema.identity.AppUserKey.UserKey.getDefaultInstance();
       }
 
+      @java.lang.Override
       public io.bloombox.schema.identity.AppUserKey.UserKey build() {
         io.bloombox.schema.identity.AppUserKey.UserKey result = buildPartial();
         if (!result.isInitialized()) {
@@ -466,6 +478,7 @@ public final class AppUserKey {
         return result;
       }
 
+      @java.lang.Override
       public io.bloombox.schema.identity.AppUserKey.UserKey buildPartial() {
         io.bloombox.schema.identity.AppUserKey.UserKey result = new io.bloombox.schema.identity.AppUserKey.UserKey(this);
         result.uid_ = uid_;
@@ -474,32 +487,39 @@ public final class AppUserKey {
         return result;
       }
 
+      @java.lang.Override
       public Builder clone() {
         return (Builder) super.clone();
       }
+      @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
         return (Builder) super.setField(field, value);
       }
+      @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
         return (Builder) super.clearField(field);
       }
+      @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
         return (Builder) super.clearOneof(oneof);
       }
+      @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
         return (Builder) super.setRepeatedField(field, index, value);
       }
+      @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
         return (Builder) super.addRepeatedField(field, value);
       }
+      @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
         if (other instanceof io.bloombox.schema.identity.AppUserKey.UserKey) {
           return mergeFrom((io.bloombox.schema.identity.AppUserKey.UserKey)other);
@@ -524,10 +544,12 @@ public final class AppUserKey {
         return this;
       }
 
+      @java.lang.Override
       public final boolean isInitialized() {
         return true;
       }
 
+      @java.lang.Override
       public Builder mergeFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -723,21 +745,23 @@ public final class AppUserKey {
         onChanged();
         return this;
       }
+      @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
         return super.setUnknownFieldsProto3(unknownFields);
       }
 
+      @java.lang.Override
       public final Builder mergeUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
         return super.mergeUnknownFields(unknownFields);
       }
 
 
-      // @@protoc_insertion_point(builder_scope:bloombox.schema.identity.UserKey)
+      // @@protoc_insertion_point(builder_scope:bloombox.identity.UserKey)
     }
 
-    // @@protoc_insertion_point(class_scope:bloombox.schema.identity.UserKey)
+    // @@protoc_insertion_point(class_scope:bloombox.identity.UserKey)
     private static final io.bloombox.schema.identity.AppUserKey.UserKey DEFAULT_INSTANCE;
     static {
       DEFAULT_INSTANCE = new io.bloombox.schema.identity.AppUserKey.UserKey();
@@ -749,6 +773,7 @@ public final class AppUserKey {
 
     private static final com.google.protobuf.Parser<UserKey>
         PARSER = new com.google.protobuf.AbstractParser<UserKey>() {
+      @java.lang.Override
       public UserKey parsePartialFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -766,6 +791,7 @@ public final class AppUserKey {
       return PARSER;
     }
 
+    @java.lang.Override
     public io.bloombox.schema.identity.AppUserKey.UserKey getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
@@ -773,10 +799,10 @@ public final class AppUserKey {
   }
 
   private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_bloombox_schema_identity_UserKey_descriptor;
+    internal_static_bloombox_identity_UserKey_descriptor;
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_bloombox_schema_identity_UserKey_fieldAccessorTable;
+      internal_static_bloombox_identity_UserKey_fieldAccessorTable;
 
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
@@ -786,13 +812,13 @@ public final class AppUserKey {
       descriptor;
   static {
     java.lang.String[] descriptorData = {
-      "\n\026identity/UserKey.proto\022\030bloombox.schem" +
-      "a.identity\032\016bq_field.proto\032\024core/Datamod" +
-      "el.proto\"m\n\007UserKey\022-\n\003uid\030\001 \001(\tB \302\265\003\002\010\002" +
-      "\212@\027Unique ID for the user.\0223\n\010identity\030\002" +
-      " \001(\tB!\212@\036Specific user identity in use.B" +
-      "3\n\033io.bloombox.schema.identityB\nAppUserK" +
-      "eyH\001P\000\242\002\003BBSb\006proto3"
+      "\n\026identity/UserKey.proto\022\021bloombox.ident" +
+      "ity\032\016bq_field.proto\032\024core/Datamodel.prot" +
+      "o\"m\n\007UserKey\022-\n\003uid\030\001 \001(\tB \302\265\003\002\010\002\212@\027Uniq" +
+      "ue ID for the user.\0223\n\010identity\030\002 \001(\tB!\212" +
+      "@\036Specific user identity in use.B3\n\033io.b" +
+      "loombox.schema.identityB\nAppUserKeyH\001P\000\242" +
+      "\002\003BBSb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -808,11 +834,11 @@ public final class AppUserKey {
           gen_bq_schema.BqField.getDescriptor(),
           core.Datamodel.getDescriptor(),
         }, assigner);
-    internal_static_bloombox_schema_identity_UserKey_descriptor =
+    internal_static_bloombox_identity_UserKey_descriptor =
       getDescriptor().getMessageTypes().get(0);
-    internal_static_bloombox_schema_identity_UserKey_fieldAccessorTable = new
+    internal_static_bloombox_identity_UserKey_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_bloombox_schema_identity_UserKey_descriptor,
+        internal_static_bloombox_identity_UserKey_descriptor,
         new java.lang.String[] { "Uid", "Identity", });
     com.google.protobuf.ExtensionRegistry registry =
         com.google.protobuf.ExtensionRegistry.newInstance();

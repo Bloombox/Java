@@ -1,11 +1,12 @@
 /*
- * Copyright 2018, Bloombox, LLC.
+ * Copyright 2018, Momentum Ideas, Co. All rights reserved.
  *
- * Licensed under the Apache License, Version 2.0 (the "License");
- * you may not use this file except in compliance with the License.
- * You may obtain a copy of the License at
- *
- *     http://www.apache.org/licenses/LICENSE-2.0
+ * Source and object computer code contained herein is the private intellectual
+ * property of Momentum Ideas Co., a Delaware Corporation. Use of this
+ * code in source form requires permission in writing before use or the
+ * assembly, distribution, or publishing of derivative works, for commercial
+ * purposes or any other purpose, from a duly authorized officer of Momentum
+ * Ideas Co.
  *
  * Unless required by applicable law or agreed to in writing, software
  * distributed under the License is distributed on an "AS IS" BASIS,
@@ -403,13 +404,6 @@ public final class CommercialDiscounts {
             case 0:
               done = true;
               break;
-            default: {
-              if (!parseUnknownFieldProto3(
-                  input, unknownFields, extensionRegistry, tag)) {
-                done = true;
-              }
-              break;
-            }
             case 8: {
               int rawValue = input.readEnum();
 
@@ -432,6 +426,13 @@ public final class CommercialDiscounts {
               rate_ = input.readDouble();
               break;
             }
+            default: {
+              if (!parseUnknownFieldProto3(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
           }
         }
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
@@ -449,6 +450,7 @@ public final class CommercialDiscounts {
       return io.opencannabis.schema.accounting.CommercialDiscounts.internal_static_opencannabis_commerce_DiscountSpec_descriptor;
     }
 
+    @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
       return io.opencannabis.schema.accounting.CommercialDiscounts.internal_static_opencannabis_commerce_DiscountSpec_fieldAccessorTable
@@ -514,6 +516,7 @@ public final class CommercialDiscounts {
      * <code>.opencannabis.commerce.DiscountType type = 1;</code>
      */
     public io.opencannabis.schema.accounting.CommercialDiscounts.DiscountType getType() {
+      @SuppressWarnings("deprecation")
       io.opencannabis.schema.accounting.CommercialDiscounts.DiscountType result = io.opencannabis.schema.accounting.CommercialDiscounts.DiscountType.valueOf(type_);
       return result == null ? io.opencannabis.schema.accounting.CommercialDiscounts.DiscountType.UNRECOGNIZED : result;
     }
@@ -538,6 +541,7 @@ public final class CommercialDiscounts {
      * <code>.opencannabis.commerce.DiscountBasis basis = 2;</code>
      */
     public io.opencannabis.schema.accounting.CommercialDiscounts.DiscountBasis getBasis() {
+      @SuppressWarnings("deprecation")
       io.opencannabis.schema.accounting.CommercialDiscounts.DiscountBasis result = io.opencannabis.schema.accounting.CommercialDiscounts.DiscountBasis.valueOf(basis_);
       return result == null ? io.opencannabis.schema.accounting.CommercialDiscounts.DiscountBasis.UNRECOGNIZED : result;
     }
@@ -573,6 +577,7 @@ public final class CommercialDiscounts {
     }
 
     private byte memoizedIsInitialized = -1;
+    @java.lang.Override
     public final boolean isInitialized() {
       byte isInitialized = memoizedIsInitialized;
       if (isInitialized == 1) return true;
@@ -582,6 +587,7 @@ public final class CommercialDiscounts {
       return true;
     }
 
+    @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
       if (type_ != io.opencannabis.schema.accounting.CommercialDiscounts.DiscountType.CUSTOM.getNumber()) {
@@ -601,6 +607,7 @@ public final class CommercialDiscounts {
       unknownFields.writeTo(output);
     }
 
+    @java.lang.Override
     public int getSerializedSize() {
       int size = memoizedSize;
       if (size != -1) return size;
@@ -765,6 +772,7 @@ public final class CommercialDiscounts {
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
 
+    @java.lang.Override
     public Builder newBuilderForType() { return newBuilder(); }
     public static Builder newBuilder() {
       return DEFAULT_INSTANCE.toBuilder();
@@ -772,6 +780,7 @@ public final class CommercialDiscounts {
     public static Builder newBuilder(io.opencannabis.schema.accounting.CommercialDiscounts.DiscountSpec prototype) {
       return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
     }
+    @java.lang.Override
     public Builder toBuilder() {
       return this == DEFAULT_INSTANCE
           ? new Builder() : new Builder().mergeFrom(this);
@@ -799,6 +808,7 @@ public final class CommercialDiscounts {
         return io.opencannabis.schema.accounting.CommercialDiscounts.internal_static_opencannabis_commerce_DiscountSpec_descriptor;
       }
 
+      @java.lang.Override
       protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
           internalGetFieldAccessorTable() {
         return io.opencannabis.schema.accounting.CommercialDiscounts.internal_static_opencannabis_commerce_DiscountSpec_fieldAccessorTable
@@ -821,6 +831,7 @@ public final class CommercialDiscounts {
                 .alwaysUseFieldBuilders) {
         }
       }
+      @java.lang.Override
       public Builder clear() {
         super.clear();
         type_ = 0;
@@ -832,15 +843,18 @@ public final class CommercialDiscounts {
         return this;
       }
 
+      @java.lang.Override
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
         return io.opencannabis.schema.accounting.CommercialDiscounts.internal_static_opencannabis_commerce_DiscountSpec_descriptor;
       }
 
+      @java.lang.Override
       public io.opencannabis.schema.accounting.CommercialDiscounts.DiscountSpec getDefaultInstanceForType() {
         return io.opencannabis.schema.accounting.CommercialDiscounts.DiscountSpec.getDefaultInstance();
       }
 
+      @java.lang.Override
       public io.opencannabis.schema.accounting.CommercialDiscounts.DiscountSpec build() {
         io.opencannabis.schema.accounting.CommercialDiscounts.DiscountSpec result = buildPartial();
         if (!result.isInitialized()) {
@@ -849,6 +863,7 @@ public final class CommercialDiscounts {
         return result;
       }
 
+      @java.lang.Override
       public io.opencannabis.schema.accounting.CommercialDiscounts.DiscountSpec buildPartial() {
         io.opencannabis.schema.accounting.CommercialDiscounts.DiscountSpec result = new io.opencannabis.schema.accounting.CommercialDiscounts.DiscountSpec(this);
         result.type_ = type_;
@@ -864,32 +879,39 @@ public final class CommercialDiscounts {
         return result;
       }
 
+      @java.lang.Override
       public Builder clone() {
         return (Builder) super.clone();
       }
+      @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
         return (Builder) super.setField(field, value);
       }
+      @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
         return (Builder) super.clearField(field);
       }
+      @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
         return (Builder) super.clearOneof(oneof);
       }
+      @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
         return (Builder) super.setRepeatedField(field, index, value);
       }
+      @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
         return (Builder) super.addRepeatedField(field, value);
       }
+      @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
         if (other instanceof io.opencannabis.schema.accounting.CommercialDiscounts.DiscountSpec) {
           return mergeFrom((io.opencannabis.schema.accounting.CommercialDiscounts.DiscountSpec)other);
@@ -925,10 +947,12 @@ public final class CommercialDiscounts {
         return this;
       }
 
+      @java.lang.Override
       public final boolean isInitialized() {
         return true;
       }
 
+      @java.lang.Override
       public Builder mergeFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -993,6 +1017,7 @@ public final class CommercialDiscounts {
        * <code>.opencannabis.commerce.DiscountType type = 1;</code>
        */
       public io.opencannabis.schema.accounting.CommercialDiscounts.DiscountType getType() {
+        @SuppressWarnings("deprecation")
         io.opencannabis.schema.accounting.CommercialDiscounts.DiscountType result = io.opencannabis.schema.accounting.CommercialDiscounts.DiscountType.valueOf(type_);
         return result == null ? io.opencannabis.schema.accounting.CommercialDiscounts.DiscountType.UNRECOGNIZED : result;
       }
@@ -1057,6 +1082,7 @@ public final class CommercialDiscounts {
        * <code>.opencannabis.commerce.DiscountBasis basis = 2;</code>
        */
       public io.opencannabis.schema.accounting.CommercialDiscounts.DiscountBasis getBasis() {
+        @SuppressWarnings("deprecation")
         io.opencannabis.schema.accounting.CommercialDiscounts.DiscountBasis result = io.opencannabis.schema.accounting.CommercialDiscounts.DiscountBasis.valueOf(basis_);
         return result == null ? io.opencannabis.schema.accounting.CommercialDiscounts.DiscountBasis.UNRECOGNIZED : result;
       }
@@ -1173,11 +1199,13 @@ public final class CommercialDiscounts {
         }
         return this;
       }
+      @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
         return super.setUnknownFieldsProto3(unknownFields);
       }
 
+      @java.lang.Override
       public final Builder mergeUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
         return super.mergeUnknownFields(unknownFields);
@@ -1199,6 +1227,7 @@ public final class CommercialDiscounts {
 
     private static final com.google.protobuf.Parser<DiscountSpec>
         PARSER = new com.google.protobuf.AbstractParser<DiscountSpec>() {
+      @java.lang.Override
       public DiscountSpec parsePartialFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -1216,6 +1245,7 @@ public final class CommercialDiscounts {
       return PARSER;
     }
 
+    @java.lang.Override
     public io.opencannabis.schema.accounting.CommercialDiscounts.DiscountSpec getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
@@ -1422,13 +1452,6 @@ public final class CommercialDiscounts {
             case 0:
               done = true;
               break;
-            default: {
-              if (!parseUnknownFieldProto3(
-                  input, unknownFields, extensionRegistry, tag)) {
-                done = true;
-              }
-              break;
-            }
             case 10: {
               java.lang.String s = input.readStringRequireUtf8();
 
@@ -1492,6 +1515,13 @@ public final class CommercialDiscounts {
 
               break;
             }
+            default: {
+              if (!parseUnknownFieldProto3(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
           }
         }
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
@@ -1509,6 +1539,7 @@ public final class CommercialDiscounts {
       return io.opencannabis.schema.accounting.CommercialDiscounts.internal_static_opencannabis_commerce_Discount_descriptor;
     }
 
+    @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
       return io.opencannabis.schema.accounting.CommercialDiscounts.internal_static_opencannabis_commerce_Discount_fieldAccessorTable
@@ -1786,6 +1817,7 @@ public final class CommercialDiscounts {
     }
 
     private byte memoizedIsInitialized = -1;
+    @java.lang.Override
     public final boolean isInitialized() {
       byte isInitialized = memoizedIsInitialized;
       if (isInitialized == 1) return true;
@@ -1795,6 +1827,7 @@ public final class CommercialDiscounts {
       return true;
     }
 
+    @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
       if (!getIdBytes().isEmpty()) {
@@ -1821,6 +1854,7 @@ public final class CommercialDiscounts {
       unknownFields.writeTo(output);
     }
 
+    @java.lang.Override
     public int getSerializedSize() {
       int size = memoizedSize;
       if (size != -1) return size;
@@ -1995,6 +2029,7 @@ public final class CommercialDiscounts {
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
 
+    @java.lang.Override
     public Builder newBuilderForType() { return newBuilder(); }
     public static Builder newBuilder() {
       return DEFAULT_INSTANCE.toBuilder();
@@ -2002,6 +2037,7 @@ public final class CommercialDiscounts {
     public static Builder newBuilder(io.opencannabis.schema.accounting.CommercialDiscounts.Discount prototype) {
       return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
     }
+    @java.lang.Override
     public Builder toBuilder() {
       return this == DEFAULT_INSTANCE
           ? new Builder() : new Builder().mergeFrom(this);
@@ -2029,6 +2065,7 @@ public final class CommercialDiscounts {
         return io.opencannabis.schema.accounting.CommercialDiscounts.internal_static_opencannabis_commerce_Discount_descriptor;
       }
 
+      @java.lang.Override
       protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
           internalGetFieldAccessorTable() {
         return io.opencannabis.schema.accounting.CommercialDiscounts.internal_static_opencannabis_commerce_Discount_fieldAccessorTable
@@ -2051,6 +2088,7 @@ public final class CommercialDiscounts {
                 .alwaysUseFieldBuilders) {
         }
       }
+      @java.lang.Override
       public Builder clear() {
         super.clear();
         id_ = "";
@@ -2082,15 +2120,18 @@ public final class CommercialDiscounts {
         return this;
       }
 
+      @java.lang.Override
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
         return io.opencannabis.schema.accounting.CommercialDiscounts.internal_static_opencannabis_commerce_Discount_descriptor;
       }
 
+      @java.lang.Override
       public io.opencannabis.schema.accounting.CommercialDiscounts.Discount getDefaultInstanceForType() {
         return io.opencannabis.schema.accounting.CommercialDiscounts.Discount.getDefaultInstance();
       }
 
+      @java.lang.Override
       public io.opencannabis.schema.accounting.CommercialDiscounts.Discount build() {
         io.opencannabis.schema.accounting.CommercialDiscounts.Discount result = buildPartial();
         if (!result.isInitialized()) {
@@ -2099,6 +2140,7 @@ public final class CommercialDiscounts {
         return result;
       }
 
+      @java.lang.Override
       public io.opencannabis.schema.accounting.CommercialDiscounts.Discount buildPartial() {
         io.opencannabis.schema.accounting.CommercialDiscounts.Discount result = new io.opencannabis.schema.accounting.CommercialDiscounts.Discount(this);
         result.id_ = id_;
@@ -2124,32 +2166,39 @@ public final class CommercialDiscounts {
         return result;
       }
 
+      @java.lang.Override
       public Builder clone() {
         return (Builder) super.clone();
       }
+      @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
         return (Builder) super.setField(field, value);
       }
+      @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
         return (Builder) super.clearField(field);
       }
+      @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
         return (Builder) super.clearOneof(oneof);
       }
+      @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
         return (Builder) super.setRepeatedField(field, index, value);
       }
+      @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
         return (Builder) super.addRepeatedField(field, value);
       }
+      @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
         if (other instanceof io.opencannabis.schema.accounting.CommercialDiscounts.Discount) {
           return mergeFrom((io.opencannabis.schema.accounting.CommercialDiscounts.Discount)other);
@@ -2191,10 +2240,12 @@ public final class CommercialDiscounts {
         return this;
       }
 
+      @java.lang.Override
       public final boolean isInitialized() {
         return true;
       }
 
+      @java.lang.Override
       public Builder mergeFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -3032,11 +3083,13 @@ public final class CommercialDiscounts {
         }
         return createdAtBuilder_;
       }
+      @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
         return super.setUnknownFieldsProto3(unknownFields);
       }
 
+      @java.lang.Override
       public final Builder mergeUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
         return super.mergeUnknownFields(unknownFields);
@@ -3058,6 +3111,7 @@ public final class CommercialDiscounts {
 
     private static final com.google.protobuf.Parser<Discount>
         PARSER = new com.google.protobuf.AbstractParser<Discount>() {
+      @java.lang.Override
       public Discount parsePartialFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -3075,6 +3129,7 @@ public final class CommercialDiscounts {
       return PARSER;
     }
 
+    @java.lang.Override
     public io.opencannabis.schema.accounting.CommercialDiscounts.Discount getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
