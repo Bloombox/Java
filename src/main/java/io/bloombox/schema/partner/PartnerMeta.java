@@ -1,11 +1,12 @@
 /*
- * Copyright 2018, Bloombox, LLC.
+ * Copyright 2018, Momentum Ideas, Co. All rights reserved.
  *
- * Licensed under the Apache License, Version 2.0 (the "License");
- * you may not use this file except in compliance with the License.
- * You may obtain a copy of the License at
- *
- *     http://www.apache.org/licenses/LICENSE-2.0
+ * Source and object computer code contained herein is the private intellectual
+ * property of Momentum Ideas Co., a Delaware Corporation. Use of this
+ * code in source form requires permission in writing before use or the
+ * assembly, distribution, or publishing of derivative works, for commercial
+ * purposes or any other purpose, from a duly authorized officer of Momentum
+ * Ideas Co.
  *
  * Unless required by applicable law or agreed to in writing, software
  * distributed under the License is distributed on an "AS IS" BASIS,
@@ -31,7 +32,7 @@ public final class PartnerMeta {
         (com.google.protobuf.ExtensionRegistryLite) registry);
   }
   public interface PartnerKeyOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:bloombox.schema.partner.PartnerKey)
+      // @@protoc_insertion_point(interface_extends:bloombox.partner.PartnerKey)
       com.google.protobuf.MessageOrBuilder {
 
     /**
@@ -57,11 +58,11 @@ public final class PartnerMeta {
    * Specifies a key that references a partner organization, with an account opened at Bloombox.
    * </pre>
    *
-   * Protobuf type {@code bloombox.schema.partner.PartnerKey}
+   * Protobuf type {@code bloombox.partner.PartnerKey}
    */
   public  static final class PartnerKey extends
       com.google.protobuf.GeneratedMessageV3 implements
-      // @@protoc_insertion_point(message_implements:bloombox.schema.partner.PartnerKey)
+      // @@protoc_insertion_point(message_implements:bloombox.partner.PartnerKey)
       PartnerKeyOrBuilder {
   private static final long serialVersionUID = 0L;
     // Use PartnerKey.newBuilder() to construct.
@@ -96,17 +97,17 @@ public final class PartnerMeta {
             case 0:
               done = true;
               break;
+            case 10: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              code_ = s;
+              break;
+            }
             default: {
               if (!parseUnknownFieldProto3(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
-              break;
-            }
-            case 10: {
-              java.lang.String s = input.readStringRequireUtf8();
-
-              code_ = s;
               break;
             }
           }
@@ -123,12 +124,13 @@ public final class PartnerMeta {
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return io.bloombox.schema.partner.PartnerMeta.internal_static_bloombox_schema_partner_PartnerKey_descriptor;
+      return io.bloombox.schema.partner.PartnerMeta.internal_static_bloombox_partner_PartnerKey_descriptor;
     }
 
+    @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return io.bloombox.schema.partner.PartnerMeta.internal_static_bloombox_schema_partner_PartnerKey_fieldAccessorTable
+      return io.bloombox.schema.partner.PartnerMeta.internal_static_bloombox_partner_PartnerKey_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
               io.bloombox.schema.partner.PartnerMeta.PartnerKey.class, io.bloombox.schema.partner.PartnerMeta.PartnerKey.Builder.class);
     }
@@ -176,6 +178,7 @@ public final class PartnerMeta {
     }
 
     private byte memoizedIsInitialized = -1;
+    @java.lang.Override
     public final boolean isInitialized() {
       byte isInitialized = memoizedIsInitialized;
       if (isInitialized == 1) return true;
@@ -185,6 +188,7 @@ public final class PartnerMeta {
       return true;
     }
 
+    @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
       if (!getCodeBytes().isEmpty()) {
@@ -193,6 +197,7 @@ public final class PartnerMeta {
       unknownFields.writeTo(output);
     }
 
+    @java.lang.Override
     public int getSerializedSize() {
       int size = memoizedSize;
       if (size != -1) return size;
@@ -307,6 +312,7 @@ public final class PartnerMeta {
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
 
+    @java.lang.Override
     public Builder newBuilderForType() { return newBuilder(); }
     public static Builder newBuilder() {
       return DEFAULT_INSTANCE.toBuilder();
@@ -314,6 +320,7 @@ public final class PartnerMeta {
     public static Builder newBuilder(io.bloombox.schema.partner.PartnerMeta.PartnerKey prototype) {
       return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
     }
+    @java.lang.Override
     public Builder toBuilder() {
       return this == DEFAULT_INSTANCE
           ? new Builder() : new Builder().mergeFrom(this);
@@ -330,20 +337,21 @@ public final class PartnerMeta {
      * Specifies a key that references a partner organization, with an account opened at Bloombox.
      * </pre>
      *
-     * Protobuf type {@code bloombox.schema.partner.PartnerKey}
+     * Protobuf type {@code bloombox.partner.PartnerKey}
      */
     public static final class Builder extends
         com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:bloombox.schema.partner.PartnerKey)
+        // @@protoc_insertion_point(builder_implements:bloombox.partner.PartnerKey)
         io.bloombox.schema.partner.PartnerMeta.PartnerKeyOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return io.bloombox.schema.partner.PartnerMeta.internal_static_bloombox_schema_partner_PartnerKey_descriptor;
+        return io.bloombox.schema.partner.PartnerMeta.internal_static_bloombox_partner_PartnerKey_descriptor;
       }
 
+      @java.lang.Override
       protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return io.bloombox.schema.partner.PartnerMeta.internal_static_bloombox_schema_partner_PartnerKey_fieldAccessorTable
+        return io.bloombox.schema.partner.PartnerMeta.internal_static_bloombox_partner_PartnerKey_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
                 io.bloombox.schema.partner.PartnerMeta.PartnerKey.class, io.bloombox.schema.partner.PartnerMeta.PartnerKey.Builder.class);
       }
@@ -363,6 +371,7 @@ public final class PartnerMeta {
                 .alwaysUseFieldBuilders) {
         }
       }
+      @java.lang.Override
       public Builder clear() {
         super.clear();
         code_ = "";
@@ -370,15 +379,18 @@ public final class PartnerMeta {
         return this;
       }
 
+      @java.lang.Override
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return io.bloombox.schema.partner.PartnerMeta.internal_static_bloombox_schema_partner_PartnerKey_descriptor;
+        return io.bloombox.schema.partner.PartnerMeta.internal_static_bloombox_partner_PartnerKey_descriptor;
       }
 
+      @java.lang.Override
       public io.bloombox.schema.partner.PartnerMeta.PartnerKey getDefaultInstanceForType() {
         return io.bloombox.schema.partner.PartnerMeta.PartnerKey.getDefaultInstance();
       }
 
+      @java.lang.Override
       public io.bloombox.schema.partner.PartnerMeta.PartnerKey build() {
         io.bloombox.schema.partner.PartnerMeta.PartnerKey result = buildPartial();
         if (!result.isInitialized()) {
@@ -387,6 +399,7 @@ public final class PartnerMeta {
         return result;
       }
 
+      @java.lang.Override
       public io.bloombox.schema.partner.PartnerMeta.PartnerKey buildPartial() {
         io.bloombox.schema.partner.PartnerMeta.PartnerKey result = new io.bloombox.schema.partner.PartnerMeta.PartnerKey(this);
         result.code_ = code_;
@@ -394,32 +407,39 @@ public final class PartnerMeta {
         return result;
       }
 
+      @java.lang.Override
       public Builder clone() {
         return (Builder) super.clone();
       }
+      @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
         return (Builder) super.setField(field, value);
       }
+      @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
         return (Builder) super.clearField(field);
       }
+      @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
         return (Builder) super.clearOneof(oneof);
       }
+      @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
         return (Builder) super.setRepeatedField(field, index, value);
       }
+      @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
         return (Builder) super.addRepeatedField(field, value);
       }
+      @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
         if (other instanceof io.bloombox.schema.partner.PartnerMeta.PartnerKey) {
           return mergeFrom((io.bloombox.schema.partner.PartnerMeta.PartnerKey)other);
@@ -440,10 +460,12 @@ public final class PartnerMeta {
         return this;
       }
 
+      @java.lang.Override
       public final boolean isInitialized() {
         return true;
       }
 
+      @java.lang.Override
       public Builder mergeFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -550,21 +572,23 @@ public final class PartnerMeta {
         onChanged();
         return this;
       }
+      @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
         return super.setUnknownFieldsProto3(unknownFields);
       }
 
+      @java.lang.Override
       public final Builder mergeUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
         return super.mergeUnknownFields(unknownFields);
       }
 
 
-      // @@protoc_insertion_point(builder_scope:bloombox.schema.partner.PartnerKey)
+      // @@protoc_insertion_point(builder_scope:bloombox.partner.PartnerKey)
     }
 
-    // @@protoc_insertion_point(class_scope:bloombox.schema.partner.PartnerKey)
+    // @@protoc_insertion_point(class_scope:bloombox.partner.PartnerKey)
     private static final io.bloombox.schema.partner.PartnerMeta.PartnerKey DEFAULT_INSTANCE;
     static {
       DEFAULT_INSTANCE = new io.bloombox.schema.partner.PartnerMeta.PartnerKey();
@@ -576,6 +600,7 @@ public final class PartnerMeta {
 
     private static final com.google.protobuf.Parser<PartnerKey>
         PARSER = new com.google.protobuf.AbstractParser<PartnerKey>() {
+      @java.lang.Override
       public PartnerKey parsePartialFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -593,6 +618,7 @@ public final class PartnerMeta {
       return PARSER;
     }
 
+    @java.lang.Override
     public io.bloombox.schema.partner.PartnerMeta.PartnerKey getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
@@ -600,10 +626,10 @@ public final class PartnerMeta {
   }
 
   private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_bloombox_schema_partner_PartnerKey_descriptor;
+    internal_static_bloombox_partner_PartnerKey_descriptor;
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_bloombox_schema_partner_PartnerKey_fieldAccessorTable;
+      internal_static_bloombox_partner_PartnerKey_fieldAccessorTable;
 
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
@@ -613,13 +639,13 @@ public final class PartnerMeta {
       descriptor;
   static {
     java.lang.String[] descriptorData = {
-      "\n\030partner/PartnerKey.proto\022\027bloombox.sch" +
-      "ema.partner\032\016bq_field.proto\032\024core/Datamo" +
-      "del.proto\"b\n\nPartnerKey\022T\n\004code\030\001 \001(\tBF\302" +
-      "\265\003\002\010\002\212@=Short string that uniquely ident" +
-      "ifies a partner organization.B3\n\032io.bloo" +
-      "mbox.schema.partnerB\013PartnerMetaH\001P\000\242\002\003B" +
-      "BSb\006proto3"
+      "\n\030partner/PartnerKey.proto\022\020bloombox.par" +
+      "tner\032\016bq_field.proto\032\024core/Datamodel.pro" +
+      "to\"b\n\nPartnerKey\022T\n\004code\030\001 \001(\tBF\302\265\003\002\010\002\212@" +
+      "=Short string that uniquely identifies a" +
+      " partner organization.B3\n\032io.bloombox.sc" +
+      "hema.partnerB\013PartnerMetaH\001P\000\242\002\003BBSb\006pro" +
+      "to3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -635,11 +661,11 @@ public final class PartnerMeta {
           gen_bq_schema.BqField.getDescriptor(),
           core.Datamodel.getDescriptor(),
         }, assigner);
-    internal_static_bloombox_schema_partner_PartnerKey_descriptor =
+    internal_static_bloombox_partner_PartnerKey_descriptor =
       getDescriptor().getMessageTypes().get(0);
-    internal_static_bloombox_schema_partner_PartnerKey_fieldAccessorTable = new
+    internal_static_bloombox_partner_PartnerKey_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_bloombox_schema_partner_PartnerKey_descriptor,
+        internal_static_bloombox_partner_PartnerKey_descriptor,
         new java.lang.String[] { "Code", });
     com.google.protobuf.ExtensionRegistry registry =
         com.google.protobuf.ExtensionRegistry.newInstance();

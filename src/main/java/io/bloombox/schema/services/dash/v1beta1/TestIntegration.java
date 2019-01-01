@@ -1,8 +1,8 @@
 /*
- * Copyright 2018, Bloombox, LLC. All rights reserved.
+ * Copyright 2018, Momentum Ideas, Co. All rights reserved.
  *
  * Source and object computer code contained herein is the private intellectual
- * property of Bloombox, a California Limited Liability Corporation. Use of this
+ * property of Momentum Ideas Co., a Delaware Corporation. Use of this
  * code in source form requires permission in writing before use or the
  * assembly, distribution, or publishing of derivative works, for commercial
  * purposes or any other purpose, from a duly authorized officer of Momentum
@@ -25,11 +25,11 @@ package io.bloombox.schema.services.dash.v1beta1;
  * Test an integrated piece of software against a Bloombox account.
  * </pre>
  *
- * Protobuf type {@code bloombox.schema.services.dash.v1beta1.TestIntegration}
+ * Protobuf type {@code bloombox.services.dash.v1beta1.TestIntegration}
  */
 public  final class TestIntegration extends
     com.google.protobuf.GeneratedMessageV3 implements
-    // @@protoc_insertion_point(message_implements:bloombox.schema.services.dash.v1beta1.TestIntegration)
+    // @@protoc_insertion_point(message_implements:bloombox.services.dash.v1beta1.TestIntegration)
     TestIntegrationOrBuilder {
 private static final long serialVersionUID = 0L;
   // Use TestIntegration.newBuilder() to construct.
@@ -83,18 +83,19 @@ private static final long serialVersionUID = 0L;
   }
   public static final com.google.protobuf.Descriptors.Descriptor
       getDescriptor() {
-    return io.bloombox.schema.services.dash.v1beta1.DashServiceBeta1.internal_static_bloombox_schema_services_dash_v1beta1_TestIntegration_descriptor;
+    return io.bloombox.schema.services.dash.v1beta1.DashServiceBeta1.internal_static_bloombox_services_dash_v1beta1_TestIntegration_descriptor;
   }
 
+  @java.lang.Override
   protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internalGetFieldAccessorTable() {
-    return io.bloombox.schema.services.dash.v1beta1.DashServiceBeta1.internal_static_bloombox_schema_services_dash_v1beta1_TestIntegration_fieldAccessorTable
+    return io.bloombox.schema.services.dash.v1beta1.DashServiceBeta1.internal_static_bloombox_services_dash_v1beta1_TestIntegration_fieldAccessorTable
         .ensureFieldAccessorsInitialized(
             io.bloombox.schema.services.dash.v1beta1.TestIntegration.class, io.bloombox.schema.services.dash.v1beta1.TestIntegration.Builder.class);
   }
 
   public interface RequestOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:bloombox.schema.services.dash.v1beta1.TestIntegration.Request)
+      // @@protoc_insertion_point(interface_extends:bloombox.services.dash.v1beta1.TestIntegration.Request)
       com.google.protobuf.MessageOrBuilder {
 
     /**
@@ -138,7 +139,7 @@ private static final long serialVersionUID = 0L;
      * Vendor for which we should test integration points.
      * </pre>
      *
-     * <code>.bloombox.schema.partner.integrations.IntegrationPartner vendor = 3;</code>
+     * <code>.bloombox.partner.integrations.IntegrationPartner vendor = 3;</code>
      */
     int getVendorValue();
     /**
@@ -146,7 +147,7 @@ private static final long serialVersionUID = 0L;
      * Vendor for which we should test integration points.
      * </pre>
      *
-     * <code>.bloombox.schema.partner.integrations.IntegrationPartner vendor = 3;</code>
+     * <code>.bloombox.partner.integrations.IntegrationPartner vendor = 3;</code>
      */
     io.bloombox.schema.partner.integrations.IntegrationSettings.IntegrationPartner getVendor();
   }
@@ -155,11 +156,11 @@ private static final long serialVersionUID = 0L;
    * Request to test an integrated piece of software.
    * </pre>
    *
-   * Protobuf type {@code bloombox.schema.services.dash.v1beta1.TestIntegration.Request}
+   * Protobuf type {@code bloombox.services.dash.v1beta1.TestIntegration.Request}
    */
   public  static final class Request extends
       com.google.protobuf.GeneratedMessageV3 implements
-      // @@protoc_insertion_point(message_implements:bloombox.schema.services.dash.v1beta1.TestIntegration.Request)
+      // @@protoc_insertion_point(message_implements:bloombox.services.dash.v1beta1.TestIntegration.Request)
       RequestOrBuilder {
   private static final long serialVersionUID = 0L;
     // Use Request.newBuilder() to construct.
@@ -196,13 +197,6 @@ private static final long serialVersionUID = 0L;
             case 0:
               done = true;
               break;
-            default: {
-              if (!parseUnknownFieldProto3(
-                  input, unknownFields, extensionRegistry, tag)) {
-                done = true;
-              }
-              break;
-            }
             case 10: {
               java.lang.String s = input.readStringRequireUtf8();
 
@@ -221,6 +215,13 @@ private static final long serialVersionUID = 0L;
               vendor_ = rawValue;
               break;
             }
+            default: {
+              if (!parseUnknownFieldProto3(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
           }
         }
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
@@ -235,12 +236,13 @@ private static final long serialVersionUID = 0L;
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return io.bloombox.schema.services.dash.v1beta1.DashServiceBeta1.internal_static_bloombox_schema_services_dash_v1beta1_TestIntegration_Request_descriptor;
+      return io.bloombox.schema.services.dash.v1beta1.DashServiceBeta1.internal_static_bloombox_services_dash_v1beta1_TestIntegration_Request_descriptor;
     }
 
+    @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return io.bloombox.schema.services.dash.v1beta1.DashServiceBeta1.internal_static_bloombox_schema_services_dash_v1beta1_TestIntegration_Request_fieldAccessorTable
+      return io.bloombox.schema.services.dash.v1beta1.DashServiceBeta1.internal_static_bloombox_services_dash_v1beta1_TestIntegration_Request_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
               io.bloombox.schema.services.dash.v1beta1.TestIntegration.Request.class, io.bloombox.schema.services.dash.v1beta1.TestIntegration.Request.Builder.class);
     }
@@ -336,7 +338,7 @@ private static final long serialVersionUID = 0L;
      * Vendor for which we should test integration points.
      * </pre>
      *
-     * <code>.bloombox.schema.partner.integrations.IntegrationPartner vendor = 3;</code>
+     * <code>.bloombox.partner.integrations.IntegrationPartner vendor = 3;</code>
      */
     public int getVendorValue() {
       return vendor_;
@@ -346,14 +348,16 @@ private static final long serialVersionUID = 0L;
      * Vendor for which we should test integration points.
      * </pre>
      *
-     * <code>.bloombox.schema.partner.integrations.IntegrationPartner vendor = 3;</code>
+     * <code>.bloombox.partner.integrations.IntegrationPartner vendor = 3;</code>
      */
     public io.bloombox.schema.partner.integrations.IntegrationSettings.IntegrationPartner getVendor() {
+      @SuppressWarnings("deprecation")
       io.bloombox.schema.partner.integrations.IntegrationSettings.IntegrationPartner result = io.bloombox.schema.partner.integrations.IntegrationSettings.IntegrationPartner.valueOf(vendor_);
       return result == null ? io.bloombox.schema.partner.integrations.IntegrationSettings.IntegrationPartner.UNRECOGNIZED : result;
     }
 
     private byte memoizedIsInitialized = -1;
+    @java.lang.Override
     public final boolean isInitialized() {
       byte isInitialized = memoizedIsInitialized;
       if (isInitialized == 1) return true;
@@ -363,6 +367,7 @@ private static final long serialVersionUID = 0L;
       return true;
     }
 
+    @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
       if (!getPartnerBytes().isEmpty()) {
@@ -377,6 +382,7 @@ private static final long serialVersionUID = 0L;
       unknownFields.writeTo(output);
     }
 
+    @java.lang.Override
     public int getSerializedSize() {
       int size = memoizedSize;
       if (size != -1) return size;
@@ -505,6 +511,7 @@ private static final long serialVersionUID = 0L;
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
 
+    @java.lang.Override
     public Builder newBuilderForType() { return newBuilder(); }
     public static Builder newBuilder() {
       return DEFAULT_INSTANCE.toBuilder();
@@ -512,6 +519,7 @@ private static final long serialVersionUID = 0L;
     public static Builder newBuilder(io.bloombox.schema.services.dash.v1beta1.TestIntegration.Request prototype) {
       return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
     }
+    @java.lang.Override
     public Builder toBuilder() {
       return this == DEFAULT_INSTANCE
           ? new Builder() : new Builder().mergeFrom(this);
@@ -528,20 +536,21 @@ private static final long serialVersionUID = 0L;
      * Request to test an integrated piece of software.
      * </pre>
      *
-     * Protobuf type {@code bloombox.schema.services.dash.v1beta1.TestIntegration.Request}
+     * Protobuf type {@code bloombox.services.dash.v1beta1.TestIntegration.Request}
      */
     public static final class Builder extends
         com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:bloombox.schema.services.dash.v1beta1.TestIntegration.Request)
+        // @@protoc_insertion_point(builder_implements:bloombox.services.dash.v1beta1.TestIntegration.Request)
         io.bloombox.schema.services.dash.v1beta1.TestIntegration.RequestOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return io.bloombox.schema.services.dash.v1beta1.DashServiceBeta1.internal_static_bloombox_schema_services_dash_v1beta1_TestIntegration_Request_descriptor;
+        return io.bloombox.schema.services.dash.v1beta1.DashServiceBeta1.internal_static_bloombox_services_dash_v1beta1_TestIntegration_Request_descriptor;
       }
 
+      @java.lang.Override
       protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return io.bloombox.schema.services.dash.v1beta1.DashServiceBeta1.internal_static_bloombox_schema_services_dash_v1beta1_TestIntegration_Request_fieldAccessorTable
+        return io.bloombox.schema.services.dash.v1beta1.DashServiceBeta1.internal_static_bloombox_services_dash_v1beta1_TestIntegration_Request_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
                 io.bloombox.schema.services.dash.v1beta1.TestIntegration.Request.class, io.bloombox.schema.services.dash.v1beta1.TestIntegration.Request.Builder.class);
       }
@@ -561,6 +570,7 @@ private static final long serialVersionUID = 0L;
                 .alwaysUseFieldBuilders) {
         }
       }
+      @java.lang.Override
       public Builder clear() {
         super.clear();
         partner_ = "";
@@ -572,15 +582,18 @@ private static final long serialVersionUID = 0L;
         return this;
       }
 
+      @java.lang.Override
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return io.bloombox.schema.services.dash.v1beta1.DashServiceBeta1.internal_static_bloombox_schema_services_dash_v1beta1_TestIntegration_Request_descriptor;
+        return io.bloombox.schema.services.dash.v1beta1.DashServiceBeta1.internal_static_bloombox_services_dash_v1beta1_TestIntegration_Request_descriptor;
       }
 
+      @java.lang.Override
       public io.bloombox.schema.services.dash.v1beta1.TestIntegration.Request getDefaultInstanceForType() {
         return io.bloombox.schema.services.dash.v1beta1.TestIntegration.Request.getDefaultInstance();
       }
 
+      @java.lang.Override
       public io.bloombox.schema.services.dash.v1beta1.TestIntegration.Request build() {
         io.bloombox.schema.services.dash.v1beta1.TestIntegration.Request result = buildPartial();
         if (!result.isInitialized()) {
@@ -589,6 +602,7 @@ private static final long serialVersionUID = 0L;
         return result;
       }
 
+      @java.lang.Override
       public io.bloombox.schema.services.dash.v1beta1.TestIntegration.Request buildPartial() {
         io.bloombox.schema.services.dash.v1beta1.TestIntegration.Request result = new io.bloombox.schema.services.dash.v1beta1.TestIntegration.Request(this);
         result.partner_ = partner_;
@@ -598,32 +612,39 @@ private static final long serialVersionUID = 0L;
         return result;
       }
 
+      @java.lang.Override
       public Builder clone() {
         return (Builder) super.clone();
       }
+      @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
         return (Builder) super.setField(field, value);
       }
+      @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
         return (Builder) super.clearField(field);
       }
+      @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
         return (Builder) super.clearOneof(oneof);
       }
+      @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
         return (Builder) super.setRepeatedField(field, index, value);
       }
+      @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
         return (Builder) super.addRepeatedField(field, value);
       }
+      @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
         if (other instanceof io.bloombox.schema.services.dash.v1beta1.TestIntegration.Request) {
           return mergeFrom((io.bloombox.schema.services.dash.v1beta1.TestIntegration.Request)other);
@@ -651,10 +672,12 @@ private static final long serialVersionUID = 0L;
         return this;
       }
 
+      @java.lang.Override
       public final boolean isInitialized() {
         return true;
       }
 
+      @java.lang.Override
       public Builder mergeFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -857,7 +880,7 @@ private static final long serialVersionUID = 0L;
        * Vendor for which we should test integration points.
        * </pre>
        *
-       * <code>.bloombox.schema.partner.integrations.IntegrationPartner vendor = 3;</code>
+       * <code>.bloombox.partner.integrations.IntegrationPartner vendor = 3;</code>
        */
       public int getVendorValue() {
         return vendor_;
@@ -867,7 +890,7 @@ private static final long serialVersionUID = 0L;
        * Vendor for which we should test integration points.
        * </pre>
        *
-       * <code>.bloombox.schema.partner.integrations.IntegrationPartner vendor = 3;</code>
+       * <code>.bloombox.partner.integrations.IntegrationPartner vendor = 3;</code>
        */
       public Builder setVendorValue(int value) {
         vendor_ = value;
@@ -879,9 +902,10 @@ private static final long serialVersionUID = 0L;
        * Vendor for which we should test integration points.
        * </pre>
        *
-       * <code>.bloombox.schema.partner.integrations.IntegrationPartner vendor = 3;</code>
+       * <code>.bloombox.partner.integrations.IntegrationPartner vendor = 3;</code>
        */
       public io.bloombox.schema.partner.integrations.IntegrationSettings.IntegrationPartner getVendor() {
+        @SuppressWarnings("deprecation")
         io.bloombox.schema.partner.integrations.IntegrationSettings.IntegrationPartner result = io.bloombox.schema.partner.integrations.IntegrationSettings.IntegrationPartner.valueOf(vendor_);
         return result == null ? io.bloombox.schema.partner.integrations.IntegrationSettings.IntegrationPartner.UNRECOGNIZED : result;
       }
@@ -890,7 +914,7 @@ private static final long serialVersionUID = 0L;
        * Vendor for which we should test integration points.
        * </pre>
        *
-       * <code>.bloombox.schema.partner.integrations.IntegrationPartner vendor = 3;</code>
+       * <code>.bloombox.partner.integrations.IntegrationPartner vendor = 3;</code>
        */
       public Builder setVendor(io.bloombox.schema.partner.integrations.IntegrationSettings.IntegrationPartner value) {
         if (value == null) {
@@ -906,7 +930,7 @@ private static final long serialVersionUID = 0L;
        * Vendor for which we should test integration points.
        * </pre>
        *
-       * <code>.bloombox.schema.partner.integrations.IntegrationPartner vendor = 3;</code>
+       * <code>.bloombox.partner.integrations.IntegrationPartner vendor = 3;</code>
        */
       public Builder clearVendor() {
         
@@ -914,21 +938,23 @@ private static final long serialVersionUID = 0L;
         onChanged();
         return this;
       }
+      @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
         return super.setUnknownFieldsProto3(unknownFields);
       }
 
+      @java.lang.Override
       public final Builder mergeUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
         return super.mergeUnknownFields(unknownFields);
       }
 
 
-      // @@protoc_insertion_point(builder_scope:bloombox.schema.services.dash.v1beta1.TestIntegration.Request)
+      // @@protoc_insertion_point(builder_scope:bloombox.services.dash.v1beta1.TestIntegration.Request)
     }
 
-    // @@protoc_insertion_point(class_scope:bloombox.schema.services.dash.v1beta1.TestIntegration.Request)
+    // @@protoc_insertion_point(class_scope:bloombox.services.dash.v1beta1.TestIntegration.Request)
     private static final io.bloombox.schema.services.dash.v1beta1.TestIntegration.Request DEFAULT_INSTANCE;
     static {
       DEFAULT_INSTANCE = new io.bloombox.schema.services.dash.v1beta1.TestIntegration.Request();
@@ -940,6 +966,7 @@ private static final long serialVersionUID = 0L;
 
     private static final com.google.protobuf.Parser<Request>
         PARSER = new com.google.protobuf.AbstractParser<Request>() {
+      @java.lang.Override
       public Request parsePartialFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -957,6 +984,7 @@ private static final long serialVersionUID = 0L;
       return PARSER;
     }
 
+    @java.lang.Override
     public io.bloombox.schema.services.dash.v1beta1.TestIntegration.Request getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
@@ -964,7 +992,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public interface ResponseOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:bloombox.schema.services.dash.v1beta1.TestIntegration.Response)
+      // @@protoc_insertion_point(interface_extends:bloombox.services.dash.v1beta1.TestIntegration.Response)
       com.google.protobuf.MessageOrBuilder {
 
     /**
@@ -972,7 +1000,7 @@ private static final long serialVersionUID = 0L;
      * Integration error experienced, if any.
      * </pre>
      *
-     * <code>.bloombox.schema.services.dash.v1beta1.DashError err = 1;</code>
+     * <code>.bloombox.services.dash.v1beta1.DashError err = 1;</code>
      */
     int getErrValue();
     /**
@@ -980,7 +1008,7 @@ private static final long serialVersionUID = 0L;
      * Integration error experienced, if any.
      * </pre>
      *
-     * <code>.bloombox.schema.services.dash.v1beta1.DashError err = 1;</code>
+     * <code>.bloombox.services.dash.v1beta1.DashError err = 1;</code>
      */
     io.bloombox.schema.services.dash.v1beta1.DashError getErr();
 
@@ -1007,11 +1035,11 @@ private static final long serialVersionUID = 0L;
    * Response to a request to test an integrated piece of software.
    * </pre>
    *
-   * Protobuf type {@code bloombox.schema.services.dash.v1beta1.TestIntegration.Response}
+   * Protobuf type {@code bloombox.services.dash.v1beta1.TestIntegration.Response}
    */
   public  static final class Response extends
       com.google.protobuf.GeneratedMessageV3 implements
-      // @@protoc_insertion_point(message_implements:bloombox.schema.services.dash.v1beta1.TestIntegration.Response)
+      // @@protoc_insertion_point(message_implements:bloombox.services.dash.v1beta1.TestIntegration.Response)
       ResponseOrBuilder {
   private static final long serialVersionUID = 0L;
     // Use Response.newBuilder() to construct.
@@ -1047,13 +1075,6 @@ private static final long serialVersionUID = 0L;
             case 0:
               done = true;
               break;
-            default: {
-              if (!parseUnknownFieldProto3(
-                  input, unknownFields, extensionRegistry, tag)) {
-                done = true;
-              }
-              break;
-            }
             case 8: {
               int rawValue = input.readEnum();
 
@@ -1064,6 +1085,13 @@ private static final long serialVersionUID = 0L;
               java.lang.String s = input.readStringRequireUtf8();
 
               message_ = s;
+              break;
+            }
+            default: {
+              if (!parseUnknownFieldProto3(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
               break;
             }
           }
@@ -1080,12 +1108,13 @@ private static final long serialVersionUID = 0L;
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return io.bloombox.schema.services.dash.v1beta1.DashServiceBeta1.internal_static_bloombox_schema_services_dash_v1beta1_TestIntegration_Response_descriptor;
+      return io.bloombox.schema.services.dash.v1beta1.DashServiceBeta1.internal_static_bloombox_services_dash_v1beta1_TestIntegration_Response_descriptor;
     }
 
+    @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return io.bloombox.schema.services.dash.v1beta1.DashServiceBeta1.internal_static_bloombox_schema_services_dash_v1beta1_TestIntegration_Response_fieldAccessorTable
+      return io.bloombox.schema.services.dash.v1beta1.DashServiceBeta1.internal_static_bloombox_services_dash_v1beta1_TestIntegration_Response_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
               io.bloombox.schema.services.dash.v1beta1.TestIntegration.Response.class, io.bloombox.schema.services.dash.v1beta1.TestIntegration.Response.Builder.class);
     }
@@ -1097,7 +1126,7 @@ private static final long serialVersionUID = 0L;
      * Integration error experienced, if any.
      * </pre>
      *
-     * <code>.bloombox.schema.services.dash.v1beta1.DashError err = 1;</code>
+     * <code>.bloombox.services.dash.v1beta1.DashError err = 1;</code>
      */
     public int getErrValue() {
       return err_;
@@ -1107,9 +1136,10 @@ private static final long serialVersionUID = 0L;
      * Integration error experienced, if any.
      * </pre>
      *
-     * <code>.bloombox.schema.services.dash.v1beta1.DashError err = 1;</code>
+     * <code>.bloombox.services.dash.v1beta1.DashError err = 1;</code>
      */
     public io.bloombox.schema.services.dash.v1beta1.DashError getErr() {
+      @SuppressWarnings("deprecation")
       io.bloombox.schema.services.dash.v1beta1.DashError result = io.bloombox.schema.services.dash.v1beta1.DashError.valueOf(err_);
       return result == null ? io.bloombox.schema.services.dash.v1beta1.DashError.UNRECOGNIZED : result;
     }
@@ -1157,6 +1187,7 @@ private static final long serialVersionUID = 0L;
     }
 
     private byte memoizedIsInitialized = -1;
+    @java.lang.Override
     public final boolean isInitialized() {
       byte isInitialized = memoizedIsInitialized;
       if (isInitialized == 1) return true;
@@ -1166,6 +1197,7 @@ private static final long serialVersionUID = 0L;
       return true;
     }
 
+    @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
       if (err_ != io.bloombox.schema.services.dash.v1beta1.DashError.NO_ERROR.getNumber()) {
@@ -1177,6 +1209,7 @@ private static final long serialVersionUID = 0L;
       unknownFields.writeTo(output);
     }
 
+    @java.lang.Override
     public int getSerializedSize() {
       int size = memoizedSize;
       if (size != -1) return size;
@@ -1298,6 +1331,7 @@ private static final long serialVersionUID = 0L;
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
 
+    @java.lang.Override
     public Builder newBuilderForType() { return newBuilder(); }
     public static Builder newBuilder() {
       return DEFAULT_INSTANCE.toBuilder();
@@ -1305,6 +1339,7 @@ private static final long serialVersionUID = 0L;
     public static Builder newBuilder(io.bloombox.schema.services.dash.v1beta1.TestIntegration.Response prototype) {
       return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
     }
+    @java.lang.Override
     public Builder toBuilder() {
       return this == DEFAULT_INSTANCE
           ? new Builder() : new Builder().mergeFrom(this);
@@ -1321,20 +1356,21 @@ private static final long serialVersionUID = 0L;
      * Response to a request to test an integrated piece of software.
      * </pre>
      *
-     * Protobuf type {@code bloombox.schema.services.dash.v1beta1.TestIntegration.Response}
+     * Protobuf type {@code bloombox.services.dash.v1beta1.TestIntegration.Response}
      */
     public static final class Builder extends
         com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:bloombox.schema.services.dash.v1beta1.TestIntegration.Response)
+        // @@protoc_insertion_point(builder_implements:bloombox.services.dash.v1beta1.TestIntegration.Response)
         io.bloombox.schema.services.dash.v1beta1.TestIntegration.ResponseOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return io.bloombox.schema.services.dash.v1beta1.DashServiceBeta1.internal_static_bloombox_schema_services_dash_v1beta1_TestIntegration_Response_descriptor;
+        return io.bloombox.schema.services.dash.v1beta1.DashServiceBeta1.internal_static_bloombox_services_dash_v1beta1_TestIntegration_Response_descriptor;
       }
 
+      @java.lang.Override
       protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return io.bloombox.schema.services.dash.v1beta1.DashServiceBeta1.internal_static_bloombox_schema_services_dash_v1beta1_TestIntegration_Response_fieldAccessorTable
+        return io.bloombox.schema.services.dash.v1beta1.DashServiceBeta1.internal_static_bloombox_services_dash_v1beta1_TestIntegration_Response_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
                 io.bloombox.schema.services.dash.v1beta1.TestIntegration.Response.class, io.bloombox.schema.services.dash.v1beta1.TestIntegration.Response.Builder.class);
       }
@@ -1354,6 +1390,7 @@ private static final long serialVersionUID = 0L;
                 .alwaysUseFieldBuilders) {
         }
       }
+      @java.lang.Override
       public Builder clear() {
         super.clear();
         err_ = 0;
@@ -1363,15 +1400,18 @@ private static final long serialVersionUID = 0L;
         return this;
       }
 
+      @java.lang.Override
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return io.bloombox.schema.services.dash.v1beta1.DashServiceBeta1.internal_static_bloombox_schema_services_dash_v1beta1_TestIntegration_Response_descriptor;
+        return io.bloombox.schema.services.dash.v1beta1.DashServiceBeta1.internal_static_bloombox_services_dash_v1beta1_TestIntegration_Response_descriptor;
       }
 
+      @java.lang.Override
       public io.bloombox.schema.services.dash.v1beta1.TestIntegration.Response getDefaultInstanceForType() {
         return io.bloombox.schema.services.dash.v1beta1.TestIntegration.Response.getDefaultInstance();
       }
 
+      @java.lang.Override
       public io.bloombox.schema.services.dash.v1beta1.TestIntegration.Response build() {
         io.bloombox.schema.services.dash.v1beta1.TestIntegration.Response result = buildPartial();
         if (!result.isInitialized()) {
@@ -1380,6 +1420,7 @@ private static final long serialVersionUID = 0L;
         return result;
       }
 
+      @java.lang.Override
       public io.bloombox.schema.services.dash.v1beta1.TestIntegration.Response buildPartial() {
         io.bloombox.schema.services.dash.v1beta1.TestIntegration.Response result = new io.bloombox.schema.services.dash.v1beta1.TestIntegration.Response(this);
         result.err_ = err_;
@@ -1388,32 +1429,39 @@ private static final long serialVersionUID = 0L;
         return result;
       }
 
+      @java.lang.Override
       public Builder clone() {
         return (Builder) super.clone();
       }
+      @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
         return (Builder) super.setField(field, value);
       }
+      @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
         return (Builder) super.clearField(field);
       }
+      @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
         return (Builder) super.clearOneof(oneof);
       }
+      @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
         return (Builder) super.setRepeatedField(field, index, value);
       }
+      @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
         return (Builder) super.addRepeatedField(field, value);
       }
+      @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
         if (other instanceof io.bloombox.schema.services.dash.v1beta1.TestIntegration.Response) {
           return mergeFrom((io.bloombox.schema.services.dash.v1beta1.TestIntegration.Response)other);
@@ -1437,10 +1485,12 @@ private static final long serialVersionUID = 0L;
         return this;
       }
 
+      @java.lang.Override
       public final boolean isInitialized() {
         return true;
       }
 
+      @java.lang.Override
       public Builder mergeFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -1465,7 +1515,7 @@ private static final long serialVersionUID = 0L;
        * Integration error experienced, if any.
        * </pre>
        *
-       * <code>.bloombox.schema.services.dash.v1beta1.DashError err = 1;</code>
+       * <code>.bloombox.services.dash.v1beta1.DashError err = 1;</code>
        */
       public int getErrValue() {
         return err_;
@@ -1475,7 +1525,7 @@ private static final long serialVersionUID = 0L;
        * Integration error experienced, if any.
        * </pre>
        *
-       * <code>.bloombox.schema.services.dash.v1beta1.DashError err = 1;</code>
+       * <code>.bloombox.services.dash.v1beta1.DashError err = 1;</code>
        */
       public Builder setErrValue(int value) {
         err_ = value;
@@ -1487,9 +1537,10 @@ private static final long serialVersionUID = 0L;
        * Integration error experienced, if any.
        * </pre>
        *
-       * <code>.bloombox.schema.services.dash.v1beta1.DashError err = 1;</code>
+       * <code>.bloombox.services.dash.v1beta1.DashError err = 1;</code>
        */
       public io.bloombox.schema.services.dash.v1beta1.DashError getErr() {
+        @SuppressWarnings("deprecation")
         io.bloombox.schema.services.dash.v1beta1.DashError result = io.bloombox.schema.services.dash.v1beta1.DashError.valueOf(err_);
         return result == null ? io.bloombox.schema.services.dash.v1beta1.DashError.UNRECOGNIZED : result;
       }
@@ -1498,7 +1549,7 @@ private static final long serialVersionUID = 0L;
        * Integration error experienced, if any.
        * </pre>
        *
-       * <code>.bloombox.schema.services.dash.v1beta1.DashError err = 1;</code>
+       * <code>.bloombox.services.dash.v1beta1.DashError err = 1;</code>
        */
       public Builder setErr(io.bloombox.schema.services.dash.v1beta1.DashError value) {
         if (value == null) {
@@ -1514,7 +1565,7 @@ private static final long serialVersionUID = 0L;
        * Integration error experienced, if any.
        * </pre>
        *
-       * <code>.bloombox.schema.services.dash.v1beta1.DashError err = 1;</code>
+       * <code>.bloombox.services.dash.v1beta1.DashError err = 1;</code>
        */
       public Builder clearErr() {
         
@@ -1611,21 +1662,23 @@ private static final long serialVersionUID = 0L;
         onChanged();
         return this;
       }
+      @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
         return super.setUnknownFieldsProto3(unknownFields);
       }
 
+      @java.lang.Override
       public final Builder mergeUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
         return super.mergeUnknownFields(unknownFields);
       }
 
 
-      // @@protoc_insertion_point(builder_scope:bloombox.schema.services.dash.v1beta1.TestIntegration.Response)
+      // @@protoc_insertion_point(builder_scope:bloombox.services.dash.v1beta1.TestIntegration.Response)
     }
 
-    // @@protoc_insertion_point(class_scope:bloombox.schema.services.dash.v1beta1.TestIntegration.Response)
+    // @@protoc_insertion_point(class_scope:bloombox.services.dash.v1beta1.TestIntegration.Response)
     private static final io.bloombox.schema.services.dash.v1beta1.TestIntegration.Response DEFAULT_INSTANCE;
     static {
       DEFAULT_INSTANCE = new io.bloombox.schema.services.dash.v1beta1.TestIntegration.Response();
@@ -1637,6 +1690,7 @@ private static final long serialVersionUID = 0L;
 
     private static final com.google.protobuf.Parser<Response>
         PARSER = new com.google.protobuf.AbstractParser<Response>() {
+      @java.lang.Override
       public Response parsePartialFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -1654,6 +1708,7 @@ private static final long serialVersionUID = 0L;
       return PARSER;
     }
 
+    @java.lang.Override
     public io.bloombox.schema.services.dash.v1beta1.TestIntegration.Response getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
@@ -1661,6 +1716,7 @@ private static final long serialVersionUID = 0L;
   }
 
   private byte memoizedIsInitialized = -1;
+  @java.lang.Override
   public final boolean isInitialized() {
     byte isInitialized = memoizedIsInitialized;
     if (isInitialized == 1) return true;
@@ -1670,11 +1726,13 @@ private static final long serialVersionUID = 0L;
     return true;
   }
 
+  @java.lang.Override
   public void writeTo(com.google.protobuf.CodedOutputStream output)
                       throws java.io.IOException {
     unknownFields.writeTo(output);
   }
 
+  @java.lang.Override
   public int getSerializedSize() {
     int size = memoizedSize;
     if (size != -1) return size;
@@ -1782,6 +1840,7 @@ private static final long serialVersionUID = 0L;
         .parseWithIOException(PARSER, input, extensionRegistry);
   }
 
+  @java.lang.Override
   public Builder newBuilderForType() { return newBuilder(); }
   public static Builder newBuilder() {
     return DEFAULT_INSTANCE.toBuilder();
@@ -1789,6 +1848,7 @@ private static final long serialVersionUID = 0L;
   public static Builder newBuilder(io.bloombox.schema.services.dash.v1beta1.TestIntegration prototype) {
     return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
   }
+  @java.lang.Override
   public Builder toBuilder() {
     return this == DEFAULT_INSTANCE
         ? new Builder() : new Builder().mergeFrom(this);
@@ -1805,20 +1865,21 @@ private static final long serialVersionUID = 0L;
    * Test an integrated piece of software against a Bloombox account.
    * </pre>
    *
-   * Protobuf type {@code bloombox.schema.services.dash.v1beta1.TestIntegration}
+   * Protobuf type {@code bloombox.services.dash.v1beta1.TestIntegration}
    */
   public static final class Builder extends
       com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-      // @@protoc_insertion_point(builder_implements:bloombox.schema.services.dash.v1beta1.TestIntegration)
+      // @@protoc_insertion_point(builder_implements:bloombox.services.dash.v1beta1.TestIntegration)
       io.bloombox.schema.services.dash.v1beta1.TestIntegrationOrBuilder {
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return io.bloombox.schema.services.dash.v1beta1.DashServiceBeta1.internal_static_bloombox_schema_services_dash_v1beta1_TestIntegration_descriptor;
+      return io.bloombox.schema.services.dash.v1beta1.DashServiceBeta1.internal_static_bloombox_services_dash_v1beta1_TestIntegration_descriptor;
     }
 
+    @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return io.bloombox.schema.services.dash.v1beta1.DashServiceBeta1.internal_static_bloombox_schema_services_dash_v1beta1_TestIntegration_fieldAccessorTable
+      return io.bloombox.schema.services.dash.v1beta1.DashServiceBeta1.internal_static_bloombox_services_dash_v1beta1_TestIntegration_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
               io.bloombox.schema.services.dash.v1beta1.TestIntegration.class, io.bloombox.schema.services.dash.v1beta1.TestIntegration.Builder.class);
     }
@@ -1838,20 +1899,24 @@ private static final long serialVersionUID = 0L;
               .alwaysUseFieldBuilders) {
       }
     }
+    @java.lang.Override
     public Builder clear() {
       super.clear();
       return this;
     }
 
+    @java.lang.Override
     public com.google.protobuf.Descriptors.Descriptor
         getDescriptorForType() {
-      return io.bloombox.schema.services.dash.v1beta1.DashServiceBeta1.internal_static_bloombox_schema_services_dash_v1beta1_TestIntegration_descriptor;
+      return io.bloombox.schema.services.dash.v1beta1.DashServiceBeta1.internal_static_bloombox_services_dash_v1beta1_TestIntegration_descriptor;
     }
 
+    @java.lang.Override
     public io.bloombox.schema.services.dash.v1beta1.TestIntegration getDefaultInstanceForType() {
       return io.bloombox.schema.services.dash.v1beta1.TestIntegration.getDefaultInstance();
     }
 
+    @java.lang.Override
     public io.bloombox.schema.services.dash.v1beta1.TestIntegration build() {
       io.bloombox.schema.services.dash.v1beta1.TestIntegration result = buildPartial();
       if (!result.isInitialized()) {
@@ -1860,38 +1925,46 @@ private static final long serialVersionUID = 0L;
       return result;
     }
 
+    @java.lang.Override
     public io.bloombox.schema.services.dash.v1beta1.TestIntegration buildPartial() {
       io.bloombox.schema.services.dash.v1beta1.TestIntegration result = new io.bloombox.schema.services.dash.v1beta1.TestIntegration(this);
       onBuilt();
       return result;
     }
 
+    @java.lang.Override
     public Builder clone() {
       return (Builder) super.clone();
     }
+    @java.lang.Override
     public Builder setField(
         com.google.protobuf.Descriptors.FieldDescriptor field,
         java.lang.Object value) {
       return (Builder) super.setField(field, value);
     }
+    @java.lang.Override
     public Builder clearField(
         com.google.protobuf.Descriptors.FieldDescriptor field) {
       return (Builder) super.clearField(field);
     }
+    @java.lang.Override
     public Builder clearOneof(
         com.google.protobuf.Descriptors.OneofDescriptor oneof) {
       return (Builder) super.clearOneof(oneof);
     }
+    @java.lang.Override
     public Builder setRepeatedField(
         com.google.protobuf.Descriptors.FieldDescriptor field,
         int index, java.lang.Object value) {
       return (Builder) super.setRepeatedField(field, index, value);
     }
+    @java.lang.Override
     public Builder addRepeatedField(
         com.google.protobuf.Descriptors.FieldDescriptor field,
         java.lang.Object value) {
       return (Builder) super.addRepeatedField(field, value);
     }
+    @java.lang.Override
     public Builder mergeFrom(com.google.protobuf.Message other) {
       if (other instanceof io.bloombox.schema.services.dash.v1beta1.TestIntegration) {
         return mergeFrom((io.bloombox.schema.services.dash.v1beta1.TestIntegration)other);
@@ -1908,10 +1981,12 @@ private static final long serialVersionUID = 0L;
       return this;
     }
 
+    @java.lang.Override
     public final boolean isInitialized() {
       return true;
     }
 
+    @java.lang.Override
     public Builder mergeFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -1929,21 +2004,23 @@ private static final long serialVersionUID = 0L;
       }
       return this;
     }
+    @java.lang.Override
     public final Builder setUnknownFields(
         final com.google.protobuf.UnknownFieldSet unknownFields) {
       return super.setUnknownFieldsProto3(unknownFields);
     }
 
+    @java.lang.Override
     public final Builder mergeUnknownFields(
         final com.google.protobuf.UnknownFieldSet unknownFields) {
       return super.mergeUnknownFields(unknownFields);
     }
 
 
-    // @@protoc_insertion_point(builder_scope:bloombox.schema.services.dash.v1beta1.TestIntegration)
+    // @@protoc_insertion_point(builder_scope:bloombox.services.dash.v1beta1.TestIntegration)
   }
 
-  // @@protoc_insertion_point(class_scope:bloombox.schema.services.dash.v1beta1.TestIntegration)
+  // @@protoc_insertion_point(class_scope:bloombox.services.dash.v1beta1.TestIntegration)
   private static final io.bloombox.schema.services.dash.v1beta1.TestIntegration DEFAULT_INSTANCE;
   static {
     DEFAULT_INSTANCE = new io.bloombox.schema.services.dash.v1beta1.TestIntegration();
@@ -1955,6 +2032,7 @@ private static final long serialVersionUID = 0L;
 
   private static final com.google.protobuf.Parser<TestIntegration>
       PARSER = new com.google.protobuf.AbstractParser<TestIntegration>() {
+    @java.lang.Override
     public TestIntegration parsePartialFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -1972,6 +2050,7 @@ private static final long serialVersionUID = 0L;
     return PARSER;
   }
 
+  @java.lang.Override
   public io.bloombox.schema.services.dash.v1beta1.TestIntegration getDefaultInstanceForType() {
     return DEFAULT_INSTANCE;
   }

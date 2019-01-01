@@ -1,11 +1,12 @@
 /*
- * Copyright 2018, Bloombox, LLC.
+ * Copyright 2018, Momentum Ideas, Co. All rights reserved.
  *
- * Licensed under the Apache License, Version 2.0 (the "License");
- * you may not use this file except in compliance with the License.
- * You may obtain a copy of the License at
- *
- *     http://www.apache.org/licenses/LICENSE-2.0
+ * Source and object computer code contained herein is the private intellectual
+ * property of Momentum Ideas Co., a Delaware Corporation. Use of this
+ * code in source form requires permission in writing before use or the
+ * assembly, distribution, or publishing of derivative works, for commercial
+ * purposes or any other purpose, from a duly authorized officer of Momentum
+ * Ideas Co.
  *
  * Unless required by applicable law or agreed to in writing, software
  * distributed under the License is distributed on an "AS IS" BASIS,
@@ -45,15 +46,14 @@ public final class SignatureOuterClass {
   static {
     java.lang.String[] descriptorData = {
       "\n\026crypto/Signature.proto\022\023opencannabis.c" +
-      "rypto\032\037crypto/primitives/Keypair.proto\032!" +
-      "crypto/primitives/Integrity.proto\"\317\001\n\tSi" +
-      "gnature\022C\n\npublic_key\030\001 \001(\0132/.opencannab" +
-      "is.crypto.primitives.pki.KeyMaterial\022C\n\013" +
-      "fingerprint\030\002 \001(\0132..opencannabis.crypto." +
-      "primitives.integrity.Hash\022\r\n\003raw\030\005 \001(\014H\000" +
-      "\022\r\n\003b64\030\006 \001(\tH\000\022\r\n\003hex\030\007 \001(\tH\000B\013\n\tsignat" +
-      "ureB)\n\035io.opencannabis.schema.cryptoH\001P\001" +
-      "\242\002\003OCSb\006proto3"
+      "rypto\032\034crypto/primitives/Keys.proto\032!cry" +
+      "pto/primitives/Integrity.proto\"\253\001\n\tSigna" +
+      "ture\0224\n\npublic_key\030\001 \001(\0132 .opencannabis." +
+      "crypto.KeyMaterial\022.\n\013fingerprint\030\002 \001(\0132" +
+      "\031.opencannabis.crypto.Hash\022\r\n\003raw\030\005 \001(\014H" +
+      "\000\022\r\n\003b64\030\006 \001(\tH\000\022\r\n\003hex\030\007 \001(\tH\000B\013\n\tsigna" +
+      "tureB)\n\035io.opencannabis.schema.cryptoH\001P" +
+      "\001\242\002\003OCSb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -66,7 +66,7 @@ public final class SignatureOuterClass {
     com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
-          io.opencannabis.schema.crypto.primitives.pki.KeypairOuterClass.getDescriptor(),
+          io.opencannabis.schema.crypto.primitives.Keys.getDescriptor(),
           io.opencannabis.schema.crypto.primitives.integrity.Integrity.getDescriptor(),
         }, assigner);
     internal_static_opencannabis_crypto_Signature_descriptor =
@@ -75,7 +75,7 @@ public final class SignatureOuterClass {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_opencannabis_crypto_Signature_descriptor,
         new java.lang.String[] { "PublicKey", "Fingerprint", "Raw", "B64", "Hex", "Signature", });
-    io.opencannabis.schema.crypto.primitives.pki.KeypairOuterClass.getDescriptor();
+    io.opencannabis.schema.crypto.primitives.Keys.getDescriptor();
     io.opencannabis.schema.crypto.primitives.integrity.Integrity.getDescriptor();
   }
 

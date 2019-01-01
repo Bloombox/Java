@@ -223,13 +223,6 @@ public final class Openapiv2 {
             case 0:
               done = true;
               break;
-            default: {
-              if (!parseUnknownFieldProto3(
-                  input, unknownFields, extensionRegistry, tag)) {
-                done = true;
-              }
-              break;
-            }
             case 10: {
               java.lang.String s = input.readStringRequireUtf8();
 
@@ -337,6 +330,13 @@ public final class Openapiv2 {
 
               break;
             }
+            default: {
+              if (!parseUnknownFieldProto3(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
           }
         }
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
@@ -366,6 +366,7 @@ public final class Openapiv2 {
       return grpc.gateway.protoc_gen_swagger.options.Openapiv2.internal_static_grpc_gateway_protoc_gen_swagger_options_Swagger_descriptor;
     }
 
+    @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
       return grpc.gateway.protoc_gen_swagger.options.Openapiv2.internal_static_grpc_gateway_protoc_gen_swagger_options_Swagger_fieldAccessorTable
@@ -629,6 +630,7 @@ public final class Openapiv2 {
             new com.google.protobuf.Internal.ListAdapter.Converter<
                 java.lang.Integer, grpc.gateway.protoc_gen_swagger.options.Openapiv2.Swagger.SwaggerScheme>() {
               public grpc.gateway.protoc_gen_swagger.options.Openapiv2.Swagger.SwaggerScheme convert(java.lang.Integer from) {
+                @SuppressWarnings("deprecation")
                 grpc.gateway.protoc_gen_swagger.options.Openapiv2.Swagger.SwaggerScheme result = grpc.gateway.protoc_gen_swagger.options.Openapiv2.Swagger.SwaggerScheme.valueOf(from);
                 return result == null ? grpc.gateway.protoc_gen_swagger.options.Openapiv2.Swagger.SwaggerScheme.UNRECOGNIZED : result;
               }
@@ -803,6 +805,7 @@ public final class Openapiv2 {
     }
 
     private byte memoizedIsInitialized = -1;
+    @java.lang.Override
     public final boolean isInitialized() {
       byte isInitialized = memoizedIsInitialized;
       if (isInitialized == 1) return true;
@@ -812,6 +815,7 @@ public final class Openapiv2 {
       return true;
     }
 
+    @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
       getSerializedSize();
@@ -852,6 +856,7 @@ public final class Openapiv2 {
       unknownFields.writeTo(output);
     }
 
+    @java.lang.Override
     public int getSerializedSize() {
       int size = memoizedSize;
       if (size != -1) return size;
@@ -1074,6 +1079,7 @@ public final class Openapiv2 {
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
 
+    @java.lang.Override
     public Builder newBuilderForType() { return newBuilder(); }
     public static Builder newBuilder() {
       return DEFAULT_INSTANCE.toBuilder();
@@ -1081,6 +1087,7 @@ public final class Openapiv2 {
     public static Builder newBuilder(grpc.gateway.protoc_gen_swagger.options.Openapiv2.Swagger prototype) {
       return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
     }
+    @java.lang.Override
     public Builder toBuilder() {
       return this == DEFAULT_INSTANCE
           ? new Builder() : new Builder().mergeFrom(this);
@@ -1110,6 +1117,7 @@ public final class Openapiv2 {
         return grpc.gateway.protoc_gen_swagger.options.Openapiv2.internal_static_grpc_gateway_protoc_gen_swagger_options_Swagger_descriptor;
       }
 
+      @java.lang.Override
       protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
           internalGetFieldAccessorTable() {
         return grpc.gateway.protoc_gen_swagger.options.Openapiv2.internal_static_grpc_gateway_protoc_gen_swagger_options_Swagger_fieldAccessorTable
@@ -1133,6 +1141,7 @@ public final class Openapiv2 {
           getSecurityFieldBuilder();
         }
       }
+      @java.lang.Override
       public Builder clear() {
         super.clear();
         swagger_ = "";
@@ -1174,15 +1183,18 @@ public final class Openapiv2 {
         return this;
       }
 
+      @java.lang.Override
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
         return grpc.gateway.protoc_gen_swagger.options.Openapiv2.internal_static_grpc_gateway_protoc_gen_swagger_options_Swagger_descriptor;
       }
 
+      @java.lang.Override
       public grpc.gateway.protoc_gen_swagger.options.Openapiv2.Swagger getDefaultInstanceForType() {
         return grpc.gateway.protoc_gen_swagger.options.Openapiv2.Swagger.getDefaultInstance();
       }
 
+      @java.lang.Override
       public grpc.gateway.protoc_gen_swagger.options.Openapiv2.Swagger build() {
         grpc.gateway.protoc_gen_swagger.options.Openapiv2.Swagger result = buildPartial();
         if (!result.isInitialized()) {
@@ -1191,6 +1203,7 @@ public final class Openapiv2 {
         return result;
       }
 
+      @java.lang.Override
       public grpc.gateway.protoc_gen_swagger.options.Openapiv2.Swagger buildPartial() {
         grpc.gateway.protoc_gen_swagger.options.Openapiv2.Swagger result = new grpc.gateway.protoc_gen_swagger.options.Openapiv2.Swagger(this);
         int from_bitField0_ = bitField0_;
@@ -1242,32 +1255,39 @@ public final class Openapiv2 {
         return result;
       }
 
+      @java.lang.Override
       public Builder clone() {
         return (Builder) super.clone();
       }
+      @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
         return (Builder) super.setField(field, value);
       }
+      @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
         return (Builder) super.clearField(field);
       }
+      @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
         return (Builder) super.clearOneof(oneof);
       }
+      @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
         return (Builder) super.setRepeatedField(field, index, value);
       }
+      @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
         return (Builder) super.addRepeatedField(field, value);
       }
+      @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
         if (other instanceof grpc.gateway.protoc_gen_swagger.options.Openapiv2.Swagger) {
           return mergeFrom((grpc.gateway.protoc_gen_swagger.options.Openapiv2.Swagger)other);
@@ -1361,10 +1381,12 @@ public final class Openapiv2 {
         return this;
       }
 
+      @java.lang.Override
       public final boolean isInitialized() {
         return true;
       }
 
+      @java.lang.Override
       public Builder mergeFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -2487,11 +2509,13 @@ public final class Openapiv2 {
         }
         return externalDocsBuilder_;
       }
+      @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
         return super.setUnknownFieldsProto3(unknownFields);
       }
 
+      @java.lang.Override
       public final Builder mergeUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
         return super.mergeUnknownFields(unknownFields);
@@ -2513,6 +2537,7 @@ public final class Openapiv2 {
 
     private static final com.google.protobuf.Parser<Swagger>
         PARSER = new com.google.protobuf.AbstractParser<Swagger>() {
+      @java.lang.Override
       public Swagger parsePartialFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -2530,6 +2555,7 @@ public final class Openapiv2 {
       return PARSER;
     }
 
+    @java.lang.Override
     public grpc.gateway.protoc_gen_swagger.options.Openapiv2.Swagger getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
@@ -2742,13 +2768,6 @@ public final class Openapiv2 {
             case 0:
               done = true;
               break;
-            default: {
-              if (!parseUnknownFieldProto3(
-                  input, unknownFields, extensionRegistry, tag)) {
-                done = true;
-              }
-              break;
-            }
             case 10: {
               java.lang.String s = input.readStringRequireUtf8();
               if (!((mutable_bitField0_ & 0x00000001) == 0x00000001)) {
@@ -2830,6 +2849,13 @@ public final class Openapiv2 {
                   input.readMessage(grpc.gateway.protoc_gen_swagger.options.Openapiv2.SecurityRequirement.parser(), extensionRegistry));
               break;
             }
+            default: {
+              if (!parseUnknownFieldProto3(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
           }
         }
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
@@ -2862,6 +2888,7 @@ public final class Openapiv2 {
       return grpc.gateway.protoc_gen_swagger.options.Openapiv2.internal_static_grpc_gateway_protoc_gen_swagger_options_Operation_descriptor;
     }
 
+    @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
       return grpc.gateway.protoc_gen_swagger.options.Openapiv2.internal_static_grpc_gateway_protoc_gen_swagger_options_Operation_fieldAccessorTable
@@ -3154,6 +3181,7 @@ public final class Openapiv2 {
     }
 
     private byte memoizedIsInitialized = -1;
+    @java.lang.Override
     public final boolean isInitialized() {
       byte isInitialized = memoizedIsInitialized;
       if (isInitialized == 1) return true;
@@ -3163,6 +3191,7 @@ public final class Openapiv2 {
       return true;
     }
 
+    @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
       for (int i = 0; i < tags_.size(); i++) {
@@ -3198,6 +3227,7 @@ public final class Openapiv2 {
       unknownFields.writeTo(output);
     }
 
+    @java.lang.Override
     public int getSerializedSize() {
       int size = memoizedSize;
       if (size != -1) return size;
@@ -3414,6 +3444,7 @@ public final class Openapiv2 {
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
 
+    @java.lang.Override
     public Builder newBuilderForType() { return newBuilder(); }
     public static Builder newBuilder() {
       return DEFAULT_INSTANCE.toBuilder();
@@ -3421,6 +3452,7 @@ public final class Openapiv2 {
     public static Builder newBuilder(grpc.gateway.protoc_gen_swagger.options.Openapiv2.Operation prototype) {
       return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
     }
+    @java.lang.Override
     public Builder toBuilder() {
       return this == DEFAULT_INSTANCE
           ? new Builder() : new Builder().mergeFrom(this);
@@ -3450,6 +3482,7 @@ public final class Openapiv2 {
         return grpc.gateway.protoc_gen_swagger.options.Openapiv2.internal_static_grpc_gateway_protoc_gen_swagger_options_Operation_descriptor;
       }
 
+      @java.lang.Override
       protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
           internalGetFieldAccessorTable() {
         return grpc.gateway.protoc_gen_swagger.options.Openapiv2.internal_static_grpc_gateway_protoc_gen_swagger_options_Operation_fieldAccessorTable
@@ -3473,6 +3506,7 @@ public final class Openapiv2 {
           getSecurityFieldBuilder();
         }
       }
+      @java.lang.Override
       public Builder clear() {
         super.clear();
         tags_ = com.google.protobuf.LazyStringArrayList.EMPTY;
@@ -3506,15 +3540,18 @@ public final class Openapiv2 {
         return this;
       }
 
+      @java.lang.Override
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
         return grpc.gateway.protoc_gen_swagger.options.Openapiv2.internal_static_grpc_gateway_protoc_gen_swagger_options_Operation_descriptor;
       }
 
+      @java.lang.Override
       public grpc.gateway.protoc_gen_swagger.options.Openapiv2.Operation getDefaultInstanceForType() {
         return grpc.gateway.protoc_gen_swagger.options.Openapiv2.Operation.getDefaultInstance();
       }
 
+      @java.lang.Override
       public grpc.gateway.protoc_gen_swagger.options.Openapiv2.Operation build() {
         grpc.gateway.protoc_gen_swagger.options.Openapiv2.Operation result = buildPartial();
         if (!result.isInitialized()) {
@@ -3523,6 +3560,7 @@ public final class Openapiv2 {
         return result;
       }
 
+      @java.lang.Override
       public grpc.gateway.protoc_gen_swagger.options.Openapiv2.Operation buildPartial() {
         grpc.gateway.protoc_gen_swagger.options.Openapiv2.Operation result = new grpc.gateway.protoc_gen_swagger.options.Openapiv2.Operation(this);
         int from_bitField0_ = bitField0_;
@@ -3570,32 +3608,39 @@ public final class Openapiv2 {
         return result;
       }
 
+      @java.lang.Override
       public Builder clone() {
         return (Builder) super.clone();
       }
+      @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
         return (Builder) super.setField(field, value);
       }
+      @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
         return (Builder) super.clearField(field);
       }
+      @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
         return (Builder) super.clearOneof(oneof);
       }
+      @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
         return (Builder) super.setRepeatedField(field, index, value);
       }
+      @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
         return (Builder) super.addRepeatedField(field, value);
       }
+      @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
         if (other instanceof grpc.gateway.protoc_gen_swagger.options.Openapiv2.Operation) {
           return mergeFrom((grpc.gateway.protoc_gen_swagger.options.Openapiv2.Operation)other);
@@ -3696,10 +3741,12 @@ public final class Openapiv2 {
         return this;
       }
 
+      @java.lang.Override
       public final boolean isInitialized() {
         return true;
       }
 
+      @java.lang.Override
       public Builder mergeFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -4684,11 +4731,13 @@ public final class Openapiv2 {
         }
         return securityBuilder_;
       }
+      @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
         return super.setUnknownFieldsProto3(unknownFields);
       }
 
+      @java.lang.Override
       public final Builder mergeUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
         return super.mergeUnknownFields(unknownFields);
@@ -4710,6 +4759,7 @@ public final class Openapiv2 {
 
     private static final com.google.protobuf.Parser<Operation>
         PARSER = new com.google.protobuf.AbstractParser<Operation>() {
+      @java.lang.Override
       public Operation parsePartialFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -4727,6 +4777,7 @@ public final class Openapiv2 {
       return PARSER;
     }
 
+    @java.lang.Override
     public grpc.gateway.protoc_gen_swagger.options.Openapiv2.Operation getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
@@ -4839,13 +4890,6 @@ public final class Openapiv2 {
             case 0:
               done = true;
               break;
-            default: {
-              if (!parseUnknownFieldProto3(
-                  input, unknownFields, extensionRegistry, tag)) {
-                done = true;
-              }
-              break;
-            }
             case 10: {
               java.lang.String s = input.readStringRequireUtf8();
 
@@ -4883,6 +4927,13 @@ public final class Openapiv2 {
               version_ = s;
               break;
             }
+            default: {
+              if (!parseUnknownFieldProto3(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
           }
         }
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
@@ -4900,6 +4951,7 @@ public final class Openapiv2 {
       return grpc.gateway.protoc_gen_swagger.options.Openapiv2.internal_static_grpc_gateway_protoc_gen_swagger_options_Info_descriptor;
     }
 
+    @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
       return grpc.gateway.protoc_gen_swagger.options.Openapiv2.internal_static_grpc_gateway_protoc_gen_swagger_options_Info_fieldAccessorTable
@@ -5065,6 +5117,7 @@ public final class Openapiv2 {
     }
 
     private byte memoizedIsInitialized = -1;
+    @java.lang.Override
     public final boolean isInitialized() {
       byte isInitialized = memoizedIsInitialized;
       if (isInitialized == 1) return true;
@@ -5074,6 +5127,7 @@ public final class Openapiv2 {
       return true;
     }
 
+    @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
       if (!getTitleBytes().isEmpty()) {
@@ -5094,6 +5148,7 @@ public final class Openapiv2 {
       unknownFields.writeTo(output);
     }
 
+    @java.lang.Override
     public int getSerializedSize() {
       int size = memoizedSize;
       if (size != -1) return size;
@@ -5242,6 +5297,7 @@ public final class Openapiv2 {
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
 
+    @java.lang.Override
     public Builder newBuilderForType() { return newBuilder(); }
     public static Builder newBuilder() {
       return DEFAULT_INSTANCE.toBuilder();
@@ -5249,6 +5305,7 @@ public final class Openapiv2 {
     public static Builder newBuilder(grpc.gateway.protoc_gen_swagger.options.Openapiv2.Info prototype) {
       return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
     }
+    @java.lang.Override
     public Builder toBuilder() {
       return this == DEFAULT_INSTANCE
           ? new Builder() : new Builder().mergeFrom(this);
@@ -5278,6 +5335,7 @@ public final class Openapiv2 {
         return grpc.gateway.protoc_gen_swagger.options.Openapiv2.internal_static_grpc_gateway_protoc_gen_swagger_options_Info_descriptor;
       }
 
+      @java.lang.Override
       protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
           internalGetFieldAccessorTable() {
         return grpc.gateway.protoc_gen_swagger.options.Openapiv2.internal_static_grpc_gateway_protoc_gen_swagger_options_Info_fieldAccessorTable
@@ -5300,6 +5358,7 @@ public final class Openapiv2 {
                 .alwaysUseFieldBuilders) {
         }
       }
+      @java.lang.Override
       public Builder clear() {
         super.clear();
         title_ = "";
@@ -5319,15 +5378,18 @@ public final class Openapiv2 {
         return this;
       }
 
+      @java.lang.Override
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
         return grpc.gateway.protoc_gen_swagger.options.Openapiv2.internal_static_grpc_gateway_protoc_gen_swagger_options_Info_descriptor;
       }
 
+      @java.lang.Override
       public grpc.gateway.protoc_gen_swagger.options.Openapiv2.Info getDefaultInstanceForType() {
         return grpc.gateway.protoc_gen_swagger.options.Openapiv2.Info.getDefaultInstance();
       }
 
+      @java.lang.Override
       public grpc.gateway.protoc_gen_swagger.options.Openapiv2.Info build() {
         grpc.gateway.protoc_gen_swagger.options.Openapiv2.Info result = buildPartial();
         if (!result.isInitialized()) {
@@ -5336,6 +5398,7 @@ public final class Openapiv2 {
         return result;
       }
 
+      @java.lang.Override
       public grpc.gateway.protoc_gen_swagger.options.Openapiv2.Info buildPartial() {
         grpc.gateway.protoc_gen_swagger.options.Openapiv2.Info result = new grpc.gateway.protoc_gen_swagger.options.Openapiv2.Info(this);
         result.title_ = title_;
@@ -5351,32 +5414,39 @@ public final class Openapiv2 {
         return result;
       }
 
+      @java.lang.Override
       public Builder clone() {
         return (Builder) super.clone();
       }
+      @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
         return (Builder) super.setField(field, value);
       }
+      @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
         return (Builder) super.clearField(field);
       }
+      @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
         return (Builder) super.clearOneof(oneof);
       }
+      @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
         return (Builder) super.setRepeatedField(field, index, value);
       }
+      @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
         return (Builder) super.addRepeatedField(field, value);
       }
+      @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
         if (other instanceof grpc.gateway.protoc_gen_swagger.options.Openapiv2.Info) {
           return mergeFrom((grpc.gateway.protoc_gen_swagger.options.Openapiv2.Info)other);
@@ -5412,10 +5482,12 @@ public final class Openapiv2 {
         return this;
       }
 
+      @java.lang.Override
       public final boolean isInitialized() {
         return true;
       }
 
+      @java.lang.Override
       public Builder mergeFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -5826,11 +5898,13 @@ public final class Openapiv2 {
         onChanged();
         return this;
       }
+      @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
         return super.setUnknownFieldsProto3(unknownFields);
       }
 
+      @java.lang.Override
       public final Builder mergeUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
         return super.mergeUnknownFields(unknownFields);
@@ -5852,6 +5926,7 @@ public final class Openapiv2 {
 
     private static final com.google.protobuf.Parser<Info>
         PARSER = new com.google.protobuf.AbstractParser<Info>() {
+      @java.lang.Override
       public Info parsePartialFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -5869,6 +5944,7 @@ public final class Openapiv2 {
       return PARSER;
     }
 
+    @java.lang.Override
     public grpc.gateway.protoc_gen_swagger.options.Openapiv2.Info getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
@@ -5957,13 +6033,6 @@ public final class Openapiv2 {
             case 0:
               done = true;
               break;
-            default: {
-              if (!parseUnknownFieldProto3(
-                  input, unknownFields, extensionRegistry, tag)) {
-                done = true;
-              }
-              break;
-            }
             case 10: {
               java.lang.String s = input.readStringRequireUtf8();
 
@@ -5980,6 +6049,13 @@ public final class Openapiv2 {
               java.lang.String s = input.readStringRequireUtf8();
 
               email_ = s;
+              break;
+            }
+            default: {
+              if (!parseUnknownFieldProto3(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
               break;
             }
           }
@@ -5999,6 +6075,7 @@ public final class Openapiv2 {
       return grpc.gateway.protoc_gen_swagger.options.Openapiv2.internal_static_grpc_gateway_protoc_gen_swagger_options_Contact_descriptor;
     }
 
+    @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
       return grpc.gateway.protoc_gen_swagger.options.Openapiv2.internal_static_grpc_gateway_protoc_gen_swagger_options_Contact_fieldAccessorTable
@@ -6109,6 +6186,7 @@ public final class Openapiv2 {
     }
 
     private byte memoizedIsInitialized = -1;
+    @java.lang.Override
     public final boolean isInitialized() {
       byte isInitialized = memoizedIsInitialized;
       if (isInitialized == 1) return true;
@@ -6118,6 +6196,7 @@ public final class Openapiv2 {
       return true;
     }
 
+    @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
       if (!getNameBytes().isEmpty()) {
@@ -6132,6 +6211,7 @@ public final class Openapiv2 {
       unknownFields.writeTo(output);
     }
 
+    @java.lang.Override
     public int getSerializedSize() {
       int size = memoizedSize;
       if (size != -1) return size;
@@ -6260,6 +6340,7 @@ public final class Openapiv2 {
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
 
+    @java.lang.Override
     public Builder newBuilderForType() { return newBuilder(); }
     public static Builder newBuilder() {
       return DEFAULT_INSTANCE.toBuilder();
@@ -6267,6 +6348,7 @@ public final class Openapiv2 {
     public static Builder newBuilder(grpc.gateway.protoc_gen_swagger.options.Openapiv2.Contact prototype) {
       return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
     }
+    @java.lang.Override
     public Builder toBuilder() {
       return this == DEFAULT_INSTANCE
           ? new Builder() : new Builder().mergeFrom(this);
@@ -6296,6 +6378,7 @@ public final class Openapiv2 {
         return grpc.gateway.protoc_gen_swagger.options.Openapiv2.internal_static_grpc_gateway_protoc_gen_swagger_options_Contact_descriptor;
       }
 
+      @java.lang.Override
       protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
           internalGetFieldAccessorTable() {
         return grpc.gateway.protoc_gen_swagger.options.Openapiv2.internal_static_grpc_gateway_protoc_gen_swagger_options_Contact_fieldAccessorTable
@@ -6318,6 +6401,7 @@ public final class Openapiv2 {
                 .alwaysUseFieldBuilders) {
         }
       }
+      @java.lang.Override
       public Builder clear() {
         super.clear();
         name_ = "";
@@ -6329,15 +6413,18 @@ public final class Openapiv2 {
         return this;
       }
 
+      @java.lang.Override
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
         return grpc.gateway.protoc_gen_swagger.options.Openapiv2.internal_static_grpc_gateway_protoc_gen_swagger_options_Contact_descriptor;
       }
 
+      @java.lang.Override
       public grpc.gateway.protoc_gen_swagger.options.Openapiv2.Contact getDefaultInstanceForType() {
         return grpc.gateway.protoc_gen_swagger.options.Openapiv2.Contact.getDefaultInstance();
       }
 
+      @java.lang.Override
       public grpc.gateway.protoc_gen_swagger.options.Openapiv2.Contact build() {
         grpc.gateway.protoc_gen_swagger.options.Openapiv2.Contact result = buildPartial();
         if (!result.isInitialized()) {
@@ -6346,6 +6433,7 @@ public final class Openapiv2 {
         return result;
       }
 
+      @java.lang.Override
       public grpc.gateway.protoc_gen_swagger.options.Openapiv2.Contact buildPartial() {
         grpc.gateway.protoc_gen_swagger.options.Openapiv2.Contact result = new grpc.gateway.protoc_gen_swagger.options.Openapiv2.Contact(this);
         result.name_ = name_;
@@ -6355,32 +6443,39 @@ public final class Openapiv2 {
         return result;
       }
 
+      @java.lang.Override
       public Builder clone() {
         return (Builder) super.clone();
       }
+      @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
         return (Builder) super.setField(field, value);
       }
+      @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
         return (Builder) super.clearField(field);
       }
+      @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
         return (Builder) super.clearOneof(oneof);
       }
+      @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
         return (Builder) super.setRepeatedField(field, index, value);
       }
+      @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
         return (Builder) super.addRepeatedField(field, value);
       }
+      @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
         if (other instanceof grpc.gateway.protoc_gen_swagger.options.Openapiv2.Contact) {
           return mergeFrom((grpc.gateway.protoc_gen_swagger.options.Openapiv2.Contact)other);
@@ -6409,10 +6504,12 @@ public final class Openapiv2 {
         return this;
       }
 
+      @java.lang.Override
       public final boolean isInitialized() {
         return true;
       }
 
+      @java.lang.Override
       public Builder mergeFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -6637,11 +6734,13 @@ public final class Openapiv2 {
         onChanged();
         return this;
       }
+      @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
         return super.setUnknownFieldsProto3(unknownFields);
       }
 
+      @java.lang.Override
       public final Builder mergeUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
         return super.mergeUnknownFields(unknownFields);
@@ -6663,6 +6762,7 @@ public final class Openapiv2 {
 
     private static final com.google.protobuf.Parser<Contact>
         PARSER = new com.google.protobuf.AbstractParser<Contact>() {
+      @java.lang.Override
       public Contact parsePartialFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -6680,6 +6780,7 @@ public final class Openapiv2 {
       return PARSER;
     }
 
+    @java.lang.Override
     public grpc.gateway.protoc_gen_swagger.options.Openapiv2.Contact getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
@@ -6758,13 +6859,6 @@ public final class Openapiv2 {
             case 0:
               done = true;
               break;
-            default: {
-              if (!parseUnknownFieldProto3(
-                  input, unknownFields, extensionRegistry, tag)) {
-                done = true;
-              }
-              break;
-            }
             case 10: {
               java.lang.String s = input.readStringRequireUtf8();
 
@@ -6775,6 +6869,13 @@ public final class Openapiv2 {
               java.lang.String s = input.readStringRequireUtf8();
 
               url_ = s;
+              break;
+            }
+            default: {
+              if (!parseUnknownFieldProto3(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
               break;
             }
           }
@@ -6794,6 +6895,7 @@ public final class Openapiv2 {
       return grpc.gateway.protoc_gen_swagger.options.Openapiv2.internal_static_grpc_gateway_protoc_gen_swagger_options_ExternalDocumentation_descriptor;
     }
 
+    @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
       return grpc.gateway.protoc_gen_swagger.options.Openapiv2.internal_static_grpc_gateway_protoc_gen_swagger_options_ExternalDocumentation_fieldAccessorTable
@@ -6870,6 +6972,7 @@ public final class Openapiv2 {
     }
 
     private byte memoizedIsInitialized = -1;
+    @java.lang.Override
     public final boolean isInitialized() {
       byte isInitialized = memoizedIsInitialized;
       if (isInitialized == 1) return true;
@@ -6879,6 +6982,7 @@ public final class Openapiv2 {
       return true;
     }
 
+    @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
       if (!getDescriptionBytes().isEmpty()) {
@@ -6890,6 +6994,7 @@ public final class Openapiv2 {
       unknownFields.writeTo(output);
     }
 
+    @java.lang.Override
     public int getSerializedSize() {
       int size = memoizedSize;
       if (size != -1) return size;
@@ -7011,6 +7116,7 @@ public final class Openapiv2 {
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
 
+    @java.lang.Override
     public Builder newBuilderForType() { return newBuilder(); }
     public static Builder newBuilder() {
       return DEFAULT_INSTANCE.toBuilder();
@@ -7018,6 +7124,7 @@ public final class Openapiv2 {
     public static Builder newBuilder(grpc.gateway.protoc_gen_swagger.options.Openapiv2.ExternalDocumentation prototype) {
       return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
     }
+    @java.lang.Override
     public Builder toBuilder() {
       return this == DEFAULT_INSTANCE
           ? new Builder() : new Builder().mergeFrom(this);
@@ -7048,6 +7155,7 @@ public final class Openapiv2 {
         return grpc.gateway.protoc_gen_swagger.options.Openapiv2.internal_static_grpc_gateway_protoc_gen_swagger_options_ExternalDocumentation_descriptor;
       }
 
+      @java.lang.Override
       protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
           internalGetFieldAccessorTable() {
         return grpc.gateway.protoc_gen_swagger.options.Openapiv2.internal_static_grpc_gateway_protoc_gen_swagger_options_ExternalDocumentation_fieldAccessorTable
@@ -7070,6 +7178,7 @@ public final class Openapiv2 {
                 .alwaysUseFieldBuilders) {
         }
       }
+      @java.lang.Override
       public Builder clear() {
         super.clear();
         description_ = "";
@@ -7079,15 +7188,18 @@ public final class Openapiv2 {
         return this;
       }
 
+      @java.lang.Override
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
         return grpc.gateway.protoc_gen_swagger.options.Openapiv2.internal_static_grpc_gateway_protoc_gen_swagger_options_ExternalDocumentation_descriptor;
       }
 
+      @java.lang.Override
       public grpc.gateway.protoc_gen_swagger.options.Openapiv2.ExternalDocumentation getDefaultInstanceForType() {
         return grpc.gateway.protoc_gen_swagger.options.Openapiv2.ExternalDocumentation.getDefaultInstance();
       }
 
+      @java.lang.Override
       public grpc.gateway.protoc_gen_swagger.options.Openapiv2.ExternalDocumentation build() {
         grpc.gateway.protoc_gen_swagger.options.Openapiv2.ExternalDocumentation result = buildPartial();
         if (!result.isInitialized()) {
@@ -7096,6 +7208,7 @@ public final class Openapiv2 {
         return result;
       }
 
+      @java.lang.Override
       public grpc.gateway.protoc_gen_swagger.options.Openapiv2.ExternalDocumentation buildPartial() {
         grpc.gateway.protoc_gen_swagger.options.Openapiv2.ExternalDocumentation result = new grpc.gateway.protoc_gen_swagger.options.Openapiv2.ExternalDocumentation(this);
         result.description_ = description_;
@@ -7104,32 +7217,39 @@ public final class Openapiv2 {
         return result;
       }
 
+      @java.lang.Override
       public Builder clone() {
         return (Builder) super.clone();
       }
+      @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
         return (Builder) super.setField(field, value);
       }
+      @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
         return (Builder) super.clearField(field);
       }
+      @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
         return (Builder) super.clearOneof(oneof);
       }
+      @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
         return (Builder) super.setRepeatedField(field, index, value);
       }
+      @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
         return (Builder) super.addRepeatedField(field, value);
       }
+      @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
         if (other instanceof grpc.gateway.protoc_gen_swagger.options.Openapiv2.ExternalDocumentation) {
           return mergeFrom((grpc.gateway.protoc_gen_swagger.options.Openapiv2.ExternalDocumentation)other);
@@ -7154,10 +7274,12 @@ public final class Openapiv2 {
         return this;
       }
 
+      @java.lang.Override
       public final boolean isInitialized() {
         return true;
       }
 
+      @java.lang.Override
       public Builder mergeFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -7313,11 +7435,13 @@ public final class Openapiv2 {
         onChanged();
         return this;
       }
+      @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
         return super.setUnknownFieldsProto3(unknownFields);
       }
 
+      @java.lang.Override
       public final Builder mergeUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
         return super.mergeUnknownFields(unknownFields);
@@ -7339,6 +7463,7 @@ public final class Openapiv2 {
 
     private static final com.google.protobuf.Parser<ExternalDocumentation>
         PARSER = new com.google.protobuf.AbstractParser<ExternalDocumentation>() {
+      @java.lang.Override
       public ExternalDocumentation parsePartialFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -7356,6 +7481,7 @@ public final class Openapiv2 {
       return PARSER;
     }
 
+    @java.lang.Override
     public grpc.gateway.protoc_gen_swagger.options.Openapiv2.ExternalDocumentation getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
@@ -7467,13 +7593,6 @@ public final class Openapiv2 {
             case 0:
               done = true;
               break;
-            default: {
-              if (!parseUnknownFieldProto3(
-                  input, unknownFields, extensionRegistry, tag)) {
-                done = true;
-              }
-              break;
-            }
             case 10: {
               grpc.gateway.protoc_gen_swagger.options.Openapiv2.JSONSchema.Builder subBuilder = null;
               if (jsonSchema_ != null) {
@@ -7524,6 +7643,13 @@ public final class Openapiv2 {
 
               break;
             }
+            default: {
+              if (!parseUnknownFieldProto3(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
           }
         }
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
@@ -7541,6 +7667,7 @@ public final class Openapiv2 {
       return grpc.gateway.protoc_gen_swagger.options.Openapiv2.internal_static_grpc_gateway_protoc_gen_swagger_options_Schema_descriptor;
     }
 
+    @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
       return grpc.gateway.protoc_gen_swagger.options.Openapiv2.internal_static_grpc_gateway_protoc_gen_swagger_options_Schema_fieldAccessorTable
@@ -7655,6 +7782,7 @@ public final class Openapiv2 {
     }
 
     private byte memoizedIsInitialized = -1;
+    @java.lang.Override
     public final boolean isInitialized() {
       byte isInitialized = memoizedIsInitialized;
       if (isInitialized == 1) return true;
@@ -7664,6 +7792,7 @@ public final class Openapiv2 {
       return true;
     }
 
+    @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
       if (jsonSchema_ != null) {
@@ -7684,6 +7813,7 @@ public final class Openapiv2 {
       unknownFields.writeTo(output);
     }
 
+    @java.lang.Override
     public int getSerializedSize() {
       int size = memoizedSize;
       if (size != -1) return size;
@@ -7846,6 +7976,7 @@ public final class Openapiv2 {
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
 
+    @java.lang.Override
     public Builder newBuilderForType() { return newBuilder(); }
     public static Builder newBuilder() {
       return DEFAULT_INSTANCE.toBuilder();
@@ -7853,6 +7984,7 @@ public final class Openapiv2 {
     public static Builder newBuilder(grpc.gateway.protoc_gen_swagger.options.Openapiv2.Schema prototype) {
       return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
     }
+    @java.lang.Override
     public Builder toBuilder() {
       return this == DEFAULT_INSTANCE
           ? new Builder() : new Builder().mergeFrom(this);
@@ -7882,6 +8014,7 @@ public final class Openapiv2 {
         return grpc.gateway.protoc_gen_swagger.options.Openapiv2.internal_static_grpc_gateway_protoc_gen_swagger_options_Schema_descriptor;
       }
 
+      @java.lang.Override
       protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
           internalGetFieldAccessorTable() {
         return grpc.gateway.protoc_gen_swagger.options.Openapiv2.internal_static_grpc_gateway_protoc_gen_swagger_options_Schema_fieldAccessorTable
@@ -7904,6 +8037,7 @@ public final class Openapiv2 {
                 .alwaysUseFieldBuilders) {
         }
       }
+      @java.lang.Override
       public Builder clear() {
         super.clear();
         if (jsonSchemaBuilder_ == null) {
@@ -7931,15 +8065,18 @@ public final class Openapiv2 {
         return this;
       }
 
+      @java.lang.Override
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
         return grpc.gateway.protoc_gen_swagger.options.Openapiv2.internal_static_grpc_gateway_protoc_gen_swagger_options_Schema_descriptor;
       }
 
+      @java.lang.Override
       public grpc.gateway.protoc_gen_swagger.options.Openapiv2.Schema getDefaultInstanceForType() {
         return grpc.gateway.protoc_gen_swagger.options.Openapiv2.Schema.getDefaultInstance();
       }
 
+      @java.lang.Override
       public grpc.gateway.protoc_gen_swagger.options.Openapiv2.Schema build() {
         grpc.gateway.protoc_gen_swagger.options.Openapiv2.Schema result = buildPartial();
         if (!result.isInitialized()) {
@@ -7948,6 +8085,7 @@ public final class Openapiv2 {
         return result;
       }
 
+      @java.lang.Override
       public grpc.gateway.protoc_gen_swagger.options.Openapiv2.Schema buildPartial() {
         grpc.gateway.protoc_gen_swagger.options.Openapiv2.Schema result = new grpc.gateway.protoc_gen_swagger.options.Openapiv2.Schema(this);
         if (jsonSchemaBuilder_ == null) {
@@ -7971,32 +8109,39 @@ public final class Openapiv2 {
         return result;
       }
 
+      @java.lang.Override
       public Builder clone() {
         return (Builder) super.clone();
       }
+      @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
         return (Builder) super.setField(field, value);
       }
+      @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
         return (Builder) super.clearField(field);
       }
+      @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
         return (Builder) super.clearOneof(oneof);
       }
+      @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
         return (Builder) super.setRepeatedField(field, index, value);
       }
+      @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
         return (Builder) super.addRepeatedField(field, value);
       }
+      @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
         if (other instanceof grpc.gateway.protoc_gen_swagger.options.Openapiv2.Schema) {
           return mergeFrom((grpc.gateway.protoc_gen_swagger.options.Openapiv2.Schema)other);
@@ -8029,10 +8174,12 @@ public final class Openapiv2 {
         return this;
       }
 
+      @java.lang.Override
       public final boolean isInitialized() {
         return true;
       }
 
+      @java.lang.Override
       public Builder mergeFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -8496,11 +8643,13 @@ public final class Openapiv2 {
         }
         return exampleBuilder_;
       }
+      @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
         return super.setUnknownFieldsProto3(unknownFields);
       }
 
+      @java.lang.Override
       public final Builder mergeUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
         return super.mergeUnknownFields(unknownFields);
@@ -8522,6 +8671,7 @@ public final class Openapiv2 {
 
     private static final com.google.protobuf.Parser<Schema>
         PARSER = new com.google.protobuf.AbstractParser<Schema>() {
+      @java.lang.Override
       public Schema parsePartialFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -8539,6 +8689,7 @@ public final class Openapiv2 {
       return PARSER;
     }
 
+    @java.lang.Override
     public grpc.gateway.protoc_gen_swagger.options.Openapiv2.Schema getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
@@ -8793,13 +8944,6 @@ public final class Openapiv2 {
             case 0:
               done = true;
               break;
-            default: {
-              if (!parseUnknownFieldProto3(
-                  input, unknownFields, extensionRegistry, tag)) {
-                done = true;
-              }
-              break;
-            }
             case 42: {
               java.lang.String s = input.readStringRequireUtf8();
 
@@ -8925,6 +9069,13 @@ public final class Openapiv2 {
               input.popLimit(oldLimit);
               break;
             }
+            default: {
+              if (!parseUnknownFieldProto3(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
           }
         }
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
@@ -8951,6 +9102,7 @@ public final class Openapiv2 {
       return grpc.gateway.protoc_gen_swagger.options.Openapiv2.internal_static_grpc_gateway_protoc_gen_swagger_options_JSONSchema_descriptor;
     }
 
+    @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
       return grpc.gateway.protoc_gen_swagger.options.Openapiv2.internal_static_grpc_gateway_protoc_gen_swagger_options_JSONSchema_fieldAccessorTable
@@ -9436,6 +9588,7 @@ public final class Openapiv2 {
             new com.google.protobuf.Internal.ListAdapter.Converter<
                 java.lang.Integer, grpc.gateway.protoc_gen_swagger.options.Openapiv2.JSONSchema.JSONSchemaSimpleTypes>() {
               public grpc.gateway.protoc_gen_swagger.options.Openapiv2.JSONSchema.JSONSchemaSimpleTypes convert(java.lang.Integer from) {
+                @SuppressWarnings("deprecation")
                 grpc.gateway.protoc_gen_swagger.options.Openapiv2.JSONSchema.JSONSchemaSimpleTypes result = grpc.gateway.protoc_gen_swagger.options.Openapiv2.JSONSchema.JSONSchemaSimpleTypes.valueOf(from);
                 return result == null ? grpc.gateway.protoc_gen_swagger.options.Openapiv2.JSONSchema.JSONSchemaSimpleTypes.UNRECOGNIZED : result;
               }
@@ -9475,6 +9628,7 @@ public final class Openapiv2 {
     private int typeMemoizedSerializedSize;
 
     private byte memoizedIsInitialized = -1;
+    @java.lang.Override
     public final boolean isInitialized() {
       byte isInitialized = memoizedIsInitialized;
       if (isInitialized == 1) return true;
@@ -9484,6 +9638,7 @@ public final class Openapiv2 {
       return true;
     }
 
+    @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
       getSerializedSize();
@@ -9551,6 +9706,7 @@ public final class Openapiv2 {
       unknownFields.writeTo(output);
     }
 
+    @java.lang.Override
     public int getSerializedSize() {
       int size = memoizedSize;
       if (size != -1) return size;
@@ -9845,6 +10001,7 @@ public final class Openapiv2 {
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
 
+    @java.lang.Override
     public Builder newBuilderForType() { return newBuilder(); }
     public static Builder newBuilder() {
       return DEFAULT_INSTANCE.toBuilder();
@@ -9852,6 +10009,7 @@ public final class Openapiv2 {
     public static Builder newBuilder(grpc.gateway.protoc_gen_swagger.options.Openapiv2.JSONSchema prototype) {
       return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
     }
+    @java.lang.Override
     public Builder toBuilder() {
       return this == DEFAULT_INSTANCE
           ? new Builder() : new Builder().mergeFrom(this);
@@ -9885,6 +10043,7 @@ public final class Openapiv2 {
         return grpc.gateway.protoc_gen_swagger.options.Openapiv2.internal_static_grpc_gateway_protoc_gen_swagger_options_JSONSchema_descriptor;
       }
 
+      @java.lang.Override
       protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
           internalGetFieldAccessorTable() {
         return grpc.gateway.protoc_gen_swagger.options.Openapiv2.internal_static_grpc_gateway_protoc_gen_swagger_options_JSONSchema_fieldAccessorTable
@@ -9907,6 +10066,7 @@ public final class Openapiv2 {
                 .alwaysUseFieldBuilders) {
         }
       }
+      @java.lang.Override
       public Builder clear() {
         super.clear();
         title_ = "";
@@ -9950,15 +10110,18 @@ public final class Openapiv2 {
         return this;
       }
 
+      @java.lang.Override
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
         return grpc.gateway.protoc_gen_swagger.options.Openapiv2.internal_static_grpc_gateway_protoc_gen_swagger_options_JSONSchema_descriptor;
       }
 
+      @java.lang.Override
       public grpc.gateway.protoc_gen_swagger.options.Openapiv2.JSONSchema getDefaultInstanceForType() {
         return grpc.gateway.protoc_gen_swagger.options.Openapiv2.JSONSchema.getDefaultInstance();
       }
 
+      @java.lang.Override
       public grpc.gateway.protoc_gen_swagger.options.Openapiv2.JSONSchema build() {
         grpc.gateway.protoc_gen_swagger.options.Openapiv2.JSONSchema result = buildPartial();
         if (!result.isInitialized()) {
@@ -9967,6 +10130,7 @@ public final class Openapiv2 {
         return result;
       }
 
+      @java.lang.Override
       public grpc.gateway.protoc_gen_swagger.options.Openapiv2.JSONSchema buildPartial() {
         grpc.gateway.protoc_gen_swagger.options.Openapiv2.JSONSchema result = new grpc.gateway.protoc_gen_swagger.options.Openapiv2.JSONSchema(this);
         int from_bitField0_ = bitField0_;
@@ -10007,32 +10171,39 @@ public final class Openapiv2 {
         return result;
       }
 
+      @java.lang.Override
       public Builder clone() {
         return (Builder) super.clone();
       }
+      @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
         return (Builder) super.setField(field, value);
       }
+      @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
         return (Builder) super.clearField(field);
       }
+      @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
         return (Builder) super.clearOneof(oneof);
       }
+      @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
         return (Builder) super.setRepeatedField(field, index, value);
       }
+      @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
         return (Builder) super.addRepeatedField(field, value);
       }
+      @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
         if (other instanceof grpc.gateway.protoc_gen_swagger.options.Openapiv2.JSONSchema) {
           return mergeFrom((grpc.gateway.protoc_gen_swagger.options.Openapiv2.JSONSchema)other);
@@ -10131,10 +10302,12 @@ public final class Openapiv2 {
         return this;
       }
 
+      @java.lang.Override
       public final boolean isInitialized() {
         return true;
       }
 
+      @java.lang.Override
       public Builder mergeFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -11083,11 +11256,13 @@ public final class Openapiv2 {
         onChanged();
         return this;
       }
+      @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
         return super.setUnknownFieldsProto3(unknownFields);
       }
 
+      @java.lang.Override
       public final Builder mergeUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
         return super.mergeUnknownFields(unknownFields);
@@ -11109,6 +11284,7 @@ public final class Openapiv2 {
 
     private static final com.google.protobuf.Parser<JSONSchema>
         PARSER = new com.google.protobuf.AbstractParser<JSONSchema>() {
+      @java.lang.Override
       public JSONSchema parsePartialFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -11126,6 +11302,7 @@ public final class Openapiv2 {
       return PARSER;
     }
 
+    @java.lang.Override
     public grpc.gateway.protoc_gen_swagger.options.Openapiv2.JSONSchema getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
@@ -11215,13 +11392,6 @@ public final class Openapiv2 {
             case 0:
               done = true;
               break;
-            default: {
-              if (!parseUnknownFieldProto3(
-                  input, unknownFields, extensionRegistry, tag)) {
-                done = true;
-              }
-              break;
-            }
             case 18: {
               java.lang.String s = input.readStringRequireUtf8();
 
@@ -11241,6 +11411,13 @@ public final class Openapiv2 {
 
               break;
             }
+            default: {
+              if (!parseUnknownFieldProto3(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
           }
         }
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
@@ -11258,6 +11435,7 @@ public final class Openapiv2 {
       return grpc.gateway.protoc_gen_swagger.options.Openapiv2.internal_static_grpc_gateway_protoc_gen_swagger_options_Tag_descriptor;
     }
 
+    @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
       return grpc.gateway.protoc_gen_swagger.options.Openapiv2.internal_static_grpc_gateway_protoc_gen_swagger_options_Tag_fieldAccessorTable
@@ -11331,6 +11509,7 @@ public final class Openapiv2 {
     }
 
     private byte memoizedIsInitialized = -1;
+    @java.lang.Override
     public final boolean isInitialized() {
       byte isInitialized = memoizedIsInitialized;
       if (isInitialized == 1) return true;
@@ -11340,6 +11519,7 @@ public final class Openapiv2 {
       return true;
     }
 
+    @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
       if (!getDescriptionBytes().isEmpty()) {
@@ -11351,6 +11531,7 @@ public final class Openapiv2 {
       unknownFields.writeTo(output);
     }
 
+    @java.lang.Override
     public int getSerializedSize() {
       int size = memoizedSize;
       if (size != -1) return size;
@@ -11478,6 +11659,7 @@ public final class Openapiv2 {
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
 
+    @java.lang.Override
     public Builder newBuilderForType() { return newBuilder(); }
     public static Builder newBuilder() {
       return DEFAULT_INSTANCE.toBuilder();
@@ -11485,6 +11667,7 @@ public final class Openapiv2 {
     public static Builder newBuilder(grpc.gateway.protoc_gen_swagger.options.Openapiv2.Tag prototype) {
       return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
     }
+    @java.lang.Override
     public Builder toBuilder() {
       return this == DEFAULT_INSTANCE
           ? new Builder() : new Builder().mergeFrom(this);
@@ -11514,6 +11697,7 @@ public final class Openapiv2 {
         return grpc.gateway.protoc_gen_swagger.options.Openapiv2.internal_static_grpc_gateway_protoc_gen_swagger_options_Tag_descriptor;
       }
 
+      @java.lang.Override
       protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
           internalGetFieldAccessorTable() {
         return grpc.gateway.protoc_gen_swagger.options.Openapiv2.internal_static_grpc_gateway_protoc_gen_swagger_options_Tag_fieldAccessorTable
@@ -11536,6 +11720,7 @@ public final class Openapiv2 {
                 .alwaysUseFieldBuilders) {
         }
       }
+      @java.lang.Override
       public Builder clear() {
         super.clear();
         description_ = "";
@@ -11549,15 +11734,18 @@ public final class Openapiv2 {
         return this;
       }
 
+      @java.lang.Override
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
         return grpc.gateway.protoc_gen_swagger.options.Openapiv2.internal_static_grpc_gateway_protoc_gen_swagger_options_Tag_descriptor;
       }
 
+      @java.lang.Override
       public grpc.gateway.protoc_gen_swagger.options.Openapiv2.Tag getDefaultInstanceForType() {
         return grpc.gateway.protoc_gen_swagger.options.Openapiv2.Tag.getDefaultInstance();
       }
 
+      @java.lang.Override
       public grpc.gateway.protoc_gen_swagger.options.Openapiv2.Tag build() {
         grpc.gateway.protoc_gen_swagger.options.Openapiv2.Tag result = buildPartial();
         if (!result.isInitialized()) {
@@ -11566,6 +11754,7 @@ public final class Openapiv2 {
         return result;
       }
 
+      @java.lang.Override
       public grpc.gateway.protoc_gen_swagger.options.Openapiv2.Tag buildPartial() {
         grpc.gateway.protoc_gen_swagger.options.Openapiv2.Tag result = new grpc.gateway.protoc_gen_swagger.options.Openapiv2.Tag(this);
         result.description_ = description_;
@@ -11578,32 +11767,39 @@ public final class Openapiv2 {
         return result;
       }
 
+      @java.lang.Override
       public Builder clone() {
         return (Builder) super.clone();
       }
+      @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
         return (Builder) super.setField(field, value);
       }
+      @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
         return (Builder) super.clearField(field);
       }
+      @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
         return (Builder) super.clearOneof(oneof);
       }
+      @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
         return (Builder) super.setRepeatedField(field, index, value);
       }
+      @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
         return (Builder) super.addRepeatedField(field, value);
       }
+      @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
         if (other instanceof grpc.gateway.protoc_gen_swagger.options.Openapiv2.Tag) {
           return mergeFrom((grpc.gateway.protoc_gen_swagger.options.Openapiv2.Tag)other);
@@ -11627,10 +11823,12 @@ public final class Openapiv2 {
         return this;
       }
 
+      @java.lang.Override
       public final boolean isInitialized() {
         return true;
       }
 
+      @java.lang.Override
       public Builder mergeFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -11859,11 +12057,13 @@ public final class Openapiv2 {
         }
         return externalDocsBuilder_;
       }
+      @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
         return super.setUnknownFieldsProto3(unknownFields);
       }
 
+      @java.lang.Override
       public final Builder mergeUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
         return super.mergeUnknownFields(unknownFields);
@@ -11885,6 +12085,7 @@ public final class Openapiv2 {
 
     private static final com.google.protobuf.Parser<Tag>
         PARSER = new com.google.protobuf.AbstractParser<Tag>() {
+      @java.lang.Override
       public Tag parsePartialFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -11902,6 +12103,7 @@ public final class Openapiv2 {
       return PARSER;
     }
 
+    @java.lang.Override
     public grpc.gateway.protoc_gen_swagger.options.Openapiv2.Tag getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
@@ -12014,13 +12216,6 @@ public final class Openapiv2 {
             case 0:
               done = true;
               break;
-            default: {
-              if (!parseUnknownFieldProto3(
-                  input, unknownFields, extensionRegistry, tag)) {
-                done = true;
-              }
-              break;
-            }
             case 10: {
               if (!((mutable_bitField0_ & 0x00000001) == 0x00000001)) {
                 security_ = com.google.protobuf.MapField.newMapField(
@@ -12032,6 +12227,13 @@ public final class Openapiv2 {
                   SecurityDefaultEntryHolder.defaultEntry.getParserForType(), extensionRegistry);
               security_.getMutableMap().put(
                   security__.getKey(), security__.getValue());
+              break;
+            }
+            default: {
+              if (!parseUnknownFieldProto3(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
               break;
             }
           }
@@ -12052,6 +12254,7 @@ public final class Openapiv2 {
     }
 
     @SuppressWarnings({"rawtypes"})
+    @java.lang.Override
     protected com.google.protobuf.MapField internalGetMapField(
         int number) {
       switch (number) {
@@ -12062,6 +12265,7 @@ public final class Openapiv2 {
               "Invalid map field number: " + number);
       }
     }
+    @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
       return grpc.gateway.protoc_gen_swagger.options.Openapiv2.internal_static_grpc_gateway_protoc_gen_swagger_options_SecurityDefinitions_fieldAccessorTable
@@ -12162,6 +12366,7 @@ public final class Openapiv2 {
     }
 
     private byte memoizedIsInitialized = -1;
+    @java.lang.Override
     public final boolean isInitialized() {
       byte isInitialized = memoizedIsInitialized;
       if (isInitialized == 1) return true;
@@ -12171,6 +12376,7 @@ public final class Openapiv2 {
       return true;
     }
 
+    @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
       com.google.protobuf.GeneratedMessageV3
@@ -12182,6 +12388,7 @@ public final class Openapiv2 {
       unknownFields.writeTo(output);
     }
 
+    @java.lang.Override
     public int getSerializedSize() {
       int size = memoizedSize;
       if (size != -1) return size;
@@ -12305,6 +12512,7 @@ public final class Openapiv2 {
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
 
+    @java.lang.Override
     public Builder newBuilderForType() { return newBuilder(); }
     public static Builder newBuilder() {
       return DEFAULT_INSTANCE.toBuilder();
@@ -12312,6 +12520,7 @@ public final class Openapiv2 {
     public static Builder newBuilder(grpc.gateway.protoc_gen_swagger.options.Openapiv2.SecurityDefinitions prototype) {
       return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
     }
+    @java.lang.Override
     public Builder toBuilder() {
       return this == DEFAULT_INSTANCE
           ? new Builder() : new Builder().mergeFrom(this);
@@ -12366,6 +12575,7 @@ public final class Openapiv2 {
                 "Invalid map field number: " + number);
         }
       }
+      @java.lang.Override
       protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
           internalGetFieldAccessorTable() {
         return grpc.gateway.protoc_gen_swagger.options.Openapiv2.internal_static_grpc_gateway_protoc_gen_swagger_options_SecurityDefinitions_fieldAccessorTable
@@ -12388,21 +12598,25 @@ public final class Openapiv2 {
                 .alwaysUseFieldBuilders) {
         }
       }
+      @java.lang.Override
       public Builder clear() {
         super.clear();
         internalGetMutableSecurity().clear();
         return this;
       }
 
+      @java.lang.Override
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
         return grpc.gateway.protoc_gen_swagger.options.Openapiv2.internal_static_grpc_gateway_protoc_gen_swagger_options_SecurityDefinitions_descriptor;
       }
 
+      @java.lang.Override
       public grpc.gateway.protoc_gen_swagger.options.Openapiv2.SecurityDefinitions getDefaultInstanceForType() {
         return grpc.gateway.protoc_gen_swagger.options.Openapiv2.SecurityDefinitions.getDefaultInstance();
       }
 
+      @java.lang.Override
       public grpc.gateway.protoc_gen_swagger.options.Openapiv2.SecurityDefinitions build() {
         grpc.gateway.protoc_gen_swagger.options.Openapiv2.SecurityDefinitions result = buildPartial();
         if (!result.isInitialized()) {
@@ -12411,6 +12625,7 @@ public final class Openapiv2 {
         return result;
       }
 
+      @java.lang.Override
       public grpc.gateway.protoc_gen_swagger.options.Openapiv2.SecurityDefinitions buildPartial() {
         grpc.gateway.protoc_gen_swagger.options.Openapiv2.SecurityDefinitions result = new grpc.gateway.protoc_gen_swagger.options.Openapiv2.SecurityDefinitions(this);
         int from_bitField0_ = bitField0_;
@@ -12420,32 +12635,39 @@ public final class Openapiv2 {
         return result;
       }
 
+      @java.lang.Override
       public Builder clone() {
         return (Builder) super.clone();
       }
+      @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
         return (Builder) super.setField(field, value);
       }
+      @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
         return (Builder) super.clearField(field);
       }
+      @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
         return (Builder) super.clearOneof(oneof);
       }
+      @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
         return (Builder) super.setRepeatedField(field, index, value);
       }
+      @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
         return (Builder) super.addRepeatedField(field, value);
       }
+      @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
         if (other instanceof grpc.gateway.protoc_gen_swagger.options.Openapiv2.SecurityDefinitions) {
           return mergeFrom((grpc.gateway.protoc_gen_swagger.options.Openapiv2.SecurityDefinitions)other);
@@ -12464,10 +12686,12 @@ public final class Openapiv2 {
         return this;
       }
 
+      @java.lang.Override
       public final boolean isInitialized() {
         return true;
       }
 
+      @java.lang.Override
       public Builder mergeFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -12637,11 +12861,13 @@ public final class Openapiv2 {
             .putAll(values);
         return this;
       }
+      @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
         return super.setUnknownFieldsProto3(unknownFields);
       }
 
+      @java.lang.Override
       public final Builder mergeUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
         return super.mergeUnknownFields(unknownFields);
@@ -12663,6 +12889,7 @@ public final class Openapiv2 {
 
     private static final com.google.protobuf.Parser<SecurityDefinitions>
         PARSER = new com.google.protobuf.AbstractParser<SecurityDefinitions>() {
+      @java.lang.Override
       public SecurityDefinitions parsePartialFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -12680,6 +12907,7 @@ public final class Openapiv2 {
       return PARSER;
     }
 
+    @java.lang.Override
     public grpc.gateway.protoc_gen_swagger.options.Openapiv2.SecurityDefinitions getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
@@ -12915,13 +13143,6 @@ public final class Openapiv2 {
             case 0:
               done = true;
               break;
-            default: {
-              if (!parseUnknownFieldProto3(
-                  input, unknownFields, extensionRegistry, tag)) {
-                done = true;
-              }
-              break;
-            }
             case 8: {
               int rawValue = input.readEnum();
 
@@ -12977,6 +13198,13 @@ public final class Openapiv2 {
 
               break;
             }
+            default: {
+              if (!parseUnknownFieldProto3(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
           }
         }
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
@@ -12994,6 +13222,7 @@ public final class Openapiv2 {
       return grpc.gateway.protoc_gen_swagger.options.Openapiv2.internal_static_grpc_gateway_protoc_gen_swagger_options_SecurityScheme_descriptor;
     }
 
+    @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
       return grpc.gateway.protoc_gen_swagger.options.Openapiv2.internal_static_grpc_gateway_protoc_gen_swagger_options_SecurityScheme_fieldAccessorTable
@@ -13385,6 +13614,7 @@ public final class Openapiv2 {
      * <code>.grpc.gateway.protoc_gen_swagger.options.SecurityScheme.Type type = 1;</code>
      */
     public grpc.gateway.protoc_gen_swagger.options.Openapiv2.SecurityScheme.Type getType() {
+      @SuppressWarnings("deprecation")
       grpc.gateway.protoc_gen_swagger.options.Openapiv2.SecurityScheme.Type result = grpc.gateway.protoc_gen_swagger.options.Openapiv2.SecurityScheme.Type.valueOf(type_);
       return result == null ? grpc.gateway.protoc_gen_swagger.options.Openapiv2.SecurityScheme.Type.UNRECOGNIZED : result;
     }
@@ -13497,6 +13727,7 @@ public final class Openapiv2 {
      * <code>.grpc.gateway.protoc_gen_swagger.options.SecurityScheme.In in = 4;</code>
      */
     public grpc.gateway.protoc_gen_swagger.options.Openapiv2.SecurityScheme.In getIn() {
+      @SuppressWarnings("deprecation")
       grpc.gateway.protoc_gen_swagger.options.Openapiv2.SecurityScheme.In result = grpc.gateway.protoc_gen_swagger.options.Openapiv2.SecurityScheme.In.valueOf(in_);
       return result == null ? grpc.gateway.protoc_gen_swagger.options.Openapiv2.SecurityScheme.In.UNRECOGNIZED : result;
     }
@@ -13525,6 +13756,7 @@ public final class Openapiv2 {
      * <code>.grpc.gateway.protoc_gen_swagger.options.SecurityScheme.Flow flow = 5;</code>
      */
     public grpc.gateway.protoc_gen_swagger.options.Openapiv2.SecurityScheme.Flow getFlow() {
+      @SuppressWarnings("deprecation")
       grpc.gateway.protoc_gen_swagger.options.Openapiv2.SecurityScheme.Flow result = grpc.gateway.protoc_gen_swagger.options.Openapiv2.SecurityScheme.Flow.valueOf(flow_);
       return result == null ? grpc.gateway.protoc_gen_swagger.options.Openapiv2.SecurityScheme.Flow.UNRECOGNIZED : result;
     }
@@ -13658,6 +13890,7 @@ public final class Openapiv2 {
     }
 
     private byte memoizedIsInitialized = -1;
+    @java.lang.Override
     public final boolean isInitialized() {
       byte isInitialized = memoizedIsInitialized;
       if (isInitialized == 1) return true;
@@ -13667,6 +13900,7 @@ public final class Openapiv2 {
       return true;
     }
 
+    @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
       if (type_ != grpc.gateway.protoc_gen_swagger.options.Openapiv2.SecurityScheme.Type.TYPE_INVALID.getNumber()) {
@@ -13696,6 +13930,7 @@ public final class Openapiv2 {
       unknownFields.writeTo(output);
     }
 
+    @java.lang.Override
     public int getSerializedSize() {
       int size = memoizedSize;
       if (size != -1) return size;
@@ -13865,6 +14100,7 @@ public final class Openapiv2 {
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
 
+    @java.lang.Override
     public Builder newBuilderForType() { return newBuilder(); }
     public static Builder newBuilder() {
       return DEFAULT_INSTANCE.toBuilder();
@@ -13872,6 +14108,7 @@ public final class Openapiv2 {
     public static Builder newBuilder(grpc.gateway.protoc_gen_swagger.options.Openapiv2.SecurityScheme prototype) {
       return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
     }
+    @java.lang.Override
     public Builder toBuilder() {
       return this == DEFAULT_INSTANCE
           ? new Builder() : new Builder().mergeFrom(this);
@@ -13905,6 +14142,7 @@ public final class Openapiv2 {
         return grpc.gateway.protoc_gen_swagger.options.Openapiv2.internal_static_grpc_gateway_protoc_gen_swagger_options_SecurityScheme_descriptor;
       }
 
+      @java.lang.Override
       protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
           internalGetFieldAccessorTable() {
         return grpc.gateway.protoc_gen_swagger.options.Openapiv2.internal_static_grpc_gateway_protoc_gen_swagger_options_SecurityScheme_fieldAccessorTable
@@ -13927,6 +14165,7 @@ public final class Openapiv2 {
                 .alwaysUseFieldBuilders) {
         }
       }
+      @java.lang.Override
       public Builder clear() {
         super.clear();
         type_ = 0;
@@ -13952,15 +14191,18 @@ public final class Openapiv2 {
         return this;
       }
 
+      @java.lang.Override
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
         return grpc.gateway.protoc_gen_swagger.options.Openapiv2.internal_static_grpc_gateway_protoc_gen_swagger_options_SecurityScheme_descriptor;
       }
 
+      @java.lang.Override
       public grpc.gateway.protoc_gen_swagger.options.Openapiv2.SecurityScheme getDefaultInstanceForType() {
         return grpc.gateway.protoc_gen_swagger.options.Openapiv2.SecurityScheme.getDefaultInstance();
       }
 
+      @java.lang.Override
       public grpc.gateway.protoc_gen_swagger.options.Openapiv2.SecurityScheme build() {
         grpc.gateway.protoc_gen_swagger.options.Openapiv2.SecurityScheme result = buildPartial();
         if (!result.isInitialized()) {
@@ -13969,6 +14211,7 @@ public final class Openapiv2 {
         return result;
       }
 
+      @java.lang.Override
       public grpc.gateway.protoc_gen_swagger.options.Openapiv2.SecurityScheme buildPartial() {
         grpc.gateway.protoc_gen_swagger.options.Openapiv2.SecurityScheme result = new grpc.gateway.protoc_gen_swagger.options.Openapiv2.SecurityScheme(this);
         result.type_ = type_;
@@ -13987,32 +14230,39 @@ public final class Openapiv2 {
         return result;
       }
 
+      @java.lang.Override
       public Builder clone() {
         return (Builder) super.clone();
       }
+      @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
         return (Builder) super.setField(field, value);
       }
+      @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
         return (Builder) super.clearField(field);
       }
+      @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
         return (Builder) super.clearOneof(oneof);
       }
+      @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
         return (Builder) super.setRepeatedField(field, index, value);
       }
+      @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
         return (Builder) super.addRepeatedField(field, value);
       }
+      @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
         if (other instanceof grpc.gateway.protoc_gen_swagger.options.Openapiv2.SecurityScheme) {
           return mergeFrom((grpc.gateway.protoc_gen_swagger.options.Openapiv2.SecurityScheme)other);
@@ -14057,10 +14307,12 @@ public final class Openapiv2 {
         return this;
       }
 
+      @java.lang.Override
       public final boolean isInitialized() {
         return true;
       }
 
+      @java.lang.Override
       public Builder mergeFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -14113,6 +14365,7 @@ public final class Openapiv2 {
        * <code>.grpc.gateway.protoc_gen_swagger.options.SecurityScheme.Type type = 1;</code>
        */
       public grpc.gateway.protoc_gen_swagger.options.Openapiv2.SecurityScheme.Type getType() {
+        @SuppressWarnings("deprecation")
         grpc.gateway.protoc_gen_swagger.options.Openapiv2.SecurityScheme.Type result = grpc.gateway.protoc_gen_swagger.options.Openapiv2.SecurityScheme.Type.valueOf(type_);
         return result == null ? grpc.gateway.protoc_gen_swagger.options.Openapiv2.SecurityScheme.Type.UNRECOGNIZED : result;
       }
@@ -14365,6 +14618,7 @@ public final class Openapiv2 {
        * <code>.grpc.gateway.protoc_gen_swagger.options.SecurityScheme.In in = 4;</code>
        */
       public grpc.gateway.protoc_gen_swagger.options.Openapiv2.SecurityScheme.In getIn() {
+        @SuppressWarnings("deprecation")
         grpc.gateway.protoc_gen_swagger.options.Openapiv2.SecurityScheme.In result = grpc.gateway.protoc_gen_swagger.options.Openapiv2.SecurityScheme.In.valueOf(in_);
         return result == null ? grpc.gateway.protoc_gen_swagger.options.Openapiv2.SecurityScheme.In.UNRECOGNIZED : result;
       }
@@ -14437,6 +14691,7 @@ public final class Openapiv2 {
        * <code>.grpc.gateway.protoc_gen_swagger.options.SecurityScheme.Flow flow = 5;</code>
        */
       public grpc.gateway.protoc_gen_swagger.options.Openapiv2.SecurityScheme.Flow getFlow() {
+        @SuppressWarnings("deprecation")
         grpc.gateway.protoc_gen_swagger.options.Openapiv2.SecurityScheme.Flow result = grpc.gateway.protoc_gen_swagger.options.Openapiv2.SecurityScheme.Flow.valueOf(flow_);
         return result == null ? grpc.gateway.protoc_gen_swagger.options.Openapiv2.SecurityScheme.Flow.UNRECOGNIZED : result;
       }
@@ -14833,11 +15088,13 @@ public final class Openapiv2 {
         }
         return scopesBuilder_;
       }
+      @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
         return super.setUnknownFieldsProto3(unknownFields);
       }
 
+      @java.lang.Override
       public final Builder mergeUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
         return super.mergeUnknownFields(unknownFields);
@@ -14859,6 +15116,7 @@ public final class Openapiv2 {
 
     private static final com.google.protobuf.Parser<SecurityScheme>
         PARSER = new com.google.protobuf.AbstractParser<SecurityScheme>() {
+      @java.lang.Override
       public SecurityScheme parsePartialFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -14876,6 +15134,7 @@ public final class Openapiv2 {
       return PARSER;
     }
 
+    @java.lang.Override
     public grpc.gateway.protoc_gen_swagger.options.Openapiv2.SecurityScheme getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
@@ -15005,13 +15264,6 @@ public final class Openapiv2 {
             case 0:
               done = true;
               break;
-            default: {
-              if (!parseUnknownFieldProto3(
-                  input, unknownFields, extensionRegistry, tag)) {
-                done = true;
-              }
-              break;
-            }
             case 10: {
               if (!((mutable_bitField0_ & 0x00000001) == 0x00000001)) {
                 securityRequirement_ = com.google.protobuf.MapField.newMapField(
@@ -15023,6 +15275,13 @@ public final class Openapiv2 {
                   SecurityRequirementDefaultEntryHolder.defaultEntry.getParserForType(), extensionRegistry);
               securityRequirement_.getMutableMap().put(
                   securityRequirement__.getKey(), securityRequirement__.getValue());
+              break;
+            }
+            default: {
+              if (!parseUnknownFieldProto3(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
               break;
             }
           }
@@ -15043,6 +15302,7 @@ public final class Openapiv2 {
     }
 
     @SuppressWarnings({"rawtypes"})
+    @java.lang.Override
     protected com.google.protobuf.MapField internalGetMapField(
         int number) {
       switch (number) {
@@ -15053,6 +15313,7 @@ public final class Openapiv2 {
               "Invalid map field number: " + number);
       }
     }
+    @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
       return grpc.gateway.protoc_gen_swagger.options.Openapiv2.internal_static_grpc_gateway_protoc_gen_swagger_options_SecurityRequirement_fieldAccessorTable
@@ -15129,13 +15390,6 @@ public final class Openapiv2 {
               case 0:
                 done = true;
                 break;
-              default: {
-                if (!parseUnknownFieldProto3(
-                    input, unknownFields, extensionRegistry, tag)) {
-                  done = true;
-                }
-                break;
-              }
               case 10: {
                 java.lang.String s = input.readStringRequireUtf8();
                 if (!((mutable_bitField0_ & 0x00000001) == 0x00000001)) {
@@ -15143,6 +15397,13 @@ public final class Openapiv2 {
                   mutable_bitField0_ |= 0x00000001;
                 }
                 scope_.add(s);
+                break;
+              }
+              default: {
+                if (!parseUnknownFieldProto3(
+                    input, unknownFields, extensionRegistry, tag)) {
+                  done = true;
+                }
                 break;
               }
             }
@@ -15165,6 +15426,7 @@ public final class Openapiv2 {
         return grpc.gateway.protoc_gen_swagger.options.Openapiv2.internal_static_grpc_gateway_protoc_gen_swagger_options_SecurityRequirement_SecurityRequirementValue_descriptor;
       }
 
+      @java.lang.Override
       protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
           internalGetFieldAccessorTable() {
         return grpc.gateway.protoc_gen_swagger.options.Openapiv2.internal_static_grpc_gateway_protoc_gen_swagger_options_SecurityRequirement_SecurityRequirementValue_fieldAccessorTable
@@ -15202,6 +15464,7 @@ public final class Openapiv2 {
       }
 
       private byte memoizedIsInitialized = -1;
+      @java.lang.Override
       public final boolean isInitialized() {
         byte isInitialized = memoizedIsInitialized;
         if (isInitialized == 1) return true;
@@ -15211,6 +15474,7 @@ public final class Openapiv2 {
         return true;
       }
 
+      @java.lang.Override
       public void writeTo(com.google.protobuf.CodedOutputStream output)
                           throws java.io.IOException {
         for (int i = 0; i < scope_.size(); i++) {
@@ -15219,6 +15483,7 @@ public final class Openapiv2 {
         unknownFields.writeTo(output);
       }
 
+      @java.lang.Override
       public int getSerializedSize() {
         int size = memoizedSize;
         if (size != -1) return size;
@@ -15340,6 +15605,7 @@ public final class Openapiv2 {
             .parseWithIOException(PARSER, input, extensionRegistry);
       }
 
+      @java.lang.Override
       public Builder newBuilderForType() { return newBuilder(); }
       public static Builder newBuilder() {
         return DEFAULT_INSTANCE.toBuilder();
@@ -15347,6 +15613,7 @@ public final class Openapiv2 {
       public static Builder newBuilder(grpc.gateway.protoc_gen_swagger.options.Openapiv2.SecurityRequirement.SecurityRequirementValue prototype) {
         return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
       }
+      @java.lang.Override
       public Builder toBuilder() {
         return this == DEFAULT_INSTANCE
             ? new Builder() : new Builder().mergeFrom(this);
@@ -15376,6 +15643,7 @@ public final class Openapiv2 {
           return grpc.gateway.protoc_gen_swagger.options.Openapiv2.internal_static_grpc_gateway_protoc_gen_swagger_options_SecurityRequirement_SecurityRequirementValue_descriptor;
         }
 
+        @java.lang.Override
         protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
             internalGetFieldAccessorTable() {
           return grpc.gateway.protoc_gen_swagger.options.Openapiv2.internal_static_grpc_gateway_protoc_gen_swagger_options_SecurityRequirement_SecurityRequirementValue_fieldAccessorTable
@@ -15398,6 +15666,7 @@ public final class Openapiv2 {
                   .alwaysUseFieldBuilders) {
           }
         }
+        @java.lang.Override
         public Builder clear() {
           super.clear();
           scope_ = com.google.protobuf.LazyStringArrayList.EMPTY;
@@ -15405,15 +15674,18 @@ public final class Openapiv2 {
           return this;
         }
 
+        @java.lang.Override
         public com.google.protobuf.Descriptors.Descriptor
             getDescriptorForType() {
           return grpc.gateway.protoc_gen_swagger.options.Openapiv2.internal_static_grpc_gateway_protoc_gen_swagger_options_SecurityRequirement_SecurityRequirementValue_descriptor;
         }
 
+        @java.lang.Override
         public grpc.gateway.protoc_gen_swagger.options.Openapiv2.SecurityRequirement.SecurityRequirementValue getDefaultInstanceForType() {
           return grpc.gateway.protoc_gen_swagger.options.Openapiv2.SecurityRequirement.SecurityRequirementValue.getDefaultInstance();
         }
 
+        @java.lang.Override
         public grpc.gateway.protoc_gen_swagger.options.Openapiv2.SecurityRequirement.SecurityRequirementValue build() {
           grpc.gateway.protoc_gen_swagger.options.Openapiv2.SecurityRequirement.SecurityRequirementValue result = buildPartial();
           if (!result.isInitialized()) {
@@ -15422,6 +15694,7 @@ public final class Openapiv2 {
           return result;
         }
 
+        @java.lang.Override
         public grpc.gateway.protoc_gen_swagger.options.Openapiv2.SecurityRequirement.SecurityRequirementValue buildPartial() {
           grpc.gateway.protoc_gen_swagger.options.Openapiv2.SecurityRequirement.SecurityRequirementValue result = new grpc.gateway.protoc_gen_swagger.options.Openapiv2.SecurityRequirement.SecurityRequirementValue(this);
           int from_bitField0_ = bitField0_;
@@ -15434,32 +15707,39 @@ public final class Openapiv2 {
           return result;
         }
 
+        @java.lang.Override
         public Builder clone() {
           return (Builder) super.clone();
         }
+        @java.lang.Override
         public Builder setField(
             com.google.protobuf.Descriptors.FieldDescriptor field,
             java.lang.Object value) {
           return (Builder) super.setField(field, value);
         }
+        @java.lang.Override
         public Builder clearField(
             com.google.protobuf.Descriptors.FieldDescriptor field) {
           return (Builder) super.clearField(field);
         }
+        @java.lang.Override
         public Builder clearOneof(
             com.google.protobuf.Descriptors.OneofDescriptor oneof) {
           return (Builder) super.clearOneof(oneof);
         }
+        @java.lang.Override
         public Builder setRepeatedField(
             com.google.protobuf.Descriptors.FieldDescriptor field,
             int index, java.lang.Object value) {
           return (Builder) super.setRepeatedField(field, index, value);
         }
+        @java.lang.Override
         public Builder addRepeatedField(
             com.google.protobuf.Descriptors.FieldDescriptor field,
             java.lang.Object value) {
           return (Builder) super.addRepeatedField(field, value);
         }
+        @java.lang.Override
         public Builder mergeFrom(com.google.protobuf.Message other) {
           if (other instanceof grpc.gateway.protoc_gen_swagger.options.Openapiv2.SecurityRequirement.SecurityRequirementValue) {
             return mergeFrom((grpc.gateway.protoc_gen_swagger.options.Openapiv2.SecurityRequirement.SecurityRequirementValue)other);
@@ -15486,10 +15766,12 @@ public final class Openapiv2 {
           return this;
         }
 
+        @java.lang.Override
         public final boolean isInitialized() {
           return true;
         }
 
+        @java.lang.Override
         public Builder mergeFrom(
             com.google.protobuf.CodedInputStream input,
             com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -15602,11 +15884,13 @@ public final class Openapiv2 {
           onChanged();
           return this;
         }
+        @java.lang.Override
         public final Builder setUnknownFields(
             final com.google.protobuf.UnknownFieldSet unknownFields) {
           return super.setUnknownFieldsProto3(unknownFields);
         }
 
+        @java.lang.Override
         public final Builder mergeUnknownFields(
             final com.google.protobuf.UnknownFieldSet unknownFields) {
           return super.mergeUnknownFields(unknownFields);
@@ -15628,6 +15912,7 @@ public final class Openapiv2 {
 
       private static final com.google.protobuf.Parser<SecurityRequirementValue>
           PARSER = new com.google.protobuf.AbstractParser<SecurityRequirementValue>() {
+        @java.lang.Override
         public SecurityRequirementValue parsePartialFrom(
             com.google.protobuf.CodedInputStream input,
             com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -15645,6 +15930,7 @@ public final class Openapiv2 {
         return PARSER;
       }
 
+      @java.lang.Override
       public grpc.gateway.protoc_gen_swagger.options.Openapiv2.SecurityRequirement.SecurityRequirementValue getDefaultInstanceForType() {
         return DEFAULT_INSTANCE;
       }
@@ -15756,6 +16042,7 @@ public final class Openapiv2 {
     }
 
     private byte memoizedIsInitialized = -1;
+    @java.lang.Override
     public final boolean isInitialized() {
       byte isInitialized = memoizedIsInitialized;
       if (isInitialized == 1) return true;
@@ -15765,6 +16052,7 @@ public final class Openapiv2 {
       return true;
     }
 
+    @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
       com.google.protobuf.GeneratedMessageV3
@@ -15776,6 +16064,7 @@ public final class Openapiv2 {
       unknownFields.writeTo(output);
     }
 
+    @java.lang.Override
     public int getSerializedSize() {
       int size = memoizedSize;
       if (size != -1) return size;
@@ -15899,6 +16188,7 @@ public final class Openapiv2 {
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
 
+    @java.lang.Override
     public Builder newBuilderForType() { return newBuilder(); }
     public static Builder newBuilder() {
       return DEFAULT_INSTANCE.toBuilder();
@@ -15906,6 +16196,7 @@ public final class Openapiv2 {
     public static Builder newBuilder(grpc.gateway.protoc_gen_swagger.options.Openapiv2.SecurityRequirement prototype) {
       return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
     }
+    @java.lang.Override
     public Builder toBuilder() {
       return this == DEFAULT_INSTANCE
           ? new Builder() : new Builder().mergeFrom(this);
@@ -15962,6 +16253,7 @@ public final class Openapiv2 {
                 "Invalid map field number: " + number);
         }
       }
+      @java.lang.Override
       protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
           internalGetFieldAccessorTable() {
         return grpc.gateway.protoc_gen_swagger.options.Openapiv2.internal_static_grpc_gateway_protoc_gen_swagger_options_SecurityRequirement_fieldAccessorTable
@@ -15984,21 +16276,25 @@ public final class Openapiv2 {
                 .alwaysUseFieldBuilders) {
         }
       }
+      @java.lang.Override
       public Builder clear() {
         super.clear();
         internalGetMutableSecurityRequirement().clear();
         return this;
       }
 
+      @java.lang.Override
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
         return grpc.gateway.protoc_gen_swagger.options.Openapiv2.internal_static_grpc_gateway_protoc_gen_swagger_options_SecurityRequirement_descriptor;
       }
 
+      @java.lang.Override
       public grpc.gateway.protoc_gen_swagger.options.Openapiv2.SecurityRequirement getDefaultInstanceForType() {
         return grpc.gateway.protoc_gen_swagger.options.Openapiv2.SecurityRequirement.getDefaultInstance();
       }
 
+      @java.lang.Override
       public grpc.gateway.protoc_gen_swagger.options.Openapiv2.SecurityRequirement build() {
         grpc.gateway.protoc_gen_swagger.options.Openapiv2.SecurityRequirement result = buildPartial();
         if (!result.isInitialized()) {
@@ -16007,6 +16303,7 @@ public final class Openapiv2 {
         return result;
       }
 
+      @java.lang.Override
       public grpc.gateway.protoc_gen_swagger.options.Openapiv2.SecurityRequirement buildPartial() {
         grpc.gateway.protoc_gen_swagger.options.Openapiv2.SecurityRequirement result = new grpc.gateway.protoc_gen_swagger.options.Openapiv2.SecurityRequirement(this);
         int from_bitField0_ = bitField0_;
@@ -16016,32 +16313,39 @@ public final class Openapiv2 {
         return result;
       }
 
+      @java.lang.Override
       public Builder clone() {
         return (Builder) super.clone();
       }
+      @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
         return (Builder) super.setField(field, value);
       }
+      @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
         return (Builder) super.clearField(field);
       }
+      @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
         return (Builder) super.clearOneof(oneof);
       }
+      @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
         return (Builder) super.setRepeatedField(field, index, value);
       }
+      @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
         return (Builder) super.addRepeatedField(field, value);
       }
+      @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
         if (other instanceof grpc.gateway.protoc_gen_swagger.options.Openapiv2.SecurityRequirement) {
           return mergeFrom((grpc.gateway.protoc_gen_swagger.options.Openapiv2.SecurityRequirement)other);
@@ -16060,10 +16364,12 @@ public final class Openapiv2 {
         return this;
       }
 
+      @java.lang.Override
       public final boolean isInitialized() {
         return true;
       }
 
+      @java.lang.Override
       public Builder mergeFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -16254,11 +16560,13 @@ public final class Openapiv2 {
             .putAll(values);
         return this;
       }
+      @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
         return super.setUnknownFieldsProto3(unknownFields);
       }
 
+      @java.lang.Override
       public final Builder mergeUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
         return super.mergeUnknownFields(unknownFields);
@@ -16280,6 +16588,7 @@ public final class Openapiv2 {
 
     private static final com.google.protobuf.Parser<SecurityRequirement>
         PARSER = new com.google.protobuf.AbstractParser<SecurityRequirement>() {
+      @java.lang.Override
       public SecurityRequirement parsePartialFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -16297,6 +16606,7 @@ public final class Openapiv2 {
       return PARSER;
     }
 
+    @java.lang.Override
     public grpc.gateway.protoc_gen_swagger.options.Openapiv2.SecurityRequirement getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
@@ -16411,13 +16721,6 @@ public final class Openapiv2 {
             case 0:
               done = true;
               break;
-            default: {
-              if (!parseUnknownFieldProto3(
-                  input, unknownFields, extensionRegistry, tag)) {
-                done = true;
-              }
-              break;
-            }
             case 10: {
               if (!((mutable_bitField0_ & 0x00000001) == 0x00000001)) {
                 scope_ = com.google.protobuf.MapField.newMapField(
@@ -16429,6 +16732,13 @@ public final class Openapiv2 {
                   ScopeDefaultEntryHolder.defaultEntry.getParserForType(), extensionRegistry);
               scope_.getMutableMap().put(
                   scope__.getKey(), scope__.getValue());
+              break;
+            }
+            default: {
+              if (!parseUnknownFieldProto3(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
               break;
             }
           }
@@ -16449,6 +16759,7 @@ public final class Openapiv2 {
     }
 
     @SuppressWarnings({"rawtypes"})
+    @java.lang.Override
     protected com.google.protobuf.MapField internalGetMapField(
         int number) {
       switch (number) {
@@ -16459,6 +16770,7 @@ public final class Openapiv2 {
               "Invalid map field number: " + number);
       }
     }
+    @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
       return grpc.gateway.protoc_gen_swagger.options.Openapiv2.internal_static_grpc_gateway_protoc_gen_swagger_options_Scopes_fieldAccessorTable
@@ -16563,6 +16875,7 @@ public final class Openapiv2 {
     }
 
     private byte memoizedIsInitialized = -1;
+    @java.lang.Override
     public final boolean isInitialized() {
       byte isInitialized = memoizedIsInitialized;
       if (isInitialized == 1) return true;
@@ -16572,6 +16885,7 @@ public final class Openapiv2 {
       return true;
     }
 
+    @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
       com.google.protobuf.GeneratedMessageV3
@@ -16583,6 +16897,7 @@ public final class Openapiv2 {
       unknownFields.writeTo(output);
     }
 
+    @java.lang.Override
     public int getSerializedSize() {
       int size = memoizedSize;
       if (size != -1) return size;
@@ -16706,6 +17021,7 @@ public final class Openapiv2 {
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
 
+    @java.lang.Override
     public Builder newBuilderForType() { return newBuilder(); }
     public static Builder newBuilder() {
       return DEFAULT_INSTANCE.toBuilder();
@@ -16713,6 +17029,7 @@ public final class Openapiv2 {
     public static Builder newBuilder(grpc.gateway.protoc_gen_swagger.options.Openapiv2.Scopes prototype) {
       return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
     }
+    @java.lang.Override
     public Builder toBuilder() {
       return this == DEFAULT_INSTANCE
           ? new Builder() : new Builder().mergeFrom(this);
@@ -16764,6 +17081,7 @@ public final class Openapiv2 {
                 "Invalid map field number: " + number);
         }
       }
+      @java.lang.Override
       protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
           internalGetFieldAccessorTable() {
         return grpc.gateway.protoc_gen_swagger.options.Openapiv2.internal_static_grpc_gateway_protoc_gen_swagger_options_Scopes_fieldAccessorTable
@@ -16786,21 +17104,25 @@ public final class Openapiv2 {
                 .alwaysUseFieldBuilders) {
         }
       }
+      @java.lang.Override
       public Builder clear() {
         super.clear();
         internalGetMutableScope().clear();
         return this;
       }
 
+      @java.lang.Override
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
         return grpc.gateway.protoc_gen_swagger.options.Openapiv2.internal_static_grpc_gateway_protoc_gen_swagger_options_Scopes_descriptor;
       }
 
+      @java.lang.Override
       public grpc.gateway.protoc_gen_swagger.options.Openapiv2.Scopes getDefaultInstanceForType() {
         return grpc.gateway.protoc_gen_swagger.options.Openapiv2.Scopes.getDefaultInstance();
       }
 
+      @java.lang.Override
       public grpc.gateway.protoc_gen_swagger.options.Openapiv2.Scopes build() {
         grpc.gateway.protoc_gen_swagger.options.Openapiv2.Scopes result = buildPartial();
         if (!result.isInitialized()) {
@@ -16809,6 +17131,7 @@ public final class Openapiv2 {
         return result;
       }
 
+      @java.lang.Override
       public grpc.gateway.protoc_gen_swagger.options.Openapiv2.Scopes buildPartial() {
         grpc.gateway.protoc_gen_swagger.options.Openapiv2.Scopes result = new grpc.gateway.protoc_gen_swagger.options.Openapiv2.Scopes(this);
         int from_bitField0_ = bitField0_;
@@ -16818,32 +17141,39 @@ public final class Openapiv2 {
         return result;
       }
 
+      @java.lang.Override
       public Builder clone() {
         return (Builder) super.clone();
       }
+      @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
         return (Builder) super.setField(field, value);
       }
+      @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
         return (Builder) super.clearField(field);
       }
+      @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
         return (Builder) super.clearOneof(oneof);
       }
+      @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
         return (Builder) super.setRepeatedField(field, index, value);
       }
+      @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
         return (Builder) super.addRepeatedField(field, value);
       }
+      @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
         if (other instanceof grpc.gateway.protoc_gen_swagger.options.Openapiv2.Scopes) {
           return mergeFrom((grpc.gateway.protoc_gen_swagger.options.Openapiv2.Scopes)other);
@@ -16862,10 +17192,12 @@ public final class Openapiv2 {
         return this;
       }
 
+      @java.lang.Override
       public final boolean isInitialized() {
         return true;
       }
 
+      @java.lang.Override
       public Builder mergeFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -17042,11 +17374,13 @@ public final class Openapiv2 {
             .putAll(values);
         return this;
       }
+      @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
         return super.setUnknownFieldsProto3(unknownFields);
       }
 
+      @java.lang.Override
       public final Builder mergeUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
         return super.mergeUnknownFields(unknownFields);
@@ -17068,6 +17402,7 @@ public final class Openapiv2 {
 
     private static final com.google.protobuf.Parser<Scopes>
         PARSER = new com.google.protobuf.AbstractParser<Scopes>() {
+      @java.lang.Override
       public Scopes parsePartialFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -17085,6 +17420,7 @@ public final class Openapiv2 {
       return PARSER;
     }
 
+    @java.lang.Override
     public grpc.gateway.protoc_gen_swagger.options.Openapiv2.Scopes getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }

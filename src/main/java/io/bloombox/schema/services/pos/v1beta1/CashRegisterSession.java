@@ -1,8 +1,8 @@
 /*
- * Copyright 2018, Bloombox, LLC. All rights reserved.
+ * Copyright 2018, Momentum Ideas, Co. All rights reserved.
  *
  * Source and object computer code contained herein is the private intellectual
- * property of Bloombox, a California Limited Liability Corporation. Use of this
+ * property of Momentum Ideas Co., a Delaware Corporation. Use of this
  * code in source form requires permission in writing before use or the
  * assembly, distribution, or publishing of derivative works, for commercial
  * purposes or any other purpose, from a duly authorized officer of Momentum
@@ -25,11 +25,11 @@ package io.bloombox.schema.services.pos.v1beta1;
  * Specifies the notion of a point-of-sale session, bound to a user and particular POS device.
  * </pre>
  *
- * Protobuf type {@code bloombox.schema.services.pos.v1beta1.CashRegisterSession}
+ * Protobuf type {@code bloombox.services.pos.v1beta1.CashRegisterSession}
  */
 public  final class CashRegisterSession extends
     com.google.protobuf.GeneratedMessageV3 implements
-    // @@protoc_insertion_point(message_implements:bloombox.schema.services.pos.v1beta1.CashRegisterSession)
+    // @@protoc_insertion_point(message_implements:bloombox.services.pos.v1beta1.CashRegisterSession)
     CashRegisterSessionOrBuilder {
 private static final long serialVersionUID = 0L;
   // Use CashRegisterSession.newBuilder() to construct.
@@ -66,13 +66,6 @@ private static final long serialVersionUID = 0L;
           case 0:
             done = true;
             break;
-          default: {
-            if (!parseUnknownFieldProto3(
-                input, unknownFields, extensionRegistry, tag)) {
-              done = true;
-            }
-            break;
-          }
           case 10: {
             java.lang.String s = input.readStringRequireUtf8();
 
@@ -172,6 +165,13 @@ private static final long serialVersionUID = 0L;
 
             break;
           }
+          default: {
+            if (!parseUnknownFieldProto3(
+                input, unknownFields, extensionRegistry, tag)) {
+              done = true;
+            }
+            break;
+          }
         }
       }
     } catch (com.google.protobuf.InvalidProtocolBufferException e) {
@@ -189,18 +189,19 @@ private static final long serialVersionUID = 0L;
   }
   public static final com.google.protobuf.Descriptors.Descriptor
       getDescriptor() {
-    return io.bloombox.schema.services.pos.v1beta1.POSServiceBeta1.internal_static_bloombox_schema_services_pos_v1beta1_CashRegisterSession_descriptor;
+    return io.bloombox.schema.services.pos.v1beta1.POSServiceBeta1.internal_static_bloombox_services_pos_v1beta1_CashRegisterSession_descriptor;
   }
 
+  @java.lang.Override
   protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internalGetFieldAccessorTable() {
-    return io.bloombox.schema.services.pos.v1beta1.POSServiceBeta1.internal_static_bloombox_schema_services_pos_v1beta1_CashRegisterSession_fieldAccessorTable
+    return io.bloombox.schema.services.pos.v1beta1.POSServiceBeta1.internal_static_bloombox_services_pos_v1beta1_CashRegisterSession_fieldAccessorTable
         .ensureFieldAccessorsInitialized(
             io.bloombox.schema.services.pos.v1beta1.CashRegisterSession.class, io.bloombox.schema.services.pos.v1beta1.CashRegisterSession.Builder.class);
   }
 
   public interface MessagingSessionOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:bloombox.schema.services.pos.v1beta1.CashRegisterSession.MessagingSession)
+      // @@protoc_insertion_point(interface_extends:bloombox.services.pos.v1beta1.CashRegisterSession.MessagingSession)
       com.google.protobuf.MessageOrBuilder {
 
     /**
@@ -226,11 +227,11 @@ private static final long serialVersionUID = 0L;
    * Properties related to a messaging session, if one was established.
    * </pre>
    *
-   * Protobuf type {@code bloombox.schema.services.pos.v1beta1.CashRegisterSession.MessagingSession}
+   * Protobuf type {@code bloombox.services.pos.v1beta1.CashRegisterSession.MessagingSession}
    */
   public  static final class MessagingSession extends
       com.google.protobuf.GeneratedMessageV3 implements
-      // @@protoc_insertion_point(message_implements:bloombox.schema.services.pos.v1beta1.CashRegisterSession.MessagingSession)
+      // @@protoc_insertion_point(message_implements:bloombox.services.pos.v1beta1.CashRegisterSession.MessagingSession)
       MessagingSessionOrBuilder {
   private static final long serialVersionUID = 0L;
     // Use MessagingSession.newBuilder() to construct.
@@ -265,17 +266,17 @@ private static final long serialVersionUID = 0L;
             case 0:
               done = true;
               break;
+            case 10: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              identity_ = s;
+              break;
+            }
             default: {
               if (!parseUnknownFieldProto3(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
-              break;
-            }
-            case 10: {
-              java.lang.String s = input.readStringRequireUtf8();
-
-              identity_ = s;
               break;
             }
           }
@@ -292,12 +293,13 @@ private static final long serialVersionUID = 0L;
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return io.bloombox.schema.services.pos.v1beta1.POSServiceBeta1.internal_static_bloombox_schema_services_pos_v1beta1_CashRegisterSession_MessagingSession_descriptor;
+      return io.bloombox.schema.services.pos.v1beta1.POSServiceBeta1.internal_static_bloombox_services_pos_v1beta1_CashRegisterSession_MessagingSession_descriptor;
     }
 
+    @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return io.bloombox.schema.services.pos.v1beta1.POSServiceBeta1.internal_static_bloombox_schema_services_pos_v1beta1_CashRegisterSession_MessagingSession_fieldAccessorTable
+      return io.bloombox.schema.services.pos.v1beta1.POSServiceBeta1.internal_static_bloombox_services_pos_v1beta1_CashRegisterSession_MessagingSession_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
               io.bloombox.schema.services.pos.v1beta1.CashRegisterSession.MessagingSession.class, io.bloombox.schema.services.pos.v1beta1.CashRegisterSession.MessagingSession.Builder.class);
     }
@@ -345,6 +347,7 @@ private static final long serialVersionUID = 0L;
     }
 
     private byte memoizedIsInitialized = -1;
+    @java.lang.Override
     public final boolean isInitialized() {
       byte isInitialized = memoizedIsInitialized;
       if (isInitialized == 1) return true;
@@ -354,6 +357,7 @@ private static final long serialVersionUID = 0L;
       return true;
     }
 
+    @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
       if (!getIdentityBytes().isEmpty()) {
@@ -362,6 +366,7 @@ private static final long serialVersionUID = 0L;
       unknownFields.writeTo(output);
     }
 
+    @java.lang.Override
     public int getSerializedSize() {
       int size = memoizedSize;
       if (size != -1) return size;
@@ -476,6 +481,7 @@ private static final long serialVersionUID = 0L;
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
 
+    @java.lang.Override
     public Builder newBuilderForType() { return newBuilder(); }
     public static Builder newBuilder() {
       return DEFAULT_INSTANCE.toBuilder();
@@ -483,6 +489,7 @@ private static final long serialVersionUID = 0L;
     public static Builder newBuilder(io.bloombox.schema.services.pos.v1beta1.CashRegisterSession.MessagingSession prototype) {
       return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
     }
+    @java.lang.Override
     public Builder toBuilder() {
       return this == DEFAULT_INSTANCE
           ? new Builder() : new Builder().mergeFrom(this);
@@ -499,20 +506,21 @@ private static final long serialVersionUID = 0L;
      * Properties related to a messaging session, if one was established.
      * </pre>
      *
-     * Protobuf type {@code bloombox.schema.services.pos.v1beta1.CashRegisterSession.MessagingSession}
+     * Protobuf type {@code bloombox.services.pos.v1beta1.CashRegisterSession.MessagingSession}
      */
     public static final class Builder extends
         com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:bloombox.schema.services.pos.v1beta1.CashRegisterSession.MessagingSession)
+        // @@protoc_insertion_point(builder_implements:bloombox.services.pos.v1beta1.CashRegisterSession.MessagingSession)
         io.bloombox.schema.services.pos.v1beta1.CashRegisterSession.MessagingSessionOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return io.bloombox.schema.services.pos.v1beta1.POSServiceBeta1.internal_static_bloombox_schema_services_pos_v1beta1_CashRegisterSession_MessagingSession_descriptor;
+        return io.bloombox.schema.services.pos.v1beta1.POSServiceBeta1.internal_static_bloombox_services_pos_v1beta1_CashRegisterSession_MessagingSession_descriptor;
       }
 
+      @java.lang.Override
       protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return io.bloombox.schema.services.pos.v1beta1.POSServiceBeta1.internal_static_bloombox_schema_services_pos_v1beta1_CashRegisterSession_MessagingSession_fieldAccessorTable
+        return io.bloombox.schema.services.pos.v1beta1.POSServiceBeta1.internal_static_bloombox_services_pos_v1beta1_CashRegisterSession_MessagingSession_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
                 io.bloombox.schema.services.pos.v1beta1.CashRegisterSession.MessagingSession.class, io.bloombox.schema.services.pos.v1beta1.CashRegisterSession.MessagingSession.Builder.class);
       }
@@ -532,6 +540,7 @@ private static final long serialVersionUID = 0L;
                 .alwaysUseFieldBuilders) {
         }
       }
+      @java.lang.Override
       public Builder clear() {
         super.clear();
         identity_ = "";
@@ -539,15 +548,18 @@ private static final long serialVersionUID = 0L;
         return this;
       }
 
+      @java.lang.Override
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return io.bloombox.schema.services.pos.v1beta1.POSServiceBeta1.internal_static_bloombox_schema_services_pos_v1beta1_CashRegisterSession_MessagingSession_descriptor;
+        return io.bloombox.schema.services.pos.v1beta1.POSServiceBeta1.internal_static_bloombox_services_pos_v1beta1_CashRegisterSession_MessagingSession_descriptor;
       }
 
+      @java.lang.Override
       public io.bloombox.schema.services.pos.v1beta1.CashRegisterSession.MessagingSession getDefaultInstanceForType() {
         return io.bloombox.schema.services.pos.v1beta1.CashRegisterSession.MessagingSession.getDefaultInstance();
       }
 
+      @java.lang.Override
       public io.bloombox.schema.services.pos.v1beta1.CashRegisterSession.MessagingSession build() {
         io.bloombox.schema.services.pos.v1beta1.CashRegisterSession.MessagingSession result = buildPartial();
         if (!result.isInitialized()) {
@@ -556,6 +568,7 @@ private static final long serialVersionUID = 0L;
         return result;
       }
 
+      @java.lang.Override
       public io.bloombox.schema.services.pos.v1beta1.CashRegisterSession.MessagingSession buildPartial() {
         io.bloombox.schema.services.pos.v1beta1.CashRegisterSession.MessagingSession result = new io.bloombox.schema.services.pos.v1beta1.CashRegisterSession.MessagingSession(this);
         result.identity_ = identity_;
@@ -563,32 +576,39 @@ private static final long serialVersionUID = 0L;
         return result;
       }
 
+      @java.lang.Override
       public Builder clone() {
         return (Builder) super.clone();
       }
+      @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
         return (Builder) super.setField(field, value);
       }
+      @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
         return (Builder) super.clearField(field);
       }
+      @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
         return (Builder) super.clearOneof(oneof);
       }
+      @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
         return (Builder) super.setRepeatedField(field, index, value);
       }
+      @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
         return (Builder) super.addRepeatedField(field, value);
       }
+      @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
         if (other instanceof io.bloombox.schema.services.pos.v1beta1.CashRegisterSession.MessagingSession) {
           return mergeFrom((io.bloombox.schema.services.pos.v1beta1.CashRegisterSession.MessagingSession)other);
@@ -609,10 +629,12 @@ private static final long serialVersionUID = 0L;
         return this;
       }
 
+      @java.lang.Override
       public final boolean isInitialized() {
         return true;
       }
 
+      @java.lang.Override
       public Builder mergeFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -719,21 +741,23 @@ private static final long serialVersionUID = 0L;
         onChanged();
         return this;
       }
+      @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
         return super.setUnknownFieldsProto3(unknownFields);
       }
 
+      @java.lang.Override
       public final Builder mergeUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
         return super.mergeUnknownFields(unknownFields);
       }
 
 
-      // @@protoc_insertion_point(builder_scope:bloombox.schema.services.pos.v1beta1.CashRegisterSession.MessagingSession)
+      // @@protoc_insertion_point(builder_scope:bloombox.services.pos.v1beta1.CashRegisterSession.MessagingSession)
     }
 
-    // @@protoc_insertion_point(class_scope:bloombox.schema.services.pos.v1beta1.CashRegisterSession.MessagingSession)
+    // @@protoc_insertion_point(class_scope:bloombox.services.pos.v1beta1.CashRegisterSession.MessagingSession)
     private static final io.bloombox.schema.services.pos.v1beta1.CashRegisterSession.MessagingSession DEFAULT_INSTANCE;
     static {
       DEFAULT_INSTANCE = new io.bloombox.schema.services.pos.v1beta1.CashRegisterSession.MessagingSession();
@@ -745,6 +769,7 @@ private static final long serialVersionUID = 0L;
 
     private static final com.google.protobuf.Parser<MessagingSession>
         PARSER = new com.google.protobuf.AbstractParser<MessagingSession>() {
+      @java.lang.Override
       public MessagingSession parsePartialFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -762,6 +787,7 @@ private static final long serialVersionUID = 0L;
       return PARSER;
     }
 
+    @java.lang.Override
     public io.bloombox.schema.services.pos.v1beta1.CashRegisterSession.MessagingSession getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
@@ -818,7 +844,7 @@ private static final long serialVersionUID = 0L;
    * Specifies the staff user logged in via this operation.
    * </pre>
    *
-   * <code>.bloombox.schema.identity.StaffUser user = 2;</code>
+   * <code>.bloombox.identity.StaffUser user = 2;</code>
    */
   public boolean hasUser() {
     return user_ != null;
@@ -828,7 +854,7 @@ private static final long serialVersionUID = 0L;
    * Specifies the staff user logged in via this operation.
    * </pre>
    *
-   * <code>.bloombox.schema.identity.StaffUser user = 2;</code>
+   * <code>.bloombox.identity.StaffUser user = 2;</code>
    */
   public io.bloombox.schema.identity.AppStaff.StaffUser getUser() {
     return user_ == null ? io.bloombox.schema.identity.AppStaff.StaffUser.getDefaultInstance() : user_;
@@ -838,7 +864,7 @@ private static final long serialVersionUID = 0L;
    * Specifies the staff user logged in via this operation.
    * </pre>
    *
-   * <code>.bloombox.schema.identity.StaffUser user = 2;</code>
+   * <code>.bloombox.identity.StaffUser user = 2;</code>
    */
   public io.bloombox.schema.identity.AppStaff.StaffUserOrBuilder getUserOrBuilder() {
     return getUser();
@@ -851,7 +877,7 @@ private static final long serialVersionUID = 0L;
    * Specifies the current/active status of a particular point of sale session.
    * </pre>
    *
-   * <code>.opencannabis.commerce.SessionStatus status = 3;</code>
+   * <code>.bloombox.pos.SessionStatus status = 3;</code>
    */
   public int getStatusValue() {
     return status_;
@@ -861,9 +887,10 @@ private static final long serialVersionUID = 0L;
    * Specifies the current/active status of a particular point of sale session.
    * </pre>
    *
-   * <code>.opencannabis.commerce.SessionStatus status = 3;</code>
+   * <code>.bloombox.pos.SessionStatus status = 3;</code>
    */
   public io.opencannabis.schema.commerce.CommercialPOS.SessionStatus getStatus() {
+    @SuppressWarnings("deprecation")
     io.opencannabis.schema.commerce.CommercialPOS.SessionStatus result = io.opencannabis.schema.commerce.CommercialPOS.SessionStatus.valueOf(status_);
     return result == null ? io.opencannabis.schema.commerce.CommercialPOS.SessionStatus.UNRECOGNIZED : result;
   }
@@ -875,7 +902,7 @@ private static final long serialVersionUID = 0L;
    * Rendered access rights for this partner location.
    * </pre>
    *
-   * <code>.bloombox.schema.identity.IndustryProfile rights = 5;</code>
+   * <code>.bloombox.identity.IndustryProfile rights = 5;</code>
    */
   public boolean hasRights() {
     return rights_ != null;
@@ -885,7 +912,7 @@ private static final long serialVersionUID = 0L;
    * Rendered access rights for this partner location.
    * </pre>
    *
-   * <code>.bloombox.schema.identity.IndustryProfile rights = 5;</code>
+   * <code>.bloombox.identity.IndustryProfile rights = 5;</code>
    */
   public io.bloombox.schema.identity.AppUser.IndustryProfile getRights() {
     return rights_ == null ? io.bloombox.schema.identity.AppUser.IndustryProfile.getDefaultInstance() : rights_;
@@ -895,7 +922,7 @@ private static final long serialVersionUID = 0L;
    * Rendered access rights for this partner location.
    * </pre>
    *
-   * <code>.bloombox.schema.identity.IndustryProfile rights = 5;</code>
+   * <code>.bloombox.identity.IndustryProfile rights = 5;</code>
    */
   public io.bloombox.schema.identity.AppUser.IndustryProfileOrBuilder getRightsOrBuilder() {
     return getRights();
@@ -908,7 +935,7 @@ private static final long serialVersionUID = 0L;
    * Authorization grants/tokens issued in response to this authentication transaction.
    * </pre>
    *
-   * <code>repeated .bloombox.schema.services.pos.v1beta1.RegisterSessionToken authorization = 6;</code>
+   * <code>repeated .bloombox.services.pos.v1beta1.RegisterSessionToken authorization = 6;</code>
    */
   public java.util.List<io.bloombox.schema.services.pos.v1beta1.RegisterSessionToken> getAuthorizationList() {
     return authorization_;
@@ -918,7 +945,7 @@ private static final long serialVersionUID = 0L;
    * Authorization grants/tokens issued in response to this authentication transaction.
    * </pre>
    *
-   * <code>repeated .bloombox.schema.services.pos.v1beta1.RegisterSessionToken authorization = 6;</code>
+   * <code>repeated .bloombox.services.pos.v1beta1.RegisterSessionToken authorization = 6;</code>
    */
   public java.util.List<? extends io.bloombox.schema.services.pos.v1beta1.RegisterSessionTokenOrBuilder> 
       getAuthorizationOrBuilderList() {
@@ -929,7 +956,7 @@ private static final long serialVersionUID = 0L;
    * Authorization grants/tokens issued in response to this authentication transaction.
    * </pre>
    *
-   * <code>repeated .bloombox.schema.services.pos.v1beta1.RegisterSessionToken authorization = 6;</code>
+   * <code>repeated .bloombox.services.pos.v1beta1.RegisterSessionToken authorization = 6;</code>
    */
   public int getAuthorizationCount() {
     return authorization_.size();
@@ -939,7 +966,7 @@ private static final long serialVersionUID = 0L;
    * Authorization grants/tokens issued in response to this authentication transaction.
    * </pre>
    *
-   * <code>repeated .bloombox.schema.services.pos.v1beta1.RegisterSessionToken authorization = 6;</code>
+   * <code>repeated .bloombox.services.pos.v1beta1.RegisterSessionToken authorization = 6;</code>
    */
   public io.bloombox.schema.services.pos.v1beta1.RegisterSessionToken getAuthorization(int index) {
     return authorization_.get(index);
@@ -949,7 +976,7 @@ private static final long serialVersionUID = 0L;
    * Authorization grants/tokens issued in response to this authentication transaction.
    * </pre>
    *
-   * <code>repeated .bloombox.schema.services.pos.v1beta1.RegisterSessionToken authorization = 6;</code>
+   * <code>repeated .bloombox.services.pos.v1beta1.RegisterSessionToken authorization = 6;</code>
    */
   public io.bloombox.schema.services.pos.v1beta1.RegisterSessionTokenOrBuilder getAuthorizationOrBuilder(
       int index) {
@@ -963,7 +990,7 @@ private static final long serialVersionUID = 0L;
    * Messaging session configuration, if applicable.
    * </pre>
    *
-   * <code>.bloombox.schema.services.pos.v1beta1.CashRegisterSession.MessagingSession messaging = 7;</code>
+   * <code>.bloombox.services.pos.v1beta1.CashRegisterSession.MessagingSession messaging = 7;</code>
    */
   public boolean hasMessaging() {
     return messaging_ != null;
@@ -973,7 +1000,7 @@ private static final long serialVersionUID = 0L;
    * Messaging session configuration, if applicable.
    * </pre>
    *
-   * <code>.bloombox.schema.services.pos.v1beta1.CashRegisterSession.MessagingSession messaging = 7;</code>
+   * <code>.bloombox.services.pos.v1beta1.CashRegisterSession.MessagingSession messaging = 7;</code>
    */
   public io.bloombox.schema.services.pos.v1beta1.CashRegisterSession.MessagingSession getMessaging() {
     return messaging_ == null ? io.bloombox.schema.services.pos.v1beta1.CashRegisterSession.MessagingSession.getDefaultInstance() : messaging_;
@@ -983,7 +1010,7 @@ private static final long serialVersionUID = 0L;
    * Messaging session configuration, if applicable.
    * </pre>
    *
-   * <code>.bloombox.schema.services.pos.v1beta1.CashRegisterSession.MessagingSession messaging = 7;</code>
+   * <code>.bloombox.services.pos.v1beta1.CashRegisterSession.MessagingSession messaging = 7;</code>
    */
   public io.bloombox.schema.services.pos.v1beta1.CashRegisterSession.MessagingSessionOrBuilder getMessagingOrBuilder() {
     return getMessaging();
@@ -1089,6 +1116,7 @@ private static final long serialVersionUID = 0L;
   }
 
   private byte memoizedIsInitialized = -1;
+  @java.lang.Override
   public final boolean isInitialized() {
     byte isInitialized = memoizedIsInitialized;
     if (isInitialized == 1) return true;
@@ -1098,6 +1126,7 @@ private static final long serialVersionUID = 0L;
     return true;
   }
 
+  @java.lang.Override
   public void writeTo(com.google.protobuf.CodedOutputStream output)
                       throws java.io.IOException {
     if (!getIdBytes().isEmpty()) {
@@ -1130,6 +1159,7 @@ private static final long serialVersionUID = 0L;
     unknownFields.writeTo(output);
   }
 
+  @java.lang.Override
   public int getSerializedSize() {
     int size = memoizedSize;
     if (size != -1) return size;
@@ -1339,6 +1369,7 @@ private static final long serialVersionUID = 0L;
         .parseWithIOException(PARSER, input, extensionRegistry);
   }
 
+  @java.lang.Override
   public Builder newBuilderForType() { return newBuilder(); }
   public static Builder newBuilder() {
     return DEFAULT_INSTANCE.toBuilder();
@@ -1346,6 +1377,7 @@ private static final long serialVersionUID = 0L;
   public static Builder newBuilder(io.bloombox.schema.services.pos.v1beta1.CashRegisterSession prototype) {
     return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
   }
+  @java.lang.Override
   public Builder toBuilder() {
     return this == DEFAULT_INSTANCE
         ? new Builder() : new Builder().mergeFrom(this);
@@ -1362,20 +1394,21 @@ private static final long serialVersionUID = 0L;
    * Specifies the notion of a point-of-sale session, bound to a user and particular POS device.
    * </pre>
    *
-   * Protobuf type {@code bloombox.schema.services.pos.v1beta1.CashRegisterSession}
+   * Protobuf type {@code bloombox.services.pos.v1beta1.CashRegisterSession}
    */
   public static final class Builder extends
       com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-      // @@protoc_insertion_point(builder_implements:bloombox.schema.services.pos.v1beta1.CashRegisterSession)
+      // @@protoc_insertion_point(builder_implements:bloombox.services.pos.v1beta1.CashRegisterSession)
       io.bloombox.schema.services.pos.v1beta1.CashRegisterSessionOrBuilder {
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return io.bloombox.schema.services.pos.v1beta1.POSServiceBeta1.internal_static_bloombox_schema_services_pos_v1beta1_CashRegisterSession_descriptor;
+      return io.bloombox.schema.services.pos.v1beta1.POSServiceBeta1.internal_static_bloombox_services_pos_v1beta1_CashRegisterSession_descriptor;
     }
 
+    @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return io.bloombox.schema.services.pos.v1beta1.POSServiceBeta1.internal_static_bloombox_schema_services_pos_v1beta1_CashRegisterSession_fieldAccessorTable
+      return io.bloombox.schema.services.pos.v1beta1.POSServiceBeta1.internal_static_bloombox_services_pos_v1beta1_CashRegisterSession_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
               io.bloombox.schema.services.pos.v1beta1.CashRegisterSession.class, io.bloombox.schema.services.pos.v1beta1.CashRegisterSession.Builder.class);
     }
@@ -1396,6 +1429,7 @@ private static final long serialVersionUID = 0L;
         getAuthorizationFieldBuilder();
       }
     }
+    @java.lang.Override
     public Builder clear() {
       super.clear();
       id_ = "";
@@ -1447,15 +1481,18 @@ private static final long serialVersionUID = 0L;
       return this;
     }
 
+    @java.lang.Override
     public com.google.protobuf.Descriptors.Descriptor
         getDescriptorForType() {
-      return io.bloombox.schema.services.pos.v1beta1.POSServiceBeta1.internal_static_bloombox_schema_services_pos_v1beta1_CashRegisterSession_descriptor;
+      return io.bloombox.schema.services.pos.v1beta1.POSServiceBeta1.internal_static_bloombox_services_pos_v1beta1_CashRegisterSession_descriptor;
     }
 
+    @java.lang.Override
     public io.bloombox.schema.services.pos.v1beta1.CashRegisterSession getDefaultInstanceForType() {
       return io.bloombox.schema.services.pos.v1beta1.CashRegisterSession.getDefaultInstance();
     }
 
+    @java.lang.Override
     public io.bloombox.schema.services.pos.v1beta1.CashRegisterSession build() {
       io.bloombox.schema.services.pos.v1beta1.CashRegisterSession result = buildPartial();
       if (!result.isInitialized()) {
@@ -1464,6 +1501,7 @@ private static final long serialVersionUID = 0L;
       return result;
     }
 
+    @java.lang.Override
     public io.bloombox.schema.services.pos.v1beta1.CashRegisterSession buildPartial() {
       io.bloombox.schema.services.pos.v1beta1.CashRegisterSession result = new io.bloombox.schema.services.pos.v1beta1.CashRegisterSession(this);
       int from_bitField0_ = bitField0_;
@@ -1514,32 +1552,39 @@ private static final long serialVersionUID = 0L;
       return result;
     }
 
+    @java.lang.Override
     public Builder clone() {
       return (Builder) super.clone();
     }
+    @java.lang.Override
     public Builder setField(
         com.google.protobuf.Descriptors.FieldDescriptor field,
         java.lang.Object value) {
       return (Builder) super.setField(field, value);
     }
+    @java.lang.Override
     public Builder clearField(
         com.google.protobuf.Descriptors.FieldDescriptor field) {
       return (Builder) super.clearField(field);
     }
+    @java.lang.Override
     public Builder clearOneof(
         com.google.protobuf.Descriptors.OneofDescriptor oneof) {
       return (Builder) super.clearOneof(oneof);
     }
+    @java.lang.Override
     public Builder setRepeatedField(
         com.google.protobuf.Descriptors.FieldDescriptor field,
         int index, java.lang.Object value) {
       return (Builder) super.setRepeatedField(field, index, value);
     }
+    @java.lang.Override
     public Builder addRepeatedField(
         com.google.protobuf.Descriptors.FieldDescriptor field,
         java.lang.Object value) {
       return (Builder) super.addRepeatedField(field, value);
     }
+    @java.lang.Override
     public Builder mergeFrom(com.google.protobuf.Message other) {
       if (other instanceof io.bloombox.schema.services.pos.v1beta1.CashRegisterSession) {
         return mergeFrom((io.bloombox.schema.services.pos.v1beta1.CashRegisterSession)other);
@@ -1607,10 +1652,12 @@ private static final long serialVersionUID = 0L;
       return this;
     }
 
+    @java.lang.Override
     public final boolean isInitialized() {
       return true;
     }
 
+    @java.lang.Override
     public Builder mergeFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -1727,7 +1774,7 @@ private static final long serialVersionUID = 0L;
      * Specifies the staff user logged in via this operation.
      * </pre>
      *
-     * <code>.bloombox.schema.identity.StaffUser user = 2;</code>
+     * <code>.bloombox.identity.StaffUser user = 2;</code>
      */
     public boolean hasUser() {
       return userBuilder_ != null || user_ != null;
@@ -1737,7 +1784,7 @@ private static final long serialVersionUID = 0L;
      * Specifies the staff user logged in via this operation.
      * </pre>
      *
-     * <code>.bloombox.schema.identity.StaffUser user = 2;</code>
+     * <code>.bloombox.identity.StaffUser user = 2;</code>
      */
     public io.bloombox.schema.identity.AppStaff.StaffUser getUser() {
       if (userBuilder_ == null) {
@@ -1751,7 +1798,7 @@ private static final long serialVersionUID = 0L;
      * Specifies the staff user logged in via this operation.
      * </pre>
      *
-     * <code>.bloombox.schema.identity.StaffUser user = 2;</code>
+     * <code>.bloombox.identity.StaffUser user = 2;</code>
      */
     public Builder setUser(io.bloombox.schema.identity.AppStaff.StaffUser value) {
       if (userBuilder_ == null) {
@@ -1771,7 +1818,7 @@ private static final long serialVersionUID = 0L;
      * Specifies the staff user logged in via this operation.
      * </pre>
      *
-     * <code>.bloombox.schema.identity.StaffUser user = 2;</code>
+     * <code>.bloombox.identity.StaffUser user = 2;</code>
      */
     public Builder setUser(
         io.bloombox.schema.identity.AppStaff.StaffUser.Builder builderForValue) {
@@ -1789,7 +1836,7 @@ private static final long serialVersionUID = 0L;
      * Specifies the staff user logged in via this operation.
      * </pre>
      *
-     * <code>.bloombox.schema.identity.StaffUser user = 2;</code>
+     * <code>.bloombox.identity.StaffUser user = 2;</code>
      */
     public Builder mergeUser(io.bloombox.schema.identity.AppStaff.StaffUser value) {
       if (userBuilder_ == null) {
@@ -1811,7 +1858,7 @@ private static final long serialVersionUID = 0L;
      * Specifies the staff user logged in via this operation.
      * </pre>
      *
-     * <code>.bloombox.schema.identity.StaffUser user = 2;</code>
+     * <code>.bloombox.identity.StaffUser user = 2;</code>
      */
     public Builder clearUser() {
       if (userBuilder_ == null) {
@@ -1829,7 +1876,7 @@ private static final long serialVersionUID = 0L;
      * Specifies the staff user logged in via this operation.
      * </pre>
      *
-     * <code>.bloombox.schema.identity.StaffUser user = 2;</code>
+     * <code>.bloombox.identity.StaffUser user = 2;</code>
      */
     public io.bloombox.schema.identity.AppStaff.StaffUser.Builder getUserBuilder() {
       
@@ -1841,7 +1888,7 @@ private static final long serialVersionUID = 0L;
      * Specifies the staff user logged in via this operation.
      * </pre>
      *
-     * <code>.bloombox.schema.identity.StaffUser user = 2;</code>
+     * <code>.bloombox.identity.StaffUser user = 2;</code>
      */
     public io.bloombox.schema.identity.AppStaff.StaffUserOrBuilder getUserOrBuilder() {
       if (userBuilder_ != null) {
@@ -1856,7 +1903,7 @@ private static final long serialVersionUID = 0L;
      * Specifies the staff user logged in via this operation.
      * </pre>
      *
-     * <code>.bloombox.schema.identity.StaffUser user = 2;</code>
+     * <code>.bloombox.identity.StaffUser user = 2;</code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<
         io.bloombox.schema.identity.AppStaff.StaffUser, io.bloombox.schema.identity.AppStaff.StaffUser.Builder, io.bloombox.schema.identity.AppStaff.StaffUserOrBuilder> 
@@ -1878,7 +1925,7 @@ private static final long serialVersionUID = 0L;
      * Specifies the current/active status of a particular point of sale session.
      * </pre>
      *
-     * <code>.opencannabis.commerce.SessionStatus status = 3;</code>
+     * <code>.bloombox.pos.SessionStatus status = 3;</code>
      */
     public int getStatusValue() {
       return status_;
@@ -1888,7 +1935,7 @@ private static final long serialVersionUID = 0L;
      * Specifies the current/active status of a particular point of sale session.
      * </pre>
      *
-     * <code>.opencannabis.commerce.SessionStatus status = 3;</code>
+     * <code>.bloombox.pos.SessionStatus status = 3;</code>
      */
     public Builder setStatusValue(int value) {
       status_ = value;
@@ -1900,9 +1947,10 @@ private static final long serialVersionUID = 0L;
      * Specifies the current/active status of a particular point of sale session.
      * </pre>
      *
-     * <code>.opencannabis.commerce.SessionStatus status = 3;</code>
+     * <code>.bloombox.pos.SessionStatus status = 3;</code>
      */
     public io.opencannabis.schema.commerce.CommercialPOS.SessionStatus getStatus() {
+      @SuppressWarnings("deprecation")
       io.opencannabis.schema.commerce.CommercialPOS.SessionStatus result = io.opencannabis.schema.commerce.CommercialPOS.SessionStatus.valueOf(status_);
       return result == null ? io.opencannabis.schema.commerce.CommercialPOS.SessionStatus.UNRECOGNIZED : result;
     }
@@ -1911,7 +1959,7 @@ private static final long serialVersionUID = 0L;
      * Specifies the current/active status of a particular point of sale session.
      * </pre>
      *
-     * <code>.opencannabis.commerce.SessionStatus status = 3;</code>
+     * <code>.bloombox.pos.SessionStatus status = 3;</code>
      */
     public Builder setStatus(io.opencannabis.schema.commerce.CommercialPOS.SessionStatus value) {
       if (value == null) {
@@ -1927,7 +1975,7 @@ private static final long serialVersionUID = 0L;
      * Specifies the current/active status of a particular point of sale session.
      * </pre>
      *
-     * <code>.opencannabis.commerce.SessionStatus status = 3;</code>
+     * <code>.bloombox.pos.SessionStatus status = 3;</code>
      */
     public Builder clearStatus() {
       
@@ -1944,7 +1992,7 @@ private static final long serialVersionUID = 0L;
      * Rendered access rights for this partner location.
      * </pre>
      *
-     * <code>.bloombox.schema.identity.IndustryProfile rights = 5;</code>
+     * <code>.bloombox.identity.IndustryProfile rights = 5;</code>
      */
     public boolean hasRights() {
       return rightsBuilder_ != null || rights_ != null;
@@ -1954,7 +2002,7 @@ private static final long serialVersionUID = 0L;
      * Rendered access rights for this partner location.
      * </pre>
      *
-     * <code>.bloombox.schema.identity.IndustryProfile rights = 5;</code>
+     * <code>.bloombox.identity.IndustryProfile rights = 5;</code>
      */
     public io.bloombox.schema.identity.AppUser.IndustryProfile getRights() {
       if (rightsBuilder_ == null) {
@@ -1968,7 +2016,7 @@ private static final long serialVersionUID = 0L;
      * Rendered access rights for this partner location.
      * </pre>
      *
-     * <code>.bloombox.schema.identity.IndustryProfile rights = 5;</code>
+     * <code>.bloombox.identity.IndustryProfile rights = 5;</code>
      */
     public Builder setRights(io.bloombox.schema.identity.AppUser.IndustryProfile value) {
       if (rightsBuilder_ == null) {
@@ -1988,7 +2036,7 @@ private static final long serialVersionUID = 0L;
      * Rendered access rights for this partner location.
      * </pre>
      *
-     * <code>.bloombox.schema.identity.IndustryProfile rights = 5;</code>
+     * <code>.bloombox.identity.IndustryProfile rights = 5;</code>
      */
     public Builder setRights(
         io.bloombox.schema.identity.AppUser.IndustryProfile.Builder builderForValue) {
@@ -2006,7 +2054,7 @@ private static final long serialVersionUID = 0L;
      * Rendered access rights for this partner location.
      * </pre>
      *
-     * <code>.bloombox.schema.identity.IndustryProfile rights = 5;</code>
+     * <code>.bloombox.identity.IndustryProfile rights = 5;</code>
      */
     public Builder mergeRights(io.bloombox.schema.identity.AppUser.IndustryProfile value) {
       if (rightsBuilder_ == null) {
@@ -2028,7 +2076,7 @@ private static final long serialVersionUID = 0L;
      * Rendered access rights for this partner location.
      * </pre>
      *
-     * <code>.bloombox.schema.identity.IndustryProfile rights = 5;</code>
+     * <code>.bloombox.identity.IndustryProfile rights = 5;</code>
      */
     public Builder clearRights() {
       if (rightsBuilder_ == null) {
@@ -2046,7 +2094,7 @@ private static final long serialVersionUID = 0L;
      * Rendered access rights for this partner location.
      * </pre>
      *
-     * <code>.bloombox.schema.identity.IndustryProfile rights = 5;</code>
+     * <code>.bloombox.identity.IndustryProfile rights = 5;</code>
      */
     public io.bloombox.schema.identity.AppUser.IndustryProfile.Builder getRightsBuilder() {
       
@@ -2058,7 +2106,7 @@ private static final long serialVersionUID = 0L;
      * Rendered access rights for this partner location.
      * </pre>
      *
-     * <code>.bloombox.schema.identity.IndustryProfile rights = 5;</code>
+     * <code>.bloombox.identity.IndustryProfile rights = 5;</code>
      */
     public io.bloombox.schema.identity.AppUser.IndustryProfileOrBuilder getRightsOrBuilder() {
       if (rightsBuilder_ != null) {
@@ -2073,7 +2121,7 @@ private static final long serialVersionUID = 0L;
      * Rendered access rights for this partner location.
      * </pre>
      *
-     * <code>.bloombox.schema.identity.IndustryProfile rights = 5;</code>
+     * <code>.bloombox.identity.IndustryProfile rights = 5;</code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<
         io.bloombox.schema.identity.AppUser.IndustryProfile, io.bloombox.schema.identity.AppUser.IndustryProfile.Builder, io.bloombox.schema.identity.AppUser.IndustryProfileOrBuilder> 
@@ -2106,7 +2154,7 @@ private static final long serialVersionUID = 0L;
      * Authorization grants/tokens issued in response to this authentication transaction.
      * </pre>
      *
-     * <code>repeated .bloombox.schema.services.pos.v1beta1.RegisterSessionToken authorization = 6;</code>
+     * <code>repeated .bloombox.services.pos.v1beta1.RegisterSessionToken authorization = 6;</code>
      */
     public java.util.List<io.bloombox.schema.services.pos.v1beta1.RegisterSessionToken> getAuthorizationList() {
       if (authorizationBuilder_ == null) {
@@ -2120,7 +2168,7 @@ private static final long serialVersionUID = 0L;
      * Authorization grants/tokens issued in response to this authentication transaction.
      * </pre>
      *
-     * <code>repeated .bloombox.schema.services.pos.v1beta1.RegisterSessionToken authorization = 6;</code>
+     * <code>repeated .bloombox.services.pos.v1beta1.RegisterSessionToken authorization = 6;</code>
      */
     public int getAuthorizationCount() {
       if (authorizationBuilder_ == null) {
@@ -2134,7 +2182,7 @@ private static final long serialVersionUID = 0L;
      * Authorization grants/tokens issued in response to this authentication transaction.
      * </pre>
      *
-     * <code>repeated .bloombox.schema.services.pos.v1beta1.RegisterSessionToken authorization = 6;</code>
+     * <code>repeated .bloombox.services.pos.v1beta1.RegisterSessionToken authorization = 6;</code>
      */
     public io.bloombox.schema.services.pos.v1beta1.RegisterSessionToken getAuthorization(int index) {
       if (authorizationBuilder_ == null) {
@@ -2148,7 +2196,7 @@ private static final long serialVersionUID = 0L;
      * Authorization grants/tokens issued in response to this authentication transaction.
      * </pre>
      *
-     * <code>repeated .bloombox.schema.services.pos.v1beta1.RegisterSessionToken authorization = 6;</code>
+     * <code>repeated .bloombox.services.pos.v1beta1.RegisterSessionToken authorization = 6;</code>
      */
     public Builder setAuthorization(
         int index, io.bloombox.schema.services.pos.v1beta1.RegisterSessionToken value) {
@@ -2169,7 +2217,7 @@ private static final long serialVersionUID = 0L;
      * Authorization grants/tokens issued in response to this authentication transaction.
      * </pre>
      *
-     * <code>repeated .bloombox.schema.services.pos.v1beta1.RegisterSessionToken authorization = 6;</code>
+     * <code>repeated .bloombox.services.pos.v1beta1.RegisterSessionToken authorization = 6;</code>
      */
     public Builder setAuthorization(
         int index, io.bloombox.schema.services.pos.v1beta1.RegisterSessionToken.Builder builderForValue) {
@@ -2187,7 +2235,7 @@ private static final long serialVersionUID = 0L;
      * Authorization grants/tokens issued in response to this authentication transaction.
      * </pre>
      *
-     * <code>repeated .bloombox.schema.services.pos.v1beta1.RegisterSessionToken authorization = 6;</code>
+     * <code>repeated .bloombox.services.pos.v1beta1.RegisterSessionToken authorization = 6;</code>
      */
     public Builder addAuthorization(io.bloombox.schema.services.pos.v1beta1.RegisterSessionToken value) {
       if (authorizationBuilder_ == null) {
@@ -2207,7 +2255,7 @@ private static final long serialVersionUID = 0L;
      * Authorization grants/tokens issued in response to this authentication transaction.
      * </pre>
      *
-     * <code>repeated .bloombox.schema.services.pos.v1beta1.RegisterSessionToken authorization = 6;</code>
+     * <code>repeated .bloombox.services.pos.v1beta1.RegisterSessionToken authorization = 6;</code>
      */
     public Builder addAuthorization(
         int index, io.bloombox.schema.services.pos.v1beta1.RegisterSessionToken value) {
@@ -2228,7 +2276,7 @@ private static final long serialVersionUID = 0L;
      * Authorization grants/tokens issued in response to this authentication transaction.
      * </pre>
      *
-     * <code>repeated .bloombox.schema.services.pos.v1beta1.RegisterSessionToken authorization = 6;</code>
+     * <code>repeated .bloombox.services.pos.v1beta1.RegisterSessionToken authorization = 6;</code>
      */
     public Builder addAuthorization(
         io.bloombox.schema.services.pos.v1beta1.RegisterSessionToken.Builder builderForValue) {
@@ -2246,7 +2294,7 @@ private static final long serialVersionUID = 0L;
      * Authorization grants/tokens issued in response to this authentication transaction.
      * </pre>
      *
-     * <code>repeated .bloombox.schema.services.pos.v1beta1.RegisterSessionToken authorization = 6;</code>
+     * <code>repeated .bloombox.services.pos.v1beta1.RegisterSessionToken authorization = 6;</code>
      */
     public Builder addAuthorization(
         int index, io.bloombox.schema.services.pos.v1beta1.RegisterSessionToken.Builder builderForValue) {
@@ -2264,7 +2312,7 @@ private static final long serialVersionUID = 0L;
      * Authorization grants/tokens issued in response to this authentication transaction.
      * </pre>
      *
-     * <code>repeated .bloombox.schema.services.pos.v1beta1.RegisterSessionToken authorization = 6;</code>
+     * <code>repeated .bloombox.services.pos.v1beta1.RegisterSessionToken authorization = 6;</code>
      */
     public Builder addAllAuthorization(
         java.lang.Iterable<? extends io.bloombox.schema.services.pos.v1beta1.RegisterSessionToken> values) {
@@ -2283,7 +2331,7 @@ private static final long serialVersionUID = 0L;
      * Authorization grants/tokens issued in response to this authentication transaction.
      * </pre>
      *
-     * <code>repeated .bloombox.schema.services.pos.v1beta1.RegisterSessionToken authorization = 6;</code>
+     * <code>repeated .bloombox.services.pos.v1beta1.RegisterSessionToken authorization = 6;</code>
      */
     public Builder clearAuthorization() {
       if (authorizationBuilder_ == null) {
@@ -2300,7 +2348,7 @@ private static final long serialVersionUID = 0L;
      * Authorization grants/tokens issued in response to this authentication transaction.
      * </pre>
      *
-     * <code>repeated .bloombox.schema.services.pos.v1beta1.RegisterSessionToken authorization = 6;</code>
+     * <code>repeated .bloombox.services.pos.v1beta1.RegisterSessionToken authorization = 6;</code>
      */
     public Builder removeAuthorization(int index) {
       if (authorizationBuilder_ == null) {
@@ -2317,7 +2365,7 @@ private static final long serialVersionUID = 0L;
      * Authorization grants/tokens issued in response to this authentication transaction.
      * </pre>
      *
-     * <code>repeated .bloombox.schema.services.pos.v1beta1.RegisterSessionToken authorization = 6;</code>
+     * <code>repeated .bloombox.services.pos.v1beta1.RegisterSessionToken authorization = 6;</code>
      */
     public io.bloombox.schema.services.pos.v1beta1.RegisterSessionToken.Builder getAuthorizationBuilder(
         int index) {
@@ -2328,7 +2376,7 @@ private static final long serialVersionUID = 0L;
      * Authorization grants/tokens issued in response to this authentication transaction.
      * </pre>
      *
-     * <code>repeated .bloombox.schema.services.pos.v1beta1.RegisterSessionToken authorization = 6;</code>
+     * <code>repeated .bloombox.services.pos.v1beta1.RegisterSessionToken authorization = 6;</code>
      */
     public io.bloombox.schema.services.pos.v1beta1.RegisterSessionTokenOrBuilder getAuthorizationOrBuilder(
         int index) {
@@ -2342,7 +2390,7 @@ private static final long serialVersionUID = 0L;
      * Authorization grants/tokens issued in response to this authentication transaction.
      * </pre>
      *
-     * <code>repeated .bloombox.schema.services.pos.v1beta1.RegisterSessionToken authorization = 6;</code>
+     * <code>repeated .bloombox.services.pos.v1beta1.RegisterSessionToken authorization = 6;</code>
      */
     public java.util.List<? extends io.bloombox.schema.services.pos.v1beta1.RegisterSessionTokenOrBuilder> 
          getAuthorizationOrBuilderList() {
@@ -2357,7 +2405,7 @@ private static final long serialVersionUID = 0L;
      * Authorization grants/tokens issued in response to this authentication transaction.
      * </pre>
      *
-     * <code>repeated .bloombox.schema.services.pos.v1beta1.RegisterSessionToken authorization = 6;</code>
+     * <code>repeated .bloombox.services.pos.v1beta1.RegisterSessionToken authorization = 6;</code>
      */
     public io.bloombox.schema.services.pos.v1beta1.RegisterSessionToken.Builder addAuthorizationBuilder() {
       return getAuthorizationFieldBuilder().addBuilder(
@@ -2368,7 +2416,7 @@ private static final long serialVersionUID = 0L;
      * Authorization grants/tokens issued in response to this authentication transaction.
      * </pre>
      *
-     * <code>repeated .bloombox.schema.services.pos.v1beta1.RegisterSessionToken authorization = 6;</code>
+     * <code>repeated .bloombox.services.pos.v1beta1.RegisterSessionToken authorization = 6;</code>
      */
     public io.bloombox.schema.services.pos.v1beta1.RegisterSessionToken.Builder addAuthorizationBuilder(
         int index) {
@@ -2380,7 +2428,7 @@ private static final long serialVersionUID = 0L;
      * Authorization grants/tokens issued in response to this authentication transaction.
      * </pre>
      *
-     * <code>repeated .bloombox.schema.services.pos.v1beta1.RegisterSessionToken authorization = 6;</code>
+     * <code>repeated .bloombox.services.pos.v1beta1.RegisterSessionToken authorization = 6;</code>
      */
     public java.util.List<io.bloombox.schema.services.pos.v1beta1.RegisterSessionToken.Builder> 
          getAuthorizationBuilderList() {
@@ -2409,7 +2457,7 @@ private static final long serialVersionUID = 0L;
      * Messaging session configuration, if applicable.
      * </pre>
      *
-     * <code>.bloombox.schema.services.pos.v1beta1.CashRegisterSession.MessagingSession messaging = 7;</code>
+     * <code>.bloombox.services.pos.v1beta1.CashRegisterSession.MessagingSession messaging = 7;</code>
      */
     public boolean hasMessaging() {
       return messagingBuilder_ != null || messaging_ != null;
@@ -2419,7 +2467,7 @@ private static final long serialVersionUID = 0L;
      * Messaging session configuration, if applicable.
      * </pre>
      *
-     * <code>.bloombox.schema.services.pos.v1beta1.CashRegisterSession.MessagingSession messaging = 7;</code>
+     * <code>.bloombox.services.pos.v1beta1.CashRegisterSession.MessagingSession messaging = 7;</code>
      */
     public io.bloombox.schema.services.pos.v1beta1.CashRegisterSession.MessagingSession getMessaging() {
       if (messagingBuilder_ == null) {
@@ -2433,7 +2481,7 @@ private static final long serialVersionUID = 0L;
      * Messaging session configuration, if applicable.
      * </pre>
      *
-     * <code>.bloombox.schema.services.pos.v1beta1.CashRegisterSession.MessagingSession messaging = 7;</code>
+     * <code>.bloombox.services.pos.v1beta1.CashRegisterSession.MessagingSession messaging = 7;</code>
      */
     public Builder setMessaging(io.bloombox.schema.services.pos.v1beta1.CashRegisterSession.MessagingSession value) {
       if (messagingBuilder_ == null) {
@@ -2453,7 +2501,7 @@ private static final long serialVersionUID = 0L;
      * Messaging session configuration, if applicable.
      * </pre>
      *
-     * <code>.bloombox.schema.services.pos.v1beta1.CashRegisterSession.MessagingSession messaging = 7;</code>
+     * <code>.bloombox.services.pos.v1beta1.CashRegisterSession.MessagingSession messaging = 7;</code>
      */
     public Builder setMessaging(
         io.bloombox.schema.services.pos.v1beta1.CashRegisterSession.MessagingSession.Builder builderForValue) {
@@ -2471,7 +2519,7 @@ private static final long serialVersionUID = 0L;
      * Messaging session configuration, if applicable.
      * </pre>
      *
-     * <code>.bloombox.schema.services.pos.v1beta1.CashRegisterSession.MessagingSession messaging = 7;</code>
+     * <code>.bloombox.services.pos.v1beta1.CashRegisterSession.MessagingSession messaging = 7;</code>
      */
     public Builder mergeMessaging(io.bloombox.schema.services.pos.v1beta1.CashRegisterSession.MessagingSession value) {
       if (messagingBuilder_ == null) {
@@ -2493,7 +2541,7 @@ private static final long serialVersionUID = 0L;
      * Messaging session configuration, if applicable.
      * </pre>
      *
-     * <code>.bloombox.schema.services.pos.v1beta1.CashRegisterSession.MessagingSession messaging = 7;</code>
+     * <code>.bloombox.services.pos.v1beta1.CashRegisterSession.MessagingSession messaging = 7;</code>
      */
     public Builder clearMessaging() {
       if (messagingBuilder_ == null) {
@@ -2511,7 +2559,7 @@ private static final long serialVersionUID = 0L;
      * Messaging session configuration, if applicable.
      * </pre>
      *
-     * <code>.bloombox.schema.services.pos.v1beta1.CashRegisterSession.MessagingSession messaging = 7;</code>
+     * <code>.bloombox.services.pos.v1beta1.CashRegisterSession.MessagingSession messaging = 7;</code>
      */
     public io.bloombox.schema.services.pos.v1beta1.CashRegisterSession.MessagingSession.Builder getMessagingBuilder() {
       
@@ -2523,7 +2571,7 @@ private static final long serialVersionUID = 0L;
      * Messaging session configuration, if applicable.
      * </pre>
      *
-     * <code>.bloombox.schema.services.pos.v1beta1.CashRegisterSession.MessagingSession messaging = 7;</code>
+     * <code>.bloombox.services.pos.v1beta1.CashRegisterSession.MessagingSession messaging = 7;</code>
      */
     public io.bloombox.schema.services.pos.v1beta1.CashRegisterSession.MessagingSessionOrBuilder getMessagingOrBuilder() {
       if (messagingBuilder_ != null) {
@@ -2538,7 +2586,7 @@ private static final long serialVersionUID = 0L;
      * Messaging session configuration, if applicable.
      * </pre>
      *
-     * <code>.bloombox.schema.services.pos.v1beta1.CashRegisterSession.MessagingSession messaging = 7;</code>
+     * <code>.bloombox.services.pos.v1beta1.CashRegisterSession.MessagingSession messaging = 7;</code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<
         io.bloombox.schema.services.pos.v1beta1.CashRegisterSession.MessagingSession, io.bloombox.schema.services.pos.v1beta1.CashRegisterSession.MessagingSession.Builder, io.bloombox.schema.services.pos.v1beta1.CashRegisterSession.MessagingSessionOrBuilder> 
@@ -3012,21 +3060,23 @@ private static final long serialVersionUID = 0L;
       }
       return establishedBuilder_;
     }
+    @java.lang.Override
     public final Builder setUnknownFields(
         final com.google.protobuf.UnknownFieldSet unknownFields) {
       return super.setUnknownFieldsProto3(unknownFields);
     }
 
+    @java.lang.Override
     public final Builder mergeUnknownFields(
         final com.google.protobuf.UnknownFieldSet unknownFields) {
       return super.mergeUnknownFields(unknownFields);
     }
 
 
-    // @@protoc_insertion_point(builder_scope:bloombox.schema.services.pos.v1beta1.CashRegisterSession)
+    // @@protoc_insertion_point(builder_scope:bloombox.services.pos.v1beta1.CashRegisterSession)
   }
 
-  // @@protoc_insertion_point(class_scope:bloombox.schema.services.pos.v1beta1.CashRegisterSession)
+  // @@protoc_insertion_point(class_scope:bloombox.services.pos.v1beta1.CashRegisterSession)
   private static final io.bloombox.schema.services.pos.v1beta1.CashRegisterSession DEFAULT_INSTANCE;
   static {
     DEFAULT_INSTANCE = new io.bloombox.schema.services.pos.v1beta1.CashRegisterSession();
@@ -3038,6 +3088,7 @@ private static final long serialVersionUID = 0L;
 
   private static final com.google.protobuf.Parser<CashRegisterSession>
       PARSER = new com.google.protobuf.AbstractParser<CashRegisterSession>() {
+    @java.lang.Override
     public CashRegisterSession parsePartialFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -3055,6 +3106,7 @@ private static final long serialVersionUID = 0L;
     return PARSER;
   }
 
+  @java.lang.Override
   public io.bloombox.schema.services.pos.v1beta1.CashRegisterSession getDefaultInstanceForType() {
     return DEFAULT_INSTANCE;
   }

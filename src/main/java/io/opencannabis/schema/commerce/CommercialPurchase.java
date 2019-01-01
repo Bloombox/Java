@@ -1,11 +1,12 @@
 /*
- * Copyright 2018, Bloombox, LLC.
+ * Copyright 2018, Momentum Ideas, Co. All rights reserved.
  *
- * Licensed under the Apache License, Version 2.0 (the "License");
- * you may not use this file except in compliance with the License.
- * You may obtain a copy of the License at
- *
- *     http://www.apache.org/licenses/LICENSE-2.0
+ * Source and object computer code contained herein is the private intellectual
+ * property of Momentum Ideas Co., a Delaware Corporation. Use of this
+ * code in source form requires permission in writing before use or the
+ * assembly, distribution, or publishing of derivative works, for commercial
+ * purposes or any other purpose, from a duly authorized officer of Momentum
+ * Ideas Co.
  *
  * Unless required by applicable law or agreed to in writing, software
  * distributed under the License is distributed on an "AS IS" BASIS,
@@ -743,13 +744,6 @@ public final class CommercialPurchase {
             case 0:
               done = true;
               break;
-            default: {
-              if (!parseUnknownFieldProto3(
-                  input, unknownFields, extensionRegistry, tag)) {
-                done = true;
-              }
-              break;
-            }
             case 8: {
               int rawValue = input.readEnum();
 
@@ -787,6 +781,13 @@ public final class CommercialPurchase {
               message_ = s;
               break;
             }
+            default: {
+              if (!parseUnknownFieldProto3(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
           }
         }
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
@@ -804,6 +805,7 @@ public final class CommercialPurchase {
       return io.opencannabis.schema.commerce.CommercialPurchase.internal_static_opencannabis_commerce_PurchaseLogEntry_descriptor;
     }
 
+    @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
       return io.opencannabis.schema.commerce.CommercialPurchase.internal_static_opencannabis_commerce_PurchaseLogEntry_fieldAccessorTable
@@ -831,6 +833,7 @@ public final class CommercialPurchase {
      * <code>.opencannabis.commerce.PurchaseStatus status = 1;</code>
      */
     public io.opencannabis.schema.commerce.CommercialPurchase.PurchaseStatus getStatus() {
+      @SuppressWarnings("deprecation")
       io.opencannabis.schema.commerce.CommercialPurchase.PurchaseStatus result = io.opencannabis.schema.commerce.CommercialPurchase.PurchaseStatus.valueOf(status_);
       return result == null ? io.opencannabis.schema.commerce.CommercialPurchase.PurchaseStatus.UNRECOGNIZED : result;
     }
@@ -847,6 +850,7 @@ public final class CommercialPurchase {
      * <code>.opencannabis.commerce.PurchaseEvent event = 2;</code>
      */
     public io.opencannabis.schema.commerce.CommercialPurchase.PurchaseEvent getEvent() {
+      @SuppressWarnings("deprecation")
       io.opencannabis.schema.commerce.CommercialPurchase.PurchaseEvent result = io.opencannabis.schema.commerce.CommercialPurchase.PurchaseEvent.valueOf(event_);
       return result == null ? io.opencannabis.schema.commerce.CommercialPurchase.PurchaseEvent.UNRECOGNIZED : result;
     }
@@ -969,6 +973,7 @@ public final class CommercialPurchase {
     }
 
     private byte memoizedIsInitialized = -1;
+    @java.lang.Override
     public final boolean isInitialized() {
       byte isInitialized = memoizedIsInitialized;
       if (isInitialized == 1) return true;
@@ -978,6 +983,7 @@ public final class CommercialPurchase {
       return true;
     }
 
+    @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
       if (status_ != io.opencannabis.schema.commerce.CommercialPurchase.PurchaseStatus.FRESH.getNumber()) {
@@ -998,6 +1004,7 @@ public final class CommercialPurchase {
       unknownFields.writeTo(output);
     }
 
+    @java.lang.Override
     public int getSerializedSize() {
       int size = memoizedSize;
       if (size != -1) return size;
@@ -1146,6 +1153,7 @@ public final class CommercialPurchase {
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
 
+    @java.lang.Override
     public Builder newBuilderForType() { return newBuilder(); }
     public static Builder newBuilder() {
       return DEFAULT_INSTANCE.toBuilder();
@@ -1153,6 +1161,7 @@ public final class CommercialPurchase {
     public static Builder newBuilder(io.opencannabis.schema.commerce.CommercialPurchase.PurchaseLogEntry prototype) {
       return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
     }
+    @java.lang.Override
     public Builder toBuilder() {
       return this == DEFAULT_INSTANCE
           ? new Builder() : new Builder().mergeFrom(this);
@@ -1180,6 +1189,7 @@ public final class CommercialPurchase {
         return io.opencannabis.schema.commerce.CommercialPurchase.internal_static_opencannabis_commerce_PurchaseLogEntry_descriptor;
       }
 
+      @java.lang.Override
       protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
           internalGetFieldAccessorTable() {
         return io.opencannabis.schema.commerce.CommercialPurchase.internal_static_opencannabis_commerce_PurchaseLogEntry_fieldAccessorTable
@@ -1202,6 +1212,7 @@ public final class CommercialPurchase {
                 .alwaysUseFieldBuilders) {
         }
       }
+      @java.lang.Override
       public Builder clear() {
         super.clear();
         status_ = 0;
@@ -1221,15 +1232,18 @@ public final class CommercialPurchase {
         return this;
       }
 
+      @java.lang.Override
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
         return io.opencannabis.schema.commerce.CommercialPurchase.internal_static_opencannabis_commerce_PurchaseLogEntry_descriptor;
       }
 
+      @java.lang.Override
       public io.opencannabis.schema.commerce.CommercialPurchase.PurchaseLogEntry getDefaultInstanceForType() {
         return io.opencannabis.schema.commerce.CommercialPurchase.PurchaseLogEntry.getDefaultInstance();
       }
 
+      @java.lang.Override
       public io.opencannabis.schema.commerce.CommercialPurchase.PurchaseLogEntry build() {
         io.opencannabis.schema.commerce.CommercialPurchase.PurchaseLogEntry result = buildPartial();
         if (!result.isInitialized()) {
@@ -1238,6 +1252,7 @@ public final class CommercialPurchase {
         return result;
       }
 
+      @java.lang.Override
       public io.opencannabis.schema.commerce.CommercialPurchase.PurchaseLogEntry buildPartial() {
         io.opencannabis.schema.commerce.CommercialPurchase.PurchaseLogEntry result = new io.opencannabis.schema.commerce.CommercialPurchase.PurchaseLogEntry(this);
         result.status_ = status_;
@@ -1253,32 +1268,39 @@ public final class CommercialPurchase {
         return result;
       }
 
+      @java.lang.Override
       public Builder clone() {
         return (Builder) super.clone();
       }
+      @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
         return (Builder) super.setField(field, value);
       }
+      @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
         return (Builder) super.clearField(field);
       }
+      @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
         return (Builder) super.clearOneof(oneof);
       }
+      @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
         return (Builder) super.setRepeatedField(field, index, value);
       }
+      @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
         return (Builder) super.addRepeatedField(field, value);
       }
+      @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
         if (other instanceof io.opencannabis.schema.commerce.CommercialPurchase.PurchaseLogEntry) {
           return mergeFrom((io.opencannabis.schema.commerce.CommercialPurchase.PurchaseLogEntry)other);
@@ -1312,10 +1334,12 @@ public final class CommercialPurchase {
         return this;
       }
 
+      @java.lang.Override
       public final boolean isInitialized() {
         return true;
       }
 
+      @java.lang.Override
       public Builder mergeFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -1365,6 +1389,7 @@ public final class CommercialPurchase {
        * <code>.opencannabis.commerce.PurchaseStatus status = 1;</code>
        */
       public io.opencannabis.schema.commerce.CommercialPurchase.PurchaseStatus getStatus() {
+        @SuppressWarnings("deprecation")
         io.opencannabis.schema.commerce.CommercialPurchase.PurchaseStatus result = io.opencannabis.schema.commerce.CommercialPurchase.PurchaseStatus.valueOf(status_);
         return result == null ? io.opencannabis.schema.commerce.CommercialPurchase.PurchaseStatus.UNRECOGNIZED : result;
       }
@@ -1417,6 +1442,7 @@ public final class CommercialPurchase {
        * <code>.opencannabis.commerce.PurchaseEvent event = 2;</code>
        */
       public io.opencannabis.schema.commerce.CommercialPurchase.PurchaseEvent getEvent() {
+        @SuppressWarnings("deprecation")
         io.opencannabis.schema.commerce.CommercialPurchase.PurchaseEvent result = io.opencannabis.schema.commerce.CommercialPurchase.PurchaseEvent.valueOf(event_);
         return result == null ? io.opencannabis.schema.commerce.CommercialPurchase.PurchaseEvent.UNRECOGNIZED : result;
       }
@@ -1772,11 +1798,13 @@ public final class CommercialPurchase {
         onChanged();
         return this;
       }
+      @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
         return super.setUnknownFieldsProto3(unknownFields);
       }
 
+      @java.lang.Override
       public final Builder mergeUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
         return super.mergeUnknownFields(unknownFields);
@@ -1798,6 +1826,7 @@ public final class CommercialPurchase {
 
     private static final com.google.protobuf.Parser<PurchaseLogEntry>
         PARSER = new com.google.protobuf.AbstractParser<PurchaseLogEntry>() {
+      @java.lang.Override
       public PurchaseLogEntry parsePartialFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -1815,6 +1844,7 @@ public final class CommercialPurchase {
       return PARSER;
     }
 
+    @java.lang.Override
     public io.opencannabis.schema.commerce.CommercialPurchase.PurchaseLogEntry getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
@@ -2026,13 +2056,6 @@ public final class CommercialPurchase {
             case 0:
               done = true;
               break;
-            default: {
-              if (!parseUnknownFieldProto3(
-                  input, unknownFields, extensionRegistry, tag)) {
-                done = true;
-              }
-              break;
-            }
             case 8: {
               int rawValue = input.readEnum();
 
@@ -2082,6 +2105,13 @@ public final class CommercialPurchase {
               total_ = input.readDouble();
               break;
             }
+            default: {
+              if (!parseUnknownFieldProto3(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
           }
         }
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
@@ -2105,6 +2135,7 @@ public final class CommercialPurchase {
       return io.opencannabis.schema.commerce.CommercialPurchase.internal_static_opencannabis_commerce_BillOfCharges_descriptor;
     }
 
+    @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
       return io.opencannabis.schema.commerce.CommercialPurchase.internal_static_opencannabis_commerce_BillOfCharges_fieldAccessorTable
@@ -2133,6 +2164,7 @@ public final class CommercialPurchase {
      * <code>.opencannabis.commerce.BillStatus status = 1;</code>
      */
     public io.opencannabis.schema.commerce.Payments.BillStatus getStatus() {
+      @SuppressWarnings("deprecation")
       io.opencannabis.schema.commerce.Payments.BillStatus result = io.opencannabis.schema.commerce.Payments.BillStatus.valueOf(status_);
       return result == null ? io.opencannabis.schema.commerce.Payments.BillStatus.UNRECOGNIZED : result;
     }
@@ -2313,6 +2345,7 @@ public final class CommercialPurchase {
     }
 
     private byte memoizedIsInitialized = -1;
+    @java.lang.Override
     public final boolean isInitialized() {
       byte isInitialized = memoizedIsInitialized;
       if (isInitialized == 1) return true;
@@ -2322,6 +2355,7 @@ public final class CommercialPurchase {
       return true;
     }
 
+    @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
       if (status_ != io.opencannabis.schema.commerce.Payments.BillStatus.SUSPENSE.getNumber()) {
@@ -2351,6 +2385,7 @@ public final class CommercialPurchase {
       unknownFields.writeTo(output);
     }
 
+    @java.lang.Override
     public int getSerializedSize() {
       int size = memoizedSize;
       if (size != -1) return size;
@@ -2540,6 +2575,7 @@ public final class CommercialPurchase {
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
 
+    @java.lang.Override
     public Builder newBuilderForType() { return newBuilder(); }
     public static Builder newBuilder() {
       return DEFAULT_INSTANCE.toBuilder();
@@ -2547,6 +2583,7 @@ public final class CommercialPurchase {
     public static Builder newBuilder(io.opencannabis.schema.commerce.CommercialPurchase.BillOfCharges prototype) {
       return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
     }
+    @java.lang.Override
     public Builder toBuilder() {
       return this == DEFAULT_INSTANCE
           ? new Builder() : new Builder().mergeFrom(this);
@@ -2574,6 +2611,7 @@ public final class CommercialPurchase {
         return io.opencannabis.schema.commerce.CommercialPurchase.internal_static_opencannabis_commerce_BillOfCharges_descriptor;
       }
 
+      @java.lang.Override
       protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
           internalGetFieldAccessorTable() {
         return io.opencannabis.schema.commerce.CommercialPurchase.internal_static_opencannabis_commerce_BillOfCharges_fieldAccessorTable
@@ -2598,6 +2636,7 @@ public final class CommercialPurchase {
           getDiscountFieldBuilder();
         }
       }
+      @java.lang.Override
       public Builder clear() {
         super.clear();
         status_ = 0;
@@ -2627,15 +2666,18 @@ public final class CommercialPurchase {
         return this;
       }
 
+      @java.lang.Override
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
         return io.opencannabis.schema.commerce.CommercialPurchase.internal_static_opencannabis_commerce_BillOfCharges_descriptor;
       }
 
+      @java.lang.Override
       public io.opencannabis.schema.commerce.CommercialPurchase.BillOfCharges getDefaultInstanceForType() {
         return io.opencannabis.schema.commerce.CommercialPurchase.BillOfCharges.getDefaultInstance();
       }
 
+      @java.lang.Override
       public io.opencannabis.schema.commerce.CommercialPurchase.BillOfCharges build() {
         io.opencannabis.schema.commerce.CommercialPurchase.BillOfCharges result = buildPartial();
         if (!result.isInitialized()) {
@@ -2644,6 +2686,7 @@ public final class CommercialPurchase {
         return result;
       }
 
+      @java.lang.Override
       public io.opencannabis.schema.commerce.CommercialPurchase.BillOfCharges buildPartial() {
         io.opencannabis.schema.commerce.CommercialPurchase.BillOfCharges result = new io.opencannabis.schema.commerce.CommercialPurchase.BillOfCharges(this);
         int from_bitField0_ = bitField0_;
@@ -2677,32 +2720,39 @@ public final class CommercialPurchase {
         return result;
       }
 
+      @java.lang.Override
       public Builder clone() {
         return (Builder) super.clone();
       }
+      @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
         return (Builder) super.setField(field, value);
       }
+      @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
         return (Builder) super.clearField(field);
       }
+      @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
         return (Builder) super.clearOneof(oneof);
       }
+      @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
         return (Builder) super.setRepeatedField(field, index, value);
       }
+      @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
         return (Builder) super.addRepeatedField(field, value);
       }
+      @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
         if (other instanceof io.opencannabis.schema.commerce.CommercialPurchase.BillOfCharges) {
           return mergeFrom((io.opencannabis.schema.commerce.CommercialPurchase.BillOfCharges)other);
@@ -2789,10 +2839,12 @@ public final class CommercialPurchase {
         return this;
       }
 
+      @java.lang.Override
       public final boolean isInitialized() {
         return true;
       }
 
+      @java.lang.Override
       public Builder mergeFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -2843,6 +2895,7 @@ public final class CommercialPurchase {
        * <code>.opencannabis.commerce.BillStatus status = 1;</code>
        */
       public io.opencannabis.schema.commerce.Payments.BillStatus getStatus() {
+        @SuppressWarnings("deprecation")
         io.opencannabis.schema.commerce.Payments.BillStatus result = io.opencannabis.schema.commerce.Payments.BillStatus.valueOf(status_);
         return result == null ? io.opencannabis.schema.commerce.Payments.BillStatus.UNRECOGNIZED : result;
       }
@@ -3689,11 +3742,13 @@ public final class CommercialPurchase {
         onChanged();
         return this;
       }
+      @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
         return super.setUnknownFieldsProto3(unknownFields);
       }
 
+      @java.lang.Override
       public final Builder mergeUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
         return super.mergeUnknownFields(unknownFields);
@@ -3715,6 +3770,7 @@ public final class CommercialPurchase {
 
     private static final com.google.protobuf.Parser<BillOfCharges>
         PARSER = new com.google.protobuf.AbstractParser<BillOfCharges>() {
+      @java.lang.Override
       public BillOfCharges parsePartialFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -3732,6 +3788,7 @@ public final class CommercialPurchase {
       return PARSER;
     }
 
+    @java.lang.Override
     public io.opencannabis.schema.commerce.CommercialPurchase.BillOfCharges getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
@@ -3880,13 +3937,6 @@ public final class CommercialPurchase {
             case 0:
               done = true;
               break;
-            default: {
-              if (!parseUnknownFieldProto3(
-                  input, unknownFields, extensionRegistry, tag)) {
-                done = true;
-              }
-              break;
-            }
             case 10: {
               io.opencannabis.schema.inventory.InventoryKey.Builder subBuilder = null;
               if (key_ != null) {
@@ -3932,6 +3982,13 @@ public final class CommercialPurchase {
 
               break;
             }
+            default: {
+              if (!parseUnknownFieldProto3(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
           }
         }
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
@@ -3949,6 +4006,7 @@ public final class CommercialPurchase {
       return io.opencannabis.schema.commerce.CommercialPurchase.internal_static_opencannabis_commerce_TicketItem_descriptor;
     }
 
+    @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
       return io.opencannabis.schema.commerce.CommercialPurchase.internal_static_opencannabis_commerce_TicketItem_fieldAccessorTable
@@ -4098,6 +4156,7 @@ public final class CommercialPurchase {
     }
 
     private byte memoizedIsInitialized = -1;
+    @java.lang.Override
     public final boolean isInitialized() {
       byte isInitialized = memoizedIsInitialized;
       if (isInitialized == 1) return true;
@@ -4107,6 +4166,7 @@ public final class CommercialPurchase {
       return true;
     }
 
+    @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
       if (key_ != null) {
@@ -4124,6 +4184,7 @@ public final class CommercialPurchase {
       unknownFields.writeTo(output);
     }
 
+    @java.lang.Override
     public int getSerializedSize() {
       int size = memoizedSize;
       if (size != -1) return size;
@@ -4277,6 +4338,7 @@ public final class CommercialPurchase {
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
 
+    @java.lang.Override
     public Builder newBuilderForType() { return newBuilder(); }
     public static Builder newBuilder() {
       return DEFAULT_INSTANCE.toBuilder();
@@ -4284,6 +4346,7 @@ public final class CommercialPurchase {
     public static Builder newBuilder(io.opencannabis.schema.commerce.CommercialPurchase.TicketItem prototype) {
       return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
     }
+    @java.lang.Override
     public Builder toBuilder() {
       return this == DEFAULT_INSTANCE
           ? new Builder() : new Builder().mergeFrom(this);
@@ -4312,6 +4375,7 @@ public final class CommercialPurchase {
         return io.opencannabis.schema.commerce.CommercialPurchase.internal_static_opencannabis_commerce_TicketItem_descriptor;
       }
 
+      @java.lang.Override
       protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
           internalGetFieldAccessorTable() {
         return io.opencannabis.schema.commerce.CommercialPurchase.internal_static_opencannabis_commerce_TicketItem_fieldAccessorTable
@@ -4334,6 +4398,7 @@ public final class CommercialPurchase {
                 .alwaysUseFieldBuilders) {
         }
       }
+      @java.lang.Override
       public Builder clear() {
         super.clear();
         if (keyBuilder_ == null) {
@@ -4359,15 +4424,18 @@ public final class CommercialPurchase {
         return this;
       }
 
+      @java.lang.Override
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
         return io.opencannabis.schema.commerce.CommercialPurchase.internal_static_opencannabis_commerce_TicketItem_descriptor;
       }
 
+      @java.lang.Override
       public io.opencannabis.schema.commerce.CommercialPurchase.TicketItem getDefaultInstanceForType() {
         return io.opencannabis.schema.commerce.CommercialPurchase.TicketItem.getDefaultInstance();
       }
 
+      @java.lang.Override
       public io.opencannabis.schema.commerce.CommercialPurchase.TicketItem build() {
         io.opencannabis.schema.commerce.CommercialPurchase.TicketItem result = buildPartial();
         if (!result.isInitialized()) {
@@ -4376,6 +4444,7 @@ public final class CommercialPurchase {
         return result;
       }
 
+      @java.lang.Override
       public io.opencannabis.schema.commerce.CommercialPurchase.TicketItem buildPartial() {
         io.opencannabis.schema.commerce.CommercialPurchase.TicketItem result = new io.opencannabis.schema.commerce.CommercialPurchase.TicketItem(this);
         if (keyBuilder_ == null) {
@@ -4398,32 +4467,39 @@ public final class CommercialPurchase {
         return result;
       }
 
+      @java.lang.Override
       public Builder clone() {
         return (Builder) super.clone();
       }
+      @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
         return (Builder) super.setField(field, value);
       }
+      @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
         return (Builder) super.clearField(field);
       }
+      @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
         return (Builder) super.clearOneof(oneof);
       }
+      @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
         return (Builder) super.setRepeatedField(field, index, value);
       }
+      @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
         return (Builder) super.addRepeatedField(field, value);
       }
+      @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
         if (other instanceof io.opencannabis.schema.commerce.CommercialPurchase.TicketItem) {
           return mergeFrom((io.opencannabis.schema.commerce.CommercialPurchase.TicketItem)other);
@@ -4453,10 +4529,12 @@ public final class CommercialPurchase {
         return this;
       }
 
+      @java.lang.Override
       public final boolean isInitialized() {
         return true;
       }
 
+      @java.lang.Override
       public Builder mergeFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -5022,11 +5100,13 @@ public final class CommercialPurchase {
         }
         return lineBuilder_;
       }
+      @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
         return super.setUnknownFieldsProto3(unknownFields);
       }
 
+      @java.lang.Override
       public final Builder mergeUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
         return super.mergeUnknownFields(unknownFields);
@@ -5048,6 +5128,7 @@ public final class CommercialPurchase {
 
     private static final com.google.protobuf.Parser<TicketItem>
         PARSER = new com.google.protobuf.AbstractParser<TicketItem>() {
+      @java.lang.Override
       public TicketItem parsePartialFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -5065,6 +5146,7 @@ public final class CommercialPurchase {
       return PARSER;
     }
 
+    @java.lang.Override
     public io.opencannabis.schema.commerce.CommercialPurchase.TicketItem getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
@@ -5243,13 +5325,6 @@ public final class CommercialPurchase {
             case 0:
               done = true;
               break;
-            default: {
-              if (!parseUnknownFieldProto3(
-                  input, unknownFields, extensionRegistry, tag)) {
-                done = true;
-              }
-              break;
-            }
             case 10: {
               io.opencannabis.schema.temporal.TemporalInstant.Instant.Builder subBuilder = null;
               if (established_ != null) {
@@ -5315,6 +5390,13 @@ public final class CommercialPurchase {
 
               break;
             }
+            default: {
+              if (!parseUnknownFieldProto3(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
           }
         }
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
@@ -5332,6 +5414,7 @@ public final class CommercialPurchase {
       return io.opencannabis.schema.commerce.CommercialPurchase.internal_static_opencannabis_commerce_PurchaseTimestamps_descriptor;
     }
 
+    @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
       return io.opencannabis.schema.commerce.CommercialPurchase.internal_static_opencannabis_commerce_PurchaseTimestamps_fieldAccessorTable
@@ -5505,6 +5588,7 @@ public final class CommercialPurchase {
     }
 
     private byte memoizedIsInitialized = -1;
+    @java.lang.Override
     public final boolean isInitialized() {
       byte isInitialized = memoizedIsInitialized;
       if (isInitialized == 1) return true;
@@ -5514,6 +5598,7 @@ public final class CommercialPurchase {
       return true;
     }
 
+    @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
       if (established_ != null) {
@@ -5534,6 +5619,7 @@ public final class CommercialPurchase {
       unknownFields.writeTo(output);
     }
 
+    @java.lang.Override
     public int getSerializedSize() {
       int size = memoizedSize;
       if (size != -1) return size;
@@ -5706,6 +5792,7 @@ public final class CommercialPurchase {
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
 
+    @java.lang.Override
     public Builder newBuilderForType() { return newBuilder(); }
     public static Builder newBuilder() {
       return DEFAULT_INSTANCE.toBuilder();
@@ -5713,6 +5800,7 @@ public final class CommercialPurchase {
     public static Builder newBuilder(io.opencannabis.schema.commerce.CommercialPurchase.PurchaseTimestamps prototype) {
       return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
     }
+    @java.lang.Override
     public Builder toBuilder() {
       return this == DEFAULT_INSTANCE
           ? new Builder() : new Builder().mergeFrom(this);
@@ -5740,6 +5828,7 @@ public final class CommercialPurchase {
         return io.opencannabis.schema.commerce.CommercialPurchase.internal_static_opencannabis_commerce_PurchaseTimestamps_descriptor;
       }
 
+      @java.lang.Override
       protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
           internalGetFieldAccessorTable() {
         return io.opencannabis.schema.commerce.CommercialPurchase.internal_static_opencannabis_commerce_PurchaseTimestamps_fieldAccessorTable
@@ -5762,6 +5851,7 @@ public final class CommercialPurchase {
                 .alwaysUseFieldBuilders) {
         }
       }
+      @java.lang.Override
       public Builder clear() {
         super.clear();
         if (establishedBuilder_ == null) {
@@ -5797,15 +5887,18 @@ public final class CommercialPurchase {
         return this;
       }
 
+      @java.lang.Override
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
         return io.opencannabis.schema.commerce.CommercialPurchase.internal_static_opencannabis_commerce_PurchaseTimestamps_descriptor;
       }
 
+      @java.lang.Override
       public io.opencannabis.schema.commerce.CommercialPurchase.PurchaseTimestamps getDefaultInstanceForType() {
         return io.opencannabis.schema.commerce.CommercialPurchase.PurchaseTimestamps.getDefaultInstance();
       }
 
+      @java.lang.Override
       public io.opencannabis.schema.commerce.CommercialPurchase.PurchaseTimestamps build() {
         io.opencannabis.schema.commerce.CommercialPurchase.PurchaseTimestamps result = buildPartial();
         if (!result.isInitialized()) {
@@ -5814,6 +5907,7 @@ public final class CommercialPurchase {
         return result;
       }
 
+      @java.lang.Override
       public io.opencannabis.schema.commerce.CommercialPurchase.PurchaseTimestamps buildPartial() {
         io.opencannabis.schema.commerce.CommercialPurchase.PurchaseTimestamps result = new io.opencannabis.schema.commerce.CommercialPurchase.PurchaseTimestamps(this);
         if (establishedBuilder_ == null) {
@@ -5845,32 +5939,39 @@ public final class CommercialPurchase {
         return result;
       }
 
+      @java.lang.Override
       public Builder clone() {
         return (Builder) super.clone();
       }
+      @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
         return (Builder) super.setField(field, value);
       }
+      @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
         return (Builder) super.clearField(field);
       }
+      @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
         return (Builder) super.clearOneof(oneof);
       }
+      @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
         return (Builder) super.setRepeatedField(field, index, value);
       }
+      @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
         return (Builder) super.addRepeatedField(field, value);
       }
+      @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
         if (other instanceof io.opencannabis.schema.commerce.CommercialPurchase.PurchaseTimestamps) {
           return mergeFrom((io.opencannabis.schema.commerce.CommercialPurchase.PurchaseTimestamps)other);
@@ -5902,10 +6003,12 @@ public final class CommercialPurchase {
         return this;
       }
 
+      @java.lang.Override
       public final boolean isInitialized() {
         return true;
       }
 
+      @java.lang.Override
       public Builder mergeFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -6688,11 +6791,13 @@ public final class CommercialPurchase {
         }
         return finalizedBuilder_;
       }
+      @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
         return super.setUnknownFieldsProto3(unknownFields);
       }
 
+      @java.lang.Override
       public final Builder mergeUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
         return super.mergeUnknownFields(unknownFields);
@@ -6714,6 +6819,7 @@ public final class CommercialPurchase {
 
     private static final com.google.protobuf.Parser<PurchaseTimestamps>
         PARSER = new com.google.protobuf.AbstractParser<PurchaseTimestamps>() {
+      @java.lang.Override
       public PurchaseTimestamps parsePartialFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -6731,6 +6837,7 @@ public final class CommercialPurchase {
       return PARSER;
     }
 
+    @java.lang.Override
     public io.opencannabis.schema.commerce.CommercialPurchase.PurchaseTimestamps getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
@@ -6803,17 +6910,17 @@ public final class CommercialPurchase {
             case 0:
               done = true;
               break;
+            case 10: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              uuid_ = s;
+              break;
+            }
             default: {
               if (!parseUnknownFieldProto3(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
-              break;
-            }
-            case 10: {
-              java.lang.String s = input.readStringRequireUtf8();
-
-              uuid_ = s;
               break;
             }
           }
@@ -6833,6 +6940,7 @@ public final class CommercialPurchase {
       return io.opencannabis.schema.commerce.CommercialPurchase.internal_static_opencannabis_commerce_PurchaseKey_descriptor;
     }
 
+    @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
       return io.opencannabis.schema.commerce.CommercialPurchase.internal_static_opencannabis_commerce_PurchaseKey_fieldAccessorTable
@@ -6883,6 +6991,7 @@ public final class CommercialPurchase {
     }
 
     private byte memoizedIsInitialized = -1;
+    @java.lang.Override
     public final boolean isInitialized() {
       byte isInitialized = memoizedIsInitialized;
       if (isInitialized == 1) return true;
@@ -6892,6 +7001,7 @@ public final class CommercialPurchase {
       return true;
     }
 
+    @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
       if (!getUuidBytes().isEmpty()) {
@@ -6900,6 +7010,7 @@ public final class CommercialPurchase {
       unknownFields.writeTo(output);
     }
 
+    @java.lang.Override
     public int getSerializedSize() {
       int size = memoizedSize;
       if (size != -1) return size;
@@ -7014,6 +7125,7 @@ public final class CommercialPurchase {
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
 
+    @java.lang.Override
     public Builder newBuilderForType() { return newBuilder(); }
     public static Builder newBuilder() {
       return DEFAULT_INSTANCE.toBuilder();
@@ -7021,6 +7133,7 @@ public final class CommercialPurchase {
     public static Builder newBuilder(io.opencannabis.schema.commerce.CommercialPurchase.PurchaseKey prototype) {
       return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
     }
+    @java.lang.Override
     public Builder toBuilder() {
       return this == DEFAULT_INSTANCE
           ? new Builder() : new Builder().mergeFrom(this);
@@ -7048,6 +7161,7 @@ public final class CommercialPurchase {
         return io.opencannabis.schema.commerce.CommercialPurchase.internal_static_opencannabis_commerce_PurchaseKey_descriptor;
       }
 
+      @java.lang.Override
       protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
           internalGetFieldAccessorTable() {
         return io.opencannabis.schema.commerce.CommercialPurchase.internal_static_opencannabis_commerce_PurchaseKey_fieldAccessorTable
@@ -7070,6 +7184,7 @@ public final class CommercialPurchase {
                 .alwaysUseFieldBuilders) {
         }
       }
+      @java.lang.Override
       public Builder clear() {
         super.clear();
         uuid_ = "";
@@ -7077,15 +7192,18 @@ public final class CommercialPurchase {
         return this;
       }
 
+      @java.lang.Override
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
         return io.opencannabis.schema.commerce.CommercialPurchase.internal_static_opencannabis_commerce_PurchaseKey_descriptor;
       }
 
+      @java.lang.Override
       public io.opencannabis.schema.commerce.CommercialPurchase.PurchaseKey getDefaultInstanceForType() {
         return io.opencannabis.schema.commerce.CommercialPurchase.PurchaseKey.getDefaultInstance();
       }
 
+      @java.lang.Override
       public io.opencannabis.schema.commerce.CommercialPurchase.PurchaseKey build() {
         io.opencannabis.schema.commerce.CommercialPurchase.PurchaseKey result = buildPartial();
         if (!result.isInitialized()) {
@@ -7094,6 +7212,7 @@ public final class CommercialPurchase {
         return result;
       }
 
+      @java.lang.Override
       public io.opencannabis.schema.commerce.CommercialPurchase.PurchaseKey buildPartial() {
         io.opencannabis.schema.commerce.CommercialPurchase.PurchaseKey result = new io.opencannabis.schema.commerce.CommercialPurchase.PurchaseKey(this);
         result.uuid_ = uuid_;
@@ -7101,32 +7220,39 @@ public final class CommercialPurchase {
         return result;
       }
 
+      @java.lang.Override
       public Builder clone() {
         return (Builder) super.clone();
       }
+      @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
         return (Builder) super.setField(field, value);
       }
+      @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
         return (Builder) super.clearField(field);
       }
+      @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
         return (Builder) super.clearOneof(oneof);
       }
+      @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
         return (Builder) super.setRepeatedField(field, index, value);
       }
+      @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
         return (Builder) super.addRepeatedField(field, value);
       }
+      @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
         if (other instanceof io.opencannabis.schema.commerce.CommercialPurchase.PurchaseKey) {
           return mergeFrom((io.opencannabis.schema.commerce.CommercialPurchase.PurchaseKey)other);
@@ -7147,10 +7273,12 @@ public final class CommercialPurchase {
         return this;
       }
 
+      @java.lang.Override
       public final boolean isInitialized() {
         return true;
       }
 
+      @java.lang.Override
       public Builder mergeFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -7257,11 +7385,13 @@ public final class CommercialPurchase {
         onChanged();
         return this;
       }
+      @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
         return super.setUnknownFieldsProto3(unknownFields);
       }
 
+      @java.lang.Override
       public final Builder mergeUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
         return super.mergeUnknownFields(unknownFields);
@@ -7283,6 +7413,7 @@ public final class CommercialPurchase {
 
     private static final com.google.protobuf.Parser<PurchaseKey>
         PARSER = new com.google.protobuf.AbstractParser<PurchaseKey>() {
+      @java.lang.Override
       public PurchaseKey parsePartialFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -7300,6 +7431,7 @@ public final class CommercialPurchase {
       return PARSER;
     }
 
+    @java.lang.Override
     public io.opencannabis.schema.commerce.CommercialPurchase.PurchaseKey getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
@@ -7422,13 +7554,6 @@ public final class CommercialPurchase {
             case 0:
               done = true;
               break;
-            default: {
-              if (!parseUnknownFieldProto3(
-                  input, unknownFields, extensionRegistry, tag)) {
-                done = true;
-              }
-              break;
-            }
             case 10: {
               java.lang.String s = input.readStringRequireUtf8();
 
@@ -7461,6 +7586,13 @@ public final class CommercialPurchase {
 
               break;
             }
+            default: {
+              if (!parseUnknownFieldProto3(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
           }
         }
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
@@ -7478,6 +7610,7 @@ public final class CommercialPurchase {
       return io.opencannabis.schema.commerce.CommercialPurchase.internal_static_opencannabis_commerce_PurchaseSignature_descriptor;
     }
 
+    @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
       return io.opencannabis.schema.commerce.CommercialPurchase.internal_static_opencannabis_commerce_PurchaseSignature_fieldAccessorTable
@@ -7594,6 +7727,7 @@ public final class CommercialPurchase {
     }
 
     private byte memoizedIsInitialized = -1;
+    @java.lang.Override
     public final boolean isInitialized() {
       byte isInitialized = memoizedIsInitialized;
       if (isInitialized == 1) return true;
@@ -7603,6 +7737,7 @@ public final class CommercialPurchase {
       return true;
     }
 
+    @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
       if (!getNonceBytes().isEmpty()) {
@@ -7617,6 +7752,7 @@ public final class CommercialPurchase {
       unknownFields.writeTo(output);
     }
 
+    @java.lang.Override
     public int getSerializedSize() {
       int size = memoizedSize;
       if (size != -1) return size;
@@ -7757,6 +7893,7 @@ public final class CommercialPurchase {
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
 
+    @java.lang.Override
     public Builder newBuilderForType() { return newBuilder(); }
     public static Builder newBuilder() {
       return DEFAULT_INSTANCE.toBuilder();
@@ -7764,6 +7901,7 @@ public final class CommercialPurchase {
     public static Builder newBuilder(io.opencannabis.schema.commerce.CommercialPurchase.PurchaseSignature prototype) {
       return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
     }
+    @java.lang.Override
     public Builder toBuilder() {
       return this == DEFAULT_INSTANCE
           ? new Builder() : new Builder().mergeFrom(this);
@@ -7791,6 +7929,7 @@ public final class CommercialPurchase {
         return io.opencannabis.schema.commerce.CommercialPurchase.internal_static_opencannabis_commerce_PurchaseSignature_descriptor;
       }
 
+      @java.lang.Override
       protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
           internalGetFieldAccessorTable() {
         return io.opencannabis.schema.commerce.CommercialPurchase.internal_static_opencannabis_commerce_PurchaseSignature_fieldAccessorTable
@@ -7813,6 +7952,7 @@ public final class CommercialPurchase {
                 .alwaysUseFieldBuilders) {
         }
       }
+      @java.lang.Override
       public Builder clear() {
         super.clear();
         nonce_ = "";
@@ -7832,15 +7972,18 @@ public final class CommercialPurchase {
         return this;
       }
 
+      @java.lang.Override
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
         return io.opencannabis.schema.commerce.CommercialPurchase.internal_static_opencannabis_commerce_PurchaseSignature_descriptor;
       }
 
+      @java.lang.Override
       public io.opencannabis.schema.commerce.CommercialPurchase.PurchaseSignature getDefaultInstanceForType() {
         return io.opencannabis.schema.commerce.CommercialPurchase.PurchaseSignature.getDefaultInstance();
       }
 
+      @java.lang.Override
       public io.opencannabis.schema.commerce.CommercialPurchase.PurchaseSignature build() {
         io.opencannabis.schema.commerce.CommercialPurchase.PurchaseSignature result = buildPartial();
         if (!result.isInitialized()) {
@@ -7849,6 +7992,7 @@ public final class CommercialPurchase {
         return result;
       }
 
+      @java.lang.Override
       public io.opencannabis.schema.commerce.CommercialPurchase.PurchaseSignature buildPartial() {
         io.opencannabis.schema.commerce.CommercialPurchase.PurchaseSignature result = new io.opencannabis.schema.commerce.CommercialPurchase.PurchaseSignature(this);
         result.nonce_ = nonce_;
@@ -7866,32 +8010,39 @@ public final class CommercialPurchase {
         return result;
       }
 
+      @java.lang.Override
       public Builder clone() {
         return (Builder) super.clone();
       }
+      @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
         return (Builder) super.setField(field, value);
       }
+      @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
         return (Builder) super.clearField(field);
       }
+      @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
         return (Builder) super.clearOneof(oneof);
       }
+      @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
         return (Builder) super.setRepeatedField(field, index, value);
       }
+      @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
         return (Builder) super.addRepeatedField(field, value);
       }
+      @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
         if (other instanceof io.opencannabis.schema.commerce.CommercialPurchase.PurchaseSignature) {
           return mergeFrom((io.opencannabis.schema.commerce.CommercialPurchase.PurchaseSignature)other);
@@ -7918,10 +8069,12 @@ public final class CommercialPurchase {
         return this;
       }
 
+      @java.lang.Override
       public final boolean isInitialized() {
         return true;
       }
 
+      @java.lang.Override
       public Builder mergeFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -8334,11 +8487,13 @@ public final class CommercialPurchase {
         }
         return customerBuilder_;
       }
+      @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
         return super.setUnknownFieldsProto3(unknownFields);
       }
 
+      @java.lang.Override
       public final Builder mergeUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
         return super.mergeUnknownFields(unknownFields);
@@ -8360,6 +8515,7 @@ public final class CommercialPurchase {
 
     private static final com.google.protobuf.Parser<PurchaseSignature>
         PARSER = new com.google.protobuf.AbstractParser<PurchaseSignature>() {
+      @java.lang.Override
       public PurchaseSignature parsePartialFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -8377,6 +8533,7 @@ public final class CommercialPurchase {
       return PARSER;
     }
 
+    @java.lang.Override
     public io.opencannabis.schema.commerce.CommercialPurchase.PurchaseSignature getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
@@ -8389,85 +8546,28 @@ public final class CommercialPurchase {
 
     /**
      * <pre>
-     * Specifies the full identifying document the user presented for this transaction.
+     * Unique and opaque ID, representing this customer's accounting of interactions.
      * </pre>
      *
-     * <code>.bloombox.schema.identity.ID identification = 1;</code>
+     * <code>string unique_id = 1;</code>
      */
-    boolean hasIdentification();
+    java.lang.String getUniqueId();
     /**
      * <pre>
-     * Specifies the full identifying document the user presented for this transaction.
+     * Unique and opaque ID, representing this customer's accounting of interactions.
      * </pre>
      *
-     * <code>.bloombox.schema.identity.ID identification = 1;</code>
+     * <code>string unique_id = 1;</code>
      */
-    io.bloombox.schema.identity.IdentityID.ID getIdentification();
-    /**
-     * <pre>
-     * Specifies the full identifying document the user presented for this transaction.
-     * </pre>
-     *
-     * <code>.bloombox.schema.identity.ID identification = 1;</code>
-     */
-    io.bloombox.schema.identity.IdentityID.IDOrBuilder getIdentificationOrBuilder();
-
-    /**
-     * <pre>
-     * Specifies the key to a digital pass the user presented during this transaction, if any.
-     * </pre>
-     *
-     * <code>.bloombox.schema.identity.pass.PassKey pass = 2;</code>
-     */
-    boolean hasPass();
-    /**
-     * <pre>
-     * Specifies the key to a digital pass the user presented during this transaction, if any.
-     * </pre>
-     *
-     * <code>.bloombox.schema.identity.pass.PassKey pass = 2;</code>
-     */
-    io.bloombox.schema.pass.PassIDKey.PassKey getPass();
-    /**
-     * <pre>
-     * Specifies the key to a digital pass the user presented during this transaction, if any.
-     * </pre>
-     *
-     * <code>.bloombox.schema.identity.pass.PassKey pass = 2;</code>
-     */
-    io.bloombox.schema.pass.PassIDKey.PassKeyOrBuilder getPassOrBuilder();
-
-    /**
-     * <pre>
-     * Specifies the user that made the purchase (i.e. the customer).
-     * </pre>
-     *
-     * <code>.bloombox.schema.identity.MembershipKey membership = 3;</code>
-     */
-    boolean hasMembership();
-    /**
-     * <pre>
-     * Specifies the user that made the purchase (i.e. the customer).
-     * </pre>
-     *
-     * <code>.bloombox.schema.identity.MembershipKey membership = 3;</code>
-     */
-    io.bloombox.schema.identity.AppMemberKey.MembershipKey getMembership();
-    /**
-     * <pre>
-     * Specifies the user that made the purchase (i.e. the customer).
-     * </pre>
-     *
-     * <code>.bloombox.schema.identity.MembershipKey membership = 3;</code>
-     */
-    io.bloombox.schema.identity.AppMemberKey.MembershipKeyOrBuilder getMembershipOrBuilder();
+    com.google.protobuf.ByteString
+        getUniqueIdBytes();
 
     /**
      * <pre>
      * Digital signature provided by the customer, if applicable and supported.
      * </pre>
      *
-     * <code>.opencannabis.commerce.PurchaseSignature signature = 4;</code>
+     * <code>.opencannabis.commerce.PurchaseSignature signature = 2;</code>
      */
     boolean hasSignature();
     /**
@@ -8475,7 +8575,7 @@ public final class CommercialPurchase {
      * Digital signature provided by the customer, if applicable and supported.
      * </pre>
      *
-     * <code>.opencannabis.commerce.PurchaseSignature signature = 4;</code>
+     * <code>.opencannabis.commerce.PurchaseSignature signature = 2;</code>
      */
     io.opencannabis.schema.commerce.CommercialPurchase.PurchaseSignature getSignature();
     /**
@@ -8483,7 +8583,7 @@ public final class CommercialPurchase {
      * Digital signature provided by the customer, if applicable and supported.
      * </pre>
      *
-     * <code>.opencannabis.commerce.PurchaseSignature signature = 4;</code>
+     * <code>.opencannabis.commerce.PurchaseSignature signature = 2;</code>
      */
     io.opencannabis.schema.commerce.CommercialPurchase.PurchaseSignatureOrBuilder getSignatureOrBuilder();
   }
@@ -8505,6 +8605,7 @@ public final class CommercialPurchase {
       super(builder);
     }
     private PurchaseCustomer() {
+      uniqueId_ = "";
     }
 
     @java.lang.Override
@@ -8531,53 +8632,13 @@ public final class CommercialPurchase {
             case 0:
               done = true;
               break;
-            default: {
-              if (!parseUnknownFieldProto3(
-                  input, unknownFields, extensionRegistry, tag)) {
-                done = true;
-              }
-              break;
-            }
             case 10: {
-              io.bloombox.schema.identity.IdentityID.ID.Builder subBuilder = null;
-              if (identification_ != null) {
-                subBuilder = identification_.toBuilder();
-              }
-              identification_ = input.readMessage(io.bloombox.schema.identity.IdentityID.ID.parser(), extensionRegistry);
-              if (subBuilder != null) {
-                subBuilder.mergeFrom(identification_);
-                identification_ = subBuilder.buildPartial();
-              }
+              java.lang.String s = input.readStringRequireUtf8();
 
+              uniqueId_ = s;
               break;
             }
             case 18: {
-              io.bloombox.schema.pass.PassIDKey.PassKey.Builder subBuilder = null;
-              if (pass_ != null) {
-                subBuilder = pass_.toBuilder();
-              }
-              pass_ = input.readMessage(io.bloombox.schema.pass.PassIDKey.PassKey.parser(), extensionRegistry);
-              if (subBuilder != null) {
-                subBuilder.mergeFrom(pass_);
-                pass_ = subBuilder.buildPartial();
-              }
-
-              break;
-            }
-            case 26: {
-              io.bloombox.schema.identity.AppMemberKey.MembershipKey.Builder subBuilder = null;
-              if (membership_ != null) {
-                subBuilder = membership_.toBuilder();
-              }
-              membership_ = input.readMessage(io.bloombox.schema.identity.AppMemberKey.MembershipKey.parser(), extensionRegistry);
-              if (subBuilder != null) {
-                subBuilder.mergeFrom(membership_);
-                membership_ = subBuilder.buildPartial();
-              }
-
-              break;
-            }
-            case 34: {
               io.opencannabis.schema.commerce.CommercialPurchase.PurchaseSignature.Builder subBuilder = null;
               if (signature_ != null) {
                 subBuilder = signature_.toBuilder();
@@ -8588,6 +8649,13 @@ public final class CommercialPurchase {
                 signature_ = subBuilder.buildPartial();
               }
 
+              break;
+            }
+            default: {
+              if (!parseUnknownFieldProto3(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
               break;
             }
           }
@@ -8607,6 +8675,7 @@ public final class CommercialPurchase {
       return io.opencannabis.schema.commerce.CommercialPurchase.internal_static_opencannabis_commerce_PurchaseCustomer_descriptor;
     }
 
+    @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
       return io.opencannabis.schema.commerce.CommercialPurchase.internal_static_opencannabis_commerce_PurchaseCustomer_fieldAccessorTable
@@ -8614,113 +8683,56 @@ public final class CommercialPurchase {
               io.opencannabis.schema.commerce.CommercialPurchase.PurchaseCustomer.class, io.opencannabis.schema.commerce.CommercialPurchase.PurchaseCustomer.Builder.class);
     }
 
-    public static final int IDENTIFICATION_FIELD_NUMBER = 1;
-    private io.bloombox.schema.identity.IdentityID.ID identification_;
+    public static final int UNIQUE_ID_FIELD_NUMBER = 1;
+    private volatile java.lang.Object uniqueId_;
     /**
      * <pre>
-     * Specifies the full identifying document the user presented for this transaction.
+     * Unique and opaque ID, representing this customer's accounting of interactions.
      * </pre>
      *
-     * <code>.bloombox.schema.identity.ID identification = 1;</code>
+     * <code>string unique_id = 1;</code>
      */
-    public boolean hasIdentification() {
-      return identification_ != null;
+    public java.lang.String getUniqueId() {
+      java.lang.Object ref = uniqueId_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        uniqueId_ = s;
+        return s;
+      }
     }
     /**
      * <pre>
-     * Specifies the full identifying document the user presented for this transaction.
+     * Unique and opaque ID, representing this customer's accounting of interactions.
      * </pre>
      *
-     * <code>.bloombox.schema.identity.ID identification = 1;</code>
+     * <code>string unique_id = 1;</code>
      */
-    public io.bloombox.schema.identity.IdentityID.ID getIdentification() {
-      return identification_ == null ? io.bloombox.schema.identity.IdentityID.ID.getDefaultInstance() : identification_;
-    }
-    /**
-     * <pre>
-     * Specifies the full identifying document the user presented for this transaction.
-     * </pre>
-     *
-     * <code>.bloombox.schema.identity.ID identification = 1;</code>
-     */
-    public io.bloombox.schema.identity.IdentityID.IDOrBuilder getIdentificationOrBuilder() {
-      return getIdentification();
-    }
-
-    public static final int PASS_FIELD_NUMBER = 2;
-    private io.bloombox.schema.pass.PassIDKey.PassKey pass_;
-    /**
-     * <pre>
-     * Specifies the key to a digital pass the user presented during this transaction, if any.
-     * </pre>
-     *
-     * <code>.bloombox.schema.identity.pass.PassKey pass = 2;</code>
-     */
-    public boolean hasPass() {
-      return pass_ != null;
-    }
-    /**
-     * <pre>
-     * Specifies the key to a digital pass the user presented during this transaction, if any.
-     * </pre>
-     *
-     * <code>.bloombox.schema.identity.pass.PassKey pass = 2;</code>
-     */
-    public io.bloombox.schema.pass.PassIDKey.PassKey getPass() {
-      return pass_ == null ? io.bloombox.schema.pass.PassIDKey.PassKey.getDefaultInstance() : pass_;
-    }
-    /**
-     * <pre>
-     * Specifies the key to a digital pass the user presented during this transaction, if any.
-     * </pre>
-     *
-     * <code>.bloombox.schema.identity.pass.PassKey pass = 2;</code>
-     */
-    public io.bloombox.schema.pass.PassIDKey.PassKeyOrBuilder getPassOrBuilder() {
-      return getPass();
+    public com.google.protobuf.ByteString
+        getUniqueIdBytes() {
+      java.lang.Object ref = uniqueId_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        uniqueId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
     }
 
-    public static final int MEMBERSHIP_FIELD_NUMBER = 3;
-    private io.bloombox.schema.identity.AppMemberKey.MembershipKey membership_;
-    /**
-     * <pre>
-     * Specifies the user that made the purchase (i.e. the customer).
-     * </pre>
-     *
-     * <code>.bloombox.schema.identity.MembershipKey membership = 3;</code>
-     */
-    public boolean hasMembership() {
-      return membership_ != null;
-    }
-    /**
-     * <pre>
-     * Specifies the user that made the purchase (i.e. the customer).
-     * </pre>
-     *
-     * <code>.bloombox.schema.identity.MembershipKey membership = 3;</code>
-     */
-    public io.bloombox.schema.identity.AppMemberKey.MembershipKey getMembership() {
-      return membership_ == null ? io.bloombox.schema.identity.AppMemberKey.MembershipKey.getDefaultInstance() : membership_;
-    }
-    /**
-     * <pre>
-     * Specifies the user that made the purchase (i.e. the customer).
-     * </pre>
-     *
-     * <code>.bloombox.schema.identity.MembershipKey membership = 3;</code>
-     */
-    public io.bloombox.schema.identity.AppMemberKey.MembershipKeyOrBuilder getMembershipOrBuilder() {
-      return getMembership();
-    }
-
-    public static final int SIGNATURE_FIELD_NUMBER = 4;
+    public static final int SIGNATURE_FIELD_NUMBER = 2;
     private io.opencannabis.schema.commerce.CommercialPurchase.PurchaseSignature signature_;
     /**
      * <pre>
      * Digital signature provided by the customer, if applicable and supported.
      * </pre>
      *
-     * <code>.opencannabis.commerce.PurchaseSignature signature = 4;</code>
+     * <code>.opencannabis.commerce.PurchaseSignature signature = 2;</code>
      */
     public boolean hasSignature() {
       return signature_ != null;
@@ -8730,7 +8742,7 @@ public final class CommercialPurchase {
      * Digital signature provided by the customer, if applicable and supported.
      * </pre>
      *
-     * <code>.opencannabis.commerce.PurchaseSignature signature = 4;</code>
+     * <code>.opencannabis.commerce.PurchaseSignature signature = 2;</code>
      */
     public io.opencannabis.schema.commerce.CommercialPurchase.PurchaseSignature getSignature() {
       return signature_ == null ? io.opencannabis.schema.commerce.CommercialPurchase.PurchaseSignature.getDefaultInstance() : signature_;
@@ -8740,13 +8752,14 @@ public final class CommercialPurchase {
      * Digital signature provided by the customer, if applicable and supported.
      * </pre>
      *
-     * <code>.opencannabis.commerce.PurchaseSignature signature = 4;</code>
+     * <code>.opencannabis.commerce.PurchaseSignature signature = 2;</code>
      */
     public io.opencannabis.schema.commerce.CommercialPurchase.PurchaseSignatureOrBuilder getSignatureOrBuilder() {
       return getSignature();
     }
 
     private byte memoizedIsInitialized = -1;
+    @java.lang.Override
     public final boolean isInitialized() {
       byte isInitialized = memoizedIsInitialized;
       if (isInitialized == 1) return true;
@@ -8756,43 +8769,30 @@ public final class CommercialPurchase {
       return true;
     }
 
+    @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (identification_ != null) {
-        output.writeMessage(1, getIdentification());
-      }
-      if (pass_ != null) {
-        output.writeMessage(2, getPass());
-      }
-      if (membership_ != null) {
-        output.writeMessage(3, getMembership());
+      if (!getUniqueIdBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, uniqueId_);
       }
       if (signature_ != null) {
-        output.writeMessage(4, getSignature());
+        output.writeMessage(2, getSignature());
       }
       unknownFields.writeTo(output);
     }
 
+    @java.lang.Override
     public int getSerializedSize() {
       int size = memoizedSize;
       if (size != -1) return size;
 
       size = 0;
-      if (identification_ != null) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(1, getIdentification());
-      }
-      if (pass_ != null) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(2, getPass());
-      }
-      if (membership_ != null) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(3, getMembership());
+      if (!getUniqueIdBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, uniqueId_);
       }
       if (signature_ != null) {
         size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(4, getSignature());
+          .computeMessageSize(2, getSignature());
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -8810,21 +8810,8 @@ public final class CommercialPurchase {
       io.opencannabis.schema.commerce.CommercialPurchase.PurchaseCustomer other = (io.opencannabis.schema.commerce.CommercialPurchase.PurchaseCustomer) obj;
 
       boolean result = true;
-      result = result && (hasIdentification() == other.hasIdentification());
-      if (hasIdentification()) {
-        result = result && getIdentification()
-            .equals(other.getIdentification());
-      }
-      result = result && (hasPass() == other.hasPass());
-      if (hasPass()) {
-        result = result && getPass()
-            .equals(other.getPass());
-      }
-      result = result && (hasMembership() == other.hasMembership());
-      if (hasMembership()) {
-        result = result && getMembership()
-            .equals(other.getMembership());
-      }
+      result = result && getUniqueId()
+          .equals(other.getUniqueId());
       result = result && (hasSignature() == other.hasSignature());
       if (hasSignature()) {
         result = result && getSignature()
@@ -8841,18 +8828,8 @@ public final class CommercialPurchase {
       }
       int hash = 41;
       hash = (19 * hash) + getDescriptor().hashCode();
-      if (hasIdentification()) {
-        hash = (37 * hash) + IDENTIFICATION_FIELD_NUMBER;
-        hash = (53 * hash) + getIdentification().hashCode();
-      }
-      if (hasPass()) {
-        hash = (37 * hash) + PASS_FIELD_NUMBER;
-        hash = (53 * hash) + getPass().hashCode();
-      }
-      if (hasMembership()) {
-        hash = (37 * hash) + MEMBERSHIP_FIELD_NUMBER;
-        hash = (53 * hash) + getMembership().hashCode();
-      }
+      hash = (37 * hash) + UNIQUE_ID_FIELD_NUMBER;
+      hash = (53 * hash) + getUniqueId().hashCode();
       if (hasSignature()) {
         hash = (37 * hash) + SIGNATURE_FIELD_NUMBER;
         hash = (53 * hash) + getSignature().hashCode();
@@ -8932,6 +8909,7 @@ public final class CommercialPurchase {
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
 
+    @java.lang.Override
     public Builder newBuilderForType() { return newBuilder(); }
     public static Builder newBuilder() {
       return DEFAULT_INSTANCE.toBuilder();
@@ -8939,6 +8917,7 @@ public final class CommercialPurchase {
     public static Builder newBuilder(io.opencannabis.schema.commerce.CommercialPurchase.PurchaseCustomer prototype) {
       return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
     }
+    @java.lang.Override
     public Builder toBuilder() {
       return this == DEFAULT_INSTANCE
           ? new Builder() : new Builder().mergeFrom(this);
@@ -8967,6 +8946,7 @@ public final class CommercialPurchase {
         return io.opencannabis.schema.commerce.CommercialPurchase.internal_static_opencannabis_commerce_PurchaseCustomer_descriptor;
       }
 
+      @java.lang.Override
       protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
           internalGetFieldAccessorTable() {
         return io.opencannabis.schema.commerce.CommercialPurchase.internal_static_opencannabis_commerce_PurchaseCustomer_fieldAccessorTable
@@ -8989,26 +8969,11 @@ public final class CommercialPurchase {
                 .alwaysUseFieldBuilders) {
         }
       }
+      @java.lang.Override
       public Builder clear() {
         super.clear();
-        if (identificationBuilder_ == null) {
-          identification_ = null;
-        } else {
-          identification_ = null;
-          identificationBuilder_ = null;
-        }
-        if (passBuilder_ == null) {
-          pass_ = null;
-        } else {
-          pass_ = null;
-          passBuilder_ = null;
-        }
-        if (membershipBuilder_ == null) {
-          membership_ = null;
-        } else {
-          membership_ = null;
-          membershipBuilder_ = null;
-        }
+        uniqueId_ = "";
+
         if (signatureBuilder_ == null) {
           signature_ = null;
         } else {
@@ -9018,15 +8983,18 @@ public final class CommercialPurchase {
         return this;
       }
 
+      @java.lang.Override
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
         return io.opencannabis.schema.commerce.CommercialPurchase.internal_static_opencannabis_commerce_PurchaseCustomer_descriptor;
       }
 
+      @java.lang.Override
       public io.opencannabis.schema.commerce.CommercialPurchase.PurchaseCustomer getDefaultInstanceForType() {
         return io.opencannabis.schema.commerce.CommercialPurchase.PurchaseCustomer.getDefaultInstance();
       }
 
+      @java.lang.Override
       public io.opencannabis.schema.commerce.CommercialPurchase.PurchaseCustomer build() {
         io.opencannabis.schema.commerce.CommercialPurchase.PurchaseCustomer result = buildPartial();
         if (!result.isInitialized()) {
@@ -9035,23 +9003,10 @@ public final class CommercialPurchase {
         return result;
       }
 
+      @java.lang.Override
       public io.opencannabis.schema.commerce.CommercialPurchase.PurchaseCustomer buildPartial() {
         io.opencannabis.schema.commerce.CommercialPurchase.PurchaseCustomer result = new io.opencannabis.schema.commerce.CommercialPurchase.PurchaseCustomer(this);
-        if (identificationBuilder_ == null) {
-          result.identification_ = identification_;
-        } else {
-          result.identification_ = identificationBuilder_.build();
-        }
-        if (passBuilder_ == null) {
-          result.pass_ = pass_;
-        } else {
-          result.pass_ = passBuilder_.build();
-        }
-        if (membershipBuilder_ == null) {
-          result.membership_ = membership_;
-        } else {
-          result.membership_ = membershipBuilder_.build();
-        }
+        result.uniqueId_ = uniqueId_;
         if (signatureBuilder_ == null) {
           result.signature_ = signature_;
         } else {
@@ -9061,32 +9016,39 @@ public final class CommercialPurchase {
         return result;
       }
 
+      @java.lang.Override
       public Builder clone() {
         return (Builder) super.clone();
       }
+      @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
         return (Builder) super.setField(field, value);
       }
+      @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
         return (Builder) super.clearField(field);
       }
+      @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
         return (Builder) super.clearOneof(oneof);
       }
+      @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
         return (Builder) super.setRepeatedField(field, index, value);
       }
+      @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
         return (Builder) super.addRepeatedField(field, value);
       }
+      @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
         if (other instanceof io.opencannabis.schema.commerce.CommercialPurchase.PurchaseCustomer) {
           return mergeFrom((io.opencannabis.schema.commerce.CommercialPurchase.PurchaseCustomer)other);
@@ -9098,14 +9060,9 @@ public final class CommercialPurchase {
 
       public Builder mergeFrom(io.opencannabis.schema.commerce.CommercialPurchase.PurchaseCustomer other) {
         if (other == io.opencannabis.schema.commerce.CommercialPurchase.PurchaseCustomer.getDefaultInstance()) return this;
-        if (other.hasIdentification()) {
-          mergeIdentification(other.getIdentification());
-        }
-        if (other.hasPass()) {
-          mergePass(other.getPass());
-        }
-        if (other.hasMembership()) {
-          mergeMembership(other.getMembership());
+        if (!other.getUniqueId().isEmpty()) {
+          uniqueId_ = other.uniqueId_;
+          onChanged();
         }
         if (other.hasSignature()) {
           mergeSignature(other.getSignature());
@@ -9115,10 +9072,12 @@ public final class CommercialPurchase {
         return this;
       }
 
+      @java.lang.Override
       public final boolean isInitialized() {
         return true;
       }
 
+      @java.lang.Override
       public Builder mergeFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -9137,463 +9096,93 @@ public final class CommercialPurchase {
         return this;
       }
 
-      private io.bloombox.schema.identity.IdentityID.ID identification_ = null;
-      private com.google.protobuf.SingleFieldBuilderV3<
-          io.bloombox.schema.identity.IdentityID.ID, io.bloombox.schema.identity.IdentityID.ID.Builder, io.bloombox.schema.identity.IdentityID.IDOrBuilder> identificationBuilder_;
+      private java.lang.Object uniqueId_ = "";
       /**
        * <pre>
-       * Specifies the full identifying document the user presented for this transaction.
+       * Unique and opaque ID, representing this customer's accounting of interactions.
        * </pre>
        *
-       * <code>.bloombox.schema.identity.ID identification = 1;</code>
+       * <code>string unique_id = 1;</code>
        */
-      public boolean hasIdentification() {
-        return identificationBuilder_ != null || identification_ != null;
-      }
-      /**
-       * <pre>
-       * Specifies the full identifying document the user presented for this transaction.
-       * </pre>
-       *
-       * <code>.bloombox.schema.identity.ID identification = 1;</code>
-       */
-      public io.bloombox.schema.identity.IdentityID.ID getIdentification() {
-        if (identificationBuilder_ == null) {
-          return identification_ == null ? io.bloombox.schema.identity.IdentityID.ID.getDefaultInstance() : identification_;
+      public java.lang.String getUniqueId() {
+        java.lang.Object ref = uniqueId_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          uniqueId_ = s;
+          return s;
         } else {
-          return identificationBuilder_.getMessage();
+          return (java.lang.String) ref;
         }
       }
       /**
        * <pre>
-       * Specifies the full identifying document the user presented for this transaction.
+       * Unique and opaque ID, representing this customer's accounting of interactions.
        * </pre>
        *
-       * <code>.bloombox.schema.identity.ID identification = 1;</code>
+       * <code>string unique_id = 1;</code>
        */
-      public Builder setIdentification(io.bloombox.schema.identity.IdentityID.ID value) {
-        if (identificationBuilder_ == null) {
-          if (value == null) {
-            throw new NullPointerException();
-          }
-          identification_ = value;
-          onChanged();
+      public com.google.protobuf.ByteString
+          getUniqueIdBytes() {
+        java.lang.Object ref = uniqueId_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          uniqueId_ = b;
+          return b;
         } else {
-          identificationBuilder_.setMessage(value);
+          return (com.google.protobuf.ByteString) ref;
         }
-
-        return this;
       }
       /**
        * <pre>
-       * Specifies the full identifying document the user presented for this transaction.
+       * Unique and opaque ID, representing this customer's accounting of interactions.
        * </pre>
        *
-       * <code>.bloombox.schema.identity.ID identification = 1;</code>
+       * <code>string unique_id = 1;</code>
        */
-      public Builder setIdentification(
-          io.bloombox.schema.identity.IdentityID.ID.Builder builderForValue) {
-        if (identificationBuilder_ == null) {
-          identification_ = builderForValue.build();
-          onChanged();
-        } else {
-          identificationBuilder_.setMessage(builderForValue.build());
-        }
-
-        return this;
-      }
-      /**
-       * <pre>
-       * Specifies the full identifying document the user presented for this transaction.
-       * </pre>
-       *
-       * <code>.bloombox.schema.identity.ID identification = 1;</code>
-       */
-      public Builder mergeIdentification(io.bloombox.schema.identity.IdentityID.ID value) {
-        if (identificationBuilder_ == null) {
-          if (identification_ != null) {
-            identification_ =
-              io.bloombox.schema.identity.IdentityID.ID.newBuilder(identification_).mergeFrom(value).buildPartial();
-          } else {
-            identification_ = value;
-          }
-          onChanged();
-        } else {
-          identificationBuilder_.mergeFrom(value);
-        }
-
-        return this;
-      }
-      /**
-       * <pre>
-       * Specifies the full identifying document the user presented for this transaction.
-       * </pre>
-       *
-       * <code>.bloombox.schema.identity.ID identification = 1;</code>
-       */
-      public Builder clearIdentification() {
-        if (identificationBuilder_ == null) {
-          identification_ = null;
-          onChanged();
-        } else {
-          identification_ = null;
-          identificationBuilder_ = null;
-        }
-
-        return this;
-      }
-      /**
-       * <pre>
-       * Specifies the full identifying document the user presented for this transaction.
-       * </pre>
-       *
-       * <code>.bloombox.schema.identity.ID identification = 1;</code>
-       */
-      public io.bloombox.schema.identity.IdentityID.ID.Builder getIdentificationBuilder() {
-        
+      public Builder setUniqueId(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        uniqueId_ = value;
         onChanged();
-        return getIdentificationFieldBuilder().getBuilder();
-      }
-      /**
-       * <pre>
-       * Specifies the full identifying document the user presented for this transaction.
-       * </pre>
-       *
-       * <code>.bloombox.schema.identity.ID identification = 1;</code>
-       */
-      public io.bloombox.schema.identity.IdentityID.IDOrBuilder getIdentificationOrBuilder() {
-        if (identificationBuilder_ != null) {
-          return identificationBuilder_.getMessageOrBuilder();
-        } else {
-          return identification_ == null ?
-              io.bloombox.schema.identity.IdentityID.ID.getDefaultInstance() : identification_;
-        }
-      }
-      /**
-       * <pre>
-       * Specifies the full identifying document the user presented for this transaction.
-       * </pre>
-       *
-       * <code>.bloombox.schema.identity.ID identification = 1;</code>
-       */
-      private com.google.protobuf.SingleFieldBuilderV3<
-          io.bloombox.schema.identity.IdentityID.ID, io.bloombox.schema.identity.IdentityID.ID.Builder, io.bloombox.schema.identity.IdentityID.IDOrBuilder> 
-          getIdentificationFieldBuilder() {
-        if (identificationBuilder_ == null) {
-          identificationBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-              io.bloombox.schema.identity.IdentityID.ID, io.bloombox.schema.identity.IdentityID.ID.Builder, io.bloombox.schema.identity.IdentityID.IDOrBuilder>(
-                  getIdentification(),
-                  getParentForChildren(),
-                  isClean());
-          identification_ = null;
-        }
-        return identificationBuilder_;
-      }
-
-      private io.bloombox.schema.pass.PassIDKey.PassKey pass_ = null;
-      private com.google.protobuf.SingleFieldBuilderV3<
-          io.bloombox.schema.pass.PassIDKey.PassKey, io.bloombox.schema.pass.PassIDKey.PassKey.Builder, io.bloombox.schema.pass.PassIDKey.PassKeyOrBuilder> passBuilder_;
-      /**
-       * <pre>
-       * Specifies the key to a digital pass the user presented during this transaction, if any.
-       * </pre>
-       *
-       * <code>.bloombox.schema.identity.pass.PassKey pass = 2;</code>
-       */
-      public boolean hasPass() {
-        return passBuilder_ != null || pass_ != null;
-      }
-      /**
-       * <pre>
-       * Specifies the key to a digital pass the user presented during this transaction, if any.
-       * </pre>
-       *
-       * <code>.bloombox.schema.identity.pass.PassKey pass = 2;</code>
-       */
-      public io.bloombox.schema.pass.PassIDKey.PassKey getPass() {
-        if (passBuilder_ == null) {
-          return pass_ == null ? io.bloombox.schema.pass.PassIDKey.PassKey.getDefaultInstance() : pass_;
-        } else {
-          return passBuilder_.getMessage();
-        }
-      }
-      /**
-       * <pre>
-       * Specifies the key to a digital pass the user presented during this transaction, if any.
-       * </pre>
-       *
-       * <code>.bloombox.schema.identity.pass.PassKey pass = 2;</code>
-       */
-      public Builder setPass(io.bloombox.schema.pass.PassIDKey.PassKey value) {
-        if (passBuilder_ == null) {
-          if (value == null) {
-            throw new NullPointerException();
-          }
-          pass_ = value;
-          onChanged();
-        } else {
-          passBuilder_.setMessage(value);
-        }
-
         return this;
       }
       /**
        * <pre>
-       * Specifies the key to a digital pass the user presented during this transaction, if any.
+       * Unique and opaque ID, representing this customer's accounting of interactions.
        * </pre>
        *
-       * <code>.bloombox.schema.identity.pass.PassKey pass = 2;</code>
+       * <code>string unique_id = 1;</code>
        */
-      public Builder setPass(
-          io.bloombox.schema.pass.PassIDKey.PassKey.Builder builderForValue) {
-        if (passBuilder_ == null) {
-          pass_ = builderForValue.build();
-          onChanged();
-        } else {
-          passBuilder_.setMessage(builderForValue.build());
-        }
-
-        return this;
-      }
-      /**
-       * <pre>
-       * Specifies the key to a digital pass the user presented during this transaction, if any.
-       * </pre>
-       *
-       * <code>.bloombox.schema.identity.pass.PassKey pass = 2;</code>
-       */
-      public Builder mergePass(io.bloombox.schema.pass.PassIDKey.PassKey value) {
-        if (passBuilder_ == null) {
-          if (pass_ != null) {
-            pass_ =
-              io.bloombox.schema.pass.PassIDKey.PassKey.newBuilder(pass_).mergeFrom(value).buildPartial();
-          } else {
-            pass_ = value;
-          }
-          onChanged();
-        } else {
-          passBuilder_.mergeFrom(value);
-        }
-
-        return this;
-      }
-      /**
-       * <pre>
-       * Specifies the key to a digital pass the user presented during this transaction, if any.
-       * </pre>
-       *
-       * <code>.bloombox.schema.identity.pass.PassKey pass = 2;</code>
-       */
-      public Builder clearPass() {
-        if (passBuilder_ == null) {
-          pass_ = null;
-          onChanged();
-        } else {
-          pass_ = null;
-          passBuilder_ = null;
-        }
-
-        return this;
-      }
-      /**
-       * <pre>
-       * Specifies the key to a digital pass the user presented during this transaction, if any.
-       * </pre>
-       *
-       * <code>.bloombox.schema.identity.pass.PassKey pass = 2;</code>
-       */
-      public io.bloombox.schema.pass.PassIDKey.PassKey.Builder getPassBuilder() {
+      public Builder clearUniqueId() {
         
+        uniqueId_ = getDefaultInstance().getUniqueId();
         onChanged();
-        return getPassFieldBuilder().getBuilder();
-      }
-      /**
-       * <pre>
-       * Specifies the key to a digital pass the user presented during this transaction, if any.
-       * </pre>
-       *
-       * <code>.bloombox.schema.identity.pass.PassKey pass = 2;</code>
-       */
-      public io.bloombox.schema.pass.PassIDKey.PassKeyOrBuilder getPassOrBuilder() {
-        if (passBuilder_ != null) {
-          return passBuilder_.getMessageOrBuilder();
-        } else {
-          return pass_ == null ?
-              io.bloombox.schema.pass.PassIDKey.PassKey.getDefaultInstance() : pass_;
-        }
-      }
-      /**
-       * <pre>
-       * Specifies the key to a digital pass the user presented during this transaction, if any.
-       * </pre>
-       *
-       * <code>.bloombox.schema.identity.pass.PassKey pass = 2;</code>
-       */
-      private com.google.protobuf.SingleFieldBuilderV3<
-          io.bloombox.schema.pass.PassIDKey.PassKey, io.bloombox.schema.pass.PassIDKey.PassKey.Builder, io.bloombox.schema.pass.PassIDKey.PassKeyOrBuilder> 
-          getPassFieldBuilder() {
-        if (passBuilder_ == null) {
-          passBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-              io.bloombox.schema.pass.PassIDKey.PassKey, io.bloombox.schema.pass.PassIDKey.PassKey.Builder, io.bloombox.schema.pass.PassIDKey.PassKeyOrBuilder>(
-                  getPass(),
-                  getParentForChildren(),
-                  isClean());
-          pass_ = null;
-        }
-        return passBuilder_;
-      }
-
-      private io.bloombox.schema.identity.AppMemberKey.MembershipKey membership_ = null;
-      private com.google.protobuf.SingleFieldBuilderV3<
-          io.bloombox.schema.identity.AppMemberKey.MembershipKey, io.bloombox.schema.identity.AppMemberKey.MembershipKey.Builder, io.bloombox.schema.identity.AppMemberKey.MembershipKeyOrBuilder> membershipBuilder_;
-      /**
-       * <pre>
-       * Specifies the user that made the purchase (i.e. the customer).
-       * </pre>
-       *
-       * <code>.bloombox.schema.identity.MembershipKey membership = 3;</code>
-       */
-      public boolean hasMembership() {
-        return membershipBuilder_ != null || membership_ != null;
-      }
-      /**
-       * <pre>
-       * Specifies the user that made the purchase (i.e. the customer).
-       * </pre>
-       *
-       * <code>.bloombox.schema.identity.MembershipKey membership = 3;</code>
-       */
-      public io.bloombox.schema.identity.AppMemberKey.MembershipKey getMembership() {
-        if (membershipBuilder_ == null) {
-          return membership_ == null ? io.bloombox.schema.identity.AppMemberKey.MembershipKey.getDefaultInstance() : membership_;
-        } else {
-          return membershipBuilder_.getMessage();
-        }
-      }
-      /**
-       * <pre>
-       * Specifies the user that made the purchase (i.e. the customer).
-       * </pre>
-       *
-       * <code>.bloombox.schema.identity.MembershipKey membership = 3;</code>
-       */
-      public Builder setMembership(io.bloombox.schema.identity.AppMemberKey.MembershipKey value) {
-        if (membershipBuilder_ == null) {
-          if (value == null) {
-            throw new NullPointerException();
-          }
-          membership_ = value;
-          onChanged();
-        } else {
-          membershipBuilder_.setMessage(value);
-        }
-
         return this;
       }
       /**
        * <pre>
-       * Specifies the user that made the purchase (i.e. the customer).
+       * Unique and opaque ID, representing this customer's accounting of interactions.
        * </pre>
        *
-       * <code>.bloombox.schema.identity.MembershipKey membership = 3;</code>
+       * <code>string unique_id = 1;</code>
        */
-      public Builder setMembership(
-          io.bloombox.schema.identity.AppMemberKey.MembershipKey.Builder builderForValue) {
-        if (membershipBuilder_ == null) {
-          membership_ = builderForValue.build();
-          onChanged();
-        } else {
-          membershipBuilder_.setMessage(builderForValue.build());
-        }
-
-        return this;
-      }
-      /**
-       * <pre>
-       * Specifies the user that made the purchase (i.e. the customer).
-       * </pre>
-       *
-       * <code>.bloombox.schema.identity.MembershipKey membership = 3;</code>
-       */
-      public Builder mergeMembership(io.bloombox.schema.identity.AppMemberKey.MembershipKey value) {
-        if (membershipBuilder_ == null) {
-          if (membership_ != null) {
-            membership_ =
-              io.bloombox.schema.identity.AppMemberKey.MembershipKey.newBuilder(membership_).mergeFrom(value).buildPartial();
-          } else {
-            membership_ = value;
-          }
-          onChanged();
-        } else {
-          membershipBuilder_.mergeFrom(value);
-        }
-
-        return this;
-      }
-      /**
-       * <pre>
-       * Specifies the user that made the purchase (i.e. the customer).
-       * </pre>
-       *
-       * <code>.bloombox.schema.identity.MembershipKey membership = 3;</code>
-       */
-      public Builder clearMembership() {
-        if (membershipBuilder_ == null) {
-          membership_ = null;
-          onChanged();
-        } else {
-          membership_ = null;
-          membershipBuilder_ = null;
-        }
-
-        return this;
-      }
-      /**
-       * <pre>
-       * Specifies the user that made the purchase (i.e. the customer).
-       * </pre>
-       *
-       * <code>.bloombox.schema.identity.MembershipKey membership = 3;</code>
-       */
-      public io.bloombox.schema.identity.AppMemberKey.MembershipKey.Builder getMembershipBuilder() {
+      public Builder setUniqueIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
         
+        uniqueId_ = value;
         onChanged();
-        return getMembershipFieldBuilder().getBuilder();
-      }
-      /**
-       * <pre>
-       * Specifies the user that made the purchase (i.e. the customer).
-       * </pre>
-       *
-       * <code>.bloombox.schema.identity.MembershipKey membership = 3;</code>
-       */
-      public io.bloombox.schema.identity.AppMemberKey.MembershipKeyOrBuilder getMembershipOrBuilder() {
-        if (membershipBuilder_ != null) {
-          return membershipBuilder_.getMessageOrBuilder();
-        } else {
-          return membership_ == null ?
-              io.bloombox.schema.identity.AppMemberKey.MembershipKey.getDefaultInstance() : membership_;
-        }
-      }
-      /**
-       * <pre>
-       * Specifies the user that made the purchase (i.e. the customer).
-       * </pre>
-       *
-       * <code>.bloombox.schema.identity.MembershipKey membership = 3;</code>
-       */
-      private com.google.protobuf.SingleFieldBuilderV3<
-          io.bloombox.schema.identity.AppMemberKey.MembershipKey, io.bloombox.schema.identity.AppMemberKey.MembershipKey.Builder, io.bloombox.schema.identity.AppMemberKey.MembershipKeyOrBuilder> 
-          getMembershipFieldBuilder() {
-        if (membershipBuilder_ == null) {
-          membershipBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-              io.bloombox.schema.identity.AppMemberKey.MembershipKey, io.bloombox.schema.identity.AppMemberKey.MembershipKey.Builder, io.bloombox.schema.identity.AppMemberKey.MembershipKeyOrBuilder>(
-                  getMembership(),
-                  getParentForChildren(),
-                  isClean());
-          membership_ = null;
-        }
-        return membershipBuilder_;
+        return this;
       }
 
       private io.opencannabis.schema.commerce.CommercialPurchase.PurchaseSignature signature_ = null;
@@ -9604,7 +9193,7 @@ public final class CommercialPurchase {
        * Digital signature provided by the customer, if applicable and supported.
        * </pre>
        *
-       * <code>.opencannabis.commerce.PurchaseSignature signature = 4;</code>
+       * <code>.opencannabis.commerce.PurchaseSignature signature = 2;</code>
        */
       public boolean hasSignature() {
         return signatureBuilder_ != null || signature_ != null;
@@ -9614,7 +9203,7 @@ public final class CommercialPurchase {
        * Digital signature provided by the customer, if applicable and supported.
        * </pre>
        *
-       * <code>.opencannabis.commerce.PurchaseSignature signature = 4;</code>
+       * <code>.opencannabis.commerce.PurchaseSignature signature = 2;</code>
        */
       public io.opencannabis.schema.commerce.CommercialPurchase.PurchaseSignature getSignature() {
         if (signatureBuilder_ == null) {
@@ -9628,7 +9217,7 @@ public final class CommercialPurchase {
        * Digital signature provided by the customer, if applicable and supported.
        * </pre>
        *
-       * <code>.opencannabis.commerce.PurchaseSignature signature = 4;</code>
+       * <code>.opencannabis.commerce.PurchaseSignature signature = 2;</code>
        */
       public Builder setSignature(io.opencannabis.schema.commerce.CommercialPurchase.PurchaseSignature value) {
         if (signatureBuilder_ == null) {
@@ -9648,7 +9237,7 @@ public final class CommercialPurchase {
        * Digital signature provided by the customer, if applicable and supported.
        * </pre>
        *
-       * <code>.opencannabis.commerce.PurchaseSignature signature = 4;</code>
+       * <code>.opencannabis.commerce.PurchaseSignature signature = 2;</code>
        */
       public Builder setSignature(
           io.opencannabis.schema.commerce.CommercialPurchase.PurchaseSignature.Builder builderForValue) {
@@ -9666,7 +9255,7 @@ public final class CommercialPurchase {
        * Digital signature provided by the customer, if applicable and supported.
        * </pre>
        *
-       * <code>.opencannabis.commerce.PurchaseSignature signature = 4;</code>
+       * <code>.opencannabis.commerce.PurchaseSignature signature = 2;</code>
        */
       public Builder mergeSignature(io.opencannabis.schema.commerce.CommercialPurchase.PurchaseSignature value) {
         if (signatureBuilder_ == null) {
@@ -9688,7 +9277,7 @@ public final class CommercialPurchase {
        * Digital signature provided by the customer, if applicable and supported.
        * </pre>
        *
-       * <code>.opencannabis.commerce.PurchaseSignature signature = 4;</code>
+       * <code>.opencannabis.commerce.PurchaseSignature signature = 2;</code>
        */
       public Builder clearSignature() {
         if (signatureBuilder_ == null) {
@@ -9706,7 +9295,7 @@ public final class CommercialPurchase {
        * Digital signature provided by the customer, if applicable and supported.
        * </pre>
        *
-       * <code>.opencannabis.commerce.PurchaseSignature signature = 4;</code>
+       * <code>.opencannabis.commerce.PurchaseSignature signature = 2;</code>
        */
       public io.opencannabis.schema.commerce.CommercialPurchase.PurchaseSignature.Builder getSignatureBuilder() {
         
@@ -9718,7 +9307,7 @@ public final class CommercialPurchase {
        * Digital signature provided by the customer, if applicable and supported.
        * </pre>
        *
-       * <code>.opencannabis.commerce.PurchaseSignature signature = 4;</code>
+       * <code>.opencannabis.commerce.PurchaseSignature signature = 2;</code>
        */
       public io.opencannabis.schema.commerce.CommercialPurchase.PurchaseSignatureOrBuilder getSignatureOrBuilder() {
         if (signatureBuilder_ != null) {
@@ -9733,7 +9322,7 @@ public final class CommercialPurchase {
        * Digital signature provided by the customer, if applicable and supported.
        * </pre>
        *
-       * <code>.opencannabis.commerce.PurchaseSignature signature = 4;</code>
+       * <code>.opencannabis.commerce.PurchaseSignature signature = 2;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
           io.opencannabis.schema.commerce.CommercialPurchase.PurchaseSignature, io.opencannabis.schema.commerce.CommercialPurchase.PurchaseSignature.Builder, io.opencannabis.schema.commerce.CommercialPurchase.PurchaseSignatureOrBuilder> 
@@ -9748,11 +9337,13 @@ public final class CommercialPurchase {
         }
         return signatureBuilder_;
       }
+      @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
         return super.setUnknownFieldsProto3(unknownFields);
       }
 
+      @java.lang.Override
       public final Builder mergeUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
         return super.mergeUnknownFields(unknownFields);
@@ -9774,6 +9365,7 @@ public final class CommercialPurchase {
 
     private static final com.google.protobuf.Parser<PurchaseCustomer>
         PARSER = new com.google.protobuf.AbstractParser<PurchaseCustomer>() {
+      @java.lang.Override
       public PurchaseCustomer parsePartialFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -9791,6 +9383,7 @@ public final class CommercialPurchase {
       return PARSER;
     }
 
+    @java.lang.Override
     public io.opencannabis.schema.commerce.CommercialPurchase.PurchaseCustomer getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
@@ -9822,53 +9415,39 @@ public final class CommercialPurchase {
 
     /**
      * <pre>
-     * Specifies the user that conducted the purchase (i.e. the sales agent or budtender).
+     * Specifies the opaque ID for the user that conducted the purchase (i.e. the sales agent or budtender).
      * </pre>
      *
-     * <code>.bloombox.schema.identity.UserKey agent = 2;</code>
+     * <code>string agent = 2;</code>
      */
-    boolean hasAgent();
+    java.lang.String getAgent();
     /**
      * <pre>
-     * Specifies the user that conducted the purchase (i.e. the sales agent or budtender).
+     * Specifies the opaque ID for the user that conducted the purchase (i.e. the sales agent or budtender).
      * </pre>
      *
-     * <code>.bloombox.schema.identity.UserKey agent = 2;</code>
+     * <code>string agent = 2;</code>
      */
-    io.bloombox.schema.identity.AppUserKey.UserKey getAgent();
-    /**
-     * <pre>
-     * Specifies the user that conducted the purchase (i.e. the sales agent or budtender).
-     * </pre>
-     *
-     * <code>.bloombox.schema.identity.UserKey agent = 2;</code>
-     */
-    io.bloombox.schema.identity.AppUserKey.UserKeyOrBuilder getAgentOrBuilder();
+    com.google.protobuf.ByteString
+        getAgentBytes();
 
     /**
      * <pre>
-     * Reference to the partner co-located point-of-sale device that facilitated this transaction.
+     * Unique/opaque reference to the partner co-located point-of-sale device that facilitated this transaction.
      * </pre>
      *
-     * <code>.bloombox.schema.partner.PartnerDeviceKey device = 3;</code>
+     * <code>string device = 3;</code>
      */
-    boolean hasDevice();
+    java.lang.String getDevice();
     /**
      * <pre>
-     * Reference to the partner co-located point-of-sale device that facilitated this transaction.
+     * Unique/opaque reference to the partner co-located point-of-sale device that facilitated this transaction.
      * </pre>
      *
-     * <code>.bloombox.schema.partner.PartnerDeviceKey device = 3;</code>
+     * <code>string device = 3;</code>
      */
-    io.bloombox.schema.partner.PartnerDevices.PartnerDeviceKey getDevice();
-    /**
-     * <pre>
-     * Reference to the partner co-located point-of-sale device that facilitated this transaction.
-     * </pre>
-     *
-     * <code>.bloombox.schema.partner.PartnerDeviceKey device = 3;</code>
-     */
-    io.bloombox.schema.partner.PartnerDevices.PartnerDeviceKeyOrBuilder getDeviceOrBuilder();
+    com.google.protobuf.ByteString
+        getDeviceBytes();
 
     /**
      * <pre>
@@ -9914,6 +9493,8 @@ public final class CommercialPurchase {
     }
     private PurchaseFacilitator() {
       authority_ = 0;
+      agent_ = "";
+      device_ = "";
     }
 
     @java.lang.Override
@@ -9940,13 +9521,6 @@ public final class CommercialPurchase {
             case 0:
               done = true;
               break;
-            default: {
-              if (!parseUnknownFieldProto3(
-                  input, unknownFields, extensionRegistry, tag)) {
-                done = true;
-              }
-              break;
-            }
             case 8: {
               int rawValue = input.readEnum();
 
@@ -9954,29 +9528,15 @@ public final class CommercialPurchase {
               break;
             }
             case 18: {
-              io.bloombox.schema.identity.AppUserKey.UserKey.Builder subBuilder = null;
-              if (agent_ != null) {
-                subBuilder = agent_.toBuilder();
-              }
-              agent_ = input.readMessage(io.bloombox.schema.identity.AppUserKey.UserKey.parser(), extensionRegistry);
-              if (subBuilder != null) {
-                subBuilder.mergeFrom(agent_);
-                agent_ = subBuilder.buildPartial();
-              }
+              java.lang.String s = input.readStringRequireUtf8();
 
+              agent_ = s;
               break;
             }
             case 26: {
-              io.bloombox.schema.partner.PartnerDevices.PartnerDeviceKey.Builder subBuilder = null;
-              if (device_ != null) {
-                subBuilder = device_.toBuilder();
-              }
-              device_ = input.readMessage(io.bloombox.schema.partner.PartnerDevices.PartnerDeviceKey.parser(), extensionRegistry);
-              if (subBuilder != null) {
-                subBuilder.mergeFrom(device_);
-                device_ = subBuilder.buildPartial();
-              }
+              java.lang.String s = input.readStringRequireUtf8();
 
+              device_ = s;
               break;
             }
             case 34: {
@@ -9990,6 +9550,13 @@ public final class CommercialPurchase {
                 signature_ = subBuilder.buildPartial();
               }
 
+              break;
+            }
+            default: {
+              if (!parseUnknownFieldProto3(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
               break;
             }
           }
@@ -10009,6 +9576,7 @@ public final class CommercialPurchase {
       return io.opencannabis.schema.commerce.CommercialPurchase.internal_static_opencannabis_commerce_PurchaseFacilitator_descriptor;
     }
 
+    @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
       return io.opencannabis.schema.commerce.CommercialPurchase.internal_static_opencannabis_commerce_PurchaseFacilitator_fieldAccessorTable
@@ -10038,74 +9606,93 @@ public final class CommercialPurchase {
      * <code>.opencannabis.commerce.PurchaseAuthority authority = 1;</code>
      */
     public io.opencannabis.schema.commerce.CommercialPurchase.PurchaseAuthority getAuthority() {
+      @SuppressWarnings("deprecation")
       io.opencannabis.schema.commerce.CommercialPurchase.PurchaseAuthority result = io.opencannabis.schema.commerce.CommercialPurchase.PurchaseAuthority.valueOf(authority_);
       return result == null ? io.opencannabis.schema.commerce.CommercialPurchase.PurchaseAuthority.UNRECOGNIZED : result;
     }
 
     public static final int AGENT_FIELD_NUMBER = 2;
-    private io.bloombox.schema.identity.AppUserKey.UserKey agent_;
+    private volatile java.lang.Object agent_;
     /**
      * <pre>
-     * Specifies the user that conducted the purchase (i.e. the sales agent or budtender).
+     * Specifies the opaque ID for the user that conducted the purchase (i.e. the sales agent or budtender).
      * </pre>
      *
-     * <code>.bloombox.schema.identity.UserKey agent = 2;</code>
+     * <code>string agent = 2;</code>
      */
-    public boolean hasAgent() {
-      return agent_ != null;
+    public java.lang.String getAgent() {
+      java.lang.Object ref = agent_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        agent_ = s;
+        return s;
+      }
     }
     /**
      * <pre>
-     * Specifies the user that conducted the purchase (i.e. the sales agent or budtender).
+     * Specifies the opaque ID for the user that conducted the purchase (i.e. the sales agent or budtender).
      * </pre>
      *
-     * <code>.bloombox.schema.identity.UserKey agent = 2;</code>
+     * <code>string agent = 2;</code>
      */
-    public io.bloombox.schema.identity.AppUserKey.UserKey getAgent() {
-      return agent_ == null ? io.bloombox.schema.identity.AppUserKey.UserKey.getDefaultInstance() : agent_;
-    }
-    /**
-     * <pre>
-     * Specifies the user that conducted the purchase (i.e. the sales agent or budtender).
-     * </pre>
-     *
-     * <code>.bloombox.schema.identity.UserKey agent = 2;</code>
-     */
-    public io.bloombox.schema.identity.AppUserKey.UserKeyOrBuilder getAgentOrBuilder() {
-      return getAgent();
+    public com.google.protobuf.ByteString
+        getAgentBytes() {
+      java.lang.Object ref = agent_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        agent_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
     }
 
     public static final int DEVICE_FIELD_NUMBER = 3;
-    private io.bloombox.schema.partner.PartnerDevices.PartnerDeviceKey device_;
+    private volatile java.lang.Object device_;
     /**
      * <pre>
-     * Reference to the partner co-located point-of-sale device that facilitated this transaction.
+     * Unique/opaque reference to the partner co-located point-of-sale device that facilitated this transaction.
      * </pre>
      *
-     * <code>.bloombox.schema.partner.PartnerDeviceKey device = 3;</code>
+     * <code>string device = 3;</code>
      */
-    public boolean hasDevice() {
-      return device_ != null;
+    public java.lang.String getDevice() {
+      java.lang.Object ref = device_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        device_ = s;
+        return s;
+      }
     }
     /**
      * <pre>
-     * Reference to the partner co-located point-of-sale device that facilitated this transaction.
+     * Unique/opaque reference to the partner co-located point-of-sale device that facilitated this transaction.
      * </pre>
      *
-     * <code>.bloombox.schema.partner.PartnerDeviceKey device = 3;</code>
+     * <code>string device = 3;</code>
      */
-    public io.bloombox.schema.partner.PartnerDevices.PartnerDeviceKey getDevice() {
-      return device_ == null ? io.bloombox.schema.partner.PartnerDevices.PartnerDeviceKey.getDefaultInstance() : device_;
-    }
-    /**
-     * <pre>
-     * Reference to the partner co-located point-of-sale device that facilitated this transaction.
-     * </pre>
-     *
-     * <code>.bloombox.schema.partner.PartnerDeviceKey device = 3;</code>
-     */
-    public io.bloombox.schema.partner.PartnerDevices.PartnerDeviceKeyOrBuilder getDeviceOrBuilder() {
-      return getDevice();
+    public com.google.protobuf.ByteString
+        getDeviceBytes() {
+      java.lang.Object ref = device_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        device_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
     }
 
     public static final int SIGNATURE_FIELD_NUMBER = 4;
@@ -10142,6 +9729,7 @@ public final class CommercialPurchase {
     }
 
     private byte memoizedIsInitialized = -1;
+    @java.lang.Override
     public final boolean isInitialized() {
       byte isInitialized = memoizedIsInitialized;
       if (isInitialized == 1) return true;
@@ -10151,16 +9739,17 @@ public final class CommercialPurchase {
       return true;
     }
 
+    @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
       if (authority_ != io.opencannabis.schema.commerce.CommercialPurchase.PurchaseAuthority.STANDARD.getNumber()) {
         output.writeEnum(1, authority_);
       }
-      if (agent_ != null) {
-        output.writeMessage(2, getAgent());
+      if (!getAgentBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, agent_);
       }
-      if (device_ != null) {
-        output.writeMessage(3, getDevice());
+      if (!getDeviceBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 3, device_);
       }
       if (signature_ != null) {
         output.writeMessage(4, getSignature());
@@ -10168,6 +9757,7 @@ public final class CommercialPurchase {
       unknownFields.writeTo(output);
     }
 
+    @java.lang.Override
     public int getSerializedSize() {
       int size = memoizedSize;
       if (size != -1) return size;
@@ -10177,13 +9767,11 @@ public final class CommercialPurchase {
         size += com.google.protobuf.CodedOutputStream
           .computeEnumSize(1, authority_);
       }
-      if (agent_ != null) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(2, getAgent());
+      if (!getAgentBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, agent_);
       }
-      if (device_ != null) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(3, getDevice());
+      if (!getDeviceBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, device_);
       }
       if (signature_ != null) {
         size += com.google.protobuf.CodedOutputStream
@@ -10206,16 +9794,10 @@ public final class CommercialPurchase {
 
       boolean result = true;
       result = result && authority_ == other.authority_;
-      result = result && (hasAgent() == other.hasAgent());
-      if (hasAgent()) {
-        result = result && getAgent()
-            .equals(other.getAgent());
-      }
-      result = result && (hasDevice() == other.hasDevice());
-      if (hasDevice()) {
-        result = result && getDevice()
-            .equals(other.getDevice());
-      }
+      result = result && getAgent()
+          .equals(other.getAgent());
+      result = result && getDevice()
+          .equals(other.getDevice());
       result = result && (hasSignature() == other.hasSignature());
       if (hasSignature()) {
         result = result && getSignature()
@@ -10234,14 +9816,10 @@ public final class CommercialPurchase {
       hash = (19 * hash) + getDescriptor().hashCode();
       hash = (37 * hash) + AUTHORITY_FIELD_NUMBER;
       hash = (53 * hash) + authority_;
-      if (hasAgent()) {
-        hash = (37 * hash) + AGENT_FIELD_NUMBER;
-        hash = (53 * hash) + getAgent().hashCode();
-      }
-      if (hasDevice()) {
-        hash = (37 * hash) + DEVICE_FIELD_NUMBER;
-        hash = (53 * hash) + getDevice().hashCode();
-      }
+      hash = (37 * hash) + AGENT_FIELD_NUMBER;
+      hash = (53 * hash) + getAgent().hashCode();
+      hash = (37 * hash) + DEVICE_FIELD_NUMBER;
+      hash = (53 * hash) + getDevice().hashCode();
       if (hasSignature()) {
         hash = (37 * hash) + SIGNATURE_FIELD_NUMBER;
         hash = (53 * hash) + getSignature().hashCode();
@@ -10321,6 +9899,7 @@ public final class CommercialPurchase {
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
 
+    @java.lang.Override
     public Builder newBuilderForType() { return newBuilder(); }
     public static Builder newBuilder() {
       return DEFAULT_INSTANCE.toBuilder();
@@ -10328,6 +9907,7 @@ public final class CommercialPurchase {
     public static Builder newBuilder(io.opencannabis.schema.commerce.CommercialPurchase.PurchaseFacilitator prototype) {
       return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
     }
+    @java.lang.Override
     public Builder toBuilder() {
       return this == DEFAULT_INSTANCE
           ? new Builder() : new Builder().mergeFrom(this);
@@ -10356,6 +9936,7 @@ public final class CommercialPurchase {
         return io.opencannabis.schema.commerce.CommercialPurchase.internal_static_opencannabis_commerce_PurchaseFacilitator_descriptor;
       }
 
+      @java.lang.Override
       protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
           internalGetFieldAccessorTable() {
         return io.opencannabis.schema.commerce.CommercialPurchase.internal_static_opencannabis_commerce_PurchaseFacilitator_fieldAccessorTable
@@ -10378,22 +9959,15 @@ public final class CommercialPurchase {
                 .alwaysUseFieldBuilders) {
         }
       }
+      @java.lang.Override
       public Builder clear() {
         super.clear();
         authority_ = 0;
 
-        if (agentBuilder_ == null) {
-          agent_ = null;
-        } else {
-          agent_ = null;
-          agentBuilder_ = null;
-        }
-        if (deviceBuilder_ == null) {
-          device_ = null;
-        } else {
-          device_ = null;
-          deviceBuilder_ = null;
-        }
+        agent_ = "";
+
+        device_ = "";
+
         if (signatureBuilder_ == null) {
           signature_ = null;
         } else {
@@ -10403,15 +9977,18 @@ public final class CommercialPurchase {
         return this;
       }
 
+      @java.lang.Override
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
         return io.opencannabis.schema.commerce.CommercialPurchase.internal_static_opencannabis_commerce_PurchaseFacilitator_descriptor;
       }
 
+      @java.lang.Override
       public io.opencannabis.schema.commerce.CommercialPurchase.PurchaseFacilitator getDefaultInstanceForType() {
         return io.opencannabis.schema.commerce.CommercialPurchase.PurchaseFacilitator.getDefaultInstance();
       }
 
+      @java.lang.Override
       public io.opencannabis.schema.commerce.CommercialPurchase.PurchaseFacilitator build() {
         io.opencannabis.schema.commerce.CommercialPurchase.PurchaseFacilitator result = buildPartial();
         if (!result.isInitialized()) {
@@ -10420,19 +9997,12 @@ public final class CommercialPurchase {
         return result;
       }
 
+      @java.lang.Override
       public io.opencannabis.schema.commerce.CommercialPurchase.PurchaseFacilitator buildPartial() {
         io.opencannabis.schema.commerce.CommercialPurchase.PurchaseFacilitator result = new io.opencannabis.schema.commerce.CommercialPurchase.PurchaseFacilitator(this);
         result.authority_ = authority_;
-        if (agentBuilder_ == null) {
-          result.agent_ = agent_;
-        } else {
-          result.agent_ = agentBuilder_.build();
-        }
-        if (deviceBuilder_ == null) {
-          result.device_ = device_;
-        } else {
-          result.device_ = deviceBuilder_.build();
-        }
+        result.agent_ = agent_;
+        result.device_ = device_;
         if (signatureBuilder_ == null) {
           result.signature_ = signature_;
         } else {
@@ -10442,32 +10012,39 @@ public final class CommercialPurchase {
         return result;
       }
 
+      @java.lang.Override
       public Builder clone() {
         return (Builder) super.clone();
       }
+      @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
         return (Builder) super.setField(field, value);
       }
+      @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
         return (Builder) super.clearField(field);
       }
+      @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
         return (Builder) super.clearOneof(oneof);
       }
+      @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
         return (Builder) super.setRepeatedField(field, index, value);
       }
+      @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
         return (Builder) super.addRepeatedField(field, value);
       }
+      @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
         if (other instanceof io.opencannabis.schema.commerce.CommercialPurchase.PurchaseFacilitator) {
           return mergeFrom((io.opencannabis.schema.commerce.CommercialPurchase.PurchaseFacilitator)other);
@@ -10482,11 +10059,13 @@ public final class CommercialPurchase {
         if (other.authority_ != 0) {
           setAuthorityValue(other.getAuthorityValue());
         }
-        if (other.hasAgent()) {
-          mergeAgent(other.getAgent());
+        if (!other.getAgent().isEmpty()) {
+          agent_ = other.agent_;
+          onChanged();
         }
-        if (other.hasDevice()) {
-          mergeDevice(other.getDevice());
+        if (!other.getDevice().isEmpty()) {
+          device_ = other.device_;
+          onChanged();
         }
         if (other.hasSignature()) {
           mergeSignature(other.getSignature());
@@ -10496,10 +10075,12 @@ public final class CommercialPurchase {
         return this;
       }
 
+      @java.lang.Override
       public final boolean isInitialized() {
         return true;
       }
 
+      @java.lang.Override
       public Builder mergeFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -10552,6 +10133,7 @@ public final class CommercialPurchase {
        * <code>.opencannabis.commerce.PurchaseAuthority authority = 1;</code>
        */
       public io.opencannabis.schema.commerce.CommercialPurchase.PurchaseAuthority getAuthority() {
+        @SuppressWarnings("deprecation")
         io.opencannabis.schema.commerce.CommercialPurchase.PurchaseAuthority result = io.opencannabis.schema.commerce.CommercialPurchase.PurchaseAuthority.valueOf(authority_);
         return result == null ? io.opencannabis.schema.commerce.CommercialPurchase.PurchaseAuthority.UNRECOGNIZED : result;
       }
@@ -10587,310 +10169,182 @@ public final class CommercialPurchase {
         return this;
       }
 
-      private io.bloombox.schema.identity.AppUserKey.UserKey agent_ = null;
-      private com.google.protobuf.SingleFieldBuilderV3<
-          io.bloombox.schema.identity.AppUserKey.UserKey, io.bloombox.schema.identity.AppUserKey.UserKey.Builder, io.bloombox.schema.identity.AppUserKey.UserKeyOrBuilder> agentBuilder_;
+      private java.lang.Object agent_ = "";
       /**
        * <pre>
-       * Specifies the user that conducted the purchase (i.e. the sales agent or budtender).
+       * Specifies the opaque ID for the user that conducted the purchase (i.e. the sales agent or budtender).
        * </pre>
        *
-       * <code>.bloombox.schema.identity.UserKey agent = 2;</code>
+       * <code>string agent = 2;</code>
        */
-      public boolean hasAgent() {
-        return agentBuilder_ != null || agent_ != null;
-      }
-      /**
-       * <pre>
-       * Specifies the user that conducted the purchase (i.e. the sales agent or budtender).
-       * </pre>
-       *
-       * <code>.bloombox.schema.identity.UserKey agent = 2;</code>
-       */
-      public io.bloombox.schema.identity.AppUserKey.UserKey getAgent() {
-        if (agentBuilder_ == null) {
-          return agent_ == null ? io.bloombox.schema.identity.AppUserKey.UserKey.getDefaultInstance() : agent_;
+      public java.lang.String getAgent() {
+        java.lang.Object ref = agent_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          agent_ = s;
+          return s;
         } else {
-          return agentBuilder_.getMessage();
+          return (java.lang.String) ref;
         }
       }
       /**
        * <pre>
-       * Specifies the user that conducted the purchase (i.e. the sales agent or budtender).
+       * Specifies the opaque ID for the user that conducted the purchase (i.e. the sales agent or budtender).
        * </pre>
        *
-       * <code>.bloombox.schema.identity.UserKey agent = 2;</code>
+       * <code>string agent = 2;</code>
        */
-      public Builder setAgent(io.bloombox.schema.identity.AppUserKey.UserKey value) {
-        if (agentBuilder_ == null) {
-          if (value == null) {
-            throw new NullPointerException();
-          }
-          agent_ = value;
-          onChanged();
+      public com.google.protobuf.ByteString
+          getAgentBytes() {
+        java.lang.Object ref = agent_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          agent_ = b;
+          return b;
         } else {
-          agentBuilder_.setMessage(value);
+          return (com.google.protobuf.ByteString) ref;
         }
-
-        return this;
       }
       /**
        * <pre>
-       * Specifies the user that conducted the purchase (i.e. the sales agent or budtender).
+       * Specifies the opaque ID for the user that conducted the purchase (i.e. the sales agent or budtender).
        * </pre>
        *
-       * <code>.bloombox.schema.identity.UserKey agent = 2;</code>
+       * <code>string agent = 2;</code>
        */
       public Builder setAgent(
-          io.bloombox.schema.identity.AppUserKey.UserKey.Builder builderForValue) {
-        if (agentBuilder_ == null) {
-          agent_ = builderForValue.build();
-          onChanged();
-        } else {
-          agentBuilder_.setMessage(builderForValue.build());
-        }
-
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        agent_ = value;
+        onChanged();
         return this;
       }
       /**
        * <pre>
-       * Specifies the user that conducted the purchase (i.e. the sales agent or budtender).
+       * Specifies the opaque ID for the user that conducted the purchase (i.e. the sales agent or budtender).
        * </pre>
        *
-       * <code>.bloombox.schema.identity.UserKey agent = 2;</code>
-       */
-      public Builder mergeAgent(io.bloombox.schema.identity.AppUserKey.UserKey value) {
-        if (agentBuilder_ == null) {
-          if (agent_ != null) {
-            agent_ =
-              io.bloombox.schema.identity.AppUserKey.UserKey.newBuilder(agent_).mergeFrom(value).buildPartial();
-          } else {
-            agent_ = value;
-          }
-          onChanged();
-        } else {
-          agentBuilder_.mergeFrom(value);
-        }
-
-        return this;
-      }
-      /**
-       * <pre>
-       * Specifies the user that conducted the purchase (i.e. the sales agent or budtender).
-       * </pre>
-       *
-       * <code>.bloombox.schema.identity.UserKey agent = 2;</code>
+       * <code>string agent = 2;</code>
        */
       public Builder clearAgent() {
-        if (agentBuilder_ == null) {
-          agent_ = null;
-          onChanged();
-        } else {
-          agent_ = null;
-          agentBuilder_ = null;
-        }
-
-        return this;
-      }
-      /**
-       * <pre>
-       * Specifies the user that conducted the purchase (i.e. the sales agent or budtender).
-       * </pre>
-       *
-       * <code>.bloombox.schema.identity.UserKey agent = 2;</code>
-       */
-      public io.bloombox.schema.identity.AppUserKey.UserKey.Builder getAgentBuilder() {
         
+        agent_ = getDefaultInstance().getAgent();
         onChanged();
-        return getAgentFieldBuilder().getBuilder();
-      }
-      /**
-       * <pre>
-       * Specifies the user that conducted the purchase (i.e. the sales agent or budtender).
-       * </pre>
-       *
-       * <code>.bloombox.schema.identity.UserKey agent = 2;</code>
-       */
-      public io.bloombox.schema.identity.AppUserKey.UserKeyOrBuilder getAgentOrBuilder() {
-        if (agentBuilder_ != null) {
-          return agentBuilder_.getMessageOrBuilder();
-        } else {
-          return agent_ == null ?
-              io.bloombox.schema.identity.AppUserKey.UserKey.getDefaultInstance() : agent_;
-        }
-      }
-      /**
-       * <pre>
-       * Specifies the user that conducted the purchase (i.e. the sales agent or budtender).
-       * </pre>
-       *
-       * <code>.bloombox.schema.identity.UserKey agent = 2;</code>
-       */
-      private com.google.protobuf.SingleFieldBuilderV3<
-          io.bloombox.schema.identity.AppUserKey.UserKey, io.bloombox.schema.identity.AppUserKey.UserKey.Builder, io.bloombox.schema.identity.AppUserKey.UserKeyOrBuilder> 
-          getAgentFieldBuilder() {
-        if (agentBuilder_ == null) {
-          agentBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-              io.bloombox.schema.identity.AppUserKey.UserKey, io.bloombox.schema.identity.AppUserKey.UserKey.Builder, io.bloombox.schema.identity.AppUserKey.UserKeyOrBuilder>(
-                  getAgent(),
-                  getParentForChildren(),
-                  isClean());
-          agent_ = null;
-        }
-        return agentBuilder_;
-      }
-
-      private io.bloombox.schema.partner.PartnerDevices.PartnerDeviceKey device_ = null;
-      private com.google.protobuf.SingleFieldBuilderV3<
-          io.bloombox.schema.partner.PartnerDevices.PartnerDeviceKey, io.bloombox.schema.partner.PartnerDevices.PartnerDeviceKey.Builder, io.bloombox.schema.partner.PartnerDevices.PartnerDeviceKeyOrBuilder> deviceBuilder_;
-      /**
-       * <pre>
-       * Reference to the partner co-located point-of-sale device that facilitated this transaction.
-       * </pre>
-       *
-       * <code>.bloombox.schema.partner.PartnerDeviceKey device = 3;</code>
-       */
-      public boolean hasDevice() {
-        return deviceBuilder_ != null || device_ != null;
-      }
-      /**
-       * <pre>
-       * Reference to the partner co-located point-of-sale device that facilitated this transaction.
-       * </pre>
-       *
-       * <code>.bloombox.schema.partner.PartnerDeviceKey device = 3;</code>
-       */
-      public io.bloombox.schema.partner.PartnerDevices.PartnerDeviceKey getDevice() {
-        if (deviceBuilder_ == null) {
-          return device_ == null ? io.bloombox.schema.partner.PartnerDevices.PartnerDeviceKey.getDefaultInstance() : device_;
-        } else {
-          return deviceBuilder_.getMessage();
-        }
-      }
-      /**
-       * <pre>
-       * Reference to the partner co-located point-of-sale device that facilitated this transaction.
-       * </pre>
-       *
-       * <code>.bloombox.schema.partner.PartnerDeviceKey device = 3;</code>
-       */
-      public Builder setDevice(io.bloombox.schema.partner.PartnerDevices.PartnerDeviceKey value) {
-        if (deviceBuilder_ == null) {
-          if (value == null) {
-            throw new NullPointerException();
-          }
-          device_ = value;
-          onChanged();
-        } else {
-          deviceBuilder_.setMessage(value);
-        }
-
         return this;
       }
       /**
        * <pre>
-       * Reference to the partner co-located point-of-sale device that facilitated this transaction.
+       * Specifies the opaque ID for the user that conducted the purchase (i.e. the sales agent or budtender).
        * </pre>
        *
-       * <code>.bloombox.schema.partner.PartnerDeviceKey device = 3;</code>
+       * <code>string agent = 2;</code>
+       */
+      public Builder setAgentBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        agent_ = value;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object device_ = "";
+      /**
+       * <pre>
+       * Unique/opaque reference to the partner co-located point-of-sale device that facilitated this transaction.
+       * </pre>
+       *
+       * <code>string device = 3;</code>
+       */
+      public java.lang.String getDevice() {
+        java.lang.Object ref = device_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          device_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Unique/opaque reference to the partner co-located point-of-sale device that facilitated this transaction.
+       * </pre>
+       *
+       * <code>string device = 3;</code>
+       */
+      public com.google.protobuf.ByteString
+          getDeviceBytes() {
+        java.lang.Object ref = device_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          device_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Unique/opaque reference to the partner co-located point-of-sale device that facilitated this transaction.
+       * </pre>
+       *
+       * <code>string device = 3;</code>
        */
       public Builder setDevice(
-          io.bloombox.schema.partner.PartnerDevices.PartnerDeviceKey.Builder builderForValue) {
-        if (deviceBuilder_ == null) {
-          device_ = builderForValue.build();
-          onChanged();
-        } else {
-          deviceBuilder_.setMessage(builderForValue.build());
-        }
-
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        device_ = value;
+        onChanged();
         return this;
       }
       /**
        * <pre>
-       * Reference to the partner co-located point-of-sale device that facilitated this transaction.
+       * Unique/opaque reference to the partner co-located point-of-sale device that facilitated this transaction.
        * </pre>
        *
-       * <code>.bloombox.schema.partner.PartnerDeviceKey device = 3;</code>
-       */
-      public Builder mergeDevice(io.bloombox.schema.partner.PartnerDevices.PartnerDeviceKey value) {
-        if (deviceBuilder_ == null) {
-          if (device_ != null) {
-            device_ =
-              io.bloombox.schema.partner.PartnerDevices.PartnerDeviceKey.newBuilder(device_).mergeFrom(value).buildPartial();
-          } else {
-            device_ = value;
-          }
-          onChanged();
-        } else {
-          deviceBuilder_.mergeFrom(value);
-        }
-
-        return this;
-      }
-      /**
-       * <pre>
-       * Reference to the partner co-located point-of-sale device that facilitated this transaction.
-       * </pre>
-       *
-       * <code>.bloombox.schema.partner.PartnerDeviceKey device = 3;</code>
+       * <code>string device = 3;</code>
        */
       public Builder clearDevice() {
-        if (deviceBuilder_ == null) {
-          device_ = null;
-          onChanged();
-        } else {
-          device_ = null;
-          deviceBuilder_ = null;
-        }
-
+        
+        device_ = getDefaultInstance().getDevice();
+        onChanged();
         return this;
       }
       /**
        * <pre>
-       * Reference to the partner co-located point-of-sale device that facilitated this transaction.
+       * Unique/opaque reference to the partner co-located point-of-sale device that facilitated this transaction.
        * </pre>
        *
-       * <code>.bloombox.schema.partner.PartnerDeviceKey device = 3;</code>
+       * <code>string device = 3;</code>
        */
-      public io.bloombox.schema.partner.PartnerDevices.PartnerDeviceKey.Builder getDeviceBuilder() {
+      public Builder setDeviceBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
         
+        device_ = value;
         onChanged();
-        return getDeviceFieldBuilder().getBuilder();
-      }
-      /**
-       * <pre>
-       * Reference to the partner co-located point-of-sale device that facilitated this transaction.
-       * </pre>
-       *
-       * <code>.bloombox.schema.partner.PartnerDeviceKey device = 3;</code>
-       */
-      public io.bloombox.schema.partner.PartnerDevices.PartnerDeviceKeyOrBuilder getDeviceOrBuilder() {
-        if (deviceBuilder_ != null) {
-          return deviceBuilder_.getMessageOrBuilder();
-        } else {
-          return device_ == null ?
-              io.bloombox.schema.partner.PartnerDevices.PartnerDeviceKey.getDefaultInstance() : device_;
-        }
-      }
-      /**
-       * <pre>
-       * Reference to the partner co-located point-of-sale device that facilitated this transaction.
-       * </pre>
-       *
-       * <code>.bloombox.schema.partner.PartnerDeviceKey device = 3;</code>
-       */
-      private com.google.protobuf.SingleFieldBuilderV3<
-          io.bloombox.schema.partner.PartnerDevices.PartnerDeviceKey, io.bloombox.schema.partner.PartnerDevices.PartnerDeviceKey.Builder, io.bloombox.schema.partner.PartnerDevices.PartnerDeviceKeyOrBuilder> 
-          getDeviceFieldBuilder() {
-        if (deviceBuilder_ == null) {
-          deviceBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-              io.bloombox.schema.partner.PartnerDevices.PartnerDeviceKey, io.bloombox.schema.partner.PartnerDevices.PartnerDeviceKey.Builder, io.bloombox.schema.partner.PartnerDevices.PartnerDeviceKeyOrBuilder>(
-                  getDevice(),
-                  getParentForChildren(),
-                  isClean());
-          device_ = null;
-        }
-        return deviceBuilder_;
+        return this;
       }
 
       private io.opencannabis.schema.commerce.CommercialPurchase.PurchaseSignature signature_ = null;
@@ -11045,11 +10499,13 @@ public final class CommercialPurchase {
         }
         return signatureBuilder_;
       }
+      @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
         return super.setUnknownFieldsProto3(unknownFields);
       }
 
+      @java.lang.Override
       public final Builder mergeUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
         return super.mergeUnknownFields(unknownFields);
@@ -11071,6 +10527,7 @@ public final class CommercialPurchase {
 
     private static final com.google.protobuf.Parser<PurchaseFacilitator>
         PARSER = new com.google.protobuf.AbstractParser<PurchaseFacilitator>() {
+      @java.lang.Override
       public PurchaseFacilitator parsePartialFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -11088,6 +10545,7 @@ public final class CommercialPurchase {
       return PARSER;
     }
 
+    @java.lang.Override
     public io.opencannabis.schema.commerce.CommercialPurchase.PurchaseFacilitator getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
@@ -11160,17 +10618,17 @@ public final class CommercialPurchase {
             case 0:
               done = true;
               break;
+            case 10: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              uuid_ = s;
+              break;
+            }
             default: {
               if (!parseUnknownFieldProto3(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
-              break;
-            }
-            case 10: {
-              java.lang.String s = input.readStringRequireUtf8();
-
-              uuid_ = s;
               break;
             }
           }
@@ -11190,6 +10648,7 @@ public final class CommercialPurchase {
       return io.opencannabis.schema.commerce.CommercialPurchase.internal_static_opencannabis_commerce_PaymentKey_descriptor;
     }
 
+    @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
       return io.opencannabis.schema.commerce.CommercialPurchase.internal_static_opencannabis_commerce_PaymentKey_fieldAccessorTable
@@ -11240,6 +10699,7 @@ public final class CommercialPurchase {
     }
 
     private byte memoizedIsInitialized = -1;
+    @java.lang.Override
     public final boolean isInitialized() {
       byte isInitialized = memoizedIsInitialized;
       if (isInitialized == 1) return true;
@@ -11249,6 +10709,7 @@ public final class CommercialPurchase {
       return true;
     }
 
+    @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
       if (!getUuidBytes().isEmpty()) {
@@ -11257,6 +10718,7 @@ public final class CommercialPurchase {
       unknownFields.writeTo(output);
     }
 
+    @java.lang.Override
     public int getSerializedSize() {
       int size = memoizedSize;
       if (size != -1) return size;
@@ -11371,6 +10833,7 @@ public final class CommercialPurchase {
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
 
+    @java.lang.Override
     public Builder newBuilderForType() { return newBuilder(); }
     public static Builder newBuilder() {
       return DEFAULT_INSTANCE.toBuilder();
@@ -11378,6 +10841,7 @@ public final class CommercialPurchase {
     public static Builder newBuilder(io.opencannabis.schema.commerce.CommercialPurchase.PaymentKey prototype) {
       return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
     }
+    @java.lang.Override
     public Builder toBuilder() {
       return this == DEFAULT_INSTANCE
           ? new Builder() : new Builder().mergeFrom(this);
@@ -11405,6 +10869,7 @@ public final class CommercialPurchase {
         return io.opencannabis.schema.commerce.CommercialPurchase.internal_static_opencannabis_commerce_PaymentKey_descriptor;
       }
 
+      @java.lang.Override
       protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
           internalGetFieldAccessorTable() {
         return io.opencannabis.schema.commerce.CommercialPurchase.internal_static_opencannabis_commerce_PaymentKey_fieldAccessorTable
@@ -11427,6 +10892,7 @@ public final class CommercialPurchase {
                 .alwaysUseFieldBuilders) {
         }
       }
+      @java.lang.Override
       public Builder clear() {
         super.clear();
         uuid_ = "";
@@ -11434,15 +10900,18 @@ public final class CommercialPurchase {
         return this;
       }
 
+      @java.lang.Override
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
         return io.opencannabis.schema.commerce.CommercialPurchase.internal_static_opencannabis_commerce_PaymentKey_descriptor;
       }
 
+      @java.lang.Override
       public io.opencannabis.schema.commerce.CommercialPurchase.PaymentKey getDefaultInstanceForType() {
         return io.opencannabis.schema.commerce.CommercialPurchase.PaymentKey.getDefaultInstance();
       }
 
+      @java.lang.Override
       public io.opencannabis.schema.commerce.CommercialPurchase.PaymentKey build() {
         io.opencannabis.schema.commerce.CommercialPurchase.PaymentKey result = buildPartial();
         if (!result.isInitialized()) {
@@ -11451,6 +10920,7 @@ public final class CommercialPurchase {
         return result;
       }
 
+      @java.lang.Override
       public io.opencannabis.schema.commerce.CommercialPurchase.PaymentKey buildPartial() {
         io.opencannabis.schema.commerce.CommercialPurchase.PaymentKey result = new io.opencannabis.schema.commerce.CommercialPurchase.PaymentKey(this);
         result.uuid_ = uuid_;
@@ -11458,32 +10928,39 @@ public final class CommercialPurchase {
         return result;
       }
 
+      @java.lang.Override
       public Builder clone() {
         return (Builder) super.clone();
       }
+      @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
         return (Builder) super.setField(field, value);
       }
+      @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
         return (Builder) super.clearField(field);
       }
+      @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
         return (Builder) super.clearOneof(oneof);
       }
+      @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
         return (Builder) super.setRepeatedField(field, index, value);
       }
+      @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
         return (Builder) super.addRepeatedField(field, value);
       }
+      @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
         if (other instanceof io.opencannabis.schema.commerce.CommercialPurchase.PaymentKey) {
           return mergeFrom((io.opencannabis.schema.commerce.CommercialPurchase.PaymentKey)other);
@@ -11504,10 +10981,12 @@ public final class CommercialPurchase {
         return this;
       }
 
+      @java.lang.Override
       public final boolean isInitialized() {
         return true;
       }
 
+      @java.lang.Override
       public Builder mergeFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -11614,11 +11093,13 @@ public final class CommercialPurchase {
         onChanged();
         return this;
       }
+      @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
         return super.setUnknownFieldsProto3(unknownFields);
       }
 
+      @java.lang.Override
       public final Builder mergeUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
         return super.mergeUnknownFields(unknownFields);
@@ -11640,6 +11121,7 @@ public final class CommercialPurchase {
 
     private static final com.google.protobuf.Parser<PaymentKey>
         PARSER = new com.google.protobuf.AbstractParser<PaymentKey>() {
+      @java.lang.Override
       public PaymentKey parsePartialFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -11657,6 +11139,7 @@ public final class CommercialPurchase {
       return PARSER;
     }
 
+    @java.lang.Override
     public io.opencannabis.schema.commerce.CommercialPurchase.PaymentKey getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
@@ -11918,13 +11401,6 @@ public final class CommercialPurchase {
             case 0:
               done = true;
               break;
-            default: {
-              if (!parseUnknownFieldProto3(
-                  input, unknownFields, extensionRegistry, tag)) {
-                done = true;
-              }
-              break;
-            }
             case 10: {
               io.opencannabis.schema.commerce.CommercialPurchase.PaymentKey.Builder subBuilder = null;
               if (key_ != null) {
@@ -12030,6 +11506,13 @@ public final class CommercialPurchase {
               specCase_ = 14;
               break;
             }
+            default: {
+              if (!parseUnknownFieldProto3(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
           }
         }
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
@@ -12047,6 +11530,7 @@ public final class CommercialPurchase {
       return io.opencannabis.schema.commerce.CommercialPurchase.internal_static_opencannabis_commerce_Payment_descriptor;
     }
 
+    @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
       return io.opencannabis.schema.commerce.CommercialPurchase.internal_static_opencannabis_commerce_Payment_fieldAccessorTable
@@ -12151,13 +11635,6 @@ public final class CommercialPurchase {
               case 0:
                 done = true;
                 break;
-              default: {
-                if (!parseUnknownFieldProto3(
-                    input, unknownFields, extensionRegistry, tag)) {
-                  done = true;
-                }
-                break;
-              }
               case 10: {
                 io.opencannabis.schema.currency.CommerceCurrency.CurrencyValue.Builder subBuilder = null;
                 if (tendered_ != null) {
@@ -12184,6 +11661,13 @@ public final class CommercialPurchase {
 
                 break;
               }
+              default: {
+                if (!parseUnknownFieldProto3(
+                    input, unknownFields, extensionRegistry, tag)) {
+                  done = true;
+                }
+                break;
+              }
             }
           }
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
@@ -12201,6 +11685,7 @@ public final class CommercialPurchase {
         return io.opencannabis.schema.commerce.CommercialPurchase.internal_static_opencannabis_commerce_Payment_CashPayment_descriptor;
       }
 
+      @java.lang.Override
       protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
           internalGetFieldAccessorTable() {
         return io.opencannabis.schema.commerce.CommercialPurchase.internal_static_opencannabis_commerce_Payment_CashPayment_fieldAccessorTable
@@ -12275,6 +11760,7 @@ public final class CommercialPurchase {
       }
 
       private byte memoizedIsInitialized = -1;
+      @java.lang.Override
       public final boolean isInitialized() {
         byte isInitialized = memoizedIsInitialized;
         if (isInitialized == 1) return true;
@@ -12284,6 +11770,7 @@ public final class CommercialPurchase {
         return true;
       }
 
+      @java.lang.Override
       public void writeTo(com.google.protobuf.CodedOutputStream output)
                           throws java.io.IOException {
         if (tendered_ != null) {
@@ -12295,6 +11782,7 @@ public final class CommercialPurchase {
         unknownFields.writeTo(output);
       }
 
+      @java.lang.Override
       public int getSerializedSize() {
         int size = memoizedSize;
         if (size != -1) return size;
@@ -12428,6 +11916,7 @@ public final class CommercialPurchase {
             .parseWithIOException(PARSER, input, extensionRegistry);
       }
 
+      @java.lang.Override
       public Builder newBuilderForType() { return newBuilder(); }
       public static Builder newBuilder() {
         return DEFAULT_INSTANCE.toBuilder();
@@ -12435,6 +11924,7 @@ public final class CommercialPurchase {
       public static Builder newBuilder(io.opencannabis.schema.commerce.CommercialPurchase.Payment.CashPayment prototype) {
         return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
       }
+      @java.lang.Override
       public Builder toBuilder() {
         return this == DEFAULT_INSTANCE
             ? new Builder() : new Builder().mergeFrom(this);
@@ -12462,6 +11952,7 @@ public final class CommercialPurchase {
           return io.opencannabis.schema.commerce.CommercialPurchase.internal_static_opencannabis_commerce_Payment_CashPayment_descriptor;
         }
 
+        @java.lang.Override
         protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
             internalGetFieldAccessorTable() {
           return io.opencannabis.schema.commerce.CommercialPurchase.internal_static_opencannabis_commerce_Payment_CashPayment_fieldAccessorTable
@@ -12484,6 +11975,7 @@ public final class CommercialPurchase {
                   .alwaysUseFieldBuilders) {
           }
         }
+        @java.lang.Override
         public Builder clear() {
           super.clear();
           if (tenderedBuilder_ == null) {
@@ -12501,15 +11993,18 @@ public final class CommercialPurchase {
           return this;
         }
 
+        @java.lang.Override
         public com.google.protobuf.Descriptors.Descriptor
             getDescriptorForType() {
           return io.opencannabis.schema.commerce.CommercialPurchase.internal_static_opencannabis_commerce_Payment_CashPayment_descriptor;
         }
 
+        @java.lang.Override
         public io.opencannabis.schema.commerce.CommercialPurchase.Payment.CashPayment getDefaultInstanceForType() {
           return io.opencannabis.schema.commerce.CommercialPurchase.Payment.CashPayment.getDefaultInstance();
         }
 
+        @java.lang.Override
         public io.opencannabis.schema.commerce.CommercialPurchase.Payment.CashPayment build() {
           io.opencannabis.schema.commerce.CommercialPurchase.Payment.CashPayment result = buildPartial();
           if (!result.isInitialized()) {
@@ -12518,6 +12013,7 @@ public final class CommercialPurchase {
           return result;
         }
 
+        @java.lang.Override
         public io.opencannabis.schema.commerce.CommercialPurchase.Payment.CashPayment buildPartial() {
           io.opencannabis.schema.commerce.CommercialPurchase.Payment.CashPayment result = new io.opencannabis.schema.commerce.CommercialPurchase.Payment.CashPayment(this);
           if (tenderedBuilder_ == null) {
@@ -12534,32 +12030,39 @@ public final class CommercialPurchase {
           return result;
         }
 
+        @java.lang.Override
         public Builder clone() {
           return (Builder) super.clone();
         }
+        @java.lang.Override
         public Builder setField(
             com.google.protobuf.Descriptors.FieldDescriptor field,
             java.lang.Object value) {
           return (Builder) super.setField(field, value);
         }
+        @java.lang.Override
         public Builder clearField(
             com.google.protobuf.Descriptors.FieldDescriptor field) {
           return (Builder) super.clearField(field);
         }
+        @java.lang.Override
         public Builder clearOneof(
             com.google.protobuf.Descriptors.OneofDescriptor oneof) {
           return (Builder) super.clearOneof(oneof);
         }
+        @java.lang.Override
         public Builder setRepeatedField(
             com.google.protobuf.Descriptors.FieldDescriptor field,
             int index, java.lang.Object value) {
           return (Builder) super.setRepeatedField(field, index, value);
         }
+        @java.lang.Override
         public Builder addRepeatedField(
             com.google.protobuf.Descriptors.FieldDescriptor field,
             java.lang.Object value) {
           return (Builder) super.addRepeatedField(field, value);
         }
+        @java.lang.Override
         public Builder mergeFrom(com.google.protobuf.Message other) {
           if (other instanceof io.opencannabis.schema.commerce.CommercialPurchase.Payment.CashPayment) {
             return mergeFrom((io.opencannabis.schema.commerce.CommercialPurchase.Payment.CashPayment)other);
@@ -12582,10 +12085,12 @@ public final class CommercialPurchase {
           return this;
         }
 
+        @java.lang.Override
         public final boolean isInitialized() {
           return true;
         }
 
+        @java.lang.Override
         public Builder mergeFrom(
             com.google.protobuf.CodedInputStream input,
             com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -12909,11 +12414,13 @@ public final class CommercialPurchase {
           }
           return changeBuilder_;
         }
+        @java.lang.Override
         public final Builder setUnknownFields(
             final com.google.protobuf.UnknownFieldSet unknownFields) {
           return super.setUnknownFieldsProto3(unknownFields);
         }
 
+        @java.lang.Override
         public final Builder mergeUnknownFields(
             final com.google.protobuf.UnknownFieldSet unknownFields) {
           return super.mergeUnknownFields(unknownFields);
@@ -12935,6 +12442,7 @@ public final class CommercialPurchase {
 
       private static final com.google.protobuf.Parser<CashPayment>
           PARSER = new com.google.protobuf.AbstractParser<CashPayment>() {
+        @java.lang.Override
         public CashPayment parsePartialFrom(
             com.google.protobuf.CodedInputStream input,
             com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -12952,6 +12460,7 @@ public final class CommercialPurchase {
         return PARSER;
       }
 
+      @java.lang.Override
       public io.opencannabis.schema.commerce.CommercialPurchase.Payment.CashPayment getDefaultInstanceForType() {
         return DEFAULT_INSTANCE;
       }
@@ -13091,13 +12600,6 @@ public final class CommercialPurchase {
               case 0:
                 done = true;
                 break;
-              default: {
-                if (!parseUnknownFieldProto3(
-                    input, unknownFields, extensionRegistry, tag)) {
-                  done = true;
-                }
-                break;
-              }
               case 10: {
                 java.lang.String s = input.readStringRequireUtf8();
 
@@ -13127,6 +12629,13 @@ public final class CommercialPurchase {
                 certified_ = input.readBool();
                 break;
               }
+              default: {
+                if (!parseUnknownFieldProto3(
+                    input, unknownFields, extensionRegistry, tag)) {
+                  done = true;
+                }
+                break;
+              }
             }
           }
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
@@ -13144,6 +12653,7 @@ public final class CommercialPurchase {
         return io.opencannabis.schema.commerce.CommercialPurchase.internal_static_opencannabis_commerce_Payment_CheckPayment_descriptor;
       }
 
+      @java.lang.Override
       protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
           internalGetFieldAccessorTable() {
         return io.opencannabis.schema.commerce.CommercialPurchase.internal_static_opencannabis_commerce_Payment_CheckPayment_fieldAccessorTable
@@ -13333,6 +12843,7 @@ public final class CommercialPurchase {
       }
 
       private byte memoizedIsInitialized = -1;
+      @java.lang.Override
       public final boolean isInitialized() {
         byte isInitialized = memoizedIsInitialized;
         if (isInitialized == 1) return true;
@@ -13342,6 +12853,7 @@ public final class CommercialPurchase {
         return true;
       }
 
+      @java.lang.Override
       public void writeTo(com.google.protobuf.CodedOutputStream output)
                           throws java.io.IOException {
         if (!getCheckNumberBytes().isEmpty()) {
@@ -13362,6 +12874,7 @@ public final class CommercialPurchase {
         unknownFields.writeTo(output);
       }
 
+      @java.lang.Override
       public int getSerializedSize() {
         int size = memoizedSize;
         if (size != -1) return size;
@@ -13506,6 +13019,7 @@ public final class CommercialPurchase {
             .parseWithIOException(PARSER, input, extensionRegistry);
       }
 
+      @java.lang.Override
       public Builder newBuilderForType() { return newBuilder(); }
       public static Builder newBuilder() {
         return DEFAULT_INSTANCE.toBuilder();
@@ -13513,6 +13027,7 @@ public final class CommercialPurchase {
       public static Builder newBuilder(io.opencannabis.schema.commerce.CommercialPurchase.Payment.CheckPayment prototype) {
         return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
       }
+      @java.lang.Override
       public Builder toBuilder() {
         return this == DEFAULT_INSTANCE
             ? new Builder() : new Builder().mergeFrom(this);
@@ -13540,6 +13055,7 @@ public final class CommercialPurchase {
           return io.opencannabis.schema.commerce.CommercialPurchase.internal_static_opencannabis_commerce_Payment_CheckPayment_descriptor;
         }
 
+        @java.lang.Override
         protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
             internalGetFieldAccessorTable() {
           return io.opencannabis.schema.commerce.CommercialPurchase.internal_static_opencannabis_commerce_Payment_CheckPayment_fieldAccessorTable
@@ -13562,6 +13078,7 @@ public final class CommercialPurchase {
                   .alwaysUseFieldBuilders) {
           }
         }
+        @java.lang.Override
         public Builder clear() {
           super.clear();
           checkNumber_ = "";
@@ -13577,15 +13094,18 @@ public final class CommercialPurchase {
           return this;
         }
 
+        @java.lang.Override
         public com.google.protobuf.Descriptors.Descriptor
             getDescriptorForType() {
           return io.opencannabis.schema.commerce.CommercialPurchase.internal_static_opencannabis_commerce_Payment_CheckPayment_descriptor;
         }
 
+        @java.lang.Override
         public io.opencannabis.schema.commerce.CommercialPurchase.Payment.CheckPayment getDefaultInstanceForType() {
           return io.opencannabis.schema.commerce.CommercialPurchase.Payment.CheckPayment.getDefaultInstance();
         }
 
+        @java.lang.Override
         public io.opencannabis.schema.commerce.CommercialPurchase.Payment.CheckPayment build() {
           io.opencannabis.schema.commerce.CommercialPurchase.Payment.CheckPayment result = buildPartial();
           if (!result.isInitialized()) {
@@ -13594,6 +13114,7 @@ public final class CommercialPurchase {
           return result;
         }
 
+        @java.lang.Override
         public io.opencannabis.schema.commerce.CommercialPurchase.Payment.CheckPayment buildPartial() {
           io.opencannabis.schema.commerce.CommercialPurchase.Payment.CheckPayment result = new io.opencannabis.schema.commerce.CommercialPurchase.Payment.CheckPayment(this);
           result.checkNumber_ = checkNumber_;
@@ -13605,32 +13126,39 @@ public final class CommercialPurchase {
           return result;
         }
 
+        @java.lang.Override
         public Builder clone() {
           return (Builder) super.clone();
         }
+        @java.lang.Override
         public Builder setField(
             com.google.protobuf.Descriptors.FieldDescriptor field,
             java.lang.Object value) {
           return (Builder) super.setField(field, value);
         }
+        @java.lang.Override
         public Builder clearField(
             com.google.protobuf.Descriptors.FieldDescriptor field) {
           return (Builder) super.clearField(field);
         }
+        @java.lang.Override
         public Builder clearOneof(
             com.google.protobuf.Descriptors.OneofDescriptor oneof) {
           return (Builder) super.clearOneof(oneof);
         }
+        @java.lang.Override
         public Builder setRepeatedField(
             com.google.protobuf.Descriptors.FieldDescriptor field,
             int index, java.lang.Object value) {
           return (Builder) super.setRepeatedField(field, index, value);
         }
+        @java.lang.Override
         public Builder addRepeatedField(
             com.google.protobuf.Descriptors.FieldDescriptor field,
             java.lang.Object value) {
           return (Builder) super.addRepeatedField(field, value);
         }
+        @java.lang.Override
         public Builder mergeFrom(com.google.protobuf.Message other) {
           if (other instanceof io.opencannabis.schema.commerce.CommercialPurchase.Payment.CheckPayment) {
             return mergeFrom((io.opencannabis.schema.commerce.CommercialPurchase.Payment.CheckPayment)other);
@@ -13666,10 +13194,12 @@ public final class CommercialPurchase {
           return this;
         }
 
+        @java.lang.Override
         public final boolean isInitialized() {
           return true;
         }
 
+        @java.lang.Override
         public Builder mergeFrom(
             com.google.protobuf.CodedInputStream input,
             com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -14081,11 +13611,13 @@ public final class CommercialPurchase {
           onChanged();
           return this;
         }
+        @java.lang.Override
         public final Builder setUnknownFields(
             final com.google.protobuf.UnknownFieldSet unknownFields) {
           return super.setUnknownFieldsProto3(unknownFields);
         }
 
+        @java.lang.Override
         public final Builder mergeUnknownFields(
             final com.google.protobuf.UnknownFieldSet unknownFields) {
           return super.mergeUnknownFields(unknownFields);
@@ -14107,6 +13639,7 @@ public final class CommercialPurchase {
 
       private static final com.google.protobuf.Parser<CheckPayment>
           PARSER = new com.google.protobuf.AbstractParser<CheckPayment>() {
+        @java.lang.Override
         public CheckPayment parsePartialFrom(
             com.google.protobuf.CodedInputStream input,
             com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -14124,6 +13657,7 @@ public final class CommercialPurchase {
         return PARSER;
       }
 
+      @java.lang.Override
       public io.opencannabis.schema.commerce.CommercialPurchase.Payment.CheckPayment getDefaultInstanceForType() {
         return DEFAULT_INSTANCE;
       }
@@ -14195,17 +13729,17 @@ public final class CommercialPurchase {
               case 0:
                 done = true;
                 break;
+              case 8: {
+                int rawValue = input.readEnum();
+
+                cardType_ = rawValue;
+                break;
+              }
               default: {
                 if (!parseUnknownFieldProto3(
                     input, unknownFields, extensionRegistry, tag)) {
                   done = true;
                 }
-                break;
-              }
-              case 8: {
-                int rawValue = input.readEnum();
-
-                cardType_ = rawValue;
                 break;
               }
             }
@@ -14225,6 +13759,7 @@ public final class CommercialPurchase {
         return io.opencannabis.schema.commerce.CommercialPurchase.internal_static_opencannabis_commerce_Payment_CardPayment_descriptor;
       }
 
+      @java.lang.Override
       protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
           internalGetFieldAccessorTable() {
         return io.opencannabis.schema.commerce.CommercialPurchase.internal_static_opencannabis_commerce_Payment_CardPayment_fieldAccessorTable
@@ -14252,11 +13787,13 @@ public final class CommercialPurchase {
        * <code>.opencannabis.commerce.PaymentCardType card_type = 1;</code>
        */
       public io.opencannabis.schema.commerce.Payments.PaymentCardType getCardType() {
+        @SuppressWarnings("deprecation")
         io.opencannabis.schema.commerce.Payments.PaymentCardType result = io.opencannabis.schema.commerce.Payments.PaymentCardType.valueOf(cardType_);
         return result == null ? io.opencannabis.schema.commerce.Payments.PaymentCardType.UNRECOGNIZED : result;
       }
 
       private byte memoizedIsInitialized = -1;
+      @java.lang.Override
       public final boolean isInitialized() {
         byte isInitialized = memoizedIsInitialized;
         if (isInitialized == 1) return true;
@@ -14266,6 +13803,7 @@ public final class CommercialPurchase {
         return true;
       }
 
+      @java.lang.Override
       public void writeTo(com.google.protobuf.CodedOutputStream output)
                           throws java.io.IOException {
         if (cardType_ != io.opencannabis.schema.commerce.Payments.PaymentCardType.NO_CARD_TYPE.getNumber()) {
@@ -14274,6 +13812,7 @@ public final class CommercialPurchase {
         unknownFields.writeTo(output);
       }
 
+      @java.lang.Override
       public int getSerializedSize() {
         int size = memoizedSize;
         if (size != -1) return size;
@@ -14388,6 +13927,7 @@ public final class CommercialPurchase {
             .parseWithIOException(PARSER, input, extensionRegistry);
       }
 
+      @java.lang.Override
       public Builder newBuilderForType() { return newBuilder(); }
       public static Builder newBuilder() {
         return DEFAULT_INSTANCE.toBuilder();
@@ -14395,6 +13935,7 @@ public final class CommercialPurchase {
       public static Builder newBuilder(io.opencannabis.schema.commerce.CommercialPurchase.Payment.CardPayment prototype) {
         return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
       }
+      @java.lang.Override
       public Builder toBuilder() {
         return this == DEFAULT_INSTANCE
             ? new Builder() : new Builder().mergeFrom(this);
@@ -14422,6 +13963,7 @@ public final class CommercialPurchase {
           return io.opencannabis.schema.commerce.CommercialPurchase.internal_static_opencannabis_commerce_Payment_CardPayment_descriptor;
         }
 
+        @java.lang.Override
         protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
             internalGetFieldAccessorTable() {
           return io.opencannabis.schema.commerce.CommercialPurchase.internal_static_opencannabis_commerce_Payment_CardPayment_fieldAccessorTable
@@ -14444,6 +13986,7 @@ public final class CommercialPurchase {
                   .alwaysUseFieldBuilders) {
           }
         }
+        @java.lang.Override
         public Builder clear() {
           super.clear();
           cardType_ = 0;
@@ -14451,15 +13994,18 @@ public final class CommercialPurchase {
           return this;
         }
 
+        @java.lang.Override
         public com.google.protobuf.Descriptors.Descriptor
             getDescriptorForType() {
           return io.opencannabis.schema.commerce.CommercialPurchase.internal_static_opencannabis_commerce_Payment_CardPayment_descriptor;
         }
 
+        @java.lang.Override
         public io.opencannabis.schema.commerce.CommercialPurchase.Payment.CardPayment getDefaultInstanceForType() {
           return io.opencannabis.schema.commerce.CommercialPurchase.Payment.CardPayment.getDefaultInstance();
         }
 
+        @java.lang.Override
         public io.opencannabis.schema.commerce.CommercialPurchase.Payment.CardPayment build() {
           io.opencannabis.schema.commerce.CommercialPurchase.Payment.CardPayment result = buildPartial();
           if (!result.isInitialized()) {
@@ -14468,6 +14014,7 @@ public final class CommercialPurchase {
           return result;
         }
 
+        @java.lang.Override
         public io.opencannabis.schema.commerce.CommercialPurchase.Payment.CardPayment buildPartial() {
           io.opencannabis.schema.commerce.CommercialPurchase.Payment.CardPayment result = new io.opencannabis.schema.commerce.CommercialPurchase.Payment.CardPayment(this);
           result.cardType_ = cardType_;
@@ -14475,32 +14022,39 @@ public final class CommercialPurchase {
           return result;
         }
 
+        @java.lang.Override
         public Builder clone() {
           return (Builder) super.clone();
         }
+        @java.lang.Override
         public Builder setField(
             com.google.protobuf.Descriptors.FieldDescriptor field,
             java.lang.Object value) {
           return (Builder) super.setField(field, value);
         }
+        @java.lang.Override
         public Builder clearField(
             com.google.protobuf.Descriptors.FieldDescriptor field) {
           return (Builder) super.clearField(field);
         }
+        @java.lang.Override
         public Builder clearOneof(
             com.google.protobuf.Descriptors.OneofDescriptor oneof) {
           return (Builder) super.clearOneof(oneof);
         }
+        @java.lang.Override
         public Builder setRepeatedField(
             com.google.protobuf.Descriptors.FieldDescriptor field,
             int index, java.lang.Object value) {
           return (Builder) super.setRepeatedField(field, index, value);
         }
+        @java.lang.Override
         public Builder addRepeatedField(
             com.google.protobuf.Descriptors.FieldDescriptor field,
             java.lang.Object value) {
           return (Builder) super.addRepeatedField(field, value);
         }
+        @java.lang.Override
         public Builder mergeFrom(com.google.protobuf.Message other) {
           if (other instanceof io.opencannabis.schema.commerce.CommercialPurchase.Payment.CardPayment) {
             return mergeFrom((io.opencannabis.schema.commerce.CommercialPurchase.Payment.CardPayment)other);
@@ -14520,10 +14074,12 @@ public final class CommercialPurchase {
           return this;
         }
 
+        @java.lang.Override
         public final boolean isInitialized() {
           return true;
         }
 
+        @java.lang.Override
         public Builder mergeFrom(
             com.google.protobuf.CodedInputStream input,
             com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -14573,6 +14129,7 @@ public final class CommercialPurchase {
          * <code>.opencannabis.commerce.PaymentCardType card_type = 1;</code>
          */
         public io.opencannabis.schema.commerce.Payments.PaymentCardType getCardType() {
+          @SuppressWarnings("deprecation")
           io.opencannabis.schema.commerce.Payments.PaymentCardType result = io.opencannabis.schema.commerce.Payments.PaymentCardType.valueOf(cardType_);
           return result == null ? io.opencannabis.schema.commerce.Payments.PaymentCardType.UNRECOGNIZED : result;
         }
@@ -14605,11 +14162,13 @@ public final class CommercialPurchase {
           onChanged();
           return this;
         }
+        @java.lang.Override
         public final Builder setUnknownFields(
             final com.google.protobuf.UnknownFieldSet unknownFields) {
           return super.setUnknownFieldsProto3(unknownFields);
         }
 
+        @java.lang.Override
         public final Builder mergeUnknownFields(
             final com.google.protobuf.UnknownFieldSet unknownFields) {
           return super.mergeUnknownFields(unknownFields);
@@ -14631,6 +14190,7 @@ public final class CommercialPurchase {
 
       private static final com.google.protobuf.Parser<CardPayment>
           PARSER = new com.google.protobuf.AbstractParser<CardPayment>() {
+        @java.lang.Override
         public CardPayment parsePartialFrom(
             com.google.protobuf.CodedInputStream input,
             com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -14648,6 +14208,7 @@ public final class CommercialPurchase {
         return PARSER;
       }
 
+      @java.lang.Override
       public io.opencannabis.schema.commerce.CommercialPurchase.Payment.CardPayment getDefaultInstanceForType() {
         return DEFAULT_INSTANCE;
       }
@@ -14758,13 +14319,6 @@ public final class CommercialPurchase {
               case 0:
                 done = true;
                 break;
-              default: {
-                if (!parseUnknownFieldProto3(
-                    input, unknownFields, extensionRegistry, tag)) {
-                  done = true;
-                }
-                break;
-              }
               case 10: {
                 java.lang.String s = input.readStringRequireUtf8();
 
@@ -14781,6 +14335,13 @@ public final class CommercialPurchase {
                 java.lang.String s = input.readStringRequireUtf8();
 
                 reference_ = s;
+                break;
+              }
+              default: {
+                if (!parseUnknownFieldProto3(
+                    input, unknownFields, extensionRegistry, tag)) {
+                  done = true;
+                }
                 break;
               }
             }
@@ -14800,6 +14361,7 @@ public final class CommercialPurchase {
         return io.opencannabis.schema.commerce.CommercialPurchase.internal_static_opencannabis_commerce_Payment_BankPayment_descriptor;
       }
 
+      @java.lang.Override
       protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
           internalGetFieldAccessorTable() {
         return io.opencannabis.schema.commerce.CommercialPurchase.internal_static_opencannabis_commerce_Payment_BankPayment_fieldAccessorTable
@@ -14934,6 +14496,7 @@ public final class CommercialPurchase {
       }
 
       private byte memoizedIsInitialized = -1;
+      @java.lang.Override
       public final boolean isInitialized() {
         byte isInitialized = memoizedIsInitialized;
         if (isInitialized == 1) return true;
@@ -14943,6 +14506,7 @@ public final class CommercialPurchase {
         return true;
       }
 
+      @java.lang.Override
       public void writeTo(com.google.protobuf.CodedOutputStream output)
                           throws java.io.IOException {
         if (!getRoutingNumberBytes().isEmpty()) {
@@ -14957,6 +14521,7 @@ public final class CommercialPurchase {
         unknownFields.writeTo(output);
       }
 
+      @java.lang.Override
       public int getSerializedSize() {
         int size = memoizedSize;
         if (size != -1) return size;
@@ -15085,6 +14650,7 @@ public final class CommercialPurchase {
             .parseWithIOException(PARSER, input, extensionRegistry);
       }
 
+      @java.lang.Override
       public Builder newBuilderForType() { return newBuilder(); }
       public static Builder newBuilder() {
         return DEFAULT_INSTANCE.toBuilder();
@@ -15092,6 +14658,7 @@ public final class CommercialPurchase {
       public static Builder newBuilder(io.opencannabis.schema.commerce.CommercialPurchase.Payment.BankPayment prototype) {
         return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
       }
+      @java.lang.Override
       public Builder toBuilder() {
         return this == DEFAULT_INSTANCE
             ? new Builder() : new Builder().mergeFrom(this);
@@ -15119,6 +14686,7 @@ public final class CommercialPurchase {
           return io.opencannabis.schema.commerce.CommercialPurchase.internal_static_opencannabis_commerce_Payment_BankPayment_descriptor;
         }
 
+        @java.lang.Override
         protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
             internalGetFieldAccessorTable() {
           return io.opencannabis.schema.commerce.CommercialPurchase.internal_static_opencannabis_commerce_Payment_BankPayment_fieldAccessorTable
@@ -15141,6 +14709,7 @@ public final class CommercialPurchase {
                   .alwaysUseFieldBuilders) {
           }
         }
+        @java.lang.Override
         public Builder clear() {
           super.clear();
           routingNumber_ = "";
@@ -15152,15 +14721,18 @@ public final class CommercialPurchase {
           return this;
         }
 
+        @java.lang.Override
         public com.google.protobuf.Descriptors.Descriptor
             getDescriptorForType() {
           return io.opencannabis.schema.commerce.CommercialPurchase.internal_static_opencannabis_commerce_Payment_BankPayment_descriptor;
         }
 
+        @java.lang.Override
         public io.opencannabis.schema.commerce.CommercialPurchase.Payment.BankPayment getDefaultInstanceForType() {
           return io.opencannabis.schema.commerce.CommercialPurchase.Payment.BankPayment.getDefaultInstance();
         }
 
+        @java.lang.Override
         public io.opencannabis.schema.commerce.CommercialPurchase.Payment.BankPayment build() {
           io.opencannabis.schema.commerce.CommercialPurchase.Payment.BankPayment result = buildPartial();
           if (!result.isInitialized()) {
@@ -15169,6 +14741,7 @@ public final class CommercialPurchase {
           return result;
         }
 
+        @java.lang.Override
         public io.opencannabis.schema.commerce.CommercialPurchase.Payment.BankPayment buildPartial() {
           io.opencannabis.schema.commerce.CommercialPurchase.Payment.BankPayment result = new io.opencannabis.schema.commerce.CommercialPurchase.Payment.BankPayment(this);
           result.routingNumber_ = routingNumber_;
@@ -15178,32 +14751,39 @@ public final class CommercialPurchase {
           return result;
         }
 
+        @java.lang.Override
         public Builder clone() {
           return (Builder) super.clone();
         }
+        @java.lang.Override
         public Builder setField(
             com.google.protobuf.Descriptors.FieldDescriptor field,
             java.lang.Object value) {
           return (Builder) super.setField(field, value);
         }
+        @java.lang.Override
         public Builder clearField(
             com.google.protobuf.Descriptors.FieldDescriptor field) {
           return (Builder) super.clearField(field);
         }
+        @java.lang.Override
         public Builder clearOneof(
             com.google.protobuf.Descriptors.OneofDescriptor oneof) {
           return (Builder) super.clearOneof(oneof);
         }
+        @java.lang.Override
         public Builder setRepeatedField(
             com.google.protobuf.Descriptors.FieldDescriptor field,
             int index, java.lang.Object value) {
           return (Builder) super.setRepeatedField(field, index, value);
         }
+        @java.lang.Override
         public Builder addRepeatedField(
             com.google.protobuf.Descriptors.FieldDescriptor field,
             java.lang.Object value) {
           return (Builder) super.addRepeatedField(field, value);
         }
+        @java.lang.Override
         public Builder mergeFrom(com.google.protobuf.Message other) {
           if (other instanceof io.opencannabis.schema.commerce.CommercialPurchase.Payment.BankPayment) {
             return mergeFrom((io.opencannabis.schema.commerce.CommercialPurchase.Payment.BankPayment)other);
@@ -15232,10 +14812,12 @@ public final class CommercialPurchase {
           return this;
         }
 
+        @java.lang.Override
         public final boolean isInitialized() {
           return true;
         }
 
+        @java.lang.Override
         public Builder mergeFrom(
             com.google.protobuf.CodedInputStream input,
             com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -15520,11 +15102,13 @@ public final class CommercialPurchase {
           onChanged();
           return this;
         }
+        @java.lang.Override
         public final Builder setUnknownFields(
             final com.google.protobuf.UnknownFieldSet unknownFields) {
           return super.setUnknownFieldsProto3(unknownFields);
         }
 
+        @java.lang.Override
         public final Builder mergeUnknownFields(
             final com.google.protobuf.UnknownFieldSet unknownFields) {
           return super.mergeUnknownFields(unknownFields);
@@ -15546,6 +15130,7 @@ public final class CommercialPurchase {
 
       private static final com.google.protobuf.Parser<BankPayment>
           PARSER = new com.google.protobuf.AbstractParser<BankPayment>() {
+        @java.lang.Override
         public BankPayment parsePartialFrom(
             com.google.protobuf.CodedInputStream input,
             com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -15563,6 +15148,7 @@ public final class CommercialPurchase {
         return PARSER;
       }
 
+      @java.lang.Override
       public io.opencannabis.schema.commerce.CommercialPurchase.Payment.BankPayment getDefaultInstanceForType() {
         return DEFAULT_INSTANCE;
       }
@@ -15672,13 +15258,6 @@ public final class CommercialPurchase {
               case 0:
                 done = true;
                 break;
-              default: {
-                if (!parseUnknownFieldProto3(
-                    input, unknownFields, extensionRegistry, tag)) {
-                  done = true;
-                }
-                break;
-              }
               case 8: {
                 int rawValue = input.readEnum();
 
@@ -15695,6 +15274,13 @@ public final class CommercialPurchase {
                 java.lang.String s = input.readStringRequireUtf8();
 
                 reference_ = s;
+                break;
+              }
+              default: {
+                if (!parseUnknownFieldProto3(
+                    input, unknownFields, extensionRegistry, tag)) {
+                  done = true;
+                }
                 break;
               }
             }
@@ -15714,6 +15300,7 @@ public final class CommercialPurchase {
         return io.opencannabis.schema.commerce.CommercialPurchase.internal_static_opencannabis_commerce_Payment_DigitalPayment_descriptor;
       }
 
+      @java.lang.Override
       protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
           internalGetFieldAccessorTable() {
         return io.opencannabis.schema.commerce.CommercialPurchase.internal_static_opencannabis_commerce_Payment_DigitalPayment_fieldAccessorTable
@@ -15741,6 +15328,7 @@ public final class CommercialPurchase {
        * <code>.opencannabis.commerce.DigitalPaymentNetwork network = 1;</code>
        */
       public io.opencannabis.schema.commerce.Payments.DigitalPaymentNetwork getNetwork() {
+        @SuppressWarnings("deprecation")
         io.opencannabis.schema.commerce.Payments.DigitalPaymentNetwork result = io.opencannabis.schema.commerce.Payments.DigitalPaymentNetwork.valueOf(network_);
         return result == null ? io.opencannabis.schema.commerce.Payments.DigitalPaymentNetwork.UNRECOGNIZED : result;
       }
@@ -15830,6 +15418,7 @@ public final class CommercialPurchase {
       }
 
       private byte memoizedIsInitialized = -1;
+      @java.lang.Override
       public final boolean isInitialized() {
         byte isInitialized = memoizedIsInitialized;
         if (isInitialized == 1) return true;
@@ -15839,6 +15428,7 @@ public final class CommercialPurchase {
         return true;
       }
 
+      @java.lang.Override
       public void writeTo(com.google.protobuf.CodedOutputStream output)
                           throws java.io.IOException {
         if (network_ != io.opencannabis.schema.commerce.Payments.DigitalPaymentNetwork.UNSPECIFIED_NETWORK.getNumber()) {
@@ -15853,6 +15443,7 @@ public final class CommercialPurchase {
         unknownFields.writeTo(output);
       }
 
+      @java.lang.Override
       public int getSerializedSize() {
         int size = memoizedSize;
         if (size != -1) return size;
@@ -15981,6 +15572,7 @@ public final class CommercialPurchase {
             .parseWithIOException(PARSER, input, extensionRegistry);
       }
 
+      @java.lang.Override
       public Builder newBuilderForType() { return newBuilder(); }
       public static Builder newBuilder() {
         return DEFAULT_INSTANCE.toBuilder();
@@ -15988,6 +15580,7 @@ public final class CommercialPurchase {
       public static Builder newBuilder(io.opencannabis.schema.commerce.CommercialPurchase.Payment.DigitalPayment prototype) {
         return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
       }
+      @java.lang.Override
       public Builder toBuilder() {
         return this == DEFAULT_INSTANCE
             ? new Builder() : new Builder().mergeFrom(this);
@@ -16015,6 +15608,7 @@ public final class CommercialPurchase {
           return io.opencannabis.schema.commerce.CommercialPurchase.internal_static_opencannabis_commerce_Payment_DigitalPayment_descriptor;
         }
 
+        @java.lang.Override
         protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
             internalGetFieldAccessorTable() {
           return io.opencannabis.schema.commerce.CommercialPurchase.internal_static_opencannabis_commerce_Payment_DigitalPayment_fieldAccessorTable
@@ -16037,6 +15631,7 @@ public final class CommercialPurchase {
                   .alwaysUseFieldBuilders) {
           }
         }
+        @java.lang.Override
         public Builder clear() {
           super.clear();
           network_ = 0;
@@ -16048,15 +15643,18 @@ public final class CommercialPurchase {
           return this;
         }
 
+        @java.lang.Override
         public com.google.protobuf.Descriptors.Descriptor
             getDescriptorForType() {
           return io.opencannabis.schema.commerce.CommercialPurchase.internal_static_opencannabis_commerce_Payment_DigitalPayment_descriptor;
         }
 
+        @java.lang.Override
         public io.opencannabis.schema.commerce.CommercialPurchase.Payment.DigitalPayment getDefaultInstanceForType() {
           return io.opencannabis.schema.commerce.CommercialPurchase.Payment.DigitalPayment.getDefaultInstance();
         }
 
+        @java.lang.Override
         public io.opencannabis.schema.commerce.CommercialPurchase.Payment.DigitalPayment build() {
           io.opencannabis.schema.commerce.CommercialPurchase.Payment.DigitalPayment result = buildPartial();
           if (!result.isInitialized()) {
@@ -16065,6 +15663,7 @@ public final class CommercialPurchase {
           return result;
         }
 
+        @java.lang.Override
         public io.opencannabis.schema.commerce.CommercialPurchase.Payment.DigitalPayment buildPartial() {
           io.opencannabis.schema.commerce.CommercialPurchase.Payment.DigitalPayment result = new io.opencannabis.schema.commerce.CommercialPurchase.Payment.DigitalPayment(this);
           result.network_ = network_;
@@ -16074,32 +15673,39 @@ public final class CommercialPurchase {
           return result;
         }
 
+        @java.lang.Override
         public Builder clone() {
           return (Builder) super.clone();
         }
+        @java.lang.Override
         public Builder setField(
             com.google.protobuf.Descriptors.FieldDescriptor field,
             java.lang.Object value) {
           return (Builder) super.setField(field, value);
         }
+        @java.lang.Override
         public Builder clearField(
             com.google.protobuf.Descriptors.FieldDescriptor field) {
           return (Builder) super.clearField(field);
         }
+        @java.lang.Override
         public Builder clearOneof(
             com.google.protobuf.Descriptors.OneofDescriptor oneof) {
           return (Builder) super.clearOneof(oneof);
         }
+        @java.lang.Override
         public Builder setRepeatedField(
             com.google.protobuf.Descriptors.FieldDescriptor field,
             int index, java.lang.Object value) {
           return (Builder) super.setRepeatedField(field, index, value);
         }
+        @java.lang.Override
         public Builder addRepeatedField(
             com.google.protobuf.Descriptors.FieldDescriptor field,
             java.lang.Object value) {
           return (Builder) super.addRepeatedField(field, value);
         }
+        @java.lang.Override
         public Builder mergeFrom(com.google.protobuf.Message other) {
           if (other instanceof io.opencannabis.schema.commerce.CommercialPurchase.Payment.DigitalPayment) {
             return mergeFrom((io.opencannabis.schema.commerce.CommercialPurchase.Payment.DigitalPayment)other);
@@ -16127,10 +15733,12 @@ public final class CommercialPurchase {
           return this;
         }
 
+        @java.lang.Override
         public final boolean isInitialized() {
           return true;
         }
 
+        @java.lang.Override
         public Builder mergeFrom(
             com.google.protobuf.CodedInputStream input,
             com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -16180,6 +15788,7 @@ public final class CommercialPurchase {
          * <code>.opencannabis.commerce.DigitalPaymentNetwork network = 1;</code>
          */
         public io.opencannabis.schema.commerce.Payments.DigitalPaymentNetwork getNetwork() {
+          @SuppressWarnings("deprecation")
           io.opencannabis.schema.commerce.Payments.DigitalPaymentNetwork result = io.opencannabis.schema.commerce.Payments.DigitalPaymentNetwork.valueOf(network_);
           return result == null ? io.opencannabis.schema.commerce.Payments.DigitalPaymentNetwork.UNRECOGNIZED : result;
         }
@@ -16390,11 +15999,13 @@ public final class CommercialPurchase {
           onChanged();
           return this;
         }
+        @java.lang.Override
         public final Builder setUnknownFields(
             final com.google.protobuf.UnknownFieldSet unknownFields) {
           return super.setUnknownFieldsProto3(unknownFields);
         }
 
+        @java.lang.Override
         public final Builder mergeUnknownFields(
             final com.google.protobuf.UnknownFieldSet unknownFields) {
           return super.mergeUnknownFields(unknownFields);
@@ -16416,6 +16027,7 @@ public final class CommercialPurchase {
 
       private static final com.google.protobuf.Parser<DigitalPayment>
           PARSER = new com.google.protobuf.AbstractParser<DigitalPayment>() {
+        @java.lang.Override
         public DigitalPayment parsePartialFrom(
             com.google.protobuf.CodedInputStream input,
             com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -16433,6 +16045,7 @@ public final class CommercialPurchase {
         return PARSER;
       }
 
+      @java.lang.Override
       public io.opencannabis.schema.commerce.CommercialPurchase.Payment.DigitalPayment getDefaultInstanceForType() {
         return DEFAULT_INSTANCE;
       }
@@ -16536,6 +16149,7 @@ public final class CommercialPurchase {
      * <code>.opencannabis.commerce.PaymentMethod method = 2;</code>
      */
     public io.opencannabis.schema.commerce.Payments.PaymentMethod getMethod() {
+      @SuppressWarnings("deprecation")
       io.opencannabis.schema.commerce.Payments.PaymentMethod result = io.opencannabis.schema.commerce.Payments.PaymentMethod.valueOf(method_);
       return result == null ? io.opencannabis.schema.commerce.Payments.PaymentMethod.UNRECOGNIZED : result;
     }
@@ -16560,6 +16174,7 @@ public final class CommercialPurchase {
      * <code>.opencannabis.commerce.PaymentStatus status = 3;</code>
      */
     public io.opencannabis.schema.commerce.Payments.PaymentStatus getStatus() {
+      @SuppressWarnings("deprecation")
       io.opencannabis.schema.commerce.Payments.PaymentStatus result = io.opencannabis.schema.commerce.Payments.PaymentStatus.valueOf(status_);
       return result == null ? io.opencannabis.schema.commerce.Payments.PaymentStatus.UNRECOGNIZED : result;
     }
@@ -16781,6 +16396,7 @@ public final class CommercialPurchase {
     }
 
     private byte memoizedIsInitialized = -1;
+    @java.lang.Override
     public final boolean isInitialized() {
       byte isInitialized = memoizedIsInitialized;
       if (isInitialized == 1) return true;
@@ -16790,6 +16406,7 @@ public final class CommercialPurchase {
       return true;
     }
 
+    @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
       if (key_ != null) {
@@ -16825,6 +16442,7 @@ public final class CommercialPurchase {
       unknownFields.writeTo(output);
     }
 
+    @java.lang.Override
     public int getSerializedSize() {
       int size = memoizedSize;
       if (size != -1) return size;
@@ -17050,6 +16668,7 @@ public final class CommercialPurchase {
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
 
+    @java.lang.Override
     public Builder newBuilderForType() { return newBuilder(); }
     public static Builder newBuilder() {
       return DEFAULT_INSTANCE.toBuilder();
@@ -17057,6 +16676,7 @@ public final class CommercialPurchase {
     public static Builder newBuilder(io.opencannabis.schema.commerce.CommercialPurchase.Payment prototype) {
       return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
     }
+    @java.lang.Override
     public Builder toBuilder() {
       return this == DEFAULT_INSTANCE
           ? new Builder() : new Builder().mergeFrom(this);
@@ -17084,6 +16704,7 @@ public final class CommercialPurchase {
         return io.opencannabis.schema.commerce.CommercialPurchase.internal_static_opencannabis_commerce_Payment_descriptor;
       }
 
+      @java.lang.Override
       protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
           internalGetFieldAccessorTable() {
         return io.opencannabis.schema.commerce.CommercialPurchase.internal_static_opencannabis_commerce_Payment_fieldAccessorTable
@@ -17106,6 +16727,7 @@ public final class CommercialPurchase {
                 .alwaysUseFieldBuilders) {
         }
       }
+      @java.lang.Override
       public Builder clear() {
         super.clear();
         if (keyBuilder_ == null) {
@@ -17127,15 +16749,18 @@ public final class CommercialPurchase {
         return this;
       }
 
+      @java.lang.Override
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
         return io.opencannabis.schema.commerce.CommercialPurchase.internal_static_opencannabis_commerce_Payment_descriptor;
       }
 
+      @java.lang.Override
       public io.opencannabis.schema.commerce.CommercialPurchase.Payment getDefaultInstanceForType() {
         return io.opencannabis.schema.commerce.CommercialPurchase.Payment.getDefaultInstance();
       }
 
+      @java.lang.Override
       public io.opencannabis.schema.commerce.CommercialPurchase.Payment build() {
         io.opencannabis.schema.commerce.CommercialPurchase.Payment result = buildPartial();
         if (!result.isInitialized()) {
@@ -17144,6 +16769,7 @@ public final class CommercialPurchase {
         return result;
       }
 
+      @java.lang.Override
       public io.opencannabis.schema.commerce.CommercialPurchase.Payment buildPartial() {
         io.opencannabis.schema.commerce.CommercialPurchase.Payment result = new io.opencannabis.schema.commerce.CommercialPurchase.Payment(this);
         if (keyBuilder_ == null) {
@@ -17195,32 +16821,39 @@ public final class CommercialPurchase {
         return result;
       }
 
+      @java.lang.Override
       public Builder clone() {
         return (Builder) super.clone();
       }
+      @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
         return (Builder) super.setField(field, value);
       }
+      @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
         return (Builder) super.clearField(field);
       }
+      @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
         return (Builder) super.clearOneof(oneof);
       }
+      @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
         return (Builder) super.setRepeatedField(field, index, value);
       }
+      @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
         return (Builder) super.addRepeatedField(field, value);
       }
+      @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
         if (other instanceof io.opencannabis.schema.commerce.CommercialPurchase.Payment) {
           return mergeFrom((io.opencannabis.schema.commerce.CommercialPurchase.Payment)other);
@@ -17277,10 +16910,12 @@ public final class CommercialPurchase {
         return this;
       }
 
+      @java.lang.Override
       public final boolean isInitialized() {
         return true;
       }
 
+      @java.lang.Override
       public Builder mergeFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -17498,6 +17133,7 @@ public final class CommercialPurchase {
        * <code>.opencannabis.commerce.PaymentMethod method = 2;</code>
        */
       public io.opencannabis.schema.commerce.Payments.PaymentMethod getMethod() {
+        @SuppressWarnings("deprecation")
         io.opencannabis.schema.commerce.Payments.PaymentMethod result = io.opencannabis.schema.commerce.Payments.PaymentMethod.valueOf(method_);
         return result == null ? io.opencannabis.schema.commerce.Payments.PaymentMethod.UNRECOGNIZED : result;
       }
@@ -17562,6 +17198,7 @@ public final class CommercialPurchase {
        * <code>.opencannabis.commerce.PaymentStatus status = 3;</code>
        */
       public io.opencannabis.schema.commerce.Payments.PaymentStatus getStatus() {
+        @SuppressWarnings("deprecation")
         io.opencannabis.schema.commerce.Payments.PaymentStatus result = io.opencannabis.schema.commerce.Payments.PaymentStatus.valueOf(status_);
         return result == null ? io.opencannabis.schema.commerce.Payments.PaymentStatus.UNRECOGNIZED : result;
       }
@@ -18530,11 +18167,13 @@ public final class CommercialPurchase {
         onChanged();;
         return digitalBuilder_;
       }
+      @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
         return super.setUnknownFieldsProto3(unknownFields);
       }
 
+      @java.lang.Override
       public final Builder mergeUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
         return super.mergeUnknownFields(unknownFields);
@@ -18556,6 +18195,7 @@ public final class CommercialPurchase {
 
     private static final com.google.protobuf.Parser<Payment>
         PARSER = new com.google.protobuf.AbstractParser<Payment>() {
+      @java.lang.Override
       public Payment parsePartialFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -18573,3503 +18213,8 @@ public final class CommercialPurchase {
       return PARSER;
     }
 
+    @java.lang.Override
     public io.opencannabis.schema.commerce.CommercialPurchase.Payment getDefaultInstanceForType() {
-      return DEFAULT_INSTANCE;
-    }
-
-  }
-
-  public interface PurchaseTicketOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:opencannabis.commerce.PurchaseTicket)
-      com.google.protobuf.MessageOrBuilder {
-
-    /**
-     * <pre>
-     * Unique key generated to address this purchase. Usually consists of a string UUID.
-     * </pre>
-     *
-     * <code>.opencannabis.commerce.PurchaseKey key = 1 [(.core.field) = { ... }</code>
-     */
-    boolean hasKey();
-    /**
-     * <pre>
-     * Unique key generated to address this purchase. Usually consists of a string UUID.
-     * </pre>
-     *
-     * <code>.opencannabis.commerce.PurchaseKey key = 1 [(.core.field) = { ... }</code>
-     */
-    io.opencannabis.schema.commerce.CommercialPurchase.PurchaseKey getKey();
-    /**
-     * <pre>
-     * Unique key generated to address this purchase. Usually consists of a string UUID.
-     * </pre>
-     *
-     * <code>.opencannabis.commerce.PurchaseKey key = 1 [(.core.field) = { ... }</code>
-     */
-    io.opencannabis.schema.commerce.CommercialPurchase.PurchaseKeyOrBuilder getKeyOrBuilder();
-
-    /**
-     * <pre>
-     * Version or revision number for this purchase ticket.
-     * </pre>
-     *
-     * <code>uint32 version = 2;</code>
-     */
-    int getVersion();
-
-    /**
-     * <pre>
-     * Specifies the current status of this individual purchase transaction.
-     * </pre>
-     *
-     * <code>.opencannabis.commerce.PurchaseStatus status = 3;</code>
-     */
-    int getStatusValue();
-    /**
-     * <pre>
-     * Specifies the current status of this individual purchase transaction.
-     * </pre>
-     *
-     * <code>.opencannabis.commerce.PurchaseStatus status = 3;</code>
-     */
-    io.opencannabis.schema.commerce.CommercialPurchase.PurchaseStatus getStatus();
-
-    /**
-     * <pre>
-     * Point-of-sale session that is currently claiming this ticket, or last claimed this ticket.
-     * </pre>
-     *
-     * <code>string claim = 4;</code>
-     */
-    java.lang.String getClaim();
-    /**
-     * <pre>
-     * Point-of-sale session that is currently claiming this ticket, or last claimed this ticket.
-     * </pre>
-     *
-     * <code>string claim = 4;</code>
-     */
-    com.google.protobuf.ByteString
-        getClaimBytes();
-
-    /**
-     * <pre>
-     * Partner organization, location, device, and staff member that facilitated this transaction.
-     * </pre>
-     *
-     * <code>.opencannabis.commerce.PurchaseFacilitator facilitator = 5;</code>
-     */
-    boolean hasFacilitator();
-    /**
-     * <pre>
-     * Partner organization, location, device, and staff member that facilitated this transaction.
-     * </pre>
-     *
-     * <code>.opencannabis.commerce.PurchaseFacilitator facilitator = 5;</code>
-     */
-    io.opencannabis.schema.commerce.CommercialPurchase.PurchaseFacilitator getFacilitator();
-    /**
-     * <pre>
-     * Partner organization, location, device, and staff member that facilitated this transaction.
-     * </pre>
-     *
-     * <code>.opencannabis.commerce.PurchaseFacilitator facilitator = 5;</code>
-     */
-    io.opencannabis.schema.commerce.CommercialPurchase.PurchaseFacilitatorOrBuilder getFacilitatorOrBuilder();
-
-    /**
-     * <pre>
-     * Specifies information regarding the customer that made this purchase.
-     * </pre>
-     *
-     * <code>.opencannabis.commerce.PurchaseCustomer customer = 6;</code>
-     */
-    boolean hasCustomer();
-    /**
-     * <pre>
-     * Specifies information regarding the customer that made this purchase.
-     * </pre>
-     *
-     * <code>.opencannabis.commerce.PurchaseCustomer customer = 6;</code>
-     */
-    io.opencannabis.schema.commerce.CommercialPurchase.PurchaseCustomer getCustomer();
-    /**
-     * <pre>
-     * Specifies information regarding the customer that made this purchase.
-     * </pre>
-     *
-     * <code>.opencannabis.commerce.PurchaseCustomer customer = 6;</code>
-     */
-    io.opencannabis.schema.commerce.CommercialPurchase.PurchaseCustomerOrBuilder getCustomerOrBuilder();
-
-    /**
-     * <pre>
-     * Line-item bill of charges, or purchase sums. Includes taxes and discounts.
-     * </pre>
-     *
-     * <code>.opencannabis.commerce.BillOfCharges bill = 7;</code>
-     */
-    boolean hasBill();
-    /**
-     * <pre>
-     * Line-item bill of charges, or purchase sums. Includes taxes and discounts.
-     * </pre>
-     *
-     * <code>.opencannabis.commerce.BillOfCharges bill = 7;</code>
-     */
-    io.opencannabis.schema.commerce.CommercialPurchase.BillOfCharges getBill();
-    /**
-     * <pre>
-     * Line-item bill of charges, or purchase sums. Includes taxes and discounts.
-     * </pre>
-     *
-     * <code>.opencannabis.commerce.BillOfCharges bill = 7;</code>
-     */
-    io.opencannabis.schema.commerce.CommercialPurchase.BillOfChargesOrBuilder getBillOrBuilder();
-
-    /**
-     * <pre>
-     * Constituent items purchased as part of this commercial purchase ticket.
-     * </pre>
-     *
-     * <code>repeated .opencannabis.commerce.TicketItem item = 8;</code>
-     */
-    java.util.List<io.opencannabis.schema.commerce.CommercialPurchase.TicketItem> 
-        getItemList();
-    /**
-     * <pre>
-     * Constituent items purchased as part of this commercial purchase ticket.
-     * </pre>
-     *
-     * <code>repeated .opencannabis.commerce.TicketItem item = 8;</code>
-     */
-    io.opencannabis.schema.commerce.CommercialPurchase.TicketItem getItem(int index);
-    /**
-     * <pre>
-     * Constituent items purchased as part of this commercial purchase ticket.
-     * </pre>
-     *
-     * <code>repeated .opencannabis.commerce.TicketItem item = 8;</code>
-     */
-    int getItemCount();
-    /**
-     * <pre>
-     * Constituent items purchased as part of this commercial purchase ticket.
-     * </pre>
-     *
-     * <code>repeated .opencannabis.commerce.TicketItem item = 8;</code>
-     */
-    java.util.List<? extends io.opencannabis.schema.commerce.CommercialPurchase.TicketItemOrBuilder> 
-        getItemOrBuilderList();
-    /**
-     * <pre>
-     * Constituent items purchased as part of this commercial purchase ticket.
-     * </pre>
-     *
-     * <code>repeated .opencannabis.commerce.TicketItem item = 8;</code>
-     */
-    io.opencannabis.schema.commerce.CommercialPurchase.TicketItemOrBuilder getItemOrBuilder(
-        int index);
-
-    /**
-     * <pre>
-     * Specifies how this order was paid for, if applicable at this point in the ticket lifecycle.
-     * </pre>
-     *
-     * <code>repeated .opencannabis.commerce.Payment payment = 9;</code>
-     */
-    java.util.List<io.opencannabis.schema.commerce.CommercialPurchase.Payment> 
-        getPaymentList();
-    /**
-     * <pre>
-     * Specifies how this order was paid for, if applicable at this point in the ticket lifecycle.
-     * </pre>
-     *
-     * <code>repeated .opencannabis.commerce.Payment payment = 9;</code>
-     */
-    io.opencannabis.schema.commerce.CommercialPurchase.Payment getPayment(int index);
-    /**
-     * <pre>
-     * Specifies how this order was paid for, if applicable at this point in the ticket lifecycle.
-     * </pre>
-     *
-     * <code>repeated .opencannabis.commerce.Payment payment = 9;</code>
-     */
-    int getPaymentCount();
-    /**
-     * <pre>
-     * Specifies how this order was paid for, if applicable at this point in the ticket lifecycle.
-     * </pre>
-     *
-     * <code>repeated .opencannabis.commerce.Payment payment = 9;</code>
-     */
-    java.util.List<? extends io.opencannabis.schema.commerce.CommercialPurchase.PaymentOrBuilder> 
-        getPaymentOrBuilderList();
-    /**
-     * <pre>
-     * Specifies how this order was paid for, if applicable at this point in the ticket lifecycle.
-     * </pre>
-     *
-     * <code>repeated .opencannabis.commerce.Payment payment = 9;</code>
-     */
-    io.opencannabis.schema.commerce.CommercialPurchase.PaymentOrBuilder getPaymentOrBuilder(
-        int index);
-
-    /**
-     * <pre>
-     * Actions taken on this order.
-     * </pre>
-     *
-     * <code>repeated .opencannabis.commerce.PurchaseLogEntry action = 10;</code>
-     */
-    java.util.List<io.opencannabis.schema.commerce.CommercialPurchase.PurchaseLogEntry> 
-        getActionList();
-    /**
-     * <pre>
-     * Actions taken on this order.
-     * </pre>
-     *
-     * <code>repeated .opencannabis.commerce.PurchaseLogEntry action = 10;</code>
-     */
-    io.opencannabis.schema.commerce.CommercialPurchase.PurchaseLogEntry getAction(int index);
-    /**
-     * <pre>
-     * Actions taken on this order.
-     * </pre>
-     *
-     * <code>repeated .opencannabis.commerce.PurchaseLogEntry action = 10;</code>
-     */
-    int getActionCount();
-    /**
-     * <pre>
-     * Actions taken on this order.
-     * </pre>
-     *
-     * <code>repeated .opencannabis.commerce.PurchaseLogEntry action = 10;</code>
-     */
-    java.util.List<? extends io.opencannabis.schema.commerce.CommercialPurchase.PurchaseLogEntryOrBuilder> 
-        getActionOrBuilderList();
-    /**
-     * <pre>
-     * Actions taken on this order.
-     * </pre>
-     *
-     * <code>repeated .opencannabis.commerce.PurchaseLogEntry action = 10;</code>
-     */
-    io.opencannabis.schema.commerce.CommercialPurchase.PurchaseLogEntryOrBuilder getActionOrBuilder(
-        int index);
-
-    /**
-     * <pre>
-     * Timestamps that record the temporal position of individual purchase lifecycle events.
-     * </pre>
-     *
-     * <code>.opencannabis.commerce.PurchaseTimestamps ts = 11;</code>
-     */
-    boolean hasTs();
-    /**
-     * <pre>
-     * Timestamps that record the temporal position of individual purchase lifecycle events.
-     * </pre>
-     *
-     * <code>.opencannabis.commerce.PurchaseTimestamps ts = 11;</code>
-     */
-    io.opencannabis.schema.commerce.CommercialPurchase.PurchaseTimestamps getTs();
-    /**
-     * <pre>
-     * Timestamps that record the temporal position of individual purchase lifecycle events.
-     * </pre>
-     *
-     * <code>.opencannabis.commerce.PurchaseTimestamps ts = 11;</code>
-     */
-    io.opencannabis.schema.commerce.CommercialPurchase.PurchaseTimestampsOrBuilder getTsOrBuilder();
-  }
-  /**
-   * <pre>
-   * Specifies a record of a purchase made by a consumer at a retail cannabis location. Purchases are like orders, in that
-   * they are both consumer interactions with retailers in a commercial setting, but purchases are always made in-person
-   * using a point-of-sale device, and never online or from remote.
-   * </pre>
-   *
-   * Protobuf type {@code opencannabis.commerce.PurchaseTicket}
-   */
-  public  static final class PurchaseTicket extends
-      com.google.protobuf.GeneratedMessageV3 implements
-      // @@protoc_insertion_point(message_implements:opencannabis.commerce.PurchaseTicket)
-      PurchaseTicketOrBuilder {
-  private static final long serialVersionUID = 0L;
-    // Use PurchaseTicket.newBuilder() to construct.
-    private PurchaseTicket(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
-      super(builder);
-    }
-    private PurchaseTicket() {
-      version_ = 0;
-      status_ = 0;
-      claim_ = "";
-      item_ = java.util.Collections.emptyList();
-      payment_ = java.util.Collections.emptyList();
-      action_ = java.util.Collections.emptyList();
-    }
-
-    @java.lang.Override
-    public final com.google.protobuf.UnknownFieldSet
-    getUnknownFields() {
-      return this.unknownFields;
-    }
-    private PurchaseTicket(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      this();
-      if (extensionRegistry == null) {
-        throw new java.lang.NullPointerException();
-      }
-      int mutable_bitField0_ = 0;
-      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-          com.google.protobuf.UnknownFieldSet.newBuilder();
-      try {
-        boolean done = false;
-        while (!done) {
-          int tag = input.readTag();
-          switch (tag) {
-            case 0:
-              done = true;
-              break;
-            default: {
-              if (!parseUnknownFieldProto3(
-                  input, unknownFields, extensionRegistry, tag)) {
-                done = true;
-              }
-              break;
-            }
-            case 10: {
-              io.opencannabis.schema.commerce.CommercialPurchase.PurchaseKey.Builder subBuilder = null;
-              if (key_ != null) {
-                subBuilder = key_.toBuilder();
-              }
-              key_ = input.readMessage(io.opencannabis.schema.commerce.CommercialPurchase.PurchaseKey.parser(), extensionRegistry);
-              if (subBuilder != null) {
-                subBuilder.mergeFrom(key_);
-                key_ = subBuilder.buildPartial();
-              }
-
-              break;
-            }
-            case 16: {
-
-              version_ = input.readUInt32();
-              break;
-            }
-            case 24: {
-              int rawValue = input.readEnum();
-
-              status_ = rawValue;
-              break;
-            }
-            case 34: {
-              java.lang.String s = input.readStringRequireUtf8();
-
-              claim_ = s;
-              break;
-            }
-            case 42: {
-              io.opencannabis.schema.commerce.CommercialPurchase.PurchaseFacilitator.Builder subBuilder = null;
-              if (facilitator_ != null) {
-                subBuilder = facilitator_.toBuilder();
-              }
-              facilitator_ = input.readMessage(io.opencannabis.schema.commerce.CommercialPurchase.PurchaseFacilitator.parser(), extensionRegistry);
-              if (subBuilder != null) {
-                subBuilder.mergeFrom(facilitator_);
-                facilitator_ = subBuilder.buildPartial();
-              }
-
-              break;
-            }
-            case 50: {
-              io.opencannabis.schema.commerce.CommercialPurchase.PurchaseCustomer.Builder subBuilder = null;
-              if (customer_ != null) {
-                subBuilder = customer_.toBuilder();
-              }
-              customer_ = input.readMessage(io.opencannabis.schema.commerce.CommercialPurchase.PurchaseCustomer.parser(), extensionRegistry);
-              if (subBuilder != null) {
-                subBuilder.mergeFrom(customer_);
-                customer_ = subBuilder.buildPartial();
-              }
-
-              break;
-            }
-            case 58: {
-              io.opencannabis.schema.commerce.CommercialPurchase.BillOfCharges.Builder subBuilder = null;
-              if (bill_ != null) {
-                subBuilder = bill_.toBuilder();
-              }
-              bill_ = input.readMessage(io.opencannabis.schema.commerce.CommercialPurchase.BillOfCharges.parser(), extensionRegistry);
-              if (subBuilder != null) {
-                subBuilder.mergeFrom(bill_);
-                bill_ = subBuilder.buildPartial();
-              }
-
-              break;
-            }
-            case 66: {
-              if (!((mutable_bitField0_ & 0x00000080) == 0x00000080)) {
-                item_ = new java.util.ArrayList<io.opencannabis.schema.commerce.CommercialPurchase.TicketItem>();
-                mutable_bitField0_ |= 0x00000080;
-              }
-              item_.add(
-                  input.readMessage(io.opencannabis.schema.commerce.CommercialPurchase.TicketItem.parser(), extensionRegistry));
-              break;
-            }
-            case 74: {
-              if (!((mutable_bitField0_ & 0x00000100) == 0x00000100)) {
-                payment_ = new java.util.ArrayList<io.opencannabis.schema.commerce.CommercialPurchase.Payment>();
-                mutable_bitField0_ |= 0x00000100;
-              }
-              payment_.add(
-                  input.readMessage(io.opencannabis.schema.commerce.CommercialPurchase.Payment.parser(), extensionRegistry));
-              break;
-            }
-            case 82: {
-              if (!((mutable_bitField0_ & 0x00000200) == 0x00000200)) {
-                action_ = new java.util.ArrayList<io.opencannabis.schema.commerce.CommercialPurchase.PurchaseLogEntry>();
-                mutable_bitField0_ |= 0x00000200;
-              }
-              action_.add(
-                  input.readMessage(io.opencannabis.schema.commerce.CommercialPurchase.PurchaseLogEntry.parser(), extensionRegistry));
-              break;
-            }
-            case 90: {
-              io.opencannabis.schema.commerce.CommercialPurchase.PurchaseTimestamps.Builder subBuilder = null;
-              if (ts_ != null) {
-                subBuilder = ts_.toBuilder();
-              }
-              ts_ = input.readMessage(io.opencannabis.schema.commerce.CommercialPurchase.PurchaseTimestamps.parser(), extensionRegistry);
-              if (subBuilder != null) {
-                subBuilder.mergeFrom(ts_);
-                ts_ = subBuilder.buildPartial();
-              }
-
-              break;
-            }
-          }
-        }
-      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        throw e.setUnfinishedMessage(this);
-      } catch (java.io.IOException e) {
-        throw new com.google.protobuf.InvalidProtocolBufferException(
-            e).setUnfinishedMessage(this);
-      } finally {
-        if (((mutable_bitField0_ & 0x00000080) == 0x00000080)) {
-          item_ = java.util.Collections.unmodifiableList(item_);
-        }
-        if (((mutable_bitField0_ & 0x00000100) == 0x00000100)) {
-          payment_ = java.util.Collections.unmodifiableList(payment_);
-        }
-        if (((mutable_bitField0_ & 0x00000200) == 0x00000200)) {
-          action_ = java.util.Collections.unmodifiableList(action_);
-        }
-        this.unknownFields = unknownFields.build();
-        makeExtensionsImmutable();
-      }
-    }
-    public static final com.google.protobuf.Descriptors.Descriptor
-        getDescriptor() {
-      return io.opencannabis.schema.commerce.CommercialPurchase.internal_static_opencannabis_commerce_PurchaseTicket_descriptor;
-    }
-
-    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-        internalGetFieldAccessorTable() {
-      return io.opencannabis.schema.commerce.CommercialPurchase.internal_static_opencannabis_commerce_PurchaseTicket_fieldAccessorTable
-          .ensureFieldAccessorsInitialized(
-              io.opencannabis.schema.commerce.CommercialPurchase.PurchaseTicket.class, io.opencannabis.schema.commerce.CommercialPurchase.PurchaseTicket.Builder.class);
-    }
-
-    private int bitField0_;
-    public static final int KEY_FIELD_NUMBER = 1;
-    private io.opencannabis.schema.commerce.CommercialPurchase.PurchaseKey key_;
-    /**
-     * <pre>
-     * Unique key generated to address this purchase. Usually consists of a string UUID.
-     * </pre>
-     *
-     * <code>.opencannabis.commerce.PurchaseKey key = 1 [(.core.field) = { ... }</code>
-     */
-    public boolean hasKey() {
-      return key_ != null;
-    }
-    /**
-     * <pre>
-     * Unique key generated to address this purchase. Usually consists of a string UUID.
-     * </pre>
-     *
-     * <code>.opencannabis.commerce.PurchaseKey key = 1 [(.core.field) = { ... }</code>
-     */
-    public io.opencannabis.schema.commerce.CommercialPurchase.PurchaseKey getKey() {
-      return key_ == null ? io.opencannabis.schema.commerce.CommercialPurchase.PurchaseKey.getDefaultInstance() : key_;
-    }
-    /**
-     * <pre>
-     * Unique key generated to address this purchase. Usually consists of a string UUID.
-     * </pre>
-     *
-     * <code>.opencannabis.commerce.PurchaseKey key = 1 [(.core.field) = { ... }</code>
-     */
-    public io.opencannabis.schema.commerce.CommercialPurchase.PurchaseKeyOrBuilder getKeyOrBuilder() {
-      return getKey();
-    }
-
-    public static final int VERSION_FIELD_NUMBER = 2;
-    private int version_;
-    /**
-     * <pre>
-     * Version or revision number for this purchase ticket.
-     * </pre>
-     *
-     * <code>uint32 version = 2;</code>
-     */
-    public int getVersion() {
-      return version_;
-    }
-
-    public static final int STATUS_FIELD_NUMBER = 3;
-    private int status_;
-    /**
-     * <pre>
-     * Specifies the current status of this individual purchase transaction.
-     * </pre>
-     *
-     * <code>.opencannabis.commerce.PurchaseStatus status = 3;</code>
-     */
-    public int getStatusValue() {
-      return status_;
-    }
-    /**
-     * <pre>
-     * Specifies the current status of this individual purchase transaction.
-     * </pre>
-     *
-     * <code>.opencannabis.commerce.PurchaseStatus status = 3;</code>
-     */
-    public io.opencannabis.schema.commerce.CommercialPurchase.PurchaseStatus getStatus() {
-      io.opencannabis.schema.commerce.CommercialPurchase.PurchaseStatus result = io.opencannabis.schema.commerce.CommercialPurchase.PurchaseStatus.valueOf(status_);
-      return result == null ? io.opencannabis.schema.commerce.CommercialPurchase.PurchaseStatus.UNRECOGNIZED : result;
-    }
-
-    public static final int CLAIM_FIELD_NUMBER = 4;
-    private volatile java.lang.Object claim_;
-    /**
-     * <pre>
-     * Point-of-sale session that is currently claiming this ticket, or last claimed this ticket.
-     * </pre>
-     *
-     * <code>string claim = 4;</code>
-     */
-    public java.lang.String getClaim() {
-      java.lang.Object ref = claim_;
-      if (ref instanceof java.lang.String) {
-        return (java.lang.String) ref;
-      } else {
-        com.google.protobuf.ByteString bs = 
-            (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        claim_ = s;
-        return s;
-      }
-    }
-    /**
-     * <pre>
-     * Point-of-sale session that is currently claiming this ticket, or last claimed this ticket.
-     * </pre>
-     *
-     * <code>string claim = 4;</code>
-     */
-    public com.google.protobuf.ByteString
-        getClaimBytes() {
-      java.lang.Object ref = claim_;
-      if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        claim_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
-    }
-
-    public static final int FACILITATOR_FIELD_NUMBER = 5;
-    private io.opencannabis.schema.commerce.CommercialPurchase.PurchaseFacilitator facilitator_;
-    /**
-     * <pre>
-     * Partner organization, location, device, and staff member that facilitated this transaction.
-     * </pre>
-     *
-     * <code>.opencannabis.commerce.PurchaseFacilitator facilitator = 5;</code>
-     */
-    public boolean hasFacilitator() {
-      return facilitator_ != null;
-    }
-    /**
-     * <pre>
-     * Partner organization, location, device, and staff member that facilitated this transaction.
-     * </pre>
-     *
-     * <code>.opencannabis.commerce.PurchaseFacilitator facilitator = 5;</code>
-     */
-    public io.opencannabis.schema.commerce.CommercialPurchase.PurchaseFacilitator getFacilitator() {
-      return facilitator_ == null ? io.opencannabis.schema.commerce.CommercialPurchase.PurchaseFacilitator.getDefaultInstance() : facilitator_;
-    }
-    /**
-     * <pre>
-     * Partner organization, location, device, and staff member that facilitated this transaction.
-     * </pre>
-     *
-     * <code>.opencannabis.commerce.PurchaseFacilitator facilitator = 5;</code>
-     */
-    public io.opencannabis.schema.commerce.CommercialPurchase.PurchaseFacilitatorOrBuilder getFacilitatorOrBuilder() {
-      return getFacilitator();
-    }
-
-    public static final int CUSTOMER_FIELD_NUMBER = 6;
-    private io.opencannabis.schema.commerce.CommercialPurchase.PurchaseCustomer customer_;
-    /**
-     * <pre>
-     * Specifies information regarding the customer that made this purchase.
-     * </pre>
-     *
-     * <code>.opencannabis.commerce.PurchaseCustomer customer = 6;</code>
-     */
-    public boolean hasCustomer() {
-      return customer_ != null;
-    }
-    /**
-     * <pre>
-     * Specifies information regarding the customer that made this purchase.
-     * </pre>
-     *
-     * <code>.opencannabis.commerce.PurchaseCustomer customer = 6;</code>
-     */
-    public io.opencannabis.schema.commerce.CommercialPurchase.PurchaseCustomer getCustomer() {
-      return customer_ == null ? io.opencannabis.schema.commerce.CommercialPurchase.PurchaseCustomer.getDefaultInstance() : customer_;
-    }
-    /**
-     * <pre>
-     * Specifies information regarding the customer that made this purchase.
-     * </pre>
-     *
-     * <code>.opencannabis.commerce.PurchaseCustomer customer = 6;</code>
-     */
-    public io.opencannabis.schema.commerce.CommercialPurchase.PurchaseCustomerOrBuilder getCustomerOrBuilder() {
-      return getCustomer();
-    }
-
-    public static final int BILL_FIELD_NUMBER = 7;
-    private io.opencannabis.schema.commerce.CommercialPurchase.BillOfCharges bill_;
-    /**
-     * <pre>
-     * Line-item bill of charges, or purchase sums. Includes taxes and discounts.
-     * </pre>
-     *
-     * <code>.opencannabis.commerce.BillOfCharges bill = 7;</code>
-     */
-    public boolean hasBill() {
-      return bill_ != null;
-    }
-    /**
-     * <pre>
-     * Line-item bill of charges, or purchase sums. Includes taxes and discounts.
-     * </pre>
-     *
-     * <code>.opencannabis.commerce.BillOfCharges bill = 7;</code>
-     */
-    public io.opencannabis.schema.commerce.CommercialPurchase.BillOfCharges getBill() {
-      return bill_ == null ? io.opencannabis.schema.commerce.CommercialPurchase.BillOfCharges.getDefaultInstance() : bill_;
-    }
-    /**
-     * <pre>
-     * Line-item bill of charges, or purchase sums. Includes taxes and discounts.
-     * </pre>
-     *
-     * <code>.opencannabis.commerce.BillOfCharges bill = 7;</code>
-     */
-    public io.opencannabis.schema.commerce.CommercialPurchase.BillOfChargesOrBuilder getBillOrBuilder() {
-      return getBill();
-    }
-
-    public static final int ITEM_FIELD_NUMBER = 8;
-    private java.util.List<io.opencannabis.schema.commerce.CommercialPurchase.TicketItem> item_;
-    /**
-     * <pre>
-     * Constituent items purchased as part of this commercial purchase ticket.
-     * </pre>
-     *
-     * <code>repeated .opencannabis.commerce.TicketItem item = 8;</code>
-     */
-    public java.util.List<io.opencannabis.schema.commerce.CommercialPurchase.TicketItem> getItemList() {
-      return item_;
-    }
-    /**
-     * <pre>
-     * Constituent items purchased as part of this commercial purchase ticket.
-     * </pre>
-     *
-     * <code>repeated .opencannabis.commerce.TicketItem item = 8;</code>
-     */
-    public java.util.List<? extends io.opencannabis.schema.commerce.CommercialPurchase.TicketItemOrBuilder> 
-        getItemOrBuilderList() {
-      return item_;
-    }
-    /**
-     * <pre>
-     * Constituent items purchased as part of this commercial purchase ticket.
-     * </pre>
-     *
-     * <code>repeated .opencannabis.commerce.TicketItem item = 8;</code>
-     */
-    public int getItemCount() {
-      return item_.size();
-    }
-    /**
-     * <pre>
-     * Constituent items purchased as part of this commercial purchase ticket.
-     * </pre>
-     *
-     * <code>repeated .opencannabis.commerce.TicketItem item = 8;</code>
-     */
-    public io.opencannabis.schema.commerce.CommercialPurchase.TicketItem getItem(int index) {
-      return item_.get(index);
-    }
-    /**
-     * <pre>
-     * Constituent items purchased as part of this commercial purchase ticket.
-     * </pre>
-     *
-     * <code>repeated .opencannabis.commerce.TicketItem item = 8;</code>
-     */
-    public io.opencannabis.schema.commerce.CommercialPurchase.TicketItemOrBuilder getItemOrBuilder(
-        int index) {
-      return item_.get(index);
-    }
-
-    public static final int PAYMENT_FIELD_NUMBER = 9;
-    private java.util.List<io.opencannabis.schema.commerce.CommercialPurchase.Payment> payment_;
-    /**
-     * <pre>
-     * Specifies how this order was paid for, if applicable at this point in the ticket lifecycle.
-     * </pre>
-     *
-     * <code>repeated .opencannabis.commerce.Payment payment = 9;</code>
-     */
-    public java.util.List<io.opencannabis.schema.commerce.CommercialPurchase.Payment> getPaymentList() {
-      return payment_;
-    }
-    /**
-     * <pre>
-     * Specifies how this order was paid for, if applicable at this point in the ticket lifecycle.
-     * </pre>
-     *
-     * <code>repeated .opencannabis.commerce.Payment payment = 9;</code>
-     */
-    public java.util.List<? extends io.opencannabis.schema.commerce.CommercialPurchase.PaymentOrBuilder> 
-        getPaymentOrBuilderList() {
-      return payment_;
-    }
-    /**
-     * <pre>
-     * Specifies how this order was paid for, if applicable at this point in the ticket lifecycle.
-     * </pre>
-     *
-     * <code>repeated .opencannabis.commerce.Payment payment = 9;</code>
-     */
-    public int getPaymentCount() {
-      return payment_.size();
-    }
-    /**
-     * <pre>
-     * Specifies how this order was paid for, if applicable at this point in the ticket lifecycle.
-     * </pre>
-     *
-     * <code>repeated .opencannabis.commerce.Payment payment = 9;</code>
-     */
-    public io.opencannabis.schema.commerce.CommercialPurchase.Payment getPayment(int index) {
-      return payment_.get(index);
-    }
-    /**
-     * <pre>
-     * Specifies how this order was paid for, if applicable at this point in the ticket lifecycle.
-     * </pre>
-     *
-     * <code>repeated .opencannabis.commerce.Payment payment = 9;</code>
-     */
-    public io.opencannabis.schema.commerce.CommercialPurchase.PaymentOrBuilder getPaymentOrBuilder(
-        int index) {
-      return payment_.get(index);
-    }
-
-    public static final int ACTION_FIELD_NUMBER = 10;
-    private java.util.List<io.opencannabis.schema.commerce.CommercialPurchase.PurchaseLogEntry> action_;
-    /**
-     * <pre>
-     * Actions taken on this order.
-     * </pre>
-     *
-     * <code>repeated .opencannabis.commerce.PurchaseLogEntry action = 10;</code>
-     */
-    public java.util.List<io.opencannabis.schema.commerce.CommercialPurchase.PurchaseLogEntry> getActionList() {
-      return action_;
-    }
-    /**
-     * <pre>
-     * Actions taken on this order.
-     * </pre>
-     *
-     * <code>repeated .opencannabis.commerce.PurchaseLogEntry action = 10;</code>
-     */
-    public java.util.List<? extends io.opencannabis.schema.commerce.CommercialPurchase.PurchaseLogEntryOrBuilder> 
-        getActionOrBuilderList() {
-      return action_;
-    }
-    /**
-     * <pre>
-     * Actions taken on this order.
-     * </pre>
-     *
-     * <code>repeated .opencannabis.commerce.PurchaseLogEntry action = 10;</code>
-     */
-    public int getActionCount() {
-      return action_.size();
-    }
-    /**
-     * <pre>
-     * Actions taken on this order.
-     * </pre>
-     *
-     * <code>repeated .opencannabis.commerce.PurchaseLogEntry action = 10;</code>
-     */
-    public io.opencannabis.schema.commerce.CommercialPurchase.PurchaseLogEntry getAction(int index) {
-      return action_.get(index);
-    }
-    /**
-     * <pre>
-     * Actions taken on this order.
-     * </pre>
-     *
-     * <code>repeated .opencannabis.commerce.PurchaseLogEntry action = 10;</code>
-     */
-    public io.opencannabis.schema.commerce.CommercialPurchase.PurchaseLogEntryOrBuilder getActionOrBuilder(
-        int index) {
-      return action_.get(index);
-    }
-
-    public static final int TS_FIELD_NUMBER = 11;
-    private io.opencannabis.schema.commerce.CommercialPurchase.PurchaseTimestamps ts_;
-    /**
-     * <pre>
-     * Timestamps that record the temporal position of individual purchase lifecycle events.
-     * </pre>
-     *
-     * <code>.opencannabis.commerce.PurchaseTimestamps ts = 11;</code>
-     */
-    public boolean hasTs() {
-      return ts_ != null;
-    }
-    /**
-     * <pre>
-     * Timestamps that record the temporal position of individual purchase lifecycle events.
-     * </pre>
-     *
-     * <code>.opencannabis.commerce.PurchaseTimestamps ts = 11;</code>
-     */
-    public io.opencannabis.schema.commerce.CommercialPurchase.PurchaseTimestamps getTs() {
-      return ts_ == null ? io.opencannabis.schema.commerce.CommercialPurchase.PurchaseTimestamps.getDefaultInstance() : ts_;
-    }
-    /**
-     * <pre>
-     * Timestamps that record the temporal position of individual purchase lifecycle events.
-     * </pre>
-     *
-     * <code>.opencannabis.commerce.PurchaseTimestamps ts = 11;</code>
-     */
-    public io.opencannabis.schema.commerce.CommercialPurchase.PurchaseTimestampsOrBuilder getTsOrBuilder() {
-      return getTs();
-    }
-
-    private byte memoizedIsInitialized = -1;
-    public final boolean isInitialized() {
-      byte isInitialized = memoizedIsInitialized;
-      if (isInitialized == 1) return true;
-      if (isInitialized == 0) return false;
-
-      memoizedIsInitialized = 1;
-      return true;
-    }
-
-    public void writeTo(com.google.protobuf.CodedOutputStream output)
-                        throws java.io.IOException {
-      if (key_ != null) {
-        output.writeMessage(1, getKey());
-      }
-      if (version_ != 0) {
-        output.writeUInt32(2, version_);
-      }
-      if (status_ != io.opencannabis.schema.commerce.CommercialPurchase.PurchaseStatus.FRESH.getNumber()) {
-        output.writeEnum(3, status_);
-      }
-      if (!getClaimBytes().isEmpty()) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 4, claim_);
-      }
-      if (facilitator_ != null) {
-        output.writeMessage(5, getFacilitator());
-      }
-      if (customer_ != null) {
-        output.writeMessage(6, getCustomer());
-      }
-      if (bill_ != null) {
-        output.writeMessage(7, getBill());
-      }
-      for (int i = 0; i < item_.size(); i++) {
-        output.writeMessage(8, item_.get(i));
-      }
-      for (int i = 0; i < payment_.size(); i++) {
-        output.writeMessage(9, payment_.get(i));
-      }
-      for (int i = 0; i < action_.size(); i++) {
-        output.writeMessage(10, action_.get(i));
-      }
-      if (ts_ != null) {
-        output.writeMessage(11, getTs());
-      }
-      unknownFields.writeTo(output);
-    }
-
-    public int getSerializedSize() {
-      int size = memoizedSize;
-      if (size != -1) return size;
-
-      size = 0;
-      if (key_ != null) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(1, getKey());
-      }
-      if (version_ != 0) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeUInt32Size(2, version_);
-      }
-      if (status_ != io.opencannabis.schema.commerce.CommercialPurchase.PurchaseStatus.FRESH.getNumber()) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeEnumSize(3, status_);
-      }
-      if (!getClaimBytes().isEmpty()) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(4, claim_);
-      }
-      if (facilitator_ != null) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(5, getFacilitator());
-      }
-      if (customer_ != null) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(6, getCustomer());
-      }
-      if (bill_ != null) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(7, getBill());
-      }
-      for (int i = 0; i < item_.size(); i++) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(8, item_.get(i));
-      }
-      for (int i = 0; i < payment_.size(); i++) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(9, payment_.get(i));
-      }
-      for (int i = 0; i < action_.size(); i++) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(10, action_.get(i));
-      }
-      if (ts_ != null) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(11, getTs());
-      }
-      size += unknownFields.getSerializedSize();
-      memoizedSize = size;
-      return size;
-    }
-
-    @java.lang.Override
-    public boolean equals(final java.lang.Object obj) {
-      if (obj == this) {
-       return true;
-      }
-      if (!(obj instanceof io.opencannabis.schema.commerce.CommercialPurchase.PurchaseTicket)) {
-        return super.equals(obj);
-      }
-      io.opencannabis.schema.commerce.CommercialPurchase.PurchaseTicket other = (io.opencannabis.schema.commerce.CommercialPurchase.PurchaseTicket) obj;
-
-      boolean result = true;
-      result = result && (hasKey() == other.hasKey());
-      if (hasKey()) {
-        result = result && getKey()
-            .equals(other.getKey());
-      }
-      result = result && (getVersion()
-          == other.getVersion());
-      result = result && status_ == other.status_;
-      result = result && getClaim()
-          .equals(other.getClaim());
-      result = result && (hasFacilitator() == other.hasFacilitator());
-      if (hasFacilitator()) {
-        result = result && getFacilitator()
-            .equals(other.getFacilitator());
-      }
-      result = result && (hasCustomer() == other.hasCustomer());
-      if (hasCustomer()) {
-        result = result && getCustomer()
-            .equals(other.getCustomer());
-      }
-      result = result && (hasBill() == other.hasBill());
-      if (hasBill()) {
-        result = result && getBill()
-            .equals(other.getBill());
-      }
-      result = result && getItemList()
-          .equals(other.getItemList());
-      result = result && getPaymentList()
-          .equals(other.getPaymentList());
-      result = result && getActionList()
-          .equals(other.getActionList());
-      result = result && (hasTs() == other.hasTs());
-      if (hasTs()) {
-        result = result && getTs()
-            .equals(other.getTs());
-      }
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
-    }
-
-    @java.lang.Override
-    public int hashCode() {
-      if (memoizedHashCode != 0) {
-        return memoizedHashCode;
-      }
-      int hash = 41;
-      hash = (19 * hash) + getDescriptor().hashCode();
-      if (hasKey()) {
-        hash = (37 * hash) + KEY_FIELD_NUMBER;
-        hash = (53 * hash) + getKey().hashCode();
-      }
-      hash = (37 * hash) + VERSION_FIELD_NUMBER;
-      hash = (53 * hash) + getVersion();
-      hash = (37 * hash) + STATUS_FIELD_NUMBER;
-      hash = (53 * hash) + status_;
-      hash = (37 * hash) + CLAIM_FIELD_NUMBER;
-      hash = (53 * hash) + getClaim().hashCode();
-      if (hasFacilitator()) {
-        hash = (37 * hash) + FACILITATOR_FIELD_NUMBER;
-        hash = (53 * hash) + getFacilitator().hashCode();
-      }
-      if (hasCustomer()) {
-        hash = (37 * hash) + CUSTOMER_FIELD_NUMBER;
-        hash = (53 * hash) + getCustomer().hashCode();
-      }
-      if (hasBill()) {
-        hash = (37 * hash) + BILL_FIELD_NUMBER;
-        hash = (53 * hash) + getBill().hashCode();
-      }
-      if (getItemCount() > 0) {
-        hash = (37 * hash) + ITEM_FIELD_NUMBER;
-        hash = (53 * hash) + getItemList().hashCode();
-      }
-      if (getPaymentCount() > 0) {
-        hash = (37 * hash) + PAYMENT_FIELD_NUMBER;
-        hash = (53 * hash) + getPaymentList().hashCode();
-      }
-      if (getActionCount() > 0) {
-        hash = (37 * hash) + ACTION_FIELD_NUMBER;
-        hash = (53 * hash) + getActionList().hashCode();
-      }
-      if (hasTs()) {
-        hash = (37 * hash) + TS_FIELD_NUMBER;
-        hash = (53 * hash) + getTs().hashCode();
-      }
-      hash = (29 * hash) + unknownFields.hashCode();
-      memoizedHashCode = hash;
-      return hash;
-    }
-
-    public static io.opencannabis.schema.commerce.CommercialPurchase.PurchaseTicket parseFrom(
-        java.nio.ByteBuffer data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
-    }
-    public static io.opencannabis.schema.commerce.CommercialPurchase.PurchaseTicket parseFrom(
-        java.nio.ByteBuffer data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
-    }
-    public static io.opencannabis.schema.commerce.CommercialPurchase.PurchaseTicket parseFrom(
-        com.google.protobuf.ByteString data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
-    }
-    public static io.opencannabis.schema.commerce.CommercialPurchase.PurchaseTicket parseFrom(
-        com.google.protobuf.ByteString data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
-    }
-    public static io.opencannabis.schema.commerce.CommercialPurchase.PurchaseTicket parseFrom(byte[] data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
-    }
-    public static io.opencannabis.schema.commerce.CommercialPurchase.PurchaseTicket parseFrom(
-        byte[] data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
-    }
-    public static io.opencannabis.schema.commerce.CommercialPurchase.PurchaseTicket parseFrom(java.io.InputStream input)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
-    }
-    public static io.opencannabis.schema.commerce.CommercialPurchase.PurchaseTicket parseFrom(
-        java.io.InputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
-    }
-    public static io.opencannabis.schema.commerce.CommercialPurchase.PurchaseTicket parseDelimitedFrom(java.io.InputStream input)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input);
-    }
-    public static io.opencannabis.schema.commerce.CommercialPurchase.PurchaseTicket parseDelimitedFrom(
-        java.io.InputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
-    }
-    public static io.opencannabis.schema.commerce.CommercialPurchase.PurchaseTicket parseFrom(
-        com.google.protobuf.CodedInputStream input)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
-    }
-    public static io.opencannabis.schema.commerce.CommercialPurchase.PurchaseTicket parseFrom(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
-    }
-
-    public Builder newBuilderForType() { return newBuilder(); }
-    public static Builder newBuilder() {
-      return DEFAULT_INSTANCE.toBuilder();
-    }
-    public static Builder newBuilder(io.opencannabis.schema.commerce.CommercialPurchase.PurchaseTicket prototype) {
-      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
-    }
-    public Builder toBuilder() {
-      return this == DEFAULT_INSTANCE
-          ? new Builder() : new Builder().mergeFrom(this);
-    }
-
-    @java.lang.Override
-    protected Builder newBuilderForType(
-        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-      Builder builder = new Builder(parent);
-      return builder;
-    }
-    /**
-     * <pre>
-     * Specifies a record of a purchase made by a consumer at a retail cannabis location. Purchases are like orders, in that
-     * they are both consumer interactions with retailers in a commercial setting, but purchases are always made in-person
-     * using a point-of-sale device, and never online or from remote.
-     * </pre>
-     *
-     * Protobuf type {@code opencannabis.commerce.PurchaseTicket}
-     */
-    public static final class Builder extends
-        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:opencannabis.commerce.PurchaseTicket)
-        io.opencannabis.schema.commerce.CommercialPurchase.PurchaseTicketOrBuilder {
-      public static final com.google.protobuf.Descriptors.Descriptor
-          getDescriptor() {
-        return io.opencannabis.schema.commerce.CommercialPurchase.internal_static_opencannabis_commerce_PurchaseTicket_descriptor;
-      }
-
-      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-          internalGetFieldAccessorTable() {
-        return io.opencannabis.schema.commerce.CommercialPurchase.internal_static_opencannabis_commerce_PurchaseTicket_fieldAccessorTable
-            .ensureFieldAccessorsInitialized(
-                io.opencannabis.schema.commerce.CommercialPurchase.PurchaseTicket.class, io.opencannabis.schema.commerce.CommercialPurchase.PurchaseTicket.Builder.class);
-      }
-
-      // Construct using io.opencannabis.schema.commerce.CommercialPurchase.PurchaseTicket.newBuilder()
-      private Builder() {
-        maybeForceBuilderInitialization();
-      }
-
-      private Builder(
-          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-        super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getItemFieldBuilder();
-          getPaymentFieldBuilder();
-          getActionFieldBuilder();
-        }
-      }
-      public Builder clear() {
-        super.clear();
-        if (keyBuilder_ == null) {
-          key_ = null;
-        } else {
-          key_ = null;
-          keyBuilder_ = null;
-        }
-        version_ = 0;
-
-        status_ = 0;
-
-        claim_ = "";
-
-        if (facilitatorBuilder_ == null) {
-          facilitator_ = null;
-        } else {
-          facilitator_ = null;
-          facilitatorBuilder_ = null;
-        }
-        if (customerBuilder_ == null) {
-          customer_ = null;
-        } else {
-          customer_ = null;
-          customerBuilder_ = null;
-        }
-        if (billBuilder_ == null) {
-          bill_ = null;
-        } else {
-          bill_ = null;
-          billBuilder_ = null;
-        }
-        if (itemBuilder_ == null) {
-          item_ = java.util.Collections.emptyList();
-          bitField0_ = (bitField0_ & ~0x00000080);
-        } else {
-          itemBuilder_.clear();
-        }
-        if (paymentBuilder_ == null) {
-          payment_ = java.util.Collections.emptyList();
-          bitField0_ = (bitField0_ & ~0x00000100);
-        } else {
-          paymentBuilder_.clear();
-        }
-        if (actionBuilder_ == null) {
-          action_ = java.util.Collections.emptyList();
-          bitField0_ = (bitField0_ & ~0x00000200);
-        } else {
-          actionBuilder_.clear();
-        }
-        if (tsBuilder_ == null) {
-          ts_ = null;
-        } else {
-          ts_ = null;
-          tsBuilder_ = null;
-        }
-        return this;
-      }
-
-      public com.google.protobuf.Descriptors.Descriptor
-          getDescriptorForType() {
-        return io.opencannabis.schema.commerce.CommercialPurchase.internal_static_opencannabis_commerce_PurchaseTicket_descriptor;
-      }
-
-      public io.opencannabis.schema.commerce.CommercialPurchase.PurchaseTicket getDefaultInstanceForType() {
-        return io.opencannabis.schema.commerce.CommercialPurchase.PurchaseTicket.getDefaultInstance();
-      }
-
-      public io.opencannabis.schema.commerce.CommercialPurchase.PurchaseTicket build() {
-        io.opencannabis.schema.commerce.CommercialPurchase.PurchaseTicket result = buildPartial();
-        if (!result.isInitialized()) {
-          throw newUninitializedMessageException(result);
-        }
-        return result;
-      }
-
-      public io.opencannabis.schema.commerce.CommercialPurchase.PurchaseTicket buildPartial() {
-        io.opencannabis.schema.commerce.CommercialPurchase.PurchaseTicket result = new io.opencannabis.schema.commerce.CommercialPurchase.PurchaseTicket(this);
-        int from_bitField0_ = bitField0_;
-        int to_bitField0_ = 0;
-        if (keyBuilder_ == null) {
-          result.key_ = key_;
-        } else {
-          result.key_ = keyBuilder_.build();
-        }
-        result.version_ = version_;
-        result.status_ = status_;
-        result.claim_ = claim_;
-        if (facilitatorBuilder_ == null) {
-          result.facilitator_ = facilitator_;
-        } else {
-          result.facilitator_ = facilitatorBuilder_.build();
-        }
-        if (customerBuilder_ == null) {
-          result.customer_ = customer_;
-        } else {
-          result.customer_ = customerBuilder_.build();
-        }
-        if (billBuilder_ == null) {
-          result.bill_ = bill_;
-        } else {
-          result.bill_ = billBuilder_.build();
-        }
-        if (itemBuilder_ == null) {
-          if (((bitField0_ & 0x00000080) == 0x00000080)) {
-            item_ = java.util.Collections.unmodifiableList(item_);
-            bitField0_ = (bitField0_ & ~0x00000080);
-          }
-          result.item_ = item_;
-        } else {
-          result.item_ = itemBuilder_.build();
-        }
-        if (paymentBuilder_ == null) {
-          if (((bitField0_ & 0x00000100) == 0x00000100)) {
-            payment_ = java.util.Collections.unmodifiableList(payment_);
-            bitField0_ = (bitField0_ & ~0x00000100);
-          }
-          result.payment_ = payment_;
-        } else {
-          result.payment_ = paymentBuilder_.build();
-        }
-        if (actionBuilder_ == null) {
-          if (((bitField0_ & 0x00000200) == 0x00000200)) {
-            action_ = java.util.Collections.unmodifiableList(action_);
-            bitField0_ = (bitField0_ & ~0x00000200);
-          }
-          result.action_ = action_;
-        } else {
-          result.action_ = actionBuilder_.build();
-        }
-        if (tsBuilder_ == null) {
-          result.ts_ = ts_;
-        } else {
-          result.ts_ = tsBuilder_.build();
-        }
-        result.bitField0_ = to_bitField0_;
-        onBuilt();
-        return result;
-      }
-
-      public Builder clone() {
-        return (Builder) super.clone();
-      }
-      public Builder setField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return (Builder) super.setField(field, value);
-      }
-      public Builder clearField(
-          com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
-      }
-      public Builder clearOneof(
-          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
-      }
-      public Builder setRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
-      }
-      public Builder addRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
-      }
-      public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof io.opencannabis.schema.commerce.CommercialPurchase.PurchaseTicket) {
-          return mergeFrom((io.opencannabis.schema.commerce.CommercialPurchase.PurchaseTicket)other);
-        } else {
-          super.mergeFrom(other);
-          return this;
-        }
-      }
-
-      public Builder mergeFrom(io.opencannabis.schema.commerce.CommercialPurchase.PurchaseTicket other) {
-        if (other == io.opencannabis.schema.commerce.CommercialPurchase.PurchaseTicket.getDefaultInstance()) return this;
-        if (other.hasKey()) {
-          mergeKey(other.getKey());
-        }
-        if (other.getVersion() != 0) {
-          setVersion(other.getVersion());
-        }
-        if (other.status_ != 0) {
-          setStatusValue(other.getStatusValue());
-        }
-        if (!other.getClaim().isEmpty()) {
-          claim_ = other.claim_;
-          onChanged();
-        }
-        if (other.hasFacilitator()) {
-          mergeFacilitator(other.getFacilitator());
-        }
-        if (other.hasCustomer()) {
-          mergeCustomer(other.getCustomer());
-        }
-        if (other.hasBill()) {
-          mergeBill(other.getBill());
-        }
-        if (itemBuilder_ == null) {
-          if (!other.item_.isEmpty()) {
-            if (item_.isEmpty()) {
-              item_ = other.item_;
-              bitField0_ = (bitField0_ & ~0x00000080);
-            } else {
-              ensureItemIsMutable();
-              item_.addAll(other.item_);
-            }
-            onChanged();
-          }
-        } else {
-          if (!other.item_.isEmpty()) {
-            if (itemBuilder_.isEmpty()) {
-              itemBuilder_.dispose();
-              itemBuilder_ = null;
-              item_ = other.item_;
-              bitField0_ = (bitField0_ & ~0x00000080);
-              itemBuilder_ = 
-                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
-                   getItemFieldBuilder() : null;
-            } else {
-              itemBuilder_.addAllMessages(other.item_);
-            }
-          }
-        }
-        if (paymentBuilder_ == null) {
-          if (!other.payment_.isEmpty()) {
-            if (payment_.isEmpty()) {
-              payment_ = other.payment_;
-              bitField0_ = (bitField0_ & ~0x00000100);
-            } else {
-              ensurePaymentIsMutable();
-              payment_.addAll(other.payment_);
-            }
-            onChanged();
-          }
-        } else {
-          if (!other.payment_.isEmpty()) {
-            if (paymentBuilder_.isEmpty()) {
-              paymentBuilder_.dispose();
-              paymentBuilder_ = null;
-              payment_ = other.payment_;
-              bitField0_ = (bitField0_ & ~0x00000100);
-              paymentBuilder_ = 
-                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
-                   getPaymentFieldBuilder() : null;
-            } else {
-              paymentBuilder_.addAllMessages(other.payment_);
-            }
-          }
-        }
-        if (actionBuilder_ == null) {
-          if (!other.action_.isEmpty()) {
-            if (action_.isEmpty()) {
-              action_ = other.action_;
-              bitField0_ = (bitField0_ & ~0x00000200);
-            } else {
-              ensureActionIsMutable();
-              action_.addAll(other.action_);
-            }
-            onChanged();
-          }
-        } else {
-          if (!other.action_.isEmpty()) {
-            if (actionBuilder_.isEmpty()) {
-              actionBuilder_.dispose();
-              actionBuilder_ = null;
-              action_ = other.action_;
-              bitField0_ = (bitField0_ & ~0x00000200);
-              actionBuilder_ = 
-                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
-                   getActionFieldBuilder() : null;
-            } else {
-              actionBuilder_.addAllMessages(other.action_);
-            }
-          }
-        }
-        if (other.hasTs()) {
-          mergeTs(other.getTs());
-        }
-        this.mergeUnknownFields(other.unknownFields);
-        onChanged();
-        return this;
-      }
-
-      public final boolean isInitialized() {
-        return true;
-      }
-
-      public Builder mergeFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws java.io.IOException {
-        io.opencannabis.schema.commerce.CommercialPurchase.PurchaseTicket parsedMessage = null;
-        try {
-          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (io.opencannabis.schema.commerce.CommercialPurchase.PurchaseTicket) e.getUnfinishedMessage();
-          throw e.unwrapIOException();
-        } finally {
-          if (parsedMessage != null) {
-            mergeFrom(parsedMessage);
-          }
-        }
-        return this;
-      }
-      private int bitField0_;
-
-      private io.opencannabis.schema.commerce.CommercialPurchase.PurchaseKey key_ = null;
-      private com.google.protobuf.SingleFieldBuilderV3<
-          io.opencannabis.schema.commerce.CommercialPurchase.PurchaseKey, io.opencannabis.schema.commerce.CommercialPurchase.PurchaseKey.Builder, io.opencannabis.schema.commerce.CommercialPurchase.PurchaseKeyOrBuilder> keyBuilder_;
-      /**
-       * <pre>
-       * Unique key generated to address this purchase. Usually consists of a string UUID.
-       * </pre>
-       *
-       * <code>.opencannabis.commerce.PurchaseKey key = 1 [(.core.field) = { ... }</code>
-       */
-      public boolean hasKey() {
-        return keyBuilder_ != null || key_ != null;
-      }
-      /**
-       * <pre>
-       * Unique key generated to address this purchase. Usually consists of a string UUID.
-       * </pre>
-       *
-       * <code>.opencannabis.commerce.PurchaseKey key = 1 [(.core.field) = { ... }</code>
-       */
-      public io.opencannabis.schema.commerce.CommercialPurchase.PurchaseKey getKey() {
-        if (keyBuilder_ == null) {
-          return key_ == null ? io.opencannabis.schema.commerce.CommercialPurchase.PurchaseKey.getDefaultInstance() : key_;
-        } else {
-          return keyBuilder_.getMessage();
-        }
-      }
-      /**
-       * <pre>
-       * Unique key generated to address this purchase. Usually consists of a string UUID.
-       * </pre>
-       *
-       * <code>.opencannabis.commerce.PurchaseKey key = 1 [(.core.field) = { ... }</code>
-       */
-      public Builder setKey(io.opencannabis.schema.commerce.CommercialPurchase.PurchaseKey value) {
-        if (keyBuilder_ == null) {
-          if (value == null) {
-            throw new NullPointerException();
-          }
-          key_ = value;
-          onChanged();
-        } else {
-          keyBuilder_.setMessage(value);
-        }
-
-        return this;
-      }
-      /**
-       * <pre>
-       * Unique key generated to address this purchase. Usually consists of a string UUID.
-       * </pre>
-       *
-       * <code>.opencannabis.commerce.PurchaseKey key = 1 [(.core.field) = { ... }</code>
-       */
-      public Builder setKey(
-          io.opencannabis.schema.commerce.CommercialPurchase.PurchaseKey.Builder builderForValue) {
-        if (keyBuilder_ == null) {
-          key_ = builderForValue.build();
-          onChanged();
-        } else {
-          keyBuilder_.setMessage(builderForValue.build());
-        }
-
-        return this;
-      }
-      /**
-       * <pre>
-       * Unique key generated to address this purchase. Usually consists of a string UUID.
-       * </pre>
-       *
-       * <code>.opencannabis.commerce.PurchaseKey key = 1 [(.core.field) = { ... }</code>
-       */
-      public Builder mergeKey(io.opencannabis.schema.commerce.CommercialPurchase.PurchaseKey value) {
-        if (keyBuilder_ == null) {
-          if (key_ != null) {
-            key_ =
-              io.opencannabis.schema.commerce.CommercialPurchase.PurchaseKey.newBuilder(key_).mergeFrom(value).buildPartial();
-          } else {
-            key_ = value;
-          }
-          onChanged();
-        } else {
-          keyBuilder_.mergeFrom(value);
-        }
-
-        return this;
-      }
-      /**
-       * <pre>
-       * Unique key generated to address this purchase. Usually consists of a string UUID.
-       * </pre>
-       *
-       * <code>.opencannabis.commerce.PurchaseKey key = 1 [(.core.field) = { ... }</code>
-       */
-      public Builder clearKey() {
-        if (keyBuilder_ == null) {
-          key_ = null;
-          onChanged();
-        } else {
-          key_ = null;
-          keyBuilder_ = null;
-        }
-
-        return this;
-      }
-      /**
-       * <pre>
-       * Unique key generated to address this purchase. Usually consists of a string UUID.
-       * </pre>
-       *
-       * <code>.opencannabis.commerce.PurchaseKey key = 1 [(.core.field) = { ... }</code>
-       */
-      public io.opencannabis.schema.commerce.CommercialPurchase.PurchaseKey.Builder getKeyBuilder() {
-        
-        onChanged();
-        return getKeyFieldBuilder().getBuilder();
-      }
-      /**
-       * <pre>
-       * Unique key generated to address this purchase. Usually consists of a string UUID.
-       * </pre>
-       *
-       * <code>.opencannabis.commerce.PurchaseKey key = 1 [(.core.field) = { ... }</code>
-       */
-      public io.opencannabis.schema.commerce.CommercialPurchase.PurchaseKeyOrBuilder getKeyOrBuilder() {
-        if (keyBuilder_ != null) {
-          return keyBuilder_.getMessageOrBuilder();
-        } else {
-          return key_ == null ?
-              io.opencannabis.schema.commerce.CommercialPurchase.PurchaseKey.getDefaultInstance() : key_;
-        }
-      }
-      /**
-       * <pre>
-       * Unique key generated to address this purchase. Usually consists of a string UUID.
-       * </pre>
-       *
-       * <code>.opencannabis.commerce.PurchaseKey key = 1 [(.core.field) = { ... }</code>
-       */
-      private com.google.protobuf.SingleFieldBuilderV3<
-          io.opencannabis.schema.commerce.CommercialPurchase.PurchaseKey, io.opencannabis.schema.commerce.CommercialPurchase.PurchaseKey.Builder, io.opencannabis.schema.commerce.CommercialPurchase.PurchaseKeyOrBuilder> 
-          getKeyFieldBuilder() {
-        if (keyBuilder_ == null) {
-          keyBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-              io.opencannabis.schema.commerce.CommercialPurchase.PurchaseKey, io.opencannabis.schema.commerce.CommercialPurchase.PurchaseKey.Builder, io.opencannabis.schema.commerce.CommercialPurchase.PurchaseKeyOrBuilder>(
-                  getKey(),
-                  getParentForChildren(),
-                  isClean());
-          key_ = null;
-        }
-        return keyBuilder_;
-      }
-
-      private int version_ ;
-      /**
-       * <pre>
-       * Version or revision number for this purchase ticket.
-       * </pre>
-       *
-       * <code>uint32 version = 2;</code>
-       */
-      public int getVersion() {
-        return version_;
-      }
-      /**
-       * <pre>
-       * Version or revision number for this purchase ticket.
-       * </pre>
-       *
-       * <code>uint32 version = 2;</code>
-       */
-      public Builder setVersion(int value) {
-        
-        version_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <pre>
-       * Version or revision number for this purchase ticket.
-       * </pre>
-       *
-       * <code>uint32 version = 2;</code>
-       */
-      public Builder clearVersion() {
-        
-        version_ = 0;
-        onChanged();
-        return this;
-      }
-
-      private int status_ = 0;
-      /**
-       * <pre>
-       * Specifies the current status of this individual purchase transaction.
-       * </pre>
-       *
-       * <code>.opencannabis.commerce.PurchaseStatus status = 3;</code>
-       */
-      public int getStatusValue() {
-        return status_;
-      }
-      /**
-       * <pre>
-       * Specifies the current status of this individual purchase transaction.
-       * </pre>
-       *
-       * <code>.opencannabis.commerce.PurchaseStatus status = 3;</code>
-       */
-      public Builder setStatusValue(int value) {
-        status_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <pre>
-       * Specifies the current status of this individual purchase transaction.
-       * </pre>
-       *
-       * <code>.opencannabis.commerce.PurchaseStatus status = 3;</code>
-       */
-      public io.opencannabis.schema.commerce.CommercialPurchase.PurchaseStatus getStatus() {
-        io.opencannabis.schema.commerce.CommercialPurchase.PurchaseStatus result = io.opencannabis.schema.commerce.CommercialPurchase.PurchaseStatus.valueOf(status_);
-        return result == null ? io.opencannabis.schema.commerce.CommercialPurchase.PurchaseStatus.UNRECOGNIZED : result;
-      }
-      /**
-       * <pre>
-       * Specifies the current status of this individual purchase transaction.
-       * </pre>
-       *
-       * <code>.opencannabis.commerce.PurchaseStatus status = 3;</code>
-       */
-      public Builder setStatus(io.opencannabis.schema.commerce.CommercialPurchase.PurchaseStatus value) {
-        if (value == null) {
-          throw new NullPointerException();
-        }
-        
-        status_ = value.getNumber();
-        onChanged();
-        return this;
-      }
-      /**
-       * <pre>
-       * Specifies the current status of this individual purchase transaction.
-       * </pre>
-       *
-       * <code>.opencannabis.commerce.PurchaseStatus status = 3;</code>
-       */
-      public Builder clearStatus() {
-        
-        status_ = 0;
-        onChanged();
-        return this;
-      }
-
-      private java.lang.Object claim_ = "";
-      /**
-       * <pre>
-       * Point-of-sale session that is currently claiming this ticket, or last claimed this ticket.
-       * </pre>
-       *
-       * <code>string claim = 4;</code>
-       */
-      public java.lang.String getClaim() {
-        java.lang.Object ref = claim_;
-        if (!(ref instanceof java.lang.String)) {
-          com.google.protobuf.ByteString bs =
-              (com.google.protobuf.ByteString) ref;
-          java.lang.String s = bs.toStringUtf8();
-          claim_ = s;
-          return s;
-        } else {
-          return (java.lang.String) ref;
-        }
-      }
-      /**
-       * <pre>
-       * Point-of-sale session that is currently claiming this ticket, or last claimed this ticket.
-       * </pre>
-       *
-       * <code>string claim = 4;</code>
-       */
-      public com.google.protobuf.ByteString
-          getClaimBytes() {
-        java.lang.Object ref = claim_;
-        if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
-          claim_ = b;
-          return b;
-        } else {
-          return (com.google.protobuf.ByteString) ref;
-        }
-      }
-      /**
-       * <pre>
-       * Point-of-sale session that is currently claiming this ticket, or last claimed this ticket.
-       * </pre>
-       *
-       * <code>string claim = 4;</code>
-       */
-      public Builder setClaim(
-          java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
-        claim_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <pre>
-       * Point-of-sale session that is currently claiming this ticket, or last claimed this ticket.
-       * </pre>
-       *
-       * <code>string claim = 4;</code>
-       */
-      public Builder clearClaim() {
-        
-        claim_ = getDefaultInstance().getClaim();
-        onChanged();
-        return this;
-      }
-      /**
-       * <pre>
-       * Point-of-sale session that is currently claiming this ticket, or last claimed this ticket.
-       * </pre>
-       *
-       * <code>string claim = 4;</code>
-       */
-      public Builder setClaimBytes(
-          com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
-        claim_ = value;
-        onChanged();
-        return this;
-      }
-
-      private io.opencannabis.schema.commerce.CommercialPurchase.PurchaseFacilitator facilitator_ = null;
-      private com.google.protobuf.SingleFieldBuilderV3<
-          io.opencannabis.schema.commerce.CommercialPurchase.PurchaseFacilitator, io.opencannabis.schema.commerce.CommercialPurchase.PurchaseFacilitator.Builder, io.opencannabis.schema.commerce.CommercialPurchase.PurchaseFacilitatorOrBuilder> facilitatorBuilder_;
-      /**
-       * <pre>
-       * Partner organization, location, device, and staff member that facilitated this transaction.
-       * </pre>
-       *
-       * <code>.opencannabis.commerce.PurchaseFacilitator facilitator = 5;</code>
-       */
-      public boolean hasFacilitator() {
-        return facilitatorBuilder_ != null || facilitator_ != null;
-      }
-      /**
-       * <pre>
-       * Partner organization, location, device, and staff member that facilitated this transaction.
-       * </pre>
-       *
-       * <code>.opencannabis.commerce.PurchaseFacilitator facilitator = 5;</code>
-       */
-      public io.opencannabis.schema.commerce.CommercialPurchase.PurchaseFacilitator getFacilitator() {
-        if (facilitatorBuilder_ == null) {
-          return facilitator_ == null ? io.opencannabis.schema.commerce.CommercialPurchase.PurchaseFacilitator.getDefaultInstance() : facilitator_;
-        } else {
-          return facilitatorBuilder_.getMessage();
-        }
-      }
-      /**
-       * <pre>
-       * Partner organization, location, device, and staff member that facilitated this transaction.
-       * </pre>
-       *
-       * <code>.opencannabis.commerce.PurchaseFacilitator facilitator = 5;</code>
-       */
-      public Builder setFacilitator(io.opencannabis.schema.commerce.CommercialPurchase.PurchaseFacilitator value) {
-        if (facilitatorBuilder_ == null) {
-          if (value == null) {
-            throw new NullPointerException();
-          }
-          facilitator_ = value;
-          onChanged();
-        } else {
-          facilitatorBuilder_.setMessage(value);
-        }
-
-        return this;
-      }
-      /**
-       * <pre>
-       * Partner organization, location, device, and staff member that facilitated this transaction.
-       * </pre>
-       *
-       * <code>.opencannabis.commerce.PurchaseFacilitator facilitator = 5;</code>
-       */
-      public Builder setFacilitator(
-          io.opencannabis.schema.commerce.CommercialPurchase.PurchaseFacilitator.Builder builderForValue) {
-        if (facilitatorBuilder_ == null) {
-          facilitator_ = builderForValue.build();
-          onChanged();
-        } else {
-          facilitatorBuilder_.setMessage(builderForValue.build());
-        }
-
-        return this;
-      }
-      /**
-       * <pre>
-       * Partner organization, location, device, and staff member that facilitated this transaction.
-       * </pre>
-       *
-       * <code>.opencannabis.commerce.PurchaseFacilitator facilitator = 5;</code>
-       */
-      public Builder mergeFacilitator(io.opencannabis.schema.commerce.CommercialPurchase.PurchaseFacilitator value) {
-        if (facilitatorBuilder_ == null) {
-          if (facilitator_ != null) {
-            facilitator_ =
-              io.opencannabis.schema.commerce.CommercialPurchase.PurchaseFacilitator.newBuilder(facilitator_).mergeFrom(value).buildPartial();
-          } else {
-            facilitator_ = value;
-          }
-          onChanged();
-        } else {
-          facilitatorBuilder_.mergeFrom(value);
-        }
-
-        return this;
-      }
-      /**
-       * <pre>
-       * Partner organization, location, device, and staff member that facilitated this transaction.
-       * </pre>
-       *
-       * <code>.opencannabis.commerce.PurchaseFacilitator facilitator = 5;</code>
-       */
-      public Builder clearFacilitator() {
-        if (facilitatorBuilder_ == null) {
-          facilitator_ = null;
-          onChanged();
-        } else {
-          facilitator_ = null;
-          facilitatorBuilder_ = null;
-        }
-
-        return this;
-      }
-      /**
-       * <pre>
-       * Partner organization, location, device, and staff member that facilitated this transaction.
-       * </pre>
-       *
-       * <code>.opencannabis.commerce.PurchaseFacilitator facilitator = 5;</code>
-       */
-      public io.opencannabis.schema.commerce.CommercialPurchase.PurchaseFacilitator.Builder getFacilitatorBuilder() {
-        
-        onChanged();
-        return getFacilitatorFieldBuilder().getBuilder();
-      }
-      /**
-       * <pre>
-       * Partner organization, location, device, and staff member that facilitated this transaction.
-       * </pre>
-       *
-       * <code>.opencannabis.commerce.PurchaseFacilitator facilitator = 5;</code>
-       */
-      public io.opencannabis.schema.commerce.CommercialPurchase.PurchaseFacilitatorOrBuilder getFacilitatorOrBuilder() {
-        if (facilitatorBuilder_ != null) {
-          return facilitatorBuilder_.getMessageOrBuilder();
-        } else {
-          return facilitator_ == null ?
-              io.opencannabis.schema.commerce.CommercialPurchase.PurchaseFacilitator.getDefaultInstance() : facilitator_;
-        }
-      }
-      /**
-       * <pre>
-       * Partner organization, location, device, and staff member that facilitated this transaction.
-       * </pre>
-       *
-       * <code>.opencannabis.commerce.PurchaseFacilitator facilitator = 5;</code>
-       */
-      private com.google.protobuf.SingleFieldBuilderV3<
-          io.opencannabis.schema.commerce.CommercialPurchase.PurchaseFacilitator, io.opencannabis.schema.commerce.CommercialPurchase.PurchaseFacilitator.Builder, io.opencannabis.schema.commerce.CommercialPurchase.PurchaseFacilitatorOrBuilder> 
-          getFacilitatorFieldBuilder() {
-        if (facilitatorBuilder_ == null) {
-          facilitatorBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-              io.opencannabis.schema.commerce.CommercialPurchase.PurchaseFacilitator, io.opencannabis.schema.commerce.CommercialPurchase.PurchaseFacilitator.Builder, io.opencannabis.schema.commerce.CommercialPurchase.PurchaseFacilitatorOrBuilder>(
-                  getFacilitator(),
-                  getParentForChildren(),
-                  isClean());
-          facilitator_ = null;
-        }
-        return facilitatorBuilder_;
-      }
-
-      private io.opencannabis.schema.commerce.CommercialPurchase.PurchaseCustomer customer_ = null;
-      private com.google.protobuf.SingleFieldBuilderV3<
-          io.opencannabis.schema.commerce.CommercialPurchase.PurchaseCustomer, io.opencannabis.schema.commerce.CommercialPurchase.PurchaseCustomer.Builder, io.opencannabis.schema.commerce.CommercialPurchase.PurchaseCustomerOrBuilder> customerBuilder_;
-      /**
-       * <pre>
-       * Specifies information regarding the customer that made this purchase.
-       * </pre>
-       *
-       * <code>.opencannabis.commerce.PurchaseCustomer customer = 6;</code>
-       */
-      public boolean hasCustomer() {
-        return customerBuilder_ != null || customer_ != null;
-      }
-      /**
-       * <pre>
-       * Specifies information regarding the customer that made this purchase.
-       * </pre>
-       *
-       * <code>.opencannabis.commerce.PurchaseCustomer customer = 6;</code>
-       */
-      public io.opencannabis.schema.commerce.CommercialPurchase.PurchaseCustomer getCustomer() {
-        if (customerBuilder_ == null) {
-          return customer_ == null ? io.opencannabis.schema.commerce.CommercialPurchase.PurchaseCustomer.getDefaultInstance() : customer_;
-        } else {
-          return customerBuilder_.getMessage();
-        }
-      }
-      /**
-       * <pre>
-       * Specifies information regarding the customer that made this purchase.
-       * </pre>
-       *
-       * <code>.opencannabis.commerce.PurchaseCustomer customer = 6;</code>
-       */
-      public Builder setCustomer(io.opencannabis.schema.commerce.CommercialPurchase.PurchaseCustomer value) {
-        if (customerBuilder_ == null) {
-          if (value == null) {
-            throw new NullPointerException();
-          }
-          customer_ = value;
-          onChanged();
-        } else {
-          customerBuilder_.setMessage(value);
-        }
-
-        return this;
-      }
-      /**
-       * <pre>
-       * Specifies information regarding the customer that made this purchase.
-       * </pre>
-       *
-       * <code>.opencannabis.commerce.PurchaseCustomer customer = 6;</code>
-       */
-      public Builder setCustomer(
-          io.opencannabis.schema.commerce.CommercialPurchase.PurchaseCustomer.Builder builderForValue) {
-        if (customerBuilder_ == null) {
-          customer_ = builderForValue.build();
-          onChanged();
-        } else {
-          customerBuilder_.setMessage(builderForValue.build());
-        }
-
-        return this;
-      }
-      /**
-       * <pre>
-       * Specifies information regarding the customer that made this purchase.
-       * </pre>
-       *
-       * <code>.opencannabis.commerce.PurchaseCustomer customer = 6;</code>
-       */
-      public Builder mergeCustomer(io.opencannabis.schema.commerce.CommercialPurchase.PurchaseCustomer value) {
-        if (customerBuilder_ == null) {
-          if (customer_ != null) {
-            customer_ =
-              io.opencannabis.schema.commerce.CommercialPurchase.PurchaseCustomer.newBuilder(customer_).mergeFrom(value).buildPartial();
-          } else {
-            customer_ = value;
-          }
-          onChanged();
-        } else {
-          customerBuilder_.mergeFrom(value);
-        }
-
-        return this;
-      }
-      /**
-       * <pre>
-       * Specifies information regarding the customer that made this purchase.
-       * </pre>
-       *
-       * <code>.opencannabis.commerce.PurchaseCustomer customer = 6;</code>
-       */
-      public Builder clearCustomer() {
-        if (customerBuilder_ == null) {
-          customer_ = null;
-          onChanged();
-        } else {
-          customer_ = null;
-          customerBuilder_ = null;
-        }
-
-        return this;
-      }
-      /**
-       * <pre>
-       * Specifies information regarding the customer that made this purchase.
-       * </pre>
-       *
-       * <code>.opencannabis.commerce.PurchaseCustomer customer = 6;</code>
-       */
-      public io.opencannabis.schema.commerce.CommercialPurchase.PurchaseCustomer.Builder getCustomerBuilder() {
-        
-        onChanged();
-        return getCustomerFieldBuilder().getBuilder();
-      }
-      /**
-       * <pre>
-       * Specifies information regarding the customer that made this purchase.
-       * </pre>
-       *
-       * <code>.opencannabis.commerce.PurchaseCustomer customer = 6;</code>
-       */
-      public io.opencannabis.schema.commerce.CommercialPurchase.PurchaseCustomerOrBuilder getCustomerOrBuilder() {
-        if (customerBuilder_ != null) {
-          return customerBuilder_.getMessageOrBuilder();
-        } else {
-          return customer_ == null ?
-              io.opencannabis.schema.commerce.CommercialPurchase.PurchaseCustomer.getDefaultInstance() : customer_;
-        }
-      }
-      /**
-       * <pre>
-       * Specifies information regarding the customer that made this purchase.
-       * </pre>
-       *
-       * <code>.opencannabis.commerce.PurchaseCustomer customer = 6;</code>
-       */
-      private com.google.protobuf.SingleFieldBuilderV3<
-          io.opencannabis.schema.commerce.CommercialPurchase.PurchaseCustomer, io.opencannabis.schema.commerce.CommercialPurchase.PurchaseCustomer.Builder, io.opencannabis.schema.commerce.CommercialPurchase.PurchaseCustomerOrBuilder> 
-          getCustomerFieldBuilder() {
-        if (customerBuilder_ == null) {
-          customerBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-              io.opencannabis.schema.commerce.CommercialPurchase.PurchaseCustomer, io.opencannabis.schema.commerce.CommercialPurchase.PurchaseCustomer.Builder, io.opencannabis.schema.commerce.CommercialPurchase.PurchaseCustomerOrBuilder>(
-                  getCustomer(),
-                  getParentForChildren(),
-                  isClean());
-          customer_ = null;
-        }
-        return customerBuilder_;
-      }
-
-      private io.opencannabis.schema.commerce.CommercialPurchase.BillOfCharges bill_ = null;
-      private com.google.protobuf.SingleFieldBuilderV3<
-          io.opencannabis.schema.commerce.CommercialPurchase.BillOfCharges, io.opencannabis.schema.commerce.CommercialPurchase.BillOfCharges.Builder, io.opencannabis.schema.commerce.CommercialPurchase.BillOfChargesOrBuilder> billBuilder_;
-      /**
-       * <pre>
-       * Line-item bill of charges, or purchase sums. Includes taxes and discounts.
-       * </pre>
-       *
-       * <code>.opencannabis.commerce.BillOfCharges bill = 7;</code>
-       */
-      public boolean hasBill() {
-        return billBuilder_ != null || bill_ != null;
-      }
-      /**
-       * <pre>
-       * Line-item bill of charges, or purchase sums. Includes taxes and discounts.
-       * </pre>
-       *
-       * <code>.opencannabis.commerce.BillOfCharges bill = 7;</code>
-       */
-      public io.opencannabis.schema.commerce.CommercialPurchase.BillOfCharges getBill() {
-        if (billBuilder_ == null) {
-          return bill_ == null ? io.opencannabis.schema.commerce.CommercialPurchase.BillOfCharges.getDefaultInstance() : bill_;
-        } else {
-          return billBuilder_.getMessage();
-        }
-      }
-      /**
-       * <pre>
-       * Line-item bill of charges, or purchase sums. Includes taxes and discounts.
-       * </pre>
-       *
-       * <code>.opencannabis.commerce.BillOfCharges bill = 7;</code>
-       */
-      public Builder setBill(io.opencannabis.schema.commerce.CommercialPurchase.BillOfCharges value) {
-        if (billBuilder_ == null) {
-          if (value == null) {
-            throw new NullPointerException();
-          }
-          bill_ = value;
-          onChanged();
-        } else {
-          billBuilder_.setMessage(value);
-        }
-
-        return this;
-      }
-      /**
-       * <pre>
-       * Line-item bill of charges, or purchase sums. Includes taxes and discounts.
-       * </pre>
-       *
-       * <code>.opencannabis.commerce.BillOfCharges bill = 7;</code>
-       */
-      public Builder setBill(
-          io.opencannabis.schema.commerce.CommercialPurchase.BillOfCharges.Builder builderForValue) {
-        if (billBuilder_ == null) {
-          bill_ = builderForValue.build();
-          onChanged();
-        } else {
-          billBuilder_.setMessage(builderForValue.build());
-        }
-
-        return this;
-      }
-      /**
-       * <pre>
-       * Line-item bill of charges, or purchase sums. Includes taxes and discounts.
-       * </pre>
-       *
-       * <code>.opencannabis.commerce.BillOfCharges bill = 7;</code>
-       */
-      public Builder mergeBill(io.opencannabis.schema.commerce.CommercialPurchase.BillOfCharges value) {
-        if (billBuilder_ == null) {
-          if (bill_ != null) {
-            bill_ =
-              io.opencannabis.schema.commerce.CommercialPurchase.BillOfCharges.newBuilder(bill_).mergeFrom(value).buildPartial();
-          } else {
-            bill_ = value;
-          }
-          onChanged();
-        } else {
-          billBuilder_.mergeFrom(value);
-        }
-
-        return this;
-      }
-      /**
-       * <pre>
-       * Line-item bill of charges, or purchase sums. Includes taxes and discounts.
-       * </pre>
-       *
-       * <code>.opencannabis.commerce.BillOfCharges bill = 7;</code>
-       */
-      public Builder clearBill() {
-        if (billBuilder_ == null) {
-          bill_ = null;
-          onChanged();
-        } else {
-          bill_ = null;
-          billBuilder_ = null;
-        }
-
-        return this;
-      }
-      /**
-       * <pre>
-       * Line-item bill of charges, or purchase sums. Includes taxes and discounts.
-       * </pre>
-       *
-       * <code>.opencannabis.commerce.BillOfCharges bill = 7;</code>
-       */
-      public io.opencannabis.schema.commerce.CommercialPurchase.BillOfCharges.Builder getBillBuilder() {
-        
-        onChanged();
-        return getBillFieldBuilder().getBuilder();
-      }
-      /**
-       * <pre>
-       * Line-item bill of charges, or purchase sums. Includes taxes and discounts.
-       * </pre>
-       *
-       * <code>.opencannabis.commerce.BillOfCharges bill = 7;</code>
-       */
-      public io.opencannabis.schema.commerce.CommercialPurchase.BillOfChargesOrBuilder getBillOrBuilder() {
-        if (billBuilder_ != null) {
-          return billBuilder_.getMessageOrBuilder();
-        } else {
-          return bill_ == null ?
-              io.opencannabis.schema.commerce.CommercialPurchase.BillOfCharges.getDefaultInstance() : bill_;
-        }
-      }
-      /**
-       * <pre>
-       * Line-item bill of charges, or purchase sums. Includes taxes and discounts.
-       * </pre>
-       *
-       * <code>.opencannabis.commerce.BillOfCharges bill = 7;</code>
-       */
-      private com.google.protobuf.SingleFieldBuilderV3<
-          io.opencannabis.schema.commerce.CommercialPurchase.BillOfCharges, io.opencannabis.schema.commerce.CommercialPurchase.BillOfCharges.Builder, io.opencannabis.schema.commerce.CommercialPurchase.BillOfChargesOrBuilder> 
-          getBillFieldBuilder() {
-        if (billBuilder_ == null) {
-          billBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-              io.opencannabis.schema.commerce.CommercialPurchase.BillOfCharges, io.opencannabis.schema.commerce.CommercialPurchase.BillOfCharges.Builder, io.opencannabis.schema.commerce.CommercialPurchase.BillOfChargesOrBuilder>(
-                  getBill(),
-                  getParentForChildren(),
-                  isClean());
-          bill_ = null;
-        }
-        return billBuilder_;
-      }
-
-      private java.util.List<io.opencannabis.schema.commerce.CommercialPurchase.TicketItem> item_ =
-        java.util.Collections.emptyList();
-      private void ensureItemIsMutable() {
-        if (!((bitField0_ & 0x00000080) == 0x00000080)) {
-          item_ = new java.util.ArrayList<io.opencannabis.schema.commerce.CommercialPurchase.TicketItem>(item_);
-          bitField0_ |= 0x00000080;
-         }
-      }
-
-      private com.google.protobuf.RepeatedFieldBuilderV3<
-          io.opencannabis.schema.commerce.CommercialPurchase.TicketItem, io.opencannabis.schema.commerce.CommercialPurchase.TicketItem.Builder, io.opencannabis.schema.commerce.CommercialPurchase.TicketItemOrBuilder> itemBuilder_;
-
-      /**
-       * <pre>
-       * Constituent items purchased as part of this commercial purchase ticket.
-       * </pre>
-       *
-       * <code>repeated .opencannabis.commerce.TicketItem item = 8;</code>
-       */
-      public java.util.List<io.opencannabis.schema.commerce.CommercialPurchase.TicketItem> getItemList() {
-        if (itemBuilder_ == null) {
-          return java.util.Collections.unmodifiableList(item_);
-        } else {
-          return itemBuilder_.getMessageList();
-        }
-      }
-      /**
-       * <pre>
-       * Constituent items purchased as part of this commercial purchase ticket.
-       * </pre>
-       *
-       * <code>repeated .opencannabis.commerce.TicketItem item = 8;</code>
-       */
-      public int getItemCount() {
-        if (itemBuilder_ == null) {
-          return item_.size();
-        } else {
-          return itemBuilder_.getCount();
-        }
-      }
-      /**
-       * <pre>
-       * Constituent items purchased as part of this commercial purchase ticket.
-       * </pre>
-       *
-       * <code>repeated .opencannabis.commerce.TicketItem item = 8;</code>
-       */
-      public io.opencannabis.schema.commerce.CommercialPurchase.TicketItem getItem(int index) {
-        if (itemBuilder_ == null) {
-          return item_.get(index);
-        } else {
-          return itemBuilder_.getMessage(index);
-        }
-      }
-      /**
-       * <pre>
-       * Constituent items purchased as part of this commercial purchase ticket.
-       * </pre>
-       *
-       * <code>repeated .opencannabis.commerce.TicketItem item = 8;</code>
-       */
-      public Builder setItem(
-          int index, io.opencannabis.schema.commerce.CommercialPurchase.TicketItem value) {
-        if (itemBuilder_ == null) {
-          if (value == null) {
-            throw new NullPointerException();
-          }
-          ensureItemIsMutable();
-          item_.set(index, value);
-          onChanged();
-        } else {
-          itemBuilder_.setMessage(index, value);
-        }
-        return this;
-      }
-      /**
-       * <pre>
-       * Constituent items purchased as part of this commercial purchase ticket.
-       * </pre>
-       *
-       * <code>repeated .opencannabis.commerce.TicketItem item = 8;</code>
-       */
-      public Builder setItem(
-          int index, io.opencannabis.schema.commerce.CommercialPurchase.TicketItem.Builder builderForValue) {
-        if (itemBuilder_ == null) {
-          ensureItemIsMutable();
-          item_.set(index, builderForValue.build());
-          onChanged();
-        } else {
-          itemBuilder_.setMessage(index, builderForValue.build());
-        }
-        return this;
-      }
-      /**
-       * <pre>
-       * Constituent items purchased as part of this commercial purchase ticket.
-       * </pre>
-       *
-       * <code>repeated .opencannabis.commerce.TicketItem item = 8;</code>
-       */
-      public Builder addItem(io.opencannabis.schema.commerce.CommercialPurchase.TicketItem value) {
-        if (itemBuilder_ == null) {
-          if (value == null) {
-            throw new NullPointerException();
-          }
-          ensureItemIsMutable();
-          item_.add(value);
-          onChanged();
-        } else {
-          itemBuilder_.addMessage(value);
-        }
-        return this;
-      }
-      /**
-       * <pre>
-       * Constituent items purchased as part of this commercial purchase ticket.
-       * </pre>
-       *
-       * <code>repeated .opencannabis.commerce.TicketItem item = 8;</code>
-       */
-      public Builder addItem(
-          int index, io.opencannabis.schema.commerce.CommercialPurchase.TicketItem value) {
-        if (itemBuilder_ == null) {
-          if (value == null) {
-            throw new NullPointerException();
-          }
-          ensureItemIsMutable();
-          item_.add(index, value);
-          onChanged();
-        } else {
-          itemBuilder_.addMessage(index, value);
-        }
-        return this;
-      }
-      /**
-       * <pre>
-       * Constituent items purchased as part of this commercial purchase ticket.
-       * </pre>
-       *
-       * <code>repeated .opencannabis.commerce.TicketItem item = 8;</code>
-       */
-      public Builder addItem(
-          io.opencannabis.schema.commerce.CommercialPurchase.TicketItem.Builder builderForValue) {
-        if (itemBuilder_ == null) {
-          ensureItemIsMutable();
-          item_.add(builderForValue.build());
-          onChanged();
-        } else {
-          itemBuilder_.addMessage(builderForValue.build());
-        }
-        return this;
-      }
-      /**
-       * <pre>
-       * Constituent items purchased as part of this commercial purchase ticket.
-       * </pre>
-       *
-       * <code>repeated .opencannabis.commerce.TicketItem item = 8;</code>
-       */
-      public Builder addItem(
-          int index, io.opencannabis.schema.commerce.CommercialPurchase.TicketItem.Builder builderForValue) {
-        if (itemBuilder_ == null) {
-          ensureItemIsMutable();
-          item_.add(index, builderForValue.build());
-          onChanged();
-        } else {
-          itemBuilder_.addMessage(index, builderForValue.build());
-        }
-        return this;
-      }
-      /**
-       * <pre>
-       * Constituent items purchased as part of this commercial purchase ticket.
-       * </pre>
-       *
-       * <code>repeated .opencannabis.commerce.TicketItem item = 8;</code>
-       */
-      public Builder addAllItem(
-          java.lang.Iterable<? extends io.opencannabis.schema.commerce.CommercialPurchase.TicketItem> values) {
-        if (itemBuilder_ == null) {
-          ensureItemIsMutable();
-          com.google.protobuf.AbstractMessageLite.Builder.addAll(
-              values, item_);
-          onChanged();
-        } else {
-          itemBuilder_.addAllMessages(values);
-        }
-        return this;
-      }
-      /**
-       * <pre>
-       * Constituent items purchased as part of this commercial purchase ticket.
-       * </pre>
-       *
-       * <code>repeated .opencannabis.commerce.TicketItem item = 8;</code>
-       */
-      public Builder clearItem() {
-        if (itemBuilder_ == null) {
-          item_ = java.util.Collections.emptyList();
-          bitField0_ = (bitField0_ & ~0x00000080);
-          onChanged();
-        } else {
-          itemBuilder_.clear();
-        }
-        return this;
-      }
-      /**
-       * <pre>
-       * Constituent items purchased as part of this commercial purchase ticket.
-       * </pre>
-       *
-       * <code>repeated .opencannabis.commerce.TicketItem item = 8;</code>
-       */
-      public Builder removeItem(int index) {
-        if (itemBuilder_ == null) {
-          ensureItemIsMutable();
-          item_.remove(index);
-          onChanged();
-        } else {
-          itemBuilder_.remove(index);
-        }
-        return this;
-      }
-      /**
-       * <pre>
-       * Constituent items purchased as part of this commercial purchase ticket.
-       * </pre>
-       *
-       * <code>repeated .opencannabis.commerce.TicketItem item = 8;</code>
-       */
-      public io.opencannabis.schema.commerce.CommercialPurchase.TicketItem.Builder getItemBuilder(
-          int index) {
-        return getItemFieldBuilder().getBuilder(index);
-      }
-      /**
-       * <pre>
-       * Constituent items purchased as part of this commercial purchase ticket.
-       * </pre>
-       *
-       * <code>repeated .opencannabis.commerce.TicketItem item = 8;</code>
-       */
-      public io.opencannabis.schema.commerce.CommercialPurchase.TicketItemOrBuilder getItemOrBuilder(
-          int index) {
-        if (itemBuilder_ == null) {
-          return item_.get(index);  } else {
-          return itemBuilder_.getMessageOrBuilder(index);
-        }
-      }
-      /**
-       * <pre>
-       * Constituent items purchased as part of this commercial purchase ticket.
-       * </pre>
-       *
-       * <code>repeated .opencannabis.commerce.TicketItem item = 8;</code>
-       */
-      public java.util.List<? extends io.opencannabis.schema.commerce.CommercialPurchase.TicketItemOrBuilder> 
-           getItemOrBuilderList() {
-        if (itemBuilder_ != null) {
-          return itemBuilder_.getMessageOrBuilderList();
-        } else {
-          return java.util.Collections.unmodifiableList(item_);
-        }
-      }
-      /**
-       * <pre>
-       * Constituent items purchased as part of this commercial purchase ticket.
-       * </pre>
-       *
-       * <code>repeated .opencannabis.commerce.TicketItem item = 8;</code>
-       */
-      public io.opencannabis.schema.commerce.CommercialPurchase.TicketItem.Builder addItemBuilder() {
-        return getItemFieldBuilder().addBuilder(
-            io.opencannabis.schema.commerce.CommercialPurchase.TicketItem.getDefaultInstance());
-      }
-      /**
-       * <pre>
-       * Constituent items purchased as part of this commercial purchase ticket.
-       * </pre>
-       *
-       * <code>repeated .opencannabis.commerce.TicketItem item = 8;</code>
-       */
-      public io.opencannabis.schema.commerce.CommercialPurchase.TicketItem.Builder addItemBuilder(
-          int index) {
-        return getItemFieldBuilder().addBuilder(
-            index, io.opencannabis.schema.commerce.CommercialPurchase.TicketItem.getDefaultInstance());
-      }
-      /**
-       * <pre>
-       * Constituent items purchased as part of this commercial purchase ticket.
-       * </pre>
-       *
-       * <code>repeated .opencannabis.commerce.TicketItem item = 8;</code>
-       */
-      public java.util.List<io.opencannabis.schema.commerce.CommercialPurchase.TicketItem.Builder> 
-           getItemBuilderList() {
-        return getItemFieldBuilder().getBuilderList();
-      }
-      private com.google.protobuf.RepeatedFieldBuilderV3<
-          io.opencannabis.schema.commerce.CommercialPurchase.TicketItem, io.opencannabis.schema.commerce.CommercialPurchase.TicketItem.Builder, io.opencannabis.schema.commerce.CommercialPurchase.TicketItemOrBuilder> 
-          getItemFieldBuilder() {
-        if (itemBuilder_ == null) {
-          itemBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
-              io.opencannabis.schema.commerce.CommercialPurchase.TicketItem, io.opencannabis.schema.commerce.CommercialPurchase.TicketItem.Builder, io.opencannabis.schema.commerce.CommercialPurchase.TicketItemOrBuilder>(
-                  item_,
-                  ((bitField0_ & 0x00000080) == 0x00000080),
-                  getParentForChildren(),
-                  isClean());
-          item_ = null;
-        }
-        return itemBuilder_;
-      }
-
-      private java.util.List<io.opencannabis.schema.commerce.CommercialPurchase.Payment> payment_ =
-        java.util.Collections.emptyList();
-      private void ensurePaymentIsMutable() {
-        if (!((bitField0_ & 0x00000100) == 0x00000100)) {
-          payment_ = new java.util.ArrayList<io.opencannabis.schema.commerce.CommercialPurchase.Payment>(payment_);
-          bitField0_ |= 0x00000100;
-         }
-      }
-
-      private com.google.protobuf.RepeatedFieldBuilderV3<
-          io.opencannabis.schema.commerce.CommercialPurchase.Payment, io.opencannabis.schema.commerce.CommercialPurchase.Payment.Builder, io.opencannabis.schema.commerce.CommercialPurchase.PaymentOrBuilder> paymentBuilder_;
-
-      /**
-       * <pre>
-       * Specifies how this order was paid for, if applicable at this point in the ticket lifecycle.
-       * </pre>
-       *
-       * <code>repeated .opencannabis.commerce.Payment payment = 9;</code>
-       */
-      public java.util.List<io.opencannabis.schema.commerce.CommercialPurchase.Payment> getPaymentList() {
-        if (paymentBuilder_ == null) {
-          return java.util.Collections.unmodifiableList(payment_);
-        } else {
-          return paymentBuilder_.getMessageList();
-        }
-      }
-      /**
-       * <pre>
-       * Specifies how this order was paid for, if applicable at this point in the ticket lifecycle.
-       * </pre>
-       *
-       * <code>repeated .opencannabis.commerce.Payment payment = 9;</code>
-       */
-      public int getPaymentCount() {
-        if (paymentBuilder_ == null) {
-          return payment_.size();
-        } else {
-          return paymentBuilder_.getCount();
-        }
-      }
-      /**
-       * <pre>
-       * Specifies how this order was paid for, if applicable at this point in the ticket lifecycle.
-       * </pre>
-       *
-       * <code>repeated .opencannabis.commerce.Payment payment = 9;</code>
-       */
-      public io.opencannabis.schema.commerce.CommercialPurchase.Payment getPayment(int index) {
-        if (paymentBuilder_ == null) {
-          return payment_.get(index);
-        } else {
-          return paymentBuilder_.getMessage(index);
-        }
-      }
-      /**
-       * <pre>
-       * Specifies how this order was paid for, if applicable at this point in the ticket lifecycle.
-       * </pre>
-       *
-       * <code>repeated .opencannabis.commerce.Payment payment = 9;</code>
-       */
-      public Builder setPayment(
-          int index, io.opencannabis.schema.commerce.CommercialPurchase.Payment value) {
-        if (paymentBuilder_ == null) {
-          if (value == null) {
-            throw new NullPointerException();
-          }
-          ensurePaymentIsMutable();
-          payment_.set(index, value);
-          onChanged();
-        } else {
-          paymentBuilder_.setMessage(index, value);
-        }
-        return this;
-      }
-      /**
-       * <pre>
-       * Specifies how this order was paid for, if applicable at this point in the ticket lifecycle.
-       * </pre>
-       *
-       * <code>repeated .opencannabis.commerce.Payment payment = 9;</code>
-       */
-      public Builder setPayment(
-          int index, io.opencannabis.schema.commerce.CommercialPurchase.Payment.Builder builderForValue) {
-        if (paymentBuilder_ == null) {
-          ensurePaymentIsMutable();
-          payment_.set(index, builderForValue.build());
-          onChanged();
-        } else {
-          paymentBuilder_.setMessage(index, builderForValue.build());
-        }
-        return this;
-      }
-      /**
-       * <pre>
-       * Specifies how this order was paid for, if applicable at this point in the ticket lifecycle.
-       * </pre>
-       *
-       * <code>repeated .opencannabis.commerce.Payment payment = 9;</code>
-       */
-      public Builder addPayment(io.opencannabis.schema.commerce.CommercialPurchase.Payment value) {
-        if (paymentBuilder_ == null) {
-          if (value == null) {
-            throw new NullPointerException();
-          }
-          ensurePaymentIsMutable();
-          payment_.add(value);
-          onChanged();
-        } else {
-          paymentBuilder_.addMessage(value);
-        }
-        return this;
-      }
-      /**
-       * <pre>
-       * Specifies how this order was paid for, if applicable at this point in the ticket lifecycle.
-       * </pre>
-       *
-       * <code>repeated .opencannabis.commerce.Payment payment = 9;</code>
-       */
-      public Builder addPayment(
-          int index, io.opencannabis.schema.commerce.CommercialPurchase.Payment value) {
-        if (paymentBuilder_ == null) {
-          if (value == null) {
-            throw new NullPointerException();
-          }
-          ensurePaymentIsMutable();
-          payment_.add(index, value);
-          onChanged();
-        } else {
-          paymentBuilder_.addMessage(index, value);
-        }
-        return this;
-      }
-      /**
-       * <pre>
-       * Specifies how this order was paid for, if applicable at this point in the ticket lifecycle.
-       * </pre>
-       *
-       * <code>repeated .opencannabis.commerce.Payment payment = 9;</code>
-       */
-      public Builder addPayment(
-          io.opencannabis.schema.commerce.CommercialPurchase.Payment.Builder builderForValue) {
-        if (paymentBuilder_ == null) {
-          ensurePaymentIsMutable();
-          payment_.add(builderForValue.build());
-          onChanged();
-        } else {
-          paymentBuilder_.addMessage(builderForValue.build());
-        }
-        return this;
-      }
-      /**
-       * <pre>
-       * Specifies how this order was paid for, if applicable at this point in the ticket lifecycle.
-       * </pre>
-       *
-       * <code>repeated .opencannabis.commerce.Payment payment = 9;</code>
-       */
-      public Builder addPayment(
-          int index, io.opencannabis.schema.commerce.CommercialPurchase.Payment.Builder builderForValue) {
-        if (paymentBuilder_ == null) {
-          ensurePaymentIsMutable();
-          payment_.add(index, builderForValue.build());
-          onChanged();
-        } else {
-          paymentBuilder_.addMessage(index, builderForValue.build());
-        }
-        return this;
-      }
-      /**
-       * <pre>
-       * Specifies how this order was paid for, if applicable at this point in the ticket lifecycle.
-       * </pre>
-       *
-       * <code>repeated .opencannabis.commerce.Payment payment = 9;</code>
-       */
-      public Builder addAllPayment(
-          java.lang.Iterable<? extends io.opencannabis.schema.commerce.CommercialPurchase.Payment> values) {
-        if (paymentBuilder_ == null) {
-          ensurePaymentIsMutable();
-          com.google.protobuf.AbstractMessageLite.Builder.addAll(
-              values, payment_);
-          onChanged();
-        } else {
-          paymentBuilder_.addAllMessages(values);
-        }
-        return this;
-      }
-      /**
-       * <pre>
-       * Specifies how this order was paid for, if applicable at this point in the ticket lifecycle.
-       * </pre>
-       *
-       * <code>repeated .opencannabis.commerce.Payment payment = 9;</code>
-       */
-      public Builder clearPayment() {
-        if (paymentBuilder_ == null) {
-          payment_ = java.util.Collections.emptyList();
-          bitField0_ = (bitField0_ & ~0x00000100);
-          onChanged();
-        } else {
-          paymentBuilder_.clear();
-        }
-        return this;
-      }
-      /**
-       * <pre>
-       * Specifies how this order was paid for, if applicable at this point in the ticket lifecycle.
-       * </pre>
-       *
-       * <code>repeated .opencannabis.commerce.Payment payment = 9;</code>
-       */
-      public Builder removePayment(int index) {
-        if (paymentBuilder_ == null) {
-          ensurePaymentIsMutable();
-          payment_.remove(index);
-          onChanged();
-        } else {
-          paymentBuilder_.remove(index);
-        }
-        return this;
-      }
-      /**
-       * <pre>
-       * Specifies how this order was paid for, if applicable at this point in the ticket lifecycle.
-       * </pre>
-       *
-       * <code>repeated .opencannabis.commerce.Payment payment = 9;</code>
-       */
-      public io.opencannabis.schema.commerce.CommercialPurchase.Payment.Builder getPaymentBuilder(
-          int index) {
-        return getPaymentFieldBuilder().getBuilder(index);
-      }
-      /**
-       * <pre>
-       * Specifies how this order was paid for, if applicable at this point in the ticket lifecycle.
-       * </pre>
-       *
-       * <code>repeated .opencannabis.commerce.Payment payment = 9;</code>
-       */
-      public io.opencannabis.schema.commerce.CommercialPurchase.PaymentOrBuilder getPaymentOrBuilder(
-          int index) {
-        if (paymentBuilder_ == null) {
-          return payment_.get(index);  } else {
-          return paymentBuilder_.getMessageOrBuilder(index);
-        }
-      }
-      /**
-       * <pre>
-       * Specifies how this order was paid for, if applicable at this point in the ticket lifecycle.
-       * </pre>
-       *
-       * <code>repeated .opencannabis.commerce.Payment payment = 9;</code>
-       */
-      public java.util.List<? extends io.opencannabis.schema.commerce.CommercialPurchase.PaymentOrBuilder> 
-           getPaymentOrBuilderList() {
-        if (paymentBuilder_ != null) {
-          return paymentBuilder_.getMessageOrBuilderList();
-        } else {
-          return java.util.Collections.unmodifiableList(payment_);
-        }
-      }
-      /**
-       * <pre>
-       * Specifies how this order was paid for, if applicable at this point in the ticket lifecycle.
-       * </pre>
-       *
-       * <code>repeated .opencannabis.commerce.Payment payment = 9;</code>
-       */
-      public io.opencannabis.schema.commerce.CommercialPurchase.Payment.Builder addPaymentBuilder() {
-        return getPaymentFieldBuilder().addBuilder(
-            io.opencannabis.schema.commerce.CommercialPurchase.Payment.getDefaultInstance());
-      }
-      /**
-       * <pre>
-       * Specifies how this order was paid for, if applicable at this point in the ticket lifecycle.
-       * </pre>
-       *
-       * <code>repeated .opencannabis.commerce.Payment payment = 9;</code>
-       */
-      public io.opencannabis.schema.commerce.CommercialPurchase.Payment.Builder addPaymentBuilder(
-          int index) {
-        return getPaymentFieldBuilder().addBuilder(
-            index, io.opencannabis.schema.commerce.CommercialPurchase.Payment.getDefaultInstance());
-      }
-      /**
-       * <pre>
-       * Specifies how this order was paid for, if applicable at this point in the ticket lifecycle.
-       * </pre>
-       *
-       * <code>repeated .opencannabis.commerce.Payment payment = 9;</code>
-       */
-      public java.util.List<io.opencannabis.schema.commerce.CommercialPurchase.Payment.Builder> 
-           getPaymentBuilderList() {
-        return getPaymentFieldBuilder().getBuilderList();
-      }
-      private com.google.protobuf.RepeatedFieldBuilderV3<
-          io.opencannabis.schema.commerce.CommercialPurchase.Payment, io.opencannabis.schema.commerce.CommercialPurchase.Payment.Builder, io.opencannabis.schema.commerce.CommercialPurchase.PaymentOrBuilder> 
-          getPaymentFieldBuilder() {
-        if (paymentBuilder_ == null) {
-          paymentBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
-              io.opencannabis.schema.commerce.CommercialPurchase.Payment, io.opencannabis.schema.commerce.CommercialPurchase.Payment.Builder, io.opencannabis.schema.commerce.CommercialPurchase.PaymentOrBuilder>(
-                  payment_,
-                  ((bitField0_ & 0x00000100) == 0x00000100),
-                  getParentForChildren(),
-                  isClean());
-          payment_ = null;
-        }
-        return paymentBuilder_;
-      }
-
-      private java.util.List<io.opencannabis.schema.commerce.CommercialPurchase.PurchaseLogEntry> action_ =
-        java.util.Collections.emptyList();
-      private void ensureActionIsMutable() {
-        if (!((bitField0_ & 0x00000200) == 0x00000200)) {
-          action_ = new java.util.ArrayList<io.opencannabis.schema.commerce.CommercialPurchase.PurchaseLogEntry>(action_);
-          bitField0_ |= 0x00000200;
-         }
-      }
-
-      private com.google.protobuf.RepeatedFieldBuilderV3<
-          io.opencannabis.schema.commerce.CommercialPurchase.PurchaseLogEntry, io.opencannabis.schema.commerce.CommercialPurchase.PurchaseLogEntry.Builder, io.opencannabis.schema.commerce.CommercialPurchase.PurchaseLogEntryOrBuilder> actionBuilder_;
-
-      /**
-       * <pre>
-       * Actions taken on this order.
-       * </pre>
-       *
-       * <code>repeated .opencannabis.commerce.PurchaseLogEntry action = 10;</code>
-       */
-      public java.util.List<io.opencannabis.schema.commerce.CommercialPurchase.PurchaseLogEntry> getActionList() {
-        if (actionBuilder_ == null) {
-          return java.util.Collections.unmodifiableList(action_);
-        } else {
-          return actionBuilder_.getMessageList();
-        }
-      }
-      /**
-       * <pre>
-       * Actions taken on this order.
-       * </pre>
-       *
-       * <code>repeated .opencannabis.commerce.PurchaseLogEntry action = 10;</code>
-       */
-      public int getActionCount() {
-        if (actionBuilder_ == null) {
-          return action_.size();
-        } else {
-          return actionBuilder_.getCount();
-        }
-      }
-      /**
-       * <pre>
-       * Actions taken on this order.
-       * </pre>
-       *
-       * <code>repeated .opencannabis.commerce.PurchaseLogEntry action = 10;</code>
-       */
-      public io.opencannabis.schema.commerce.CommercialPurchase.PurchaseLogEntry getAction(int index) {
-        if (actionBuilder_ == null) {
-          return action_.get(index);
-        } else {
-          return actionBuilder_.getMessage(index);
-        }
-      }
-      /**
-       * <pre>
-       * Actions taken on this order.
-       * </pre>
-       *
-       * <code>repeated .opencannabis.commerce.PurchaseLogEntry action = 10;</code>
-       */
-      public Builder setAction(
-          int index, io.opencannabis.schema.commerce.CommercialPurchase.PurchaseLogEntry value) {
-        if (actionBuilder_ == null) {
-          if (value == null) {
-            throw new NullPointerException();
-          }
-          ensureActionIsMutable();
-          action_.set(index, value);
-          onChanged();
-        } else {
-          actionBuilder_.setMessage(index, value);
-        }
-        return this;
-      }
-      /**
-       * <pre>
-       * Actions taken on this order.
-       * </pre>
-       *
-       * <code>repeated .opencannabis.commerce.PurchaseLogEntry action = 10;</code>
-       */
-      public Builder setAction(
-          int index, io.opencannabis.schema.commerce.CommercialPurchase.PurchaseLogEntry.Builder builderForValue) {
-        if (actionBuilder_ == null) {
-          ensureActionIsMutable();
-          action_.set(index, builderForValue.build());
-          onChanged();
-        } else {
-          actionBuilder_.setMessage(index, builderForValue.build());
-        }
-        return this;
-      }
-      /**
-       * <pre>
-       * Actions taken on this order.
-       * </pre>
-       *
-       * <code>repeated .opencannabis.commerce.PurchaseLogEntry action = 10;</code>
-       */
-      public Builder addAction(io.opencannabis.schema.commerce.CommercialPurchase.PurchaseLogEntry value) {
-        if (actionBuilder_ == null) {
-          if (value == null) {
-            throw new NullPointerException();
-          }
-          ensureActionIsMutable();
-          action_.add(value);
-          onChanged();
-        } else {
-          actionBuilder_.addMessage(value);
-        }
-        return this;
-      }
-      /**
-       * <pre>
-       * Actions taken on this order.
-       * </pre>
-       *
-       * <code>repeated .opencannabis.commerce.PurchaseLogEntry action = 10;</code>
-       */
-      public Builder addAction(
-          int index, io.opencannabis.schema.commerce.CommercialPurchase.PurchaseLogEntry value) {
-        if (actionBuilder_ == null) {
-          if (value == null) {
-            throw new NullPointerException();
-          }
-          ensureActionIsMutable();
-          action_.add(index, value);
-          onChanged();
-        } else {
-          actionBuilder_.addMessage(index, value);
-        }
-        return this;
-      }
-      /**
-       * <pre>
-       * Actions taken on this order.
-       * </pre>
-       *
-       * <code>repeated .opencannabis.commerce.PurchaseLogEntry action = 10;</code>
-       */
-      public Builder addAction(
-          io.opencannabis.schema.commerce.CommercialPurchase.PurchaseLogEntry.Builder builderForValue) {
-        if (actionBuilder_ == null) {
-          ensureActionIsMutable();
-          action_.add(builderForValue.build());
-          onChanged();
-        } else {
-          actionBuilder_.addMessage(builderForValue.build());
-        }
-        return this;
-      }
-      /**
-       * <pre>
-       * Actions taken on this order.
-       * </pre>
-       *
-       * <code>repeated .opencannabis.commerce.PurchaseLogEntry action = 10;</code>
-       */
-      public Builder addAction(
-          int index, io.opencannabis.schema.commerce.CommercialPurchase.PurchaseLogEntry.Builder builderForValue) {
-        if (actionBuilder_ == null) {
-          ensureActionIsMutable();
-          action_.add(index, builderForValue.build());
-          onChanged();
-        } else {
-          actionBuilder_.addMessage(index, builderForValue.build());
-        }
-        return this;
-      }
-      /**
-       * <pre>
-       * Actions taken on this order.
-       * </pre>
-       *
-       * <code>repeated .opencannabis.commerce.PurchaseLogEntry action = 10;</code>
-       */
-      public Builder addAllAction(
-          java.lang.Iterable<? extends io.opencannabis.schema.commerce.CommercialPurchase.PurchaseLogEntry> values) {
-        if (actionBuilder_ == null) {
-          ensureActionIsMutable();
-          com.google.protobuf.AbstractMessageLite.Builder.addAll(
-              values, action_);
-          onChanged();
-        } else {
-          actionBuilder_.addAllMessages(values);
-        }
-        return this;
-      }
-      /**
-       * <pre>
-       * Actions taken on this order.
-       * </pre>
-       *
-       * <code>repeated .opencannabis.commerce.PurchaseLogEntry action = 10;</code>
-       */
-      public Builder clearAction() {
-        if (actionBuilder_ == null) {
-          action_ = java.util.Collections.emptyList();
-          bitField0_ = (bitField0_ & ~0x00000200);
-          onChanged();
-        } else {
-          actionBuilder_.clear();
-        }
-        return this;
-      }
-      /**
-       * <pre>
-       * Actions taken on this order.
-       * </pre>
-       *
-       * <code>repeated .opencannabis.commerce.PurchaseLogEntry action = 10;</code>
-       */
-      public Builder removeAction(int index) {
-        if (actionBuilder_ == null) {
-          ensureActionIsMutable();
-          action_.remove(index);
-          onChanged();
-        } else {
-          actionBuilder_.remove(index);
-        }
-        return this;
-      }
-      /**
-       * <pre>
-       * Actions taken on this order.
-       * </pre>
-       *
-       * <code>repeated .opencannabis.commerce.PurchaseLogEntry action = 10;</code>
-       */
-      public io.opencannabis.schema.commerce.CommercialPurchase.PurchaseLogEntry.Builder getActionBuilder(
-          int index) {
-        return getActionFieldBuilder().getBuilder(index);
-      }
-      /**
-       * <pre>
-       * Actions taken on this order.
-       * </pre>
-       *
-       * <code>repeated .opencannabis.commerce.PurchaseLogEntry action = 10;</code>
-       */
-      public io.opencannabis.schema.commerce.CommercialPurchase.PurchaseLogEntryOrBuilder getActionOrBuilder(
-          int index) {
-        if (actionBuilder_ == null) {
-          return action_.get(index);  } else {
-          return actionBuilder_.getMessageOrBuilder(index);
-        }
-      }
-      /**
-       * <pre>
-       * Actions taken on this order.
-       * </pre>
-       *
-       * <code>repeated .opencannabis.commerce.PurchaseLogEntry action = 10;</code>
-       */
-      public java.util.List<? extends io.opencannabis.schema.commerce.CommercialPurchase.PurchaseLogEntryOrBuilder> 
-           getActionOrBuilderList() {
-        if (actionBuilder_ != null) {
-          return actionBuilder_.getMessageOrBuilderList();
-        } else {
-          return java.util.Collections.unmodifiableList(action_);
-        }
-      }
-      /**
-       * <pre>
-       * Actions taken on this order.
-       * </pre>
-       *
-       * <code>repeated .opencannabis.commerce.PurchaseLogEntry action = 10;</code>
-       */
-      public io.opencannabis.schema.commerce.CommercialPurchase.PurchaseLogEntry.Builder addActionBuilder() {
-        return getActionFieldBuilder().addBuilder(
-            io.opencannabis.schema.commerce.CommercialPurchase.PurchaseLogEntry.getDefaultInstance());
-      }
-      /**
-       * <pre>
-       * Actions taken on this order.
-       * </pre>
-       *
-       * <code>repeated .opencannabis.commerce.PurchaseLogEntry action = 10;</code>
-       */
-      public io.opencannabis.schema.commerce.CommercialPurchase.PurchaseLogEntry.Builder addActionBuilder(
-          int index) {
-        return getActionFieldBuilder().addBuilder(
-            index, io.opencannabis.schema.commerce.CommercialPurchase.PurchaseLogEntry.getDefaultInstance());
-      }
-      /**
-       * <pre>
-       * Actions taken on this order.
-       * </pre>
-       *
-       * <code>repeated .opencannabis.commerce.PurchaseLogEntry action = 10;</code>
-       */
-      public java.util.List<io.opencannabis.schema.commerce.CommercialPurchase.PurchaseLogEntry.Builder> 
-           getActionBuilderList() {
-        return getActionFieldBuilder().getBuilderList();
-      }
-      private com.google.protobuf.RepeatedFieldBuilderV3<
-          io.opencannabis.schema.commerce.CommercialPurchase.PurchaseLogEntry, io.opencannabis.schema.commerce.CommercialPurchase.PurchaseLogEntry.Builder, io.opencannabis.schema.commerce.CommercialPurchase.PurchaseLogEntryOrBuilder> 
-          getActionFieldBuilder() {
-        if (actionBuilder_ == null) {
-          actionBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
-              io.opencannabis.schema.commerce.CommercialPurchase.PurchaseLogEntry, io.opencannabis.schema.commerce.CommercialPurchase.PurchaseLogEntry.Builder, io.opencannabis.schema.commerce.CommercialPurchase.PurchaseLogEntryOrBuilder>(
-                  action_,
-                  ((bitField0_ & 0x00000200) == 0x00000200),
-                  getParentForChildren(),
-                  isClean());
-          action_ = null;
-        }
-        return actionBuilder_;
-      }
-
-      private io.opencannabis.schema.commerce.CommercialPurchase.PurchaseTimestamps ts_ = null;
-      private com.google.protobuf.SingleFieldBuilderV3<
-          io.opencannabis.schema.commerce.CommercialPurchase.PurchaseTimestamps, io.opencannabis.schema.commerce.CommercialPurchase.PurchaseTimestamps.Builder, io.opencannabis.schema.commerce.CommercialPurchase.PurchaseTimestampsOrBuilder> tsBuilder_;
-      /**
-       * <pre>
-       * Timestamps that record the temporal position of individual purchase lifecycle events.
-       * </pre>
-       *
-       * <code>.opencannabis.commerce.PurchaseTimestamps ts = 11;</code>
-       */
-      public boolean hasTs() {
-        return tsBuilder_ != null || ts_ != null;
-      }
-      /**
-       * <pre>
-       * Timestamps that record the temporal position of individual purchase lifecycle events.
-       * </pre>
-       *
-       * <code>.opencannabis.commerce.PurchaseTimestamps ts = 11;</code>
-       */
-      public io.opencannabis.schema.commerce.CommercialPurchase.PurchaseTimestamps getTs() {
-        if (tsBuilder_ == null) {
-          return ts_ == null ? io.opencannabis.schema.commerce.CommercialPurchase.PurchaseTimestamps.getDefaultInstance() : ts_;
-        } else {
-          return tsBuilder_.getMessage();
-        }
-      }
-      /**
-       * <pre>
-       * Timestamps that record the temporal position of individual purchase lifecycle events.
-       * </pre>
-       *
-       * <code>.opencannabis.commerce.PurchaseTimestamps ts = 11;</code>
-       */
-      public Builder setTs(io.opencannabis.schema.commerce.CommercialPurchase.PurchaseTimestamps value) {
-        if (tsBuilder_ == null) {
-          if (value == null) {
-            throw new NullPointerException();
-          }
-          ts_ = value;
-          onChanged();
-        } else {
-          tsBuilder_.setMessage(value);
-        }
-
-        return this;
-      }
-      /**
-       * <pre>
-       * Timestamps that record the temporal position of individual purchase lifecycle events.
-       * </pre>
-       *
-       * <code>.opencannabis.commerce.PurchaseTimestamps ts = 11;</code>
-       */
-      public Builder setTs(
-          io.opencannabis.schema.commerce.CommercialPurchase.PurchaseTimestamps.Builder builderForValue) {
-        if (tsBuilder_ == null) {
-          ts_ = builderForValue.build();
-          onChanged();
-        } else {
-          tsBuilder_.setMessage(builderForValue.build());
-        }
-
-        return this;
-      }
-      /**
-       * <pre>
-       * Timestamps that record the temporal position of individual purchase lifecycle events.
-       * </pre>
-       *
-       * <code>.opencannabis.commerce.PurchaseTimestamps ts = 11;</code>
-       */
-      public Builder mergeTs(io.opencannabis.schema.commerce.CommercialPurchase.PurchaseTimestamps value) {
-        if (tsBuilder_ == null) {
-          if (ts_ != null) {
-            ts_ =
-              io.opencannabis.schema.commerce.CommercialPurchase.PurchaseTimestamps.newBuilder(ts_).mergeFrom(value).buildPartial();
-          } else {
-            ts_ = value;
-          }
-          onChanged();
-        } else {
-          tsBuilder_.mergeFrom(value);
-        }
-
-        return this;
-      }
-      /**
-       * <pre>
-       * Timestamps that record the temporal position of individual purchase lifecycle events.
-       * </pre>
-       *
-       * <code>.opencannabis.commerce.PurchaseTimestamps ts = 11;</code>
-       */
-      public Builder clearTs() {
-        if (tsBuilder_ == null) {
-          ts_ = null;
-          onChanged();
-        } else {
-          ts_ = null;
-          tsBuilder_ = null;
-        }
-
-        return this;
-      }
-      /**
-       * <pre>
-       * Timestamps that record the temporal position of individual purchase lifecycle events.
-       * </pre>
-       *
-       * <code>.opencannabis.commerce.PurchaseTimestamps ts = 11;</code>
-       */
-      public io.opencannabis.schema.commerce.CommercialPurchase.PurchaseTimestamps.Builder getTsBuilder() {
-        
-        onChanged();
-        return getTsFieldBuilder().getBuilder();
-      }
-      /**
-       * <pre>
-       * Timestamps that record the temporal position of individual purchase lifecycle events.
-       * </pre>
-       *
-       * <code>.opencannabis.commerce.PurchaseTimestamps ts = 11;</code>
-       */
-      public io.opencannabis.schema.commerce.CommercialPurchase.PurchaseTimestampsOrBuilder getTsOrBuilder() {
-        if (tsBuilder_ != null) {
-          return tsBuilder_.getMessageOrBuilder();
-        } else {
-          return ts_ == null ?
-              io.opencannabis.schema.commerce.CommercialPurchase.PurchaseTimestamps.getDefaultInstance() : ts_;
-        }
-      }
-      /**
-       * <pre>
-       * Timestamps that record the temporal position of individual purchase lifecycle events.
-       * </pre>
-       *
-       * <code>.opencannabis.commerce.PurchaseTimestamps ts = 11;</code>
-       */
-      private com.google.protobuf.SingleFieldBuilderV3<
-          io.opencannabis.schema.commerce.CommercialPurchase.PurchaseTimestamps, io.opencannabis.schema.commerce.CommercialPurchase.PurchaseTimestamps.Builder, io.opencannabis.schema.commerce.CommercialPurchase.PurchaseTimestampsOrBuilder> 
-          getTsFieldBuilder() {
-        if (tsBuilder_ == null) {
-          tsBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-              io.opencannabis.schema.commerce.CommercialPurchase.PurchaseTimestamps, io.opencannabis.schema.commerce.CommercialPurchase.PurchaseTimestamps.Builder, io.opencannabis.schema.commerce.CommercialPurchase.PurchaseTimestampsOrBuilder>(
-                  getTs(),
-                  getParentForChildren(),
-                  isClean());
-          ts_ = null;
-        }
-        return tsBuilder_;
-      }
-      public final Builder setUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
-      }
-
-      public final Builder mergeUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.mergeUnknownFields(unknownFields);
-      }
-
-
-      // @@protoc_insertion_point(builder_scope:opencannabis.commerce.PurchaseTicket)
-    }
-
-    // @@protoc_insertion_point(class_scope:opencannabis.commerce.PurchaseTicket)
-    private static final io.opencannabis.schema.commerce.CommercialPurchase.PurchaseTicket DEFAULT_INSTANCE;
-    static {
-      DEFAULT_INSTANCE = new io.opencannabis.schema.commerce.CommercialPurchase.PurchaseTicket();
-    }
-
-    public static io.opencannabis.schema.commerce.CommercialPurchase.PurchaseTicket getDefaultInstance() {
-      return DEFAULT_INSTANCE;
-    }
-
-    private static final com.google.protobuf.Parser<PurchaseTicket>
-        PARSER = new com.google.protobuf.AbstractParser<PurchaseTicket>() {
-      public PurchaseTicket parsePartialFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
-        return new PurchaseTicket(input, extensionRegistry);
-      }
-    };
-
-    public static com.google.protobuf.Parser<PurchaseTicket> parser() {
-      return PARSER;
-    }
-
-    @java.lang.Override
-    public com.google.protobuf.Parser<PurchaseTicket> getParserForType() {
-      return PARSER;
-    }
-
-    public io.opencannabis.schema.commerce.CommercialPurchase.PurchaseTicket getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
 
@@ -22150,11 +18295,6 @@ public final class CommercialPurchase {
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_opencannabis_commerce_Payment_DigitalPayment_fieldAccessorTable;
-  private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_opencannabis_commerce_PurchaseTicket_descriptor;
-  private static final 
-    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_opencannabis_commerce_PurchaseTicket_fieldAccessorTable;
 
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
@@ -22173,90 +18313,70 @@ public final class CommercialPurchase {
       "D.proto\032\026identity/UserKey.proto\032\033identit" +
       "y/pass/PassKey.proto\032\034identity/Membershi" +
       "pKey.proto\032 inventory/InventoryProduct.p" +
-      "roto\032\026crypto/Signature.proto\032\037crypto/pri" +
-      "mitives/Keypair.proto\032!crypto/primitives" +
-      "/Integrity.proto\032\026temporal/Instant.proto" +
-      "\"\315\001\n\020PurchaseLogEntry\0225\n\006status\030\001 \001(\0162%." +
-      "opencannabis.commerce.PurchaseStatus\0223\n\005" +
-      "event\030\002 \001(\0162$.opencannabis.commerce.Purc" +
-      "haseEvent\022/\n\007instant\030\003 \001(\0132\036.opencannabi" +
-      "s.temporal.Instant\022\013\n\003sku\030\004 \001(\t\022\017\n\007messa" +
-      "ge\030\005 \001(\t\"\355\001\n\rBillOfCharges\0221\n\006status\030\001 \001" +
-      "(\0162!.opencannabis.commerce.BillStatus\022$\n" +
-      "\003tax\030\002 \003(\0132\027.opencannabis.taxes.Tax\0221\n\010d" +
-      "iscount\030\003 \003(\0132\037.opencannabis.commerce.Di" +
-      "scount\022\r\n\005price\030\004 \001(\001\022\r\n\005taxes\030\005 \001(\001\022\021\n\t" +
-      "discounts\030\006 \001(\001\022\020\n\010subtotal\030\007 \001(\001\022\r\n\005tot" +
-      "al\030\010 \001(\001\"\253\001\n\nTicketItem\0221\n\003key\030\001 \001(\0132$.o" +
-      "pencannabis.inventory.InventoryKey\022\013\n\003sk" +
-      "u\030\002 \001(\t\022)\n\004item\030\003 \001(\0132\033.opencannabis.com" +
-      "merce.Item\0222\n\004line\030\004 \001(\0132$.opencannabis." +
-      "commerce.BillOfCharges\"\221\002\n\022PurchaseTimes" +
-      "tamps\0223\n\013established\030\001 \001(\0132\036.opencannabi" +
-      "s.temporal.Instant\022/\n\007created\030\002 \001(\0132\036.op" +
-      "encannabis.temporal.Instant\0220\n\010modified\030" +
-      "\003 \001(\0132\036.opencannabis.temporal.Instant\0220\n" +
-      "\010executed\030\004 \001(\0132\036.opencannabis.temporal." +
-      "Instant\0221\n\tfinalized\030\005 \001(\0132\036.opencannabi" +
-      "s.temporal.Instant\"#\n\013PurchaseKey\022\024\n\004uui" +
-      "d\030\001 \001(\tB\006\302\265\003\002\010\002\"\211\001\n\021PurchaseSignature\022\r\n" +
-      "\005nonce\030\001 \001(\t\0223\n\013facilitator\030\002 \001(\0132\036.open" +
-      "cannabis.crypto.Signature\0220\n\010customer\030\003 " +
-      "\001(\0132\036.opencannabis.crypto.Signature\"\370\001\n\020" +
-      "PurchaseCustomer\0224\n\016identification\030\001 \001(\013" +
-      "2\034.bloombox.schema.identity.ID\0224\n\004pass\030\002" +
-      " \001(\0132&.bloombox.schema.identity.pass.Pas" +
-      "sKey\022;\n\nmembership\030\003 \001(\0132\'.bloombox.sche" +
-      "ma.identity.MembershipKey\022;\n\tsignature\030\004" +
-      " \001(\0132(.opencannabis.commerce.PurchaseSig" +
-      "nature\"\374\001\n\023PurchaseFacilitator\022;\n\tauthor" +
-      "ity\030\001 \001(\0162(.opencannabis.commerce.Purcha" +
-      "seAuthority\0220\n\005agent\030\002 \001(\0132!.bloombox.sc" +
-      "hema.identity.UserKey\0229\n\006device\030\003 \001(\0132)." +
-      "bloombox.schema.partner.PartnerDeviceKey" +
-      "\022;\n\tsignature\030\004 \001(\0132(.opencannabis.comme" +
-      "rce.PurchaseSignature\"\"\n\nPaymentKey\022\024\n\004u" +
-      "uid\030\001 \001(\tB\006\302\265\003\002\010\002\"\224\010\n\007Payment\0226\n\003key\030\001 \001" +
-      "(\0132!.opencannabis.commerce.PaymentKeyB\006\302" +
-      "\265\003\002\010\001\0224\n\006method\030\002 \001(\0162$.opencannabis.com" +
-      "merce.PaymentMethod\0224\n\006status\030\003 \001(\0162$.op" +
-      "encannabis.commerce.PaymentStatus\022\016\n\006amo" +
-      "unt\030\004 \001(\001\022\014\n\004full\030\005 \001(\010\022:\n\004cash\030\n \001(\0132*." +
-      "opencannabis.commerce.Payment.CashPaymen" +
-      "tH\000\022<\n\005check\030\013 \001(\0132+.opencannabis.commer" +
-      "ce.Payment.CheckPaymentH\000\022:\n\004card\030\014 \001(\0132" +
-      "*.opencannabis.commerce.Payment.CardPaym" +
-      "entH\000\022:\n\004bank\030\r \001(\0132*.opencannabis.comme" +
-      "rce.Payment.BankPaymentH\000\022@\n\007digital\030\016 \001" +
-      "(\0132-.opencannabis.commerce.Payment.Digit" +
-      "alPaymentH\000\032{\n\013CashPayment\0226\n\010tendered\030\001" +
-      " \001(\0132$.opencannabis.commerce.CurrencyVal" +
-      "ue\0224\n\006change\030\002 \001(\0132$.opencannabis.commer" +
-      "ce.CurrencyValue\032|\n\014CheckPayment\022\024\n\014chec" +
-      "k_number\030\001 \001(\t\022\026\n\016routing_number\030\002 \001(\t\022\026" +
-      "\n\016account_number\030\003 \001(\t\022\023\n\013institution\030\004 " +
-      "\001(\t\022\021\n\tcertified\030\005 \001(\010\032H\n\013CardPayment\0229\n" +
-      "\tcard_type\030\001 \001(\0162&.opencannabis.commerce" +
-      ".PaymentCardType\032P\n\013BankPayment\022\026\n\016routi" +
-      "ng_number\030\001 \001(\t\022\026\n\016account_number\030\002 \001(\t\022" +
-      "\021\n\treference\030\003 \001(\t\032t\n\016DigitalPayment\022=\n\007" +
-      "network\030\001 \001(\0162,.opencannabis.commerce.Di" +
-      "gitalPaymentNetwork\022\020\n\010username\030\002 \001(\t\022\021\n" +
-      "\treference\030\003 \001(\tB\006\n\004spec\"\265\004\n\016PurchaseTic" +
-      "ket\0227\n\003key\030\001 \001(\0132\".opencannabis.commerce" +
-      ".PurchaseKeyB\006\302\265\003\002\010\001\022\017\n\007version\030\002 \001(\r\0225\n" +
-      "\006status\030\003 \001(\0162%.opencannabis.commerce.Pu" +
-      "rchaseStatus\022\r\n\005claim\030\004 \001(\t\022?\n\013facilitat" +
-      "or\030\005 \001(\0132*.opencannabis.commerce.Purchas" +
-      "eFacilitator\0229\n\010customer\030\006 \001(\0132\'.opencan" +
-      "nabis.commerce.PurchaseCustomer\0222\n\004bill\030" +
-      "\007 \001(\0132$.opencannabis.commerce.BillOfChar" +
-      "ges\022/\n\004item\030\010 \003(\0132!.opencannabis.commerc" +
-      "e.TicketItem\022/\n\007payment\030\t \003(\0132\036.opencann" +
-      "abis.commerce.Payment\0227\n\006action\030\n \003(\0132\'." +
-      "opencannabis.commerce.PurchaseLogEntry\0225" +
-      "\n\002ts\030\013 \001(\0132).opencannabis.commerce.Purch" +
-      "aseTimestamps:\021\202\367\002\r\010\002\022\tpurchases*\\\n\016Purc" +
+      "roto\032\026crypto/Signature.proto\032\034crypto/pri" +
+      "mitives/Keys.proto\032!crypto/primitives/In" +
+      "tegrity.proto\032\026temporal/Instant.proto\"\315\001" +
+      "\n\020PurchaseLogEntry\0225\n\006status\030\001 \001(\0162%.ope" +
+      "ncannabis.commerce.PurchaseStatus\0223\n\005eve" +
+      "nt\030\002 \001(\0162$.opencannabis.commerce.Purchas" +
+      "eEvent\022/\n\007instant\030\003 \001(\0132\036.opencannabis.t" +
+      "emporal.Instant\022\013\n\003sku\030\004 \001(\t\022\017\n\007message\030" +
+      "\005 \001(\t\"\355\001\n\rBillOfCharges\0221\n\006status\030\001 \001(\0162" +
+      "!.opencannabis.commerce.BillStatus\022$\n\003ta" +
+      "x\030\002 \003(\0132\027.opencannabis.taxes.Tax\0221\n\010disc" +
+      "ount\030\003 \003(\0132\037.opencannabis.commerce.Disco" +
+      "unt\022\r\n\005price\030\004 \001(\001\022\r\n\005taxes\030\005 \001(\001\022\021\n\tdis" +
+      "counts\030\006 \001(\001\022\020\n\010subtotal\030\007 \001(\001\022\r\n\005total\030" +
+      "\010 \001(\001\"\253\001\n\nTicketItem\0221\n\003key\030\001 \001(\0132$.open" +
+      "cannabis.inventory.InventoryKey\022\013\n\003sku\030\002" +
+      " \001(\t\022)\n\004item\030\003 \001(\0132\033.opencannabis.commer" +
+      "ce.Item\0222\n\004line\030\004 \001(\0132$.opencannabis.com" +
+      "merce.BillOfCharges\"\221\002\n\022PurchaseTimestam" +
+      "ps\0223\n\013established\030\001 \001(\0132\036.opencannabis.t" +
+      "emporal.Instant\022/\n\007created\030\002 \001(\0132\036.openc" +
+      "annabis.temporal.Instant\0220\n\010modified\030\003 \001" +
+      "(\0132\036.opencannabis.temporal.Instant\0220\n\010ex" +
+      "ecuted\030\004 \001(\0132\036.opencannabis.temporal.Ins" +
+      "tant\0221\n\tfinalized\030\005 \001(\0132\036.opencannabis.t" +
+      "emporal.Instant\"#\n\013PurchaseKey\022\024\n\004uuid\030\001" +
+      " \001(\tB\006\302\265\003\002\010\002\"\211\001\n\021PurchaseSignature\022\r\n\005no" +
+      "nce\030\001 \001(\t\0223\n\013facilitator\030\002 \001(\0132\036.opencan" +
+      "nabis.crypto.Signature\0220\n\010customer\030\003 \001(\013" +
+      "2\036.opencannabis.crypto.Signature\"b\n\020Purc" +
+      "haseCustomer\022\021\n\tunique_id\030\001 \001(\t\022;\n\tsigna" +
+      "ture\030\002 \001(\0132(.opencannabis.commerce.Purch" +
+      "aseSignature\"\256\001\n\023PurchaseFacilitator\022;\n\t" +
+      "authority\030\001 \001(\0162(.opencannabis.commerce." +
+      "PurchaseAuthority\022\r\n\005agent\030\002 \001(\t\022\016\n\006devi" +
+      "ce\030\003 \001(\t\022;\n\tsignature\030\004 \001(\0132(.opencannab" +
+      "is.commerce.PurchaseSignature\"\"\n\nPayment" +
+      "Key\022\024\n\004uuid\030\001 \001(\tB\006\302\265\003\002\010\002\"\224\010\n\007Payment\0226\n" +
+      "\003key\030\001 \001(\0132!.opencannabis.commerce.Payme" +
+      "ntKeyB\006\302\265\003\002\010\001\0224\n\006method\030\002 \001(\0162$.opencann" +
+      "abis.commerce.PaymentMethod\0224\n\006status\030\003 " +
+      "\001(\0162$.opencannabis.commerce.PaymentStatu" +
+      "s\022\016\n\006amount\030\004 \001(\001\022\014\n\004full\030\005 \001(\010\022:\n\004cash\030" +
+      "\n \001(\0132*.opencannabis.commerce.Payment.Ca" +
+      "shPaymentH\000\022<\n\005check\030\013 \001(\0132+.opencannabi" +
+      "s.commerce.Payment.CheckPaymentH\000\022:\n\004car" +
+      "d\030\014 \001(\0132*.opencannabis.commerce.Payment." +
+      "CardPaymentH\000\022:\n\004bank\030\r \001(\0132*.opencannab" +
+      "is.commerce.Payment.BankPaymentH\000\022@\n\007dig" +
+      "ital\030\016 \001(\0132-.opencannabis.commerce.Payme" +
+      "nt.DigitalPaymentH\000\032{\n\013CashPayment\0226\n\010te" +
+      "ndered\030\001 \001(\0132$.opencannabis.commerce.Cur" +
+      "rencyValue\0224\n\006change\030\002 \001(\0132$.opencannabi" +
+      "s.commerce.CurrencyValue\032|\n\014CheckPayment" +
+      "\022\024\n\014check_number\030\001 \001(\t\022\026\n\016routing_number" +
+      "\030\002 \001(\t\022\026\n\016account_number\030\003 \001(\t\022\023\n\013instit" +
+      "ution\030\004 \001(\t\022\021\n\tcertified\030\005 \001(\010\032H\n\013CardPa" +
+      "yment\0229\n\tcard_type\030\001 \001(\0162&.opencannabis." +
+      "commerce.PaymentCardType\032P\n\013BankPayment\022" +
+      "\026\n\016routing_number\030\001 \001(\t\022\026\n\016account_numbe" +
+      "r\030\002 \001(\t\022\021\n\treference\030\003 \001(\t\032t\n\016DigitalPay" +
+      "ment\022=\n\007network\030\001 \001(\0162,.opencannabis.com" +
+      "merce.DigitalPaymentNetwork\022\020\n\010username\030" +
+      "\002 \001(\t\022\021\n\treference\030\003 \001(\tB\006\n\004spec*\\\n\016Purc" +
       "haseStatus\022\t\n\005FRESH\020\000\022\010\n\004OPEN\020\001\022\n\n\006CLOSE" +
       "D\020\002\022\n\n\006VOIDED\020\003\022\r\n\tFINALIZED\020\004\022\016\n\nRECONC" +
       "ILED\020\005*=\n\021PurchaseAuthority\022\014\n\010STANDARD\020" +
@@ -22293,7 +18413,7 @@ public final class CommercialPurchase {
           io.bloombox.schema.identity.AppMemberKey.getDescriptor(),
           io.opencannabis.schema.inventory.InventoryProductOuterClass.getDescriptor(),
           io.opencannabis.schema.crypto.SignatureOuterClass.getDescriptor(),
-          io.opencannabis.schema.crypto.primitives.pki.KeypairOuterClass.getDescriptor(),
+          io.opencannabis.schema.crypto.primitives.Keys.getDescriptor(),
           io.opencannabis.schema.crypto.primitives.integrity.Integrity.getDescriptor(),
           io.opencannabis.schema.temporal.TemporalInstant.getDescriptor(),
         }, assigner);
@@ -22338,7 +18458,7 @@ public final class CommercialPurchase {
     internal_static_opencannabis_commerce_PurchaseCustomer_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_opencannabis_commerce_PurchaseCustomer_descriptor,
-        new java.lang.String[] { "Identification", "Pass", "Membership", "Signature", });
+        new java.lang.String[] { "UniqueId", "Signature", });
     internal_static_opencannabis_commerce_PurchaseFacilitator_descriptor =
       getDescriptor().getMessageTypes().get(7);
     internal_static_opencannabis_commerce_PurchaseFacilitator_fieldAccessorTable = new
@@ -22387,15 +18507,8 @@ public final class CommercialPurchase {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_opencannabis_commerce_Payment_DigitalPayment_descriptor,
         new java.lang.String[] { "Network", "Username", "Reference", });
-    internal_static_opencannabis_commerce_PurchaseTicket_descriptor =
-      getDescriptor().getMessageTypes().get(10);
-    internal_static_opencannabis_commerce_PurchaseTicket_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_opencannabis_commerce_PurchaseTicket_descriptor,
-        new java.lang.String[] { "Key", "Version", "Status", "Claim", "Facilitator", "Customer", "Bill", "Item", "Payment", "Action", "Ts", });
     com.google.protobuf.ExtensionRegistry registry =
         com.google.protobuf.ExtensionRegistry.newInstance();
-    registry.add(core.Datamodel.db);
     registry.add(core.Datamodel.field);
     com.google.protobuf.Descriptors.FileDescriptor
         .internalUpdateFileDescriptor(descriptor, registry);
@@ -22412,7 +18525,7 @@ public final class CommercialPurchase {
     io.bloombox.schema.identity.AppMemberKey.getDescriptor();
     io.opencannabis.schema.inventory.InventoryProductOuterClass.getDescriptor();
     io.opencannabis.schema.crypto.SignatureOuterClass.getDescriptor();
-    io.opencannabis.schema.crypto.primitives.pki.KeypairOuterClass.getDescriptor();
+    io.opencannabis.schema.crypto.primitives.Keys.getDescriptor();
     io.opencannabis.schema.crypto.primitives.integrity.Integrity.getDescriptor();
     io.opencannabis.schema.temporal.TemporalInstant.getDescriptor();
   }

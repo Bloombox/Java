@@ -1,8 +1,8 @@
 /*
- * Copyright 2018, Bloombox, LLC. All rights reserved.
+ * Copyright 2018, Momentum Ideas, Co. All rights reserved.
  *
  * Source and object computer code contained herein is the private intellectual
- * property of Bloombox, a California Limited Liability Corporation. Use of this
+ * property of Momentum Ideas Co., a Delaware Corporation. Use of this
  * code in source form requires permission in writing before use or the
  * assembly, distribution, or publishing of derivative works, for commercial
  * purposes or any other purpose, from a duly authorized officer of Momentum
@@ -37,7 +37,7 @@ public final class OperatingSystemContext {
    * server applications.
    * </pre>
    *
-   * Protobuf enum {@code bloombox.schema.analytics.context.OSType}
+   * Protobuf enum {@code bloombox.analytics.context.OSType}
    */
   public enum OSType
       implements com.google.protobuf.ProtocolMessageEnum {
@@ -283,11 +283,11 @@ public final class OperatingSystemContext {
       this.value = value;
     }
 
-    // @@protoc_insertion_point(enum_scope:bloombox.schema.analytics.context.OSType)
+    // @@protoc_insertion_point(enum_scope:bloombox.analytics.context.OSType)
   }
 
   public interface DeviceOSOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:bloombox.schema.analytics.context.DeviceOS)
+      // @@protoc_insertion_point(interface_extends:bloombox.analytics.context.DeviceOS)
       com.google.protobuf.MessageOrBuilder {
 
     /**
@@ -295,7 +295,7 @@ public final class OperatingSystemContext {
      * Type of Operating System being expressed or specified.
      * </pre>
      *
-     * <code>.bloombox.schema.analytics.context.OSType type = 1 [(.gen_bq_schema.require) = true, (.gen_bq_schema.description) = "Type of Operating System being expressed or specified."];</code>
+     * <code>.bloombox.analytics.context.OSType type = 1 [(.gen_bq_schema.require) = true, (.gen_bq_schema.description) = "Type of Operating System being expressed or specified."];</code>
      */
     int getTypeValue();
     /**
@@ -303,7 +303,7 @@ public final class OperatingSystemContext {
      * Type of Operating System being expressed or specified.
      * </pre>
      *
-     * <code>.bloombox.schema.analytics.context.OSType type = 1 [(.gen_bq_schema.require) = true, (.gen_bq_schema.description) = "Type of Operating System being expressed or specified."];</code>
+     * <code>.bloombox.analytics.context.OSType type = 1 [(.gen_bq_schema.require) = true, (.gen_bq_schema.description) = "Type of Operating System being expressed or specified."];</code>
      */
     io.bloombox.schema.telemetry.context.OperatingSystemContext.OSType getType();
 
@@ -337,11 +337,11 @@ public final class OperatingSystemContext {
    * Structure describing a device's operating system, including type and version.
    * </pre>
    *
-   * Protobuf type {@code bloombox.schema.analytics.context.DeviceOS}
+   * Protobuf type {@code bloombox.analytics.context.DeviceOS}
    */
   public  static final class DeviceOS extends
       com.google.protobuf.GeneratedMessageV3 implements
-      // @@protoc_insertion_point(message_implements:bloombox.schema.analytics.context.DeviceOS)
+      // @@protoc_insertion_point(message_implements:bloombox.analytics.context.DeviceOS)
       DeviceOSOrBuilder {
   private static final long serialVersionUID = 0L;
     // Use DeviceOS.newBuilder() to construct.
@@ -376,13 +376,6 @@ public final class OperatingSystemContext {
             case 0:
               done = true;
               break;
-            default: {
-              if (!parseUnknownFieldProto3(
-                  input, unknownFields, extensionRegistry, tag)) {
-                done = true;
-              }
-              break;
-            }
             case 8: {
               int rawValue = input.readEnum();
 
@@ -402,6 +395,13 @@ public final class OperatingSystemContext {
 
               break;
             }
+            default: {
+              if (!parseUnknownFieldProto3(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
           }
         }
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
@@ -416,12 +416,13 @@ public final class OperatingSystemContext {
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return io.bloombox.schema.telemetry.context.OperatingSystemContext.internal_static_bloombox_schema_analytics_context_DeviceOS_descriptor;
+      return io.bloombox.schema.telemetry.context.OperatingSystemContext.internal_static_bloombox_analytics_context_DeviceOS_descriptor;
     }
 
+    @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return io.bloombox.schema.telemetry.context.OperatingSystemContext.internal_static_bloombox_schema_analytics_context_DeviceOS_fieldAccessorTable
+      return io.bloombox.schema.telemetry.context.OperatingSystemContext.internal_static_bloombox_analytics_context_DeviceOS_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
               io.bloombox.schema.telemetry.context.OperatingSystemContext.DeviceOS.class, io.bloombox.schema.telemetry.context.OperatingSystemContext.DeviceOS.Builder.class);
     }
@@ -433,7 +434,7 @@ public final class OperatingSystemContext {
      * Type of Operating System being expressed or specified.
      * </pre>
      *
-     * <code>.bloombox.schema.analytics.context.OSType type = 1 [(.gen_bq_schema.require) = true, (.gen_bq_schema.description) = "Type of Operating System being expressed or specified."];</code>
+     * <code>.bloombox.analytics.context.OSType type = 1 [(.gen_bq_schema.require) = true, (.gen_bq_schema.description) = "Type of Operating System being expressed or specified."];</code>
      */
     public int getTypeValue() {
       return type_;
@@ -443,9 +444,10 @@ public final class OperatingSystemContext {
      * Type of Operating System being expressed or specified.
      * </pre>
      *
-     * <code>.bloombox.schema.analytics.context.OSType type = 1 [(.gen_bq_schema.require) = true, (.gen_bq_schema.description) = "Type of Operating System being expressed or specified."];</code>
+     * <code>.bloombox.analytics.context.OSType type = 1 [(.gen_bq_schema.require) = true, (.gen_bq_schema.description) = "Type of Operating System being expressed or specified."];</code>
      */
     public io.bloombox.schema.telemetry.context.OperatingSystemContext.OSType getType() {
+      @SuppressWarnings("deprecation")
       io.bloombox.schema.telemetry.context.OperatingSystemContext.OSType result = io.bloombox.schema.telemetry.context.OperatingSystemContext.OSType.valueOf(type_);
       return result == null ? io.bloombox.schema.telemetry.context.OperatingSystemContext.OSType.UNRECOGNIZED : result;
     }
@@ -484,6 +486,7 @@ public final class OperatingSystemContext {
     }
 
     private byte memoizedIsInitialized = -1;
+    @java.lang.Override
     public final boolean isInitialized() {
       byte isInitialized = memoizedIsInitialized;
       if (isInitialized == 1) return true;
@@ -493,6 +496,7 @@ public final class OperatingSystemContext {
       return true;
     }
 
+    @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
       if (type_ != io.bloombox.schema.telemetry.context.OperatingSystemContext.OSType.OS_UNKNOWN.getNumber()) {
@@ -504,6 +508,7 @@ public final class OperatingSystemContext {
       unknownFields.writeTo(output);
     }
 
+    @java.lang.Override
     public int getSerializedSize() {
       int size = memoizedSize;
       if (size != -1) return size;
@@ -631,6 +636,7 @@ public final class OperatingSystemContext {
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
 
+    @java.lang.Override
     public Builder newBuilderForType() { return newBuilder(); }
     public static Builder newBuilder() {
       return DEFAULT_INSTANCE.toBuilder();
@@ -638,6 +644,7 @@ public final class OperatingSystemContext {
     public static Builder newBuilder(io.bloombox.schema.telemetry.context.OperatingSystemContext.DeviceOS prototype) {
       return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
     }
+    @java.lang.Override
     public Builder toBuilder() {
       return this == DEFAULT_INSTANCE
           ? new Builder() : new Builder().mergeFrom(this);
@@ -654,20 +661,21 @@ public final class OperatingSystemContext {
      * Structure describing a device's operating system, including type and version.
      * </pre>
      *
-     * Protobuf type {@code bloombox.schema.analytics.context.DeviceOS}
+     * Protobuf type {@code bloombox.analytics.context.DeviceOS}
      */
     public static final class Builder extends
         com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:bloombox.schema.analytics.context.DeviceOS)
+        // @@protoc_insertion_point(builder_implements:bloombox.analytics.context.DeviceOS)
         io.bloombox.schema.telemetry.context.OperatingSystemContext.DeviceOSOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return io.bloombox.schema.telemetry.context.OperatingSystemContext.internal_static_bloombox_schema_analytics_context_DeviceOS_descriptor;
+        return io.bloombox.schema.telemetry.context.OperatingSystemContext.internal_static_bloombox_analytics_context_DeviceOS_descriptor;
       }
 
+      @java.lang.Override
       protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return io.bloombox.schema.telemetry.context.OperatingSystemContext.internal_static_bloombox_schema_analytics_context_DeviceOS_fieldAccessorTable
+        return io.bloombox.schema.telemetry.context.OperatingSystemContext.internal_static_bloombox_analytics_context_DeviceOS_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
                 io.bloombox.schema.telemetry.context.OperatingSystemContext.DeviceOS.class, io.bloombox.schema.telemetry.context.OperatingSystemContext.DeviceOS.Builder.class);
       }
@@ -687,6 +695,7 @@ public final class OperatingSystemContext {
                 .alwaysUseFieldBuilders) {
         }
       }
+      @java.lang.Override
       public Builder clear() {
         super.clear();
         type_ = 0;
@@ -700,15 +709,18 @@ public final class OperatingSystemContext {
         return this;
       }
 
+      @java.lang.Override
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return io.bloombox.schema.telemetry.context.OperatingSystemContext.internal_static_bloombox_schema_analytics_context_DeviceOS_descriptor;
+        return io.bloombox.schema.telemetry.context.OperatingSystemContext.internal_static_bloombox_analytics_context_DeviceOS_descriptor;
       }
 
+      @java.lang.Override
       public io.bloombox.schema.telemetry.context.OperatingSystemContext.DeviceOS getDefaultInstanceForType() {
         return io.bloombox.schema.telemetry.context.OperatingSystemContext.DeviceOS.getDefaultInstance();
       }
 
+      @java.lang.Override
       public io.bloombox.schema.telemetry.context.OperatingSystemContext.DeviceOS build() {
         io.bloombox.schema.telemetry.context.OperatingSystemContext.DeviceOS result = buildPartial();
         if (!result.isInitialized()) {
@@ -717,6 +729,7 @@ public final class OperatingSystemContext {
         return result;
       }
 
+      @java.lang.Override
       public io.bloombox.schema.telemetry.context.OperatingSystemContext.DeviceOS buildPartial() {
         io.bloombox.schema.telemetry.context.OperatingSystemContext.DeviceOS result = new io.bloombox.schema.telemetry.context.OperatingSystemContext.DeviceOS(this);
         result.type_ = type_;
@@ -729,32 +742,39 @@ public final class OperatingSystemContext {
         return result;
       }
 
+      @java.lang.Override
       public Builder clone() {
         return (Builder) super.clone();
       }
+      @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
         return (Builder) super.setField(field, value);
       }
+      @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
         return (Builder) super.clearField(field);
       }
+      @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
         return (Builder) super.clearOneof(oneof);
       }
+      @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
         return (Builder) super.setRepeatedField(field, index, value);
       }
+      @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
         return (Builder) super.addRepeatedField(field, value);
       }
+      @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
         if (other instanceof io.bloombox.schema.telemetry.context.OperatingSystemContext.DeviceOS) {
           return mergeFrom((io.bloombox.schema.telemetry.context.OperatingSystemContext.DeviceOS)other);
@@ -777,10 +797,12 @@ public final class OperatingSystemContext {
         return this;
       }
 
+      @java.lang.Override
       public final boolean isInitialized() {
         return true;
       }
 
+      @java.lang.Override
       public Builder mergeFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -805,7 +827,7 @@ public final class OperatingSystemContext {
        * Type of Operating System being expressed or specified.
        * </pre>
        *
-       * <code>.bloombox.schema.analytics.context.OSType type = 1 [(.gen_bq_schema.require) = true, (.gen_bq_schema.description) = "Type of Operating System being expressed or specified."];</code>
+       * <code>.bloombox.analytics.context.OSType type = 1 [(.gen_bq_schema.require) = true, (.gen_bq_schema.description) = "Type of Operating System being expressed or specified."];</code>
        */
       public int getTypeValue() {
         return type_;
@@ -815,7 +837,7 @@ public final class OperatingSystemContext {
        * Type of Operating System being expressed or specified.
        * </pre>
        *
-       * <code>.bloombox.schema.analytics.context.OSType type = 1 [(.gen_bq_schema.require) = true, (.gen_bq_schema.description) = "Type of Operating System being expressed or specified."];</code>
+       * <code>.bloombox.analytics.context.OSType type = 1 [(.gen_bq_schema.require) = true, (.gen_bq_schema.description) = "Type of Operating System being expressed or specified."];</code>
        */
       public Builder setTypeValue(int value) {
         type_ = value;
@@ -827,9 +849,10 @@ public final class OperatingSystemContext {
        * Type of Operating System being expressed or specified.
        * </pre>
        *
-       * <code>.bloombox.schema.analytics.context.OSType type = 1 [(.gen_bq_schema.require) = true, (.gen_bq_schema.description) = "Type of Operating System being expressed or specified."];</code>
+       * <code>.bloombox.analytics.context.OSType type = 1 [(.gen_bq_schema.require) = true, (.gen_bq_schema.description) = "Type of Operating System being expressed or specified."];</code>
        */
       public io.bloombox.schema.telemetry.context.OperatingSystemContext.OSType getType() {
+        @SuppressWarnings("deprecation")
         io.bloombox.schema.telemetry.context.OperatingSystemContext.OSType result = io.bloombox.schema.telemetry.context.OperatingSystemContext.OSType.valueOf(type_);
         return result == null ? io.bloombox.schema.telemetry.context.OperatingSystemContext.OSType.UNRECOGNIZED : result;
       }
@@ -838,7 +861,7 @@ public final class OperatingSystemContext {
        * Type of Operating System being expressed or specified.
        * </pre>
        *
-       * <code>.bloombox.schema.analytics.context.OSType type = 1 [(.gen_bq_schema.require) = true, (.gen_bq_schema.description) = "Type of Operating System being expressed or specified."];</code>
+       * <code>.bloombox.analytics.context.OSType type = 1 [(.gen_bq_schema.require) = true, (.gen_bq_schema.description) = "Type of Operating System being expressed or specified."];</code>
        */
       public Builder setType(io.bloombox.schema.telemetry.context.OperatingSystemContext.OSType value) {
         if (value == null) {
@@ -854,7 +877,7 @@ public final class OperatingSystemContext {
        * Type of Operating System being expressed or specified.
        * </pre>
        *
-       * <code>.bloombox.schema.analytics.context.OSType type = 1 [(.gen_bq_schema.require) = true, (.gen_bq_schema.description) = "Type of Operating System being expressed or specified."];</code>
+       * <code>.bloombox.analytics.context.OSType type = 1 [(.gen_bq_schema.require) = true, (.gen_bq_schema.description) = "Type of Operating System being expressed or specified."];</code>
        */
       public Builder clearType() {
         
@@ -1015,21 +1038,23 @@ public final class OperatingSystemContext {
         }
         return versionBuilder_;
       }
+      @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
         return super.setUnknownFieldsProto3(unknownFields);
       }
 
+      @java.lang.Override
       public final Builder mergeUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
         return super.mergeUnknownFields(unknownFields);
       }
 
 
-      // @@protoc_insertion_point(builder_scope:bloombox.schema.analytics.context.DeviceOS)
+      // @@protoc_insertion_point(builder_scope:bloombox.analytics.context.DeviceOS)
     }
 
-    // @@protoc_insertion_point(class_scope:bloombox.schema.analytics.context.DeviceOS)
+    // @@protoc_insertion_point(class_scope:bloombox.analytics.context.DeviceOS)
     private static final io.bloombox.schema.telemetry.context.OperatingSystemContext.DeviceOS DEFAULT_INSTANCE;
     static {
       DEFAULT_INSTANCE = new io.bloombox.schema.telemetry.context.OperatingSystemContext.DeviceOS();
@@ -1041,6 +1066,7 @@ public final class OperatingSystemContext {
 
     private static final com.google.protobuf.Parser<DeviceOS>
         PARSER = new com.google.protobuf.AbstractParser<DeviceOS>() {
+      @java.lang.Override
       public DeviceOS parsePartialFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -1058,6 +1084,7 @@ public final class OperatingSystemContext {
       return PARSER;
     }
 
+    @java.lang.Override
     public io.bloombox.schema.telemetry.context.OperatingSystemContext.DeviceOS getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
@@ -1065,10 +1092,10 @@ public final class OperatingSystemContext {
   }
 
   private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_bloombox_schema_analytics_context_DeviceOS_descriptor;
+    internal_static_bloombox_analytics_context_DeviceOS_descriptor;
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_bloombox_schema_analytics_context_DeviceOS_fieldAccessorTable;
+      internal_static_bloombox_analytics_context_DeviceOS_fieldAccessorTable;
 
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
@@ -1078,20 +1105,20 @@ public final class OperatingSystemContext {
       descriptor;
   static {
     java.lang.String[] descriptorData = {
-      "\n\032analytics/context/OS.proto\022!bloombox.s" +
-      "chema.analytics.context\032\016bq_field.proto\032" +
-      "\025structs/Version.proto\"\342\001\n\010DeviceOS\022u\n\004t" +
-      "ype\030\001 \001(\0162).bloombox.schema.analytics.co" +
-      "ntext.OSTypeB<\360?\001\212@6Type of Operating Sy" +
-      "stem being expressed or specified.\022_\n\007ve" +
-      "rsion\030\002 \001(\0132!.opencannabis.structs.Versi" +
-      "onSpecB+\212@(Version of the OS running on " +
-      "the device.*\217\001\n\006OSType\022\016\n\nOS_UNKNOWN\020\000\022\007" +
-      "\n\003iOS\020d\022\t\n\005macOS\020e\022\010\n\004tvOS\020f\022\013\n\007watchOS\020" +
-      "g\022\014\n\007ANDROID\020\310\001\022\021\n\014ANDROID_WEAR\020\311\001\022\013\n\007WI" +
-      "NDOWS\020\004\022\021\n\rWINDOWS_PHONE\020\005\022\t\n\005LINUX\020\006BH\n" +
-      "$io.bloombox.schema.telemetry.contextB\026O" +
-      "peratingSystemContextH\001P\000\242\002\003BBSb\006proto3"
+      "\n\032analytics/context/OS.proto\022\032bloombox.a" +
+      "nalytics.context\032\016bq_field.proto\032\025struct" +
+      "s/Version.proto\"\333\001\n\010DeviceOS\022n\n\004type\030\001 \001" +
+      "(\0162\".bloombox.analytics.context.OSTypeB<" +
+      "\360?\001\212@6Type of Operating System being exp" +
+      "ressed or specified.\022_\n\007version\030\002 \001(\0132!." +
+      "opencannabis.structs.VersionSpecB+\212@(Ver" +
+      "sion of the OS running on the device.*\217\001" +
+      "\n\006OSType\022\016\n\nOS_UNKNOWN\020\000\022\007\n\003iOS\020d\022\t\n\005mac" +
+      "OS\020e\022\010\n\004tvOS\020f\022\013\n\007watchOS\020g\022\014\n\007ANDROID\020\310" +
+      "\001\022\021\n\014ANDROID_WEAR\020\311\001\022\013\n\007WINDOWS\020\004\022\021\n\rWIN" +
+      "DOWS_PHONE\020\005\022\t\n\005LINUX\020\006BH\n$io.bloombox.s" +
+      "chema.telemetry.contextB\026OperatingSystem" +
+      "ContextH\001P\000\242\002\003BBSb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -1107,11 +1134,11 @@ public final class OperatingSystemContext {
           gen_bq_schema.BqField.getDescriptor(),
           io.opencannabis.schema.struct.Version.getDescriptor(),
         }, assigner);
-    internal_static_bloombox_schema_analytics_context_DeviceOS_descriptor =
+    internal_static_bloombox_analytics_context_DeviceOS_descriptor =
       getDescriptor().getMessageTypes().get(0);
-    internal_static_bloombox_schema_analytics_context_DeviceOS_fieldAccessorTable = new
+    internal_static_bloombox_analytics_context_DeviceOS_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_bloombox_schema_analytics_context_DeviceOS_descriptor,
+        internal_static_bloombox_analytics_context_DeviceOS_descriptor,
         new java.lang.String[] { "Type", "Version", });
     com.google.protobuf.ExtensionRegistry registry =
         com.google.protobuf.ExtensionRegistry.newInstance();

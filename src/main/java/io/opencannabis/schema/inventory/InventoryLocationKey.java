@@ -1,11 +1,12 @@
 /*
- * Copyright 2018, Bloombox, LLC.
+ * Copyright 2018, Momentum Ideas, Co. All rights reserved.
  *
- * Licensed under the Apache License, Version 2.0 (the "License");
- * you may not use this file except in compliance with the License.
- * You may obtain a copy of the License at
- *
- *     http://www.apache.org/licenses/LICENSE-2.0
+ * Source and object computer code contained herein is the private intellectual
+ * property of Momentum Ideas Co., a Delaware Corporation. Use of this
+ * code in source form requires permission in writing before use or the
+ * assembly, distribution, or publishing of derivative works, for commercial
+ * purposes or any other purpose, from a duly authorized officer of Momentum
+ * Ideas Co.
  *
  * Unless required by applicable law or agreed to in writing, software
  * distributed under the License is distributed on an "AS IS" BASIS,
@@ -37,6 +38,8 @@ private static final long serialVersionUID = 0L;
   }
   private InventoryLocationKey() {
     uuid_ = "";
+    partner_ = "";
+    location_ = "";
   }
 
   @java.lang.Override
@@ -63,13 +66,6 @@ private static final long serialVersionUID = 0L;
           case 0:
             done = true;
             break;
-          default: {
-            if (!parseUnknownFieldProto3(
-                input, unknownFields, extensionRegistry, tag)) {
-              done = true;
-            }
-            break;
-          }
           case 10: {
             java.lang.String s = input.readStringRequireUtf8();
 
@@ -77,16 +73,22 @@ private static final long serialVersionUID = 0L;
             break;
           }
           case 18: {
-            io.bloombox.schema.partner.LocationAccountKey.LocationKey.Builder subBuilder = null;
-            if (location_ != null) {
-              subBuilder = location_.toBuilder();
-            }
-            location_ = input.readMessage(io.bloombox.schema.partner.LocationAccountKey.LocationKey.parser(), extensionRegistry);
-            if (subBuilder != null) {
-              subBuilder.mergeFrom(location_);
-              location_ = subBuilder.buildPartial();
-            }
+            java.lang.String s = input.readStringRequireUtf8();
 
+            partner_ = s;
+            break;
+          }
+          case 26: {
+            java.lang.String s = input.readStringRequireUtf8();
+
+            location_ = s;
+            break;
+          }
+          default: {
+            if (!parseUnknownFieldProto3(
+                input, unknownFields, extensionRegistry, tag)) {
+              done = true;
+            }
             break;
           }
         }
@@ -106,6 +108,7 @@ private static final long serialVersionUID = 0L;
     return io.opencannabis.schema.inventory.InventoryLocationOuterClass.internal_static_opencannabis_inventory_InventoryLocationKey_descriptor;
   }
 
+  @java.lang.Override
   protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internalGetFieldAccessorTable() {
     return io.opencannabis.schema.inventory.InventoryLocationOuterClass.internal_static_opencannabis_inventory_InventoryLocationKey_fieldAccessorTable
@@ -155,40 +158,92 @@ private static final long serialVersionUID = 0L;
     }
   }
 
-  public static final int LOCATION_FIELD_NUMBER = 2;
-  private io.bloombox.schema.partner.LocationAccountKey.LocationKey location_;
+  public static final int PARTNER_FIELD_NUMBER = 2;
+  private volatile java.lang.Object partner_;
+  /**
+   * <pre>
+   * Partner key, indicating which partner owns this inventory, or has custody of this inventory.
+   * </pre>
+   *
+   * <code>string partner = 2;</code>
+   */
+  public java.lang.String getPartner() {
+    java.lang.Object ref = partner_;
+    if (ref instanceof java.lang.String) {
+      return (java.lang.String) ref;
+    } else {
+      com.google.protobuf.ByteString bs = 
+          (com.google.protobuf.ByteString) ref;
+      java.lang.String s = bs.toStringUtf8();
+      partner_ = s;
+      return s;
+    }
+  }
+  /**
+   * <pre>
+   * Partner key, indicating which partner owns this inventory, or has custody of this inventory.
+   * </pre>
+   *
+   * <code>string partner = 2;</code>
+   */
+  public com.google.protobuf.ByteString
+      getPartnerBytes() {
+    java.lang.Object ref = partner_;
+    if (ref instanceof java.lang.String) {
+      com.google.protobuf.ByteString b = 
+          com.google.protobuf.ByteString.copyFromUtf8(
+              (java.lang.String) ref);
+      partner_ = b;
+      return b;
+    } else {
+      return (com.google.protobuf.ByteString) ref;
+    }
+  }
+
+  public static final int LOCATION_FIELD_NUMBER = 3;
+  private volatile java.lang.Object location_;
   /**
    * <pre>
    * Partner location key, which binds this inventory location to a partner organization.
    * </pre>
    *
-   * <code>.bloombox.schema.partner.LocationKey location = 2;</code>
+   * <code>string location = 3;</code>
    */
-  public boolean hasLocation() {
-    return location_ != null;
+  public java.lang.String getLocation() {
+    java.lang.Object ref = location_;
+    if (ref instanceof java.lang.String) {
+      return (java.lang.String) ref;
+    } else {
+      com.google.protobuf.ByteString bs = 
+          (com.google.protobuf.ByteString) ref;
+      java.lang.String s = bs.toStringUtf8();
+      location_ = s;
+      return s;
+    }
   }
   /**
    * <pre>
    * Partner location key, which binds this inventory location to a partner organization.
    * </pre>
    *
-   * <code>.bloombox.schema.partner.LocationKey location = 2;</code>
+   * <code>string location = 3;</code>
    */
-  public io.bloombox.schema.partner.LocationAccountKey.LocationKey getLocation() {
-    return location_ == null ? io.bloombox.schema.partner.LocationAccountKey.LocationKey.getDefaultInstance() : location_;
-  }
-  /**
-   * <pre>
-   * Partner location key, which binds this inventory location to a partner organization.
-   * </pre>
-   *
-   * <code>.bloombox.schema.partner.LocationKey location = 2;</code>
-   */
-  public io.bloombox.schema.partner.LocationAccountKey.LocationKeyOrBuilder getLocationOrBuilder() {
-    return getLocation();
+  public com.google.protobuf.ByteString
+      getLocationBytes() {
+    java.lang.Object ref = location_;
+    if (ref instanceof java.lang.String) {
+      com.google.protobuf.ByteString b = 
+          com.google.protobuf.ByteString.copyFromUtf8(
+              (java.lang.String) ref);
+      location_ = b;
+      return b;
+    } else {
+      return (com.google.protobuf.ByteString) ref;
+    }
   }
 
   private byte memoizedIsInitialized = -1;
+  @java.lang.Override
   public final boolean isInitialized() {
     byte isInitialized = memoizedIsInitialized;
     if (isInitialized == 1) return true;
@@ -198,17 +253,22 @@ private static final long serialVersionUID = 0L;
     return true;
   }
 
+  @java.lang.Override
   public void writeTo(com.google.protobuf.CodedOutputStream output)
                       throws java.io.IOException {
     if (!getUuidBytes().isEmpty()) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 1, uuid_);
     }
-    if (location_ != null) {
-      output.writeMessage(2, getLocation());
+    if (!getPartnerBytes().isEmpty()) {
+      com.google.protobuf.GeneratedMessageV3.writeString(output, 2, partner_);
+    }
+    if (!getLocationBytes().isEmpty()) {
+      com.google.protobuf.GeneratedMessageV3.writeString(output, 3, location_);
     }
     unknownFields.writeTo(output);
   }
 
+  @java.lang.Override
   public int getSerializedSize() {
     int size = memoizedSize;
     if (size != -1) return size;
@@ -217,9 +277,11 @@ private static final long serialVersionUID = 0L;
     if (!getUuidBytes().isEmpty()) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, uuid_);
     }
-    if (location_ != null) {
-      size += com.google.protobuf.CodedOutputStream
-        .computeMessageSize(2, getLocation());
+    if (!getPartnerBytes().isEmpty()) {
+      size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, partner_);
+    }
+    if (!getLocationBytes().isEmpty()) {
+      size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, location_);
     }
     size += unknownFields.getSerializedSize();
     memoizedSize = size;
@@ -239,11 +301,10 @@ private static final long serialVersionUID = 0L;
     boolean result = true;
     result = result && getUuid()
         .equals(other.getUuid());
-    result = result && (hasLocation() == other.hasLocation());
-    if (hasLocation()) {
-      result = result && getLocation()
-          .equals(other.getLocation());
-    }
+    result = result && getPartner()
+        .equals(other.getPartner());
+    result = result && getLocation()
+        .equals(other.getLocation());
     result = result && unknownFields.equals(other.unknownFields);
     return result;
   }
@@ -257,10 +318,10 @@ private static final long serialVersionUID = 0L;
     hash = (19 * hash) + getDescriptor().hashCode();
     hash = (37 * hash) + UUID_FIELD_NUMBER;
     hash = (53 * hash) + getUuid().hashCode();
-    if (hasLocation()) {
-      hash = (37 * hash) + LOCATION_FIELD_NUMBER;
-      hash = (53 * hash) + getLocation().hashCode();
-    }
+    hash = (37 * hash) + PARTNER_FIELD_NUMBER;
+    hash = (53 * hash) + getPartner().hashCode();
+    hash = (37 * hash) + LOCATION_FIELD_NUMBER;
+    hash = (53 * hash) + getLocation().hashCode();
     hash = (29 * hash) + unknownFields.hashCode();
     memoizedHashCode = hash;
     return hash;
@@ -336,6 +397,7 @@ private static final long serialVersionUID = 0L;
         .parseWithIOException(PARSER, input, extensionRegistry);
   }
 
+  @java.lang.Override
   public Builder newBuilderForType() { return newBuilder(); }
   public static Builder newBuilder() {
     return DEFAULT_INSTANCE.toBuilder();
@@ -343,6 +405,7 @@ private static final long serialVersionUID = 0L;
   public static Builder newBuilder(io.opencannabis.schema.inventory.InventoryLocationKey prototype) {
     return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
   }
+  @java.lang.Override
   public Builder toBuilder() {
     return this == DEFAULT_INSTANCE
         ? new Builder() : new Builder().mergeFrom(this);
@@ -370,6 +433,7 @@ private static final long serialVersionUID = 0L;
       return io.opencannabis.schema.inventory.InventoryLocationOuterClass.internal_static_opencannabis_inventory_InventoryLocationKey_descriptor;
     }
 
+    @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
       return io.opencannabis.schema.inventory.InventoryLocationOuterClass.internal_static_opencannabis_inventory_InventoryLocationKey_fieldAccessorTable
@@ -392,28 +456,30 @@ private static final long serialVersionUID = 0L;
               .alwaysUseFieldBuilders) {
       }
     }
+    @java.lang.Override
     public Builder clear() {
       super.clear();
       uuid_ = "";
 
-      if (locationBuilder_ == null) {
-        location_ = null;
-      } else {
-        location_ = null;
-        locationBuilder_ = null;
-      }
+      partner_ = "";
+
+      location_ = "";
+
       return this;
     }
 
+    @java.lang.Override
     public com.google.protobuf.Descriptors.Descriptor
         getDescriptorForType() {
       return io.opencannabis.schema.inventory.InventoryLocationOuterClass.internal_static_opencannabis_inventory_InventoryLocationKey_descriptor;
     }
 
+    @java.lang.Override
     public io.opencannabis.schema.inventory.InventoryLocationKey getDefaultInstanceForType() {
       return io.opencannabis.schema.inventory.InventoryLocationKey.getDefaultInstance();
     }
 
+    @java.lang.Override
     public io.opencannabis.schema.inventory.InventoryLocationKey build() {
       io.opencannabis.schema.inventory.InventoryLocationKey result = buildPartial();
       if (!result.isInitialized()) {
@@ -422,44 +488,49 @@ private static final long serialVersionUID = 0L;
       return result;
     }
 
+    @java.lang.Override
     public io.opencannabis.schema.inventory.InventoryLocationKey buildPartial() {
       io.opencannabis.schema.inventory.InventoryLocationKey result = new io.opencannabis.schema.inventory.InventoryLocationKey(this);
       result.uuid_ = uuid_;
-      if (locationBuilder_ == null) {
-        result.location_ = location_;
-      } else {
-        result.location_ = locationBuilder_.build();
-      }
+      result.partner_ = partner_;
+      result.location_ = location_;
       onBuilt();
       return result;
     }
 
+    @java.lang.Override
     public Builder clone() {
       return (Builder) super.clone();
     }
+    @java.lang.Override
     public Builder setField(
         com.google.protobuf.Descriptors.FieldDescriptor field,
         java.lang.Object value) {
       return (Builder) super.setField(field, value);
     }
+    @java.lang.Override
     public Builder clearField(
         com.google.protobuf.Descriptors.FieldDescriptor field) {
       return (Builder) super.clearField(field);
     }
+    @java.lang.Override
     public Builder clearOneof(
         com.google.protobuf.Descriptors.OneofDescriptor oneof) {
       return (Builder) super.clearOneof(oneof);
     }
+    @java.lang.Override
     public Builder setRepeatedField(
         com.google.protobuf.Descriptors.FieldDescriptor field,
         int index, java.lang.Object value) {
       return (Builder) super.setRepeatedField(field, index, value);
     }
+    @java.lang.Override
     public Builder addRepeatedField(
         com.google.protobuf.Descriptors.FieldDescriptor field,
         java.lang.Object value) {
       return (Builder) super.addRepeatedField(field, value);
     }
+    @java.lang.Override
     public Builder mergeFrom(com.google.protobuf.Message other) {
       if (other instanceof io.opencannabis.schema.inventory.InventoryLocationKey) {
         return mergeFrom((io.opencannabis.schema.inventory.InventoryLocationKey)other);
@@ -475,18 +546,25 @@ private static final long serialVersionUID = 0L;
         uuid_ = other.uuid_;
         onChanged();
       }
-      if (other.hasLocation()) {
-        mergeLocation(other.getLocation());
+      if (!other.getPartner().isEmpty()) {
+        partner_ = other.partner_;
+        onChanged();
+      }
+      if (!other.getLocation().isEmpty()) {
+        location_ = other.location_;
+        onChanged();
       }
       this.mergeUnknownFields(other.unknownFields);
       onChanged();
       return this;
     }
 
+    @java.lang.Override
     public final boolean isInitialized() {
       return true;
     }
 
+    @java.lang.Override
     public Builder mergeFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -594,69 +672,150 @@ private static final long serialVersionUID = 0L;
       return this;
     }
 
-    private io.bloombox.schema.partner.LocationAccountKey.LocationKey location_ = null;
-    private com.google.protobuf.SingleFieldBuilderV3<
-        io.bloombox.schema.partner.LocationAccountKey.LocationKey, io.bloombox.schema.partner.LocationAccountKey.LocationKey.Builder, io.bloombox.schema.partner.LocationAccountKey.LocationKeyOrBuilder> locationBuilder_;
+    private java.lang.Object partner_ = "";
     /**
      * <pre>
-     * Partner location key, which binds this inventory location to a partner organization.
+     * Partner key, indicating which partner owns this inventory, or has custody of this inventory.
      * </pre>
      *
-     * <code>.bloombox.schema.partner.LocationKey location = 2;</code>
+     * <code>string partner = 2;</code>
      */
-    public boolean hasLocation() {
-      return locationBuilder_ != null || location_ != null;
-    }
-    /**
-     * <pre>
-     * Partner location key, which binds this inventory location to a partner organization.
-     * </pre>
-     *
-     * <code>.bloombox.schema.partner.LocationKey location = 2;</code>
-     */
-    public io.bloombox.schema.partner.LocationAccountKey.LocationKey getLocation() {
-      if (locationBuilder_ == null) {
-        return location_ == null ? io.bloombox.schema.partner.LocationAccountKey.LocationKey.getDefaultInstance() : location_;
+    public java.lang.String getPartner() {
+      java.lang.Object ref = partner_;
+      if (!(ref instanceof java.lang.String)) {
+        com.google.protobuf.ByteString bs =
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        partner_ = s;
+        return s;
       } else {
-        return locationBuilder_.getMessage();
+        return (java.lang.String) ref;
       }
     }
     /**
      * <pre>
-     * Partner location key, which binds this inventory location to a partner organization.
+     * Partner key, indicating which partner owns this inventory, or has custody of this inventory.
      * </pre>
      *
-     * <code>.bloombox.schema.partner.LocationKey location = 2;</code>
+     * <code>string partner = 2;</code>
      */
-    public Builder setLocation(io.bloombox.schema.partner.LocationAccountKey.LocationKey value) {
-      if (locationBuilder_ == null) {
-        if (value == null) {
-          throw new NullPointerException();
-        }
-        location_ = value;
-        onChanged();
+    public com.google.protobuf.ByteString
+        getPartnerBytes() {
+      java.lang.Object ref = partner_;
+      if (ref instanceof String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        partner_ = b;
+        return b;
       } else {
-        locationBuilder_.setMessage(value);
+        return (com.google.protobuf.ByteString) ref;
       }
-
+    }
+    /**
+     * <pre>
+     * Partner key, indicating which partner owns this inventory, or has custody of this inventory.
+     * </pre>
+     *
+     * <code>string partner = 2;</code>
+     */
+    public Builder setPartner(
+        java.lang.String value) {
+      if (value == null) {
+    throw new NullPointerException();
+  }
+  
+      partner_ = value;
+      onChanged();
       return this;
     }
     /**
      * <pre>
+     * Partner key, indicating which partner owns this inventory, or has custody of this inventory.
+     * </pre>
+     *
+     * <code>string partner = 2;</code>
+     */
+    public Builder clearPartner() {
+      
+      partner_ = getDefaultInstance().getPartner();
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * Partner key, indicating which partner owns this inventory, or has custody of this inventory.
+     * </pre>
+     *
+     * <code>string partner = 2;</code>
+     */
+    public Builder setPartnerBytes(
+        com.google.protobuf.ByteString value) {
+      if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+      
+      partner_ = value;
+      onChanged();
+      return this;
+    }
+
+    private java.lang.Object location_ = "";
+    /**
+     * <pre>
      * Partner location key, which binds this inventory location to a partner organization.
      * </pre>
      *
-     * <code>.bloombox.schema.partner.LocationKey location = 2;</code>
+     * <code>string location = 3;</code>
+     */
+    public java.lang.String getLocation() {
+      java.lang.Object ref = location_;
+      if (!(ref instanceof java.lang.String)) {
+        com.google.protobuf.ByteString bs =
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        location_ = s;
+        return s;
+      } else {
+        return (java.lang.String) ref;
+      }
+    }
+    /**
+     * <pre>
+     * Partner location key, which binds this inventory location to a partner organization.
+     * </pre>
+     *
+     * <code>string location = 3;</code>
+     */
+    public com.google.protobuf.ByteString
+        getLocationBytes() {
+      java.lang.Object ref = location_;
+      if (ref instanceof String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        location_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+    /**
+     * <pre>
+     * Partner location key, which binds this inventory location to a partner organization.
+     * </pre>
+     *
+     * <code>string location = 3;</code>
      */
     public Builder setLocation(
-        io.bloombox.schema.partner.LocationAccountKey.LocationKey.Builder builderForValue) {
-      if (locationBuilder_ == null) {
-        location_ = builderForValue.build();
-        onChanged();
-      } else {
-        locationBuilder_.setMessage(builderForValue.build());
-      }
-
+        java.lang.String value) {
+      if (value == null) {
+    throw new NullPointerException();
+  }
+  
+      location_ = value;
+      onChanged();
       return this;
     }
     /**
@@ -664,39 +823,12 @@ private static final long serialVersionUID = 0L;
      * Partner location key, which binds this inventory location to a partner organization.
      * </pre>
      *
-     * <code>.bloombox.schema.partner.LocationKey location = 2;</code>
-     */
-    public Builder mergeLocation(io.bloombox.schema.partner.LocationAccountKey.LocationKey value) {
-      if (locationBuilder_ == null) {
-        if (location_ != null) {
-          location_ =
-            io.bloombox.schema.partner.LocationAccountKey.LocationKey.newBuilder(location_).mergeFrom(value).buildPartial();
-        } else {
-          location_ = value;
-        }
-        onChanged();
-      } else {
-        locationBuilder_.mergeFrom(value);
-      }
-
-      return this;
-    }
-    /**
-     * <pre>
-     * Partner location key, which binds this inventory location to a partner organization.
-     * </pre>
-     *
-     * <code>.bloombox.schema.partner.LocationKey location = 2;</code>
+     * <code>string location = 3;</code>
      */
     public Builder clearLocation() {
-      if (locationBuilder_ == null) {
-        location_ = null;
-        onChanged();
-      } else {
-        location_ = null;
-        locationBuilder_ = null;
-      }
-
+      
+      location_ = getDefaultInstance().getLocation();
+      onChanged();
       return this;
     }
     /**
@@ -704,53 +836,26 @@ private static final long serialVersionUID = 0L;
      * Partner location key, which binds this inventory location to a partner organization.
      * </pre>
      *
-     * <code>.bloombox.schema.partner.LocationKey location = 2;</code>
+     * <code>string location = 3;</code>
      */
-    public io.bloombox.schema.partner.LocationAccountKey.LocationKey.Builder getLocationBuilder() {
+    public Builder setLocationBytes(
+        com.google.protobuf.ByteString value) {
+      if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
       
+      location_ = value;
       onChanged();
-      return getLocationFieldBuilder().getBuilder();
+      return this;
     }
-    /**
-     * <pre>
-     * Partner location key, which binds this inventory location to a partner organization.
-     * </pre>
-     *
-     * <code>.bloombox.schema.partner.LocationKey location = 2;</code>
-     */
-    public io.bloombox.schema.partner.LocationAccountKey.LocationKeyOrBuilder getLocationOrBuilder() {
-      if (locationBuilder_ != null) {
-        return locationBuilder_.getMessageOrBuilder();
-      } else {
-        return location_ == null ?
-            io.bloombox.schema.partner.LocationAccountKey.LocationKey.getDefaultInstance() : location_;
-      }
-    }
-    /**
-     * <pre>
-     * Partner location key, which binds this inventory location to a partner organization.
-     * </pre>
-     *
-     * <code>.bloombox.schema.partner.LocationKey location = 2;</code>
-     */
-    private com.google.protobuf.SingleFieldBuilderV3<
-        io.bloombox.schema.partner.LocationAccountKey.LocationKey, io.bloombox.schema.partner.LocationAccountKey.LocationKey.Builder, io.bloombox.schema.partner.LocationAccountKey.LocationKeyOrBuilder> 
-        getLocationFieldBuilder() {
-      if (locationBuilder_ == null) {
-        locationBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-            io.bloombox.schema.partner.LocationAccountKey.LocationKey, io.bloombox.schema.partner.LocationAccountKey.LocationKey.Builder, io.bloombox.schema.partner.LocationAccountKey.LocationKeyOrBuilder>(
-                getLocation(),
-                getParentForChildren(),
-                isClean());
-        location_ = null;
-      }
-      return locationBuilder_;
-    }
+    @java.lang.Override
     public final Builder setUnknownFields(
         final com.google.protobuf.UnknownFieldSet unknownFields) {
       return super.setUnknownFieldsProto3(unknownFields);
     }
 
+    @java.lang.Override
     public final Builder mergeUnknownFields(
         final com.google.protobuf.UnknownFieldSet unknownFields) {
       return super.mergeUnknownFields(unknownFields);
@@ -772,6 +877,7 @@ private static final long serialVersionUID = 0L;
 
   private static final com.google.protobuf.Parser<InventoryLocationKey>
       PARSER = new com.google.protobuf.AbstractParser<InventoryLocationKey>() {
+    @java.lang.Override
     public InventoryLocationKey parsePartialFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -789,6 +895,7 @@ private static final long serialVersionUID = 0L;
     return PARSER;
   }
 
+  @java.lang.Override
   public io.opencannabis.schema.inventory.InventoryLocationKey getDefaultInstanceForType() {
     return DEFAULT_INSTANCE;
   }

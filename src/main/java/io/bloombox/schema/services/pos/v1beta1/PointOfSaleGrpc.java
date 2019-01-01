@@ -1,8 +1,8 @@
 /*
- * Copyright 2018, Bloombox, LLC. All rights reserved.
+ * Copyright 2018, Momentum Ideas, Co. All rights reserved.
  *
  * Source and object computer code contained herein is the private intellectual
- * property of Bloombox, a California Limited Liability Corporation. Use of this
+ * property of Momentum Ideas Co., a Delaware Corporation. Use of this
  * code in source form requires permission in writing before use or the
  * assembly, distribution, or publishing of derivative works, for commercial
  * purposes or any other purpose, from a duly authorized officer of Momentum
@@ -17,20 +17,20 @@
 
 package io.bloombox.schema.services.pos.v1beta1;
 
-import static io.grpc.stub.ClientCalls.asyncUnaryCall;
-import static io.grpc.stub.ClientCalls.asyncServerStreamingCall;
-import static io.grpc.stub.ClientCalls.asyncClientStreamingCall;
-import static io.grpc.stub.ClientCalls.asyncBidiStreamingCall;
-import static io.grpc.stub.ClientCalls.blockingUnaryCall;
-import static io.grpc.stub.ClientCalls.blockingServerStreamingCall;
-import static io.grpc.stub.ClientCalls.futureUnaryCall;
 import static io.grpc.MethodDescriptor.generateFullMethodName;
-import static io.grpc.stub.ServerCalls.asyncUnaryCall;
-import static io.grpc.stub.ServerCalls.asyncServerStreamingCall;
-import static io.grpc.stub.ServerCalls.asyncClientStreamingCall;
+import static io.grpc.stub.ClientCalls.asyncBidiStreamingCall;
+import static io.grpc.stub.ClientCalls.asyncClientStreamingCall;
+import static io.grpc.stub.ClientCalls.asyncServerStreamingCall;
+import static io.grpc.stub.ClientCalls.asyncUnaryCall;
+import static io.grpc.stub.ClientCalls.blockingServerStreamingCall;
+import static io.grpc.stub.ClientCalls.blockingUnaryCall;
+import static io.grpc.stub.ClientCalls.futureUnaryCall;
 import static io.grpc.stub.ServerCalls.asyncBidiStreamingCall;
-import static io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall;
+import static io.grpc.stub.ServerCalls.asyncClientStreamingCall;
+import static io.grpc.stub.ServerCalls.asyncServerStreamingCall;
+import static io.grpc.stub.ServerCalls.asyncUnaryCall;
 import static io.grpc.stub.ServerCalls.asyncUnimplementedStreamingCall;
+import static io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall;
 
 /**
  * <pre>
@@ -41,171 +41,430 @@ import static io.grpc.stub.ServerCalls.asyncUnimplementedStreamingCall;
  * </pre>
  */
 @javax.annotation.Generated(
-    value = "by gRPC proto compiler (version 1.6.0-SNAPSHOT)",
+    value = "by gRPC proto compiler (version 1.18.0-SNAPSHOT)",
     comments = "Source: pos/v1beta1/POSService_Beta1.proto")
 public final class PointOfSaleGrpc {
 
   private PointOfSaleGrpc() {}
 
-  public static final String SERVICE_NAME = "bloombox.schema.services.pos.v1beta1.PointOfSale";
+  public static final String SERVICE_NAME = "bloombox.services.pos.v1beta1.PointOfSale";
 
   // Static method descriptors that strictly reflect the proto.
-  @io.grpc.ExperimentalApi("https://github.com/grpc/grpc-java/issues/1901")
-  public static final io.grpc.MethodDescriptor<io.bloombox.schema.services.pos.v1beta1.AuthorizeUser.Request,
-      io.bloombox.schema.services.pos.v1beta1.AuthorizeUser.Response> METHOD_AUTHORIZE =
-      io.grpc.MethodDescriptor.<io.bloombox.schema.services.pos.v1beta1.AuthorizeUser.Request, io.bloombox.schema.services.pos.v1beta1.AuthorizeUser.Response>newBuilder()
-          .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-          .setFullMethodName(generateFullMethodName(
-              "bloombox.schema.services.pos.v1beta1.PointOfSale", "Authorize"))
-          .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-              io.bloombox.schema.services.pos.v1beta1.AuthorizeUser.Request.getDefaultInstance()))
-          .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-              io.bloombox.schema.services.pos.v1beta1.AuthorizeUser.Response.getDefaultInstance()))
-          .build();
-  @io.grpc.ExperimentalApi("https://github.com/grpc/grpc-java/issues/1901")
-  public static final io.grpc.MethodDescriptor<io.bloombox.schema.services.pos.v1beta1.OpenSession.Request,
-      io.bloombox.schema.services.pos.v1beta1.OpenSession.Response> METHOD_SESSION_OPEN =
-      io.grpc.MethodDescriptor.<io.bloombox.schema.services.pos.v1beta1.OpenSession.Request, io.bloombox.schema.services.pos.v1beta1.OpenSession.Response>newBuilder()
-          .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-          .setFullMethodName(generateFullMethodName(
-              "bloombox.schema.services.pos.v1beta1.PointOfSale", "SessionOpen"))
-          .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-              io.bloombox.schema.services.pos.v1beta1.OpenSession.Request.getDefaultInstance()))
-          .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-              io.bloombox.schema.services.pos.v1beta1.OpenSession.Response.getDefaultInstance()))
-          .build();
-  @io.grpc.ExperimentalApi("https://github.com/grpc/grpc-java/issues/1901")
-  public static final io.grpc.MethodDescriptor<io.bloombox.schema.services.pos.v1beta1.CloseSession.Request,
-      io.bloombox.schema.services.pos.v1beta1.CloseSession.Response> METHOD_SESSION_CLOSE =
-      io.grpc.MethodDescriptor.<io.bloombox.schema.services.pos.v1beta1.CloseSession.Request, io.bloombox.schema.services.pos.v1beta1.CloseSession.Response>newBuilder()
-          .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-          .setFullMethodName(generateFullMethodName(
-              "bloombox.schema.services.pos.v1beta1.PointOfSale", "SessionClose"))
-          .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-              io.bloombox.schema.services.pos.v1beta1.CloseSession.Request.getDefaultInstance()))
-          .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-              io.bloombox.schema.services.pos.v1beta1.CloseSession.Response.getDefaultInstance()))
-          .build();
-  @io.grpc.ExperimentalApi("https://github.com/grpc/grpc-java/issues/1901")
-  public static final io.grpc.MethodDescriptor<io.bloombox.schema.services.pos.v1beta1.OpenTicket.Request,
-      io.bloombox.schema.services.pos.v1beta1.OpenTicket.Response> METHOD_TICKET_OPEN =
-      io.grpc.MethodDescriptor.<io.bloombox.schema.services.pos.v1beta1.OpenTicket.Request, io.bloombox.schema.services.pos.v1beta1.OpenTicket.Response>newBuilder()
-          .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-          .setFullMethodName(generateFullMethodName(
-              "bloombox.schema.services.pos.v1beta1.PointOfSale", "TicketOpen"))
-          .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-              io.bloombox.schema.services.pos.v1beta1.OpenTicket.Request.getDefaultInstance()))
-          .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-              io.bloombox.schema.services.pos.v1beta1.OpenTicket.Response.getDefaultInstance()))
-          .build();
-  @io.grpc.ExperimentalApi("https://github.com/grpc/grpc-java/issues/1901")
-  public static final io.grpc.MethodDescriptor<io.bloombox.schema.services.pos.v1beta1.SaveTicket.Request,
-      io.bloombox.schema.services.pos.v1beta1.SaveTicket.Response> METHOD_TICKET_SAVE =
-      io.grpc.MethodDescriptor.<io.bloombox.schema.services.pos.v1beta1.SaveTicket.Request, io.bloombox.schema.services.pos.v1beta1.SaveTicket.Response>newBuilder()
-          .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-          .setFullMethodName(generateFullMethodName(
-              "bloombox.schema.services.pos.v1beta1.PointOfSale", "TicketSave"))
-          .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-              io.bloombox.schema.services.pos.v1beta1.SaveTicket.Request.getDefaultInstance()))
-          .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-              io.bloombox.schema.services.pos.v1beta1.SaveTicket.Response.getDefaultInstance()))
-          .build();
-  @io.grpc.ExperimentalApi("https://github.com/grpc/grpc-java/issues/1901")
-  public static final io.grpc.MethodDescriptor<io.bloombox.schema.services.pos.v1beta1.LoadTicket.Request,
-      io.bloombox.schema.services.pos.v1beta1.LoadTicket.Response> METHOD_TICKET_LOAD =
-      io.grpc.MethodDescriptor.<io.bloombox.schema.services.pos.v1beta1.LoadTicket.Request, io.bloombox.schema.services.pos.v1beta1.LoadTicket.Response>newBuilder()
-          .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-          .setFullMethodName(generateFullMethodName(
-              "bloombox.schema.services.pos.v1beta1.PointOfSale", "TicketLoad"))
-          .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-              io.bloombox.schema.services.pos.v1beta1.LoadTicket.Request.getDefaultInstance()))
-          .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-              io.bloombox.schema.services.pos.v1beta1.LoadTicket.Response.getDefaultInstance()))
-          .build();
-  @io.grpc.ExperimentalApi("https://github.com/grpc/grpc-java/issues/1901")
-  public static final io.grpc.MethodDescriptor<io.bloombox.schema.services.pos.v1beta1.VoidTicket.Request,
-      io.bloombox.schema.services.pos.v1beta1.VoidTicket.Response> METHOD_TICKET_VOID =
-      io.grpc.MethodDescriptor.<io.bloombox.schema.services.pos.v1beta1.VoidTicket.Request, io.bloombox.schema.services.pos.v1beta1.VoidTicket.Response>newBuilder()
-          .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-          .setFullMethodName(generateFullMethodName(
-              "bloombox.schema.services.pos.v1beta1.PointOfSale", "TicketVoid"))
-          .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-              io.bloombox.schema.services.pos.v1beta1.VoidTicket.Request.getDefaultInstance()))
-          .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-              io.bloombox.schema.services.pos.v1beta1.VoidTicket.Response.getDefaultInstance()))
-          .build();
-  @io.grpc.ExperimentalApi("https://github.com/grpc/grpc-java/issues/1901")
-  public static final io.grpc.MethodDescriptor<io.bloombox.schema.services.pos.v1beta1.ClaimTicket.Request,
-      io.bloombox.schema.services.pos.v1beta1.ClaimTicket.Response> METHOD_TICKET_CLAIM =
-      io.grpc.MethodDescriptor.<io.bloombox.schema.services.pos.v1beta1.ClaimTicket.Request, io.bloombox.schema.services.pos.v1beta1.ClaimTicket.Response>newBuilder()
-          .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-          .setFullMethodName(generateFullMethodName(
-              "bloombox.schema.services.pos.v1beta1.PointOfSale", "TicketClaim"))
-          .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-              io.bloombox.schema.services.pos.v1beta1.ClaimTicket.Request.getDefaultInstance()))
-          .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-              io.bloombox.schema.services.pos.v1beta1.ClaimTicket.Response.getDefaultInstance()))
-          .build();
-  @io.grpc.ExperimentalApi("https://github.com/grpc/grpc-java/issues/1901")
-  public static final io.grpc.MethodDescriptor<io.bloombox.schema.services.pos.v1beta1.CloneTicket.Request,
-      io.bloombox.schema.services.pos.v1beta1.CloneTicket.Response> METHOD_TICKET_CLONE =
-      io.grpc.MethodDescriptor.<io.bloombox.schema.services.pos.v1beta1.CloneTicket.Request, io.bloombox.schema.services.pos.v1beta1.CloneTicket.Response>newBuilder()
-          .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-          .setFullMethodName(generateFullMethodName(
-              "bloombox.schema.services.pos.v1beta1.PointOfSale", "TicketClone"))
-          .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-              io.bloombox.schema.services.pos.v1beta1.CloneTicket.Request.getDefaultInstance()))
-          .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-              io.bloombox.schema.services.pos.v1beta1.CloneTicket.Response.getDefaultInstance()))
-          .build();
-  @io.grpc.ExperimentalApi("https://github.com/grpc/grpc-java/issues/1901")
-  public static final io.grpc.MethodDescriptor<io.bloombox.schema.services.pos.v1beta1.FinalizeTicket.Request,
-      io.bloombox.schema.services.pos.v1beta1.FinalizeTicket.Response> METHOD_TICKET_FINALIZE =
-      io.grpc.MethodDescriptor.<io.bloombox.schema.services.pos.v1beta1.FinalizeTicket.Request, io.bloombox.schema.services.pos.v1beta1.FinalizeTicket.Response>newBuilder()
-          .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-          .setFullMethodName(generateFullMethodName(
-              "bloombox.schema.services.pos.v1beta1.PointOfSale", "TicketFinalize"))
-          .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-              io.bloombox.schema.services.pos.v1beta1.FinalizeTicket.Request.getDefaultInstance()))
-          .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-              io.bloombox.schema.services.pos.v1beta1.FinalizeTicket.Response.getDefaultInstance()))
-          .build();
-  @io.grpc.ExperimentalApi("https://github.com/grpc/grpc-java/issues/1901")
-  public static final io.grpc.MethodDescriptor<io.bloombox.schema.services.pos.v1beta1.MemberSearch.Request,
-      io.bloombox.schema.services.pos.v1beta1.MemberSearch.Response> METHOD_SEARCH_MEMBERS =
-      io.grpc.MethodDescriptor.<io.bloombox.schema.services.pos.v1beta1.MemberSearch.Request, io.bloombox.schema.services.pos.v1beta1.MemberSearch.Response>newBuilder()
-          .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-          .setFullMethodName(generateFullMethodName(
-              "bloombox.schema.services.pos.v1beta1.PointOfSale", "SearchMembers"))
-          .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-              io.bloombox.schema.services.pos.v1beta1.MemberSearch.Request.getDefaultInstance()))
-          .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-              io.bloombox.schema.services.pos.v1beta1.MemberSearch.Response.getDefaultInstance()))
-          .build();
-  @io.grpc.ExperimentalApi("https://github.com/grpc/grpc-java/issues/1901")
-  public static final io.grpc.MethodDescriptor<io.bloombox.schema.services.pos.v1beta1.InventoryQuery.Request,
-      io.bloombox.schema.services.pos.v1beta1.InventoryQuery.Response> METHOD_INVENTORY_RETRIEVE =
-      io.grpc.MethodDescriptor.<io.bloombox.schema.services.pos.v1beta1.InventoryQuery.Request, io.bloombox.schema.services.pos.v1beta1.InventoryQuery.Response>newBuilder()
-          .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-          .setFullMethodName(generateFullMethodName(
-              "bloombox.schema.services.pos.v1beta1.PointOfSale", "InventoryRetrieve"))
-          .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-              io.bloombox.schema.services.pos.v1beta1.InventoryQuery.Request.getDefaultInstance()))
-          .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-              io.bloombox.schema.services.pos.v1beta1.InventoryQuery.Response.getDefaultInstance()))
-          .build();
-  @io.grpc.ExperimentalApi("https://github.com/grpc/grpc-java/issues/1901")
-  public static final io.grpc.MethodDescriptor<io.bloombox.schema.services.pos.v1beta1.InventoryStream.Request,
-      io.bloombox.schema.services.pos.v1beta1.InventoryStream.Payload> METHOD_INVENTORY_STREAM =
-      io.grpc.MethodDescriptor.<io.bloombox.schema.services.pos.v1beta1.InventoryStream.Request, io.bloombox.schema.services.pos.v1beta1.InventoryStream.Payload>newBuilder()
-          .setType(io.grpc.MethodDescriptor.MethodType.BIDI_STREAMING)
-          .setFullMethodName(generateFullMethodName(
-              "bloombox.schema.services.pos.v1beta1.PointOfSale", "InventoryStream"))
-          .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-              io.bloombox.schema.services.pos.v1beta1.InventoryStream.Request.getDefaultInstance()))
-          .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-              io.bloombox.schema.services.pos.v1beta1.InventoryStream.Payload.getDefaultInstance()))
-          .build();
+  private static volatile io.grpc.MethodDescriptor<io.bloombox.schema.services.pos.v1beta1.AuthorizeUser.Request,
+      io.bloombox.schema.services.pos.v1beta1.AuthorizeUser.Response> getAuthorizeMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "Authorize",
+      requestType = io.bloombox.schema.services.pos.v1beta1.AuthorizeUser.Request.class,
+      responseType = io.bloombox.schema.services.pos.v1beta1.AuthorizeUser.Response.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<io.bloombox.schema.services.pos.v1beta1.AuthorizeUser.Request,
+      io.bloombox.schema.services.pos.v1beta1.AuthorizeUser.Response> getAuthorizeMethod() {
+    io.grpc.MethodDescriptor<io.bloombox.schema.services.pos.v1beta1.AuthorizeUser.Request, io.bloombox.schema.services.pos.v1beta1.AuthorizeUser.Response> getAuthorizeMethod;
+    if ((getAuthorizeMethod = PointOfSaleGrpc.getAuthorizeMethod) == null) {
+      synchronized (PointOfSaleGrpc.class) {
+        if ((getAuthorizeMethod = PointOfSaleGrpc.getAuthorizeMethod) == null) {
+          PointOfSaleGrpc.getAuthorizeMethod = getAuthorizeMethod = 
+              io.grpc.MethodDescriptor.<io.bloombox.schema.services.pos.v1beta1.AuthorizeUser.Request, io.bloombox.schema.services.pos.v1beta1.AuthorizeUser.Response>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(
+                  "bloombox.services.pos.v1beta1.PointOfSale", "Authorize"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  io.bloombox.schema.services.pos.v1beta1.AuthorizeUser.Request.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  io.bloombox.schema.services.pos.v1beta1.AuthorizeUser.Response.getDefaultInstance()))
+                  .setSchemaDescriptor(new PointOfSaleMethodDescriptorSupplier("Authorize"))
+                  .build();
+          }
+        }
+     }
+     return getAuthorizeMethod;
+  }
+
+  private static volatile io.grpc.MethodDescriptor<io.bloombox.schema.services.pos.v1beta1.OpenSession.Request,
+      io.bloombox.schema.services.pos.v1beta1.OpenSession.Response> getSessionOpenMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "SessionOpen",
+      requestType = io.bloombox.schema.services.pos.v1beta1.OpenSession.Request.class,
+      responseType = io.bloombox.schema.services.pos.v1beta1.OpenSession.Response.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<io.bloombox.schema.services.pos.v1beta1.OpenSession.Request,
+      io.bloombox.schema.services.pos.v1beta1.OpenSession.Response> getSessionOpenMethod() {
+    io.grpc.MethodDescriptor<io.bloombox.schema.services.pos.v1beta1.OpenSession.Request, io.bloombox.schema.services.pos.v1beta1.OpenSession.Response> getSessionOpenMethod;
+    if ((getSessionOpenMethod = PointOfSaleGrpc.getSessionOpenMethod) == null) {
+      synchronized (PointOfSaleGrpc.class) {
+        if ((getSessionOpenMethod = PointOfSaleGrpc.getSessionOpenMethod) == null) {
+          PointOfSaleGrpc.getSessionOpenMethod = getSessionOpenMethod = 
+              io.grpc.MethodDescriptor.<io.bloombox.schema.services.pos.v1beta1.OpenSession.Request, io.bloombox.schema.services.pos.v1beta1.OpenSession.Response>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(
+                  "bloombox.services.pos.v1beta1.PointOfSale", "SessionOpen"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  io.bloombox.schema.services.pos.v1beta1.OpenSession.Request.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  io.bloombox.schema.services.pos.v1beta1.OpenSession.Response.getDefaultInstance()))
+                  .setSchemaDescriptor(new PointOfSaleMethodDescriptorSupplier("SessionOpen"))
+                  .build();
+          }
+        }
+     }
+     return getSessionOpenMethod;
+  }
+
+  private static volatile io.grpc.MethodDescriptor<io.bloombox.schema.services.pos.v1beta1.CloseSession.Request,
+      io.bloombox.schema.services.pos.v1beta1.CloseSession.Response> getSessionCloseMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "SessionClose",
+      requestType = io.bloombox.schema.services.pos.v1beta1.CloseSession.Request.class,
+      responseType = io.bloombox.schema.services.pos.v1beta1.CloseSession.Response.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<io.bloombox.schema.services.pos.v1beta1.CloseSession.Request,
+      io.bloombox.schema.services.pos.v1beta1.CloseSession.Response> getSessionCloseMethod() {
+    io.grpc.MethodDescriptor<io.bloombox.schema.services.pos.v1beta1.CloseSession.Request, io.bloombox.schema.services.pos.v1beta1.CloseSession.Response> getSessionCloseMethod;
+    if ((getSessionCloseMethod = PointOfSaleGrpc.getSessionCloseMethod) == null) {
+      synchronized (PointOfSaleGrpc.class) {
+        if ((getSessionCloseMethod = PointOfSaleGrpc.getSessionCloseMethod) == null) {
+          PointOfSaleGrpc.getSessionCloseMethod = getSessionCloseMethod = 
+              io.grpc.MethodDescriptor.<io.bloombox.schema.services.pos.v1beta1.CloseSession.Request, io.bloombox.schema.services.pos.v1beta1.CloseSession.Response>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(
+                  "bloombox.services.pos.v1beta1.PointOfSale", "SessionClose"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  io.bloombox.schema.services.pos.v1beta1.CloseSession.Request.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  io.bloombox.schema.services.pos.v1beta1.CloseSession.Response.getDefaultInstance()))
+                  .setSchemaDescriptor(new PointOfSaleMethodDescriptorSupplier("SessionClose"))
+                  .build();
+          }
+        }
+     }
+     return getSessionCloseMethod;
+  }
+
+  private static volatile io.grpc.MethodDescriptor<io.bloombox.schema.services.pos.v1beta1.OpenTicket.Request,
+      io.bloombox.schema.services.pos.v1beta1.OpenTicket.Response> getTicketOpenMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "TicketOpen",
+      requestType = io.bloombox.schema.services.pos.v1beta1.OpenTicket.Request.class,
+      responseType = io.bloombox.schema.services.pos.v1beta1.OpenTicket.Response.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<io.bloombox.schema.services.pos.v1beta1.OpenTicket.Request,
+      io.bloombox.schema.services.pos.v1beta1.OpenTicket.Response> getTicketOpenMethod() {
+    io.grpc.MethodDescriptor<io.bloombox.schema.services.pos.v1beta1.OpenTicket.Request, io.bloombox.schema.services.pos.v1beta1.OpenTicket.Response> getTicketOpenMethod;
+    if ((getTicketOpenMethod = PointOfSaleGrpc.getTicketOpenMethod) == null) {
+      synchronized (PointOfSaleGrpc.class) {
+        if ((getTicketOpenMethod = PointOfSaleGrpc.getTicketOpenMethod) == null) {
+          PointOfSaleGrpc.getTicketOpenMethod = getTicketOpenMethod = 
+              io.grpc.MethodDescriptor.<io.bloombox.schema.services.pos.v1beta1.OpenTicket.Request, io.bloombox.schema.services.pos.v1beta1.OpenTicket.Response>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(
+                  "bloombox.services.pos.v1beta1.PointOfSale", "TicketOpen"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  io.bloombox.schema.services.pos.v1beta1.OpenTicket.Request.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  io.bloombox.schema.services.pos.v1beta1.OpenTicket.Response.getDefaultInstance()))
+                  .setSchemaDescriptor(new PointOfSaleMethodDescriptorSupplier("TicketOpen"))
+                  .build();
+          }
+        }
+     }
+     return getTicketOpenMethod;
+  }
+
+  private static volatile io.grpc.MethodDescriptor<io.bloombox.schema.services.pos.v1beta1.SaveTicket.Request,
+      io.bloombox.schema.services.pos.v1beta1.SaveTicket.Response> getTicketSaveMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "TicketSave",
+      requestType = io.bloombox.schema.services.pos.v1beta1.SaveTicket.Request.class,
+      responseType = io.bloombox.schema.services.pos.v1beta1.SaveTicket.Response.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<io.bloombox.schema.services.pos.v1beta1.SaveTicket.Request,
+      io.bloombox.schema.services.pos.v1beta1.SaveTicket.Response> getTicketSaveMethod() {
+    io.grpc.MethodDescriptor<io.bloombox.schema.services.pos.v1beta1.SaveTicket.Request, io.bloombox.schema.services.pos.v1beta1.SaveTicket.Response> getTicketSaveMethod;
+    if ((getTicketSaveMethod = PointOfSaleGrpc.getTicketSaveMethod) == null) {
+      synchronized (PointOfSaleGrpc.class) {
+        if ((getTicketSaveMethod = PointOfSaleGrpc.getTicketSaveMethod) == null) {
+          PointOfSaleGrpc.getTicketSaveMethod = getTicketSaveMethod = 
+              io.grpc.MethodDescriptor.<io.bloombox.schema.services.pos.v1beta1.SaveTicket.Request, io.bloombox.schema.services.pos.v1beta1.SaveTicket.Response>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(
+                  "bloombox.services.pos.v1beta1.PointOfSale", "TicketSave"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  io.bloombox.schema.services.pos.v1beta1.SaveTicket.Request.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  io.bloombox.schema.services.pos.v1beta1.SaveTicket.Response.getDefaultInstance()))
+                  .setSchemaDescriptor(new PointOfSaleMethodDescriptorSupplier("TicketSave"))
+                  .build();
+          }
+        }
+     }
+     return getTicketSaveMethod;
+  }
+
+  private static volatile io.grpc.MethodDescriptor<io.bloombox.schema.services.pos.v1beta1.LoadTicket.Request,
+      io.bloombox.schema.services.pos.v1beta1.LoadTicket.Response> getTicketLoadMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "TicketLoad",
+      requestType = io.bloombox.schema.services.pos.v1beta1.LoadTicket.Request.class,
+      responseType = io.bloombox.schema.services.pos.v1beta1.LoadTicket.Response.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<io.bloombox.schema.services.pos.v1beta1.LoadTicket.Request,
+      io.bloombox.schema.services.pos.v1beta1.LoadTicket.Response> getTicketLoadMethod() {
+    io.grpc.MethodDescriptor<io.bloombox.schema.services.pos.v1beta1.LoadTicket.Request, io.bloombox.schema.services.pos.v1beta1.LoadTicket.Response> getTicketLoadMethod;
+    if ((getTicketLoadMethod = PointOfSaleGrpc.getTicketLoadMethod) == null) {
+      synchronized (PointOfSaleGrpc.class) {
+        if ((getTicketLoadMethod = PointOfSaleGrpc.getTicketLoadMethod) == null) {
+          PointOfSaleGrpc.getTicketLoadMethod = getTicketLoadMethod = 
+              io.grpc.MethodDescriptor.<io.bloombox.schema.services.pos.v1beta1.LoadTicket.Request, io.bloombox.schema.services.pos.v1beta1.LoadTicket.Response>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(
+                  "bloombox.services.pos.v1beta1.PointOfSale", "TicketLoad"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  io.bloombox.schema.services.pos.v1beta1.LoadTicket.Request.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  io.bloombox.schema.services.pos.v1beta1.LoadTicket.Response.getDefaultInstance()))
+                  .setSchemaDescriptor(new PointOfSaleMethodDescriptorSupplier("TicketLoad"))
+                  .build();
+          }
+        }
+     }
+     return getTicketLoadMethod;
+  }
+
+  private static volatile io.grpc.MethodDescriptor<io.bloombox.schema.services.pos.v1beta1.VoidTicket.Request,
+      io.bloombox.schema.services.pos.v1beta1.VoidTicket.Response> getTicketVoidMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "TicketVoid",
+      requestType = io.bloombox.schema.services.pos.v1beta1.VoidTicket.Request.class,
+      responseType = io.bloombox.schema.services.pos.v1beta1.VoidTicket.Response.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<io.bloombox.schema.services.pos.v1beta1.VoidTicket.Request,
+      io.bloombox.schema.services.pos.v1beta1.VoidTicket.Response> getTicketVoidMethod() {
+    io.grpc.MethodDescriptor<io.bloombox.schema.services.pos.v1beta1.VoidTicket.Request, io.bloombox.schema.services.pos.v1beta1.VoidTicket.Response> getTicketVoidMethod;
+    if ((getTicketVoidMethod = PointOfSaleGrpc.getTicketVoidMethod) == null) {
+      synchronized (PointOfSaleGrpc.class) {
+        if ((getTicketVoidMethod = PointOfSaleGrpc.getTicketVoidMethod) == null) {
+          PointOfSaleGrpc.getTicketVoidMethod = getTicketVoidMethod = 
+              io.grpc.MethodDescriptor.<io.bloombox.schema.services.pos.v1beta1.VoidTicket.Request, io.bloombox.schema.services.pos.v1beta1.VoidTicket.Response>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(
+                  "bloombox.services.pos.v1beta1.PointOfSale", "TicketVoid"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  io.bloombox.schema.services.pos.v1beta1.VoidTicket.Request.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  io.bloombox.schema.services.pos.v1beta1.VoidTicket.Response.getDefaultInstance()))
+                  .setSchemaDescriptor(new PointOfSaleMethodDescriptorSupplier("TicketVoid"))
+                  .build();
+          }
+        }
+     }
+     return getTicketVoidMethod;
+  }
+
+  private static volatile io.grpc.MethodDescriptor<io.bloombox.schema.services.pos.v1beta1.ClaimTicket.Request,
+      io.bloombox.schema.services.pos.v1beta1.ClaimTicket.Response> getTicketClaimMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "TicketClaim",
+      requestType = io.bloombox.schema.services.pos.v1beta1.ClaimTicket.Request.class,
+      responseType = io.bloombox.schema.services.pos.v1beta1.ClaimTicket.Response.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<io.bloombox.schema.services.pos.v1beta1.ClaimTicket.Request,
+      io.bloombox.schema.services.pos.v1beta1.ClaimTicket.Response> getTicketClaimMethod() {
+    io.grpc.MethodDescriptor<io.bloombox.schema.services.pos.v1beta1.ClaimTicket.Request, io.bloombox.schema.services.pos.v1beta1.ClaimTicket.Response> getTicketClaimMethod;
+    if ((getTicketClaimMethod = PointOfSaleGrpc.getTicketClaimMethod) == null) {
+      synchronized (PointOfSaleGrpc.class) {
+        if ((getTicketClaimMethod = PointOfSaleGrpc.getTicketClaimMethod) == null) {
+          PointOfSaleGrpc.getTicketClaimMethod = getTicketClaimMethod = 
+              io.grpc.MethodDescriptor.<io.bloombox.schema.services.pos.v1beta1.ClaimTicket.Request, io.bloombox.schema.services.pos.v1beta1.ClaimTicket.Response>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(
+                  "bloombox.services.pos.v1beta1.PointOfSale", "TicketClaim"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  io.bloombox.schema.services.pos.v1beta1.ClaimTicket.Request.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  io.bloombox.schema.services.pos.v1beta1.ClaimTicket.Response.getDefaultInstance()))
+                  .setSchemaDescriptor(new PointOfSaleMethodDescriptorSupplier("TicketClaim"))
+                  .build();
+          }
+        }
+     }
+     return getTicketClaimMethod;
+  }
+
+  private static volatile io.grpc.MethodDescriptor<io.bloombox.schema.services.pos.v1beta1.CloneTicket.Request,
+      io.bloombox.schema.services.pos.v1beta1.CloneTicket.Response> getTicketCloneMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "TicketClone",
+      requestType = io.bloombox.schema.services.pos.v1beta1.CloneTicket.Request.class,
+      responseType = io.bloombox.schema.services.pos.v1beta1.CloneTicket.Response.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<io.bloombox.schema.services.pos.v1beta1.CloneTicket.Request,
+      io.bloombox.schema.services.pos.v1beta1.CloneTicket.Response> getTicketCloneMethod() {
+    io.grpc.MethodDescriptor<io.bloombox.schema.services.pos.v1beta1.CloneTicket.Request, io.bloombox.schema.services.pos.v1beta1.CloneTicket.Response> getTicketCloneMethod;
+    if ((getTicketCloneMethod = PointOfSaleGrpc.getTicketCloneMethod) == null) {
+      synchronized (PointOfSaleGrpc.class) {
+        if ((getTicketCloneMethod = PointOfSaleGrpc.getTicketCloneMethod) == null) {
+          PointOfSaleGrpc.getTicketCloneMethod = getTicketCloneMethod = 
+              io.grpc.MethodDescriptor.<io.bloombox.schema.services.pos.v1beta1.CloneTicket.Request, io.bloombox.schema.services.pos.v1beta1.CloneTicket.Response>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(
+                  "bloombox.services.pos.v1beta1.PointOfSale", "TicketClone"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  io.bloombox.schema.services.pos.v1beta1.CloneTicket.Request.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  io.bloombox.schema.services.pos.v1beta1.CloneTicket.Response.getDefaultInstance()))
+                  .setSchemaDescriptor(new PointOfSaleMethodDescriptorSupplier("TicketClone"))
+                  .build();
+          }
+        }
+     }
+     return getTicketCloneMethod;
+  }
+
+  private static volatile io.grpc.MethodDescriptor<io.bloombox.schema.services.pos.v1beta1.FinalizeTicket.Request,
+      io.bloombox.schema.services.pos.v1beta1.FinalizeTicket.Response> getTicketFinalizeMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "TicketFinalize",
+      requestType = io.bloombox.schema.services.pos.v1beta1.FinalizeTicket.Request.class,
+      responseType = io.bloombox.schema.services.pos.v1beta1.FinalizeTicket.Response.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<io.bloombox.schema.services.pos.v1beta1.FinalizeTicket.Request,
+      io.bloombox.schema.services.pos.v1beta1.FinalizeTicket.Response> getTicketFinalizeMethod() {
+    io.grpc.MethodDescriptor<io.bloombox.schema.services.pos.v1beta1.FinalizeTicket.Request, io.bloombox.schema.services.pos.v1beta1.FinalizeTicket.Response> getTicketFinalizeMethod;
+    if ((getTicketFinalizeMethod = PointOfSaleGrpc.getTicketFinalizeMethod) == null) {
+      synchronized (PointOfSaleGrpc.class) {
+        if ((getTicketFinalizeMethod = PointOfSaleGrpc.getTicketFinalizeMethod) == null) {
+          PointOfSaleGrpc.getTicketFinalizeMethod = getTicketFinalizeMethod = 
+              io.grpc.MethodDescriptor.<io.bloombox.schema.services.pos.v1beta1.FinalizeTicket.Request, io.bloombox.schema.services.pos.v1beta1.FinalizeTicket.Response>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(
+                  "bloombox.services.pos.v1beta1.PointOfSale", "TicketFinalize"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  io.bloombox.schema.services.pos.v1beta1.FinalizeTicket.Request.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  io.bloombox.schema.services.pos.v1beta1.FinalizeTicket.Response.getDefaultInstance()))
+                  .setSchemaDescriptor(new PointOfSaleMethodDescriptorSupplier("TicketFinalize"))
+                  .build();
+          }
+        }
+     }
+     return getTicketFinalizeMethod;
+  }
+
+  private static volatile io.grpc.MethodDescriptor<io.bloombox.schema.services.pos.v1beta1.MemberSearch.Request,
+      io.bloombox.schema.services.pos.v1beta1.MemberSearch.Response> getSearchMembersMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "SearchMembers",
+      requestType = io.bloombox.schema.services.pos.v1beta1.MemberSearch.Request.class,
+      responseType = io.bloombox.schema.services.pos.v1beta1.MemberSearch.Response.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<io.bloombox.schema.services.pos.v1beta1.MemberSearch.Request,
+      io.bloombox.schema.services.pos.v1beta1.MemberSearch.Response> getSearchMembersMethod() {
+    io.grpc.MethodDescriptor<io.bloombox.schema.services.pos.v1beta1.MemberSearch.Request, io.bloombox.schema.services.pos.v1beta1.MemberSearch.Response> getSearchMembersMethod;
+    if ((getSearchMembersMethod = PointOfSaleGrpc.getSearchMembersMethod) == null) {
+      synchronized (PointOfSaleGrpc.class) {
+        if ((getSearchMembersMethod = PointOfSaleGrpc.getSearchMembersMethod) == null) {
+          PointOfSaleGrpc.getSearchMembersMethod = getSearchMembersMethod = 
+              io.grpc.MethodDescriptor.<io.bloombox.schema.services.pos.v1beta1.MemberSearch.Request, io.bloombox.schema.services.pos.v1beta1.MemberSearch.Response>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(
+                  "bloombox.services.pos.v1beta1.PointOfSale", "SearchMembers"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  io.bloombox.schema.services.pos.v1beta1.MemberSearch.Request.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  io.bloombox.schema.services.pos.v1beta1.MemberSearch.Response.getDefaultInstance()))
+                  .setSchemaDescriptor(new PointOfSaleMethodDescriptorSupplier("SearchMembers"))
+                  .build();
+          }
+        }
+     }
+     return getSearchMembersMethod;
+  }
+
+  private static volatile io.grpc.MethodDescriptor<io.bloombox.schema.services.pos.v1beta1.InventoryQuery.Request,
+      io.bloombox.schema.services.pos.v1beta1.InventoryQuery.Response> getInventoryRetrieveMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "InventoryRetrieve",
+      requestType = io.bloombox.schema.services.pos.v1beta1.InventoryQuery.Request.class,
+      responseType = io.bloombox.schema.services.pos.v1beta1.InventoryQuery.Response.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<io.bloombox.schema.services.pos.v1beta1.InventoryQuery.Request,
+      io.bloombox.schema.services.pos.v1beta1.InventoryQuery.Response> getInventoryRetrieveMethod() {
+    io.grpc.MethodDescriptor<io.bloombox.schema.services.pos.v1beta1.InventoryQuery.Request, io.bloombox.schema.services.pos.v1beta1.InventoryQuery.Response> getInventoryRetrieveMethod;
+    if ((getInventoryRetrieveMethod = PointOfSaleGrpc.getInventoryRetrieveMethod) == null) {
+      synchronized (PointOfSaleGrpc.class) {
+        if ((getInventoryRetrieveMethod = PointOfSaleGrpc.getInventoryRetrieveMethod) == null) {
+          PointOfSaleGrpc.getInventoryRetrieveMethod = getInventoryRetrieveMethod = 
+              io.grpc.MethodDescriptor.<io.bloombox.schema.services.pos.v1beta1.InventoryQuery.Request, io.bloombox.schema.services.pos.v1beta1.InventoryQuery.Response>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(
+                  "bloombox.services.pos.v1beta1.PointOfSale", "InventoryRetrieve"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  io.bloombox.schema.services.pos.v1beta1.InventoryQuery.Request.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  io.bloombox.schema.services.pos.v1beta1.InventoryQuery.Response.getDefaultInstance()))
+                  .setSchemaDescriptor(new PointOfSaleMethodDescriptorSupplier("InventoryRetrieve"))
+                  .build();
+          }
+        }
+     }
+     return getInventoryRetrieveMethod;
+  }
+
+  private static volatile io.grpc.MethodDescriptor<io.bloombox.schema.services.pos.v1beta1.InventoryStream.Request,
+      io.bloombox.schema.services.pos.v1beta1.InventoryStream.Payload> getInventoryStreamMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "InventoryStream",
+      requestType = io.bloombox.schema.services.pos.v1beta1.InventoryStream.Request.class,
+      responseType = io.bloombox.schema.services.pos.v1beta1.InventoryStream.Payload.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.BIDI_STREAMING)
+  public static io.grpc.MethodDescriptor<io.bloombox.schema.services.pos.v1beta1.InventoryStream.Request,
+      io.bloombox.schema.services.pos.v1beta1.InventoryStream.Payload> getInventoryStreamMethod() {
+    io.grpc.MethodDescriptor<io.bloombox.schema.services.pos.v1beta1.InventoryStream.Request, io.bloombox.schema.services.pos.v1beta1.InventoryStream.Payload> getInventoryStreamMethod;
+    if ((getInventoryStreamMethod = PointOfSaleGrpc.getInventoryStreamMethod) == null) {
+      synchronized (PointOfSaleGrpc.class) {
+        if ((getInventoryStreamMethod = PointOfSaleGrpc.getInventoryStreamMethod) == null) {
+          PointOfSaleGrpc.getInventoryStreamMethod = getInventoryStreamMethod = 
+              io.grpc.MethodDescriptor.<io.bloombox.schema.services.pos.v1beta1.InventoryStream.Request, io.bloombox.schema.services.pos.v1beta1.InventoryStream.Payload>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.BIDI_STREAMING)
+              .setFullMethodName(generateFullMethodName(
+                  "bloombox.services.pos.v1beta1.PointOfSale", "InventoryStream"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  io.bloombox.schema.services.pos.v1beta1.InventoryStream.Request.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  io.bloombox.schema.services.pos.v1beta1.InventoryStream.Payload.getDefaultInstance()))
+                  .setSchemaDescriptor(new PointOfSaleMethodDescriptorSupplier("InventoryStream"))
+                  .build();
+          }
+        }
+     }
+     return getInventoryStreamMethod;
+  }
 
   /**
    * Creates a new async stub that supports all call types for the service
@@ -247,7 +506,7 @@ public final class PointOfSaleGrpc {
      */
     public void authorize(io.bloombox.schema.services.pos.v1beta1.AuthorizeUser.Request request,
         io.grpc.stub.StreamObserver<io.bloombox.schema.services.pos.v1beta1.AuthorizeUser.Response> responseObserver) {
-      asyncUnimplementedUnaryCall(METHOD_AUTHORIZE, responseObserver);
+      asyncUnimplementedUnaryCall(getAuthorizeMethod(), responseObserver);
     }
 
     /**
@@ -257,7 +516,7 @@ public final class PointOfSaleGrpc {
      */
     public void sessionOpen(io.bloombox.schema.services.pos.v1beta1.OpenSession.Request request,
         io.grpc.stub.StreamObserver<io.bloombox.schema.services.pos.v1beta1.OpenSession.Response> responseObserver) {
-      asyncUnimplementedUnaryCall(METHOD_SESSION_OPEN, responseObserver);
+      asyncUnimplementedUnaryCall(getSessionOpenMethod(), responseObserver);
     }
 
     /**
@@ -267,7 +526,7 @@ public final class PointOfSaleGrpc {
      */
     public void sessionClose(io.bloombox.schema.services.pos.v1beta1.CloseSession.Request request,
         io.grpc.stub.StreamObserver<io.bloombox.schema.services.pos.v1beta1.CloseSession.Response> responseObserver) {
-      asyncUnimplementedUnaryCall(METHOD_SESSION_CLOSE, responseObserver);
+      asyncUnimplementedUnaryCall(getSessionCloseMethod(), responseObserver);
     }
 
     /**
@@ -277,7 +536,7 @@ public final class PointOfSaleGrpc {
      */
     public void ticketOpen(io.bloombox.schema.services.pos.v1beta1.OpenTicket.Request request,
         io.grpc.stub.StreamObserver<io.bloombox.schema.services.pos.v1beta1.OpenTicket.Response> responseObserver) {
-      asyncUnimplementedUnaryCall(METHOD_TICKET_OPEN, responseObserver);
+      asyncUnimplementedUnaryCall(getTicketOpenMethod(), responseObserver);
     }
 
     /**
@@ -287,7 +546,7 @@ public final class PointOfSaleGrpc {
      */
     public void ticketSave(io.bloombox.schema.services.pos.v1beta1.SaveTicket.Request request,
         io.grpc.stub.StreamObserver<io.bloombox.schema.services.pos.v1beta1.SaveTicket.Response> responseObserver) {
-      asyncUnimplementedUnaryCall(METHOD_TICKET_SAVE, responseObserver);
+      asyncUnimplementedUnaryCall(getTicketSaveMethod(), responseObserver);
     }
 
     /**
@@ -297,7 +556,7 @@ public final class PointOfSaleGrpc {
      */
     public void ticketLoad(io.bloombox.schema.services.pos.v1beta1.LoadTicket.Request request,
         io.grpc.stub.StreamObserver<io.bloombox.schema.services.pos.v1beta1.LoadTicket.Response> responseObserver) {
-      asyncUnimplementedUnaryCall(METHOD_TICKET_LOAD, responseObserver);
+      asyncUnimplementedUnaryCall(getTicketLoadMethod(), responseObserver);
     }
 
     /**
@@ -307,7 +566,7 @@ public final class PointOfSaleGrpc {
      */
     public void ticketVoid(io.bloombox.schema.services.pos.v1beta1.VoidTicket.Request request,
         io.grpc.stub.StreamObserver<io.bloombox.schema.services.pos.v1beta1.VoidTicket.Response> responseObserver) {
-      asyncUnimplementedUnaryCall(METHOD_TICKET_VOID, responseObserver);
+      asyncUnimplementedUnaryCall(getTicketVoidMethod(), responseObserver);
     }
 
     /**
@@ -317,7 +576,7 @@ public final class PointOfSaleGrpc {
      */
     public void ticketClaim(io.bloombox.schema.services.pos.v1beta1.ClaimTicket.Request request,
         io.grpc.stub.StreamObserver<io.bloombox.schema.services.pos.v1beta1.ClaimTicket.Response> responseObserver) {
-      asyncUnimplementedUnaryCall(METHOD_TICKET_CLAIM, responseObserver);
+      asyncUnimplementedUnaryCall(getTicketClaimMethod(), responseObserver);
     }
 
     /**
@@ -327,7 +586,7 @@ public final class PointOfSaleGrpc {
      */
     public void ticketClone(io.bloombox.schema.services.pos.v1beta1.CloneTicket.Request request,
         io.grpc.stub.StreamObserver<io.bloombox.schema.services.pos.v1beta1.CloneTicket.Response> responseObserver) {
-      asyncUnimplementedUnaryCall(METHOD_TICKET_CLONE, responseObserver);
+      asyncUnimplementedUnaryCall(getTicketCloneMethod(), responseObserver);
     }
 
     /**
@@ -337,7 +596,7 @@ public final class PointOfSaleGrpc {
      */
     public void ticketFinalize(io.bloombox.schema.services.pos.v1beta1.FinalizeTicket.Request request,
         io.grpc.stub.StreamObserver<io.bloombox.schema.services.pos.v1beta1.FinalizeTicket.Response> responseObserver) {
-      asyncUnimplementedUnaryCall(METHOD_TICKET_FINALIZE, responseObserver);
+      asyncUnimplementedUnaryCall(getTicketFinalizeMethod(), responseObserver);
     }
 
     /**
@@ -347,7 +606,7 @@ public final class PointOfSaleGrpc {
      */
     public void searchMembers(io.bloombox.schema.services.pos.v1beta1.MemberSearch.Request request,
         io.grpc.stub.StreamObserver<io.bloombox.schema.services.pos.v1beta1.MemberSearch.Response> responseObserver) {
-      asyncUnimplementedUnaryCall(METHOD_SEARCH_MEMBERS, responseObserver);
+      asyncUnimplementedUnaryCall(getSearchMembersMethod(), responseObserver);
     }
 
     /**
@@ -357,7 +616,7 @@ public final class PointOfSaleGrpc {
      */
     public void inventoryRetrieve(io.bloombox.schema.services.pos.v1beta1.InventoryQuery.Request request,
         io.grpc.stub.StreamObserver<io.bloombox.schema.services.pos.v1beta1.InventoryQuery.Response> responseObserver) {
-      asyncUnimplementedUnaryCall(METHOD_INVENTORY_RETRIEVE, responseObserver);
+      asyncUnimplementedUnaryCall(getInventoryRetrieveMethod(), responseObserver);
     }
 
     /**
@@ -367,97 +626,97 @@ public final class PointOfSaleGrpc {
      */
     public io.grpc.stub.StreamObserver<io.bloombox.schema.services.pos.v1beta1.InventoryStream.Request> inventoryStream(
         io.grpc.stub.StreamObserver<io.bloombox.schema.services.pos.v1beta1.InventoryStream.Payload> responseObserver) {
-      return asyncUnimplementedStreamingCall(METHOD_INVENTORY_STREAM, responseObserver);
+      return asyncUnimplementedStreamingCall(getInventoryStreamMethod(), responseObserver);
     }
 
     @java.lang.Override public final io.grpc.ServerServiceDefinition bindService() {
       return io.grpc.ServerServiceDefinition.builder(getServiceDescriptor())
           .addMethod(
-            METHOD_AUTHORIZE,
+            getAuthorizeMethod(),
             asyncUnaryCall(
               new MethodHandlers<
                 io.bloombox.schema.services.pos.v1beta1.AuthorizeUser.Request,
                 io.bloombox.schema.services.pos.v1beta1.AuthorizeUser.Response>(
                   this, METHODID_AUTHORIZE)))
           .addMethod(
-            METHOD_SESSION_OPEN,
+            getSessionOpenMethod(),
             asyncUnaryCall(
               new MethodHandlers<
                 io.bloombox.schema.services.pos.v1beta1.OpenSession.Request,
                 io.bloombox.schema.services.pos.v1beta1.OpenSession.Response>(
                   this, METHODID_SESSION_OPEN)))
           .addMethod(
-            METHOD_SESSION_CLOSE,
+            getSessionCloseMethod(),
             asyncUnaryCall(
               new MethodHandlers<
                 io.bloombox.schema.services.pos.v1beta1.CloseSession.Request,
                 io.bloombox.schema.services.pos.v1beta1.CloseSession.Response>(
                   this, METHODID_SESSION_CLOSE)))
           .addMethod(
-            METHOD_TICKET_OPEN,
+            getTicketOpenMethod(),
             asyncUnaryCall(
               new MethodHandlers<
                 io.bloombox.schema.services.pos.v1beta1.OpenTicket.Request,
                 io.bloombox.schema.services.pos.v1beta1.OpenTicket.Response>(
                   this, METHODID_TICKET_OPEN)))
           .addMethod(
-            METHOD_TICKET_SAVE,
+            getTicketSaveMethod(),
             asyncUnaryCall(
               new MethodHandlers<
                 io.bloombox.schema.services.pos.v1beta1.SaveTicket.Request,
                 io.bloombox.schema.services.pos.v1beta1.SaveTicket.Response>(
                   this, METHODID_TICKET_SAVE)))
           .addMethod(
-            METHOD_TICKET_LOAD,
+            getTicketLoadMethod(),
             asyncUnaryCall(
               new MethodHandlers<
                 io.bloombox.schema.services.pos.v1beta1.LoadTicket.Request,
                 io.bloombox.schema.services.pos.v1beta1.LoadTicket.Response>(
                   this, METHODID_TICKET_LOAD)))
           .addMethod(
-            METHOD_TICKET_VOID,
+            getTicketVoidMethod(),
             asyncUnaryCall(
               new MethodHandlers<
                 io.bloombox.schema.services.pos.v1beta1.VoidTicket.Request,
                 io.bloombox.schema.services.pos.v1beta1.VoidTicket.Response>(
                   this, METHODID_TICKET_VOID)))
           .addMethod(
-            METHOD_TICKET_CLAIM,
+            getTicketClaimMethod(),
             asyncUnaryCall(
               new MethodHandlers<
                 io.bloombox.schema.services.pos.v1beta1.ClaimTicket.Request,
                 io.bloombox.schema.services.pos.v1beta1.ClaimTicket.Response>(
                   this, METHODID_TICKET_CLAIM)))
           .addMethod(
-            METHOD_TICKET_CLONE,
+            getTicketCloneMethod(),
             asyncUnaryCall(
               new MethodHandlers<
                 io.bloombox.schema.services.pos.v1beta1.CloneTicket.Request,
                 io.bloombox.schema.services.pos.v1beta1.CloneTicket.Response>(
                   this, METHODID_TICKET_CLONE)))
           .addMethod(
-            METHOD_TICKET_FINALIZE,
+            getTicketFinalizeMethod(),
             asyncUnaryCall(
               new MethodHandlers<
                 io.bloombox.schema.services.pos.v1beta1.FinalizeTicket.Request,
                 io.bloombox.schema.services.pos.v1beta1.FinalizeTicket.Response>(
                   this, METHODID_TICKET_FINALIZE)))
           .addMethod(
-            METHOD_SEARCH_MEMBERS,
+            getSearchMembersMethod(),
             asyncUnaryCall(
               new MethodHandlers<
                 io.bloombox.schema.services.pos.v1beta1.MemberSearch.Request,
                 io.bloombox.schema.services.pos.v1beta1.MemberSearch.Response>(
                   this, METHODID_SEARCH_MEMBERS)))
           .addMethod(
-            METHOD_INVENTORY_RETRIEVE,
+            getInventoryRetrieveMethod(),
             asyncUnaryCall(
               new MethodHandlers<
                 io.bloombox.schema.services.pos.v1beta1.InventoryQuery.Request,
                 io.bloombox.schema.services.pos.v1beta1.InventoryQuery.Response>(
                   this, METHODID_INVENTORY_RETRIEVE)))
           .addMethod(
-            METHOD_INVENTORY_STREAM,
+            getInventoryStreamMethod(),
             asyncBidiStreamingCall(
               new MethodHandlers<
                 io.bloombox.schema.services.pos.v1beta1.InventoryStream.Request,
@@ -499,7 +758,7 @@ public final class PointOfSaleGrpc {
     public void authorize(io.bloombox.schema.services.pos.v1beta1.AuthorizeUser.Request request,
         io.grpc.stub.StreamObserver<io.bloombox.schema.services.pos.v1beta1.AuthorizeUser.Response> responseObserver) {
       asyncUnaryCall(
-          getChannel().newCall(METHOD_AUTHORIZE, getCallOptions()), request, responseObserver);
+          getChannel().newCall(getAuthorizeMethod(), getCallOptions()), request, responseObserver);
     }
 
     /**
@@ -510,7 +769,7 @@ public final class PointOfSaleGrpc {
     public void sessionOpen(io.bloombox.schema.services.pos.v1beta1.OpenSession.Request request,
         io.grpc.stub.StreamObserver<io.bloombox.schema.services.pos.v1beta1.OpenSession.Response> responseObserver) {
       asyncUnaryCall(
-          getChannel().newCall(METHOD_SESSION_OPEN, getCallOptions()), request, responseObserver);
+          getChannel().newCall(getSessionOpenMethod(), getCallOptions()), request, responseObserver);
     }
 
     /**
@@ -521,7 +780,7 @@ public final class PointOfSaleGrpc {
     public void sessionClose(io.bloombox.schema.services.pos.v1beta1.CloseSession.Request request,
         io.grpc.stub.StreamObserver<io.bloombox.schema.services.pos.v1beta1.CloseSession.Response> responseObserver) {
       asyncUnaryCall(
-          getChannel().newCall(METHOD_SESSION_CLOSE, getCallOptions()), request, responseObserver);
+          getChannel().newCall(getSessionCloseMethod(), getCallOptions()), request, responseObserver);
     }
 
     /**
@@ -532,7 +791,7 @@ public final class PointOfSaleGrpc {
     public void ticketOpen(io.bloombox.schema.services.pos.v1beta1.OpenTicket.Request request,
         io.grpc.stub.StreamObserver<io.bloombox.schema.services.pos.v1beta1.OpenTicket.Response> responseObserver) {
       asyncUnaryCall(
-          getChannel().newCall(METHOD_TICKET_OPEN, getCallOptions()), request, responseObserver);
+          getChannel().newCall(getTicketOpenMethod(), getCallOptions()), request, responseObserver);
     }
 
     /**
@@ -543,7 +802,7 @@ public final class PointOfSaleGrpc {
     public void ticketSave(io.bloombox.schema.services.pos.v1beta1.SaveTicket.Request request,
         io.grpc.stub.StreamObserver<io.bloombox.schema.services.pos.v1beta1.SaveTicket.Response> responseObserver) {
       asyncUnaryCall(
-          getChannel().newCall(METHOD_TICKET_SAVE, getCallOptions()), request, responseObserver);
+          getChannel().newCall(getTicketSaveMethod(), getCallOptions()), request, responseObserver);
     }
 
     /**
@@ -554,7 +813,7 @@ public final class PointOfSaleGrpc {
     public void ticketLoad(io.bloombox.schema.services.pos.v1beta1.LoadTicket.Request request,
         io.grpc.stub.StreamObserver<io.bloombox.schema.services.pos.v1beta1.LoadTicket.Response> responseObserver) {
       asyncUnaryCall(
-          getChannel().newCall(METHOD_TICKET_LOAD, getCallOptions()), request, responseObserver);
+          getChannel().newCall(getTicketLoadMethod(), getCallOptions()), request, responseObserver);
     }
 
     /**
@@ -565,7 +824,7 @@ public final class PointOfSaleGrpc {
     public void ticketVoid(io.bloombox.schema.services.pos.v1beta1.VoidTicket.Request request,
         io.grpc.stub.StreamObserver<io.bloombox.schema.services.pos.v1beta1.VoidTicket.Response> responseObserver) {
       asyncUnaryCall(
-          getChannel().newCall(METHOD_TICKET_VOID, getCallOptions()), request, responseObserver);
+          getChannel().newCall(getTicketVoidMethod(), getCallOptions()), request, responseObserver);
     }
 
     /**
@@ -576,7 +835,7 @@ public final class PointOfSaleGrpc {
     public void ticketClaim(io.bloombox.schema.services.pos.v1beta1.ClaimTicket.Request request,
         io.grpc.stub.StreamObserver<io.bloombox.schema.services.pos.v1beta1.ClaimTicket.Response> responseObserver) {
       asyncUnaryCall(
-          getChannel().newCall(METHOD_TICKET_CLAIM, getCallOptions()), request, responseObserver);
+          getChannel().newCall(getTicketClaimMethod(), getCallOptions()), request, responseObserver);
     }
 
     /**
@@ -587,7 +846,7 @@ public final class PointOfSaleGrpc {
     public void ticketClone(io.bloombox.schema.services.pos.v1beta1.CloneTicket.Request request,
         io.grpc.stub.StreamObserver<io.bloombox.schema.services.pos.v1beta1.CloneTicket.Response> responseObserver) {
       asyncUnaryCall(
-          getChannel().newCall(METHOD_TICKET_CLONE, getCallOptions()), request, responseObserver);
+          getChannel().newCall(getTicketCloneMethod(), getCallOptions()), request, responseObserver);
     }
 
     /**
@@ -598,7 +857,7 @@ public final class PointOfSaleGrpc {
     public void ticketFinalize(io.bloombox.schema.services.pos.v1beta1.FinalizeTicket.Request request,
         io.grpc.stub.StreamObserver<io.bloombox.schema.services.pos.v1beta1.FinalizeTicket.Response> responseObserver) {
       asyncUnaryCall(
-          getChannel().newCall(METHOD_TICKET_FINALIZE, getCallOptions()), request, responseObserver);
+          getChannel().newCall(getTicketFinalizeMethod(), getCallOptions()), request, responseObserver);
     }
 
     /**
@@ -609,7 +868,7 @@ public final class PointOfSaleGrpc {
     public void searchMembers(io.bloombox.schema.services.pos.v1beta1.MemberSearch.Request request,
         io.grpc.stub.StreamObserver<io.bloombox.schema.services.pos.v1beta1.MemberSearch.Response> responseObserver) {
       asyncUnaryCall(
-          getChannel().newCall(METHOD_SEARCH_MEMBERS, getCallOptions()), request, responseObserver);
+          getChannel().newCall(getSearchMembersMethod(), getCallOptions()), request, responseObserver);
     }
 
     /**
@@ -620,7 +879,7 @@ public final class PointOfSaleGrpc {
     public void inventoryRetrieve(io.bloombox.schema.services.pos.v1beta1.InventoryQuery.Request request,
         io.grpc.stub.StreamObserver<io.bloombox.schema.services.pos.v1beta1.InventoryQuery.Response> responseObserver) {
       asyncUnaryCall(
-          getChannel().newCall(METHOD_INVENTORY_RETRIEVE, getCallOptions()), request, responseObserver);
+          getChannel().newCall(getInventoryRetrieveMethod(), getCallOptions()), request, responseObserver);
     }
 
     /**
@@ -631,7 +890,7 @@ public final class PointOfSaleGrpc {
     public io.grpc.stub.StreamObserver<io.bloombox.schema.services.pos.v1beta1.InventoryStream.Request> inventoryStream(
         io.grpc.stub.StreamObserver<io.bloombox.schema.services.pos.v1beta1.InventoryStream.Payload> responseObserver) {
       return asyncBidiStreamingCall(
-          getChannel().newCall(METHOD_INVENTORY_STREAM, getCallOptions()), responseObserver);
+          getChannel().newCall(getInventoryStreamMethod(), getCallOptions()), responseObserver);
     }
   }
 
@@ -666,7 +925,7 @@ public final class PointOfSaleGrpc {
      */
     public io.bloombox.schema.services.pos.v1beta1.AuthorizeUser.Response authorize(io.bloombox.schema.services.pos.v1beta1.AuthorizeUser.Request request) {
       return blockingUnaryCall(
-          getChannel(), METHOD_AUTHORIZE, getCallOptions(), request);
+          getChannel(), getAuthorizeMethod(), getCallOptions(), request);
     }
 
     /**
@@ -676,7 +935,7 @@ public final class PointOfSaleGrpc {
      */
     public io.bloombox.schema.services.pos.v1beta1.OpenSession.Response sessionOpen(io.bloombox.schema.services.pos.v1beta1.OpenSession.Request request) {
       return blockingUnaryCall(
-          getChannel(), METHOD_SESSION_OPEN, getCallOptions(), request);
+          getChannel(), getSessionOpenMethod(), getCallOptions(), request);
     }
 
     /**
@@ -686,7 +945,7 @@ public final class PointOfSaleGrpc {
      */
     public io.bloombox.schema.services.pos.v1beta1.CloseSession.Response sessionClose(io.bloombox.schema.services.pos.v1beta1.CloseSession.Request request) {
       return blockingUnaryCall(
-          getChannel(), METHOD_SESSION_CLOSE, getCallOptions(), request);
+          getChannel(), getSessionCloseMethod(), getCallOptions(), request);
     }
 
     /**
@@ -696,7 +955,7 @@ public final class PointOfSaleGrpc {
      */
     public io.bloombox.schema.services.pos.v1beta1.OpenTicket.Response ticketOpen(io.bloombox.schema.services.pos.v1beta1.OpenTicket.Request request) {
       return blockingUnaryCall(
-          getChannel(), METHOD_TICKET_OPEN, getCallOptions(), request);
+          getChannel(), getTicketOpenMethod(), getCallOptions(), request);
     }
 
     /**
@@ -706,7 +965,7 @@ public final class PointOfSaleGrpc {
      */
     public io.bloombox.schema.services.pos.v1beta1.SaveTicket.Response ticketSave(io.bloombox.schema.services.pos.v1beta1.SaveTicket.Request request) {
       return blockingUnaryCall(
-          getChannel(), METHOD_TICKET_SAVE, getCallOptions(), request);
+          getChannel(), getTicketSaveMethod(), getCallOptions(), request);
     }
 
     /**
@@ -716,7 +975,7 @@ public final class PointOfSaleGrpc {
      */
     public io.bloombox.schema.services.pos.v1beta1.LoadTicket.Response ticketLoad(io.bloombox.schema.services.pos.v1beta1.LoadTicket.Request request) {
       return blockingUnaryCall(
-          getChannel(), METHOD_TICKET_LOAD, getCallOptions(), request);
+          getChannel(), getTicketLoadMethod(), getCallOptions(), request);
     }
 
     /**
@@ -726,7 +985,7 @@ public final class PointOfSaleGrpc {
      */
     public io.bloombox.schema.services.pos.v1beta1.VoidTicket.Response ticketVoid(io.bloombox.schema.services.pos.v1beta1.VoidTicket.Request request) {
       return blockingUnaryCall(
-          getChannel(), METHOD_TICKET_VOID, getCallOptions(), request);
+          getChannel(), getTicketVoidMethod(), getCallOptions(), request);
     }
 
     /**
@@ -736,7 +995,7 @@ public final class PointOfSaleGrpc {
      */
     public io.bloombox.schema.services.pos.v1beta1.ClaimTicket.Response ticketClaim(io.bloombox.schema.services.pos.v1beta1.ClaimTicket.Request request) {
       return blockingUnaryCall(
-          getChannel(), METHOD_TICKET_CLAIM, getCallOptions(), request);
+          getChannel(), getTicketClaimMethod(), getCallOptions(), request);
     }
 
     /**
@@ -746,7 +1005,7 @@ public final class PointOfSaleGrpc {
      */
     public io.bloombox.schema.services.pos.v1beta1.CloneTicket.Response ticketClone(io.bloombox.schema.services.pos.v1beta1.CloneTicket.Request request) {
       return blockingUnaryCall(
-          getChannel(), METHOD_TICKET_CLONE, getCallOptions(), request);
+          getChannel(), getTicketCloneMethod(), getCallOptions(), request);
     }
 
     /**
@@ -756,7 +1015,7 @@ public final class PointOfSaleGrpc {
      */
     public io.bloombox.schema.services.pos.v1beta1.FinalizeTicket.Response ticketFinalize(io.bloombox.schema.services.pos.v1beta1.FinalizeTicket.Request request) {
       return blockingUnaryCall(
-          getChannel(), METHOD_TICKET_FINALIZE, getCallOptions(), request);
+          getChannel(), getTicketFinalizeMethod(), getCallOptions(), request);
     }
 
     /**
@@ -766,7 +1025,7 @@ public final class PointOfSaleGrpc {
      */
     public io.bloombox.schema.services.pos.v1beta1.MemberSearch.Response searchMembers(io.bloombox.schema.services.pos.v1beta1.MemberSearch.Request request) {
       return blockingUnaryCall(
-          getChannel(), METHOD_SEARCH_MEMBERS, getCallOptions(), request);
+          getChannel(), getSearchMembersMethod(), getCallOptions(), request);
     }
 
     /**
@@ -776,7 +1035,7 @@ public final class PointOfSaleGrpc {
      */
     public io.bloombox.schema.services.pos.v1beta1.InventoryQuery.Response inventoryRetrieve(io.bloombox.schema.services.pos.v1beta1.InventoryQuery.Request request) {
       return blockingUnaryCall(
-          getChannel(), METHOD_INVENTORY_RETRIEVE, getCallOptions(), request);
+          getChannel(), getInventoryRetrieveMethod(), getCallOptions(), request);
     }
   }
 
@@ -812,7 +1071,7 @@ public final class PointOfSaleGrpc {
     public com.google.common.util.concurrent.ListenableFuture<io.bloombox.schema.services.pos.v1beta1.AuthorizeUser.Response> authorize(
         io.bloombox.schema.services.pos.v1beta1.AuthorizeUser.Request request) {
       return futureUnaryCall(
-          getChannel().newCall(METHOD_AUTHORIZE, getCallOptions()), request);
+          getChannel().newCall(getAuthorizeMethod(), getCallOptions()), request);
     }
 
     /**
@@ -823,7 +1082,7 @@ public final class PointOfSaleGrpc {
     public com.google.common.util.concurrent.ListenableFuture<io.bloombox.schema.services.pos.v1beta1.OpenSession.Response> sessionOpen(
         io.bloombox.schema.services.pos.v1beta1.OpenSession.Request request) {
       return futureUnaryCall(
-          getChannel().newCall(METHOD_SESSION_OPEN, getCallOptions()), request);
+          getChannel().newCall(getSessionOpenMethod(), getCallOptions()), request);
     }
 
     /**
@@ -834,7 +1093,7 @@ public final class PointOfSaleGrpc {
     public com.google.common.util.concurrent.ListenableFuture<io.bloombox.schema.services.pos.v1beta1.CloseSession.Response> sessionClose(
         io.bloombox.schema.services.pos.v1beta1.CloseSession.Request request) {
       return futureUnaryCall(
-          getChannel().newCall(METHOD_SESSION_CLOSE, getCallOptions()), request);
+          getChannel().newCall(getSessionCloseMethod(), getCallOptions()), request);
     }
 
     /**
@@ -845,7 +1104,7 @@ public final class PointOfSaleGrpc {
     public com.google.common.util.concurrent.ListenableFuture<io.bloombox.schema.services.pos.v1beta1.OpenTicket.Response> ticketOpen(
         io.bloombox.schema.services.pos.v1beta1.OpenTicket.Request request) {
       return futureUnaryCall(
-          getChannel().newCall(METHOD_TICKET_OPEN, getCallOptions()), request);
+          getChannel().newCall(getTicketOpenMethod(), getCallOptions()), request);
     }
 
     /**
@@ -856,7 +1115,7 @@ public final class PointOfSaleGrpc {
     public com.google.common.util.concurrent.ListenableFuture<io.bloombox.schema.services.pos.v1beta1.SaveTicket.Response> ticketSave(
         io.bloombox.schema.services.pos.v1beta1.SaveTicket.Request request) {
       return futureUnaryCall(
-          getChannel().newCall(METHOD_TICKET_SAVE, getCallOptions()), request);
+          getChannel().newCall(getTicketSaveMethod(), getCallOptions()), request);
     }
 
     /**
@@ -867,7 +1126,7 @@ public final class PointOfSaleGrpc {
     public com.google.common.util.concurrent.ListenableFuture<io.bloombox.schema.services.pos.v1beta1.LoadTicket.Response> ticketLoad(
         io.bloombox.schema.services.pos.v1beta1.LoadTicket.Request request) {
       return futureUnaryCall(
-          getChannel().newCall(METHOD_TICKET_LOAD, getCallOptions()), request);
+          getChannel().newCall(getTicketLoadMethod(), getCallOptions()), request);
     }
 
     /**
@@ -878,7 +1137,7 @@ public final class PointOfSaleGrpc {
     public com.google.common.util.concurrent.ListenableFuture<io.bloombox.schema.services.pos.v1beta1.VoidTicket.Response> ticketVoid(
         io.bloombox.schema.services.pos.v1beta1.VoidTicket.Request request) {
       return futureUnaryCall(
-          getChannel().newCall(METHOD_TICKET_VOID, getCallOptions()), request);
+          getChannel().newCall(getTicketVoidMethod(), getCallOptions()), request);
     }
 
     /**
@@ -889,7 +1148,7 @@ public final class PointOfSaleGrpc {
     public com.google.common.util.concurrent.ListenableFuture<io.bloombox.schema.services.pos.v1beta1.ClaimTicket.Response> ticketClaim(
         io.bloombox.schema.services.pos.v1beta1.ClaimTicket.Request request) {
       return futureUnaryCall(
-          getChannel().newCall(METHOD_TICKET_CLAIM, getCallOptions()), request);
+          getChannel().newCall(getTicketClaimMethod(), getCallOptions()), request);
     }
 
     /**
@@ -900,7 +1159,7 @@ public final class PointOfSaleGrpc {
     public com.google.common.util.concurrent.ListenableFuture<io.bloombox.schema.services.pos.v1beta1.CloneTicket.Response> ticketClone(
         io.bloombox.schema.services.pos.v1beta1.CloneTicket.Request request) {
       return futureUnaryCall(
-          getChannel().newCall(METHOD_TICKET_CLONE, getCallOptions()), request);
+          getChannel().newCall(getTicketCloneMethod(), getCallOptions()), request);
     }
 
     /**
@@ -911,7 +1170,7 @@ public final class PointOfSaleGrpc {
     public com.google.common.util.concurrent.ListenableFuture<io.bloombox.schema.services.pos.v1beta1.FinalizeTicket.Response> ticketFinalize(
         io.bloombox.schema.services.pos.v1beta1.FinalizeTicket.Request request) {
       return futureUnaryCall(
-          getChannel().newCall(METHOD_TICKET_FINALIZE, getCallOptions()), request);
+          getChannel().newCall(getTicketFinalizeMethod(), getCallOptions()), request);
     }
 
     /**
@@ -922,7 +1181,7 @@ public final class PointOfSaleGrpc {
     public com.google.common.util.concurrent.ListenableFuture<io.bloombox.schema.services.pos.v1beta1.MemberSearch.Response> searchMembers(
         io.bloombox.schema.services.pos.v1beta1.MemberSearch.Request request) {
       return futureUnaryCall(
-          getChannel().newCall(METHOD_SEARCH_MEMBERS, getCallOptions()), request);
+          getChannel().newCall(getSearchMembersMethod(), getCallOptions()), request);
     }
 
     /**
@@ -933,7 +1192,7 @@ public final class PointOfSaleGrpc {
     public com.google.common.util.concurrent.ListenableFuture<io.bloombox.schema.services.pos.v1beta1.InventoryQuery.Response> inventoryRetrieve(
         io.bloombox.schema.services.pos.v1beta1.InventoryQuery.Request request) {
       return futureUnaryCall(
-          getChannel().newCall(METHOD_INVENTORY_RETRIEVE, getCallOptions()), request);
+          getChannel().newCall(getInventoryRetrieveMethod(), getCallOptions()), request);
     }
   }
 
@@ -1035,10 +1294,38 @@ public final class PointOfSaleGrpc {
     }
   }
 
-  private static final class PointOfSaleDescriptorSupplier implements io.grpc.protobuf.ProtoFileDescriptorSupplier {
+  private static abstract class PointOfSaleBaseDescriptorSupplier
+      implements io.grpc.protobuf.ProtoFileDescriptorSupplier, io.grpc.protobuf.ProtoServiceDescriptorSupplier {
+    PointOfSaleBaseDescriptorSupplier() {}
+
     @java.lang.Override
     public com.google.protobuf.Descriptors.FileDescriptor getFileDescriptor() {
       return io.bloombox.schema.services.pos.v1beta1.POSServiceBeta1.getDescriptor();
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Descriptors.ServiceDescriptor getServiceDescriptor() {
+      return getFileDescriptor().findServiceByName("PointOfSale");
+    }
+  }
+
+  private static final class PointOfSaleFileDescriptorSupplier
+      extends PointOfSaleBaseDescriptorSupplier {
+    PointOfSaleFileDescriptorSupplier() {}
+  }
+
+  private static final class PointOfSaleMethodDescriptorSupplier
+      extends PointOfSaleBaseDescriptorSupplier
+      implements io.grpc.protobuf.ProtoMethodDescriptorSupplier {
+    private final String methodName;
+
+    PointOfSaleMethodDescriptorSupplier(String methodName) {
+      this.methodName = methodName;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Descriptors.MethodDescriptor getMethodDescriptor() {
+      return getServiceDescriptor().findMethodByName(methodName);
     }
   }
 
@@ -1051,20 +1338,20 @@ public final class PointOfSaleGrpc {
         result = serviceDescriptor;
         if (result == null) {
           serviceDescriptor = result = io.grpc.ServiceDescriptor.newBuilder(SERVICE_NAME)
-              .setSchemaDescriptor(new PointOfSaleDescriptorSupplier())
-              .addMethod(METHOD_AUTHORIZE)
-              .addMethod(METHOD_SESSION_OPEN)
-              .addMethod(METHOD_SESSION_CLOSE)
-              .addMethod(METHOD_TICKET_OPEN)
-              .addMethod(METHOD_TICKET_SAVE)
-              .addMethod(METHOD_TICKET_LOAD)
-              .addMethod(METHOD_TICKET_VOID)
-              .addMethod(METHOD_TICKET_CLAIM)
-              .addMethod(METHOD_TICKET_CLONE)
-              .addMethod(METHOD_TICKET_FINALIZE)
-              .addMethod(METHOD_SEARCH_MEMBERS)
-              .addMethod(METHOD_INVENTORY_RETRIEVE)
-              .addMethod(METHOD_INVENTORY_STREAM)
+              .setSchemaDescriptor(new PointOfSaleFileDescriptorSupplier())
+              .addMethod(getAuthorizeMethod())
+              .addMethod(getSessionOpenMethod())
+              .addMethod(getSessionCloseMethod())
+              .addMethod(getTicketOpenMethod())
+              .addMethod(getTicketSaveMethod())
+              .addMethod(getTicketLoadMethod())
+              .addMethod(getTicketVoidMethod())
+              .addMethod(getTicketClaimMethod())
+              .addMethod(getTicketCloneMethod())
+              .addMethod(getTicketFinalizeMethod())
+              .addMethod(getSearchMembersMethod())
+              .addMethod(getInventoryRetrieveMethod())
+              .addMethod(getInventoryStreamMethod())
               .build();
         }
       }

@@ -1,8 +1,8 @@
 /*
- * Copyright 2018, Bloombox, LLC. All rights reserved.
+ * Copyright 2018, Momentum Ideas, Co. All rights reserved.
  *
  * Source and object computer code contained herein is the private intellectual
- * property of Bloombox, a California Limited Liability Corporation. Use of this
+ * property of Momentum Ideas Co., a Delaware Corporation. Use of this
  * code in source form requires permission in writing before use or the
  * assembly, distribution, or publishing of derivative works, for commercial
  * purposes or any other purpose, from a duly authorized officer of Momentum
@@ -36,7 +36,7 @@ public final class AnalyticsCollection {
    * Enumerates categories of events supported by the telemetry system.
    * </pre>
    *
-   * Protobuf enum {@code bloombox.schema.analytics.context.EventType}
+   * Protobuf enum {@code bloombox.analytics.context.EventType}
    */
   public enum EventType
       implements com.google.protobuf.ProtocolMessageEnum {
@@ -197,11 +197,11 @@ public final class AnalyticsCollection {
       this.value = value;
     }
 
-    // @@protoc_insertion_point(enum_scope:bloombox.schema.analytics.context.EventType)
+    // @@protoc_insertion_point(enum_scope:bloombox.analytics.context.EventType)
   }
 
   public interface CollectionOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:bloombox.schema.analytics.context.Collection)
+      // @@protoc_insertion_point(interface_extends:bloombox.analytics.context.Collection)
       com.google.protobuf.MessageOrBuilder {
 
     /**
@@ -236,7 +236,7 @@ public final class AnalyticsCollection {
      * Specifies the type of event. Usually added by the telemetry backend.
      * </pre>
      *
-     * <code>.bloombox.schema.analytics.context.EventType type = 3 [(.gen_bq_schema.description) = "Specifies the type of event. Usually added by the telemetry backend."];</code>
+     * <code>.bloombox.analytics.context.EventType type = 3 [(.gen_bq_schema.description) = "Specifies the type of event. Usually added by the telemetry backend."];</code>
      */
     int getTypeValue();
     /**
@@ -244,7 +244,7 @@ public final class AnalyticsCollection {
      * Specifies the type of event. Usually added by the telemetry backend.
      * </pre>
      *
-     * <code>.bloombox.schema.analytics.context.EventType type = 3 [(.gen_bq_schema.description) = "Specifies the type of event. Usually added by the telemetry backend."];</code>
+     * <code>.bloombox.analytics.context.EventType type = 3 [(.gen_bq_schema.description) = "Specifies the type of event. Usually added by the telemetry backend."];</code>
      */
     io.bloombox.schema.telemetry.context.AnalyticsCollection.EventType getType();
   }
@@ -253,11 +253,11 @@ public final class AnalyticsCollection {
    * Represents a specification for an analytics event collection.
    * </pre>
    *
-   * Protobuf type {@code bloombox.schema.analytics.context.Collection}
+   * Protobuf type {@code bloombox.analytics.context.Collection}
    */
   public  static final class Collection extends
       com.google.protobuf.GeneratedMessageV3 implements
-      // @@protoc_insertion_point(message_implements:bloombox.schema.analytics.context.Collection)
+      // @@protoc_insertion_point(message_implements:bloombox.analytics.context.Collection)
       CollectionOrBuilder {
   private static final long serialVersionUID = 0L;
     // Use Collection.newBuilder() to construct.
@@ -294,13 +294,6 @@ public final class AnalyticsCollection {
             case 0:
               done = true;
               break;
-            default: {
-              if (!parseUnknownFieldProto3(
-                  input, unknownFields, extensionRegistry, tag)) {
-                done = true;
-              }
-              break;
-            }
             case 10: {
               java.lang.String s = input.readStringRequireUtf8();
 
@@ -318,6 +311,13 @@ public final class AnalyticsCollection {
               type_ = rawValue;
               break;
             }
+            default: {
+              if (!parseUnknownFieldProto3(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
           }
         }
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
@@ -332,12 +332,13 @@ public final class AnalyticsCollection {
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return io.bloombox.schema.telemetry.context.AnalyticsCollection.internal_static_bloombox_schema_analytics_context_Collection_descriptor;
+      return io.bloombox.schema.telemetry.context.AnalyticsCollection.internal_static_bloombox_analytics_context_Collection_descriptor;
     }
 
+    @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return io.bloombox.schema.telemetry.context.AnalyticsCollection.internal_static_bloombox_schema_analytics_context_Collection_fieldAccessorTable
+      return io.bloombox.schema.telemetry.context.AnalyticsCollection.internal_static_bloombox_analytics_context_Collection_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
               io.bloombox.schema.telemetry.context.AnalyticsCollection.Collection.class, io.bloombox.schema.telemetry.context.AnalyticsCollection.Collection.Builder.class);
     }
@@ -404,7 +405,7 @@ public final class AnalyticsCollection {
      * Specifies the type of event. Usually added by the telemetry backend.
      * </pre>
      *
-     * <code>.bloombox.schema.analytics.context.EventType type = 3 [(.gen_bq_schema.description) = "Specifies the type of event. Usually added by the telemetry backend."];</code>
+     * <code>.bloombox.analytics.context.EventType type = 3 [(.gen_bq_schema.description) = "Specifies the type of event. Usually added by the telemetry backend."];</code>
      */
     public int getTypeValue() {
       return type_;
@@ -414,14 +415,16 @@ public final class AnalyticsCollection {
      * Specifies the type of event. Usually added by the telemetry backend.
      * </pre>
      *
-     * <code>.bloombox.schema.analytics.context.EventType type = 3 [(.gen_bq_schema.description) = "Specifies the type of event. Usually added by the telemetry backend."];</code>
+     * <code>.bloombox.analytics.context.EventType type = 3 [(.gen_bq_schema.description) = "Specifies the type of event. Usually added by the telemetry backend."];</code>
      */
     public io.bloombox.schema.telemetry.context.AnalyticsCollection.EventType getType() {
+      @SuppressWarnings("deprecation")
       io.bloombox.schema.telemetry.context.AnalyticsCollection.EventType result = io.bloombox.schema.telemetry.context.AnalyticsCollection.EventType.valueOf(type_);
       return result == null ? io.bloombox.schema.telemetry.context.AnalyticsCollection.EventType.UNRECOGNIZED : result;
     }
 
     private byte memoizedIsInitialized = -1;
+    @java.lang.Override
     public final boolean isInitialized() {
       byte isInitialized = memoizedIsInitialized;
       if (isInitialized == 1) return true;
@@ -431,6 +434,7 @@ public final class AnalyticsCollection {
       return true;
     }
 
+    @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
       if (!getNameBytes().isEmpty()) {
@@ -445,6 +449,7 @@ public final class AnalyticsCollection {
       unknownFields.writeTo(output);
     }
 
+    @java.lang.Override
     public int getSerializedSize() {
       int size = memoizedSize;
       if (size != -1) return size;
@@ -575,6 +580,7 @@ public final class AnalyticsCollection {
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
 
+    @java.lang.Override
     public Builder newBuilderForType() { return newBuilder(); }
     public static Builder newBuilder() {
       return DEFAULT_INSTANCE.toBuilder();
@@ -582,6 +588,7 @@ public final class AnalyticsCollection {
     public static Builder newBuilder(io.bloombox.schema.telemetry.context.AnalyticsCollection.Collection prototype) {
       return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
     }
+    @java.lang.Override
     public Builder toBuilder() {
       return this == DEFAULT_INSTANCE
           ? new Builder() : new Builder().mergeFrom(this);
@@ -598,20 +605,21 @@ public final class AnalyticsCollection {
      * Represents a specification for an analytics event collection.
      * </pre>
      *
-     * Protobuf type {@code bloombox.schema.analytics.context.Collection}
+     * Protobuf type {@code bloombox.analytics.context.Collection}
      */
     public static final class Builder extends
         com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:bloombox.schema.analytics.context.Collection)
+        // @@protoc_insertion_point(builder_implements:bloombox.analytics.context.Collection)
         io.bloombox.schema.telemetry.context.AnalyticsCollection.CollectionOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return io.bloombox.schema.telemetry.context.AnalyticsCollection.internal_static_bloombox_schema_analytics_context_Collection_descriptor;
+        return io.bloombox.schema.telemetry.context.AnalyticsCollection.internal_static_bloombox_analytics_context_Collection_descriptor;
       }
 
+      @java.lang.Override
       protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return io.bloombox.schema.telemetry.context.AnalyticsCollection.internal_static_bloombox_schema_analytics_context_Collection_fieldAccessorTable
+        return io.bloombox.schema.telemetry.context.AnalyticsCollection.internal_static_bloombox_analytics_context_Collection_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
                 io.bloombox.schema.telemetry.context.AnalyticsCollection.Collection.class, io.bloombox.schema.telemetry.context.AnalyticsCollection.Collection.Builder.class);
       }
@@ -631,6 +639,7 @@ public final class AnalyticsCollection {
                 .alwaysUseFieldBuilders) {
         }
       }
+      @java.lang.Override
       public Builder clear() {
         super.clear();
         name_ = "";
@@ -642,15 +651,18 @@ public final class AnalyticsCollection {
         return this;
       }
 
+      @java.lang.Override
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return io.bloombox.schema.telemetry.context.AnalyticsCollection.internal_static_bloombox_schema_analytics_context_Collection_descriptor;
+        return io.bloombox.schema.telemetry.context.AnalyticsCollection.internal_static_bloombox_analytics_context_Collection_descriptor;
       }
 
+      @java.lang.Override
       public io.bloombox.schema.telemetry.context.AnalyticsCollection.Collection getDefaultInstanceForType() {
         return io.bloombox.schema.telemetry.context.AnalyticsCollection.Collection.getDefaultInstance();
       }
 
+      @java.lang.Override
       public io.bloombox.schema.telemetry.context.AnalyticsCollection.Collection build() {
         io.bloombox.schema.telemetry.context.AnalyticsCollection.Collection result = buildPartial();
         if (!result.isInitialized()) {
@@ -659,6 +671,7 @@ public final class AnalyticsCollection {
         return result;
       }
 
+      @java.lang.Override
       public io.bloombox.schema.telemetry.context.AnalyticsCollection.Collection buildPartial() {
         io.bloombox.schema.telemetry.context.AnalyticsCollection.Collection result = new io.bloombox.schema.telemetry.context.AnalyticsCollection.Collection(this);
         result.name_ = name_;
@@ -668,32 +681,39 @@ public final class AnalyticsCollection {
         return result;
       }
 
+      @java.lang.Override
       public Builder clone() {
         return (Builder) super.clone();
       }
+      @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
         return (Builder) super.setField(field, value);
       }
+      @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
         return (Builder) super.clearField(field);
       }
+      @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
         return (Builder) super.clearOneof(oneof);
       }
+      @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
         return (Builder) super.setRepeatedField(field, index, value);
       }
+      @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
         return (Builder) super.addRepeatedField(field, value);
       }
+      @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
         if (other instanceof io.bloombox.schema.telemetry.context.AnalyticsCollection.Collection) {
           return mergeFrom((io.bloombox.schema.telemetry.context.AnalyticsCollection.Collection)other);
@@ -720,10 +740,12 @@ public final class AnalyticsCollection {
         return this;
       }
 
+      @java.lang.Override
       public final boolean isInitialized() {
         return true;
       }
 
+      @java.lang.Override
       public Builder mergeFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -875,7 +897,7 @@ public final class AnalyticsCollection {
        * Specifies the type of event. Usually added by the telemetry backend.
        * </pre>
        *
-       * <code>.bloombox.schema.analytics.context.EventType type = 3 [(.gen_bq_schema.description) = "Specifies the type of event. Usually added by the telemetry backend."];</code>
+       * <code>.bloombox.analytics.context.EventType type = 3 [(.gen_bq_schema.description) = "Specifies the type of event. Usually added by the telemetry backend."];</code>
        */
       public int getTypeValue() {
         return type_;
@@ -885,7 +907,7 @@ public final class AnalyticsCollection {
        * Specifies the type of event. Usually added by the telemetry backend.
        * </pre>
        *
-       * <code>.bloombox.schema.analytics.context.EventType type = 3 [(.gen_bq_schema.description) = "Specifies the type of event. Usually added by the telemetry backend."];</code>
+       * <code>.bloombox.analytics.context.EventType type = 3 [(.gen_bq_schema.description) = "Specifies the type of event. Usually added by the telemetry backend."];</code>
        */
       public Builder setTypeValue(int value) {
         type_ = value;
@@ -897,9 +919,10 @@ public final class AnalyticsCollection {
        * Specifies the type of event. Usually added by the telemetry backend.
        * </pre>
        *
-       * <code>.bloombox.schema.analytics.context.EventType type = 3 [(.gen_bq_schema.description) = "Specifies the type of event. Usually added by the telemetry backend."];</code>
+       * <code>.bloombox.analytics.context.EventType type = 3 [(.gen_bq_schema.description) = "Specifies the type of event. Usually added by the telemetry backend."];</code>
        */
       public io.bloombox.schema.telemetry.context.AnalyticsCollection.EventType getType() {
+        @SuppressWarnings("deprecation")
         io.bloombox.schema.telemetry.context.AnalyticsCollection.EventType result = io.bloombox.schema.telemetry.context.AnalyticsCollection.EventType.valueOf(type_);
         return result == null ? io.bloombox.schema.telemetry.context.AnalyticsCollection.EventType.UNRECOGNIZED : result;
       }
@@ -908,7 +931,7 @@ public final class AnalyticsCollection {
        * Specifies the type of event. Usually added by the telemetry backend.
        * </pre>
        *
-       * <code>.bloombox.schema.analytics.context.EventType type = 3 [(.gen_bq_schema.description) = "Specifies the type of event. Usually added by the telemetry backend."];</code>
+       * <code>.bloombox.analytics.context.EventType type = 3 [(.gen_bq_schema.description) = "Specifies the type of event. Usually added by the telemetry backend."];</code>
        */
       public Builder setType(io.bloombox.schema.telemetry.context.AnalyticsCollection.EventType value) {
         if (value == null) {
@@ -924,7 +947,7 @@ public final class AnalyticsCollection {
        * Specifies the type of event. Usually added by the telemetry backend.
        * </pre>
        *
-       * <code>.bloombox.schema.analytics.context.EventType type = 3 [(.gen_bq_schema.description) = "Specifies the type of event. Usually added by the telemetry backend."];</code>
+       * <code>.bloombox.analytics.context.EventType type = 3 [(.gen_bq_schema.description) = "Specifies the type of event. Usually added by the telemetry backend."];</code>
        */
       public Builder clearType() {
         
@@ -932,21 +955,23 @@ public final class AnalyticsCollection {
         onChanged();
         return this;
       }
+      @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
         return super.setUnknownFieldsProto3(unknownFields);
       }
 
+      @java.lang.Override
       public final Builder mergeUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
         return super.mergeUnknownFields(unknownFields);
       }
 
 
-      // @@protoc_insertion_point(builder_scope:bloombox.schema.analytics.context.Collection)
+      // @@protoc_insertion_point(builder_scope:bloombox.analytics.context.Collection)
     }
 
-    // @@protoc_insertion_point(class_scope:bloombox.schema.analytics.context.Collection)
+    // @@protoc_insertion_point(class_scope:bloombox.analytics.context.Collection)
     private static final io.bloombox.schema.telemetry.context.AnalyticsCollection.Collection DEFAULT_INSTANCE;
     static {
       DEFAULT_INSTANCE = new io.bloombox.schema.telemetry.context.AnalyticsCollection.Collection();
@@ -958,6 +983,7 @@ public final class AnalyticsCollection {
 
     private static final com.google.protobuf.Parser<Collection>
         PARSER = new com.google.protobuf.AbstractParser<Collection>() {
+      @java.lang.Override
       public Collection parsePartialFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -975,6 +1001,7 @@ public final class AnalyticsCollection {
       return PARSER;
     }
 
+    @java.lang.Override
     public io.bloombox.schema.telemetry.context.AnalyticsCollection.Collection getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
@@ -982,10 +1009,10 @@ public final class AnalyticsCollection {
   }
 
   private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_bloombox_schema_analytics_context_Collection_descriptor;
+    internal_static_bloombox_analytics_context_Collection_descriptor;
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_bloombox_schema_analytics_context_Collection_fieldAccessorTable;
+      internal_static_bloombox_analytics_context_Collection_fieldAccessorTable;
 
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
@@ -995,20 +1022,20 @@ public final class AnalyticsCollection {
       descriptor;
   static {
     java.lang.String[] descriptorData = {
-      "\n\"analytics/context/Collection.proto\022!bl" +
-      "oombox.schema.analytics.context\032\016bq_fiel" +
-      "d.proto\"\253\002\n\nCollection\022A\n\004name\030\001 \001(\tB3\360?" +
-      "\001\212@-Specifies an unenumerated collection" +
-      " by name.\022T\n\010internal\030\002 \001(\010BB\212@?Specifie" +
-      "s a specific collection as internal. Bac" +
-      "kend-only flag.\022\203\001\n\004type\030\003 \001(\0162,.bloombo" +
-      "x.schema.analytics.context.EventTypeBG\212@" +
-      "DSpecifies the type of event. Usually ad" +
-      "ded by the telemetry backend.*W\n\tEventTy" +
-      "pe\022\013\n\007GENERIC\020\000\022\016\n\nCOMMERCIAL\020\001\022\014\n\010IDENT" +
-      "ITY\020\002\022\016\n\nEXPERIENCE\020\003\022\017\n\013OPERATIONAL\020\004BE" +
-      "\n$io.bloombox.schema.telemetry.contextB\023" +
-      "AnalyticsCollectionH\001P\000\242\002\003BBSb\006proto3"
+      "\n\"analytics/context/Collection.proto\022\032bl" +
+      "oombox.analytics.context\032\016bq_field.proto" +
+      "\"\243\002\n\nCollection\022A\n\004name\030\001 \001(\tB3\360?\001\212@-Spe" +
+      "cifies an unenumerated collection by nam" +
+      "e.\022T\n\010internal\030\002 \001(\010BB\212@?Specifies a spe" +
+      "cific collection as internal. Backend-on" +
+      "ly flag.\022|\n\004type\030\003 \001(\0162%.bloombox.analyt" +
+      "ics.context.EventTypeBG\212@DSpecifies the " +
+      "type of event. Usually added by the tele" +
+      "metry backend.*W\n\tEventType\022\013\n\007GENERIC\020\000" +
+      "\022\016\n\nCOMMERCIAL\020\001\022\014\n\010IDENTITY\020\002\022\016\n\nEXPERI" +
+      "ENCE\020\003\022\017\n\013OPERATIONAL\020\004BE\n$io.bloombox.s" +
+      "chema.telemetry.contextB\023AnalyticsCollec" +
+      "tionH\001P\000\242\002\003BBSb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -1023,11 +1050,11 @@ public final class AnalyticsCollection {
         new com.google.protobuf.Descriptors.FileDescriptor[] {
           gen_bq_schema.BqField.getDescriptor(),
         }, assigner);
-    internal_static_bloombox_schema_analytics_context_Collection_descriptor =
+    internal_static_bloombox_analytics_context_Collection_descriptor =
       getDescriptor().getMessageTypes().get(0);
-    internal_static_bloombox_schema_analytics_context_Collection_fieldAccessorTable = new
+    internal_static_bloombox_analytics_context_Collection_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_bloombox_schema_analytics_context_Collection_descriptor,
+        internal_static_bloombox_analytics_context_Collection_descriptor,
         new java.lang.String[] { "Name", "Internal", "Type", });
     com.google.protobuf.ExtensionRegistry registry =
         com.google.protobuf.ExtensionRegistry.newInstance();

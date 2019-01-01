@@ -1,8 +1,8 @@
 /*
- * Copyright 2018, Bloombox, LLC. All rights reserved.
+ * Copyright 2018, Momentum Ideas, Co. All rights reserved.
  *
  * Source and object computer code contained herein is the private intellectual
- * property of Bloombox, a California Limited Liability Corporation. Use of this
+ * property of Momentum Ideas Co., a Delaware Corporation. Use of this
  * code in source form requires permission in writing before use or the
  * assembly, distribution, or publishing of derivative works, for commercial
  * purposes or any other purpose, from a duly authorized officer of Momentum
@@ -26,11 +26,11 @@ package io.bloombox.schema.services.checkin.v1beta1;
  * a physical card, or an authenticated digital card.
  * </pre>
  *
- * Protobuf type {@code bloombox.schema.services.checkin.v1beta1.CheckinResponse}
+ * Protobuf type {@code bloombox.services.checkin.v1beta1.CheckinResponse}
  */
 public  final class CheckinResponse extends
     com.google.protobuf.GeneratedMessageV3 implements
-    // @@protoc_insertion_point(message_implements:bloombox.schema.services.checkin.v1beta1.CheckinResponse)
+    // @@protoc_insertion_point(message_implements:bloombox.services.checkin.v1beta1.CheckinResponse)
     CheckinResponseOrBuilder {
 private static final long serialVersionUID = 0L;
   // Use CheckinResponse.newBuilder() to construct.
@@ -67,13 +67,6 @@ private static final long serialVersionUID = 0L;
           case 0:
             done = true;
             break;
-          default: {
-            if (!parseUnknownFieldProto3(
-                input, unknownFields, extensionRegistry, tag)) {
-              done = true;
-            }
-            break;
-          }
           case 8: {
 
             success_ = input.readBool();
@@ -116,6 +109,13 @@ private static final long serialVersionUID = 0L;
 
             break;
           }
+          default: {
+            if (!parseUnknownFieldProto3(
+                input, unknownFields, extensionRegistry, tag)) {
+              done = true;
+            }
+            break;
+          }
         }
       }
     } catch (com.google.protobuf.InvalidProtocolBufferException e) {
@@ -130,12 +130,13 @@ private static final long serialVersionUID = 0L;
   }
   public static final com.google.protobuf.Descriptors.Descriptor
       getDescriptor() {
-    return io.bloombox.schema.services.checkin.v1beta1.CheckinServiceBeta1.internal_static_bloombox_schema_services_checkin_v1beta1_CheckinResponse_descriptor;
+    return io.bloombox.schema.services.checkin.v1beta1.CheckinServiceBeta1.internal_static_bloombox_services_checkin_v1beta1_CheckinResponse_descriptor;
   }
 
+  @java.lang.Override
   protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internalGetFieldAccessorTable() {
-    return io.bloombox.schema.services.checkin.v1beta1.CheckinServiceBeta1.internal_static_bloombox_schema_services_checkin_v1beta1_CheckinResponse_fieldAccessorTable
+    return io.bloombox.schema.services.checkin.v1beta1.CheckinServiceBeta1.internal_static_bloombox_services_checkin_v1beta1_CheckinResponse_fieldAccessorTable
         .ensureFieldAccessorsInitialized(
             io.bloombox.schema.services.checkin.v1beta1.CheckinResponse.class, io.bloombox.schema.services.checkin.v1beta1.CheckinResponse.Builder.class);
   }
@@ -173,7 +174,7 @@ private static final long serialVersionUID = 0L;
    * Specifies a known checkin error that occurred, if applicable.
    * </pre>
    *
-   * <code>.bloombox.schema.services.checkin.v1beta1.CheckinError error = 3;</code>
+   * <code>.bloombox.services.checkin.v1beta1.CheckinError error = 3;</code>
    */
   public int getErrorValue() {
     return error_;
@@ -183,9 +184,10 @@ private static final long serialVersionUID = 0L;
    * Specifies a known checkin error that occurred, if applicable.
    * </pre>
    *
-   * <code>.bloombox.schema.services.checkin.v1beta1.CheckinError error = 3;</code>
+   * <code>.bloombox.services.checkin.v1beta1.CheckinError error = 3;</code>
    */
   public io.bloombox.schema.services.checkin.v1beta1.CheckinError getError() {
+    @SuppressWarnings("deprecation")
     io.bloombox.schema.services.checkin.v1beta1.CheckinError result = io.bloombox.schema.services.checkin.v1beta1.CheckinError.valueOf(error_);
     return result == null ? io.bloombox.schema.services.checkin.v1beta1.CheckinError.UNRECOGNIZED : result;
   }
@@ -197,7 +199,7 @@ private static final long serialVersionUID = 0L;
    * Information about the resulting user account.
    * </pre>
    *
-   * <code>.bloombox.schema.services.checkin.v1beta1.CheckinUser user = 4;</code>
+   * <code>.bloombox.services.checkin.v1beta1.CheckinUser user = 4;</code>
    */
   public boolean hasUser() {
     return user_ != null;
@@ -207,7 +209,7 @@ private static final long serialVersionUID = 0L;
    * Information about the resulting user account.
    * </pre>
    *
-   * <code>.bloombox.schema.services.checkin.v1beta1.CheckinUser user = 4;</code>
+   * <code>.bloombox.services.checkin.v1beta1.CheckinUser user = 4;</code>
    */
   public io.bloombox.schema.services.checkin.v1beta1.CheckinUser getUser() {
     return user_ == null ? io.bloombox.schema.services.checkin.v1beta1.CheckinUser.getDefaultInstance() : user_;
@@ -217,7 +219,7 @@ private static final long serialVersionUID = 0L;
    * Information about the resulting user account.
    * </pre>
    *
-   * <code>.bloombox.schema.services.checkin.v1beta1.CheckinUser user = 4;</code>
+   * <code>.bloombox.services.checkin.v1beta1.CheckinUser user = 4;</code>
    */
   public io.bloombox.schema.services.checkin.v1beta1.CheckinUserOrBuilder getUserOrBuilder() {
     return getUser();
@@ -230,7 +232,7 @@ private static final long serialVersionUID = 0L;
    * Information related to the user's next enrollment action, if required.
    * </pre>
    *
-   * <code>.bloombox.schema.services.checkin.v1beta1.CheckinEnrollment enrollment = 5;</code>
+   * <code>.bloombox.services.checkin.v1beta1.CheckinEnrollment enrollment = 5;</code>
    */
   public boolean hasEnrollment() {
     return enrollment_ != null;
@@ -240,7 +242,7 @@ private static final long serialVersionUID = 0L;
    * Information related to the user's next enrollment action, if required.
    * </pre>
    *
-   * <code>.bloombox.schema.services.checkin.v1beta1.CheckinEnrollment enrollment = 5;</code>
+   * <code>.bloombox.services.checkin.v1beta1.CheckinEnrollment enrollment = 5;</code>
    */
   public io.bloombox.schema.services.checkin.v1beta1.CheckinEnrollment getEnrollment() {
     return enrollment_ == null ? io.bloombox.schema.services.checkin.v1beta1.CheckinEnrollment.getDefaultInstance() : enrollment_;
@@ -250,13 +252,14 @@ private static final long serialVersionUID = 0L;
    * Information related to the user's next enrollment action, if required.
    * </pre>
    *
-   * <code>.bloombox.schema.services.checkin.v1beta1.CheckinEnrollment enrollment = 5;</code>
+   * <code>.bloombox.services.checkin.v1beta1.CheckinEnrollment enrollment = 5;</code>
    */
   public io.bloombox.schema.services.checkin.v1beta1.CheckinEnrollmentOrBuilder getEnrollmentOrBuilder() {
     return getEnrollment();
   }
 
   private byte memoizedIsInitialized = -1;
+  @java.lang.Override
   public final boolean isInitialized() {
     byte isInitialized = memoizedIsInitialized;
     if (isInitialized == 1) return true;
@@ -266,6 +269,7 @@ private static final long serialVersionUID = 0L;
     return true;
   }
 
+  @java.lang.Override
   public void writeTo(com.google.protobuf.CodedOutputStream output)
                       throws java.io.IOException {
     if (success_ != false) {
@@ -286,6 +290,7 @@ private static final long serialVersionUID = 0L;
     unknownFields.writeTo(output);
   }
 
+  @java.lang.Override
   public int getSerializedSize() {
     int size = memoizedSize;
     if (size != -1) return size;
@@ -444,6 +449,7 @@ private static final long serialVersionUID = 0L;
         .parseWithIOException(PARSER, input, extensionRegistry);
   }
 
+  @java.lang.Override
   public Builder newBuilderForType() { return newBuilder(); }
   public static Builder newBuilder() {
     return DEFAULT_INSTANCE.toBuilder();
@@ -451,6 +457,7 @@ private static final long serialVersionUID = 0L;
   public static Builder newBuilder(io.bloombox.schema.services.checkin.v1beta1.CheckinResponse prototype) {
     return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
   }
+  @java.lang.Override
   public Builder toBuilder() {
     return this == DEFAULT_INSTANCE
         ? new Builder() : new Builder().mergeFrom(this);
@@ -468,20 +475,21 @@ private static final long serialVersionUID = 0L;
    * a physical card, or an authenticated digital card.
    * </pre>
    *
-   * Protobuf type {@code bloombox.schema.services.checkin.v1beta1.CheckinResponse}
+   * Protobuf type {@code bloombox.services.checkin.v1beta1.CheckinResponse}
    */
   public static final class Builder extends
       com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-      // @@protoc_insertion_point(builder_implements:bloombox.schema.services.checkin.v1beta1.CheckinResponse)
+      // @@protoc_insertion_point(builder_implements:bloombox.services.checkin.v1beta1.CheckinResponse)
       io.bloombox.schema.services.checkin.v1beta1.CheckinResponseOrBuilder {
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return io.bloombox.schema.services.checkin.v1beta1.CheckinServiceBeta1.internal_static_bloombox_schema_services_checkin_v1beta1_CheckinResponse_descriptor;
+      return io.bloombox.schema.services.checkin.v1beta1.CheckinServiceBeta1.internal_static_bloombox_services_checkin_v1beta1_CheckinResponse_descriptor;
     }
 
+    @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return io.bloombox.schema.services.checkin.v1beta1.CheckinServiceBeta1.internal_static_bloombox_schema_services_checkin_v1beta1_CheckinResponse_fieldAccessorTable
+      return io.bloombox.schema.services.checkin.v1beta1.CheckinServiceBeta1.internal_static_bloombox_services_checkin_v1beta1_CheckinResponse_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
               io.bloombox.schema.services.checkin.v1beta1.CheckinResponse.class, io.bloombox.schema.services.checkin.v1beta1.CheckinResponse.Builder.class);
     }
@@ -501,6 +509,7 @@ private static final long serialVersionUID = 0L;
               .alwaysUseFieldBuilders) {
       }
     }
+    @java.lang.Override
     public Builder clear() {
       super.clear();
       success_ = false;
@@ -524,15 +533,18 @@ private static final long serialVersionUID = 0L;
       return this;
     }
 
+    @java.lang.Override
     public com.google.protobuf.Descriptors.Descriptor
         getDescriptorForType() {
-      return io.bloombox.schema.services.checkin.v1beta1.CheckinServiceBeta1.internal_static_bloombox_schema_services_checkin_v1beta1_CheckinResponse_descriptor;
+      return io.bloombox.schema.services.checkin.v1beta1.CheckinServiceBeta1.internal_static_bloombox_services_checkin_v1beta1_CheckinResponse_descriptor;
     }
 
+    @java.lang.Override
     public io.bloombox.schema.services.checkin.v1beta1.CheckinResponse getDefaultInstanceForType() {
       return io.bloombox.schema.services.checkin.v1beta1.CheckinResponse.getDefaultInstance();
     }
 
+    @java.lang.Override
     public io.bloombox.schema.services.checkin.v1beta1.CheckinResponse build() {
       io.bloombox.schema.services.checkin.v1beta1.CheckinResponse result = buildPartial();
       if (!result.isInitialized()) {
@@ -541,6 +553,7 @@ private static final long serialVersionUID = 0L;
       return result;
     }
 
+    @java.lang.Override
     public io.bloombox.schema.services.checkin.v1beta1.CheckinResponse buildPartial() {
       io.bloombox.schema.services.checkin.v1beta1.CheckinResponse result = new io.bloombox.schema.services.checkin.v1beta1.CheckinResponse(this);
       result.success_ = success_;
@@ -560,32 +573,39 @@ private static final long serialVersionUID = 0L;
       return result;
     }
 
+    @java.lang.Override
     public Builder clone() {
       return (Builder) super.clone();
     }
+    @java.lang.Override
     public Builder setField(
         com.google.protobuf.Descriptors.FieldDescriptor field,
         java.lang.Object value) {
       return (Builder) super.setField(field, value);
     }
+    @java.lang.Override
     public Builder clearField(
         com.google.protobuf.Descriptors.FieldDescriptor field) {
       return (Builder) super.clearField(field);
     }
+    @java.lang.Override
     public Builder clearOneof(
         com.google.protobuf.Descriptors.OneofDescriptor oneof) {
       return (Builder) super.clearOneof(oneof);
     }
+    @java.lang.Override
     public Builder setRepeatedField(
         com.google.protobuf.Descriptors.FieldDescriptor field,
         int index, java.lang.Object value) {
       return (Builder) super.setRepeatedField(field, index, value);
     }
+    @java.lang.Override
     public Builder addRepeatedField(
         com.google.protobuf.Descriptors.FieldDescriptor field,
         java.lang.Object value) {
       return (Builder) super.addRepeatedField(field, value);
     }
+    @java.lang.Override
     public Builder mergeFrom(com.google.protobuf.Message other) {
       if (other instanceof io.bloombox.schema.services.checkin.v1beta1.CheckinResponse) {
         return mergeFrom((io.bloombox.schema.services.checkin.v1beta1.CheckinResponse)other);
@@ -617,10 +637,12 @@ private static final long serialVersionUID = 0L;
       return this;
     }
 
+    @java.lang.Override
     public final boolean isInitialized() {
       return true;
     }
 
+    @java.lang.Override
     public Builder mergeFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -721,7 +743,7 @@ private static final long serialVersionUID = 0L;
      * Specifies a known checkin error that occurred, if applicable.
      * </pre>
      *
-     * <code>.bloombox.schema.services.checkin.v1beta1.CheckinError error = 3;</code>
+     * <code>.bloombox.services.checkin.v1beta1.CheckinError error = 3;</code>
      */
     public int getErrorValue() {
       return error_;
@@ -731,7 +753,7 @@ private static final long serialVersionUID = 0L;
      * Specifies a known checkin error that occurred, if applicable.
      * </pre>
      *
-     * <code>.bloombox.schema.services.checkin.v1beta1.CheckinError error = 3;</code>
+     * <code>.bloombox.services.checkin.v1beta1.CheckinError error = 3;</code>
      */
     public Builder setErrorValue(int value) {
       error_ = value;
@@ -743,9 +765,10 @@ private static final long serialVersionUID = 0L;
      * Specifies a known checkin error that occurred, if applicable.
      * </pre>
      *
-     * <code>.bloombox.schema.services.checkin.v1beta1.CheckinError error = 3;</code>
+     * <code>.bloombox.services.checkin.v1beta1.CheckinError error = 3;</code>
      */
     public io.bloombox.schema.services.checkin.v1beta1.CheckinError getError() {
+      @SuppressWarnings("deprecation")
       io.bloombox.schema.services.checkin.v1beta1.CheckinError result = io.bloombox.schema.services.checkin.v1beta1.CheckinError.valueOf(error_);
       return result == null ? io.bloombox.schema.services.checkin.v1beta1.CheckinError.UNRECOGNIZED : result;
     }
@@ -754,7 +777,7 @@ private static final long serialVersionUID = 0L;
      * Specifies a known checkin error that occurred, if applicable.
      * </pre>
      *
-     * <code>.bloombox.schema.services.checkin.v1beta1.CheckinError error = 3;</code>
+     * <code>.bloombox.services.checkin.v1beta1.CheckinError error = 3;</code>
      */
     public Builder setError(io.bloombox.schema.services.checkin.v1beta1.CheckinError value) {
       if (value == null) {
@@ -770,7 +793,7 @@ private static final long serialVersionUID = 0L;
      * Specifies a known checkin error that occurred, if applicable.
      * </pre>
      *
-     * <code>.bloombox.schema.services.checkin.v1beta1.CheckinError error = 3;</code>
+     * <code>.bloombox.services.checkin.v1beta1.CheckinError error = 3;</code>
      */
     public Builder clearError() {
       
@@ -787,7 +810,7 @@ private static final long serialVersionUID = 0L;
      * Information about the resulting user account.
      * </pre>
      *
-     * <code>.bloombox.schema.services.checkin.v1beta1.CheckinUser user = 4;</code>
+     * <code>.bloombox.services.checkin.v1beta1.CheckinUser user = 4;</code>
      */
     public boolean hasUser() {
       return userBuilder_ != null || user_ != null;
@@ -797,7 +820,7 @@ private static final long serialVersionUID = 0L;
      * Information about the resulting user account.
      * </pre>
      *
-     * <code>.bloombox.schema.services.checkin.v1beta1.CheckinUser user = 4;</code>
+     * <code>.bloombox.services.checkin.v1beta1.CheckinUser user = 4;</code>
      */
     public io.bloombox.schema.services.checkin.v1beta1.CheckinUser getUser() {
       if (userBuilder_ == null) {
@@ -811,7 +834,7 @@ private static final long serialVersionUID = 0L;
      * Information about the resulting user account.
      * </pre>
      *
-     * <code>.bloombox.schema.services.checkin.v1beta1.CheckinUser user = 4;</code>
+     * <code>.bloombox.services.checkin.v1beta1.CheckinUser user = 4;</code>
      */
     public Builder setUser(io.bloombox.schema.services.checkin.v1beta1.CheckinUser value) {
       if (userBuilder_ == null) {
@@ -831,7 +854,7 @@ private static final long serialVersionUID = 0L;
      * Information about the resulting user account.
      * </pre>
      *
-     * <code>.bloombox.schema.services.checkin.v1beta1.CheckinUser user = 4;</code>
+     * <code>.bloombox.services.checkin.v1beta1.CheckinUser user = 4;</code>
      */
     public Builder setUser(
         io.bloombox.schema.services.checkin.v1beta1.CheckinUser.Builder builderForValue) {
@@ -849,7 +872,7 @@ private static final long serialVersionUID = 0L;
      * Information about the resulting user account.
      * </pre>
      *
-     * <code>.bloombox.schema.services.checkin.v1beta1.CheckinUser user = 4;</code>
+     * <code>.bloombox.services.checkin.v1beta1.CheckinUser user = 4;</code>
      */
     public Builder mergeUser(io.bloombox.schema.services.checkin.v1beta1.CheckinUser value) {
       if (userBuilder_ == null) {
@@ -871,7 +894,7 @@ private static final long serialVersionUID = 0L;
      * Information about the resulting user account.
      * </pre>
      *
-     * <code>.bloombox.schema.services.checkin.v1beta1.CheckinUser user = 4;</code>
+     * <code>.bloombox.services.checkin.v1beta1.CheckinUser user = 4;</code>
      */
     public Builder clearUser() {
       if (userBuilder_ == null) {
@@ -889,7 +912,7 @@ private static final long serialVersionUID = 0L;
      * Information about the resulting user account.
      * </pre>
      *
-     * <code>.bloombox.schema.services.checkin.v1beta1.CheckinUser user = 4;</code>
+     * <code>.bloombox.services.checkin.v1beta1.CheckinUser user = 4;</code>
      */
     public io.bloombox.schema.services.checkin.v1beta1.CheckinUser.Builder getUserBuilder() {
       
@@ -901,7 +924,7 @@ private static final long serialVersionUID = 0L;
      * Information about the resulting user account.
      * </pre>
      *
-     * <code>.bloombox.schema.services.checkin.v1beta1.CheckinUser user = 4;</code>
+     * <code>.bloombox.services.checkin.v1beta1.CheckinUser user = 4;</code>
      */
     public io.bloombox.schema.services.checkin.v1beta1.CheckinUserOrBuilder getUserOrBuilder() {
       if (userBuilder_ != null) {
@@ -916,7 +939,7 @@ private static final long serialVersionUID = 0L;
      * Information about the resulting user account.
      * </pre>
      *
-     * <code>.bloombox.schema.services.checkin.v1beta1.CheckinUser user = 4;</code>
+     * <code>.bloombox.services.checkin.v1beta1.CheckinUser user = 4;</code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<
         io.bloombox.schema.services.checkin.v1beta1.CheckinUser, io.bloombox.schema.services.checkin.v1beta1.CheckinUser.Builder, io.bloombox.schema.services.checkin.v1beta1.CheckinUserOrBuilder> 
@@ -940,7 +963,7 @@ private static final long serialVersionUID = 0L;
      * Information related to the user's next enrollment action, if required.
      * </pre>
      *
-     * <code>.bloombox.schema.services.checkin.v1beta1.CheckinEnrollment enrollment = 5;</code>
+     * <code>.bloombox.services.checkin.v1beta1.CheckinEnrollment enrollment = 5;</code>
      */
     public boolean hasEnrollment() {
       return enrollmentBuilder_ != null || enrollment_ != null;
@@ -950,7 +973,7 @@ private static final long serialVersionUID = 0L;
      * Information related to the user's next enrollment action, if required.
      * </pre>
      *
-     * <code>.bloombox.schema.services.checkin.v1beta1.CheckinEnrollment enrollment = 5;</code>
+     * <code>.bloombox.services.checkin.v1beta1.CheckinEnrollment enrollment = 5;</code>
      */
     public io.bloombox.schema.services.checkin.v1beta1.CheckinEnrollment getEnrollment() {
       if (enrollmentBuilder_ == null) {
@@ -964,7 +987,7 @@ private static final long serialVersionUID = 0L;
      * Information related to the user's next enrollment action, if required.
      * </pre>
      *
-     * <code>.bloombox.schema.services.checkin.v1beta1.CheckinEnrollment enrollment = 5;</code>
+     * <code>.bloombox.services.checkin.v1beta1.CheckinEnrollment enrollment = 5;</code>
      */
     public Builder setEnrollment(io.bloombox.schema.services.checkin.v1beta1.CheckinEnrollment value) {
       if (enrollmentBuilder_ == null) {
@@ -984,7 +1007,7 @@ private static final long serialVersionUID = 0L;
      * Information related to the user's next enrollment action, if required.
      * </pre>
      *
-     * <code>.bloombox.schema.services.checkin.v1beta1.CheckinEnrollment enrollment = 5;</code>
+     * <code>.bloombox.services.checkin.v1beta1.CheckinEnrollment enrollment = 5;</code>
      */
     public Builder setEnrollment(
         io.bloombox.schema.services.checkin.v1beta1.CheckinEnrollment.Builder builderForValue) {
@@ -1002,7 +1025,7 @@ private static final long serialVersionUID = 0L;
      * Information related to the user's next enrollment action, if required.
      * </pre>
      *
-     * <code>.bloombox.schema.services.checkin.v1beta1.CheckinEnrollment enrollment = 5;</code>
+     * <code>.bloombox.services.checkin.v1beta1.CheckinEnrollment enrollment = 5;</code>
      */
     public Builder mergeEnrollment(io.bloombox.schema.services.checkin.v1beta1.CheckinEnrollment value) {
       if (enrollmentBuilder_ == null) {
@@ -1024,7 +1047,7 @@ private static final long serialVersionUID = 0L;
      * Information related to the user's next enrollment action, if required.
      * </pre>
      *
-     * <code>.bloombox.schema.services.checkin.v1beta1.CheckinEnrollment enrollment = 5;</code>
+     * <code>.bloombox.services.checkin.v1beta1.CheckinEnrollment enrollment = 5;</code>
      */
     public Builder clearEnrollment() {
       if (enrollmentBuilder_ == null) {
@@ -1042,7 +1065,7 @@ private static final long serialVersionUID = 0L;
      * Information related to the user's next enrollment action, if required.
      * </pre>
      *
-     * <code>.bloombox.schema.services.checkin.v1beta1.CheckinEnrollment enrollment = 5;</code>
+     * <code>.bloombox.services.checkin.v1beta1.CheckinEnrollment enrollment = 5;</code>
      */
     public io.bloombox.schema.services.checkin.v1beta1.CheckinEnrollment.Builder getEnrollmentBuilder() {
       
@@ -1054,7 +1077,7 @@ private static final long serialVersionUID = 0L;
      * Information related to the user's next enrollment action, if required.
      * </pre>
      *
-     * <code>.bloombox.schema.services.checkin.v1beta1.CheckinEnrollment enrollment = 5;</code>
+     * <code>.bloombox.services.checkin.v1beta1.CheckinEnrollment enrollment = 5;</code>
      */
     public io.bloombox.schema.services.checkin.v1beta1.CheckinEnrollmentOrBuilder getEnrollmentOrBuilder() {
       if (enrollmentBuilder_ != null) {
@@ -1069,7 +1092,7 @@ private static final long serialVersionUID = 0L;
      * Information related to the user's next enrollment action, if required.
      * </pre>
      *
-     * <code>.bloombox.schema.services.checkin.v1beta1.CheckinEnrollment enrollment = 5;</code>
+     * <code>.bloombox.services.checkin.v1beta1.CheckinEnrollment enrollment = 5;</code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<
         io.bloombox.schema.services.checkin.v1beta1.CheckinEnrollment, io.bloombox.schema.services.checkin.v1beta1.CheckinEnrollment.Builder, io.bloombox.schema.services.checkin.v1beta1.CheckinEnrollmentOrBuilder> 
@@ -1084,21 +1107,23 @@ private static final long serialVersionUID = 0L;
       }
       return enrollmentBuilder_;
     }
+    @java.lang.Override
     public final Builder setUnknownFields(
         final com.google.protobuf.UnknownFieldSet unknownFields) {
       return super.setUnknownFieldsProto3(unknownFields);
     }
 
+    @java.lang.Override
     public final Builder mergeUnknownFields(
         final com.google.protobuf.UnknownFieldSet unknownFields) {
       return super.mergeUnknownFields(unknownFields);
     }
 
 
-    // @@protoc_insertion_point(builder_scope:bloombox.schema.services.checkin.v1beta1.CheckinResponse)
+    // @@protoc_insertion_point(builder_scope:bloombox.services.checkin.v1beta1.CheckinResponse)
   }
 
-  // @@protoc_insertion_point(class_scope:bloombox.schema.services.checkin.v1beta1.CheckinResponse)
+  // @@protoc_insertion_point(class_scope:bloombox.services.checkin.v1beta1.CheckinResponse)
   private static final io.bloombox.schema.services.checkin.v1beta1.CheckinResponse DEFAULT_INSTANCE;
   static {
     DEFAULT_INSTANCE = new io.bloombox.schema.services.checkin.v1beta1.CheckinResponse();
@@ -1110,6 +1135,7 @@ private static final long serialVersionUID = 0L;
 
   private static final com.google.protobuf.Parser<CheckinResponse>
       PARSER = new com.google.protobuf.AbstractParser<CheckinResponse>() {
+    @java.lang.Override
     public CheckinResponse parsePartialFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -1127,6 +1153,7 @@ private static final long serialVersionUID = 0L;
     return PARSER;
   }
 
+  @java.lang.Override
   public io.bloombox.schema.services.checkin.v1beta1.CheckinResponse getDefaultInstanceForType() {
     return DEFAULT_INSTANCE;
   }

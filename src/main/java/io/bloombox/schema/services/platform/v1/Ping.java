@@ -1,8 +1,8 @@
 /*
- * Copyright 2018, Bloombox, LLC. All rights reserved.
+ * Copyright 2018, Momentum Ideas, Co. All rights reserved.
  *
  * Source and object computer code contained herein is the private intellectual
- * property of Bloombox, a California Limited Liability Corporation. Use of this
+ * property of Momentum Ideas Co., a Delaware Corporation. Use of this
  * code in source form requires permission in writing before use or the
  * assembly, distribution, or publishing of derivative works, for commercial
  * purposes or any other purpose, from a duly authorized officer of Momentum
@@ -25,11 +25,11 @@ package io.bloombox.schema.services.platform.v1;
  * Specifies an RPC operation to retrieve status information for the Checkin API.
  * </pre>
  *
- * Protobuf type {@code bloombox.schema.services.platform.v1.Ping}
+ * Protobuf type {@code bloombox.services.platform.v1.Ping}
  */
 public  final class Ping extends
     com.google.protobuf.GeneratedMessageV3 implements
-    // @@protoc_insertion_point(message_implements:bloombox.schema.services.platform.v1.Ping)
+    // @@protoc_insertion_point(message_implements:bloombox.services.platform.v1.Ping)
     PingOrBuilder {
 private static final long serialVersionUID = 0L;
   // Use Ping.newBuilder() to construct.
@@ -83,18 +83,19 @@ private static final long serialVersionUID = 0L;
   }
   public static final com.google.protobuf.Descriptors.Descriptor
       getDescriptor() {
-    return io.bloombox.schema.services.platform.v1.PlatformServiceV1.internal_static_bloombox_schema_services_platform_v1_Ping_descriptor;
+    return io.bloombox.schema.services.platform.v1.PlatformServiceV1.internal_static_bloombox_services_platform_v1_Ping_descriptor;
   }
 
+  @java.lang.Override
   protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internalGetFieldAccessorTable() {
-    return io.bloombox.schema.services.platform.v1.PlatformServiceV1.internal_static_bloombox_schema_services_platform_v1_Ping_fieldAccessorTable
+    return io.bloombox.schema.services.platform.v1.PlatformServiceV1.internal_static_bloombox_services_platform_v1_Ping_fieldAccessorTable
         .ensureFieldAccessorsInitialized(
             io.bloombox.schema.services.platform.v1.Ping.class, io.bloombox.schema.services.platform.v1.Ping.Builder.class);
   }
 
   public interface RequestOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:bloombox.schema.services.platform.v1.Ping.Request)
+      // @@protoc_insertion_point(interface_extends:bloombox.services.platform.v1.Ping.Request)
       com.google.protobuf.MessageOrBuilder {
   }
   /**
@@ -102,11 +103,11 @@ private static final long serialVersionUID = 0L;
    * Specifies a platform ping request.
    * </pre>
    *
-   * Protobuf type {@code bloombox.schema.services.platform.v1.Ping.Request}
+   * Protobuf type {@code bloombox.services.platform.v1.Ping.Request}
    */
   public  static final class Request extends
       com.google.protobuf.GeneratedMessageV3 implements
-      // @@protoc_insertion_point(message_implements:bloombox.schema.services.platform.v1.Ping.Request)
+      // @@protoc_insertion_point(message_implements:bloombox.services.platform.v1.Ping.Request)
       RequestOrBuilder {
   private static final long serialVersionUID = 0L;
     // Use Request.newBuilder() to construct.
@@ -160,17 +161,19 @@ private static final long serialVersionUID = 0L;
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return io.bloombox.schema.services.platform.v1.PlatformServiceV1.internal_static_bloombox_schema_services_platform_v1_Ping_Request_descriptor;
+      return io.bloombox.schema.services.platform.v1.PlatformServiceV1.internal_static_bloombox_services_platform_v1_Ping_Request_descriptor;
     }
 
+    @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return io.bloombox.schema.services.platform.v1.PlatformServiceV1.internal_static_bloombox_schema_services_platform_v1_Ping_Request_fieldAccessorTable
+      return io.bloombox.schema.services.platform.v1.PlatformServiceV1.internal_static_bloombox_services_platform_v1_Ping_Request_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
               io.bloombox.schema.services.platform.v1.Ping.Request.class, io.bloombox.schema.services.platform.v1.Ping.Request.Builder.class);
     }
 
     private byte memoizedIsInitialized = -1;
+    @java.lang.Override
     public final boolean isInitialized() {
       byte isInitialized = memoizedIsInitialized;
       if (isInitialized == 1) return true;
@@ -180,11 +183,13 @@ private static final long serialVersionUID = 0L;
       return true;
     }
 
+    @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
       unknownFields.writeTo(output);
     }
 
+    @java.lang.Override
     public int getSerializedSize() {
       int size = memoizedSize;
       if (size != -1) return size;
@@ -292,6 +297,7 @@ private static final long serialVersionUID = 0L;
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
 
+    @java.lang.Override
     public Builder newBuilderForType() { return newBuilder(); }
     public static Builder newBuilder() {
       return DEFAULT_INSTANCE.toBuilder();
@@ -299,6 +305,7 @@ private static final long serialVersionUID = 0L;
     public static Builder newBuilder(io.bloombox.schema.services.platform.v1.Ping.Request prototype) {
       return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
     }
+    @java.lang.Override
     public Builder toBuilder() {
       return this == DEFAULT_INSTANCE
           ? new Builder() : new Builder().mergeFrom(this);
@@ -315,20 +322,21 @@ private static final long serialVersionUID = 0L;
      * Specifies a platform ping request.
      * </pre>
      *
-     * Protobuf type {@code bloombox.schema.services.platform.v1.Ping.Request}
+     * Protobuf type {@code bloombox.services.platform.v1.Ping.Request}
      */
     public static final class Builder extends
         com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:bloombox.schema.services.platform.v1.Ping.Request)
+        // @@protoc_insertion_point(builder_implements:bloombox.services.platform.v1.Ping.Request)
         io.bloombox.schema.services.platform.v1.Ping.RequestOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return io.bloombox.schema.services.platform.v1.PlatformServiceV1.internal_static_bloombox_schema_services_platform_v1_Ping_Request_descriptor;
+        return io.bloombox.schema.services.platform.v1.PlatformServiceV1.internal_static_bloombox_services_platform_v1_Ping_Request_descriptor;
       }
 
+      @java.lang.Override
       protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return io.bloombox.schema.services.platform.v1.PlatformServiceV1.internal_static_bloombox_schema_services_platform_v1_Ping_Request_fieldAccessorTable
+        return io.bloombox.schema.services.platform.v1.PlatformServiceV1.internal_static_bloombox_services_platform_v1_Ping_Request_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
                 io.bloombox.schema.services.platform.v1.Ping.Request.class, io.bloombox.schema.services.platform.v1.Ping.Request.Builder.class);
       }
@@ -348,20 +356,24 @@ private static final long serialVersionUID = 0L;
                 .alwaysUseFieldBuilders) {
         }
       }
+      @java.lang.Override
       public Builder clear() {
         super.clear();
         return this;
       }
 
+      @java.lang.Override
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return io.bloombox.schema.services.platform.v1.PlatformServiceV1.internal_static_bloombox_schema_services_platform_v1_Ping_Request_descriptor;
+        return io.bloombox.schema.services.platform.v1.PlatformServiceV1.internal_static_bloombox_services_platform_v1_Ping_Request_descriptor;
       }
 
+      @java.lang.Override
       public io.bloombox.schema.services.platform.v1.Ping.Request getDefaultInstanceForType() {
         return io.bloombox.schema.services.platform.v1.Ping.Request.getDefaultInstance();
       }
 
+      @java.lang.Override
       public io.bloombox.schema.services.platform.v1.Ping.Request build() {
         io.bloombox.schema.services.platform.v1.Ping.Request result = buildPartial();
         if (!result.isInitialized()) {
@@ -370,38 +382,46 @@ private static final long serialVersionUID = 0L;
         return result;
       }
 
+      @java.lang.Override
       public io.bloombox.schema.services.platform.v1.Ping.Request buildPartial() {
         io.bloombox.schema.services.platform.v1.Ping.Request result = new io.bloombox.schema.services.platform.v1.Ping.Request(this);
         onBuilt();
         return result;
       }
 
+      @java.lang.Override
       public Builder clone() {
         return (Builder) super.clone();
       }
+      @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
         return (Builder) super.setField(field, value);
       }
+      @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
         return (Builder) super.clearField(field);
       }
+      @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
         return (Builder) super.clearOneof(oneof);
       }
+      @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
         return (Builder) super.setRepeatedField(field, index, value);
       }
+      @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
         return (Builder) super.addRepeatedField(field, value);
       }
+      @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
         if (other instanceof io.bloombox.schema.services.platform.v1.Ping.Request) {
           return mergeFrom((io.bloombox.schema.services.platform.v1.Ping.Request)other);
@@ -418,10 +438,12 @@ private static final long serialVersionUID = 0L;
         return this;
       }
 
+      @java.lang.Override
       public final boolean isInitialized() {
         return true;
       }
 
+      @java.lang.Override
       public Builder mergeFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -439,21 +461,23 @@ private static final long serialVersionUID = 0L;
         }
         return this;
       }
+      @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
         return super.setUnknownFieldsProto3(unknownFields);
       }
 
+      @java.lang.Override
       public final Builder mergeUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
         return super.mergeUnknownFields(unknownFields);
       }
 
 
-      // @@protoc_insertion_point(builder_scope:bloombox.schema.services.platform.v1.Ping.Request)
+      // @@protoc_insertion_point(builder_scope:bloombox.services.platform.v1.Ping.Request)
     }
 
-    // @@protoc_insertion_point(class_scope:bloombox.schema.services.platform.v1.Ping.Request)
+    // @@protoc_insertion_point(class_scope:bloombox.services.platform.v1.Ping.Request)
     private static final io.bloombox.schema.services.platform.v1.Ping.Request DEFAULT_INSTANCE;
     static {
       DEFAULT_INSTANCE = new io.bloombox.schema.services.platform.v1.Ping.Request();
@@ -465,6 +489,7 @@ private static final long serialVersionUID = 0L;
 
     private static final com.google.protobuf.Parser<Request>
         PARSER = new com.google.protobuf.AbstractParser<Request>() {
+      @java.lang.Override
       public Request parsePartialFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -482,6 +507,7 @@ private static final long serialVersionUID = 0L;
       return PARSER;
     }
 
+    @java.lang.Override
     public io.bloombox.schema.services.platform.v1.Ping.Request getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
@@ -489,7 +515,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public interface ResponseOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:bloombox.schema.services.platform.v1.Ping.Response)
+      // @@protoc_insertion_point(interface_extends:bloombox.services.platform.v1.Ping.Response)
       com.google.protobuf.MessageOrBuilder {
 
     /**
@@ -497,7 +523,7 @@ private static final long serialVersionUID = 0L;
      * Current service status.
      * </pre>
      *
-     * <code>.bloombox.schema.services.platform.v1.PlatformServiceStatus status = 1;</code>
+     * <code>.bloombox.services.platform.v1.PlatformServiceStatus status = 1;</code>
      */
     int getStatusValue();
     /**
@@ -505,7 +531,7 @@ private static final long serialVersionUID = 0L;
      * Current service status.
      * </pre>
      *
-     * <code>.bloombox.schema.services.platform.v1.PlatformServiceStatus status = 1;</code>
+     * <code>.bloombox.services.platform.v1.PlatformServiceStatus status = 1;</code>
      */
     io.bloombox.schema.services.platform.v1.PlatformServiceStatus getStatus();
   }
@@ -514,11 +540,11 @@ private static final long serialVersionUID = 0L;
    * Specifies a platform ping response.
    * </pre>
    *
-   * Protobuf type {@code bloombox.schema.services.platform.v1.Ping.Response}
+   * Protobuf type {@code bloombox.services.platform.v1.Ping.Response}
    */
   public  static final class Response extends
       com.google.protobuf.GeneratedMessageV3 implements
-      // @@protoc_insertion_point(message_implements:bloombox.schema.services.platform.v1.Ping.Response)
+      // @@protoc_insertion_point(message_implements:bloombox.services.platform.v1.Ping.Response)
       ResponseOrBuilder {
   private static final long serialVersionUID = 0L;
     // Use Response.newBuilder() to construct.
@@ -553,17 +579,17 @@ private static final long serialVersionUID = 0L;
             case 0:
               done = true;
               break;
+            case 8: {
+              int rawValue = input.readEnum();
+
+              status_ = rawValue;
+              break;
+            }
             default: {
               if (!parseUnknownFieldProto3(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
-              break;
-            }
-            case 8: {
-              int rawValue = input.readEnum();
-
-              status_ = rawValue;
               break;
             }
           }
@@ -580,12 +606,13 @@ private static final long serialVersionUID = 0L;
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return io.bloombox.schema.services.platform.v1.PlatformServiceV1.internal_static_bloombox_schema_services_platform_v1_Ping_Response_descriptor;
+      return io.bloombox.schema.services.platform.v1.PlatformServiceV1.internal_static_bloombox_services_platform_v1_Ping_Response_descriptor;
     }
 
+    @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return io.bloombox.schema.services.platform.v1.PlatformServiceV1.internal_static_bloombox_schema_services_platform_v1_Ping_Response_fieldAccessorTable
+      return io.bloombox.schema.services.platform.v1.PlatformServiceV1.internal_static_bloombox_services_platform_v1_Ping_Response_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
               io.bloombox.schema.services.platform.v1.Ping.Response.class, io.bloombox.schema.services.platform.v1.Ping.Response.Builder.class);
     }
@@ -597,7 +624,7 @@ private static final long serialVersionUID = 0L;
      * Current service status.
      * </pre>
      *
-     * <code>.bloombox.schema.services.platform.v1.PlatformServiceStatus status = 1;</code>
+     * <code>.bloombox.services.platform.v1.PlatformServiceStatus status = 1;</code>
      */
     public int getStatusValue() {
       return status_;
@@ -607,14 +634,16 @@ private static final long serialVersionUID = 0L;
      * Current service status.
      * </pre>
      *
-     * <code>.bloombox.schema.services.platform.v1.PlatformServiceStatus status = 1;</code>
+     * <code>.bloombox.services.platform.v1.PlatformServiceStatus status = 1;</code>
      */
     public io.bloombox.schema.services.platform.v1.PlatformServiceStatus getStatus() {
+      @SuppressWarnings("deprecation")
       io.bloombox.schema.services.platform.v1.PlatformServiceStatus result = io.bloombox.schema.services.platform.v1.PlatformServiceStatus.valueOf(status_);
       return result == null ? io.bloombox.schema.services.platform.v1.PlatformServiceStatus.UNRECOGNIZED : result;
     }
 
     private byte memoizedIsInitialized = -1;
+    @java.lang.Override
     public final boolean isInitialized() {
       byte isInitialized = memoizedIsInitialized;
       if (isInitialized == 1) return true;
@@ -624,6 +653,7 @@ private static final long serialVersionUID = 0L;
       return true;
     }
 
+    @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
       if (status_ != io.bloombox.schema.services.platform.v1.PlatformServiceStatus.UNKNOWN.getNumber()) {
@@ -632,6 +662,7 @@ private static final long serialVersionUID = 0L;
       unknownFields.writeTo(output);
     }
 
+    @java.lang.Override
     public int getSerializedSize() {
       int size = memoizedSize;
       if (size != -1) return size;
@@ -746,6 +777,7 @@ private static final long serialVersionUID = 0L;
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
 
+    @java.lang.Override
     public Builder newBuilderForType() { return newBuilder(); }
     public static Builder newBuilder() {
       return DEFAULT_INSTANCE.toBuilder();
@@ -753,6 +785,7 @@ private static final long serialVersionUID = 0L;
     public static Builder newBuilder(io.bloombox.schema.services.platform.v1.Ping.Response prototype) {
       return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
     }
+    @java.lang.Override
     public Builder toBuilder() {
       return this == DEFAULT_INSTANCE
           ? new Builder() : new Builder().mergeFrom(this);
@@ -769,20 +802,21 @@ private static final long serialVersionUID = 0L;
      * Specifies a platform ping response.
      * </pre>
      *
-     * Protobuf type {@code bloombox.schema.services.platform.v1.Ping.Response}
+     * Protobuf type {@code bloombox.services.platform.v1.Ping.Response}
      */
     public static final class Builder extends
         com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:bloombox.schema.services.platform.v1.Ping.Response)
+        // @@protoc_insertion_point(builder_implements:bloombox.services.platform.v1.Ping.Response)
         io.bloombox.schema.services.platform.v1.Ping.ResponseOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return io.bloombox.schema.services.platform.v1.PlatformServiceV1.internal_static_bloombox_schema_services_platform_v1_Ping_Response_descriptor;
+        return io.bloombox.schema.services.platform.v1.PlatformServiceV1.internal_static_bloombox_services_platform_v1_Ping_Response_descriptor;
       }
 
+      @java.lang.Override
       protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return io.bloombox.schema.services.platform.v1.PlatformServiceV1.internal_static_bloombox_schema_services_platform_v1_Ping_Response_fieldAccessorTable
+        return io.bloombox.schema.services.platform.v1.PlatformServiceV1.internal_static_bloombox_services_platform_v1_Ping_Response_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
                 io.bloombox.schema.services.platform.v1.Ping.Response.class, io.bloombox.schema.services.platform.v1.Ping.Response.Builder.class);
       }
@@ -802,6 +836,7 @@ private static final long serialVersionUID = 0L;
                 .alwaysUseFieldBuilders) {
         }
       }
+      @java.lang.Override
       public Builder clear() {
         super.clear();
         status_ = 0;
@@ -809,15 +844,18 @@ private static final long serialVersionUID = 0L;
         return this;
       }
 
+      @java.lang.Override
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return io.bloombox.schema.services.platform.v1.PlatformServiceV1.internal_static_bloombox_schema_services_platform_v1_Ping_Response_descriptor;
+        return io.bloombox.schema.services.platform.v1.PlatformServiceV1.internal_static_bloombox_services_platform_v1_Ping_Response_descriptor;
       }
 
+      @java.lang.Override
       public io.bloombox.schema.services.platform.v1.Ping.Response getDefaultInstanceForType() {
         return io.bloombox.schema.services.platform.v1.Ping.Response.getDefaultInstance();
       }
 
+      @java.lang.Override
       public io.bloombox.schema.services.platform.v1.Ping.Response build() {
         io.bloombox.schema.services.platform.v1.Ping.Response result = buildPartial();
         if (!result.isInitialized()) {
@@ -826,6 +864,7 @@ private static final long serialVersionUID = 0L;
         return result;
       }
 
+      @java.lang.Override
       public io.bloombox.schema.services.platform.v1.Ping.Response buildPartial() {
         io.bloombox.schema.services.platform.v1.Ping.Response result = new io.bloombox.schema.services.platform.v1.Ping.Response(this);
         result.status_ = status_;
@@ -833,32 +872,39 @@ private static final long serialVersionUID = 0L;
         return result;
       }
 
+      @java.lang.Override
       public Builder clone() {
         return (Builder) super.clone();
       }
+      @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
         return (Builder) super.setField(field, value);
       }
+      @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
         return (Builder) super.clearField(field);
       }
+      @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
         return (Builder) super.clearOneof(oneof);
       }
+      @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
         return (Builder) super.setRepeatedField(field, index, value);
       }
+      @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
         return (Builder) super.addRepeatedField(field, value);
       }
+      @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
         if (other instanceof io.bloombox.schema.services.platform.v1.Ping.Response) {
           return mergeFrom((io.bloombox.schema.services.platform.v1.Ping.Response)other);
@@ -878,10 +924,12 @@ private static final long serialVersionUID = 0L;
         return this;
       }
 
+      @java.lang.Override
       public final boolean isInitialized() {
         return true;
       }
 
+      @java.lang.Override
       public Builder mergeFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -906,7 +954,7 @@ private static final long serialVersionUID = 0L;
        * Current service status.
        * </pre>
        *
-       * <code>.bloombox.schema.services.platform.v1.PlatformServiceStatus status = 1;</code>
+       * <code>.bloombox.services.platform.v1.PlatformServiceStatus status = 1;</code>
        */
       public int getStatusValue() {
         return status_;
@@ -916,7 +964,7 @@ private static final long serialVersionUID = 0L;
        * Current service status.
        * </pre>
        *
-       * <code>.bloombox.schema.services.platform.v1.PlatformServiceStatus status = 1;</code>
+       * <code>.bloombox.services.platform.v1.PlatformServiceStatus status = 1;</code>
        */
       public Builder setStatusValue(int value) {
         status_ = value;
@@ -928,9 +976,10 @@ private static final long serialVersionUID = 0L;
        * Current service status.
        * </pre>
        *
-       * <code>.bloombox.schema.services.platform.v1.PlatformServiceStatus status = 1;</code>
+       * <code>.bloombox.services.platform.v1.PlatformServiceStatus status = 1;</code>
        */
       public io.bloombox.schema.services.platform.v1.PlatformServiceStatus getStatus() {
+        @SuppressWarnings("deprecation")
         io.bloombox.schema.services.platform.v1.PlatformServiceStatus result = io.bloombox.schema.services.platform.v1.PlatformServiceStatus.valueOf(status_);
         return result == null ? io.bloombox.schema.services.platform.v1.PlatformServiceStatus.UNRECOGNIZED : result;
       }
@@ -939,7 +988,7 @@ private static final long serialVersionUID = 0L;
        * Current service status.
        * </pre>
        *
-       * <code>.bloombox.schema.services.platform.v1.PlatformServiceStatus status = 1;</code>
+       * <code>.bloombox.services.platform.v1.PlatformServiceStatus status = 1;</code>
        */
       public Builder setStatus(io.bloombox.schema.services.platform.v1.PlatformServiceStatus value) {
         if (value == null) {
@@ -955,7 +1004,7 @@ private static final long serialVersionUID = 0L;
        * Current service status.
        * </pre>
        *
-       * <code>.bloombox.schema.services.platform.v1.PlatformServiceStatus status = 1;</code>
+       * <code>.bloombox.services.platform.v1.PlatformServiceStatus status = 1;</code>
        */
       public Builder clearStatus() {
         
@@ -963,21 +1012,23 @@ private static final long serialVersionUID = 0L;
         onChanged();
         return this;
       }
+      @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
         return super.setUnknownFieldsProto3(unknownFields);
       }
 
+      @java.lang.Override
       public final Builder mergeUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
         return super.mergeUnknownFields(unknownFields);
       }
 
 
-      // @@protoc_insertion_point(builder_scope:bloombox.schema.services.platform.v1.Ping.Response)
+      // @@protoc_insertion_point(builder_scope:bloombox.services.platform.v1.Ping.Response)
     }
 
-    // @@protoc_insertion_point(class_scope:bloombox.schema.services.platform.v1.Ping.Response)
+    // @@protoc_insertion_point(class_scope:bloombox.services.platform.v1.Ping.Response)
     private static final io.bloombox.schema.services.platform.v1.Ping.Response DEFAULT_INSTANCE;
     static {
       DEFAULT_INSTANCE = new io.bloombox.schema.services.platform.v1.Ping.Response();
@@ -989,6 +1040,7 @@ private static final long serialVersionUID = 0L;
 
     private static final com.google.protobuf.Parser<Response>
         PARSER = new com.google.protobuf.AbstractParser<Response>() {
+      @java.lang.Override
       public Response parsePartialFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -1006,6 +1058,7 @@ private static final long serialVersionUID = 0L;
       return PARSER;
     }
 
+    @java.lang.Override
     public io.bloombox.schema.services.platform.v1.Ping.Response getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
@@ -1013,6 +1066,7 @@ private static final long serialVersionUID = 0L;
   }
 
   private byte memoizedIsInitialized = -1;
+  @java.lang.Override
   public final boolean isInitialized() {
     byte isInitialized = memoizedIsInitialized;
     if (isInitialized == 1) return true;
@@ -1022,11 +1076,13 @@ private static final long serialVersionUID = 0L;
     return true;
   }
 
+  @java.lang.Override
   public void writeTo(com.google.protobuf.CodedOutputStream output)
                       throws java.io.IOException {
     unknownFields.writeTo(output);
   }
 
+  @java.lang.Override
   public int getSerializedSize() {
     int size = memoizedSize;
     if (size != -1) return size;
@@ -1134,6 +1190,7 @@ private static final long serialVersionUID = 0L;
         .parseWithIOException(PARSER, input, extensionRegistry);
   }
 
+  @java.lang.Override
   public Builder newBuilderForType() { return newBuilder(); }
   public static Builder newBuilder() {
     return DEFAULT_INSTANCE.toBuilder();
@@ -1141,6 +1198,7 @@ private static final long serialVersionUID = 0L;
   public static Builder newBuilder(io.bloombox.schema.services.platform.v1.Ping prototype) {
     return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
   }
+  @java.lang.Override
   public Builder toBuilder() {
     return this == DEFAULT_INSTANCE
         ? new Builder() : new Builder().mergeFrom(this);
@@ -1157,20 +1215,21 @@ private static final long serialVersionUID = 0L;
    * Specifies an RPC operation to retrieve status information for the Checkin API.
    * </pre>
    *
-   * Protobuf type {@code bloombox.schema.services.platform.v1.Ping}
+   * Protobuf type {@code bloombox.services.platform.v1.Ping}
    */
   public static final class Builder extends
       com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-      // @@protoc_insertion_point(builder_implements:bloombox.schema.services.platform.v1.Ping)
+      // @@protoc_insertion_point(builder_implements:bloombox.services.platform.v1.Ping)
       io.bloombox.schema.services.platform.v1.PingOrBuilder {
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return io.bloombox.schema.services.platform.v1.PlatformServiceV1.internal_static_bloombox_schema_services_platform_v1_Ping_descriptor;
+      return io.bloombox.schema.services.platform.v1.PlatformServiceV1.internal_static_bloombox_services_platform_v1_Ping_descriptor;
     }
 
+    @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return io.bloombox.schema.services.platform.v1.PlatformServiceV1.internal_static_bloombox_schema_services_platform_v1_Ping_fieldAccessorTable
+      return io.bloombox.schema.services.platform.v1.PlatformServiceV1.internal_static_bloombox_services_platform_v1_Ping_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
               io.bloombox.schema.services.platform.v1.Ping.class, io.bloombox.schema.services.platform.v1.Ping.Builder.class);
     }
@@ -1190,20 +1249,24 @@ private static final long serialVersionUID = 0L;
               .alwaysUseFieldBuilders) {
       }
     }
+    @java.lang.Override
     public Builder clear() {
       super.clear();
       return this;
     }
 
+    @java.lang.Override
     public com.google.protobuf.Descriptors.Descriptor
         getDescriptorForType() {
-      return io.bloombox.schema.services.platform.v1.PlatformServiceV1.internal_static_bloombox_schema_services_platform_v1_Ping_descriptor;
+      return io.bloombox.schema.services.platform.v1.PlatformServiceV1.internal_static_bloombox_services_platform_v1_Ping_descriptor;
     }
 
+    @java.lang.Override
     public io.bloombox.schema.services.platform.v1.Ping getDefaultInstanceForType() {
       return io.bloombox.schema.services.platform.v1.Ping.getDefaultInstance();
     }
 
+    @java.lang.Override
     public io.bloombox.schema.services.platform.v1.Ping build() {
       io.bloombox.schema.services.platform.v1.Ping result = buildPartial();
       if (!result.isInitialized()) {
@@ -1212,38 +1275,46 @@ private static final long serialVersionUID = 0L;
       return result;
     }
 
+    @java.lang.Override
     public io.bloombox.schema.services.platform.v1.Ping buildPartial() {
       io.bloombox.schema.services.platform.v1.Ping result = new io.bloombox.schema.services.platform.v1.Ping(this);
       onBuilt();
       return result;
     }
 
+    @java.lang.Override
     public Builder clone() {
       return (Builder) super.clone();
     }
+    @java.lang.Override
     public Builder setField(
         com.google.protobuf.Descriptors.FieldDescriptor field,
         java.lang.Object value) {
       return (Builder) super.setField(field, value);
     }
+    @java.lang.Override
     public Builder clearField(
         com.google.protobuf.Descriptors.FieldDescriptor field) {
       return (Builder) super.clearField(field);
     }
+    @java.lang.Override
     public Builder clearOneof(
         com.google.protobuf.Descriptors.OneofDescriptor oneof) {
       return (Builder) super.clearOneof(oneof);
     }
+    @java.lang.Override
     public Builder setRepeatedField(
         com.google.protobuf.Descriptors.FieldDescriptor field,
         int index, java.lang.Object value) {
       return (Builder) super.setRepeatedField(field, index, value);
     }
+    @java.lang.Override
     public Builder addRepeatedField(
         com.google.protobuf.Descriptors.FieldDescriptor field,
         java.lang.Object value) {
       return (Builder) super.addRepeatedField(field, value);
     }
+    @java.lang.Override
     public Builder mergeFrom(com.google.protobuf.Message other) {
       if (other instanceof io.bloombox.schema.services.platform.v1.Ping) {
         return mergeFrom((io.bloombox.schema.services.platform.v1.Ping)other);
@@ -1260,10 +1331,12 @@ private static final long serialVersionUID = 0L;
       return this;
     }
 
+    @java.lang.Override
     public final boolean isInitialized() {
       return true;
     }
 
+    @java.lang.Override
     public Builder mergeFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -1281,21 +1354,23 @@ private static final long serialVersionUID = 0L;
       }
       return this;
     }
+    @java.lang.Override
     public final Builder setUnknownFields(
         final com.google.protobuf.UnknownFieldSet unknownFields) {
       return super.setUnknownFieldsProto3(unknownFields);
     }
 
+    @java.lang.Override
     public final Builder mergeUnknownFields(
         final com.google.protobuf.UnknownFieldSet unknownFields) {
       return super.mergeUnknownFields(unknownFields);
     }
 
 
-    // @@protoc_insertion_point(builder_scope:bloombox.schema.services.platform.v1.Ping)
+    // @@protoc_insertion_point(builder_scope:bloombox.services.platform.v1.Ping)
   }
 
-  // @@protoc_insertion_point(class_scope:bloombox.schema.services.platform.v1.Ping)
+  // @@protoc_insertion_point(class_scope:bloombox.services.platform.v1.Ping)
   private static final io.bloombox.schema.services.platform.v1.Ping DEFAULT_INSTANCE;
   static {
     DEFAULT_INSTANCE = new io.bloombox.schema.services.platform.v1.Ping();
@@ -1307,6 +1382,7 @@ private static final long serialVersionUID = 0L;
 
   private static final com.google.protobuf.Parser<Ping>
       PARSER = new com.google.protobuf.AbstractParser<Ping>() {
+    @java.lang.Override
     public Ping parsePartialFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -1324,6 +1400,7 @@ private static final long serialVersionUID = 0L;
     return PARSER;
   }
 
+  @java.lang.Override
   public io.bloombox.schema.services.platform.v1.Ping getDefaultInstanceForType() {
     return DEFAULT_INSTANCE;
   }

@@ -1,8 +1,8 @@
 /*
- * Copyright 2018, Bloombox, LLC. All rights reserved.
+ * Copyright 2018, Momentum Ideas, Co. All rights reserved.
  *
  * Source and object computer code contained herein is the private intellectual
- * property of Bloombox, a California Limited Liability Corporation. Use of this
+ * property of Momentum Ideas Co., a Delaware Corporation. Use of this
  * code in source form requires permission in writing before use or the
  * assembly, distribution, or publishing of derivative works, for commercial
  * purposes or any other purpose, from a duly authorized officer of Momentum
@@ -32,15 +32,15 @@ public final class MediaTaskOuterClass {
         (com.google.protobuf.ExtensionRegistryLite) registry);
   }
   static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_bloombox_schema_services_media_v1beta1_MediaTask_descriptor;
+    internal_static_bloombox_services_media_v1beta1_MediaTask_descriptor;
   static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_bloombox_schema_services_media_v1beta1_MediaTask_fieldAccessorTable;
+      internal_static_bloombox_services_media_v1beta1_MediaTask_fieldAccessorTable;
   static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_bloombox_schema_services_media_v1beta1_MediaTask_ImageOptimization_descriptor;
+    internal_static_bloombox_services_media_v1beta1_MediaTask_ImageOptimization_descriptor;
   static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_bloombox_schema_services_media_v1beta1_MediaTask_ImageOptimization_fieldAccessorTable;
+      internal_static_bloombox_services_media_v1beta1_MediaTask_ImageOptimization_fieldAccessorTable;
 
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
@@ -50,23 +50,23 @@ public final class MediaTaskOuterClass {
       descriptor;
   static {
     java.lang.String[] descriptorData = {
-      "\n\035media/v1beta1/MediaTask.proto\022&bloombo" +
-      "x.schema.services.media.v1beta1\032\024media/M" +
-      "ediaKey.proto\032\025media/MediaType.proto\032\025me" +
-      "dia/MediaItem.proto\"\220\003\n\tMediaTask\022\014\n\004uui" +
-      "d\030\001 \001(\t\022)\n\003key\030\002 \001(\0132\034.opencannabis.medi" +
-      "a.MediaKey\022,\n\005media\030\003 \001(\0132\035.opencannabis" +
-      ".media.MediaItem\022X\n\timage_min\030\n \001(\0132C.bl" +
-      "oombox.schema.services.media.v1beta1.Med" +
-      "iaTask.ImageOptimizationH\000\022\027\n\rimage_publ" +
-      "ish\030\013 \001(\010H\000\032\240\001\n\021ImageOptimization\0227\n\006for" +
-      "mat\030\001 \001(\0162\'.opencannabis.media.MediaType" +
-      ".ImageKind\0223\n\003dpi\030\002 \001(\0162&.opencannabis.m" +
-      "edia.MediaType.ImageDPI\022\r\n\005width\030\003 \001(\004\022\016" +
-      "\n\006height\030\004 \001(\004B\006\n\004task*6\n\017ImageResizeMod" +
-      "e\022\r\n\tNO_RESIZE\020\000\022\n\n\006RESIZE\020\001\022\010\n\004CROP\020\002B5" +
-      "\n)io.bloombox.schema.services.media.v1be" +
-      "ta1H\001P\001\242\002\003BBSb\006proto3"
+      "\n\035media/v1beta1/MediaTask.proto\022\037bloombo" +
+      "x.services.media.v1beta1\032\024media/MediaKey" +
+      ".proto\032\025media/MediaType.proto\032\025media/Med" +
+      "iaItem.proto\"\211\003\n\tMediaTask\022\014\n\004uuid\030\001 \001(\t" +
+      "\022)\n\003key\030\002 \001(\0132\034.opencannabis.media.Media" +
+      "Key\022,\n\005media\030\003 \001(\0132\035.opencannabis.media." +
+      "MediaItem\022Q\n\timage_min\030\n \001(\0132<.bloombox." +
+      "services.media.v1beta1.MediaTask.ImageOp" +
+      "timizationH\000\022\027\n\rimage_publish\030\013 \001(\010H\000\032\240\001" +
+      "\n\021ImageOptimization\0227\n\006format\030\001 \001(\0162\'.op" +
+      "encannabis.media.MediaType.ImageKind\0223\n\003" +
+      "dpi\030\002 \001(\0162&.opencannabis.media.MediaType" +
+      ".ImageDPI\022\r\n\005width\030\003 \001(\004\022\016\n\006height\030\004 \001(\004" +
+      "B\006\n\004task*6\n\017ImageResizeMode\022\r\n\tNO_RESIZE" +
+      "\020\000\022\n\n\006RESIZE\020\001\022\010\n\004CROP\020\002B5\n)io.bloombox." +
+      "schema.services.media.v1beta1H\001P\001\242\002\003BBSb" +
+      "\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -83,17 +83,17 @@ public final class MediaTaskOuterClass {
           io.opencannabis.schema.media.MediaItemType.getDescriptor(),
           io.opencannabis.schema.media.AttachedMedia.getDescriptor(),
         }, assigner);
-    internal_static_bloombox_schema_services_media_v1beta1_MediaTask_descriptor =
+    internal_static_bloombox_services_media_v1beta1_MediaTask_descriptor =
       getDescriptor().getMessageTypes().get(0);
-    internal_static_bloombox_schema_services_media_v1beta1_MediaTask_fieldAccessorTable = new
+    internal_static_bloombox_services_media_v1beta1_MediaTask_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_bloombox_schema_services_media_v1beta1_MediaTask_descriptor,
+        internal_static_bloombox_services_media_v1beta1_MediaTask_descriptor,
         new java.lang.String[] { "Uuid", "Key", "Media", "ImageMin", "ImagePublish", "Task", });
-    internal_static_bloombox_schema_services_media_v1beta1_MediaTask_ImageOptimization_descriptor =
-      internal_static_bloombox_schema_services_media_v1beta1_MediaTask_descriptor.getNestedTypes().get(0);
-    internal_static_bloombox_schema_services_media_v1beta1_MediaTask_ImageOptimization_fieldAccessorTable = new
+    internal_static_bloombox_services_media_v1beta1_MediaTask_ImageOptimization_descriptor =
+      internal_static_bloombox_services_media_v1beta1_MediaTask_descriptor.getNestedTypes().get(0);
+    internal_static_bloombox_services_media_v1beta1_MediaTask_ImageOptimization_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_bloombox_schema_services_media_v1beta1_MediaTask_ImageOptimization_descriptor,
+        internal_static_bloombox_services_media_v1beta1_MediaTask_ImageOptimization_descriptor,
         new java.lang.String[] { "Format", "Dpi", "Width", "Height", });
     io.opencannabis.schema.media.MediaItemKey.getDescriptor();
     io.opencannabis.schema.media.MediaItemType.getDescriptor();

@@ -1,11 +1,12 @@
 /*
- * Copyright 2018, Bloombox, LLC.
+ * Copyright 2018, Momentum Ideas, Co. All rights reserved.
  *
- * Licensed under the Apache License, Version 2.0 (the "License");
- * you may not use this file except in compliance with the License.
- * You may obtain a copy of the License at
- *
- *     http://www.apache.org/licenses/LICENSE-2.0
+ * Source and object computer code contained herein is the private intellectual
+ * property of Momentum Ideas Co., a Delaware Corporation. Use of this
+ * code in source form requires permission in writing before use or the
+ * assembly, distribution, or publishing of derivative works, for commercial
+ * purposes or any other purpose, from a duly authorized officer of Momentum
+ * Ideas Co.
  *
  * Unless required by applicable law or agreed to in writing, software
  * distributed under the License is distributed on an "AS IS" BASIS,
@@ -97,17 +98,17 @@ public final class TemporalTime {
             case 0:
               done = true;
               break;
+            case 10: {
+              java.lang.String s = input.readStringRequireUtf8();
+              specCase_ = 1;
+              spec_ = s;
+              break;
+            }
             default: {
               if (!parseUnknownFieldProto3(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
-              break;
-            }
-            case 10: {
-              java.lang.String s = input.readStringRequireUtf8();
-              specCase_ = 1;
-              spec_ = s;
               break;
             }
           }
@@ -127,6 +128,7 @@ public final class TemporalTime {
       return io.opencannabis.schema.temporal.TemporalTime.internal_static_opencannabis_temporal_Time_descriptor;
     }
 
+    @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
       return io.opencannabis.schema.temporal.TemporalTime.internal_static_opencannabis_temporal_Time_fieldAccessorTable
@@ -222,6 +224,7 @@ public final class TemporalTime {
     }
 
     private byte memoizedIsInitialized = -1;
+    @java.lang.Override
     public final boolean isInitialized() {
       byte isInitialized = memoizedIsInitialized;
       if (isInitialized == 1) return true;
@@ -231,6 +234,7 @@ public final class TemporalTime {
       return true;
     }
 
+    @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
       if (specCase_ == 1) {
@@ -239,6 +243,7 @@ public final class TemporalTime {
       unknownFields.writeTo(output);
     }
 
+    @java.lang.Override
     public int getSerializedSize() {
       int size = memoizedSize;
       if (size != -1) return size;
@@ -368,6 +373,7 @@ public final class TemporalTime {
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
 
+    @java.lang.Override
     public Builder newBuilderForType() { return newBuilder(); }
     public static Builder newBuilder() {
       return DEFAULT_INSTANCE.toBuilder();
@@ -375,6 +381,7 @@ public final class TemporalTime {
     public static Builder newBuilder(io.opencannabis.schema.temporal.TemporalTime.Time prototype) {
       return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
     }
+    @java.lang.Override
     public Builder toBuilder() {
       return this == DEFAULT_INSTANCE
           ? new Builder() : new Builder().mergeFrom(this);
@@ -402,6 +409,7 @@ public final class TemporalTime {
         return io.opencannabis.schema.temporal.TemporalTime.internal_static_opencannabis_temporal_Time_descriptor;
       }
 
+      @java.lang.Override
       protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
           internalGetFieldAccessorTable() {
         return io.opencannabis.schema.temporal.TemporalTime.internal_static_opencannabis_temporal_Time_fieldAccessorTable
@@ -424,6 +432,7 @@ public final class TemporalTime {
                 .alwaysUseFieldBuilders) {
         }
       }
+      @java.lang.Override
       public Builder clear() {
         super.clear();
         specCase_ = 0;
@@ -431,15 +440,18 @@ public final class TemporalTime {
         return this;
       }
 
+      @java.lang.Override
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
         return io.opencannabis.schema.temporal.TemporalTime.internal_static_opencannabis_temporal_Time_descriptor;
       }
 
+      @java.lang.Override
       public io.opencannabis.schema.temporal.TemporalTime.Time getDefaultInstanceForType() {
         return io.opencannabis.schema.temporal.TemporalTime.Time.getDefaultInstance();
       }
 
+      @java.lang.Override
       public io.opencannabis.schema.temporal.TemporalTime.Time build() {
         io.opencannabis.schema.temporal.TemporalTime.Time result = buildPartial();
         if (!result.isInitialized()) {
@@ -448,6 +460,7 @@ public final class TemporalTime {
         return result;
       }
 
+      @java.lang.Override
       public io.opencannabis.schema.temporal.TemporalTime.Time buildPartial() {
         io.opencannabis.schema.temporal.TemporalTime.Time result = new io.opencannabis.schema.temporal.TemporalTime.Time(this);
         if (specCase_ == 1) {
@@ -458,32 +471,39 @@ public final class TemporalTime {
         return result;
       }
 
+      @java.lang.Override
       public Builder clone() {
         return (Builder) super.clone();
       }
+      @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
         return (Builder) super.setField(field, value);
       }
+      @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
         return (Builder) super.clearField(field);
       }
+      @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
         return (Builder) super.clearOneof(oneof);
       }
+      @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
         return (Builder) super.setRepeatedField(field, index, value);
       }
+      @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
         return (Builder) super.addRepeatedField(field, value);
       }
+      @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
         if (other instanceof io.opencannabis.schema.temporal.TemporalTime.Time) {
           return mergeFrom((io.opencannabis.schema.temporal.TemporalTime.Time)other);
@@ -511,10 +531,12 @@ public final class TemporalTime {
         return this;
       }
 
+      @java.lang.Override
       public final boolean isInitialized() {
         return true;
       }
 
+      @java.lang.Override
       public Builder mergeFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -647,11 +669,13 @@ public final class TemporalTime {
         onChanged();
         return this;
       }
+      @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
         return super.setUnknownFieldsProto3(unknownFields);
       }
 
+      @java.lang.Override
       public final Builder mergeUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
         return super.mergeUnknownFields(unknownFields);
@@ -673,6 +697,7 @@ public final class TemporalTime {
 
     private static final com.google.protobuf.Parser<Time>
         PARSER = new com.google.protobuf.AbstractParser<Time>() {
+      @java.lang.Override
       public Time parsePartialFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -690,6 +715,7 @@ public final class TemporalTime {
       return PARSER;
     }
 
+    @java.lang.Override
     public io.opencannabis.schema.temporal.TemporalTime.Time getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }

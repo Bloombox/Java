@@ -1,11 +1,12 @@
 /*
- * Copyright 2018, Bloombox, LLC.
+ * Copyright 2018, Momentum Ideas, Co. All rights reserved.
  *
- * Licensed under the Apache License, Version 2.0 (the "License");
- * you may not use this file except in compliance with the License.
- * You may obtain a copy of the License at
- *
- *     http://www.apache.org/licenses/LICENSE-2.0
+ * Source and object computer code contained herein is the private intellectual
+ * property of Momentum Ideas Co., a Delaware Corporation. Use of this
+ * code in source form requires permission in writing before use or the
+ * assembly, distribution, or publishing of derivative works, for commercial
+ * purposes or any other purpose, from a duly authorized officer of Momentum
+ * Ideas Co.
  *
  * Unless required by applicable law or agreed to in writing, software
  * distributed under the License is distributed on an "AS IS" BASIS,
@@ -31,7 +32,7 @@ public final class AppMemberKey {
         (com.google.protobuf.ExtensionRegistryLite) registry);
   }
   public interface MembershipKeyOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:bloombox.schema.identity.MembershipKey)
+      // @@protoc_insertion_point(interface_extends:bloombox.identity.MembershipKey)
       com.google.protobuf.MessageOrBuilder {
 
     /**
@@ -57,7 +58,7 @@ public final class AppMemberKey {
      * Key specifying the user for which this membership was established.
      * </pre>
      *
-     * <code>.bloombox.schema.identity.UserKey user = 2;</code>
+     * <code>.bloombox.identity.UserKey user = 2;</code>
      */
     boolean hasUser();
     /**
@@ -65,7 +66,7 @@ public final class AppMemberKey {
      * Key specifying the user for which this membership was established.
      * </pre>
      *
-     * <code>.bloombox.schema.identity.UserKey user = 2;</code>
+     * <code>.bloombox.identity.UserKey user = 2;</code>
      */
     io.bloombox.schema.identity.AppUserKey.UserKey getUser();
     /**
@@ -73,7 +74,7 @@ public final class AppMemberKey {
      * Key specifying the user for which this membership was established.
      * </pre>
      *
-     * <code>.bloombox.schema.identity.UserKey user = 2;</code>
+     * <code>.bloombox.identity.UserKey user = 2;</code>
      */
     io.bloombox.schema.identity.AppUserKey.UserKeyOrBuilder getUserOrBuilder();
 
@@ -82,7 +83,7 @@ public final class AppMemberKey {
      * Specifies the partner under which this membership applies.
      * </pre>
      *
-     * <code>.bloombox.schema.partner.PartnerKey partner = 3;</code>
+     * <code>.bloombox.partner.PartnerKey partner = 3;</code>
      */
     boolean hasPartner();
     /**
@@ -90,7 +91,7 @@ public final class AppMemberKey {
      * Specifies the partner under which this membership applies.
      * </pre>
      *
-     * <code>.bloombox.schema.partner.PartnerKey partner = 3;</code>
+     * <code>.bloombox.partner.PartnerKey partner = 3;</code>
      */
     io.bloombox.schema.partner.PartnerMeta.PartnerKey getPartner();
     /**
@@ -98,7 +99,7 @@ public final class AppMemberKey {
      * Specifies the partner under which this membership applies.
      * </pre>
      *
-     * <code>.bloombox.schema.partner.PartnerKey partner = 3;</code>
+     * <code>.bloombox.partner.PartnerKey partner = 3;</code>
      */
     io.bloombox.schema.partner.PartnerMeta.PartnerKeyOrBuilder getPartnerOrBuilder();
 
@@ -107,7 +108,7 @@ public final class AppMemberKey {
      * Specifies the location under which this membership applies.
      * </pre>
      *
-     * <code>.bloombox.schema.partner.LocationKey location = 4;</code>
+     * <code>.bloombox.partner.LocationKey location = 4;</code>
      */
     boolean hasLocation();
     /**
@@ -115,7 +116,7 @@ public final class AppMemberKey {
      * Specifies the location under which this membership applies.
      * </pre>
      *
-     * <code>.bloombox.schema.partner.LocationKey location = 4;</code>
+     * <code>.bloombox.partner.LocationKey location = 4;</code>
      */
     io.bloombox.schema.partner.LocationAccountKey.LocationKey getLocation();
     /**
@@ -123,7 +124,7 @@ public final class AppMemberKey {
      * Specifies the location under which this membership applies.
      * </pre>
      *
-     * <code>.bloombox.schema.partner.LocationKey location = 4;</code>
+     * <code>.bloombox.partner.LocationKey location = 4;</code>
      */
     io.bloombox.schema.partner.LocationAccountKey.LocationKeyOrBuilder getLocationOrBuilder();
 
@@ -135,11 +136,11 @@ public final class AppMemberKey {
    * location scope.
    * </pre>
    *
-   * Protobuf type {@code bloombox.schema.identity.MembershipKey}
+   * Protobuf type {@code bloombox.identity.MembershipKey}
    */
   public  static final class MembershipKey extends
       com.google.protobuf.GeneratedMessageV3 implements
-      // @@protoc_insertion_point(message_implements:bloombox.schema.identity.MembershipKey)
+      // @@protoc_insertion_point(message_implements:bloombox.identity.MembershipKey)
       MembershipKeyOrBuilder {
   private static final long serialVersionUID = 0L;
     // Use MembershipKey.newBuilder() to construct.
@@ -174,13 +175,6 @@ public final class AppMemberKey {
             case 0:
               done = true;
               break;
-            default: {
-              if (!parseUnknownFieldProto3(
-                  input, unknownFields, extensionRegistry, tag)) {
-                done = true;
-              }
-              break;
-            }
             case 10: {
               java.lang.String s = input.readStringRequireUtf8();
 
@@ -228,6 +222,13 @@ public final class AppMemberKey {
               scopeCase_ = 4;
               break;
             }
+            default: {
+              if (!parseUnknownFieldProto3(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
           }
         }
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
@@ -242,12 +243,13 @@ public final class AppMemberKey {
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return io.bloombox.schema.identity.AppMemberKey.internal_static_bloombox_schema_identity_MembershipKey_descriptor;
+      return io.bloombox.schema.identity.AppMemberKey.internal_static_bloombox_identity_MembershipKey_descriptor;
     }
 
+    @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return io.bloombox.schema.identity.AppMemberKey.internal_static_bloombox_schema_identity_MembershipKey_fieldAccessorTable
+      return io.bloombox.schema.identity.AppMemberKey.internal_static_bloombox_identity_MembershipKey_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
               io.bloombox.schema.identity.AppMemberKey.MembershipKey.class, io.bloombox.schema.identity.AppMemberKey.MembershipKey.Builder.class);
     }
@@ -339,7 +341,7 @@ public final class AppMemberKey {
      * Key specifying the user for which this membership was established.
      * </pre>
      *
-     * <code>.bloombox.schema.identity.UserKey user = 2;</code>
+     * <code>.bloombox.identity.UserKey user = 2;</code>
      */
     public boolean hasUser() {
       return user_ != null;
@@ -349,7 +351,7 @@ public final class AppMemberKey {
      * Key specifying the user for which this membership was established.
      * </pre>
      *
-     * <code>.bloombox.schema.identity.UserKey user = 2;</code>
+     * <code>.bloombox.identity.UserKey user = 2;</code>
      */
     public io.bloombox.schema.identity.AppUserKey.UserKey getUser() {
       return user_ == null ? io.bloombox.schema.identity.AppUserKey.UserKey.getDefaultInstance() : user_;
@@ -359,7 +361,7 @@ public final class AppMemberKey {
      * Key specifying the user for which this membership was established.
      * </pre>
      *
-     * <code>.bloombox.schema.identity.UserKey user = 2;</code>
+     * <code>.bloombox.identity.UserKey user = 2;</code>
      */
     public io.bloombox.schema.identity.AppUserKey.UserKeyOrBuilder getUserOrBuilder() {
       return getUser();
@@ -371,7 +373,7 @@ public final class AppMemberKey {
      * Specifies the partner under which this membership applies.
      * </pre>
      *
-     * <code>.bloombox.schema.partner.PartnerKey partner = 3;</code>
+     * <code>.bloombox.partner.PartnerKey partner = 3;</code>
      */
     public boolean hasPartner() {
       return scopeCase_ == 3;
@@ -381,7 +383,7 @@ public final class AppMemberKey {
      * Specifies the partner under which this membership applies.
      * </pre>
      *
-     * <code>.bloombox.schema.partner.PartnerKey partner = 3;</code>
+     * <code>.bloombox.partner.PartnerKey partner = 3;</code>
      */
     public io.bloombox.schema.partner.PartnerMeta.PartnerKey getPartner() {
       if (scopeCase_ == 3) {
@@ -394,7 +396,7 @@ public final class AppMemberKey {
      * Specifies the partner under which this membership applies.
      * </pre>
      *
-     * <code>.bloombox.schema.partner.PartnerKey partner = 3;</code>
+     * <code>.bloombox.partner.PartnerKey partner = 3;</code>
      */
     public io.bloombox.schema.partner.PartnerMeta.PartnerKeyOrBuilder getPartnerOrBuilder() {
       if (scopeCase_ == 3) {
@@ -409,7 +411,7 @@ public final class AppMemberKey {
      * Specifies the location under which this membership applies.
      * </pre>
      *
-     * <code>.bloombox.schema.partner.LocationKey location = 4;</code>
+     * <code>.bloombox.partner.LocationKey location = 4;</code>
      */
     public boolean hasLocation() {
       return scopeCase_ == 4;
@@ -419,7 +421,7 @@ public final class AppMemberKey {
      * Specifies the location under which this membership applies.
      * </pre>
      *
-     * <code>.bloombox.schema.partner.LocationKey location = 4;</code>
+     * <code>.bloombox.partner.LocationKey location = 4;</code>
      */
     public io.bloombox.schema.partner.LocationAccountKey.LocationKey getLocation() {
       if (scopeCase_ == 4) {
@@ -432,7 +434,7 @@ public final class AppMemberKey {
      * Specifies the location under which this membership applies.
      * </pre>
      *
-     * <code>.bloombox.schema.partner.LocationKey location = 4;</code>
+     * <code>.bloombox.partner.LocationKey location = 4;</code>
      */
     public io.bloombox.schema.partner.LocationAccountKey.LocationKeyOrBuilder getLocationOrBuilder() {
       if (scopeCase_ == 4) {
@@ -442,6 +444,7 @@ public final class AppMemberKey {
     }
 
     private byte memoizedIsInitialized = -1;
+    @java.lang.Override
     public final boolean isInitialized() {
       byte isInitialized = memoizedIsInitialized;
       if (isInitialized == 1) return true;
@@ -451,6 +454,7 @@ public final class AppMemberKey {
       return true;
     }
 
+    @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
       if (!getUuidBytes().isEmpty()) {
@@ -468,6 +472,7 @@ public final class AppMemberKey {
       unknownFields.writeTo(output);
     }
 
+    @java.lang.Override
     public int getSerializedSize() {
       int size = memoizedSize;
       if (size != -1) return size;
@@ -630,6 +635,7 @@ public final class AppMemberKey {
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
 
+    @java.lang.Override
     public Builder newBuilderForType() { return newBuilder(); }
     public static Builder newBuilder() {
       return DEFAULT_INSTANCE.toBuilder();
@@ -637,6 +643,7 @@ public final class AppMemberKey {
     public static Builder newBuilder(io.bloombox.schema.identity.AppMemberKey.MembershipKey prototype) {
       return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
     }
+    @java.lang.Override
     public Builder toBuilder() {
       return this == DEFAULT_INSTANCE
           ? new Builder() : new Builder().mergeFrom(this);
@@ -654,20 +661,21 @@ public final class AppMemberKey {
      * location scope.
      * </pre>
      *
-     * Protobuf type {@code bloombox.schema.identity.MembershipKey}
+     * Protobuf type {@code bloombox.identity.MembershipKey}
      */
     public static final class Builder extends
         com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:bloombox.schema.identity.MembershipKey)
+        // @@protoc_insertion_point(builder_implements:bloombox.identity.MembershipKey)
         io.bloombox.schema.identity.AppMemberKey.MembershipKeyOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return io.bloombox.schema.identity.AppMemberKey.internal_static_bloombox_schema_identity_MembershipKey_descriptor;
+        return io.bloombox.schema.identity.AppMemberKey.internal_static_bloombox_identity_MembershipKey_descriptor;
       }
 
+      @java.lang.Override
       protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return io.bloombox.schema.identity.AppMemberKey.internal_static_bloombox_schema_identity_MembershipKey_fieldAccessorTable
+        return io.bloombox.schema.identity.AppMemberKey.internal_static_bloombox_identity_MembershipKey_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
                 io.bloombox.schema.identity.AppMemberKey.MembershipKey.class, io.bloombox.schema.identity.AppMemberKey.MembershipKey.Builder.class);
       }
@@ -687,6 +695,7 @@ public final class AppMemberKey {
                 .alwaysUseFieldBuilders) {
         }
       }
+      @java.lang.Override
       public Builder clear() {
         super.clear();
         uuid_ = "";
@@ -702,15 +711,18 @@ public final class AppMemberKey {
         return this;
       }
 
+      @java.lang.Override
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return io.bloombox.schema.identity.AppMemberKey.internal_static_bloombox_schema_identity_MembershipKey_descriptor;
+        return io.bloombox.schema.identity.AppMemberKey.internal_static_bloombox_identity_MembershipKey_descriptor;
       }
 
+      @java.lang.Override
       public io.bloombox.schema.identity.AppMemberKey.MembershipKey getDefaultInstanceForType() {
         return io.bloombox.schema.identity.AppMemberKey.MembershipKey.getDefaultInstance();
       }
 
+      @java.lang.Override
       public io.bloombox.schema.identity.AppMemberKey.MembershipKey build() {
         io.bloombox.schema.identity.AppMemberKey.MembershipKey result = buildPartial();
         if (!result.isInitialized()) {
@@ -719,6 +731,7 @@ public final class AppMemberKey {
         return result;
       }
 
+      @java.lang.Override
       public io.bloombox.schema.identity.AppMemberKey.MembershipKey buildPartial() {
         io.bloombox.schema.identity.AppMemberKey.MembershipKey result = new io.bloombox.schema.identity.AppMemberKey.MembershipKey(this);
         result.uuid_ = uuid_;
@@ -746,32 +759,39 @@ public final class AppMemberKey {
         return result;
       }
 
+      @java.lang.Override
       public Builder clone() {
         return (Builder) super.clone();
       }
+      @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
         return (Builder) super.setField(field, value);
       }
+      @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
         return (Builder) super.clearField(field);
       }
+      @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
         return (Builder) super.clearOneof(oneof);
       }
+      @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
         return (Builder) super.setRepeatedField(field, index, value);
       }
+      @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
         return (Builder) super.addRepeatedField(field, value);
       }
+      @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
         if (other instanceof io.bloombox.schema.identity.AppMemberKey.MembershipKey) {
           return mergeFrom((io.bloombox.schema.identity.AppMemberKey.MembershipKey)other);
@@ -808,10 +828,12 @@ public final class AppMemberKey {
         return this;
       }
 
+      @java.lang.Override
       public final boolean isInitialized() {
         return true;
       }
 
+      @java.lang.Override
       public Builder mergeFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -942,7 +964,7 @@ public final class AppMemberKey {
        * Key specifying the user for which this membership was established.
        * </pre>
        *
-       * <code>.bloombox.schema.identity.UserKey user = 2;</code>
+       * <code>.bloombox.identity.UserKey user = 2;</code>
        */
       public boolean hasUser() {
         return userBuilder_ != null || user_ != null;
@@ -952,7 +974,7 @@ public final class AppMemberKey {
        * Key specifying the user for which this membership was established.
        * </pre>
        *
-       * <code>.bloombox.schema.identity.UserKey user = 2;</code>
+       * <code>.bloombox.identity.UserKey user = 2;</code>
        */
       public io.bloombox.schema.identity.AppUserKey.UserKey getUser() {
         if (userBuilder_ == null) {
@@ -966,7 +988,7 @@ public final class AppMemberKey {
        * Key specifying the user for which this membership was established.
        * </pre>
        *
-       * <code>.bloombox.schema.identity.UserKey user = 2;</code>
+       * <code>.bloombox.identity.UserKey user = 2;</code>
        */
       public Builder setUser(io.bloombox.schema.identity.AppUserKey.UserKey value) {
         if (userBuilder_ == null) {
@@ -986,7 +1008,7 @@ public final class AppMemberKey {
        * Key specifying the user for which this membership was established.
        * </pre>
        *
-       * <code>.bloombox.schema.identity.UserKey user = 2;</code>
+       * <code>.bloombox.identity.UserKey user = 2;</code>
        */
       public Builder setUser(
           io.bloombox.schema.identity.AppUserKey.UserKey.Builder builderForValue) {
@@ -1004,7 +1026,7 @@ public final class AppMemberKey {
        * Key specifying the user for which this membership was established.
        * </pre>
        *
-       * <code>.bloombox.schema.identity.UserKey user = 2;</code>
+       * <code>.bloombox.identity.UserKey user = 2;</code>
        */
       public Builder mergeUser(io.bloombox.schema.identity.AppUserKey.UserKey value) {
         if (userBuilder_ == null) {
@@ -1026,7 +1048,7 @@ public final class AppMemberKey {
        * Key specifying the user for which this membership was established.
        * </pre>
        *
-       * <code>.bloombox.schema.identity.UserKey user = 2;</code>
+       * <code>.bloombox.identity.UserKey user = 2;</code>
        */
       public Builder clearUser() {
         if (userBuilder_ == null) {
@@ -1044,7 +1066,7 @@ public final class AppMemberKey {
        * Key specifying the user for which this membership was established.
        * </pre>
        *
-       * <code>.bloombox.schema.identity.UserKey user = 2;</code>
+       * <code>.bloombox.identity.UserKey user = 2;</code>
        */
       public io.bloombox.schema.identity.AppUserKey.UserKey.Builder getUserBuilder() {
         
@@ -1056,7 +1078,7 @@ public final class AppMemberKey {
        * Key specifying the user for which this membership was established.
        * </pre>
        *
-       * <code>.bloombox.schema.identity.UserKey user = 2;</code>
+       * <code>.bloombox.identity.UserKey user = 2;</code>
        */
       public io.bloombox.schema.identity.AppUserKey.UserKeyOrBuilder getUserOrBuilder() {
         if (userBuilder_ != null) {
@@ -1071,7 +1093,7 @@ public final class AppMemberKey {
        * Key specifying the user for which this membership was established.
        * </pre>
        *
-       * <code>.bloombox.schema.identity.UserKey user = 2;</code>
+       * <code>.bloombox.identity.UserKey user = 2;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
           io.bloombox.schema.identity.AppUserKey.UserKey, io.bloombox.schema.identity.AppUserKey.UserKey.Builder, io.bloombox.schema.identity.AppUserKey.UserKeyOrBuilder> 
@@ -1094,7 +1116,7 @@ public final class AppMemberKey {
        * Specifies the partner under which this membership applies.
        * </pre>
        *
-       * <code>.bloombox.schema.partner.PartnerKey partner = 3;</code>
+       * <code>.bloombox.partner.PartnerKey partner = 3;</code>
        */
       public boolean hasPartner() {
         return scopeCase_ == 3;
@@ -1104,7 +1126,7 @@ public final class AppMemberKey {
        * Specifies the partner under which this membership applies.
        * </pre>
        *
-       * <code>.bloombox.schema.partner.PartnerKey partner = 3;</code>
+       * <code>.bloombox.partner.PartnerKey partner = 3;</code>
        */
       public io.bloombox.schema.partner.PartnerMeta.PartnerKey getPartner() {
         if (partnerBuilder_ == null) {
@@ -1124,7 +1146,7 @@ public final class AppMemberKey {
        * Specifies the partner under which this membership applies.
        * </pre>
        *
-       * <code>.bloombox.schema.partner.PartnerKey partner = 3;</code>
+       * <code>.bloombox.partner.PartnerKey partner = 3;</code>
        */
       public Builder setPartner(io.bloombox.schema.partner.PartnerMeta.PartnerKey value) {
         if (partnerBuilder_ == null) {
@@ -1144,7 +1166,7 @@ public final class AppMemberKey {
        * Specifies the partner under which this membership applies.
        * </pre>
        *
-       * <code>.bloombox.schema.partner.PartnerKey partner = 3;</code>
+       * <code>.bloombox.partner.PartnerKey partner = 3;</code>
        */
       public Builder setPartner(
           io.bloombox.schema.partner.PartnerMeta.PartnerKey.Builder builderForValue) {
@@ -1162,7 +1184,7 @@ public final class AppMemberKey {
        * Specifies the partner under which this membership applies.
        * </pre>
        *
-       * <code>.bloombox.schema.partner.PartnerKey partner = 3;</code>
+       * <code>.bloombox.partner.PartnerKey partner = 3;</code>
        */
       public Builder mergePartner(io.bloombox.schema.partner.PartnerMeta.PartnerKey value) {
         if (partnerBuilder_ == null) {
@@ -1188,7 +1210,7 @@ public final class AppMemberKey {
        * Specifies the partner under which this membership applies.
        * </pre>
        *
-       * <code>.bloombox.schema.partner.PartnerKey partner = 3;</code>
+       * <code>.bloombox.partner.PartnerKey partner = 3;</code>
        */
       public Builder clearPartner() {
         if (partnerBuilder_ == null) {
@@ -1211,7 +1233,7 @@ public final class AppMemberKey {
        * Specifies the partner under which this membership applies.
        * </pre>
        *
-       * <code>.bloombox.schema.partner.PartnerKey partner = 3;</code>
+       * <code>.bloombox.partner.PartnerKey partner = 3;</code>
        */
       public io.bloombox.schema.partner.PartnerMeta.PartnerKey.Builder getPartnerBuilder() {
         return getPartnerFieldBuilder().getBuilder();
@@ -1221,7 +1243,7 @@ public final class AppMemberKey {
        * Specifies the partner under which this membership applies.
        * </pre>
        *
-       * <code>.bloombox.schema.partner.PartnerKey partner = 3;</code>
+       * <code>.bloombox.partner.PartnerKey partner = 3;</code>
        */
       public io.bloombox.schema.partner.PartnerMeta.PartnerKeyOrBuilder getPartnerOrBuilder() {
         if ((scopeCase_ == 3) && (partnerBuilder_ != null)) {
@@ -1238,7 +1260,7 @@ public final class AppMemberKey {
        * Specifies the partner under which this membership applies.
        * </pre>
        *
-       * <code>.bloombox.schema.partner.PartnerKey partner = 3;</code>
+       * <code>.bloombox.partner.PartnerKey partner = 3;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
           io.bloombox.schema.partner.PartnerMeta.PartnerKey, io.bloombox.schema.partner.PartnerMeta.PartnerKey.Builder, io.bloombox.schema.partner.PartnerMeta.PartnerKeyOrBuilder> 
@@ -1266,7 +1288,7 @@ public final class AppMemberKey {
        * Specifies the location under which this membership applies.
        * </pre>
        *
-       * <code>.bloombox.schema.partner.LocationKey location = 4;</code>
+       * <code>.bloombox.partner.LocationKey location = 4;</code>
        */
       public boolean hasLocation() {
         return scopeCase_ == 4;
@@ -1276,7 +1298,7 @@ public final class AppMemberKey {
        * Specifies the location under which this membership applies.
        * </pre>
        *
-       * <code>.bloombox.schema.partner.LocationKey location = 4;</code>
+       * <code>.bloombox.partner.LocationKey location = 4;</code>
        */
       public io.bloombox.schema.partner.LocationAccountKey.LocationKey getLocation() {
         if (locationBuilder_ == null) {
@@ -1296,7 +1318,7 @@ public final class AppMemberKey {
        * Specifies the location under which this membership applies.
        * </pre>
        *
-       * <code>.bloombox.schema.partner.LocationKey location = 4;</code>
+       * <code>.bloombox.partner.LocationKey location = 4;</code>
        */
       public Builder setLocation(io.bloombox.schema.partner.LocationAccountKey.LocationKey value) {
         if (locationBuilder_ == null) {
@@ -1316,7 +1338,7 @@ public final class AppMemberKey {
        * Specifies the location under which this membership applies.
        * </pre>
        *
-       * <code>.bloombox.schema.partner.LocationKey location = 4;</code>
+       * <code>.bloombox.partner.LocationKey location = 4;</code>
        */
       public Builder setLocation(
           io.bloombox.schema.partner.LocationAccountKey.LocationKey.Builder builderForValue) {
@@ -1334,7 +1356,7 @@ public final class AppMemberKey {
        * Specifies the location under which this membership applies.
        * </pre>
        *
-       * <code>.bloombox.schema.partner.LocationKey location = 4;</code>
+       * <code>.bloombox.partner.LocationKey location = 4;</code>
        */
       public Builder mergeLocation(io.bloombox.schema.partner.LocationAccountKey.LocationKey value) {
         if (locationBuilder_ == null) {
@@ -1360,7 +1382,7 @@ public final class AppMemberKey {
        * Specifies the location under which this membership applies.
        * </pre>
        *
-       * <code>.bloombox.schema.partner.LocationKey location = 4;</code>
+       * <code>.bloombox.partner.LocationKey location = 4;</code>
        */
       public Builder clearLocation() {
         if (locationBuilder_ == null) {
@@ -1383,7 +1405,7 @@ public final class AppMemberKey {
        * Specifies the location under which this membership applies.
        * </pre>
        *
-       * <code>.bloombox.schema.partner.LocationKey location = 4;</code>
+       * <code>.bloombox.partner.LocationKey location = 4;</code>
        */
       public io.bloombox.schema.partner.LocationAccountKey.LocationKey.Builder getLocationBuilder() {
         return getLocationFieldBuilder().getBuilder();
@@ -1393,7 +1415,7 @@ public final class AppMemberKey {
        * Specifies the location under which this membership applies.
        * </pre>
        *
-       * <code>.bloombox.schema.partner.LocationKey location = 4;</code>
+       * <code>.bloombox.partner.LocationKey location = 4;</code>
        */
       public io.bloombox.schema.partner.LocationAccountKey.LocationKeyOrBuilder getLocationOrBuilder() {
         if ((scopeCase_ == 4) && (locationBuilder_ != null)) {
@@ -1410,7 +1432,7 @@ public final class AppMemberKey {
        * Specifies the location under which this membership applies.
        * </pre>
        *
-       * <code>.bloombox.schema.partner.LocationKey location = 4;</code>
+       * <code>.bloombox.partner.LocationKey location = 4;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
           io.bloombox.schema.partner.LocationAccountKey.LocationKey, io.bloombox.schema.partner.LocationAccountKey.LocationKey.Builder, io.bloombox.schema.partner.LocationAccountKey.LocationKeyOrBuilder> 
@@ -1430,21 +1452,23 @@ public final class AppMemberKey {
         onChanged();;
         return locationBuilder_;
       }
+      @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
         return super.setUnknownFieldsProto3(unknownFields);
       }
 
+      @java.lang.Override
       public final Builder mergeUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
         return super.mergeUnknownFields(unknownFields);
       }
 
 
-      // @@protoc_insertion_point(builder_scope:bloombox.schema.identity.MembershipKey)
+      // @@protoc_insertion_point(builder_scope:bloombox.identity.MembershipKey)
     }
 
-    // @@protoc_insertion_point(class_scope:bloombox.schema.identity.MembershipKey)
+    // @@protoc_insertion_point(class_scope:bloombox.identity.MembershipKey)
     private static final io.bloombox.schema.identity.AppMemberKey.MembershipKey DEFAULT_INSTANCE;
     static {
       DEFAULT_INSTANCE = new io.bloombox.schema.identity.AppMemberKey.MembershipKey();
@@ -1456,6 +1480,7 @@ public final class AppMemberKey {
 
     private static final com.google.protobuf.Parser<MembershipKey>
         PARSER = new com.google.protobuf.AbstractParser<MembershipKey>() {
+      @java.lang.Override
       public MembershipKey parsePartialFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -1473,6 +1498,7 @@ public final class AppMemberKey {
       return PARSER;
     }
 
+    @java.lang.Override
     public io.bloombox.schema.identity.AppMemberKey.MembershipKey getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
@@ -1480,7 +1506,7 @@ public final class AppMemberKey {
   }
 
   public interface MembershipReferenceOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:bloombox.schema.identity.MembershipReference)
+      // @@protoc_insertion_point(interface_extends:bloombox.identity.MembershipReference)
       com.google.protobuf.MessageOrBuilder {
 
     /**
@@ -1488,7 +1514,7 @@ public final class AppMemberKey {
      * Specifies a unique code identifying this user membership.
      * </pre>
      *
-     * <code>.bloombox.schema.identity.MembershipKey key = 1;</code>
+     * <code>.bloombox.identity.MembershipKey key = 1;</code>
      */
     boolean hasKey();
     /**
@@ -1496,7 +1522,7 @@ public final class AppMemberKey {
      * Specifies a unique code identifying this user membership.
      * </pre>
      *
-     * <code>.bloombox.schema.identity.MembershipKey key = 1;</code>
+     * <code>.bloombox.identity.MembershipKey key = 1;</code>
      */
     io.bloombox.schema.identity.AppMemberKey.MembershipKey getKey();
     /**
@@ -1504,7 +1530,7 @@ public final class AppMemberKey {
      * Specifies a unique code identifying this user membership.
      * </pre>
      *
-     * <code>.bloombox.schema.identity.MembershipKey key = 1;</code>
+     * <code>.bloombox.identity.MembershipKey key = 1;</code>
      */
     io.bloombox.schema.identity.AppMemberKey.MembershipKeyOrBuilder getKeyOrBuilder();
 
@@ -1563,11 +1589,11 @@ public final class AppMemberKey {
    * Makes reference to a user in a particular membership context.
    * </pre>
    *
-   * Protobuf type {@code bloombox.schema.identity.MembershipReference}
+   * Protobuf type {@code bloombox.identity.MembershipReference}
    */
   public  static final class MembershipReference extends
       com.google.protobuf.GeneratedMessageV3 implements
-      // @@protoc_insertion_point(message_implements:bloombox.schema.identity.MembershipReference)
+      // @@protoc_insertion_point(message_implements:bloombox.identity.MembershipReference)
       MembershipReferenceOrBuilder {
   private static final long serialVersionUID = 0L;
     // Use MembershipReference.newBuilder() to construct.
@@ -1601,13 +1627,6 @@ public final class AppMemberKey {
             case 0:
               done = true;
               break;
-            default: {
-              if (!parseUnknownFieldProto3(
-                  input, unknownFields, extensionRegistry, tag)) {
-                done = true;
-              }
-              break;
-            }
             case 10: {
               io.bloombox.schema.identity.AppMemberKey.MembershipKey.Builder subBuilder = null;
               if (key_ != null) {
@@ -1647,6 +1666,13 @@ public final class AppMemberKey {
 
               break;
             }
+            default: {
+              if (!parseUnknownFieldProto3(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
           }
         }
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
@@ -1661,12 +1687,13 @@ public final class AppMemberKey {
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return io.bloombox.schema.identity.AppMemberKey.internal_static_bloombox_schema_identity_MembershipReference_descriptor;
+      return io.bloombox.schema.identity.AppMemberKey.internal_static_bloombox_identity_MembershipReference_descriptor;
     }
 
+    @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return io.bloombox.schema.identity.AppMemberKey.internal_static_bloombox_schema_identity_MembershipReference_fieldAccessorTable
+      return io.bloombox.schema.identity.AppMemberKey.internal_static_bloombox_identity_MembershipReference_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
               io.bloombox.schema.identity.AppMemberKey.MembershipReference.class, io.bloombox.schema.identity.AppMemberKey.MembershipReference.Builder.class);
     }
@@ -1678,7 +1705,7 @@ public final class AppMemberKey {
      * Specifies a unique code identifying this user membership.
      * </pre>
      *
-     * <code>.bloombox.schema.identity.MembershipKey key = 1;</code>
+     * <code>.bloombox.identity.MembershipKey key = 1;</code>
      */
     public boolean hasKey() {
       return key_ != null;
@@ -1688,7 +1715,7 @@ public final class AppMemberKey {
      * Specifies a unique code identifying this user membership.
      * </pre>
      *
-     * <code>.bloombox.schema.identity.MembershipKey key = 1;</code>
+     * <code>.bloombox.identity.MembershipKey key = 1;</code>
      */
     public io.bloombox.schema.identity.AppMemberKey.MembershipKey getKey() {
       return key_ == null ? io.bloombox.schema.identity.AppMemberKey.MembershipKey.getDefaultInstance() : key_;
@@ -1698,7 +1725,7 @@ public final class AppMemberKey {
      * Specifies a unique code identifying this user membership.
      * </pre>
      *
-     * <code>.bloombox.schema.identity.MembershipKey key = 1;</code>
+     * <code>.bloombox.identity.MembershipKey key = 1;</code>
      */
     public io.bloombox.schema.identity.AppMemberKey.MembershipKeyOrBuilder getKeyOrBuilder() {
       return getKey();
@@ -1771,6 +1798,7 @@ public final class AppMemberKey {
     }
 
     private byte memoizedIsInitialized = -1;
+    @java.lang.Override
     public final boolean isInitialized() {
       byte isInitialized = memoizedIsInitialized;
       if (isInitialized == 1) return true;
@@ -1780,6 +1808,7 @@ public final class AppMemberKey {
       return true;
     }
 
+    @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
       if (key_ != null) {
@@ -1794,6 +1823,7 @@ public final class AppMemberKey {
       unknownFields.writeTo(output);
     }
 
+    @java.lang.Override
     public int getSerializedSize() {
       int size = memoizedSize;
       if (size != -1) return size;
@@ -1940,6 +1970,7 @@ public final class AppMemberKey {
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
 
+    @java.lang.Override
     public Builder newBuilderForType() { return newBuilder(); }
     public static Builder newBuilder() {
       return DEFAULT_INSTANCE.toBuilder();
@@ -1947,6 +1978,7 @@ public final class AppMemberKey {
     public static Builder newBuilder(io.bloombox.schema.identity.AppMemberKey.MembershipReference prototype) {
       return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
     }
+    @java.lang.Override
     public Builder toBuilder() {
       return this == DEFAULT_INSTANCE
           ? new Builder() : new Builder().mergeFrom(this);
@@ -1963,20 +1995,21 @@ public final class AppMemberKey {
      * Makes reference to a user in a particular membership context.
      * </pre>
      *
-     * Protobuf type {@code bloombox.schema.identity.MembershipReference}
+     * Protobuf type {@code bloombox.identity.MembershipReference}
      */
     public static final class Builder extends
         com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:bloombox.schema.identity.MembershipReference)
+        // @@protoc_insertion_point(builder_implements:bloombox.identity.MembershipReference)
         io.bloombox.schema.identity.AppMemberKey.MembershipReferenceOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return io.bloombox.schema.identity.AppMemberKey.internal_static_bloombox_schema_identity_MembershipReference_descriptor;
+        return io.bloombox.schema.identity.AppMemberKey.internal_static_bloombox_identity_MembershipReference_descriptor;
       }
 
+      @java.lang.Override
       protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return io.bloombox.schema.identity.AppMemberKey.internal_static_bloombox_schema_identity_MembershipReference_fieldAccessorTable
+        return io.bloombox.schema.identity.AppMemberKey.internal_static_bloombox_identity_MembershipReference_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
                 io.bloombox.schema.identity.AppMemberKey.MembershipReference.class, io.bloombox.schema.identity.AppMemberKey.MembershipReference.Builder.class);
       }
@@ -1996,6 +2029,7 @@ public final class AppMemberKey {
                 .alwaysUseFieldBuilders) {
         }
       }
+      @java.lang.Override
       public Builder clear() {
         super.clear();
         if (keyBuilder_ == null) {
@@ -2019,15 +2053,18 @@ public final class AppMemberKey {
         return this;
       }
 
+      @java.lang.Override
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return io.bloombox.schema.identity.AppMemberKey.internal_static_bloombox_schema_identity_MembershipReference_descriptor;
+        return io.bloombox.schema.identity.AppMemberKey.internal_static_bloombox_identity_MembershipReference_descriptor;
       }
 
+      @java.lang.Override
       public io.bloombox.schema.identity.AppMemberKey.MembershipReference getDefaultInstanceForType() {
         return io.bloombox.schema.identity.AppMemberKey.MembershipReference.getDefaultInstance();
       }
 
+      @java.lang.Override
       public io.bloombox.schema.identity.AppMemberKey.MembershipReference build() {
         io.bloombox.schema.identity.AppMemberKey.MembershipReference result = buildPartial();
         if (!result.isInitialized()) {
@@ -2036,6 +2073,7 @@ public final class AppMemberKey {
         return result;
       }
 
+      @java.lang.Override
       public io.bloombox.schema.identity.AppMemberKey.MembershipReference buildPartial() {
         io.bloombox.schema.identity.AppMemberKey.MembershipReference result = new io.bloombox.schema.identity.AppMemberKey.MembershipReference(this);
         if (keyBuilder_ == null) {
@@ -2057,32 +2095,39 @@ public final class AppMemberKey {
         return result;
       }
 
+      @java.lang.Override
       public Builder clone() {
         return (Builder) super.clone();
       }
+      @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
         return (Builder) super.setField(field, value);
       }
+      @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
         return (Builder) super.clearField(field);
       }
+      @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
         return (Builder) super.clearOneof(oneof);
       }
+      @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
         return (Builder) super.setRepeatedField(field, index, value);
       }
+      @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
         return (Builder) super.addRepeatedField(field, value);
       }
+      @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
         if (other instanceof io.bloombox.schema.identity.AppMemberKey.MembershipReference) {
           return mergeFrom((io.bloombox.schema.identity.AppMemberKey.MembershipReference)other);
@@ -2108,10 +2153,12 @@ public final class AppMemberKey {
         return this;
       }
 
+      @java.lang.Override
       public final boolean isInitialized() {
         return true;
       }
 
+      @java.lang.Override
       public Builder mergeFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -2138,7 +2185,7 @@ public final class AppMemberKey {
        * Specifies a unique code identifying this user membership.
        * </pre>
        *
-       * <code>.bloombox.schema.identity.MembershipKey key = 1;</code>
+       * <code>.bloombox.identity.MembershipKey key = 1;</code>
        */
       public boolean hasKey() {
         return keyBuilder_ != null || key_ != null;
@@ -2148,7 +2195,7 @@ public final class AppMemberKey {
        * Specifies a unique code identifying this user membership.
        * </pre>
        *
-       * <code>.bloombox.schema.identity.MembershipKey key = 1;</code>
+       * <code>.bloombox.identity.MembershipKey key = 1;</code>
        */
       public io.bloombox.schema.identity.AppMemberKey.MembershipKey getKey() {
         if (keyBuilder_ == null) {
@@ -2162,7 +2209,7 @@ public final class AppMemberKey {
        * Specifies a unique code identifying this user membership.
        * </pre>
        *
-       * <code>.bloombox.schema.identity.MembershipKey key = 1;</code>
+       * <code>.bloombox.identity.MembershipKey key = 1;</code>
        */
       public Builder setKey(io.bloombox.schema.identity.AppMemberKey.MembershipKey value) {
         if (keyBuilder_ == null) {
@@ -2182,7 +2229,7 @@ public final class AppMemberKey {
        * Specifies a unique code identifying this user membership.
        * </pre>
        *
-       * <code>.bloombox.schema.identity.MembershipKey key = 1;</code>
+       * <code>.bloombox.identity.MembershipKey key = 1;</code>
        */
       public Builder setKey(
           io.bloombox.schema.identity.AppMemberKey.MembershipKey.Builder builderForValue) {
@@ -2200,7 +2247,7 @@ public final class AppMemberKey {
        * Specifies a unique code identifying this user membership.
        * </pre>
        *
-       * <code>.bloombox.schema.identity.MembershipKey key = 1;</code>
+       * <code>.bloombox.identity.MembershipKey key = 1;</code>
        */
       public Builder mergeKey(io.bloombox.schema.identity.AppMemberKey.MembershipKey value) {
         if (keyBuilder_ == null) {
@@ -2222,7 +2269,7 @@ public final class AppMemberKey {
        * Specifies a unique code identifying this user membership.
        * </pre>
        *
-       * <code>.bloombox.schema.identity.MembershipKey key = 1;</code>
+       * <code>.bloombox.identity.MembershipKey key = 1;</code>
        */
       public Builder clearKey() {
         if (keyBuilder_ == null) {
@@ -2240,7 +2287,7 @@ public final class AppMemberKey {
        * Specifies a unique code identifying this user membership.
        * </pre>
        *
-       * <code>.bloombox.schema.identity.MembershipKey key = 1;</code>
+       * <code>.bloombox.identity.MembershipKey key = 1;</code>
        */
       public io.bloombox.schema.identity.AppMemberKey.MembershipKey.Builder getKeyBuilder() {
         
@@ -2252,7 +2299,7 @@ public final class AppMemberKey {
        * Specifies a unique code identifying this user membership.
        * </pre>
        *
-       * <code>.bloombox.schema.identity.MembershipKey key = 1;</code>
+       * <code>.bloombox.identity.MembershipKey key = 1;</code>
        */
       public io.bloombox.schema.identity.AppMemberKey.MembershipKeyOrBuilder getKeyOrBuilder() {
         if (keyBuilder_ != null) {
@@ -2267,7 +2314,7 @@ public final class AppMemberKey {
        * Specifies a unique code identifying this user membership.
        * </pre>
        *
-       * <code>.bloombox.schema.identity.MembershipKey key = 1;</code>
+       * <code>.bloombox.identity.MembershipKey key = 1;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
           io.bloombox.schema.identity.AppMemberKey.MembershipKey, io.bloombox.schema.identity.AppMemberKey.MembershipKey.Builder, io.bloombox.schema.identity.AppMemberKey.MembershipKeyOrBuilder> 
@@ -2588,21 +2635,23 @@ public final class AppMemberKey {
         }
         return portraitBuilder_;
       }
+      @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
         return super.setUnknownFieldsProto3(unknownFields);
       }
 
+      @java.lang.Override
       public final Builder mergeUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
         return super.mergeUnknownFields(unknownFields);
       }
 
 
-      // @@protoc_insertion_point(builder_scope:bloombox.schema.identity.MembershipReference)
+      // @@protoc_insertion_point(builder_scope:bloombox.identity.MembershipReference)
     }
 
-    // @@protoc_insertion_point(class_scope:bloombox.schema.identity.MembershipReference)
+    // @@protoc_insertion_point(class_scope:bloombox.identity.MembershipReference)
     private static final io.bloombox.schema.identity.AppMemberKey.MembershipReference DEFAULT_INSTANCE;
     static {
       DEFAULT_INSTANCE = new io.bloombox.schema.identity.AppMemberKey.MembershipReference();
@@ -2614,6 +2663,7 @@ public final class AppMemberKey {
 
     private static final com.google.protobuf.Parser<MembershipReference>
         PARSER = new com.google.protobuf.AbstractParser<MembershipReference>() {
+      @java.lang.Override
       public MembershipReference parsePartialFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -2631,6 +2681,7 @@ public final class AppMemberKey {
       return PARSER;
     }
 
+    @java.lang.Override
     public io.bloombox.schema.identity.AppMemberKey.MembershipReference getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
@@ -2638,15 +2689,15 @@ public final class AppMemberKey {
   }
 
   private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_bloombox_schema_identity_MembershipKey_descriptor;
+    internal_static_bloombox_identity_MembershipKey_descriptor;
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_bloombox_schema_identity_MembershipKey_fieldAccessorTable;
+      internal_static_bloombox_identity_MembershipKey_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_bloombox_schema_identity_MembershipReference_descriptor;
+    internal_static_bloombox_identity_MembershipReference_descriptor;
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_bloombox_schema_identity_MembershipReference_fieldAccessorTable;
+      internal_static_bloombox_identity_MembershipReference_fieldAccessorTable;
 
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
@@ -2656,23 +2707,22 @@ public final class AppMemberKey {
       descriptor;
   static {
     java.lang.String[] descriptorData = {
-      "\n\034identity/MembershipKey.proto\022\030bloombox" +
-      ".schema.identity\032\016bq_field.proto\032\024core/D" +
-      "atamodel.proto\032\024media/MediaKey.proto\032\026id" +
-      "entity/UserKey.proto\032\027person/PersonName." +
-      "proto\032\030partner/PartnerKey.proto\032\031partner" +
-      "/LocationKey.proto\"\321\001\n\rMembershipKey\022\024\n\004" +
-      "uuid\030\001 \001(\tB\006\302\265\003\002\010\002\022/\n\004user\030\002 \001(\0132!.bloom" +
-      "box.schema.identity.UserKey\0226\n\007partner\030\003" +
-      " \001(\0132#.bloombox.schema.partner.PartnerKe" +
-      "yH\000\0228\n\010location\030\004 \001(\0132$.bloombox.schema." +
-      "partner.LocationKeyH\000B\007\n\005scope\"\244\001\n\023Membe" +
-      "rshipReference\0224\n\003key\030\001 \001(\0132\'.bloombox.s" +
-      "chema.identity.MembershipKey\022\'\n\004name\030\002 \001" +
-      "(\0132\031.opencannabis.person.Name\022.\n\010portrai" +
-      "t\030\003 \001(\0132\034.opencannabis.media.MediaKeyB5\n" +
-      "\033io.bloombox.schema.identityB\014AppMemberK" +
-      "eyH\001P\000\242\002\003BBSb\006proto3"
+      "\n\034identity/MembershipKey.proto\022\021bloombox" +
+      ".identity\032\016bq_field.proto\032\024core/Datamode" +
+      "l.proto\032\024media/MediaKey.proto\032\026identity/" +
+      "UserKey.proto\032\027person/PersonName.proto\032\030" +
+      "partner/PartnerKey.proto\032\031partner/Locati" +
+      "onKey.proto\"\274\001\n\rMembershipKey\022\024\n\004uuid\030\001 " +
+      "\001(\tB\006\302\265\003\002\010\002\022(\n\004user\030\002 \001(\0132\032.bloombox.ide" +
+      "ntity.UserKey\022/\n\007partner\030\003 \001(\0132\034.bloombo" +
+      "x.partner.PartnerKeyH\000\0221\n\010location\030\004 \001(\013" +
+      "2\035.bloombox.partner.LocationKeyH\000B\007\n\005sco" +
+      "pe\"\235\001\n\023MembershipReference\022-\n\003key\030\001 \001(\0132" +
+      " .bloombox.identity.MembershipKey\022\'\n\004nam" +
+      "e\030\002 \001(\0132\031.opencannabis.person.Name\022.\n\010po" +
+      "rtrait\030\003 \001(\0132\034.opencannabis.media.MediaK" +
+      "eyB5\n\033io.bloombox.schema.identityB\014AppMe" +
+      "mberKeyH\001P\000\242\002\003BBSb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -2693,17 +2743,17 @@ public final class AppMemberKey {
           io.bloombox.schema.partner.PartnerMeta.getDescriptor(),
           io.bloombox.schema.partner.LocationAccountKey.getDescriptor(),
         }, assigner);
-    internal_static_bloombox_schema_identity_MembershipKey_descriptor =
+    internal_static_bloombox_identity_MembershipKey_descriptor =
       getDescriptor().getMessageTypes().get(0);
-    internal_static_bloombox_schema_identity_MembershipKey_fieldAccessorTable = new
+    internal_static_bloombox_identity_MembershipKey_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_bloombox_schema_identity_MembershipKey_descriptor,
+        internal_static_bloombox_identity_MembershipKey_descriptor,
         new java.lang.String[] { "Uuid", "User", "Partner", "Location", "Scope", });
-    internal_static_bloombox_schema_identity_MembershipReference_descriptor =
+    internal_static_bloombox_identity_MembershipReference_descriptor =
       getDescriptor().getMessageTypes().get(1);
-    internal_static_bloombox_schema_identity_MembershipReference_fieldAccessorTable = new
+    internal_static_bloombox_identity_MembershipReference_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_bloombox_schema_identity_MembershipReference_descriptor,
+        internal_static_bloombox_identity_MembershipReference_descriptor,
         new java.lang.String[] { "Key", "Name", "Portrait", });
     com.google.protobuf.ExtensionRegistry registry =
         com.google.protobuf.ExtensionRegistry.newInstance();

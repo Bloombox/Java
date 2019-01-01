@@ -1,11 +1,12 @@
 /*
- * Copyright 2018, Bloombox, LLC.
+ * Copyright 2018, Momentum Ideas, Co. All rights reserved.
  *
- * Licensed under the Apache License, Version 2.0 (the "License");
- * you may not use this file except in compliance with the License.
- * You may obtain a copy of the License at
- *
- *     http://www.apache.org/licenses/LICENSE-2.0
+ * Source and object computer code contained herein is the private intellectual
+ * property of Momentum Ideas Co., a Delaware Corporation. Use of this
+ * code in source form requires permission in writing before use or the
+ * assembly, distribution, or publishing of derivative works, for commercial
+ * purposes or any other purpose, from a duly authorized officer of Momentum
+ * Ideas Co.
  *
  * Unless required by applicable law or agreed to in writing, software
  * distributed under the License is distributed on an "AS IS" BASIS,
@@ -36,7 +37,7 @@ public final class Accounts {
    * with access in limited capacities.
    * </pre>
    *
-   * Protobuf enum {@code bloombox.schema.ledger.SpecialActor}
+   * Protobuf enum {@code bloombox.ledger.SpecialActor}
    */
   public enum SpecialActor
       implements com.google.protobuf.ProtocolMessageEnum {
@@ -146,11 +147,11 @@ public final class Accounts {
       this.value = value;
     }
 
-    // @@protoc_insertion_point(enum_scope:bloombox.schema.ledger.SpecialActor)
+    // @@protoc_insertion_point(enum_scope:bloombox.ledger.SpecialActor)
   }
 
   public interface ActorCertificateOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:bloombox.schema.ledger.ActorCertificate)
+      // @@protoc_insertion_point(interface_extends:bloombox.ledger.ActorCertificate)
       com.google.protobuf.MessageOrBuilder {
 
     /**
@@ -194,7 +195,7 @@ public final class Accounts {
      * Cryptographic fingerprint of the transmitted certificate data.
      * </pre>
      *
-     * <code>.opencannabis.crypto.primitives.integrity.Hash fingerprint = 3;</code>
+     * <code>.opencannabis.crypto.Hash fingerprint = 3;</code>
      */
     boolean hasFingerprint();
     /**
@@ -202,7 +203,7 @@ public final class Accounts {
      * Cryptographic fingerprint of the transmitted certificate data.
      * </pre>
      *
-     * <code>.opencannabis.crypto.primitives.integrity.Hash fingerprint = 3;</code>
+     * <code>.opencannabis.crypto.Hash fingerprint = 3;</code>
      */
     io.opencannabis.schema.crypto.primitives.integrity.Hash getFingerprint();
     /**
@@ -210,7 +211,7 @@ public final class Accounts {
      * Cryptographic fingerprint of the transmitted certificate data.
      * </pre>
      *
-     * <code>.opencannabis.crypto.primitives.integrity.Hash fingerprint = 3;</code>
+     * <code>.opencannabis.crypto.Hash fingerprint = 3;</code>
      */
     io.opencannabis.schema.crypto.primitives.integrity.HashOrBuilder getFingerprintOrBuilder();
 
@@ -285,11 +286,11 @@ public final class Accounts {
    * the actor's ledger key, and certified by the ledger actor CA.
    * </pre>
    *
-   * Protobuf type {@code bloombox.schema.ledger.ActorCertificate}
+   * Protobuf type {@code bloombox.ledger.ActorCertificate}
    */
   public  static final class ActorCertificate extends
       com.google.protobuf.GeneratedMessageV3 implements
-      // @@protoc_insertion_point(message_implements:bloombox.schema.ledger.ActorCertificate)
+      // @@protoc_insertion_point(message_implements:bloombox.ledger.ActorCertificate)
       ActorCertificateOrBuilder {
   private static final long serialVersionUID = 0L;
     // Use ActorCertificate.newBuilder() to construct.
@@ -327,13 +328,6 @@ public final class Accounts {
             case 0:
               done = true;
               break;
-            default: {
-              if (!parseUnknownFieldProto3(
-                  input, unknownFields, extensionRegistry, tag)) {
-                done = true;
-              }
-              break;
-            }
             case 10: {
               java.lang.String s = input.readStringRequireUtf8();
 
@@ -382,6 +376,13 @@ public final class Accounts {
               payload_ = s;
               break;
             }
+            default: {
+              if (!parseUnknownFieldProto3(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
           }
         }
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
@@ -396,12 +397,13 @@ public final class Accounts {
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return io.bloombox.schema.ledger.Accounts.internal_static_bloombox_schema_ledger_ActorCertificate_descriptor;
+      return io.bloombox.schema.ledger.Accounts.internal_static_bloombox_ledger_ActorCertificate_descriptor;
     }
 
+    @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return io.bloombox.schema.ledger.Accounts.internal_static_bloombox_schema_ledger_ActorCertificate_fieldAccessorTable
+      return io.bloombox.schema.ledger.Accounts.internal_static_bloombox_ledger_ActorCertificate_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
               io.bloombox.schema.ledger.Accounts.ActorCertificate.class, io.bloombox.schema.ledger.Accounts.ActorCertificate.Builder.class);
     }
@@ -535,7 +537,7 @@ public final class Accounts {
      * Cryptographic fingerprint of the transmitted certificate data.
      * </pre>
      *
-     * <code>.opencannabis.crypto.primitives.integrity.Hash fingerprint = 3;</code>
+     * <code>.opencannabis.crypto.Hash fingerprint = 3;</code>
      */
     public boolean hasFingerprint() {
       return fingerprint_ != null;
@@ -545,7 +547,7 @@ public final class Accounts {
      * Cryptographic fingerprint of the transmitted certificate data.
      * </pre>
      *
-     * <code>.opencannabis.crypto.primitives.integrity.Hash fingerprint = 3;</code>
+     * <code>.opencannabis.crypto.Hash fingerprint = 3;</code>
      */
     public io.opencannabis.schema.crypto.primitives.integrity.Hash getFingerprint() {
       return fingerprint_ == null ? io.opencannabis.schema.crypto.primitives.integrity.Hash.getDefaultInstance() : fingerprint_;
@@ -555,7 +557,7 @@ public final class Accounts {
      * Cryptographic fingerprint of the transmitted certificate data.
      * </pre>
      *
-     * <code>.opencannabis.crypto.primitives.integrity.Hash fingerprint = 3;</code>
+     * <code>.opencannabis.crypto.Hash fingerprint = 3;</code>
      */
     public io.opencannabis.schema.crypto.primitives.integrity.HashOrBuilder getFingerprintOrBuilder() {
       return getFingerprint();
@@ -712,6 +714,7 @@ public final class Accounts {
     }
 
     private byte memoizedIsInitialized = -1;
+    @java.lang.Override
     public final boolean isInitialized() {
       byte isInitialized = memoizedIsInitialized;
       if (isInitialized == 1) return true;
@@ -721,6 +724,7 @@ public final class Accounts {
       return true;
     }
 
+    @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
       if (!getIdBytes().isEmpty()) {
@@ -748,6 +752,7 @@ public final class Accounts {
       unknownFields.writeTo(output);
     }
 
+    @java.lang.Override
     public int getSerializedSize() {
       int size = memoizedSize;
       if (size != -1) return size;
@@ -931,6 +936,7 @@ public final class Accounts {
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
 
+    @java.lang.Override
     public Builder newBuilderForType() { return newBuilder(); }
     public static Builder newBuilder() {
       return DEFAULT_INSTANCE.toBuilder();
@@ -938,6 +944,7 @@ public final class Accounts {
     public static Builder newBuilder(io.bloombox.schema.ledger.Accounts.ActorCertificate prototype) {
       return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
     }
+    @java.lang.Override
     public Builder toBuilder() {
       return this == DEFAULT_INSTANCE
           ? new Builder() : new Builder().mergeFrom(this);
@@ -955,20 +962,21 @@ public final class Accounts {
      * the actor's ledger key, and certified by the ledger actor CA.
      * </pre>
      *
-     * Protobuf type {@code bloombox.schema.ledger.ActorCertificate}
+     * Protobuf type {@code bloombox.ledger.ActorCertificate}
      */
     public static final class Builder extends
         com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:bloombox.schema.ledger.ActorCertificate)
+        // @@protoc_insertion_point(builder_implements:bloombox.ledger.ActorCertificate)
         io.bloombox.schema.ledger.Accounts.ActorCertificateOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return io.bloombox.schema.ledger.Accounts.internal_static_bloombox_schema_ledger_ActorCertificate_descriptor;
+        return io.bloombox.schema.ledger.Accounts.internal_static_bloombox_ledger_ActorCertificate_descriptor;
       }
 
+      @java.lang.Override
       protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return io.bloombox.schema.ledger.Accounts.internal_static_bloombox_schema_ledger_ActorCertificate_fieldAccessorTable
+        return io.bloombox.schema.ledger.Accounts.internal_static_bloombox_ledger_ActorCertificate_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
                 io.bloombox.schema.ledger.Accounts.ActorCertificate.class, io.bloombox.schema.ledger.Accounts.ActorCertificate.Builder.class);
       }
@@ -988,6 +996,7 @@ public final class Accounts {
                 .alwaysUseFieldBuilders) {
         }
       }
+      @java.lang.Override
       public Builder clear() {
         super.clear();
         id_ = "";
@@ -1009,15 +1018,18 @@ public final class Accounts {
         return this;
       }
 
+      @java.lang.Override
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return io.bloombox.schema.ledger.Accounts.internal_static_bloombox_schema_ledger_ActorCertificate_descriptor;
+        return io.bloombox.schema.ledger.Accounts.internal_static_bloombox_ledger_ActorCertificate_descriptor;
       }
 
+      @java.lang.Override
       public io.bloombox.schema.ledger.Accounts.ActorCertificate getDefaultInstanceForType() {
         return io.bloombox.schema.ledger.Accounts.ActorCertificate.getDefaultInstance();
       }
 
+      @java.lang.Override
       public io.bloombox.schema.ledger.Accounts.ActorCertificate build() {
         io.bloombox.schema.ledger.Accounts.ActorCertificate result = buildPartial();
         if (!result.isInitialized()) {
@@ -1026,6 +1038,7 @@ public final class Accounts {
         return result;
       }
 
+      @java.lang.Override
       public io.bloombox.schema.ledger.Accounts.ActorCertificate buildPartial() {
         io.bloombox.schema.ledger.Accounts.ActorCertificate result = new io.bloombox.schema.ledger.Accounts.ActorCertificate(this);
         result.id_ = id_;
@@ -1048,32 +1061,39 @@ public final class Accounts {
         return result;
       }
 
+      @java.lang.Override
       public Builder clone() {
         return (Builder) super.clone();
       }
+      @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
         return (Builder) super.setField(field, value);
       }
+      @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
         return (Builder) super.clearField(field);
       }
+      @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
         return (Builder) super.clearOneof(oneof);
       }
+      @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
         return (Builder) super.setRepeatedField(field, index, value);
       }
+      @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
         return (Builder) super.addRepeatedField(field, value);
       }
+      @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
         if (other instanceof io.bloombox.schema.ledger.Accounts.ActorCertificate) {
           return mergeFrom((io.bloombox.schema.ledger.Accounts.ActorCertificate)other);
@@ -1124,10 +1144,12 @@ public final class Accounts {
         return this;
       }
 
+      @java.lang.Override
       public final boolean isInitialized() {
         return true;
       }
 
+      @java.lang.Override
       public Builder mergeFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -1347,7 +1369,7 @@ public final class Accounts {
        * Cryptographic fingerprint of the transmitted certificate data.
        * </pre>
        *
-       * <code>.opencannabis.crypto.primitives.integrity.Hash fingerprint = 3;</code>
+       * <code>.opencannabis.crypto.Hash fingerprint = 3;</code>
        */
       public boolean hasFingerprint() {
         return fingerprintBuilder_ != null || fingerprint_ != null;
@@ -1357,7 +1379,7 @@ public final class Accounts {
        * Cryptographic fingerprint of the transmitted certificate data.
        * </pre>
        *
-       * <code>.opencannabis.crypto.primitives.integrity.Hash fingerprint = 3;</code>
+       * <code>.opencannabis.crypto.Hash fingerprint = 3;</code>
        */
       public io.opencannabis.schema.crypto.primitives.integrity.Hash getFingerprint() {
         if (fingerprintBuilder_ == null) {
@@ -1371,7 +1393,7 @@ public final class Accounts {
        * Cryptographic fingerprint of the transmitted certificate data.
        * </pre>
        *
-       * <code>.opencannabis.crypto.primitives.integrity.Hash fingerprint = 3;</code>
+       * <code>.opencannabis.crypto.Hash fingerprint = 3;</code>
        */
       public Builder setFingerprint(io.opencannabis.schema.crypto.primitives.integrity.Hash value) {
         if (fingerprintBuilder_ == null) {
@@ -1391,7 +1413,7 @@ public final class Accounts {
        * Cryptographic fingerprint of the transmitted certificate data.
        * </pre>
        *
-       * <code>.opencannabis.crypto.primitives.integrity.Hash fingerprint = 3;</code>
+       * <code>.opencannabis.crypto.Hash fingerprint = 3;</code>
        */
       public Builder setFingerprint(
           io.opencannabis.schema.crypto.primitives.integrity.Hash.Builder builderForValue) {
@@ -1409,7 +1431,7 @@ public final class Accounts {
        * Cryptographic fingerprint of the transmitted certificate data.
        * </pre>
        *
-       * <code>.opencannabis.crypto.primitives.integrity.Hash fingerprint = 3;</code>
+       * <code>.opencannabis.crypto.Hash fingerprint = 3;</code>
        */
       public Builder mergeFingerprint(io.opencannabis.schema.crypto.primitives.integrity.Hash value) {
         if (fingerprintBuilder_ == null) {
@@ -1431,7 +1453,7 @@ public final class Accounts {
        * Cryptographic fingerprint of the transmitted certificate data.
        * </pre>
        *
-       * <code>.opencannabis.crypto.primitives.integrity.Hash fingerprint = 3;</code>
+       * <code>.opencannabis.crypto.Hash fingerprint = 3;</code>
        */
       public Builder clearFingerprint() {
         if (fingerprintBuilder_ == null) {
@@ -1449,7 +1471,7 @@ public final class Accounts {
        * Cryptographic fingerprint of the transmitted certificate data.
        * </pre>
        *
-       * <code>.opencannabis.crypto.primitives.integrity.Hash fingerprint = 3;</code>
+       * <code>.opencannabis.crypto.Hash fingerprint = 3;</code>
        */
       public io.opencannabis.schema.crypto.primitives.integrity.Hash.Builder getFingerprintBuilder() {
         
@@ -1461,7 +1483,7 @@ public final class Accounts {
        * Cryptographic fingerprint of the transmitted certificate data.
        * </pre>
        *
-       * <code>.opencannabis.crypto.primitives.integrity.Hash fingerprint = 3;</code>
+       * <code>.opencannabis.crypto.Hash fingerprint = 3;</code>
        */
       public io.opencannabis.schema.crypto.primitives.integrity.HashOrBuilder getFingerprintOrBuilder() {
         if (fingerprintBuilder_ != null) {
@@ -1476,7 +1498,7 @@ public final class Accounts {
        * Cryptographic fingerprint of the transmitted certificate data.
        * </pre>
        *
-       * <code>.opencannabis.crypto.primitives.integrity.Hash fingerprint = 3;</code>
+       * <code>.opencannabis.crypto.Hash fingerprint = 3;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
           io.opencannabis.schema.crypto.primitives.integrity.Hash, io.opencannabis.schema.crypto.primitives.integrity.Hash.Builder, io.opencannabis.schema.crypto.primitives.integrity.HashOrBuilder> 
@@ -1814,21 +1836,23 @@ public final class Accounts {
         onChanged();
         return this;
       }
+      @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
         return super.setUnknownFieldsProto3(unknownFields);
       }
 
+      @java.lang.Override
       public final Builder mergeUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
         return super.mergeUnknownFields(unknownFields);
       }
 
 
-      // @@protoc_insertion_point(builder_scope:bloombox.schema.ledger.ActorCertificate)
+      // @@protoc_insertion_point(builder_scope:bloombox.ledger.ActorCertificate)
     }
 
-    // @@protoc_insertion_point(class_scope:bloombox.schema.ledger.ActorCertificate)
+    // @@protoc_insertion_point(class_scope:bloombox.ledger.ActorCertificate)
     private static final io.bloombox.schema.ledger.Accounts.ActorCertificate DEFAULT_INSTANCE;
     static {
       DEFAULT_INSTANCE = new io.bloombox.schema.ledger.Accounts.ActorCertificate();
@@ -1840,6 +1864,7 @@ public final class Accounts {
 
     private static final com.google.protobuf.Parser<ActorCertificate>
         PARSER = new com.google.protobuf.AbstractParser<ActorCertificate>() {
+      @java.lang.Override
       public ActorCertificate parsePartialFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -1857,6 +1882,7 @@ public final class Accounts {
       return PARSER;
     }
 
+    @java.lang.Override
     public io.bloombox.schema.ledger.Accounts.ActorCertificate getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
@@ -1864,7 +1890,7 @@ public final class Accounts {
   }
 
   public interface ActorKeyOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:bloombox.schema.ledger.ActorKey)
+      // @@protoc_insertion_point(interface_extends:bloombox.ledger.ActorKey)
       com.google.protobuf.MessageOrBuilder {
 
     /**
@@ -1872,7 +1898,7 @@ public final class Accounts {
      * Specifies a system account, such as reconciliation or sandbox access.
      * </pre>
      *
-     * <code>.bloombox.schema.ledger.SpecialActor known = 1;</code>
+     * <code>.bloombox.ledger.SpecialActor known = 1;</code>
      */
     int getKnownValue();
     /**
@@ -1880,7 +1906,7 @@ public final class Accounts {
      * Specifies a system account, such as reconciliation or sandbox access.
      * </pre>
      *
-     * <code>.bloombox.schema.ledger.SpecialActor known = 1;</code>
+     * <code>.bloombox.ledger.SpecialActor known = 1;</code>
      */
     io.bloombox.schema.ledger.Accounts.SpecialActor getKnown();
 
@@ -1889,7 +1915,7 @@ public final class Accounts {
      * Specifies a user as the identity behind a particular ledger account.
      * </pre>
      *
-     * <code>.bloombox.schema.identity.UserKey user = 10;</code>
+     * <code>.bloombox.identity.UserKey user = 10;</code>
      */
     boolean hasUser();
     /**
@@ -1897,7 +1923,7 @@ public final class Accounts {
      * Specifies a user as the identity behind a particular ledger account.
      * </pre>
      *
-     * <code>.bloombox.schema.identity.UserKey user = 10;</code>
+     * <code>.bloombox.identity.UserKey user = 10;</code>
      */
     io.bloombox.schema.identity.AppUserKey.UserKey getUser();
     /**
@@ -1905,7 +1931,7 @@ public final class Accounts {
      * Specifies a user as the identity behind a particular ledger account.
      * </pre>
      *
-     * <code>.bloombox.schema.identity.UserKey user = 10;</code>
+     * <code>.bloombox.identity.UserKey user = 10;</code>
      */
     io.bloombox.schema.identity.AppUserKey.UserKeyOrBuilder getUserOrBuilder();
 
@@ -1914,7 +1940,7 @@ public final class Accounts {
      * Specifies a partner organization as the identity behind a particular ledger account.
      * </pre>
      *
-     * <code>.bloombox.schema.partner.PartnerKey partner = 20;</code>
+     * <code>.bloombox.partner.PartnerKey partner = 20;</code>
      */
     boolean hasPartner();
     /**
@@ -1922,7 +1948,7 @@ public final class Accounts {
      * Specifies a partner organization as the identity behind a particular ledger account.
      * </pre>
      *
-     * <code>.bloombox.schema.partner.PartnerKey partner = 20;</code>
+     * <code>.bloombox.partner.PartnerKey partner = 20;</code>
      */
     io.bloombox.schema.partner.PartnerMeta.PartnerKey getPartner();
     /**
@@ -1930,7 +1956,7 @@ public final class Accounts {
      * Specifies a partner organization as the identity behind a particular ledger account.
      * </pre>
      *
-     * <code>.bloombox.schema.partner.PartnerKey partner = 20;</code>
+     * <code>.bloombox.partner.PartnerKey partner = 20;</code>
      */
     io.bloombox.schema.partner.PartnerMeta.PartnerKeyOrBuilder getPartnerOrBuilder();
 
@@ -1939,7 +1965,7 @@ public final class Accounts {
      * Specifies a partner location as the identity behind a particular ledger account.
      * </pre>
      *
-     * <code>.bloombox.schema.partner.LocationKey location = 30;</code>
+     * <code>.bloombox.partner.LocationKey location = 30;</code>
      */
     boolean hasLocation();
     /**
@@ -1947,7 +1973,7 @@ public final class Accounts {
      * Specifies a partner location as the identity behind a particular ledger account.
      * </pre>
      *
-     * <code>.bloombox.schema.partner.LocationKey location = 30;</code>
+     * <code>.bloombox.partner.LocationKey location = 30;</code>
      */
     io.bloombox.schema.partner.LocationAccountKey.LocationKey getLocation();
     /**
@@ -1955,7 +1981,7 @@ public final class Accounts {
      * Specifies a partner location as the identity behind a particular ledger account.
      * </pre>
      *
-     * <code>.bloombox.schema.partner.LocationKey location = 30;</code>
+     * <code>.bloombox.partner.LocationKey location = 30;</code>
      */
     io.bloombox.schema.partner.LocationAccountKey.LocationKeyOrBuilder getLocationOrBuilder();
 
@@ -1967,11 +1993,11 @@ public final class Accounts {
    * structure, such that either may easily be the basis for a ledger transaction.
    * </pre>
    *
-   * Protobuf type {@code bloombox.schema.ledger.ActorKey}
+   * Protobuf type {@code bloombox.ledger.ActorKey}
    */
   public  static final class ActorKey extends
       com.google.protobuf.GeneratedMessageV3 implements
-      // @@protoc_insertion_point(message_implements:bloombox.schema.ledger.ActorKey)
+      // @@protoc_insertion_point(message_implements:bloombox.ledger.ActorKey)
       ActorKeyOrBuilder {
   private static final long serialVersionUID = 0L;
     // Use ActorKey.newBuilder() to construct.
@@ -2005,13 +2031,6 @@ public final class Accounts {
             case 0:
               done = true;
               break;
-            default: {
-              if (!parseUnknownFieldProto3(
-                  input, unknownFields, extensionRegistry, tag)) {
-                done = true;
-              }
-              break;
-            }
             case 8: {
               int rawValue = input.readEnum();
               actorCase_ = 1;
@@ -2060,6 +2079,13 @@ public final class Accounts {
               actorCase_ = 30;
               break;
             }
+            default: {
+              if (!parseUnknownFieldProto3(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
           }
         }
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
@@ -2074,12 +2100,13 @@ public final class Accounts {
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return io.bloombox.schema.ledger.Accounts.internal_static_bloombox_schema_ledger_ActorKey_descriptor;
+      return io.bloombox.schema.ledger.Accounts.internal_static_bloombox_ledger_ActorKey_descriptor;
     }
 
+    @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return io.bloombox.schema.ledger.Accounts.internal_static_bloombox_schema_ledger_ActorKey_fieldAccessorTable
+      return io.bloombox.schema.ledger.Accounts.internal_static_bloombox_ledger_ActorKey_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
               io.bloombox.schema.ledger.Accounts.ActorKey.class, io.bloombox.schema.ledger.Accounts.ActorKey.Builder.class);
     }
@@ -2132,7 +2159,7 @@ public final class Accounts {
      * Specifies a system account, such as reconciliation or sandbox access.
      * </pre>
      *
-     * <code>.bloombox.schema.ledger.SpecialActor known = 1;</code>
+     * <code>.bloombox.ledger.SpecialActor known = 1;</code>
      */
     public int getKnownValue() {
       if (actorCase_ == 1) {
@@ -2145,10 +2172,11 @@ public final class Accounts {
      * Specifies a system account, such as reconciliation or sandbox access.
      * </pre>
      *
-     * <code>.bloombox.schema.ledger.SpecialActor known = 1;</code>
+     * <code>.bloombox.ledger.SpecialActor known = 1;</code>
      */
     public io.bloombox.schema.ledger.Accounts.SpecialActor getKnown() {
       if (actorCase_ == 1) {
+        @SuppressWarnings("deprecation")
         io.bloombox.schema.ledger.Accounts.SpecialActor result = io.bloombox.schema.ledger.Accounts.SpecialActor.valueOf(
             (java.lang.Integer) actor_);
         return result == null ? io.bloombox.schema.ledger.Accounts.SpecialActor.UNRECOGNIZED : result;
@@ -2162,7 +2190,7 @@ public final class Accounts {
      * Specifies a user as the identity behind a particular ledger account.
      * </pre>
      *
-     * <code>.bloombox.schema.identity.UserKey user = 10;</code>
+     * <code>.bloombox.identity.UserKey user = 10;</code>
      */
     public boolean hasUser() {
       return actorCase_ == 10;
@@ -2172,7 +2200,7 @@ public final class Accounts {
      * Specifies a user as the identity behind a particular ledger account.
      * </pre>
      *
-     * <code>.bloombox.schema.identity.UserKey user = 10;</code>
+     * <code>.bloombox.identity.UserKey user = 10;</code>
      */
     public io.bloombox.schema.identity.AppUserKey.UserKey getUser() {
       if (actorCase_ == 10) {
@@ -2185,7 +2213,7 @@ public final class Accounts {
      * Specifies a user as the identity behind a particular ledger account.
      * </pre>
      *
-     * <code>.bloombox.schema.identity.UserKey user = 10;</code>
+     * <code>.bloombox.identity.UserKey user = 10;</code>
      */
     public io.bloombox.schema.identity.AppUserKey.UserKeyOrBuilder getUserOrBuilder() {
       if (actorCase_ == 10) {
@@ -2200,7 +2228,7 @@ public final class Accounts {
      * Specifies a partner organization as the identity behind a particular ledger account.
      * </pre>
      *
-     * <code>.bloombox.schema.partner.PartnerKey partner = 20;</code>
+     * <code>.bloombox.partner.PartnerKey partner = 20;</code>
      */
     public boolean hasPartner() {
       return actorCase_ == 20;
@@ -2210,7 +2238,7 @@ public final class Accounts {
      * Specifies a partner organization as the identity behind a particular ledger account.
      * </pre>
      *
-     * <code>.bloombox.schema.partner.PartnerKey partner = 20;</code>
+     * <code>.bloombox.partner.PartnerKey partner = 20;</code>
      */
     public io.bloombox.schema.partner.PartnerMeta.PartnerKey getPartner() {
       if (actorCase_ == 20) {
@@ -2223,7 +2251,7 @@ public final class Accounts {
      * Specifies a partner organization as the identity behind a particular ledger account.
      * </pre>
      *
-     * <code>.bloombox.schema.partner.PartnerKey partner = 20;</code>
+     * <code>.bloombox.partner.PartnerKey partner = 20;</code>
      */
     public io.bloombox.schema.partner.PartnerMeta.PartnerKeyOrBuilder getPartnerOrBuilder() {
       if (actorCase_ == 20) {
@@ -2238,7 +2266,7 @@ public final class Accounts {
      * Specifies a partner location as the identity behind a particular ledger account.
      * </pre>
      *
-     * <code>.bloombox.schema.partner.LocationKey location = 30;</code>
+     * <code>.bloombox.partner.LocationKey location = 30;</code>
      */
     public boolean hasLocation() {
       return actorCase_ == 30;
@@ -2248,7 +2276,7 @@ public final class Accounts {
      * Specifies a partner location as the identity behind a particular ledger account.
      * </pre>
      *
-     * <code>.bloombox.schema.partner.LocationKey location = 30;</code>
+     * <code>.bloombox.partner.LocationKey location = 30;</code>
      */
     public io.bloombox.schema.partner.LocationAccountKey.LocationKey getLocation() {
       if (actorCase_ == 30) {
@@ -2261,7 +2289,7 @@ public final class Accounts {
      * Specifies a partner location as the identity behind a particular ledger account.
      * </pre>
      *
-     * <code>.bloombox.schema.partner.LocationKey location = 30;</code>
+     * <code>.bloombox.partner.LocationKey location = 30;</code>
      */
     public io.bloombox.schema.partner.LocationAccountKey.LocationKeyOrBuilder getLocationOrBuilder() {
       if (actorCase_ == 30) {
@@ -2271,6 +2299,7 @@ public final class Accounts {
     }
 
     private byte memoizedIsInitialized = -1;
+    @java.lang.Override
     public final boolean isInitialized() {
       byte isInitialized = memoizedIsInitialized;
       if (isInitialized == 1) return true;
@@ -2280,6 +2309,7 @@ public final class Accounts {
       return true;
     }
 
+    @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
       if (actorCase_ == 1) {
@@ -2297,6 +2327,7 @@ public final class Accounts {
       unknownFields.writeTo(output);
     }
 
+    @java.lang.Override
     public int getSerializedSize() {
       int size = memoizedSize;
       if (size != -1) return size;
@@ -2463,6 +2494,7 @@ public final class Accounts {
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
 
+    @java.lang.Override
     public Builder newBuilderForType() { return newBuilder(); }
     public static Builder newBuilder() {
       return DEFAULT_INSTANCE.toBuilder();
@@ -2470,6 +2502,7 @@ public final class Accounts {
     public static Builder newBuilder(io.bloombox.schema.ledger.Accounts.ActorKey prototype) {
       return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
     }
+    @java.lang.Override
     public Builder toBuilder() {
       return this == DEFAULT_INSTANCE
           ? new Builder() : new Builder().mergeFrom(this);
@@ -2487,20 +2520,21 @@ public final class Accounts {
      * structure, such that either may easily be the basis for a ledger transaction.
      * </pre>
      *
-     * Protobuf type {@code bloombox.schema.ledger.ActorKey}
+     * Protobuf type {@code bloombox.ledger.ActorKey}
      */
     public static final class Builder extends
         com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:bloombox.schema.ledger.ActorKey)
+        // @@protoc_insertion_point(builder_implements:bloombox.ledger.ActorKey)
         io.bloombox.schema.ledger.Accounts.ActorKeyOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return io.bloombox.schema.ledger.Accounts.internal_static_bloombox_schema_ledger_ActorKey_descriptor;
+        return io.bloombox.schema.ledger.Accounts.internal_static_bloombox_ledger_ActorKey_descriptor;
       }
 
+      @java.lang.Override
       protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return io.bloombox.schema.ledger.Accounts.internal_static_bloombox_schema_ledger_ActorKey_fieldAccessorTable
+        return io.bloombox.schema.ledger.Accounts.internal_static_bloombox_ledger_ActorKey_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
                 io.bloombox.schema.ledger.Accounts.ActorKey.class, io.bloombox.schema.ledger.Accounts.ActorKey.Builder.class);
       }
@@ -2520,6 +2554,7 @@ public final class Accounts {
                 .alwaysUseFieldBuilders) {
         }
       }
+      @java.lang.Override
       public Builder clear() {
         super.clear();
         actorCase_ = 0;
@@ -2527,15 +2562,18 @@ public final class Accounts {
         return this;
       }
 
+      @java.lang.Override
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return io.bloombox.schema.ledger.Accounts.internal_static_bloombox_schema_ledger_ActorKey_descriptor;
+        return io.bloombox.schema.ledger.Accounts.internal_static_bloombox_ledger_ActorKey_descriptor;
       }
 
+      @java.lang.Override
       public io.bloombox.schema.ledger.Accounts.ActorKey getDefaultInstanceForType() {
         return io.bloombox.schema.ledger.Accounts.ActorKey.getDefaultInstance();
       }
 
+      @java.lang.Override
       public io.bloombox.schema.ledger.Accounts.ActorKey build() {
         io.bloombox.schema.ledger.Accounts.ActorKey result = buildPartial();
         if (!result.isInitialized()) {
@@ -2544,6 +2582,7 @@ public final class Accounts {
         return result;
       }
 
+      @java.lang.Override
       public io.bloombox.schema.ledger.Accounts.ActorKey buildPartial() {
         io.bloombox.schema.ledger.Accounts.ActorKey result = new io.bloombox.schema.ledger.Accounts.ActorKey(this);
         if (actorCase_ == 1) {
@@ -2575,32 +2614,39 @@ public final class Accounts {
         return result;
       }
 
+      @java.lang.Override
       public Builder clone() {
         return (Builder) super.clone();
       }
+      @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
         return (Builder) super.setField(field, value);
       }
+      @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
         return (Builder) super.clearField(field);
       }
+      @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
         return (Builder) super.clearOneof(oneof);
       }
+      @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
         return (Builder) super.setRepeatedField(field, index, value);
       }
+      @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
         return (Builder) super.addRepeatedField(field, value);
       }
+      @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
         if (other instanceof io.bloombox.schema.ledger.Accounts.ActorKey) {
           return mergeFrom((io.bloombox.schema.ledger.Accounts.ActorKey)other);
@@ -2638,10 +2684,12 @@ public final class Accounts {
         return this;
       }
 
+      @java.lang.Override
       public final boolean isInitialized() {
         return true;
       }
 
+      @java.lang.Override
       public Builder mergeFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -2680,7 +2728,7 @@ public final class Accounts {
        * Specifies a system account, such as reconciliation or sandbox access.
        * </pre>
        *
-       * <code>.bloombox.schema.ledger.SpecialActor known = 1;</code>
+       * <code>.bloombox.ledger.SpecialActor known = 1;</code>
        */
       public int getKnownValue() {
         if (actorCase_ == 1) {
@@ -2693,7 +2741,7 @@ public final class Accounts {
        * Specifies a system account, such as reconciliation or sandbox access.
        * </pre>
        *
-       * <code>.bloombox.schema.ledger.SpecialActor known = 1;</code>
+       * <code>.bloombox.ledger.SpecialActor known = 1;</code>
        */
       public Builder setKnownValue(int value) {
         actorCase_ = 1;
@@ -2706,10 +2754,11 @@ public final class Accounts {
        * Specifies a system account, such as reconciliation or sandbox access.
        * </pre>
        *
-       * <code>.bloombox.schema.ledger.SpecialActor known = 1;</code>
+       * <code>.bloombox.ledger.SpecialActor known = 1;</code>
        */
       public io.bloombox.schema.ledger.Accounts.SpecialActor getKnown() {
         if (actorCase_ == 1) {
+          @SuppressWarnings("deprecation")
           io.bloombox.schema.ledger.Accounts.SpecialActor result = io.bloombox.schema.ledger.Accounts.SpecialActor.valueOf(
               (java.lang.Integer) actor_);
           return result == null ? io.bloombox.schema.ledger.Accounts.SpecialActor.UNRECOGNIZED : result;
@@ -2721,7 +2770,7 @@ public final class Accounts {
        * Specifies a system account, such as reconciliation or sandbox access.
        * </pre>
        *
-       * <code>.bloombox.schema.ledger.SpecialActor known = 1;</code>
+       * <code>.bloombox.ledger.SpecialActor known = 1;</code>
        */
       public Builder setKnown(io.bloombox.schema.ledger.Accounts.SpecialActor value) {
         if (value == null) {
@@ -2737,7 +2786,7 @@ public final class Accounts {
        * Specifies a system account, such as reconciliation or sandbox access.
        * </pre>
        *
-       * <code>.bloombox.schema.ledger.SpecialActor known = 1;</code>
+       * <code>.bloombox.ledger.SpecialActor known = 1;</code>
        */
       public Builder clearKnown() {
         if (actorCase_ == 1) {
@@ -2755,7 +2804,7 @@ public final class Accounts {
        * Specifies a user as the identity behind a particular ledger account.
        * </pre>
        *
-       * <code>.bloombox.schema.identity.UserKey user = 10;</code>
+       * <code>.bloombox.identity.UserKey user = 10;</code>
        */
       public boolean hasUser() {
         return actorCase_ == 10;
@@ -2765,7 +2814,7 @@ public final class Accounts {
        * Specifies a user as the identity behind a particular ledger account.
        * </pre>
        *
-       * <code>.bloombox.schema.identity.UserKey user = 10;</code>
+       * <code>.bloombox.identity.UserKey user = 10;</code>
        */
       public io.bloombox.schema.identity.AppUserKey.UserKey getUser() {
         if (userBuilder_ == null) {
@@ -2785,7 +2834,7 @@ public final class Accounts {
        * Specifies a user as the identity behind a particular ledger account.
        * </pre>
        *
-       * <code>.bloombox.schema.identity.UserKey user = 10;</code>
+       * <code>.bloombox.identity.UserKey user = 10;</code>
        */
       public Builder setUser(io.bloombox.schema.identity.AppUserKey.UserKey value) {
         if (userBuilder_ == null) {
@@ -2805,7 +2854,7 @@ public final class Accounts {
        * Specifies a user as the identity behind a particular ledger account.
        * </pre>
        *
-       * <code>.bloombox.schema.identity.UserKey user = 10;</code>
+       * <code>.bloombox.identity.UserKey user = 10;</code>
        */
       public Builder setUser(
           io.bloombox.schema.identity.AppUserKey.UserKey.Builder builderForValue) {
@@ -2823,7 +2872,7 @@ public final class Accounts {
        * Specifies a user as the identity behind a particular ledger account.
        * </pre>
        *
-       * <code>.bloombox.schema.identity.UserKey user = 10;</code>
+       * <code>.bloombox.identity.UserKey user = 10;</code>
        */
       public Builder mergeUser(io.bloombox.schema.identity.AppUserKey.UserKey value) {
         if (userBuilder_ == null) {
@@ -2849,7 +2898,7 @@ public final class Accounts {
        * Specifies a user as the identity behind a particular ledger account.
        * </pre>
        *
-       * <code>.bloombox.schema.identity.UserKey user = 10;</code>
+       * <code>.bloombox.identity.UserKey user = 10;</code>
        */
       public Builder clearUser() {
         if (userBuilder_ == null) {
@@ -2872,7 +2921,7 @@ public final class Accounts {
        * Specifies a user as the identity behind a particular ledger account.
        * </pre>
        *
-       * <code>.bloombox.schema.identity.UserKey user = 10;</code>
+       * <code>.bloombox.identity.UserKey user = 10;</code>
        */
       public io.bloombox.schema.identity.AppUserKey.UserKey.Builder getUserBuilder() {
         return getUserFieldBuilder().getBuilder();
@@ -2882,7 +2931,7 @@ public final class Accounts {
        * Specifies a user as the identity behind a particular ledger account.
        * </pre>
        *
-       * <code>.bloombox.schema.identity.UserKey user = 10;</code>
+       * <code>.bloombox.identity.UserKey user = 10;</code>
        */
       public io.bloombox.schema.identity.AppUserKey.UserKeyOrBuilder getUserOrBuilder() {
         if ((actorCase_ == 10) && (userBuilder_ != null)) {
@@ -2899,7 +2948,7 @@ public final class Accounts {
        * Specifies a user as the identity behind a particular ledger account.
        * </pre>
        *
-       * <code>.bloombox.schema.identity.UserKey user = 10;</code>
+       * <code>.bloombox.identity.UserKey user = 10;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
           io.bloombox.schema.identity.AppUserKey.UserKey, io.bloombox.schema.identity.AppUserKey.UserKey.Builder, io.bloombox.schema.identity.AppUserKey.UserKeyOrBuilder> 
@@ -2927,7 +2976,7 @@ public final class Accounts {
        * Specifies a partner organization as the identity behind a particular ledger account.
        * </pre>
        *
-       * <code>.bloombox.schema.partner.PartnerKey partner = 20;</code>
+       * <code>.bloombox.partner.PartnerKey partner = 20;</code>
        */
       public boolean hasPartner() {
         return actorCase_ == 20;
@@ -2937,7 +2986,7 @@ public final class Accounts {
        * Specifies a partner organization as the identity behind a particular ledger account.
        * </pre>
        *
-       * <code>.bloombox.schema.partner.PartnerKey partner = 20;</code>
+       * <code>.bloombox.partner.PartnerKey partner = 20;</code>
        */
       public io.bloombox.schema.partner.PartnerMeta.PartnerKey getPartner() {
         if (partnerBuilder_ == null) {
@@ -2957,7 +3006,7 @@ public final class Accounts {
        * Specifies a partner organization as the identity behind a particular ledger account.
        * </pre>
        *
-       * <code>.bloombox.schema.partner.PartnerKey partner = 20;</code>
+       * <code>.bloombox.partner.PartnerKey partner = 20;</code>
        */
       public Builder setPartner(io.bloombox.schema.partner.PartnerMeta.PartnerKey value) {
         if (partnerBuilder_ == null) {
@@ -2977,7 +3026,7 @@ public final class Accounts {
        * Specifies a partner organization as the identity behind a particular ledger account.
        * </pre>
        *
-       * <code>.bloombox.schema.partner.PartnerKey partner = 20;</code>
+       * <code>.bloombox.partner.PartnerKey partner = 20;</code>
        */
       public Builder setPartner(
           io.bloombox.schema.partner.PartnerMeta.PartnerKey.Builder builderForValue) {
@@ -2995,7 +3044,7 @@ public final class Accounts {
        * Specifies a partner organization as the identity behind a particular ledger account.
        * </pre>
        *
-       * <code>.bloombox.schema.partner.PartnerKey partner = 20;</code>
+       * <code>.bloombox.partner.PartnerKey partner = 20;</code>
        */
       public Builder mergePartner(io.bloombox.schema.partner.PartnerMeta.PartnerKey value) {
         if (partnerBuilder_ == null) {
@@ -3021,7 +3070,7 @@ public final class Accounts {
        * Specifies a partner organization as the identity behind a particular ledger account.
        * </pre>
        *
-       * <code>.bloombox.schema.partner.PartnerKey partner = 20;</code>
+       * <code>.bloombox.partner.PartnerKey partner = 20;</code>
        */
       public Builder clearPartner() {
         if (partnerBuilder_ == null) {
@@ -3044,7 +3093,7 @@ public final class Accounts {
        * Specifies a partner organization as the identity behind a particular ledger account.
        * </pre>
        *
-       * <code>.bloombox.schema.partner.PartnerKey partner = 20;</code>
+       * <code>.bloombox.partner.PartnerKey partner = 20;</code>
        */
       public io.bloombox.schema.partner.PartnerMeta.PartnerKey.Builder getPartnerBuilder() {
         return getPartnerFieldBuilder().getBuilder();
@@ -3054,7 +3103,7 @@ public final class Accounts {
        * Specifies a partner organization as the identity behind a particular ledger account.
        * </pre>
        *
-       * <code>.bloombox.schema.partner.PartnerKey partner = 20;</code>
+       * <code>.bloombox.partner.PartnerKey partner = 20;</code>
        */
       public io.bloombox.schema.partner.PartnerMeta.PartnerKeyOrBuilder getPartnerOrBuilder() {
         if ((actorCase_ == 20) && (partnerBuilder_ != null)) {
@@ -3071,7 +3120,7 @@ public final class Accounts {
        * Specifies a partner organization as the identity behind a particular ledger account.
        * </pre>
        *
-       * <code>.bloombox.schema.partner.PartnerKey partner = 20;</code>
+       * <code>.bloombox.partner.PartnerKey partner = 20;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
           io.bloombox.schema.partner.PartnerMeta.PartnerKey, io.bloombox.schema.partner.PartnerMeta.PartnerKey.Builder, io.bloombox.schema.partner.PartnerMeta.PartnerKeyOrBuilder> 
@@ -3099,7 +3148,7 @@ public final class Accounts {
        * Specifies a partner location as the identity behind a particular ledger account.
        * </pre>
        *
-       * <code>.bloombox.schema.partner.LocationKey location = 30;</code>
+       * <code>.bloombox.partner.LocationKey location = 30;</code>
        */
       public boolean hasLocation() {
         return actorCase_ == 30;
@@ -3109,7 +3158,7 @@ public final class Accounts {
        * Specifies a partner location as the identity behind a particular ledger account.
        * </pre>
        *
-       * <code>.bloombox.schema.partner.LocationKey location = 30;</code>
+       * <code>.bloombox.partner.LocationKey location = 30;</code>
        */
       public io.bloombox.schema.partner.LocationAccountKey.LocationKey getLocation() {
         if (locationBuilder_ == null) {
@@ -3129,7 +3178,7 @@ public final class Accounts {
        * Specifies a partner location as the identity behind a particular ledger account.
        * </pre>
        *
-       * <code>.bloombox.schema.partner.LocationKey location = 30;</code>
+       * <code>.bloombox.partner.LocationKey location = 30;</code>
        */
       public Builder setLocation(io.bloombox.schema.partner.LocationAccountKey.LocationKey value) {
         if (locationBuilder_ == null) {
@@ -3149,7 +3198,7 @@ public final class Accounts {
        * Specifies a partner location as the identity behind a particular ledger account.
        * </pre>
        *
-       * <code>.bloombox.schema.partner.LocationKey location = 30;</code>
+       * <code>.bloombox.partner.LocationKey location = 30;</code>
        */
       public Builder setLocation(
           io.bloombox.schema.partner.LocationAccountKey.LocationKey.Builder builderForValue) {
@@ -3167,7 +3216,7 @@ public final class Accounts {
        * Specifies a partner location as the identity behind a particular ledger account.
        * </pre>
        *
-       * <code>.bloombox.schema.partner.LocationKey location = 30;</code>
+       * <code>.bloombox.partner.LocationKey location = 30;</code>
        */
       public Builder mergeLocation(io.bloombox.schema.partner.LocationAccountKey.LocationKey value) {
         if (locationBuilder_ == null) {
@@ -3193,7 +3242,7 @@ public final class Accounts {
        * Specifies a partner location as the identity behind a particular ledger account.
        * </pre>
        *
-       * <code>.bloombox.schema.partner.LocationKey location = 30;</code>
+       * <code>.bloombox.partner.LocationKey location = 30;</code>
        */
       public Builder clearLocation() {
         if (locationBuilder_ == null) {
@@ -3216,7 +3265,7 @@ public final class Accounts {
        * Specifies a partner location as the identity behind a particular ledger account.
        * </pre>
        *
-       * <code>.bloombox.schema.partner.LocationKey location = 30;</code>
+       * <code>.bloombox.partner.LocationKey location = 30;</code>
        */
       public io.bloombox.schema.partner.LocationAccountKey.LocationKey.Builder getLocationBuilder() {
         return getLocationFieldBuilder().getBuilder();
@@ -3226,7 +3275,7 @@ public final class Accounts {
        * Specifies a partner location as the identity behind a particular ledger account.
        * </pre>
        *
-       * <code>.bloombox.schema.partner.LocationKey location = 30;</code>
+       * <code>.bloombox.partner.LocationKey location = 30;</code>
        */
       public io.bloombox.schema.partner.LocationAccountKey.LocationKeyOrBuilder getLocationOrBuilder() {
         if ((actorCase_ == 30) && (locationBuilder_ != null)) {
@@ -3243,7 +3292,7 @@ public final class Accounts {
        * Specifies a partner location as the identity behind a particular ledger account.
        * </pre>
        *
-       * <code>.bloombox.schema.partner.LocationKey location = 30;</code>
+       * <code>.bloombox.partner.LocationKey location = 30;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
           io.bloombox.schema.partner.LocationAccountKey.LocationKey, io.bloombox.schema.partner.LocationAccountKey.LocationKey.Builder, io.bloombox.schema.partner.LocationAccountKey.LocationKeyOrBuilder> 
@@ -3263,21 +3312,23 @@ public final class Accounts {
         onChanged();;
         return locationBuilder_;
       }
+      @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
         return super.setUnknownFieldsProto3(unknownFields);
       }
 
+      @java.lang.Override
       public final Builder mergeUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
         return super.mergeUnknownFields(unknownFields);
       }
 
 
-      // @@protoc_insertion_point(builder_scope:bloombox.schema.ledger.ActorKey)
+      // @@protoc_insertion_point(builder_scope:bloombox.ledger.ActorKey)
     }
 
-    // @@protoc_insertion_point(class_scope:bloombox.schema.ledger.ActorKey)
+    // @@protoc_insertion_point(class_scope:bloombox.ledger.ActorKey)
     private static final io.bloombox.schema.ledger.Accounts.ActorKey DEFAULT_INSTANCE;
     static {
       DEFAULT_INSTANCE = new io.bloombox.schema.ledger.Accounts.ActorKey();
@@ -3289,6 +3340,7 @@ public final class Accounts {
 
     private static final com.google.protobuf.Parser<ActorKey>
         PARSER = new com.google.protobuf.AbstractParser<ActorKey>() {
+      @java.lang.Override
       public ActorKey parsePartialFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -3306,6 +3358,7 @@ public final class Accounts {
       return PARSER;
     }
 
+    @java.lang.Override
     public io.bloombox.schema.ledger.Accounts.ActorKey getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
@@ -3313,7 +3366,7 @@ public final class Accounts {
   }
 
   public interface AccountKeyOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:bloombox.schema.ledger.AccountKey)
+      // @@protoc_insertion_point(interface_extends:bloombox.ledger.AccountKey)
       com.google.protobuf.MessageOrBuilder {
 
     /**
@@ -3340,7 +3393,7 @@ public final class Accounts {
      * here (the structure supports it), but usually, it's used for the onboard cryptographic hash of the public key.
      * </pre>
      *
-     * <code>.opencannabis.crypto.primitives.pki.Keypair pair = 2;</code>
+     * <code>.opencannabis.crypto.Keypair pair = 2;</code>
      */
     boolean hasPair();
     /**
@@ -3349,18 +3402,18 @@ public final class Accounts {
      * here (the structure supports it), but usually, it's used for the onboard cryptographic hash of the public key.
      * </pre>
      *
-     * <code>.opencannabis.crypto.primitives.pki.Keypair pair = 2;</code>
+     * <code>.opencannabis.crypto.Keypair pair = 2;</code>
      */
-    io.opencannabis.schema.crypto.primitives.pki.Keypair getPair();
+    io.opencannabis.schema.crypto.primitives.Keypair getPair();
     /**
      * <pre>
      * Reference to the public/private keypair for this ledger account. In rare cases, the private key may be included
      * here (the structure supports it), but usually, it's used for the onboard cryptographic hash of the public key.
      * </pre>
      *
-     * <code>.opencannabis.crypto.primitives.pki.Keypair pair = 2;</code>
+     * <code>.opencannabis.crypto.Keypair pair = 2;</code>
      */
-    io.opencannabis.schema.crypto.primitives.pki.KeypairOrBuilder getPairOrBuilder();
+    io.opencannabis.schema.crypto.primitives.KeypairOrBuilder getPairOrBuilder();
 
     /**
      * <pre>
@@ -3368,7 +3421,7 @@ public final class Accounts {
      * behind organizations or individuals who execute transactions on the ledger.
      * </pre>
      *
-     * <code>.opencannabis.crypto.primitives.pki.Keypair identity = 3;</code>
+     * <code>.opencannabis.crypto.Keypair identity = 3;</code>
      */
     boolean hasIdentity();
     /**
@@ -3377,18 +3430,18 @@ public final class Accounts {
      * behind organizations or individuals who execute transactions on the ledger.
      * </pre>
      *
-     * <code>.opencannabis.crypto.primitives.pki.Keypair identity = 3;</code>
+     * <code>.opencannabis.crypto.Keypair identity = 3;</code>
      */
-    io.opencannabis.schema.crypto.primitives.pki.Keypair getIdentity();
+    io.opencannabis.schema.crypto.primitives.Keypair getIdentity();
     /**
      * <pre>
      * Reference to the identity public/private keypair for this actor. Ledger "actors" represent the real-world identity
      * behind organizations or individuals who execute transactions on the ledger.
      * </pre>
      *
-     * <code>.opencannabis.crypto.primitives.pki.Keypair identity = 3;</code>
+     * <code>.opencannabis.crypto.Keypair identity = 3;</code>
      */
-    io.opencannabis.schema.crypto.primitives.pki.KeypairOrBuilder getIdentityOrBuilder();
+    io.opencannabis.schema.crypto.primitives.KeypairOrBuilder getIdentityOrBuilder();
   }
   /**
    * <pre>
@@ -3397,11 +3450,11 @@ public final class Accounts {
    * Separately, a user account may be associated with a concrete identity via the `identity` property.
    * </pre>
    *
-   * Protobuf type {@code bloombox.schema.ledger.AccountKey}
+   * Protobuf type {@code bloombox.ledger.AccountKey}
    */
   public  static final class AccountKey extends
       com.google.protobuf.GeneratedMessageV3 implements
-      // @@protoc_insertion_point(message_implements:bloombox.schema.ledger.AccountKey)
+      // @@protoc_insertion_point(message_implements:bloombox.ledger.AccountKey)
       AccountKeyOrBuilder {
   private static final long serialVersionUID = 0L;
     // Use AccountKey.newBuilder() to construct.
@@ -3436,13 +3489,6 @@ public final class Accounts {
             case 0:
               done = true;
               break;
-            default: {
-              if (!parseUnknownFieldProto3(
-                  input, unknownFields, extensionRegistry, tag)) {
-                done = true;
-              }
-              break;
-            }
             case 10: {
               java.lang.String s = input.readStringRequireUtf8();
 
@@ -3450,11 +3496,11 @@ public final class Accounts {
               break;
             }
             case 18: {
-              io.opencannabis.schema.crypto.primitives.pki.Keypair.Builder subBuilder = null;
+              io.opencannabis.schema.crypto.primitives.Keypair.Builder subBuilder = null;
               if (pair_ != null) {
                 subBuilder = pair_.toBuilder();
               }
-              pair_ = input.readMessage(io.opencannabis.schema.crypto.primitives.pki.Keypair.parser(), extensionRegistry);
+              pair_ = input.readMessage(io.opencannabis.schema.crypto.primitives.Keypair.parser(), extensionRegistry);
               if (subBuilder != null) {
                 subBuilder.mergeFrom(pair_);
                 pair_ = subBuilder.buildPartial();
@@ -3463,16 +3509,23 @@ public final class Accounts {
               break;
             }
             case 26: {
-              io.opencannabis.schema.crypto.primitives.pki.Keypair.Builder subBuilder = null;
+              io.opencannabis.schema.crypto.primitives.Keypair.Builder subBuilder = null;
               if (identity_ != null) {
                 subBuilder = identity_.toBuilder();
               }
-              identity_ = input.readMessage(io.opencannabis.schema.crypto.primitives.pki.Keypair.parser(), extensionRegistry);
+              identity_ = input.readMessage(io.opencannabis.schema.crypto.primitives.Keypair.parser(), extensionRegistry);
               if (subBuilder != null) {
                 subBuilder.mergeFrom(identity_);
                 identity_ = subBuilder.buildPartial();
               }
 
+              break;
+            }
+            default: {
+              if (!parseUnknownFieldProto3(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
               break;
             }
           }
@@ -3489,12 +3542,13 @@ public final class Accounts {
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return io.bloombox.schema.ledger.Accounts.internal_static_bloombox_schema_ledger_AccountKey_descriptor;
+      return io.bloombox.schema.ledger.Accounts.internal_static_bloombox_ledger_AccountKey_descriptor;
     }
 
+    @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return io.bloombox.schema.ledger.Accounts.internal_static_bloombox_schema_ledger_AccountKey_fieldAccessorTable
+      return io.bloombox.schema.ledger.Accounts.internal_static_bloombox_ledger_AccountKey_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
               io.bloombox.schema.ledger.Accounts.AccountKey.class, io.bloombox.schema.ledger.Accounts.AccountKey.Builder.class);
     }
@@ -3542,14 +3596,14 @@ public final class Accounts {
     }
 
     public static final int PAIR_FIELD_NUMBER = 2;
-    private io.opencannabis.schema.crypto.primitives.pki.Keypair pair_;
+    private io.opencannabis.schema.crypto.primitives.Keypair pair_;
     /**
      * <pre>
      * Reference to the public/private keypair for this ledger account. In rare cases, the private key may be included
      * here (the structure supports it), but usually, it's used for the onboard cryptographic hash of the public key.
      * </pre>
      *
-     * <code>.opencannabis.crypto.primitives.pki.Keypair pair = 2;</code>
+     * <code>.opencannabis.crypto.Keypair pair = 2;</code>
      */
     public boolean hasPair() {
       return pair_ != null;
@@ -3560,10 +3614,10 @@ public final class Accounts {
      * here (the structure supports it), but usually, it's used for the onboard cryptographic hash of the public key.
      * </pre>
      *
-     * <code>.opencannabis.crypto.primitives.pki.Keypair pair = 2;</code>
+     * <code>.opencannabis.crypto.Keypair pair = 2;</code>
      */
-    public io.opencannabis.schema.crypto.primitives.pki.Keypair getPair() {
-      return pair_ == null ? io.opencannabis.schema.crypto.primitives.pki.Keypair.getDefaultInstance() : pair_;
+    public io.opencannabis.schema.crypto.primitives.Keypair getPair() {
+      return pair_ == null ? io.opencannabis.schema.crypto.primitives.Keypair.getDefaultInstance() : pair_;
     }
     /**
      * <pre>
@@ -3571,21 +3625,21 @@ public final class Accounts {
      * here (the structure supports it), but usually, it's used for the onboard cryptographic hash of the public key.
      * </pre>
      *
-     * <code>.opencannabis.crypto.primitives.pki.Keypair pair = 2;</code>
+     * <code>.opencannabis.crypto.Keypair pair = 2;</code>
      */
-    public io.opencannabis.schema.crypto.primitives.pki.KeypairOrBuilder getPairOrBuilder() {
+    public io.opencannabis.schema.crypto.primitives.KeypairOrBuilder getPairOrBuilder() {
       return getPair();
     }
 
     public static final int IDENTITY_FIELD_NUMBER = 3;
-    private io.opencannabis.schema.crypto.primitives.pki.Keypair identity_;
+    private io.opencannabis.schema.crypto.primitives.Keypair identity_;
     /**
      * <pre>
      * Reference to the identity public/private keypair for this actor. Ledger "actors" represent the real-world identity
      * behind organizations or individuals who execute transactions on the ledger.
      * </pre>
      *
-     * <code>.opencannabis.crypto.primitives.pki.Keypair identity = 3;</code>
+     * <code>.opencannabis.crypto.Keypair identity = 3;</code>
      */
     public boolean hasIdentity() {
       return identity_ != null;
@@ -3596,10 +3650,10 @@ public final class Accounts {
      * behind organizations or individuals who execute transactions on the ledger.
      * </pre>
      *
-     * <code>.opencannabis.crypto.primitives.pki.Keypair identity = 3;</code>
+     * <code>.opencannabis.crypto.Keypair identity = 3;</code>
      */
-    public io.opencannabis.schema.crypto.primitives.pki.Keypair getIdentity() {
-      return identity_ == null ? io.opencannabis.schema.crypto.primitives.pki.Keypair.getDefaultInstance() : identity_;
+    public io.opencannabis.schema.crypto.primitives.Keypair getIdentity() {
+      return identity_ == null ? io.opencannabis.schema.crypto.primitives.Keypair.getDefaultInstance() : identity_;
     }
     /**
      * <pre>
@@ -3607,13 +3661,14 @@ public final class Accounts {
      * behind organizations or individuals who execute transactions on the ledger.
      * </pre>
      *
-     * <code>.opencannabis.crypto.primitives.pki.Keypair identity = 3;</code>
+     * <code>.opencannabis.crypto.Keypair identity = 3;</code>
      */
-    public io.opencannabis.schema.crypto.primitives.pki.KeypairOrBuilder getIdentityOrBuilder() {
+    public io.opencannabis.schema.crypto.primitives.KeypairOrBuilder getIdentityOrBuilder() {
       return getIdentity();
     }
 
     private byte memoizedIsInitialized = -1;
+    @java.lang.Override
     public final boolean isInitialized() {
       byte isInitialized = memoizedIsInitialized;
       if (isInitialized == 1) return true;
@@ -3623,6 +3678,7 @@ public final class Accounts {
       return true;
     }
 
+    @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
       if (!getIdBytes().isEmpty()) {
@@ -3637,6 +3693,7 @@ public final class Accounts {
       unknownFields.writeTo(output);
     }
 
+    @java.lang.Override
     public int getSerializedSize() {
       int size = memoizedSize;
       if (size != -1) return size;
@@ -3777,6 +3834,7 @@ public final class Accounts {
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
 
+    @java.lang.Override
     public Builder newBuilderForType() { return newBuilder(); }
     public static Builder newBuilder() {
       return DEFAULT_INSTANCE.toBuilder();
@@ -3784,6 +3842,7 @@ public final class Accounts {
     public static Builder newBuilder(io.bloombox.schema.ledger.Accounts.AccountKey prototype) {
       return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
     }
+    @java.lang.Override
     public Builder toBuilder() {
       return this == DEFAULT_INSTANCE
           ? new Builder() : new Builder().mergeFrom(this);
@@ -3802,20 +3861,21 @@ public final class Accounts {
      * Separately, a user account may be associated with a concrete identity via the `identity` property.
      * </pre>
      *
-     * Protobuf type {@code bloombox.schema.ledger.AccountKey}
+     * Protobuf type {@code bloombox.ledger.AccountKey}
      */
     public static final class Builder extends
         com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:bloombox.schema.ledger.AccountKey)
+        // @@protoc_insertion_point(builder_implements:bloombox.ledger.AccountKey)
         io.bloombox.schema.ledger.Accounts.AccountKeyOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return io.bloombox.schema.ledger.Accounts.internal_static_bloombox_schema_ledger_AccountKey_descriptor;
+        return io.bloombox.schema.ledger.Accounts.internal_static_bloombox_ledger_AccountKey_descriptor;
       }
 
+      @java.lang.Override
       protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return io.bloombox.schema.ledger.Accounts.internal_static_bloombox_schema_ledger_AccountKey_fieldAccessorTable
+        return io.bloombox.schema.ledger.Accounts.internal_static_bloombox_ledger_AccountKey_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
                 io.bloombox.schema.ledger.Accounts.AccountKey.class, io.bloombox.schema.ledger.Accounts.AccountKey.Builder.class);
       }
@@ -3835,6 +3895,7 @@ public final class Accounts {
                 .alwaysUseFieldBuilders) {
         }
       }
+      @java.lang.Override
       public Builder clear() {
         super.clear();
         id_ = "";
@@ -3854,15 +3915,18 @@ public final class Accounts {
         return this;
       }
 
+      @java.lang.Override
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return io.bloombox.schema.ledger.Accounts.internal_static_bloombox_schema_ledger_AccountKey_descriptor;
+        return io.bloombox.schema.ledger.Accounts.internal_static_bloombox_ledger_AccountKey_descriptor;
       }
 
+      @java.lang.Override
       public io.bloombox.schema.ledger.Accounts.AccountKey getDefaultInstanceForType() {
         return io.bloombox.schema.ledger.Accounts.AccountKey.getDefaultInstance();
       }
 
+      @java.lang.Override
       public io.bloombox.schema.ledger.Accounts.AccountKey build() {
         io.bloombox.schema.ledger.Accounts.AccountKey result = buildPartial();
         if (!result.isInitialized()) {
@@ -3871,6 +3935,7 @@ public final class Accounts {
         return result;
       }
 
+      @java.lang.Override
       public io.bloombox.schema.ledger.Accounts.AccountKey buildPartial() {
         io.bloombox.schema.ledger.Accounts.AccountKey result = new io.bloombox.schema.ledger.Accounts.AccountKey(this);
         result.id_ = id_;
@@ -3888,32 +3953,39 @@ public final class Accounts {
         return result;
       }
 
+      @java.lang.Override
       public Builder clone() {
         return (Builder) super.clone();
       }
+      @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
         return (Builder) super.setField(field, value);
       }
+      @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
         return (Builder) super.clearField(field);
       }
+      @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
         return (Builder) super.clearOneof(oneof);
       }
+      @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
         return (Builder) super.setRepeatedField(field, index, value);
       }
+      @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
         return (Builder) super.addRepeatedField(field, value);
       }
+      @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
         if (other instanceof io.bloombox.schema.ledger.Accounts.AccountKey) {
           return mergeFrom((io.bloombox.schema.ledger.Accounts.AccountKey)other);
@@ -3940,10 +4012,12 @@ public final class Accounts {
         return this;
       }
 
+      @java.lang.Override
       public final boolean isInitialized() {
         return true;
       }
 
+      @java.lang.Override
       public Builder mergeFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -4051,16 +4125,16 @@ public final class Accounts {
         return this;
       }
 
-      private io.opencannabis.schema.crypto.primitives.pki.Keypair pair_ = null;
+      private io.opencannabis.schema.crypto.primitives.Keypair pair_ = null;
       private com.google.protobuf.SingleFieldBuilderV3<
-          io.opencannabis.schema.crypto.primitives.pki.Keypair, io.opencannabis.schema.crypto.primitives.pki.Keypair.Builder, io.opencannabis.schema.crypto.primitives.pki.KeypairOrBuilder> pairBuilder_;
+          io.opencannabis.schema.crypto.primitives.Keypair, io.opencannabis.schema.crypto.primitives.Keypair.Builder, io.opencannabis.schema.crypto.primitives.KeypairOrBuilder> pairBuilder_;
       /**
        * <pre>
        * Reference to the public/private keypair for this ledger account. In rare cases, the private key may be included
        * here (the structure supports it), but usually, it's used for the onboard cryptographic hash of the public key.
        * </pre>
        *
-       * <code>.opencannabis.crypto.primitives.pki.Keypair pair = 2;</code>
+       * <code>.opencannabis.crypto.Keypair pair = 2;</code>
        */
       public boolean hasPair() {
         return pairBuilder_ != null || pair_ != null;
@@ -4071,11 +4145,11 @@ public final class Accounts {
        * here (the structure supports it), but usually, it's used for the onboard cryptographic hash of the public key.
        * </pre>
        *
-       * <code>.opencannabis.crypto.primitives.pki.Keypair pair = 2;</code>
+       * <code>.opencannabis.crypto.Keypair pair = 2;</code>
        */
-      public io.opencannabis.schema.crypto.primitives.pki.Keypair getPair() {
+      public io.opencannabis.schema.crypto.primitives.Keypair getPair() {
         if (pairBuilder_ == null) {
-          return pair_ == null ? io.opencannabis.schema.crypto.primitives.pki.Keypair.getDefaultInstance() : pair_;
+          return pair_ == null ? io.opencannabis.schema.crypto.primitives.Keypair.getDefaultInstance() : pair_;
         } else {
           return pairBuilder_.getMessage();
         }
@@ -4086,9 +4160,9 @@ public final class Accounts {
        * here (the structure supports it), but usually, it's used for the onboard cryptographic hash of the public key.
        * </pre>
        *
-       * <code>.opencannabis.crypto.primitives.pki.Keypair pair = 2;</code>
+       * <code>.opencannabis.crypto.Keypair pair = 2;</code>
        */
-      public Builder setPair(io.opencannabis.schema.crypto.primitives.pki.Keypair value) {
+      public Builder setPair(io.opencannabis.schema.crypto.primitives.Keypair value) {
         if (pairBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
@@ -4107,10 +4181,10 @@ public final class Accounts {
        * here (the structure supports it), but usually, it's used for the onboard cryptographic hash of the public key.
        * </pre>
        *
-       * <code>.opencannabis.crypto.primitives.pki.Keypair pair = 2;</code>
+       * <code>.opencannabis.crypto.Keypair pair = 2;</code>
        */
       public Builder setPair(
-          io.opencannabis.schema.crypto.primitives.pki.Keypair.Builder builderForValue) {
+          io.opencannabis.schema.crypto.primitives.Keypair.Builder builderForValue) {
         if (pairBuilder_ == null) {
           pair_ = builderForValue.build();
           onChanged();
@@ -4126,13 +4200,13 @@ public final class Accounts {
        * here (the structure supports it), but usually, it's used for the onboard cryptographic hash of the public key.
        * </pre>
        *
-       * <code>.opencannabis.crypto.primitives.pki.Keypair pair = 2;</code>
+       * <code>.opencannabis.crypto.Keypair pair = 2;</code>
        */
-      public Builder mergePair(io.opencannabis.schema.crypto.primitives.pki.Keypair value) {
+      public Builder mergePair(io.opencannabis.schema.crypto.primitives.Keypair value) {
         if (pairBuilder_ == null) {
           if (pair_ != null) {
             pair_ =
-              io.opencannabis.schema.crypto.primitives.pki.Keypair.newBuilder(pair_).mergeFrom(value).buildPartial();
+              io.opencannabis.schema.crypto.primitives.Keypair.newBuilder(pair_).mergeFrom(value).buildPartial();
           } else {
             pair_ = value;
           }
@@ -4149,7 +4223,7 @@ public final class Accounts {
        * here (the structure supports it), but usually, it's used for the onboard cryptographic hash of the public key.
        * </pre>
        *
-       * <code>.opencannabis.crypto.primitives.pki.Keypair pair = 2;</code>
+       * <code>.opencannabis.crypto.Keypair pair = 2;</code>
        */
       public Builder clearPair() {
         if (pairBuilder_ == null) {
@@ -4168,9 +4242,9 @@ public final class Accounts {
        * here (the structure supports it), but usually, it's used for the onboard cryptographic hash of the public key.
        * </pre>
        *
-       * <code>.opencannabis.crypto.primitives.pki.Keypair pair = 2;</code>
+       * <code>.opencannabis.crypto.Keypair pair = 2;</code>
        */
-      public io.opencannabis.schema.crypto.primitives.pki.Keypair.Builder getPairBuilder() {
+      public io.opencannabis.schema.crypto.primitives.Keypair.Builder getPairBuilder() {
         
         onChanged();
         return getPairFieldBuilder().getBuilder();
@@ -4181,14 +4255,14 @@ public final class Accounts {
        * here (the structure supports it), but usually, it's used for the onboard cryptographic hash of the public key.
        * </pre>
        *
-       * <code>.opencannabis.crypto.primitives.pki.Keypair pair = 2;</code>
+       * <code>.opencannabis.crypto.Keypair pair = 2;</code>
        */
-      public io.opencannabis.schema.crypto.primitives.pki.KeypairOrBuilder getPairOrBuilder() {
+      public io.opencannabis.schema.crypto.primitives.KeypairOrBuilder getPairOrBuilder() {
         if (pairBuilder_ != null) {
           return pairBuilder_.getMessageOrBuilder();
         } else {
           return pair_ == null ?
-              io.opencannabis.schema.crypto.primitives.pki.Keypair.getDefaultInstance() : pair_;
+              io.opencannabis.schema.crypto.primitives.Keypair.getDefaultInstance() : pair_;
         }
       }
       /**
@@ -4197,14 +4271,14 @@ public final class Accounts {
        * here (the structure supports it), but usually, it's used for the onboard cryptographic hash of the public key.
        * </pre>
        *
-       * <code>.opencannabis.crypto.primitives.pki.Keypair pair = 2;</code>
+       * <code>.opencannabis.crypto.Keypair pair = 2;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
-          io.opencannabis.schema.crypto.primitives.pki.Keypair, io.opencannabis.schema.crypto.primitives.pki.Keypair.Builder, io.opencannabis.schema.crypto.primitives.pki.KeypairOrBuilder> 
+          io.opencannabis.schema.crypto.primitives.Keypair, io.opencannabis.schema.crypto.primitives.Keypair.Builder, io.opencannabis.schema.crypto.primitives.KeypairOrBuilder> 
           getPairFieldBuilder() {
         if (pairBuilder_ == null) {
           pairBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-              io.opencannabis.schema.crypto.primitives.pki.Keypair, io.opencannabis.schema.crypto.primitives.pki.Keypair.Builder, io.opencannabis.schema.crypto.primitives.pki.KeypairOrBuilder>(
+              io.opencannabis.schema.crypto.primitives.Keypair, io.opencannabis.schema.crypto.primitives.Keypair.Builder, io.opencannabis.schema.crypto.primitives.KeypairOrBuilder>(
                   getPair(),
                   getParentForChildren(),
                   isClean());
@@ -4213,16 +4287,16 @@ public final class Accounts {
         return pairBuilder_;
       }
 
-      private io.opencannabis.schema.crypto.primitives.pki.Keypair identity_ = null;
+      private io.opencannabis.schema.crypto.primitives.Keypair identity_ = null;
       private com.google.protobuf.SingleFieldBuilderV3<
-          io.opencannabis.schema.crypto.primitives.pki.Keypair, io.opencannabis.schema.crypto.primitives.pki.Keypair.Builder, io.opencannabis.schema.crypto.primitives.pki.KeypairOrBuilder> identityBuilder_;
+          io.opencannabis.schema.crypto.primitives.Keypair, io.opencannabis.schema.crypto.primitives.Keypair.Builder, io.opencannabis.schema.crypto.primitives.KeypairOrBuilder> identityBuilder_;
       /**
        * <pre>
        * Reference to the identity public/private keypair for this actor. Ledger "actors" represent the real-world identity
        * behind organizations or individuals who execute transactions on the ledger.
        * </pre>
        *
-       * <code>.opencannabis.crypto.primitives.pki.Keypair identity = 3;</code>
+       * <code>.opencannabis.crypto.Keypair identity = 3;</code>
        */
       public boolean hasIdentity() {
         return identityBuilder_ != null || identity_ != null;
@@ -4233,11 +4307,11 @@ public final class Accounts {
        * behind organizations or individuals who execute transactions on the ledger.
        * </pre>
        *
-       * <code>.opencannabis.crypto.primitives.pki.Keypair identity = 3;</code>
+       * <code>.opencannabis.crypto.Keypair identity = 3;</code>
        */
-      public io.opencannabis.schema.crypto.primitives.pki.Keypair getIdentity() {
+      public io.opencannabis.schema.crypto.primitives.Keypair getIdentity() {
         if (identityBuilder_ == null) {
-          return identity_ == null ? io.opencannabis.schema.crypto.primitives.pki.Keypair.getDefaultInstance() : identity_;
+          return identity_ == null ? io.opencannabis.schema.crypto.primitives.Keypair.getDefaultInstance() : identity_;
         } else {
           return identityBuilder_.getMessage();
         }
@@ -4248,9 +4322,9 @@ public final class Accounts {
        * behind organizations or individuals who execute transactions on the ledger.
        * </pre>
        *
-       * <code>.opencannabis.crypto.primitives.pki.Keypair identity = 3;</code>
+       * <code>.opencannabis.crypto.Keypair identity = 3;</code>
        */
-      public Builder setIdentity(io.opencannabis.schema.crypto.primitives.pki.Keypair value) {
+      public Builder setIdentity(io.opencannabis.schema.crypto.primitives.Keypair value) {
         if (identityBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
@@ -4269,10 +4343,10 @@ public final class Accounts {
        * behind organizations or individuals who execute transactions on the ledger.
        * </pre>
        *
-       * <code>.opencannabis.crypto.primitives.pki.Keypair identity = 3;</code>
+       * <code>.opencannabis.crypto.Keypair identity = 3;</code>
        */
       public Builder setIdentity(
-          io.opencannabis.schema.crypto.primitives.pki.Keypair.Builder builderForValue) {
+          io.opencannabis.schema.crypto.primitives.Keypair.Builder builderForValue) {
         if (identityBuilder_ == null) {
           identity_ = builderForValue.build();
           onChanged();
@@ -4288,13 +4362,13 @@ public final class Accounts {
        * behind organizations or individuals who execute transactions on the ledger.
        * </pre>
        *
-       * <code>.opencannabis.crypto.primitives.pki.Keypair identity = 3;</code>
+       * <code>.opencannabis.crypto.Keypair identity = 3;</code>
        */
-      public Builder mergeIdentity(io.opencannabis.schema.crypto.primitives.pki.Keypair value) {
+      public Builder mergeIdentity(io.opencannabis.schema.crypto.primitives.Keypair value) {
         if (identityBuilder_ == null) {
           if (identity_ != null) {
             identity_ =
-              io.opencannabis.schema.crypto.primitives.pki.Keypair.newBuilder(identity_).mergeFrom(value).buildPartial();
+              io.opencannabis.schema.crypto.primitives.Keypair.newBuilder(identity_).mergeFrom(value).buildPartial();
           } else {
             identity_ = value;
           }
@@ -4311,7 +4385,7 @@ public final class Accounts {
        * behind organizations or individuals who execute transactions on the ledger.
        * </pre>
        *
-       * <code>.opencannabis.crypto.primitives.pki.Keypair identity = 3;</code>
+       * <code>.opencannabis.crypto.Keypair identity = 3;</code>
        */
       public Builder clearIdentity() {
         if (identityBuilder_ == null) {
@@ -4330,9 +4404,9 @@ public final class Accounts {
        * behind organizations or individuals who execute transactions on the ledger.
        * </pre>
        *
-       * <code>.opencannabis.crypto.primitives.pki.Keypair identity = 3;</code>
+       * <code>.opencannabis.crypto.Keypair identity = 3;</code>
        */
-      public io.opencannabis.schema.crypto.primitives.pki.Keypair.Builder getIdentityBuilder() {
+      public io.opencannabis.schema.crypto.primitives.Keypair.Builder getIdentityBuilder() {
         
         onChanged();
         return getIdentityFieldBuilder().getBuilder();
@@ -4343,14 +4417,14 @@ public final class Accounts {
        * behind organizations or individuals who execute transactions on the ledger.
        * </pre>
        *
-       * <code>.opencannabis.crypto.primitives.pki.Keypair identity = 3;</code>
+       * <code>.opencannabis.crypto.Keypair identity = 3;</code>
        */
-      public io.opencannabis.schema.crypto.primitives.pki.KeypairOrBuilder getIdentityOrBuilder() {
+      public io.opencannabis.schema.crypto.primitives.KeypairOrBuilder getIdentityOrBuilder() {
         if (identityBuilder_ != null) {
           return identityBuilder_.getMessageOrBuilder();
         } else {
           return identity_ == null ?
-              io.opencannabis.schema.crypto.primitives.pki.Keypair.getDefaultInstance() : identity_;
+              io.opencannabis.schema.crypto.primitives.Keypair.getDefaultInstance() : identity_;
         }
       }
       /**
@@ -4359,14 +4433,14 @@ public final class Accounts {
        * behind organizations or individuals who execute transactions on the ledger.
        * </pre>
        *
-       * <code>.opencannabis.crypto.primitives.pki.Keypair identity = 3;</code>
+       * <code>.opencannabis.crypto.Keypair identity = 3;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
-          io.opencannabis.schema.crypto.primitives.pki.Keypair, io.opencannabis.schema.crypto.primitives.pki.Keypair.Builder, io.opencannabis.schema.crypto.primitives.pki.KeypairOrBuilder> 
+          io.opencannabis.schema.crypto.primitives.Keypair, io.opencannabis.schema.crypto.primitives.Keypair.Builder, io.opencannabis.schema.crypto.primitives.KeypairOrBuilder> 
           getIdentityFieldBuilder() {
         if (identityBuilder_ == null) {
           identityBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-              io.opencannabis.schema.crypto.primitives.pki.Keypair, io.opencannabis.schema.crypto.primitives.pki.Keypair.Builder, io.opencannabis.schema.crypto.primitives.pki.KeypairOrBuilder>(
+              io.opencannabis.schema.crypto.primitives.Keypair, io.opencannabis.schema.crypto.primitives.Keypair.Builder, io.opencannabis.schema.crypto.primitives.KeypairOrBuilder>(
                   getIdentity(),
                   getParentForChildren(),
                   isClean());
@@ -4374,21 +4448,23 @@ public final class Accounts {
         }
         return identityBuilder_;
       }
+      @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
         return super.setUnknownFieldsProto3(unknownFields);
       }
 
+      @java.lang.Override
       public final Builder mergeUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
         return super.mergeUnknownFields(unknownFields);
       }
 
 
-      // @@protoc_insertion_point(builder_scope:bloombox.schema.ledger.AccountKey)
+      // @@protoc_insertion_point(builder_scope:bloombox.ledger.AccountKey)
     }
 
-    // @@protoc_insertion_point(class_scope:bloombox.schema.ledger.AccountKey)
+    // @@protoc_insertion_point(class_scope:bloombox.ledger.AccountKey)
     private static final io.bloombox.schema.ledger.Accounts.AccountKey DEFAULT_INSTANCE;
     static {
       DEFAULT_INSTANCE = new io.bloombox.schema.ledger.Accounts.AccountKey();
@@ -4400,6 +4476,7 @@ public final class Accounts {
 
     private static final com.google.protobuf.Parser<AccountKey>
         PARSER = new com.google.protobuf.AbstractParser<AccountKey>() {
+      @java.lang.Override
       public AccountKey parsePartialFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -4417,6 +4494,7 @@ public final class Accounts {
       return PARSER;
     }
 
+    @java.lang.Override
     public io.bloombox.schema.ledger.Accounts.AccountKey getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
@@ -4424,7 +4502,7 @@ public final class Accounts {
   }
 
   public interface LedgerIdentityOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:bloombox.schema.ledger.LedgerIdentity)
+      // @@protoc_insertion_point(interface_extends:bloombox.ledger.LedgerIdentity)
       com.google.protobuf.MessageOrBuilder {
 
     /**
@@ -4433,7 +4511,7 @@ public final class Accounts {
      * supports such behavior), but in most cases only a cryptographic fingerprint of the public key is available.
      * </pre>
      *
-     * <code>.bloombox.schema.ledger.AccountKey key = 1 [(.core.field) = { ... }</code>
+     * <code>.bloombox.ledger.AccountKey key = 1 [(.core.field) = { ... }</code>
      */
     boolean hasKey();
     /**
@@ -4442,7 +4520,7 @@ public final class Accounts {
      * supports such behavior), but in most cases only a cryptographic fingerprint of the public key is available.
      * </pre>
      *
-     * <code>.bloombox.schema.ledger.AccountKey key = 1 [(.core.field) = { ... }</code>
+     * <code>.bloombox.ledger.AccountKey key = 1 [(.core.field) = { ... }</code>
      */
     io.bloombox.schema.ledger.Accounts.AccountKey getKey();
     /**
@@ -4451,7 +4529,7 @@ public final class Accounts {
      * supports such behavior), but in most cases only a cryptographic fingerprint of the public key is available.
      * </pre>
      *
-     * <code>.bloombox.schema.ledger.AccountKey key = 1 [(.core.field) = { ... }</code>
+     * <code>.bloombox.ledger.AccountKey key = 1 [(.core.field) = { ... }</code>
      */
     io.bloombox.schema.ledger.Accounts.AccountKeyOrBuilder getKeyOrBuilder();
 
@@ -4461,7 +4539,7 @@ public final class Accounts {
      * individual. Actor keys keys may be encrypted.
      * </pre>
      *
-     * <code>.bloombox.schema.ledger.ActorKey actor = 2;</code>
+     * <code>.bloombox.ledger.ActorKey actor = 2;</code>
      */
     boolean hasActor();
     /**
@@ -4470,7 +4548,7 @@ public final class Accounts {
      * individual. Actor keys keys may be encrypted.
      * </pre>
      *
-     * <code>.bloombox.schema.ledger.ActorKey actor = 2;</code>
+     * <code>.bloombox.ledger.ActorKey actor = 2;</code>
      */
     io.bloombox.schema.ledger.Accounts.ActorKey getActor();
     /**
@@ -4479,7 +4557,7 @@ public final class Accounts {
      * individual. Actor keys keys may be encrypted.
      * </pre>
      *
-     * <code>.bloombox.schema.ledger.ActorKey actor = 2;</code>
+     * <code>.bloombox.ledger.ActorKey actor = 2;</code>
      */
     io.bloombox.schema.ledger.Accounts.ActorKeyOrBuilder getActorOrBuilder();
 
@@ -4488,7 +4566,7 @@ public final class Accounts {
      * Specifies actual backing certificate information, issued by the central ledger PKI CA.
      * </pre>
      *
-     * <code>.bloombox.schema.ledger.ActorCertificate certificate = 3;</code>
+     * <code>.bloombox.ledger.ActorCertificate certificate = 3;</code>
      */
     boolean hasCertificate();
     /**
@@ -4496,7 +4574,7 @@ public final class Accounts {
      * Specifies actual backing certificate information, issued by the central ledger PKI CA.
      * </pre>
      *
-     * <code>.bloombox.schema.ledger.ActorCertificate certificate = 3;</code>
+     * <code>.bloombox.ledger.ActorCertificate certificate = 3;</code>
      */
     io.bloombox.schema.ledger.Accounts.ActorCertificate getCertificate();
     /**
@@ -4504,7 +4582,7 @@ public final class Accounts {
      * Specifies actual backing certificate information, issued by the central ledger PKI CA.
      * </pre>
      *
-     * <code>.bloombox.schema.ledger.ActorCertificate certificate = 3;</code>
+     * <code>.bloombox.ledger.ActorCertificate certificate = 3;</code>
      */
     io.bloombox.schema.ledger.Accounts.ActorCertificateOrBuilder getCertificateOrBuilder();
   }
@@ -4514,11 +4592,11 @@ public final class Accounts {
    * material generated by the actor themselves, and 2) associated identity stored somewhere else, or stored with us.
    * </pre>
    *
-   * Protobuf type {@code bloombox.schema.ledger.LedgerIdentity}
+   * Protobuf type {@code bloombox.ledger.LedgerIdentity}
    */
   public  static final class LedgerIdentity extends
       com.google.protobuf.GeneratedMessageV3 implements
-      // @@protoc_insertion_point(message_implements:bloombox.schema.ledger.LedgerIdentity)
+      // @@protoc_insertion_point(message_implements:bloombox.ledger.LedgerIdentity)
       LedgerIdentityOrBuilder {
   private static final long serialVersionUID = 0L;
     // Use LedgerIdentity.newBuilder() to construct.
@@ -4552,13 +4630,6 @@ public final class Accounts {
             case 0:
               done = true;
               break;
-            default: {
-              if (!parseUnknownFieldProto3(
-                  input, unknownFields, extensionRegistry, tag)) {
-                done = true;
-              }
-              break;
-            }
             case 10: {
               io.bloombox.schema.ledger.Accounts.AccountKey.Builder subBuilder = null;
               if (key_ != null) {
@@ -4598,6 +4669,13 @@ public final class Accounts {
 
               break;
             }
+            default: {
+              if (!parseUnknownFieldProto3(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
           }
         }
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
@@ -4612,12 +4690,13 @@ public final class Accounts {
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return io.bloombox.schema.ledger.Accounts.internal_static_bloombox_schema_ledger_LedgerIdentity_descriptor;
+      return io.bloombox.schema.ledger.Accounts.internal_static_bloombox_ledger_LedgerIdentity_descriptor;
     }
 
+    @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return io.bloombox.schema.ledger.Accounts.internal_static_bloombox_schema_ledger_LedgerIdentity_fieldAccessorTable
+      return io.bloombox.schema.ledger.Accounts.internal_static_bloombox_ledger_LedgerIdentity_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
               io.bloombox.schema.ledger.Accounts.LedgerIdentity.class, io.bloombox.schema.ledger.Accounts.LedgerIdentity.Builder.class);
     }
@@ -4630,7 +4709,7 @@ public final class Accounts {
      * supports such behavior), but in most cases only a cryptographic fingerprint of the public key is available.
      * </pre>
      *
-     * <code>.bloombox.schema.ledger.AccountKey key = 1 [(.core.field) = { ... }</code>
+     * <code>.bloombox.ledger.AccountKey key = 1 [(.core.field) = { ... }</code>
      */
     public boolean hasKey() {
       return key_ != null;
@@ -4641,7 +4720,7 @@ public final class Accounts {
      * supports such behavior), but in most cases only a cryptographic fingerprint of the public key is available.
      * </pre>
      *
-     * <code>.bloombox.schema.ledger.AccountKey key = 1 [(.core.field) = { ... }</code>
+     * <code>.bloombox.ledger.AccountKey key = 1 [(.core.field) = { ... }</code>
      */
     public io.bloombox.schema.ledger.Accounts.AccountKey getKey() {
       return key_ == null ? io.bloombox.schema.ledger.Accounts.AccountKey.getDefaultInstance() : key_;
@@ -4652,7 +4731,7 @@ public final class Accounts {
      * supports such behavior), but in most cases only a cryptographic fingerprint of the public key is available.
      * </pre>
      *
-     * <code>.bloombox.schema.ledger.AccountKey key = 1 [(.core.field) = { ... }</code>
+     * <code>.bloombox.ledger.AccountKey key = 1 [(.core.field) = { ... }</code>
      */
     public io.bloombox.schema.ledger.Accounts.AccountKeyOrBuilder getKeyOrBuilder() {
       return getKey();
@@ -4666,7 +4745,7 @@ public final class Accounts {
      * individual. Actor keys keys may be encrypted.
      * </pre>
      *
-     * <code>.bloombox.schema.ledger.ActorKey actor = 2;</code>
+     * <code>.bloombox.ledger.ActorKey actor = 2;</code>
      */
     public boolean hasActor() {
       return actor_ != null;
@@ -4677,7 +4756,7 @@ public final class Accounts {
      * individual. Actor keys keys may be encrypted.
      * </pre>
      *
-     * <code>.bloombox.schema.ledger.ActorKey actor = 2;</code>
+     * <code>.bloombox.ledger.ActorKey actor = 2;</code>
      */
     public io.bloombox.schema.ledger.Accounts.ActorKey getActor() {
       return actor_ == null ? io.bloombox.schema.ledger.Accounts.ActorKey.getDefaultInstance() : actor_;
@@ -4688,7 +4767,7 @@ public final class Accounts {
      * individual. Actor keys keys may be encrypted.
      * </pre>
      *
-     * <code>.bloombox.schema.ledger.ActorKey actor = 2;</code>
+     * <code>.bloombox.ledger.ActorKey actor = 2;</code>
      */
     public io.bloombox.schema.ledger.Accounts.ActorKeyOrBuilder getActorOrBuilder() {
       return getActor();
@@ -4701,7 +4780,7 @@ public final class Accounts {
      * Specifies actual backing certificate information, issued by the central ledger PKI CA.
      * </pre>
      *
-     * <code>.bloombox.schema.ledger.ActorCertificate certificate = 3;</code>
+     * <code>.bloombox.ledger.ActorCertificate certificate = 3;</code>
      */
     public boolean hasCertificate() {
       return certificate_ != null;
@@ -4711,7 +4790,7 @@ public final class Accounts {
      * Specifies actual backing certificate information, issued by the central ledger PKI CA.
      * </pre>
      *
-     * <code>.bloombox.schema.ledger.ActorCertificate certificate = 3;</code>
+     * <code>.bloombox.ledger.ActorCertificate certificate = 3;</code>
      */
     public io.bloombox.schema.ledger.Accounts.ActorCertificate getCertificate() {
       return certificate_ == null ? io.bloombox.schema.ledger.Accounts.ActorCertificate.getDefaultInstance() : certificate_;
@@ -4721,13 +4800,14 @@ public final class Accounts {
      * Specifies actual backing certificate information, issued by the central ledger PKI CA.
      * </pre>
      *
-     * <code>.bloombox.schema.ledger.ActorCertificate certificate = 3;</code>
+     * <code>.bloombox.ledger.ActorCertificate certificate = 3;</code>
      */
     public io.bloombox.schema.ledger.Accounts.ActorCertificateOrBuilder getCertificateOrBuilder() {
       return getCertificate();
     }
 
     private byte memoizedIsInitialized = -1;
+    @java.lang.Override
     public final boolean isInitialized() {
       byte isInitialized = memoizedIsInitialized;
       if (isInitialized == 1) return true;
@@ -4737,6 +4817,7 @@ public final class Accounts {
       return true;
     }
 
+    @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
       if (key_ != null) {
@@ -4751,6 +4832,7 @@ public final class Accounts {
       unknownFields.writeTo(output);
     }
 
+    @java.lang.Override
     public int getSerializedSize() {
       int size = memoizedSize;
       if (size != -1) return size;
@@ -4897,6 +4979,7 @@ public final class Accounts {
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
 
+    @java.lang.Override
     public Builder newBuilderForType() { return newBuilder(); }
     public static Builder newBuilder() {
       return DEFAULT_INSTANCE.toBuilder();
@@ -4904,6 +4987,7 @@ public final class Accounts {
     public static Builder newBuilder(io.bloombox.schema.ledger.Accounts.LedgerIdentity prototype) {
       return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
     }
+    @java.lang.Override
     public Builder toBuilder() {
       return this == DEFAULT_INSTANCE
           ? new Builder() : new Builder().mergeFrom(this);
@@ -4921,20 +5005,21 @@ public final class Accounts {
      * material generated by the actor themselves, and 2) associated identity stored somewhere else, or stored with us.
      * </pre>
      *
-     * Protobuf type {@code bloombox.schema.ledger.LedgerIdentity}
+     * Protobuf type {@code bloombox.ledger.LedgerIdentity}
      */
     public static final class Builder extends
         com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:bloombox.schema.ledger.LedgerIdentity)
+        // @@protoc_insertion_point(builder_implements:bloombox.ledger.LedgerIdentity)
         io.bloombox.schema.ledger.Accounts.LedgerIdentityOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return io.bloombox.schema.ledger.Accounts.internal_static_bloombox_schema_ledger_LedgerIdentity_descriptor;
+        return io.bloombox.schema.ledger.Accounts.internal_static_bloombox_ledger_LedgerIdentity_descriptor;
       }
 
+      @java.lang.Override
       protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return io.bloombox.schema.ledger.Accounts.internal_static_bloombox_schema_ledger_LedgerIdentity_fieldAccessorTable
+        return io.bloombox.schema.ledger.Accounts.internal_static_bloombox_ledger_LedgerIdentity_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
                 io.bloombox.schema.ledger.Accounts.LedgerIdentity.class, io.bloombox.schema.ledger.Accounts.LedgerIdentity.Builder.class);
       }
@@ -4954,6 +5039,7 @@ public final class Accounts {
                 .alwaysUseFieldBuilders) {
         }
       }
+      @java.lang.Override
       public Builder clear() {
         super.clear();
         if (keyBuilder_ == null) {
@@ -4977,15 +5063,18 @@ public final class Accounts {
         return this;
       }
 
+      @java.lang.Override
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return io.bloombox.schema.ledger.Accounts.internal_static_bloombox_schema_ledger_LedgerIdentity_descriptor;
+        return io.bloombox.schema.ledger.Accounts.internal_static_bloombox_ledger_LedgerIdentity_descriptor;
       }
 
+      @java.lang.Override
       public io.bloombox.schema.ledger.Accounts.LedgerIdentity getDefaultInstanceForType() {
         return io.bloombox.schema.ledger.Accounts.LedgerIdentity.getDefaultInstance();
       }
 
+      @java.lang.Override
       public io.bloombox.schema.ledger.Accounts.LedgerIdentity build() {
         io.bloombox.schema.ledger.Accounts.LedgerIdentity result = buildPartial();
         if (!result.isInitialized()) {
@@ -4994,6 +5083,7 @@ public final class Accounts {
         return result;
       }
 
+      @java.lang.Override
       public io.bloombox.schema.ledger.Accounts.LedgerIdentity buildPartial() {
         io.bloombox.schema.ledger.Accounts.LedgerIdentity result = new io.bloombox.schema.ledger.Accounts.LedgerIdentity(this);
         if (keyBuilder_ == null) {
@@ -5015,32 +5105,39 @@ public final class Accounts {
         return result;
       }
 
+      @java.lang.Override
       public Builder clone() {
         return (Builder) super.clone();
       }
+      @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
         return (Builder) super.setField(field, value);
       }
+      @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
         return (Builder) super.clearField(field);
       }
+      @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
         return (Builder) super.clearOneof(oneof);
       }
+      @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
         return (Builder) super.setRepeatedField(field, index, value);
       }
+      @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
         return (Builder) super.addRepeatedField(field, value);
       }
+      @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
         if (other instanceof io.bloombox.schema.ledger.Accounts.LedgerIdentity) {
           return mergeFrom((io.bloombox.schema.ledger.Accounts.LedgerIdentity)other);
@@ -5066,10 +5163,12 @@ public final class Accounts {
         return this;
       }
 
+      @java.lang.Override
       public final boolean isInitialized() {
         return true;
       }
 
+      @java.lang.Override
       public Builder mergeFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -5097,7 +5196,7 @@ public final class Accounts {
        * supports such behavior), but in most cases only a cryptographic fingerprint of the public key is available.
        * </pre>
        *
-       * <code>.bloombox.schema.ledger.AccountKey key = 1 [(.core.field) = { ... }</code>
+       * <code>.bloombox.ledger.AccountKey key = 1 [(.core.field) = { ... }</code>
        */
       public boolean hasKey() {
         return keyBuilder_ != null || key_ != null;
@@ -5108,7 +5207,7 @@ public final class Accounts {
        * supports such behavior), but in most cases only a cryptographic fingerprint of the public key is available.
        * </pre>
        *
-       * <code>.bloombox.schema.ledger.AccountKey key = 1 [(.core.field) = { ... }</code>
+       * <code>.bloombox.ledger.AccountKey key = 1 [(.core.field) = { ... }</code>
        */
       public io.bloombox.schema.ledger.Accounts.AccountKey getKey() {
         if (keyBuilder_ == null) {
@@ -5123,7 +5222,7 @@ public final class Accounts {
        * supports such behavior), but in most cases only a cryptographic fingerprint of the public key is available.
        * </pre>
        *
-       * <code>.bloombox.schema.ledger.AccountKey key = 1 [(.core.field) = { ... }</code>
+       * <code>.bloombox.ledger.AccountKey key = 1 [(.core.field) = { ... }</code>
        */
       public Builder setKey(io.bloombox.schema.ledger.Accounts.AccountKey value) {
         if (keyBuilder_ == null) {
@@ -5144,7 +5243,7 @@ public final class Accounts {
        * supports such behavior), but in most cases only a cryptographic fingerprint of the public key is available.
        * </pre>
        *
-       * <code>.bloombox.schema.ledger.AccountKey key = 1 [(.core.field) = { ... }</code>
+       * <code>.bloombox.ledger.AccountKey key = 1 [(.core.field) = { ... }</code>
        */
       public Builder setKey(
           io.bloombox.schema.ledger.Accounts.AccountKey.Builder builderForValue) {
@@ -5163,7 +5262,7 @@ public final class Accounts {
        * supports such behavior), but in most cases only a cryptographic fingerprint of the public key is available.
        * </pre>
        *
-       * <code>.bloombox.schema.ledger.AccountKey key = 1 [(.core.field) = { ... }</code>
+       * <code>.bloombox.ledger.AccountKey key = 1 [(.core.field) = { ... }</code>
        */
       public Builder mergeKey(io.bloombox.schema.ledger.Accounts.AccountKey value) {
         if (keyBuilder_ == null) {
@@ -5186,7 +5285,7 @@ public final class Accounts {
        * supports such behavior), but in most cases only a cryptographic fingerprint of the public key is available.
        * </pre>
        *
-       * <code>.bloombox.schema.ledger.AccountKey key = 1 [(.core.field) = { ... }</code>
+       * <code>.bloombox.ledger.AccountKey key = 1 [(.core.field) = { ... }</code>
        */
       public Builder clearKey() {
         if (keyBuilder_ == null) {
@@ -5205,7 +5304,7 @@ public final class Accounts {
        * supports such behavior), but in most cases only a cryptographic fingerprint of the public key is available.
        * </pre>
        *
-       * <code>.bloombox.schema.ledger.AccountKey key = 1 [(.core.field) = { ... }</code>
+       * <code>.bloombox.ledger.AccountKey key = 1 [(.core.field) = { ... }</code>
        */
       public io.bloombox.schema.ledger.Accounts.AccountKey.Builder getKeyBuilder() {
         
@@ -5218,7 +5317,7 @@ public final class Accounts {
        * supports such behavior), but in most cases only a cryptographic fingerprint of the public key is available.
        * </pre>
        *
-       * <code>.bloombox.schema.ledger.AccountKey key = 1 [(.core.field) = { ... }</code>
+       * <code>.bloombox.ledger.AccountKey key = 1 [(.core.field) = { ... }</code>
        */
       public io.bloombox.schema.ledger.Accounts.AccountKeyOrBuilder getKeyOrBuilder() {
         if (keyBuilder_ != null) {
@@ -5234,7 +5333,7 @@ public final class Accounts {
        * supports such behavior), but in most cases only a cryptographic fingerprint of the public key is available.
        * </pre>
        *
-       * <code>.bloombox.schema.ledger.AccountKey key = 1 [(.core.field) = { ... }</code>
+       * <code>.bloombox.ledger.AccountKey key = 1 [(.core.field) = { ... }</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
           io.bloombox.schema.ledger.Accounts.AccountKey, io.bloombox.schema.ledger.Accounts.AccountKey.Builder, io.bloombox.schema.ledger.Accounts.AccountKeyOrBuilder> 
@@ -5259,7 +5358,7 @@ public final class Accounts {
        * individual. Actor keys keys may be encrypted.
        * </pre>
        *
-       * <code>.bloombox.schema.ledger.ActorKey actor = 2;</code>
+       * <code>.bloombox.ledger.ActorKey actor = 2;</code>
        */
       public boolean hasActor() {
         return actorBuilder_ != null || actor_ != null;
@@ -5270,7 +5369,7 @@ public final class Accounts {
        * individual. Actor keys keys may be encrypted.
        * </pre>
        *
-       * <code>.bloombox.schema.ledger.ActorKey actor = 2;</code>
+       * <code>.bloombox.ledger.ActorKey actor = 2;</code>
        */
       public io.bloombox.schema.ledger.Accounts.ActorKey getActor() {
         if (actorBuilder_ == null) {
@@ -5285,7 +5384,7 @@ public final class Accounts {
        * individual. Actor keys keys may be encrypted.
        * </pre>
        *
-       * <code>.bloombox.schema.ledger.ActorKey actor = 2;</code>
+       * <code>.bloombox.ledger.ActorKey actor = 2;</code>
        */
       public Builder setActor(io.bloombox.schema.ledger.Accounts.ActorKey value) {
         if (actorBuilder_ == null) {
@@ -5306,7 +5405,7 @@ public final class Accounts {
        * individual. Actor keys keys may be encrypted.
        * </pre>
        *
-       * <code>.bloombox.schema.ledger.ActorKey actor = 2;</code>
+       * <code>.bloombox.ledger.ActorKey actor = 2;</code>
        */
       public Builder setActor(
           io.bloombox.schema.ledger.Accounts.ActorKey.Builder builderForValue) {
@@ -5325,7 +5424,7 @@ public final class Accounts {
        * individual. Actor keys keys may be encrypted.
        * </pre>
        *
-       * <code>.bloombox.schema.ledger.ActorKey actor = 2;</code>
+       * <code>.bloombox.ledger.ActorKey actor = 2;</code>
        */
       public Builder mergeActor(io.bloombox.schema.ledger.Accounts.ActorKey value) {
         if (actorBuilder_ == null) {
@@ -5348,7 +5447,7 @@ public final class Accounts {
        * individual. Actor keys keys may be encrypted.
        * </pre>
        *
-       * <code>.bloombox.schema.ledger.ActorKey actor = 2;</code>
+       * <code>.bloombox.ledger.ActorKey actor = 2;</code>
        */
       public Builder clearActor() {
         if (actorBuilder_ == null) {
@@ -5367,7 +5466,7 @@ public final class Accounts {
        * individual. Actor keys keys may be encrypted.
        * </pre>
        *
-       * <code>.bloombox.schema.ledger.ActorKey actor = 2;</code>
+       * <code>.bloombox.ledger.ActorKey actor = 2;</code>
        */
       public io.bloombox.schema.ledger.Accounts.ActorKey.Builder getActorBuilder() {
         
@@ -5380,7 +5479,7 @@ public final class Accounts {
        * individual. Actor keys keys may be encrypted.
        * </pre>
        *
-       * <code>.bloombox.schema.ledger.ActorKey actor = 2;</code>
+       * <code>.bloombox.ledger.ActorKey actor = 2;</code>
        */
       public io.bloombox.schema.ledger.Accounts.ActorKeyOrBuilder getActorOrBuilder() {
         if (actorBuilder_ != null) {
@@ -5396,7 +5495,7 @@ public final class Accounts {
        * individual. Actor keys keys may be encrypted.
        * </pre>
        *
-       * <code>.bloombox.schema.ledger.ActorKey actor = 2;</code>
+       * <code>.bloombox.ledger.ActorKey actor = 2;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
           io.bloombox.schema.ledger.Accounts.ActorKey, io.bloombox.schema.ledger.Accounts.ActorKey.Builder, io.bloombox.schema.ledger.Accounts.ActorKeyOrBuilder> 
@@ -5420,7 +5519,7 @@ public final class Accounts {
        * Specifies actual backing certificate information, issued by the central ledger PKI CA.
        * </pre>
        *
-       * <code>.bloombox.schema.ledger.ActorCertificate certificate = 3;</code>
+       * <code>.bloombox.ledger.ActorCertificate certificate = 3;</code>
        */
       public boolean hasCertificate() {
         return certificateBuilder_ != null || certificate_ != null;
@@ -5430,7 +5529,7 @@ public final class Accounts {
        * Specifies actual backing certificate information, issued by the central ledger PKI CA.
        * </pre>
        *
-       * <code>.bloombox.schema.ledger.ActorCertificate certificate = 3;</code>
+       * <code>.bloombox.ledger.ActorCertificate certificate = 3;</code>
        */
       public io.bloombox.schema.ledger.Accounts.ActorCertificate getCertificate() {
         if (certificateBuilder_ == null) {
@@ -5444,7 +5543,7 @@ public final class Accounts {
        * Specifies actual backing certificate information, issued by the central ledger PKI CA.
        * </pre>
        *
-       * <code>.bloombox.schema.ledger.ActorCertificate certificate = 3;</code>
+       * <code>.bloombox.ledger.ActorCertificate certificate = 3;</code>
        */
       public Builder setCertificate(io.bloombox.schema.ledger.Accounts.ActorCertificate value) {
         if (certificateBuilder_ == null) {
@@ -5464,7 +5563,7 @@ public final class Accounts {
        * Specifies actual backing certificate information, issued by the central ledger PKI CA.
        * </pre>
        *
-       * <code>.bloombox.schema.ledger.ActorCertificate certificate = 3;</code>
+       * <code>.bloombox.ledger.ActorCertificate certificate = 3;</code>
        */
       public Builder setCertificate(
           io.bloombox.schema.ledger.Accounts.ActorCertificate.Builder builderForValue) {
@@ -5482,7 +5581,7 @@ public final class Accounts {
        * Specifies actual backing certificate information, issued by the central ledger PKI CA.
        * </pre>
        *
-       * <code>.bloombox.schema.ledger.ActorCertificate certificate = 3;</code>
+       * <code>.bloombox.ledger.ActorCertificate certificate = 3;</code>
        */
       public Builder mergeCertificate(io.bloombox.schema.ledger.Accounts.ActorCertificate value) {
         if (certificateBuilder_ == null) {
@@ -5504,7 +5603,7 @@ public final class Accounts {
        * Specifies actual backing certificate information, issued by the central ledger PKI CA.
        * </pre>
        *
-       * <code>.bloombox.schema.ledger.ActorCertificate certificate = 3;</code>
+       * <code>.bloombox.ledger.ActorCertificate certificate = 3;</code>
        */
       public Builder clearCertificate() {
         if (certificateBuilder_ == null) {
@@ -5522,7 +5621,7 @@ public final class Accounts {
        * Specifies actual backing certificate information, issued by the central ledger PKI CA.
        * </pre>
        *
-       * <code>.bloombox.schema.ledger.ActorCertificate certificate = 3;</code>
+       * <code>.bloombox.ledger.ActorCertificate certificate = 3;</code>
        */
       public io.bloombox.schema.ledger.Accounts.ActorCertificate.Builder getCertificateBuilder() {
         
@@ -5534,7 +5633,7 @@ public final class Accounts {
        * Specifies actual backing certificate information, issued by the central ledger PKI CA.
        * </pre>
        *
-       * <code>.bloombox.schema.ledger.ActorCertificate certificate = 3;</code>
+       * <code>.bloombox.ledger.ActorCertificate certificate = 3;</code>
        */
       public io.bloombox.schema.ledger.Accounts.ActorCertificateOrBuilder getCertificateOrBuilder() {
         if (certificateBuilder_ != null) {
@@ -5549,7 +5648,7 @@ public final class Accounts {
        * Specifies actual backing certificate information, issued by the central ledger PKI CA.
        * </pre>
        *
-       * <code>.bloombox.schema.ledger.ActorCertificate certificate = 3;</code>
+       * <code>.bloombox.ledger.ActorCertificate certificate = 3;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
           io.bloombox.schema.ledger.Accounts.ActorCertificate, io.bloombox.schema.ledger.Accounts.ActorCertificate.Builder, io.bloombox.schema.ledger.Accounts.ActorCertificateOrBuilder> 
@@ -5564,21 +5663,23 @@ public final class Accounts {
         }
         return certificateBuilder_;
       }
+      @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
         return super.setUnknownFieldsProto3(unknownFields);
       }
 
+      @java.lang.Override
       public final Builder mergeUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
         return super.mergeUnknownFields(unknownFields);
       }
 
 
-      // @@protoc_insertion_point(builder_scope:bloombox.schema.ledger.LedgerIdentity)
+      // @@protoc_insertion_point(builder_scope:bloombox.ledger.LedgerIdentity)
     }
 
-    // @@protoc_insertion_point(class_scope:bloombox.schema.ledger.LedgerIdentity)
+    // @@protoc_insertion_point(class_scope:bloombox.ledger.LedgerIdentity)
     private static final io.bloombox.schema.ledger.Accounts.LedgerIdentity DEFAULT_INSTANCE;
     static {
       DEFAULT_INSTANCE = new io.bloombox.schema.ledger.Accounts.LedgerIdentity();
@@ -5590,6 +5691,7 @@ public final class Accounts {
 
     private static final com.google.protobuf.Parser<LedgerIdentity>
         PARSER = new com.google.protobuf.AbstractParser<LedgerIdentity>() {
+      @java.lang.Override
       public LedgerIdentity parsePartialFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -5607,6 +5709,7 @@ public final class Accounts {
       return PARSER;
     }
 
+    @java.lang.Override
     public io.bloombox.schema.ledger.Accounts.LedgerIdentity getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
@@ -5614,7 +5717,7 @@ public final class Accounts {
   }
 
   public interface AssertionTicketOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:bloombox.schema.ledger.AssertionTicket)
+      // @@protoc_insertion_point(interface_extends:bloombox.ledger.AssertionTicket)
       com.google.protobuf.MessageOrBuilder {
 
     /**
@@ -5622,7 +5725,7 @@ public final class Accounts {
      * Cryptographic fingerprint of the transmitted certificate data.
      * </pre>
      *
-     * <code>.opencannabis.crypto.primitives.integrity.Hash fingerprint = 1;</code>
+     * <code>.opencannabis.crypto.Hash fingerprint = 1;</code>
      */
     boolean hasFingerprint();
     /**
@@ -5630,7 +5733,7 @@ public final class Accounts {
      * Cryptographic fingerprint of the transmitted certificate data.
      * </pre>
      *
-     * <code>.opencannabis.crypto.primitives.integrity.Hash fingerprint = 1;</code>
+     * <code>.opencannabis.crypto.Hash fingerprint = 1;</code>
      */
     io.opencannabis.schema.crypto.primitives.integrity.Hash getFingerprint();
     /**
@@ -5638,7 +5741,7 @@ public final class Accounts {
      * Cryptographic fingerprint of the transmitted certificate data.
      * </pre>
      *
-     * <code>.opencannabis.crypto.primitives.integrity.Hash fingerprint = 1;</code>
+     * <code>.opencannabis.crypto.Hash fingerprint = 1;</code>
      */
     io.opencannabis.schema.crypto.primitives.integrity.HashOrBuilder getFingerprintOrBuilder();
 
@@ -5709,11 +5812,11 @@ public final class Accounts {
    * and cryptographically verified.
    * </pre>
    *
-   * Protobuf type {@code bloombox.schema.ledger.AssertionTicket}
+   * Protobuf type {@code bloombox.ledger.AssertionTicket}
    */
   public  static final class AssertionTicket extends
       com.google.protobuf.GeneratedMessageV3 implements
-      // @@protoc_insertion_point(message_implements:bloombox.schema.ledger.AssertionTicket)
+      // @@protoc_insertion_point(message_implements:bloombox.ledger.AssertionTicket)
       AssertionTicketOrBuilder {
   private static final long serialVersionUID = 0L;
     // Use AssertionTicket.newBuilder() to construct.
@@ -5749,13 +5852,6 @@ public final class Accounts {
             case 0:
               done = true;
               break;
-            default: {
-              if (!parseUnknownFieldProto3(
-                  input, unknownFields, extensionRegistry, tag)) {
-                done = true;
-              }
-              break;
-            }
             case 10: {
               io.opencannabis.schema.crypto.primitives.integrity.Hash.Builder subBuilder = null;
               if (fingerprint_ != null) {
@@ -5794,6 +5890,13 @@ public final class Accounts {
               assurer_ = s;
               break;
             }
+            default: {
+              if (!parseUnknownFieldProto3(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
           }
         }
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
@@ -5808,12 +5911,13 @@ public final class Accounts {
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return io.bloombox.schema.ledger.Accounts.internal_static_bloombox_schema_ledger_AssertionTicket_descriptor;
+      return io.bloombox.schema.ledger.Accounts.internal_static_bloombox_ledger_AssertionTicket_descriptor;
     }
 
+    @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return io.bloombox.schema.ledger.Accounts.internal_static_bloombox_schema_ledger_AssertionTicket_fieldAccessorTable
+      return io.bloombox.schema.ledger.Accounts.internal_static_bloombox_ledger_AssertionTicket_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
               io.bloombox.schema.ledger.Accounts.AssertionTicket.class, io.bloombox.schema.ledger.Accounts.AssertionTicket.Builder.class);
     }
@@ -5825,7 +5929,7 @@ public final class Accounts {
      * Cryptographic fingerprint of the transmitted certificate data.
      * </pre>
      *
-     * <code>.opencannabis.crypto.primitives.integrity.Hash fingerprint = 1;</code>
+     * <code>.opencannabis.crypto.Hash fingerprint = 1;</code>
      */
     public boolean hasFingerprint() {
       return fingerprint_ != null;
@@ -5835,7 +5939,7 @@ public final class Accounts {
      * Cryptographic fingerprint of the transmitted certificate data.
      * </pre>
      *
-     * <code>.opencannabis.crypto.primitives.integrity.Hash fingerprint = 1;</code>
+     * <code>.opencannabis.crypto.Hash fingerprint = 1;</code>
      */
     public io.opencannabis.schema.crypto.primitives.integrity.Hash getFingerprint() {
       return fingerprint_ == null ? io.opencannabis.schema.crypto.primitives.integrity.Hash.getDefaultInstance() : fingerprint_;
@@ -5845,7 +5949,7 @@ public final class Accounts {
      * Cryptographic fingerprint of the transmitted certificate data.
      * </pre>
      *
-     * <code>.opencannabis.crypto.primitives.integrity.Hash fingerprint = 1;</code>
+     * <code>.opencannabis.crypto.Hash fingerprint = 1;</code>
      */
     public io.opencannabis.schema.crypto.primitives.integrity.HashOrBuilder getFingerprintOrBuilder() {
       return getFingerprint();
@@ -5969,6 +6073,7 @@ public final class Accounts {
     }
 
     private byte memoizedIsInitialized = -1;
+    @java.lang.Override
     public final boolean isInitialized() {
       byte isInitialized = memoizedIsInitialized;
       if (isInitialized == 1) return true;
@@ -5978,6 +6083,7 @@ public final class Accounts {
       return true;
     }
 
+    @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
       if (fingerprint_ != null) {
@@ -5995,6 +6101,7 @@ public final class Accounts {
       unknownFields.writeTo(output);
     }
 
+    @java.lang.Override
     public int getSerializedSize() {
       int size = memoizedSize;
       if (size != -1) return size;
@@ -6142,6 +6249,7 @@ public final class Accounts {
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
 
+    @java.lang.Override
     public Builder newBuilderForType() { return newBuilder(); }
     public static Builder newBuilder() {
       return DEFAULT_INSTANCE.toBuilder();
@@ -6149,6 +6257,7 @@ public final class Accounts {
     public static Builder newBuilder(io.bloombox.schema.ledger.Accounts.AssertionTicket prototype) {
       return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
     }
+    @java.lang.Override
     public Builder toBuilder() {
       return this == DEFAULT_INSTANCE
           ? new Builder() : new Builder().mergeFrom(this);
@@ -6166,20 +6275,21 @@ public final class Accounts {
      * and cryptographically verified.
      * </pre>
      *
-     * Protobuf type {@code bloombox.schema.ledger.AssertionTicket}
+     * Protobuf type {@code bloombox.ledger.AssertionTicket}
      */
     public static final class Builder extends
         com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:bloombox.schema.ledger.AssertionTicket)
+        // @@protoc_insertion_point(builder_implements:bloombox.ledger.AssertionTicket)
         io.bloombox.schema.ledger.Accounts.AssertionTicketOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return io.bloombox.schema.ledger.Accounts.internal_static_bloombox_schema_ledger_AssertionTicket_descriptor;
+        return io.bloombox.schema.ledger.Accounts.internal_static_bloombox_ledger_AssertionTicket_descriptor;
       }
 
+      @java.lang.Override
       protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return io.bloombox.schema.ledger.Accounts.internal_static_bloombox_schema_ledger_AssertionTicket_fieldAccessorTable
+        return io.bloombox.schema.ledger.Accounts.internal_static_bloombox_ledger_AssertionTicket_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
                 io.bloombox.schema.ledger.Accounts.AssertionTicket.class, io.bloombox.schema.ledger.Accounts.AssertionTicket.Builder.class);
       }
@@ -6199,6 +6309,7 @@ public final class Accounts {
                 .alwaysUseFieldBuilders) {
         }
       }
+      @java.lang.Override
       public Builder clear() {
         super.clear();
         if (fingerprintBuilder_ == null) {
@@ -6220,15 +6331,18 @@ public final class Accounts {
         return this;
       }
 
+      @java.lang.Override
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return io.bloombox.schema.ledger.Accounts.internal_static_bloombox_schema_ledger_AssertionTicket_descriptor;
+        return io.bloombox.schema.ledger.Accounts.internal_static_bloombox_ledger_AssertionTicket_descriptor;
       }
 
+      @java.lang.Override
       public io.bloombox.schema.ledger.Accounts.AssertionTicket getDefaultInstanceForType() {
         return io.bloombox.schema.ledger.Accounts.AssertionTicket.getDefaultInstance();
       }
 
+      @java.lang.Override
       public io.bloombox.schema.ledger.Accounts.AssertionTicket build() {
         io.bloombox.schema.ledger.Accounts.AssertionTicket result = buildPartial();
         if (!result.isInitialized()) {
@@ -6237,6 +6351,7 @@ public final class Accounts {
         return result;
       }
 
+      @java.lang.Override
       public io.bloombox.schema.ledger.Accounts.AssertionTicket buildPartial() {
         io.bloombox.schema.ledger.Accounts.AssertionTicket result = new io.bloombox.schema.ledger.Accounts.AssertionTicket(this);
         if (fingerprintBuilder_ == null) {
@@ -6255,32 +6370,39 @@ public final class Accounts {
         return result;
       }
 
+      @java.lang.Override
       public Builder clone() {
         return (Builder) super.clone();
       }
+      @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
         return (Builder) super.setField(field, value);
       }
+      @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
         return (Builder) super.clearField(field);
       }
+      @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
         return (Builder) super.clearOneof(oneof);
       }
+      @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
         return (Builder) super.setRepeatedField(field, index, value);
       }
+      @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
         return (Builder) super.addRepeatedField(field, value);
       }
+      @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
         if (other instanceof io.bloombox.schema.ledger.Accounts.AssertionTicket) {
           return mergeFrom((io.bloombox.schema.ledger.Accounts.AssertionTicket)other);
@@ -6311,10 +6433,12 @@ public final class Accounts {
         return this;
       }
 
+      @java.lang.Override
       public final boolean isInitialized() {
         return true;
       }
 
+      @java.lang.Override
       public Builder mergeFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -6341,7 +6465,7 @@ public final class Accounts {
        * Cryptographic fingerprint of the transmitted certificate data.
        * </pre>
        *
-       * <code>.opencannabis.crypto.primitives.integrity.Hash fingerprint = 1;</code>
+       * <code>.opencannabis.crypto.Hash fingerprint = 1;</code>
        */
       public boolean hasFingerprint() {
         return fingerprintBuilder_ != null || fingerprint_ != null;
@@ -6351,7 +6475,7 @@ public final class Accounts {
        * Cryptographic fingerprint of the transmitted certificate data.
        * </pre>
        *
-       * <code>.opencannabis.crypto.primitives.integrity.Hash fingerprint = 1;</code>
+       * <code>.opencannabis.crypto.Hash fingerprint = 1;</code>
        */
       public io.opencannabis.schema.crypto.primitives.integrity.Hash getFingerprint() {
         if (fingerprintBuilder_ == null) {
@@ -6365,7 +6489,7 @@ public final class Accounts {
        * Cryptographic fingerprint of the transmitted certificate data.
        * </pre>
        *
-       * <code>.opencannabis.crypto.primitives.integrity.Hash fingerprint = 1;</code>
+       * <code>.opencannabis.crypto.Hash fingerprint = 1;</code>
        */
       public Builder setFingerprint(io.opencannabis.schema.crypto.primitives.integrity.Hash value) {
         if (fingerprintBuilder_ == null) {
@@ -6385,7 +6509,7 @@ public final class Accounts {
        * Cryptographic fingerprint of the transmitted certificate data.
        * </pre>
        *
-       * <code>.opencannabis.crypto.primitives.integrity.Hash fingerprint = 1;</code>
+       * <code>.opencannabis.crypto.Hash fingerprint = 1;</code>
        */
       public Builder setFingerprint(
           io.opencannabis.schema.crypto.primitives.integrity.Hash.Builder builderForValue) {
@@ -6403,7 +6527,7 @@ public final class Accounts {
        * Cryptographic fingerprint of the transmitted certificate data.
        * </pre>
        *
-       * <code>.opencannabis.crypto.primitives.integrity.Hash fingerprint = 1;</code>
+       * <code>.opencannabis.crypto.Hash fingerprint = 1;</code>
        */
       public Builder mergeFingerprint(io.opencannabis.schema.crypto.primitives.integrity.Hash value) {
         if (fingerprintBuilder_ == null) {
@@ -6425,7 +6549,7 @@ public final class Accounts {
        * Cryptographic fingerprint of the transmitted certificate data.
        * </pre>
        *
-       * <code>.opencannabis.crypto.primitives.integrity.Hash fingerprint = 1;</code>
+       * <code>.opencannabis.crypto.Hash fingerprint = 1;</code>
        */
       public Builder clearFingerprint() {
         if (fingerprintBuilder_ == null) {
@@ -6443,7 +6567,7 @@ public final class Accounts {
        * Cryptographic fingerprint of the transmitted certificate data.
        * </pre>
        *
-       * <code>.opencannabis.crypto.primitives.integrity.Hash fingerprint = 1;</code>
+       * <code>.opencannabis.crypto.Hash fingerprint = 1;</code>
        */
       public io.opencannabis.schema.crypto.primitives.integrity.Hash.Builder getFingerprintBuilder() {
         
@@ -6455,7 +6579,7 @@ public final class Accounts {
        * Cryptographic fingerprint of the transmitted certificate data.
        * </pre>
        *
-       * <code>.opencannabis.crypto.primitives.integrity.Hash fingerprint = 1;</code>
+       * <code>.opencannabis.crypto.Hash fingerprint = 1;</code>
        */
       public io.opencannabis.schema.crypto.primitives.integrity.HashOrBuilder getFingerprintOrBuilder() {
         if (fingerprintBuilder_ != null) {
@@ -6470,7 +6594,7 @@ public final class Accounts {
        * Cryptographic fingerprint of the transmitted certificate data.
        * </pre>
        *
-       * <code>.opencannabis.crypto.primitives.integrity.Hash fingerprint = 1;</code>
+       * <code>.opencannabis.crypto.Hash fingerprint = 1;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
           io.opencannabis.schema.crypto.primitives.integrity.Hash, io.opencannabis.schema.crypto.primitives.integrity.Hash.Builder, io.opencannabis.schema.crypto.primitives.integrity.HashOrBuilder> 
@@ -6816,21 +6940,23 @@ public final class Accounts {
         onChanged();
         return this;
       }
+      @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
         return super.setUnknownFieldsProto3(unknownFields);
       }
 
+      @java.lang.Override
       public final Builder mergeUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
         return super.mergeUnknownFields(unknownFields);
       }
 
 
-      // @@protoc_insertion_point(builder_scope:bloombox.schema.ledger.AssertionTicket)
+      // @@protoc_insertion_point(builder_scope:bloombox.ledger.AssertionTicket)
     }
 
-    // @@protoc_insertion_point(class_scope:bloombox.schema.ledger.AssertionTicket)
+    // @@protoc_insertion_point(class_scope:bloombox.ledger.AssertionTicket)
     private static final io.bloombox.schema.ledger.Accounts.AssertionTicket DEFAULT_INSTANCE;
     static {
       DEFAULT_INSTANCE = new io.bloombox.schema.ledger.Accounts.AssertionTicket();
@@ -6842,6 +6968,7 @@ public final class Accounts {
 
     private static final com.google.protobuf.Parser<AssertionTicket>
         PARSER = new com.google.protobuf.AbstractParser<AssertionTicket>() {
+      @java.lang.Override
       public AssertionTicket parsePartialFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -6859,6 +6986,7 @@ public final class Accounts {
       return PARSER;
     }
 
+    @java.lang.Override
     public io.bloombox.schema.ledger.Accounts.AssertionTicket getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
@@ -6866,7 +6994,7 @@ public final class Accounts {
   }
 
   public interface IdentityClaimOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:bloombox.schema.ledger.IdentityClaim)
+      // @@protoc_insertion_point(interface_extends:bloombox.ledger.IdentityClaim)
       com.google.protobuf.MessageOrBuilder {
 
     /**
@@ -6946,7 +7074,7 @@ public final class Accounts {
      * Specifies actual backing certificate information, issued by the central ledger PKI CA.
      * </pre>
      *
-     * <code>.bloombox.schema.ledger.ActorCertificate certificate = 5;</code>
+     * <code>.bloombox.ledger.ActorCertificate certificate = 5;</code>
      */
     boolean hasCertificate();
     /**
@@ -6954,7 +7082,7 @@ public final class Accounts {
      * Specifies actual backing certificate information, issued by the central ledger PKI CA.
      * </pre>
      *
-     * <code>.bloombox.schema.ledger.ActorCertificate certificate = 5;</code>
+     * <code>.bloombox.ledger.ActorCertificate certificate = 5;</code>
      */
     io.bloombox.schema.ledger.Accounts.ActorCertificate getCertificate();
     /**
@@ -6962,7 +7090,7 @@ public final class Accounts {
      * Specifies actual backing certificate information, issued by the central ledger PKI CA.
      * </pre>
      *
-     * <code>.bloombox.schema.ledger.ActorCertificate certificate = 5;</code>
+     * <code>.bloombox.ledger.ActorCertificate certificate = 5;</code>
      */
     io.bloombox.schema.ledger.Accounts.ActorCertificateOrBuilder getCertificateOrBuilder();
 
@@ -6972,7 +7100,7 @@ public final class Accounts {
      * individual. Actor keys keys may be encrypted.
      * </pre>
      *
-     * <code>.bloombox.schema.ledger.ActorKey actor = 6;</code>
+     * <code>.bloombox.ledger.ActorKey actor = 6;</code>
      */
     boolean hasActor();
     /**
@@ -6981,7 +7109,7 @@ public final class Accounts {
      * individual. Actor keys keys may be encrypted.
      * </pre>
      *
-     * <code>.bloombox.schema.ledger.ActorKey actor = 6;</code>
+     * <code>.bloombox.ledger.ActorKey actor = 6;</code>
      */
     io.bloombox.schema.ledger.Accounts.ActorKey getActor();
     /**
@@ -6990,7 +7118,7 @@ public final class Accounts {
      * individual. Actor keys keys may be encrypted.
      * </pre>
      *
-     * <code>.bloombox.schema.ledger.ActorKey actor = 6;</code>
+     * <code>.bloombox.ledger.ActorKey actor = 6;</code>
      */
     io.bloombox.schema.ledger.Accounts.ActorKeyOrBuilder getActorOrBuilder();
 
@@ -6999,7 +7127,7 @@ public final class Accounts {
      * Assertion ticket, verifying that this was indeed verified by the server upon submission.
      * </pre>
      *
-     * <code>.bloombox.schema.ledger.AssertionTicket assertion = 7;</code>
+     * <code>.bloombox.ledger.AssertionTicket assertion = 7;</code>
      */
     boolean hasAssertion();
     /**
@@ -7007,7 +7135,7 @@ public final class Accounts {
      * Assertion ticket, verifying that this was indeed verified by the server upon submission.
      * </pre>
      *
-     * <code>.bloombox.schema.ledger.AssertionTicket assertion = 7;</code>
+     * <code>.bloombox.ledger.AssertionTicket assertion = 7;</code>
      */
     io.bloombox.schema.ledger.Accounts.AssertionTicket getAssertion();
     /**
@@ -7015,7 +7143,7 @@ public final class Accounts {
      * Assertion ticket, verifying that this was indeed verified by the server upon submission.
      * </pre>
      *
-     * <code>.bloombox.schema.ledger.AssertionTicket assertion = 7;</code>
+     * <code>.bloombox.ledger.AssertionTicket assertion = 7;</code>
      */
     io.bloombox.schema.ledger.Accounts.AssertionTicketOrBuilder getAssertionOrBuilder();
   }
@@ -7026,11 +7154,11 @@ public final class Accounts {
    * and certificate hash to their object identifier, which is the digest of their ledger public key.
    * </pre>
    *
-   * Protobuf type {@code bloombox.schema.ledger.IdentityClaim}
+   * Protobuf type {@code bloombox.ledger.IdentityClaim}
    */
   public  static final class IdentityClaim extends
       com.google.protobuf.GeneratedMessageV3 implements
-      // @@protoc_insertion_point(message_implements:bloombox.schema.ledger.IdentityClaim)
+      // @@protoc_insertion_point(message_implements:bloombox.ledger.IdentityClaim)
       IdentityClaimOrBuilder {
   private static final long serialVersionUID = 0L;
     // Use IdentityClaim.newBuilder() to construct.
@@ -7068,13 +7196,6 @@ public final class Accounts {
             case 0:
               done = true;
               break;
-            default: {
-              if (!parseUnknownFieldProto3(
-                  input, unknownFields, extensionRegistry, tag)) {
-                done = true;
-              }
-              break;
-            }
             case 10: {
               java.lang.String s = input.readStringRequireUtf8();
 
@@ -7138,6 +7259,13 @@ public final class Accounts {
 
               break;
             }
+            default: {
+              if (!parseUnknownFieldProto3(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
           }
         }
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
@@ -7152,12 +7280,13 @@ public final class Accounts {
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return io.bloombox.schema.ledger.Accounts.internal_static_bloombox_schema_ledger_IdentityClaim_descriptor;
+      return io.bloombox.schema.ledger.Accounts.internal_static_bloombox_ledger_IdentityClaim_descriptor;
     }
 
+    @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return io.bloombox.schema.ledger.Accounts.internal_static_bloombox_schema_ledger_IdentityClaim_fieldAccessorTable
+      return io.bloombox.schema.ledger.Accounts.internal_static_bloombox_ledger_IdentityClaim_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
               io.bloombox.schema.ledger.Accounts.IdentityClaim.class, io.bloombox.schema.ledger.Accounts.IdentityClaim.Builder.class);
     }
@@ -7337,7 +7466,7 @@ public final class Accounts {
      * Specifies actual backing certificate information, issued by the central ledger PKI CA.
      * </pre>
      *
-     * <code>.bloombox.schema.ledger.ActorCertificate certificate = 5;</code>
+     * <code>.bloombox.ledger.ActorCertificate certificate = 5;</code>
      */
     public boolean hasCertificate() {
       return certificate_ != null;
@@ -7347,7 +7476,7 @@ public final class Accounts {
      * Specifies actual backing certificate information, issued by the central ledger PKI CA.
      * </pre>
      *
-     * <code>.bloombox.schema.ledger.ActorCertificate certificate = 5;</code>
+     * <code>.bloombox.ledger.ActorCertificate certificate = 5;</code>
      */
     public io.bloombox.schema.ledger.Accounts.ActorCertificate getCertificate() {
       return certificate_ == null ? io.bloombox.schema.ledger.Accounts.ActorCertificate.getDefaultInstance() : certificate_;
@@ -7357,7 +7486,7 @@ public final class Accounts {
      * Specifies actual backing certificate information, issued by the central ledger PKI CA.
      * </pre>
      *
-     * <code>.bloombox.schema.ledger.ActorCertificate certificate = 5;</code>
+     * <code>.bloombox.ledger.ActorCertificate certificate = 5;</code>
      */
     public io.bloombox.schema.ledger.Accounts.ActorCertificateOrBuilder getCertificateOrBuilder() {
       return getCertificate();
@@ -7371,7 +7500,7 @@ public final class Accounts {
      * individual. Actor keys keys may be encrypted.
      * </pre>
      *
-     * <code>.bloombox.schema.ledger.ActorKey actor = 6;</code>
+     * <code>.bloombox.ledger.ActorKey actor = 6;</code>
      */
     public boolean hasActor() {
       return actor_ != null;
@@ -7382,7 +7511,7 @@ public final class Accounts {
      * individual. Actor keys keys may be encrypted.
      * </pre>
      *
-     * <code>.bloombox.schema.ledger.ActorKey actor = 6;</code>
+     * <code>.bloombox.ledger.ActorKey actor = 6;</code>
      */
     public io.bloombox.schema.ledger.Accounts.ActorKey getActor() {
       return actor_ == null ? io.bloombox.schema.ledger.Accounts.ActorKey.getDefaultInstance() : actor_;
@@ -7393,7 +7522,7 @@ public final class Accounts {
      * individual. Actor keys keys may be encrypted.
      * </pre>
      *
-     * <code>.bloombox.schema.ledger.ActorKey actor = 6;</code>
+     * <code>.bloombox.ledger.ActorKey actor = 6;</code>
      */
     public io.bloombox.schema.ledger.Accounts.ActorKeyOrBuilder getActorOrBuilder() {
       return getActor();
@@ -7406,7 +7535,7 @@ public final class Accounts {
      * Assertion ticket, verifying that this was indeed verified by the server upon submission.
      * </pre>
      *
-     * <code>.bloombox.schema.ledger.AssertionTicket assertion = 7;</code>
+     * <code>.bloombox.ledger.AssertionTicket assertion = 7;</code>
      */
     public boolean hasAssertion() {
       return assertion_ != null;
@@ -7416,7 +7545,7 @@ public final class Accounts {
      * Assertion ticket, verifying that this was indeed verified by the server upon submission.
      * </pre>
      *
-     * <code>.bloombox.schema.ledger.AssertionTicket assertion = 7;</code>
+     * <code>.bloombox.ledger.AssertionTicket assertion = 7;</code>
      */
     public io.bloombox.schema.ledger.Accounts.AssertionTicket getAssertion() {
       return assertion_ == null ? io.bloombox.schema.ledger.Accounts.AssertionTicket.getDefaultInstance() : assertion_;
@@ -7426,13 +7555,14 @@ public final class Accounts {
      * Assertion ticket, verifying that this was indeed verified by the server upon submission.
      * </pre>
      *
-     * <code>.bloombox.schema.ledger.AssertionTicket assertion = 7;</code>
+     * <code>.bloombox.ledger.AssertionTicket assertion = 7;</code>
      */
     public io.bloombox.schema.ledger.Accounts.AssertionTicketOrBuilder getAssertionOrBuilder() {
       return getAssertion();
     }
 
     private byte memoizedIsInitialized = -1;
+    @java.lang.Override
     public final boolean isInitialized() {
       byte isInitialized = memoizedIsInitialized;
       if (isInitialized == 1) return true;
@@ -7442,6 +7572,7 @@ public final class Accounts {
       return true;
     }
 
+    @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
       if (!getIdBytes().isEmpty()) {
@@ -7468,6 +7599,7 @@ public final class Accounts {
       unknownFields.writeTo(output);
     }
 
+    @java.lang.Override
     public int getSerializedSize() {
       int size = memoizedSize;
       if (size != -1) return size;
@@ -7642,6 +7774,7 @@ public final class Accounts {
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
 
+    @java.lang.Override
     public Builder newBuilderForType() { return newBuilder(); }
     public static Builder newBuilder() {
       return DEFAULT_INSTANCE.toBuilder();
@@ -7649,6 +7782,7 @@ public final class Accounts {
     public static Builder newBuilder(io.bloombox.schema.ledger.Accounts.IdentityClaim prototype) {
       return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
     }
+    @java.lang.Override
     public Builder toBuilder() {
       return this == DEFAULT_INSTANCE
           ? new Builder() : new Builder().mergeFrom(this);
@@ -7667,20 +7801,21 @@ public final class Accounts {
      * and certificate hash to their object identifier, which is the digest of their ledger public key.
      * </pre>
      *
-     * Protobuf type {@code bloombox.schema.ledger.IdentityClaim}
+     * Protobuf type {@code bloombox.ledger.IdentityClaim}
      */
     public static final class Builder extends
         com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:bloombox.schema.ledger.IdentityClaim)
+        // @@protoc_insertion_point(builder_implements:bloombox.ledger.IdentityClaim)
         io.bloombox.schema.ledger.Accounts.IdentityClaimOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return io.bloombox.schema.ledger.Accounts.internal_static_bloombox_schema_ledger_IdentityClaim_descriptor;
+        return io.bloombox.schema.ledger.Accounts.internal_static_bloombox_ledger_IdentityClaim_descriptor;
       }
 
+      @java.lang.Override
       protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return io.bloombox.schema.ledger.Accounts.internal_static_bloombox_schema_ledger_IdentityClaim_fieldAccessorTable
+        return io.bloombox.schema.ledger.Accounts.internal_static_bloombox_ledger_IdentityClaim_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
                 io.bloombox.schema.ledger.Accounts.IdentityClaim.class, io.bloombox.schema.ledger.Accounts.IdentityClaim.Builder.class);
       }
@@ -7700,6 +7835,7 @@ public final class Accounts {
                 .alwaysUseFieldBuilders) {
         }
       }
+      @java.lang.Override
       public Builder clear() {
         super.clear();
         id_ = "";
@@ -7731,15 +7867,18 @@ public final class Accounts {
         return this;
       }
 
+      @java.lang.Override
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return io.bloombox.schema.ledger.Accounts.internal_static_bloombox_schema_ledger_IdentityClaim_descriptor;
+        return io.bloombox.schema.ledger.Accounts.internal_static_bloombox_ledger_IdentityClaim_descriptor;
       }
 
+      @java.lang.Override
       public io.bloombox.schema.ledger.Accounts.IdentityClaim getDefaultInstanceForType() {
         return io.bloombox.schema.ledger.Accounts.IdentityClaim.getDefaultInstance();
       }
 
+      @java.lang.Override
       public io.bloombox.schema.ledger.Accounts.IdentityClaim build() {
         io.bloombox.schema.ledger.Accounts.IdentityClaim result = buildPartial();
         if (!result.isInitialized()) {
@@ -7748,6 +7887,7 @@ public final class Accounts {
         return result;
       }
 
+      @java.lang.Override
       public io.bloombox.schema.ledger.Accounts.IdentityClaim buildPartial() {
         io.bloombox.schema.ledger.Accounts.IdentityClaim result = new io.bloombox.schema.ledger.Accounts.IdentityClaim(this);
         result.id_ = id_;
@@ -7773,32 +7913,39 @@ public final class Accounts {
         return result;
       }
 
+      @java.lang.Override
       public Builder clone() {
         return (Builder) super.clone();
       }
+      @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
         return (Builder) super.setField(field, value);
       }
+      @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
         return (Builder) super.clearField(field);
       }
+      @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
         return (Builder) super.clearOneof(oneof);
       }
+      @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
         return (Builder) super.setRepeatedField(field, index, value);
       }
+      @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
         return (Builder) super.addRepeatedField(field, value);
       }
+      @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
         if (other instanceof io.bloombox.schema.ledger.Accounts.IdentityClaim) {
           return mergeFrom((io.bloombox.schema.ledger.Accounts.IdentityClaim)other);
@@ -7840,10 +7987,12 @@ public final class Accounts {
         return this;
       }
 
+      @java.lang.Override
       public final boolean isInitialized() {
         return true;
       }
 
+      @java.lang.Override
       public Builder mergeFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -8226,7 +8375,7 @@ public final class Accounts {
        * Specifies actual backing certificate information, issued by the central ledger PKI CA.
        * </pre>
        *
-       * <code>.bloombox.schema.ledger.ActorCertificate certificate = 5;</code>
+       * <code>.bloombox.ledger.ActorCertificate certificate = 5;</code>
        */
       public boolean hasCertificate() {
         return certificateBuilder_ != null || certificate_ != null;
@@ -8236,7 +8385,7 @@ public final class Accounts {
        * Specifies actual backing certificate information, issued by the central ledger PKI CA.
        * </pre>
        *
-       * <code>.bloombox.schema.ledger.ActorCertificate certificate = 5;</code>
+       * <code>.bloombox.ledger.ActorCertificate certificate = 5;</code>
        */
       public io.bloombox.schema.ledger.Accounts.ActorCertificate getCertificate() {
         if (certificateBuilder_ == null) {
@@ -8250,7 +8399,7 @@ public final class Accounts {
        * Specifies actual backing certificate information, issued by the central ledger PKI CA.
        * </pre>
        *
-       * <code>.bloombox.schema.ledger.ActorCertificate certificate = 5;</code>
+       * <code>.bloombox.ledger.ActorCertificate certificate = 5;</code>
        */
       public Builder setCertificate(io.bloombox.schema.ledger.Accounts.ActorCertificate value) {
         if (certificateBuilder_ == null) {
@@ -8270,7 +8419,7 @@ public final class Accounts {
        * Specifies actual backing certificate information, issued by the central ledger PKI CA.
        * </pre>
        *
-       * <code>.bloombox.schema.ledger.ActorCertificate certificate = 5;</code>
+       * <code>.bloombox.ledger.ActorCertificate certificate = 5;</code>
        */
       public Builder setCertificate(
           io.bloombox.schema.ledger.Accounts.ActorCertificate.Builder builderForValue) {
@@ -8288,7 +8437,7 @@ public final class Accounts {
        * Specifies actual backing certificate information, issued by the central ledger PKI CA.
        * </pre>
        *
-       * <code>.bloombox.schema.ledger.ActorCertificate certificate = 5;</code>
+       * <code>.bloombox.ledger.ActorCertificate certificate = 5;</code>
        */
       public Builder mergeCertificate(io.bloombox.schema.ledger.Accounts.ActorCertificate value) {
         if (certificateBuilder_ == null) {
@@ -8310,7 +8459,7 @@ public final class Accounts {
        * Specifies actual backing certificate information, issued by the central ledger PKI CA.
        * </pre>
        *
-       * <code>.bloombox.schema.ledger.ActorCertificate certificate = 5;</code>
+       * <code>.bloombox.ledger.ActorCertificate certificate = 5;</code>
        */
       public Builder clearCertificate() {
         if (certificateBuilder_ == null) {
@@ -8328,7 +8477,7 @@ public final class Accounts {
        * Specifies actual backing certificate information, issued by the central ledger PKI CA.
        * </pre>
        *
-       * <code>.bloombox.schema.ledger.ActorCertificate certificate = 5;</code>
+       * <code>.bloombox.ledger.ActorCertificate certificate = 5;</code>
        */
       public io.bloombox.schema.ledger.Accounts.ActorCertificate.Builder getCertificateBuilder() {
         
@@ -8340,7 +8489,7 @@ public final class Accounts {
        * Specifies actual backing certificate information, issued by the central ledger PKI CA.
        * </pre>
        *
-       * <code>.bloombox.schema.ledger.ActorCertificate certificate = 5;</code>
+       * <code>.bloombox.ledger.ActorCertificate certificate = 5;</code>
        */
       public io.bloombox.schema.ledger.Accounts.ActorCertificateOrBuilder getCertificateOrBuilder() {
         if (certificateBuilder_ != null) {
@@ -8355,7 +8504,7 @@ public final class Accounts {
        * Specifies actual backing certificate information, issued by the central ledger PKI CA.
        * </pre>
        *
-       * <code>.bloombox.schema.ledger.ActorCertificate certificate = 5;</code>
+       * <code>.bloombox.ledger.ActorCertificate certificate = 5;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
           io.bloombox.schema.ledger.Accounts.ActorCertificate, io.bloombox.schema.ledger.Accounts.ActorCertificate.Builder, io.bloombox.schema.ledger.Accounts.ActorCertificateOrBuilder> 
@@ -8380,7 +8529,7 @@ public final class Accounts {
        * individual. Actor keys keys may be encrypted.
        * </pre>
        *
-       * <code>.bloombox.schema.ledger.ActorKey actor = 6;</code>
+       * <code>.bloombox.ledger.ActorKey actor = 6;</code>
        */
       public boolean hasActor() {
         return actorBuilder_ != null || actor_ != null;
@@ -8391,7 +8540,7 @@ public final class Accounts {
        * individual. Actor keys keys may be encrypted.
        * </pre>
        *
-       * <code>.bloombox.schema.ledger.ActorKey actor = 6;</code>
+       * <code>.bloombox.ledger.ActorKey actor = 6;</code>
        */
       public io.bloombox.schema.ledger.Accounts.ActorKey getActor() {
         if (actorBuilder_ == null) {
@@ -8406,7 +8555,7 @@ public final class Accounts {
        * individual. Actor keys keys may be encrypted.
        * </pre>
        *
-       * <code>.bloombox.schema.ledger.ActorKey actor = 6;</code>
+       * <code>.bloombox.ledger.ActorKey actor = 6;</code>
        */
       public Builder setActor(io.bloombox.schema.ledger.Accounts.ActorKey value) {
         if (actorBuilder_ == null) {
@@ -8427,7 +8576,7 @@ public final class Accounts {
        * individual. Actor keys keys may be encrypted.
        * </pre>
        *
-       * <code>.bloombox.schema.ledger.ActorKey actor = 6;</code>
+       * <code>.bloombox.ledger.ActorKey actor = 6;</code>
        */
       public Builder setActor(
           io.bloombox.schema.ledger.Accounts.ActorKey.Builder builderForValue) {
@@ -8446,7 +8595,7 @@ public final class Accounts {
        * individual. Actor keys keys may be encrypted.
        * </pre>
        *
-       * <code>.bloombox.schema.ledger.ActorKey actor = 6;</code>
+       * <code>.bloombox.ledger.ActorKey actor = 6;</code>
        */
       public Builder mergeActor(io.bloombox.schema.ledger.Accounts.ActorKey value) {
         if (actorBuilder_ == null) {
@@ -8469,7 +8618,7 @@ public final class Accounts {
        * individual. Actor keys keys may be encrypted.
        * </pre>
        *
-       * <code>.bloombox.schema.ledger.ActorKey actor = 6;</code>
+       * <code>.bloombox.ledger.ActorKey actor = 6;</code>
        */
       public Builder clearActor() {
         if (actorBuilder_ == null) {
@@ -8488,7 +8637,7 @@ public final class Accounts {
        * individual. Actor keys keys may be encrypted.
        * </pre>
        *
-       * <code>.bloombox.schema.ledger.ActorKey actor = 6;</code>
+       * <code>.bloombox.ledger.ActorKey actor = 6;</code>
        */
       public io.bloombox.schema.ledger.Accounts.ActorKey.Builder getActorBuilder() {
         
@@ -8501,7 +8650,7 @@ public final class Accounts {
        * individual. Actor keys keys may be encrypted.
        * </pre>
        *
-       * <code>.bloombox.schema.ledger.ActorKey actor = 6;</code>
+       * <code>.bloombox.ledger.ActorKey actor = 6;</code>
        */
       public io.bloombox.schema.ledger.Accounts.ActorKeyOrBuilder getActorOrBuilder() {
         if (actorBuilder_ != null) {
@@ -8517,7 +8666,7 @@ public final class Accounts {
        * individual. Actor keys keys may be encrypted.
        * </pre>
        *
-       * <code>.bloombox.schema.ledger.ActorKey actor = 6;</code>
+       * <code>.bloombox.ledger.ActorKey actor = 6;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
           io.bloombox.schema.ledger.Accounts.ActorKey, io.bloombox.schema.ledger.Accounts.ActorKey.Builder, io.bloombox.schema.ledger.Accounts.ActorKeyOrBuilder> 
@@ -8541,7 +8690,7 @@ public final class Accounts {
        * Assertion ticket, verifying that this was indeed verified by the server upon submission.
        * </pre>
        *
-       * <code>.bloombox.schema.ledger.AssertionTicket assertion = 7;</code>
+       * <code>.bloombox.ledger.AssertionTicket assertion = 7;</code>
        */
       public boolean hasAssertion() {
         return assertionBuilder_ != null || assertion_ != null;
@@ -8551,7 +8700,7 @@ public final class Accounts {
        * Assertion ticket, verifying that this was indeed verified by the server upon submission.
        * </pre>
        *
-       * <code>.bloombox.schema.ledger.AssertionTicket assertion = 7;</code>
+       * <code>.bloombox.ledger.AssertionTicket assertion = 7;</code>
        */
       public io.bloombox.schema.ledger.Accounts.AssertionTicket getAssertion() {
         if (assertionBuilder_ == null) {
@@ -8565,7 +8714,7 @@ public final class Accounts {
        * Assertion ticket, verifying that this was indeed verified by the server upon submission.
        * </pre>
        *
-       * <code>.bloombox.schema.ledger.AssertionTicket assertion = 7;</code>
+       * <code>.bloombox.ledger.AssertionTicket assertion = 7;</code>
        */
       public Builder setAssertion(io.bloombox.schema.ledger.Accounts.AssertionTicket value) {
         if (assertionBuilder_ == null) {
@@ -8585,7 +8734,7 @@ public final class Accounts {
        * Assertion ticket, verifying that this was indeed verified by the server upon submission.
        * </pre>
        *
-       * <code>.bloombox.schema.ledger.AssertionTicket assertion = 7;</code>
+       * <code>.bloombox.ledger.AssertionTicket assertion = 7;</code>
        */
       public Builder setAssertion(
           io.bloombox.schema.ledger.Accounts.AssertionTicket.Builder builderForValue) {
@@ -8603,7 +8752,7 @@ public final class Accounts {
        * Assertion ticket, verifying that this was indeed verified by the server upon submission.
        * </pre>
        *
-       * <code>.bloombox.schema.ledger.AssertionTicket assertion = 7;</code>
+       * <code>.bloombox.ledger.AssertionTicket assertion = 7;</code>
        */
       public Builder mergeAssertion(io.bloombox.schema.ledger.Accounts.AssertionTicket value) {
         if (assertionBuilder_ == null) {
@@ -8625,7 +8774,7 @@ public final class Accounts {
        * Assertion ticket, verifying that this was indeed verified by the server upon submission.
        * </pre>
        *
-       * <code>.bloombox.schema.ledger.AssertionTicket assertion = 7;</code>
+       * <code>.bloombox.ledger.AssertionTicket assertion = 7;</code>
        */
       public Builder clearAssertion() {
         if (assertionBuilder_ == null) {
@@ -8643,7 +8792,7 @@ public final class Accounts {
        * Assertion ticket, verifying that this was indeed verified by the server upon submission.
        * </pre>
        *
-       * <code>.bloombox.schema.ledger.AssertionTicket assertion = 7;</code>
+       * <code>.bloombox.ledger.AssertionTicket assertion = 7;</code>
        */
       public io.bloombox.schema.ledger.Accounts.AssertionTicket.Builder getAssertionBuilder() {
         
@@ -8655,7 +8804,7 @@ public final class Accounts {
        * Assertion ticket, verifying that this was indeed verified by the server upon submission.
        * </pre>
        *
-       * <code>.bloombox.schema.ledger.AssertionTicket assertion = 7;</code>
+       * <code>.bloombox.ledger.AssertionTicket assertion = 7;</code>
        */
       public io.bloombox.schema.ledger.Accounts.AssertionTicketOrBuilder getAssertionOrBuilder() {
         if (assertionBuilder_ != null) {
@@ -8670,7 +8819,7 @@ public final class Accounts {
        * Assertion ticket, verifying that this was indeed verified by the server upon submission.
        * </pre>
        *
-       * <code>.bloombox.schema.ledger.AssertionTicket assertion = 7;</code>
+       * <code>.bloombox.ledger.AssertionTicket assertion = 7;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
           io.bloombox.schema.ledger.Accounts.AssertionTicket, io.bloombox.schema.ledger.Accounts.AssertionTicket.Builder, io.bloombox.schema.ledger.Accounts.AssertionTicketOrBuilder> 
@@ -8685,21 +8834,23 @@ public final class Accounts {
         }
         return assertionBuilder_;
       }
+      @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
         return super.setUnknownFieldsProto3(unknownFields);
       }
 
+      @java.lang.Override
       public final Builder mergeUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
         return super.mergeUnknownFields(unknownFields);
       }
 
 
-      // @@protoc_insertion_point(builder_scope:bloombox.schema.ledger.IdentityClaim)
+      // @@protoc_insertion_point(builder_scope:bloombox.ledger.IdentityClaim)
     }
 
-    // @@protoc_insertion_point(class_scope:bloombox.schema.ledger.IdentityClaim)
+    // @@protoc_insertion_point(class_scope:bloombox.ledger.IdentityClaim)
     private static final io.bloombox.schema.ledger.Accounts.IdentityClaim DEFAULT_INSTANCE;
     static {
       DEFAULT_INSTANCE = new io.bloombox.schema.ledger.Accounts.IdentityClaim();
@@ -8711,6 +8862,7 @@ public final class Accounts {
 
     private static final com.google.protobuf.Parser<IdentityClaim>
         PARSER = new com.google.protobuf.AbstractParser<IdentityClaim>() {
+      @java.lang.Override
       public IdentityClaim parsePartialFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -8728,6 +8880,7 @@ public final class Accounts {
       return PARSER;
     }
 
+    @java.lang.Override
     public io.bloombox.schema.ledger.Accounts.IdentityClaim getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
@@ -8735,35 +8888,35 @@ public final class Accounts {
   }
 
   private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_bloombox_schema_ledger_ActorCertificate_descriptor;
+    internal_static_bloombox_ledger_ActorCertificate_descriptor;
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_bloombox_schema_ledger_ActorCertificate_fieldAccessorTable;
+      internal_static_bloombox_ledger_ActorCertificate_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_bloombox_schema_ledger_ActorKey_descriptor;
+    internal_static_bloombox_ledger_ActorKey_descriptor;
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_bloombox_schema_ledger_ActorKey_fieldAccessorTable;
+      internal_static_bloombox_ledger_ActorKey_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_bloombox_schema_ledger_AccountKey_descriptor;
+    internal_static_bloombox_ledger_AccountKey_descriptor;
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_bloombox_schema_ledger_AccountKey_fieldAccessorTable;
+      internal_static_bloombox_ledger_AccountKey_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_bloombox_schema_ledger_LedgerIdentity_descriptor;
+    internal_static_bloombox_ledger_LedgerIdentity_descriptor;
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_bloombox_schema_ledger_LedgerIdentity_fieldAccessorTable;
+      internal_static_bloombox_ledger_LedgerIdentity_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_bloombox_schema_ledger_AssertionTicket_descriptor;
+    internal_static_bloombox_ledger_AssertionTicket_descriptor;
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_bloombox_schema_ledger_AssertionTicket_fieldAccessorTable;
+      internal_static_bloombox_ledger_AssertionTicket_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_bloombox_schema_ledger_IdentityClaim_descriptor;
+    internal_static_bloombox_ledger_IdentityClaim_descriptor;
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_bloombox_schema_ledger_IdentityClaim_fieldAccessorTable;
+      internal_static_bloombox_ledger_IdentityClaim_fieldAccessorTable;
 
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
@@ -8773,46 +8926,42 @@ public final class Accounts {
       descriptor;
   static {
     java.lang.String[] descriptorData = {
-      "\n\024ledger/Account.proto\022\026bloombox.schema." +
-      "ledger\032\024core/Datamodel.proto\032\026temporal/I" +
-      "nstant.proto\032\026identity/UserKey.proto\032\030pa" +
-      "rtner/PartnerKey.proto\032\031partner/Location" +
-      "Key.proto\032\037crypto/primitives/Keypair.pro" +
-      "to\032!crypto/primitives/Integrity.proto\"\313\001" +
-      "\n\020ActorCertificate\022\n\n\002id\030\001 \001(\t\022\016\n\006serial" +
-      "\030\002 \001(\t\022C\n\013fingerprint\030\003 \001(\0132..opencannab" +
-      "is.crypto.primitives.integrity.Hash\022\023\n\013c" +
-      "ommon_name\030\004 \001(\t\022\023\n\013issuer_name\030\005 \001(\t\022\016\n" +
-      "\004data\030\n \001(\014H\000\022\021\n\007encoded\030\013 \001(\tH\000B\t\n\007payl" +
-      "oad\"\357\001\n\010ActorKey\0225\n\005known\030\001 \001(\0162$.bloomb" +
-      "ox.schema.ledger.SpecialActorH\000\0221\n\004user\030" +
-      "\n \001(\0132!.bloombox.schema.identity.UserKey" +
-      "H\000\0226\n\007partner\030\024 \001(\0132#.bloombox.schema.pa" +
-      "rtner.PartnerKeyH\000\0228\n\010location\030\036 \001(\0132$.b" +
-      "loombox.schema.partner.LocationKeyH\000B\007\n\005" +
-      "actor\"\232\001\n\nAccountKey\022\022\n\002id\030\001 \001(\tB\006\302\265\003\002\010\002" +
-      "\0229\n\004pair\030\002 \001(\0132+.opencannabis.crypto.pri" +
-      "mitives.pki.Keypair\022=\n\010identity\030\003 \001(\0132+." +
-      "opencannabis.crypto.primitives.pki.Keypa" +
-      "ir\"\271\001\n\016LedgerIdentity\0227\n\003key\030\001 \001(\0132\".blo" +
-      "ombox.schema.ledger.AccountKeyB\006\302\265\003\002\010\001\022/" +
-      "\n\005actor\030\002 \001(\0132 .bloombox.schema.ledger.A" +
-      "ctorKey\022=\n\013certificate\030\003 \001(\0132(.bloombox." +
-      "schema.ledger.ActorCertificate\"\252\001\n\017Asser" +
-      "tionTicket\022C\n\013fingerprint\030\001 \001(\0132..openca" +
-      "nnabis.crypto.primitives.integrity.Hash\022" +
-      ".\n\006issued\030\002 \001(\0132\036.opencannabis.temporal." +
-      "Instant\022\021\n\tsignature\030\003 \001(\t\022\017\n\007assurer\030\004 " +
-      "\001(\t\"\223\002\n\rIdentityClaim\022\022\n\002id\030\001 \001(\tB\006\302\265\003\002\010" +
-      "\002\022\013\n\003key\030\002 \001(\t\022\016\n\006serial\030\003 \001(\t\022\023\n\013finger" +
-      "print\030\004 \001(\t\022=\n\013certificate\030\005 \001(\0132(.bloom" +
-      "box.schema.ledger.ActorCertificate\022/\n\005ac" +
-      "tor\030\006 \001(\0132 .bloombox.schema.ledger.Actor" +
-      "Key\022:\n\tassertion\030\007 \001(\0132\'.bloombox.schema" +
-      ".ledger.AssertionTicket:\020\202\367\002\014\010\002\022\010account" +
-      "s*\'\n\014SpecialActor\022\n\n\006SYSTEM\020\000\022\013\n\007SANDBOX" +
-      "\020\001B/\n\031io.bloombox.schema.ledgerB\010Account" +
-      "sH\001P\000\242\002\003BBSb\006proto3"
+      "\n\024ledger/Account.proto\022\017bloombox.ledger\032" +
+      "\024core/Datamodel.proto\032\026temporal/Instant." +
+      "proto\032\026identity/UserKey.proto\032\030partner/P" +
+      "artnerKey.proto\032\031partner/LocationKey.pro" +
+      "to\032\034crypto/primitives/Keys.proto\032!crypto" +
+      "/primitives/Integrity.proto\"\266\001\n\020ActorCer" +
+      "tificate\022\n\n\002id\030\001 \001(\t\022\016\n\006serial\030\002 \001(\t\022.\n\013" +
+      "fingerprint\030\003 \001(\0132\031.opencannabis.crypto." +
+      "Hash\022\023\n\013common_name\030\004 \001(\t\022\023\n\013issuer_name" +
+      "\030\005 \001(\t\022\016\n\004data\030\n \001(\014H\000\022\021\n\007encoded\030\013 \001(\tH" +
+      "\000B\t\n\007payload\"\323\001\n\010ActorKey\022.\n\005known\030\001 \001(\016" +
+      "2\035.bloombox.ledger.SpecialActorH\000\022*\n\004use" +
+      "r\030\n \001(\0132\032.bloombox.identity.UserKeyH\000\022/\n" +
+      "\007partner\030\024 \001(\0132\034.bloombox.partner.Partne" +
+      "rKeyH\000\0221\n\010location\030\036 \001(\0132\035.bloombox.part" +
+      "ner.LocationKeyH\000B\007\n\005actor\"|\n\nAccountKey" +
+      "\022\022\n\002id\030\001 \001(\tB\006\302\265\003\002\010\002\022*\n\004pair\030\002 \001(\0132\034.ope" +
+      "ncannabis.crypto.Keypair\022.\n\010identity\030\003 \001" +
+      "(\0132\034.opencannabis.crypto.Keypair\"\244\001\n\016Led" +
+      "gerIdentity\0220\n\003key\030\001 \001(\0132\033.bloombox.ledg" +
+      "er.AccountKeyB\006\302\265\003\002\010\001\022(\n\005actor\030\002 \001(\0132\031.b" +
+      "loombox.ledger.ActorKey\0226\n\013certificate\030\003" +
+      " \001(\0132!.bloombox.ledger.ActorCertificate\"" +
+      "\225\001\n\017AssertionTicket\022.\n\013fingerprint\030\001 \001(\013" +
+      "2\031.opencannabis.crypto.Hash\022.\n\006issued\030\002 " +
+      "\001(\0132\036.opencannabis.temporal.Instant\022\021\n\ts" +
+      "ignature\030\003 \001(\t\022\017\n\007assurer\030\004 \001(\t\"\376\001\n\rIden" +
+      "tityClaim\022\022\n\002id\030\001 \001(\tB\006\302\265\003\002\010\002\022\013\n\003key\030\002 \001" +
+      "(\t\022\016\n\006serial\030\003 \001(\t\022\023\n\013fingerprint\030\004 \001(\t\022" +
+      "6\n\013certificate\030\005 \001(\0132!.bloombox.ledger.A" +
+      "ctorCertificate\022(\n\005actor\030\006 \001(\0132\031.bloombo" +
+      "x.ledger.ActorKey\0223\n\tassertion\030\007 \001(\0132 .b" +
+      "loombox.ledger.AssertionTicket:\020\202\367\002\014\010\002\022\010" +
+      "accounts*\'\n\014SpecialActor\022\n\n\006SYSTEM\020\000\022\013\n\007" +
+      "SANDBOX\020\001B/\n\031io.bloombox.schema.ledgerB\010" +
+      "AccountsH\001P\000\242\002\003BBSb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -8830,44 +8979,44 @@ public final class Accounts {
           io.bloombox.schema.identity.AppUserKey.getDescriptor(),
           io.bloombox.schema.partner.PartnerMeta.getDescriptor(),
           io.bloombox.schema.partner.LocationAccountKey.getDescriptor(),
-          io.opencannabis.schema.crypto.primitives.pki.KeypairOuterClass.getDescriptor(),
+          io.opencannabis.schema.crypto.primitives.Keys.getDescriptor(),
           io.opencannabis.schema.crypto.primitives.integrity.Integrity.getDescriptor(),
         }, assigner);
-    internal_static_bloombox_schema_ledger_ActorCertificate_descriptor =
+    internal_static_bloombox_ledger_ActorCertificate_descriptor =
       getDescriptor().getMessageTypes().get(0);
-    internal_static_bloombox_schema_ledger_ActorCertificate_fieldAccessorTable = new
+    internal_static_bloombox_ledger_ActorCertificate_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_bloombox_schema_ledger_ActorCertificate_descriptor,
+        internal_static_bloombox_ledger_ActorCertificate_descriptor,
         new java.lang.String[] { "Id", "Serial", "Fingerprint", "CommonName", "IssuerName", "Data", "Encoded", "Payload", });
-    internal_static_bloombox_schema_ledger_ActorKey_descriptor =
+    internal_static_bloombox_ledger_ActorKey_descriptor =
       getDescriptor().getMessageTypes().get(1);
-    internal_static_bloombox_schema_ledger_ActorKey_fieldAccessorTable = new
+    internal_static_bloombox_ledger_ActorKey_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_bloombox_schema_ledger_ActorKey_descriptor,
+        internal_static_bloombox_ledger_ActorKey_descriptor,
         new java.lang.String[] { "Known", "User", "Partner", "Location", "Actor", });
-    internal_static_bloombox_schema_ledger_AccountKey_descriptor =
+    internal_static_bloombox_ledger_AccountKey_descriptor =
       getDescriptor().getMessageTypes().get(2);
-    internal_static_bloombox_schema_ledger_AccountKey_fieldAccessorTable = new
+    internal_static_bloombox_ledger_AccountKey_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_bloombox_schema_ledger_AccountKey_descriptor,
+        internal_static_bloombox_ledger_AccountKey_descriptor,
         new java.lang.String[] { "Id", "Pair", "Identity", });
-    internal_static_bloombox_schema_ledger_LedgerIdentity_descriptor =
+    internal_static_bloombox_ledger_LedgerIdentity_descriptor =
       getDescriptor().getMessageTypes().get(3);
-    internal_static_bloombox_schema_ledger_LedgerIdentity_fieldAccessorTable = new
+    internal_static_bloombox_ledger_LedgerIdentity_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_bloombox_schema_ledger_LedgerIdentity_descriptor,
+        internal_static_bloombox_ledger_LedgerIdentity_descriptor,
         new java.lang.String[] { "Key", "Actor", "Certificate", });
-    internal_static_bloombox_schema_ledger_AssertionTicket_descriptor =
+    internal_static_bloombox_ledger_AssertionTicket_descriptor =
       getDescriptor().getMessageTypes().get(4);
-    internal_static_bloombox_schema_ledger_AssertionTicket_fieldAccessorTable = new
+    internal_static_bloombox_ledger_AssertionTicket_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_bloombox_schema_ledger_AssertionTicket_descriptor,
+        internal_static_bloombox_ledger_AssertionTicket_descriptor,
         new java.lang.String[] { "Fingerprint", "Issued", "Signature", "Assurer", });
-    internal_static_bloombox_schema_ledger_IdentityClaim_descriptor =
+    internal_static_bloombox_ledger_IdentityClaim_descriptor =
       getDescriptor().getMessageTypes().get(5);
-    internal_static_bloombox_schema_ledger_IdentityClaim_fieldAccessorTable = new
+    internal_static_bloombox_ledger_IdentityClaim_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_bloombox_schema_ledger_IdentityClaim_descriptor,
+        internal_static_bloombox_ledger_IdentityClaim_descriptor,
         new java.lang.String[] { "Id", "Key", "Serial", "Fingerprint", "Certificate", "Actor", "Assertion", });
     com.google.protobuf.ExtensionRegistry registry =
         com.google.protobuf.ExtensionRegistry.newInstance();
@@ -8880,7 +9029,7 @@ public final class Accounts {
     io.bloombox.schema.identity.AppUserKey.getDescriptor();
     io.bloombox.schema.partner.PartnerMeta.getDescriptor();
     io.bloombox.schema.partner.LocationAccountKey.getDescriptor();
-    io.opencannabis.schema.crypto.primitives.pki.KeypairOuterClass.getDescriptor();
+    io.opencannabis.schema.crypto.primitives.Keys.getDescriptor();
     io.opencannabis.schema.crypto.primitives.integrity.Integrity.getDescriptor();
   }
 

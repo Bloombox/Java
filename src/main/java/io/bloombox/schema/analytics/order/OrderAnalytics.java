@@ -1,8 +1,8 @@
 /*
- * Copyright 2018, Bloombox, LLC. All rights reserved.
+ * Copyright 2018, Momentum Ideas, Co. All rights reserved.
  *
  * Source and object computer code contained herein is the private intellectual
- * property of Bloombox, a California Limited Liability Corporation. Use of this
+ * property of Momentum Ideas Co., a Delaware Corporation. Use of this
  * code in source form requires permission in writing before use or the
  * assembly, distribution, or publishing of derivative works, for commercial
  * purposes or any other purpose, from a duly authorized officer of Momentum
@@ -36,7 +36,7 @@ public final class OrderAnalytics {
    * Specifies actions that may be taken on an order.
    * </pre>
    *
-   * Protobuf enum {@code bloombox.schema.analytics.order.OrderAction}
+   * Protobuf enum {@code bloombox.analytics.order.OrderAction}
    */
   public enum OrderAction
       implements com.google.protobuf.ProtocolMessageEnum {
@@ -316,11 +316,11 @@ public final class OrderAnalytics {
       this.value = value;
     }
 
-    // @@protoc_insertion_point(enum_scope:bloombox.schema.analytics.order.OrderAction)
+    // @@protoc_insertion_point(enum_scope:bloombox.analytics.order.OrderAction)
   }
 
   public interface ActionOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:bloombox.schema.analytics.order.Action)
+      // @@protoc_insertion_point(interface_extends:bloombox.analytics.order.Action)
       com.google.protobuf.MessageOrBuilder {
 
     /**
@@ -353,7 +353,7 @@ public final class OrderAnalytics {
      * Action that was taken upon or regarding the order.
      * </pre>
      *
-     * <code>.bloombox.schema.analytics.order.OrderAction verb = 2;</code>
+     * <code>.bloombox.analytics.order.OrderAction verb = 2;</code>
      */
     int getVerbValue();
     /**
@@ -361,7 +361,7 @@ public final class OrderAnalytics {
      * Action that was taken upon or regarding the order.
      * </pre>
      *
-     * <code>.bloombox.schema.analytics.order.OrderAction verb = 2;</code>
+     * <code>.bloombox.analytics.order.OrderAction verb = 2;</code>
      */
     io.bloombox.schema.analytics.order.OrderAnalytics.OrderAction getVerb();
 
@@ -421,11 +421,11 @@ public final class OrderAnalytics {
    * regarding a commercial order to be submitted or previously submitted by an end user.
    * </pre>
    *
-   * Protobuf type {@code bloombox.schema.analytics.order.Action}
+   * Protobuf type {@code bloombox.analytics.order.Action}
    */
   public  static final class Action extends
       com.google.protobuf.GeneratedMessageV3 implements
-      // @@protoc_insertion_point(message_implements:bloombox.schema.analytics.order.Action)
+      // @@protoc_insertion_point(message_implements:bloombox.analytics.order.Action)
       ActionOrBuilder {
   private static final long serialVersionUID = 0L;
     // Use Action.newBuilder() to construct.
@@ -460,13 +460,6 @@ public final class OrderAnalytics {
             case 0:
               done = true;
               break;
-            default: {
-              if (!parseUnknownFieldProto3(
-                  input, unknownFields, extensionRegistry, tag)) {
-                done = true;
-              }
-              break;
-            }
             case 10: {
               io.opencannabis.schema.commerce.CommercialOrder.OrderKey.Builder subBuilder = null;
               if (orderKey_ != null) {
@@ -512,6 +505,13 @@ public final class OrderAnalytics {
 
               break;
             }
+            default: {
+              if (!parseUnknownFieldProto3(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
           }
         }
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
@@ -526,12 +526,13 @@ public final class OrderAnalytics {
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return io.bloombox.schema.analytics.order.OrderAnalytics.internal_static_bloombox_schema_analytics_order_Action_descriptor;
+      return io.bloombox.schema.analytics.order.OrderAnalytics.internal_static_bloombox_analytics_order_Action_descriptor;
     }
 
+    @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return io.bloombox.schema.analytics.order.OrderAnalytics.internal_static_bloombox_schema_analytics_order_Action_fieldAccessorTable
+      return io.bloombox.schema.analytics.order.OrderAnalytics.internal_static_bloombox_analytics_order_Action_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
               io.bloombox.schema.analytics.order.OrderAnalytics.Action.class, io.bloombox.schema.analytics.order.OrderAnalytics.Action.Builder.class);
     }
@@ -576,7 +577,7 @@ public final class OrderAnalytics {
      * Action that was taken upon or regarding the order.
      * </pre>
      *
-     * <code>.bloombox.schema.analytics.order.OrderAction verb = 2;</code>
+     * <code>.bloombox.analytics.order.OrderAction verb = 2;</code>
      */
     public int getVerbValue() {
       return verb_;
@@ -586,9 +587,10 @@ public final class OrderAnalytics {
      * Action that was taken upon or regarding the order.
      * </pre>
      *
-     * <code>.bloombox.schema.analytics.order.OrderAction verb = 2;</code>
+     * <code>.bloombox.analytics.order.OrderAction verb = 2;</code>
      */
     public io.bloombox.schema.analytics.order.OrderAnalytics.OrderAction getVerb() {
+      @SuppressWarnings("deprecation")
       io.bloombox.schema.analytics.order.OrderAnalytics.OrderAction result = io.bloombox.schema.analytics.order.OrderAnalytics.OrderAction.valueOf(verb_);
       return result == null ? io.bloombox.schema.analytics.order.OrderAnalytics.OrderAction.UNRECOGNIZED : result;
     }
@@ -660,6 +662,7 @@ public final class OrderAnalytics {
     }
 
     private byte memoizedIsInitialized = -1;
+    @java.lang.Override
     public final boolean isInitialized() {
       byte isInitialized = memoizedIsInitialized;
       if (isInitialized == 1) return true;
@@ -669,6 +672,7 @@ public final class OrderAnalytics {
       return true;
     }
 
+    @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
       if (orderKey_ != null) {
@@ -686,6 +690,7 @@ public final class OrderAnalytics {
       unknownFields.writeTo(output);
     }
 
+    @java.lang.Override
     public int getSerializedSize() {
       int size = memoizedSize;
       if (size != -1) return size;
@@ -839,6 +844,7 @@ public final class OrderAnalytics {
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
 
+    @java.lang.Override
     public Builder newBuilderForType() { return newBuilder(); }
     public static Builder newBuilder() {
       return DEFAULT_INSTANCE.toBuilder();
@@ -846,6 +852,7 @@ public final class OrderAnalytics {
     public static Builder newBuilder(io.bloombox.schema.analytics.order.OrderAnalytics.Action prototype) {
       return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
     }
+    @java.lang.Override
     public Builder toBuilder() {
       return this == DEFAULT_INSTANCE
           ? new Builder() : new Builder().mergeFrom(this);
@@ -863,20 +870,21 @@ public final class OrderAnalytics {
      * regarding a commercial order to be submitted or previously submitted by an end user.
      * </pre>
      *
-     * Protobuf type {@code bloombox.schema.analytics.order.Action}
+     * Protobuf type {@code bloombox.analytics.order.Action}
      */
     public static final class Builder extends
         com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:bloombox.schema.analytics.order.Action)
+        // @@protoc_insertion_point(builder_implements:bloombox.analytics.order.Action)
         io.bloombox.schema.analytics.order.OrderAnalytics.ActionOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return io.bloombox.schema.analytics.order.OrderAnalytics.internal_static_bloombox_schema_analytics_order_Action_descriptor;
+        return io.bloombox.schema.analytics.order.OrderAnalytics.internal_static_bloombox_analytics_order_Action_descriptor;
       }
 
+      @java.lang.Override
       protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return io.bloombox.schema.analytics.order.OrderAnalytics.internal_static_bloombox_schema_analytics_order_Action_fieldAccessorTable
+        return io.bloombox.schema.analytics.order.OrderAnalytics.internal_static_bloombox_analytics_order_Action_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
                 io.bloombox.schema.analytics.order.OrderAnalytics.Action.class, io.bloombox.schema.analytics.order.OrderAnalytics.Action.Builder.class);
       }
@@ -896,6 +904,7 @@ public final class OrderAnalytics {
                 .alwaysUseFieldBuilders) {
         }
       }
+      @java.lang.Override
       public Builder clear() {
         super.clear();
         if (orderKeyBuilder_ == null) {
@@ -921,15 +930,18 @@ public final class OrderAnalytics {
         return this;
       }
 
+      @java.lang.Override
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return io.bloombox.schema.analytics.order.OrderAnalytics.internal_static_bloombox_schema_analytics_order_Action_descriptor;
+        return io.bloombox.schema.analytics.order.OrderAnalytics.internal_static_bloombox_analytics_order_Action_descriptor;
       }
 
+      @java.lang.Override
       public io.bloombox.schema.analytics.order.OrderAnalytics.Action getDefaultInstanceForType() {
         return io.bloombox.schema.analytics.order.OrderAnalytics.Action.getDefaultInstance();
       }
 
+      @java.lang.Override
       public io.bloombox.schema.analytics.order.OrderAnalytics.Action build() {
         io.bloombox.schema.analytics.order.OrderAnalytics.Action result = buildPartial();
         if (!result.isInitialized()) {
@@ -938,6 +950,7 @@ public final class OrderAnalytics {
         return result;
       }
 
+      @java.lang.Override
       public io.bloombox.schema.analytics.order.OrderAnalytics.Action buildPartial() {
         io.bloombox.schema.analytics.order.OrderAnalytics.Action result = new io.bloombox.schema.analytics.order.OrderAnalytics.Action(this);
         if (orderKeyBuilder_ == null) {
@@ -960,32 +973,39 @@ public final class OrderAnalytics {
         return result;
       }
 
+      @java.lang.Override
       public Builder clone() {
         return (Builder) super.clone();
       }
+      @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
         return (Builder) super.setField(field, value);
       }
+      @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
         return (Builder) super.clearField(field);
       }
+      @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
         return (Builder) super.clearOneof(oneof);
       }
+      @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
         return (Builder) super.setRepeatedField(field, index, value);
       }
+      @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
         return (Builder) super.addRepeatedField(field, value);
       }
+      @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
         if (other instanceof io.bloombox.schema.analytics.order.OrderAnalytics.Action) {
           return mergeFrom((io.bloombox.schema.analytics.order.OrderAnalytics.Action)other);
@@ -1014,10 +1034,12 @@ public final class OrderAnalytics {
         return this;
       }
 
+      @java.lang.Override
       public final boolean isInitialized() {
         return true;
       }
 
+      @java.lang.Override
       public Builder mergeFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -1195,7 +1217,7 @@ public final class OrderAnalytics {
        * Action that was taken upon or regarding the order.
        * </pre>
        *
-       * <code>.bloombox.schema.analytics.order.OrderAction verb = 2;</code>
+       * <code>.bloombox.analytics.order.OrderAction verb = 2;</code>
        */
       public int getVerbValue() {
         return verb_;
@@ -1205,7 +1227,7 @@ public final class OrderAnalytics {
        * Action that was taken upon or regarding the order.
        * </pre>
        *
-       * <code>.bloombox.schema.analytics.order.OrderAction verb = 2;</code>
+       * <code>.bloombox.analytics.order.OrderAction verb = 2;</code>
        */
       public Builder setVerbValue(int value) {
         verb_ = value;
@@ -1217,9 +1239,10 @@ public final class OrderAnalytics {
        * Action that was taken upon or regarding the order.
        * </pre>
        *
-       * <code>.bloombox.schema.analytics.order.OrderAction verb = 2;</code>
+       * <code>.bloombox.analytics.order.OrderAction verb = 2;</code>
        */
       public io.bloombox.schema.analytics.order.OrderAnalytics.OrderAction getVerb() {
+        @SuppressWarnings("deprecation")
         io.bloombox.schema.analytics.order.OrderAnalytics.OrderAction result = io.bloombox.schema.analytics.order.OrderAnalytics.OrderAction.valueOf(verb_);
         return result == null ? io.bloombox.schema.analytics.order.OrderAnalytics.OrderAction.UNRECOGNIZED : result;
       }
@@ -1228,7 +1251,7 @@ public final class OrderAnalytics {
        * Action that was taken upon or regarding the order.
        * </pre>
        *
-       * <code>.bloombox.schema.analytics.order.OrderAction verb = 2;</code>
+       * <code>.bloombox.analytics.order.OrderAction verb = 2;</code>
        */
       public Builder setVerb(io.bloombox.schema.analytics.order.OrderAnalytics.OrderAction value) {
         if (value == null) {
@@ -1244,7 +1267,7 @@ public final class OrderAnalytics {
        * Action that was taken upon or regarding the order.
        * </pre>
        *
-       * <code>.bloombox.schema.analytics.order.OrderAction verb = 2;</code>
+       * <code>.bloombox.analytics.order.OrderAction verb = 2;</code>
        */
       public Builder clearVerb() {
         
@@ -1558,21 +1581,23 @@ public final class OrderAnalytics {
         }
         return occurredBuilder_;
       }
+      @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
         return super.setUnknownFieldsProto3(unknownFields);
       }
 
+      @java.lang.Override
       public final Builder mergeUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
         return super.mergeUnknownFields(unknownFields);
       }
 
 
-      // @@protoc_insertion_point(builder_scope:bloombox.schema.analytics.order.Action)
+      // @@protoc_insertion_point(builder_scope:bloombox.analytics.order.Action)
     }
 
-    // @@protoc_insertion_point(class_scope:bloombox.schema.analytics.order.Action)
+    // @@protoc_insertion_point(class_scope:bloombox.analytics.order.Action)
     private static final io.bloombox.schema.analytics.order.OrderAnalytics.Action DEFAULT_INSTANCE;
     static {
       DEFAULT_INSTANCE = new io.bloombox.schema.analytics.order.OrderAnalytics.Action();
@@ -1584,6 +1609,7 @@ public final class OrderAnalytics {
 
     private static final com.google.protobuf.Parser<Action>
         PARSER = new com.google.protobuf.AbstractParser<Action>() {
+      @java.lang.Override
       public Action parsePartialFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -1601,6 +1627,7 @@ public final class OrderAnalytics {
       return PARSER;
     }
 
+    @java.lang.Override
     public io.bloombox.schema.analytics.order.OrderAnalytics.Action getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
@@ -1608,10 +1635,10 @@ public final class OrderAnalytics {
   }
 
   private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_bloombox_schema_analytics_order_Action_descriptor;
+    internal_static_bloombox_analytics_order_Action_descriptor;
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_bloombox_schema_analytics_order_Action_fieldAccessorTable;
+      internal_static_bloombox_analytics_order_Action_fieldAccessorTable;
 
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
@@ -1622,23 +1649,23 @@ public final class OrderAnalytics {
   static {
     java.lang.String[] descriptorData = {
       "\n\'analytics/commerce/OrderAnalytics.prot" +
-      "o\022\037bloombox.schema.analytics.order\032\024comm" +
-      "erce/Order.proto\032\026temporal/Instant.proto" +
-      "\032\027commerce/Customer.proto\"\335\001\n\006Action\0222\n\t" +
-      "order_key\030\001 \001(\0132\037.opencannabis.commerce." +
-      "OrderKey\022:\n\004verb\030\002 \001(\0162,.bloombox.schema" +
-      ".analytics.order.OrderAction\0221\n\010customer" +
-      "\030\003 \001(\0132\037.opencannabis.commerce.Customer\022" +
-      "0\n\010occurred\030\004 \001(\0132\036.opencannabis.tempora" +
-      "l.Instant*\377\001\n\013OrderAction\022\017\n\013ADD_TO_CART" +
-      "\020\000\022\024\n\020REMOVE_FROM_CART\020\001\022\020\n\014RESTORE_CART" +
-      "\020\002\022\021\n\rVERIFY_MEMBER\020\003\022\020\n\014ORDER_SUBMIT\020\004\022" +
-      "\020\n\014ORDER_STATUS\020\005\022\020\n\014ORDER_CANCEL\020\006\022\022\n\016O" +
-      "RDER_ACCEPTED\020\007\022\022\n\016ORDER_REJECTED\020\010\022\025\n\021O" +
-      "RDER_IN_PROGERSS\020\t\022\032\n\026ORDER_OUT_FOR_DELI" +
-      "VERY\020\n\022\023\n\017ORDER_FULFILLED\020\013B>\n\"io.bloomb" +
-      "ox.schema.analytics.orderB\016OrderAnalytic" +
-      "sH\001P\000\242\002\003BBSb\006proto3"
+      "o\022\030bloombox.analytics.order\032\024commerce/Or" +
+      "der.proto\032\026temporal/Instant.proto\032\027comme" +
+      "rce/Customer.proto\"\326\001\n\006Action\0222\n\torder_k" +
+      "ey\030\001 \001(\0132\037.opencannabis.commerce.OrderKe" +
+      "y\0223\n\004verb\030\002 \001(\0162%.bloombox.analytics.ord" +
+      "er.OrderAction\0221\n\010customer\030\003 \001(\0132\037.openc" +
+      "annabis.commerce.Customer\0220\n\010occurred\030\004 " +
+      "\001(\0132\036.opencannabis.temporal.Instant*\377\001\n\013" +
+      "OrderAction\022\017\n\013ADD_TO_CART\020\000\022\024\n\020REMOVE_F" +
+      "ROM_CART\020\001\022\020\n\014RESTORE_CART\020\002\022\021\n\rVERIFY_M" +
+      "EMBER\020\003\022\020\n\014ORDER_SUBMIT\020\004\022\020\n\014ORDER_STATU" +
+      "S\020\005\022\020\n\014ORDER_CANCEL\020\006\022\022\n\016ORDER_ACCEPTED\020" +
+      "\007\022\022\n\016ORDER_REJECTED\020\010\022\025\n\021ORDER_IN_PROGER" +
+      "SS\020\t\022\032\n\026ORDER_OUT_FOR_DELIVERY\020\n\022\023\n\017ORDE" +
+      "R_FULFILLED\020\013B>\n\"io.bloombox.schema.anal" +
+      "ytics.orderB\016OrderAnalyticsH\001P\000\242\002\003BBSb\006p" +
+      "roto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -1655,11 +1682,11 @@ public final class OrderAnalytics {
           io.opencannabis.schema.temporal.TemporalInstant.getDescriptor(),
           io.opencannabis.schema.commerce.OrderCustomer.getDescriptor(),
         }, assigner);
-    internal_static_bloombox_schema_analytics_order_Action_descriptor =
+    internal_static_bloombox_analytics_order_Action_descriptor =
       getDescriptor().getMessageTypes().get(0);
-    internal_static_bloombox_schema_analytics_order_Action_fieldAccessorTable = new
+    internal_static_bloombox_analytics_order_Action_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_bloombox_schema_analytics_order_Action_descriptor,
+        internal_static_bloombox_analytics_order_Action_descriptor,
         new java.lang.String[] { "OrderKey", "Verb", "Customer", "Occurred", });
     io.opencannabis.schema.commerce.CommercialOrder.getDescriptor();
     io.opencannabis.schema.temporal.TemporalInstant.getDescriptor();

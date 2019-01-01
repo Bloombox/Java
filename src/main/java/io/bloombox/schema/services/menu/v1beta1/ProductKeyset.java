@@ -1,8 +1,8 @@
 /*
- * Copyright 2018, Bloombox, LLC. All rights reserved.
+ * Copyright 2018, Momentum Ideas, Co. All rights reserved.
  *
  * Source and object computer code contained herein is the private intellectual
- * property of Bloombox, a California Limited Liability Corporation. Use of this
+ * property of Momentum Ideas Co., a Delaware Corporation. Use of this
  * code in source form requires permission in writing before use or the
  * assembly, distribution, or publishing of derivative works, for commercial
  * purposes or any other purpose, from a duly authorized officer of Momentum
@@ -25,11 +25,11 @@ package io.bloombox.schema.services.menu.v1beta1;
  * Specifies a set of keys.
  * </pre>
  *
- * Protobuf type {@code bloombox.schema.services.menu.v1beta1.ProductKeyset}
+ * Protobuf type {@code bloombox.services.menu.v1beta1.ProductKeyset}
  */
 public  final class ProductKeyset extends
     com.google.protobuf.GeneratedMessageV3 implements
-    // @@protoc_insertion_point(message_implements:bloombox.schema.services.menu.v1beta1.ProductKeyset)
+    // @@protoc_insertion_point(message_implements:bloombox.services.menu.v1beta1.ProductKeyset)
     ProductKeysetOrBuilder {
 private static final long serialVersionUID = 0L;
   // Use ProductKeyset.newBuilder() to construct.
@@ -64,13 +64,6 @@ private static final long serialVersionUID = 0L;
           case 0:
             done = true;
             break;
-          default: {
-            if (!parseUnknownFieldProto3(
-                input, unknownFields, extensionRegistry, tag)) {
-              done = true;
-            }
-            break;
-          }
           case 10: {
             if (!((mutable_bitField0_ & 0x00000001) == 0x00000001)) {
               key_ = new java.util.ArrayList<io.opencannabis.schema.base.BaseProductKey.ProductKey>();
@@ -78,6 +71,13 @@ private static final long serialVersionUID = 0L;
             }
             key_.add(
                 input.readMessage(io.opencannabis.schema.base.BaseProductKey.ProductKey.parser(), extensionRegistry));
+            break;
+          }
+          default: {
+            if (!parseUnknownFieldProto3(
+                input, unknownFields, extensionRegistry, tag)) {
+              done = true;
+            }
             break;
           }
         }
@@ -97,12 +97,13 @@ private static final long serialVersionUID = 0L;
   }
   public static final com.google.protobuf.Descriptors.Descriptor
       getDescriptor() {
-    return io.bloombox.schema.services.menu.v1beta1.MenuServiceBeta1.internal_static_bloombox_schema_services_menu_v1beta1_ProductKeyset_descriptor;
+    return io.bloombox.schema.services.menu.v1beta1.MenuServiceBeta1.internal_static_bloombox_services_menu_v1beta1_ProductKeyset_descriptor;
   }
 
+  @java.lang.Override
   protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internalGetFieldAccessorTable() {
-    return io.bloombox.schema.services.menu.v1beta1.MenuServiceBeta1.internal_static_bloombox_schema_services_menu_v1beta1_ProductKeyset_fieldAccessorTable
+    return io.bloombox.schema.services.menu.v1beta1.MenuServiceBeta1.internal_static_bloombox_services_menu_v1beta1_ProductKeyset_fieldAccessorTable
         .ensureFieldAccessorsInitialized(
             io.bloombox.schema.services.menu.v1beta1.ProductKeyset.class, io.bloombox.schema.services.menu.v1beta1.ProductKeyset.Builder.class);
   }
@@ -163,6 +164,7 @@ private static final long serialVersionUID = 0L;
   }
 
   private byte memoizedIsInitialized = -1;
+  @java.lang.Override
   public final boolean isInitialized() {
     byte isInitialized = memoizedIsInitialized;
     if (isInitialized == 1) return true;
@@ -172,6 +174,7 @@ private static final long serialVersionUID = 0L;
     return true;
   }
 
+  @java.lang.Override
   public void writeTo(com.google.protobuf.CodedOutputStream output)
                       throws java.io.IOException {
     for (int i = 0; i < key_.size(); i++) {
@@ -180,6 +183,7 @@ private static final long serialVersionUID = 0L;
     unknownFields.writeTo(output);
   }
 
+  @java.lang.Override
   public int getSerializedSize() {
     int size = memoizedSize;
     if (size != -1) return size;
@@ -297,6 +301,7 @@ private static final long serialVersionUID = 0L;
         .parseWithIOException(PARSER, input, extensionRegistry);
   }
 
+  @java.lang.Override
   public Builder newBuilderForType() { return newBuilder(); }
   public static Builder newBuilder() {
     return DEFAULT_INSTANCE.toBuilder();
@@ -304,6 +309,7 @@ private static final long serialVersionUID = 0L;
   public static Builder newBuilder(io.bloombox.schema.services.menu.v1beta1.ProductKeyset prototype) {
     return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
   }
+  @java.lang.Override
   public Builder toBuilder() {
     return this == DEFAULT_INSTANCE
         ? new Builder() : new Builder().mergeFrom(this);
@@ -320,20 +326,21 @@ private static final long serialVersionUID = 0L;
    * Specifies a set of keys.
    * </pre>
    *
-   * Protobuf type {@code bloombox.schema.services.menu.v1beta1.ProductKeyset}
+   * Protobuf type {@code bloombox.services.menu.v1beta1.ProductKeyset}
    */
   public static final class Builder extends
       com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-      // @@protoc_insertion_point(builder_implements:bloombox.schema.services.menu.v1beta1.ProductKeyset)
+      // @@protoc_insertion_point(builder_implements:bloombox.services.menu.v1beta1.ProductKeyset)
       io.bloombox.schema.services.menu.v1beta1.ProductKeysetOrBuilder {
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return io.bloombox.schema.services.menu.v1beta1.MenuServiceBeta1.internal_static_bloombox_schema_services_menu_v1beta1_ProductKeyset_descriptor;
+      return io.bloombox.schema.services.menu.v1beta1.MenuServiceBeta1.internal_static_bloombox_services_menu_v1beta1_ProductKeyset_descriptor;
     }
 
+    @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return io.bloombox.schema.services.menu.v1beta1.MenuServiceBeta1.internal_static_bloombox_schema_services_menu_v1beta1_ProductKeyset_fieldAccessorTable
+      return io.bloombox.schema.services.menu.v1beta1.MenuServiceBeta1.internal_static_bloombox_services_menu_v1beta1_ProductKeyset_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
               io.bloombox.schema.services.menu.v1beta1.ProductKeyset.class, io.bloombox.schema.services.menu.v1beta1.ProductKeyset.Builder.class);
     }
@@ -354,6 +361,7 @@ private static final long serialVersionUID = 0L;
         getKeyFieldBuilder();
       }
     }
+    @java.lang.Override
     public Builder clear() {
       super.clear();
       if (keyBuilder_ == null) {
@@ -365,15 +373,18 @@ private static final long serialVersionUID = 0L;
       return this;
     }
 
+    @java.lang.Override
     public com.google.protobuf.Descriptors.Descriptor
         getDescriptorForType() {
-      return io.bloombox.schema.services.menu.v1beta1.MenuServiceBeta1.internal_static_bloombox_schema_services_menu_v1beta1_ProductKeyset_descriptor;
+      return io.bloombox.schema.services.menu.v1beta1.MenuServiceBeta1.internal_static_bloombox_services_menu_v1beta1_ProductKeyset_descriptor;
     }
 
+    @java.lang.Override
     public io.bloombox.schema.services.menu.v1beta1.ProductKeyset getDefaultInstanceForType() {
       return io.bloombox.schema.services.menu.v1beta1.ProductKeyset.getDefaultInstance();
     }
 
+    @java.lang.Override
     public io.bloombox.schema.services.menu.v1beta1.ProductKeyset build() {
       io.bloombox.schema.services.menu.v1beta1.ProductKeyset result = buildPartial();
       if (!result.isInitialized()) {
@@ -382,6 +393,7 @@ private static final long serialVersionUID = 0L;
       return result;
     }
 
+    @java.lang.Override
     public io.bloombox.schema.services.menu.v1beta1.ProductKeyset buildPartial() {
       io.bloombox.schema.services.menu.v1beta1.ProductKeyset result = new io.bloombox.schema.services.menu.v1beta1.ProductKeyset(this);
       int from_bitField0_ = bitField0_;
@@ -398,32 +410,39 @@ private static final long serialVersionUID = 0L;
       return result;
     }
 
+    @java.lang.Override
     public Builder clone() {
       return (Builder) super.clone();
     }
+    @java.lang.Override
     public Builder setField(
         com.google.protobuf.Descriptors.FieldDescriptor field,
         java.lang.Object value) {
       return (Builder) super.setField(field, value);
     }
+    @java.lang.Override
     public Builder clearField(
         com.google.protobuf.Descriptors.FieldDescriptor field) {
       return (Builder) super.clearField(field);
     }
+    @java.lang.Override
     public Builder clearOneof(
         com.google.protobuf.Descriptors.OneofDescriptor oneof) {
       return (Builder) super.clearOneof(oneof);
     }
+    @java.lang.Override
     public Builder setRepeatedField(
         com.google.protobuf.Descriptors.FieldDescriptor field,
         int index, java.lang.Object value) {
       return (Builder) super.setRepeatedField(field, index, value);
     }
+    @java.lang.Override
     public Builder addRepeatedField(
         com.google.protobuf.Descriptors.FieldDescriptor field,
         java.lang.Object value) {
       return (Builder) super.addRepeatedField(field, value);
     }
+    @java.lang.Override
     public Builder mergeFrom(com.google.protobuf.Message other) {
       if (other instanceof io.bloombox.schema.services.menu.v1beta1.ProductKeyset) {
         return mergeFrom((io.bloombox.schema.services.menu.v1beta1.ProductKeyset)other);
@@ -466,10 +485,12 @@ private static final long serialVersionUID = 0L;
       return this;
     }
 
+    @java.lang.Override
     public final boolean isInitialized() {
       return true;
     }
 
+    @java.lang.Override
     public Builder mergeFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -800,21 +821,23 @@ private static final long serialVersionUID = 0L;
       }
       return keyBuilder_;
     }
+    @java.lang.Override
     public final Builder setUnknownFields(
         final com.google.protobuf.UnknownFieldSet unknownFields) {
       return super.setUnknownFieldsProto3(unknownFields);
     }
 
+    @java.lang.Override
     public final Builder mergeUnknownFields(
         final com.google.protobuf.UnknownFieldSet unknownFields) {
       return super.mergeUnknownFields(unknownFields);
     }
 
 
-    // @@protoc_insertion_point(builder_scope:bloombox.schema.services.menu.v1beta1.ProductKeyset)
+    // @@protoc_insertion_point(builder_scope:bloombox.services.menu.v1beta1.ProductKeyset)
   }
 
-  // @@protoc_insertion_point(class_scope:bloombox.schema.services.menu.v1beta1.ProductKeyset)
+  // @@protoc_insertion_point(class_scope:bloombox.services.menu.v1beta1.ProductKeyset)
   private static final io.bloombox.schema.services.menu.v1beta1.ProductKeyset DEFAULT_INSTANCE;
   static {
     DEFAULT_INSTANCE = new io.bloombox.schema.services.menu.v1beta1.ProductKeyset();
@@ -826,6 +849,7 @@ private static final long serialVersionUID = 0L;
 
   private static final com.google.protobuf.Parser<ProductKeyset>
       PARSER = new com.google.protobuf.AbstractParser<ProductKeyset>() {
+    @java.lang.Override
     public ProductKeyset parsePartialFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -843,6 +867,7 @@ private static final long serialVersionUID = 0L;
     return PARSER;
   }
 
+  @java.lang.Override
   public io.bloombox.schema.services.menu.v1beta1.ProductKeyset getDefaultInstanceForType() {
     return DEFAULT_INSTANCE;
   }

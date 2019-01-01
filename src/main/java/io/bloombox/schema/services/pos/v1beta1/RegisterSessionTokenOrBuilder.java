@@ -1,8 +1,8 @@
 /*
- * Copyright 2018, Bloombox, LLC. All rights reserved.
+ * Copyright 2018, Momentum Ideas, Co. All rights reserved.
  *
  * Source and object computer code contained herein is the private intellectual
- * property of Bloombox, a California Limited Liability Corporation. Use of this
+ * property of Momentum Ideas Co., a Delaware Corporation. Use of this
  * code in source form requires permission in writing before use or the
  * assembly, distribution, or publishing of derivative works, for commercial
  * purposes or any other purpose, from a duly authorized officer of Momentum
@@ -21,7 +21,7 @@
 package io.bloombox.schema.services.pos.v1beta1;
 
 public interface RegisterSessionTokenOrBuilder extends
-    // @@protoc_insertion_point(interface_extends:bloombox.schema.services.pos.v1beta1.RegisterSessionToken)
+    // @@protoc_insertion_point(interface_extends:bloombox.services.pos.v1beta1.RegisterSessionToken)
     com.google.protobuf.MessageOrBuilder {
 
   /**
@@ -29,7 +29,7 @@ public interface RegisterSessionTokenOrBuilder extends
    * Type of grant that this token provides the bearer.
    * </pre>
    *
-   * <code>.bloombox.schema.services.pos.v1beta1.SessionTokenGrant grant = 1;</code>
+   * <code>.bloombox.services.pos.v1beta1.SessionTokenGrant grant = 1;</code>
    */
   int getGrantValue();
   /**
@@ -37,7 +37,7 @@ public interface RegisterSessionTokenOrBuilder extends
    * Type of grant that this token provides the bearer.
    * </pre>
    *
-   * <code>.bloombox.schema.services.pos.v1beta1.SessionTokenGrant grant = 1;</code>
+   * <code>.bloombox.services.pos.v1beta1.SessionTokenGrant grant = 1;</code>
    */
   io.bloombox.schema.services.pos.v1beta1.SessionTokenGrant getGrant();
 
@@ -46,7 +46,7 @@ public interface RegisterSessionTokenOrBuilder extends
    * Resulting authorization token, entitling the bearer to access the specified grant.
    * </pre>
    *
-   * <code>.bloombox.schema.security.AuthToken token = 2;</code>
+   * <code>.bloombox.security.AuthToken token = 2;</code>
    */
   boolean hasToken();
   /**
@@ -54,7 +54,7 @@ public interface RegisterSessionTokenOrBuilder extends
    * Resulting authorization token, entitling the bearer to access the specified grant.
    * </pre>
    *
-   * <code>.bloombox.schema.security.AuthToken token = 2;</code>
+   * <code>.bloombox.security.AuthToken token = 2;</code>
    */
   io.bloombox.schema.security.AuthToken getToken();
   /**
@@ -62,7 +62,7 @@ public interface RegisterSessionTokenOrBuilder extends
    * Resulting authorization token, entitling the bearer to access the specified grant.
    * </pre>
    *
-   * <code>.bloombox.schema.security.AuthToken token = 2;</code>
+   * <code>.bloombox.security.AuthToken token = 2;</code>
    */
   io.bloombox.schema.security.AuthTokenOrBuilder getTokenOrBuilder();
 }

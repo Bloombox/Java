@@ -1,8 +1,8 @@
 /*
- * Copyright 2018, Bloombox, LLC. All rights reserved.
+ * Copyright 2018, Momentum Ideas, Co. All rights reserved.
  *
  * Source and object computer code contained herein is the private intellectual
- * property of Bloombox, a California Limited Liability Corporation. Use of this
+ * property of Momentum Ideas Co., a Delaware Corporation. Use of this
  * code in source form requires permission in writing before use or the
  * assembly, distribution, or publishing of derivative works, for commercial
  * purposes or any other purpose, from a duly authorized officer of Momentum
@@ -32,7 +32,7 @@ public final class SessionTelemetry {
         (com.google.protobuf.ExtensionRegistryLite) registry);
   }
   public interface SessionStatsOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:bloombox.schema.analytics.stats.SessionStats)
+      // @@protoc_insertion_point(interface_extends:bloombox.analytics.stats.SessionStats)
       com.google.protobuf.MessageOrBuilder {
 
     /**
@@ -171,11 +171,11 @@ public final class SessionTelemetry {
    * Specifies a set of basic calculated statistics, computed at the level of an entire user session.
    * </pre>
    *
-   * Protobuf type {@code bloombox.schema.analytics.stats.SessionStats}
+   * Protobuf type {@code bloombox.analytics.stats.SessionStats}
    */
   public  static final class SessionStats extends
       com.google.protobuf.GeneratedMessageV3 implements
-      // @@protoc_insertion_point(message_implements:bloombox.schema.analytics.stats.SessionStats)
+      // @@protoc_insertion_point(message_implements:bloombox.analytics.stats.SessionStats)
       SessionStatsOrBuilder {
   private static final long serialVersionUID = 0L;
     // Use SessionStats.newBuilder() to construct.
@@ -214,13 +214,6 @@ public final class SessionTelemetry {
             case 0:
               done = true;
               break;
-            default: {
-              if (!parseUnknownFieldProto3(
-                  input, unknownFields, extensionRegistry, tag)) {
-                done = true;
-              }
-              break;
-            }
             case 10: {
               java.lang.String s = input.readStringRequireUtf8();
 
@@ -276,6 +269,13 @@ public final class SessionTelemetry {
               userId_ = s;
               break;
             }
+            default: {
+              if (!parseUnknownFieldProto3(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
           }
         }
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
@@ -290,12 +290,13 @@ public final class SessionTelemetry {
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return io.bloombox.schema.telemetry.stats.SessionTelemetry.internal_static_bloombox_schema_analytics_stats_SessionStats_descriptor;
+      return io.bloombox.schema.telemetry.stats.SessionTelemetry.internal_static_bloombox_analytics_stats_SessionStats_descriptor;
     }
 
+    @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return io.bloombox.schema.telemetry.stats.SessionTelemetry.internal_static_bloombox_schema_analytics_stats_SessionStats_fieldAccessorTable
+      return io.bloombox.schema.telemetry.stats.SessionTelemetry.internal_static_bloombox_analytics_stats_SessionStats_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
               io.bloombox.schema.telemetry.stats.SessionTelemetry.SessionStats.class, io.bloombox.schema.telemetry.stats.SessionTelemetry.SessionStats.Builder.class);
     }
@@ -548,6 +549,7 @@ public final class SessionTelemetry {
     }
 
     private byte memoizedIsInitialized = -1;
+    @java.lang.Override
     public final boolean isInitialized() {
       byte isInitialized = memoizedIsInitialized;
       if (isInitialized == 1) return true;
@@ -557,6 +559,7 @@ public final class SessionTelemetry {
       return true;
     }
 
+    @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
       if (!getSidBytes().isEmpty()) {
@@ -583,6 +586,7 @@ public final class SessionTelemetry {
       unknownFields.writeTo(output);
     }
 
+    @java.lang.Override
     public int getSerializedSize() {
       int size = memoizedSize;
       if (size != -1) return size;
@@ -752,6 +756,7 @@ public final class SessionTelemetry {
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
 
+    @java.lang.Override
     public Builder newBuilderForType() { return newBuilder(); }
     public static Builder newBuilder() {
       return DEFAULT_INSTANCE.toBuilder();
@@ -759,6 +764,7 @@ public final class SessionTelemetry {
     public static Builder newBuilder(io.bloombox.schema.telemetry.stats.SessionTelemetry.SessionStats prototype) {
       return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
     }
+    @java.lang.Override
     public Builder toBuilder() {
       return this == DEFAULT_INSTANCE
           ? new Builder() : new Builder().mergeFrom(this);
@@ -775,20 +781,21 @@ public final class SessionTelemetry {
      * Specifies a set of basic calculated statistics, computed at the level of an entire user session.
      * </pre>
      *
-     * Protobuf type {@code bloombox.schema.analytics.stats.SessionStats}
+     * Protobuf type {@code bloombox.analytics.stats.SessionStats}
      */
     public static final class Builder extends
         com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:bloombox.schema.analytics.stats.SessionStats)
+        // @@protoc_insertion_point(builder_implements:bloombox.analytics.stats.SessionStats)
         io.bloombox.schema.telemetry.stats.SessionTelemetry.SessionStatsOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return io.bloombox.schema.telemetry.stats.SessionTelemetry.internal_static_bloombox_schema_analytics_stats_SessionStats_descriptor;
+        return io.bloombox.schema.telemetry.stats.SessionTelemetry.internal_static_bloombox_analytics_stats_SessionStats_descriptor;
       }
 
+      @java.lang.Override
       protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return io.bloombox.schema.telemetry.stats.SessionTelemetry.internal_static_bloombox_schema_analytics_stats_SessionStats_fieldAccessorTable
+        return io.bloombox.schema.telemetry.stats.SessionTelemetry.internal_static_bloombox_analytics_stats_SessionStats_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
                 io.bloombox.schema.telemetry.stats.SessionTelemetry.SessionStats.class, io.bloombox.schema.telemetry.stats.SessionTelemetry.SessionStats.Builder.class);
       }
@@ -808,6 +815,7 @@ public final class SessionTelemetry {
                 .alwaysUseFieldBuilders) {
         }
       }
+      @java.lang.Override
       public Builder clear() {
         super.clear();
         sid_ = "";
@@ -835,15 +843,18 @@ public final class SessionTelemetry {
         return this;
       }
 
+      @java.lang.Override
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return io.bloombox.schema.telemetry.stats.SessionTelemetry.internal_static_bloombox_schema_analytics_stats_SessionStats_descriptor;
+        return io.bloombox.schema.telemetry.stats.SessionTelemetry.internal_static_bloombox_analytics_stats_SessionStats_descriptor;
       }
 
+      @java.lang.Override
       public io.bloombox.schema.telemetry.stats.SessionTelemetry.SessionStats getDefaultInstanceForType() {
         return io.bloombox.schema.telemetry.stats.SessionTelemetry.SessionStats.getDefaultInstance();
       }
 
+      @java.lang.Override
       public io.bloombox.schema.telemetry.stats.SessionTelemetry.SessionStats build() {
         io.bloombox.schema.telemetry.stats.SessionTelemetry.SessionStats result = buildPartial();
         if (!result.isInitialized()) {
@@ -852,6 +863,7 @@ public final class SessionTelemetry {
         return result;
       }
 
+      @java.lang.Override
       public io.bloombox.schema.telemetry.stats.SessionTelemetry.SessionStats buildPartial() {
         io.bloombox.schema.telemetry.stats.SessionTelemetry.SessionStats result = new io.bloombox.schema.telemetry.stats.SessionTelemetry.SessionStats(this);
         result.sid_ = sid_;
@@ -873,32 +885,39 @@ public final class SessionTelemetry {
         return result;
       }
 
+      @java.lang.Override
       public Builder clone() {
         return (Builder) super.clone();
       }
+      @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
         return (Builder) super.setField(field, value);
       }
+      @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
         return (Builder) super.clearField(field);
       }
+      @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
         return (Builder) super.clearOneof(oneof);
       }
+      @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
         return (Builder) super.setRepeatedField(field, index, value);
       }
+      @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
         return (Builder) super.addRepeatedField(field, value);
       }
+      @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
         if (other instanceof io.bloombox.schema.telemetry.stats.SessionTelemetry.SessionStats) {
           return mergeFrom((io.bloombox.schema.telemetry.stats.SessionTelemetry.SessionStats)other);
@@ -940,10 +959,12 @@ public final class SessionTelemetry {
         return this;
       }
 
+      @java.lang.Override
       public final boolean isInitialized() {
         return true;
       }
 
+      @java.lang.Override
       public Builder mergeFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -1661,21 +1682,23 @@ public final class SessionTelemetry {
         onChanged();
         return this;
       }
+      @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
         return super.setUnknownFieldsProto3(unknownFields);
       }
 
+      @java.lang.Override
       public final Builder mergeUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
         return super.mergeUnknownFields(unknownFields);
       }
 
 
-      // @@protoc_insertion_point(builder_scope:bloombox.schema.analytics.stats.SessionStats)
+      // @@protoc_insertion_point(builder_scope:bloombox.analytics.stats.SessionStats)
     }
 
-    // @@protoc_insertion_point(class_scope:bloombox.schema.analytics.stats.SessionStats)
+    // @@protoc_insertion_point(class_scope:bloombox.analytics.stats.SessionStats)
     private static final io.bloombox.schema.telemetry.stats.SessionTelemetry.SessionStats DEFAULT_INSTANCE;
     static {
       DEFAULT_INSTANCE = new io.bloombox.schema.telemetry.stats.SessionTelemetry.SessionStats();
@@ -1687,6 +1710,7 @@ public final class SessionTelemetry {
 
     private static final com.google.protobuf.Parser<SessionStats>
         PARSER = new com.google.protobuf.AbstractParser<SessionStats>() {
+      @java.lang.Override
       public SessionStats parsePartialFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -1704,6 +1728,7 @@ public final class SessionTelemetry {
       return PARSER;
     }
 
+    @java.lang.Override
     public io.bloombox.schema.telemetry.stats.SessionTelemetry.SessionStats getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
@@ -1711,10 +1736,10 @@ public final class SessionTelemetry {
   }
 
   private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_bloombox_schema_analytics_stats_SessionStats_descriptor;
+    internal_static_bloombox_analytics_stats_SessionStats_descriptor;
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_bloombox_schema_analytics_stats_SessionStats_fieldAccessorTable;
+      internal_static_bloombox_analytics_stats_SessionStats_fieldAccessorTable;
 
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
@@ -1724,26 +1749,26 @@ public final class SessionTelemetry {
       descriptor;
   static {
     java.lang.String[] descriptorData = {
-      "\n\"analytics/stats/SessionStats.proto\022\037bl" +
-      "oombox.schema.analytics.stats\032\016bq_field." +
-      "proto\032\026temporal/Instant.proto\"\310\004\n\014Sessio" +
-      "nStats\022.\n\003sid\030\001 \001(\tB!\360?\001\212@\033Original ID o" +
-      "f the session.\022P\n\rpartner_scope\030\002 \001(\tB9\360" +
-      "?\001\212@3Partner scope seen as associated wi" +
-      "th this session.\022F\n\013event_count\030\003 \001(\rB1\360" +
-      "?\001\212@+Count of total events seen in this " +
-      "session.\022q\n\005begin\030\004 \001(\0132\036.opencannabis.t" +
-      "emporal.InstantBB\360?\001\212@<Timestamp represe" +
-      "nting the first event seen in this sessi" +
-      "on.\022n\n\003end\030\005 \001(\0132\036.opencannabis.temporal" +
-      ".InstantBA\360?\001\212@;Timestamp representing t" +
-      "he last event seen in this session.\022H\n\td" +
-      "evice_id\030\006 \001(\tB5\360?\001\212@/Device ID seen as " +
-      "associated with this session.\022A\n\007user_id" +
-      "\030\007 \001(\tB0\212@-User ID seen as associated wi" +
-      "th this session.B@\n\"io.bloombox.schema.t" +
-      "elemetry.statsB\020SessionTelemetryH\001P\000\242\002\003B" +
-      "BSb\006proto3"
+      "\n\"analytics/stats/SessionStats.proto\022\030bl" +
+      "oombox.analytics.stats\032\016bq_field.proto\032\026" +
+      "temporal/Instant.proto\"\310\004\n\014SessionStats\022" +
+      ".\n\003sid\030\001 \001(\tB!\360?\001\212@\033Original ID of the s" +
+      "ession.\022P\n\rpartner_scope\030\002 \001(\tB9\360?\001\212@3Pa" +
+      "rtner scope seen as associated with this" +
+      " session.\022F\n\013event_count\030\003 \001(\rB1\360?\001\212@+Co" +
+      "unt of total events seen in this session" +
+      ".\022q\n\005begin\030\004 \001(\0132\036.opencannabis.temporal" +
+      ".InstantBB\360?\001\212@<Timestamp representing t" +
+      "he first event seen in this session.\022n\n\003" +
+      "end\030\005 \001(\0132\036.opencannabis.temporal.Instan" +
+      "tBA\360?\001\212@;Timestamp representing the last" +
+      " event seen in this session.\022H\n\tdevice_i" +
+      "d\030\006 \001(\tB5\360?\001\212@/Device ID seen as associa" +
+      "ted with this session.\022A\n\007user_id\030\007 \001(\tB" +
+      "0\212@-User ID seen as associated with this" +
+      " session.B@\n\"io.bloombox.schema.telemetr" +
+      "y.statsB\020SessionTelemetryH\001P\000\242\002\003BBSb\006pro" +
+      "to3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -1759,11 +1784,11 @@ public final class SessionTelemetry {
           gen_bq_schema.BqField.getDescriptor(),
           io.opencannabis.schema.temporal.TemporalInstant.getDescriptor(),
         }, assigner);
-    internal_static_bloombox_schema_analytics_stats_SessionStats_descriptor =
+    internal_static_bloombox_analytics_stats_SessionStats_descriptor =
       getDescriptor().getMessageTypes().get(0);
-    internal_static_bloombox_schema_analytics_stats_SessionStats_fieldAccessorTable = new
+    internal_static_bloombox_analytics_stats_SessionStats_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_bloombox_schema_analytics_stats_SessionStats_descriptor,
+        internal_static_bloombox_analytics_stats_SessionStats_descriptor,
         new java.lang.String[] { "Sid", "PartnerScope", "EventCount", "Begin", "End", "DeviceId", "UserId", });
     com.google.protobuf.ExtensionRegistry registry =
         com.google.protobuf.ExtensionRegistry.newInstance();

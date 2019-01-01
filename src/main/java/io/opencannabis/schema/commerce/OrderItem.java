@@ -1,11 +1,12 @@
 /*
- * Copyright 2018, Bloombox, LLC.
+ * Copyright 2018, Momentum Ideas, Co. All rights reserved.
  *
- * Licensed under the Apache License, Version 2.0 (the "License");
- * you may not use this file except in compliance with the License.
- * You may obtain a copy of the License at
- *
- *     http://www.apache.org/licenses/LICENSE-2.0
+ * Source and object computer code contained herein is the private intellectual
+ * property of Momentum Ideas Co., a Delaware Corporation. Use of this
+ * code in source form requires permission in writing before use or the
+ * assembly, distribution, or publishing of derivative works, for commercial
+ * purposes or any other purpose, from a duly authorized officer of Momentum
+ * Ideas Co.
  *
  * Unless required by applicable law or agreed to in writing, software
  * distributed under the License is distributed on an "AS IS" BASIS,
@@ -285,13 +286,6 @@ public final class OrderItem {
             case 0:
               done = true;
               break;
-            default: {
-              if (!parseUnknownFieldProto3(
-                  input, unknownFields, extensionRegistry, tag)) {
-                done = true;
-              }
-              break;
-            }
             case 8: {
               int rawValue = input.readEnum();
 
@@ -316,6 +310,13 @@ public final class OrderItem {
               spec_ = s;
               break;
             }
+            default: {
+              if (!parseUnknownFieldProto3(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
           }
         }
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
@@ -333,6 +334,7 @@ public final class OrderItem {
       return io.opencannabis.schema.commerce.OrderItem.internal_static_opencannabis_commerce_VariantSpec_descriptor;
     }
 
+    @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
       return io.opencannabis.schema.commerce.OrderItem.internal_static_opencannabis_commerce_VariantSpec_fieldAccessorTable
@@ -400,6 +402,7 @@ public final class OrderItem {
      * <code>.opencannabis.commerce.ProductVariant variant = 1;</code>
      */
     public io.opencannabis.schema.commerce.OrderItem.ProductVariant getVariant() {
+      @SuppressWarnings("deprecation")
       io.opencannabis.schema.commerce.OrderItem.ProductVariant result = io.opencannabis.schema.commerce.OrderItem.ProductVariant.valueOf(variant_);
       return result == null ? io.opencannabis.schema.commerce.OrderItem.ProductVariant.UNRECOGNIZED : result;
     }
@@ -427,6 +430,7 @@ public final class OrderItem {
      */
     public io.opencannabis.schema.product.struct.PricingWeightTier getWeight() {
       if (specCase_ == 2) {
+        @SuppressWarnings("deprecation")
         io.opencannabis.schema.product.struct.PricingWeightTier result = io.opencannabis.schema.product.struct.PricingWeightTier.valueOf(
             (java.lang.Integer) spec_);
         return result == null ? io.opencannabis.schema.product.struct.PricingWeightTier.UNRECOGNIZED : result;
@@ -537,6 +541,7 @@ public final class OrderItem {
     }
 
     private byte memoizedIsInitialized = -1;
+    @java.lang.Override
     public final boolean isInitialized() {
       byte isInitialized = memoizedIsInitialized;
       if (isInitialized == 1) return true;
@@ -546,6 +551,7 @@ public final class OrderItem {
       return true;
     }
 
+    @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
       if (variant_ != io.opencannabis.schema.commerce.OrderItem.ProductVariant.WEIGHT.getNumber()) {
@@ -563,6 +569,7 @@ public final class OrderItem {
       unknownFields.writeTo(output);
     }
 
+    @java.lang.Override
     public int getSerializedSize() {
       int size = memoizedSize;
       if (size != -1) return size;
@@ -722,6 +729,7 @@ public final class OrderItem {
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
 
+    @java.lang.Override
     public Builder newBuilderForType() { return newBuilder(); }
     public static Builder newBuilder() {
       return DEFAULT_INSTANCE.toBuilder();
@@ -729,6 +737,7 @@ public final class OrderItem {
     public static Builder newBuilder(io.opencannabis.schema.commerce.OrderItem.VariantSpec prototype) {
       return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
     }
+    @java.lang.Override
     public Builder toBuilder() {
       return this == DEFAULT_INSTANCE
           ? new Builder() : new Builder().mergeFrom(this);
@@ -756,6 +765,7 @@ public final class OrderItem {
         return io.opencannabis.schema.commerce.OrderItem.internal_static_opencannabis_commerce_VariantSpec_descriptor;
       }
 
+      @java.lang.Override
       protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
           internalGetFieldAccessorTable() {
         return io.opencannabis.schema.commerce.OrderItem.internal_static_opencannabis_commerce_VariantSpec_fieldAccessorTable
@@ -778,6 +788,7 @@ public final class OrderItem {
                 .alwaysUseFieldBuilders) {
         }
       }
+      @java.lang.Override
       public Builder clear() {
         super.clear();
         variant_ = 0;
@@ -787,15 +798,18 @@ public final class OrderItem {
         return this;
       }
 
+      @java.lang.Override
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
         return io.opencannabis.schema.commerce.OrderItem.internal_static_opencannabis_commerce_VariantSpec_descriptor;
       }
 
+      @java.lang.Override
       public io.opencannabis.schema.commerce.OrderItem.VariantSpec getDefaultInstanceForType() {
         return io.opencannabis.schema.commerce.OrderItem.VariantSpec.getDefaultInstance();
       }
 
+      @java.lang.Override
       public io.opencannabis.schema.commerce.OrderItem.VariantSpec build() {
         io.opencannabis.schema.commerce.OrderItem.VariantSpec result = buildPartial();
         if (!result.isInitialized()) {
@@ -804,6 +818,7 @@ public final class OrderItem {
         return result;
       }
 
+      @java.lang.Override
       public io.opencannabis.schema.commerce.OrderItem.VariantSpec buildPartial() {
         io.opencannabis.schema.commerce.OrderItem.VariantSpec result = new io.opencannabis.schema.commerce.OrderItem.VariantSpec(this);
         result.variant_ = variant_;
@@ -821,32 +836,39 @@ public final class OrderItem {
         return result;
       }
 
+      @java.lang.Override
       public Builder clone() {
         return (Builder) super.clone();
       }
+      @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
         return (Builder) super.setField(field, value);
       }
+      @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
         return (Builder) super.clearField(field);
       }
+      @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
         return (Builder) super.clearOneof(oneof);
       }
+      @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
         return (Builder) super.setRepeatedField(field, index, value);
       }
+      @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
         return (Builder) super.addRepeatedField(field, value);
       }
+      @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
         if (other instanceof io.opencannabis.schema.commerce.OrderItem.VariantSpec) {
           return mergeFrom((io.opencannabis.schema.commerce.OrderItem.VariantSpec)other);
@@ -887,10 +909,12 @@ public final class OrderItem {
         return this;
       }
 
+      @java.lang.Override
       public final boolean isInitialized() {
         return true;
       }
 
+      @java.lang.Override
       public Builder mergeFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -955,6 +979,7 @@ public final class OrderItem {
        * <code>.opencannabis.commerce.ProductVariant variant = 1;</code>
        */
       public io.opencannabis.schema.commerce.OrderItem.ProductVariant getVariant() {
+        @SuppressWarnings("deprecation")
         io.opencannabis.schema.commerce.OrderItem.ProductVariant result = io.opencannabis.schema.commerce.OrderItem.ProductVariant.valueOf(variant_);
         return result == null ? io.opencannabis.schema.commerce.OrderItem.ProductVariant.UNRECOGNIZED : result;
       }
@@ -1023,6 +1048,7 @@ public final class OrderItem {
        */
       public io.opencannabis.schema.product.struct.PricingWeightTier getWeight() {
         if (specCase_ == 2) {
+          @SuppressWarnings("deprecation")
           io.opencannabis.schema.product.struct.PricingWeightTier result = io.opencannabis.schema.product.struct.PricingWeightTier.valueOf(
               (java.lang.Integer) spec_);
           return result == null ? io.opencannabis.schema.product.struct.PricingWeightTier.UNRECOGNIZED : result;
@@ -1260,11 +1286,13 @@ public final class OrderItem {
         onChanged();
         return this;
       }
+      @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
         return super.setUnknownFieldsProto3(unknownFields);
       }
 
+      @java.lang.Override
       public final Builder mergeUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
         return super.mergeUnknownFields(unknownFields);
@@ -1286,6 +1314,7 @@ public final class OrderItem {
 
     private static final com.google.protobuf.Parser<VariantSpec>
         PARSER = new com.google.protobuf.AbstractParser<VariantSpec>() {
+      @java.lang.Override
       public VariantSpec parsePartialFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -1303,6 +1332,7 @@ public final class OrderItem {
       return PARSER;
     }
 
+    @java.lang.Override
     public io.opencannabis.schema.commerce.OrderItem.VariantSpec getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
@@ -1474,13 +1504,6 @@ public final class OrderItem {
             case 0:
               done = true;
               break;
-            default: {
-              if (!parseUnknownFieldProto3(
-                  input, unknownFields, extensionRegistry, tag)) {
-                done = true;
-              }
-              break;
-            }
             case 10: {
               io.opencannabis.schema.base.BaseProductKey.ProductKey.Builder subBuilder = null;
               if (key_ != null) {
@@ -1520,6 +1543,13 @@ public final class OrderItem {
               imageUri_ = s;
               break;
             }
+            default: {
+              if (!parseUnknownFieldProto3(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
           }
         }
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
@@ -1540,6 +1570,7 @@ public final class OrderItem {
       return io.opencannabis.schema.commerce.OrderItem.internal_static_opencannabis_commerce_Item_descriptor;
     }
 
+    @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
       return io.opencannabis.schema.commerce.OrderItem.internal_static_opencannabis_commerce_Item_fieldAccessorTable
@@ -1734,6 +1765,7 @@ public final class OrderItem {
     }
 
     private byte memoizedIsInitialized = -1;
+    @java.lang.Override
     public final boolean isInitialized() {
       byte isInitialized = memoizedIsInitialized;
       if (isInitialized == 1) return true;
@@ -1743,6 +1775,7 @@ public final class OrderItem {
       return true;
     }
 
+    @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
       if (key_ != null) {
@@ -1763,6 +1796,7 @@ public final class OrderItem {
       unknownFields.writeTo(output);
     }
 
+    @java.lang.Override
     public int getSerializedSize() {
       int size = memoizedSize;
       if (size != -1) return size;
@@ -1915,6 +1949,7 @@ public final class OrderItem {
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
 
+    @java.lang.Override
     public Builder newBuilderForType() { return newBuilder(); }
     public static Builder newBuilder() {
       return DEFAULT_INSTANCE.toBuilder();
@@ -1922,6 +1957,7 @@ public final class OrderItem {
     public static Builder newBuilder(io.opencannabis.schema.commerce.OrderItem.Item prototype) {
       return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
     }
+    @java.lang.Override
     public Builder toBuilder() {
       return this == DEFAULT_INSTANCE
           ? new Builder() : new Builder().mergeFrom(this);
@@ -1949,6 +1985,7 @@ public final class OrderItem {
         return io.opencannabis.schema.commerce.OrderItem.internal_static_opencannabis_commerce_Item_descriptor;
       }
 
+      @java.lang.Override
       protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
           internalGetFieldAccessorTable() {
         return io.opencannabis.schema.commerce.OrderItem.internal_static_opencannabis_commerce_Item_fieldAccessorTable
@@ -1972,6 +2009,7 @@ public final class OrderItem {
           getVariantFieldBuilder();
         }
       }
+      @java.lang.Override
       public Builder clear() {
         super.clear();
         if (keyBuilder_ == null) {
@@ -1995,15 +2033,18 @@ public final class OrderItem {
         return this;
       }
 
+      @java.lang.Override
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
         return io.opencannabis.schema.commerce.OrderItem.internal_static_opencannabis_commerce_Item_descriptor;
       }
 
+      @java.lang.Override
       public io.opencannabis.schema.commerce.OrderItem.Item getDefaultInstanceForType() {
         return io.opencannabis.schema.commerce.OrderItem.Item.getDefaultInstance();
       }
 
+      @java.lang.Override
       public io.opencannabis.schema.commerce.OrderItem.Item build() {
         io.opencannabis.schema.commerce.OrderItem.Item result = buildPartial();
         if (!result.isInitialized()) {
@@ -2012,6 +2053,7 @@ public final class OrderItem {
         return result;
       }
 
+      @java.lang.Override
       public io.opencannabis.schema.commerce.OrderItem.Item buildPartial() {
         io.opencannabis.schema.commerce.OrderItem.Item result = new io.opencannabis.schema.commerce.OrderItem.Item(this);
         int from_bitField0_ = bitField0_;
@@ -2038,32 +2080,39 @@ public final class OrderItem {
         return result;
       }
 
+      @java.lang.Override
       public Builder clone() {
         return (Builder) super.clone();
       }
+      @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
         return (Builder) super.setField(field, value);
       }
+      @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
         return (Builder) super.clearField(field);
       }
+      @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
         return (Builder) super.clearOneof(oneof);
       }
+      @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
         return (Builder) super.setRepeatedField(field, index, value);
       }
+      @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
         return (Builder) super.addRepeatedField(field, value);
       }
+      @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
         if (other instanceof io.opencannabis.schema.commerce.OrderItem.Item) {
           return mergeFrom((io.opencannabis.schema.commerce.OrderItem.Item)other);
@@ -2120,10 +2169,12 @@ public final class OrderItem {
         return this;
       }
 
+      @java.lang.Override
       public final boolean isInitialized() {
         return true;
       }
 
+      @java.lang.Override
       public Builder mergeFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -2823,11 +2874,13 @@ public final class OrderItem {
         onChanged();
         return this;
       }
+      @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
         return super.setUnknownFieldsProto3(unknownFields);
       }
 
+      @java.lang.Override
       public final Builder mergeUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
         return super.mergeUnknownFields(unknownFields);
@@ -2849,6 +2902,7 @@ public final class OrderItem {
 
     private static final com.google.protobuf.Parser<Item>
         PARSER = new com.google.protobuf.AbstractParser<Item>() {
+      @java.lang.Override
       public Item parsePartialFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -2866,6 +2920,7 @@ public final class OrderItem {
       return PARSER;
     }
 
+    @java.lang.Override
     public io.opencannabis.schema.commerce.OrderItem.Item getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }

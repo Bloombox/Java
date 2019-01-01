@@ -9,9 +9,12 @@ public final class Datamodel {
       com.google.protobuf.ExtensionRegistryLite registry) {
     registry.add(core.Datamodel.db);
     registry.add(core.Datamodel.table);
+    registry.add(core.Datamodel.map);
     registry.add(core.Datamodel.field);
     registry.add(core.Datamodel.column);
     registry.add(core.Datamodel.collection);
+    registry.add(core.Datamodel.label);
+    registry.add(core.Datamodel.color);
   }
 
   public static void registerAllExtensions(
@@ -347,7 +350,7 @@ public final class Datamodel {
 
     /**
      * <pre>
-     * Data path for a given message, with templated items in the URL corresponding to parameters in the item's key path.
+     * Data path for a given message, with items in the URL corresponding to parameters in the item's key path.
      * </pre>
      *
      * <code>string path = 2;</code>
@@ -355,7 +358,7 @@ public final class Datamodel {
     java.lang.String getPath();
     /**
      * <pre>
-     * Data path for a given message, with templated items in the URL corresponding to parameters in the item's key path.
+     * Data path for a given message, with items in the URL corresponding to parameters in the item's key path.
      * </pre>
      *
      * <code>string path = 2;</code>
@@ -409,13 +412,6 @@ public final class Datamodel {
             case 0:
               done = true;
               break;
-            default: {
-              if (!parseUnknownFieldProto3(
-                  input, unknownFields, extensionRegistry, tag)) {
-                done = true;
-              }
-              break;
-            }
             case 8: {
               int rawValue = input.readEnum();
 
@@ -426,6 +422,13 @@ public final class Datamodel {
               java.lang.String s = input.readStringRequireUtf8();
 
               path_ = s;
+              break;
+            }
+            default: {
+              if (!parseUnknownFieldProto3(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
               break;
             }
           }
@@ -445,6 +448,7 @@ public final class Datamodel {
       return core.Datamodel.internal_static_core_PersistenceOptions_descriptor;
     }
 
+    @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
       return core.Datamodel.internal_static_core_PersistenceOptions_fieldAccessorTable
@@ -472,6 +476,7 @@ public final class Datamodel {
      * <code>.core.CollectionMode mode = 1;</code>
      */
     public core.Datamodel.CollectionMode getMode() {
+      @SuppressWarnings("deprecation")
       core.Datamodel.CollectionMode result = core.Datamodel.CollectionMode.valueOf(mode_);
       return result == null ? core.Datamodel.CollectionMode.UNRECOGNIZED : result;
     }
@@ -480,7 +485,7 @@ public final class Datamodel {
     private volatile java.lang.Object path_;
     /**
      * <pre>
-     * Data path for a given message, with templated items in the URL corresponding to parameters in the item's key path.
+     * Data path for a given message, with items in the URL corresponding to parameters in the item's key path.
      * </pre>
      *
      * <code>string path = 2;</code>
@@ -499,7 +504,7 @@ public final class Datamodel {
     }
     /**
      * <pre>
-     * Data path for a given message, with templated items in the URL corresponding to parameters in the item's key path.
+     * Data path for a given message, with items in the URL corresponding to parameters in the item's key path.
      * </pre>
      *
      * <code>string path = 2;</code>
@@ -519,6 +524,7 @@ public final class Datamodel {
     }
 
     private byte memoizedIsInitialized = -1;
+    @java.lang.Override
     public final boolean isInitialized() {
       byte isInitialized = memoizedIsInitialized;
       if (isInitialized == 1) return true;
@@ -528,6 +534,7 @@ public final class Datamodel {
       return true;
     }
 
+    @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
       if (mode_ != core.Datamodel.CollectionMode.NESTED.getNumber()) {
@@ -539,6 +546,7 @@ public final class Datamodel {
       unknownFields.writeTo(output);
     }
 
+    @java.lang.Override
     public int getSerializedSize() {
       int size = memoizedSize;
       if (size != -1) return size;
@@ -660,6 +668,7 @@ public final class Datamodel {
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
 
+    @java.lang.Override
     public Builder newBuilderForType() { return newBuilder(); }
     public static Builder newBuilder() {
       return DEFAULT_INSTANCE.toBuilder();
@@ -667,6 +676,7 @@ public final class Datamodel {
     public static Builder newBuilder(core.Datamodel.PersistenceOptions prototype) {
       return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
     }
+    @java.lang.Override
     public Builder toBuilder() {
       return this == DEFAULT_INSTANCE
           ? new Builder() : new Builder().mergeFrom(this);
@@ -695,6 +705,7 @@ public final class Datamodel {
         return core.Datamodel.internal_static_core_PersistenceOptions_descriptor;
       }
 
+      @java.lang.Override
       protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
           internalGetFieldAccessorTable() {
         return core.Datamodel.internal_static_core_PersistenceOptions_fieldAccessorTable
@@ -717,6 +728,7 @@ public final class Datamodel {
                 .alwaysUseFieldBuilders) {
         }
       }
+      @java.lang.Override
       public Builder clear() {
         super.clear();
         mode_ = 0;
@@ -726,15 +738,18 @@ public final class Datamodel {
         return this;
       }
 
+      @java.lang.Override
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
         return core.Datamodel.internal_static_core_PersistenceOptions_descriptor;
       }
 
+      @java.lang.Override
       public core.Datamodel.PersistenceOptions getDefaultInstanceForType() {
         return core.Datamodel.PersistenceOptions.getDefaultInstance();
       }
 
+      @java.lang.Override
       public core.Datamodel.PersistenceOptions build() {
         core.Datamodel.PersistenceOptions result = buildPartial();
         if (!result.isInitialized()) {
@@ -743,6 +758,7 @@ public final class Datamodel {
         return result;
       }
 
+      @java.lang.Override
       public core.Datamodel.PersistenceOptions buildPartial() {
         core.Datamodel.PersistenceOptions result = new core.Datamodel.PersistenceOptions(this);
         result.mode_ = mode_;
@@ -751,32 +767,39 @@ public final class Datamodel {
         return result;
       }
 
+      @java.lang.Override
       public Builder clone() {
         return (Builder) super.clone();
       }
+      @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
         return (Builder) super.setField(field, value);
       }
+      @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
         return (Builder) super.clearField(field);
       }
+      @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
         return (Builder) super.clearOneof(oneof);
       }
+      @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
         return (Builder) super.setRepeatedField(field, index, value);
       }
+      @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
         return (Builder) super.addRepeatedField(field, value);
       }
+      @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
         if (other instanceof core.Datamodel.PersistenceOptions) {
           return mergeFrom((core.Datamodel.PersistenceOptions)other);
@@ -800,10 +823,12 @@ public final class Datamodel {
         return this;
       }
 
+      @java.lang.Override
       public final boolean isInitialized() {
         return true;
       }
 
+      @java.lang.Override
       public Builder mergeFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -853,6 +878,7 @@ public final class Datamodel {
        * <code>.core.CollectionMode mode = 1;</code>
        */
       public core.Datamodel.CollectionMode getMode() {
+        @SuppressWarnings("deprecation")
         core.Datamodel.CollectionMode result = core.Datamodel.CollectionMode.valueOf(mode_);
         return result == null ? core.Datamodel.CollectionMode.UNRECOGNIZED : result;
       }
@@ -889,7 +915,7 @@ public final class Datamodel {
       private java.lang.Object path_ = "";
       /**
        * <pre>
-       * Data path for a given message, with templated items in the URL corresponding to parameters in the item's key path.
+       * Data path for a given message, with items in the URL corresponding to parameters in the item's key path.
        * </pre>
        *
        * <code>string path = 2;</code>
@@ -908,7 +934,7 @@ public final class Datamodel {
       }
       /**
        * <pre>
-       * Data path for a given message, with templated items in the URL corresponding to parameters in the item's key path.
+       * Data path for a given message, with items in the URL corresponding to parameters in the item's key path.
        * </pre>
        *
        * <code>string path = 2;</code>
@@ -928,7 +954,7 @@ public final class Datamodel {
       }
       /**
        * <pre>
-       * Data path for a given message, with templated items in the URL corresponding to parameters in the item's key path.
+       * Data path for a given message, with items in the URL corresponding to parameters in the item's key path.
        * </pre>
        *
        * <code>string path = 2;</code>
@@ -945,7 +971,7 @@ public final class Datamodel {
       }
       /**
        * <pre>
-       * Data path for a given message, with templated items in the URL corresponding to parameters in the item's key path.
+       * Data path for a given message, with items in the URL corresponding to parameters in the item's key path.
        * </pre>
        *
        * <code>string path = 2;</code>
@@ -958,7 +984,7 @@ public final class Datamodel {
       }
       /**
        * <pre>
-       * Data path for a given message, with templated items in the URL corresponding to parameters in the item's key path.
+       * Data path for a given message, with items in the URL corresponding to parameters in the item's key path.
        * </pre>
        *
        * <code>string path = 2;</code>
@@ -974,11 +1000,13 @@ public final class Datamodel {
         onChanged();
         return this;
       }
+      @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
         return super.setUnknownFieldsProto3(unknownFields);
       }
 
+      @java.lang.Override
       public final Builder mergeUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
         return super.mergeUnknownFields(unknownFields);
@@ -1000,6 +1028,7 @@ public final class Datamodel {
 
     private static final com.google.protobuf.Parser<PersistenceOptions>
         PARSER = new com.google.protobuf.AbstractParser<PersistenceOptions>() {
+      @java.lang.Override
       public PersistenceOptions parsePartialFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -1017,6 +1046,7 @@ public final class Datamodel {
       return PARSER;
     }
 
+    @java.lang.Override
     public core.Datamodel.PersistenceOptions getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
@@ -1109,13 +1139,6 @@ public final class Datamodel {
             case 0:
               done = true;
               break;
-            default: {
-              if (!parseUnknownFieldProto3(
-                  input, unknownFields, extensionRegistry, tag)) {
-                done = true;
-              }
-              break;
-            }
             case 10: {
               java.lang.String s = input.readStringRequireUtf8();
 
@@ -1126,6 +1149,13 @@ public final class Datamodel {
               java.lang.String s = input.readStringRequireUtf8();
 
               description_ = s;
+              break;
+            }
+            default: {
+              if (!parseUnknownFieldProto3(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
               break;
             }
           }
@@ -1145,6 +1175,7 @@ public final class Datamodel {
       return core.Datamodel.internal_static_core_TableOptions_descriptor;
     }
 
+    @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
       return core.Datamodel.internal_static_core_TableOptions_fieldAccessorTable
@@ -1237,6 +1268,7 @@ public final class Datamodel {
     }
 
     private byte memoizedIsInitialized = -1;
+    @java.lang.Override
     public final boolean isInitialized() {
       byte isInitialized = memoizedIsInitialized;
       if (isInitialized == 1) return true;
@@ -1246,6 +1278,7 @@ public final class Datamodel {
       return true;
     }
 
+    @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
       if (!getNameBytes().isEmpty()) {
@@ -1257,6 +1290,7 @@ public final class Datamodel {
       unknownFields.writeTo(output);
     }
 
+    @java.lang.Override
     public int getSerializedSize() {
       int size = memoizedSize;
       if (size != -1) return size;
@@ -1378,6 +1412,7 @@ public final class Datamodel {
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
 
+    @java.lang.Override
     public Builder newBuilderForType() { return newBuilder(); }
     public static Builder newBuilder() {
       return DEFAULT_INSTANCE.toBuilder();
@@ -1385,6 +1420,7 @@ public final class Datamodel {
     public static Builder newBuilder(core.Datamodel.TableOptions prototype) {
       return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
     }
+    @java.lang.Override
     public Builder toBuilder() {
       return this == DEFAULT_INSTANCE
           ? new Builder() : new Builder().mergeFrom(this);
@@ -1413,6 +1449,7 @@ public final class Datamodel {
         return core.Datamodel.internal_static_core_TableOptions_descriptor;
       }
 
+      @java.lang.Override
       protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
           internalGetFieldAccessorTable() {
         return core.Datamodel.internal_static_core_TableOptions_fieldAccessorTable
@@ -1435,6 +1472,7 @@ public final class Datamodel {
                 .alwaysUseFieldBuilders) {
         }
       }
+      @java.lang.Override
       public Builder clear() {
         super.clear();
         name_ = "";
@@ -1444,15 +1482,18 @@ public final class Datamodel {
         return this;
       }
 
+      @java.lang.Override
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
         return core.Datamodel.internal_static_core_TableOptions_descriptor;
       }
 
+      @java.lang.Override
       public core.Datamodel.TableOptions getDefaultInstanceForType() {
         return core.Datamodel.TableOptions.getDefaultInstance();
       }
 
+      @java.lang.Override
       public core.Datamodel.TableOptions build() {
         core.Datamodel.TableOptions result = buildPartial();
         if (!result.isInitialized()) {
@@ -1461,6 +1502,7 @@ public final class Datamodel {
         return result;
       }
 
+      @java.lang.Override
       public core.Datamodel.TableOptions buildPartial() {
         core.Datamodel.TableOptions result = new core.Datamodel.TableOptions(this);
         result.name_ = name_;
@@ -1469,32 +1511,39 @@ public final class Datamodel {
         return result;
       }
 
+      @java.lang.Override
       public Builder clone() {
         return (Builder) super.clone();
       }
+      @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
         return (Builder) super.setField(field, value);
       }
+      @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
         return (Builder) super.clearField(field);
       }
+      @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
         return (Builder) super.clearOneof(oneof);
       }
+      @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
         return (Builder) super.setRepeatedField(field, index, value);
       }
+      @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
         return (Builder) super.addRepeatedField(field, value);
       }
+      @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
         if (other instanceof core.Datamodel.TableOptions) {
           return mergeFrom((core.Datamodel.TableOptions)other);
@@ -1519,10 +1568,12 @@ public final class Datamodel {
         return this;
       }
 
+      @java.lang.Override
       public final boolean isInitialized() {
         return true;
       }
 
+      @java.lang.Override
       public Builder mergeFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -1718,11 +1769,13 @@ public final class Datamodel {
         onChanged();
         return this;
       }
+      @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
         return super.setUnknownFieldsProto3(unknownFields);
       }
 
+      @java.lang.Override
       public final Builder mergeUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
         return super.mergeUnknownFields(unknownFields);
@@ -1744,6 +1797,7 @@ public final class Datamodel {
 
     private static final com.google.protobuf.Parser<TableOptions>
         PARSER = new com.google.protobuf.AbstractParser<TableOptions>() {
+      @java.lang.Override
       public TableOptions parsePartialFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -1761,6 +1815,7 @@ public final class Datamodel {
       return PARSER;
     }
 
+    @java.lang.Override
     public core.Datamodel.TableOptions getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
@@ -1773,7 +1828,7 @@ public final class Datamodel {
 
     /**
      * <pre>
-     * Collection storage mode for the given submessage field.
+     * Collection storage mode for the given sub-message field.
      * </pre>
      *
      * <code>.core.CollectionMode mode = 1;</code>
@@ -1781,7 +1836,7 @@ public final class Datamodel {
     int getModeValue();
     /**
      * <pre>
-     * Collection storage mode for the given submessage field.
+     * Collection storage mode for the given sub-message field.
      * </pre>
      *
      * <code>.core.CollectionMode mode = 1;</code>
@@ -1790,7 +1845,7 @@ public final class Datamodel {
 
     /**
      * <pre>
-     * Data path for the given submessage field.
+     * Data path for the given sub-message field.
      * </pre>
      *
      * <code>string path = 3;</code>
@@ -1798,7 +1853,7 @@ public final class Datamodel {
     java.lang.String getPath();
     /**
      * <pre>
-     * Data path for the given submessage field.
+     * Data path for the given sub-message field.
      * </pre>
      *
      * <code>string path = 3;</code>
@@ -1808,7 +1863,7 @@ public final class Datamodel {
   }
   /**
    * <pre>
-   * Specifies options related to storing a submessage.
+   * Specifies options related to storing a sub-message.
    * </pre>
    *
    * Protobuf type {@code core.SubmessageOptions}
@@ -1851,13 +1906,6 @@ public final class Datamodel {
             case 0:
               done = true;
               break;
-            default: {
-              if (!parseUnknownFieldProto3(
-                  input, unknownFields, extensionRegistry, tag)) {
-                done = true;
-              }
-              break;
-            }
             case 8: {
               int rawValue = input.readEnum();
 
@@ -1868,6 +1916,13 @@ public final class Datamodel {
               java.lang.String s = input.readStringRequireUtf8();
 
               path_ = s;
+              break;
+            }
+            default: {
+              if (!parseUnknownFieldProto3(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
               break;
             }
           }
@@ -1887,6 +1942,7 @@ public final class Datamodel {
       return core.Datamodel.internal_static_core_SubmessageOptions_descriptor;
     }
 
+    @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
       return core.Datamodel.internal_static_core_SubmessageOptions_fieldAccessorTable
@@ -1898,7 +1954,7 @@ public final class Datamodel {
     private int mode_;
     /**
      * <pre>
-     * Collection storage mode for the given submessage field.
+     * Collection storage mode for the given sub-message field.
      * </pre>
      *
      * <code>.core.CollectionMode mode = 1;</code>
@@ -1908,12 +1964,13 @@ public final class Datamodel {
     }
     /**
      * <pre>
-     * Collection storage mode for the given submessage field.
+     * Collection storage mode for the given sub-message field.
      * </pre>
      *
      * <code>.core.CollectionMode mode = 1;</code>
      */
     public core.Datamodel.CollectionMode getMode() {
+      @SuppressWarnings("deprecation")
       core.Datamodel.CollectionMode result = core.Datamodel.CollectionMode.valueOf(mode_);
       return result == null ? core.Datamodel.CollectionMode.UNRECOGNIZED : result;
     }
@@ -1922,7 +1979,7 @@ public final class Datamodel {
     private volatile java.lang.Object path_;
     /**
      * <pre>
-     * Data path for the given submessage field.
+     * Data path for the given sub-message field.
      * </pre>
      *
      * <code>string path = 3;</code>
@@ -1941,7 +1998,7 @@ public final class Datamodel {
     }
     /**
      * <pre>
-     * Data path for the given submessage field.
+     * Data path for the given sub-message field.
      * </pre>
      *
      * <code>string path = 3;</code>
@@ -1961,6 +2018,7 @@ public final class Datamodel {
     }
 
     private byte memoizedIsInitialized = -1;
+    @java.lang.Override
     public final boolean isInitialized() {
       byte isInitialized = memoizedIsInitialized;
       if (isInitialized == 1) return true;
@@ -1970,6 +2028,7 @@ public final class Datamodel {
       return true;
     }
 
+    @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
       if (mode_ != core.Datamodel.CollectionMode.NESTED.getNumber()) {
@@ -1981,6 +2040,7 @@ public final class Datamodel {
       unknownFields.writeTo(output);
     }
 
+    @java.lang.Override
     public int getSerializedSize() {
       int size = memoizedSize;
       if (size != -1) return size;
@@ -2102,6 +2162,7 @@ public final class Datamodel {
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
 
+    @java.lang.Override
     public Builder newBuilderForType() { return newBuilder(); }
     public static Builder newBuilder() {
       return DEFAULT_INSTANCE.toBuilder();
@@ -2109,6 +2170,7 @@ public final class Datamodel {
     public static Builder newBuilder(core.Datamodel.SubmessageOptions prototype) {
       return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
     }
+    @java.lang.Override
     public Builder toBuilder() {
       return this == DEFAULT_INSTANCE
           ? new Builder() : new Builder().mergeFrom(this);
@@ -2122,7 +2184,7 @@ public final class Datamodel {
     }
     /**
      * <pre>
-     * Specifies options related to storing a submessage.
+     * Specifies options related to storing a sub-message.
      * </pre>
      *
      * Protobuf type {@code core.SubmessageOptions}
@@ -2136,6 +2198,7 @@ public final class Datamodel {
         return core.Datamodel.internal_static_core_SubmessageOptions_descriptor;
       }
 
+      @java.lang.Override
       protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
           internalGetFieldAccessorTable() {
         return core.Datamodel.internal_static_core_SubmessageOptions_fieldAccessorTable
@@ -2158,6 +2221,7 @@ public final class Datamodel {
                 .alwaysUseFieldBuilders) {
         }
       }
+      @java.lang.Override
       public Builder clear() {
         super.clear();
         mode_ = 0;
@@ -2167,15 +2231,18 @@ public final class Datamodel {
         return this;
       }
 
+      @java.lang.Override
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
         return core.Datamodel.internal_static_core_SubmessageOptions_descriptor;
       }
 
+      @java.lang.Override
       public core.Datamodel.SubmessageOptions getDefaultInstanceForType() {
         return core.Datamodel.SubmessageOptions.getDefaultInstance();
       }
 
+      @java.lang.Override
       public core.Datamodel.SubmessageOptions build() {
         core.Datamodel.SubmessageOptions result = buildPartial();
         if (!result.isInitialized()) {
@@ -2184,6 +2251,7 @@ public final class Datamodel {
         return result;
       }
 
+      @java.lang.Override
       public core.Datamodel.SubmessageOptions buildPartial() {
         core.Datamodel.SubmessageOptions result = new core.Datamodel.SubmessageOptions(this);
         result.mode_ = mode_;
@@ -2192,32 +2260,39 @@ public final class Datamodel {
         return result;
       }
 
+      @java.lang.Override
       public Builder clone() {
         return (Builder) super.clone();
       }
+      @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
         return (Builder) super.setField(field, value);
       }
+      @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
         return (Builder) super.clearField(field);
       }
+      @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
         return (Builder) super.clearOneof(oneof);
       }
+      @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
         return (Builder) super.setRepeatedField(field, index, value);
       }
+      @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
         return (Builder) super.addRepeatedField(field, value);
       }
+      @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
         if (other instanceof core.Datamodel.SubmessageOptions) {
           return mergeFrom((core.Datamodel.SubmessageOptions)other);
@@ -2241,10 +2316,12 @@ public final class Datamodel {
         return this;
       }
 
+      @java.lang.Override
       public final boolean isInitialized() {
         return true;
       }
 
+      @java.lang.Override
       public Builder mergeFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -2266,7 +2343,7 @@ public final class Datamodel {
       private int mode_ = 0;
       /**
        * <pre>
-       * Collection storage mode for the given submessage field.
+       * Collection storage mode for the given sub-message field.
        * </pre>
        *
        * <code>.core.CollectionMode mode = 1;</code>
@@ -2276,7 +2353,7 @@ public final class Datamodel {
       }
       /**
        * <pre>
-       * Collection storage mode for the given submessage field.
+       * Collection storage mode for the given sub-message field.
        * </pre>
        *
        * <code>.core.CollectionMode mode = 1;</code>
@@ -2288,18 +2365,19 @@ public final class Datamodel {
       }
       /**
        * <pre>
-       * Collection storage mode for the given submessage field.
+       * Collection storage mode for the given sub-message field.
        * </pre>
        *
        * <code>.core.CollectionMode mode = 1;</code>
        */
       public core.Datamodel.CollectionMode getMode() {
+        @SuppressWarnings("deprecation")
         core.Datamodel.CollectionMode result = core.Datamodel.CollectionMode.valueOf(mode_);
         return result == null ? core.Datamodel.CollectionMode.UNRECOGNIZED : result;
       }
       /**
        * <pre>
-       * Collection storage mode for the given submessage field.
+       * Collection storage mode for the given sub-message field.
        * </pre>
        *
        * <code>.core.CollectionMode mode = 1;</code>
@@ -2315,7 +2393,7 @@ public final class Datamodel {
       }
       /**
        * <pre>
-       * Collection storage mode for the given submessage field.
+       * Collection storage mode for the given sub-message field.
        * </pre>
        *
        * <code>.core.CollectionMode mode = 1;</code>
@@ -2330,7 +2408,7 @@ public final class Datamodel {
       private java.lang.Object path_ = "";
       /**
        * <pre>
-       * Data path for the given submessage field.
+       * Data path for the given sub-message field.
        * </pre>
        *
        * <code>string path = 3;</code>
@@ -2349,7 +2427,7 @@ public final class Datamodel {
       }
       /**
        * <pre>
-       * Data path for the given submessage field.
+       * Data path for the given sub-message field.
        * </pre>
        *
        * <code>string path = 3;</code>
@@ -2369,7 +2447,7 @@ public final class Datamodel {
       }
       /**
        * <pre>
-       * Data path for the given submessage field.
+       * Data path for the given sub-message field.
        * </pre>
        *
        * <code>string path = 3;</code>
@@ -2386,7 +2464,7 @@ public final class Datamodel {
       }
       /**
        * <pre>
-       * Data path for the given submessage field.
+       * Data path for the given sub-message field.
        * </pre>
        *
        * <code>string path = 3;</code>
@@ -2399,7 +2477,7 @@ public final class Datamodel {
       }
       /**
        * <pre>
-       * Data path for the given submessage field.
+       * Data path for the given sub-message field.
        * </pre>
        *
        * <code>string path = 3;</code>
@@ -2415,11 +2493,13 @@ public final class Datamodel {
         onChanged();
         return this;
       }
+      @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
         return super.setUnknownFieldsProto3(unknownFields);
       }
 
+      @java.lang.Override
       public final Builder mergeUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
         return super.mergeUnknownFields(unknownFields);
@@ -2441,6 +2521,7 @@ public final class Datamodel {
 
     private static final com.google.protobuf.Parser<SubmessageOptions>
         PARSER = new com.google.protobuf.AbstractParser<SubmessageOptions>() {
+      @java.lang.Override
       public SubmessageOptions parsePartialFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -2458,6 +2539,7 @@ public final class Datamodel {
       return PARSER;
     }
 
+    @java.lang.Override
     public core.Datamodel.SubmessageOptions getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
@@ -2548,13 +2630,6 @@ public final class Datamodel {
             case 0:
               done = true;
               break;
-            default: {
-              if (!parseUnknownFieldProto3(
-                  input, unknownFields, extensionRegistry, tag)) {
-                done = true;
-              }
-              break;
-            }
             case 8: {
               int rawValue = input.readEnum();
 
@@ -2565,6 +2640,13 @@ public final class Datamodel {
               java.lang.String s = input.readStringRequireUtf8();
 
               description_ = s;
+              break;
+            }
+            default: {
+              if (!parseUnknownFieldProto3(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
               break;
             }
           }
@@ -2584,6 +2666,7 @@ public final class Datamodel {
       return core.Datamodel.internal_static_core_FieldPersistenceOptions_descriptor;
     }
 
+    @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
       return core.Datamodel.internal_static_core_FieldPersistenceOptions_fieldAccessorTable
@@ -2611,6 +2694,7 @@ public final class Datamodel {
      * <code>.core.FieldType type = 1;</code>
      */
     public core.Datamodel.FieldType getType() {
+      @SuppressWarnings("deprecation")
       core.Datamodel.FieldType result = core.Datamodel.FieldType.valueOf(type_);
       return result == null ? core.Datamodel.FieldType.UNRECOGNIZED : result;
     }
@@ -2658,6 +2742,7 @@ public final class Datamodel {
     }
 
     private byte memoizedIsInitialized = -1;
+    @java.lang.Override
     public final boolean isInitialized() {
       byte isInitialized = memoizedIsInitialized;
       if (isInitialized == 1) return true;
@@ -2667,6 +2752,7 @@ public final class Datamodel {
       return true;
     }
 
+    @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
       if (type_ != core.Datamodel.FieldType.STANDARD.getNumber()) {
@@ -2678,6 +2764,7 @@ public final class Datamodel {
       unknownFields.writeTo(output);
     }
 
+    @java.lang.Override
     public int getSerializedSize() {
       int size = memoizedSize;
       if (size != -1) return size;
@@ -2799,6 +2886,7 @@ public final class Datamodel {
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
 
+    @java.lang.Override
     public Builder newBuilderForType() { return newBuilder(); }
     public static Builder newBuilder() {
       return DEFAULT_INSTANCE.toBuilder();
@@ -2806,6 +2894,7 @@ public final class Datamodel {
     public static Builder newBuilder(core.Datamodel.FieldPersistenceOptions prototype) {
       return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
     }
+    @java.lang.Override
     public Builder toBuilder() {
       return this == DEFAULT_INSTANCE
           ? new Builder() : new Builder().mergeFrom(this);
@@ -2833,6 +2922,7 @@ public final class Datamodel {
         return core.Datamodel.internal_static_core_FieldPersistenceOptions_descriptor;
       }
 
+      @java.lang.Override
       protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
           internalGetFieldAccessorTable() {
         return core.Datamodel.internal_static_core_FieldPersistenceOptions_fieldAccessorTable
@@ -2855,6 +2945,7 @@ public final class Datamodel {
                 .alwaysUseFieldBuilders) {
         }
       }
+      @java.lang.Override
       public Builder clear() {
         super.clear();
         type_ = 0;
@@ -2864,15 +2955,18 @@ public final class Datamodel {
         return this;
       }
 
+      @java.lang.Override
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
         return core.Datamodel.internal_static_core_FieldPersistenceOptions_descriptor;
       }
 
+      @java.lang.Override
       public core.Datamodel.FieldPersistenceOptions getDefaultInstanceForType() {
         return core.Datamodel.FieldPersistenceOptions.getDefaultInstance();
       }
 
+      @java.lang.Override
       public core.Datamodel.FieldPersistenceOptions build() {
         core.Datamodel.FieldPersistenceOptions result = buildPartial();
         if (!result.isInitialized()) {
@@ -2881,6 +2975,7 @@ public final class Datamodel {
         return result;
       }
 
+      @java.lang.Override
       public core.Datamodel.FieldPersistenceOptions buildPartial() {
         core.Datamodel.FieldPersistenceOptions result = new core.Datamodel.FieldPersistenceOptions(this);
         result.type_ = type_;
@@ -2889,32 +2984,39 @@ public final class Datamodel {
         return result;
       }
 
+      @java.lang.Override
       public Builder clone() {
         return (Builder) super.clone();
       }
+      @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
         return (Builder) super.setField(field, value);
       }
+      @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
         return (Builder) super.clearField(field);
       }
+      @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
         return (Builder) super.clearOneof(oneof);
       }
+      @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
         return (Builder) super.setRepeatedField(field, index, value);
       }
+      @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
         return (Builder) super.addRepeatedField(field, value);
       }
+      @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
         if (other instanceof core.Datamodel.FieldPersistenceOptions) {
           return mergeFrom((core.Datamodel.FieldPersistenceOptions)other);
@@ -2938,10 +3040,12 @@ public final class Datamodel {
         return this;
       }
 
+      @java.lang.Override
       public final boolean isInitialized() {
         return true;
       }
 
+      @java.lang.Override
       public Builder mergeFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -2991,6 +3095,7 @@ public final class Datamodel {
        * <code>.core.FieldType type = 1;</code>
        */
       public core.Datamodel.FieldType getType() {
+        @SuppressWarnings("deprecation")
         core.Datamodel.FieldType result = core.Datamodel.FieldType.valueOf(type_);
         return result == null ? core.Datamodel.FieldType.UNRECOGNIZED : result;
       }
@@ -3112,11 +3217,13 @@ public final class Datamodel {
         onChanged();
         return this;
       }
+      @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
         return super.setUnknownFieldsProto3(unknownFields);
       }
 
+      @java.lang.Override
       public final Builder mergeUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
         return super.mergeUnknownFields(unknownFields);
@@ -3138,6 +3245,7 @@ public final class Datamodel {
 
     private static final com.google.protobuf.Parser<FieldPersistenceOptions>
         PARSER = new com.google.protobuf.AbstractParser<FieldPersistenceOptions>() {
+      @java.lang.Override
       public FieldPersistenceOptions parsePartialFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -3155,6 +3263,7 @@ public final class Datamodel {
       return PARSER;
     }
 
+    @java.lang.Override
     public core.Datamodel.FieldPersistenceOptions getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
@@ -3247,13 +3356,6 @@ public final class Datamodel {
             case 0:
               done = true;
               break;
-            default: {
-              if (!parseUnknownFieldProto3(
-                  input, unknownFields, extensionRegistry, tag)) {
-                done = true;
-              }
-              break;
-            }
             case 8: {
 
               require_ = input.readBool();
@@ -3268,6 +3370,13 @@ public final class Datamodel {
               java.lang.String s = input.readStringRequireUtf8();
 
               bqtype_ = s;
+              break;
+            }
+            default: {
+              if (!parseUnknownFieldProto3(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
               break;
             }
           }
@@ -3287,6 +3396,7 @@ public final class Datamodel {
       return core.Datamodel.internal_static_core_TableFieldOptions_descriptor;
     }
 
+    @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
       return core.Datamodel.internal_static_core_TableFieldOptions_fieldAccessorTable
@@ -3363,6 +3473,7 @@ public final class Datamodel {
     }
 
     private byte memoizedIsInitialized = -1;
+    @java.lang.Override
     public final boolean isInitialized() {
       byte isInitialized = memoizedIsInitialized;
       if (isInitialized == 1) return true;
@@ -3372,6 +3483,7 @@ public final class Datamodel {
       return true;
     }
 
+    @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
       if (require_ != false) {
@@ -3386,6 +3498,7 @@ public final class Datamodel {
       unknownFields.writeTo(output);
     }
 
+    @java.lang.Override
     public int getSerializedSize() {
       int size = memoizedSize;
       if (size != -1) return size;
@@ -3518,6 +3631,7 @@ public final class Datamodel {
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
 
+    @java.lang.Override
     public Builder newBuilderForType() { return newBuilder(); }
     public static Builder newBuilder() {
       return DEFAULT_INSTANCE.toBuilder();
@@ -3525,6 +3639,7 @@ public final class Datamodel {
     public static Builder newBuilder(core.Datamodel.TableFieldOptions prototype) {
       return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
     }
+    @java.lang.Override
     public Builder toBuilder() {
       return this == DEFAULT_INSTANCE
           ? new Builder() : new Builder().mergeFrom(this);
@@ -3552,6 +3667,7 @@ public final class Datamodel {
         return core.Datamodel.internal_static_core_TableFieldOptions_descriptor;
       }
 
+      @java.lang.Override
       protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
           internalGetFieldAccessorTable() {
         return core.Datamodel.internal_static_core_TableFieldOptions_fieldAccessorTable
@@ -3574,6 +3690,7 @@ public final class Datamodel {
                 .alwaysUseFieldBuilders) {
         }
       }
+      @java.lang.Override
       public Builder clear() {
         super.clear();
         require_ = false;
@@ -3585,15 +3702,18 @@ public final class Datamodel {
         return this;
       }
 
+      @java.lang.Override
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
         return core.Datamodel.internal_static_core_TableFieldOptions_descriptor;
       }
 
+      @java.lang.Override
       public core.Datamodel.TableFieldOptions getDefaultInstanceForType() {
         return core.Datamodel.TableFieldOptions.getDefaultInstance();
       }
 
+      @java.lang.Override
       public core.Datamodel.TableFieldOptions build() {
         core.Datamodel.TableFieldOptions result = buildPartial();
         if (!result.isInitialized()) {
@@ -3602,6 +3722,7 @@ public final class Datamodel {
         return result;
       }
 
+      @java.lang.Override
       public core.Datamodel.TableFieldOptions buildPartial() {
         core.Datamodel.TableFieldOptions result = new core.Datamodel.TableFieldOptions(this);
         result.require_ = require_;
@@ -3611,32 +3732,39 @@ public final class Datamodel {
         return result;
       }
 
+      @java.lang.Override
       public Builder clone() {
         return (Builder) super.clone();
       }
+      @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
         return (Builder) super.setField(field, value);
       }
+      @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
         return (Builder) super.clearField(field);
       }
+      @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
         return (Builder) super.clearOneof(oneof);
       }
+      @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
         return (Builder) super.setRepeatedField(field, index, value);
       }
+      @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
         return (Builder) super.addRepeatedField(field, value);
       }
+      @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
         if (other instanceof core.Datamodel.TableFieldOptions) {
           return mergeFrom((core.Datamodel.TableFieldOptions)other);
@@ -3663,10 +3791,12 @@ public final class Datamodel {
         return this;
       }
 
+      @java.lang.Override
       public final boolean isInitialized() {
         return true;
       }
 
+      @java.lang.Override
       public Builder mergeFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -3849,11 +3979,13 @@ public final class Datamodel {
         onChanged();
         return this;
       }
+      @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
         return super.setUnknownFieldsProto3(unknownFields);
       }
 
+      @java.lang.Override
       public final Builder mergeUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
         return super.mergeUnknownFields(unknownFields);
@@ -3875,6 +4007,7 @@ public final class Datamodel {
 
     private static final com.google.protobuf.Parser<TableFieldOptions>
         PARSER = new com.google.protobuf.AbstractParser<TableFieldOptions>() {
+      @java.lang.Override
       public TableFieldOptions parsePartialFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -3892,7 +4025,688 @@ public final class Datamodel {
       return PARSER;
     }
 
+    @java.lang.Override
     public core.Datamodel.TableFieldOptions getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface ObjectMappingOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:core.ObjectMapping)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * Maps an enumeration instance to this object. Enumeration membership is contextual.
+     * </pre>
+     *
+     * <code>repeated string instance = 1;</code>
+     */
+    java.util.List<java.lang.String>
+        getInstanceList();
+    /**
+     * <pre>
+     * Maps an enumeration instance to this object. Enumeration membership is contextual.
+     * </pre>
+     *
+     * <code>repeated string instance = 1;</code>
+     */
+    int getInstanceCount();
+    /**
+     * <pre>
+     * Maps an enumeration instance to this object. Enumeration membership is contextual.
+     * </pre>
+     *
+     * <code>repeated string instance = 1;</code>
+     */
+    java.lang.String getInstance(int index);
+    /**
+     * <pre>
+     * Maps an enumeration instance to this object. Enumeration membership is contextual.
+     * </pre>
+     *
+     * <code>repeated string instance = 1;</code>
+     */
+    com.google.protobuf.ByteString
+        getInstanceBytes(int index);
+  }
+  /**
+   * <pre>
+   * Specifies mappings for an arbitrary protobuf message object.
+   * </pre>
+   *
+   * Protobuf type {@code core.ObjectMapping}
+   */
+  public  static final class ObjectMapping extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:core.ObjectMapping)
+      ObjectMappingOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use ObjectMapping.newBuilder() to construct.
+    private ObjectMapping(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private ObjectMapping() {
+      instance_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private ObjectMapping(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              java.lang.String s = input.readStringRequireUtf8();
+              if (!((mutable_bitField0_ & 0x00000001) == 0x00000001)) {
+                instance_ = new com.google.protobuf.LazyStringArrayList();
+                mutable_bitField0_ |= 0x00000001;
+              }
+              instance_.add(s);
+              break;
+            }
+            default: {
+              if (!parseUnknownFieldProto3(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        if (((mutable_bitField0_ & 0x00000001) == 0x00000001)) {
+          instance_ = instance_.getUnmodifiableView();
+        }
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return core.Datamodel.internal_static_core_ObjectMapping_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return core.Datamodel.internal_static_core_ObjectMapping_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              core.Datamodel.ObjectMapping.class, core.Datamodel.ObjectMapping.Builder.class);
+    }
+
+    public static final int INSTANCE_FIELD_NUMBER = 1;
+    private com.google.protobuf.LazyStringList instance_;
+    /**
+     * <pre>
+     * Maps an enumeration instance to this object. Enumeration membership is contextual.
+     * </pre>
+     *
+     * <code>repeated string instance = 1;</code>
+     */
+    public com.google.protobuf.ProtocolStringList
+        getInstanceList() {
+      return instance_;
+    }
+    /**
+     * <pre>
+     * Maps an enumeration instance to this object. Enumeration membership is contextual.
+     * </pre>
+     *
+     * <code>repeated string instance = 1;</code>
+     */
+    public int getInstanceCount() {
+      return instance_.size();
+    }
+    /**
+     * <pre>
+     * Maps an enumeration instance to this object. Enumeration membership is contextual.
+     * </pre>
+     *
+     * <code>repeated string instance = 1;</code>
+     */
+    public java.lang.String getInstance(int index) {
+      return instance_.get(index);
+    }
+    /**
+     * <pre>
+     * Maps an enumeration instance to this object. Enumeration membership is contextual.
+     * </pre>
+     *
+     * <code>repeated string instance = 1;</code>
+     */
+    public com.google.protobuf.ByteString
+        getInstanceBytes(int index) {
+      return instance_.getByteString(index);
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      for (int i = 0; i < instance_.size(); i++) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, instance_.getRaw(i));
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      {
+        int dataSize = 0;
+        for (int i = 0; i < instance_.size(); i++) {
+          dataSize += computeStringSizeNoTag(instance_.getRaw(i));
+        }
+        size += dataSize;
+        size += 1 * getInstanceList().size();
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof core.Datamodel.ObjectMapping)) {
+        return super.equals(obj);
+      }
+      core.Datamodel.ObjectMapping other = (core.Datamodel.ObjectMapping) obj;
+
+      boolean result = true;
+      result = result && getInstanceList()
+          .equals(other.getInstanceList());
+      result = result && unknownFields.equals(other.unknownFields);
+      return result;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (getInstanceCount() > 0) {
+        hash = (37 * hash) + INSTANCE_FIELD_NUMBER;
+        hash = (53 * hash) + getInstanceList().hashCode();
+      }
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static core.Datamodel.ObjectMapping parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static core.Datamodel.ObjectMapping parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static core.Datamodel.ObjectMapping parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static core.Datamodel.ObjectMapping parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static core.Datamodel.ObjectMapping parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static core.Datamodel.ObjectMapping parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static core.Datamodel.ObjectMapping parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static core.Datamodel.ObjectMapping parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static core.Datamodel.ObjectMapping parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static core.Datamodel.ObjectMapping parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static core.Datamodel.ObjectMapping parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static core.Datamodel.ObjectMapping parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(core.Datamodel.ObjectMapping prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * Specifies mappings for an arbitrary protobuf message object.
+     * </pre>
+     *
+     * Protobuf type {@code core.ObjectMapping}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:core.ObjectMapping)
+        core.Datamodel.ObjectMappingOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return core.Datamodel.internal_static_core_ObjectMapping_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return core.Datamodel.internal_static_core_ObjectMapping_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                core.Datamodel.ObjectMapping.class, core.Datamodel.ObjectMapping.Builder.class);
+      }
+
+      // Construct using core.Datamodel.ObjectMapping.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        instance_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+        bitField0_ = (bitField0_ & ~0x00000001);
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return core.Datamodel.internal_static_core_ObjectMapping_descriptor;
+      }
+
+      @java.lang.Override
+      public core.Datamodel.ObjectMapping getDefaultInstanceForType() {
+        return core.Datamodel.ObjectMapping.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public core.Datamodel.ObjectMapping build() {
+        core.Datamodel.ObjectMapping result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public core.Datamodel.ObjectMapping buildPartial() {
+        core.Datamodel.ObjectMapping result = new core.Datamodel.ObjectMapping(this);
+        int from_bitField0_ = bitField0_;
+        if (((bitField0_ & 0x00000001) == 0x00000001)) {
+          instance_ = instance_.getUnmodifiableView();
+          bitField0_ = (bitField0_ & ~0x00000001);
+        }
+        result.instance_ = instance_;
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return (Builder) super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return (Builder) super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return (Builder) super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return (Builder) super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return (Builder) super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return (Builder) super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof core.Datamodel.ObjectMapping) {
+          return mergeFrom((core.Datamodel.ObjectMapping)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(core.Datamodel.ObjectMapping other) {
+        if (other == core.Datamodel.ObjectMapping.getDefaultInstance()) return this;
+        if (!other.instance_.isEmpty()) {
+          if (instance_.isEmpty()) {
+            instance_ = other.instance_;
+            bitField0_ = (bitField0_ & ~0x00000001);
+          } else {
+            ensureInstanceIsMutable();
+            instance_.addAll(other.instance_);
+          }
+          onChanged();
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        core.Datamodel.ObjectMapping parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (core.Datamodel.ObjectMapping) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+      private int bitField0_;
+
+      private com.google.protobuf.LazyStringList instance_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+      private void ensureInstanceIsMutable() {
+        if (!((bitField0_ & 0x00000001) == 0x00000001)) {
+          instance_ = new com.google.protobuf.LazyStringArrayList(instance_);
+          bitField0_ |= 0x00000001;
+         }
+      }
+      /**
+       * <pre>
+       * Maps an enumeration instance to this object. Enumeration membership is contextual.
+       * </pre>
+       *
+       * <code>repeated string instance = 1;</code>
+       */
+      public com.google.protobuf.ProtocolStringList
+          getInstanceList() {
+        return instance_.getUnmodifiableView();
+      }
+      /**
+       * <pre>
+       * Maps an enumeration instance to this object. Enumeration membership is contextual.
+       * </pre>
+       *
+       * <code>repeated string instance = 1;</code>
+       */
+      public int getInstanceCount() {
+        return instance_.size();
+      }
+      /**
+       * <pre>
+       * Maps an enumeration instance to this object. Enumeration membership is contextual.
+       * </pre>
+       *
+       * <code>repeated string instance = 1;</code>
+       */
+      public java.lang.String getInstance(int index) {
+        return instance_.get(index);
+      }
+      /**
+       * <pre>
+       * Maps an enumeration instance to this object. Enumeration membership is contextual.
+       * </pre>
+       *
+       * <code>repeated string instance = 1;</code>
+       */
+      public com.google.protobuf.ByteString
+          getInstanceBytes(int index) {
+        return instance_.getByteString(index);
+      }
+      /**
+       * <pre>
+       * Maps an enumeration instance to this object. Enumeration membership is contextual.
+       * </pre>
+       *
+       * <code>repeated string instance = 1;</code>
+       */
+      public Builder setInstance(
+          int index, java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  ensureInstanceIsMutable();
+        instance_.set(index, value);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Maps an enumeration instance to this object. Enumeration membership is contextual.
+       * </pre>
+       *
+       * <code>repeated string instance = 1;</code>
+       */
+      public Builder addInstance(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  ensureInstanceIsMutable();
+        instance_.add(value);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Maps an enumeration instance to this object. Enumeration membership is contextual.
+       * </pre>
+       *
+       * <code>repeated string instance = 1;</code>
+       */
+      public Builder addAllInstance(
+          java.lang.Iterable<java.lang.String> values) {
+        ensureInstanceIsMutable();
+        com.google.protobuf.AbstractMessageLite.Builder.addAll(
+            values, instance_);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Maps an enumeration instance to this object. Enumeration membership is contextual.
+       * </pre>
+       *
+       * <code>repeated string instance = 1;</code>
+       */
+      public Builder clearInstance() {
+        instance_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Maps an enumeration instance to this object. Enumeration membership is contextual.
+       * </pre>
+       *
+       * <code>repeated string instance = 1;</code>
+       */
+      public Builder addInstanceBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        ensureInstanceIsMutable();
+        instance_.add(value);
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFieldsProto3(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:core.ObjectMapping)
+    }
+
+    // @@protoc_insertion_point(class_scope:core.ObjectMapping)
+    private static final core.Datamodel.ObjectMapping DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new core.Datamodel.ObjectMapping();
+    }
+
+    public static core.Datamodel.ObjectMapping getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<ObjectMapping>
+        PARSER = new com.google.protobuf.AbstractParser<ObjectMapping>() {
+      @java.lang.Override
+      public ObjectMapping parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new ObjectMapping(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<ObjectMapping> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<ObjectMapping> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public core.Datamodel.ObjectMapping getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
 
@@ -3930,6 +4744,22 @@ public final class Datamodel {
           .newFileScopedGeneratedExtension(
         core.Datamodel.TableOptions.class,
         core.Datamodel.TableOptions.getDefaultInstance());
+  public static final int MAP_FIELD_NUMBER = 6002;
+  /**
+   * <pre>
+   * Settings that determine meta-mappings between this message object and enumerated states, declared in a foreign
+   * structure. Foreign structure mappings are contextually defined by the invoking application.
+   * </pre>
+   *
+   * <code>extend .google.protobuf.MessageOptions { ... }</code>
+   */
+  public static final
+    com.google.protobuf.GeneratedMessage.GeneratedExtension<
+      com.google.protobuf.DescriptorProtos.MessageOptions,
+      core.Datamodel.ObjectMapping> map = com.google.protobuf.GeneratedMessage
+          .newFileScopedGeneratedExtension(
+        core.Datamodel.ObjectMapping.class,
+        core.Datamodel.ObjectMapping.getDefaultInstance());
   public static final int FIELD_FIELD_NUMBER = 7000;
   /**
    * <pre>
@@ -3975,6 +4805,37 @@ public final class Datamodel {
           .newFileScopedGeneratedExtension(
         core.Datamodel.SubmessageOptions.class,
         core.Datamodel.SubmessageOptions.getDefaultInstance());
+  public static final int LABEL_FIELD_NUMBER = 8003;
+  /**
+   * <pre>
+   * Human-readable label for a given enumeration value state. Optional, can be used by invoking code to generate labels
+   * for states in forms or other UI.
+   * </pre>
+   *
+   * <code>extend .google.protobuf.EnumValueOptions { ... }</code>
+   */
+  public static final
+    com.google.protobuf.GeneratedMessage.GeneratedExtension<
+      com.google.protobuf.DescriptorProtos.EnumValueOptions,
+      java.lang.String> label = com.google.protobuf.GeneratedMessage
+          .newFileScopedGeneratedExtension(
+        java.lang.String.class,
+        null);
+  public static final int COLOR_FIELD_NUMBER = 8004;
+  /**
+   * <pre>
+   * Color code value for a given enumerated value state. Optional, can be used by invoking code to generate UI schemes.
+   * </pre>
+   *
+   * <code>extend .google.protobuf.EnumValueOptions { ... }</code>
+   */
+  public static final
+    com.google.protobuf.GeneratedMessage.GeneratedExtension<
+      com.google.protobuf.DescriptorProtos.EnumValueOptions,
+      io.opencannabis.schema.content.Colors.Color> color = com.google.protobuf.GeneratedMessage
+          .newFileScopedGeneratedExtension(
+        io.opencannabis.schema.content.Colors.Color.class,
+        io.opencannabis.schema.content.Colors.Color.getDefaultInstance());
   private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_core_PersistenceOptions_descriptor;
   private static final 
@@ -4000,6 +4861,11 @@ public final class Datamodel {
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_core_TableFieldOptions_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_core_ObjectMapping_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_core_ObjectMapping_fieldAccessorTable;
 
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
@@ -4010,28 +4876,34 @@ public final class Datamodel {
   static {
     java.lang.String[] descriptorData = {
       "\n\024core/Datamodel.proto\022\004core\032 google/pro" +
-      "tobuf/descriptor.proto\"F\n\022PersistenceOpt" +
-      "ions\022\"\n\004mode\030\001 \001(\0162\024.core.CollectionMode" +
-      "\022\014\n\004path\030\002 \001(\t\"1\n\014TableOptions\022\014\n\004name\030\001" +
-      " \001(\t\022\023\n\013description\030\002 \001(\t\"E\n\021SubmessageO" +
-      "ptions\022\"\n\004mode\030\001 \001(\0162\024.core.CollectionMo" +
-      "de\022\014\n\004path\030\003 \001(\t\"M\n\027FieldPersistenceOpti" +
-      "ons\022\035\n\004type\030\001 \001(\0162\017.core.FieldType\022\023\n\013de" +
-      "scription\030\002 \001(\t\"D\n\021TableFieldOptions\022\017\n\007" +
-      "require\030\001 \001(\010\022\016\n\006ignore\030\002 \001(\010\022\016\n\006bqtype\030" +
-      "\003 \001(\t*7\n\016CollectionMode\022\n\n\006NESTED\020\000\022\016\n\nC" +
-      "OLLECTION\020\001\022\t\n\005GROUP\020\002*?\n\tFieldType\022\014\n\010S" +
-      "TANDARD\020\000\022\007\n\003KEY\020\001\022\006\n\002ID\020\002\022\010\n\004TAGS\020\003\022\t\n\005" +
-      "FLAGS\020\004:F\n\002db\022\037.google.protobuf.MessageO" +
-      "ptions\030\360. \001(\0132\030.core.PersistenceOptions:" +
-      "C\n\005table\022\037.google.protobuf.MessageOption" +
-      "s\030\361. \001(\0132\022.core.TableOptions:L\n\005field\022\035." +
-      "google.protobuf.FieldOptions\030\3306 \001(\0132\035.co" +
-      "re.FieldPersistenceOptions:G\n\006column\022\035.g" +
-      "oogle.protobuf.FieldOptions\030\3316 \001(\0132\027.cor" +
-      "e.TableFieldOptions:K\n\ncollection\022\035.goog" +
-      "le.protobuf.FieldOptions\030\3326 \001(\0132\027.core.S" +
-      "ubmessageOptionsb\006proto3"
+      "tobuf/descriptor.proto\032\024content/Colors.p" +
+      "roto\"F\n\022PersistenceOptions\022\"\n\004mode\030\001 \001(\016" +
+      "2\024.core.CollectionMode\022\014\n\004path\030\002 \001(\t\"1\n\014" +
+      "TableOptions\022\014\n\004name\030\001 \001(\t\022\023\n\013descriptio" +
+      "n\030\002 \001(\t\"E\n\021SubmessageOptions\022\"\n\004mode\030\001 \001" +
+      "(\0162\024.core.CollectionMode\022\014\n\004path\030\003 \001(\t\"M" +
+      "\n\027FieldPersistenceOptions\022\035\n\004type\030\001 \001(\0162" +
+      "\017.core.FieldType\022\023\n\013description\030\002 \001(\t\"D\n" +
+      "\021TableFieldOptions\022\017\n\007require\030\001 \001(\010\022\016\n\006i" +
+      "gnore\030\002 \001(\010\022\016\n\006bqtype\030\003 \001(\t\"!\n\rObjectMap" +
+      "ping\022\020\n\010instance\030\001 \003(\t*7\n\016CollectionMode" +
+      "\022\n\n\006NESTED\020\000\022\016\n\nCOLLECTION\020\001\022\t\n\005GROUP\020\002*" +
+      "?\n\tFieldType\022\014\n\010STANDARD\020\000\022\007\n\003KEY\020\001\022\006\n\002I" +
+      "D\020\002\022\010\n\004TAGS\020\003\022\t\n\005FLAGS\020\004:F\n\002db\022\037.google." +
+      "protobuf.MessageOptions\030\360. \001(\0132\030.core.Pe" +
+      "rsistenceOptions:C\n\005table\022\037.google.proto" +
+      "buf.MessageOptions\030\361. \001(\0132\022.core.TableOp" +
+      "tions:B\n\003map\022\037.google.protobuf.MessageOp" +
+      "tions\030\362. \001(\0132\023.core.ObjectMapping:L\n\005fie" +
+      "ld\022\035.google.protobuf.FieldOptions\030\3306 \001(\013" +
+      "2\035.core.FieldPersistenceOptions:G\n\006colum" +
+      "n\022\035.google.protobuf.FieldOptions\030\3316 \001(\0132" +
+      "\027.core.TableFieldOptions:K\n\ncollection\022\035" +
+      ".google.protobuf.FieldOptions\030\3326 \001(\0132\027.c" +
+      "ore.SubmessageOptions:1\n\005label\022!.google." +
+      "protobuf.EnumValueOptions\030\303> \001(\t:N\n\005colo" +
+      "r\022!.google.protobuf.EnumValueOptions\030\304> " +
+      "\001(\0132\033.opencannabis.content.Colorb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -4045,6 +4917,7 @@ public final class Datamodel {
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
           com.google.protobuf.DescriptorProtos.getDescriptor(),
+          io.opencannabis.schema.content.Colors.getDescriptor(),
         }, assigner);
     internal_static_core_PersistenceOptions_descriptor =
       getDescriptor().getMessageTypes().get(0);
@@ -4076,12 +4949,22 @@ public final class Datamodel {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_core_TableFieldOptions_descriptor,
         new java.lang.String[] { "Require", "Ignore", "Bqtype", });
+    internal_static_core_ObjectMapping_descriptor =
+      getDescriptor().getMessageTypes().get(5);
+    internal_static_core_ObjectMapping_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_core_ObjectMapping_descriptor,
+        new java.lang.String[] { "Instance", });
     db.internalInit(descriptor.getExtensions().get(0));
     table.internalInit(descriptor.getExtensions().get(1));
-    field.internalInit(descriptor.getExtensions().get(2));
-    column.internalInit(descriptor.getExtensions().get(3));
-    collection.internalInit(descriptor.getExtensions().get(4));
+    map.internalInit(descriptor.getExtensions().get(2));
+    field.internalInit(descriptor.getExtensions().get(3));
+    column.internalInit(descriptor.getExtensions().get(4));
+    collection.internalInit(descriptor.getExtensions().get(5));
+    label.internalInit(descriptor.getExtensions().get(6));
+    color.internalInit(descriptor.getExtensions().get(7));
     com.google.protobuf.DescriptorProtos.getDescriptor();
+    io.opencannabis.schema.content.Colors.getDescriptor();
   }
 
   // @@protoc_insertion_point(outer_class_scope)

@@ -1,11 +1,12 @@
 /*
- * Copyright 2018, Bloombox, LLC.
+ * Copyright 2018, Momentum Ideas, Co. All rights reserved.
  *
- * Licensed under the Apache License, Version 2.0 (the "License");
- * you may not use this file except in compliance with the License.
- * You may obtain a copy of the License at
- *
- *     http://www.apache.org/licenses/LICENSE-2.0
+ * Source and object computer code contained herein is the private intellectual
+ * property of Momentum Ideas Co., a Delaware Corporation. Use of this
+ * code in source form requires permission in writing before use or the
+ * assembly, distribution, or publishing of derivative works, for commercial
+ * purposes or any other purpose, from a duly authorized officer of Momentum
+ * Ideas Co.
  *
  * Unless required by applicable law or agreed to in writing, software
  * distributed under the License is distributed on an "AS IS" BASIS,
@@ -31,7 +32,7 @@ public final class GreenbitsSettingsOuterClass {
         (com.google.protobuf.ExtensionRegistryLite) registry);
   }
   public interface GreenbitsIntegrationFeaturesOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:bloombox.schema.partner.integrations.greenbits.GreenbitsIntegrationFeatures)
+      // @@protoc_insertion_point(interface_extends:bloombox.partner.integrations.greenbits.GreenbitsIntegrationFeatures)
       com.google.protobuf.MessageOrBuilder {
 
     /**
@@ -57,11 +58,11 @@ public final class GreenbitsSettingsOuterClass {
    * Specifies Greenbits features that may be enabled or disabled.
    * </pre>
    *
-   * Protobuf type {@code bloombox.schema.partner.integrations.greenbits.GreenbitsIntegrationFeatures}
+   * Protobuf type {@code bloombox.partner.integrations.greenbits.GreenbitsIntegrationFeatures}
    */
   public  static final class GreenbitsIntegrationFeatures extends
       com.google.protobuf.GeneratedMessageV3 implements
-      // @@protoc_insertion_point(message_implements:bloombox.schema.partner.integrations.greenbits.GreenbitsIntegrationFeatures)
+      // @@protoc_insertion_point(message_implements:bloombox.partner.integrations.greenbits.GreenbitsIntegrationFeatures)
       GreenbitsIntegrationFeaturesOrBuilder {
   private static final long serialVersionUID = 0L;
     // Use GreenbitsIntegrationFeatures.newBuilder() to construct.
@@ -97,13 +98,6 @@ public final class GreenbitsSettingsOuterClass {
             case 0:
               done = true;
               break;
-            default: {
-              if (!parseUnknownFieldProto3(
-                  input, unknownFields, extensionRegistry, tag)) {
-                done = true;
-              }
-              break;
-            }
             case 8: {
 
               customers_ = input.readBool();
@@ -112,6 +106,13 @@ public final class GreenbitsSettingsOuterClass {
             case 16: {
 
               checkin_ = input.readBool();
+              break;
+            }
+            default: {
+              if (!parseUnknownFieldProto3(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
               break;
             }
           }
@@ -128,12 +129,13 @@ public final class GreenbitsSettingsOuterClass {
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return io.bloombox.schema.partner.integrations.greenbits.GreenbitsSettingsOuterClass.internal_static_bloombox_schema_partner_integrations_greenbits_GreenbitsIntegrationFeatures_descriptor;
+      return io.bloombox.schema.partner.integrations.greenbits.GreenbitsSettingsOuterClass.internal_static_bloombox_partner_integrations_greenbits_GreenbitsIntegrationFeatures_descriptor;
     }
 
+    @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return io.bloombox.schema.partner.integrations.greenbits.GreenbitsSettingsOuterClass.internal_static_bloombox_schema_partner_integrations_greenbits_GreenbitsIntegrationFeatures_fieldAccessorTable
+      return io.bloombox.schema.partner.integrations.greenbits.GreenbitsSettingsOuterClass.internal_static_bloombox_partner_integrations_greenbits_GreenbitsIntegrationFeatures_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
               io.bloombox.schema.partner.integrations.greenbits.GreenbitsSettingsOuterClass.GreenbitsIntegrationFeatures.class, io.bloombox.schema.partner.integrations.greenbits.GreenbitsSettingsOuterClass.GreenbitsIntegrationFeatures.Builder.class);
     }
@@ -165,6 +167,7 @@ public final class GreenbitsSettingsOuterClass {
     }
 
     private byte memoizedIsInitialized = -1;
+    @java.lang.Override
     public final boolean isInitialized() {
       byte isInitialized = memoizedIsInitialized;
       if (isInitialized == 1) return true;
@@ -174,6 +177,7 @@ public final class GreenbitsSettingsOuterClass {
       return true;
     }
 
+    @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
       if (customers_ != false) {
@@ -185,6 +189,7 @@ public final class GreenbitsSettingsOuterClass {
       unknownFields.writeTo(output);
     }
 
+    @java.lang.Override
     public int getSerializedSize() {
       int size = memoizedSize;
       if (size != -1) return size;
@@ -310,6 +315,7 @@ public final class GreenbitsSettingsOuterClass {
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
 
+    @java.lang.Override
     public Builder newBuilderForType() { return newBuilder(); }
     public static Builder newBuilder() {
       return DEFAULT_INSTANCE.toBuilder();
@@ -317,6 +323,7 @@ public final class GreenbitsSettingsOuterClass {
     public static Builder newBuilder(io.bloombox.schema.partner.integrations.greenbits.GreenbitsSettingsOuterClass.GreenbitsIntegrationFeatures prototype) {
       return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
     }
+    @java.lang.Override
     public Builder toBuilder() {
       return this == DEFAULT_INSTANCE
           ? new Builder() : new Builder().mergeFrom(this);
@@ -333,20 +340,21 @@ public final class GreenbitsSettingsOuterClass {
      * Specifies Greenbits features that may be enabled or disabled.
      * </pre>
      *
-     * Protobuf type {@code bloombox.schema.partner.integrations.greenbits.GreenbitsIntegrationFeatures}
+     * Protobuf type {@code bloombox.partner.integrations.greenbits.GreenbitsIntegrationFeatures}
      */
     public static final class Builder extends
         com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:bloombox.schema.partner.integrations.greenbits.GreenbitsIntegrationFeatures)
+        // @@protoc_insertion_point(builder_implements:bloombox.partner.integrations.greenbits.GreenbitsIntegrationFeatures)
         io.bloombox.schema.partner.integrations.greenbits.GreenbitsSettingsOuterClass.GreenbitsIntegrationFeaturesOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return io.bloombox.schema.partner.integrations.greenbits.GreenbitsSettingsOuterClass.internal_static_bloombox_schema_partner_integrations_greenbits_GreenbitsIntegrationFeatures_descriptor;
+        return io.bloombox.schema.partner.integrations.greenbits.GreenbitsSettingsOuterClass.internal_static_bloombox_partner_integrations_greenbits_GreenbitsIntegrationFeatures_descriptor;
       }
 
+      @java.lang.Override
       protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return io.bloombox.schema.partner.integrations.greenbits.GreenbitsSettingsOuterClass.internal_static_bloombox_schema_partner_integrations_greenbits_GreenbitsIntegrationFeatures_fieldAccessorTable
+        return io.bloombox.schema.partner.integrations.greenbits.GreenbitsSettingsOuterClass.internal_static_bloombox_partner_integrations_greenbits_GreenbitsIntegrationFeatures_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
                 io.bloombox.schema.partner.integrations.greenbits.GreenbitsSettingsOuterClass.GreenbitsIntegrationFeatures.class, io.bloombox.schema.partner.integrations.greenbits.GreenbitsSettingsOuterClass.GreenbitsIntegrationFeatures.Builder.class);
       }
@@ -366,6 +374,7 @@ public final class GreenbitsSettingsOuterClass {
                 .alwaysUseFieldBuilders) {
         }
       }
+      @java.lang.Override
       public Builder clear() {
         super.clear();
         customers_ = false;
@@ -375,15 +384,18 @@ public final class GreenbitsSettingsOuterClass {
         return this;
       }
 
+      @java.lang.Override
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return io.bloombox.schema.partner.integrations.greenbits.GreenbitsSettingsOuterClass.internal_static_bloombox_schema_partner_integrations_greenbits_GreenbitsIntegrationFeatures_descriptor;
+        return io.bloombox.schema.partner.integrations.greenbits.GreenbitsSettingsOuterClass.internal_static_bloombox_partner_integrations_greenbits_GreenbitsIntegrationFeatures_descriptor;
       }
 
+      @java.lang.Override
       public io.bloombox.schema.partner.integrations.greenbits.GreenbitsSettingsOuterClass.GreenbitsIntegrationFeatures getDefaultInstanceForType() {
         return io.bloombox.schema.partner.integrations.greenbits.GreenbitsSettingsOuterClass.GreenbitsIntegrationFeatures.getDefaultInstance();
       }
 
+      @java.lang.Override
       public io.bloombox.schema.partner.integrations.greenbits.GreenbitsSettingsOuterClass.GreenbitsIntegrationFeatures build() {
         io.bloombox.schema.partner.integrations.greenbits.GreenbitsSettingsOuterClass.GreenbitsIntegrationFeatures result = buildPartial();
         if (!result.isInitialized()) {
@@ -392,6 +404,7 @@ public final class GreenbitsSettingsOuterClass {
         return result;
       }
 
+      @java.lang.Override
       public io.bloombox.schema.partner.integrations.greenbits.GreenbitsSettingsOuterClass.GreenbitsIntegrationFeatures buildPartial() {
         io.bloombox.schema.partner.integrations.greenbits.GreenbitsSettingsOuterClass.GreenbitsIntegrationFeatures result = new io.bloombox.schema.partner.integrations.greenbits.GreenbitsSettingsOuterClass.GreenbitsIntegrationFeatures(this);
         result.customers_ = customers_;
@@ -400,32 +413,39 @@ public final class GreenbitsSettingsOuterClass {
         return result;
       }
 
+      @java.lang.Override
       public Builder clone() {
         return (Builder) super.clone();
       }
+      @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
         return (Builder) super.setField(field, value);
       }
+      @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
         return (Builder) super.clearField(field);
       }
+      @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
         return (Builder) super.clearOneof(oneof);
       }
+      @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
         return (Builder) super.setRepeatedField(field, index, value);
       }
+      @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
         return (Builder) super.addRepeatedField(field, value);
       }
+      @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
         if (other instanceof io.bloombox.schema.partner.integrations.greenbits.GreenbitsSettingsOuterClass.GreenbitsIntegrationFeatures) {
           return mergeFrom((io.bloombox.schema.partner.integrations.greenbits.GreenbitsSettingsOuterClass.GreenbitsIntegrationFeatures)other);
@@ -448,10 +468,12 @@ public final class GreenbitsSettingsOuterClass {
         return this;
       }
 
+      @java.lang.Override
       public final boolean isInitialized() {
         return true;
       }
 
+      @java.lang.Override
       public Builder mergeFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -545,21 +567,23 @@ public final class GreenbitsSettingsOuterClass {
         onChanged();
         return this;
       }
+      @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
         return super.setUnknownFieldsProto3(unknownFields);
       }
 
+      @java.lang.Override
       public final Builder mergeUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
         return super.mergeUnknownFields(unknownFields);
       }
 
 
-      // @@protoc_insertion_point(builder_scope:bloombox.schema.partner.integrations.greenbits.GreenbitsIntegrationFeatures)
+      // @@protoc_insertion_point(builder_scope:bloombox.partner.integrations.greenbits.GreenbitsIntegrationFeatures)
     }
 
-    // @@protoc_insertion_point(class_scope:bloombox.schema.partner.integrations.greenbits.GreenbitsIntegrationFeatures)
+    // @@protoc_insertion_point(class_scope:bloombox.partner.integrations.greenbits.GreenbitsIntegrationFeatures)
     private static final io.bloombox.schema.partner.integrations.greenbits.GreenbitsSettingsOuterClass.GreenbitsIntegrationFeatures DEFAULT_INSTANCE;
     static {
       DEFAULT_INSTANCE = new io.bloombox.schema.partner.integrations.greenbits.GreenbitsSettingsOuterClass.GreenbitsIntegrationFeatures();
@@ -571,6 +595,7 @@ public final class GreenbitsSettingsOuterClass {
 
     private static final com.google.protobuf.Parser<GreenbitsIntegrationFeatures>
         PARSER = new com.google.protobuf.AbstractParser<GreenbitsIntegrationFeatures>() {
+      @java.lang.Override
       public GreenbitsIntegrationFeatures parsePartialFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -588,6 +613,7 @@ public final class GreenbitsSettingsOuterClass {
       return PARSER;
     }
 
+    @java.lang.Override
     public io.bloombox.schema.partner.integrations.greenbits.GreenbitsSettingsOuterClass.GreenbitsIntegrationFeatures getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
@@ -595,7 +621,7 @@ public final class GreenbitsSettingsOuterClass {
   }
 
   public interface GreenbitsSettingsOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:bloombox.schema.partner.integrations.greenbits.GreenbitsSettings)
+      // @@protoc_insertion_point(interface_extends:bloombox.partner.integrations.greenbits.GreenbitsSettings)
       com.google.protobuf.MessageOrBuilder {
 
     /**
@@ -657,7 +683,7 @@ public final class GreenbitsSettingsOuterClass {
      * Flags indicating features that should be enabled or disabled.
      * </pre>
      *
-     * <code>.bloombox.schema.partner.integrations.greenbits.GreenbitsIntegrationFeatures features = 10;</code>
+     * <code>.bloombox.partner.integrations.greenbits.GreenbitsIntegrationFeatures features = 10;</code>
      */
     boolean hasFeatures();
     /**
@@ -665,7 +691,7 @@ public final class GreenbitsSettingsOuterClass {
      * Flags indicating features that should be enabled or disabled.
      * </pre>
      *
-     * <code>.bloombox.schema.partner.integrations.greenbits.GreenbitsIntegrationFeatures features = 10;</code>
+     * <code>.bloombox.partner.integrations.greenbits.GreenbitsIntegrationFeatures features = 10;</code>
      */
     io.bloombox.schema.partner.integrations.greenbits.GreenbitsSettingsOuterClass.GreenbitsIntegrationFeatures getFeatures();
     /**
@@ -673,7 +699,7 @@ public final class GreenbitsSettingsOuterClass {
      * Flags indicating features that should be enabled or disabled.
      * </pre>
      *
-     * <code>.bloombox.schema.partner.integrations.greenbits.GreenbitsIntegrationFeatures features = 10;</code>
+     * <code>.bloombox.partner.integrations.greenbits.GreenbitsIntegrationFeatures features = 10;</code>
      */
     io.bloombox.schema.partner.integrations.greenbits.GreenbitsSettingsOuterClass.GreenbitsIntegrationFeaturesOrBuilder getFeaturesOrBuilder();
   }
@@ -682,11 +708,11 @@ public final class GreenbitsSettingsOuterClass {
    * Specifies settings related to Greenbits integration with Bloombox.
    * </pre>
    *
-   * Protobuf type {@code bloombox.schema.partner.integrations.greenbits.GreenbitsSettings}
+   * Protobuf type {@code bloombox.partner.integrations.greenbits.GreenbitsSettings}
    */
   public  static final class GreenbitsSettings extends
       com.google.protobuf.GeneratedMessageV3 implements
-      // @@protoc_insertion_point(message_implements:bloombox.schema.partner.integrations.greenbits.GreenbitsSettings)
+      // @@protoc_insertion_point(message_implements:bloombox.partner.integrations.greenbits.GreenbitsSettings)
       GreenbitsSettingsOrBuilder {
   private static final long serialVersionUID = 0L;
     // Use GreenbitsSettings.newBuilder() to construct.
@@ -723,13 +749,6 @@ public final class GreenbitsSettingsOuterClass {
             case 0:
               done = true;
               break;
-            default: {
-              if (!parseUnknownFieldProto3(
-                  input, unknownFields, extensionRegistry, tag)) {
-                done = true;
-              }
-              break;
-            }
             case 10: {
               java.lang.String s = input.readStringRequireUtf8();
 
@@ -761,6 +780,13 @@ public final class GreenbitsSettingsOuterClass {
 
               break;
             }
+            default: {
+              if (!parseUnknownFieldProto3(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
           }
         }
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
@@ -775,12 +801,13 @@ public final class GreenbitsSettingsOuterClass {
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return io.bloombox.schema.partner.integrations.greenbits.GreenbitsSettingsOuterClass.internal_static_bloombox_schema_partner_integrations_greenbits_GreenbitsSettings_descriptor;
+      return io.bloombox.schema.partner.integrations.greenbits.GreenbitsSettingsOuterClass.internal_static_bloombox_partner_integrations_greenbits_GreenbitsSettings_descriptor;
     }
 
+    @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return io.bloombox.schema.partner.integrations.greenbits.GreenbitsSettingsOuterClass.internal_static_bloombox_schema_partner_integrations_greenbits_GreenbitsSettings_fieldAccessorTable
+      return io.bloombox.schema.partner.integrations.greenbits.GreenbitsSettingsOuterClass.internal_static_bloombox_partner_integrations_greenbits_GreenbitsSettings_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
               io.bloombox.schema.partner.integrations.greenbits.GreenbitsSettingsOuterClass.GreenbitsSettings.class, io.bloombox.schema.partner.integrations.greenbits.GreenbitsSettingsOuterClass.GreenbitsSettings.Builder.class);
     }
@@ -918,7 +945,7 @@ public final class GreenbitsSettingsOuterClass {
      * Flags indicating features that should be enabled or disabled.
      * </pre>
      *
-     * <code>.bloombox.schema.partner.integrations.greenbits.GreenbitsIntegrationFeatures features = 10;</code>
+     * <code>.bloombox.partner.integrations.greenbits.GreenbitsIntegrationFeatures features = 10;</code>
      */
     public boolean hasFeatures() {
       return features_ != null;
@@ -928,7 +955,7 @@ public final class GreenbitsSettingsOuterClass {
      * Flags indicating features that should be enabled or disabled.
      * </pre>
      *
-     * <code>.bloombox.schema.partner.integrations.greenbits.GreenbitsIntegrationFeatures features = 10;</code>
+     * <code>.bloombox.partner.integrations.greenbits.GreenbitsIntegrationFeatures features = 10;</code>
      */
     public io.bloombox.schema.partner.integrations.greenbits.GreenbitsSettingsOuterClass.GreenbitsIntegrationFeatures getFeatures() {
       return features_ == null ? io.bloombox.schema.partner.integrations.greenbits.GreenbitsSettingsOuterClass.GreenbitsIntegrationFeatures.getDefaultInstance() : features_;
@@ -938,13 +965,14 @@ public final class GreenbitsSettingsOuterClass {
      * Flags indicating features that should be enabled or disabled.
      * </pre>
      *
-     * <code>.bloombox.schema.partner.integrations.greenbits.GreenbitsIntegrationFeatures features = 10;</code>
+     * <code>.bloombox.partner.integrations.greenbits.GreenbitsIntegrationFeatures features = 10;</code>
      */
     public io.bloombox.schema.partner.integrations.greenbits.GreenbitsSettingsOuterClass.GreenbitsIntegrationFeaturesOrBuilder getFeaturesOrBuilder() {
       return getFeatures();
     }
 
     private byte memoizedIsInitialized = -1;
+    @java.lang.Override
     public final boolean isInitialized() {
       byte isInitialized = memoizedIsInitialized;
       if (isInitialized == 1) return true;
@@ -954,6 +982,7 @@ public final class GreenbitsSettingsOuterClass {
       return true;
     }
 
+    @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
       if (!getOrganizationBytes().isEmpty()) {
@@ -971,6 +1000,7 @@ public final class GreenbitsSettingsOuterClass {
       unknownFields.writeTo(output);
     }
 
+    @java.lang.Override
     public int getSerializedSize() {
       int size = memoizedSize;
       if (size != -1) return size;
@@ -1112,6 +1142,7 @@ public final class GreenbitsSettingsOuterClass {
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
 
+    @java.lang.Override
     public Builder newBuilderForType() { return newBuilder(); }
     public static Builder newBuilder() {
       return DEFAULT_INSTANCE.toBuilder();
@@ -1119,6 +1150,7 @@ public final class GreenbitsSettingsOuterClass {
     public static Builder newBuilder(io.bloombox.schema.partner.integrations.greenbits.GreenbitsSettingsOuterClass.GreenbitsSettings prototype) {
       return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
     }
+    @java.lang.Override
     public Builder toBuilder() {
       return this == DEFAULT_INSTANCE
           ? new Builder() : new Builder().mergeFrom(this);
@@ -1135,20 +1167,21 @@ public final class GreenbitsSettingsOuterClass {
      * Specifies settings related to Greenbits integration with Bloombox.
      * </pre>
      *
-     * Protobuf type {@code bloombox.schema.partner.integrations.greenbits.GreenbitsSettings}
+     * Protobuf type {@code bloombox.partner.integrations.greenbits.GreenbitsSettings}
      */
     public static final class Builder extends
         com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:bloombox.schema.partner.integrations.greenbits.GreenbitsSettings)
+        // @@protoc_insertion_point(builder_implements:bloombox.partner.integrations.greenbits.GreenbitsSettings)
         io.bloombox.schema.partner.integrations.greenbits.GreenbitsSettingsOuterClass.GreenbitsSettingsOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return io.bloombox.schema.partner.integrations.greenbits.GreenbitsSettingsOuterClass.internal_static_bloombox_schema_partner_integrations_greenbits_GreenbitsSettings_descriptor;
+        return io.bloombox.schema.partner.integrations.greenbits.GreenbitsSettingsOuterClass.internal_static_bloombox_partner_integrations_greenbits_GreenbitsSettings_descriptor;
       }
 
+      @java.lang.Override
       protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return io.bloombox.schema.partner.integrations.greenbits.GreenbitsSettingsOuterClass.internal_static_bloombox_schema_partner_integrations_greenbits_GreenbitsSettings_fieldAccessorTable
+        return io.bloombox.schema.partner.integrations.greenbits.GreenbitsSettingsOuterClass.internal_static_bloombox_partner_integrations_greenbits_GreenbitsSettings_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
                 io.bloombox.schema.partner.integrations.greenbits.GreenbitsSettingsOuterClass.GreenbitsSettings.class, io.bloombox.schema.partner.integrations.greenbits.GreenbitsSettingsOuterClass.GreenbitsSettings.Builder.class);
       }
@@ -1168,6 +1201,7 @@ public final class GreenbitsSettingsOuterClass {
                 .alwaysUseFieldBuilders) {
         }
       }
+      @java.lang.Override
       public Builder clear() {
         super.clear();
         organization_ = "";
@@ -1185,15 +1219,18 @@ public final class GreenbitsSettingsOuterClass {
         return this;
       }
 
+      @java.lang.Override
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return io.bloombox.schema.partner.integrations.greenbits.GreenbitsSettingsOuterClass.internal_static_bloombox_schema_partner_integrations_greenbits_GreenbitsSettings_descriptor;
+        return io.bloombox.schema.partner.integrations.greenbits.GreenbitsSettingsOuterClass.internal_static_bloombox_partner_integrations_greenbits_GreenbitsSettings_descriptor;
       }
 
+      @java.lang.Override
       public io.bloombox.schema.partner.integrations.greenbits.GreenbitsSettingsOuterClass.GreenbitsSettings getDefaultInstanceForType() {
         return io.bloombox.schema.partner.integrations.greenbits.GreenbitsSettingsOuterClass.GreenbitsSettings.getDefaultInstance();
       }
 
+      @java.lang.Override
       public io.bloombox.schema.partner.integrations.greenbits.GreenbitsSettingsOuterClass.GreenbitsSettings build() {
         io.bloombox.schema.partner.integrations.greenbits.GreenbitsSettingsOuterClass.GreenbitsSettings result = buildPartial();
         if (!result.isInitialized()) {
@@ -1202,6 +1239,7 @@ public final class GreenbitsSettingsOuterClass {
         return result;
       }
 
+      @java.lang.Override
       public io.bloombox.schema.partner.integrations.greenbits.GreenbitsSettingsOuterClass.GreenbitsSettings buildPartial() {
         io.bloombox.schema.partner.integrations.greenbits.GreenbitsSettingsOuterClass.GreenbitsSettings result = new io.bloombox.schema.partner.integrations.greenbits.GreenbitsSettingsOuterClass.GreenbitsSettings(this);
         result.organization_ = organization_;
@@ -1216,32 +1254,39 @@ public final class GreenbitsSettingsOuterClass {
         return result;
       }
 
+      @java.lang.Override
       public Builder clone() {
         return (Builder) super.clone();
       }
+      @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
         return (Builder) super.setField(field, value);
       }
+      @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
         return (Builder) super.clearField(field);
       }
+      @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
         return (Builder) super.clearOneof(oneof);
       }
+      @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
         return (Builder) super.setRepeatedField(field, index, value);
       }
+      @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
         return (Builder) super.addRepeatedField(field, value);
       }
+      @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
         if (other instanceof io.bloombox.schema.partner.integrations.greenbits.GreenbitsSettingsOuterClass.GreenbitsSettings) {
           return mergeFrom((io.bloombox.schema.partner.integrations.greenbits.GreenbitsSettingsOuterClass.GreenbitsSettings)other);
@@ -1273,10 +1318,12 @@ public final class GreenbitsSettingsOuterClass {
         return this;
       }
 
+      @java.lang.Override
       public final boolean isInitialized() {
         return true;
       }
 
+      @java.lang.Override
       public Builder mergeFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -1570,7 +1617,7 @@ public final class GreenbitsSettingsOuterClass {
        * Flags indicating features that should be enabled or disabled.
        * </pre>
        *
-       * <code>.bloombox.schema.partner.integrations.greenbits.GreenbitsIntegrationFeatures features = 10;</code>
+       * <code>.bloombox.partner.integrations.greenbits.GreenbitsIntegrationFeatures features = 10;</code>
        */
       public boolean hasFeatures() {
         return featuresBuilder_ != null || features_ != null;
@@ -1580,7 +1627,7 @@ public final class GreenbitsSettingsOuterClass {
        * Flags indicating features that should be enabled or disabled.
        * </pre>
        *
-       * <code>.bloombox.schema.partner.integrations.greenbits.GreenbitsIntegrationFeatures features = 10;</code>
+       * <code>.bloombox.partner.integrations.greenbits.GreenbitsIntegrationFeatures features = 10;</code>
        */
       public io.bloombox.schema.partner.integrations.greenbits.GreenbitsSettingsOuterClass.GreenbitsIntegrationFeatures getFeatures() {
         if (featuresBuilder_ == null) {
@@ -1594,7 +1641,7 @@ public final class GreenbitsSettingsOuterClass {
        * Flags indicating features that should be enabled or disabled.
        * </pre>
        *
-       * <code>.bloombox.schema.partner.integrations.greenbits.GreenbitsIntegrationFeatures features = 10;</code>
+       * <code>.bloombox.partner.integrations.greenbits.GreenbitsIntegrationFeatures features = 10;</code>
        */
       public Builder setFeatures(io.bloombox.schema.partner.integrations.greenbits.GreenbitsSettingsOuterClass.GreenbitsIntegrationFeatures value) {
         if (featuresBuilder_ == null) {
@@ -1614,7 +1661,7 @@ public final class GreenbitsSettingsOuterClass {
        * Flags indicating features that should be enabled or disabled.
        * </pre>
        *
-       * <code>.bloombox.schema.partner.integrations.greenbits.GreenbitsIntegrationFeatures features = 10;</code>
+       * <code>.bloombox.partner.integrations.greenbits.GreenbitsIntegrationFeatures features = 10;</code>
        */
       public Builder setFeatures(
           io.bloombox.schema.partner.integrations.greenbits.GreenbitsSettingsOuterClass.GreenbitsIntegrationFeatures.Builder builderForValue) {
@@ -1632,7 +1679,7 @@ public final class GreenbitsSettingsOuterClass {
        * Flags indicating features that should be enabled or disabled.
        * </pre>
        *
-       * <code>.bloombox.schema.partner.integrations.greenbits.GreenbitsIntegrationFeatures features = 10;</code>
+       * <code>.bloombox.partner.integrations.greenbits.GreenbitsIntegrationFeatures features = 10;</code>
        */
       public Builder mergeFeatures(io.bloombox.schema.partner.integrations.greenbits.GreenbitsSettingsOuterClass.GreenbitsIntegrationFeatures value) {
         if (featuresBuilder_ == null) {
@@ -1654,7 +1701,7 @@ public final class GreenbitsSettingsOuterClass {
        * Flags indicating features that should be enabled or disabled.
        * </pre>
        *
-       * <code>.bloombox.schema.partner.integrations.greenbits.GreenbitsIntegrationFeatures features = 10;</code>
+       * <code>.bloombox.partner.integrations.greenbits.GreenbitsIntegrationFeatures features = 10;</code>
        */
       public Builder clearFeatures() {
         if (featuresBuilder_ == null) {
@@ -1672,7 +1719,7 @@ public final class GreenbitsSettingsOuterClass {
        * Flags indicating features that should be enabled or disabled.
        * </pre>
        *
-       * <code>.bloombox.schema.partner.integrations.greenbits.GreenbitsIntegrationFeatures features = 10;</code>
+       * <code>.bloombox.partner.integrations.greenbits.GreenbitsIntegrationFeatures features = 10;</code>
        */
       public io.bloombox.schema.partner.integrations.greenbits.GreenbitsSettingsOuterClass.GreenbitsIntegrationFeatures.Builder getFeaturesBuilder() {
         
@@ -1684,7 +1731,7 @@ public final class GreenbitsSettingsOuterClass {
        * Flags indicating features that should be enabled or disabled.
        * </pre>
        *
-       * <code>.bloombox.schema.partner.integrations.greenbits.GreenbitsIntegrationFeatures features = 10;</code>
+       * <code>.bloombox.partner.integrations.greenbits.GreenbitsIntegrationFeatures features = 10;</code>
        */
       public io.bloombox.schema.partner.integrations.greenbits.GreenbitsSettingsOuterClass.GreenbitsIntegrationFeaturesOrBuilder getFeaturesOrBuilder() {
         if (featuresBuilder_ != null) {
@@ -1699,7 +1746,7 @@ public final class GreenbitsSettingsOuterClass {
        * Flags indicating features that should be enabled or disabled.
        * </pre>
        *
-       * <code>.bloombox.schema.partner.integrations.greenbits.GreenbitsIntegrationFeatures features = 10;</code>
+       * <code>.bloombox.partner.integrations.greenbits.GreenbitsIntegrationFeatures features = 10;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
           io.bloombox.schema.partner.integrations.greenbits.GreenbitsSettingsOuterClass.GreenbitsIntegrationFeatures, io.bloombox.schema.partner.integrations.greenbits.GreenbitsSettingsOuterClass.GreenbitsIntegrationFeatures.Builder, io.bloombox.schema.partner.integrations.greenbits.GreenbitsSettingsOuterClass.GreenbitsIntegrationFeaturesOrBuilder> 
@@ -1714,21 +1761,23 @@ public final class GreenbitsSettingsOuterClass {
         }
         return featuresBuilder_;
       }
+      @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
         return super.setUnknownFieldsProto3(unknownFields);
       }
 
+      @java.lang.Override
       public final Builder mergeUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
         return super.mergeUnknownFields(unknownFields);
       }
 
 
-      // @@protoc_insertion_point(builder_scope:bloombox.schema.partner.integrations.greenbits.GreenbitsSettings)
+      // @@protoc_insertion_point(builder_scope:bloombox.partner.integrations.greenbits.GreenbitsSettings)
     }
 
-    // @@protoc_insertion_point(class_scope:bloombox.schema.partner.integrations.greenbits.GreenbitsSettings)
+    // @@protoc_insertion_point(class_scope:bloombox.partner.integrations.greenbits.GreenbitsSettings)
     private static final io.bloombox.schema.partner.integrations.greenbits.GreenbitsSettingsOuterClass.GreenbitsSettings DEFAULT_INSTANCE;
     static {
       DEFAULT_INSTANCE = new io.bloombox.schema.partner.integrations.greenbits.GreenbitsSettingsOuterClass.GreenbitsSettings();
@@ -1740,6 +1789,7 @@ public final class GreenbitsSettingsOuterClass {
 
     private static final com.google.protobuf.Parser<GreenbitsSettings>
         PARSER = new com.google.protobuf.AbstractParser<GreenbitsSettings>() {
+      @java.lang.Override
       public GreenbitsSettings parsePartialFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -1757,6 +1807,7 @@ public final class GreenbitsSettingsOuterClass {
       return PARSER;
     }
 
+    @java.lang.Override
     public io.bloombox.schema.partner.integrations.greenbits.GreenbitsSettingsOuterClass.GreenbitsSettings getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
@@ -1764,15 +1815,15 @@ public final class GreenbitsSettingsOuterClass {
   }
 
   private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_bloombox_schema_partner_integrations_greenbits_GreenbitsIntegrationFeatures_descriptor;
+    internal_static_bloombox_partner_integrations_greenbits_GreenbitsIntegrationFeatures_descriptor;
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_bloombox_schema_partner_integrations_greenbits_GreenbitsIntegrationFeatures_fieldAccessorTable;
+      internal_static_bloombox_partner_integrations_greenbits_GreenbitsIntegrationFeatures_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_bloombox_schema_partner_integrations_greenbits_GreenbitsSettings_descriptor;
+    internal_static_bloombox_partner_integrations_greenbits_GreenbitsSettings_descriptor;
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_bloombox_schema_partner_integrations_greenbits_GreenbitsSettings_fieldAccessorTable;
+      internal_static_bloombox_partner_integrations_greenbits_GreenbitsSettings_fieldAccessorTable;
 
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
@@ -1783,16 +1834,15 @@ public final class GreenbitsSettingsOuterClass {
   static {
     java.lang.String[] descriptorData = {
       "\n,partner/integrations/GreenbitsSettings" +
-      ".proto\022.bloombox.schema.partner.integrat" +
-      "ions.greenbits\"B\n\034GreenbitsIntegrationFe" +
-      "atures\022\021\n\tcustomers\030\001 \001(\010\022\017\n\007checkin\030\002 \001" +
-      "(\010\"\256\001\n\021GreenbitsSettings\022\024\n\014organization" +
-      "\030\001 \001(\t\022\017\n\007api_key\030\002 \001(\t\022\022\n\nauth_token\030\003 " +
-      "\001(\t\022^\n\010features\030\n \001(\0132L.bloombox.schema." +
-      "partner.integrations.greenbits.Greenbits" +
-      "IntegrationFeaturesB=\n1io.bloombox.schem" +
-      "a.partner.integrations.greenbitsH\001P\000\242\002\003B" +
-      "BSb\006proto3"
+      ".proto\022\'bloombox.partner.integrations.gr" +
+      "eenbits\"B\n\034GreenbitsIntegrationFeatures\022" +
+      "\021\n\tcustomers\030\001 \001(\010\022\017\n\007checkin\030\002 \001(\010\"\247\001\n\021" +
+      "GreenbitsSettings\022\024\n\014organization\030\001 \001(\t\022" +
+      "\017\n\007api_key\030\002 \001(\t\022\022\n\nauth_token\030\003 \001(\t\022W\n\010" +
+      "features\030\n \001(\0132E.bloombox.partner.integr" +
+      "ations.greenbits.GreenbitsIntegrationFea" +
+      "turesB=\n1io.bloombox.schema.partner.inte" +
+      "grations.greenbitsH\001P\000\242\002\003BBSb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -1806,17 +1856,17 @@ public final class GreenbitsSettingsOuterClass {
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
         }, assigner);
-    internal_static_bloombox_schema_partner_integrations_greenbits_GreenbitsIntegrationFeatures_descriptor =
+    internal_static_bloombox_partner_integrations_greenbits_GreenbitsIntegrationFeatures_descriptor =
       getDescriptor().getMessageTypes().get(0);
-    internal_static_bloombox_schema_partner_integrations_greenbits_GreenbitsIntegrationFeatures_fieldAccessorTable = new
+    internal_static_bloombox_partner_integrations_greenbits_GreenbitsIntegrationFeatures_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_bloombox_schema_partner_integrations_greenbits_GreenbitsIntegrationFeatures_descriptor,
+        internal_static_bloombox_partner_integrations_greenbits_GreenbitsIntegrationFeatures_descriptor,
         new java.lang.String[] { "Customers", "Checkin", });
-    internal_static_bloombox_schema_partner_integrations_greenbits_GreenbitsSettings_descriptor =
+    internal_static_bloombox_partner_integrations_greenbits_GreenbitsSettings_descriptor =
       getDescriptor().getMessageTypes().get(1);
-    internal_static_bloombox_schema_partner_integrations_greenbits_GreenbitsSettings_fieldAccessorTable = new
+    internal_static_bloombox_partner_integrations_greenbits_GreenbitsSettings_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_bloombox_schema_partner_integrations_greenbits_GreenbitsSettings_descriptor,
+        internal_static_bloombox_partner_integrations_greenbits_GreenbitsSettings_descriptor,
         new java.lang.String[] { "Organization", "ApiKey", "AuthToken", "Features", });
   }
 

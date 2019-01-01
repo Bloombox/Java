@@ -1,11 +1,12 @@
 /*
- * Copyright 2018, Bloombox, LLC.
+ * Copyright 2018, Momentum Ideas, Co. All rights reserved.
  *
- * Licensed under the Apache License, Version 2.0 (the "License");
- * you may not use this file except in compliance with the License.
- * You may obtain a copy of the License at
- *
- *     http://www.apache.org/licenses/LICENSE-2.0
+ * Source and object computer code contained herein is the private intellectual
+ * property of Momentum Ideas Co., a Delaware Corporation. Use of this
+ * code in source form requires permission in writing before use or the
+ * assembly, distribution, or publishing of derivative works, for commercial
+ * purposes or any other purpose, from a duly authorized officer of Momentum
+ * Ideas Co.
  *
  * Unless required by applicable law or agreed to in writing, software
  * distributed under the License is distributed on an "AS IS" BASIS,
@@ -35,7 +36,7 @@ public final class PartnerAuthorization {
    * Specifies authentication scopes at the partner level.
    * </pre>
    *
-   * Protobuf enum {@code bloombox.schema.partner.PartnerScope}
+   * Protobuf enum {@code bloombox.partner.PartnerScope}
    */
   public enum PartnerScope
       implements com.google.protobuf.ProtocolMessageEnum {
@@ -247,7 +248,7 @@ public final class PartnerAuthorization {
       this.value = value;
     }
 
-    // @@protoc_insertion_point(enum_scope:bloombox.schema.partner.PartnerScope)
+    // @@protoc_insertion_point(enum_scope:bloombox.partner.PartnerScope)
   }
 
 
@@ -259,13 +260,13 @@ public final class PartnerAuthorization {
       descriptor;
   static {
     java.lang.String[] descriptorData = {
-      "\n\032partner/PartnerScope.proto\022\027bloombox.s" +
-      "chema.partner*\217\001\n\014PartnerScope\022\010\n\004AUTH\020\000" +
-      "\022\013\n\007CONTACT\020\001\022\r\n\tDASHBOARD\020\002\022\022\n\016MENU_DAT" +
-      "A_READ\020\n\022\023\n\017MENU_DATA_WRITE\020\024\022\021\n\rSETTING" +
-      "S_READ\0202\022\022\n\016SETTINGS_WRITE\0203\022\t\n\005ADMIN\020dB" +
-      "<\n\032io.bloombox.schema.partnerB\024PartnerAu" +
-      "thorizationH\001P\000\242\002\003BBSb\006proto3"
+      "\n\032partner/PartnerScope.proto\022\020bloombox.p" +
+      "artner*\217\001\n\014PartnerScope\022\010\n\004AUTH\020\000\022\013\n\007CON" +
+      "TACT\020\001\022\r\n\tDASHBOARD\020\002\022\022\n\016MENU_DATA_READ\020" +
+      "\n\022\023\n\017MENU_DATA_WRITE\020\024\022\021\n\rSETTINGS_READ\020" +
+      "2\022\022\n\016SETTINGS_WRITE\0203\022\t\n\005ADMIN\020dB<\n\032io.b" +
+      "loombox.schema.partnerB\024PartnerAuthoriza" +
+      "tionH\001P\000\242\002\003BBSb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {

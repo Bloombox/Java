@@ -1,8 +1,8 @@
 /*
- * Copyright 2018, Bloombox, LLC. All rights reserved.
+ * Copyright 2018, Momentum Ideas, Co. All rights reserved.
  *
  * Source and object computer code contained herein is the private intellectual
- * property of Bloombox, a California Limited Liability Corporation. Use of this
+ * property of Momentum Ideas Co., a Delaware Corporation. Use of this
  * code in source form requires permission in writing before use or the
  * assembly, distribution, or publishing of derivative works, for commercial
  * purposes or any other purpose, from a duly authorized officer of Momentum
@@ -21,7 +21,7 @@
 package io.bloombox.schema.services.devices.v1beta1;
 
 public interface DeviceAssignmentOrBuilder extends
-    // @@protoc_insertion_point(interface_extends:bloombox.schema.services.devices.v1beta1.DeviceAssignment)
+    // @@protoc_insertion_point(interface_extends:bloombox.services.devices.v1beta1.DeviceAssignment)
     com.google.protobuf.MessageOrBuilder {
 
   /**
@@ -65,7 +65,7 @@ public interface DeviceAssignmentOrBuilder extends
    * Role setting for the device.
    * </pre>
    *
-   * <code>.bloombox.schema.services.devices.v1beta1.DeviceRole role = 3;</code>
+   * <code>.bloombox.services.devices.v1beta1.DeviceRole role = 3;</code>
    */
   int getRoleValue();
   /**
@@ -73,7 +73,7 @@ public interface DeviceAssignmentOrBuilder extends
    * Role setting for the device.
    * </pre>
    *
-   * <code>.bloombox.schema.services.devices.v1beta1.DeviceRole role = 3;</code>
+   * <code>.bloombox.services.devices.v1beta1.DeviceRole role = 3;</code>
    */
   io.bloombox.schema.services.devices.v1beta1.DeviceRole getRole();
 
@@ -82,7 +82,7 @@ public interface DeviceAssignmentOrBuilder extends
    * Environment name to make use of. Usually "V1".
    * </pre>
    *
-   * <code>.bloombox.schema.services.devices.v1beta1.DataEnvironment environment = 4;</code>
+   * <code>.bloombox.services.devices.v1beta1.DataEnvironment environment = 4;</code>
    */
   int getEnvironmentValue();
   /**
@@ -90,7 +90,7 @@ public interface DeviceAssignmentOrBuilder extends
    * Environment name to make use of. Usually "V1".
    * </pre>
    *
-   * <code>.bloombox.schema.services.devices.v1beta1.DataEnvironment environment = 4;</code>
+   * <code>.bloombox.services.devices.v1beta1.DataEnvironment environment = 4;</code>
    */
   io.bloombox.schema.services.devices.v1beta1.DataEnvironment getEnvironment();
 

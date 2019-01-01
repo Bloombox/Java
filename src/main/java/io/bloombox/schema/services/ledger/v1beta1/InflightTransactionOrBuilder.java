@@ -1,8 +1,8 @@
 /*
- * Copyright 2018, Bloombox, LLC. All rights reserved.
+ * Copyright 2018, Momentum Ideas, Co. All rights reserved.
  *
  * Source and object computer code contained herein is the private intellectual
- * property of Bloombox, a California Limited Liability Corporation. Use of this
+ * property of Momentum Ideas Co., a Delaware Corporation. Use of this
  * code in source form requires permission in writing before use or the
  * assembly, distribution, or publishing of derivative works, for commercial
  * purposes or any other purpose, from a duly authorized officer of Momentum
@@ -21,7 +21,7 @@
 package io.bloombox.schema.services.ledger.v1beta1;
 
 public interface InflightTransactionOrBuilder extends
-    // @@protoc_insertion_point(interface_extends:bloombox.schema.services.ledger.v1beta1.InflightTransaction)
+    // @@protoc_insertion_point(interface_extends:bloombox.services.ledger.v1beta1.InflightTransaction)
     com.google.protobuf.MessageOrBuilder {
 
   /**
@@ -29,7 +29,7 @@ public interface InflightTransactionOrBuilder extends
    * Specifies the status of an inflight transaction.
    * </pre>
    *
-   * <code>.bloombox.schema.services.ledger.v1beta1.TransactionStatus status = 1;</code>
+   * <code>.bloombox.services.ledger.v1beta1.TransactionStatus status = 1;</code>
    */
   int getStatusValue();
   /**
@@ -37,7 +37,7 @@ public interface InflightTransactionOrBuilder extends
    * Specifies the status of an inflight transaction.
    * </pre>
    *
-   * <code>.bloombox.schema.services.ledger.v1beta1.TransactionStatus status = 1;</code>
+   * <code>.bloombox.services.ledger.v1beta1.TransactionStatus status = 1;</code>
    */
   io.bloombox.schema.services.ledger.v1beta1.TransactionStatus getStatus();
 
@@ -46,7 +46,7 @@ public interface InflightTransactionOrBuilder extends
    * Transaction object. Provided when the transaction has finalized.
    * </pre>
    *
-   * <code>.bloombox.schema.ledger.Transaction txn = 2;</code>
+   * <code>.bloombox.ledger.Transaction txn = 2;</code>
    */
   boolean hasTxn();
   /**
@@ -54,7 +54,7 @@ public interface InflightTransactionOrBuilder extends
    * Transaction object. Provided when the transaction has finalized.
    * </pre>
    *
-   * <code>.bloombox.schema.ledger.Transaction txn = 2;</code>
+   * <code>.bloombox.ledger.Transaction txn = 2;</code>
    */
   io.bloombox.schema.ledger.Transactions.Transaction getTxn();
   /**
@@ -62,7 +62,7 @@ public interface InflightTransactionOrBuilder extends
    * Transaction object. Provided when the transaction has finalized.
    * </pre>
    *
-   * <code>.bloombox.schema.ledger.Transaction txn = 2;</code>
+   * <code>.bloombox.ledger.Transaction txn = 2;</code>
    */
   io.bloombox.schema.ledger.Transactions.TransactionOrBuilder getTxnOrBuilder();
 }

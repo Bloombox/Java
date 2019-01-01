@@ -1,8 +1,8 @@
 /*
- * Copyright 2018, Bloombox, LLC. All rights reserved.
+ * Copyright 2018, Momentum Ideas, Co. All rights reserved.
  *
  * Source and object computer code contained herein is the private intellectual
- * property of Bloombox, a California Limited Liability Corporation. Use of this
+ * property of Momentum Ideas Co., a Delaware Corporation. Use of this
  * code in source form requires permission in writing before use or the
  * assembly, distribution, or publishing of derivative works, for commercial
  * purposes or any other purpose, from a duly authorized officer of Momentum
@@ -17,20 +17,20 @@
 
 package io.bloombox.schema.services.devices.v1beta1;
 
-import static io.grpc.stub.ClientCalls.asyncUnaryCall;
-import static io.grpc.stub.ClientCalls.asyncServerStreamingCall;
-import static io.grpc.stub.ClientCalls.asyncClientStreamingCall;
-import static io.grpc.stub.ClientCalls.asyncBidiStreamingCall;
-import static io.grpc.stub.ClientCalls.blockingUnaryCall;
-import static io.grpc.stub.ClientCalls.blockingServerStreamingCall;
-import static io.grpc.stub.ClientCalls.futureUnaryCall;
 import static io.grpc.MethodDescriptor.generateFullMethodName;
-import static io.grpc.stub.ServerCalls.asyncUnaryCall;
-import static io.grpc.stub.ServerCalls.asyncServerStreamingCall;
-import static io.grpc.stub.ServerCalls.asyncClientStreamingCall;
+import static io.grpc.stub.ClientCalls.asyncBidiStreamingCall;
+import static io.grpc.stub.ClientCalls.asyncClientStreamingCall;
+import static io.grpc.stub.ClientCalls.asyncServerStreamingCall;
+import static io.grpc.stub.ClientCalls.asyncUnaryCall;
+import static io.grpc.stub.ClientCalls.blockingServerStreamingCall;
+import static io.grpc.stub.ClientCalls.blockingUnaryCall;
+import static io.grpc.stub.ClientCalls.futureUnaryCall;
 import static io.grpc.stub.ServerCalls.asyncBidiStreamingCall;
-import static io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall;
+import static io.grpc.stub.ServerCalls.asyncClientStreamingCall;
+import static io.grpc.stub.ServerCalls.asyncServerStreamingCall;
+import static io.grpc.stub.ServerCalls.asyncUnaryCall;
 import static io.grpc.stub.ServerCalls.asyncUnimplementedStreamingCall;
+import static io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall;
 
 /**
  * <pre>
@@ -39,39 +39,78 @@ import static io.grpc.stub.ServerCalls.asyncUnimplementedStreamingCall;
  * </pre>
  */
 @javax.annotation.Generated(
-    value = "by gRPC proto compiler (version 1.6.0-SNAPSHOT)",
+    value = "by gRPC proto compiler (version 1.18.0-SNAPSHOT)",
     comments = "Source: devices/v1beta1/DevicesService_Beta1.proto")
 public final class DevicesGrpc {
 
   private DevicesGrpc() {}
 
-  public static final String SERVICE_NAME = "bloombox.schema.services.devices.v1beta1.Devices";
+  public static final String SERVICE_NAME = "bloombox.services.devices.v1beta1.Devices";
 
   // Static method descriptors that strictly reflect the proto.
-  @io.grpc.ExperimentalApi("https://github.com/grpc/grpc-java/issues/1901")
-  public static final io.grpc.MethodDescriptor<io.bloombox.schema.services.devices.v1beta1.Ping.Request,
-      io.bloombox.schema.services.devices.v1beta1.Ping.Response> METHOD_PING =
-      io.grpc.MethodDescriptor.<io.bloombox.schema.services.devices.v1beta1.Ping.Request, io.bloombox.schema.services.devices.v1beta1.Ping.Response>newBuilder()
-          .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-          .setFullMethodName(generateFullMethodName(
-              "bloombox.schema.services.devices.v1beta1.Devices", "Ping"))
-          .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-              io.bloombox.schema.services.devices.v1beta1.Ping.Request.getDefaultInstance()))
-          .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-              io.bloombox.schema.services.devices.v1beta1.Ping.Response.getDefaultInstance()))
-          .build();
-  @io.grpc.ExperimentalApi("https://github.com/grpc/grpc-java/issues/1901")
-  public static final io.grpc.MethodDescriptor<io.bloombox.schema.services.devices.v1beta1.Activation.Request,
-      io.bloombox.schema.services.devices.v1beta1.Activation.Response> METHOD_ACTIVATE =
-      io.grpc.MethodDescriptor.<io.bloombox.schema.services.devices.v1beta1.Activation.Request, io.bloombox.schema.services.devices.v1beta1.Activation.Response>newBuilder()
-          .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-          .setFullMethodName(generateFullMethodName(
-              "bloombox.schema.services.devices.v1beta1.Devices", "Activate"))
-          .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-              io.bloombox.schema.services.devices.v1beta1.Activation.Request.getDefaultInstance()))
-          .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-              io.bloombox.schema.services.devices.v1beta1.Activation.Response.getDefaultInstance()))
-          .build();
+  private static volatile io.grpc.MethodDescriptor<io.bloombox.schema.services.devices.v1beta1.Ping.Request,
+      io.bloombox.schema.services.devices.v1beta1.Ping.Response> getPingMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "Ping",
+      requestType = io.bloombox.schema.services.devices.v1beta1.Ping.Request.class,
+      responseType = io.bloombox.schema.services.devices.v1beta1.Ping.Response.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<io.bloombox.schema.services.devices.v1beta1.Ping.Request,
+      io.bloombox.schema.services.devices.v1beta1.Ping.Response> getPingMethod() {
+    io.grpc.MethodDescriptor<io.bloombox.schema.services.devices.v1beta1.Ping.Request, io.bloombox.schema.services.devices.v1beta1.Ping.Response> getPingMethod;
+    if ((getPingMethod = DevicesGrpc.getPingMethod) == null) {
+      synchronized (DevicesGrpc.class) {
+        if ((getPingMethod = DevicesGrpc.getPingMethod) == null) {
+          DevicesGrpc.getPingMethod = getPingMethod = 
+              io.grpc.MethodDescriptor.<io.bloombox.schema.services.devices.v1beta1.Ping.Request, io.bloombox.schema.services.devices.v1beta1.Ping.Response>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(
+                  "bloombox.services.devices.v1beta1.Devices", "Ping"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  io.bloombox.schema.services.devices.v1beta1.Ping.Request.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  io.bloombox.schema.services.devices.v1beta1.Ping.Response.getDefaultInstance()))
+                  .setSchemaDescriptor(new DevicesMethodDescriptorSupplier("Ping"))
+                  .build();
+          }
+        }
+     }
+     return getPingMethod;
+  }
+
+  private static volatile io.grpc.MethodDescriptor<io.bloombox.schema.services.devices.v1beta1.Activation.Request,
+      io.bloombox.schema.services.devices.v1beta1.Activation.Response> getActivateMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "Activate",
+      requestType = io.bloombox.schema.services.devices.v1beta1.Activation.Request.class,
+      responseType = io.bloombox.schema.services.devices.v1beta1.Activation.Response.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<io.bloombox.schema.services.devices.v1beta1.Activation.Request,
+      io.bloombox.schema.services.devices.v1beta1.Activation.Response> getActivateMethod() {
+    io.grpc.MethodDescriptor<io.bloombox.schema.services.devices.v1beta1.Activation.Request, io.bloombox.schema.services.devices.v1beta1.Activation.Response> getActivateMethod;
+    if ((getActivateMethod = DevicesGrpc.getActivateMethod) == null) {
+      synchronized (DevicesGrpc.class) {
+        if ((getActivateMethod = DevicesGrpc.getActivateMethod) == null) {
+          DevicesGrpc.getActivateMethod = getActivateMethod = 
+              io.grpc.MethodDescriptor.<io.bloombox.schema.services.devices.v1beta1.Activation.Request, io.bloombox.schema.services.devices.v1beta1.Activation.Response>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(
+                  "bloombox.services.devices.v1beta1.Devices", "Activate"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  io.bloombox.schema.services.devices.v1beta1.Activation.Request.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  io.bloombox.schema.services.devices.v1beta1.Activation.Response.getDefaultInstance()))
+                  .setSchemaDescriptor(new DevicesMethodDescriptorSupplier("Activate"))
+                  .build();
+          }
+        }
+     }
+     return getActivateMethod;
+  }
 
   /**
    * Creates a new async stub that supports all call types for the service
@@ -111,7 +150,7 @@ public final class DevicesGrpc {
      */
     public void ping(io.bloombox.schema.services.devices.v1beta1.Ping.Request request,
         io.grpc.stub.StreamObserver<io.bloombox.schema.services.devices.v1beta1.Ping.Response> responseObserver) {
-      asyncUnimplementedUnaryCall(METHOD_PING, responseObserver);
+      asyncUnimplementedUnaryCall(getPingMethod(), responseObserver);
     }
 
     /**
@@ -122,20 +161,20 @@ public final class DevicesGrpc {
      */
     public void activate(io.bloombox.schema.services.devices.v1beta1.Activation.Request request,
         io.grpc.stub.StreamObserver<io.bloombox.schema.services.devices.v1beta1.Activation.Response> responseObserver) {
-      asyncUnimplementedUnaryCall(METHOD_ACTIVATE, responseObserver);
+      asyncUnimplementedUnaryCall(getActivateMethod(), responseObserver);
     }
 
     @java.lang.Override public final io.grpc.ServerServiceDefinition bindService() {
       return io.grpc.ServerServiceDefinition.builder(getServiceDescriptor())
           .addMethod(
-            METHOD_PING,
+            getPingMethod(),
             asyncUnaryCall(
               new MethodHandlers<
                 io.bloombox.schema.services.devices.v1beta1.Ping.Request,
                 io.bloombox.schema.services.devices.v1beta1.Ping.Response>(
                   this, METHODID_PING)))
           .addMethod(
-            METHOD_ACTIVATE,
+            getActivateMethod(),
             asyncUnaryCall(
               new MethodHandlers<
                 io.bloombox.schema.services.devices.v1beta1.Activation.Request,
@@ -175,7 +214,7 @@ public final class DevicesGrpc {
     public void ping(io.bloombox.schema.services.devices.v1beta1.Ping.Request request,
         io.grpc.stub.StreamObserver<io.bloombox.schema.services.devices.v1beta1.Ping.Response> responseObserver) {
       asyncUnaryCall(
-          getChannel().newCall(METHOD_PING, getCallOptions()), request, responseObserver);
+          getChannel().newCall(getPingMethod(), getCallOptions()), request, responseObserver);
     }
 
     /**
@@ -187,7 +226,7 @@ public final class DevicesGrpc {
     public void activate(io.bloombox.schema.services.devices.v1beta1.Activation.Request request,
         io.grpc.stub.StreamObserver<io.bloombox.schema.services.devices.v1beta1.Activation.Response> responseObserver) {
       asyncUnaryCall(
-          getChannel().newCall(METHOD_ACTIVATE, getCallOptions()), request, responseObserver);
+          getChannel().newCall(getActivateMethod(), getCallOptions()), request, responseObserver);
     }
   }
 
@@ -220,7 +259,7 @@ public final class DevicesGrpc {
      */
     public io.bloombox.schema.services.devices.v1beta1.Ping.Response ping(io.bloombox.schema.services.devices.v1beta1.Ping.Request request) {
       return blockingUnaryCall(
-          getChannel(), METHOD_PING, getCallOptions(), request);
+          getChannel(), getPingMethod(), getCallOptions(), request);
     }
 
     /**
@@ -231,7 +270,7 @@ public final class DevicesGrpc {
      */
     public io.bloombox.schema.services.devices.v1beta1.Activation.Response activate(io.bloombox.schema.services.devices.v1beta1.Activation.Request request) {
       return blockingUnaryCall(
-          getChannel(), METHOD_ACTIVATE, getCallOptions(), request);
+          getChannel(), getActivateMethod(), getCallOptions(), request);
     }
   }
 
@@ -265,7 +304,7 @@ public final class DevicesGrpc {
     public com.google.common.util.concurrent.ListenableFuture<io.bloombox.schema.services.devices.v1beta1.Ping.Response> ping(
         io.bloombox.schema.services.devices.v1beta1.Ping.Request request) {
       return futureUnaryCall(
-          getChannel().newCall(METHOD_PING, getCallOptions()), request);
+          getChannel().newCall(getPingMethod(), getCallOptions()), request);
     }
 
     /**
@@ -277,7 +316,7 @@ public final class DevicesGrpc {
     public com.google.common.util.concurrent.ListenableFuture<io.bloombox.schema.services.devices.v1beta1.Activation.Response> activate(
         io.bloombox.schema.services.devices.v1beta1.Activation.Request request) {
       return futureUnaryCall(
-          getChannel().newCall(METHOD_ACTIVATE, getCallOptions()), request);
+          getChannel().newCall(getActivateMethod(), getCallOptions()), request);
     }
   }
 
@@ -325,10 +364,38 @@ public final class DevicesGrpc {
     }
   }
 
-  private static final class DevicesDescriptorSupplier implements io.grpc.protobuf.ProtoFileDescriptorSupplier {
+  private static abstract class DevicesBaseDescriptorSupplier
+      implements io.grpc.protobuf.ProtoFileDescriptorSupplier, io.grpc.protobuf.ProtoServiceDescriptorSupplier {
+    DevicesBaseDescriptorSupplier() {}
+
     @java.lang.Override
     public com.google.protobuf.Descriptors.FileDescriptor getFileDescriptor() {
       return io.bloombox.schema.services.devices.v1beta1.DevicesServiceBeta1.getDescriptor();
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Descriptors.ServiceDescriptor getServiceDescriptor() {
+      return getFileDescriptor().findServiceByName("Devices");
+    }
+  }
+
+  private static final class DevicesFileDescriptorSupplier
+      extends DevicesBaseDescriptorSupplier {
+    DevicesFileDescriptorSupplier() {}
+  }
+
+  private static final class DevicesMethodDescriptorSupplier
+      extends DevicesBaseDescriptorSupplier
+      implements io.grpc.protobuf.ProtoMethodDescriptorSupplier {
+    private final String methodName;
+
+    DevicesMethodDescriptorSupplier(String methodName) {
+      this.methodName = methodName;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Descriptors.MethodDescriptor getMethodDescriptor() {
+      return getServiceDescriptor().findMethodByName(methodName);
     }
   }
 
@@ -341,9 +408,9 @@ public final class DevicesGrpc {
         result = serviceDescriptor;
         if (result == null) {
           serviceDescriptor = result = io.grpc.ServiceDescriptor.newBuilder(SERVICE_NAME)
-              .setSchemaDescriptor(new DevicesDescriptorSupplier())
-              .addMethod(METHOD_PING)
-              .addMethod(METHOD_ACTIVATE)
+              .setSchemaDescriptor(new DevicesFileDescriptorSupplier())
+              .addMethod(getPingMethod())
+              .addMethod(getActivateMethod())
               .build();
         }
       }

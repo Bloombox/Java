@@ -1,11 +1,12 @@
 /*
- * Copyright 2018, Bloombox, LLC.
+ * Copyright 2018, Momentum Ideas, Co. All rights reserved.
  *
- * Licensed under the Apache License, Version 2.0 (the "License");
- * you may not use this file except in compliance with the License.
- * You may obtain a copy of the License at
- *
- *     http://www.apache.org/licenses/LICENSE-2.0
+ * Source and object computer code contained herein is the private intellectual
+ * property of Momentum Ideas Co., a Delaware Corporation. Use of this
+ * code in source form requires permission in writing before use or the
+ * assembly, distribution, or publishing of derivative works, for commercial
+ * purposes or any other purpose, from a duly authorized officer of Momentum
+ * Ideas Co.
  *
  * Unless required by applicable law or agreed to in writing, software
  * distributed under the License is distributed on an "AS IS" BASIS,
@@ -45,15 +46,15 @@ public final class BluetoothBeaconOuterClass {
   static {
     java.lang.String[] descriptorData = {
       "\n\037proximity/BluetoothBeacon.proto\022\026openc" +
-      "annabis.proximity\032\022geo/Location.proto\032\026t" +
-      "emporal/Instant.proto\"\317\001\n\017BluetoothBeaco" +
-      "n\022\014\n\004uuid\030\001 \001(\t\022\r\n\005major\030\002 \001(\r\022\r\n\005minor\030" +
-      "\003 \001(\r\022,\n\004seen\030\004 \001(\0132\036.opencannabis.tempo" +
-      "ral.Instant\022,\n\010location\030\005 \001(\0132\032.opencann" +
-      "abis.geo.Location\0224\n\010accuracy\030\006 \001(\0132\".op" +
-      "encannabis.geo.LocationAccuracyB,\n io.op" +
-      "encannabis.schema.proximityH\001P\001\242\002\003OCSb\006p" +
-      "roto3"
+      "annabis.proximity\032\022geo/Location.proto\032\022g" +
+      "eo/Distance.proto\032\026temporal/Instant.prot" +
+      "o\"\317\001\n\017BluetoothBeacon\022\014\n\004uuid\030\001 \001(\t\022\r\n\005m" +
+      "ajor\030\002 \001(\r\022\r\n\005minor\030\003 \001(\r\022,\n\004seen\030\004 \001(\0132" +
+      "\036.opencannabis.temporal.Instant\022,\n\010locat" +
+      "ion\030\005 \001(\0132\032.opencannabis.geo.Location\0224\n" +
+      "\010accuracy\030\006 \001(\0132\".opencannabis.geo.Locat" +
+      "ionAccuracyB,\n io.opencannabis.schema.pr" +
+      "oximityH\001P\001\242\002\003OCSb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -67,6 +68,7 @@ public final class BluetoothBeaconOuterClass {
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
           io.opencannabis.schema.geo.LocationOuterClass.getDescriptor(),
+          io.opencannabis.schema.geo.DistanceOuterClass.getDescriptor(),
           io.opencannabis.schema.temporal.TemporalInstant.getDescriptor(),
         }, assigner);
     internal_static_opencannabis_proximity_BluetoothBeacon_descriptor =
@@ -76,6 +78,7 @@ public final class BluetoothBeaconOuterClass {
         internal_static_opencannabis_proximity_BluetoothBeacon_descriptor,
         new java.lang.String[] { "Uuid", "Major", "Minor", "Seen", "Location", "Accuracy", });
     io.opencannabis.schema.geo.LocationOuterClass.getDescriptor();
+    io.opencannabis.schema.geo.DistanceOuterClass.getDescriptor();
     io.opencannabis.schema.temporal.TemporalInstant.getDescriptor();
   }
 

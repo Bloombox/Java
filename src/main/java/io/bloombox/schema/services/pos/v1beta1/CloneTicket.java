@@ -1,8 +1,8 @@
 /*
- * Copyright 2018, Bloombox, LLC. All rights reserved.
+ * Copyright 2018, Momentum Ideas, Co. All rights reserved.
  *
  * Source and object computer code contained herein is the private intellectual
- * property of Bloombox, a California Limited Liability Corporation. Use of this
+ * property of Momentum Ideas Co., a Delaware Corporation. Use of this
  * code in source form requires permission in writing before use or the
  * assembly, distribution, or publishing of derivative works, for commercial
  * purposes or any other purpose, from a duly authorized officer of Momentum
@@ -27,11 +27,11 @@ package io.bloombox.schema.services.pos.v1beta1;
  * customer may be replaced.
  * </pre>
  *
- * Protobuf type {@code bloombox.schema.services.pos.v1beta1.CloneTicket}
+ * Protobuf type {@code bloombox.services.pos.v1beta1.CloneTicket}
  */
 public  final class CloneTicket extends
     com.google.protobuf.GeneratedMessageV3 implements
-    // @@protoc_insertion_point(message_implements:bloombox.schema.services.pos.v1beta1.CloneTicket)
+    // @@protoc_insertion_point(message_implements:bloombox.services.pos.v1beta1.CloneTicket)
     CloneTicketOrBuilder {
 private static final long serialVersionUID = 0L;
   // Use CloneTicket.newBuilder() to construct.
@@ -85,18 +85,19 @@ private static final long serialVersionUID = 0L;
   }
   public static final com.google.protobuf.Descriptors.Descriptor
       getDescriptor() {
-    return io.bloombox.schema.services.pos.v1beta1.POSServiceBeta1.internal_static_bloombox_schema_services_pos_v1beta1_CloneTicket_descriptor;
+    return io.bloombox.schema.services.pos.v1beta1.POSServiceBeta1.internal_static_bloombox_services_pos_v1beta1_CloneTicket_descriptor;
   }
 
+  @java.lang.Override
   protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internalGetFieldAccessorTable() {
-    return io.bloombox.schema.services.pos.v1beta1.POSServiceBeta1.internal_static_bloombox_schema_services_pos_v1beta1_CloneTicket_fieldAccessorTable
+    return io.bloombox.schema.services.pos.v1beta1.POSServiceBeta1.internal_static_bloombox_services_pos_v1beta1_CloneTicket_fieldAccessorTable
         .ensureFieldAccessorsInitialized(
             io.bloombox.schema.services.pos.v1beta1.CloneTicket.class, io.bloombox.schema.services.pos.v1beta1.CloneTicket.Builder.class);
   }
 
   public interface RequestOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:bloombox.schema.services.pos.v1beta1.CloneTicket.Request)
+      // @@protoc_insertion_point(interface_extends:bloombox.services.pos.v1beta1.CloneTicket.Request)
       com.google.protobuf.MessageOrBuilder {
 
     /**
@@ -129,7 +130,7 @@ private static final long serialVersionUID = 0L;
      * Specifies the device for which a ticket is being cloned.
      * </pre>
      *
-     * <code>.bloombox.schema.partner.PartnerDeviceKey register = 2;</code>
+     * <code>.bloombox.partner.PartnerDeviceKey register = 2;</code>
      */
     boolean hasRegister();
     /**
@@ -137,7 +138,7 @@ private static final long serialVersionUID = 0L;
      * Specifies the device for which a ticket is being cloned.
      * </pre>
      *
-     * <code>.bloombox.schema.partner.PartnerDeviceKey register = 2;</code>
+     * <code>.bloombox.partner.PartnerDeviceKey register = 2;</code>
      */
     io.bloombox.schema.partner.PartnerDevices.PartnerDeviceKey getRegister();
     /**
@@ -145,7 +146,7 @@ private static final long serialVersionUID = 0L;
      * Specifies the device for which a ticket is being cloned.
      * </pre>
      *
-     * <code>.bloombox.schema.partner.PartnerDeviceKey register = 2;</code>
+     * <code>.bloombox.partner.PartnerDeviceKey register = 2;</code>
      */
     io.bloombox.schema.partner.PartnerDevices.PartnerDeviceKeyOrBuilder getRegisterOrBuilder();
 
@@ -172,11 +173,11 @@ private static final long serialVersionUID = 0L;
    * Request to clone an existing purchase ticket.
    * </pre>
    *
-   * Protobuf type {@code bloombox.schema.services.pos.v1beta1.CloneTicket.Request}
+   * Protobuf type {@code bloombox.services.pos.v1beta1.CloneTicket.Request}
    */
   public  static final class Request extends
       com.google.protobuf.GeneratedMessageV3 implements
-      // @@protoc_insertion_point(message_implements:bloombox.schema.services.pos.v1beta1.CloneTicket.Request)
+      // @@protoc_insertion_point(message_implements:bloombox.services.pos.v1beta1.CloneTicket.Request)
       RequestOrBuilder {
   private static final long serialVersionUID = 0L;
     // Use Request.newBuilder() to construct.
@@ -211,13 +212,6 @@ private static final long serialVersionUID = 0L;
             case 0:
               done = true;
               break;
-            default: {
-              if (!parseUnknownFieldProto3(
-                  input, unknownFields, extensionRegistry, tag)) {
-                done = true;
-              }
-              break;
-            }
             case 10: {
               io.opencannabis.schema.commerce.CommercialPurchase.PurchaseKey.Builder subBuilder = null;
               if (purchase_ != null) {
@@ -250,6 +244,13 @@ private static final long serialVersionUID = 0L;
               session_ = s;
               break;
             }
+            default: {
+              if (!parseUnknownFieldProto3(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
           }
         }
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
@@ -264,12 +265,13 @@ private static final long serialVersionUID = 0L;
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return io.bloombox.schema.services.pos.v1beta1.POSServiceBeta1.internal_static_bloombox_schema_services_pos_v1beta1_CloneTicket_Request_descriptor;
+      return io.bloombox.schema.services.pos.v1beta1.POSServiceBeta1.internal_static_bloombox_services_pos_v1beta1_CloneTicket_Request_descriptor;
     }
 
+    @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return io.bloombox.schema.services.pos.v1beta1.POSServiceBeta1.internal_static_bloombox_schema_services_pos_v1beta1_CloneTicket_Request_fieldAccessorTable
+      return io.bloombox.schema.services.pos.v1beta1.POSServiceBeta1.internal_static_bloombox_services_pos_v1beta1_CloneTicket_Request_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
               io.bloombox.schema.services.pos.v1beta1.CloneTicket.Request.class, io.bloombox.schema.services.pos.v1beta1.CloneTicket.Request.Builder.class);
     }
@@ -314,7 +316,7 @@ private static final long serialVersionUID = 0L;
      * Specifies the device for which a ticket is being cloned.
      * </pre>
      *
-     * <code>.bloombox.schema.partner.PartnerDeviceKey register = 2;</code>
+     * <code>.bloombox.partner.PartnerDeviceKey register = 2;</code>
      */
     public boolean hasRegister() {
       return register_ != null;
@@ -324,7 +326,7 @@ private static final long serialVersionUID = 0L;
      * Specifies the device for which a ticket is being cloned.
      * </pre>
      *
-     * <code>.bloombox.schema.partner.PartnerDeviceKey register = 2;</code>
+     * <code>.bloombox.partner.PartnerDeviceKey register = 2;</code>
      */
     public io.bloombox.schema.partner.PartnerDevices.PartnerDeviceKey getRegister() {
       return register_ == null ? io.bloombox.schema.partner.PartnerDevices.PartnerDeviceKey.getDefaultInstance() : register_;
@@ -334,7 +336,7 @@ private static final long serialVersionUID = 0L;
      * Specifies the device for which a ticket is being cloned.
      * </pre>
      *
-     * <code>.bloombox.schema.partner.PartnerDeviceKey register = 2;</code>
+     * <code>.bloombox.partner.PartnerDeviceKey register = 2;</code>
      */
     public io.bloombox.schema.partner.PartnerDevices.PartnerDeviceKeyOrBuilder getRegisterOrBuilder() {
       return getRegister();
@@ -383,6 +385,7 @@ private static final long serialVersionUID = 0L;
     }
 
     private byte memoizedIsInitialized = -1;
+    @java.lang.Override
     public final boolean isInitialized() {
       byte isInitialized = memoizedIsInitialized;
       if (isInitialized == 1) return true;
@@ -392,6 +395,7 @@ private static final long serialVersionUID = 0L;
       return true;
     }
 
+    @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
       if (purchase_ != null) {
@@ -406,6 +410,7 @@ private static final long serialVersionUID = 0L;
       unknownFields.writeTo(output);
     }
 
+    @java.lang.Override
     public int getSerializedSize() {
       int size = memoizedSize;
       if (size != -1) return size;
@@ -546,6 +551,7 @@ private static final long serialVersionUID = 0L;
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
 
+    @java.lang.Override
     public Builder newBuilderForType() { return newBuilder(); }
     public static Builder newBuilder() {
       return DEFAULT_INSTANCE.toBuilder();
@@ -553,6 +559,7 @@ private static final long serialVersionUID = 0L;
     public static Builder newBuilder(io.bloombox.schema.services.pos.v1beta1.CloneTicket.Request prototype) {
       return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
     }
+    @java.lang.Override
     public Builder toBuilder() {
       return this == DEFAULT_INSTANCE
           ? new Builder() : new Builder().mergeFrom(this);
@@ -569,20 +576,21 @@ private static final long serialVersionUID = 0L;
      * Request to clone an existing purchase ticket.
      * </pre>
      *
-     * Protobuf type {@code bloombox.schema.services.pos.v1beta1.CloneTicket.Request}
+     * Protobuf type {@code bloombox.services.pos.v1beta1.CloneTicket.Request}
      */
     public static final class Builder extends
         com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:bloombox.schema.services.pos.v1beta1.CloneTicket.Request)
+        // @@protoc_insertion_point(builder_implements:bloombox.services.pos.v1beta1.CloneTicket.Request)
         io.bloombox.schema.services.pos.v1beta1.CloneTicket.RequestOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return io.bloombox.schema.services.pos.v1beta1.POSServiceBeta1.internal_static_bloombox_schema_services_pos_v1beta1_CloneTicket_Request_descriptor;
+        return io.bloombox.schema.services.pos.v1beta1.POSServiceBeta1.internal_static_bloombox_services_pos_v1beta1_CloneTicket_Request_descriptor;
       }
 
+      @java.lang.Override
       protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return io.bloombox.schema.services.pos.v1beta1.POSServiceBeta1.internal_static_bloombox_schema_services_pos_v1beta1_CloneTicket_Request_fieldAccessorTable
+        return io.bloombox.schema.services.pos.v1beta1.POSServiceBeta1.internal_static_bloombox_services_pos_v1beta1_CloneTicket_Request_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
                 io.bloombox.schema.services.pos.v1beta1.CloneTicket.Request.class, io.bloombox.schema.services.pos.v1beta1.CloneTicket.Request.Builder.class);
       }
@@ -602,6 +610,7 @@ private static final long serialVersionUID = 0L;
                 .alwaysUseFieldBuilders) {
         }
       }
+      @java.lang.Override
       public Builder clear() {
         super.clear();
         if (purchaseBuilder_ == null) {
@@ -621,15 +630,18 @@ private static final long serialVersionUID = 0L;
         return this;
       }
 
+      @java.lang.Override
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return io.bloombox.schema.services.pos.v1beta1.POSServiceBeta1.internal_static_bloombox_schema_services_pos_v1beta1_CloneTicket_Request_descriptor;
+        return io.bloombox.schema.services.pos.v1beta1.POSServiceBeta1.internal_static_bloombox_services_pos_v1beta1_CloneTicket_Request_descriptor;
       }
 
+      @java.lang.Override
       public io.bloombox.schema.services.pos.v1beta1.CloneTicket.Request getDefaultInstanceForType() {
         return io.bloombox.schema.services.pos.v1beta1.CloneTicket.Request.getDefaultInstance();
       }
 
+      @java.lang.Override
       public io.bloombox.schema.services.pos.v1beta1.CloneTicket.Request build() {
         io.bloombox.schema.services.pos.v1beta1.CloneTicket.Request result = buildPartial();
         if (!result.isInitialized()) {
@@ -638,6 +650,7 @@ private static final long serialVersionUID = 0L;
         return result;
       }
 
+      @java.lang.Override
       public io.bloombox.schema.services.pos.v1beta1.CloneTicket.Request buildPartial() {
         io.bloombox.schema.services.pos.v1beta1.CloneTicket.Request result = new io.bloombox.schema.services.pos.v1beta1.CloneTicket.Request(this);
         if (purchaseBuilder_ == null) {
@@ -655,32 +668,39 @@ private static final long serialVersionUID = 0L;
         return result;
       }
 
+      @java.lang.Override
       public Builder clone() {
         return (Builder) super.clone();
       }
+      @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
         return (Builder) super.setField(field, value);
       }
+      @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
         return (Builder) super.clearField(field);
       }
+      @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
         return (Builder) super.clearOneof(oneof);
       }
+      @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
         return (Builder) super.setRepeatedField(field, index, value);
       }
+      @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
         return (Builder) super.addRepeatedField(field, value);
       }
+      @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
         if (other instanceof io.bloombox.schema.services.pos.v1beta1.CloneTicket.Request) {
           return mergeFrom((io.bloombox.schema.services.pos.v1beta1.CloneTicket.Request)other);
@@ -707,10 +727,12 @@ private static final long serialVersionUID = 0L;
         return this;
       }
 
+      @java.lang.Override
       public final boolean isInitialized() {
         return true;
       }
 
+      @java.lang.Override
       public Builder mergeFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -890,7 +912,7 @@ private static final long serialVersionUID = 0L;
        * Specifies the device for which a ticket is being cloned.
        * </pre>
        *
-       * <code>.bloombox.schema.partner.PartnerDeviceKey register = 2;</code>
+       * <code>.bloombox.partner.PartnerDeviceKey register = 2;</code>
        */
       public boolean hasRegister() {
         return registerBuilder_ != null || register_ != null;
@@ -900,7 +922,7 @@ private static final long serialVersionUID = 0L;
        * Specifies the device for which a ticket is being cloned.
        * </pre>
        *
-       * <code>.bloombox.schema.partner.PartnerDeviceKey register = 2;</code>
+       * <code>.bloombox.partner.PartnerDeviceKey register = 2;</code>
        */
       public io.bloombox.schema.partner.PartnerDevices.PartnerDeviceKey getRegister() {
         if (registerBuilder_ == null) {
@@ -914,7 +936,7 @@ private static final long serialVersionUID = 0L;
        * Specifies the device for which a ticket is being cloned.
        * </pre>
        *
-       * <code>.bloombox.schema.partner.PartnerDeviceKey register = 2;</code>
+       * <code>.bloombox.partner.PartnerDeviceKey register = 2;</code>
        */
       public Builder setRegister(io.bloombox.schema.partner.PartnerDevices.PartnerDeviceKey value) {
         if (registerBuilder_ == null) {
@@ -934,7 +956,7 @@ private static final long serialVersionUID = 0L;
        * Specifies the device for which a ticket is being cloned.
        * </pre>
        *
-       * <code>.bloombox.schema.partner.PartnerDeviceKey register = 2;</code>
+       * <code>.bloombox.partner.PartnerDeviceKey register = 2;</code>
        */
       public Builder setRegister(
           io.bloombox.schema.partner.PartnerDevices.PartnerDeviceKey.Builder builderForValue) {
@@ -952,7 +974,7 @@ private static final long serialVersionUID = 0L;
        * Specifies the device for which a ticket is being cloned.
        * </pre>
        *
-       * <code>.bloombox.schema.partner.PartnerDeviceKey register = 2;</code>
+       * <code>.bloombox.partner.PartnerDeviceKey register = 2;</code>
        */
       public Builder mergeRegister(io.bloombox.schema.partner.PartnerDevices.PartnerDeviceKey value) {
         if (registerBuilder_ == null) {
@@ -974,7 +996,7 @@ private static final long serialVersionUID = 0L;
        * Specifies the device for which a ticket is being cloned.
        * </pre>
        *
-       * <code>.bloombox.schema.partner.PartnerDeviceKey register = 2;</code>
+       * <code>.bloombox.partner.PartnerDeviceKey register = 2;</code>
        */
       public Builder clearRegister() {
         if (registerBuilder_ == null) {
@@ -992,7 +1014,7 @@ private static final long serialVersionUID = 0L;
        * Specifies the device for which a ticket is being cloned.
        * </pre>
        *
-       * <code>.bloombox.schema.partner.PartnerDeviceKey register = 2;</code>
+       * <code>.bloombox.partner.PartnerDeviceKey register = 2;</code>
        */
       public io.bloombox.schema.partner.PartnerDevices.PartnerDeviceKey.Builder getRegisterBuilder() {
         
@@ -1004,7 +1026,7 @@ private static final long serialVersionUID = 0L;
        * Specifies the device for which a ticket is being cloned.
        * </pre>
        *
-       * <code>.bloombox.schema.partner.PartnerDeviceKey register = 2;</code>
+       * <code>.bloombox.partner.PartnerDeviceKey register = 2;</code>
        */
       public io.bloombox.schema.partner.PartnerDevices.PartnerDeviceKeyOrBuilder getRegisterOrBuilder() {
         if (registerBuilder_ != null) {
@@ -1019,7 +1041,7 @@ private static final long serialVersionUID = 0L;
        * Specifies the device for which a ticket is being cloned.
        * </pre>
        *
-       * <code>.bloombox.schema.partner.PartnerDeviceKey register = 2;</code>
+       * <code>.bloombox.partner.PartnerDeviceKey register = 2;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
           io.bloombox.schema.partner.PartnerDevices.PartnerDeviceKey, io.bloombox.schema.partner.PartnerDevices.PartnerDeviceKey.Builder, io.bloombox.schema.partner.PartnerDevices.PartnerDeviceKeyOrBuilder> 
@@ -1123,21 +1145,23 @@ private static final long serialVersionUID = 0L;
         onChanged();
         return this;
       }
+      @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
         return super.setUnknownFieldsProto3(unknownFields);
       }
 
+      @java.lang.Override
       public final Builder mergeUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
         return super.mergeUnknownFields(unknownFields);
       }
 
 
-      // @@protoc_insertion_point(builder_scope:bloombox.schema.services.pos.v1beta1.CloneTicket.Request)
+      // @@protoc_insertion_point(builder_scope:bloombox.services.pos.v1beta1.CloneTicket.Request)
     }
 
-    // @@protoc_insertion_point(class_scope:bloombox.schema.services.pos.v1beta1.CloneTicket.Request)
+    // @@protoc_insertion_point(class_scope:bloombox.services.pos.v1beta1.CloneTicket.Request)
     private static final io.bloombox.schema.services.pos.v1beta1.CloneTicket.Request DEFAULT_INSTANCE;
     static {
       DEFAULT_INSTANCE = new io.bloombox.schema.services.pos.v1beta1.CloneTicket.Request();
@@ -1149,6 +1173,7 @@ private static final long serialVersionUID = 0L;
 
     private static final com.google.protobuf.Parser<Request>
         PARSER = new com.google.protobuf.AbstractParser<Request>() {
+      @java.lang.Override
       public Request parsePartialFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -1166,6 +1191,7 @@ private static final long serialVersionUID = 0L;
       return PARSER;
     }
 
+    @java.lang.Override
     public io.bloombox.schema.services.pos.v1beta1.CloneTicket.Request getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
@@ -1173,7 +1199,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public interface ResponseOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:bloombox.schema.services.pos.v1beta1.CloneTicket.Response)
+      // @@protoc_insertion_point(interface_extends:bloombox.services.pos.v1beta1.CloneTicket.Response)
       com.google.protobuf.MessageOrBuilder {
 
     /**
@@ -1181,7 +1207,7 @@ private static final long serialVersionUID = 0L;
      * Specifies the resulting newly-cloned purchase ticket, if it could successfully be cloned.
      * </pre>
      *
-     * <code>.opencannabis.commerce.PurchaseTicket ticket = 1;</code>
+     * <code>.bloombox.pos.PurchaseTicket ticket = 1;</code>
      */
     boolean hasTicket();
     /**
@@ -1189,28 +1215,28 @@ private static final long serialVersionUID = 0L;
      * Specifies the resulting newly-cloned purchase ticket, if it could successfully be cloned.
      * </pre>
      *
-     * <code>.opencannabis.commerce.PurchaseTicket ticket = 1;</code>
+     * <code>.bloombox.pos.PurchaseTicket ticket = 1;</code>
      */
-    io.opencannabis.schema.commerce.CommercialPurchase.PurchaseTicket getTicket();
+    io.opencannabis.schema.commerce.CommercialPOS.PurchaseTicket getTicket();
     /**
      * <pre>
      * Specifies the resulting newly-cloned purchase ticket, if it could successfully be cloned.
      * </pre>
      *
-     * <code>.opencannabis.commerce.PurchaseTicket ticket = 1;</code>
+     * <code>.bloombox.pos.PurchaseTicket ticket = 1;</code>
      */
-    io.opencannabis.schema.commerce.CommercialPurchase.PurchaseTicketOrBuilder getTicketOrBuilder();
+    io.opencannabis.schema.commerce.CommercialPOS.PurchaseTicketOrBuilder getTicketOrBuilder();
   }
   /**
    * <pre>
    * Response to a request to clone an existing purchase ticket.
    * </pre>
    *
-   * Protobuf type {@code bloombox.schema.services.pos.v1beta1.CloneTicket.Response}
+   * Protobuf type {@code bloombox.services.pos.v1beta1.CloneTicket.Response}
    */
   public  static final class Response extends
       com.google.protobuf.GeneratedMessageV3 implements
-      // @@protoc_insertion_point(message_implements:bloombox.schema.services.pos.v1beta1.CloneTicket.Response)
+      // @@protoc_insertion_point(message_implements:bloombox.services.pos.v1beta1.CloneTicket.Response)
       ResponseOrBuilder {
   private static final long serialVersionUID = 0L;
     // Use Response.newBuilder() to construct.
@@ -1244,24 +1270,24 @@ private static final long serialVersionUID = 0L;
             case 0:
               done = true;
               break;
-            default: {
-              if (!parseUnknownFieldProto3(
-                  input, unknownFields, extensionRegistry, tag)) {
-                done = true;
-              }
-              break;
-            }
             case 10: {
-              io.opencannabis.schema.commerce.CommercialPurchase.PurchaseTicket.Builder subBuilder = null;
+              io.opencannabis.schema.commerce.CommercialPOS.PurchaseTicket.Builder subBuilder = null;
               if (ticket_ != null) {
                 subBuilder = ticket_.toBuilder();
               }
-              ticket_ = input.readMessage(io.opencannabis.schema.commerce.CommercialPurchase.PurchaseTicket.parser(), extensionRegistry);
+              ticket_ = input.readMessage(io.opencannabis.schema.commerce.CommercialPOS.PurchaseTicket.parser(), extensionRegistry);
               if (subBuilder != null) {
                 subBuilder.mergeFrom(ticket_);
                 ticket_ = subBuilder.buildPartial();
               }
 
+              break;
+            }
+            default: {
+              if (!parseUnknownFieldProto3(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
               break;
             }
           }
@@ -1278,24 +1304,25 @@ private static final long serialVersionUID = 0L;
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return io.bloombox.schema.services.pos.v1beta1.POSServiceBeta1.internal_static_bloombox_schema_services_pos_v1beta1_CloneTicket_Response_descriptor;
+      return io.bloombox.schema.services.pos.v1beta1.POSServiceBeta1.internal_static_bloombox_services_pos_v1beta1_CloneTicket_Response_descriptor;
     }
 
+    @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return io.bloombox.schema.services.pos.v1beta1.POSServiceBeta1.internal_static_bloombox_schema_services_pos_v1beta1_CloneTicket_Response_fieldAccessorTable
+      return io.bloombox.schema.services.pos.v1beta1.POSServiceBeta1.internal_static_bloombox_services_pos_v1beta1_CloneTicket_Response_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
               io.bloombox.schema.services.pos.v1beta1.CloneTicket.Response.class, io.bloombox.schema.services.pos.v1beta1.CloneTicket.Response.Builder.class);
     }
 
     public static final int TICKET_FIELD_NUMBER = 1;
-    private io.opencannabis.schema.commerce.CommercialPurchase.PurchaseTicket ticket_;
+    private io.opencannabis.schema.commerce.CommercialPOS.PurchaseTicket ticket_;
     /**
      * <pre>
      * Specifies the resulting newly-cloned purchase ticket, if it could successfully be cloned.
      * </pre>
      *
-     * <code>.opencannabis.commerce.PurchaseTicket ticket = 1;</code>
+     * <code>.bloombox.pos.PurchaseTicket ticket = 1;</code>
      */
     public boolean hasTicket() {
       return ticket_ != null;
@@ -1305,23 +1332,24 @@ private static final long serialVersionUID = 0L;
      * Specifies the resulting newly-cloned purchase ticket, if it could successfully be cloned.
      * </pre>
      *
-     * <code>.opencannabis.commerce.PurchaseTicket ticket = 1;</code>
+     * <code>.bloombox.pos.PurchaseTicket ticket = 1;</code>
      */
-    public io.opencannabis.schema.commerce.CommercialPurchase.PurchaseTicket getTicket() {
-      return ticket_ == null ? io.opencannabis.schema.commerce.CommercialPurchase.PurchaseTicket.getDefaultInstance() : ticket_;
+    public io.opencannabis.schema.commerce.CommercialPOS.PurchaseTicket getTicket() {
+      return ticket_ == null ? io.opencannabis.schema.commerce.CommercialPOS.PurchaseTicket.getDefaultInstance() : ticket_;
     }
     /**
      * <pre>
      * Specifies the resulting newly-cloned purchase ticket, if it could successfully be cloned.
      * </pre>
      *
-     * <code>.opencannabis.commerce.PurchaseTicket ticket = 1;</code>
+     * <code>.bloombox.pos.PurchaseTicket ticket = 1;</code>
      */
-    public io.opencannabis.schema.commerce.CommercialPurchase.PurchaseTicketOrBuilder getTicketOrBuilder() {
+    public io.opencannabis.schema.commerce.CommercialPOS.PurchaseTicketOrBuilder getTicketOrBuilder() {
       return getTicket();
     }
 
     private byte memoizedIsInitialized = -1;
+    @java.lang.Override
     public final boolean isInitialized() {
       byte isInitialized = memoizedIsInitialized;
       if (isInitialized == 1) return true;
@@ -1331,6 +1359,7 @@ private static final long serialVersionUID = 0L;
       return true;
     }
 
+    @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
       if (ticket_ != null) {
@@ -1339,6 +1368,7 @@ private static final long serialVersionUID = 0L;
       unknownFields.writeTo(output);
     }
 
+    @java.lang.Override
     public int getSerializedSize() {
       int size = memoizedSize;
       if (size != -1) return size;
@@ -1459,6 +1489,7 @@ private static final long serialVersionUID = 0L;
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
 
+    @java.lang.Override
     public Builder newBuilderForType() { return newBuilder(); }
     public static Builder newBuilder() {
       return DEFAULT_INSTANCE.toBuilder();
@@ -1466,6 +1497,7 @@ private static final long serialVersionUID = 0L;
     public static Builder newBuilder(io.bloombox.schema.services.pos.v1beta1.CloneTicket.Response prototype) {
       return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
     }
+    @java.lang.Override
     public Builder toBuilder() {
       return this == DEFAULT_INSTANCE
           ? new Builder() : new Builder().mergeFrom(this);
@@ -1482,20 +1514,21 @@ private static final long serialVersionUID = 0L;
      * Response to a request to clone an existing purchase ticket.
      * </pre>
      *
-     * Protobuf type {@code bloombox.schema.services.pos.v1beta1.CloneTicket.Response}
+     * Protobuf type {@code bloombox.services.pos.v1beta1.CloneTicket.Response}
      */
     public static final class Builder extends
         com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:bloombox.schema.services.pos.v1beta1.CloneTicket.Response)
+        // @@protoc_insertion_point(builder_implements:bloombox.services.pos.v1beta1.CloneTicket.Response)
         io.bloombox.schema.services.pos.v1beta1.CloneTicket.ResponseOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return io.bloombox.schema.services.pos.v1beta1.POSServiceBeta1.internal_static_bloombox_schema_services_pos_v1beta1_CloneTicket_Response_descriptor;
+        return io.bloombox.schema.services.pos.v1beta1.POSServiceBeta1.internal_static_bloombox_services_pos_v1beta1_CloneTicket_Response_descriptor;
       }
 
+      @java.lang.Override
       protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return io.bloombox.schema.services.pos.v1beta1.POSServiceBeta1.internal_static_bloombox_schema_services_pos_v1beta1_CloneTicket_Response_fieldAccessorTable
+        return io.bloombox.schema.services.pos.v1beta1.POSServiceBeta1.internal_static_bloombox_services_pos_v1beta1_CloneTicket_Response_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
                 io.bloombox.schema.services.pos.v1beta1.CloneTicket.Response.class, io.bloombox.schema.services.pos.v1beta1.CloneTicket.Response.Builder.class);
       }
@@ -1515,6 +1548,7 @@ private static final long serialVersionUID = 0L;
                 .alwaysUseFieldBuilders) {
         }
       }
+      @java.lang.Override
       public Builder clear() {
         super.clear();
         if (ticketBuilder_ == null) {
@@ -1526,15 +1560,18 @@ private static final long serialVersionUID = 0L;
         return this;
       }
 
+      @java.lang.Override
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return io.bloombox.schema.services.pos.v1beta1.POSServiceBeta1.internal_static_bloombox_schema_services_pos_v1beta1_CloneTicket_Response_descriptor;
+        return io.bloombox.schema.services.pos.v1beta1.POSServiceBeta1.internal_static_bloombox_services_pos_v1beta1_CloneTicket_Response_descriptor;
       }
 
+      @java.lang.Override
       public io.bloombox.schema.services.pos.v1beta1.CloneTicket.Response getDefaultInstanceForType() {
         return io.bloombox.schema.services.pos.v1beta1.CloneTicket.Response.getDefaultInstance();
       }
 
+      @java.lang.Override
       public io.bloombox.schema.services.pos.v1beta1.CloneTicket.Response build() {
         io.bloombox.schema.services.pos.v1beta1.CloneTicket.Response result = buildPartial();
         if (!result.isInitialized()) {
@@ -1543,6 +1580,7 @@ private static final long serialVersionUID = 0L;
         return result;
       }
 
+      @java.lang.Override
       public io.bloombox.schema.services.pos.v1beta1.CloneTicket.Response buildPartial() {
         io.bloombox.schema.services.pos.v1beta1.CloneTicket.Response result = new io.bloombox.schema.services.pos.v1beta1.CloneTicket.Response(this);
         if (ticketBuilder_ == null) {
@@ -1554,32 +1592,39 @@ private static final long serialVersionUID = 0L;
         return result;
       }
 
+      @java.lang.Override
       public Builder clone() {
         return (Builder) super.clone();
       }
+      @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
         return (Builder) super.setField(field, value);
       }
+      @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
         return (Builder) super.clearField(field);
       }
+      @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
         return (Builder) super.clearOneof(oneof);
       }
+      @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
         return (Builder) super.setRepeatedField(field, index, value);
       }
+      @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
         return (Builder) super.addRepeatedField(field, value);
       }
+      @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
         if (other instanceof io.bloombox.schema.services.pos.v1beta1.CloneTicket.Response) {
           return mergeFrom((io.bloombox.schema.services.pos.v1beta1.CloneTicket.Response)other);
@@ -1599,10 +1644,12 @@ private static final long serialVersionUID = 0L;
         return this;
       }
 
+      @java.lang.Override
       public final boolean isInitialized() {
         return true;
       }
 
+      @java.lang.Override
       public Builder mergeFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -1621,15 +1668,15 @@ private static final long serialVersionUID = 0L;
         return this;
       }
 
-      private io.opencannabis.schema.commerce.CommercialPurchase.PurchaseTicket ticket_ = null;
+      private io.opencannabis.schema.commerce.CommercialPOS.PurchaseTicket ticket_ = null;
       private com.google.protobuf.SingleFieldBuilderV3<
-          io.opencannabis.schema.commerce.CommercialPurchase.PurchaseTicket, io.opencannabis.schema.commerce.CommercialPurchase.PurchaseTicket.Builder, io.opencannabis.schema.commerce.CommercialPurchase.PurchaseTicketOrBuilder> ticketBuilder_;
+          io.opencannabis.schema.commerce.CommercialPOS.PurchaseTicket, io.opencannabis.schema.commerce.CommercialPOS.PurchaseTicket.Builder, io.opencannabis.schema.commerce.CommercialPOS.PurchaseTicketOrBuilder> ticketBuilder_;
       /**
        * <pre>
        * Specifies the resulting newly-cloned purchase ticket, if it could successfully be cloned.
        * </pre>
        *
-       * <code>.opencannabis.commerce.PurchaseTicket ticket = 1;</code>
+       * <code>.bloombox.pos.PurchaseTicket ticket = 1;</code>
        */
       public boolean hasTicket() {
         return ticketBuilder_ != null || ticket_ != null;
@@ -1639,11 +1686,11 @@ private static final long serialVersionUID = 0L;
        * Specifies the resulting newly-cloned purchase ticket, if it could successfully be cloned.
        * </pre>
        *
-       * <code>.opencannabis.commerce.PurchaseTicket ticket = 1;</code>
+       * <code>.bloombox.pos.PurchaseTicket ticket = 1;</code>
        */
-      public io.opencannabis.schema.commerce.CommercialPurchase.PurchaseTicket getTicket() {
+      public io.opencannabis.schema.commerce.CommercialPOS.PurchaseTicket getTicket() {
         if (ticketBuilder_ == null) {
-          return ticket_ == null ? io.opencannabis.schema.commerce.CommercialPurchase.PurchaseTicket.getDefaultInstance() : ticket_;
+          return ticket_ == null ? io.opencannabis.schema.commerce.CommercialPOS.PurchaseTicket.getDefaultInstance() : ticket_;
         } else {
           return ticketBuilder_.getMessage();
         }
@@ -1653,9 +1700,9 @@ private static final long serialVersionUID = 0L;
        * Specifies the resulting newly-cloned purchase ticket, if it could successfully be cloned.
        * </pre>
        *
-       * <code>.opencannabis.commerce.PurchaseTicket ticket = 1;</code>
+       * <code>.bloombox.pos.PurchaseTicket ticket = 1;</code>
        */
-      public Builder setTicket(io.opencannabis.schema.commerce.CommercialPurchase.PurchaseTicket value) {
+      public Builder setTicket(io.opencannabis.schema.commerce.CommercialPOS.PurchaseTicket value) {
         if (ticketBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
@@ -1673,10 +1720,10 @@ private static final long serialVersionUID = 0L;
        * Specifies the resulting newly-cloned purchase ticket, if it could successfully be cloned.
        * </pre>
        *
-       * <code>.opencannabis.commerce.PurchaseTicket ticket = 1;</code>
+       * <code>.bloombox.pos.PurchaseTicket ticket = 1;</code>
        */
       public Builder setTicket(
-          io.opencannabis.schema.commerce.CommercialPurchase.PurchaseTicket.Builder builderForValue) {
+          io.opencannabis.schema.commerce.CommercialPOS.PurchaseTicket.Builder builderForValue) {
         if (ticketBuilder_ == null) {
           ticket_ = builderForValue.build();
           onChanged();
@@ -1691,13 +1738,13 @@ private static final long serialVersionUID = 0L;
        * Specifies the resulting newly-cloned purchase ticket, if it could successfully be cloned.
        * </pre>
        *
-       * <code>.opencannabis.commerce.PurchaseTicket ticket = 1;</code>
+       * <code>.bloombox.pos.PurchaseTicket ticket = 1;</code>
        */
-      public Builder mergeTicket(io.opencannabis.schema.commerce.CommercialPurchase.PurchaseTicket value) {
+      public Builder mergeTicket(io.opencannabis.schema.commerce.CommercialPOS.PurchaseTicket value) {
         if (ticketBuilder_ == null) {
           if (ticket_ != null) {
             ticket_ =
-              io.opencannabis.schema.commerce.CommercialPurchase.PurchaseTicket.newBuilder(ticket_).mergeFrom(value).buildPartial();
+              io.opencannabis.schema.commerce.CommercialPOS.PurchaseTicket.newBuilder(ticket_).mergeFrom(value).buildPartial();
           } else {
             ticket_ = value;
           }
@@ -1713,7 +1760,7 @@ private static final long serialVersionUID = 0L;
        * Specifies the resulting newly-cloned purchase ticket, if it could successfully be cloned.
        * </pre>
        *
-       * <code>.opencannabis.commerce.PurchaseTicket ticket = 1;</code>
+       * <code>.bloombox.pos.PurchaseTicket ticket = 1;</code>
        */
       public Builder clearTicket() {
         if (ticketBuilder_ == null) {
@@ -1731,9 +1778,9 @@ private static final long serialVersionUID = 0L;
        * Specifies the resulting newly-cloned purchase ticket, if it could successfully be cloned.
        * </pre>
        *
-       * <code>.opencannabis.commerce.PurchaseTicket ticket = 1;</code>
+       * <code>.bloombox.pos.PurchaseTicket ticket = 1;</code>
        */
-      public io.opencannabis.schema.commerce.CommercialPurchase.PurchaseTicket.Builder getTicketBuilder() {
+      public io.opencannabis.schema.commerce.CommercialPOS.PurchaseTicket.Builder getTicketBuilder() {
         
         onChanged();
         return getTicketFieldBuilder().getBuilder();
@@ -1743,14 +1790,14 @@ private static final long serialVersionUID = 0L;
        * Specifies the resulting newly-cloned purchase ticket, if it could successfully be cloned.
        * </pre>
        *
-       * <code>.opencannabis.commerce.PurchaseTicket ticket = 1;</code>
+       * <code>.bloombox.pos.PurchaseTicket ticket = 1;</code>
        */
-      public io.opencannabis.schema.commerce.CommercialPurchase.PurchaseTicketOrBuilder getTicketOrBuilder() {
+      public io.opencannabis.schema.commerce.CommercialPOS.PurchaseTicketOrBuilder getTicketOrBuilder() {
         if (ticketBuilder_ != null) {
           return ticketBuilder_.getMessageOrBuilder();
         } else {
           return ticket_ == null ?
-              io.opencannabis.schema.commerce.CommercialPurchase.PurchaseTicket.getDefaultInstance() : ticket_;
+              io.opencannabis.schema.commerce.CommercialPOS.PurchaseTicket.getDefaultInstance() : ticket_;
         }
       }
       /**
@@ -1758,14 +1805,14 @@ private static final long serialVersionUID = 0L;
        * Specifies the resulting newly-cloned purchase ticket, if it could successfully be cloned.
        * </pre>
        *
-       * <code>.opencannabis.commerce.PurchaseTicket ticket = 1;</code>
+       * <code>.bloombox.pos.PurchaseTicket ticket = 1;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
-          io.opencannabis.schema.commerce.CommercialPurchase.PurchaseTicket, io.opencannabis.schema.commerce.CommercialPurchase.PurchaseTicket.Builder, io.opencannabis.schema.commerce.CommercialPurchase.PurchaseTicketOrBuilder> 
+          io.opencannabis.schema.commerce.CommercialPOS.PurchaseTicket, io.opencannabis.schema.commerce.CommercialPOS.PurchaseTicket.Builder, io.opencannabis.schema.commerce.CommercialPOS.PurchaseTicketOrBuilder> 
           getTicketFieldBuilder() {
         if (ticketBuilder_ == null) {
           ticketBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-              io.opencannabis.schema.commerce.CommercialPurchase.PurchaseTicket, io.opencannabis.schema.commerce.CommercialPurchase.PurchaseTicket.Builder, io.opencannabis.schema.commerce.CommercialPurchase.PurchaseTicketOrBuilder>(
+              io.opencannabis.schema.commerce.CommercialPOS.PurchaseTicket, io.opencannabis.schema.commerce.CommercialPOS.PurchaseTicket.Builder, io.opencannabis.schema.commerce.CommercialPOS.PurchaseTicketOrBuilder>(
                   getTicket(),
                   getParentForChildren(),
                   isClean());
@@ -1773,21 +1820,23 @@ private static final long serialVersionUID = 0L;
         }
         return ticketBuilder_;
       }
+      @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
         return super.setUnknownFieldsProto3(unknownFields);
       }
 
+      @java.lang.Override
       public final Builder mergeUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
         return super.mergeUnknownFields(unknownFields);
       }
 
 
-      // @@protoc_insertion_point(builder_scope:bloombox.schema.services.pos.v1beta1.CloneTicket.Response)
+      // @@protoc_insertion_point(builder_scope:bloombox.services.pos.v1beta1.CloneTicket.Response)
     }
 
-    // @@protoc_insertion_point(class_scope:bloombox.schema.services.pos.v1beta1.CloneTicket.Response)
+    // @@protoc_insertion_point(class_scope:bloombox.services.pos.v1beta1.CloneTicket.Response)
     private static final io.bloombox.schema.services.pos.v1beta1.CloneTicket.Response DEFAULT_INSTANCE;
     static {
       DEFAULT_INSTANCE = new io.bloombox.schema.services.pos.v1beta1.CloneTicket.Response();
@@ -1799,6 +1848,7 @@ private static final long serialVersionUID = 0L;
 
     private static final com.google.protobuf.Parser<Response>
         PARSER = new com.google.protobuf.AbstractParser<Response>() {
+      @java.lang.Override
       public Response parsePartialFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -1816,6 +1866,7 @@ private static final long serialVersionUID = 0L;
       return PARSER;
     }
 
+    @java.lang.Override
     public io.bloombox.schema.services.pos.v1beta1.CloneTicket.Response getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
@@ -1823,7 +1874,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public interface OperationOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:bloombox.schema.services.pos.v1beta1.CloneTicket.Operation)
+      // @@protoc_insertion_point(interface_extends:bloombox.services.pos.v1beta1.CloneTicket.Operation)
       com.google.protobuf.MessageOrBuilder {
 
     /**
@@ -1831,7 +1882,7 @@ private static final long serialVersionUID = 0L;
      * Request to clone a purchase ticket.
      * </pre>
      *
-     * <code>.bloombox.schema.services.pos.v1beta1.CloneTicket.Request request = 1;</code>
+     * <code>.bloombox.services.pos.v1beta1.CloneTicket.Request request = 1;</code>
      */
     boolean hasRequest();
     /**
@@ -1839,7 +1890,7 @@ private static final long serialVersionUID = 0L;
      * Request to clone a purchase ticket.
      * </pre>
      *
-     * <code>.bloombox.schema.services.pos.v1beta1.CloneTicket.Request request = 1;</code>
+     * <code>.bloombox.services.pos.v1beta1.CloneTicket.Request request = 1;</code>
      */
     io.bloombox.schema.services.pos.v1beta1.CloneTicket.Request getRequest();
     /**
@@ -1847,7 +1898,7 @@ private static final long serialVersionUID = 0L;
      * Request to clone a purchase ticket.
      * </pre>
      *
-     * <code>.bloombox.schema.services.pos.v1beta1.CloneTicket.Request request = 1;</code>
+     * <code>.bloombox.services.pos.v1beta1.CloneTicket.Request request = 1;</code>
      */
     io.bloombox.schema.services.pos.v1beta1.CloneTicket.RequestOrBuilder getRequestOrBuilder();
 
@@ -1856,7 +1907,7 @@ private static final long serialVersionUID = 0L;
      * Response provided to this request to clone a purchase ticket.
      * </pre>
      *
-     * <code>.bloombox.schema.services.pos.v1beta1.CloneTicket.Response response = 2;</code>
+     * <code>.bloombox.services.pos.v1beta1.CloneTicket.Response response = 2;</code>
      */
     boolean hasResponse();
     /**
@@ -1864,7 +1915,7 @@ private static final long serialVersionUID = 0L;
      * Response provided to this request to clone a purchase ticket.
      * </pre>
      *
-     * <code>.bloombox.schema.services.pos.v1beta1.CloneTicket.Response response = 2;</code>
+     * <code>.bloombox.services.pos.v1beta1.CloneTicket.Response response = 2;</code>
      */
     io.bloombox.schema.services.pos.v1beta1.CloneTicket.Response getResponse();
     /**
@@ -1872,7 +1923,7 @@ private static final long serialVersionUID = 0L;
      * Response provided to this request to clone a purchase ticket.
      * </pre>
      *
-     * <code>.bloombox.schema.services.pos.v1beta1.CloneTicket.Response response = 2;</code>
+     * <code>.bloombox.services.pos.v1beta1.CloneTicket.Response response = 2;</code>
      */
     io.bloombox.schema.services.pos.v1beta1.CloneTicket.ResponseOrBuilder getResponseOrBuilder();
   }
@@ -1881,11 +1932,11 @@ private static final long serialVersionUID = 0L;
    * Represents an entire RPC operation to clone an existing purchase ticket.
    * </pre>
    *
-   * Protobuf type {@code bloombox.schema.services.pos.v1beta1.CloneTicket.Operation}
+   * Protobuf type {@code bloombox.services.pos.v1beta1.CloneTicket.Operation}
    */
   public  static final class Operation extends
       com.google.protobuf.GeneratedMessageV3 implements
-      // @@protoc_insertion_point(message_implements:bloombox.schema.services.pos.v1beta1.CloneTicket.Operation)
+      // @@protoc_insertion_point(message_implements:bloombox.services.pos.v1beta1.CloneTicket.Operation)
       OperationOrBuilder {
   private static final long serialVersionUID = 0L;
     // Use Operation.newBuilder() to construct.
@@ -1919,13 +1970,6 @@ private static final long serialVersionUID = 0L;
             case 0:
               done = true;
               break;
-            default: {
-              if (!parseUnknownFieldProto3(
-                  input, unknownFields, extensionRegistry, tag)) {
-                done = true;
-              }
-              break;
-            }
             case 10: {
               io.bloombox.schema.services.pos.v1beta1.CloneTicket.Request.Builder subBuilder = null;
               if (request_ != null) {
@@ -1952,6 +1996,13 @@ private static final long serialVersionUID = 0L;
 
               break;
             }
+            default: {
+              if (!parseUnknownFieldProto3(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
           }
         }
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
@@ -1966,12 +2017,13 @@ private static final long serialVersionUID = 0L;
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return io.bloombox.schema.services.pos.v1beta1.POSServiceBeta1.internal_static_bloombox_schema_services_pos_v1beta1_CloneTicket_Operation_descriptor;
+      return io.bloombox.schema.services.pos.v1beta1.POSServiceBeta1.internal_static_bloombox_services_pos_v1beta1_CloneTicket_Operation_descriptor;
     }
 
+    @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return io.bloombox.schema.services.pos.v1beta1.POSServiceBeta1.internal_static_bloombox_schema_services_pos_v1beta1_CloneTicket_Operation_fieldAccessorTable
+      return io.bloombox.schema.services.pos.v1beta1.POSServiceBeta1.internal_static_bloombox_services_pos_v1beta1_CloneTicket_Operation_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
               io.bloombox.schema.services.pos.v1beta1.CloneTicket.Operation.class, io.bloombox.schema.services.pos.v1beta1.CloneTicket.Operation.Builder.class);
     }
@@ -1983,7 +2035,7 @@ private static final long serialVersionUID = 0L;
      * Request to clone a purchase ticket.
      * </pre>
      *
-     * <code>.bloombox.schema.services.pos.v1beta1.CloneTicket.Request request = 1;</code>
+     * <code>.bloombox.services.pos.v1beta1.CloneTicket.Request request = 1;</code>
      */
     public boolean hasRequest() {
       return request_ != null;
@@ -1993,7 +2045,7 @@ private static final long serialVersionUID = 0L;
      * Request to clone a purchase ticket.
      * </pre>
      *
-     * <code>.bloombox.schema.services.pos.v1beta1.CloneTicket.Request request = 1;</code>
+     * <code>.bloombox.services.pos.v1beta1.CloneTicket.Request request = 1;</code>
      */
     public io.bloombox.schema.services.pos.v1beta1.CloneTicket.Request getRequest() {
       return request_ == null ? io.bloombox.schema.services.pos.v1beta1.CloneTicket.Request.getDefaultInstance() : request_;
@@ -2003,7 +2055,7 @@ private static final long serialVersionUID = 0L;
      * Request to clone a purchase ticket.
      * </pre>
      *
-     * <code>.bloombox.schema.services.pos.v1beta1.CloneTicket.Request request = 1;</code>
+     * <code>.bloombox.services.pos.v1beta1.CloneTicket.Request request = 1;</code>
      */
     public io.bloombox.schema.services.pos.v1beta1.CloneTicket.RequestOrBuilder getRequestOrBuilder() {
       return getRequest();
@@ -2016,7 +2068,7 @@ private static final long serialVersionUID = 0L;
      * Response provided to this request to clone a purchase ticket.
      * </pre>
      *
-     * <code>.bloombox.schema.services.pos.v1beta1.CloneTicket.Response response = 2;</code>
+     * <code>.bloombox.services.pos.v1beta1.CloneTicket.Response response = 2;</code>
      */
     public boolean hasResponse() {
       return response_ != null;
@@ -2026,7 +2078,7 @@ private static final long serialVersionUID = 0L;
      * Response provided to this request to clone a purchase ticket.
      * </pre>
      *
-     * <code>.bloombox.schema.services.pos.v1beta1.CloneTicket.Response response = 2;</code>
+     * <code>.bloombox.services.pos.v1beta1.CloneTicket.Response response = 2;</code>
      */
     public io.bloombox.schema.services.pos.v1beta1.CloneTicket.Response getResponse() {
       return response_ == null ? io.bloombox.schema.services.pos.v1beta1.CloneTicket.Response.getDefaultInstance() : response_;
@@ -2036,13 +2088,14 @@ private static final long serialVersionUID = 0L;
      * Response provided to this request to clone a purchase ticket.
      * </pre>
      *
-     * <code>.bloombox.schema.services.pos.v1beta1.CloneTicket.Response response = 2;</code>
+     * <code>.bloombox.services.pos.v1beta1.CloneTicket.Response response = 2;</code>
      */
     public io.bloombox.schema.services.pos.v1beta1.CloneTicket.ResponseOrBuilder getResponseOrBuilder() {
       return getResponse();
     }
 
     private byte memoizedIsInitialized = -1;
+    @java.lang.Override
     public final boolean isInitialized() {
       byte isInitialized = memoizedIsInitialized;
       if (isInitialized == 1) return true;
@@ -2052,6 +2105,7 @@ private static final long serialVersionUID = 0L;
       return true;
     }
 
+    @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
       if (request_ != null) {
@@ -2063,6 +2117,7 @@ private static final long serialVersionUID = 0L;
       unknownFields.writeTo(output);
     }
 
+    @java.lang.Override
     public int getSerializedSize() {
       int size = memoizedSize;
       if (size != -1) return size;
@@ -2196,6 +2251,7 @@ private static final long serialVersionUID = 0L;
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
 
+    @java.lang.Override
     public Builder newBuilderForType() { return newBuilder(); }
     public static Builder newBuilder() {
       return DEFAULT_INSTANCE.toBuilder();
@@ -2203,6 +2259,7 @@ private static final long serialVersionUID = 0L;
     public static Builder newBuilder(io.bloombox.schema.services.pos.v1beta1.CloneTicket.Operation prototype) {
       return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
     }
+    @java.lang.Override
     public Builder toBuilder() {
       return this == DEFAULT_INSTANCE
           ? new Builder() : new Builder().mergeFrom(this);
@@ -2219,20 +2276,21 @@ private static final long serialVersionUID = 0L;
      * Represents an entire RPC operation to clone an existing purchase ticket.
      * </pre>
      *
-     * Protobuf type {@code bloombox.schema.services.pos.v1beta1.CloneTicket.Operation}
+     * Protobuf type {@code bloombox.services.pos.v1beta1.CloneTicket.Operation}
      */
     public static final class Builder extends
         com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:bloombox.schema.services.pos.v1beta1.CloneTicket.Operation)
+        // @@protoc_insertion_point(builder_implements:bloombox.services.pos.v1beta1.CloneTicket.Operation)
         io.bloombox.schema.services.pos.v1beta1.CloneTicket.OperationOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return io.bloombox.schema.services.pos.v1beta1.POSServiceBeta1.internal_static_bloombox_schema_services_pos_v1beta1_CloneTicket_Operation_descriptor;
+        return io.bloombox.schema.services.pos.v1beta1.POSServiceBeta1.internal_static_bloombox_services_pos_v1beta1_CloneTicket_Operation_descriptor;
       }
 
+      @java.lang.Override
       protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return io.bloombox.schema.services.pos.v1beta1.POSServiceBeta1.internal_static_bloombox_schema_services_pos_v1beta1_CloneTicket_Operation_fieldAccessorTable
+        return io.bloombox.schema.services.pos.v1beta1.POSServiceBeta1.internal_static_bloombox_services_pos_v1beta1_CloneTicket_Operation_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
                 io.bloombox.schema.services.pos.v1beta1.CloneTicket.Operation.class, io.bloombox.schema.services.pos.v1beta1.CloneTicket.Operation.Builder.class);
       }
@@ -2252,6 +2310,7 @@ private static final long serialVersionUID = 0L;
                 .alwaysUseFieldBuilders) {
         }
       }
+      @java.lang.Override
       public Builder clear() {
         super.clear();
         if (requestBuilder_ == null) {
@@ -2269,15 +2328,18 @@ private static final long serialVersionUID = 0L;
         return this;
       }
 
+      @java.lang.Override
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return io.bloombox.schema.services.pos.v1beta1.POSServiceBeta1.internal_static_bloombox_schema_services_pos_v1beta1_CloneTicket_Operation_descriptor;
+        return io.bloombox.schema.services.pos.v1beta1.POSServiceBeta1.internal_static_bloombox_services_pos_v1beta1_CloneTicket_Operation_descriptor;
       }
 
+      @java.lang.Override
       public io.bloombox.schema.services.pos.v1beta1.CloneTicket.Operation getDefaultInstanceForType() {
         return io.bloombox.schema.services.pos.v1beta1.CloneTicket.Operation.getDefaultInstance();
       }
 
+      @java.lang.Override
       public io.bloombox.schema.services.pos.v1beta1.CloneTicket.Operation build() {
         io.bloombox.schema.services.pos.v1beta1.CloneTicket.Operation result = buildPartial();
         if (!result.isInitialized()) {
@@ -2286,6 +2348,7 @@ private static final long serialVersionUID = 0L;
         return result;
       }
 
+      @java.lang.Override
       public io.bloombox.schema.services.pos.v1beta1.CloneTicket.Operation buildPartial() {
         io.bloombox.schema.services.pos.v1beta1.CloneTicket.Operation result = new io.bloombox.schema.services.pos.v1beta1.CloneTicket.Operation(this);
         if (requestBuilder_ == null) {
@@ -2302,32 +2365,39 @@ private static final long serialVersionUID = 0L;
         return result;
       }
 
+      @java.lang.Override
       public Builder clone() {
         return (Builder) super.clone();
       }
+      @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
         return (Builder) super.setField(field, value);
       }
+      @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
         return (Builder) super.clearField(field);
       }
+      @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
         return (Builder) super.clearOneof(oneof);
       }
+      @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
         return (Builder) super.setRepeatedField(field, index, value);
       }
+      @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
         return (Builder) super.addRepeatedField(field, value);
       }
+      @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
         if (other instanceof io.bloombox.schema.services.pos.v1beta1.CloneTicket.Operation) {
           return mergeFrom((io.bloombox.schema.services.pos.v1beta1.CloneTicket.Operation)other);
@@ -2350,10 +2420,12 @@ private static final long serialVersionUID = 0L;
         return this;
       }
 
+      @java.lang.Override
       public final boolean isInitialized() {
         return true;
       }
 
+      @java.lang.Override
       public Builder mergeFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -2380,7 +2452,7 @@ private static final long serialVersionUID = 0L;
        * Request to clone a purchase ticket.
        * </pre>
        *
-       * <code>.bloombox.schema.services.pos.v1beta1.CloneTicket.Request request = 1;</code>
+       * <code>.bloombox.services.pos.v1beta1.CloneTicket.Request request = 1;</code>
        */
       public boolean hasRequest() {
         return requestBuilder_ != null || request_ != null;
@@ -2390,7 +2462,7 @@ private static final long serialVersionUID = 0L;
        * Request to clone a purchase ticket.
        * </pre>
        *
-       * <code>.bloombox.schema.services.pos.v1beta1.CloneTicket.Request request = 1;</code>
+       * <code>.bloombox.services.pos.v1beta1.CloneTicket.Request request = 1;</code>
        */
       public io.bloombox.schema.services.pos.v1beta1.CloneTicket.Request getRequest() {
         if (requestBuilder_ == null) {
@@ -2404,7 +2476,7 @@ private static final long serialVersionUID = 0L;
        * Request to clone a purchase ticket.
        * </pre>
        *
-       * <code>.bloombox.schema.services.pos.v1beta1.CloneTicket.Request request = 1;</code>
+       * <code>.bloombox.services.pos.v1beta1.CloneTicket.Request request = 1;</code>
        */
       public Builder setRequest(io.bloombox.schema.services.pos.v1beta1.CloneTicket.Request value) {
         if (requestBuilder_ == null) {
@@ -2424,7 +2496,7 @@ private static final long serialVersionUID = 0L;
        * Request to clone a purchase ticket.
        * </pre>
        *
-       * <code>.bloombox.schema.services.pos.v1beta1.CloneTicket.Request request = 1;</code>
+       * <code>.bloombox.services.pos.v1beta1.CloneTicket.Request request = 1;</code>
        */
       public Builder setRequest(
           io.bloombox.schema.services.pos.v1beta1.CloneTicket.Request.Builder builderForValue) {
@@ -2442,7 +2514,7 @@ private static final long serialVersionUID = 0L;
        * Request to clone a purchase ticket.
        * </pre>
        *
-       * <code>.bloombox.schema.services.pos.v1beta1.CloneTicket.Request request = 1;</code>
+       * <code>.bloombox.services.pos.v1beta1.CloneTicket.Request request = 1;</code>
        */
       public Builder mergeRequest(io.bloombox.schema.services.pos.v1beta1.CloneTicket.Request value) {
         if (requestBuilder_ == null) {
@@ -2464,7 +2536,7 @@ private static final long serialVersionUID = 0L;
        * Request to clone a purchase ticket.
        * </pre>
        *
-       * <code>.bloombox.schema.services.pos.v1beta1.CloneTicket.Request request = 1;</code>
+       * <code>.bloombox.services.pos.v1beta1.CloneTicket.Request request = 1;</code>
        */
       public Builder clearRequest() {
         if (requestBuilder_ == null) {
@@ -2482,7 +2554,7 @@ private static final long serialVersionUID = 0L;
        * Request to clone a purchase ticket.
        * </pre>
        *
-       * <code>.bloombox.schema.services.pos.v1beta1.CloneTicket.Request request = 1;</code>
+       * <code>.bloombox.services.pos.v1beta1.CloneTicket.Request request = 1;</code>
        */
       public io.bloombox.schema.services.pos.v1beta1.CloneTicket.Request.Builder getRequestBuilder() {
         
@@ -2494,7 +2566,7 @@ private static final long serialVersionUID = 0L;
        * Request to clone a purchase ticket.
        * </pre>
        *
-       * <code>.bloombox.schema.services.pos.v1beta1.CloneTicket.Request request = 1;</code>
+       * <code>.bloombox.services.pos.v1beta1.CloneTicket.Request request = 1;</code>
        */
       public io.bloombox.schema.services.pos.v1beta1.CloneTicket.RequestOrBuilder getRequestOrBuilder() {
         if (requestBuilder_ != null) {
@@ -2509,7 +2581,7 @@ private static final long serialVersionUID = 0L;
        * Request to clone a purchase ticket.
        * </pre>
        *
-       * <code>.bloombox.schema.services.pos.v1beta1.CloneTicket.Request request = 1;</code>
+       * <code>.bloombox.services.pos.v1beta1.CloneTicket.Request request = 1;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
           io.bloombox.schema.services.pos.v1beta1.CloneTicket.Request, io.bloombox.schema.services.pos.v1beta1.CloneTicket.Request.Builder, io.bloombox.schema.services.pos.v1beta1.CloneTicket.RequestOrBuilder> 
@@ -2533,7 +2605,7 @@ private static final long serialVersionUID = 0L;
        * Response provided to this request to clone a purchase ticket.
        * </pre>
        *
-       * <code>.bloombox.schema.services.pos.v1beta1.CloneTicket.Response response = 2;</code>
+       * <code>.bloombox.services.pos.v1beta1.CloneTicket.Response response = 2;</code>
        */
       public boolean hasResponse() {
         return responseBuilder_ != null || response_ != null;
@@ -2543,7 +2615,7 @@ private static final long serialVersionUID = 0L;
        * Response provided to this request to clone a purchase ticket.
        * </pre>
        *
-       * <code>.bloombox.schema.services.pos.v1beta1.CloneTicket.Response response = 2;</code>
+       * <code>.bloombox.services.pos.v1beta1.CloneTicket.Response response = 2;</code>
        */
       public io.bloombox.schema.services.pos.v1beta1.CloneTicket.Response getResponse() {
         if (responseBuilder_ == null) {
@@ -2557,7 +2629,7 @@ private static final long serialVersionUID = 0L;
        * Response provided to this request to clone a purchase ticket.
        * </pre>
        *
-       * <code>.bloombox.schema.services.pos.v1beta1.CloneTicket.Response response = 2;</code>
+       * <code>.bloombox.services.pos.v1beta1.CloneTicket.Response response = 2;</code>
        */
       public Builder setResponse(io.bloombox.schema.services.pos.v1beta1.CloneTicket.Response value) {
         if (responseBuilder_ == null) {
@@ -2577,7 +2649,7 @@ private static final long serialVersionUID = 0L;
        * Response provided to this request to clone a purchase ticket.
        * </pre>
        *
-       * <code>.bloombox.schema.services.pos.v1beta1.CloneTicket.Response response = 2;</code>
+       * <code>.bloombox.services.pos.v1beta1.CloneTicket.Response response = 2;</code>
        */
       public Builder setResponse(
           io.bloombox.schema.services.pos.v1beta1.CloneTicket.Response.Builder builderForValue) {
@@ -2595,7 +2667,7 @@ private static final long serialVersionUID = 0L;
        * Response provided to this request to clone a purchase ticket.
        * </pre>
        *
-       * <code>.bloombox.schema.services.pos.v1beta1.CloneTicket.Response response = 2;</code>
+       * <code>.bloombox.services.pos.v1beta1.CloneTicket.Response response = 2;</code>
        */
       public Builder mergeResponse(io.bloombox.schema.services.pos.v1beta1.CloneTicket.Response value) {
         if (responseBuilder_ == null) {
@@ -2617,7 +2689,7 @@ private static final long serialVersionUID = 0L;
        * Response provided to this request to clone a purchase ticket.
        * </pre>
        *
-       * <code>.bloombox.schema.services.pos.v1beta1.CloneTicket.Response response = 2;</code>
+       * <code>.bloombox.services.pos.v1beta1.CloneTicket.Response response = 2;</code>
        */
       public Builder clearResponse() {
         if (responseBuilder_ == null) {
@@ -2635,7 +2707,7 @@ private static final long serialVersionUID = 0L;
        * Response provided to this request to clone a purchase ticket.
        * </pre>
        *
-       * <code>.bloombox.schema.services.pos.v1beta1.CloneTicket.Response response = 2;</code>
+       * <code>.bloombox.services.pos.v1beta1.CloneTicket.Response response = 2;</code>
        */
       public io.bloombox.schema.services.pos.v1beta1.CloneTicket.Response.Builder getResponseBuilder() {
         
@@ -2647,7 +2719,7 @@ private static final long serialVersionUID = 0L;
        * Response provided to this request to clone a purchase ticket.
        * </pre>
        *
-       * <code>.bloombox.schema.services.pos.v1beta1.CloneTicket.Response response = 2;</code>
+       * <code>.bloombox.services.pos.v1beta1.CloneTicket.Response response = 2;</code>
        */
       public io.bloombox.schema.services.pos.v1beta1.CloneTicket.ResponseOrBuilder getResponseOrBuilder() {
         if (responseBuilder_ != null) {
@@ -2662,7 +2734,7 @@ private static final long serialVersionUID = 0L;
        * Response provided to this request to clone a purchase ticket.
        * </pre>
        *
-       * <code>.bloombox.schema.services.pos.v1beta1.CloneTicket.Response response = 2;</code>
+       * <code>.bloombox.services.pos.v1beta1.CloneTicket.Response response = 2;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
           io.bloombox.schema.services.pos.v1beta1.CloneTicket.Response, io.bloombox.schema.services.pos.v1beta1.CloneTicket.Response.Builder, io.bloombox.schema.services.pos.v1beta1.CloneTicket.ResponseOrBuilder> 
@@ -2677,21 +2749,23 @@ private static final long serialVersionUID = 0L;
         }
         return responseBuilder_;
       }
+      @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
         return super.setUnknownFieldsProto3(unknownFields);
       }
 
+      @java.lang.Override
       public final Builder mergeUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
         return super.mergeUnknownFields(unknownFields);
       }
 
 
-      // @@protoc_insertion_point(builder_scope:bloombox.schema.services.pos.v1beta1.CloneTicket.Operation)
+      // @@protoc_insertion_point(builder_scope:bloombox.services.pos.v1beta1.CloneTicket.Operation)
     }
 
-    // @@protoc_insertion_point(class_scope:bloombox.schema.services.pos.v1beta1.CloneTicket.Operation)
+    // @@protoc_insertion_point(class_scope:bloombox.services.pos.v1beta1.CloneTicket.Operation)
     private static final io.bloombox.schema.services.pos.v1beta1.CloneTicket.Operation DEFAULT_INSTANCE;
     static {
       DEFAULT_INSTANCE = new io.bloombox.schema.services.pos.v1beta1.CloneTicket.Operation();
@@ -2703,6 +2777,7 @@ private static final long serialVersionUID = 0L;
 
     private static final com.google.protobuf.Parser<Operation>
         PARSER = new com.google.protobuf.AbstractParser<Operation>() {
+      @java.lang.Override
       public Operation parsePartialFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -2720,6 +2795,7 @@ private static final long serialVersionUID = 0L;
       return PARSER;
     }
 
+    @java.lang.Override
     public io.bloombox.schema.services.pos.v1beta1.CloneTicket.Operation getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
@@ -2727,6 +2803,7 @@ private static final long serialVersionUID = 0L;
   }
 
   private byte memoizedIsInitialized = -1;
+  @java.lang.Override
   public final boolean isInitialized() {
     byte isInitialized = memoizedIsInitialized;
     if (isInitialized == 1) return true;
@@ -2736,11 +2813,13 @@ private static final long serialVersionUID = 0L;
     return true;
   }
 
+  @java.lang.Override
   public void writeTo(com.google.protobuf.CodedOutputStream output)
                       throws java.io.IOException {
     unknownFields.writeTo(output);
   }
 
+  @java.lang.Override
   public int getSerializedSize() {
     int size = memoizedSize;
     if (size != -1) return size;
@@ -2848,6 +2927,7 @@ private static final long serialVersionUID = 0L;
         .parseWithIOException(PARSER, input, extensionRegistry);
   }
 
+  @java.lang.Override
   public Builder newBuilderForType() { return newBuilder(); }
   public static Builder newBuilder() {
     return DEFAULT_INSTANCE.toBuilder();
@@ -2855,6 +2935,7 @@ private static final long serialVersionUID = 0L;
   public static Builder newBuilder(io.bloombox.schema.services.pos.v1beta1.CloneTicket prototype) {
     return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
   }
+  @java.lang.Override
   public Builder toBuilder() {
     return this == DEFAULT_INSTANCE
         ? new Builder() : new Builder().mergeFrom(this);
@@ -2873,20 +2954,21 @@ private static final long serialVersionUID = 0L;
    * customer may be replaced.
    * </pre>
    *
-   * Protobuf type {@code bloombox.schema.services.pos.v1beta1.CloneTicket}
+   * Protobuf type {@code bloombox.services.pos.v1beta1.CloneTicket}
    */
   public static final class Builder extends
       com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-      // @@protoc_insertion_point(builder_implements:bloombox.schema.services.pos.v1beta1.CloneTicket)
+      // @@protoc_insertion_point(builder_implements:bloombox.services.pos.v1beta1.CloneTicket)
       io.bloombox.schema.services.pos.v1beta1.CloneTicketOrBuilder {
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return io.bloombox.schema.services.pos.v1beta1.POSServiceBeta1.internal_static_bloombox_schema_services_pos_v1beta1_CloneTicket_descriptor;
+      return io.bloombox.schema.services.pos.v1beta1.POSServiceBeta1.internal_static_bloombox_services_pos_v1beta1_CloneTicket_descriptor;
     }
 
+    @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return io.bloombox.schema.services.pos.v1beta1.POSServiceBeta1.internal_static_bloombox_schema_services_pos_v1beta1_CloneTicket_fieldAccessorTable
+      return io.bloombox.schema.services.pos.v1beta1.POSServiceBeta1.internal_static_bloombox_services_pos_v1beta1_CloneTicket_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
               io.bloombox.schema.services.pos.v1beta1.CloneTicket.class, io.bloombox.schema.services.pos.v1beta1.CloneTicket.Builder.class);
     }
@@ -2906,20 +2988,24 @@ private static final long serialVersionUID = 0L;
               .alwaysUseFieldBuilders) {
       }
     }
+    @java.lang.Override
     public Builder clear() {
       super.clear();
       return this;
     }
 
+    @java.lang.Override
     public com.google.protobuf.Descriptors.Descriptor
         getDescriptorForType() {
-      return io.bloombox.schema.services.pos.v1beta1.POSServiceBeta1.internal_static_bloombox_schema_services_pos_v1beta1_CloneTicket_descriptor;
+      return io.bloombox.schema.services.pos.v1beta1.POSServiceBeta1.internal_static_bloombox_services_pos_v1beta1_CloneTicket_descriptor;
     }
 
+    @java.lang.Override
     public io.bloombox.schema.services.pos.v1beta1.CloneTicket getDefaultInstanceForType() {
       return io.bloombox.schema.services.pos.v1beta1.CloneTicket.getDefaultInstance();
     }
 
+    @java.lang.Override
     public io.bloombox.schema.services.pos.v1beta1.CloneTicket build() {
       io.bloombox.schema.services.pos.v1beta1.CloneTicket result = buildPartial();
       if (!result.isInitialized()) {
@@ -2928,38 +3014,46 @@ private static final long serialVersionUID = 0L;
       return result;
     }
 
+    @java.lang.Override
     public io.bloombox.schema.services.pos.v1beta1.CloneTicket buildPartial() {
       io.bloombox.schema.services.pos.v1beta1.CloneTicket result = new io.bloombox.schema.services.pos.v1beta1.CloneTicket(this);
       onBuilt();
       return result;
     }
 
+    @java.lang.Override
     public Builder clone() {
       return (Builder) super.clone();
     }
+    @java.lang.Override
     public Builder setField(
         com.google.protobuf.Descriptors.FieldDescriptor field,
         java.lang.Object value) {
       return (Builder) super.setField(field, value);
     }
+    @java.lang.Override
     public Builder clearField(
         com.google.protobuf.Descriptors.FieldDescriptor field) {
       return (Builder) super.clearField(field);
     }
+    @java.lang.Override
     public Builder clearOneof(
         com.google.protobuf.Descriptors.OneofDescriptor oneof) {
       return (Builder) super.clearOneof(oneof);
     }
+    @java.lang.Override
     public Builder setRepeatedField(
         com.google.protobuf.Descriptors.FieldDescriptor field,
         int index, java.lang.Object value) {
       return (Builder) super.setRepeatedField(field, index, value);
     }
+    @java.lang.Override
     public Builder addRepeatedField(
         com.google.protobuf.Descriptors.FieldDescriptor field,
         java.lang.Object value) {
       return (Builder) super.addRepeatedField(field, value);
     }
+    @java.lang.Override
     public Builder mergeFrom(com.google.protobuf.Message other) {
       if (other instanceof io.bloombox.schema.services.pos.v1beta1.CloneTicket) {
         return mergeFrom((io.bloombox.schema.services.pos.v1beta1.CloneTicket)other);
@@ -2976,10 +3070,12 @@ private static final long serialVersionUID = 0L;
       return this;
     }
 
+    @java.lang.Override
     public final boolean isInitialized() {
       return true;
     }
 
+    @java.lang.Override
     public Builder mergeFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -2997,21 +3093,23 @@ private static final long serialVersionUID = 0L;
       }
       return this;
     }
+    @java.lang.Override
     public final Builder setUnknownFields(
         final com.google.protobuf.UnknownFieldSet unknownFields) {
       return super.setUnknownFieldsProto3(unknownFields);
     }
 
+    @java.lang.Override
     public final Builder mergeUnknownFields(
         final com.google.protobuf.UnknownFieldSet unknownFields) {
       return super.mergeUnknownFields(unknownFields);
     }
 
 
-    // @@protoc_insertion_point(builder_scope:bloombox.schema.services.pos.v1beta1.CloneTicket)
+    // @@protoc_insertion_point(builder_scope:bloombox.services.pos.v1beta1.CloneTicket)
   }
 
-  // @@protoc_insertion_point(class_scope:bloombox.schema.services.pos.v1beta1.CloneTicket)
+  // @@protoc_insertion_point(class_scope:bloombox.services.pos.v1beta1.CloneTicket)
   private static final io.bloombox.schema.services.pos.v1beta1.CloneTicket DEFAULT_INSTANCE;
   static {
     DEFAULT_INSTANCE = new io.bloombox.schema.services.pos.v1beta1.CloneTicket();
@@ -3023,6 +3121,7 @@ private static final long serialVersionUID = 0L;
 
   private static final com.google.protobuf.Parser<CloneTicket>
       PARSER = new com.google.protobuf.AbstractParser<CloneTicket>() {
+    @java.lang.Override
     public CloneTicket parsePartialFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -3040,6 +3139,7 @@ private static final long serialVersionUID = 0L;
     return PARSER;
   }
 
+  @java.lang.Override
   public io.bloombox.schema.services.pos.v1beta1.CloneTicket getDefaultInstanceForType() {
     return DEFAULT_INSTANCE;
   }

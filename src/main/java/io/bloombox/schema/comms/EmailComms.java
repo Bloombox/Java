@@ -1,11 +1,12 @@
 /*
- * Copyright 2018, Bloombox, LLC.
+ * Copyright 2018, Momentum Ideas, Co. All rights reserved.
  *
- * Licensed under the Apache License, Version 2.0 (the "License");
- * you may not use this file except in compliance with the License.
- * You may obtain a copy of the License at
- *
- *     http://www.apache.org/licenses/LICENSE-2.0
+ * Source and object computer code contained herein is the private intellectual
+ * property of Momentum Ideas Co., a Delaware Corporation. Use of this
+ * code in source form requires permission in writing before use or the
+ * assembly, distribution, or publishing of derivative works, for commercial
+ * purposes or any other purpose, from a duly authorized officer of Momentum
+ * Ideas Co.
  *
  * Unless required by applicable law or agreed to in writing, software
  * distributed under the License is distributed on an "AS IS" BASIS,
@@ -31,7 +32,7 @@ public final class EmailComms {
         (com.google.protobuf.ExtensionRegistryLite) registry);
   }
   public interface EmailContentOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:bloombox.schema.comms.EmailContent)
+      // @@protoc_insertion_point(interface_extends:bloombox.comms.EmailContent)
       com.google.protobuf.MessageOrBuilder {
 
     /**
@@ -145,11 +146,11 @@ public final class EmailComms {
    * Specifies email content for a given ad group.
    * </pre>
    *
-   * Protobuf type {@code bloombox.schema.comms.EmailContent}
+   * Protobuf type {@code bloombox.comms.EmailContent}
    */
   public  static final class EmailContent extends
       com.google.protobuf.GeneratedMessageV3 implements
-      // @@protoc_insertion_point(message_implements:bloombox.schema.comms.EmailContent)
+      // @@protoc_insertion_point(message_implements:bloombox.comms.EmailContent)
       EmailContentOrBuilder {
   private static final long serialVersionUID = 0L;
     // Use EmailContent.newBuilder() to construct.
@@ -186,13 +187,6 @@ public final class EmailComms {
             case 0:
               done = true;
               break;
-            default: {
-              if (!parseUnknownFieldProto3(
-                  input, unknownFields, extensionRegistry, tag)) {
-                done = true;
-              }
-              break;
-            }
             case 10: {
               java.lang.String s = input.readStringRequireUtf8();
 
@@ -217,6 +211,13 @@ public final class EmailComms {
                   input.readMessage(io.opencannabis.schema.media.MediaItemKey.MediaKey.parser(), extensionRegistry));
               break;
             }
+            default: {
+              if (!parseUnknownFieldProto3(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
           }
         }
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
@@ -237,12 +238,13 @@ public final class EmailComms {
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return io.bloombox.schema.comms.EmailComms.internal_static_bloombox_schema_comms_EmailContent_descriptor;
+      return io.bloombox.schema.comms.EmailComms.internal_static_bloombox_comms_EmailContent_descriptor;
     }
 
+    @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return io.bloombox.schema.comms.EmailComms.internal_static_bloombox_schema_comms_EmailContent_fieldAccessorTable
+      return io.bloombox.schema.comms.EmailComms.internal_static_bloombox_comms_EmailContent_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
               io.bloombox.schema.comms.EmailComms.EmailContent.class, io.bloombox.schema.comms.EmailComms.EmailContent.Builder.class);
     }
@@ -401,6 +403,7 @@ public final class EmailComms {
     }
 
     private byte memoizedIsInitialized = -1;
+    @java.lang.Override
     public final boolean isInitialized() {
       byte isInitialized = memoizedIsInitialized;
       if (isInitialized == 1) return true;
@@ -410,6 +413,7 @@ public final class EmailComms {
       return true;
     }
 
+    @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
       if (!getSubjectBytes().isEmpty()) {
@@ -424,6 +428,7 @@ public final class EmailComms {
       unknownFields.writeTo(output);
     }
 
+    @java.lang.Override
     public int getSerializedSize() {
       int size = memoizedSize;
       if (size != -1) return size;
@@ -558,6 +563,7 @@ public final class EmailComms {
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
 
+    @java.lang.Override
     public Builder newBuilderForType() { return newBuilder(); }
     public static Builder newBuilder() {
       return DEFAULT_INSTANCE.toBuilder();
@@ -565,6 +571,7 @@ public final class EmailComms {
     public static Builder newBuilder(io.bloombox.schema.comms.EmailComms.EmailContent prototype) {
       return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
     }
+    @java.lang.Override
     public Builder toBuilder() {
       return this == DEFAULT_INSTANCE
           ? new Builder() : new Builder().mergeFrom(this);
@@ -581,20 +588,21 @@ public final class EmailComms {
      * Specifies email content for a given ad group.
      * </pre>
      *
-     * Protobuf type {@code bloombox.schema.comms.EmailContent}
+     * Protobuf type {@code bloombox.comms.EmailContent}
      */
     public static final class Builder extends
         com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:bloombox.schema.comms.EmailContent)
+        // @@protoc_insertion_point(builder_implements:bloombox.comms.EmailContent)
         io.bloombox.schema.comms.EmailComms.EmailContentOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return io.bloombox.schema.comms.EmailComms.internal_static_bloombox_schema_comms_EmailContent_descriptor;
+        return io.bloombox.schema.comms.EmailComms.internal_static_bloombox_comms_EmailContent_descriptor;
       }
 
+      @java.lang.Override
       protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return io.bloombox.schema.comms.EmailComms.internal_static_bloombox_schema_comms_EmailContent_fieldAccessorTable
+        return io.bloombox.schema.comms.EmailComms.internal_static_bloombox_comms_EmailContent_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
                 io.bloombox.schema.comms.EmailComms.EmailContent.class, io.bloombox.schema.comms.EmailComms.EmailContent.Builder.class);
       }
@@ -616,6 +624,7 @@ public final class EmailComms {
           getAttachmentFieldBuilder();
         }
       }
+      @java.lang.Override
       public Builder clear() {
         super.clear();
         subject_ = "";
@@ -635,15 +644,18 @@ public final class EmailComms {
         return this;
       }
 
+      @java.lang.Override
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return io.bloombox.schema.comms.EmailComms.internal_static_bloombox_schema_comms_EmailContent_descriptor;
+        return io.bloombox.schema.comms.EmailComms.internal_static_bloombox_comms_EmailContent_descriptor;
       }
 
+      @java.lang.Override
       public io.bloombox.schema.comms.EmailComms.EmailContent getDefaultInstanceForType() {
         return io.bloombox.schema.comms.EmailComms.EmailContent.getDefaultInstance();
       }
 
+      @java.lang.Override
       public io.bloombox.schema.comms.EmailComms.EmailContent build() {
         io.bloombox.schema.comms.EmailComms.EmailContent result = buildPartial();
         if (!result.isInitialized()) {
@@ -652,6 +664,7 @@ public final class EmailComms {
         return result;
       }
 
+      @java.lang.Override
       public io.bloombox.schema.comms.EmailComms.EmailContent buildPartial() {
         io.bloombox.schema.comms.EmailComms.EmailContent result = new io.bloombox.schema.comms.EmailComms.EmailContent(this);
         int from_bitField0_ = bitField0_;
@@ -680,32 +693,39 @@ public final class EmailComms {
         return result;
       }
 
+      @java.lang.Override
       public Builder clone() {
         return (Builder) super.clone();
       }
+      @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
         return (Builder) super.setField(field, value);
       }
+      @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
         return (Builder) super.clearField(field);
       }
+      @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
         return (Builder) super.clearOneof(oneof);
       }
+      @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
         return (Builder) super.setRepeatedField(field, index, value);
       }
+      @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
         return (Builder) super.addRepeatedField(field, value);
       }
+      @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
         if (other instanceof io.bloombox.schema.comms.EmailComms.EmailContent) {
           return mergeFrom((io.bloombox.schema.comms.EmailComms.EmailContent)other);
@@ -778,10 +798,12 @@ public final class EmailComms {
         return this;
       }
 
+      @java.lang.Override
       public final boolean isInitialized() {
         return true;
       }
 
+      @java.lang.Override
       public Builder mergeFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -1513,21 +1535,23 @@ public final class EmailComms {
         }
         return attachmentBuilder_;
       }
+      @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
         return super.setUnknownFieldsProto3(unknownFields);
       }
 
+      @java.lang.Override
       public final Builder mergeUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
         return super.mergeUnknownFields(unknownFields);
       }
 
 
-      // @@protoc_insertion_point(builder_scope:bloombox.schema.comms.EmailContent)
+      // @@protoc_insertion_point(builder_scope:bloombox.comms.EmailContent)
     }
 
-    // @@protoc_insertion_point(class_scope:bloombox.schema.comms.EmailContent)
+    // @@protoc_insertion_point(class_scope:bloombox.comms.EmailContent)
     private static final io.bloombox.schema.comms.EmailComms.EmailContent DEFAULT_INSTANCE;
     static {
       DEFAULT_INSTANCE = new io.bloombox.schema.comms.EmailComms.EmailContent();
@@ -1539,6 +1563,7 @@ public final class EmailComms {
 
     private static final com.google.protobuf.Parser<EmailContent>
         PARSER = new com.google.protobuf.AbstractParser<EmailContent>() {
+      @java.lang.Override
       public EmailContent parsePartialFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -1556,6 +1581,7 @@ public final class EmailComms {
       return PARSER;
     }
 
+    @java.lang.Override
     public io.bloombox.schema.comms.EmailComms.EmailContent getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
@@ -1563,7 +1589,7 @@ public final class EmailComms {
   }
 
   public interface EmailMessageOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:bloombox.schema.comms.EmailMessage)
+      // @@protoc_insertion_point(interface_extends:bloombox.comms.EmailMessage)
       com.google.protobuf.MessageOrBuilder {
 
     /**
@@ -1621,7 +1647,7 @@ public final class EmailComms {
      * Content for the email message.
      * </pre>
      *
-     * <code>.bloombox.schema.comms.EmailContent content = 3;</code>
+     * <code>.bloombox.comms.EmailContent content = 3;</code>
      */
     boolean hasContent();
     /**
@@ -1629,7 +1655,7 @@ public final class EmailComms {
      * Content for the email message.
      * </pre>
      *
-     * <code>.bloombox.schema.comms.EmailContent content = 3;</code>
+     * <code>.bloombox.comms.EmailContent content = 3;</code>
      */
     io.bloombox.schema.comms.EmailComms.EmailContent getContent();
     /**
@@ -1637,7 +1663,7 @@ public final class EmailComms {
      * Content for the email message.
      * </pre>
      *
-     * <code>.bloombox.schema.comms.EmailContent content = 3;</code>
+     * <code>.bloombox.comms.EmailContent content = 3;</code>
      */
     io.bloombox.schema.comms.EmailComms.EmailContentOrBuilder getContentOrBuilder();
 
@@ -1759,11 +1785,11 @@ public final class EmailComms {
    * Specifies the structure of an individual email message.
    * </pre>
    *
-   * Protobuf type {@code bloombox.schema.comms.EmailMessage}
+   * Protobuf type {@code bloombox.comms.EmailMessage}
    */
   public  static final class EmailMessage extends
       com.google.protobuf.GeneratedMessageV3 implements
-      // @@protoc_insertion_point(message_implements:bloombox.schema.comms.EmailMessage)
+      // @@protoc_insertion_point(message_implements:bloombox.comms.EmailMessage)
       EmailMessageOrBuilder {
   private static final long serialVersionUID = 0L;
     // Use EmailMessage.newBuilder() to construct.
@@ -1799,13 +1825,6 @@ public final class EmailComms {
             case 0:
               done = true;
               break;
-            default: {
-              if (!parseUnknownFieldProto3(
-                  input, unknownFields, extensionRegistry, tag)) {
-                done = true;
-              }
-              break;
-            }
             case 10: {
               io.opencannabis.schema.contact.ContactEmail.EmailAddress.Builder subBuilder = null;
               if (sender_ != null) {
@@ -1876,6 +1895,13 @@ public final class EmailComms {
                   input.readMessage(io.opencannabis.schema.contact.ContactEmail.EmailAddress.parser(), extensionRegistry));
               break;
             }
+            default: {
+              if (!parseUnknownFieldProto3(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
           }
         }
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
@@ -1896,12 +1922,13 @@ public final class EmailComms {
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return io.bloombox.schema.comms.EmailComms.internal_static_bloombox_schema_comms_EmailMessage_descriptor;
+      return io.bloombox.schema.comms.EmailComms.internal_static_bloombox_comms_EmailMessage_descriptor;
     }
 
+    @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return io.bloombox.schema.comms.EmailComms.internal_static_bloombox_schema_comms_EmailMessage_fieldAccessorTable
+      return io.bloombox.schema.comms.EmailComms.internal_static_bloombox_comms_EmailMessage_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
               io.bloombox.schema.comms.EmailComms.EmailMessage.class, io.bloombox.schema.comms.EmailComms.EmailMessage.Builder.class);
     }
@@ -1980,7 +2007,7 @@ public final class EmailComms {
      * Content for the email message.
      * </pre>
      *
-     * <code>.bloombox.schema.comms.EmailContent content = 3;</code>
+     * <code>.bloombox.comms.EmailContent content = 3;</code>
      */
     public boolean hasContent() {
       return content_ != null;
@@ -1990,7 +2017,7 @@ public final class EmailComms {
      * Content for the email message.
      * </pre>
      *
-     * <code>.bloombox.schema.comms.EmailContent content = 3;</code>
+     * <code>.bloombox.comms.EmailContent content = 3;</code>
      */
     public io.bloombox.schema.comms.EmailComms.EmailContent getContent() {
       return content_ == null ? io.bloombox.schema.comms.EmailComms.EmailContent.getDefaultInstance() : content_;
@@ -2000,7 +2027,7 @@ public final class EmailComms {
      * Content for the email message.
      * </pre>
      *
-     * <code>.bloombox.schema.comms.EmailContent content = 3;</code>
+     * <code>.bloombox.comms.EmailContent content = 3;</code>
      */
     public io.bloombox.schema.comms.EmailComms.EmailContentOrBuilder getContentOrBuilder() {
       return getContent();
@@ -2150,6 +2177,7 @@ public final class EmailComms {
     }
 
     private byte memoizedIsInitialized = -1;
+    @java.lang.Override
     public final boolean isInitialized() {
       byte isInitialized = memoizedIsInitialized;
       if (isInitialized == 1) return true;
@@ -2159,6 +2187,7 @@ public final class EmailComms {
       return true;
     }
 
+    @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
       if (sender_ != null) {
@@ -2182,6 +2211,7 @@ public final class EmailComms {
       unknownFields.writeTo(output);
     }
 
+    @java.lang.Override
     public int getSerializedSize() {
       int size = memoizedSize;
       if (size != -1) return size;
@@ -2361,6 +2391,7 @@ public final class EmailComms {
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
 
+    @java.lang.Override
     public Builder newBuilderForType() { return newBuilder(); }
     public static Builder newBuilder() {
       return DEFAULT_INSTANCE.toBuilder();
@@ -2368,6 +2399,7 @@ public final class EmailComms {
     public static Builder newBuilder(io.bloombox.schema.comms.EmailComms.EmailMessage prototype) {
       return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
     }
+    @java.lang.Override
     public Builder toBuilder() {
       return this == DEFAULT_INSTANCE
           ? new Builder() : new Builder().mergeFrom(this);
@@ -2384,20 +2416,21 @@ public final class EmailComms {
      * Specifies the structure of an individual email message.
      * </pre>
      *
-     * Protobuf type {@code bloombox.schema.comms.EmailMessage}
+     * Protobuf type {@code bloombox.comms.EmailMessage}
      */
     public static final class Builder extends
         com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:bloombox.schema.comms.EmailMessage)
+        // @@protoc_insertion_point(builder_implements:bloombox.comms.EmailMessage)
         io.bloombox.schema.comms.EmailComms.EmailMessageOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return io.bloombox.schema.comms.EmailComms.internal_static_bloombox_schema_comms_EmailMessage_descriptor;
+        return io.bloombox.schema.comms.EmailComms.internal_static_bloombox_comms_EmailMessage_descriptor;
       }
 
+      @java.lang.Override
       protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return io.bloombox.schema.comms.EmailComms.internal_static_bloombox_schema_comms_EmailMessage_fieldAccessorTable
+        return io.bloombox.schema.comms.EmailComms.internal_static_bloombox_comms_EmailMessage_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
                 io.bloombox.schema.comms.EmailComms.EmailMessage.class, io.bloombox.schema.comms.EmailComms.EmailMessage.Builder.class);
       }
@@ -2419,6 +2452,7 @@ public final class EmailComms {
           getBccFieldBuilder();
         }
       }
+      @java.lang.Override
       public Builder clear() {
         super.clear();
         if (senderBuilder_ == null) {
@@ -2460,15 +2494,18 @@ public final class EmailComms {
         return this;
       }
 
+      @java.lang.Override
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return io.bloombox.schema.comms.EmailComms.internal_static_bloombox_schema_comms_EmailMessage_descriptor;
+        return io.bloombox.schema.comms.EmailComms.internal_static_bloombox_comms_EmailMessage_descriptor;
       }
 
+      @java.lang.Override
       public io.bloombox.schema.comms.EmailComms.EmailMessage getDefaultInstanceForType() {
         return io.bloombox.schema.comms.EmailComms.EmailMessage.getDefaultInstance();
       }
 
+      @java.lang.Override
       public io.bloombox.schema.comms.EmailComms.EmailMessage build() {
         io.bloombox.schema.comms.EmailComms.EmailMessage result = buildPartial();
         if (!result.isInitialized()) {
@@ -2477,6 +2514,7 @@ public final class EmailComms {
         return result;
       }
 
+      @java.lang.Override
       public io.bloombox.schema.comms.EmailComms.EmailMessage buildPartial() {
         io.bloombox.schema.comms.EmailComms.EmailMessage result = new io.bloombox.schema.comms.EmailComms.EmailMessage(this);
         int from_bitField0_ = bitField0_;
@@ -2524,32 +2562,39 @@ public final class EmailComms {
         return result;
       }
 
+      @java.lang.Override
       public Builder clone() {
         return (Builder) super.clone();
       }
+      @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
         return (Builder) super.setField(field, value);
       }
+      @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
         return (Builder) super.clearField(field);
       }
+      @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
         return (Builder) super.clearOneof(oneof);
       }
+      @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
         return (Builder) super.setRepeatedField(field, index, value);
       }
+      @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
         return (Builder) super.addRepeatedField(field, value);
       }
+      @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
         if (other instanceof io.bloombox.schema.comms.EmailComms.EmailMessage) {
           return mergeFrom((io.bloombox.schema.comms.EmailComms.EmailMessage)other);
@@ -2630,10 +2675,12 @@ public final class EmailComms {
         return this;
       }
 
+      @java.lang.Override
       public final boolean isInitialized() {
         return true;
       }
 
+      @java.lang.Override
       public Builder mergeFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -2967,7 +3014,7 @@ public final class EmailComms {
        * Content for the email message.
        * </pre>
        *
-       * <code>.bloombox.schema.comms.EmailContent content = 3;</code>
+       * <code>.bloombox.comms.EmailContent content = 3;</code>
        */
       public boolean hasContent() {
         return contentBuilder_ != null || content_ != null;
@@ -2977,7 +3024,7 @@ public final class EmailComms {
        * Content for the email message.
        * </pre>
        *
-       * <code>.bloombox.schema.comms.EmailContent content = 3;</code>
+       * <code>.bloombox.comms.EmailContent content = 3;</code>
        */
       public io.bloombox.schema.comms.EmailComms.EmailContent getContent() {
         if (contentBuilder_ == null) {
@@ -2991,7 +3038,7 @@ public final class EmailComms {
        * Content for the email message.
        * </pre>
        *
-       * <code>.bloombox.schema.comms.EmailContent content = 3;</code>
+       * <code>.bloombox.comms.EmailContent content = 3;</code>
        */
       public Builder setContent(io.bloombox.schema.comms.EmailComms.EmailContent value) {
         if (contentBuilder_ == null) {
@@ -3011,7 +3058,7 @@ public final class EmailComms {
        * Content for the email message.
        * </pre>
        *
-       * <code>.bloombox.schema.comms.EmailContent content = 3;</code>
+       * <code>.bloombox.comms.EmailContent content = 3;</code>
        */
       public Builder setContent(
           io.bloombox.schema.comms.EmailComms.EmailContent.Builder builderForValue) {
@@ -3029,7 +3076,7 @@ public final class EmailComms {
        * Content for the email message.
        * </pre>
        *
-       * <code>.bloombox.schema.comms.EmailContent content = 3;</code>
+       * <code>.bloombox.comms.EmailContent content = 3;</code>
        */
       public Builder mergeContent(io.bloombox.schema.comms.EmailComms.EmailContent value) {
         if (contentBuilder_ == null) {
@@ -3051,7 +3098,7 @@ public final class EmailComms {
        * Content for the email message.
        * </pre>
        *
-       * <code>.bloombox.schema.comms.EmailContent content = 3;</code>
+       * <code>.bloombox.comms.EmailContent content = 3;</code>
        */
       public Builder clearContent() {
         if (contentBuilder_ == null) {
@@ -3069,7 +3116,7 @@ public final class EmailComms {
        * Content for the email message.
        * </pre>
        *
-       * <code>.bloombox.schema.comms.EmailContent content = 3;</code>
+       * <code>.bloombox.comms.EmailContent content = 3;</code>
        */
       public io.bloombox.schema.comms.EmailComms.EmailContent.Builder getContentBuilder() {
         
@@ -3081,7 +3128,7 @@ public final class EmailComms {
        * Content for the email message.
        * </pre>
        *
-       * <code>.bloombox.schema.comms.EmailContent content = 3;</code>
+       * <code>.bloombox.comms.EmailContent content = 3;</code>
        */
       public io.bloombox.schema.comms.EmailComms.EmailContentOrBuilder getContentOrBuilder() {
         if (contentBuilder_ != null) {
@@ -3096,7 +3143,7 @@ public final class EmailComms {
        * Content for the email message.
        * </pre>
        *
-       * <code>.bloombox.schema.comms.EmailContent content = 3;</code>
+       * <code>.bloombox.comms.EmailContent content = 3;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
           io.bloombox.schema.comms.EmailComms.EmailContent, io.bloombox.schema.comms.EmailComms.EmailContent.Builder, io.bloombox.schema.comms.EmailComms.EmailContentOrBuilder> 
@@ -3888,21 +3935,23 @@ public final class EmailComms {
         }
         return bccBuilder_;
       }
+      @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
         return super.setUnknownFieldsProto3(unknownFields);
       }
 
+      @java.lang.Override
       public final Builder mergeUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
         return super.mergeUnknownFields(unknownFields);
       }
 
 
-      // @@protoc_insertion_point(builder_scope:bloombox.schema.comms.EmailMessage)
+      // @@protoc_insertion_point(builder_scope:bloombox.comms.EmailMessage)
     }
 
-    // @@protoc_insertion_point(class_scope:bloombox.schema.comms.EmailMessage)
+    // @@protoc_insertion_point(class_scope:bloombox.comms.EmailMessage)
     private static final io.bloombox.schema.comms.EmailComms.EmailMessage DEFAULT_INSTANCE;
     static {
       DEFAULT_INSTANCE = new io.bloombox.schema.comms.EmailComms.EmailMessage();
@@ -3914,6 +3963,7 @@ public final class EmailComms {
 
     private static final com.google.protobuf.Parser<EmailMessage>
         PARSER = new com.google.protobuf.AbstractParser<EmailMessage>() {
+      @java.lang.Override
       public EmailMessage parsePartialFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -3931,6 +3981,7 @@ public final class EmailComms {
       return PARSER;
     }
 
+    @java.lang.Override
     public io.bloombox.schema.comms.EmailComms.EmailMessage getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
@@ -3938,7 +3989,7 @@ public final class EmailComms {
   }
 
   public interface PublisherMetadataOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:bloombox.schema.comms.PublisherMetadata)
+      // @@protoc_insertion_point(interface_extends:bloombox.comms.PublisherMetadata)
       com.google.protobuf.MessageOrBuilder {
 
     /**
@@ -4036,11 +4087,11 @@ public final class EmailComms {
    * Specifies information about the publisher of an action.
    * </pre>
    *
-   * Protobuf type {@code bloombox.schema.comms.PublisherMetadata}
+   * Protobuf type {@code bloombox.comms.PublisherMetadata}
    */
   public  static final class PublisherMetadata extends
       com.google.protobuf.GeneratedMessageV3 implements
-      // @@protoc_insertion_point(message_implements:bloombox.schema.comms.PublisherMetadata)
+      // @@protoc_insertion_point(message_implements:bloombox.comms.PublisherMetadata)
       PublisherMetadataOrBuilder {
   private static final long serialVersionUID = 0L;
     // Use PublisherMetadata.newBuilder() to construct.
@@ -4079,13 +4130,6 @@ public final class EmailComms {
             case 0:
               done = true;
               break;
-            default: {
-              if (!parseUnknownFieldProto3(
-                  input, unknownFields, extensionRegistry, tag)) {
-                done = true;
-              }
-              break;
-            }
             case 10: {
               java.lang.String s = input.readStringRequireUtf8();
 
@@ -4116,6 +4160,13 @@ public final class EmailComms {
               facebook_ = s;
               break;
             }
+            default: {
+              if (!parseUnknownFieldProto3(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
           }
         }
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
@@ -4130,12 +4181,13 @@ public final class EmailComms {
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return io.bloombox.schema.comms.EmailComms.internal_static_bloombox_schema_comms_PublisherMetadata_descriptor;
+      return io.bloombox.schema.comms.EmailComms.internal_static_bloombox_comms_PublisherMetadata_descriptor;
     }
 
+    @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return io.bloombox.schema.comms.EmailComms.internal_static_bloombox_schema_comms_PublisherMetadata_fieldAccessorTable
+      return io.bloombox.schema.comms.EmailComms.internal_static_bloombox_comms_PublisherMetadata_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
               io.bloombox.schema.comms.EmailComms.PublisherMetadata.class, io.bloombox.schema.comms.EmailComms.PublisherMetadata.Builder.class);
     }
@@ -4351,6 +4403,7 @@ public final class EmailComms {
     }
 
     private byte memoizedIsInitialized = -1;
+    @java.lang.Override
     public final boolean isInitialized() {
       byte isInitialized = memoizedIsInitialized;
       if (isInitialized == 1) return true;
@@ -4360,6 +4413,7 @@ public final class EmailComms {
       return true;
     }
 
+    @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
       if (!getNameBytes().isEmpty()) {
@@ -4380,6 +4434,7 @@ public final class EmailComms {
       unknownFields.writeTo(output);
     }
 
+    @java.lang.Override
     public int getSerializedSize() {
       int size = memoizedSize;
       if (size != -1) return size;
@@ -4522,6 +4577,7 @@ public final class EmailComms {
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
 
+    @java.lang.Override
     public Builder newBuilderForType() { return newBuilder(); }
     public static Builder newBuilder() {
       return DEFAULT_INSTANCE.toBuilder();
@@ -4529,6 +4585,7 @@ public final class EmailComms {
     public static Builder newBuilder(io.bloombox.schema.comms.EmailComms.PublisherMetadata prototype) {
       return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
     }
+    @java.lang.Override
     public Builder toBuilder() {
       return this == DEFAULT_INSTANCE
           ? new Builder() : new Builder().mergeFrom(this);
@@ -4545,20 +4602,21 @@ public final class EmailComms {
      * Specifies information about the publisher of an action.
      * </pre>
      *
-     * Protobuf type {@code bloombox.schema.comms.PublisherMetadata}
+     * Protobuf type {@code bloombox.comms.PublisherMetadata}
      */
     public static final class Builder extends
         com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:bloombox.schema.comms.PublisherMetadata)
+        // @@protoc_insertion_point(builder_implements:bloombox.comms.PublisherMetadata)
         io.bloombox.schema.comms.EmailComms.PublisherMetadataOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return io.bloombox.schema.comms.EmailComms.internal_static_bloombox_schema_comms_PublisherMetadata_descriptor;
+        return io.bloombox.schema.comms.EmailComms.internal_static_bloombox_comms_PublisherMetadata_descriptor;
       }
 
+      @java.lang.Override
       protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return io.bloombox.schema.comms.EmailComms.internal_static_bloombox_schema_comms_PublisherMetadata_fieldAccessorTable
+        return io.bloombox.schema.comms.EmailComms.internal_static_bloombox_comms_PublisherMetadata_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
                 io.bloombox.schema.comms.EmailComms.PublisherMetadata.class, io.bloombox.schema.comms.EmailComms.PublisherMetadata.Builder.class);
       }
@@ -4578,6 +4636,7 @@ public final class EmailComms {
                 .alwaysUseFieldBuilders) {
         }
       }
+      @java.lang.Override
       public Builder clear() {
         super.clear();
         name_ = "";
@@ -4593,15 +4652,18 @@ public final class EmailComms {
         return this;
       }
 
+      @java.lang.Override
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return io.bloombox.schema.comms.EmailComms.internal_static_bloombox_schema_comms_PublisherMetadata_descriptor;
+        return io.bloombox.schema.comms.EmailComms.internal_static_bloombox_comms_PublisherMetadata_descriptor;
       }
 
+      @java.lang.Override
       public io.bloombox.schema.comms.EmailComms.PublisherMetadata getDefaultInstanceForType() {
         return io.bloombox.schema.comms.EmailComms.PublisherMetadata.getDefaultInstance();
       }
 
+      @java.lang.Override
       public io.bloombox.schema.comms.EmailComms.PublisherMetadata build() {
         io.bloombox.schema.comms.EmailComms.PublisherMetadata result = buildPartial();
         if (!result.isInitialized()) {
@@ -4610,6 +4672,7 @@ public final class EmailComms {
         return result;
       }
 
+      @java.lang.Override
       public io.bloombox.schema.comms.EmailComms.PublisherMetadata buildPartial() {
         io.bloombox.schema.comms.EmailComms.PublisherMetadata result = new io.bloombox.schema.comms.EmailComms.PublisherMetadata(this);
         result.name_ = name_;
@@ -4621,32 +4684,39 @@ public final class EmailComms {
         return result;
       }
 
+      @java.lang.Override
       public Builder clone() {
         return (Builder) super.clone();
       }
+      @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
         return (Builder) super.setField(field, value);
       }
+      @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
         return (Builder) super.clearField(field);
       }
+      @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
         return (Builder) super.clearOneof(oneof);
       }
+      @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
         return (Builder) super.setRepeatedField(field, index, value);
       }
+      @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
         return (Builder) super.addRepeatedField(field, value);
       }
+      @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
         if (other instanceof io.bloombox.schema.comms.EmailComms.PublisherMetadata) {
           return mergeFrom((io.bloombox.schema.comms.EmailComms.PublisherMetadata)other);
@@ -4683,10 +4753,12 @@ public final class EmailComms {
         return this;
       }
 
+      @java.lang.Override
       public final boolean isInitialized() {
         return true;
       }
 
+      @java.lang.Override
       public Builder mergeFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -5149,21 +5221,23 @@ public final class EmailComms {
         onChanged();
         return this;
       }
+      @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
         return super.setUnknownFieldsProto3(unknownFields);
       }
 
+      @java.lang.Override
       public final Builder mergeUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
         return super.mergeUnknownFields(unknownFields);
       }
 
 
-      // @@protoc_insertion_point(builder_scope:bloombox.schema.comms.PublisherMetadata)
+      // @@protoc_insertion_point(builder_scope:bloombox.comms.PublisherMetadata)
     }
 
-    // @@protoc_insertion_point(class_scope:bloombox.schema.comms.PublisherMetadata)
+    // @@protoc_insertion_point(class_scope:bloombox.comms.PublisherMetadata)
     private static final io.bloombox.schema.comms.EmailComms.PublisherMetadata DEFAULT_INSTANCE;
     static {
       DEFAULT_INSTANCE = new io.bloombox.schema.comms.EmailComms.PublisherMetadata();
@@ -5175,6 +5249,7 @@ public final class EmailComms {
 
     private static final com.google.protobuf.Parser<PublisherMetadata>
         PARSER = new com.google.protobuf.AbstractParser<PublisherMetadata>() {
+      @java.lang.Override
       public PublisherMetadata parsePartialFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -5192,6 +5267,7 @@ public final class EmailComms {
       return PARSER;
     }
 
+    @java.lang.Override
     public io.bloombox.schema.comms.EmailComms.PublisherMetadata getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
@@ -5199,7 +5275,7 @@ public final class EmailComms {
   }
 
   public interface EmailMetadataOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:bloombox.schema.comms.EmailMetadata)
+      // @@protoc_insertion_point(interface_extends:bloombox.comms.EmailMetadata)
       com.google.protobuf.MessageOrBuilder {
   }
   /**
@@ -5207,11 +5283,11 @@ public final class EmailComms {
    * Specifies schema-based metadata appended to a message.
    * </pre>
    *
-   * Protobuf type {@code bloombox.schema.comms.EmailMetadata}
+   * Protobuf type {@code bloombox.comms.EmailMetadata}
    */
   public  static final class EmailMetadata extends
       com.google.protobuf.GeneratedMessageV3 implements
-      // @@protoc_insertion_point(message_implements:bloombox.schema.comms.EmailMetadata)
+      // @@protoc_insertion_point(message_implements:bloombox.comms.EmailMetadata)
       EmailMetadataOrBuilder {
   private static final long serialVersionUID = 0L;
     // Use EmailMetadata.newBuilder() to construct.
@@ -5265,12 +5341,13 @@ public final class EmailComms {
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return io.bloombox.schema.comms.EmailComms.internal_static_bloombox_schema_comms_EmailMetadata_descriptor;
+      return io.bloombox.schema.comms.EmailComms.internal_static_bloombox_comms_EmailMetadata_descriptor;
     }
 
+    @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return io.bloombox.schema.comms.EmailComms.internal_static_bloombox_schema_comms_EmailMetadata_fieldAccessorTable
+      return io.bloombox.schema.comms.EmailComms.internal_static_bloombox_comms_EmailMetadata_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
               io.bloombox.schema.comms.EmailComms.EmailMetadata.class, io.bloombox.schema.comms.EmailComms.EmailMetadata.Builder.class);
     }
@@ -5280,7 +5357,7 @@ public final class EmailComms {
      * Specifies the type of metadata block to append.
      * </pre>
      *
-     * Protobuf enum {@code bloombox.schema.comms.EmailMetadata.Type}
+     * Protobuf enum {@code bloombox.comms.EmailMetadata.Type}
      */
     public enum Type
         implements com.google.protobuf.ProtocolMessageEnum {
@@ -5424,11 +5501,11 @@ public final class EmailComms {
         this.value = value;
       }
 
-      // @@protoc_insertion_point(enum_scope:bloombox.schema.comms.EmailMetadata.Type)
+      // @@protoc_insertion_point(enum_scope:bloombox.comms.EmailMetadata.Type)
     }
 
     public interface GoToViewOrBuilder extends
-        // @@protoc_insertion_point(interface_extends:bloombox.schema.comms.EmailMetadata.GoToView)
+        // @@protoc_insertion_point(interface_extends:bloombox.comms.EmailMetadata.GoToView)
         com.google.protobuf.MessageOrBuilder {
 
       /**
@@ -5472,7 +5549,7 @@ public final class EmailComms {
        * Information about the action's publisher.
        * </pre>
        *
-       * <code>.bloombox.schema.comms.PublisherMetadata publisher = 4;</code>
+       * <code>.bloombox.comms.PublisherMetadata publisher = 4;</code>
        */
       boolean hasPublisher();
       /**
@@ -5480,7 +5557,7 @@ public final class EmailComms {
        * Information about the action's publisher.
        * </pre>
        *
-       * <code>.bloombox.schema.comms.PublisherMetadata publisher = 4;</code>
+       * <code>.bloombox.comms.PublisherMetadata publisher = 4;</code>
        */
       io.bloombox.schema.comms.EmailComms.PublisherMetadata getPublisher();
       /**
@@ -5488,7 +5565,7 @@ public final class EmailComms {
        * Information about the action's publisher.
        * </pre>
        *
-       * <code>.bloombox.schema.comms.PublisherMetadata publisher = 4;</code>
+       * <code>.bloombox.comms.PublisherMetadata publisher = 4;</code>
        */
       io.bloombox.schema.comms.EmailComms.PublisherMetadataOrBuilder getPublisherOrBuilder();
     }
@@ -5497,11 +5574,11 @@ public final class EmailComms {
      * Specifies the structure of an attached go-to action.
      * </pre>
      *
-     * Protobuf type {@code bloombox.schema.comms.EmailMetadata.GoToView}
+     * Protobuf type {@code bloombox.comms.EmailMetadata.GoToView}
      */
     public  static final class GoToView extends
         com.google.protobuf.GeneratedMessageV3 implements
-        // @@protoc_insertion_point(message_implements:bloombox.schema.comms.EmailMetadata.GoToView)
+        // @@protoc_insertion_point(message_implements:bloombox.comms.EmailMetadata.GoToView)
         GoToViewOrBuilder {
     private static final long serialVersionUID = 0L;
       // Use GoToView.newBuilder() to construct.
@@ -5537,13 +5614,6 @@ public final class EmailComms {
               case 0:
                 done = true;
                 break;
-              default: {
-                if (!parseUnknownFieldProto3(
-                    input, unknownFields, extensionRegistry, tag)) {
-                  done = true;
-                }
-                break;
-              }
               case 10: {
                 java.lang.String s = input.readStringRequireUtf8();
 
@@ -5569,6 +5639,13 @@ public final class EmailComms {
 
                 break;
               }
+              default: {
+                if (!parseUnknownFieldProto3(
+                    input, unknownFields, extensionRegistry, tag)) {
+                  done = true;
+                }
+                break;
+              }
             }
           }
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
@@ -5583,12 +5660,13 @@ public final class EmailComms {
       }
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return io.bloombox.schema.comms.EmailComms.internal_static_bloombox_schema_comms_EmailMetadata_GoToView_descriptor;
+        return io.bloombox.schema.comms.EmailComms.internal_static_bloombox_comms_EmailMetadata_GoToView_descriptor;
       }
 
+      @java.lang.Override
       protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return io.bloombox.schema.comms.EmailComms.internal_static_bloombox_schema_comms_EmailMetadata_GoToView_fieldAccessorTable
+        return io.bloombox.schema.comms.EmailComms.internal_static_bloombox_comms_EmailMetadata_GoToView_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
                 io.bloombox.schema.comms.EmailComms.EmailMetadata.GoToView.class, io.bloombox.schema.comms.EmailComms.EmailMetadata.GoToView.Builder.class);
       }
@@ -5684,7 +5762,7 @@ public final class EmailComms {
        * Information about the action's publisher.
        * </pre>
        *
-       * <code>.bloombox.schema.comms.PublisherMetadata publisher = 4;</code>
+       * <code>.bloombox.comms.PublisherMetadata publisher = 4;</code>
        */
       public boolean hasPublisher() {
         return publisher_ != null;
@@ -5694,7 +5772,7 @@ public final class EmailComms {
        * Information about the action's publisher.
        * </pre>
        *
-       * <code>.bloombox.schema.comms.PublisherMetadata publisher = 4;</code>
+       * <code>.bloombox.comms.PublisherMetadata publisher = 4;</code>
        */
       public io.bloombox.schema.comms.EmailComms.PublisherMetadata getPublisher() {
         return publisher_ == null ? io.bloombox.schema.comms.EmailComms.PublisherMetadata.getDefaultInstance() : publisher_;
@@ -5704,13 +5782,14 @@ public final class EmailComms {
        * Information about the action's publisher.
        * </pre>
        *
-       * <code>.bloombox.schema.comms.PublisherMetadata publisher = 4;</code>
+       * <code>.bloombox.comms.PublisherMetadata publisher = 4;</code>
        */
       public io.bloombox.schema.comms.EmailComms.PublisherMetadataOrBuilder getPublisherOrBuilder() {
         return getPublisher();
       }
 
       private byte memoizedIsInitialized = -1;
+      @java.lang.Override
       public final boolean isInitialized() {
         byte isInitialized = memoizedIsInitialized;
         if (isInitialized == 1) return true;
@@ -5720,6 +5799,7 @@ public final class EmailComms {
         return true;
       }
 
+      @java.lang.Override
       public void writeTo(com.google.protobuf.CodedOutputStream output)
                           throws java.io.IOException {
         if (!getNameBytes().isEmpty()) {
@@ -5734,6 +5814,7 @@ public final class EmailComms {
         unknownFields.writeTo(output);
       }
 
+      @java.lang.Override
       public int getSerializedSize() {
         int size = memoizedSize;
         if (size != -1) return size;
@@ -5868,6 +5949,7 @@ public final class EmailComms {
             .parseWithIOException(PARSER, input, extensionRegistry);
       }
 
+      @java.lang.Override
       public Builder newBuilderForType() { return newBuilder(); }
       public static Builder newBuilder() {
         return DEFAULT_INSTANCE.toBuilder();
@@ -5875,6 +5957,7 @@ public final class EmailComms {
       public static Builder newBuilder(io.bloombox.schema.comms.EmailComms.EmailMetadata.GoToView prototype) {
         return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
       }
+      @java.lang.Override
       public Builder toBuilder() {
         return this == DEFAULT_INSTANCE
             ? new Builder() : new Builder().mergeFrom(this);
@@ -5891,20 +5974,21 @@ public final class EmailComms {
        * Specifies the structure of an attached go-to action.
        * </pre>
        *
-       * Protobuf type {@code bloombox.schema.comms.EmailMetadata.GoToView}
+       * Protobuf type {@code bloombox.comms.EmailMetadata.GoToView}
        */
       public static final class Builder extends
           com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-          // @@protoc_insertion_point(builder_implements:bloombox.schema.comms.EmailMetadata.GoToView)
+          // @@protoc_insertion_point(builder_implements:bloombox.comms.EmailMetadata.GoToView)
           io.bloombox.schema.comms.EmailComms.EmailMetadata.GoToViewOrBuilder {
         public static final com.google.protobuf.Descriptors.Descriptor
             getDescriptor() {
-          return io.bloombox.schema.comms.EmailComms.internal_static_bloombox_schema_comms_EmailMetadata_GoToView_descriptor;
+          return io.bloombox.schema.comms.EmailComms.internal_static_bloombox_comms_EmailMetadata_GoToView_descriptor;
         }
 
+        @java.lang.Override
         protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
             internalGetFieldAccessorTable() {
-          return io.bloombox.schema.comms.EmailComms.internal_static_bloombox_schema_comms_EmailMetadata_GoToView_fieldAccessorTable
+          return io.bloombox.schema.comms.EmailComms.internal_static_bloombox_comms_EmailMetadata_GoToView_fieldAccessorTable
               .ensureFieldAccessorsInitialized(
                   io.bloombox.schema.comms.EmailComms.EmailMetadata.GoToView.class, io.bloombox.schema.comms.EmailComms.EmailMetadata.GoToView.Builder.class);
         }
@@ -5924,6 +6008,7 @@ public final class EmailComms {
                   .alwaysUseFieldBuilders) {
           }
         }
+        @java.lang.Override
         public Builder clear() {
           super.clear();
           name_ = "";
@@ -5939,15 +6024,18 @@ public final class EmailComms {
           return this;
         }
 
+        @java.lang.Override
         public com.google.protobuf.Descriptors.Descriptor
             getDescriptorForType() {
-          return io.bloombox.schema.comms.EmailComms.internal_static_bloombox_schema_comms_EmailMetadata_GoToView_descriptor;
+          return io.bloombox.schema.comms.EmailComms.internal_static_bloombox_comms_EmailMetadata_GoToView_descriptor;
         }
 
+        @java.lang.Override
         public io.bloombox.schema.comms.EmailComms.EmailMetadata.GoToView getDefaultInstanceForType() {
           return io.bloombox.schema.comms.EmailComms.EmailMetadata.GoToView.getDefaultInstance();
         }
 
+        @java.lang.Override
         public io.bloombox.schema.comms.EmailComms.EmailMetadata.GoToView build() {
           io.bloombox.schema.comms.EmailComms.EmailMetadata.GoToView result = buildPartial();
           if (!result.isInitialized()) {
@@ -5956,6 +6044,7 @@ public final class EmailComms {
           return result;
         }
 
+        @java.lang.Override
         public io.bloombox.schema.comms.EmailComms.EmailMetadata.GoToView buildPartial() {
           io.bloombox.schema.comms.EmailComms.EmailMetadata.GoToView result = new io.bloombox.schema.comms.EmailComms.EmailMetadata.GoToView(this);
           result.name_ = name_;
@@ -5969,32 +6058,39 @@ public final class EmailComms {
           return result;
         }
 
+        @java.lang.Override
         public Builder clone() {
           return (Builder) super.clone();
         }
+        @java.lang.Override
         public Builder setField(
             com.google.protobuf.Descriptors.FieldDescriptor field,
             java.lang.Object value) {
           return (Builder) super.setField(field, value);
         }
+        @java.lang.Override
         public Builder clearField(
             com.google.protobuf.Descriptors.FieldDescriptor field) {
           return (Builder) super.clearField(field);
         }
+        @java.lang.Override
         public Builder clearOneof(
             com.google.protobuf.Descriptors.OneofDescriptor oneof) {
           return (Builder) super.clearOneof(oneof);
         }
+        @java.lang.Override
         public Builder setRepeatedField(
             com.google.protobuf.Descriptors.FieldDescriptor field,
             int index, java.lang.Object value) {
           return (Builder) super.setRepeatedField(field, index, value);
         }
+        @java.lang.Override
         public Builder addRepeatedField(
             com.google.protobuf.Descriptors.FieldDescriptor field,
             java.lang.Object value) {
           return (Builder) super.addRepeatedField(field, value);
         }
+        @java.lang.Override
         public Builder mergeFrom(com.google.protobuf.Message other) {
           if (other instanceof io.bloombox.schema.comms.EmailComms.EmailMetadata.GoToView) {
             return mergeFrom((io.bloombox.schema.comms.EmailComms.EmailMetadata.GoToView)other);
@@ -6022,10 +6118,12 @@ public final class EmailComms {
           return this;
         }
 
+        @java.lang.Override
         public final boolean isInitialized() {
           return true;
         }
 
+        @java.lang.Override
         public Builder mergeFrom(
             com.google.protobuf.CodedInputStream input,
             com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -6230,7 +6328,7 @@ public final class EmailComms {
          * Information about the action's publisher.
          * </pre>
          *
-         * <code>.bloombox.schema.comms.PublisherMetadata publisher = 4;</code>
+         * <code>.bloombox.comms.PublisherMetadata publisher = 4;</code>
          */
         public boolean hasPublisher() {
           return publisherBuilder_ != null || publisher_ != null;
@@ -6240,7 +6338,7 @@ public final class EmailComms {
          * Information about the action's publisher.
          * </pre>
          *
-         * <code>.bloombox.schema.comms.PublisherMetadata publisher = 4;</code>
+         * <code>.bloombox.comms.PublisherMetadata publisher = 4;</code>
          */
         public io.bloombox.schema.comms.EmailComms.PublisherMetadata getPublisher() {
           if (publisherBuilder_ == null) {
@@ -6254,7 +6352,7 @@ public final class EmailComms {
          * Information about the action's publisher.
          * </pre>
          *
-         * <code>.bloombox.schema.comms.PublisherMetadata publisher = 4;</code>
+         * <code>.bloombox.comms.PublisherMetadata publisher = 4;</code>
          */
         public Builder setPublisher(io.bloombox.schema.comms.EmailComms.PublisherMetadata value) {
           if (publisherBuilder_ == null) {
@@ -6274,7 +6372,7 @@ public final class EmailComms {
          * Information about the action's publisher.
          * </pre>
          *
-         * <code>.bloombox.schema.comms.PublisherMetadata publisher = 4;</code>
+         * <code>.bloombox.comms.PublisherMetadata publisher = 4;</code>
          */
         public Builder setPublisher(
             io.bloombox.schema.comms.EmailComms.PublisherMetadata.Builder builderForValue) {
@@ -6292,7 +6390,7 @@ public final class EmailComms {
          * Information about the action's publisher.
          * </pre>
          *
-         * <code>.bloombox.schema.comms.PublisherMetadata publisher = 4;</code>
+         * <code>.bloombox.comms.PublisherMetadata publisher = 4;</code>
          */
         public Builder mergePublisher(io.bloombox.schema.comms.EmailComms.PublisherMetadata value) {
           if (publisherBuilder_ == null) {
@@ -6314,7 +6412,7 @@ public final class EmailComms {
          * Information about the action's publisher.
          * </pre>
          *
-         * <code>.bloombox.schema.comms.PublisherMetadata publisher = 4;</code>
+         * <code>.bloombox.comms.PublisherMetadata publisher = 4;</code>
          */
         public Builder clearPublisher() {
           if (publisherBuilder_ == null) {
@@ -6332,7 +6430,7 @@ public final class EmailComms {
          * Information about the action's publisher.
          * </pre>
          *
-         * <code>.bloombox.schema.comms.PublisherMetadata publisher = 4;</code>
+         * <code>.bloombox.comms.PublisherMetadata publisher = 4;</code>
          */
         public io.bloombox.schema.comms.EmailComms.PublisherMetadata.Builder getPublisherBuilder() {
           
@@ -6344,7 +6442,7 @@ public final class EmailComms {
          * Information about the action's publisher.
          * </pre>
          *
-         * <code>.bloombox.schema.comms.PublisherMetadata publisher = 4;</code>
+         * <code>.bloombox.comms.PublisherMetadata publisher = 4;</code>
          */
         public io.bloombox.schema.comms.EmailComms.PublisherMetadataOrBuilder getPublisherOrBuilder() {
           if (publisherBuilder_ != null) {
@@ -6359,7 +6457,7 @@ public final class EmailComms {
          * Information about the action's publisher.
          * </pre>
          *
-         * <code>.bloombox.schema.comms.PublisherMetadata publisher = 4;</code>
+         * <code>.bloombox.comms.PublisherMetadata publisher = 4;</code>
          */
         private com.google.protobuf.SingleFieldBuilderV3<
             io.bloombox.schema.comms.EmailComms.PublisherMetadata, io.bloombox.schema.comms.EmailComms.PublisherMetadata.Builder, io.bloombox.schema.comms.EmailComms.PublisherMetadataOrBuilder> 
@@ -6374,21 +6472,23 @@ public final class EmailComms {
           }
           return publisherBuilder_;
         }
+        @java.lang.Override
         public final Builder setUnknownFields(
             final com.google.protobuf.UnknownFieldSet unknownFields) {
           return super.setUnknownFieldsProto3(unknownFields);
         }
 
+        @java.lang.Override
         public final Builder mergeUnknownFields(
             final com.google.protobuf.UnknownFieldSet unknownFields) {
           return super.mergeUnknownFields(unknownFields);
         }
 
 
-        // @@protoc_insertion_point(builder_scope:bloombox.schema.comms.EmailMetadata.GoToView)
+        // @@protoc_insertion_point(builder_scope:bloombox.comms.EmailMetadata.GoToView)
       }
 
-      // @@protoc_insertion_point(class_scope:bloombox.schema.comms.EmailMetadata.GoToView)
+      // @@protoc_insertion_point(class_scope:bloombox.comms.EmailMetadata.GoToView)
       private static final io.bloombox.schema.comms.EmailComms.EmailMetadata.GoToView DEFAULT_INSTANCE;
       static {
         DEFAULT_INSTANCE = new io.bloombox.schema.comms.EmailComms.EmailMetadata.GoToView();
@@ -6400,6 +6500,7 @@ public final class EmailComms {
 
       private static final com.google.protobuf.Parser<GoToView>
           PARSER = new com.google.protobuf.AbstractParser<GoToView>() {
+        @java.lang.Override
         public GoToView parsePartialFrom(
             com.google.protobuf.CodedInputStream input,
             com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -6417,6 +6518,7 @@ public final class EmailComms {
         return PARSER;
       }
 
+      @java.lang.Override
       public io.bloombox.schema.comms.EmailComms.EmailMetadata.GoToView getDefaultInstanceForType() {
         return DEFAULT_INSTANCE;
       }
@@ -6424,7 +6526,7 @@ public final class EmailComms {
     }
 
     public interface GoToTrackOrBuilder extends
-        // @@protoc_insertion_point(interface_extends:bloombox.schema.comms.EmailMetadata.GoToTrack)
+        // @@protoc_insertion_point(interface_extends:bloombox.comms.EmailMetadata.GoToTrack)
         com.google.protobuf.MessageOrBuilder {
 
       /**
@@ -6507,7 +6609,7 @@ public final class EmailComms {
        * Specifies info about the partner fulfilling the order.
        * </pre>
        *
-       * <code>.bloombox.schema.partner.Partner partner = 4;</code>
+       * <code>.bloombox.partner.Partner partner = 4;</code>
        */
       boolean hasPartner();
       /**
@@ -6515,7 +6617,7 @@ public final class EmailComms {
        * Specifies info about the partner fulfilling the order.
        * </pre>
        *
-       * <code>.bloombox.schema.partner.Partner partner = 4;</code>
+       * <code>.bloombox.partner.Partner partner = 4;</code>
        */
       io.bloombox.schema.partner.PartnerAccount.Partner getPartner();
       /**
@@ -6523,7 +6625,7 @@ public final class EmailComms {
        * Specifies info about the partner fulfilling the order.
        * </pre>
        *
-       * <code>.bloombox.schema.partner.Partner partner = 4;</code>
+       * <code>.bloombox.partner.Partner partner = 4;</code>
        */
       io.bloombox.schema.partner.PartnerAccount.PartnerOrBuilder getPartnerOrBuilder();
 
@@ -6575,11 +6677,11 @@ public final class EmailComms {
      * Specifies the structure of an attached One-Click action.
      * </pre>
      *
-     * Protobuf type {@code bloombox.schema.comms.EmailMetadata.GoToTrack}
+     * Protobuf type {@code bloombox.comms.EmailMetadata.GoToTrack}
      */
     public  static final class GoToTrack extends
         com.google.protobuf.GeneratedMessageV3 implements
-        // @@protoc_insertion_point(message_implements:bloombox.schema.comms.EmailMetadata.GoToTrack)
+        // @@protoc_insertion_point(message_implements:bloombox.comms.EmailMetadata.GoToTrack)
         GoToTrackOrBuilder {
     private static final long serialVersionUID = 0L;
       // Use GoToTrack.newBuilder() to construct.
@@ -6614,13 +6716,6 @@ public final class EmailComms {
               case 0:
                 done = true;
                 break;
-              default: {
-                if (!parseUnknownFieldProto3(
-                    input, unknownFields, extensionRegistry, tag)) {
-                  done = true;
-                }
-                break;
-              }
               case 10: {
                 io.opencannabis.schema.geo.Address.Builder subBuilder = null;
                 if (deliveryAddress_ != null) {
@@ -6692,6 +6787,13 @@ public final class EmailComms {
                 trackingUrl_ = s;
                 break;
               }
+              default: {
+                if (!parseUnknownFieldProto3(
+                    input, unknownFields, extensionRegistry, tag)) {
+                  done = true;
+                }
+                break;
+              }
             }
           }
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
@@ -6706,12 +6808,13 @@ public final class EmailComms {
       }
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return io.bloombox.schema.comms.EmailComms.internal_static_bloombox_schema_comms_EmailMetadata_GoToTrack_descriptor;
+        return io.bloombox.schema.comms.EmailComms.internal_static_bloombox_comms_EmailMetadata_GoToTrack_descriptor;
       }
 
+      @java.lang.Override
       protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return io.bloombox.schema.comms.EmailComms.internal_static_bloombox_schema_comms_EmailMetadata_GoToTrack_fieldAccessorTable
+        return io.bloombox.schema.comms.EmailComms.internal_static_bloombox_comms_EmailMetadata_GoToTrack_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
                 io.bloombox.schema.comms.EmailComms.EmailMetadata.GoToTrack.class, io.bloombox.schema.comms.EmailComms.EmailMetadata.GoToTrack.Builder.class);
       }
@@ -6822,7 +6925,7 @@ public final class EmailComms {
        * Specifies info about the partner fulfilling the order.
        * </pre>
        *
-       * <code>.bloombox.schema.partner.Partner partner = 4;</code>
+       * <code>.bloombox.partner.Partner partner = 4;</code>
        */
       public boolean hasPartner() {
         return partner_ != null;
@@ -6832,7 +6935,7 @@ public final class EmailComms {
        * Specifies info about the partner fulfilling the order.
        * </pre>
        *
-       * <code>.bloombox.schema.partner.Partner partner = 4;</code>
+       * <code>.bloombox.partner.Partner partner = 4;</code>
        */
       public io.bloombox.schema.partner.PartnerAccount.Partner getPartner() {
         return partner_ == null ? io.bloombox.schema.partner.PartnerAccount.Partner.getDefaultInstance() : partner_;
@@ -6842,7 +6945,7 @@ public final class EmailComms {
        * Specifies info about the partner fulfilling the order.
        * </pre>
        *
-       * <code>.bloombox.schema.partner.Partner partner = 4;</code>
+       * <code>.bloombox.partner.Partner partner = 4;</code>
        */
       public io.bloombox.schema.partner.PartnerAccount.PartnerOrBuilder getPartnerOrBuilder() {
         return getPartner();
@@ -6924,6 +7027,7 @@ public final class EmailComms {
       }
 
       private byte memoizedIsInitialized = -1;
+      @java.lang.Override
       public final boolean isInitialized() {
         byte isInitialized = memoizedIsInitialized;
         if (isInitialized == 1) return true;
@@ -6933,6 +7037,7 @@ public final class EmailComms {
         return true;
       }
 
+      @java.lang.Override
       public void writeTo(com.google.protobuf.CodedOutputStream output)
                           throws java.io.IOException {
         if (deliveryAddress_ != null) {
@@ -6956,6 +7061,7 @@ public final class EmailComms {
         unknownFields.writeTo(output);
       }
 
+      @java.lang.Override
       public int getSerializedSize() {
         int size = memoizedSize;
         if (size != -1) return size;
@@ -7135,6 +7241,7 @@ public final class EmailComms {
             .parseWithIOException(PARSER, input, extensionRegistry);
       }
 
+      @java.lang.Override
       public Builder newBuilderForType() { return newBuilder(); }
       public static Builder newBuilder() {
         return DEFAULT_INSTANCE.toBuilder();
@@ -7142,6 +7249,7 @@ public final class EmailComms {
       public static Builder newBuilder(io.bloombox.schema.comms.EmailComms.EmailMetadata.GoToTrack prototype) {
         return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
       }
+      @java.lang.Override
       public Builder toBuilder() {
         return this == DEFAULT_INSTANCE
             ? new Builder() : new Builder().mergeFrom(this);
@@ -7158,20 +7266,21 @@ public final class EmailComms {
        * Specifies the structure of an attached One-Click action.
        * </pre>
        *
-       * Protobuf type {@code bloombox.schema.comms.EmailMetadata.GoToTrack}
+       * Protobuf type {@code bloombox.comms.EmailMetadata.GoToTrack}
        */
       public static final class Builder extends
           com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-          // @@protoc_insertion_point(builder_implements:bloombox.schema.comms.EmailMetadata.GoToTrack)
+          // @@protoc_insertion_point(builder_implements:bloombox.comms.EmailMetadata.GoToTrack)
           io.bloombox.schema.comms.EmailComms.EmailMetadata.GoToTrackOrBuilder {
         public static final com.google.protobuf.Descriptors.Descriptor
             getDescriptor() {
-          return io.bloombox.schema.comms.EmailComms.internal_static_bloombox_schema_comms_EmailMetadata_GoToTrack_descriptor;
+          return io.bloombox.schema.comms.EmailComms.internal_static_bloombox_comms_EmailMetadata_GoToTrack_descriptor;
         }
 
+        @java.lang.Override
         protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
             internalGetFieldAccessorTable() {
-          return io.bloombox.schema.comms.EmailComms.internal_static_bloombox_schema_comms_EmailMetadata_GoToTrack_fieldAccessorTable
+          return io.bloombox.schema.comms.EmailComms.internal_static_bloombox_comms_EmailMetadata_GoToTrack_fieldAccessorTable
               .ensureFieldAccessorsInitialized(
                   io.bloombox.schema.comms.EmailComms.EmailMetadata.GoToTrack.class, io.bloombox.schema.comms.EmailComms.EmailMetadata.GoToTrack.Builder.class);
         }
@@ -7191,6 +7300,7 @@ public final class EmailComms {
                   .alwaysUseFieldBuilders) {
           }
         }
+        @java.lang.Override
         public Builder clear() {
           super.clear();
           if (deliveryAddressBuilder_ == null) {
@@ -7228,15 +7338,18 @@ public final class EmailComms {
           return this;
         }
 
+        @java.lang.Override
         public com.google.protobuf.Descriptors.Descriptor
             getDescriptorForType() {
-          return io.bloombox.schema.comms.EmailComms.internal_static_bloombox_schema_comms_EmailMetadata_GoToTrack_descriptor;
+          return io.bloombox.schema.comms.EmailComms.internal_static_bloombox_comms_EmailMetadata_GoToTrack_descriptor;
         }
 
+        @java.lang.Override
         public io.bloombox.schema.comms.EmailComms.EmailMetadata.GoToTrack getDefaultInstanceForType() {
           return io.bloombox.schema.comms.EmailComms.EmailMetadata.GoToTrack.getDefaultInstance();
         }
 
+        @java.lang.Override
         public io.bloombox.schema.comms.EmailComms.EmailMetadata.GoToTrack build() {
           io.bloombox.schema.comms.EmailComms.EmailMetadata.GoToTrack result = buildPartial();
           if (!result.isInitialized()) {
@@ -7245,6 +7358,7 @@ public final class EmailComms {
           return result;
         }
 
+        @java.lang.Override
         public io.bloombox.schema.comms.EmailComms.EmailMetadata.GoToTrack buildPartial() {
           io.bloombox.schema.comms.EmailComms.EmailMetadata.GoToTrack result = new io.bloombox.schema.comms.EmailComms.EmailMetadata.GoToTrack(this);
           if (deliveryAddressBuilder_ == null) {
@@ -7277,32 +7391,39 @@ public final class EmailComms {
           return result;
         }
 
+        @java.lang.Override
         public Builder clone() {
           return (Builder) super.clone();
         }
+        @java.lang.Override
         public Builder setField(
             com.google.protobuf.Descriptors.FieldDescriptor field,
             java.lang.Object value) {
           return (Builder) super.setField(field, value);
         }
+        @java.lang.Override
         public Builder clearField(
             com.google.protobuf.Descriptors.FieldDescriptor field) {
           return (Builder) super.clearField(field);
         }
+        @java.lang.Override
         public Builder clearOneof(
             com.google.protobuf.Descriptors.OneofDescriptor oneof) {
           return (Builder) super.clearOneof(oneof);
         }
+        @java.lang.Override
         public Builder setRepeatedField(
             com.google.protobuf.Descriptors.FieldDescriptor field,
             int index, java.lang.Object value) {
           return (Builder) super.setRepeatedField(field, index, value);
         }
+        @java.lang.Override
         public Builder addRepeatedField(
             com.google.protobuf.Descriptors.FieldDescriptor field,
             java.lang.Object value) {
           return (Builder) super.addRepeatedField(field, value);
         }
+        @java.lang.Override
         public Builder mergeFrom(com.google.protobuf.Message other) {
           if (other instanceof io.bloombox.schema.comms.EmailComms.EmailMetadata.GoToTrack) {
             return mergeFrom((io.bloombox.schema.comms.EmailComms.EmailMetadata.GoToTrack)other);
@@ -7338,10 +7459,12 @@ public final class EmailComms {
           return this;
         }
 
+        @java.lang.Override
         public final boolean isInitialized() {
           return true;
         }
 
+        @java.lang.Override
         public Builder mergeFrom(
             com.google.protobuf.CodedInputStream input,
             com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -7827,7 +7950,7 @@ public final class EmailComms {
          * Specifies info about the partner fulfilling the order.
          * </pre>
          *
-         * <code>.bloombox.schema.partner.Partner partner = 4;</code>
+         * <code>.bloombox.partner.Partner partner = 4;</code>
          */
         public boolean hasPartner() {
           return partnerBuilder_ != null || partner_ != null;
@@ -7837,7 +7960,7 @@ public final class EmailComms {
          * Specifies info about the partner fulfilling the order.
          * </pre>
          *
-         * <code>.bloombox.schema.partner.Partner partner = 4;</code>
+         * <code>.bloombox.partner.Partner partner = 4;</code>
          */
         public io.bloombox.schema.partner.PartnerAccount.Partner getPartner() {
           if (partnerBuilder_ == null) {
@@ -7851,7 +7974,7 @@ public final class EmailComms {
          * Specifies info about the partner fulfilling the order.
          * </pre>
          *
-         * <code>.bloombox.schema.partner.Partner partner = 4;</code>
+         * <code>.bloombox.partner.Partner partner = 4;</code>
          */
         public Builder setPartner(io.bloombox.schema.partner.PartnerAccount.Partner value) {
           if (partnerBuilder_ == null) {
@@ -7871,7 +7994,7 @@ public final class EmailComms {
          * Specifies info about the partner fulfilling the order.
          * </pre>
          *
-         * <code>.bloombox.schema.partner.Partner partner = 4;</code>
+         * <code>.bloombox.partner.Partner partner = 4;</code>
          */
         public Builder setPartner(
             io.bloombox.schema.partner.PartnerAccount.Partner.Builder builderForValue) {
@@ -7889,7 +8012,7 @@ public final class EmailComms {
          * Specifies info about the partner fulfilling the order.
          * </pre>
          *
-         * <code>.bloombox.schema.partner.Partner partner = 4;</code>
+         * <code>.bloombox.partner.Partner partner = 4;</code>
          */
         public Builder mergePartner(io.bloombox.schema.partner.PartnerAccount.Partner value) {
           if (partnerBuilder_ == null) {
@@ -7911,7 +8034,7 @@ public final class EmailComms {
          * Specifies info about the partner fulfilling the order.
          * </pre>
          *
-         * <code>.bloombox.schema.partner.Partner partner = 4;</code>
+         * <code>.bloombox.partner.Partner partner = 4;</code>
          */
         public Builder clearPartner() {
           if (partnerBuilder_ == null) {
@@ -7929,7 +8052,7 @@ public final class EmailComms {
          * Specifies info about the partner fulfilling the order.
          * </pre>
          *
-         * <code>.bloombox.schema.partner.Partner partner = 4;</code>
+         * <code>.bloombox.partner.Partner partner = 4;</code>
          */
         public io.bloombox.schema.partner.PartnerAccount.Partner.Builder getPartnerBuilder() {
           
@@ -7941,7 +8064,7 @@ public final class EmailComms {
          * Specifies info about the partner fulfilling the order.
          * </pre>
          *
-         * <code>.bloombox.schema.partner.Partner partner = 4;</code>
+         * <code>.bloombox.partner.Partner partner = 4;</code>
          */
         public io.bloombox.schema.partner.PartnerAccount.PartnerOrBuilder getPartnerOrBuilder() {
           if (partnerBuilder_ != null) {
@@ -7956,7 +8079,7 @@ public final class EmailComms {
          * Specifies info about the partner fulfilling the order.
          * </pre>
          *
-         * <code>.bloombox.schema.partner.Partner partner = 4;</code>
+         * <code>.bloombox.partner.Partner partner = 4;</code>
          */
         private com.google.protobuf.SingleFieldBuilderV3<
             io.bloombox.schema.partner.PartnerAccount.Partner, io.bloombox.schema.partner.PartnerAccount.Partner.Builder, io.bloombox.schema.partner.PartnerAccount.PartnerOrBuilder> 
@@ -8213,21 +8336,23 @@ public final class EmailComms {
           onChanged();
           return this;
         }
+        @java.lang.Override
         public final Builder setUnknownFields(
             final com.google.protobuf.UnknownFieldSet unknownFields) {
           return super.setUnknownFieldsProto3(unknownFields);
         }
 
+        @java.lang.Override
         public final Builder mergeUnknownFields(
             final com.google.protobuf.UnknownFieldSet unknownFields) {
           return super.mergeUnknownFields(unknownFields);
         }
 
 
-        // @@protoc_insertion_point(builder_scope:bloombox.schema.comms.EmailMetadata.GoToTrack)
+        // @@protoc_insertion_point(builder_scope:bloombox.comms.EmailMetadata.GoToTrack)
       }
 
-      // @@protoc_insertion_point(class_scope:bloombox.schema.comms.EmailMetadata.GoToTrack)
+      // @@protoc_insertion_point(class_scope:bloombox.comms.EmailMetadata.GoToTrack)
       private static final io.bloombox.schema.comms.EmailComms.EmailMetadata.GoToTrack DEFAULT_INSTANCE;
       static {
         DEFAULT_INSTANCE = new io.bloombox.schema.comms.EmailComms.EmailMetadata.GoToTrack();
@@ -8239,6 +8364,7 @@ public final class EmailComms {
 
       private static final com.google.protobuf.Parser<GoToTrack>
           PARSER = new com.google.protobuf.AbstractParser<GoToTrack>() {
+        @java.lang.Override
         public GoToTrack parsePartialFrom(
             com.google.protobuf.CodedInputStream input,
             com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -8256,6 +8382,7 @@ public final class EmailComms {
         return PARSER;
       }
 
+      @java.lang.Override
       public io.bloombox.schema.comms.EmailComms.EmailMetadata.GoToTrack getDefaultInstanceForType() {
         return DEFAULT_INSTANCE;
       }
@@ -8263,7 +8390,7 @@ public final class EmailComms {
     }
 
     public interface OneClickActionOrBuilder extends
-        // @@protoc_insertion_point(interface_extends:bloombox.schema.comms.EmailMetadata.OneClickAction)
+        // @@protoc_insertion_point(interface_extends:bloombox.comms.EmailMetadata.OneClickAction)
         com.google.protobuf.MessageOrBuilder {
 
       /**
@@ -8271,7 +8398,7 @@ public final class EmailComms {
        * Type of one-click-action to attach.
        * </pre>
        *
-       * <code>.bloombox.schema.comms.EmailMetadata.OneClickAction.ActionType type = 1;</code>
+       * <code>.bloombox.comms.EmailMetadata.OneClickAction.ActionType type = 1;</code>
        */
       int getTypeValue();
       /**
@@ -8279,7 +8406,7 @@ public final class EmailComms {
        * Type of one-click-action to attach.
        * </pre>
        *
-       * <code>.bloombox.schema.comms.EmailMetadata.OneClickAction.ActionType type = 1;</code>
+       * <code>.bloombox.comms.EmailMetadata.OneClickAction.ActionType type = 1;</code>
        */
       io.bloombox.schema.comms.EmailComms.EmailMetadata.OneClickAction.ActionType getType();
 
@@ -8342,11 +8469,11 @@ public final class EmailComms {
      * Specifies the structure of an attached One-Click action.
      * </pre>
      *
-     * Protobuf type {@code bloombox.schema.comms.EmailMetadata.OneClickAction}
+     * Protobuf type {@code bloombox.comms.EmailMetadata.OneClickAction}
      */
     public  static final class OneClickAction extends
         com.google.protobuf.GeneratedMessageV3 implements
-        // @@protoc_insertion_point(message_implements:bloombox.schema.comms.EmailMetadata.OneClickAction)
+        // @@protoc_insertion_point(message_implements:bloombox.comms.EmailMetadata.OneClickAction)
         OneClickActionOrBuilder {
     private static final long serialVersionUID = 0L;
       // Use OneClickAction.newBuilder() to construct.
@@ -8384,13 +8511,6 @@ public final class EmailComms {
               case 0:
                 done = true;
                 break;
-              default: {
-                if (!parseUnknownFieldProto3(
-                    input, unknownFields, extensionRegistry, tag)) {
-                  done = true;
-                }
-                break;
-              }
               case 8: {
                 int rawValue = input.readEnum();
 
@@ -8415,6 +8535,13 @@ public final class EmailComms {
                 description_ = s;
                 break;
               }
+              default: {
+                if (!parseUnknownFieldProto3(
+                    input, unknownFields, extensionRegistry, tag)) {
+                  done = true;
+                }
+                break;
+              }
             }
           }
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
@@ -8429,12 +8556,13 @@ public final class EmailComms {
       }
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return io.bloombox.schema.comms.EmailComms.internal_static_bloombox_schema_comms_EmailMetadata_OneClickAction_descriptor;
+        return io.bloombox.schema.comms.EmailComms.internal_static_bloombox_comms_EmailMetadata_OneClickAction_descriptor;
       }
 
+      @java.lang.Override
       protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return io.bloombox.schema.comms.EmailComms.internal_static_bloombox_schema_comms_EmailMetadata_OneClickAction_fieldAccessorTable
+        return io.bloombox.schema.comms.EmailComms.internal_static_bloombox_comms_EmailMetadata_OneClickAction_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
                 io.bloombox.schema.comms.EmailComms.EmailMetadata.OneClickAction.class, io.bloombox.schema.comms.EmailComms.EmailMetadata.OneClickAction.Builder.class);
       }
@@ -8444,7 +8572,7 @@ public final class EmailComms {
        * Specifies known types of one-click actions.
        * </pre>
        *
-       * Protobuf enum {@code bloombox.schema.comms.EmailMetadata.OneClickAction.ActionType}
+       * Protobuf enum {@code bloombox.comms.EmailMetadata.OneClickAction.ActionType}
        */
       public enum ActionType
           implements com.google.protobuf.ProtocolMessageEnum {
@@ -8571,7 +8699,7 @@ public final class EmailComms {
           this.value = value;
         }
 
-        // @@protoc_insertion_point(enum_scope:bloombox.schema.comms.EmailMetadata.OneClickAction.ActionType)
+        // @@protoc_insertion_point(enum_scope:bloombox.comms.EmailMetadata.OneClickAction.ActionType)
       }
 
       public static final int TYPE_FIELD_NUMBER = 1;
@@ -8581,7 +8709,7 @@ public final class EmailComms {
        * Type of one-click-action to attach.
        * </pre>
        *
-       * <code>.bloombox.schema.comms.EmailMetadata.OneClickAction.ActionType type = 1;</code>
+       * <code>.bloombox.comms.EmailMetadata.OneClickAction.ActionType type = 1;</code>
        */
       public int getTypeValue() {
         return type_;
@@ -8591,9 +8719,10 @@ public final class EmailComms {
        * Type of one-click-action to attach.
        * </pre>
        *
-       * <code>.bloombox.schema.comms.EmailMetadata.OneClickAction.ActionType type = 1;</code>
+       * <code>.bloombox.comms.EmailMetadata.OneClickAction.ActionType type = 1;</code>
        */
       public io.bloombox.schema.comms.EmailComms.EmailMetadata.OneClickAction.ActionType getType() {
+        @SuppressWarnings("deprecation")
         io.bloombox.schema.comms.EmailComms.EmailMetadata.OneClickAction.ActionType result = io.bloombox.schema.comms.EmailComms.EmailMetadata.OneClickAction.ActionType.valueOf(type_);
         return result == null ? io.bloombox.schema.comms.EmailComms.EmailMetadata.OneClickAction.ActionType.UNRECOGNIZED : result;
       }
@@ -8725,6 +8854,7 @@ public final class EmailComms {
       }
 
       private byte memoizedIsInitialized = -1;
+      @java.lang.Override
       public final boolean isInitialized() {
         byte isInitialized = memoizedIsInitialized;
         if (isInitialized == 1) return true;
@@ -8734,6 +8864,7 @@ public final class EmailComms {
         return true;
       }
 
+      @java.lang.Override
       public void writeTo(com.google.protobuf.CodedOutputStream output)
                           throws java.io.IOException {
         if (type_ != io.bloombox.schema.comms.EmailComms.EmailMetadata.OneClickAction.ActionType.CONFIRM.getNumber()) {
@@ -8751,6 +8882,7 @@ public final class EmailComms {
         unknownFields.writeTo(output);
       }
 
+      @java.lang.Override
       public int getSerializedSize() {
         int size = memoizedSize;
         if (size != -1) return size;
@@ -8886,6 +9018,7 @@ public final class EmailComms {
             .parseWithIOException(PARSER, input, extensionRegistry);
       }
 
+      @java.lang.Override
       public Builder newBuilderForType() { return newBuilder(); }
       public static Builder newBuilder() {
         return DEFAULT_INSTANCE.toBuilder();
@@ -8893,6 +9026,7 @@ public final class EmailComms {
       public static Builder newBuilder(io.bloombox.schema.comms.EmailComms.EmailMetadata.OneClickAction prototype) {
         return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
       }
+      @java.lang.Override
       public Builder toBuilder() {
         return this == DEFAULT_INSTANCE
             ? new Builder() : new Builder().mergeFrom(this);
@@ -8909,20 +9043,21 @@ public final class EmailComms {
        * Specifies the structure of an attached One-Click action.
        * </pre>
        *
-       * Protobuf type {@code bloombox.schema.comms.EmailMetadata.OneClickAction}
+       * Protobuf type {@code bloombox.comms.EmailMetadata.OneClickAction}
        */
       public static final class Builder extends
           com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-          // @@protoc_insertion_point(builder_implements:bloombox.schema.comms.EmailMetadata.OneClickAction)
+          // @@protoc_insertion_point(builder_implements:bloombox.comms.EmailMetadata.OneClickAction)
           io.bloombox.schema.comms.EmailComms.EmailMetadata.OneClickActionOrBuilder {
         public static final com.google.protobuf.Descriptors.Descriptor
             getDescriptor() {
-          return io.bloombox.schema.comms.EmailComms.internal_static_bloombox_schema_comms_EmailMetadata_OneClickAction_descriptor;
+          return io.bloombox.schema.comms.EmailComms.internal_static_bloombox_comms_EmailMetadata_OneClickAction_descriptor;
         }
 
+        @java.lang.Override
         protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
             internalGetFieldAccessorTable() {
-          return io.bloombox.schema.comms.EmailComms.internal_static_bloombox_schema_comms_EmailMetadata_OneClickAction_fieldAccessorTable
+          return io.bloombox.schema.comms.EmailComms.internal_static_bloombox_comms_EmailMetadata_OneClickAction_fieldAccessorTable
               .ensureFieldAccessorsInitialized(
                   io.bloombox.schema.comms.EmailComms.EmailMetadata.OneClickAction.class, io.bloombox.schema.comms.EmailComms.EmailMetadata.OneClickAction.Builder.class);
         }
@@ -8942,6 +9077,7 @@ public final class EmailComms {
                   .alwaysUseFieldBuilders) {
           }
         }
+        @java.lang.Override
         public Builder clear() {
           super.clear();
           type_ = 0;
@@ -8955,15 +9091,18 @@ public final class EmailComms {
           return this;
         }
 
+        @java.lang.Override
         public com.google.protobuf.Descriptors.Descriptor
             getDescriptorForType() {
-          return io.bloombox.schema.comms.EmailComms.internal_static_bloombox_schema_comms_EmailMetadata_OneClickAction_descriptor;
+          return io.bloombox.schema.comms.EmailComms.internal_static_bloombox_comms_EmailMetadata_OneClickAction_descriptor;
         }
 
+        @java.lang.Override
         public io.bloombox.schema.comms.EmailComms.EmailMetadata.OneClickAction getDefaultInstanceForType() {
           return io.bloombox.schema.comms.EmailComms.EmailMetadata.OneClickAction.getDefaultInstance();
         }
 
+        @java.lang.Override
         public io.bloombox.schema.comms.EmailComms.EmailMetadata.OneClickAction build() {
           io.bloombox.schema.comms.EmailComms.EmailMetadata.OneClickAction result = buildPartial();
           if (!result.isInitialized()) {
@@ -8972,6 +9111,7 @@ public final class EmailComms {
           return result;
         }
 
+        @java.lang.Override
         public io.bloombox.schema.comms.EmailComms.EmailMetadata.OneClickAction buildPartial() {
           io.bloombox.schema.comms.EmailComms.EmailMetadata.OneClickAction result = new io.bloombox.schema.comms.EmailComms.EmailMetadata.OneClickAction(this);
           result.type_ = type_;
@@ -8982,32 +9122,39 @@ public final class EmailComms {
           return result;
         }
 
+        @java.lang.Override
         public Builder clone() {
           return (Builder) super.clone();
         }
+        @java.lang.Override
         public Builder setField(
             com.google.protobuf.Descriptors.FieldDescriptor field,
             java.lang.Object value) {
           return (Builder) super.setField(field, value);
         }
+        @java.lang.Override
         public Builder clearField(
             com.google.protobuf.Descriptors.FieldDescriptor field) {
           return (Builder) super.clearField(field);
         }
+        @java.lang.Override
         public Builder clearOneof(
             com.google.protobuf.Descriptors.OneofDescriptor oneof) {
           return (Builder) super.clearOneof(oneof);
         }
+        @java.lang.Override
         public Builder setRepeatedField(
             com.google.protobuf.Descriptors.FieldDescriptor field,
             int index, java.lang.Object value) {
           return (Builder) super.setRepeatedField(field, index, value);
         }
+        @java.lang.Override
         public Builder addRepeatedField(
             com.google.protobuf.Descriptors.FieldDescriptor field,
             java.lang.Object value) {
           return (Builder) super.addRepeatedField(field, value);
         }
+        @java.lang.Override
         public Builder mergeFrom(com.google.protobuf.Message other) {
           if (other instanceof io.bloombox.schema.comms.EmailComms.EmailMetadata.OneClickAction) {
             return mergeFrom((io.bloombox.schema.comms.EmailComms.EmailMetadata.OneClickAction)other);
@@ -9039,10 +9186,12 @@ public final class EmailComms {
           return this;
         }
 
+        @java.lang.Override
         public final boolean isInitialized() {
           return true;
         }
 
+        @java.lang.Override
         public Builder mergeFrom(
             com.google.protobuf.CodedInputStream input,
             com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -9067,7 +9216,7 @@ public final class EmailComms {
          * Type of one-click-action to attach.
          * </pre>
          *
-         * <code>.bloombox.schema.comms.EmailMetadata.OneClickAction.ActionType type = 1;</code>
+         * <code>.bloombox.comms.EmailMetadata.OneClickAction.ActionType type = 1;</code>
          */
         public int getTypeValue() {
           return type_;
@@ -9077,7 +9226,7 @@ public final class EmailComms {
          * Type of one-click-action to attach.
          * </pre>
          *
-         * <code>.bloombox.schema.comms.EmailMetadata.OneClickAction.ActionType type = 1;</code>
+         * <code>.bloombox.comms.EmailMetadata.OneClickAction.ActionType type = 1;</code>
          */
         public Builder setTypeValue(int value) {
           type_ = value;
@@ -9089,9 +9238,10 @@ public final class EmailComms {
          * Type of one-click-action to attach.
          * </pre>
          *
-         * <code>.bloombox.schema.comms.EmailMetadata.OneClickAction.ActionType type = 1;</code>
+         * <code>.bloombox.comms.EmailMetadata.OneClickAction.ActionType type = 1;</code>
          */
         public io.bloombox.schema.comms.EmailComms.EmailMetadata.OneClickAction.ActionType getType() {
+          @SuppressWarnings("deprecation")
           io.bloombox.schema.comms.EmailComms.EmailMetadata.OneClickAction.ActionType result = io.bloombox.schema.comms.EmailComms.EmailMetadata.OneClickAction.ActionType.valueOf(type_);
           return result == null ? io.bloombox.schema.comms.EmailComms.EmailMetadata.OneClickAction.ActionType.UNRECOGNIZED : result;
         }
@@ -9100,7 +9250,7 @@ public final class EmailComms {
          * Type of one-click-action to attach.
          * </pre>
          *
-         * <code>.bloombox.schema.comms.EmailMetadata.OneClickAction.ActionType type = 1;</code>
+         * <code>.bloombox.comms.EmailMetadata.OneClickAction.ActionType type = 1;</code>
          */
         public Builder setType(io.bloombox.schema.comms.EmailComms.EmailMetadata.OneClickAction.ActionType value) {
           if (value == null) {
@@ -9116,7 +9266,7 @@ public final class EmailComms {
          * Type of one-click-action to attach.
          * </pre>
          *
-         * <code>.bloombox.schema.comms.EmailMetadata.OneClickAction.ActionType type = 1;</code>
+         * <code>.bloombox.comms.EmailMetadata.OneClickAction.ActionType type = 1;</code>
          */
         public Builder clearType() {
           
@@ -9391,21 +9541,23 @@ public final class EmailComms {
           onChanged();
           return this;
         }
+        @java.lang.Override
         public final Builder setUnknownFields(
             final com.google.protobuf.UnknownFieldSet unknownFields) {
           return super.setUnknownFieldsProto3(unknownFields);
         }
 
+        @java.lang.Override
         public final Builder mergeUnknownFields(
             final com.google.protobuf.UnknownFieldSet unknownFields) {
           return super.mergeUnknownFields(unknownFields);
         }
 
 
-        // @@protoc_insertion_point(builder_scope:bloombox.schema.comms.EmailMetadata.OneClickAction)
+        // @@protoc_insertion_point(builder_scope:bloombox.comms.EmailMetadata.OneClickAction)
       }
 
-      // @@protoc_insertion_point(class_scope:bloombox.schema.comms.EmailMetadata.OneClickAction)
+      // @@protoc_insertion_point(class_scope:bloombox.comms.EmailMetadata.OneClickAction)
       private static final io.bloombox.schema.comms.EmailComms.EmailMetadata.OneClickAction DEFAULT_INSTANCE;
       static {
         DEFAULT_INSTANCE = new io.bloombox.schema.comms.EmailComms.EmailMetadata.OneClickAction();
@@ -9417,6 +9569,7 @@ public final class EmailComms {
 
       private static final com.google.protobuf.Parser<OneClickAction>
           PARSER = new com.google.protobuf.AbstractParser<OneClickAction>() {
+        @java.lang.Override
         public OneClickAction parsePartialFrom(
             com.google.protobuf.CodedInputStream input,
             com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -9434,6 +9587,7 @@ public final class EmailComms {
         return PARSER;
       }
 
+      @java.lang.Override
       public io.bloombox.schema.comms.EmailComms.EmailMetadata.OneClickAction getDefaultInstanceForType() {
         return DEFAULT_INSTANCE;
       }
@@ -9441,7 +9595,7 @@ public final class EmailComms {
     }
 
     public interface OrderMetadataOrBuilder extends
-        // @@protoc_insertion_point(interface_extends:bloombox.schema.comms.EmailMetadata.OrderMetadata)
+        // @@protoc_insertion_point(interface_extends:bloombox.comms.EmailMetadata.OrderMetadata)
         com.google.protobuf.MessageOrBuilder {
 
       /**
@@ -9449,7 +9603,7 @@ public final class EmailComms {
        * Specifies info about the partner fulfilling the order.
        * </pre>
        *
-       * <code>.bloombox.schema.partner.Partner partner = 1;</code>
+       * <code>.bloombox.partner.Partner partner = 1;</code>
        */
       boolean hasPartner();
       /**
@@ -9457,7 +9611,7 @@ public final class EmailComms {
        * Specifies info about the partner fulfilling the order.
        * </pre>
        *
-       * <code>.bloombox.schema.partner.Partner partner = 1;</code>
+       * <code>.bloombox.partner.Partner partner = 1;</code>
        */
       io.bloombox.schema.partner.PartnerAccount.Partner getPartner();
       /**
@@ -9465,7 +9619,7 @@ public final class EmailComms {
        * Specifies info about the partner fulfilling the order.
        * </pre>
        *
-       * <code>.bloombox.schema.partner.Partner partner = 1;</code>
+       * <code>.bloombox.partner.Partner partner = 1;</code>
        */
       io.bloombox.schema.partner.PartnerAccount.PartnerOrBuilder getPartnerOrBuilder();
 
@@ -9562,11 +9716,11 @@ public final class EmailComms {
      * Specifies the structure of attached order metadata.
      * </pre>
      *
-     * Protobuf type {@code bloombox.schema.comms.EmailMetadata.OrderMetadata}
+     * Protobuf type {@code bloombox.comms.EmailMetadata.OrderMetadata}
      */
     public  static final class OrderMetadata extends
         com.google.protobuf.GeneratedMessageV3 implements
-        // @@protoc_insertion_point(message_implements:bloombox.schema.comms.EmailMetadata.OrderMetadata)
+        // @@protoc_insertion_point(message_implements:bloombox.comms.EmailMetadata.OrderMetadata)
         OrderMetadataOrBuilder {
     private static final long serialVersionUID = 0L;
       // Use OrderMetadata.newBuilder() to construct.
@@ -9604,13 +9758,6 @@ public final class EmailComms {
               case 0:
                 done = true;
                 break;
-              default: {
-                if (!parseUnknownFieldProto3(
-                    input, unknownFields, extensionRegistry, tag)) {
-                  done = true;
-                }
-                break;
-              }
               case 10: {
                 io.bloombox.schema.partner.PartnerAccount.Partner.Builder subBuilder = null;
                 if (partner_ != null) {
@@ -9660,6 +9807,13 @@ public final class EmailComms {
                 mobileUrl_ = s;
                 break;
               }
+              default: {
+                if (!parseUnknownFieldProto3(
+                    input, unknownFields, extensionRegistry, tag)) {
+                  done = true;
+                }
+                break;
+              }
             }
           }
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
@@ -9674,12 +9828,13 @@ public final class EmailComms {
       }
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return io.bloombox.schema.comms.EmailComms.internal_static_bloombox_schema_comms_EmailMetadata_OrderMetadata_descriptor;
+        return io.bloombox.schema.comms.EmailComms.internal_static_bloombox_comms_EmailMetadata_OrderMetadata_descriptor;
       }
 
+      @java.lang.Override
       protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return io.bloombox.schema.comms.EmailComms.internal_static_bloombox_schema_comms_EmailMetadata_OrderMetadata_fieldAccessorTable
+        return io.bloombox.schema.comms.EmailComms.internal_static_bloombox_comms_EmailMetadata_OrderMetadata_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
                 io.bloombox.schema.comms.EmailComms.EmailMetadata.OrderMetadata.class, io.bloombox.schema.comms.EmailComms.EmailMetadata.OrderMetadata.Builder.class);
       }
@@ -9691,7 +9846,7 @@ public final class EmailComms {
        * Specifies info about the partner fulfilling the order.
        * </pre>
        *
-       * <code>.bloombox.schema.partner.Partner partner = 1;</code>
+       * <code>.bloombox.partner.Partner partner = 1;</code>
        */
       public boolean hasPartner() {
         return partner_ != null;
@@ -9701,7 +9856,7 @@ public final class EmailComms {
        * Specifies info about the partner fulfilling the order.
        * </pre>
        *
-       * <code>.bloombox.schema.partner.Partner partner = 1;</code>
+       * <code>.bloombox.partner.Partner partner = 1;</code>
        */
       public io.bloombox.schema.partner.PartnerAccount.Partner getPartner() {
         return partner_ == null ? io.bloombox.schema.partner.PartnerAccount.Partner.getDefaultInstance() : partner_;
@@ -9711,7 +9866,7 @@ public final class EmailComms {
        * Specifies info about the partner fulfilling the order.
        * </pre>
        *
-       * <code>.bloombox.schema.partner.Partner partner = 1;</code>
+       * <code>.bloombox.partner.Partner partner = 1;</code>
        */
       public io.bloombox.schema.partner.PartnerAccount.PartnerOrBuilder getPartnerOrBuilder() {
         return getPartner();
@@ -9890,6 +10045,7 @@ public final class EmailComms {
       }
 
       private byte memoizedIsInitialized = -1;
+      @java.lang.Override
       public final boolean isInitialized() {
         byte isInitialized = memoizedIsInitialized;
         if (isInitialized == 1) return true;
@@ -9899,6 +10055,7 @@ public final class EmailComms {
         return true;
       }
 
+      @java.lang.Override
       public void writeTo(com.google.protobuf.CodedOutputStream output)
                           throws java.io.IOException {
         if (partner_ != null) {
@@ -9922,6 +10079,7 @@ public final class EmailComms {
         unknownFields.writeTo(output);
       }
 
+      @java.lang.Override
       public int getSerializedSize() {
         int size = memoizedSize;
         if (size != -1) return size;
@@ -10087,6 +10245,7 @@ public final class EmailComms {
             .parseWithIOException(PARSER, input, extensionRegistry);
       }
 
+      @java.lang.Override
       public Builder newBuilderForType() { return newBuilder(); }
       public static Builder newBuilder() {
         return DEFAULT_INSTANCE.toBuilder();
@@ -10094,6 +10253,7 @@ public final class EmailComms {
       public static Builder newBuilder(io.bloombox.schema.comms.EmailComms.EmailMetadata.OrderMetadata prototype) {
         return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
       }
+      @java.lang.Override
       public Builder toBuilder() {
         return this == DEFAULT_INSTANCE
             ? new Builder() : new Builder().mergeFrom(this);
@@ -10110,20 +10270,21 @@ public final class EmailComms {
        * Specifies the structure of attached order metadata.
        * </pre>
        *
-       * Protobuf type {@code bloombox.schema.comms.EmailMetadata.OrderMetadata}
+       * Protobuf type {@code bloombox.comms.EmailMetadata.OrderMetadata}
        */
       public static final class Builder extends
           com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-          // @@protoc_insertion_point(builder_implements:bloombox.schema.comms.EmailMetadata.OrderMetadata)
+          // @@protoc_insertion_point(builder_implements:bloombox.comms.EmailMetadata.OrderMetadata)
           io.bloombox.schema.comms.EmailComms.EmailMetadata.OrderMetadataOrBuilder {
         public static final com.google.protobuf.Descriptors.Descriptor
             getDescriptor() {
-          return io.bloombox.schema.comms.EmailComms.internal_static_bloombox_schema_comms_EmailMetadata_OrderMetadata_descriptor;
+          return io.bloombox.schema.comms.EmailComms.internal_static_bloombox_comms_EmailMetadata_OrderMetadata_descriptor;
         }
 
+        @java.lang.Override
         protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
             internalGetFieldAccessorTable() {
-          return io.bloombox.schema.comms.EmailComms.internal_static_bloombox_schema_comms_EmailMetadata_OrderMetadata_fieldAccessorTable
+          return io.bloombox.schema.comms.EmailComms.internal_static_bloombox_comms_EmailMetadata_OrderMetadata_fieldAccessorTable
               .ensureFieldAccessorsInitialized(
                   io.bloombox.schema.comms.EmailComms.EmailMetadata.OrderMetadata.class, io.bloombox.schema.comms.EmailComms.EmailMetadata.OrderMetadata.Builder.class);
         }
@@ -10143,6 +10304,7 @@ public final class EmailComms {
                   .alwaysUseFieldBuilders) {
           }
         }
+        @java.lang.Override
         public Builder clear() {
           super.clear();
           if (partnerBuilder_ == null) {
@@ -10168,15 +10330,18 @@ public final class EmailComms {
           return this;
         }
 
+        @java.lang.Override
         public com.google.protobuf.Descriptors.Descriptor
             getDescriptorForType() {
-          return io.bloombox.schema.comms.EmailComms.internal_static_bloombox_schema_comms_EmailMetadata_OrderMetadata_descriptor;
+          return io.bloombox.schema.comms.EmailComms.internal_static_bloombox_comms_EmailMetadata_OrderMetadata_descriptor;
         }
 
+        @java.lang.Override
         public io.bloombox.schema.comms.EmailComms.EmailMetadata.OrderMetadata getDefaultInstanceForType() {
           return io.bloombox.schema.comms.EmailComms.EmailMetadata.OrderMetadata.getDefaultInstance();
         }
 
+        @java.lang.Override
         public io.bloombox.schema.comms.EmailComms.EmailMetadata.OrderMetadata build() {
           io.bloombox.schema.comms.EmailComms.EmailMetadata.OrderMetadata result = buildPartial();
           if (!result.isInitialized()) {
@@ -10185,6 +10350,7 @@ public final class EmailComms {
           return result;
         }
 
+        @java.lang.Override
         public io.bloombox.schema.comms.EmailComms.EmailMetadata.OrderMetadata buildPartial() {
           io.bloombox.schema.comms.EmailComms.EmailMetadata.OrderMetadata result = new io.bloombox.schema.comms.EmailComms.EmailMetadata.OrderMetadata(this);
           if (partnerBuilder_ == null) {
@@ -10205,32 +10371,39 @@ public final class EmailComms {
           return result;
         }
 
+        @java.lang.Override
         public Builder clone() {
           return (Builder) super.clone();
         }
+        @java.lang.Override
         public Builder setField(
             com.google.protobuf.Descriptors.FieldDescriptor field,
             java.lang.Object value) {
           return (Builder) super.setField(field, value);
         }
+        @java.lang.Override
         public Builder clearField(
             com.google.protobuf.Descriptors.FieldDescriptor field) {
           return (Builder) super.clearField(field);
         }
+        @java.lang.Override
         public Builder clearOneof(
             com.google.protobuf.Descriptors.OneofDescriptor oneof) {
           return (Builder) super.clearOneof(oneof);
         }
+        @java.lang.Override
         public Builder setRepeatedField(
             com.google.protobuf.Descriptors.FieldDescriptor field,
             int index, java.lang.Object value) {
           return (Builder) super.setRepeatedField(field, index, value);
         }
+        @java.lang.Override
         public Builder addRepeatedField(
             com.google.protobuf.Descriptors.FieldDescriptor field,
             java.lang.Object value) {
           return (Builder) super.addRepeatedField(field, value);
         }
+        @java.lang.Override
         public Builder mergeFrom(com.google.protobuf.Message other) {
           if (other instanceof io.bloombox.schema.comms.EmailComms.EmailMetadata.OrderMetadata) {
             return mergeFrom((io.bloombox.schema.comms.EmailComms.EmailMetadata.OrderMetadata)other);
@@ -10268,10 +10441,12 @@ public final class EmailComms {
           return this;
         }
 
+        @java.lang.Override
         public final boolean isInitialized() {
           return true;
         }
 
+        @java.lang.Override
         public Builder mergeFrom(
             com.google.protobuf.CodedInputStream input,
             com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -10298,7 +10473,7 @@ public final class EmailComms {
          * Specifies info about the partner fulfilling the order.
          * </pre>
          *
-         * <code>.bloombox.schema.partner.Partner partner = 1;</code>
+         * <code>.bloombox.partner.Partner partner = 1;</code>
          */
         public boolean hasPartner() {
           return partnerBuilder_ != null || partner_ != null;
@@ -10308,7 +10483,7 @@ public final class EmailComms {
          * Specifies info about the partner fulfilling the order.
          * </pre>
          *
-         * <code>.bloombox.schema.partner.Partner partner = 1;</code>
+         * <code>.bloombox.partner.Partner partner = 1;</code>
          */
         public io.bloombox.schema.partner.PartnerAccount.Partner getPartner() {
           if (partnerBuilder_ == null) {
@@ -10322,7 +10497,7 @@ public final class EmailComms {
          * Specifies info about the partner fulfilling the order.
          * </pre>
          *
-         * <code>.bloombox.schema.partner.Partner partner = 1;</code>
+         * <code>.bloombox.partner.Partner partner = 1;</code>
          */
         public Builder setPartner(io.bloombox.schema.partner.PartnerAccount.Partner value) {
           if (partnerBuilder_ == null) {
@@ -10342,7 +10517,7 @@ public final class EmailComms {
          * Specifies info about the partner fulfilling the order.
          * </pre>
          *
-         * <code>.bloombox.schema.partner.Partner partner = 1;</code>
+         * <code>.bloombox.partner.Partner partner = 1;</code>
          */
         public Builder setPartner(
             io.bloombox.schema.partner.PartnerAccount.Partner.Builder builderForValue) {
@@ -10360,7 +10535,7 @@ public final class EmailComms {
          * Specifies info about the partner fulfilling the order.
          * </pre>
          *
-         * <code>.bloombox.schema.partner.Partner partner = 1;</code>
+         * <code>.bloombox.partner.Partner partner = 1;</code>
          */
         public Builder mergePartner(io.bloombox.schema.partner.PartnerAccount.Partner value) {
           if (partnerBuilder_ == null) {
@@ -10382,7 +10557,7 @@ public final class EmailComms {
          * Specifies info about the partner fulfilling the order.
          * </pre>
          *
-         * <code>.bloombox.schema.partner.Partner partner = 1;</code>
+         * <code>.bloombox.partner.Partner partner = 1;</code>
          */
         public Builder clearPartner() {
           if (partnerBuilder_ == null) {
@@ -10400,7 +10575,7 @@ public final class EmailComms {
          * Specifies info about the partner fulfilling the order.
          * </pre>
          *
-         * <code>.bloombox.schema.partner.Partner partner = 1;</code>
+         * <code>.bloombox.partner.Partner partner = 1;</code>
          */
         public io.bloombox.schema.partner.PartnerAccount.Partner.Builder getPartnerBuilder() {
           
@@ -10412,7 +10587,7 @@ public final class EmailComms {
          * Specifies info about the partner fulfilling the order.
          * </pre>
          *
-         * <code>.bloombox.schema.partner.Partner partner = 1;</code>
+         * <code>.bloombox.partner.Partner partner = 1;</code>
          */
         public io.bloombox.schema.partner.PartnerAccount.PartnerOrBuilder getPartnerOrBuilder() {
           if (partnerBuilder_ != null) {
@@ -10427,7 +10602,7 @@ public final class EmailComms {
          * Specifies info about the partner fulfilling the order.
          * </pre>
          *
-         * <code>.bloombox.schema.partner.Partner partner = 1;</code>
+         * <code>.bloombox.partner.Partner partner = 1;</code>
          */
         private com.google.protobuf.SingleFieldBuilderV3<
             io.bloombox.schema.partner.PartnerAccount.Partner, io.bloombox.schema.partner.PartnerAccount.Partner.Builder, io.bloombox.schema.partner.PartnerAccount.PartnerOrBuilder> 
@@ -10900,21 +11075,23 @@ public final class EmailComms {
           onChanged();
           return this;
         }
+        @java.lang.Override
         public final Builder setUnknownFields(
             final com.google.protobuf.UnknownFieldSet unknownFields) {
           return super.setUnknownFieldsProto3(unknownFields);
         }
 
+        @java.lang.Override
         public final Builder mergeUnknownFields(
             final com.google.protobuf.UnknownFieldSet unknownFields) {
           return super.mergeUnknownFields(unknownFields);
         }
 
 
-        // @@protoc_insertion_point(builder_scope:bloombox.schema.comms.EmailMetadata.OrderMetadata)
+        // @@protoc_insertion_point(builder_scope:bloombox.comms.EmailMetadata.OrderMetadata)
       }
 
-      // @@protoc_insertion_point(class_scope:bloombox.schema.comms.EmailMetadata.OrderMetadata)
+      // @@protoc_insertion_point(class_scope:bloombox.comms.EmailMetadata.OrderMetadata)
       private static final io.bloombox.schema.comms.EmailComms.EmailMetadata.OrderMetadata DEFAULT_INSTANCE;
       static {
         DEFAULT_INSTANCE = new io.bloombox.schema.comms.EmailComms.EmailMetadata.OrderMetadata();
@@ -10926,6 +11103,7 @@ public final class EmailComms {
 
       private static final com.google.protobuf.Parser<OrderMetadata>
           PARSER = new com.google.protobuf.AbstractParser<OrderMetadata>() {
+        @java.lang.Override
         public OrderMetadata parsePartialFrom(
             com.google.protobuf.CodedInputStream input,
             com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -10943,6 +11121,7 @@ public final class EmailComms {
         return PARSER;
       }
 
+      @java.lang.Override
       public io.bloombox.schema.comms.EmailComms.EmailMetadata.OrderMetadata getDefaultInstanceForType() {
         return DEFAULT_INSTANCE;
       }
@@ -10950,7 +11129,7 @@ public final class EmailComms {
     }
 
     public interface SchemaBlockOrBuilder extends
-        // @@protoc_insertion_point(interface_extends:bloombox.schema.comms.EmailMetadata.SchemaBlock)
+        // @@protoc_insertion_point(interface_extends:bloombox.comms.EmailMetadata.SchemaBlock)
         com.google.protobuf.MessageOrBuilder {
 
       /**
@@ -10958,7 +11137,7 @@ public final class EmailComms {
        * Type of schema block we're specifying.
        * </pre>
        *
-       * <code>.bloombox.schema.comms.EmailMetadata.Type type = 1;</code>
+       * <code>.bloombox.comms.EmailMetadata.Type type = 1;</code>
        */
       int getTypeValue();
       /**
@@ -10966,7 +11145,7 @@ public final class EmailComms {
        * Type of schema block we're specifying.
        * </pre>
        *
-       * <code>.bloombox.schema.comms.EmailMetadata.Type type = 1;</code>
+       * <code>.bloombox.comms.EmailMetadata.Type type = 1;</code>
        */
       io.bloombox.schema.comms.EmailComms.EmailMetadata.Type getType();
 
@@ -10975,7 +11154,7 @@ public final class EmailComms {
        * Specifies a block for a go-to view action.
        * </pre>
        *
-       * <code>.bloombox.schema.comms.EmailMetadata.GoToView view = 10;</code>
+       * <code>.bloombox.comms.EmailMetadata.GoToView view = 10;</code>
        */
       boolean hasView();
       /**
@@ -10983,7 +11162,7 @@ public final class EmailComms {
        * Specifies a block for a go-to view action.
        * </pre>
        *
-       * <code>.bloombox.schema.comms.EmailMetadata.GoToView view = 10;</code>
+       * <code>.bloombox.comms.EmailMetadata.GoToView view = 10;</code>
        */
       io.bloombox.schema.comms.EmailComms.EmailMetadata.GoToView getView();
       /**
@@ -10991,7 +11170,7 @@ public final class EmailComms {
        * Specifies a block for a go-to view action.
        * </pre>
        *
-       * <code>.bloombox.schema.comms.EmailMetadata.GoToView view = 10;</code>
+       * <code>.bloombox.comms.EmailMetadata.GoToView view = 10;</code>
        */
       io.bloombox.schema.comms.EmailComms.EmailMetadata.GoToViewOrBuilder getViewOrBuilder();
 
@@ -11000,7 +11179,7 @@ public final class EmailComms {
        * Specifies a block for a go-to track action.
        * </pre>
        *
-       * <code>.bloombox.schema.comms.EmailMetadata.GoToTrack track = 15;</code>
+       * <code>.bloombox.comms.EmailMetadata.GoToTrack track = 15;</code>
        */
       boolean hasTrack();
       /**
@@ -11008,7 +11187,7 @@ public final class EmailComms {
        * Specifies a block for a go-to track action.
        * </pre>
        *
-       * <code>.bloombox.schema.comms.EmailMetadata.GoToTrack track = 15;</code>
+       * <code>.bloombox.comms.EmailMetadata.GoToTrack track = 15;</code>
        */
       io.bloombox.schema.comms.EmailComms.EmailMetadata.GoToTrack getTrack();
       /**
@@ -11016,7 +11195,7 @@ public final class EmailComms {
        * Specifies a block for a go-to track action.
        * </pre>
        *
-       * <code>.bloombox.schema.comms.EmailMetadata.GoToTrack track = 15;</code>
+       * <code>.bloombox.comms.EmailMetadata.GoToTrack track = 15;</code>
        */
       io.bloombox.schema.comms.EmailComms.EmailMetadata.GoToTrackOrBuilder getTrackOrBuilder();
 
@@ -11025,7 +11204,7 @@ public final class EmailComms {
        * Specifies a block for a one-click action.
        * </pre>
        *
-       * <code>.bloombox.schema.comms.EmailMetadata.OneClickAction one_click = 20;</code>
+       * <code>.bloombox.comms.EmailMetadata.OneClickAction one_click = 20;</code>
        */
       boolean hasOneClick();
       /**
@@ -11033,7 +11212,7 @@ public final class EmailComms {
        * Specifies a block for a one-click action.
        * </pre>
        *
-       * <code>.bloombox.schema.comms.EmailMetadata.OneClickAction one_click = 20;</code>
+       * <code>.bloombox.comms.EmailMetadata.OneClickAction one_click = 20;</code>
        */
       io.bloombox.schema.comms.EmailComms.EmailMetadata.OneClickAction getOneClick();
       /**
@@ -11041,7 +11220,7 @@ public final class EmailComms {
        * Specifies a block for a one-click action.
        * </pre>
        *
-       * <code>.bloombox.schema.comms.EmailMetadata.OneClickAction one_click = 20;</code>
+       * <code>.bloombox.comms.EmailMetadata.OneClickAction one_click = 20;</code>
        */
       io.bloombox.schema.comms.EmailComms.EmailMetadata.OneClickActionOrBuilder getOneClickOrBuilder();
 
@@ -11050,7 +11229,7 @@ public final class EmailComms {
        * Specifies a block for order metadata.
        * </pre>
        *
-       * <code>.bloombox.schema.comms.EmailMetadata.OrderMetadata order = 30;</code>
+       * <code>.bloombox.comms.EmailMetadata.OrderMetadata order = 30;</code>
        */
       boolean hasOrder();
       /**
@@ -11058,7 +11237,7 @@ public final class EmailComms {
        * Specifies a block for order metadata.
        * </pre>
        *
-       * <code>.bloombox.schema.comms.EmailMetadata.OrderMetadata order = 30;</code>
+       * <code>.bloombox.comms.EmailMetadata.OrderMetadata order = 30;</code>
        */
       io.bloombox.schema.comms.EmailComms.EmailMetadata.OrderMetadata getOrder();
       /**
@@ -11066,7 +11245,7 @@ public final class EmailComms {
        * Specifies a block for order metadata.
        * </pre>
        *
-       * <code>.bloombox.schema.comms.EmailMetadata.OrderMetadata order = 30;</code>
+       * <code>.bloombox.comms.EmailMetadata.OrderMetadata order = 30;</code>
        */
       io.bloombox.schema.comms.EmailComms.EmailMetadata.OrderMetadataOrBuilder getOrderOrBuilder();
 
@@ -11077,11 +11256,11 @@ public final class EmailComms {
      * Individual block of schema-based metadata.
      * </pre>
      *
-     * Protobuf type {@code bloombox.schema.comms.EmailMetadata.SchemaBlock}
+     * Protobuf type {@code bloombox.comms.EmailMetadata.SchemaBlock}
      */
     public  static final class SchemaBlock extends
         com.google.protobuf.GeneratedMessageV3 implements
-        // @@protoc_insertion_point(message_implements:bloombox.schema.comms.EmailMetadata.SchemaBlock)
+        // @@protoc_insertion_point(message_implements:bloombox.comms.EmailMetadata.SchemaBlock)
         SchemaBlockOrBuilder {
     private static final long serialVersionUID = 0L;
       // Use SchemaBlock.newBuilder() to construct.
@@ -11116,13 +11295,6 @@ public final class EmailComms {
               case 0:
                 done = true;
                 break;
-              default: {
-                if (!parseUnknownFieldProto3(
-                    input, unknownFields, extensionRegistry, tag)) {
-                  done = true;
-                }
-                break;
-              }
               case 8: {
                 int rawValue = input.readEnum();
 
@@ -11185,6 +11357,13 @@ public final class EmailComms {
                 blockCase_ = 30;
                 break;
               }
+              default: {
+                if (!parseUnknownFieldProto3(
+                    input, unknownFields, extensionRegistry, tag)) {
+                  done = true;
+                }
+                break;
+              }
             }
           }
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
@@ -11199,12 +11378,13 @@ public final class EmailComms {
       }
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return io.bloombox.schema.comms.EmailComms.internal_static_bloombox_schema_comms_EmailMetadata_SchemaBlock_descriptor;
+        return io.bloombox.schema.comms.EmailComms.internal_static_bloombox_comms_EmailMetadata_SchemaBlock_descriptor;
       }
 
+      @java.lang.Override
       protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return io.bloombox.schema.comms.EmailComms.internal_static_bloombox_schema_comms_EmailMetadata_SchemaBlock_fieldAccessorTable
+        return io.bloombox.schema.comms.EmailComms.internal_static_bloombox_comms_EmailMetadata_SchemaBlock_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
                 io.bloombox.schema.comms.EmailComms.EmailMetadata.SchemaBlock.class, io.bloombox.schema.comms.EmailComms.EmailMetadata.SchemaBlock.Builder.class);
       }
@@ -11258,7 +11438,7 @@ public final class EmailComms {
        * Type of schema block we're specifying.
        * </pre>
        *
-       * <code>.bloombox.schema.comms.EmailMetadata.Type type = 1;</code>
+       * <code>.bloombox.comms.EmailMetadata.Type type = 1;</code>
        */
       public int getTypeValue() {
         return type_;
@@ -11268,9 +11448,10 @@ public final class EmailComms {
        * Type of schema block we're specifying.
        * </pre>
        *
-       * <code>.bloombox.schema.comms.EmailMetadata.Type type = 1;</code>
+       * <code>.bloombox.comms.EmailMetadata.Type type = 1;</code>
        */
       public io.bloombox.schema.comms.EmailComms.EmailMetadata.Type getType() {
+        @SuppressWarnings("deprecation")
         io.bloombox.schema.comms.EmailComms.EmailMetadata.Type result = io.bloombox.schema.comms.EmailComms.EmailMetadata.Type.valueOf(type_);
         return result == null ? io.bloombox.schema.comms.EmailComms.EmailMetadata.Type.UNRECOGNIZED : result;
       }
@@ -11281,7 +11462,7 @@ public final class EmailComms {
        * Specifies a block for a go-to view action.
        * </pre>
        *
-       * <code>.bloombox.schema.comms.EmailMetadata.GoToView view = 10;</code>
+       * <code>.bloombox.comms.EmailMetadata.GoToView view = 10;</code>
        */
       public boolean hasView() {
         return blockCase_ == 10;
@@ -11291,7 +11472,7 @@ public final class EmailComms {
        * Specifies a block for a go-to view action.
        * </pre>
        *
-       * <code>.bloombox.schema.comms.EmailMetadata.GoToView view = 10;</code>
+       * <code>.bloombox.comms.EmailMetadata.GoToView view = 10;</code>
        */
       public io.bloombox.schema.comms.EmailComms.EmailMetadata.GoToView getView() {
         if (blockCase_ == 10) {
@@ -11304,7 +11485,7 @@ public final class EmailComms {
        * Specifies a block for a go-to view action.
        * </pre>
        *
-       * <code>.bloombox.schema.comms.EmailMetadata.GoToView view = 10;</code>
+       * <code>.bloombox.comms.EmailMetadata.GoToView view = 10;</code>
        */
       public io.bloombox.schema.comms.EmailComms.EmailMetadata.GoToViewOrBuilder getViewOrBuilder() {
         if (blockCase_ == 10) {
@@ -11319,7 +11500,7 @@ public final class EmailComms {
        * Specifies a block for a go-to track action.
        * </pre>
        *
-       * <code>.bloombox.schema.comms.EmailMetadata.GoToTrack track = 15;</code>
+       * <code>.bloombox.comms.EmailMetadata.GoToTrack track = 15;</code>
        */
       public boolean hasTrack() {
         return blockCase_ == 15;
@@ -11329,7 +11510,7 @@ public final class EmailComms {
        * Specifies a block for a go-to track action.
        * </pre>
        *
-       * <code>.bloombox.schema.comms.EmailMetadata.GoToTrack track = 15;</code>
+       * <code>.bloombox.comms.EmailMetadata.GoToTrack track = 15;</code>
        */
       public io.bloombox.schema.comms.EmailComms.EmailMetadata.GoToTrack getTrack() {
         if (blockCase_ == 15) {
@@ -11342,7 +11523,7 @@ public final class EmailComms {
        * Specifies a block for a go-to track action.
        * </pre>
        *
-       * <code>.bloombox.schema.comms.EmailMetadata.GoToTrack track = 15;</code>
+       * <code>.bloombox.comms.EmailMetadata.GoToTrack track = 15;</code>
        */
       public io.bloombox.schema.comms.EmailComms.EmailMetadata.GoToTrackOrBuilder getTrackOrBuilder() {
         if (blockCase_ == 15) {
@@ -11357,7 +11538,7 @@ public final class EmailComms {
        * Specifies a block for a one-click action.
        * </pre>
        *
-       * <code>.bloombox.schema.comms.EmailMetadata.OneClickAction one_click = 20;</code>
+       * <code>.bloombox.comms.EmailMetadata.OneClickAction one_click = 20;</code>
        */
       public boolean hasOneClick() {
         return blockCase_ == 20;
@@ -11367,7 +11548,7 @@ public final class EmailComms {
        * Specifies a block for a one-click action.
        * </pre>
        *
-       * <code>.bloombox.schema.comms.EmailMetadata.OneClickAction one_click = 20;</code>
+       * <code>.bloombox.comms.EmailMetadata.OneClickAction one_click = 20;</code>
        */
       public io.bloombox.schema.comms.EmailComms.EmailMetadata.OneClickAction getOneClick() {
         if (blockCase_ == 20) {
@@ -11380,7 +11561,7 @@ public final class EmailComms {
        * Specifies a block for a one-click action.
        * </pre>
        *
-       * <code>.bloombox.schema.comms.EmailMetadata.OneClickAction one_click = 20;</code>
+       * <code>.bloombox.comms.EmailMetadata.OneClickAction one_click = 20;</code>
        */
       public io.bloombox.schema.comms.EmailComms.EmailMetadata.OneClickActionOrBuilder getOneClickOrBuilder() {
         if (blockCase_ == 20) {
@@ -11395,7 +11576,7 @@ public final class EmailComms {
        * Specifies a block for order metadata.
        * </pre>
        *
-       * <code>.bloombox.schema.comms.EmailMetadata.OrderMetadata order = 30;</code>
+       * <code>.bloombox.comms.EmailMetadata.OrderMetadata order = 30;</code>
        */
       public boolean hasOrder() {
         return blockCase_ == 30;
@@ -11405,7 +11586,7 @@ public final class EmailComms {
        * Specifies a block for order metadata.
        * </pre>
        *
-       * <code>.bloombox.schema.comms.EmailMetadata.OrderMetadata order = 30;</code>
+       * <code>.bloombox.comms.EmailMetadata.OrderMetadata order = 30;</code>
        */
       public io.bloombox.schema.comms.EmailComms.EmailMetadata.OrderMetadata getOrder() {
         if (blockCase_ == 30) {
@@ -11418,7 +11599,7 @@ public final class EmailComms {
        * Specifies a block for order metadata.
        * </pre>
        *
-       * <code>.bloombox.schema.comms.EmailMetadata.OrderMetadata order = 30;</code>
+       * <code>.bloombox.comms.EmailMetadata.OrderMetadata order = 30;</code>
        */
       public io.bloombox.schema.comms.EmailComms.EmailMetadata.OrderMetadataOrBuilder getOrderOrBuilder() {
         if (blockCase_ == 30) {
@@ -11428,6 +11609,7 @@ public final class EmailComms {
       }
 
       private byte memoizedIsInitialized = -1;
+      @java.lang.Override
       public final boolean isInitialized() {
         byte isInitialized = memoizedIsInitialized;
         if (isInitialized == 1) return true;
@@ -11437,6 +11619,7 @@ public final class EmailComms {
         return true;
       }
 
+      @java.lang.Override
       public void writeTo(com.google.protobuf.CodedOutputStream output)
                           throws java.io.IOException {
         if (type_ != io.bloombox.schema.comms.EmailComms.EmailMetadata.Type.VIEW.getNumber()) {
@@ -11457,6 +11640,7 @@ public final class EmailComms {
         unknownFields.writeTo(output);
       }
 
+      @java.lang.Override
       public int getSerializedSize() {
         int size = memoizedSize;
         if (size != -1) return size;
@@ -11630,6 +11814,7 @@ public final class EmailComms {
             .parseWithIOException(PARSER, input, extensionRegistry);
       }
 
+      @java.lang.Override
       public Builder newBuilderForType() { return newBuilder(); }
       public static Builder newBuilder() {
         return DEFAULT_INSTANCE.toBuilder();
@@ -11637,6 +11822,7 @@ public final class EmailComms {
       public static Builder newBuilder(io.bloombox.schema.comms.EmailComms.EmailMetadata.SchemaBlock prototype) {
         return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
       }
+      @java.lang.Override
       public Builder toBuilder() {
         return this == DEFAULT_INSTANCE
             ? new Builder() : new Builder().mergeFrom(this);
@@ -11653,20 +11839,21 @@ public final class EmailComms {
        * Individual block of schema-based metadata.
        * </pre>
        *
-       * Protobuf type {@code bloombox.schema.comms.EmailMetadata.SchemaBlock}
+       * Protobuf type {@code bloombox.comms.EmailMetadata.SchemaBlock}
        */
       public static final class Builder extends
           com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-          // @@protoc_insertion_point(builder_implements:bloombox.schema.comms.EmailMetadata.SchemaBlock)
+          // @@protoc_insertion_point(builder_implements:bloombox.comms.EmailMetadata.SchemaBlock)
           io.bloombox.schema.comms.EmailComms.EmailMetadata.SchemaBlockOrBuilder {
         public static final com.google.protobuf.Descriptors.Descriptor
             getDescriptor() {
-          return io.bloombox.schema.comms.EmailComms.internal_static_bloombox_schema_comms_EmailMetadata_SchemaBlock_descriptor;
+          return io.bloombox.schema.comms.EmailComms.internal_static_bloombox_comms_EmailMetadata_SchemaBlock_descriptor;
         }
 
+        @java.lang.Override
         protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
             internalGetFieldAccessorTable() {
-          return io.bloombox.schema.comms.EmailComms.internal_static_bloombox_schema_comms_EmailMetadata_SchemaBlock_fieldAccessorTable
+          return io.bloombox.schema.comms.EmailComms.internal_static_bloombox_comms_EmailMetadata_SchemaBlock_fieldAccessorTable
               .ensureFieldAccessorsInitialized(
                   io.bloombox.schema.comms.EmailComms.EmailMetadata.SchemaBlock.class, io.bloombox.schema.comms.EmailComms.EmailMetadata.SchemaBlock.Builder.class);
         }
@@ -11686,6 +11873,7 @@ public final class EmailComms {
                   .alwaysUseFieldBuilders) {
           }
         }
+        @java.lang.Override
         public Builder clear() {
           super.clear();
           type_ = 0;
@@ -11695,15 +11883,18 @@ public final class EmailComms {
           return this;
         }
 
+        @java.lang.Override
         public com.google.protobuf.Descriptors.Descriptor
             getDescriptorForType() {
-          return io.bloombox.schema.comms.EmailComms.internal_static_bloombox_schema_comms_EmailMetadata_SchemaBlock_descriptor;
+          return io.bloombox.schema.comms.EmailComms.internal_static_bloombox_comms_EmailMetadata_SchemaBlock_descriptor;
         }
 
+        @java.lang.Override
         public io.bloombox.schema.comms.EmailComms.EmailMetadata.SchemaBlock getDefaultInstanceForType() {
           return io.bloombox.schema.comms.EmailComms.EmailMetadata.SchemaBlock.getDefaultInstance();
         }
 
+        @java.lang.Override
         public io.bloombox.schema.comms.EmailComms.EmailMetadata.SchemaBlock build() {
           io.bloombox.schema.comms.EmailComms.EmailMetadata.SchemaBlock result = buildPartial();
           if (!result.isInitialized()) {
@@ -11712,6 +11903,7 @@ public final class EmailComms {
           return result;
         }
 
+        @java.lang.Override
         public io.bloombox.schema.comms.EmailComms.EmailMetadata.SchemaBlock buildPartial() {
           io.bloombox.schema.comms.EmailComms.EmailMetadata.SchemaBlock result = new io.bloombox.schema.comms.EmailComms.EmailMetadata.SchemaBlock(this);
           result.type_ = type_;
@@ -11748,32 +11940,39 @@ public final class EmailComms {
           return result;
         }
 
+        @java.lang.Override
         public Builder clone() {
           return (Builder) super.clone();
         }
+        @java.lang.Override
         public Builder setField(
             com.google.protobuf.Descriptors.FieldDescriptor field,
             java.lang.Object value) {
           return (Builder) super.setField(field, value);
         }
+        @java.lang.Override
         public Builder clearField(
             com.google.protobuf.Descriptors.FieldDescriptor field) {
           return (Builder) super.clearField(field);
         }
+        @java.lang.Override
         public Builder clearOneof(
             com.google.protobuf.Descriptors.OneofDescriptor oneof) {
           return (Builder) super.clearOneof(oneof);
         }
+        @java.lang.Override
         public Builder setRepeatedField(
             com.google.protobuf.Descriptors.FieldDescriptor field,
             int index, java.lang.Object value) {
           return (Builder) super.setRepeatedField(field, index, value);
         }
+        @java.lang.Override
         public Builder addRepeatedField(
             com.google.protobuf.Descriptors.FieldDescriptor field,
             java.lang.Object value) {
           return (Builder) super.addRepeatedField(field, value);
         }
+        @java.lang.Override
         public Builder mergeFrom(com.google.protobuf.Message other) {
           if (other instanceof io.bloombox.schema.comms.EmailComms.EmailMetadata.SchemaBlock) {
             return mergeFrom((io.bloombox.schema.comms.EmailComms.EmailMetadata.SchemaBlock)other);
@@ -11814,10 +12013,12 @@ public final class EmailComms {
           return this;
         }
 
+        @java.lang.Override
         public final boolean isInitialized() {
           return true;
         }
 
+        @java.lang.Override
         public Builder mergeFrom(
             com.google.protobuf.CodedInputStream input,
             com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -11857,7 +12058,7 @@ public final class EmailComms {
          * Type of schema block we're specifying.
          * </pre>
          *
-         * <code>.bloombox.schema.comms.EmailMetadata.Type type = 1;</code>
+         * <code>.bloombox.comms.EmailMetadata.Type type = 1;</code>
          */
         public int getTypeValue() {
           return type_;
@@ -11867,7 +12068,7 @@ public final class EmailComms {
          * Type of schema block we're specifying.
          * </pre>
          *
-         * <code>.bloombox.schema.comms.EmailMetadata.Type type = 1;</code>
+         * <code>.bloombox.comms.EmailMetadata.Type type = 1;</code>
          */
         public Builder setTypeValue(int value) {
           type_ = value;
@@ -11879,9 +12080,10 @@ public final class EmailComms {
          * Type of schema block we're specifying.
          * </pre>
          *
-         * <code>.bloombox.schema.comms.EmailMetadata.Type type = 1;</code>
+         * <code>.bloombox.comms.EmailMetadata.Type type = 1;</code>
          */
         public io.bloombox.schema.comms.EmailComms.EmailMetadata.Type getType() {
+          @SuppressWarnings("deprecation")
           io.bloombox.schema.comms.EmailComms.EmailMetadata.Type result = io.bloombox.schema.comms.EmailComms.EmailMetadata.Type.valueOf(type_);
           return result == null ? io.bloombox.schema.comms.EmailComms.EmailMetadata.Type.UNRECOGNIZED : result;
         }
@@ -11890,7 +12092,7 @@ public final class EmailComms {
          * Type of schema block we're specifying.
          * </pre>
          *
-         * <code>.bloombox.schema.comms.EmailMetadata.Type type = 1;</code>
+         * <code>.bloombox.comms.EmailMetadata.Type type = 1;</code>
          */
         public Builder setType(io.bloombox.schema.comms.EmailComms.EmailMetadata.Type value) {
           if (value == null) {
@@ -11906,7 +12108,7 @@ public final class EmailComms {
          * Type of schema block we're specifying.
          * </pre>
          *
-         * <code>.bloombox.schema.comms.EmailMetadata.Type type = 1;</code>
+         * <code>.bloombox.comms.EmailMetadata.Type type = 1;</code>
          */
         public Builder clearType() {
           
@@ -11922,7 +12124,7 @@ public final class EmailComms {
          * Specifies a block for a go-to view action.
          * </pre>
          *
-         * <code>.bloombox.schema.comms.EmailMetadata.GoToView view = 10;</code>
+         * <code>.bloombox.comms.EmailMetadata.GoToView view = 10;</code>
          */
         public boolean hasView() {
           return blockCase_ == 10;
@@ -11932,7 +12134,7 @@ public final class EmailComms {
          * Specifies a block for a go-to view action.
          * </pre>
          *
-         * <code>.bloombox.schema.comms.EmailMetadata.GoToView view = 10;</code>
+         * <code>.bloombox.comms.EmailMetadata.GoToView view = 10;</code>
          */
         public io.bloombox.schema.comms.EmailComms.EmailMetadata.GoToView getView() {
           if (viewBuilder_ == null) {
@@ -11952,7 +12154,7 @@ public final class EmailComms {
          * Specifies a block for a go-to view action.
          * </pre>
          *
-         * <code>.bloombox.schema.comms.EmailMetadata.GoToView view = 10;</code>
+         * <code>.bloombox.comms.EmailMetadata.GoToView view = 10;</code>
          */
         public Builder setView(io.bloombox.schema.comms.EmailComms.EmailMetadata.GoToView value) {
           if (viewBuilder_ == null) {
@@ -11972,7 +12174,7 @@ public final class EmailComms {
          * Specifies a block for a go-to view action.
          * </pre>
          *
-         * <code>.bloombox.schema.comms.EmailMetadata.GoToView view = 10;</code>
+         * <code>.bloombox.comms.EmailMetadata.GoToView view = 10;</code>
          */
         public Builder setView(
             io.bloombox.schema.comms.EmailComms.EmailMetadata.GoToView.Builder builderForValue) {
@@ -11990,7 +12192,7 @@ public final class EmailComms {
          * Specifies a block for a go-to view action.
          * </pre>
          *
-         * <code>.bloombox.schema.comms.EmailMetadata.GoToView view = 10;</code>
+         * <code>.bloombox.comms.EmailMetadata.GoToView view = 10;</code>
          */
         public Builder mergeView(io.bloombox.schema.comms.EmailComms.EmailMetadata.GoToView value) {
           if (viewBuilder_ == null) {
@@ -12016,7 +12218,7 @@ public final class EmailComms {
          * Specifies a block for a go-to view action.
          * </pre>
          *
-         * <code>.bloombox.schema.comms.EmailMetadata.GoToView view = 10;</code>
+         * <code>.bloombox.comms.EmailMetadata.GoToView view = 10;</code>
          */
         public Builder clearView() {
           if (viewBuilder_ == null) {
@@ -12039,7 +12241,7 @@ public final class EmailComms {
          * Specifies a block for a go-to view action.
          * </pre>
          *
-         * <code>.bloombox.schema.comms.EmailMetadata.GoToView view = 10;</code>
+         * <code>.bloombox.comms.EmailMetadata.GoToView view = 10;</code>
          */
         public io.bloombox.schema.comms.EmailComms.EmailMetadata.GoToView.Builder getViewBuilder() {
           return getViewFieldBuilder().getBuilder();
@@ -12049,7 +12251,7 @@ public final class EmailComms {
          * Specifies a block for a go-to view action.
          * </pre>
          *
-         * <code>.bloombox.schema.comms.EmailMetadata.GoToView view = 10;</code>
+         * <code>.bloombox.comms.EmailMetadata.GoToView view = 10;</code>
          */
         public io.bloombox.schema.comms.EmailComms.EmailMetadata.GoToViewOrBuilder getViewOrBuilder() {
           if ((blockCase_ == 10) && (viewBuilder_ != null)) {
@@ -12066,7 +12268,7 @@ public final class EmailComms {
          * Specifies a block for a go-to view action.
          * </pre>
          *
-         * <code>.bloombox.schema.comms.EmailMetadata.GoToView view = 10;</code>
+         * <code>.bloombox.comms.EmailMetadata.GoToView view = 10;</code>
          */
         private com.google.protobuf.SingleFieldBuilderV3<
             io.bloombox.schema.comms.EmailComms.EmailMetadata.GoToView, io.bloombox.schema.comms.EmailComms.EmailMetadata.GoToView.Builder, io.bloombox.schema.comms.EmailComms.EmailMetadata.GoToViewOrBuilder> 
@@ -12094,7 +12296,7 @@ public final class EmailComms {
          * Specifies a block for a go-to track action.
          * </pre>
          *
-         * <code>.bloombox.schema.comms.EmailMetadata.GoToTrack track = 15;</code>
+         * <code>.bloombox.comms.EmailMetadata.GoToTrack track = 15;</code>
          */
         public boolean hasTrack() {
           return blockCase_ == 15;
@@ -12104,7 +12306,7 @@ public final class EmailComms {
          * Specifies a block for a go-to track action.
          * </pre>
          *
-         * <code>.bloombox.schema.comms.EmailMetadata.GoToTrack track = 15;</code>
+         * <code>.bloombox.comms.EmailMetadata.GoToTrack track = 15;</code>
          */
         public io.bloombox.schema.comms.EmailComms.EmailMetadata.GoToTrack getTrack() {
           if (trackBuilder_ == null) {
@@ -12124,7 +12326,7 @@ public final class EmailComms {
          * Specifies a block for a go-to track action.
          * </pre>
          *
-         * <code>.bloombox.schema.comms.EmailMetadata.GoToTrack track = 15;</code>
+         * <code>.bloombox.comms.EmailMetadata.GoToTrack track = 15;</code>
          */
         public Builder setTrack(io.bloombox.schema.comms.EmailComms.EmailMetadata.GoToTrack value) {
           if (trackBuilder_ == null) {
@@ -12144,7 +12346,7 @@ public final class EmailComms {
          * Specifies a block for a go-to track action.
          * </pre>
          *
-         * <code>.bloombox.schema.comms.EmailMetadata.GoToTrack track = 15;</code>
+         * <code>.bloombox.comms.EmailMetadata.GoToTrack track = 15;</code>
          */
         public Builder setTrack(
             io.bloombox.schema.comms.EmailComms.EmailMetadata.GoToTrack.Builder builderForValue) {
@@ -12162,7 +12364,7 @@ public final class EmailComms {
          * Specifies a block for a go-to track action.
          * </pre>
          *
-         * <code>.bloombox.schema.comms.EmailMetadata.GoToTrack track = 15;</code>
+         * <code>.bloombox.comms.EmailMetadata.GoToTrack track = 15;</code>
          */
         public Builder mergeTrack(io.bloombox.schema.comms.EmailComms.EmailMetadata.GoToTrack value) {
           if (trackBuilder_ == null) {
@@ -12188,7 +12390,7 @@ public final class EmailComms {
          * Specifies a block for a go-to track action.
          * </pre>
          *
-         * <code>.bloombox.schema.comms.EmailMetadata.GoToTrack track = 15;</code>
+         * <code>.bloombox.comms.EmailMetadata.GoToTrack track = 15;</code>
          */
         public Builder clearTrack() {
           if (trackBuilder_ == null) {
@@ -12211,7 +12413,7 @@ public final class EmailComms {
          * Specifies a block for a go-to track action.
          * </pre>
          *
-         * <code>.bloombox.schema.comms.EmailMetadata.GoToTrack track = 15;</code>
+         * <code>.bloombox.comms.EmailMetadata.GoToTrack track = 15;</code>
          */
         public io.bloombox.schema.comms.EmailComms.EmailMetadata.GoToTrack.Builder getTrackBuilder() {
           return getTrackFieldBuilder().getBuilder();
@@ -12221,7 +12423,7 @@ public final class EmailComms {
          * Specifies a block for a go-to track action.
          * </pre>
          *
-         * <code>.bloombox.schema.comms.EmailMetadata.GoToTrack track = 15;</code>
+         * <code>.bloombox.comms.EmailMetadata.GoToTrack track = 15;</code>
          */
         public io.bloombox.schema.comms.EmailComms.EmailMetadata.GoToTrackOrBuilder getTrackOrBuilder() {
           if ((blockCase_ == 15) && (trackBuilder_ != null)) {
@@ -12238,7 +12440,7 @@ public final class EmailComms {
          * Specifies a block for a go-to track action.
          * </pre>
          *
-         * <code>.bloombox.schema.comms.EmailMetadata.GoToTrack track = 15;</code>
+         * <code>.bloombox.comms.EmailMetadata.GoToTrack track = 15;</code>
          */
         private com.google.protobuf.SingleFieldBuilderV3<
             io.bloombox.schema.comms.EmailComms.EmailMetadata.GoToTrack, io.bloombox.schema.comms.EmailComms.EmailMetadata.GoToTrack.Builder, io.bloombox.schema.comms.EmailComms.EmailMetadata.GoToTrackOrBuilder> 
@@ -12266,7 +12468,7 @@ public final class EmailComms {
          * Specifies a block for a one-click action.
          * </pre>
          *
-         * <code>.bloombox.schema.comms.EmailMetadata.OneClickAction one_click = 20;</code>
+         * <code>.bloombox.comms.EmailMetadata.OneClickAction one_click = 20;</code>
          */
         public boolean hasOneClick() {
           return blockCase_ == 20;
@@ -12276,7 +12478,7 @@ public final class EmailComms {
          * Specifies a block for a one-click action.
          * </pre>
          *
-         * <code>.bloombox.schema.comms.EmailMetadata.OneClickAction one_click = 20;</code>
+         * <code>.bloombox.comms.EmailMetadata.OneClickAction one_click = 20;</code>
          */
         public io.bloombox.schema.comms.EmailComms.EmailMetadata.OneClickAction getOneClick() {
           if (oneClickBuilder_ == null) {
@@ -12296,7 +12498,7 @@ public final class EmailComms {
          * Specifies a block for a one-click action.
          * </pre>
          *
-         * <code>.bloombox.schema.comms.EmailMetadata.OneClickAction one_click = 20;</code>
+         * <code>.bloombox.comms.EmailMetadata.OneClickAction one_click = 20;</code>
          */
         public Builder setOneClick(io.bloombox.schema.comms.EmailComms.EmailMetadata.OneClickAction value) {
           if (oneClickBuilder_ == null) {
@@ -12316,7 +12518,7 @@ public final class EmailComms {
          * Specifies a block for a one-click action.
          * </pre>
          *
-         * <code>.bloombox.schema.comms.EmailMetadata.OneClickAction one_click = 20;</code>
+         * <code>.bloombox.comms.EmailMetadata.OneClickAction one_click = 20;</code>
          */
         public Builder setOneClick(
             io.bloombox.schema.comms.EmailComms.EmailMetadata.OneClickAction.Builder builderForValue) {
@@ -12334,7 +12536,7 @@ public final class EmailComms {
          * Specifies a block for a one-click action.
          * </pre>
          *
-         * <code>.bloombox.schema.comms.EmailMetadata.OneClickAction one_click = 20;</code>
+         * <code>.bloombox.comms.EmailMetadata.OneClickAction one_click = 20;</code>
          */
         public Builder mergeOneClick(io.bloombox.schema.comms.EmailComms.EmailMetadata.OneClickAction value) {
           if (oneClickBuilder_ == null) {
@@ -12360,7 +12562,7 @@ public final class EmailComms {
          * Specifies a block for a one-click action.
          * </pre>
          *
-         * <code>.bloombox.schema.comms.EmailMetadata.OneClickAction one_click = 20;</code>
+         * <code>.bloombox.comms.EmailMetadata.OneClickAction one_click = 20;</code>
          */
         public Builder clearOneClick() {
           if (oneClickBuilder_ == null) {
@@ -12383,7 +12585,7 @@ public final class EmailComms {
          * Specifies a block for a one-click action.
          * </pre>
          *
-         * <code>.bloombox.schema.comms.EmailMetadata.OneClickAction one_click = 20;</code>
+         * <code>.bloombox.comms.EmailMetadata.OneClickAction one_click = 20;</code>
          */
         public io.bloombox.schema.comms.EmailComms.EmailMetadata.OneClickAction.Builder getOneClickBuilder() {
           return getOneClickFieldBuilder().getBuilder();
@@ -12393,7 +12595,7 @@ public final class EmailComms {
          * Specifies a block for a one-click action.
          * </pre>
          *
-         * <code>.bloombox.schema.comms.EmailMetadata.OneClickAction one_click = 20;</code>
+         * <code>.bloombox.comms.EmailMetadata.OneClickAction one_click = 20;</code>
          */
         public io.bloombox.schema.comms.EmailComms.EmailMetadata.OneClickActionOrBuilder getOneClickOrBuilder() {
           if ((blockCase_ == 20) && (oneClickBuilder_ != null)) {
@@ -12410,7 +12612,7 @@ public final class EmailComms {
          * Specifies a block for a one-click action.
          * </pre>
          *
-         * <code>.bloombox.schema.comms.EmailMetadata.OneClickAction one_click = 20;</code>
+         * <code>.bloombox.comms.EmailMetadata.OneClickAction one_click = 20;</code>
          */
         private com.google.protobuf.SingleFieldBuilderV3<
             io.bloombox.schema.comms.EmailComms.EmailMetadata.OneClickAction, io.bloombox.schema.comms.EmailComms.EmailMetadata.OneClickAction.Builder, io.bloombox.schema.comms.EmailComms.EmailMetadata.OneClickActionOrBuilder> 
@@ -12438,7 +12640,7 @@ public final class EmailComms {
          * Specifies a block for order metadata.
          * </pre>
          *
-         * <code>.bloombox.schema.comms.EmailMetadata.OrderMetadata order = 30;</code>
+         * <code>.bloombox.comms.EmailMetadata.OrderMetadata order = 30;</code>
          */
         public boolean hasOrder() {
           return blockCase_ == 30;
@@ -12448,7 +12650,7 @@ public final class EmailComms {
          * Specifies a block for order metadata.
          * </pre>
          *
-         * <code>.bloombox.schema.comms.EmailMetadata.OrderMetadata order = 30;</code>
+         * <code>.bloombox.comms.EmailMetadata.OrderMetadata order = 30;</code>
          */
         public io.bloombox.schema.comms.EmailComms.EmailMetadata.OrderMetadata getOrder() {
           if (orderBuilder_ == null) {
@@ -12468,7 +12670,7 @@ public final class EmailComms {
          * Specifies a block for order metadata.
          * </pre>
          *
-         * <code>.bloombox.schema.comms.EmailMetadata.OrderMetadata order = 30;</code>
+         * <code>.bloombox.comms.EmailMetadata.OrderMetadata order = 30;</code>
          */
         public Builder setOrder(io.bloombox.schema.comms.EmailComms.EmailMetadata.OrderMetadata value) {
           if (orderBuilder_ == null) {
@@ -12488,7 +12690,7 @@ public final class EmailComms {
          * Specifies a block for order metadata.
          * </pre>
          *
-         * <code>.bloombox.schema.comms.EmailMetadata.OrderMetadata order = 30;</code>
+         * <code>.bloombox.comms.EmailMetadata.OrderMetadata order = 30;</code>
          */
         public Builder setOrder(
             io.bloombox.schema.comms.EmailComms.EmailMetadata.OrderMetadata.Builder builderForValue) {
@@ -12506,7 +12708,7 @@ public final class EmailComms {
          * Specifies a block for order metadata.
          * </pre>
          *
-         * <code>.bloombox.schema.comms.EmailMetadata.OrderMetadata order = 30;</code>
+         * <code>.bloombox.comms.EmailMetadata.OrderMetadata order = 30;</code>
          */
         public Builder mergeOrder(io.bloombox.schema.comms.EmailComms.EmailMetadata.OrderMetadata value) {
           if (orderBuilder_ == null) {
@@ -12532,7 +12734,7 @@ public final class EmailComms {
          * Specifies a block for order metadata.
          * </pre>
          *
-         * <code>.bloombox.schema.comms.EmailMetadata.OrderMetadata order = 30;</code>
+         * <code>.bloombox.comms.EmailMetadata.OrderMetadata order = 30;</code>
          */
         public Builder clearOrder() {
           if (orderBuilder_ == null) {
@@ -12555,7 +12757,7 @@ public final class EmailComms {
          * Specifies a block for order metadata.
          * </pre>
          *
-         * <code>.bloombox.schema.comms.EmailMetadata.OrderMetadata order = 30;</code>
+         * <code>.bloombox.comms.EmailMetadata.OrderMetadata order = 30;</code>
          */
         public io.bloombox.schema.comms.EmailComms.EmailMetadata.OrderMetadata.Builder getOrderBuilder() {
           return getOrderFieldBuilder().getBuilder();
@@ -12565,7 +12767,7 @@ public final class EmailComms {
          * Specifies a block for order metadata.
          * </pre>
          *
-         * <code>.bloombox.schema.comms.EmailMetadata.OrderMetadata order = 30;</code>
+         * <code>.bloombox.comms.EmailMetadata.OrderMetadata order = 30;</code>
          */
         public io.bloombox.schema.comms.EmailComms.EmailMetadata.OrderMetadataOrBuilder getOrderOrBuilder() {
           if ((blockCase_ == 30) && (orderBuilder_ != null)) {
@@ -12582,7 +12784,7 @@ public final class EmailComms {
          * Specifies a block for order metadata.
          * </pre>
          *
-         * <code>.bloombox.schema.comms.EmailMetadata.OrderMetadata order = 30;</code>
+         * <code>.bloombox.comms.EmailMetadata.OrderMetadata order = 30;</code>
          */
         private com.google.protobuf.SingleFieldBuilderV3<
             io.bloombox.schema.comms.EmailComms.EmailMetadata.OrderMetadata, io.bloombox.schema.comms.EmailComms.EmailMetadata.OrderMetadata.Builder, io.bloombox.schema.comms.EmailComms.EmailMetadata.OrderMetadataOrBuilder> 
@@ -12602,21 +12804,23 @@ public final class EmailComms {
           onChanged();;
           return orderBuilder_;
         }
+        @java.lang.Override
         public final Builder setUnknownFields(
             final com.google.protobuf.UnknownFieldSet unknownFields) {
           return super.setUnknownFieldsProto3(unknownFields);
         }
 
+        @java.lang.Override
         public final Builder mergeUnknownFields(
             final com.google.protobuf.UnknownFieldSet unknownFields) {
           return super.mergeUnknownFields(unknownFields);
         }
 
 
-        // @@protoc_insertion_point(builder_scope:bloombox.schema.comms.EmailMetadata.SchemaBlock)
+        // @@protoc_insertion_point(builder_scope:bloombox.comms.EmailMetadata.SchemaBlock)
       }
 
-      // @@protoc_insertion_point(class_scope:bloombox.schema.comms.EmailMetadata.SchemaBlock)
+      // @@protoc_insertion_point(class_scope:bloombox.comms.EmailMetadata.SchemaBlock)
       private static final io.bloombox.schema.comms.EmailComms.EmailMetadata.SchemaBlock DEFAULT_INSTANCE;
       static {
         DEFAULT_INSTANCE = new io.bloombox.schema.comms.EmailComms.EmailMetadata.SchemaBlock();
@@ -12628,6 +12832,7 @@ public final class EmailComms {
 
       private static final com.google.protobuf.Parser<SchemaBlock>
           PARSER = new com.google.protobuf.AbstractParser<SchemaBlock>() {
+        @java.lang.Override
         public SchemaBlock parsePartialFrom(
             com.google.protobuf.CodedInputStream input,
             com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -12645,6 +12850,7 @@ public final class EmailComms {
         return PARSER;
       }
 
+      @java.lang.Override
       public io.bloombox.schema.comms.EmailComms.EmailMetadata.SchemaBlock getDefaultInstanceForType() {
         return DEFAULT_INSTANCE;
       }
@@ -12652,6 +12858,7 @@ public final class EmailComms {
     }
 
     private byte memoizedIsInitialized = -1;
+    @java.lang.Override
     public final boolean isInitialized() {
       byte isInitialized = memoizedIsInitialized;
       if (isInitialized == 1) return true;
@@ -12661,11 +12868,13 @@ public final class EmailComms {
       return true;
     }
 
+    @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
       unknownFields.writeTo(output);
     }
 
+    @java.lang.Override
     public int getSerializedSize() {
       int size = memoizedSize;
       if (size != -1) return size;
@@ -12773,6 +12982,7 @@ public final class EmailComms {
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
 
+    @java.lang.Override
     public Builder newBuilderForType() { return newBuilder(); }
     public static Builder newBuilder() {
       return DEFAULT_INSTANCE.toBuilder();
@@ -12780,6 +12990,7 @@ public final class EmailComms {
     public static Builder newBuilder(io.bloombox.schema.comms.EmailComms.EmailMetadata prototype) {
       return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
     }
+    @java.lang.Override
     public Builder toBuilder() {
       return this == DEFAULT_INSTANCE
           ? new Builder() : new Builder().mergeFrom(this);
@@ -12796,20 +13007,21 @@ public final class EmailComms {
      * Specifies schema-based metadata appended to a message.
      * </pre>
      *
-     * Protobuf type {@code bloombox.schema.comms.EmailMetadata}
+     * Protobuf type {@code bloombox.comms.EmailMetadata}
      */
     public static final class Builder extends
         com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:bloombox.schema.comms.EmailMetadata)
+        // @@protoc_insertion_point(builder_implements:bloombox.comms.EmailMetadata)
         io.bloombox.schema.comms.EmailComms.EmailMetadataOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return io.bloombox.schema.comms.EmailComms.internal_static_bloombox_schema_comms_EmailMetadata_descriptor;
+        return io.bloombox.schema.comms.EmailComms.internal_static_bloombox_comms_EmailMetadata_descriptor;
       }
 
+      @java.lang.Override
       protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return io.bloombox.schema.comms.EmailComms.internal_static_bloombox_schema_comms_EmailMetadata_fieldAccessorTable
+        return io.bloombox.schema.comms.EmailComms.internal_static_bloombox_comms_EmailMetadata_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
                 io.bloombox.schema.comms.EmailComms.EmailMetadata.class, io.bloombox.schema.comms.EmailComms.EmailMetadata.Builder.class);
       }
@@ -12829,20 +13041,24 @@ public final class EmailComms {
                 .alwaysUseFieldBuilders) {
         }
       }
+      @java.lang.Override
       public Builder clear() {
         super.clear();
         return this;
       }
 
+      @java.lang.Override
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return io.bloombox.schema.comms.EmailComms.internal_static_bloombox_schema_comms_EmailMetadata_descriptor;
+        return io.bloombox.schema.comms.EmailComms.internal_static_bloombox_comms_EmailMetadata_descriptor;
       }
 
+      @java.lang.Override
       public io.bloombox.schema.comms.EmailComms.EmailMetadata getDefaultInstanceForType() {
         return io.bloombox.schema.comms.EmailComms.EmailMetadata.getDefaultInstance();
       }
 
+      @java.lang.Override
       public io.bloombox.schema.comms.EmailComms.EmailMetadata build() {
         io.bloombox.schema.comms.EmailComms.EmailMetadata result = buildPartial();
         if (!result.isInitialized()) {
@@ -12851,38 +13067,46 @@ public final class EmailComms {
         return result;
       }
 
+      @java.lang.Override
       public io.bloombox.schema.comms.EmailComms.EmailMetadata buildPartial() {
         io.bloombox.schema.comms.EmailComms.EmailMetadata result = new io.bloombox.schema.comms.EmailComms.EmailMetadata(this);
         onBuilt();
         return result;
       }
 
+      @java.lang.Override
       public Builder clone() {
         return (Builder) super.clone();
       }
+      @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
         return (Builder) super.setField(field, value);
       }
+      @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
         return (Builder) super.clearField(field);
       }
+      @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
         return (Builder) super.clearOneof(oneof);
       }
+      @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
         return (Builder) super.setRepeatedField(field, index, value);
       }
+      @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
         return (Builder) super.addRepeatedField(field, value);
       }
+      @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
         if (other instanceof io.bloombox.schema.comms.EmailComms.EmailMetadata) {
           return mergeFrom((io.bloombox.schema.comms.EmailComms.EmailMetadata)other);
@@ -12899,10 +13123,12 @@ public final class EmailComms {
         return this;
       }
 
+      @java.lang.Override
       public final boolean isInitialized() {
         return true;
       }
 
+      @java.lang.Override
       public Builder mergeFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -12920,21 +13146,23 @@ public final class EmailComms {
         }
         return this;
       }
+      @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
         return super.setUnknownFieldsProto3(unknownFields);
       }
 
+      @java.lang.Override
       public final Builder mergeUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
         return super.mergeUnknownFields(unknownFields);
       }
 
 
-      // @@protoc_insertion_point(builder_scope:bloombox.schema.comms.EmailMetadata)
+      // @@protoc_insertion_point(builder_scope:bloombox.comms.EmailMetadata)
     }
 
-    // @@protoc_insertion_point(class_scope:bloombox.schema.comms.EmailMetadata)
+    // @@protoc_insertion_point(class_scope:bloombox.comms.EmailMetadata)
     private static final io.bloombox.schema.comms.EmailComms.EmailMetadata DEFAULT_INSTANCE;
     static {
       DEFAULT_INSTANCE = new io.bloombox.schema.comms.EmailComms.EmailMetadata();
@@ -12946,6 +13174,7 @@ public final class EmailComms {
 
     private static final com.google.protobuf.Parser<EmailMetadata>
         PARSER = new com.google.protobuf.AbstractParser<EmailMetadata>() {
+      @java.lang.Override
       public EmailMetadata parsePartialFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -12963,6 +13192,7 @@ public final class EmailComms {
       return PARSER;
     }
 
+    @java.lang.Override
     public io.bloombox.schema.comms.EmailComms.EmailMetadata getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
@@ -12970,7 +13200,7 @@ public final class EmailComms {
   }
 
   public interface EmailTransmissionOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:bloombox.schema.comms.EmailTransmission)
+      // @@protoc_insertion_point(interface_extends:bloombox.comms.EmailTransmission)
       com.google.protobuf.MessageOrBuilder {
 
     /**
@@ -12978,7 +13208,7 @@ public final class EmailComms {
      * Message payload to transmit in this operation.
      * </pre>
      *
-     * <code>.bloombox.schema.comms.EmailMessage message = 1;</code>
+     * <code>.bloombox.comms.EmailMessage message = 1;</code>
      */
     boolean hasMessage();
     /**
@@ -12986,7 +13216,7 @@ public final class EmailComms {
      * Message payload to transmit in this operation.
      * </pre>
      *
-     * <code>.bloombox.schema.comms.EmailMessage message = 1;</code>
+     * <code>.bloombox.comms.EmailMessage message = 1;</code>
      */
     io.bloombox.schema.comms.EmailComms.EmailMessage getMessage();
     /**
@@ -12994,7 +13224,7 @@ public final class EmailComms {
      * Message payload to transmit in this operation.
      * </pre>
      *
-     * <code>.bloombox.schema.comms.EmailMessage message = 1;</code>
+     * <code>.bloombox.comms.EmailMessage message = 1;</code>
      */
     io.bloombox.schema.comms.EmailComms.EmailMessageOrBuilder getMessageOrBuilder();
   }
@@ -13003,11 +13233,11 @@ public final class EmailComms {
    * Specifies the structure of a transmission operation for an individual email message.
    * </pre>
    *
-   * Protobuf type {@code bloombox.schema.comms.EmailTransmission}
+   * Protobuf type {@code bloombox.comms.EmailTransmission}
    */
   public  static final class EmailTransmission extends
       com.google.protobuf.GeneratedMessageV3 implements
-      // @@protoc_insertion_point(message_implements:bloombox.schema.comms.EmailTransmission)
+      // @@protoc_insertion_point(message_implements:bloombox.comms.EmailTransmission)
       EmailTransmissionOrBuilder {
   private static final long serialVersionUID = 0L;
     // Use EmailTransmission.newBuilder() to construct.
@@ -13041,13 +13271,6 @@ public final class EmailComms {
             case 0:
               done = true;
               break;
-            default: {
-              if (!parseUnknownFieldProto3(
-                  input, unknownFields, extensionRegistry, tag)) {
-                done = true;
-              }
-              break;
-            }
             case 10: {
               io.bloombox.schema.comms.EmailComms.EmailMessage.Builder subBuilder = null;
               if (message_ != null) {
@@ -13059,6 +13282,13 @@ public final class EmailComms {
                 message_ = subBuilder.buildPartial();
               }
 
+              break;
+            }
+            default: {
+              if (!parseUnknownFieldProto3(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
               break;
             }
           }
@@ -13075,12 +13305,13 @@ public final class EmailComms {
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return io.bloombox.schema.comms.EmailComms.internal_static_bloombox_schema_comms_EmailTransmission_descriptor;
+      return io.bloombox.schema.comms.EmailComms.internal_static_bloombox_comms_EmailTransmission_descriptor;
     }
 
+    @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return io.bloombox.schema.comms.EmailComms.internal_static_bloombox_schema_comms_EmailTransmission_fieldAccessorTable
+      return io.bloombox.schema.comms.EmailComms.internal_static_bloombox_comms_EmailTransmission_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
               io.bloombox.schema.comms.EmailComms.EmailTransmission.class, io.bloombox.schema.comms.EmailComms.EmailTransmission.Builder.class);
     }
@@ -13092,7 +13323,7 @@ public final class EmailComms {
      * Message payload to transmit in this operation.
      * </pre>
      *
-     * <code>.bloombox.schema.comms.EmailMessage message = 1;</code>
+     * <code>.bloombox.comms.EmailMessage message = 1;</code>
      */
     public boolean hasMessage() {
       return message_ != null;
@@ -13102,7 +13333,7 @@ public final class EmailComms {
      * Message payload to transmit in this operation.
      * </pre>
      *
-     * <code>.bloombox.schema.comms.EmailMessage message = 1;</code>
+     * <code>.bloombox.comms.EmailMessage message = 1;</code>
      */
     public io.bloombox.schema.comms.EmailComms.EmailMessage getMessage() {
       return message_ == null ? io.bloombox.schema.comms.EmailComms.EmailMessage.getDefaultInstance() : message_;
@@ -13112,13 +13343,14 @@ public final class EmailComms {
      * Message payload to transmit in this operation.
      * </pre>
      *
-     * <code>.bloombox.schema.comms.EmailMessage message = 1;</code>
+     * <code>.bloombox.comms.EmailMessage message = 1;</code>
      */
     public io.bloombox.schema.comms.EmailComms.EmailMessageOrBuilder getMessageOrBuilder() {
       return getMessage();
     }
 
     private byte memoizedIsInitialized = -1;
+    @java.lang.Override
     public final boolean isInitialized() {
       byte isInitialized = memoizedIsInitialized;
       if (isInitialized == 1) return true;
@@ -13128,6 +13360,7 @@ public final class EmailComms {
       return true;
     }
 
+    @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
       if (message_ != null) {
@@ -13136,6 +13369,7 @@ public final class EmailComms {
       unknownFields.writeTo(output);
     }
 
+    @java.lang.Override
     public int getSerializedSize() {
       int size = memoizedSize;
       if (size != -1) return size;
@@ -13256,6 +13490,7 @@ public final class EmailComms {
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
 
+    @java.lang.Override
     public Builder newBuilderForType() { return newBuilder(); }
     public static Builder newBuilder() {
       return DEFAULT_INSTANCE.toBuilder();
@@ -13263,6 +13498,7 @@ public final class EmailComms {
     public static Builder newBuilder(io.bloombox.schema.comms.EmailComms.EmailTransmission prototype) {
       return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
     }
+    @java.lang.Override
     public Builder toBuilder() {
       return this == DEFAULT_INSTANCE
           ? new Builder() : new Builder().mergeFrom(this);
@@ -13279,20 +13515,21 @@ public final class EmailComms {
      * Specifies the structure of a transmission operation for an individual email message.
      * </pre>
      *
-     * Protobuf type {@code bloombox.schema.comms.EmailTransmission}
+     * Protobuf type {@code bloombox.comms.EmailTransmission}
      */
     public static final class Builder extends
         com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:bloombox.schema.comms.EmailTransmission)
+        // @@protoc_insertion_point(builder_implements:bloombox.comms.EmailTransmission)
         io.bloombox.schema.comms.EmailComms.EmailTransmissionOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return io.bloombox.schema.comms.EmailComms.internal_static_bloombox_schema_comms_EmailTransmission_descriptor;
+        return io.bloombox.schema.comms.EmailComms.internal_static_bloombox_comms_EmailTransmission_descriptor;
       }
 
+      @java.lang.Override
       protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return io.bloombox.schema.comms.EmailComms.internal_static_bloombox_schema_comms_EmailTransmission_fieldAccessorTable
+        return io.bloombox.schema.comms.EmailComms.internal_static_bloombox_comms_EmailTransmission_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
                 io.bloombox.schema.comms.EmailComms.EmailTransmission.class, io.bloombox.schema.comms.EmailComms.EmailTransmission.Builder.class);
       }
@@ -13312,6 +13549,7 @@ public final class EmailComms {
                 .alwaysUseFieldBuilders) {
         }
       }
+      @java.lang.Override
       public Builder clear() {
         super.clear();
         if (messageBuilder_ == null) {
@@ -13323,15 +13561,18 @@ public final class EmailComms {
         return this;
       }
 
+      @java.lang.Override
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return io.bloombox.schema.comms.EmailComms.internal_static_bloombox_schema_comms_EmailTransmission_descriptor;
+        return io.bloombox.schema.comms.EmailComms.internal_static_bloombox_comms_EmailTransmission_descriptor;
       }
 
+      @java.lang.Override
       public io.bloombox.schema.comms.EmailComms.EmailTransmission getDefaultInstanceForType() {
         return io.bloombox.schema.comms.EmailComms.EmailTransmission.getDefaultInstance();
       }
 
+      @java.lang.Override
       public io.bloombox.schema.comms.EmailComms.EmailTransmission build() {
         io.bloombox.schema.comms.EmailComms.EmailTransmission result = buildPartial();
         if (!result.isInitialized()) {
@@ -13340,6 +13581,7 @@ public final class EmailComms {
         return result;
       }
 
+      @java.lang.Override
       public io.bloombox.schema.comms.EmailComms.EmailTransmission buildPartial() {
         io.bloombox.schema.comms.EmailComms.EmailTransmission result = new io.bloombox.schema.comms.EmailComms.EmailTransmission(this);
         if (messageBuilder_ == null) {
@@ -13351,32 +13593,39 @@ public final class EmailComms {
         return result;
       }
 
+      @java.lang.Override
       public Builder clone() {
         return (Builder) super.clone();
       }
+      @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
         return (Builder) super.setField(field, value);
       }
+      @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
         return (Builder) super.clearField(field);
       }
+      @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
         return (Builder) super.clearOneof(oneof);
       }
+      @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
         return (Builder) super.setRepeatedField(field, index, value);
       }
+      @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
         return (Builder) super.addRepeatedField(field, value);
       }
+      @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
         if (other instanceof io.bloombox.schema.comms.EmailComms.EmailTransmission) {
           return mergeFrom((io.bloombox.schema.comms.EmailComms.EmailTransmission)other);
@@ -13396,10 +13645,12 @@ public final class EmailComms {
         return this;
       }
 
+      @java.lang.Override
       public final boolean isInitialized() {
         return true;
       }
 
+      @java.lang.Override
       public Builder mergeFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -13426,7 +13677,7 @@ public final class EmailComms {
        * Message payload to transmit in this operation.
        * </pre>
        *
-       * <code>.bloombox.schema.comms.EmailMessage message = 1;</code>
+       * <code>.bloombox.comms.EmailMessage message = 1;</code>
        */
       public boolean hasMessage() {
         return messageBuilder_ != null || message_ != null;
@@ -13436,7 +13687,7 @@ public final class EmailComms {
        * Message payload to transmit in this operation.
        * </pre>
        *
-       * <code>.bloombox.schema.comms.EmailMessage message = 1;</code>
+       * <code>.bloombox.comms.EmailMessage message = 1;</code>
        */
       public io.bloombox.schema.comms.EmailComms.EmailMessage getMessage() {
         if (messageBuilder_ == null) {
@@ -13450,7 +13701,7 @@ public final class EmailComms {
        * Message payload to transmit in this operation.
        * </pre>
        *
-       * <code>.bloombox.schema.comms.EmailMessage message = 1;</code>
+       * <code>.bloombox.comms.EmailMessage message = 1;</code>
        */
       public Builder setMessage(io.bloombox.schema.comms.EmailComms.EmailMessage value) {
         if (messageBuilder_ == null) {
@@ -13470,7 +13721,7 @@ public final class EmailComms {
        * Message payload to transmit in this operation.
        * </pre>
        *
-       * <code>.bloombox.schema.comms.EmailMessage message = 1;</code>
+       * <code>.bloombox.comms.EmailMessage message = 1;</code>
        */
       public Builder setMessage(
           io.bloombox.schema.comms.EmailComms.EmailMessage.Builder builderForValue) {
@@ -13488,7 +13739,7 @@ public final class EmailComms {
        * Message payload to transmit in this operation.
        * </pre>
        *
-       * <code>.bloombox.schema.comms.EmailMessage message = 1;</code>
+       * <code>.bloombox.comms.EmailMessage message = 1;</code>
        */
       public Builder mergeMessage(io.bloombox.schema.comms.EmailComms.EmailMessage value) {
         if (messageBuilder_ == null) {
@@ -13510,7 +13761,7 @@ public final class EmailComms {
        * Message payload to transmit in this operation.
        * </pre>
        *
-       * <code>.bloombox.schema.comms.EmailMessage message = 1;</code>
+       * <code>.bloombox.comms.EmailMessage message = 1;</code>
        */
       public Builder clearMessage() {
         if (messageBuilder_ == null) {
@@ -13528,7 +13779,7 @@ public final class EmailComms {
        * Message payload to transmit in this operation.
        * </pre>
        *
-       * <code>.bloombox.schema.comms.EmailMessage message = 1;</code>
+       * <code>.bloombox.comms.EmailMessage message = 1;</code>
        */
       public io.bloombox.schema.comms.EmailComms.EmailMessage.Builder getMessageBuilder() {
         
@@ -13540,7 +13791,7 @@ public final class EmailComms {
        * Message payload to transmit in this operation.
        * </pre>
        *
-       * <code>.bloombox.schema.comms.EmailMessage message = 1;</code>
+       * <code>.bloombox.comms.EmailMessage message = 1;</code>
        */
       public io.bloombox.schema.comms.EmailComms.EmailMessageOrBuilder getMessageOrBuilder() {
         if (messageBuilder_ != null) {
@@ -13555,7 +13806,7 @@ public final class EmailComms {
        * Message payload to transmit in this operation.
        * </pre>
        *
-       * <code>.bloombox.schema.comms.EmailMessage message = 1;</code>
+       * <code>.bloombox.comms.EmailMessage message = 1;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
           io.bloombox.schema.comms.EmailComms.EmailMessage, io.bloombox.schema.comms.EmailComms.EmailMessage.Builder, io.bloombox.schema.comms.EmailComms.EmailMessageOrBuilder> 
@@ -13570,21 +13821,23 @@ public final class EmailComms {
         }
         return messageBuilder_;
       }
+      @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
         return super.setUnknownFieldsProto3(unknownFields);
       }
 
+      @java.lang.Override
       public final Builder mergeUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
         return super.mergeUnknownFields(unknownFields);
       }
 
 
-      // @@protoc_insertion_point(builder_scope:bloombox.schema.comms.EmailTransmission)
+      // @@protoc_insertion_point(builder_scope:bloombox.comms.EmailTransmission)
     }
 
-    // @@protoc_insertion_point(class_scope:bloombox.schema.comms.EmailTransmission)
+    // @@protoc_insertion_point(class_scope:bloombox.comms.EmailTransmission)
     private static final io.bloombox.schema.comms.EmailComms.EmailTransmission DEFAULT_INSTANCE;
     static {
       DEFAULT_INSTANCE = new io.bloombox.schema.comms.EmailComms.EmailTransmission();
@@ -13596,6 +13849,7 @@ public final class EmailComms {
 
     private static final com.google.protobuf.Parser<EmailTransmission>
         PARSER = new com.google.protobuf.AbstractParser<EmailTransmission>() {
+      @java.lang.Override
       public EmailTransmission parsePartialFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -13613,6 +13867,7 @@ public final class EmailComms {
       return PARSER;
     }
 
+    @java.lang.Override
     public io.bloombox.schema.comms.EmailComms.EmailTransmission getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
@@ -13620,7 +13875,7 @@ public final class EmailComms {
   }
 
   public interface EmailBatchOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:bloombox.schema.comms.EmailBatch)
+      // @@protoc_insertion_point(interface_extends:bloombox.comms.EmailBatch)
       com.google.protobuf.MessageOrBuilder {
 
     /**
@@ -13628,7 +13883,7 @@ public final class EmailComms {
      * Transmission operations for this batch.
      * </pre>
      *
-     * <code>repeated .bloombox.schema.comms.EmailTransmission op = 1;</code>
+     * <code>repeated .bloombox.comms.EmailTransmission op = 1;</code>
      */
     java.util.List<io.bloombox.schema.comms.EmailComms.EmailTransmission> 
         getOpList();
@@ -13637,7 +13892,7 @@ public final class EmailComms {
      * Transmission operations for this batch.
      * </pre>
      *
-     * <code>repeated .bloombox.schema.comms.EmailTransmission op = 1;</code>
+     * <code>repeated .bloombox.comms.EmailTransmission op = 1;</code>
      */
     io.bloombox.schema.comms.EmailComms.EmailTransmission getOp(int index);
     /**
@@ -13645,7 +13900,7 @@ public final class EmailComms {
      * Transmission operations for this batch.
      * </pre>
      *
-     * <code>repeated .bloombox.schema.comms.EmailTransmission op = 1;</code>
+     * <code>repeated .bloombox.comms.EmailTransmission op = 1;</code>
      */
     int getOpCount();
     /**
@@ -13653,7 +13908,7 @@ public final class EmailComms {
      * Transmission operations for this batch.
      * </pre>
      *
-     * <code>repeated .bloombox.schema.comms.EmailTransmission op = 1;</code>
+     * <code>repeated .bloombox.comms.EmailTransmission op = 1;</code>
      */
     java.util.List<? extends io.bloombox.schema.comms.EmailComms.EmailTransmissionOrBuilder> 
         getOpOrBuilderList();
@@ -13662,7 +13917,7 @@ public final class EmailComms {
      * Transmission operations for this batch.
      * </pre>
      *
-     * <code>repeated .bloombox.schema.comms.EmailTransmission op = 1;</code>
+     * <code>repeated .bloombox.comms.EmailTransmission op = 1;</code>
      */
     io.bloombox.schema.comms.EmailComms.EmailTransmissionOrBuilder getOpOrBuilder(
         int index);
@@ -13672,11 +13927,11 @@ public final class EmailComms {
    * Specifies the structure of a batch of email transmission operations.
    * </pre>
    *
-   * Protobuf type {@code bloombox.schema.comms.EmailBatch}
+   * Protobuf type {@code bloombox.comms.EmailBatch}
    */
   public  static final class EmailBatch extends
       com.google.protobuf.GeneratedMessageV3 implements
-      // @@protoc_insertion_point(message_implements:bloombox.schema.comms.EmailBatch)
+      // @@protoc_insertion_point(message_implements:bloombox.comms.EmailBatch)
       EmailBatchOrBuilder {
   private static final long serialVersionUID = 0L;
     // Use EmailBatch.newBuilder() to construct.
@@ -13711,13 +13966,6 @@ public final class EmailComms {
             case 0:
               done = true;
               break;
-            default: {
-              if (!parseUnknownFieldProto3(
-                  input, unknownFields, extensionRegistry, tag)) {
-                done = true;
-              }
-              break;
-            }
             case 10: {
               if (!((mutable_bitField0_ & 0x00000001) == 0x00000001)) {
                 op_ = new java.util.ArrayList<io.bloombox.schema.comms.EmailComms.EmailTransmission>();
@@ -13725,6 +13973,13 @@ public final class EmailComms {
               }
               op_.add(
                   input.readMessage(io.bloombox.schema.comms.EmailComms.EmailTransmission.parser(), extensionRegistry));
+              break;
+            }
+            default: {
+              if (!parseUnknownFieldProto3(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
               break;
             }
           }
@@ -13744,12 +13999,13 @@ public final class EmailComms {
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return io.bloombox.schema.comms.EmailComms.internal_static_bloombox_schema_comms_EmailBatch_descriptor;
+      return io.bloombox.schema.comms.EmailComms.internal_static_bloombox_comms_EmailBatch_descriptor;
     }
 
+    @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return io.bloombox.schema.comms.EmailComms.internal_static_bloombox_schema_comms_EmailBatch_fieldAccessorTable
+      return io.bloombox.schema.comms.EmailComms.internal_static_bloombox_comms_EmailBatch_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
               io.bloombox.schema.comms.EmailComms.EmailBatch.class, io.bloombox.schema.comms.EmailComms.EmailBatch.Builder.class);
     }
@@ -13761,7 +14017,7 @@ public final class EmailComms {
      * Transmission operations for this batch.
      * </pre>
      *
-     * <code>repeated .bloombox.schema.comms.EmailTransmission op = 1;</code>
+     * <code>repeated .bloombox.comms.EmailTransmission op = 1;</code>
      */
     public java.util.List<io.bloombox.schema.comms.EmailComms.EmailTransmission> getOpList() {
       return op_;
@@ -13771,7 +14027,7 @@ public final class EmailComms {
      * Transmission operations for this batch.
      * </pre>
      *
-     * <code>repeated .bloombox.schema.comms.EmailTransmission op = 1;</code>
+     * <code>repeated .bloombox.comms.EmailTransmission op = 1;</code>
      */
     public java.util.List<? extends io.bloombox.schema.comms.EmailComms.EmailTransmissionOrBuilder> 
         getOpOrBuilderList() {
@@ -13782,7 +14038,7 @@ public final class EmailComms {
      * Transmission operations for this batch.
      * </pre>
      *
-     * <code>repeated .bloombox.schema.comms.EmailTransmission op = 1;</code>
+     * <code>repeated .bloombox.comms.EmailTransmission op = 1;</code>
      */
     public int getOpCount() {
       return op_.size();
@@ -13792,7 +14048,7 @@ public final class EmailComms {
      * Transmission operations for this batch.
      * </pre>
      *
-     * <code>repeated .bloombox.schema.comms.EmailTransmission op = 1;</code>
+     * <code>repeated .bloombox.comms.EmailTransmission op = 1;</code>
      */
     public io.bloombox.schema.comms.EmailComms.EmailTransmission getOp(int index) {
       return op_.get(index);
@@ -13802,7 +14058,7 @@ public final class EmailComms {
      * Transmission operations for this batch.
      * </pre>
      *
-     * <code>repeated .bloombox.schema.comms.EmailTransmission op = 1;</code>
+     * <code>repeated .bloombox.comms.EmailTransmission op = 1;</code>
      */
     public io.bloombox.schema.comms.EmailComms.EmailTransmissionOrBuilder getOpOrBuilder(
         int index) {
@@ -13810,6 +14066,7 @@ public final class EmailComms {
     }
 
     private byte memoizedIsInitialized = -1;
+    @java.lang.Override
     public final boolean isInitialized() {
       byte isInitialized = memoizedIsInitialized;
       if (isInitialized == 1) return true;
@@ -13819,6 +14076,7 @@ public final class EmailComms {
       return true;
     }
 
+    @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
       for (int i = 0; i < op_.size(); i++) {
@@ -13827,6 +14085,7 @@ public final class EmailComms {
       unknownFields.writeTo(output);
     }
 
+    @java.lang.Override
     public int getSerializedSize() {
       int size = memoizedSize;
       if (size != -1) return size;
@@ -13944,6 +14203,7 @@ public final class EmailComms {
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
 
+    @java.lang.Override
     public Builder newBuilderForType() { return newBuilder(); }
     public static Builder newBuilder() {
       return DEFAULT_INSTANCE.toBuilder();
@@ -13951,6 +14211,7 @@ public final class EmailComms {
     public static Builder newBuilder(io.bloombox.schema.comms.EmailComms.EmailBatch prototype) {
       return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
     }
+    @java.lang.Override
     public Builder toBuilder() {
       return this == DEFAULT_INSTANCE
           ? new Builder() : new Builder().mergeFrom(this);
@@ -13967,20 +14228,21 @@ public final class EmailComms {
      * Specifies the structure of a batch of email transmission operations.
      * </pre>
      *
-     * Protobuf type {@code bloombox.schema.comms.EmailBatch}
+     * Protobuf type {@code bloombox.comms.EmailBatch}
      */
     public static final class Builder extends
         com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:bloombox.schema.comms.EmailBatch)
+        // @@protoc_insertion_point(builder_implements:bloombox.comms.EmailBatch)
         io.bloombox.schema.comms.EmailComms.EmailBatchOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return io.bloombox.schema.comms.EmailComms.internal_static_bloombox_schema_comms_EmailBatch_descriptor;
+        return io.bloombox.schema.comms.EmailComms.internal_static_bloombox_comms_EmailBatch_descriptor;
       }
 
+      @java.lang.Override
       protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return io.bloombox.schema.comms.EmailComms.internal_static_bloombox_schema_comms_EmailBatch_fieldAccessorTable
+        return io.bloombox.schema.comms.EmailComms.internal_static_bloombox_comms_EmailBatch_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
                 io.bloombox.schema.comms.EmailComms.EmailBatch.class, io.bloombox.schema.comms.EmailComms.EmailBatch.Builder.class);
       }
@@ -14001,6 +14263,7 @@ public final class EmailComms {
           getOpFieldBuilder();
         }
       }
+      @java.lang.Override
       public Builder clear() {
         super.clear();
         if (opBuilder_ == null) {
@@ -14012,15 +14275,18 @@ public final class EmailComms {
         return this;
       }
 
+      @java.lang.Override
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return io.bloombox.schema.comms.EmailComms.internal_static_bloombox_schema_comms_EmailBatch_descriptor;
+        return io.bloombox.schema.comms.EmailComms.internal_static_bloombox_comms_EmailBatch_descriptor;
       }
 
+      @java.lang.Override
       public io.bloombox.schema.comms.EmailComms.EmailBatch getDefaultInstanceForType() {
         return io.bloombox.schema.comms.EmailComms.EmailBatch.getDefaultInstance();
       }
 
+      @java.lang.Override
       public io.bloombox.schema.comms.EmailComms.EmailBatch build() {
         io.bloombox.schema.comms.EmailComms.EmailBatch result = buildPartial();
         if (!result.isInitialized()) {
@@ -14029,6 +14295,7 @@ public final class EmailComms {
         return result;
       }
 
+      @java.lang.Override
       public io.bloombox.schema.comms.EmailComms.EmailBatch buildPartial() {
         io.bloombox.schema.comms.EmailComms.EmailBatch result = new io.bloombox.schema.comms.EmailComms.EmailBatch(this);
         int from_bitField0_ = bitField0_;
@@ -14045,32 +14312,39 @@ public final class EmailComms {
         return result;
       }
 
+      @java.lang.Override
       public Builder clone() {
         return (Builder) super.clone();
       }
+      @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
         return (Builder) super.setField(field, value);
       }
+      @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
         return (Builder) super.clearField(field);
       }
+      @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
         return (Builder) super.clearOneof(oneof);
       }
+      @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
         return (Builder) super.setRepeatedField(field, index, value);
       }
+      @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
         return (Builder) super.addRepeatedField(field, value);
       }
+      @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
         if (other instanceof io.bloombox.schema.comms.EmailComms.EmailBatch) {
           return mergeFrom((io.bloombox.schema.comms.EmailComms.EmailBatch)other);
@@ -14113,10 +14387,12 @@ public final class EmailComms {
         return this;
       }
 
+      @java.lang.Override
       public final boolean isInitialized() {
         return true;
       }
 
+      @java.lang.Override
       public Builder mergeFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -14153,7 +14429,7 @@ public final class EmailComms {
        * Transmission operations for this batch.
        * </pre>
        *
-       * <code>repeated .bloombox.schema.comms.EmailTransmission op = 1;</code>
+       * <code>repeated .bloombox.comms.EmailTransmission op = 1;</code>
        */
       public java.util.List<io.bloombox.schema.comms.EmailComms.EmailTransmission> getOpList() {
         if (opBuilder_ == null) {
@@ -14167,7 +14443,7 @@ public final class EmailComms {
        * Transmission operations for this batch.
        * </pre>
        *
-       * <code>repeated .bloombox.schema.comms.EmailTransmission op = 1;</code>
+       * <code>repeated .bloombox.comms.EmailTransmission op = 1;</code>
        */
       public int getOpCount() {
         if (opBuilder_ == null) {
@@ -14181,7 +14457,7 @@ public final class EmailComms {
        * Transmission operations for this batch.
        * </pre>
        *
-       * <code>repeated .bloombox.schema.comms.EmailTransmission op = 1;</code>
+       * <code>repeated .bloombox.comms.EmailTransmission op = 1;</code>
        */
       public io.bloombox.schema.comms.EmailComms.EmailTransmission getOp(int index) {
         if (opBuilder_ == null) {
@@ -14195,7 +14471,7 @@ public final class EmailComms {
        * Transmission operations for this batch.
        * </pre>
        *
-       * <code>repeated .bloombox.schema.comms.EmailTransmission op = 1;</code>
+       * <code>repeated .bloombox.comms.EmailTransmission op = 1;</code>
        */
       public Builder setOp(
           int index, io.bloombox.schema.comms.EmailComms.EmailTransmission value) {
@@ -14216,7 +14492,7 @@ public final class EmailComms {
        * Transmission operations for this batch.
        * </pre>
        *
-       * <code>repeated .bloombox.schema.comms.EmailTransmission op = 1;</code>
+       * <code>repeated .bloombox.comms.EmailTransmission op = 1;</code>
        */
       public Builder setOp(
           int index, io.bloombox.schema.comms.EmailComms.EmailTransmission.Builder builderForValue) {
@@ -14234,7 +14510,7 @@ public final class EmailComms {
        * Transmission operations for this batch.
        * </pre>
        *
-       * <code>repeated .bloombox.schema.comms.EmailTransmission op = 1;</code>
+       * <code>repeated .bloombox.comms.EmailTransmission op = 1;</code>
        */
       public Builder addOp(io.bloombox.schema.comms.EmailComms.EmailTransmission value) {
         if (opBuilder_ == null) {
@@ -14254,7 +14530,7 @@ public final class EmailComms {
        * Transmission operations for this batch.
        * </pre>
        *
-       * <code>repeated .bloombox.schema.comms.EmailTransmission op = 1;</code>
+       * <code>repeated .bloombox.comms.EmailTransmission op = 1;</code>
        */
       public Builder addOp(
           int index, io.bloombox.schema.comms.EmailComms.EmailTransmission value) {
@@ -14275,7 +14551,7 @@ public final class EmailComms {
        * Transmission operations for this batch.
        * </pre>
        *
-       * <code>repeated .bloombox.schema.comms.EmailTransmission op = 1;</code>
+       * <code>repeated .bloombox.comms.EmailTransmission op = 1;</code>
        */
       public Builder addOp(
           io.bloombox.schema.comms.EmailComms.EmailTransmission.Builder builderForValue) {
@@ -14293,7 +14569,7 @@ public final class EmailComms {
        * Transmission operations for this batch.
        * </pre>
        *
-       * <code>repeated .bloombox.schema.comms.EmailTransmission op = 1;</code>
+       * <code>repeated .bloombox.comms.EmailTransmission op = 1;</code>
        */
       public Builder addOp(
           int index, io.bloombox.schema.comms.EmailComms.EmailTransmission.Builder builderForValue) {
@@ -14311,7 +14587,7 @@ public final class EmailComms {
        * Transmission operations for this batch.
        * </pre>
        *
-       * <code>repeated .bloombox.schema.comms.EmailTransmission op = 1;</code>
+       * <code>repeated .bloombox.comms.EmailTransmission op = 1;</code>
        */
       public Builder addAllOp(
           java.lang.Iterable<? extends io.bloombox.schema.comms.EmailComms.EmailTransmission> values) {
@@ -14330,7 +14606,7 @@ public final class EmailComms {
        * Transmission operations for this batch.
        * </pre>
        *
-       * <code>repeated .bloombox.schema.comms.EmailTransmission op = 1;</code>
+       * <code>repeated .bloombox.comms.EmailTransmission op = 1;</code>
        */
       public Builder clearOp() {
         if (opBuilder_ == null) {
@@ -14347,7 +14623,7 @@ public final class EmailComms {
        * Transmission operations for this batch.
        * </pre>
        *
-       * <code>repeated .bloombox.schema.comms.EmailTransmission op = 1;</code>
+       * <code>repeated .bloombox.comms.EmailTransmission op = 1;</code>
        */
       public Builder removeOp(int index) {
         if (opBuilder_ == null) {
@@ -14364,7 +14640,7 @@ public final class EmailComms {
        * Transmission operations for this batch.
        * </pre>
        *
-       * <code>repeated .bloombox.schema.comms.EmailTransmission op = 1;</code>
+       * <code>repeated .bloombox.comms.EmailTransmission op = 1;</code>
        */
       public io.bloombox.schema.comms.EmailComms.EmailTransmission.Builder getOpBuilder(
           int index) {
@@ -14375,7 +14651,7 @@ public final class EmailComms {
        * Transmission operations for this batch.
        * </pre>
        *
-       * <code>repeated .bloombox.schema.comms.EmailTransmission op = 1;</code>
+       * <code>repeated .bloombox.comms.EmailTransmission op = 1;</code>
        */
       public io.bloombox.schema.comms.EmailComms.EmailTransmissionOrBuilder getOpOrBuilder(
           int index) {
@@ -14389,7 +14665,7 @@ public final class EmailComms {
        * Transmission operations for this batch.
        * </pre>
        *
-       * <code>repeated .bloombox.schema.comms.EmailTransmission op = 1;</code>
+       * <code>repeated .bloombox.comms.EmailTransmission op = 1;</code>
        */
       public java.util.List<? extends io.bloombox.schema.comms.EmailComms.EmailTransmissionOrBuilder> 
            getOpOrBuilderList() {
@@ -14404,7 +14680,7 @@ public final class EmailComms {
        * Transmission operations for this batch.
        * </pre>
        *
-       * <code>repeated .bloombox.schema.comms.EmailTransmission op = 1;</code>
+       * <code>repeated .bloombox.comms.EmailTransmission op = 1;</code>
        */
       public io.bloombox.schema.comms.EmailComms.EmailTransmission.Builder addOpBuilder() {
         return getOpFieldBuilder().addBuilder(
@@ -14415,7 +14691,7 @@ public final class EmailComms {
        * Transmission operations for this batch.
        * </pre>
        *
-       * <code>repeated .bloombox.schema.comms.EmailTransmission op = 1;</code>
+       * <code>repeated .bloombox.comms.EmailTransmission op = 1;</code>
        */
       public io.bloombox.schema.comms.EmailComms.EmailTransmission.Builder addOpBuilder(
           int index) {
@@ -14427,7 +14703,7 @@ public final class EmailComms {
        * Transmission operations for this batch.
        * </pre>
        *
-       * <code>repeated .bloombox.schema.comms.EmailTransmission op = 1;</code>
+       * <code>repeated .bloombox.comms.EmailTransmission op = 1;</code>
        */
       public java.util.List<io.bloombox.schema.comms.EmailComms.EmailTransmission.Builder> 
            getOpBuilderList() {
@@ -14447,21 +14723,23 @@ public final class EmailComms {
         }
         return opBuilder_;
       }
+      @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
         return super.setUnknownFieldsProto3(unknownFields);
       }
 
+      @java.lang.Override
       public final Builder mergeUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
         return super.mergeUnknownFields(unknownFields);
       }
 
 
-      // @@protoc_insertion_point(builder_scope:bloombox.schema.comms.EmailBatch)
+      // @@protoc_insertion_point(builder_scope:bloombox.comms.EmailBatch)
     }
 
-    // @@protoc_insertion_point(class_scope:bloombox.schema.comms.EmailBatch)
+    // @@protoc_insertion_point(class_scope:bloombox.comms.EmailBatch)
     private static final io.bloombox.schema.comms.EmailComms.EmailBatch DEFAULT_INSTANCE;
     static {
       DEFAULT_INSTANCE = new io.bloombox.schema.comms.EmailComms.EmailBatch();
@@ -14473,6 +14751,7 @@ public final class EmailComms {
 
     private static final com.google.protobuf.Parser<EmailBatch>
         PARSER = new com.google.protobuf.AbstractParser<EmailBatch>() {
+      @java.lang.Override
       public EmailBatch parsePartialFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -14490,6 +14769,7 @@ public final class EmailComms {
       return PARSER;
     }
 
+    @java.lang.Override
     public io.bloombox.schema.comms.EmailComms.EmailBatch getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
@@ -14497,7 +14777,7 @@ public final class EmailComms {
   }
 
   public interface EmailSenderOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:bloombox.schema.comms.EmailSender)
+      // @@protoc_insertion_point(interface_extends:bloombox.comms.EmailSender)
       com.google.protobuf.MessageOrBuilder {
 
     /**
@@ -14505,7 +14785,7 @@ public final class EmailComms {
      * Roles for this contact.
      * </pre>
      *
-     * <code>repeated .bloombox.schema.comms.EmailSender.Role role = 1;</code>
+     * <code>repeated .bloombox.comms.EmailSender.Role role = 1;</code>
      */
     java.util.List<io.bloombox.schema.comms.EmailComms.EmailSender.Role> getRoleList();
     /**
@@ -14513,7 +14793,7 @@ public final class EmailComms {
      * Roles for this contact.
      * </pre>
      *
-     * <code>repeated .bloombox.schema.comms.EmailSender.Role role = 1;</code>
+     * <code>repeated .bloombox.comms.EmailSender.Role role = 1;</code>
      */
     int getRoleCount();
     /**
@@ -14521,7 +14801,7 @@ public final class EmailComms {
      * Roles for this contact.
      * </pre>
      *
-     * <code>repeated .bloombox.schema.comms.EmailSender.Role role = 1;</code>
+     * <code>repeated .bloombox.comms.EmailSender.Role role = 1;</code>
      */
     io.bloombox.schema.comms.EmailComms.EmailSender.Role getRole(int index);
     /**
@@ -14529,7 +14809,7 @@ public final class EmailComms {
      * Roles for this contact.
      * </pre>
      *
-     * <code>repeated .bloombox.schema.comms.EmailSender.Role role = 1;</code>
+     * <code>repeated .bloombox.comms.EmailSender.Role role = 1;</code>
      */
     java.util.List<java.lang.Integer>
     getRoleValueList();
@@ -14538,7 +14818,7 @@ public final class EmailComms {
      * Roles for this contact.
      * </pre>
      *
-     * <code>repeated .bloombox.schema.comms.EmailSender.Role role = 1;</code>
+     * <code>repeated .bloombox.comms.EmailSender.Role role = 1;</code>
      */
     int getRoleValue(int index);
 
@@ -14572,11 +14852,11 @@ public final class EmailComms {
    * Specifies an email sender record.
    * </pre>
    *
-   * Protobuf type {@code bloombox.schema.comms.EmailSender}
+   * Protobuf type {@code bloombox.comms.EmailSender}
    */
   public  static final class EmailSender extends
       com.google.protobuf.GeneratedMessageV3 implements
-      // @@protoc_insertion_point(message_implements:bloombox.schema.comms.EmailSender)
+      // @@protoc_insertion_point(message_implements:bloombox.comms.EmailSender)
       EmailSenderOrBuilder {
   private static final long serialVersionUID = 0L;
     // Use EmailSender.newBuilder() to construct.
@@ -14611,13 +14891,6 @@ public final class EmailComms {
             case 0:
               done = true;
               break;
-            default: {
-              if (!parseUnknownFieldProto3(
-                  input, unknownFields, extensionRegistry, tag)) {
-                done = true;
-              }
-              break;
-            }
             case 8: {
               int rawValue = input.readEnum();
               if (!((mutable_bitField0_ & 0x00000001) == 0x00000001)) {
@@ -14654,6 +14927,13 @@ public final class EmailComms {
 
               break;
             }
+            default: {
+              if (!parseUnknownFieldProto3(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
           }
         }
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
@@ -14671,12 +14951,13 @@ public final class EmailComms {
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return io.bloombox.schema.comms.EmailComms.internal_static_bloombox_schema_comms_EmailSender_descriptor;
+      return io.bloombox.schema.comms.EmailComms.internal_static_bloombox_comms_EmailSender_descriptor;
     }
 
+    @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return io.bloombox.schema.comms.EmailComms.internal_static_bloombox_schema_comms_EmailSender_fieldAccessorTable
+      return io.bloombox.schema.comms.EmailComms.internal_static_bloombox_comms_EmailSender_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
               io.bloombox.schema.comms.EmailComms.EmailSender.class, io.bloombox.schema.comms.EmailComms.EmailSender.Builder.class);
     }
@@ -14686,7 +14967,7 @@ public final class EmailComms {
      * Enumerates available roles for an email contact.
      * </pre>
      *
-     * Protobuf enum {@code bloombox.schema.comms.EmailSender.Role}
+     * Protobuf enum {@code bloombox.comms.EmailSender.Role}
      */
     public enum Role
         implements com.google.protobuf.ProtocolMessageEnum {
@@ -14830,7 +15111,7 @@ public final class EmailComms {
         this.value = value;
       }
 
-      // @@protoc_insertion_point(enum_scope:bloombox.schema.comms.EmailSender.Role)
+      // @@protoc_insertion_point(enum_scope:bloombox.comms.EmailSender.Role)
     }
 
     private int bitField0_;
@@ -14841,6 +15122,7 @@ public final class EmailComms {
             new com.google.protobuf.Internal.ListAdapter.Converter<
                 java.lang.Integer, io.bloombox.schema.comms.EmailComms.EmailSender.Role>() {
               public io.bloombox.schema.comms.EmailComms.EmailSender.Role convert(java.lang.Integer from) {
+                @SuppressWarnings("deprecation")
                 io.bloombox.schema.comms.EmailComms.EmailSender.Role result = io.bloombox.schema.comms.EmailComms.EmailSender.Role.valueOf(from);
                 return result == null ? io.bloombox.schema.comms.EmailComms.EmailSender.Role.UNRECOGNIZED : result;
               }
@@ -14850,7 +15132,7 @@ public final class EmailComms {
      * Roles for this contact.
      * </pre>
      *
-     * <code>repeated .bloombox.schema.comms.EmailSender.Role role = 1;</code>
+     * <code>repeated .bloombox.comms.EmailSender.Role role = 1;</code>
      */
     public java.util.List<io.bloombox.schema.comms.EmailComms.EmailSender.Role> getRoleList() {
       return new com.google.protobuf.Internal.ListAdapter<
@@ -14861,7 +15143,7 @@ public final class EmailComms {
      * Roles for this contact.
      * </pre>
      *
-     * <code>repeated .bloombox.schema.comms.EmailSender.Role role = 1;</code>
+     * <code>repeated .bloombox.comms.EmailSender.Role role = 1;</code>
      */
     public int getRoleCount() {
       return role_.size();
@@ -14871,7 +15153,7 @@ public final class EmailComms {
      * Roles for this contact.
      * </pre>
      *
-     * <code>repeated .bloombox.schema.comms.EmailSender.Role role = 1;</code>
+     * <code>repeated .bloombox.comms.EmailSender.Role role = 1;</code>
      */
     public io.bloombox.schema.comms.EmailComms.EmailSender.Role getRole(int index) {
       return role_converter_.convert(role_.get(index));
@@ -14881,7 +15163,7 @@ public final class EmailComms {
      * Roles for this contact.
      * </pre>
      *
-     * <code>repeated .bloombox.schema.comms.EmailSender.Role role = 1;</code>
+     * <code>repeated .bloombox.comms.EmailSender.Role role = 1;</code>
      */
     public java.util.List<java.lang.Integer>
     getRoleValueList() {
@@ -14892,7 +15174,7 @@ public final class EmailComms {
      * Roles for this contact.
      * </pre>
      *
-     * <code>repeated .bloombox.schema.comms.EmailSender.Role role = 1;</code>
+     * <code>repeated .bloombox.comms.EmailSender.Role role = 1;</code>
      */
     public int getRoleValue(int index) {
       return role_.get(index);
@@ -14933,6 +15215,7 @@ public final class EmailComms {
     }
 
     private byte memoizedIsInitialized = -1;
+    @java.lang.Override
     public final boolean isInitialized() {
       byte isInitialized = memoizedIsInitialized;
       if (isInitialized == 1) return true;
@@ -14942,6 +15225,7 @@ public final class EmailComms {
       return true;
     }
 
+    @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
       getSerializedSize();
@@ -14958,6 +15242,7 @@ public final class EmailComms {
       unknownFields.writeTo(output);
     }
 
+    @java.lang.Override
     public int getSerializedSize() {
       int size = memoizedSize;
       if (size != -1) return size;
@@ -15095,6 +15380,7 @@ public final class EmailComms {
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
 
+    @java.lang.Override
     public Builder newBuilderForType() { return newBuilder(); }
     public static Builder newBuilder() {
       return DEFAULT_INSTANCE.toBuilder();
@@ -15102,6 +15388,7 @@ public final class EmailComms {
     public static Builder newBuilder(io.bloombox.schema.comms.EmailComms.EmailSender prototype) {
       return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
     }
+    @java.lang.Override
     public Builder toBuilder() {
       return this == DEFAULT_INSTANCE
           ? new Builder() : new Builder().mergeFrom(this);
@@ -15118,20 +15405,21 @@ public final class EmailComms {
      * Specifies an email sender record.
      * </pre>
      *
-     * Protobuf type {@code bloombox.schema.comms.EmailSender}
+     * Protobuf type {@code bloombox.comms.EmailSender}
      */
     public static final class Builder extends
         com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:bloombox.schema.comms.EmailSender)
+        // @@protoc_insertion_point(builder_implements:bloombox.comms.EmailSender)
         io.bloombox.schema.comms.EmailComms.EmailSenderOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return io.bloombox.schema.comms.EmailComms.internal_static_bloombox_schema_comms_EmailSender_descriptor;
+        return io.bloombox.schema.comms.EmailComms.internal_static_bloombox_comms_EmailSender_descriptor;
       }
 
+      @java.lang.Override
       protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return io.bloombox.schema.comms.EmailComms.internal_static_bloombox_schema_comms_EmailSender_fieldAccessorTable
+        return io.bloombox.schema.comms.EmailComms.internal_static_bloombox_comms_EmailSender_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
                 io.bloombox.schema.comms.EmailComms.EmailSender.class, io.bloombox.schema.comms.EmailComms.EmailSender.Builder.class);
       }
@@ -15151,6 +15439,7 @@ public final class EmailComms {
                 .alwaysUseFieldBuilders) {
         }
       }
+      @java.lang.Override
       public Builder clear() {
         super.clear();
         role_ = java.util.Collections.emptyList();
@@ -15164,15 +15453,18 @@ public final class EmailComms {
         return this;
       }
 
+      @java.lang.Override
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return io.bloombox.schema.comms.EmailComms.internal_static_bloombox_schema_comms_EmailSender_descriptor;
+        return io.bloombox.schema.comms.EmailComms.internal_static_bloombox_comms_EmailSender_descriptor;
       }
 
+      @java.lang.Override
       public io.bloombox.schema.comms.EmailComms.EmailSender getDefaultInstanceForType() {
         return io.bloombox.schema.comms.EmailComms.EmailSender.getDefaultInstance();
       }
 
+      @java.lang.Override
       public io.bloombox.schema.comms.EmailComms.EmailSender build() {
         io.bloombox.schema.comms.EmailComms.EmailSender result = buildPartial();
         if (!result.isInitialized()) {
@@ -15181,6 +15473,7 @@ public final class EmailComms {
         return result;
       }
 
+      @java.lang.Override
       public io.bloombox.schema.comms.EmailComms.EmailSender buildPartial() {
         io.bloombox.schema.comms.EmailComms.EmailSender result = new io.bloombox.schema.comms.EmailComms.EmailSender(this);
         int from_bitField0_ = bitField0_;
@@ -15200,32 +15493,39 @@ public final class EmailComms {
         return result;
       }
 
+      @java.lang.Override
       public Builder clone() {
         return (Builder) super.clone();
       }
+      @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
         return (Builder) super.setField(field, value);
       }
+      @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
         return (Builder) super.clearField(field);
       }
+      @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
         return (Builder) super.clearOneof(oneof);
       }
+      @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
         return (Builder) super.setRepeatedField(field, index, value);
       }
+      @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
         return (Builder) super.addRepeatedField(field, value);
       }
+      @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
         if (other instanceof io.bloombox.schema.comms.EmailComms.EmailSender) {
           return mergeFrom((io.bloombox.schema.comms.EmailComms.EmailSender)other);
@@ -15255,10 +15555,12 @@ public final class EmailComms {
         return this;
       }
 
+      @java.lang.Override
       public final boolean isInitialized() {
         return true;
       }
 
+      @java.lang.Override
       public Builder mergeFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -15291,7 +15593,7 @@ public final class EmailComms {
        * Roles for this contact.
        * </pre>
        *
-       * <code>repeated .bloombox.schema.comms.EmailSender.Role role = 1;</code>
+       * <code>repeated .bloombox.comms.EmailSender.Role role = 1;</code>
        */
       public java.util.List<io.bloombox.schema.comms.EmailComms.EmailSender.Role> getRoleList() {
         return new com.google.protobuf.Internal.ListAdapter<
@@ -15302,7 +15604,7 @@ public final class EmailComms {
        * Roles for this contact.
        * </pre>
        *
-       * <code>repeated .bloombox.schema.comms.EmailSender.Role role = 1;</code>
+       * <code>repeated .bloombox.comms.EmailSender.Role role = 1;</code>
        */
       public int getRoleCount() {
         return role_.size();
@@ -15312,7 +15614,7 @@ public final class EmailComms {
        * Roles for this contact.
        * </pre>
        *
-       * <code>repeated .bloombox.schema.comms.EmailSender.Role role = 1;</code>
+       * <code>repeated .bloombox.comms.EmailSender.Role role = 1;</code>
        */
       public io.bloombox.schema.comms.EmailComms.EmailSender.Role getRole(int index) {
         return role_converter_.convert(role_.get(index));
@@ -15322,7 +15624,7 @@ public final class EmailComms {
        * Roles for this contact.
        * </pre>
        *
-       * <code>repeated .bloombox.schema.comms.EmailSender.Role role = 1;</code>
+       * <code>repeated .bloombox.comms.EmailSender.Role role = 1;</code>
        */
       public Builder setRole(
           int index, io.bloombox.schema.comms.EmailComms.EmailSender.Role value) {
@@ -15339,7 +15641,7 @@ public final class EmailComms {
        * Roles for this contact.
        * </pre>
        *
-       * <code>repeated .bloombox.schema.comms.EmailSender.Role role = 1;</code>
+       * <code>repeated .bloombox.comms.EmailSender.Role role = 1;</code>
        */
       public Builder addRole(io.bloombox.schema.comms.EmailComms.EmailSender.Role value) {
         if (value == null) {
@@ -15355,7 +15657,7 @@ public final class EmailComms {
        * Roles for this contact.
        * </pre>
        *
-       * <code>repeated .bloombox.schema.comms.EmailSender.Role role = 1;</code>
+       * <code>repeated .bloombox.comms.EmailSender.Role role = 1;</code>
        */
       public Builder addAllRole(
           java.lang.Iterable<? extends io.bloombox.schema.comms.EmailComms.EmailSender.Role> values) {
@@ -15371,7 +15673,7 @@ public final class EmailComms {
        * Roles for this contact.
        * </pre>
        *
-       * <code>repeated .bloombox.schema.comms.EmailSender.Role role = 1;</code>
+       * <code>repeated .bloombox.comms.EmailSender.Role role = 1;</code>
        */
       public Builder clearRole() {
         role_ = java.util.Collections.emptyList();
@@ -15384,7 +15686,7 @@ public final class EmailComms {
        * Roles for this contact.
        * </pre>
        *
-       * <code>repeated .bloombox.schema.comms.EmailSender.Role role = 1;</code>
+       * <code>repeated .bloombox.comms.EmailSender.Role role = 1;</code>
        */
       public java.util.List<java.lang.Integer>
       getRoleValueList() {
@@ -15395,7 +15697,7 @@ public final class EmailComms {
        * Roles for this contact.
        * </pre>
        *
-       * <code>repeated .bloombox.schema.comms.EmailSender.Role role = 1;</code>
+       * <code>repeated .bloombox.comms.EmailSender.Role role = 1;</code>
        */
       public int getRoleValue(int index) {
         return role_.get(index);
@@ -15405,7 +15707,7 @@ public final class EmailComms {
        * Roles for this contact.
        * </pre>
        *
-       * <code>repeated .bloombox.schema.comms.EmailSender.Role role = 1;</code>
+       * <code>repeated .bloombox.comms.EmailSender.Role role = 1;</code>
        */
       public Builder setRoleValue(
           int index, int value) {
@@ -15419,7 +15721,7 @@ public final class EmailComms {
        * Roles for this contact.
        * </pre>
        *
-       * <code>repeated .bloombox.schema.comms.EmailSender.Role role = 1;</code>
+       * <code>repeated .bloombox.comms.EmailSender.Role role = 1;</code>
        */
       public Builder addRoleValue(int value) {
         ensureRoleIsMutable();
@@ -15432,7 +15734,7 @@ public final class EmailComms {
        * Roles for this contact.
        * </pre>
        *
-       * <code>repeated .bloombox.schema.comms.EmailSender.Role role = 1;</code>
+       * <code>repeated .bloombox.comms.EmailSender.Role role = 1;</code>
        */
       public Builder addAllRoleValue(
           java.lang.Iterable<java.lang.Integer> values) {
@@ -15596,21 +15898,23 @@ public final class EmailComms {
         }
         return contactBuilder_;
       }
+      @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
         return super.setUnknownFieldsProto3(unknownFields);
       }
 
+      @java.lang.Override
       public final Builder mergeUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
         return super.mergeUnknownFields(unknownFields);
       }
 
 
-      // @@protoc_insertion_point(builder_scope:bloombox.schema.comms.EmailSender)
+      // @@protoc_insertion_point(builder_scope:bloombox.comms.EmailSender)
     }
 
-    // @@protoc_insertion_point(class_scope:bloombox.schema.comms.EmailSender)
+    // @@protoc_insertion_point(class_scope:bloombox.comms.EmailSender)
     private static final io.bloombox.schema.comms.EmailComms.EmailSender DEFAULT_INSTANCE;
     static {
       DEFAULT_INSTANCE = new io.bloombox.schema.comms.EmailComms.EmailSender();
@@ -15622,6 +15926,7 @@ public final class EmailComms {
 
     private static final com.google.protobuf.Parser<EmailSender>
         PARSER = new com.google.protobuf.AbstractParser<EmailSender>() {
+      @java.lang.Override
       public EmailSender parsePartialFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -15639,6 +15944,7 @@ public final class EmailComms {
       return PARSER;
     }
 
+    @java.lang.Override
     public io.bloombox.schema.comms.EmailComms.EmailSender getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
@@ -15646,7 +15952,7 @@ public final class EmailComms {
   }
 
   public interface EmailSettingsOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:bloombox.schema.comms.EmailSettings)
+      // @@protoc_insertion_point(interface_extends:bloombox.comms.EmailSettings)
       com.google.protobuf.MessageOrBuilder {
 
     /**
@@ -15654,7 +15960,7 @@ public final class EmailComms {
      * Origin email address to send the email from.
      * </pre>
      *
-     * <code>repeated .bloombox.schema.comms.EmailSender sender = 1;</code>
+     * <code>repeated .bloombox.comms.EmailSender sender = 1;</code>
      */
     java.util.List<io.bloombox.schema.comms.EmailComms.EmailSender> 
         getSenderList();
@@ -15663,7 +15969,7 @@ public final class EmailComms {
      * Origin email address to send the email from.
      * </pre>
      *
-     * <code>repeated .bloombox.schema.comms.EmailSender sender = 1;</code>
+     * <code>repeated .bloombox.comms.EmailSender sender = 1;</code>
      */
     io.bloombox.schema.comms.EmailComms.EmailSender getSender(int index);
     /**
@@ -15671,7 +15977,7 @@ public final class EmailComms {
      * Origin email address to send the email from.
      * </pre>
      *
-     * <code>repeated .bloombox.schema.comms.EmailSender sender = 1;</code>
+     * <code>repeated .bloombox.comms.EmailSender sender = 1;</code>
      */
     int getSenderCount();
     /**
@@ -15679,7 +15985,7 @@ public final class EmailComms {
      * Origin email address to send the email from.
      * </pre>
      *
-     * <code>repeated .bloombox.schema.comms.EmailSender sender = 1;</code>
+     * <code>repeated .bloombox.comms.EmailSender sender = 1;</code>
      */
     java.util.List<? extends io.bloombox.schema.comms.EmailComms.EmailSenderOrBuilder> 
         getSenderOrBuilderList();
@@ -15688,7 +15994,7 @@ public final class EmailComms {
      * Origin email address to send the email from.
      * </pre>
      *
-     * <code>repeated .bloombox.schema.comms.EmailSender sender = 1;</code>
+     * <code>repeated .bloombox.comms.EmailSender sender = 1;</code>
      */
     io.bloombox.schema.comms.EmailComms.EmailSenderOrBuilder getSenderOrBuilder(
         int index);
@@ -15725,11 +16031,11 @@ public final class EmailComms {
    * Email-specific settings.
    * </pre>
    *
-   * Protobuf type {@code bloombox.schema.comms.EmailSettings}
+   * Protobuf type {@code bloombox.comms.EmailSettings}
    */
   public  static final class EmailSettings extends
       com.google.protobuf.GeneratedMessageV3 implements
-      // @@protoc_insertion_point(message_implements:bloombox.schema.comms.EmailSettings)
+      // @@protoc_insertion_point(message_implements:bloombox.comms.EmailSettings)
       EmailSettingsOrBuilder {
   private static final long serialVersionUID = 0L;
     // Use EmailSettings.newBuilder() to construct.
@@ -15767,13 +16073,6 @@ public final class EmailComms {
             case 0:
               done = true;
               break;
-            default: {
-              if (!parseUnknownFieldProto3(
-                  input, unknownFields, extensionRegistry, tag)) {
-                done = true;
-              }
-              break;
-            }
             case 10: {
               if (!((mutable_bitField0_ & 0x00000001) == 0x00000001)) {
                 sender_ = new java.util.ArrayList<io.bloombox.schema.comms.EmailComms.EmailSender>();
@@ -15798,6 +16097,13 @@ public final class EmailComms {
               asmGroup_ = input.readUInt32();
               break;
             }
+            default: {
+              if (!parseUnknownFieldProto3(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
           }
         }
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
@@ -15815,12 +16121,13 @@ public final class EmailComms {
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return io.bloombox.schema.comms.EmailComms.internal_static_bloombox_schema_comms_EmailSettings_descriptor;
+      return io.bloombox.schema.comms.EmailComms.internal_static_bloombox_comms_EmailSettings_descriptor;
     }
 
+    @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return io.bloombox.schema.comms.EmailComms.internal_static_bloombox_schema_comms_EmailSettings_fieldAccessorTable
+      return io.bloombox.schema.comms.EmailComms.internal_static_bloombox_comms_EmailSettings_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
               io.bloombox.schema.comms.EmailComms.EmailSettings.class, io.bloombox.schema.comms.EmailComms.EmailSettings.Builder.class);
     }
@@ -15833,7 +16140,7 @@ public final class EmailComms {
      * Origin email address to send the email from.
      * </pre>
      *
-     * <code>repeated .bloombox.schema.comms.EmailSender sender = 1;</code>
+     * <code>repeated .bloombox.comms.EmailSender sender = 1;</code>
      */
     public java.util.List<io.bloombox.schema.comms.EmailComms.EmailSender> getSenderList() {
       return sender_;
@@ -15843,7 +16150,7 @@ public final class EmailComms {
      * Origin email address to send the email from.
      * </pre>
      *
-     * <code>repeated .bloombox.schema.comms.EmailSender sender = 1;</code>
+     * <code>repeated .bloombox.comms.EmailSender sender = 1;</code>
      */
     public java.util.List<? extends io.bloombox.schema.comms.EmailComms.EmailSenderOrBuilder> 
         getSenderOrBuilderList() {
@@ -15854,7 +16161,7 @@ public final class EmailComms {
      * Origin email address to send the email from.
      * </pre>
      *
-     * <code>repeated .bloombox.schema.comms.EmailSender sender = 1;</code>
+     * <code>repeated .bloombox.comms.EmailSender sender = 1;</code>
      */
     public int getSenderCount() {
       return sender_.size();
@@ -15864,7 +16171,7 @@ public final class EmailComms {
      * Origin email address to send the email from.
      * </pre>
      *
-     * <code>repeated .bloombox.schema.comms.EmailSender sender = 1;</code>
+     * <code>repeated .bloombox.comms.EmailSender sender = 1;</code>
      */
     public io.bloombox.schema.comms.EmailComms.EmailSender getSender(int index) {
       return sender_.get(index);
@@ -15874,7 +16181,7 @@ public final class EmailComms {
      * Origin email address to send the email from.
      * </pre>
      *
-     * <code>repeated .bloombox.schema.comms.EmailSender sender = 1;</code>
+     * <code>repeated .bloombox.comms.EmailSender sender = 1;</code>
      */
     public io.bloombox.schema.comms.EmailComms.EmailSenderOrBuilder getSenderOrBuilder(
         int index) {
@@ -15921,6 +16228,7 @@ public final class EmailComms {
     }
 
     private byte memoizedIsInitialized = -1;
+    @java.lang.Override
     public final boolean isInitialized() {
       byte isInitialized = memoizedIsInitialized;
       if (isInitialized == 1) return true;
@@ -15930,6 +16238,7 @@ public final class EmailComms {
       return true;
     }
 
+    @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
       for (int i = 0; i < sender_.size(); i++) {
@@ -15947,6 +16256,7 @@ public final class EmailComms {
       unknownFields.writeTo(output);
     }
 
+    @java.lang.Override
     public int getSerializedSize() {
       int size = memoizedSize;
       if (size != -1) return size;
@@ -16090,6 +16400,7 @@ public final class EmailComms {
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
 
+    @java.lang.Override
     public Builder newBuilderForType() { return newBuilder(); }
     public static Builder newBuilder() {
       return DEFAULT_INSTANCE.toBuilder();
@@ -16097,6 +16408,7 @@ public final class EmailComms {
     public static Builder newBuilder(io.bloombox.schema.comms.EmailComms.EmailSettings prototype) {
       return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
     }
+    @java.lang.Override
     public Builder toBuilder() {
       return this == DEFAULT_INSTANCE
           ? new Builder() : new Builder().mergeFrom(this);
@@ -16113,20 +16425,21 @@ public final class EmailComms {
      * Email-specific settings.
      * </pre>
      *
-     * Protobuf type {@code bloombox.schema.comms.EmailSettings}
+     * Protobuf type {@code bloombox.comms.EmailSettings}
      */
     public static final class Builder extends
         com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:bloombox.schema.comms.EmailSettings)
+        // @@protoc_insertion_point(builder_implements:bloombox.comms.EmailSettings)
         io.bloombox.schema.comms.EmailComms.EmailSettingsOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return io.bloombox.schema.comms.EmailComms.internal_static_bloombox_schema_comms_EmailSettings_descriptor;
+        return io.bloombox.schema.comms.EmailComms.internal_static_bloombox_comms_EmailSettings_descriptor;
       }
 
+      @java.lang.Override
       protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return io.bloombox.schema.comms.EmailComms.internal_static_bloombox_schema_comms_EmailSettings_fieldAccessorTable
+        return io.bloombox.schema.comms.EmailComms.internal_static_bloombox_comms_EmailSettings_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
                 io.bloombox.schema.comms.EmailComms.EmailSettings.class, io.bloombox.schema.comms.EmailComms.EmailSettings.Builder.class);
       }
@@ -16147,6 +16460,7 @@ public final class EmailComms {
           getSenderFieldBuilder();
         }
       }
+      @java.lang.Override
       public Builder clear() {
         super.clear();
         if (senderBuilder_ == null) {
@@ -16164,15 +16478,18 @@ public final class EmailComms {
         return this;
       }
 
+      @java.lang.Override
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return io.bloombox.schema.comms.EmailComms.internal_static_bloombox_schema_comms_EmailSettings_descriptor;
+        return io.bloombox.schema.comms.EmailComms.internal_static_bloombox_comms_EmailSettings_descriptor;
       }
 
+      @java.lang.Override
       public io.bloombox.schema.comms.EmailComms.EmailSettings getDefaultInstanceForType() {
         return io.bloombox.schema.comms.EmailComms.EmailSettings.getDefaultInstance();
       }
 
+      @java.lang.Override
       public io.bloombox.schema.comms.EmailComms.EmailSettings build() {
         io.bloombox.schema.comms.EmailComms.EmailSettings result = buildPartial();
         if (!result.isInitialized()) {
@@ -16181,6 +16498,7 @@ public final class EmailComms {
         return result;
       }
 
+      @java.lang.Override
       public io.bloombox.schema.comms.EmailComms.EmailSettings buildPartial() {
         io.bloombox.schema.comms.EmailComms.EmailSettings result = new io.bloombox.schema.comms.EmailComms.EmailSettings(this);
         int from_bitField0_ = bitField0_;
@@ -16202,32 +16520,39 @@ public final class EmailComms {
         return result;
       }
 
+      @java.lang.Override
       public Builder clone() {
         return (Builder) super.clone();
       }
+      @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
         return (Builder) super.setField(field, value);
       }
+      @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
         return (Builder) super.clearField(field);
       }
+      @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
         return (Builder) super.clearOneof(oneof);
       }
+      @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
         return (Builder) super.setRepeatedField(field, index, value);
       }
+      @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
         return (Builder) super.addRepeatedField(field, value);
       }
+      @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
         if (other instanceof io.bloombox.schema.comms.EmailComms.EmailSettings) {
           return mergeFrom((io.bloombox.schema.comms.EmailComms.EmailSettings)other);
@@ -16279,10 +16604,12 @@ public final class EmailComms {
         return this;
       }
 
+      @java.lang.Override
       public final boolean isInitialized() {
         return true;
       }
 
+      @java.lang.Override
       public Builder mergeFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -16319,7 +16646,7 @@ public final class EmailComms {
        * Origin email address to send the email from.
        * </pre>
        *
-       * <code>repeated .bloombox.schema.comms.EmailSender sender = 1;</code>
+       * <code>repeated .bloombox.comms.EmailSender sender = 1;</code>
        */
       public java.util.List<io.bloombox.schema.comms.EmailComms.EmailSender> getSenderList() {
         if (senderBuilder_ == null) {
@@ -16333,7 +16660,7 @@ public final class EmailComms {
        * Origin email address to send the email from.
        * </pre>
        *
-       * <code>repeated .bloombox.schema.comms.EmailSender sender = 1;</code>
+       * <code>repeated .bloombox.comms.EmailSender sender = 1;</code>
        */
       public int getSenderCount() {
         if (senderBuilder_ == null) {
@@ -16347,7 +16674,7 @@ public final class EmailComms {
        * Origin email address to send the email from.
        * </pre>
        *
-       * <code>repeated .bloombox.schema.comms.EmailSender sender = 1;</code>
+       * <code>repeated .bloombox.comms.EmailSender sender = 1;</code>
        */
       public io.bloombox.schema.comms.EmailComms.EmailSender getSender(int index) {
         if (senderBuilder_ == null) {
@@ -16361,7 +16688,7 @@ public final class EmailComms {
        * Origin email address to send the email from.
        * </pre>
        *
-       * <code>repeated .bloombox.schema.comms.EmailSender sender = 1;</code>
+       * <code>repeated .bloombox.comms.EmailSender sender = 1;</code>
        */
       public Builder setSender(
           int index, io.bloombox.schema.comms.EmailComms.EmailSender value) {
@@ -16382,7 +16709,7 @@ public final class EmailComms {
        * Origin email address to send the email from.
        * </pre>
        *
-       * <code>repeated .bloombox.schema.comms.EmailSender sender = 1;</code>
+       * <code>repeated .bloombox.comms.EmailSender sender = 1;</code>
        */
       public Builder setSender(
           int index, io.bloombox.schema.comms.EmailComms.EmailSender.Builder builderForValue) {
@@ -16400,7 +16727,7 @@ public final class EmailComms {
        * Origin email address to send the email from.
        * </pre>
        *
-       * <code>repeated .bloombox.schema.comms.EmailSender sender = 1;</code>
+       * <code>repeated .bloombox.comms.EmailSender sender = 1;</code>
        */
       public Builder addSender(io.bloombox.schema.comms.EmailComms.EmailSender value) {
         if (senderBuilder_ == null) {
@@ -16420,7 +16747,7 @@ public final class EmailComms {
        * Origin email address to send the email from.
        * </pre>
        *
-       * <code>repeated .bloombox.schema.comms.EmailSender sender = 1;</code>
+       * <code>repeated .bloombox.comms.EmailSender sender = 1;</code>
        */
       public Builder addSender(
           int index, io.bloombox.schema.comms.EmailComms.EmailSender value) {
@@ -16441,7 +16768,7 @@ public final class EmailComms {
        * Origin email address to send the email from.
        * </pre>
        *
-       * <code>repeated .bloombox.schema.comms.EmailSender sender = 1;</code>
+       * <code>repeated .bloombox.comms.EmailSender sender = 1;</code>
        */
       public Builder addSender(
           io.bloombox.schema.comms.EmailComms.EmailSender.Builder builderForValue) {
@@ -16459,7 +16786,7 @@ public final class EmailComms {
        * Origin email address to send the email from.
        * </pre>
        *
-       * <code>repeated .bloombox.schema.comms.EmailSender sender = 1;</code>
+       * <code>repeated .bloombox.comms.EmailSender sender = 1;</code>
        */
       public Builder addSender(
           int index, io.bloombox.schema.comms.EmailComms.EmailSender.Builder builderForValue) {
@@ -16477,7 +16804,7 @@ public final class EmailComms {
        * Origin email address to send the email from.
        * </pre>
        *
-       * <code>repeated .bloombox.schema.comms.EmailSender sender = 1;</code>
+       * <code>repeated .bloombox.comms.EmailSender sender = 1;</code>
        */
       public Builder addAllSender(
           java.lang.Iterable<? extends io.bloombox.schema.comms.EmailComms.EmailSender> values) {
@@ -16496,7 +16823,7 @@ public final class EmailComms {
        * Origin email address to send the email from.
        * </pre>
        *
-       * <code>repeated .bloombox.schema.comms.EmailSender sender = 1;</code>
+       * <code>repeated .bloombox.comms.EmailSender sender = 1;</code>
        */
       public Builder clearSender() {
         if (senderBuilder_ == null) {
@@ -16513,7 +16840,7 @@ public final class EmailComms {
        * Origin email address to send the email from.
        * </pre>
        *
-       * <code>repeated .bloombox.schema.comms.EmailSender sender = 1;</code>
+       * <code>repeated .bloombox.comms.EmailSender sender = 1;</code>
        */
       public Builder removeSender(int index) {
         if (senderBuilder_ == null) {
@@ -16530,7 +16857,7 @@ public final class EmailComms {
        * Origin email address to send the email from.
        * </pre>
        *
-       * <code>repeated .bloombox.schema.comms.EmailSender sender = 1;</code>
+       * <code>repeated .bloombox.comms.EmailSender sender = 1;</code>
        */
       public io.bloombox.schema.comms.EmailComms.EmailSender.Builder getSenderBuilder(
           int index) {
@@ -16541,7 +16868,7 @@ public final class EmailComms {
        * Origin email address to send the email from.
        * </pre>
        *
-       * <code>repeated .bloombox.schema.comms.EmailSender sender = 1;</code>
+       * <code>repeated .bloombox.comms.EmailSender sender = 1;</code>
        */
       public io.bloombox.schema.comms.EmailComms.EmailSenderOrBuilder getSenderOrBuilder(
           int index) {
@@ -16555,7 +16882,7 @@ public final class EmailComms {
        * Origin email address to send the email from.
        * </pre>
        *
-       * <code>repeated .bloombox.schema.comms.EmailSender sender = 1;</code>
+       * <code>repeated .bloombox.comms.EmailSender sender = 1;</code>
        */
       public java.util.List<? extends io.bloombox.schema.comms.EmailComms.EmailSenderOrBuilder> 
            getSenderOrBuilderList() {
@@ -16570,7 +16897,7 @@ public final class EmailComms {
        * Origin email address to send the email from.
        * </pre>
        *
-       * <code>repeated .bloombox.schema.comms.EmailSender sender = 1;</code>
+       * <code>repeated .bloombox.comms.EmailSender sender = 1;</code>
        */
       public io.bloombox.schema.comms.EmailComms.EmailSender.Builder addSenderBuilder() {
         return getSenderFieldBuilder().addBuilder(
@@ -16581,7 +16908,7 @@ public final class EmailComms {
        * Origin email address to send the email from.
        * </pre>
        *
-       * <code>repeated .bloombox.schema.comms.EmailSender sender = 1;</code>
+       * <code>repeated .bloombox.comms.EmailSender sender = 1;</code>
        */
       public io.bloombox.schema.comms.EmailComms.EmailSender.Builder addSenderBuilder(
           int index) {
@@ -16593,7 +16920,7 @@ public final class EmailComms {
        * Origin email address to send the email from.
        * </pre>
        *
-       * <code>repeated .bloombox.schema.comms.EmailSender sender = 1;</code>
+       * <code>repeated .bloombox.comms.EmailSender sender = 1;</code>
        */
       public java.util.List<io.bloombox.schema.comms.EmailComms.EmailSender.Builder> 
            getSenderBuilderList() {
@@ -16727,21 +17054,23 @@ public final class EmailComms {
         onChanged();
         return this;
       }
+      @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
         return super.setUnknownFieldsProto3(unknownFields);
       }
 
+      @java.lang.Override
       public final Builder mergeUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
         return super.mergeUnknownFields(unknownFields);
       }
 
 
-      // @@protoc_insertion_point(builder_scope:bloombox.schema.comms.EmailSettings)
+      // @@protoc_insertion_point(builder_scope:bloombox.comms.EmailSettings)
     }
 
-    // @@protoc_insertion_point(class_scope:bloombox.schema.comms.EmailSettings)
+    // @@protoc_insertion_point(class_scope:bloombox.comms.EmailSettings)
     private static final io.bloombox.schema.comms.EmailComms.EmailSettings DEFAULT_INSTANCE;
     static {
       DEFAULT_INSTANCE = new io.bloombox.schema.comms.EmailComms.EmailSettings();
@@ -16753,6 +17082,7 @@ public final class EmailComms {
 
     private static final com.google.protobuf.Parser<EmailSettings>
         PARSER = new com.google.protobuf.AbstractParser<EmailSettings>() {
+      @java.lang.Override
       public EmailSettings parsePartialFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -16770,6 +17100,7 @@ public final class EmailComms {
       return PARSER;
     }
 
+    @java.lang.Override
     public io.bloombox.schema.comms.EmailComms.EmailSettings getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
@@ -16777,70 +17108,70 @@ public final class EmailComms {
   }
 
   private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_bloombox_schema_comms_EmailContent_descriptor;
+    internal_static_bloombox_comms_EmailContent_descriptor;
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_bloombox_schema_comms_EmailContent_fieldAccessorTable;
+      internal_static_bloombox_comms_EmailContent_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_bloombox_schema_comms_EmailMessage_descriptor;
+    internal_static_bloombox_comms_EmailMessage_descriptor;
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_bloombox_schema_comms_EmailMessage_fieldAccessorTable;
+      internal_static_bloombox_comms_EmailMessage_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_bloombox_schema_comms_PublisherMetadata_descriptor;
+    internal_static_bloombox_comms_PublisherMetadata_descriptor;
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_bloombox_schema_comms_PublisherMetadata_fieldAccessorTable;
+      internal_static_bloombox_comms_PublisherMetadata_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_bloombox_schema_comms_EmailMetadata_descriptor;
+    internal_static_bloombox_comms_EmailMetadata_descriptor;
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_bloombox_schema_comms_EmailMetadata_fieldAccessorTable;
+      internal_static_bloombox_comms_EmailMetadata_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_bloombox_schema_comms_EmailMetadata_GoToView_descriptor;
+    internal_static_bloombox_comms_EmailMetadata_GoToView_descriptor;
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_bloombox_schema_comms_EmailMetadata_GoToView_fieldAccessorTable;
+      internal_static_bloombox_comms_EmailMetadata_GoToView_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_bloombox_schema_comms_EmailMetadata_GoToTrack_descriptor;
+    internal_static_bloombox_comms_EmailMetadata_GoToTrack_descriptor;
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_bloombox_schema_comms_EmailMetadata_GoToTrack_fieldAccessorTable;
+      internal_static_bloombox_comms_EmailMetadata_GoToTrack_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_bloombox_schema_comms_EmailMetadata_OneClickAction_descriptor;
+    internal_static_bloombox_comms_EmailMetadata_OneClickAction_descriptor;
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_bloombox_schema_comms_EmailMetadata_OneClickAction_fieldAccessorTable;
+      internal_static_bloombox_comms_EmailMetadata_OneClickAction_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_bloombox_schema_comms_EmailMetadata_OrderMetadata_descriptor;
+    internal_static_bloombox_comms_EmailMetadata_OrderMetadata_descriptor;
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_bloombox_schema_comms_EmailMetadata_OrderMetadata_fieldAccessorTable;
+      internal_static_bloombox_comms_EmailMetadata_OrderMetadata_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_bloombox_schema_comms_EmailMetadata_SchemaBlock_descriptor;
+    internal_static_bloombox_comms_EmailMetadata_SchemaBlock_descriptor;
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_bloombox_schema_comms_EmailMetadata_SchemaBlock_fieldAccessorTable;
+      internal_static_bloombox_comms_EmailMetadata_SchemaBlock_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_bloombox_schema_comms_EmailTransmission_descriptor;
+    internal_static_bloombox_comms_EmailTransmission_descriptor;
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_bloombox_schema_comms_EmailTransmission_fieldAccessorTable;
+      internal_static_bloombox_comms_EmailTransmission_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_bloombox_schema_comms_EmailBatch_descriptor;
+    internal_static_bloombox_comms_EmailBatch_descriptor;
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_bloombox_schema_comms_EmailBatch_fieldAccessorTable;
+      internal_static_bloombox_comms_EmailBatch_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_bloombox_schema_comms_EmailSender_descriptor;
+    internal_static_bloombox_comms_EmailSender_descriptor;
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_bloombox_schema_comms_EmailSender_fieldAccessorTable;
+      internal_static_bloombox_comms_EmailSender_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_bloombox_schema_comms_EmailSettings_descriptor;
+    internal_static_bloombox_comms_EmailSettings_descriptor;
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_bloombox_schema_comms_EmailSettings_fieldAccessorTable;
+      internal_static_bloombox_comms_EmailSettings_fieldAccessorTable;
 
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
@@ -16850,69 +17181,67 @@ public final class EmailComms {
       descriptor;
   static {
     java.lang.String[] descriptorData = {
-      "\n\021comms/Email.proto\022\025bloombox.schema.com" +
-      "ms\032\021geo/Address.proto\032\024commerce/Order.pr" +
-      "oto\032\024core/Datamodel.proto\032\024media/MediaKe" +
-      "y.proto\032\025partner/Partner.proto\032\025content/" +
-      "Content.proto\032\026temporal/Instant.proto\032\032c" +
-      "ontact/EmailAddress.proto\"\201\001\n\014EmailConte" +
-      "nt\022\017\n\007subject\030\001 \001(\t\022.\n\007content\030\002 \003(\0132\035.o" +
-      "pencannabis.content.Content\0220\n\nattachmen" +
-      "t\030\003 \003(\0132\034.opencannabis.media.MediaKey\"\306\002" +
-      "\n\014EmailMessage\0222\n\006sender\030\001 \001(\0132\".opencan" +
-      "nabis.contact.EmailAddress\0225\n\trecipient\030" +
-      "\002 \001(\0132\".opencannabis.contact.EmailAddres" +
-      "s\0224\n\007content\030\003 \001(\0132#.bloombox.schema.com" +
-      "ms.EmailContent\0224\n\010reply_to\030\004 \001(\0132\".open" +
-      "cannabis.contact.EmailAddress\022.\n\002cc\030\005 \003(" +
-      "\0132\".opencannabis.contact.EmailAddress\022/\n" +
-      "\003bcc\030\006 \003(\0132\".opencannabis.contact.EmailA" +
-      "ddress\"f\n\021PublisherMetadata\022\014\n\004name\030\001 \001(" +
-      "\t\022\013\n\003url\030\002 \001(\t\022\023\n\013google_plus\030\003 \001(\t\022\017\n\007t" +
-      "witter\030\004 \001(\t\022\020\n\010facebook\030\005 \001(\t\"\274\t\n\rEmail" +
-      "Metadata\032e\n\010GoToView\022\014\n\004name\030\001 \001(\t\022\016\n\006ta" +
-      "rget\030\003 \001(\t\022;\n\tpublisher\030\004 \001(\0132(.bloombox" +
-      ".schema.comms.PublisherMetadata\032\252\002\n\tGoTo" +
-      "Track\0223\n\020delivery_address\030\001 \001(\0132\031.openca" +
-      "nnabis.geo.Address\0227\n\017estimated_ready\030\002 " +
-      "\001(\0132\036.opencannabis.temporal.Instant\0229\n\021e" +
-      "stimated_arrival\030\003 \001(\0132\036.opencannabis.te" +
-      "mporal.Instant\0221\n\007partner\030\004 \001(\0132 .bloomb" +
-      "ox.schema.partner.Partner\022+\n\005order\030\005 \001(\013" +
-      "2\034.opencannabis.commerce.Order\022\024\n\014tracki" +
-      "ng_url\030\006 \001(\t\032\300\001\n\016OneClickAction\022L\n\004type\030" +
-      "\001 \001(\0162>.bloombox.schema.comms.EmailMetad" +
-      "ata.OneClickAction.ActionType\022\014\n\004name\030\002 " +
-      "\001(\t\022\016\n\006target\030\003 \001(\t\022\023\n\013description\030\004 \001(\t" +
-      "\"-\n\nActionType\022\013\n\007CONFIRM\020\000\022\010\n\004SAVE\020\001\022\010\n" +
-      "\004RSVP\020\002\032\273\001\n\rOrderMetadata\0221\n\007partner\030\001 \001" +
-      "(\0132 .bloombox.schema.partner.Partner\022+\n\005" +
-      "order\030\002 \001(\0132\034.opencannabis.commerce.Orde" +
-      "r\022\020\n\010currency\030\003 \001(\t\022\020\n\010subtotal\030\004 \001(\001\022\022\n" +
-      "\nstatus_url\030\005 \001(\t\022\022\n\nmobile_url\030\006 \001(\t\032\336\002" +
-      "\n\013SchemaBlock\0227\n\004type\030\001 \001(\0162).bloombox.s" +
-      "chema.comms.EmailMetadata.Type\022=\n\004view\030\n" +
-      " \001(\0132-.bloombox.schema.comms.EmailMetada" +
-      "ta.GoToViewH\000\022?\n\005track\030\017 \001(\0132..bloombox." +
-      "schema.comms.EmailMetadata.GoToTrackH\000\022H" +
-      "\n\tone_click\030\024 \001(\01323.bloombox.schema.comm" +
-      "s.EmailMetadata.OneClickActionH\000\022C\n\005orde" +
-      "r\030\036 \001(\01322.bloombox.schema.comms.EmailMet" +
-      "adata.OrderMetadataH\000B\007\n\005block\"5\n\004Type\022\010" +
-      "\n\004VIEW\020\000\022\t\n\005TRACK\020\001\022\r\n\tONE_CLICK\020\002\022\t\n\005OR" +
-      "DER\020\003\"I\n\021EmailTransmission\0224\n\007message\030\001 " +
-      "\001(\0132#.bloombox.schema.comms.EmailMessage" +
-      "\"B\n\nEmailBatch\0224\n\002op\030\001 \003(\0132(.bloombox.sc" +
-      "hema.comms.EmailTransmission\"\254\001\n\013EmailSe" +
-      "nder\0225\n\004role\030\001 \003(\0162\'.bloombox.schema.com" +
-      "ms.EmailSender.Role\0223\n\007contact\030\002 \001(\0132\".o" +
-      "pencannabis.contact.EmailAddress\"1\n\004Role" +
-      "\022\n\n\006SENDER\020\000\022\006\n\002CC\020\001\022\007\n\003BCC\020\002\022\014\n\010REPLY_T" +
-      "O\020\003\"\200\001\n\rEmailSettings\0222\n\006sender\030\001 \003(\0132\"." +
-      "bloombox.schema.comms.EmailSender\022\023\n\013ena" +
-      "ble_text\030\002 \001(\010\022\023\n\013enable_html\030\003 \001(\010\022\021\n\ta" +
-      "sm_group\030\004 \001(\rB0\n\030io.bloombox.schema.com" +
-      "msB\nEmailCommsH\001P\000\242\002\003BBSb\006proto3"
+      "\n\021comms/Email.proto\022\016bloombox.comms\032\021geo" +
+      "/Address.proto\032\024commerce/Order.proto\032\024co" +
+      "re/Datamodel.proto\032\024media/MediaKey.proto" +
+      "\032\025partner/Partner.proto\032\025content/Content" +
+      ".proto\032\026temporal/Instant.proto\032\032contact/" +
+      "EmailAddress.proto\"\201\001\n\014EmailContent\022\017\n\007s" +
+      "ubject\030\001 \001(\t\022.\n\007content\030\002 \003(\0132\035.opencann" +
+      "abis.content.Content\0220\n\nattachment\030\003 \003(\013" +
+      "2\034.opencannabis.media.MediaKey\"\277\002\n\014Email" +
+      "Message\0222\n\006sender\030\001 \001(\0132\".opencannabis.c" +
+      "ontact.EmailAddress\0225\n\trecipient\030\002 \001(\0132\"" +
+      ".opencannabis.contact.EmailAddress\022-\n\007co" +
+      "ntent\030\003 \001(\0132\034.bloombox.comms.EmailConten" +
+      "t\0224\n\010reply_to\030\004 \001(\0132\".opencannabis.conta" +
+      "ct.EmailAddress\022.\n\002cc\030\005 \003(\0132\".opencannab" +
+      "is.contact.EmailAddress\022/\n\003bcc\030\006 \003(\0132\".o" +
+      "pencannabis.contact.EmailAddress\"f\n\021Publ" +
+      "isherMetadata\022\014\n\004name\030\001 \001(\t\022\013\n\003url\030\002 \001(\t" +
+      "\022\023\n\013google_plus\030\003 \001(\t\022\017\n\007twitter\030\004 \001(\t\022\020" +
+      "\n\010facebook\030\005 \001(\t\"\375\010\n\rEmailMetadata\032^\n\010Go" +
+      "ToView\022\014\n\004name\030\001 \001(\t\022\016\n\006target\030\003 \001(\t\0224\n\t" +
+      "publisher\030\004 \001(\0132!.bloombox.comms.Publish" +
+      "erMetadata\032\243\002\n\tGoToTrack\0223\n\020delivery_add" +
+      "ress\030\001 \001(\0132\031.opencannabis.geo.Address\0227\n" +
+      "\017estimated_ready\030\002 \001(\0132\036.opencannabis.te" +
+      "mporal.Instant\0229\n\021estimated_arrival\030\003 \001(" +
+      "\0132\036.opencannabis.temporal.Instant\022*\n\007par" +
+      "tner\030\004 \001(\0132\031.bloombox.partner.Partner\022+\n" +
+      "\005order\030\005 \001(\0132\034.opencannabis.commerce.Ord" +
+      "er\022\024\n\014tracking_url\030\006 \001(\t\032\271\001\n\016OneClickAct" +
+      "ion\022E\n\004type\030\001 \001(\01627.bloombox.comms.Email" +
+      "Metadata.OneClickAction.ActionType\022\014\n\004na" +
+      "me\030\002 \001(\t\022\016\n\006target\030\003 \001(\t\022\023\n\013description\030" +
+      "\004 \001(\t\"-\n\nActionType\022\013\n\007CONFIRM\020\000\022\010\n\004SAVE" +
+      "\020\001\022\010\n\004RSVP\020\002\032\264\001\n\rOrderMetadata\022*\n\007partne" +
+      "r\030\001 \001(\0132\031.bloombox.partner.Partner\022+\n\005or" +
+      "der\030\002 \001(\0132\034.opencannabis.commerce.Order\022" +
+      "\020\n\010currency\030\003 \001(\t\022\020\n\010subtotal\030\004 \001(\001\022\022\n\ns" +
+      "tatus_url\030\005 \001(\t\022\022\n\nmobile_url\030\006 \001(\t\032\273\002\n\013" +
+      "SchemaBlock\0220\n\004type\030\001 \001(\0162\".bloombox.com" +
+      "ms.EmailMetadata.Type\0226\n\004view\030\n \001(\0132&.bl" +
+      "oombox.comms.EmailMetadata.GoToViewH\000\0228\n" +
+      "\005track\030\017 \001(\0132\'.bloombox.comms.EmailMetad" +
+      "ata.GoToTrackH\000\022A\n\tone_click\030\024 \001(\0132,.blo" +
+      "ombox.comms.EmailMetadata.OneClickAction" +
+      "H\000\022<\n\005order\030\036 \001(\0132+.bloombox.comms.Email" +
+      "Metadata.OrderMetadataH\000B\007\n\005block\"5\n\004Typ" +
+      "e\022\010\n\004VIEW\020\000\022\t\n\005TRACK\020\001\022\r\n\tONE_CLICK\020\002\022\t\n" +
+      "\005ORDER\020\003\"B\n\021EmailTransmission\022-\n\007message" +
+      "\030\001 \001(\0132\034.bloombox.comms.EmailMessage\";\n\n" +
+      "EmailBatch\022-\n\002op\030\001 \003(\0132!.bloombox.comms." +
+      "EmailTransmission\"\245\001\n\013EmailSender\022.\n\004rol" +
+      "e\030\001 \003(\0162 .bloombox.comms.EmailSender.Rol" +
+      "e\0223\n\007contact\030\002 \001(\0132\".opencannabis.contac" +
+      "t.EmailAddress\"1\n\004Role\022\n\n\006SENDER\020\000\022\006\n\002CC" +
+      "\020\001\022\007\n\003BCC\020\002\022\014\n\010REPLY_TO\020\003\"y\n\rEmailSettin" +
+      "gs\022+\n\006sender\030\001 \003(\0132\033.bloombox.comms.Emai" +
+      "lSender\022\023\n\013enable_text\030\002 \001(\010\022\023\n\013enable_h" +
+      "tml\030\003 \001(\010\022\021\n\tasm_group\030\004 \001(\rB0\n\030io.bloom" +
+      "box.schema.commsB\nEmailCommsH\001P\000\242\002\003BBSb\006" +
+      "proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -16934,83 +17263,83 @@ public final class EmailComms {
           io.opencannabis.schema.temporal.TemporalInstant.getDescriptor(),
           io.opencannabis.schema.contact.ContactEmail.getDescriptor(),
         }, assigner);
-    internal_static_bloombox_schema_comms_EmailContent_descriptor =
+    internal_static_bloombox_comms_EmailContent_descriptor =
       getDescriptor().getMessageTypes().get(0);
-    internal_static_bloombox_schema_comms_EmailContent_fieldAccessorTable = new
+    internal_static_bloombox_comms_EmailContent_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_bloombox_schema_comms_EmailContent_descriptor,
+        internal_static_bloombox_comms_EmailContent_descriptor,
         new java.lang.String[] { "Subject", "Content", "Attachment", });
-    internal_static_bloombox_schema_comms_EmailMessage_descriptor =
+    internal_static_bloombox_comms_EmailMessage_descriptor =
       getDescriptor().getMessageTypes().get(1);
-    internal_static_bloombox_schema_comms_EmailMessage_fieldAccessorTable = new
+    internal_static_bloombox_comms_EmailMessage_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_bloombox_schema_comms_EmailMessage_descriptor,
+        internal_static_bloombox_comms_EmailMessage_descriptor,
         new java.lang.String[] { "Sender", "Recipient", "Content", "ReplyTo", "Cc", "Bcc", });
-    internal_static_bloombox_schema_comms_PublisherMetadata_descriptor =
+    internal_static_bloombox_comms_PublisherMetadata_descriptor =
       getDescriptor().getMessageTypes().get(2);
-    internal_static_bloombox_schema_comms_PublisherMetadata_fieldAccessorTable = new
+    internal_static_bloombox_comms_PublisherMetadata_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_bloombox_schema_comms_PublisherMetadata_descriptor,
+        internal_static_bloombox_comms_PublisherMetadata_descriptor,
         new java.lang.String[] { "Name", "Url", "GooglePlus", "Twitter", "Facebook", });
-    internal_static_bloombox_schema_comms_EmailMetadata_descriptor =
+    internal_static_bloombox_comms_EmailMetadata_descriptor =
       getDescriptor().getMessageTypes().get(3);
-    internal_static_bloombox_schema_comms_EmailMetadata_fieldAccessorTable = new
+    internal_static_bloombox_comms_EmailMetadata_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_bloombox_schema_comms_EmailMetadata_descriptor,
+        internal_static_bloombox_comms_EmailMetadata_descriptor,
         new java.lang.String[] { });
-    internal_static_bloombox_schema_comms_EmailMetadata_GoToView_descriptor =
-      internal_static_bloombox_schema_comms_EmailMetadata_descriptor.getNestedTypes().get(0);
-    internal_static_bloombox_schema_comms_EmailMetadata_GoToView_fieldAccessorTable = new
+    internal_static_bloombox_comms_EmailMetadata_GoToView_descriptor =
+      internal_static_bloombox_comms_EmailMetadata_descriptor.getNestedTypes().get(0);
+    internal_static_bloombox_comms_EmailMetadata_GoToView_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_bloombox_schema_comms_EmailMetadata_GoToView_descriptor,
+        internal_static_bloombox_comms_EmailMetadata_GoToView_descriptor,
         new java.lang.String[] { "Name", "Target", "Publisher", });
-    internal_static_bloombox_schema_comms_EmailMetadata_GoToTrack_descriptor =
-      internal_static_bloombox_schema_comms_EmailMetadata_descriptor.getNestedTypes().get(1);
-    internal_static_bloombox_schema_comms_EmailMetadata_GoToTrack_fieldAccessorTable = new
+    internal_static_bloombox_comms_EmailMetadata_GoToTrack_descriptor =
+      internal_static_bloombox_comms_EmailMetadata_descriptor.getNestedTypes().get(1);
+    internal_static_bloombox_comms_EmailMetadata_GoToTrack_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_bloombox_schema_comms_EmailMetadata_GoToTrack_descriptor,
+        internal_static_bloombox_comms_EmailMetadata_GoToTrack_descriptor,
         new java.lang.String[] { "DeliveryAddress", "EstimatedReady", "EstimatedArrival", "Partner", "Order", "TrackingUrl", });
-    internal_static_bloombox_schema_comms_EmailMetadata_OneClickAction_descriptor =
-      internal_static_bloombox_schema_comms_EmailMetadata_descriptor.getNestedTypes().get(2);
-    internal_static_bloombox_schema_comms_EmailMetadata_OneClickAction_fieldAccessorTable = new
+    internal_static_bloombox_comms_EmailMetadata_OneClickAction_descriptor =
+      internal_static_bloombox_comms_EmailMetadata_descriptor.getNestedTypes().get(2);
+    internal_static_bloombox_comms_EmailMetadata_OneClickAction_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_bloombox_schema_comms_EmailMetadata_OneClickAction_descriptor,
+        internal_static_bloombox_comms_EmailMetadata_OneClickAction_descriptor,
         new java.lang.String[] { "Type", "Name", "Target", "Description", });
-    internal_static_bloombox_schema_comms_EmailMetadata_OrderMetadata_descriptor =
-      internal_static_bloombox_schema_comms_EmailMetadata_descriptor.getNestedTypes().get(3);
-    internal_static_bloombox_schema_comms_EmailMetadata_OrderMetadata_fieldAccessorTable = new
+    internal_static_bloombox_comms_EmailMetadata_OrderMetadata_descriptor =
+      internal_static_bloombox_comms_EmailMetadata_descriptor.getNestedTypes().get(3);
+    internal_static_bloombox_comms_EmailMetadata_OrderMetadata_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_bloombox_schema_comms_EmailMetadata_OrderMetadata_descriptor,
+        internal_static_bloombox_comms_EmailMetadata_OrderMetadata_descriptor,
         new java.lang.String[] { "Partner", "Order", "Currency", "Subtotal", "StatusUrl", "MobileUrl", });
-    internal_static_bloombox_schema_comms_EmailMetadata_SchemaBlock_descriptor =
-      internal_static_bloombox_schema_comms_EmailMetadata_descriptor.getNestedTypes().get(4);
-    internal_static_bloombox_schema_comms_EmailMetadata_SchemaBlock_fieldAccessorTable = new
+    internal_static_bloombox_comms_EmailMetadata_SchemaBlock_descriptor =
+      internal_static_bloombox_comms_EmailMetadata_descriptor.getNestedTypes().get(4);
+    internal_static_bloombox_comms_EmailMetadata_SchemaBlock_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_bloombox_schema_comms_EmailMetadata_SchemaBlock_descriptor,
+        internal_static_bloombox_comms_EmailMetadata_SchemaBlock_descriptor,
         new java.lang.String[] { "Type", "View", "Track", "OneClick", "Order", "Block", });
-    internal_static_bloombox_schema_comms_EmailTransmission_descriptor =
+    internal_static_bloombox_comms_EmailTransmission_descriptor =
       getDescriptor().getMessageTypes().get(4);
-    internal_static_bloombox_schema_comms_EmailTransmission_fieldAccessorTable = new
+    internal_static_bloombox_comms_EmailTransmission_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_bloombox_schema_comms_EmailTransmission_descriptor,
+        internal_static_bloombox_comms_EmailTransmission_descriptor,
         new java.lang.String[] { "Message", });
-    internal_static_bloombox_schema_comms_EmailBatch_descriptor =
+    internal_static_bloombox_comms_EmailBatch_descriptor =
       getDescriptor().getMessageTypes().get(5);
-    internal_static_bloombox_schema_comms_EmailBatch_fieldAccessorTable = new
+    internal_static_bloombox_comms_EmailBatch_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_bloombox_schema_comms_EmailBatch_descriptor,
+        internal_static_bloombox_comms_EmailBatch_descriptor,
         new java.lang.String[] { "Op", });
-    internal_static_bloombox_schema_comms_EmailSender_descriptor =
+    internal_static_bloombox_comms_EmailSender_descriptor =
       getDescriptor().getMessageTypes().get(6);
-    internal_static_bloombox_schema_comms_EmailSender_fieldAccessorTable = new
+    internal_static_bloombox_comms_EmailSender_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_bloombox_schema_comms_EmailSender_descriptor,
+        internal_static_bloombox_comms_EmailSender_descriptor,
         new java.lang.String[] { "Role", "Contact", });
-    internal_static_bloombox_schema_comms_EmailSettings_descriptor =
+    internal_static_bloombox_comms_EmailSettings_descriptor =
       getDescriptor().getMessageTypes().get(7);
-    internal_static_bloombox_schema_comms_EmailSettings_fieldAccessorTable = new
+    internal_static_bloombox_comms_EmailSettings_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_bloombox_schema_comms_EmailSettings_descriptor,
+        internal_static_bloombox_comms_EmailSettings_descriptor,
         new java.lang.String[] { "Sender", "EnableText", "EnableHtml", "AsmGroup", });
     io.opencannabis.schema.geo.AddressOuterClass.getDescriptor();
     io.opencannabis.schema.commerce.CommercialOrder.getDescriptor();

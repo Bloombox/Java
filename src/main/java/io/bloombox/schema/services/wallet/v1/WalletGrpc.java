@@ -1,8 +1,8 @@
 /*
- * Copyright 2018, Bloombox, LLC. All rights reserved.
+ * Copyright 2018, Momentum Ideas, Co. All rights reserved.
  *
  * Source and object computer code contained herein is the private intellectual
- * property of Bloombox, a California Limited Liability Corporation. Use of this
+ * property of Momentum Ideas Co., a Delaware Corporation. Use of this
  * code in source form requires permission in writing before use or the
  * assembly, distribution, or publishing of derivative works, for commercial
  * purposes or any other purpose, from a duly authorized officer of Momentum
@@ -17,20 +17,20 @@
 
 package io.bloombox.schema.services.wallet.v1;
 
-import static io.grpc.stub.ClientCalls.asyncUnaryCall;
-import static io.grpc.stub.ClientCalls.asyncServerStreamingCall;
-import static io.grpc.stub.ClientCalls.asyncClientStreamingCall;
-import static io.grpc.stub.ClientCalls.asyncBidiStreamingCall;
-import static io.grpc.stub.ClientCalls.blockingUnaryCall;
-import static io.grpc.stub.ClientCalls.blockingServerStreamingCall;
-import static io.grpc.stub.ClientCalls.futureUnaryCall;
 import static io.grpc.MethodDescriptor.generateFullMethodName;
-import static io.grpc.stub.ServerCalls.asyncUnaryCall;
-import static io.grpc.stub.ServerCalls.asyncServerStreamingCall;
-import static io.grpc.stub.ServerCalls.asyncClientStreamingCall;
+import static io.grpc.stub.ClientCalls.asyncBidiStreamingCall;
+import static io.grpc.stub.ClientCalls.asyncClientStreamingCall;
+import static io.grpc.stub.ClientCalls.asyncServerStreamingCall;
+import static io.grpc.stub.ClientCalls.asyncUnaryCall;
+import static io.grpc.stub.ClientCalls.blockingServerStreamingCall;
+import static io.grpc.stub.ClientCalls.blockingUnaryCall;
+import static io.grpc.stub.ClientCalls.futureUnaryCall;
 import static io.grpc.stub.ServerCalls.asyncBidiStreamingCall;
-import static io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall;
+import static io.grpc.stub.ServerCalls.asyncClientStreamingCall;
+import static io.grpc.stub.ServerCalls.asyncServerStreamingCall;
+import static io.grpc.stub.ServerCalls.asyncUnaryCall;
 import static io.grpc.stub.ServerCalls.asyncUnimplementedStreamingCall;
+import static io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall;
 
 /**
  * <pre>
@@ -39,99 +39,238 @@ import static io.grpc.stub.ServerCalls.asyncUnimplementedStreamingCall;
  * </pre>
  */
 @javax.annotation.Generated(
-    value = "by gRPC proto compiler (version 1.6.0-SNAPSHOT)",
+    value = "by gRPC proto compiler (version 1.18.0-SNAPSHOT)",
     comments = "Source: wallet/v1/WalletService_v1.proto")
 public final class WalletGrpc {
 
   private WalletGrpc() {}
 
-  public static final String SERVICE_NAME = "bloombox.schema.services.wallet.v1.Wallet";
+  public static final String SERVICE_NAME = "bloombox.services.wallet.v1.Wallet";
 
   // Static method descriptors that strictly reflect the proto.
-  @io.grpc.ExperimentalApi("https://github.com/grpc/grpc-java/issues/1901")
-  public static final io.grpc.MethodDescriptor<io.bloombox.schema.services.wallet.v1.CardProvision.Request,
-      io.bloombox.schema.services.wallet.v1.CardProvision.Response> METHOD_PROVISION_CARD =
-      io.grpc.MethodDescriptor.<io.bloombox.schema.services.wallet.v1.CardProvision.Request, io.bloombox.schema.services.wallet.v1.CardProvision.Response>newBuilder()
-          .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-          .setFullMethodName(generateFullMethodName(
-              "bloombox.schema.services.wallet.v1.Wallet", "ProvisionCard"))
-          .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-              io.bloombox.schema.services.wallet.v1.CardProvision.Request.getDefaultInstance()))
-          .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-              io.bloombox.schema.services.wallet.v1.CardProvision.Response.getDefaultInstance()))
-          .build();
-  @io.grpc.ExperimentalApi("https://github.com/grpc/grpc-java/issues/1901")
-  public static final io.grpc.MethodDescriptor<io.bloombox.schema.services.wallet.v1.CardIssuance.Request,
-      io.bloombox.schema.services.wallet.v1.CardIssuance.Response> METHOD_ISSUE_CARD =
-      io.grpc.MethodDescriptor.<io.bloombox.schema.services.wallet.v1.CardIssuance.Request, io.bloombox.schema.services.wallet.v1.CardIssuance.Response>newBuilder()
-          .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-          .setFullMethodName(generateFullMethodName(
-              "bloombox.schema.services.wallet.v1.Wallet", "IssueCard"))
-          .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-              io.bloombox.schema.services.wallet.v1.CardIssuance.Request.getDefaultInstance()))
-          .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-              io.bloombox.schema.services.wallet.v1.CardIssuance.Response.getDefaultInstance()))
-          .build();
-  @io.grpc.ExperimentalApi("https://github.com/grpc/grpc-java/issues/1901")
-  public static final io.grpc.MethodDescriptor<io.bloombox.schema.services.wallet.v1.CardList.Request,
-      io.bloombox.schema.services.wallet.v1.CardList.Response> METHOD_LIST_CARDS =
-      io.grpc.MethodDescriptor.<io.bloombox.schema.services.wallet.v1.CardList.Request, io.bloombox.schema.services.wallet.v1.CardList.Response>newBuilder()
-          .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-          .setFullMethodName(generateFullMethodName(
-              "bloombox.schema.services.wallet.v1.Wallet", "ListCards"))
-          .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-              io.bloombox.schema.services.wallet.v1.CardList.Request.getDefaultInstance()))
-          .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-              io.bloombox.schema.services.wallet.v1.CardList.Response.getDefaultInstance()))
-          .build();
-  @io.grpc.ExperimentalApi("https://github.com/grpc/grpc-java/issues/1901")
-  public static final io.grpc.MethodDescriptor<io.bloombox.schema.services.wallet.v1.CardActivate.Request,
-      com.google.protobuf.Empty> METHOD_ACTIVATE_CARD =
-      io.grpc.MethodDescriptor.<io.bloombox.schema.services.wallet.v1.CardActivate.Request, com.google.protobuf.Empty>newBuilder()
-          .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-          .setFullMethodName(generateFullMethodName(
-              "bloombox.schema.services.wallet.v1.Wallet", "ActivateCard"))
-          .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-              io.bloombox.schema.services.wallet.v1.CardActivate.Request.getDefaultInstance()))
-          .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-              com.google.protobuf.Empty.getDefaultInstance()))
-          .build();
-  @io.grpc.ExperimentalApi("https://github.com/grpc/grpc-java/issues/1901")
-  public static final io.grpc.MethodDescriptor<io.bloombox.schema.services.wallet.v1.CardRetrieve.Request,
-      io.bloombox.schema.services.wallet.v1.CardRetrieve.Response> METHOD_RETRIEVE_CARD =
-      io.grpc.MethodDescriptor.<io.bloombox.schema.services.wallet.v1.CardRetrieve.Request, io.bloombox.schema.services.wallet.v1.CardRetrieve.Response>newBuilder()
-          .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-          .setFullMethodName(generateFullMethodName(
-              "bloombox.schema.services.wallet.v1.Wallet", "RetrieveCard"))
-          .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-              io.bloombox.schema.services.wallet.v1.CardRetrieve.Request.getDefaultInstance()))
-          .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-              io.bloombox.schema.services.wallet.v1.CardRetrieve.Response.getDefaultInstance()))
-          .build();
-  @io.grpc.ExperimentalApi("https://github.com/grpc/grpc-java/issues/1901")
-  public static final io.grpc.MethodDescriptor<io.bloombox.schema.services.wallet.v1.CardEnroll.Request,
-      io.bloombox.schema.services.wallet.v1.CardEnroll.Response> METHOD_PERSONALIZE_CARD =
-      io.grpc.MethodDescriptor.<io.bloombox.schema.services.wallet.v1.CardEnroll.Request, io.bloombox.schema.services.wallet.v1.CardEnroll.Response>newBuilder()
-          .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-          .setFullMethodName(generateFullMethodName(
-              "bloombox.schema.services.wallet.v1.Wallet", "PersonalizeCard"))
-          .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-              io.bloombox.schema.services.wallet.v1.CardEnroll.Request.getDefaultInstance()))
-          .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-              io.bloombox.schema.services.wallet.v1.CardEnroll.Response.getDefaultInstance()))
-          .build();
-  @io.grpc.ExperimentalApi("https://github.com/grpc/grpc-java/issues/1901")
-  public static final io.grpc.MethodDescriptor<io.bloombox.schema.services.wallet.v1.CardVoid.Request,
-      com.google.protobuf.Empty> METHOD_DECOMMISSION_CARD =
-      io.grpc.MethodDescriptor.<io.bloombox.schema.services.wallet.v1.CardVoid.Request, com.google.protobuf.Empty>newBuilder()
-          .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-          .setFullMethodName(generateFullMethodName(
-              "bloombox.schema.services.wallet.v1.Wallet", "DecommissionCard"))
-          .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-              io.bloombox.schema.services.wallet.v1.CardVoid.Request.getDefaultInstance()))
-          .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-              com.google.protobuf.Empty.getDefaultInstance()))
-          .build();
+  private static volatile io.grpc.MethodDescriptor<io.bloombox.schema.services.wallet.v1.CardProvision.Request,
+      io.bloombox.schema.services.wallet.v1.CardProvision.Response> getProvisionCardMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "ProvisionCard",
+      requestType = io.bloombox.schema.services.wallet.v1.CardProvision.Request.class,
+      responseType = io.bloombox.schema.services.wallet.v1.CardProvision.Response.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<io.bloombox.schema.services.wallet.v1.CardProvision.Request,
+      io.bloombox.schema.services.wallet.v1.CardProvision.Response> getProvisionCardMethod() {
+    io.grpc.MethodDescriptor<io.bloombox.schema.services.wallet.v1.CardProvision.Request, io.bloombox.schema.services.wallet.v1.CardProvision.Response> getProvisionCardMethod;
+    if ((getProvisionCardMethod = WalletGrpc.getProvisionCardMethod) == null) {
+      synchronized (WalletGrpc.class) {
+        if ((getProvisionCardMethod = WalletGrpc.getProvisionCardMethod) == null) {
+          WalletGrpc.getProvisionCardMethod = getProvisionCardMethod = 
+              io.grpc.MethodDescriptor.<io.bloombox.schema.services.wallet.v1.CardProvision.Request, io.bloombox.schema.services.wallet.v1.CardProvision.Response>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(
+                  "bloombox.services.wallet.v1.Wallet", "ProvisionCard"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  io.bloombox.schema.services.wallet.v1.CardProvision.Request.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  io.bloombox.schema.services.wallet.v1.CardProvision.Response.getDefaultInstance()))
+                  .setSchemaDescriptor(new WalletMethodDescriptorSupplier("ProvisionCard"))
+                  .build();
+          }
+        }
+     }
+     return getProvisionCardMethod;
+  }
+
+  private static volatile io.grpc.MethodDescriptor<io.bloombox.schema.services.wallet.v1.CardIssuance.Request,
+      io.bloombox.schema.services.wallet.v1.CardIssuance.Response> getIssueCardMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "IssueCard",
+      requestType = io.bloombox.schema.services.wallet.v1.CardIssuance.Request.class,
+      responseType = io.bloombox.schema.services.wallet.v1.CardIssuance.Response.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<io.bloombox.schema.services.wallet.v1.CardIssuance.Request,
+      io.bloombox.schema.services.wallet.v1.CardIssuance.Response> getIssueCardMethod() {
+    io.grpc.MethodDescriptor<io.bloombox.schema.services.wallet.v1.CardIssuance.Request, io.bloombox.schema.services.wallet.v1.CardIssuance.Response> getIssueCardMethod;
+    if ((getIssueCardMethod = WalletGrpc.getIssueCardMethod) == null) {
+      synchronized (WalletGrpc.class) {
+        if ((getIssueCardMethod = WalletGrpc.getIssueCardMethod) == null) {
+          WalletGrpc.getIssueCardMethod = getIssueCardMethod = 
+              io.grpc.MethodDescriptor.<io.bloombox.schema.services.wallet.v1.CardIssuance.Request, io.bloombox.schema.services.wallet.v1.CardIssuance.Response>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(
+                  "bloombox.services.wallet.v1.Wallet", "IssueCard"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  io.bloombox.schema.services.wallet.v1.CardIssuance.Request.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  io.bloombox.schema.services.wallet.v1.CardIssuance.Response.getDefaultInstance()))
+                  .setSchemaDescriptor(new WalletMethodDescriptorSupplier("IssueCard"))
+                  .build();
+          }
+        }
+     }
+     return getIssueCardMethod;
+  }
+
+  private static volatile io.grpc.MethodDescriptor<io.bloombox.schema.services.wallet.v1.CardList.Request,
+      io.bloombox.schema.services.wallet.v1.CardList.Response> getListCardsMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "ListCards",
+      requestType = io.bloombox.schema.services.wallet.v1.CardList.Request.class,
+      responseType = io.bloombox.schema.services.wallet.v1.CardList.Response.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<io.bloombox.schema.services.wallet.v1.CardList.Request,
+      io.bloombox.schema.services.wallet.v1.CardList.Response> getListCardsMethod() {
+    io.grpc.MethodDescriptor<io.bloombox.schema.services.wallet.v1.CardList.Request, io.bloombox.schema.services.wallet.v1.CardList.Response> getListCardsMethod;
+    if ((getListCardsMethod = WalletGrpc.getListCardsMethod) == null) {
+      synchronized (WalletGrpc.class) {
+        if ((getListCardsMethod = WalletGrpc.getListCardsMethod) == null) {
+          WalletGrpc.getListCardsMethod = getListCardsMethod = 
+              io.grpc.MethodDescriptor.<io.bloombox.schema.services.wallet.v1.CardList.Request, io.bloombox.schema.services.wallet.v1.CardList.Response>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(
+                  "bloombox.services.wallet.v1.Wallet", "ListCards"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  io.bloombox.schema.services.wallet.v1.CardList.Request.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  io.bloombox.schema.services.wallet.v1.CardList.Response.getDefaultInstance()))
+                  .setSchemaDescriptor(new WalletMethodDescriptorSupplier("ListCards"))
+                  .build();
+          }
+        }
+     }
+     return getListCardsMethod;
+  }
+
+  private static volatile io.grpc.MethodDescriptor<io.bloombox.schema.services.wallet.v1.CardActivate.Request,
+      com.google.protobuf.Empty> getActivateCardMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "ActivateCard",
+      requestType = io.bloombox.schema.services.wallet.v1.CardActivate.Request.class,
+      responseType = com.google.protobuf.Empty.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<io.bloombox.schema.services.wallet.v1.CardActivate.Request,
+      com.google.protobuf.Empty> getActivateCardMethod() {
+    io.grpc.MethodDescriptor<io.bloombox.schema.services.wallet.v1.CardActivate.Request, com.google.protobuf.Empty> getActivateCardMethod;
+    if ((getActivateCardMethod = WalletGrpc.getActivateCardMethod) == null) {
+      synchronized (WalletGrpc.class) {
+        if ((getActivateCardMethod = WalletGrpc.getActivateCardMethod) == null) {
+          WalletGrpc.getActivateCardMethod = getActivateCardMethod = 
+              io.grpc.MethodDescriptor.<io.bloombox.schema.services.wallet.v1.CardActivate.Request, com.google.protobuf.Empty>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(
+                  "bloombox.services.wallet.v1.Wallet", "ActivateCard"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  io.bloombox.schema.services.wallet.v1.CardActivate.Request.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.google.protobuf.Empty.getDefaultInstance()))
+                  .setSchemaDescriptor(new WalletMethodDescriptorSupplier("ActivateCard"))
+                  .build();
+          }
+        }
+     }
+     return getActivateCardMethod;
+  }
+
+  private static volatile io.grpc.MethodDescriptor<io.bloombox.schema.services.wallet.v1.CardRetrieve.Request,
+      io.bloombox.schema.services.wallet.v1.CardRetrieve.Response> getRetrieveCardMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "RetrieveCard",
+      requestType = io.bloombox.schema.services.wallet.v1.CardRetrieve.Request.class,
+      responseType = io.bloombox.schema.services.wallet.v1.CardRetrieve.Response.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<io.bloombox.schema.services.wallet.v1.CardRetrieve.Request,
+      io.bloombox.schema.services.wallet.v1.CardRetrieve.Response> getRetrieveCardMethod() {
+    io.grpc.MethodDescriptor<io.bloombox.schema.services.wallet.v1.CardRetrieve.Request, io.bloombox.schema.services.wallet.v1.CardRetrieve.Response> getRetrieveCardMethod;
+    if ((getRetrieveCardMethod = WalletGrpc.getRetrieveCardMethod) == null) {
+      synchronized (WalletGrpc.class) {
+        if ((getRetrieveCardMethod = WalletGrpc.getRetrieveCardMethod) == null) {
+          WalletGrpc.getRetrieveCardMethod = getRetrieveCardMethod = 
+              io.grpc.MethodDescriptor.<io.bloombox.schema.services.wallet.v1.CardRetrieve.Request, io.bloombox.schema.services.wallet.v1.CardRetrieve.Response>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(
+                  "bloombox.services.wallet.v1.Wallet", "RetrieveCard"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  io.bloombox.schema.services.wallet.v1.CardRetrieve.Request.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  io.bloombox.schema.services.wallet.v1.CardRetrieve.Response.getDefaultInstance()))
+                  .setSchemaDescriptor(new WalletMethodDescriptorSupplier("RetrieveCard"))
+                  .build();
+          }
+        }
+     }
+     return getRetrieveCardMethod;
+  }
+
+  private static volatile io.grpc.MethodDescriptor<io.bloombox.schema.services.wallet.v1.CardEnroll.Request,
+      io.bloombox.schema.services.wallet.v1.CardEnroll.Response> getPersonalizeCardMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "PersonalizeCard",
+      requestType = io.bloombox.schema.services.wallet.v1.CardEnroll.Request.class,
+      responseType = io.bloombox.schema.services.wallet.v1.CardEnroll.Response.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<io.bloombox.schema.services.wallet.v1.CardEnroll.Request,
+      io.bloombox.schema.services.wallet.v1.CardEnroll.Response> getPersonalizeCardMethod() {
+    io.grpc.MethodDescriptor<io.bloombox.schema.services.wallet.v1.CardEnroll.Request, io.bloombox.schema.services.wallet.v1.CardEnroll.Response> getPersonalizeCardMethod;
+    if ((getPersonalizeCardMethod = WalletGrpc.getPersonalizeCardMethod) == null) {
+      synchronized (WalletGrpc.class) {
+        if ((getPersonalizeCardMethod = WalletGrpc.getPersonalizeCardMethod) == null) {
+          WalletGrpc.getPersonalizeCardMethod = getPersonalizeCardMethod = 
+              io.grpc.MethodDescriptor.<io.bloombox.schema.services.wallet.v1.CardEnroll.Request, io.bloombox.schema.services.wallet.v1.CardEnroll.Response>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(
+                  "bloombox.services.wallet.v1.Wallet", "PersonalizeCard"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  io.bloombox.schema.services.wallet.v1.CardEnroll.Request.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  io.bloombox.schema.services.wallet.v1.CardEnroll.Response.getDefaultInstance()))
+                  .setSchemaDescriptor(new WalletMethodDescriptorSupplier("PersonalizeCard"))
+                  .build();
+          }
+        }
+     }
+     return getPersonalizeCardMethod;
+  }
+
+  private static volatile io.grpc.MethodDescriptor<io.bloombox.schema.services.wallet.v1.CardVoid.Request,
+      com.google.protobuf.Empty> getDecommissionCardMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "DecommissionCard",
+      requestType = io.bloombox.schema.services.wallet.v1.CardVoid.Request.class,
+      responseType = com.google.protobuf.Empty.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<io.bloombox.schema.services.wallet.v1.CardVoid.Request,
+      com.google.protobuf.Empty> getDecommissionCardMethod() {
+    io.grpc.MethodDescriptor<io.bloombox.schema.services.wallet.v1.CardVoid.Request, com.google.protobuf.Empty> getDecommissionCardMethod;
+    if ((getDecommissionCardMethod = WalletGrpc.getDecommissionCardMethod) == null) {
+      synchronized (WalletGrpc.class) {
+        if ((getDecommissionCardMethod = WalletGrpc.getDecommissionCardMethod) == null) {
+          WalletGrpc.getDecommissionCardMethod = getDecommissionCardMethod = 
+              io.grpc.MethodDescriptor.<io.bloombox.schema.services.wallet.v1.CardVoid.Request, com.google.protobuf.Empty>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(
+                  "bloombox.services.wallet.v1.Wallet", "DecommissionCard"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  io.bloombox.schema.services.wallet.v1.CardVoid.Request.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.google.protobuf.Empty.getDefaultInstance()))
+                  .setSchemaDescriptor(new WalletMethodDescriptorSupplier("DecommissionCard"))
+                  .build();
+          }
+        }
+     }
+     return getDecommissionCardMethod;
+  }
 
   /**
    * Creates a new async stub that supports all call types for the service
@@ -171,7 +310,7 @@ public final class WalletGrpc {
      */
     public void provisionCard(io.bloombox.schema.services.wallet.v1.CardProvision.Request request,
         io.grpc.stub.StreamObserver<io.bloombox.schema.services.wallet.v1.CardProvision.Response> responseObserver) {
-      asyncUnimplementedUnaryCall(METHOD_PROVISION_CARD, responseObserver);
+      asyncUnimplementedUnaryCall(getProvisionCardMethod(), responseObserver);
     }
 
     /**
@@ -181,7 +320,7 @@ public final class WalletGrpc {
      */
     public void issueCard(io.bloombox.schema.services.wallet.v1.CardIssuance.Request request,
         io.grpc.stub.StreamObserver<io.bloombox.schema.services.wallet.v1.CardIssuance.Response> responseObserver) {
-      asyncUnimplementedUnaryCall(METHOD_ISSUE_CARD, responseObserver);
+      asyncUnimplementedUnaryCall(getIssueCardMethod(), responseObserver);
     }
 
     /**
@@ -191,7 +330,7 @@ public final class WalletGrpc {
      */
     public void listCards(io.bloombox.schema.services.wallet.v1.CardList.Request request,
         io.grpc.stub.StreamObserver<io.bloombox.schema.services.wallet.v1.CardList.Response> responseObserver) {
-      asyncUnimplementedUnaryCall(METHOD_LIST_CARDS, responseObserver);
+      asyncUnimplementedUnaryCall(getListCardsMethod(), responseObserver);
     }
 
     /**
@@ -201,7 +340,7 @@ public final class WalletGrpc {
      */
     public void activateCard(io.bloombox.schema.services.wallet.v1.CardActivate.Request request,
         io.grpc.stub.StreamObserver<com.google.protobuf.Empty> responseObserver) {
-      asyncUnimplementedUnaryCall(METHOD_ACTIVATE_CARD, responseObserver);
+      asyncUnimplementedUnaryCall(getActivateCardMethod(), responseObserver);
     }
 
     /**
@@ -211,7 +350,7 @@ public final class WalletGrpc {
      */
     public void retrieveCard(io.bloombox.schema.services.wallet.v1.CardRetrieve.Request request,
         io.grpc.stub.StreamObserver<io.bloombox.schema.services.wallet.v1.CardRetrieve.Response> responseObserver) {
-      asyncUnimplementedUnaryCall(METHOD_RETRIEVE_CARD, responseObserver);
+      asyncUnimplementedUnaryCall(getRetrieveCardMethod(), responseObserver);
     }
 
     /**
@@ -221,7 +360,7 @@ public final class WalletGrpc {
      */
     public void personalizeCard(io.bloombox.schema.services.wallet.v1.CardEnroll.Request request,
         io.grpc.stub.StreamObserver<io.bloombox.schema.services.wallet.v1.CardEnroll.Response> responseObserver) {
-      asyncUnimplementedUnaryCall(METHOD_PERSONALIZE_CARD, responseObserver);
+      asyncUnimplementedUnaryCall(getPersonalizeCardMethod(), responseObserver);
     }
 
     /**
@@ -231,55 +370,55 @@ public final class WalletGrpc {
      */
     public void decommissionCard(io.bloombox.schema.services.wallet.v1.CardVoid.Request request,
         io.grpc.stub.StreamObserver<com.google.protobuf.Empty> responseObserver) {
-      asyncUnimplementedUnaryCall(METHOD_DECOMMISSION_CARD, responseObserver);
+      asyncUnimplementedUnaryCall(getDecommissionCardMethod(), responseObserver);
     }
 
     @java.lang.Override public final io.grpc.ServerServiceDefinition bindService() {
       return io.grpc.ServerServiceDefinition.builder(getServiceDescriptor())
           .addMethod(
-            METHOD_PROVISION_CARD,
+            getProvisionCardMethod(),
             asyncUnaryCall(
               new MethodHandlers<
                 io.bloombox.schema.services.wallet.v1.CardProvision.Request,
                 io.bloombox.schema.services.wallet.v1.CardProvision.Response>(
                   this, METHODID_PROVISION_CARD)))
           .addMethod(
-            METHOD_ISSUE_CARD,
+            getIssueCardMethod(),
             asyncUnaryCall(
               new MethodHandlers<
                 io.bloombox.schema.services.wallet.v1.CardIssuance.Request,
                 io.bloombox.schema.services.wallet.v1.CardIssuance.Response>(
                   this, METHODID_ISSUE_CARD)))
           .addMethod(
-            METHOD_LIST_CARDS,
+            getListCardsMethod(),
             asyncUnaryCall(
               new MethodHandlers<
                 io.bloombox.schema.services.wallet.v1.CardList.Request,
                 io.bloombox.schema.services.wallet.v1.CardList.Response>(
                   this, METHODID_LIST_CARDS)))
           .addMethod(
-            METHOD_ACTIVATE_CARD,
+            getActivateCardMethod(),
             asyncUnaryCall(
               new MethodHandlers<
                 io.bloombox.schema.services.wallet.v1.CardActivate.Request,
                 com.google.protobuf.Empty>(
                   this, METHODID_ACTIVATE_CARD)))
           .addMethod(
-            METHOD_RETRIEVE_CARD,
+            getRetrieveCardMethod(),
             asyncUnaryCall(
               new MethodHandlers<
                 io.bloombox.schema.services.wallet.v1.CardRetrieve.Request,
                 io.bloombox.schema.services.wallet.v1.CardRetrieve.Response>(
                   this, METHODID_RETRIEVE_CARD)))
           .addMethod(
-            METHOD_PERSONALIZE_CARD,
+            getPersonalizeCardMethod(),
             asyncUnaryCall(
               new MethodHandlers<
                 io.bloombox.schema.services.wallet.v1.CardEnroll.Request,
                 io.bloombox.schema.services.wallet.v1.CardEnroll.Response>(
                   this, METHODID_PERSONALIZE_CARD)))
           .addMethod(
-            METHOD_DECOMMISSION_CARD,
+            getDecommissionCardMethod(),
             asyncUnaryCall(
               new MethodHandlers<
                 io.bloombox.schema.services.wallet.v1.CardVoid.Request,
@@ -319,7 +458,7 @@ public final class WalletGrpc {
     public void provisionCard(io.bloombox.schema.services.wallet.v1.CardProvision.Request request,
         io.grpc.stub.StreamObserver<io.bloombox.schema.services.wallet.v1.CardProvision.Response> responseObserver) {
       asyncUnaryCall(
-          getChannel().newCall(METHOD_PROVISION_CARD, getCallOptions()), request, responseObserver);
+          getChannel().newCall(getProvisionCardMethod(), getCallOptions()), request, responseObserver);
     }
 
     /**
@@ -330,7 +469,7 @@ public final class WalletGrpc {
     public void issueCard(io.bloombox.schema.services.wallet.v1.CardIssuance.Request request,
         io.grpc.stub.StreamObserver<io.bloombox.schema.services.wallet.v1.CardIssuance.Response> responseObserver) {
       asyncUnaryCall(
-          getChannel().newCall(METHOD_ISSUE_CARD, getCallOptions()), request, responseObserver);
+          getChannel().newCall(getIssueCardMethod(), getCallOptions()), request, responseObserver);
     }
 
     /**
@@ -341,7 +480,7 @@ public final class WalletGrpc {
     public void listCards(io.bloombox.schema.services.wallet.v1.CardList.Request request,
         io.grpc.stub.StreamObserver<io.bloombox.schema.services.wallet.v1.CardList.Response> responseObserver) {
       asyncUnaryCall(
-          getChannel().newCall(METHOD_LIST_CARDS, getCallOptions()), request, responseObserver);
+          getChannel().newCall(getListCardsMethod(), getCallOptions()), request, responseObserver);
     }
 
     /**
@@ -352,7 +491,7 @@ public final class WalletGrpc {
     public void activateCard(io.bloombox.schema.services.wallet.v1.CardActivate.Request request,
         io.grpc.stub.StreamObserver<com.google.protobuf.Empty> responseObserver) {
       asyncUnaryCall(
-          getChannel().newCall(METHOD_ACTIVATE_CARD, getCallOptions()), request, responseObserver);
+          getChannel().newCall(getActivateCardMethod(), getCallOptions()), request, responseObserver);
     }
 
     /**
@@ -363,7 +502,7 @@ public final class WalletGrpc {
     public void retrieveCard(io.bloombox.schema.services.wallet.v1.CardRetrieve.Request request,
         io.grpc.stub.StreamObserver<io.bloombox.schema.services.wallet.v1.CardRetrieve.Response> responseObserver) {
       asyncUnaryCall(
-          getChannel().newCall(METHOD_RETRIEVE_CARD, getCallOptions()), request, responseObserver);
+          getChannel().newCall(getRetrieveCardMethod(), getCallOptions()), request, responseObserver);
     }
 
     /**
@@ -374,7 +513,7 @@ public final class WalletGrpc {
     public void personalizeCard(io.bloombox.schema.services.wallet.v1.CardEnroll.Request request,
         io.grpc.stub.StreamObserver<io.bloombox.schema.services.wallet.v1.CardEnroll.Response> responseObserver) {
       asyncUnaryCall(
-          getChannel().newCall(METHOD_PERSONALIZE_CARD, getCallOptions()), request, responseObserver);
+          getChannel().newCall(getPersonalizeCardMethod(), getCallOptions()), request, responseObserver);
     }
 
     /**
@@ -385,7 +524,7 @@ public final class WalletGrpc {
     public void decommissionCard(io.bloombox.schema.services.wallet.v1.CardVoid.Request request,
         io.grpc.stub.StreamObserver<com.google.protobuf.Empty> responseObserver) {
       asyncUnaryCall(
-          getChannel().newCall(METHOD_DECOMMISSION_CARD, getCallOptions()), request, responseObserver);
+          getChannel().newCall(getDecommissionCardMethod(), getCallOptions()), request, responseObserver);
     }
   }
 
@@ -418,7 +557,7 @@ public final class WalletGrpc {
      */
     public io.bloombox.schema.services.wallet.v1.CardProvision.Response provisionCard(io.bloombox.schema.services.wallet.v1.CardProvision.Request request) {
       return blockingUnaryCall(
-          getChannel(), METHOD_PROVISION_CARD, getCallOptions(), request);
+          getChannel(), getProvisionCardMethod(), getCallOptions(), request);
     }
 
     /**
@@ -428,7 +567,7 @@ public final class WalletGrpc {
      */
     public io.bloombox.schema.services.wallet.v1.CardIssuance.Response issueCard(io.bloombox.schema.services.wallet.v1.CardIssuance.Request request) {
       return blockingUnaryCall(
-          getChannel(), METHOD_ISSUE_CARD, getCallOptions(), request);
+          getChannel(), getIssueCardMethod(), getCallOptions(), request);
     }
 
     /**
@@ -438,7 +577,7 @@ public final class WalletGrpc {
      */
     public io.bloombox.schema.services.wallet.v1.CardList.Response listCards(io.bloombox.schema.services.wallet.v1.CardList.Request request) {
       return blockingUnaryCall(
-          getChannel(), METHOD_LIST_CARDS, getCallOptions(), request);
+          getChannel(), getListCardsMethod(), getCallOptions(), request);
     }
 
     /**
@@ -448,7 +587,7 @@ public final class WalletGrpc {
      */
     public com.google.protobuf.Empty activateCard(io.bloombox.schema.services.wallet.v1.CardActivate.Request request) {
       return blockingUnaryCall(
-          getChannel(), METHOD_ACTIVATE_CARD, getCallOptions(), request);
+          getChannel(), getActivateCardMethod(), getCallOptions(), request);
     }
 
     /**
@@ -458,7 +597,7 @@ public final class WalletGrpc {
      */
     public io.bloombox.schema.services.wallet.v1.CardRetrieve.Response retrieveCard(io.bloombox.schema.services.wallet.v1.CardRetrieve.Request request) {
       return blockingUnaryCall(
-          getChannel(), METHOD_RETRIEVE_CARD, getCallOptions(), request);
+          getChannel(), getRetrieveCardMethod(), getCallOptions(), request);
     }
 
     /**
@@ -468,7 +607,7 @@ public final class WalletGrpc {
      */
     public io.bloombox.schema.services.wallet.v1.CardEnroll.Response personalizeCard(io.bloombox.schema.services.wallet.v1.CardEnroll.Request request) {
       return blockingUnaryCall(
-          getChannel(), METHOD_PERSONALIZE_CARD, getCallOptions(), request);
+          getChannel(), getPersonalizeCardMethod(), getCallOptions(), request);
     }
 
     /**
@@ -478,7 +617,7 @@ public final class WalletGrpc {
      */
     public com.google.protobuf.Empty decommissionCard(io.bloombox.schema.services.wallet.v1.CardVoid.Request request) {
       return blockingUnaryCall(
-          getChannel(), METHOD_DECOMMISSION_CARD, getCallOptions(), request);
+          getChannel(), getDecommissionCardMethod(), getCallOptions(), request);
     }
   }
 
@@ -512,7 +651,7 @@ public final class WalletGrpc {
     public com.google.common.util.concurrent.ListenableFuture<io.bloombox.schema.services.wallet.v1.CardProvision.Response> provisionCard(
         io.bloombox.schema.services.wallet.v1.CardProvision.Request request) {
       return futureUnaryCall(
-          getChannel().newCall(METHOD_PROVISION_CARD, getCallOptions()), request);
+          getChannel().newCall(getProvisionCardMethod(), getCallOptions()), request);
     }
 
     /**
@@ -523,7 +662,7 @@ public final class WalletGrpc {
     public com.google.common.util.concurrent.ListenableFuture<io.bloombox.schema.services.wallet.v1.CardIssuance.Response> issueCard(
         io.bloombox.schema.services.wallet.v1.CardIssuance.Request request) {
       return futureUnaryCall(
-          getChannel().newCall(METHOD_ISSUE_CARD, getCallOptions()), request);
+          getChannel().newCall(getIssueCardMethod(), getCallOptions()), request);
     }
 
     /**
@@ -534,7 +673,7 @@ public final class WalletGrpc {
     public com.google.common.util.concurrent.ListenableFuture<io.bloombox.schema.services.wallet.v1.CardList.Response> listCards(
         io.bloombox.schema.services.wallet.v1.CardList.Request request) {
       return futureUnaryCall(
-          getChannel().newCall(METHOD_LIST_CARDS, getCallOptions()), request);
+          getChannel().newCall(getListCardsMethod(), getCallOptions()), request);
     }
 
     /**
@@ -545,7 +684,7 @@ public final class WalletGrpc {
     public com.google.common.util.concurrent.ListenableFuture<com.google.protobuf.Empty> activateCard(
         io.bloombox.schema.services.wallet.v1.CardActivate.Request request) {
       return futureUnaryCall(
-          getChannel().newCall(METHOD_ACTIVATE_CARD, getCallOptions()), request);
+          getChannel().newCall(getActivateCardMethod(), getCallOptions()), request);
     }
 
     /**
@@ -556,7 +695,7 @@ public final class WalletGrpc {
     public com.google.common.util.concurrent.ListenableFuture<io.bloombox.schema.services.wallet.v1.CardRetrieve.Response> retrieveCard(
         io.bloombox.schema.services.wallet.v1.CardRetrieve.Request request) {
       return futureUnaryCall(
-          getChannel().newCall(METHOD_RETRIEVE_CARD, getCallOptions()), request);
+          getChannel().newCall(getRetrieveCardMethod(), getCallOptions()), request);
     }
 
     /**
@@ -567,7 +706,7 @@ public final class WalletGrpc {
     public com.google.common.util.concurrent.ListenableFuture<io.bloombox.schema.services.wallet.v1.CardEnroll.Response> personalizeCard(
         io.bloombox.schema.services.wallet.v1.CardEnroll.Request request) {
       return futureUnaryCall(
-          getChannel().newCall(METHOD_PERSONALIZE_CARD, getCallOptions()), request);
+          getChannel().newCall(getPersonalizeCardMethod(), getCallOptions()), request);
     }
 
     /**
@@ -578,7 +717,7 @@ public final class WalletGrpc {
     public com.google.common.util.concurrent.ListenableFuture<com.google.protobuf.Empty> decommissionCard(
         io.bloombox.schema.services.wallet.v1.CardVoid.Request request) {
       return futureUnaryCall(
-          getChannel().newCall(METHOD_DECOMMISSION_CARD, getCallOptions()), request);
+          getChannel().newCall(getDecommissionCardMethod(), getCallOptions()), request);
     }
   }
 
@@ -651,10 +790,38 @@ public final class WalletGrpc {
     }
   }
 
-  private static final class WalletDescriptorSupplier implements io.grpc.protobuf.ProtoFileDescriptorSupplier {
+  private static abstract class WalletBaseDescriptorSupplier
+      implements io.grpc.protobuf.ProtoFileDescriptorSupplier, io.grpc.protobuf.ProtoServiceDescriptorSupplier {
+    WalletBaseDescriptorSupplier() {}
+
     @java.lang.Override
     public com.google.protobuf.Descriptors.FileDescriptor getFileDescriptor() {
       return io.bloombox.schema.services.wallet.v1.WalletServiceV1.getDescriptor();
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Descriptors.ServiceDescriptor getServiceDescriptor() {
+      return getFileDescriptor().findServiceByName("Wallet");
+    }
+  }
+
+  private static final class WalletFileDescriptorSupplier
+      extends WalletBaseDescriptorSupplier {
+    WalletFileDescriptorSupplier() {}
+  }
+
+  private static final class WalletMethodDescriptorSupplier
+      extends WalletBaseDescriptorSupplier
+      implements io.grpc.protobuf.ProtoMethodDescriptorSupplier {
+    private final String methodName;
+
+    WalletMethodDescriptorSupplier(String methodName) {
+      this.methodName = methodName;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Descriptors.MethodDescriptor getMethodDescriptor() {
+      return getServiceDescriptor().findMethodByName(methodName);
     }
   }
 
@@ -667,14 +834,14 @@ public final class WalletGrpc {
         result = serviceDescriptor;
         if (result == null) {
           serviceDescriptor = result = io.grpc.ServiceDescriptor.newBuilder(SERVICE_NAME)
-              .setSchemaDescriptor(new WalletDescriptorSupplier())
-              .addMethod(METHOD_PROVISION_CARD)
-              .addMethod(METHOD_ISSUE_CARD)
-              .addMethod(METHOD_LIST_CARDS)
-              .addMethod(METHOD_ACTIVATE_CARD)
-              .addMethod(METHOD_RETRIEVE_CARD)
-              .addMethod(METHOD_PERSONALIZE_CARD)
-              .addMethod(METHOD_DECOMMISSION_CARD)
+              .setSchemaDescriptor(new WalletFileDescriptorSupplier())
+              .addMethod(getProvisionCardMethod())
+              .addMethod(getIssueCardMethod())
+              .addMethod(getListCardsMethod())
+              .addMethod(getActivateCardMethod())
+              .addMethod(getRetrieveCardMethod())
+              .addMethod(getPersonalizeCardMethod())
+              .addMethod(getDecommissionCardMethod())
               .build();
         }
       }

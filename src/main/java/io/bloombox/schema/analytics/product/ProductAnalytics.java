@@ -1,8 +1,8 @@
 /*
- * Copyright 2018, Bloombox, LLC. All rights reserved.
+ * Copyright 2018, Momentum Ideas, Co. All rights reserved.
  *
  * Source and object computer code contained herein is the private intellectual
- * property of Bloombox, a California Limited Liability Corporation. Use of this
+ * property of Momentum Ideas Co., a Delaware Corporation. Use of this
  * code in source form requires permission in writing before use or the
  * assembly, distribution, or publishing of derivative works, for commercial
  * purposes or any other purpose, from a duly authorized officer of Momentum
@@ -36,7 +36,7 @@ public final class ProductAnalytics {
    * Specifies the types of actions that a user may take on a product.
    * </pre>
    *
-   * Protobuf enum {@code bloombox.schema.analytics.product.ProductAction}
+   * Protobuf enum {@code bloombox.analytics.product.ProductAction}
    */
   public enum ProductAction
       implements com.google.protobuf.ProtocolMessageEnum {
@@ -282,11 +282,11 @@ public final class ProductAnalytics {
       this.value = value;
     }
 
-    // @@protoc_insertion_point(enum_scope:bloombox.schema.analytics.product.ProductAction)
+    // @@protoc_insertion_point(enum_scope:bloombox.analytics.product.ProductAction)
   }
 
   public interface ImpressionOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:bloombox.schema.analytics.product.Impression)
+      // @@protoc_insertion_point(interface_extends:bloombox.analytics.product.Impression)
       com.google.protobuf.MessageOrBuilder {
 
     /**
@@ -363,11 +363,11 @@ public final class ProductAnalytics {
    * for detail information to an end user.
    * </pre>
    *
-   * Protobuf type {@code bloombox.schema.analytics.product.Impression}
+   * Protobuf type {@code bloombox.analytics.product.Impression}
    */
   public  static final class Impression extends
       com.google.protobuf.GeneratedMessageV3 implements
-      // @@protoc_insertion_point(message_implements:bloombox.schema.analytics.product.Impression)
+      // @@protoc_insertion_point(message_implements:bloombox.analytics.product.Impression)
       ImpressionOrBuilder {
   private static final long serialVersionUID = 0L;
     // Use Impression.newBuilder() to construct.
@@ -403,13 +403,6 @@ public final class ProductAnalytics {
             case 0:
               done = true;
               break;
-            default: {
-              if (!parseUnknownFieldProto3(
-                  input, unknownFields, extensionRegistry, tag)) {
-                done = true;
-              }
-              break;
-            }
             case 10: {
               io.opencannabis.schema.base.BaseProductKey.ProductKey.Builder subBuilder = null;
               if (key_ != null) {
@@ -446,6 +439,13 @@ public final class ProductAnalytics {
 
               break;
             }
+            default: {
+              if (!parseUnknownFieldProto3(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
           }
         }
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
@@ -460,12 +460,13 @@ public final class ProductAnalytics {
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return io.bloombox.schema.analytics.product.ProductAnalytics.internal_static_bloombox_schema_analytics_product_Impression_descriptor;
+      return io.bloombox.schema.analytics.product.ProductAnalytics.internal_static_bloombox_analytics_product_Impression_descriptor;
     }
 
+    @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return io.bloombox.schema.analytics.product.ProductAnalytics.internal_static_bloombox_schema_analytics_product_Impression_fieldAccessorTable
+      return io.bloombox.schema.analytics.product.ProductAnalytics.internal_static_bloombox_analytics_product_Impression_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
               io.bloombox.schema.analytics.product.ProductAnalytics.Impression.class, io.bloombox.schema.analytics.product.ProductAnalytics.Impression.Builder.class);
     }
@@ -563,6 +564,7 @@ public final class ProductAnalytics {
     }
 
     private byte memoizedIsInitialized = -1;
+    @java.lang.Override
     public final boolean isInitialized() {
       byte isInitialized = memoizedIsInitialized;
       if (isInitialized == 1) return true;
@@ -572,6 +574,7 @@ public final class ProductAnalytics {
       return true;
     }
 
+    @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
       if (key_ != null) {
@@ -589,6 +592,7 @@ public final class ProductAnalytics {
       unknownFields.writeTo(output);
     }
 
+    @java.lang.Override
     public int getSerializedSize() {
       int size = memoizedSize;
       if (size != -1) return size;
@@ -740,6 +744,7 @@ public final class ProductAnalytics {
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
 
+    @java.lang.Override
     public Builder newBuilderForType() { return newBuilder(); }
     public static Builder newBuilder() {
       return DEFAULT_INSTANCE.toBuilder();
@@ -747,6 +752,7 @@ public final class ProductAnalytics {
     public static Builder newBuilder(io.bloombox.schema.analytics.product.ProductAnalytics.Impression prototype) {
       return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
     }
+    @java.lang.Override
     public Builder toBuilder() {
       return this == DEFAULT_INSTANCE
           ? new Builder() : new Builder().mergeFrom(this);
@@ -764,20 +770,21 @@ public final class ProductAnalytics {
      * for detail information to an end user.
      * </pre>
      *
-     * Protobuf type {@code bloombox.schema.analytics.product.Impression}
+     * Protobuf type {@code bloombox.analytics.product.Impression}
      */
     public static final class Builder extends
         com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:bloombox.schema.analytics.product.Impression)
+        // @@protoc_insertion_point(builder_implements:bloombox.analytics.product.Impression)
         io.bloombox.schema.analytics.product.ProductAnalytics.ImpressionOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return io.bloombox.schema.analytics.product.ProductAnalytics.internal_static_bloombox_schema_analytics_product_Impression_descriptor;
+        return io.bloombox.schema.analytics.product.ProductAnalytics.internal_static_bloombox_analytics_product_Impression_descriptor;
       }
 
+      @java.lang.Override
       protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return io.bloombox.schema.analytics.product.ProductAnalytics.internal_static_bloombox_schema_analytics_product_Impression_fieldAccessorTable
+        return io.bloombox.schema.analytics.product.ProductAnalytics.internal_static_bloombox_analytics_product_Impression_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
                 io.bloombox.schema.analytics.product.ProductAnalytics.Impression.class, io.bloombox.schema.analytics.product.ProductAnalytics.Impression.Builder.class);
       }
@@ -797,6 +804,7 @@ public final class ProductAnalytics {
                 .alwaysUseFieldBuilders) {
         }
       }
+      @java.lang.Override
       public Builder clear() {
         super.clear();
         if (keyBuilder_ == null) {
@@ -818,15 +826,18 @@ public final class ProductAnalytics {
         return this;
       }
 
+      @java.lang.Override
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return io.bloombox.schema.analytics.product.ProductAnalytics.internal_static_bloombox_schema_analytics_product_Impression_descriptor;
+        return io.bloombox.schema.analytics.product.ProductAnalytics.internal_static_bloombox_analytics_product_Impression_descriptor;
       }
 
+      @java.lang.Override
       public io.bloombox.schema.analytics.product.ProductAnalytics.Impression getDefaultInstanceForType() {
         return io.bloombox.schema.analytics.product.ProductAnalytics.Impression.getDefaultInstance();
       }
 
+      @java.lang.Override
       public io.bloombox.schema.analytics.product.ProductAnalytics.Impression build() {
         io.bloombox.schema.analytics.product.ProductAnalytics.Impression result = buildPartial();
         if (!result.isInitialized()) {
@@ -835,6 +846,7 @@ public final class ProductAnalytics {
         return result;
       }
 
+      @java.lang.Override
       public io.bloombox.schema.analytics.product.ProductAnalytics.Impression buildPartial() {
         io.bloombox.schema.analytics.product.ProductAnalytics.Impression result = new io.bloombox.schema.analytics.product.ProductAnalytics.Impression(this);
         if (keyBuilder_ == null) {
@@ -853,32 +865,39 @@ public final class ProductAnalytics {
         return result;
       }
 
+      @java.lang.Override
       public Builder clone() {
         return (Builder) super.clone();
       }
+      @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
         return (Builder) super.setField(field, value);
       }
+      @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
         return (Builder) super.clearField(field);
       }
+      @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
         return (Builder) super.clearOneof(oneof);
       }
+      @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
         return (Builder) super.setRepeatedField(field, index, value);
       }
+      @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
         return (Builder) super.addRepeatedField(field, value);
       }
+      @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
         if (other instanceof io.bloombox.schema.analytics.product.ProductAnalytics.Impression) {
           return mergeFrom((io.bloombox.schema.analytics.product.ProductAnalytics.Impression)other);
@@ -907,10 +926,12 @@ public final class ProductAnalytics {
         return this;
       }
 
+      @java.lang.Override
       public final boolean isInitialized() {
         return true;
       }
 
+      @java.lang.Override
       public Builder mergeFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -1310,21 +1331,23 @@ public final class ProductAnalytics {
         }
         return occurredBuilder_;
       }
+      @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
         return super.setUnknownFieldsProto3(unknownFields);
       }
 
+      @java.lang.Override
       public final Builder mergeUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
         return super.mergeUnknownFields(unknownFields);
       }
 
 
-      // @@protoc_insertion_point(builder_scope:bloombox.schema.analytics.product.Impression)
+      // @@protoc_insertion_point(builder_scope:bloombox.analytics.product.Impression)
     }
 
-    // @@protoc_insertion_point(class_scope:bloombox.schema.analytics.product.Impression)
+    // @@protoc_insertion_point(class_scope:bloombox.analytics.product.Impression)
     private static final io.bloombox.schema.analytics.product.ProductAnalytics.Impression DEFAULT_INSTANCE;
     static {
       DEFAULT_INSTANCE = new io.bloombox.schema.analytics.product.ProductAnalytics.Impression();
@@ -1336,6 +1359,7 @@ public final class ProductAnalytics {
 
     private static final com.google.protobuf.Parser<Impression>
         PARSER = new com.google.protobuf.AbstractParser<Impression>() {
+      @java.lang.Override
       public Impression parsePartialFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -1353,6 +1377,7 @@ public final class ProductAnalytics {
       return PARSER;
     }
 
+    @java.lang.Override
     public io.bloombox.schema.analytics.product.ProductAnalytics.Impression getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
@@ -1360,7 +1385,7 @@ public final class ProductAnalytics {
   }
 
   public interface ViewOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:bloombox.schema.analytics.product.View)
+      // @@protoc_insertion_point(interface_extends:bloombox.analytics.product.View)
       com.google.protobuf.MessageOrBuilder {
 
     /**
@@ -1427,11 +1452,11 @@ public final class ProductAnalytics {
    * Specifies that an end-user viewed detail information about a product.
    * </pre>
    *
-   * Protobuf type {@code bloombox.schema.analytics.product.View}
+   * Protobuf type {@code bloombox.analytics.product.View}
    */
   public  static final class View extends
       com.google.protobuf.GeneratedMessageV3 implements
-      // @@protoc_insertion_point(message_implements:bloombox.schema.analytics.product.View)
+      // @@protoc_insertion_point(message_implements:bloombox.analytics.product.View)
       ViewOrBuilder {
   private static final long serialVersionUID = 0L;
     // Use View.newBuilder() to construct.
@@ -1466,13 +1491,6 @@ public final class ProductAnalytics {
             case 0:
               done = true;
               break;
-            default: {
-              if (!parseUnknownFieldProto3(
-                  input, unknownFields, extensionRegistry, tag)) {
-                done = true;
-              }
-              break;
-            }
             case 10: {
               io.opencannabis.schema.base.BaseProductKey.ProductKey.Builder subBuilder = null;
               if (key_ != null) {
@@ -1504,6 +1522,13 @@ public final class ProductAnalytics {
 
               break;
             }
+            default: {
+              if (!parseUnknownFieldProto3(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
           }
         }
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
@@ -1518,12 +1543,13 @@ public final class ProductAnalytics {
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return io.bloombox.schema.analytics.product.ProductAnalytics.internal_static_bloombox_schema_analytics_product_View_descriptor;
+      return io.bloombox.schema.analytics.product.ProductAnalytics.internal_static_bloombox_analytics_product_View_descriptor;
     }
 
+    @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return io.bloombox.schema.analytics.product.ProductAnalytics.internal_static_bloombox_schema_analytics_product_View_fieldAccessorTable
+      return io.bloombox.schema.analytics.product.ProductAnalytics.internal_static_bloombox_analytics_product_View_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
               io.bloombox.schema.analytics.product.ProductAnalytics.View.class, io.bloombox.schema.analytics.product.ProductAnalytics.View.Builder.class);
     }
@@ -1608,6 +1634,7 @@ public final class ProductAnalytics {
     }
 
     private byte memoizedIsInitialized = -1;
+    @java.lang.Override
     public final boolean isInitialized() {
       byte isInitialized = memoizedIsInitialized;
       if (isInitialized == 1) return true;
@@ -1617,6 +1644,7 @@ public final class ProductAnalytics {
       return true;
     }
 
+    @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
       if (key_ != null) {
@@ -1631,6 +1659,7 @@ public final class ProductAnalytics {
       unknownFields.writeTo(output);
     }
 
+    @java.lang.Override
     public int getSerializedSize() {
       int size = memoizedSize;
       if (size != -1) return size;
@@ -1773,6 +1802,7 @@ public final class ProductAnalytics {
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
 
+    @java.lang.Override
     public Builder newBuilderForType() { return newBuilder(); }
     public static Builder newBuilder() {
       return DEFAULT_INSTANCE.toBuilder();
@@ -1780,6 +1810,7 @@ public final class ProductAnalytics {
     public static Builder newBuilder(io.bloombox.schema.analytics.product.ProductAnalytics.View prototype) {
       return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
     }
+    @java.lang.Override
     public Builder toBuilder() {
       return this == DEFAULT_INSTANCE
           ? new Builder() : new Builder().mergeFrom(this);
@@ -1796,20 +1827,21 @@ public final class ProductAnalytics {
      * Specifies that an end-user viewed detail information about a product.
      * </pre>
      *
-     * Protobuf type {@code bloombox.schema.analytics.product.View}
+     * Protobuf type {@code bloombox.analytics.product.View}
      */
     public static final class Builder extends
         com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:bloombox.schema.analytics.product.View)
+        // @@protoc_insertion_point(builder_implements:bloombox.analytics.product.View)
         io.bloombox.schema.analytics.product.ProductAnalytics.ViewOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return io.bloombox.schema.analytics.product.ProductAnalytics.internal_static_bloombox_schema_analytics_product_View_descriptor;
+        return io.bloombox.schema.analytics.product.ProductAnalytics.internal_static_bloombox_analytics_product_View_descriptor;
       }
 
+      @java.lang.Override
       protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return io.bloombox.schema.analytics.product.ProductAnalytics.internal_static_bloombox_schema_analytics_product_View_fieldAccessorTable
+        return io.bloombox.schema.analytics.product.ProductAnalytics.internal_static_bloombox_analytics_product_View_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
                 io.bloombox.schema.analytics.product.ProductAnalytics.View.class, io.bloombox.schema.analytics.product.ProductAnalytics.View.Builder.class);
       }
@@ -1829,6 +1861,7 @@ public final class ProductAnalytics {
                 .alwaysUseFieldBuilders) {
         }
       }
+      @java.lang.Override
       public Builder clear() {
         super.clear();
         if (keyBuilder_ == null) {
@@ -1848,15 +1881,18 @@ public final class ProductAnalytics {
         return this;
       }
 
+      @java.lang.Override
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return io.bloombox.schema.analytics.product.ProductAnalytics.internal_static_bloombox_schema_analytics_product_View_descriptor;
+        return io.bloombox.schema.analytics.product.ProductAnalytics.internal_static_bloombox_analytics_product_View_descriptor;
       }
 
+      @java.lang.Override
       public io.bloombox.schema.analytics.product.ProductAnalytics.View getDefaultInstanceForType() {
         return io.bloombox.schema.analytics.product.ProductAnalytics.View.getDefaultInstance();
       }
 
+      @java.lang.Override
       public io.bloombox.schema.analytics.product.ProductAnalytics.View build() {
         io.bloombox.schema.analytics.product.ProductAnalytics.View result = buildPartial();
         if (!result.isInitialized()) {
@@ -1865,6 +1901,7 @@ public final class ProductAnalytics {
         return result;
       }
 
+      @java.lang.Override
       public io.bloombox.schema.analytics.product.ProductAnalytics.View buildPartial() {
         io.bloombox.schema.analytics.product.ProductAnalytics.View result = new io.bloombox.schema.analytics.product.ProductAnalytics.View(this);
         if (keyBuilder_ == null) {
@@ -1882,32 +1919,39 @@ public final class ProductAnalytics {
         return result;
       }
 
+      @java.lang.Override
       public Builder clone() {
         return (Builder) super.clone();
       }
+      @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
         return (Builder) super.setField(field, value);
       }
+      @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
         return (Builder) super.clearField(field);
       }
+      @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
         return (Builder) super.clearOneof(oneof);
       }
+      @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
         return (Builder) super.setRepeatedField(field, index, value);
       }
+      @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
         return (Builder) super.addRepeatedField(field, value);
       }
+      @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
         if (other instanceof io.bloombox.schema.analytics.product.ProductAnalytics.View) {
           return mergeFrom((io.bloombox.schema.analytics.product.ProductAnalytics.View)other);
@@ -1933,10 +1977,12 @@ public final class ProductAnalytics {
         return this;
       }
 
+      @java.lang.Override
       public final boolean isInitialized() {
         return true;
       }
 
+      @java.lang.Override
       public Builder mergeFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -2298,21 +2344,23 @@ public final class ProductAnalytics {
         }
         return occurredBuilder_;
       }
+      @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
         return super.setUnknownFieldsProto3(unknownFields);
       }
 
+      @java.lang.Override
       public final Builder mergeUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
         return super.mergeUnknownFields(unknownFields);
       }
 
 
-      // @@protoc_insertion_point(builder_scope:bloombox.schema.analytics.product.View)
+      // @@protoc_insertion_point(builder_scope:bloombox.analytics.product.View)
     }
 
-    // @@protoc_insertion_point(class_scope:bloombox.schema.analytics.product.View)
+    // @@protoc_insertion_point(class_scope:bloombox.analytics.product.View)
     private static final io.bloombox.schema.analytics.product.ProductAnalytics.View DEFAULT_INSTANCE;
     static {
       DEFAULT_INSTANCE = new io.bloombox.schema.analytics.product.ProductAnalytics.View();
@@ -2324,6 +2372,7 @@ public final class ProductAnalytics {
 
     private static final com.google.protobuf.Parser<View>
         PARSER = new com.google.protobuf.AbstractParser<View>() {
+      @java.lang.Override
       public View parsePartialFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -2341,6 +2390,7 @@ public final class ProductAnalytics {
       return PARSER;
     }
 
+    @java.lang.Override
     public io.bloombox.schema.analytics.product.ProductAnalytics.View getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
@@ -2348,7 +2398,7 @@ public final class ProductAnalytics {
   }
 
   public interface ActionOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:bloombox.schema.analytics.product.Action)
+      // @@protoc_insertion_point(interface_extends:bloombox.analytics.product.Action)
       com.google.protobuf.MessageOrBuilder {
 
     /**
@@ -2381,7 +2431,7 @@ public final class ProductAnalytics {
      * The action that was taken on the product.
      * </pre>
      *
-     * <code>.bloombox.schema.analytics.product.ProductAction verb = 2;</code>
+     * <code>.bloombox.analytics.product.ProductAction verb = 2;</code>
      */
     int getVerbValue();
     /**
@@ -2389,7 +2439,7 @@ public final class ProductAnalytics {
      * The action that was taken on the product.
      * </pre>
      *
-     * <code>.bloombox.schema.analytics.product.ProductAction verb = 2;</code>
+     * <code>.bloombox.analytics.product.ProductAction verb = 2;</code>
      */
     io.bloombox.schema.analytics.product.ProductAnalytics.ProductAction getVerb();
 
@@ -2423,11 +2473,11 @@ public final class ProductAnalytics {
    * An action that was taken affirmatively by a user on a particular product.
    * </pre>
    *
-   * Protobuf type {@code bloombox.schema.analytics.product.Action}
+   * Protobuf type {@code bloombox.analytics.product.Action}
    */
   public  static final class Action extends
       com.google.protobuf.GeneratedMessageV3 implements
-      // @@protoc_insertion_point(message_implements:bloombox.schema.analytics.product.Action)
+      // @@protoc_insertion_point(message_implements:bloombox.analytics.product.Action)
       ActionOrBuilder {
   private static final long serialVersionUID = 0L;
     // Use Action.newBuilder() to construct.
@@ -2462,13 +2512,6 @@ public final class ProductAnalytics {
             case 0:
               done = true;
               break;
-            default: {
-              if (!parseUnknownFieldProto3(
-                  input, unknownFields, extensionRegistry, tag)) {
-                done = true;
-              }
-              break;
-            }
             case 10: {
               io.opencannabis.schema.base.BaseProductKey.ProductKey.Builder subBuilder = null;
               if (key_ != null) {
@@ -2501,6 +2544,13 @@ public final class ProductAnalytics {
 
               break;
             }
+            default: {
+              if (!parseUnknownFieldProto3(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
           }
         }
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
@@ -2515,12 +2565,13 @@ public final class ProductAnalytics {
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return io.bloombox.schema.analytics.product.ProductAnalytics.internal_static_bloombox_schema_analytics_product_Action_descriptor;
+      return io.bloombox.schema.analytics.product.ProductAnalytics.internal_static_bloombox_analytics_product_Action_descriptor;
     }
 
+    @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return io.bloombox.schema.analytics.product.ProductAnalytics.internal_static_bloombox_schema_analytics_product_Action_fieldAccessorTable
+      return io.bloombox.schema.analytics.product.ProductAnalytics.internal_static_bloombox_analytics_product_Action_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
               io.bloombox.schema.analytics.product.ProductAnalytics.Action.class, io.bloombox.schema.analytics.product.ProductAnalytics.Action.Builder.class);
     }
@@ -2565,7 +2616,7 @@ public final class ProductAnalytics {
      * The action that was taken on the product.
      * </pre>
      *
-     * <code>.bloombox.schema.analytics.product.ProductAction verb = 2;</code>
+     * <code>.bloombox.analytics.product.ProductAction verb = 2;</code>
      */
     public int getVerbValue() {
       return verb_;
@@ -2575,9 +2626,10 @@ public final class ProductAnalytics {
      * The action that was taken on the product.
      * </pre>
      *
-     * <code>.bloombox.schema.analytics.product.ProductAction verb = 2;</code>
+     * <code>.bloombox.analytics.product.ProductAction verb = 2;</code>
      */
     public io.bloombox.schema.analytics.product.ProductAnalytics.ProductAction getVerb() {
+      @SuppressWarnings("deprecation")
       io.bloombox.schema.analytics.product.ProductAnalytics.ProductAction result = io.bloombox.schema.analytics.product.ProductAnalytics.ProductAction.valueOf(verb_);
       return result == null ? io.bloombox.schema.analytics.product.ProductAnalytics.ProductAction.UNRECOGNIZED : result;
     }
@@ -2616,6 +2668,7 @@ public final class ProductAnalytics {
     }
 
     private byte memoizedIsInitialized = -1;
+    @java.lang.Override
     public final boolean isInitialized() {
       byte isInitialized = memoizedIsInitialized;
       if (isInitialized == 1) return true;
@@ -2625,6 +2678,7 @@ public final class ProductAnalytics {
       return true;
     }
 
+    @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
       if (key_ != null) {
@@ -2639,6 +2693,7 @@ public final class ProductAnalytics {
       unknownFields.writeTo(output);
     }
 
+    @java.lang.Override
     public int getSerializedSize() {
       int size = memoizedSize;
       if (size != -1) return size;
@@ -2779,6 +2834,7 @@ public final class ProductAnalytics {
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
 
+    @java.lang.Override
     public Builder newBuilderForType() { return newBuilder(); }
     public static Builder newBuilder() {
       return DEFAULT_INSTANCE.toBuilder();
@@ -2786,6 +2842,7 @@ public final class ProductAnalytics {
     public static Builder newBuilder(io.bloombox.schema.analytics.product.ProductAnalytics.Action prototype) {
       return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
     }
+    @java.lang.Override
     public Builder toBuilder() {
       return this == DEFAULT_INSTANCE
           ? new Builder() : new Builder().mergeFrom(this);
@@ -2802,20 +2859,21 @@ public final class ProductAnalytics {
      * An action that was taken affirmatively by a user on a particular product.
      * </pre>
      *
-     * Protobuf type {@code bloombox.schema.analytics.product.Action}
+     * Protobuf type {@code bloombox.analytics.product.Action}
      */
     public static final class Builder extends
         com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:bloombox.schema.analytics.product.Action)
+        // @@protoc_insertion_point(builder_implements:bloombox.analytics.product.Action)
         io.bloombox.schema.analytics.product.ProductAnalytics.ActionOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return io.bloombox.schema.analytics.product.ProductAnalytics.internal_static_bloombox_schema_analytics_product_Action_descriptor;
+        return io.bloombox.schema.analytics.product.ProductAnalytics.internal_static_bloombox_analytics_product_Action_descriptor;
       }
 
+      @java.lang.Override
       protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return io.bloombox.schema.analytics.product.ProductAnalytics.internal_static_bloombox_schema_analytics_product_Action_fieldAccessorTable
+        return io.bloombox.schema.analytics.product.ProductAnalytics.internal_static_bloombox_analytics_product_Action_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
                 io.bloombox.schema.analytics.product.ProductAnalytics.Action.class, io.bloombox.schema.analytics.product.ProductAnalytics.Action.Builder.class);
       }
@@ -2835,6 +2893,7 @@ public final class ProductAnalytics {
                 .alwaysUseFieldBuilders) {
         }
       }
+      @java.lang.Override
       public Builder clear() {
         super.clear();
         if (keyBuilder_ == null) {
@@ -2854,15 +2913,18 @@ public final class ProductAnalytics {
         return this;
       }
 
+      @java.lang.Override
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return io.bloombox.schema.analytics.product.ProductAnalytics.internal_static_bloombox_schema_analytics_product_Action_descriptor;
+        return io.bloombox.schema.analytics.product.ProductAnalytics.internal_static_bloombox_analytics_product_Action_descriptor;
       }
 
+      @java.lang.Override
       public io.bloombox.schema.analytics.product.ProductAnalytics.Action getDefaultInstanceForType() {
         return io.bloombox.schema.analytics.product.ProductAnalytics.Action.getDefaultInstance();
       }
 
+      @java.lang.Override
       public io.bloombox.schema.analytics.product.ProductAnalytics.Action build() {
         io.bloombox.schema.analytics.product.ProductAnalytics.Action result = buildPartial();
         if (!result.isInitialized()) {
@@ -2871,6 +2933,7 @@ public final class ProductAnalytics {
         return result;
       }
 
+      @java.lang.Override
       public io.bloombox.schema.analytics.product.ProductAnalytics.Action buildPartial() {
         io.bloombox.schema.analytics.product.ProductAnalytics.Action result = new io.bloombox.schema.analytics.product.ProductAnalytics.Action(this);
         if (keyBuilder_ == null) {
@@ -2888,32 +2951,39 @@ public final class ProductAnalytics {
         return result;
       }
 
+      @java.lang.Override
       public Builder clone() {
         return (Builder) super.clone();
       }
+      @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
         return (Builder) super.setField(field, value);
       }
+      @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
         return (Builder) super.clearField(field);
       }
+      @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
         return (Builder) super.clearOneof(oneof);
       }
+      @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
         return (Builder) super.setRepeatedField(field, index, value);
       }
+      @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
         return (Builder) super.addRepeatedField(field, value);
       }
+      @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
         if (other instanceof io.bloombox.schema.analytics.product.ProductAnalytics.Action) {
           return mergeFrom((io.bloombox.schema.analytics.product.ProductAnalytics.Action)other);
@@ -2939,10 +3009,12 @@ public final class ProductAnalytics {
         return this;
       }
 
+      @java.lang.Override
       public final boolean isInitialized() {
         return true;
       }
 
+      @java.lang.Override
       public Builder mergeFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -3120,7 +3192,7 @@ public final class ProductAnalytics {
        * The action that was taken on the product.
        * </pre>
        *
-       * <code>.bloombox.schema.analytics.product.ProductAction verb = 2;</code>
+       * <code>.bloombox.analytics.product.ProductAction verb = 2;</code>
        */
       public int getVerbValue() {
         return verb_;
@@ -3130,7 +3202,7 @@ public final class ProductAnalytics {
        * The action that was taken on the product.
        * </pre>
        *
-       * <code>.bloombox.schema.analytics.product.ProductAction verb = 2;</code>
+       * <code>.bloombox.analytics.product.ProductAction verb = 2;</code>
        */
       public Builder setVerbValue(int value) {
         verb_ = value;
@@ -3142,9 +3214,10 @@ public final class ProductAnalytics {
        * The action that was taken on the product.
        * </pre>
        *
-       * <code>.bloombox.schema.analytics.product.ProductAction verb = 2;</code>
+       * <code>.bloombox.analytics.product.ProductAction verb = 2;</code>
        */
       public io.bloombox.schema.analytics.product.ProductAnalytics.ProductAction getVerb() {
+        @SuppressWarnings("deprecation")
         io.bloombox.schema.analytics.product.ProductAnalytics.ProductAction result = io.bloombox.schema.analytics.product.ProductAnalytics.ProductAction.valueOf(verb_);
         return result == null ? io.bloombox.schema.analytics.product.ProductAnalytics.ProductAction.UNRECOGNIZED : result;
       }
@@ -3153,7 +3226,7 @@ public final class ProductAnalytics {
        * The action that was taken on the product.
        * </pre>
        *
-       * <code>.bloombox.schema.analytics.product.ProductAction verb = 2;</code>
+       * <code>.bloombox.analytics.product.ProductAction verb = 2;</code>
        */
       public Builder setVerb(io.bloombox.schema.analytics.product.ProductAnalytics.ProductAction value) {
         if (value == null) {
@@ -3169,7 +3242,7 @@ public final class ProductAnalytics {
        * The action that was taken on the product.
        * </pre>
        *
-       * <code>.bloombox.schema.analytics.product.ProductAction verb = 2;</code>
+       * <code>.bloombox.analytics.product.ProductAction verb = 2;</code>
        */
       public Builder clearVerb() {
         
@@ -3330,21 +3403,23 @@ public final class ProductAnalytics {
         }
         return occurredBuilder_;
       }
+      @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
         return super.setUnknownFieldsProto3(unknownFields);
       }
 
+      @java.lang.Override
       public final Builder mergeUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
         return super.mergeUnknownFields(unknownFields);
       }
 
 
-      // @@protoc_insertion_point(builder_scope:bloombox.schema.analytics.product.Action)
+      // @@protoc_insertion_point(builder_scope:bloombox.analytics.product.Action)
     }
 
-    // @@protoc_insertion_point(class_scope:bloombox.schema.analytics.product.Action)
+    // @@protoc_insertion_point(class_scope:bloombox.analytics.product.Action)
     private static final io.bloombox.schema.analytics.product.ProductAnalytics.Action DEFAULT_INSTANCE;
     static {
       DEFAULT_INSTANCE = new io.bloombox.schema.analytics.product.ProductAnalytics.Action();
@@ -3356,6 +3431,7 @@ public final class ProductAnalytics {
 
     private static final com.google.protobuf.Parser<Action>
         PARSER = new com.google.protobuf.AbstractParser<Action>() {
+      @java.lang.Override
       public Action parsePartialFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -3373,6 +3449,7 @@ public final class ProductAnalytics {
       return PARSER;
     }
 
+    @java.lang.Override
     public io.bloombox.schema.analytics.product.ProductAnalytics.Action getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
@@ -3380,20 +3457,20 @@ public final class ProductAnalytics {
   }
 
   private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_bloombox_schema_analytics_product_Impression_descriptor;
+    internal_static_bloombox_analytics_product_Impression_descriptor;
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_bloombox_schema_analytics_product_Impression_fieldAccessorTable;
+      internal_static_bloombox_analytics_product_Impression_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_bloombox_schema_analytics_product_View_descriptor;
+    internal_static_bloombox_analytics_product_View_descriptor;
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_bloombox_schema_analytics_product_View_fieldAccessorTable;
+      internal_static_bloombox_analytics_product_View_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_bloombox_schema_analytics_product_Action_descriptor;
+    internal_static_bloombox_analytics_product_Action_descriptor;
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_bloombox_schema_analytics_product_Action_fieldAccessorTable;
+      internal_static_bloombox_analytics_product_Action_fieldAccessorTable;
 
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
@@ -3404,25 +3481,25 @@ public final class ProductAnalytics {
   static {
     java.lang.String[] descriptorData = {
       "\n)analytics/commerce/ProductAnalytics.pr" +
-      "oto\022!bloombox.schema.analytics.product\032\025" +
-      "base/ProductKey.proto\032\026temporal/Instant." +
-      "proto\"\214\001\n\nImpression\022*\n\003key\030\001 \001(\0132\035.open" +
-      "cannabis.base.ProductKey\022\020\n\010filtered\030\002 \001" +
-      "(\010\022\016\n\006sorted\030\003 \001(\010\0220\n\010occurred\030\004 \001(\0132\036.o" +
-      "pencannabis.temporal.Instant\"y\n\004View\022*\n\003" +
-      "key\030\001 \001(\0132\035.opencannabis.base.ProductKey" +
-      "\022\023\n\013interactive\030\002 \001(\010\0220\n\010occurred\030\003 \001(\0132" +
-      "\036.opencannabis.temporal.Instant\"\246\001\n\006Acti" +
-      "on\022*\n\003key\030\001 \001(\0132\035.opencannabis.base.Prod" +
-      "uctKey\022>\n\004verb\030\002 \001(\01620.bloombox.schema.a" +
-      "nalytics.product.ProductAction\0220\n\010occurr" +
-      "ed\030\003 \001(\0132\036.opencannabis.temporal.Instant" +
-      "*\212\001\n\rProductAction\022\010\n\004VIEW\020\000\022\t\n\005SHARE\020\001\022" +
-      "\014\n\010FAVORITE\020\002\022\013\n\007COMPARE\020\003\022\010\n\004CART\020\004\022\014\n\010" +
-      "PURCHASE\020\005\022\r\n\tSUBSCRIBE\020\006\022\010\n\004ZOOM\020\007\022\013\n\007R" +
-      "EPORTS\020\010\022\013\n\007SIMILAR\020\tBB\n$io.bloombox.sch" +
-      "ema.analytics.productB\020ProductAnalyticsH" +
-      "\001P\000\242\002\003BBSb\006proto3"
+      "oto\022\032bloombox.analytics.product\032\025base/Pr" +
+      "oductKey.proto\032\026temporal/Instant.proto\"\214" +
+      "\001\n\nImpression\022*\n\003key\030\001 \001(\0132\035.opencannabi" +
+      "s.base.ProductKey\022\020\n\010filtered\030\002 \001(\010\022\016\n\006s" +
+      "orted\030\003 \001(\010\0220\n\010occurred\030\004 \001(\0132\036.opencann" +
+      "abis.temporal.Instant\"y\n\004View\022*\n\003key\030\001 \001" +
+      "(\0132\035.opencannabis.base.ProductKey\022\023\n\013int" +
+      "eractive\030\002 \001(\010\0220\n\010occurred\030\003 \001(\0132\036.openc" +
+      "annabis.temporal.Instant\"\237\001\n\006Action\022*\n\003k" +
+      "ey\030\001 \001(\0132\035.opencannabis.base.ProductKey\022" +
+      "7\n\004verb\030\002 \001(\0162).bloombox.analytics.produ" +
+      "ct.ProductAction\0220\n\010occurred\030\003 \001(\0132\036.ope" +
+      "ncannabis.temporal.Instant*\212\001\n\rProductAc" +
+      "tion\022\010\n\004VIEW\020\000\022\t\n\005SHARE\020\001\022\014\n\010FAVORITE\020\002\022" +
+      "\013\n\007COMPARE\020\003\022\010\n\004CART\020\004\022\014\n\010PURCHASE\020\005\022\r\n\t" +
+      "SUBSCRIBE\020\006\022\010\n\004ZOOM\020\007\022\013\n\007REPORTS\020\010\022\013\n\007SI" +
+      "MILAR\020\tBB\n$io.bloombox.schema.analytics." +
+      "productB\020ProductAnalyticsH\001P\000\242\002\003BBSb\006pro" +
+      "to3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -3438,23 +3515,23 @@ public final class ProductAnalytics {
           io.opencannabis.schema.base.BaseProductKey.getDescriptor(),
           io.opencannabis.schema.temporal.TemporalInstant.getDescriptor(),
         }, assigner);
-    internal_static_bloombox_schema_analytics_product_Impression_descriptor =
+    internal_static_bloombox_analytics_product_Impression_descriptor =
       getDescriptor().getMessageTypes().get(0);
-    internal_static_bloombox_schema_analytics_product_Impression_fieldAccessorTable = new
+    internal_static_bloombox_analytics_product_Impression_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_bloombox_schema_analytics_product_Impression_descriptor,
+        internal_static_bloombox_analytics_product_Impression_descriptor,
         new java.lang.String[] { "Key", "Filtered", "Sorted", "Occurred", });
-    internal_static_bloombox_schema_analytics_product_View_descriptor =
+    internal_static_bloombox_analytics_product_View_descriptor =
       getDescriptor().getMessageTypes().get(1);
-    internal_static_bloombox_schema_analytics_product_View_fieldAccessorTable = new
+    internal_static_bloombox_analytics_product_View_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_bloombox_schema_analytics_product_View_descriptor,
+        internal_static_bloombox_analytics_product_View_descriptor,
         new java.lang.String[] { "Key", "Interactive", "Occurred", });
-    internal_static_bloombox_schema_analytics_product_Action_descriptor =
+    internal_static_bloombox_analytics_product_Action_descriptor =
       getDescriptor().getMessageTypes().get(2);
-    internal_static_bloombox_schema_analytics_product_Action_fieldAccessorTable = new
+    internal_static_bloombox_analytics_product_Action_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_bloombox_schema_analytics_product_Action_descriptor,
+        internal_static_bloombox_analytics_product_Action_descriptor,
         new java.lang.String[] { "Key", "Verb", "Occurred", });
     io.opencannabis.schema.base.BaseProductKey.getDescriptor();
     io.opencannabis.schema.temporal.TemporalInstant.getDescriptor();

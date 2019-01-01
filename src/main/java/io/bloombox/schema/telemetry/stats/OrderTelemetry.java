@@ -1,8 +1,8 @@
 /*
- * Copyright 2018, Bloombox, LLC. All rights reserved.
+ * Copyright 2018, Momentum Ideas, Co. All rights reserved.
  *
  * Source and object computer code contained herein is the private intellectual
- * property of Bloombox, a California Limited Liability Corporation. Use of this
+ * property of Momentum Ideas Co., a Delaware Corporation. Use of this
  * code in source form requires permission in writing before use or the
  * assembly, distribution, or publishing of derivative works, for commercial
  * purposes or any other purpose, from a duly authorized officer of Momentum
@@ -32,7 +32,7 @@ public final class OrderTelemetry {
         (com.google.protobuf.ExtensionRegistryLite) registry);
   }
   public interface OrderStatsOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:bloombox.schema.analytics.stats.OrderStats)
+      // @@protoc_insertion_point(interface_extends:bloombox.analytics.stats.OrderStats)
       com.google.protobuf.MessageOrBuilder {
 
     /**
@@ -119,11 +119,11 @@ public final class OrderTelemetry {
    * Specifies a set of basic calculated statistics, computed at the level of an entire user session.
    * </pre>
    *
-   * Protobuf type {@code bloombox.schema.analytics.stats.OrderStats}
+   * Protobuf type {@code bloombox.analytics.stats.OrderStats}
    */
   public  static final class OrderStats extends
       com.google.protobuf.GeneratedMessageV3 implements
-      // @@protoc_insertion_point(message_implements:bloombox.schema.analytics.stats.OrderStats)
+      // @@protoc_insertion_point(message_implements:bloombox.analytics.stats.OrderStats)
       OrderStatsOrBuilder {
   private static final long serialVersionUID = 0L;
     // Use OrderStats.newBuilder() to construct.
@@ -161,13 +161,6 @@ public final class OrderTelemetry {
             case 0:
               done = true;
               break;
-            default: {
-              if (!parseUnknownFieldProto3(
-                  input, unknownFields, extensionRegistry, tag)) {
-                done = true;
-              }
-              break;
-            }
             case 10: {
               java.lang.String s = input.readStringRequireUtf8();
 
@@ -203,6 +196,13 @@ public final class OrderTelemetry {
               totalItemCount_ = input.readUInt32();
               break;
             }
+            default: {
+              if (!parseUnknownFieldProto3(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
           }
         }
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
@@ -217,12 +217,13 @@ public final class OrderTelemetry {
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return io.bloombox.schema.telemetry.stats.OrderTelemetry.internal_static_bloombox_schema_analytics_stats_OrderStats_descriptor;
+      return io.bloombox.schema.telemetry.stats.OrderTelemetry.internal_static_bloombox_analytics_stats_OrderStats_descriptor;
     }
 
+    @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return io.bloombox.schema.telemetry.stats.OrderTelemetry.internal_static_bloombox_schema_analytics_stats_OrderStats_fieldAccessorTable
+      return io.bloombox.schema.telemetry.stats.OrderTelemetry.internal_static_bloombox_analytics_stats_OrderStats_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
               io.bloombox.schema.telemetry.stats.OrderTelemetry.OrderStats.class, io.bloombox.schema.telemetry.stats.OrderTelemetry.OrderStats.Builder.class);
     }
@@ -371,6 +372,7 @@ public final class OrderTelemetry {
     }
 
     private byte memoizedIsInitialized = -1;
+    @java.lang.Override
     public final boolean isInitialized() {
       byte isInitialized = memoizedIsInitialized;
       if (isInitialized == 1) return true;
@@ -380,6 +382,7 @@ public final class OrderTelemetry {
       return true;
     }
 
+    @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
       if (!getOidBytes().isEmpty()) {
@@ -400,6 +403,7 @@ public final class OrderTelemetry {
       unknownFields.writeTo(output);
     }
 
+    @java.lang.Override
     public int getSerializedSize() {
       int size = memoizedSize;
       if (size != -1) return size;
@@ -550,6 +554,7 @@ public final class OrderTelemetry {
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
 
+    @java.lang.Override
     public Builder newBuilderForType() { return newBuilder(); }
     public static Builder newBuilder() {
       return DEFAULT_INSTANCE.toBuilder();
@@ -557,6 +562,7 @@ public final class OrderTelemetry {
     public static Builder newBuilder(io.bloombox.schema.telemetry.stats.OrderTelemetry.OrderStats prototype) {
       return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
     }
+    @java.lang.Override
     public Builder toBuilder() {
       return this == DEFAULT_INSTANCE
           ? new Builder() : new Builder().mergeFrom(this);
@@ -573,20 +579,21 @@ public final class OrderTelemetry {
      * Specifies a set of basic calculated statistics, computed at the level of an entire user session.
      * </pre>
      *
-     * Protobuf type {@code bloombox.schema.analytics.stats.OrderStats}
+     * Protobuf type {@code bloombox.analytics.stats.OrderStats}
      */
     public static final class Builder extends
         com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:bloombox.schema.analytics.stats.OrderStats)
+        // @@protoc_insertion_point(builder_implements:bloombox.analytics.stats.OrderStats)
         io.bloombox.schema.telemetry.stats.OrderTelemetry.OrderStatsOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return io.bloombox.schema.telemetry.stats.OrderTelemetry.internal_static_bloombox_schema_analytics_stats_OrderStats_descriptor;
+        return io.bloombox.schema.telemetry.stats.OrderTelemetry.internal_static_bloombox_analytics_stats_OrderStats_descriptor;
       }
 
+      @java.lang.Override
       protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return io.bloombox.schema.telemetry.stats.OrderTelemetry.internal_static_bloombox_schema_analytics_stats_OrderStats_fieldAccessorTable
+        return io.bloombox.schema.telemetry.stats.OrderTelemetry.internal_static_bloombox_analytics_stats_OrderStats_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
                 io.bloombox.schema.telemetry.stats.OrderTelemetry.OrderStats.class, io.bloombox.schema.telemetry.stats.OrderTelemetry.OrderStats.Builder.class);
       }
@@ -606,6 +613,7 @@ public final class OrderTelemetry {
                 .alwaysUseFieldBuilders) {
         }
       }
+      @java.lang.Override
       public Builder clear() {
         super.clear();
         oid_ = "";
@@ -625,15 +633,18 @@ public final class OrderTelemetry {
         return this;
       }
 
+      @java.lang.Override
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return io.bloombox.schema.telemetry.stats.OrderTelemetry.internal_static_bloombox_schema_analytics_stats_OrderStats_descriptor;
+        return io.bloombox.schema.telemetry.stats.OrderTelemetry.internal_static_bloombox_analytics_stats_OrderStats_descriptor;
       }
 
+      @java.lang.Override
       public io.bloombox.schema.telemetry.stats.OrderTelemetry.OrderStats getDefaultInstanceForType() {
         return io.bloombox.schema.telemetry.stats.OrderTelemetry.OrderStats.getDefaultInstance();
       }
 
+      @java.lang.Override
       public io.bloombox.schema.telemetry.stats.OrderTelemetry.OrderStats build() {
         io.bloombox.schema.telemetry.stats.OrderTelemetry.OrderStats result = buildPartial();
         if (!result.isInitialized()) {
@@ -642,6 +653,7 @@ public final class OrderTelemetry {
         return result;
       }
 
+      @java.lang.Override
       public io.bloombox.schema.telemetry.stats.OrderTelemetry.OrderStats buildPartial() {
         io.bloombox.schema.telemetry.stats.OrderTelemetry.OrderStats result = new io.bloombox.schema.telemetry.stats.OrderTelemetry.OrderStats(this);
         result.oid_ = oid_;
@@ -657,32 +669,39 @@ public final class OrderTelemetry {
         return result;
       }
 
+      @java.lang.Override
       public Builder clone() {
         return (Builder) super.clone();
       }
+      @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
         return (Builder) super.setField(field, value);
       }
+      @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
         return (Builder) super.clearField(field);
       }
+      @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
         return (Builder) super.clearOneof(oneof);
       }
+      @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
         return (Builder) super.setRepeatedField(field, index, value);
       }
+      @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
         return (Builder) super.addRepeatedField(field, value);
       }
+      @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
         if (other instanceof io.bloombox.schema.telemetry.stats.OrderTelemetry.OrderStats) {
           return mergeFrom((io.bloombox.schema.telemetry.stats.OrderTelemetry.OrderStats)other);
@@ -716,10 +735,12 @@ public final class OrderTelemetry {
         return this;
       }
 
+      @java.lang.Override
       public final boolean isInitialized() {
         return true;
       }
 
+      @java.lang.Override
       public Builder mergeFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -1144,21 +1165,23 @@ public final class OrderTelemetry {
         onChanged();
         return this;
       }
+      @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
         return super.setUnknownFieldsProto3(unknownFields);
       }
 
+      @java.lang.Override
       public final Builder mergeUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
         return super.mergeUnknownFields(unknownFields);
       }
 
 
-      // @@protoc_insertion_point(builder_scope:bloombox.schema.analytics.stats.OrderStats)
+      // @@protoc_insertion_point(builder_scope:bloombox.analytics.stats.OrderStats)
     }
 
-    // @@protoc_insertion_point(class_scope:bloombox.schema.analytics.stats.OrderStats)
+    // @@protoc_insertion_point(class_scope:bloombox.analytics.stats.OrderStats)
     private static final io.bloombox.schema.telemetry.stats.OrderTelemetry.OrderStats DEFAULT_INSTANCE;
     static {
       DEFAULT_INSTANCE = new io.bloombox.schema.telemetry.stats.OrderTelemetry.OrderStats();
@@ -1170,6 +1193,7 @@ public final class OrderTelemetry {
 
     private static final com.google.protobuf.Parser<OrderStats>
         PARSER = new com.google.protobuf.AbstractParser<OrderStats>() {
+      @java.lang.Override
       public OrderStats parsePartialFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -1187,6 +1211,7 @@ public final class OrderTelemetry {
       return PARSER;
     }
 
+    @java.lang.Override
     public io.bloombox.schema.telemetry.stats.OrderTelemetry.OrderStats getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
@@ -1194,10 +1219,10 @@ public final class OrderTelemetry {
   }
 
   private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_bloombox_schema_analytics_stats_OrderStats_descriptor;
+    internal_static_bloombox_analytics_stats_OrderStats_descriptor;
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_bloombox_schema_analytics_stats_OrderStats_fieldAccessorTable;
+      internal_static_bloombox_analytics_stats_OrderStats_fieldAccessorTable;
 
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
@@ -1207,23 +1232,23 @@ public final class OrderTelemetry {
       descriptor;
   static {
     java.lang.String[] descriptorData = {
-      "\n analytics/stats/OrderStats.proto\022\037bloo" +
-      "mbox.schema.analytics.stats\032\016bq_field.pr" +
-      "oto\032\026temporal/Instant.proto\"\350\003\n\nOrderSta" +
-      "ts\022/\n\003oid\030\001 \001(\tB\"\360?\001\212@\034// Original ID of" +
-      " the order.\022Y\n\rpartner_scope\030\002 \001(\tBB\360?\001\212" +
-      "@<Partner scope seen as associated with " +
-      "this commercial order.\022t\n\010occurred\030\003 \001(\013" +
-      "2\036.opencannabis.temporal.InstantBB\360?\001\212@<" +
-      "Timestamp representing the first event s" +
-      "een in this session.\022n\n\021unique_item_coun" +
-      "t\030\004 \001(\rBS\360?\001\212@MCount of unique products " +
-      "ordered (i.e. regardless of item \'count\'" +
-      " per order).\022h\n\020total_item_count\030\005 \001(\rBN" +
-      "\360?\001\212@HCount of total products ordered (i" +
-      ".e. including item \'count\' per order).B>" +
-      "\n\"io.bloombox.schema.telemetry.statsB\016Or" +
-      "derTelemetryH\001P\000\242\002\003BBSb\006proto3"
+      "\n analytics/stats/OrderStats.proto\022\030bloo" +
+      "mbox.analytics.stats\032\016bq_field.proto\032\026te" +
+      "mporal/Instant.proto\"\350\003\n\nOrderStats\022/\n\003o" +
+      "id\030\001 \001(\tB\"\360?\001\212@\034// Original ID of the or" +
+      "der.\022Y\n\rpartner_scope\030\002 \001(\tBB\360?\001\212@<Partn" +
+      "er scope seen as associated with this co" +
+      "mmercial order.\022t\n\010occurred\030\003 \001(\0132\036.open" +
+      "cannabis.temporal.InstantBB\360?\001\212@<Timesta" +
+      "mp representing the first event seen in " +
+      "this session.\022n\n\021unique_item_count\030\004 \001(\r" +
+      "BS\360?\001\212@MCount of unique products ordered" +
+      " (i.e. regardless of item \'count\' per or" +
+      "der).\022h\n\020total_item_count\030\005 \001(\rBN\360?\001\212@HC" +
+      "ount of total products ordered (i.e. inc" +
+      "luding item \'count\' per order).B>\n\"io.bl" +
+      "oombox.schema.telemetry.statsB\016OrderTele" +
+      "metryH\001P\000\242\002\003BBSb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -1239,11 +1264,11 @@ public final class OrderTelemetry {
           gen_bq_schema.BqField.getDescriptor(),
           io.opencannabis.schema.temporal.TemporalInstant.getDescriptor(),
         }, assigner);
-    internal_static_bloombox_schema_analytics_stats_OrderStats_descriptor =
+    internal_static_bloombox_analytics_stats_OrderStats_descriptor =
       getDescriptor().getMessageTypes().get(0);
-    internal_static_bloombox_schema_analytics_stats_OrderStats_fieldAccessorTable = new
+    internal_static_bloombox_analytics_stats_OrderStats_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_bloombox_schema_analytics_stats_OrderStats_descriptor,
+        internal_static_bloombox_analytics_stats_OrderStats_descriptor,
         new java.lang.String[] { "Oid", "PartnerScope", "Occurred", "UniqueItemCount", "TotalItemCount", });
     com.google.protobuf.ExtensionRegistry registry =
         com.google.protobuf.ExtensionRegistry.newInstance();

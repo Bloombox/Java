@@ -1,8 +1,8 @@
 /*
- * Copyright 2018, Bloombox, LLC. All rights reserved.
+ * Copyright 2018, Momentum Ideas, Co. All rights reserved.
  *
  * Source and object computer code contained herein is the private intellectual
- * property of Bloombox, a California Limited Liability Corporation. Use of this
+ * property of Momentum Ideas Co., a Delaware Corporation. Use of this
  * code in source form requires permission in writing before use or the
  * assembly, distribution, or publishing of derivative works, for commercial
  * purposes or any other purpose, from a duly authorized officer of Momentum
@@ -17,20 +17,20 @@
 
 package io.bloombox.schema.services.telemetry.v1beta4;
 
-import static io.grpc.stub.ClientCalls.asyncUnaryCall;
-import static io.grpc.stub.ClientCalls.asyncServerStreamingCall;
-import static io.grpc.stub.ClientCalls.asyncClientStreamingCall;
-import static io.grpc.stub.ClientCalls.asyncBidiStreamingCall;
-import static io.grpc.stub.ClientCalls.blockingUnaryCall;
-import static io.grpc.stub.ClientCalls.blockingServerStreamingCall;
-import static io.grpc.stub.ClientCalls.futureUnaryCall;
 import static io.grpc.MethodDescriptor.generateFullMethodName;
-import static io.grpc.stub.ServerCalls.asyncUnaryCall;
-import static io.grpc.stub.ServerCalls.asyncServerStreamingCall;
-import static io.grpc.stub.ServerCalls.asyncClientStreamingCall;
+import static io.grpc.stub.ClientCalls.asyncBidiStreamingCall;
+import static io.grpc.stub.ClientCalls.asyncClientStreamingCall;
+import static io.grpc.stub.ClientCalls.asyncServerStreamingCall;
+import static io.grpc.stub.ClientCalls.asyncUnaryCall;
+import static io.grpc.stub.ClientCalls.blockingServerStreamingCall;
+import static io.grpc.stub.ClientCalls.blockingUnaryCall;
+import static io.grpc.stub.ClientCalls.futureUnaryCall;
 import static io.grpc.stub.ServerCalls.asyncBidiStreamingCall;
-import static io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall;
+import static io.grpc.stub.ServerCalls.asyncClientStreamingCall;
+import static io.grpc.stub.ServerCalls.asyncServerStreamingCall;
+import static io.grpc.stub.ServerCalls.asyncUnaryCall;
 import static io.grpc.stub.ServerCalls.asyncUnimplementedStreamingCall;
+import static io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall;
 
 /**
  * <pre>
@@ -38,63 +38,142 @@ import static io.grpc.stub.ServerCalls.asyncUnimplementedStreamingCall;
  * </pre>
  */
 @javax.annotation.Generated(
-    value = "by gRPC proto compiler (version 1.6.0-SNAPSHOT)",
+    value = "by gRPC proto compiler (version 1.18.0-SNAPSHOT)",
     comments = "Source: telemetry/v1beta4/TelemetryService_Beta4.proto")
 public final class EventTelemetryGrpc {
 
   private EventTelemetryGrpc() {}
 
-  public static final String SERVICE_NAME = "bloombox.schema.services.telemetry.v1beta4.EventTelemetry";
+  public static final String SERVICE_NAME = "bloombox.services.telemetry.v1beta4.EventTelemetry";
 
   // Static method descriptors that strictly reflect the proto.
-  @io.grpc.ExperimentalApi("https://github.com/grpc/grpc-java/issues/1901")
-  public static final io.grpc.MethodDescriptor<io.bloombox.schema.services.telemetry.v1beta4.TelemetryPing.Request,
-      io.bloombox.schema.services.telemetry.v1beta4.TelemetryPing.Response> METHOD_PING =
-      io.grpc.MethodDescriptor.<io.bloombox.schema.services.telemetry.v1beta4.TelemetryPing.Request, io.bloombox.schema.services.telemetry.v1beta4.TelemetryPing.Response>newBuilder()
-          .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-          .setFullMethodName(generateFullMethodName(
-              "bloombox.schema.services.telemetry.v1beta4.EventTelemetry", "Ping"))
-          .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-              io.bloombox.schema.services.telemetry.v1beta4.TelemetryPing.Request.getDefaultInstance()))
-          .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-              io.bloombox.schema.services.telemetry.v1beta4.TelemetryPing.Response.getDefaultInstance()))
-          .build();
-  @io.grpc.ExperimentalApi("https://github.com/grpc/grpc-java/issues/1901")
-  public static final io.grpc.MethodDescriptor<io.bloombox.schema.services.telemetry.v1beta4.Event.Request,
-      com.google.protobuf.Empty> METHOD_EVENT =
-      io.grpc.MethodDescriptor.<io.bloombox.schema.services.telemetry.v1beta4.Event.Request, com.google.protobuf.Empty>newBuilder()
-          .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-          .setFullMethodName(generateFullMethodName(
-              "bloombox.schema.services.telemetry.v1beta4.EventTelemetry", "Event"))
-          .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-              io.bloombox.schema.services.telemetry.v1beta4.Event.Request.getDefaultInstance()))
-          .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-              com.google.protobuf.Empty.getDefaultInstance()))
-          .build();
-  @io.grpc.ExperimentalApi("https://github.com/grpc/grpc-java/issues/1901")
-  public static final io.grpc.MethodDescriptor<io.bloombox.schema.services.telemetry.v1beta4.Event.BatchRequest,
-      io.bloombox.schema.services.telemetry.v1beta4.TelemetryResponse> METHOD_BATCH =
-      io.grpc.MethodDescriptor.<io.bloombox.schema.services.telemetry.v1beta4.Event.BatchRequest, io.bloombox.schema.services.telemetry.v1beta4.TelemetryResponse>newBuilder()
-          .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-          .setFullMethodName(generateFullMethodName(
-              "bloombox.schema.services.telemetry.v1beta4.EventTelemetry", "Batch"))
-          .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-              io.bloombox.schema.services.telemetry.v1beta4.Event.BatchRequest.getDefaultInstance()))
-          .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-              io.bloombox.schema.services.telemetry.v1beta4.TelemetryResponse.getDefaultInstance()))
-          .build();
-  @io.grpc.ExperimentalApi("https://github.com/grpc/grpc-java/issues/1901")
-  public static final io.grpc.MethodDescriptor<io.bloombox.schema.services.telemetry.v1beta4.Exception,
-      com.google.protobuf.Empty> METHOD_ERROR =
-      io.grpc.MethodDescriptor.<io.bloombox.schema.services.telemetry.v1beta4.Exception, com.google.protobuf.Empty>newBuilder()
-          .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-          .setFullMethodName(generateFullMethodName(
-              "bloombox.schema.services.telemetry.v1beta4.EventTelemetry", "Error"))
-          .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-              io.bloombox.schema.services.telemetry.v1beta4.Exception.getDefaultInstance()))
-          .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-              com.google.protobuf.Empty.getDefaultInstance()))
-          .build();
+  private static volatile io.grpc.MethodDescriptor<io.bloombox.schema.services.telemetry.v1beta4.TelemetryPing.Request,
+      io.bloombox.schema.services.telemetry.v1beta4.TelemetryPing.Response> getPingMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "Ping",
+      requestType = io.bloombox.schema.services.telemetry.v1beta4.TelemetryPing.Request.class,
+      responseType = io.bloombox.schema.services.telemetry.v1beta4.TelemetryPing.Response.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<io.bloombox.schema.services.telemetry.v1beta4.TelemetryPing.Request,
+      io.bloombox.schema.services.telemetry.v1beta4.TelemetryPing.Response> getPingMethod() {
+    io.grpc.MethodDescriptor<io.bloombox.schema.services.telemetry.v1beta4.TelemetryPing.Request, io.bloombox.schema.services.telemetry.v1beta4.TelemetryPing.Response> getPingMethod;
+    if ((getPingMethod = EventTelemetryGrpc.getPingMethod) == null) {
+      synchronized (EventTelemetryGrpc.class) {
+        if ((getPingMethod = EventTelemetryGrpc.getPingMethod) == null) {
+          EventTelemetryGrpc.getPingMethod = getPingMethod = 
+              io.grpc.MethodDescriptor.<io.bloombox.schema.services.telemetry.v1beta4.TelemetryPing.Request, io.bloombox.schema.services.telemetry.v1beta4.TelemetryPing.Response>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(
+                  "bloombox.services.telemetry.v1beta4.EventTelemetry", "Ping"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  io.bloombox.schema.services.telemetry.v1beta4.TelemetryPing.Request.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  io.bloombox.schema.services.telemetry.v1beta4.TelemetryPing.Response.getDefaultInstance()))
+                  .setSchemaDescriptor(new EventTelemetryMethodDescriptorSupplier("Ping"))
+                  .build();
+          }
+        }
+     }
+     return getPingMethod;
+  }
+
+  private static volatile io.grpc.MethodDescriptor<io.bloombox.schema.services.telemetry.v1beta4.Event.Request,
+      com.google.protobuf.Empty> getEventMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "Event",
+      requestType = io.bloombox.schema.services.telemetry.v1beta4.Event.Request.class,
+      responseType = com.google.protobuf.Empty.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<io.bloombox.schema.services.telemetry.v1beta4.Event.Request,
+      com.google.protobuf.Empty> getEventMethod() {
+    io.grpc.MethodDescriptor<io.bloombox.schema.services.telemetry.v1beta4.Event.Request, com.google.protobuf.Empty> getEventMethod;
+    if ((getEventMethod = EventTelemetryGrpc.getEventMethod) == null) {
+      synchronized (EventTelemetryGrpc.class) {
+        if ((getEventMethod = EventTelemetryGrpc.getEventMethod) == null) {
+          EventTelemetryGrpc.getEventMethod = getEventMethod = 
+              io.grpc.MethodDescriptor.<io.bloombox.schema.services.telemetry.v1beta4.Event.Request, com.google.protobuf.Empty>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(
+                  "bloombox.services.telemetry.v1beta4.EventTelemetry", "Event"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  io.bloombox.schema.services.telemetry.v1beta4.Event.Request.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.google.protobuf.Empty.getDefaultInstance()))
+                  .setSchemaDescriptor(new EventTelemetryMethodDescriptorSupplier("Event"))
+                  .build();
+          }
+        }
+     }
+     return getEventMethod;
+  }
+
+  private static volatile io.grpc.MethodDescriptor<io.bloombox.schema.services.telemetry.v1beta4.Event.BatchRequest,
+      io.bloombox.schema.services.telemetry.v1beta4.TelemetryResponse> getBatchMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "Batch",
+      requestType = io.bloombox.schema.services.telemetry.v1beta4.Event.BatchRequest.class,
+      responseType = io.bloombox.schema.services.telemetry.v1beta4.TelemetryResponse.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<io.bloombox.schema.services.telemetry.v1beta4.Event.BatchRequest,
+      io.bloombox.schema.services.telemetry.v1beta4.TelemetryResponse> getBatchMethod() {
+    io.grpc.MethodDescriptor<io.bloombox.schema.services.telemetry.v1beta4.Event.BatchRequest, io.bloombox.schema.services.telemetry.v1beta4.TelemetryResponse> getBatchMethod;
+    if ((getBatchMethod = EventTelemetryGrpc.getBatchMethod) == null) {
+      synchronized (EventTelemetryGrpc.class) {
+        if ((getBatchMethod = EventTelemetryGrpc.getBatchMethod) == null) {
+          EventTelemetryGrpc.getBatchMethod = getBatchMethod = 
+              io.grpc.MethodDescriptor.<io.bloombox.schema.services.telemetry.v1beta4.Event.BatchRequest, io.bloombox.schema.services.telemetry.v1beta4.TelemetryResponse>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(
+                  "bloombox.services.telemetry.v1beta4.EventTelemetry", "Batch"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  io.bloombox.schema.services.telemetry.v1beta4.Event.BatchRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  io.bloombox.schema.services.telemetry.v1beta4.TelemetryResponse.getDefaultInstance()))
+                  .setSchemaDescriptor(new EventTelemetryMethodDescriptorSupplier("Batch"))
+                  .build();
+          }
+        }
+     }
+     return getBatchMethod;
+  }
+
+  private static volatile io.grpc.MethodDescriptor<io.bloombox.schema.services.telemetry.v1beta4.Exception,
+      com.google.protobuf.Empty> getErrorMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "Error",
+      requestType = io.bloombox.schema.services.telemetry.v1beta4.Exception.class,
+      responseType = com.google.protobuf.Empty.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<io.bloombox.schema.services.telemetry.v1beta4.Exception,
+      com.google.protobuf.Empty> getErrorMethod() {
+    io.grpc.MethodDescriptor<io.bloombox.schema.services.telemetry.v1beta4.Exception, com.google.protobuf.Empty> getErrorMethod;
+    if ((getErrorMethod = EventTelemetryGrpc.getErrorMethod) == null) {
+      synchronized (EventTelemetryGrpc.class) {
+        if ((getErrorMethod = EventTelemetryGrpc.getErrorMethod) == null) {
+          EventTelemetryGrpc.getErrorMethod = getErrorMethod = 
+              io.grpc.MethodDescriptor.<io.bloombox.schema.services.telemetry.v1beta4.Exception, com.google.protobuf.Empty>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(
+                  "bloombox.services.telemetry.v1beta4.EventTelemetry", "Error"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  io.bloombox.schema.services.telemetry.v1beta4.Exception.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.google.protobuf.Empty.getDefaultInstance()))
+                  .setSchemaDescriptor(new EventTelemetryMethodDescriptorSupplier("Error"))
+                  .build();
+          }
+        }
+     }
+     return getErrorMethod;
+  }
 
   /**
    * Creates a new async stub that supports all call types for the service
@@ -133,7 +212,7 @@ public final class EventTelemetryGrpc {
      */
     public void ping(io.bloombox.schema.services.telemetry.v1beta4.TelemetryPing.Request request,
         io.grpc.stub.StreamObserver<io.bloombox.schema.services.telemetry.v1beta4.TelemetryPing.Response> responseObserver) {
-      asyncUnimplementedUnaryCall(METHOD_PING, responseObserver);
+      asyncUnimplementedUnaryCall(getPingMethod(), responseObserver);
     }
 
     /**
@@ -143,7 +222,7 @@ public final class EventTelemetryGrpc {
      */
     public void event(io.bloombox.schema.services.telemetry.v1beta4.Event.Request request,
         io.grpc.stub.StreamObserver<com.google.protobuf.Empty> responseObserver) {
-      asyncUnimplementedUnaryCall(METHOD_EVENT, responseObserver);
+      asyncUnimplementedUnaryCall(getEventMethod(), responseObserver);
     }
 
     /**
@@ -153,7 +232,7 @@ public final class EventTelemetryGrpc {
      */
     public void batch(io.bloombox.schema.services.telemetry.v1beta4.Event.BatchRequest request,
         io.grpc.stub.StreamObserver<io.bloombox.schema.services.telemetry.v1beta4.TelemetryResponse> responseObserver) {
-      asyncUnimplementedUnaryCall(METHOD_BATCH, responseObserver);
+      asyncUnimplementedUnaryCall(getBatchMethod(), responseObserver);
     }
 
     /**
@@ -163,34 +242,34 @@ public final class EventTelemetryGrpc {
      */
     public void error(io.bloombox.schema.services.telemetry.v1beta4.Exception request,
         io.grpc.stub.StreamObserver<com.google.protobuf.Empty> responseObserver) {
-      asyncUnimplementedUnaryCall(METHOD_ERROR, responseObserver);
+      asyncUnimplementedUnaryCall(getErrorMethod(), responseObserver);
     }
 
     @java.lang.Override public final io.grpc.ServerServiceDefinition bindService() {
       return io.grpc.ServerServiceDefinition.builder(getServiceDescriptor())
           .addMethod(
-            METHOD_PING,
+            getPingMethod(),
             asyncUnaryCall(
               new MethodHandlers<
                 io.bloombox.schema.services.telemetry.v1beta4.TelemetryPing.Request,
                 io.bloombox.schema.services.telemetry.v1beta4.TelemetryPing.Response>(
                   this, METHODID_PING)))
           .addMethod(
-            METHOD_EVENT,
+            getEventMethod(),
             asyncUnaryCall(
               new MethodHandlers<
                 io.bloombox.schema.services.telemetry.v1beta4.Event.Request,
                 com.google.protobuf.Empty>(
                   this, METHODID_EVENT)))
           .addMethod(
-            METHOD_BATCH,
+            getBatchMethod(),
             asyncUnaryCall(
               new MethodHandlers<
                 io.bloombox.schema.services.telemetry.v1beta4.Event.BatchRequest,
                 io.bloombox.schema.services.telemetry.v1beta4.TelemetryResponse>(
                   this, METHODID_BATCH)))
           .addMethod(
-            METHOD_ERROR,
+            getErrorMethod(),
             asyncUnaryCall(
               new MethodHandlers<
                 io.bloombox.schema.services.telemetry.v1beta4.Exception,
@@ -229,7 +308,7 @@ public final class EventTelemetryGrpc {
     public void ping(io.bloombox.schema.services.telemetry.v1beta4.TelemetryPing.Request request,
         io.grpc.stub.StreamObserver<io.bloombox.schema.services.telemetry.v1beta4.TelemetryPing.Response> responseObserver) {
       asyncUnaryCall(
-          getChannel().newCall(METHOD_PING, getCallOptions()), request, responseObserver);
+          getChannel().newCall(getPingMethod(), getCallOptions()), request, responseObserver);
     }
 
     /**
@@ -240,7 +319,7 @@ public final class EventTelemetryGrpc {
     public void event(io.bloombox.schema.services.telemetry.v1beta4.Event.Request request,
         io.grpc.stub.StreamObserver<com.google.protobuf.Empty> responseObserver) {
       asyncUnaryCall(
-          getChannel().newCall(METHOD_EVENT, getCallOptions()), request, responseObserver);
+          getChannel().newCall(getEventMethod(), getCallOptions()), request, responseObserver);
     }
 
     /**
@@ -251,7 +330,7 @@ public final class EventTelemetryGrpc {
     public void batch(io.bloombox.schema.services.telemetry.v1beta4.Event.BatchRequest request,
         io.grpc.stub.StreamObserver<io.bloombox.schema.services.telemetry.v1beta4.TelemetryResponse> responseObserver) {
       asyncUnaryCall(
-          getChannel().newCall(METHOD_BATCH, getCallOptions()), request, responseObserver);
+          getChannel().newCall(getBatchMethod(), getCallOptions()), request, responseObserver);
     }
 
     /**
@@ -262,7 +341,7 @@ public final class EventTelemetryGrpc {
     public void error(io.bloombox.schema.services.telemetry.v1beta4.Exception request,
         io.grpc.stub.StreamObserver<com.google.protobuf.Empty> responseObserver) {
       asyncUnaryCall(
-          getChannel().newCall(METHOD_ERROR, getCallOptions()), request, responseObserver);
+          getChannel().newCall(getErrorMethod(), getCallOptions()), request, responseObserver);
     }
   }
 
@@ -294,7 +373,7 @@ public final class EventTelemetryGrpc {
      */
     public io.bloombox.schema.services.telemetry.v1beta4.TelemetryPing.Response ping(io.bloombox.schema.services.telemetry.v1beta4.TelemetryPing.Request request) {
       return blockingUnaryCall(
-          getChannel(), METHOD_PING, getCallOptions(), request);
+          getChannel(), getPingMethod(), getCallOptions(), request);
     }
 
     /**
@@ -304,7 +383,7 @@ public final class EventTelemetryGrpc {
      */
     public com.google.protobuf.Empty event(io.bloombox.schema.services.telemetry.v1beta4.Event.Request request) {
       return blockingUnaryCall(
-          getChannel(), METHOD_EVENT, getCallOptions(), request);
+          getChannel(), getEventMethod(), getCallOptions(), request);
     }
 
     /**
@@ -314,7 +393,7 @@ public final class EventTelemetryGrpc {
      */
     public io.bloombox.schema.services.telemetry.v1beta4.TelemetryResponse batch(io.bloombox.schema.services.telemetry.v1beta4.Event.BatchRequest request) {
       return blockingUnaryCall(
-          getChannel(), METHOD_BATCH, getCallOptions(), request);
+          getChannel(), getBatchMethod(), getCallOptions(), request);
     }
 
     /**
@@ -324,7 +403,7 @@ public final class EventTelemetryGrpc {
      */
     public com.google.protobuf.Empty error(io.bloombox.schema.services.telemetry.v1beta4.Exception request) {
       return blockingUnaryCall(
-          getChannel(), METHOD_ERROR, getCallOptions(), request);
+          getChannel(), getErrorMethod(), getCallOptions(), request);
     }
   }
 
@@ -357,7 +436,7 @@ public final class EventTelemetryGrpc {
     public com.google.common.util.concurrent.ListenableFuture<io.bloombox.schema.services.telemetry.v1beta4.TelemetryPing.Response> ping(
         io.bloombox.schema.services.telemetry.v1beta4.TelemetryPing.Request request) {
       return futureUnaryCall(
-          getChannel().newCall(METHOD_PING, getCallOptions()), request);
+          getChannel().newCall(getPingMethod(), getCallOptions()), request);
     }
 
     /**
@@ -368,7 +447,7 @@ public final class EventTelemetryGrpc {
     public com.google.common.util.concurrent.ListenableFuture<com.google.protobuf.Empty> event(
         io.bloombox.schema.services.telemetry.v1beta4.Event.Request request) {
       return futureUnaryCall(
-          getChannel().newCall(METHOD_EVENT, getCallOptions()), request);
+          getChannel().newCall(getEventMethod(), getCallOptions()), request);
     }
 
     /**
@@ -379,7 +458,7 @@ public final class EventTelemetryGrpc {
     public com.google.common.util.concurrent.ListenableFuture<io.bloombox.schema.services.telemetry.v1beta4.TelemetryResponse> batch(
         io.bloombox.schema.services.telemetry.v1beta4.Event.BatchRequest request) {
       return futureUnaryCall(
-          getChannel().newCall(METHOD_BATCH, getCallOptions()), request);
+          getChannel().newCall(getBatchMethod(), getCallOptions()), request);
     }
 
     /**
@@ -390,7 +469,7 @@ public final class EventTelemetryGrpc {
     public com.google.common.util.concurrent.ListenableFuture<com.google.protobuf.Empty> error(
         io.bloombox.schema.services.telemetry.v1beta4.Exception request) {
       return futureUnaryCall(
-          getChannel().newCall(METHOD_ERROR, getCallOptions()), request);
+          getChannel().newCall(getErrorMethod(), getCallOptions()), request);
     }
   }
 
@@ -448,10 +527,38 @@ public final class EventTelemetryGrpc {
     }
   }
 
-  private static final class EventTelemetryDescriptorSupplier implements io.grpc.protobuf.ProtoFileDescriptorSupplier {
+  private static abstract class EventTelemetryBaseDescriptorSupplier
+      implements io.grpc.protobuf.ProtoFileDescriptorSupplier, io.grpc.protobuf.ProtoServiceDescriptorSupplier {
+    EventTelemetryBaseDescriptorSupplier() {}
+
     @java.lang.Override
     public com.google.protobuf.Descriptors.FileDescriptor getFileDescriptor() {
       return io.bloombox.schema.services.telemetry.v1beta4.TelemetryServiceBeta4.getDescriptor();
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Descriptors.ServiceDescriptor getServiceDescriptor() {
+      return getFileDescriptor().findServiceByName("EventTelemetry");
+    }
+  }
+
+  private static final class EventTelemetryFileDescriptorSupplier
+      extends EventTelemetryBaseDescriptorSupplier {
+    EventTelemetryFileDescriptorSupplier() {}
+  }
+
+  private static final class EventTelemetryMethodDescriptorSupplier
+      extends EventTelemetryBaseDescriptorSupplier
+      implements io.grpc.protobuf.ProtoMethodDescriptorSupplier {
+    private final String methodName;
+
+    EventTelemetryMethodDescriptorSupplier(String methodName) {
+      this.methodName = methodName;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Descriptors.MethodDescriptor getMethodDescriptor() {
+      return getServiceDescriptor().findMethodByName(methodName);
     }
   }
 
@@ -464,11 +571,11 @@ public final class EventTelemetryGrpc {
         result = serviceDescriptor;
         if (result == null) {
           serviceDescriptor = result = io.grpc.ServiceDescriptor.newBuilder(SERVICE_NAME)
-              .setSchemaDescriptor(new EventTelemetryDescriptorSupplier())
-              .addMethod(METHOD_PING)
-              .addMethod(METHOD_EVENT)
-              .addMethod(METHOD_BATCH)
-              .addMethod(METHOD_ERROR)
+              .setSchemaDescriptor(new EventTelemetryFileDescriptorSupplier())
+              .addMethod(getPingMethod())
+              .addMethod(getEventMethod())
+              .addMethod(getBatchMethod())
+              .addMethod(getErrorMethod())
               .build();
         }
       }

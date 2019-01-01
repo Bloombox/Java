@@ -1,11 +1,12 @@
 /*
- * Copyright 2018, Bloombox, LLC.
+ * Copyright 2018, Momentum Ideas, Co. All rights reserved.
  *
- * Licensed under the Apache License, Version 2.0 (the "License");
- * you may not use this file except in compliance with the License.
- * You may obtain a copy of the License at
- *
- *     http://www.apache.org/licenses/LICENSE-2.0
+ * Source and object computer code contained herein is the private intellectual
+ * property of Momentum Ideas Co., a Delaware Corporation. Use of this
+ * code in source form requires permission in writing before use or the
+ * assembly, distribution, or publishing of derivative works, for commercial
+ * purposes or any other purpose, from a duly authorized officer of Momentum
+ * Ideas Co.
  *
  * Unless required by applicable law or agreed to in writing, software
  * distributed under the License is distributed on an "AS IS" BASIS,
@@ -36,7 +37,7 @@ public final class DriversLicenseID {
    * document with OCR or reading the document's barcodes.
    * </pre>
    *
-   * Protobuf enum {@code bloombox.schema.identity.ids.USDLField}
+   * Protobuf enum {@code bloombox.identity.ids.USDLField}
    */
   public enum USDLField
       implements com.google.protobuf.ProtocolMessageEnum {
@@ -743,11 +744,11 @@ public final class DriversLicenseID {
       this.value = value;
     }
 
-    // @@protoc_insertion_point(enum_scope:bloombox.schema.identity.ids.USDLField)
+    // @@protoc_insertion_point(enum_scope:bloombox.identity.ids.USDLField)
   }
 
   public interface USDLFieldValueOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:bloombox.schema.identity.ids.USDLFieldValue)
+      // @@protoc_insertion_point(interface_extends:bloombox.identity.ids.USDLFieldValue)
       com.google.protobuf.MessageOrBuilder {
 
     /**
@@ -755,7 +756,7 @@ public final class DriversLicenseID {
      * Field that we are storing data for.
      * </pre>
      *
-     * <code>.bloombox.schema.identity.ids.USDLField field = 1 [(.gen_bq_schema.description) = "Field that we are storing data for."];</code>
+     * <code>.bloombox.identity.ids.USDLField field = 1 [(.gen_bq_schema.description) = "Field that we are storing data for."];</code>
      */
     int getFieldValue();
     /**
@@ -763,7 +764,7 @@ public final class DriversLicenseID {
      * Field that we are storing data for.
      * </pre>
      *
-     * <code>.bloombox.schema.identity.ids.USDLField field = 1 [(.gen_bq_schema.description) = "Field that we are storing data for."];</code>
+     * <code>.bloombox.identity.ids.USDLField field = 1 [(.gen_bq_schema.description) = "Field that we are storing data for."];</code>
      */
     io.bloombox.schema.identity.ids.DriversLicenseID.USDLField getField();
 
@@ -801,11 +802,11 @@ public final class DriversLicenseID {
    * Specifies an individual raw field value read or scanned from a United States Driver's License.
    * </pre>
    *
-   * Protobuf type {@code bloombox.schema.identity.ids.USDLFieldValue}
+   * Protobuf type {@code bloombox.identity.ids.USDLFieldValue}
    */
   public  static final class USDLFieldValue extends
       com.google.protobuf.GeneratedMessageV3 implements
-      // @@protoc_insertion_point(message_implements:bloombox.schema.identity.ids.USDLFieldValue)
+      // @@protoc_insertion_point(message_implements:bloombox.identity.ids.USDLFieldValue)
       USDLFieldValueOrBuilder {
   private static final long serialVersionUID = 0L;
     // Use USDLFieldValue.newBuilder() to construct.
@@ -840,13 +841,6 @@ public final class DriversLicenseID {
             case 0:
               done = true;
               break;
-            default: {
-              if (!parseUnknownFieldProto3(
-                  input, unknownFields, extensionRegistry, tag)) {
-                done = true;
-              }
-              break;
-            }
             case 8: {
               int rawValue = input.readEnum();
 
@@ -864,6 +858,13 @@ public final class DriversLicenseID {
               data_ = input.readBytes();
               break;
             }
+            default: {
+              if (!parseUnknownFieldProto3(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
           }
         }
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
@@ -878,12 +879,13 @@ public final class DriversLicenseID {
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return io.bloombox.schema.identity.ids.DriversLicenseID.internal_static_bloombox_schema_identity_ids_USDLFieldValue_descriptor;
+      return io.bloombox.schema.identity.ids.DriversLicenseID.internal_static_bloombox_identity_ids_USDLFieldValue_descriptor;
     }
 
+    @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return io.bloombox.schema.identity.ids.DriversLicenseID.internal_static_bloombox_schema_identity_ids_USDLFieldValue_fieldAccessorTable
+      return io.bloombox.schema.identity.ids.DriversLicenseID.internal_static_bloombox_identity_ids_USDLFieldValue_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
               io.bloombox.schema.identity.ids.DriversLicenseID.USDLFieldValue.class, io.bloombox.schema.identity.ids.DriversLicenseID.USDLFieldValue.Builder.class);
     }
@@ -933,7 +935,7 @@ public final class DriversLicenseID {
      * Field that we are storing data for.
      * </pre>
      *
-     * <code>.bloombox.schema.identity.ids.USDLField field = 1 [(.gen_bq_schema.description) = "Field that we are storing data for."];</code>
+     * <code>.bloombox.identity.ids.USDLField field = 1 [(.gen_bq_schema.description) = "Field that we are storing data for."];</code>
      */
     public int getFieldValue() {
       return field_;
@@ -943,9 +945,10 @@ public final class DriversLicenseID {
      * Field that we are storing data for.
      * </pre>
      *
-     * <code>.bloombox.schema.identity.ids.USDLField field = 1 [(.gen_bq_schema.description) = "Field that we are storing data for."];</code>
+     * <code>.bloombox.identity.ids.USDLField field = 1 [(.gen_bq_schema.description) = "Field that we are storing data for."];</code>
      */
     public io.bloombox.schema.identity.ids.DriversLicenseID.USDLField getField() {
+      @SuppressWarnings("deprecation")
       io.bloombox.schema.identity.ids.DriversLicenseID.USDLField result = io.bloombox.schema.identity.ids.DriversLicenseID.USDLField.valueOf(field_);
       return result == null ? io.bloombox.schema.identity.ids.DriversLicenseID.USDLField.UNRECOGNIZED : result;
     }
@@ -1017,6 +1020,7 @@ public final class DriversLicenseID {
     }
 
     private byte memoizedIsInitialized = -1;
+    @java.lang.Override
     public final boolean isInitialized() {
       byte isInitialized = memoizedIsInitialized;
       if (isInitialized == 1) return true;
@@ -1026,6 +1030,7 @@ public final class DriversLicenseID {
       return true;
     }
 
+    @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
       if (field_ != io.bloombox.schema.identity.ids.DriversLicenseID.USDLField.BACK_BARCODE.getNumber()) {
@@ -1041,6 +1046,7 @@ public final class DriversLicenseID {
       unknownFields.writeTo(output);
     }
 
+    @java.lang.Override
     public int getSerializedSize() {
       int size = memoizedSize;
       if (size != -1) return size;
@@ -1190,6 +1196,7 @@ public final class DriversLicenseID {
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
 
+    @java.lang.Override
     public Builder newBuilderForType() { return newBuilder(); }
     public static Builder newBuilder() {
       return DEFAULT_INSTANCE.toBuilder();
@@ -1197,6 +1204,7 @@ public final class DriversLicenseID {
     public static Builder newBuilder(io.bloombox.schema.identity.ids.DriversLicenseID.USDLFieldValue prototype) {
       return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
     }
+    @java.lang.Override
     public Builder toBuilder() {
       return this == DEFAULT_INSTANCE
           ? new Builder() : new Builder().mergeFrom(this);
@@ -1213,20 +1221,21 @@ public final class DriversLicenseID {
      * Specifies an individual raw field value read or scanned from a United States Driver's License.
      * </pre>
      *
-     * Protobuf type {@code bloombox.schema.identity.ids.USDLFieldValue}
+     * Protobuf type {@code bloombox.identity.ids.USDLFieldValue}
      */
     public static final class Builder extends
         com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:bloombox.schema.identity.ids.USDLFieldValue)
+        // @@protoc_insertion_point(builder_implements:bloombox.identity.ids.USDLFieldValue)
         io.bloombox.schema.identity.ids.DriversLicenseID.USDLFieldValueOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return io.bloombox.schema.identity.ids.DriversLicenseID.internal_static_bloombox_schema_identity_ids_USDLFieldValue_descriptor;
+        return io.bloombox.schema.identity.ids.DriversLicenseID.internal_static_bloombox_identity_ids_USDLFieldValue_descriptor;
       }
 
+      @java.lang.Override
       protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return io.bloombox.schema.identity.ids.DriversLicenseID.internal_static_bloombox_schema_identity_ids_USDLFieldValue_fieldAccessorTable
+        return io.bloombox.schema.identity.ids.DriversLicenseID.internal_static_bloombox_identity_ids_USDLFieldValue_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
                 io.bloombox.schema.identity.ids.DriversLicenseID.USDLFieldValue.class, io.bloombox.schema.identity.ids.DriversLicenseID.USDLFieldValue.Builder.class);
       }
@@ -1246,6 +1255,7 @@ public final class DriversLicenseID {
                 .alwaysUseFieldBuilders) {
         }
       }
+      @java.lang.Override
       public Builder clear() {
         super.clear();
         field_ = 0;
@@ -1255,15 +1265,18 @@ public final class DriversLicenseID {
         return this;
       }
 
+      @java.lang.Override
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return io.bloombox.schema.identity.ids.DriversLicenseID.internal_static_bloombox_schema_identity_ids_USDLFieldValue_descriptor;
+        return io.bloombox.schema.identity.ids.DriversLicenseID.internal_static_bloombox_identity_ids_USDLFieldValue_descriptor;
       }
 
+      @java.lang.Override
       public io.bloombox.schema.identity.ids.DriversLicenseID.USDLFieldValue getDefaultInstanceForType() {
         return io.bloombox.schema.identity.ids.DriversLicenseID.USDLFieldValue.getDefaultInstance();
       }
 
+      @java.lang.Override
       public io.bloombox.schema.identity.ids.DriversLicenseID.USDLFieldValue build() {
         io.bloombox.schema.identity.ids.DriversLicenseID.USDLFieldValue result = buildPartial();
         if (!result.isInitialized()) {
@@ -1272,6 +1285,7 @@ public final class DriversLicenseID {
         return result;
       }
 
+      @java.lang.Override
       public io.bloombox.schema.identity.ids.DriversLicenseID.USDLFieldValue buildPartial() {
         io.bloombox.schema.identity.ids.DriversLicenseID.USDLFieldValue result = new io.bloombox.schema.identity.ids.DriversLicenseID.USDLFieldValue(this);
         result.field_ = field_;
@@ -1286,32 +1300,39 @@ public final class DriversLicenseID {
         return result;
       }
 
+      @java.lang.Override
       public Builder clone() {
         return (Builder) super.clone();
       }
+      @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
         return (Builder) super.setField(field, value);
       }
+      @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
         return (Builder) super.clearField(field);
       }
+      @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
         return (Builder) super.clearOneof(oneof);
       }
+      @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
         return (Builder) super.setRepeatedField(field, index, value);
       }
+      @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
         return (Builder) super.addRepeatedField(field, value);
       }
+      @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
         if (other instanceof io.bloombox.schema.identity.ids.DriversLicenseID.USDLFieldValue) {
           return mergeFrom((io.bloombox.schema.identity.ids.DriversLicenseID.USDLFieldValue)other);
@@ -1346,10 +1367,12 @@ public final class DriversLicenseID {
         return this;
       }
 
+      @java.lang.Override
       public final boolean isInitialized() {
         return true;
       }
 
+      @java.lang.Override
       public Builder mergeFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -1389,7 +1412,7 @@ public final class DriversLicenseID {
        * Field that we are storing data for.
        * </pre>
        *
-       * <code>.bloombox.schema.identity.ids.USDLField field = 1 [(.gen_bq_schema.description) = "Field that we are storing data for."];</code>
+       * <code>.bloombox.identity.ids.USDLField field = 1 [(.gen_bq_schema.description) = "Field that we are storing data for."];</code>
        */
       public int getFieldValue() {
         return field_;
@@ -1399,7 +1422,7 @@ public final class DriversLicenseID {
        * Field that we are storing data for.
        * </pre>
        *
-       * <code>.bloombox.schema.identity.ids.USDLField field = 1 [(.gen_bq_schema.description) = "Field that we are storing data for."];</code>
+       * <code>.bloombox.identity.ids.USDLField field = 1 [(.gen_bq_schema.description) = "Field that we are storing data for."];</code>
        */
       public Builder setFieldValue(int value) {
         field_ = value;
@@ -1411,9 +1434,10 @@ public final class DriversLicenseID {
        * Field that we are storing data for.
        * </pre>
        *
-       * <code>.bloombox.schema.identity.ids.USDLField field = 1 [(.gen_bq_schema.description) = "Field that we are storing data for."];</code>
+       * <code>.bloombox.identity.ids.USDLField field = 1 [(.gen_bq_schema.description) = "Field that we are storing data for."];</code>
        */
       public io.bloombox.schema.identity.ids.DriversLicenseID.USDLField getField() {
+        @SuppressWarnings("deprecation")
         io.bloombox.schema.identity.ids.DriversLicenseID.USDLField result = io.bloombox.schema.identity.ids.DriversLicenseID.USDLField.valueOf(field_);
         return result == null ? io.bloombox.schema.identity.ids.DriversLicenseID.USDLField.UNRECOGNIZED : result;
       }
@@ -1422,7 +1446,7 @@ public final class DriversLicenseID {
        * Field that we are storing data for.
        * </pre>
        *
-       * <code>.bloombox.schema.identity.ids.USDLField field = 1 [(.gen_bq_schema.description) = "Field that we are storing data for."];</code>
+       * <code>.bloombox.identity.ids.USDLField field = 1 [(.gen_bq_schema.description) = "Field that we are storing data for."];</code>
        */
       public Builder setField(io.bloombox.schema.identity.ids.DriversLicenseID.USDLField value) {
         if (value == null) {
@@ -1438,7 +1462,7 @@ public final class DriversLicenseID {
        * Field that we are storing data for.
        * </pre>
        *
-       * <code>.bloombox.schema.identity.ids.USDLField field = 1 [(.gen_bq_schema.description) = "Field that we are storing data for."];</code>
+       * <code>.bloombox.identity.ids.USDLField field = 1 [(.gen_bq_schema.description) = "Field that we are storing data for."];</code>
        */
       public Builder clearField() {
         
@@ -1591,21 +1615,23 @@ public final class DriversLicenseID {
         }
         return this;
       }
+      @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
         return super.setUnknownFieldsProto3(unknownFields);
       }
 
+      @java.lang.Override
       public final Builder mergeUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
         return super.mergeUnknownFields(unknownFields);
       }
 
 
-      // @@protoc_insertion_point(builder_scope:bloombox.schema.identity.ids.USDLFieldValue)
+      // @@protoc_insertion_point(builder_scope:bloombox.identity.ids.USDLFieldValue)
     }
 
-    // @@protoc_insertion_point(class_scope:bloombox.schema.identity.ids.USDLFieldValue)
+    // @@protoc_insertion_point(class_scope:bloombox.identity.ids.USDLFieldValue)
     private static final io.bloombox.schema.identity.ids.DriversLicenseID.USDLFieldValue DEFAULT_INSTANCE;
     static {
       DEFAULT_INSTANCE = new io.bloombox.schema.identity.ids.DriversLicenseID.USDLFieldValue();
@@ -1617,6 +1643,7 @@ public final class DriversLicenseID {
 
     private static final com.google.protobuf.Parser<USDLFieldValue>
         PARSER = new com.google.protobuf.AbstractParser<USDLFieldValue>() {
+      @java.lang.Override
       public USDLFieldValue parsePartialFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -1634,6 +1661,7 @@ public final class DriversLicenseID {
       return PARSER;
     }
 
+    @java.lang.Override
     public io.bloombox.schema.identity.ids.DriversLicenseID.USDLFieldValue getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
@@ -1641,7 +1669,7 @@ public final class DriversLicenseID {
   }
 
   public interface USDLReferenceOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:bloombox.schema.identity.ids.USDLReference)
+      // @@protoc_insertion_point(interface_extends:bloombox.identity.ids.USDLReference)
       com.google.protobuf.MessageOrBuilder {
 
     /**
@@ -1705,11 +1733,11 @@ public final class DriversLicenseID {
    * Reference to a US Driver's License.
    * </pre>
    *
-   * Protobuf type {@code bloombox.schema.identity.ids.USDLReference}
+   * Protobuf type {@code bloombox.identity.ids.USDLReference}
    */
   public  static final class USDLReference extends
       com.google.protobuf.GeneratedMessageV3 implements
-      // @@protoc_insertion_point(message_implements:bloombox.schema.identity.ids.USDLReference)
+      // @@protoc_insertion_point(message_implements:bloombox.identity.ids.USDLReference)
       USDLReferenceOrBuilder {
   private static final long serialVersionUID = 0L;
     // Use USDLReference.newBuilder() to construct.
@@ -1744,13 +1772,6 @@ public final class DriversLicenseID {
             case 0:
               done = true;
               break;
-            default: {
-              if (!parseUnknownFieldProto3(
-                  input, unknownFields, extensionRegistry, tag)) {
-                done = true;
-              }
-              break;
-            }
             case 10: {
               java.lang.String s = input.readStringRequireUtf8();
 
@@ -1769,6 +1790,13 @@ public final class DriversLicenseID {
               data_ = s;
               break;
             }
+            default: {
+              if (!parseUnknownFieldProto3(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
           }
         }
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
@@ -1783,12 +1811,13 @@ public final class DriversLicenseID {
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return io.bloombox.schema.identity.ids.DriversLicenseID.internal_static_bloombox_schema_identity_ids_USDLReference_descriptor;
+      return io.bloombox.schema.identity.ids.DriversLicenseID.internal_static_bloombox_identity_ids_USDLReference_descriptor;
     }
 
+    @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return io.bloombox.schema.identity.ids.DriversLicenseID.internal_static_bloombox_schema_identity_ids_USDLReference_fieldAccessorTable
+      return io.bloombox.schema.identity.ids.DriversLicenseID.internal_static_bloombox_identity_ids_USDLReference_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
               io.bloombox.schema.identity.ids.DriversLicenseID.USDLReference.class, io.bloombox.schema.identity.ids.DriversLicenseID.USDLReference.Builder.class);
     }
@@ -1976,6 +2005,7 @@ public final class DriversLicenseID {
     }
 
     private byte memoizedIsInitialized = -1;
+    @java.lang.Override
     public final boolean isInitialized() {
       byte isInitialized = memoizedIsInitialized;
       if (isInitialized == 1) return true;
@@ -1985,6 +2015,7 @@ public final class DriversLicenseID {
       return true;
     }
 
+    @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
       if (!getNumberBytes().isEmpty()) {
@@ -1999,6 +2030,7 @@ public final class DriversLicenseID {
       unknownFields.writeTo(output);
     }
 
+    @java.lang.Override
     public int getSerializedSize() {
       int size = memoizedSize;
       if (size != -1) return size;
@@ -2146,6 +2178,7 @@ public final class DriversLicenseID {
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
 
+    @java.lang.Override
     public Builder newBuilderForType() { return newBuilder(); }
     public static Builder newBuilder() {
       return DEFAULT_INSTANCE.toBuilder();
@@ -2153,6 +2186,7 @@ public final class DriversLicenseID {
     public static Builder newBuilder(io.bloombox.schema.identity.ids.DriversLicenseID.USDLReference prototype) {
       return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
     }
+    @java.lang.Override
     public Builder toBuilder() {
       return this == DEFAULT_INSTANCE
           ? new Builder() : new Builder().mergeFrom(this);
@@ -2169,20 +2203,21 @@ public final class DriversLicenseID {
      * Reference to a US Driver's License.
      * </pre>
      *
-     * Protobuf type {@code bloombox.schema.identity.ids.USDLReference}
+     * Protobuf type {@code bloombox.identity.ids.USDLReference}
      */
     public static final class Builder extends
         com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:bloombox.schema.identity.ids.USDLReference)
+        // @@protoc_insertion_point(builder_implements:bloombox.identity.ids.USDLReference)
         io.bloombox.schema.identity.ids.DriversLicenseID.USDLReferenceOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return io.bloombox.schema.identity.ids.DriversLicenseID.internal_static_bloombox_schema_identity_ids_USDLReference_descriptor;
+        return io.bloombox.schema.identity.ids.DriversLicenseID.internal_static_bloombox_identity_ids_USDLReference_descriptor;
       }
 
+      @java.lang.Override
       protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return io.bloombox.schema.identity.ids.DriversLicenseID.internal_static_bloombox_schema_identity_ids_USDLReference_fieldAccessorTable
+        return io.bloombox.schema.identity.ids.DriversLicenseID.internal_static_bloombox_identity_ids_USDLReference_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
                 io.bloombox.schema.identity.ids.DriversLicenseID.USDLReference.class, io.bloombox.schema.identity.ids.DriversLicenseID.USDLReference.Builder.class);
       }
@@ -2202,6 +2237,7 @@ public final class DriversLicenseID {
                 .alwaysUseFieldBuilders) {
         }
       }
+      @java.lang.Override
       public Builder clear() {
         super.clear();
         number_ = "";
@@ -2211,15 +2247,18 @@ public final class DriversLicenseID {
         return this;
       }
 
+      @java.lang.Override
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return io.bloombox.schema.identity.ids.DriversLicenseID.internal_static_bloombox_schema_identity_ids_USDLReference_descriptor;
+        return io.bloombox.schema.identity.ids.DriversLicenseID.internal_static_bloombox_identity_ids_USDLReference_descriptor;
       }
 
+      @java.lang.Override
       public io.bloombox.schema.identity.ids.DriversLicenseID.USDLReference getDefaultInstanceForType() {
         return io.bloombox.schema.identity.ids.DriversLicenseID.USDLReference.getDefaultInstance();
       }
 
+      @java.lang.Override
       public io.bloombox.schema.identity.ids.DriversLicenseID.USDLReference build() {
         io.bloombox.schema.identity.ids.DriversLicenseID.USDLReference result = buildPartial();
         if (!result.isInitialized()) {
@@ -2228,6 +2267,7 @@ public final class DriversLicenseID {
         return result;
       }
 
+      @java.lang.Override
       public io.bloombox.schema.identity.ids.DriversLicenseID.USDLReference buildPartial() {
         io.bloombox.schema.identity.ids.DriversLicenseID.USDLReference result = new io.bloombox.schema.identity.ids.DriversLicenseID.USDLReference(this);
         result.number_ = number_;
@@ -2242,32 +2282,39 @@ public final class DriversLicenseID {
         return result;
       }
 
+      @java.lang.Override
       public Builder clone() {
         return (Builder) super.clone();
       }
+      @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
         return (Builder) super.setField(field, value);
       }
+      @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
         return (Builder) super.clearField(field);
       }
+      @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
         return (Builder) super.clearOneof(oneof);
       }
+      @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
         return (Builder) super.setRepeatedField(field, index, value);
       }
+      @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
         return (Builder) super.addRepeatedField(field, value);
       }
+      @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
         if (other instanceof io.bloombox.schema.identity.ids.DriversLicenseID.USDLReference) {
           return mergeFrom((io.bloombox.schema.identity.ids.DriversLicenseID.USDLReference)other);
@@ -2305,10 +2352,12 @@ public final class DriversLicenseID {
         return this;
       }
 
+      @java.lang.Override
       public final boolean isInitialized() {
         return true;
       }
 
+      @java.lang.Override
       public Builder mergeFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -2630,21 +2679,23 @@ public final class DriversLicenseID {
         onChanged();
         return this;
       }
+      @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
         return super.setUnknownFieldsProto3(unknownFields);
       }
 
+      @java.lang.Override
       public final Builder mergeUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
         return super.mergeUnknownFields(unknownFields);
       }
 
 
-      // @@protoc_insertion_point(builder_scope:bloombox.schema.identity.ids.USDLReference)
+      // @@protoc_insertion_point(builder_scope:bloombox.identity.ids.USDLReference)
     }
 
-    // @@protoc_insertion_point(class_scope:bloombox.schema.identity.ids.USDLReference)
+    // @@protoc_insertion_point(class_scope:bloombox.identity.ids.USDLReference)
     private static final io.bloombox.schema.identity.ids.DriversLicenseID.USDLReference DEFAULT_INSTANCE;
     static {
       DEFAULT_INSTANCE = new io.bloombox.schema.identity.ids.DriversLicenseID.USDLReference();
@@ -2656,6 +2707,7 @@ public final class DriversLicenseID {
 
     private static final com.google.protobuf.Parser<USDLReference>
         PARSER = new com.google.protobuf.AbstractParser<USDLReference>() {
+      @java.lang.Override
       public USDLReference parsePartialFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -2673,6 +2725,7 @@ public final class DriversLicenseID {
       return PARSER;
     }
 
+    @java.lang.Override
     public io.bloombox.schema.identity.ids.DriversLicenseID.USDLReference getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
@@ -2680,7 +2733,7 @@ public final class DriversLicenseID {
   }
 
   public interface USDLOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:bloombox.schema.identity.ids.USDL)
+      // @@protoc_insertion_point(interface_extends:bloombox.identity.ids.USDL)
       com.google.protobuf.MessageOrBuilder {
 
     /**
@@ -2750,7 +2803,7 @@ public final class DriversLicenseID {
      * Raw field data for this license.
      * </pre>
      *
-     * <code>repeated .bloombox.schema.identity.ids.USDLFieldValue fields = 100 [(.gen_bq_schema.description) = "Raw field data for this license."];</code>
+     * <code>repeated .bloombox.identity.ids.USDLFieldValue fields = 100 [(.gen_bq_schema.description) = "Raw field data for this license."];</code>
      */
     java.util.List<io.bloombox.schema.identity.ids.DriversLicenseID.USDLFieldValue> 
         getFieldsList();
@@ -2759,7 +2812,7 @@ public final class DriversLicenseID {
      * Raw field data for this license.
      * </pre>
      *
-     * <code>repeated .bloombox.schema.identity.ids.USDLFieldValue fields = 100 [(.gen_bq_schema.description) = "Raw field data for this license."];</code>
+     * <code>repeated .bloombox.identity.ids.USDLFieldValue fields = 100 [(.gen_bq_schema.description) = "Raw field data for this license."];</code>
      */
     io.bloombox.schema.identity.ids.DriversLicenseID.USDLFieldValue getFields(int index);
     /**
@@ -2767,7 +2820,7 @@ public final class DriversLicenseID {
      * Raw field data for this license.
      * </pre>
      *
-     * <code>repeated .bloombox.schema.identity.ids.USDLFieldValue fields = 100 [(.gen_bq_schema.description) = "Raw field data for this license."];</code>
+     * <code>repeated .bloombox.identity.ids.USDLFieldValue fields = 100 [(.gen_bq_schema.description) = "Raw field data for this license."];</code>
      */
     int getFieldsCount();
     /**
@@ -2775,7 +2828,7 @@ public final class DriversLicenseID {
      * Raw field data for this license.
      * </pre>
      *
-     * <code>repeated .bloombox.schema.identity.ids.USDLFieldValue fields = 100 [(.gen_bq_schema.description) = "Raw field data for this license."];</code>
+     * <code>repeated .bloombox.identity.ids.USDLFieldValue fields = 100 [(.gen_bq_schema.description) = "Raw field data for this license."];</code>
      */
     java.util.List<? extends io.bloombox.schema.identity.ids.DriversLicenseID.USDLFieldValueOrBuilder> 
         getFieldsOrBuilderList();
@@ -2784,7 +2837,7 @@ public final class DriversLicenseID {
      * Raw field data for this license.
      * </pre>
      *
-     * <code>repeated .bloombox.schema.identity.ids.USDLFieldValue fields = 100 [(.gen_bq_schema.description) = "Raw field data for this license."];</code>
+     * <code>repeated .bloombox.identity.ids.USDLFieldValue fields = 100 [(.gen_bq_schema.description) = "Raw field data for this license."];</code>
      */
     io.bloombox.schema.identity.ids.DriversLicenseID.USDLFieldValueOrBuilder getFieldsOrBuilder(
         int index);
@@ -2794,11 +2847,11 @@ public final class DriversLicenseID {
    * Specifies a United States Driver's License.
    * </pre>
    *
-   * Protobuf type {@code bloombox.schema.identity.ids.USDL}
+   * Protobuf type {@code bloombox.identity.ids.USDL}
    */
   public  static final class USDL extends
       com.google.protobuf.GeneratedMessageV3 implements
-      // @@protoc_insertion_point(message_implements:bloombox.schema.identity.ids.USDL)
+      // @@protoc_insertion_point(message_implements:bloombox.identity.ids.USDL)
       USDLOrBuilder {
   private static final long serialVersionUID = 0L;
     // Use USDL.newBuilder() to construct.
@@ -2837,13 +2890,6 @@ public final class DriversLicenseID {
             case 0:
               done = true;
               break;
-            default: {
-              if (!parseUnknownFieldProto3(
-                  input, unknownFields, extensionRegistry, tag)) {
-                done = true;
-              }
-              break;
-            }
             case 10: {
               java.lang.String s = input.readStringRequireUtf8();
 
@@ -2876,6 +2922,13 @@ public final class DriversLicenseID {
                   input.readMessage(io.bloombox.schema.identity.ids.DriversLicenseID.USDLFieldValue.parser(), extensionRegistry));
               break;
             }
+            default: {
+              if (!parseUnknownFieldProto3(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
           }
         }
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
@@ -2893,12 +2946,13 @@ public final class DriversLicenseID {
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return io.bloombox.schema.identity.ids.DriversLicenseID.internal_static_bloombox_schema_identity_ids_USDL_descriptor;
+      return io.bloombox.schema.identity.ids.DriversLicenseID.internal_static_bloombox_identity_ids_USDL_descriptor;
     }
 
+    @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return io.bloombox.schema.identity.ids.DriversLicenseID.internal_static_bloombox_schema_identity_ids_USDL_fieldAccessorTable
+      return io.bloombox.schema.identity.ids.DriversLicenseID.internal_static_bloombox_identity_ids_USDL_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
               io.bloombox.schema.identity.ids.DriversLicenseID.USDL.class, io.bloombox.schema.identity.ids.DriversLicenseID.USDL.Builder.class);
     }
@@ -3008,6 +3062,7 @@ public final class DriversLicenseID {
      * <code>.opencannabis.geo.usa.USState jurisdiction = 3 [(.gen_bq_schema.description) = "State that issued this Driver&#92;'s License."];</code>
      */
     public io.opencannabis.schema.geo.usa.USState getJurisdiction() {
+      @SuppressWarnings("deprecation")
       io.opencannabis.schema.geo.usa.USState result = io.opencannabis.schema.geo.usa.USState.valueOf(jurisdiction_);
       return result == null ? io.opencannabis.schema.geo.usa.USState.UNRECOGNIZED : result;
     }
@@ -3032,7 +3087,7 @@ public final class DriversLicenseID {
      * Raw field data for this license.
      * </pre>
      *
-     * <code>repeated .bloombox.schema.identity.ids.USDLFieldValue fields = 100 [(.gen_bq_schema.description) = "Raw field data for this license."];</code>
+     * <code>repeated .bloombox.identity.ids.USDLFieldValue fields = 100 [(.gen_bq_schema.description) = "Raw field data for this license."];</code>
      */
     public java.util.List<io.bloombox.schema.identity.ids.DriversLicenseID.USDLFieldValue> getFieldsList() {
       return fields_;
@@ -3042,7 +3097,7 @@ public final class DriversLicenseID {
      * Raw field data for this license.
      * </pre>
      *
-     * <code>repeated .bloombox.schema.identity.ids.USDLFieldValue fields = 100 [(.gen_bq_schema.description) = "Raw field data for this license."];</code>
+     * <code>repeated .bloombox.identity.ids.USDLFieldValue fields = 100 [(.gen_bq_schema.description) = "Raw field data for this license."];</code>
      */
     public java.util.List<? extends io.bloombox.schema.identity.ids.DriversLicenseID.USDLFieldValueOrBuilder> 
         getFieldsOrBuilderList() {
@@ -3053,7 +3108,7 @@ public final class DriversLicenseID {
      * Raw field data for this license.
      * </pre>
      *
-     * <code>repeated .bloombox.schema.identity.ids.USDLFieldValue fields = 100 [(.gen_bq_schema.description) = "Raw field data for this license."];</code>
+     * <code>repeated .bloombox.identity.ids.USDLFieldValue fields = 100 [(.gen_bq_schema.description) = "Raw field data for this license."];</code>
      */
     public int getFieldsCount() {
       return fields_.size();
@@ -3063,7 +3118,7 @@ public final class DriversLicenseID {
      * Raw field data for this license.
      * </pre>
      *
-     * <code>repeated .bloombox.schema.identity.ids.USDLFieldValue fields = 100 [(.gen_bq_schema.description) = "Raw field data for this license."];</code>
+     * <code>repeated .bloombox.identity.ids.USDLFieldValue fields = 100 [(.gen_bq_schema.description) = "Raw field data for this license."];</code>
      */
     public io.bloombox.schema.identity.ids.DriversLicenseID.USDLFieldValue getFields(int index) {
       return fields_.get(index);
@@ -3073,7 +3128,7 @@ public final class DriversLicenseID {
      * Raw field data for this license.
      * </pre>
      *
-     * <code>repeated .bloombox.schema.identity.ids.USDLFieldValue fields = 100 [(.gen_bq_schema.description) = "Raw field data for this license."];</code>
+     * <code>repeated .bloombox.identity.ids.USDLFieldValue fields = 100 [(.gen_bq_schema.description) = "Raw field data for this license."];</code>
      */
     public io.bloombox.schema.identity.ids.DriversLicenseID.USDLFieldValueOrBuilder getFieldsOrBuilder(
         int index) {
@@ -3081,6 +3136,7 @@ public final class DriversLicenseID {
     }
 
     private byte memoizedIsInitialized = -1;
+    @java.lang.Override
     public final boolean isInitialized() {
       byte isInitialized = memoizedIsInitialized;
       if (isInitialized == 1) return true;
@@ -3090,6 +3146,7 @@ public final class DriversLicenseID {
       return true;
     }
 
+    @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
       if (!getBarcodeBytes().isEmpty()) {
@@ -3110,6 +3167,7 @@ public final class DriversLicenseID {
       unknownFields.writeTo(output);
     }
 
+    @java.lang.Override
     public int getSerializedSize() {
       int size = memoizedSize;
       if (size != -1) return size;
@@ -3257,6 +3315,7 @@ public final class DriversLicenseID {
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
 
+    @java.lang.Override
     public Builder newBuilderForType() { return newBuilder(); }
     public static Builder newBuilder() {
       return DEFAULT_INSTANCE.toBuilder();
@@ -3264,6 +3323,7 @@ public final class DriversLicenseID {
     public static Builder newBuilder(io.bloombox.schema.identity.ids.DriversLicenseID.USDL prototype) {
       return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
     }
+    @java.lang.Override
     public Builder toBuilder() {
       return this == DEFAULT_INSTANCE
           ? new Builder() : new Builder().mergeFrom(this);
@@ -3280,20 +3340,21 @@ public final class DriversLicenseID {
      * Specifies a United States Driver's License.
      * </pre>
      *
-     * Protobuf type {@code bloombox.schema.identity.ids.USDL}
+     * Protobuf type {@code bloombox.identity.ids.USDL}
      */
     public static final class Builder extends
         com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:bloombox.schema.identity.ids.USDL)
+        // @@protoc_insertion_point(builder_implements:bloombox.identity.ids.USDL)
         io.bloombox.schema.identity.ids.DriversLicenseID.USDLOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return io.bloombox.schema.identity.ids.DriversLicenseID.internal_static_bloombox_schema_identity_ids_USDL_descriptor;
+        return io.bloombox.schema.identity.ids.DriversLicenseID.internal_static_bloombox_identity_ids_USDL_descriptor;
       }
 
+      @java.lang.Override
       protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return io.bloombox.schema.identity.ids.DriversLicenseID.internal_static_bloombox_schema_identity_ids_USDL_fieldAccessorTable
+        return io.bloombox.schema.identity.ids.DriversLicenseID.internal_static_bloombox_identity_ids_USDL_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
                 io.bloombox.schema.identity.ids.DriversLicenseID.USDL.class, io.bloombox.schema.identity.ids.DriversLicenseID.USDL.Builder.class);
       }
@@ -3314,6 +3375,7 @@ public final class DriversLicenseID {
           getFieldsFieldBuilder();
         }
       }
+      @java.lang.Override
       public Builder clear() {
         super.clear();
         barcode_ = "";
@@ -3333,15 +3395,18 @@ public final class DriversLicenseID {
         return this;
       }
 
+      @java.lang.Override
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return io.bloombox.schema.identity.ids.DriversLicenseID.internal_static_bloombox_schema_identity_ids_USDL_descriptor;
+        return io.bloombox.schema.identity.ids.DriversLicenseID.internal_static_bloombox_identity_ids_USDL_descriptor;
       }
 
+      @java.lang.Override
       public io.bloombox.schema.identity.ids.DriversLicenseID.USDL getDefaultInstanceForType() {
         return io.bloombox.schema.identity.ids.DriversLicenseID.USDL.getDefaultInstance();
       }
 
+      @java.lang.Override
       public io.bloombox.schema.identity.ids.DriversLicenseID.USDL build() {
         io.bloombox.schema.identity.ids.DriversLicenseID.USDL result = buildPartial();
         if (!result.isInitialized()) {
@@ -3350,6 +3415,7 @@ public final class DriversLicenseID {
         return result;
       }
 
+      @java.lang.Override
       public io.bloombox.schema.identity.ids.DriversLicenseID.USDL buildPartial() {
         io.bloombox.schema.identity.ids.DriversLicenseID.USDL result = new io.bloombox.schema.identity.ids.DriversLicenseID.USDL(this);
         int from_bitField0_ = bitField0_;
@@ -3372,32 +3438,39 @@ public final class DriversLicenseID {
         return result;
       }
 
+      @java.lang.Override
       public Builder clone() {
         return (Builder) super.clone();
       }
+      @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
         return (Builder) super.setField(field, value);
       }
+      @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
         return (Builder) super.clearField(field);
       }
+      @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
         return (Builder) super.clearOneof(oneof);
       }
+      @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
         return (Builder) super.setRepeatedField(field, index, value);
       }
+      @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
         return (Builder) super.addRepeatedField(field, value);
       }
+      @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
         if (other instanceof io.bloombox.schema.identity.ids.DriversLicenseID.USDL) {
           return mergeFrom((io.bloombox.schema.identity.ids.DriversLicenseID.USDL)other);
@@ -3454,10 +3527,12 @@ public final class DriversLicenseID {
         return this;
       }
 
+      @java.lang.Override
       public final boolean isInitialized() {
         return true;
       }
 
+      @java.lang.Override
       public Builder mergeFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -3686,6 +3761,7 @@ public final class DriversLicenseID {
        * <code>.opencannabis.geo.usa.USState jurisdiction = 3 [(.gen_bq_schema.description) = "State that issued this Driver&#92;'s License."];</code>
        */
       public io.opencannabis.schema.geo.usa.USState getJurisdiction() {
+        @SuppressWarnings("deprecation")
         io.opencannabis.schema.geo.usa.USState result = io.opencannabis.schema.geo.usa.USState.valueOf(jurisdiction_);
         return result == null ? io.opencannabis.schema.geo.usa.USState.UNRECOGNIZED : result;
       }
@@ -3774,7 +3850,7 @@ public final class DriversLicenseID {
        * Raw field data for this license.
        * </pre>
        *
-       * <code>repeated .bloombox.schema.identity.ids.USDLFieldValue fields = 100 [(.gen_bq_schema.description) = "Raw field data for this license."];</code>
+       * <code>repeated .bloombox.identity.ids.USDLFieldValue fields = 100 [(.gen_bq_schema.description) = "Raw field data for this license."];</code>
        */
       public java.util.List<io.bloombox.schema.identity.ids.DriversLicenseID.USDLFieldValue> getFieldsList() {
         if (fieldsBuilder_ == null) {
@@ -3788,7 +3864,7 @@ public final class DriversLicenseID {
        * Raw field data for this license.
        * </pre>
        *
-       * <code>repeated .bloombox.schema.identity.ids.USDLFieldValue fields = 100 [(.gen_bq_schema.description) = "Raw field data for this license."];</code>
+       * <code>repeated .bloombox.identity.ids.USDLFieldValue fields = 100 [(.gen_bq_schema.description) = "Raw field data for this license."];</code>
        */
       public int getFieldsCount() {
         if (fieldsBuilder_ == null) {
@@ -3802,7 +3878,7 @@ public final class DriversLicenseID {
        * Raw field data for this license.
        * </pre>
        *
-       * <code>repeated .bloombox.schema.identity.ids.USDLFieldValue fields = 100 [(.gen_bq_schema.description) = "Raw field data for this license."];</code>
+       * <code>repeated .bloombox.identity.ids.USDLFieldValue fields = 100 [(.gen_bq_schema.description) = "Raw field data for this license."];</code>
        */
       public io.bloombox.schema.identity.ids.DriversLicenseID.USDLFieldValue getFields(int index) {
         if (fieldsBuilder_ == null) {
@@ -3816,7 +3892,7 @@ public final class DriversLicenseID {
        * Raw field data for this license.
        * </pre>
        *
-       * <code>repeated .bloombox.schema.identity.ids.USDLFieldValue fields = 100 [(.gen_bq_schema.description) = "Raw field data for this license."];</code>
+       * <code>repeated .bloombox.identity.ids.USDLFieldValue fields = 100 [(.gen_bq_schema.description) = "Raw field data for this license."];</code>
        */
       public Builder setFields(
           int index, io.bloombox.schema.identity.ids.DriversLicenseID.USDLFieldValue value) {
@@ -3837,7 +3913,7 @@ public final class DriversLicenseID {
        * Raw field data for this license.
        * </pre>
        *
-       * <code>repeated .bloombox.schema.identity.ids.USDLFieldValue fields = 100 [(.gen_bq_schema.description) = "Raw field data for this license."];</code>
+       * <code>repeated .bloombox.identity.ids.USDLFieldValue fields = 100 [(.gen_bq_schema.description) = "Raw field data for this license."];</code>
        */
       public Builder setFields(
           int index, io.bloombox.schema.identity.ids.DriversLicenseID.USDLFieldValue.Builder builderForValue) {
@@ -3855,7 +3931,7 @@ public final class DriversLicenseID {
        * Raw field data for this license.
        * </pre>
        *
-       * <code>repeated .bloombox.schema.identity.ids.USDLFieldValue fields = 100 [(.gen_bq_schema.description) = "Raw field data for this license."];</code>
+       * <code>repeated .bloombox.identity.ids.USDLFieldValue fields = 100 [(.gen_bq_schema.description) = "Raw field data for this license."];</code>
        */
       public Builder addFields(io.bloombox.schema.identity.ids.DriversLicenseID.USDLFieldValue value) {
         if (fieldsBuilder_ == null) {
@@ -3875,7 +3951,7 @@ public final class DriversLicenseID {
        * Raw field data for this license.
        * </pre>
        *
-       * <code>repeated .bloombox.schema.identity.ids.USDLFieldValue fields = 100 [(.gen_bq_schema.description) = "Raw field data for this license."];</code>
+       * <code>repeated .bloombox.identity.ids.USDLFieldValue fields = 100 [(.gen_bq_schema.description) = "Raw field data for this license."];</code>
        */
       public Builder addFields(
           int index, io.bloombox.schema.identity.ids.DriversLicenseID.USDLFieldValue value) {
@@ -3896,7 +3972,7 @@ public final class DriversLicenseID {
        * Raw field data for this license.
        * </pre>
        *
-       * <code>repeated .bloombox.schema.identity.ids.USDLFieldValue fields = 100 [(.gen_bq_schema.description) = "Raw field data for this license."];</code>
+       * <code>repeated .bloombox.identity.ids.USDLFieldValue fields = 100 [(.gen_bq_schema.description) = "Raw field data for this license."];</code>
        */
       public Builder addFields(
           io.bloombox.schema.identity.ids.DriversLicenseID.USDLFieldValue.Builder builderForValue) {
@@ -3914,7 +3990,7 @@ public final class DriversLicenseID {
        * Raw field data for this license.
        * </pre>
        *
-       * <code>repeated .bloombox.schema.identity.ids.USDLFieldValue fields = 100 [(.gen_bq_schema.description) = "Raw field data for this license."];</code>
+       * <code>repeated .bloombox.identity.ids.USDLFieldValue fields = 100 [(.gen_bq_schema.description) = "Raw field data for this license."];</code>
        */
       public Builder addFields(
           int index, io.bloombox.schema.identity.ids.DriversLicenseID.USDLFieldValue.Builder builderForValue) {
@@ -3932,7 +4008,7 @@ public final class DriversLicenseID {
        * Raw field data for this license.
        * </pre>
        *
-       * <code>repeated .bloombox.schema.identity.ids.USDLFieldValue fields = 100 [(.gen_bq_schema.description) = "Raw field data for this license."];</code>
+       * <code>repeated .bloombox.identity.ids.USDLFieldValue fields = 100 [(.gen_bq_schema.description) = "Raw field data for this license."];</code>
        */
       public Builder addAllFields(
           java.lang.Iterable<? extends io.bloombox.schema.identity.ids.DriversLicenseID.USDLFieldValue> values) {
@@ -3951,7 +4027,7 @@ public final class DriversLicenseID {
        * Raw field data for this license.
        * </pre>
        *
-       * <code>repeated .bloombox.schema.identity.ids.USDLFieldValue fields = 100 [(.gen_bq_schema.description) = "Raw field data for this license."];</code>
+       * <code>repeated .bloombox.identity.ids.USDLFieldValue fields = 100 [(.gen_bq_schema.description) = "Raw field data for this license."];</code>
        */
       public Builder clearFields() {
         if (fieldsBuilder_ == null) {
@@ -3968,7 +4044,7 @@ public final class DriversLicenseID {
        * Raw field data for this license.
        * </pre>
        *
-       * <code>repeated .bloombox.schema.identity.ids.USDLFieldValue fields = 100 [(.gen_bq_schema.description) = "Raw field data for this license."];</code>
+       * <code>repeated .bloombox.identity.ids.USDLFieldValue fields = 100 [(.gen_bq_schema.description) = "Raw field data for this license."];</code>
        */
       public Builder removeFields(int index) {
         if (fieldsBuilder_ == null) {
@@ -3985,7 +4061,7 @@ public final class DriversLicenseID {
        * Raw field data for this license.
        * </pre>
        *
-       * <code>repeated .bloombox.schema.identity.ids.USDLFieldValue fields = 100 [(.gen_bq_schema.description) = "Raw field data for this license."];</code>
+       * <code>repeated .bloombox.identity.ids.USDLFieldValue fields = 100 [(.gen_bq_schema.description) = "Raw field data for this license."];</code>
        */
       public io.bloombox.schema.identity.ids.DriversLicenseID.USDLFieldValue.Builder getFieldsBuilder(
           int index) {
@@ -3996,7 +4072,7 @@ public final class DriversLicenseID {
        * Raw field data for this license.
        * </pre>
        *
-       * <code>repeated .bloombox.schema.identity.ids.USDLFieldValue fields = 100 [(.gen_bq_schema.description) = "Raw field data for this license."];</code>
+       * <code>repeated .bloombox.identity.ids.USDLFieldValue fields = 100 [(.gen_bq_schema.description) = "Raw field data for this license."];</code>
        */
       public io.bloombox.schema.identity.ids.DriversLicenseID.USDLFieldValueOrBuilder getFieldsOrBuilder(
           int index) {
@@ -4010,7 +4086,7 @@ public final class DriversLicenseID {
        * Raw field data for this license.
        * </pre>
        *
-       * <code>repeated .bloombox.schema.identity.ids.USDLFieldValue fields = 100 [(.gen_bq_schema.description) = "Raw field data for this license."];</code>
+       * <code>repeated .bloombox.identity.ids.USDLFieldValue fields = 100 [(.gen_bq_schema.description) = "Raw field data for this license."];</code>
        */
       public java.util.List<? extends io.bloombox.schema.identity.ids.DriversLicenseID.USDLFieldValueOrBuilder> 
            getFieldsOrBuilderList() {
@@ -4025,7 +4101,7 @@ public final class DriversLicenseID {
        * Raw field data for this license.
        * </pre>
        *
-       * <code>repeated .bloombox.schema.identity.ids.USDLFieldValue fields = 100 [(.gen_bq_schema.description) = "Raw field data for this license."];</code>
+       * <code>repeated .bloombox.identity.ids.USDLFieldValue fields = 100 [(.gen_bq_schema.description) = "Raw field data for this license."];</code>
        */
       public io.bloombox.schema.identity.ids.DriversLicenseID.USDLFieldValue.Builder addFieldsBuilder() {
         return getFieldsFieldBuilder().addBuilder(
@@ -4036,7 +4112,7 @@ public final class DriversLicenseID {
        * Raw field data for this license.
        * </pre>
        *
-       * <code>repeated .bloombox.schema.identity.ids.USDLFieldValue fields = 100 [(.gen_bq_schema.description) = "Raw field data for this license."];</code>
+       * <code>repeated .bloombox.identity.ids.USDLFieldValue fields = 100 [(.gen_bq_schema.description) = "Raw field data for this license."];</code>
        */
       public io.bloombox.schema.identity.ids.DriversLicenseID.USDLFieldValue.Builder addFieldsBuilder(
           int index) {
@@ -4048,7 +4124,7 @@ public final class DriversLicenseID {
        * Raw field data for this license.
        * </pre>
        *
-       * <code>repeated .bloombox.schema.identity.ids.USDLFieldValue fields = 100 [(.gen_bq_schema.description) = "Raw field data for this license."];</code>
+       * <code>repeated .bloombox.identity.ids.USDLFieldValue fields = 100 [(.gen_bq_schema.description) = "Raw field data for this license."];</code>
        */
       public java.util.List<io.bloombox.schema.identity.ids.DriversLicenseID.USDLFieldValue.Builder> 
            getFieldsBuilderList() {
@@ -4068,21 +4144,23 @@ public final class DriversLicenseID {
         }
         return fieldsBuilder_;
       }
+      @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
         return super.setUnknownFieldsProto3(unknownFields);
       }
 
+      @java.lang.Override
       public final Builder mergeUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
         return super.mergeUnknownFields(unknownFields);
       }
 
 
-      // @@protoc_insertion_point(builder_scope:bloombox.schema.identity.ids.USDL)
+      // @@protoc_insertion_point(builder_scope:bloombox.identity.ids.USDL)
     }
 
-    // @@protoc_insertion_point(class_scope:bloombox.schema.identity.ids.USDL)
+    // @@protoc_insertion_point(class_scope:bloombox.identity.ids.USDL)
     private static final io.bloombox.schema.identity.ids.DriversLicenseID.USDL DEFAULT_INSTANCE;
     static {
       DEFAULT_INSTANCE = new io.bloombox.schema.identity.ids.DriversLicenseID.USDL();
@@ -4094,6 +4172,7 @@ public final class DriversLicenseID {
 
     private static final com.google.protobuf.Parser<USDL>
         PARSER = new com.google.protobuf.AbstractParser<USDL>() {
+      @java.lang.Override
       public USDL parsePartialFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -4111,6 +4190,7 @@ public final class DriversLicenseID {
       return PARSER;
     }
 
+    @java.lang.Override
     public io.bloombox.schema.identity.ids.DriversLicenseID.USDL getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
@@ -4118,20 +4198,20 @@ public final class DriversLicenseID {
   }
 
   private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_bloombox_schema_identity_ids_USDLFieldValue_descriptor;
+    internal_static_bloombox_identity_ids_USDLFieldValue_descriptor;
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_bloombox_schema_identity_ids_USDLFieldValue_fieldAccessorTable;
+      internal_static_bloombox_identity_ids_USDLFieldValue_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_bloombox_schema_identity_ids_USDLReference_descriptor;
+    internal_static_bloombox_identity_ids_USDLReference_descriptor;
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_bloombox_schema_identity_ids_USDLReference_fieldAccessorTable;
+      internal_static_bloombox_identity_ids_USDLReference_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_bloombox_schema_identity_ids_USDL_descriptor;
+    internal_static_bloombox_identity_ids_USDL_descriptor;
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_bloombox_schema_identity_ids_USDL_fieldAccessorTable;
+      internal_static_bloombox_identity_ids_USDL_fieldAccessorTable;
 
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
@@ -4141,44 +4221,43 @@ public final class DriversLicenseID {
       descriptor;
   static {
     java.lang.String[] descriptorData = {
-      "\n\027identity/ids/USDL.proto\022\034bloombox.sche" +
-      "ma.identity.ids\032\016bq_field.proto\032\021geo/USS" +
-      "tate.proto\"\303\001\n\016USDLFieldValue\022^\n\005field\030\001" +
-      " \001(\0162\'.bloombox.schema.identity.ids.USDL" +
-      "FieldB&\212@#Field that we are storing data" +
-      " for.\022/\n\005value\030\002 \001(\tB\036\212@\033String data for" +
-      " this field.H\000\022\030\n\traw_value\030\003 \001(\014B\003\200@\001H\000" +
-      "B\006\n\004data\"O\n\rUSDLReference\022\016\n\006number\030\001 \001(" +
-      "\t\022\021\n\007barcode\030\002 \001(\tH\000\022\023\n\tmagstripe\030\003 \001(\tH" +
-      "\000B\006\n\004data\"\346\002\n\004USDL\022\024\n\007barcode\030\001 \001(\tB\003\200@\001" +
-      "\022\026\n\tmagstripe\030\002 \001(\tB\003\200@\001\022`\n\014jurisdiction" +
-      "\030\003 \001(\0162\035.opencannabis.geo.usa.USStateB+\212" +
-      "@(State that issued this Driver\'s Licens" +
-      "e.\022k\n\023identification_card\030\004 \001(\010BN\212@KFlag" +
-      " that indicates this is an identificatio" +
-      "n card, not a Driver\'s License.\022a\n\006field" +
-      "s\030d \003(\0132,.bloombox.schema.identity.ids.U" +
-      "SDLFieldValueB#\212@ Raw field data for thi" +
-      "s license.*\270\005\n\tUSDLField\022\020\n\014BACK_BARCODE" +
-      "\020\000\022\017\n\013FAMILY_NAME\020\001\022\016\n\nGIVEN_NAME\020\002\022\017\n\013M" +
-      "IDDLE_NAME\020\003\022\r\n\tFULL_NAME\020\004\022\017\n\013NAME_PREF" +
-      "IX\020\005\022\017\n\013NAME_SUFFIX\020\006\022\021\n\rDATE_OF_BIRTH\020\n" +
-      "\022\007\n\003SEX\020\013\022\n\n\006HEIGHT\020\014\022\n\n\006WEIGHT\020\r\022\r\n\tEYE" +
-      "_COLOR\020\016\022\016\n\nHAIR_COLOR\020\017\022\020\n\014FULL_ADDRESS" +
-      "\020\024\022\020\n\014ADDRESS_LINE\020\025\022\021\n\rADDRESS_LINE2\020\026\022" +
-      "\020\n\014ADDRESS_CITY\020\027\022\017\n\013POSTAL_CODE\020\030\022\026\n\022ST" +
-      "ATE_JURISDICTION\020\031\022\016\n\nLICENSE_ID\020\036\022\026\n\022LI" +
-      "CENSE_ISSUE_DATE\020\037\022\027\n\023LICENSE_EXPIRY_DAT" +
-      "E\020 \022\027\n\023ISSUER_JURISDICTION\020!\022&\n\"ISSUER_J" +
-      "URISDICTION_FORMAT_VERSION\020\"\022\030\n\024UNIQUE_D" +
-      "OCUMENT_CODE\020(\022\032\n\026INVENTORY_CONTROL_CODE" +
-      "\020)\022\021\n\rUNDER_18_DATE\0202\022\021\n\rUNDER_19_DATE\0203" +
-      "\022\021\n\rUNDER_21_DATE\0204\022\014\n\010UNDER_18\020<\022\014\n\010UND" +
-      "ER_19\020=\022\014\n\010UNDER_21\020>\022\017\n\013ORGAN_DONOR\020?\022\013" +
-      "\n\007VETERAN\020@\022\017\n\013NONRESIDENT\020A\022\022\n\016RACE_ETH" +
-      "NICITY\020F\022\023\n\017COMPLIANCE_TYPE\020GB=\n\037io.bloo" +
-      "mbox.schema.identity.idsB\020DriversLicense" +
-      "IDH\001P\000\242\002\003BBSb\006proto3"
+      "\n\027identity/ids/USDL.proto\022\025bloombox.iden" +
+      "tity.ids\032\016bq_field.proto\032\021geo/USState.pr" +
+      "oto\"\274\001\n\016USDLFieldValue\022W\n\005field\030\001 \001(\0162 ." +
+      "bloombox.identity.ids.USDLFieldB&\212@#Fiel" +
+      "d that we are storing data for.\022/\n\005value" +
+      "\030\002 \001(\tB\036\212@\033String data for this field.H\000" +
+      "\022\030\n\traw_value\030\003 \001(\014B\003\200@\001H\000B\006\n\004data\"O\n\rUS" +
+      "DLReference\022\016\n\006number\030\001 \001(\t\022\021\n\007barcode\030\002" +
+      " \001(\tH\000\022\023\n\tmagstripe\030\003 \001(\tH\000B\006\n\004data\"\337\002\n\004" +
+      "USDL\022\024\n\007barcode\030\001 \001(\tB\003\200@\001\022\026\n\tmagstripe\030" +
+      "\002 \001(\tB\003\200@\001\022`\n\014jurisdiction\030\003 \001(\0162\035.openc" +
+      "annabis.geo.usa.USStateB+\212@(State that i" +
+      "ssued this Driver\'s License.\022k\n\023identifi" +
+      "cation_card\030\004 \001(\010BN\212@KFlag that indicate" +
+      "s this is an identification card, not a " +
+      "Driver\'s License.\022Z\n\006fields\030d \003(\0132%.bloo" +
+      "mbox.identity.ids.USDLFieldValueB#\212@ Raw" +
+      " field data for this license.*\270\005\n\tUSDLFi" +
+      "eld\022\020\n\014BACK_BARCODE\020\000\022\017\n\013FAMILY_NAME\020\001\022\016" +
+      "\n\nGIVEN_NAME\020\002\022\017\n\013MIDDLE_NAME\020\003\022\r\n\tFULL_" +
+      "NAME\020\004\022\017\n\013NAME_PREFIX\020\005\022\017\n\013NAME_SUFFIX\020\006" +
+      "\022\021\n\rDATE_OF_BIRTH\020\n\022\007\n\003SEX\020\013\022\n\n\006HEIGHT\020\014" +
+      "\022\n\n\006WEIGHT\020\r\022\r\n\tEYE_COLOR\020\016\022\016\n\nHAIR_COLO" +
+      "R\020\017\022\020\n\014FULL_ADDRESS\020\024\022\020\n\014ADDRESS_LINE\020\025\022" +
+      "\021\n\rADDRESS_LINE2\020\026\022\020\n\014ADDRESS_CITY\020\027\022\017\n\013" +
+      "POSTAL_CODE\020\030\022\026\n\022STATE_JURISDICTION\020\031\022\016\n" +
+      "\nLICENSE_ID\020\036\022\026\n\022LICENSE_ISSUE_DATE\020\037\022\027\n" +
+      "\023LICENSE_EXPIRY_DATE\020 \022\027\n\023ISSUER_JURISDI" +
+      "CTION\020!\022&\n\"ISSUER_JURISDICTION_FORMAT_VE" +
+      "RSION\020\"\022\030\n\024UNIQUE_DOCUMENT_CODE\020(\022\032\n\026INV" +
+      "ENTORY_CONTROL_CODE\020)\022\021\n\rUNDER_18_DATE\0202" +
+      "\022\021\n\rUNDER_19_DATE\0203\022\021\n\rUNDER_21_DATE\0204\022\014" +
+      "\n\010UNDER_18\020<\022\014\n\010UNDER_19\020=\022\014\n\010UNDER_21\020>" +
+      "\022\017\n\013ORGAN_DONOR\020?\022\013\n\007VETERAN\020@\022\017\n\013NONRES" +
+      "IDENT\020A\022\022\n\016RACE_ETHNICITY\020F\022\023\n\017COMPLIANC" +
+      "E_TYPE\020GB=\n\037io.bloombox.schema.identity." +
+      "idsB\020DriversLicenseIDH\001P\000\242\002\003BBSb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -4194,23 +4273,23 @@ public final class DriversLicenseID {
           gen_bq_schema.BqField.getDescriptor(),
           io.opencannabis.schema.geo.usa.USStateOuterClass.getDescriptor(),
         }, assigner);
-    internal_static_bloombox_schema_identity_ids_USDLFieldValue_descriptor =
+    internal_static_bloombox_identity_ids_USDLFieldValue_descriptor =
       getDescriptor().getMessageTypes().get(0);
-    internal_static_bloombox_schema_identity_ids_USDLFieldValue_fieldAccessorTable = new
+    internal_static_bloombox_identity_ids_USDLFieldValue_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_bloombox_schema_identity_ids_USDLFieldValue_descriptor,
+        internal_static_bloombox_identity_ids_USDLFieldValue_descriptor,
         new java.lang.String[] { "Field", "Value", "RawValue", "Data", });
-    internal_static_bloombox_schema_identity_ids_USDLReference_descriptor =
+    internal_static_bloombox_identity_ids_USDLReference_descriptor =
       getDescriptor().getMessageTypes().get(1);
-    internal_static_bloombox_schema_identity_ids_USDLReference_fieldAccessorTable = new
+    internal_static_bloombox_identity_ids_USDLReference_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_bloombox_schema_identity_ids_USDLReference_descriptor,
+        internal_static_bloombox_identity_ids_USDLReference_descriptor,
         new java.lang.String[] { "Number", "Barcode", "Magstripe", "Data", });
-    internal_static_bloombox_schema_identity_ids_USDL_descriptor =
+    internal_static_bloombox_identity_ids_USDL_descriptor =
       getDescriptor().getMessageTypes().get(2);
-    internal_static_bloombox_schema_identity_ids_USDL_fieldAccessorTable = new
+    internal_static_bloombox_identity_ids_USDL_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_bloombox_schema_identity_ids_USDL_descriptor,
+        internal_static_bloombox_identity_ids_USDL_descriptor,
         new java.lang.String[] { "Barcode", "Magstripe", "Jurisdiction", "IdentificationCard", "Fields", });
     com.google.protobuf.ExtensionRegistry registry =
         com.google.protobuf.ExtensionRegistry.newInstance();

@@ -1,8 +1,8 @@
 /*
- * Copyright 2018, Bloombox, LLC. All rights reserved.
+ * Copyright 2018, Momentum Ideas, Co. All rights reserved.
  *
  * Source and object computer code contained herein is the private intellectual
- * property of Bloombox, a California Limited Liability Corporation. Use of this
+ * property of Momentum Ideas Co., a Delaware Corporation. Use of this
  * code in source form requires permission in writing before use or the
  * assembly, distribution, or publishing of derivative works, for commercial
  * purposes or any other purpose, from a duly authorized officer of Momentum
@@ -25,11 +25,11 @@ package io.bloombox.schema.services.partners.v1beta1;
  * Specifies an operation to fetch an individual location account.
  * </pre>
  *
- * Protobuf type {@code bloombox.schema.services.partners.v1beta1.LocationGet}
+ * Protobuf type {@code bloombox.services.partners.v1beta1.LocationGet}
  */
 public  final class LocationGet extends
     com.google.protobuf.GeneratedMessageV3 implements
-    // @@protoc_insertion_point(message_implements:bloombox.schema.services.partners.v1beta1.LocationGet)
+    // @@protoc_insertion_point(message_implements:bloombox.services.partners.v1beta1.LocationGet)
     LocationGetOrBuilder {
 private static final long serialVersionUID = 0L;
   // Use LocationGet.newBuilder() to construct.
@@ -83,18 +83,19 @@ private static final long serialVersionUID = 0L;
   }
   public static final com.google.protobuf.Descriptors.Descriptor
       getDescriptor() {
-    return io.bloombox.schema.services.partners.v1beta1.PartnersServiceBeta1.internal_static_bloombox_schema_services_partners_v1beta1_LocationGet_descriptor;
+    return io.bloombox.schema.services.partners.v1beta1.PartnersServiceBeta1.internal_static_bloombox_services_partners_v1beta1_LocationGet_descriptor;
   }
 
+  @java.lang.Override
   protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internalGetFieldAccessorTable() {
-    return io.bloombox.schema.services.partners.v1beta1.PartnersServiceBeta1.internal_static_bloombox_schema_services_partners_v1beta1_LocationGet_fieldAccessorTable
+    return io.bloombox.schema.services.partners.v1beta1.PartnersServiceBeta1.internal_static_bloombox_services_partners_v1beta1_LocationGet_fieldAccessorTable
         .ensureFieldAccessorsInitialized(
             io.bloombox.schema.services.partners.v1beta1.LocationGet.class, io.bloombox.schema.services.partners.v1beta1.LocationGet.Builder.class);
   }
 
   public interface RequestOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:bloombox.schema.services.partners.v1beta1.LocationGet.Request)
+      // @@protoc_insertion_point(interface_extends:bloombox.services.partners.v1beta1.LocationGet.Request)
       com.google.protobuf.MessageOrBuilder {
 
     /**
@@ -138,11 +139,11 @@ private static final long serialVersionUID = 0L;
    * Specifies a request to retrieve a location.
    * </pre>
    *
-   * Protobuf type {@code bloombox.schema.services.partners.v1beta1.LocationGet.Request}
+   * Protobuf type {@code bloombox.services.partners.v1beta1.LocationGet.Request}
    */
   public  static final class Request extends
       com.google.protobuf.GeneratedMessageV3 implements
-      // @@protoc_insertion_point(message_implements:bloombox.schema.services.partners.v1beta1.LocationGet.Request)
+      // @@protoc_insertion_point(message_implements:bloombox.services.partners.v1beta1.LocationGet.Request)
       RequestOrBuilder {
   private static final long serialVersionUID = 0L;
     // Use Request.newBuilder() to construct.
@@ -178,13 +179,6 @@ private static final long serialVersionUID = 0L;
             case 0:
               done = true;
               break;
-            default: {
-              if (!parseUnknownFieldProto3(
-                  input, unknownFields, extensionRegistry, tag)) {
-                done = true;
-              }
-              break;
-            }
             case 10: {
               java.lang.String s = input.readStringRequireUtf8();
 
@@ -195,6 +189,13 @@ private static final long serialVersionUID = 0L;
               java.lang.String s = input.readStringRequireUtf8();
 
               locationId_ = s;
+              break;
+            }
+            default: {
+              if (!parseUnknownFieldProto3(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
               break;
             }
           }
@@ -211,12 +212,13 @@ private static final long serialVersionUID = 0L;
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return io.bloombox.schema.services.partners.v1beta1.PartnersServiceBeta1.internal_static_bloombox_schema_services_partners_v1beta1_LocationGet_Request_descriptor;
+      return io.bloombox.schema.services.partners.v1beta1.PartnersServiceBeta1.internal_static_bloombox_services_partners_v1beta1_LocationGet_Request_descriptor;
     }
 
+    @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return io.bloombox.schema.services.partners.v1beta1.PartnersServiceBeta1.internal_static_bloombox_schema_services_partners_v1beta1_LocationGet_Request_fieldAccessorTable
+      return io.bloombox.schema.services.partners.v1beta1.PartnersServiceBeta1.internal_static_bloombox_services_partners_v1beta1_LocationGet_Request_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
               io.bloombox.schema.services.partners.v1beta1.LocationGet.Request.class, io.bloombox.schema.services.partners.v1beta1.LocationGet.Request.Builder.class);
     }
@@ -306,6 +308,7 @@ private static final long serialVersionUID = 0L;
     }
 
     private byte memoizedIsInitialized = -1;
+    @java.lang.Override
     public final boolean isInitialized() {
       byte isInitialized = memoizedIsInitialized;
       if (isInitialized == 1) return true;
@@ -315,6 +318,7 @@ private static final long serialVersionUID = 0L;
       return true;
     }
 
+    @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
       if (!getPartnerIdBytes().isEmpty()) {
@@ -326,6 +330,7 @@ private static final long serialVersionUID = 0L;
       unknownFields.writeTo(output);
     }
 
+    @java.lang.Override
     public int getSerializedSize() {
       int size = memoizedSize;
       if (size != -1) return size;
@@ -447,6 +452,7 @@ private static final long serialVersionUID = 0L;
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
 
+    @java.lang.Override
     public Builder newBuilderForType() { return newBuilder(); }
     public static Builder newBuilder() {
       return DEFAULT_INSTANCE.toBuilder();
@@ -454,6 +460,7 @@ private static final long serialVersionUID = 0L;
     public static Builder newBuilder(io.bloombox.schema.services.partners.v1beta1.LocationGet.Request prototype) {
       return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
     }
+    @java.lang.Override
     public Builder toBuilder() {
       return this == DEFAULT_INSTANCE
           ? new Builder() : new Builder().mergeFrom(this);
@@ -470,20 +477,21 @@ private static final long serialVersionUID = 0L;
      * Specifies a request to retrieve a location.
      * </pre>
      *
-     * Protobuf type {@code bloombox.schema.services.partners.v1beta1.LocationGet.Request}
+     * Protobuf type {@code bloombox.services.partners.v1beta1.LocationGet.Request}
      */
     public static final class Builder extends
         com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:bloombox.schema.services.partners.v1beta1.LocationGet.Request)
+        // @@protoc_insertion_point(builder_implements:bloombox.services.partners.v1beta1.LocationGet.Request)
         io.bloombox.schema.services.partners.v1beta1.LocationGet.RequestOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return io.bloombox.schema.services.partners.v1beta1.PartnersServiceBeta1.internal_static_bloombox_schema_services_partners_v1beta1_LocationGet_Request_descriptor;
+        return io.bloombox.schema.services.partners.v1beta1.PartnersServiceBeta1.internal_static_bloombox_services_partners_v1beta1_LocationGet_Request_descriptor;
       }
 
+      @java.lang.Override
       protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return io.bloombox.schema.services.partners.v1beta1.PartnersServiceBeta1.internal_static_bloombox_schema_services_partners_v1beta1_LocationGet_Request_fieldAccessorTable
+        return io.bloombox.schema.services.partners.v1beta1.PartnersServiceBeta1.internal_static_bloombox_services_partners_v1beta1_LocationGet_Request_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
                 io.bloombox.schema.services.partners.v1beta1.LocationGet.Request.class, io.bloombox.schema.services.partners.v1beta1.LocationGet.Request.Builder.class);
       }
@@ -503,6 +511,7 @@ private static final long serialVersionUID = 0L;
                 .alwaysUseFieldBuilders) {
         }
       }
+      @java.lang.Override
       public Builder clear() {
         super.clear();
         partnerId_ = "";
@@ -512,15 +521,18 @@ private static final long serialVersionUID = 0L;
         return this;
       }
 
+      @java.lang.Override
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return io.bloombox.schema.services.partners.v1beta1.PartnersServiceBeta1.internal_static_bloombox_schema_services_partners_v1beta1_LocationGet_Request_descriptor;
+        return io.bloombox.schema.services.partners.v1beta1.PartnersServiceBeta1.internal_static_bloombox_services_partners_v1beta1_LocationGet_Request_descriptor;
       }
 
+      @java.lang.Override
       public io.bloombox.schema.services.partners.v1beta1.LocationGet.Request getDefaultInstanceForType() {
         return io.bloombox.schema.services.partners.v1beta1.LocationGet.Request.getDefaultInstance();
       }
 
+      @java.lang.Override
       public io.bloombox.schema.services.partners.v1beta1.LocationGet.Request build() {
         io.bloombox.schema.services.partners.v1beta1.LocationGet.Request result = buildPartial();
         if (!result.isInitialized()) {
@@ -529,6 +541,7 @@ private static final long serialVersionUID = 0L;
         return result;
       }
 
+      @java.lang.Override
       public io.bloombox.schema.services.partners.v1beta1.LocationGet.Request buildPartial() {
         io.bloombox.schema.services.partners.v1beta1.LocationGet.Request result = new io.bloombox.schema.services.partners.v1beta1.LocationGet.Request(this);
         result.partnerId_ = partnerId_;
@@ -537,32 +550,39 @@ private static final long serialVersionUID = 0L;
         return result;
       }
 
+      @java.lang.Override
       public Builder clone() {
         return (Builder) super.clone();
       }
+      @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
         return (Builder) super.setField(field, value);
       }
+      @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
         return (Builder) super.clearField(field);
       }
+      @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
         return (Builder) super.clearOneof(oneof);
       }
+      @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
         return (Builder) super.setRepeatedField(field, index, value);
       }
+      @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
         return (Builder) super.addRepeatedField(field, value);
       }
+      @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
         if (other instanceof io.bloombox.schema.services.partners.v1beta1.LocationGet.Request) {
           return mergeFrom((io.bloombox.schema.services.partners.v1beta1.LocationGet.Request)other);
@@ -587,10 +607,12 @@ private static final long serialVersionUID = 0L;
         return this;
       }
 
+      @java.lang.Override
       public final boolean isInitialized() {
         return true;
       }
 
+      @java.lang.Override
       public Builder mergeFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -786,21 +808,23 @@ private static final long serialVersionUID = 0L;
         onChanged();
         return this;
       }
+      @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
         return super.setUnknownFieldsProto3(unknownFields);
       }
 
+      @java.lang.Override
       public final Builder mergeUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
         return super.mergeUnknownFields(unknownFields);
       }
 
 
-      // @@protoc_insertion_point(builder_scope:bloombox.schema.services.partners.v1beta1.LocationGet.Request)
+      // @@protoc_insertion_point(builder_scope:bloombox.services.partners.v1beta1.LocationGet.Request)
     }
 
-    // @@protoc_insertion_point(class_scope:bloombox.schema.services.partners.v1beta1.LocationGet.Request)
+    // @@protoc_insertion_point(class_scope:bloombox.services.partners.v1beta1.LocationGet.Request)
     private static final io.bloombox.schema.services.partners.v1beta1.LocationGet.Request DEFAULT_INSTANCE;
     static {
       DEFAULT_INSTANCE = new io.bloombox.schema.services.partners.v1beta1.LocationGet.Request();
@@ -812,6 +836,7 @@ private static final long serialVersionUID = 0L;
 
     private static final com.google.protobuf.Parser<Request>
         PARSER = new com.google.protobuf.AbstractParser<Request>() {
+      @java.lang.Override
       public Request parsePartialFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -829,6 +854,7 @@ private static final long serialVersionUID = 0L;
       return PARSER;
     }
 
+    @java.lang.Override
     public io.bloombox.schema.services.partners.v1beta1.LocationGet.Request getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
@@ -836,7 +862,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public interface ResponseOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:bloombox.schema.services.partners.v1beta1.LocationGet.Response)
+      // @@protoc_insertion_point(interface_extends:bloombox.services.partners.v1beta1.LocationGet.Response)
       com.google.protobuf.MessageOrBuilder {
 
     /**
@@ -844,7 +870,7 @@ private static final long serialVersionUID = 0L;
      * Resulting location record.
      * </pre>
      *
-     * <code>.bloombox.schema.partner.PartnerLocation location = 1;</code>
+     * <code>.bloombox.partner.PartnerLocation location = 1;</code>
      */
     boolean hasLocation();
     /**
@@ -852,7 +878,7 @@ private static final long serialVersionUID = 0L;
      * Resulting location record.
      * </pre>
      *
-     * <code>.bloombox.schema.partner.PartnerLocation location = 1;</code>
+     * <code>.bloombox.partner.PartnerLocation location = 1;</code>
      */
     io.bloombox.schema.partner.LocationAccount.PartnerLocation getLocation();
     /**
@@ -860,7 +886,7 @@ private static final long serialVersionUID = 0L;
      * Resulting location record.
      * </pre>
      *
-     * <code>.bloombox.schema.partner.PartnerLocation location = 1;</code>
+     * <code>.bloombox.partner.PartnerLocation location = 1;</code>
      */
     io.bloombox.schema.partner.LocationAccount.PartnerLocationOrBuilder getLocationOrBuilder();
   }
@@ -869,11 +895,11 @@ private static final long serialVersionUID = 0L;
    * Specifies a response with a fetched location.
    * </pre>
    *
-   * Protobuf type {@code bloombox.schema.services.partners.v1beta1.LocationGet.Response}
+   * Protobuf type {@code bloombox.services.partners.v1beta1.LocationGet.Response}
    */
   public  static final class Response extends
       com.google.protobuf.GeneratedMessageV3 implements
-      // @@protoc_insertion_point(message_implements:bloombox.schema.services.partners.v1beta1.LocationGet.Response)
+      // @@protoc_insertion_point(message_implements:bloombox.services.partners.v1beta1.LocationGet.Response)
       ResponseOrBuilder {
   private static final long serialVersionUID = 0L;
     // Use Response.newBuilder() to construct.
@@ -907,13 +933,6 @@ private static final long serialVersionUID = 0L;
             case 0:
               done = true;
               break;
-            default: {
-              if (!parseUnknownFieldProto3(
-                  input, unknownFields, extensionRegistry, tag)) {
-                done = true;
-              }
-              break;
-            }
             case 10: {
               io.bloombox.schema.partner.LocationAccount.PartnerLocation.Builder subBuilder = null;
               if (location_ != null) {
@@ -925,6 +944,13 @@ private static final long serialVersionUID = 0L;
                 location_ = subBuilder.buildPartial();
               }
 
+              break;
+            }
+            default: {
+              if (!parseUnknownFieldProto3(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
               break;
             }
           }
@@ -941,12 +967,13 @@ private static final long serialVersionUID = 0L;
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return io.bloombox.schema.services.partners.v1beta1.PartnersServiceBeta1.internal_static_bloombox_schema_services_partners_v1beta1_LocationGet_Response_descriptor;
+      return io.bloombox.schema.services.partners.v1beta1.PartnersServiceBeta1.internal_static_bloombox_services_partners_v1beta1_LocationGet_Response_descriptor;
     }
 
+    @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return io.bloombox.schema.services.partners.v1beta1.PartnersServiceBeta1.internal_static_bloombox_schema_services_partners_v1beta1_LocationGet_Response_fieldAccessorTable
+      return io.bloombox.schema.services.partners.v1beta1.PartnersServiceBeta1.internal_static_bloombox_services_partners_v1beta1_LocationGet_Response_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
               io.bloombox.schema.services.partners.v1beta1.LocationGet.Response.class, io.bloombox.schema.services.partners.v1beta1.LocationGet.Response.Builder.class);
     }
@@ -958,7 +985,7 @@ private static final long serialVersionUID = 0L;
      * Resulting location record.
      * </pre>
      *
-     * <code>.bloombox.schema.partner.PartnerLocation location = 1;</code>
+     * <code>.bloombox.partner.PartnerLocation location = 1;</code>
      */
     public boolean hasLocation() {
       return location_ != null;
@@ -968,7 +995,7 @@ private static final long serialVersionUID = 0L;
      * Resulting location record.
      * </pre>
      *
-     * <code>.bloombox.schema.partner.PartnerLocation location = 1;</code>
+     * <code>.bloombox.partner.PartnerLocation location = 1;</code>
      */
     public io.bloombox.schema.partner.LocationAccount.PartnerLocation getLocation() {
       return location_ == null ? io.bloombox.schema.partner.LocationAccount.PartnerLocation.getDefaultInstance() : location_;
@@ -978,13 +1005,14 @@ private static final long serialVersionUID = 0L;
      * Resulting location record.
      * </pre>
      *
-     * <code>.bloombox.schema.partner.PartnerLocation location = 1;</code>
+     * <code>.bloombox.partner.PartnerLocation location = 1;</code>
      */
     public io.bloombox.schema.partner.LocationAccount.PartnerLocationOrBuilder getLocationOrBuilder() {
       return getLocation();
     }
 
     private byte memoizedIsInitialized = -1;
+    @java.lang.Override
     public final boolean isInitialized() {
       byte isInitialized = memoizedIsInitialized;
       if (isInitialized == 1) return true;
@@ -994,6 +1022,7 @@ private static final long serialVersionUID = 0L;
       return true;
     }
 
+    @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
       if (location_ != null) {
@@ -1002,6 +1031,7 @@ private static final long serialVersionUID = 0L;
       unknownFields.writeTo(output);
     }
 
+    @java.lang.Override
     public int getSerializedSize() {
       int size = memoizedSize;
       if (size != -1) return size;
@@ -1122,6 +1152,7 @@ private static final long serialVersionUID = 0L;
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
 
+    @java.lang.Override
     public Builder newBuilderForType() { return newBuilder(); }
     public static Builder newBuilder() {
       return DEFAULT_INSTANCE.toBuilder();
@@ -1129,6 +1160,7 @@ private static final long serialVersionUID = 0L;
     public static Builder newBuilder(io.bloombox.schema.services.partners.v1beta1.LocationGet.Response prototype) {
       return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
     }
+    @java.lang.Override
     public Builder toBuilder() {
       return this == DEFAULT_INSTANCE
           ? new Builder() : new Builder().mergeFrom(this);
@@ -1145,20 +1177,21 @@ private static final long serialVersionUID = 0L;
      * Specifies a response with a fetched location.
      * </pre>
      *
-     * Protobuf type {@code bloombox.schema.services.partners.v1beta1.LocationGet.Response}
+     * Protobuf type {@code bloombox.services.partners.v1beta1.LocationGet.Response}
      */
     public static final class Builder extends
         com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:bloombox.schema.services.partners.v1beta1.LocationGet.Response)
+        // @@protoc_insertion_point(builder_implements:bloombox.services.partners.v1beta1.LocationGet.Response)
         io.bloombox.schema.services.partners.v1beta1.LocationGet.ResponseOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return io.bloombox.schema.services.partners.v1beta1.PartnersServiceBeta1.internal_static_bloombox_schema_services_partners_v1beta1_LocationGet_Response_descriptor;
+        return io.bloombox.schema.services.partners.v1beta1.PartnersServiceBeta1.internal_static_bloombox_services_partners_v1beta1_LocationGet_Response_descriptor;
       }
 
+      @java.lang.Override
       protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return io.bloombox.schema.services.partners.v1beta1.PartnersServiceBeta1.internal_static_bloombox_schema_services_partners_v1beta1_LocationGet_Response_fieldAccessorTable
+        return io.bloombox.schema.services.partners.v1beta1.PartnersServiceBeta1.internal_static_bloombox_services_partners_v1beta1_LocationGet_Response_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
                 io.bloombox.schema.services.partners.v1beta1.LocationGet.Response.class, io.bloombox.schema.services.partners.v1beta1.LocationGet.Response.Builder.class);
       }
@@ -1178,6 +1211,7 @@ private static final long serialVersionUID = 0L;
                 .alwaysUseFieldBuilders) {
         }
       }
+      @java.lang.Override
       public Builder clear() {
         super.clear();
         if (locationBuilder_ == null) {
@@ -1189,15 +1223,18 @@ private static final long serialVersionUID = 0L;
         return this;
       }
 
+      @java.lang.Override
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return io.bloombox.schema.services.partners.v1beta1.PartnersServiceBeta1.internal_static_bloombox_schema_services_partners_v1beta1_LocationGet_Response_descriptor;
+        return io.bloombox.schema.services.partners.v1beta1.PartnersServiceBeta1.internal_static_bloombox_services_partners_v1beta1_LocationGet_Response_descriptor;
       }
 
+      @java.lang.Override
       public io.bloombox.schema.services.partners.v1beta1.LocationGet.Response getDefaultInstanceForType() {
         return io.bloombox.schema.services.partners.v1beta1.LocationGet.Response.getDefaultInstance();
       }
 
+      @java.lang.Override
       public io.bloombox.schema.services.partners.v1beta1.LocationGet.Response build() {
         io.bloombox.schema.services.partners.v1beta1.LocationGet.Response result = buildPartial();
         if (!result.isInitialized()) {
@@ -1206,6 +1243,7 @@ private static final long serialVersionUID = 0L;
         return result;
       }
 
+      @java.lang.Override
       public io.bloombox.schema.services.partners.v1beta1.LocationGet.Response buildPartial() {
         io.bloombox.schema.services.partners.v1beta1.LocationGet.Response result = new io.bloombox.schema.services.partners.v1beta1.LocationGet.Response(this);
         if (locationBuilder_ == null) {
@@ -1217,32 +1255,39 @@ private static final long serialVersionUID = 0L;
         return result;
       }
 
+      @java.lang.Override
       public Builder clone() {
         return (Builder) super.clone();
       }
+      @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
         return (Builder) super.setField(field, value);
       }
+      @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
         return (Builder) super.clearField(field);
       }
+      @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
         return (Builder) super.clearOneof(oneof);
       }
+      @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
         return (Builder) super.setRepeatedField(field, index, value);
       }
+      @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
         return (Builder) super.addRepeatedField(field, value);
       }
+      @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
         if (other instanceof io.bloombox.schema.services.partners.v1beta1.LocationGet.Response) {
           return mergeFrom((io.bloombox.schema.services.partners.v1beta1.LocationGet.Response)other);
@@ -1262,10 +1307,12 @@ private static final long serialVersionUID = 0L;
         return this;
       }
 
+      @java.lang.Override
       public final boolean isInitialized() {
         return true;
       }
 
+      @java.lang.Override
       public Builder mergeFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -1292,7 +1339,7 @@ private static final long serialVersionUID = 0L;
        * Resulting location record.
        * </pre>
        *
-       * <code>.bloombox.schema.partner.PartnerLocation location = 1;</code>
+       * <code>.bloombox.partner.PartnerLocation location = 1;</code>
        */
       public boolean hasLocation() {
         return locationBuilder_ != null || location_ != null;
@@ -1302,7 +1349,7 @@ private static final long serialVersionUID = 0L;
        * Resulting location record.
        * </pre>
        *
-       * <code>.bloombox.schema.partner.PartnerLocation location = 1;</code>
+       * <code>.bloombox.partner.PartnerLocation location = 1;</code>
        */
       public io.bloombox.schema.partner.LocationAccount.PartnerLocation getLocation() {
         if (locationBuilder_ == null) {
@@ -1316,7 +1363,7 @@ private static final long serialVersionUID = 0L;
        * Resulting location record.
        * </pre>
        *
-       * <code>.bloombox.schema.partner.PartnerLocation location = 1;</code>
+       * <code>.bloombox.partner.PartnerLocation location = 1;</code>
        */
       public Builder setLocation(io.bloombox.schema.partner.LocationAccount.PartnerLocation value) {
         if (locationBuilder_ == null) {
@@ -1336,7 +1383,7 @@ private static final long serialVersionUID = 0L;
        * Resulting location record.
        * </pre>
        *
-       * <code>.bloombox.schema.partner.PartnerLocation location = 1;</code>
+       * <code>.bloombox.partner.PartnerLocation location = 1;</code>
        */
       public Builder setLocation(
           io.bloombox.schema.partner.LocationAccount.PartnerLocation.Builder builderForValue) {
@@ -1354,7 +1401,7 @@ private static final long serialVersionUID = 0L;
        * Resulting location record.
        * </pre>
        *
-       * <code>.bloombox.schema.partner.PartnerLocation location = 1;</code>
+       * <code>.bloombox.partner.PartnerLocation location = 1;</code>
        */
       public Builder mergeLocation(io.bloombox.schema.partner.LocationAccount.PartnerLocation value) {
         if (locationBuilder_ == null) {
@@ -1376,7 +1423,7 @@ private static final long serialVersionUID = 0L;
        * Resulting location record.
        * </pre>
        *
-       * <code>.bloombox.schema.partner.PartnerLocation location = 1;</code>
+       * <code>.bloombox.partner.PartnerLocation location = 1;</code>
        */
       public Builder clearLocation() {
         if (locationBuilder_ == null) {
@@ -1394,7 +1441,7 @@ private static final long serialVersionUID = 0L;
        * Resulting location record.
        * </pre>
        *
-       * <code>.bloombox.schema.partner.PartnerLocation location = 1;</code>
+       * <code>.bloombox.partner.PartnerLocation location = 1;</code>
        */
       public io.bloombox.schema.partner.LocationAccount.PartnerLocation.Builder getLocationBuilder() {
         
@@ -1406,7 +1453,7 @@ private static final long serialVersionUID = 0L;
        * Resulting location record.
        * </pre>
        *
-       * <code>.bloombox.schema.partner.PartnerLocation location = 1;</code>
+       * <code>.bloombox.partner.PartnerLocation location = 1;</code>
        */
       public io.bloombox.schema.partner.LocationAccount.PartnerLocationOrBuilder getLocationOrBuilder() {
         if (locationBuilder_ != null) {
@@ -1421,7 +1468,7 @@ private static final long serialVersionUID = 0L;
        * Resulting location record.
        * </pre>
        *
-       * <code>.bloombox.schema.partner.PartnerLocation location = 1;</code>
+       * <code>.bloombox.partner.PartnerLocation location = 1;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
           io.bloombox.schema.partner.LocationAccount.PartnerLocation, io.bloombox.schema.partner.LocationAccount.PartnerLocation.Builder, io.bloombox.schema.partner.LocationAccount.PartnerLocationOrBuilder> 
@@ -1436,21 +1483,23 @@ private static final long serialVersionUID = 0L;
         }
         return locationBuilder_;
       }
+      @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
         return super.setUnknownFieldsProto3(unknownFields);
       }
 
+      @java.lang.Override
       public final Builder mergeUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
         return super.mergeUnknownFields(unknownFields);
       }
 
 
-      // @@protoc_insertion_point(builder_scope:bloombox.schema.services.partners.v1beta1.LocationGet.Response)
+      // @@protoc_insertion_point(builder_scope:bloombox.services.partners.v1beta1.LocationGet.Response)
     }
 
-    // @@protoc_insertion_point(class_scope:bloombox.schema.services.partners.v1beta1.LocationGet.Response)
+    // @@protoc_insertion_point(class_scope:bloombox.services.partners.v1beta1.LocationGet.Response)
     private static final io.bloombox.schema.services.partners.v1beta1.LocationGet.Response DEFAULT_INSTANCE;
     static {
       DEFAULT_INSTANCE = new io.bloombox.schema.services.partners.v1beta1.LocationGet.Response();
@@ -1462,6 +1511,7 @@ private static final long serialVersionUID = 0L;
 
     private static final com.google.protobuf.Parser<Response>
         PARSER = new com.google.protobuf.AbstractParser<Response>() {
+      @java.lang.Override
       public Response parsePartialFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -1479,6 +1529,7 @@ private static final long serialVersionUID = 0L;
       return PARSER;
     }
 
+    @java.lang.Override
     public io.bloombox.schema.services.partners.v1beta1.LocationGet.Response getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
@@ -1486,6 +1537,7 @@ private static final long serialVersionUID = 0L;
   }
 
   private byte memoizedIsInitialized = -1;
+  @java.lang.Override
   public final boolean isInitialized() {
     byte isInitialized = memoizedIsInitialized;
     if (isInitialized == 1) return true;
@@ -1495,11 +1547,13 @@ private static final long serialVersionUID = 0L;
     return true;
   }
 
+  @java.lang.Override
   public void writeTo(com.google.protobuf.CodedOutputStream output)
                       throws java.io.IOException {
     unknownFields.writeTo(output);
   }
 
+  @java.lang.Override
   public int getSerializedSize() {
     int size = memoizedSize;
     if (size != -1) return size;
@@ -1607,6 +1661,7 @@ private static final long serialVersionUID = 0L;
         .parseWithIOException(PARSER, input, extensionRegistry);
   }
 
+  @java.lang.Override
   public Builder newBuilderForType() { return newBuilder(); }
   public static Builder newBuilder() {
     return DEFAULT_INSTANCE.toBuilder();
@@ -1614,6 +1669,7 @@ private static final long serialVersionUID = 0L;
   public static Builder newBuilder(io.bloombox.schema.services.partners.v1beta1.LocationGet prototype) {
     return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
   }
+  @java.lang.Override
   public Builder toBuilder() {
     return this == DEFAULT_INSTANCE
         ? new Builder() : new Builder().mergeFrom(this);
@@ -1630,20 +1686,21 @@ private static final long serialVersionUID = 0L;
    * Specifies an operation to fetch an individual location account.
    * </pre>
    *
-   * Protobuf type {@code bloombox.schema.services.partners.v1beta1.LocationGet}
+   * Protobuf type {@code bloombox.services.partners.v1beta1.LocationGet}
    */
   public static final class Builder extends
       com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-      // @@protoc_insertion_point(builder_implements:bloombox.schema.services.partners.v1beta1.LocationGet)
+      // @@protoc_insertion_point(builder_implements:bloombox.services.partners.v1beta1.LocationGet)
       io.bloombox.schema.services.partners.v1beta1.LocationGetOrBuilder {
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return io.bloombox.schema.services.partners.v1beta1.PartnersServiceBeta1.internal_static_bloombox_schema_services_partners_v1beta1_LocationGet_descriptor;
+      return io.bloombox.schema.services.partners.v1beta1.PartnersServiceBeta1.internal_static_bloombox_services_partners_v1beta1_LocationGet_descriptor;
     }
 
+    @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return io.bloombox.schema.services.partners.v1beta1.PartnersServiceBeta1.internal_static_bloombox_schema_services_partners_v1beta1_LocationGet_fieldAccessorTable
+      return io.bloombox.schema.services.partners.v1beta1.PartnersServiceBeta1.internal_static_bloombox_services_partners_v1beta1_LocationGet_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
               io.bloombox.schema.services.partners.v1beta1.LocationGet.class, io.bloombox.schema.services.partners.v1beta1.LocationGet.Builder.class);
     }
@@ -1663,20 +1720,24 @@ private static final long serialVersionUID = 0L;
               .alwaysUseFieldBuilders) {
       }
     }
+    @java.lang.Override
     public Builder clear() {
       super.clear();
       return this;
     }
 
+    @java.lang.Override
     public com.google.protobuf.Descriptors.Descriptor
         getDescriptorForType() {
-      return io.bloombox.schema.services.partners.v1beta1.PartnersServiceBeta1.internal_static_bloombox_schema_services_partners_v1beta1_LocationGet_descriptor;
+      return io.bloombox.schema.services.partners.v1beta1.PartnersServiceBeta1.internal_static_bloombox_services_partners_v1beta1_LocationGet_descriptor;
     }
 
+    @java.lang.Override
     public io.bloombox.schema.services.partners.v1beta1.LocationGet getDefaultInstanceForType() {
       return io.bloombox.schema.services.partners.v1beta1.LocationGet.getDefaultInstance();
     }
 
+    @java.lang.Override
     public io.bloombox.schema.services.partners.v1beta1.LocationGet build() {
       io.bloombox.schema.services.partners.v1beta1.LocationGet result = buildPartial();
       if (!result.isInitialized()) {
@@ -1685,38 +1746,46 @@ private static final long serialVersionUID = 0L;
       return result;
     }
 
+    @java.lang.Override
     public io.bloombox.schema.services.partners.v1beta1.LocationGet buildPartial() {
       io.bloombox.schema.services.partners.v1beta1.LocationGet result = new io.bloombox.schema.services.partners.v1beta1.LocationGet(this);
       onBuilt();
       return result;
     }
 
+    @java.lang.Override
     public Builder clone() {
       return (Builder) super.clone();
     }
+    @java.lang.Override
     public Builder setField(
         com.google.protobuf.Descriptors.FieldDescriptor field,
         java.lang.Object value) {
       return (Builder) super.setField(field, value);
     }
+    @java.lang.Override
     public Builder clearField(
         com.google.protobuf.Descriptors.FieldDescriptor field) {
       return (Builder) super.clearField(field);
     }
+    @java.lang.Override
     public Builder clearOneof(
         com.google.protobuf.Descriptors.OneofDescriptor oneof) {
       return (Builder) super.clearOneof(oneof);
     }
+    @java.lang.Override
     public Builder setRepeatedField(
         com.google.protobuf.Descriptors.FieldDescriptor field,
         int index, java.lang.Object value) {
       return (Builder) super.setRepeatedField(field, index, value);
     }
+    @java.lang.Override
     public Builder addRepeatedField(
         com.google.protobuf.Descriptors.FieldDescriptor field,
         java.lang.Object value) {
       return (Builder) super.addRepeatedField(field, value);
     }
+    @java.lang.Override
     public Builder mergeFrom(com.google.protobuf.Message other) {
       if (other instanceof io.bloombox.schema.services.partners.v1beta1.LocationGet) {
         return mergeFrom((io.bloombox.schema.services.partners.v1beta1.LocationGet)other);
@@ -1733,10 +1802,12 @@ private static final long serialVersionUID = 0L;
       return this;
     }
 
+    @java.lang.Override
     public final boolean isInitialized() {
       return true;
     }
 
+    @java.lang.Override
     public Builder mergeFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -1754,21 +1825,23 @@ private static final long serialVersionUID = 0L;
       }
       return this;
     }
+    @java.lang.Override
     public final Builder setUnknownFields(
         final com.google.protobuf.UnknownFieldSet unknownFields) {
       return super.setUnknownFieldsProto3(unknownFields);
     }
 
+    @java.lang.Override
     public final Builder mergeUnknownFields(
         final com.google.protobuf.UnknownFieldSet unknownFields) {
       return super.mergeUnknownFields(unknownFields);
     }
 
 
-    // @@protoc_insertion_point(builder_scope:bloombox.schema.services.partners.v1beta1.LocationGet)
+    // @@protoc_insertion_point(builder_scope:bloombox.services.partners.v1beta1.LocationGet)
   }
 
-  // @@protoc_insertion_point(class_scope:bloombox.schema.services.partners.v1beta1.LocationGet)
+  // @@protoc_insertion_point(class_scope:bloombox.services.partners.v1beta1.LocationGet)
   private static final io.bloombox.schema.services.partners.v1beta1.LocationGet DEFAULT_INSTANCE;
   static {
     DEFAULT_INSTANCE = new io.bloombox.schema.services.partners.v1beta1.LocationGet();
@@ -1780,6 +1853,7 @@ private static final long serialVersionUID = 0L;
 
   private static final com.google.protobuf.Parser<LocationGet>
       PARSER = new com.google.protobuf.AbstractParser<LocationGet>() {
+    @java.lang.Override
     public LocationGet parsePartialFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -1797,6 +1871,7 @@ private static final long serialVersionUID = 0L;
     return PARSER;
   }
 
+  @java.lang.Override
   public io.bloombox.schema.services.partners.v1beta1.LocationGet getDefaultInstanceForType() {
     return DEFAULT_INSTANCE;
   }

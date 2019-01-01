@@ -1,11 +1,12 @@
 /*
- * Copyright 2018, Bloombox, LLC.
+ * Copyright 2018, Momentum Ideas, Co. All rights reserved.
  *
- * Licensed under the Apache License, Version 2.0 (the "License");
- * you may not use this file except in compliance with the License.
- * You may obtain a copy of the License at
- *
- *     http://www.apache.org/licenses/LICENSE-2.0
+ * Source and object computer code contained herein is the private intellectual
+ * property of Momentum Ideas Co., a Delaware Corporation. Use of this
+ * code in source form requires permission in writing before use or the
+ * assembly, distribution, or publishing of derivative works, for commercial
+ * purposes or any other purpose, from a duly authorized officer of Momentum
+ * Ideas Co.
  *
  * Unless required by applicable law or agreed to in writing, software
  * distributed under the License is distributed on an "AS IS" BASIS,
@@ -31,7 +32,7 @@ public final class PassIDKey {
         (com.google.protobuf.ExtensionRegistryLite) registry);
   }
   public interface PassKeyOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:bloombox.schema.identity.pass.PassKey)
+      // @@protoc_insertion_point(interface_extends:bloombox.identity.pass.PassKey)
       com.google.protobuf.MessageOrBuilder {
 
     /**
@@ -129,11 +130,11 @@ public final class PassIDKey {
    * Specifies the key for a digital pass record.
    * </pre>
    *
-   * Protobuf type {@code bloombox.schema.identity.pass.PassKey}
+   * Protobuf type {@code bloombox.identity.pass.PassKey}
    */
   public  static final class PassKey extends
       com.google.protobuf.GeneratedMessageV3 implements
-      // @@protoc_insertion_point(message_implements:bloombox.schema.identity.pass.PassKey)
+      // @@protoc_insertion_point(message_implements:bloombox.identity.pass.PassKey)
       PassKeyOrBuilder {
   private static final long serialVersionUID = 0L;
     // Use PassKey.newBuilder() to construct.
@@ -172,13 +173,6 @@ public final class PassIDKey {
             case 0:
               done = true;
               break;
-            default: {
-              if (!parseUnknownFieldProto3(
-                  input, unknownFields, extensionRegistry, tag)) {
-                done = true;
-              }
-              break;
-            }
             case 10: {
               java.lang.String s = input.readStringRequireUtf8();
 
@@ -209,6 +203,13 @@ public final class PassIDKey {
               location_ = s;
               break;
             }
+            default: {
+              if (!parseUnknownFieldProto3(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
           }
         }
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
@@ -223,12 +224,13 @@ public final class PassIDKey {
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return io.bloombox.schema.pass.PassIDKey.internal_static_bloombox_schema_identity_pass_PassKey_descriptor;
+      return io.bloombox.schema.pass.PassIDKey.internal_static_bloombox_identity_pass_PassKey_descriptor;
     }
 
+    @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return io.bloombox.schema.pass.PassIDKey.internal_static_bloombox_schema_identity_pass_PassKey_fieldAccessorTable
+      return io.bloombox.schema.pass.PassIDKey.internal_static_bloombox_identity_pass_PassKey_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
               io.bloombox.schema.pass.PassIDKey.PassKey.class, io.bloombox.schema.pass.PassIDKey.PassKey.Builder.class);
     }
@@ -444,6 +446,7 @@ public final class PassIDKey {
     }
 
     private byte memoizedIsInitialized = -1;
+    @java.lang.Override
     public final boolean isInitialized() {
       byte isInitialized = memoizedIsInitialized;
       if (isInitialized == 1) return true;
@@ -453,6 +456,7 @@ public final class PassIDKey {
       return true;
     }
 
+    @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
       if (!getUuidBytes().isEmpty()) {
@@ -473,6 +477,7 @@ public final class PassIDKey {
       unknownFields.writeTo(output);
     }
 
+    @java.lang.Override
     public int getSerializedSize() {
       int size = memoizedSize;
       if (size != -1) return size;
@@ -615,6 +620,7 @@ public final class PassIDKey {
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
 
+    @java.lang.Override
     public Builder newBuilderForType() { return newBuilder(); }
     public static Builder newBuilder() {
       return DEFAULT_INSTANCE.toBuilder();
@@ -622,6 +628,7 @@ public final class PassIDKey {
     public static Builder newBuilder(io.bloombox.schema.pass.PassIDKey.PassKey prototype) {
       return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
     }
+    @java.lang.Override
     public Builder toBuilder() {
       return this == DEFAULT_INSTANCE
           ? new Builder() : new Builder().mergeFrom(this);
@@ -638,20 +645,21 @@ public final class PassIDKey {
      * Specifies the key for a digital pass record.
      * </pre>
      *
-     * Protobuf type {@code bloombox.schema.identity.pass.PassKey}
+     * Protobuf type {@code bloombox.identity.pass.PassKey}
      */
     public static final class Builder extends
         com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:bloombox.schema.identity.pass.PassKey)
+        // @@protoc_insertion_point(builder_implements:bloombox.identity.pass.PassKey)
         io.bloombox.schema.pass.PassIDKey.PassKeyOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return io.bloombox.schema.pass.PassIDKey.internal_static_bloombox_schema_identity_pass_PassKey_descriptor;
+        return io.bloombox.schema.pass.PassIDKey.internal_static_bloombox_identity_pass_PassKey_descriptor;
       }
 
+      @java.lang.Override
       protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return io.bloombox.schema.pass.PassIDKey.internal_static_bloombox_schema_identity_pass_PassKey_fieldAccessorTable
+        return io.bloombox.schema.pass.PassIDKey.internal_static_bloombox_identity_pass_PassKey_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
                 io.bloombox.schema.pass.PassIDKey.PassKey.class, io.bloombox.schema.pass.PassIDKey.PassKey.Builder.class);
       }
@@ -671,6 +679,7 @@ public final class PassIDKey {
                 .alwaysUseFieldBuilders) {
         }
       }
+      @java.lang.Override
       public Builder clear() {
         super.clear();
         uuid_ = "";
@@ -686,15 +695,18 @@ public final class PassIDKey {
         return this;
       }
 
+      @java.lang.Override
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return io.bloombox.schema.pass.PassIDKey.internal_static_bloombox_schema_identity_pass_PassKey_descriptor;
+        return io.bloombox.schema.pass.PassIDKey.internal_static_bloombox_identity_pass_PassKey_descriptor;
       }
 
+      @java.lang.Override
       public io.bloombox.schema.pass.PassIDKey.PassKey getDefaultInstanceForType() {
         return io.bloombox.schema.pass.PassIDKey.PassKey.getDefaultInstance();
       }
 
+      @java.lang.Override
       public io.bloombox.schema.pass.PassIDKey.PassKey build() {
         io.bloombox.schema.pass.PassIDKey.PassKey result = buildPartial();
         if (!result.isInitialized()) {
@@ -703,6 +715,7 @@ public final class PassIDKey {
         return result;
       }
 
+      @java.lang.Override
       public io.bloombox.schema.pass.PassIDKey.PassKey buildPartial() {
         io.bloombox.schema.pass.PassIDKey.PassKey result = new io.bloombox.schema.pass.PassIDKey.PassKey(this);
         result.uuid_ = uuid_;
@@ -714,32 +727,39 @@ public final class PassIDKey {
         return result;
       }
 
+      @java.lang.Override
       public Builder clone() {
         return (Builder) super.clone();
       }
+      @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
         return (Builder) super.setField(field, value);
       }
+      @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
         return (Builder) super.clearField(field);
       }
+      @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
         return (Builder) super.clearOneof(oneof);
       }
+      @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
         return (Builder) super.setRepeatedField(field, index, value);
       }
+      @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
         return (Builder) super.addRepeatedField(field, value);
       }
+      @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
         if (other instanceof io.bloombox.schema.pass.PassIDKey.PassKey) {
           return mergeFrom((io.bloombox.schema.pass.PassIDKey.PassKey)other);
@@ -776,10 +796,12 @@ public final class PassIDKey {
         return this;
       }
 
+      @java.lang.Override
       public final boolean isInitialized() {
         return true;
       }
 
+      @java.lang.Override
       public Builder mergeFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -1242,21 +1264,23 @@ public final class PassIDKey {
         onChanged();
         return this;
       }
+      @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
         return super.setUnknownFieldsProto3(unknownFields);
       }
 
+      @java.lang.Override
       public final Builder mergeUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
         return super.mergeUnknownFields(unknownFields);
       }
 
 
-      // @@protoc_insertion_point(builder_scope:bloombox.schema.identity.pass.PassKey)
+      // @@protoc_insertion_point(builder_scope:bloombox.identity.pass.PassKey)
     }
 
-    // @@protoc_insertion_point(class_scope:bloombox.schema.identity.pass.PassKey)
+    // @@protoc_insertion_point(class_scope:bloombox.identity.pass.PassKey)
     private static final io.bloombox.schema.pass.PassIDKey.PassKey DEFAULT_INSTANCE;
     static {
       DEFAULT_INSTANCE = new io.bloombox.schema.pass.PassIDKey.PassKey();
@@ -1268,6 +1292,7 @@ public final class PassIDKey {
 
     private static final com.google.protobuf.Parser<PassKey>
         PARSER = new com.google.protobuf.AbstractParser<PassKey>() {
+      @java.lang.Override
       public PassKey parsePartialFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -1285,6 +1310,7 @@ public final class PassIDKey {
       return PARSER;
     }
 
+    @java.lang.Override
     public io.bloombox.schema.pass.PassIDKey.PassKey getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
@@ -1292,7 +1318,7 @@ public final class PassIDKey {
   }
 
   public interface DigitalPassKeyOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:bloombox.schema.identity.pass.DigitalPassKey)
+      // @@protoc_insertion_point(interface_extends:bloombox.identity.pass.DigitalPassKey)
       com.google.protobuf.MessageOrBuilder {
 
     /**
@@ -1345,11 +1371,11 @@ public final class PassIDKey {
    * Specifies a reference to a digital pass.
    * </pre>
    *
-   * Protobuf type {@code bloombox.schema.identity.pass.DigitalPassKey}
+   * Protobuf type {@code bloombox.identity.pass.DigitalPassKey}
    */
   public  static final class DigitalPassKey extends
       com.google.protobuf.GeneratedMessageV3 implements
-      // @@protoc_insertion_point(message_implements:bloombox.schema.identity.pass.DigitalPassKey)
+      // @@protoc_insertion_point(message_implements:bloombox.identity.pass.DigitalPassKey)
       DigitalPassKeyOrBuilder {
   private static final long serialVersionUID = 0L;
     // Use DigitalPassKey.newBuilder() to construct.
@@ -1383,13 +1409,6 @@ public final class PassIDKey {
             case 0:
               done = true;
               break;
-            default: {
-              if (!parseUnknownFieldProto3(
-                  input, unknownFields, extensionRegistry, tag)) {
-                done = true;
-              }
-              break;
-            }
             case 10: {
               java.lang.String s = input.readStringRequireUtf8();
               referenceCase_ = 1;
@@ -1410,6 +1429,13 @@ public final class PassIDKey {
               referenceCase_ = 2;
               break;
             }
+            default: {
+              if (!parseUnknownFieldProto3(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
           }
         }
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
@@ -1424,12 +1450,13 @@ public final class PassIDKey {
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return io.bloombox.schema.pass.PassIDKey.internal_static_bloombox_schema_identity_pass_DigitalPassKey_descriptor;
+      return io.bloombox.schema.pass.PassIDKey.internal_static_bloombox_identity_pass_DigitalPassKey_descriptor;
     }
 
+    @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return io.bloombox.schema.pass.PassIDKey.internal_static_bloombox_schema_identity_pass_DigitalPassKey_fieldAccessorTable
+      return io.bloombox.schema.pass.PassIDKey.internal_static_bloombox_identity_pass_DigitalPassKey_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
               io.bloombox.schema.pass.PassIDKey.DigitalPassKey.class, io.bloombox.schema.pass.PassIDKey.DigitalPassKey.Builder.class);
     }
@@ -1562,6 +1589,7 @@ public final class PassIDKey {
     }
 
     private byte memoizedIsInitialized = -1;
+    @java.lang.Override
     public final boolean isInitialized() {
       byte isInitialized = memoizedIsInitialized;
       if (isInitialized == 1) return true;
@@ -1571,6 +1599,7 @@ public final class PassIDKey {
       return true;
     }
 
+    @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
       if (referenceCase_ == 1) {
@@ -1582,6 +1611,7 @@ public final class PassIDKey {
       unknownFields.writeTo(output);
     }
 
+    @java.lang.Override
     public int getSerializedSize() {
       int size = memoizedSize;
       if (size != -1) return size;
@@ -1723,6 +1753,7 @@ public final class PassIDKey {
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
 
+    @java.lang.Override
     public Builder newBuilderForType() { return newBuilder(); }
     public static Builder newBuilder() {
       return DEFAULT_INSTANCE.toBuilder();
@@ -1730,6 +1761,7 @@ public final class PassIDKey {
     public static Builder newBuilder(io.bloombox.schema.pass.PassIDKey.DigitalPassKey prototype) {
       return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
     }
+    @java.lang.Override
     public Builder toBuilder() {
       return this == DEFAULT_INSTANCE
           ? new Builder() : new Builder().mergeFrom(this);
@@ -1746,20 +1778,21 @@ public final class PassIDKey {
      * Specifies a reference to a digital pass.
      * </pre>
      *
-     * Protobuf type {@code bloombox.schema.identity.pass.DigitalPassKey}
+     * Protobuf type {@code bloombox.identity.pass.DigitalPassKey}
      */
     public static final class Builder extends
         com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:bloombox.schema.identity.pass.DigitalPassKey)
+        // @@protoc_insertion_point(builder_implements:bloombox.identity.pass.DigitalPassKey)
         io.bloombox.schema.pass.PassIDKey.DigitalPassKeyOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return io.bloombox.schema.pass.PassIDKey.internal_static_bloombox_schema_identity_pass_DigitalPassKey_descriptor;
+        return io.bloombox.schema.pass.PassIDKey.internal_static_bloombox_identity_pass_DigitalPassKey_descriptor;
       }
 
+      @java.lang.Override
       protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return io.bloombox.schema.pass.PassIDKey.internal_static_bloombox_schema_identity_pass_DigitalPassKey_fieldAccessorTable
+        return io.bloombox.schema.pass.PassIDKey.internal_static_bloombox_identity_pass_DigitalPassKey_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
                 io.bloombox.schema.pass.PassIDKey.DigitalPassKey.class, io.bloombox.schema.pass.PassIDKey.DigitalPassKey.Builder.class);
       }
@@ -1779,6 +1812,7 @@ public final class PassIDKey {
                 .alwaysUseFieldBuilders) {
         }
       }
+      @java.lang.Override
       public Builder clear() {
         super.clear();
         referenceCase_ = 0;
@@ -1786,15 +1820,18 @@ public final class PassIDKey {
         return this;
       }
 
+      @java.lang.Override
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return io.bloombox.schema.pass.PassIDKey.internal_static_bloombox_schema_identity_pass_DigitalPassKey_descriptor;
+        return io.bloombox.schema.pass.PassIDKey.internal_static_bloombox_identity_pass_DigitalPassKey_descriptor;
       }
 
+      @java.lang.Override
       public io.bloombox.schema.pass.PassIDKey.DigitalPassKey getDefaultInstanceForType() {
         return io.bloombox.schema.pass.PassIDKey.DigitalPassKey.getDefaultInstance();
       }
 
+      @java.lang.Override
       public io.bloombox.schema.pass.PassIDKey.DigitalPassKey build() {
         io.bloombox.schema.pass.PassIDKey.DigitalPassKey result = buildPartial();
         if (!result.isInitialized()) {
@@ -1803,6 +1840,7 @@ public final class PassIDKey {
         return result;
       }
 
+      @java.lang.Override
       public io.bloombox.schema.pass.PassIDKey.DigitalPassKey buildPartial() {
         io.bloombox.schema.pass.PassIDKey.DigitalPassKey result = new io.bloombox.schema.pass.PassIDKey.DigitalPassKey(this);
         if (referenceCase_ == 1) {
@@ -1820,32 +1858,39 @@ public final class PassIDKey {
         return result;
       }
 
+      @java.lang.Override
       public Builder clone() {
         return (Builder) super.clone();
       }
+      @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
         return (Builder) super.setField(field, value);
       }
+      @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
         return (Builder) super.clearField(field);
       }
+      @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
         return (Builder) super.clearOneof(oneof);
       }
+      @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
         return (Builder) super.setRepeatedField(field, index, value);
       }
+      @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
         return (Builder) super.addRepeatedField(field, value);
       }
+      @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
         if (other instanceof io.bloombox.schema.pass.PassIDKey.DigitalPassKey) {
           return mergeFrom((io.bloombox.schema.pass.PassIDKey.DigitalPassKey)other);
@@ -1877,10 +1922,12 @@ public final class PassIDKey {
         return this;
       }
 
+      @java.lang.Override
       public final boolean isInitialized() {
         return true;
       }
 
+      @java.lang.Override
       public Builder mergeFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -2185,21 +2232,23 @@ public final class PassIDKey {
         onChanged();;
         return beaconBuilder_;
       }
+      @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
         return super.setUnknownFieldsProto3(unknownFields);
       }
 
+      @java.lang.Override
       public final Builder mergeUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
         return super.mergeUnknownFields(unknownFields);
       }
 
 
-      // @@protoc_insertion_point(builder_scope:bloombox.schema.identity.pass.DigitalPassKey)
+      // @@protoc_insertion_point(builder_scope:bloombox.identity.pass.DigitalPassKey)
     }
 
-    // @@protoc_insertion_point(class_scope:bloombox.schema.identity.pass.DigitalPassKey)
+    // @@protoc_insertion_point(class_scope:bloombox.identity.pass.DigitalPassKey)
     private static final io.bloombox.schema.pass.PassIDKey.DigitalPassKey DEFAULT_INSTANCE;
     static {
       DEFAULT_INSTANCE = new io.bloombox.schema.pass.PassIDKey.DigitalPassKey();
@@ -2211,6 +2260,7 @@ public final class PassIDKey {
 
     private static final com.google.protobuf.Parser<DigitalPassKey>
         PARSER = new com.google.protobuf.AbstractParser<DigitalPassKey>() {
+      @java.lang.Override
       public DigitalPassKey parsePartialFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -2228,6 +2278,7 @@ public final class PassIDKey {
       return PARSER;
     }
 
+    @java.lang.Override
     public io.bloombox.schema.pass.PassIDKey.DigitalPassKey getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
@@ -2235,15 +2286,15 @@ public final class PassIDKey {
   }
 
   private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_bloombox_schema_identity_pass_PassKey_descriptor;
+    internal_static_bloombox_identity_pass_PassKey_descriptor;
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_bloombox_schema_identity_pass_PassKey_fieldAccessorTable;
+      internal_static_bloombox_identity_pass_PassKey_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_bloombox_schema_identity_pass_DigitalPassKey_descriptor;
+    internal_static_bloombox_identity_pass_DigitalPassKey_descriptor;
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_bloombox_schema_identity_pass_DigitalPassKey_fieldAccessorTable;
+      internal_static_bloombox_identity_pass_DigitalPassKey_fieldAccessorTable;
 
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
@@ -2253,16 +2304,16 @@ public final class PassIDKey {
       descriptor;
   static {
     java.lang.String[] descriptorData = {
-      "\n\033identity/pass/PassKey.proto\022\035bloombox." +
-      "schema.identity.pass\032\024core/Datamodel.pro" +
-      "to\032\037proximity/BluetoothBeacon.proto\"_\n\007P" +
-      "assKey\022\024\n\004uuid\030\001 \001(\tB\006\302\265\003\002\010\002\022\016\n\006serial\030\002" +
-      " \001(\t\022\013\n\003uid\030\003 \001(\t\022\017\n\007partner\030\004 \001(\t\022\020\n\010lo" +
-      "cation\030\005 \001(\t\"k\n\016DigitalPassKey\022\021\n\007barcod" +
-      "e\030\001 \001(\tH\000\0229\n\006beacon\030\002 \001(\0132\'.opencannabis" +
-      ".proximity.BluetoothBeaconH\000B\013\n\treferenc" +
-      "eB.\n\027io.bloombox.schema.passB\tPassIDKeyH" +
-      "\001P\000\242\002\003BBSb\006proto3"
+      "\n\033identity/pass/PassKey.proto\022\026bloombox." +
+      "identity.pass\032\024core/Datamodel.proto\032\037pro" +
+      "ximity/BluetoothBeacon.proto\"_\n\007PassKey\022" +
+      "\024\n\004uuid\030\001 \001(\tB\006\302\265\003\002\010\002\022\016\n\006serial\030\002 \001(\t\022\013\n" +
+      "\003uid\030\003 \001(\t\022\017\n\007partner\030\004 \001(\t\022\020\n\010location\030" +
+      "\005 \001(\t\"k\n\016DigitalPassKey\022\021\n\007barcode\030\001 \001(\t" +
+      "H\000\0229\n\006beacon\030\002 \001(\0132\'.opencannabis.proxim" +
+      "ity.BluetoothBeaconH\000B\013\n\treferenceB.\n\027io" +
+      ".bloombox.schema.passB\tPassIDKeyH\001P\000\242\002\003B" +
+      "BSb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -2278,17 +2329,17 @@ public final class PassIDKey {
           core.Datamodel.getDescriptor(),
           io.opencannabis.schema.proximity.BluetoothBeaconOuterClass.getDescriptor(),
         }, assigner);
-    internal_static_bloombox_schema_identity_pass_PassKey_descriptor =
+    internal_static_bloombox_identity_pass_PassKey_descriptor =
       getDescriptor().getMessageTypes().get(0);
-    internal_static_bloombox_schema_identity_pass_PassKey_fieldAccessorTable = new
+    internal_static_bloombox_identity_pass_PassKey_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_bloombox_schema_identity_pass_PassKey_descriptor,
+        internal_static_bloombox_identity_pass_PassKey_descriptor,
         new java.lang.String[] { "Uuid", "Serial", "Uid", "Partner", "Location", });
-    internal_static_bloombox_schema_identity_pass_DigitalPassKey_descriptor =
+    internal_static_bloombox_identity_pass_DigitalPassKey_descriptor =
       getDescriptor().getMessageTypes().get(1);
-    internal_static_bloombox_schema_identity_pass_DigitalPassKey_fieldAccessorTable = new
+    internal_static_bloombox_identity_pass_DigitalPassKey_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_bloombox_schema_identity_pass_DigitalPassKey_descriptor,
+        internal_static_bloombox_identity_pass_DigitalPassKey_descriptor,
         new java.lang.String[] { "Barcode", "Beacon", "Reference", });
     com.google.protobuf.ExtensionRegistry registry =
         com.google.protobuf.ExtensionRegistry.newInstance();

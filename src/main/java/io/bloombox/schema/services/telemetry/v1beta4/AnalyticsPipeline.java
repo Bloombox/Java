@@ -1,8 +1,8 @@
 /*
- * Copyright 2018, Bloombox, LLC. All rights reserved.
+ * Copyright 2018, Momentum Ideas, Co. All rights reserved.
  *
  * Source and object computer code contained herein is the private intellectual
- * property of Bloombox, a California Limited Liability Corporation. Use of this
+ * property of Momentum Ideas Co., a Delaware Corporation. Use of this
  * code in source form requires permission in writing before use or the
  * assembly, distribution, or publishing of derivative works, for commercial
  * purposes or any other purpose, from a duly authorized officer of Momentum
@@ -32,7 +32,7 @@ public final class AnalyticsPipeline {
         (com.google.protobuf.ExtensionRegistryLite) registry);
   }
   public interface TelemetryEventOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:bloombox.schema.services.telemetry.v1beta4.TelemetryEvent)
+      // @@protoc_insertion_point(interface_extends:bloombox.services.telemetry.v1beta4.TelemetryEvent)
       com.google.protobuf.MessageOrBuilder {
 
     /**
@@ -86,7 +86,7 @@ public final class AnalyticsPipeline {
      * 'Position', or timing, of the event, in various circumstances.
      * </pre>
      *
-     * <code>.bloombox.schema.analytics.EventPosition timing = 4;</code>
+     * <code>.bloombox.analytics.EventPosition timing = 4;</code>
      */
     boolean hasTiming();
     /**
@@ -94,7 +94,7 @@ public final class AnalyticsPipeline {
      * 'Position', or timing, of the event, in various circumstances.
      * </pre>
      *
-     * <code>.bloombox.schema.analytics.EventPosition timing = 4;</code>
+     * <code>.bloombox.analytics.EventPosition timing = 4;</code>
      */
     io.bloombox.schema.telemetry.AnalyticsContext.EventPosition getTiming();
     /**
@@ -102,7 +102,7 @@ public final class AnalyticsPipeline {
      * 'Position', or timing, of the event, in various circumstances.
      * </pre>
      *
-     * <code>.bloombox.schema.analytics.EventPosition timing = 4;</code>
+     * <code>.bloombox.analytics.EventPosition timing = 4;</code>
      */
     io.bloombox.schema.telemetry.AnalyticsContext.EventPositionOrBuilder getTimingOrBuilder();
 
@@ -111,7 +111,7 @@ public final class AnalyticsPipeline {
      * Event context.
      * </pre>
      *
-     * <code>.bloombox.schema.analytics.Context context = 5;</code>
+     * <code>.bloombox.analytics.Context context = 5;</code>
      */
     boolean hasContext();
     /**
@@ -119,7 +119,7 @@ public final class AnalyticsPipeline {
      * Event context.
      * </pre>
      *
-     * <code>.bloombox.schema.analytics.Context context = 5;</code>
+     * <code>.bloombox.analytics.Context context = 5;</code>
      */
     io.bloombox.schema.telemetry.AnalyticsContext.Context getContext();
     /**
@@ -127,7 +127,7 @@ public final class AnalyticsPipeline {
      * Event context.
      * </pre>
      *
-     * <code>.bloombox.schema.analytics.Context context = 5;</code>
+     * <code>.bloombox.analytics.Context context = 5;</code>
      */
     io.bloombox.schema.telemetry.AnalyticsContext.ContextOrBuilder getContextOrBuilder();
 
@@ -136,7 +136,7 @@ public final class AnalyticsPipeline {
      * Full event actor records.
      * </pre>
      *
-     * <code>.bloombox.schema.analytics.EventActors actors = 6;</code>
+     * <code>.bloombox.analytics.EventActors actors = 6;</code>
      */
     boolean hasActors();
     /**
@@ -144,7 +144,7 @@ public final class AnalyticsPipeline {
      * Full event actor records.
      * </pre>
      *
-     * <code>.bloombox.schema.analytics.EventActors actors = 6;</code>
+     * <code>.bloombox.analytics.EventActors actors = 6;</code>
      */
     io.bloombox.schema.telemetry.AnalyticsContext.EventActors getActors();
     /**
@@ -152,7 +152,7 @@ public final class AnalyticsPipeline {
      * Full event actor records.
      * </pre>
      *
-     * <code>.bloombox.schema.analytics.EventActors actors = 6;</code>
+     * <code>.bloombox.analytics.EventActors actors = 6;</code>
      */
     io.bloombox.schema.telemetry.AnalyticsContext.EventActorsOrBuilder getActorsOrBuilder();
 
@@ -161,7 +161,7 @@ public final class AnalyticsPipeline {
      * Generic: Event.
      * </pre>
      *
-     * <code>.bloombox.schema.analytics.generic.Event generic = 10;</code>
+     * <code>.bloombox.analytics.generic.Event generic = 10;</code>
      */
     boolean hasGeneric();
     /**
@@ -169,7 +169,7 @@ public final class AnalyticsPipeline {
      * Generic: Event.
      * </pre>
      *
-     * <code>.bloombox.schema.analytics.generic.Event generic = 10;</code>
+     * <code>.bloombox.analytics.generic.Event generic = 10;</code>
      */
     io.bloombox.schema.telemetry.AnalyticsEvent.Event getGeneric();
     /**
@@ -177,7 +177,7 @@ public final class AnalyticsPipeline {
      * Generic: Event.
      * </pre>
      *
-     * <code>.bloombox.schema.analytics.generic.Event generic = 10;</code>
+     * <code>.bloombox.analytics.generic.Event generic = 10;</code>
      */
     io.bloombox.schema.telemetry.AnalyticsEvent.EventOrBuilder getGenericOrBuilder();
 
@@ -186,7 +186,7 @@ public final class AnalyticsPipeline {
      * Generic: Exception.
      * </pre>
      *
-     * <code>.bloombox.schema.analytics.generic.Exception error = 11;</code>
+     * <code>.bloombox.analytics.generic.Exception error = 11;</code>
      */
     boolean hasError();
     /**
@@ -194,7 +194,7 @@ public final class AnalyticsPipeline {
      * Generic: Exception.
      * </pre>
      *
-     * <code>.bloombox.schema.analytics.generic.Exception error = 11;</code>
+     * <code>.bloombox.analytics.generic.Exception error = 11;</code>
      */
     io.bloombox.schema.telemetry.AnalyticsException.Exception getError();
     /**
@@ -202,7 +202,7 @@ public final class AnalyticsPipeline {
      * Generic: Exception.
      * </pre>
      *
-     * <code>.bloombox.schema.analytics.generic.Exception error = 11;</code>
+     * <code>.bloombox.analytics.generic.Exception error = 11;</code>
      */
     io.bloombox.schema.telemetry.AnalyticsException.ExceptionOrBuilder getErrorOrBuilder();
 
@@ -211,7 +211,7 @@ public final class AnalyticsPipeline {
      * Sections: Impression.
      * </pre>
      *
-     * <code>.bloombox.schema.services.telemetry.v1beta4.CommercialEvent.Impression impression = 20;</code>
+     * <code>.bloombox.services.telemetry.v1beta4.CommercialEvent.Impression impression = 20;</code>
      */
     boolean hasImpression();
     /**
@@ -219,7 +219,7 @@ public final class AnalyticsPipeline {
      * Sections: Impression.
      * </pre>
      *
-     * <code>.bloombox.schema.services.telemetry.v1beta4.CommercialEvent.Impression impression = 20;</code>
+     * <code>.bloombox.services.telemetry.v1beta4.CommercialEvent.Impression impression = 20;</code>
      */
     io.bloombox.schema.services.telemetry.v1beta4.CommercialEvent.Impression getImpression();
     /**
@@ -227,7 +227,7 @@ public final class AnalyticsPipeline {
      * Sections: Impression.
      * </pre>
      *
-     * <code>.bloombox.schema.services.telemetry.v1beta4.CommercialEvent.Impression impression = 20;</code>
+     * <code>.bloombox.services.telemetry.v1beta4.CommercialEvent.Impression impression = 20;</code>
      */
     io.bloombox.schema.services.telemetry.v1beta4.CommercialEvent.ImpressionOrBuilder getImpressionOrBuilder();
 
@@ -236,7 +236,7 @@ public final class AnalyticsPipeline {
      * Sections: View.
      * </pre>
      *
-     * <code>.bloombox.schema.services.telemetry.v1beta4.CommercialEvent.View view = 21;</code>
+     * <code>.bloombox.services.telemetry.v1beta4.CommercialEvent.View view = 21;</code>
      */
     boolean hasView();
     /**
@@ -244,7 +244,7 @@ public final class AnalyticsPipeline {
      * Sections: View.
      * </pre>
      *
-     * <code>.bloombox.schema.services.telemetry.v1beta4.CommercialEvent.View view = 21;</code>
+     * <code>.bloombox.services.telemetry.v1beta4.CommercialEvent.View view = 21;</code>
      */
     io.bloombox.schema.services.telemetry.v1beta4.CommercialEvent.View getView();
     /**
@@ -252,7 +252,7 @@ public final class AnalyticsPipeline {
      * Sections: View.
      * </pre>
      *
-     * <code>.bloombox.schema.services.telemetry.v1beta4.CommercialEvent.View view = 21;</code>
+     * <code>.bloombox.services.telemetry.v1beta4.CommercialEvent.View view = 21;</code>
      */
     io.bloombox.schema.services.telemetry.v1beta4.CommercialEvent.ViewOrBuilder getViewOrBuilder();
 
@@ -261,7 +261,7 @@ public final class AnalyticsPipeline {
      * Sections: Action.
      * </pre>
      *
-     * <code>.bloombox.schema.services.telemetry.v1beta4.CommercialEvent.Action action = 22;</code>
+     * <code>.bloombox.services.telemetry.v1beta4.CommercialEvent.Action action = 22;</code>
      */
     boolean hasAction();
     /**
@@ -269,7 +269,7 @@ public final class AnalyticsPipeline {
      * Sections: Action.
      * </pre>
      *
-     * <code>.bloombox.schema.services.telemetry.v1beta4.CommercialEvent.Action action = 22;</code>
+     * <code>.bloombox.services.telemetry.v1beta4.CommercialEvent.Action action = 22;</code>
      */
     io.bloombox.schema.services.telemetry.v1beta4.CommercialEvent.Action getAction();
     /**
@@ -277,7 +277,7 @@ public final class AnalyticsPipeline {
      * Sections: Action.
      * </pre>
      *
-     * <code>.bloombox.schema.services.telemetry.v1beta4.CommercialEvent.Action action = 22;</code>
+     * <code>.bloombox.services.telemetry.v1beta4.CommercialEvent.Action action = 22;</code>
      */
     io.bloombox.schema.services.telemetry.v1beta4.CommercialEvent.ActionOrBuilder getActionOrBuilder();
 
@@ -286,7 +286,7 @@ public final class AnalyticsPipeline {
      * Users: Action.
      * </pre>
      *
-     * <code>.bloombox.schema.services.telemetry.v1beta4.IdentityEvent.Action user_action = 30;</code>
+     * <code>.bloombox.services.telemetry.v1beta4.IdentityEvent.Action user_action = 30;</code>
      */
     boolean hasUserAction();
     /**
@@ -294,7 +294,7 @@ public final class AnalyticsPipeline {
      * Users: Action.
      * </pre>
      *
-     * <code>.bloombox.schema.services.telemetry.v1beta4.IdentityEvent.Action user_action = 30;</code>
+     * <code>.bloombox.services.telemetry.v1beta4.IdentityEvent.Action user_action = 30;</code>
      */
     io.bloombox.schema.services.telemetry.v1beta4.IdentityEvent.Action getUserAction();
     /**
@@ -302,7 +302,7 @@ public final class AnalyticsPipeline {
      * Users: Action.
      * </pre>
      *
-     * <code>.bloombox.schema.services.telemetry.v1beta4.IdentityEvent.Action user_action = 30;</code>
+     * <code>.bloombox.services.telemetry.v1beta4.IdentityEvent.Action user_action = 30;</code>
      */
     io.bloombox.schema.services.telemetry.v1beta4.IdentityEvent.ActionOrBuilder getUserActionOrBuilder();
 
@@ -311,7 +311,7 @@ public final class AnalyticsPipeline {
      * Search: Query.
      * </pre>
      *
-     * <code>.bloombox.schema.services.telemetry.v1beta4.SearchEvent.Query search_query = 31;</code>
+     * <code>.bloombox.services.telemetry.v1beta4.SearchEvent.Query search_query = 31;</code>
      */
     boolean hasSearchQuery();
     /**
@@ -319,7 +319,7 @@ public final class AnalyticsPipeline {
      * Search: Query.
      * </pre>
      *
-     * <code>.bloombox.schema.services.telemetry.v1beta4.SearchEvent.Query search_query = 31;</code>
+     * <code>.bloombox.services.telemetry.v1beta4.SearchEvent.Query search_query = 31;</code>
      */
     io.bloombox.schema.services.telemetry.v1beta4.SearchEvent.Query getSearchQuery();
     /**
@@ -327,7 +327,7 @@ public final class AnalyticsPipeline {
      * Search: Query.
      * </pre>
      *
-     * <code>.bloombox.schema.services.telemetry.v1beta4.SearchEvent.Query search_query = 31;</code>
+     * <code>.bloombox.services.telemetry.v1beta4.SearchEvent.Query search_query = 31;</code>
      */
     io.bloombox.schema.services.telemetry.v1beta4.SearchEvent.QueryOrBuilder getSearchQueryOrBuilder();
 
@@ -336,7 +336,7 @@ public final class AnalyticsPipeline {
      * Search: Result.
      * </pre>
      *
-     * <code>.bloombox.schema.services.telemetry.v1beta4.SearchEvent.Result search_result = 32;</code>
+     * <code>.bloombox.services.telemetry.v1beta4.SearchEvent.Result search_result = 32;</code>
      */
     boolean hasSearchResult();
     /**
@@ -344,7 +344,7 @@ public final class AnalyticsPipeline {
      * Search: Result.
      * </pre>
      *
-     * <code>.bloombox.schema.services.telemetry.v1beta4.SearchEvent.Result search_result = 32;</code>
+     * <code>.bloombox.services.telemetry.v1beta4.SearchEvent.Result search_result = 32;</code>
      */
     io.bloombox.schema.services.telemetry.v1beta4.SearchEvent.Result getSearchResult();
     /**
@@ -352,7 +352,7 @@ public final class AnalyticsPipeline {
      * Search: Result.
      * </pre>
      *
-     * <code>.bloombox.schema.services.telemetry.v1beta4.SearchEvent.Result search_result = 32;</code>
+     * <code>.bloombox.services.telemetry.v1beta4.SearchEvent.Result search_result = 32;</code>
      */
     io.bloombox.schema.services.telemetry.v1beta4.SearchEvent.ResultOrBuilder getSearchResultOrBuilder();
 
@@ -363,11 +363,11 @@ public final class AnalyticsPipeline {
    * Wrapper object that provides support for transporting telemetry data of any kind.
    * </pre>
    *
-   * Protobuf type {@code bloombox.schema.services.telemetry.v1beta4.TelemetryEvent}
+   * Protobuf type {@code bloombox.services.telemetry.v1beta4.TelemetryEvent}
    */
   public  static final class TelemetryEvent extends
       com.google.protobuf.GeneratedMessageV3 implements
-      // @@protoc_insertion_point(message_implements:bloombox.schema.services.telemetry.v1beta4.TelemetryEvent)
+      // @@protoc_insertion_point(message_implements:bloombox.services.telemetry.v1beta4.TelemetryEvent)
       TelemetryEventOrBuilder {
   private static final long serialVersionUID = 0L;
     // Use TelemetryEvent.newBuilder() to construct.
@@ -404,13 +404,6 @@ public final class AnalyticsPipeline {
             case 0:
               done = true;
               break;
-            default: {
-              if (!parseUnknownFieldProto3(
-                  input, unknownFields, extensionRegistry, tag)) {
-                done = true;
-              }
-              break;
-            }
             case 10: {
               java.lang.String s = input.readStringRequireUtf8();
 
@@ -579,6 +572,13 @@ public final class AnalyticsPipeline {
               eventCase_ = 32;
               break;
             }
+            default: {
+              if (!parseUnknownFieldProto3(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
           }
         }
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
@@ -593,12 +593,13 @@ public final class AnalyticsPipeline {
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return io.bloombox.schema.services.telemetry.v1beta4.AnalyticsPipeline.internal_static_bloombox_schema_services_telemetry_v1beta4_TelemetryEvent_descriptor;
+      return io.bloombox.schema.services.telemetry.v1beta4.AnalyticsPipeline.internal_static_bloombox_services_telemetry_v1beta4_TelemetryEvent_descriptor;
     }
 
+    @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return io.bloombox.schema.services.telemetry.v1beta4.AnalyticsPipeline.internal_static_bloombox_schema_services_telemetry_v1beta4_TelemetryEvent_fieldAccessorTable
+      return io.bloombox.schema.services.telemetry.v1beta4.AnalyticsPipeline.internal_static_bloombox_services_telemetry_v1beta4_TelemetryEvent_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
               io.bloombox.schema.services.telemetry.v1beta4.AnalyticsPipeline.TelemetryEvent.class, io.bloombox.schema.services.telemetry.v1beta4.AnalyticsPipeline.TelemetryEvent.Builder.class);
     }
@@ -758,7 +759,7 @@ public final class AnalyticsPipeline {
      * 'Position', or timing, of the event, in various circumstances.
      * </pre>
      *
-     * <code>.bloombox.schema.analytics.EventPosition timing = 4;</code>
+     * <code>.bloombox.analytics.EventPosition timing = 4;</code>
      */
     public boolean hasTiming() {
       return timing_ != null;
@@ -768,7 +769,7 @@ public final class AnalyticsPipeline {
      * 'Position', or timing, of the event, in various circumstances.
      * </pre>
      *
-     * <code>.bloombox.schema.analytics.EventPosition timing = 4;</code>
+     * <code>.bloombox.analytics.EventPosition timing = 4;</code>
      */
     public io.bloombox.schema.telemetry.AnalyticsContext.EventPosition getTiming() {
       return timing_ == null ? io.bloombox.schema.telemetry.AnalyticsContext.EventPosition.getDefaultInstance() : timing_;
@@ -778,7 +779,7 @@ public final class AnalyticsPipeline {
      * 'Position', or timing, of the event, in various circumstances.
      * </pre>
      *
-     * <code>.bloombox.schema.analytics.EventPosition timing = 4;</code>
+     * <code>.bloombox.analytics.EventPosition timing = 4;</code>
      */
     public io.bloombox.schema.telemetry.AnalyticsContext.EventPositionOrBuilder getTimingOrBuilder() {
       return getTiming();
@@ -791,7 +792,7 @@ public final class AnalyticsPipeline {
      * Event context.
      * </pre>
      *
-     * <code>.bloombox.schema.analytics.Context context = 5;</code>
+     * <code>.bloombox.analytics.Context context = 5;</code>
      */
     public boolean hasContext() {
       return context_ != null;
@@ -801,7 +802,7 @@ public final class AnalyticsPipeline {
      * Event context.
      * </pre>
      *
-     * <code>.bloombox.schema.analytics.Context context = 5;</code>
+     * <code>.bloombox.analytics.Context context = 5;</code>
      */
     public io.bloombox.schema.telemetry.AnalyticsContext.Context getContext() {
       return context_ == null ? io.bloombox.schema.telemetry.AnalyticsContext.Context.getDefaultInstance() : context_;
@@ -811,7 +812,7 @@ public final class AnalyticsPipeline {
      * Event context.
      * </pre>
      *
-     * <code>.bloombox.schema.analytics.Context context = 5;</code>
+     * <code>.bloombox.analytics.Context context = 5;</code>
      */
     public io.bloombox.schema.telemetry.AnalyticsContext.ContextOrBuilder getContextOrBuilder() {
       return getContext();
@@ -824,7 +825,7 @@ public final class AnalyticsPipeline {
      * Full event actor records.
      * </pre>
      *
-     * <code>.bloombox.schema.analytics.EventActors actors = 6;</code>
+     * <code>.bloombox.analytics.EventActors actors = 6;</code>
      */
     public boolean hasActors() {
       return actors_ != null;
@@ -834,7 +835,7 @@ public final class AnalyticsPipeline {
      * Full event actor records.
      * </pre>
      *
-     * <code>.bloombox.schema.analytics.EventActors actors = 6;</code>
+     * <code>.bloombox.analytics.EventActors actors = 6;</code>
      */
     public io.bloombox.schema.telemetry.AnalyticsContext.EventActors getActors() {
       return actors_ == null ? io.bloombox.schema.telemetry.AnalyticsContext.EventActors.getDefaultInstance() : actors_;
@@ -844,7 +845,7 @@ public final class AnalyticsPipeline {
      * Full event actor records.
      * </pre>
      *
-     * <code>.bloombox.schema.analytics.EventActors actors = 6;</code>
+     * <code>.bloombox.analytics.EventActors actors = 6;</code>
      */
     public io.bloombox.schema.telemetry.AnalyticsContext.EventActorsOrBuilder getActorsOrBuilder() {
       return getActors();
@@ -856,7 +857,7 @@ public final class AnalyticsPipeline {
      * Generic: Event.
      * </pre>
      *
-     * <code>.bloombox.schema.analytics.generic.Event generic = 10;</code>
+     * <code>.bloombox.analytics.generic.Event generic = 10;</code>
      */
     public boolean hasGeneric() {
       return eventCase_ == 10;
@@ -866,7 +867,7 @@ public final class AnalyticsPipeline {
      * Generic: Event.
      * </pre>
      *
-     * <code>.bloombox.schema.analytics.generic.Event generic = 10;</code>
+     * <code>.bloombox.analytics.generic.Event generic = 10;</code>
      */
     public io.bloombox.schema.telemetry.AnalyticsEvent.Event getGeneric() {
       if (eventCase_ == 10) {
@@ -879,7 +880,7 @@ public final class AnalyticsPipeline {
      * Generic: Event.
      * </pre>
      *
-     * <code>.bloombox.schema.analytics.generic.Event generic = 10;</code>
+     * <code>.bloombox.analytics.generic.Event generic = 10;</code>
      */
     public io.bloombox.schema.telemetry.AnalyticsEvent.EventOrBuilder getGenericOrBuilder() {
       if (eventCase_ == 10) {
@@ -894,7 +895,7 @@ public final class AnalyticsPipeline {
      * Generic: Exception.
      * </pre>
      *
-     * <code>.bloombox.schema.analytics.generic.Exception error = 11;</code>
+     * <code>.bloombox.analytics.generic.Exception error = 11;</code>
      */
     public boolean hasError() {
       return eventCase_ == 11;
@@ -904,7 +905,7 @@ public final class AnalyticsPipeline {
      * Generic: Exception.
      * </pre>
      *
-     * <code>.bloombox.schema.analytics.generic.Exception error = 11;</code>
+     * <code>.bloombox.analytics.generic.Exception error = 11;</code>
      */
     public io.bloombox.schema.telemetry.AnalyticsException.Exception getError() {
       if (eventCase_ == 11) {
@@ -917,7 +918,7 @@ public final class AnalyticsPipeline {
      * Generic: Exception.
      * </pre>
      *
-     * <code>.bloombox.schema.analytics.generic.Exception error = 11;</code>
+     * <code>.bloombox.analytics.generic.Exception error = 11;</code>
      */
     public io.bloombox.schema.telemetry.AnalyticsException.ExceptionOrBuilder getErrorOrBuilder() {
       if (eventCase_ == 11) {
@@ -932,7 +933,7 @@ public final class AnalyticsPipeline {
      * Sections: Impression.
      * </pre>
      *
-     * <code>.bloombox.schema.services.telemetry.v1beta4.CommercialEvent.Impression impression = 20;</code>
+     * <code>.bloombox.services.telemetry.v1beta4.CommercialEvent.Impression impression = 20;</code>
      */
     public boolean hasImpression() {
       return eventCase_ == 20;
@@ -942,7 +943,7 @@ public final class AnalyticsPipeline {
      * Sections: Impression.
      * </pre>
      *
-     * <code>.bloombox.schema.services.telemetry.v1beta4.CommercialEvent.Impression impression = 20;</code>
+     * <code>.bloombox.services.telemetry.v1beta4.CommercialEvent.Impression impression = 20;</code>
      */
     public io.bloombox.schema.services.telemetry.v1beta4.CommercialEvent.Impression getImpression() {
       if (eventCase_ == 20) {
@@ -955,7 +956,7 @@ public final class AnalyticsPipeline {
      * Sections: Impression.
      * </pre>
      *
-     * <code>.bloombox.schema.services.telemetry.v1beta4.CommercialEvent.Impression impression = 20;</code>
+     * <code>.bloombox.services.telemetry.v1beta4.CommercialEvent.Impression impression = 20;</code>
      */
     public io.bloombox.schema.services.telemetry.v1beta4.CommercialEvent.ImpressionOrBuilder getImpressionOrBuilder() {
       if (eventCase_ == 20) {
@@ -970,7 +971,7 @@ public final class AnalyticsPipeline {
      * Sections: View.
      * </pre>
      *
-     * <code>.bloombox.schema.services.telemetry.v1beta4.CommercialEvent.View view = 21;</code>
+     * <code>.bloombox.services.telemetry.v1beta4.CommercialEvent.View view = 21;</code>
      */
     public boolean hasView() {
       return eventCase_ == 21;
@@ -980,7 +981,7 @@ public final class AnalyticsPipeline {
      * Sections: View.
      * </pre>
      *
-     * <code>.bloombox.schema.services.telemetry.v1beta4.CommercialEvent.View view = 21;</code>
+     * <code>.bloombox.services.telemetry.v1beta4.CommercialEvent.View view = 21;</code>
      */
     public io.bloombox.schema.services.telemetry.v1beta4.CommercialEvent.View getView() {
       if (eventCase_ == 21) {
@@ -993,7 +994,7 @@ public final class AnalyticsPipeline {
      * Sections: View.
      * </pre>
      *
-     * <code>.bloombox.schema.services.telemetry.v1beta4.CommercialEvent.View view = 21;</code>
+     * <code>.bloombox.services.telemetry.v1beta4.CommercialEvent.View view = 21;</code>
      */
     public io.bloombox.schema.services.telemetry.v1beta4.CommercialEvent.ViewOrBuilder getViewOrBuilder() {
       if (eventCase_ == 21) {
@@ -1008,7 +1009,7 @@ public final class AnalyticsPipeline {
      * Sections: Action.
      * </pre>
      *
-     * <code>.bloombox.schema.services.telemetry.v1beta4.CommercialEvent.Action action = 22;</code>
+     * <code>.bloombox.services.telemetry.v1beta4.CommercialEvent.Action action = 22;</code>
      */
     public boolean hasAction() {
       return eventCase_ == 22;
@@ -1018,7 +1019,7 @@ public final class AnalyticsPipeline {
      * Sections: Action.
      * </pre>
      *
-     * <code>.bloombox.schema.services.telemetry.v1beta4.CommercialEvent.Action action = 22;</code>
+     * <code>.bloombox.services.telemetry.v1beta4.CommercialEvent.Action action = 22;</code>
      */
     public io.bloombox.schema.services.telemetry.v1beta4.CommercialEvent.Action getAction() {
       if (eventCase_ == 22) {
@@ -1031,7 +1032,7 @@ public final class AnalyticsPipeline {
      * Sections: Action.
      * </pre>
      *
-     * <code>.bloombox.schema.services.telemetry.v1beta4.CommercialEvent.Action action = 22;</code>
+     * <code>.bloombox.services.telemetry.v1beta4.CommercialEvent.Action action = 22;</code>
      */
     public io.bloombox.schema.services.telemetry.v1beta4.CommercialEvent.ActionOrBuilder getActionOrBuilder() {
       if (eventCase_ == 22) {
@@ -1046,7 +1047,7 @@ public final class AnalyticsPipeline {
      * Users: Action.
      * </pre>
      *
-     * <code>.bloombox.schema.services.telemetry.v1beta4.IdentityEvent.Action user_action = 30;</code>
+     * <code>.bloombox.services.telemetry.v1beta4.IdentityEvent.Action user_action = 30;</code>
      */
     public boolean hasUserAction() {
       return eventCase_ == 30;
@@ -1056,7 +1057,7 @@ public final class AnalyticsPipeline {
      * Users: Action.
      * </pre>
      *
-     * <code>.bloombox.schema.services.telemetry.v1beta4.IdentityEvent.Action user_action = 30;</code>
+     * <code>.bloombox.services.telemetry.v1beta4.IdentityEvent.Action user_action = 30;</code>
      */
     public io.bloombox.schema.services.telemetry.v1beta4.IdentityEvent.Action getUserAction() {
       if (eventCase_ == 30) {
@@ -1069,7 +1070,7 @@ public final class AnalyticsPipeline {
      * Users: Action.
      * </pre>
      *
-     * <code>.bloombox.schema.services.telemetry.v1beta4.IdentityEvent.Action user_action = 30;</code>
+     * <code>.bloombox.services.telemetry.v1beta4.IdentityEvent.Action user_action = 30;</code>
      */
     public io.bloombox.schema.services.telemetry.v1beta4.IdentityEvent.ActionOrBuilder getUserActionOrBuilder() {
       if (eventCase_ == 30) {
@@ -1084,7 +1085,7 @@ public final class AnalyticsPipeline {
      * Search: Query.
      * </pre>
      *
-     * <code>.bloombox.schema.services.telemetry.v1beta4.SearchEvent.Query search_query = 31;</code>
+     * <code>.bloombox.services.telemetry.v1beta4.SearchEvent.Query search_query = 31;</code>
      */
     public boolean hasSearchQuery() {
       return eventCase_ == 31;
@@ -1094,7 +1095,7 @@ public final class AnalyticsPipeline {
      * Search: Query.
      * </pre>
      *
-     * <code>.bloombox.schema.services.telemetry.v1beta4.SearchEvent.Query search_query = 31;</code>
+     * <code>.bloombox.services.telemetry.v1beta4.SearchEvent.Query search_query = 31;</code>
      */
     public io.bloombox.schema.services.telemetry.v1beta4.SearchEvent.Query getSearchQuery() {
       if (eventCase_ == 31) {
@@ -1107,7 +1108,7 @@ public final class AnalyticsPipeline {
      * Search: Query.
      * </pre>
      *
-     * <code>.bloombox.schema.services.telemetry.v1beta4.SearchEvent.Query search_query = 31;</code>
+     * <code>.bloombox.services.telemetry.v1beta4.SearchEvent.Query search_query = 31;</code>
      */
     public io.bloombox.schema.services.telemetry.v1beta4.SearchEvent.QueryOrBuilder getSearchQueryOrBuilder() {
       if (eventCase_ == 31) {
@@ -1122,7 +1123,7 @@ public final class AnalyticsPipeline {
      * Search: Result.
      * </pre>
      *
-     * <code>.bloombox.schema.services.telemetry.v1beta4.SearchEvent.Result search_result = 32;</code>
+     * <code>.bloombox.services.telemetry.v1beta4.SearchEvent.Result search_result = 32;</code>
      */
     public boolean hasSearchResult() {
       return eventCase_ == 32;
@@ -1132,7 +1133,7 @@ public final class AnalyticsPipeline {
      * Search: Result.
      * </pre>
      *
-     * <code>.bloombox.schema.services.telemetry.v1beta4.SearchEvent.Result search_result = 32;</code>
+     * <code>.bloombox.services.telemetry.v1beta4.SearchEvent.Result search_result = 32;</code>
      */
     public io.bloombox.schema.services.telemetry.v1beta4.SearchEvent.Result getSearchResult() {
       if (eventCase_ == 32) {
@@ -1145,7 +1146,7 @@ public final class AnalyticsPipeline {
      * Search: Result.
      * </pre>
      *
-     * <code>.bloombox.schema.services.telemetry.v1beta4.SearchEvent.Result search_result = 32;</code>
+     * <code>.bloombox.services.telemetry.v1beta4.SearchEvent.Result search_result = 32;</code>
      */
     public io.bloombox.schema.services.telemetry.v1beta4.SearchEvent.ResultOrBuilder getSearchResultOrBuilder() {
       if (eventCase_ == 32) {
@@ -1155,6 +1156,7 @@ public final class AnalyticsPipeline {
     }
 
     private byte memoizedIsInitialized = -1;
+    @java.lang.Override
     public final boolean isInitialized() {
       byte isInitialized = memoizedIsInitialized;
       if (isInitialized == 1) return true;
@@ -1164,6 +1166,7 @@ public final class AnalyticsPipeline {
       return true;
     }
 
+    @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
       if (!getUuidBytes().isEmpty()) {
@@ -1211,6 +1214,7 @@ public final class AnalyticsPipeline {
       unknownFields.writeTo(output);
     }
 
+    @java.lang.Override
     public int getSerializedSize() {
       int size = memoizedSize;
       if (size != -1) return size;
@@ -1487,6 +1491,7 @@ public final class AnalyticsPipeline {
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
 
+    @java.lang.Override
     public Builder newBuilderForType() { return newBuilder(); }
     public static Builder newBuilder() {
       return DEFAULT_INSTANCE.toBuilder();
@@ -1494,6 +1499,7 @@ public final class AnalyticsPipeline {
     public static Builder newBuilder(io.bloombox.schema.services.telemetry.v1beta4.AnalyticsPipeline.TelemetryEvent prototype) {
       return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
     }
+    @java.lang.Override
     public Builder toBuilder() {
       return this == DEFAULT_INSTANCE
           ? new Builder() : new Builder().mergeFrom(this);
@@ -1510,20 +1516,21 @@ public final class AnalyticsPipeline {
      * Wrapper object that provides support for transporting telemetry data of any kind.
      * </pre>
      *
-     * Protobuf type {@code bloombox.schema.services.telemetry.v1beta4.TelemetryEvent}
+     * Protobuf type {@code bloombox.services.telemetry.v1beta4.TelemetryEvent}
      */
     public static final class Builder extends
         com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:bloombox.schema.services.telemetry.v1beta4.TelemetryEvent)
+        // @@protoc_insertion_point(builder_implements:bloombox.services.telemetry.v1beta4.TelemetryEvent)
         io.bloombox.schema.services.telemetry.v1beta4.AnalyticsPipeline.TelemetryEventOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return io.bloombox.schema.services.telemetry.v1beta4.AnalyticsPipeline.internal_static_bloombox_schema_services_telemetry_v1beta4_TelemetryEvent_descriptor;
+        return io.bloombox.schema.services.telemetry.v1beta4.AnalyticsPipeline.internal_static_bloombox_services_telemetry_v1beta4_TelemetryEvent_descriptor;
       }
 
+      @java.lang.Override
       protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return io.bloombox.schema.services.telemetry.v1beta4.AnalyticsPipeline.internal_static_bloombox_schema_services_telemetry_v1beta4_TelemetryEvent_fieldAccessorTable
+        return io.bloombox.schema.services.telemetry.v1beta4.AnalyticsPipeline.internal_static_bloombox_services_telemetry_v1beta4_TelemetryEvent_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
                 io.bloombox.schema.services.telemetry.v1beta4.AnalyticsPipeline.TelemetryEvent.class, io.bloombox.schema.services.telemetry.v1beta4.AnalyticsPipeline.TelemetryEvent.Builder.class);
       }
@@ -1543,6 +1550,7 @@ public final class AnalyticsPipeline {
                 .alwaysUseFieldBuilders) {
         }
       }
+      @java.lang.Override
       public Builder clear() {
         super.clear();
         uuid_ = "";
@@ -1574,15 +1582,18 @@ public final class AnalyticsPipeline {
         return this;
       }
 
+      @java.lang.Override
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return io.bloombox.schema.services.telemetry.v1beta4.AnalyticsPipeline.internal_static_bloombox_schema_services_telemetry_v1beta4_TelemetryEvent_descriptor;
+        return io.bloombox.schema.services.telemetry.v1beta4.AnalyticsPipeline.internal_static_bloombox_services_telemetry_v1beta4_TelemetryEvent_descriptor;
       }
 
+      @java.lang.Override
       public io.bloombox.schema.services.telemetry.v1beta4.AnalyticsPipeline.TelemetryEvent getDefaultInstanceForType() {
         return io.bloombox.schema.services.telemetry.v1beta4.AnalyticsPipeline.TelemetryEvent.getDefaultInstance();
       }
 
+      @java.lang.Override
       public io.bloombox.schema.services.telemetry.v1beta4.AnalyticsPipeline.TelemetryEvent build() {
         io.bloombox.schema.services.telemetry.v1beta4.AnalyticsPipeline.TelemetryEvent result = buildPartial();
         if (!result.isInitialized()) {
@@ -1591,6 +1602,7 @@ public final class AnalyticsPipeline {
         return result;
       }
 
+      @java.lang.Override
       public io.bloombox.schema.services.telemetry.v1beta4.AnalyticsPipeline.TelemetryEvent buildPartial() {
         io.bloombox.schema.services.telemetry.v1beta4.AnalyticsPipeline.TelemetryEvent result = new io.bloombox.schema.services.telemetry.v1beta4.AnalyticsPipeline.TelemetryEvent(this);
         result.uuid_ = uuid_;
@@ -1672,32 +1684,39 @@ public final class AnalyticsPipeline {
         return result;
       }
 
+      @java.lang.Override
       public Builder clone() {
         return (Builder) super.clone();
       }
+      @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
         return (Builder) super.setField(field, value);
       }
+      @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
         return (Builder) super.clearField(field);
       }
+      @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
         return (Builder) super.clearOneof(oneof);
       }
+      @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
         return (Builder) super.setRepeatedField(field, index, value);
       }
+      @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
         return (Builder) super.addRepeatedField(field, value);
       }
+      @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
         if (other instanceof io.bloombox.schema.services.telemetry.v1beta4.AnalyticsPipeline.TelemetryEvent) {
           return mergeFrom((io.bloombox.schema.services.telemetry.v1beta4.AnalyticsPipeline.TelemetryEvent)other);
@@ -1771,10 +1790,12 @@ public final class AnalyticsPipeline {
         return this;
       }
 
+      @java.lang.Override
       public final boolean isInitialized() {
         return true;
       }
 
+      @java.lang.Override
       public Builder mergeFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -2035,7 +2056,7 @@ public final class AnalyticsPipeline {
        * 'Position', or timing, of the event, in various circumstances.
        * </pre>
        *
-       * <code>.bloombox.schema.analytics.EventPosition timing = 4;</code>
+       * <code>.bloombox.analytics.EventPosition timing = 4;</code>
        */
       public boolean hasTiming() {
         return timingBuilder_ != null || timing_ != null;
@@ -2045,7 +2066,7 @@ public final class AnalyticsPipeline {
        * 'Position', or timing, of the event, in various circumstances.
        * </pre>
        *
-       * <code>.bloombox.schema.analytics.EventPosition timing = 4;</code>
+       * <code>.bloombox.analytics.EventPosition timing = 4;</code>
        */
       public io.bloombox.schema.telemetry.AnalyticsContext.EventPosition getTiming() {
         if (timingBuilder_ == null) {
@@ -2059,7 +2080,7 @@ public final class AnalyticsPipeline {
        * 'Position', or timing, of the event, in various circumstances.
        * </pre>
        *
-       * <code>.bloombox.schema.analytics.EventPosition timing = 4;</code>
+       * <code>.bloombox.analytics.EventPosition timing = 4;</code>
        */
       public Builder setTiming(io.bloombox.schema.telemetry.AnalyticsContext.EventPosition value) {
         if (timingBuilder_ == null) {
@@ -2079,7 +2100,7 @@ public final class AnalyticsPipeline {
        * 'Position', or timing, of the event, in various circumstances.
        * </pre>
        *
-       * <code>.bloombox.schema.analytics.EventPosition timing = 4;</code>
+       * <code>.bloombox.analytics.EventPosition timing = 4;</code>
        */
       public Builder setTiming(
           io.bloombox.schema.telemetry.AnalyticsContext.EventPosition.Builder builderForValue) {
@@ -2097,7 +2118,7 @@ public final class AnalyticsPipeline {
        * 'Position', or timing, of the event, in various circumstances.
        * </pre>
        *
-       * <code>.bloombox.schema.analytics.EventPosition timing = 4;</code>
+       * <code>.bloombox.analytics.EventPosition timing = 4;</code>
        */
       public Builder mergeTiming(io.bloombox.schema.telemetry.AnalyticsContext.EventPosition value) {
         if (timingBuilder_ == null) {
@@ -2119,7 +2140,7 @@ public final class AnalyticsPipeline {
        * 'Position', or timing, of the event, in various circumstances.
        * </pre>
        *
-       * <code>.bloombox.schema.analytics.EventPosition timing = 4;</code>
+       * <code>.bloombox.analytics.EventPosition timing = 4;</code>
        */
       public Builder clearTiming() {
         if (timingBuilder_ == null) {
@@ -2137,7 +2158,7 @@ public final class AnalyticsPipeline {
        * 'Position', or timing, of the event, in various circumstances.
        * </pre>
        *
-       * <code>.bloombox.schema.analytics.EventPosition timing = 4;</code>
+       * <code>.bloombox.analytics.EventPosition timing = 4;</code>
        */
       public io.bloombox.schema.telemetry.AnalyticsContext.EventPosition.Builder getTimingBuilder() {
         
@@ -2149,7 +2170,7 @@ public final class AnalyticsPipeline {
        * 'Position', or timing, of the event, in various circumstances.
        * </pre>
        *
-       * <code>.bloombox.schema.analytics.EventPosition timing = 4;</code>
+       * <code>.bloombox.analytics.EventPosition timing = 4;</code>
        */
       public io.bloombox.schema.telemetry.AnalyticsContext.EventPositionOrBuilder getTimingOrBuilder() {
         if (timingBuilder_ != null) {
@@ -2164,7 +2185,7 @@ public final class AnalyticsPipeline {
        * 'Position', or timing, of the event, in various circumstances.
        * </pre>
        *
-       * <code>.bloombox.schema.analytics.EventPosition timing = 4;</code>
+       * <code>.bloombox.analytics.EventPosition timing = 4;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
           io.bloombox.schema.telemetry.AnalyticsContext.EventPosition, io.bloombox.schema.telemetry.AnalyticsContext.EventPosition.Builder, io.bloombox.schema.telemetry.AnalyticsContext.EventPositionOrBuilder> 
@@ -2188,7 +2209,7 @@ public final class AnalyticsPipeline {
        * Event context.
        * </pre>
        *
-       * <code>.bloombox.schema.analytics.Context context = 5;</code>
+       * <code>.bloombox.analytics.Context context = 5;</code>
        */
       public boolean hasContext() {
         return contextBuilder_ != null || context_ != null;
@@ -2198,7 +2219,7 @@ public final class AnalyticsPipeline {
        * Event context.
        * </pre>
        *
-       * <code>.bloombox.schema.analytics.Context context = 5;</code>
+       * <code>.bloombox.analytics.Context context = 5;</code>
        */
       public io.bloombox.schema.telemetry.AnalyticsContext.Context getContext() {
         if (contextBuilder_ == null) {
@@ -2212,7 +2233,7 @@ public final class AnalyticsPipeline {
        * Event context.
        * </pre>
        *
-       * <code>.bloombox.schema.analytics.Context context = 5;</code>
+       * <code>.bloombox.analytics.Context context = 5;</code>
        */
       public Builder setContext(io.bloombox.schema.telemetry.AnalyticsContext.Context value) {
         if (contextBuilder_ == null) {
@@ -2232,7 +2253,7 @@ public final class AnalyticsPipeline {
        * Event context.
        * </pre>
        *
-       * <code>.bloombox.schema.analytics.Context context = 5;</code>
+       * <code>.bloombox.analytics.Context context = 5;</code>
        */
       public Builder setContext(
           io.bloombox.schema.telemetry.AnalyticsContext.Context.Builder builderForValue) {
@@ -2250,7 +2271,7 @@ public final class AnalyticsPipeline {
        * Event context.
        * </pre>
        *
-       * <code>.bloombox.schema.analytics.Context context = 5;</code>
+       * <code>.bloombox.analytics.Context context = 5;</code>
        */
       public Builder mergeContext(io.bloombox.schema.telemetry.AnalyticsContext.Context value) {
         if (contextBuilder_ == null) {
@@ -2272,7 +2293,7 @@ public final class AnalyticsPipeline {
        * Event context.
        * </pre>
        *
-       * <code>.bloombox.schema.analytics.Context context = 5;</code>
+       * <code>.bloombox.analytics.Context context = 5;</code>
        */
       public Builder clearContext() {
         if (contextBuilder_ == null) {
@@ -2290,7 +2311,7 @@ public final class AnalyticsPipeline {
        * Event context.
        * </pre>
        *
-       * <code>.bloombox.schema.analytics.Context context = 5;</code>
+       * <code>.bloombox.analytics.Context context = 5;</code>
        */
       public io.bloombox.schema.telemetry.AnalyticsContext.Context.Builder getContextBuilder() {
         
@@ -2302,7 +2323,7 @@ public final class AnalyticsPipeline {
        * Event context.
        * </pre>
        *
-       * <code>.bloombox.schema.analytics.Context context = 5;</code>
+       * <code>.bloombox.analytics.Context context = 5;</code>
        */
       public io.bloombox.schema.telemetry.AnalyticsContext.ContextOrBuilder getContextOrBuilder() {
         if (contextBuilder_ != null) {
@@ -2317,7 +2338,7 @@ public final class AnalyticsPipeline {
        * Event context.
        * </pre>
        *
-       * <code>.bloombox.schema.analytics.Context context = 5;</code>
+       * <code>.bloombox.analytics.Context context = 5;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
           io.bloombox.schema.telemetry.AnalyticsContext.Context, io.bloombox.schema.telemetry.AnalyticsContext.Context.Builder, io.bloombox.schema.telemetry.AnalyticsContext.ContextOrBuilder> 
@@ -2341,7 +2362,7 @@ public final class AnalyticsPipeline {
        * Full event actor records.
        * </pre>
        *
-       * <code>.bloombox.schema.analytics.EventActors actors = 6;</code>
+       * <code>.bloombox.analytics.EventActors actors = 6;</code>
        */
       public boolean hasActors() {
         return actorsBuilder_ != null || actors_ != null;
@@ -2351,7 +2372,7 @@ public final class AnalyticsPipeline {
        * Full event actor records.
        * </pre>
        *
-       * <code>.bloombox.schema.analytics.EventActors actors = 6;</code>
+       * <code>.bloombox.analytics.EventActors actors = 6;</code>
        */
       public io.bloombox.schema.telemetry.AnalyticsContext.EventActors getActors() {
         if (actorsBuilder_ == null) {
@@ -2365,7 +2386,7 @@ public final class AnalyticsPipeline {
        * Full event actor records.
        * </pre>
        *
-       * <code>.bloombox.schema.analytics.EventActors actors = 6;</code>
+       * <code>.bloombox.analytics.EventActors actors = 6;</code>
        */
       public Builder setActors(io.bloombox.schema.telemetry.AnalyticsContext.EventActors value) {
         if (actorsBuilder_ == null) {
@@ -2385,7 +2406,7 @@ public final class AnalyticsPipeline {
        * Full event actor records.
        * </pre>
        *
-       * <code>.bloombox.schema.analytics.EventActors actors = 6;</code>
+       * <code>.bloombox.analytics.EventActors actors = 6;</code>
        */
       public Builder setActors(
           io.bloombox.schema.telemetry.AnalyticsContext.EventActors.Builder builderForValue) {
@@ -2403,7 +2424,7 @@ public final class AnalyticsPipeline {
        * Full event actor records.
        * </pre>
        *
-       * <code>.bloombox.schema.analytics.EventActors actors = 6;</code>
+       * <code>.bloombox.analytics.EventActors actors = 6;</code>
        */
       public Builder mergeActors(io.bloombox.schema.telemetry.AnalyticsContext.EventActors value) {
         if (actorsBuilder_ == null) {
@@ -2425,7 +2446,7 @@ public final class AnalyticsPipeline {
        * Full event actor records.
        * </pre>
        *
-       * <code>.bloombox.schema.analytics.EventActors actors = 6;</code>
+       * <code>.bloombox.analytics.EventActors actors = 6;</code>
        */
       public Builder clearActors() {
         if (actorsBuilder_ == null) {
@@ -2443,7 +2464,7 @@ public final class AnalyticsPipeline {
        * Full event actor records.
        * </pre>
        *
-       * <code>.bloombox.schema.analytics.EventActors actors = 6;</code>
+       * <code>.bloombox.analytics.EventActors actors = 6;</code>
        */
       public io.bloombox.schema.telemetry.AnalyticsContext.EventActors.Builder getActorsBuilder() {
         
@@ -2455,7 +2476,7 @@ public final class AnalyticsPipeline {
        * Full event actor records.
        * </pre>
        *
-       * <code>.bloombox.schema.analytics.EventActors actors = 6;</code>
+       * <code>.bloombox.analytics.EventActors actors = 6;</code>
        */
       public io.bloombox.schema.telemetry.AnalyticsContext.EventActorsOrBuilder getActorsOrBuilder() {
         if (actorsBuilder_ != null) {
@@ -2470,7 +2491,7 @@ public final class AnalyticsPipeline {
        * Full event actor records.
        * </pre>
        *
-       * <code>.bloombox.schema.analytics.EventActors actors = 6;</code>
+       * <code>.bloombox.analytics.EventActors actors = 6;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
           io.bloombox.schema.telemetry.AnalyticsContext.EventActors, io.bloombox.schema.telemetry.AnalyticsContext.EventActors.Builder, io.bloombox.schema.telemetry.AnalyticsContext.EventActorsOrBuilder> 
@@ -2493,7 +2514,7 @@ public final class AnalyticsPipeline {
        * Generic: Event.
        * </pre>
        *
-       * <code>.bloombox.schema.analytics.generic.Event generic = 10;</code>
+       * <code>.bloombox.analytics.generic.Event generic = 10;</code>
        */
       public boolean hasGeneric() {
         return eventCase_ == 10;
@@ -2503,7 +2524,7 @@ public final class AnalyticsPipeline {
        * Generic: Event.
        * </pre>
        *
-       * <code>.bloombox.schema.analytics.generic.Event generic = 10;</code>
+       * <code>.bloombox.analytics.generic.Event generic = 10;</code>
        */
       public io.bloombox.schema.telemetry.AnalyticsEvent.Event getGeneric() {
         if (genericBuilder_ == null) {
@@ -2523,7 +2544,7 @@ public final class AnalyticsPipeline {
        * Generic: Event.
        * </pre>
        *
-       * <code>.bloombox.schema.analytics.generic.Event generic = 10;</code>
+       * <code>.bloombox.analytics.generic.Event generic = 10;</code>
        */
       public Builder setGeneric(io.bloombox.schema.telemetry.AnalyticsEvent.Event value) {
         if (genericBuilder_ == null) {
@@ -2543,7 +2564,7 @@ public final class AnalyticsPipeline {
        * Generic: Event.
        * </pre>
        *
-       * <code>.bloombox.schema.analytics.generic.Event generic = 10;</code>
+       * <code>.bloombox.analytics.generic.Event generic = 10;</code>
        */
       public Builder setGeneric(
           io.bloombox.schema.telemetry.AnalyticsEvent.Event.Builder builderForValue) {
@@ -2561,7 +2582,7 @@ public final class AnalyticsPipeline {
        * Generic: Event.
        * </pre>
        *
-       * <code>.bloombox.schema.analytics.generic.Event generic = 10;</code>
+       * <code>.bloombox.analytics.generic.Event generic = 10;</code>
        */
       public Builder mergeGeneric(io.bloombox.schema.telemetry.AnalyticsEvent.Event value) {
         if (genericBuilder_ == null) {
@@ -2587,7 +2608,7 @@ public final class AnalyticsPipeline {
        * Generic: Event.
        * </pre>
        *
-       * <code>.bloombox.schema.analytics.generic.Event generic = 10;</code>
+       * <code>.bloombox.analytics.generic.Event generic = 10;</code>
        */
       public Builder clearGeneric() {
         if (genericBuilder_ == null) {
@@ -2610,7 +2631,7 @@ public final class AnalyticsPipeline {
        * Generic: Event.
        * </pre>
        *
-       * <code>.bloombox.schema.analytics.generic.Event generic = 10;</code>
+       * <code>.bloombox.analytics.generic.Event generic = 10;</code>
        */
       public io.bloombox.schema.telemetry.AnalyticsEvent.Event.Builder getGenericBuilder() {
         return getGenericFieldBuilder().getBuilder();
@@ -2620,7 +2641,7 @@ public final class AnalyticsPipeline {
        * Generic: Event.
        * </pre>
        *
-       * <code>.bloombox.schema.analytics.generic.Event generic = 10;</code>
+       * <code>.bloombox.analytics.generic.Event generic = 10;</code>
        */
       public io.bloombox.schema.telemetry.AnalyticsEvent.EventOrBuilder getGenericOrBuilder() {
         if ((eventCase_ == 10) && (genericBuilder_ != null)) {
@@ -2637,7 +2658,7 @@ public final class AnalyticsPipeline {
        * Generic: Event.
        * </pre>
        *
-       * <code>.bloombox.schema.analytics.generic.Event generic = 10;</code>
+       * <code>.bloombox.analytics.generic.Event generic = 10;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
           io.bloombox.schema.telemetry.AnalyticsEvent.Event, io.bloombox.schema.telemetry.AnalyticsEvent.Event.Builder, io.bloombox.schema.telemetry.AnalyticsEvent.EventOrBuilder> 
@@ -2665,7 +2686,7 @@ public final class AnalyticsPipeline {
        * Generic: Exception.
        * </pre>
        *
-       * <code>.bloombox.schema.analytics.generic.Exception error = 11;</code>
+       * <code>.bloombox.analytics.generic.Exception error = 11;</code>
        */
       public boolean hasError() {
         return eventCase_ == 11;
@@ -2675,7 +2696,7 @@ public final class AnalyticsPipeline {
        * Generic: Exception.
        * </pre>
        *
-       * <code>.bloombox.schema.analytics.generic.Exception error = 11;</code>
+       * <code>.bloombox.analytics.generic.Exception error = 11;</code>
        */
       public io.bloombox.schema.telemetry.AnalyticsException.Exception getError() {
         if (errorBuilder_ == null) {
@@ -2695,7 +2716,7 @@ public final class AnalyticsPipeline {
        * Generic: Exception.
        * </pre>
        *
-       * <code>.bloombox.schema.analytics.generic.Exception error = 11;</code>
+       * <code>.bloombox.analytics.generic.Exception error = 11;</code>
        */
       public Builder setError(io.bloombox.schema.telemetry.AnalyticsException.Exception value) {
         if (errorBuilder_ == null) {
@@ -2715,7 +2736,7 @@ public final class AnalyticsPipeline {
        * Generic: Exception.
        * </pre>
        *
-       * <code>.bloombox.schema.analytics.generic.Exception error = 11;</code>
+       * <code>.bloombox.analytics.generic.Exception error = 11;</code>
        */
       public Builder setError(
           io.bloombox.schema.telemetry.AnalyticsException.Exception.Builder builderForValue) {
@@ -2733,7 +2754,7 @@ public final class AnalyticsPipeline {
        * Generic: Exception.
        * </pre>
        *
-       * <code>.bloombox.schema.analytics.generic.Exception error = 11;</code>
+       * <code>.bloombox.analytics.generic.Exception error = 11;</code>
        */
       public Builder mergeError(io.bloombox.schema.telemetry.AnalyticsException.Exception value) {
         if (errorBuilder_ == null) {
@@ -2759,7 +2780,7 @@ public final class AnalyticsPipeline {
        * Generic: Exception.
        * </pre>
        *
-       * <code>.bloombox.schema.analytics.generic.Exception error = 11;</code>
+       * <code>.bloombox.analytics.generic.Exception error = 11;</code>
        */
       public Builder clearError() {
         if (errorBuilder_ == null) {
@@ -2782,7 +2803,7 @@ public final class AnalyticsPipeline {
        * Generic: Exception.
        * </pre>
        *
-       * <code>.bloombox.schema.analytics.generic.Exception error = 11;</code>
+       * <code>.bloombox.analytics.generic.Exception error = 11;</code>
        */
       public io.bloombox.schema.telemetry.AnalyticsException.Exception.Builder getErrorBuilder() {
         return getErrorFieldBuilder().getBuilder();
@@ -2792,7 +2813,7 @@ public final class AnalyticsPipeline {
        * Generic: Exception.
        * </pre>
        *
-       * <code>.bloombox.schema.analytics.generic.Exception error = 11;</code>
+       * <code>.bloombox.analytics.generic.Exception error = 11;</code>
        */
       public io.bloombox.schema.telemetry.AnalyticsException.ExceptionOrBuilder getErrorOrBuilder() {
         if ((eventCase_ == 11) && (errorBuilder_ != null)) {
@@ -2809,7 +2830,7 @@ public final class AnalyticsPipeline {
        * Generic: Exception.
        * </pre>
        *
-       * <code>.bloombox.schema.analytics.generic.Exception error = 11;</code>
+       * <code>.bloombox.analytics.generic.Exception error = 11;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
           io.bloombox.schema.telemetry.AnalyticsException.Exception, io.bloombox.schema.telemetry.AnalyticsException.Exception.Builder, io.bloombox.schema.telemetry.AnalyticsException.ExceptionOrBuilder> 
@@ -2837,7 +2858,7 @@ public final class AnalyticsPipeline {
        * Sections: Impression.
        * </pre>
        *
-       * <code>.bloombox.schema.services.telemetry.v1beta4.CommercialEvent.Impression impression = 20;</code>
+       * <code>.bloombox.services.telemetry.v1beta4.CommercialEvent.Impression impression = 20;</code>
        */
       public boolean hasImpression() {
         return eventCase_ == 20;
@@ -2847,7 +2868,7 @@ public final class AnalyticsPipeline {
        * Sections: Impression.
        * </pre>
        *
-       * <code>.bloombox.schema.services.telemetry.v1beta4.CommercialEvent.Impression impression = 20;</code>
+       * <code>.bloombox.services.telemetry.v1beta4.CommercialEvent.Impression impression = 20;</code>
        */
       public io.bloombox.schema.services.telemetry.v1beta4.CommercialEvent.Impression getImpression() {
         if (impressionBuilder_ == null) {
@@ -2867,7 +2888,7 @@ public final class AnalyticsPipeline {
        * Sections: Impression.
        * </pre>
        *
-       * <code>.bloombox.schema.services.telemetry.v1beta4.CommercialEvent.Impression impression = 20;</code>
+       * <code>.bloombox.services.telemetry.v1beta4.CommercialEvent.Impression impression = 20;</code>
        */
       public Builder setImpression(io.bloombox.schema.services.telemetry.v1beta4.CommercialEvent.Impression value) {
         if (impressionBuilder_ == null) {
@@ -2887,7 +2908,7 @@ public final class AnalyticsPipeline {
        * Sections: Impression.
        * </pre>
        *
-       * <code>.bloombox.schema.services.telemetry.v1beta4.CommercialEvent.Impression impression = 20;</code>
+       * <code>.bloombox.services.telemetry.v1beta4.CommercialEvent.Impression impression = 20;</code>
        */
       public Builder setImpression(
           io.bloombox.schema.services.telemetry.v1beta4.CommercialEvent.Impression.Builder builderForValue) {
@@ -2905,7 +2926,7 @@ public final class AnalyticsPipeline {
        * Sections: Impression.
        * </pre>
        *
-       * <code>.bloombox.schema.services.telemetry.v1beta4.CommercialEvent.Impression impression = 20;</code>
+       * <code>.bloombox.services.telemetry.v1beta4.CommercialEvent.Impression impression = 20;</code>
        */
       public Builder mergeImpression(io.bloombox.schema.services.telemetry.v1beta4.CommercialEvent.Impression value) {
         if (impressionBuilder_ == null) {
@@ -2931,7 +2952,7 @@ public final class AnalyticsPipeline {
        * Sections: Impression.
        * </pre>
        *
-       * <code>.bloombox.schema.services.telemetry.v1beta4.CommercialEvent.Impression impression = 20;</code>
+       * <code>.bloombox.services.telemetry.v1beta4.CommercialEvent.Impression impression = 20;</code>
        */
       public Builder clearImpression() {
         if (impressionBuilder_ == null) {
@@ -2954,7 +2975,7 @@ public final class AnalyticsPipeline {
        * Sections: Impression.
        * </pre>
        *
-       * <code>.bloombox.schema.services.telemetry.v1beta4.CommercialEvent.Impression impression = 20;</code>
+       * <code>.bloombox.services.telemetry.v1beta4.CommercialEvent.Impression impression = 20;</code>
        */
       public io.bloombox.schema.services.telemetry.v1beta4.CommercialEvent.Impression.Builder getImpressionBuilder() {
         return getImpressionFieldBuilder().getBuilder();
@@ -2964,7 +2985,7 @@ public final class AnalyticsPipeline {
        * Sections: Impression.
        * </pre>
        *
-       * <code>.bloombox.schema.services.telemetry.v1beta4.CommercialEvent.Impression impression = 20;</code>
+       * <code>.bloombox.services.telemetry.v1beta4.CommercialEvent.Impression impression = 20;</code>
        */
       public io.bloombox.schema.services.telemetry.v1beta4.CommercialEvent.ImpressionOrBuilder getImpressionOrBuilder() {
         if ((eventCase_ == 20) && (impressionBuilder_ != null)) {
@@ -2981,7 +3002,7 @@ public final class AnalyticsPipeline {
        * Sections: Impression.
        * </pre>
        *
-       * <code>.bloombox.schema.services.telemetry.v1beta4.CommercialEvent.Impression impression = 20;</code>
+       * <code>.bloombox.services.telemetry.v1beta4.CommercialEvent.Impression impression = 20;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
           io.bloombox.schema.services.telemetry.v1beta4.CommercialEvent.Impression, io.bloombox.schema.services.telemetry.v1beta4.CommercialEvent.Impression.Builder, io.bloombox.schema.services.telemetry.v1beta4.CommercialEvent.ImpressionOrBuilder> 
@@ -3009,7 +3030,7 @@ public final class AnalyticsPipeline {
        * Sections: View.
        * </pre>
        *
-       * <code>.bloombox.schema.services.telemetry.v1beta4.CommercialEvent.View view = 21;</code>
+       * <code>.bloombox.services.telemetry.v1beta4.CommercialEvent.View view = 21;</code>
        */
       public boolean hasView() {
         return eventCase_ == 21;
@@ -3019,7 +3040,7 @@ public final class AnalyticsPipeline {
        * Sections: View.
        * </pre>
        *
-       * <code>.bloombox.schema.services.telemetry.v1beta4.CommercialEvent.View view = 21;</code>
+       * <code>.bloombox.services.telemetry.v1beta4.CommercialEvent.View view = 21;</code>
        */
       public io.bloombox.schema.services.telemetry.v1beta4.CommercialEvent.View getView() {
         if (viewBuilder_ == null) {
@@ -3039,7 +3060,7 @@ public final class AnalyticsPipeline {
        * Sections: View.
        * </pre>
        *
-       * <code>.bloombox.schema.services.telemetry.v1beta4.CommercialEvent.View view = 21;</code>
+       * <code>.bloombox.services.telemetry.v1beta4.CommercialEvent.View view = 21;</code>
        */
       public Builder setView(io.bloombox.schema.services.telemetry.v1beta4.CommercialEvent.View value) {
         if (viewBuilder_ == null) {
@@ -3059,7 +3080,7 @@ public final class AnalyticsPipeline {
        * Sections: View.
        * </pre>
        *
-       * <code>.bloombox.schema.services.telemetry.v1beta4.CommercialEvent.View view = 21;</code>
+       * <code>.bloombox.services.telemetry.v1beta4.CommercialEvent.View view = 21;</code>
        */
       public Builder setView(
           io.bloombox.schema.services.telemetry.v1beta4.CommercialEvent.View.Builder builderForValue) {
@@ -3077,7 +3098,7 @@ public final class AnalyticsPipeline {
        * Sections: View.
        * </pre>
        *
-       * <code>.bloombox.schema.services.telemetry.v1beta4.CommercialEvent.View view = 21;</code>
+       * <code>.bloombox.services.telemetry.v1beta4.CommercialEvent.View view = 21;</code>
        */
       public Builder mergeView(io.bloombox.schema.services.telemetry.v1beta4.CommercialEvent.View value) {
         if (viewBuilder_ == null) {
@@ -3103,7 +3124,7 @@ public final class AnalyticsPipeline {
        * Sections: View.
        * </pre>
        *
-       * <code>.bloombox.schema.services.telemetry.v1beta4.CommercialEvent.View view = 21;</code>
+       * <code>.bloombox.services.telemetry.v1beta4.CommercialEvent.View view = 21;</code>
        */
       public Builder clearView() {
         if (viewBuilder_ == null) {
@@ -3126,7 +3147,7 @@ public final class AnalyticsPipeline {
        * Sections: View.
        * </pre>
        *
-       * <code>.bloombox.schema.services.telemetry.v1beta4.CommercialEvent.View view = 21;</code>
+       * <code>.bloombox.services.telemetry.v1beta4.CommercialEvent.View view = 21;</code>
        */
       public io.bloombox.schema.services.telemetry.v1beta4.CommercialEvent.View.Builder getViewBuilder() {
         return getViewFieldBuilder().getBuilder();
@@ -3136,7 +3157,7 @@ public final class AnalyticsPipeline {
        * Sections: View.
        * </pre>
        *
-       * <code>.bloombox.schema.services.telemetry.v1beta4.CommercialEvent.View view = 21;</code>
+       * <code>.bloombox.services.telemetry.v1beta4.CommercialEvent.View view = 21;</code>
        */
       public io.bloombox.schema.services.telemetry.v1beta4.CommercialEvent.ViewOrBuilder getViewOrBuilder() {
         if ((eventCase_ == 21) && (viewBuilder_ != null)) {
@@ -3153,7 +3174,7 @@ public final class AnalyticsPipeline {
        * Sections: View.
        * </pre>
        *
-       * <code>.bloombox.schema.services.telemetry.v1beta4.CommercialEvent.View view = 21;</code>
+       * <code>.bloombox.services.telemetry.v1beta4.CommercialEvent.View view = 21;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
           io.bloombox.schema.services.telemetry.v1beta4.CommercialEvent.View, io.bloombox.schema.services.telemetry.v1beta4.CommercialEvent.View.Builder, io.bloombox.schema.services.telemetry.v1beta4.CommercialEvent.ViewOrBuilder> 
@@ -3181,7 +3202,7 @@ public final class AnalyticsPipeline {
        * Sections: Action.
        * </pre>
        *
-       * <code>.bloombox.schema.services.telemetry.v1beta4.CommercialEvent.Action action = 22;</code>
+       * <code>.bloombox.services.telemetry.v1beta4.CommercialEvent.Action action = 22;</code>
        */
       public boolean hasAction() {
         return eventCase_ == 22;
@@ -3191,7 +3212,7 @@ public final class AnalyticsPipeline {
        * Sections: Action.
        * </pre>
        *
-       * <code>.bloombox.schema.services.telemetry.v1beta4.CommercialEvent.Action action = 22;</code>
+       * <code>.bloombox.services.telemetry.v1beta4.CommercialEvent.Action action = 22;</code>
        */
       public io.bloombox.schema.services.telemetry.v1beta4.CommercialEvent.Action getAction() {
         if (actionBuilder_ == null) {
@@ -3211,7 +3232,7 @@ public final class AnalyticsPipeline {
        * Sections: Action.
        * </pre>
        *
-       * <code>.bloombox.schema.services.telemetry.v1beta4.CommercialEvent.Action action = 22;</code>
+       * <code>.bloombox.services.telemetry.v1beta4.CommercialEvent.Action action = 22;</code>
        */
       public Builder setAction(io.bloombox.schema.services.telemetry.v1beta4.CommercialEvent.Action value) {
         if (actionBuilder_ == null) {
@@ -3231,7 +3252,7 @@ public final class AnalyticsPipeline {
        * Sections: Action.
        * </pre>
        *
-       * <code>.bloombox.schema.services.telemetry.v1beta4.CommercialEvent.Action action = 22;</code>
+       * <code>.bloombox.services.telemetry.v1beta4.CommercialEvent.Action action = 22;</code>
        */
       public Builder setAction(
           io.bloombox.schema.services.telemetry.v1beta4.CommercialEvent.Action.Builder builderForValue) {
@@ -3249,7 +3270,7 @@ public final class AnalyticsPipeline {
        * Sections: Action.
        * </pre>
        *
-       * <code>.bloombox.schema.services.telemetry.v1beta4.CommercialEvent.Action action = 22;</code>
+       * <code>.bloombox.services.telemetry.v1beta4.CommercialEvent.Action action = 22;</code>
        */
       public Builder mergeAction(io.bloombox.schema.services.telemetry.v1beta4.CommercialEvent.Action value) {
         if (actionBuilder_ == null) {
@@ -3275,7 +3296,7 @@ public final class AnalyticsPipeline {
        * Sections: Action.
        * </pre>
        *
-       * <code>.bloombox.schema.services.telemetry.v1beta4.CommercialEvent.Action action = 22;</code>
+       * <code>.bloombox.services.telemetry.v1beta4.CommercialEvent.Action action = 22;</code>
        */
       public Builder clearAction() {
         if (actionBuilder_ == null) {
@@ -3298,7 +3319,7 @@ public final class AnalyticsPipeline {
        * Sections: Action.
        * </pre>
        *
-       * <code>.bloombox.schema.services.telemetry.v1beta4.CommercialEvent.Action action = 22;</code>
+       * <code>.bloombox.services.telemetry.v1beta4.CommercialEvent.Action action = 22;</code>
        */
       public io.bloombox.schema.services.telemetry.v1beta4.CommercialEvent.Action.Builder getActionBuilder() {
         return getActionFieldBuilder().getBuilder();
@@ -3308,7 +3329,7 @@ public final class AnalyticsPipeline {
        * Sections: Action.
        * </pre>
        *
-       * <code>.bloombox.schema.services.telemetry.v1beta4.CommercialEvent.Action action = 22;</code>
+       * <code>.bloombox.services.telemetry.v1beta4.CommercialEvent.Action action = 22;</code>
        */
       public io.bloombox.schema.services.telemetry.v1beta4.CommercialEvent.ActionOrBuilder getActionOrBuilder() {
         if ((eventCase_ == 22) && (actionBuilder_ != null)) {
@@ -3325,7 +3346,7 @@ public final class AnalyticsPipeline {
        * Sections: Action.
        * </pre>
        *
-       * <code>.bloombox.schema.services.telemetry.v1beta4.CommercialEvent.Action action = 22;</code>
+       * <code>.bloombox.services.telemetry.v1beta4.CommercialEvent.Action action = 22;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
           io.bloombox.schema.services.telemetry.v1beta4.CommercialEvent.Action, io.bloombox.schema.services.telemetry.v1beta4.CommercialEvent.Action.Builder, io.bloombox.schema.services.telemetry.v1beta4.CommercialEvent.ActionOrBuilder> 
@@ -3353,7 +3374,7 @@ public final class AnalyticsPipeline {
        * Users: Action.
        * </pre>
        *
-       * <code>.bloombox.schema.services.telemetry.v1beta4.IdentityEvent.Action user_action = 30;</code>
+       * <code>.bloombox.services.telemetry.v1beta4.IdentityEvent.Action user_action = 30;</code>
        */
       public boolean hasUserAction() {
         return eventCase_ == 30;
@@ -3363,7 +3384,7 @@ public final class AnalyticsPipeline {
        * Users: Action.
        * </pre>
        *
-       * <code>.bloombox.schema.services.telemetry.v1beta4.IdentityEvent.Action user_action = 30;</code>
+       * <code>.bloombox.services.telemetry.v1beta4.IdentityEvent.Action user_action = 30;</code>
        */
       public io.bloombox.schema.services.telemetry.v1beta4.IdentityEvent.Action getUserAction() {
         if (userActionBuilder_ == null) {
@@ -3383,7 +3404,7 @@ public final class AnalyticsPipeline {
        * Users: Action.
        * </pre>
        *
-       * <code>.bloombox.schema.services.telemetry.v1beta4.IdentityEvent.Action user_action = 30;</code>
+       * <code>.bloombox.services.telemetry.v1beta4.IdentityEvent.Action user_action = 30;</code>
        */
       public Builder setUserAction(io.bloombox.schema.services.telemetry.v1beta4.IdentityEvent.Action value) {
         if (userActionBuilder_ == null) {
@@ -3403,7 +3424,7 @@ public final class AnalyticsPipeline {
        * Users: Action.
        * </pre>
        *
-       * <code>.bloombox.schema.services.telemetry.v1beta4.IdentityEvent.Action user_action = 30;</code>
+       * <code>.bloombox.services.telemetry.v1beta4.IdentityEvent.Action user_action = 30;</code>
        */
       public Builder setUserAction(
           io.bloombox.schema.services.telemetry.v1beta4.IdentityEvent.Action.Builder builderForValue) {
@@ -3421,7 +3442,7 @@ public final class AnalyticsPipeline {
        * Users: Action.
        * </pre>
        *
-       * <code>.bloombox.schema.services.telemetry.v1beta4.IdentityEvent.Action user_action = 30;</code>
+       * <code>.bloombox.services.telemetry.v1beta4.IdentityEvent.Action user_action = 30;</code>
        */
       public Builder mergeUserAction(io.bloombox.schema.services.telemetry.v1beta4.IdentityEvent.Action value) {
         if (userActionBuilder_ == null) {
@@ -3447,7 +3468,7 @@ public final class AnalyticsPipeline {
        * Users: Action.
        * </pre>
        *
-       * <code>.bloombox.schema.services.telemetry.v1beta4.IdentityEvent.Action user_action = 30;</code>
+       * <code>.bloombox.services.telemetry.v1beta4.IdentityEvent.Action user_action = 30;</code>
        */
       public Builder clearUserAction() {
         if (userActionBuilder_ == null) {
@@ -3470,7 +3491,7 @@ public final class AnalyticsPipeline {
        * Users: Action.
        * </pre>
        *
-       * <code>.bloombox.schema.services.telemetry.v1beta4.IdentityEvent.Action user_action = 30;</code>
+       * <code>.bloombox.services.telemetry.v1beta4.IdentityEvent.Action user_action = 30;</code>
        */
       public io.bloombox.schema.services.telemetry.v1beta4.IdentityEvent.Action.Builder getUserActionBuilder() {
         return getUserActionFieldBuilder().getBuilder();
@@ -3480,7 +3501,7 @@ public final class AnalyticsPipeline {
        * Users: Action.
        * </pre>
        *
-       * <code>.bloombox.schema.services.telemetry.v1beta4.IdentityEvent.Action user_action = 30;</code>
+       * <code>.bloombox.services.telemetry.v1beta4.IdentityEvent.Action user_action = 30;</code>
        */
       public io.bloombox.schema.services.telemetry.v1beta4.IdentityEvent.ActionOrBuilder getUserActionOrBuilder() {
         if ((eventCase_ == 30) && (userActionBuilder_ != null)) {
@@ -3497,7 +3518,7 @@ public final class AnalyticsPipeline {
        * Users: Action.
        * </pre>
        *
-       * <code>.bloombox.schema.services.telemetry.v1beta4.IdentityEvent.Action user_action = 30;</code>
+       * <code>.bloombox.services.telemetry.v1beta4.IdentityEvent.Action user_action = 30;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
           io.bloombox.schema.services.telemetry.v1beta4.IdentityEvent.Action, io.bloombox.schema.services.telemetry.v1beta4.IdentityEvent.Action.Builder, io.bloombox.schema.services.telemetry.v1beta4.IdentityEvent.ActionOrBuilder> 
@@ -3525,7 +3546,7 @@ public final class AnalyticsPipeline {
        * Search: Query.
        * </pre>
        *
-       * <code>.bloombox.schema.services.telemetry.v1beta4.SearchEvent.Query search_query = 31;</code>
+       * <code>.bloombox.services.telemetry.v1beta4.SearchEvent.Query search_query = 31;</code>
        */
       public boolean hasSearchQuery() {
         return eventCase_ == 31;
@@ -3535,7 +3556,7 @@ public final class AnalyticsPipeline {
        * Search: Query.
        * </pre>
        *
-       * <code>.bloombox.schema.services.telemetry.v1beta4.SearchEvent.Query search_query = 31;</code>
+       * <code>.bloombox.services.telemetry.v1beta4.SearchEvent.Query search_query = 31;</code>
        */
       public io.bloombox.schema.services.telemetry.v1beta4.SearchEvent.Query getSearchQuery() {
         if (searchQueryBuilder_ == null) {
@@ -3555,7 +3576,7 @@ public final class AnalyticsPipeline {
        * Search: Query.
        * </pre>
        *
-       * <code>.bloombox.schema.services.telemetry.v1beta4.SearchEvent.Query search_query = 31;</code>
+       * <code>.bloombox.services.telemetry.v1beta4.SearchEvent.Query search_query = 31;</code>
        */
       public Builder setSearchQuery(io.bloombox.schema.services.telemetry.v1beta4.SearchEvent.Query value) {
         if (searchQueryBuilder_ == null) {
@@ -3575,7 +3596,7 @@ public final class AnalyticsPipeline {
        * Search: Query.
        * </pre>
        *
-       * <code>.bloombox.schema.services.telemetry.v1beta4.SearchEvent.Query search_query = 31;</code>
+       * <code>.bloombox.services.telemetry.v1beta4.SearchEvent.Query search_query = 31;</code>
        */
       public Builder setSearchQuery(
           io.bloombox.schema.services.telemetry.v1beta4.SearchEvent.Query.Builder builderForValue) {
@@ -3593,7 +3614,7 @@ public final class AnalyticsPipeline {
        * Search: Query.
        * </pre>
        *
-       * <code>.bloombox.schema.services.telemetry.v1beta4.SearchEvent.Query search_query = 31;</code>
+       * <code>.bloombox.services.telemetry.v1beta4.SearchEvent.Query search_query = 31;</code>
        */
       public Builder mergeSearchQuery(io.bloombox.schema.services.telemetry.v1beta4.SearchEvent.Query value) {
         if (searchQueryBuilder_ == null) {
@@ -3619,7 +3640,7 @@ public final class AnalyticsPipeline {
        * Search: Query.
        * </pre>
        *
-       * <code>.bloombox.schema.services.telemetry.v1beta4.SearchEvent.Query search_query = 31;</code>
+       * <code>.bloombox.services.telemetry.v1beta4.SearchEvent.Query search_query = 31;</code>
        */
       public Builder clearSearchQuery() {
         if (searchQueryBuilder_ == null) {
@@ -3642,7 +3663,7 @@ public final class AnalyticsPipeline {
        * Search: Query.
        * </pre>
        *
-       * <code>.bloombox.schema.services.telemetry.v1beta4.SearchEvent.Query search_query = 31;</code>
+       * <code>.bloombox.services.telemetry.v1beta4.SearchEvent.Query search_query = 31;</code>
        */
       public io.bloombox.schema.services.telemetry.v1beta4.SearchEvent.Query.Builder getSearchQueryBuilder() {
         return getSearchQueryFieldBuilder().getBuilder();
@@ -3652,7 +3673,7 @@ public final class AnalyticsPipeline {
        * Search: Query.
        * </pre>
        *
-       * <code>.bloombox.schema.services.telemetry.v1beta4.SearchEvent.Query search_query = 31;</code>
+       * <code>.bloombox.services.telemetry.v1beta4.SearchEvent.Query search_query = 31;</code>
        */
       public io.bloombox.schema.services.telemetry.v1beta4.SearchEvent.QueryOrBuilder getSearchQueryOrBuilder() {
         if ((eventCase_ == 31) && (searchQueryBuilder_ != null)) {
@@ -3669,7 +3690,7 @@ public final class AnalyticsPipeline {
        * Search: Query.
        * </pre>
        *
-       * <code>.bloombox.schema.services.telemetry.v1beta4.SearchEvent.Query search_query = 31;</code>
+       * <code>.bloombox.services.telemetry.v1beta4.SearchEvent.Query search_query = 31;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
           io.bloombox.schema.services.telemetry.v1beta4.SearchEvent.Query, io.bloombox.schema.services.telemetry.v1beta4.SearchEvent.Query.Builder, io.bloombox.schema.services.telemetry.v1beta4.SearchEvent.QueryOrBuilder> 
@@ -3697,7 +3718,7 @@ public final class AnalyticsPipeline {
        * Search: Result.
        * </pre>
        *
-       * <code>.bloombox.schema.services.telemetry.v1beta4.SearchEvent.Result search_result = 32;</code>
+       * <code>.bloombox.services.telemetry.v1beta4.SearchEvent.Result search_result = 32;</code>
        */
       public boolean hasSearchResult() {
         return eventCase_ == 32;
@@ -3707,7 +3728,7 @@ public final class AnalyticsPipeline {
        * Search: Result.
        * </pre>
        *
-       * <code>.bloombox.schema.services.telemetry.v1beta4.SearchEvent.Result search_result = 32;</code>
+       * <code>.bloombox.services.telemetry.v1beta4.SearchEvent.Result search_result = 32;</code>
        */
       public io.bloombox.schema.services.telemetry.v1beta4.SearchEvent.Result getSearchResult() {
         if (searchResultBuilder_ == null) {
@@ -3727,7 +3748,7 @@ public final class AnalyticsPipeline {
        * Search: Result.
        * </pre>
        *
-       * <code>.bloombox.schema.services.telemetry.v1beta4.SearchEvent.Result search_result = 32;</code>
+       * <code>.bloombox.services.telemetry.v1beta4.SearchEvent.Result search_result = 32;</code>
        */
       public Builder setSearchResult(io.bloombox.schema.services.telemetry.v1beta4.SearchEvent.Result value) {
         if (searchResultBuilder_ == null) {
@@ -3747,7 +3768,7 @@ public final class AnalyticsPipeline {
        * Search: Result.
        * </pre>
        *
-       * <code>.bloombox.schema.services.telemetry.v1beta4.SearchEvent.Result search_result = 32;</code>
+       * <code>.bloombox.services.telemetry.v1beta4.SearchEvent.Result search_result = 32;</code>
        */
       public Builder setSearchResult(
           io.bloombox.schema.services.telemetry.v1beta4.SearchEvent.Result.Builder builderForValue) {
@@ -3765,7 +3786,7 @@ public final class AnalyticsPipeline {
        * Search: Result.
        * </pre>
        *
-       * <code>.bloombox.schema.services.telemetry.v1beta4.SearchEvent.Result search_result = 32;</code>
+       * <code>.bloombox.services.telemetry.v1beta4.SearchEvent.Result search_result = 32;</code>
        */
       public Builder mergeSearchResult(io.bloombox.schema.services.telemetry.v1beta4.SearchEvent.Result value) {
         if (searchResultBuilder_ == null) {
@@ -3791,7 +3812,7 @@ public final class AnalyticsPipeline {
        * Search: Result.
        * </pre>
        *
-       * <code>.bloombox.schema.services.telemetry.v1beta4.SearchEvent.Result search_result = 32;</code>
+       * <code>.bloombox.services.telemetry.v1beta4.SearchEvent.Result search_result = 32;</code>
        */
       public Builder clearSearchResult() {
         if (searchResultBuilder_ == null) {
@@ -3814,7 +3835,7 @@ public final class AnalyticsPipeline {
        * Search: Result.
        * </pre>
        *
-       * <code>.bloombox.schema.services.telemetry.v1beta4.SearchEvent.Result search_result = 32;</code>
+       * <code>.bloombox.services.telemetry.v1beta4.SearchEvent.Result search_result = 32;</code>
        */
       public io.bloombox.schema.services.telemetry.v1beta4.SearchEvent.Result.Builder getSearchResultBuilder() {
         return getSearchResultFieldBuilder().getBuilder();
@@ -3824,7 +3845,7 @@ public final class AnalyticsPipeline {
        * Search: Result.
        * </pre>
        *
-       * <code>.bloombox.schema.services.telemetry.v1beta4.SearchEvent.Result search_result = 32;</code>
+       * <code>.bloombox.services.telemetry.v1beta4.SearchEvent.Result search_result = 32;</code>
        */
       public io.bloombox.schema.services.telemetry.v1beta4.SearchEvent.ResultOrBuilder getSearchResultOrBuilder() {
         if ((eventCase_ == 32) && (searchResultBuilder_ != null)) {
@@ -3841,7 +3862,7 @@ public final class AnalyticsPipeline {
        * Search: Result.
        * </pre>
        *
-       * <code>.bloombox.schema.services.telemetry.v1beta4.SearchEvent.Result search_result = 32;</code>
+       * <code>.bloombox.services.telemetry.v1beta4.SearchEvent.Result search_result = 32;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
           io.bloombox.schema.services.telemetry.v1beta4.SearchEvent.Result, io.bloombox.schema.services.telemetry.v1beta4.SearchEvent.Result.Builder, io.bloombox.schema.services.telemetry.v1beta4.SearchEvent.ResultOrBuilder> 
@@ -3861,21 +3882,23 @@ public final class AnalyticsPipeline {
         onChanged();;
         return searchResultBuilder_;
       }
+      @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
         return super.setUnknownFieldsProto3(unknownFields);
       }
 
+      @java.lang.Override
       public final Builder mergeUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
         return super.mergeUnknownFields(unknownFields);
       }
 
 
-      // @@protoc_insertion_point(builder_scope:bloombox.schema.services.telemetry.v1beta4.TelemetryEvent)
+      // @@protoc_insertion_point(builder_scope:bloombox.services.telemetry.v1beta4.TelemetryEvent)
     }
 
-    // @@protoc_insertion_point(class_scope:bloombox.schema.services.telemetry.v1beta4.TelemetryEvent)
+    // @@protoc_insertion_point(class_scope:bloombox.services.telemetry.v1beta4.TelemetryEvent)
     private static final io.bloombox.schema.services.telemetry.v1beta4.AnalyticsPipeline.TelemetryEvent DEFAULT_INSTANCE;
     static {
       DEFAULT_INSTANCE = new io.bloombox.schema.services.telemetry.v1beta4.AnalyticsPipeline.TelemetryEvent();
@@ -3887,6 +3910,7 @@ public final class AnalyticsPipeline {
 
     private static final com.google.protobuf.Parser<TelemetryEvent>
         PARSER = new com.google.protobuf.AbstractParser<TelemetryEvent>() {
+      @java.lang.Override
       public TelemetryEvent parsePartialFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -3904,6 +3928,7 @@ public final class AnalyticsPipeline {
       return PARSER;
     }
 
+    @java.lang.Override
     public io.bloombox.schema.services.telemetry.v1beta4.AnalyticsPipeline.TelemetryEvent getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
@@ -3911,10 +3936,10 @@ public final class AnalyticsPipeline {
   }
 
   private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_bloombox_schema_services_telemetry_v1beta4_TelemetryEvent_descriptor;
+    internal_static_bloombox_services_telemetry_v1beta4_TelemetryEvent_descriptor;
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_bloombox_schema_services_telemetry_v1beta4_TelemetryEvent_fieldAccessorTable;
+      internal_static_bloombox_services_telemetry_v1beta4_TelemetryEvent_fieldAccessorTable;
 
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
@@ -3925,37 +3950,35 @@ public final class AnalyticsPipeline {
   static {
     java.lang.String[] descriptorData = {
       "\n,telemetry/v1beta4/TelemetryEvent_Beta4" +
-      ".proto\022*bloombox.schema.services.telemet" +
-      "ry.v1beta4\032\016bq_field.proto\032\027analytics/Co" +
-      "ntext.proto\032\035analytics/generic/Event.pro" +
-      "to\032!analytics/generic/Exception.proto\032.t" +
-      "elemetry/v1beta4/TelemetryService_Beta4." +
-      "proto\"\373\006\n\016TelemetryEvent\022\014\n\004uuid\030\001 \001(\t\022\016" +
-      "\n\006parent\030\002 \001(\t\022\020\n\010internal\030\003 \001(\010\0228\n\006timi" +
-      "ng\030\004 \001(\0132(.bloombox.schema.analytics.Eve" +
-      "ntPosition\0223\n\007context\030\005 \001(\0132\".bloombox.s" +
-      "chema.analytics.Context\0226\n\006actors\030\006 \001(\0132" +
-      "&.bloombox.schema.analytics.EventActors\022" +
-      ";\n\007generic\030\n \001(\0132(.bloombox.schema.analy" +
-      "tics.generic.EventH\000\022=\n\005error\030\013 \001(\0132,.bl" +
-      "oombox.schema.analytics.generic.Exceptio" +
-      "nH\000\022\\\n\nimpression\030\024 \001(\0132F.bloombox.schem" +
-      "a.services.telemetry.v1beta4.CommercialE" +
-      "vent.ImpressionH\000\022P\n\004view\030\025 \001(\0132@.bloomb" +
-      "ox.schema.services.telemetry.v1beta4.Com" +
-      "mercialEvent.ViewH\000\022T\n\006action\030\026 \001(\0132B.bl" +
-      "oombox.schema.services.telemetry.v1beta4" +
-      ".CommercialEvent.ActionH\000\022W\n\013user_action" +
-      "\030\036 \001(\0132@.bloombox.schema.services.teleme" +
-      "try.v1beta4.IdentityEvent.ActionH\000\022U\n\014se" +
-      "arch_query\030\037 \001(\0132=.bloombox.schema.servi" +
-      "ces.telemetry.v1beta4.SearchEvent.QueryH" +
-      "\000\022W\n\rsearch_result\030  \001(\0132>.bloombox.sche" +
-      "ma.services.telemetry.v1beta4.SearchEven" +
-      "t.ResultH\000B\007\n\005eventBc\n-io.bloombox.schem" +
-      "a.services.telemetry.v1beta4B\021AnalyticsP" +
-      "ipelineH\001P\000\370\001\001\242\002\003BBS\252\002\021Telemetry.v1beta4" +
-      "b\006proto3"
+      ".proto\022#bloombox.services.telemetry.v1be" +
+      "ta4\032\016bq_field.proto\032\027analytics/Context.p" +
+      "roto\032\035analytics/generic/Event.proto\032!ana" +
+      "lytics/generic/Exception.proto\032.telemetr" +
+      "y/v1beta4/TelemetryService_Beta4.proto\"\256" +
+      "\006\n\016TelemetryEvent\022\014\n\004uuid\030\001 \001(\t\022\016\n\006paren" +
+      "t\030\002 \001(\t\022\020\n\010internal\030\003 \001(\010\0221\n\006timing\030\004 \001(" +
+      "\0132!.bloombox.analytics.EventPosition\022,\n\007" +
+      "context\030\005 \001(\0132\033.bloombox.analytics.Conte" +
+      "xt\022/\n\006actors\030\006 \001(\0132\037.bloombox.analytics." +
+      "EventActors\0224\n\007generic\030\n \001(\0132!.bloombox." +
+      "analytics.generic.EventH\000\0226\n\005error\030\013 \001(\013" +
+      "2%.bloombox.analytics.generic.ExceptionH" +
+      "\000\022U\n\nimpression\030\024 \001(\0132?.bloombox.service" +
+      "s.telemetry.v1beta4.CommercialEvent.Impr" +
+      "essionH\000\022I\n\004view\030\025 \001(\01329.bloombox.servic" +
+      "es.telemetry.v1beta4.CommercialEvent.Vie" +
+      "wH\000\022M\n\006action\030\026 \001(\0132;.bloombox.services." +
+      "telemetry.v1beta4.CommercialEvent.Action" +
+      "H\000\022P\n\013user_action\030\036 \001(\01329.bloombox.servi" +
+      "ces.telemetry.v1beta4.IdentityEvent.Acti" +
+      "onH\000\022N\n\014search_query\030\037 \001(\01326.bloombox.se" +
+      "rvices.telemetry.v1beta4.SearchEvent.Que" +
+      "ryH\000\022P\n\rsearch_result\030  \001(\01327.bloombox.s" +
+      "ervices.telemetry.v1beta4.SearchEvent.Re" +
+      "sultH\000B\007\n\005eventBc\n-io.bloombox.schema.se" +
+      "rvices.telemetry.v1beta4B\021AnalyticsPipel" +
+      "ineH\001P\000\370\001\001\242\002\003BBS\252\002\021Telemetry.v1beta4b\006pr" +
+      "oto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -3974,11 +3997,11 @@ public final class AnalyticsPipeline {
           io.bloombox.schema.telemetry.AnalyticsException.getDescriptor(),
           io.bloombox.schema.services.telemetry.v1beta4.TelemetryServiceBeta4.getDescriptor(),
         }, assigner);
-    internal_static_bloombox_schema_services_telemetry_v1beta4_TelemetryEvent_descriptor =
+    internal_static_bloombox_services_telemetry_v1beta4_TelemetryEvent_descriptor =
       getDescriptor().getMessageTypes().get(0);
-    internal_static_bloombox_schema_services_telemetry_v1beta4_TelemetryEvent_fieldAccessorTable = new
+    internal_static_bloombox_services_telemetry_v1beta4_TelemetryEvent_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_bloombox_schema_services_telemetry_v1beta4_TelemetryEvent_descriptor,
+        internal_static_bloombox_services_telemetry_v1beta4_TelemetryEvent_descriptor,
         new java.lang.String[] { "Uuid", "Parent", "Internal", "Timing", "Context", "Actors", "Generic", "Error", "Impression", "View", "Action", "UserAction", "SearchQuery", "SearchResult", "Event", });
     gen_bq_schema.BqField.getDescriptor();
     io.bloombox.schema.telemetry.AnalyticsContext.getDescriptor();

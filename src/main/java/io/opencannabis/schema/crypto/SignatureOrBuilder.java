@@ -1,11 +1,12 @@
 /*
- * Copyright 2018, Bloombox, LLC.
+ * Copyright 2018, Momentum Ideas, Co. All rights reserved.
  *
- * Licensed under the Apache License, Version 2.0 (the "License");
- * you may not use this file except in compliance with the License.
- * You may obtain a copy of the License at
- *
- *     http://www.apache.org/licenses/LICENSE-2.0
+ * Source and object computer code contained herein is the private intellectual
+ * property of Momentum Ideas Co., a Delaware Corporation. Use of this
+ * code in source form requires permission in writing before use or the
+ * assembly, distribution, or publishing of derivative works, for commercial
+ * purposes or any other purpose, from a duly authorized officer of Momentum
+ * Ideas Co.
  *
  * Unless required by applicable law or agreed to in writing, software
  * distributed under the License is distributed on an "AS IS" BASIS,
@@ -28,7 +29,7 @@ public interface SignatureOrBuilder extends
    * Public key fingerprint, or raw content of the public key, that performed the signing operation.
    * </pre>
    *
-   * <code>.opencannabis.crypto.primitives.pki.KeyMaterial public_key = 1;</code>
+   * <code>.opencannabis.crypto.KeyMaterial public_key = 1;</code>
    */
   boolean hasPublicKey();
   /**
@@ -36,17 +37,17 @@ public interface SignatureOrBuilder extends
    * Public key fingerprint, or raw content of the public key, that performed the signing operation.
    * </pre>
    *
-   * <code>.opencannabis.crypto.primitives.pki.KeyMaterial public_key = 1;</code>
+   * <code>.opencannabis.crypto.KeyMaterial public_key = 1;</code>
    */
-  io.opencannabis.schema.crypto.primitives.pki.KeyMaterial getPublicKey();
+  io.opencannabis.schema.crypto.primitives.KeyMaterial getPublicKey();
   /**
    * <pre>
    * Public key fingerprint, or raw content of the public key, that performed the signing operation.
    * </pre>
    *
-   * <code>.opencannabis.crypto.primitives.pki.KeyMaterial public_key = 1;</code>
+   * <code>.opencannabis.crypto.KeyMaterial public_key = 1;</code>
    */
-  io.opencannabis.schema.crypto.primitives.pki.KeyMaterialOrBuilder getPublicKeyOrBuilder();
+  io.opencannabis.schema.crypto.primitives.KeyMaterialOrBuilder getPublicKeyOrBuilder();
 
   /**
    * <pre>
@@ -54,7 +55,7 @@ public interface SignatureOrBuilder extends
    * the private key and recomputed via the public key.
    * </pre>
    *
-   * <code>.opencannabis.crypto.primitives.integrity.Hash fingerprint = 2;</code>
+   * <code>.opencannabis.crypto.Hash fingerprint = 2;</code>
    */
   boolean hasFingerprint();
   /**
@@ -63,7 +64,7 @@ public interface SignatureOrBuilder extends
    * the private key and recomputed via the public key.
    * </pre>
    *
-   * <code>.opencannabis.crypto.primitives.integrity.Hash fingerprint = 2;</code>
+   * <code>.opencannabis.crypto.Hash fingerprint = 2;</code>
    */
   io.opencannabis.schema.crypto.primitives.integrity.Hash getFingerprint();
   /**
@@ -72,7 +73,7 @@ public interface SignatureOrBuilder extends
    * the private key and recomputed via the public key.
    * </pre>
    *
-   * <code>.opencannabis.crypto.primitives.integrity.Hash fingerprint = 2;</code>
+   * <code>.opencannabis.crypto.Hash fingerprint = 2;</code>
    */
   io.opencannabis.schema.crypto.primitives.integrity.HashOrBuilder getFingerprintOrBuilder();
 

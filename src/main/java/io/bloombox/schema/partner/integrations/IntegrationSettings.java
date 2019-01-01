@@ -1,11 +1,12 @@
 /*
- * Copyright 2018, Bloombox, LLC.
+ * Copyright 2018, Momentum Ideas, Co. All rights reserved.
  *
- * Licensed under the Apache License, Version 2.0 (the "License");
- * you may not use this file except in compliance with the License.
- * You may obtain a copy of the License at
- *
- *     http://www.apache.org/licenses/LICENSE-2.0
+ * Source and object computer code contained herein is the private intellectual
+ * property of Momentum Ideas Co., a Delaware Corporation. Use of this
+ * code in source form requires permission in writing before use or the
+ * assembly, distribution, or publishing of derivative works, for commercial
+ * purposes or any other purpose, from a duly authorized officer of Momentum
+ * Ideas Co.
  *
  * Unless required by applicable law or agreed to in writing, software
  * distributed under the License is distributed on an "AS IS" BASIS,
@@ -35,7 +36,7 @@ public final class IntegrationSettings {
    * Enumerates all known Bloombox integration partners.
    * </pre>
    *
-   * Protobuf enum {@code bloombox.schema.partner.integrations.IntegrationPartner}
+   * Protobuf enum {@code bloombox.partner.integrations.IntegrationPartner}
    */
   public enum IntegrationPartner
       implements com.google.protobuf.ProtocolMessageEnum {
@@ -281,11 +282,11 @@ public final class IntegrationSettings {
       this.value = value;
     }
 
-    // @@protoc_insertion_point(enum_scope:bloombox.schema.partner.integrations.IntegrationPartner)
+    // @@protoc_insertion_point(enum_scope:bloombox.partner.integrations.IntegrationPartner)
   }
 
   public interface GenericIntegrationSettingsOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:bloombox.schema.partner.integrations.GenericIntegrationSettings)
+      // @@protoc_insertion_point(interface_extends:bloombox.partner.integrations.GenericIntegrationSettings)
       com.google.protobuf.MessageOrBuilder {
 
     /**
@@ -293,7 +294,7 @@ public final class IntegrationSettings {
      * Specifies the integration partner to which these settings apply for a given location.
      * </pre>
      *
-     * <code>.bloombox.schema.partner.integrations.IntegrationPartner partner = 1;</code>
+     * <code>.bloombox.partner.integrations.IntegrationPartner partner = 1;</code>
      */
     int getPartnerValue();
     /**
@@ -301,7 +302,7 @@ public final class IntegrationSettings {
      * Specifies the integration partner to which these settings apply for a given location.
      * </pre>
      *
-     * <code>.bloombox.schema.partner.integrations.IntegrationPartner partner = 1;</code>
+     * <code>.bloombox.partner.integrations.IntegrationPartner partner = 1;</code>
      */
     io.bloombox.schema.partner.integrations.IntegrationSettings.IntegrationPartner getPartner();
 
@@ -353,11 +354,11 @@ public final class IntegrationSettings {
    * Specifies a generic set of settings for a given integration.
    * </pre>
    *
-   * Protobuf type {@code bloombox.schema.partner.integrations.GenericIntegrationSettings}
+   * Protobuf type {@code bloombox.partner.integrations.GenericIntegrationSettings}
    */
   public  static final class GenericIntegrationSettings extends
       com.google.protobuf.GeneratedMessageV3 implements
-      // @@protoc_insertion_point(message_implements:bloombox.schema.partner.integrations.GenericIntegrationSettings)
+      // @@protoc_insertion_point(message_implements:bloombox.partner.integrations.GenericIntegrationSettings)
       GenericIntegrationSettingsOrBuilder {
   private static final long serialVersionUID = 0L;
     // Use GenericIntegrationSettings.newBuilder() to construct.
@@ -394,13 +395,6 @@ public final class IntegrationSettings {
             case 0:
               done = true;
               break;
-            default: {
-              if (!parseUnknownFieldProto3(
-                  input, unknownFields, extensionRegistry, tag)) {
-                done = true;
-              }
-              break;
-            }
             case 8: {
               int rawValue = input.readEnum();
 
@@ -430,6 +424,13 @@ public final class IntegrationSettings {
 
               break;
             }
+            default: {
+              if (!parseUnknownFieldProto3(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
           }
         }
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
@@ -444,12 +445,13 @@ public final class IntegrationSettings {
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return io.bloombox.schema.partner.integrations.IntegrationSettings.internal_static_bloombox_schema_partner_integrations_GenericIntegrationSettings_descriptor;
+      return io.bloombox.schema.partner.integrations.IntegrationSettings.internal_static_bloombox_partner_integrations_GenericIntegrationSettings_descriptor;
     }
 
+    @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return io.bloombox.schema.partner.integrations.IntegrationSettings.internal_static_bloombox_schema_partner_integrations_GenericIntegrationSettings_fieldAccessorTable
+      return io.bloombox.schema.partner.integrations.IntegrationSettings.internal_static_bloombox_partner_integrations_GenericIntegrationSettings_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
               io.bloombox.schema.partner.integrations.IntegrationSettings.GenericIntegrationSettings.class, io.bloombox.schema.partner.integrations.IntegrationSettings.GenericIntegrationSettings.Builder.class);
     }
@@ -461,7 +463,7 @@ public final class IntegrationSettings {
      * Specifies the integration partner to which these settings apply for a given location.
      * </pre>
      *
-     * <code>.bloombox.schema.partner.integrations.IntegrationPartner partner = 1;</code>
+     * <code>.bloombox.partner.integrations.IntegrationPartner partner = 1;</code>
      */
     public int getPartnerValue() {
       return partner_;
@@ -471,9 +473,10 @@ public final class IntegrationSettings {
      * Specifies the integration partner to which these settings apply for a given location.
      * </pre>
      *
-     * <code>.bloombox.schema.partner.integrations.IntegrationPartner partner = 1;</code>
+     * <code>.bloombox.partner.integrations.IntegrationPartner partner = 1;</code>
      */
     public io.bloombox.schema.partner.integrations.IntegrationSettings.IntegrationPartner getPartner() {
+      @SuppressWarnings("deprecation")
       io.bloombox.schema.partner.integrations.IntegrationSettings.IntegrationPartner result = io.bloombox.schema.partner.integrations.IntegrationSettings.IntegrationPartner.valueOf(partner_);
       return result == null ? io.bloombox.schema.partner.integrations.IntegrationSettings.IntegrationPartner.UNRECOGNIZED : result;
     }
@@ -538,6 +541,7 @@ public final class IntegrationSettings {
     }
 
     private byte memoizedIsInitialized = -1;
+    @java.lang.Override
     public final boolean isInitialized() {
       byte isInitialized = memoizedIsInitialized;
       if (isInitialized == 1) return true;
@@ -547,6 +551,7 @@ public final class IntegrationSettings {
       return true;
     }
 
+    @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
       if (partner_ != io.bloombox.schema.partner.integrations.IntegrationSettings.IntegrationPartner.INTERNAL.getNumber()) {
@@ -564,6 +569,7 @@ public final class IntegrationSettings {
       unknownFields.writeTo(output);
     }
 
+    @java.lang.Override
     public int getSerializedSize() {
       int size = memoizedSize;
       if (size != -1) return size;
@@ -709,6 +715,7 @@ public final class IntegrationSettings {
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
 
+    @java.lang.Override
     public Builder newBuilderForType() { return newBuilder(); }
     public static Builder newBuilder() {
       return DEFAULT_INSTANCE.toBuilder();
@@ -716,6 +723,7 @@ public final class IntegrationSettings {
     public static Builder newBuilder(io.bloombox.schema.partner.integrations.IntegrationSettings.GenericIntegrationSettings prototype) {
       return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
     }
+    @java.lang.Override
     public Builder toBuilder() {
       return this == DEFAULT_INSTANCE
           ? new Builder() : new Builder().mergeFrom(this);
@@ -732,20 +740,21 @@ public final class IntegrationSettings {
      * Specifies a generic set of settings for a given integration.
      * </pre>
      *
-     * Protobuf type {@code bloombox.schema.partner.integrations.GenericIntegrationSettings}
+     * Protobuf type {@code bloombox.partner.integrations.GenericIntegrationSettings}
      */
     public static final class Builder extends
         com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:bloombox.schema.partner.integrations.GenericIntegrationSettings)
+        // @@protoc_insertion_point(builder_implements:bloombox.partner.integrations.GenericIntegrationSettings)
         io.bloombox.schema.partner.integrations.IntegrationSettings.GenericIntegrationSettingsOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return io.bloombox.schema.partner.integrations.IntegrationSettings.internal_static_bloombox_schema_partner_integrations_GenericIntegrationSettings_descriptor;
+        return io.bloombox.schema.partner.integrations.IntegrationSettings.internal_static_bloombox_partner_integrations_GenericIntegrationSettings_descriptor;
       }
 
+      @java.lang.Override
       protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return io.bloombox.schema.partner.integrations.IntegrationSettings.internal_static_bloombox_schema_partner_integrations_GenericIntegrationSettings_fieldAccessorTable
+        return io.bloombox.schema.partner.integrations.IntegrationSettings.internal_static_bloombox_partner_integrations_GenericIntegrationSettings_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
                 io.bloombox.schema.partner.integrations.IntegrationSettings.GenericIntegrationSettings.class, io.bloombox.schema.partner.integrations.IntegrationSettings.GenericIntegrationSettings.Builder.class);
       }
@@ -765,6 +774,7 @@ public final class IntegrationSettings {
                 .alwaysUseFieldBuilders) {
         }
       }
+      @java.lang.Override
       public Builder clear() {
         super.clear();
         partner_ = 0;
@@ -782,15 +792,18 @@ public final class IntegrationSettings {
         return this;
       }
 
+      @java.lang.Override
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return io.bloombox.schema.partner.integrations.IntegrationSettings.internal_static_bloombox_schema_partner_integrations_GenericIntegrationSettings_descriptor;
+        return io.bloombox.schema.partner.integrations.IntegrationSettings.internal_static_bloombox_partner_integrations_GenericIntegrationSettings_descriptor;
       }
 
+      @java.lang.Override
       public io.bloombox.schema.partner.integrations.IntegrationSettings.GenericIntegrationSettings getDefaultInstanceForType() {
         return io.bloombox.schema.partner.integrations.IntegrationSettings.GenericIntegrationSettings.getDefaultInstance();
       }
 
+      @java.lang.Override
       public io.bloombox.schema.partner.integrations.IntegrationSettings.GenericIntegrationSettings build() {
         io.bloombox.schema.partner.integrations.IntegrationSettings.GenericIntegrationSettings result = buildPartial();
         if (!result.isInitialized()) {
@@ -799,6 +812,7 @@ public final class IntegrationSettings {
         return result;
       }
 
+      @java.lang.Override
       public io.bloombox.schema.partner.integrations.IntegrationSettings.GenericIntegrationSettings buildPartial() {
         io.bloombox.schema.partner.integrations.IntegrationSettings.GenericIntegrationSettings result = new io.bloombox.schema.partner.integrations.IntegrationSettings.GenericIntegrationSettings(this);
         result.partner_ = partner_;
@@ -813,32 +827,39 @@ public final class IntegrationSettings {
         return result;
       }
 
+      @java.lang.Override
       public Builder clone() {
         return (Builder) super.clone();
       }
+      @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
         return (Builder) super.setField(field, value);
       }
+      @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
         return (Builder) super.clearField(field);
       }
+      @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
         return (Builder) super.clearOneof(oneof);
       }
+      @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
         return (Builder) super.setRepeatedField(field, index, value);
       }
+      @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
         return (Builder) super.addRepeatedField(field, value);
       }
+      @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
         if (other instanceof io.bloombox.schema.partner.integrations.IntegrationSettings.GenericIntegrationSettings) {
           return mergeFrom((io.bloombox.schema.partner.integrations.IntegrationSettings.GenericIntegrationSettings)other);
@@ -867,10 +888,12 @@ public final class IntegrationSettings {
         return this;
       }
 
+      @java.lang.Override
       public final boolean isInitialized() {
         return true;
       }
 
+      @java.lang.Override
       public Builder mergeFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -895,7 +918,7 @@ public final class IntegrationSettings {
        * Specifies the integration partner to which these settings apply for a given location.
        * </pre>
        *
-       * <code>.bloombox.schema.partner.integrations.IntegrationPartner partner = 1;</code>
+       * <code>.bloombox.partner.integrations.IntegrationPartner partner = 1;</code>
        */
       public int getPartnerValue() {
         return partner_;
@@ -905,7 +928,7 @@ public final class IntegrationSettings {
        * Specifies the integration partner to which these settings apply for a given location.
        * </pre>
        *
-       * <code>.bloombox.schema.partner.integrations.IntegrationPartner partner = 1;</code>
+       * <code>.bloombox.partner.integrations.IntegrationPartner partner = 1;</code>
        */
       public Builder setPartnerValue(int value) {
         partner_ = value;
@@ -917,9 +940,10 @@ public final class IntegrationSettings {
        * Specifies the integration partner to which these settings apply for a given location.
        * </pre>
        *
-       * <code>.bloombox.schema.partner.integrations.IntegrationPartner partner = 1;</code>
+       * <code>.bloombox.partner.integrations.IntegrationPartner partner = 1;</code>
        */
       public io.bloombox.schema.partner.integrations.IntegrationSettings.IntegrationPartner getPartner() {
+        @SuppressWarnings("deprecation")
         io.bloombox.schema.partner.integrations.IntegrationSettings.IntegrationPartner result = io.bloombox.schema.partner.integrations.IntegrationSettings.IntegrationPartner.valueOf(partner_);
         return result == null ? io.bloombox.schema.partner.integrations.IntegrationSettings.IntegrationPartner.UNRECOGNIZED : result;
       }
@@ -928,7 +952,7 @@ public final class IntegrationSettings {
        * Specifies the integration partner to which these settings apply for a given location.
        * </pre>
        *
-       * <code>.bloombox.schema.partner.integrations.IntegrationPartner partner = 1;</code>
+       * <code>.bloombox.partner.integrations.IntegrationPartner partner = 1;</code>
        */
       public Builder setPartner(io.bloombox.schema.partner.integrations.IntegrationSettings.IntegrationPartner value) {
         if (value == null) {
@@ -944,7 +968,7 @@ public final class IntegrationSettings {
        * Specifies the integration partner to which these settings apply for a given location.
        * </pre>
        *
-       * <code>.bloombox.schema.partner.integrations.IntegrationPartner partner = 1;</code>
+       * <code>.bloombox.partner.integrations.IntegrationPartner partner = 1;</code>
        */
       public Builder clearPartner() {
         
@@ -1181,21 +1205,23 @@ public final class IntegrationSettings {
         }
         return lastTestedBuilder_;
       }
+      @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
         return super.setUnknownFieldsProto3(unknownFields);
       }
 
+      @java.lang.Override
       public final Builder mergeUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
         return super.mergeUnknownFields(unknownFields);
       }
 
 
-      // @@protoc_insertion_point(builder_scope:bloombox.schema.partner.integrations.GenericIntegrationSettings)
+      // @@protoc_insertion_point(builder_scope:bloombox.partner.integrations.GenericIntegrationSettings)
     }
 
-    // @@protoc_insertion_point(class_scope:bloombox.schema.partner.integrations.GenericIntegrationSettings)
+    // @@protoc_insertion_point(class_scope:bloombox.partner.integrations.GenericIntegrationSettings)
     private static final io.bloombox.schema.partner.integrations.IntegrationSettings.GenericIntegrationSettings DEFAULT_INSTANCE;
     static {
       DEFAULT_INSTANCE = new io.bloombox.schema.partner.integrations.IntegrationSettings.GenericIntegrationSettings();
@@ -1207,6 +1233,7 @@ public final class IntegrationSettings {
 
     private static final com.google.protobuf.Parser<GenericIntegrationSettings>
         PARSER = new com.google.protobuf.AbstractParser<GenericIntegrationSettings>() {
+      @java.lang.Override
       public GenericIntegrationSettings parsePartialFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -1224,6 +1251,7 @@ public final class IntegrationSettings {
       return PARSER;
     }
 
+    @java.lang.Override
     public io.bloombox.schema.partner.integrations.IntegrationSettings.GenericIntegrationSettings getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
@@ -1231,7 +1259,7 @@ public final class IntegrationSettings {
   }
 
   public interface LocationIntegrationSettingsOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:bloombox.schema.partner.integrations.LocationIntegrationSettings)
+      // @@protoc_insertion_point(interface_extends:bloombox.partner.integrations.LocationIntegrationSettings)
       com.google.protobuf.MessageOrBuilder {
 
     /**
@@ -1239,7 +1267,7 @@ public final class IntegrationSettings {
      * Specifies integrations that a specific location has setup.
      * </pre>
      *
-     * <code>repeated .bloombox.schema.partner.integrations.IntegrationPartner integrations = 1;</code>
+     * <code>repeated .bloombox.partner.integrations.IntegrationPartner integrations = 1;</code>
      */
     java.util.List<io.bloombox.schema.partner.integrations.IntegrationSettings.IntegrationPartner> getIntegrationsList();
     /**
@@ -1247,7 +1275,7 @@ public final class IntegrationSettings {
      * Specifies integrations that a specific location has setup.
      * </pre>
      *
-     * <code>repeated .bloombox.schema.partner.integrations.IntegrationPartner integrations = 1;</code>
+     * <code>repeated .bloombox.partner.integrations.IntegrationPartner integrations = 1;</code>
      */
     int getIntegrationsCount();
     /**
@@ -1255,7 +1283,7 @@ public final class IntegrationSettings {
      * Specifies integrations that a specific location has setup.
      * </pre>
      *
-     * <code>repeated .bloombox.schema.partner.integrations.IntegrationPartner integrations = 1;</code>
+     * <code>repeated .bloombox.partner.integrations.IntegrationPartner integrations = 1;</code>
      */
     io.bloombox.schema.partner.integrations.IntegrationSettings.IntegrationPartner getIntegrations(int index);
     /**
@@ -1263,7 +1291,7 @@ public final class IntegrationSettings {
      * Specifies integrations that a specific location has setup.
      * </pre>
      *
-     * <code>repeated .bloombox.schema.partner.integrations.IntegrationPartner integrations = 1;</code>
+     * <code>repeated .bloombox.partner.integrations.IntegrationPartner integrations = 1;</code>
      */
     java.util.List<java.lang.Integer>
     getIntegrationsValueList();
@@ -1272,7 +1300,7 @@ public final class IntegrationSettings {
      * Specifies integrations that a specific location has setup.
      * </pre>
      *
-     * <code>repeated .bloombox.schema.partner.integrations.IntegrationPartner integrations = 1;</code>
+     * <code>repeated .bloombox.partner.integrations.IntegrationPartner integrations = 1;</code>
      */
     int getIntegrationsValue(int index);
 
@@ -1281,7 +1309,7 @@ public final class IntegrationSettings {
      * Generic settings, specified for each integration.
      * </pre>
      *
-     * <code>map&lt;string, .bloombox.schema.partner.integrations.GenericIntegrationSettings&gt; generic = 2;</code>
+     * <code>map&lt;string, .bloombox.partner.integrations.GenericIntegrationSettings&gt; generic = 2;</code>
      */
     int getGenericCount();
     /**
@@ -1289,7 +1317,7 @@ public final class IntegrationSettings {
      * Generic settings, specified for each integration.
      * </pre>
      *
-     * <code>map&lt;string, .bloombox.schema.partner.integrations.GenericIntegrationSettings&gt; generic = 2;</code>
+     * <code>map&lt;string, .bloombox.partner.integrations.GenericIntegrationSettings&gt; generic = 2;</code>
      */
     boolean containsGeneric(
         java.lang.String key);
@@ -1304,7 +1332,7 @@ public final class IntegrationSettings {
      * Generic settings, specified for each integration.
      * </pre>
      *
-     * <code>map&lt;string, .bloombox.schema.partner.integrations.GenericIntegrationSettings&gt; generic = 2;</code>
+     * <code>map&lt;string, .bloombox.partner.integrations.GenericIntegrationSettings&gt; generic = 2;</code>
      */
     java.util.Map<java.lang.String, io.bloombox.schema.partner.integrations.IntegrationSettings.GenericIntegrationSettings>
     getGenericMap();
@@ -1313,7 +1341,7 @@ public final class IntegrationSettings {
      * Generic settings, specified for each integration.
      * </pre>
      *
-     * <code>map&lt;string, .bloombox.schema.partner.integrations.GenericIntegrationSettings&gt; generic = 2;</code>
+     * <code>map&lt;string, .bloombox.partner.integrations.GenericIntegrationSettings&gt; generic = 2;</code>
      */
 
     io.bloombox.schema.partner.integrations.IntegrationSettings.GenericIntegrationSettings getGenericOrDefault(
@@ -1324,7 +1352,7 @@ public final class IntegrationSettings {
      * Generic settings, specified for each integration.
      * </pre>
      *
-     * <code>map&lt;string, .bloombox.schema.partner.integrations.GenericIntegrationSettings&gt; generic = 2;</code>
+     * <code>map&lt;string, .bloombox.partner.integrations.GenericIntegrationSettings&gt; generic = 2;</code>
      */
 
     io.bloombox.schema.partner.integrations.IntegrationSettings.GenericIntegrationSettings getGenericOrThrow(
@@ -1335,7 +1363,7 @@ public final class IntegrationSettings {
      * Specifies location-specific integration settings with Greenbits.
      * </pre>
      *
-     * <code>.bloombox.schema.partner.integrations.greenbits.GreenbitsSettings greenbits = 10;</code>
+     * <code>.bloombox.partner.integrations.greenbits.GreenbitsSettings greenbits = 10;</code>
      */
     boolean hasGreenbits();
     /**
@@ -1343,7 +1371,7 @@ public final class IntegrationSettings {
      * Specifies location-specific integration settings with Greenbits.
      * </pre>
      *
-     * <code>.bloombox.schema.partner.integrations.greenbits.GreenbitsSettings greenbits = 10;</code>
+     * <code>.bloombox.partner.integrations.greenbits.GreenbitsSettings greenbits = 10;</code>
      */
     io.bloombox.schema.partner.integrations.greenbits.GreenbitsSettingsOuterClass.GreenbitsSettings getGreenbits();
     /**
@@ -1351,7 +1379,7 @@ public final class IntegrationSettings {
      * Specifies location-specific integration settings with Greenbits.
      * </pre>
      *
-     * <code>.bloombox.schema.partner.integrations.greenbits.GreenbitsSettings greenbits = 10;</code>
+     * <code>.bloombox.partner.integrations.greenbits.GreenbitsSettings greenbits = 10;</code>
      */
     io.bloombox.schema.partner.integrations.greenbits.GreenbitsSettingsOuterClass.GreenbitsSettingsOrBuilder getGreenbitsOrBuilder();
 
@@ -1360,7 +1388,7 @@ public final class IntegrationSettings {
      * Specifies location-specific integration settings with MailChimp.
      * </pre>
      *
-     * <code>.bloombox.schema.partner.integrations.mailchimp.MailchimpSettings mailchimp = 11;</code>
+     * <code>.bloombox.partner.integrations.mailchimp.MailchimpSettings mailchimp = 11;</code>
      */
     boolean hasMailchimp();
     /**
@@ -1368,7 +1396,7 @@ public final class IntegrationSettings {
      * Specifies location-specific integration settings with MailChimp.
      * </pre>
      *
-     * <code>.bloombox.schema.partner.integrations.mailchimp.MailchimpSettings mailchimp = 11;</code>
+     * <code>.bloombox.partner.integrations.mailchimp.MailchimpSettings mailchimp = 11;</code>
      */
     io.bloombox.schema.partner.integrations.mailchimp.MailchimpSettingsOuterClass.MailchimpSettings getMailchimp();
     /**
@@ -1376,7 +1404,7 @@ public final class IntegrationSettings {
      * Specifies location-specific integration settings with MailChimp.
      * </pre>
      *
-     * <code>.bloombox.schema.partner.integrations.mailchimp.MailchimpSettings mailchimp = 11;</code>
+     * <code>.bloombox.partner.integrations.mailchimp.MailchimpSettings mailchimp = 11;</code>
      */
     io.bloombox.schema.partner.integrations.mailchimp.MailchimpSettingsOuterClass.MailchimpSettingsOrBuilder getMailchimpOrBuilder();
 
@@ -1385,7 +1413,7 @@ public final class IntegrationSettings {
      * Specifies location-specific integration settings with Sendgrid.
      * </pre>
      *
-     * <code>.bloombox.schema.partner.integrations.sendgrid.SendgridSettings sendgrid = 12;</code>
+     * <code>.bloombox.partner.integrations.sendgrid.SendgridSettings sendgrid = 12;</code>
      */
     boolean hasSendgrid();
     /**
@@ -1393,7 +1421,7 @@ public final class IntegrationSettings {
      * Specifies location-specific integration settings with Sendgrid.
      * </pre>
      *
-     * <code>.bloombox.schema.partner.integrations.sendgrid.SendgridSettings sendgrid = 12;</code>
+     * <code>.bloombox.partner.integrations.sendgrid.SendgridSettings sendgrid = 12;</code>
      */
     io.bloombox.schema.partner.integrations.sendgrid.SendgridSettingsOuterClass.SendgridSettings getSendgrid();
     /**
@@ -1401,7 +1429,7 @@ public final class IntegrationSettings {
      * Specifies location-specific integration settings with Sendgrid.
      * </pre>
      *
-     * <code>.bloombox.schema.partner.integrations.sendgrid.SendgridSettings sendgrid = 12;</code>
+     * <code>.bloombox.partner.integrations.sendgrid.SendgridSettings sendgrid = 12;</code>
      */
     io.bloombox.schema.partner.integrations.sendgrid.SendgridSettingsOuterClass.SendgridSettingsOrBuilder getSendgridOrBuilder();
 
@@ -1410,7 +1438,7 @@ public final class IntegrationSettings {
      * Specifies location-specific integration settings with Twilio.
      * </pre>
      *
-     * <code>.bloombox.schema.partner.integrations.twilio.TwilioSettings twilio = 13;</code>
+     * <code>.bloombox.partner.integrations.twilio.TwilioSettings twilio = 13;</code>
      */
     boolean hasTwilio();
     /**
@@ -1418,7 +1446,7 @@ public final class IntegrationSettings {
      * Specifies location-specific integration settings with Twilio.
      * </pre>
      *
-     * <code>.bloombox.schema.partner.integrations.twilio.TwilioSettings twilio = 13;</code>
+     * <code>.bloombox.partner.integrations.twilio.TwilioSettings twilio = 13;</code>
      */
     io.bloombox.schema.partner.integrations.twilio.TwilioSettingsOuterClass.TwilioSettings getTwilio();
     /**
@@ -1426,7 +1454,7 @@ public final class IntegrationSettings {
      * Specifies location-specific integration settings with Twilio.
      * </pre>
      *
-     * <code>.bloombox.schema.partner.integrations.twilio.TwilioSettings twilio = 13;</code>
+     * <code>.bloombox.partner.integrations.twilio.TwilioSettings twilio = 13;</code>
      */
     io.bloombox.schema.partner.integrations.twilio.TwilioSettingsOuterClass.TwilioSettingsOrBuilder getTwilioOrBuilder();
 
@@ -1435,7 +1463,7 @@ public final class IntegrationSettings {
      * Specifies location-specific integration settings with OnFleet.
      * </pre>
      *
-     * <code>.bloombox.schema.partner.integrations.onfleet.OnFleetSettings onfleet = 14;</code>
+     * <code>.bloombox.partner.integrations.onfleet.OnFleetSettings onfleet = 14;</code>
      */
     boolean hasOnfleet();
     /**
@@ -1443,7 +1471,7 @@ public final class IntegrationSettings {
      * Specifies location-specific integration settings with OnFleet.
      * </pre>
      *
-     * <code>.bloombox.schema.partner.integrations.onfleet.OnFleetSettings onfleet = 14;</code>
+     * <code>.bloombox.partner.integrations.onfleet.OnFleetSettings onfleet = 14;</code>
      */
     io.bloombox.schema.partner.integrations.onfleet.OnFleetSettingsOuterClass.OnFleetSettings getOnfleet();
     /**
@@ -1451,7 +1479,7 @@ public final class IntegrationSettings {
      * Specifies location-specific integration settings with OnFleet.
      * </pre>
      *
-     * <code>.bloombox.schema.partner.integrations.onfleet.OnFleetSettings onfleet = 14;</code>
+     * <code>.bloombox.partner.integrations.onfleet.OnFleetSettings onfleet = 14;</code>
      */
     io.bloombox.schema.partner.integrations.onfleet.OnFleetSettingsOuterClass.OnFleetSettingsOrBuilder getOnfleetOrBuilder();
 
@@ -1460,7 +1488,7 @@ public final class IntegrationSettings {
      * Specifies location-specific integration settings with Treez.
      * </pre>
      *
-     * <code>.bloombox.schema.partner.integrations.treez.TreezSettings treez = 15;</code>
+     * <code>.bloombox.partner.integrations.treez.TreezSettings treez = 15;</code>
      */
     boolean hasTreez();
     /**
@@ -1468,7 +1496,7 @@ public final class IntegrationSettings {
      * Specifies location-specific integration settings with Treez.
      * </pre>
      *
-     * <code>.bloombox.schema.partner.integrations.treez.TreezSettings treez = 15;</code>
+     * <code>.bloombox.partner.integrations.treez.TreezSettings treez = 15;</code>
      */
     io.bloombox.schema.partner.integrations.treez.TreezSettingsOuterClass.TreezSettings getTreez();
     /**
@@ -1476,7 +1504,7 @@ public final class IntegrationSettings {
      * Specifies location-specific integration settings with Treez.
      * </pre>
      *
-     * <code>.bloombox.schema.partner.integrations.treez.TreezSettings treez = 15;</code>
+     * <code>.bloombox.partner.integrations.treez.TreezSettings treez = 15;</code>
      */
     io.bloombox.schema.partner.integrations.treez.TreezSettingsOuterClass.TreezSettingsOrBuilder getTreezOrBuilder();
   }
@@ -1485,11 +1513,11 @@ public final class IntegrationSettings {
    * Location-level integration settings.
    * </pre>
    *
-   * Protobuf type {@code bloombox.schema.partner.integrations.LocationIntegrationSettings}
+   * Protobuf type {@code bloombox.partner.integrations.LocationIntegrationSettings}
    */
   public  static final class LocationIntegrationSettings extends
       com.google.protobuf.GeneratedMessageV3 implements
-      // @@protoc_insertion_point(message_implements:bloombox.schema.partner.integrations.LocationIntegrationSettings)
+      // @@protoc_insertion_point(message_implements:bloombox.partner.integrations.LocationIntegrationSettings)
       LocationIntegrationSettingsOrBuilder {
   private static final long serialVersionUID = 0L;
     // Use LocationIntegrationSettings.newBuilder() to construct.
@@ -1524,13 +1552,6 @@ public final class IntegrationSettings {
             case 0:
               done = true;
               break;
-            default: {
-              if (!parseUnknownFieldProto3(
-                  input, unknownFields, extensionRegistry, tag)) {
-                done = true;
-              }
-              break;
-            }
             case 8: {
               int rawValue = input.readEnum();
               if (!((mutable_bitField0_ & 0x00000001) == 0x00000001)) {
@@ -1645,6 +1666,13 @@ public final class IntegrationSettings {
 
               break;
             }
+            default: {
+              if (!parseUnknownFieldProto3(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
           }
         }
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
@@ -1662,10 +1690,11 @@ public final class IntegrationSettings {
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return io.bloombox.schema.partner.integrations.IntegrationSettings.internal_static_bloombox_schema_partner_integrations_LocationIntegrationSettings_descriptor;
+      return io.bloombox.schema.partner.integrations.IntegrationSettings.internal_static_bloombox_partner_integrations_LocationIntegrationSettings_descriptor;
     }
 
     @SuppressWarnings({"rawtypes"})
+    @java.lang.Override
     protected com.google.protobuf.MapField internalGetMapField(
         int number) {
       switch (number) {
@@ -1676,9 +1705,10 @@ public final class IntegrationSettings {
               "Invalid map field number: " + number);
       }
     }
+    @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return io.bloombox.schema.partner.integrations.IntegrationSettings.internal_static_bloombox_schema_partner_integrations_LocationIntegrationSettings_fieldAccessorTable
+      return io.bloombox.schema.partner.integrations.IntegrationSettings.internal_static_bloombox_partner_integrations_LocationIntegrationSettings_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
               io.bloombox.schema.partner.integrations.IntegrationSettings.LocationIntegrationSettings.class, io.bloombox.schema.partner.integrations.IntegrationSettings.LocationIntegrationSettings.Builder.class);
     }
@@ -1691,6 +1721,7 @@ public final class IntegrationSettings {
             new com.google.protobuf.Internal.ListAdapter.Converter<
                 java.lang.Integer, io.bloombox.schema.partner.integrations.IntegrationSettings.IntegrationPartner>() {
               public io.bloombox.schema.partner.integrations.IntegrationSettings.IntegrationPartner convert(java.lang.Integer from) {
+                @SuppressWarnings("deprecation")
                 io.bloombox.schema.partner.integrations.IntegrationSettings.IntegrationPartner result = io.bloombox.schema.partner.integrations.IntegrationSettings.IntegrationPartner.valueOf(from);
                 return result == null ? io.bloombox.schema.partner.integrations.IntegrationSettings.IntegrationPartner.UNRECOGNIZED : result;
               }
@@ -1700,7 +1731,7 @@ public final class IntegrationSettings {
      * Specifies integrations that a specific location has setup.
      * </pre>
      *
-     * <code>repeated .bloombox.schema.partner.integrations.IntegrationPartner integrations = 1;</code>
+     * <code>repeated .bloombox.partner.integrations.IntegrationPartner integrations = 1;</code>
      */
     public java.util.List<io.bloombox.schema.partner.integrations.IntegrationSettings.IntegrationPartner> getIntegrationsList() {
       return new com.google.protobuf.Internal.ListAdapter<
@@ -1711,7 +1742,7 @@ public final class IntegrationSettings {
      * Specifies integrations that a specific location has setup.
      * </pre>
      *
-     * <code>repeated .bloombox.schema.partner.integrations.IntegrationPartner integrations = 1;</code>
+     * <code>repeated .bloombox.partner.integrations.IntegrationPartner integrations = 1;</code>
      */
     public int getIntegrationsCount() {
       return integrations_.size();
@@ -1721,7 +1752,7 @@ public final class IntegrationSettings {
      * Specifies integrations that a specific location has setup.
      * </pre>
      *
-     * <code>repeated .bloombox.schema.partner.integrations.IntegrationPartner integrations = 1;</code>
+     * <code>repeated .bloombox.partner.integrations.IntegrationPartner integrations = 1;</code>
      */
     public io.bloombox.schema.partner.integrations.IntegrationSettings.IntegrationPartner getIntegrations(int index) {
       return integrations_converter_.convert(integrations_.get(index));
@@ -1731,7 +1762,7 @@ public final class IntegrationSettings {
      * Specifies integrations that a specific location has setup.
      * </pre>
      *
-     * <code>repeated .bloombox.schema.partner.integrations.IntegrationPartner integrations = 1;</code>
+     * <code>repeated .bloombox.partner.integrations.IntegrationPartner integrations = 1;</code>
      */
     public java.util.List<java.lang.Integer>
     getIntegrationsValueList() {
@@ -1742,7 +1773,7 @@ public final class IntegrationSettings {
      * Specifies integrations that a specific location has setup.
      * </pre>
      *
-     * <code>repeated .bloombox.schema.partner.integrations.IntegrationPartner integrations = 1;</code>
+     * <code>repeated .bloombox.partner.integrations.IntegrationPartner integrations = 1;</code>
      */
     public int getIntegrationsValue(int index) {
       return integrations_.get(index);
@@ -1755,7 +1786,7 @@ public final class IntegrationSettings {
           java.lang.String, io.bloombox.schema.partner.integrations.IntegrationSettings.GenericIntegrationSettings> defaultEntry =
               com.google.protobuf.MapEntry
               .<java.lang.String, io.bloombox.schema.partner.integrations.IntegrationSettings.GenericIntegrationSettings>newDefaultInstance(
-                  io.bloombox.schema.partner.integrations.IntegrationSettings.internal_static_bloombox_schema_partner_integrations_LocationIntegrationSettings_GenericEntry_descriptor, 
+                  io.bloombox.schema.partner.integrations.IntegrationSettings.internal_static_bloombox_partner_integrations_LocationIntegrationSettings_GenericEntry_descriptor, 
                   com.google.protobuf.WireFormat.FieldType.STRING,
                   "",
                   com.google.protobuf.WireFormat.FieldType.MESSAGE,
@@ -1780,7 +1811,7 @@ public final class IntegrationSettings {
      * Generic settings, specified for each integration.
      * </pre>
      *
-     * <code>map&lt;string, .bloombox.schema.partner.integrations.GenericIntegrationSettings&gt; generic = 2;</code>
+     * <code>map&lt;string, .bloombox.partner.integrations.GenericIntegrationSettings&gt; generic = 2;</code>
      */
 
     public boolean containsGeneric(
@@ -1800,7 +1831,7 @@ public final class IntegrationSettings {
      * Generic settings, specified for each integration.
      * </pre>
      *
-     * <code>map&lt;string, .bloombox.schema.partner.integrations.GenericIntegrationSettings&gt; generic = 2;</code>
+     * <code>map&lt;string, .bloombox.partner.integrations.GenericIntegrationSettings&gt; generic = 2;</code>
      */
 
     public java.util.Map<java.lang.String, io.bloombox.schema.partner.integrations.IntegrationSettings.GenericIntegrationSettings> getGenericMap() {
@@ -1811,7 +1842,7 @@ public final class IntegrationSettings {
      * Generic settings, specified for each integration.
      * </pre>
      *
-     * <code>map&lt;string, .bloombox.schema.partner.integrations.GenericIntegrationSettings&gt; generic = 2;</code>
+     * <code>map&lt;string, .bloombox.partner.integrations.GenericIntegrationSettings&gt; generic = 2;</code>
      */
 
     public io.bloombox.schema.partner.integrations.IntegrationSettings.GenericIntegrationSettings getGenericOrDefault(
@@ -1827,7 +1858,7 @@ public final class IntegrationSettings {
      * Generic settings, specified for each integration.
      * </pre>
      *
-     * <code>map&lt;string, .bloombox.schema.partner.integrations.GenericIntegrationSettings&gt; generic = 2;</code>
+     * <code>map&lt;string, .bloombox.partner.integrations.GenericIntegrationSettings&gt; generic = 2;</code>
      */
 
     public io.bloombox.schema.partner.integrations.IntegrationSettings.GenericIntegrationSettings getGenericOrThrow(
@@ -1848,7 +1879,7 @@ public final class IntegrationSettings {
      * Specifies location-specific integration settings with Greenbits.
      * </pre>
      *
-     * <code>.bloombox.schema.partner.integrations.greenbits.GreenbitsSettings greenbits = 10;</code>
+     * <code>.bloombox.partner.integrations.greenbits.GreenbitsSettings greenbits = 10;</code>
      */
     public boolean hasGreenbits() {
       return greenbits_ != null;
@@ -1858,7 +1889,7 @@ public final class IntegrationSettings {
      * Specifies location-specific integration settings with Greenbits.
      * </pre>
      *
-     * <code>.bloombox.schema.partner.integrations.greenbits.GreenbitsSettings greenbits = 10;</code>
+     * <code>.bloombox.partner.integrations.greenbits.GreenbitsSettings greenbits = 10;</code>
      */
     public io.bloombox.schema.partner.integrations.greenbits.GreenbitsSettingsOuterClass.GreenbitsSettings getGreenbits() {
       return greenbits_ == null ? io.bloombox.schema.partner.integrations.greenbits.GreenbitsSettingsOuterClass.GreenbitsSettings.getDefaultInstance() : greenbits_;
@@ -1868,7 +1899,7 @@ public final class IntegrationSettings {
      * Specifies location-specific integration settings with Greenbits.
      * </pre>
      *
-     * <code>.bloombox.schema.partner.integrations.greenbits.GreenbitsSettings greenbits = 10;</code>
+     * <code>.bloombox.partner.integrations.greenbits.GreenbitsSettings greenbits = 10;</code>
      */
     public io.bloombox.schema.partner.integrations.greenbits.GreenbitsSettingsOuterClass.GreenbitsSettingsOrBuilder getGreenbitsOrBuilder() {
       return getGreenbits();
@@ -1881,7 +1912,7 @@ public final class IntegrationSettings {
      * Specifies location-specific integration settings with MailChimp.
      * </pre>
      *
-     * <code>.bloombox.schema.partner.integrations.mailchimp.MailchimpSettings mailchimp = 11;</code>
+     * <code>.bloombox.partner.integrations.mailchimp.MailchimpSettings mailchimp = 11;</code>
      */
     public boolean hasMailchimp() {
       return mailchimp_ != null;
@@ -1891,7 +1922,7 @@ public final class IntegrationSettings {
      * Specifies location-specific integration settings with MailChimp.
      * </pre>
      *
-     * <code>.bloombox.schema.partner.integrations.mailchimp.MailchimpSettings mailchimp = 11;</code>
+     * <code>.bloombox.partner.integrations.mailchimp.MailchimpSettings mailchimp = 11;</code>
      */
     public io.bloombox.schema.partner.integrations.mailchimp.MailchimpSettingsOuterClass.MailchimpSettings getMailchimp() {
       return mailchimp_ == null ? io.bloombox.schema.partner.integrations.mailchimp.MailchimpSettingsOuterClass.MailchimpSettings.getDefaultInstance() : mailchimp_;
@@ -1901,7 +1932,7 @@ public final class IntegrationSettings {
      * Specifies location-specific integration settings with MailChimp.
      * </pre>
      *
-     * <code>.bloombox.schema.partner.integrations.mailchimp.MailchimpSettings mailchimp = 11;</code>
+     * <code>.bloombox.partner.integrations.mailchimp.MailchimpSettings mailchimp = 11;</code>
      */
     public io.bloombox.schema.partner.integrations.mailchimp.MailchimpSettingsOuterClass.MailchimpSettingsOrBuilder getMailchimpOrBuilder() {
       return getMailchimp();
@@ -1914,7 +1945,7 @@ public final class IntegrationSettings {
      * Specifies location-specific integration settings with Sendgrid.
      * </pre>
      *
-     * <code>.bloombox.schema.partner.integrations.sendgrid.SendgridSettings sendgrid = 12;</code>
+     * <code>.bloombox.partner.integrations.sendgrid.SendgridSettings sendgrid = 12;</code>
      */
     public boolean hasSendgrid() {
       return sendgrid_ != null;
@@ -1924,7 +1955,7 @@ public final class IntegrationSettings {
      * Specifies location-specific integration settings with Sendgrid.
      * </pre>
      *
-     * <code>.bloombox.schema.partner.integrations.sendgrid.SendgridSettings sendgrid = 12;</code>
+     * <code>.bloombox.partner.integrations.sendgrid.SendgridSettings sendgrid = 12;</code>
      */
     public io.bloombox.schema.partner.integrations.sendgrid.SendgridSettingsOuterClass.SendgridSettings getSendgrid() {
       return sendgrid_ == null ? io.bloombox.schema.partner.integrations.sendgrid.SendgridSettingsOuterClass.SendgridSettings.getDefaultInstance() : sendgrid_;
@@ -1934,7 +1965,7 @@ public final class IntegrationSettings {
      * Specifies location-specific integration settings with Sendgrid.
      * </pre>
      *
-     * <code>.bloombox.schema.partner.integrations.sendgrid.SendgridSettings sendgrid = 12;</code>
+     * <code>.bloombox.partner.integrations.sendgrid.SendgridSettings sendgrid = 12;</code>
      */
     public io.bloombox.schema.partner.integrations.sendgrid.SendgridSettingsOuterClass.SendgridSettingsOrBuilder getSendgridOrBuilder() {
       return getSendgrid();
@@ -1947,7 +1978,7 @@ public final class IntegrationSettings {
      * Specifies location-specific integration settings with Twilio.
      * </pre>
      *
-     * <code>.bloombox.schema.partner.integrations.twilio.TwilioSettings twilio = 13;</code>
+     * <code>.bloombox.partner.integrations.twilio.TwilioSettings twilio = 13;</code>
      */
     public boolean hasTwilio() {
       return twilio_ != null;
@@ -1957,7 +1988,7 @@ public final class IntegrationSettings {
      * Specifies location-specific integration settings with Twilio.
      * </pre>
      *
-     * <code>.bloombox.schema.partner.integrations.twilio.TwilioSettings twilio = 13;</code>
+     * <code>.bloombox.partner.integrations.twilio.TwilioSettings twilio = 13;</code>
      */
     public io.bloombox.schema.partner.integrations.twilio.TwilioSettingsOuterClass.TwilioSettings getTwilio() {
       return twilio_ == null ? io.bloombox.schema.partner.integrations.twilio.TwilioSettingsOuterClass.TwilioSettings.getDefaultInstance() : twilio_;
@@ -1967,7 +1998,7 @@ public final class IntegrationSettings {
      * Specifies location-specific integration settings with Twilio.
      * </pre>
      *
-     * <code>.bloombox.schema.partner.integrations.twilio.TwilioSettings twilio = 13;</code>
+     * <code>.bloombox.partner.integrations.twilio.TwilioSettings twilio = 13;</code>
      */
     public io.bloombox.schema.partner.integrations.twilio.TwilioSettingsOuterClass.TwilioSettingsOrBuilder getTwilioOrBuilder() {
       return getTwilio();
@@ -1980,7 +2011,7 @@ public final class IntegrationSettings {
      * Specifies location-specific integration settings with OnFleet.
      * </pre>
      *
-     * <code>.bloombox.schema.partner.integrations.onfleet.OnFleetSettings onfleet = 14;</code>
+     * <code>.bloombox.partner.integrations.onfleet.OnFleetSettings onfleet = 14;</code>
      */
     public boolean hasOnfleet() {
       return onfleet_ != null;
@@ -1990,7 +2021,7 @@ public final class IntegrationSettings {
      * Specifies location-specific integration settings with OnFleet.
      * </pre>
      *
-     * <code>.bloombox.schema.partner.integrations.onfleet.OnFleetSettings onfleet = 14;</code>
+     * <code>.bloombox.partner.integrations.onfleet.OnFleetSettings onfleet = 14;</code>
      */
     public io.bloombox.schema.partner.integrations.onfleet.OnFleetSettingsOuterClass.OnFleetSettings getOnfleet() {
       return onfleet_ == null ? io.bloombox.schema.partner.integrations.onfleet.OnFleetSettingsOuterClass.OnFleetSettings.getDefaultInstance() : onfleet_;
@@ -2000,7 +2031,7 @@ public final class IntegrationSettings {
      * Specifies location-specific integration settings with OnFleet.
      * </pre>
      *
-     * <code>.bloombox.schema.partner.integrations.onfleet.OnFleetSettings onfleet = 14;</code>
+     * <code>.bloombox.partner.integrations.onfleet.OnFleetSettings onfleet = 14;</code>
      */
     public io.bloombox.schema.partner.integrations.onfleet.OnFleetSettingsOuterClass.OnFleetSettingsOrBuilder getOnfleetOrBuilder() {
       return getOnfleet();
@@ -2013,7 +2044,7 @@ public final class IntegrationSettings {
      * Specifies location-specific integration settings with Treez.
      * </pre>
      *
-     * <code>.bloombox.schema.partner.integrations.treez.TreezSettings treez = 15;</code>
+     * <code>.bloombox.partner.integrations.treez.TreezSettings treez = 15;</code>
      */
     public boolean hasTreez() {
       return treez_ != null;
@@ -2023,7 +2054,7 @@ public final class IntegrationSettings {
      * Specifies location-specific integration settings with Treez.
      * </pre>
      *
-     * <code>.bloombox.schema.partner.integrations.treez.TreezSettings treez = 15;</code>
+     * <code>.bloombox.partner.integrations.treez.TreezSettings treez = 15;</code>
      */
     public io.bloombox.schema.partner.integrations.treez.TreezSettingsOuterClass.TreezSettings getTreez() {
       return treez_ == null ? io.bloombox.schema.partner.integrations.treez.TreezSettingsOuterClass.TreezSettings.getDefaultInstance() : treez_;
@@ -2033,13 +2064,14 @@ public final class IntegrationSettings {
      * Specifies location-specific integration settings with Treez.
      * </pre>
      *
-     * <code>.bloombox.schema.partner.integrations.treez.TreezSettings treez = 15;</code>
+     * <code>.bloombox.partner.integrations.treez.TreezSettings treez = 15;</code>
      */
     public io.bloombox.schema.partner.integrations.treez.TreezSettingsOuterClass.TreezSettingsOrBuilder getTreezOrBuilder() {
       return getTreez();
     }
 
     private byte memoizedIsInitialized = -1;
+    @java.lang.Override
     public final boolean isInitialized() {
       byte isInitialized = memoizedIsInitialized;
       if (isInitialized == 1) return true;
@@ -2049,6 +2081,7 @@ public final class IntegrationSettings {
       return true;
     }
 
+    @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
       getSerializedSize();
@@ -2086,6 +2119,7 @@ public final class IntegrationSettings {
       unknownFields.writeTo(output);
     }
 
+    @java.lang.Override
     public int getSerializedSize() {
       int size = memoizedSize;
       if (size != -1) return size;
@@ -2304,6 +2338,7 @@ public final class IntegrationSettings {
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
 
+    @java.lang.Override
     public Builder newBuilderForType() { return newBuilder(); }
     public static Builder newBuilder() {
       return DEFAULT_INSTANCE.toBuilder();
@@ -2311,6 +2346,7 @@ public final class IntegrationSettings {
     public static Builder newBuilder(io.bloombox.schema.partner.integrations.IntegrationSettings.LocationIntegrationSettings prototype) {
       return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
     }
+    @java.lang.Override
     public Builder toBuilder() {
       return this == DEFAULT_INSTANCE
           ? new Builder() : new Builder().mergeFrom(this);
@@ -2327,15 +2363,15 @@ public final class IntegrationSettings {
      * Location-level integration settings.
      * </pre>
      *
-     * Protobuf type {@code bloombox.schema.partner.integrations.LocationIntegrationSettings}
+     * Protobuf type {@code bloombox.partner.integrations.LocationIntegrationSettings}
      */
     public static final class Builder extends
         com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:bloombox.schema.partner.integrations.LocationIntegrationSettings)
+        // @@protoc_insertion_point(builder_implements:bloombox.partner.integrations.LocationIntegrationSettings)
         io.bloombox.schema.partner.integrations.IntegrationSettings.LocationIntegrationSettingsOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return io.bloombox.schema.partner.integrations.IntegrationSettings.internal_static_bloombox_schema_partner_integrations_LocationIntegrationSettings_descriptor;
+        return io.bloombox.schema.partner.integrations.IntegrationSettings.internal_static_bloombox_partner_integrations_LocationIntegrationSettings_descriptor;
       }
 
       @SuppressWarnings({"rawtypes"})
@@ -2360,9 +2396,10 @@ public final class IntegrationSettings {
                 "Invalid map field number: " + number);
         }
       }
+      @java.lang.Override
       protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return io.bloombox.schema.partner.integrations.IntegrationSettings.internal_static_bloombox_schema_partner_integrations_LocationIntegrationSettings_fieldAccessorTable
+        return io.bloombox.schema.partner.integrations.IntegrationSettings.internal_static_bloombox_partner_integrations_LocationIntegrationSettings_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
                 io.bloombox.schema.partner.integrations.IntegrationSettings.LocationIntegrationSettings.class, io.bloombox.schema.partner.integrations.IntegrationSettings.LocationIntegrationSettings.Builder.class);
       }
@@ -2382,6 +2419,7 @@ public final class IntegrationSettings {
                 .alwaysUseFieldBuilders) {
         }
       }
+      @java.lang.Override
       public Builder clear() {
         super.clear();
         integrations_ = java.util.Collections.emptyList();
@@ -2426,15 +2464,18 @@ public final class IntegrationSettings {
         return this;
       }
 
+      @java.lang.Override
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return io.bloombox.schema.partner.integrations.IntegrationSettings.internal_static_bloombox_schema_partner_integrations_LocationIntegrationSettings_descriptor;
+        return io.bloombox.schema.partner.integrations.IntegrationSettings.internal_static_bloombox_partner_integrations_LocationIntegrationSettings_descriptor;
       }
 
+      @java.lang.Override
       public io.bloombox.schema.partner.integrations.IntegrationSettings.LocationIntegrationSettings getDefaultInstanceForType() {
         return io.bloombox.schema.partner.integrations.IntegrationSettings.LocationIntegrationSettings.getDefaultInstance();
       }
 
+      @java.lang.Override
       public io.bloombox.schema.partner.integrations.IntegrationSettings.LocationIntegrationSettings build() {
         io.bloombox.schema.partner.integrations.IntegrationSettings.LocationIntegrationSettings result = buildPartial();
         if (!result.isInitialized()) {
@@ -2443,6 +2484,7 @@ public final class IntegrationSettings {
         return result;
       }
 
+      @java.lang.Override
       public io.bloombox.schema.partner.integrations.IntegrationSettings.LocationIntegrationSettings buildPartial() {
         io.bloombox.schema.partner.integrations.IntegrationSettings.LocationIntegrationSettings result = new io.bloombox.schema.partner.integrations.IntegrationSettings.LocationIntegrationSettings(this);
         int from_bitField0_ = bitField0_;
@@ -2489,32 +2531,39 @@ public final class IntegrationSettings {
         return result;
       }
 
+      @java.lang.Override
       public Builder clone() {
         return (Builder) super.clone();
       }
+      @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
         return (Builder) super.setField(field, value);
       }
+      @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
         return (Builder) super.clearField(field);
       }
+      @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
         return (Builder) super.clearOneof(oneof);
       }
+      @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
         return (Builder) super.setRepeatedField(field, index, value);
       }
+      @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
         return (Builder) super.addRepeatedField(field, value);
       }
+      @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
         if (other instanceof io.bloombox.schema.partner.integrations.IntegrationSettings.LocationIntegrationSettings) {
           return mergeFrom((io.bloombox.schema.partner.integrations.IntegrationSettings.LocationIntegrationSettings)other);
@@ -2561,10 +2610,12 @@ public final class IntegrationSettings {
         return this;
       }
 
+      @java.lang.Override
       public final boolean isInitialized() {
         return true;
       }
 
+      @java.lang.Override
       public Builder mergeFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -2597,7 +2648,7 @@ public final class IntegrationSettings {
        * Specifies integrations that a specific location has setup.
        * </pre>
        *
-       * <code>repeated .bloombox.schema.partner.integrations.IntegrationPartner integrations = 1;</code>
+       * <code>repeated .bloombox.partner.integrations.IntegrationPartner integrations = 1;</code>
        */
       public java.util.List<io.bloombox.schema.partner.integrations.IntegrationSettings.IntegrationPartner> getIntegrationsList() {
         return new com.google.protobuf.Internal.ListAdapter<
@@ -2608,7 +2659,7 @@ public final class IntegrationSettings {
        * Specifies integrations that a specific location has setup.
        * </pre>
        *
-       * <code>repeated .bloombox.schema.partner.integrations.IntegrationPartner integrations = 1;</code>
+       * <code>repeated .bloombox.partner.integrations.IntegrationPartner integrations = 1;</code>
        */
       public int getIntegrationsCount() {
         return integrations_.size();
@@ -2618,7 +2669,7 @@ public final class IntegrationSettings {
        * Specifies integrations that a specific location has setup.
        * </pre>
        *
-       * <code>repeated .bloombox.schema.partner.integrations.IntegrationPartner integrations = 1;</code>
+       * <code>repeated .bloombox.partner.integrations.IntegrationPartner integrations = 1;</code>
        */
       public io.bloombox.schema.partner.integrations.IntegrationSettings.IntegrationPartner getIntegrations(int index) {
         return integrations_converter_.convert(integrations_.get(index));
@@ -2628,7 +2679,7 @@ public final class IntegrationSettings {
        * Specifies integrations that a specific location has setup.
        * </pre>
        *
-       * <code>repeated .bloombox.schema.partner.integrations.IntegrationPartner integrations = 1;</code>
+       * <code>repeated .bloombox.partner.integrations.IntegrationPartner integrations = 1;</code>
        */
       public Builder setIntegrations(
           int index, io.bloombox.schema.partner.integrations.IntegrationSettings.IntegrationPartner value) {
@@ -2645,7 +2696,7 @@ public final class IntegrationSettings {
        * Specifies integrations that a specific location has setup.
        * </pre>
        *
-       * <code>repeated .bloombox.schema.partner.integrations.IntegrationPartner integrations = 1;</code>
+       * <code>repeated .bloombox.partner.integrations.IntegrationPartner integrations = 1;</code>
        */
       public Builder addIntegrations(io.bloombox.schema.partner.integrations.IntegrationSettings.IntegrationPartner value) {
         if (value == null) {
@@ -2661,7 +2712,7 @@ public final class IntegrationSettings {
        * Specifies integrations that a specific location has setup.
        * </pre>
        *
-       * <code>repeated .bloombox.schema.partner.integrations.IntegrationPartner integrations = 1;</code>
+       * <code>repeated .bloombox.partner.integrations.IntegrationPartner integrations = 1;</code>
        */
       public Builder addAllIntegrations(
           java.lang.Iterable<? extends io.bloombox.schema.partner.integrations.IntegrationSettings.IntegrationPartner> values) {
@@ -2677,7 +2728,7 @@ public final class IntegrationSettings {
        * Specifies integrations that a specific location has setup.
        * </pre>
        *
-       * <code>repeated .bloombox.schema.partner.integrations.IntegrationPartner integrations = 1;</code>
+       * <code>repeated .bloombox.partner.integrations.IntegrationPartner integrations = 1;</code>
        */
       public Builder clearIntegrations() {
         integrations_ = java.util.Collections.emptyList();
@@ -2690,7 +2741,7 @@ public final class IntegrationSettings {
        * Specifies integrations that a specific location has setup.
        * </pre>
        *
-       * <code>repeated .bloombox.schema.partner.integrations.IntegrationPartner integrations = 1;</code>
+       * <code>repeated .bloombox.partner.integrations.IntegrationPartner integrations = 1;</code>
        */
       public java.util.List<java.lang.Integer>
       getIntegrationsValueList() {
@@ -2701,7 +2752,7 @@ public final class IntegrationSettings {
        * Specifies integrations that a specific location has setup.
        * </pre>
        *
-       * <code>repeated .bloombox.schema.partner.integrations.IntegrationPartner integrations = 1;</code>
+       * <code>repeated .bloombox.partner.integrations.IntegrationPartner integrations = 1;</code>
        */
       public int getIntegrationsValue(int index) {
         return integrations_.get(index);
@@ -2711,7 +2762,7 @@ public final class IntegrationSettings {
        * Specifies integrations that a specific location has setup.
        * </pre>
        *
-       * <code>repeated .bloombox.schema.partner.integrations.IntegrationPartner integrations = 1;</code>
+       * <code>repeated .bloombox.partner.integrations.IntegrationPartner integrations = 1;</code>
        */
       public Builder setIntegrationsValue(
           int index, int value) {
@@ -2725,7 +2776,7 @@ public final class IntegrationSettings {
        * Specifies integrations that a specific location has setup.
        * </pre>
        *
-       * <code>repeated .bloombox.schema.partner.integrations.IntegrationPartner integrations = 1;</code>
+       * <code>repeated .bloombox.partner.integrations.IntegrationPartner integrations = 1;</code>
        */
       public Builder addIntegrationsValue(int value) {
         ensureIntegrationsIsMutable();
@@ -2738,7 +2789,7 @@ public final class IntegrationSettings {
        * Specifies integrations that a specific location has setup.
        * </pre>
        *
-       * <code>repeated .bloombox.schema.partner.integrations.IntegrationPartner integrations = 1;</code>
+       * <code>repeated .bloombox.partner.integrations.IntegrationPartner integrations = 1;</code>
        */
       public Builder addAllIntegrationsValue(
           java.lang.Iterable<java.lang.Integer> values) {
@@ -2781,7 +2832,7 @@ public final class IntegrationSettings {
        * Generic settings, specified for each integration.
        * </pre>
        *
-       * <code>map&lt;string, .bloombox.schema.partner.integrations.GenericIntegrationSettings&gt; generic = 2;</code>
+       * <code>map&lt;string, .bloombox.partner.integrations.GenericIntegrationSettings&gt; generic = 2;</code>
        */
 
       public boolean containsGeneric(
@@ -2801,7 +2852,7 @@ public final class IntegrationSettings {
        * Generic settings, specified for each integration.
        * </pre>
        *
-       * <code>map&lt;string, .bloombox.schema.partner.integrations.GenericIntegrationSettings&gt; generic = 2;</code>
+       * <code>map&lt;string, .bloombox.partner.integrations.GenericIntegrationSettings&gt; generic = 2;</code>
        */
 
       public java.util.Map<java.lang.String, io.bloombox.schema.partner.integrations.IntegrationSettings.GenericIntegrationSettings> getGenericMap() {
@@ -2812,7 +2863,7 @@ public final class IntegrationSettings {
        * Generic settings, specified for each integration.
        * </pre>
        *
-       * <code>map&lt;string, .bloombox.schema.partner.integrations.GenericIntegrationSettings&gt; generic = 2;</code>
+       * <code>map&lt;string, .bloombox.partner.integrations.GenericIntegrationSettings&gt; generic = 2;</code>
        */
 
       public io.bloombox.schema.partner.integrations.IntegrationSettings.GenericIntegrationSettings getGenericOrDefault(
@@ -2828,7 +2879,7 @@ public final class IntegrationSettings {
        * Generic settings, specified for each integration.
        * </pre>
        *
-       * <code>map&lt;string, .bloombox.schema.partner.integrations.GenericIntegrationSettings&gt; generic = 2;</code>
+       * <code>map&lt;string, .bloombox.partner.integrations.GenericIntegrationSettings&gt; generic = 2;</code>
        */
 
       public io.bloombox.schema.partner.integrations.IntegrationSettings.GenericIntegrationSettings getGenericOrThrow(
@@ -2852,7 +2903,7 @@ public final class IntegrationSettings {
        * Generic settings, specified for each integration.
        * </pre>
        *
-       * <code>map&lt;string, .bloombox.schema.partner.integrations.GenericIntegrationSettings&gt; generic = 2;</code>
+       * <code>map&lt;string, .bloombox.partner.integrations.GenericIntegrationSettings&gt; generic = 2;</code>
        */
 
       public Builder removeGeneric(
@@ -2875,7 +2926,7 @@ public final class IntegrationSettings {
        * Generic settings, specified for each integration.
        * </pre>
        *
-       * <code>map&lt;string, .bloombox.schema.partner.integrations.GenericIntegrationSettings&gt; generic = 2;</code>
+       * <code>map&lt;string, .bloombox.partner.integrations.GenericIntegrationSettings&gt; generic = 2;</code>
        */
       public Builder putGeneric(
           java.lang.String key,
@@ -2891,7 +2942,7 @@ public final class IntegrationSettings {
        * Generic settings, specified for each integration.
        * </pre>
        *
-       * <code>map&lt;string, .bloombox.schema.partner.integrations.GenericIntegrationSettings&gt; generic = 2;</code>
+       * <code>map&lt;string, .bloombox.partner.integrations.GenericIntegrationSettings&gt; generic = 2;</code>
        */
 
       public Builder putAllGeneric(
@@ -2909,7 +2960,7 @@ public final class IntegrationSettings {
        * Specifies location-specific integration settings with Greenbits.
        * </pre>
        *
-       * <code>.bloombox.schema.partner.integrations.greenbits.GreenbitsSettings greenbits = 10;</code>
+       * <code>.bloombox.partner.integrations.greenbits.GreenbitsSettings greenbits = 10;</code>
        */
       public boolean hasGreenbits() {
         return greenbitsBuilder_ != null || greenbits_ != null;
@@ -2919,7 +2970,7 @@ public final class IntegrationSettings {
        * Specifies location-specific integration settings with Greenbits.
        * </pre>
        *
-       * <code>.bloombox.schema.partner.integrations.greenbits.GreenbitsSettings greenbits = 10;</code>
+       * <code>.bloombox.partner.integrations.greenbits.GreenbitsSettings greenbits = 10;</code>
        */
       public io.bloombox.schema.partner.integrations.greenbits.GreenbitsSettingsOuterClass.GreenbitsSettings getGreenbits() {
         if (greenbitsBuilder_ == null) {
@@ -2933,7 +2984,7 @@ public final class IntegrationSettings {
        * Specifies location-specific integration settings with Greenbits.
        * </pre>
        *
-       * <code>.bloombox.schema.partner.integrations.greenbits.GreenbitsSettings greenbits = 10;</code>
+       * <code>.bloombox.partner.integrations.greenbits.GreenbitsSettings greenbits = 10;</code>
        */
       public Builder setGreenbits(io.bloombox.schema.partner.integrations.greenbits.GreenbitsSettingsOuterClass.GreenbitsSettings value) {
         if (greenbitsBuilder_ == null) {
@@ -2953,7 +3004,7 @@ public final class IntegrationSettings {
        * Specifies location-specific integration settings with Greenbits.
        * </pre>
        *
-       * <code>.bloombox.schema.partner.integrations.greenbits.GreenbitsSettings greenbits = 10;</code>
+       * <code>.bloombox.partner.integrations.greenbits.GreenbitsSettings greenbits = 10;</code>
        */
       public Builder setGreenbits(
           io.bloombox.schema.partner.integrations.greenbits.GreenbitsSettingsOuterClass.GreenbitsSettings.Builder builderForValue) {
@@ -2971,7 +3022,7 @@ public final class IntegrationSettings {
        * Specifies location-specific integration settings with Greenbits.
        * </pre>
        *
-       * <code>.bloombox.schema.partner.integrations.greenbits.GreenbitsSettings greenbits = 10;</code>
+       * <code>.bloombox.partner.integrations.greenbits.GreenbitsSettings greenbits = 10;</code>
        */
       public Builder mergeGreenbits(io.bloombox.schema.partner.integrations.greenbits.GreenbitsSettingsOuterClass.GreenbitsSettings value) {
         if (greenbitsBuilder_ == null) {
@@ -2993,7 +3044,7 @@ public final class IntegrationSettings {
        * Specifies location-specific integration settings with Greenbits.
        * </pre>
        *
-       * <code>.bloombox.schema.partner.integrations.greenbits.GreenbitsSettings greenbits = 10;</code>
+       * <code>.bloombox.partner.integrations.greenbits.GreenbitsSettings greenbits = 10;</code>
        */
       public Builder clearGreenbits() {
         if (greenbitsBuilder_ == null) {
@@ -3011,7 +3062,7 @@ public final class IntegrationSettings {
        * Specifies location-specific integration settings with Greenbits.
        * </pre>
        *
-       * <code>.bloombox.schema.partner.integrations.greenbits.GreenbitsSettings greenbits = 10;</code>
+       * <code>.bloombox.partner.integrations.greenbits.GreenbitsSettings greenbits = 10;</code>
        */
       public io.bloombox.schema.partner.integrations.greenbits.GreenbitsSettingsOuterClass.GreenbitsSettings.Builder getGreenbitsBuilder() {
         
@@ -3023,7 +3074,7 @@ public final class IntegrationSettings {
        * Specifies location-specific integration settings with Greenbits.
        * </pre>
        *
-       * <code>.bloombox.schema.partner.integrations.greenbits.GreenbitsSettings greenbits = 10;</code>
+       * <code>.bloombox.partner.integrations.greenbits.GreenbitsSettings greenbits = 10;</code>
        */
       public io.bloombox.schema.partner.integrations.greenbits.GreenbitsSettingsOuterClass.GreenbitsSettingsOrBuilder getGreenbitsOrBuilder() {
         if (greenbitsBuilder_ != null) {
@@ -3038,7 +3089,7 @@ public final class IntegrationSettings {
        * Specifies location-specific integration settings with Greenbits.
        * </pre>
        *
-       * <code>.bloombox.schema.partner.integrations.greenbits.GreenbitsSettings greenbits = 10;</code>
+       * <code>.bloombox.partner.integrations.greenbits.GreenbitsSettings greenbits = 10;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
           io.bloombox.schema.partner.integrations.greenbits.GreenbitsSettingsOuterClass.GreenbitsSettings, io.bloombox.schema.partner.integrations.greenbits.GreenbitsSettingsOuterClass.GreenbitsSettings.Builder, io.bloombox.schema.partner.integrations.greenbits.GreenbitsSettingsOuterClass.GreenbitsSettingsOrBuilder> 
@@ -3062,7 +3113,7 @@ public final class IntegrationSettings {
        * Specifies location-specific integration settings with MailChimp.
        * </pre>
        *
-       * <code>.bloombox.schema.partner.integrations.mailchimp.MailchimpSettings mailchimp = 11;</code>
+       * <code>.bloombox.partner.integrations.mailchimp.MailchimpSettings mailchimp = 11;</code>
        */
       public boolean hasMailchimp() {
         return mailchimpBuilder_ != null || mailchimp_ != null;
@@ -3072,7 +3123,7 @@ public final class IntegrationSettings {
        * Specifies location-specific integration settings with MailChimp.
        * </pre>
        *
-       * <code>.bloombox.schema.partner.integrations.mailchimp.MailchimpSettings mailchimp = 11;</code>
+       * <code>.bloombox.partner.integrations.mailchimp.MailchimpSettings mailchimp = 11;</code>
        */
       public io.bloombox.schema.partner.integrations.mailchimp.MailchimpSettingsOuterClass.MailchimpSettings getMailchimp() {
         if (mailchimpBuilder_ == null) {
@@ -3086,7 +3137,7 @@ public final class IntegrationSettings {
        * Specifies location-specific integration settings with MailChimp.
        * </pre>
        *
-       * <code>.bloombox.schema.partner.integrations.mailchimp.MailchimpSettings mailchimp = 11;</code>
+       * <code>.bloombox.partner.integrations.mailchimp.MailchimpSettings mailchimp = 11;</code>
        */
       public Builder setMailchimp(io.bloombox.schema.partner.integrations.mailchimp.MailchimpSettingsOuterClass.MailchimpSettings value) {
         if (mailchimpBuilder_ == null) {
@@ -3106,7 +3157,7 @@ public final class IntegrationSettings {
        * Specifies location-specific integration settings with MailChimp.
        * </pre>
        *
-       * <code>.bloombox.schema.partner.integrations.mailchimp.MailchimpSettings mailchimp = 11;</code>
+       * <code>.bloombox.partner.integrations.mailchimp.MailchimpSettings mailchimp = 11;</code>
        */
       public Builder setMailchimp(
           io.bloombox.schema.partner.integrations.mailchimp.MailchimpSettingsOuterClass.MailchimpSettings.Builder builderForValue) {
@@ -3124,7 +3175,7 @@ public final class IntegrationSettings {
        * Specifies location-specific integration settings with MailChimp.
        * </pre>
        *
-       * <code>.bloombox.schema.partner.integrations.mailchimp.MailchimpSettings mailchimp = 11;</code>
+       * <code>.bloombox.partner.integrations.mailchimp.MailchimpSettings mailchimp = 11;</code>
        */
       public Builder mergeMailchimp(io.bloombox.schema.partner.integrations.mailchimp.MailchimpSettingsOuterClass.MailchimpSettings value) {
         if (mailchimpBuilder_ == null) {
@@ -3146,7 +3197,7 @@ public final class IntegrationSettings {
        * Specifies location-specific integration settings with MailChimp.
        * </pre>
        *
-       * <code>.bloombox.schema.partner.integrations.mailchimp.MailchimpSettings mailchimp = 11;</code>
+       * <code>.bloombox.partner.integrations.mailchimp.MailchimpSettings mailchimp = 11;</code>
        */
       public Builder clearMailchimp() {
         if (mailchimpBuilder_ == null) {
@@ -3164,7 +3215,7 @@ public final class IntegrationSettings {
        * Specifies location-specific integration settings with MailChimp.
        * </pre>
        *
-       * <code>.bloombox.schema.partner.integrations.mailchimp.MailchimpSettings mailchimp = 11;</code>
+       * <code>.bloombox.partner.integrations.mailchimp.MailchimpSettings mailchimp = 11;</code>
        */
       public io.bloombox.schema.partner.integrations.mailchimp.MailchimpSettingsOuterClass.MailchimpSettings.Builder getMailchimpBuilder() {
         
@@ -3176,7 +3227,7 @@ public final class IntegrationSettings {
        * Specifies location-specific integration settings with MailChimp.
        * </pre>
        *
-       * <code>.bloombox.schema.partner.integrations.mailchimp.MailchimpSettings mailchimp = 11;</code>
+       * <code>.bloombox.partner.integrations.mailchimp.MailchimpSettings mailchimp = 11;</code>
        */
       public io.bloombox.schema.partner.integrations.mailchimp.MailchimpSettingsOuterClass.MailchimpSettingsOrBuilder getMailchimpOrBuilder() {
         if (mailchimpBuilder_ != null) {
@@ -3191,7 +3242,7 @@ public final class IntegrationSettings {
        * Specifies location-specific integration settings with MailChimp.
        * </pre>
        *
-       * <code>.bloombox.schema.partner.integrations.mailchimp.MailchimpSettings mailchimp = 11;</code>
+       * <code>.bloombox.partner.integrations.mailchimp.MailchimpSettings mailchimp = 11;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
           io.bloombox.schema.partner.integrations.mailchimp.MailchimpSettingsOuterClass.MailchimpSettings, io.bloombox.schema.partner.integrations.mailchimp.MailchimpSettingsOuterClass.MailchimpSettings.Builder, io.bloombox.schema.partner.integrations.mailchimp.MailchimpSettingsOuterClass.MailchimpSettingsOrBuilder> 
@@ -3215,7 +3266,7 @@ public final class IntegrationSettings {
        * Specifies location-specific integration settings with Sendgrid.
        * </pre>
        *
-       * <code>.bloombox.schema.partner.integrations.sendgrid.SendgridSettings sendgrid = 12;</code>
+       * <code>.bloombox.partner.integrations.sendgrid.SendgridSettings sendgrid = 12;</code>
        */
       public boolean hasSendgrid() {
         return sendgridBuilder_ != null || sendgrid_ != null;
@@ -3225,7 +3276,7 @@ public final class IntegrationSettings {
        * Specifies location-specific integration settings with Sendgrid.
        * </pre>
        *
-       * <code>.bloombox.schema.partner.integrations.sendgrid.SendgridSettings sendgrid = 12;</code>
+       * <code>.bloombox.partner.integrations.sendgrid.SendgridSettings sendgrid = 12;</code>
        */
       public io.bloombox.schema.partner.integrations.sendgrid.SendgridSettingsOuterClass.SendgridSettings getSendgrid() {
         if (sendgridBuilder_ == null) {
@@ -3239,7 +3290,7 @@ public final class IntegrationSettings {
        * Specifies location-specific integration settings with Sendgrid.
        * </pre>
        *
-       * <code>.bloombox.schema.partner.integrations.sendgrid.SendgridSettings sendgrid = 12;</code>
+       * <code>.bloombox.partner.integrations.sendgrid.SendgridSettings sendgrid = 12;</code>
        */
       public Builder setSendgrid(io.bloombox.schema.partner.integrations.sendgrid.SendgridSettingsOuterClass.SendgridSettings value) {
         if (sendgridBuilder_ == null) {
@@ -3259,7 +3310,7 @@ public final class IntegrationSettings {
        * Specifies location-specific integration settings with Sendgrid.
        * </pre>
        *
-       * <code>.bloombox.schema.partner.integrations.sendgrid.SendgridSettings sendgrid = 12;</code>
+       * <code>.bloombox.partner.integrations.sendgrid.SendgridSettings sendgrid = 12;</code>
        */
       public Builder setSendgrid(
           io.bloombox.schema.partner.integrations.sendgrid.SendgridSettingsOuterClass.SendgridSettings.Builder builderForValue) {
@@ -3277,7 +3328,7 @@ public final class IntegrationSettings {
        * Specifies location-specific integration settings with Sendgrid.
        * </pre>
        *
-       * <code>.bloombox.schema.partner.integrations.sendgrid.SendgridSettings sendgrid = 12;</code>
+       * <code>.bloombox.partner.integrations.sendgrid.SendgridSettings sendgrid = 12;</code>
        */
       public Builder mergeSendgrid(io.bloombox.schema.partner.integrations.sendgrid.SendgridSettingsOuterClass.SendgridSettings value) {
         if (sendgridBuilder_ == null) {
@@ -3299,7 +3350,7 @@ public final class IntegrationSettings {
        * Specifies location-specific integration settings with Sendgrid.
        * </pre>
        *
-       * <code>.bloombox.schema.partner.integrations.sendgrid.SendgridSettings sendgrid = 12;</code>
+       * <code>.bloombox.partner.integrations.sendgrid.SendgridSettings sendgrid = 12;</code>
        */
       public Builder clearSendgrid() {
         if (sendgridBuilder_ == null) {
@@ -3317,7 +3368,7 @@ public final class IntegrationSettings {
        * Specifies location-specific integration settings with Sendgrid.
        * </pre>
        *
-       * <code>.bloombox.schema.partner.integrations.sendgrid.SendgridSettings sendgrid = 12;</code>
+       * <code>.bloombox.partner.integrations.sendgrid.SendgridSettings sendgrid = 12;</code>
        */
       public io.bloombox.schema.partner.integrations.sendgrid.SendgridSettingsOuterClass.SendgridSettings.Builder getSendgridBuilder() {
         
@@ -3329,7 +3380,7 @@ public final class IntegrationSettings {
        * Specifies location-specific integration settings with Sendgrid.
        * </pre>
        *
-       * <code>.bloombox.schema.partner.integrations.sendgrid.SendgridSettings sendgrid = 12;</code>
+       * <code>.bloombox.partner.integrations.sendgrid.SendgridSettings sendgrid = 12;</code>
        */
       public io.bloombox.schema.partner.integrations.sendgrid.SendgridSettingsOuterClass.SendgridSettingsOrBuilder getSendgridOrBuilder() {
         if (sendgridBuilder_ != null) {
@@ -3344,7 +3395,7 @@ public final class IntegrationSettings {
        * Specifies location-specific integration settings with Sendgrid.
        * </pre>
        *
-       * <code>.bloombox.schema.partner.integrations.sendgrid.SendgridSettings sendgrid = 12;</code>
+       * <code>.bloombox.partner.integrations.sendgrid.SendgridSettings sendgrid = 12;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
           io.bloombox.schema.partner.integrations.sendgrid.SendgridSettingsOuterClass.SendgridSettings, io.bloombox.schema.partner.integrations.sendgrid.SendgridSettingsOuterClass.SendgridSettings.Builder, io.bloombox.schema.partner.integrations.sendgrid.SendgridSettingsOuterClass.SendgridSettingsOrBuilder> 
@@ -3368,7 +3419,7 @@ public final class IntegrationSettings {
        * Specifies location-specific integration settings with Twilio.
        * </pre>
        *
-       * <code>.bloombox.schema.partner.integrations.twilio.TwilioSettings twilio = 13;</code>
+       * <code>.bloombox.partner.integrations.twilio.TwilioSettings twilio = 13;</code>
        */
       public boolean hasTwilio() {
         return twilioBuilder_ != null || twilio_ != null;
@@ -3378,7 +3429,7 @@ public final class IntegrationSettings {
        * Specifies location-specific integration settings with Twilio.
        * </pre>
        *
-       * <code>.bloombox.schema.partner.integrations.twilio.TwilioSettings twilio = 13;</code>
+       * <code>.bloombox.partner.integrations.twilio.TwilioSettings twilio = 13;</code>
        */
       public io.bloombox.schema.partner.integrations.twilio.TwilioSettingsOuterClass.TwilioSettings getTwilio() {
         if (twilioBuilder_ == null) {
@@ -3392,7 +3443,7 @@ public final class IntegrationSettings {
        * Specifies location-specific integration settings with Twilio.
        * </pre>
        *
-       * <code>.bloombox.schema.partner.integrations.twilio.TwilioSettings twilio = 13;</code>
+       * <code>.bloombox.partner.integrations.twilio.TwilioSettings twilio = 13;</code>
        */
       public Builder setTwilio(io.bloombox.schema.partner.integrations.twilio.TwilioSettingsOuterClass.TwilioSettings value) {
         if (twilioBuilder_ == null) {
@@ -3412,7 +3463,7 @@ public final class IntegrationSettings {
        * Specifies location-specific integration settings with Twilio.
        * </pre>
        *
-       * <code>.bloombox.schema.partner.integrations.twilio.TwilioSettings twilio = 13;</code>
+       * <code>.bloombox.partner.integrations.twilio.TwilioSettings twilio = 13;</code>
        */
       public Builder setTwilio(
           io.bloombox.schema.partner.integrations.twilio.TwilioSettingsOuterClass.TwilioSettings.Builder builderForValue) {
@@ -3430,7 +3481,7 @@ public final class IntegrationSettings {
        * Specifies location-specific integration settings with Twilio.
        * </pre>
        *
-       * <code>.bloombox.schema.partner.integrations.twilio.TwilioSettings twilio = 13;</code>
+       * <code>.bloombox.partner.integrations.twilio.TwilioSettings twilio = 13;</code>
        */
       public Builder mergeTwilio(io.bloombox.schema.partner.integrations.twilio.TwilioSettingsOuterClass.TwilioSettings value) {
         if (twilioBuilder_ == null) {
@@ -3452,7 +3503,7 @@ public final class IntegrationSettings {
        * Specifies location-specific integration settings with Twilio.
        * </pre>
        *
-       * <code>.bloombox.schema.partner.integrations.twilio.TwilioSettings twilio = 13;</code>
+       * <code>.bloombox.partner.integrations.twilio.TwilioSettings twilio = 13;</code>
        */
       public Builder clearTwilio() {
         if (twilioBuilder_ == null) {
@@ -3470,7 +3521,7 @@ public final class IntegrationSettings {
        * Specifies location-specific integration settings with Twilio.
        * </pre>
        *
-       * <code>.bloombox.schema.partner.integrations.twilio.TwilioSettings twilio = 13;</code>
+       * <code>.bloombox.partner.integrations.twilio.TwilioSettings twilio = 13;</code>
        */
       public io.bloombox.schema.partner.integrations.twilio.TwilioSettingsOuterClass.TwilioSettings.Builder getTwilioBuilder() {
         
@@ -3482,7 +3533,7 @@ public final class IntegrationSettings {
        * Specifies location-specific integration settings with Twilio.
        * </pre>
        *
-       * <code>.bloombox.schema.partner.integrations.twilio.TwilioSettings twilio = 13;</code>
+       * <code>.bloombox.partner.integrations.twilio.TwilioSettings twilio = 13;</code>
        */
       public io.bloombox.schema.partner.integrations.twilio.TwilioSettingsOuterClass.TwilioSettingsOrBuilder getTwilioOrBuilder() {
         if (twilioBuilder_ != null) {
@@ -3497,7 +3548,7 @@ public final class IntegrationSettings {
        * Specifies location-specific integration settings with Twilio.
        * </pre>
        *
-       * <code>.bloombox.schema.partner.integrations.twilio.TwilioSettings twilio = 13;</code>
+       * <code>.bloombox.partner.integrations.twilio.TwilioSettings twilio = 13;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
           io.bloombox.schema.partner.integrations.twilio.TwilioSettingsOuterClass.TwilioSettings, io.bloombox.schema.partner.integrations.twilio.TwilioSettingsOuterClass.TwilioSettings.Builder, io.bloombox.schema.partner.integrations.twilio.TwilioSettingsOuterClass.TwilioSettingsOrBuilder> 
@@ -3521,7 +3572,7 @@ public final class IntegrationSettings {
        * Specifies location-specific integration settings with OnFleet.
        * </pre>
        *
-       * <code>.bloombox.schema.partner.integrations.onfleet.OnFleetSettings onfleet = 14;</code>
+       * <code>.bloombox.partner.integrations.onfleet.OnFleetSettings onfleet = 14;</code>
        */
       public boolean hasOnfleet() {
         return onfleetBuilder_ != null || onfleet_ != null;
@@ -3531,7 +3582,7 @@ public final class IntegrationSettings {
        * Specifies location-specific integration settings with OnFleet.
        * </pre>
        *
-       * <code>.bloombox.schema.partner.integrations.onfleet.OnFleetSettings onfleet = 14;</code>
+       * <code>.bloombox.partner.integrations.onfleet.OnFleetSettings onfleet = 14;</code>
        */
       public io.bloombox.schema.partner.integrations.onfleet.OnFleetSettingsOuterClass.OnFleetSettings getOnfleet() {
         if (onfleetBuilder_ == null) {
@@ -3545,7 +3596,7 @@ public final class IntegrationSettings {
        * Specifies location-specific integration settings with OnFleet.
        * </pre>
        *
-       * <code>.bloombox.schema.partner.integrations.onfleet.OnFleetSettings onfleet = 14;</code>
+       * <code>.bloombox.partner.integrations.onfleet.OnFleetSettings onfleet = 14;</code>
        */
       public Builder setOnfleet(io.bloombox.schema.partner.integrations.onfleet.OnFleetSettingsOuterClass.OnFleetSettings value) {
         if (onfleetBuilder_ == null) {
@@ -3565,7 +3616,7 @@ public final class IntegrationSettings {
        * Specifies location-specific integration settings with OnFleet.
        * </pre>
        *
-       * <code>.bloombox.schema.partner.integrations.onfleet.OnFleetSettings onfleet = 14;</code>
+       * <code>.bloombox.partner.integrations.onfleet.OnFleetSettings onfleet = 14;</code>
        */
       public Builder setOnfleet(
           io.bloombox.schema.partner.integrations.onfleet.OnFleetSettingsOuterClass.OnFleetSettings.Builder builderForValue) {
@@ -3583,7 +3634,7 @@ public final class IntegrationSettings {
        * Specifies location-specific integration settings with OnFleet.
        * </pre>
        *
-       * <code>.bloombox.schema.partner.integrations.onfleet.OnFleetSettings onfleet = 14;</code>
+       * <code>.bloombox.partner.integrations.onfleet.OnFleetSettings onfleet = 14;</code>
        */
       public Builder mergeOnfleet(io.bloombox.schema.partner.integrations.onfleet.OnFleetSettingsOuterClass.OnFleetSettings value) {
         if (onfleetBuilder_ == null) {
@@ -3605,7 +3656,7 @@ public final class IntegrationSettings {
        * Specifies location-specific integration settings with OnFleet.
        * </pre>
        *
-       * <code>.bloombox.schema.partner.integrations.onfleet.OnFleetSettings onfleet = 14;</code>
+       * <code>.bloombox.partner.integrations.onfleet.OnFleetSettings onfleet = 14;</code>
        */
       public Builder clearOnfleet() {
         if (onfleetBuilder_ == null) {
@@ -3623,7 +3674,7 @@ public final class IntegrationSettings {
        * Specifies location-specific integration settings with OnFleet.
        * </pre>
        *
-       * <code>.bloombox.schema.partner.integrations.onfleet.OnFleetSettings onfleet = 14;</code>
+       * <code>.bloombox.partner.integrations.onfleet.OnFleetSettings onfleet = 14;</code>
        */
       public io.bloombox.schema.partner.integrations.onfleet.OnFleetSettingsOuterClass.OnFleetSettings.Builder getOnfleetBuilder() {
         
@@ -3635,7 +3686,7 @@ public final class IntegrationSettings {
        * Specifies location-specific integration settings with OnFleet.
        * </pre>
        *
-       * <code>.bloombox.schema.partner.integrations.onfleet.OnFleetSettings onfleet = 14;</code>
+       * <code>.bloombox.partner.integrations.onfleet.OnFleetSettings onfleet = 14;</code>
        */
       public io.bloombox.schema.partner.integrations.onfleet.OnFleetSettingsOuterClass.OnFleetSettingsOrBuilder getOnfleetOrBuilder() {
         if (onfleetBuilder_ != null) {
@@ -3650,7 +3701,7 @@ public final class IntegrationSettings {
        * Specifies location-specific integration settings with OnFleet.
        * </pre>
        *
-       * <code>.bloombox.schema.partner.integrations.onfleet.OnFleetSettings onfleet = 14;</code>
+       * <code>.bloombox.partner.integrations.onfleet.OnFleetSettings onfleet = 14;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
           io.bloombox.schema.partner.integrations.onfleet.OnFleetSettingsOuterClass.OnFleetSettings, io.bloombox.schema.partner.integrations.onfleet.OnFleetSettingsOuterClass.OnFleetSettings.Builder, io.bloombox.schema.partner.integrations.onfleet.OnFleetSettingsOuterClass.OnFleetSettingsOrBuilder> 
@@ -3674,7 +3725,7 @@ public final class IntegrationSettings {
        * Specifies location-specific integration settings with Treez.
        * </pre>
        *
-       * <code>.bloombox.schema.partner.integrations.treez.TreezSettings treez = 15;</code>
+       * <code>.bloombox.partner.integrations.treez.TreezSettings treez = 15;</code>
        */
       public boolean hasTreez() {
         return treezBuilder_ != null || treez_ != null;
@@ -3684,7 +3735,7 @@ public final class IntegrationSettings {
        * Specifies location-specific integration settings with Treez.
        * </pre>
        *
-       * <code>.bloombox.schema.partner.integrations.treez.TreezSettings treez = 15;</code>
+       * <code>.bloombox.partner.integrations.treez.TreezSettings treez = 15;</code>
        */
       public io.bloombox.schema.partner.integrations.treez.TreezSettingsOuterClass.TreezSettings getTreez() {
         if (treezBuilder_ == null) {
@@ -3698,7 +3749,7 @@ public final class IntegrationSettings {
        * Specifies location-specific integration settings with Treez.
        * </pre>
        *
-       * <code>.bloombox.schema.partner.integrations.treez.TreezSettings treez = 15;</code>
+       * <code>.bloombox.partner.integrations.treez.TreezSettings treez = 15;</code>
        */
       public Builder setTreez(io.bloombox.schema.partner.integrations.treez.TreezSettingsOuterClass.TreezSettings value) {
         if (treezBuilder_ == null) {
@@ -3718,7 +3769,7 @@ public final class IntegrationSettings {
        * Specifies location-specific integration settings with Treez.
        * </pre>
        *
-       * <code>.bloombox.schema.partner.integrations.treez.TreezSettings treez = 15;</code>
+       * <code>.bloombox.partner.integrations.treez.TreezSettings treez = 15;</code>
        */
       public Builder setTreez(
           io.bloombox.schema.partner.integrations.treez.TreezSettingsOuterClass.TreezSettings.Builder builderForValue) {
@@ -3736,7 +3787,7 @@ public final class IntegrationSettings {
        * Specifies location-specific integration settings with Treez.
        * </pre>
        *
-       * <code>.bloombox.schema.partner.integrations.treez.TreezSettings treez = 15;</code>
+       * <code>.bloombox.partner.integrations.treez.TreezSettings treez = 15;</code>
        */
       public Builder mergeTreez(io.bloombox.schema.partner.integrations.treez.TreezSettingsOuterClass.TreezSettings value) {
         if (treezBuilder_ == null) {
@@ -3758,7 +3809,7 @@ public final class IntegrationSettings {
        * Specifies location-specific integration settings with Treez.
        * </pre>
        *
-       * <code>.bloombox.schema.partner.integrations.treez.TreezSettings treez = 15;</code>
+       * <code>.bloombox.partner.integrations.treez.TreezSettings treez = 15;</code>
        */
       public Builder clearTreez() {
         if (treezBuilder_ == null) {
@@ -3776,7 +3827,7 @@ public final class IntegrationSettings {
        * Specifies location-specific integration settings with Treez.
        * </pre>
        *
-       * <code>.bloombox.schema.partner.integrations.treez.TreezSettings treez = 15;</code>
+       * <code>.bloombox.partner.integrations.treez.TreezSettings treez = 15;</code>
        */
       public io.bloombox.schema.partner.integrations.treez.TreezSettingsOuterClass.TreezSettings.Builder getTreezBuilder() {
         
@@ -3788,7 +3839,7 @@ public final class IntegrationSettings {
        * Specifies location-specific integration settings with Treez.
        * </pre>
        *
-       * <code>.bloombox.schema.partner.integrations.treez.TreezSettings treez = 15;</code>
+       * <code>.bloombox.partner.integrations.treez.TreezSettings treez = 15;</code>
        */
       public io.bloombox.schema.partner.integrations.treez.TreezSettingsOuterClass.TreezSettingsOrBuilder getTreezOrBuilder() {
         if (treezBuilder_ != null) {
@@ -3803,7 +3854,7 @@ public final class IntegrationSettings {
        * Specifies location-specific integration settings with Treez.
        * </pre>
        *
-       * <code>.bloombox.schema.partner.integrations.treez.TreezSettings treez = 15;</code>
+       * <code>.bloombox.partner.integrations.treez.TreezSettings treez = 15;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
           io.bloombox.schema.partner.integrations.treez.TreezSettingsOuterClass.TreezSettings, io.bloombox.schema.partner.integrations.treez.TreezSettingsOuterClass.TreezSettings.Builder, io.bloombox.schema.partner.integrations.treez.TreezSettingsOuterClass.TreezSettingsOrBuilder> 
@@ -3818,21 +3869,23 @@ public final class IntegrationSettings {
         }
         return treezBuilder_;
       }
+      @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
         return super.setUnknownFieldsProto3(unknownFields);
       }
 
+      @java.lang.Override
       public final Builder mergeUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
         return super.mergeUnknownFields(unknownFields);
       }
 
 
-      // @@protoc_insertion_point(builder_scope:bloombox.schema.partner.integrations.LocationIntegrationSettings)
+      // @@protoc_insertion_point(builder_scope:bloombox.partner.integrations.LocationIntegrationSettings)
     }
 
-    // @@protoc_insertion_point(class_scope:bloombox.schema.partner.integrations.LocationIntegrationSettings)
+    // @@protoc_insertion_point(class_scope:bloombox.partner.integrations.LocationIntegrationSettings)
     private static final io.bloombox.schema.partner.integrations.IntegrationSettings.LocationIntegrationSettings DEFAULT_INSTANCE;
     static {
       DEFAULT_INSTANCE = new io.bloombox.schema.partner.integrations.IntegrationSettings.LocationIntegrationSettings();
@@ -3844,6 +3897,7 @@ public final class IntegrationSettings {
 
     private static final com.google.protobuf.Parser<LocationIntegrationSettings>
         PARSER = new com.google.protobuf.AbstractParser<LocationIntegrationSettings>() {
+      @java.lang.Override
       public LocationIntegrationSettings parsePartialFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -3861,6 +3915,7 @@ public final class IntegrationSettings {
       return PARSER;
     }
 
+    @java.lang.Override
     public io.bloombox.schema.partner.integrations.IntegrationSettings.LocationIntegrationSettings getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
@@ -3868,7 +3923,7 @@ public final class IntegrationSettings {
   }
 
   public interface PartnerIntegrationSettingsOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:bloombox.schema.partner.integrations.PartnerIntegrationSettings)
+      // @@protoc_insertion_point(interface_extends:bloombox.partner.integrations.PartnerIntegrationSettings)
       com.google.protobuf.MessageOrBuilder {
 
     /**
@@ -3876,7 +3931,7 @@ public final class IntegrationSettings {
      * Specifies integrations that a specific partner has setup.
      * </pre>
      *
-     * <code>repeated .bloombox.schema.partner.integrations.IntegrationPartner integrations = 1;</code>
+     * <code>repeated .bloombox.partner.integrations.IntegrationPartner integrations = 1;</code>
      */
     java.util.List<io.bloombox.schema.partner.integrations.IntegrationSettings.IntegrationPartner> getIntegrationsList();
     /**
@@ -3884,7 +3939,7 @@ public final class IntegrationSettings {
      * Specifies integrations that a specific partner has setup.
      * </pre>
      *
-     * <code>repeated .bloombox.schema.partner.integrations.IntegrationPartner integrations = 1;</code>
+     * <code>repeated .bloombox.partner.integrations.IntegrationPartner integrations = 1;</code>
      */
     int getIntegrationsCount();
     /**
@@ -3892,7 +3947,7 @@ public final class IntegrationSettings {
      * Specifies integrations that a specific partner has setup.
      * </pre>
      *
-     * <code>repeated .bloombox.schema.partner.integrations.IntegrationPartner integrations = 1;</code>
+     * <code>repeated .bloombox.partner.integrations.IntegrationPartner integrations = 1;</code>
      */
     io.bloombox.schema.partner.integrations.IntegrationSettings.IntegrationPartner getIntegrations(int index);
     /**
@@ -3900,7 +3955,7 @@ public final class IntegrationSettings {
      * Specifies integrations that a specific partner has setup.
      * </pre>
      *
-     * <code>repeated .bloombox.schema.partner.integrations.IntegrationPartner integrations = 1;</code>
+     * <code>repeated .bloombox.partner.integrations.IntegrationPartner integrations = 1;</code>
      */
     java.util.List<java.lang.Integer>
     getIntegrationsValueList();
@@ -3909,7 +3964,7 @@ public final class IntegrationSettings {
      * Specifies integrations that a specific partner has setup.
      * </pre>
      *
-     * <code>repeated .bloombox.schema.partner.integrations.IntegrationPartner integrations = 1;</code>
+     * <code>repeated .bloombox.partner.integrations.IntegrationPartner integrations = 1;</code>
      */
     int getIntegrationsValue(int index);
 
@@ -3918,7 +3973,7 @@ public final class IntegrationSettings {
      * Generic settings, specified for each partner-level integration.
      * </pre>
      *
-     * <code>map&lt;string, .bloombox.schema.partner.integrations.GenericIntegrationSettings&gt; generic = 2;</code>
+     * <code>map&lt;string, .bloombox.partner.integrations.GenericIntegrationSettings&gt; generic = 2;</code>
      */
     int getGenericCount();
     /**
@@ -3926,7 +3981,7 @@ public final class IntegrationSettings {
      * Generic settings, specified for each partner-level integration.
      * </pre>
      *
-     * <code>map&lt;string, .bloombox.schema.partner.integrations.GenericIntegrationSettings&gt; generic = 2;</code>
+     * <code>map&lt;string, .bloombox.partner.integrations.GenericIntegrationSettings&gt; generic = 2;</code>
      */
     boolean containsGeneric(
         java.lang.String key);
@@ -3941,7 +3996,7 @@ public final class IntegrationSettings {
      * Generic settings, specified for each partner-level integration.
      * </pre>
      *
-     * <code>map&lt;string, .bloombox.schema.partner.integrations.GenericIntegrationSettings&gt; generic = 2;</code>
+     * <code>map&lt;string, .bloombox.partner.integrations.GenericIntegrationSettings&gt; generic = 2;</code>
      */
     java.util.Map<java.lang.String, io.bloombox.schema.partner.integrations.IntegrationSettings.GenericIntegrationSettings>
     getGenericMap();
@@ -3950,7 +4005,7 @@ public final class IntegrationSettings {
      * Generic settings, specified for each partner-level integration.
      * </pre>
      *
-     * <code>map&lt;string, .bloombox.schema.partner.integrations.GenericIntegrationSettings&gt; generic = 2;</code>
+     * <code>map&lt;string, .bloombox.partner.integrations.GenericIntegrationSettings&gt; generic = 2;</code>
      */
 
     io.bloombox.schema.partner.integrations.IntegrationSettings.GenericIntegrationSettings getGenericOrDefault(
@@ -3961,7 +4016,7 @@ public final class IntegrationSettings {
      * Generic settings, specified for each partner-level integration.
      * </pre>
      *
-     * <code>map&lt;string, .bloombox.schema.partner.integrations.GenericIntegrationSettings&gt; generic = 2;</code>
+     * <code>map&lt;string, .bloombox.partner.integrations.GenericIntegrationSettings&gt; generic = 2;</code>
      */
 
     io.bloombox.schema.partner.integrations.IntegrationSettings.GenericIntegrationSettings getGenericOrThrow(
@@ -3972,7 +4027,7 @@ public final class IntegrationSettings {
      * Specifies location-specific integration settings with GSuite.
      * </pre>
      *
-     * <code>.bloombox.schema.partner.integrations.gsuite.GSuiteSettings gsuite = 10;</code>
+     * <code>.bloombox.partner.integrations.gsuite.GSuiteSettings gsuite = 10;</code>
      */
     boolean hasGsuite();
     /**
@@ -3980,7 +4035,7 @@ public final class IntegrationSettings {
      * Specifies location-specific integration settings with GSuite.
      * </pre>
      *
-     * <code>.bloombox.schema.partner.integrations.gsuite.GSuiteSettings gsuite = 10;</code>
+     * <code>.bloombox.partner.integrations.gsuite.GSuiteSettings gsuite = 10;</code>
      */
     io.bloombox.schema.partner.integrations.gsuite.GSuiteSettingsOuterClass.GSuiteSettings getGsuite();
     /**
@@ -3988,7 +4043,7 @@ public final class IntegrationSettings {
      * Specifies location-specific integration settings with GSuite.
      * </pre>
      *
-     * <code>.bloombox.schema.partner.integrations.gsuite.GSuiteSettings gsuite = 10;</code>
+     * <code>.bloombox.partner.integrations.gsuite.GSuiteSettings gsuite = 10;</code>
      */
     io.bloombox.schema.partner.integrations.gsuite.GSuiteSettingsOuterClass.GSuiteSettingsOrBuilder getGsuiteOrBuilder();
   }
@@ -3997,11 +4052,11 @@ public final class IntegrationSettings {
    * Partner-level integration settings.
    * </pre>
    *
-   * Protobuf type {@code bloombox.schema.partner.integrations.PartnerIntegrationSettings}
+   * Protobuf type {@code bloombox.partner.integrations.PartnerIntegrationSettings}
    */
   public  static final class PartnerIntegrationSettings extends
       com.google.protobuf.GeneratedMessageV3 implements
-      // @@protoc_insertion_point(message_implements:bloombox.schema.partner.integrations.PartnerIntegrationSettings)
+      // @@protoc_insertion_point(message_implements:bloombox.partner.integrations.PartnerIntegrationSettings)
       PartnerIntegrationSettingsOrBuilder {
   private static final long serialVersionUID = 0L;
     // Use PartnerIntegrationSettings.newBuilder() to construct.
@@ -4036,13 +4091,6 @@ public final class IntegrationSettings {
             case 0:
               done = true;
               break;
-            default: {
-              if (!parseUnknownFieldProto3(
-                  input, unknownFields, extensionRegistry, tag)) {
-                done = true;
-              }
-              break;
-            }
             case 8: {
               int rawValue = input.readEnum();
               if (!((mutable_bitField0_ & 0x00000001) == 0x00000001)) {
@@ -4092,6 +4140,13 @@ public final class IntegrationSettings {
 
               break;
             }
+            default: {
+              if (!parseUnknownFieldProto3(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
           }
         }
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
@@ -4109,10 +4164,11 @@ public final class IntegrationSettings {
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return io.bloombox.schema.partner.integrations.IntegrationSettings.internal_static_bloombox_schema_partner_integrations_PartnerIntegrationSettings_descriptor;
+      return io.bloombox.schema.partner.integrations.IntegrationSettings.internal_static_bloombox_partner_integrations_PartnerIntegrationSettings_descriptor;
     }
 
     @SuppressWarnings({"rawtypes"})
+    @java.lang.Override
     protected com.google.protobuf.MapField internalGetMapField(
         int number) {
       switch (number) {
@@ -4123,9 +4179,10 @@ public final class IntegrationSettings {
               "Invalid map field number: " + number);
       }
     }
+    @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return io.bloombox.schema.partner.integrations.IntegrationSettings.internal_static_bloombox_schema_partner_integrations_PartnerIntegrationSettings_fieldAccessorTable
+      return io.bloombox.schema.partner.integrations.IntegrationSettings.internal_static_bloombox_partner_integrations_PartnerIntegrationSettings_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
               io.bloombox.schema.partner.integrations.IntegrationSettings.PartnerIntegrationSettings.class, io.bloombox.schema.partner.integrations.IntegrationSettings.PartnerIntegrationSettings.Builder.class);
     }
@@ -4138,6 +4195,7 @@ public final class IntegrationSettings {
             new com.google.protobuf.Internal.ListAdapter.Converter<
                 java.lang.Integer, io.bloombox.schema.partner.integrations.IntegrationSettings.IntegrationPartner>() {
               public io.bloombox.schema.partner.integrations.IntegrationSettings.IntegrationPartner convert(java.lang.Integer from) {
+                @SuppressWarnings("deprecation")
                 io.bloombox.schema.partner.integrations.IntegrationSettings.IntegrationPartner result = io.bloombox.schema.partner.integrations.IntegrationSettings.IntegrationPartner.valueOf(from);
                 return result == null ? io.bloombox.schema.partner.integrations.IntegrationSettings.IntegrationPartner.UNRECOGNIZED : result;
               }
@@ -4147,7 +4205,7 @@ public final class IntegrationSettings {
      * Specifies integrations that a specific partner has setup.
      * </pre>
      *
-     * <code>repeated .bloombox.schema.partner.integrations.IntegrationPartner integrations = 1;</code>
+     * <code>repeated .bloombox.partner.integrations.IntegrationPartner integrations = 1;</code>
      */
     public java.util.List<io.bloombox.schema.partner.integrations.IntegrationSettings.IntegrationPartner> getIntegrationsList() {
       return new com.google.protobuf.Internal.ListAdapter<
@@ -4158,7 +4216,7 @@ public final class IntegrationSettings {
      * Specifies integrations that a specific partner has setup.
      * </pre>
      *
-     * <code>repeated .bloombox.schema.partner.integrations.IntegrationPartner integrations = 1;</code>
+     * <code>repeated .bloombox.partner.integrations.IntegrationPartner integrations = 1;</code>
      */
     public int getIntegrationsCount() {
       return integrations_.size();
@@ -4168,7 +4226,7 @@ public final class IntegrationSettings {
      * Specifies integrations that a specific partner has setup.
      * </pre>
      *
-     * <code>repeated .bloombox.schema.partner.integrations.IntegrationPartner integrations = 1;</code>
+     * <code>repeated .bloombox.partner.integrations.IntegrationPartner integrations = 1;</code>
      */
     public io.bloombox.schema.partner.integrations.IntegrationSettings.IntegrationPartner getIntegrations(int index) {
       return integrations_converter_.convert(integrations_.get(index));
@@ -4178,7 +4236,7 @@ public final class IntegrationSettings {
      * Specifies integrations that a specific partner has setup.
      * </pre>
      *
-     * <code>repeated .bloombox.schema.partner.integrations.IntegrationPartner integrations = 1;</code>
+     * <code>repeated .bloombox.partner.integrations.IntegrationPartner integrations = 1;</code>
      */
     public java.util.List<java.lang.Integer>
     getIntegrationsValueList() {
@@ -4189,7 +4247,7 @@ public final class IntegrationSettings {
      * Specifies integrations that a specific partner has setup.
      * </pre>
      *
-     * <code>repeated .bloombox.schema.partner.integrations.IntegrationPartner integrations = 1;</code>
+     * <code>repeated .bloombox.partner.integrations.IntegrationPartner integrations = 1;</code>
      */
     public int getIntegrationsValue(int index) {
       return integrations_.get(index);
@@ -4202,7 +4260,7 @@ public final class IntegrationSettings {
           java.lang.String, io.bloombox.schema.partner.integrations.IntegrationSettings.GenericIntegrationSettings> defaultEntry =
               com.google.protobuf.MapEntry
               .<java.lang.String, io.bloombox.schema.partner.integrations.IntegrationSettings.GenericIntegrationSettings>newDefaultInstance(
-                  io.bloombox.schema.partner.integrations.IntegrationSettings.internal_static_bloombox_schema_partner_integrations_PartnerIntegrationSettings_GenericEntry_descriptor, 
+                  io.bloombox.schema.partner.integrations.IntegrationSettings.internal_static_bloombox_partner_integrations_PartnerIntegrationSettings_GenericEntry_descriptor, 
                   com.google.protobuf.WireFormat.FieldType.STRING,
                   "",
                   com.google.protobuf.WireFormat.FieldType.MESSAGE,
@@ -4227,7 +4285,7 @@ public final class IntegrationSettings {
      * Generic settings, specified for each partner-level integration.
      * </pre>
      *
-     * <code>map&lt;string, .bloombox.schema.partner.integrations.GenericIntegrationSettings&gt; generic = 2;</code>
+     * <code>map&lt;string, .bloombox.partner.integrations.GenericIntegrationSettings&gt; generic = 2;</code>
      */
 
     public boolean containsGeneric(
@@ -4247,7 +4305,7 @@ public final class IntegrationSettings {
      * Generic settings, specified for each partner-level integration.
      * </pre>
      *
-     * <code>map&lt;string, .bloombox.schema.partner.integrations.GenericIntegrationSettings&gt; generic = 2;</code>
+     * <code>map&lt;string, .bloombox.partner.integrations.GenericIntegrationSettings&gt; generic = 2;</code>
      */
 
     public java.util.Map<java.lang.String, io.bloombox.schema.partner.integrations.IntegrationSettings.GenericIntegrationSettings> getGenericMap() {
@@ -4258,7 +4316,7 @@ public final class IntegrationSettings {
      * Generic settings, specified for each partner-level integration.
      * </pre>
      *
-     * <code>map&lt;string, .bloombox.schema.partner.integrations.GenericIntegrationSettings&gt; generic = 2;</code>
+     * <code>map&lt;string, .bloombox.partner.integrations.GenericIntegrationSettings&gt; generic = 2;</code>
      */
 
     public io.bloombox.schema.partner.integrations.IntegrationSettings.GenericIntegrationSettings getGenericOrDefault(
@@ -4274,7 +4332,7 @@ public final class IntegrationSettings {
      * Generic settings, specified for each partner-level integration.
      * </pre>
      *
-     * <code>map&lt;string, .bloombox.schema.partner.integrations.GenericIntegrationSettings&gt; generic = 2;</code>
+     * <code>map&lt;string, .bloombox.partner.integrations.GenericIntegrationSettings&gt; generic = 2;</code>
      */
 
     public io.bloombox.schema.partner.integrations.IntegrationSettings.GenericIntegrationSettings getGenericOrThrow(
@@ -4295,7 +4353,7 @@ public final class IntegrationSettings {
      * Specifies location-specific integration settings with GSuite.
      * </pre>
      *
-     * <code>.bloombox.schema.partner.integrations.gsuite.GSuiteSettings gsuite = 10;</code>
+     * <code>.bloombox.partner.integrations.gsuite.GSuiteSettings gsuite = 10;</code>
      */
     public boolean hasGsuite() {
       return gsuite_ != null;
@@ -4305,7 +4363,7 @@ public final class IntegrationSettings {
      * Specifies location-specific integration settings with GSuite.
      * </pre>
      *
-     * <code>.bloombox.schema.partner.integrations.gsuite.GSuiteSettings gsuite = 10;</code>
+     * <code>.bloombox.partner.integrations.gsuite.GSuiteSettings gsuite = 10;</code>
      */
     public io.bloombox.schema.partner.integrations.gsuite.GSuiteSettingsOuterClass.GSuiteSettings getGsuite() {
       return gsuite_ == null ? io.bloombox.schema.partner.integrations.gsuite.GSuiteSettingsOuterClass.GSuiteSettings.getDefaultInstance() : gsuite_;
@@ -4315,13 +4373,14 @@ public final class IntegrationSettings {
      * Specifies location-specific integration settings with GSuite.
      * </pre>
      *
-     * <code>.bloombox.schema.partner.integrations.gsuite.GSuiteSettings gsuite = 10;</code>
+     * <code>.bloombox.partner.integrations.gsuite.GSuiteSettings gsuite = 10;</code>
      */
     public io.bloombox.schema.partner.integrations.gsuite.GSuiteSettingsOuterClass.GSuiteSettingsOrBuilder getGsuiteOrBuilder() {
       return getGsuite();
     }
 
     private byte memoizedIsInitialized = -1;
+    @java.lang.Override
     public final boolean isInitialized() {
       byte isInitialized = memoizedIsInitialized;
       if (isInitialized == 1) return true;
@@ -4331,6 +4390,7 @@ public final class IntegrationSettings {
       return true;
     }
 
+    @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
       getSerializedSize();
@@ -4353,6 +4413,7 @@ public final class IntegrationSettings {
       unknownFields.writeTo(output);
     }
 
+    @java.lang.Override
     public int getSerializedSize() {
       int size = memoizedSize;
       if (size != -1) return size;
@@ -4506,6 +4567,7 @@ public final class IntegrationSettings {
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
 
+    @java.lang.Override
     public Builder newBuilderForType() { return newBuilder(); }
     public static Builder newBuilder() {
       return DEFAULT_INSTANCE.toBuilder();
@@ -4513,6 +4575,7 @@ public final class IntegrationSettings {
     public static Builder newBuilder(io.bloombox.schema.partner.integrations.IntegrationSettings.PartnerIntegrationSettings prototype) {
       return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
     }
+    @java.lang.Override
     public Builder toBuilder() {
       return this == DEFAULT_INSTANCE
           ? new Builder() : new Builder().mergeFrom(this);
@@ -4529,15 +4592,15 @@ public final class IntegrationSettings {
      * Partner-level integration settings.
      * </pre>
      *
-     * Protobuf type {@code bloombox.schema.partner.integrations.PartnerIntegrationSettings}
+     * Protobuf type {@code bloombox.partner.integrations.PartnerIntegrationSettings}
      */
     public static final class Builder extends
         com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:bloombox.schema.partner.integrations.PartnerIntegrationSettings)
+        // @@protoc_insertion_point(builder_implements:bloombox.partner.integrations.PartnerIntegrationSettings)
         io.bloombox.schema.partner.integrations.IntegrationSettings.PartnerIntegrationSettingsOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return io.bloombox.schema.partner.integrations.IntegrationSettings.internal_static_bloombox_schema_partner_integrations_PartnerIntegrationSettings_descriptor;
+        return io.bloombox.schema.partner.integrations.IntegrationSettings.internal_static_bloombox_partner_integrations_PartnerIntegrationSettings_descriptor;
       }
 
       @SuppressWarnings({"rawtypes"})
@@ -4562,9 +4625,10 @@ public final class IntegrationSettings {
                 "Invalid map field number: " + number);
         }
       }
+      @java.lang.Override
       protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return io.bloombox.schema.partner.integrations.IntegrationSettings.internal_static_bloombox_schema_partner_integrations_PartnerIntegrationSettings_fieldAccessorTable
+        return io.bloombox.schema.partner.integrations.IntegrationSettings.internal_static_bloombox_partner_integrations_PartnerIntegrationSettings_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
                 io.bloombox.schema.partner.integrations.IntegrationSettings.PartnerIntegrationSettings.class, io.bloombox.schema.partner.integrations.IntegrationSettings.PartnerIntegrationSettings.Builder.class);
       }
@@ -4584,6 +4648,7 @@ public final class IntegrationSettings {
                 .alwaysUseFieldBuilders) {
         }
       }
+      @java.lang.Override
       public Builder clear() {
         super.clear();
         integrations_ = java.util.Collections.emptyList();
@@ -4598,15 +4663,18 @@ public final class IntegrationSettings {
         return this;
       }
 
+      @java.lang.Override
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return io.bloombox.schema.partner.integrations.IntegrationSettings.internal_static_bloombox_schema_partner_integrations_PartnerIntegrationSettings_descriptor;
+        return io.bloombox.schema.partner.integrations.IntegrationSettings.internal_static_bloombox_partner_integrations_PartnerIntegrationSettings_descriptor;
       }
 
+      @java.lang.Override
       public io.bloombox.schema.partner.integrations.IntegrationSettings.PartnerIntegrationSettings getDefaultInstanceForType() {
         return io.bloombox.schema.partner.integrations.IntegrationSettings.PartnerIntegrationSettings.getDefaultInstance();
       }
 
+      @java.lang.Override
       public io.bloombox.schema.partner.integrations.IntegrationSettings.PartnerIntegrationSettings build() {
         io.bloombox.schema.partner.integrations.IntegrationSettings.PartnerIntegrationSettings result = buildPartial();
         if (!result.isInitialized()) {
@@ -4615,6 +4683,7 @@ public final class IntegrationSettings {
         return result;
       }
 
+      @java.lang.Override
       public io.bloombox.schema.partner.integrations.IntegrationSettings.PartnerIntegrationSettings buildPartial() {
         io.bloombox.schema.partner.integrations.IntegrationSettings.PartnerIntegrationSettings result = new io.bloombox.schema.partner.integrations.IntegrationSettings.PartnerIntegrationSettings(this);
         int from_bitField0_ = bitField0_;
@@ -4636,32 +4705,39 @@ public final class IntegrationSettings {
         return result;
       }
 
+      @java.lang.Override
       public Builder clone() {
         return (Builder) super.clone();
       }
+      @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
         return (Builder) super.setField(field, value);
       }
+      @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
         return (Builder) super.clearField(field);
       }
+      @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
         return (Builder) super.clearOneof(oneof);
       }
+      @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
         return (Builder) super.setRepeatedField(field, index, value);
       }
+      @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
         return (Builder) super.addRepeatedField(field, value);
       }
+      @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
         if (other instanceof io.bloombox.schema.partner.integrations.IntegrationSettings.PartnerIntegrationSettings) {
           return mergeFrom((io.bloombox.schema.partner.integrations.IntegrationSettings.PartnerIntegrationSettings)other);
@@ -4693,10 +4769,12 @@ public final class IntegrationSettings {
         return this;
       }
 
+      @java.lang.Override
       public final boolean isInitialized() {
         return true;
       }
 
+      @java.lang.Override
       public Builder mergeFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -4729,7 +4807,7 @@ public final class IntegrationSettings {
        * Specifies integrations that a specific partner has setup.
        * </pre>
        *
-       * <code>repeated .bloombox.schema.partner.integrations.IntegrationPartner integrations = 1;</code>
+       * <code>repeated .bloombox.partner.integrations.IntegrationPartner integrations = 1;</code>
        */
       public java.util.List<io.bloombox.schema.partner.integrations.IntegrationSettings.IntegrationPartner> getIntegrationsList() {
         return new com.google.protobuf.Internal.ListAdapter<
@@ -4740,7 +4818,7 @@ public final class IntegrationSettings {
        * Specifies integrations that a specific partner has setup.
        * </pre>
        *
-       * <code>repeated .bloombox.schema.partner.integrations.IntegrationPartner integrations = 1;</code>
+       * <code>repeated .bloombox.partner.integrations.IntegrationPartner integrations = 1;</code>
        */
       public int getIntegrationsCount() {
         return integrations_.size();
@@ -4750,7 +4828,7 @@ public final class IntegrationSettings {
        * Specifies integrations that a specific partner has setup.
        * </pre>
        *
-       * <code>repeated .bloombox.schema.partner.integrations.IntegrationPartner integrations = 1;</code>
+       * <code>repeated .bloombox.partner.integrations.IntegrationPartner integrations = 1;</code>
        */
       public io.bloombox.schema.partner.integrations.IntegrationSettings.IntegrationPartner getIntegrations(int index) {
         return integrations_converter_.convert(integrations_.get(index));
@@ -4760,7 +4838,7 @@ public final class IntegrationSettings {
        * Specifies integrations that a specific partner has setup.
        * </pre>
        *
-       * <code>repeated .bloombox.schema.partner.integrations.IntegrationPartner integrations = 1;</code>
+       * <code>repeated .bloombox.partner.integrations.IntegrationPartner integrations = 1;</code>
        */
       public Builder setIntegrations(
           int index, io.bloombox.schema.partner.integrations.IntegrationSettings.IntegrationPartner value) {
@@ -4777,7 +4855,7 @@ public final class IntegrationSettings {
        * Specifies integrations that a specific partner has setup.
        * </pre>
        *
-       * <code>repeated .bloombox.schema.partner.integrations.IntegrationPartner integrations = 1;</code>
+       * <code>repeated .bloombox.partner.integrations.IntegrationPartner integrations = 1;</code>
        */
       public Builder addIntegrations(io.bloombox.schema.partner.integrations.IntegrationSettings.IntegrationPartner value) {
         if (value == null) {
@@ -4793,7 +4871,7 @@ public final class IntegrationSettings {
        * Specifies integrations that a specific partner has setup.
        * </pre>
        *
-       * <code>repeated .bloombox.schema.partner.integrations.IntegrationPartner integrations = 1;</code>
+       * <code>repeated .bloombox.partner.integrations.IntegrationPartner integrations = 1;</code>
        */
       public Builder addAllIntegrations(
           java.lang.Iterable<? extends io.bloombox.schema.partner.integrations.IntegrationSettings.IntegrationPartner> values) {
@@ -4809,7 +4887,7 @@ public final class IntegrationSettings {
        * Specifies integrations that a specific partner has setup.
        * </pre>
        *
-       * <code>repeated .bloombox.schema.partner.integrations.IntegrationPartner integrations = 1;</code>
+       * <code>repeated .bloombox.partner.integrations.IntegrationPartner integrations = 1;</code>
        */
       public Builder clearIntegrations() {
         integrations_ = java.util.Collections.emptyList();
@@ -4822,7 +4900,7 @@ public final class IntegrationSettings {
        * Specifies integrations that a specific partner has setup.
        * </pre>
        *
-       * <code>repeated .bloombox.schema.partner.integrations.IntegrationPartner integrations = 1;</code>
+       * <code>repeated .bloombox.partner.integrations.IntegrationPartner integrations = 1;</code>
        */
       public java.util.List<java.lang.Integer>
       getIntegrationsValueList() {
@@ -4833,7 +4911,7 @@ public final class IntegrationSettings {
        * Specifies integrations that a specific partner has setup.
        * </pre>
        *
-       * <code>repeated .bloombox.schema.partner.integrations.IntegrationPartner integrations = 1;</code>
+       * <code>repeated .bloombox.partner.integrations.IntegrationPartner integrations = 1;</code>
        */
       public int getIntegrationsValue(int index) {
         return integrations_.get(index);
@@ -4843,7 +4921,7 @@ public final class IntegrationSettings {
        * Specifies integrations that a specific partner has setup.
        * </pre>
        *
-       * <code>repeated .bloombox.schema.partner.integrations.IntegrationPartner integrations = 1;</code>
+       * <code>repeated .bloombox.partner.integrations.IntegrationPartner integrations = 1;</code>
        */
       public Builder setIntegrationsValue(
           int index, int value) {
@@ -4857,7 +4935,7 @@ public final class IntegrationSettings {
        * Specifies integrations that a specific partner has setup.
        * </pre>
        *
-       * <code>repeated .bloombox.schema.partner.integrations.IntegrationPartner integrations = 1;</code>
+       * <code>repeated .bloombox.partner.integrations.IntegrationPartner integrations = 1;</code>
        */
       public Builder addIntegrationsValue(int value) {
         ensureIntegrationsIsMutable();
@@ -4870,7 +4948,7 @@ public final class IntegrationSettings {
        * Specifies integrations that a specific partner has setup.
        * </pre>
        *
-       * <code>repeated .bloombox.schema.partner.integrations.IntegrationPartner integrations = 1;</code>
+       * <code>repeated .bloombox.partner.integrations.IntegrationPartner integrations = 1;</code>
        */
       public Builder addAllIntegrationsValue(
           java.lang.Iterable<java.lang.Integer> values) {
@@ -4913,7 +4991,7 @@ public final class IntegrationSettings {
        * Generic settings, specified for each partner-level integration.
        * </pre>
        *
-       * <code>map&lt;string, .bloombox.schema.partner.integrations.GenericIntegrationSettings&gt; generic = 2;</code>
+       * <code>map&lt;string, .bloombox.partner.integrations.GenericIntegrationSettings&gt; generic = 2;</code>
        */
 
       public boolean containsGeneric(
@@ -4933,7 +5011,7 @@ public final class IntegrationSettings {
        * Generic settings, specified for each partner-level integration.
        * </pre>
        *
-       * <code>map&lt;string, .bloombox.schema.partner.integrations.GenericIntegrationSettings&gt; generic = 2;</code>
+       * <code>map&lt;string, .bloombox.partner.integrations.GenericIntegrationSettings&gt; generic = 2;</code>
        */
 
       public java.util.Map<java.lang.String, io.bloombox.schema.partner.integrations.IntegrationSettings.GenericIntegrationSettings> getGenericMap() {
@@ -4944,7 +5022,7 @@ public final class IntegrationSettings {
        * Generic settings, specified for each partner-level integration.
        * </pre>
        *
-       * <code>map&lt;string, .bloombox.schema.partner.integrations.GenericIntegrationSettings&gt; generic = 2;</code>
+       * <code>map&lt;string, .bloombox.partner.integrations.GenericIntegrationSettings&gt; generic = 2;</code>
        */
 
       public io.bloombox.schema.partner.integrations.IntegrationSettings.GenericIntegrationSettings getGenericOrDefault(
@@ -4960,7 +5038,7 @@ public final class IntegrationSettings {
        * Generic settings, specified for each partner-level integration.
        * </pre>
        *
-       * <code>map&lt;string, .bloombox.schema.partner.integrations.GenericIntegrationSettings&gt; generic = 2;</code>
+       * <code>map&lt;string, .bloombox.partner.integrations.GenericIntegrationSettings&gt; generic = 2;</code>
        */
 
       public io.bloombox.schema.partner.integrations.IntegrationSettings.GenericIntegrationSettings getGenericOrThrow(
@@ -4984,7 +5062,7 @@ public final class IntegrationSettings {
        * Generic settings, specified for each partner-level integration.
        * </pre>
        *
-       * <code>map&lt;string, .bloombox.schema.partner.integrations.GenericIntegrationSettings&gt; generic = 2;</code>
+       * <code>map&lt;string, .bloombox.partner.integrations.GenericIntegrationSettings&gt; generic = 2;</code>
        */
 
       public Builder removeGeneric(
@@ -5007,7 +5085,7 @@ public final class IntegrationSettings {
        * Generic settings, specified for each partner-level integration.
        * </pre>
        *
-       * <code>map&lt;string, .bloombox.schema.partner.integrations.GenericIntegrationSettings&gt; generic = 2;</code>
+       * <code>map&lt;string, .bloombox.partner.integrations.GenericIntegrationSettings&gt; generic = 2;</code>
        */
       public Builder putGeneric(
           java.lang.String key,
@@ -5023,7 +5101,7 @@ public final class IntegrationSettings {
        * Generic settings, specified for each partner-level integration.
        * </pre>
        *
-       * <code>map&lt;string, .bloombox.schema.partner.integrations.GenericIntegrationSettings&gt; generic = 2;</code>
+       * <code>map&lt;string, .bloombox.partner.integrations.GenericIntegrationSettings&gt; generic = 2;</code>
        */
 
       public Builder putAllGeneric(
@@ -5041,7 +5119,7 @@ public final class IntegrationSettings {
        * Specifies location-specific integration settings with GSuite.
        * </pre>
        *
-       * <code>.bloombox.schema.partner.integrations.gsuite.GSuiteSettings gsuite = 10;</code>
+       * <code>.bloombox.partner.integrations.gsuite.GSuiteSettings gsuite = 10;</code>
        */
       public boolean hasGsuite() {
         return gsuiteBuilder_ != null || gsuite_ != null;
@@ -5051,7 +5129,7 @@ public final class IntegrationSettings {
        * Specifies location-specific integration settings with GSuite.
        * </pre>
        *
-       * <code>.bloombox.schema.partner.integrations.gsuite.GSuiteSettings gsuite = 10;</code>
+       * <code>.bloombox.partner.integrations.gsuite.GSuiteSettings gsuite = 10;</code>
        */
       public io.bloombox.schema.partner.integrations.gsuite.GSuiteSettingsOuterClass.GSuiteSettings getGsuite() {
         if (gsuiteBuilder_ == null) {
@@ -5065,7 +5143,7 @@ public final class IntegrationSettings {
        * Specifies location-specific integration settings with GSuite.
        * </pre>
        *
-       * <code>.bloombox.schema.partner.integrations.gsuite.GSuiteSettings gsuite = 10;</code>
+       * <code>.bloombox.partner.integrations.gsuite.GSuiteSettings gsuite = 10;</code>
        */
       public Builder setGsuite(io.bloombox.schema.partner.integrations.gsuite.GSuiteSettingsOuterClass.GSuiteSettings value) {
         if (gsuiteBuilder_ == null) {
@@ -5085,7 +5163,7 @@ public final class IntegrationSettings {
        * Specifies location-specific integration settings with GSuite.
        * </pre>
        *
-       * <code>.bloombox.schema.partner.integrations.gsuite.GSuiteSettings gsuite = 10;</code>
+       * <code>.bloombox.partner.integrations.gsuite.GSuiteSettings gsuite = 10;</code>
        */
       public Builder setGsuite(
           io.bloombox.schema.partner.integrations.gsuite.GSuiteSettingsOuterClass.GSuiteSettings.Builder builderForValue) {
@@ -5103,7 +5181,7 @@ public final class IntegrationSettings {
        * Specifies location-specific integration settings with GSuite.
        * </pre>
        *
-       * <code>.bloombox.schema.partner.integrations.gsuite.GSuiteSettings gsuite = 10;</code>
+       * <code>.bloombox.partner.integrations.gsuite.GSuiteSettings gsuite = 10;</code>
        */
       public Builder mergeGsuite(io.bloombox.schema.partner.integrations.gsuite.GSuiteSettingsOuterClass.GSuiteSettings value) {
         if (gsuiteBuilder_ == null) {
@@ -5125,7 +5203,7 @@ public final class IntegrationSettings {
        * Specifies location-specific integration settings with GSuite.
        * </pre>
        *
-       * <code>.bloombox.schema.partner.integrations.gsuite.GSuiteSettings gsuite = 10;</code>
+       * <code>.bloombox.partner.integrations.gsuite.GSuiteSettings gsuite = 10;</code>
        */
       public Builder clearGsuite() {
         if (gsuiteBuilder_ == null) {
@@ -5143,7 +5221,7 @@ public final class IntegrationSettings {
        * Specifies location-specific integration settings with GSuite.
        * </pre>
        *
-       * <code>.bloombox.schema.partner.integrations.gsuite.GSuiteSettings gsuite = 10;</code>
+       * <code>.bloombox.partner.integrations.gsuite.GSuiteSettings gsuite = 10;</code>
        */
       public io.bloombox.schema.partner.integrations.gsuite.GSuiteSettingsOuterClass.GSuiteSettings.Builder getGsuiteBuilder() {
         
@@ -5155,7 +5233,7 @@ public final class IntegrationSettings {
        * Specifies location-specific integration settings with GSuite.
        * </pre>
        *
-       * <code>.bloombox.schema.partner.integrations.gsuite.GSuiteSettings gsuite = 10;</code>
+       * <code>.bloombox.partner.integrations.gsuite.GSuiteSettings gsuite = 10;</code>
        */
       public io.bloombox.schema.partner.integrations.gsuite.GSuiteSettingsOuterClass.GSuiteSettingsOrBuilder getGsuiteOrBuilder() {
         if (gsuiteBuilder_ != null) {
@@ -5170,7 +5248,7 @@ public final class IntegrationSettings {
        * Specifies location-specific integration settings with GSuite.
        * </pre>
        *
-       * <code>.bloombox.schema.partner.integrations.gsuite.GSuiteSettings gsuite = 10;</code>
+       * <code>.bloombox.partner.integrations.gsuite.GSuiteSettings gsuite = 10;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
           io.bloombox.schema.partner.integrations.gsuite.GSuiteSettingsOuterClass.GSuiteSettings, io.bloombox.schema.partner.integrations.gsuite.GSuiteSettingsOuterClass.GSuiteSettings.Builder, io.bloombox.schema.partner.integrations.gsuite.GSuiteSettingsOuterClass.GSuiteSettingsOrBuilder> 
@@ -5185,21 +5263,23 @@ public final class IntegrationSettings {
         }
         return gsuiteBuilder_;
       }
+      @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
         return super.setUnknownFieldsProto3(unknownFields);
       }
 
+      @java.lang.Override
       public final Builder mergeUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
         return super.mergeUnknownFields(unknownFields);
       }
 
 
-      // @@protoc_insertion_point(builder_scope:bloombox.schema.partner.integrations.PartnerIntegrationSettings)
+      // @@protoc_insertion_point(builder_scope:bloombox.partner.integrations.PartnerIntegrationSettings)
     }
 
-    // @@protoc_insertion_point(class_scope:bloombox.schema.partner.integrations.PartnerIntegrationSettings)
+    // @@protoc_insertion_point(class_scope:bloombox.partner.integrations.PartnerIntegrationSettings)
     private static final io.bloombox.schema.partner.integrations.IntegrationSettings.PartnerIntegrationSettings DEFAULT_INSTANCE;
     static {
       DEFAULT_INSTANCE = new io.bloombox.schema.partner.integrations.IntegrationSettings.PartnerIntegrationSettings();
@@ -5211,6 +5291,7 @@ public final class IntegrationSettings {
 
     private static final com.google.protobuf.Parser<PartnerIntegrationSettings>
         PARSER = new com.google.protobuf.AbstractParser<PartnerIntegrationSettings>() {
+      @java.lang.Override
       public PartnerIntegrationSettings parsePartialFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -5228,6 +5309,7 @@ public final class IntegrationSettings {
       return PARSER;
     }
 
+    @java.lang.Override
     public io.bloombox.schema.partner.integrations.IntegrationSettings.PartnerIntegrationSettings getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
@@ -5235,30 +5317,30 @@ public final class IntegrationSettings {
   }
 
   private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_bloombox_schema_partner_integrations_GenericIntegrationSettings_descriptor;
+    internal_static_bloombox_partner_integrations_GenericIntegrationSettings_descriptor;
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_bloombox_schema_partner_integrations_GenericIntegrationSettings_fieldAccessorTable;
+      internal_static_bloombox_partner_integrations_GenericIntegrationSettings_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_bloombox_schema_partner_integrations_LocationIntegrationSettings_descriptor;
+    internal_static_bloombox_partner_integrations_LocationIntegrationSettings_descriptor;
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_bloombox_schema_partner_integrations_LocationIntegrationSettings_fieldAccessorTable;
+      internal_static_bloombox_partner_integrations_LocationIntegrationSettings_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_bloombox_schema_partner_integrations_LocationIntegrationSettings_GenericEntry_descriptor;
+    internal_static_bloombox_partner_integrations_LocationIntegrationSettings_GenericEntry_descriptor;
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_bloombox_schema_partner_integrations_LocationIntegrationSettings_GenericEntry_fieldAccessorTable;
+      internal_static_bloombox_partner_integrations_LocationIntegrationSettings_GenericEntry_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_bloombox_schema_partner_integrations_PartnerIntegrationSettings_descriptor;
+    internal_static_bloombox_partner_integrations_PartnerIntegrationSettings_descriptor;
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_bloombox_schema_partner_integrations_PartnerIntegrationSettings_fieldAccessorTable;
+      internal_static_bloombox_partner_integrations_PartnerIntegrationSettings_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_bloombox_schema_partner_integrations_PartnerIntegrationSettings_GenericEntry_descriptor;
+    internal_static_bloombox_partner_integrations_PartnerIntegrationSettings_GenericEntry_descriptor;
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_bloombox_schema_partner_integrations_PartnerIntegrationSettings_GenericEntry_fieldAccessorTable;
+      internal_static_bloombox_partner_integrations_PartnerIntegrationSettings_GenericEntry_fieldAccessorTable;
 
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
@@ -5269,56 +5351,54 @@ public final class IntegrationSettings {
   static {
     java.lang.String[] descriptorData = {
       "\n.partner/integrations/IntegrationSettin" +
-      "gs.proto\022$bloombox.schema.partner.integr" +
-      "ations\032\026temporal/Instant.proto\032(partner/" +
-      "integrations/TreezSettings.proto\032)partne" +
-      "r/integrations/GSuiteSettings.proto\032)par" +
-      "tner/integrations/TwilioSettings.proto\032*" +
-      "partner/integrations/OnFleetSettings.pro" +
-      "to\032+partner/integrations/SendgridSetting" +
-      "s.proto\032,partner/integrations/MailchimpS" +
-      "ettings.proto\032,partner/integrations/Gree" +
-      "nbitsSettings.proto\"\302\001\n\032GenericIntegrati" +
-      "onSettings\022I\n\007partner\030\001 \001(\01628.bloombox.s" +
-      "chema.partner.integrations.IntegrationPa" +
-      "rtner\022\017\n\007enabled\030\002 \001(\010\022\023\n\013fully_setup\030\003 " +
-      "\001(\010\0223\n\013last_tested\030\004 \001(\0132\036.opencannabis." +
-      "temporal.Instant\"\246\006\n\033LocationIntegration" +
-      "Settings\022N\n\014integrations\030\001 \003(\01628.bloombo" +
-      "x.schema.partner.integrations.Integratio" +
-      "nPartner\022_\n\007generic\030\002 \003(\0132N.bloombox.sch" +
-      "ema.partner.integrations.LocationIntegra" +
-      "tionSettings.GenericEntry\022T\n\tgreenbits\030\n" +
-      " \001(\0132A.bloombox.schema.partner.integrati" +
-      "ons.greenbits.GreenbitsSettings\022T\n\tmailc" +
-      "himp\030\013 \001(\0132A.bloombox.schema.partner.int" +
-      "egrations.mailchimp.MailchimpSettings\022Q\n" +
-      "\010sendgrid\030\014 \001(\0132?.bloombox.schema.partne" +
-      "r.integrations.sendgrid.SendgridSettings" +
-      "\022K\n\006twilio\030\r \001(\0132;.bloombox.schema.partn" +
-      "er.integrations.twilio.TwilioSettings\022N\n" +
-      "\007onfleet\030\016 \001(\0132=.bloombox.schema.partner" +
-      ".integrations.onfleet.OnFleetSettings\022H\n" +
-      "\005treez\030\017 \001(\01329.bloombox.schema.partner.i" +
-      "ntegrations.treez.TreezSettings\032p\n\014Gener" +
-      "icEntry\022\013\n\003key\030\001 \001(\t\022O\n\005value\030\002 \001(\0132@.bl" +
-      "oombox.schema.partner.integrations.Gener" +
-      "icIntegrationSettings:\0028\001\"\213\003\n\032PartnerInt" +
-      "egrationSettings\022N\n\014integrations\030\001 \003(\01628" +
-      ".bloombox.schema.partner.integrations.In" +
-      "tegrationPartner\022^\n\007generic\030\002 \003(\0132M.bloo" +
-      "mbox.schema.partner.integrations.Partner" +
-      "IntegrationSettings.GenericEntry\022K\n\006gsui" +
-      "te\030\n \001(\0132;.bloombox.schema.partner.integ" +
-      "rations.gsuite.GSuiteSettings\032p\n\014Generic" +
-      "Entry\022\013\n\003key\030\001 \001(\t\022O\n\005value\030\002 \001(\0132@.bloo" +
-      "mbox.schema.partner.integrations.Generic" +
-      "IntegrationSettings:\0028\001*\225\001\n\022IntegrationP" +
-      "artner\022\014\n\010INTERNAL\020\000\022\013\n\007SALSIFY\020\001\022\010\n\004KEE" +
-      "N\020\002\022\r\n\tGREENBITS\020\003\022\r\n\tMAILCHIMP\020\004\022\014\n\010SEN" +
-      "DGRID\020\005\022\n\n\006TWILIO\020\006\022\013\n\007ONFLEET\020\007\022\n\n\006GSUI" +
-      "TE\020\010\022\t\n\005TREEZ\020\tB3\n\'io.bloombox.schema.pa" +
-      "rtner.integrationsH\001P\000\242\002\003BBSb\006proto3"
+      "gs.proto\022\035bloombox.partner.integrations\032" +
+      "\026temporal/Instant.proto\032(partner/integra" +
+      "tions/TreezSettings.proto\032)partner/integ" +
+      "rations/GSuiteSettings.proto\032)partner/in" +
+      "tegrations/TwilioSettings.proto\032*partner" +
+      "/integrations/OnFleetSettings.proto\032+par" +
+      "tner/integrations/SendgridSettings.proto" +
+      "\032,partner/integrations/MailchimpSettings" +
+      ".proto\032,partner/integrations/GreenbitsSe" +
+      "ttings.proto\"\273\001\n\032GenericIntegrationSetti" +
+      "ngs\022B\n\007partner\030\001 \001(\01621.bloombox.partner." +
+      "integrations.IntegrationPartner\022\017\n\007enabl" +
+      "ed\030\002 \001(\010\022\023\n\013fully_setup\030\003 \001(\010\0223\n\013last_te" +
+      "sted\030\004 \001(\0132\036.opencannabis.temporal.Insta" +
+      "nt\"\347\005\n\033LocationIntegrationSettings\022G\n\014in" +
+      "tegrations\030\001 \003(\01621.bloombox.partner.inte" +
+      "grations.IntegrationPartner\022X\n\007generic\030\002" +
+      " \003(\0132G.bloombox.partner.integrations.Loc" +
+      "ationIntegrationSettings.GenericEntry\022M\n" +
+      "\tgreenbits\030\n \001(\0132:.bloombox.partner.inte" +
+      "grations.greenbits.GreenbitsSettings\022M\n\t" +
+      "mailchimp\030\013 \001(\0132:.bloombox.partner.integ" +
+      "rations.mailchimp.MailchimpSettings\022J\n\010s" +
+      "endgrid\030\014 \001(\01328.bloombox.partner.integra" +
+      "tions.sendgrid.SendgridSettings\022D\n\006twili" +
+      "o\030\r \001(\01324.bloombox.partner.integrations." +
+      "twilio.TwilioSettings\022G\n\007onfleet\030\016 \001(\01326" +
+      ".bloombox.partner.integrations.onfleet.O" +
+      "nFleetSettings\022A\n\005treez\030\017 \001(\01322.bloombox" +
+      ".partner.integrations.treez.TreezSetting" +
+      "s\032i\n\014GenericEntry\022\013\n\003key\030\001 \001(\t\022H\n\005value\030" +
+      "\002 \001(\01329.bloombox.partner.integrations.Ge" +
+      "nericIntegrationSettings:\0028\001\"\357\002\n\032Partner" +
+      "IntegrationSettings\022G\n\014integrations\030\001 \003(" +
+      "\01621.bloombox.partner.integrations.Integr" +
+      "ationPartner\022W\n\007generic\030\002 \003(\0132F.bloombox" +
+      ".partner.integrations.PartnerIntegration" +
+      "Settings.GenericEntry\022D\n\006gsuite\030\n \001(\01324." +
+      "bloombox.partner.integrations.gsuite.GSu" +
+      "iteSettings\032i\n\014GenericEntry\022\013\n\003key\030\001 \001(\t" +
+      "\022H\n\005value\030\002 \001(\01329.bloombox.partner.integ" +
+      "rations.GenericIntegrationSettings:\0028\001*\225" +
+      "\001\n\022IntegrationPartner\022\014\n\010INTERNAL\020\000\022\013\n\007S" +
+      "ALSIFY\020\001\022\010\n\004KEEN\020\002\022\r\n\tGREENBITS\020\003\022\r\n\tMAI" +
+      "LCHIMP\020\004\022\014\n\010SENDGRID\020\005\022\n\n\006TWILIO\020\006\022\013\n\007ON" +
+      "FLEET\020\007\022\n\n\006GSUITE\020\010\022\t\n\005TREEZ\020\tB3\n\'io.blo" +
+      "ombox.schema.partner.integrationsH\001P\000\242\002\003" +
+      "BBSb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -5340,35 +5420,35 @@ public final class IntegrationSettings {
           io.bloombox.schema.partner.integrations.mailchimp.MailchimpSettingsOuterClass.getDescriptor(),
           io.bloombox.schema.partner.integrations.greenbits.GreenbitsSettingsOuterClass.getDescriptor(),
         }, assigner);
-    internal_static_bloombox_schema_partner_integrations_GenericIntegrationSettings_descriptor =
+    internal_static_bloombox_partner_integrations_GenericIntegrationSettings_descriptor =
       getDescriptor().getMessageTypes().get(0);
-    internal_static_bloombox_schema_partner_integrations_GenericIntegrationSettings_fieldAccessorTable = new
+    internal_static_bloombox_partner_integrations_GenericIntegrationSettings_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_bloombox_schema_partner_integrations_GenericIntegrationSettings_descriptor,
+        internal_static_bloombox_partner_integrations_GenericIntegrationSettings_descriptor,
         new java.lang.String[] { "Partner", "Enabled", "FullySetup", "LastTested", });
-    internal_static_bloombox_schema_partner_integrations_LocationIntegrationSettings_descriptor =
+    internal_static_bloombox_partner_integrations_LocationIntegrationSettings_descriptor =
       getDescriptor().getMessageTypes().get(1);
-    internal_static_bloombox_schema_partner_integrations_LocationIntegrationSettings_fieldAccessorTable = new
+    internal_static_bloombox_partner_integrations_LocationIntegrationSettings_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_bloombox_schema_partner_integrations_LocationIntegrationSettings_descriptor,
+        internal_static_bloombox_partner_integrations_LocationIntegrationSettings_descriptor,
         new java.lang.String[] { "Integrations", "Generic", "Greenbits", "Mailchimp", "Sendgrid", "Twilio", "Onfleet", "Treez", });
-    internal_static_bloombox_schema_partner_integrations_LocationIntegrationSettings_GenericEntry_descriptor =
-      internal_static_bloombox_schema_partner_integrations_LocationIntegrationSettings_descriptor.getNestedTypes().get(0);
-    internal_static_bloombox_schema_partner_integrations_LocationIntegrationSettings_GenericEntry_fieldAccessorTable = new
+    internal_static_bloombox_partner_integrations_LocationIntegrationSettings_GenericEntry_descriptor =
+      internal_static_bloombox_partner_integrations_LocationIntegrationSettings_descriptor.getNestedTypes().get(0);
+    internal_static_bloombox_partner_integrations_LocationIntegrationSettings_GenericEntry_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_bloombox_schema_partner_integrations_LocationIntegrationSettings_GenericEntry_descriptor,
+        internal_static_bloombox_partner_integrations_LocationIntegrationSettings_GenericEntry_descriptor,
         new java.lang.String[] { "Key", "Value", });
-    internal_static_bloombox_schema_partner_integrations_PartnerIntegrationSettings_descriptor =
+    internal_static_bloombox_partner_integrations_PartnerIntegrationSettings_descriptor =
       getDescriptor().getMessageTypes().get(2);
-    internal_static_bloombox_schema_partner_integrations_PartnerIntegrationSettings_fieldAccessorTable = new
+    internal_static_bloombox_partner_integrations_PartnerIntegrationSettings_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_bloombox_schema_partner_integrations_PartnerIntegrationSettings_descriptor,
+        internal_static_bloombox_partner_integrations_PartnerIntegrationSettings_descriptor,
         new java.lang.String[] { "Integrations", "Generic", "Gsuite", });
-    internal_static_bloombox_schema_partner_integrations_PartnerIntegrationSettings_GenericEntry_descriptor =
-      internal_static_bloombox_schema_partner_integrations_PartnerIntegrationSettings_descriptor.getNestedTypes().get(0);
-    internal_static_bloombox_schema_partner_integrations_PartnerIntegrationSettings_GenericEntry_fieldAccessorTable = new
+    internal_static_bloombox_partner_integrations_PartnerIntegrationSettings_GenericEntry_descriptor =
+      internal_static_bloombox_partner_integrations_PartnerIntegrationSettings_descriptor.getNestedTypes().get(0);
+    internal_static_bloombox_partner_integrations_PartnerIntegrationSettings_GenericEntry_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_bloombox_schema_partner_integrations_PartnerIntegrationSettings_GenericEntry_descriptor,
+        internal_static_bloombox_partner_integrations_PartnerIntegrationSettings_GenericEntry_descriptor,
         new java.lang.String[] { "Key", "Value", });
     io.opencannabis.schema.temporal.TemporalInstant.getDescriptor();
     io.bloombox.schema.partner.integrations.treez.TreezSettingsOuterClass.getDescriptor();

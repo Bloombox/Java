@@ -1,8 +1,8 @@
 /*
- * Copyright 2018, Bloombox, LLC. All rights reserved.
+ * Copyright 2018, Momentum Ideas, Co. All rights reserved.
  *
  * Source and object computer code contained herein is the private intellectual
- * property of Bloombox, a California Limited Liability Corporation. Use of this
+ * property of Momentum Ideas Co., a Delaware Corporation. Use of this
  * code in source form requires permission in writing before use or the
  * assembly, distribution, or publishing of derivative works, for commercial
  * purposes or any other purpose, from a duly authorized officer of Momentum
@@ -21,7 +21,7 @@
 package io.bloombox.schema.services.checkin.v1beta1;
 
 public interface CheckinUserOrBuilder extends
-    // @@protoc_insertion_point(interface_extends:bloombox.schema.services.checkin.v1beta1.CheckinUser)
+    // @@protoc_insertion_point(interface_extends:bloombox.services.checkin.v1beta1.CheckinUser)
     com.google.protobuf.MessageOrBuilder {
 
   /**
@@ -29,7 +29,7 @@ public interface CheckinUserOrBuilder extends
    * Key and identity ID for the user who was checked in.
    * </pre>
    *
-   * <code>.bloombox.schema.identity.UserKey key = 1;</code>
+   * <code>.bloombox.identity.UserKey key = 1;</code>
    */
   boolean hasKey();
   /**
@@ -37,7 +37,7 @@ public interface CheckinUserOrBuilder extends
    * Key and identity ID for the user who was checked in.
    * </pre>
    *
-   * <code>.bloombox.schema.identity.UserKey key = 1;</code>
+   * <code>.bloombox.identity.UserKey key = 1;</code>
    */
   io.bloombox.schema.identity.AppUserKey.UserKey getKey();
   /**
@@ -45,7 +45,7 @@ public interface CheckinUserOrBuilder extends
    * Key and identity ID for the user who was checked in.
    * </pre>
    *
-   * <code>.bloombox.schema.identity.UserKey key = 1;</code>
+   * <code>.bloombox.identity.UserKey key = 1;</code>
    */
   io.bloombox.schema.identity.AppUserKey.UserKeyOrBuilder getKeyOrBuilder();
 
@@ -54,7 +54,7 @@ public interface CheckinUserOrBuilder extends
    * Active account flags.
    * </pre>
    *
-   * <code>.bloombox.schema.identity.UserFlags flags = 2;</code>
+   * <code>.bloombox.identity.UserFlags flags = 2;</code>
    */
   boolean hasFlags();
   /**
@@ -62,7 +62,7 @@ public interface CheckinUserOrBuilder extends
    * Active account flags.
    * </pre>
    *
-   * <code>.bloombox.schema.identity.UserFlags flags = 2;</code>
+   * <code>.bloombox.identity.UserFlags flags = 2;</code>
    */
   io.bloombox.schema.identity.AppUser.UserFlags getFlags();
   /**
@@ -70,7 +70,7 @@ public interface CheckinUserOrBuilder extends
    * Active account flags.
    * </pre>
    *
-   * <code>.bloombox.schema.identity.UserFlags flags = 2;</code>
+   * <code>.bloombox.identity.UserFlags flags = 2;</code>
    */
   io.bloombox.schema.identity.AppUser.UserFlagsOrBuilder getFlagsOrBuilder();
 

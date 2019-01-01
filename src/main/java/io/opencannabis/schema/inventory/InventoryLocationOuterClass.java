@@ -1,11 +1,12 @@
 /*
- * Copyright 2018, Bloombox, LLC.
+ * Copyright 2018, Momentum Ideas, Co. All rights reserved.
  *
- * Licensed under the Apache License, Version 2.0 (the "License");
- * you may not use this file except in compliance with the License.
- * You may obtain a copy of the License at
- *
- *     http://www.apache.org/licenses/LICENSE-2.0
+ * Source and object computer code contained herein is the private intellectual
+ * property of Momentum Ideas Co., a Delaware Corporation. Use of this
+ * code in source form requires permission in writing before use or the
+ * assembly, distribution, or publishing of derivative works, for commercial
+ * purposes or any other purpose, from a duly authorized officer of Momentum
+ * Ideas Co.
  *
  * Unless required by applicable law or agreed to in writing, software
  * distributed under the License is distributed on an "AS IS" BASIS,
@@ -58,21 +59,21 @@ public final class InventoryLocationOuterClass {
       "ncannabis.inventory\032\024core/Datamodel.prot" +
       "o\032\031contact/ContactInfo.proto\032\031partner/Lo" +
       "cationKey.proto\032 inventory/InventoryProd" +
-      "uct.proto\"d\n\024InventoryLocationKey\022\024\n\004uui" +
-      "d\030\001 \001(\tB\006\302\265\003\002\010\002\0226\n\010location\030\002 \001(\0132$.bloo" +
-      "mbox.schema.partner.LocationKey\"\325\001\n\021Inve" +
-      "ntoryLocation\022A\n\003key\030\001 \001(\0132,.opencannabi" +
-      "s.inventory.InventoryLocationKeyB\006\302\265\003\002\010\001" +
-      "\022;\n\004type\030\002 \001(\0162-.opencannabis.inventory." +
-      "InventoryLocationType\022\014\n\004name\030\003 \001(\t\0222\n\007c" +
-      "ontact\030\004 \001(\0132!.opencannabis.contact.Cont" +
-      "actInfo\"\211\001\n\020InventoryBinding\022=\n\007held_by\030" +
+      "uct.proto\"O\n\024InventoryLocationKey\022\024\n\004uui" +
+      "d\030\001 \001(\tB\006\302\265\003\002\010\002\022\017\n\007partner\030\002 \001(\t\022\020\n\010loca" +
+      "tion\030\003 \001(\t\"\325\001\n\021InventoryLocation\022A\n\003key\030" +
       "\001 \001(\0132,.opencannabis.inventory.Inventory" +
-      "LocationKey\0226\n\004item\030\002 \001(\0132(.opencannabis" +
-      ".inventory.InventoryProduct*B\n\025Inventory" +
-      "LocationType\022\n\n\006RETAIL\020\000\022\r\n\tWAREHOUSE\020\001\022" +
-      "\016\n\nPRODUCTION\020\002B,\n io.opencannabis.schem" +
-      "a.inventoryH\001P\001\242\002\003OCSb\006proto3"
+      "LocationKeyB\006\302\265\003\002\010\001\022;\n\004type\030\002 \001(\0162-.open" +
+      "cannabis.inventory.InventoryLocationType" +
+      "\022\014\n\004name\030\003 \001(\t\0222\n\007contact\030\004 \001(\0132!.openca" +
+      "nnabis.contact.ContactInfo\"\211\001\n\020Inventory" +
+      "Binding\022=\n\007held_by\030\001 \001(\0132,.opencannabis." +
+      "inventory.InventoryLocationKey\0226\n\004item\030\002" +
+      " \001(\0132(.opencannabis.inventory.InventoryP" +
+      "roduct*B\n\025InventoryLocationType\022\n\n\006RETAI" +
+      "L\020\000\022\r\n\tWAREHOUSE\020\001\022\016\n\nPRODUCTION\020\002B,\n io" +
+      ".opencannabis.schema.inventoryH\001P\001\242\002\003OCS" +
+      "b\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -95,7 +96,7 @@ public final class InventoryLocationOuterClass {
     internal_static_opencannabis_inventory_InventoryLocationKey_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_opencannabis_inventory_InventoryLocationKey_descriptor,
-        new java.lang.String[] { "Uuid", "Location", });
+        new java.lang.String[] { "Uuid", "Partner", "Location", });
     internal_static_opencannabis_inventory_InventoryLocation_descriptor =
       getDescriptor().getMessageTypes().get(1);
     internal_static_opencannabis_inventory_InventoryLocation_fieldAccessorTable = new

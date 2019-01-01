@@ -1,11 +1,12 @@
 /*
- * Copyright 2018, Bloombox, LLC.
+ * Copyright 2018, Momentum Ideas, Co. All rights reserved.
  *
- * Licensed under the Apache License, Version 2.0 (the "License");
- * you may not use this file except in compliance with the License.
- * You may obtain a copy of the License at
- *
- *     http://www.apache.org/licenses/LICENSE-2.0
+ * Source and object computer code contained herein is the private intellectual
+ * property of Momentum Ideas Co., a Delaware Corporation. Use of this
+ * code in source form requires permission in writing before use or the
+ * assembly, distribution, or publishing of derivative works, for commercial
+ * purposes or any other purpose, from a duly authorized officer of Momentum
+ * Ideas Co.
  *
  * Unless required by applicable law or agreed to in writing, software
  * distributed under the License is distributed on an "AS IS" BASIS,
@@ -35,7 +36,7 @@ public final class MarketingCampaign {
    * Enumerates the statuses a campaign object may live in.
    * </pre>
    *
-   * Protobuf enum {@code bloombox.schema.marketing.CampaignStatus}
+   * Protobuf enum {@code bloombox.marketing.CampaignStatus}
    */
   public enum CampaignStatus
       implements com.google.protobuf.ProtocolMessageEnum {
@@ -196,11 +197,11 @@ public final class MarketingCampaign {
       this.value = value;
     }
 
-    // @@protoc_insertion_point(enum_scope:bloombox.schema.marketing.CampaignStatus)
+    // @@protoc_insertion_point(enum_scope:bloombox.marketing.CampaignStatus)
   }
 
   public interface CampaignTagOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:bloombox.schema.marketing.CampaignTag)
+      // @@protoc_insertion_point(interface_extends:bloombox.marketing.CampaignTag)
       com.google.protobuf.MessageOrBuilder {
 
     /**
@@ -244,11 +245,11 @@ public final class MarketingCampaign {
    * Tags applied to a campaign to organize/group similar marketing efforts.
    * </pre>
    *
-   * Protobuf type {@code bloombox.schema.marketing.CampaignTag}
+   * Protobuf type {@code bloombox.marketing.CampaignTag}
    */
   public  static final class CampaignTag extends
       com.google.protobuf.GeneratedMessageV3 implements
-      // @@protoc_insertion_point(message_implements:bloombox.schema.marketing.CampaignTag)
+      // @@protoc_insertion_point(message_implements:bloombox.marketing.CampaignTag)
       CampaignTagOrBuilder {
   private static final long serialVersionUID = 0L;
     // Use CampaignTag.newBuilder() to construct.
@@ -284,13 +285,6 @@ public final class MarketingCampaign {
             case 0:
               done = true;
               break;
-            default: {
-              if (!parseUnknownFieldProto3(
-                  input, unknownFields, extensionRegistry, tag)) {
-                done = true;
-              }
-              break;
-            }
             case 10: {
               java.lang.String s = input.readStringRequireUtf8();
 
@@ -301,6 +295,13 @@ public final class MarketingCampaign {
               java.lang.String s = input.readStringRequireUtf8();
 
               label_ = s;
+              break;
+            }
+            default: {
+              if (!parseUnknownFieldProto3(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
               break;
             }
           }
@@ -317,12 +318,13 @@ public final class MarketingCampaign {
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return io.bloombox.schema.marketing.MarketingCampaign.internal_static_bloombox_schema_marketing_CampaignTag_descriptor;
+      return io.bloombox.schema.marketing.MarketingCampaign.internal_static_bloombox_marketing_CampaignTag_descriptor;
     }
 
+    @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return io.bloombox.schema.marketing.MarketingCampaign.internal_static_bloombox_schema_marketing_CampaignTag_fieldAccessorTable
+      return io.bloombox.schema.marketing.MarketingCampaign.internal_static_bloombox_marketing_CampaignTag_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
               io.bloombox.schema.marketing.MarketingCampaign.CampaignTag.class, io.bloombox.schema.marketing.MarketingCampaign.CampaignTag.Builder.class);
     }
@@ -412,6 +414,7 @@ public final class MarketingCampaign {
     }
 
     private byte memoizedIsInitialized = -1;
+    @java.lang.Override
     public final boolean isInitialized() {
       byte isInitialized = memoizedIsInitialized;
       if (isInitialized == 1) return true;
@@ -421,6 +424,7 @@ public final class MarketingCampaign {
       return true;
     }
 
+    @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
       if (!getIdBytes().isEmpty()) {
@@ -432,6 +436,7 @@ public final class MarketingCampaign {
       unknownFields.writeTo(output);
     }
 
+    @java.lang.Override
     public int getSerializedSize() {
       int size = memoizedSize;
       if (size != -1) return size;
@@ -553,6 +558,7 @@ public final class MarketingCampaign {
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
 
+    @java.lang.Override
     public Builder newBuilderForType() { return newBuilder(); }
     public static Builder newBuilder() {
       return DEFAULT_INSTANCE.toBuilder();
@@ -560,6 +566,7 @@ public final class MarketingCampaign {
     public static Builder newBuilder(io.bloombox.schema.marketing.MarketingCampaign.CampaignTag prototype) {
       return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
     }
+    @java.lang.Override
     public Builder toBuilder() {
       return this == DEFAULT_INSTANCE
           ? new Builder() : new Builder().mergeFrom(this);
@@ -576,20 +583,21 @@ public final class MarketingCampaign {
      * Tags applied to a campaign to organize/group similar marketing efforts.
      * </pre>
      *
-     * Protobuf type {@code bloombox.schema.marketing.CampaignTag}
+     * Protobuf type {@code bloombox.marketing.CampaignTag}
      */
     public static final class Builder extends
         com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:bloombox.schema.marketing.CampaignTag)
+        // @@protoc_insertion_point(builder_implements:bloombox.marketing.CampaignTag)
         io.bloombox.schema.marketing.MarketingCampaign.CampaignTagOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return io.bloombox.schema.marketing.MarketingCampaign.internal_static_bloombox_schema_marketing_CampaignTag_descriptor;
+        return io.bloombox.schema.marketing.MarketingCampaign.internal_static_bloombox_marketing_CampaignTag_descriptor;
       }
 
+      @java.lang.Override
       protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return io.bloombox.schema.marketing.MarketingCampaign.internal_static_bloombox_schema_marketing_CampaignTag_fieldAccessorTable
+        return io.bloombox.schema.marketing.MarketingCampaign.internal_static_bloombox_marketing_CampaignTag_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
                 io.bloombox.schema.marketing.MarketingCampaign.CampaignTag.class, io.bloombox.schema.marketing.MarketingCampaign.CampaignTag.Builder.class);
       }
@@ -609,6 +617,7 @@ public final class MarketingCampaign {
                 .alwaysUseFieldBuilders) {
         }
       }
+      @java.lang.Override
       public Builder clear() {
         super.clear();
         id_ = "";
@@ -618,15 +627,18 @@ public final class MarketingCampaign {
         return this;
       }
 
+      @java.lang.Override
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return io.bloombox.schema.marketing.MarketingCampaign.internal_static_bloombox_schema_marketing_CampaignTag_descriptor;
+        return io.bloombox.schema.marketing.MarketingCampaign.internal_static_bloombox_marketing_CampaignTag_descriptor;
       }
 
+      @java.lang.Override
       public io.bloombox.schema.marketing.MarketingCampaign.CampaignTag getDefaultInstanceForType() {
         return io.bloombox.schema.marketing.MarketingCampaign.CampaignTag.getDefaultInstance();
       }
 
+      @java.lang.Override
       public io.bloombox.schema.marketing.MarketingCampaign.CampaignTag build() {
         io.bloombox.schema.marketing.MarketingCampaign.CampaignTag result = buildPartial();
         if (!result.isInitialized()) {
@@ -635,6 +647,7 @@ public final class MarketingCampaign {
         return result;
       }
 
+      @java.lang.Override
       public io.bloombox.schema.marketing.MarketingCampaign.CampaignTag buildPartial() {
         io.bloombox.schema.marketing.MarketingCampaign.CampaignTag result = new io.bloombox.schema.marketing.MarketingCampaign.CampaignTag(this);
         result.id_ = id_;
@@ -643,32 +656,39 @@ public final class MarketingCampaign {
         return result;
       }
 
+      @java.lang.Override
       public Builder clone() {
         return (Builder) super.clone();
       }
+      @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
         return (Builder) super.setField(field, value);
       }
+      @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
         return (Builder) super.clearField(field);
       }
+      @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
         return (Builder) super.clearOneof(oneof);
       }
+      @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
         return (Builder) super.setRepeatedField(field, index, value);
       }
+      @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
         return (Builder) super.addRepeatedField(field, value);
       }
+      @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
         if (other instanceof io.bloombox.schema.marketing.MarketingCampaign.CampaignTag) {
           return mergeFrom((io.bloombox.schema.marketing.MarketingCampaign.CampaignTag)other);
@@ -693,10 +713,12 @@ public final class MarketingCampaign {
         return this;
       }
 
+      @java.lang.Override
       public final boolean isInitialized() {
         return true;
       }
 
+      @java.lang.Override
       public Builder mergeFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -892,21 +914,23 @@ public final class MarketingCampaign {
         onChanged();
         return this;
       }
+      @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
         return super.setUnknownFieldsProto3(unknownFields);
       }
 
+      @java.lang.Override
       public final Builder mergeUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
         return super.mergeUnknownFields(unknownFields);
       }
 
 
-      // @@protoc_insertion_point(builder_scope:bloombox.schema.marketing.CampaignTag)
+      // @@protoc_insertion_point(builder_scope:bloombox.marketing.CampaignTag)
     }
 
-    // @@protoc_insertion_point(class_scope:bloombox.schema.marketing.CampaignTag)
+    // @@protoc_insertion_point(class_scope:bloombox.marketing.CampaignTag)
     private static final io.bloombox.schema.marketing.MarketingCampaign.CampaignTag DEFAULT_INSTANCE;
     static {
       DEFAULT_INSTANCE = new io.bloombox.schema.marketing.MarketingCampaign.CampaignTag();
@@ -918,6 +942,7 @@ public final class MarketingCampaign {
 
     private static final com.google.protobuf.Parser<CampaignTag>
         PARSER = new com.google.protobuf.AbstractParser<CampaignTag>() {
+      @java.lang.Override
       public CampaignTag parsePartialFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -935,6 +960,7 @@ public final class MarketingCampaign {
       return PARSER;
     }
 
+    @java.lang.Override
     public io.bloombox.schema.marketing.MarketingCampaign.CampaignTag getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
@@ -942,7 +968,7 @@ public final class MarketingCampaign {
   }
 
   public interface ChannelSettingsOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:bloombox.schema.marketing.ChannelSettings)
+      // @@protoc_insertion_point(interface_extends:bloombox.marketing.ChannelSettings)
       com.google.protobuf.MessageOrBuilder {
 
     /**
@@ -950,7 +976,7 @@ public final class MarketingCampaign {
      * Channel for which we are specifying settings.
      * </pre>
      *
-     * <code>.bloombox.schema.comms.Channel channel = 1;</code>
+     * <code>.bloombox.comms.Channel channel = 1;</code>
      */
     int getChannelValue();
     /**
@@ -958,7 +984,7 @@ public final class MarketingCampaign {
      * Channel for which we are specifying settings.
      * </pre>
      *
-     * <code>.bloombox.schema.comms.Channel channel = 1;</code>
+     * <code>.bloombox.comms.Channel channel = 1;</code>
      */
     io.bloombox.schema.comms.GenericComms.Channel getChannel();
 
@@ -976,7 +1002,7 @@ public final class MarketingCampaign {
      * SMS settings.
      * </pre>
      *
-     * <code>.bloombox.schema.comms.SMSSettings sms = 20;</code>
+     * <code>.bloombox.comms.SMSSettings sms = 20;</code>
      */
     boolean hasSms();
     /**
@@ -984,7 +1010,7 @@ public final class MarketingCampaign {
      * SMS settings.
      * </pre>
      *
-     * <code>.bloombox.schema.comms.SMSSettings sms = 20;</code>
+     * <code>.bloombox.comms.SMSSettings sms = 20;</code>
      */
     io.bloombox.schema.comms.SMSComms.SMSSettings getSms();
     /**
@@ -992,7 +1018,7 @@ public final class MarketingCampaign {
      * SMS settings.
      * </pre>
      *
-     * <code>.bloombox.schema.comms.SMSSettings sms = 20;</code>
+     * <code>.bloombox.comms.SMSSettings sms = 20;</code>
      */
     io.bloombox.schema.comms.SMSComms.SMSSettingsOrBuilder getSmsOrBuilder();
 
@@ -1001,7 +1027,7 @@ public final class MarketingCampaign {
      * Email settings.
      * </pre>
      *
-     * <code>.bloombox.schema.comms.EmailSettings email = 21;</code>
+     * <code>.bloombox.comms.EmailSettings email = 21;</code>
      */
     boolean hasEmail();
     /**
@@ -1009,7 +1035,7 @@ public final class MarketingCampaign {
      * Email settings.
      * </pre>
      *
-     * <code>.bloombox.schema.comms.EmailSettings email = 21;</code>
+     * <code>.bloombox.comms.EmailSettings email = 21;</code>
      */
     io.bloombox.schema.comms.EmailComms.EmailSettings getEmail();
     /**
@@ -1017,7 +1043,7 @@ public final class MarketingCampaign {
      * Email settings.
      * </pre>
      *
-     * <code>.bloombox.schema.comms.EmailSettings email = 21;</code>
+     * <code>.bloombox.comms.EmailSettings email = 21;</code>
      */
     io.bloombox.schema.comms.EmailComms.EmailSettingsOrBuilder getEmailOrBuilder();
 
@@ -1028,11 +1054,11 @@ public final class MarketingCampaign {
    * Settings for a given channel.
    * </pre>
    *
-   * Protobuf type {@code bloombox.schema.marketing.ChannelSettings}
+   * Protobuf type {@code bloombox.marketing.ChannelSettings}
    */
   public  static final class ChannelSettings extends
       com.google.protobuf.GeneratedMessageV3 implements
-      // @@protoc_insertion_point(message_implements:bloombox.schema.marketing.ChannelSettings)
+      // @@protoc_insertion_point(message_implements:bloombox.marketing.ChannelSettings)
       ChannelSettingsOrBuilder {
   private static final long serialVersionUID = 0L;
     // Use ChannelSettings.newBuilder() to construct.
@@ -1068,13 +1094,6 @@ public final class MarketingCampaign {
             case 0:
               done = true;
               break;
-            default: {
-              if (!parseUnknownFieldProto3(
-                  input, unknownFields, extensionRegistry, tag)) {
-                done = true;
-              }
-              break;
-            }
             case 8: {
               int rawValue = input.readEnum();
 
@@ -1114,6 +1133,13 @@ public final class MarketingCampaign {
               settingsCase_ = 21;
               break;
             }
+            default: {
+              if (!parseUnknownFieldProto3(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
           }
         }
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
@@ -1128,12 +1154,13 @@ public final class MarketingCampaign {
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return io.bloombox.schema.marketing.MarketingCampaign.internal_static_bloombox_schema_marketing_ChannelSettings_descriptor;
+      return io.bloombox.schema.marketing.MarketingCampaign.internal_static_bloombox_marketing_ChannelSettings_descriptor;
     }
 
+    @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return io.bloombox.schema.marketing.MarketingCampaign.internal_static_bloombox_schema_marketing_ChannelSettings_fieldAccessorTable
+      return io.bloombox.schema.marketing.MarketingCampaign.internal_static_bloombox_marketing_ChannelSettings_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
               io.bloombox.schema.marketing.MarketingCampaign.ChannelSettings.class, io.bloombox.schema.marketing.MarketingCampaign.ChannelSettings.Builder.class);
     }
@@ -1183,7 +1210,7 @@ public final class MarketingCampaign {
      * Channel for which we are specifying settings.
      * </pre>
      *
-     * <code>.bloombox.schema.comms.Channel channel = 1;</code>
+     * <code>.bloombox.comms.Channel channel = 1;</code>
      */
     public int getChannelValue() {
       return channel_;
@@ -1193,9 +1220,10 @@ public final class MarketingCampaign {
      * Channel for which we are specifying settings.
      * </pre>
      *
-     * <code>.bloombox.schema.comms.Channel channel = 1;</code>
+     * <code>.bloombox.comms.Channel channel = 1;</code>
      */
     public io.bloombox.schema.comms.GenericComms.Channel getChannel() {
+      @SuppressWarnings("deprecation")
       io.bloombox.schema.comms.GenericComms.Channel result = io.bloombox.schema.comms.GenericComms.Channel.valueOf(channel_);
       return result == null ? io.bloombox.schema.comms.GenericComms.Channel.UNRECOGNIZED : result;
     }
@@ -1219,7 +1247,7 @@ public final class MarketingCampaign {
      * SMS settings.
      * </pre>
      *
-     * <code>.bloombox.schema.comms.SMSSettings sms = 20;</code>
+     * <code>.bloombox.comms.SMSSettings sms = 20;</code>
      */
     public boolean hasSms() {
       return settingsCase_ == 20;
@@ -1229,7 +1257,7 @@ public final class MarketingCampaign {
      * SMS settings.
      * </pre>
      *
-     * <code>.bloombox.schema.comms.SMSSettings sms = 20;</code>
+     * <code>.bloombox.comms.SMSSettings sms = 20;</code>
      */
     public io.bloombox.schema.comms.SMSComms.SMSSettings getSms() {
       if (settingsCase_ == 20) {
@@ -1242,7 +1270,7 @@ public final class MarketingCampaign {
      * SMS settings.
      * </pre>
      *
-     * <code>.bloombox.schema.comms.SMSSettings sms = 20;</code>
+     * <code>.bloombox.comms.SMSSettings sms = 20;</code>
      */
     public io.bloombox.schema.comms.SMSComms.SMSSettingsOrBuilder getSmsOrBuilder() {
       if (settingsCase_ == 20) {
@@ -1257,7 +1285,7 @@ public final class MarketingCampaign {
      * Email settings.
      * </pre>
      *
-     * <code>.bloombox.schema.comms.EmailSettings email = 21;</code>
+     * <code>.bloombox.comms.EmailSettings email = 21;</code>
      */
     public boolean hasEmail() {
       return settingsCase_ == 21;
@@ -1267,7 +1295,7 @@ public final class MarketingCampaign {
      * Email settings.
      * </pre>
      *
-     * <code>.bloombox.schema.comms.EmailSettings email = 21;</code>
+     * <code>.bloombox.comms.EmailSettings email = 21;</code>
      */
     public io.bloombox.schema.comms.EmailComms.EmailSettings getEmail() {
       if (settingsCase_ == 21) {
@@ -1280,7 +1308,7 @@ public final class MarketingCampaign {
      * Email settings.
      * </pre>
      *
-     * <code>.bloombox.schema.comms.EmailSettings email = 21;</code>
+     * <code>.bloombox.comms.EmailSettings email = 21;</code>
      */
     public io.bloombox.schema.comms.EmailComms.EmailSettingsOrBuilder getEmailOrBuilder() {
       if (settingsCase_ == 21) {
@@ -1290,6 +1318,7 @@ public final class MarketingCampaign {
     }
 
     private byte memoizedIsInitialized = -1;
+    @java.lang.Override
     public final boolean isInitialized() {
       byte isInitialized = memoizedIsInitialized;
       if (isInitialized == 1) return true;
@@ -1299,6 +1328,7 @@ public final class MarketingCampaign {
       return true;
     }
 
+    @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
       if (channel_ != io.bloombox.schema.comms.GenericComms.Channel.UNSPECIFIED.getNumber()) {
@@ -1316,6 +1346,7 @@ public final class MarketingCampaign {
       unknownFields.writeTo(output);
     }
 
+    @java.lang.Override
     public int getSerializedSize() {
       int size = memoizedSize;
       if (size != -1) return size;
@@ -1474,6 +1505,7 @@ public final class MarketingCampaign {
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
 
+    @java.lang.Override
     public Builder newBuilderForType() { return newBuilder(); }
     public static Builder newBuilder() {
       return DEFAULT_INSTANCE.toBuilder();
@@ -1481,6 +1513,7 @@ public final class MarketingCampaign {
     public static Builder newBuilder(io.bloombox.schema.marketing.MarketingCampaign.ChannelSettings prototype) {
       return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
     }
+    @java.lang.Override
     public Builder toBuilder() {
       return this == DEFAULT_INSTANCE
           ? new Builder() : new Builder().mergeFrom(this);
@@ -1497,20 +1530,21 @@ public final class MarketingCampaign {
      * Settings for a given channel.
      * </pre>
      *
-     * Protobuf type {@code bloombox.schema.marketing.ChannelSettings}
+     * Protobuf type {@code bloombox.marketing.ChannelSettings}
      */
     public static final class Builder extends
         com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:bloombox.schema.marketing.ChannelSettings)
+        // @@protoc_insertion_point(builder_implements:bloombox.marketing.ChannelSettings)
         io.bloombox.schema.marketing.MarketingCampaign.ChannelSettingsOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return io.bloombox.schema.marketing.MarketingCampaign.internal_static_bloombox_schema_marketing_ChannelSettings_descriptor;
+        return io.bloombox.schema.marketing.MarketingCampaign.internal_static_bloombox_marketing_ChannelSettings_descriptor;
       }
 
+      @java.lang.Override
       protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return io.bloombox.schema.marketing.MarketingCampaign.internal_static_bloombox_schema_marketing_ChannelSettings_fieldAccessorTable
+        return io.bloombox.schema.marketing.MarketingCampaign.internal_static_bloombox_marketing_ChannelSettings_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
                 io.bloombox.schema.marketing.MarketingCampaign.ChannelSettings.class, io.bloombox.schema.marketing.MarketingCampaign.ChannelSettings.Builder.class);
       }
@@ -1530,6 +1564,7 @@ public final class MarketingCampaign {
                 .alwaysUseFieldBuilders) {
         }
       }
+      @java.lang.Override
       public Builder clear() {
         super.clear();
         channel_ = 0;
@@ -1541,15 +1576,18 @@ public final class MarketingCampaign {
         return this;
       }
 
+      @java.lang.Override
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return io.bloombox.schema.marketing.MarketingCampaign.internal_static_bloombox_schema_marketing_ChannelSettings_descriptor;
+        return io.bloombox.schema.marketing.MarketingCampaign.internal_static_bloombox_marketing_ChannelSettings_descriptor;
       }
 
+      @java.lang.Override
       public io.bloombox.schema.marketing.MarketingCampaign.ChannelSettings getDefaultInstanceForType() {
         return io.bloombox.schema.marketing.MarketingCampaign.ChannelSettings.getDefaultInstance();
       }
 
+      @java.lang.Override
       public io.bloombox.schema.marketing.MarketingCampaign.ChannelSettings build() {
         io.bloombox.schema.marketing.MarketingCampaign.ChannelSettings result = buildPartial();
         if (!result.isInitialized()) {
@@ -1558,6 +1596,7 @@ public final class MarketingCampaign {
         return result;
       }
 
+      @java.lang.Override
       public io.bloombox.schema.marketing.MarketingCampaign.ChannelSettings buildPartial() {
         io.bloombox.schema.marketing.MarketingCampaign.ChannelSettings result = new io.bloombox.schema.marketing.MarketingCampaign.ChannelSettings(this);
         result.channel_ = channel_;
@@ -1581,32 +1620,39 @@ public final class MarketingCampaign {
         return result;
       }
 
+      @java.lang.Override
       public Builder clone() {
         return (Builder) super.clone();
       }
+      @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
         return (Builder) super.setField(field, value);
       }
+      @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
         return (Builder) super.clearField(field);
       }
+      @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
         return (Builder) super.clearOneof(oneof);
       }
+      @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
         return (Builder) super.setRepeatedField(field, index, value);
       }
+      @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
         return (Builder) super.addRepeatedField(field, value);
       }
+      @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
         if (other instanceof io.bloombox.schema.marketing.MarketingCampaign.ChannelSettings) {
           return mergeFrom((io.bloombox.schema.marketing.MarketingCampaign.ChannelSettings)other);
@@ -1642,10 +1688,12 @@ public final class MarketingCampaign {
         return this;
       }
 
+      @java.lang.Override
       public final boolean isInitialized() {
         return true;
       }
 
+      @java.lang.Override
       public Builder mergeFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -1685,7 +1733,7 @@ public final class MarketingCampaign {
        * Channel for which we are specifying settings.
        * </pre>
        *
-       * <code>.bloombox.schema.comms.Channel channel = 1;</code>
+       * <code>.bloombox.comms.Channel channel = 1;</code>
        */
       public int getChannelValue() {
         return channel_;
@@ -1695,7 +1743,7 @@ public final class MarketingCampaign {
        * Channel for which we are specifying settings.
        * </pre>
        *
-       * <code>.bloombox.schema.comms.Channel channel = 1;</code>
+       * <code>.bloombox.comms.Channel channel = 1;</code>
        */
       public Builder setChannelValue(int value) {
         channel_ = value;
@@ -1707,9 +1755,10 @@ public final class MarketingCampaign {
        * Channel for which we are specifying settings.
        * </pre>
        *
-       * <code>.bloombox.schema.comms.Channel channel = 1;</code>
+       * <code>.bloombox.comms.Channel channel = 1;</code>
        */
       public io.bloombox.schema.comms.GenericComms.Channel getChannel() {
+        @SuppressWarnings("deprecation")
         io.bloombox.schema.comms.GenericComms.Channel result = io.bloombox.schema.comms.GenericComms.Channel.valueOf(channel_);
         return result == null ? io.bloombox.schema.comms.GenericComms.Channel.UNRECOGNIZED : result;
       }
@@ -1718,7 +1767,7 @@ public final class MarketingCampaign {
        * Channel for which we are specifying settings.
        * </pre>
        *
-       * <code>.bloombox.schema.comms.Channel channel = 1;</code>
+       * <code>.bloombox.comms.Channel channel = 1;</code>
        */
       public Builder setChannel(io.bloombox.schema.comms.GenericComms.Channel value) {
         if (value == null) {
@@ -1734,7 +1783,7 @@ public final class MarketingCampaign {
        * Channel for which we are specifying settings.
        * </pre>
        *
-       * <code>.bloombox.schema.comms.Channel channel = 1;</code>
+       * <code>.bloombox.comms.Channel channel = 1;</code>
        */
       public Builder clearChannel() {
         
@@ -1788,7 +1837,7 @@ public final class MarketingCampaign {
        * SMS settings.
        * </pre>
        *
-       * <code>.bloombox.schema.comms.SMSSettings sms = 20;</code>
+       * <code>.bloombox.comms.SMSSettings sms = 20;</code>
        */
       public boolean hasSms() {
         return settingsCase_ == 20;
@@ -1798,7 +1847,7 @@ public final class MarketingCampaign {
        * SMS settings.
        * </pre>
        *
-       * <code>.bloombox.schema.comms.SMSSettings sms = 20;</code>
+       * <code>.bloombox.comms.SMSSettings sms = 20;</code>
        */
       public io.bloombox.schema.comms.SMSComms.SMSSettings getSms() {
         if (smsBuilder_ == null) {
@@ -1818,7 +1867,7 @@ public final class MarketingCampaign {
        * SMS settings.
        * </pre>
        *
-       * <code>.bloombox.schema.comms.SMSSettings sms = 20;</code>
+       * <code>.bloombox.comms.SMSSettings sms = 20;</code>
        */
       public Builder setSms(io.bloombox.schema.comms.SMSComms.SMSSettings value) {
         if (smsBuilder_ == null) {
@@ -1838,7 +1887,7 @@ public final class MarketingCampaign {
        * SMS settings.
        * </pre>
        *
-       * <code>.bloombox.schema.comms.SMSSettings sms = 20;</code>
+       * <code>.bloombox.comms.SMSSettings sms = 20;</code>
        */
       public Builder setSms(
           io.bloombox.schema.comms.SMSComms.SMSSettings.Builder builderForValue) {
@@ -1856,7 +1905,7 @@ public final class MarketingCampaign {
        * SMS settings.
        * </pre>
        *
-       * <code>.bloombox.schema.comms.SMSSettings sms = 20;</code>
+       * <code>.bloombox.comms.SMSSettings sms = 20;</code>
        */
       public Builder mergeSms(io.bloombox.schema.comms.SMSComms.SMSSettings value) {
         if (smsBuilder_ == null) {
@@ -1882,7 +1931,7 @@ public final class MarketingCampaign {
        * SMS settings.
        * </pre>
        *
-       * <code>.bloombox.schema.comms.SMSSettings sms = 20;</code>
+       * <code>.bloombox.comms.SMSSettings sms = 20;</code>
        */
       public Builder clearSms() {
         if (smsBuilder_ == null) {
@@ -1905,7 +1954,7 @@ public final class MarketingCampaign {
        * SMS settings.
        * </pre>
        *
-       * <code>.bloombox.schema.comms.SMSSettings sms = 20;</code>
+       * <code>.bloombox.comms.SMSSettings sms = 20;</code>
        */
       public io.bloombox.schema.comms.SMSComms.SMSSettings.Builder getSmsBuilder() {
         return getSmsFieldBuilder().getBuilder();
@@ -1915,7 +1964,7 @@ public final class MarketingCampaign {
        * SMS settings.
        * </pre>
        *
-       * <code>.bloombox.schema.comms.SMSSettings sms = 20;</code>
+       * <code>.bloombox.comms.SMSSettings sms = 20;</code>
        */
       public io.bloombox.schema.comms.SMSComms.SMSSettingsOrBuilder getSmsOrBuilder() {
         if ((settingsCase_ == 20) && (smsBuilder_ != null)) {
@@ -1932,7 +1981,7 @@ public final class MarketingCampaign {
        * SMS settings.
        * </pre>
        *
-       * <code>.bloombox.schema.comms.SMSSettings sms = 20;</code>
+       * <code>.bloombox.comms.SMSSettings sms = 20;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
           io.bloombox.schema.comms.SMSComms.SMSSettings, io.bloombox.schema.comms.SMSComms.SMSSettings.Builder, io.bloombox.schema.comms.SMSComms.SMSSettingsOrBuilder> 
@@ -1960,7 +2009,7 @@ public final class MarketingCampaign {
        * Email settings.
        * </pre>
        *
-       * <code>.bloombox.schema.comms.EmailSettings email = 21;</code>
+       * <code>.bloombox.comms.EmailSettings email = 21;</code>
        */
       public boolean hasEmail() {
         return settingsCase_ == 21;
@@ -1970,7 +2019,7 @@ public final class MarketingCampaign {
        * Email settings.
        * </pre>
        *
-       * <code>.bloombox.schema.comms.EmailSettings email = 21;</code>
+       * <code>.bloombox.comms.EmailSettings email = 21;</code>
        */
       public io.bloombox.schema.comms.EmailComms.EmailSettings getEmail() {
         if (emailBuilder_ == null) {
@@ -1990,7 +2039,7 @@ public final class MarketingCampaign {
        * Email settings.
        * </pre>
        *
-       * <code>.bloombox.schema.comms.EmailSettings email = 21;</code>
+       * <code>.bloombox.comms.EmailSettings email = 21;</code>
        */
       public Builder setEmail(io.bloombox.schema.comms.EmailComms.EmailSettings value) {
         if (emailBuilder_ == null) {
@@ -2010,7 +2059,7 @@ public final class MarketingCampaign {
        * Email settings.
        * </pre>
        *
-       * <code>.bloombox.schema.comms.EmailSettings email = 21;</code>
+       * <code>.bloombox.comms.EmailSettings email = 21;</code>
        */
       public Builder setEmail(
           io.bloombox.schema.comms.EmailComms.EmailSettings.Builder builderForValue) {
@@ -2028,7 +2077,7 @@ public final class MarketingCampaign {
        * Email settings.
        * </pre>
        *
-       * <code>.bloombox.schema.comms.EmailSettings email = 21;</code>
+       * <code>.bloombox.comms.EmailSettings email = 21;</code>
        */
       public Builder mergeEmail(io.bloombox.schema.comms.EmailComms.EmailSettings value) {
         if (emailBuilder_ == null) {
@@ -2054,7 +2103,7 @@ public final class MarketingCampaign {
        * Email settings.
        * </pre>
        *
-       * <code>.bloombox.schema.comms.EmailSettings email = 21;</code>
+       * <code>.bloombox.comms.EmailSettings email = 21;</code>
        */
       public Builder clearEmail() {
         if (emailBuilder_ == null) {
@@ -2077,7 +2126,7 @@ public final class MarketingCampaign {
        * Email settings.
        * </pre>
        *
-       * <code>.bloombox.schema.comms.EmailSettings email = 21;</code>
+       * <code>.bloombox.comms.EmailSettings email = 21;</code>
        */
       public io.bloombox.schema.comms.EmailComms.EmailSettings.Builder getEmailBuilder() {
         return getEmailFieldBuilder().getBuilder();
@@ -2087,7 +2136,7 @@ public final class MarketingCampaign {
        * Email settings.
        * </pre>
        *
-       * <code>.bloombox.schema.comms.EmailSettings email = 21;</code>
+       * <code>.bloombox.comms.EmailSettings email = 21;</code>
        */
       public io.bloombox.schema.comms.EmailComms.EmailSettingsOrBuilder getEmailOrBuilder() {
         if ((settingsCase_ == 21) && (emailBuilder_ != null)) {
@@ -2104,7 +2153,7 @@ public final class MarketingCampaign {
        * Email settings.
        * </pre>
        *
-       * <code>.bloombox.schema.comms.EmailSettings email = 21;</code>
+       * <code>.bloombox.comms.EmailSettings email = 21;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
           io.bloombox.schema.comms.EmailComms.EmailSettings, io.bloombox.schema.comms.EmailComms.EmailSettings.Builder, io.bloombox.schema.comms.EmailComms.EmailSettingsOrBuilder> 
@@ -2124,21 +2173,23 @@ public final class MarketingCampaign {
         onChanged();;
         return emailBuilder_;
       }
+      @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
         return super.setUnknownFieldsProto3(unknownFields);
       }
 
+      @java.lang.Override
       public final Builder mergeUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
         return super.mergeUnknownFields(unknownFields);
       }
 
 
-      // @@protoc_insertion_point(builder_scope:bloombox.schema.marketing.ChannelSettings)
+      // @@protoc_insertion_point(builder_scope:bloombox.marketing.ChannelSettings)
     }
 
-    // @@protoc_insertion_point(class_scope:bloombox.schema.marketing.ChannelSettings)
+    // @@protoc_insertion_point(class_scope:bloombox.marketing.ChannelSettings)
     private static final io.bloombox.schema.marketing.MarketingCampaign.ChannelSettings DEFAULT_INSTANCE;
     static {
       DEFAULT_INSTANCE = new io.bloombox.schema.marketing.MarketingCampaign.ChannelSettings();
@@ -2150,6 +2201,7 @@ public final class MarketingCampaign {
 
     private static final com.google.protobuf.Parser<ChannelSettings>
         PARSER = new com.google.protobuf.AbstractParser<ChannelSettings>() {
+      @java.lang.Override
       public ChannelSettings parsePartialFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -2167,6 +2219,7 @@ public final class MarketingCampaign {
       return PARSER;
     }
 
+    @java.lang.Override
     public io.bloombox.schema.marketing.MarketingCampaign.ChannelSettings getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
@@ -2174,7 +2227,7 @@ public final class MarketingCampaign {
   }
 
   public interface CreativeOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:bloombox.schema.marketing.Creative)
+      // @@protoc_insertion_point(interface_extends:bloombox.marketing.Creative)
       com.google.protobuf.MessageOrBuilder {
 
     /**
@@ -2182,7 +2235,7 @@ public final class MarketingCampaign {
      * SMS-specific content.
      * </pre>
      *
-     * <code>.bloombox.schema.comms.SMSContent sms = 10;</code>
+     * <code>.bloombox.comms.SMSContent sms = 10;</code>
      */
     boolean hasSms();
     /**
@@ -2190,7 +2243,7 @@ public final class MarketingCampaign {
      * SMS-specific content.
      * </pre>
      *
-     * <code>.bloombox.schema.comms.SMSContent sms = 10;</code>
+     * <code>.bloombox.comms.SMSContent sms = 10;</code>
      */
     io.bloombox.schema.comms.SMSComms.SMSContent getSms();
     /**
@@ -2198,7 +2251,7 @@ public final class MarketingCampaign {
      * SMS-specific content.
      * </pre>
      *
-     * <code>.bloombox.schema.comms.SMSContent sms = 10;</code>
+     * <code>.bloombox.comms.SMSContent sms = 10;</code>
      */
     io.bloombox.schema.comms.SMSComms.SMSContentOrBuilder getSmsOrBuilder();
 
@@ -2207,7 +2260,7 @@ public final class MarketingCampaign {
      * Email-specific content.
      * </pre>
      *
-     * <code>.bloombox.schema.comms.EmailContent email = 11;</code>
+     * <code>.bloombox.comms.EmailContent email = 11;</code>
      */
     boolean hasEmail();
     /**
@@ -2215,7 +2268,7 @@ public final class MarketingCampaign {
      * Email-specific content.
      * </pre>
      *
-     * <code>.bloombox.schema.comms.EmailContent email = 11;</code>
+     * <code>.bloombox.comms.EmailContent email = 11;</code>
      */
     io.bloombox.schema.comms.EmailComms.EmailContent getEmail();
     /**
@@ -2223,7 +2276,7 @@ public final class MarketingCampaign {
      * Email-specific content.
      * </pre>
      *
-     * <code>.bloombox.schema.comms.EmailContent email = 11;</code>
+     * <code>.bloombox.comms.EmailContent email = 11;</code>
      */
     io.bloombox.schema.comms.EmailComms.EmailContentOrBuilder getEmailOrBuilder();
 
@@ -2234,11 +2287,11 @@ public final class MarketingCampaign {
    * Specifies the actual content of a marketing campaign ad group.
    * </pre>
    *
-   * Protobuf type {@code bloombox.schema.marketing.Creative}
+   * Protobuf type {@code bloombox.marketing.Creative}
    */
   public  static final class Creative extends
       com.google.protobuf.GeneratedMessageV3 implements
-      // @@protoc_insertion_point(message_implements:bloombox.schema.marketing.Creative)
+      // @@protoc_insertion_point(message_implements:bloombox.marketing.Creative)
       CreativeOrBuilder {
   private static final long serialVersionUID = 0L;
     // Use Creative.newBuilder() to construct.
@@ -2272,13 +2325,6 @@ public final class MarketingCampaign {
             case 0:
               done = true;
               break;
-            default: {
-              if (!parseUnknownFieldProto3(
-                  input, unknownFields, extensionRegistry, tag)) {
-                done = true;
-              }
-              break;
-            }
             case 82: {
               io.bloombox.schema.comms.SMSComms.SMSContent.Builder subBuilder = null;
               if (contentCase_ == 10) {
@@ -2307,6 +2353,13 @@ public final class MarketingCampaign {
               contentCase_ = 11;
               break;
             }
+            default: {
+              if (!parseUnknownFieldProto3(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
           }
         }
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
@@ -2321,12 +2374,13 @@ public final class MarketingCampaign {
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return io.bloombox.schema.marketing.MarketingCampaign.internal_static_bloombox_schema_marketing_Creative_descriptor;
+      return io.bloombox.schema.marketing.MarketingCampaign.internal_static_bloombox_marketing_Creative_descriptor;
     }
 
+    @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return io.bloombox.schema.marketing.MarketingCampaign.internal_static_bloombox_schema_marketing_Creative_fieldAccessorTable
+      return io.bloombox.schema.marketing.MarketingCampaign.internal_static_bloombox_marketing_Creative_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
               io.bloombox.schema.marketing.MarketingCampaign.Creative.class, io.bloombox.schema.marketing.MarketingCampaign.Creative.Builder.class);
     }
@@ -2375,7 +2429,7 @@ public final class MarketingCampaign {
      * SMS-specific content.
      * </pre>
      *
-     * <code>.bloombox.schema.comms.SMSContent sms = 10;</code>
+     * <code>.bloombox.comms.SMSContent sms = 10;</code>
      */
     public boolean hasSms() {
       return contentCase_ == 10;
@@ -2385,7 +2439,7 @@ public final class MarketingCampaign {
      * SMS-specific content.
      * </pre>
      *
-     * <code>.bloombox.schema.comms.SMSContent sms = 10;</code>
+     * <code>.bloombox.comms.SMSContent sms = 10;</code>
      */
     public io.bloombox.schema.comms.SMSComms.SMSContent getSms() {
       if (contentCase_ == 10) {
@@ -2398,7 +2452,7 @@ public final class MarketingCampaign {
      * SMS-specific content.
      * </pre>
      *
-     * <code>.bloombox.schema.comms.SMSContent sms = 10;</code>
+     * <code>.bloombox.comms.SMSContent sms = 10;</code>
      */
     public io.bloombox.schema.comms.SMSComms.SMSContentOrBuilder getSmsOrBuilder() {
       if (contentCase_ == 10) {
@@ -2413,7 +2467,7 @@ public final class MarketingCampaign {
      * Email-specific content.
      * </pre>
      *
-     * <code>.bloombox.schema.comms.EmailContent email = 11;</code>
+     * <code>.bloombox.comms.EmailContent email = 11;</code>
      */
     public boolean hasEmail() {
       return contentCase_ == 11;
@@ -2423,7 +2477,7 @@ public final class MarketingCampaign {
      * Email-specific content.
      * </pre>
      *
-     * <code>.bloombox.schema.comms.EmailContent email = 11;</code>
+     * <code>.bloombox.comms.EmailContent email = 11;</code>
      */
     public io.bloombox.schema.comms.EmailComms.EmailContent getEmail() {
       if (contentCase_ == 11) {
@@ -2436,7 +2490,7 @@ public final class MarketingCampaign {
      * Email-specific content.
      * </pre>
      *
-     * <code>.bloombox.schema.comms.EmailContent email = 11;</code>
+     * <code>.bloombox.comms.EmailContent email = 11;</code>
      */
     public io.bloombox.schema.comms.EmailComms.EmailContentOrBuilder getEmailOrBuilder() {
       if (contentCase_ == 11) {
@@ -2446,6 +2500,7 @@ public final class MarketingCampaign {
     }
 
     private byte memoizedIsInitialized = -1;
+    @java.lang.Override
     public final boolean isInitialized() {
       byte isInitialized = memoizedIsInitialized;
       if (isInitialized == 1) return true;
@@ -2455,6 +2510,7 @@ public final class MarketingCampaign {
       return true;
     }
 
+    @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
       if (contentCase_ == 10) {
@@ -2466,6 +2522,7 @@ public final class MarketingCampaign {
       unknownFields.writeTo(output);
     }
 
+    @java.lang.Override
     public int getSerializedSize() {
       int size = memoizedSize;
       if (size != -1) return size;
@@ -2608,6 +2665,7 @@ public final class MarketingCampaign {
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
 
+    @java.lang.Override
     public Builder newBuilderForType() { return newBuilder(); }
     public static Builder newBuilder() {
       return DEFAULT_INSTANCE.toBuilder();
@@ -2615,6 +2673,7 @@ public final class MarketingCampaign {
     public static Builder newBuilder(io.bloombox.schema.marketing.MarketingCampaign.Creative prototype) {
       return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
     }
+    @java.lang.Override
     public Builder toBuilder() {
       return this == DEFAULT_INSTANCE
           ? new Builder() : new Builder().mergeFrom(this);
@@ -2631,20 +2690,21 @@ public final class MarketingCampaign {
      * Specifies the actual content of a marketing campaign ad group.
      * </pre>
      *
-     * Protobuf type {@code bloombox.schema.marketing.Creative}
+     * Protobuf type {@code bloombox.marketing.Creative}
      */
     public static final class Builder extends
         com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:bloombox.schema.marketing.Creative)
+        // @@protoc_insertion_point(builder_implements:bloombox.marketing.Creative)
         io.bloombox.schema.marketing.MarketingCampaign.CreativeOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return io.bloombox.schema.marketing.MarketingCampaign.internal_static_bloombox_schema_marketing_Creative_descriptor;
+        return io.bloombox.schema.marketing.MarketingCampaign.internal_static_bloombox_marketing_Creative_descriptor;
       }
 
+      @java.lang.Override
       protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return io.bloombox.schema.marketing.MarketingCampaign.internal_static_bloombox_schema_marketing_Creative_fieldAccessorTable
+        return io.bloombox.schema.marketing.MarketingCampaign.internal_static_bloombox_marketing_Creative_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
                 io.bloombox.schema.marketing.MarketingCampaign.Creative.class, io.bloombox.schema.marketing.MarketingCampaign.Creative.Builder.class);
       }
@@ -2664,6 +2724,7 @@ public final class MarketingCampaign {
                 .alwaysUseFieldBuilders) {
         }
       }
+      @java.lang.Override
       public Builder clear() {
         super.clear();
         contentCase_ = 0;
@@ -2671,15 +2732,18 @@ public final class MarketingCampaign {
         return this;
       }
 
+      @java.lang.Override
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return io.bloombox.schema.marketing.MarketingCampaign.internal_static_bloombox_schema_marketing_Creative_descriptor;
+        return io.bloombox.schema.marketing.MarketingCampaign.internal_static_bloombox_marketing_Creative_descriptor;
       }
 
+      @java.lang.Override
       public io.bloombox.schema.marketing.MarketingCampaign.Creative getDefaultInstanceForType() {
         return io.bloombox.schema.marketing.MarketingCampaign.Creative.getDefaultInstance();
       }
 
+      @java.lang.Override
       public io.bloombox.schema.marketing.MarketingCampaign.Creative build() {
         io.bloombox.schema.marketing.MarketingCampaign.Creative result = buildPartial();
         if (!result.isInitialized()) {
@@ -2688,6 +2752,7 @@ public final class MarketingCampaign {
         return result;
       }
 
+      @java.lang.Override
       public io.bloombox.schema.marketing.MarketingCampaign.Creative buildPartial() {
         io.bloombox.schema.marketing.MarketingCampaign.Creative result = new io.bloombox.schema.marketing.MarketingCampaign.Creative(this);
         if (contentCase_ == 10) {
@@ -2709,32 +2774,39 @@ public final class MarketingCampaign {
         return result;
       }
 
+      @java.lang.Override
       public Builder clone() {
         return (Builder) super.clone();
       }
+      @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
         return (Builder) super.setField(field, value);
       }
+      @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
         return (Builder) super.clearField(field);
       }
+      @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
         return (Builder) super.clearOneof(oneof);
       }
+      @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
         return (Builder) super.setRepeatedField(field, index, value);
       }
+      @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
         return (Builder) super.addRepeatedField(field, value);
       }
+      @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
         if (other instanceof io.bloombox.schema.marketing.MarketingCampaign.Creative) {
           return mergeFrom((io.bloombox.schema.marketing.MarketingCampaign.Creative)other);
@@ -2764,10 +2836,12 @@ public final class MarketingCampaign {
         return this;
       }
 
+      @java.lang.Override
       public final boolean isInitialized() {
         return true;
       }
 
+      @java.lang.Override
       public Builder mergeFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -2808,7 +2882,7 @@ public final class MarketingCampaign {
        * SMS-specific content.
        * </pre>
        *
-       * <code>.bloombox.schema.comms.SMSContent sms = 10;</code>
+       * <code>.bloombox.comms.SMSContent sms = 10;</code>
        */
       public boolean hasSms() {
         return contentCase_ == 10;
@@ -2818,7 +2892,7 @@ public final class MarketingCampaign {
        * SMS-specific content.
        * </pre>
        *
-       * <code>.bloombox.schema.comms.SMSContent sms = 10;</code>
+       * <code>.bloombox.comms.SMSContent sms = 10;</code>
        */
       public io.bloombox.schema.comms.SMSComms.SMSContent getSms() {
         if (smsBuilder_ == null) {
@@ -2838,7 +2912,7 @@ public final class MarketingCampaign {
        * SMS-specific content.
        * </pre>
        *
-       * <code>.bloombox.schema.comms.SMSContent sms = 10;</code>
+       * <code>.bloombox.comms.SMSContent sms = 10;</code>
        */
       public Builder setSms(io.bloombox.schema.comms.SMSComms.SMSContent value) {
         if (smsBuilder_ == null) {
@@ -2858,7 +2932,7 @@ public final class MarketingCampaign {
        * SMS-specific content.
        * </pre>
        *
-       * <code>.bloombox.schema.comms.SMSContent sms = 10;</code>
+       * <code>.bloombox.comms.SMSContent sms = 10;</code>
        */
       public Builder setSms(
           io.bloombox.schema.comms.SMSComms.SMSContent.Builder builderForValue) {
@@ -2876,7 +2950,7 @@ public final class MarketingCampaign {
        * SMS-specific content.
        * </pre>
        *
-       * <code>.bloombox.schema.comms.SMSContent sms = 10;</code>
+       * <code>.bloombox.comms.SMSContent sms = 10;</code>
        */
       public Builder mergeSms(io.bloombox.schema.comms.SMSComms.SMSContent value) {
         if (smsBuilder_ == null) {
@@ -2902,7 +2976,7 @@ public final class MarketingCampaign {
        * SMS-specific content.
        * </pre>
        *
-       * <code>.bloombox.schema.comms.SMSContent sms = 10;</code>
+       * <code>.bloombox.comms.SMSContent sms = 10;</code>
        */
       public Builder clearSms() {
         if (smsBuilder_ == null) {
@@ -2925,7 +2999,7 @@ public final class MarketingCampaign {
        * SMS-specific content.
        * </pre>
        *
-       * <code>.bloombox.schema.comms.SMSContent sms = 10;</code>
+       * <code>.bloombox.comms.SMSContent sms = 10;</code>
        */
       public io.bloombox.schema.comms.SMSComms.SMSContent.Builder getSmsBuilder() {
         return getSmsFieldBuilder().getBuilder();
@@ -2935,7 +3009,7 @@ public final class MarketingCampaign {
        * SMS-specific content.
        * </pre>
        *
-       * <code>.bloombox.schema.comms.SMSContent sms = 10;</code>
+       * <code>.bloombox.comms.SMSContent sms = 10;</code>
        */
       public io.bloombox.schema.comms.SMSComms.SMSContentOrBuilder getSmsOrBuilder() {
         if ((contentCase_ == 10) && (smsBuilder_ != null)) {
@@ -2952,7 +3026,7 @@ public final class MarketingCampaign {
        * SMS-specific content.
        * </pre>
        *
-       * <code>.bloombox.schema.comms.SMSContent sms = 10;</code>
+       * <code>.bloombox.comms.SMSContent sms = 10;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
           io.bloombox.schema.comms.SMSComms.SMSContent, io.bloombox.schema.comms.SMSComms.SMSContent.Builder, io.bloombox.schema.comms.SMSComms.SMSContentOrBuilder> 
@@ -2980,7 +3054,7 @@ public final class MarketingCampaign {
        * Email-specific content.
        * </pre>
        *
-       * <code>.bloombox.schema.comms.EmailContent email = 11;</code>
+       * <code>.bloombox.comms.EmailContent email = 11;</code>
        */
       public boolean hasEmail() {
         return contentCase_ == 11;
@@ -2990,7 +3064,7 @@ public final class MarketingCampaign {
        * Email-specific content.
        * </pre>
        *
-       * <code>.bloombox.schema.comms.EmailContent email = 11;</code>
+       * <code>.bloombox.comms.EmailContent email = 11;</code>
        */
       public io.bloombox.schema.comms.EmailComms.EmailContent getEmail() {
         if (emailBuilder_ == null) {
@@ -3010,7 +3084,7 @@ public final class MarketingCampaign {
        * Email-specific content.
        * </pre>
        *
-       * <code>.bloombox.schema.comms.EmailContent email = 11;</code>
+       * <code>.bloombox.comms.EmailContent email = 11;</code>
        */
       public Builder setEmail(io.bloombox.schema.comms.EmailComms.EmailContent value) {
         if (emailBuilder_ == null) {
@@ -3030,7 +3104,7 @@ public final class MarketingCampaign {
        * Email-specific content.
        * </pre>
        *
-       * <code>.bloombox.schema.comms.EmailContent email = 11;</code>
+       * <code>.bloombox.comms.EmailContent email = 11;</code>
        */
       public Builder setEmail(
           io.bloombox.schema.comms.EmailComms.EmailContent.Builder builderForValue) {
@@ -3048,7 +3122,7 @@ public final class MarketingCampaign {
        * Email-specific content.
        * </pre>
        *
-       * <code>.bloombox.schema.comms.EmailContent email = 11;</code>
+       * <code>.bloombox.comms.EmailContent email = 11;</code>
        */
       public Builder mergeEmail(io.bloombox.schema.comms.EmailComms.EmailContent value) {
         if (emailBuilder_ == null) {
@@ -3074,7 +3148,7 @@ public final class MarketingCampaign {
        * Email-specific content.
        * </pre>
        *
-       * <code>.bloombox.schema.comms.EmailContent email = 11;</code>
+       * <code>.bloombox.comms.EmailContent email = 11;</code>
        */
       public Builder clearEmail() {
         if (emailBuilder_ == null) {
@@ -3097,7 +3171,7 @@ public final class MarketingCampaign {
        * Email-specific content.
        * </pre>
        *
-       * <code>.bloombox.schema.comms.EmailContent email = 11;</code>
+       * <code>.bloombox.comms.EmailContent email = 11;</code>
        */
       public io.bloombox.schema.comms.EmailComms.EmailContent.Builder getEmailBuilder() {
         return getEmailFieldBuilder().getBuilder();
@@ -3107,7 +3181,7 @@ public final class MarketingCampaign {
        * Email-specific content.
        * </pre>
        *
-       * <code>.bloombox.schema.comms.EmailContent email = 11;</code>
+       * <code>.bloombox.comms.EmailContent email = 11;</code>
        */
       public io.bloombox.schema.comms.EmailComms.EmailContentOrBuilder getEmailOrBuilder() {
         if ((contentCase_ == 11) && (emailBuilder_ != null)) {
@@ -3124,7 +3198,7 @@ public final class MarketingCampaign {
        * Email-specific content.
        * </pre>
        *
-       * <code>.bloombox.schema.comms.EmailContent email = 11;</code>
+       * <code>.bloombox.comms.EmailContent email = 11;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
           io.bloombox.schema.comms.EmailComms.EmailContent, io.bloombox.schema.comms.EmailComms.EmailContent.Builder, io.bloombox.schema.comms.EmailComms.EmailContentOrBuilder> 
@@ -3144,21 +3218,23 @@ public final class MarketingCampaign {
         onChanged();;
         return emailBuilder_;
       }
+      @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
         return super.setUnknownFieldsProto3(unknownFields);
       }
 
+      @java.lang.Override
       public final Builder mergeUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
         return super.mergeUnknownFields(unknownFields);
       }
 
 
-      // @@protoc_insertion_point(builder_scope:bloombox.schema.marketing.Creative)
+      // @@protoc_insertion_point(builder_scope:bloombox.marketing.Creative)
     }
 
-    // @@protoc_insertion_point(class_scope:bloombox.schema.marketing.Creative)
+    // @@protoc_insertion_point(class_scope:bloombox.marketing.Creative)
     private static final io.bloombox.schema.marketing.MarketingCampaign.Creative DEFAULT_INSTANCE;
     static {
       DEFAULT_INSTANCE = new io.bloombox.schema.marketing.MarketingCampaign.Creative();
@@ -3170,6 +3246,7 @@ public final class MarketingCampaign {
 
     private static final com.google.protobuf.Parser<Creative>
         PARSER = new com.google.protobuf.AbstractParser<Creative>() {
+      @java.lang.Override
       public Creative parsePartialFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -3187,6 +3264,7 @@ public final class MarketingCampaign {
       return PARSER;
     }
 
+    @java.lang.Override
     public io.bloombox.schema.marketing.MarketingCampaign.Creative getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
@@ -3194,7 +3272,7 @@ public final class MarketingCampaign {
   }
 
   public interface AdGroupOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:bloombox.schema.marketing.AdGroup)
+      // @@protoc_insertion_point(interface_extends:bloombox.marketing.AdGroup)
       com.google.protobuf.MessageOrBuilder {
 
     /**
@@ -3220,7 +3298,7 @@ public final class MarketingCampaign {
      * Key for this ad group's owning campaign.
      * </pre>
      *
-     * <code>.bloombox.schema.marketing.CampaignKey campaign = 2;</code>
+     * <code>.bloombox.marketing.CampaignKey campaign = 2;</code>
      */
     boolean hasCampaign();
     /**
@@ -3228,7 +3306,7 @@ public final class MarketingCampaign {
      * Key for this ad group's owning campaign.
      * </pre>
      *
-     * <code>.bloombox.schema.marketing.CampaignKey campaign = 2;</code>
+     * <code>.bloombox.marketing.CampaignKey campaign = 2;</code>
      */
     io.bloombox.schema.marketing.MarketingCampaign.CampaignKey getCampaign();
     /**
@@ -3236,7 +3314,7 @@ public final class MarketingCampaign {
      * Key for this ad group's owning campaign.
      * </pre>
      *
-     * <code>.bloombox.schema.marketing.CampaignKey campaign = 2;</code>
+     * <code>.bloombox.marketing.CampaignKey campaign = 2;</code>
      */
     io.bloombox.schema.marketing.MarketingCampaign.CampaignKeyOrBuilder getCampaignOrBuilder();
 
@@ -3245,7 +3323,7 @@ public final class MarketingCampaign {
      * Channel for this specification.
      * </pre>
      *
-     * <code>.bloombox.schema.comms.Channel channel = 3;</code>
+     * <code>.bloombox.comms.Channel channel = 3;</code>
      */
     int getChannelValue();
     /**
@@ -3253,7 +3331,7 @@ public final class MarketingCampaign {
      * Channel for this specification.
      * </pre>
      *
-     * <code>.bloombox.schema.comms.Channel channel = 3;</code>
+     * <code>.bloombox.comms.Channel channel = 3;</code>
      */
     io.bloombox.schema.comms.GenericComms.Channel getChannel();
 
@@ -3262,7 +3340,7 @@ public final class MarketingCampaign {
      * Attached content/creatives for this ad group.
      * </pre>
      *
-     * <code>repeated .bloombox.schema.marketing.Creative creative = 4;</code>
+     * <code>repeated .bloombox.marketing.Creative creative = 4;</code>
      */
     java.util.List<io.bloombox.schema.marketing.MarketingCampaign.Creative> 
         getCreativeList();
@@ -3271,7 +3349,7 @@ public final class MarketingCampaign {
      * Attached content/creatives for this ad group.
      * </pre>
      *
-     * <code>repeated .bloombox.schema.marketing.Creative creative = 4;</code>
+     * <code>repeated .bloombox.marketing.Creative creative = 4;</code>
      */
     io.bloombox.schema.marketing.MarketingCampaign.Creative getCreative(int index);
     /**
@@ -3279,7 +3357,7 @@ public final class MarketingCampaign {
      * Attached content/creatives for this ad group.
      * </pre>
      *
-     * <code>repeated .bloombox.schema.marketing.Creative creative = 4;</code>
+     * <code>repeated .bloombox.marketing.Creative creative = 4;</code>
      */
     int getCreativeCount();
     /**
@@ -3287,7 +3365,7 @@ public final class MarketingCampaign {
      * Attached content/creatives for this ad group.
      * </pre>
      *
-     * <code>repeated .bloombox.schema.marketing.Creative creative = 4;</code>
+     * <code>repeated .bloombox.marketing.Creative creative = 4;</code>
      */
     java.util.List<? extends io.bloombox.schema.marketing.MarketingCampaign.CreativeOrBuilder> 
         getCreativeOrBuilderList();
@@ -3296,7 +3374,7 @@ public final class MarketingCampaign {
      * Attached content/creatives for this ad group.
      * </pre>
      *
-     * <code>repeated .bloombox.schema.marketing.Creative creative = 4;</code>
+     * <code>repeated .bloombox.marketing.Creative creative = 4;</code>
      */
     io.bloombox.schema.marketing.MarketingCampaign.CreativeOrBuilder getCreativeOrBuilder(
         int index);
@@ -3306,11 +3384,11 @@ public final class MarketingCampaign {
    * Specifies campaign settings for a given channel.
    * </pre>
    *
-   * Protobuf type {@code bloombox.schema.marketing.AdGroup}
+   * Protobuf type {@code bloombox.marketing.AdGroup}
    */
   public  static final class AdGroup extends
       com.google.protobuf.GeneratedMessageV3 implements
-      // @@protoc_insertion_point(message_implements:bloombox.schema.marketing.AdGroup)
+      // @@protoc_insertion_point(message_implements:bloombox.marketing.AdGroup)
       AdGroupOrBuilder {
   private static final long serialVersionUID = 0L;
     // Use AdGroup.newBuilder() to construct.
@@ -3347,13 +3425,6 @@ public final class MarketingCampaign {
             case 0:
               done = true;
               break;
-            default: {
-              if (!parseUnknownFieldProto3(
-                  input, unknownFields, extensionRegistry, tag)) {
-                done = true;
-              }
-              break;
-            }
             case 10: {
               java.lang.String s = input.readStringRequireUtf8();
 
@@ -3388,6 +3459,13 @@ public final class MarketingCampaign {
                   input.readMessage(io.bloombox.schema.marketing.MarketingCampaign.Creative.parser(), extensionRegistry));
               break;
             }
+            default: {
+              if (!parseUnknownFieldProto3(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
           }
         }
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
@@ -3405,12 +3483,13 @@ public final class MarketingCampaign {
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return io.bloombox.schema.marketing.MarketingCampaign.internal_static_bloombox_schema_marketing_AdGroup_descriptor;
+      return io.bloombox.schema.marketing.MarketingCampaign.internal_static_bloombox_marketing_AdGroup_descriptor;
     }
 
+    @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return io.bloombox.schema.marketing.MarketingCampaign.internal_static_bloombox_schema_marketing_AdGroup_fieldAccessorTable
+      return io.bloombox.schema.marketing.MarketingCampaign.internal_static_bloombox_marketing_AdGroup_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
               io.bloombox.schema.marketing.MarketingCampaign.AdGroup.class, io.bloombox.schema.marketing.MarketingCampaign.AdGroup.Builder.class);
     }
@@ -3465,7 +3544,7 @@ public final class MarketingCampaign {
      * Key for this ad group's owning campaign.
      * </pre>
      *
-     * <code>.bloombox.schema.marketing.CampaignKey campaign = 2;</code>
+     * <code>.bloombox.marketing.CampaignKey campaign = 2;</code>
      */
     public boolean hasCampaign() {
       return campaign_ != null;
@@ -3475,7 +3554,7 @@ public final class MarketingCampaign {
      * Key for this ad group's owning campaign.
      * </pre>
      *
-     * <code>.bloombox.schema.marketing.CampaignKey campaign = 2;</code>
+     * <code>.bloombox.marketing.CampaignKey campaign = 2;</code>
      */
     public io.bloombox.schema.marketing.MarketingCampaign.CampaignKey getCampaign() {
       return campaign_ == null ? io.bloombox.schema.marketing.MarketingCampaign.CampaignKey.getDefaultInstance() : campaign_;
@@ -3485,7 +3564,7 @@ public final class MarketingCampaign {
      * Key for this ad group's owning campaign.
      * </pre>
      *
-     * <code>.bloombox.schema.marketing.CampaignKey campaign = 2;</code>
+     * <code>.bloombox.marketing.CampaignKey campaign = 2;</code>
      */
     public io.bloombox.schema.marketing.MarketingCampaign.CampaignKeyOrBuilder getCampaignOrBuilder() {
       return getCampaign();
@@ -3498,7 +3577,7 @@ public final class MarketingCampaign {
      * Channel for this specification.
      * </pre>
      *
-     * <code>.bloombox.schema.comms.Channel channel = 3;</code>
+     * <code>.bloombox.comms.Channel channel = 3;</code>
      */
     public int getChannelValue() {
       return channel_;
@@ -3508,9 +3587,10 @@ public final class MarketingCampaign {
      * Channel for this specification.
      * </pre>
      *
-     * <code>.bloombox.schema.comms.Channel channel = 3;</code>
+     * <code>.bloombox.comms.Channel channel = 3;</code>
      */
     public io.bloombox.schema.comms.GenericComms.Channel getChannel() {
+      @SuppressWarnings("deprecation")
       io.bloombox.schema.comms.GenericComms.Channel result = io.bloombox.schema.comms.GenericComms.Channel.valueOf(channel_);
       return result == null ? io.bloombox.schema.comms.GenericComms.Channel.UNRECOGNIZED : result;
     }
@@ -3522,7 +3602,7 @@ public final class MarketingCampaign {
      * Attached content/creatives for this ad group.
      * </pre>
      *
-     * <code>repeated .bloombox.schema.marketing.Creative creative = 4;</code>
+     * <code>repeated .bloombox.marketing.Creative creative = 4;</code>
      */
     public java.util.List<io.bloombox.schema.marketing.MarketingCampaign.Creative> getCreativeList() {
       return creative_;
@@ -3532,7 +3612,7 @@ public final class MarketingCampaign {
      * Attached content/creatives for this ad group.
      * </pre>
      *
-     * <code>repeated .bloombox.schema.marketing.Creative creative = 4;</code>
+     * <code>repeated .bloombox.marketing.Creative creative = 4;</code>
      */
     public java.util.List<? extends io.bloombox.schema.marketing.MarketingCampaign.CreativeOrBuilder> 
         getCreativeOrBuilderList() {
@@ -3543,7 +3623,7 @@ public final class MarketingCampaign {
      * Attached content/creatives for this ad group.
      * </pre>
      *
-     * <code>repeated .bloombox.schema.marketing.Creative creative = 4;</code>
+     * <code>repeated .bloombox.marketing.Creative creative = 4;</code>
      */
     public int getCreativeCount() {
       return creative_.size();
@@ -3553,7 +3633,7 @@ public final class MarketingCampaign {
      * Attached content/creatives for this ad group.
      * </pre>
      *
-     * <code>repeated .bloombox.schema.marketing.Creative creative = 4;</code>
+     * <code>repeated .bloombox.marketing.Creative creative = 4;</code>
      */
     public io.bloombox.schema.marketing.MarketingCampaign.Creative getCreative(int index) {
       return creative_.get(index);
@@ -3563,7 +3643,7 @@ public final class MarketingCampaign {
      * Attached content/creatives for this ad group.
      * </pre>
      *
-     * <code>repeated .bloombox.schema.marketing.Creative creative = 4;</code>
+     * <code>repeated .bloombox.marketing.Creative creative = 4;</code>
      */
     public io.bloombox.schema.marketing.MarketingCampaign.CreativeOrBuilder getCreativeOrBuilder(
         int index) {
@@ -3571,6 +3651,7 @@ public final class MarketingCampaign {
     }
 
     private byte memoizedIsInitialized = -1;
+    @java.lang.Override
     public final boolean isInitialized() {
       byte isInitialized = memoizedIsInitialized;
       if (isInitialized == 1) return true;
@@ -3580,6 +3661,7 @@ public final class MarketingCampaign {
       return true;
     }
 
+    @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
       if (!getIdBytes().isEmpty()) {
@@ -3597,6 +3679,7 @@ public final class MarketingCampaign {
       unknownFields.writeTo(output);
     }
 
+    @java.lang.Override
     public int getSerializedSize() {
       int size = memoizedSize;
       if (size != -1) return size;
@@ -3741,6 +3824,7 @@ public final class MarketingCampaign {
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
 
+    @java.lang.Override
     public Builder newBuilderForType() { return newBuilder(); }
     public static Builder newBuilder() {
       return DEFAULT_INSTANCE.toBuilder();
@@ -3748,6 +3832,7 @@ public final class MarketingCampaign {
     public static Builder newBuilder(io.bloombox.schema.marketing.MarketingCampaign.AdGroup prototype) {
       return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
     }
+    @java.lang.Override
     public Builder toBuilder() {
       return this == DEFAULT_INSTANCE
           ? new Builder() : new Builder().mergeFrom(this);
@@ -3764,20 +3849,21 @@ public final class MarketingCampaign {
      * Specifies campaign settings for a given channel.
      * </pre>
      *
-     * Protobuf type {@code bloombox.schema.marketing.AdGroup}
+     * Protobuf type {@code bloombox.marketing.AdGroup}
      */
     public static final class Builder extends
         com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:bloombox.schema.marketing.AdGroup)
+        // @@protoc_insertion_point(builder_implements:bloombox.marketing.AdGroup)
         io.bloombox.schema.marketing.MarketingCampaign.AdGroupOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return io.bloombox.schema.marketing.MarketingCampaign.internal_static_bloombox_schema_marketing_AdGroup_descriptor;
+        return io.bloombox.schema.marketing.MarketingCampaign.internal_static_bloombox_marketing_AdGroup_descriptor;
       }
 
+      @java.lang.Override
       protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return io.bloombox.schema.marketing.MarketingCampaign.internal_static_bloombox_schema_marketing_AdGroup_fieldAccessorTable
+        return io.bloombox.schema.marketing.MarketingCampaign.internal_static_bloombox_marketing_AdGroup_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
                 io.bloombox.schema.marketing.MarketingCampaign.AdGroup.class, io.bloombox.schema.marketing.MarketingCampaign.AdGroup.Builder.class);
       }
@@ -3798,6 +3884,7 @@ public final class MarketingCampaign {
           getCreativeFieldBuilder();
         }
       }
+      @java.lang.Override
       public Builder clear() {
         super.clear();
         id_ = "";
@@ -3819,15 +3906,18 @@ public final class MarketingCampaign {
         return this;
       }
 
+      @java.lang.Override
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return io.bloombox.schema.marketing.MarketingCampaign.internal_static_bloombox_schema_marketing_AdGroup_descriptor;
+        return io.bloombox.schema.marketing.MarketingCampaign.internal_static_bloombox_marketing_AdGroup_descriptor;
       }
 
+      @java.lang.Override
       public io.bloombox.schema.marketing.MarketingCampaign.AdGroup getDefaultInstanceForType() {
         return io.bloombox.schema.marketing.MarketingCampaign.AdGroup.getDefaultInstance();
       }
 
+      @java.lang.Override
       public io.bloombox.schema.marketing.MarketingCampaign.AdGroup build() {
         io.bloombox.schema.marketing.MarketingCampaign.AdGroup result = buildPartial();
         if (!result.isInitialized()) {
@@ -3836,6 +3926,7 @@ public final class MarketingCampaign {
         return result;
       }
 
+      @java.lang.Override
       public io.bloombox.schema.marketing.MarketingCampaign.AdGroup buildPartial() {
         io.bloombox.schema.marketing.MarketingCampaign.AdGroup result = new io.bloombox.schema.marketing.MarketingCampaign.AdGroup(this);
         int from_bitField0_ = bitField0_;
@@ -3861,32 +3952,39 @@ public final class MarketingCampaign {
         return result;
       }
 
+      @java.lang.Override
       public Builder clone() {
         return (Builder) super.clone();
       }
+      @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
         return (Builder) super.setField(field, value);
       }
+      @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
         return (Builder) super.clearField(field);
       }
+      @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
         return (Builder) super.clearOneof(oneof);
       }
+      @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
         return (Builder) super.setRepeatedField(field, index, value);
       }
+      @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
         return (Builder) super.addRepeatedField(field, value);
       }
+      @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
         if (other instanceof io.bloombox.schema.marketing.MarketingCampaign.AdGroup) {
           return mergeFrom((io.bloombox.schema.marketing.MarketingCampaign.AdGroup)other);
@@ -3939,10 +4037,12 @@ public final class MarketingCampaign {
         return this;
       }
 
+      @java.lang.Override
       public final boolean isInitialized() {
         return true;
       }
 
+      @java.lang.Override
       public Builder mergeFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -4059,7 +4159,7 @@ public final class MarketingCampaign {
        * Key for this ad group's owning campaign.
        * </pre>
        *
-       * <code>.bloombox.schema.marketing.CampaignKey campaign = 2;</code>
+       * <code>.bloombox.marketing.CampaignKey campaign = 2;</code>
        */
       public boolean hasCampaign() {
         return campaignBuilder_ != null || campaign_ != null;
@@ -4069,7 +4169,7 @@ public final class MarketingCampaign {
        * Key for this ad group's owning campaign.
        * </pre>
        *
-       * <code>.bloombox.schema.marketing.CampaignKey campaign = 2;</code>
+       * <code>.bloombox.marketing.CampaignKey campaign = 2;</code>
        */
       public io.bloombox.schema.marketing.MarketingCampaign.CampaignKey getCampaign() {
         if (campaignBuilder_ == null) {
@@ -4083,7 +4183,7 @@ public final class MarketingCampaign {
        * Key for this ad group's owning campaign.
        * </pre>
        *
-       * <code>.bloombox.schema.marketing.CampaignKey campaign = 2;</code>
+       * <code>.bloombox.marketing.CampaignKey campaign = 2;</code>
        */
       public Builder setCampaign(io.bloombox.schema.marketing.MarketingCampaign.CampaignKey value) {
         if (campaignBuilder_ == null) {
@@ -4103,7 +4203,7 @@ public final class MarketingCampaign {
        * Key for this ad group's owning campaign.
        * </pre>
        *
-       * <code>.bloombox.schema.marketing.CampaignKey campaign = 2;</code>
+       * <code>.bloombox.marketing.CampaignKey campaign = 2;</code>
        */
       public Builder setCampaign(
           io.bloombox.schema.marketing.MarketingCampaign.CampaignKey.Builder builderForValue) {
@@ -4121,7 +4221,7 @@ public final class MarketingCampaign {
        * Key for this ad group's owning campaign.
        * </pre>
        *
-       * <code>.bloombox.schema.marketing.CampaignKey campaign = 2;</code>
+       * <code>.bloombox.marketing.CampaignKey campaign = 2;</code>
        */
       public Builder mergeCampaign(io.bloombox.schema.marketing.MarketingCampaign.CampaignKey value) {
         if (campaignBuilder_ == null) {
@@ -4143,7 +4243,7 @@ public final class MarketingCampaign {
        * Key for this ad group's owning campaign.
        * </pre>
        *
-       * <code>.bloombox.schema.marketing.CampaignKey campaign = 2;</code>
+       * <code>.bloombox.marketing.CampaignKey campaign = 2;</code>
        */
       public Builder clearCampaign() {
         if (campaignBuilder_ == null) {
@@ -4161,7 +4261,7 @@ public final class MarketingCampaign {
        * Key for this ad group's owning campaign.
        * </pre>
        *
-       * <code>.bloombox.schema.marketing.CampaignKey campaign = 2;</code>
+       * <code>.bloombox.marketing.CampaignKey campaign = 2;</code>
        */
       public io.bloombox.schema.marketing.MarketingCampaign.CampaignKey.Builder getCampaignBuilder() {
         
@@ -4173,7 +4273,7 @@ public final class MarketingCampaign {
        * Key for this ad group's owning campaign.
        * </pre>
        *
-       * <code>.bloombox.schema.marketing.CampaignKey campaign = 2;</code>
+       * <code>.bloombox.marketing.CampaignKey campaign = 2;</code>
        */
       public io.bloombox.schema.marketing.MarketingCampaign.CampaignKeyOrBuilder getCampaignOrBuilder() {
         if (campaignBuilder_ != null) {
@@ -4188,7 +4288,7 @@ public final class MarketingCampaign {
        * Key for this ad group's owning campaign.
        * </pre>
        *
-       * <code>.bloombox.schema.marketing.CampaignKey campaign = 2;</code>
+       * <code>.bloombox.marketing.CampaignKey campaign = 2;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
           io.bloombox.schema.marketing.MarketingCampaign.CampaignKey, io.bloombox.schema.marketing.MarketingCampaign.CampaignKey.Builder, io.bloombox.schema.marketing.MarketingCampaign.CampaignKeyOrBuilder> 
@@ -4210,7 +4310,7 @@ public final class MarketingCampaign {
        * Channel for this specification.
        * </pre>
        *
-       * <code>.bloombox.schema.comms.Channel channel = 3;</code>
+       * <code>.bloombox.comms.Channel channel = 3;</code>
        */
       public int getChannelValue() {
         return channel_;
@@ -4220,7 +4320,7 @@ public final class MarketingCampaign {
        * Channel for this specification.
        * </pre>
        *
-       * <code>.bloombox.schema.comms.Channel channel = 3;</code>
+       * <code>.bloombox.comms.Channel channel = 3;</code>
        */
       public Builder setChannelValue(int value) {
         channel_ = value;
@@ -4232,9 +4332,10 @@ public final class MarketingCampaign {
        * Channel for this specification.
        * </pre>
        *
-       * <code>.bloombox.schema.comms.Channel channel = 3;</code>
+       * <code>.bloombox.comms.Channel channel = 3;</code>
        */
       public io.bloombox.schema.comms.GenericComms.Channel getChannel() {
+        @SuppressWarnings("deprecation")
         io.bloombox.schema.comms.GenericComms.Channel result = io.bloombox.schema.comms.GenericComms.Channel.valueOf(channel_);
         return result == null ? io.bloombox.schema.comms.GenericComms.Channel.UNRECOGNIZED : result;
       }
@@ -4243,7 +4344,7 @@ public final class MarketingCampaign {
        * Channel for this specification.
        * </pre>
        *
-       * <code>.bloombox.schema.comms.Channel channel = 3;</code>
+       * <code>.bloombox.comms.Channel channel = 3;</code>
        */
       public Builder setChannel(io.bloombox.schema.comms.GenericComms.Channel value) {
         if (value == null) {
@@ -4259,7 +4360,7 @@ public final class MarketingCampaign {
        * Channel for this specification.
        * </pre>
        *
-       * <code>.bloombox.schema.comms.Channel channel = 3;</code>
+       * <code>.bloombox.comms.Channel channel = 3;</code>
        */
       public Builder clearChannel() {
         
@@ -4285,7 +4386,7 @@ public final class MarketingCampaign {
        * Attached content/creatives for this ad group.
        * </pre>
        *
-       * <code>repeated .bloombox.schema.marketing.Creative creative = 4;</code>
+       * <code>repeated .bloombox.marketing.Creative creative = 4;</code>
        */
       public java.util.List<io.bloombox.schema.marketing.MarketingCampaign.Creative> getCreativeList() {
         if (creativeBuilder_ == null) {
@@ -4299,7 +4400,7 @@ public final class MarketingCampaign {
        * Attached content/creatives for this ad group.
        * </pre>
        *
-       * <code>repeated .bloombox.schema.marketing.Creative creative = 4;</code>
+       * <code>repeated .bloombox.marketing.Creative creative = 4;</code>
        */
       public int getCreativeCount() {
         if (creativeBuilder_ == null) {
@@ -4313,7 +4414,7 @@ public final class MarketingCampaign {
        * Attached content/creatives for this ad group.
        * </pre>
        *
-       * <code>repeated .bloombox.schema.marketing.Creative creative = 4;</code>
+       * <code>repeated .bloombox.marketing.Creative creative = 4;</code>
        */
       public io.bloombox.schema.marketing.MarketingCampaign.Creative getCreative(int index) {
         if (creativeBuilder_ == null) {
@@ -4327,7 +4428,7 @@ public final class MarketingCampaign {
        * Attached content/creatives for this ad group.
        * </pre>
        *
-       * <code>repeated .bloombox.schema.marketing.Creative creative = 4;</code>
+       * <code>repeated .bloombox.marketing.Creative creative = 4;</code>
        */
       public Builder setCreative(
           int index, io.bloombox.schema.marketing.MarketingCampaign.Creative value) {
@@ -4348,7 +4449,7 @@ public final class MarketingCampaign {
        * Attached content/creatives for this ad group.
        * </pre>
        *
-       * <code>repeated .bloombox.schema.marketing.Creative creative = 4;</code>
+       * <code>repeated .bloombox.marketing.Creative creative = 4;</code>
        */
       public Builder setCreative(
           int index, io.bloombox.schema.marketing.MarketingCampaign.Creative.Builder builderForValue) {
@@ -4366,7 +4467,7 @@ public final class MarketingCampaign {
        * Attached content/creatives for this ad group.
        * </pre>
        *
-       * <code>repeated .bloombox.schema.marketing.Creative creative = 4;</code>
+       * <code>repeated .bloombox.marketing.Creative creative = 4;</code>
        */
       public Builder addCreative(io.bloombox.schema.marketing.MarketingCampaign.Creative value) {
         if (creativeBuilder_ == null) {
@@ -4386,7 +4487,7 @@ public final class MarketingCampaign {
        * Attached content/creatives for this ad group.
        * </pre>
        *
-       * <code>repeated .bloombox.schema.marketing.Creative creative = 4;</code>
+       * <code>repeated .bloombox.marketing.Creative creative = 4;</code>
        */
       public Builder addCreative(
           int index, io.bloombox.schema.marketing.MarketingCampaign.Creative value) {
@@ -4407,7 +4508,7 @@ public final class MarketingCampaign {
        * Attached content/creatives for this ad group.
        * </pre>
        *
-       * <code>repeated .bloombox.schema.marketing.Creative creative = 4;</code>
+       * <code>repeated .bloombox.marketing.Creative creative = 4;</code>
        */
       public Builder addCreative(
           io.bloombox.schema.marketing.MarketingCampaign.Creative.Builder builderForValue) {
@@ -4425,7 +4526,7 @@ public final class MarketingCampaign {
        * Attached content/creatives for this ad group.
        * </pre>
        *
-       * <code>repeated .bloombox.schema.marketing.Creative creative = 4;</code>
+       * <code>repeated .bloombox.marketing.Creative creative = 4;</code>
        */
       public Builder addCreative(
           int index, io.bloombox.schema.marketing.MarketingCampaign.Creative.Builder builderForValue) {
@@ -4443,7 +4544,7 @@ public final class MarketingCampaign {
        * Attached content/creatives for this ad group.
        * </pre>
        *
-       * <code>repeated .bloombox.schema.marketing.Creative creative = 4;</code>
+       * <code>repeated .bloombox.marketing.Creative creative = 4;</code>
        */
       public Builder addAllCreative(
           java.lang.Iterable<? extends io.bloombox.schema.marketing.MarketingCampaign.Creative> values) {
@@ -4462,7 +4563,7 @@ public final class MarketingCampaign {
        * Attached content/creatives for this ad group.
        * </pre>
        *
-       * <code>repeated .bloombox.schema.marketing.Creative creative = 4;</code>
+       * <code>repeated .bloombox.marketing.Creative creative = 4;</code>
        */
       public Builder clearCreative() {
         if (creativeBuilder_ == null) {
@@ -4479,7 +4580,7 @@ public final class MarketingCampaign {
        * Attached content/creatives for this ad group.
        * </pre>
        *
-       * <code>repeated .bloombox.schema.marketing.Creative creative = 4;</code>
+       * <code>repeated .bloombox.marketing.Creative creative = 4;</code>
        */
       public Builder removeCreative(int index) {
         if (creativeBuilder_ == null) {
@@ -4496,7 +4597,7 @@ public final class MarketingCampaign {
        * Attached content/creatives for this ad group.
        * </pre>
        *
-       * <code>repeated .bloombox.schema.marketing.Creative creative = 4;</code>
+       * <code>repeated .bloombox.marketing.Creative creative = 4;</code>
        */
       public io.bloombox.schema.marketing.MarketingCampaign.Creative.Builder getCreativeBuilder(
           int index) {
@@ -4507,7 +4608,7 @@ public final class MarketingCampaign {
        * Attached content/creatives for this ad group.
        * </pre>
        *
-       * <code>repeated .bloombox.schema.marketing.Creative creative = 4;</code>
+       * <code>repeated .bloombox.marketing.Creative creative = 4;</code>
        */
       public io.bloombox.schema.marketing.MarketingCampaign.CreativeOrBuilder getCreativeOrBuilder(
           int index) {
@@ -4521,7 +4622,7 @@ public final class MarketingCampaign {
        * Attached content/creatives for this ad group.
        * </pre>
        *
-       * <code>repeated .bloombox.schema.marketing.Creative creative = 4;</code>
+       * <code>repeated .bloombox.marketing.Creative creative = 4;</code>
        */
       public java.util.List<? extends io.bloombox.schema.marketing.MarketingCampaign.CreativeOrBuilder> 
            getCreativeOrBuilderList() {
@@ -4536,7 +4637,7 @@ public final class MarketingCampaign {
        * Attached content/creatives for this ad group.
        * </pre>
        *
-       * <code>repeated .bloombox.schema.marketing.Creative creative = 4;</code>
+       * <code>repeated .bloombox.marketing.Creative creative = 4;</code>
        */
       public io.bloombox.schema.marketing.MarketingCampaign.Creative.Builder addCreativeBuilder() {
         return getCreativeFieldBuilder().addBuilder(
@@ -4547,7 +4648,7 @@ public final class MarketingCampaign {
        * Attached content/creatives for this ad group.
        * </pre>
        *
-       * <code>repeated .bloombox.schema.marketing.Creative creative = 4;</code>
+       * <code>repeated .bloombox.marketing.Creative creative = 4;</code>
        */
       public io.bloombox.schema.marketing.MarketingCampaign.Creative.Builder addCreativeBuilder(
           int index) {
@@ -4559,7 +4660,7 @@ public final class MarketingCampaign {
        * Attached content/creatives for this ad group.
        * </pre>
        *
-       * <code>repeated .bloombox.schema.marketing.Creative creative = 4;</code>
+       * <code>repeated .bloombox.marketing.Creative creative = 4;</code>
        */
       public java.util.List<io.bloombox.schema.marketing.MarketingCampaign.Creative.Builder> 
            getCreativeBuilderList() {
@@ -4579,21 +4680,23 @@ public final class MarketingCampaign {
         }
         return creativeBuilder_;
       }
+      @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
         return super.setUnknownFieldsProto3(unknownFields);
       }
 
+      @java.lang.Override
       public final Builder mergeUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
         return super.mergeUnknownFields(unknownFields);
       }
 
 
-      // @@protoc_insertion_point(builder_scope:bloombox.schema.marketing.AdGroup)
+      // @@protoc_insertion_point(builder_scope:bloombox.marketing.AdGroup)
     }
 
-    // @@protoc_insertion_point(class_scope:bloombox.schema.marketing.AdGroup)
+    // @@protoc_insertion_point(class_scope:bloombox.marketing.AdGroup)
     private static final io.bloombox.schema.marketing.MarketingCampaign.AdGroup DEFAULT_INSTANCE;
     static {
       DEFAULT_INSTANCE = new io.bloombox.schema.marketing.MarketingCampaign.AdGroup();
@@ -4605,6 +4708,7 @@ public final class MarketingCampaign {
 
     private static final com.google.protobuf.Parser<AdGroup>
         PARSER = new com.google.protobuf.AbstractParser<AdGroup>() {
+      @java.lang.Override
       public AdGroup parsePartialFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -4622,6 +4726,7 @@ public final class MarketingCampaign {
       return PARSER;
     }
 
+    @java.lang.Override
     public io.bloombox.schema.marketing.MarketingCampaign.AdGroup getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
@@ -4629,7 +4734,7 @@ public final class MarketingCampaign {
   }
 
   public interface CampaignTargetingOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:bloombox.schema.marketing.CampaignTargeting)
+      // @@protoc_insertion_point(interface_extends:bloombox.marketing.CampaignTargeting)
       com.google.protobuf.MessageOrBuilder {
 
     /**
@@ -4646,7 +4751,7 @@ public final class MarketingCampaign {
      * Targeting policy payload block.
      * </pre>
      *
-     * <code>repeated .bloombox.schema.marketing.TargetingPolicy block = 2;</code>
+     * <code>repeated .bloombox.marketing.TargetingPolicy block = 2;</code>
      */
     java.util.List<io.bloombox.schema.marketing.CampaignTargeting.TargetingPolicy> 
         getBlockList();
@@ -4655,7 +4760,7 @@ public final class MarketingCampaign {
      * Targeting policy payload block.
      * </pre>
      *
-     * <code>repeated .bloombox.schema.marketing.TargetingPolicy block = 2;</code>
+     * <code>repeated .bloombox.marketing.TargetingPolicy block = 2;</code>
      */
     io.bloombox.schema.marketing.CampaignTargeting.TargetingPolicy getBlock(int index);
     /**
@@ -4663,7 +4768,7 @@ public final class MarketingCampaign {
      * Targeting policy payload block.
      * </pre>
      *
-     * <code>repeated .bloombox.schema.marketing.TargetingPolicy block = 2;</code>
+     * <code>repeated .bloombox.marketing.TargetingPolicy block = 2;</code>
      */
     int getBlockCount();
     /**
@@ -4671,7 +4776,7 @@ public final class MarketingCampaign {
      * Targeting policy payload block.
      * </pre>
      *
-     * <code>repeated .bloombox.schema.marketing.TargetingPolicy block = 2;</code>
+     * <code>repeated .bloombox.marketing.TargetingPolicy block = 2;</code>
      */
     java.util.List<? extends io.bloombox.schema.marketing.CampaignTargeting.TargetingPolicyOrBuilder> 
         getBlockOrBuilderList();
@@ -4680,7 +4785,7 @@ public final class MarketingCampaign {
      * Targeting policy payload block.
      * </pre>
      *
-     * <code>repeated .bloombox.schema.marketing.TargetingPolicy block = 2;</code>
+     * <code>repeated .bloombox.marketing.TargetingPolicy block = 2;</code>
      */
     io.bloombox.schema.marketing.CampaignTargeting.TargetingPolicyOrBuilder getBlockOrBuilder(
         int index);
@@ -4690,11 +4795,11 @@ public final class MarketingCampaign {
    * Marketing campaign targeting parameters/configuration.
    * </pre>
    *
-   * Protobuf type {@code bloombox.schema.marketing.CampaignTargeting}
+   * Protobuf type {@code bloombox.marketing.CampaignTargeting}
    */
   public  static final class CampaignTargeting extends
       com.google.protobuf.GeneratedMessageV3 implements
-      // @@protoc_insertion_point(message_implements:bloombox.schema.marketing.CampaignTargeting)
+      // @@protoc_insertion_point(message_implements:bloombox.marketing.CampaignTargeting)
       CampaignTargetingOrBuilder {
   private static final long serialVersionUID = 0L;
     // Use CampaignTargeting.newBuilder() to construct.
@@ -4730,13 +4835,6 @@ public final class MarketingCampaign {
             case 0:
               done = true;
               break;
-            default: {
-              if (!parseUnknownFieldProto3(
-                  input, unknownFields, extensionRegistry, tag)) {
-                done = true;
-              }
-              break;
-            }
             case 8: {
 
               strict_ = input.readBool();
@@ -4749,6 +4847,13 @@ public final class MarketingCampaign {
               }
               block_.add(
                   input.readMessage(io.bloombox.schema.marketing.CampaignTargeting.TargetingPolicy.parser(), extensionRegistry));
+              break;
+            }
+            default: {
+              if (!parseUnknownFieldProto3(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
               break;
             }
           }
@@ -4768,12 +4873,13 @@ public final class MarketingCampaign {
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return io.bloombox.schema.marketing.MarketingCampaign.internal_static_bloombox_schema_marketing_CampaignTargeting_descriptor;
+      return io.bloombox.schema.marketing.MarketingCampaign.internal_static_bloombox_marketing_CampaignTargeting_descriptor;
     }
 
+    @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return io.bloombox.schema.marketing.MarketingCampaign.internal_static_bloombox_schema_marketing_CampaignTargeting_fieldAccessorTable
+      return io.bloombox.schema.marketing.MarketingCampaign.internal_static_bloombox_marketing_CampaignTargeting_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
               io.bloombox.schema.marketing.MarketingCampaign.CampaignTargeting.class, io.bloombox.schema.marketing.MarketingCampaign.CampaignTargeting.Builder.class);
     }
@@ -4799,7 +4905,7 @@ public final class MarketingCampaign {
      * Targeting policy payload block.
      * </pre>
      *
-     * <code>repeated .bloombox.schema.marketing.TargetingPolicy block = 2;</code>
+     * <code>repeated .bloombox.marketing.TargetingPolicy block = 2;</code>
      */
     public java.util.List<io.bloombox.schema.marketing.CampaignTargeting.TargetingPolicy> getBlockList() {
       return block_;
@@ -4809,7 +4915,7 @@ public final class MarketingCampaign {
      * Targeting policy payload block.
      * </pre>
      *
-     * <code>repeated .bloombox.schema.marketing.TargetingPolicy block = 2;</code>
+     * <code>repeated .bloombox.marketing.TargetingPolicy block = 2;</code>
      */
     public java.util.List<? extends io.bloombox.schema.marketing.CampaignTargeting.TargetingPolicyOrBuilder> 
         getBlockOrBuilderList() {
@@ -4820,7 +4926,7 @@ public final class MarketingCampaign {
      * Targeting policy payload block.
      * </pre>
      *
-     * <code>repeated .bloombox.schema.marketing.TargetingPolicy block = 2;</code>
+     * <code>repeated .bloombox.marketing.TargetingPolicy block = 2;</code>
      */
     public int getBlockCount() {
       return block_.size();
@@ -4830,7 +4936,7 @@ public final class MarketingCampaign {
      * Targeting policy payload block.
      * </pre>
      *
-     * <code>repeated .bloombox.schema.marketing.TargetingPolicy block = 2;</code>
+     * <code>repeated .bloombox.marketing.TargetingPolicy block = 2;</code>
      */
     public io.bloombox.schema.marketing.CampaignTargeting.TargetingPolicy getBlock(int index) {
       return block_.get(index);
@@ -4840,7 +4946,7 @@ public final class MarketingCampaign {
      * Targeting policy payload block.
      * </pre>
      *
-     * <code>repeated .bloombox.schema.marketing.TargetingPolicy block = 2;</code>
+     * <code>repeated .bloombox.marketing.TargetingPolicy block = 2;</code>
      */
     public io.bloombox.schema.marketing.CampaignTargeting.TargetingPolicyOrBuilder getBlockOrBuilder(
         int index) {
@@ -4848,6 +4954,7 @@ public final class MarketingCampaign {
     }
 
     private byte memoizedIsInitialized = -1;
+    @java.lang.Override
     public final boolean isInitialized() {
       byte isInitialized = memoizedIsInitialized;
       if (isInitialized == 1) return true;
@@ -4857,6 +4964,7 @@ public final class MarketingCampaign {
       return true;
     }
 
+    @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
       if (strict_ != false) {
@@ -4868,6 +4976,7 @@ public final class MarketingCampaign {
       unknownFields.writeTo(output);
     }
 
+    @java.lang.Override
     public int getSerializedSize() {
       int size = memoizedSize;
       if (size != -1) return size;
@@ -4994,6 +5103,7 @@ public final class MarketingCampaign {
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
 
+    @java.lang.Override
     public Builder newBuilderForType() { return newBuilder(); }
     public static Builder newBuilder() {
       return DEFAULT_INSTANCE.toBuilder();
@@ -5001,6 +5111,7 @@ public final class MarketingCampaign {
     public static Builder newBuilder(io.bloombox.schema.marketing.MarketingCampaign.CampaignTargeting prototype) {
       return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
     }
+    @java.lang.Override
     public Builder toBuilder() {
       return this == DEFAULT_INSTANCE
           ? new Builder() : new Builder().mergeFrom(this);
@@ -5017,20 +5128,21 @@ public final class MarketingCampaign {
      * Marketing campaign targeting parameters/configuration.
      * </pre>
      *
-     * Protobuf type {@code bloombox.schema.marketing.CampaignTargeting}
+     * Protobuf type {@code bloombox.marketing.CampaignTargeting}
      */
     public static final class Builder extends
         com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:bloombox.schema.marketing.CampaignTargeting)
+        // @@protoc_insertion_point(builder_implements:bloombox.marketing.CampaignTargeting)
         io.bloombox.schema.marketing.MarketingCampaign.CampaignTargetingOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return io.bloombox.schema.marketing.MarketingCampaign.internal_static_bloombox_schema_marketing_CampaignTargeting_descriptor;
+        return io.bloombox.schema.marketing.MarketingCampaign.internal_static_bloombox_marketing_CampaignTargeting_descriptor;
       }
 
+      @java.lang.Override
       protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return io.bloombox.schema.marketing.MarketingCampaign.internal_static_bloombox_schema_marketing_CampaignTargeting_fieldAccessorTable
+        return io.bloombox.schema.marketing.MarketingCampaign.internal_static_bloombox_marketing_CampaignTargeting_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
                 io.bloombox.schema.marketing.MarketingCampaign.CampaignTargeting.class, io.bloombox.schema.marketing.MarketingCampaign.CampaignTargeting.Builder.class);
       }
@@ -5051,6 +5163,7 @@ public final class MarketingCampaign {
           getBlockFieldBuilder();
         }
       }
+      @java.lang.Override
       public Builder clear() {
         super.clear();
         strict_ = false;
@@ -5064,15 +5177,18 @@ public final class MarketingCampaign {
         return this;
       }
 
+      @java.lang.Override
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return io.bloombox.schema.marketing.MarketingCampaign.internal_static_bloombox_schema_marketing_CampaignTargeting_descriptor;
+        return io.bloombox.schema.marketing.MarketingCampaign.internal_static_bloombox_marketing_CampaignTargeting_descriptor;
       }
 
+      @java.lang.Override
       public io.bloombox.schema.marketing.MarketingCampaign.CampaignTargeting getDefaultInstanceForType() {
         return io.bloombox.schema.marketing.MarketingCampaign.CampaignTargeting.getDefaultInstance();
       }
 
+      @java.lang.Override
       public io.bloombox.schema.marketing.MarketingCampaign.CampaignTargeting build() {
         io.bloombox.schema.marketing.MarketingCampaign.CampaignTargeting result = buildPartial();
         if (!result.isInitialized()) {
@@ -5081,6 +5197,7 @@ public final class MarketingCampaign {
         return result;
       }
 
+      @java.lang.Override
       public io.bloombox.schema.marketing.MarketingCampaign.CampaignTargeting buildPartial() {
         io.bloombox.schema.marketing.MarketingCampaign.CampaignTargeting result = new io.bloombox.schema.marketing.MarketingCampaign.CampaignTargeting(this);
         int from_bitField0_ = bitField0_;
@@ -5100,32 +5217,39 @@ public final class MarketingCampaign {
         return result;
       }
 
+      @java.lang.Override
       public Builder clone() {
         return (Builder) super.clone();
       }
+      @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
         return (Builder) super.setField(field, value);
       }
+      @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
         return (Builder) super.clearField(field);
       }
+      @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
         return (Builder) super.clearOneof(oneof);
       }
+      @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
         return (Builder) super.setRepeatedField(field, index, value);
       }
+      @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
         return (Builder) super.addRepeatedField(field, value);
       }
+      @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
         if (other instanceof io.bloombox.schema.marketing.MarketingCampaign.CampaignTargeting) {
           return mergeFrom((io.bloombox.schema.marketing.MarketingCampaign.CampaignTargeting)other);
@@ -5171,10 +5295,12 @@ public final class MarketingCampaign {
         return this;
       }
 
+      @java.lang.Override
       public final boolean isInitialized() {
         return true;
       }
 
+      @java.lang.Override
       public Builder mergeFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -5249,7 +5375,7 @@ public final class MarketingCampaign {
        * Targeting policy payload block.
        * </pre>
        *
-       * <code>repeated .bloombox.schema.marketing.TargetingPolicy block = 2;</code>
+       * <code>repeated .bloombox.marketing.TargetingPolicy block = 2;</code>
        */
       public java.util.List<io.bloombox.schema.marketing.CampaignTargeting.TargetingPolicy> getBlockList() {
         if (blockBuilder_ == null) {
@@ -5263,7 +5389,7 @@ public final class MarketingCampaign {
        * Targeting policy payload block.
        * </pre>
        *
-       * <code>repeated .bloombox.schema.marketing.TargetingPolicy block = 2;</code>
+       * <code>repeated .bloombox.marketing.TargetingPolicy block = 2;</code>
        */
       public int getBlockCount() {
         if (blockBuilder_ == null) {
@@ -5277,7 +5403,7 @@ public final class MarketingCampaign {
        * Targeting policy payload block.
        * </pre>
        *
-       * <code>repeated .bloombox.schema.marketing.TargetingPolicy block = 2;</code>
+       * <code>repeated .bloombox.marketing.TargetingPolicy block = 2;</code>
        */
       public io.bloombox.schema.marketing.CampaignTargeting.TargetingPolicy getBlock(int index) {
         if (blockBuilder_ == null) {
@@ -5291,7 +5417,7 @@ public final class MarketingCampaign {
        * Targeting policy payload block.
        * </pre>
        *
-       * <code>repeated .bloombox.schema.marketing.TargetingPolicy block = 2;</code>
+       * <code>repeated .bloombox.marketing.TargetingPolicy block = 2;</code>
        */
       public Builder setBlock(
           int index, io.bloombox.schema.marketing.CampaignTargeting.TargetingPolicy value) {
@@ -5312,7 +5438,7 @@ public final class MarketingCampaign {
        * Targeting policy payload block.
        * </pre>
        *
-       * <code>repeated .bloombox.schema.marketing.TargetingPolicy block = 2;</code>
+       * <code>repeated .bloombox.marketing.TargetingPolicy block = 2;</code>
        */
       public Builder setBlock(
           int index, io.bloombox.schema.marketing.CampaignTargeting.TargetingPolicy.Builder builderForValue) {
@@ -5330,7 +5456,7 @@ public final class MarketingCampaign {
        * Targeting policy payload block.
        * </pre>
        *
-       * <code>repeated .bloombox.schema.marketing.TargetingPolicy block = 2;</code>
+       * <code>repeated .bloombox.marketing.TargetingPolicy block = 2;</code>
        */
       public Builder addBlock(io.bloombox.schema.marketing.CampaignTargeting.TargetingPolicy value) {
         if (blockBuilder_ == null) {
@@ -5350,7 +5476,7 @@ public final class MarketingCampaign {
        * Targeting policy payload block.
        * </pre>
        *
-       * <code>repeated .bloombox.schema.marketing.TargetingPolicy block = 2;</code>
+       * <code>repeated .bloombox.marketing.TargetingPolicy block = 2;</code>
        */
       public Builder addBlock(
           int index, io.bloombox.schema.marketing.CampaignTargeting.TargetingPolicy value) {
@@ -5371,7 +5497,7 @@ public final class MarketingCampaign {
        * Targeting policy payload block.
        * </pre>
        *
-       * <code>repeated .bloombox.schema.marketing.TargetingPolicy block = 2;</code>
+       * <code>repeated .bloombox.marketing.TargetingPolicy block = 2;</code>
        */
       public Builder addBlock(
           io.bloombox.schema.marketing.CampaignTargeting.TargetingPolicy.Builder builderForValue) {
@@ -5389,7 +5515,7 @@ public final class MarketingCampaign {
        * Targeting policy payload block.
        * </pre>
        *
-       * <code>repeated .bloombox.schema.marketing.TargetingPolicy block = 2;</code>
+       * <code>repeated .bloombox.marketing.TargetingPolicy block = 2;</code>
        */
       public Builder addBlock(
           int index, io.bloombox.schema.marketing.CampaignTargeting.TargetingPolicy.Builder builderForValue) {
@@ -5407,7 +5533,7 @@ public final class MarketingCampaign {
        * Targeting policy payload block.
        * </pre>
        *
-       * <code>repeated .bloombox.schema.marketing.TargetingPolicy block = 2;</code>
+       * <code>repeated .bloombox.marketing.TargetingPolicy block = 2;</code>
        */
       public Builder addAllBlock(
           java.lang.Iterable<? extends io.bloombox.schema.marketing.CampaignTargeting.TargetingPolicy> values) {
@@ -5426,7 +5552,7 @@ public final class MarketingCampaign {
        * Targeting policy payload block.
        * </pre>
        *
-       * <code>repeated .bloombox.schema.marketing.TargetingPolicy block = 2;</code>
+       * <code>repeated .bloombox.marketing.TargetingPolicy block = 2;</code>
        */
       public Builder clearBlock() {
         if (blockBuilder_ == null) {
@@ -5443,7 +5569,7 @@ public final class MarketingCampaign {
        * Targeting policy payload block.
        * </pre>
        *
-       * <code>repeated .bloombox.schema.marketing.TargetingPolicy block = 2;</code>
+       * <code>repeated .bloombox.marketing.TargetingPolicy block = 2;</code>
        */
       public Builder removeBlock(int index) {
         if (blockBuilder_ == null) {
@@ -5460,7 +5586,7 @@ public final class MarketingCampaign {
        * Targeting policy payload block.
        * </pre>
        *
-       * <code>repeated .bloombox.schema.marketing.TargetingPolicy block = 2;</code>
+       * <code>repeated .bloombox.marketing.TargetingPolicy block = 2;</code>
        */
       public io.bloombox.schema.marketing.CampaignTargeting.TargetingPolicy.Builder getBlockBuilder(
           int index) {
@@ -5471,7 +5597,7 @@ public final class MarketingCampaign {
        * Targeting policy payload block.
        * </pre>
        *
-       * <code>repeated .bloombox.schema.marketing.TargetingPolicy block = 2;</code>
+       * <code>repeated .bloombox.marketing.TargetingPolicy block = 2;</code>
        */
       public io.bloombox.schema.marketing.CampaignTargeting.TargetingPolicyOrBuilder getBlockOrBuilder(
           int index) {
@@ -5485,7 +5611,7 @@ public final class MarketingCampaign {
        * Targeting policy payload block.
        * </pre>
        *
-       * <code>repeated .bloombox.schema.marketing.TargetingPolicy block = 2;</code>
+       * <code>repeated .bloombox.marketing.TargetingPolicy block = 2;</code>
        */
       public java.util.List<? extends io.bloombox.schema.marketing.CampaignTargeting.TargetingPolicyOrBuilder> 
            getBlockOrBuilderList() {
@@ -5500,7 +5626,7 @@ public final class MarketingCampaign {
        * Targeting policy payload block.
        * </pre>
        *
-       * <code>repeated .bloombox.schema.marketing.TargetingPolicy block = 2;</code>
+       * <code>repeated .bloombox.marketing.TargetingPolicy block = 2;</code>
        */
       public io.bloombox.schema.marketing.CampaignTargeting.TargetingPolicy.Builder addBlockBuilder() {
         return getBlockFieldBuilder().addBuilder(
@@ -5511,7 +5637,7 @@ public final class MarketingCampaign {
        * Targeting policy payload block.
        * </pre>
        *
-       * <code>repeated .bloombox.schema.marketing.TargetingPolicy block = 2;</code>
+       * <code>repeated .bloombox.marketing.TargetingPolicy block = 2;</code>
        */
       public io.bloombox.schema.marketing.CampaignTargeting.TargetingPolicy.Builder addBlockBuilder(
           int index) {
@@ -5523,7 +5649,7 @@ public final class MarketingCampaign {
        * Targeting policy payload block.
        * </pre>
        *
-       * <code>repeated .bloombox.schema.marketing.TargetingPolicy block = 2;</code>
+       * <code>repeated .bloombox.marketing.TargetingPolicy block = 2;</code>
        */
       public java.util.List<io.bloombox.schema.marketing.CampaignTargeting.TargetingPolicy.Builder> 
            getBlockBuilderList() {
@@ -5543,21 +5669,23 @@ public final class MarketingCampaign {
         }
         return blockBuilder_;
       }
+      @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
         return super.setUnknownFieldsProto3(unknownFields);
       }
 
+      @java.lang.Override
       public final Builder mergeUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
         return super.mergeUnknownFields(unknownFields);
       }
 
 
-      // @@protoc_insertion_point(builder_scope:bloombox.schema.marketing.CampaignTargeting)
+      // @@protoc_insertion_point(builder_scope:bloombox.marketing.CampaignTargeting)
     }
 
-    // @@protoc_insertion_point(class_scope:bloombox.schema.marketing.CampaignTargeting)
+    // @@protoc_insertion_point(class_scope:bloombox.marketing.CampaignTargeting)
     private static final io.bloombox.schema.marketing.MarketingCampaign.CampaignTargeting DEFAULT_INSTANCE;
     static {
       DEFAULT_INSTANCE = new io.bloombox.schema.marketing.MarketingCampaign.CampaignTargeting();
@@ -5569,6 +5697,7 @@ public final class MarketingCampaign {
 
     private static final com.google.protobuf.Parser<CampaignTargeting>
         PARSER = new com.google.protobuf.AbstractParser<CampaignTargeting>() {
+      @java.lang.Override
       public CampaignTargeting parsePartialFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -5586,6 +5715,7 @@ public final class MarketingCampaign {
       return PARSER;
     }
 
+    @java.lang.Override
     public io.bloombox.schema.marketing.MarketingCampaign.CampaignTargeting getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
@@ -5593,7 +5723,7 @@ public final class MarketingCampaign {
   }
 
   public interface CampaignKeyOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:bloombox.schema.marketing.CampaignKey)
+      // @@protoc_insertion_point(interface_extends:bloombox.marketing.CampaignKey)
       com.google.protobuf.MessageOrBuilder {
 
     /**
@@ -5655,11 +5785,11 @@ public final class MarketingCampaign {
    * Specifies the structure of a marketing campaign's unique primary key.
    * </pre>
    *
-   * Protobuf type {@code bloombox.schema.marketing.CampaignKey}
+   * Protobuf type {@code bloombox.marketing.CampaignKey}
    */
   public  static final class CampaignKey extends
       com.google.protobuf.GeneratedMessageV3 implements
-      // @@protoc_insertion_point(message_implements:bloombox.schema.marketing.CampaignKey)
+      // @@protoc_insertion_point(message_implements:bloombox.marketing.CampaignKey)
       CampaignKeyOrBuilder {
   private static final long serialVersionUID = 0L;
     // Use CampaignKey.newBuilder() to construct.
@@ -5696,13 +5826,6 @@ public final class MarketingCampaign {
             case 0:
               done = true;
               break;
-            default: {
-              if (!parseUnknownFieldProto3(
-                  input, unknownFields, extensionRegistry, tag)) {
-                done = true;
-              }
-              break;
-            }
             case 10: {
               java.lang.String s = input.readStringRequireUtf8();
 
@@ -5721,6 +5844,13 @@ public final class MarketingCampaign {
               location_ = s;
               break;
             }
+            default: {
+              if (!parseUnknownFieldProto3(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
           }
         }
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
@@ -5735,12 +5865,13 @@ public final class MarketingCampaign {
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return io.bloombox.schema.marketing.MarketingCampaign.internal_static_bloombox_schema_marketing_CampaignKey_descriptor;
+      return io.bloombox.schema.marketing.MarketingCampaign.internal_static_bloombox_marketing_CampaignKey_descriptor;
     }
 
+    @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return io.bloombox.schema.marketing.MarketingCampaign.internal_static_bloombox_schema_marketing_CampaignKey_fieldAccessorTable
+      return io.bloombox.schema.marketing.MarketingCampaign.internal_static_bloombox_marketing_CampaignKey_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
               io.bloombox.schema.marketing.MarketingCampaign.CampaignKey.class, io.bloombox.schema.marketing.MarketingCampaign.CampaignKey.Builder.class);
     }
@@ -5872,6 +6003,7 @@ public final class MarketingCampaign {
     }
 
     private byte memoizedIsInitialized = -1;
+    @java.lang.Override
     public final boolean isInitialized() {
       byte isInitialized = memoizedIsInitialized;
       if (isInitialized == 1) return true;
@@ -5881,6 +6013,7 @@ public final class MarketingCampaign {
       return true;
     }
 
+    @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
       if (!getIdBytes().isEmpty()) {
@@ -5895,6 +6028,7 @@ public final class MarketingCampaign {
       unknownFields.writeTo(output);
     }
 
+    @java.lang.Override
     public int getSerializedSize() {
       int size = memoizedSize;
       if (size != -1) return size;
@@ -6023,6 +6157,7 @@ public final class MarketingCampaign {
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
 
+    @java.lang.Override
     public Builder newBuilderForType() { return newBuilder(); }
     public static Builder newBuilder() {
       return DEFAULT_INSTANCE.toBuilder();
@@ -6030,6 +6165,7 @@ public final class MarketingCampaign {
     public static Builder newBuilder(io.bloombox.schema.marketing.MarketingCampaign.CampaignKey prototype) {
       return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
     }
+    @java.lang.Override
     public Builder toBuilder() {
       return this == DEFAULT_INSTANCE
           ? new Builder() : new Builder().mergeFrom(this);
@@ -6046,20 +6182,21 @@ public final class MarketingCampaign {
      * Specifies the structure of a marketing campaign's unique primary key.
      * </pre>
      *
-     * Protobuf type {@code bloombox.schema.marketing.CampaignKey}
+     * Protobuf type {@code bloombox.marketing.CampaignKey}
      */
     public static final class Builder extends
         com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:bloombox.schema.marketing.CampaignKey)
+        // @@protoc_insertion_point(builder_implements:bloombox.marketing.CampaignKey)
         io.bloombox.schema.marketing.MarketingCampaign.CampaignKeyOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return io.bloombox.schema.marketing.MarketingCampaign.internal_static_bloombox_schema_marketing_CampaignKey_descriptor;
+        return io.bloombox.schema.marketing.MarketingCampaign.internal_static_bloombox_marketing_CampaignKey_descriptor;
       }
 
+      @java.lang.Override
       protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return io.bloombox.schema.marketing.MarketingCampaign.internal_static_bloombox_schema_marketing_CampaignKey_fieldAccessorTable
+        return io.bloombox.schema.marketing.MarketingCampaign.internal_static_bloombox_marketing_CampaignKey_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
                 io.bloombox.schema.marketing.MarketingCampaign.CampaignKey.class, io.bloombox.schema.marketing.MarketingCampaign.CampaignKey.Builder.class);
       }
@@ -6079,6 +6216,7 @@ public final class MarketingCampaign {
                 .alwaysUseFieldBuilders) {
         }
       }
+      @java.lang.Override
       public Builder clear() {
         super.clear();
         id_ = "";
@@ -6090,15 +6228,18 @@ public final class MarketingCampaign {
         return this;
       }
 
+      @java.lang.Override
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return io.bloombox.schema.marketing.MarketingCampaign.internal_static_bloombox_schema_marketing_CampaignKey_descriptor;
+        return io.bloombox.schema.marketing.MarketingCampaign.internal_static_bloombox_marketing_CampaignKey_descriptor;
       }
 
+      @java.lang.Override
       public io.bloombox.schema.marketing.MarketingCampaign.CampaignKey getDefaultInstanceForType() {
         return io.bloombox.schema.marketing.MarketingCampaign.CampaignKey.getDefaultInstance();
       }
 
+      @java.lang.Override
       public io.bloombox.schema.marketing.MarketingCampaign.CampaignKey build() {
         io.bloombox.schema.marketing.MarketingCampaign.CampaignKey result = buildPartial();
         if (!result.isInitialized()) {
@@ -6107,6 +6248,7 @@ public final class MarketingCampaign {
         return result;
       }
 
+      @java.lang.Override
       public io.bloombox.schema.marketing.MarketingCampaign.CampaignKey buildPartial() {
         io.bloombox.schema.marketing.MarketingCampaign.CampaignKey result = new io.bloombox.schema.marketing.MarketingCampaign.CampaignKey(this);
         result.id_ = id_;
@@ -6116,32 +6258,39 @@ public final class MarketingCampaign {
         return result;
       }
 
+      @java.lang.Override
       public Builder clone() {
         return (Builder) super.clone();
       }
+      @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
         return (Builder) super.setField(field, value);
       }
+      @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
         return (Builder) super.clearField(field);
       }
+      @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
         return (Builder) super.clearOneof(oneof);
       }
+      @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
         return (Builder) super.setRepeatedField(field, index, value);
       }
+      @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
         return (Builder) super.addRepeatedField(field, value);
       }
+      @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
         if (other instanceof io.bloombox.schema.marketing.MarketingCampaign.CampaignKey) {
           return mergeFrom((io.bloombox.schema.marketing.MarketingCampaign.CampaignKey)other);
@@ -6170,10 +6319,12 @@ public final class MarketingCampaign {
         return this;
       }
 
+      @java.lang.Override
       public final boolean isInitialized() {
         return true;
       }
 
+      @java.lang.Override
       public Builder mergeFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -6458,21 +6609,23 @@ public final class MarketingCampaign {
         onChanged();
         return this;
       }
+      @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
         return super.setUnknownFieldsProto3(unknownFields);
       }
 
+      @java.lang.Override
       public final Builder mergeUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
         return super.mergeUnknownFields(unknownFields);
       }
 
 
-      // @@protoc_insertion_point(builder_scope:bloombox.schema.marketing.CampaignKey)
+      // @@protoc_insertion_point(builder_scope:bloombox.marketing.CampaignKey)
     }
 
-    // @@protoc_insertion_point(class_scope:bloombox.schema.marketing.CampaignKey)
+    // @@protoc_insertion_point(class_scope:bloombox.marketing.CampaignKey)
     private static final io.bloombox.schema.marketing.MarketingCampaign.CampaignKey DEFAULT_INSTANCE;
     static {
       DEFAULT_INSTANCE = new io.bloombox.schema.marketing.MarketingCampaign.CampaignKey();
@@ -6484,6 +6637,7 @@ public final class MarketingCampaign {
 
     private static final com.google.protobuf.Parser<CampaignKey>
         PARSER = new com.google.protobuf.AbstractParser<CampaignKey>() {
+      @java.lang.Override
       public CampaignKey parsePartialFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -6501,6 +6655,7 @@ public final class MarketingCampaign {
       return PARSER;
     }
 
+    @java.lang.Override
     public io.bloombox.schema.marketing.MarketingCampaign.CampaignKey getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
@@ -6508,7 +6663,7 @@ public final class MarketingCampaign {
   }
 
   public interface CampaignOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:bloombox.schema.marketing.Campaign)
+      // @@protoc_insertion_point(interface_extends:bloombox.marketing.Campaign)
       com.google.protobuf.MessageOrBuilder {
 
     /**
@@ -6516,7 +6671,7 @@ public final class MarketingCampaign {
      * Unique key for this campaign.
      * </pre>
      *
-     * <code>.bloombox.schema.marketing.CampaignKey key = 1 [(.core.field) = { ... }</code>
+     * <code>.bloombox.marketing.CampaignKey key = 1 [(.core.field) = { ... }</code>
      */
     boolean hasKey();
     /**
@@ -6524,7 +6679,7 @@ public final class MarketingCampaign {
      * Unique key for this campaign.
      * </pre>
      *
-     * <code>.bloombox.schema.marketing.CampaignKey key = 1 [(.core.field) = { ... }</code>
+     * <code>.bloombox.marketing.CampaignKey key = 1 [(.core.field) = { ... }</code>
      */
     io.bloombox.schema.marketing.MarketingCampaign.CampaignKey getKey();
     /**
@@ -6532,7 +6687,7 @@ public final class MarketingCampaign {
      * Unique key for this campaign.
      * </pre>
      *
-     * <code>.bloombox.schema.marketing.CampaignKey key = 1 [(.core.field) = { ... }</code>
+     * <code>.bloombox.marketing.CampaignKey key = 1 [(.core.field) = { ... }</code>
      */
     io.bloombox.schema.marketing.MarketingCampaign.CampaignKeyOrBuilder getKeyOrBuilder();
 
@@ -6577,7 +6732,7 @@ public final class MarketingCampaign {
      * Status of this campaign.
      * </pre>
      *
-     * <code>.bloombox.schema.marketing.CampaignStatus status = 4;</code>
+     * <code>.bloombox.marketing.CampaignStatus status = 4;</code>
      */
     int getStatusValue();
     /**
@@ -6585,7 +6740,7 @@ public final class MarketingCampaign {
      * Status of this campaign.
      * </pre>
      *
-     * <code>.bloombox.schema.marketing.CampaignStatus status = 4;</code>
+     * <code>.bloombox.marketing.CampaignStatus status = 4;</code>
      */
     io.bloombox.schema.marketing.MarketingCampaign.CampaignStatus getStatus();
 
@@ -6603,7 +6758,7 @@ public final class MarketingCampaign {
      * Campaign audience targeting settings.
      * </pre>
      *
-     * <code>.bloombox.schema.marketing.CampaignTargeting targeting = 6;</code>
+     * <code>.bloombox.marketing.CampaignTargeting targeting = 6;</code>
      */
     boolean hasTargeting();
     /**
@@ -6611,7 +6766,7 @@ public final class MarketingCampaign {
      * Campaign audience targeting settings.
      * </pre>
      *
-     * <code>.bloombox.schema.marketing.CampaignTargeting targeting = 6;</code>
+     * <code>.bloombox.marketing.CampaignTargeting targeting = 6;</code>
      */
     io.bloombox.schema.marketing.MarketingCampaign.CampaignTargeting getTargeting();
     /**
@@ -6619,7 +6774,7 @@ public final class MarketingCampaign {
      * Campaign audience targeting settings.
      * </pre>
      *
-     * <code>.bloombox.schema.marketing.CampaignTargeting targeting = 6;</code>
+     * <code>.bloombox.marketing.CampaignTargeting targeting = 6;</code>
      */
     io.bloombox.schema.marketing.MarketingCampaign.CampaignTargetingOrBuilder getTargetingOrBuilder();
 
@@ -6628,7 +6783,7 @@ public final class MarketingCampaign {
      * Distribution/channel settings for this campaign.
      * </pre>
      *
-     * <code>repeated .bloombox.schema.marketing.ChannelSettings channel = 7;</code>
+     * <code>repeated .bloombox.marketing.ChannelSettings channel = 7;</code>
      */
     java.util.List<io.bloombox.schema.marketing.MarketingCampaign.ChannelSettings> 
         getChannelList();
@@ -6637,7 +6792,7 @@ public final class MarketingCampaign {
      * Distribution/channel settings for this campaign.
      * </pre>
      *
-     * <code>repeated .bloombox.schema.marketing.ChannelSettings channel = 7;</code>
+     * <code>repeated .bloombox.marketing.ChannelSettings channel = 7;</code>
      */
     io.bloombox.schema.marketing.MarketingCampaign.ChannelSettings getChannel(int index);
     /**
@@ -6645,7 +6800,7 @@ public final class MarketingCampaign {
      * Distribution/channel settings for this campaign.
      * </pre>
      *
-     * <code>repeated .bloombox.schema.marketing.ChannelSettings channel = 7;</code>
+     * <code>repeated .bloombox.marketing.ChannelSettings channel = 7;</code>
      */
     int getChannelCount();
     /**
@@ -6653,7 +6808,7 @@ public final class MarketingCampaign {
      * Distribution/channel settings for this campaign.
      * </pre>
      *
-     * <code>repeated .bloombox.schema.marketing.ChannelSettings channel = 7;</code>
+     * <code>repeated .bloombox.marketing.ChannelSettings channel = 7;</code>
      */
     java.util.List<? extends io.bloombox.schema.marketing.MarketingCampaign.ChannelSettingsOrBuilder> 
         getChannelOrBuilderList();
@@ -6662,7 +6817,7 @@ public final class MarketingCampaign {
      * Distribution/channel settings for this campaign.
      * </pre>
      *
-     * <code>repeated .bloombox.schema.marketing.ChannelSettings channel = 7;</code>
+     * <code>repeated .bloombox.marketing.ChannelSettings channel = 7;</code>
      */
     io.bloombox.schema.marketing.MarketingCampaign.ChannelSettingsOrBuilder getChannelOrBuilder(
         int index);
@@ -6672,7 +6827,7 @@ public final class MarketingCampaign {
      * Tags for this campaign.
      * </pre>
      *
-     * <code>repeated .bloombox.schema.marketing.CampaignTag tag = 8 [(.core.collection) = { ... }</code>
+     * <code>repeated .bloombox.marketing.CampaignTag tag = 8 [(.core.collection) = { ... }</code>
      */
     java.util.List<io.bloombox.schema.marketing.MarketingCampaign.CampaignTag> 
         getTagList();
@@ -6681,7 +6836,7 @@ public final class MarketingCampaign {
      * Tags for this campaign.
      * </pre>
      *
-     * <code>repeated .bloombox.schema.marketing.CampaignTag tag = 8 [(.core.collection) = { ... }</code>
+     * <code>repeated .bloombox.marketing.CampaignTag tag = 8 [(.core.collection) = { ... }</code>
      */
     io.bloombox.schema.marketing.MarketingCampaign.CampaignTag getTag(int index);
     /**
@@ -6689,7 +6844,7 @@ public final class MarketingCampaign {
      * Tags for this campaign.
      * </pre>
      *
-     * <code>repeated .bloombox.schema.marketing.CampaignTag tag = 8 [(.core.collection) = { ... }</code>
+     * <code>repeated .bloombox.marketing.CampaignTag tag = 8 [(.core.collection) = { ... }</code>
      */
     int getTagCount();
     /**
@@ -6697,7 +6852,7 @@ public final class MarketingCampaign {
      * Tags for this campaign.
      * </pre>
      *
-     * <code>repeated .bloombox.schema.marketing.CampaignTag tag = 8 [(.core.collection) = { ... }</code>
+     * <code>repeated .bloombox.marketing.CampaignTag tag = 8 [(.core.collection) = { ... }</code>
      */
     java.util.List<? extends io.bloombox.schema.marketing.MarketingCampaign.CampaignTagOrBuilder> 
         getTagOrBuilderList();
@@ -6706,7 +6861,7 @@ public final class MarketingCampaign {
      * Tags for this campaign.
      * </pre>
      *
-     * <code>repeated .bloombox.schema.marketing.CampaignTag tag = 8 [(.core.collection) = { ... }</code>
+     * <code>repeated .bloombox.marketing.CampaignTag tag = 8 [(.core.collection) = { ... }</code>
      */
     io.bloombox.schema.marketing.MarketingCampaign.CampaignTagOrBuilder getTagOrBuilder(
         int index);
@@ -6716,7 +6871,7 @@ public final class MarketingCampaign {
      * Ad groups attached to this campaign.
      * </pre>
      *
-     * <code>repeated .bloombox.schema.marketing.AdGroup group = 9 [(.core.collection) = { ... }</code>
+     * <code>repeated .bloombox.marketing.AdGroup group = 9 [(.core.collection) = { ... }</code>
      */
     java.util.List<io.bloombox.schema.marketing.MarketingCampaign.AdGroup> 
         getGroupList();
@@ -6725,7 +6880,7 @@ public final class MarketingCampaign {
      * Ad groups attached to this campaign.
      * </pre>
      *
-     * <code>repeated .bloombox.schema.marketing.AdGroup group = 9 [(.core.collection) = { ... }</code>
+     * <code>repeated .bloombox.marketing.AdGroup group = 9 [(.core.collection) = { ... }</code>
      */
     io.bloombox.schema.marketing.MarketingCampaign.AdGroup getGroup(int index);
     /**
@@ -6733,7 +6888,7 @@ public final class MarketingCampaign {
      * Ad groups attached to this campaign.
      * </pre>
      *
-     * <code>repeated .bloombox.schema.marketing.AdGroup group = 9 [(.core.collection) = { ... }</code>
+     * <code>repeated .bloombox.marketing.AdGroup group = 9 [(.core.collection) = { ... }</code>
      */
     int getGroupCount();
     /**
@@ -6741,7 +6896,7 @@ public final class MarketingCampaign {
      * Ad groups attached to this campaign.
      * </pre>
      *
-     * <code>repeated .bloombox.schema.marketing.AdGroup group = 9 [(.core.collection) = { ... }</code>
+     * <code>repeated .bloombox.marketing.AdGroup group = 9 [(.core.collection) = { ... }</code>
      */
     java.util.List<? extends io.bloombox.schema.marketing.MarketingCampaign.AdGroupOrBuilder> 
         getGroupOrBuilderList();
@@ -6750,7 +6905,7 @@ public final class MarketingCampaign {
      * Ad groups attached to this campaign.
      * </pre>
      *
-     * <code>repeated .bloombox.schema.marketing.AdGroup group = 9 [(.core.collection) = { ... }</code>
+     * <code>repeated .bloombox.marketing.AdGroup group = 9 [(.core.collection) = { ... }</code>
      */
     io.bloombox.schema.marketing.MarketingCampaign.AdGroupOrBuilder getGroupOrBuilder(
         int index);
@@ -6836,11 +6991,11 @@ public final class MarketingCampaign {
    * concentrated effort towards specific, defined conversion goals.
    * </pre>
    *
-   * Protobuf type {@code bloombox.schema.marketing.Campaign}
+   * Protobuf type {@code bloombox.marketing.Campaign}
    */
   public  static final class Campaign extends
       com.google.protobuf.GeneratedMessageV3 implements
-      // @@protoc_insertion_point(message_implements:bloombox.schema.marketing.Campaign)
+      // @@protoc_insertion_point(message_implements:bloombox.marketing.Campaign)
       CampaignOrBuilder {
   private static final long serialVersionUID = 0L;
     // Use Campaign.newBuilder() to construct.
@@ -6881,13 +7036,6 @@ public final class MarketingCampaign {
             case 0:
               done = true;
               break;
-            default: {
-              if (!parseUnknownFieldProto3(
-                  input, unknownFields, extensionRegistry, tag)) {
-                done = true;
-              }
-              break;
-            }
             case 10: {
               io.bloombox.schema.marketing.MarketingCampaign.CampaignKey.Builder subBuilder = null;
               if (key_ != null) {
@@ -7003,6 +7151,13 @@ public final class MarketingCampaign {
 
               break;
             }
+            default: {
+              if (!parseUnknownFieldProto3(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
           }
         }
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
@@ -7026,12 +7181,13 @@ public final class MarketingCampaign {
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return io.bloombox.schema.marketing.MarketingCampaign.internal_static_bloombox_schema_marketing_Campaign_descriptor;
+      return io.bloombox.schema.marketing.MarketingCampaign.internal_static_bloombox_marketing_Campaign_descriptor;
     }
 
+    @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return io.bloombox.schema.marketing.MarketingCampaign.internal_static_bloombox_schema_marketing_Campaign_fieldAccessorTable
+      return io.bloombox.schema.marketing.MarketingCampaign.internal_static_bloombox_marketing_Campaign_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
               io.bloombox.schema.marketing.MarketingCampaign.Campaign.class, io.bloombox.schema.marketing.MarketingCampaign.Campaign.Builder.class);
     }
@@ -7044,7 +7200,7 @@ public final class MarketingCampaign {
      * Unique key for this campaign.
      * </pre>
      *
-     * <code>.bloombox.schema.marketing.CampaignKey key = 1 [(.core.field) = { ... }</code>
+     * <code>.bloombox.marketing.CampaignKey key = 1 [(.core.field) = { ... }</code>
      */
     public boolean hasKey() {
       return key_ != null;
@@ -7054,7 +7210,7 @@ public final class MarketingCampaign {
      * Unique key for this campaign.
      * </pre>
      *
-     * <code>.bloombox.schema.marketing.CampaignKey key = 1 [(.core.field) = { ... }</code>
+     * <code>.bloombox.marketing.CampaignKey key = 1 [(.core.field) = { ... }</code>
      */
     public io.bloombox.schema.marketing.MarketingCampaign.CampaignKey getKey() {
       return key_ == null ? io.bloombox.schema.marketing.MarketingCampaign.CampaignKey.getDefaultInstance() : key_;
@@ -7064,7 +7220,7 @@ public final class MarketingCampaign {
      * Unique key for this campaign.
      * </pre>
      *
-     * <code>.bloombox.schema.marketing.CampaignKey key = 1 [(.core.field) = { ... }</code>
+     * <code>.bloombox.marketing.CampaignKey key = 1 [(.core.field) = { ... }</code>
      */
     public io.bloombox.schema.marketing.MarketingCampaign.CampaignKeyOrBuilder getKeyOrBuilder() {
       return getKey();
@@ -7161,7 +7317,7 @@ public final class MarketingCampaign {
      * Status of this campaign.
      * </pre>
      *
-     * <code>.bloombox.schema.marketing.CampaignStatus status = 4;</code>
+     * <code>.bloombox.marketing.CampaignStatus status = 4;</code>
      */
     public int getStatusValue() {
       return status_;
@@ -7171,9 +7327,10 @@ public final class MarketingCampaign {
      * Status of this campaign.
      * </pre>
      *
-     * <code>.bloombox.schema.marketing.CampaignStatus status = 4;</code>
+     * <code>.bloombox.marketing.CampaignStatus status = 4;</code>
      */
     public io.bloombox.schema.marketing.MarketingCampaign.CampaignStatus getStatus() {
+      @SuppressWarnings("deprecation")
       io.bloombox.schema.marketing.MarketingCampaign.CampaignStatus result = io.bloombox.schema.marketing.MarketingCampaign.CampaignStatus.valueOf(status_);
       return result == null ? io.bloombox.schema.marketing.MarketingCampaign.CampaignStatus.UNRECOGNIZED : result;
     }
@@ -7198,7 +7355,7 @@ public final class MarketingCampaign {
      * Campaign audience targeting settings.
      * </pre>
      *
-     * <code>.bloombox.schema.marketing.CampaignTargeting targeting = 6;</code>
+     * <code>.bloombox.marketing.CampaignTargeting targeting = 6;</code>
      */
     public boolean hasTargeting() {
       return targeting_ != null;
@@ -7208,7 +7365,7 @@ public final class MarketingCampaign {
      * Campaign audience targeting settings.
      * </pre>
      *
-     * <code>.bloombox.schema.marketing.CampaignTargeting targeting = 6;</code>
+     * <code>.bloombox.marketing.CampaignTargeting targeting = 6;</code>
      */
     public io.bloombox.schema.marketing.MarketingCampaign.CampaignTargeting getTargeting() {
       return targeting_ == null ? io.bloombox.schema.marketing.MarketingCampaign.CampaignTargeting.getDefaultInstance() : targeting_;
@@ -7218,7 +7375,7 @@ public final class MarketingCampaign {
      * Campaign audience targeting settings.
      * </pre>
      *
-     * <code>.bloombox.schema.marketing.CampaignTargeting targeting = 6;</code>
+     * <code>.bloombox.marketing.CampaignTargeting targeting = 6;</code>
      */
     public io.bloombox.schema.marketing.MarketingCampaign.CampaignTargetingOrBuilder getTargetingOrBuilder() {
       return getTargeting();
@@ -7231,7 +7388,7 @@ public final class MarketingCampaign {
      * Distribution/channel settings for this campaign.
      * </pre>
      *
-     * <code>repeated .bloombox.schema.marketing.ChannelSettings channel = 7;</code>
+     * <code>repeated .bloombox.marketing.ChannelSettings channel = 7;</code>
      */
     public java.util.List<io.bloombox.schema.marketing.MarketingCampaign.ChannelSettings> getChannelList() {
       return channel_;
@@ -7241,7 +7398,7 @@ public final class MarketingCampaign {
      * Distribution/channel settings for this campaign.
      * </pre>
      *
-     * <code>repeated .bloombox.schema.marketing.ChannelSettings channel = 7;</code>
+     * <code>repeated .bloombox.marketing.ChannelSettings channel = 7;</code>
      */
     public java.util.List<? extends io.bloombox.schema.marketing.MarketingCampaign.ChannelSettingsOrBuilder> 
         getChannelOrBuilderList() {
@@ -7252,7 +7409,7 @@ public final class MarketingCampaign {
      * Distribution/channel settings for this campaign.
      * </pre>
      *
-     * <code>repeated .bloombox.schema.marketing.ChannelSettings channel = 7;</code>
+     * <code>repeated .bloombox.marketing.ChannelSettings channel = 7;</code>
      */
     public int getChannelCount() {
       return channel_.size();
@@ -7262,7 +7419,7 @@ public final class MarketingCampaign {
      * Distribution/channel settings for this campaign.
      * </pre>
      *
-     * <code>repeated .bloombox.schema.marketing.ChannelSettings channel = 7;</code>
+     * <code>repeated .bloombox.marketing.ChannelSettings channel = 7;</code>
      */
     public io.bloombox.schema.marketing.MarketingCampaign.ChannelSettings getChannel(int index) {
       return channel_.get(index);
@@ -7272,7 +7429,7 @@ public final class MarketingCampaign {
      * Distribution/channel settings for this campaign.
      * </pre>
      *
-     * <code>repeated .bloombox.schema.marketing.ChannelSettings channel = 7;</code>
+     * <code>repeated .bloombox.marketing.ChannelSettings channel = 7;</code>
      */
     public io.bloombox.schema.marketing.MarketingCampaign.ChannelSettingsOrBuilder getChannelOrBuilder(
         int index) {
@@ -7286,7 +7443,7 @@ public final class MarketingCampaign {
      * Tags for this campaign.
      * </pre>
      *
-     * <code>repeated .bloombox.schema.marketing.CampaignTag tag = 8 [(.core.collection) = { ... }</code>
+     * <code>repeated .bloombox.marketing.CampaignTag tag = 8 [(.core.collection) = { ... }</code>
      */
     public java.util.List<io.bloombox.schema.marketing.MarketingCampaign.CampaignTag> getTagList() {
       return tag_;
@@ -7296,7 +7453,7 @@ public final class MarketingCampaign {
      * Tags for this campaign.
      * </pre>
      *
-     * <code>repeated .bloombox.schema.marketing.CampaignTag tag = 8 [(.core.collection) = { ... }</code>
+     * <code>repeated .bloombox.marketing.CampaignTag tag = 8 [(.core.collection) = { ... }</code>
      */
     public java.util.List<? extends io.bloombox.schema.marketing.MarketingCampaign.CampaignTagOrBuilder> 
         getTagOrBuilderList() {
@@ -7307,7 +7464,7 @@ public final class MarketingCampaign {
      * Tags for this campaign.
      * </pre>
      *
-     * <code>repeated .bloombox.schema.marketing.CampaignTag tag = 8 [(.core.collection) = { ... }</code>
+     * <code>repeated .bloombox.marketing.CampaignTag tag = 8 [(.core.collection) = { ... }</code>
      */
     public int getTagCount() {
       return tag_.size();
@@ -7317,7 +7474,7 @@ public final class MarketingCampaign {
      * Tags for this campaign.
      * </pre>
      *
-     * <code>repeated .bloombox.schema.marketing.CampaignTag tag = 8 [(.core.collection) = { ... }</code>
+     * <code>repeated .bloombox.marketing.CampaignTag tag = 8 [(.core.collection) = { ... }</code>
      */
     public io.bloombox.schema.marketing.MarketingCampaign.CampaignTag getTag(int index) {
       return tag_.get(index);
@@ -7327,7 +7484,7 @@ public final class MarketingCampaign {
      * Tags for this campaign.
      * </pre>
      *
-     * <code>repeated .bloombox.schema.marketing.CampaignTag tag = 8 [(.core.collection) = { ... }</code>
+     * <code>repeated .bloombox.marketing.CampaignTag tag = 8 [(.core.collection) = { ... }</code>
      */
     public io.bloombox.schema.marketing.MarketingCampaign.CampaignTagOrBuilder getTagOrBuilder(
         int index) {
@@ -7341,7 +7498,7 @@ public final class MarketingCampaign {
      * Ad groups attached to this campaign.
      * </pre>
      *
-     * <code>repeated .bloombox.schema.marketing.AdGroup group = 9 [(.core.collection) = { ... }</code>
+     * <code>repeated .bloombox.marketing.AdGroup group = 9 [(.core.collection) = { ... }</code>
      */
     public java.util.List<io.bloombox.schema.marketing.MarketingCampaign.AdGroup> getGroupList() {
       return group_;
@@ -7351,7 +7508,7 @@ public final class MarketingCampaign {
      * Ad groups attached to this campaign.
      * </pre>
      *
-     * <code>repeated .bloombox.schema.marketing.AdGroup group = 9 [(.core.collection) = { ... }</code>
+     * <code>repeated .bloombox.marketing.AdGroup group = 9 [(.core.collection) = { ... }</code>
      */
     public java.util.List<? extends io.bloombox.schema.marketing.MarketingCampaign.AdGroupOrBuilder> 
         getGroupOrBuilderList() {
@@ -7362,7 +7519,7 @@ public final class MarketingCampaign {
      * Ad groups attached to this campaign.
      * </pre>
      *
-     * <code>repeated .bloombox.schema.marketing.AdGroup group = 9 [(.core.collection) = { ... }</code>
+     * <code>repeated .bloombox.marketing.AdGroup group = 9 [(.core.collection) = { ... }</code>
      */
     public int getGroupCount() {
       return group_.size();
@@ -7372,7 +7529,7 @@ public final class MarketingCampaign {
      * Ad groups attached to this campaign.
      * </pre>
      *
-     * <code>repeated .bloombox.schema.marketing.AdGroup group = 9 [(.core.collection) = { ... }</code>
+     * <code>repeated .bloombox.marketing.AdGroup group = 9 [(.core.collection) = { ... }</code>
      */
     public io.bloombox.schema.marketing.MarketingCampaign.AdGroup getGroup(int index) {
       return group_.get(index);
@@ -7382,7 +7539,7 @@ public final class MarketingCampaign {
      * Ad groups attached to this campaign.
      * </pre>
      *
-     * <code>repeated .bloombox.schema.marketing.AdGroup group = 9 [(.core.collection) = { ... }</code>
+     * <code>repeated .bloombox.marketing.AdGroup group = 9 [(.core.collection) = { ... }</code>
      */
     public io.bloombox.schema.marketing.MarketingCampaign.AdGroupOrBuilder getGroupOrBuilder(
         int index) {
@@ -7489,6 +7646,7 @@ public final class MarketingCampaign {
     }
 
     private byte memoizedIsInitialized = -1;
+    @java.lang.Override
     public final boolean isInitialized() {
       byte isInitialized = memoizedIsInitialized;
       if (isInitialized == 1) return true;
@@ -7498,6 +7656,7 @@ public final class MarketingCampaign {
       return true;
     }
 
+    @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
       if (key_ != null) {
@@ -7539,6 +7698,7 @@ public final class MarketingCampaign {
       unknownFields.writeTo(output);
     }
 
+    @java.lang.Override
     public int getSerializedSize() {
       int size = memoizedSize;
       if (size != -1) return size;
@@ -7771,6 +7931,7 @@ public final class MarketingCampaign {
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
 
+    @java.lang.Override
     public Builder newBuilderForType() { return newBuilder(); }
     public static Builder newBuilder() {
       return DEFAULT_INSTANCE.toBuilder();
@@ -7778,6 +7939,7 @@ public final class MarketingCampaign {
     public static Builder newBuilder(io.bloombox.schema.marketing.MarketingCampaign.Campaign prototype) {
       return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
     }
+    @java.lang.Override
     public Builder toBuilder() {
       return this == DEFAULT_INSTANCE
           ? new Builder() : new Builder().mergeFrom(this);
@@ -7795,20 +7957,21 @@ public final class MarketingCampaign {
      * concentrated effort towards specific, defined conversion goals.
      * </pre>
      *
-     * Protobuf type {@code bloombox.schema.marketing.Campaign}
+     * Protobuf type {@code bloombox.marketing.Campaign}
      */
     public static final class Builder extends
         com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:bloombox.schema.marketing.Campaign)
+        // @@protoc_insertion_point(builder_implements:bloombox.marketing.Campaign)
         io.bloombox.schema.marketing.MarketingCampaign.CampaignOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return io.bloombox.schema.marketing.MarketingCampaign.internal_static_bloombox_schema_marketing_Campaign_descriptor;
+        return io.bloombox.schema.marketing.MarketingCampaign.internal_static_bloombox_marketing_Campaign_descriptor;
       }
 
+      @java.lang.Override
       protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return io.bloombox.schema.marketing.MarketingCampaign.internal_static_bloombox_schema_marketing_Campaign_fieldAccessorTable
+        return io.bloombox.schema.marketing.MarketingCampaign.internal_static_bloombox_marketing_Campaign_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
                 io.bloombox.schema.marketing.MarketingCampaign.Campaign.class, io.bloombox.schema.marketing.MarketingCampaign.Campaign.Builder.class);
       }
@@ -7831,6 +7994,7 @@ public final class MarketingCampaign {
           getGroupFieldBuilder();
         }
       }
+      @java.lang.Override
       public Builder clear() {
         super.clear();
         if (keyBuilder_ == null) {
@@ -7892,15 +8056,18 @@ public final class MarketingCampaign {
         return this;
       }
 
+      @java.lang.Override
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return io.bloombox.schema.marketing.MarketingCampaign.internal_static_bloombox_schema_marketing_Campaign_descriptor;
+        return io.bloombox.schema.marketing.MarketingCampaign.internal_static_bloombox_marketing_Campaign_descriptor;
       }
 
+      @java.lang.Override
       public io.bloombox.schema.marketing.MarketingCampaign.Campaign getDefaultInstanceForType() {
         return io.bloombox.schema.marketing.MarketingCampaign.Campaign.getDefaultInstance();
       }
 
+      @java.lang.Override
       public io.bloombox.schema.marketing.MarketingCampaign.Campaign build() {
         io.bloombox.schema.marketing.MarketingCampaign.Campaign result = buildPartial();
         if (!result.isInitialized()) {
@@ -7909,6 +8076,7 @@ public final class MarketingCampaign {
         return result;
       }
 
+      @java.lang.Override
       public io.bloombox.schema.marketing.MarketingCampaign.Campaign buildPartial() {
         io.bloombox.schema.marketing.MarketingCampaign.Campaign result = new io.bloombox.schema.marketing.MarketingCampaign.Campaign(this);
         int from_bitField0_ = bitField0_;
@@ -7974,32 +8142,39 @@ public final class MarketingCampaign {
         return result;
       }
 
+      @java.lang.Override
       public Builder clone() {
         return (Builder) super.clone();
       }
+      @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
         return (Builder) super.setField(field, value);
       }
+      @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
         return (Builder) super.clearField(field);
       }
+      @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
         return (Builder) super.clearOneof(oneof);
       }
+      @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
         return (Builder) super.setRepeatedField(field, index, value);
       }
+      @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
         return (Builder) super.addRepeatedField(field, value);
       }
+      @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
         if (other instanceof io.bloombox.schema.marketing.MarketingCampaign.Campaign) {
           return mergeFrom((io.bloombox.schema.marketing.MarketingCampaign.Campaign)other);
@@ -8123,10 +8298,12 @@ public final class MarketingCampaign {
         return this;
       }
 
+      @java.lang.Override
       public final boolean isInitialized() {
         return true;
       }
 
+      @java.lang.Override
       public Builder mergeFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -8154,7 +8331,7 @@ public final class MarketingCampaign {
        * Unique key for this campaign.
        * </pre>
        *
-       * <code>.bloombox.schema.marketing.CampaignKey key = 1 [(.core.field) = { ... }</code>
+       * <code>.bloombox.marketing.CampaignKey key = 1 [(.core.field) = { ... }</code>
        */
       public boolean hasKey() {
         return keyBuilder_ != null || key_ != null;
@@ -8164,7 +8341,7 @@ public final class MarketingCampaign {
        * Unique key for this campaign.
        * </pre>
        *
-       * <code>.bloombox.schema.marketing.CampaignKey key = 1 [(.core.field) = { ... }</code>
+       * <code>.bloombox.marketing.CampaignKey key = 1 [(.core.field) = { ... }</code>
        */
       public io.bloombox.schema.marketing.MarketingCampaign.CampaignKey getKey() {
         if (keyBuilder_ == null) {
@@ -8178,7 +8355,7 @@ public final class MarketingCampaign {
        * Unique key for this campaign.
        * </pre>
        *
-       * <code>.bloombox.schema.marketing.CampaignKey key = 1 [(.core.field) = { ... }</code>
+       * <code>.bloombox.marketing.CampaignKey key = 1 [(.core.field) = { ... }</code>
        */
       public Builder setKey(io.bloombox.schema.marketing.MarketingCampaign.CampaignKey value) {
         if (keyBuilder_ == null) {
@@ -8198,7 +8375,7 @@ public final class MarketingCampaign {
        * Unique key for this campaign.
        * </pre>
        *
-       * <code>.bloombox.schema.marketing.CampaignKey key = 1 [(.core.field) = { ... }</code>
+       * <code>.bloombox.marketing.CampaignKey key = 1 [(.core.field) = { ... }</code>
        */
       public Builder setKey(
           io.bloombox.schema.marketing.MarketingCampaign.CampaignKey.Builder builderForValue) {
@@ -8216,7 +8393,7 @@ public final class MarketingCampaign {
        * Unique key for this campaign.
        * </pre>
        *
-       * <code>.bloombox.schema.marketing.CampaignKey key = 1 [(.core.field) = { ... }</code>
+       * <code>.bloombox.marketing.CampaignKey key = 1 [(.core.field) = { ... }</code>
        */
       public Builder mergeKey(io.bloombox.schema.marketing.MarketingCampaign.CampaignKey value) {
         if (keyBuilder_ == null) {
@@ -8238,7 +8415,7 @@ public final class MarketingCampaign {
        * Unique key for this campaign.
        * </pre>
        *
-       * <code>.bloombox.schema.marketing.CampaignKey key = 1 [(.core.field) = { ... }</code>
+       * <code>.bloombox.marketing.CampaignKey key = 1 [(.core.field) = { ... }</code>
        */
       public Builder clearKey() {
         if (keyBuilder_ == null) {
@@ -8256,7 +8433,7 @@ public final class MarketingCampaign {
        * Unique key for this campaign.
        * </pre>
        *
-       * <code>.bloombox.schema.marketing.CampaignKey key = 1 [(.core.field) = { ... }</code>
+       * <code>.bloombox.marketing.CampaignKey key = 1 [(.core.field) = { ... }</code>
        */
       public io.bloombox.schema.marketing.MarketingCampaign.CampaignKey.Builder getKeyBuilder() {
         
@@ -8268,7 +8445,7 @@ public final class MarketingCampaign {
        * Unique key for this campaign.
        * </pre>
        *
-       * <code>.bloombox.schema.marketing.CampaignKey key = 1 [(.core.field) = { ... }</code>
+       * <code>.bloombox.marketing.CampaignKey key = 1 [(.core.field) = { ... }</code>
        */
       public io.bloombox.schema.marketing.MarketingCampaign.CampaignKeyOrBuilder getKeyOrBuilder() {
         if (keyBuilder_ != null) {
@@ -8283,7 +8460,7 @@ public final class MarketingCampaign {
        * Unique key for this campaign.
        * </pre>
        *
-       * <code>.bloombox.schema.marketing.CampaignKey key = 1 [(.core.field) = { ... }</code>
+       * <code>.bloombox.marketing.CampaignKey key = 1 [(.core.field) = { ... }</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
           io.bloombox.schema.marketing.MarketingCampaign.CampaignKey, io.bloombox.schema.marketing.MarketingCampaign.CampaignKey.Builder, io.bloombox.schema.marketing.MarketingCampaign.CampaignKeyOrBuilder> 
@@ -8483,7 +8660,7 @@ public final class MarketingCampaign {
        * Status of this campaign.
        * </pre>
        *
-       * <code>.bloombox.schema.marketing.CampaignStatus status = 4;</code>
+       * <code>.bloombox.marketing.CampaignStatus status = 4;</code>
        */
       public int getStatusValue() {
         return status_;
@@ -8493,7 +8670,7 @@ public final class MarketingCampaign {
        * Status of this campaign.
        * </pre>
        *
-       * <code>.bloombox.schema.marketing.CampaignStatus status = 4;</code>
+       * <code>.bloombox.marketing.CampaignStatus status = 4;</code>
        */
       public Builder setStatusValue(int value) {
         status_ = value;
@@ -8505,9 +8682,10 @@ public final class MarketingCampaign {
        * Status of this campaign.
        * </pre>
        *
-       * <code>.bloombox.schema.marketing.CampaignStatus status = 4;</code>
+       * <code>.bloombox.marketing.CampaignStatus status = 4;</code>
        */
       public io.bloombox.schema.marketing.MarketingCampaign.CampaignStatus getStatus() {
+        @SuppressWarnings("deprecation")
         io.bloombox.schema.marketing.MarketingCampaign.CampaignStatus result = io.bloombox.schema.marketing.MarketingCampaign.CampaignStatus.valueOf(status_);
         return result == null ? io.bloombox.schema.marketing.MarketingCampaign.CampaignStatus.UNRECOGNIZED : result;
       }
@@ -8516,7 +8694,7 @@ public final class MarketingCampaign {
        * Status of this campaign.
        * </pre>
        *
-       * <code>.bloombox.schema.marketing.CampaignStatus status = 4;</code>
+       * <code>.bloombox.marketing.CampaignStatus status = 4;</code>
        */
       public Builder setStatus(io.bloombox.schema.marketing.MarketingCampaign.CampaignStatus value) {
         if (value == null) {
@@ -8532,7 +8710,7 @@ public final class MarketingCampaign {
        * Status of this campaign.
        * </pre>
        *
-       * <code>.bloombox.schema.marketing.CampaignStatus status = 4;</code>
+       * <code>.bloombox.marketing.CampaignStatus status = 4;</code>
        */
       public Builder clearStatus() {
         
@@ -8587,7 +8765,7 @@ public final class MarketingCampaign {
        * Campaign audience targeting settings.
        * </pre>
        *
-       * <code>.bloombox.schema.marketing.CampaignTargeting targeting = 6;</code>
+       * <code>.bloombox.marketing.CampaignTargeting targeting = 6;</code>
        */
       public boolean hasTargeting() {
         return targetingBuilder_ != null || targeting_ != null;
@@ -8597,7 +8775,7 @@ public final class MarketingCampaign {
        * Campaign audience targeting settings.
        * </pre>
        *
-       * <code>.bloombox.schema.marketing.CampaignTargeting targeting = 6;</code>
+       * <code>.bloombox.marketing.CampaignTargeting targeting = 6;</code>
        */
       public io.bloombox.schema.marketing.MarketingCampaign.CampaignTargeting getTargeting() {
         if (targetingBuilder_ == null) {
@@ -8611,7 +8789,7 @@ public final class MarketingCampaign {
        * Campaign audience targeting settings.
        * </pre>
        *
-       * <code>.bloombox.schema.marketing.CampaignTargeting targeting = 6;</code>
+       * <code>.bloombox.marketing.CampaignTargeting targeting = 6;</code>
        */
       public Builder setTargeting(io.bloombox.schema.marketing.MarketingCampaign.CampaignTargeting value) {
         if (targetingBuilder_ == null) {
@@ -8631,7 +8809,7 @@ public final class MarketingCampaign {
        * Campaign audience targeting settings.
        * </pre>
        *
-       * <code>.bloombox.schema.marketing.CampaignTargeting targeting = 6;</code>
+       * <code>.bloombox.marketing.CampaignTargeting targeting = 6;</code>
        */
       public Builder setTargeting(
           io.bloombox.schema.marketing.MarketingCampaign.CampaignTargeting.Builder builderForValue) {
@@ -8649,7 +8827,7 @@ public final class MarketingCampaign {
        * Campaign audience targeting settings.
        * </pre>
        *
-       * <code>.bloombox.schema.marketing.CampaignTargeting targeting = 6;</code>
+       * <code>.bloombox.marketing.CampaignTargeting targeting = 6;</code>
        */
       public Builder mergeTargeting(io.bloombox.schema.marketing.MarketingCampaign.CampaignTargeting value) {
         if (targetingBuilder_ == null) {
@@ -8671,7 +8849,7 @@ public final class MarketingCampaign {
        * Campaign audience targeting settings.
        * </pre>
        *
-       * <code>.bloombox.schema.marketing.CampaignTargeting targeting = 6;</code>
+       * <code>.bloombox.marketing.CampaignTargeting targeting = 6;</code>
        */
       public Builder clearTargeting() {
         if (targetingBuilder_ == null) {
@@ -8689,7 +8867,7 @@ public final class MarketingCampaign {
        * Campaign audience targeting settings.
        * </pre>
        *
-       * <code>.bloombox.schema.marketing.CampaignTargeting targeting = 6;</code>
+       * <code>.bloombox.marketing.CampaignTargeting targeting = 6;</code>
        */
       public io.bloombox.schema.marketing.MarketingCampaign.CampaignTargeting.Builder getTargetingBuilder() {
         
@@ -8701,7 +8879,7 @@ public final class MarketingCampaign {
        * Campaign audience targeting settings.
        * </pre>
        *
-       * <code>.bloombox.schema.marketing.CampaignTargeting targeting = 6;</code>
+       * <code>.bloombox.marketing.CampaignTargeting targeting = 6;</code>
        */
       public io.bloombox.schema.marketing.MarketingCampaign.CampaignTargetingOrBuilder getTargetingOrBuilder() {
         if (targetingBuilder_ != null) {
@@ -8716,7 +8894,7 @@ public final class MarketingCampaign {
        * Campaign audience targeting settings.
        * </pre>
        *
-       * <code>.bloombox.schema.marketing.CampaignTargeting targeting = 6;</code>
+       * <code>.bloombox.marketing.CampaignTargeting targeting = 6;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
           io.bloombox.schema.marketing.MarketingCampaign.CampaignTargeting, io.bloombox.schema.marketing.MarketingCampaign.CampaignTargeting.Builder, io.bloombox.schema.marketing.MarketingCampaign.CampaignTargetingOrBuilder> 
@@ -8749,7 +8927,7 @@ public final class MarketingCampaign {
        * Distribution/channel settings for this campaign.
        * </pre>
        *
-       * <code>repeated .bloombox.schema.marketing.ChannelSettings channel = 7;</code>
+       * <code>repeated .bloombox.marketing.ChannelSettings channel = 7;</code>
        */
       public java.util.List<io.bloombox.schema.marketing.MarketingCampaign.ChannelSettings> getChannelList() {
         if (channelBuilder_ == null) {
@@ -8763,7 +8941,7 @@ public final class MarketingCampaign {
        * Distribution/channel settings for this campaign.
        * </pre>
        *
-       * <code>repeated .bloombox.schema.marketing.ChannelSettings channel = 7;</code>
+       * <code>repeated .bloombox.marketing.ChannelSettings channel = 7;</code>
        */
       public int getChannelCount() {
         if (channelBuilder_ == null) {
@@ -8777,7 +8955,7 @@ public final class MarketingCampaign {
        * Distribution/channel settings for this campaign.
        * </pre>
        *
-       * <code>repeated .bloombox.schema.marketing.ChannelSettings channel = 7;</code>
+       * <code>repeated .bloombox.marketing.ChannelSettings channel = 7;</code>
        */
       public io.bloombox.schema.marketing.MarketingCampaign.ChannelSettings getChannel(int index) {
         if (channelBuilder_ == null) {
@@ -8791,7 +8969,7 @@ public final class MarketingCampaign {
        * Distribution/channel settings for this campaign.
        * </pre>
        *
-       * <code>repeated .bloombox.schema.marketing.ChannelSettings channel = 7;</code>
+       * <code>repeated .bloombox.marketing.ChannelSettings channel = 7;</code>
        */
       public Builder setChannel(
           int index, io.bloombox.schema.marketing.MarketingCampaign.ChannelSettings value) {
@@ -8812,7 +8990,7 @@ public final class MarketingCampaign {
        * Distribution/channel settings for this campaign.
        * </pre>
        *
-       * <code>repeated .bloombox.schema.marketing.ChannelSettings channel = 7;</code>
+       * <code>repeated .bloombox.marketing.ChannelSettings channel = 7;</code>
        */
       public Builder setChannel(
           int index, io.bloombox.schema.marketing.MarketingCampaign.ChannelSettings.Builder builderForValue) {
@@ -8830,7 +9008,7 @@ public final class MarketingCampaign {
        * Distribution/channel settings for this campaign.
        * </pre>
        *
-       * <code>repeated .bloombox.schema.marketing.ChannelSettings channel = 7;</code>
+       * <code>repeated .bloombox.marketing.ChannelSettings channel = 7;</code>
        */
       public Builder addChannel(io.bloombox.schema.marketing.MarketingCampaign.ChannelSettings value) {
         if (channelBuilder_ == null) {
@@ -8850,7 +9028,7 @@ public final class MarketingCampaign {
        * Distribution/channel settings for this campaign.
        * </pre>
        *
-       * <code>repeated .bloombox.schema.marketing.ChannelSettings channel = 7;</code>
+       * <code>repeated .bloombox.marketing.ChannelSettings channel = 7;</code>
        */
       public Builder addChannel(
           int index, io.bloombox.schema.marketing.MarketingCampaign.ChannelSettings value) {
@@ -8871,7 +9049,7 @@ public final class MarketingCampaign {
        * Distribution/channel settings for this campaign.
        * </pre>
        *
-       * <code>repeated .bloombox.schema.marketing.ChannelSettings channel = 7;</code>
+       * <code>repeated .bloombox.marketing.ChannelSettings channel = 7;</code>
        */
       public Builder addChannel(
           io.bloombox.schema.marketing.MarketingCampaign.ChannelSettings.Builder builderForValue) {
@@ -8889,7 +9067,7 @@ public final class MarketingCampaign {
        * Distribution/channel settings for this campaign.
        * </pre>
        *
-       * <code>repeated .bloombox.schema.marketing.ChannelSettings channel = 7;</code>
+       * <code>repeated .bloombox.marketing.ChannelSettings channel = 7;</code>
        */
       public Builder addChannel(
           int index, io.bloombox.schema.marketing.MarketingCampaign.ChannelSettings.Builder builderForValue) {
@@ -8907,7 +9085,7 @@ public final class MarketingCampaign {
        * Distribution/channel settings for this campaign.
        * </pre>
        *
-       * <code>repeated .bloombox.schema.marketing.ChannelSettings channel = 7;</code>
+       * <code>repeated .bloombox.marketing.ChannelSettings channel = 7;</code>
        */
       public Builder addAllChannel(
           java.lang.Iterable<? extends io.bloombox.schema.marketing.MarketingCampaign.ChannelSettings> values) {
@@ -8926,7 +9104,7 @@ public final class MarketingCampaign {
        * Distribution/channel settings for this campaign.
        * </pre>
        *
-       * <code>repeated .bloombox.schema.marketing.ChannelSettings channel = 7;</code>
+       * <code>repeated .bloombox.marketing.ChannelSettings channel = 7;</code>
        */
       public Builder clearChannel() {
         if (channelBuilder_ == null) {
@@ -8943,7 +9121,7 @@ public final class MarketingCampaign {
        * Distribution/channel settings for this campaign.
        * </pre>
        *
-       * <code>repeated .bloombox.schema.marketing.ChannelSettings channel = 7;</code>
+       * <code>repeated .bloombox.marketing.ChannelSettings channel = 7;</code>
        */
       public Builder removeChannel(int index) {
         if (channelBuilder_ == null) {
@@ -8960,7 +9138,7 @@ public final class MarketingCampaign {
        * Distribution/channel settings for this campaign.
        * </pre>
        *
-       * <code>repeated .bloombox.schema.marketing.ChannelSettings channel = 7;</code>
+       * <code>repeated .bloombox.marketing.ChannelSettings channel = 7;</code>
        */
       public io.bloombox.schema.marketing.MarketingCampaign.ChannelSettings.Builder getChannelBuilder(
           int index) {
@@ -8971,7 +9149,7 @@ public final class MarketingCampaign {
        * Distribution/channel settings for this campaign.
        * </pre>
        *
-       * <code>repeated .bloombox.schema.marketing.ChannelSettings channel = 7;</code>
+       * <code>repeated .bloombox.marketing.ChannelSettings channel = 7;</code>
        */
       public io.bloombox.schema.marketing.MarketingCampaign.ChannelSettingsOrBuilder getChannelOrBuilder(
           int index) {
@@ -8985,7 +9163,7 @@ public final class MarketingCampaign {
        * Distribution/channel settings for this campaign.
        * </pre>
        *
-       * <code>repeated .bloombox.schema.marketing.ChannelSettings channel = 7;</code>
+       * <code>repeated .bloombox.marketing.ChannelSettings channel = 7;</code>
        */
       public java.util.List<? extends io.bloombox.schema.marketing.MarketingCampaign.ChannelSettingsOrBuilder> 
            getChannelOrBuilderList() {
@@ -9000,7 +9178,7 @@ public final class MarketingCampaign {
        * Distribution/channel settings for this campaign.
        * </pre>
        *
-       * <code>repeated .bloombox.schema.marketing.ChannelSettings channel = 7;</code>
+       * <code>repeated .bloombox.marketing.ChannelSettings channel = 7;</code>
        */
       public io.bloombox.schema.marketing.MarketingCampaign.ChannelSettings.Builder addChannelBuilder() {
         return getChannelFieldBuilder().addBuilder(
@@ -9011,7 +9189,7 @@ public final class MarketingCampaign {
        * Distribution/channel settings for this campaign.
        * </pre>
        *
-       * <code>repeated .bloombox.schema.marketing.ChannelSettings channel = 7;</code>
+       * <code>repeated .bloombox.marketing.ChannelSettings channel = 7;</code>
        */
       public io.bloombox.schema.marketing.MarketingCampaign.ChannelSettings.Builder addChannelBuilder(
           int index) {
@@ -9023,7 +9201,7 @@ public final class MarketingCampaign {
        * Distribution/channel settings for this campaign.
        * </pre>
        *
-       * <code>repeated .bloombox.schema.marketing.ChannelSettings channel = 7;</code>
+       * <code>repeated .bloombox.marketing.ChannelSettings channel = 7;</code>
        */
       public java.util.List<io.bloombox.schema.marketing.MarketingCampaign.ChannelSettings.Builder> 
            getChannelBuilderList() {
@@ -9061,7 +9239,7 @@ public final class MarketingCampaign {
        * Tags for this campaign.
        * </pre>
        *
-       * <code>repeated .bloombox.schema.marketing.CampaignTag tag = 8 [(.core.collection) = { ... }</code>
+       * <code>repeated .bloombox.marketing.CampaignTag tag = 8 [(.core.collection) = { ... }</code>
        */
       public java.util.List<io.bloombox.schema.marketing.MarketingCampaign.CampaignTag> getTagList() {
         if (tagBuilder_ == null) {
@@ -9075,7 +9253,7 @@ public final class MarketingCampaign {
        * Tags for this campaign.
        * </pre>
        *
-       * <code>repeated .bloombox.schema.marketing.CampaignTag tag = 8 [(.core.collection) = { ... }</code>
+       * <code>repeated .bloombox.marketing.CampaignTag tag = 8 [(.core.collection) = { ... }</code>
        */
       public int getTagCount() {
         if (tagBuilder_ == null) {
@@ -9089,7 +9267,7 @@ public final class MarketingCampaign {
        * Tags for this campaign.
        * </pre>
        *
-       * <code>repeated .bloombox.schema.marketing.CampaignTag tag = 8 [(.core.collection) = { ... }</code>
+       * <code>repeated .bloombox.marketing.CampaignTag tag = 8 [(.core.collection) = { ... }</code>
        */
       public io.bloombox.schema.marketing.MarketingCampaign.CampaignTag getTag(int index) {
         if (tagBuilder_ == null) {
@@ -9103,7 +9281,7 @@ public final class MarketingCampaign {
        * Tags for this campaign.
        * </pre>
        *
-       * <code>repeated .bloombox.schema.marketing.CampaignTag tag = 8 [(.core.collection) = { ... }</code>
+       * <code>repeated .bloombox.marketing.CampaignTag tag = 8 [(.core.collection) = { ... }</code>
        */
       public Builder setTag(
           int index, io.bloombox.schema.marketing.MarketingCampaign.CampaignTag value) {
@@ -9124,7 +9302,7 @@ public final class MarketingCampaign {
        * Tags for this campaign.
        * </pre>
        *
-       * <code>repeated .bloombox.schema.marketing.CampaignTag tag = 8 [(.core.collection) = { ... }</code>
+       * <code>repeated .bloombox.marketing.CampaignTag tag = 8 [(.core.collection) = { ... }</code>
        */
       public Builder setTag(
           int index, io.bloombox.schema.marketing.MarketingCampaign.CampaignTag.Builder builderForValue) {
@@ -9142,7 +9320,7 @@ public final class MarketingCampaign {
        * Tags for this campaign.
        * </pre>
        *
-       * <code>repeated .bloombox.schema.marketing.CampaignTag tag = 8 [(.core.collection) = { ... }</code>
+       * <code>repeated .bloombox.marketing.CampaignTag tag = 8 [(.core.collection) = { ... }</code>
        */
       public Builder addTag(io.bloombox.schema.marketing.MarketingCampaign.CampaignTag value) {
         if (tagBuilder_ == null) {
@@ -9162,7 +9340,7 @@ public final class MarketingCampaign {
        * Tags for this campaign.
        * </pre>
        *
-       * <code>repeated .bloombox.schema.marketing.CampaignTag tag = 8 [(.core.collection) = { ... }</code>
+       * <code>repeated .bloombox.marketing.CampaignTag tag = 8 [(.core.collection) = { ... }</code>
        */
       public Builder addTag(
           int index, io.bloombox.schema.marketing.MarketingCampaign.CampaignTag value) {
@@ -9183,7 +9361,7 @@ public final class MarketingCampaign {
        * Tags for this campaign.
        * </pre>
        *
-       * <code>repeated .bloombox.schema.marketing.CampaignTag tag = 8 [(.core.collection) = { ... }</code>
+       * <code>repeated .bloombox.marketing.CampaignTag tag = 8 [(.core.collection) = { ... }</code>
        */
       public Builder addTag(
           io.bloombox.schema.marketing.MarketingCampaign.CampaignTag.Builder builderForValue) {
@@ -9201,7 +9379,7 @@ public final class MarketingCampaign {
        * Tags for this campaign.
        * </pre>
        *
-       * <code>repeated .bloombox.schema.marketing.CampaignTag tag = 8 [(.core.collection) = { ... }</code>
+       * <code>repeated .bloombox.marketing.CampaignTag tag = 8 [(.core.collection) = { ... }</code>
        */
       public Builder addTag(
           int index, io.bloombox.schema.marketing.MarketingCampaign.CampaignTag.Builder builderForValue) {
@@ -9219,7 +9397,7 @@ public final class MarketingCampaign {
        * Tags for this campaign.
        * </pre>
        *
-       * <code>repeated .bloombox.schema.marketing.CampaignTag tag = 8 [(.core.collection) = { ... }</code>
+       * <code>repeated .bloombox.marketing.CampaignTag tag = 8 [(.core.collection) = { ... }</code>
        */
       public Builder addAllTag(
           java.lang.Iterable<? extends io.bloombox.schema.marketing.MarketingCampaign.CampaignTag> values) {
@@ -9238,7 +9416,7 @@ public final class MarketingCampaign {
        * Tags for this campaign.
        * </pre>
        *
-       * <code>repeated .bloombox.schema.marketing.CampaignTag tag = 8 [(.core.collection) = { ... }</code>
+       * <code>repeated .bloombox.marketing.CampaignTag tag = 8 [(.core.collection) = { ... }</code>
        */
       public Builder clearTag() {
         if (tagBuilder_ == null) {
@@ -9255,7 +9433,7 @@ public final class MarketingCampaign {
        * Tags for this campaign.
        * </pre>
        *
-       * <code>repeated .bloombox.schema.marketing.CampaignTag tag = 8 [(.core.collection) = { ... }</code>
+       * <code>repeated .bloombox.marketing.CampaignTag tag = 8 [(.core.collection) = { ... }</code>
        */
       public Builder removeTag(int index) {
         if (tagBuilder_ == null) {
@@ -9272,7 +9450,7 @@ public final class MarketingCampaign {
        * Tags for this campaign.
        * </pre>
        *
-       * <code>repeated .bloombox.schema.marketing.CampaignTag tag = 8 [(.core.collection) = { ... }</code>
+       * <code>repeated .bloombox.marketing.CampaignTag tag = 8 [(.core.collection) = { ... }</code>
        */
       public io.bloombox.schema.marketing.MarketingCampaign.CampaignTag.Builder getTagBuilder(
           int index) {
@@ -9283,7 +9461,7 @@ public final class MarketingCampaign {
        * Tags for this campaign.
        * </pre>
        *
-       * <code>repeated .bloombox.schema.marketing.CampaignTag tag = 8 [(.core.collection) = { ... }</code>
+       * <code>repeated .bloombox.marketing.CampaignTag tag = 8 [(.core.collection) = { ... }</code>
        */
       public io.bloombox.schema.marketing.MarketingCampaign.CampaignTagOrBuilder getTagOrBuilder(
           int index) {
@@ -9297,7 +9475,7 @@ public final class MarketingCampaign {
        * Tags for this campaign.
        * </pre>
        *
-       * <code>repeated .bloombox.schema.marketing.CampaignTag tag = 8 [(.core.collection) = { ... }</code>
+       * <code>repeated .bloombox.marketing.CampaignTag tag = 8 [(.core.collection) = { ... }</code>
        */
       public java.util.List<? extends io.bloombox.schema.marketing.MarketingCampaign.CampaignTagOrBuilder> 
            getTagOrBuilderList() {
@@ -9312,7 +9490,7 @@ public final class MarketingCampaign {
        * Tags for this campaign.
        * </pre>
        *
-       * <code>repeated .bloombox.schema.marketing.CampaignTag tag = 8 [(.core.collection) = { ... }</code>
+       * <code>repeated .bloombox.marketing.CampaignTag tag = 8 [(.core.collection) = { ... }</code>
        */
       public io.bloombox.schema.marketing.MarketingCampaign.CampaignTag.Builder addTagBuilder() {
         return getTagFieldBuilder().addBuilder(
@@ -9323,7 +9501,7 @@ public final class MarketingCampaign {
        * Tags for this campaign.
        * </pre>
        *
-       * <code>repeated .bloombox.schema.marketing.CampaignTag tag = 8 [(.core.collection) = { ... }</code>
+       * <code>repeated .bloombox.marketing.CampaignTag tag = 8 [(.core.collection) = { ... }</code>
        */
       public io.bloombox.schema.marketing.MarketingCampaign.CampaignTag.Builder addTagBuilder(
           int index) {
@@ -9335,7 +9513,7 @@ public final class MarketingCampaign {
        * Tags for this campaign.
        * </pre>
        *
-       * <code>repeated .bloombox.schema.marketing.CampaignTag tag = 8 [(.core.collection) = { ... }</code>
+       * <code>repeated .bloombox.marketing.CampaignTag tag = 8 [(.core.collection) = { ... }</code>
        */
       public java.util.List<io.bloombox.schema.marketing.MarketingCampaign.CampaignTag.Builder> 
            getTagBuilderList() {
@@ -9373,7 +9551,7 @@ public final class MarketingCampaign {
        * Ad groups attached to this campaign.
        * </pre>
        *
-       * <code>repeated .bloombox.schema.marketing.AdGroup group = 9 [(.core.collection) = { ... }</code>
+       * <code>repeated .bloombox.marketing.AdGroup group = 9 [(.core.collection) = { ... }</code>
        */
       public java.util.List<io.bloombox.schema.marketing.MarketingCampaign.AdGroup> getGroupList() {
         if (groupBuilder_ == null) {
@@ -9387,7 +9565,7 @@ public final class MarketingCampaign {
        * Ad groups attached to this campaign.
        * </pre>
        *
-       * <code>repeated .bloombox.schema.marketing.AdGroup group = 9 [(.core.collection) = { ... }</code>
+       * <code>repeated .bloombox.marketing.AdGroup group = 9 [(.core.collection) = { ... }</code>
        */
       public int getGroupCount() {
         if (groupBuilder_ == null) {
@@ -9401,7 +9579,7 @@ public final class MarketingCampaign {
        * Ad groups attached to this campaign.
        * </pre>
        *
-       * <code>repeated .bloombox.schema.marketing.AdGroup group = 9 [(.core.collection) = { ... }</code>
+       * <code>repeated .bloombox.marketing.AdGroup group = 9 [(.core.collection) = { ... }</code>
        */
       public io.bloombox.schema.marketing.MarketingCampaign.AdGroup getGroup(int index) {
         if (groupBuilder_ == null) {
@@ -9415,7 +9593,7 @@ public final class MarketingCampaign {
        * Ad groups attached to this campaign.
        * </pre>
        *
-       * <code>repeated .bloombox.schema.marketing.AdGroup group = 9 [(.core.collection) = { ... }</code>
+       * <code>repeated .bloombox.marketing.AdGroup group = 9 [(.core.collection) = { ... }</code>
        */
       public Builder setGroup(
           int index, io.bloombox.schema.marketing.MarketingCampaign.AdGroup value) {
@@ -9436,7 +9614,7 @@ public final class MarketingCampaign {
        * Ad groups attached to this campaign.
        * </pre>
        *
-       * <code>repeated .bloombox.schema.marketing.AdGroup group = 9 [(.core.collection) = { ... }</code>
+       * <code>repeated .bloombox.marketing.AdGroup group = 9 [(.core.collection) = { ... }</code>
        */
       public Builder setGroup(
           int index, io.bloombox.schema.marketing.MarketingCampaign.AdGroup.Builder builderForValue) {
@@ -9454,7 +9632,7 @@ public final class MarketingCampaign {
        * Ad groups attached to this campaign.
        * </pre>
        *
-       * <code>repeated .bloombox.schema.marketing.AdGroup group = 9 [(.core.collection) = { ... }</code>
+       * <code>repeated .bloombox.marketing.AdGroup group = 9 [(.core.collection) = { ... }</code>
        */
       public Builder addGroup(io.bloombox.schema.marketing.MarketingCampaign.AdGroup value) {
         if (groupBuilder_ == null) {
@@ -9474,7 +9652,7 @@ public final class MarketingCampaign {
        * Ad groups attached to this campaign.
        * </pre>
        *
-       * <code>repeated .bloombox.schema.marketing.AdGroup group = 9 [(.core.collection) = { ... }</code>
+       * <code>repeated .bloombox.marketing.AdGroup group = 9 [(.core.collection) = { ... }</code>
        */
       public Builder addGroup(
           int index, io.bloombox.schema.marketing.MarketingCampaign.AdGroup value) {
@@ -9495,7 +9673,7 @@ public final class MarketingCampaign {
        * Ad groups attached to this campaign.
        * </pre>
        *
-       * <code>repeated .bloombox.schema.marketing.AdGroup group = 9 [(.core.collection) = { ... }</code>
+       * <code>repeated .bloombox.marketing.AdGroup group = 9 [(.core.collection) = { ... }</code>
        */
       public Builder addGroup(
           io.bloombox.schema.marketing.MarketingCampaign.AdGroup.Builder builderForValue) {
@@ -9513,7 +9691,7 @@ public final class MarketingCampaign {
        * Ad groups attached to this campaign.
        * </pre>
        *
-       * <code>repeated .bloombox.schema.marketing.AdGroup group = 9 [(.core.collection) = { ... }</code>
+       * <code>repeated .bloombox.marketing.AdGroup group = 9 [(.core.collection) = { ... }</code>
        */
       public Builder addGroup(
           int index, io.bloombox.schema.marketing.MarketingCampaign.AdGroup.Builder builderForValue) {
@@ -9531,7 +9709,7 @@ public final class MarketingCampaign {
        * Ad groups attached to this campaign.
        * </pre>
        *
-       * <code>repeated .bloombox.schema.marketing.AdGroup group = 9 [(.core.collection) = { ... }</code>
+       * <code>repeated .bloombox.marketing.AdGroup group = 9 [(.core.collection) = { ... }</code>
        */
       public Builder addAllGroup(
           java.lang.Iterable<? extends io.bloombox.schema.marketing.MarketingCampaign.AdGroup> values) {
@@ -9550,7 +9728,7 @@ public final class MarketingCampaign {
        * Ad groups attached to this campaign.
        * </pre>
        *
-       * <code>repeated .bloombox.schema.marketing.AdGroup group = 9 [(.core.collection) = { ... }</code>
+       * <code>repeated .bloombox.marketing.AdGroup group = 9 [(.core.collection) = { ... }</code>
        */
       public Builder clearGroup() {
         if (groupBuilder_ == null) {
@@ -9567,7 +9745,7 @@ public final class MarketingCampaign {
        * Ad groups attached to this campaign.
        * </pre>
        *
-       * <code>repeated .bloombox.schema.marketing.AdGroup group = 9 [(.core.collection) = { ... }</code>
+       * <code>repeated .bloombox.marketing.AdGroup group = 9 [(.core.collection) = { ... }</code>
        */
       public Builder removeGroup(int index) {
         if (groupBuilder_ == null) {
@@ -9584,7 +9762,7 @@ public final class MarketingCampaign {
        * Ad groups attached to this campaign.
        * </pre>
        *
-       * <code>repeated .bloombox.schema.marketing.AdGroup group = 9 [(.core.collection) = { ... }</code>
+       * <code>repeated .bloombox.marketing.AdGroup group = 9 [(.core.collection) = { ... }</code>
        */
       public io.bloombox.schema.marketing.MarketingCampaign.AdGroup.Builder getGroupBuilder(
           int index) {
@@ -9595,7 +9773,7 @@ public final class MarketingCampaign {
        * Ad groups attached to this campaign.
        * </pre>
        *
-       * <code>repeated .bloombox.schema.marketing.AdGroup group = 9 [(.core.collection) = { ... }</code>
+       * <code>repeated .bloombox.marketing.AdGroup group = 9 [(.core.collection) = { ... }</code>
        */
       public io.bloombox.schema.marketing.MarketingCampaign.AdGroupOrBuilder getGroupOrBuilder(
           int index) {
@@ -9609,7 +9787,7 @@ public final class MarketingCampaign {
        * Ad groups attached to this campaign.
        * </pre>
        *
-       * <code>repeated .bloombox.schema.marketing.AdGroup group = 9 [(.core.collection) = { ... }</code>
+       * <code>repeated .bloombox.marketing.AdGroup group = 9 [(.core.collection) = { ... }</code>
        */
       public java.util.List<? extends io.bloombox.schema.marketing.MarketingCampaign.AdGroupOrBuilder> 
            getGroupOrBuilderList() {
@@ -9624,7 +9802,7 @@ public final class MarketingCampaign {
        * Ad groups attached to this campaign.
        * </pre>
        *
-       * <code>repeated .bloombox.schema.marketing.AdGroup group = 9 [(.core.collection) = { ... }</code>
+       * <code>repeated .bloombox.marketing.AdGroup group = 9 [(.core.collection) = { ... }</code>
        */
       public io.bloombox.schema.marketing.MarketingCampaign.AdGroup.Builder addGroupBuilder() {
         return getGroupFieldBuilder().addBuilder(
@@ -9635,7 +9813,7 @@ public final class MarketingCampaign {
        * Ad groups attached to this campaign.
        * </pre>
        *
-       * <code>repeated .bloombox.schema.marketing.AdGroup group = 9 [(.core.collection) = { ... }</code>
+       * <code>repeated .bloombox.marketing.AdGroup group = 9 [(.core.collection) = { ... }</code>
        */
       public io.bloombox.schema.marketing.MarketingCampaign.AdGroup.Builder addGroupBuilder(
           int index) {
@@ -9647,7 +9825,7 @@ public final class MarketingCampaign {
        * Ad groups attached to this campaign.
        * </pre>
        *
-       * <code>repeated .bloombox.schema.marketing.AdGroup group = 9 [(.core.collection) = { ... }</code>
+       * <code>repeated .bloombox.marketing.AdGroup group = 9 [(.core.collection) = { ... }</code>
        */
       public java.util.List<io.bloombox.schema.marketing.MarketingCampaign.AdGroup.Builder> 
            getGroupBuilderList() {
@@ -10126,21 +10304,23 @@ public final class MarketingCampaign {
         }
         return modifiedBuilder_;
       }
+      @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
         return super.setUnknownFieldsProto3(unknownFields);
       }
 
+      @java.lang.Override
       public final Builder mergeUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
         return super.mergeUnknownFields(unknownFields);
       }
 
 
-      // @@protoc_insertion_point(builder_scope:bloombox.schema.marketing.Campaign)
+      // @@protoc_insertion_point(builder_scope:bloombox.marketing.Campaign)
     }
 
-    // @@protoc_insertion_point(class_scope:bloombox.schema.marketing.Campaign)
+    // @@protoc_insertion_point(class_scope:bloombox.marketing.Campaign)
     private static final io.bloombox.schema.marketing.MarketingCampaign.Campaign DEFAULT_INSTANCE;
     static {
       DEFAULT_INSTANCE = new io.bloombox.schema.marketing.MarketingCampaign.Campaign();
@@ -10152,6 +10332,7 @@ public final class MarketingCampaign {
 
     private static final com.google.protobuf.Parser<Campaign>
         PARSER = new com.google.protobuf.AbstractParser<Campaign>() {
+      @java.lang.Override
       public Campaign parsePartialFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -10169,6 +10350,7 @@ public final class MarketingCampaign {
       return PARSER;
     }
 
+    @java.lang.Override
     public io.bloombox.schema.marketing.MarketingCampaign.Campaign getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
@@ -10176,40 +10358,40 @@ public final class MarketingCampaign {
   }
 
   private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_bloombox_schema_marketing_CampaignTag_descriptor;
+    internal_static_bloombox_marketing_CampaignTag_descriptor;
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_bloombox_schema_marketing_CampaignTag_fieldAccessorTable;
+      internal_static_bloombox_marketing_CampaignTag_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_bloombox_schema_marketing_ChannelSettings_descriptor;
+    internal_static_bloombox_marketing_ChannelSettings_descriptor;
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_bloombox_schema_marketing_ChannelSettings_fieldAccessorTable;
+      internal_static_bloombox_marketing_ChannelSettings_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_bloombox_schema_marketing_Creative_descriptor;
+    internal_static_bloombox_marketing_Creative_descriptor;
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_bloombox_schema_marketing_Creative_fieldAccessorTable;
+      internal_static_bloombox_marketing_Creative_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_bloombox_schema_marketing_AdGroup_descriptor;
+    internal_static_bloombox_marketing_AdGroup_descriptor;
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_bloombox_schema_marketing_AdGroup_fieldAccessorTable;
+      internal_static_bloombox_marketing_AdGroup_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_bloombox_schema_marketing_CampaignTargeting_descriptor;
+    internal_static_bloombox_marketing_CampaignTargeting_descriptor;
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_bloombox_schema_marketing_CampaignTargeting_fieldAccessorTable;
+      internal_static_bloombox_marketing_CampaignTargeting_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_bloombox_schema_marketing_CampaignKey_descriptor;
+    internal_static_bloombox_marketing_CampaignKey_descriptor;
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_bloombox_schema_marketing_CampaignKey_fieldAccessorTable;
+      internal_static_bloombox_marketing_CampaignKey_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_bloombox_schema_marketing_Campaign_descriptor;
+    internal_static_bloombox_marketing_Campaign_descriptor;
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_bloombox_schema_marketing_Campaign_fieldAccessorTable;
+      internal_static_bloombox_marketing_Campaign_fieldAccessorTable;
 
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
@@ -10219,48 +10401,46 @@ public final class MarketingCampaign {
       descriptor;
   static {
     java.lang.String[] descriptorData = {
-      "\n\030marketing/Campaign.proto\022\031bloombox.sch" +
-      "ema.marketing\032\024core/Datamodel.proto\032\017com" +
-      "ms/SMS.proto\032\021comms/Email.proto\032\021comms/C" +
-      "omms.proto\032\026temporal/Instant.proto\032\031mark" +
-      "eting/Targeting.proto\"0\n\013CampaignTag\022\022\n\002" +
-      "id\030\001 \001(\tB\006\302\265\003\002\010\002\022\r\n\005label\030\002 \001(\t\"\310\001\n\017Chan" +
-      "nelSettings\022/\n\007channel\030\001 \001(\0162\036.bloombox." +
-      "schema.comms.Channel\022\016\n\006active\030\002 \001(\010\0221\n\003" +
-      "sms\030\024 \001(\0132\".bloombox.schema.comms.SMSSet" +
-      "tingsH\000\0225\n\005email\030\025 \001(\0132$.bloombox.schema" +
-      ".comms.EmailSettingsH\000B\n\n\010settings\"}\n\010Cr" +
-      "eative\0220\n\003sms\030\n \001(\0132!.bloombox.schema.co" +
-      "mms.SMSContentH\000\0224\n\005email\030\013 \001(\0132#.bloomb" +
-      "ox.schema.comms.EmailContentH\000B\t\n\007conten" +
-      "t\"\307\001\n\007AdGroup\022\022\n\002id\030\001 \001(\tB\006\302\265\003\002\010\002\0228\n\010cam" +
-      "paign\030\002 \001(\0132&.bloombox.schema.marketing." +
-      "CampaignKey\022/\n\007channel\030\003 \001(\0162\036.bloombox." +
-      "schema.comms.Channel\0225\n\010creative\030\004 \003(\0132#" +
-      ".bloombox.schema.marketing.Creative:\006\202\367\002" +
-      "\002\010\001\"^\n\021CampaignTargeting\022\016\n\006strict\030\001 \001(\010" +
-      "\0229\n\005block\030\002 \003(\0132*.bloombox.schema.market" +
-      "ing.TargetingPolicy\"D\n\013CampaignKey\022\022\n\002id" +
-      "\030\001 \001(\tB\006\302\265\003\002\010\002\022\017\n\007partner\030\002 \001(\t\022\020\n\010locat" +
-      "ion\030\003 \001(\t\"\330\004\n\010Campaign\022;\n\003key\030\001 \001(\0132&.bl" +
-      "oombox.schema.marketing.CampaignKeyB\006\302\265\003" +
-      "\002\010\001\022\014\n\004name\030\002 \001(\t\022\023\n\013description\030\003 \001(\t\0229" +
-      "\n\006status\030\004 \001(\0162).bloombox.schema.marketi" +
-      "ng.CampaignStatus\022\014\n\004live\030\005 \001(\010\022?\n\ttarge" +
-      "ting\030\006 \001(\0132,.bloombox.schema.marketing.C" +
-      "ampaignTargeting\022;\n\007channel\030\007 \003(\0132*.bloo" +
-      "mbox.schema.marketing.ChannelSettings\022A\n" +
-      "\003tag\030\010 \003(\0132&.bloombox.schema.marketing.C" +
-      "ampaignTagB\014\322\265\003\010\010\001\032\004tags\0229\n\005group\030\t \003(\0132" +
-      "\".bloombox.schema.marketing.AdGroupB\006\322\265\003" +
-      "\002\010\001\0221\n\tpublished\030\n \001(\0132\036.opencannabis.te" +
-      "mporal.Instant\022/\n\007created\030\013 \001(\0132\036.openca" +
-      "nnabis.temporal.Instant\0220\n\010modified\030\014 \001(" +
-      "\0132\036.opencannabis.temporal.Instant:\021\202\367\002\r\010" +
-      "\002\022\tcampaigns*K\n\016CampaignStatus\022\013\n\007PENDIN" +
-      "G\020\000\022\t\n\005DRAFT\020\001\022\n\n\006QUEUED\020\002\022\013\n\007SENDING\020\003\022" +
-      "\010\n\004DONE\020\004B;\n\034io.bloombox.schema.marketin" +
-      "gB\021MarketingCampaignH\001P\000\242\002\003BBSb\006proto3"
+      "\n\030marketing/Campaign.proto\022\022bloombox.mar" +
+      "keting\032\024core/Datamodel.proto\032\017comms/SMS." +
+      "proto\032\021comms/Email.proto\032\021comms/Comms.pr" +
+      "oto\032\026temporal/Instant.proto\032\031marketing/T" +
+      "argeting.proto\"0\n\013CampaignTag\022\022\n\002id\030\001 \001(" +
+      "\tB\006\302\265\003\002\010\002\022\r\n\005label\030\002 \001(\t\"\263\001\n\017ChannelSett" +
+      "ings\022(\n\007channel\030\001 \001(\0162\027.bloombox.comms.C" +
+      "hannel\022\016\n\006active\030\002 \001(\010\022*\n\003sms\030\024 \001(\0132\033.bl" +
+      "oombox.comms.SMSSettingsH\000\022.\n\005email\030\025 \001(" +
+      "\0132\035.bloombox.comms.EmailSettingsH\000B\n\n\010se" +
+      "ttings\"o\n\010Creative\022)\n\003sms\030\n \001(\0132\032.bloomb" +
+      "ox.comms.SMSContentH\000\022-\n\005email\030\013 \001(\0132\034.b" +
+      "loombox.comms.EmailContentH\000B\t\n\007content\"" +
+      "\262\001\n\007AdGroup\022\022\n\002id\030\001 \001(\tB\006\302\265\003\002\010\002\0221\n\010campa" +
+      "ign\030\002 \001(\0132\037.bloombox.marketing.CampaignK" +
+      "ey\022(\n\007channel\030\003 \001(\0162\027.bloombox.comms.Cha" +
+      "nnel\022.\n\010creative\030\004 \003(\0132\034.bloombox.market" +
+      "ing.Creative:\006\202\367\002\002\010\001\"W\n\021CampaignTargetin" +
+      "g\022\016\n\006strict\030\001 \001(\010\0222\n\005block\030\002 \003(\0132#.bloom" +
+      "box.marketing.TargetingPolicy\"D\n\013Campaig" +
+      "nKey\022\022\n\002id\030\001 \001(\tB\006\302\265\003\002\010\002\022\017\n\007partner\030\002 \001(" +
+      "\t\022\020\n\010location\030\003 \001(\t\"\256\004\n\010Campaign\0224\n\003key\030" +
+      "\001 \001(\0132\037.bloombox.marketing.CampaignKeyB\006" +
+      "\302\265\003\002\010\001\022\014\n\004name\030\002 \001(\t\022\023\n\013description\030\003 \001(" +
+      "\t\0222\n\006status\030\004 \001(\0162\".bloombox.marketing.C" +
+      "ampaignStatus\022\014\n\004live\030\005 \001(\010\0228\n\ttargeting" +
+      "\030\006 \001(\0132%.bloombox.marketing.CampaignTarg" +
+      "eting\0224\n\007channel\030\007 \003(\0132#.bloombox.market" +
+      "ing.ChannelSettings\022:\n\003tag\030\010 \003(\0132\037.bloom" +
+      "box.marketing.CampaignTagB\014\322\265\003\010\010\001\032\004tags\022" +
+      "2\n\005group\030\t \003(\0132\033.bloombox.marketing.AdGr" +
+      "oupB\006\322\265\003\002\010\001\0221\n\tpublished\030\n \001(\0132\036.opencan" +
+      "nabis.temporal.Instant\022/\n\007created\030\013 \001(\0132" +
+      "\036.opencannabis.temporal.Instant\0220\n\010modif" +
+      "ied\030\014 \001(\0132\036.opencannabis.temporal.Instan" +
+      "t:\021\202\367\002\r\010\002\022\tcampaigns*K\n\016CampaignStatus\022\013" +
+      "\n\007PENDING\020\000\022\t\n\005DRAFT\020\001\022\n\n\006QUEUED\020\002\022\013\n\007SE" +
+      "NDING\020\003\022\010\n\004DONE\020\004B;\n\034io.bloombox.schema." +
+      "marketingB\021MarketingCampaignH\001P\000\242\002\003BBSb\006" +
+      "proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -10280,47 +10460,47 @@ public final class MarketingCampaign {
           io.opencannabis.schema.temporal.TemporalInstant.getDescriptor(),
           io.bloombox.schema.marketing.CampaignTargeting.getDescriptor(),
         }, assigner);
-    internal_static_bloombox_schema_marketing_CampaignTag_descriptor =
+    internal_static_bloombox_marketing_CampaignTag_descriptor =
       getDescriptor().getMessageTypes().get(0);
-    internal_static_bloombox_schema_marketing_CampaignTag_fieldAccessorTable = new
+    internal_static_bloombox_marketing_CampaignTag_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_bloombox_schema_marketing_CampaignTag_descriptor,
+        internal_static_bloombox_marketing_CampaignTag_descriptor,
         new java.lang.String[] { "Id", "Label", });
-    internal_static_bloombox_schema_marketing_ChannelSettings_descriptor =
+    internal_static_bloombox_marketing_ChannelSettings_descriptor =
       getDescriptor().getMessageTypes().get(1);
-    internal_static_bloombox_schema_marketing_ChannelSettings_fieldAccessorTable = new
+    internal_static_bloombox_marketing_ChannelSettings_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_bloombox_schema_marketing_ChannelSettings_descriptor,
+        internal_static_bloombox_marketing_ChannelSettings_descriptor,
         new java.lang.String[] { "Channel", "Active", "Sms", "Email", "Settings", });
-    internal_static_bloombox_schema_marketing_Creative_descriptor =
+    internal_static_bloombox_marketing_Creative_descriptor =
       getDescriptor().getMessageTypes().get(2);
-    internal_static_bloombox_schema_marketing_Creative_fieldAccessorTable = new
+    internal_static_bloombox_marketing_Creative_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_bloombox_schema_marketing_Creative_descriptor,
+        internal_static_bloombox_marketing_Creative_descriptor,
         new java.lang.String[] { "Sms", "Email", "Content", });
-    internal_static_bloombox_schema_marketing_AdGroup_descriptor =
+    internal_static_bloombox_marketing_AdGroup_descriptor =
       getDescriptor().getMessageTypes().get(3);
-    internal_static_bloombox_schema_marketing_AdGroup_fieldAccessorTable = new
+    internal_static_bloombox_marketing_AdGroup_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_bloombox_schema_marketing_AdGroup_descriptor,
+        internal_static_bloombox_marketing_AdGroup_descriptor,
         new java.lang.String[] { "Id", "Campaign", "Channel", "Creative", });
-    internal_static_bloombox_schema_marketing_CampaignTargeting_descriptor =
+    internal_static_bloombox_marketing_CampaignTargeting_descriptor =
       getDescriptor().getMessageTypes().get(4);
-    internal_static_bloombox_schema_marketing_CampaignTargeting_fieldAccessorTable = new
+    internal_static_bloombox_marketing_CampaignTargeting_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_bloombox_schema_marketing_CampaignTargeting_descriptor,
+        internal_static_bloombox_marketing_CampaignTargeting_descriptor,
         new java.lang.String[] { "Strict", "Block", });
-    internal_static_bloombox_schema_marketing_CampaignKey_descriptor =
+    internal_static_bloombox_marketing_CampaignKey_descriptor =
       getDescriptor().getMessageTypes().get(5);
-    internal_static_bloombox_schema_marketing_CampaignKey_fieldAccessorTable = new
+    internal_static_bloombox_marketing_CampaignKey_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_bloombox_schema_marketing_CampaignKey_descriptor,
+        internal_static_bloombox_marketing_CampaignKey_descriptor,
         new java.lang.String[] { "Id", "Partner", "Location", });
-    internal_static_bloombox_schema_marketing_Campaign_descriptor =
+    internal_static_bloombox_marketing_Campaign_descriptor =
       getDescriptor().getMessageTypes().get(6);
-    internal_static_bloombox_schema_marketing_Campaign_fieldAccessorTable = new
+    internal_static_bloombox_marketing_Campaign_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_bloombox_schema_marketing_Campaign_descriptor,
+        internal_static_bloombox_marketing_Campaign_descriptor,
         new java.lang.String[] { "Key", "Name", "Description", "Status", "Live", "Targeting", "Channel", "Tag", "Group", "Published", "Created", "Modified", });
     com.google.protobuf.ExtensionRegistry registry =
         com.google.protobuf.ExtensionRegistry.newInstance();

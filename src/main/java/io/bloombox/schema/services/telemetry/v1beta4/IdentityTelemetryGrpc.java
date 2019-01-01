@@ -1,8 +1,8 @@
 /*
- * Copyright 2018, Bloombox, LLC. All rights reserved.
+ * Copyright 2018, Momentum Ideas, Co. All rights reserved.
  *
  * Source and object computer code contained herein is the private intellectual
- * property of Bloombox, a California Limited Liability Corporation. Use of this
+ * property of Momentum Ideas Co., a Delaware Corporation. Use of this
  * code in source form requires permission in writing before use or the
  * assembly, distribution, or publishing of derivative works, for commercial
  * purposes or any other purpose, from a duly authorized officer of Momentum
@@ -17,20 +17,20 @@
 
 package io.bloombox.schema.services.telemetry.v1beta4;
 
-import static io.grpc.stub.ClientCalls.asyncUnaryCall;
-import static io.grpc.stub.ClientCalls.asyncServerStreamingCall;
-import static io.grpc.stub.ClientCalls.asyncClientStreamingCall;
-import static io.grpc.stub.ClientCalls.asyncBidiStreamingCall;
-import static io.grpc.stub.ClientCalls.blockingUnaryCall;
-import static io.grpc.stub.ClientCalls.blockingServerStreamingCall;
-import static io.grpc.stub.ClientCalls.futureUnaryCall;
 import static io.grpc.MethodDescriptor.generateFullMethodName;
-import static io.grpc.stub.ServerCalls.asyncUnaryCall;
-import static io.grpc.stub.ServerCalls.asyncServerStreamingCall;
-import static io.grpc.stub.ServerCalls.asyncClientStreamingCall;
+import static io.grpc.stub.ClientCalls.asyncBidiStreamingCall;
+import static io.grpc.stub.ClientCalls.asyncClientStreamingCall;
+import static io.grpc.stub.ClientCalls.asyncServerStreamingCall;
+import static io.grpc.stub.ClientCalls.asyncUnaryCall;
+import static io.grpc.stub.ClientCalls.blockingServerStreamingCall;
+import static io.grpc.stub.ClientCalls.blockingUnaryCall;
+import static io.grpc.stub.ClientCalls.futureUnaryCall;
 import static io.grpc.stub.ServerCalls.asyncBidiStreamingCall;
-import static io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall;
+import static io.grpc.stub.ServerCalls.asyncClientStreamingCall;
+import static io.grpc.stub.ServerCalls.asyncServerStreamingCall;
+import static io.grpc.stub.ServerCalls.asyncUnaryCall;
 import static io.grpc.stub.ServerCalls.asyncUnimplementedStreamingCall;
+import static io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall;
 
 /**
  * <pre>
@@ -39,27 +39,46 @@ import static io.grpc.stub.ServerCalls.asyncUnimplementedStreamingCall;
  * </pre>
  */
 @javax.annotation.Generated(
-    value = "by gRPC proto compiler (version 1.6.0-SNAPSHOT)",
+    value = "by gRPC proto compiler (version 1.18.0-SNAPSHOT)",
     comments = "Source: telemetry/v1beta4/TelemetryService_Beta4.proto")
 public final class IdentityTelemetryGrpc {
 
   private IdentityTelemetryGrpc() {}
 
-  public static final String SERVICE_NAME = "bloombox.schema.services.telemetry.v1beta4.IdentityTelemetry";
+  public static final String SERVICE_NAME = "bloombox.services.telemetry.v1beta4.IdentityTelemetry";
 
   // Static method descriptors that strictly reflect the proto.
-  @io.grpc.ExperimentalApi("https://github.com/grpc/grpc-java/issues/1901")
-  public static final io.grpc.MethodDescriptor<io.bloombox.schema.services.telemetry.v1beta4.IdentityEvent.Action,
-      com.google.protobuf.Empty> METHOD_ACTION =
-      io.grpc.MethodDescriptor.<io.bloombox.schema.services.telemetry.v1beta4.IdentityEvent.Action, com.google.protobuf.Empty>newBuilder()
-          .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-          .setFullMethodName(generateFullMethodName(
-              "bloombox.schema.services.telemetry.v1beta4.IdentityTelemetry", "Action"))
-          .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-              io.bloombox.schema.services.telemetry.v1beta4.IdentityEvent.Action.getDefaultInstance()))
-          .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-              com.google.protobuf.Empty.getDefaultInstance()))
-          .build();
+  private static volatile io.grpc.MethodDescriptor<io.bloombox.schema.services.telemetry.v1beta4.IdentityEvent.Action,
+      com.google.protobuf.Empty> getActionMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "Action",
+      requestType = io.bloombox.schema.services.telemetry.v1beta4.IdentityEvent.Action.class,
+      responseType = com.google.protobuf.Empty.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<io.bloombox.schema.services.telemetry.v1beta4.IdentityEvent.Action,
+      com.google.protobuf.Empty> getActionMethod() {
+    io.grpc.MethodDescriptor<io.bloombox.schema.services.telemetry.v1beta4.IdentityEvent.Action, com.google.protobuf.Empty> getActionMethod;
+    if ((getActionMethod = IdentityTelemetryGrpc.getActionMethod) == null) {
+      synchronized (IdentityTelemetryGrpc.class) {
+        if ((getActionMethod = IdentityTelemetryGrpc.getActionMethod) == null) {
+          IdentityTelemetryGrpc.getActionMethod = getActionMethod = 
+              io.grpc.MethodDescriptor.<io.bloombox.schema.services.telemetry.v1beta4.IdentityEvent.Action, com.google.protobuf.Empty>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(
+                  "bloombox.services.telemetry.v1beta4.IdentityTelemetry", "Action"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  io.bloombox.schema.services.telemetry.v1beta4.IdentityEvent.Action.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.google.protobuf.Empty.getDefaultInstance()))
+                  .setSchemaDescriptor(new IdentityTelemetryMethodDescriptorSupplier("Action"))
+                  .build();
+          }
+        }
+     }
+     return getActionMethod;
+  }
 
   /**
    * Creates a new async stub that supports all call types for the service
@@ -99,13 +118,13 @@ public final class IdentityTelemetryGrpc {
      */
     public void action(io.bloombox.schema.services.telemetry.v1beta4.IdentityEvent.Action request,
         io.grpc.stub.StreamObserver<com.google.protobuf.Empty> responseObserver) {
-      asyncUnimplementedUnaryCall(METHOD_ACTION, responseObserver);
+      asyncUnimplementedUnaryCall(getActionMethod(), responseObserver);
     }
 
     @java.lang.Override public final io.grpc.ServerServiceDefinition bindService() {
       return io.grpc.ServerServiceDefinition.builder(getServiceDescriptor())
           .addMethod(
-            METHOD_ACTION,
+            getActionMethod(),
             asyncUnaryCall(
               new MethodHandlers<
                 io.bloombox.schema.services.telemetry.v1beta4.IdentityEvent.Action,
@@ -145,7 +164,7 @@ public final class IdentityTelemetryGrpc {
     public void action(io.bloombox.schema.services.telemetry.v1beta4.IdentityEvent.Action request,
         io.grpc.stub.StreamObserver<com.google.protobuf.Empty> responseObserver) {
       asyncUnaryCall(
-          getChannel().newCall(METHOD_ACTION, getCallOptions()), request, responseObserver);
+          getChannel().newCall(getActionMethod(), getCallOptions()), request, responseObserver);
     }
   }
 
@@ -178,7 +197,7 @@ public final class IdentityTelemetryGrpc {
      */
     public com.google.protobuf.Empty action(io.bloombox.schema.services.telemetry.v1beta4.IdentityEvent.Action request) {
       return blockingUnaryCall(
-          getChannel(), METHOD_ACTION, getCallOptions(), request);
+          getChannel(), getActionMethod(), getCallOptions(), request);
     }
   }
 
@@ -212,7 +231,7 @@ public final class IdentityTelemetryGrpc {
     public com.google.common.util.concurrent.ListenableFuture<com.google.protobuf.Empty> action(
         io.bloombox.schema.services.telemetry.v1beta4.IdentityEvent.Action request) {
       return futureUnaryCall(
-          getChannel().newCall(METHOD_ACTION, getCallOptions()), request);
+          getChannel().newCall(getActionMethod(), getCallOptions()), request);
     }
   }
 
@@ -255,10 +274,38 @@ public final class IdentityTelemetryGrpc {
     }
   }
 
-  private static final class IdentityTelemetryDescriptorSupplier implements io.grpc.protobuf.ProtoFileDescriptorSupplier {
+  private static abstract class IdentityTelemetryBaseDescriptorSupplier
+      implements io.grpc.protobuf.ProtoFileDescriptorSupplier, io.grpc.protobuf.ProtoServiceDescriptorSupplier {
+    IdentityTelemetryBaseDescriptorSupplier() {}
+
     @java.lang.Override
     public com.google.protobuf.Descriptors.FileDescriptor getFileDescriptor() {
       return io.bloombox.schema.services.telemetry.v1beta4.TelemetryServiceBeta4.getDescriptor();
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Descriptors.ServiceDescriptor getServiceDescriptor() {
+      return getFileDescriptor().findServiceByName("IdentityTelemetry");
+    }
+  }
+
+  private static final class IdentityTelemetryFileDescriptorSupplier
+      extends IdentityTelemetryBaseDescriptorSupplier {
+    IdentityTelemetryFileDescriptorSupplier() {}
+  }
+
+  private static final class IdentityTelemetryMethodDescriptorSupplier
+      extends IdentityTelemetryBaseDescriptorSupplier
+      implements io.grpc.protobuf.ProtoMethodDescriptorSupplier {
+    private final String methodName;
+
+    IdentityTelemetryMethodDescriptorSupplier(String methodName) {
+      this.methodName = methodName;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Descriptors.MethodDescriptor getMethodDescriptor() {
+      return getServiceDescriptor().findMethodByName(methodName);
     }
   }
 
@@ -271,8 +318,8 @@ public final class IdentityTelemetryGrpc {
         result = serviceDescriptor;
         if (result == null) {
           serviceDescriptor = result = io.grpc.ServiceDescriptor.newBuilder(SERVICE_NAME)
-              .setSchemaDescriptor(new IdentityTelemetryDescriptorSupplier())
-              .addMethod(METHOD_ACTION)
+              .setSchemaDescriptor(new IdentityTelemetryFileDescriptorSupplier())
+              .addMethod(getActionMethod())
               .build();
         }
       }

@@ -1,11 +1,12 @@
 /*
- * Copyright 2018, Bloombox, LLC.
+ * Copyright 2018, Momentum Ideas, Co. All rights reserved.
  *
- * Licensed under the Apache License, Version 2.0 (the "License");
- * you may not use this file except in compliance with the License.
- * You may obtain a copy of the License at
- *
- *     http://www.apache.org/licenses/LICENSE-2.0
+ * Source and object computer code contained herein is the private intellectual
+ * property of Momentum Ideas Co., a Delaware Corporation. Use of this
+ * code in source form requires permission in writing before use or the
+ * assembly, distribution, or publishing of derivative works, for commercial
+ * purposes or any other purpose, from a duly authorized officer of Momentum
+ * Ideas Co.
  *
  * Unless required by applicable law or agreed to in writing, software
  * distributed under the License is distributed on an "AS IS" BASIS,
@@ -31,7 +32,7 @@ public final class AppStaff {
         (com.google.protobuf.ExtensionRegistryLite) registry);
   }
   public interface StaffUserOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:bloombox.schema.identity.StaffUser)
+      // @@protoc_insertion_point(interface_extends:bloombox.identity.StaffUser)
       com.google.protobuf.MessageOrBuilder {
 
     /**
@@ -89,7 +90,7 @@ public final class AppStaff {
      * Identity account used to authorize access to the point-of-sale.
      * </pre>
      *
-     * <code>.bloombox.schema.identity.UserIdentity identity = 4;</code>
+     * <code>.bloombox.identity.UserIdentity identity = 4;</code>
      */
     boolean hasIdentity();
     /**
@@ -97,7 +98,7 @@ public final class AppStaff {
      * Identity account used to authorize access to the point-of-sale.
      * </pre>
      *
-     * <code>.bloombox.schema.identity.UserIdentity identity = 4;</code>
+     * <code>.bloombox.identity.UserIdentity identity = 4;</code>
      */
     io.bloombox.schema.identity.AppUser.UserIdentity getIdentity();
     /**
@@ -105,7 +106,7 @@ public final class AppStaff {
      * Identity account used to authorize access to the point-of-sale.
      * </pre>
      *
-     * <code>.bloombox.schema.identity.UserIdentity identity = 4;</code>
+     * <code>.bloombox.identity.UserIdentity identity = 4;</code>
      */
     io.bloombox.schema.identity.AppUser.UserIdentityOrBuilder getIdentityOrBuilder();
 
@@ -123,11 +124,11 @@ public final class AppStaff {
    * Specifies a staff user, logged in via POS authorization.
    * </pre>
    *
-   * Protobuf type {@code bloombox.schema.identity.StaffUser}
+   * Protobuf type {@code bloombox.identity.StaffUser}
    */
   public  static final class StaffUser extends
       com.google.protobuf.GeneratedMessageV3 implements
-      // @@protoc_insertion_point(message_implements:bloombox.schema.identity.StaffUser)
+      // @@protoc_insertion_point(message_implements:bloombox.identity.StaffUser)
       StaffUserOrBuilder {
   private static final long serialVersionUID = 0L;
     // Use StaffUser.newBuilder() to construct.
@@ -162,13 +163,6 @@ public final class AppStaff {
             case 0:
               done = true;
               break;
-            default: {
-              if (!parseUnknownFieldProto3(
-                  input, unknownFields, extensionRegistry, tag)) {
-                done = true;
-              }
-              break;
-            }
             case 18: {
               io.opencannabis.schema.person.Name.Builder subBuilder = null;
               if (name_ != null) {
@@ -213,6 +207,13 @@ public final class AppStaff {
               setup_ = input.readBool();
               break;
             }
+            default: {
+              if (!parseUnknownFieldProto3(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
           }
         }
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
@@ -227,12 +228,13 @@ public final class AppStaff {
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return io.bloombox.schema.identity.AppStaff.internal_static_bloombox_schema_identity_StaffUser_descriptor;
+      return io.bloombox.schema.identity.AppStaff.internal_static_bloombox_identity_StaffUser_descriptor;
     }
 
+    @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return io.bloombox.schema.identity.AppStaff.internal_static_bloombox_schema_identity_StaffUser_fieldAccessorTable
+      return io.bloombox.schema.identity.AppStaff.internal_static_bloombox_identity_StaffUser_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
               io.bloombox.schema.identity.AppStaff.StaffUser.class, io.bloombox.schema.identity.AppStaff.StaffUser.Builder.class);
     }
@@ -310,7 +312,7 @@ public final class AppStaff {
      * Identity account used to authorize access to the point-of-sale.
      * </pre>
      *
-     * <code>.bloombox.schema.identity.UserIdentity identity = 4;</code>
+     * <code>.bloombox.identity.UserIdentity identity = 4;</code>
      */
     public boolean hasIdentity() {
       return identity_ != null;
@@ -320,7 +322,7 @@ public final class AppStaff {
      * Identity account used to authorize access to the point-of-sale.
      * </pre>
      *
-     * <code>.bloombox.schema.identity.UserIdentity identity = 4;</code>
+     * <code>.bloombox.identity.UserIdentity identity = 4;</code>
      */
     public io.bloombox.schema.identity.AppUser.UserIdentity getIdentity() {
       return identity_ == null ? io.bloombox.schema.identity.AppUser.UserIdentity.getDefaultInstance() : identity_;
@@ -330,7 +332,7 @@ public final class AppStaff {
      * Identity account used to authorize access to the point-of-sale.
      * </pre>
      *
-     * <code>.bloombox.schema.identity.UserIdentity identity = 4;</code>
+     * <code>.bloombox.identity.UserIdentity identity = 4;</code>
      */
     public io.bloombox.schema.identity.AppUser.UserIdentityOrBuilder getIdentityOrBuilder() {
       return getIdentity();
@@ -350,6 +352,7 @@ public final class AppStaff {
     }
 
     private byte memoizedIsInitialized = -1;
+    @java.lang.Override
     public final boolean isInitialized() {
       byte isInitialized = memoizedIsInitialized;
       if (isInitialized == 1) return true;
@@ -359,6 +362,7 @@ public final class AppStaff {
       return true;
     }
 
+    @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
       if (name_ != null) {
@@ -376,6 +380,7 @@ public final class AppStaff {
       unknownFields.writeTo(output);
     }
 
+    @java.lang.Override
     public int getSerializedSize() {
       int size = memoizedSize;
       if (size != -1) return size;
@@ -531,6 +536,7 @@ public final class AppStaff {
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
 
+    @java.lang.Override
     public Builder newBuilderForType() { return newBuilder(); }
     public static Builder newBuilder() {
       return DEFAULT_INSTANCE.toBuilder();
@@ -538,6 +544,7 @@ public final class AppStaff {
     public static Builder newBuilder(io.bloombox.schema.identity.AppStaff.StaffUser prototype) {
       return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
     }
+    @java.lang.Override
     public Builder toBuilder() {
       return this == DEFAULT_INSTANCE
           ? new Builder() : new Builder().mergeFrom(this);
@@ -554,20 +561,21 @@ public final class AppStaff {
      * Specifies a staff user, logged in via POS authorization.
      * </pre>
      *
-     * Protobuf type {@code bloombox.schema.identity.StaffUser}
+     * Protobuf type {@code bloombox.identity.StaffUser}
      */
     public static final class Builder extends
         com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:bloombox.schema.identity.StaffUser)
+        // @@protoc_insertion_point(builder_implements:bloombox.identity.StaffUser)
         io.bloombox.schema.identity.AppStaff.StaffUserOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return io.bloombox.schema.identity.AppStaff.internal_static_bloombox_schema_identity_StaffUser_descriptor;
+        return io.bloombox.schema.identity.AppStaff.internal_static_bloombox_identity_StaffUser_descriptor;
       }
 
+      @java.lang.Override
       protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return io.bloombox.schema.identity.AppStaff.internal_static_bloombox_schema_identity_StaffUser_fieldAccessorTable
+        return io.bloombox.schema.identity.AppStaff.internal_static_bloombox_identity_StaffUser_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
                 io.bloombox.schema.identity.AppStaff.StaffUser.class, io.bloombox.schema.identity.AppStaff.StaffUser.Builder.class);
       }
@@ -587,6 +595,7 @@ public final class AppStaff {
                 .alwaysUseFieldBuilders) {
         }
       }
+      @java.lang.Override
       public Builder clear() {
         super.clear();
         if (nameBuilder_ == null) {
@@ -612,15 +621,18 @@ public final class AppStaff {
         return this;
       }
 
+      @java.lang.Override
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return io.bloombox.schema.identity.AppStaff.internal_static_bloombox_schema_identity_StaffUser_descriptor;
+        return io.bloombox.schema.identity.AppStaff.internal_static_bloombox_identity_StaffUser_descriptor;
       }
 
+      @java.lang.Override
       public io.bloombox.schema.identity.AppStaff.StaffUser getDefaultInstanceForType() {
         return io.bloombox.schema.identity.AppStaff.StaffUser.getDefaultInstance();
       }
 
+      @java.lang.Override
       public io.bloombox.schema.identity.AppStaff.StaffUser build() {
         io.bloombox.schema.identity.AppStaff.StaffUser result = buildPartial();
         if (!result.isInitialized()) {
@@ -629,6 +641,7 @@ public final class AppStaff {
         return result;
       }
 
+      @java.lang.Override
       public io.bloombox.schema.identity.AppStaff.StaffUser buildPartial() {
         io.bloombox.schema.identity.AppStaff.StaffUser result = new io.bloombox.schema.identity.AppStaff.StaffUser(this);
         if (nameBuilder_ == null) {
@@ -651,32 +664,39 @@ public final class AppStaff {
         return result;
       }
 
+      @java.lang.Override
       public Builder clone() {
         return (Builder) super.clone();
       }
+      @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
         return (Builder) super.setField(field, value);
       }
+      @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
         return (Builder) super.clearField(field);
       }
+      @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
         return (Builder) super.clearOneof(oneof);
       }
+      @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
         return (Builder) super.setRepeatedField(field, index, value);
       }
+      @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
         return (Builder) super.addRepeatedField(field, value);
       }
+      @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
         if (other instanceof io.bloombox.schema.identity.AppStaff.StaffUser) {
           return mergeFrom((io.bloombox.schema.identity.AppStaff.StaffUser)other);
@@ -705,10 +725,12 @@ public final class AppStaff {
         return this;
       }
 
+      @java.lang.Override
       public final boolean isInitialized() {
         return true;
       }
 
+      @java.lang.Override
       public Builder mergeFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -1041,7 +1063,7 @@ public final class AppStaff {
        * Identity account used to authorize access to the point-of-sale.
        * </pre>
        *
-       * <code>.bloombox.schema.identity.UserIdentity identity = 4;</code>
+       * <code>.bloombox.identity.UserIdentity identity = 4;</code>
        */
       public boolean hasIdentity() {
         return identityBuilder_ != null || identity_ != null;
@@ -1051,7 +1073,7 @@ public final class AppStaff {
        * Identity account used to authorize access to the point-of-sale.
        * </pre>
        *
-       * <code>.bloombox.schema.identity.UserIdentity identity = 4;</code>
+       * <code>.bloombox.identity.UserIdentity identity = 4;</code>
        */
       public io.bloombox.schema.identity.AppUser.UserIdentity getIdentity() {
         if (identityBuilder_ == null) {
@@ -1065,7 +1087,7 @@ public final class AppStaff {
        * Identity account used to authorize access to the point-of-sale.
        * </pre>
        *
-       * <code>.bloombox.schema.identity.UserIdentity identity = 4;</code>
+       * <code>.bloombox.identity.UserIdentity identity = 4;</code>
        */
       public Builder setIdentity(io.bloombox.schema.identity.AppUser.UserIdentity value) {
         if (identityBuilder_ == null) {
@@ -1085,7 +1107,7 @@ public final class AppStaff {
        * Identity account used to authorize access to the point-of-sale.
        * </pre>
        *
-       * <code>.bloombox.schema.identity.UserIdentity identity = 4;</code>
+       * <code>.bloombox.identity.UserIdentity identity = 4;</code>
        */
       public Builder setIdentity(
           io.bloombox.schema.identity.AppUser.UserIdentity.Builder builderForValue) {
@@ -1103,7 +1125,7 @@ public final class AppStaff {
        * Identity account used to authorize access to the point-of-sale.
        * </pre>
        *
-       * <code>.bloombox.schema.identity.UserIdentity identity = 4;</code>
+       * <code>.bloombox.identity.UserIdentity identity = 4;</code>
        */
       public Builder mergeIdentity(io.bloombox.schema.identity.AppUser.UserIdentity value) {
         if (identityBuilder_ == null) {
@@ -1125,7 +1147,7 @@ public final class AppStaff {
        * Identity account used to authorize access to the point-of-sale.
        * </pre>
        *
-       * <code>.bloombox.schema.identity.UserIdentity identity = 4;</code>
+       * <code>.bloombox.identity.UserIdentity identity = 4;</code>
        */
       public Builder clearIdentity() {
         if (identityBuilder_ == null) {
@@ -1143,7 +1165,7 @@ public final class AppStaff {
        * Identity account used to authorize access to the point-of-sale.
        * </pre>
        *
-       * <code>.bloombox.schema.identity.UserIdentity identity = 4;</code>
+       * <code>.bloombox.identity.UserIdentity identity = 4;</code>
        */
       public io.bloombox.schema.identity.AppUser.UserIdentity.Builder getIdentityBuilder() {
         
@@ -1155,7 +1177,7 @@ public final class AppStaff {
        * Identity account used to authorize access to the point-of-sale.
        * </pre>
        *
-       * <code>.bloombox.schema.identity.UserIdentity identity = 4;</code>
+       * <code>.bloombox.identity.UserIdentity identity = 4;</code>
        */
       public io.bloombox.schema.identity.AppUser.UserIdentityOrBuilder getIdentityOrBuilder() {
         if (identityBuilder_ != null) {
@@ -1170,7 +1192,7 @@ public final class AppStaff {
        * Identity account used to authorize access to the point-of-sale.
        * </pre>
        *
-       * <code>.bloombox.schema.identity.UserIdentity identity = 4;</code>
+       * <code>.bloombox.identity.UserIdentity identity = 4;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
           io.bloombox.schema.identity.AppUser.UserIdentity, io.bloombox.schema.identity.AppUser.UserIdentity.Builder, io.bloombox.schema.identity.AppUser.UserIdentityOrBuilder> 
@@ -1223,21 +1245,23 @@ public final class AppStaff {
         onChanged();
         return this;
       }
+      @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
         return super.setUnknownFieldsProto3(unknownFields);
       }
 
+      @java.lang.Override
       public final Builder mergeUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
         return super.mergeUnknownFields(unknownFields);
       }
 
 
-      // @@protoc_insertion_point(builder_scope:bloombox.schema.identity.StaffUser)
+      // @@protoc_insertion_point(builder_scope:bloombox.identity.StaffUser)
     }
 
-    // @@protoc_insertion_point(class_scope:bloombox.schema.identity.StaffUser)
+    // @@protoc_insertion_point(class_scope:bloombox.identity.StaffUser)
     private static final io.bloombox.schema.identity.AppStaff.StaffUser DEFAULT_INSTANCE;
     static {
       DEFAULT_INSTANCE = new io.bloombox.schema.identity.AppStaff.StaffUser();
@@ -1249,6 +1273,7 @@ public final class AppStaff {
 
     private static final com.google.protobuf.Parser<StaffUser>
         PARSER = new com.google.protobuf.AbstractParser<StaffUser>() {
+      @java.lang.Override
       public StaffUser parsePartialFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -1266,6 +1291,7 @@ public final class AppStaff {
       return PARSER;
     }
 
+    @java.lang.Override
     public io.bloombox.schema.identity.AppStaff.StaffUser getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
@@ -1273,10 +1299,10 @@ public final class AppStaff {
   }
 
   private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_bloombox_schema_identity_StaffUser_descriptor;
+    internal_static_bloombox_identity_StaffUser_descriptor;
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_bloombox_schema_identity_StaffUser_fieldAccessorTable;
+      internal_static_bloombox_identity_StaffUser_fieldAccessorTable;
 
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
@@ -1286,16 +1312,16 @@ public final class AppStaff {
       descriptor;
   static {
     java.lang.String[] descriptorData = {
-      "\n\030identity/StaffUser.proto\022\030bloombox.sch" +
-      "ema.identity\032\024core/Datamodel.proto\032\023iden" +
-      "tity/User.proto\032\024media/MediaKey.proto\032\027p" +
-      "erson/PersonName.proto\"\255\001\n\tStaffUser\022\'\n\004" +
-      "name\030\002 \001(\0132\031.opencannabis.person.Name\022.\n" +
-      "\010portrait\030\003 \001(\0132\034.opencannabis.media.Med" +
-      "iaKey\0228\n\010identity\030\004 \001(\0132&.bloombox.schem" +
-      "a.identity.UserIdentity\022\r\n\005setup\030\005 \001(\010B1" +
-      "\n\033io.bloombox.schema.identityB\010AppStaffH" +
-      "\001P\000\242\002\003BBSb\006proto3"
+      "\n\030identity/StaffUser.proto\022\021bloombox.ide" +
+      "ntity\032\024core/Datamodel.proto\032\023identity/Us" +
+      "er.proto\032\024media/MediaKey.proto\032\027person/P" +
+      "ersonName.proto\"\246\001\n\tStaffUser\022\'\n\004name\030\002 " +
+      "\001(\0132\031.opencannabis.person.Name\022.\n\010portra" +
+      "it\030\003 \001(\0132\034.opencannabis.media.MediaKey\0221" +
+      "\n\010identity\030\004 \001(\0132\037.bloombox.identity.Use" +
+      "rIdentity\022\r\n\005setup\030\005 \001(\010B1\n\033io.bloombox." +
+      "schema.identityB\010AppStaffH\001P\000\242\002\003BBSb\006pro" +
+      "to3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -1313,11 +1339,11 @@ public final class AppStaff {
           io.opencannabis.schema.media.MediaItemKey.getDescriptor(),
           io.opencannabis.schema.person.PersonName.getDescriptor(),
         }, assigner);
-    internal_static_bloombox_schema_identity_StaffUser_descriptor =
+    internal_static_bloombox_identity_StaffUser_descriptor =
       getDescriptor().getMessageTypes().get(0);
-    internal_static_bloombox_schema_identity_StaffUser_fieldAccessorTable = new
+    internal_static_bloombox_identity_StaffUser_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_bloombox_schema_identity_StaffUser_descriptor,
+        internal_static_bloombox_identity_StaffUser_descriptor,
         new java.lang.String[] { "Name", "Portrait", "Identity", "Setup", });
     core.Datamodel.getDescriptor();
     io.bloombox.schema.identity.AppUser.getDescriptor();

@@ -1,8 +1,8 @@
 /*
- * Copyright 2018, Bloombox, LLC. All rights reserved.
+ * Copyright 2018, Momentum Ideas, Co. All rights reserved.
  *
  * Source and object computer code contained herein is the private intellectual
- * property of Bloombox, a California Limited Liability Corporation. Use of this
+ * property of Momentum Ideas Co., a Delaware Corporation. Use of this
  * code in source form requires permission in writing before use or the
  * assembly, distribution, or publishing of derivative works, for commercial
  * purposes or any other purpose, from a duly authorized officer of Momentum
@@ -36,7 +36,7 @@ public final class ApplicationContext {
    * Enumerates types of applications that may run on a device and report telemetry information.
    * </pre>
    *
-   * Protobuf enum {@code bloombox.schema.analytics.context.ApplicationType}
+   * Protobuf enum {@code bloombox.analytics.context.ApplicationType}
    */
   public enum ApplicationType
       implements com.google.protobuf.ProtocolMessageEnum {
@@ -146,11 +146,11 @@ public final class ApplicationContext {
       this.value = value;
     }
 
-    // @@protoc_insertion_point(enum_scope:bloombox.schema.analytics.context.ApplicationType)
+    // @@protoc_insertion_point(enum_scope:bloombox.analytics.context.ApplicationType)
   }
 
   public interface WebApplicationOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:bloombox.schema.analytics.context.WebApplication)
+      // @@protoc_insertion_point(interface_extends:bloombox.analytics.context.WebApplication)
       com.google.protobuf.MessageOrBuilder {
 
     /**
@@ -266,11 +266,11 @@ public final class ApplicationContext {
    * Specifies information about a web application reporting information to the telemetry service.
    * </pre>
    *
-   * Protobuf type {@code bloombox.schema.analytics.context.WebApplication}
+   * Protobuf type {@code bloombox.analytics.context.WebApplication}
    */
   public  static final class WebApplication extends
       com.google.protobuf.GeneratedMessageV3 implements
-      // @@protoc_insertion_point(message_implements:bloombox.schema.analytics.context.WebApplication)
+      // @@protoc_insertion_point(message_implements:bloombox.analytics.context.WebApplication)
       WebApplicationOrBuilder {
   private static final long serialVersionUID = 0L;
     // Use WebApplication.newBuilder() to construct.
@@ -310,13 +310,6 @@ public final class ApplicationContext {
             case 0:
               done = true;
               break;
-            default: {
-              if (!parseUnknownFieldProto3(
-                  input, unknownFields, extensionRegistry, tag)) {
-                done = true;
-              }
-              break;
-            }
             case 10: {
               java.lang.String s = input.readStringRequireUtf8();
 
@@ -353,6 +346,13 @@ public final class ApplicationContext {
               protocol_ = s;
               break;
             }
+            default: {
+              if (!parseUnknownFieldProto3(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
           }
         }
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
@@ -367,12 +367,13 @@ public final class ApplicationContext {
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return io.bloombox.schema.telemetry.context.ApplicationContext.internal_static_bloombox_schema_analytics_context_WebApplication_descriptor;
+      return io.bloombox.schema.telemetry.context.ApplicationContext.internal_static_bloombox_analytics_context_WebApplication_descriptor;
     }
 
+    @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return io.bloombox.schema.telemetry.context.ApplicationContext.internal_static_bloombox_schema_analytics_context_WebApplication_fieldAccessorTable
+      return io.bloombox.schema.telemetry.context.ApplicationContext.internal_static_bloombox_analytics_context_WebApplication_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
               io.bloombox.schema.telemetry.context.ApplicationContext.WebApplication.class, io.bloombox.schema.telemetry.context.ApplicationContext.WebApplication.Builder.class);
     }
@@ -630,6 +631,7 @@ public final class ApplicationContext {
     }
 
     private byte memoizedIsInitialized = -1;
+    @java.lang.Override
     public final boolean isInitialized() {
       byte isInitialized = memoizedIsInitialized;
       if (isInitialized == 1) return true;
@@ -639,6 +641,7 @@ public final class ApplicationContext {
       return true;
     }
 
+    @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
       if (!getOriginBytes().isEmpty()) {
@@ -662,6 +665,7 @@ public final class ApplicationContext {
       unknownFields.writeTo(output);
     }
 
+    @java.lang.Override
     public int getSerializedSize() {
       int size = memoizedSize;
       if (size != -1) return size;
@@ -811,6 +815,7 @@ public final class ApplicationContext {
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
 
+    @java.lang.Override
     public Builder newBuilderForType() { return newBuilder(); }
     public static Builder newBuilder() {
       return DEFAULT_INSTANCE.toBuilder();
@@ -818,6 +823,7 @@ public final class ApplicationContext {
     public static Builder newBuilder(io.bloombox.schema.telemetry.context.ApplicationContext.WebApplication prototype) {
       return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
     }
+    @java.lang.Override
     public Builder toBuilder() {
       return this == DEFAULT_INSTANCE
           ? new Builder() : new Builder().mergeFrom(this);
@@ -834,20 +840,21 @@ public final class ApplicationContext {
      * Specifies information about a web application reporting information to the telemetry service.
      * </pre>
      *
-     * Protobuf type {@code bloombox.schema.analytics.context.WebApplication}
+     * Protobuf type {@code bloombox.analytics.context.WebApplication}
      */
     public static final class Builder extends
         com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:bloombox.schema.analytics.context.WebApplication)
+        // @@protoc_insertion_point(builder_implements:bloombox.analytics.context.WebApplication)
         io.bloombox.schema.telemetry.context.ApplicationContext.WebApplicationOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return io.bloombox.schema.telemetry.context.ApplicationContext.internal_static_bloombox_schema_analytics_context_WebApplication_descriptor;
+        return io.bloombox.schema.telemetry.context.ApplicationContext.internal_static_bloombox_analytics_context_WebApplication_descriptor;
       }
 
+      @java.lang.Override
       protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return io.bloombox.schema.telemetry.context.ApplicationContext.internal_static_bloombox_schema_analytics_context_WebApplication_fieldAccessorTable
+        return io.bloombox.schema.telemetry.context.ApplicationContext.internal_static_bloombox_analytics_context_WebApplication_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
                 io.bloombox.schema.telemetry.context.ApplicationContext.WebApplication.class, io.bloombox.schema.telemetry.context.ApplicationContext.WebApplication.Builder.class);
       }
@@ -867,6 +874,7 @@ public final class ApplicationContext {
                 .alwaysUseFieldBuilders) {
         }
       }
+      @java.lang.Override
       public Builder clear() {
         super.clear();
         origin_ = "";
@@ -884,15 +892,18 @@ public final class ApplicationContext {
         return this;
       }
 
+      @java.lang.Override
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return io.bloombox.schema.telemetry.context.ApplicationContext.internal_static_bloombox_schema_analytics_context_WebApplication_descriptor;
+        return io.bloombox.schema.telemetry.context.ApplicationContext.internal_static_bloombox_analytics_context_WebApplication_descriptor;
       }
 
+      @java.lang.Override
       public io.bloombox.schema.telemetry.context.ApplicationContext.WebApplication getDefaultInstanceForType() {
         return io.bloombox.schema.telemetry.context.ApplicationContext.WebApplication.getDefaultInstance();
       }
 
+      @java.lang.Override
       public io.bloombox.schema.telemetry.context.ApplicationContext.WebApplication build() {
         io.bloombox.schema.telemetry.context.ApplicationContext.WebApplication result = buildPartial();
         if (!result.isInitialized()) {
@@ -901,6 +912,7 @@ public final class ApplicationContext {
         return result;
       }
 
+      @java.lang.Override
       public io.bloombox.schema.telemetry.context.ApplicationContext.WebApplication buildPartial() {
         io.bloombox.schema.telemetry.context.ApplicationContext.WebApplication result = new io.bloombox.schema.telemetry.context.ApplicationContext.WebApplication(this);
         result.origin_ = origin_;
@@ -913,32 +925,39 @@ public final class ApplicationContext {
         return result;
       }
 
+      @java.lang.Override
       public Builder clone() {
         return (Builder) super.clone();
       }
+      @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
         return (Builder) super.setField(field, value);
       }
+      @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
         return (Builder) super.clearField(field);
       }
+      @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
         return (Builder) super.clearOneof(oneof);
       }
+      @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
         return (Builder) super.setRepeatedField(field, index, value);
       }
+      @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
         return (Builder) super.addRepeatedField(field, value);
       }
+      @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
         if (other instanceof io.bloombox.schema.telemetry.context.ApplicationContext.WebApplication) {
           return mergeFrom((io.bloombox.schema.telemetry.context.ApplicationContext.WebApplication)other);
@@ -979,10 +998,12 @@ public final class ApplicationContext {
         return this;
       }
 
+      @java.lang.Override
       public final boolean isInitialized() {
         return true;
       }
 
+      @java.lang.Override
       public Builder mergeFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -1534,21 +1555,23 @@ public final class ApplicationContext {
         onChanged();
         return this;
       }
+      @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
         return super.setUnknownFieldsProto3(unknownFields);
       }
 
+      @java.lang.Override
       public final Builder mergeUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
         return super.mergeUnknownFields(unknownFields);
       }
 
 
-      // @@protoc_insertion_point(builder_scope:bloombox.schema.analytics.context.WebApplication)
+      // @@protoc_insertion_point(builder_scope:bloombox.analytics.context.WebApplication)
     }
 
-    // @@protoc_insertion_point(class_scope:bloombox.schema.analytics.context.WebApplication)
+    // @@protoc_insertion_point(class_scope:bloombox.analytics.context.WebApplication)
     private static final io.bloombox.schema.telemetry.context.ApplicationContext.WebApplication DEFAULT_INSTANCE;
     static {
       DEFAULT_INSTANCE = new io.bloombox.schema.telemetry.context.ApplicationContext.WebApplication();
@@ -1560,6 +1583,7 @@ public final class ApplicationContext {
 
     private static final com.google.protobuf.Parser<WebApplication>
         PARSER = new com.google.protobuf.AbstractParser<WebApplication>() {
+      @java.lang.Override
       public WebApplication parsePartialFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -1577,6 +1601,7 @@ public final class ApplicationContext {
       return PARSER;
     }
 
+    @java.lang.Override
     public io.bloombox.schema.telemetry.context.ApplicationContext.WebApplication getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
@@ -1584,7 +1609,7 @@ public final class ApplicationContext {
   }
 
   public interface DeviceApplicationOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:bloombox.schema.analytics.context.DeviceApplication)
+      // @@protoc_insertion_point(interface_extends:bloombox.analytics.context.DeviceApplication)
       com.google.protobuf.MessageOrBuilder {
 
     /**
@@ -1592,7 +1617,7 @@ public final class ApplicationContext {
      * Type of application.
      * </pre>
      *
-     * <code>.bloombox.schema.analytics.context.ApplicationType type = 1 [(.gen_bq_schema.require) = true, (.gen_bq_schema.description) = "Type of application."];</code>
+     * <code>.bloombox.analytics.context.ApplicationType type = 1 [(.gen_bq_schema.require) = true, (.gen_bq_schema.description) = "Type of application."];</code>
      */
     int getTypeValue();
     /**
@@ -1600,7 +1625,7 @@ public final class ApplicationContext {
      * Type of application.
      * </pre>
      *
-     * <code>.bloombox.schema.analytics.context.ApplicationType type = 1 [(.gen_bq_schema.require) = true, (.gen_bq_schema.description) = "Type of application."];</code>
+     * <code>.bloombox.analytics.context.ApplicationType type = 1 [(.gen_bq_schema.require) = true, (.gen_bq_schema.description) = "Type of application."];</code>
      */
     io.bloombox.schema.telemetry.context.ApplicationContext.ApplicationType getType();
 
@@ -1634,7 +1659,7 @@ public final class ApplicationContext {
      * Specifies information about an event that was sent from a web application.
      * </pre>
      *
-     * <code>.bloombox.schema.analytics.context.WebApplication web = 10 [(.gen_bq_schema.description) = "Specifies information about an event that was sent from a web application."];</code>
+     * <code>.bloombox.analytics.context.WebApplication web = 10 [(.gen_bq_schema.description) = "Specifies information about an event that was sent from a web application."];</code>
      */
     boolean hasWeb();
     /**
@@ -1642,7 +1667,7 @@ public final class ApplicationContext {
      * Specifies information about an event that was sent from a web application.
      * </pre>
      *
-     * <code>.bloombox.schema.analytics.context.WebApplication web = 10 [(.gen_bq_schema.description) = "Specifies information about an event that was sent from a web application."];</code>
+     * <code>.bloombox.analytics.context.WebApplication web = 10 [(.gen_bq_schema.description) = "Specifies information about an event that was sent from a web application."];</code>
      */
     io.bloombox.schema.telemetry.context.ApplicationContext.WebApplication getWeb();
     /**
@@ -1650,7 +1675,7 @@ public final class ApplicationContext {
      * Specifies information about an event that was sent from a web application.
      * </pre>
      *
-     * <code>.bloombox.schema.analytics.context.WebApplication web = 10 [(.gen_bq_schema.description) = "Specifies information about an event that was sent from a web application."];</code>
+     * <code>.bloombox.analytics.context.WebApplication web = 10 [(.gen_bq_schema.description) = "Specifies information about an event that was sent from a web application."];</code>
      */
     io.bloombox.schema.telemetry.context.ApplicationContext.WebApplicationOrBuilder getWebOrBuilder();
 
@@ -1697,11 +1722,11 @@ public final class ApplicationContext {
    * Specifies information about the application reporting information to the telemetry service.
    * </pre>
    *
-   * Protobuf type {@code bloombox.schema.analytics.context.DeviceApplication}
+   * Protobuf type {@code bloombox.analytics.context.DeviceApplication}
    */
   public  static final class DeviceApplication extends
       com.google.protobuf.GeneratedMessageV3 implements
-      // @@protoc_insertion_point(message_implements:bloombox.schema.analytics.context.DeviceApplication)
+      // @@protoc_insertion_point(message_implements:bloombox.analytics.context.DeviceApplication)
       DeviceApplicationOrBuilder {
   private static final long serialVersionUID = 0L;
     // Use DeviceApplication.newBuilder() to construct.
@@ -1736,13 +1761,6 @@ public final class ApplicationContext {
             case 0:
               done = true;
               break;
-            default: {
-              if (!parseUnknownFieldProto3(
-                  input, unknownFields, extensionRegistry, tag)) {
-                done = true;
-              }
-              break;
-            }
             case 8: {
               int rawValue = input.readEnum();
 
@@ -1788,6 +1806,13 @@ public final class ApplicationContext {
               spec_ = s;
               break;
             }
+            default: {
+              if (!parseUnknownFieldProto3(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
           }
         }
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
@@ -1802,12 +1827,13 @@ public final class ApplicationContext {
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return io.bloombox.schema.telemetry.context.ApplicationContext.internal_static_bloombox_schema_analytics_context_DeviceApplication_descriptor;
+      return io.bloombox.schema.telemetry.context.ApplicationContext.internal_static_bloombox_analytics_context_DeviceApplication_descriptor;
     }
 
+    @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return io.bloombox.schema.telemetry.context.ApplicationContext.internal_static_bloombox_schema_analytics_context_DeviceApplication_fieldAccessorTable
+      return io.bloombox.schema.telemetry.context.ApplicationContext.internal_static_bloombox_analytics_context_DeviceApplication_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
               io.bloombox.schema.telemetry.context.ApplicationContext.DeviceApplication.class, io.bloombox.schema.telemetry.context.ApplicationContext.DeviceApplication.Builder.class);
     }
@@ -1859,7 +1885,7 @@ public final class ApplicationContext {
      * Type of application.
      * </pre>
      *
-     * <code>.bloombox.schema.analytics.context.ApplicationType type = 1 [(.gen_bq_schema.require) = true, (.gen_bq_schema.description) = "Type of application."];</code>
+     * <code>.bloombox.analytics.context.ApplicationType type = 1 [(.gen_bq_schema.require) = true, (.gen_bq_schema.description) = "Type of application."];</code>
      */
     public int getTypeValue() {
       return type_;
@@ -1869,9 +1895,10 @@ public final class ApplicationContext {
      * Type of application.
      * </pre>
      *
-     * <code>.bloombox.schema.analytics.context.ApplicationType type = 1 [(.gen_bq_schema.require) = true, (.gen_bq_schema.description) = "Type of application."];</code>
+     * <code>.bloombox.analytics.context.ApplicationType type = 1 [(.gen_bq_schema.require) = true, (.gen_bq_schema.description) = "Type of application."];</code>
      */
     public io.bloombox.schema.telemetry.context.ApplicationContext.ApplicationType getType() {
+      @SuppressWarnings("deprecation")
       io.bloombox.schema.telemetry.context.ApplicationContext.ApplicationType result = io.bloombox.schema.telemetry.context.ApplicationContext.ApplicationType.valueOf(type_);
       return result == null ? io.bloombox.schema.telemetry.context.ApplicationContext.ApplicationType.UNRECOGNIZED : result;
     }
@@ -1915,7 +1942,7 @@ public final class ApplicationContext {
      * Specifies information about an event that was sent from a web application.
      * </pre>
      *
-     * <code>.bloombox.schema.analytics.context.WebApplication web = 10 [(.gen_bq_schema.description) = "Specifies information about an event that was sent from a web application."];</code>
+     * <code>.bloombox.analytics.context.WebApplication web = 10 [(.gen_bq_schema.description) = "Specifies information about an event that was sent from a web application."];</code>
      */
     public boolean hasWeb() {
       return specCase_ == 10;
@@ -1925,7 +1952,7 @@ public final class ApplicationContext {
      * Specifies information about an event that was sent from a web application.
      * </pre>
      *
-     * <code>.bloombox.schema.analytics.context.WebApplication web = 10 [(.gen_bq_schema.description) = "Specifies information about an event that was sent from a web application."];</code>
+     * <code>.bloombox.analytics.context.WebApplication web = 10 [(.gen_bq_schema.description) = "Specifies information about an event that was sent from a web application."];</code>
      */
     public io.bloombox.schema.telemetry.context.ApplicationContext.WebApplication getWeb() {
       if (specCase_ == 10) {
@@ -1938,7 +1965,7 @@ public final class ApplicationContext {
      * Specifies information about an event that was sent from a web application.
      * </pre>
      *
-     * <code>.bloombox.schema.analytics.context.WebApplication web = 10 [(.gen_bq_schema.description) = "Specifies information about an event that was sent from a web application."];</code>
+     * <code>.bloombox.analytics.context.WebApplication web = 10 [(.gen_bq_schema.description) = "Specifies information about an event that was sent from a web application."];</code>
      */
     public io.bloombox.schema.telemetry.context.ApplicationContext.WebApplicationOrBuilder getWebOrBuilder() {
       if (specCase_ == 10) {
@@ -2050,6 +2077,7 @@ public final class ApplicationContext {
     }
 
     private byte memoizedIsInitialized = -1;
+    @java.lang.Override
     public final boolean isInitialized() {
       byte isInitialized = memoizedIsInitialized;
       if (isInitialized == 1) return true;
@@ -2059,6 +2087,7 @@ public final class ApplicationContext {
       return true;
     }
 
+    @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
       if (type_ != io.bloombox.schema.telemetry.context.ApplicationContext.ApplicationType.INTERNAL.getNumber()) {
@@ -2079,6 +2108,7 @@ public final class ApplicationContext {
       unknownFields.writeTo(output);
     }
 
+    @java.lang.Override
     public int getSerializedSize() {
       int size = memoizedSize;
       if (size != -1) return size;
@@ -2251,6 +2281,7 @@ public final class ApplicationContext {
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
 
+    @java.lang.Override
     public Builder newBuilderForType() { return newBuilder(); }
     public static Builder newBuilder() {
       return DEFAULT_INSTANCE.toBuilder();
@@ -2258,6 +2289,7 @@ public final class ApplicationContext {
     public static Builder newBuilder(io.bloombox.schema.telemetry.context.ApplicationContext.DeviceApplication prototype) {
       return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
     }
+    @java.lang.Override
     public Builder toBuilder() {
       return this == DEFAULT_INSTANCE
           ? new Builder() : new Builder().mergeFrom(this);
@@ -2274,20 +2306,21 @@ public final class ApplicationContext {
      * Specifies information about the application reporting information to the telemetry service.
      * </pre>
      *
-     * Protobuf type {@code bloombox.schema.analytics.context.DeviceApplication}
+     * Protobuf type {@code bloombox.analytics.context.DeviceApplication}
      */
     public static final class Builder extends
         com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:bloombox.schema.analytics.context.DeviceApplication)
+        // @@protoc_insertion_point(builder_implements:bloombox.analytics.context.DeviceApplication)
         io.bloombox.schema.telemetry.context.ApplicationContext.DeviceApplicationOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return io.bloombox.schema.telemetry.context.ApplicationContext.internal_static_bloombox_schema_analytics_context_DeviceApplication_descriptor;
+        return io.bloombox.schema.telemetry.context.ApplicationContext.internal_static_bloombox_analytics_context_DeviceApplication_descriptor;
       }
 
+      @java.lang.Override
       protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return io.bloombox.schema.telemetry.context.ApplicationContext.internal_static_bloombox_schema_analytics_context_DeviceApplication_fieldAccessorTable
+        return io.bloombox.schema.telemetry.context.ApplicationContext.internal_static_bloombox_analytics_context_DeviceApplication_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
                 io.bloombox.schema.telemetry.context.ApplicationContext.DeviceApplication.class, io.bloombox.schema.telemetry.context.ApplicationContext.DeviceApplication.Builder.class);
       }
@@ -2307,6 +2340,7 @@ public final class ApplicationContext {
                 .alwaysUseFieldBuilders) {
         }
       }
+      @java.lang.Override
       public Builder clear() {
         super.clear();
         type_ = 0;
@@ -2322,15 +2356,18 @@ public final class ApplicationContext {
         return this;
       }
 
+      @java.lang.Override
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return io.bloombox.schema.telemetry.context.ApplicationContext.internal_static_bloombox_schema_analytics_context_DeviceApplication_descriptor;
+        return io.bloombox.schema.telemetry.context.ApplicationContext.internal_static_bloombox_analytics_context_DeviceApplication_descriptor;
       }
 
+      @java.lang.Override
       public io.bloombox.schema.telemetry.context.ApplicationContext.DeviceApplication getDefaultInstanceForType() {
         return io.bloombox.schema.telemetry.context.ApplicationContext.DeviceApplication.getDefaultInstance();
       }
 
+      @java.lang.Override
       public io.bloombox.schema.telemetry.context.ApplicationContext.DeviceApplication build() {
         io.bloombox.schema.telemetry.context.ApplicationContext.DeviceApplication result = buildPartial();
         if (!result.isInitialized()) {
@@ -2339,6 +2376,7 @@ public final class ApplicationContext {
         return result;
       }
 
+      @java.lang.Override
       public io.bloombox.schema.telemetry.context.ApplicationContext.DeviceApplication buildPartial() {
         io.bloombox.schema.telemetry.context.ApplicationContext.DeviceApplication result = new io.bloombox.schema.telemetry.context.ApplicationContext.DeviceApplication(this);
         result.type_ = type_;
@@ -2365,32 +2403,39 @@ public final class ApplicationContext {
         return result;
       }
 
+      @java.lang.Override
       public Builder clone() {
         return (Builder) super.clone();
       }
+      @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
         return (Builder) super.setField(field, value);
       }
+      @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
         return (Builder) super.clearField(field);
       }
+      @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
         return (Builder) super.clearOneof(oneof);
       }
+      @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
         return (Builder) super.setRepeatedField(field, index, value);
       }
+      @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
         return (Builder) super.addRepeatedField(field, value);
       }
+      @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
         if (other instanceof io.bloombox.schema.telemetry.context.ApplicationContext.DeviceApplication) {
           return mergeFrom((io.bloombox.schema.telemetry.context.ApplicationContext.DeviceApplication)other);
@@ -2434,10 +2479,12 @@ public final class ApplicationContext {
         return this;
       }
 
+      @java.lang.Override
       public final boolean isInitialized() {
         return true;
       }
 
+      @java.lang.Override
       public Builder mergeFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -2477,7 +2524,7 @@ public final class ApplicationContext {
        * Type of application.
        * </pre>
        *
-       * <code>.bloombox.schema.analytics.context.ApplicationType type = 1 [(.gen_bq_schema.require) = true, (.gen_bq_schema.description) = "Type of application."];</code>
+       * <code>.bloombox.analytics.context.ApplicationType type = 1 [(.gen_bq_schema.require) = true, (.gen_bq_schema.description) = "Type of application."];</code>
        */
       public int getTypeValue() {
         return type_;
@@ -2487,7 +2534,7 @@ public final class ApplicationContext {
        * Type of application.
        * </pre>
        *
-       * <code>.bloombox.schema.analytics.context.ApplicationType type = 1 [(.gen_bq_schema.require) = true, (.gen_bq_schema.description) = "Type of application."];</code>
+       * <code>.bloombox.analytics.context.ApplicationType type = 1 [(.gen_bq_schema.require) = true, (.gen_bq_schema.description) = "Type of application."];</code>
        */
       public Builder setTypeValue(int value) {
         type_ = value;
@@ -2499,9 +2546,10 @@ public final class ApplicationContext {
        * Type of application.
        * </pre>
        *
-       * <code>.bloombox.schema.analytics.context.ApplicationType type = 1 [(.gen_bq_schema.require) = true, (.gen_bq_schema.description) = "Type of application."];</code>
+       * <code>.bloombox.analytics.context.ApplicationType type = 1 [(.gen_bq_schema.require) = true, (.gen_bq_schema.description) = "Type of application."];</code>
        */
       public io.bloombox.schema.telemetry.context.ApplicationContext.ApplicationType getType() {
+        @SuppressWarnings("deprecation")
         io.bloombox.schema.telemetry.context.ApplicationContext.ApplicationType result = io.bloombox.schema.telemetry.context.ApplicationContext.ApplicationType.valueOf(type_);
         return result == null ? io.bloombox.schema.telemetry.context.ApplicationContext.ApplicationType.UNRECOGNIZED : result;
       }
@@ -2510,7 +2558,7 @@ public final class ApplicationContext {
        * Type of application.
        * </pre>
        *
-       * <code>.bloombox.schema.analytics.context.ApplicationType type = 1 [(.gen_bq_schema.require) = true, (.gen_bq_schema.description) = "Type of application."];</code>
+       * <code>.bloombox.analytics.context.ApplicationType type = 1 [(.gen_bq_schema.require) = true, (.gen_bq_schema.description) = "Type of application."];</code>
        */
       public Builder setType(io.bloombox.schema.telemetry.context.ApplicationContext.ApplicationType value) {
         if (value == null) {
@@ -2526,7 +2574,7 @@ public final class ApplicationContext {
        * Type of application.
        * </pre>
        *
-       * <code>.bloombox.schema.analytics.context.ApplicationType type = 1 [(.gen_bq_schema.require) = true, (.gen_bq_schema.description) = "Type of application."];</code>
+       * <code>.bloombox.analytics.context.ApplicationType type = 1 [(.gen_bq_schema.require) = true, (.gen_bq_schema.description) = "Type of application."];</code>
        */
       public Builder clearType() {
         
@@ -2695,7 +2743,7 @@ public final class ApplicationContext {
        * Specifies information about an event that was sent from a web application.
        * </pre>
        *
-       * <code>.bloombox.schema.analytics.context.WebApplication web = 10 [(.gen_bq_schema.description) = "Specifies information about an event that was sent from a web application."];</code>
+       * <code>.bloombox.analytics.context.WebApplication web = 10 [(.gen_bq_schema.description) = "Specifies information about an event that was sent from a web application."];</code>
        */
       public boolean hasWeb() {
         return specCase_ == 10;
@@ -2705,7 +2753,7 @@ public final class ApplicationContext {
        * Specifies information about an event that was sent from a web application.
        * </pre>
        *
-       * <code>.bloombox.schema.analytics.context.WebApplication web = 10 [(.gen_bq_schema.description) = "Specifies information about an event that was sent from a web application."];</code>
+       * <code>.bloombox.analytics.context.WebApplication web = 10 [(.gen_bq_schema.description) = "Specifies information about an event that was sent from a web application."];</code>
        */
       public io.bloombox.schema.telemetry.context.ApplicationContext.WebApplication getWeb() {
         if (webBuilder_ == null) {
@@ -2725,7 +2773,7 @@ public final class ApplicationContext {
        * Specifies information about an event that was sent from a web application.
        * </pre>
        *
-       * <code>.bloombox.schema.analytics.context.WebApplication web = 10 [(.gen_bq_schema.description) = "Specifies information about an event that was sent from a web application."];</code>
+       * <code>.bloombox.analytics.context.WebApplication web = 10 [(.gen_bq_schema.description) = "Specifies information about an event that was sent from a web application."];</code>
        */
       public Builder setWeb(io.bloombox.schema.telemetry.context.ApplicationContext.WebApplication value) {
         if (webBuilder_ == null) {
@@ -2745,7 +2793,7 @@ public final class ApplicationContext {
        * Specifies information about an event that was sent from a web application.
        * </pre>
        *
-       * <code>.bloombox.schema.analytics.context.WebApplication web = 10 [(.gen_bq_schema.description) = "Specifies information about an event that was sent from a web application."];</code>
+       * <code>.bloombox.analytics.context.WebApplication web = 10 [(.gen_bq_schema.description) = "Specifies information about an event that was sent from a web application."];</code>
        */
       public Builder setWeb(
           io.bloombox.schema.telemetry.context.ApplicationContext.WebApplication.Builder builderForValue) {
@@ -2763,7 +2811,7 @@ public final class ApplicationContext {
        * Specifies information about an event that was sent from a web application.
        * </pre>
        *
-       * <code>.bloombox.schema.analytics.context.WebApplication web = 10 [(.gen_bq_schema.description) = "Specifies information about an event that was sent from a web application."];</code>
+       * <code>.bloombox.analytics.context.WebApplication web = 10 [(.gen_bq_schema.description) = "Specifies information about an event that was sent from a web application."];</code>
        */
       public Builder mergeWeb(io.bloombox.schema.telemetry.context.ApplicationContext.WebApplication value) {
         if (webBuilder_ == null) {
@@ -2789,7 +2837,7 @@ public final class ApplicationContext {
        * Specifies information about an event that was sent from a web application.
        * </pre>
        *
-       * <code>.bloombox.schema.analytics.context.WebApplication web = 10 [(.gen_bq_schema.description) = "Specifies information about an event that was sent from a web application."];</code>
+       * <code>.bloombox.analytics.context.WebApplication web = 10 [(.gen_bq_schema.description) = "Specifies information about an event that was sent from a web application."];</code>
        */
       public Builder clearWeb() {
         if (webBuilder_ == null) {
@@ -2812,7 +2860,7 @@ public final class ApplicationContext {
        * Specifies information about an event that was sent from a web application.
        * </pre>
        *
-       * <code>.bloombox.schema.analytics.context.WebApplication web = 10 [(.gen_bq_schema.description) = "Specifies information about an event that was sent from a web application."];</code>
+       * <code>.bloombox.analytics.context.WebApplication web = 10 [(.gen_bq_schema.description) = "Specifies information about an event that was sent from a web application."];</code>
        */
       public io.bloombox.schema.telemetry.context.ApplicationContext.WebApplication.Builder getWebBuilder() {
         return getWebFieldBuilder().getBuilder();
@@ -2822,7 +2870,7 @@ public final class ApplicationContext {
        * Specifies information about an event that was sent from a web application.
        * </pre>
        *
-       * <code>.bloombox.schema.analytics.context.WebApplication web = 10 [(.gen_bq_schema.description) = "Specifies information about an event that was sent from a web application."];</code>
+       * <code>.bloombox.analytics.context.WebApplication web = 10 [(.gen_bq_schema.description) = "Specifies information about an event that was sent from a web application."];</code>
        */
       public io.bloombox.schema.telemetry.context.ApplicationContext.WebApplicationOrBuilder getWebOrBuilder() {
         if ((specCase_ == 10) && (webBuilder_ != null)) {
@@ -2839,7 +2887,7 @@ public final class ApplicationContext {
        * Specifies information about an event that was sent from a web application.
        * </pre>
        *
-       * <code>.bloombox.schema.analytics.context.WebApplication web = 10 [(.gen_bq_schema.description) = "Specifies information about an event that was sent from a web application."];</code>
+       * <code>.bloombox.analytics.context.WebApplication web = 10 [(.gen_bq_schema.description) = "Specifies information about an event that was sent from a web application."];</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
           io.bloombox.schema.telemetry.context.ApplicationContext.WebApplication, io.bloombox.schema.telemetry.context.ApplicationContext.WebApplication.Builder, io.bloombox.schema.telemetry.context.ApplicationContext.WebApplicationOrBuilder> 
@@ -3059,21 +3107,23 @@ public final class ApplicationContext {
         onChanged();
         return this;
       }
+      @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
         return super.setUnknownFieldsProto3(unknownFields);
       }
 
+      @java.lang.Override
       public final Builder mergeUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
         return super.mergeUnknownFields(unknownFields);
       }
 
 
-      // @@protoc_insertion_point(builder_scope:bloombox.schema.analytics.context.DeviceApplication)
+      // @@protoc_insertion_point(builder_scope:bloombox.analytics.context.DeviceApplication)
     }
 
-    // @@protoc_insertion_point(class_scope:bloombox.schema.analytics.context.DeviceApplication)
+    // @@protoc_insertion_point(class_scope:bloombox.analytics.context.DeviceApplication)
     private static final io.bloombox.schema.telemetry.context.ApplicationContext.DeviceApplication DEFAULT_INSTANCE;
     static {
       DEFAULT_INSTANCE = new io.bloombox.schema.telemetry.context.ApplicationContext.DeviceApplication();
@@ -3085,6 +3135,7 @@ public final class ApplicationContext {
 
     private static final com.google.protobuf.Parser<DeviceApplication>
         PARSER = new com.google.protobuf.AbstractParser<DeviceApplication>() {
+      @java.lang.Override
       public DeviceApplication parsePartialFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -3102,6 +3153,7 @@ public final class ApplicationContext {
       return PARSER;
     }
 
+    @java.lang.Override
     public io.bloombox.schema.telemetry.context.ApplicationContext.DeviceApplication getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
@@ -3109,15 +3161,15 @@ public final class ApplicationContext {
   }
 
   private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_bloombox_schema_analytics_context_WebApplication_descriptor;
+    internal_static_bloombox_analytics_context_WebApplication_descriptor;
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_bloombox_schema_analytics_context_WebApplication_fieldAccessorTable;
+      internal_static_bloombox_analytics_context_WebApplication_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_bloombox_schema_analytics_context_DeviceApplication_descriptor;
+    internal_static_bloombox_analytics_context_DeviceApplication_descriptor;
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_bloombox_schema_analytics_context_DeviceApplication_fieldAccessorTable;
+      internal_static_bloombox_analytics_context_DeviceApplication_fieldAccessorTable;
 
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
@@ -3127,35 +3179,34 @@ public final class ApplicationContext {
       descriptor;
   static {
     java.lang.String[] descriptorData = {
-      "\n#analytics/context/Application.proto\022!b" +
-      "loombox.schema.analytics.context\032\016bq_fie" +
-      "ld.proto\032\025structs/Version.proto\"\367\002\n\016WebA" +
-      "pplication\022=\n\006origin\030\001 \001(\tB-\212@*Specifies" +
-      " an origin for a web application.\022P\n\010loc" +
-      "ation\030\002 \001(\tB>\212@;Full, absolute URL the u" +
-      "ser was at when the event was sent.\022-\n\006a" +
-      "nchor\030\003 \001(\tB\035\212@\032Anchor in the URL, if an" +
-      "y.\022/\n\005title\030\004 \001(\tB \212@\035Title of the curre" +
-      "nt webpage.\0224\n\010referrer\030\005 \001(\tB\"\212@\037Referr" +
-      "ing URL for this webpage.\022>\n\010protocol\030\006 " +
-      "\001(\tB,\212@)Protocol that was used to serve " +
-      "this URL.\"\213\004\n\021DeviceApplication\022\\\n\004type\030" +
-      "\001 \001(\01622.bloombox.schema.analytics.contex" +
-      "t.ApplicationTypeB\032\360?\001\212@\024Type of applica" +
-      "tion.\022]\n\007version\030\002 \001(\0132!.opencannabis.st" +
-      "ructs.VersionSpecB)\212@&Version for the re" +
-      "porting application.\022\217\001\n\003web\030\n \001(\01321.blo" +
-      "ombox.schema.analytics.context.WebApplic" +
-      "ationBM\212@JSpecifies information about an" +
-      " event that was sent from a web applicat" +
-      "ion.H\000\022E\n\tbundle_id\030\024 \001(\tB0\212@-Specifies " +
-      "a bundle ID for an iOS application.H\000\022X\n" +
-      "\022android_package_id\030\036 \001(\tB:\212@7Specifies " +
-      "an application ID for an Android applica" +
-      "tion.H\000B\006\n\004spec*,\n\017ApplicationType\022\014\n\010IN" +
-      "TERNAL\020\000\022\013\n\007PARTNER\020\001BD\n$io.bloombox.sch" +
-      "ema.telemetry.contextB\022ApplicationContex" +
-      "tH\001P\000\242\002\003BBSb\006proto3"
+      "\n#analytics/context/Application.proto\022\032b" +
+      "loombox.analytics.context\032\016bq_field.prot" +
+      "o\032\025structs/Version.proto\"\367\002\n\016WebApplicat" +
+      "ion\022=\n\006origin\030\001 \001(\tB-\212@*Specifies an ori" +
+      "gin for a web application.\022P\n\010location\030\002" +
+      " \001(\tB>\212@;Full, absolute URL the user was" +
+      " at when the event was sent.\022-\n\006anchor\030\003" +
+      " \001(\tB\035\212@\032Anchor in the URL, if any.\022/\n\005t" +
+      "itle\030\004 \001(\tB \212@\035Title of the current webp" +
+      "age.\0224\n\010referrer\030\005 \001(\tB\"\212@\037Referring URL" +
+      " for this webpage.\022>\n\010protocol\030\006 \001(\tB,\212@" +
+      ")Protocol that was used to serve this UR" +
+      "L.\"\375\003\n\021DeviceApplication\022U\n\004type\030\001 \001(\0162+" +
+      ".bloombox.analytics.context.ApplicationT" +
+      "ypeB\032\360?\001\212@\024Type of application.\022]\n\007versi" +
+      "on\030\002 \001(\0132!.opencannabis.structs.VersionS" +
+      "pecB)\212@&Version for the reporting applic" +
+      "ation.\022\210\001\n\003web\030\n \001(\0132*.bloombox.analytic" +
+      "s.context.WebApplicationBM\212@JSpecifies i" +
+      "nformation about an event that was sent " +
+      "from a web application.H\000\022E\n\tbundle_id\030\024" +
+      " \001(\tB0\212@-Specifies a bundle ID for an iO" +
+      "S application.H\000\022X\n\022android_package_id\030\036" +
+      " \001(\tB:\212@7Specifies an application ID for" +
+      " an Android application.H\000B\006\n\004spec*,\n\017Ap" +
+      "plicationType\022\014\n\010INTERNAL\020\000\022\013\n\007PARTNER\020\001" +
+      "BD\n$io.bloombox.schema.telemetry.context" +
+      "B\022ApplicationContextH\001P\000\242\002\003BBSb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -3171,17 +3222,17 @@ public final class ApplicationContext {
           gen_bq_schema.BqField.getDescriptor(),
           io.opencannabis.schema.struct.Version.getDescriptor(),
         }, assigner);
-    internal_static_bloombox_schema_analytics_context_WebApplication_descriptor =
+    internal_static_bloombox_analytics_context_WebApplication_descriptor =
       getDescriptor().getMessageTypes().get(0);
-    internal_static_bloombox_schema_analytics_context_WebApplication_fieldAccessorTable = new
+    internal_static_bloombox_analytics_context_WebApplication_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_bloombox_schema_analytics_context_WebApplication_descriptor,
+        internal_static_bloombox_analytics_context_WebApplication_descriptor,
         new java.lang.String[] { "Origin", "Location", "Anchor", "Title", "Referrer", "Protocol", });
-    internal_static_bloombox_schema_analytics_context_DeviceApplication_descriptor =
+    internal_static_bloombox_analytics_context_DeviceApplication_descriptor =
       getDescriptor().getMessageTypes().get(1);
-    internal_static_bloombox_schema_analytics_context_DeviceApplication_fieldAccessorTable = new
+    internal_static_bloombox_analytics_context_DeviceApplication_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_bloombox_schema_analytics_context_DeviceApplication_descriptor,
+        internal_static_bloombox_analytics_context_DeviceApplication_descriptor,
         new java.lang.String[] { "Type", "Version", "Web", "BundleId", "AndroidPackageId", "Spec", });
     com.google.protobuf.ExtensionRegistry registry =
         com.google.protobuf.ExtensionRegistry.newInstance();

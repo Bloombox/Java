@@ -1,11 +1,12 @@
 /*
- * Copyright 2018, Bloombox, LLC.
+ * Copyright 2018, Momentum Ideas, Co. All rights reserved.
  *
- * Licensed under the Apache License, Version 2.0 (the "License");
- * you may not use this file except in compliance with the License.
- * You may obtain a copy of the License at
- *
- *     http://www.apache.org/licenses/LICENSE-2.0
+ * Source and object computer code contained herein is the private intellectual
+ * property of Momentum Ideas Co., a Delaware Corporation. Use of this
+ * code in source form requires permission in writing before use or the
+ * assembly, distribution, or publishing of derivative works, for commercial
+ * purposes or any other purpose, from a duly authorized officer of Momentum
+ * Ideas Co.
  *
  * Unless required by applicable law or agreed to in writing, software
  * distributed under the License is distributed on an "AS IS" BASIS,
@@ -31,7 +32,7 @@ public final class StaffPOSSettings {
         (com.google.protobuf.ExtensionRegistryLite) registry);
   }
   public interface POSStaffSettingsOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:bloombox.schema.identity.industry.POSStaffSettings)
+      // @@protoc_insertion_point(interface_extends:bloombox.identity.industry.POSStaffSettings)
       com.google.protobuf.MessageOrBuilder {
 
     /**
@@ -40,7 +41,7 @@ public final class StaffPOSSettings {
      * rejection of the user's point-of-sale passcode.
      * </pre>
      *
-     * <code>.opencannabis.crypto.primitives.integrity.Hash challenge = 1;</code>
+     * <code>.opencannabis.crypto.Hash challenge = 1;</code>
      */
     boolean hasChallenge();
     /**
@@ -49,7 +50,7 @@ public final class StaffPOSSettings {
      * rejection of the user's point-of-sale passcode.
      * </pre>
      *
-     * <code>.opencannabis.crypto.primitives.integrity.Hash challenge = 1;</code>
+     * <code>.opencannabis.crypto.Hash challenge = 1;</code>
      */
     io.opencannabis.schema.crypto.primitives.integrity.Hash getChallenge();
     /**
@@ -58,7 +59,7 @@ public final class StaffPOSSettings {
      * rejection of the user's point-of-sale passcode.
      * </pre>
      *
-     * <code>.opencannabis.crypto.primitives.integrity.Hash challenge = 1;</code>
+     * <code>.opencannabis.crypto.Hash challenge = 1;</code>
      */
     io.opencannabis.schema.crypto.primitives.integrity.HashOrBuilder getChallengeOrBuilder();
 
@@ -68,7 +69,7 @@ public final class StaffPOSSettings {
      * rejection of a keycard scan operation designed to log the user in quickly.
      * </pre>
      *
-     * <code>.opencannabis.crypto.primitives.integrity.Hash keycard = 2;</code>
+     * <code>.opencannabis.crypto.Hash keycard = 2;</code>
      */
     boolean hasKeycard();
     /**
@@ -77,7 +78,7 @@ public final class StaffPOSSettings {
      * rejection of a keycard scan operation designed to log the user in quickly.
      * </pre>
      *
-     * <code>.opencannabis.crypto.primitives.integrity.Hash keycard = 2;</code>
+     * <code>.opencannabis.crypto.Hash keycard = 2;</code>
      */
     io.opencannabis.schema.crypto.primitives.integrity.Hash getKeycard();
     /**
@@ -86,7 +87,7 @@ public final class StaffPOSSettings {
      * rejection of a keycard scan operation designed to log the user in quickly.
      * </pre>
      *
-     * <code>.opencannabis.crypto.primitives.integrity.Hash keycard = 2;</code>
+     * <code>.opencannabis.crypto.Hash keycard = 2;</code>
      */
     io.opencannabis.schema.crypto.primitives.integrity.HashOrBuilder getKeycardOrBuilder();
   }
@@ -96,11 +97,11 @@ public final class StaffPOSSettings {
    * point-of-sale session.
    * </pre>
    *
-   * Protobuf type {@code bloombox.schema.identity.industry.POSStaffSettings}
+   * Protobuf type {@code bloombox.identity.industry.POSStaffSettings}
    */
   public  static final class POSStaffSettings extends
       com.google.protobuf.GeneratedMessageV3 implements
-      // @@protoc_insertion_point(message_implements:bloombox.schema.identity.industry.POSStaffSettings)
+      // @@protoc_insertion_point(message_implements:bloombox.identity.industry.POSStaffSettings)
       POSStaffSettingsOrBuilder {
   private static final long serialVersionUID = 0L;
     // Use POSStaffSettings.newBuilder() to construct.
@@ -134,13 +135,6 @@ public final class StaffPOSSettings {
             case 0:
               done = true;
               break;
-            default: {
-              if (!parseUnknownFieldProto3(
-                  input, unknownFields, extensionRegistry, tag)) {
-                done = true;
-              }
-              break;
-            }
             case 10: {
               io.opencannabis.schema.crypto.primitives.integrity.Hash.Builder subBuilder = null;
               if (challenge_ != null) {
@@ -167,6 +161,13 @@ public final class StaffPOSSettings {
 
               break;
             }
+            default: {
+              if (!parseUnknownFieldProto3(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
           }
         }
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
@@ -181,12 +182,13 @@ public final class StaffPOSSettings {
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return io.bloombox.schema.identity.industry.StaffPOSSettings.internal_static_bloombox_schema_identity_industry_POSStaffSettings_descriptor;
+      return io.bloombox.schema.identity.industry.StaffPOSSettings.internal_static_bloombox_identity_industry_POSStaffSettings_descriptor;
     }
 
+    @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return io.bloombox.schema.identity.industry.StaffPOSSettings.internal_static_bloombox_schema_identity_industry_POSStaffSettings_fieldAccessorTable
+      return io.bloombox.schema.identity.industry.StaffPOSSettings.internal_static_bloombox_identity_industry_POSStaffSettings_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
               io.bloombox.schema.identity.industry.StaffPOSSettings.POSStaffSettings.class, io.bloombox.schema.identity.industry.StaffPOSSettings.POSStaffSettings.Builder.class);
     }
@@ -199,7 +201,7 @@ public final class StaffPOSSettings {
      * rejection of the user's point-of-sale passcode.
      * </pre>
      *
-     * <code>.opencannabis.crypto.primitives.integrity.Hash challenge = 1;</code>
+     * <code>.opencannabis.crypto.Hash challenge = 1;</code>
      */
     public boolean hasChallenge() {
       return challenge_ != null;
@@ -210,7 +212,7 @@ public final class StaffPOSSettings {
      * rejection of the user's point-of-sale passcode.
      * </pre>
      *
-     * <code>.opencannabis.crypto.primitives.integrity.Hash challenge = 1;</code>
+     * <code>.opencannabis.crypto.Hash challenge = 1;</code>
      */
     public io.opencannabis.schema.crypto.primitives.integrity.Hash getChallenge() {
       return challenge_ == null ? io.opencannabis.schema.crypto.primitives.integrity.Hash.getDefaultInstance() : challenge_;
@@ -221,7 +223,7 @@ public final class StaffPOSSettings {
      * rejection of the user's point-of-sale passcode.
      * </pre>
      *
-     * <code>.opencannabis.crypto.primitives.integrity.Hash challenge = 1;</code>
+     * <code>.opencannabis.crypto.Hash challenge = 1;</code>
      */
     public io.opencannabis.schema.crypto.primitives.integrity.HashOrBuilder getChallengeOrBuilder() {
       return getChallenge();
@@ -235,7 +237,7 @@ public final class StaffPOSSettings {
      * rejection of a keycard scan operation designed to log the user in quickly.
      * </pre>
      *
-     * <code>.opencannabis.crypto.primitives.integrity.Hash keycard = 2;</code>
+     * <code>.opencannabis.crypto.Hash keycard = 2;</code>
      */
     public boolean hasKeycard() {
       return keycard_ != null;
@@ -246,7 +248,7 @@ public final class StaffPOSSettings {
      * rejection of a keycard scan operation designed to log the user in quickly.
      * </pre>
      *
-     * <code>.opencannabis.crypto.primitives.integrity.Hash keycard = 2;</code>
+     * <code>.opencannabis.crypto.Hash keycard = 2;</code>
      */
     public io.opencannabis.schema.crypto.primitives.integrity.Hash getKeycard() {
       return keycard_ == null ? io.opencannabis.schema.crypto.primitives.integrity.Hash.getDefaultInstance() : keycard_;
@@ -257,13 +259,14 @@ public final class StaffPOSSettings {
      * rejection of a keycard scan operation designed to log the user in quickly.
      * </pre>
      *
-     * <code>.opencannabis.crypto.primitives.integrity.Hash keycard = 2;</code>
+     * <code>.opencannabis.crypto.Hash keycard = 2;</code>
      */
     public io.opencannabis.schema.crypto.primitives.integrity.HashOrBuilder getKeycardOrBuilder() {
       return getKeycard();
     }
 
     private byte memoizedIsInitialized = -1;
+    @java.lang.Override
     public final boolean isInitialized() {
       byte isInitialized = memoizedIsInitialized;
       if (isInitialized == 1) return true;
@@ -273,6 +276,7 @@ public final class StaffPOSSettings {
       return true;
     }
 
+    @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
       if (challenge_ != null) {
@@ -284,6 +288,7 @@ public final class StaffPOSSettings {
       unknownFields.writeTo(output);
     }
 
+    @java.lang.Override
     public int getSerializedSize() {
       int size = memoizedSize;
       if (size != -1) return size;
@@ -417,6 +422,7 @@ public final class StaffPOSSettings {
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
 
+    @java.lang.Override
     public Builder newBuilderForType() { return newBuilder(); }
     public static Builder newBuilder() {
       return DEFAULT_INSTANCE.toBuilder();
@@ -424,6 +430,7 @@ public final class StaffPOSSettings {
     public static Builder newBuilder(io.bloombox.schema.identity.industry.StaffPOSSettings.POSStaffSettings prototype) {
       return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
     }
+    @java.lang.Override
     public Builder toBuilder() {
       return this == DEFAULT_INSTANCE
           ? new Builder() : new Builder().mergeFrom(this);
@@ -441,20 +448,21 @@ public final class StaffPOSSettings {
      * point-of-sale session.
      * </pre>
      *
-     * Protobuf type {@code bloombox.schema.identity.industry.POSStaffSettings}
+     * Protobuf type {@code bloombox.identity.industry.POSStaffSettings}
      */
     public static final class Builder extends
         com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:bloombox.schema.identity.industry.POSStaffSettings)
+        // @@protoc_insertion_point(builder_implements:bloombox.identity.industry.POSStaffSettings)
         io.bloombox.schema.identity.industry.StaffPOSSettings.POSStaffSettingsOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return io.bloombox.schema.identity.industry.StaffPOSSettings.internal_static_bloombox_schema_identity_industry_POSStaffSettings_descriptor;
+        return io.bloombox.schema.identity.industry.StaffPOSSettings.internal_static_bloombox_identity_industry_POSStaffSettings_descriptor;
       }
 
+      @java.lang.Override
       protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return io.bloombox.schema.identity.industry.StaffPOSSettings.internal_static_bloombox_schema_identity_industry_POSStaffSettings_fieldAccessorTable
+        return io.bloombox.schema.identity.industry.StaffPOSSettings.internal_static_bloombox_identity_industry_POSStaffSettings_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
                 io.bloombox.schema.identity.industry.StaffPOSSettings.POSStaffSettings.class, io.bloombox.schema.identity.industry.StaffPOSSettings.POSStaffSettings.Builder.class);
       }
@@ -474,6 +482,7 @@ public final class StaffPOSSettings {
                 .alwaysUseFieldBuilders) {
         }
       }
+      @java.lang.Override
       public Builder clear() {
         super.clear();
         if (challengeBuilder_ == null) {
@@ -491,15 +500,18 @@ public final class StaffPOSSettings {
         return this;
       }
 
+      @java.lang.Override
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return io.bloombox.schema.identity.industry.StaffPOSSettings.internal_static_bloombox_schema_identity_industry_POSStaffSettings_descriptor;
+        return io.bloombox.schema.identity.industry.StaffPOSSettings.internal_static_bloombox_identity_industry_POSStaffSettings_descriptor;
       }
 
+      @java.lang.Override
       public io.bloombox.schema.identity.industry.StaffPOSSettings.POSStaffSettings getDefaultInstanceForType() {
         return io.bloombox.schema.identity.industry.StaffPOSSettings.POSStaffSettings.getDefaultInstance();
       }
 
+      @java.lang.Override
       public io.bloombox.schema.identity.industry.StaffPOSSettings.POSStaffSettings build() {
         io.bloombox.schema.identity.industry.StaffPOSSettings.POSStaffSettings result = buildPartial();
         if (!result.isInitialized()) {
@@ -508,6 +520,7 @@ public final class StaffPOSSettings {
         return result;
       }
 
+      @java.lang.Override
       public io.bloombox.schema.identity.industry.StaffPOSSettings.POSStaffSettings buildPartial() {
         io.bloombox.schema.identity.industry.StaffPOSSettings.POSStaffSettings result = new io.bloombox.schema.identity.industry.StaffPOSSettings.POSStaffSettings(this);
         if (challengeBuilder_ == null) {
@@ -524,32 +537,39 @@ public final class StaffPOSSettings {
         return result;
       }
 
+      @java.lang.Override
       public Builder clone() {
         return (Builder) super.clone();
       }
+      @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
         return (Builder) super.setField(field, value);
       }
+      @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
         return (Builder) super.clearField(field);
       }
+      @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
         return (Builder) super.clearOneof(oneof);
       }
+      @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
         return (Builder) super.setRepeatedField(field, index, value);
       }
+      @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
         return (Builder) super.addRepeatedField(field, value);
       }
+      @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
         if (other instanceof io.bloombox.schema.identity.industry.StaffPOSSettings.POSStaffSettings) {
           return mergeFrom((io.bloombox.schema.identity.industry.StaffPOSSettings.POSStaffSettings)other);
@@ -572,10 +592,12 @@ public final class StaffPOSSettings {
         return this;
       }
 
+      @java.lang.Override
       public final boolean isInitialized() {
         return true;
       }
 
+      @java.lang.Override
       public Builder mergeFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -603,7 +625,7 @@ public final class StaffPOSSettings {
        * rejection of the user's point-of-sale passcode.
        * </pre>
        *
-       * <code>.opencannabis.crypto.primitives.integrity.Hash challenge = 1;</code>
+       * <code>.opencannabis.crypto.Hash challenge = 1;</code>
        */
       public boolean hasChallenge() {
         return challengeBuilder_ != null || challenge_ != null;
@@ -614,7 +636,7 @@ public final class StaffPOSSettings {
        * rejection of the user's point-of-sale passcode.
        * </pre>
        *
-       * <code>.opencannabis.crypto.primitives.integrity.Hash challenge = 1;</code>
+       * <code>.opencannabis.crypto.Hash challenge = 1;</code>
        */
       public io.opencannabis.schema.crypto.primitives.integrity.Hash getChallenge() {
         if (challengeBuilder_ == null) {
@@ -629,7 +651,7 @@ public final class StaffPOSSettings {
        * rejection of the user's point-of-sale passcode.
        * </pre>
        *
-       * <code>.opencannabis.crypto.primitives.integrity.Hash challenge = 1;</code>
+       * <code>.opencannabis.crypto.Hash challenge = 1;</code>
        */
       public Builder setChallenge(io.opencannabis.schema.crypto.primitives.integrity.Hash value) {
         if (challengeBuilder_ == null) {
@@ -650,7 +672,7 @@ public final class StaffPOSSettings {
        * rejection of the user's point-of-sale passcode.
        * </pre>
        *
-       * <code>.opencannabis.crypto.primitives.integrity.Hash challenge = 1;</code>
+       * <code>.opencannabis.crypto.Hash challenge = 1;</code>
        */
       public Builder setChallenge(
           io.opencannabis.schema.crypto.primitives.integrity.Hash.Builder builderForValue) {
@@ -669,7 +691,7 @@ public final class StaffPOSSettings {
        * rejection of the user's point-of-sale passcode.
        * </pre>
        *
-       * <code>.opencannabis.crypto.primitives.integrity.Hash challenge = 1;</code>
+       * <code>.opencannabis.crypto.Hash challenge = 1;</code>
        */
       public Builder mergeChallenge(io.opencannabis.schema.crypto.primitives.integrity.Hash value) {
         if (challengeBuilder_ == null) {
@@ -692,7 +714,7 @@ public final class StaffPOSSettings {
        * rejection of the user's point-of-sale passcode.
        * </pre>
        *
-       * <code>.opencannabis.crypto.primitives.integrity.Hash challenge = 1;</code>
+       * <code>.opencannabis.crypto.Hash challenge = 1;</code>
        */
       public Builder clearChallenge() {
         if (challengeBuilder_ == null) {
@@ -711,7 +733,7 @@ public final class StaffPOSSettings {
        * rejection of the user's point-of-sale passcode.
        * </pre>
        *
-       * <code>.opencannabis.crypto.primitives.integrity.Hash challenge = 1;</code>
+       * <code>.opencannabis.crypto.Hash challenge = 1;</code>
        */
       public io.opencannabis.schema.crypto.primitives.integrity.Hash.Builder getChallengeBuilder() {
         
@@ -724,7 +746,7 @@ public final class StaffPOSSettings {
        * rejection of the user's point-of-sale passcode.
        * </pre>
        *
-       * <code>.opencannabis.crypto.primitives.integrity.Hash challenge = 1;</code>
+       * <code>.opencannabis.crypto.Hash challenge = 1;</code>
        */
       public io.opencannabis.schema.crypto.primitives.integrity.HashOrBuilder getChallengeOrBuilder() {
         if (challengeBuilder_ != null) {
@@ -740,7 +762,7 @@ public final class StaffPOSSettings {
        * rejection of the user's point-of-sale passcode.
        * </pre>
        *
-       * <code>.opencannabis.crypto.primitives.integrity.Hash challenge = 1;</code>
+       * <code>.opencannabis.crypto.Hash challenge = 1;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
           io.opencannabis.schema.crypto.primitives.integrity.Hash, io.opencannabis.schema.crypto.primitives.integrity.Hash.Builder, io.opencannabis.schema.crypto.primitives.integrity.HashOrBuilder> 
@@ -765,7 +787,7 @@ public final class StaffPOSSettings {
        * rejection of a keycard scan operation designed to log the user in quickly.
        * </pre>
        *
-       * <code>.opencannabis.crypto.primitives.integrity.Hash keycard = 2;</code>
+       * <code>.opencannabis.crypto.Hash keycard = 2;</code>
        */
       public boolean hasKeycard() {
         return keycardBuilder_ != null || keycard_ != null;
@@ -776,7 +798,7 @@ public final class StaffPOSSettings {
        * rejection of a keycard scan operation designed to log the user in quickly.
        * </pre>
        *
-       * <code>.opencannabis.crypto.primitives.integrity.Hash keycard = 2;</code>
+       * <code>.opencannabis.crypto.Hash keycard = 2;</code>
        */
       public io.opencannabis.schema.crypto.primitives.integrity.Hash getKeycard() {
         if (keycardBuilder_ == null) {
@@ -791,7 +813,7 @@ public final class StaffPOSSettings {
        * rejection of a keycard scan operation designed to log the user in quickly.
        * </pre>
        *
-       * <code>.opencannabis.crypto.primitives.integrity.Hash keycard = 2;</code>
+       * <code>.opencannabis.crypto.Hash keycard = 2;</code>
        */
       public Builder setKeycard(io.opencannabis.schema.crypto.primitives.integrity.Hash value) {
         if (keycardBuilder_ == null) {
@@ -812,7 +834,7 @@ public final class StaffPOSSettings {
        * rejection of a keycard scan operation designed to log the user in quickly.
        * </pre>
        *
-       * <code>.opencannabis.crypto.primitives.integrity.Hash keycard = 2;</code>
+       * <code>.opencannabis.crypto.Hash keycard = 2;</code>
        */
       public Builder setKeycard(
           io.opencannabis.schema.crypto.primitives.integrity.Hash.Builder builderForValue) {
@@ -831,7 +853,7 @@ public final class StaffPOSSettings {
        * rejection of a keycard scan operation designed to log the user in quickly.
        * </pre>
        *
-       * <code>.opencannabis.crypto.primitives.integrity.Hash keycard = 2;</code>
+       * <code>.opencannabis.crypto.Hash keycard = 2;</code>
        */
       public Builder mergeKeycard(io.opencannabis.schema.crypto.primitives.integrity.Hash value) {
         if (keycardBuilder_ == null) {
@@ -854,7 +876,7 @@ public final class StaffPOSSettings {
        * rejection of a keycard scan operation designed to log the user in quickly.
        * </pre>
        *
-       * <code>.opencannabis.crypto.primitives.integrity.Hash keycard = 2;</code>
+       * <code>.opencannabis.crypto.Hash keycard = 2;</code>
        */
       public Builder clearKeycard() {
         if (keycardBuilder_ == null) {
@@ -873,7 +895,7 @@ public final class StaffPOSSettings {
        * rejection of a keycard scan operation designed to log the user in quickly.
        * </pre>
        *
-       * <code>.opencannabis.crypto.primitives.integrity.Hash keycard = 2;</code>
+       * <code>.opencannabis.crypto.Hash keycard = 2;</code>
        */
       public io.opencannabis.schema.crypto.primitives.integrity.Hash.Builder getKeycardBuilder() {
         
@@ -886,7 +908,7 @@ public final class StaffPOSSettings {
        * rejection of a keycard scan operation designed to log the user in quickly.
        * </pre>
        *
-       * <code>.opencannabis.crypto.primitives.integrity.Hash keycard = 2;</code>
+       * <code>.opencannabis.crypto.Hash keycard = 2;</code>
        */
       public io.opencannabis.schema.crypto.primitives.integrity.HashOrBuilder getKeycardOrBuilder() {
         if (keycardBuilder_ != null) {
@@ -902,7 +924,7 @@ public final class StaffPOSSettings {
        * rejection of a keycard scan operation designed to log the user in quickly.
        * </pre>
        *
-       * <code>.opencannabis.crypto.primitives.integrity.Hash keycard = 2;</code>
+       * <code>.opencannabis.crypto.Hash keycard = 2;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
           io.opencannabis.schema.crypto.primitives.integrity.Hash, io.opencannabis.schema.crypto.primitives.integrity.Hash.Builder, io.opencannabis.schema.crypto.primitives.integrity.HashOrBuilder> 
@@ -917,21 +939,23 @@ public final class StaffPOSSettings {
         }
         return keycardBuilder_;
       }
+      @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
         return super.setUnknownFieldsProto3(unknownFields);
       }
 
+      @java.lang.Override
       public final Builder mergeUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
         return super.mergeUnknownFields(unknownFields);
       }
 
 
-      // @@protoc_insertion_point(builder_scope:bloombox.schema.identity.industry.POSStaffSettings)
+      // @@protoc_insertion_point(builder_scope:bloombox.identity.industry.POSStaffSettings)
     }
 
-    // @@protoc_insertion_point(class_scope:bloombox.schema.identity.industry.POSStaffSettings)
+    // @@protoc_insertion_point(class_scope:bloombox.identity.industry.POSStaffSettings)
     private static final io.bloombox.schema.identity.industry.StaffPOSSettings.POSStaffSettings DEFAULT_INSTANCE;
     static {
       DEFAULT_INSTANCE = new io.bloombox.schema.identity.industry.StaffPOSSettings.POSStaffSettings();
@@ -943,6 +967,7 @@ public final class StaffPOSSettings {
 
     private static final com.google.protobuf.Parser<POSStaffSettings>
         PARSER = new com.google.protobuf.AbstractParser<POSStaffSettings>() {
+      @java.lang.Override
       public POSStaffSettings parsePartialFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -960,6 +985,7 @@ public final class StaffPOSSettings {
       return PARSER;
     }
 
+    @java.lang.Override
     public io.bloombox.schema.identity.industry.StaffPOSSettings.POSStaffSettings getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
@@ -967,10 +993,10 @@ public final class StaffPOSSettings {
   }
 
   private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_bloombox_schema_identity_industry_POSStaffSettings_descriptor;
+    internal_static_bloombox_identity_industry_POSStaffSettings_descriptor;
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_bloombox_schema_identity_industry_POSStaffSettings_fieldAccessorTable;
+      internal_static_bloombox_identity_industry_POSStaffSettings_fieldAccessorTable;
 
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
@@ -981,14 +1007,13 @@ public final class StaffPOSSettings {
   static {
     java.lang.String[] descriptorData = {
       "\n(identity/industry/POSStaffSettings.pro" +
-      "to\022!bloombox.schema.identity.industry\032!c" +
-      "rypto/primitives/Integrity.proto\"\226\001\n\020POS" +
-      "StaffSettings\022A\n\tchallenge\030\001 \001(\0132..openc" +
-      "annabis.crypto.primitives.integrity.Hash" +
-      "\022?\n\007keycard\030\002 \001(\0132..opencannabis.crypto." +
-      "primitives.integrity.HashBB\n$io.bloombox" +
-      ".schema.identity.industryB\020StaffPOSSetti" +
-      "ngsH\001P\000\242\002\003BBSb\006proto3"
+      "to\022\032bloombox.identity.industry\032!crypto/p" +
+      "rimitives/Integrity.proto\"l\n\020POSStaffSet" +
+      "tings\022,\n\tchallenge\030\001 \001(\0132\031.opencannabis." +
+      "crypto.Hash\022*\n\007keycard\030\002 \001(\0132\031.opencanna" +
+      "bis.crypto.HashBB\n$io.bloombox.schema.id" +
+      "entity.industryB\020StaffPOSSettingsH\001P\000\242\002\003" +
+      "BBSb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -1003,11 +1028,11 @@ public final class StaffPOSSettings {
         new com.google.protobuf.Descriptors.FileDescriptor[] {
           io.opencannabis.schema.crypto.primitives.integrity.Integrity.getDescriptor(),
         }, assigner);
-    internal_static_bloombox_schema_identity_industry_POSStaffSettings_descriptor =
+    internal_static_bloombox_identity_industry_POSStaffSettings_descriptor =
       getDescriptor().getMessageTypes().get(0);
-    internal_static_bloombox_schema_identity_industry_POSStaffSettings_fieldAccessorTable = new
+    internal_static_bloombox_identity_industry_POSStaffSettings_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_bloombox_schema_identity_industry_POSStaffSettings_descriptor,
+        internal_static_bloombox_identity_industry_POSStaffSettings_descriptor,
         new java.lang.String[] { "Challenge", "Keycard", });
     io.opencannabis.schema.crypto.primitives.integrity.Integrity.getDescriptor();
   }

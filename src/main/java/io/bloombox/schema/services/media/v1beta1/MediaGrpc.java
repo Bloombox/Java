@@ -1,8 +1,8 @@
 /*
- * Copyright 2018, Bloombox, LLC. All rights reserved.
+ * Copyright 2018, Momentum Ideas, Co. All rights reserved.
  *
  * Source and object computer code contained herein is the private intellectual
- * property of Bloombox, a California Limited Liability Corporation. Use of this
+ * property of Momentum Ideas Co., a Delaware Corporation. Use of this
  * code in source form requires permission in writing before use or the
  * assembly, distribution, or publishing of derivative works, for commercial
  * purposes or any other purpose, from a duly authorized officer of Momentum
@@ -17,20 +17,20 @@
 
 package io.bloombox.schema.services.media.v1beta1;
 
-import static io.grpc.stub.ClientCalls.asyncUnaryCall;
-import static io.grpc.stub.ClientCalls.asyncServerStreamingCall;
-import static io.grpc.stub.ClientCalls.asyncClientStreamingCall;
-import static io.grpc.stub.ClientCalls.asyncBidiStreamingCall;
-import static io.grpc.stub.ClientCalls.blockingUnaryCall;
-import static io.grpc.stub.ClientCalls.blockingServerStreamingCall;
-import static io.grpc.stub.ClientCalls.futureUnaryCall;
 import static io.grpc.MethodDescriptor.generateFullMethodName;
-import static io.grpc.stub.ServerCalls.asyncUnaryCall;
-import static io.grpc.stub.ServerCalls.asyncServerStreamingCall;
-import static io.grpc.stub.ServerCalls.asyncClientStreamingCall;
+import static io.grpc.stub.ClientCalls.asyncBidiStreamingCall;
+import static io.grpc.stub.ClientCalls.asyncClientStreamingCall;
+import static io.grpc.stub.ClientCalls.asyncServerStreamingCall;
+import static io.grpc.stub.ClientCalls.asyncUnaryCall;
+import static io.grpc.stub.ClientCalls.blockingServerStreamingCall;
+import static io.grpc.stub.ClientCalls.blockingUnaryCall;
+import static io.grpc.stub.ClientCalls.futureUnaryCall;
 import static io.grpc.stub.ServerCalls.asyncBidiStreamingCall;
-import static io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall;
+import static io.grpc.stub.ServerCalls.asyncClientStreamingCall;
+import static io.grpc.stub.ServerCalls.asyncServerStreamingCall;
+import static io.grpc.stub.ServerCalls.asyncUnaryCall;
 import static io.grpc.stub.ServerCalls.asyncUnimplementedStreamingCall;
+import static io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall;
 
 /**
  * <pre>
@@ -39,63 +39,142 @@ import static io.grpc.stub.ServerCalls.asyncUnimplementedStreamingCall;
  * </pre>
  */
 @javax.annotation.Generated(
-    value = "by gRPC proto compiler (version 1.6.0-SNAPSHOT)",
+    value = "by gRPC proto compiler (version 1.18.0-SNAPSHOT)",
     comments = "Source: media/v1beta1/MediaService_Beta1.proto")
 public final class MediaGrpc {
 
   private MediaGrpc() {}
 
-  public static final String SERVICE_NAME = "bloombox.schema.services.media.v1beta1.Media";
+  public static final String SERVICE_NAME = "bloombox.services.media.v1beta1.Media";
 
   // Static method descriptors that strictly reflect the proto.
-  @io.grpc.ExperimentalApi("https://github.com/grpc/grpc-java/issues/1901")
-  public static final io.grpc.MethodDescriptor<io.bloombox.schema.services.media.v1beta1.ListMedia.Request,
-      io.bloombox.schema.services.media.v1beta1.ListMedia.Response> METHOD_LIST =
-      io.grpc.MethodDescriptor.<io.bloombox.schema.services.media.v1beta1.ListMedia.Request, io.bloombox.schema.services.media.v1beta1.ListMedia.Response>newBuilder()
-          .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-          .setFullMethodName(generateFullMethodName(
-              "bloombox.schema.services.media.v1beta1.Media", "List"))
-          .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-              io.bloombox.schema.services.media.v1beta1.ListMedia.Request.getDefaultInstance()))
-          .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-              io.bloombox.schema.services.media.v1beta1.ListMedia.Response.getDefaultInstance()))
-          .build();
-  @io.grpc.ExperimentalApi("https://github.com/grpc/grpc-java/issues/1901")
-  public static final io.grpc.MethodDescriptor<io.bloombox.schema.services.media.v1beta1.GetMedia.Request,
-      io.bloombox.schema.services.media.v1beta1.GetMedia.Response> METHOD_RETRIEVE =
-      io.grpc.MethodDescriptor.<io.bloombox.schema.services.media.v1beta1.GetMedia.Request, io.bloombox.schema.services.media.v1beta1.GetMedia.Response>newBuilder()
-          .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-          .setFullMethodName(generateFullMethodName(
-              "bloombox.schema.services.media.v1beta1.Media", "Retrieve"))
-          .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-              io.bloombox.schema.services.media.v1beta1.GetMedia.Request.getDefaultInstance()))
-          .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-              io.bloombox.schema.services.media.v1beta1.GetMedia.Response.getDefaultInstance()))
-          .build();
-  @io.grpc.ExperimentalApi("https://github.com/grpc/grpc-java/issues/1901")
-  public static final io.grpc.MethodDescriptor<io.bloombox.schema.services.media.v1beta1.UploadMedia.Request,
-      io.bloombox.schema.services.media.v1beta1.UploadMedia.Response> METHOD_UPLOAD =
-      io.grpc.MethodDescriptor.<io.bloombox.schema.services.media.v1beta1.UploadMedia.Request, io.bloombox.schema.services.media.v1beta1.UploadMedia.Response>newBuilder()
-          .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-          .setFullMethodName(generateFullMethodName(
-              "bloombox.schema.services.media.v1beta1.Media", "Upload"))
-          .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-              io.bloombox.schema.services.media.v1beta1.UploadMedia.Request.getDefaultInstance()))
-          .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-              io.bloombox.schema.services.media.v1beta1.UploadMedia.Response.getDefaultInstance()))
-          .build();
-  @io.grpc.ExperimentalApi("https://github.com/grpc/grpc-java/issues/1901")
-  public static final io.grpc.MethodDescriptor<io.bloombox.schema.services.media.v1beta1.AttachMedia.Request,
-      com.google.protobuf.Empty> METHOD_ATTACH =
-      io.grpc.MethodDescriptor.<io.bloombox.schema.services.media.v1beta1.AttachMedia.Request, com.google.protobuf.Empty>newBuilder()
-          .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-          .setFullMethodName(generateFullMethodName(
-              "bloombox.schema.services.media.v1beta1.Media", "Attach"))
-          .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-              io.bloombox.schema.services.media.v1beta1.AttachMedia.Request.getDefaultInstance()))
-          .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-              com.google.protobuf.Empty.getDefaultInstance()))
-          .build();
+  private static volatile io.grpc.MethodDescriptor<io.bloombox.schema.services.media.v1beta1.ListMedia.Request,
+      io.bloombox.schema.services.media.v1beta1.ListMedia.Response> getListMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "List",
+      requestType = io.bloombox.schema.services.media.v1beta1.ListMedia.Request.class,
+      responseType = io.bloombox.schema.services.media.v1beta1.ListMedia.Response.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<io.bloombox.schema.services.media.v1beta1.ListMedia.Request,
+      io.bloombox.schema.services.media.v1beta1.ListMedia.Response> getListMethod() {
+    io.grpc.MethodDescriptor<io.bloombox.schema.services.media.v1beta1.ListMedia.Request, io.bloombox.schema.services.media.v1beta1.ListMedia.Response> getListMethod;
+    if ((getListMethod = MediaGrpc.getListMethod) == null) {
+      synchronized (MediaGrpc.class) {
+        if ((getListMethod = MediaGrpc.getListMethod) == null) {
+          MediaGrpc.getListMethod = getListMethod = 
+              io.grpc.MethodDescriptor.<io.bloombox.schema.services.media.v1beta1.ListMedia.Request, io.bloombox.schema.services.media.v1beta1.ListMedia.Response>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(
+                  "bloombox.services.media.v1beta1.Media", "List"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  io.bloombox.schema.services.media.v1beta1.ListMedia.Request.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  io.bloombox.schema.services.media.v1beta1.ListMedia.Response.getDefaultInstance()))
+                  .setSchemaDescriptor(new MediaMethodDescriptorSupplier("List"))
+                  .build();
+          }
+        }
+     }
+     return getListMethod;
+  }
+
+  private static volatile io.grpc.MethodDescriptor<io.bloombox.schema.services.media.v1beta1.GetMedia.Request,
+      io.bloombox.schema.services.media.v1beta1.GetMedia.Response> getRetrieveMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "Retrieve",
+      requestType = io.bloombox.schema.services.media.v1beta1.GetMedia.Request.class,
+      responseType = io.bloombox.schema.services.media.v1beta1.GetMedia.Response.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<io.bloombox.schema.services.media.v1beta1.GetMedia.Request,
+      io.bloombox.schema.services.media.v1beta1.GetMedia.Response> getRetrieveMethod() {
+    io.grpc.MethodDescriptor<io.bloombox.schema.services.media.v1beta1.GetMedia.Request, io.bloombox.schema.services.media.v1beta1.GetMedia.Response> getRetrieveMethod;
+    if ((getRetrieveMethod = MediaGrpc.getRetrieveMethod) == null) {
+      synchronized (MediaGrpc.class) {
+        if ((getRetrieveMethod = MediaGrpc.getRetrieveMethod) == null) {
+          MediaGrpc.getRetrieveMethod = getRetrieveMethod = 
+              io.grpc.MethodDescriptor.<io.bloombox.schema.services.media.v1beta1.GetMedia.Request, io.bloombox.schema.services.media.v1beta1.GetMedia.Response>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(
+                  "bloombox.services.media.v1beta1.Media", "Retrieve"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  io.bloombox.schema.services.media.v1beta1.GetMedia.Request.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  io.bloombox.schema.services.media.v1beta1.GetMedia.Response.getDefaultInstance()))
+                  .setSchemaDescriptor(new MediaMethodDescriptorSupplier("Retrieve"))
+                  .build();
+          }
+        }
+     }
+     return getRetrieveMethod;
+  }
+
+  private static volatile io.grpc.MethodDescriptor<io.bloombox.schema.services.media.v1beta1.UploadMedia.Request,
+      io.bloombox.schema.services.media.v1beta1.UploadMedia.Response> getUploadMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "Upload",
+      requestType = io.bloombox.schema.services.media.v1beta1.UploadMedia.Request.class,
+      responseType = io.bloombox.schema.services.media.v1beta1.UploadMedia.Response.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<io.bloombox.schema.services.media.v1beta1.UploadMedia.Request,
+      io.bloombox.schema.services.media.v1beta1.UploadMedia.Response> getUploadMethod() {
+    io.grpc.MethodDescriptor<io.bloombox.schema.services.media.v1beta1.UploadMedia.Request, io.bloombox.schema.services.media.v1beta1.UploadMedia.Response> getUploadMethod;
+    if ((getUploadMethod = MediaGrpc.getUploadMethod) == null) {
+      synchronized (MediaGrpc.class) {
+        if ((getUploadMethod = MediaGrpc.getUploadMethod) == null) {
+          MediaGrpc.getUploadMethod = getUploadMethod = 
+              io.grpc.MethodDescriptor.<io.bloombox.schema.services.media.v1beta1.UploadMedia.Request, io.bloombox.schema.services.media.v1beta1.UploadMedia.Response>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(
+                  "bloombox.services.media.v1beta1.Media", "Upload"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  io.bloombox.schema.services.media.v1beta1.UploadMedia.Request.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  io.bloombox.schema.services.media.v1beta1.UploadMedia.Response.getDefaultInstance()))
+                  .setSchemaDescriptor(new MediaMethodDescriptorSupplier("Upload"))
+                  .build();
+          }
+        }
+     }
+     return getUploadMethod;
+  }
+
+  private static volatile io.grpc.MethodDescriptor<io.bloombox.schema.services.media.v1beta1.AttachMedia.Request,
+      com.google.protobuf.Empty> getAttachMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "Attach",
+      requestType = io.bloombox.schema.services.media.v1beta1.AttachMedia.Request.class,
+      responseType = com.google.protobuf.Empty.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<io.bloombox.schema.services.media.v1beta1.AttachMedia.Request,
+      com.google.protobuf.Empty> getAttachMethod() {
+    io.grpc.MethodDescriptor<io.bloombox.schema.services.media.v1beta1.AttachMedia.Request, com.google.protobuf.Empty> getAttachMethod;
+    if ((getAttachMethod = MediaGrpc.getAttachMethod) == null) {
+      synchronized (MediaGrpc.class) {
+        if ((getAttachMethod = MediaGrpc.getAttachMethod) == null) {
+          MediaGrpc.getAttachMethod = getAttachMethod = 
+              io.grpc.MethodDescriptor.<io.bloombox.schema.services.media.v1beta1.AttachMedia.Request, com.google.protobuf.Empty>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(
+                  "bloombox.services.media.v1beta1.Media", "Attach"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  io.bloombox.schema.services.media.v1beta1.AttachMedia.Request.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.google.protobuf.Empty.getDefaultInstance()))
+                  .setSchemaDescriptor(new MediaMethodDescriptorSupplier("Attach"))
+                  .build();
+          }
+        }
+     }
+     return getAttachMethod;
+  }
 
   /**
    * Creates a new async stub that supports all call types for the service
@@ -136,7 +215,7 @@ public final class MediaGrpc {
      */
     public void list(io.bloombox.schema.services.media.v1beta1.ListMedia.Request request,
         io.grpc.stub.StreamObserver<io.bloombox.schema.services.media.v1beta1.ListMedia.Response> responseObserver) {
-      asyncUnimplementedUnaryCall(METHOD_LIST, responseObserver);
+      asyncUnimplementedUnaryCall(getListMethod(), responseObserver);
     }
 
     /**
@@ -147,7 +226,7 @@ public final class MediaGrpc {
      */
     public void retrieve(io.bloombox.schema.services.media.v1beta1.GetMedia.Request request,
         io.grpc.stub.StreamObserver<io.bloombox.schema.services.media.v1beta1.GetMedia.Response> responseObserver) {
-      asyncUnimplementedUnaryCall(METHOD_RETRIEVE, responseObserver);
+      asyncUnimplementedUnaryCall(getRetrieveMethod(), responseObserver);
     }
 
     /**
@@ -158,7 +237,7 @@ public final class MediaGrpc {
      */
     public void upload(io.bloombox.schema.services.media.v1beta1.UploadMedia.Request request,
         io.grpc.stub.StreamObserver<io.bloombox.schema.services.media.v1beta1.UploadMedia.Response> responseObserver) {
-      asyncUnimplementedUnaryCall(METHOD_UPLOAD, responseObserver);
+      asyncUnimplementedUnaryCall(getUploadMethod(), responseObserver);
     }
 
     /**
@@ -170,34 +249,34 @@ public final class MediaGrpc {
      */
     public void attach(io.bloombox.schema.services.media.v1beta1.AttachMedia.Request request,
         io.grpc.stub.StreamObserver<com.google.protobuf.Empty> responseObserver) {
-      asyncUnimplementedUnaryCall(METHOD_ATTACH, responseObserver);
+      asyncUnimplementedUnaryCall(getAttachMethod(), responseObserver);
     }
 
     @java.lang.Override public final io.grpc.ServerServiceDefinition bindService() {
       return io.grpc.ServerServiceDefinition.builder(getServiceDescriptor())
           .addMethod(
-            METHOD_LIST,
+            getListMethod(),
             asyncUnaryCall(
               new MethodHandlers<
                 io.bloombox.schema.services.media.v1beta1.ListMedia.Request,
                 io.bloombox.schema.services.media.v1beta1.ListMedia.Response>(
                   this, METHODID_LIST)))
           .addMethod(
-            METHOD_RETRIEVE,
+            getRetrieveMethod(),
             asyncUnaryCall(
               new MethodHandlers<
                 io.bloombox.schema.services.media.v1beta1.GetMedia.Request,
                 io.bloombox.schema.services.media.v1beta1.GetMedia.Response>(
                   this, METHODID_RETRIEVE)))
           .addMethod(
-            METHOD_UPLOAD,
+            getUploadMethod(),
             asyncUnaryCall(
               new MethodHandlers<
                 io.bloombox.schema.services.media.v1beta1.UploadMedia.Request,
                 io.bloombox.schema.services.media.v1beta1.UploadMedia.Response>(
                   this, METHODID_UPLOAD)))
           .addMethod(
-            METHOD_ATTACH,
+            getAttachMethod(),
             asyncUnaryCall(
               new MethodHandlers<
                 io.bloombox.schema.services.media.v1beta1.AttachMedia.Request,
@@ -238,7 +317,7 @@ public final class MediaGrpc {
     public void list(io.bloombox.schema.services.media.v1beta1.ListMedia.Request request,
         io.grpc.stub.StreamObserver<io.bloombox.schema.services.media.v1beta1.ListMedia.Response> responseObserver) {
       asyncUnaryCall(
-          getChannel().newCall(METHOD_LIST, getCallOptions()), request, responseObserver);
+          getChannel().newCall(getListMethod(), getCallOptions()), request, responseObserver);
     }
 
     /**
@@ -250,7 +329,7 @@ public final class MediaGrpc {
     public void retrieve(io.bloombox.schema.services.media.v1beta1.GetMedia.Request request,
         io.grpc.stub.StreamObserver<io.bloombox.schema.services.media.v1beta1.GetMedia.Response> responseObserver) {
       asyncUnaryCall(
-          getChannel().newCall(METHOD_RETRIEVE, getCallOptions()), request, responseObserver);
+          getChannel().newCall(getRetrieveMethod(), getCallOptions()), request, responseObserver);
     }
 
     /**
@@ -262,7 +341,7 @@ public final class MediaGrpc {
     public void upload(io.bloombox.schema.services.media.v1beta1.UploadMedia.Request request,
         io.grpc.stub.StreamObserver<io.bloombox.schema.services.media.v1beta1.UploadMedia.Response> responseObserver) {
       asyncUnaryCall(
-          getChannel().newCall(METHOD_UPLOAD, getCallOptions()), request, responseObserver);
+          getChannel().newCall(getUploadMethod(), getCallOptions()), request, responseObserver);
     }
 
     /**
@@ -275,7 +354,7 @@ public final class MediaGrpc {
     public void attach(io.bloombox.schema.services.media.v1beta1.AttachMedia.Request request,
         io.grpc.stub.StreamObserver<com.google.protobuf.Empty> responseObserver) {
       asyncUnaryCall(
-          getChannel().newCall(METHOD_ATTACH, getCallOptions()), request, responseObserver);
+          getChannel().newCall(getAttachMethod(), getCallOptions()), request, responseObserver);
     }
   }
 
@@ -309,7 +388,7 @@ public final class MediaGrpc {
      */
     public io.bloombox.schema.services.media.v1beta1.ListMedia.Response list(io.bloombox.schema.services.media.v1beta1.ListMedia.Request request) {
       return blockingUnaryCall(
-          getChannel(), METHOD_LIST, getCallOptions(), request);
+          getChannel(), getListMethod(), getCallOptions(), request);
     }
 
     /**
@@ -320,7 +399,7 @@ public final class MediaGrpc {
      */
     public io.bloombox.schema.services.media.v1beta1.GetMedia.Response retrieve(io.bloombox.schema.services.media.v1beta1.GetMedia.Request request) {
       return blockingUnaryCall(
-          getChannel(), METHOD_RETRIEVE, getCallOptions(), request);
+          getChannel(), getRetrieveMethod(), getCallOptions(), request);
     }
 
     /**
@@ -331,7 +410,7 @@ public final class MediaGrpc {
      */
     public io.bloombox.schema.services.media.v1beta1.UploadMedia.Response upload(io.bloombox.schema.services.media.v1beta1.UploadMedia.Request request) {
       return blockingUnaryCall(
-          getChannel(), METHOD_UPLOAD, getCallOptions(), request);
+          getChannel(), getUploadMethod(), getCallOptions(), request);
     }
 
     /**
@@ -343,7 +422,7 @@ public final class MediaGrpc {
      */
     public com.google.protobuf.Empty attach(io.bloombox.schema.services.media.v1beta1.AttachMedia.Request request) {
       return blockingUnaryCall(
-          getChannel(), METHOD_ATTACH, getCallOptions(), request);
+          getChannel(), getAttachMethod(), getCallOptions(), request);
     }
   }
 
@@ -378,7 +457,7 @@ public final class MediaGrpc {
     public com.google.common.util.concurrent.ListenableFuture<io.bloombox.schema.services.media.v1beta1.ListMedia.Response> list(
         io.bloombox.schema.services.media.v1beta1.ListMedia.Request request) {
       return futureUnaryCall(
-          getChannel().newCall(METHOD_LIST, getCallOptions()), request);
+          getChannel().newCall(getListMethod(), getCallOptions()), request);
     }
 
     /**
@@ -390,7 +469,7 @@ public final class MediaGrpc {
     public com.google.common.util.concurrent.ListenableFuture<io.bloombox.schema.services.media.v1beta1.GetMedia.Response> retrieve(
         io.bloombox.schema.services.media.v1beta1.GetMedia.Request request) {
       return futureUnaryCall(
-          getChannel().newCall(METHOD_RETRIEVE, getCallOptions()), request);
+          getChannel().newCall(getRetrieveMethod(), getCallOptions()), request);
     }
 
     /**
@@ -402,7 +481,7 @@ public final class MediaGrpc {
     public com.google.common.util.concurrent.ListenableFuture<io.bloombox.schema.services.media.v1beta1.UploadMedia.Response> upload(
         io.bloombox.schema.services.media.v1beta1.UploadMedia.Request request) {
       return futureUnaryCall(
-          getChannel().newCall(METHOD_UPLOAD, getCallOptions()), request);
+          getChannel().newCall(getUploadMethod(), getCallOptions()), request);
     }
 
     /**
@@ -415,7 +494,7 @@ public final class MediaGrpc {
     public com.google.common.util.concurrent.ListenableFuture<com.google.protobuf.Empty> attach(
         io.bloombox.schema.services.media.v1beta1.AttachMedia.Request request) {
       return futureUnaryCall(
-          getChannel().newCall(METHOD_ATTACH, getCallOptions()), request);
+          getChannel().newCall(getAttachMethod(), getCallOptions()), request);
     }
   }
 
@@ -473,10 +552,38 @@ public final class MediaGrpc {
     }
   }
 
-  private static final class MediaDescriptorSupplier implements io.grpc.protobuf.ProtoFileDescriptorSupplier {
+  private static abstract class MediaBaseDescriptorSupplier
+      implements io.grpc.protobuf.ProtoFileDescriptorSupplier, io.grpc.protobuf.ProtoServiceDescriptorSupplier {
+    MediaBaseDescriptorSupplier() {}
+
     @java.lang.Override
     public com.google.protobuf.Descriptors.FileDescriptor getFileDescriptor() {
       return io.bloombox.schema.services.media.v1beta1.MediaServiceBeta1.getDescriptor();
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Descriptors.ServiceDescriptor getServiceDescriptor() {
+      return getFileDescriptor().findServiceByName("Media");
+    }
+  }
+
+  private static final class MediaFileDescriptorSupplier
+      extends MediaBaseDescriptorSupplier {
+    MediaFileDescriptorSupplier() {}
+  }
+
+  private static final class MediaMethodDescriptorSupplier
+      extends MediaBaseDescriptorSupplier
+      implements io.grpc.protobuf.ProtoMethodDescriptorSupplier {
+    private final String methodName;
+
+    MediaMethodDescriptorSupplier(String methodName) {
+      this.methodName = methodName;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Descriptors.MethodDescriptor getMethodDescriptor() {
+      return getServiceDescriptor().findMethodByName(methodName);
     }
   }
 
@@ -489,11 +596,11 @@ public final class MediaGrpc {
         result = serviceDescriptor;
         if (result == null) {
           serviceDescriptor = result = io.grpc.ServiceDescriptor.newBuilder(SERVICE_NAME)
-              .setSchemaDescriptor(new MediaDescriptorSupplier())
-              .addMethod(METHOD_LIST)
-              .addMethod(METHOD_RETRIEVE)
-              .addMethod(METHOD_UPLOAD)
-              .addMethod(METHOD_ATTACH)
+              .setSchemaDescriptor(new MediaFileDescriptorSupplier())
+              .addMethod(getListMethod())
+              .addMethod(getRetrieveMethod())
+              .addMethod(getUploadMethod())
+              .addMethod(getAttachMethod())
               .build();
         }
       }

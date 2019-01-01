@@ -1,11 +1,12 @@
 /*
- * Copyright 2018, Bloombox, LLC.
+ * Copyright 2018, Momentum Ideas, Co. All rights reserved.
  *
- * Licensed under the Apache License, Version 2.0 (the "License");
- * you may not use this file except in compliance with the License.
- * You may obtain a copy of the License at
- *
- *     http://www.apache.org/licenses/LICENSE-2.0
+ * Source and object computer code contained herein is the private intellectual
+ * property of Momentum Ideas Co., a Delaware Corporation. Use of this
+ * code in source form requires permission in writing before use or the
+ * assembly, distribution, or publishing of derivative works, for commercial
+ * purposes or any other purpose, from a duly authorized officer of Momentum
+ * Ideas Co.
  *
  * Unless required by applicable law or agreed to in writing, software
  * distributed under the License is distributed on an "AS IS" BASIS,
@@ -201,13 +202,6 @@ public final class MaterialsContent {
             case 0:
               done = true;
               break;
-            default: {
-              if (!parseUnknownFieldProto3(
-                  input, unknownFields, extensionRegistry, tag)) {
-                done = true;
-              }
-              break;
-            }
             case 8: {
               int rawValue = input.readEnum();
 
@@ -248,6 +242,13 @@ public final class MaterialsContent {
                   input.readMessage(io.opencannabis.schema.product.DistributionChannel.DistributionPolicy.parser(), extensionRegistry));
               break;
             }
+            default: {
+              if (!parseUnknownFieldProto3(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
           }
         }
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
@@ -268,6 +269,7 @@ public final class MaterialsContent {
       return io.opencannabis.schema.content.MaterialsContent.internal_static_opencannabis_content_MaterialsData_descriptor;
     }
 
+    @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
       return io.opencannabis.schema.content.MaterialsContent.internal_static_opencannabis_content_MaterialsData_fieldAccessorTable
@@ -296,6 +298,7 @@ public final class MaterialsContent {
      * <code>.opencannabis.structs.Species species = 1;</code>
      */
     public io.opencannabis.schema.product.struct.Species getSpecies() {
+      @SuppressWarnings("deprecation")
       io.opencannabis.schema.product.struct.Species result = io.opencannabis.schema.product.struct.Species.valueOf(species_);
       return result == null ? io.opencannabis.schema.product.struct.Species.UNRECOGNIZED : result;
     }
@@ -353,6 +356,7 @@ public final class MaterialsContent {
      * <code>.opencannabis.structs.Grow grow = 3;</code>
      */
     public io.opencannabis.schema.product.struct.Grow getGrow() {
+      @SuppressWarnings("deprecation")
       io.opencannabis.schema.product.struct.Grow result = io.opencannabis.schema.product.struct.Grow.valueOf(grow_);
       return result == null ? io.opencannabis.schema.product.struct.Grow.UNRECOGNIZED : result;
     }
@@ -377,6 +381,7 @@ public final class MaterialsContent {
      * <code>.opencannabis.structs.Shelf shelf = 4;</code>
      */
     public io.opencannabis.schema.product.struct.Shelf getShelf() {
+      @SuppressWarnings("deprecation")
       io.opencannabis.schema.product.struct.Shelf result = io.opencannabis.schema.product.struct.Shelf.valueOf(shelf_);
       return result == null ? io.opencannabis.schema.product.struct.Shelf.UNRECOGNIZED : result;
     }
@@ -437,6 +442,7 @@ public final class MaterialsContent {
     }
 
     private byte memoizedIsInitialized = -1;
+    @java.lang.Override
     public final boolean isInitialized() {
       byte isInitialized = memoizedIsInitialized;
       if (isInitialized == 1) return true;
@@ -446,6 +452,7 @@ public final class MaterialsContent {
       return true;
     }
 
+    @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
       if (species_ != io.opencannabis.schema.product.struct.Species.UNSPECIFIED.getNumber()) {
@@ -466,6 +473,7 @@ public final class MaterialsContent {
       unknownFields.writeTo(output);
     }
 
+    @java.lang.Override
     public int getSerializedSize() {
       int size = memoizedSize;
       if (size != -1) return size;
@@ -617,6 +625,7 @@ public final class MaterialsContent {
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
 
+    @java.lang.Override
     public Builder newBuilderForType() { return newBuilder(); }
     public static Builder newBuilder() {
       return DEFAULT_INSTANCE.toBuilder();
@@ -624,6 +633,7 @@ public final class MaterialsContent {
     public static Builder newBuilder(io.opencannabis.schema.content.MaterialsContent.MaterialsData prototype) {
       return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
     }
+    @java.lang.Override
     public Builder toBuilder() {
       return this == DEFAULT_INSTANCE
           ? new Builder() : new Builder().mergeFrom(this);
@@ -651,6 +661,7 @@ public final class MaterialsContent {
         return io.opencannabis.schema.content.MaterialsContent.internal_static_opencannabis_content_MaterialsData_descriptor;
       }
 
+      @java.lang.Override
       protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
           internalGetFieldAccessorTable() {
         return io.opencannabis.schema.content.MaterialsContent.internal_static_opencannabis_content_MaterialsData_fieldAccessorTable
@@ -674,6 +685,7 @@ public final class MaterialsContent {
           getChannelFieldBuilder();
         }
       }
+      @java.lang.Override
       public Builder clear() {
         super.clear();
         species_ = 0;
@@ -697,15 +709,18 @@ public final class MaterialsContent {
         return this;
       }
 
+      @java.lang.Override
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
         return io.opencannabis.schema.content.MaterialsContent.internal_static_opencannabis_content_MaterialsData_descriptor;
       }
 
+      @java.lang.Override
       public io.opencannabis.schema.content.MaterialsContent.MaterialsData getDefaultInstanceForType() {
         return io.opencannabis.schema.content.MaterialsContent.MaterialsData.getDefaultInstance();
       }
 
+      @java.lang.Override
       public io.opencannabis.schema.content.MaterialsContent.MaterialsData build() {
         io.opencannabis.schema.content.MaterialsContent.MaterialsData result = buildPartial();
         if (!result.isInitialized()) {
@@ -714,6 +729,7 @@ public final class MaterialsContent {
         return result;
       }
 
+      @java.lang.Override
       public io.opencannabis.schema.content.MaterialsContent.MaterialsData buildPartial() {
         io.opencannabis.schema.content.MaterialsContent.MaterialsData result = new io.opencannabis.schema.content.MaterialsContent.MaterialsData(this);
         int from_bitField0_ = bitField0_;
@@ -740,32 +756,39 @@ public final class MaterialsContent {
         return result;
       }
 
+      @java.lang.Override
       public Builder clone() {
         return (Builder) super.clone();
       }
+      @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
         return (Builder) super.setField(field, value);
       }
+      @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
         return (Builder) super.clearField(field);
       }
+      @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
         return (Builder) super.clearOneof(oneof);
       }
+      @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
         return (Builder) super.setRepeatedField(field, index, value);
       }
+      @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
         return (Builder) super.addRepeatedField(field, value);
       }
+      @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
         if (other instanceof io.opencannabis.schema.content.MaterialsContent.MaterialsData) {
           return mergeFrom((io.opencannabis.schema.content.MaterialsContent.MaterialsData)other);
@@ -820,10 +843,12 @@ public final class MaterialsContent {
         return this;
       }
 
+      @java.lang.Override
       public final boolean isInitialized() {
         return true;
       }
 
+      @java.lang.Override
       public Builder mergeFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -874,6 +899,7 @@ public final class MaterialsContent {
        * <code>.opencannabis.structs.Species species = 1;</code>
        */
       public io.opencannabis.schema.product.struct.Species getSpecies() {
+        @SuppressWarnings("deprecation")
         io.opencannabis.schema.product.struct.Species result = io.opencannabis.schema.product.struct.Species.valueOf(species_);
         return result == null ? io.opencannabis.schema.product.struct.Species.UNRECOGNIZED : result;
       }
@@ -1091,6 +1117,7 @@ public final class MaterialsContent {
        * <code>.opencannabis.structs.Grow grow = 3;</code>
        */
       public io.opencannabis.schema.product.struct.Grow getGrow() {
+        @SuppressWarnings("deprecation")
         io.opencannabis.schema.product.struct.Grow result = io.opencannabis.schema.product.struct.Grow.valueOf(grow_);
         return result == null ? io.opencannabis.schema.product.struct.Grow.UNRECOGNIZED : result;
       }
@@ -1155,6 +1182,7 @@ public final class MaterialsContent {
        * <code>.opencannabis.structs.Shelf shelf = 4;</code>
        */
       public io.opencannabis.schema.product.struct.Shelf getShelf() {
+        @SuppressWarnings("deprecation")
         io.opencannabis.schema.product.struct.Shelf result = io.opencannabis.schema.product.struct.Shelf.valueOf(shelf_);
         return result == null ? io.opencannabis.schema.product.struct.Shelf.UNRECOGNIZED : result;
       }
@@ -1499,11 +1527,13 @@ public final class MaterialsContent {
         }
         return channelBuilder_;
       }
+      @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
         return super.setUnknownFieldsProto3(unknownFields);
       }
 
+      @java.lang.Override
       public final Builder mergeUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
         return super.mergeUnknownFields(unknownFields);
@@ -1525,6 +1555,7 @@ public final class MaterialsContent {
 
     private static final com.google.protobuf.Parser<MaterialsData>
         PARSER = new com.google.protobuf.AbstractParser<MaterialsData>() {
+      @java.lang.Override
       public MaterialsData parsePartialFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -1542,6 +1573,7 @@ public final class MaterialsContent {
       return PARSER;
     }
 
+    @java.lang.Override
     public io.opencannabis.schema.content.MaterialsContent.MaterialsData getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }

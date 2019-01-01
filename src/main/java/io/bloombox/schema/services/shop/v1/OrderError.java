@@ -1,8 +1,8 @@
 /*
- * Copyright 2018, Bloombox, LLC. All rights reserved.
+ * Copyright 2018, Momentum Ideas, Co. All rights reserved.
  *
  * Source and object computer code contained herein is the private intellectual
- * property of Bloombox, a California Limited Liability Corporation. Use of this
+ * property of Momentum Ideas Co., a Delaware Corporation. Use of this
  * code in source form requires permission in writing before use or the
  * assembly, distribution, or publishing of derivative works, for commercial
  * purposes or any other purpose, from a duly authorized officer of Momentum
@@ -25,7 +25,7 @@ package io.bloombox.schema.services.shop.v1;
  * Enumerates errors that may prevent a user from submitting an order for pickup or delivery.
  * </pre>
  *
- * Protobuf enum {@code bloombox.schema.services.shop.v1.OrderError}
+ * Protobuf enum {@code bloombox.services.shop.v1.OrderError}
  */
 public enum OrderError
     implements com.google.protobuf.ProtocolMessageEnum {
@@ -339,6 +339,6 @@ public enum OrderError
     this.value = value;
   }
 
-  // @@protoc_insertion_point(enum_scope:bloombox.schema.services.shop.v1.OrderError)
+  // @@protoc_insertion_point(enum_scope:bloombox.services.shop.v1.OrderError)
 }
 

@@ -1,11 +1,12 @@
 /*
- * Copyright 2018, Bloombox, LLC.
+ * Copyright 2018, Momentum Ideas, Co. All rights reserved.
  *
- * Licensed under the Apache License, Version 2.0 (the "License");
- * you may not use this file except in compliance with the License.
- * You may obtain a copy of the License at
- *
- *     http://www.apache.org/licenses/LICENSE-2.0
+ * Source and object computer code contained herein is the private intellectual
+ * property of Momentum Ideas Co., a Delaware Corporation. Use of this
+ * code in source form requires permission in writing before use or the
+ * assembly, distribution, or publishing of derivative works, for commercial
+ * purposes or any other purpose, from a duly authorized officer of Momentum
+ * Ideas Co.
  *
  * Unless required by applicable law or agreed to in writing, software
  * distributed under the License is distributed on an "AS IS" BASIS,
@@ -20,7 +21,7 @@
 package io.bloombox.schema.search;
 
 public interface SearchResultOptionsOrBuilder extends
-    // @@protoc_insertion_point(interface_extends:bloombox.schema.search.SearchResultOptions)
+    // @@protoc_insertion_point(interface_extends:bloombox.search.SearchResultOptions)
     com.google.protobuf.MessageOrBuilder {
 
   /**
@@ -37,7 +38,7 @@ public interface SearchResultOptionsOrBuilder extends
    * Enable result highlighting
    * </pre>
    *
-   * <code>.bloombox.schema.search.ResultHighlightMode highlight = 2;</code>
+   * <code>.bloombox.search.ResultHighlightMode highlight = 2;</code>
    */
   int getHighlightValue();
   /**
@@ -45,7 +46,7 @@ public interface SearchResultOptionsOrBuilder extends
    * Enable result highlighting
    * </pre>
    *
-   * <code>.bloombox.schema.search.ResultHighlightMode highlight = 2;</code>
+   * <code>.bloombox.search.ResultHighlightMode highlight = 2;</code>
    */
   io.bloombox.schema.search.ResultHighlightMode getHighlight();
 
@@ -54,7 +55,7 @@ public interface SearchResultOptionsOrBuilder extends
    * Specifies desired extensions to stock search result data.
    * </pre>
    *
-   * <code>repeated .bloombox.schema.search.SearchResultExtension include = 3;</code>
+   * <code>repeated .bloombox.search.SearchResultExtension include = 3;</code>
    */
   java.util.List<io.bloombox.schema.search.SearchResultExtension> getIncludeList();
   /**
@@ -62,7 +63,7 @@ public interface SearchResultOptionsOrBuilder extends
    * Specifies desired extensions to stock search result data.
    * </pre>
    *
-   * <code>repeated .bloombox.schema.search.SearchResultExtension include = 3;</code>
+   * <code>repeated .bloombox.search.SearchResultExtension include = 3;</code>
    */
   int getIncludeCount();
   /**
@@ -70,7 +71,7 @@ public interface SearchResultOptionsOrBuilder extends
    * Specifies desired extensions to stock search result data.
    * </pre>
    *
-   * <code>repeated .bloombox.schema.search.SearchResultExtension include = 3;</code>
+   * <code>repeated .bloombox.search.SearchResultExtension include = 3;</code>
    */
   io.bloombox.schema.search.SearchResultExtension getInclude(int index);
   /**
@@ -78,7 +79,7 @@ public interface SearchResultOptionsOrBuilder extends
    * Specifies desired extensions to stock search result data.
    * </pre>
    *
-   * <code>repeated .bloombox.schema.search.SearchResultExtension include = 3;</code>
+   * <code>repeated .bloombox.search.SearchResultExtension include = 3;</code>
    */
   java.util.List<java.lang.Integer>
   getIncludeValueList();
@@ -87,7 +88,7 @@ public interface SearchResultOptionsOrBuilder extends
    * Specifies desired extensions to stock search result data.
    * </pre>
    *
-   * <code>repeated .bloombox.schema.search.SearchResultExtension include = 3;</code>
+   * <code>repeated .bloombox.search.SearchResultExtension include = 3;</code>
    */
   int getIncludeValue(int index);
 }

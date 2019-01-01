@@ -1,11 +1,12 @@
 /*
- * Copyright 2018, Bloombox, LLC.
+ * Copyright 2018, Momentum Ideas, Co. All rights reserved.
  *
- * Licensed under the Apache License, Version 2.0 (the "License");
- * you may not use this file except in compliance with the License.
- * You may obtain a copy of the License at
- *
- *     http://www.apache.org/licenses/LICENSE-2.0
+ * Source and object computer code contained herein is the private intellectual
+ * property of Momentum Ideas Co., a Delaware Corporation. Use of this
+ * code in source form requires permission in writing before use or the
+ * assembly, distribution, or publishing of derivative works, for commercial
+ * purposes or any other purpose, from a duly authorized officer of Momentum
+ * Ideas Co.
  *
  * Unless required by applicable law or agreed to in writing, software
  * distributed under the License is distributed on an "AS IS" BASIS,
@@ -63,19 +64,12 @@ private static final long serialVersionUID = 0L;
           case 0:
             done = true;
             break;
-          default: {
-            if (!parseUnknownFieldProto3(
-                input, unknownFields, extensionRegistry, tag)) {
-              done = true;
-            }
-            break;
-          }
           case 10: {
-            io.opencannabis.schema.crypto.primitives.pki.KeyMaterial.Builder subBuilder = null;
+            io.opencannabis.schema.crypto.primitives.KeyMaterial.Builder subBuilder = null;
             if (publicKey_ != null) {
               subBuilder = publicKey_.toBuilder();
             }
-            publicKey_ = input.readMessage(io.opencannabis.schema.crypto.primitives.pki.KeyMaterial.parser(), extensionRegistry);
+            publicKey_ = input.readMessage(io.opencannabis.schema.crypto.primitives.KeyMaterial.parser(), extensionRegistry);
             if (subBuilder != null) {
               subBuilder.mergeFrom(publicKey_);
               publicKey_ = subBuilder.buildPartial();
@@ -113,6 +107,13 @@ private static final long serialVersionUID = 0L;
             signature_ = s;
             break;
           }
+          default: {
+            if (!parseUnknownFieldProto3(
+                input, unknownFields, extensionRegistry, tag)) {
+              done = true;
+            }
+            break;
+          }
         }
       }
     } catch (com.google.protobuf.InvalidProtocolBufferException e) {
@@ -130,6 +131,7 @@ private static final long serialVersionUID = 0L;
     return io.opencannabis.schema.crypto.SignatureOuterClass.internal_static_opencannabis_crypto_Signature_descriptor;
   }
 
+  @java.lang.Override
   protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internalGetFieldAccessorTable() {
     return io.opencannabis.schema.crypto.SignatureOuterClass.internal_static_opencannabis_crypto_Signature_fieldAccessorTable
@@ -178,13 +180,13 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int PUBLIC_KEY_FIELD_NUMBER = 1;
-  private io.opencannabis.schema.crypto.primitives.pki.KeyMaterial publicKey_;
+  private io.opencannabis.schema.crypto.primitives.KeyMaterial publicKey_;
   /**
    * <pre>
    * Public key fingerprint, or raw content of the public key, that performed the signing operation.
    * </pre>
    *
-   * <code>.opencannabis.crypto.primitives.pki.KeyMaterial public_key = 1;</code>
+   * <code>.opencannabis.crypto.KeyMaterial public_key = 1;</code>
    */
   public boolean hasPublicKey() {
     return publicKey_ != null;
@@ -194,19 +196,19 @@ private static final long serialVersionUID = 0L;
    * Public key fingerprint, or raw content of the public key, that performed the signing operation.
    * </pre>
    *
-   * <code>.opencannabis.crypto.primitives.pki.KeyMaterial public_key = 1;</code>
+   * <code>.opencannabis.crypto.KeyMaterial public_key = 1;</code>
    */
-  public io.opencannabis.schema.crypto.primitives.pki.KeyMaterial getPublicKey() {
-    return publicKey_ == null ? io.opencannabis.schema.crypto.primitives.pki.KeyMaterial.getDefaultInstance() : publicKey_;
+  public io.opencannabis.schema.crypto.primitives.KeyMaterial getPublicKey() {
+    return publicKey_ == null ? io.opencannabis.schema.crypto.primitives.KeyMaterial.getDefaultInstance() : publicKey_;
   }
   /**
    * <pre>
    * Public key fingerprint, or raw content of the public key, that performed the signing operation.
    * </pre>
    *
-   * <code>.opencannabis.crypto.primitives.pki.KeyMaterial public_key = 1;</code>
+   * <code>.opencannabis.crypto.KeyMaterial public_key = 1;</code>
    */
-  public io.opencannabis.schema.crypto.primitives.pki.KeyMaterialOrBuilder getPublicKeyOrBuilder() {
+  public io.opencannabis.schema.crypto.primitives.KeyMaterialOrBuilder getPublicKeyOrBuilder() {
     return getPublicKey();
   }
 
@@ -218,7 +220,7 @@ private static final long serialVersionUID = 0L;
    * the private key and recomputed via the public key.
    * </pre>
    *
-   * <code>.opencannabis.crypto.primitives.integrity.Hash fingerprint = 2;</code>
+   * <code>.opencannabis.crypto.Hash fingerprint = 2;</code>
    */
   public boolean hasFingerprint() {
     return fingerprint_ != null;
@@ -229,7 +231,7 @@ private static final long serialVersionUID = 0L;
    * the private key and recomputed via the public key.
    * </pre>
    *
-   * <code>.opencannabis.crypto.primitives.integrity.Hash fingerprint = 2;</code>
+   * <code>.opencannabis.crypto.Hash fingerprint = 2;</code>
    */
   public io.opencannabis.schema.crypto.primitives.integrity.Hash getFingerprint() {
     return fingerprint_ == null ? io.opencannabis.schema.crypto.primitives.integrity.Hash.getDefaultInstance() : fingerprint_;
@@ -240,7 +242,7 @@ private static final long serialVersionUID = 0L;
    * the private key and recomputed via the public key.
    * </pre>
    *
-   * <code>.opencannabis.crypto.primitives.integrity.Hash fingerprint = 2;</code>
+   * <code>.opencannabis.crypto.Hash fingerprint = 2;</code>
    */
   public io.opencannabis.schema.crypto.primitives.integrity.HashOrBuilder getFingerprintOrBuilder() {
     return getFingerprint();
@@ -369,6 +371,7 @@ private static final long serialVersionUID = 0L;
   }
 
   private byte memoizedIsInitialized = -1;
+  @java.lang.Override
   public final boolean isInitialized() {
     byte isInitialized = memoizedIsInitialized;
     if (isInitialized == 1) return true;
@@ -378,6 +381,7 @@ private static final long serialVersionUID = 0L;
     return true;
   }
 
+  @java.lang.Override
   public void writeTo(com.google.protobuf.CodedOutputStream output)
                       throws java.io.IOException {
     if (publicKey_ != null) {
@@ -399,6 +403,7 @@ private static final long serialVersionUID = 0L;
     unknownFields.writeTo(output);
   }
 
+  @java.lang.Override
   public int getSerializedSize() {
     int size = memoizedSize;
     if (size != -1) return size;
@@ -578,6 +583,7 @@ private static final long serialVersionUID = 0L;
         .parseWithIOException(PARSER, input, extensionRegistry);
   }
 
+  @java.lang.Override
   public Builder newBuilderForType() { return newBuilder(); }
   public static Builder newBuilder() {
     return DEFAULT_INSTANCE.toBuilder();
@@ -585,6 +591,7 @@ private static final long serialVersionUID = 0L;
   public static Builder newBuilder(io.opencannabis.schema.crypto.Signature prototype) {
     return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
   }
+  @java.lang.Override
   public Builder toBuilder() {
     return this == DEFAULT_INSTANCE
         ? new Builder() : new Builder().mergeFrom(this);
@@ -613,6 +620,7 @@ private static final long serialVersionUID = 0L;
       return io.opencannabis.schema.crypto.SignatureOuterClass.internal_static_opencannabis_crypto_Signature_descriptor;
     }
 
+    @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
       return io.opencannabis.schema.crypto.SignatureOuterClass.internal_static_opencannabis_crypto_Signature_fieldAccessorTable
@@ -635,6 +643,7 @@ private static final long serialVersionUID = 0L;
               .alwaysUseFieldBuilders) {
       }
     }
+    @java.lang.Override
     public Builder clear() {
       super.clear();
       if (publicKeyBuilder_ == null) {
@@ -654,15 +663,18 @@ private static final long serialVersionUID = 0L;
       return this;
     }
 
+    @java.lang.Override
     public com.google.protobuf.Descriptors.Descriptor
         getDescriptorForType() {
       return io.opencannabis.schema.crypto.SignatureOuterClass.internal_static_opencannabis_crypto_Signature_descriptor;
     }
 
+    @java.lang.Override
     public io.opencannabis.schema.crypto.Signature getDefaultInstanceForType() {
       return io.opencannabis.schema.crypto.Signature.getDefaultInstance();
     }
 
+    @java.lang.Override
     public io.opencannabis.schema.crypto.Signature build() {
       io.opencannabis.schema.crypto.Signature result = buildPartial();
       if (!result.isInitialized()) {
@@ -671,6 +683,7 @@ private static final long serialVersionUID = 0L;
       return result;
     }
 
+    @java.lang.Override
     public io.opencannabis.schema.crypto.Signature buildPartial() {
       io.opencannabis.schema.crypto.Signature result = new io.opencannabis.schema.crypto.Signature(this);
       if (publicKeyBuilder_ == null) {
@@ -697,32 +710,39 @@ private static final long serialVersionUID = 0L;
       return result;
     }
 
+    @java.lang.Override
     public Builder clone() {
       return (Builder) super.clone();
     }
+    @java.lang.Override
     public Builder setField(
         com.google.protobuf.Descriptors.FieldDescriptor field,
         java.lang.Object value) {
       return (Builder) super.setField(field, value);
     }
+    @java.lang.Override
     public Builder clearField(
         com.google.protobuf.Descriptors.FieldDescriptor field) {
       return (Builder) super.clearField(field);
     }
+    @java.lang.Override
     public Builder clearOneof(
         com.google.protobuf.Descriptors.OneofDescriptor oneof) {
       return (Builder) super.clearOneof(oneof);
     }
+    @java.lang.Override
     public Builder setRepeatedField(
         com.google.protobuf.Descriptors.FieldDescriptor field,
         int index, java.lang.Object value) {
       return (Builder) super.setRepeatedField(field, index, value);
     }
+    @java.lang.Override
     public Builder addRepeatedField(
         com.google.protobuf.Descriptors.FieldDescriptor field,
         java.lang.Object value) {
       return (Builder) super.addRepeatedField(field, value);
     }
+    @java.lang.Override
     public Builder mergeFrom(com.google.protobuf.Message other) {
       if (other instanceof io.opencannabis.schema.crypto.Signature) {
         return mergeFrom((io.opencannabis.schema.crypto.Signature)other);
@@ -766,10 +786,12 @@ private static final long serialVersionUID = 0L;
       return this;
     }
 
+    @java.lang.Override
     public final boolean isInitialized() {
       return true;
     }
 
+    @java.lang.Override
     public Builder mergeFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -803,15 +825,15 @@ private static final long serialVersionUID = 0L;
     }
 
 
-    private io.opencannabis.schema.crypto.primitives.pki.KeyMaterial publicKey_ = null;
+    private io.opencannabis.schema.crypto.primitives.KeyMaterial publicKey_ = null;
     private com.google.protobuf.SingleFieldBuilderV3<
-        io.opencannabis.schema.crypto.primitives.pki.KeyMaterial, io.opencannabis.schema.crypto.primitives.pki.KeyMaterial.Builder, io.opencannabis.schema.crypto.primitives.pki.KeyMaterialOrBuilder> publicKeyBuilder_;
+        io.opencannabis.schema.crypto.primitives.KeyMaterial, io.opencannabis.schema.crypto.primitives.KeyMaterial.Builder, io.opencannabis.schema.crypto.primitives.KeyMaterialOrBuilder> publicKeyBuilder_;
     /**
      * <pre>
      * Public key fingerprint, or raw content of the public key, that performed the signing operation.
      * </pre>
      *
-     * <code>.opencannabis.crypto.primitives.pki.KeyMaterial public_key = 1;</code>
+     * <code>.opencannabis.crypto.KeyMaterial public_key = 1;</code>
      */
     public boolean hasPublicKey() {
       return publicKeyBuilder_ != null || publicKey_ != null;
@@ -821,11 +843,11 @@ private static final long serialVersionUID = 0L;
      * Public key fingerprint, or raw content of the public key, that performed the signing operation.
      * </pre>
      *
-     * <code>.opencannabis.crypto.primitives.pki.KeyMaterial public_key = 1;</code>
+     * <code>.opencannabis.crypto.KeyMaterial public_key = 1;</code>
      */
-    public io.opencannabis.schema.crypto.primitives.pki.KeyMaterial getPublicKey() {
+    public io.opencannabis.schema.crypto.primitives.KeyMaterial getPublicKey() {
       if (publicKeyBuilder_ == null) {
-        return publicKey_ == null ? io.opencannabis.schema.crypto.primitives.pki.KeyMaterial.getDefaultInstance() : publicKey_;
+        return publicKey_ == null ? io.opencannabis.schema.crypto.primitives.KeyMaterial.getDefaultInstance() : publicKey_;
       } else {
         return publicKeyBuilder_.getMessage();
       }
@@ -835,9 +857,9 @@ private static final long serialVersionUID = 0L;
      * Public key fingerprint, or raw content of the public key, that performed the signing operation.
      * </pre>
      *
-     * <code>.opencannabis.crypto.primitives.pki.KeyMaterial public_key = 1;</code>
+     * <code>.opencannabis.crypto.KeyMaterial public_key = 1;</code>
      */
-    public Builder setPublicKey(io.opencannabis.schema.crypto.primitives.pki.KeyMaterial value) {
+    public Builder setPublicKey(io.opencannabis.schema.crypto.primitives.KeyMaterial value) {
       if (publicKeyBuilder_ == null) {
         if (value == null) {
           throw new NullPointerException();
@@ -855,10 +877,10 @@ private static final long serialVersionUID = 0L;
      * Public key fingerprint, or raw content of the public key, that performed the signing operation.
      * </pre>
      *
-     * <code>.opencannabis.crypto.primitives.pki.KeyMaterial public_key = 1;</code>
+     * <code>.opencannabis.crypto.KeyMaterial public_key = 1;</code>
      */
     public Builder setPublicKey(
-        io.opencannabis.schema.crypto.primitives.pki.KeyMaterial.Builder builderForValue) {
+        io.opencannabis.schema.crypto.primitives.KeyMaterial.Builder builderForValue) {
       if (publicKeyBuilder_ == null) {
         publicKey_ = builderForValue.build();
         onChanged();
@@ -873,13 +895,13 @@ private static final long serialVersionUID = 0L;
      * Public key fingerprint, or raw content of the public key, that performed the signing operation.
      * </pre>
      *
-     * <code>.opencannabis.crypto.primitives.pki.KeyMaterial public_key = 1;</code>
+     * <code>.opencannabis.crypto.KeyMaterial public_key = 1;</code>
      */
-    public Builder mergePublicKey(io.opencannabis.schema.crypto.primitives.pki.KeyMaterial value) {
+    public Builder mergePublicKey(io.opencannabis.schema.crypto.primitives.KeyMaterial value) {
       if (publicKeyBuilder_ == null) {
         if (publicKey_ != null) {
           publicKey_ =
-            io.opencannabis.schema.crypto.primitives.pki.KeyMaterial.newBuilder(publicKey_).mergeFrom(value).buildPartial();
+            io.opencannabis.schema.crypto.primitives.KeyMaterial.newBuilder(publicKey_).mergeFrom(value).buildPartial();
         } else {
           publicKey_ = value;
         }
@@ -895,7 +917,7 @@ private static final long serialVersionUID = 0L;
      * Public key fingerprint, or raw content of the public key, that performed the signing operation.
      * </pre>
      *
-     * <code>.opencannabis.crypto.primitives.pki.KeyMaterial public_key = 1;</code>
+     * <code>.opencannabis.crypto.KeyMaterial public_key = 1;</code>
      */
     public Builder clearPublicKey() {
       if (publicKeyBuilder_ == null) {
@@ -913,9 +935,9 @@ private static final long serialVersionUID = 0L;
      * Public key fingerprint, or raw content of the public key, that performed the signing operation.
      * </pre>
      *
-     * <code>.opencannabis.crypto.primitives.pki.KeyMaterial public_key = 1;</code>
+     * <code>.opencannabis.crypto.KeyMaterial public_key = 1;</code>
      */
-    public io.opencannabis.schema.crypto.primitives.pki.KeyMaterial.Builder getPublicKeyBuilder() {
+    public io.opencannabis.schema.crypto.primitives.KeyMaterial.Builder getPublicKeyBuilder() {
       
       onChanged();
       return getPublicKeyFieldBuilder().getBuilder();
@@ -925,14 +947,14 @@ private static final long serialVersionUID = 0L;
      * Public key fingerprint, or raw content of the public key, that performed the signing operation.
      * </pre>
      *
-     * <code>.opencannabis.crypto.primitives.pki.KeyMaterial public_key = 1;</code>
+     * <code>.opencannabis.crypto.KeyMaterial public_key = 1;</code>
      */
-    public io.opencannabis.schema.crypto.primitives.pki.KeyMaterialOrBuilder getPublicKeyOrBuilder() {
+    public io.opencannabis.schema.crypto.primitives.KeyMaterialOrBuilder getPublicKeyOrBuilder() {
       if (publicKeyBuilder_ != null) {
         return publicKeyBuilder_.getMessageOrBuilder();
       } else {
         return publicKey_ == null ?
-            io.opencannabis.schema.crypto.primitives.pki.KeyMaterial.getDefaultInstance() : publicKey_;
+            io.opencannabis.schema.crypto.primitives.KeyMaterial.getDefaultInstance() : publicKey_;
       }
     }
     /**
@@ -940,14 +962,14 @@ private static final long serialVersionUID = 0L;
      * Public key fingerprint, or raw content of the public key, that performed the signing operation.
      * </pre>
      *
-     * <code>.opencannabis.crypto.primitives.pki.KeyMaterial public_key = 1;</code>
+     * <code>.opencannabis.crypto.KeyMaterial public_key = 1;</code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<
-        io.opencannabis.schema.crypto.primitives.pki.KeyMaterial, io.opencannabis.schema.crypto.primitives.pki.KeyMaterial.Builder, io.opencannabis.schema.crypto.primitives.pki.KeyMaterialOrBuilder> 
+        io.opencannabis.schema.crypto.primitives.KeyMaterial, io.opencannabis.schema.crypto.primitives.KeyMaterial.Builder, io.opencannabis.schema.crypto.primitives.KeyMaterialOrBuilder> 
         getPublicKeyFieldBuilder() {
       if (publicKeyBuilder_ == null) {
         publicKeyBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-            io.opencannabis.schema.crypto.primitives.pki.KeyMaterial, io.opencannabis.schema.crypto.primitives.pki.KeyMaterial.Builder, io.opencannabis.schema.crypto.primitives.pki.KeyMaterialOrBuilder>(
+            io.opencannabis.schema.crypto.primitives.KeyMaterial, io.opencannabis.schema.crypto.primitives.KeyMaterial.Builder, io.opencannabis.schema.crypto.primitives.KeyMaterialOrBuilder>(
                 getPublicKey(),
                 getParentForChildren(),
                 isClean());
@@ -965,7 +987,7 @@ private static final long serialVersionUID = 0L;
      * the private key and recomputed via the public key.
      * </pre>
      *
-     * <code>.opencannabis.crypto.primitives.integrity.Hash fingerprint = 2;</code>
+     * <code>.opencannabis.crypto.Hash fingerprint = 2;</code>
      */
     public boolean hasFingerprint() {
       return fingerprintBuilder_ != null || fingerprint_ != null;
@@ -976,7 +998,7 @@ private static final long serialVersionUID = 0L;
      * the private key and recomputed via the public key.
      * </pre>
      *
-     * <code>.opencannabis.crypto.primitives.integrity.Hash fingerprint = 2;</code>
+     * <code>.opencannabis.crypto.Hash fingerprint = 2;</code>
      */
     public io.opencannabis.schema.crypto.primitives.integrity.Hash getFingerprint() {
       if (fingerprintBuilder_ == null) {
@@ -991,7 +1013,7 @@ private static final long serialVersionUID = 0L;
      * the private key and recomputed via the public key.
      * </pre>
      *
-     * <code>.opencannabis.crypto.primitives.integrity.Hash fingerprint = 2;</code>
+     * <code>.opencannabis.crypto.Hash fingerprint = 2;</code>
      */
     public Builder setFingerprint(io.opencannabis.schema.crypto.primitives.integrity.Hash value) {
       if (fingerprintBuilder_ == null) {
@@ -1012,7 +1034,7 @@ private static final long serialVersionUID = 0L;
      * the private key and recomputed via the public key.
      * </pre>
      *
-     * <code>.opencannabis.crypto.primitives.integrity.Hash fingerprint = 2;</code>
+     * <code>.opencannabis.crypto.Hash fingerprint = 2;</code>
      */
     public Builder setFingerprint(
         io.opencannabis.schema.crypto.primitives.integrity.Hash.Builder builderForValue) {
@@ -1031,7 +1053,7 @@ private static final long serialVersionUID = 0L;
      * the private key and recomputed via the public key.
      * </pre>
      *
-     * <code>.opencannabis.crypto.primitives.integrity.Hash fingerprint = 2;</code>
+     * <code>.opencannabis.crypto.Hash fingerprint = 2;</code>
      */
     public Builder mergeFingerprint(io.opencannabis.schema.crypto.primitives.integrity.Hash value) {
       if (fingerprintBuilder_ == null) {
@@ -1054,7 +1076,7 @@ private static final long serialVersionUID = 0L;
      * the private key and recomputed via the public key.
      * </pre>
      *
-     * <code>.opencannabis.crypto.primitives.integrity.Hash fingerprint = 2;</code>
+     * <code>.opencannabis.crypto.Hash fingerprint = 2;</code>
      */
     public Builder clearFingerprint() {
       if (fingerprintBuilder_ == null) {
@@ -1073,7 +1095,7 @@ private static final long serialVersionUID = 0L;
      * the private key and recomputed via the public key.
      * </pre>
      *
-     * <code>.opencannabis.crypto.primitives.integrity.Hash fingerprint = 2;</code>
+     * <code>.opencannabis.crypto.Hash fingerprint = 2;</code>
      */
     public io.opencannabis.schema.crypto.primitives.integrity.Hash.Builder getFingerprintBuilder() {
       
@@ -1086,7 +1108,7 @@ private static final long serialVersionUID = 0L;
      * the private key and recomputed via the public key.
      * </pre>
      *
-     * <code>.opencannabis.crypto.primitives.integrity.Hash fingerprint = 2;</code>
+     * <code>.opencannabis.crypto.Hash fingerprint = 2;</code>
      */
     public io.opencannabis.schema.crypto.primitives.integrity.HashOrBuilder getFingerprintOrBuilder() {
       if (fingerprintBuilder_ != null) {
@@ -1102,7 +1124,7 @@ private static final long serialVersionUID = 0L;
      * the private key and recomputed via the public key.
      * </pre>
      *
-     * <code>.opencannabis.crypto.primitives.integrity.Hash fingerprint = 2;</code>
+     * <code>.opencannabis.crypto.Hash fingerprint = 2;</code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<
         io.opencannabis.schema.crypto.primitives.integrity.Hash, io.opencannabis.schema.crypto.primitives.integrity.Hash.Builder, io.opencannabis.schema.crypto.primitives.integrity.HashOrBuilder> 
@@ -1375,11 +1397,13 @@ private static final long serialVersionUID = 0L;
       onChanged();
       return this;
     }
+    @java.lang.Override
     public final Builder setUnknownFields(
         final com.google.protobuf.UnknownFieldSet unknownFields) {
       return super.setUnknownFieldsProto3(unknownFields);
     }
 
+    @java.lang.Override
     public final Builder mergeUnknownFields(
         final com.google.protobuf.UnknownFieldSet unknownFields) {
       return super.mergeUnknownFields(unknownFields);
@@ -1401,6 +1425,7 @@ private static final long serialVersionUID = 0L;
 
   private static final com.google.protobuf.Parser<Signature>
       PARSER = new com.google.protobuf.AbstractParser<Signature>() {
+    @java.lang.Override
     public Signature parsePartialFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -1418,6 +1443,7 @@ private static final long serialVersionUID = 0L;
     return PARSER;
   }
 
+  @java.lang.Override
   public io.opencannabis.schema.crypto.Signature getDefaultInstanceForType() {
     return DEFAULT_INSTANCE;
   }

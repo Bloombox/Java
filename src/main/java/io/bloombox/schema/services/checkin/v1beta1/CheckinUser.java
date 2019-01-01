@@ -1,8 +1,8 @@
 /*
- * Copyright 2018, Bloombox, LLC. All rights reserved.
+ * Copyright 2018, Momentum Ideas, Co. All rights reserved.
  *
  * Source and object computer code contained herein is the private intellectual
- * property of Bloombox, a California Limited Liability Corporation. Use of this
+ * property of Momentum Ideas Co., a Delaware Corporation. Use of this
  * code in source form requires permission in writing before use or the
  * assembly, distribution, or publishing of derivative works, for commercial
  * purposes or any other purpose, from a duly authorized officer of Momentum
@@ -26,11 +26,11 @@ package io.bloombox.schema.services.checkin.v1beta1;
  * with enough information for a salutation.
  * </pre>
  *
- * Protobuf type {@code bloombox.schema.services.checkin.v1beta1.CheckinUser}
+ * Protobuf type {@code bloombox.services.checkin.v1beta1.CheckinUser}
  */
 public  final class CheckinUser extends
     com.google.protobuf.GeneratedMessageV3 implements
-    // @@protoc_insertion_point(message_implements:bloombox.schema.services.checkin.v1beta1.CheckinUser)
+    // @@protoc_insertion_point(message_implements:bloombox.services.checkin.v1beta1.CheckinUser)
     CheckinUserOrBuilder {
 private static final long serialVersionUID = 0L;
   // Use CheckinUser.newBuilder() to construct.
@@ -64,13 +64,6 @@ private static final long serialVersionUID = 0L;
           case 0:
             done = true;
             break;
-          default: {
-            if (!parseUnknownFieldProto3(
-                input, unknownFields, extensionRegistry, tag)) {
-              done = true;
-            }
-            break;
-          }
           case 10: {
             io.bloombox.schema.identity.AppUserKey.UserKey.Builder subBuilder = null;
             if (key_ != null) {
@@ -110,6 +103,13 @@ private static final long serialVersionUID = 0L;
 
             break;
           }
+          default: {
+            if (!parseUnknownFieldProto3(
+                input, unknownFields, extensionRegistry, tag)) {
+              done = true;
+            }
+            break;
+          }
         }
       }
     } catch (com.google.protobuf.InvalidProtocolBufferException e) {
@@ -124,12 +124,13 @@ private static final long serialVersionUID = 0L;
   }
   public static final com.google.protobuf.Descriptors.Descriptor
       getDescriptor() {
-    return io.bloombox.schema.services.checkin.v1beta1.CheckinServiceBeta1.internal_static_bloombox_schema_services_checkin_v1beta1_CheckinUser_descriptor;
+    return io.bloombox.schema.services.checkin.v1beta1.CheckinServiceBeta1.internal_static_bloombox_services_checkin_v1beta1_CheckinUser_descriptor;
   }
 
+  @java.lang.Override
   protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internalGetFieldAccessorTable() {
-    return io.bloombox.schema.services.checkin.v1beta1.CheckinServiceBeta1.internal_static_bloombox_schema_services_checkin_v1beta1_CheckinUser_fieldAccessorTable
+    return io.bloombox.schema.services.checkin.v1beta1.CheckinServiceBeta1.internal_static_bloombox_services_checkin_v1beta1_CheckinUser_fieldAccessorTable
         .ensureFieldAccessorsInitialized(
             io.bloombox.schema.services.checkin.v1beta1.CheckinUser.class, io.bloombox.schema.services.checkin.v1beta1.CheckinUser.Builder.class);
   }
@@ -141,7 +142,7 @@ private static final long serialVersionUID = 0L;
    * Key and identity ID for the user who was checked in.
    * </pre>
    *
-   * <code>.bloombox.schema.identity.UserKey key = 1;</code>
+   * <code>.bloombox.identity.UserKey key = 1;</code>
    */
   public boolean hasKey() {
     return key_ != null;
@@ -151,7 +152,7 @@ private static final long serialVersionUID = 0L;
    * Key and identity ID for the user who was checked in.
    * </pre>
    *
-   * <code>.bloombox.schema.identity.UserKey key = 1;</code>
+   * <code>.bloombox.identity.UserKey key = 1;</code>
    */
   public io.bloombox.schema.identity.AppUserKey.UserKey getKey() {
     return key_ == null ? io.bloombox.schema.identity.AppUserKey.UserKey.getDefaultInstance() : key_;
@@ -161,7 +162,7 @@ private static final long serialVersionUID = 0L;
    * Key and identity ID for the user who was checked in.
    * </pre>
    *
-   * <code>.bloombox.schema.identity.UserKey key = 1;</code>
+   * <code>.bloombox.identity.UserKey key = 1;</code>
    */
   public io.bloombox.schema.identity.AppUserKey.UserKeyOrBuilder getKeyOrBuilder() {
     return getKey();
@@ -174,7 +175,7 @@ private static final long serialVersionUID = 0L;
    * Active account flags.
    * </pre>
    *
-   * <code>.bloombox.schema.identity.UserFlags flags = 2;</code>
+   * <code>.bloombox.identity.UserFlags flags = 2;</code>
    */
   public boolean hasFlags() {
     return flags_ != null;
@@ -184,7 +185,7 @@ private static final long serialVersionUID = 0L;
    * Active account flags.
    * </pre>
    *
-   * <code>.bloombox.schema.identity.UserFlags flags = 2;</code>
+   * <code>.bloombox.identity.UserFlags flags = 2;</code>
    */
   public io.bloombox.schema.identity.AppUser.UserFlags getFlags() {
     return flags_ == null ? io.bloombox.schema.identity.AppUser.UserFlags.getDefaultInstance() : flags_;
@@ -194,7 +195,7 @@ private static final long serialVersionUID = 0L;
    * Active account flags.
    * </pre>
    *
-   * <code>.bloombox.schema.identity.UserFlags flags = 2;</code>
+   * <code>.bloombox.identity.UserFlags flags = 2;</code>
    */
   public io.bloombox.schema.identity.AppUser.UserFlagsOrBuilder getFlagsOrBuilder() {
     return getFlags();
@@ -234,6 +235,7 @@ private static final long serialVersionUID = 0L;
   }
 
   private byte memoizedIsInitialized = -1;
+  @java.lang.Override
   public final boolean isInitialized() {
     byte isInitialized = memoizedIsInitialized;
     if (isInitialized == 1) return true;
@@ -243,6 +245,7 @@ private static final long serialVersionUID = 0L;
     return true;
   }
 
+  @java.lang.Override
   public void writeTo(com.google.protobuf.CodedOutputStream output)
                       throws java.io.IOException {
     if (key_ != null) {
@@ -257,6 +260,7 @@ private static final long serialVersionUID = 0L;
     unknownFields.writeTo(output);
   }
 
+  @java.lang.Override
   public int getSerializedSize() {
     int size = memoizedSize;
     if (size != -1) return size;
@@ -403,6 +407,7 @@ private static final long serialVersionUID = 0L;
         .parseWithIOException(PARSER, input, extensionRegistry);
   }
 
+  @java.lang.Override
   public Builder newBuilderForType() { return newBuilder(); }
   public static Builder newBuilder() {
     return DEFAULT_INSTANCE.toBuilder();
@@ -410,6 +415,7 @@ private static final long serialVersionUID = 0L;
   public static Builder newBuilder(io.bloombox.schema.services.checkin.v1beta1.CheckinUser prototype) {
     return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
   }
+  @java.lang.Override
   public Builder toBuilder() {
     return this == DEFAULT_INSTANCE
         ? new Builder() : new Builder().mergeFrom(this);
@@ -427,20 +433,21 @@ private static final long serialVersionUID = 0L;
    * with enough information for a salutation.
    * </pre>
    *
-   * Protobuf type {@code bloombox.schema.services.checkin.v1beta1.CheckinUser}
+   * Protobuf type {@code bloombox.services.checkin.v1beta1.CheckinUser}
    */
   public static final class Builder extends
       com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-      // @@protoc_insertion_point(builder_implements:bloombox.schema.services.checkin.v1beta1.CheckinUser)
+      // @@protoc_insertion_point(builder_implements:bloombox.services.checkin.v1beta1.CheckinUser)
       io.bloombox.schema.services.checkin.v1beta1.CheckinUserOrBuilder {
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return io.bloombox.schema.services.checkin.v1beta1.CheckinServiceBeta1.internal_static_bloombox_schema_services_checkin_v1beta1_CheckinUser_descriptor;
+      return io.bloombox.schema.services.checkin.v1beta1.CheckinServiceBeta1.internal_static_bloombox_services_checkin_v1beta1_CheckinUser_descriptor;
     }
 
+    @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return io.bloombox.schema.services.checkin.v1beta1.CheckinServiceBeta1.internal_static_bloombox_schema_services_checkin_v1beta1_CheckinUser_fieldAccessorTable
+      return io.bloombox.schema.services.checkin.v1beta1.CheckinServiceBeta1.internal_static_bloombox_services_checkin_v1beta1_CheckinUser_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
               io.bloombox.schema.services.checkin.v1beta1.CheckinUser.class, io.bloombox.schema.services.checkin.v1beta1.CheckinUser.Builder.class);
     }
@@ -460,6 +467,7 @@ private static final long serialVersionUID = 0L;
               .alwaysUseFieldBuilders) {
       }
     }
+    @java.lang.Override
     public Builder clear() {
       super.clear();
       if (keyBuilder_ == null) {
@@ -483,15 +491,18 @@ private static final long serialVersionUID = 0L;
       return this;
     }
 
+    @java.lang.Override
     public com.google.protobuf.Descriptors.Descriptor
         getDescriptorForType() {
-      return io.bloombox.schema.services.checkin.v1beta1.CheckinServiceBeta1.internal_static_bloombox_schema_services_checkin_v1beta1_CheckinUser_descriptor;
+      return io.bloombox.schema.services.checkin.v1beta1.CheckinServiceBeta1.internal_static_bloombox_services_checkin_v1beta1_CheckinUser_descriptor;
     }
 
+    @java.lang.Override
     public io.bloombox.schema.services.checkin.v1beta1.CheckinUser getDefaultInstanceForType() {
       return io.bloombox.schema.services.checkin.v1beta1.CheckinUser.getDefaultInstance();
     }
 
+    @java.lang.Override
     public io.bloombox.schema.services.checkin.v1beta1.CheckinUser build() {
       io.bloombox.schema.services.checkin.v1beta1.CheckinUser result = buildPartial();
       if (!result.isInitialized()) {
@@ -500,6 +511,7 @@ private static final long serialVersionUID = 0L;
       return result;
     }
 
+    @java.lang.Override
     public io.bloombox.schema.services.checkin.v1beta1.CheckinUser buildPartial() {
       io.bloombox.schema.services.checkin.v1beta1.CheckinUser result = new io.bloombox.schema.services.checkin.v1beta1.CheckinUser(this);
       if (keyBuilder_ == null) {
@@ -521,32 +533,39 @@ private static final long serialVersionUID = 0L;
       return result;
     }
 
+    @java.lang.Override
     public Builder clone() {
       return (Builder) super.clone();
     }
+    @java.lang.Override
     public Builder setField(
         com.google.protobuf.Descriptors.FieldDescriptor field,
         java.lang.Object value) {
       return (Builder) super.setField(field, value);
     }
+    @java.lang.Override
     public Builder clearField(
         com.google.protobuf.Descriptors.FieldDescriptor field) {
       return (Builder) super.clearField(field);
     }
+    @java.lang.Override
     public Builder clearOneof(
         com.google.protobuf.Descriptors.OneofDescriptor oneof) {
       return (Builder) super.clearOneof(oneof);
     }
+    @java.lang.Override
     public Builder setRepeatedField(
         com.google.protobuf.Descriptors.FieldDescriptor field,
         int index, java.lang.Object value) {
       return (Builder) super.setRepeatedField(field, index, value);
     }
+    @java.lang.Override
     public Builder addRepeatedField(
         com.google.protobuf.Descriptors.FieldDescriptor field,
         java.lang.Object value) {
       return (Builder) super.addRepeatedField(field, value);
     }
+    @java.lang.Override
     public Builder mergeFrom(com.google.protobuf.Message other) {
       if (other instanceof io.bloombox.schema.services.checkin.v1beta1.CheckinUser) {
         return mergeFrom((io.bloombox.schema.services.checkin.v1beta1.CheckinUser)other);
@@ -572,10 +591,12 @@ private static final long serialVersionUID = 0L;
       return this;
     }
 
+    @java.lang.Override
     public final boolean isInitialized() {
       return true;
     }
 
+    @java.lang.Override
     public Builder mergeFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -602,7 +623,7 @@ private static final long serialVersionUID = 0L;
      * Key and identity ID for the user who was checked in.
      * </pre>
      *
-     * <code>.bloombox.schema.identity.UserKey key = 1;</code>
+     * <code>.bloombox.identity.UserKey key = 1;</code>
      */
     public boolean hasKey() {
       return keyBuilder_ != null || key_ != null;
@@ -612,7 +633,7 @@ private static final long serialVersionUID = 0L;
      * Key and identity ID for the user who was checked in.
      * </pre>
      *
-     * <code>.bloombox.schema.identity.UserKey key = 1;</code>
+     * <code>.bloombox.identity.UserKey key = 1;</code>
      */
     public io.bloombox.schema.identity.AppUserKey.UserKey getKey() {
       if (keyBuilder_ == null) {
@@ -626,7 +647,7 @@ private static final long serialVersionUID = 0L;
      * Key and identity ID for the user who was checked in.
      * </pre>
      *
-     * <code>.bloombox.schema.identity.UserKey key = 1;</code>
+     * <code>.bloombox.identity.UserKey key = 1;</code>
      */
     public Builder setKey(io.bloombox.schema.identity.AppUserKey.UserKey value) {
       if (keyBuilder_ == null) {
@@ -646,7 +667,7 @@ private static final long serialVersionUID = 0L;
      * Key and identity ID for the user who was checked in.
      * </pre>
      *
-     * <code>.bloombox.schema.identity.UserKey key = 1;</code>
+     * <code>.bloombox.identity.UserKey key = 1;</code>
      */
     public Builder setKey(
         io.bloombox.schema.identity.AppUserKey.UserKey.Builder builderForValue) {
@@ -664,7 +685,7 @@ private static final long serialVersionUID = 0L;
      * Key and identity ID for the user who was checked in.
      * </pre>
      *
-     * <code>.bloombox.schema.identity.UserKey key = 1;</code>
+     * <code>.bloombox.identity.UserKey key = 1;</code>
      */
     public Builder mergeKey(io.bloombox.schema.identity.AppUserKey.UserKey value) {
       if (keyBuilder_ == null) {
@@ -686,7 +707,7 @@ private static final long serialVersionUID = 0L;
      * Key and identity ID for the user who was checked in.
      * </pre>
      *
-     * <code>.bloombox.schema.identity.UserKey key = 1;</code>
+     * <code>.bloombox.identity.UserKey key = 1;</code>
      */
     public Builder clearKey() {
       if (keyBuilder_ == null) {
@@ -704,7 +725,7 @@ private static final long serialVersionUID = 0L;
      * Key and identity ID for the user who was checked in.
      * </pre>
      *
-     * <code>.bloombox.schema.identity.UserKey key = 1;</code>
+     * <code>.bloombox.identity.UserKey key = 1;</code>
      */
     public io.bloombox.schema.identity.AppUserKey.UserKey.Builder getKeyBuilder() {
       
@@ -716,7 +737,7 @@ private static final long serialVersionUID = 0L;
      * Key and identity ID for the user who was checked in.
      * </pre>
      *
-     * <code>.bloombox.schema.identity.UserKey key = 1;</code>
+     * <code>.bloombox.identity.UserKey key = 1;</code>
      */
     public io.bloombox.schema.identity.AppUserKey.UserKeyOrBuilder getKeyOrBuilder() {
       if (keyBuilder_ != null) {
@@ -731,7 +752,7 @@ private static final long serialVersionUID = 0L;
      * Key and identity ID for the user who was checked in.
      * </pre>
      *
-     * <code>.bloombox.schema.identity.UserKey key = 1;</code>
+     * <code>.bloombox.identity.UserKey key = 1;</code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<
         io.bloombox.schema.identity.AppUserKey.UserKey, io.bloombox.schema.identity.AppUserKey.UserKey.Builder, io.bloombox.schema.identity.AppUserKey.UserKeyOrBuilder> 
@@ -755,7 +776,7 @@ private static final long serialVersionUID = 0L;
      * Active account flags.
      * </pre>
      *
-     * <code>.bloombox.schema.identity.UserFlags flags = 2;</code>
+     * <code>.bloombox.identity.UserFlags flags = 2;</code>
      */
     public boolean hasFlags() {
       return flagsBuilder_ != null || flags_ != null;
@@ -765,7 +786,7 @@ private static final long serialVersionUID = 0L;
      * Active account flags.
      * </pre>
      *
-     * <code>.bloombox.schema.identity.UserFlags flags = 2;</code>
+     * <code>.bloombox.identity.UserFlags flags = 2;</code>
      */
     public io.bloombox.schema.identity.AppUser.UserFlags getFlags() {
       if (flagsBuilder_ == null) {
@@ -779,7 +800,7 @@ private static final long serialVersionUID = 0L;
      * Active account flags.
      * </pre>
      *
-     * <code>.bloombox.schema.identity.UserFlags flags = 2;</code>
+     * <code>.bloombox.identity.UserFlags flags = 2;</code>
      */
     public Builder setFlags(io.bloombox.schema.identity.AppUser.UserFlags value) {
       if (flagsBuilder_ == null) {
@@ -799,7 +820,7 @@ private static final long serialVersionUID = 0L;
      * Active account flags.
      * </pre>
      *
-     * <code>.bloombox.schema.identity.UserFlags flags = 2;</code>
+     * <code>.bloombox.identity.UserFlags flags = 2;</code>
      */
     public Builder setFlags(
         io.bloombox.schema.identity.AppUser.UserFlags.Builder builderForValue) {
@@ -817,7 +838,7 @@ private static final long serialVersionUID = 0L;
      * Active account flags.
      * </pre>
      *
-     * <code>.bloombox.schema.identity.UserFlags flags = 2;</code>
+     * <code>.bloombox.identity.UserFlags flags = 2;</code>
      */
     public Builder mergeFlags(io.bloombox.schema.identity.AppUser.UserFlags value) {
       if (flagsBuilder_ == null) {
@@ -839,7 +860,7 @@ private static final long serialVersionUID = 0L;
      * Active account flags.
      * </pre>
      *
-     * <code>.bloombox.schema.identity.UserFlags flags = 2;</code>
+     * <code>.bloombox.identity.UserFlags flags = 2;</code>
      */
     public Builder clearFlags() {
       if (flagsBuilder_ == null) {
@@ -857,7 +878,7 @@ private static final long serialVersionUID = 0L;
      * Active account flags.
      * </pre>
      *
-     * <code>.bloombox.schema.identity.UserFlags flags = 2;</code>
+     * <code>.bloombox.identity.UserFlags flags = 2;</code>
      */
     public io.bloombox.schema.identity.AppUser.UserFlags.Builder getFlagsBuilder() {
       
@@ -869,7 +890,7 @@ private static final long serialVersionUID = 0L;
      * Active account flags.
      * </pre>
      *
-     * <code>.bloombox.schema.identity.UserFlags flags = 2;</code>
+     * <code>.bloombox.identity.UserFlags flags = 2;</code>
      */
     public io.bloombox.schema.identity.AppUser.UserFlagsOrBuilder getFlagsOrBuilder() {
       if (flagsBuilder_ != null) {
@@ -884,7 +905,7 @@ private static final long serialVersionUID = 0L;
      * Active account flags.
      * </pre>
      *
-     * <code>.bloombox.schema.identity.UserFlags flags = 2;</code>
+     * <code>.bloombox.identity.UserFlags flags = 2;</code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<
         io.bloombox.schema.identity.AppUser.UserFlags, io.bloombox.schema.identity.AppUser.UserFlags.Builder, io.bloombox.schema.identity.AppUser.UserFlagsOrBuilder> 
@@ -1052,21 +1073,23 @@ private static final long serialVersionUID = 0L;
       }
       return nameBuilder_;
     }
+    @java.lang.Override
     public final Builder setUnknownFields(
         final com.google.protobuf.UnknownFieldSet unknownFields) {
       return super.setUnknownFieldsProto3(unknownFields);
     }
 
+    @java.lang.Override
     public final Builder mergeUnknownFields(
         final com.google.protobuf.UnknownFieldSet unknownFields) {
       return super.mergeUnknownFields(unknownFields);
     }
 
 
-    // @@protoc_insertion_point(builder_scope:bloombox.schema.services.checkin.v1beta1.CheckinUser)
+    // @@protoc_insertion_point(builder_scope:bloombox.services.checkin.v1beta1.CheckinUser)
   }
 
-  // @@protoc_insertion_point(class_scope:bloombox.schema.services.checkin.v1beta1.CheckinUser)
+  // @@protoc_insertion_point(class_scope:bloombox.services.checkin.v1beta1.CheckinUser)
   private static final io.bloombox.schema.services.checkin.v1beta1.CheckinUser DEFAULT_INSTANCE;
   static {
     DEFAULT_INSTANCE = new io.bloombox.schema.services.checkin.v1beta1.CheckinUser();
@@ -1078,6 +1101,7 @@ private static final long serialVersionUID = 0L;
 
   private static final com.google.protobuf.Parser<CheckinUser>
       PARSER = new com.google.protobuf.AbstractParser<CheckinUser>() {
+    @java.lang.Override
     public CheckinUser parsePartialFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -1095,6 +1119,7 @@ private static final long serialVersionUID = 0L;
     return PARSER;
   }
 
+  @java.lang.Override
   public io.bloombox.schema.services.checkin.v1beta1.CheckinUser getDefaultInstanceForType() {
     return DEFAULT_INSTANCE;
   }

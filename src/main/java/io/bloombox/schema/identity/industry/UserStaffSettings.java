@@ -1,11 +1,12 @@
 /*
- * Copyright 2018, Bloombox, LLC.
+ * Copyright 2018, Momentum Ideas, Co. All rights reserved.
  *
- * Licensed under the Apache License, Version 2.0 (the "License");
- * you may not use this file except in compliance with the License.
- * You may obtain a copy of the License at
- *
- *     http://www.apache.org/licenses/LICENSE-2.0
+ * Source and object computer code contained herein is the private intellectual
+ * property of Momentum Ideas Co., a Delaware Corporation. Use of this
+ * code in source form requires permission in writing before use or the
+ * assembly, distribution, or publishing of derivative works, for commercial
+ * purposes or any other purpose, from a duly authorized officer of Momentum
+ * Ideas Co.
  *
  * Unless required by applicable law or agreed to in writing, software
  * distributed under the License is distributed on an "AS IS" BASIS,
@@ -31,7 +32,7 @@ public final class UserStaffSettings {
         (com.google.protobuf.ExtensionRegistryLite) registry);
   }
   public interface StaffSettingsOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:bloombox.schema.identity.industry.StaffSettings)
+      // @@protoc_insertion_point(interface_extends:bloombox.identity.industry.StaffSettings)
       com.google.protobuf.MessageOrBuilder {
 
     /**
@@ -40,7 +41,7 @@ public final class UserStaffSettings {
      * security details. User preferences on the point-of-sale device are also stored here.
      * </pre>
      *
-     * <code>.bloombox.schema.identity.industry.POSStaffSettings pos = 1;</code>
+     * <code>.bloombox.identity.industry.POSStaffSettings pos = 1;</code>
      */
     boolean hasPos();
     /**
@@ -49,7 +50,7 @@ public final class UserStaffSettings {
      * security details. User preferences on the point-of-sale device are also stored here.
      * </pre>
      *
-     * <code>.bloombox.schema.identity.industry.POSStaffSettings pos = 1;</code>
+     * <code>.bloombox.identity.industry.POSStaffSettings pos = 1;</code>
      */
     io.bloombox.schema.identity.industry.StaffPOSSettings.POSStaffSettings getPos();
     /**
@@ -58,7 +59,7 @@ public final class UserStaffSettings {
      * security details. User preferences on the point-of-sale device are also stored here.
      * </pre>
      *
-     * <code>.bloombox.schema.identity.industry.POSStaffSettings pos = 1;</code>
+     * <code>.bloombox.identity.industry.POSStaffSettings pos = 1;</code>
      */
     io.bloombox.schema.identity.industry.StaffPOSSettings.POSStaffSettingsOrBuilder getPosOrBuilder();
 
@@ -69,7 +70,7 @@ public final class UserStaffSettings {
      * they are not shared between users and generally only apply cosmetically.
      * </pre>
      *
-     * <code>.bloombox.schema.identity.industry.DashboardStaffSettings dashboard = 2;</code>
+     * <code>.bloombox.identity.industry.DashboardStaffSettings dashboard = 2;</code>
      */
     boolean hasDashboard();
     /**
@@ -79,7 +80,7 @@ public final class UserStaffSettings {
      * they are not shared between users and generally only apply cosmetically.
      * </pre>
      *
-     * <code>.bloombox.schema.identity.industry.DashboardStaffSettings dashboard = 2;</code>
+     * <code>.bloombox.identity.industry.DashboardStaffSettings dashboard = 2;</code>
      */
     io.bloombox.schema.identity.industry.StaffDashboardSettings.DashboardStaffSettings getDashboard();
     /**
@@ -89,7 +90,7 @@ public final class UserStaffSettings {
      * they are not shared between users and generally only apply cosmetically.
      * </pre>
      *
-     * <code>.bloombox.schema.identity.industry.DashboardStaffSettings dashboard = 2;</code>
+     * <code>.bloombox.identity.industry.DashboardStaffSettings dashboard = 2;</code>
      */
     io.bloombox.schema.identity.industry.StaffDashboardSettings.DashboardStaffSettingsOrBuilder getDashboardOrBuilder();
   }
@@ -99,11 +100,11 @@ public final class UserStaffSettings {
    * authorized for industry-side use of Bloombox products.
    * </pre>
    *
-   * Protobuf type {@code bloombox.schema.identity.industry.StaffSettings}
+   * Protobuf type {@code bloombox.identity.industry.StaffSettings}
    */
   public  static final class StaffSettings extends
       com.google.protobuf.GeneratedMessageV3 implements
-      // @@protoc_insertion_point(message_implements:bloombox.schema.identity.industry.StaffSettings)
+      // @@protoc_insertion_point(message_implements:bloombox.identity.industry.StaffSettings)
       StaffSettingsOrBuilder {
   private static final long serialVersionUID = 0L;
     // Use StaffSettings.newBuilder() to construct.
@@ -137,13 +138,6 @@ public final class UserStaffSettings {
             case 0:
               done = true;
               break;
-            default: {
-              if (!parseUnknownFieldProto3(
-                  input, unknownFields, extensionRegistry, tag)) {
-                done = true;
-              }
-              break;
-            }
             case 10: {
               io.bloombox.schema.identity.industry.StaffPOSSettings.POSStaffSettings.Builder subBuilder = null;
               if (pos_ != null) {
@@ -170,6 +164,13 @@ public final class UserStaffSettings {
 
               break;
             }
+            default: {
+              if (!parseUnknownFieldProto3(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
           }
         }
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
@@ -184,12 +185,13 @@ public final class UserStaffSettings {
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return io.bloombox.schema.identity.industry.UserStaffSettings.internal_static_bloombox_schema_identity_industry_StaffSettings_descriptor;
+      return io.bloombox.schema.identity.industry.UserStaffSettings.internal_static_bloombox_identity_industry_StaffSettings_descriptor;
     }
 
+    @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return io.bloombox.schema.identity.industry.UserStaffSettings.internal_static_bloombox_schema_identity_industry_StaffSettings_fieldAccessorTable
+      return io.bloombox.schema.identity.industry.UserStaffSettings.internal_static_bloombox_identity_industry_StaffSettings_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
               io.bloombox.schema.identity.industry.UserStaffSettings.StaffSettings.class, io.bloombox.schema.identity.industry.UserStaffSettings.StaffSettings.Builder.class);
     }
@@ -202,7 +204,7 @@ public final class UserStaffSettings {
      * security details. User preferences on the point-of-sale device are also stored here.
      * </pre>
      *
-     * <code>.bloombox.schema.identity.industry.POSStaffSettings pos = 1;</code>
+     * <code>.bloombox.identity.industry.POSStaffSettings pos = 1;</code>
      */
     public boolean hasPos() {
       return pos_ != null;
@@ -213,7 +215,7 @@ public final class UserStaffSettings {
      * security details. User preferences on the point-of-sale device are also stored here.
      * </pre>
      *
-     * <code>.bloombox.schema.identity.industry.POSStaffSettings pos = 1;</code>
+     * <code>.bloombox.identity.industry.POSStaffSettings pos = 1;</code>
      */
     public io.bloombox.schema.identity.industry.StaffPOSSettings.POSStaffSettings getPos() {
       return pos_ == null ? io.bloombox.schema.identity.industry.StaffPOSSettings.POSStaffSettings.getDefaultInstance() : pos_;
@@ -224,7 +226,7 @@ public final class UserStaffSettings {
      * security details. User preferences on the point-of-sale device are also stored here.
      * </pre>
      *
-     * <code>.bloombox.schema.identity.industry.POSStaffSettings pos = 1;</code>
+     * <code>.bloombox.identity.industry.POSStaffSettings pos = 1;</code>
      */
     public io.bloombox.schema.identity.industry.StaffPOSSettings.POSStaffSettingsOrBuilder getPosOrBuilder() {
       return getPos();
@@ -239,7 +241,7 @@ public final class UserStaffSettings {
      * they are not shared between users and generally only apply cosmetically.
      * </pre>
      *
-     * <code>.bloombox.schema.identity.industry.DashboardStaffSettings dashboard = 2;</code>
+     * <code>.bloombox.identity.industry.DashboardStaffSettings dashboard = 2;</code>
      */
     public boolean hasDashboard() {
       return dashboard_ != null;
@@ -251,7 +253,7 @@ public final class UserStaffSettings {
      * they are not shared between users and generally only apply cosmetically.
      * </pre>
      *
-     * <code>.bloombox.schema.identity.industry.DashboardStaffSettings dashboard = 2;</code>
+     * <code>.bloombox.identity.industry.DashboardStaffSettings dashboard = 2;</code>
      */
     public io.bloombox.schema.identity.industry.StaffDashboardSettings.DashboardStaffSettings getDashboard() {
       return dashboard_ == null ? io.bloombox.schema.identity.industry.StaffDashboardSettings.DashboardStaffSettings.getDefaultInstance() : dashboard_;
@@ -263,13 +265,14 @@ public final class UserStaffSettings {
      * they are not shared between users and generally only apply cosmetically.
      * </pre>
      *
-     * <code>.bloombox.schema.identity.industry.DashboardStaffSettings dashboard = 2;</code>
+     * <code>.bloombox.identity.industry.DashboardStaffSettings dashboard = 2;</code>
      */
     public io.bloombox.schema.identity.industry.StaffDashboardSettings.DashboardStaffSettingsOrBuilder getDashboardOrBuilder() {
       return getDashboard();
     }
 
     private byte memoizedIsInitialized = -1;
+    @java.lang.Override
     public final boolean isInitialized() {
       byte isInitialized = memoizedIsInitialized;
       if (isInitialized == 1) return true;
@@ -279,6 +282,7 @@ public final class UserStaffSettings {
       return true;
     }
 
+    @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
       if (pos_ != null) {
@@ -290,6 +294,7 @@ public final class UserStaffSettings {
       unknownFields.writeTo(output);
     }
 
+    @java.lang.Override
     public int getSerializedSize() {
       int size = memoizedSize;
       if (size != -1) return size;
@@ -423,6 +428,7 @@ public final class UserStaffSettings {
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
 
+    @java.lang.Override
     public Builder newBuilderForType() { return newBuilder(); }
     public static Builder newBuilder() {
       return DEFAULT_INSTANCE.toBuilder();
@@ -430,6 +436,7 @@ public final class UserStaffSettings {
     public static Builder newBuilder(io.bloombox.schema.identity.industry.UserStaffSettings.StaffSettings prototype) {
       return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
     }
+    @java.lang.Override
     public Builder toBuilder() {
       return this == DEFAULT_INSTANCE
           ? new Builder() : new Builder().mergeFrom(this);
@@ -447,20 +454,21 @@ public final class UserStaffSettings {
      * authorized for industry-side use of Bloombox products.
      * </pre>
      *
-     * Protobuf type {@code bloombox.schema.identity.industry.StaffSettings}
+     * Protobuf type {@code bloombox.identity.industry.StaffSettings}
      */
     public static final class Builder extends
         com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:bloombox.schema.identity.industry.StaffSettings)
+        // @@protoc_insertion_point(builder_implements:bloombox.identity.industry.StaffSettings)
         io.bloombox.schema.identity.industry.UserStaffSettings.StaffSettingsOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return io.bloombox.schema.identity.industry.UserStaffSettings.internal_static_bloombox_schema_identity_industry_StaffSettings_descriptor;
+        return io.bloombox.schema.identity.industry.UserStaffSettings.internal_static_bloombox_identity_industry_StaffSettings_descriptor;
       }
 
+      @java.lang.Override
       protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return io.bloombox.schema.identity.industry.UserStaffSettings.internal_static_bloombox_schema_identity_industry_StaffSettings_fieldAccessorTable
+        return io.bloombox.schema.identity.industry.UserStaffSettings.internal_static_bloombox_identity_industry_StaffSettings_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
                 io.bloombox.schema.identity.industry.UserStaffSettings.StaffSettings.class, io.bloombox.schema.identity.industry.UserStaffSettings.StaffSettings.Builder.class);
       }
@@ -480,6 +488,7 @@ public final class UserStaffSettings {
                 .alwaysUseFieldBuilders) {
         }
       }
+      @java.lang.Override
       public Builder clear() {
         super.clear();
         if (posBuilder_ == null) {
@@ -497,15 +506,18 @@ public final class UserStaffSettings {
         return this;
       }
 
+      @java.lang.Override
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return io.bloombox.schema.identity.industry.UserStaffSettings.internal_static_bloombox_schema_identity_industry_StaffSettings_descriptor;
+        return io.bloombox.schema.identity.industry.UserStaffSettings.internal_static_bloombox_identity_industry_StaffSettings_descriptor;
       }
 
+      @java.lang.Override
       public io.bloombox.schema.identity.industry.UserStaffSettings.StaffSettings getDefaultInstanceForType() {
         return io.bloombox.schema.identity.industry.UserStaffSettings.StaffSettings.getDefaultInstance();
       }
 
+      @java.lang.Override
       public io.bloombox.schema.identity.industry.UserStaffSettings.StaffSettings build() {
         io.bloombox.schema.identity.industry.UserStaffSettings.StaffSettings result = buildPartial();
         if (!result.isInitialized()) {
@@ -514,6 +526,7 @@ public final class UserStaffSettings {
         return result;
       }
 
+      @java.lang.Override
       public io.bloombox.schema.identity.industry.UserStaffSettings.StaffSettings buildPartial() {
         io.bloombox.schema.identity.industry.UserStaffSettings.StaffSettings result = new io.bloombox.schema.identity.industry.UserStaffSettings.StaffSettings(this);
         if (posBuilder_ == null) {
@@ -530,32 +543,39 @@ public final class UserStaffSettings {
         return result;
       }
 
+      @java.lang.Override
       public Builder clone() {
         return (Builder) super.clone();
       }
+      @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
         return (Builder) super.setField(field, value);
       }
+      @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
         return (Builder) super.clearField(field);
       }
+      @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
         return (Builder) super.clearOneof(oneof);
       }
+      @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
         return (Builder) super.setRepeatedField(field, index, value);
       }
+      @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
         return (Builder) super.addRepeatedField(field, value);
       }
+      @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
         if (other instanceof io.bloombox.schema.identity.industry.UserStaffSettings.StaffSettings) {
           return mergeFrom((io.bloombox.schema.identity.industry.UserStaffSettings.StaffSettings)other);
@@ -578,10 +598,12 @@ public final class UserStaffSettings {
         return this;
       }
 
+      @java.lang.Override
       public final boolean isInitialized() {
         return true;
       }
 
+      @java.lang.Override
       public Builder mergeFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -609,7 +631,7 @@ public final class UserStaffSettings {
        * security details. User preferences on the point-of-sale device are also stored here.
        * </pre>
        *
-       * <code>.bloombox.schema.identity.industry.POSStaffSettings pos = 1;</code>
+       * <code>.bloombox.identity.industry.POSStaffSettings pos = 1;</code>
        */
       public boolean hasPos() {
         return posBuilder_ != null || pos_ != null;
@@ -620,7 +642,7 @@ public final class UserStaffSettings {
        * security details. User preferences on the point-of-sale device are also stored here.
        * </pre>
        *
-       * <code>.bloombox.schema.identity.industry.POSStaffSettings pos = 1;</code>
+       * <code>.bloombox.identity.industry.POSStaffSettings pos = 1;</code>
        */
       public io.bloombox.schema.identity.industry.StaffPOSSettings.POSStaffSettings getPos() {
         if (posBuilder_ == null) {
@@ -635,7 +657,7 @@ public final class UserStaffSettings {
        * security details. User preferences on the point-of-sale device are also stored here.
        * </pre>
        *
-       * <code>.bloombox.schema.identity.industry.POSStaffSettings pos = 1;</code>
+       * <code>.bloombox.identity.industry.POSStaffSettings pos = 1;</code>
        */
       public Builder setPos(io.bloombox.schema.identity.industry.StaffPOSSettings.POSStaffSettings value) {
         if (posBuilder_ == null) {
@@ -656,7 +678,7 @@ public final class UserStaffSettings {
        * security details. User preferences on the point-of-sale device are also stored here.
        * </pre>
        *
-       * <code>.bloombox.schema.identity.industry.POSStaffSettings pos = 1;</code>
+       * <code>.bloombox.identity.industry.POSStaffSettings pos = 1;</code>
        */
       public Builder setPos(
           io.bloombox.schema.identity.industry.StaffPOSSettings.POSStaffSettings.Builder builderForValue) {
@@ -675,7 +697,7 @@ public final class UserStaffSettings {
        * security details. User preferences on the point-of-sale device are also stored here.
        * </pre>
        *
-       * <code>.bloombox.schema.identity.industry.POSStaffSettings pos = 1;</code>
+       * <code>.bloombox.identity.industry.POSStaffSettings pos = 1;</code>
        */
       public Builder mergePos(io.bloombox.schema.identity.industry.StaffPOSSettings.POSStaffSettings value) {
         if (posBuilder_ == null) {
@@ -698,7 +720,7 @@ public final class UserStaffSettings {
        * security details. User preferences on the point-of-sale device are also stored here.
        * </pre>
        *
-       * <code>.bloombox.schema.identity.industry.POSStaffSettings pos = 1;</code>
+       * <code>.bloombox.identity.industry.POSStaffSettings pos = 1;</code>
        */
       public Builder clearPos() {
         if (posBuilder_ == null) {
@@ -717,7 +739,7 @@ public final class UserStaffSettings {
        * security details. User preferences on the point-of-sale device are also stored here.
        * </pre>
        *
-       * <code>.bloombox.schema.identity.industry.POSStaffSettings pos = 1;</code>
+       * <code>.bloombox.identity.industry.POSStaffSettings pos = 1;</code>
        */
       public io.bloombox.schema.identity.industry.StaffPOSSettings.POSStaffSettings.Builder getPosBuilder() {
         
@@ -730,7 +752,7 @@ public final class UserStaffSettings {
        * security details. User preferences on the point-of-sale device are also stored here.
        * </pre>
        *
-       * <code>.bloombox.schema.identity.industry.POSStaffSettings pos = 1;</code>
+       * <code>.bloombox.identity.industry.POSStaffSettings pos = 1;</code>
        */
       public io.bloombox.schema.identity.industry.StaffPOSSettings.POSStaffSettingsOrBuilder getPosOrBuilder() {
         if (posBuilder_ != null) {
@@ -746,7 +768,7 @@ public final class UserStaffSettings {
        * security details. User preferences on the point-of-sale device are also stored here.
        * </pre>
        *
-       * <code>.bloombox.schema.identity.industry.POSStaffSettings pos = 1;</code>
+       * <code>.bloombox.identity.industry.POSStaffSettings pos = 1;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
           io.bloombox.schema.identity.industry.StaffPOSSettings.POSStaffSettings, io.bloombox.schema.identity.industry.StaffPOSSettings.POSStaffSettings.Builder, io.bloombox.schema.identity.industry.StaffPOSSettings.POSStaffSettingsOrBuilder> 
@@ -772,7 +794,7 @@ public final class UserStaffSettings {
        * they are not shared between users and generally only apply cosmetically.
        * </pre>
        *
-       * <code>.bloombox.schema.identity.industry.DashboardStaffSettings dashboard = 2;</code>
+       * <code>.bloombox.identity.industry.DashboardStaffSettings dashboard = 2;</code>
        */
       public boolean hasDashboard() {
         return dashboardBuilder_ != null || dashboard_ != null;
@@ -784,7 +806,7 @@ public final class UserStaffSettings {
        * they are not shared between users and generally only apply cosmetically.
        * </pre>
        *
-       * <code>.bloombox.schema.identity.industry.DashboardStaffSettings dashboard = 2;</code>
+       * <code>.bloombox.identity.industry.DashboardStaffSettings dashboard = 2;</code>
        */
       public io.bloombox.schema.identity.industry.StaffDashboardSettings.DashboardStaffSettings getDashboard() {
         if (dashboardBuilder_ == null) {
@@ -800,7 +822,7 @@ public final class UserStaffSettings {
        * they are not shared between users and generally only apply cosmetically.
        * </pre>
        *
-       * <code>.bloombox.schema.identity.industry.DashboardStaffSettings dashboard = 2;</code>
+       * <code>.bloombox.identity.industry.DashboardStaffSettings dashboard = 2;</code>
        */
       public Builder setDashboard(io.bloombox.schema.identity.industry.StaffDashboardSettings.DashboardStaffSettings value) {
         if (dashboardBuilder_ == null) {
@@ -822,7 +844,7 @@ public final class UserStaffSettings {
        * they are not shared between users and generally only apply cosmetically.
        * </pre>
        *
-       * <code>.bloombox.schema.identity.industry.DashboardStaffSettings dashboard = 2;</code>
+       * <code>.bloombox.identity.industry.DashboardStaffSettings dashboard = 2;</code>
        */
       public Builder setDashboard(
           io.bloombox.schema.identity.industry.StaffDashboardSettings.DashboardStaffSettings.Builder builderForValue) {
@@ -842,7 +864,7 @@ public final class UserStaffSettings {
        * they are not shared between users and generally only apply cosmetically.
        * </pre>
        *
-       * <code>.bloombox.schema.identity.industry.DashboardStaffSettings dashboard = 2;</code>
+       * <code>.bloombox.identity.industry.DashboardStaffSettings dashboard = 2;</code>
        */
       public Builder mergeDashboard(io.bloombox.schema.identity.industry.StaffDashboardSettings.DashboardStaffSettings value) {
         if (dashboardBuilder_ == null) {
@@ -866,7 +888,7 @@ public final class UserStaffSettings {
        * they are not shared between users and generally only apply cosmetically.
        * </pre>
        *
-       * <code>.bloombox.schema.identity.industry.DashboardStaffSettings dashboard = 2;</code>
+       * <code>.bloombox.identity.industry.DashboardStaffSettings dashboard = 2;</code>
        */
       public Builder clearDashboard() {
         if (dashboardBuilder_ == null) {
@@ -886,7 +908,7 @@ public final class UserStaffSettings {
        * they are not shared between users and generally only apply cosmetically.
        * </pre>
        *
-       * <code>.bloombox.schema.identity.industry.DashboardStaffSettings dashboard = 2;</code>
+       * <code>.bloombox.identity.industry.DashboardStaffSettings dashboard = 2;</code>
        */
       public io.bloombox.schema.identity.industry.StaffDashboardSettings.DashboardStaffSettings.Builder getDashboardBuilder() {
         
@@ -900,7 +922,7 @@ public final class UserStaffSettings {
        * they are not shared between users and generally only apply cosmetically.
        * </pre>
        *
-       * <code>.bloombox.schema.identity.industry.DashboardStaffSettings dashboard = 2;</code>
+       * <code>.bloombox.identity.industry.DashboardStaffSettings dashboard = 2;</code>
        */
       public io.bloombox.schema.identity.industry.StaffDashboardSettings.DashboardStaffSettingsOrBuilder getDashboardOrBuilder() {
         if (dashboardBuilder_ != null) {
@@ -917,7 +939,7 @@ public final class UserStaffSettings {
        * they are not shared between users and generally only apply cosmetically.
        * </pre>
        *
-       * <code>.bloombox.schema.identity.industry.DashboardStaffSettings dashboard = 2;</code>
+       * <code>.bloombox.identity.industry.DashboardStaffSettings dashboard = 2;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
           io.bloombox.schema.identity.industry.StaffDashboardSettings.DashboardStaffSettings, io.bloombox.schema.identity.industry.StaffDashboardSettings.DashboardStaffSettings.Builder, io.bloombox.schema.identity.industry.StaffDashboardSettings.DashboardStaffSettingsOrBuilder> 
@@ -932,21 +954,23 @@ public final class UserStaffSettings {
         }
         return dashboardBuilder_;
       }
+      @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
         return super.setUnknownFieldsProto3(unknownFields);
       }
 
+      @java.lang.Override
       public final Builder mergeUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
         return super.mergeUnknownFields(unknownFields);
       }
 
 
-      // @@protoc_insertion_point(builder_scope:bloombox.schema.identity.industry.StaffSettings)
+      // @@protoc_insertion_point(builder_scope:bloombox.identity.industry.StaffSettings)
     }
 
-    // @@protoc_insertion_point(class_scope:bloombox.schema.identity.industry.StaffSettings)
+    // @@protoc_insertion_point(class_scope:bloombox.identity.industry.StaffSettings)
     private static final io.bloombox.schema.identity.industry.UserStaffSettings.StaffSettings DEFAULT_INSTANCE;
     static {
       DEFAULT_INSTANCE = new io.bloombox.schema.identity.industry.UserStaffSettings.StaffSettings();
@@ -958,6 +982,7 @@ public final class UserStaffSettings {
 
     private static final com.google.protobuf.Parser<StaffSettings>
         PARSER = new com.google.protobuf.AbstractParser<StaffSettings>() {
+      @java.lang.Override
       public StaffSettings parsePartialFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -975,6 +1000,7 @@ public final class UserStaffSettings {
       return PARSER;
     }
 
+    @java.lang.Override
     public io.bloombox.schema.identity.industry.UserStaffSettings.StaffSettings getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
@@ -982,10 +1008,10 @@ public final class UserStaffSettings {
   }
 
   private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_bloombox_schema_identity_industry_StaffSettings_descriptor;
+    internal_static_bloombox_identity_industry_StaffSettings_descriptor;
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_bloombox_schema_identity_industry_StaffSettings_fieldAccessorTable;
+      internal_static_bloombox_identity_industry_StaffSettings_fieldAccessorTable;
 
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
@@ -996,16 +1022,15 @@ public final class UserStaffSettings {
   static {
     java.lang.String[] descriptorData = {
       "\n%identity/industry/StaffSettings.proto\022" +
-      "!bloombox.schema.identity.industry\032(iden" +
-      "tity/industry/POSStaffSettings.proto\032.id" +
-      "entity/industry/DashboardStaffSettings.p" +
-      "roto\"\237\001\n\rStaffSettings\022@\n\003pos\030\001 \001(\01323.bl" +
-      "oombox.schema.identity.industry.POSStaff" +
-      "Settings\022L\n\tdashboard\030\002 \001(\01329.bloombox.s" +
-      "chema.identity.industry.DashboardStaffSe" +
-      "ttingsBC\n$io.bloombox.schema.identity.in" +
-      "dustryB\021UserStaffSettingsH\001P\000\242\002\003BBSb\006pro" +
-      "to3"
+      "\032bloombox.identity.industry\032(identity/in" +
+      "dustry/POSStaffSettings.proto\032.identity/" +
+      "industry/DashboardStaffSettings.proto\"\221\001" +
+      "\n\rStaffSettings\0229\n\003pos\030\001 \001(\0132,.bloombox." +
+      "identity.industry.POSStaffSettings\022E\n\tda" +
+      "shboard\030\002 \001(\01322.bloombox.identity.indust" +
+      "ry.DashboardStaffSettingsBC\n$io.bloombox" +
+      ".schema.identity.industryB\021UserStaffSett" +
+      "ingsH\001P\000\242\002\003BBSb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -1021,11 +1046,11 @@ public final class UserStaffSettings {
           io.bloombox.schema.identity.industry.StaffPOSSettings.getDescriptor(),
           io.bloombox.schema.identity.industry.StaffDashboardSettings.getDescriptor(),
         }, assigner);
-    internal_static_bloombox_schema_identity_industry_StaffSettings_descriptor =
+    internal_static_bloombox_identity_industry_StaffSettings_descriptor =
       getDescriptor().getMessageTypes().get(0);
-    internal_static_bloombox_schema_identity_industry_StaffSettings_fieldAccessorTable = new
+    internal_static_bloombox_identity_industry_StaffSettings_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_bloombox_schema_identity_industry_StaffSettings_descriptor,
+        internal_static_bloombox_identity_industry_StaffSettings_descriptor,
         new java.lang.String[] { "Pos", "Dashboard", });
     io.bloombox.schema.identity.industry.StaffPOSSettings.getDescriptor();
     io.bloombox.schema.identity.industry.StaffDashboardSettings.getDescriptor();

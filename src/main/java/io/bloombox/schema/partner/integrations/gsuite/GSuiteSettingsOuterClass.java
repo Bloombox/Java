@@ -1,11 +1,12 @@
 /*
- * Copyright 2018, Bloombox, LLC.
+ * Copyright 2018, Momentum Ideas, Co. All rights reserved.
  *
- * Licensed under the Apache License, Version 2.0 (the "License");
- * you may not use this file except in compliance with the License.
- * You may obtain a copy of the License at
- *
- *     http://www.apache.org/licenses/LICENSE-2.0
+ * Source and object computer code contained herein is the private intellectual
+ * property of Momentum Ideas Co., a Delaware Corporation. Use of this
+ * code in source form requires permission in writing before use or the
+ * assembly, distribution, or publishing of derivative works, for commercial
+ * purposes or any other purpose, from a duly authorized officer of Momentum
+ * Ideas Co.
  *
  * Unless required by applicable law or agreed to in writing, software
  * distributed under the License is distributed on an "AS IS" BASIS,
@@ -31,7 +32,7 @@ public final class GSuiteSettingsOuterClass {
         (com.google.protobuf.ExtensionRegistryLite) registry);
   }
   public interface GSuiteIntegrationFeaturesOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:bloombox.schema.partner.integrations.gsuite.GSuiteIntegrationFeatures)
+      // @@protoc_insertion_point(interface_extends:bloombox.partner.integrations.gsuite.GSuiteIntegrationFeatures)
       com.google.protobuf.MessageOrBuilder {
   }
   /**
@@ -39,11 +40,11 @@ public final class GSuiteSettingsOuterClass {
    * Specifies Google Apps features that may be enabled or disabled.
    * </pre>
    *
-   * Protobuf type {@code bloombox.schema.partner.integrations.gsuite.GSuiteIntegrationFeatures}
+   * Protobuf type {@code bloombox.partner.integrations.gsuite.GSuiteIntegrationFeatures}
    */
   public  static final class GSuiteIntegrationFeatures extends
       com.google.protobuf.GeneratedMessageV3 implements
-      // @@protoc_insertion_point(message_implements:bloombox.schema.partner.integrations.gsuite.GSuiteIntegrationFeatures)
+      // @@protoc_insertion_point(message_implements:bloombox.partner.integrations.gsuite.GSuiteIntegrationFeatures)
       GSuiteIntegrationFeaturesOrBuilder {
   private static final long serialVersionUID = 0L;
     // Use GSuiteIntegrationFeatures.newBuilder() to construct.
@@ -97,17 +98,19 @@ public final class GSuiteSettingsOuterClass {
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return io.bloombox.schema.partner.integrations.gsuite.GSuiteSettingsOuterClass.internal_static_bloombox_schema_partner_integrations_gsuite_GSuiteIntegrationFeatures_descriptor;
+      return io.bloombox.schema.partner.integrations.gsuite.GSuiteSettingsOuterClass.internal_static_bloombox_partner_integrations_gsuite_GSuiteIntegrationFeatures_descriptor;
     }
 
+    @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return io.bloombox.schema.partner.integrations.gsuite.GSuiteSettingsOuterClass.internal_static_bloombox_schema_partner_integrations_gsuite_GSuiteIntegrationFeatures_fieldAccessorTable
+      return io.bloombox.schema.partner.integrations.gsuite.GSuiteSettingsOuterClass.internal_static_bloombox_partner_integrations_gsuite_GSuiteIntegrationFeatures_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
               io.bloombox.schema.partner.integrations.gsuite.GSuiteSettingsOuterClass.GSuiteIntegrationFeatures.class, io.bloombox.schema.partner.integrations.gsuite.GSuiteSettingsOuterClass.GSuiteIntegrationFeatures.Builder.class);
     }
 
     private byte memoizedIsInitialized = -1;
+    @java.lang.Override
     public final boolean isInitialized() {
       byte isInitialized = memoizedIsInitialized;
       if (isInitialized == 1) return true;
@@ -117,11 +120,13 @@ public final class GSuiteSettingsOuterClass {
       return true;
     }
 
+    @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
       unknownFields.writeTo(output);
     }
 
+    @java.lang.Override
     public int getSerializedSize() {
       int size = memoizedSize;
       if (size != -1) return size;
@@ -229,6 +234,7 @@ public final class GSuiteSettingsOuterClass {
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
 
+    @java.lang.Override
     public Builder newBuilderForType() { return newBuilder(); }
     public static Builder newBuilder() {
       return DEFAULT_INSTANCE.toBuilder();
@@ -236,6 +242,7 @@ public final class GSuiteSettingsOuterClass {
     public static Builder newBuilder(io.bloombox.schema.partner.integrations.gsuite.GSuiteSettingsOuterClass.GSuiteIntegrationFeatures prototype) {
       return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
     }
+    @java.lang.Override
     public Builder toBuilder() {
       return this == DEFAULT_INSTANCE
           ? new Builder() : new Builder().mergeFrom(this);
@@ -252,20 +259,21 @@ public final class GSuiteSettingsOuterClass {
      * Specifies Google Apps features that may be enabled or disabled.
      * </pre>
      *
-     * Protobuf type {@code bloombox.schema.partner.integrations.gsuite.GSuiteIntegrationFeatures}
+     * Protobuf type {@code bloombox.partner.integrations.gsuite.GSuiteIntegrationFeatures}
      */
     public static final class Builder extends
         com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:bloombox.schema.partner.integrations.gsuite.GSuiteIntegrationFeatures)
+        // @@protoc_insertion_point(builder_implements:bloombox.partner.integrations.gsuite.GSuiteIntegrationFeatures)
         io.bloombox.schema.partner.integrations.gsuite.GSuiteSettingsOuterClass.GSuiteIntegrationFeaturesOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return io.bloombox.schema.partner.integrations.gsuite.GSuiteSettingsOuterClass.internal_static_bloombox_schema_partner_integrations_gsuite_GSuiteIntegrationFeatures_descriptor;
+        return io.bloombox.schema.partner.integrations.gsuite.GSuiteSettingsOuterClass.internal_static_bloombox_partner_integrations_gsuite_GSuiteIntegrationFeatures_descriptor;
       }
 
+      @java.lang.Override
       protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return io.bloombox.schema.partner.integrations.gsuite.GSuiteSettingsOuterClass.internal_static_bloombox_schema_partner_integrations_gsuite_GSuiteIntegrationFeatures_fieldAccessorTable
+        return io.bloombox.schema.partner.integrations.gsuite.GSuiteSettingsOuterClass.internal_static_bloombox_partner_integrations_gsuite_GSuiteIntegrationFeatures_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
                 io.bloombox.schema.partner.integrations.gsuite.GSuiteSettingsOuterClass.GSuiteIntegrationFeatures.class, io.bloombox.schema.partner.integrations.gsuite.GSuiteSettingsOuterClass.GSuiteIntegrationFeatures.Builder.class);
       }
@@ -285,20 +293,24 @@ public final class GSuiteSettingsOuterClass {
                 .alwaysUseFieldBuilders) {
         }
       }
+      @java.lang.Override
       public Builder clear() {
         super.clear();
         return this;
       }
 
+      @java.lang.Override
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return io.bloombox.schema.partner.integrations.gsuite.GSuiteSettingsOuterClass.internal_static_bloombox_schema_partner_integrations_gsuite_GSuiteIntegrationFeatures_descriptor;
+        return io.bloombox.schema.partner.integrations.gsuite.GSuiteSettingsOuterClass.internal_static_bloombox_partner_integrations_gsuite_GSuiteIntegrationFeatures_descriptor;
       }
 
+      @java.lang.Override
       public io.bloombox.schema.partner.integrations.gsuite.GSuiteSettingsOuterClass.GSuiteIntegrationFeatures getDefaultInstanceForType() {
         return io.bloombox.schema.partner.integrations.gsuite.GSuiteSettingsOuterClass.GSuiteIntegrationFeatures.getDefaultInstance();
       }
 
+      @java.lang.Override
       public io.bloombox.schema.partner.integrations.gsuite.GSuiteSettingsOuterClass.GSuiteIntegrationFeatures build() {
         io.bloombox.schema.partner.integrations.gsuite.GSuiteSettingsOuterClass.GSuiteIntegrationFeatures result = buildPartial();
         if (!result.isInitialized()) {
@@ -307,38 +319,46 @@ public final class GSuiteSettingsOuterClass {
         return result;
       }
 
+      @java.lang.Override
       public io.bloombox.schema.partner.integrations.gsuite.GSuiteSettingsOuterClass.GSuiteIntegrationFeatures buildPartial() {
         io.bloombox.schema.partner.integrations.gsuite.GSuiteSettingsOuterClass.GSuiteIntegrationFeatures result = new io.bloombox.schema.partner.integrations.gsuite.GSuiteSettingsOuterClass.GSuiteIntegrationFeatures(this);
         onBuilt();
         return result;
       }
 
+      @java.lang.Override
       public Builder clone() {
         return (Builder) super.clone();
       }
+      @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
         return (Builder) super.setField(field, value);
       }
+      @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
         return (Builder) super.clearField(field);
       }
+      @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
         return (Builder) super.clearOneof(oneof);
       }
+      @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
         return (Builder) super.setRepeatedField(field, index, value);
       }
+      @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
         return (Builder) super.addRepeatedField(field, value);
       }
+      @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
         if (other instanceof io.bloombox.schema.partner.integrations.gsuite.GSuiteSettingsOuterClass.GSuiteIntegrationFeatures) {
           return mergeFrom((io.bloombox.schema.partner.integrations.gsuite.GSuiteSettingsOuterClass.GSuiteIntegrationFeatures)other);
@@ -355,10 +375,12 @@ public final class GSuiteSettingsOuterClass {
         return this;
       }
 
+      @java.lang.Override
       public final boolean isInitialized() {
         return true;
       }
 
+      @java.lang.Override
       public Builder mergeFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -376,21 +398,23 @@ public final class GSuiteSettingsOuterClass {
         }
         return this;
       }
+      @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
         return super.setUnknownFieldsProto3(unknownFields);
       }
 
+      @java.lang.Override
       public final Builder mergeUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
         return super.mergeUnknownFields(unknownFields);
       }
 
 
-      // @@protoc_insertion_point(builder_scope:bloombox.schema.partner.integrations.gsuite.GSuiteIntegrationFeatures)
+      // @@protoc_insertion_point(builder_scope:bloombox.partner.integrations.gsuite.GSuiteIntegrationFeatures)
     }
 
-    // @@protoc_insertion_point(class_scope:bloombox.schema.partner.integrations.gsuite.GSuiteIntegrationFeatures)
+    // @@protoc_insertion_point(class_scope:bloombox.partner.integrations.gsuite.GSuiteIntegrationFeatures)
     private static final io.bloombox.schema.partner.integrations.gsuite.GSuiteSettingsOuterClass.GSuiteIntegrationFeatures DEFAULT_INSTANCE;
     static {
       DEFAULT_INSTANCE = new io.bloombox.schema.partner.integrations.gsuite.GSuiteSettingsOuterClass.GSuiteIntegrationFeatures();
@@ -402,6 +426,7 @@ public final class GSuiteSettingsOuterClass {
 
     private static final com.google.protobuf.Parser<GSuiteIntegrationFeatures>
         PARSER = new com.google.protobuf.AbstractParser<GSuiteIntegrationFeatures>() {
+      @java.lang.Override
       public GSuiteIntegrationFeatures parsePartialFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -419,6 +444,7 @@ public final class GSuiteSettingsOuterClass {
       return PARSER;
     }
 
+    @java.lang.Override
     public io.bloombox.schema.partner.integrations.gsuite.GSuiteSettingsOuterClass.GSuiteIntegrationFeatures getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
@@ -426,7 +452,7 @@ public final class GSuiteSettingsOuterClass {
   }
 
   public interface GSuiteSettingsOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:bloombox.schema.partner.integrations.gsuite.GSuiteSettings)
+      // @@protoc_insertion_point(interface_extends:bloombox.partner.integrations.gsuite.GSuiteSettings)
       com.google.protobuf.MessageOrBuilder {
 
     /**
@@ -452,7 +478,7 @@ public final class GSuiteSettingsOuterClass {
      * Flags indicating features that should be enabled or disabled.
      * </pre>
      *
-     * <code>.bloombox.schema.partner.integrations.gsuite.GSuiteIntegrationFeatures features = 10;</code>
+     * <code>.bloombox.partner.integrations.gsuite.GSuiteIntegrationFeatures features = 10;</code>
      */
     boolean hasFeatures();
     /**
@@ -460,7 +486,7 @@ public final class GSuiteSettingsOuterClass {
      * Flags indicating features that should be enabled or disabled.
      * </pre>
      *
-     * <code>.bloombox.schema.partner.integrations.gsuite.GSuiteIntegrationFeatures features = 10;</code>
+     * <code>.bloombox.partner.integrations.gsuite.GSuiteIntegrationFeatures features = 10;</code>
      */
     io.bloombox.schema.partner.integrations.gsuite.GSuiteSettingsOuterClass.GSuiteIntegrationFeatures getFeatures();
     /**
@@ -468,7 +494,7 @@ public final class GSuiteSettingsOuterClass {
      * Flags indicating features that should be enabled or disabled.
      * </pre>
      *
-     * <code>.bloombox.schema.partner.integrations.gsuite.GSuiteIntegrationFeatures features = 10;</code>
+     * <code>.bloombox.partner.integrations.gsuite.GSuiteIntegrationFeatures features = 10;</code>
      */
     io.bloombox.schema.partner.integrations.gsuite.GSuiteSettingsOuterClass.GSuiteIntegrationFeaturesOrBuilder getFeaturesOrBuilder();
   }
@@ -477,11 +503,11 @@ public final class GSuiteSettingsOuterClass {
    * Specifies settings related to Google Apps integration with Bloombox.
    * </pre>
    *
-   * Protobuf type {@code bloombox.schema.partner.integrations.gsuite.GSuiteSettings}
+   * Protobuf type {@code bloombox.partner.integrations.gsuite.GSuiteSettings}
    */
   public  static final class GSuiteSettings extends
       com.google.protobuf.GeneratedMessageV3 implements
-      // @@protoc_insertion_point(message_implements:bloombox.schema.partner.integrations.gsuite.GSuiteSettings)
+      // @@protoc_insertion_point(message_implements:bloombox.partner.integrations.gsuite.GSuiteSettings)
       GSuiteSettingsOrBuilder {
   private static final long serialVersionUID = 0L;
     // Use GSuiteSettings.newBuilder() to construct.
@@ -516,13 +542,6 @@ public final class GSuiteSettingsOuterClass {
             case 0:
               done = true;
               break;
-            default: {
-              if (!parseUnknownFieldProto3(
-                  input, unknownFields, extensionRegistry, tag)) {
-                done = true;
-              }
-              break;
-            }
             case 10: {
               java.lang.String s = input.readStringRequireUtf8();
 
@@ -542,6 +561,13 @@ public final class GSuiteSettingsOuterClass {
 
               break;
             }
+            default: {
+              if (!parseUnknownFieldProto3(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
           }
         }
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
@@ -556,12 +582,13 @@ public final class GSuiteSettingsOuterClass {
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return io.bloombox.schema.partner.integrations.gsuite.GSuiteSettingsOuterClass.internal_static_bloombox_schema_partner_integrations_gsuite_GSuiteSettings_descriptor;
+      return io.bloombox.schema.partner.integrations.gsuite.GSuiteSettingsOuterClass.internal_static_bloombox_partner_integrations_gsuite_GSuiteSettings_descriptor;
     }
 
+    @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return io.bloombox.schema.partner.integrations.gsuite.GSuiteSettingsOuterClass.internal_static_bloombox_schema_partner_integrations_gsuite_GSuiteSettings_fieldAccessorTable
+      return io.bloombox.schema.partner.integrations.gsuite.GSuiteSettingsOuterClass.internal_static_bloombox_partner_integrations_gsuite_GSuiteSettings_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
               io.bloombox.schema.partner.integrations.gsuite.GSuiteSettingsOuterClass.GSuiteSettings.class, io.bloombox.schema.partner.integrations.gsuite.GSuiteSettingsOuterClass.GSuiteSettings.Builder.class);
     }
@@ -615,7 +642,7 @@ public final class GSuiteSettingsOuterClass {
      * Flags indicating features that should be enabled or disabled.
      * </pre>
      *
-     * <code>.bloombox.schema.partner.integrations.gsuite.GSuiteIntegrationFeatures features = 10;</code>
+     * <code>.bloombox.partner.integrations.gsuite.GSuiteIntegrationFeatures features = 10;</code>
      */
     public boolean hasFeatures() {
       return features_ != null;
@@ -625,7 +652,7 @@ public final class GSuiteSettingsOuterClass {
      * Flags indicating features that should be enabled or disabled.
      * </pre>
      *
-     * <code>.bloombox.schema.partner.integrations.gsuite.GSuiteIntegrationFeatures features = 10;</code>
+     * <code>.bloombox.partner.integrations.gsuite.GSuiteIntegrationFeatures features = 10;</code>
      */
     public io.bloombox.schema.partner.integrations.gsuite.GSuiteSettingsOuterClass.GSuiteIntegrationFeatures getFeatures() {
       return features_ == null ? io.bloombox.schema.partner.integrations.gsuite.GSuiteSettingsOuterClass.GSuiteIntegrationFeatures.getDefaultInstance() : features_;
@@ -635,13 +662,14 @@ public final class GSuiteSettingsOuterClass {
      * Flags indicating features that should be enabled or disabled.
      * </pre>
      *
-     * <code>.bloombox.schema.partner.integrations.gsuite.GSuiteIntegrationFeatures features = 10;</code>
+     * <code>.bloombox.partner.integrations.gsuite.GSuiteIntegrationFeatures features = 10;</code>
      */
     public io.bloombox.schema.partner.integrations.gsuite.GSuiteSettingsOuterClass.GSuiteIntegrationFeaturesOrBuilder getFeaturesOrBuilder() {
       return getFeatures();
     }
 
     private byte memoizedIsInitialized = -1;
+    @java.lang.Override
     public final boolean isInitialized() {
       byte isInitialized = memoizedIsInitialized;
       if (isInitialized == 1) return true;
@@ -651,6 +679,7 @@ public final class GSuiteSettingsOuterClass {
       return true;
     }
 
+    @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
       if (!getDomainBytes().isEmpty()) {
@@ -662,6 +691,7 @@ public final class GSuiteSettingsOuterClass {
       unknownFields.writeTo(output);
     }
 
+    @java.lang.Override
     public int getSerializedSize() {
       int size = memoizedSize;
       if (size != -1) return size;
@@ -789,6 +819,7 @@ public final class GSuiteSettingsOuterClass {
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
 
+    @java.lang.Override
     public Builder newBuilderForType() { return newBuilder(); }
     public static Builder newBuilder() {
       return DEFAULT_INSTANCE.toBuilder();
@@ -796,6 +827,7 @@ public final class GSuiteSettingsOuterClass {
     public static Builder newBuilder(io.bloombox.schema.partner.integrations.gsuite.GSuiteSettingsOuterClass.GSuiteSettings prototype) {
       return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
     }
+    @java.lang.Override
     public Builder toBuilder() {
       return this == DEFAULT_INSTANCE
           ? new Builder() : new Builder().mergeFrom(this);
@@ -812,20 +844,21 @@ public final class GSuiteSettingsOuterClass {
      * Specifies settings related to Google Apps integration with Bloombox.
      * </pre>
      *
-     * Protobuf type {@code bloombox.schema.partner.integrations.gsuite.GSuiteSettings}
+     * Protobuf type {@code bloombox.partner.integrations.gsuite.GSuiteSettings}
      */
     public static final class Builder extends
         com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:bloombox.schema.partner.integrations.gsuite.GSuiteSettings)
+        // @@protoc_insertion_point(builder_implements:bloombox.partner.integrations.gsuite.GSuiteSettings)
         io.bloombox.schema.partner.integrations.gsuite.GSuiteSettingsOuterClass.GSuiteSettingsOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return io.bloombox.schema.partner.integrations.gsuite.GSuiteSettingsOuterClass.internal_static_bloombox_schema_partner_integrations_gsuite_GSuiteSettings_descriptor;
+        return io.bloombox.schema.partner.integrations.gsuite.GSuiteSettingsOuterClass.internal_static_bloombox_partner_integrations_gsuite_GSuiteSettings_descriptor;
       }
 
+      @java.lang.Override
       protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return io.bloombox.schema.partner.integrations.gsuite.GSuiteSettingsOuterClass.internal_static_bloombox_schema_partner_integrations_gsuite_GSuiteSettings_fieldAccessorTable
+        return io.bloombox.schema.partner.integrations.gsuite.GSuiteSettingsOuterClass.internal_static_bloombox_partner_integrations_gsuite_GSuiteSettings_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
                 io.bloombox.schema.partner.integrations.gsuite.GSuiteSettingsOuterClass.GSuiteSettings.class, io.bloombox.schema.partner.integrations.gsuite.GSuiteSettingsOuterClass.GSuiteSettings.Builder.class);
       }
@@ -845,6 +878,7 @@ public final class GSuiteSettingsOuterClass {
                 .alwaysUseFieldBuilders) {
         }
       }
+      @java.lang.Override
       public Builder clear() {
         super.clear();
         domain_ = "";
@@ -858,15 +892,18 @@ public final class GSuiteSettingsOuterClass {
         return this;
       }
 
+      @java.lang.Override
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return io.bloombox.schema.partner.integrations.gsuite.GSuiteSettingsOuterClass.internal_static_bloombox_schema_partner_integrations_gsuite_GSuiteSettings_descriptor;
+        return io.bloombox.schema.partner.integrations.gsuite.GSuiteSettingsOuterClass.internal_static_bloombox_partner_integrations_gsuite_GSuiteSettings_descriptor;
       }
 
+      @java.lang.Override
       public io.bloombox.schema.partner.integrations.gsuite.GSuiteSettingsOuterClass.GSuiteSettings getDefaultInstanceForType() {
         return io.bloombox.schema.partner.integrations.gsuite.GSuiteSettingsOuterClass.GSuiteSettings.getDefaultInstance();
       }
 
+      @java.lang.Override
       public io.bloombox.schema.partner.integrations.gsuite.GSuiteSettingsOuterClass.GSuiteSettings build() {
         io.bloombox.schema.partner.integrations.gsuite.GSuiteSettingsOuterClass.GSuiteSettings result = buildPartial();
         if (!result.isInitialized()) {
@@ -875,6 +912,7 @@ public final class GSuiteSettingsOuterClass {
         return result;
       }
 
+      @java.lang.Override
       public io.bloombox.schema.partner.integrations.gsuite.GSuiteSettingsOuterClass.GSuiteSettings buildPartial() {
         io.bloombox.schema.partner.integrations.gsuite.GSuiteSettingsOuterClass.GSuiteSettings result = new io.bloombox.schema.partner.integrations.gsuite.GSuiteSettingsOuterClass.GSuiteSettings(this);
         result.domain_ = domain_;
@@ -887,32 +925,39 @@ public final class GSuiteSettingsOuterClass {
         return result;
       }
 
+      @java.lang.Override
       public Builder clone() {
         return (Builder) super.clone();
       }
+      @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
         return (Builder) super.setField(field, value);
       }
+      @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
         return (Builder) super.clearField(field);
       }
+      @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
         return (Builder) super.clearOneof(oneof);
       }
+      @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
         return (Builder) super.setRepeatedField(field, index, value);
       }
+      @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
         return (Builder) super.addRepeatedField(field, value);
       }
+      @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
         if (other instanceof io.bloombox.schema.partner.integrations.gsuite.GSuiteSettingsOuterClass.GSuiteSettings) {
           return mergeFrom((io.bloombox.schema.partner.integrations.gsuite.GSuiteSettingsOuterClass.GSuiteSettings)other);
@@ -936,10 +981,12 @@ public final class GSuiteSettingsOuterClass {
         return this;
       }
 
+      @java.lang.Override
       public final boolean isInitialized() {
         return true;
       }
 
+      @java.lang.Override
       public Builder mergeFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -1055,7 +1102,7 @@ public final class GSuiteSettingsOuterClass {
        * Flags indicating features that should be enabled or disabled.
        * </pre>
        *
-       * <code>.bloombox.schema.partner.integrations.gsuite.GSuiteIntegrationFeatures features = 10;</code>
+       * <code>.bloombox.partner.integrations.gsuite.GSuiteIntegrationFeatures features = 10;</code>
        */
       public boolean hasFeatures() {
         return featuresBuilder_ != null || features_ != null;
@@ -1065,7 +1112,7 @@ public final class GSuiteSettingsOuterClass {
        * Flags indicating features that should be enabled or disabled.
        * </pre>
        *
-       * <code>.bloombox.schema.partner.integrations.gsuite.GSuiteIntegrationFeatures features = 10;</code>
+       * <code>.bloombox.partner.integrations.gsuite.GSuiteIntegrationFeatures features = 10;</code>
        */
       public io.bloombox.schema.partner.integrations.gsuite.GSuiteSettingsOuterClass.GSuiteIntegrationFeatures getFeatures() {
         if (featuresBuilder_ == null) {
@@ -1079,7 +1126,7 @@ public final class GSuiteSettingsOuterClass {
        * Flags indicating features that should be enabled or disabled.
        * </pre>
        *
-       * <code>.bloombox.schema.partner.integrations.gsuite.GSuiteIntegrationFeatures features = 10;</code>
+       * <code>.bloombox.partner.integrations.gsuite.GSuiteIntegrationFeatures features = 10;</code>
        */
       public Builder setFeatures(io.bloombox.schema.partner.integrations.gsuite.GSuiteSettingsOuterClass.GSuiteIntegrationFeatures value) {
         if (featuresBuilder_ == null) {
@@ -1099,7 +1146,7 @@ public final class GSuiteSettingsOuterClass {
        * Flags indicating features that should be enabled or disabled.
        * </pre>
        *
-       * <code>.bloombox.schema.partner.integrations.gsuite.GSuiteIntegrationFeatures features = 10;</code>
+       * <code>.bloombox.partner.integrations.gsuite.GSuiteIntegrationFeatures features = 10;</code>
        */
       public Builder setFeatures(
           io.bloombox.schema.partner.integrations.gsuite.GSuiteSettingsOuterClass.GSuiteIntegrationFeatures.Builder builderForValue) {
@@ -1117,7 +1164,7 @@ public final class GSuiteSettingsOuterClass {
        * Flags indicating features that should be enabled or disabled.
        * </pre>
        *
-       * <code>.bloombox.schema.partner.integrations.gsuite.GSuiteIntegrationFeatures features = 10;</code>
+       * <code>.bloombox.partner.integrations.gsuite.GSuiteIntegrationFeatures features = 10;</code>
        */
       public Builder mergeFeatures(io.bloombox.schema.partner.integrations.gsuite.GSuiteSettingsOuterClass.GSuiteIntegrationFeatures value) {
         if (featuresBuilder_ == null) {
@@ -1139,7 +1186,7 @@ public final class GSuiteSettingsOuterClass {
        * Flags indicating features that should be enabled or disabled.
        * </pre>
        *
-       * <code>.bloombox.schema.partner.integrations.gsuite.GSuiteIntegrationFeatures features = 10;</code>
+       * <code>.bloombox.partner.integrations.gsuite.GSuiteIntegrationFeatures features = 10;</code>
        */
       public Builder clearFeatures() {
         if (featuresBuilder_ == null) {
@@ -1157,7 +1204,7 @@ public final class GSuiteSettingsOuterClass {
        * Flags indicating features that should be enabled or disabled.
        * </pre>
        *
-       * <code>.bloombox.schema.partner.integrations.gsuite.GSuiteIntegrationFeatures features = 10;</code>
+       * <code>.bloombox.partner.integrations.gsuite.GSuiteIntegrationFeatures features = 10;</code>
        */
       public io.bloombox.schema.partner.integrations.gsuite.GSuiteSettingsOuterClass.GSuiteIntegrationFeatures.Builder getFeaturesBuilder() {
         
@@ -1169,7 +1216,7 @@ public final class GSuiteSettingsOuterClass {
        * Flags indicating features that should be enabled or disabled.
        * </pre>
        *
-       * <code>.bloombox.schema.partner.integrations.gsuite.GSuiteIntegrationFeatures features = 10;</code>
+       * <code>.bloombox.partner.integrations.gsuite.GSuiteIntegrationFeatures features = 10;</code>
        */
       public io.bloombox.schema.partner.integrations.gsuite.GSuiteSettingsOuterClass.GSuiteIntegrationFeaturesOrBuilder getFeaturesOrBuilder() {
         if (featuresBuilder_ != null) {
@@ -1184,7 +1231,7 @@ public final class GSuiteSettingsOuterClass {
        * Flags indicating features that should be enabled or disabled.
        * </pre>
        *
-       * <code>.bloombox.schema.partner.integrations.gsuite.GSuiteIntegrationFeatures features = 10;</code>
+       * <code>.bloombox.partner.integrations.gsuite.GSuiteIntegrationFeatures features = 10;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
           io.bloombox.schema.partner.integrations.gsuite.GSuiteSettingsOuterClass.GSuiteIntegrationFeatures, io.bloombox.schema.partner.integrations.gsuite.GSuiteSettingsOuterClass.GSuiteIntegrationFeatures.Builder, io.bloombox.schema.partner.integrations.gsuite.GSuiteSettingsOuterClass.GSuiteIntegrationFeaturesOrBuilder> 
@@ -1199,21 +1246,23 @@ public final class GSuiteSettingsOuterClass {
         }
         return featuresBuilder_;
       }
+      @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
         return super.setUnknownFieldsProto3(unknownFields);
       }
 
+      @java.lang.Override
       public final Builder mergeUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
         return super.mergeUnknownFields(unknownFields);
       }
 
 
-      // @@protoc_insertion_point(builder_scope:bloombox.schema.partner.integrations.gsuite.GSuiteSettings)
+      // @@protoc_insertion_point(builder_scope:bloombox.partner.integrations.gsuite.GSuiteSettings)
     }
 
-    // @@protoc_insertion_point(class_scope:bloombox.schema.partner.integrations.gsuite.GSuiteSettings)
+    // @@protoc_insertion_point(class_scope:bloombox.partner.integrations.gsuite.GSuiteSettings)
     private static final io.bloombox.schema.partner.integrations.gsuite.GSuiteSettingsOuterClass.GSuiteSettings DEFAULT_INSTANCE;
     static {
       DEFAULT_INSTANCE = new io.bloombox.schema.partner.integrations.gsuite.GSuiteSettingsOuterClass.GSuiteSettings();
@@ -1225,6 +1274,7 @@ public final class GSuiteSettingsOuterClass {
 
     private static final com.google.protobuf.Parser<GSuiteSettings>
         PARSER = new com.google.protobuf.AbstractParser<GSuiteSettings>() {
+      @java.lang.Override
       public GSuiteSettings parsePartialFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -1242,6 +1292,7 @@ public final class GSuiteSettingsOuterClass {
       return PARSER;
     }
 
+    @java.lang.Override
     public io.bloombox.schema.partner.integrations.gsuite.GSuiteSettingsOuterClass.GSuiteSettings getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
@@ -1249,15 +1300,15 @@ public final class GSuiteSettingsOuterClass {
   }
 
   private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_bloombox_schema_partner_integrations_gsuite_GSuiteIntegrationFeatures_descriptor;
+    internal_static_bloombox_partner_integrations_gsuite_GSuiteIntegrationFeatures_descriptor;
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_bloombox_schema_partner_integrations_gsuite_GSuiteIntegrationFeatures_fieldAccessorTable;
+      internal_static_bloombox_partner_integrations_gsuite_GSuiteIntegrationFeatures_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_bloombox_schema_partner_integrations_gsuite_GSuiteSettings_descriptor;
+    internal_static_bloombox_partner_integrations_gsuite_GSuiteSettings_descriptor;
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_bloombox_schema_partner_integrations_gsuite_GSuiteSettings_fieldAccessorTable;
+      internal_static_bloombox_partner_integrations_gsuite_GSuiteSettings_fieldAccessorTable;
 
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
@@ -1268,13 +1319,13 @@ public final class GSuiteSettingsOuterClass {
   static {
     java.lang.String[] descriptorData = {
       "\n)partner/integrations/GSuiteSettings.pr" +
-      "oto\022+bloombox.schema.partner.integration" +
-      "s.gsuite\"\033\n\031GSuiteIntegrationFeatures\"z\n" +
-      "\016GSuiteSettings\022\016\n\006domain\030\001 \001(\t\022X\n\010featu" +
-      "res\030\n \001(\0132F.bloombox.schema.partner.inte" +
-      "grations.gsuite.GSuiteIntegrationFeature" +
-      "sB:\n.io.bloombox.schema.partner.integrat" +
-      "ions.gsuiteH\001P\000\242\002\003BBSb\006proto3"
+      "oto\022$bloombox.partner.integrations.gsuit" +
+      "e\"\033\n\031GSuiteIntegrationFeatures\"s\n\016GSuite" +
+      "Settings\022\016\n\006domain\030\001 \001(\t\022Q\n\010features\030\n \001" +
+      "(\0132?.bloombox.partner.integrations.gsuit" +
+      "e.GSuiteIntegrationFeaturesB:\n.io.bloomb" +
+      "ox.schema.partner.integrations.gsuiteH\001P" +
+      "\000\242\002\003BBSb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -1288,17 +1339,17 @@ public final class GSuiteSettingsOuterClass {
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
         }, assigner);
-    internal_static_bloombox_schema_partner_integrations_gsuite_GSuiteIntegrationFeatures_descriptor =
+    internal_static_bloombox_partner_integrations_gsuite_GSuiteIntegrationFeatures_descriptor =
       getDescriptor().getMessageTypes().get(0);
-    internal_static_bloombox_schema_partner_integrations_gsuite_GSuiteIntegrationFeatures_fieldAccessorTable = new
+    internal_static_bloombox_partner_integrations_gsuite_GSuiteIntegrationFeatures_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_bloombox_schema_partner_integrations_gsuite_GSuiteIntegrationFeatures_descriptor,
+        internal_static_bloombox_partner_integrations_gsuite_GSuiteIntegrationFeatures_descriptor,
         new java.lang.String[] { });
-    internal_static_bloombox_schema_partner_integrations_gsuite_GSuiteSettings_descriptor =
+    internal_static_bloombox_partner_integrations_gsuite_GSuiteSettings_descriptor =
       getDescriptor().getMessageTypes().get(1);
-    internal_static_bloombox_schema_partner_integrations_gsuite_GSuiteSettings_fieldAccessorTable = new
+    internal_static_bloombox_partner_integrations_gsuite_GSuiteSettings_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_bloombox_schema_partner_integrations_gsuite_GSuiteSettings_descriptor,
+        internal_static_bloombox_partner_integrations_gsuite_GSuiteSettings_descriptor,
         new java.lang.String[] { "Domain", "Features", });
   }
 

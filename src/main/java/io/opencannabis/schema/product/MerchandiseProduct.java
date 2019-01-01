@@ -1,11 +1,12 @@
 /*
- * Copyright 2018, Bloombox, LLC.
+ * Copyright 2018, Momentum Ideas, Co. All rights reserved.
  *
- * Licensed under the Apache License, Version 2.0 (the "License");
- * you may not use this file except in compliance with the License.
- * You may obtain a copy of the License at
- *
- *     http://www.apache.org/licenses/LICENSE-2.0
+ * Source and object computer code contained herein is the private intellectual
+ * property of Momentum Ideas Co., a Delaware Corporation. Use of this
+ * code in source form requires permission in writing before use or the
+ * assembly, distribution, or publishing of derivative works, for commercial
+ * purposes or any other purpose, from a duly authorized officer of Momentum
+ * Ideas Co.
  *
  * Unless required by applicable law or agreed to in writing, software
  * distributed under the License is distributed on an "AS IS" BASIS,
@@ -493,13 +494,6 @@ public final class MerchandiseProduct {
             case 0:
               done = true;
               break;
-            default: {
-              if (!parseUnknownFieldProto3(
-                  input, unknownFields, extensionRegistry, tag)) {
-                done = true;
-              }
-              break;
-            }
             case 10: {
               io.opencannabis.schema.base.BaseProductKey.ProductKey.Builder subBuilder = null;
               if (key_ != null) {
@@ -555,6 +549,13 @@ public final class MerchandiseProduct {
 
               break;
             }
+            default: {
+              if (!parseUnknownFieldProto3(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
           }
         }
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
@@ -575,6 +576,7 @@ public final class MerchandiseProduct {
       return io.opencannabis.schema.product.MerchandiseProduct.internal_static_opencannabis_products_Merchandise_descriptor;
     }
 
+    @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
       return io.opencannabis.schema.product.MerchandiseProduct.internal_static_opencannabis_products_Merchandise_fieldAccessorTable
@@ -636,6 +638,7 @@ public final class MerchandiseProduct {
      * <code>.opencannabis.products.MerchandiseType type = 2;</code>
      */
     public io.opencannabis.schema.product.MerchandiseProduct.MerchandiseType getType() {
+      @SuppressWarnings("deprecation")
       io.opencannabis.schema.product.MerchandiseProduct.MerchandiseType result = io.opencannabis.schema.product.MerchandiseProduct.MerchandiseType.valueOf(type_);
       return result == null ? io.opencannabis.schema.product.MerchandiseProduct.MerchandiseType.UNRECOGNIZED : result;
     }
@@ -647,6 +650,7 @@ public final class MerchandiseProduct {
             new com.google.protobuf.Internal.ListAdapter.Converter<
                 java.lang.Integer, io.opencannabis.schema.product.MerchandiseProduct.MerchandiseFlag>() {
               public io.opencannabis.schema.product.MerchandiseProduct.MerchandiseFlag convert(java.lang.Integer from) {
+                @SuppressWarnings("deprecation")
                 io.opencannabis.schema.product.MerchandiseProduct.MerchandiseFlag result = io.opencannabis.schema.product.MerchandiseProduct.MerchandiseFlag.valueOf(from);
                 return result == null ? io.opencannabis.schema.product.MerchandiseProduct.MerchandiseFlag.UNRECOGNIZED : result;
               }
@@ -739,6 +743,7 @@ public final class MerchandiseProduct {
     }
 
     private byte memoizedIsInitialized = -1;
+    @java.lang.Override
     public final boolean isInitialized() {
       byte isInitialized = memoizedIsInitialized;
       if (isInitialized == 1) return true;
@@ -748,6 +753,7 @@ public final class MerchandiseProduct {
       return true;
     }
 
+    @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
       getSerializedSize();
@@ -770,6 +776,7 @@ public final class MerchandiseProduct {
       unknownFields.writeTo(output);
     }
 
+    @java.lang.Override
     public int getSerializedSize() {
       int size = memoizedSize;
       if (size != -1) return size;
@@ -927,6 +934,7 @@ public final class MerchandiseProduct {
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
 
+    @java.lang.Override
     public Builder newBuilderForType() { return newBuilder(); }
     public static Builder newBuilder() {
       return DEFAULT_INSTANCE.toBuilder();
@@ -934,6 +942,7 @@ public final class MerchandiseProduct {
     public static Builder newBuilder(io.opencannabis.schema.product.MerchandiseProduct.Merchandise prototype) {
       return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
     }
+    @java.lang.Override
     public Builder toBuilder() {
       return this == DEFAULT_INSTANCE
           ? new Builder() : new Builder().mergeFrom(this);
@@ -962,6 +971,7 @@ public final class MerchandiseProduct {
         return io.opencannabis.schema.product.MerchandiseProduct.internal_static_opencannabis_products_Merchandise_descriptor;
       }
 
+      @java.lang.Override
       protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
           internalGetFieldAccessorTable() {
         return io.opencannabis.schema.product.MerchandiseProduct.internal_static_opencannabis_products_Merchandise_fieldAccessorTable
@@ -984,6 +994,7 @@ public final class MerchandiseProduct {
                 .alwaysUseFieldBuilders) {
         }
       }
+      @java.lang.Override
       public Builder clear() {
         super.clear();
         if (keyBuilder_ == null) {
@@ -1005,15 +1016,18 @@ public final class MerchandiseProduct {
         return this;
       }
 
+      @java.lang.Override
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
         return io.opencannabis.schema.product.MerchandiseProduct.internal_static_opencannabis_products_Merchandise_descriptor;
       }
 
+      @java.lang.Override
       public io.opencannabis.schema.product.MerchandiseProduct.Merchandise getDefaultInstanceForType() {
         return io.opencannabis.schema.product.MerchandiseProduct.Merchandise.getDefaultInstance();
       }
 
+      @java.lang.Override
       public io.opencannabis.schema.product.MerchandiseProduct.Merchandise build() {
         io.opencannabis.schema.product.MerchandiseProduct.Merchandise result = buildPartial();
         if (!result.isInitialized()) {
@@ -1022,6 +1036,7 @@ public final class MerchandiseProduct {
         return result;
       }
 
+      @java.lang.Override
       public io.opencannabis.schema.product.MerchandiseProduct.Merchandise buildPartial() {
         io.opencannabis.schema.product.MerchandiseProduct.Merchandise result = new io.opencannabis.schema.product.MerchandiseProduct.Merchandise(this);
         int from_bitField0_ = bitField0_;
@@ -1047,32 +1062,39 @@ public final class MerchandiseProduct {
         return result;
       }
 
+      @java.lang.Override
       public Builder clone() {
         return (Builder) super.clone();
       }
+      @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
         return (Builder) super.setField(field, value);
       }
+      @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
         return (Builder) super.clearField(field);
       }
+      @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
         return (Builder) super.clearOneof(oneof);
       }
+      @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
         return (Builder) super.setRepeatedField(field, index, value);
       }
+      @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
         return (Builder) super.addRepeatedField(field, value);
       }
+      @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
         if (other instanceof io.opencannabis.schema.product.MerchandiseProduct.Merchandise) {
           return mergeFrom((io.opencannabis.schema.product.MerchandiseProduct.Merchandise)other);
@@ -1108,10 +1130,12 @@ public final class MerchandiseProduct {
         return this;
       }
 
+      @java.lang.Override
       public final boolean isInitialized() {
         return true;
       }
 
+      @java.lang.Override
       public Builder mergeFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -1315,6 +1339,7 @@ public final class MerchandiseProduct {
        * <code>.opencannabis.products.MerchandiseType type = 2;</code>
        */
       public io.opencannabis.schema.product.MerchandiseProduct.MerchandiseType getType() {
+        @SuppressWarnings("deprecation")
         io.opencannabis.schema.product.MerchandiseProduct.MerchandiseType result = io.opencannabis.schema.product.MerchandiseProduct.MerchandiseType.valueOf(type_);
         return result == null ? io.opencannabis.schema.product.MerchandiseProduct.MerchandiseType.UNRECOGNIZED : result;
       }
@@ -1666,11 +1691,13 @@ public final class MerchandiseProduct {
         }
         return productBuilder_;
       }
+      @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
         return super.setUnknownFieldsProto3(unknownFields);
       }
 
+      @java.lang.Override
       public final Builder mergeUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
         return super.mergeUnknownFields(unknownFields);
@@ -1692,6 +1719,7 @@ public final class MerchandiseProduct {
 
     private static final com.google.protobuf.Parser<Merchandise>
         PARSER = new com.google.protobuf.AbstractParser<Merchandise>() {
+      @java.lang.Override
       public Merchandise parsePartialFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -1709,6 +1737,7 @@ public final class MerchandiseProduct {
       return PARSER;
     }
 
+    @java.lang.Override
     public io.opencannabis.schema.product.MerchandiseProduct.Merchandise getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }

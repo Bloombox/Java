@@ -1,11 +1,12 @@
 /*
- * Copyright 2018, Bloombox, LLC.
+ * Copyright 2018, Momentum Ideas, Co. All rights reserved.
  *
- * Licensed under the Apache License, Version 2.0 (the "License");
- * you may not use this file except in compliance with the License.
- * You may obtain a copy of the License at
- *
- *     http://www.apache.org/licenses/LICENSE-2.0
+ * Source and object computer code contained herein is the private intellectual
+ * property of Momentum Ideas Co., a Delaware Corporation. Use of this
+ * code in source form requires permission in writing before use or the
+ * assembly, distribution, or publishing of derivative works, for commercial
+ * purposes or any other purpose, from a duly authorized officer of Momentum
+ * Ideas Co.
  *
  * Unless required by applicable law or agreed to in writing, software
  * distributed under the License is distributed on an "AS IS" BASIS,
@@ -20,7 +21,7 @@
 package io.bloombox.schema.search;
 
 public interface SearchSpecOrBuilder extends
-    // @@protoc_insertion_point(interface_extends:bloombox.schema.search.SearchSpec)
+    // @@protoc_insertion_point(interface_extends:bloombox.search.SearchSpec)
     com.google.protobuf.MessageOrBuilder {
 
   /**
@@ -46,7 +47,7 @@ public interface SearchSpecOrBuilder extends
    * Specifies globally-applicable options for a given search operation.
    * </pre>
    *
-   * <code>.bloombox.schema.search.SearchOptions options = 2;</code>
+   * <code>.bloombox.search.SearchOptions options = 2;</code>
    */
   boolean hasOptions();
   /**
@@ -54,7 +55,7 @@ public interface SearchSpecOrBuilder extends
    * Specifies globally-applicable options for a given search operation.
    * </pre>
    *
-   * <code>.bloombox.schema.search.SearchOptions options = 2;</code>
+   * <code>.bloombox.search.SearchOptions options = 2;</code>
    */
   io.bloombox.schema.search.SearchOptions getOptions();
   /**
@@ -62,7 +63,7 @@ public interface SearchSpecOrBuilder extends
    * Specifies globally-applicable options for a given search operation.
    * </pre>
    *
-   * <code>.bloombox.schema.search.SearchOptions options = 2;</code>
+   * <code>.bloombox.search.SearchOptions options = 2;</code>
    */
   io.bloombox.schema.search.SearchOptionsOrBuilder getOptionsOrBuilder();
 }

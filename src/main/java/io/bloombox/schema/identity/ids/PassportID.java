@@ -1,11 +1,12 @@
 /*
- * Copyright 2018, Bloombox, LLC.
+ * Copyright 2018, Momentum Ideas, Co. All rights reserved.
  *
- * Licensed under the Apache License, Version 2.0 (the "License");
- * you may not use this file except in compliance with the License.
- * You may obtain a copy of the License at
- *
- *     http://www.apache.org/licenses/LICENSE-2.0
+ * Source and object computer code contained herein is the private intellectual
+ * property of Momentum Ideas Co., a Delaware Corporation. Use of this
+ * code in source form requires permission in writing before use or the
+ * assembly, distribution, or publishing of derivative works, for commercial
+ * purposes or any other purpose, from a duly authorized officer of Momentum
+ * Ideas Co.
  *
  * Unless required by applicable law or agreed to in writing, software
  * distributed under the License is distributed on an "AS IS" BASIS,
@@ -31,7 +32,7 @@ public final class PassportID {
         (com.google.protobuf.ExtensionRegistryLite) registry);
   }
   public interface PassportReferenceOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:bloombox.schema.identity.ids.PassportReference)
+      // @@protoc_insertion_point(interface_extends:bloombox.identity.ids.PassportReference)
       com.google.protobuf.MessageOrBuilder {
 
     /**
@@ -93,11 +94,11 @@ public final class PassportID {
    * Reference to a nation-issued passport document.
    * </pre>
    *
-   * Protobuf type {@code bloombox.schema.identity.ids.PassportReference}
+   * Protobuf type {@code bloombox.identity.ids.PassportReference}
    */
   public  static final class PassportReference extends
       com.google.protobuf.GeneratedMessageV3 implements
-      // @@protoc_insertion_point(message_implements:bloombox.schema.identity.ids.PassportReference)
+      // @@protoc_insertion_point(message_implements:bloombox.identity.ids.PassportReference)
       PassportReferenceOrBuilder {
   private static final long serialVersionUID = 0L;
     // Use PassportReference.newBuilder() to construct.
@@ -134,13 +135,6 @@ public final class PassportID {
             case 0:
               done = true;
               break;
-            default: {
-              if (!parseUnknownFieldProto3(
-                  input, unknownFields, extensionRegistry, tag)) {
-                done = true;
-              }
-              break;
-            }
             case 10: {
               java.lang.String s = input.readStringRequireUtf8();
 
@@ -159,6 +153,13 @@ public final class PassportID {
               barcode_ = s;
               break;
             }
+            default: {
+              if (!parseUnknownFieldProto3(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
           }
         }
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
@@ -173,12 +174,13 @@ public final class PassportID {
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return io.bloombox.schema.identity.ids.PassportID.internal_static_bloombox_schema_identity_ids_PassportReference_descriptor;
+      return io.bloombox.schema.identity.ids.PassportID.internal_static_bloombox_identity_ids_PassportReference_descriptor;
     }
 
+    @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return io.bloombox.schema.identity.ids.PassportID.internal_static_bloombox_schema_identity_ids_PassportReference_fieldAccessorTable
+      return io.bloombox.schema.identity.ids.PassportID.internal_static_bloombox_identity_ids_PassportReference_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
               io.bloombox.schema.identity.ids.PassportID.PassportReference.class, io.bloombox.schema.identity.ids.PassportID.PassportReference.Builder.class);
     }
@@ -310,6 +312,7 @@ public final class PassportID {
     }
 
     private byte memoizedIsInitialized = -1;
+    @java.lang.Override
     public final boolean isInitialized() {
       byte isInitialized = memoizedIsInitialized;
       if (isInitialized == 1) return true;
@@ -319,6 +322,7 @@ public final class PassportID {
       return true;
     }
 
+    @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
       if (!getNationBytes().isEmpty()) {
@@ -333,6 +337,7 @@ public final class PassportID {
       unknownFields.writeTo(output);
     }
 
+    @java.lang.Override
     public int getSerializedSize() {
       int size = memoizedSize;
       if (size != -1) return size;
@@ -461,6 +466,7 @@ public final class PassportID {
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
 
+    @java.lang.Override
     public Builder newBuilderForType() { return newBuilder(); }
     public static Builder newBuilder() {
       return DEFAULT_INSTANCE.toBuilder();
@@ -468,6 +474,7 @@ public final class PassportID {
     public static Builder newBuilder(io.bloombox.schema.identity.ids.PassportID.PassportReference prototype) {
       return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
     }
+    @java.lang.Override
     public Builder toBuilder() {
       return this == DEFAULT_INSTANCE
           ? new Builder() : new Builder().mergeFrom(this);
@@ -484,20 +491,21 @@ public final class PassportID {
      * Reference to a nation-issued passport document.
      * </pre>
      *
-     * Protobuf type {@code bloombox.schema.identity.ids.PassportReference}
+     * Protobuf type {@code bloombox.identity.ids.PassportReference}
      */
     public static final class Builder extends
         com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:bloombox.schema.identity.ids.PassportReference)
+        // @@protoc_insertion_point(builder_implements:bloombox.identity.ids.PassportReference)
         io.bloombox.schema.identity.ids.PassportID.PassportReferenceOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return io.bloombox.schema.identity.ids.PassportID.internal_static_bloombox_schema_identity_ids_PassportReference_descriptor;
+        return io.bloombox.schema.identity.ids.PassportID.internal_static_bloombox_identity_ids_PassportReference_descriptor;
       }
 
+      @java.lang.Override
       protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return io.bloombox.schema.identity.ids.PassportID.internal_static_bloombox_schema_identity_ids_PassportReference_fieldAccessorTable
+        return io.bloombox.schema.identity.ids.PassportID.internal_static_bloombox_identity_ids_PassportReference_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
                 io.bloombox.schema.identity.ids.PassportID.PassportReference.class, io.bloombox.schema.identity.ids.PassportID.PassportReference.Builder.class);
       }
@@ -517,6 +525,7 @@ public final class PassportID {
                 .alwaysUseFieldBuilders) {
         }
       }
+      @java.lang.Override
       public Builder clear() {
         super.clear();
         nation_ = "";
@@ -528,15 +537,18 @@ public final class PassportID {
         return this;
       }
 
+      @java.lang.Override
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return io.bloombox.schema.identity.ids.PassportID.internal_static_bloombox_schema_identity_ids_PassportReference_descriptor;
+        return io.bloombox.schema.identity.ids.PassportID.internal_static_bloombox_identity_ids_PassportReference_descriptor;
       }
 
+      @java.lang.Override
       public io.bloombox.schema.identity.ids.PassportID.PassportReference getDefaultInstanceForType() {
         return io.bloombox.schema.identity.ids.PassportID.PassportReference.getDefaultInstance();
       }
 
+      @java.lang.Override
       public io.bloombox.schema.identity.ids.PassportID.PassportReference build() {
         io.bloombox.schema.identity.ids.PassportID.PassportReference result = buildPartial();
         if (!result.isInitialized()) {
@@ -545,6 +557,7 @@ public final class PassportID {
         return result;
       }
 
+      @java.lang.Override
       public io.bloombox.schema.identity.ids.PassportID.PassportReference buildPartial() {
         io.bloombox.schema.identity.ids.PassportID.PassportReference result = new io.bloombox.schema.identity.ids.PassportID.PassportReference(this);
         result.nation_ = nation_;
@@ -554,32 +567,39 @@ public final class PassportID {
         return result;
       }
 
+      @java.lang.Override
       public Builder clone() {
         return (Builder) super.clone();
       }
+      @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
         return (Builder) super.setField(field, value);
       }
+      @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
         return (Builder) super.clearField(field);
       }
+      @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
         return (Builder) super.clearOneof(oneof);
       }
+      @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
         return (Builder) super.setRepeatedField(field, index, value);
       }
+      @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
         return (Builder) super.addRepeatedField(field, value);
       }
+      @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
         if (other instanceof io.bloombox.schema.identity.ids.PassportID.PassportReference) {
           return mergeFrom((io.bloombox.schema.identity.ids.PassportID.PassportReference)other);
@@ -608,10 +628,12 @@ public final class PassportID {
         return this;
       }
 
+      @java.lang.Override
       public final boolean isInitialized() {
         return true;
       }
 
+      @java.lang.Override
       public Builder mergeFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -896,21 +918,23 @@ public final class PassportID {
         onChanged();
         return this;
       }
+      @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
         return super.setUnknownFieldsProto3(unknownFields);
       }
 
+      @java.lang.Override
       public final Builder mergeUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
         return super.mergeUnknownFields(unknownFields);
       }
 
 
-      // @@protoc_insertion_point(builder_scope:bloombox.schema.identity.ids.PassportReference)
+      // @@protoc_insertion_point(builder_scope:bloombox.identity.ids.PassportReference)
     }
 
-    // @@protoc_insertion_point(class_scope:bloombox.schema.identity.ids.PassportReference)
+    // @@protoc_insertion_point(class_scope:bloombox.identity.ids.PassportReference)
     private static final io.bloombox.schema.identity.ids.PassportID.PassportReference DEFAULT_INSTANCE;
     static {
       DEFAULT_INSTANCE = new io.bloombox.schema.identity.ids.PassportID.PassportReference();
@@ -922,6 +946,7 @@ public final class PassportID {
 
     private static final com.google.protobuf.Parser<PassportReference>
         PARSER = new com.google.protobuf.AbstractParser<PassportReference>() {
+      @java.lang.Override
       public PassportReference parsePartialFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -939,6 +964,7 @@ public final class PassportID {
       return PARSER;
     }
 
+    @java.lang.Override
     public io.bloombox.schema.identity.ids.PassportID.PassportReference getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
@@ -946,7 +972,7 @@ public final class PassportID {
   }
 
   public interface PassportOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:bloombox.schema.identity.ids.Passport)
+      // @@protoc_insertion_point(interface_extends:bloombox.identity.ids.Passport)
       com.google.protobuf.MessageOrBuilder {
 
     /**
@@ -981,11 +1007,11 @@ public final class PassportID {
    * Specifies a model for a nation-state-issued passport.
    * </pre>
    *
-   * Protobuf type {@code bloombox.schema.identity.ids.Passport}
+   * Protobuf type {@code bloombox.identity.ids.Passport}
    */
   public  static final class Passport extends
       com.google.protobuf.GeneratedMessageV3 implements
-      // @@protoc_insertion_point(message_implements:bloombox.schema.identity.ids.Passport)
+      // @@protoc_insertion_point(message_implements:bloombox.identity.ids.Passport)
       PassportOrBuilder {
   private static final long serialVersionUID = 0L;
     // Use Passport.newBuilder() to construct.
@@ -1021,13 +1047,6 @@ public final class PassportID {
             case 0:
               done = true;
               break;
-            default: {
-              if (!parseUnknownFieldProto3(
-                  input, unknownFields, extensionRegistry, tag)) {
-                done = true;
-              }
-              break;
-            }
             case 10: {
 
               barcode_ = input.readBytes();
@@ -1037,6 +1056,13 @@ public final class PassportID {
               java.lang.String s = input.readStringRequireUtf8();
 
               nation_ = s;
+              break;
+            }
+            default: {
+              if (!parseUnknownFieldProto3(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
               break;
             }
           }
@@ -1053,12 +1079,13 @@ public final class PassportID {
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return io.bloombox.schema.identity.ids.PassportID.internal_static_bloombox_schema_identity_ids_Passport_descriptor;
+      return io.bloombox.schema.identity.ids.PassportID.internal_static_bloombox_identity_ids_Passport_descriptor;
     }
 
+    @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return io.bloombox.schema.identity.ids.PassportID.internal_static_bloombox_schema_identity_ids_Passport_fieldAccessorTable
+      return io.bloombox.schema.identity.ids.PassportID.internal_static_bloombox_identity_ids_Passport_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
               io.bloombox.schema.identity.ids.PassportID.Passport.class, io.bloombox.schema.identity.ids.PassportID.Passport.Builder.class);
     }
@@ -1119,6 +1146,7 @@ public final class PassportID {
     }
 
     private byte memoizedIsInitialized = -1;
+    @java.lang.Override
     public final boolean isInitialized() {
       byte isInitialized = memoizedIsInitialized;
       if (isInitialized == 1) return true;
@@ -1128,6 +1156,7 @@ public final class PassportID {
       return true;
     }
 
+    @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
       if (!barcode_.isEmpty()) {
@@ -1139,6 +1168,7 @@ public final class PassportID {
       unknownFields.writeTo(output);
     }
 
+    @java.lang.Override
     public int getSerializedSize() {
       int size = memoizedSize;
       if (size != -1) return size;
@@ -1261,6 +1291,7 @@ public final class PassportID {
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
 
+    @java.lang.Override
     public Builder newBuilderForType() { return newBuilder(); }
     public static Builder newBuilder() {
       return DEFAULT_INSTANCE.toBuilder();
@@ -1268,6 +1299,7 @@ public final class PassportID {
     public static Builder newBuilder(io.bloombox.schema.identity.ids.PassportID.Passport prototype) {
       return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
     }
+    @java.lang.Override
     public Builder toBuilder() {
       return this == DEFAULT_INSTANCE
           ? new Builder() : new Builder().mergeFrom(this);
@@ -1284,20 +1316,21 @@ public final class PassportID {
      * Specifies a model for a nation-state-issued passport.
      * </pre>
      *
-     * Protobuf type {@code bloombox.schema.identity.ids.Passport}
+     * Protobuf type {@code bloombox.identity.ids.Passport}
      */
     public static final class Builder extends
         com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:bloombox.schema.identity.ids.Passport)
+        // @@protoc_insertion_point(builder_implements:bloombox.identity.ids.Passport)
         io.bloombox.schema.identity.ids.PassportID.PassportOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return io.bloombox.schema.identity.ids.PassportID.internal_static_bloombox_schema_identity_ids_Passport_descriptor;
+        return io.bloombox.schema.identity.ids.PassportID.internal_static_bloombox_identity_ids_Passport_descriptor;
       }
 
+      @java.lang.Override
       protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return io.bloombox.schema.identity.ids.PassportID.internal_static_bloombox_schema_identity_ids_Passport_fieldAccessorTable
+        return io.bloombox.schema.identity.ids.PassportID.internal_static_bloombox_identity_ids_Passport_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
                 io.bloombox.schema.identity.ids.PassportID.Passport.class, io.bloombox.schema.identity.ids.PassportID.Passport.Builder.class);
       }
@@ -1317,6 +1350,7 @@ public final class PassportID {
                 .alwaysUseFieldBuilders) {
         }
       }
+      @java.lang.Override
       public Builder clear() {
         super.clear();
         barcode_ = com.google.protobuf.ByteString.EMPTY;
@@ -1326,15 +1360,18 @@ public final class PassportID {
         return this;
       }
 
+      @java.lang.Override
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return io.bloombox.schema.identity.ids.PassportID.internal_static_bloombox_schema_identity_ids_Passport_descriptor;
+        return io.bloombox.schema.identity.ids.PassportID.internal_static_bloombox_identity_ids_Passport_descriptor;
       }
 
+      @java.lang.Override
       public io.bloombox.schema.identity.ids.PassportID.Passport getDefaultInstanceForType() {
         return io.bloombox.schema.identity.ids.PassportID.Passport.getDefaultInstance();
       }
 
+      @java.lang.Override
       public io.bloombox.schema.identity.ids.PassportID.Passport build() {
         io.bloombox.schema.identity.ids.PassportID.Passport result = buildPartial();
         if (!result.isInitialized()) {
@@ -1343,6 +1380,7 @@ public final class PassportID {
         return result;
       }
 
+      @java.lang.Override
       public io.bloombox.schema.identity.ids.PassportID.Passport buildPartial() {
         io.bloombox.schema.identity.ids.PassportID.Passport result = new io.bloombox.schema.identity.ids.PassportID.Passport(this);
         result.barcode_ = barcode_;
@@ -1351,32 +1389,39 @@ public final class PassportID {
         return result;
       }
 
+      @java.lang.Override
       public Builder clone() {
         return (Builder) super.clone();
       }
+      @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
         return (Builder) super.setField(field, value);
       }
+      @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
         return (Builder) super.clearField(field);
       }
+      @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
         return (Builder) super.clearOneof(oneof);
       }
+      @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
         return (Builder) super.setRepeatedField(field, index, value);
       }
+      @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
         return (Builder) super.addRepeatedField(field, value);
       }
+      @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
         if (other instanceof io.bloombox.schema.identity.ids.PassportID.Passport) {
           return mergeFrom((io.bloombox.schema.identity.ids.PassportID.Passport)other);
@@ -1400,10 +1445,12 @@ public final class PassportID {
         return this;
       }
 
+      @java.lang.Override
       public final boolean isInitialized() {
         return true;
       }
 
+      @java.lang.Override
       public Builder mergeFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -1551,21 +1598,23 @@ public final class PassportID {
         onChanged();
         return this;
       }
+      @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
         return super.setUnknownFieldsProto3(unknownFields);
       }
 
+      @java.lang.Override
       public final Builder mergeUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
         return super.mergeUnknownFields(unknownFields);
       }
 
 
-      // @@protoc_insertion_point(builder_scope:bloombox.schema.identity.ids.Passport)
+      // @@protoc_insertion_point(builder_scope:bloombox.identity.ids.Passport)
     }
 
-    // @@protoc_insertion_point(class_scope:bloombox.schema.identity.ids.Passport)
+    // @@protoc_insertion_point(class_scope:bloombox.identity.ids.Passport)
     private static final io.bloombox.schema.identity.ids.PassportID.Passport DEFAULT_INSTANCE;
     static {
       DEFAULT_INSTANCE = new io.bloombox.schema.identity.ids.PassportID.Passport();
@@ -1577,6 +1626,7 @@ public final class PassportID {
 
     private static final com.google.protobuf.Parser<Passport>
         PARSER = new com.google.protobuf.AbstractParser<Passport>() {
+      @java.lang.Override
       public Passport parsePartialFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -1594,6 +1644,7 @@ public final class PassportID {
       return PARSER;
     }
 
+    @java.lang.Override
     public io.bloombox.schema.identity.ids.PassportID.Passport getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
@@ -1601,15 +1652,15 @@ public final class PassportID {
   }
 
   private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_bloombox_schema_identity_ids_PassportReference_descriptor;
+    internal_static_bloombox_identity_ids_PassportReference_descriptor;
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_bloombox_schema_identity_ids_PassportReference_fieldAccessorTable;
+      internal_static_bloombox_identity_ids_PassportReference_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_bloombox_schema_identity_ids_Passport_descriptor;
+    internal_static_bloombox_identity_ids_Passport_descriptor;
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_bloombox_schema_identity_ids_Passport_fieldAccessorTable;
+      internal_static_bloombox_identity_ids_Passport_fieldAccessorTable;
 
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
@@ -1619,15 +1670,15 @@ public final class PassportID {
       descriptor;
   static {
     java.lang.String[] descriptorData = {
-      "\n\033identity/ids/Passport.proto\022\034bloombox." +
-      "schema.identity.ids\032\016bq_field.proto\"G\n\021P" +
-      "assportReference\022\016\n\006nation\030\001 \001(\t\022\021\n\tid_n" +
-      "umber\030\002 \001(\t\022\017\n\007barcode\030\003 \001(\t\"\210\001\n\010Passpor" +
-      "t\022\024\n\007barcode\030\001 \001(\014B\003\200@\001\022f\n\006nation\030\002 \001(\tB" +
-      "V\212@SNation that issued this passport, as" +
-      " an abbreviated string code, like \"US\" o" +
-      "r \"UK\".B7\n\037io.bloombox.schema.identity.i" +
-      "dsB\nPassportIDH\001P\000\242\002\003BBSb\006proto3"
+      "\n\033identity/ids/Passport.proto\022\025bloombox." +
+      "identity.ids\032\016bq_field.proto\"G\n\021Passport" +
+      "Reference\022\016\n\006nation\030\001 \001(\t\022\021\n\tid_number\030\002" +
+      " \001(\t\022\017\n\007barcode\030\003 \001(\t\"\210\001\n\010Passport\022\024\n\007ba" +
+      "rcode\030\001 \001(\014B\003\200@\001\022f\n\006nation\030\002 \001(\tBV\212@SNat" +
+      "ion that issued this passport, as an abb" +
+      "reviated string code, like \"US\" or \"UK\"." +
+      "B7\n\037io.bloombox.schema.identity.idsB\nPas" +
+      "sportIDH\001P\000\242\002\003BBSb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -1642,17 +1693,17 @@ public final class PassportID {
         new com.google.protobuf.Descriptors.FileDescriptor[] {
           gen_bq_schema.BqField.getDescriptor(),
         }, assigner);
-    internal_static_bloombox_schema_identity_ids_PassportReference_descriptor =
+    internal_static_bloombox_identity_ids_PassportReference_descriptor =
       getDescriptor().getMessageTypes().get(0);
-    internal_static_bloombox_schema_identity_ids_PassportReference_fieldAccessorTable = new
+    internal_static_bloombox_identity_ids_PassportReference_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_bloombox_schema_identity_ids_PassportReference_descriptor,
+        internal_static_bloombox_identity_ids_PassportReference_descriptor,
         new java.lang.String[] { "Nation", "IdNumber", "Barcode", });
-    internal_static_bloombox_schema_identity_ids_Passport_descriptor =
+    internal_static_bloombox_identity_ids_Passport_descriptor =
       getDescriptor().getMessageTypes().get(1);
-    internal_static_bloombox_schema_identity_ids_Passport_fieldAccessorTable = new
+    internal_static_bloombox_identity_ids_Passport_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_bloombox_schema_identity_ids_Passport_descriptor,
+        internal_static_bloombox_identity_ids_Passport_descriptor,
         new java.lang.String[] { "Barcode", "Nation", });
     com.google.protobuf.ExtensionRegistry registry =
         com.google.protobuf.ExtensionRegistry.newInstance();

@@ -1,8 +1,8 @@
 /*
- * Copyright 2018, Bloombox, LLC. All rights reserved.
+ * Copyright 2018, Momentum Ideas, Co. All rights reserved.
  *
  * Source and object computer code contained herein is the private intellectual
- * property of Bloombox, a California Limited Liability Corporation. Use of this
+ * property of Momentum Ideas Co., a Delaware Corporation. Use of this
  * code in source form requires permission in writing before use or the
  * assembly, distribution, or publishing of derivative works, for commercial
  * purposes or any other purpose, from a duly authorized officer of Momentum
@@ -37,7 +37,7 @@ public final class SearchAnalytics {
    * or was submitted from, during analytics processing.
    * </pre>
    *
-   * Protobuf enum {@code bloombox.schema.analytics.search.SearchProperty}
+   * Protobuf enum {@code bloombox.analytics.search.SearchProperty}
    */
   public enum SearchProperty
       implements com.google.protobuf.ProtocolMessageEnum {
@@ -164,7 +164,7 @@ public final class SearchAnalytics {
       this.value = value;
     }
 
-    // @@protoc_insertion_point(enum_scope:bloombox.schema.analytics.search.SearchProperty)
+    // @@protoc_insertion_point(enum_scope:bloombox.analytics.search.SearchProperty)
   }
 
 
@@ -177,11 +177,11 @@ public final class SearchAnalytics {
   static {
     java.lang.String[] descriptorData = {
       "\n%analytics/search/SearchProperty.proto\022" +
-      " bloombox.schema.analytics.search*?\n\016Sea" +
-      "rchProperty\022\030\n\024PROPERTY_UNSPECIFIED\020\000\022\007\n" +
-      "\003WEB\020\001\022\n\n\006TABLET\020\002B@\n#io.bloombox.schema" +
-      ".telemetry.searchB\017SearchAnalyticsH\001P\000\242\002" +
-      "\003BBSb\006proto3"
+      "\031bloombox.analytics.search*?\n\016SearchProp" +
+      "erty\022\030\n\024PROPERTY_UNSPECIFIED\020\000\022\007\n\003WEB\020\001\022" +
+      "\n\n\006TABLET\020\002B@\n#io.bloombox.schema.teleme" +
+      "try.searchB\017SearchAnalyticsH\001P\000\242\002\003BBSb\006p" +
+      "roto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {

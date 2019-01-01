@@ -1,8 +1,8 @@
 /*
- * Copyright 2018, Bloombox, LLC. All rights reserved.
+ * Copyright 2018, Momentum Ideas, Co. All rights reserved.
  *
  * Source and object computer code contained herein is the private intellectual
- * property of Bloombox, a California Limited Liability Corporation. Use of this
+ * property of Momentum Ideas Co., a Delaware Corporation. Use of this
  * code in source form requires permission in writing before use or the
  * assembly, distribution, or publishing of derivative works, for commercial
  * purposes or any other purpose, from a duly authorized officer of Momentum
@@ -32,150 +32,150 @@ public final class LedgerServiceBeta1 {
         (com.google.protobuf.ExtensionRegistryLite) registry);
   }
   static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_bloombox_schema_services_ledger_v1beta1_RetrieveAsset_descriptor;
+    internal_static_bloombox_services_ledger_v1beta1_RetrieveAsset_descriptor;
   static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_bloombox_schema_services_ledger_v1beta1_RetrieveAsset_fieldAccessorTable;
+      internal_static_bloombox_services_ledger_v1beta1_RetrieveAsset_fieldAccessorTable;
   static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_bloombox_schema_services_ledger_v1beta1_RetrieveAsset_Request_descriptor;
+    internal_static_bloombox_services_ledger_v1beta1_RetrieveAsset_Request_descriptor;
   static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_bloombox_schema_services_ledger_v1beta1_RetrieveAsset_Request_fieldAccessorTable;
+      internal_static_bloombox_services_ledger_v1beta1_RetrieveAsset_Request_fieldAccessorTable;
   static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_bloombox_schema_services_ledger_v1beta1_RetrieveAsset_Response_descriptor;
+    internal_static_bloombox_services_ledger_v1beta1_RetrieveAsset_Response_descriptor;
   static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_bloombox_schema_services_ledger_v1beta1_RetrieveAsset_Response_fieldAccessorTable;
+      internal_static_bloombox_services_ledger_v1beta1_RetrieveAsset_Response_fieldAccessorTable;
   static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_bloombox_schema_services_ledger_v1beta1_RetrieveAsset_Operation_descriptor;
+    internal_static_bloombox_services_ledger_v1beta1_RetrieveAsset_Operation_descriptor;
   static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_bloombox_schema_services_ledger_v1beta1_RetrieveAsset_Operation_fieldAccessorTable;
+      internal_static_bloombox_services_ledger_v1beta1_RetrieveAsset_Operation_fieldAccessorTable;
   static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_bloombox_schema_services_ledger_v1beta1_RetrieveTransaction_descriptor;
+    internal_static_bloombox_services_ledger_v1beta1_RetrieveTransaction_descriptor;
   static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_bloombox_schema_services_ledger_v1beta1_RetrieveTransaction_fieldAccessorTable;
+      internal_static_bloombox_services_ledger_v1beta1_RetrieveTransaction_fieldAccessorTable;
   static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_bloombox_schema_services_ledger_v1beta1_RetrieveTransaction_Request_descriptor;
+    internal_static_bloombox_services_ledger_v1beta1_RetrieveTransaction_Request_descriptor;
   static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_bloombox_schema_services_ledger_v1beta1_RetrieveTransaction_Request_fieldAccessorTable;
+      internal_static_bloombox_services_ledger_v1beta1_RetrieveTransaction_Request_fieldAccessorTable;
   static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_bloombox_schema_services_ledger_v1beta1_RetrieveTransaction_Response_descriptor;
+    internal_static_bloombox_services_ledger_v1beta1_RetrieveTransaction_Response_descriptor;
   static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_bloombox_schema_services_ledger_v1beta1_RetrieveTransaction_Response_fieldAccessorTable;
+      internal_static_bloombox_services_ledger_v1beta1_RetrieveTransaction_Response_fieldAccessorTable;
   static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_bloombox_schema_services_ledger_v1beta1_RetrieveTransaction_Operation_descriptor;
+    internal_static_bloombox_services_ledger_v1beta1_RetrieveTransaction_Operation_descriptor;
   static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_bloombox_schema_services_ledger_v1beta1_RetrieveTransaction_Operation_fieldAccessorTable;
+      internal_static_bloombox_services_ledger_v1beta1_RetrieveTransaction_Operation_fieldAccessorTable;
   static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_bloombox_schema_services_ledger_v1beta1_AssetHistory_descriptor;
+    internal_static_bloombox_services_ledger_v1beta1_AssetHistory_descriptor;
   static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_bloombox_schema_services_ledger_v1beta1_AssetHistory_fieldAccessorTable;
+      internal_static_bloombox_services_ledger_v1beta1_AssetHistory_fieldAccessorTable;
   static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_bloombox_schema_services_ledger_v1beta1_AssetHistory_Request_descriptor;
+    internal_static_bloombox_services_ledger_v1beta1_AssetHistory_Request_descriptor;
   static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_bloombox_schema_services_ledger_v1beta1_AssetHistory_Request_fieldAccessorTable;
+      internal_static_bloombox_services_ledger_v1beta1_AssetHistory_Request_fieldAccessorTable;
   static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_bloombox_schema_services_ledger_v1beta1_AssetHistory_Response_descriptor;
+    internal_static_bloombox_services_ledger_v1beta1_AssetHistory_Response_descriptor;
   static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_bloombox_schema_services_ledger_v1beta1_AssetHistory_Response_fieldAccessorTable;
+      internal_static_bloombox_services_ledger_v1beta1_AssetHistory_Response_fieldAccessorTable;
   static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_bloombox_schema_services_ledger_v1beta1_AssetHistory_Operation_descriptor;
+    internal_static_bloombox_services_ledger_v1beta1_AssetHistory_Operation_descriptor;
   static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_bloombox_schema_services_ledger_v1beta1_AssetHistory_Operation_fieldAccessorTable;
+      internal_static_bloombox_services_ledger_v1beta1_AssetHistory_Operation_fieldAccessorTable;
   static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_bloombox_schema_services_ledger_v1beta1_AccountHoldings_descriptor;
+    internal_static_bloombox_services_ledger_v1beta1_AccountHoldings_descriptor;
   static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_bloombox_schema_services_ledger_v1beta1_AccountHoldings_fieldAccessorTable;
+      internal_static_bloombox_services_ledger_v1beta1_AccountHoldings_fieldAccessorTable;
   static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_bloombox_schema_services_ledger_v1beta1_AccountHoldings_Request_descriptor;
+    internal_static_bloombox_services_ledger_v1beta1_AccountHoldings_Request_descriptor;
   static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_bloombox_schema_services_ledger_v1beta1_AccountHoldings_Request_fieldAccessorTable;
+      internal_static_bloombox_services_ledger_v1beta1_AccountHoldings_Request_fieldAccessorTable;
   static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_bloombox_schema_services_ledger_v1beta1_AccountHoldings_Response_descriptor;
+    internal_static_bloombox_services_ledger_v1beta1_AccountHoldings_Response_descriptor;
   static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_bloombox_schema_services_ledger_v1beta1_AccountHoldings_Response_fieldAccessorTable;
+      internal_static_bloombox_services_ledger_v1beta1_AccountHoldings_Response_fieldAccessorTable;
   static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_bloombox_schema_services_ledger_v1beta1_AccountHoldings_Operation_descriptor;
+    internal_static_bloombox_services_ledger_v1beta1_AccountHoldings_Operation_descriptor;
   static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_bloombox_schema_services_ledger_v1beta1_AccountHoldings_Operation_fieldAccessorTable;
+      internal_static_bloombox_services_ledger_v1beta1_AccountHoldings_Operation_fieldAccessorTable;
   static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_bloombox_schema_services_ledger_v1beta1_AccountHistory_descriptor;
+    internal_static_bloombox_services_ledger_v1beta1_AccountHistory_descriptor;
   static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_bloombox_schema_services_ledger_v1beta1_AccountHistory_fieldAccessorTable;
+      internal_static_bloombox_services_ledger_v1beta1_AccountHistory_fieldAccessorTable;
   static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_bloombox_schema_services_ledger_v1beta1_AccountHistory_Request_descriptor;
+    internal_static_bloombox_services_ledger_v1beta1_AccountHistory_Request_descriptor;
   static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_bloombox_schema_services_ledger_v1beta1_AccountHistory_Request_fieldAccessorTable;
+      internal_static_bloombox_services_ledger_v1beta1_AccountHistory_Request_fieldAccessorTable;
   static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_bloombox_schema_services_ledger_v1beta1_AccountHistory_Response_descriptor;
+    internal_static_bloombox_services_ledger_v1beta1_AccountHistory_Response_descriptor;
   static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_bloombox_schema_services_ledger_v1beta1_AccountHistory_Response_fieldAccessorTable;
+      internal_static_bloombox_services_ledger_v1beta1_AccountHistory_Response_fieldAccessorTable;
   static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_bloombox_schema_services_ledger_v1beta1_AccountHistory_Operation_descriptor;
+    internal_static_bloombox_services_ledger_v1beta1_AccountHistory_Operation_descriptor;
   static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_bloombox_schema_services_ledger_v1beta1_AccountHistory_Operation_fieldAccessorTable;
+      internal_static_bloombox_services_ledger_v1beta1_AccountHistory_Operation_fieldAccessorTable;
   static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_bloombox_schema_services_ledger_v1beta1_InflightTransaction_descriptor;
+    internal_static_bloombox_services_ledger_v1beta1_InflightTransaction_descriptor;
   static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_bloombox_schema_services_ledger_v1beta1_InflightTransaction_fieldAccessorTable;
+      internal_static_bloombox_services_ledger_v1beta1_InflightTransaction_fieldAccessorTable;
   static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_bloombox_schema_services_ledger_v1beta1_AssetCreate_descriptor;
+    internal_static_bloombox_services_ledger_v1beta1_AssetCreate_descriptor;
   static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_bloombox_schema_services_ledger_v1beta1_AssetCreate_fieldAccessorTable;
+      internal_static_bloombox_services_ledger_v1beta1_AssetCreate_fieldAccessorTable;
   static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_bloombox_schema_services_ledger_v1beta1_AssetCreate_Request_descriptor;
+    internal_static_bloombox_services_ledger_v1beta1_AssetCreate_Request_descriptor;
   static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_bloombox_schema_services_ledger_v1beta1_AssetCreate_Request_fieldAccessorTable;
+      internal_static_bloombox_services_ledger_v1beta1_AssetCreate_Request_fieldAccessorTable;
   static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_bloombox_schema_services_ledger_v1beta1_AssetCreate_Response_descriptor;
+    internal_static_bloombox_services_ledger_v1beta1_AssetCreate_Response_descriptor;
   static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_bloombox_schema_services_ledger_v1beta1_AssetCreate_Response_fieldAccessorTable;
+      internal_static_bloombox_services_ledger_v1beta1_AssetCreate_Response_fieldAccessorTable;
   static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_bloombox_schema_services_ledger_v1beta1_AssetCreate_Operation_descriptor;
+    internal_static_bloombox_services_ledger_v1beta1_AssetCreate_Operation_descriptor;
   static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_bloombox_schema_services_ledger_v1beta1_AssetCreate_Operation_fieldAccessorTable;
+      internal_static_bloombox_services_ledger_v1beta1_AssetCreate_Operation_fieldAccessorTable;
   static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_bloombox_schema_services_ledger_v1beta1_AssetTransfer_descriptor;
+    internal_static_bloombox_services_ledger_v1beta1_AssetTransfer_descriptor;
   static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_bloombox_schema_services_ledger_v1beta1_AssetTransfer_fieldAccessorTable;
+      internal_static_bloombox_services_ledger_v1beta1_AssetTransfer_fieldAccessorTable;
   static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_bloombox_schema_services_ledger_v1beta1_AssetTransfer_Request_descriptor;
+    internal_static_bloombox_services_ledger_v1beta1_AssetTransfer_Request_descriptor;
   static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_bloombox_schema_services_ledger_v1beta1_AssetTransfer_Request_fieldAccessorTable;
+      internal_static_bloombox_services_ledger_v1beta1_AssetTransfer_Request_fieldAccessorTable;
   static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_bloombox_schema_services_ledger_v1beta1_AssetTransfer_Response_descriptor;
+    internal_static_bloombox_services_ledger_v1beta1_AssetTransfer_Response_descriptor;
   static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_bloombox_schema_services_ledger_v1beta1_AssetTransfer_Response_fieldAccessorTable;
+      internal_static_bloombox_services_ledger_v1beta1_AssetTransfer_Response_fieldAccessorTable;
   static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_bloombox_schema_services_ledger_v1beta1_AssetTransfer_Operation_descriptor;
+    internal_static_bloombox_services_ledger_v1beta1_AssetTransfer_Operation_descriptor;
   static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_bloombox_schema_services_ledger_v1beta1_AssetTransfer_Operation_fieldAccessorTable;
+      internal_static_bloombox_services_ledger_v1beta1_AssetTransfer_Operation_fieldAccessorTable;
 
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
@@ -186,148 +186,139 @@ public final class LedgerServiceBeta1 {
   static {
     java.lang.String[] descriptorData = {
       "\n(ledger/v1beta1/LedgerService_Beta1.pro" +
-      "to\022\'bloombox.schema.services.ledger.v1be" +
-      "ta1\032\022ledger/Asset.proto\032\024ledger/Account." +
-      "proto\032\030ledger/Transaction.proto\032\034google/" +
-      "api/annotations.proto\032(protoc-gen-swagge" +
-      "r/options/swagger.proto\"\276\002\n\rRetrieveAsse" +
-      "t\032:\n\007Request\022/\n\005asset\030\001 \001(\0132 .bloombox.s" +
-      "chema.ledger.AssetKey\032?\n\010Response\0223\n\005ass" +
-      "et\030\001 \001(\0132$.bloombox.schema.ledger.Digita" +
-      "lAsset\032\257\001\n\tOperation\022O\n\007request\030\001 \001(\0132>." +
-      "bloombox.schema.services.ledger.v1beta1." +
-      "RetrieveAsset.Request\022Q\n\010response\030\002 \001(\0132" +
-      "?.bloombox.schema.services.ledger.v1beta" +
-      "1.RetrieveAsset.Response\"\321\002\n\023RetrieveTra" +
-      "nsaction\032>\n\007Request\0223\n\003txn\030\001 \001(\0132&.bloom" +
-      "box.schema.ledger.TransactionKey\032<\n\010Resp" +
-      "onse\0220\n\003txn\030\001 \001(\0132#.bloombox.schema.ledg" +
-      "er.Transaction\032\273\001\n\tOperation\022U\n\007request\030" +
-      "\001 \001(\0132D.bloombox.schema.services.ledger." +
-      "v1beta1.RetrieveTransaction.Request\022W\n\010r" +
-      "esponse\030\002 \001(\0132E.bloombox.schema.services" +
-      ".ledger.v1beta1.RetrieveTransaction.Resp" +
-      "onse\"\273\002\n\014AssetHistory\032:\n\007Request\022/\n\005asse" +
-      "t\030\001 \001(\0132 .bloombox.schema.ledger.AssetKe" +
-      "y\032?\n\010Response\0223\n\003txn\030\001 \003(\0132&.bloombox.sc" +
-      "hema.ledger.TransactionKey\032\255\001\n\tOperation" +
-      "\022N\n\007request\030\001 \001(\0132=.bloombox.schema.serv" +
-      "ices.ledger.v1beta1.AssetHistory.Request" +
-      "\022P\n\010response\030\002 \001(\0132>.bloombox.schema.ser" +
-      "vices.ledger.v1beta1.AssetHistory.Respon" +
-      "se\"\310\002\n\017AccountHoldings\032B\n\007Request\0227\n\007acc" +
-      "ount\030\001 \001(\0132&.bloombox.schema.ledger.Ledg" +
-      "erIdentity\032;\n\010Response\022/\n\005asset\030\001 \003(\0132 ." +
-      "bloombox.schema.ledger.AssetKey\032\263\001\n\tOper" +
-      "ation\022Q\n\007request\030\001 \001(\0132@.bloombox.schema" +
-      ".services.ledger.v1beta1.AccountHoldings" +
-      ".Request\022S\n\010response\030\002 \001(\0132A.bloombox.sc" +
-      "hema.services.ledger.v1beta1.AccountHold" +
-      "ings.Response\"\311\002\n\016AccountHistory\032B\n\007Requ" +
-      "est\0227\n\007account\030\001 \001(\0132&.bloombox.schema.l" +
-      "edger.LedgerIdentity\032?\n\010Response\0223\n\003txn\030" +
-      "\001 \003(\0132&.bloombox.schema.ledger.Transacti" +
-      "onKey\032\261\001\n\tOperation\022P\n\007request\030\001 \001(\0132?.b" +
-      "loombox.schema.services.ledger.v1beta1.A" +
-      "ccountHistory.Request\022R\n\010response\030\002 \001(\0132" +
-      "@.bloombox.schema.services.ledger.v1beta" +
-      "1.AccountHistory.Response\"\223\001\n\023InflightTr" +
-      "ansaction\022J\n\006status\030\001 \001(\0162:.bloombox.sch" +
-      "ema.services.ledger.v1beta1.TransactionS" +
-      "tatus\0220\n\003txn\030\002 \001(\0132#.bloombox.schema.led" +
-      "ger.Transaction\"\206\003\n\013AssetCreate\032>\n\007Reque" +
-      "st\0223\n\002op\030\001 \001(\0132\'.bloombox.schema.ledger." +
-      "CreateOperation\032\210\001\n\010Response\022J\n\006status\030\001" +
-      " \001(\0162:.bloombox.schema.services.ledger.v" +
-      "1beta1.TransactionStatus\0220\n\003txn\030\002 \001(\0132#." +
-      "bloombox.schema.ledger.Transaction\032\253\001\n\tO" +
-      "peration\022M\n\007request\030\001 \001(\0132<.bloombox.sch" +
-      "ema.services.ledger.v1beta1.AssetCreate." +
-      "Request\022O\n\010response\030\002 \001(\0132=.bloombox.sch" +
-      "ema.services.ledger.v1beta1.AssetCreate." +
-      "Response\"\216\003\n\rAssetTransfer\032@\n\007Request\0225\n" +
-      "\002op\030\001 \001(\0132).bloombox.schema.ledger.Trans" +
-      "ferOperation\032\210\001\n\010Response\022J\n\006status\030\001 \001(" +
-      "\0162:.bloombox.schema.services.ledger.v1be" +
-      "ta1.TransactionStatus\0220\n\003txn\030\002 \001(\0132#.blo" +
-      "ombox.schema.ledger.Transaction\032\257\001\n\tOper" +
-      "ation\022O\n\007request\030\001 \001(\0132>.bloombox.schema" +
-      ".services.ledger.v1beta1.AssetTransfer.R" +
-      "equest\022Q\n\010response\030\002 \001(\0132?.bloombox.sche" +
-      "ma.services.ledger.v1beta1.AssetTransfer" +
-      ".Response*P\n\013LedgerError\022\014\n\010NO_ERROR\020\000\022\022" +
-      "\n\016INTERNAL_ERROR\020\001\022\021\n\rACCESS_DENIED\020\002\022\014\n" +
-      "\010CONFLICT\020\003*X\n\021TransactionStatus\022\014\n\010INFL" +
-      "IGHT\020\000\022\010\n\004SENT\020\001\022\016\n\nUNCOMITTED\020\002\022\014\n\010REJE" +
-      "CTED\020\003\022\r\n\tFINALIZED\020\0042\200\021\n\006Ledger\022\212\002\n\010Get" +
-      "Asset\022>.bloombox.schema.services.ledger." +
-      "v1beta1.RetrieveAsset.Request\032?.bloombox" +
-      ".schema.services.ledger.v1beta1.Retrieve" +
-      "Asset.Response\"}\202\323\344\223\002#\022!/ledger/v1beta1/" +
-      "assets/{asset.id}\222AQ\022\016Retrieve Asset\0325Re" +
-      "trieve an individual digital asset from " +
-      "the ledger.*\010GetAsset\022\253\002\n\016GetTransaction" +
-      "\022D.bloombox.schema.services.ledger.v1bet" +
-      "a1.RetrieveTransaction.Request\032E.bloombo" +
-      "x.schema.services.ledger.v1beta1.Retriev" +
-      "eTransaction.Response\"\213\001\202\323\344\223\002\'\022%/ledger/" +
-      "v1beta1/transactions/{txn.id}\222A[\022\024Retrie" +
-      "ve Transaction\0323Retrieve an individual t" +
-      "ransaction from the ledger.*\016GetTransact" +
-      "ion\022\240\002\n\017GetAssetHistory\022=.bloombox.schem" +
-      "a.services.ledger.v1beta1.AssetHistory.R" +
-      "equest\032>.bloombox.schema.services.ledger" +
-      ".v1beta1.AssetHistory.Response\"\215\001\202\323\344\223\002+\022" +
-      ")/ledger/v1beta1/assets/{asset.id}/histo" +
-      "ry\222AY\022\rAsset History\0327Retrieve transacti" +
-      "on history for a given digital asset.*\017G" +
-      "etAssetHistory\022\256\002\n\022GetAccountHoldings\022@." +
-      "bloombox.schema.services.ledger.v1beta1." +
-      "AccountHoldings.Request\032A.bloombox.schem" +
-      "a.services.ledger.v1beta1.AccountHolding" +
-      "s.Response\"\222\001\202\323\344\223\0024\0222/ledger/v1beta1/acc" +
-      "ounts/{account.key.id}/holdings\222AU\022\020Acco" +
-      "unt Holdings\032-Retrieve holdings for a gi" +
-      "ven ledger account.*\022GetAccountHoldings\022" +
-      "\247\002\n\021GetAccountHistory\022?.bloombox.schema." +
-      "services.ledger.v1beta1.AccountHistory.R" +
-      "equest\032@.bloombox.schema.services.ledger" +
-      ".v1beta1.AccountHistory.Response\"\216\001\202\323\344\223\002" +
-      "3\0221/ledger/v1beta1/accounts/{account.key" +
-      ".id}/history\222AR\022\017Account History\032,Retrie" +
-      "ve history for a given ledger account.*\021" +
-      "GetAccountHistory\022\225\002\n\006Create\022<.bloombox." +
-      "schema.services.ledger.v1beta1.AssetCrea" +
-      "te.Request\032=.bloombox.schema.services.le" +
-      "dger.v1beta1.AssetCreate.Response\"\215\001\202\323\344\223" +
-      "\002(\"#/ledger/v1beta1/transactions/create:" +
-      "\001*\222A\\\022\014Create Asset\032?Execute a CREATE tr" +
-      "ansaction to issue or create digital ass" +
-      "ets.*\013CreateAsset\022\263\002\n\010Transfer\022>.bloombo" +
-      "x.schema.services.ledger.v1beta1.AssetTr" +
-      "ansfer.Request\032?.bloombox.schema.service" +
-      "s.ledger.v1beta1.AssetTransfer.Response\"" +
-      "\245\001\202\323\344\223\002*\"%/ledger/v1beta1/transactions/t" +
-      "ransfer:\001*\222Ar\022\016Transfer Asset\032QExecute a" +
-      " TRANSFER transaction to perform interch" +
-      "ange of existing digital assets.*\rTransf" +
-      "erAsset\022o\n\010Transact\022#.bloombox.schema.le" +
-      "dger.Transaction\032<.bloombox.schema.servi" +
-      "ces.ledger.v1beta1.InflightTransaction0\001" +
-      "B\213\004\n*io.bloombox.schema.services.ledger." +
-      "v1beta1H\001P\001\242\002\003BBS\222A\321\003\022i\n\nLedger API\032\031htt" +
-      "ps://bloombox.io/terms\"7\n\010Bloombox\022\023http" +
-      "s://bloombox.io\032\026developers@bloombox.io2" +
-      "\007v1beta1\032\022api.bloombox.cloud*\001\0022\020applica" +
-      "tion/json:\020application/jsonZ\320\001\nd\n\013ApiKey" +
-      "Param\022U\010\002\022JParameter for identifying API" +
-      " key owned by the invoking project or sy" +
-      "stem.\032\003key \001\nh\n\014ApiKeyHeader\022X\010\002\022GHeader" +
-      " for identifying API key owned by the in" +
-      "voking project or system.\032\tX-API-Key \001b\021" +
-      "\n\017\n\013ApiKeyParam\022\000b\022\n\020\n\014ApiKeyHeader\022\000r/\n" +
-      "\rBloombox APIs\022\036https://apidocs.bloombox" +
-      ".cloudb\006proto3"
+      "to\022 bloombox.services.ledger.v1beta1\032\022le" +
+      "dger/Asset.proto\032\024ledger/Account.proto\032\030" +
+      "ledger/Transaction.proto\032\034google/api/ann" +
+      "otations.proto\032(protoc-gen-swagger/optio" +
+      "ns/swagger.proto\"\242\002\n\rRetrieveAsset\0323\n\007Re" +
+      "quest\022(\n\005asset\030\001 \001(\0132\031.bloombox.ledger.A" +
+      "ssetKey\0328\n\010Response\022,\n\005asset\030\001 \001(\0132\035.blo" +
+      "ombox.ledger.DigitalAsset\032\241\001\n\tOperation\022" +
+      "H\n\007request\030\001 \001(\01327.bloombox.services.led" +
+      "ger.v1beta1.RetrieveAsset.Request\022J\n\010res" +
+      "ponse\030\002 \001(\01328.bloombox.services.ledger.v" +
+      "1beta1.RetrieveAsset.Response\"\265\002\n\023Retrie" +
+      "veTransaction\0327\n\007Request\022,\n\003txn\030\001 \001(\0132\037." +
+      "bloombox.ledger.TransactionKey\0325\n\010Respon" +
+      "se\022)\n\003txn\030\001 \001(\0132\034.bloombox.ledger.Transa" +
+      "ction\032\255\001\n\tOperation\022N\n\007request\030\001 \001(\0132=.b" +
+      "loombox.services.ledger.v1beta1.Retrieve" +
+      "Transaction.Request\022P\n\010response\030\002 \001(\0132>." +
+      "bloombox.services.ledger.v1beta1.Retriev" +
+      "eTransaction.Response\"\237\002\n\014AssetHistory\0323" +
+      "\n\007Request\022(\n\005asset\030\001 \001(\0132\031.bloombox.ledg" +
+      "er.AssetKey\0328\n\010Response\022,\n\003txn\030\001 \003(\0132\037.b" +
+      "loombox.ledger.TransactionKey\032\237\001\n\tOperat" +
+      "ion\022G\n\007request\030\001 \001(\01326.bloombox.services" +
+      ".ledger.v1beta1.AssetHistory.Request\022I\n\010" +
+      "response\030\002 \001(\01327.bloombox.services.ledge" +
+      "r.v1beta1.AssetHistory.Response\"\254\002\n\017Acco" +
+      "untHoldings\032;\n\007Request\0220\n\007account\030\001 \001(\0132" +
+      "\037.bloombox.ledger.LedgerIdentity\0324\n\010Resp" +
+      "onse\022(\n\005asset\030\001 \003(\0132\031.bloombox.ledger.As" +
+      "setKey\032\245\001\n\tOperation\022J\n\007request\030\001 \001(\01329." +
+      "bloombox.services.ledger.v1beta1.Account" +
+      "Holdings.Request\022L\n\010response\030\002 \001(\0132:.blo" +
+      "ombox.services.ledger.v1beta1.AccountHol" +
+      "dings.Response\"\255\002\n\016AccountHistory\032;\n\007Req" +
+      "uest\0220\n\007account\030\001 \001(\0132\037.bloombox.ledger." +
+      "LedgerIdentity\0328\n\010Response\022,\n\003txn\030\001 \003(\0132" +
+      "\037.bloombox.ledger.TransactionKey\032\243\001\n\tOpe" +
+      "ration\022I\n\007request\030\001 \001(\01328.bloombox.servi" +
+      "ces.ledger.v1beta1.AccountHistory.Reques" +
+      "t\022K\n\010response\030\002 \001(\01329.bloombox.services." +
+      "ledger.v1beta1.AccountHistory.Response\"\205" +
+      "\001\n\023InflightTransaction\022C\n\006status\030\001 \001(\01623" +
+      ".bloombox.services.ledger.v1beta1.Transa" +
+      "ctionStatus\022)\n\003txn\030\002 \001(\0132\034.bloombox.ledg" +
+      "er.Transaction\"\342\002\n\013AssetCreate\0327\n\007Reques" +
+      "t\022,\n\002op\030\001 \001(\0132 .bloombox.ledger.CreateOp" +
+      "eration\032z\n\010Response\022C\n\006status\030\001 \001(\01623.bl" +
+      "oombox.services.ledger.v1beta1.Transacti" +
+      "onStatus\022)\n\003txn\030\002 \001(\0132\034.bloombox.ledger." +
+      "Transaction\032\235\001\n\tOperation\022F\n\007request\030\001 \001" +
+      "(\01325.bloombox.services.ledger.v1beta1.As" +
+      "setCreate.Request\022H\n\010response\030\002 \001(\01326.bl" +
+      "oombox.services.ledger.v1beta1.AssetCrea" +
+      "te.Response\"\352\002\n\rAssetTransfer\0329\n\007Request" +
+      "\022.\n\002op\030\001 \001(\0132\".bloombox.ledger.TransferO" +
+      "peration\032z\n\010Response\022C\n\006status\030\001 \001(\01623.b" +
+      "loombox.services.ledger.v1beta1.Transact" +
+      "ionStatus\022)\n\003txn\030\002 \001(\0132\034.bloombox.ledger" +
+      ".Transaction\032\241\001\n\tOperation\022H\n\007request\030\001 " +
+      "\001(\01327.bloombox.services.ledger.v1beta1.A" +
+      "ssetTransfer.Request\022J\n\010response\030\002 \001(\01328" +
+      ".bloombox.services.ledger.v1beta1.AssetT" +
+      "ransfer.Response*P\n\013LedgerError\022\014\n\010NO_ER" +
+      "ROR\020\000\022\022\n\016INTERNAL_ERROR\020\001\022\021\n\rACCESS_DENI" +
+      "ED\020\002\022\014\n\010CONFLICT\020\003*X\n\021TransactionStatus\022" +
+      "\014\n\010INFLIGHT\020\000\022\010\n\004SENT\020\001\022\016\n\nUNCOMITTED\020\002\022" +
+      "\014\n\010REJECTED\020\003\022\r\n\tFINALIZED\020\0042\220\020\n\006Ledger\022" +
+      "\374\001\n\010GetAsset\0227.bloombox.services.ledger." +
+      "v1beta1.RetrieveAsset.Request\0328.bloombox" +
+      ".services.ledger.v1beta1.RetrieveAsset.R" +
+      "esponse\"}\202\323\344\223\002#\022!/ledger/v1beta1/assets/" +
+      "{asset.id}\222AQ\022\016Retrieve Asset\0325Retrieve " +
+      "an individual digital asset from the led" +
+      "ger.*\010GetAsset\022\235\002\n\016GetTransaction\022=.bloo" +
+      "mbox.services.ledger.v1beta1.RetrieveTra" +
+      "nsaction.Request\032>.bloombox.services.led" +
+      "ger.v1beta1.RetrieveTransaction.Response" +
+      "\"\213\001\202\323\344\223\002\'\022%/ledger/v1beta1/transactions/" +
+      "{txn.id}\222A[\022\024Retrieve Transaction\0323Retri" +
+      "eve an individual transaction from the l" +
+      "edger.*\016GetTransaction\022\222\002\n\017GetAssetHisto" +
+      "ry\0226.bloombox.services.ledger.v1beta1.As" +
+      "setHistory.Request\0327.bloombox.services.l" +
+      "edger.v1beta1.AssetHistory.Response\"\215\001\202\323" +
+      "\344\223\002+\022)/ledger/v1beta1/assets/{asset.id}/" +
+      "history\222AY\022\rAsset History\0327Retrieve tran" +
+      "saction history for a given digital asse" +
+      "t.*\017GetAssetHistory\022\240\002\n\022GetAccountHoldin" +
+      "gs\0229.bloombox.services.ledger.v1beta1.Ac" +
+      "countHoldings.Request\032:.bloombox.service" +
+      "s.ledger.v1beta1.AccountHoldings.Respons" +
+      "e\"\222\001\202\323\344\223\0024\0222/ledger/v1beta1/accounts/{ac" +
+      "count.key.id}/holdings\222AU\022\020Account Holdi" +
+      "ngs\032-Retrieve holdings for a given ledge" +
+      "r account.*\022GetAccountHoldings\022\231\002\n\021GetAc" +
+      "countHistory\0228.bloombox.services.ledger." +
+      "v1beta1.AccountHistory.Request\0329.bloombo" +
+      "x.services.ledger.v1beta1.AccountHistory" +
+      ".Response\"\216\001\202\323\344\223\0023\0221/ledger/v1beta1/acco" +
+      "unts/{account.key.id}/history\222AR\022\017Accoun" +
+      "t History\032,Retrieve history for a given " +
+      "ledger account.*\021GetAccountHistory\022\207\002\n\006C" +
+      "reate\0225.bloombox.services.ledger.v1beta1" +
+      ".AssetCreate.Request\0326.bloombox.services" +
+      ".ledger.v1beta1.AssetCreate.Response\"\215\001\202" +
+      "\323\344\223\002(\"#/ledger/v1beta1/transactions/crea" +
+      "te:\001*\222A\\\022\014Create Asset\032?Execute a CREATE" +
+      " transaction to issue or create digital " +
+      "assets.*\013CreateAsset\022\245\002\n\010Transfer\0227.bloo" +
+      "mbox.services.ledger.v1beta1.AssetTransf" +
+      "er.Request\0328.bloombox.services.ledger.v1" +
+      "beta1.AssetTransfer.Response\"\245\001\202\323\344\223\002*\"%/" +
+      "ledger/v1beta1/transactions/transfer:\001*\222" +
+      "Ar\022\016Transfer Asset\032QExecute a TRANSFER t" +
+      "ransaction to perform interchange of exi" +
+      "sting digital assets.*\rTransferAsset\022a\n\010" +
+      "Transact\022\034.bloombox.ledger.Transaction\0325" +
+      ".bloombox.services.ledger.v1beta1.Inflig" +
+      "htTransaction0\001B\213\004\n*io.bloombox.schema.s" +
+      "ervices.ledger.v1beta1H\001P\001\242\002\003BBS\222A\321\003\022i\n\n" +
+      "Ledger API\032\031https://bloombox.io/terms\"7\n" +
+      "\010Bloombox\022\023https://bloombox.io\032\026develope" +
+      "rs@bloombox.io2\007v1beta1\032\022api.bloombox.cl" +
+      "oud*\001\0022\020application/json:\020application/js" +
+      "onZ\320\001\nd\n\013ApiKeyParam\022U\010\002\022JParameter for " +
+      "identifying API key owned by the invokin" +
+      "g project or system.\032\003key \001\nh\n\014ApiKeyHea" +
+      "der\022X\010\002\022GHeader for identifying API key " +
+      "owned by the invoking project or system." +
+      "\032\tX-API-Key \001b\021\n\017\n\013ApiKeyParam\022\000b\022\n\020\n\014Ap" +
+      "iKeyHeader\022\000r/\n\rBloombox APIs\022\036https://a" +
+      "pidocs.bloombox.cloudb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -346,179 +337,179 @@ public final class LedgerServiceBeta1 {
           com.google.api.AnnotationsProto.getDescriptor(),
           grpc.gateway.protoc_gen_swagger.options.Swagger.getDescriptor(),
         }, assigner);
-    internal_static_bloombox_schema_services_ledger_v1beta1_RetrieveAsset_descriptor =
+    internal_static_bloombox_services_ledger_v1beta1_RetrieveAsset_descriptor =
       getDescriptor().getMessageTypes().get(0);
-    internal_static_bloombox_schema_services_ledger_v1beta1_RetrieveAsset_fieldAccessorTable = new
+    internal_static_bloombox_services_ledger_v1beta1_RetrieveAsset_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_bloombox_schema_services_ledger_v1beta1_RetrieveAsset_descriptor,
+        internal_static_bloombox_services_ledger_v1beta1_RetrieveAsset_descriptor,
         new java.lang.String[] { });
-    internal_static_bloombox_schema_services_ledger_v1beta1_RetrieveAsset_Request_descriptor =
-      internal_static_bloombox_schema_services_ledger_v1beta1_RetrieveAsset_descriptor.getNestedTypes().get(0);
-    internal_static_bloombox_schema_services_ledger_v1beta1_RetrieveAsset_Request_fieldAccessorTable = new
+    internal_static_bloombox_services_ledger_v1beta1_RetrieveAsset_Request_descriptor =
+      internal_static_bloombox_services_ledger_v1beta1_RetrieveAsset_descriptor.getNestedTypes().get(0);
+    internal_static_bloombox_services_ledger_v1beta1_RetrieveAsset_Request_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_bloombox_schema_services_ledger_v1beta1_RetrieveAsset_Request_descriptor,
+        internal_static_bloombox_services_ledger_v1beta1_RetrieveAsset_Request_descriptor,
         new java.lang.String[] { "Asset", });
-    internal_static_bloombox_schema_services_ledger_v1beta1_RetrieveAsset_Response_descriptor =
-      internal_static_bloombox_schema_services_ledger_v1beta1_RetrieveAsset_descriptor.getNestedTypes().get(1);
-    internal_static_bloombox_schema_services_ledger_v1beta1_RetrieveAsset_Response_fieldAccessorTable = new
+    internal_static_bloombox_services_ledger_v1beta1_RetrieveAsset_Response_descriptor =
+      internal_static_bloombox_services_ledger_v1beta1_RetrieveAsset_descriptor.getNestedTypes().get(1);
+    internal_static_bloombox_services_ledger_v1beta1_RetrieveAsset_Response_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_bloombox_schema_services_ledger_v1beta1_RetrieveAsset_Response_descriptor,
+        internal_static_bloombox_services_ledger_v1beta1_RetrieveAsset_Response_descriptor,
         new java.lang.String[] { "Asset", });
-    internal_static_bloombox_schema_services_ledger_v1beta1_RetrieveAsset_Operation_descriptor =
-      internal_static_bloombox_schema_services_ledger_v1beta1_RetrieveAsset_descriptor.getNestedTypes().get(2);
-    internal_static_bloombox_schema_services_ledger_v1beta1_RetrieveAsset_Operation_fieldAccessorTable = new
+    internal_static_bloombox_services_ledger_v1beta1_RetrieveAsset_Operation_descriptor =
+      internal_static_bloombox_services_ledger_v1beta1_RetrieveAsset_descriptor.getNestedTypes().get(2);
+    internal_static_bloombox_services_ledger_v1beta1_RetrieveAsset_Operation_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_bloombox_schema_services_ledger_v1beta1_RetrieveAsset_Operation_descriptor,
+        internal_static_bloombox_services_ledger_v1beta1_RetrieveAsset_Operation_descriptor,
         new java.lang.String[] { "Request", "Response", });
-    internal_static_bloombox_schema_services_ledger_v1beta1_RetrieveTransaction_descriptor =
+    internal_static_bloombox_services_ledger_v1beta1_RetrieveTransaction_descriptor =
       getDescriptor().getMessageTypes().get(1);
-    internal_static_bloombox_schema_services_ledger_v1beta1_RetrieveTransaction_fieldAccessorTable = new
+    internal_static_bloombox_services_ledger_v1beta1_RetrieveTransaction_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_bloombox_schema_services_ledger_v1beta1_RetrieveTransaction_descriptor,
+        internal_static_bloombox_services_ledger_v1beta1_RetrieveTransaction_descriptor,
         new java.lang.String[] { });
-    internal_static_bloombox_schema_services_ledger_v1beta1_RetrieveTransaction_Request_descriptor =
-      internal_static_bloombox_schema_services_ledger_v1beta1_RetrieveTransaction_descriptor.getNestedTypes().get(0);
-    internal_static_bloombox_schema_services_ledger_v1beta1_RetrieveTransaction_Request_fieldAccessorTable = new
+    internal_static_bloombox_services_ledger_v1beta1_RetrieveTransaction_Request_descriptor =
+      internal_static_bloombox_services_ledger_v1beta1_RetrieveTransaction_descriptor.getNestedTypes().get(0);
+    internal_static_bloombox_services_ledger_v1beta1_RetrieveTransaction_Request_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_bloombox_schema_services_ledger_v1beta1_RetrieveTransaction_Request_descriptor,
+        internal_static_bloombox_services_ledger_v1beta1_RetrieveTransaction_Request_descriptor,
         new java.lang.String[] { "Txn", });
-    internal_static_bloombox_schema_services_ledger_v1beta1_RetrieveTransaction_Response_descriptor =
-      internal_static_bloombox_schema_services_ledger_v1beta1_RetrieveTransaction_descriptor.getNestedTypes().get(1);
-    internal_static_bloombox_schema_services_ledger_v1beta1_RetrieveTransaction_Response_fieldAccessorTable = new
+    internal_static_bloombox_services_ledger_v1beta1_RetrieveTransaction_Response_descriptor =
+      internal_static_bloombox_services_ledger_v1beta1_RetrieveTransaction_descriptor.getNestedTypes().get(1);
+    internal_static_bloombox_services_ledger_v1beta1_RetrieveTransaction_Response_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_bloombox_schema_services_ledger_v1beta1_RetrieveTransaction_Response_descriptor,
+        internal_static_bloombox_services_ledger_v1beta1_RetrieveTransaction_Response_descriptor,
         new java.lang.String[] { "Txn", });
-    internal_static_bloombox_schema_services_ledger_v1beta1_RetrieveTransaction_Operation_descriptor =
-      internal_static_bloombox_schema_services_ledger_v1beta1_RetrieveTransaction_descriptor.getNestedTypes().get(2);
-    internal_static_bloombox_schema_services_ledger_v1beta1_RetrieveTransaction_Operation_fieldAccessorTable = new
+    internal_static_bloombox_services_ledger_v1beta1_RetrieveTransaction_Operation_descriptor =
+      internal_static_bloombox_services_ledger_v1beta1_RetrieveTransaction_descriptor.getNestedTypes().get(2);
+    internal_static_bloombox_services_ledger_v1beta1_RetrieveTransaction_Operation_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_bloombox_schema_services_ledger_v1beta1_RetrieveTransaction_Operation_descriptor,
+        internal_static_bloombox_services_ledger_v1beta1_RetrieveTransaction_Operation_descriptor,
         new java.lang.String[] { "Request", "Response", });
-    internal_static_bloombox_schema_services_ledger_v1beta1_AssetHistory_descriptor =
+    internal_static_bloombox_services_ledger_v1beta1_AssetHistory_descriptor =
       getDescriptor().getMessageTypes().get(2);
-    internal_static_bloombox_schema_services_ledger_v1beta1_AssetHistory_fieldAccessorTable = new
+    internal_static_bloombox_services_ledger_v1beta1_AssetHistory_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_bloombox_schema_services_ledger_v1beta1_AssetHistory_descriptor,
+        internal_static_bloombox_services_ledger_v1beta1_AssetHistory_descriptor,
         new java.lang.String[] { });
-    internal_static_bloombox_schema_services_ledger_v1beta1_AssetHistory_Request_descriptor =
-      internal_static_bloombox_schema_services_ledger_v1beta1_AssetHistory_descriptor.getNestedTypes().get(0);
-    internal_static_bloombox_schema_services_ledger_v1beta1_AssetHistory_Request_fieldAccessorTable = new
+    internal_static_bloombox_services_ledger_v1beta1_AssetHistory_Request_descriptor =
+      internal_static_bloombox_services_ledger_v1beta1_AssetHistory_descriptor.getNestedTypes().get(0);
+    internal_static_bloombox_services_ledger_v1beta1_AssetHistory_Request_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_bloombox_schema_services_ledger_v1beta1_AssetHistory_Request_descriptor,
+        internal_static_bloombox_services_ledger_v1beta1_AssetHistory_Request_descriptor,
         new java.lang.String[] { "Asset", });
-    internal_static_bloombox_schema_services_ledger_v1beta1_AssetHistory_Response_descriptor =
-      internal_static_bloombox_schema_services_ledger_v1beta1_AssetHistory_descriptor.getNestedTypes().get(1);
-    internal_static_bloombox_schema_services_ledger_v1beta1_AssetHistory_Response_fieldAccessorTable = new
+    internal_static_bloombox_services_ledger_v1beta1_AssetHistory_Response_descriptor =
+      internal_static_bloombox_services_ledger_v1beta1_AssetHistory_descriptor.getNestedTypes().get(1);
+    internal_static_bloombox_services_ledger_v1beta1_AssetHistory_Response_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_bloombox_schema_services_ledger_v1beta1_AssetHistory_Response_descriptor,
+        internal_static_bloombox_services_ledger_v1beta1_AssetHistory_Response_descriptor,
         new java.lang.String[] { "Txn", });
-    internal_static_bloombox_schema_services_ledger_v1beta1_AssetHistory_Operation_descriptor =
-      internal_static_bloombox_schema_services_ledger_v1beta1_AssetHistory_descriptor.getNestedTypes().get(2);
-    internal_static_bloombox_schema_services_ledger_v1beta1_AssetHistory_Operation_fieldAccessorTable = new
+    internal_static_bloombox_services_ledger_v1beta1_AssetHistory_Operation_descriptor =
+      internal_static_bloombox_services_ledger_v1beta1_AssetHistory_descriptor.getNestedTypes().get(2);
+    internal_static_bloombox_services_ledger_v1beta1_AssetHistory_Operation_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_bloombox_schema_services_ledger_v1beta1_AssetHistory_Operation_descriptor,
+        internal_static_bloombox_services_ledger_v1beta1_AssetHistory_Operation_descriptor,
         new java.lang.String[] { "Request", "Response", });
-    internal_static_bloombox_schema_services_ledger_v1beta1_AccountHoldings_descriptor =
+    internal_static_bloombox_services_ledger_v1beta1_AccountHoldings_descriptor =
       getDescriptor().getMessageTypes().get(3);
-    internal_static_bloombox_schema_services_ledger_v1beta1_AccountHoldings_fieldAccessorTable = new
+    internal_static_bloombox_services_ledger_v1beta1_AccountHoldings_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_bloombox_schema_services_ledger_v1beta1_AccountHoldings_descriptor,
+        internal_static_bloombox_services_ledger_v1beta1_AccountHoldings_descriptor,
         new java.lang.String[] { });
-    internal_static_bloombox_schema_services_ledger_v1beta1_AccountHoldings_Request_descriptor =
-      internal_static_bloombox_schema_services_ledger_v1beta1_AccountHoldings_descriptor.getNestedTypes().get(0);
-    internal_static_bloombox_schema_services_ledger_v1beta1_AccountHoldings_Request_fieldAccessorTable = new
+    internal_static_bloombox_services_ledger_v1beta1_AccountHoldings_Request_descriptor =
+      internal_static_bloombox_services_ledger_v1beta1_AccountHoldings_descriptor.getNestedTypes().get(0);
+    internal_static_bloombox_services_ledger_v1beta1_AccountHoldings_Request_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_bloombox_schema_services_ledger_v1beta1_AccountHoldings_Request_descriptor,
+        internal_static_bloombox_services_ledger_v1beta1_AccountHoldings_Request_descriptor,
         new java.lang.String[] { "Account", });
-    internal_static_bloombox_schema_services_ledger_v1beta1_AccountHoldings_Response_descriptor =
-      internal_static_bloombox_schema_services_ledger_v1beta1_AccountHoldings_descriptor.getNestedTypes().get(1);
-    internal_static_bloombox_schema_services_ledger_v1beta1_AccountHoldings_Response_fieldAccessorTable = new
+    internal_static_bloombox_services_ledger_v1beta1_AccountHoldings_Response_descriptor =
+      internal_static_bloombox_services_ledger_v1beta1_AccountHoldings_descriptor.getNestedTypes().get(1);
+    internal_static_bloombox_services_ledger_v1beta1_AccountHoldings_Response_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_bloombox_schema_services_ledger_v1beta1_AccountHoldings_Response_descriptor,
+        internal_static_bloombox_services_ledger_v1beta1_AccountHoldings_Response_descriptor,
         new java.lang.String[] { "Asset", });
-    internal_static_bloombox_schema_services_ledger_v1beta1_AccountHoldings_Operation_descriptor =
-      internal_static_bloombox_schema_services_ledger_v1beta1_AccountHoldings_descriptor.getNestedTypes().get(2);
-    internal_static_bloombox_schema_services_ledger_v1beta1_AccountHoldings_Operation_fieldAccessorTable = new
+    internal_static_bloombox_services_ledger_v1beta1_AccountHoldings_Operation_descriptor =
+      internal_static_bloombox_services_ledger_v1beta1_AccountHoldings_descriptor.getNestedTypes().get(2);
+    internal_static_bloombox_services_ledger_v1beta1_AccountHoldings_Operation_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_bloombox_schema_services_ledger_v1beta1_AccountHoldings_Operation_descriptor,
+        internal_static_bloombox_services_ledger_v1beta1_AccountHoldings_Operation_descriptor,
         new java.lang.String[] { "Request", "Response", });
-    internal_static_bloombox_schema_services_ledger_v1beta1_AccountHistory_descriptor =
+    internal_static_bloombox_services_ledger_v1beta1_AccountHistory_descriptor =
       getDescriptor().getMessageTypes().get(4);
-    internal_static_bloombox_schema_services_ledger_v1beta1_AccountHistory_fieldAccessorTable = new
+    internal_static_bloombox_services_ledger_v1beta1_AccountHistory_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_bloombox_schema_services_ledger_v1beta1_AccountHistory_descriptor,
+        internal_static_bloombox_services_ledger_v1beta1_AccountHistory_descriptor,
         new java.lang.String[] { });
-    internal_static_bloombox_schema_services_ledger_v1beta1_AccountHistory_Request_descriptor =
-      internal_static_bloombox_schema_services_ledger_v1beta1_AccountHistory_descriptor.getNestedTypes().get(0);
-    internal_static_bloombox_schema_services_ledger_v1beta1_AccountHistory_Request_fieldAccessorTable = new
+    internal_static_bloombox_services_ledger_v1beta1_AccountHistory_Request_descriptor =
+      internal_static_bloombox_services_ledger_v1beta1_AccountHistory_descriptor.getNestedTypes().get(0);
+    internal_static_bloombox_services_ledger_v1beta1_AccountHistory_Request_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_bloombox_schema_services_ledger_v1beta1_AccountHistory_Request_descriptor,
+        internal_static_bloombox_services_ledger_v1beta1_AccountHistory_Request_descriptor,
         new java.lang.String[] { "Account", });
-    internal_static_bloombox_schema_services_ledger_v1beta1_AccountHistory_Response_descriptor =
-      internal_static_bloombox_schema_services_ledger_v1beta1_AccountHistory_descriptor.getNestedTypes().get(1);
-    internal_static_bloombox_schema_services_ledger_v1beta1_AccountHistory_Response_fieldAccessorTable = new
+    internal_static_bloombox_services_ledger_v1beta1_AccountHistory_Response_descriptor =
+      internal_static_bloombox_services_ledger_v1beta1_AccountHistory_descriptor.getNestedTypes().get(1);
+    internal_static_bloombox_services_ledger_v1beta1_AccountHistory_Response_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_bloombox_schema_services_ledger_v1beta1_AccountHistory_Response_descriptor,
+        internal_static_bloombox_services_ledger_v1beta1_AccountHistory_Response_descriptor,
         new java.lang.String[] { "Txn", });
-    internal_static_bloombox_schema_services_ledger_v1beta1_AccountHistory_Operation_descriptor =
-      internal_static_bloombox_schema_services_ledger_v1beta1_AccountHistory_descriptor.getNestedTypes().get(2);
-    internal_static_bloombox_schema_services_ledger_v1beta1_AccountHistory_Operation_fieldAccessorTable = new
+    internal_static_bloombox_services_ledger_v1beta1_AccountHistory_Operation_descriptor =
+      internal_static_bloombox_services_ledger_v1beta1_AccountHistory_descriptor.getNestedTypes().get(2);
+    internal_static_bloombox_services_ledger_v1beta1_AccountHistory_Operation_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_bloombox_schema_services_ledger_v1beta1_AccountHistory_Operation_descriptor,
+        internal_static_bloombox_services_ledger_v1beta1_AccountHistory_Operation_descriptor,
         new java.lang.String[] { "Request", "Response", });
-    internal_static_bloombox_schema_services_ledger_v1beta1_InflightTransaction_descriptor =
+    internal_static_bloombox_services_ledger_v1beta1_InflightTransaction_descriptor =
       getDescriptor().getMessageTypes().get(5);
-    internal_static_bloombox_schema_services_ledger_v1beta1_InflightTransaction_fieldAccessorTable = new
+    internal_static_bloombox_services_ledger_v1beta1_InflightTransaction_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_bloombox_schema_services_ledger_v1beta1_InflightTransaction_descriptor,
+        internal_static_bloombox_services_ledger_v1beta1_InflightTransaction_descriptor,
         new java.lang.String[] { "Status", "Txn", });
-    internal_static_bloombox_schema_services_ledger_v1beta1_AssetCreate_descriptor =
+    internal_static_bloombox_services_ledger_v1beta1_AssetCreate_descriptor =
       getDescriptor().getMessageTypes().get(6);
-    internal_static_bloombox_schema_services_ledger_v1beta1_AssetCreate_fieldAccessorTable = new
+    internal_static_bloombox_services_ledger_v1beta1_AssetCreate_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_bloombox_schema_services_ledger_v1beta1_AssetCreate_descriptor,
+        internal_static_bloombox_services_ledger_v1beta1_AssetCreate_descriptor,
         new java.lang.String[] { });
-    internal_static_bloombox_schema_services_ledger_v1beta1_AssetCreate_Request_descriptor =
-      internal_static_bloombox_schema_services_ledger_v1beta1_AssetCreate_descriptor.getNestedTypes().get(0);
-    internal_static_bloombox_schema_services_ledger_v1beta1_AssetCreate_Request_fieldAccessorTable = new
+    internal_static_bloombox_services_ledger_v1beta1_AssetCreate_Request_descriptor =
+      internal_static_bloombox_services_ledger_v1beta1_AssetCreate_descriptor.getNestedTypes().get(0);
+    internal_static_bloombox_services_ledger_v1beta1_AssetCreate_Request_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_bloombox_schema_services_ledger_v1beta1_AssetCreate_Request_descriptor,
+        internal_static_bloombox_services_ledger_v1beta1_AssetCreate_Request_descriptor,
         new java.lang.String[] { "Op", });
-    internal_static_bloombox_schema_services_ledger_v1beta1_AssetCreate_Response_descriptor =
-      internal_static_bloombox_schema_services_ledger_v1beta1_AssetCreate_descriptor.getNestedTypes().get(1);
-    internal_static_bloombox_schema_services_ledger_v1beta1_AssetCreate_Response_fieldAccessorTable = new
+    internal_static_bloombox_services_ledger_v1beta1_AssetCreate_Response_descriptor =
+      internal_static_bloombox_services_ledger_v1beta1_AssetCreate_descriptor.getNestedTypes().get(1);
+    internal_static_bloombox_services_ledger_v1beta1_AssetCreate_Response_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_bloombox_schema_services_ledger_v1beta1_AssetCreate_Response_descriptor,
+        internal_static_bloombox_services_ledger_v1beta1_AssetCreate_Response_descriptor,
         new java.lang.String[] { "Status", "Txn", });
-    internal_static_bloombox_schema_services_ledger_v1beta1_AssetCreate_Operation_descriptor =
-      internal_static_bloombox_schema_services_ledger_v1beta1_AssetCreate_descriptor.getNestedTypes().get(2);
-    internal_static_bloombox_schema_services_ledger_v1beta1_AssetCreate_Operation_fieldAccessorTable = new
+    internal_static_bloombox_services_ledger_v1beta1_AssetCreate_Operation_descriptor =
+      internal_static_bloombox_services_ledger_v1beta1_AssetCreate_descriptor.getNestedTypes().get(2);
+    internal_static_bloombox_services_ledger_v1beta1_AssetCreate_Operation_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_bloombox_schema_services_ledger_v1beta1_AssetCreate_Operation_descriptor,
+        internal_static_bloombox_services_ledger_v1beta1_AssetCreate_Operation_descriptor,
         new java.lang.String[] { "Request", "Response", });
-    internal_static_bloombox_schema_services_ledger_v1beta1_AssetTransfer_descriptor =
+    internal_static_bloombox_services_ledger_v1beta1_AssetTransfer_descriptor =
       getDescriptor().getMessageTypes().get(7);
-    internal_static_bloombox_schema_services_ledger_v1beta1_AssetTransfer_fieldAccessorTable = new
+    internal_static_bloombox_services_ledger_v1beta1_AssetTransfer_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_bloombox_schema_services_ledger_v1beta1_AssetTransfer_descriptor,
+        internal_static_bloombox_services_ledger_v1beta1_AssetTransfer_descriptor,
         new java.lang.String[] { });
-    internal_static_bloombox_schema_services_ledger_v1beta1_AssetTransfer_Request_descriptor =
-      internal_static_bloombox_schema_services_ledger_v1beta1_AssetTransfer_descriptor.getNestedTypes().get(0);
-    internal_static_bloombox_schema_services_ledger_v1beta1_AssetTransfer_Request_fieldAccessorTable = new
+    internal_static_bloombox_services_ledger_v1beta1_AssetTransfer_Request_descriptor =
+      internal_static_bloombox_services_ledger_v1beta1_AssetTransfer_descriptor.getNestedTypes().get(0);
+    internal_static_bloombox_services_ledger_v1beta1_AssetTransfer_Request_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_bloombox_schema_services_ledger_v1beta1_AssetTransfer_Request_descriptor,
+        internal_static_bloombox_services_ledger_v1beta1_AssetTransfer_Request_descriptor,
         new java.lang.String[] { "Op", });
-    internal_static_bloombox_schema_services_ledger_v1beta1_AssetTransfer_Response_descriptor =
-      internal_static_bloombox_schema_services_ledger_v1beta1_AssetTransfer_descriptor.getNestedTypes().get(1);
-    internal_static_bloombox_schema_services_ledger_v1beta1_AssetTransfer_Response_fieldAccessorTable = new
+    internal_static_bloombox_services_ledger_v1beta1_AssetTransfer_Response_descriptor =
+      internal_static_bloombox_services_ledger_v1beta1_AssetTransfer_descriptor.getNestedTypes().get(1);
+    internal_static_bloombox_services_ledger_v1beta1_AssetTransfer_Response_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_bloombox_schema_services_ledger_v1beta1_AssetTransfer_Response_descriptor,
+        internal_static_bloombox_services_ledger_v1beta1_AssetTransfer_Response_descriptor,
         new java.lang.String[] { "Status", "Txn", });
-    internal_static_bloombox_schema_services_ledger_v1beta1_AssetTransfer_Operation_descriptor =
-      internal_static_bloombox_schema_services_ledger_v1beta1_AssetTransfer_descriptor.getNestedTypes().get(2);
-    internal_static_bloombox_schema_services_ledger_v1beta1_AssetTransfer_Operation_fieldAccessorTable = new
+    internal_static_bloombox_services_ledger_v1beta1_AssetTransfer_Operation_descriptor =
+      internal_static_bloombox_services_ledger_v1beta1_AssetTransfer_descriptor.getNestedTypes().get(2);
+    internal_static_bloombox_services_ledger_v1beta1_AssetTransfer_Operation_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_bloombox_schema_services_ledger_v1beta1_AssetTransfer_Operation_descriptor,
+        internal_static_bloombox_services_ledger_v1beta1_AssetTransfer_Operation_descriptor,
         new java.lang.String[] { "Request", "Response", });
     com.google.protobuf.ExtensionRegistry registry =
         com.google.protobuf.ExtensionRegistry.newInstance();
