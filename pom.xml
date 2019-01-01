@@ -5,7 +5,7 @@
     <groupId>io.bloombox</groupId>
     <artifactId>java-client</artifactId>
     <name>Bloombox: Java Client</name>
-    <version>1.7-SNAPSHOT</version>
+    <version>1.7</version>
     <url>https://bloombox.github.io/Java</url>
     <description>Java RPCAPI client for the Bloombox Cloud.</description>
     <inceptionYear>2017</inceptionYear>
@@ -14,7 +14,7 @@
         <url>https://github.com/bloombox/java</url>
         <connection>scm:git:https://github.com/bloombox/java.git</connection>
         <developerConnection>scm:git:git@github.com:bloombox/java.git</developerConnection>
-        <tag>HEAD</tag>
+        <tag>v1.7</tag>
     </scm>
 
     <prerequisites>
