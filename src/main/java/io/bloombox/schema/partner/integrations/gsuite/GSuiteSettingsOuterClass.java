@@ -1,5 +1,5 @@
 /*
- * Copyright 2018, Momentum Ideas, Co. All rights reserved.
+ * Copyright 2019, Momentum Ideas, Co. All rights reserved.
  *
  * Source and object computer code contained herein is the private intellectual
  * property of Momentum Ideas Co., a Delaware Corporation. Use of this
@@ -78,7 +78,7 @@ public final class GSuiteSettingsOuterClass {
               done = true;
               break;
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -147,9 +147,8 @@ public final class GSuiteSettingsOuterClass {
       }
       io.bloombox.schema.partner.integrations.gsuite.GSuiteSettingsOuterClass.GSuiteIntegrationFeatures other = (io.bloombox.schema.partner.integrations.gsuite.GSuiteSettingsOuterClass.GSuiteIntegrationFeatures) obj;
 
-      boolean result = true;
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -328,35 +327,35 @@ public final class GSuiteSettingsOuterClass {
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -401,7 +400,7 @@ public final class GSuiteSettingsOuterClass {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -562,7 +561,7 @@ public final class GSuiteSettingsOuterClass {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -719,16 +718,15 @@ public final class GSuiteSettingsOuterClass {
       }
       io.bloombox.schema.partner.integrations.gsuite.GSuiteSettingsOuterClass.GSuiteSettings other = (io.bloombox.schema.partner.integrations.gsuite.GSuiteSettingsOuterClass.GSuiteSettings) obj;
 
-      boolean result = true;
-      result = result && getDomain()
-          .equals(other.getDomain());
-      result = result && (hasFeatures() == other.hasFeatures());
+      if (!getDomain()
+          .equals(other.getDomain())) return false;
+      if (hasFeatures() != other.hasFeatures()) return false;
       if (hasFeatures()) {
-        result = result && getFeatures()
-            .equals(other.getFeatures());
+        if (!getFeatures()
+            .equals(other.getFeatures())) return false;
       }
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -927,35 +925,35 @@ public final class GSuiteSettingsOuterClass {
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -1094,7 +1092,7 @@ public final class GSuiteSettingsOuterClass {
         return this;
       }
 
-      private io.bloombox.schema.partner.integrations.gsuite.GSuiteSettingsOuterClass.GSuiteIntegrationFeatures features_ = null;
+      private io.bloombox.schema.partner.integrations.gsuite.GSuiteSettingsOuterClass.GSuiteIntegrationFeatures features_;
       private com.google.protobuf.SingleFieldBuilderV3<
           io.bloombox.schema.partner.integrations.gsuite.GSuiteSettingsOuterClass.GSuiteIntegrationFeatures, io.bloombox.schema.partner.integrations.gsuite.GSuiteSettingsOuterClass.GSuiteIntegrationFeatures.Builder, io.bloombox.schema.partner.integrations.gsuite.GSuiteSettingsOuterClass.GSuiteIntegrationFeaturesOrBuilder> featuresBuilder_;
       /**
@@ -1249,7 +1247,7 @@ public final class GSuiteSettingsOuterClass {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override

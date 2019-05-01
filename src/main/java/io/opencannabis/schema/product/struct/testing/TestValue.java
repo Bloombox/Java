@@ -1,12 +1,11 @@
 /*
- * Copyright 2018, Momentum Ideas, Co. All rights reserved.
+ * Copyright 2019, Momentum Ideas Co.
  *
- * Source and object computer code contained herein is the private intellectual
- * property of Momentum Ideas Co., a Delaware Corporation. Use of this
- * code in source form requires permission in writing before use or the
- * assembly, distribution, or publishing of derivative works, for commercial
- * purposes or any other purpose, from a duly authorized officer of Momentum
- * Ideas Co.
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *  http://www.apache.org/licenses/LICENSE-2.0
  *
  * Unless required by applicable law or agreed to in writing, software
  * distributed under the License is distributed on an "AS IS" BASIS,
@@ -21,6 +20,10 @@
 package io.opencannabis.schema.product.struct.testing;
 
 /**
+ * <pre>
+ *Specifies the value of the test, its type of measurement, and the error value and type if applicable.
+ * </pre>
+ *
  * Protobuf type {@code opencannabis.structs.labtesting.TestValue}
  */
 public  final class TestValue extends
@@ -90,7 +93,7 @@ private static final long serialVersionUID = 0L;
             break;
           }
           default: {
-            if (!parseUnknownFieldProto3(
+            if (!parseUnknownField(
                 input, unknownFields, extensionRegistry, tag)) {
               done = true;
             }
@@ -126,22 +129,34 @@ private static final long serialVersionUID = 0L;
       com.google.protobuf.MessageOrBuilder {
 
     /**
+     * <pre>
+     * Represents the type of error, if it is measurable.
+     * </pre>
+     *
      * <code>.opencannabis.structs.labtesting.TestErrorType type = 1;</code>
      */
     int getTypeValue();
     /**
+     * <pre>
+     * Represents the type of error, if it is measurable.
+     * </pre>
+     *
      * <code>.opencannabis.structs.labtesting.TestErrorType type = 1;</code>
      */
     io.opencannabis.schema.product.struct.testing.TestErrorType getType();
 
     /**
+     * <pre>
+     * Represents the value of the error, if it is measurable.
+     * </pre>
+     *
      * <code>double value = 2;</code>
      */
     double getValue();
   }
   /**
    * <pre>
-   * Represents the degree of uncertainty that arises during testing and consists of the type of error being reported
+   * Specifies the degree of uncertainty that arises during testing and consists of the type of error being reported
    * along with the error value.  See more information at: 
    * https://www.nde-ed.org/GeneralResources/ErrorAnalysis/UncertaintyTerms.htm
    * </pre>
@@ -159,7 +174,6 @@ private static final long serialVersionUID = 0L;
     }
     private TestError() {
       type_ = 0;
-      value_ = 0D;
     }
 
     @java.lang.Override
@@ -198,7 +212,7 @@ private static final long serialVersionUID = 0L;
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -232,12 +246,20 @@ private static final long serialVersionUID = 0L;
     public static final int TYPE_FIELD_NUMBER = 1;
     private int type_;
     /**
+     * <pre>
+     * Represents the type of error, if it is measurable.
+     * </pre>
+     *
      * <code>.opencannabis.structs.labtesting.TestErrorType type = 1;</code>
      */
     public int getTypeValue() {
       return type_;
     }
     /**
+     * <pre>
+     * Represents the type of error, if it is measurable.
+     * </pre>
+     *
      * <code>.opencannabis.structs.labtesting.TestErrorType type = 1;</code>
      */
     public io.opencannabis.schema.product.struct.testing.TestErrorType getType() {
@@ -249,6 +271,10 @@ private static final long serialVersionUID = 0L;
     public static final int VALUE_FIELD_NUMBER = 2;
     private double value_;
     /**
+     * <pre>
+     * Represents the value of the error, if it is measurable.
+     * </pre>
+     *
      * <code>double value = 2;</code>
      */
     public double getValue() {
@@ -307,14 +333,12 @@ private static final long serialVersionUID = 0L;
       }
       io.opencannabis.schema.product.struct.testing.TestValue.TestError other = (io.opencannabis.schema.product.struct.testing.TestValue.TestError) obj;
 
-      boolean result = true;
-      result = result && type_ == other.type_;
-      result = result && (
-          java.lang.Double.doubleToLongBits(getValue())
-          == java.lang.Double.doubleToLongBits(
-              other.getValue()));
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (type_ != other.type_) return false;
+      if (java.lang.Double.doubleToLongBits(getValue())
+          != java.lang.Double.doubleToLongBits(
+              other.getValue())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -426,7 +450,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Represents the degree of uncertainty that arises during testing and consists of the type of error being reported
+     * Specifies the degree of uncertainty that arises during testing and consists of the type of error being reported
      * along with the error value.  See more information at: 
      * https://www.nde-ed.org/GeneralResources/ErrorAnalysis/UncertaintyTerms.htm
      * </pre>
@@ -506,35 +530,35 @@ private static final long serialVersionUID = 0L;
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -585,12 +609,20 @@ private static final long serialVersionUID = 0L;
 
       private int type_ = 0;
       /**
+       * <pre>
+       * Represents the type of error, if it is measurable.
+       * </pre>
+       *
        * <code>.opencannabis.structs.labtesting.TestErrorType type = 1;</code>
        */
       public int getTypeValue() {
         return type_;
       }
       /**
+       * <pre>
+       * Represents the type of error, if it is measurable.
+       * </pre>
+       *
        * <code>.opencannabis.structs.labtesting.TestErrorType type = 1;</code>
        */
       public Builder setTypeValue(int value) {
@@ -599,6 +631,10 @@ private static final long serialVersionUID = 0L;
         return this;
       }
       /**
+       * <pre>
+       * Represents the type of error, if it is measurable.
+       * </pre>
+       *
        * <code>.opencannabis.structs.labtesting.TestErrorType type = 1;</code>
        */
       public io.opencannabis.schema.product.struct.testing.TestErrorType getType() {
@@ -607,6 +643,10 @@ private static final long serialVersionUID = 0L;
         return result == null ? io.opencannabis.schema.product.struct.testing.TestErrorType.UNRECOGNIZED : result;
       }
       /**
+       * <pre>
+       * Represents the type of error, if it is measurable.
+       * </pre>
+       *
        * <code>.opencannabis.structs.labtesting.TestErrorType type = 1;</code>
        */
       public Builder setType(io.opencannabis.schema.product.struct.testing.TestErrorType value) {
@@ -619,6 +659,10 @@ private static final long serialVersionUID = 0L;
         return this;
       }
       /**
+       * <pre>
+       * Represents the type of error, if it is measurable.
+       * </pre>
+       *
        * <code>.opencannabis.structs.labtesting.TestErrorType type = 1;</code>
        */
       public Builder clearType() {
@@ -630,12 +674,20 @@ private static final long serialVersionUID = 0L;
 
       private double value_ ;
       /**
+       * <pre>
+       * Represents the value of the error, if it is measurable.
+       * </pre>
+       *
        * <code>double value = 2;</code>
        */
       public double getValue() {
         return value_;
       }
       /**
+       * <pre>
+       * Represents the value of the error, if it is measurable.
+       * </pre>
+       *
        * <code>double value = 2;</code>
        */
       public Builder setValue(double value) {
@@ -645,6 +697,10 @@ private static final long serialVersionUID = 0L;
         return this;
       }
       /**
+       * <pre>
+       * Represents the value of the error, if it is measurable.
+       * </pre>
+       *
        * <code>double value = 2;</code>
        */
       public Builder clearValue() {
@@ -656,7 +712,7 @@ private static final long serialVersionUID = 0L;
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -747,12 +803,20 @@ private static final long serialVersionUID = 0L;
   public static final int TYPE_FIELD_NUMBER = 1;
   private int type_;
   /**
+   * <pre>
+   * Represents the type of value of the test.
+   * </pre>
+   *
    * <code>.opencannabis.structs.labtesting.TestValueType type = 1;</code>
    */
   public int getTypeValue() {
     return type_;
   }
   /**
+   * <pre>
+   * Represents the type of value of the test.
+   * </pre>
+   *
    * <code>.opencannabis.structs.labtesting.TestValueType type = 1;</code>
    */
   public io.opencannabis.schema.product.struct.testing.TestValueType getType() {
@@ -764,18 +828,30 @@ private static final long serialVersionUID = 0L;
   public static final int ERROR_FIELD_NUMBER = 2;
   private io.opencannabis.schema.product.struct.testing.TestValue.TestError error_;
   /**
+   * <pre>
+   * Represents the error information.
+   * </pre>
+   *
    * <code>.opencannabis.structs.labtesting.TestValue.TestError error = 2;</code>
    */
   public boolean hasError() {
     return error_ != null;
   }
   /**
+   * <pre>
+   * Represents the error information.
+   * </pre>
+   *
    * <code>.opencannabis.structs.labtesting.TestValue.TestError error = 2;</code>
    */
   public io.opencannabis.schema.product.struct.testing.TestValue.TestError getError() {
     return error_ == null ? io.opencannabis.schema.product.struct.testing.TestValue.TestError.getDefaultInstance() : error_;
   }
   /**
+   * <pre>
+   * Represents the error information.
+   * </pre>
+   *
    * <code>.opencannabis.structs.labtesting.TestValue.TestError error = 2;</code>
    */
   public io.opencannabis.schema.product.struct.testing.TestValue.TestErrorOrBuilder getErrorOrBuilder() {
@@ -784,6 +860,10 @@ private static final long serialVersionUID = 0L;
 
   public static final int MEASUREMENT_FIELD_NUMBER = 10;
   /**
+   * <pre>
+   * Represents the value of the test.
+   * </pre>
+   *
    * <code>double measurement = 10;</code>
    */
   public double getMeasurement() {
@@ -795,6 +875,10 @@ private static final long serialVersionUID = 0L;
 
   public static final int PRESENT_FIELD_NUMBER = 20;
   /**
+   * <pre>
+   * Represents if a value is present in the test or not.
+   * </pre>
+   *
    * <code>bool present = 20;</code>
    */
   public boolean getPresent() {
@@ -874,32 +958,28 @@ private static final long serialVersionUID = 0L;
     }
     io.opencannabis.schema.product.struct.testing.TestValue other = (io.opencannabis.schema.product.struct.testing.TestValue) obj;
 
-    boolean result = true;
-    result = result && type_ == other.type_;
-    result = result && (hasError() == other.hasError());
+    if (type_ != other.type_) return false;
+    if (hasError() != other.hasError()) return false;
     if (hasError()) {
-      result = result && getError()
-          .equals(other.getError());
+      if (!getError()
+          .equals(other.getError())) return false;
     }
-    result = result && getValueCase().equals(
-        other.getValueCase());
-    if (!result) return false;
+    if (!getValueCase().equals(other.getValueCase())) return false;
     switch (valueCase_) {
       case 10:
-        result = result && (
-            java.lang.Double.doubleToLongBits(getMeasurement())
-            == java.lang.Double.doubleToLongBits(
-                other.getMeasurement()));
+        if (java.lang.Double.doubleToLongBits(getMeasurement())
+            != java.lang.Double.doubleToLongBits(
+                other.getMeasurement())) return false;
         break;
       case 20:
-        result = result && (getPresent()
-            == other.getPresent());
+        if (getPresent()
+            != other.getPresent()) return false;
         break;
       case 0:
       default:
     }
-    result = result && unknownFields.equals(other.unknownFields);
-    return result;
+    if (!unknownFields.equals(other.unknownFields)) return false;
+    return true;
   }
 
   @java.lang.Override
@@ -1025,6 +1105,10 @@ private static final long serialVersionUID = 0L;
     return builder;
   }
   /**
+   * <pre>
+   *Specifies the value of the test, its type of measurement, and the error value and type if applicable.
+   * </pre>
+   *
    * Protobuf type {@code opencannabis.structs.labtesting.TestValue}
    */
   public static final class Builder extends
@@ -1117,35 +1201,35 @@ private static final long serialVersionUID = 0L;
 
     @java.lang.Override
     public Builder clone() {
-      return (Builder) super.clone();
+      return super.clone();
     }
     @java.lang.Override
     public Builder setField(
         com.google.protobuf.Descriptors.FieldDescriptor field,
         java.lang.Object value) {
-      return (Builder) super.setField(field, value);
+      return super.setField(field, value);
     }
     @java.lang.Override
     public Builder clearField(
         com.google.protobuf.Descriptors.FieldDescriptor field) {
-      return (Builder) super.clearField(field);
+      return super.clearField(field);
     }
     @java.lang.Override
     public Builder clearOneof(
         com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-      return (Builder) super.clearOneof(oneof);
+      return super.clearOneof(oneof);
     }
     @java.lang.Override
     public Builder setRepeatedField(
         com.google.protobuf.Descriptors.FieldDescriptor field,
         int index, java.lang.Object value) {
-      return (Builder) super.setRepeatedField(field, index, value);
+      return super.setRepeatedField(field, index, value);
     }
     @java.lang.Override
     public Builder addRepeatedField(
         com.google.protobuf.Descriptors.FieldDescriptor field,
         java.lang.Object value) {
-      return (Builder) super.addRepeatedField(field, value);
+      return super.addRepeatedField(field, value);
     }
     @java.lang.Override
     public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -1224,12 +1308,20 @@ private static final long serialVersionUID = 0L;
 
     private int type_ = 0;
     /**
+     * <pre>
+     * Represents the type of value of the test.
+     * </pre>
+     *
      * <code>.opencannabis.structs.labtesting.TestValueType type = 1;</code>
      */
     public int getTypeValue() {
       return type_;
     }
     /**
+     * <pre>
+     * Represents the type of value of the test.
+     * </pre>
+     *
      * <code>.opencannabis.structs.labtesting.TestValueType type = 1;</code>
      */
     public Builder setTypeValue(int value) {
@@ -1238,6 +1330,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * Represents the type of value of the test.
+     * </pre>
+     *
      * <code>.opencannabis.structs.labtesting.TestValueType type = 1;</code>
      */
     public io.opencannabis.schema.product.struct.testing.TestValueType getType() {
@@ -1246,6 +1342,10 @@ private static final long serialVersionUID = 0L;
       return result == null ? io.opencannabis.schema.product.struct.testing.TestValueType.UNRECOGNIZED : result;
     }
     /**
+     * <pre>
+     * Represents the type of value of the test.
+     * </pre>
+     *
      * <code>.opencannabis.structs.labtesting.TestValueType type = 1;</code>
      */
     public Builder setType(io.opencannabis.schema.product.struct.testing.TestValueType value) {
@@ -1258,6 +1358,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * Represents the type of value of the test.
+     * </pre>
+     *
      * <code>.opencannabis.structs.labtesting.TestValueType type = 1;</code>
      */
     public Builder clearType() {
@@ -1267,16 +1371,24 @@ private static final long serialVersionUID = 0L;
       return this;
     }
 
-    private io.opencannabis.schema.product.struct.testing.TestValue.TestError error_ = null;
+    private io.opencannabis.schema.product.struct.testing.TestValue.TestError error_;
     private com.google.protobuf.SingleFieldBuilderV3<
         io.opencannabis.schema.product.struct.testing.TestValue.TestError, io.opencannabis.schema.product.struct.testing.TestValue.TestError.Builder, io.opencannabis.schema.product.struct.testing.TestValue.TestErrorOrBuilder> errorBuilder_;
     /**
+     * <pre>
+     * Represents the error information.
+     * </pre>
+     *
      * <code>.opencannabis.structs.labtesting.TestValue.TestError error = 2;</code>
      */
     public boolean hasError() {
       return errorBuilder_ != null || error_ != null;
     }
     /**
+     * <pre>
+     * Represents the error information.
+     * </pre>
+     *
      * <code>.opencannabis.structs.labtesting.TestValue.TestError error = 2;</code>
      */
     public io.opencannabis.schema.product.struct.testing.TestValue.TestError getError() {
@@ -1287,6 +1399,10 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     * <pre>
+     * Represents the error information.
+     * </pre>
+     *
      * <code>.opencannabis.structs.labtesting.TestValue.TestError error = 2;</code>
      */
     public Builder setError(io.opencannabis.schema.product.struct.testing.TestValue.TestError value) {
@@ -1303,6 +1419,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * Represents the error information.
+     * </pre>
+     *
      * <code>.opencannabis.structs.labtesting.TestValue.TestError error = 2;</code>
      */
     public Builder setError(
@@ -1317,6 +1437,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * Represents the error information.
+     * </pre>
+     *
      * <code>.opencannabis.structs.labtesting.TestValue.TestError error = 2;</code>
      */
     public Builder mergeError(io.opencannabis.schema.product.struct.testing.TestValue.TestError value) {
@@ -1335,6 +1459,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * Represents the error information.
+     * </pre>
+     *
      * <code>.opencannabis.structs.labtesting.TestValue.TestError error = 2;</code>
      */
     public Builder clearError() {
@@ -1349,6 +1477,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * Represents the error information.
+     * </pre>
+     *
      * <code>.opencannabis.structs.labtesting.TestValue.TestError error = 2;</code>
      */
     public io.opencannabis.schema.product.struct.testing.TestValue.TestError.Builder getErrorBuilder() {
@@ -1357,6 +1489,10 @@ private static final long serialVersionUID = 0L;
       return getErrorFieldBuilder().getBuilder();
     }
     /**
+     * <pre>
+     * Represents the error information.
+     * </pre>
+     *
      * <code>.opencannabis.structs.labtesting.TestValue.TestError error = 2;</code>
      */
     public io.opencannabis.schema.product.struct.testing.TestValue.TestErrorOrBuilder getErrorOrBuilder() {
@@ -1368,6 +1504,10 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     * <pre>
+     * Represents the error information.
+     * </pre>
+     *
      * <code>.opencannabis.structs.labtesting.TestValue.TestError error = 2;</code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<
@@ -1385,6 +1525,10 @@ private static final long serialVersionUID = 0L;
     }
 
     /**
+     * <pre>
+     * Represents the value of the test.
+     * </pre>
+     *
      * <code>double measurement = 10;</code>
      */
     public double getMeasurement() {
@@ -1394,6 +1538,10 @@ private static final long serialVersionUID = 0L;
       return 0D;
     }
     /**
+     * <pre>
+     * Represents the value of the test.
+     * </pre>
+     *
      * <code>double measurement = 10;</code>
      */
     public Builder setMeasurement(double value) {
@@ -1403,6 +1551,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * Represents the value of the test.
+     * </pre>
+     *
      * <code>double measurement = 10;</code>
      */
     public Builder clearMeasurement() {
@@ -1415,6 +1567,10 @@ private static final long serialVersionUID = 0L;
     }
 
     /**
+     * <pre>
+     * Represents if a value is present in the test or not.
+     * </pre>
+     *
      * <code>bool present = 20;</code>
      */
     public boolean getPresent() {
@@ -1424,6 +1580,10 @@ private static final long serialVersionUID = 0L;
       return false;
     }
     /**
+     * <pre>
+     * Represents if a value is present in the test or not.
+     * </pre>
+     *
      * <code>bool present = 20;</code>
      */
     public Builder setPresent(boolean value) {
@@ -1433,6 +1593,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * Represents if a value is present in the test or not.
+     * </pre>
+     *
      * <code>bool present = 20;</code>
      */
     public Builder clearPresent() {
@@ -1446,7 +1610,7 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public final Builder setUnknownFields(
         final com.google.protobuf.UnknownFieldSet unknownFields) {
-      return super.setUnknownFieldsProto3(unknownFields);
+      return super.setUnknownFields(unknownFields);
     }
 
     @java.lang.Override

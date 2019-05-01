@@ -1,12 +1,11 @@
 /*
- * Copyright 2018, Momentum Ideas, Co. All rights reserved.
+ * Copyright 2019, Momentum Ideas Co.
  *
- * Source and object computer code contained herein is the private intellectual
- * property of Momentum Ideas Co., a Delaware Corporation. Use of this
- * code in source form requires permission in writing before use or the
- * assembly, distribution, or publishing of derivative works, for commercial
- * purposes or any other purpose, from a duly authorized officer of Momentum
- * Ideas Co.
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *  http://www.apache.org/licenses/LICENSE-2.0
  *
  * Unless required by applicable law or agreed to in writing, software
  * distributed under the License is distributed on an "AS IS" BASIS,
@@ -80,6 +79,30 @@ public final class MerchandiseProduct {
      * <code>LIGHTER = 4;</code>
      */
     LIGHTER(4),
+    /**
+     * <pre>
+     * Specific clothing value for t-shirts.
+     * </pre>
+     *
+     * <code>TSHIRT = 5;</code>
+     */
+    TSHIRT(5),
+    /**
+     * <pre>
+     * Specific clothing value for sweatshirts.
+     * </pre>
+     *
+     * <code>HOODIE = 6;</code>
+     */
+    HOODIE(6),
+    /**
+     * <pre>
+     * Specific clothing value for hats.
+     * </pre>
+     *
+     * <code>HAT = 7;</code>
+     */
+    HAT(7),
     UNRECOGNIZED(-1),
     ;
 
@@ -123,6 +146,30 @@ public final class MerchandiseProduct {
      * <code>LIGHTER = 4;</code>
      */
     public static final int LIGHTER_VALUE = 4;
+    /**
+     * <pre>
+     * Specific clothing value for t-shirts.
+     * </pre>
+     *
+     * <code>TSHIRT = 5;</code>
+     */
+    public static final int TSHIRT_VALUE = 5;
+    /**
+     * <pre>
+     * Specific clothing value for sweatshirts.
+     * </pre>
+     *
+     * <code>HOODIE = 6;</code>
+     */
+    public static final int HOODIE_VALUE = 6;
+    /**
+     * <pre>
+     * Specific clothing value for hats.
+     * </pre>
+     *
+     * <code>HAT = 7;</code>
+     */
+    public static final int HAT_VALUE = 7;
 
 
     public final int getNumber() {
@@ -148,6 +195,9 @@ public final class MerchandiseProduct {
         case 2: return GLASSWARE;
         case 3: return CONTAINER;
         case 4: return LIGHTER;
+        case 5: return TSHIRT;
+        case 6: return HOODIE;
+        case 7: return HAT;
         default: return null;
       }
     }
@@ -515,7 +565,7 @@ public final class MerchandiseProduct {
             }
             case 24: {
               int rawValue = input.readEnum();
-              if (!((mutable_bitField0_ & 0x00000004) == 0x00000004)) {
+              if (!((mutable_bitField0_ & 0x00000004) != 0)) {
                 flags_ = new java.util.ArrayList<java.lang.Integer>();
                 mutable_bitField0_ |= 0x00000004;
               }
@@ -527,7 +577,7 @@ public final class MerchandiseProduct {
               int oldLimit = input.pushLimit(length);
               while(input.getBytesUntilLimit() > 0) {
                 int rawValue = input.readEnum();
-                if (!((mutable_bitField0_ & 0x00000004) == 0x00000004)) {
+                if (!((mutable_bitField0_ & 0x00000004) != 0)) {
                   flags_ = new java.util.ArrayList<java.lang.Integer>();
                   mutable_bitField0_ |= 0x00000004;
                 }
@@ -550,7 +600,7 @@ public final class MerchandiseProduct {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -564,7 +614,7 @@ public final class MerchandiseProduct {
         throw new com.google.protobuf.InvalidProtocolBufferException(
             e).setUnfinishedMessage(this);
       } finally {
-        if (((mutable_bitField0_ & 0x00000004) == 0x00000004)) {
+        if (((mutable_bitField0_ & 0x00000004) != 0)) {
           flags_ = java.util.Collections.unmodifiableList(flags_);
         }
         this.unknownFields = unknownFields.build();
@@ -821,21 +871,20 @@ public final class MerchandiseProduct {
       }
       io.opencannabis.schema.product.MerchandiseProduct.Merchandise other = (io.opencannabis.schema.product.MerchandiseProduct.Merchandise) obj;
 
-      boolean result = true;
-      result = result && (hasKey() == other.hasKey());
+      if (hasKey() != other.hasKey()) return false;
       if (hasKey()) {
-        result = result && getKey()
-            .equals(other.getKey());
+        if (!getKey()
+            .equals(other.getKey())) return false;
       }
-      result = result && type_ == other.type_;
-      result = result && flags_.equals(other.flags_);
-      result = result && (hasProduct() == other.hasProduct());
+      if (type_ != other.type_) return false;
+      if (!flags_.equals(other.flags_)) return false;
+      if (hasProduct() != other.hasProduct()) return false;
       if (hasProduct()) {
-        result = result && getProduct()
-            .equals(other.getProduct());
+        if (!getProduct()
+            .equals(other.getProduct())) return false;
       }
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -1047,7 +1096,7 @@ public final class MerchandiseProduct {
           result.key_ = keyBuilder_.build();
         }
         result.type_ = type_;
-        if (((bitField0_ & 0x00000004) == 0x00000004)) {
+        if (((bitField0_ & 0x00000004) != 0)) {
           flags_ = java.util.Collections.unmodifiableList(flags_);
           bitField0_ = (bitField0_ & ~0x00000004);
         }
@@ -1064,35 +1113,35 @@ public final class MerchandiseProduct {
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -1155,7 +1204,7 @@ public final class MerchandiseProduct {
       }
       private int bitField0_;
 
-      private io.opencannabis.schema.base.BaseProductKey.ProductKey key_ = null;
+      private io.opencannabis.schema.base.BaseProductKey.ProductKey key_;
       private com.google.protobuf.SingleFieldBuilderV3<
           io.opencannabis.schema.base.BaseProductKey.ProductKey, io.opencannabis.schema.base.BaseProductKey.ProductKey.Builder, io.opencannabis.schema.base.BaseProductKey.ProductKeyOrBuilder> keyBuilder_;
       /**
@@ -1376,7 +1425,7 @@ public final class MerchandiseProduct {
       private java.util.List<java.lang.Integer> flags_ =
         java.util.Collections.emptyList();
       private void ensureFlagsIsMutable() {
-        if (!((bitField0_ & 0x00000004) == 0x00000004)) {
+        if (!((bitField0_ & 0x00000004) != 0)) {
           flags_ = new java.util.ArrayList<java.lang.Integer>(flags_);
           bitField0_ |= 0x00000004;
         }
@@ -1539,7 +1588,7 @@ public final class MerchandiseProduct {
         return this;
       }
 
-      private io.opencannabis.schema.content.AttachedContent.ProductContent product_ = null;
+      private io.opencannabis.schema.content.AttachedContent.ProductContent product_;
       private com.google.protobuf.SingleFieldBuilderV3<
           io.opencannabis.schema.content.AttachedContent.ProductContent, io.opencannabis.schema.content.AttachedContent.ProductContent.Builder, io.opencannabis.schema.content.AttachedContent.ProductContentOrBuilder> productBuilder_;
       /**
@@ -1694,7 +1743,7 @@ public final class MerchandiseProduct {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -1766,13 +1815,14 @@ public final class MerchandiseProduct {
       "ts.MerchandiseType\0225\n\005flags\030\003 \003(\0162&.open" +
       "cannabis.products.MerchandiseFlag\0225\n\007pro" +
       "duct\030\004 \001(\0132$.opencannabis.content.Produc" +
-      "tContent*g\n\017MerchandiseType\022\033\n\027UNSPECIFI" +
-      "ED_MERCHANDISE\020\000\022\014\n\010CLOTHING\020\001\022\r\n\tGLASSW" +
-      "ARE\020\002\022\r\n\tCONTAINER\020\003\022\013\n\007LIGHTER\020\004*M\n\017Mer" +
-      "chandiseFlag\022\030\n\024NO_MERCHANDISE_FLAGS\020\000\022\020" +
-      "\n\014MEDICAL_ONLY\020\001\022\016\n\nBRAND_SWAG\020\002B>\n\036io.o" +
-      "pencannabis.schema.productB\022MerchandiseP" +
-      "roductH\001P\000\242\002\003OCSb\006proto3"
+      "tContent*\210\001\n\017MerchandiseType\022\033\n\027UNSPECIF" +
+      "IED_MERCHANDISE\020\000\022\014\n\010CLOTHING\020\001\022\r\n\tGLASS" +
+      "WARE\020\002\022\r\n\tCONTAINER\020\003\022\013\n\007LIGHTER\020\004\022\n\n\006TS" +
+      "HIRT\020\005\022\n\n\006HOODIE\020\006\022\007\n\003HAT\020\007*M\n\017Merchandi" +
+      "seFlag\022\030\n\024NO_MERCHANDISE_FLAGS\020\000\022\020\n\014MEDI" +
+      "CAL_ONLY\020\001\022\016\n\nBRAND_SWAG\020\002B>\n\036io.opencan" +
+      "nabis.schema.productB\022MerchandiseProduct" +
+      "H\001P\000\242\002\003OCSb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {

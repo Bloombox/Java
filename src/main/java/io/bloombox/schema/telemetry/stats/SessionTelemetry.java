@@ -1,5 +1,5 @@
 /*
- * Copyright 2018, Momentum Ideas, Co. All rights reserved.
+ * Copyright 2019, Momentum Ideas, Co. All rights reserved.
  *
  * Source and object computer code contained herein is the private intellectual
  * property of Momentum Ideas Co., a Delaware Corporation. Use of this
@@ -185,7 +185,6 @@ public final class SessionTelemetry {
     private SessionStats() {
       sid_ = "";
       partnerScope_ = "";
-      eventCount_ = 0;
       deviceId_ = "";
       userId_ = "";
     }
@@ -270,7 +269,7 @@ public final class SessionTelemetry {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -631,29 +630,28 @@ public final class SessionTelemetry {
       }
       io.bloombox.schema.telemetry.stats.SessionTelemetry.SessionStats other = (io.bloombox.schema.telemetry.stats.SessionTelemetry.SessionStats) obj;
 
-      boolean result = true;
-      result = result && getSid()
-          .equals(other.getSid());
-      result = result && getPartnerScope()
-          .equals(other.getPartnerScope());
-      result = result && (getEventCount()
-          == other.getEventCount());
-      result = result && (hasBegin() == other.hasBegin());
+      if (!getSid()
+          .equals(other.getSid())) return false;
+      if (!getPartnerScope()
+          .equals(other.getPartnerScope())) return false;
+      if (getEventCount()
+          != other.getEventCount()) return false;
+      if (hasBegin() != other.hasBegin()) return false;
       if (hasBegin()) {
-        result = result && getBegin()
-            .equals(other.getBegin());
+        if (!getBegin()
+            .equals(other.getBegin())) return false;
       }
-      result = result && (hasEnd() == other.hasEnd());
+      if (hasEnd() != other.hasEnd()) return false;
       if (hasEnd()) {
-        result = result && getEnd()
-            .equals(other.getEnd());
+        if (!getEnd()
+            .equals(other.getEnd())) return false;
       }
-      result = result && getDeviceId()
-          .equals(other.getDeviceId());
-      result = result && getUserId()
-          .equals(other.getUserId());
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!getDeviceId()
+          .equals(other.getDeviceId())) return false;
+      if (!getUserId()
+          .equals(other.getUserId())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -887,35 +885,35 @@ public final class SessionTelemetry {
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -1199,7 +1197,7 @@ public final class SessionTelemetry {
         return this;
       }
 
-      private io.opencannabis.schema.temporal.TemporalInstant.Instant begin_ = null;
+      private io.opencannabis.schema.temporal.TemporalInstant.Instant begin_;
       private com.google.protobuf.SingleFieldBuilderV3<
           io.opencannabis.schema.temporal.TemporalInstant.Instant, io.opencannabis.schema.temporal.TemporalInstant.Instant.Builder, io.opencannabis.schema.temporal.TemporalInstant.InstantOrBuilder> beginBuilder_;
       /**
@@ -1352,7 +1350,7 @@ public final class SessionTelemetry {
         return beginBuilder_;
       }
 
-      private io.opencannabis.schema.temporal.TemporalInstant.Instant end_ = null;
+      private io.opencannabis.schema.temporal.TemporalInstant.Instant end_;
       private com.google.protobuf.SingleFieldBuilderV3<
           io.opencannabis.schema.temporal.TemporalInstant.Instant, io.opencannabis.schema.temporal.TemporalInstant.Instant.Builder, io.opencannabis.schema.temporal.TemporalInstant.InstantOrBuilder> endBuilder_;
       /**
@@ -1685,7 +1683,7 @@ public final class SessionTelemetry {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override

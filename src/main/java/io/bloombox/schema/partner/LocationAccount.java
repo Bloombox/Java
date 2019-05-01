@@ -1,5 +1,5 @@
 /*
- * Copyright 2018, Momentum Ideas, Co. All rights reserved.
+ * Copyright 2019, Momentum Ideas, Co. All rights reserved.
  *
  * Source and object computer code contained herein is the private intellectual
  * property of Momentum Ideas Co., a Delaware Corporation. Use of this
@@ -421,7 +421,7 @@ public final class LocationAccount {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -914,50 +914,49 @@ public final class LocationAccount {
       }
       io.bloombox.schema.partner.LocationAccount.PartnerLocation other = (io.bloombox.schema.partner.LocationAccount.PartnerLocation) obj;
 
-      boolean result = true;
-      result = result && getCode()
-          .equals(other.getCode());
-      result = result && (hasPartner() == other.hasPartner());
+      if (!getCode()
+          .equals(other.getCode())) return false;
+      if (hasPartner() != other.hasPartner()) return false;
       if (hasPartner()) {
-        result = result && getPartner()
-            .equals(other.getPartner());
+        if (!getPartner()
+            .equals(other.getPartner())) return false;
       }
-      result = result && getName()
-          .equals(other.getName());
-      result = result && getLabel()
-          .equals(other.getLabel());
-      result = result && (hasFlags() == other.hasFlags());
+      if (!getName()
+          .equals(other.getName())) return false;
+      if (!getLabel()
+          .equals(other.getLabel())) return false;
+      if (hasFlags() != other.hasFlags()) return false;
       if (hasFlags()) {
-        result = result && getFlags()
-            .equals(other.getFlags());
+        if (!getFlags()
+            .equals(other.getFlags())) return false;
       }
-      result = result && (hasContact() == other.hasContact());
+      if (hasContact() != other.hasContact()) return false;
       if (hasContact()) {
-        result = result && getContact()
-            .equals(other.getContact());
+        if (!getContact()
+            .equals(other.getContact())) return false;
       }
-      result = result && (hasBranding() == other.hasBranding());
+      if (hasBranding() != other.hasBranding()) return false;
       if (hasBranding()) {
-        result = result && getBranding()
-            .equals(other.getBranding());
+        if (!getBranding()
+            .equals(other.getBranding())) return false;
       }
-      result = result && (hasSettings() == other.hasSettings());
+      if (hasSettings() != other.hasSettings()) return false;
       if (hasSettings()) {
-        result = result && getSettings()
-            .equals(other.getSettings());
+        if (!getSettings()
+            .equals(other.getSettings())) return false;
       }
-      result = result && (hasCreated() == other.hasCreated());
+      if (hasCreated() != other.hasCreated()) return false;
       if (hasCreated()) {
-        result = result && getCreated()
-            .equals(other.getCreated());
+        if (!getCreated()
+            .equals(other.getCreated())) return false;
       }
-      result = result && (hasModified() == other.hasModified());
+      if (hasModified() != other.hasModified()) return false;
       if (hasModified()) {
-        result = result && getModified()
-            .equals(other.getModified());
+        if (!getModified()
+            .equals(other.getModified())) return false;
       }
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -1257,35 +1256,35 @@ public final class LocationAccount {
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -1450,7 +1449,7 @@ public final class LocationAccount {
         return this;
       }
 
-      private io.bloombox.schema.partner.PartnerMeta.PartnerKey partner_ = null;
+      private io.bloombox.schema.partner.PartnerMeta.PartnerKey partner_;
       private com.google.protobuf.SingleFieldBuilderV3<
           io.bloombox.schema.partner.PartnerMeta.PartnerKey, io.bloombox.schema.partner.PartnerMeta.PartnerKey.Builder, io.bloombox.schema.partner.PartnerMeta.PartnerKeyOrBuilder> partnerBuilder_;
       /**
@@ -1781,7 +1780,7 @@ public final class LocationAccount {
         return this;
       }
 
-      private io.bloombox.schema.partner.PartnerInfo.PartnerFlags flags_ = null;
+      private io.bloombox.schema.partner.PartnerInfo.PartnerFlags flags_;
       private com.google.protobuf.SingleFieldBuilderV3<
           io.bloombox.schema.partner.PartnerInfo.PartnerFlags, io.bloombox.schema.partner.PartnerInfo.PartnerFlags.Builder, io.bloombox.schema.partner.PartnerInfo.PartnerFlagsOrBuilder> flagsBuilder_;
       /**
@@ -1934,7 +1933,7 @@ public final class LocationAccount {
         return flagsBuilder_;
       }
 
-      private io.opencannabis.schema.contact.GenericContact.ContactInfo contact_ = null;
+      private io.opencannabis.schema.contact.GenericContact.ContactInfo contact_;
       private com.google.protobuf.SingleFieldBuilderV3<
           io.opencannabis.schema.contact.GenericContact.ContactInfo, io.opencannabis.schema.contact.GenericContact.ContactInfo.Builder, io.opencannabis.schema.contact.GenericContact.ContactInfoOrBuilder> contactBuilder_;
       /**
@@ -2087,7 +2086,7 @@ public final class LocationAccount {
         return contactBuilder_;
       }
 
-      private io.opencannabis.schema.media.MediaItemKey.MediaKey branding_ = null;
+      private io.opencannabis.schema.media.MediaItemKey.MediaKey branding_;
       private com.google.protobuf.SingleFieldBuilderV3<
           io.opencannabis.schema.media.MediaItemKey.MediaKey, io.opencannabis.schema.media.MediaItemKey.MediaKey.Builder, io.opencannabis.schema.media.MediaItemKey.MediaKeyOrBuilder> brandingBuilder_;
       /**
@@ -2240,7 +2239,7 @@ public final class LocationAccount {
         return brandingBuilder_;
       }
 
-      private io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.PartnerLocationSettings settings_ = null;
+      private io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.PartnerLocationSettings settings_;
       private com.google.protobuf.SingleFieldBuilderV3<
           io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.PartnerLocationSettings, io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.PartnerLocationSettings.Builder, io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.PartnerLocationSettingsOrBuilder> settingsBuilder_;
       /**
@@ -2393,7 +2392,7 @@ public final class LocationAccount {
         return settingsBuilder_;
       }
 
-      private io.opencannabis.schema.temporal.TemporalInstant.Instant created_ = null;
+      private io.opencannabis.schema.temporal.TemporalInstant.Instant created_;
       private com.google.protobuf.SingleFieldBuilderV3<
           io.opencannabis.schema.temporal.TemporalInstant.Instant, io.opencannabis.schema.temporal.TemporalInstant.Instant.Builder, io.opencannabis.schema.temporal.TemporalInstant.InstantOrBuilder> createdBuilder_;
       /**
@@ -2546,7 +2545,7 @@ public final class LocationAccount {
         return createdBuilder_;
       }
 
-      private io.opencannabis.schema.temporal.TemporalInstant.Instant modified_ = null;
+      private io.opencannabis.schema.temporal.TemporalInstant.Instant modified_;
       private com.google.protobuf.SingleFieldBuilderV3<
           io.opencannabis.schema.temporal.TemporalInstant.Instant, io.opencannabis.schema.temporal.TemporalInstant.Instant.Builder, io.opencannabis.schema.temporal.TemporalInstant.InstantOrBuilder> modifiedBuilder_;
       /**
@@ -2701,7 +2700,7 @@ public final class LocationAccount {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override

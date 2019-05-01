@@ -1,5 +1,5 @@
 /*
- * Copyright 2018, Momentum Ideas, Co. All rights reserved.
+ * Copyright 2019, Momentum Ideas, Co. All rights reserved.
  *
  * Source and object computer code contained herein is the private intellectual
  * property of Momentum Ideas Co., a Delaware Corporation. Use of this
@@ -150,6 +150,22 @@ public enum CheckinError
    * <code>USER_UNDERAGE = 14;</code>
    */
   USER_UNDERAGE(14),
+  /**
+   * <pre>
+   * The user cannot be checked in, because they are already checked in.
+   * </pre>
+   *
+   * <code>USER_CHECKIN_CONFLICT = 15;</code>
+   */
+  USER_CHECKIN_CONFLICT(15),
+  /**
+   * <pre>
+   * An internal error occurred.
+   * </pre>
+   *
+   * <code>INTERNAL = 99;</code>
+   */
+  INTERNAL(99),
   UNRECOGNIZED(-1),
   ;
 
@@ -274,6 +290,22 @@ public enum CheckinError
    * <code>USER_UNDERAGE = 14;</code>
    */
   public static final int USER_UNDERAGE_VALUE = 14;
+  /**
+   * <pre>
+   * The user cannot be checked in, because they are already checked in.
+   * </pre>
+   *
+   * <code>USER_CHECKIN_CONFLICT = 15;</code>
+   */
+  public static final int USER_CHECKIN_CONFLICT_VALUE = 15;
+  /**
+   * <pre>
+   * An internal error occurred.
+   * </pre>
+   *
+   * <code>INTERNAL = 99;</code>
+   */
+  public static final int INTERNAL_VALUE = 99;
 
 
   public final int getNumber() {
@@ -309,6 +341,8 @@ public enum CheckinError
       case 12: return JURISDICTION_INVALID;
       case 13: return JURISDICTION_UNSUPPORTED;
       case 14: return USER_UNDERAGE;
+      case 15: return USER_CHECKIN_CONFLICT;
+      case 99: return INTERNAL;
       default: return null;
     }
   }

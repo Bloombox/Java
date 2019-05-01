@@ -1,5 +1,5 @@
 /*
- * Copyright 2018, Momentum Ideas, Co. All rights reserved.
+ * Copyright 2019, Momentum Ideas, Co. All rights reserved.
  *
  * Source and object computer code contained herein is the private intellectual
  * property of Momentum Ideas Co., a Delaware Corporation. Use of this
@@ -630,40 +630,40 @@ public final class POSServiceBeta1 {
       "nventoryStream\0226.bloombox.services.pos.v" +
       "1beta1.InventoryStream.Request\0326.bloombo" +
       "x.services.pos.v1beta1.InventoryStream.P" +
-      "ayload(\0010\001B\265\n\n\'io.bloombox.schema.servic" +
-      "es.pos.v1beta1H\001P\001\242\002\003BBS\222A\376\t\022k\n\021Point of" +
+      "ayload(\0010\001B\272\n\n\'io.bloombox.schema.servic" +
+      "es.pos.v1beta1H\001P\001\242\002\003BBS\222A\203\n\022p\n\021Point of" +
       " Sale API\032\031https://bloombox.io/terms\"7\n\010" +
       "Bloombox\022\023https://bloombox.io\032\026developer" +
-      "s@bloombox.io2\002v1\032\022api.bloombox.cloud*\001\002" +
-      "2\020application/json:\020application/jsonZ\375\007\n" +
-      "d\n\013ApiKeyParam\022U\010\002\022JParameter for identi" +
-      "fying API key owned by the invoking proj" +
-      "ect or system.\032\003key \001\nh\n\014ApiKeyHeader\022X\010" +
-      "\002\022GHeader for identifying API key owned " +
-      "by the invoking project or system.\032\tX-AP" +
-      "I-Key \001\n\252\006\n\006OAuth2\022\237\006\010\003\022]Bloombox Identi" +
-      "ty-powered OAuth2 access, authorized on " +
-      "behalf of an end-user or organization.(\004" +
-      "2,https://authorize.bloombox.cloud/oauth" +
-      "2/auth:-https://authorize.bloombox.cloud" +
-      "/oauth2/tokenB\334\004\n1\n\007offline\022&Offline acc" +
-      "ess to authorized user data\n9\n\006openid\022/O" +
-      "IDC (OpenID Connect) access for seamless" +
-      " logon\n:\n\022profile.basic:read\022$Read-acces" +
-      "s to user\'s basic profile.\nO\n\033profile.id" +
-      "entification:read\0220Read-access to user\'s" +
-      " government identification.\nG\n\030profile.p" +
-      "references:read\022+Read-access to user\'s c" +
-      "annabis preferences.\nV\n\026consumer.checkin" +
-      ":write\022<Write-access to check a user in " +
-      "by their ID or digital card.\n|\n$consumer" +
-      ".identity.bioprint:recommend\022TRead-acces" +
-      "s to generate product recommendations ba" +
-      "sed on a user\'s identity.bioprint.\n@\n\017pu" +
-      "rchases:write\022-Write-access to a user\'s " +
-      "in-person purchases.b#\n\017\n\013ApiKeyParam\022\000\n" +
-      "\020\n\014ApiKeyHeader\022\000r/\n\rBloombox APIs\022\036http" +
-      "s://apidocs.bloombox.cloudb\006proto3"
+      "s@bloombox.io2\007v1beta1\032\022api.bloombox.clo" +
+      "ud*\001\0022\020application/json:\020application/jso" +
+      "nZ\375\007\nd\n\013ApiKeyParam\022U\010\002\022JParameter for i" +
+      "dentifying API key owned by the invoking" +
+      " project or system.\032\003key \001\nh\n\014ApiKeyHead" +
+      "er\022X\010\002\022GHeader for identifying API key o" +
+      "wned by the invoking project or system.\032" +
+      "\tX-API-Key \001\n\252\006\n\006OAuth2\022\237\006\010\003\022]Bloombox I" +
+      "dentity-powered OAuth2 access, authorize" +
+      "d on behalf of an end-user or organizati" +
+      "on.(\0042,https://authorize.bloombox.cloud/" +
+      "oauth2/auth:-https://authorize.bloombox." +
+      "cloud/oauth2/tokenB\334\004\n1\n\007offline\022&Offlin" +
+      "e access to authorized user data\n9\n\006open" +
+      "id\022/OIDC (OpenID Connect) access for sea" +
+      "mless logon\n:\n\022profile.basic:read\022$Read-" +
+      "access to user\'s basic profile.\nO\n\033profi" +
+      "le.identification:read\0220Read-access to u" +
+      "ser\'s government identification.\nG\n\030prof" +
+      "ile.preferences:read\022+Read-access to use" +
+      "r\'s cannabis preferences.\nV\n\026consumer.ch" +
+      "eckin:write\022<Write-access to check a use" +
+      "r in by their ID or digital card.\n|\n$con" +
+      "sumer.identity.bioprint:recommend\022TRead-" +
+      "access to generate product recommendatio" +
+      "ns based on a user\'s identity.bioprint.\n" +
+      "@\n\017purchases:write\022-Write-access to a us" +
+      "er\'s in-person purchases.b#\n\017\n\013ApiKeyPar" +
+      "am\022\000\n\020\n\014ApiKeyHeader\022\000r/\n\rBloombox APIs\022" +
+      "\036https://apidocs.bloombox.cloudb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {

@@ -1,5 +1,5 @@
 /*
- * Copyright 2018, Momentum Ideas, Co. All rights reserved.
+ * Copyright 2019, Momentum Ideas, Co. All rights reserved.
  *
  * Source and object computer code contained herein is the private intellectual
  * property of Momentum Ideas Co., a Delaware Corporation. Use of this
@@ -70,8 +70,6 @@ public final class AnalyticsException {
       super(builder);
     }
     private SourceLineReference() {
-      line_ = 0;
-      column_ = 0;
     }
 
     @java.lang.Override
@@ -109,7 +107,7 @@ public final class AnalyticsException {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -218,13 +216,12 @@ public final class AnalyticsException {
       }
       io.bloombox.schema.telemetry.AnalyticsException.SourceLineReference other = (io.bloombox.schema.telemetry.AnalyticsException.SourceLineReference) obj;
 
-      boolean result = true;
-      result = result && (getLine()
-          == other.getLine());
-      result = result && (getColumn()
-          == other.getColumn());
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (getLine()
+          != other.getLine()) return false;
+      if (getColumn()
+          != other.getColumn()) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -413,35 +410,35 @@ public final class AnalyticsException {
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -568,7 +565,7 @@ public final class AnalyticsException {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -771,7 +768,7 @@ public final class AnalyticsException {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -1043,28 +1040,25 @@ public final class AnalyticsException {
       }
       io.bloombox.schema.telemetry.AnalyticsException.SourceLocation other = (io.bloombox.schema.telemetry.AnalyticsException.SourceLocation) obj;
 
-      boolean result = true;
-      result = result && getModule()
-          .equals(other.getModule());
-      result = result && getFilepath()
-          .equals(other.getFilepath());
-      result = result && getPinpointCase().equals(
-          other.getPinpointCase());
-      if (!result) return false;
+      if (!getModule()
+          .equals(other.getModule())) return false;
+      if (!getFilepath()
+          .equals(other.getFilepath())) return false;
+      if (!getPinpointCase().equals(other.getPinpointCase())) return false;
       switch (pinpointCase_) {
         case 3:
-          result = result && getLineref()
-              .equals(other.getLineref());
+          if (!getLineref()
+              .equals(other.getLineref())) return false;
           break;
         case 4:
-          result = result && (getOffset()
-              == other.getOffset());
+          if (getOffset()
+              != other.getOffset()) return false;
           break;
         case 0:
         default:
       }
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -1279,35 +1273,35 @@ public final class AnalyticsException {
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -1780,7 +1774,7 @@ public final class AnalyticsException {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -1929,7 +1923,6 @@ public final class AnalyticsException {
     }
     private Exception() {
       domain_ = "";
-      code_ = 0;
     }
 
     @java.lang.Override
@@ -1994,7 +1987,7 @@ public final class AnalyticsException {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -2211,23 +2204,22 @@ public final class AnalyticsException {
       }
       io.bloombox.schema.telemetry.AnalyticsException.Exception other = (io.bloombox.schema.telemetry.AnalyticsException.Exception) obj;
 
-      boolean result = true;
-      result = result && getDomain()
-          .equals(other.getDomain());
-      result = result && (getCode()
-          == other.getCode());
-      result = result && (hasLocation() == other.hasLocation());
+      if (!getDomain()
+          .equals(other.getDomain())) return false;
+      if (getCode()
+          != other.getCode()) return false;
+      if (hasLocation() != other.hasLocation()) return false;
       if (hasLocation()) {
-        result = result && getLocation()
-            .equals(other.getLocation());
+        if (!getLocation()
+            .equals(other.getLocation())) return false;
       }
-      result = result && (hasOccurred() == other.hasOccurred());
+      if (hasOccurred() != other.hasOccurred()) return false;
       if (hasOccurred()) {
-        result = result && getOccurred()
-            .equals(other.getOccurred());
+        if (!getOccurred()
+            .equals(other.getOccurred())) return false;
       }
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -2446,35 +2438,35 @@ public final class AnalyticsException {
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -2657,7 +2649,7 @@ public final class AnalyticsException {
         return this;
       }
 
-      private io.bloombox.schema.telemetry.AnalyticsException.SourceLocation location_ = null;
+      private io.bloombox.schema.telemetry.AnalyticsException.SourceLocation location_;
       private com.google.protobuf.SingleFieldBuilderV3<
           io.bloombox.schema.telemetry.AnalyticsException.SourceLocation, io.bloombox.schema.telemetry.AnalyticsException.SourceLocation.Builder, io.bloombox.schema.telemetry.AnalyticsException.SourceLocationOrBuilder> locationBuilder_;
       /**
@@ -2810,7 +2802,7 @@ public final class AnalyticsException {
         return locationBuilder_;
       }
 
-      private io.opencannabis.schema.temporal.TemporalInstant.Instant occurred_ = null;
+      private io.opencannabis.schema.temporal.TemporalInstant.Instant occurred_;
       private com.google.protobuf.SingleFieldBuilderV3<
           io.opencannabis.schema.temporal.TemporalInstant.Instant, io.opencannabis.schema.temporal.TemporalInstant.Instant.Builder, io.opencannabis.schema.temporal.TemporalInstant.InstantOrBuilder> occurredBuilder_;
       /**
@@ -2965,7 +2957,7 @@ public final class AnalyticsException {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override

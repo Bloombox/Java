@@ -1,12 +1,11 @@
 /*
- * Copyright 2018, Momentum Ideas, Co. All rights reserved.
+ * Copyright 2019, Momentum Ideas Co.
  *
- * Source and object computer code contained herein is the private intellectual
- * property of Momentum Ideas Co., a Delaware Corporation. Use of this
- * code in source form requires permission in writing before use or the
- * assembly, distribution, or publishing of derivative works, for commercial
- * purposes or any other purpose, from a duly authorized officer of Momentum
- * Ideas Co.
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *  http://www.apache.org/licenses/LICENSE-2.0
  *
  * Unless required by applicable law or agreed to in writing, software
  * distributed under the License is distributed on an "AS IS" BASIS,
@@ -364,7 +363,7 @@ public final class GenericContent {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -840,32 +839,29 @@ public final class GenericContent {
       }
       io.opencannabis.schema.content.GenericContent.Content other = (io.opencannabis.schema.content.GenericContent.Content) obj;
 
-      boolean result = true;
-      result = result && type_ == other.type_;
-      result = result && encoding_ == other.encoding_;
-      result = result && language_ == other.language_;
-      result = result && (hasCompression() == other.hasCompression());
+      if (type_ != other.type_) return false;
+      if (encoding_ != other.encoding_) return false;
+      if (language_ != other.language_) return false;
+      if (hasCompression() != other.hasCompression()) return false;
       if (hasCompression()) {
-        result = result && getCompression()
-            .equals(other.getCompression());
+        if (!getCompression()
+            .equals(other.getCompression())) return false;
       }
-      result = result && getPayloadCase().equals(
-          other.getPayloadCase());
-      if (!result) return false;
+      if (!getPayloadCase().equals(other.getPayloadCase())) return false;
       switch (payloadCase_) {
         case 10:
-          result = result && getContent()
-              .equals(other.getContent());
+          if (!getContent()
+              .equals(other.getContent())) return false;
           break;
         case 20:
-          result = result && getRaw()
-              .equals(other.getRaw());
+          if (!getRaw()
+              .equals(other.getRaw())) return false;
           break;
         case 0:
         default:
       }
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -1095,35 +1091,35 @@ public final class GenericContent {
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -1403,7 +1399,7 @@ public final class GenericContent {
         return this;
       }
 
-      private io.opencannabis.schema.base.BaseCompression.Compression compression_ = null;
+      private io.opencannabis.schema.base.BaseCompression.Compression compression_;
       private com.google.protobuf.SingleFieldBuilderV3<
           io.opencannabis.schema.base.BaseCompression.Compression, io.opencannabis.schema.base.BaseCompression.Compression.Builder, io.opencannabis.schema.base.BaseCompression.CompressionOrBuilder> compressionBuilder_;
       /**
@@ -1703,7 +1699,7 @@ public final class GenericContent {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override

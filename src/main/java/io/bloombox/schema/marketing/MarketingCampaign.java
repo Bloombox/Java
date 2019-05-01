@@ -1,5 +1,5 @@
 /*
- * Copyright 2018, Momentum Ideas, Co. All rights reserved.
+ * Copyright 2019, Momentum Ideas, Co. All rights reserved.
  *
  * Source and object computer code contained herein is the private intellectual
  * property of Momentum Ideas Co., a Delaware Corporation. Use of this
@@ -298,7 +298,7 @@ public final class MarketingCampaign {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -463,13 +463,12 @@ public final class MarketingCampaign {
       }
       io.bloombox.schema.marketing.MarketingCampaign.CampaignTag other = (io.bloombox.schema.marketing.MarketingCampaign.CampaignTag) obj;
 
-      boolean result = true;
-      result = result && getId()
-          .equals(other.getId());
-      result = result && getLabel()
-          .equals(other.getLabel());
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!getId()
+          .equals(other.getId())) return false;
+      if (!getLabel()
+          .equals(other.getLabel())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -658,35 +657,35 @@ public final class MarketingCampaign {
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -917,7 +916,7 @@ public final class MarketingCampaign {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -1067,7 +1066,6 @@ public final class MarketingCampaign {
     }
     private ChannelSettings() {
       channel_ = 0;
-      active_ = false;
     }
 
     @java.lang.Override
@@ -1134,7 +1132,7 @@ public final class MarketingCampaign {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -1383,27 +1381,24 @@ public final class MarketingCampaign {
       }
       io.bloombox.schema.marketing.MarketingCampaign.ChannelSettings other = (io.bloombox.schema.marketing.MarketingCampaign.ChannelSettings) obj;
 
-      boolean result = true;
-      result = result && channel_ == other.channel_;
-      result = result && (getActive()
-          == other.getActive());
-      result = result && getSettingsCase().equals(
-          other.getSettingsCase());
-      if (!result) return false;
+      if (channel_ != other.channel_) return false;
+      if (getActive()
+          != other.getActive()) return false;
+      if (!getSettingsCase().equals(other.getSettingsCase())) return false;
       switch (settingsCase_) {
         case 20:
-          result = result && getSms()
-              .equals(other.getSms());
+          if (!getSms()
+              .equals(other.getSms())) return false;
           break;
         case 21:
-          result = result && getEmail()
-              .equals(other.getEmail());
+          if (!getEmail()
+              .equals(other.getEmail())) return false;
           break;
         case 0:
         default:
       }
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -1622,35 +1617,35 @@ public final class MarketingCampaign {
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -2176,7 +2171,7 @@ public final class MarketingCampaign {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -2354,7 +2349,7 @@ public final class MarketingCampaign {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -2551,24 +2546,21 @@ public final class MarketingCampaign {
       }
       io.bloombox.schema.marketing.MarketingCampaign.Creative other = (io.bloombox.schema.marketing.MarketingCampaign.Creative) obj;
 
-      boolean result = true;
-      result = result && getContentCase().equals(
-          other.getContentCase());
-      if (!result) return false;
+      if (!getContentCase().equals(other.getContentCase())) return false;
       switch (contentCase_) {
         case 10:
-          result = result && getSms()
-              .equals(other.getSms());
+          if (!getSms()
+              .equals(other.getSms())) return false;
           break;
         case 11:
-          result = result && getEmail()
-              .equals(other.getEmail());
+          if (!getEmail()
+              .equals(other.getEmail())) return false;
           break;
         case 0:
         default:
       }
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -2776,35 +2768,35 @@ public final class MarketingCampaign {
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -3221,7 +3213,7 @@ public final class MarketingCampaign {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -3451,7 +3443,7 @@ public final class MarketingCampaign {
               break;
             }
             case 34: {
-              if (!((mutable_bitField0_ & 0x00000008) == 0x00000008)) {
+              if (!((mutable_bitField0_ & 0x00000008) != 0)) {
                 creative_ = new java.util.ArrayList<io.bloombox.schema.marketing.MarketingCampaign.Creative>();
                 mutable_bitField0_ |= 0x00000008;
               }
@@ -3460,7 +3452,7 @@ public final class MarketingCampaign {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -3474,7 +3466,7 @@ public final class MarketingCampaign {
         throw new com.google.protobuf.InvalidProtocolBufferException(
             e).setUnfinishedMessage(this);
       } finally {
-        if (((mutable_bitField0_ & 0x00000008) == 0x00000008)) {
+        if (((mutable_bitField0_ & 0x00000008) != 0)) {
           creative_ = java.util.Collections.unmodifiableList(creative_);
         }
         this.unknownFields = unknownFields.build();
@@ -3715,19 +3707,18 @@ public final class MarketingCampaign {
       }
       io.bloombox.schema.marketing.MarketingCampaign.AdGroup other = (io.bloombox.schema.marketing.MarketingCampaign.AdGroup) obj;
 
-      boolean result = true;
-      result = result && getId()
-          .equals(other.getId());
-      result = result && (hasCampaign() == other.hasCampaign());
+      if (!getId()
+          .equals(other.getId())) return false;
+      if (hasCampaign() != other.hasCampaign()) return false;
       if (hasCampaign()) {
-        result = result && getCampaign()
-            .equals(other.getCampaign());
+        if (!getCampaign()
+            .equals(other.getCampaign())) return false;
       }
-      result = result && channel_ == other.channel_;
-      result = result && getCreativeList()
-          .equals(other.getCreativeList());
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (channel_ != other.channel_) return false;
+      if (!getCreativeList()
+          .equals(other.getCreativeList())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -3939,7 +3930,7 @@ public final class MarketingCampaign {
         }
         result.channel_ = channel_;
         if (creativeBuilder_ == null) {
-          if (((bitField0_ & 0x00000008) == 0x00000008)) {
+          if (((bitField0_ & 0x00000008) != 0)) {
             creative_ = java.util.Collections.unmodifiableList(creative_);
             bitField0_ = (bitField0_ & ~0x00000008);
           }
@@ -3954,35 +3945,35 @@ public final class MarketingCampaign {
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -4151,7 +4142,7 @@ public final class MarketingCampaign {
         return this;
       }
 
-      private io.bloombox.schema.marketing.MarketingCampaign.CampaignKey campaign_ = null;
+      private io.bloombox.schema.marketing.MarketingCampaign.CampaignKey campaign_;
       private com.google.protobuf.SingleFieldBuilderV3<
           io.bloombox.schema.marketing.MarketingCampaign.CampaignKey, io.bloombox.schema.marketing.MarketingCampaign.CampaignKey.Builder, io.bloombox.schema.marketing.MarketingCampaign.CampaignKeyOrBuilder> campaignBuilder_;
       /**
@@ -4372,7 +4363,7 @@ public final class MarketingCampaign {
       private java.util.List<io.bloombox.schema.marketing.MarketingCampaign.Creative> creative_ =
         java.util.Collections.emptyList();
       private void ensureCreativeIsMutable() {
-        if (!((bitField0_ & 0x00000008) == 0x00000008)) {
+        if (!((bitField0_ & 0x00000008) != 0)) {
           creative_ = new java.util.ArrayList<io.bloombox.schema.marketing.MarketingCampaign.Creative>(creative_);
           bitField0_ |= 0x00000008;
          }
@@ -4673,7 +4664,7 @@ public final class MarketingCampaign {
           creativeBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
               io.bloombox.schema.marketing.MarketingCampaign.Creative, io.bloombox.schema.marketing.MarketingCampaign.Creative.Builder, io.bloombox.schema.marketing.MarketingCampaign.CreativeOrBuilder>(
                   creative_,
-                  ((bitField0_ & 0x00000008) == 0x00000008),
+                  ((bitField0_ & 0x00000008) != 0),
                   getParentForChildren(),
                   isClean());
           creative_ = null;
@@ -4683,7 +4674,7 @@ public final class MarketingCampaign {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -4807,7 +4798,6 @@ public final class MarketingCampaign {
       super(builder);
     }
     private CampaignTargeting() {
-      strict_ = false;
       block_ = java.util.Collections.emptyList();
     }
 
@@ -4841,7 +4831,7 @@ public final class MarketingCampaign {
               break;
             }
             case 18: {
-              if (!((mutable_bitField0_ & 0x00000002) == 0x00000002)) {
+              if (!((mutable_bitField0_ & 0x00000002) != 0)) {
                 block_ = new java.util.ArrayList<io.bloombox.schema.marketing.CampaignTargeting.TargetingPolicy>();
                 mutable_bitField0_ |= 0x00000002;
               }
@@ -4850,7 +4840,7 @@ public final class MarketingCampaign {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -4864,7 +4854,7 @@ public final class MarketingCampaign {
         throw new com.google.protobuf.InvalidProtocolBufferException(
             e).setUnfinishedMessage(this);
       } finally {
-        if (((mutable_bitField0_ & 0x00000002) == 0x00000002)) {
+        if (((mutable_bitField0_ & 0x00000002) != 0)) {
           block_ = java.util.Collections.unmodifiableList(block_);
         }
         this.unknownFields = unknownFields.build();
@@ -5005,13 +4995,12 @@ public final class MarketingCampaign {
       }
       io.bloombox.schema.marketing.MarketingCampaign.CampaignTargeting other = (io.bloombox.schema.marketing.MarketingCampaign.CampaignTargeting) obj;
 
-      boolean result = true;
-      result = result && (getStrict()
-          == other.getStrict());
-      result = result && getBlockList()
-          .equals(other.getBlockList());
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (getStrict()
+          != other.getStrict()) return false;
+      if (!getBlockList()
+          .equals(other.getBlockList())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -5204,7 +5193,7 @@ public final class MarketingCampaign {
         int to_bitField0_ = 0;
         result.strict_ = strict_;
         if (blockBuilder_ == null) {
-          if (((bitField0_ & 0x00000002) == 0x00000002)) {
+          if (((bitField0_ & 0x00000002) != 0)) {
             block_ = java.util.Collections.unmodifiableList(block_);
             bitField0_ = (bitField0_ & ~0x00000002);
           }
@@ -5219,35 +5208,35 @@ public final class MarketingCampaign {
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -5361,7 +5350,7 @@ public final class MarketingCampaign {
       private java.util.List<io.bloombox.schema.marketing.CampaignTargeting.TargetingPolicy> block_ =
         java.util.Collections.emptyList();
       private void ensureBlockIsMutable() {
-        if (!((bitField0_ & 0x00000002) == 0x00000002)) {
+        if (!((bitField0_ & 0x00000002) != 0)) {
           block_ = new java.util.ArrayList<io.bloombox.schema.marketing.CampaignTargeting.TargetingPolicy>(block_);
           bitField0_ |= 0x00000002;
          }
@@ -5662,7 +5651,7 @@ public final class MarketingCampaign {
           blockBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
               io.bloombox.schema.marketing.CampaignTargeting.TargetingPolicy, io.bloombox.schema.marketing.CampaignTargeting.TargetingPolicy.Builder, io.bloombox.schema.marketing.CampaignTargeting.TargetingPolicyOrBuilder>(
                   block_,
-                  ((bitField0_ & 0x00000002) == 0x00000002),
+                  ((bitField0_ & 0x00000002) != 0),
                   getParentForChildren(),
                   isClean());
           block_ = null;
@@ -5672,7 +5661,7 @@ public final class MarketingCampaign {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -5845,7 +5834,7 @@ public final class MarketingCampaign {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -6058,15 +6047,14 @@ public final class MarketingCampaign {
       }
       io.bloombox.schema.marketing.MarketingCampaign.CampaignKey other = (io.bloombox.schema.marketing.MarketingCampaign.CampaignKey) obj;
 
-      boolean result = true;
-      result = result && getId()
-          .equals(other.getId());
-      result = result && getPartner()
-          .equals(other.getPartner());
-      result = result && getLocation()
-          .equals(other.getLocation());
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!getId()
+          .equals(other.getId())) return false;
+      if (!getPartner()
+          .equals(other.getPartner())) return false;
+      if (!getLocation()
+          .equals(other.getLocation())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -6260,35 +6248,35 @@ public final class MarketingCampaign {
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -6612,7 +6600,7 @@ public final class MarketingCampaign {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -7006,7 +6994,6 @@ public final class MarketingCampaign {
       name_ = "";
       description_ = "";
       status_ = 0;
-      live_ = false;
       channel_ = java.util.Collections.emptyList();
       tag_ = java.util.Collections.emptyList();
       group_ = java.util.Collections.emptyList();
@@ -7086,7 +7073,7 @@ public final class MarketingCampaign {
               break;
             }
             case 58: {
-              if (!((mutable_bitField0_ & 0x00000040) == 0x00000040)) {
+              if (!((mutable_bitField0_ & 0x00000040) != 0)) {
                 channel_ = new java.util.ArrayList<io.bloombox.schema.marketing.MarketingCampaign.ChannelSettings>();
                 mutable_bitField0_ |= 0x00000040;
               }
@@ -7095,7 +7082,7 @@ public final class MarketingCampaign {
               break;
             }
             case 66: {
-              if (!((mutable_bitField0_ & 0x00000080) == 0x00000080)) {
+              if (!((mutable_bitField0_ & 0x00000080) != 0)) {
                 tag_ = new java.util.ArrayList<io.bloombox.schema.marketing.MarketingCampaign.CampaignTag>();
                 mutable_bitField0_ |= 0x00000080;
               }
@@ -7104,7 +7091,7 @@ public final class MarketingCampaign {
               break;
             }
             case 74: {
-              if (!((mutable_bitField0_ & 0x00000100) == 0x00000100)) {
+              if (!((mutable_bitField0_ & 0x00000100) != 0)) {
                 group_ = new java.util.ArrayList<io.bloombox.schema.marketing.MarketingCampaign.AdGroup>();
                 mutable_bitField0_ |= 0x00000100;
               }
@@ -7152,7 +7139,7 @@ public final class MarketingCampaign {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -7166,13 +7153,13 @@ public final class MarketingCampaign {
         throw new com.google.protobuf.InvalidProtocolBufferException(
             e).setUnfinishedMessage(this);
       } finally {
-        if (((mutable_bitField0_ & 0x00000040) == 0x00000040)) {
+        if (((mutable_bitField0_ & 0x00000040) != 0)) {
           channel_ = java.util.Collections.unmodifiableList(channel_);
         }
-        if (((mutable_bitField0_ & 0x00000080) == 0x00000080)) {
+        if (((mutable_bitField0_ & 0x00000080) != 0)) {
           tag_ = java.util.Collections.unmodifiableList(tag_);
         }
-        if (((mutable_bitField0_ & 0x00000100) == 0x00000100)) {
+        if (((mutable_bitField0_ & 0x00000100) != 0)) {
           group_ = java.util.Collections.unmodifiableList(group_);
         }
         this.unknownFields = unknownFields.build();
@@ -7765,47 +7752,46 @@ public final class MarketingCampaign {
       }
       io.bloombox.schema.marketing.MarketingCampaign.Campaign other = (io.bloombox.schema.marketing.MarketingCampaign.Campaign) obj;
 
-      boolean result = true;
-      result = result && (hasKey() == other.hasKey());
+      if (hasKey() != other.hasKey()) return false;
       if (hasKey()) {
-        result = result && getKey()
-            .equals(other.getKey());
+        if (!getKey()
+            .equals(other.getKey())) return false;
       }
-      result = result && getName()
-          .equals(other.getName());
-      result = result && getDescription()
-          .equals(other.getDescription());
-      result = result && status_ == other.status_;
-      result = result && (getLive()
-          == other.getLive());
-      result = result && (hasTargeting() == other.hasTargeting());
+      if (!getName()
+          .equals(other.getName())) return false;
+      if (!getDescription()
+          .equals(other.getDescription())) return false;
+      if (status_ != other.status_) return false;
+      if (getLive()
+          != other.getLive()) return false;
+      if (hasTargeting() != other.hasTargeting()) return false;
       if (hasTargeting()) {
-        result = result && getTargeting()
-            .equals(other.getTargeting());
+        if (!getTargeting()
+            .equals(other.getTargeting())) return false;
       }
-      result = result && getChannelList()
-          .equals(other.getChannelList());
-      result = result && getTagList()
-          .equals(other.getTagList());
-      result = result && getGroupList()
-          .equals(other.getGroupList());
-      result = result && (hasPublished() == other.hasPublished());
+      if (!getChannelList()
+          .equals(other.getChannelList())) return false;
+      if (!getTagList()
+          .equals(other.getTagList())) return false;
+      if (!getGroupList()
+          .equals(other.getGroupList())) return false;
+      if (hasPublished() != other.hasPublished()) return false;
       if (hasPublished()) {
-        result = result && getPublished()
-            .equals(other.getPublished());
+        if (!getPublished()
+            .equals(other.getPublished())) return false;
       }
-      result = result && (hasCreated() == other.hasCreated());
+      if (hasCreated() != other.hasCreated()) return false;
       if (hasCreated()) {
-        result = result && getCreated()
-            .equals(other.getCreated());
+        if (!getCreated()
+            .equals(other.getCreated())) return false;
       }
-      result = result && (hasModified() == other.hasModified());
+      if (hasModified() != other.hasModified()) return false;
       if (hasModified()) {
-        result = result && getModified()
-            .equals(other.getModified());
+        if (!getModified()
+            .equals(other.getModified())) return false;
       }
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -8096,7 +8082,7 @@ public final class MarketingCampaign {
           result.targeting_ = targetingBuilder_.build();
         }
         if (channelBuilder_ == null) {
-          if (((bitField0_ & 0x00000040) == 0x00000040)) {
+          if (((bitField0_ & 0x00000040) != 0)) {
             channel_ = java.util.Collections.unmodifiableList(channel_);
             bitField0_ = (bitField0_ & ~0x00000040);
           }
@@ -8105,7 +8091,7 @@ public final class MarketingCampaign {
           result.channel_ = channelBuilder_.build();
         }
         if (tagBuilder_ == null) {
-          if (((bitField0_ & 0x00000080) == 0x00000080)) {
+          if (((bitField0_ & 0x00000080) != 0)) {
             tag_ = java.util.Collections.unmodifiableList(tag_);
             bitField0_ = (bitField0_ & ~0x00000080);
           }
@@ -8114,7 +8100,7 @@ public final class MarketingCampaign {
           result.tag_ = tagBuilder_.build();
         }
         if (groupBuilder_ == null) {
-          if (((bitField0_ & 0x00000100) == 0x00000100)) {
+          if (((bitField0_ & 0x00000100) != 0)) {
             group_ = java.util.Collections.unmodifiableList(group_);
             bitField0_ = (bitField0_ & ~0x00000100);
           }
@@ -8144,35 +8130,35 @@ public final class MarketingCampaign {
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -8323,7 +8309,7 @@ public final class MarketingCampaign {
       }
       private int bitField0_;
 
-      private io.bloombox.schema.marketing.MarketingCampaign.CampaignKey key_ = null;
+      private io.bloombox.schema.marketing.MarketingCampaign.CampaignKey key_;
       private com.google.protobuf.SingleFieldBuilderV3<
           io.bloombox.schema.marketing.MarketingCampaign.CampaignKey, io.bloombox.schema.marketing.MarketingCampaign.CampaignKey.Builder, io.bloombox.schema.marketing.MarketingCampaign.CampaignKeyOrBuilder> keyBuilder_;
       /**
@@ -8757,7 +8743,7 @@ public final class MarketingCampaign {
         return this;
       }
 
-      private io.bloombox.schema.marketing.MarketingCampaign.CampaignTargeting targeting_ = null;
+      private io.bloombox.schema.marketing.MarketingCampaign.CampaignTargeting targeting_;
       private com.google.protobuf.SingleFieldBuilderV3<
           io.bloombox.schema.marketing.MarketingCampaign.CampaignTargeting, io.bloombox.schema.marketing.MarketingCampaign.CampaignTargeting.Builder, io.bloombox.schema.marketing.MarketingCampaign.CampaignTargetingOrBuilder> targetingBuilder_;
       /**
@@ -8913,7 +8899,7 @@ public final class MarketingCampaign {
       private java.util.List<io.bloombox.schema.marketing.MarketingCampaign.ChannelSettings> channel_ =
         java.util.Collections.emptyList();
       private void ensureChannelIsMutable() {
-        if (!((bitField0_ & 0x00000040) == 0x00000040)) {
+        if (!((bitField0_ & 0x00000040) != 0)) {
           channel_ = new java.util.ArrayList<io.bloombox.schema.marketing.MarketingCampaign.ChannelSettings>(channel_);
           bitField0_ |= 0x00000040;
          }
@@ -9214,7 +9200,7 @@ public final class MarketingCampaign {
           channelBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
               io.bloombox.schema.marketing.MarketingCampaign.ChannelSettings, io.bloombox.schema.marketing.MarketingCampaign.ChannelSettings.Builder, io.bloombox.schema.marketing.MarketingCampaign.ChannelSettingsOrBuilder>(
                   channel_,
-                  ((bitField0_ & 0x00000040) == 0x00000040),
+                  ((bitField0_ & 0x00000040) != 0),
                   getParentForChildren(),
                   isClean());
           channel_ = null;
@@ -9225,7 +9211,7 @@ public final class MarketingCampaign {
       private java.util.List<io.bloombox.schema.marketing.MarketingCampaign.CampaignTag> tag_ =
         java.util.Collections.emptyList();
       private void ensureTagIsMutable() {
-        if (!((bitField0_ & 0x00000080) == 0x00000080)) {
+        if (!((bitField0_ & 0x00000080) != 0)) {
           tag_ = new java.util.ArrayList<io.bloombox.schema.marketing.MarketingCampaign.CampaignTag>(tag_);
           bitField0_ |= 0x00000080;
          }
@@ -9526,7 +9512,7 @@ public final class MarketingCampaign {
           tagBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
               io.bloombox.schema.marketing.MarketingCampaign.CampaignTag, io.bloombox.schema.marketing.MarketingCampaign.CampaignTag.Builder, io.bloombox.schema.marketing.MarketingCampaign.CampaignTagOrBuilder>(
                   tag_,
-                  ((bitField0_ & 0x00000080) == 0x00000080),
+                  ((bitField0_ & 0x00000080) != 0),
                   getParentForChildren(),
                   isClean());
           tag_ = null;
@@ -9537,7 +9523,7 @@ public final class MarketingCampaign {
       private java.util.List<io.bloombox.schema.marketing.MarketingCampaign.AdGroup> group_ =
         java.util.Collections.emptyList();
       private void ensureGroupIsMutable() {
-        if (!((bitField0_ & 0x00000100) == 0x00000100)) {
+        if (!((bitField0_ & 0x00000100) != 0)) {
           group_ = new java.util.ArrayList<io.bloombox.schema.marketing.MarketingCampaign.AdGroup>(group_);
           bitField0_ |= 0x00000100;
          }
@@ -9838,7 +9824,7 @@ public final class MarketingCampaign {
           groupBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
               io.bloombox.schema.marketing.MarketingCampaign.AdGroup, io.bloombox.schema.marketing.MarketingCampaign.AdGroup.Builder, io.bloombox.schema.marketing.MarketingCampaign.AdGroupOrBuilder>(
                   group_,
-                  ((bitField0_ & 0x00000100) == 0x00000100),
+                  ((bitField0_ & 0x00000100) != 0),
                   getParentForChildren(),
                   isClean());
           group_ = null;
@@ -9846,7 +9832,7 @@ public final class MarketingCampaign {
         return groupBuilder_;
       }
 
-      private io.opencannabis.schema.temporal.TemporalInstant.Instant published_ = null;
+      private io.opencannabis.schema.temporal.TemporalInstant.Instant published_;
       private com.google.protobuf.SingleFieldBuilderV3<
           io.opencannabis.schema.temporal.TemporalInstant.Instant, io.opencannabis.schema.temporal.TemporalInstant.Instant.Builder, io.opencannabis.schema.temporal.TemporalInstant.InstantOrBuilder> publishedBuilder_;
       /**
@@ -9999,7 +9985,7 @@ public final class MarketingCampaign {
         return publishedBuilder_;
       }
 
-      private io.opencannabis.schema.temporal.TemporalInstant.Instant created_ = null;
+      private io.opencannabis.schema.temporal.TemporalInstant.Instant created_;
       private com.google.protobuf.SingleFieldBuilderV3<
           io.opencannabis.schema.temporal.TemporalInstant.Instant, io.opencannabis.schema.temporal.TemporalInstant.Instant.Builder, io.opencannabis.schema.temporal.TemporalInstant.InstantOrBuilder> createdBuilder_;
       /**
@@ -10152,7 +10138,7 @@ public final class MarketingCampaign {
         return createdBuilder_;
       }
 
-      private io.opencannabis.schema.temporal.TemporalInstant.Instant modified_ = null;
+      private io.opencannabis.schema.temporal.TemporalInstant.Instant modified_;
       private com.google.protobuf.SingleFieldBuilderV3<
           io.opencannabis.schema.temporal.TemporalInstant.Instant, io.opencannabis.schema.temporal.TemporalInstant.Instant.Builder, io.opencannabis.schema.temporal.TemporalInstant.InstantOrBuilder> modifiedBuilder_;
       /**
@@ -10307,7 +10293,7 @@ public final class MarketingCampaign {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override

@@ -1,12 +1,11 @@
 /*
- * Copyright 2018, Momentum Ideas, Co. All rights reserved.
+ * Copyright 2019, Momentum Ideas Co.
  *
- * Source and object computer code contained herein is the private intellectual
- * property of Momentum Ideas Co., a Delaware Corporation. Use of this
- * code in source form requires permission in writing before use or the
- * assembly, distribution, or publishing of derivative works, for commercial
- * purposes or any other purpose, from a duly authorized officer of Momentum
- * Ideas Co.
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *  http://www.apache.org/licenses/LICENSE-2.0
  *
  * Unless required by applicable law or agreed to in writing, software
  * distributed under the License is distributed on an "AS IS" BASIS,
@@ -92,7 +91,7 @@ private static final long serialVersionUID = 0L;
             break;
           }
           case 26: {
-            if (!((mutable_bitField0_ & 0x00000004) == 0x00000004)) {
+            if (!((mutable_bitField0_ & 0x00000004) != 0)) {
               discounts_ = new java.util.ArrayList<io.opencannabis.schema.product.struct.SaleDescriptor>();
               mutable_bitField0_ |= 0x00000004;
             }
@@ -101,7 +100,7 @@ private static final long serialVersionUID = 0L;
             break;
           }
           default: {
-            if (!parseUnknownFieldProto3(
+            if (!parseUnknownField(
                 input, unknownFields, extensionRegistry, tag)) {
               done = true;
             }
@@ -115,7 +114,7 @@ private static final long serialVersionUID = 0L;
       throw new com.google.protobuf.InvalidProtocolBufferException(
           e).setUnfinishedMessage(this);
     } finally {
-      if (((mutable_bitField0_ & 0x00000004) == 0x00000004)) {
+      if (((mutable_bitField0_ & 0x00000004) != 0)) {
         discounts_ = java.util.Collections.unmodifiableList(discounts_);
       }
       this.unknownFields = unknownFields.build();
@@ -316,21 +315,20 @@ private static final long serialVersionUID = 0L;
     }
     io.opencannabis.schema.product.struct.UnitPricingDescriptor other = (io.opencannabis.schema.product.struct.UnitPricingDescriptor) obj;
 
-    boolean result = true;
-    result = result && (hasPrice() == other.hasPrice());
+    if (hasPrice() != other.hasPrice()) return false;
     if (hasPrice()) {
-      result = result && getPrice()
-          .equals(other.getPrice());
+      if (!getPrice()
+          .equals(other.getPrice())) return false;
     }
-    result = result && (hasStatus() == other.hasStatus());
+    if (hasStatus() != other.hasStatus()) return false;
     if (hasStatus()) {
-      result = result && getStatus()
-          .equals(other.getStatus());
+      if (!getStatus()
+          .equals(other.getStatus())) return false;
     }
-    result = result && getDiscountsList()
-        .equals(other.getDiscountsList());
-    result = result && unknownFields.equals(other.unknownFields);
-    return result;
+    if (!getDiscountsList()
+        .equals(other.getDiscountsList())) return false;
+    if (!unknownFields.equals(other.unknownFields)) return false;
+    return true;
   }
 
   @java.lang.Override
@@ -548,7 +546,7 @@ private static final long serialVersionUID = 0L;
         result.status_ = statusBuilder_.build();
       }
       if (discountsBuilder_ == null) {
-        if (((bitField0_ & 0x00000004) == 0x00000004)) {
+        if (((bitField0_ & 0x00000004) != 0)) {
           discounts_ = java.util.Collections.unmodifiableList(discounts_);
           bitField0_ = (bitField0_ & ~0x00000004);
         }
@@ -563,35 +561,35 @@ private static final long serialVersionUID = 0L;
 
     @java.lang.Override
     public Builder clone() {
-      return (Builder) super.clone();
+      return super.clone();
     }
     @java.lang.Override
     public Builder setField(
         com.google.protobuf.Descriptors.FieldDescriptor field,
         java.lang.Object value) {
-      return (Builder) super.setField(field, value);
+      return super.setField(field, value);
     }
     @java.lang.Override
     public Builder clearField(
         com.google.protobuf.Descriptors.FieldDescriptor field) {
-      return (Builder) super.clearField(field);
+      return super.clearField(field);
     }
     @java.lang.Override
     public Builder clearOneof(
         com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-      return (Builder) super.clearOneof(oneof);
+      return super.clearOneof(oneof);
     }
     @java.lang.Override
     public Builder setRepeatedField(
         com.google.protobuf.Descriptors.FieldDescriptor field,
         int index, java.lang.Object value) {
-      return (Builder) super.setRepeatedField(field, index, value);
+      return super.setRepeatedField(field, index, value);
     }
     @java.lang.Override
     public Builder addRepeatedField(
         com.google.protobuf.Descriptors.FieldDescriptor field,
         java.lang.Object value) {
-      return (Builder) super.addRepeatedField(field, value);
+      return super.addRepeatedField(field, value);
     }
     @java.lang.Override
     public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -667,7 +665,7 @@ private static final long serialVersionUID = 0L;
     }
     private int bitField0_;
 
-    private io.opencannabis.schema.currency.CommerceCurrency.CurrencyValue price_ = null;
+    private io.opencannabis.schema.currency.CommerceCurrency.CurrencyValue price_;
     private com.google.protobuf.SingleFieldBuilderV3<
         io.opencannabis.schema.currency.CommerceCurrency.CurrencyValue, io.opencannabis.schema.currency.CommerceCurrency.CurrencyValue.Builder, io.opencannabis.schema.currency.CommerceCurrency.CurrencyValueOrBuilder> priceBuilder_;
     /**
@@ -820,7 +818,7 @@ private static final long serialVersionUID = 0L;
       return priceBuilder_;
     }
 
-    private io.opencannabis.schema.product.struct.PricingTierAvailability status_ = null;
+    private io.opencannabis.schema.product.struct.PricingTierAvailability status_;
     private com.google.protobuf.SingleFieldBuilderV3<
         io.opencannabis.schema.product.struct.PricingTierAvailability, io.opencannabis.schema.product.struct.PricingTierAvailability.Builder, io.opencannabis.schema.product.struct.PricingTierAvailabilityOrBuilder> statusBuilder_;
     /**
@@ -976,7 +974,7 @@ private static final long serialVersionUID = 0L;
     private java.util.List<io.opencannabis.schema.product.struct.SaleDescriptor> discounts_ =
       java.util.Collections.emptyList();
     private void ensureDiscountsIsMutable() {
-      if (!((bitField0_ & 0x00000004) == 0x00000004)) {
+      if (!((bitField0_ & 0x00000004) != 0)) {
         discounts_ = new java.util.ArrayList<io.opencannabis.schema.product.struct.SaleDescriptor>(discounts_);
         bitField0_ |= 0x00000004;
        }
@@ -1277,7 +1275,7 @@ private static final long serialVersionUID = 0L;
         discountsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
             io.opencannabis.schema.product.struct.SaleDescriptor, io.opencannabis.schema.product.struct.SaleDescriptor.Builder, io.opencannabis.schema.product.struct.SaleDescriptorOrBuilder>(
                 discounts_,
-                ((bitField0_ & 0x00000004) == 0x00000004),
+                ((bitField0_ & 0x00000004) != 0),
                 getParentForChildren(),
                 isClean());
         discounts_ = null;
@@ -1287,7 +1285,7 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public final Builder setUnknownFields(
         final com.google.protobuf.UnknownFieldSet unknownFields) {
-      return super.setUnknownFieldsProto3(unknownFields);
+      return super.setUnknownFields(unknownFields);
     }
 
     @java.lang.Override

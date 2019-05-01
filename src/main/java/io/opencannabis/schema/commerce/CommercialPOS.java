@@ -1,12 +1,11 @@
 /*
- * Copyright 2018, Momentum Ideas, Co. All rights reserved.
+ * Copyright 2019, Momentum Ideas Co.
  *
- * Source and object computer code contained herein is the private intellectual
- * property of Momentum Ideas Co., a Delaware Corporation. Use of this
- * code in source form requires permission in writing before use or the
- * assembly, distribution, or publishing of derivative works, for commercial
- * purposes or any other purpose, from a duly authorized officer of Momentum
- * Ideas Co.
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *  http://www.apache.org/licenses/LICENSE-2.0
  *
  * Unless required by applicable law or agreed to in writing, software
  * distributed under the License is distributed on an "AS IS" BASIS,
@@ -470,7 +469,7 @@ public final class CommercialPOS {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -878,7 +877,6 @@ public final class CommercialPOS {
       }
       private Features() {
         feature_ = java.util.Collections.emptyList();
-        drawers_ = 0;
       }
 
       @java.lang.Override
@@ -907,7 +905,7 @@ public final class CommercialPOS {
                 break;
               case 8: {
                 int rawValue = input.readEnum();
-                if (!((mutable_bitField0_ & 0x00000001) == 0x00000001)) {
+                if (!((mutable_bitField0_ & 0x00000001) != 0)) {
                   feature_ = new java.util.ArrayList<java.lang.Integer>();
                   mutable_bitField0_ |= 0x00000001;
                 }
@@ -919,7 +917,7 @@ public final class CommercialPOS {
                 int oldLimit = input.pushLimit(length);
                 while(input.getBytesUntilLimit() > 0) {
                   int rawValue = input.readEnum();
-                  if (!((mutable_bitField0_ & 0x00000001) == 0x00000001)) {
+                  if (!((mutable_bitField0_ & 0x00000001) != 0)) {
                     feature_ = new java.util.ArrayList<java.lang.Integer>();
                     mutable_bitField0_ |= 0x00000001;
                   }
@@ -934,7 +932,7 @@ public final class CommercialPOS {
                 break;
               }
               default: {
-                if (!parseUnknownFieldProto3(
+                if (!parseUnknownField(
                     input, unknownFields, extensionRegistry, tag)) {
                   done = true;
                 }
@@ -948,7 +946,7 @@ public final class CommercialPOS {
           throw new com.google.protobuf.InvalidProtocolBufferException(
               e).setUnfinishedMessage(this);
         } finally {
-          if (((mutable_bitField0_ & 0x00000001) == 0x00000001)) {
+          if (((mutable_bitField0_ & 0x00000001) != 0)) {
             feature_ = java.util.Collections.unmodifiableList(feature_);
           }
           this.unknownFields = unknownFields.build();
@@ -1113,12 +1111,11 @@ public final class CommercialPOS {
         }
         io.opencannabis.schema.commerce.CommercialPOS.POSHardware.Features other = (io.opencannabis.schema.commerce.CommercialPOS.POSHardware.Features) obj;
 
-        boolean result = true;
-        result = result && feature_.equals(other.feature_);
-        result = result && (getDrawers()
-            == other.getDrawers());
-        result = result && unknownFields.equals(other.unknownFields);
-        return result;
+        if (!feature_.equals(other.feature_)) return false;
+        if (getDrawers()
+            != other.getDrawers()) return false;
+        if (!unknownFields.equals(other.unknownFields)) return false;
+        return true;
       }
 
       @java.lang.Override
@@ -1303,7 +1300,7 @@ public final class CommercialPOS {
           io.opencannabis.schema.commerce.CommercialPOS.POSHardware.Features result = new io.opencannabis.schema.commerce.CommercialPOS.POSHardware.Features(this);
           int from_bitField0_ = bitField0_;
           int to_bitField0_ = 0;
-          if (((bitField0_ & 0x00000001) == 0x00000001)) {
+          if (((bitField0_ & 0x00000001) != 0)) {
             feature_ = java.util.Collections.unmodifiableList(feature_);
             bitField0_ = (bitField0_ & ~0x00000001);
           }
@@ -1316,35 +1313,35 @@ public final class CommercialPOS {
 
         @java.lang.Override
         public Builder clone() {
-          return (Builder) super.clone();
+          return super.clone();
         }
         @java.lang.Override
         public Builder setField(
             com.google.protobuf.Descriptors.FieldDescriptor field,
             java.lang.Object value) {
-          return (Builder) super.setField(field, value);
+          return super.setField(field, value);
         }
         @java.lang.Override
         public Builder clearField(
             com.google.protobuf.Descriptors.FieldDescriptor field) {
-          return (Builder) super.clearField(field);
+          return super.clearField(field);
         }
         @java.lang.Override
         public Builder clearOneof(
             com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-          return (Builder) super.clearOneof(oneof);
+          return super.clearOneof(oneof);
         }
         @java.lang.Override
         public Builder setRepeatedField(
             com.google.protobuf.Descriptors.FieldDescriptor field,
             int index, java.lang.Object value) {
-          return (Builder) super.setRepeatedField(field, index, value);
+          return super.setRepeatedField(field, index, value);
         }
         @java.lang.Override
         public Builder addRepeatedField(
             com.google.protobuf.Descriptors.FieldDescriptor field,
             java.lang.Object value) {
-          return (Builder) super.addRepeatedField(field, value);
+          return super.addRepeatedField(field, value);
         }
         @java.lang.Override
         public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -1404,7 +1401,7 @@ public final class CommercialPOS {
         private java.util.List<java.lang.Integer> feature_ =
           java.util.Collections.emptyList();
         private void ensureFeatureIsMutable() {
-          if (!((bitField0_ & 0x00000001) == 0x00000001)) {
+          if (!((bitField0_ & 0x00000001) != 0)) {
             feature_ = new java.util.ArrayList<java.lang.Integer>(feature_);
             bitField0_ |= 0x00000001;
           }
@@ -1607,7 +1604,7 @@ public final class CommercialPOS {
         @java.lang.Override
         public final Builder setUnknownFields(
             final com.google.protobuf.UnknownFieldSet unknownFields) {
-          return super.setUnknownFieldsProto3(unknownFields);
+          return super.setUnknownFields(unknownFields);
         }
 
         @java.lang.Override
@@ -1815,17 +1812,16 @@ public final class CommercialPOS {
       }
       io.opencannabis.schema.commerce.CommercialPOS.POSHardware other = (io.opencannabis.schema.commerce.CommercialPOS.POSHardware) obj;
 
-      boolean result = true;
-      result = result && type_ == other.type_;
-      result = result && (hasSupport() == other.hasSupport());
+      if (type_ != other.type_) return false;
+      if (hasSupport() != other.hasSupport()) return false;
       if (hasSupport()) {
-        result = result && getSupport()
-            .equals(other.getSupport());
+        if (!getSupport()
+            .equals(other.getSupport())) return false;
       }
-      result = result && getVersion()
-          .equals(other.getVersion());
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!getVersion()
+          .equals(other.getVersion())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -2029,35 +2025,35 @@ public final class CommercialPOS {
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -2175,7 +2171,7 @@ public final class CommercialPOS {
         return this;
       }
 
-      private io.opencannabis.schema.commerce.CommercialPOS.POSHardware.Features support_ = null;
+      private io.opencannabis.schema.commerce.CommercialPOS.POSHardware.Features support_;
       private com.google.protobuf.SingleFieldBuilderV3<
           io.opencannabis.schema.commerce.CommercialPOS.POSHardware.Features, io.opencannabis.schema.commerce.CommercialPOS.POSHardware.Features.Builder, io.opencannabis.schema.commerce.CommercialPOS.POSHardware.FeaturesOrBuilder> supportBuilder_;
       /**
@@ -2419,7 +2415,7 @@ public final class CommercialPOS {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -2838,7 +2834,7 @@ public final class CommercialPOS {
               break;
             }
             case 58: {
-              if (!((mutable_bitField0_ & 0x00000040) == 0x00000040)) {
+              if (!((mutable_bitField0_ & 0x00000040) != 0)) {
                 session_ = new java.util.ArrayList<io.opencannabis.schema.commerce.CommercialPOS.PointOfSaleSession>();
                 mutable_bitField0_ |= 0x00000040;
               }
@@ -2899,7 +2895,7 @@ public final class CommercialPOS {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -2913,7 +2909,7 @@ public final class CommercialPOS {
         throw new com.google.protobuf.InvalidProtocolBufferException(
             e).setUnfinishedMessage(this);
       } finally {
-        if (((mutable_bitField0_ & 0x00000040) == 0x00000040)) {
+        if (((mutable_bitField0_ & 0x00000040) != 0)) {
           session_ = java.util.Collections.unmodifiableList(session_);
         }
         this.unknownFields = unknownFields.build();
@@ -3450,48 +3446,47 @@ public final class CommercialPOS {
       }
       io.opencannabis.schema.commerce.CommercialPOS.PointOfSaleDevice other = (io.opencannabis.schema.commerce.CommercialPOS.PointOfSaleDevice) obj;
 
-      boolean result = true;
-      result = result && getUuid()
-          .equals(other.getUuid());
-      result = result && getName()
-          .equals(other.getName());
-      result = result && status_ == other.status_;
-      result = result && getClaim()
-          .equals(other.getClaim());
-      result = result && (hasHardware() == other.hasHardware());
+      if (!getUuid()
+          .equals(other.getUuid())) return false;
+      if (!getName()
+          .equals(other.getName())) return false;
+      if (status_ != other.status_) return false;
+      if (!getClaim()
+          .equals(other.getClaim())) return false;
+      if (hasHardware() != other.hasHardware()) return false;
       if (hasHardware()) {
-        result = result && getHardware()
-            .equals(other.getHardware());
+        if (!getHardware()
+            .equals(other.getHardware())) return false;
       }
-      result = result && (hasApp() == other.hasApp());
+      if (hasApp() != other.hasApp()) return false;
       if (hasApp()) {
-        result = result && getApp()
-            .equals(other.getApp());
+        if (!getApp()
+            .equals(other.getApp())) return false;
       }
-      result = result && getSessionList()
-          .equals(other.getSessionList());
-      result = result && (hasState() == other.hasState());
+      if (!getSessionList()
+          .equals(other.getSessionList())) return false;
+      if (hasState() != other.hasState()) return false;
       if (hasState()) {
-        result = result && getState()
-            .equals(other.getState());
+        if (!getState()
+            .equals(other.getState())) return false;
       }
-      result = result && (hasSeen() == other.hasSeen());
+      if (hasSeen() != other.hasSeen()) return false;
       if (hasSeen()) {
-        result = result && getSeen()
-            .equals(other.getSeen());
+        if (!getSeen()
+            .equals(other.getSeen())) return false;
       }
-      result = result && (hasCreated() == other.hasCreated());
+      if (hasCreated() != other.hasCreated()) return false;
       if (hasCreated()) {
-        result = result && getCreated()
-            .equals(other.getCreated());
+        if (!getCreated()
+            .equals(other.getCreated())) return false;
       }
-      result = result && (hasModified() == other.hasModified());
+      if (hasModified() != other.hasModified()) return false;
       if (hasModified()) {
-        result = result && getModified()
-            .equals(other.getModified());
+        if (!getModified()
+            .equals(other.getModified())) return false;
       }
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -3769,7 +3764,7 @@ public final class CommercialPOS {
           result.app_ = appBuilder_.build();
         }
         if (sessionBuilder_ == null) {
-          if (((bitField0_ & 0x00000040) == 0x00000040)) {
+          if (((bitField0_ & 0x00000040) != 0)) {
             session_ = java.util.Collections.unmodifiableList(session_);
             bitField0_ = (bitField0_ & ~0x00000040);
           }
@@ -3804,35 +3799,35 @@ public final class CommercialPOS {
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -4267,7 +4262,7 @@ public final class CommercialPOS {
         return this;
       }
 
-      private io.opencannabis.schema.commerce.CommercialPOS.POSHardware hardware_ = null;
+      private io.opencannabis.schema.commerce.CommercialPOS.POSHardware hardware_;
       private com.google.protobuf.SingleFieldBuilderV3<
           io.opencannabis.schema.commerce.CommercialPOS.POSHardware, io.opencannabis.schema.commerce.CommercialPOS.POSHardware.Builder, io.opencannabis.schema.commerce.CommercialPOS.POSHardwareOrBuilder> hardwareBuilder_;
       /**
@@ -4420,7 +4415,7 @@ public final class CommercialPOS {
         return hardwareBuilder_;
       }
 
-      private io.bloombox.schema.telemetry.context.ApplicationContext.DeviceApplication app_ = null;
+      private io.bloombox.schema.telemetry.context.ApplicationContext.DeviceApplication app_;
       private com.google.protobuf.SingleFieldBuilderV3<
           io.bloombox.schema.telemetry.context.ApplicationContext.DeviceApplication, io.bloombox.schema.telemetry.context.ApplicationContext.DeviceApplication.Builder, io.bloombox.schema.telemetry.context.ApplicationContext.DeviceApplicationOrBuilder> appBuilder_;
       /**
@@ -4576,7 +4571,7 @@ public final class CommercialPOS {
       private java.util.List<io.opencannabis.schema.commerce.CommercialPOS.PointOfSaleSession> session_ =
         java.util.Collections.emptyList();
       private void ensureSessionIsMutable() {
-        if (!((bitField0_ & 0x00000040) == 0x00000040)) {
+        if (!((bitField0_ & 0x00000040) != 0)) {
           session_ = new java.util.ArrayList<io.opencannabis.schema.commerce.CommercialPOS.PointOfSaleSession>(session_);
           bitField0_ |= 0x00000040;
          }
@@ -4877,7 +4872,7 @@ public final class CommercialPOS {
           sessionBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
               io.opencannabis.schema.commerce.CommercialPOS.PointOfSaleSession, io.opencannabis.schema.commerce.CommercialPOS.PointOfSaleSession.Builder, io.opencannabis.schema.commerce.CommercialPOS.PointOfSaleSessionOrBuilder>(
                   session_,
-                  ((bitField0_ & 0x00000040) == 0x00000040),
+                  ((bitField0_ & 0x00000040) != 0),
                   getParentForChildren(),
                   isClean());
           session_ = null;
@@ -4885,7 +4880,7 @@ public final class CommercialPOS {
         return sessionBuilder_;
       }
 
-      private io.opencannabis.schema.commerce.CommercialPOS.PointOfSaleState state_ = null;
+      private io.opencannabis.schema.commerce.CommercialPOS.PointOfSaleState state_;
       private com.google.protobuf.SingleFieldBuilderV3<
           io.opencannabis.schema.commerce.CommercialPOS.PointOfSaleState, io.opencannabis.schema.commerce.CommercialPOS.PointOfSaleState.Builder, io.opencannabis.schema.commerce.CommercialPOS.PointOfSaleStateOrBuilder> stateBuilder_;
       /**
@@ -5038,7 +5033,7 @@ public final class CommercialPOS {
         return stateBuilder_;
       }
 
-      private io.opencannabis.schema.temporal.TemporalInstant.Instant seen_ = null;
+      private io.opencannabis.schema.temporal.TemporalInstant.Instant seen_;
       private com.google.protobuf.SingleFieldBuilderV3<
           io.opencannabis.schema.temporal.TemporalInstant.Instant, io.opencannabis.schema.temporal.TemporalInstant.Instant.Builder, io.opencannabis.schema.temporal.TemporalInstant.InstantOrBuilder> seenBuilder_;
       /**
@@ -5191,7 +5186,7 @@ public final class CommercialPOS {
         return seenBuilder_;
       }
 
-      private io.opencannabis.schema.temporal.TemporalInstant.Instant created_ = null;
+      private io.opencannabis.schema.temporal.TemporalInstant.Instant created_;
       private com.google.protobuf.SingleFieldBuilderV3<
           io.opencannabis.schema.temporal.TemporalInstant.Instant, io.opencannabis.schema.temporal.TemporalInstant.Instant.Builder, io.opencannabis.schema.temporal.TemporalInstant.InstantOrBuilder> createdBuilder_;
       /**
@@ -5344,7 +5339,7 @@ public final class CommercialPOS {
         return createdBuilder_;
       }
 
-      private io.opencannabis.schema.temporal.TemporalInstant.Instant modified_ = null;
+      private io.opencannabis.schema.temporal.TemporalInstant.Instant modified_;
       private com.google.protobuf.SingleFieldBuilderV3<
           io.opencannabis.schema.temporal.TemporalInstant.Instant, io.opencannabis.schema.temporal.TemporalInstant.Instant.Builder, io.opencannabis.schema.temporal.TemporalInstant.InstantOrBuilder> modifiedBuilder_;
       /**
@@ -5499,7 +5494,7 @@ public final class CommercialPOS {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -5730,7 +5725,7 @@ public final class CommercialPOS {
               break;
             }
             case 18: {
-              if (!((mutable_bitField0_ & 0x00000002) == 0x00000002)) {
+              if (!((mutable_bitField0_ & 0x00000002) != 0)) {
                 transaction_ = new java.util.ArrayList<io.opencannabis.schema.commerce.CommercialPurchase.PurchaseKey>();
                 mutable_bitField0_ |= 0x00000002;
               }
@@ -5765,7 +5760,7 @@ public final class CommercialPOS {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -5779,7 +5774,7 @@ public final class CommercialPOS {
         throw new com.google.protobuf.InvalidProtocolBufferException(
             e).setUnfinishedMessage(this);
       } finally {
-        if (((mutable_bitField0_ & 0x00000002) == 0x00000002)) {
+        if (((mutable_bitField0_ & 0x00000002) != 0)) {
           transaction_ = java.util.Collections.unmodifiableList(transaction_);
         }
         this.unknownFields = unknownFields.build();
@@ -5923,7 +5918,7 @@ public final class CommercialPOS {
                 break;
               }
               default: {
-                if (!parseUnknownFieldProto3(
+                if (!parseUnknownField(
                     input, unknownFields, extensionRegistry, tag)) {
                   done = true;
                 }
@@ -6072,19 +6067,18 @@ public final class CommercialPOS {
         }
         io.opencannabis.schema.commerce.CommercialPOS.PointOfSaleState.SessionOpen other = (io.opencannabis.schema.commerce.CommercialPOS.PointOfSaleState.SessionOpen) obj;
 
-        boolean result = true;
-        result = result && (hasOpeningFloat() == other.hasOpeningFloat());
+        if (hasOpeningFloat() != other.hasOpeningFloat()) return false;
         if (hasOpeningFloat()) {
-          result = result && getOpeningFloat()
-              .equals(other.getOpeningFloat());
+          if (!getOpeningFloat()
+              .equals(other.getOpeningFloat())) return false;
         }
-        result = result && (hasOccurred() == other.hasOccurred());
+        if (hasOccurred() != other.hasOccurred()) return false;
         if (hasOccurred()) {
-          result = result && getOccurred()
-              .equals(other.getOccurred());
+          if (!getOccurred()
+              .equals(other.getOccurred())) return false;
         }
-        result = result && unknownFields.equals(other.unknownFields);
-        return result;
+        if (!unknownFields.equals(other.unknownFields)) return false;
+        return true;
       }
 
       @java.lang.Override
@@ -6293,35 +6287,35 @@ public final class CommercialPOS {
 
         @java.lang.Override
         public Builder clone() {
-          return (Builder) super.clone();
+          return super.clone();
         }
         @java.lang.Override
         public Builder setField(
             com.google.protobuf.Descriptors.FieldDescriptor field,
             java.lang.Object value) {
-          return (Builder) super.setField(field, value);
+          return super.setField(field, value);
         }
         @java.lang.Override
         public Builder clearField(
             com.google.protobuf.Descriptors.FieldDescriptor field) {
-          return (Builder) super.clearField(field);
+          return super.clearField(field);
         }
         @java.lang.Override
         public Builder clearOneof(
             com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-          return (Builder) super.clearOneof(oneof);
+          return super.clearOneof(oneof);
         }
         @java.lang.Override
         public Builder setRepeatedField(
             com.google.protobuf.Descriptors.FieldDescriptor field,
             int index, java.lang.Object value) {
-          return (Builder) super.setRepeatedField(field, index, value);
+          return super.setRepeatedField(field, index, value);
         }
         @java.lang.Override
         public Builder addRepeatedField(
             com.google.protobuf.Descriptors.FieldDescriptor field,
             java.lang.Object value) {
-          return (Builder) super.addRepeatedField(field, value);
+          return super.addRepeatedField(field, value);
         }
         @java.lang.Override
         public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -6370,7 +6364,7 @@ public final class CommercialPOS {
           return this;
         }
 
-        private io.opencannabis.schema.currency.CommerceCurrency.CurrencyValue openingFloat_ = null;
+        private io.opencannabis.schema.currency.CommerceCurrency.CurrencyValue openingFloat_;
         private com.google.protobuf.SingleFieldBuilderV3<
             io.opencannabis.schema.currency.CommerceCurrency.CurrencyValue, io.opencannabis.schema.currency.CommerceCurrency.CurrencyValue.Builder, io.opencannabis.schema.currency.CommerceCurrency.CurrencyValueOrBuilder> openingFloatBuilder_;
         /**
@@ -6523,7 +6517,7 @@ public final class CommercialPOS {
           return openingFloatBuilder_;
         }
 
-        private io.opencannabis.schema.temporal.TemporalInstant.Instant occurred_ = null;
+        private io.opencannabis.schema.temporal.TemporalInstant.Instant occurred_;
         private com.google.protobuf.SingleFieldBuilderV3<
             io.opencannabis.schema.temporal.TemporalInstant.Instant, io.opencannabis.schema.temporal.TemporalInstant.Instant.Builder, io.opencannabis.schema.temporal.TemporalInstant.InstantOrBuilder> occurredBuilder_;
         /**
@@ -6678,7 +6672,7 @@ public final class CommercialPOS {
         @java.lang.Override
         public final Builder setUnknownFields(
             final com.google.protobuf.UnknownFieldSet unknownFields) {
-          return super.setUnknownFieldsProto3(unknownFields);
+          return super.setUnknownFields(unknownFields);
         }
 
         @java.lang.Override
@@ -6852,7 +6846,7 @@ public final class CommercialPOS {
                 break;
               }
               default: {
-                if (!parseUnknownFieldProto3(
+                if (!parseUnknownField(
                     input, unknownFields, extensionRegistry, tag)) {
                   done = true;
                 }
@@ -7001,19 +6995,18 @@ public final class CommercialPOS {
         }
         io.opencannabis.schema.commerce.CommercialPOS.PointOfSaleState.SessionClose other = (io.opencannabis.schema.commerce.CommercialPOS.PointOfSaleState.SessionClose) obj;
 
-        boolean result = true;
-        result = result && (hasClosingCount() == other.hasClosingCount());
+        if (hasClosingCount() != other.hasClosingCount()) return false;
         if (hasClosingCount()) {
-          result = result && getClosingCount()
-              .equals(other.getClosingCount());
+          if (!getClosingCount()
+              .equals(other.getClosingCount())) return false;
         }
-        result = result && (hasOccurred() == other.hasOccurred());
+        if (hasOccurred() != other.hasOccurred()) return false;
         if (hasOccurred()) {
-          result = result && getOccurred()
-              .equals(other.getOccurred());
+          if (!getOccurred()
+              .equals(other.getOccurred())) return false;
         }
-        result = result && unknownFields.equals(other.unknownFields);
-        return result;
+        if (!unknownFields.equals(other.unknownFields)) return false;
+        return true;
       }
 
       @java.lang.Override
@@ -7222,35 +7215,35 @@ public final class CommercialPOS {
 
         @java.lang.Override
         public Builder clone() {
-          return (Builder) super.clone();
+          return super.clone();
         }
         @java.lang.Override
         public Builder setField(
             com.google.protobuf.Descriptors.FieldDescriptor field,
             java.lang.Object value) {
-          return (Builder) super.setField(field, value);
+          return super.setField(field, value);
         }
         @java.lang.Override
         public Builder clearField(
             com.google.protobuf.Descriptors.FieldDescriptor field) {
-          return (Builder) super.clearField(field);
+          return super.clearField(field);
         }
         @java.lang.Override
         public Builder clearOneof(
             com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-          return (Builder) super.clearOneof(oneof);
+          return super.clearOneof(oneof);
         }
         @java.lang.Override
         public Builder setRepeatedField(
             com.google.protobuf.Descriptors.FieldDescriptor field,
             int index, java.lang.Object value) {
-          return (Builder) super.setRepeatedField(field, index, value);
+          return super.setRepeatedField(field, index, value);
         }
         @java.lang.Override
         public Builder addRepeatedField(
             com.google.protobuf.Descriptors.FieldDescriptor field,
             java.lang.Object value) {
-          return (Builder) super.addRepeatedField(field, value);
+          return super.addRepeatedField(field, value);
         }
         @java.lang.Override
         public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -7299,7 +7292,7 @@ public final class CommercialPOS {
           return this;
         }
 
-        private io.opencannabis.schema.currency.CommerceCurrency.CurrencyValue closingCount_ = null;
+        private io.opencannabis.schema.currency.CommerceCurrency.CurrencyValue closingCount_;
         private com.google.protobuf.SingleFieldBuilderV3<
             io.opencannabis.schema.currency.CommerceCurrency.CurrencyValue, io.opencannabis.schema.currency.CommerceCurrency.CurrencyValue.Builder, io.opencannabis.schema.currency.CommerceCurrency.CurrencyValueOrBuilder> closingCountBuilder_;
         /**
@@ -7452,7 +7445,7 @@ public final class CommercialPOS {
           return closingCountBuilder_;
         }
 
-        private io.opencannabis.schema.temporal.TemporalInstant.Instant occurred_ = null;
+        private io.opencannabis.schema.temporal.TemporalInstant.Instant occurred_;
         private com.google.protobuf.SingleFieldBuilderV3<
             io.opencannabis.schema.temporal.TemporalInstant.Instant, io.opencannabis.schema.temporal.TemporalInstant.Instant.Builder, io.opencannabis.schema.temporal.TemporalInstant.InstantOrBuilder> occurredBuilder_;
         /**
@@ -7607,7 +7600,7 @@ public final class CommercialPOS {
         @java.lang.Override
         public final Builder setUnknownFields(
             final com.google.protobuf.UnknownFieldSet unknownFields) {
-          return super.setUnknownFieldsProto3(unknownFields);
+          return super.setUnknownFields(unknownFields);
         }
 
         @java.lang.Override
@@ -7878,26 +7871,25 @@ public final class CommercialPOS {
       }
       io.opencannabis.schema.commerce.CommercialPOS.PointOfSaleState other = (io.opencannabis.schema.commerce.CommercialPOS.PointOfSaleState) obj;
 
-      boolean result = true;
-      result = result && (hasOpen() == other.hasOpen());
+      if (hasOpen() != other.hasOpen()) return false;
       if (hasOpen()) {
-        result = result && getOpen()
-            .equals(other.getOpen());
+        if (!getOpen()
+            .equals(other.getOpen())) return false;
       }
-      result = result && getTransactionList()
-          .equals(other.getTransactionList());
-      result = result && (hasCurrent() == other.hasCurrent());
+      if (!getTransactionList()
+          .equals(other.getTransactionList())) return false;
+      if (hasCurrent() != other.hasCurrent()) return false;
       if (hasCurrent()) {
-        result = result && getCurrent()
-            .equals(other.getCurrent());
+        if (!getCurrent()
+            .equals(other.getCurrent())) return false;
       }
-      result = result && (hasClose() == other.hasClose());
+      if (hasClose() != other.hasClose()) return false;
       if (hasClose()) {
-        result = result && getClose()
-            .equals(other.getClose());
+        if (!getClose()
+            .equals(other.getClose())) return false;
       }
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -8119,7 +8111,7 @@ public final class CommercialPOS {
           result.open_ = openBuilder_.build();
         }
         if (transactionBuilder_ == null) {
-          if (((bitField0_ & 0x00000002) == 0x00000002)) {
+          if (((bitField0_ & 0x00000002) != 0)) {
             transaction_ = java.util.Collections.unmodifiableList(transaction_);
             bitField0_ = (bitField0_ & ~0x00000002);
           }
@@ -8144,35 +8136,35 @@ public final class CommercialPOS {
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -8251,7 +8243,7 @@ public final class CommercialPOS {
       }
       private int bitField0_;
 
-      private io.opencannabis.schema.commerce.CommercialPOS.PointOfSaleState.SessionOpen open_ = null;
+      private io.opencannabis.schema.commerce.CommercialPOS.PointOfSaleState.SessionOpen open_;
       private com.google.protobuf.SingleFieldBuilderV3<
           io.opencannabis.schema.commerce.CommercialPOS.PointOfSaleState.SessionOpen, io.opencannabis.schema.commerce.CommercialPOS.PointOfSaleState.SessionOpen.Builder, io.opencannabis.schema.commerce.CommercialPOS.PointOfSaleState.SessionOpenOrBuilder> openBuilder_;
       /**
@@ -8407,7 +8399,7 @@ public final class CommercialPOS {
       private java.util.List<io.opencannabis.schema.commerce.CommercialPurchase.PurchaseKey> transaction_ =
         java.util.Collections.emptyList();
       private void ensureTransactionIsMutable() {
-        if (!((bitField0_ & 0x00000002) == 0x00000002)) {
+        if (!((bitField0_ & 0x00000002) != 0)) {
           transaction_ = new java.util.ArrayList<io.opencannabis.schema.commerce.CommercialPurchase.PurchaseKey>(transaction_);
           bitField0_ |= 0x00000002;
          }
@@ -8708,7 +8700,7 @@ public final class CommercialPOS {
           transactionBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
               io.opencannabis.schema.commerce.CommercialPurchase.PurchaseKey, io.opencannabis.schema.commerce.CommercialPurchase.PurchaseKey.Builder, io.opencannabis.schema.commerce.CommercialPurchase.PurchaseKeyOrBuilder>(
                   transaction_,
-                  ((bitField0_ & 0x00000002) == 0x00000002),
+                  ((bitField0_ & 0x00000002) != 0),
                   getParentForChildren(),
                   isClean());
           transaction_ = null;
@@ -8716,7 +8708,7 @@ public final class CommercialPOS {
         return transactionBuilder_;
       }
 
-      private io.opencannabis.schema.commerce.CommercialPurchase.BillOfCharges current_ = null;
+      private io.opencannabis.schema.commerce.CommercialPurchase.BillOfCharges current_;
       private com.google.protobuf.SingleFieldBuilderV3<
           io.opencannabis.schema.commerce.CommercialPurchase.BillOfCharges, io.opencannabis.schema.commerce.CommercialPurchase.BillOfCharges.Builder, io.opencannabis.schema.commerce.CommercialPurchase.BillOfChargesOrBuilder> currentBuilder_;
       /**
@@ -8869,7 +8861,7 @@ public final class CommercialPOS {
         return currentBuilder_;
       }
 
-      private io.opencannabis.schema.commerce.CommercialPOS.PointOfSaleState.SessionClose close_ = null;
+      private io.opencannabis.schema.commerce.CommercialPOS.PointOfSaleState.SessionClose close_;
       private com.google.protobuf.SingleFieldBuilderV3<
           io.opencannabis.schema.commerce.CommercialPOS.PointOfSaleState.SessionClose, io.opencannabis.schema.commerce.CommercialPOS.PointOfSaleState.SessionClose.Builder, io.opencannabis.schema.commerce.CommercialPOS.PointOfSaleState.SessionCloseOrBuilder> closeBuilder_;
       /**
@@ -9024,7 +9016,7 @@ public final class CommercialPOS {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -9398,7 +9390,6 @@ public final class CommercialPOS {
       super(builder);
     }
     private PurchaseTicket() {
-      version_ = 0;
       status_ = 0;
       claim_ = "";
       item_ = java.util.Collections.emptyList();
@@ -9500,7 +9491,7 @@ public final class CommercialPOS {
               break;
             }
             case 66: {
-              if (!((mutable_bitField0_ & 0x00000080) == 0x00000080)) {
+              if (!((mutable_bitField0_ & 0x00000080) != 0)) {
                 item_ = new java.util.ArrayList<io.opencannabis.schema.commerce.CommercialPurchase.TicketItem>();
                 mutable_bitField0_ |= 0x00000080;
               }
@@ -9509,7 +9500,7 @@ public final class CommercialPOS {
               break;
             }
             case 74: {
-              if (!((mutable_bitField0_ & 0x00000100) == 0x00000100)) {
+              if (!((mutable_bitField0_ & 0x00000100) != 0)) {
                 payment_ = new java.util.ArrayList<io.opencannabis.schema.commerce.CommercialPurchase.Payment>();
                 mutable_bitField0_ |= 0x00000100;
               }
@@ -9518,7 +9509,7 @@ public final class CommercialPOS {
               break;
             }
             case 82: {
-              if (!((mutable_bitField0_ & 0x00000200) == 0x00000200)) {
+              if (!((mutable_bitField0_ & 0x00000200) != 0)) {
                 action_ = new java.util.ArrayList<io.opencannabis.schema.commerce.CommercialPurchase.PurchaseLogEntry>();
                 mutable_bitField0_ |= 0x00000200;
               }
@@ -9540,7 +9531,7 @@ public final class CommercialPOS {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -9554,13 +9545,13 @@ public final class CommercialPOS {
         throw new com.google.protobuf.InvalidProtocolBufferException(
             e).setUnfinishedMessage(this);
       } finally {
-        if (((mutable_bitField0_ & 0x00000080) == 0x00000080)) {
+        if (((mutable_bitField0_ & 0x00000080) != 0)) {
           item_ = java.util.Collections.unmodifiableList(item_);
         }
-        if (((mutable_bitField0_ & 0x00000100) == 0x00000100)) {
+        if (((mutable_bitField0_ & 0x00000100) != 0)) {
           payment_ = java.util.Collections.unmodifiableList(payment_);
         }
-        if (((mutable_bitField0_ & 0x00000200) == 0x00000200)) {
+        if (((mutable_bitField0_ & 0x00000200) != 0)) {
           action_ = java.util.Collections.unmodifiableList(action_);
         }
         this.unknownFields = unknownFields.build();
@@ -10105,45 +10096,44 @@ public final class CommercialPOS {
       }
       io.opencannabis.schema.commerce.CommercialPOS.PurchaseTicket other = (io.opencannabis.schema.commerce.CommercialPOS.PurchaseTicket) obj;
 
-      boolean result = true;
-      result = result && (hasKey() == other.hasKey());
+      if (hasKey() != other.hasKey()) return false;
       if (hasKey()) {
-        result = result && getKey()
-            .equals(other.getKey());
+        if (!getKey()
+            .equals(other.getKey())) return false;
       }
-      result = result && (getVersion()
-          == other.getVersion());
-      result = result && status_ == other.status_;
-      result = result && getClaim()
-          .equals(other.getClaim());
-      result = result && (hasFacilitator() == other.hasFacilitator());
+      if (getVersion()
+          != other.getVersion()) return false;
+      if (status_ != other.status_) return false;
+      if (!getClaim()
+          .equals(other.getClaim())) return false;
+      if (hasFacilitator() != other.hasFacilitator()) return false;
       if (hasFacilitator()) {
-        result = result && getFacilitator()
-            .equals(other.getFacilitator());
+        if (!getFacilitator()
+            .equals(other.getFacilitator())) return false;
       }
-      result = result && (hasCustomer() == other.hasCustomer());
+      if (hasCustomer() != other.hasCustomer()) return false;
       if (hasCustomer()) {
-        result = result && getCustomer()
-            .equals(other.getCustomer());
+        if (!getCustomer()
+            .equals(other.getCustomer())) return false;
       }
-      result = result && (hasBill() == other.hasBill());
+      if (hasBill() != other.hasBill()) return false;
       if (hasBill()) {
-        result = result && getBill()
-            .equals(other.getBill());
+        if (!getBill()
+            .equals(other.getBill())) return false;
       }
-      result = result && getItemList()
-          .equals(other.getItemList());
-      result = result && getPaymentList()
-          .equals(other.getPaymentList());
-      result = result && getActionList()
-          .equals(other.getActionList());
-      result = result && (hasTs() == other.hasTs());
+      if (!getItemList()
+          .equals(other.getItemList())) return false;
+      if (!getPaymentList()
+          .equals(other.getPaymentList())) return false;
+      if (!getActionList()
+          .equals(other.getActionList())) return false;
+      if (hasTs() != other.hasTs()) return false;
       if (hasTs()) {
-        result = result && getTs()
-            .equals(other.getTs());
+        if (!getTs()
+            .equals(other.getTs())) return false;
       }
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -10439,7 +10429,7 @@ public final class CommercialPOS {
           result.bill_ = billBuilder_.build();
         }
         if (itemBuilder_ == null) {
-          if (((bitField0_ & 0x00000080) == 0x00000080)) {
+          if (((bitField0_ & 0x00000080) != 0)) {
             item_ = java.util.Collections.unmodifiableList(item_);
             bitField0_ = (bitField0_ & ~0x00000080);
           }
@@ -10448,7 +10438,7 @@ public final class CommercialPOS {
           result.item_ = itemBuilder_.build();
         }
         if (paymentBuilder_ == null) {
-          if (((bitField0_ & 0x00000100) == 0x00000100)) {
+          if (((bitField0_ & 0x00000100) != 0)) {
             payment_ = java.util.Collections.unmodifiableList(payment_);
             bitField0_ = (bitField0_ & ~0x00000100);
           }
@@ -10457,7 +10447,7 @@ public final class CommercialPOS {
           result.payment_ = paymentBuilder_.build();
         }
         if (actionBuilder_ == null) {
-          if (((bitField0_ & 0x00000200) == 0x00000200)) {
+          if (((bitField0_ & 0x00000200) != 0)) {
             action_ = java.util.Collections.unmodifiableList(action_);
             bitField0_ = (bitField0_ & ~0x00000200);
           }
@@ -10477,35 +10467,35 @@ public final class CommercialPOS {
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -10652,7 +10642,7 @@ public final class CommercialPOS {
       }
       private int bitField0_;
 
-      private io.opencannabis.schema.commerce.CommercialPurchase.PurchaseKey key_ = null;
+      private io.opencannabis.schema.commerce.CommercialPurchase.PurchaseKey key_;
       private com.google.protobuf.SingleFieldBuilderV3<
           io.opencannabis.schema.commerce.CommercialPurchase.PurchaseKey, io.opencannabis.schema.commerce.CommercialPurchase.PurchaseKey.Builder, io.opencannabis.schema.commerce.CommercialPurchase.PurchaseKeyOrBuilder> keyBuilder_;
       /**
@@ -10997,7 +10987,7 @@ public final class CommercialPOS {
         return this;
       }
 
-      private io.opencannabis.schema.commerce.CommercialPurchase.PurchaseFacilitator facilitator_ = null;
+      private io.opencannabis.schema.commerce.CommercialPurchase.PurchaseFacilitator facilitator_;
       private com.google.protobuf.SingleFieldBuilderV3<
           io.opencannabis.schema.commerce.CommercialPurchase.PurchaseFacilitator, io.opencannabis.schema.commerce.CommercialPurchase.PurchaseFacilitator.Builder, io.opencannabis.schema.commerce.CommercialPurchase.PurchaseFacilitatorOrBuilder> facilitatorBuilder_;
       /**
@@ -11150,7 +11140,7 @@ public final class CommercialPOS {
         return facilitatorBuilder_;
       }
 
-      private io.opencannabis.schema.commerce.CommercialPurchase.PurchaseCustomer customer_ = null;
+      private io.opencannabis.schema.commerce.CommercialPurchase.PurchaseCustomer customer_;
       private com.google.protobuf.SingleFieldBuilderV3<
           io.opencannabis.schema.commerce.CommercialPurchase.PurchaseCustomer, io.opencannabis.schema.commerce.CommercialPurchase.PurchaseCustomer.Builder, io.opencannabis.schema.commerce.CommercialPurchase.PurchaseCustomerOrBuilder> customerBuilder_;
       /**
@@ -11303,7 +11293,7 @@ public final class CommercialPOS {
         return customerBuilder_;
       }
 
-      private io.opencannabis.schema.commerce.CommercialPurchase.BillOfCharges bill_ = null;
+      private io.opencannabis.schema.commerce.CommercialPurchase.BillOfCharges bill_;
       private com.google.protobuf.SingleFieldBuilderV3<
           io.opencannabis.schema.commerce.CommercialPurchase.BillOfCharges, io.opencannabis.schema.commerce.CommercialPurchase.BillOfCharges.Builder, io.opencannabis.schema.commerce.CommercialPurchase.BillOfChargesOrBuilder> billBuilder_;
       /**
@@ -11459,7 +11449,7 @@ public final class CommercialPOS {
       private java.util.List<io.opencannabis.schema.commerce.CommercialPurchase.TicketItem> item_ =
         java.util.Collections.emptyList();
       private void ensureItemIsMutable() {
-        if (!((bitField0_ & 0x00000080) == 0x00000080)) {
+        if (!((bitField0_ & 0x00000080) != 0)) {
           item_ = new java.util.ArrayList<io.opencannabis.schema.commerce.CommercialPurchase.TicketItem>(item_);
           bitField0_ |= 0x00000080;
          }
@@ -11760,7 +11750,7 @@ public final class CommercialPOS {
           itemBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
               io.opencannabis.schema.commerce.CommercialPurchase.TicketItem, io.opencannabis.schema.commerce.CommercialPurchase.TicketItem.Builder, io.opencannabis.schema.commerce.CommercialPurchase.TicketItemOrBuilder>(
                   item_,
-                  ((bitField0_ & 0x00000080) == 0x00000080),
+                  ((bitField0_ & 0x00000080) != 0),
                   getParentForChildren(),
                   isClean());
           item_ = null;
@@ -11771,7 +11761,7 @@ public final class CommercialPOS {
       private java.util.List<io.opencannabis.schema.commerce.CommercialPurchase.Payment> payment_ =
         java.util.Collections.emptyList();
       private void ensurePaymentIsMutable() {
-        if (!((bitField0_ & 0x00000100) == 0x00000100)) {
+        if (!((bitField0_ & 0x00000100) != 0)) {
           payment_ = new java.util.ArrayList<io.opencannabis.schema.commerce.CommercialPurchase.Payment>(payment_);
           bitField0_ |= 0x00000100;
          }
@@ -12072,7 +12062,7 @@ public final class CommercialPOS {
           paymentBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
               io.opencannabis.schema.commerce.CommercialPurchase.Payment, io.opencannabis.schema.commerce.CommercialPurchase.Payment.Builder, io.opencannabis.schema.commerce.CommercialPurchase.PaymentOrBuilder>(
                   payment_,
-                  ((bitField0_ & 0x00000100) == 0x00000100),
+                  ((bitField0_ & 0x00000100) != 0),
                   getParentForChildren(),
                   isClean());
           payment_ = null;
@@ -12083,7 +12073,7 @@ public final class CommercialPOS {
       private java.util.List<io.opencannabis.schema.commerce.CommercialPurchase.PurchaseLogEntry> action_ =
         java.util.Collections.emptyList();
       private void ensureActionIsMutable() {
-        if (!((bitField0_ & 0x00000200) == 0x00000200)) {
+        if (!((bitField0_ & 0x00000200) != 0)) {
           action_ = new java.util.ArrayList<io.opencannabis.schema.commerce.CommercialPurchase.PurchaseLogEntry>(action_);
           bitField0_ |= 0x00000200;
          }
@@ -12384,7 +12374,7 @@ public final class CommercialPOS {
           actionBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
               io.opencannabis.schema.commerce.CommercialPurchase.PurchaseLogEntry, io.opencannabis.schema.commerce.CommercialPurchase.PurchaseLogEntry.Builder, io.opencannabis.schema.commerce.CommercialPurchase.PurchaseLogEntryOrBuilder>(
                   action_,
-                  ((bitField0_ & 0x00000200) == 0x00000200),
+                  ((bitField0_ & 0x00000200) != 0),
                   getParentForChildren(),
                   isClean());
           action_ = null;
@@ -12392,7 +12382,7 @@ public final class CommercialPOS {
         return actionBuilder_;
       }
 
-      private io.opencannabis.schema.commerce.CommercialPurchase.PurchaseTimestamps ts_ = null;
+      private io.opencannabis.schema.commerce.CommercialPurchase.PurchaseTimestamps ts_;
       private com.google.protobuf.SingleFieldBuilderV3<
           io.opencannabis.schema.commerce.CommercialPurchase.PurchaseTimestamps, io.opencannabis.schema.commerce.CommercialPurchase.PurchaseTimestamps.Builder, io.opencannabis.schema.commerce.CommercialPurchase.PurchaseTimestampsOrBuilder> tsBuilder_;
       /**
@@ -12547,7 +12537,7 @@ public final class CommercialPOS {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -12879,7 +12869,7 @@ public final class CommercialPOS {
               break;
             }
             case 34: {
-              if (!((mutable_bitField0_ & 0x00000008) == 0x00000008)) {
+              if (!((mutable_bitField0_ & 0x00000008) != 0)) {
                 ticket_ = new java.util.ArrayList<io.opencannabis.schema.commerce.CommercialPOS.PurchaseTicket>();
                 mutable_bitField0_ |= 0x00000008;
               }
@@ -12940,7 +12930,7 @@ public final class CommercialPOS {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -12954,7 +12944,7 @@ public final class CommercialPOS {
         throw new com.google.protobuf.InvalidProtocolBufferException(
             e).setUnfinishedMessage(this);
       } finally {
-        if (((mutable_bitField0_ & 0x00000008) == 0x00000008)) {
+        if (((mutable_bitField0_ & 0x00000008) != 0)) {
           ticket_ = java.util.Collections.unmodifiableList(ticket_);
         }
         this.unknownFields = unknownFields.build();
@@ -13355,39 +13345,38 @@ public final class CommercialPOS {
       }
       io.opencannabis.schema.commerce.CommercialPOS.PointOfSaleSession other = (io.opencannabis.schema.commerce.CommercialPOS.PointOfSaleSession) obj;
 
-      boolean result = true;
-      result = result && getUuid()
-          .equals(other.getUuid());
-      result = result && status_ == other.status_;
-      result = result && (hasUser() == other.hasUser());
+      if (!getUuid()
+          .equals(other.getUuid())) return false;
+      if (status_ != other.status_) return false;
+      if (hasUser() != other.hasUser()) return false;
       if (hasUser()) {
-        result = result && getUser()
-            .equals(other.getUser());
+        if (!getUser()
+            .equals(other.getUser())) return false;
       }
-      result = result && getTicketList()
-          .equals(other.getTicketList());
-      result = result && (hasState() == other.hasState());
+      if (!getTicketList()
+          .equals(other.getTicketList())) return false;
+      if (hasState() != other.hasState()) return false;
       if (hasState()) {
-        result = result && getState()
-            .equals(other.getState());
+        if (!getState()
+            .equals(other.getState())) return false;
       }
-      result = result && (hasSeen() == other.hasSeen());
+      if (hasSeen() != other.hasSeen()) return false;
       if (hasSeen()) {
-        result = result && getSeen()
-            .equals(other.getSeen());
+        if (!getSeen()
+            .equals(other.getSeen())) return false;
       }
-      result = result && (hasCreated() == other.hasCreated());
+      if (hasCreated() != other.hasCreated()) return false;
       if (hasCreated()) {
-        result = result && getCreated()
-            .equals(other.getCreated());
+        if (!getCreated()
+            .equals(other.getCreated())) return false;
       }
-      result = result && (hasModified() == other.hasModified());
+      if (hasModified() != other.hasModified()) return false;
       if (hasModified()) {
-        result = result && getModified()
-            .equals(other.getModified());
+        if (!getModified()
+            .equals(other.getModified())) return false;
       }
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -13641,7 +13630,7 @@ public final class CommercialPOS {
           result.user_ = userBuilder_.build();
         }
         if (ticketBuilder_ == null) {
-          if (((bitField0_ & 0x00000008) == 0x00000008)) {
+          if (((bitField0_ & 0x00000008) != 0)) {
             ticket_ = java.util.Collections.unmodifiableList(ticket_);
             bitField0_ = (bitField0_ & ~0x00000008);
           }
@@ -13676,35 +13665,35 @@ public final class CommercialPOS {
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -13950,7 +13939,7 @@ public final class CommercialPOS {
         return this;
       }
 
-      private io.bloombox.schema.identity.AppUserKey.UserKey user_ = null;
+      private io.bloombox.schema.identity.AppUserKey.UserKey user_;
       private com.google.protobuf.SingleFieldBuilderV3<
           io.bloombox.schema.identity.AppUserKey.UserKey, io.bloombox.schema.identity.AppUserKey.UserKey.Builder, io.bloombox.schema.identity.AppUserKey.UserKeyOrBuilder> userBuilder_;
       /**
@@ -14106,7 +14095,7 @@ public final class CommercialPOS {
       private java.util.List<io.opencannabis.schema.commerce.CommercialPOS.PurchaseTicket> ticket_ =
         java.util.Collections.emptyList();
       private void ensureTicketIsMutable() {
-        if (!((bitField0_ & 0x00000008) == 0x00000008)) {
+        if (!((bitField0_ & 0x00000008) != 0)) {
           ticket_ = new java.util.ArrayList<io.opencannabis.schema.commerce.CommercialPOS.PurchaseTicket>(ticket_);
           bitField0_ |= 0x00000008;
          }
@@ -14407,7 +14396,7 @@ public final class CommercialPOS {
           ticketBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
               io.opencannabis.schema.commerce.CommercialPOS.PurchaseTicket, io.opencannabis.schema.commerce.CommercialPOS.PurchaseTicket.Builder, io.opencannabis.schema.commerce.CommercialPOS.PurchaseTicketOrBuilder>(
                   ticket_,
-                  ((bitField0_ & 0x00000008) == 0x00000008),
+                  ((bitField0_ & 0x00000008) != 0),
                   getParentForChildren(),
                   isClean());
           ticket_ = null;
@@ -14415,7 +14404,7 @@ public final class CommercialPOS {
         return ticketBuilder_;
       }
 
-      private io.opencannabis.schema.commerce.CommercialPOS.PointOfSaleState state_ = null;
+      private io.opencannabis.schema.commerce.CommercialPOS.PointOfSaleState state_;
       private com.google.protobuf.SingleFieldBuilderV3<
           io.opencannabis.schema.commerce.CommercialPOS.PointOfSaleState, io.opencannabis.schema.commerce.CommercialPOS.PointOfSaleState.Builder, io.opencannabis.schema.commerce.CommercialPOS.PointOfSaleStateOrBuilder> stateBuilder_;
       /**
@@ -14568,7 +14557,7 @@ public final class CommercialPOS {
         return stateBuilder_;
       }
 
-      private io.opencannabis.schema.temporal.TemporalInstant.Instant seen_ = null;
+      private io.opencannabis.schema.temporal.TemporalInstant.Instant seen_;
       private com.google.protobuf.SingleFieldBuilderV3<
           io.opencannabis.schema.temporal.TemporalInstant.Instant, io.opencannabis.schema.temporal.TemporalInstant.Instant.Builder, io.opencannabis.schema.temporal.TemporalInstant.InstantOrBuilder> seenBuilder_;
       /**
@@ -14721,7 +14710,7 @@ public final class CommercialPOS {
         return seenBuilder_;
       }
 
-      private io.opencannabis.schema.temporal.TemporalInstant.Instant created_ = null;
+      private io.opencannabis.schema.temporal.TemporalInstant.Instant created_;
       private com.google.protobuf.SingleFieldBuilderV3<
           io.opencannabis.schema.temporal.TemporalInstant.Instant, io.opencannabis.schema.temporal.TemporalInstant.Instant.Builder, io.opencannabis.schema.temporal.TemporalInstant.InstantOrBuilder> createdBuilder_;
       /**
@@ -14874,7 +14863,7 @@ public final class CommercialPOS {
         return createdBuilder_;
       }
 
-      private io.opencannabis.schema.temporal.TemporalInstant.Instant modified_ = null;
+      private io.opencannabis.schema.temporal.TemporalInstant.Instant modified_;
       private com.google.protobuf.SingleFieldBuilderV3<
           io.opencannabis.schema.temporal.TemporalInstant.Instant, io.opencannabis.schema.temporal.TemporalInstant.Instant.Builder, io.opencannabis.schema.temporal.TemporalInstant.InstantOrBuilder> modifiedBuilder_;
       /**
@@ -15029,7 +15018,7 @@ public final class CommercialPOS {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override

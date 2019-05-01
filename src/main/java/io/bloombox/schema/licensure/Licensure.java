@@ -1,5 +1,5 @@
 /*
- * Copyright 2018, Momentum Ideas, Co. All rights reserved.
+ * Copyright 2019, Momentum Ideas, Co. All rights reserved.
  *
  * Source and object computer code contained herein is the private intellectual
  * property of Momentum Ideas Co., a Delaware Corporation. Use of this
@@ -838,7 +838,7 @@ public final class Licensure {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -1041,7 +1041,7 @@ public final class Licensure {
                 break;
               }
               default: {
-                if (!parseUnknownFieldProto3(
+                if (!parseUnknownField(
                     input, unknownFields, extensionRegistry, tag)) {
                   done = true;
                 }
@@ -1424,41 +1424,36 @@ public final class Licensure {
         }
         io.bloombox.schema.licensure.Licensure.LicensingAuthority.LocalLicense other = (io.bloombox.schema.licensure.Licensure.LicensingAuthority.LocalLicense) obj;
 
-        boolean result = true;
-        result = result && getMunicipality()
-            .equals(other.getMunicipality());
-        result = result && getCountyCase().equals(
-            other.getCountyCase());
-        if (!result) return false;
+        if (!getMunicipality()
+            .equals(other.getMunicipality())) return false;
+        if (!getCountyCase().equals(other.getCountyCase())) return false;
         switch (countyCase_) {
           case 2:
-            result = result && getCountyName()
-                .equals(other.getCountyName());
+            if (!getCountyName()
+                .equals(other.getCountyName())) return false;
             break;
           case 3:
-            result = result && getCaliforniaCountyValue()
-                == other.getCaliforniaCountyValue();
+            if (getCaliforniaCountyValue()
+                != other.getCaliforniaCountyValue()) return false;
             break;
           case 0:
           default:
         }
-        result = result && getProvinceCase().equals(
-            other.getProvinceCase());
-        if (!result) return false;
+        if (!getProvinceCase().equals(other.getProvinceCase())) return false;
         switch (provinceCase_) {
           case 4:
-            result = result && getProvinceName()
-                .equals(other.getProvinceName());
+            if (!getProvinceName()
+                .equals(other.getProvinceName())) return false;
             break;
           case 5:
-            result = result && getUsStateValue()
-                == other.getUsStateValue();
+            if (getUsStateValue()
+                != other.getUsStateValue()) return false;
             break;
           case 0:
           default:
         }
-        result = result && unknownFields.equals(other.unknownFields);
-        return result;
+        if (!unknownFields.equals(other.unknownFields)) return false;
+        return true;
       }
 
       @java.lang.Override
@@ -1685,35 +1680,35 @@ public final class Licensure {
 
         @java.lang.Override
         public Builder clone() {
-          return (Builder) super.clone();
+          return super.clone();
         }
         @java.lang.Override
         public Builder setField(
             com.google.protobuf.Descriptors.FieldDescriptor field,
             java.lang.Object value) {
-          return (Builder) super.setField(field, value);
+          return super.setField(field, value);
         }
         @java.lang.Override
         public Builder clearField(
             com.google.protobuf.Descriptors.FieldDescriptor field) {
-          return (Builder) super.clearField(field);
+          return super.clearField(field);
         }
         @java.lang.Override
         public Builder clearOneof(
             com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-          return (Builder) super.clearOneof(oneof);
+          return super.clearOneof(oneof);
         }
         @java.lang.Override
         public Builder setRepeatedField(
             com.google.protobuf.Descriptors.FieldDescriptor field,
             int index, java.lang.Object value) {
-          return (Builder) super.setRepeatedField(field, index, value);
+          return super.setRepeatedField(field, index, value);
         }
         @java.lang.Override
         public Builder addRepeatedField(
             com.google.protobuf.Descriptors.FieldDescriptor field,
             java.lang.Object value) {
-          return (Builder) super.addRepeatedField(field, value);
+          return super.addRepeatedField(field, value);
         }
         @java.lang.Override
         public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -2259,7 +2254,7 @@ public final class Licensure {
         @java.lang.Override
         public final Builder setUnknownFields(
             final com.google.protobuf.UnknownFieldSet unknownFields) {
-          return super.setUnknownFieldsProto3(unknownFields);
+          return super.setUnknownFields(unknownFields);
         }
 
         @java.lang.Override
@@ -2456,7 +2451,7 @@ public final class Licensure {
                 break;
               }
               default: {
-                if (!parseUnknownFieldProto3(
+                if (!parseUnknownField(
                     input, unknownFields, extensionRegistry, tag)) {
                   done = true;
                 }
@@ -2791,39 +2786,34 @@ public final class Licensure {
         }
         io.bloombox.schema.licensure.Licensure.LicensingAuthority.CountyLicense other = (io.bloombox.schema.licensure.Licensure.LicensingAuthority.CountyLicense) obj;
 
-        boolean result = true;
-        result = result && getCountyCase().equals(
-            other.getCountyCase());
-        if (!result) return false;
+        if (!getCountyCase().equals(other.getCountyCase())) return false;
         switch (countyCase_) {
           case 1:
-            result = result && getName()
-                .equals(other.getName());
+            if (!getName()
+                .equals(other.getName())) return false;
             break;
           case 2:
-            result = result && getCaliforniaCountyValue()
-                == other.getCaliforniaCountyValue();
+            if (getCaliforniaCountyValue()
+                != other.getCaliforniaCountyValue()) return false;
             break;
           case 0:
           default:
         }
-        result = result && getProvinceCase().equals(
-            other.getProvinceCase());
-        if (!result) return false;
+        if (!getProvinceCase().equals(other.getProvinceCase())) return false;
         switch (provinceCase_) {
           case 4:
-            result = result && getProvinceName()
-                .equals(other.getProvinceName());
+            if (!getProvinceName()
+                .equals(other.getProvinceName())) return false;
             break;
           case 5:
-            result = result && getUsStateValue()
-                == other.getUsStateValue();
+            if (getUsStateValue()
+                != other.getUsStateValue()) return false;
             break;
           case 0:
           default:
         }
-        result = result && unknownFields.equals(other.unknownFields);
-        return result;
+        if (!unknownFields.equals(other.unknownFields)) return false;
+        return true;
       }
 
       @java.lang.Override
@@ -3045,35 +3035,35 @@ public final class Licensure {
 
         @java.lang.Override
         public Builder clone() {
-          return (Builder) super.clone();
+          return super.clone();
         }
         @java.lang.Override
         public Builder setField(
             com.google.protobuf.Descriptors.FieldDescriptor field,
             java.lang.Object value) {
-          return (Builder) super.setField(field, value);
+          return super.setField(field, value);
         }
         @java.lang.Override
         public Builder clearField(
             com.google.protobuf.Descriptors.FieldDescriptor field) {
-          return (Builder) super.clearField(field);
+          return super.clearField(field);
         }
         @java.lang.Override
         public Builder clearOneof(
             com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-          return (Builder) super.clearOneof(oneof);
+          return super.clearOneof(oneof);
         }
         @java.lang.Override
         public Builder setRepeatedField(
             com.google.protobuf.Descriptors.FieldDescriptor field,
             int index, java.lang.Object value) {
-          return (Builder) super.setRepeatedField(field, index, value);
+          return super.setRepeatedField(field, index, value);
         }
         @java.lang.Override
         public Builder addRepeatedField(
             com.google.protobuf.Descriptors.FieldDescriptor field,
             java.lang.Object value) {
-          return (Builder) super.addRepeatedField(field, value);
+          return super.addRepeatedField(field, value);
         }
         @java.lang.Override
         public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -3526,7 +3516,7 @@ public final class Licensure {
         @java.lang.Override
         public final Builder setUnknownFields(
             final com.google.protobuf.UnknownFieldSet unknownFields) {
-          return super.setUnknownFieldsProto3(unknownFields);
+          return super.setUnknownFields(unknownFields);
         }
 
         @java.lang.Override
@@ -3723,7 +3713,7 @@ public final class Licensure {
                 break;
               }
               default: {
-                if (!parseUnknownFieldProto3(
+                if (!parseUnknownField(
                     input, unknownFields, extensionRegistry, tag)) {
                   done = true;
                 }
@@ -4058,39 +4048,34 @@ public final class Licensure {
         }
         io.bloombox.schema.licensure.Licensure.LicensingAuthority.StateLicense other = (io.bloombox.schema.licensure.Licensure.LicensingAuthority.StateLicense) obj;
 
-        boolean result = true;
-        result = result && getProvinceCase().equals(
-            other.getProvinceCase());
-        if (!result) return false;
+        if (!getProvinceCase().equals(other.getProvinceCase())) return false;
         switch (provinceCase_) {
           case 1:
-            result = result && getProvinceName()
-                .equals(other.getProvinceName());
+            if (!getProvinceName()
+                .equals(other.getProvinceName())) return false;
             break;
           case 2:
-            result = result && getUsStateValue()
-                == other.getUsStateValue();
+            if (getUsStateValue()
+                != other.getUsStateValue()) return false;
             break;
           case 0:
           default:
         }
-        result = result && getAgencyCase().equals(
-            other.getAgencyCase());
-        if (!result) return false;
+        if (!getAgencyCase().equals(other.getAgencyCase())) return false;
         switch (agencyCase_) {
           case 3:
-            result = result && getAgencyName()
-                .equals(other.getAgencyName());
+            if (!getAgencyName()
+                .equals(other.getAgencyName())) return false;
             break;
           case 4:
-            result = result && getCaliforniaAgencyValue()
-                == other.getCaliforniaAgencyValue();
+            if (getCaliforniaAgencyValue()
+                != other.getCaliforniaAgencyValue()) return false;
             break;
           case 0:
           default:
         }
-        result = result && unknownFields.equals(other.unknownFields);
-        return result;
+        if (!unknownFields.equals(other.unknownFields)) return false;
+        return true;
       }
 
       @java.lang.Override
@@ -4312,35 +4297,35 @@ public final class Licensure {
 
         @java.lang.Override
         public Builder clone() {
-          return (Builder) super.clone();
+          return super.clone();
         }
         @java.lang.Override
         public Builder setField(
             com.google.protobuf.Descriptors.FieldDescriptor field,
             java.lang.Object value) {
-          return (Builder) super.setField(field, value);
+          return super.setField(field, value);
         }
         @java.lang.Override
         public Builder clearField(
             com.google.protobuf.Descriptors.FieldDescriptor field) {
-          return (Builder) super.clearField(field);
+          return super.clearField(field);
         }
         @java.lang.Override
         public Builder clearOneof(
             com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-          return (Builder) super.clearOneof(oneof);
+          return super.clearOneof(oneof);
         }
         @java.lang.Override
         public Builder setRepeatedField(
             com.google.protobuf.Descriptors.FieldDescriptor field,
             int index, java.lang.Object value) {
-          return (Builder) super.setRepeatedField(field, index, value);
+          return super.setRepeatedField(field, index, value);
         }
         @java.lang.Override
         public Builder addRepeatedField(
             com.google.protobuf.Descriptors.FieldDescriptor field,
             java.lang.Object value) {
-          return (Builder) super.addRepeatedField(field, value);
+          return super.addRepeatedField(field, value);
         }
         @java.lang.Override
         public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -4793,7 +4778,7 @@ public final class Licensure {
         @java.lang.Override
         public final Builder setUnknownFields(
             final com.google.protobuf.UnknownFieldSet unknownFields) {
-          return super.setUnknownFieldsProto3(unknownFields);
+          return super.setUnknownFields(unknownFields);
         }
 
         @java.lang.Override
@@ -5056,28 +5041,25 @@ public final class Licensure {
       }
       io.bloombox.schema.licensure.Licensure.LicensingAuthority other = (io.bloombox.schema.licensure.Licensure.LicensingAuthority) obj;
 
-      boolean result = true;
-      result = result && getJurisdictionCase().equals(
-          other.getJurisdictionCase());
-      if (!result) return false;
+      if (!getJurisdictionCase().equals(other.getJurisdictionCase())) return false;
       switch (jurisdictionCase_) {
         case 1:
-          result = result && getLocal()
-              .equals(other.getLocal());
+          if (!getLocal()
+              .equals(other.getLocal())) return false;
           break;
         case 2:
-          result = result && getCounty()
-              .equals(other.getCounty());
+          if (!getCounty()
+              .equals(other.getCounty())) return false;
           break;
         case 3:
-          result = result && getState()
-              .equals(other.getState());
+          if (!getState()
+              .equals(other.getState())) return false;
           break;
         case 0:
         default:
       }
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -5298,35 +5280,35 @@ public final class Licensure {
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -5919,7 +5901,7 @@ public final class Licensure {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -6072,7 +6054,7 @@ public final class Licensure {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -6241,13 +6223,12 @@ public final class Licensure {
       }
       io.bloombox.schema.licensure.Licensure.LicenseKey other = (io.bloombox.schema.licensure.Licensure.LicenseKey) obj;
 
-      boolean result = true;
-      result = result && getId()
-          .equals(other.getId());
-      result = result && getJid()
-          .equals(other.getJid());
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!getId()
+          .equals(other.getId())) return false;
+      if (!getJid()
+          .equals(other.getJid())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -6437,35 +6418,35 @@ public final class Licensure {
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -6706,7 +6687,7 @@ public final class Licensure {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -6922,7 +6903,7 @@ public final class Licensure {
             }
             case 16: {
               int rawValue = input.readEnum();
-              if (!((mutable_bitField0_ & 0x00000002) == 0x00000002)) {
+              if (!((mutable_bitField0_ & 0x00000002) != 0)) {
                 privilege_ = new java.util.ArrayList<java.lang.Integer>();
                 mutable_bitField0_ |= 0x00000002;
               }
@@ -6934,7 +6915,7 @@ public final class Licensure {
               int oldLimit = input.pushLimit(length);
               while(input.getBytesUntilLimit() > 0) {
                 int rawValue = input.readEnum();
-                if (!((mutable_bitField0_ & 0x00000002) == 0x00000002)) {
+                if (!((mutable_bitField0_ & 0x00000002) != 0)) {
                   privilege_ = new java.util.ArrayList<java.lang.Integer>();
                   mutable_bitField0_ |= 0x00000002;
                 }
@@ -6963,7 +6944,7 @@ public final class Licensure {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -6977,7 +6958,7 @@ public final class Licensure {
         throw new com.google.protobuf.InvalidProtocolBufferException(
             e).setUnfinishedMessage(this);
       } finally {
-        if (((mutable_bitField0_ & 0x00000002) == 0x00000002)) {
+        if (((mutable_bitField0_ & 0x00000002) != 0)) {
           privilege_ = java.util.Collections.unmodifiableList(privilege_);
         }
         this.unknownFields = unknownFields.build();
@@ -7247,18 +7228,17 @@ public final class Licensure {
       }
       io.bloombox.schema.licensure.Licensure.LicenseEvent other = (io.bloombox.schema.licensure.Licensure.LicenseEvent) obj;
 
-      boolean result = true;
-      result = result && status_ == other.status_;
-      result = result && privilege_.equals(other.privilege_);
-      result = result && getMessage()
-          .equals(other.getMessage());
-      result = result && (hasOccurred() == other.hasOccurred());
+      if (status_ != other.status_) return false;
+      if (!privilege_.equals(other.privilege_)) return false;
+      if (!getMessage()
+          .equals(other.getMessage())) return false;
+      if (hasOccurred() != other.hasOccurred()) return false;
       if (hasOccurred()) {
-        result = result && getOccurred()
-            .equals(other.getOccurred());
+        if (!getOccurred()
+            .equals(other.getOccurred())) return false;
       }
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -7459,7 +7439,7 @@ public final class Licensure {
         int from_bitField0_ = bitField0_;
         int to_bitField0_ = 0;
         result.status_ = status_;
-        if (((bitField0_ & 0x00000002) == 0x00000002)) {
+        if (((bitField0_ & 0x00000002) != 0)) {
           privilege_ = java.util.Collections.unmodifiableList(privilege_);
           bitField0_ = (bitField0_ & ~0x00000002);
         }
@@ -7477,35 +7457,35 @@ public final class Licensure {
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -7637,7 +7617,7 @@ public final class Licensure {
       private java.util.List<java.lang.Integer> privilege_ =
         java.util.Collections.emptyList();
       private void ensurePrivilegeIsMutable() {
-        if (!((bitField0_ & 0x00000002) == 0x00000002)) {
+        if (!((bitField0_ & 0x00000002) != 0)) {
           privilege_ = new java.util.ArrayList<java.lang.Integer>(privilege_);
           bitField0_ |= 0x00000002;
         }
@@ -7901,7 +7881,7 @@ public final class Licensure {
         return this;
       }
 
-      private io.opencannabis.schema.temporal.TemporalInstant.Instant occurred_ = null;
+      private io.opencannabis.schema.temporal.TemporalInstant.Instant occurred_;
       private com.google.protobuf.SingleFieldBuilderV3<
           io.opencannabis.schema.temporal.TemporalInstant.Instant, io.opencannabis.schema.temporal.TemporalInstant.Instant.Builder, io.opencannabis.schema.temporal.TemporalInstant.InstantOrBuilder> occurredBuilder_;
       /**
@@ -8056,7 +8036,7 @@ public final class Licensure {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -8383,7 +8363,7 @@ public final class Licensure {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -8692,39 +8672,38 @@ public final class Licensure {
       }
       io.bloombox.schema.licensure.Licensure.LicenseTimestamps other = (io.bloombox.schema.licensure.Licensure.LicenseTimestamps) obj;
 
-      boolean result = true;
-      result = result && (hasSubmitted() == other.hasSubmitted());
+      if (hasSubmitted() != other.hasSubmitted()) return false;
       if (hasSubmitted()) {
-        result = result && getSubmitted()
-            .equals(other.getSubmitted());
+        if (!getSubmitted()
+            .equals(other.getSubmitted())) return false;
       }
-      result = result && (hasIssued() == other.hasIssued());
+      if (hasIssued() != other.hasIssued()) return false;
       if (hasIssued()) {
-        result = result && getIssued()
-            .equals(other.getIssued());
+        if (!getIssued()
+            .equals(other.getIssued())) return false;
       }
-      result = result && (hasReceived() == other.hasReceived());
+      if (hasReceived() != other.hasReceived()) return false;
       if (hasReceived()) {
-        result = result && getReceived()
-            .equals(other.getReceived());
+        if (!getReceived()
+            .equals(other.getReceived())) return false;
       }
-      result = result && (hasVerified() == other.hasVerified());
+      if (hasVerified() != other.hasVerified()) return false;
       if (hasVerified()) {
-        result = result && getVerified()
-            .equals(other.getVerified());
+        if (!getVerified()
+            .equals(other.getVerified())) return false;
       }
-      result = result && (hasApplied() == other.hasApplied());
+      if (hasApplied() != other.hasApplied()) return false;
       if (hasApplied()) {
-        result = result && getApplied()
-            .equals(other.getApplied());
+        if (!getApplied()
+            .equals(other.getApplied())) return false;
       }
-      result = result && (hasModified() == other.hasModified());
+      if (hasModified() != other.hasModified()) return false;
       if (hasModified()) {
-        result = result && getModified()
-            .equals(other.getModified());
+        if (!getModified()
+            .equals(other.getModified())) return false;
       }
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -8994,35 +8973,35 @@ public final class Licensure {
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -9083,7 +9062,7 @@ public final class Licensure {
         return this;
       }
 
-      private io.opencannabis.schema.temporal.TemporalDate.Date submitted_ = null;
+      private io.opencannabis.schema.temporal.TemporalDate.Date submitted_;
       private com.google.protobuf.SingleFieldBuilderV3<
           io.opencannabis.schema.temporal.TemporalDate.Date, io.opencannabis.schema.temporal.TemporalDate.Date.Builder, io.opencannabis.schema.temporal.TemporalDate.DateOrBuilder> submittedBuilder_;
       /**
@@ -9236,7 +9215,7 @@ public final class Licensure {
         return submittedBuilder_;
       }
 
-      private io.opencannabis.schema.temporal.TemporalDate.Date issued_ = null;
+      private io.opencannabis.schema.temporal.TemporalDate.Date issued_;
       private com.google.protobuf.SingleFieldBuilderV3<
           io.opencannabis.schema.temporal.TemporalDate.Date, io.opencannabis.schema.temporal.TemporalDate.Date.Builder, io.opencannabis.schema.temporal.TemporalDate.DateOrBuilder> issuedBuilder_;
       /**
@@ -9389,7 +9368,7 @@ public final class Licensure {
         return issuedBuilder_;
       }
 
-      private io.opencannabis.schema.temporal.TemporalDate.Date received_ = null;
+      private io.opencannabis.schema.temporal.TemporalDate.Date received_;
       private com.google.protobuf.SingleFieldBuilderV3<
           io.opencannabis.schema.temporal.TemporalDate.Date, io.opencannabis.schema.temporal.TemporalDate.Date.Builder, io.opencannabis.schema.temporal.TemporalDate.DateOrBuilder> receivedBuilder_;
       /**
@@ -9542,7 +9521,7 @@ public final class Licensure {
         return receivedBuilder_;
       }
 
-      private io.opencannabis.schema.temporal.TemporalInstant.Instant verified_ = null;
+      private io.opencannabis.schema.temporal.TemporalInstant.Instant verified_;
       private com.google.protobuf.SingleFieldBuilderV3<
           io.opencannabis.schema.temporal.TemporalInstant.Instant, io.opencannabis.schema.temporal.TemporalInstant.Instant.Builder, io.opencannabis.schema.temporal.TemporalInstant.InstantOrBuilder> verifiedBuilder_;
       /**
@@ -9695,7 +9674,7 @@ public final class Licensure {
         return verifiedBuilder_;
       }
 
-      private io.opencannabis.schema.temporal.TemporalInstant.Instant applied_ = null;
+      private io.opencannabis.schema.temporal.TemporalInstant.Instant applied_;
       private com.google.protobuf.SingleFieldBuilderV3<
           io.opencannabis.schema.temporal.TemporalInstant.Instant, io.opencannabis.schema.temporal.TemporalInstant.Instant.Builder, io.opencannabis.schema.temporal.TemporalInstant.InstantOrBuilder> appliedBuilder_;
       /**
@@ -9848,7 +9827,7 @@ public final class Licensure {
         return appliedBuilder_;
       }
 
-      private io.opencannabis.schema.temporal.TemporalInstant.Instant modified_ = null;
+      private io.opencannabis.schema.temporal.TemporalInstant.Instant modified_;
       private com.google.protobuf.SingleFieldBuilderV3<
           io.opencannabis.schema.temporal.TemporalInstant.Instant, io.opencannabis.schema.temporal.TemporalInstant.Instant.Builder, io.opencannabis.schema.temporal.TemporalInstant.InstantOrBuilder> modifiedBuilder_;
       /**
@@ -10003,7 +9982,7 @@ public final class Licensure {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -10360,7 +10339,7 @@ public final class Licensure {
               break;
             }
             case 42: {
-              if (!((mutable_bitField0_ & 0x00000010) == 0x00000010)) {
+              if (!((mutable_bitField0_ & 0x00000010) != 0)) {
                 event_ = new java.util.ArrayList<io.bloombox.schema.licensure.Licensure.LicenseEvent>();
                 mutable_bitField0_ |= 0x00000010;
               }
@@ -10370,7 +10349,7 @@ public final class Licensure {
             }
             case 48: {
               int rawValue = input.readEnum();
-              if (!((mutable_bitField0_ & 0x00000020) == 0x00000020)) {
+              if (!((mutable_bitField0_ & 0x00000020) != 0)) {
                 privilege_ = new java.util.ArrayList<java.lang.Integer>();
                 mutable_bitField0_ |= 0x00000020;
               }
@@ -10382,7 +10361,7 @@ public final class Licensure {
               int oldLimit = input.pushLimit(length);
               while(input.getBytesUntilLimit() > 0) {
                 int rawValue = input.readEnum();
-                if (!((mutable_bitField0_ & 0x00000020) == 0x00000020)) {
+                if (!((mutable_bitField0_ & 0x00000020) != 0)) {
                   privilege_ = new java.util.ArrayList<java.lang.Integer>();
                   mutable_bitField0_ |= 0x00000020;
                 }
@@ -10405,7 +10384,7 @@ public final class Licensure {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -10419,10 +10398,10 @@ public final class Licensure {
         throw new com.google.protobuf.InvalidProtocolBufferException(
             e).setUnfinishedMessage(this);
       } finally {
-        if (((mutable_bitField0_ & 0x00000010) == 0x00000010)) {
+        if (((mutable_bitField0_ & 0x00000010) != 0)) {
           event_ = java.util.Collections.unmodifiableList(event_);
         }
-        if (((mutable_bitField0_ & 0x00000020) == 0x00000020)) {
+        if (((mutable_bitField0_ & 0x00000020) != 0)) {
           privilege_ = java.util.Collections.unmodifiableList(privilege_);
         }
         this.unknownFields = unknownFields.build();
@@ -10833,29 +10812,28 @@ public final class Licensure {
       }
       io.bloombox.schema.licensure.Licensure.RegulatoryLicense other = (io.bloombox.schema.licensure.Licensure.RegulatoryLicense) obj;
 
-      boolean result = true;
-      result = result && (hasKey() == other.hasKey());
+      if (hasKey() != other.hasKey()) return false;
       if (hasKey()) {
-        result = result && getKey()
-            .equals(other.getKey());
+        if (!getKey()
+            .equals(other.getKey())) return false;
       }
-      result = result && type_ == other.type_;
-      result = result && (hasAuthority() == other.hasAuthority());
+      if (type_ != other.type_) return false;
+      if (hasAuthority() != other.hasAuthority()) return false;
       if (hasAuthority()) {
-        result = result && getAuthority()
-            .equals(other.getAuthority());
+        if (!getAuthority()
+            .equals(other.getAuthority())) return false;
       }
-      result = result && status_ == other.status_;
-      result = result && getEventList()
-          .equals(other.getEventList());
-      result = result && privilege_.equals(other.privilege_);
-      result = result && (hasTimestamps() == other.hasTimestamps());
+      if (status_ != other.status_) return false;
+      if (!getEventList()
+          .equals(other.getEventList())) return false;
+      if (!privilege_.equals(other.privilege_)) return false;
+      if (hasTimestamps() != other.hasTimestamps()) return false;
       if (hasTimestamps()) {
-        result = result && getTimestamps()
-            .equals(other.getTimestamps());
+        if (!getTimestamps()
+            .equals(other.getTimestamps())) return false;
       }
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -11100,7 +11078,7 @@ public final class Licensure {
         }
         result.status_ = status_;
         if (eventBuilder_ == null) {
-          if (((bitField0_ & 0x00000010) == 0x00000010)) {
+          if (((bitField0_ & 0x00000010) != 0)) {
             event_ = java.util.Collections.unmodifiableList(event_);
             bitField0_ = (bitField0_ & ~0x00000010);
           }
@@ -11108,7 +11086,7 @@ public final class Licensure {
         } else {
           result.event_ = eventBuilder_.build();
         }
-        if (((bitField0_ & 0x00000020) == 0x00000020)) {
+        if (((bitField0_ & 0x00000020) != 0)) {
           privilege_ = java.util.Collections.unmodifiableList(privilege_);
           bitField0_ = (bitField0_ & ~0x00000020);
         }
@@ -11125,35 +11103,35 @@ public final class Licensure {
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -11248,7 +11226,7 @@ public final class Licensure {
       }
       private int bitField0_;
 
-      private io.bloombox.schema.licensure.Licensure.LicenseKey key_ = null;
+      private io.bloombox.schema.licensure.Licensure.LicenseKey key_;
       private com.google.protobuf.SingleFieldBuilderV3<
           io.bloombox.schema.licensure.Licensure.LicenseKey, io.bloombox.schema.licensure.Licensure.LicenseKey.Builder, io.bloombox.schema.licensure.Licensure.LicenseKeyOrBuilder> keyBuilder_;
       /**
@@ -11480,7 +11458,7 @@ public final class Licensure {
         return this;
       }
 
-      private io.bloombox.schema.licensure.Licensure.LicensingAuthority authority_ = null;
+      private io.bloombox.schema.licensure.Licensure.LicensingAuthority authority_;
       private com.google.protobuf.SingleFieldBuilderV3<
           io.bloombox.schema.licensure.Licensure.LicensingAuthority, io.bloombox.schema.licensure.Licensure.LicensingAuthority.Builder, io.bloombox.schema.licensure.Licensure.LicensingAuthorityOrBuilder> authorityBuilder_;
       /**
@@ -11715,7 +11693,7 @@ public final class Licensure {
       private java.util.List<io.bloombox.schema.licensure.Licensure.LicenseEvent> event_ =
         java.util.Collections.emptyList();
       private void ensureEventIsMutable() {
-        if (!((bitField0_ & 0x00000010) == 0x00000010)) {
+        if (!((bitField0_ & 0x00000010) != 0)) {
           event_ = new java.util.ArrayList<io.bloombox.schema.licensure.Licensure.LicenseEvent>(event_);
           bitField0_ |= 0x00000010;
          }
@@ -12034,7 +12012,7 @@ public final class Licensure {
           eventBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
               io.bloombox.schema.licensure.Licensure.LicenseEvent, io.bloombox.schema.licensure.Licensure.LicenseEvent.Builder, io.bloombox.schema.licensure.Licensure.LicenseEventOrBuilder>(
                   event_,
-                  ((bitField0_ & 0x00000010) == 0x00000010),
+                  ((bitField0_ & 0x00000010) != 0),
                   getParentForChildren(),
                   isClean());
           event_ = null;
@@ -12045,7 +12023,7 @@ public final class Licensure {
       private java.util.List<java.lang.Integer> privilege_ =
         java.util.Collections.emptyList();
       private void ensurePrivilegeIsMutable() {
-        if (!((bitField0_ & 0x00000020) == 0x00000020)) {
+        if (!((bitField0_ & 0x00000020) != 0)) {
           privilege_ = new java.util.ArrayList<java.lang.Integer>(privilege_);
           bitField0_ |= 0x00000020;
         }
@@ -12220,7 +12198,7 @@ public final class Licensure {
         return this;
       }
 
-      private io.bloombox.schema.licensure.Licensure.LicenseTimestamps timestamps_ = null;
+      private io.bloombox.schema.licensure.Licensure.LicenseTimestamps timestamps_;
       private com.google.protobuf.SingleFieldBuilderV3<
           io.bloombox.schema.licensure.Licensure.LicenseTimestamps, io.bloombox.schema.licensure.Licensure.LicenseTimestamps.Builder, io.bloombox.schema.licensure.Licensure.LicenseTimestampsOrBuilder> timestampsBuilder_;
       /**
@@ -12375,7 +12353,7 @@ public final class Licensure {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override

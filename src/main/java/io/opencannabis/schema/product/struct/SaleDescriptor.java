@@ -1,12 +1,11 @@
 /*
- * Copyright 2018, Momentum Ideas, Co. All rights reserved.
+ * Copyright 2019, Momentum Ideas Co.
  *
- * Source and object computer code contained herein is the private intellectual
- * property of Momentum Ideas Co., a Delaware Corporation. Use of this
- * code in source form requires permission in writing before use or the
- * assembly, distribution, or publishing of derivative works, for commercial
- * purposes or any other purpose, from a duly authorized officer of Momentum
- * Ideas Co.
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *  http://www.apache.org/licenses/LICENSE-2.0
  *
  * Unless required by applicable law or agreed to in writing, software
  * distributed under the License is distributed on an "AS IS" BASIS,
@@ -21,6 +20,10 @@
 package io.opencannabis.schema.product.struct;
 
 /**
+ * <pre>
+ * A description of the sale, the parameters to invoke the sale, its valid dates, and its type.
+ * </pre>
+ *
  * Protobuf type {@code opencannabis.structs.pricing.SaleDescriptor}
  */
 public  final class SaleDescriptor extends
@@ -135,7 +138,7 @@ private static final long serialVersionUID = 0L;
             break;
           }
           default: {
-            if (!parseUnknownFieldProto3(
+            if (!parseUnknownField(
                 input, unknownFields, extensionRegistry, tag)) {
               done = true;
             }
@@ -210,7 +213,7 @@ private static final long serialVersionUID = 0L;
   private int type_;
   /**
    * <pre>
-   * sale metadata
+   * Sale metadata.
    * </pre>
    *
    * <code>.opencannabis.structs.pricing.SaleType type = 1;</code>
@@ -220,7 +223,7 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * sale metadata
+   * Sale metadata.
    * </pre>
    *
    * <code>.opencannabis.structs.pricing.SaleType type = 1;</code>
@@ -234,18 +237,30 @@ private static final long serialVersionUID = 0L;
   public static final int EFFECTIVE_FIELD_NUMBER = 2;
   private io.opencannabis.schema.temporal.TemporalInstant.Instant effective_;
   /**
+   * <pre>
+   * Represents the date that the discount can be applied.
+   * </pre>
+   *
    * <code>.opencannabis.temporal.Instant effective = 2;</code>
    */
   public boolean hasEffective() {
     return effective_ != null;
   }
   /**
+   * <pre>
+   * Represents the date that the discount can be applied.
+   * </pre>
+   *
    * <code>.opencannabis.temporal.Instant effective = 2;</code>
    */
   public io.opencannabis.schema.temporal.TemporalInstant.Instant getEffective() {
     return effective_ == null ? io.opencannabis.schema.temporal.TemporalInstant.Instant.getDefaultInstance() : effective_;
   }
   /**
+   * <pre>
+   * Represents the date that the discount can be applied.
+   * </pre>
+   *
    * <code>.opencannabis.temporal.Instant effective = 2;</code>
    */
   public io.opencannabis.schema.temporal.TemporalInstant.InstantOrBuilder getEffectiveOrBuilder() {
@@ -255,18 +270,30 @@ private static final long serialVersionUID = 0L;
   public static final int EXPIRATION_FIELD_NUMBER = 3;
   private io.opencannabis.schema.temporal.TemporalInstant.Instant expiration_;
   /**
+   * <pre>
+   * Represents the final date that the discount can be applied.
+   * </pre>
+   *
    * <code>.opencannabis.temporal.Instant expiration = 3;</code>
    */
   public boolean hasExpiration() {
     return expiration_ != null;
   }
   /**
+   * <pre>
+   * Represents the final date that the discount can be applied.
+   * </pre>
+   *
    * <code>.opencannabis.temporal.Instant expiration = 3;</code>
    */
   public io.opencannabis.schema.temporal.TemporalInstant.Instant getExpiration() {
     return expiration_ == null ? io.opencannabis.schema.temporal.TemporalInstant.Instant.getDefaultInstance() : expiration_;
   }
   /**
+   * <pre>
+   * Represents the final date that the discount can be applied.
+   * </pre>
+   *
    * <code>.opencannabis.temporal.Instant expiration = 3;</code>
    */
   public io.opencannabis.schema.temporal.TemporalInstant.InstantOrBuilder getExpirationOrBuilder() {
@@ -275,12 +302,20 @@ private static final long serialVersionUID = 0L;
 
   public static final int PERCENTAGE_OFF_FIELD_NUMBER = 4;
   /**
+   * <pre>
+   * Represents the percentage value to be discounted.
+   * </pre>
+   *
    * <code>.opencannabis.structs.pricing.PercentageDiscount percentage_off = 4;</code>
    */
   public boolean hasPercentageOff() {
     return saleCase_ == 4;
   }
   /**
+   * <pre>
+   * Represents the percentage value to be discounted.
+   * </pre>
+   *
    * <code>.opencannabis.structs.pricing.PercentageDiscount percentage_off = 4;</code>
    */
   public io.opencannabis.schema.product.struct.PercentageDiscount getPercentageOff() {
@@ -290,6 +325,10 @@ private static final long serialVersionUID = 0L;
     return io.opencannabis.schema.product.struct.PercentageDiscount.getDefaultInstance();
   }
   /**
+   * <pre>
+   * Represents the percentage value to be discounted.
+   * </pre>
+   *
    * <code>.opencannabis.structs.pricing.PercentageDiscount percentage_off = 4;</code>
    */
   public io.opencannabis.schema.product.struct.PercentageDiscountOrBuilder getPercentageOffOrBuilder() {
@@ -301,12 +340,20 @@ private static final long serialVersionUID = 0L;
 
   public static final int BOGO_FIELD_NUMBER = 5;
   /**
+   * <pre>
+   * Represents that the discount is buy one get one.
+   * </pre>
+   *
    * <code>.opencannabis.structs.pricing.BOGODiscount bogo = 5;</code>
    */
   public boolean hasBogo() {
     return saleCase_ == 5;
   }
   /**
+   * <pre>
+   * Represents that the discount is buy one get one.
+   * </pre>
+   *
    * <code>.opencannabis.structs.pricing.BOGODiscount bogo = 5;</code>
    */
   public io.opencannabis.schema.product.struct.BOGODiscount getBogo() {
@@ -316,6 +363,10 @@ private static final long serialVersionUID = 0L;
     return io.opencannabis.schema.product.struct.BOGODiscount.getDefaultInstance();
   }
   /**
+   * <pre>
+   * Represents that the discount is buy one get one.
+   * </pre>
+   *
    * <code>.opencannabis.structs.pricing.BOGODiscount bogo = 5;</code>
    */
   public io.opencannabis.schema.product.struct.BOGODiscountOrBuilder getBogoOrBuilder() {
@@ -327,12 +378,20 @@ private static final long serialVersionUID = 0L;
 
   public static final int LOYALTY_FIELD_NUMBER = 6;
   /**
+   * <pre>
+   * Represents that the discount is using accrued loyalty rewards.
+   * </pre>
+   *
    * <code>.opencannabis.structs.pricing.LoyaltyDiscount loyalty = 6;</code>
    */
   public boolean hasLoyalty() {
     return saleCase_ == 6;
   }
   /**
+   * <pre>
+   * Represents that the discount is using accrued loyalty rewards.
+   * </pre>
+   *
    * <code>.opencannabis.structs.pricing.LoyaltyDiscount loyalty = 6;</code>
    */
   public io.opencannabis.schema.product.struct.LoyaltyDiscount getLoyalty() {
@@ -342,6 +401,10 @@ private static final long serialVersionUID = 0L;
     return io.opencannabis.schema.product.struct.LoyaltyDiscount.getDefaultInstance();
   }
   /**
+   * <pre>
+   * Represents that the discount is using accrued loyalty rewards.
+   * </pre>
+   *
    * <code>.opencannabis.structs.pricing.LoyaltyDiscount loyalty = 6;</code>
    */
   public io.opencannabis.schema.product.struct.LoyaltyDiscountOrBuilder getLoyaltyOrBuilder() {
@@ -431,39 +494,36 @@ private static final long serialVersionUID = 0L;
     }
     io.opencannabis.schema.product.struct.SaleDescriptor other = (io.opencannabis.schema.product.struct.SaleDescriptor) obj;
 
-    boolean result = true;
-    result = result && type_ == other.type_;
-    result = result && (hasEffective() == other.hasEffective());
+    if (type_ != other.type_) return false;
+    if (hasEffective() != other.hasEffective()) return false;
     if (hasEffective()) {
-      result = result && getEffective()
-          .equals(other.getEffective());
+      if (!getEffective()
+          .equals(other.getEffective())) return false;
     }
-    result = result && (hasExpiration() == other.hasExpiration());
+    if (hasExpiration() != other.hasExpiration()) return false;
     if (hasExpiration()) {
-      result = result && getExpiration()
-          .equals(other.getExpiration());
+      if (!getExpiration()
+          .equals(other.getExpiration())) return false;
     }
-    result = result && getSaleCase().equals(
-        other.getSaleCase());
-    if (!result) return false;
+    if (!getSaleCase().equals(other.getSaleCase())) return false;
     switch (saleCase_) {
       case 4:
-        result = result && getPercentageOff()
-            .equals(other.getPercentageOff());
+        if (!getPercentageOff()
+            .equals(other.getPercentageOff())) return false;
         break;
       case 5:
-        result = result && getBogo()
-            .equals(other.getBogo());
+        if (!getBogo()
+            .equals(other.getBogo())) return false;
         break;
       case 6:
-        result = result && getLoyalty()
-            .equals(other.getLoyalty());
+        if (!getLoyalty()
+            .equals(other.getLoyalty())) return false;
         break;
       case 0:
       default:
     }
-    result = result && unknownFields.equals(other.unknownFields);
-    return result;
+    if (!unknownFields.equals(other.unknownFields)) return false;
+    return true;
   }
 
   @java.lang.Override
@@ -595,6 +655,10 @@ private static final long serialVersionUID = 0L;
     return builder;
   }
   /**
+   * <pre>
+   * A description of the sale, the parameters to invoke the sale, its valid dates, and its type.
+   * </pre>
+   *
    * Protobuf type {@code opencannabis.structs.pricing.SaleDescriptor}
    */
   public static final class Builder extends
@@ -713,35 +777,35 @@ private static final long serialVersionUID = 0L;
 
     @java.lang.Override
     public Builder clone() {
-      return (Builder) super.clone();
+      return super.clone();
     }
     @java.lang.Override
     public Builder setField(
         com.google.protobuf.Descriptors.FieldDescriptor field,
         java.lang.Object value) {
-      return (Builder) super.setField(field, value);
+      return super.setField(field, value);
     }
     @java.lang.Override
     public Builder clearField(
         com.google.protobuf.Descriptors.FieldDescriptor field) {
-      return (Builder) super.clearField(field);
+      return super.clearField(field);
     }
     @java.lang.Override
     public Builder clearOneof(
         com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-      return (Builder) super.clearOneof(oneof);
+      return super.clearOneof(oneof);
     }
     @java.lang.Override
     public Builder setRepeatedField(
         com.google.protobuf.Descriptors.FieldDescriptor field,
         int index, java.lang.Object value) {
-      return (Builder) super.setRepeatedField(field, index, value);
+      return super.setRepeatedField(field, index, value);
     }
     @java.lang.Override
     public Builder addRepeatedField(
         com.google.protobuf.Descriptors.FieldDescriptor field,
         java.lang.Object value) {
-      return (Builder) super.addRepeatedField(field, value);
+      return super.addRepeatedField(field, value);
     }
     @java.lang.Override
     public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -828,7 +892,7 @@ private static final long serialVersionUID = 0L;
     private int type_ = 0;
     /**
      * <pre>
-     * sale metadata
+     * Sale metadata.
      * </pre>
      *
      * <code>.opencannabis.structs.pricing.SaleType type = 1;</code>
@@ -838,7 +902,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * sale metadata
+     * Sale metadata.
      * </pre>
      *
      * <code>.opencannabis.structs.pricing.SaleType type = 1;</code>
@@ -850,7 +914,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * sale metadata
+     * Sale metadata.
      * </pre>
      *
      * <code>.opencannabis.structs.pricing.SaleType type = 1;</code>
@@ -862,7 +926,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * sale metadata
+     * Sale metadata.
      * </pre>
      *
      * <code>.opencannabis.structs.pricing.SaleType type = 1;</code>
@@ -878,7 +942,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * sale metadata
+     * Sale metadata.
      * </pre>
      *
      * <code>.opencannabis.structs.pricing.SaleType type = 1;</code>
@@ -890,16 +954,24 @@ private static final long serialVersionUID = 0L;
       return this;
     }
 
-    private io.opencannabis.schema.temporal.TemporalInstant.Instant effective_ = null;
+    private io.opencannabis.schema.temporal.TemporalInstant.Instant effective_;
     private com.google.protobuf.SingleFieldBuilderV3<
         io.opencannabis.schema.temporal.TemporalInstant.Instant, io.opencannabis.schema.temporal.TemporalInstant.Instant.Builder, io.opencannabis.schema.temporal.TemporalInstant.InstantOrBuilder> effectiveBuilder_;
     /**
+     * <pre>
+     * Represents the date that the discount can be applied.
+     * </pre>
+     *
      * <code>.opencannabis.temporal.Instant effective = 2;</code>
      */
     public boolean hasEffective() {
       return effectiveBuilder_ != null || effective_ != null;
     }
     /**
+     * <pre>
+     * Represents the date that the discount can be applied.
+     * </pre>
+     *
      * <code>.opencannabis.temporal.Instant effective = 2;</code>
      */
     public io.opencannabis.schema.temporal.TemporalInstant.Instant getEffective() {
@@ -910,6 +982,10 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     * <pre>
+     * Represents the date that the discount can be applied.
+     * </pre>
+     *
      * <code>.opencannabis.temporal.Instant effective = 2;</code>
      */
     public Builder setEffective(io.opencannabis.schema.temporal.TemporalInstant.Instant value) {
@@ -926,6 +1002,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * Represents the date that the discount can be applied.
+     * </pre>
+     *
      * <code>.opencannabis.temporal.Instant effective = 2;</code>
      */
     public Builder setEffective(
@@ -940,6 +1020,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * Represents the date that the discount can be applied.
+     * </pre>
+     *
      * <code>.opencannabis.temporal.Instant effective = 2;</code>
      */
     public Builder mergeEffective(io.opencannabis.schema.temporal.TemporalInstant.Instant value) {
@@ -958,6 +1042,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * Represents the date that the discount can be applied.
+     * </pre>
+     *
      * <code>.opencannabis.temporal.Instant effective = 2;</code>
      */
     public Builder clearEffective() {
@@ -972,6 +1060,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * Represents the date that the discount can be applied.
+     * </pre>
+     *
      * <code>.opencannabis.temporal.Instant effective = 2;</code>
      */
     public io.opencannabis.schema.temporal.TemporalInstant.Instant.Builder getEffectiveBuilder() {
@@ -980,6 +1072,10 @@ private static final long serialVersionUID = 0L;
       return getEffectiveFieldBuilder().getBuilder();
     }
     /**
+     * <pre>
+     * Represents the date that the discount can be applied.
+     * </pre>
+     *
      * <code>.opencannabis.temporal.Instant effective = 2;</code>
      */
     public io.opencannabis.schema.temporal.TemporalInstant.InstantOrBuilder getEffectiveOrBuilder() {
@@ -991,6 +1087,10 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     * <pre>
+     * Represents the date that the discount can be applied.
+     * </pre>
+     *
      * <code>.opencannabis.temporal.Instant effective = 2;</code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<
@@ -1007,16 +1107,24 @@ private static final long serialVersionUID = 0L;
       return effectiveBuilder_;
     }
 
-    private io.opencannabis.schema.temporal.TemporalInstant.Instant expiration_ = null;
+    private io.opencannabis.schema.temporal.TemporalInstant.Instant expiration_;
     private com.google.protobuf.SingleFieldBuilderV3<
         io.opencannabis.schema.temporal.TemporalInstant.Instant, io.opencannabis.schema.temporal.TemporalInstant.Instant.Builder, io.opencannabis.schema.temporal.TemporalInstant.InstantOrBuilder> expirationBuilder_;
     /**
+     * <pre>
+     * Represents the final date that the discount can be applied.
+     * </pre>
+     *
      * <code>.opencannabis.temporal.Instant expiration = 3;</code>
      */
     public boolean hasExpiration() {
       return expirationBuilder_ != null || expiration_ != null;
     }
     /**
+     * <pre>
+     * Represents the final date that the discount can be applied.
+     * </pre>
+     *
      * <code>.opencannabis.temporal.Instant expiration = 3;</code>
      */
     public io.opencannabis.schema.temporal.TemporalInstant.Instant getExpiration() {
@@ -1027,6 +1135,10 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     * <pre>
+     * Represents the final date that the discount can be applied.
+     * </pre>
+     *
      * <code>.opencannabis.temporal.Instant expiration = 3;</code>
      */
     public Builder setExpiration(io.opencannabis.schema.temporal.TemporalInstant.Instant value) {
@@ -1043,6 +1155,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * Represents the final date that the discount can be applied.
+     * </pre>
+     *
      * <code>.opencannabis.temporal.Instant expiration = 3;</code>
      */
     public Builder setExpiration(
@@ -1057,6 +1173,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * Represents the final date that the discount can be applied.
+     * </pre>
+     *
      * <code>.opencannabis.temporal.Instant expiration = 3;</code>
      */
     public Builder mergeExpiration(io.opencannabis.schema.temporal.TemporalInstant.Instant value) {
@@ -1075,6 +1195,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * Represents the final date that the discount can be applied.
+     * </pre>
+     *
      * <code>.opencannabis.temporal.Instant expiration = 3;</code>
      */
     public Builder clearExpiration() {
@@ -1089,6 +1213,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * Represents the final date that the discount can be applied.
+     * </pre>
+     *
      * <code>.opencannabis.temporal.Instant expiration = 3;</code>
      */
     public io.opencannabis.schema.temporal.TemporalInstant.Instant.Builder getExpirationBuilder() {
@@ -1097,6 +1225,10 @@ private static final long serialVersionUID = 0L;
       return getExpirationFieldBuilder().getBuilder();
     }
     /**
+     * <pre>
+     * Represents the final date that the discount can be applied.
+     * </pre>
+     *
      * <code>.opencannabis.temporal.Instant expiration = 3;</code>
      */
     public io.opencannabis.schema.temporal.TemporalInstant.InstantOrBuilder getExpirationOrBuilder() {
@@ -1108,6 +1240,10 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     * <pre>
+     * Represents the final date that the discount can be applied.
+     * </pre>
+     *
      * <code>.opencannabis.temporal.Instant expiration = 3;</code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<
@@ -1127,12 +1263,20 @@ private static final long serialVersionUID = 0L;
     private com.google.protobuf.SingleFieldBuilderV3<
         io.opencannabis.schema.product.struct.PercentageDiscount, io.opencannabis.schema.product.struct.PercentageDiscount.Builder, io.opencannabis.schema.product.struct.PercentageDiscountOrBuilder> percentageOffBuilder_;
     /**
+     * <pre>
+     * Represents the percentage value to be discounted.
+     * </pre>
+     *
      * <code>.opencannabis.structs.pricing.PercentageDiscount percentage_off = 4;</code>
      */
     public boolean hasPercentageOff() {
       return saleCase_ == 4;
     }
     /**
+     * <pre>
+     * Represents the percentage value to be discounted.
+     * </pre>
+     *
      * <code>.opencannabis.structs.pricing.PercentageDiscount percentage_off = 4;</code>
      */
     public io.opencannabis.schema.product.struct.PercentageDiscount getPercentageOff() {
@@ -1149,6 +1293,10 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     * <pre>
+     * Represents the percentage value to be discounted.
+     * </pre>
+     *
      * <code>.opencannabis.structs.pricing.PercentageDiscount percentage_off = 4;</code>
      */
     public Builder setPercentageOff(io.opencannabis.schema.product.struct.PercentageDiscount value) {
@@ -1165,6 +1313,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * Represents the percentage value to be discounted.
+     * </pre>
+     *
      * <code>.opencannabis.structs.pricing.PercentageDiscount percentage_off = 4;</code>
      */
     public Builder setPercentageOff(
@@ -1179,6 +1331,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * Represents the percentage value to be discounted.
+     * </pre>
+     *
      * <code>.opencannabis.structs.pricing.PercentageDiscount percentage_off = 4;</code>
      */
     public Builder mergePercentageOff(io.opencannabis.schema.product.struct.PercentageDiscount value) {
@@ -1201,6 +1357,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * Represents the percentage value to be discounted.
+     * </pre>
+     *
      * <code>.opencannabis.structs.pricing.PercentageDiscount percentage_off = 4;</code>
      */
     public Builder clearPercentageOff() {
@@ -1220,12 +1380,20 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * Represents the percentage value to be discounted.
+     * </pre>
+     *
      * <code>.opencannabis.structs.pricing.PercentageDiscount percentage_off = 4;</code>
      */
     public io.opencannabis.schema.product.struct.PercentageDiscount.Builder getPercentageOffBuilder() {
       return getPercentageOffFieldBuilder().getBuilder();
     }
     /**
+     * <pre>
+     * Represents the percentage value to be discounted.
+     * </pre>
+     *
      * <code>.opencannabis.structs.pricing.PercentageDiscount percentage_off = 4;</code>
      */
     public io.opencannabis.schema.product.struct.PercentageDiscountOrBuilder getPercentageOffOrBuilder() {
@@ -1239,6 +1407,10 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     * <pre>
+     * Represents the percentage value to be discounted.
+     * </pre>
+     *
      * <code>.opencannabis.structs.pricing.PercentageDiscount percentage_off = 4;</code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<
@@ -1263,12 +1435,20 @@ private static final long serialVersionUID = 0L;
     private com.google.protobuf.SingleFieldBuilderV3<
         io.opencannabis.schema.product.struct.BOGODiscount, io.opencannabis.schema.product.struct.BOGODiscount.Builder, io.opencannabis.schema.product.struct.BOGODiscountOrBuilder> bogoBuilder_;
     /**
+     * <pre>
+     * Represents that the discount is buy one get one.
+     * </pre>
+     *
      * <code>.opencannabis.structs.pricing.BOGODiscount bogo = 5;</code>
      */
     public boolean hasBogo() {
       return saleCase_ == 5;
     }
     /**
+     * <pre>
+     * Represents that the discount is buy one get one.
+     * </pre>
+     *
      * <code>.opencannabis.structs.pricing.BOGODiscount bogo = 5;</code>
      */
     public io.opencannabis.schema.product.struct.BOGODiscount getBogo() {
@@ -1285,6 +1465,10 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     * <pre>
+     * Represents that the discount is buy one get one.
+     * </pre>
+     *
      * <code>.opencannabis.structs.pricing.BOGODiscount bogo = 5;</code>
      */
     public Builder setBogo(io.opencannabis.schema.product.struct.BOGODiscount value) {
@@ -1301,6 +1485,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * Represents that the discount is buy one get one.
+     * </pre>
+     *
      * <code>.opencannabis.structs.pricing.BOGODiscount bogo = 5;</code>
      */
     public Builder setBogo(
@@ -1315,6 +1503,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * Represents that the discount is buy one get one.
+     * </pre>
+     *
      * <code>.opencannabis.structs.pricing.BOGODiscount bogo = 5;</code>
      */
     public Builder mergeBogo(io.opencannabis.schema.product.struct.BOGODiscount value) {
@@ -1337,6 +1529,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * Represents that the discount is buy one get one.
+     * </pre>
+     *
      * <code>.opencannabis.structs.pricing.BOGODiscount bogo = 5;</code>
      */
     public Builder clearBogo() {
@@ -1356,12 +1552,20 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * Represents that the discount is buy one get one.
+     * </pre>
+     *
      * <code>.opencannabis.structs.pricing.BOGODiscount bogo = 5;</code>
      */
     public io.opencannabis.schema.product.struct.BOGODiscount.Builder getBogoBuilder() {
       return getBogoFieldBuilder().getBuilder();
     }
     /**
+     * <pre>
+     * Represents that the discount is buy one get one.
+     * </pre>
+     *
      * <code>.opencannabis.structs.pricing.BOGODiscount bogo = 5;</code>
      */
     public io.opencannabis.schema.product.struct.BOGODiscountOrBuilder getBogoOrBuilder() {
@@ -1375,6 +1579,10 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     * <pre>
+     * Represents that the discount is buy one get one.
+     * </pre>
+     *
      * <code>.opencannabis.structs.pricing.BOGODiscount bogo = 5;</code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<
@@ -1399,12 +1607,20 @@ private static final long serialVersionUID = 0L;
     private com.google.protobuf.SingleFieldBuilderV3<
         io.opencannabis.schema.product.struct.LoyaltyDiscount, io.opencannabis.schema.product.struct.LoyaltyDiscount.Builder, io.opencannabis.schema.product.struct.LoyaltyDiscountOrBuilder> loyaltyBuilder_;
     /**
+     * <pre>
+     * Represents that the discount is using accrued loyalty rewards.
+     * </pre>
+     *
      * <code>.opencannabis.structs.pricing.LoyaltyDiscount loyalty = 6;</code>
      */
     public boolean hasLoyalty() {
       return saleCase_ == 6;
     }
     /**
+     * <pre>
+     * Represents that the discount is using accrued loyalty rewards.
+     * </pre>
+     *
      * <code>.opencannabis.structs.pricing.LoyaltyDiscount loyalty = 6;</code>
      */
     public io.opencannabis.schema.product.struct.LoyaltyDiscount getLoyalty() {
@@ -1421,6 +1637,10 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     * <pre>
+     * Represents that the discount is using accrued loyalty rewards.
+     * </pre>
+     *
      * <code>.opencannabis.structs.pricing.LoyaltyDiscount loyalty = 6;</code>
      */
     public Builder setLoyalty(io.opencannabis.schema.product.struct.LoyaltyDiscount value) {
@@ -1437,6 +1657,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * Represents that the discount is using accrued loyalty rewards.
+     * </pre>
+     *
      * <code>.opencannabis.structs.pricing.LoyaltyDiscount loyalty = 6;</code>
      */
     public Builder setLoyalty(
@@ -1451,6 +1675,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * Represents that the discount is using accrued loyalty rewards.
+     * </pre>
+     *
      * <code>.opencannabis.structs.pricing.LoyaltyDiscount loyalty = 6;</code>
      */
     public Builder mergeLoyalty(io.opencannabis.schema.product.struct.LoyaltyDiscount value) {
@@ -1473,6 +1701,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * Represents that the discount is using accrued loyalty rewards.
+     * </pre>
+     *
      * <code>.opencannabis.structs.pricing.LoyaltyDiscount loyalty = 6;</code>
      */
     public Builder clearLoyalty() {
@@ -1492,12 +1724,20 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * Represents that the discount is using accrued loyalty rewards.
+     * </pre>
+     *
      * <code>.opencannabis.structs.pricing.LoyaltyDiscount loyalty = 6;</code>
      */
     public io.opencannabis.schema.product.struct.LoyaltyDiscount.Builder getLoyaltyBuilder() {
       return getLoyaltyFieldBuilder().getBuilder();
     }
     /**
+     * <pre>
+     * Represents that the discount is using accrued loyalty rewards.
+     * </pre>
+     *
      * <code>.opencannabis.structs.pricing.LoyaltyDiscount loyalty = 6;</code>
      */
     public io.opencannabis.schema.product.struct.LoyaltyDiscountOrBuilder getLoyaltyOrBuilder() {
@@ -1511,6 +1751,10 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     * <pre>
+     * Represents that the discount is using accrued loyalty rewards.
+     * </pre>
+     *
      * <code>.opencannabis.structs.pricing.LoyaltyDiscount loyalty = 6;</code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<
@@ -1534,7 +1778,7 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public final Builder setUnknownFields(
         final com.google.protobuf.UnknownFieldSet unknownFields) {
-      return super.setUnknownFieldsProto3(unknownFields);
+      return super.setUnknownFields(unknownFields);
     }
 
     @java.lang.Override

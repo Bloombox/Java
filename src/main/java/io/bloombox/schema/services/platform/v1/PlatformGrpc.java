@@ -1,5 +1,5 @@
 /*
- * Copyright 2018, Momentum Ideas, Co. All rights reserved.
+ * Copyright 2019, Momentum Ideas, Co. All rights reserved.
  *
  * Source and object computer code contained herein is the private intellectual
  * property of Momentum Ideas Co., a Delaware Corporation. Use of this
@@ -39,7 +39,7 @@ import static io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall;
  * </pre>
  */
 @javax.annotation.Generated(
-    value = "by gRPC proto compiler (version 1.18.0-SNAPSHOT)",
+    value = "by gRPC proto compiler (version 1.18.0)",
     comments = "Source: platform/v1/PlatformService_v1.proto")
 public final class PlatformGrpc {
 
@@ -176,6 +176,38 @@ public final class PlatformGrpc {
      return getDomainsMethod;
   }
 
+  private static volatile io.grpc.MethodDescriptor<io.bloombox.schema.services.platform.v1.SiteInfo.Request,
+      io.bloombox.schema.services.platform.v1.SiteInfo.Response> getSiteInfoMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "SiteInfo",
+      requestType = io.bloombox.schema.services.platform.v1.SiteInfo.Request.class,
+      responseType = io.bloombox.schema.services.platform.v1.SiteInfo.Response.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<io.bloombox.schema.services.platform.v1.SiteInfo.Request,
+      io.bloombox.schema.services.platform.v1.SiteInfo.Response> getSiteInfoMethod() {
+    io.grpc.MethodDescriptor<io.bloombox.schema.services.platform.v1.SiteInfo.Request, io.bloombox.schema.services.platform.v1.SiteInfo.Response> getSiteInfoMethod;
+    if ((getSiteInfoMethod = PlatformGrpc.getSiteInfoMethod) == null) {
+      synchronized (PlatformGrpc.class) {
+        if ((getSiteInfoMethod = PlatformGrpc.getSiteInfoMethod) == null) {
+          PlatformGrpc.getSiteInfoMethod = getSiteInfoMethod = 
+              io.grpc.MethodDescriptor.<io.bloombox.schema.services.platform.v1.SiteInfo.Request, io.bloombox.schema.services.platform.v1.SiteInfo.Response>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(
+                  "bloombox.services.platform.v1.Platform", "SiteInfo"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  io.bloombox.schema.services.platform.v1.SiteInfo.Request.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  io.bloombox.schema.services.platform.v1.SiteInfo.Response.getDefaultInstance()))
+                  .setSchemaDescriptor(new PlatformMethodDescriptorSupplier("SiteInfo"))
+                  .build();
+          }
+        }
+     }
+     return getSiteInfoMethod;
+  }
+
   private static volatile io.grpc.MethodDescriptor<io.bloombox.schema.services.platform.v1.BrandInfo.Request,
       io.bloombox.schema.services.platform.v1.BrandInfo.Response> getBrandMethod;
 
@@ -281,6 +313,16 @@ public final class PlatformGrpc {
 
     /**
      * <pre>
+     * Retrieves metadata found in an HTML Document for a given partner/location.
+     * </pre>
+     */
+    public void siteInfo(io.bloombox.schema.services.platform.v1.SiteInfo.Request request,
+        io.grpc.stub.StreamObserver<io.bloombox.schema.services.platform.v1.SiteInfo.Response> responseObserver) {
+      asyncUnimplementedUnaryCall(getSiteInfoMethod(), responseObserver);
+    }
+
+    /**
+     * <pre>
      * Retrieve brand assets and info for a given partner/location.
      * </pre>
      */
@@ -319,6 +361,13 @@ public final class PlatformGrpc {
                 io.bloombox.schema.services.platform.v1.DomainInfo.Request,
                 io.bloombox.schema.services.platform.v1.DomainInfo.Response>(
                   this, METHODID_DOMAINS)))
+          .addMethod(
+            getSiteInfoMethod(),
+            asyncUnaryCall(
+              new MethodHandlers<
+                io.bloombox.schema.services.platform.v1.SiteInfo.Request,
+                io.bloombox.schema.services.platform.v1.SiteInfo.Response>(
+                  this, METHODID_SITE_INFO)))
           .addMethod(
             getBrandMethod(),
             asyncUnaryCall(
@@ -398,6 +447,17 @@ public final class PlatformGrpc {
 
     /**
      * <pre>
+     * Retrieves metadata found in an HTML Document for a given partner/location.
+     * </pre>
+     */
+    public void siteInfo(io.bloombox.schema.services.platform.v1.SiteInfo.Request request,
+        io.grpc.stub.StreamObserver<io.bloombox.schema.services.platform.v1.SiteInfo.Response> responseObserver) {
+      asyncUnaryCall(
+          getChannel().newCall(getSiteInfoMethod(), getCallOptions()), request, responseObserver);
+    }
+
+    /**
+     * <pre>
      * Retrieve brand assets and info for a given partner/location.
      * </pre>
      */
@@ -468,6 +528,16 @@ public final class PlatformGrpc {
     public io.bloombox.schema.services.platform.v1.DomainInfo.Response domains(io.bloombox.schema.services.platform.v1.DomainInfo.Request request) {
       return blockingUnaryCall(
           getChannel(), getDomainsMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * Retrieves metadata found in an HTML Document for a given partner/location.
+     * </pre>
+     */
+    public io.bloombox.schema.services.platform.v1.SiteInfo.Response siteInfo(io.bloombox.schema.services.platform.v1.SiteInfo.Request request) {
+      return blockingUnaryCall(
+          getChannel(), getSiteInfoMethod(), getCallOptions(), request);
     }
 
     /**
@@ -549,6 +619,17 @@ public final class PlatformGrpc {
 
     /**
      * <pre>
+     * Retrieves metadata found in an HTML Document for a given partner/location.
+     * </pre>
+     */
+    public com.google.common.util.concurrent.ListenableFuture<io.bloombox.schema.services.platform.v1.SiteInfo.Response> siteInfo(
+        io.bloombox.schema.services.platform.v1.SiteInfo.Request request) {
+      return futureUnaryCall(
+          getChannel().newCall(getSiteInfoMethod(), getCallOptions()), request);
+    }
+
+    /**
+     * <pre>
      * Retrieve brand assets and info for a given partner/location.
      * </pre>
      */
@@ -563,7 +644,8 @@ public final class PlatformGrpc {
   private static final int METHODID_HEALTH = 1;
   private static final int METHODID_RESOLVE = 2;
   private static final int METHODID_DOMAINS = 3;
-  private static final int METHODID_BRAND = 4;
+  private static final int METHODID_SITE_INFO = 4;
+  private static final int METHODID_BRAND = 5;
 
   private static final class MethodHandlers<Req, Resp> implements
       io.grpc.stub.ServerCalls.UnaryMethod<Req, Resp>,
@@ -597,6 +679,10 @@ public final class PlatformGrpc {
         case METHODID_DOMAINS:
           serviceImpl.domains((io.bloombox.schema.services.platform.v1.DomainInfo.Request) request,
               (io.grpc.stub.StreamObserver<io.bloombox.schema.services.platform.v1.DomainInfo.Response>) responseObserver);
+          break;
+        case METHODID_SITE_INFO:
+          serviceImpl.siteInfo((io.bloombox.schema.services.platform.v1.SiteInfo.Request) request,
+              (io.grpc.stub.StreamObserver<io.bloombox.schema.services.platform.v1.SiteInfo.Response>) responseObserver);
           break;
         case METHODID_BRAND:
           serviceImpl.brand((io.bloombox.schema.services.platform.v1.BrandInfo.Request) request,
@@ -667,6 +753,7 @@ public final class PlatformGrpc {
               .addMethod(getHealthMethod())
               .addMethod(getResolveMethod())
               .addMethod(getDomainsMethod())
+              .addMethod(getSiteInfoMethod())
               .addMethod(getBrandMethod())
               .build();
         }

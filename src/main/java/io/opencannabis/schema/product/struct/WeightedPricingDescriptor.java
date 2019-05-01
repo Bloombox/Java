@@ -1,12 +1,11 @@
 /*
- * Copyright 2018, Momentum Ideas, Co. All rights reserved.
+ * Copyright 2019, Momentum Ideas Co.
  *
- * Source and object computer code contained herein is the private intellectual
- * property of Momentum Ideas Co., a Delaware Corporation. Use of this
- * code in source form requires permission in writing before use or the
- * assembly, distribution, or publishing of derivative works, for commercial
- * purposes or any other purpose, from a duly authorized officer of Momentum
- * Ideas Co.
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *  http://www.apache.org/licenses/LICENSE-2.0
  *
  * Unless required by applicable law or agreed to in writing, software
  * distributed under the License is distributed on an "AS IS" BASIS,
@@ -39,7 +38,6 @@ private static final long serialVersionUID = 0L;
   }
   private WeightedPricingDescriptor() {
     weight_ = 0;
-    weightInGrams_ = 0F;
   }
 
   @java.lang.Override
@@ -91,7 +89,7 @@ private static final long serialVersionUID = 0L;
             break;
           }
           default: {
-            if (!parseUnknownFieldProto3(
+            if (!parseUnknownField(
                 input, unknownFields, extensionRegistry, tag)) {
               done = true;
             }
@@ -252,19 +250,17 @@ private static final long serialVersionUID = 0L;
     }
     io.opencannabis.schema.product.struct.WeightedPricingDescriptor other = (io.opencannabis.schema.product.struct.WeightedPricingDescriptor) obj;
 
-    boolean result = true;
-    result = result && weight_ == other.weight_;
-    result = result && (hasTier() == other.hasTier());
+    if (weight_ != other.weight_) return false;
+    if (hasTier() != other.hasTier()) return false;
     if (hasTier()) {
-      result = result && getTier()
-          .equals(other.getTier());
+      if (!getTier()
+          .equals(other.getTier())) return false;
     }
-    result = result && (
-        java.lang.Float.floatToIntBits(getWeightInGrams())
-        == java.lang.Float.floatToIntBits(
-            other.getWeightInGrams()));
-    result = result && unknownFields.equals(other.unknownFields);
-    return result;
+    if (java.lang.Float.floatToIntBits(getWeightInGrams())
+        != java.lang.Float.floatToIntBits(
+            other.getWeightInGrams())) return false;
+    if (!unknownFields.equals(other.unknownFields)) return false;
+    return true;
   }
 
   @java.lang.Override
@@ -470,35 +466,35 @@ private static final long serialVersionUID = 0L;
 
     @java.lang.Override
     public Builder clone() {
-      return (Builder) super.clone();
+      return super.clone();
     }
     @java.lang.Override
     public Builder setField(
         com.google.protobuf.Descriptors.FieldDescriptor field,
         java.lang.Object value) {
-      return (Builder) super.setField(field, value);
+      return super.setField(field, value);
     }
     @java.lang.Override
     public Builder clearField(
         com.google.protobuf.Descriptors.FieldDescriptor field) {
-      return (Builder) super.clearField(field);
+      return super.clearField(field);
     }
     @java.lang.Override
     public Builder clearOneof(
         com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-      return (Builder) super.clearOneof(oneof);
+      return super.clearOneof(oneof);
     }
     @java.lang.Override
     public Builder setRepeatedField(
         com.google.protobuf.Descriptors.FieldDescriptor field,
         int index, java.lang.Object value) {
-      return (Builder) super.setRepeatedField(field, index, value);
+      return super.setRepeatedField(field, index, value);
     }
     @java.lang.Override
     public Builder addRepeatedField(
         com.google.protobuf.Descriptors.FieldDescriptor field,
         java.lang.Object value) {
-      return (Builder) super.addRepeatedField(field, value);
+      return super.addRepeatedField(field, value);
     }
     @java.lang.Override
     public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -615,7 +611,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
 
-    private io.opencannabis.schema.product.struct.UnitPricingDescriptor tier_ = null;
+    private io.opencannabis.schema.product.struct.UnitPricingDescriptor tier_;
     private com.google.protobuf.SingleFieldBuilderV3<
         io.opencannabis.schema.product.struct.UnitPricingDescriptor, io.opencannabis.schema.product.struct.UnitPricingDescriptor.Builder, io.opencannabis.schema.product.struct.UnitPricingDescriptorOrBuilder> tierBuilder_;
     /**
@@ -808,7 +804,7 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public final Builder setUnknownFields(
         final com.google.protobuf.UnknownFieldSet unknownFields) {
-      return super.setUnknownFieldsProto3(unknownFields);
+      return super.setUnknownFields(unknownFields);
     }
 
     @java.lang.Override

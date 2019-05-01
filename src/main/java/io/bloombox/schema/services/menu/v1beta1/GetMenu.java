@@ -1,5 +1,5 @@
 /*
- * Copyright 2018, Momentum Ideas, Co. All rights reserved.
+ * Copyright 2019, Momentum Ideas, Co. All rights reserved.
  *
  * Source and object computer code contained herein is the private intellectual
  * property of Momentum Ideas Co., a Delaware Corporation. Use of this
@@ -64,7 +64,7 @@ private static final long serialVersionUID = 0L;
             done = true;
             break;
           default: {
-            if (!parseUnknownFieldProto3(
+            if (!parseUnknownField(
                 input, unknownFields, extensionRegistry, tag)) {
               done = true;
             }
@@ -215,12 +215,9 @@ private static final long serialVersionUID = 0L;
     }
     private Request() {
       scope_ = "";
-      full_ = false;
-      keysOnly_ = false;
       snapshot_ = "";
       fingerprint_ = "";
       section_ = 0;
-      fresh_ = false;
     }
 
     @java.lang.Override
@@ -287,7 +284,7 @@ private static final long serialVersionUID = 0L;
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -592,22 +589,21 @@ private static final long serialVersionUID = 0L;
       }
       io.bloombox.schema.services.menu.v1beta1.GetMenu.Request other = (io.bloombox.schema.services.menu.v1beta1.GetMenu.Request) obj;
 
-      boolean result = true;
-      result = result && getScope()
-          .equals(other.getScope());
-      result = result && (getFull()
-          == other.getFull());
-      result = result && (getKeysOnly()
-          == other.getKeysOnly());
-      result = result && getSnapshot()
-          .equals(other.getSnapshot());
-      result = result && getFingerprint()
-          .equals(other.getFingerprint());
-      result = result && section_ == other.section_;
-      result = result && (getFresh()
-          == other.getFresh());
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!getScope()
+          .equals(other.getScope())) return false;
+      if (getFull()
+          != other.getFull()) return false;
+      if (getKeysOnly()
+          != other.getKeysOnly()) return false;
+      if (!getSnapshot()
+          .equals(other.getSnapshot())) return false;
+      if (!getFingerprint()
+          .equals(other.getFingerprint())) return false;
+      if (section_ != other.section_) return false;
+      if (getFresh()
+          != other.getFresh()) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -824,35 +820,35 @@ private static final long serialVersionUID = 0L;
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -1367,7 +1363,7 @@ private static final long serialVersionUID = 0L;
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -1475,7 +1471,6 @@ private static final long serialVersionUID = 0L;
       super(builder);
     }
     private Response() {
-      cached_ = false;
     }
 
     @java.lang.Override
@@ -1521,7 +1516,7 @@ private static final long serialVersionUID = 0L;
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -1653,16 +1648,15 @@ private static final long serialVersionUID = 0L;
       }
       io.bloombox.schema.services.menu.v1beta1.GetMenu.Response other = (io.bloombox.schema.services.menu.v1beta1.GetMenu.Response) obj;
 
-      boolean result = true;
-      result = result && (hasCatalog() == other.hasCatalog());
+      if (hasCatalog() != other.hasCatalog()) return false;
       if (hasCatalog()) {
-        result = result && getCatalog()
-            .equals(other.getCatalog());
+        if (!getCatalog()
+            .equals(other.getCatalog())) return false;
       }
-      result = result && (getCached()
-          == other.getCached());
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (getCached()
+          != other.getCached()) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -1862,35 +1856,35 @@ private static final long serialVersionUID = 0L;
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -1939,7 +1933,7 @@ private static final long serialVersionUID = 0L;
         return this;
       }
 
-      private io.opencannabis.schema.menu.Menu catalog_ = null;
+      private io.opencannabis.schema.menu.Menu catalog_;
       private com.google.protobuf.SingleFieldBuilderV3<
           io.opencannabis.schema.menu.Menu, io.opencannabis.schema.menu.Menu.Builder, io.opencannabis.schema.menu.MenuOrBuilder> catalogBuilder_;
       /**
@@ -2141,7 +2135,7 @@ private static final long serialVersionUID = 0L;
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -2191,6 +2185,6041 @@ private static final long serialVersionUID = 0L;
 
   }
 
+  public interface StreamEventOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:bloombox.services.menu.v1beta1.GetMenu.StreamEvent)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * New fingerprint for the entire menu catalog.
+     * </pre>
+     *
+     * <code>string fingerprint = 1;</code>
+     */
+    java.lang.String getFingerprint();
+    /**
+     * <pre>
+     * New fingerprint for the entire menu catalog.
+     * </pre>
+     *
+     * <code>string fingerprint = 1;</code>
+     */
+    com.google.protobuf.ByteString
+        getFingerprintBytes();
+
+    /**
+     * <pre>
+     * Timestamp indicating when this change occurred, in millisecond-level resolution.
+     * </pre>
+     *
+     * <code>.opencannabis.temporal.Instant modified = 2;</code>
+     */
+    boolean hasModified();
+    /**
+     * <pre>
+     * Timestamp indicating when this change occurred, in millisecond-level resolution.
+     * </pre>
+     *
+     * <code>.opencannabis.temporal.Instant modified = 2;</code>
+     */
+    io.opencannabis.schema.temporal.TemporalInstant.Instant getModified();
+    /**
+     * <pre>
+     * Timestamp indicating when this change occurred, in millisecond-level resolution.
+     * </pre>
+     *
+     * <code>.opencannabis.temporal.Instant modified = 2;</code>
+     */
+    io.opencannabis.schema.temporal.TemporalInstant.InstantOrBuilder getModifiedOrBuilder();
+
+    /**
+     * <pre>
+     * Specifies a full menu catalog, which is usually communicated as the initial response payload.
+     * </pre>
+     *
+     * <code>.opencannabis.products.menu.Menu catalog = 10;</code>
+     */
+    boolean hasCatalog();
+    /**
+     * <pre>
+     * Specifies a full menu catalog, which is usually communicated as the initial response payload.
+     * </pre>
+     *
+     * <code>.opencannabis.products.menu.Menu catalog = 10;</code>
+     */
+    io.opencannabis.schema.menu.Menu getCatalog();
+    /**
+     * <pre>
+     * Specifies a full menu catalog, which is usually communicated as the initial response payload.
+     * </pre>
+     *
+     * <code>.opencannabis.products.menu.Menu catalog = 10;</code>
+     */
+    io.opencannabis.schema.menu.MenuOrBuilder getCatalogOrBuilder();
+
+    /**
+     * <pre>
+     * Delta payload, describing a menu change.
+     * </pre>
+     *
+     * <code>.bloombox.services.menu.v1beta1.GetMenu.StreamEvent.MenuChanges delta = 11;</code>
+     */
+    boolean hasDelta();
+    /**
+     * <pre>
+     * Delta payload, describing a menu change.
+     * </pre>
+     *
+     * <code>.bloombox.services.menu.v1beta1.GetMenu.StreamEvent.MenuChanges delta = 11;</code>
+     */
+    io.bloombox.schema.services.menu.v1beta1.GetMenu.StreamEvent.MenuChanges getDelta();
+    /**
+     * <pre>
+     * Delta payload, describing a menu change.
+     * </pre>
+     *
+     * <code>.bloombox.services.menu.v1beta1.GetMenu.StreamEvent.MenuChanges delta = 11;</code>
+     */
+    io.bloombox.schema.services.menu.v1beta1.GetMenu.StreamEvent.MenuChangesOrBuilder getDeltaOrBuilder();
+
+    public io.bloombox.schema.services.menu.v1beta1.GetMenu.StreamEvent.PayloadCase getPayloadCase();
+  }
+  /**
+   * <pre>
+   * Respond to a menu stream with an initial response, or an event payload, describing some occurrence or change in
+   * menu data to be processed by the listening client.
+   * </pre>
+   *
+   * Protobuf type {@code bloombox.services.menu.v1beta1.GetMenu.StreamEvent}
+   */
+  public  static final class StreamEvent extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:bloombox.services.menu.v1beta1.GetMenu.StreamEvent)
+      StreamEventOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use StreamEvent.newBuilder() to construct.
+    private StreamEvent(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private StreamEvent() {
+      fingerprint_ = "";
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private StreamEvent(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              fingerprint_ = s;
+              break;
+            }
+            case 18: {
+              io.opencannabis.schema.temporal.TemporalInstant.Instant.Builder subBuilder = null;
+              if (modified_ != null) {
+                subBuilder = modified_.toBuilder();
+              }
+              modified_ = input.readMessage(io.opencannabis.schema.temporal.TemporalInstant.Instant.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(modified_);
+                modified_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            case 82: {
+              io.opencannabis.schema.menu.Menu.Builder subBuilder = null;
+              if (payloadCase_ == 10) {
+                subBuilder = ((io.opencannabis.schema.menu.Menu) payload_).toBuilder();
+              }
+              payload_ =
+                  input.readMessage(io.opencannabis.schema.menu.Menu.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom((io.opencannabis.schema.menu.Menu) payload_);
+                payload_ = subBuilder.buildPartial();
+              }
+              payloadCase_ = 10;
+              break;
+            }
+            case 90: {
+              io.bloombox.schema.services.menu.v1beta1.GetMenu.StreamEvent.MenuChanges.Builder subBuilder = null;
+              if (payloadCase_ == 11) {
+                subBuilder = ((io.bloombox.schema.services.menu.v1beta1.GetMenu.StreamEvent.MenuChanges) payload_).toBuilder();
+              }
+              payload_ =
+                  input.readMessage(io.bloombox.schema.services.menu.v1beta1.GetMenu.StreamEvent.MenuChanges.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom((io.bloombox.schema.services.menu.v1beta1.GetMenu.StreamEvent.MenuChanges) payload_);
+                payload_ = subBuilder.buildPartial();
+              }
+              payloadCase_ = 11;
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return io.bloombox.schema.services.menu.v1beta1.MenuServiceBeta1.internal_static_bloombox_services_menu_v1beta1_GetMenu_StreamEvent_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return io.bloombox.schema.services.menu.v1beta1.MenuServiceBeta1.internal_static_bloombox_services_menu_v1beta1_GetMenu_StreamEvent_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              io.bloombox.schema.services.menu.v1beta1.GetMenu.StreamEvent.class, io.bloombox.schema.services.menu.v1beta1.GetMenu.StreamEvent.Builder.class);
+    }
+
+    /**
+     * <pre>
+     * Enumerates the types of menu changes that can take place, and be used to notify the client. Changes may include
+     * menu item data, section membership for a given product, and more.
+     * </pre>
+     *
+     * Protobuf enum {@code bloombox.services.menu.v1beta1.GetMenu.StreamEvent.ChangeType}
+     */
+    public enum ChangeType
+        implements com.google.protobuf.ProtocolMessageEnum {
+      /**
+       * <pre>
+       * Some change occurred that requires a menu refresh. In this case, no details are provided, so the whole menu is
+       * invalidated for re-fetch.
+       * </pre>
+       *
+       * <code>GENERIC_CHANGE = 0;</code>
+       */
+      GENERIC_CHANGE(0),
+      /**
+       * <pre>
+       * Settings for the menu changed, and so, the entire menu should be refreshed.
+       * </pre>
+       *
+       * <code>SETTINGS = 1;</code>
+       */
+      SETTINGS(1),
+      /**
+       * <pre>
+       * A product was added to the menu. The product's key should be listed in the subject product keys.
+       * </pre>
+       *
+       * <code>PRODUCT_ADD = 2;</code>
+       */
+      PRODUCT_ADD(2),
+      /**
+       * <pre>
+       * A product was changed on the menu. The product's key should be listed in the subject product keys.
+       * </pre>
+       *
+       * <code>PRODUCT_CHANGE = 3;</code>
+       */
+      PRODUCT_CHANGE(3),
+      /**
+       * <pre>
+       * A product was deleted entirely from the menu. The product's key should be listed in the subject product keys.
+       * </pre>
+       *
+       * <code>PRODUCT_DELETE = 4;</code>
+       */
+      PRODUCT_DELETE(4),
+      UNRECOGNIZED(-1),
+      ;
+
+      /**
+       * <pre>
+       * Some change occurred that requires a menu refresh. In this case, no details are provided, so the whole menu is
+       * invalidated for re-fetch.
+       * </pre>
+       *
+       * <code>GENERIC_CHANGE = 0;</code>
+       */
+      public static final int GENERIC_CHANGE_VALUE = 0;
+      /**
+       * <pre>
+       * Settings for the menu changed, and so, the entire menu should be refreshed.
+       * </pre>
+       *
+       * <code>SETTINGS = 1;</code>
+       */
+      public static final int SETTINGS_VALUE = 1;
+      /**
+       * <pre>
+       * A product was added to the menu. The product's key should be listed in the subject product keys.
+       * </pre>
+       *
+       * <code>PRODUCT_ADD = 2;</code>
+       */
+      public static final int PRODUCT_ADD_VALUE = 2;
+      /**
+       * <pre>
+       * A product was changed on the menu. The product's key should be listed in the subject product keys.
+       * </pre>
+       *
+       * <code>PRODUCT_CHANGE = 3;</code>
+       */
+      public static final int PRODUCT_CHANGE_VALUE = 3;
+      /**
+       * <pre>
+       * A product was deleted entirely from the menu. The product's key should be listed in the subject product keys.
+       * </pre>
+       *
+       * <code>PRODUCT_DELETE = 4;</code>
+       */
+      public static final int PRODUCT_DELETE_VALUE = 4;
+
+
+      public final int getNumber() {
+        if (this == UNRECOGNIZED) {
+          throw new java.lang.IllegalArgumentException(
+              "Can't get the number of an unknown enum value.");
+        }
+        return value;
+      }
+
+      /**
+       * @deprecated Use {@link #forNumber(int)} instead.
+       */
+      @java.lang.Deprecated
+      public static ChangeType valueOf(int value) {
+        return forNumber(value);
+      }
+
+      public static ChangeType forNumber(int value) {
+        switch (value) {
+          case 0: return GENERIC_CHANGE;
+          case 1: return SETTINGS;
+          case 2: return PRODUCT_ADD;
+          case 3: return PRODUCT_CHANGE;
+          case 4: return PRODUCT_DELETE;
+          default: return null;
+        }
+      }
+
+      public static com.google.protobuf.Internal.EnumLiteMap<ChangeType>
+          internalGetValueMap() {
+        return internalValueMap;
+      }
+      private static final com.google.protobuf.Internal.EnumLiteMap<
+          ChangeType> internalValueMap =
+            new com.google.protobuf.Internal.EnumLiteMap<ChangeType>() {
+              public ChangeType findValueByNumber(int number) {
+                return ChangeType.forNumber(number);
+              }
+            };
+
+      public final com.google.protobuf.Descriptors.EnumValueDescriptor
+          getValueDescriptor() {
+        return getDescriptor().getValues().get(ordinal());
+      }
+      public final com.google.protobuf.Descriptors.EnumDescriptor
+          getDescriptorForType() {
+        return getDescriptor();
+      }
+      public static final com.google.protobuf.Descriptors.EnumDescriptor
+          getDescriptor() {
+        return io.bloombox.schema.services.menu.v1beta1.GetMenu.StreamEvent.getDescriptor().getEnumTypes().get(0);
+      }
+
+      private static final ChangeType[] VALUES = values();
+
+      public static ChangeType valueOf(
+          com.google.protobuf.Descriptors.EnumValueDescriptor desc) {
+        if (desc.getType() != getDescriptor()) {
+          throw new java.lang.IllegalArgumentException(
+            "EnumValueDescriptor is not for this type.");
+        }
+        if (desc.getIndex() == -1) {
+          return UNRECOGNIZED;
+        }
+        return VALUES[desc.getIndex()];
+      }
+
+      private final int value;
+
+      private ChangeType(int value) {
+        this.value = value;
+      }
+
+      // @@protoc_insertion_point(enum_scope:bloombox.services.menu.v1beta1.GetMenu.StreamEvent.ChangeType)
+    }
+
+    public interface ProductChangeOrBuilder extends
+        // @@protoc_insertion_point(interface_extends:bloombox.services.menu.v1beta1.GetMenu.StreamEvent.ProductChange)
+        com.google.protobuf.MessageOrBuilder {
+
+      /**
+       * <pre>
+       * Specifies a product by its key, which uniquely addresses it within a given partnership scope.
+       * </pre>
+       *
+       * <code>.opencannabis.base.ProductKey key = 1;</code>
+       */
+      boolean hasKey();
+      /**
+       * <pre>
+       * Specifies a product by its key, which uniquely addresses it within a given partnership scope.
+       * </pre>
+       *
+       * <code>.opencannabis.base.ProductKey key = 1;</code>
+       */
+      io.opencannabis.schema.base.BaseProductKey.ProductKey getKey();
+      /**
+       * <pre>
+       * Specifies a product by its key, which uniquely addresses it within a given partnership scope.
+       * </pre>
+       *
+       * <code>.opencannabis.base.ProductKey key = 1;</code>
+       */
+      io.opencannabis.schema.base.BaseProductKey.ProductKeyOrBuilder getKeyOrBuilder();
+
+      /**
+       * <pre>
+       * Specifies product data, either in full (if requested in settings), or as a delta (if keys only was not
+       * requested in settings).
+       * </pre>
+       *
+       * <code>.opencannabis.products.menu.MenuProduct product = 2;</code>
+       */
+      boolean hasProduct();
+      /**
+       * <pre>
+       * Specifies product data, either in full (if requested in settings), or as a delta (if keys only was not
+       * requested in settings).
+       * </pre>
+       *
+       * <code>.opencannabis.products.menu.MenuProduct product = 2;</code>
+       */
+      io.opencannabis.schema.menu.MenuProduct getProduct();
+      /**
+       * <pre>
+       * Specifies product data, either in full (if requested in settings), or as a delta (if keys only was not
+       * requested in settings).
+       * </pre>
+       *
+       * <code>.opencannabis.products.menu.MenuProduct product = 2;</code>
+       */
+      io.opencannabis.schema.menu.MenuProductOrBuilder getProductOrBuilder();
+
+      /**
+       * <pre>
+       * Field mask describing the properties that were touched or otherwise mutated in the specified change payload.
+       * </pre>
+       *
+       * <code>.google.protobuf.FieldMask mask = 3;</code>
+       */
+      boolean hasMask();
+      /**
+       * <pre>
+       * Field mask describing the properties that were touched or otherwise mutated in the specified change payload.
+       * </pre>
+       *
+       * <code>.google.protobuf.FieldMask mask = 3;</code>
+       */
+      com.google.protobuf.FieldMask getMask();
+      /**
+       * <pre>
+       * Field mask describing the properties that were touched or otherwise mutated in the specified change payload.
+       * </pre>
+       *
+       * <code>.google.protobuf.FieldMask mask = 3;</code>
+       */
+      com.google.protobuf.FieldMaskOrBuilder getMaskOrBuilder();
+
+      public io.bloombox.schema.services.menu.v1beta1.GetMenu.StreamEvent.ProductChange.PayloadCase getPayloadCase();
+    }
+    /**
+     * <pre>
+     * Describes the product that was changed, and how it was changed, depending on the configuration passed into the
+     * stream request. If only product keys are requested, only product keys are returned.
+     * </pre>
+     *
+     * Protobuf type {@code bloombox.services.menu.v1beta1.GetMenu.StreamEvent.ProductChange}
+     */
+    public  static final class ProductChange extends
+        com.google.protobuf.GeneratedMessageV3 implements
+        // @@protoc_insertion_point(message_implements:bloombox.services.menu.v1beta1.GetMenu.StreamEvent.ProductChange)
+        ProductChangeOrBuilder {
+    private static final long serialVersionUID = 0L;
+      // Use ProductChange.newBuilder() to construct.
+      private ProductChange(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+        super(builder);
+      }
+      private ProductChange() {
+      }
+
+      @java.lang.Override
+      public final com.google.protobuf.UnknownFieldSet
+      getUnknownFields() {
+        return this.unknownFields;
+      }
+      private ProductChange(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        this();
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        int mutable_bitField0_ = 0;
+        com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+            com.google.protobuf.UnknownFieldSet.newBuilder();
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                io.opencannabis.schema.base.BaseProductKey.ProductKey.Builder subBuilder = null;
+                if (payloadCase_ == 1) {
+                  subBuilder = ((io.opencannabis.schema.base.BaseProductKey.ProductKey) payload_).toBuilder();
+                }
+                payload_ =
+                    input.readMessage(io.opencannabis.schema.base.BaseProductKey.ProductKey.parser(), extensionRegistry);
+                if (subBuilder != null) {
+                  subBuilder.mergeFrom((io.opencannabis.schema.base.BaseProductKey.ProductKey) payload_);
+                  payload_ = subBuilder.buildPartial();
+                }
+                payloadCase_ = 1;
+                break;
+              }
+              case 18: {
+                io.opencannabis.schema.menu.MenuProduct.Builder subBuilder = null;
+                if (payloadCase_ == 2) {
+                  subBuilder = ((io.opencannabis.schema.menu.MenuProduct) payload_).toBuilder();
+                }
+                payload_ =
+                    input.readMessage(io.opencannabis.schema.menu.MenuProduct.parser(), extensionRegistry);
+                if (subBuilder != null) {
+                  subBuilder.mergeFrom((io.opencannabis.schema.menu.MenuProduct) payload_);
+                  payload_ = subBuilder.buildPartial();
+                }
+                payloadCase_ = 2;
+                break;
+              }
+              case 26: {
+                com.google.protobuf.FieldMask.Builder subBuilder = null;
+                if (mask_ != null) {
+                  subBuilder = mask_.toBuilder();
+                }
+                mask_ = input.readMessage(com.google.protobuf.FieldMask.parser(), extensionRegistry);
+                if (subBuilder != null) {
+                  subBuilder.mergeFrom(mask_);
+                  mask_ = subBuilder.buildPartial();
+                }
+
+                break;
+              }
+              default: {
+                if (!parseUnknownField(
+                    input, unknownFields, extensionRegistry, tag)) {
+                  done = true;
+                }
+                break;
+              }
+            }
+          }
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(this);
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(
+              e).setUnfinishedMessage(this);
+        } finally {
+          this.unknownFields = unknownFields.build();
+          makeExtensionsImmutable();
+        }
+      }
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return io.bloombox.schema.services.menu.v1beta1.MenuServiceBeta1.internal_static_bloombox_services_menu_v1beta1_GetMenu_StreamEvent_ProductChange_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return io.bloombox.schema.services.menu.v1beta1.MenuServiceBeta1.internal_static_bloombox_services_menu_v1beta1_GetMenu_StreamEvent_ProductChange_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                io.bloombox.schema.services.menu.v1beta1.GetMenu.StreamEvent.ProductChange.class, io.bloombox.schema.services.menu.v1beta1.GetMenu.StreamEvent.ProductChange.Builder.class);
+      }
+
+      private int payloadCase_ = 0;
+      private java.lang.Object payload_;
+      public enum PayloadCase
+          implements com.google.protobuf.Internal.EnumLite {
+        KEY(1),
+        PRODUCT(2),
+        PAYLOAD_NOT_SET(0);
+        private final int value;
+        private PayloadCase(int value) {
+          this.value = value;
+        }
+        /**
+         * @deprecated Use {@link #forNumber(int)} instead.
+         */
+        @java.lang.Deprecated
+        public static PayloadCase valueOf(int value) {
+          return forNumber(value);
+        }
+
+        public static PayloadCase forNumber(int value) {
+          switch (value) {
+            case 1: return KEY;
+            case 2: return PRODUCT;
+            case 0: return PAYLOAD_NOT_SET;
+            default: return null;
+          }
+        }
+        public int getNumber() {
+          return this.value;
+        }
+      };
+
+      public PayloadCase
+      getPayloadCase() {
+        return PayloadCase.forNumber(
+            payloadCase_);
+      }
+
+      public static final int KEY_FIELD_NUMBER = 1;
+      /**
+       * <pre>
+       * Specifies a product by its key, which uniquely addresses it within a given partnership scope.
+       * </pre>
+       *
+       * <code>.opencannabis.base.ProductKey key = 1;</code>
+       */
+      public boolean hasKey() {
+        return payloadCase_ == 1;
+      }
+      /**
+       * <pre>
+       * Specifies a product by its key, which uniquely addresses it within a given partnership scope.
+       * </pre>
+       *
+       * <code>.opencannabis.base.ProductKey key = 1;</code>
+       */
+      public io.opencannabis.schema.base.BaseProductKey.ProductKey getKey() {
+        if (payloadCase_ == 1) {
+           return (io.opencannabis.schema.base.BaseProductKey.ProductKey) payload_;
+        }
+        return io.opencannabis.schema.base.BaseProductKey.ProductKey.getDefaultInstance();
+      }
+      /**
+       * <pre>
+       * Specifies a product by its key, which uniquely addresses it within a given partnership scope.
+       * </pre>
+       *
+       * <code>.opencannabis.base.ProductKey key = 1;</code>
+       */
+      public io.opencannabis.schema.base.BaseProductKey.ProductKeyOrBuilder getKeyOrBuilder() {
+        if (payloadCase_ == 1) {
+           return (io.opencannabis.schema.base.BaseProductKey.ProductKey) payload_;
+        }
+        return io.opencannabis.schema.base.BaseProductKey.ProductKey.getDefaultInstance();
+      }
+
+      public static final int PRODUCT_FIELD_NUMBER = 2;
+      /**
+       * <pre>
+       * Specifies product data, either in full (if requested in settings), or as a delta (if keys only was not
+       * requested in settings).
+       * </pre>
+       *
+       * <code>.opencannabis.products.menu.MenuProduct product = 2;</code>
+       */
+      public boolean hasProduct() {
+        return payloadCase_ == 2;
+      }
+      /**
+       * <pre>
+       * Specifies product data, either in full (if requested in settings), or as a delta (if keys only was not
+       * requested in settings).
+       * </pre>
+       *
+       * <code>.opencannabis.products.menu.MenuProduct product = 2;</code>
+       */
+      public io.opencannabis.schema.menu.MenuProduct getProduct() {
+        if (payloadCase_ == 2) {
+           return (io.opencannabis.schema.menu.MenuProduct) payload_;
+        }
+        return io.opencannabis.schema.menu.MenuProduct.getDefaultInstance();
+      }
+      /**
+       * <pre>
+       * Specifies product data, either in full (if requested in settings), or as a delta (if keys only was not
+       * requested in settings).
+       * </pre>
+       *
+       * <code>.opencannabis.products.menu.MenuProduct product = 2;</code>
+       */
+      public io.opencannabis.schema.menu.MenuProductOrBuilder getProductOrBuilder() {
+        if (payloadCase_ == 2) {
+           return (io.opencannabis.schema.menu.MenuProduct) payload_;
+        }
+        return io.opencannabis.schema.menu.MenuProduct.getDefaultInstance();
+      }
+
+      public static final int MASK_FIELD_NUMBER = 3;
+      private com.google.protobuf.FieldMask mask_;
+      /**
+       * <pre>
+       * Field mask describing the properties that were touched or otherwise mutated in the specified change payload.
+       * </pre>
+       *
+       * <code>.google.protobuf.FieldMask mask = 3;</code>
+       */
+      public boolean hasMask() {
+        return mask_ != null;
+      }
+      /**
+       * <pre>
+       * Field mask describing the properties that were touched or otherwise mutated in the specified change payload.
+       * </pre>
+       *
+       * <code>.google.protobuf.FieldMask mask = 3;</code>
+       */
+      public com.google.protobuf.FieldMask getMask() {
+        return mask_ == null ? com.google.protobuf.FieldMask.getDefaultInstance() : mask_;
+      }
+      /**
+       * <pre>
+       * Field mask describing the properties that were touched or otherwise mutated in the specified change payload.
+       * </pre>
+       *
+       * <code>.google.protobuf.FieldMask mask = 3;</code>
+       */
+      public com.google.protobuf.FieldMaskOrBuilder getMaskOrBuilder() {
+        return getMask();
+      }
+
+      private byte memoizedIsInitialized = -1;
+      @java.lang.Override
+      public final boolean isInitialized() {
+        byte isInitialized = memoizedIsInitialized;
+        if (isInitialized == 1) return true;
+        if (isInitialized == 0) return false;
+
+        memoizedIsInitialized = 1;
+        return true;
+      }
+
+      @java.lang.Override
+      public void writeTo(com.google.protobuf.CodedOutputStream output)
+                          throws java.io.IOException {
+        if (payloadCase_ == 1) {
+          output.writeMessage(1, (io.opencannabis.schema.base.BaseProductKey.ProductKey) payload_);
+        }
+        if (payloadCase_ == 2) {
+          output.writeMessage(2, (io.opencannabis.schema.menu.MenuProduct) payload_);
+        }
+        if (mask_ != null) {
+          output.writeMessage(3, getMask());
+        }
+        unknownFields.writeTo(output);
+      }
+
+      @java.lang.Override
+      public int getSerializedSize() {
+        int size = memoizedSize;
+        if (size != -1) return size;
+
+        size = 0;
+        if (payloadCase_ == 1) {
+          size += com.google.protobuf.CodedOutputStream
+            .computeMessageSize(1, (io.opencannabis.schema.base.BaseProductKey.ProductKey) payload_);
+        }
+        if (payloadCase_ == 2) {
+          size += com.google.protobuf.CodedOutputStream
+            .computeMessageSize(2, (io.opencannabis.schema.menu.MenuProduct) payload_);
+        }
+        if (mask_ != null) {
+          size += com.google.protobuf.CodedOutputStream
+            .computeMessageSize(3, getMask());
+        }
+        size += unknownFields.getSerializedSize();
+        memoizedSize = size;
+        return size;
+      }
+
+      @java.lang.Override
+      public boolean equals(final java.lang.Object obj) {
+        if (obj == this) {
+         return true;
+        }
+        if (!(obj instanceof io.bloombox.schema.services.menu.v1beta1.GetMenu.StreamEvent.ProductChange)) {
+          return super.equals(obj);
+        }
+        io.bloombox.schema.services.menu.v1beta1.GetMenu.StreamEvent.ProductChange other = (io.bloombox.schema.services.menu.v1beta1.GetMenu.StreamEvent.ProductChange) obj;
+
+        if (hasMask() != other.hasMask()) return false;
+        if (hasMask()) {
+          if (!getMask()
+              .equals(other.getMask())) return false;
+        }
+        if (!getPayloadCase().equals(other.getPayloadCase())) return false;
+        switch (payloadCase_) {
+          case 1:
+            if (!getKey()
+                .equals(other.getKey())) return false;
+            break;
+          case 2:
+            if (!getProduct()
+                .equals(other.getProduct())) return false;
+            break;
+          case 0:
+          default:
+        }
+        if (!unknownFields.equals(other.unknownFields)) return false;
+        return true;
+      }
+
+      @java.lang.Override
+      public int hashCode() {
+        if (memoizedHashCode != 0) {
+          return memoizedHashCode;
+        }
+        int hash = 41;
+        hash = (19 * hash) + getDescriptor().hashCode();
+        if (hasMask()) {
+          hash = (37 * hash) + MASK_FIELD_NUMBER;
+          hash = (53 * hash) + getMask().hashCode();
+        }
+        switch (payloadCase_) {
+          case 1:
+            hash = (37 * hash) + KEY_FIELD_NUMBER;
+            hash = (53 * hash) + getKey().hashCode();
+            break;
+          case 2:
+            hash = (37 * hash) + PRODUCT_FIELD_NUMBER;
+            hash = (53 * hash) + getProduct().hashCode();
+            break;
+          case 0:
+          default:
+        }
+        hash = (29 * hash) + unknownFields.hashCode();
+        memoizedHashCode = hash;
+        return hash;
+      }
+
+      public static io.bloombox.schema.services.menu.v1beta1.GetMenu.StreamEvent.ProductChange parseFrom(
+          java.nio.ByteBuffer data)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data);
+      }
+      public static io.bloombox.schema.services.menu.v1beta1.GetMenu.StreamEvent.ProductChange parseFrom(
+          java.nio.ByteBuffer data,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data, extensionRegistry);
+      }
+      public static io.bloombox.schema.services.menu.v1beta1.GetMenu.StreamEvent.ProductChange parseFrom(
+          com.google.protobuf.ByteString data)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data);
+      }
+      public static io.bloombox.schema.services.menu.v1beta1.GetMenu.StreamEvent.ProductChange parseFrom(
+          com.google.protobuf.ByteString data,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data, extensionRegistry);
+      }
+      public static io.bloombox.schema.services.menu.v1beta1.GetMenu.StreamEvent.ProductChange parseFrom(byte[] data)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data);
+      }
+      public static io.bloombox.schema.services.menu.v1beta1.GetMenu.StreamEvent.ProductChange parseFrom(
+          byte[] data,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data, extensionRegistry);
+      }
+      public static io.bloombox.schema.services.menu.v1beta1.GetMenu.StreamEvent.ProductChange parseFrom(java.io.InputStream input)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input);
+      }
+      public static io.bloombox.schema.services.menu.v1beta1.GetMenu.StreamEvent.ProductChange parseFrom(
+          java.io.InputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input, extensionRegistry);
+      }
+      public static io.bloombox.schema.services.menu.v1beta1.GetMenu.StreamEvent.ProductChange parseDelimitedFrom(java.io.InputStream input)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseDelimitedWithIOException(PARSER, input);
+      }
+      public static io.bloombox.schema.services.menu.v1beta1.GetMenu.StreamEvent.ProductChange parseDelimitedFrom(
+          java.io.InputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+      }
+      public static io.bloombox.schema.services.menu.v1beta1.GetMenu.StreamEvent.ProductChange parseFrom(
+          com.google.protobuf.CodedInputStream input)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input);
+      }
+      public static io.bloombox.schema.services.menu.v1beta1.GetMenu.StreamEvent.ProductChange parseFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input, extensionRegistry);
+      }
+
+      @java.lang.Override
+      public Builder newBuilderForType() { return newBuilder(); }
+      public static Builder newBuilder() {
+        return DEFAULT_INSTANCE.toBuilder();
+      }
+      public static Builder newBuilder(io.bloombox.schema.services.menu.v1beta1.GetMenu.StreamEvent.ProductChange prototype) {
+        return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+      }
+      @java.lang.Override
+      public Builder toBuilder() {
+        return this == DEFAULT_INSTANCE
+            ? new Builder() : new Builder().mergeFrom(this);
+      }
+
+      @java.lang.Override
+      protected Builder newBuilderForType(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        Builder builder = new Builder(parent);
+        return builder;
+      }
+      /**
+       * <pre>
+       * Describes the product that was changed, and how it was changed, depending on the configuration passed into the
+       * stream request. If only product keys are requested, only product keys are returned.
+       * </pre>
+       *
+       * Protobuf type {@code bloombox.services.menu.v1beta1.GetMenu.StreamEvent.ProductChange}
+       */
+      public static final class Builder extends
+          com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+          // @@protoc_insertion_point(builder_implements:bloombox.services.menu.v1beta1.GetMenu.StreamEvent.ProductChange)
+          io.bloombox.schema.services.menu.v1beta1.GetMenu.StreamEvent.ProductChangeOrBuilder {
+        public static final com.google.protobuf.Descriptors.Descriptor
+            getDescriptor() {
+          return io.bloombox.schema.services.menu.v1beta1.MenuServiceBeta1.internal_static_bloombox_services_menu_v1beta1_GetMenu_StreamEvent_ProductChange_descriptor;
+        }
+
+        @java.lang.Override
+        protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+            internalGetFieldAccessorTable() {
+          return io.bloombox.schema.services.menu.v1beta1.MenuServiceBeta1.internal_static_bloombox_services_menu_v1beta1_GetMenu_StreamEvent_ProductChange_fieldAccessorTable
+              .ensureFieldAccessorsInitialized(
+                  io.bloombox.schema.services.menu.v1beta1.GetMenu.StreamEvent.ProductChange.class, io.bloombox.schema.services.menu.v1beta1.GetMenu.StreamEvent.ProductChange.Builder.class);
+        }
+
+        // Construct using io.bloombox.schema.services.menu.v1beta1.GetMenu.StreamEvent.ProductChange.newBuilder()
+        private Builder() {
+          maybeForceBuilderInitialization();
+        }
+
+        private Builder(
+            com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+          super(parent);
+          maybeForceBuilderInitialization();
+        }
+        private void maybeForceBuilderInitialization() {
+          if (com.google.protobuf.GeneratedMessageV3
+                  .alwaysUseFieldBuilders) {
+          }
+        }
+        @java.lang.Override
+        public Builder clear() {
+          super.clear();
+          if (maskBuilder_ == null) {
+            mask_ = null;
+          } else {
+            mask_ = null;
+            maskBuilder_ = null;
+          }
+          payloadCase_ = 0;
+          payload_ = null;
+          return this;
+        }
+
+        @java.lang.Override
+        public com.google.protobuf.Descriptors.Descriptor
+            getDescriptorForType() {
+          return io.bloombox.schema.services.menu.v1beta1.MenuServiceBeta1.internal_static_bloombox_services_menu_v1beta1_GetMenu_StreamEvent_ProductChange_descriptor;
+        }
+
+        @java.lang.Override
+        public io.bloombox.schema.services.menu.v1beta1.GetMenu.StreamEvent.ProductChange getDefaultInstanceForType() {
+          return io.bloombox.schema.services.menu.v1beta1.GetMenu.StreamEvent.ProductChange.getDefaultInstance();
+        }
+
+        @java.lang.Override
+        public io.bloombox.schema.services.menu.v1beta1.GetMenu.StreamEvent.ProductChange build() {
+          io.bloombox.schema.services.menu.v1beta1.GetMenu.StreamEvent.ProductChange result = buildPartial();
+          if (!result.isInitialized()) {
+            throw newUninitializedMessageException(result);
+          }
+          return result;
+        }
+
+        @java.lang.Override
+        public io.bloombox.schema.services.menu.v1beta1.GetMenu.StreamEvent.ProductChange buildPartial() {
+          io.bloombox.schema.services.menu.v1beta1.GetMenu.StreamEvent.ProductChange result = new io.bloombox.schema.services.menu.v1beta1.GetMenu.StreamEvent.ProductChange(this);
+          if (payloadCase_ == 1) {
+            if (keyBuilder_ == null) {
+              result.payload_ = payload_;
+            } else {
+              result.payload_ = keyBuilder_.build();
+            }
+          }
+          if (payloadCase_ == 2) {
+            if (productBuilder_ == null) {
+              result.payload_ = payload_;
+            } else {
+              result.payload_ = productBuilder_.build();
+            }
+          }
+          if (maskBuilder_ == null) {
+            result.mask_ = mask_;
+          } else {
+            result.mask_ = maskBuilder_.build();
+          }
+          result.payloadCase_ = payloadCase_;
+          onBuilt();
+          return result;
+        }
+
+        @java.lang.Override
+        public Builder clone() {
+          return super.clone();
+        }
+        @java.lang.Override
+        public Builder setField(
+            com.google.protobuf.Descriptors.FieldDescriptor field,
+            java.lang.Object value) {
+          return super.setField(field, value);
+        }
+        @java.lang.Override
+        public Builder clearField(
+            com.google.protobuf.Descriptors.FieldDescriptor field) {
+          return super.clearField(field);
+        }
+        @java.lang.Override
+        public Builder clearOneof(
+            com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+          return super.clearOneof(oneof);
+        }
+        @java.lang.Override
+        public Builder setRepeatedField(
+            com.google.protobuf.Descriptors.FieldDescriptor field,
+            int index, java.lang.Object value) {
+          return super.setRepeatedField(field, index, value);
+        }
+        @java.lang.Override
+        public Builder addRepeatedField(
+            com.google.protobuf.Descriptors.FieldDescriptor field,
+            java.lang.Object value) {
+          return super.addRepeatedField(field, value);
+        }
+        @java.lang.Override
+        public Builder mergeFrom(com.google.protobuf.Message other) {
+          if (other instanceof io.bloombox.schema.services.menu.v1beta1.GetMenu.StreamEvent.ProductChange) {
+            return mergeFrom((io.bloombox.schema.services.menu.v1beta1.GetMenu.StreamEvent.ProductChange)other);
+          } else {
+            super.mergeFrom(other);
+            return this;
+          }
+        }
+
+        public Builder mergeFrom(io.bloombox.schema.services.menu.v1beta1.GetMenu.StreamEvent.ProductChange other) {
+          if (other == io.bloombox.schema.services.menu.v1beta1.GetMenu.StreamEvent.ProductChange.getDefaultInstance()) return this;
+          if (other.hasMask()) {
+            mergeMask(other.getMask());
+          }
+          switch (other.getPayloadCase()) {
+            case KEY: {
+              mergeKey(other.getKey());
+              break;
+            }
+            case PRODUCT: {
+              mergeProduct(other.getProduct());
+              break;
+            }
+            case PAYLOAD_NOT_SET: {
+              break;
+            }
+          }
+          this.mergeUnknownFields(other.unknownFields);
+          onChanged();
+          return this;
+        }
+
+        @java.lang.Override
+        public final boolean isInitialized() {
+          return true;
+        }
+
+        @java.lang.Override
+        public Builder mergeFrom(
+            com.google.protobuf.CodedInputStream input,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws java.io.IOException {
+          io.bloombox.schema.services.menu.v1beta1.GetMenu.StreamEvent.ProductChange parsedMessage = null;
+          try {
+            parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+          } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+            parsedMessage = (io.bloombox.schema.services.menu.v1beta1.GetMenu.StreamEvent.ProductChange) e.getUnfinishedMessage();
+            throw e.unwrapIOException();
+          } finally {
+            if (parsedMessage != null) {
+              mergeFrom(parsedMessage);
+            }
+          }
+          return this;
+        }
+        private int payloadCase_ = 0;
+        private java.lang.Object payload_;
+        public PayloadCase
+            getPayloadCase() {
+          return PayloadCase.forNumber(
+              payloadCase_);
+        }
+
+        public Builder clearPayload() {
+          payloadCase_ = 0;
+          payload_ = null;
+          onChanged();
+          return this;
+        }
+
+
+        private com.google.protobuf.SingleFieldBuilderV3<
+            io.opencannabis.schema.base.BaseProductKey.ProductKey, io.opencannabis.schema.base.BaseProductKey.ProductKey.Builder, io.opencannabis.schema.base.BaseProductKey.ProductKeyOrBuilder> keyBuilder_;
+        /**
+         * <pre>
+         * Specifies a product by its key, which uniquely addresses it within a given partnership scope.
+         * </pre>
+         *
+         * <code>.opencannabis.base.ProductKey key = 1;</code>
+         */
+        public boolean hasKey() {
+          return payloadCase_ == 1;
+        }
+        /**
+         * <pre>
+         * Specifies a product by its key, which uniquely addresses it within a given partnership scope.
+         * </pre>
+         *
+         * <code>.opencannabis.base.ProductKey key = 1;</code>
+         */
+        public io.opencannabis.schema.base.BaseProductKey.ProductKey getKey() {
+          if (keyBuilder_ == null) {
+            if (payloadCase_ == 1) {
+              return (io.opencannabis.schema.base.BaseProductKey.ProductKey) payload_;
+            }
+            return io.opencannabis.schema.base.BaseProductKey.ProductKey.getDefaultInstance();
+          } else {
+            if (payloadCase_ == 1) {
+              return keyBuilder_.getMessage();
+            }
+            return io.opencannabis.schema.base.BaseProductKey.ProductKey.getDefaultInstance();
+          }
+        }
+        /**
+         * <pre>
+         * Specifies a product by its key, which uniquely addresses it within a given partnership scope.
+         * </pre>
+         *
+         * <code>.opencannabis.base.ProductKey key = 1;</code>
+         */
+        public Builder setKey(io.opencannabis.schema.base.BaseProductKey.ProductKey value) {
+          if (keyBuilder_ == null) {
+            if (value == null) {
+              throw new NullPointerException();
+            }
+            payload_ = value;
+            onChanged();
+          } else {
+            keyBuilder_.setMessage(value);
+          }
+          payloadCase_ = 1;
+          return this;
+        }
+        /**
+         * <pre>
+         * Specifies a product by its key, which uniquely addresses it within a given partnership scope.
+         * </pre>
+         *
+         * <code>.opencannabis.base.ProductKey key = 1;</code>
+         */
+        public Builder setKey(
+            io.opencannabis.schema.base.BaseProductKey.ProductKey.Builder builderForValue) {
+          if (keyBuilder_ == null) {
+            payload_ = builderForValue.build();
+            onChanged();
+          } else {
+            keyBuilder_.setMessage(builderForValue.build());
+          }
+          payloadCase_ = 1;
+          return this;
+        }
+        /**
+         * <pre>
+         * Specifies a product by its key, which uniquely addresses it within a given partnership scope.
+         * </pre>
+         *
+         * <code>.opencannabis.base.ProductKey key = 1;</code>
+         */
+        public Builder mergeKey(io.opencannabis.schema.base.BaseProductKey.ProductKey value) {
+          if (keyBuilder_ == null) {
+            if (payloadCase_ == 1 &&
+                payload_ != io.opencannabis.schema.base.BaseProductKey.ProductKey.getDefaultInstance()) {
+              payload_ = io.opencannabis.schema.base.BaseProductKey.ProductKey.newBuilder((io.opencannabis.schema.base.BaseProductKey.ProductKey) payload_)
+                  .mergeFrom(value).buildPartial();
+            } else {
+              payload_ = value;
+            }
+            onChanged();
+          } else {
+            if (payloadCase_ == 1) {
+              keyBuilder_.mergeFrom(value);
+            }
+            keyBuilder_.setMessage(value);
+          }
+          payloadCase_ = 1;
+          return this;
+        }
+        /**
+         * <pre>
+         * Specifies a product by its key, which uniquely addresses it within a given partnership scope.
+         * </pre>
+         *
+         * <code>.opencannabis.base.ProductKey key = 1;</code>
+         */
+        public Builder clearKey() {
+          if (keyBuilder_ == null) {
+            if (payloadCase_ == 1) {
+              payloadCase_ = 0;
+              payload_ = null;
+              onChanged();
+            }
+          } else {
+            if (payloadCase_ == 1) {
+              payloadCase_ = 0;
+              payload_ = null;
+            }
+            keyBuilder_.clear();
+          }
+          return this;
+        }
+        /**
+         * <pre>
+         * Specifies a product by its key, which uniquely addresses it within a given partnership scope.
+         * </pre>
+         *
+         * <code>.opencannabis.base.ProductKey key = 1;</code>
+         */
+        public io.opencannabis.schema.base.BaseProductKey.ProductKey.Builder getKeyBuilder() {
+          return getKeyFieldBuilder().getBuilder();
+        }
+        /**
+         * <pre>
+         * Specifies a product by its key, which uniquely addresses it within a given partnership scope.
+         * </pre>
+         *
+         * <code>.opencannabis.base.ProductKey key = 1;</code>
+         */
+        public io.opencannabis.schema.base.BaseProductKey.ProductKeyOrBuilder getKeyOrBuilder() {
+          if ((payloadCase_ == 1) && (keyBuilder_ != null)) {
+            return keyBuilder_.getMessageOrBuilder();
+          } else {
+            if (payloadCase_ == 1) {
+              return (io.opencannabis.schema.base.BaseProductKey.ProductKey) payload_;
+            }
+            return io.opencannabis.schema.base.BaseProductKey.ProductKey.getDefaultInstance();
+          }
+        }
+        /**
+         * <pre>
+         * Specifies a product by its key, which uniquely addresses it within a given partnership scope.
+         * </pre>
+         *
+         * <code>.opencannabis.base.ProductKey key = 1;</code>
+         */
+        private com.google.protobuf.SingleFieldBuilderV3<
+            io.opencannabis.schema.base.BaseProductKey.ProductKey, io.opencannabis.schema.base.BaseProductKey.ProductKey.Builder, io.opencannabis.schema.base.BaseProductKey.ProductKeyOrBuilder> 
+            getKeyFieldBuilder() {
+          if (keyBuilder_ == null) {
+            if (!(payloadCase_ == 1)) {
+              payload_ = io.opencannabis.schema.base.BaseProductKey.ProductKey.getDefaultInstance();
+            }
+            keyBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+                io.opencannabis.schema.base.BaseProductKey.ProductKey, io.opencannabis.schema.base.BaseProductKey.ProductKey.Builder, io.opencannabis.schema.base.BaseProductKey.ProductKeyOrBuilder>(
+                    (io.opencannabis.schema.base.BaseProductKey.ProductKey) payload_,
+                    getParentForChildren(),
+                    isClean());
+            payload_ = null;
+          }
+          payloadCase_ = 1;
+          onChanged();;
+          return keyBuilder_;
+        }
+
+        private com.google.protobuf.SingleFieldBuilderV3<
+            io.opencannabis.schema.menu.MenuProduct, io.opencannabis.schema.menu.MenuProduct.Builder, io.opencannabis.schema.menu.MenuProductOrBuilder> productBuilder_;
+        /**
+         * <pre>
+         * Specifies product data, either in full (if requested in settings), or as a delta (if keys only was not
+         * requested in settings).
+         * </pre>
+         *
+         * <code>.opencannabis.products.menu.MenuProduct product = 2;</code>
+         */
+        public boolean hasProduct() {
+          return payloadCase_ == 2;
+        }
+        /**
+         * <pre>
+         * Specifies product data, either in full (if requested in settings), or as a delta (if keys only was not
+         * requested in settings).
+         * </pre>
+         *
+         * <code>.opencannabis.products.menu.MenuProduct product = 2;</code>
+         */
+        public io.opencannabis.schema.menu.MenuProduct getProduct() {
+          if (productBuilder_ == null) {
+            if (payloadCase_ == 2) {
+              return (io.opencannabis.schema.menu.MenuProduct) payload_;
+            }
+            return io.opencannabis.schema.menu.MenuProduct.getDefaultInstance();
+          } else {
+            if (payloadCase_ == 2) {
+              return productBuilder_.getMessage();
+            }
+            return io.opencannabis.schema.menu.MenuProduct.getDefaultInstance();
+          }
+        }
+        /**
+         * <pre>
+         * Specifies product data, either in full (if requested in settings), or as a delta (if keys only was not
+         * requested in settings).
+         * </pre>
+         *
+         * <code>.opencannabis.products.menu.MenuProduct product = 2;</code>
+         */
+        public Builder setProduct(io.opencannabis.schema.menu.MenuProduct value) {
+          if (productBuilder_ == null) {
+            if (value == null) {
+              throw new NullPointerException();
+            }
+            payload_ = value;
+            onChanged();
+          } else {
+            productBuilder_.setMessage(value);
+          }
+          payloadCase_ = 2;
+          return this;
+        }
+        /**
+         * <pre>
+         * Specifies product data, either in full (if requested in settings), or as a delta (if keys only was not
+         * requested in settings).
+         * </pre>
+         *
+         * <code>.opencannabis.products.menu.MenuProduct product = 2;</code>
+         */
+        public Builder setProduct(
+            io.opencannabis.schema.menu.MenuProduct.Builder builderForValue) {
+          if (productBuilder_ == null) {
+            payload_ = builderForValue.build();
+            onChanged();
+          } else {
+            productBuilder_.setMessage(builderForValue.build());
+          }
+          payloadCase_ = 2;
+          return this;
+        }
+        /**
+         * <pre>
+         * Specifies product data, either in full (if requested in settings), or as a delta (if keys only was not
+         * requested in settings).
+         * </pre>
+         *
+         * <code>.opencannabis.products.menu.MenuProduct product = 2;</code>
+         */
+        public Builder mergeProduct(io.opencannabis.schema.menu.MenuProduct value) {
+          if (productBuilder_ == null) {
+            if (payloadCase_ == 2 &&
+                payload_ != io.opencannabis.schema.menu.MenuProduct.getDefaultInstance()) {
+              payload_ = io.opencannabis.schema.menu.MenuProduct.newBuilder((io.opencannabis.schema.menu.MenuProduct) payload_)
+                  .mergeFrom(value).buildPartial();
+            } else {
+              payload_ = value;
+            }
+            onChanged();
+          } else {
+            if (payloadCase_ == 2) {
+              productBuilder_.mergeFrom(value);
+            }
+            productBuilder_.setMessage(value);
+          }
+          payloadCase_ = 2;
+          return this;
+        }
+        /**
+         * <pre>
+         * Specifies product data, either in full (if requested in settings), or as a delta (if keys only was not
+         * requested in settings).
+         * </pre>
+         *
+         * <code>.opencannabis.products.menu.MenuProduct product = 2;</code>
+         */
+        public Builder clearProduct() {
+          if (productBuilder_ == null) {
+            if (payloadCase_ == 2) {
+              payloadCase_ = 0;
+              payload_ = null;
+              onChanged();
+            }
+          } else {
+            if (payloadCase_ == 2) {
+              payloadCase_ = 0;
+              payload_ = null;
+            }
+            productBuilder_.clear();
+          }
+          return this;
+        }
+        /**
+         * <pre>
+         * Specifies product data, either in full (if requested in settings), or as a delta (if keys only was not
+         * requested in settings).
+         * </pre>
+         *
+         * <code>.opencannabis.products.menu.MenuProduct product = 2;</code>
+         */
+        public io.opencannabis.schema.menu.MenuProduct.Builder getProductBuilder() {
+          return getProductFieldBuilder().getBuilder();
+        }
+        /**
+         * <pre>
+         * Specifies product data, either in full (if requested in settings), or as a delta (if keys only was not
+         * requested in settings).
+         * </pre>
+         *
+         * <code>.opencannabis.products.menu.MenuProduct product = 2;</code>
+         */
+        public io.opencannabis.schema.menu.MenuProductOrBuilder getProductOrBuilder() {
+          if ((payloadCase_ == 2) && (productBuilder_ != null)) {
+            return productBuilder_.getMessageOrBuilder();
+          } else {
+            if (payloadCase_ == 2) {
+              return (io.opencannabis.schema.menu.MenuProduct) payload_;
+            }
+            return io.opencannabis.schema.menu.MenuProduct.getDefaultInstance();
+          }
+        }
+        /**
+         * <pre>
+         * Specifies product data, either in full (if requested in settings), or as a delta (if keys only was not
+         * requested in settings).
+         * </pre>
+         *
+         * <code>.opencannabis.products.menu.MenuProduct product = 2;</code>
+         */
+        private com.google.protobuf.SingleFieldBuilderV3<
+            io.opencannabis.schema.menu.MenuProduct, io.opencannabis.schema.menu.MenuProduct.Builder, io.opencannabis.schema.menu.MenuProductOrBuilder> 
+            getProductFieldBuilder() {
+          if (productBuilder_ == null) {
+            if (!(payloadCase_ == 2)) {
+              payload_ = io.opencannabis.schema.menu.MenuProduct.getDefaultInstance();
+            }
+            productBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+                io.opencannabis.schema.menu.MenuProduct, io.opencannabis.schema.menu.MenuProduct.Builder, io.opencannabis.schema.menu.MenuProductOrBuilder>(
+                    (io.opencannabis.schema.menu.MenuProduct) payload_,
+                    getParentForChildren(),
+                    isClean());
+            payload_ = null;
+          }
+          payloadCase_ = 2;
+          onChanged();;
+          return productBuilder_;
+        }
+
+        private com.google.protobuf.FieldMask mask_;
+        private com.google.protobuf.SingleFieldBuilderV3<
+            com.google.protobuf.FieldMask, com.google.protobuf.FieldMask.Builder, com.google.protobuf.FieldMaskOrBuilder> maskBuilder_;
+        /**
+         * <pre>
+         * Field mask describing the properties that were touched or otherwise mutated in the specified change payload.
+         * </pre>
+         *
+         * <code>.google.protobuf.FieldMask mask = 3;</code>
+         */
+        public boolean hasMask() {
+          return maskBuilder_ != null || mask_ != null;
+        }
+        /**
+         * <pre>
+         * Field mask describing the properties that were touched or otherwise mutated in the specified change payload.
+         * </pre>
+         *
+         * <code>.google.protobuf.FieldMask mask = 3;</code>
+         */
+        public com.google.protobuf.FieldMask getMask() {
+          if (maskBuilder_ == null) {
+            return mask_ == null ? com.google.protobuf.FieldMask.getDefaultInstance() : mask_;
+          } else {
+            return maskBuilder_.getMessage();
+          }
+        }
+        /**
+         * <pre>
+         * Field mask describing the properties that were touched or otherwise mutated in the specified change payload.
+         * </pre>
+         *
+         * <code>.google.protobuf.FieldMask mask = 3;</code>
+         */
+        public Builder setMask(com.google.protobuf.FieldMask value) {
+          if (maskBuilder_ == null) {
+            if (value == null) {
+              throw new NullPointerException();
+            }
+            mask_ = value;
+            onChanged();
+          } else {
+            maskBuilder_.setMessage(value);
+          }
+
+          return this;
+        }
+        /**
+         * <pre>
+         * Field mask describing the properties that were touched or otherwise mutated in the specified change payload.
+         * </pre>
+         *
+         * <code>.google.protobuf.FieldMask mask = 3;</code>
+         */
+        public Builder setMask(
+            com.google.protobuf.FieldMask.Builder builderForValue) {
+          if (maskBuilder_ == null) {
+            mask_ = builderForValue.build();
+            onChanged();
+          } else {
+            maskBuilder_.setMessage(builderForValue.build());
+          }
+
+          return this;
+        }
+        /**
+         * <pre>
+         * Field mask describing the properties that were touched or otherwise mutated in the specified change payload.
+         * </pre>
+         *
+         * <code>.google.protobuf.FieldMask mask = 3;</code>
+         */
+        public Builder mergeMask(com.google.protobuf.FieldMask value) {
+          if (maskBuilder_ == null) {
+            if (mask_ != null) {
+              mask_ =
+                com.google.protobuf.FieldMask.newBuilder(mask_).mergeFrom(value).buildPartial();
+            } else {
+              mask_ = value;
+            }
+            onChanged();
+          } else {
+            maskBuilder_.mergeFrom(value);
+          }
+
+          return this;
+        }
+        /**
+         * <pre>
+         * Field mask describing the properties that were touched or otherwise mutated in the specified change payload.
+         * </pre>
+         *
+         * <code>.google.protobuf.FieldMask mask = 3;</code>
+         */
+        public Builder clearMask() {
+          if (maskBuilder_ == null) {
+            mask_ = null;
+            onChanged();
+          } else {
+            mask_ = null;
+            maskBuilder_ = null;
+          }
+
+          return this;
+        }
+        /**
+         * <pre>
+         * Field mask describing the properties that were touched or otherwise mutated in the specified change payload.
+         * </pre>
+         *
+         * <code>.google.protobuf.FieldMask mask = 3;</code>
+         */
+        public com.google.protobuf.FieldMask.Builder getMaskBuilder() {
+          
+          onChanged();
+          return getMaskFieldBuilder().getBuilder();
+        }
+        /**
+         * <pre>
+         * Field mask describing the properties that were touched or otherwise mutated in the specified change payload.
+         * </pre>
+         *
+         * <code>.google.protobuf.FieldMask mask = 3;</code>
+         */
+        public com.google.protobuf.FieldMaskOrBuilder getMaskOrBuilder() {
+          if (maskBuilder_ != null) {
+            return maskBuilder_.getMessageOrBuilder();
+          } else {
+            return mask_ == null ?
+                com.google.protobuf.FieldMask.getDefaultInstance() : mask_;
+          }
+        }
+        /**
+         * <pre>
+         * Field mask describing the properties that were touched or otherwise mutated in the specified change payload.
+         * </pre>
+         *
+         * <code>.google.protobuf.FieldMask mask = 3;</code>
+         */
+        private com.google.protobuf.SingleFieldBuilderV3<
+            com.google.protobuf.FieldMask, com.google.protobuf.FieldMask.Builder, com.google.protobuf.FieldMaskOrBuilder> 
+            getMaskFieldBuilder() {
+          if (maskBuilder_ == null) {
+            maskBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+                com.google.protobuf.FieldMask, com.google.protobuf.FieldMask.Builder, com.google.protobuf.FieldMaskOrBuilder>(
+                    getMask(),
+                    getParentForChildren(),
+                    isClean());
+            mask_ = null;
+          }
+          return maskBuilder_;
+        }
+        @java.lang.Override
+        public final Builder setUnknownFields(
+            final com.google.protobuf.UnknownFieldSet unknownFields) {
+          return super.setUnknownFields(unknownFields);
+        }
+
+        @java.lang.Override
+        public final Builder mergeUnknownFields(
+            final com.google.protobuf.UnknownFieldSet unknownFields) {
+          return super.mergeUnknownFields(unknownFields);
+        }
+
+
+        // @@protoc_insertion_point(builder_scope:bloombox.services.menu.v1beta1.GetMenu.StreamEvent.ProductChange)
+      }
+
+      // @@protoc_insertion_point(class_scope:bloombox.services.menu.v1beta1.GetMenu.StreamEvent.ProductChange)
+      private static final io.bloombox.schema.services.menu.v1beta1.GetMenu.StreamEvent.ProductChange DEFAULT_INSTANCE;
+      static {
+        DEFAULT_INSTANCE = new io.bloombox.schema.services.menu.v1beta1.GetMenu.StreamEvent.ProductChange();
+      }
+
+      public static io.bloombox.schema.services.menu.v1beta1.GetMenu.StreamEvent.ProductChange getDefaultInstance() {
+        return DEFAULT_INSTANCE;
+      }
+
+      private static final com.google.protobuf.Parser<ProductChange>
+          PARSER = new com.google.protobuf.AbstractParser<ProductChange>() {
+        @java.lang.Override
+        public ProductChange parsePartialFrom(
+            com.google.protobuf.CodedInputStream input,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws com.google.protobuf.InvalidProtocolBufferException {
+          return new ProductChange(input, extensionRegistry);
+        }
+      };
+
+      public static com.google.protobuf.Parser<ProductChange> parser() {
+        return PARSER;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Parser<ProductChange> getParserForType() {
+        return PARSER;
+      }
+
+      @java.lang.Override
+      public io.bloombox.schema.services.menu.v1beta1.GetMenu.StreamEvent.ProductChange getDefaultInstanceForType() {
+        return DEFAULT_INSTANCE;
+      }
+
+    }
+
+    public interface MenuDeltaEntryOrBuilder extends
+        // @@protoc_insertion_point(interface_extends:bloombox.services.menu.v1beta1.GetMenu.StreamEvent.MenuDeltaEntry)
+        com.google.protobuf.MessageOrBuilder {
+
+      /**
+       * <pre>
+       * Specifies the type of change being communicated.
+       * </pre>
+       *
+       * <code>.bloombox.services.menu.v1beta1.GetMenu.StreamEvent.ChangeType type = 1;</code>
+       */
+      int getTypeValue();
+      /**
+       * <pre>
+       * Specifies the type of change being communicated.
+       * </pre>
+       *
+       * <code>.bloombox.services.menu.v1beta1.GetMenu.StreamEvent.ChangeType type = 1;</code>
+       */
+      io.bloombox.schema.services.menu.v1beta1.GetMenu.StreamEvent.ChangeType getType();
+
+      /**
+       * <pre>
+       * Sections mentioned in this delta payload. Left unset for full catalog responses.
+       * </pre>
+       *
+       * <code>repeated .opencannabis.products.menu.section.Section section = 2;</code>
+       */
+      java.util.List<io.opencannabis.schema.menu.section.Section> getSectionList();
+      /**
+       * <pre>
+       * Sections mentioned in this delta payload. Left unset for full catalog responses.
+       * </pre>
+       *
+       * <code>repeated .opencannabis.products.menu.section.Section section = 2;</code>
+       */
+      int getSectionCount();
+      /**
+       * <pre>
+       * Sections mentioned in this delta payload. Left unset for full catalog responses.
+       * </pre>
+       *
+       * <code>repeated .opencannabis.products.menu.section.Section section = 2;</code>
+       */
+      io.opencannabis.schema.menu.section.Section getSection(int index);
+      /**
+       * <pre>
+       * Sections mentioned in this delta payload. Left unset for full catalog responses.
+       * </pre>
+       *
+       * <code>repeated .opencannabis.products.menu.section.Section section = 2;</code>
+       */
+      java.util.List<java.lang.Integer>
+      getSectionValueList();
+      /**
+       * <pre>
+       * Sections mentioned in this delta payload. Left unset for full catalog responses.
+       * </pre>
+       *
+       * <code>repeated .opencannabis.products.menu.section.Section section = 2;</code>
+       */
+      int getSectionValue(int index);
+
+      /**
+       * <pre>
+       * List of object that each specify either the key, or product payload, that changed in a given delta entry.
+       * </pre>
+       *
+       * <code>repeated .bloombox.services.menu.v1beta1.GetMenu.StreamEvent.ProductChange change = 3;</code>
+       */
+      java.util.List<io.bloombox.schema.services.menu.v1beta1.GetMenu.StreamEvent.ProductChange> 
+          getChangeList();
+      /**
+       * <pre>
+       * List of object that each specify either the key, or product payload, that changed in a given delta entry.
+       * </pre>
+       *
+       * <code>repeated .bloombox.services.menu.v1beta1.GetMenu.StreamEvent.ProductChange change = 3;</code>
+       */
+      io.bloombox.schema.services.menu.v1beta1.GetMenu.StreamEvent.ProductChange getChange(int index);
+      /**
+       * <pre>
+       * List of object that each specify either the key, or product payload, that changed in a given delta entry.
+       * </pre>
+       *
+       * <code>repeated .bloombox.services.menu.v1beta1.GetMenu.StreamEvent.ProductChange change = 3;</code>
+       */
+      int getChangeCount();
+      /**
+       * <pre>
+       * List of object that each specify either the key, or product payload, that changed in a given delta entry.
+       * </pre>
+       *
+       * <code>repeated .bloombox.services.menu.v1beta1.GetMenu.StreamEvent.ProductChange change = 3;</code>
+       */
+      java.util.List<? extends io.bloombox.schema.services.menu.v1beta1.GetMenu.StreamEvent.ProductChangeOrBuilder> 
+          getChangeOrBuilderList();
+      /**
+       * <pre>
+       * List of object that each specify either the key, or product payload, that changed in a given delta entry.
+       * </pre>
+       *
+       * <code>repeated .bloombox.services.menu.v1beta1.GetMenu.StreamEvent.ProductChange change = 3;</code>
+       */
+      io.bloombox.schema.services.menu.v1beta1.GetMenu.StreamEvent.ProductChangeOrBuilder getChangeOrBuilder(
+          int index);
+    }
+    /**
+     * <pre>
+     * Describes a change occurring in the menu catalog system, which is being communicated out to listening clients, on
+     * a live menu change stream.
+     * </pre>
+     *
+     * Protobuf type {@code bloombox.services.menu.v1beta1.GetMenu.StreamEvent.MenuDeltaEntry}
+     */
+    public  static final class MenuDeltaEntry extends
+        com.google.protobuf.GeneratedMessageV3 implements
+        // @@protoc_insertion_point(message_implements:bloombox.services.menu.v1beta1.GetMenu.StreamEvent.MenuDeltaEntry)
+        MenuDeltaEntryOrBuilder {
+    private static final long serialVersionUID = 0L;
+      // Use MenuDeltaEntry.newBuilder() to construct.
+      private MenuDeltaEntry(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+        super(builder);
+      }
+      private MenuDeltaEntry() {
+        type_ = 0;
+        section_ = java.util.Collections.emptyList();
+        change_ = java.util.Collections.emptyList();
+      }
+
+      @java.lang.Override
+      public final com.google.protobuf.UnknownFieldSet
+      getUnknownFields() {
+        return this.unknownFields;
+      }
+      private MenuDeltaEntry(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        this();
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        int mutable_bitField0_ = 0;
+        com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+            com.google.protobuf.UnknownFieldSet.newBuilder();
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 8: {
+                int rawValue = input.readEnum();
+
+                type_ = rawValue;
+                break;
+              }
+              case 16: {
+                int rawValue = input.readEnum();
+                if (!((mutable_bitField0_ & 0x00000002) != 0)) {
+                  section_ = new java.util.ArrayList<java.lang.Integer>();
+                  mutable_bitField0_ |= 0x00000002;
+                }
+                section_.add(rawValue);
+                break;
+              }
+              case 18: {
+                int length = input.readRawVarint32();
+                int oldLimit = input.pushLimit(length);
+                while(input.getBytesUntilLimit() > 0) {
+                  int rawValue = input.readEnum();
+                  if (!((mutable_bitField0_ & 0x00000002) != 0)) {
+                    section_ = new java.util.ArrayList<java.lang.Integer>();
+                    mutable_bitField0_ |= 0x00000002;
+                  }
+                  section_.add(rawValue);
+                }
+                input.popLimit(oldLimit);
+                break;
+              }
+              case 26: {
+                if (!((mutable_bitField0_ & 0x00000004) != 0)) {
+                  change_ = new java.util.ArrayList<io.bloombox.schema.services.menu.v1beta1.GetMenu.StreamEvent.ProductChange>();
+                  mutable_bitField0_ |= 0x00000004;
+                }
+                change_.add(
+                    input.readMessage(io.bloombox.schema.services.menu.v1beta1.GetMenu.StreamEvent.ProductChange.parser(), extensionRegistry));
+                break;
+              }
+              default: {
+                if (!parseUnknownField(
+                    input, unknownFields, extensionRegistry, tag)) {
+                  done = true;
+                }
+                break;
+              }
+            }
+          }
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(this);
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(
+              e).setUnfinishedMessage(this);
+        } finally {
+          if (((mutable_bitField0_ & 0x00000002) != 0)) {
+            section_ = java.util.Collections.unmodifiableList(section_);
+          }
+          if (((mutable_bitField0_ & 0x00000004) != 0)) {
+            change_ = java.util.Collections.unmodifiableList(change_);
+          }
+          this.unknownFields = unknownFields.build();
+          makeExtensionsImmutable();
+        }
+      }
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return io.bloombox.schema.services.menu.v1beta1.MenuServiceBeta1.internal_static_bloombox_services_menu_v1beta1_GetMenu_StreamEvent_MenuDeltaEntry_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return io.bloombox.schema.services.menu.v1beta1.MenuServiceBeta1.internal_static_bloombox_services_menu_v1beta1_GetMenu_StreamEvent_MenuDeltaEntry_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                io.bloombox.schema.services.menu.v1beta1.GetMenu.StreamEvent.MenuDeltaEntry.class, io.bloombox.schema.services.menu.v1beta1.GetMenu.StreamEvent.MenuDeltaEntry.Builder.class);
+      }
+
+      private int bitField0_;
+      public static final int TYPE_FIELD_NUMBER = 1;
+      private int type_;
+      /**
+       * <pre>
+       * Specifies the type of change being communicated.
+       * </pre>
+       *
+       * <code>.bloombox.services.menu.v1beta1.GetMenu.StreamEvent.ChangeType type = 1;</code>
+       */
+      public int getTypeValue() {
+        return type_;
+      }
+      /**
+       * <pre>
+       * Specifies the type of change being communicated.
+       * </pre>
+       *
+       * <code>.bloombox.services.menu.v1beta1.GetMenu.StreamEvent.ChangeType type = 1;</code>
+       */
+      public io.bloombox.schema.services.menu.v1beta1.GetMenu.StreamEvent.ChangeType getType() {
+        @SuppressWarnings("deprecation")
+        io.bloombox.schema.services.menu.v1beta1.GetMenu.StreamEvent.ChangeType result = io.bloombox.schema.services.menu.v1beta1.GetMenu.StreamEvent.ChangeType.valueOf(type_);
+        return result == null ? io.bloombox.schema.services.menu.v1beta1.GetMenu.StreamEvent.ChangeType.UNRECOGNIZED : result;
+      }
+
+      public static final int SECTION_FIELD_NUMBER = 2;
+      private java.util.List<java.lang.Integer> section_;
+      private static final com.google.protobuf.Internal.ListAdapter.Converter<
+          java.lang.Integer, io.opencannabis.schema.menu.section.Section> section_converter_ =
+              new com.google.protobuf.Internal.ListAdapter.Converter<
+                  java.lang.Integer, io.opencannabis.schema.menu.section.Section>() {
+                public io.opencannabis.schema.menu.section.Section convert(java.lang.Integer from) {
+                  @SuppressWarnings("deprecation")
+                  io.opencannabis.schema.menu.section.Section result = io.opencannabis.schema.menu.section.Section.valueOf(from);
+                  return result == null ? io.opencannabis.schema.menu.section.Section.UNRECOGNIZED : result;
+                }
+              };
+      /**
+       * <pre>
+       * Sections mentioned in this delta payload. Left unset for full catalog responses.
+       * </pre>
+       *
+       * <code>repeated .opencannabis.products.menu.section.Section section = 2;</code>
+       */
+      public java.util.List<io.opencannabis.schema.menu.section.Section> getSectionList() {
+        return new com.google.protobuf.Internal.ListAdapter<
+            java.lang.Integer, io.opencannabis.schema.menu.section.Section>(section_, section_converter_);
+      }
+      /**
+       * <pre>
+       * Sections mentioned in this delta payload. Left unset for full catalog responses.
+       * </pre>
+       *
+       * <code>repeated .opencannabis.products.menu.section.Section section = 2;</code>
+       */
+      public int getSectionCount() {
+        return section_.size();
+      }
+      /**
+       * <pre>
+       * Sections mentioned in this delta payload. Left unset for full catalog responses.
+       * </pre>
+       *
+       * <code>repeated .opencannabis.products.menu.section.Section section = 2;</code>
+       */
+      public io.opencannabis.schema.menu.section.Section getSection(int index) {
+        return section_converter_.convert(section_.get(index));
+      }
+      /**
+       * <pre>
+       * Sections mentioned in this delta payload. Left unset for full catalog responses.
+       * </pre>
+       *
+       * <code>repeated .opencannabis.products.menu.section.Section section = 2;</code>
+       */
+      public java.util.List<java.lang.Integer>
+      getSectionValueList() {
+        return section_;
+      }
+      /**
+       * <pre>
+       * Sections mentioned in this delta payload. Left unset for full catalog responses.
+       * </pre>
+       *
+       * <code>repeated .opencannabis.products.menu.section.Section section = 2;</code>
+       */
+      public int getSectionValue(int index) {
+        return section_.get(index);
+      }
+      private int sectionMemoizedSerializedSize;
+
+      public static final int CHANGE_FIELD_NUMBER = 3;
+      private java.util.List<io.bloombox.schema.services.menu.v1beta1.GetMenu.StreamEvent.ProductChange> change_;
+      /**
+       * <pre>
+       * List of object that each specify either the key, or product payload, that changed in a given delta entry.
+       * </pre>
+       *
+       * <code>repeated .bloombox.services.menu.v1beta1.GetMenu.StreamEvent.ProductChange change = 3;</code>
+       */
+      public java.util.List<io.bloombox.schema.services.menu.v1beta1.GetMenu.StreamEvent.ProductChange> getChangeList() {
+        return change_;
+      }
+      /**
+       * <pre>
+       * List of object that each specify either the key, or product payload, that changed in a given delta entry.
+       * </pre>
+       *
+       * <code>repeated .bloombox.services.menu.v1beta1.GetMenu.StreamEvent.ProductChange change = 3;</code>
+       */
+      public java.util.List<? extends io.bloombox.schema.services.menu.v1beta1.GetMenu.StreamEvent.ProductChangeOrBuilder> 
+          getChangeOrBuilderList() {
+        return change_;
+      }
+      /**
+       * <pre>
+       * List of object that each specify either the key, or product payload, that changed in a given delta entry.
+       * </pre>
+       *
+       * <code>repeated .bloombox.services.menu.v1beta1.GetMenu.StreamEvent.ProductChange change = 3;</code>
+       */
+      public int getChangeCount() {
+        return change_.size();
+      }
+      /**
+       * <pre>
+       * List of object that each specify either the key, or product payload, that changed in a given delta entry.
+       * </pre>
+       *
+       * <code>repeated .bloombox.services.menu.v1beta1.GetMenu.StreamEvent.ProductChange change = 3;</code>
+       */
+      public io.bloombox.schema.services.menu.v1beta1.GetMenu.StreamEvent.ProductChange getChange(int index) {
+        return change_.get(index);
+      }
+      /**
+       * <pre>
+       * List of object that each specify either the key, or product payload, that changed in a given delta entry.
+       * </pre>
+       *
+       * <code>repeated .bloombox.services.menu.v1beta1.GetMenu.StreamEvent.ProductChange change = 3;</code>
+       */
+      public io.bloombox.schema.services.menu.v1beta1.GetMenu.StreamEvent.ProductChangeOrBuilder getChangeOrBuilder(
+          int index) {
+        return change_.get(index);
+      }
+
+      private byte memoizedIsInitialized = -1;
+      @java.lang.Override
+      public final boolean isInitialized() {
+        byte isInitialized = memoizedIsInitialized;
+        if (isInitialized == 1) return true;
+        if (isInitialized == 0) return false;
+
+        memoizedIsInitialized = 1;
+        return true;
+      }
+
+      @java.lang.Override
+      public void writeTo(com.google.protobuf.CodedOutputStream output)
+                          throws java.io.IOException {
+        getSerializedSize();
+        if (type_ != io.bloombox.schema.services.menu.v1beta1.GetMenu.StreamEvent.ChangeType.GENERIC_CHANGE.getNumber()) {
+          output.writeEnum(1, type_);
+        }
+        if (getSectionList().size() > 0) {
+          output.writeUInt32NoTag(18);
+          output.writeUInt32NoTag(sectionMemoizedSerializedSize);
+        }
+        for (int i = 0; i < section_.size(); i++) {
+          output.writeEnumNoTag(section_.get(i));
+        }
+        for (int i = 0; i < change_.size(); i++) {
+          output.writeMessage(3, change_.get(i));
+        }
+        unknownFields.writeTo(output);
+      }
+
+      @java.lang.Override
+      public int getSerializedSize() {
+        int size = memoizedSize;
+        if (size != -1) return size;
+
+        size = 0;
+        if (type_ != io.bloombox.schema.services.menu.v1beta1.GetMenu.StreamEvent.ChangeType.GENERIC_CHANGE.getNumber()) {
+          size += com.google.protobuf.CodedOutputStream
+            .computeEnumSize(1, type_);
+        }
+        {
+          int dataSize = 0;
+          for (int i = 0; i < section_.size(); i++) {
+            dataSize += com.google.protobuf.CodedOutputStream
+              .computeEnumSizeNoTag(section_.get(i));
+          }
+          size += dataSize;
+          if (!getSectionList().isEmpty()) {  size += 1;
+            size += com.google.protobuf.CodedOutputStream
+              .computeUInt32SizeNoTag(dataSize);
+          }sectionMemoizedSerializedSize = dataSize;
+        }
+        for (int i = 0; i < change_.size(); i++) {
+          size += com.google.protobuf.CodedOutputStream
+            .computeMessageSize(3, change_.get(i));
+        }
+        size += unknownFields.getSerializedSize();
+        memoizedSize = size;
+        return size;
+      }
+
+      @java.lang.Override
+      public boolean equals(final java.lang.Object obj) {
+        if (obj == this) {
+         return true;
+        }
+        if (!(obj instanceof io.bloombox.schema.services.menu.v1beta1.GetMenu.StreamEvent.MenuDeltaEntry)) {
+          return super.equals(obj);
+        }
+        io.bloombox.schema.services.menu.v1beta1.GetMenu.StreamEvent.MenuDeltaEntry other = (io.bloombox.schema.services.menu.v1beta1.GetMenu.StreamEvent.MenuDeltaEntry) obj;
+
+        if (type_ != other.type_) return false;
+        if (!section_.equals(other.section_)) return false;
+        if (!getChangeList()
+            .equals(other.getChangeList())) return false;
+        if (!unknownFields.equals(other.unknownFields)) return false;
+        return true;
+      }
+
+      @java.lang.Override
+      public int hashCode() {
+        if (memoizedHashCode != 0) {
+          return memoizedHashCode;
+        }
+        int hash = 41;
+        hash = (19 * hash) + getDescriptor().hashCode();
+        hash = (37 * hash) + TYPE_FIELD_NUMBER;
+        hash = (53 * hash) + type_;
+        if (getSectionCount() > 0) {
+          hash = (37 * hash) + SECTION_FIELD_NUMBER;
+          hash = (53 * hash) + section_.hashCode();
+        }
+        if (getChangeCount() > 0) {
+          hash = (37 * hash) + CHANGE_FIELD_NUMBER;
+          hash = (53 * hash) + getChangeList().hashCode();
+        }
+        hash = (29 * hash) + unknownFields.hashCode();
+        memoizedHashCode = hash;
+        return hash;
+      }
+
+      public static io.bloombox.schema.services.menu.v1beta1.GetMenu.StreamEvent.MenuDeltaEntry parseFrom(
+          java.nio.ByteBuffer data)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data);
+      }
+      public static io.bloombox.schema.services.menu.v1beta1.GetMenu.StreamEvent.MenuDeltaEntry parseFrom(
+          java.nio.ByteBuffer data,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data, extensionRegistry);
+      }
+      public static io.bloombox.schema.services.menu.v1beta1.GetMenu.StreamEvent.MenuDeltaEntry parseFrom(
+          com.google.protobuf.ByteString data)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data);
+      }
+      public static io.bloombox.schema.services.menu.v1beta1.GetMenu.StreamEvent.MenuDeltaEntry parseFrom(
+          com.google.protobuf.ByteString data,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data, extensionRegistry);
+      }
+      public static io.bloombox.schema.services.menu.v1beta1.GetMenu.StreamEvent.MenuDeltaEntry parseFrom(byte[] data)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data);
+      }
+      public static io.bloombox.schema.services.menu.v1beta1.GetMenu.StreamEvent.MenuDeltaEntry parseFrom(
+          byte[] data,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data, extensionRegistry);
+      }
+      public static io.bloombox.schema.services.menu.v1beta1.GetMenu.StreamEvent.MenuDeltaEntry parseFrom(java.io.InputStream input)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input);
+      }
+      public static io.bloombox.schema.services.menu.v1beta1.GetMenu.StreamEvent.MenuDeltaEntry parseFrom(
+          java.io.InputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input, extensionRegistry);
+      }
+      public static io.bloombox.schema.services.menu.v1beta1.GetMenu.StreamEvent.MenuDeltaEntry parseDelimitedFrom(java.io.InputStream input)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseDelimitedWithIOException(PARSER, input);
+      }
+      public static io.bloombox.schema.services.menu.v1beta1.GetMenu.StreamEvent.MenuDeltaEntry parseDelimitedFrom(
+          java.io.InputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+      }
+      public static io.bloombox.schema.services.menu.v1beta1.GetMenu.StreamEvent.MenuDeltaEntry parseFrom(
+          com.google.protobuf.CodedInputStream input)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input);
+      }
+      public static io.bloombox.schema.services.menu.v1beta1.GetMenu.StreamEvent.MenuDeltaEntry parseFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input, extensionRegistry);
+      }
+
+      @java.lang.Override
+      public Builder newBuilderForType() { return newBuilder(); }
+      public static Builder newBuilder() {
+        return DEFAULT_INSTANCE.toBuilder();
+      }
+      public static Builder newBuilder(io.bloombox.schema.services.menu.v1beta1.GetMenu.StreamEvent.MenuDeltaEntry prototype) {
+        return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+      }
+      @java.lang.Override
+      public Builder toBuilder() {
+        return this == DEFAULT_INSTANCE
+            ? new Builder() : new Builder().mergeFrom(this);
+      }
+
+      @java.lang.Override
+      protected Builder newBuilderForType(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        Builder builder = new Builder(parent);
+        return builder;
+      }
+      /**
+       * <pre>
+       * Describes a change occurring in the menu catalog system, which is being communicated out to listening clients, on
+       * a live menu change stream.
+       * </pre>
+       *
+       * Protobuf type {@code bloombox.services.menu.v1beta1.GetMenu.StreamEvent.MenuDeltaEntry}
+       */
+      public static final class Builder extends
+          com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+          // @@protoc_insertion_point(builder_implements:bloombox.services.menu.v1beta1.GetMenu.StreamEvent.MenuDeltaEntry)
+          io.bloombox.schema.services.menu.v1beta1.GetMenu.StreamEvent.MenuDeltaEntryOrBuilder {
+        public static final com.google.protobuf.Descriptors.Descriptor
+            getDescriptor() {
+          return io.bloombox.schema.services.menu.v1beta1.MenuServiceBeta1.internal_static_bloombox_services_menu_v1beta1_GetMenu_StreamEvent_MenuDeltaEntry_descriptor;
+        }
+
+        @java.lang.Override
+        protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+            internalGetFieldAccessorTable() {
+          return io.bloombox.schema.services.menu.v1beta1.MenuServiceBeta1.internal_static_bloombox_services_menu_v1beta1_GetMenu_StreamEvent_MenuDeltaEntry_fieldAccessorTable
+              .ensureFieldAccessorsInitialized(
+                  io.bloombox.schema.services.menu.v1beta1.GetMenu.StreamEvent.MenuDeltaEntry.class, io.bloombox.schema.services.menu.v1beta1.GetMenu.StreamEvent.MenuDeltaEntry.Builder.class);
+        }
+
+        // Construct using io.bloombox.schema.services.menu.v1beta1.GetMenu.StreamEvent.MenuDeltaEntry.newBuilder()
+        private Builder() {
+          maybeForceBuilderInitialization();
+        }
+
+        private Builder(
+            com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+          super(parent);
+          maybeForceBuilderInitialization();
+        }
+        private void maybeForceBuilderInitialization() {
+          if (com.google.protobuf.GeneratedMessageV3
+                  .alwaysUseFieldBuilders) {
+            getChangeFieldBuilder();
+          }
+        }
+        @java.lang.Override
+        public Builder clear() {
+          super.clear();
+          type_ = 0;
+
+          section_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000002);
+          if (changeBuilder_ == null) {
+            change_ = java.util.Collections.emptyList();
+            bitField0_ = (bitField0_ & ~0x00000004);
+          } else {
+            changeBuilder_.clear();
+          }
+          return this;
+        }
+
+        @java.lang.Override
+        public com.google.protobuf.Descriptors.Descriptor
+            getDescriptorForType() {
+          return io.bloombox.schema.services.menu.v1beta1.MenuServiceBeta1.internal_static_bloombox_services_menu_v1beta1_GetMenu_StreamEvent_MenuDeltaEntry_descriptor;
+        }
+
+        @java.lang.Override
+        public io.bloombox.schema.services.menu.v1beta1.GetMenu.StreamEvent.MenuDeltaEntry getDefaultInstanceForType() {
+          return io.bloombox.schema.services.menu.v1beta1.GetMenu.StreamEvent.MenuDeltaEntry.getDefaultInstance();
+        }
+
+        @java.lang.Override
+        public io.bloombox.schema.services.menu.v1beta1.GetMenu.StreamEvent.MenuDeltaEntry build() {
+          io.bloombox.schema.services.menu.v1beta1.GetMenu.StreamEvent.MenuDeltaEntry result = buildPartial();
+          if (!result.isInitialized()) {
+            throw newUninitializedMessageException(result);
+          }
+          return result;
+        }
+
+        @java.lang.Override
+        public io.bloombox.schema.services.menu.v1beta1.GetMenu.StreamEvent.MenuDeltaEntry buildPartial() {
+          io.bloombox.schema.services.menu.v1beta1.GetMenu.StreamEvent.MenuDeltaEntry result = new io.bloombox.schema.services.menu.v1beta1.GetMenu.StreamEvent.MenuDeltaEntry(this);
+          int from_bitField0_ = bitField0_;
+          int to_bitField0_ = 0;
+          result.type_ = type_;
+          if (((bitField0_ & 0x00000002) != 0)) {
+            section_ = java.util.Collections.unmodifiableList(section_);
+            bitField0_ = (bitField0_ & ~0x00000002);
+          }
+          result.section_ = section_;
+          if (changeBuilder_ == null) {
+            if (((bitField0_ & 0x00000004) != 0)) {
+              change_ = java.util.Collections.unmodifiableList(change_);
+              bitField0_ = (bitField0_ & ~0x00000004);
+            }
+            result.change_ = change_;
+          } else {
+            result.change_ = changeBuilder_.build();
+          }
+          result.bitField0_ = to_bitField0_;
+          onBuilt();
+          return result;
+        }
+
+        @java.lang.Override
+        public Builder clone() {
+          return super.clone();
+        }
+        @java.lang.Override
+        public Builder setField(
+            com.google.protobuf.Descriptors.FieldDescriptor field,
+            java.lang.Object value) {
+          return super.setField(field, value);
+        }
+        @java.lang.Override
+        public Builder clearField(
+            com.google.protobuf.Descriptors.FieldDescriptor field) {
+          return super.clearField(field);
+        }
+        @java.lang.Override
+        public Builder clearOneof(
+            com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+          return super.clearOneof(oneof);
+        }
+        @java.lang.Override
+        public Builder setRepeatedField(
+            com.google.protobuf.Descriptors.FieldDescriptor field,
+            int index, java.lang.Object value) {
+          return super.setRepeatedField(field, index, value);
+        }
+        @java.lang.Override
+        public Builder addRepeatedField(
+            com.google.protobuf.Descriptors.FieldDescriptor field,
+            java.lang.Object value) {
+          return super.addRepeatedField(field, value);
+        }
+        @java.lang.Override
+        public Builder mergeFrom(com.google.protobuf.Message other) {
+          if (other instanceof io.bloombox.schema.services.menu.v1beta1.GetMenu.StreamEvent.MenuDeltaEntry) {
+            return mergeFrom((io.bloombox.schema.services.menu.v1beta1.GetMenu.StreamEvent.MenuDeltaEntry)other);
+          } else {
+            super.mergeFrom(other);
+            return this;
+          }
+        }
+
+        public Builder mergeFrom(io.bloombox.schema.services.menu.v1beta1.GetMenu.StreamEvent.MenuDeltaEntry other) {
+          if (other == io.bloombox.schema.services.menu.v1beta1.GetMenu.StreamEvent.MenuDeltaEntry.getDefaultInstance()) return this;
+          if (other.type_ != 0) {
+            setTypeValue(other.getTypeValue());
+          }
+          if (!other.section_.isEmpty()) {
+            if (section_.isEmpty()) {
+              section_ = other.section_;
+              bitField0_ = (bitField0_ & ~0x00000002);
+            } else {
+              ensureSectionIsMutable();
+              section_.addAll(other.section_);
+            }
+            onChanged();
+          }
+          if (changeBuilder_ == null) {
+            if (!other.change_.isEmpty()) {
+              if (change_.isEmpty()) {
+                change_ = other.change_;
+                bitField0_ = (bitField0_ & ~0x00000004);
+              } else {
+                ensureChangeIsMutable();
+                change_.addAll(other.change_);
+              }
+              onChanged();
+            }
+          } else {
+            if (!other.change_.isEmpty()) {
+              if (changeBuilder_.isEmpty()) {
+                changeBuilder_.dispose();
+                changeBuilder_ = null;
+                change_ = other.change_;
+                bitField0_ = (bitField0_ & ~0x00000004);
+                changeBuilder_ = 
+                  com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                     getChangeFieldBuilder() : null;
+              } else {
+                changeBuilder_.addAllMessages(other.change_);
+              }
+            }
+          }
+          this.mergeUnknownFields(other.unknownFields);
+          onChanged();
+          return this;
+        }
+
+        @java.lang.Override
+        public final boolean isInitialized() {
+          return true;
+        }
+
+        @java.lang.Override
+        public Builder mergeFrom(
+            com.google.protobuf.CodedInputStream input,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws java.io.IOException {
+          io.bloombox.schema.services.menu.v1beta1.GetMenu.StreamEvent.MenuDeltaEntry parsedMessage = null;
+          try {
+            parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+          } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+            parsedMessage = (io.bloombox.schema.services.menu.v1beta1.GetMenu.StreamEvent.MenuDeltaEntry) e.getUnfinishedMessage();
+            throw e.unwrapIOException();
+          } finally {
+            if (parsedMessage != null) {
+              mergeFrom(parsedMessage);
+            }
+          }
+          return this;
+        }
+        private int bitField0_;
+
+        private int type_ = 0;
+        /**
+         * <pre>
+         * Specifies the type of change being communicated.
+         * </pre>
+         *
+         * <code>.bloombox.services.menu.v1beta1.GetMenu.StreamEvent.ChangeType type = 1;</code>
+         */
+        public int getTypeValue() {
+          return type_;
+        }
+        /**
+         * <pre>
+         * Specifies the type of change being communicated.
+         * </pre>
+         *
+         * <code>.bloombox.services.menu.v1beta1.GetMenu.StreamEvent.ChangeType type = 1;</code>
+         */
+        public Builder setTypeValue(int value) {
+          type_ = value;
+          onChanged();
+          return this;
+        }
+        /**
+         * <pre>
+         * Specifies the type of change being communicated.
+         * </pre>
+         *
+         * <code>.bloombox.services.menu.v1beta1.GetMenu.StreamEvent.ChangeType type = 1;</code>
+         */
+        public io.bloombox.schema.services.menu.v1beta1.GetMenu.StreamEvent.ChangeType getType() {
+          @SuppressWarnings("deprecation")
+          io.bloombox.schema.services.menu.v1beta1.GetMenu.StreamEvent.ChangeType result = io.bloombox.schema.services.menu.v1beta1.GetMenu.StreamEvent.ChangeType.valueOf(type_);
+          return result == null ? io.bloombox.schema.services.menu.v1beta1.GetMenu.StreamEvent.ChangeType.UNRECOGNIZED : result;
+        }
+        /**
+         * <pre>
+         * Specifies the type of change being communicated.
+         * </pre>
+         *
+         * <code>.bloombox.services.menu.v1beta1.GetMenu.StreamEvent.ChangeType type = 1;</code>
+         */
+        public Builder setType(io.bloombox.schema.services.menu.v1beta1.GetMenu.StreamEvent.ChangeType value) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          
+          type_ = value.getNumber();
+          onChanged();
+          return this;
+        }
+        /**
+         * <pre>
+         * Specifies the type of change being communicated.
+         * </pre>
+         *
+         * <code>.bloombox.services.menu.v1beta1.GetMenu.StreamEvent.ChangeType type = 1;</code>
+         */
+        public Builder clearType() {
+          
+          type_ = 0;
+          onChanged();
+          return this;
+        }
+
+        private java.util.List<java.lang.Integer> section_ =
+          java.util.Collections.emptyList();
+        private void ensureSectionIsMutable() {
+          if (!((bitField0_ & 0x00000002) != 0)) {
+            section_ = new java.util.ArrayList<java.lang.Integer>(section_);
+            bitField0_ |= 0x00000002;
+          }
+        }
+        /**
+         * <pre>
+         * Sections mentioned in this delta payload. Left unset for full catalog responses.
+         * </pre>
+         *
+         * <code>repeated .opencannabis.products.menu.section.Section section = 2;</code>
+         */
+        public java.util.List<io.opencannabis.schema.menu.section.Section> getSectionList() {
+          return new com.google.protobuf.Internal.ListAdapter<
+              java.lang.Integer, io.opencannabis.schema.menu.section.Section>(section_, section_converter_);
+        }
+        /**
+         * <pre>
+         * Sections mentioned in this delta payload. Left unset for full catalog responses.
+         * </pre>
+         *
+         * <code>repeated .opencannabis.products.menu.section.Section section = 2;</code>
+         */
+        public int getSectionCount() {
+          return section_.size();
+        }
+        /**
+         * <pre>
+         * Sections mentioned in this delta payload. Left unset for full catalog responses.
+         * </pre>
+         *
+         * <code>repeated .opencannabis.products.menu.section.Section section = 2;</code>
+         */
+        public io.opencannabis.schema.menu.section.Section getSection(int index) {
+          return section_converter_.convert(section_.get(index));
+        }
+        /**
+         * <pre>
+         * Sections mentioned in this delta payload. Left unset for full catalog responses.
+         * </pre>
+         *
+         * <code>repeated .opencannabis.products.menu.section.Section section = 2;</code>
+         */
+        public Builder setSection(
+            int index, io.opencannabis.schema.menu.section.Section value) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureSectionIsMutable();
+          section_.set(index, value.getNumber());
+          onChanged();
+          return this;
+        }
+        /**
+         * <pre>
+         * Sections mentioned in this delta payload. Left unset for full catalog responses.
+         * </pre>
+         *
+         * <code>repeated .opencannabis.products.menu.section.Section section = 2;</code>
+         */
+        public Builder addSection(io.opencannabis.schema.menu.section.Section value) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureSectionIsMutable();
+          section_.add(value.getNumber());
+          onChanged();
+          return this;
+        }
+        /**
+         * <pre>
+         * Sections mentioned in this delta payload. Left unset for full catalog responses.
+         * </pre>
+         *
+         * <code>repeated .opencannabis.products.menu.section.Section section = 2;</code>
+         */
+        public Builder addAllSection(
+            java.lang.Iterable<? extends io.opencannabis.schema.menu.section.Section> values) {
+          ensureSectionIsMutable();
+          for (io.opencannabis.schema.menu.section.Section value : values) {
+            section_.add(value.getNumber());
+          }
+          onChanged();
+          return this;
+        }
+        /**
+         * <pre>
+         * Sections mentioned in this delta payload. Left unset for full catalog responses.
+         * </pre>
+         *
+         * <code>repeated .opencannabis.products.menu.section.Section section = 2;</code>
+         */
+        public Builder clearSection() {
+          section_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000002);
+          onChanged();
+          return this;
+        }
+        /**
+         * <pre>
+         * Sections mentioned in this delta payload. Left unset for full catalog responses.
+         * </pre>
+         *
+         * <code>repeated .opencannabis.products.menu.section.Section section = 2;</code>
+         */
+        public java.util.List<java.lang.Integer>
+        getSectionValueList() {
+          return java.util.Collections.unmodifiableList(section_);
+        }
+        /**
+         * <pre>
+         * Sections mentioned in this delta payload. Left unset for full catalog responses.
+         * </pre>
+         *
+         * <code>repeated .opencannabis.products.menu.section.Section section = 2;</code>
+         */
+        public int getSectionValue(int index) {
+          return section_.get(index);
+        }
+        /**
+         * <pre>
+         * Sections mentioned in this delta payload. Left unset for full catalog responses.
+         * </pre>
+         *
+         * <code>repeated .opencannabis.products.menu.section.Section section = 2;</code>
+         */
+        public Builder setSectionValue(
+            int index, int value) {
+          ensureSectionIsMutable();
+          section_.set(index, value);
+          onChanged();
+          return this;
+        }
+        /**
+         * <pre>
+         * Sections mentioned in this delta payload. Left unset for full catalog responses.
+         * </pre>
+         *
+         * <code>repeated .opencannabis.products.menu.section.Section section = 2;</code>
+         */
+        public Builder addSectionValue(int value) {
+          ensureSectionIsMutable();
+          section_.add(value);
+          onChanged();
+          return this;
+        }
+        /**
+         * <pre>
+         * Sections mentioned in this delta payload. Left unset for full catalog responses.
+         * </pre>
+         *
+         * <code>repeated .opencannabis.products.menu.section.Section section = 2;</code>
+         */
+        public Builder addAllSectionValue(
+            java.lang.Iterable<java.lang.Integer> values) {
+          ensureSectionIsMutable();
+          for (int value : values) {
+            section_.add(value);
+          }
+          onChanged();
+          return this;
+        }
+
+        private java.util.List<io.bloombox.schema.services.menu.v1beta1.GetMenu.StreamEvent.ProductChange> change_ =
+          java.util.Collections.emptyList();
+        private void ensureChangeIsMutable() {
+          if (!((bitField0_ & 0x00000004) != 0)) {
+            change_ = new java.util.ArrayList<io.bloombox.schema.services.menu.v1beta1.GetMenu.StreamEvent.ProductChange>(change_);
+            bitField0_ |= 0x00000004;
+           }
+        }
+
+        private com.google.protobuf.RepeatedFieldBuilderV3<
+            io.bloombox.schema.services.menu.v1beta1.GetMenu.StreamEvent.ProductChange, io.bloombox.schema.services.menu.v1beta1.GetMenu.StreamEvent.ProductChange.Builder, io.bloombox.schema.services.menu.v1beta1.GetMenu.StreamEvent.ProductChangeOrBuilder> changeBuilder_;
+
+        /**
+         * <pre>
+         * List of object that each specify either the key, or product payload, that changed in a given delta entry.
+         * </pre>
+         *
+         * <code>repeated .bloombox.services.menu.v1beta1.GetMenu.StreamEvent.ProductChange change = 3;</code>
+         */
+        public java.util.List<io.bloombox.schema.services.menu.v1beta1.GetMenu.StreamEvent.ProductChange> getChangeList() {
+          if (changeBuilder_ == null) {
+            return java.util.Collections.unmodifiableList(change_);
+          } else {
+            return changeBuilder_.getMessageList();
+          }
+        }
+        /**
+         * <pre>
+         * List of object that each specify either the key, or product payload, that changed in a given delta entry.
+         * </pre>
+         *
+         * <code>repeated .bloombox.services.menu.v1beta1.GetMenu.StreamEvent.ProductChange change = 3;</code>
+         */
+        public int getChangeCount() {
+          if (changeBuilder_ == null) {
+            return change_.size();
+          } else {
+            return changeBuilder_.getCount();
+          }
+        }
+        /**
+         * <pre>
+         * List of object that each specify either the key, or product payload, that changed in a given delta entry.
+         * </pre>
+         *
+         * <code>repeated .bloombox.services.menu.v1beta1.GetMenu.StreamEvent.ProductChange change = 3;</code>
+         */
+        public io.bloombox.schema.services.menu.v1beta1.GetMenu.StreamEvent.ProductChange getChange(int index) {
+          if (changeBuilder_ == null) {
+            return change_.get(index);
+          } else {
+            return changeBuilder_.getMessage(index);
+          }
+        }
+        /**
+         * <pre>
+         * List of object that each specify either the key, or product payload, that changed in a given delta entry.
+         * </pre>
+         *
+         * <code>repeated .bloombox.services.menu.v1beta1.GetMenu.StreamEvent.ProductChange change = 3;</code>
+         */
+        public Builder setChange(
+            int index, io.bloombox.schema.services.menu.v1beta1.GetMenu.StreamEvent.ProductChange value) {
+          if (changeBuilder_ == null) {
+            if (value == null) {
+              throw new NullPointerException();
+            }
+            ensureChangeIsMutable();
+            change_.set(index, value);
+            onChanged();
+          } else {
+            changeBuilder_.setMessage(index, value);
+          }
+          return this;
+        }
+        /**
+         * <pre>
+         * List of object that each specify either the key, or product payload, that changed in a given delta entry.
+         * </pre>
+         *
+         * <code>repeated .bloombox.services.menu.v1beta1.GetMenu.StreamEvent.ProductChange change = 3;</code>
+         */
+        public Builder setChange(
+            int index, io.bloombox.schema.services.menu.v1beta1.GetMenu.StreamEvent.ProductChange.Builder builderForValue) {
+          if (changeBuilder_ == null) {
+            ensureChangeIsMutable();
+            change_.set(index, builderForValue.build());
+            onChanged();
+          } else {
+            changeBuilder_.setMessage(index, builderForValue.build());
+          }
+          return this;
+        }
+        /**
+         * <pre>
+         * List of object that each specify either the key, or product payload, that changed in a given delta entry.
+         * </pre>
+         *
+         * <code>repeated .bloombox.services.menu.v1beta1.GetMenu.StreamEvent.ProductChange change = 3;</code>
+         */
+        public Builder addChange(io.bloombox.schema.services.menu.v1beta1.GetMenu.StreamEvent.ProductChange value) {
+          if (changeBuilder_ == null) {
+            if (value == null) {
+              throw new NullPointerException();
+            }
+            ensureChangeIsMutable();
+            change_.add(value);
+            onChanged();
+          } else {
+            changeBuilder_.addMessage(value);
+          }
+          return this;
+        }
+        /**
+         * <pre>
+         * List of object that each specify either the key, or product payload, that changed in a given delta entry.
+         * </pre>
+         *
+         * <code>repeated .bloombox.services.menu.v1beta1.GetMenu.StreamEvent.ProductChange change = 3;</code>
+         */
+        public Builder addChange(
+            int index, io.bloombox.schema.services.menu.v1beta1.GetMenu.StreamEvent.ProductChange value) {
+          if (changeBuilder_ == null) {
+            if (value == null) {
+              throw new NullPointerException();
+            }
+            ensureChangeIsMutable();
+            change_.add(index, value);
+            onChanged();
+          } else {
+            changeBuilder_.addMessage(index, value);
+          }
+          return this;
+        }
+        /**
+         * <pre>
+         * List of object that each specify either the key, or product payload, that changed in a given delta entry.
+         * </pre>
+         *
+         * <code>repeated .bloombox.services.menu.v1beta1.GetMenu.StreamEvent.ProductChange change = 3;</code>
+         */
+        public Builder addChange(
+            io.bloombox.schema.services.menu.v1beta1.GetMenu.StreamEvent.ProductChange.Builder builderForValue) {
+          if (changeBuilder_ == null) {
+            ensureChangeIsMutable();
+            change_.add(builderForValue.build());
+            onChanged();
+          } else {
+            changeBuilder_.addMessage(builderForValue.build());
+          }
+          return this;
+        }
+        /**
+         * <pre>
+         * List of object that each specify either the key, or product payload, that changed in a given delta entry.
+         * </pre>
+         *
+         * <code>repeated .bloombox.services.menu.v1beta1.GetMenu.StreamEvent.ProductChange change = 3;</code>
+         */
+        public Builder addChange(
+            int index, io.bloombox.schema.services.menu.v1beta1.GetMenu.StreamEvent.ProductChange.Builder builderForValue) {
+          if (changeBuilder_ == null) {
+            ensureChangeIsMutable();
+            change_.add(index, builderForValue.build());
+            onChanged();
+          } else {
+            changeBuilder_.addMessage(index, builderForValue.build());
+          }
+          return this;
+        }
+        /**
+         * <pre>
+         * List of object that each specify either the key, or product payload, that changed in a given delta entry.
+         * </pre>
+         *
+         * <code>repeated .bloombox.services.menu.v1beta1.GetMenu.StreamEvent.ProductChange change = 3;</code>
+         */
+        public Builder addAllChange(
+            java.lang.Iterable<? extends io.bloombox.schema.services.menu.v1beta1.GetMenu.StreamEvent.ProductChange> values) {
+          if (changeBuilder_ == null) {
+            ensureChangeIsMutable();
+            com.google.protobuf.AbstractMessageLite.Builder.addAll(
+                values, change_);
+            onChanged();
+          } else {
+            changeBuilder_.addAllMessages(values);
+          }
+          return this;
+        }
+        /**
+         * <pre>
+         * List of object that each specify either the key, or product payload, that changed in a given delta entry.
+         * </pre>
+         *
+         * <code>repeated .bloombox.services.menu.v1beta1.GetMenu.StreamEvent.ProductChange change = 3;</code>
+         */
+        public Builder clearChange() {
+          if (changeBuilder_ == null) {
+            change_ = java.util.Collections.emptyList();
+            bitField0_ = (bitField0_ & ~0x00000004);
+            onChanged();
+          } else {
+            changeBuilder_.clear();
+          }
+          return this;
+        }
+        /**
+         * <pre>
+         * List of object that each specify either the key, or product payload, that changed in a given delta entry.
+         * </pre>
+         *
+         * <code>repeated .bloombox.services.menu.v1beta1.GetMenu.StreamEvent.ProductChange change = 3;</code>
+         */
+        public Builder removeChange(int index) {
+          if (changeBuilder_ == null) {
+            ensureChangeIsMutable();
+            change_.remove(index);
+            onChanged();
+          } else {
+            changeBuilder_.remove(index);
+          }
+          return this;
+        }
+        /**
+         * <pre>
+         * List of object that each specify either the key, or product payload, that changed in a given delta entry.
+         * </pre>
+         *
+         * <code>repeated .bloombox.services.menu.v1beta1.GetMenu.StreamEvent.ProductChange change = 3;</code>
+         */
+        public io.bloombox.schema.services.menu.v1beta1.GetMenu.StreamEvent.ProductChange.Builder getChangeBuilder(
+            int index) {
+          return getChangeFieldBuilder().getBuilder(index);
+        }
+        /**
+         * <pre>
+         * List of object that each specify either the key, or product payload, that changed in a given delta entry.
+         * </pre>
+         *
+         * <code>repeated .bloombox.services.menu.v1beta1.GetMenu.StreamEvent.ProductChange change = 3;</code>
+         */
+        public io.bloombox.schema.services.menu.v1beta1.GetMenu.StreamEvent.ProductChangeOrBuilder getChangeOrBuilder(
+            int index) {
+          if (changeBuilder_ == null) {
+            return change_.get(index);  } else {
+            return changeBuilder_.getMessageOrBuilder(index);
+          }
+        }
+        /**
+         * <pre>
+         * List of object that each specify either the key, or product payload, that changed in a given delta entry.
+         * </pre>
+         *
+         * <code>repeated .bloombox.services.menu.v1beta1.GetMenu.StreamEvent.ProductChange change = 3;</code>
+         */
+        public java.util.List<? extends io.bloombox.schema.services.menu.v1beta1.GetMenu.StreamEvent.ProductChangeOrBuilder> 
+             getChangeOrBuilderList() {
+          if (changeBuilder_ != null) {
+            return changeBuilder_.getMessageOrBuilderList();
+          } else {
+            return java.util.Collections.unmodifiableList(change_);
+          }
+        }
+        /**
+         * <pre>
+         * List of object that each specify either the key, or product payload, that changed in a given delta entry.
+         * </pre>
+         *
+         * <code>repeated .bloombox.services.menu.v1beta1.GetMenu.StreamEvent.ProductChange change = 3;</code>
+         */
+        public io.bloombox.schema.services.menu.v1beta1.GetMenu.StreamEvent.ProductChange.Builder addChangeBuilder() {
+          return getChangeFieldBuilder().addBuilder(
+              io.bloombox.schema.services.menu.v1beta1.GetMenu.StreamEvent.ProductChange.getDefaultInstance());
+        }
+        /**
+         * <pre>
+         * List of object that each specify either the key, or product payload, that changed in a given delta entry.
+         * </pre>
+         *
+         * <code>repeated .bloombox.services.menu.v1beta1.GetMenu.StreamEvent.ProductChange change = 3;</code>
+         */
+        public io.bloombox.schema.services.menu.v1beta1.GetMenu.StreamEvent.ProductChange.Builder addChangeBuilder(
+            int index) {
+          return getChangeFieldBuilder().addBuilder(
+              index, io.bloombox.schema.services.menu.v1beta1.GetMenu.StreamEvent.ProductChange.getDefaultInstance());
+        }
+        /**
+         * <pre>
+         * List of object that each specify either the key, or product payload, that changed in a given delta entry.
+         * </pre>
+         *
+         * <code>repeated .bloombox.services.menu.v1beta1.GetMenu.StreamEvent.ProductChange change = 3;</code>
+         */
+        public java.util.List<io.bloombox.schema.services.menu.v1beta1.GetMenu.StreamEvent.ProductChange.Builder> 
+             getChangeBuilderList() {
+          return getChangeFieldBuilder().getBuilderList();
+        }
+        private com.google.protobuf.RepeatedFieldBuilderV3<
+            io.bloombox.schema.services.menu.v1beta1.GetMenu.StreamEvent.ProductChange, io.bloombox.schema.services.menu.v1beta1.GetMenu.StreamEvent.ProductChange.Builder, io.bloombox.schema.services.menu.v1beta1.GetMenu.StreamEvent.ProductChangeOrBuilder> 
+            getChangeFieldBuilder() {
+          if (changeBuilder_ == null) {
+            changeBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+                io.bloombox.schema.services.menu.v1beta1.GetMenu.StreamEvent.ProductChange, io.bloombox.schema.services.menu.v1beta1.GetMenu.StreamEvent.ProductChange.Builder, io.bloombox.schema.services.menu.v1beta1.GetMenu.StreamEvent.ProductChangeOrBuilder>(
+                    change_,
+                    ((bitField0_ & 0x00000004) != 0),
+                    getParentForChildren(),
+                    isClean());
+            change_ = null;
+          }
+          return changeBuilder_;
+        }
+        @java.lang.Override
+        public final Builder setUnknownFields(
+            final com.google.protobuf.UnknownFieldSet unknownFields) {
+          return super.setUnknownFields(unknownFields);
+        }
+
+        @java.lang.Override
+        public final Builder mergeUnknownFields(
+            final com.google.protobuf.UnknownFieldSet unknownFields) {
+          return super.mergeUnknownFields(unknownFields);
+        }
+
+
+        // @@protoc_insertion_point(builder_scope:bloombox.services.menu.v1beta1.GetMenu.StreamEvent.MenuDeltaEntry)
+      }
+
+      // @@protoc_insertion_point(class_scope:bloombox.services.menu.v1beta1.GetMenu.StreamEvent.MenuDeltaEntry)
+      private static final io.bloombox.schema.services.menu.v1beta1.GetMenu.StreamEvent.MenuDeltaEntry DEFAULT_INSTANCE;
+      static {
+        DEFAULT_INSTANCE = new io.bloombox.schema.services.menu.v1beta1.GetMenu.StreamEvent.MenuDeltaEntry();
+      }
+
+      public static io.bloombox.schema.services.menu.v1beta1.GetMenu.StreamEvent.MenuDeltaEntry getDefaultInstance() {
+        return DEFAULT_INSTANCE;
+      }
+
+      private static final com.google.protobuf.Parser<MenuDeltaEntry>
+          PARSER = new com.google.protobuf.AbstractParser<MenuDeltaEntry>() {
+        @java.lang.Override
+        public MenuDeltaEntry parsePartialFrom(
+            com.google.protobuf.CodedInputStream input,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws com.google.protobuf.InvalidProtocolBufferException {
+          return new MenuDeltaEntry(input, extensionRegistry);
+        }
+      };
+
+      public static com.google.protobuf.Parser<MenuDeltaEntry> parser() {
+        return PARSER;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Parser<MenuDeltaEntry> getParserForType() {
+        return PARSER;
+      }
+
+      @java.lang.Override
+      public io.bloombox.schema.services.menu.v1beta1.GetMenu.StreamEvent.MenuDeltaEntry getDefaultInstanceForType() {
+        return DEFAULT_INSTANCE;
+      }
+
+    }
+
+    public interface MenuChangesOrBuilder extends
+        // @@protoc_insertion_point(interface_extends:bloombox.services.menu.v1beta1.GetMenu.StreamEvent.MenuChanges)
+        com.google.protobuf.MessageOrBuilder {
+
+      /**
+       * <pre>
+       * Specifies the types of changes being communicated.
+       * </pre>
+       *
+       * <code>repeated .bloombox.services.menu.v1beta1.GetMenu.StreamEvent.ChangeType type = 1;</code>
+       */
+      java.util.List<io.bloombox.schema.services.menu.v1beta1.GetMenu.StreamEvent.ChangeType> getTypeList();
+      /**
+       * <pre>
+       * Specifies the types of changes being communicated.
+       * </pre>
+       *
+       * <code>repeated .bloombox.services.menu.v1beta1.GetMenu.StreamEvent.ChangeType type = 1;</code>
+       */
+      int getTypeCount();
+      /**
+       * <pre>
+       * Specifies the types of changes being communicated.
+       * </pre>
+       *
+       * <code>repeated .bloombox.services.menu.v1beta1.GetMenu.StreamEvent.ChangeType type = 1;</code>
+       */
+      io.bloombox.schema.services.menu.v1beta1.GetMenu.StreamEvent.ChangeType getType(int index);
+      /**
+       * <pre>
+       * Specifies the types of changes being communicated.
+       * </pre>
+       *
+       * <code>repeated .bloombox.services.menu.v1beta1.GetMenu.StreamEvent.ChangeType type = 1;</code>
+       */
+      java.util.List<java.lang.Integer>
+      getTypeValueList();
+      /**
+       * <pre>
+       * Specifies the types of changes being communicated.
+       * </pre>
+       *
+       * <code>repeated .bloombox.services.menu.v1beta1.GetMenu.StreamEvent.ChangeType type = 1;</code>
+       */
+      int getTypeValue(int index);
+
+      /**
+       * <pre>
+       * Sections mentioned in this entire delta payload. Specifies each section with changes, that might be considered
+       * "invalidated" in client-side caching.
+       * </pre>
+       *
+       * <code>repeated .opencannabis.products.menu.section.Section section = 2;</code>
+       */
+      java.util.List<io.opencannabis.schema.menu.section.Section> getSectionList();
+      /**
+       * <pre>
+       * Sections mentioned in this entire delta payload. Specifies each section with changes, that might be considered
+       * "invalidated" in client-side caching.
+       * </pre>
+       *
+       * <code>repeated .opencannabis.products.menu.section.Section section = 2;</code>
+       */
+      int getSectionCount();
+      /**
+       * <pre>
+       * Sections mentioned in this entire delta payload. Specifies each section with changes, that might be considered
+       * "invalidated" in client-side caching.
+       * </pre>
+       *
+       * <code>repeated .opencannabis.products.menu.section.Section section = 2;</code>
+       */
+      io.opencannabis.schema.menu.section.Section getSection(int index);
+      /**
+       * <pre>
+       * Sections mentioned in this entire delta payload. Specifies each section with changes, that might be considered
+       * "invalidated" in client-side caching.
+       * </pre>
+       *
+       * <code>repeated .opencannabis.products.menu.section.Section section = 2;</code>
+       */
+      java.util.List<java.lang.Integer>
+      getSectionValueList();
+      /**
+       * <pre>
+       * Sections mentioned in this entire delta payload. Specifies each section with changes, that might be considered
+       * "invalidated" in client-side caching.
+       * </pre>
+       *
+       * <code>repeated .opencannabis.products.menu.section.Section section = 2;</code>
+       */
+      int getSectionValue(int index);
+
+      /**
+       * <pre>
+       * Specifies delta entries, one for each type of change listed in `type`.
+       * </pre>
+       *
+       * <code>repeated .bloombox.services.menu.v1beta1.GetMenu.StreamEvent.MenuDeltaEntry entry = 3;</code>
+       */
+      java.util.List<io.bloombox.schema.services.menu.v1beta1.GetMenu.StreamEvent.MenuDeltaEntry> 
+          getEntryList();
+      /**
+       * <pre>
+       * Specifies delta entries, one for each type of change listed in `type`.
+       * </pre>
+       *
+       * <code>repeated .bloombox.services.menu.v1beta1.GetMenu.StreamEvent.MenuDeltaEntry entry = 3;</code>
+       */
+      io.bloombox.schema.services.menu.v1beta1.GetMenu.StreamEvent.MenuDeltaEntry getEntry(int index);
+      /**
+       * <pre>
+       * Specifies delta entries, one for each type of change listed in `type`.
+       * </pre>
+       *
+       * <code>repeated .bloombox.services.menu.v1beta1.GetMenu.StreamEvent.MenuDeltaEntry entry = 3;</code>
+       */
+      int getEntryCount();
+      /**
+       * <pre>
+       * Specifies delta entries, one for each type of change listed in `type`.
+       * </pre>
+       *
+       * <code>repeated .bloombox.services.menu.v1beta1.GetMenu.StreamEvent.MenuDeltaEntry entry = 3;</code>
+       */
+      java.util.List<? extends io.bloombox.schema.services.menu.v1beta1.GetMenu.StreamEvent.MenuDeltaEntryOrBuilder> 
+          getEntryOrBuilderList();
+      /**
+       * <pre>
+       * Specifies delta entries, one for each type of change listed in `type`.
+       * </pre>
+       *
+       * <code>repeated .bloombox.services.menu.v1beta1.GetMenu.StreamEvent.MenuDeltaEntry entry = 3;</code>
+       */
+      io.bloombox.schema.services.menu.v1beta1.GetMenu.StreamEvent.MenuDeltaEntryOrBuilder getEntryOrBuilder(
+          int index);
+
+      /**
+       * <pre>
+       * Count of changes that constitute this entire delta update. The count of changes across all delta entries should
+       * add up to this value.
+       * </pre>
+       *
+       * <code>uint32 count = 4;</code>
+       */
+      int getCount();
+    }
+    /**
+     * <pre>
+     * Event that describes a set of changes to a given menu catalog, within a specified partnership/location scope. The
+     * changes communicated via this payload are deltas.
+     * </pre>
+     *
+     * Protobuf type {@code bloombox.services.menu.v1beta1.GetMenu.StreamEvent.MenuChanges}
+     */
+    public  static final class MenuChanges extends
+        com.google.protobuf.GeneratedMessageV3 implements
+        // @@protoc_insertion_point(message_implements:bloombox.services.menu.v1beta1.GetMenu.StreamEvent.MenuChanges)
+        MenuChangesOrBuilder {
+    private static final long serialVersionUID = 0L;
+      // Use MenuChanges.newBuilder() to construct.
+      private MenuChanges(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+        super(builder);
+      }
+      private MenuChanges() {
+        type_ = java.util.Collections.emptyList();
+        section_ = java.util.Collections.emptyList();
+        entry_ = java.util.Collections.emptyList();
+      }
+
+      @java.lang.Override
+      public final com.google.protobuf.UnknownFieldSet
+      getUnknownFields() {
+        return this.unknownFields;
+      }
+      private MenuChanges(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        this();
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        int mutable_bitField0_ = 0;
+        com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+            com.google.protobuf.UnknownFieldSet.newBuilder();
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 8: {
+                int rawValue = input.readEnum();
+                if (!((mutable_bitField0_ & 0x00000001) != 0)) {
+                  type_ = new java.util.ArrayList<java.lang.Integer>();
+                  mutable_bitField0_ |= 0x00000001;
+                }
+                type_.add(rawValue);
+                break;
+              }
+              case 10: {
+                int length = input.readRawVarint32();
+                int oldLimit = input.pushLimit(length);
+                while(input.getBytesUntilLimit() > 0) {
+                  int rawValue = input.readEnum();
+                  if (!((mutable_bitField0_ & 0x00000001) != 0)) {
+                    type_ = new java.util.ArrayList<java.lang.Integer>();
+                    mutable_bitField0_ |= 0x00000001;
+                  }
+                  type_.add(rawValue);
+                }
+                input.popLimit(oldLimit);
+                break;
+              }
+              case 16: {
+                int rawValue = input.readEnum();
+                if (!((mutable_bitField0_ & 0x00000002) != 0)) {
+                  section_ = new java.util.ArrayList<java.lang.Integer>();
+                  mutable_bitField0_ |= 0x00000002;
+                }
+                section_.add(rawValue);
+                break;
+              }
+              case 18: {
+                int length = input.readRawVarint32();
+                int oldLimit = input.pushLimit(length);
+                while(input.getBytesUntilLimit() > 0) {
+                  int rawValue = input.readEnum();
+                  if (!((mutable_bitField0_ & 0x00000002) != 0)) {
+                    section_ = new java.util.ArrayList<java.lang.Integer>();
+                    mutable_bitField0_ |= 0x00000002;
+                  }
+                  section_.add(rawValue);
+                }
+                input.popLimit(oldLimit);
+                break;
+              }
+              case 26: {
+                if (!((mutable_bitField0_ & 0x00000004) != 0)) {
+                  entry_ = new java.util.ArrayList<io.bloombox.schema.services.menu.v1beta1.GetMenu.StreamEvent.MenuDeltaEntry>();
+                  mutable_bitField0_ |= 0x00000004;
+                }
+                entry_.add(
+                    input.readMessage(io.bloombox.schema.services.menu.v1beta1.GetMenu.StreamEvent.MenuDeltaEntry.parser(), extensionRegistry));
+                break;
+              }
+              case 32: {
+
+                count_ = input.readUInt32();
+                break;
+              }
+              default: {
+                if (!parseUnknownField(
+                    input, unknownFields, extensionRegistry, tag)) {
+                  done = true;
+                }
+                break;
+              }
+            }
+          }
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(this);
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(
+              e).setUnfinishedMessage(this);
+        } finally {
+          if (((mutable_bitField0_ & 0x00000001) != 0)) {
+            type_ = java.util.Collections.unmodifiableList(type_);
+          }
+          if (((mutable_bitField0_ & 0x00000002) != 0)) {
+            section_ = java.util.Collections.unmodifiableList(section_);
+          }
+          if (((mutable_bitField0_ & 0x00000004) != 0)) {
+            entry_ = java.util.Collections.unmodifiableList(entry_);
+          }
+          this.unknownFields = unknownFields.build();
+          makeExtensionsImmutable();
+        }
+      }
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return io.bloombox.schema.services.menu.v1beta1.MenuServiceBeta1.internal_static_bloombox_services_menu_v1beta1_GetMenu_StreamEvent_MenuChanges_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return io.bloombox.schema.services.menu.v1beta1.MenuServiceBeta1.internal_static_bloombox_services_menu_v1beta1_GetMenu_StreamEvent_MenuChanges_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                io.bloombox.schema.services.menu.v1beta1.GetMenu.StreamEvent.MenuChanges.class, io.bloombox.schema.services.menu.v1beta1.GetMenu.StreamEvent.MenuChanges.Builder.class);
+      }
+
+      private int bitField0_;
+      public static final int TYPE_FIELD_NUMBER = 1;
+      private java.util.List<java.lang.Integer> type_;
+      private static final com.google.protobuf.Internal.ListAdapter.Converter<
+          java.lang.Integer, io.bloombox.schema.services.menu.v1beta1.GetMenu.StreamEvent.ChangeType> type_converter_ =
+              new com.google.protobuf.Internal.ListAdapter.Converter<
+                  java.lang.Integer, io.bloombox.schema.services.menu.v1beta1.GetMenu.StreamEvent.ChangeType>() {
+                public io.bloombox.schema.services.menu.v1beta1.GetMenu.StreamEvent.ChangeType convert(java.lang.Integer from) {
+                  @SuppressWarnings("deprecation")
+                  io.bloombox.schema.services.menu.v1beta1.GetMenu.StreamEvent.ChangeType result = io.bloombox.schema.services.menu.v1beta1.GetMenu.StreamEvent.ChangeType.valueOf(from);
+                  return result == null ? io.bloombox.schema.services.menu.v1beta1.GetMenu.StreamEvent.ChangeType.UNRECOGNIZED : result;
+                }
+              };
+      /**
+       * <pre>
+       * Specifies the types of changes being communicated.
+       * </pre>
+       *
+       * <code>repeated .bloombox.services.menu.v1beta1.GetMenu.StreamEvent.ChangeType type = 1;</code>
+       */
+      public java.util.List<io.bloombox.schema.services.menu.v1beta1.GetMenu.StreamEvent.ChangeType> getTypeList() {
+        return new com.google.protobuf.Internal.ListAdapter<
+            java.lang.Integer, io.bloombox.schema.services.menu.v1beta1.GetMenu.StreamEvent.ChangeType>(type_, type_converter_);
+      }
+      /**
+       * <pre>
+       * Specifies the types of changes being communicated.
+       * </pre>
+       *
+       * <code>repeated .bloombox.services.menu.v1beta1.GetMenu.StreamEvent.ChangeType type = 1;</code>
+       */
+      public int getTypeCount() {
+        return type_.size();
+      }
+      /**
+       * <pre>
+       * Specifies the types of changes being communicated.
+       * </pre>
+       *
+       * <code>repeated .bloombox.services.menu.v1beta1.GetMenu.StreamEvent.ChangeType type = 1;</code>
+       */
+      public io.bloombox.schema.services.menu.v1beta1.GetMenu.StreamEvent.ChangeType getType(int index) {
+        return type_converter_.convert(type_.get(index));
+      }
+      /**
+       * <pre>
+       * Specifies the types of changes being communicated.
+       * </pre>
+       *
+       * <code>repeated .bloombox.services.menu.v1beta1.GetMenu.StreamEvent.ChangeType type = 1;</code>
+       */
+      public java.util.List<java.lang.Integer>
+      getTypeValueList() {
+        return type_;
+      }
+      /**
+       * <pre>
+       * Specifies the types of changes being communicated.
+       * </pre>
+       *
+       * <code>repeated .bloombox.services.menu.v1beta1.GetMenu.StreamEvent.ChangeType type = 1;</code>
+       */
+      public int getTypeValue(int index) {
+        return type_.get(index);
+      }
+      private int typeMemoizedSerializedSize;
+
+      public static final int SECTION_FIELD_NUMBER = 2;
+      private java.util.List<java.lang.Integer> section_;
+      private static final com.google.protobuf.Internal.ListAdapter.Converter<
+          java.lang.Integer, io.opencannabis.schema.menu.section.Section> section_converter_ =
+              new com.google.protobuf.Internal.ListAdapter.Converter<
+                  java.lang.Integer, io.opencannabis.schema.menu.section.Section>() {
+                public io.opencannabis.schema.menu.section.Section convert(java.lang.Integer from) {
+                  @SuppressWarnings("deprecation")
+                  io.opencannabis.schema.menu.section.Section result = io.opencannabis.schema.menu.section.Section.valueOf(from);
+                  return result == null ? io.opencannabis.schema.menu.section.Section.UNRECOGNIZED : result;
+                }
+              };
+      /**
+       * <pre>
+       * Sections mentioned in this entire delta payload. Specifies each section with changes, that might be considered
+       * "invalidated" in client-side caching.
+       * </pre>
+       *
+       * <code>repeated .opencannabis.products.menu.section.Section section = 2;</code>
+       */
+      public java.util.List<io.opencannabis.schema.menu.section.Section> getSectionList() {
+        return new com.google.protobuf.Internal.ListAdapter<
+            java.lang.Integer, io.opencannabis.schema.menu.section.Section>(section_, section_converter_);
+      }
+      /**
+       * <pre>
+       * Sections mentioned in this entire delta payload. Specifies each section with changes, that might be considered
+       * "invalidated" in client-side caching.
+       * </pre>
+       *
+       * <code>repeated .opencannabis.products.menu.section.Section section = 2;</code>
+       */
+      public int getSectionCount() {
+        return section_.size();
+      }
+      /**
+       * <pre>
+       * Sections mentioned in this entire delta payload. Specifies each section with changes, that might be considered
+       * "invalidated" in client-side caching.
+       * </pre>
+       *
+       * <code>repeated .opencannabis.products.menu.section.Section section = 2;</code>
+       */
+      public io.opencannabis.schema.menu.section.Section getSection(int index) {
+        return section_converter_.convert(section_.get(index));
+      }
+      /**
+       * <pre>
+       * Sections mentioned in this entire delta payload. Specifies each section with changes, that might be considered
+       * "invalidated" in client-side caching.
+       * </pre>
+       *
+       * <code>repeated .opencannabis.products.menu.section.Section section = 2;</code>
+       */
+      public java.util.List<java.lang.Integer>
+      getSectionValueList() {
+        return section_;
+      }
+      /**
+       * <pre>
+       * Sections mentioned in this entire delta payload. Specifies each section with changes, that might be considered
+       * "invalidated" in client-side caching.
+       * </pre>
+       *
+       * <code>repeated .opencannabis.products.menu.section.Section section = 2;</code>
+       */
+      public int getSectionValue(int index) {
+        return section_.get(index);
+      }
+      private int sectionMemoizedSerializedSize;
+
+      public static final int ENTRY_FIELD_NUMBER = 3;
+      private java.util.List<io.bloombox.schema.services.menu.v1beta1.GetMenu.StreamEvent.MenuDeltaEntry> entry_;
+      /**
+       * <pre>
+       * Specifies delta entries, one for each type of change listed in `type`.
+       * </pre>
+       *
+       * <code>repeated .bloombox.services.menu.v1beta1.GetMenu.StreamEvent.MenuDeltaEntry entry = 3;</code>
+       */
+      public java.util.List<io.bloombox.schema.services.menu.v1beta1.GetMenu.StreamEvent.MenuDeltaEntry> getEntryList() {
+        return entry_;
+      }
+      /**
+       * <pre>
+       * Specifies delta entries, one for each type of change listed in `type`.
+       * </pre>
+       *
+       * <code>repeated .bloombox.services.menu.v1beta1.GetMenu.StreamEvent.MenuDeltaEntry entry = 3;</code>
+       */
+      public java.util.List<? extends io.bloombox.schema.services.menu.v1beta1.GetMenu.StreamEvent.MenuDeltaEntryOrBuilder> 
+          getEntryOrBuilderList() {
+        return entry_;
+      }
+      /**
+       * <pre>
+       * Specifies delta entries, one for each type of change listed in `type`.
+       * </pre>
+       *
+       * <code>repeated .bloombox.services.menu.v1beta1.GetMenu.StreamEvent.MenuDeltaEntry entry = 3;</code>
+       */
+      public int getEntryCount() {
+        return entry_.size();
+      }
+      /**
+       * <pre>
+       * Specifies delta entries, one for each type of change listed in `type`.
+       * </pre>
+       *
+       * <code>repeated .bloombox.services.menu.v1beta1.GetMenu.StreamEvent.MenuDeltaEntry entry = 3;</code>
+       */
+      public io.bloombox.schema.services.menu.v1beta1.GetMenu.StreamEvent.MenuDeltaEntry getEntry(int index) {
+        return entry_.get(index);
+      }
+      /**
+       * <pre>
+       * Specifies delta entries, one for each type of change listed in `type`.
+       * </pre>
+       *
+       * <code>repeated .bloombox.services.menu.v1beta1.GetMenu.StreamEvent.MenuDeltaEntry entry = 3;</code>
+       */
+      public io.bloombox.schema.services.menu.v1beta1.GetMenu.StreamEvent.MenuDeltaEntryOrBuilder getEntryOrBuilder(
+          int index) {
+        return entry_.get(index);
+      }
+
+      public static final int COUNT_FIELD_NUMBER = 4;
+      private int count_;
+      /**
+       * <pre>
+       * Count of changes that constitute this entire delta update. The count of changes across all delta entries should
+       * add up to this value.
+       * </pre>
+       *
+       * <code>uint32 count = 4;</code>
+       */
+      public int getCount() {
+        return count_;
+      }
+
+      private byte memoizedIsInitialized = -1;
+      @java.lang.Override
+      public final boolean isInitialized() {
+        byte isInitialized = memoizedIsInitialized;
+        if (isInitialized == 1) return true;
+        if (isInitialized == 0) return false;
+
+        memoizedIsInitialized = 1;
+        return true;
+      }
+
+      @java.lang.Override
+      public void writeTo(com.google.protobuf.CodedOutputStream output)
+                          throws java.io.IOException {
+        getSerializedSize();
+        if (getTypeList().size() > 0) {
+          output.writeUInt32NoTag(10);
+          output.writeUInt32NoTag(typeMemoizedSerializedSize);
+        }
+        for (int i = 0; i < type_.size(); i++) {
+          output.writeEnumNoTag(type_.get(i));
+        }
+        if (getSectionList().size() > 0) {
+          output.writeUInt32NoTag(18);
+          output.writeUInt32NoTag(sectionMemoizedSerializedSize);
+        }
+        for (int i = 0; i < section_.size(); i++) {
+          output.writeEnumNoTag(section_.get(i));
+        }
+        for (int i = 0; i < entry_.size(); i++) {
+          output.writeMessage(3, entry_.get(i));
+        }
+        if (count_ != 0) {
+          output.writeUInt32(4, count_);
+        }
+        unknownFields.writeTo(output);
+      }
+
+      @java.lang.Override
+      public int getSerializedSize() {
+        int size = memoizedSize;
+        if (size != -1) return size;
+
+        size = 0;
+        {
+          int dataSize = 0;
+          for (int i = 0; i < type_.size(); i++) {
+            dataSize += com.google.protobuf.CodedOutputStream
+              .computeEnumSizeNoTag(type_.get(i));
+          }
+          size += dataSize;
+          if (!getTypeList().isEmpty()) {  size += 1;
+            size += com.google.protobuf.CodedOutputStream
+              .computeUInt32SizeNoTag(dataSize);
+          }typeMemoizedSerializedSize = dataSize;
+        }
+        {
+          int dataSize = 0;
+          for (int i = 0; i < section_.size(); i++) {
+            dataSize += com.google.protobuf.CodedOutputStream
+              .computeEnumSizeNoTag(section_.get(i));
+          }
+          size += dataSize;
+          if (!getSectionList().isEmpty()) {  size += 1;
+            size += com.google.protobuf.CodedOutputStream
+              .computeUInt32SizeNoTag(dataSize);
+          }sectionMemoizedSerializedSize = dataSize;
+        }
+        for (int i = 0; i < entry_.size(); i++) {
+          size += com.google.protobuf.CodedOutputStream
+            .computeMessageSize(3, entry_.get(i));
+        }
+        if (count_ != 0) {
+          size += com.google.protobuf.CodedOutputStream
+            .computeUInt32Size(4, count_);
+        }
+        size += unknownFields.getSerializedSize();
+        memoizedSize = size;
+        return size;
+      }
+
+      @java.lang.Override
+      public boolean equals(final java.lang.Object obj) {
+        if (obj == this) {
+         return true;
+        }
+        if (!(obj instanceof io.bloombox.schema.services.menu.v1beta1.GetMenu.StreamEvent.MenuChanges)) {
+          return super.equals(obj);
+        }
+        io.bloombox.schema.services.menu.v1beta1.GetMenu.StreamEvent.MenuChanges other = (io.bloombox.schema.services.menu.v1beta1.GetMenu.StreamEvent.MenuChanges) obj;
+
+        if (!type_.equals(other.type_)) return false;
+        if (!section_.equals(other.section_)) return false;
+        if (!getEntryList()
+            .equals(other.getEntryList())) return false;
+        if (getCount()
+            != other.getCount()) return false;
+        if (!unknownFields.equals(other.unknownFields)) return false;
+        return true;
+      }
+
+      @java.lang.Override
+      public int hashCode() {
+        if (memoizedHashCode != 0) {
+          return memoizedHashCode;
+        }
+        int hash = 41;
+        hash = (19 * hash) + getDescriptor().hashCode();
+        if (getTypeCount() > 0) {
+          hash = (37 * hash) + TYPE_FIELD_NUMBER;
+          hash = (53 * hash) + type_.hashCode();
+        }
+        if (getSectionCount() > 0) {
+          hash = (37 * hash) + SECTION_FIELD_NUMBER;
+          hash = (53 * hash) + section_.hashCode();
+        }
+        if (getEntryCount() > 0) {
+          hash = (37 * hash) + ENTRY_FIELD_NUMBER;
+          hash = (53 * hash) + getEntryList().hashCode();
+        }
+        hash = (37 * hash) + COUNT_FIELD_NUMBER;
+        hash = (53 * hash) + getCount();
+        hash = (29 * hash) + unknownFields.hashCode();
+        memoizedHashCode = hash;
+        return hash;
+      }
+
+      public static io.bloombox.schema.services.menu.v1beta1.GetMenu.StreamEvent.MenuChanges parseFrom(
+          java.nio.ByteBuffer data)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data);
+      }
+      public static io.bloombox.schema.services.menu.v1beta1.GetMenu.StreamEvent.MenuChanges parseFrom(
+          java.nio.ByteBuffer data,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data, extensionRegistry);
+      }
+      public static io.bloombox.schema.services.menu.v1beta1.GetMenu.StreamEvent.MenuChanges parseFrom(
+          com.google.protobuf.ByteString data)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data);
+      }
+      public static io.bloombox.schema.services.menu.v1beta1.GetMenu.StreamEvent.MenuChanges parseFrom(
+          com.google.protobuf.ByteString data,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data, extensionRegistry);
+      }
+      public static io.bloombox.schema.services.menu.v1beta1.GetMenu.StreamEvent.MenuChanges parseFrom(byte[] data)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data);
+      }
+      public static io.bloombox.schema.services.menu.v1beta1.GetMenu.StreamEvent.MenuChanges parseFrom(
+          byte[] data,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data, extensionRegistry);
+      }
+      public static io.bloombox.schema.services.menu.v1beta1.GetMenu.StreamEvent.MenuChanges parseFrom(java.io.InputStream input)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input);
+      }
+      public static io.bloombox.schema.services.menu.v1beta1.GetMenu.StreamEvent.MenuChanges parseFrom(
+          java.io.InputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input, extensionRegistry);
+      }
+      public static io.bloombox.schema.services.menu.v1beta1.GetMenu.StreamEvent.MenuChanges parseDelimitedFrom(java.io.InputStream input)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseDelimitedWithIOException(PARSER, input);
+      }
+      public static io.bloombox.schema.services.menu.v1beta1.GetMenu.StreamEvent.MenuChanges parseDelimitedFrom(
+          java.io.InputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+      }
+      public static io.bloombox.schema.services.menu.v1beta1.GetMenu.StreamEvent.MenuChanges parseFrom(
+          com.google.protobuf.CodedInputStream input)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input);
+      }
+      public static io.bloombox.schema.services.menu.v1beta1.GetMenu.StreamEvent.MenuChanges parseFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input, extensionRegistry);
+      }
+
+      @java.lang.Override
+      public Builder newBuilderForType() { return newBuilder(); }
+      public static Builder newBuilder() {
+        return DEFAULT_INSTANCE.toBuilder();
+      }
+      public static Builder newBuilder(io.bloombox.schema.services.menu.v1beta1.GetMenu.StreamEvent.MenuChanges prototype) {
+        return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+      }
+      @java.lang.Override
+      public Builder toBuilder() {
+        return this == DEFAULT_INSTANCE
+            ? new Builder() : new Builder().mergeFrom(this);
+      }
+
+      @java.lang.Override
+      protected Builder newBuilderForType(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        Builder builder = new Builder(parent);
+        return builder;
+      }
+      /**
+       * <pre>
+       * Event that describes a set of changes to a given menu catalog, within a specified partnership/location scope. The
+       * changes communicated via this payload are deltas.
+       * </pre>
+       *
+       * Protobuf type {@code bloombox.services.menu.v1beta1.GetMenu.StreamEvent.MenuChanges}
+       */
+      public static final class Builder extends
+          com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+          // @@protoc_insertion_point(builder_implements:bloombox.services.menu.v1beta1.GetMenu.StreamEvent.MenuChanges)
+          io.bloombox.schema.services.menu.v1beta1.GetMenu.StreamEvent.MenuChangesOrBuilder {
+        public static final com.google.protobuf.Descriptors.Descriptor
+            getDescriptor() {
+          return io.bloombox.schema.services.menu.v1beta1.MenuServiceBeta1.internal_static_bloombox_services_menu_v1beta1_GetMenu_StreamEvent_MenuChanges_descriptor;
+        }
+
+        @java.lang.Override
+        protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+            internalGetFieldAccessorTable() {
+          return io.bloombox.schema.services.menu.v1beta1.MenuServiceBeta1.internal_static_bloombox_services_menu_v1beta1_GetMenu_StreamEvent_MenuChanges_fieldAccessorTable
+              .ensureFieldAccessorsInitialized(
+                  io.bloombox.schema.services.menu.v1beta1.GetMenu.StreamEvent.MenuChanges.class, io.bloombox.schema.services.menu.v1beta1.GetMenu.StreamEvent.MenuChanges.Builder.class);
+        }
+
+        // Construct using io.bloombox.schema.services.menu.v1beta1.GetMenu.StreamEvent.MenuChanges.newBuilder()
+        private Builder() {
+          maybeForceBuilderInitialization();
+        }
+
+        private Builder(
+            com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+          super(parent);
+          maybeForceBuilderInitialization();
+        }
+        private void maybeForceBuilderInitialization() {
+          if (com.google.protobuf.GeneratedMessageV3
+                  .alwaysUseFieldBuilders) {
+            getEntryFieldBuilder();
+          }
+        }
+        @java.lang.Override
+        public Builder clear() {
+          super.clear();
+          type_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000001);
+          section_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000002);
+          if (entryBuilder_ == null) {
+            entry_ = java.util.Collections.emptyList();
+            bitField0_ = (bitField0_ & ~0x00000004);
+          } else {
+            entryBuilder_.clear();
+          }
+          count_ = 0;
+
+          return this;
+        }
+
+        @java.lang.Override
+        public com.google.protobuf.Descriptors.Descriptor
+            getDescriptorForType() {
+          return io.bloombox.schema.services.menu.v1beta1.MenuServiceBeta1.internal_static_bloombox_services_menu_v1beta1_GetMenu_StreamEvent_MenuChanges_descriptor;
+        }
+
+        @java.lang.Override
+        public io.bloombox.schema.services.menu.v1beta1.GetMenu.StreamEvent.MenuChanges getDefaultInstanceForType() {
+          return io.bloombox.schema.services.menu.v1beta1.GetMenu.StreamEvent.MenuChanges.getDefaultInstance();
+        }
+
+        @java.lang.Override
+        public io.bloombox.schema.services.menu.v1beta1.GetMenu.StreamEvent.MenuChanges build() {
+          io.bloombox.schema.services.menu.v1beta1.GetMenu.StreamEvent.MenuChanges result = buildPartial();
+          if (!result.isInitialized()) {
+            throw newUninitializedMessageException(result);
+          }
+          return result;
+        }
+
+        @java.lang.Override
+        public io.bloombox.schema.services.menu.v1beta1.GetMenu.StreamEvent.MenuChanges buildPartial() {
+          io.bloombox.schema.services.menu.v1beta1.GetMenu.StreamEvent.MenuChanges result = new io.bloombox.schema.services.menu.v1beta1.GetMenu.StreamEvent.MenuChanges(this);
+          int from_bitField0_ = bitField0_;
+          int to_bitField0_ = 0;
+          if (((bitField0_ & 0x00000001) != 0)) {
+            type_ = java.util.Collections.unmodifiableList(type_);
+            bitField0_ = (bitField0_ & ~0x00000001);
+          }
+          result.type_ = type_;
+          if (((bitField0_ & 0x00000002) != 0)) {
+            section_ = java.util.Collections.unmodifiableList(section_);
+            bitField0_ = (bitField0_ & ~0x00000002);
+          }
+          result.section_ = section_;
+          if (entryBuilder_ == null) {
+            if (((bitField0_ & 0x00000004) != 0)) {
+              entry_ = java.util.Collections.unmodifiableList(entry_);
+              bitField0_ = (bitField0_ & ~0x00000004);
+            }
+            result.entry_ = entry_;
+          } else {
+            result.entry_ = entryBuilder_.build();
+          }
+          result.count_ = count_;
+          result.bitField0_ = to_bitField0_;
+          onBuilt();
+          return result;
+        }
+
+        @java.lang.Override
+        public Builder clone() {
+          return super.clone();
+        }
+        @java.lang.Override
+        public Builder setField(
+            com.google.protobuf.Descriptors.FieldDescriptor field,
+            java.lang.Object value) {
+          return super.setField(field, value);
+        }
+        @java.lang.Override
+        public Builder clearField(
+            com.google.protobuf.Descriptors.FieldDescriptor field) {
+          return super.clearField(field);
+        }
+        @java.lang.Override
+        public Builder clearOneof(
+            com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+          return super.clearOneof(oneof);
+        }
+        @java.lang.Override
+        public Builder setRepeatedField(
+            com.google.protobuf.Descriptors.FieldDescriptor field,
+            int index, java.lang.Object value) {
+          return super.setRepeatedField(field, index, value);
+        }
+        @java.lang.Override
+        public Builder addRepeatedField(
+            com.google.protobuf.Descriptors.FieldDescriptor field,
+            java.lang.Object value) {
+          return super.addRepeatedField(field, value);
+        }
+        @java.lang.Override
+        public Builder mergeFrom(com.google.protobuf.Message other) {
+          if (other instanceof io.bloombox.schema.services.menu.v1beta1.GetMenu.StreamEvent.MenuChanges) {
+            return mergeFrom((io.bloombox.schema.services.menu.v1beta1.GetMenu.StreamEvent.MenuChanges)other);
+          } else {
+            super.mergeFrom(other);
+            return this;
+          }
+        }
+
+        public Builder mergeFrom(io.bloombox.schema.services.menu.v1beta1.GetMenu.StreamEvent.MenuChanges other) {
+          if (other == io.bloombox.schema.services.menu.v1beta1.GetMenu.StreamEvent.MenuChanges.getDefaultInstance()) return this;
+          if (!other.type_.isEmpty()) {
+            if (type_.isEmpty()) {
+              type_ = other.type_;
+              bitField0_ = (bitField0_ & ~0x00000001);
+            } else {
+              ensureTypeIsMutable();
+              type_.addAll(other.type_);
+            }
+            onChanged();
+          }
+          if (!other.section_.isEmpty()) {
+            if (section_.isEmpty()) {
+              section_ = other.section_;
+              bitField0_ = (bitField0_ & ~0x00000002);
+            } else {
+              ensureSectionIsMutable();
+              section_.addAll(other.section_);
+            }
+            onChanged();
+          }
+          if (entryBuilder_ == null) {
+            if (!other.entry_.isEmpty()) {
+              if (entry_.isEmpty()) {
+                entry_ = other.entry_;
+                bitField0_ = (bitField0_ & ~0x00000004);
+              } else {
+                ensureEntryIsMutable();
+                entry_.addAll(other.entry_);
+              }
+              onChanged();
+            }
+          } else {
+            if (!other.entry_.isEmpty()) {
+              if (entryBuilder_.isEmpty()) {
+                entryBuilder_.dispose();
+                entryBuilder_ = null;
+                entry_ = other.entry_;
+                bitField0_ = (bitField0_ & ~0x00000004);
+                entryBuilder_ = 
+                  com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                     getEntryFieldBuilder() : null;
+              } else {
+                entryBuilder_.addAllMessages(other.entry_);
+              }
+            }
+          }
+          if (other.getCount() != 0) {
+            setCount(other.getCount());
+          }
+          this.mergeUnknownFields(other.unknownFields);
+          onChanged();
+          return this;
+        }
+
+        @java.lang.Override
+        public final boolean isInitialized() {
+          return true;
+        }
+
+        @java.lang.Override
+        public Builder mergeFrom(
+            com.google.protobuf.CodedInputStream input,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws java.io.IOException {
+          io.bloombox.schema.services.menu.v1beta1.GetMenu.StreamEvent.MenuChanges parsedMessage = null;
+          try {
+            parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+          } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+            parsedMessage = (io.bloombox.schema.services.menu.v1beta1.GetMenu.StreamEvent.MenuChanges) e.getUnfinishedMessage();
+            throw e.unwrapIOException();
+          } finally {
+            if (parsedMessage != null) {
+              mergeFrom(parsedMessage);
+            }
+          }
+          return this;
+        }
+        private int bitField0_;
+
+        private java.util.List<java.lang.Integer> type_ =
+          java.util.Collections.emptyList();
+        private void ensureTypeIsMutable() {
+          if (!((bitField0_ & 0x00000001) != 0)) {
+            type_ = new java.util.ArrayList<java.lang.Integer>(type_);
+            bitField0_ |= 0x00000001;
+          }
+        }
+        /**
+         * <pre>
+         * Specifies the types of changes being communicated.
+         * </pre>
+         *
+         * <code>repeated .bloombox.services.menu.v1beta1.GetMenu.StreamEvent.ChangeType type = 1;</code>
+         */
+        public java.util.List<io.bloombox.schema.services.menu.v1beta1.GetMenu.StreamEvent.ChangeType> getTypeList() {
+          return new com.google.protobuf.Internal.ListAdapter<
+              java.lang.Integer, io.bloombox.schema.services.menu.v1beta1.GetMenu.StreamEvent.ChangeType>(type_, type_converter_);
+        }
+        /**
+         * <pre>
+         * Specifies the types of changes being communicated.
+         * </pre>
+         *
+         * <code>repeated .bloombox.services.menu.v1beta1.GetMenu.StreamEvent.ChangeType type = 1;</code>
+         */
+        public int getTypeCount() {
+          return type_.size();
+        }
+        /**
+         * <pre>
+         * Specifies the types of changes being communicated.
+         * </pre>
+         *
+         * <code>repeated .bloombox.services.menu.v1beta1.GetMenu.StreamEvent.ChangeType type = 1;</code>
+         */
+        public io.bloombox.schema.services.menu.v1beta1.GetMenu.StreamEvent.ChangeType getType(int index) {
+          return type_converter_.convert(type_.get(index));
+        }
+        /**
+         * <pre>
+         * Specifies the types of changes being communicated.
+         * </pre>
+         *
+         * <code>repeated .bloombox.services.menu.v1beta1.GetMenu.StreamEvent.ChangeType type = 1;</code>
+         */
+        public Builder setType(
+            int index, io.bloombox.schema.services.menu.v1beta1.GetMenu.StreamEvent.ChangeType value) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureTypeIsMutable();
+          type_.set(index, value.getNumber());
+          onChanged();
+          return this;
+        }
+        /**
+         * <pre>
+         * Specifies the types of changes being communicated.
+         * </pre>
+         *
+         * <code>repeated .bloombox.services.menu.v1beta1.GetMenu.StreamEvent.ChangeType type = 1;</code>
+         */
+        public Builder addType(io.bloombox.schema.services.menu.v1beta1.GetMenu.StreamEvent.ChangeType value) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureTypeIsMutable();
+          type_.add(value.getNumber());
+          onChanged();
+          return this;
+        }
+        /**
+         * <pre>
+         * Specifies the types of changes being communicated.
+         * </pre>
+         *
+         * <code>repeated .bloombox.services.menu.v1beta1.GetMenu.StreamEvent.ChangeType type = 1;</code>
+         */
+        public Builder addAllType(
+            java.lang.Iterable<? extends io.bloombox.schema.services.menu.v1beta1.GetMenu.StreamEvent.ChangeType> values) {
+          ensureTypeIsMutable();
+          for (io.bloombox.schema.services.menu.v1beta1.GetMenu.StreamEvent.ChangeType value : values) {
+            type_.add(value.getNumber());
+          }
+          onChanged();
+          return this;
+        }
+        /**
+         * <pre>
+         * Specifies the types of changes being communicated.
+         * </pre>
+         *
+         * <code>repeated .bloombox.services.menu.v1beta1.GetMenu.StreamEvent.ChangeType type = 1;</code>
+         */
+        public Builder clearType() {
+          type_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000001);
+          onChanged();
+          return this;
+        }
+        /**
+         * <pre>
+         * Specifies the types of changes being communicated.
+         * </pre>
+         *
+         * <code>repeated .bloombox.services.menu.v1beta1.GetMenu.StreamEvent.ChangeType type = 1;</code>
+         */
+        public java.util.List<java.lang.Integer>
+        getTypeValueList() {
+          return java.util.Collections.unmodifiableList(type_);
+        }
+        /**
+         * <pre>
+         * Specifies the types of changes being communicated.
+         * </pre>
+         *
+         * <code>repeated .bloombox.services.menu.v1beta1.GetMenu.StreamEvent.ChangeType type = 1;</code>
+         */
+        public int getTypeValue(int index) {
+          return type_.get(index);
+        }
+        /**
+         * <pre>
+         * Specifies the types of changes being communicated.
+         * </pre>
+         *
+         * <code>repeated .bloombox.services.menu.v1beta1.GetMenu.StreamEvent.ChangeType type = 1;</code>
+         */
+        public Builder setTypeValue(
+            int index, int value) {
+          ensureTypeIsMutable();
+          type_.set(index, value);
+          onChanged();
+          return this;
+        }
+        /**
+         * <pre>
+         * Specifies the types of changes being communicated.
+         * </pre>
+         *
+         * <code>repeated .bloombox.services.menu.v1beta1.GetMenu.StreamEvent.ChangeType type = 1;</code>
+         */
+        public Builder addTypeValue(int value) {
+          ensureTypeIsMutable();
+          type_.add(value);
+          onChanged();
+          return this;
+        }
+        /**
+         * <pre>
+         * Specifies the types of changes being communicated.
+         * </pre>
+         *
+         * <code>repeated .bloombox.services.menu.v1beta1.GetMenu.StreamEvent.ChangeType type = 1;</code>
+         */
+        public Builder addAllTypeValue(
+            java.lang.Iterable<java.lang.Integer> values) {
+          ensureTypeIsMutable();
+          for (int value : values) {
+            type_.add(value);
+          }
+          onChanged();
+          return this;
+        }
+
+        private java.util.List<java.lang.Integer> section_ =
+          java.util.Collections.emptyList();
+        private void ensureSectionIsMutable() {
+          if (!((bitField0_ & 0x00000002) != 0)) {
+            section_ = new java.util.ArrayList<java.lang.Integer>(section_);
+            bitField0_ |= 0x00000002;
+          }
+        }
+        /**
+         * <pre>
+         * Sections mentioned in this entire delta payload. Specifies each section with changes, that might be considered
+         * "invalidated" in client-side caching.
+         * </pre>
+         *
+         * <code>repeated .opencannabis.products.menu.section.Section section = 2;</code>
+         */
+        public java.util.List<io.opencannabis.schema.menu.section.Section> getSectionList() {
+          return new com.google.protobuf.Internal.ListAdapter<
+              java.lang.Integer, io.opencannabis.schema.menu.section.Section>(section_, section_converter_);
+        }
+        /**
+         * <pre>
+         * Sections mentioned in this entire delta payload. Specifies each section with changes, that might be considered
+         * "invalidated" in client-side caching.
+         * </pre>
+         *
+         * <code>repeated .opencannabis.products.menu.section.Section section = 2;</code>
+         */
+        public int getSectionCount() {
+          return section_.size();
+        }
+        /**
+         * <pre>
+         * Sections mentioned in this entire delta payload. Specifies each section with changes, that might be considered
+         * "invalidated" in client-side caching.
+         * </pre>
+         *
+         * <code>repeated .opencannabis.products.menu.section.Section section = 2;</code>
+         */
+        public io.opencannabis.schema.menu.section.Section getSection(int index) {
+          return section_converter_.convert(section_.get(index));
+        }
+        /**
+         * <pre>
+         * Sections mentioned in this entire delta payload. Specifies each section with changes, that might be considered
+         * "invalidated" in client-side caching.
+         * </pre>
+         *
+         * <code>repeated .opencannabis.products.menu.section.Section section = 2;</code>
+         */
+        public Builder setSection(
+            int index, io.opencannabis.schema.menu.section.Section value) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureSectionIsMutable();
+          section_.set(index, value.getNumber());
+          onChanged();
+          return this;
+        }
+        /**
+         * <pre>
+         * Sections mentioned in this entire delta payload. Specifies each section with changes, that might be considered
+         * "invalidated" in client-side caching.
+         * </pre>
+         *
+         * <code>repeated .opencannabis.products.menu.section.Section section = 2;</code>
+         */
+        public Builder addSection(io.opencannabis.schema.menu.section.Section value) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureSectionIsMutable();
+          section_.add(value.getNumber());
+          onChanged();
+          return this;
+        }
+        /**
+         * <pre>
+         * Sections mentioned in this entire delta payload. Specifies each section with changes, that might be considered
+         * "invalidated" in client-side caching.
+         * </pre>
+         *
+         * <code>repeated .opencannabis.products.menu.section.Section section = 2;</code>
+         */
+        public Builder addAllSection(
+            java.lang.Iterable<? extends io.opencannabis.schema.menu.section.Section> values) {
+          ensureSectionIsMutable();
+          for (io.opencannabis.schema.menu.section.Section value : values) {
+            section_.add(value.getNumber());
+          }
+          onChanged();
+          return this;
+        }
+        /**
+         * <pre>
+         * Sections mentioned in this entire delta payload. Specifies each section with changes, that might be considered
+         * "invalidated" in client-side caching.
+         * </pre>
+         *
+         * <code>repeated .opencannabis.products.menu.section.Section section = 2;</code>
+         */
+        public Builder clearSection() {
+          section_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000002);
+          onChanged();
+          return this;
+        }
+        /**
+         * <pre>
+         * Sections mentioned in this entire delta payload. Specifies each section with changes, that might be considered
+         * "invalidated" in client-side caching.
+         * </pre>
+         *
+         * <code>repeated .opencannabis.products.menu.section.Section section = 2;</code>
+         */
+        public java.util.List<java.lang.Integer>
+        getSectionValueList() {
+          return java.util.Collections.unmodifiableList(section_);
+        }
+        /**
+         * <pre>
+         * Sections mentioned in this entire delta payload. Specifies each section with changes, that might be considered
+         * "invalidated" in client-side caching.
+         * </pre>
+         *
+         * <code>repeated .opencannabis.products.menu.section.Section section = 2;</code>
+         */
+        public int getSectionValue(int index) {
+          return section_.get(index);
+        }
+        /**
+         * <pre>
+         * Sections mentioned in this entire delta payload. Specifies each section with changes, that might be considered
+         * "invalidated" in client-side caching.
+         * </pre>
+         *
+         * <code>repeated .opencannabis.products.menu.section.Section section = 2;</code>
+         */
+        public Builder setSectionValue(
+            int index, int value) {
+          ensureSectionIsMutable();
+          section_.set(index, value);
+          onChanged();
+          return this;
+        }
+        /**
+         * <pre>
+         * Sections mentioned in this entire delta payload. Specifies each section with changes, that might be considered
+         * "invalidated" in client-side caching.
+         * </pre>
+         *
+         * <code>repeated .opencannabis.products.menu.section.Section section = 2;</code>
+         */
+        public Builder addSectionValue(int value) {
+          ensureSectionIsMutable();
+          section_.add(value);
+          onChanged();
+          return this;
+        }
+        /**
+         * <pre>
+         * Sections mentioned in this entire delta payload. Specifies each section with changes, that might be considered
+         * "invalidated" in client-side caching.
+         * </pre>
+         *
+         * <code>repeated .opencannabis.products.menu.section.Section section = 2;</code>
+         */
+        public Builder addAllSectionValue(
+            java.lang.Iterable<java.lang.Integer> values) {
+          ensureSectionIsMutable();
+          for (int value : values) {
+            section_.add(value);
+          }
+          onChanged();
+          return this;
+        }
+
+        private java.util.List<io.bloombox.schema.services.menu.v1beta1.GetMenu.StreamEvent.MenuDeltaEntry> entry_ =
+          java.util.Collections.emptyList();
+        private void ensureEntryIsMutable() {
+          if (!((bitField0_ & 0x00000004) != 0)) {
+            entry_ = new java.util.ArrayList<io.bloombox.schema.services.menu.v1beta1.GetMenu.StreamEvent.MenuDeltaEntry>(entry_);
+            bitField0_ |= 0x00000004;
+           }
+        }
+
+        private com.google.protobuf.RepeatedFieldBuilderV3<
+            io.bloombox.schema.services.menu.v1beta1.GetMenu.StreamEvent.MenuDeltaEntry, io.bloombox.schema.services.menu.v1beta1.GetMenu.StreamEvent.MenuDeltaEntry.Builder, io.bloombox.schema.services.menu.v1beta1.GetMenu.StreamEvent.MenuDeltaEntryOrBuilder> entryBuilder_;
+
+        /**
+         * <pre>
+         * Specifies delta entries, one for each type of change listed in `type`.
+         * </pre>
+         *
+         * <code>repeated .bloombox.services.menu.v1beta1.GetMenu.StreamEvent.MenuDeltaEntry entry = 3;</code>
+         */
+        public java.util.List<io.bloombox.schema.services.menu.v1beta1.GetMenu.StreamEvent.MenuDeltaEntry> getEntryList() {
+          if (entryBuilder_ == null) {
+            return java.util.Collections.unmodifiableList(entry_);
+          } else {
+            return entryBuilder_.getMessageList();
+          }
+        }
+        /**
+         * <pre>
+         * Specifies delta entries, one for each type of change listed in `type`.
+         * </pre>
+         *
+         * <code>repeated .bloombox.services.menu.v1beta1.GetMenu.StreamEvent.MenuDeltaEntry entry = 3;</code>
+         */
+        public int getEntryCount() {
+          if (entryBuilder_ == null) {
+            return entry_.size();
+          } else {
+            return entryBuilder_.getCount();
+          }
+        }
+        /**
+         * <pre>
+         * Specifies delta entries, one for each type of change listed in `type`.
+         * </pre>
+         *
+         * <code>repeated .bloombox.services.menu.v1beta1.GetMenu.StreamEvent.MenuDeltaEntry entry = 3;</code>
+         */
+        public io.bloombox.schema.services.menu.v1beta1.GetMenu.StreamEvent.MenuDeltaEntry getEntry(int index) {
+          if (entryBuilder_ == null) {
+            return entry_.get(index);
+          } else {
+            return entryBuilder_.getMessage(index);
+          }
+        }
+        /**
+         * <pre>
+         * Specifies delta entries, one for each type of change listed in `type`.
+         * </pre>
+         *
+         * <code>repeated .bloombox.services.menu.v1beta1.GetMenu.StreamEvent.MenuDeltaEntry entry = 3;</code>
+         */
+        public Builder setEntry(
+            int index, io.bloombox.schema.services.menu.v1beta1.GetMenu.StreamEvent.MenuDeltaEntry value) {
+          if (entryBuilder_ == null) {
+            if (value == null) {
+              throw new NullPointerException();
+            }
+            ensureEntryIsMutable();
+            entry_.set(index, value);
+            onChanged();
+          } else {
+            entryBuilder_.setMessage(index, value);
+          }
+          return this;
+        }
+        /**
+         * <pre>
+         * Specifies delta entries, one for each type of change listed in `type`.
+         * </pre>
+         *
+         * <code>repeated .bloombox.services.menu.v1beta1.GetMenu.StreamEvent.MenuDeltaEntry entry = 3;</code>
+         */
+        public Builder setEntry(
+            int index, io.bloombox.schema.services.menu.v1beta1.GetMenu.StreamEvent.MenuDeltaEntry.Builder builderForValue) {
+          if (entryBuilder_ == null) {
+            ensureEntryIsMutable();
+            entry_.set(index, builderForValue.build());
+            onChanged();
+          } else {
+            entryBuilder_.setMessage(index, builderForValue.build());
+          }
+          return this;
+        }
+        /**
+         * <pre>
+         * Specifies delta entries, one for each type of change listed in `type`.
+         * </pre>
+         *
+         * <code>repeated .bloombox.services.menu.v1beta1.GetMenu.StreamEvent.MenuDeltaEntry entry = 3;</code>
+         */
+        public Builder addEntry(io.bloombox.schema.services.menu.v1beta1.GetMenu.StreamEvent.MenuDeltaEntry value) {
+          if (entryBuilder_ == null) {
+            if (value == null) {
+              throw new NullPointerException();
+            }
+            ensureEntryIsMutable();
+            entry_.add(value);
+            onChanged();
+          } else {
+            entryBuilder_.addMessage(value);
+          }
+          return this;
+        }
+        /**
+         * <pre>
+         * Specifies delta entries, one for each type of change listed in `type`.
+         * </pre>
+         *
+         * <code>repeated .bloombox.services.menu.v1beta1.GetMenu.StreamEvent.MenuDeltaEntry entry = 3;</code>
+         */
+        public Builder addEntry(
+            int index, io.bloombox.schema.services.menu.v1beta1.GetMenu.StreamEvent.MenuDeltaEntry value) {
+          if (entryBuilder_ == null) {
+            if (value == null) {
+              throw new NullPointerException();
+            }
+            ensureEntryIsMutable();
+            entry_.add(index, value);
+            onChanged();
+          } else {
+            entryBuilder_.addMessage(index, value);
+          }
+          return this;
+        }
+        /**
+         * <pre>
+         * Specifies delta entries, one for each type of change listed in `type`.
+         * </pre>
+         *
+         * <code>repeated .bloombox.services.menu.v1beta1.GetMenu.StreamEvent.MenuDeltaEntry entry = 3;</code>
+         */
+        public Builder addEntry(
+            io.bloombox.schema.services.menu.v1beta1.GetMenu.StreamEvent.MenuDeltaEntry.Builder builderForValue) {
+          if (entryBuilder_ == null) {
+            ensureEntryIsMutable();
+            entry_.add(builderForValue.build());
+            onChanged();
+          } else {
+            entryBuilder_.addMessage(builderForValue.build());
+          }
+          return this;
+        }
+        /**
+         * <pre>
+         * Specifies delta entries, one for each type of change listed in `type`.
+         * </pre>
+         *
+         * <code>repeated .bloombox.services.menu.v1beta1.GetMenu.StreamEvent.MenuDeltaEntry entry = 3;</code>
+         */
+        public Builder addEntry(
+            int index, io.bloombox.schema.services.menu.v1beta1.GetMenu.StreamEvent.MenuDeltaEntry.Builder builderForValue) {
+          if (entryBuilder_ == null) {
+            ensureEntryIsMutable();
+            entry_.add(index, builderForValue.build());
+            onChanged();
+          } else {
+            entryBuilder_.addMessage(index, builderForValue.build());
+          }
+          return this;
+        }
+        /**
+         * <pre>
+         * Specifies delta entries, one for each type of change listed in `type`.
+         * </pre>
+         *
+         * <code>repeated .bloombox.services.menu.v1beta1.GetMenu.StreamEvent.MenuDeltaEntry entry = 3;</code>
+         */
+        public Builder addAllEntry(
+            java.lang.Iterable<? extends io.bloombox.schema.services.menu.v1beta1.GetMenu.StreamEvent.MenuDeltaEntry> values) {
+          if (entryBuilder_ == null) {
+            ensureEntryIsMutable();
+            com.google.protobuf.AbstractMessageLite.Builder.addAll(
+                values, entry_);
+            onChanged();
+          } else {
+            entryBuilder_.addAllMessages(values);
+          }
+          return this;
+        }
+        /**
+         * <pre>
+         * Specifies delta entries, one for each type of change listed in `type`.
+         * </pre>
+         *
+         * <code>repeated .bloombox.services.menu.v1beta1.GetMenu.StreamEvent.MenuDeltaEntry entry = 3;</code>
+         */
+        public Builder clearEntry() {
+          if (entryBuilder_ == null) {
+            entry_ = java.util.Collections.emptyList();
+            bitField0_ = (bitField0_ & ~0x00000004);
+            onChanged();
+          } else {
+            entryBuilder_.clear();
+          }
+          return this;
+        }
+        /**
+         * <pre>
+         * Specifies delta entries, one for each type of change listed in `type`.
+         * </pre>
+         *
+         * <code>repeated .bloombox.services.menu.v1beta1.GetMenu.StreamEvent.MenuDeltaEntry entry = 3;</code>
+         */
+        public Builder removeEntry(int index) {
+          if (entryBuilder_ == null) {
+            ensureEntryIsMutable();
+            entry_.remove(index);
+            onChanged();
+          } else {
+            entryBuilder_.remove(index);
+          }
+          return this;
+        }
+        /**
+         * <pre>
+         * Specifies delta entries, one for each type of change listed in `type`.
+         * </pre>
+         *
+         * <code>repeated .bloombox.services.menu.v1beta1.GetMenu.StreamEvent.MenuDeltaEntry entry = 3;</code>
+         */
+        public io.bloombox.schema.services.menu.v1beta1.GetMenu.StreamEvent.MenuDeltaEntry.Builder getEntryBuilder(
+            int index) {
+          return getEntryFieldBuilder().getBuilder(index);
+        }
+        /**
+         * <pre>
+         * Specifies delta entries, one for each type of change listed in `type`.
+         * </pre>
+         *
+         * <code>repeated .bloombox.services.menu.v1beta1.GetMenu.StreamEvent.MenuDeltaEntry entry = 3;</code>
+         */
+        public io.bloombox.schema.services.menu.v1beta1.GetMenu.StreamEvent.MenuDeltaEntryOrBuilder getEntryOrBuilder(
+            int index) {
+          if (entryBuilder_ == null) {
+            return entry_.get(index);  } else {
+            return entryBuilder_.getMessageOrBuilder(index);
+          }
+        }
+        /**
+         * <pre>
+         * Specifies delta entries, one for each type of change listed in `type`.
+         * </pre>
+         *
+         * <code>repeated .bloombox.services.menu.v1beta1.GetMenu.StreamEvent.MenuDeltaEntry entry = 3;</code>
+         */
+        public java.util.List<? extends io.bloombox.schema.services.menu.v1beta1.GetMenu.StreamEvent.MenuDeltaEntryOrBuilder> 
+             getEntryOrBuilderList() {
+          if (entryBuilder_ != null) {
+            return entryBuilder_.getMessageOrBuilderList();
+          } else {
+            return java.util.Collections.unmodifiableList(entry_);
+          }
+        }
+        /**
+         * <pre>
+         * Specifies delta entries, one for each type of change listed in `type`.
+         * </pre>
+         *
+         * <code>repeated .bloombox.services.menu.v1beta1.GetMenu.StreamEvent.MenuDeltaEntry entry = 3;</code>
+         */
+        public io.bloombox.schema.services.menu.v1beta1.GetMenu.StreamEvent.MenuDeltaEntry.Builder addEntryBuilder() {
+          return getEntryFieldBuilder().addBuilder(
+              io.bloombox.schema.services.menu.v1beta1.GetMenu.StreamEvent.MenuDeltaEntry.getDefaultInstance());
+        }
+        /**
+         * <pre>
+         * Specifies delta entries, one for each type of change listed in `type`.
+         * </pre>
+         *
+         * <code>repeated .bloombox.services.menu.v1beta1.GetMenu.StreamEvent.MenuDeltaEntry entry = 3;</code>
+         */
+        public io.bloombox.schema.services.menu.v1beta1.GetMenu.StreamEvent.MenuDeltaEntry.Builder addEntryBuilder(
+            int index) {
+          return getEntryFieldBuilder().addBuilder(
+              index, io.bloombox.schema.services.menu.v1beta1.GetMenu.StreamEvent.MenuDeltaEntry.getDefaultInstance());
+        }
+        /**
+         * <pre>
+         * Specifies delta entries, one for each type of change listed in `type`.
+         * </pre>
+         *
+         * <code>repeated .bloombox.services.menu.v1beta1.GetMenu.StreamEvent.MenuDeltaEntry entry = 3;</code>
+         */
+        public java.util.List<io.bloombox.schema.services.menu.v1beta1.GetMenu.StreamEvent.MenuDeltaEntry.Builder> 
+             getEntryBuilderList() {
+          return getEntryFieldBuilder().getBuilderList();
+        }
+        private com.google.protobuf.RepeatedFieldBuilderV3<
+            io.bloombox.schema.services.menu.v1beta1.GetMenu.StreamEvent.MenuDeltaEntry, io.bloombox.schema.services.menu.v1beta1.GetMenu.StreamEvent.MenuDeltaEntry.Builder, io.bloombox.schema.services.menu.v1beta1.GetMenu.StreamEvent.MenuDeltaEntryOrBuilder> 
+            getEntryFieldBuilder() {
+          if (entryBuilder_ == null) {
+            entryBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+                io.bloombox.schema.services.menu.v1beta1.GetMenu.StreamEvent.MenuDeltaEntry, io.bloombox.schema.services.menu.v1beta1.GetMenu.StreamEvent.MenuDeltaEntry.Builder, io.bloombox.schema.services.menu.v1beta1.GetMenu.StreamEvent.MenuDeltaEntryOrBuilder>(
+                    entry_,
+                    ((bitField0_ & 0x00000004) != 0),
+                    getParentForChildren(),
+                    isClean());
+            entry_ = null;
+          }
+          return entryBuilder_;
+        }
+
+        private int count_ ;
+        /**
+         * <pre>
+         * Count of changes that constitute this entire delta update. The count of changes across all delta entries should
+         * add up to this value.
+         * </pre>
+         *
+         * <code>uint32 count = 4;</code>
+         */
+        public int getCount() {
+          return count_;
+        }
+        /**
+         * <pre>
+         * Count of changes that constitute this entire delta update. The count of changes across all delta entries should
+         * add up to this value.
+         * </pre>
+         *
+         * <code>uint32 count = 4;</code>
+         */
+        public Builder setCount(int value) {
+          
+          count_ = value;
+          onChanged();
+          return this;
+        }
+        /**
+         * <pre>
+         * Count of changes that constitute this entire delta update. The count of changes across all delta entries should
+         * add up to this value.
+         * </pre>
+         *
+         * <code>uint32 count = 4;</code>
+         */
+        public Builder clearCount() {
+          
+          count_ = 0;
+          onChanged();
+          return this;
+        }
+        @java.lang.Override
+        public final Builder setUnknownFields(
+            final com.google.protobuf.UnknownFieldSet unknownFields) {
+          return super.setUnknownFields(unknownFields);
+        }
+
+        @java.lang.Override
+        public final Builder mergeUnknownFields(
+            final com.google.protobuf.UnknownFieldSet unknownFields) {
+          return super.mergeUnknownFields(unknownFields);
+        }
+
+
+        // @@protoc_insertion_point(builder_scope:bloombox.services.menu.v1beta1.GetMenu.StreamEvent.MenuChanges)
+      }
+
+      // @@protoc_insertion_point(class_scope:bloombox.services.menu.v1beta1.GetMenu.StreamEvent.MenuChanges)
+      private static final io.bloombox.schema.services.menu.v1beta1.GetMenu.StreamEvent.MenuChanges DEFAULT_INSTANCE;
+      static {
+        DEFAULT_INSTANCE = new io.bloombox.schema.services.menu.v1beta1.GetMenu.StreamEvent.MenuChanges();
+      }
+
+      public static io.bloombox.schema.services.menu.v1beta1.GetMenu.StreamEvent.MenuChanges getDefaultInstance() {
+        return DEFAULT_INSTANCE;
+      }
+
+      private static final com.google.protobuf.Parser<MenuChanges>
+          PARSER = new com.google.protobuf.AbstractParser<MenuChanges>() {
+        @java.lang.Override
+        public MenuChanges parsePartialFrom(
+            com.google.protobuf.CodedInputStream input,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws com.google.protobuf.InvalidProtocolBufferException {
+          return new MenuChanges(input, extensionRegistry);
+        }
+      };
+
+      public static com.google.protobuf.Parser<MenuChanges> parser() {
+        return PARSER;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Parser<MenuChanges> getParserForType() {
+        return PARSER;
+      }
+
+      @java.lang.Override
+      public io.bloombox.schema.services.menu.v1beta1.GetMenu.StreamEvent.MenuChanges getDefaultInstanceForType() {
+        return DEFAULT_INSTANCE;
+      }
+
+    }
+
+    private int payloadCase_ = 0;
+    private java.lang.Object payload_;
+    public enum PayloadCase
+        implements com.google.protobuf.Internal.EnumLite {
+      CATALOG(10),
+      DELTA(11),
+      PAYLOAD_NOT_SET(0);
+      private final int value;
+      private PayloadCase(int value) {
+        this.value = value;
+      }
+      /**
+       * @deprecated Use {@link #forNumber(int)} instead.
+       */
+      @java.lang.Deprecated
+      public static PayloadCase valueOf(int value) {
+        return forNumber(value);
+      }
+
+      public static PayloadCase forNumber(int value) {
+        switch (value) {
+          case 10: return CATALOG;
+          case 11: return DELTA;
+          case 0: return PAYLOAD_NOT_SET;
+          default: return null;
+        }
+      }
+      public int getNumber() {
+        return this.value;
+      }
+    };
+
+    public PayloadCase
+    getPayloadCase() {
+      return PayloadCase.forNumber(
+          payloadCase_);
+    }
+
+    public static final int FINGERPRINT_FIELD_NUMBER = 1;
+    private volatile java.lang.Object fingerprint_;
+    /**
+     * <pre>
+     * New fingerprint for the entire menu catalog.
+     * </pre>
+     *
+     * <code>string fingerprint = 1;</code>
+     */
+    public java.lang.String getFingerprint() {
+      java.lang.Object ref = fingerprint_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        fingerprint_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * New fingerprint for the entire menu catalog.
+     * </pre>
+     *
+     * <code>string fingerprint = 1;</code>
+     */
+    public com.google.protobuf.ByteString
+        getFingerprintBytes() {
+      java.lang.Object ref = fingerprint_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        fingerprint_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int MODIFIED_FIELD_NUMBER = 2;
+    private io.opencannabis.schema.temporal.TemporalInstant.Instant modified_;
+    /**
+     * <pre>
+     * Timestamp indicating when this change occurred, in millisecond-level resolution.
+     * </pre>
+     *
+     * <code>.opencannabis.temporal.Instant modified = 2;</code>
+     */
+    public boolean hasModified() {
+      return modified_ != null;
+    }
+    /**
+     * <pre>
+     * Timestamp indicating when this change occurred, in millisecond-level resolution.
+     * </pre>
+     *
+     * <code>.opencannabis.temporal.Instant modified = 2;</code>
+     */
+    public io.opencannabis.schema.temporal.TemporalInstant.Instant getModified() {
+      return modified_ == null ? io.opencannabis.schema.temporal.TemporalInstant.Instant.getDefaultInstance() : modified_;
+    }
+    /**
+     * <pre>
+     * Timestamp indicating when this change occurred, in millisecond-level resolution.
+     * </pre>
+     *
+     * <code>.opencannabis.temporal.Instant modified = 2;</code>
+     */
+    public io.opencannabis.schema.temporal.TemporalInstant.InstantOrBuilder getModifiedOrBuilder() {
+      return getModified();
+    }
+
+    public static final int CATALOG_FIELD_NUMBER = 10;
+    /**
+     * <pre>
+     * Specifies a full menu catalog, which is usually communicated as the initial response payload.
+     * </pre>
+     *
+     * <code>.opencannabis.products.menu.Menu catalog = 10;</code>
+     */
+    public boolean hasCatalog() {
+      return payloadCase_ == 10;
+    }
+    /**
+     * <pre>
+     * Specifies a full menu catalog, which is usually communicated as the initial response payload.
+     * </pre>
+     *
+     * <code>.opencannabis.products.menu.Menu catalog = 10;</code>
+     */
+    public io.opencannabis.schema.menu.Menu getCatalog() {
+      if (payloadCase_ == 10) {
+         return (io.opencannabis.schema.menu.Menu) payload_;
+      }
+      return io.opencannabis.schema.menu.Menu.getDefaultInstance();
+    }
+    /**
+     * <pre>
+     * Specifies a full menu catalog, which is usually communicated as the initial response payload.
+     * </pre>
+     *
+     * <code>.opencannabis.products.menu.Menu catalog = 10;</code>
+     */
+    public io.opencannabis.schema.menu.MenuOrBuilder getCatalogOrBuilder() {
+      if (payloadCase_ == 10) {
+         return (io.opencannabis.schema.menu.Menu) payload_;
+      }
+      return io.opencannabis.schema.menu.Menu.getDefaultInstance();
+    }
+
+    public static final int DELTA_FIELD_NUMBER = 11;
+    /**
+     * <pre>
+     * Delta payload, describing a menu change.
+     * </pre>
+     *
+     * <code>.bloombox.services.menu.v1beta1.GetMenu.StreamEvent.MenuChanges delta = 11;</code>
+     */
+    public boolean hasDelta() {
+      return payloadCase_ == 11;
+    }
+    /**
+     * <pre>
+     * Delta payload, describing a menu change.
+     * </pre>
+     *
+     * <code>.bloombox.services.menu.v1beta1.GetMenu.StreamEvent.MenuChanges delta = 11;</code>
+     */
+    public io.bloombox.schema.services.menu.v1beta1.GetMenu.StreamEvent.MenuChanges getDelta() {
+      if (payloadCase_ == 11) {
+         return (io.bloombox.schema.services.menu.v1beta1.GetMenu.StreamEvent.MenuChanges) payload_;
+      }
+      return io.bloombox.schema.services.menu.v1beta1.GetMenu.StreamEvent.MenuChanges.getDefaultInstance();
+    }
+    /**
+     * <pre>
+     * Delta payload, describing a menu change.
+     * </pre>
+     *
+     * <code>.bloombox.services.menu.v1beta1.GetMenu.StreamEvent.MenuChanges delta = 11;</code>
+     */
+    public io.bloombox.schema.services.menu.v1beta1.GetMenu.StreamEvent.MenuChangesOrBuilder getDeltaOrBuilder() {
+      if (payloadCase_ == 11) {
+         return (io.bloombox.schema.services.menu.v1beta1.GetMenu.StreamEvent.MenuChanges) payload_;
+      }
+      return io.bloombox.schema.services.menu.v1beta1.GetMenu.StreamEvent.MenuChanges.getDefaultInstance();
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!getFingerprintBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, fingerprint_);
+      }
+      if (modified_ != null) {
+        output.writeMessage(2, getModified());
+      }
+      if (payloadCase_ == 10) {
+        output.writeMessage(10, (io.opencannabis.schema.menu.Menu) payload_);
+      }
+      if (payloadCase_ == 11) {
+        output.writeMessage(11, (io.bloombox.schema.services.menu.v1beta1.GetMenu.StreamEvent.MenuChanges) payload_);
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!getFingerprintBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, fingerprint_);
+      }
+      if (modified_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(2, getModified());
+      }
+      if (payloadCase_ == 10) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(10, (io.opencannabis.schema.menu.Menu) payload_);
+      }
+      if (payloadCase_ == 11) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(11, (io.bloombox.schema.services.menu.v1beta1.GetMenu.StreamEvent.MenuChanges) payload_);
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof io.bloombox.schema.services.menu.v1beta1.GetMenu.StreamEvent)) {
+        return super.equals(obj);
+      }
+      io.bloombox.schema.services.menu.v1beta1.GetMenu.StreamEvent other = (io.bloombox.schema.services.menu.v1beta1.GetMenu.StreamEvent) obj;
+
+      if (!getFingerprint()
+          .equals(other.getFingerprint())) return false;
+      if (hasModified() != other.hasModified()) return false;
+      if (hasModified()) {
+        if (!getModified()
+            .equals(other.getModified())) return false;
+      }
+      if (!getPayloadCase().equals(other.getPayloadCase())) return false;
+      switch (payloadCase_) {
+        case 10:
+          if (!getCatalog()
+              .equals(other.getCatalog())) return false;
+          break;
+        case 11:
+          if (!getDelta()
+              .equals(other.getDelta())) return false;
+          break;
+        case 0:
+        default:
+      }
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + FINGERPRINT_FIELD_NUMBER;
+      hash = (53 * hash) + getFingerprint().hashCode();
+      if (hasModified()) {
+        hash = (37 * hash) + MODIFIED_FIELD_NUMBER;
+        hash = (53 * hash) + getModified().hashCode();
+      }
+      switch (payloadCase_) {
+        case 10:
+          hash = (37 * hash) + CATALOG_FIELD_NUMBER;
+          hash = (53 * hash) + getCatalog().hashCode();
+          break;
+        case 11:
+          hash = (37 * hash) + DELTA_FIELD_NUMBER;
+          hash = (53 * hash) + getDelta().hashCode();
+          break;
+        case 0:
+        default:
+      }
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static io.bloombox.schema.services.menu.v1beta1.GetMenu.StreamEvent parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static io.bloombox.schema.services.menu.v1beta1.GetMenu.StreamEvent parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static io.bloombox.schema.services.menu.v1beta1.GetMenu.StreamEvent parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static io.bloombox.schema.services.menu.v1beta1.GetMenu.StreamEvent parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static io.bloombox.schema.services.menu.v1beta1.GetMenu.StreamEvent parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static io.bloombox.schema.services.menu.v1beta1.GetMenu.StreamEvent parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static io.bloombox.schema.services.menu.v1beta1.GetMenu.StreamEvent parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static io.bloombox.schema.services.menu.v1beta1.GetMenu.StreamEvent parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static io.bloombox.schema.services.menu.v1beta1.GetMenu.StreamEvent parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static io.bloombox.schema.services.menu.v1beta1.GetMenu.StreamEvent parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static io.bloombox.schema.services.menu.v1beta1.GetMenu.StreamEvent parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static io.bloombox.schema.services.menu.v1beta1.GetMenu.StreamEvent parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(io.bloombox.schema.services.menu.v1beta1.GetMenu.StreamEvent prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * Respond to a menu stream with an initial response, or an event payload, describing some occurrence or change in
+     * menu data to be processed by the listening client.
+     * </pre>
+     *
+     * Protobuf type {@code bloombox.services.menu.v1beta1.GetMenu.StreamEvent}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:bloombox.services.menu.v1beta1.GetMenu.StreamEvent)
+        io.bloombox.schema.services.menu.v1beta1.GetMenu.StreamEventOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return io.bloombox.schema.services.menu.v1beta1.MenuServiceBeta1.internal_static_bloombox_services_menu_v1beta1_GetMenu_StreamEvent_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return io.bloombox.schema.services.menu.v1beta1.MenuServiceBeta1.internal_static_bloombox_services_menu_v1beta1_GetMenu_StreamEvent_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                io.bloombox.schema.services.menu.v1beta1.GetMenu.StreamEvent.class, io.bloombox.schema.services.menu.v1beta1.GetMenu.StreamEvent.Builder.class);
+      }
+
+      // Construct using io.bloombox.schema.services.menu.v1beta1.GetMenu.StreamEvent.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        fingerprint_ = "";
+
+        if (modifiedBuilder_ == null) {
+          modified_ = null;
+        } else {
+          modified_ = null;
+          modifiedBuilder_ = null;
+        }
+        payloadCase_ = 0;
+        payload_ = null;
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return io.bloombox.schema.services.menu.v1beta1.MenuServiceBeta1.internal_static_bloombox_services_menu_v1beta1_GetMenu_StreamEvent_descriptor;
+      }
+
+      @java.lang.Override
+      public io.bloombox.schema.services.menu.v1beta1.GetMenu.StreamEvent getDefaultInstanceForType() {
+        return io.bloombox.schema.services.menu.v1beta1.GetMenu.StreamEvent.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public io.bloombox.schema.services.menu.v1beta1.GetMenu.StreamEvent build() {
+        io.bloombox.schema.services.menu.v1beta1.GetMenu.StreamEvent result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public io.bloombox.schema.services.menu.v1beta1.GetMenu.StreamEvent buildPartial() {
+        io.bloombox.schema.services.menu.v1beta1.GetMenu.StreamEvent result = new io.bloombox.schema.services.menu.v1beta1.GetMenu.StreamEvent(this);
+        result.fingerprint_ = fingerprint_;
+        if (modifiedBuilder_ == null) {
+          result.modified_ = modified_;
+        } else {
+          result.modified_ = modifiedBuilder_.build();
+        }
+        if (payloadCase_ == 10) {
+          if (catalogBuilder_ == null) {
+            result.payload_ = payload_;
+          } else {
+            result.payload_ = catalogBuilder_.build();
+          }
+        }
+        if (payloadCase_ == 11) {
+          if (deltaBuilder_ == null) {
+            result.payload_ = payload_;
+          } else {
+            result.payload_ = deltaBuilder_.build();
+          }
+        }
+        result.payloadCase_ = payloadCase_;
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof io.bloombox.schema.services.menu.v1beta1.GetMenu.StreamEvent) {
+          return mergeFrom((io.bloombox.schema.services.menu.v1beta1.GetMenu.StreamEvent)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(io.bloombox.schema.services.menu.v1beta1.GetMenu.StreamEvent other) {
+        if (other == io.bloombox.schema.services.menu.v1beta1.GetMenu.StreamEvent.getDefaultInstance()) return this;
+        if (!other.getFingerprint().isEmpty()) {
+          fingerprint_ = other.fingerprint_;
+          onChanged();
+        }
+        if (other.hasModified()) {
+          mergeModified(other.getModified());
+        }
+        switch (other.getPayloadCase()) {
+          case CATALOG: {
+            mergeCatalog(other.getCatalog());
+            break;
+          }
+          case DELTA: {
+            mergeDelta(other.getDelta());
+            break;
+          }
+          case PAYLOAD_NOT_SET: {
+            break;
+          }
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        io.bloombox.schema.services.menu.v1beta1.GetMenu.StreamEvent parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (io.bloombox.schema.services.menu.v1beta1.GetMenu.StreamEvent) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+      private int payloadCase_ = 0;
+      private java.lang.Object payload_;
+      public PayloadCase
+          getPayloadCase() {
+        return PayloadCase.forNumber(
+            payloadCase_);
+      }
+
+      public Builder clearPayload() {
+        payloadCase_ = 0;
+        payload_ = null;
+        onChanged();
+        return this;
+      }
+
+
+      private java.lang.Object fingerprint_ = "";
+      /**
+       * <pre>
+       * New fingerprint for the entire menu catalog.
+       * </pre>
+       *
+       * <code>string fingerprint = 1;</code>
+       */
+      public java.lang.String getFingerprint() {
+        java.lang.Object ref = fingerprint_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          fingerprint_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * New fingerprint for the entire menu catalog.
+       * </pre>
+       *
+       * <code>string fingerprint = 1;</code>
+       */
+      public com.google.protobuf.ByteString
+          getFingerprintBytes() {
+        java.lang.Object ref = fingerprint_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          fingerprint_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * New fingerprint for the entire menu catalog.
+       * </pre>
+       *
+       * <code>string fingerprint = 1;</code>
+       */
+      public Builder setFingerprint(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        fingerprint_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * New fingerprint for the entire menu catalog.
+       * </pre>
+       *
+       * <code>string fingerprint = 1;</code>
+       */
+      public Builder clearFingerprint() {
+        
+        fingerprint_ = getDefaultInstance().getFingerprint();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * New fingerprint for the entire menu catalog.
+       * </pre>
+       *
+       * <code>string fingerprint = 1;</code>
+       */
+      public Builder setFingerprintBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        fingerprint_ = value;
+        onChanged();
+        return this;
+      }
+
+      private io.opencannabis.schema.temporal.TemporalInstant.Instant modified_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          io.opencannabis.schema.temporal.TemporalInstant.Instant, io.opencannabis.schema.temporal.TemporalInstant.Instant.Builder, io.opencannabis.schema.temporal.TemporalInstant.InstantOrBuilder> modifiedBuilder_;
+      /**
+       * <pre>
+       * Timestamp indicating when this change occurred, in millisecond-level resolution.
+       * </pre>
+       *
+       * <code>.opencannabis.temporal.Instant modified = 2;</code>
+       */
+      public boolean hasModified() {
+        return modifiedBuilder_ != null || modified_ != null;
+      }
+      /**
+       * <pre>
+       * Timestamp indicating when this change occurred, in millisecond-level resolution.
+       * </pre>
+       *
+       * <code>.opencannabis.temporal.Instant modified = 2;</code>
+       */
+      public io.opencannabis.schema.temporal.TemporalInstant.Instant getModified() {
+        if (modifiedBuilder_ == null) {
+          return modified_ == null ? io.opencannabis.schema.temporal.TemporalInstant.Instant.getDefaultInstance() : modified_;
+        } else {
+          return modifiedBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * Timestamp indicating when this change occurred, in millisecond-level resolution.
+       * </pre>
+       *
+       * <code>.opencannabis.temporal.Instant modified = 2;</code>
+       */
+      public Builder setModified(io.opencannabis.schema.temporal.TemporalInstant.Instant value) {
+        if (modifiedBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          modified_ = value;
+          onChanged();
+        } else {
+          modifiedBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Timestamp indicating when this change occurred, in millisecond-level resolution.
+       * </pre>
+       *
+       * <code>.opencannabis.temporal.Instant modified = 2;</code>
+       */
+      public Builder setModified(
+          io.opencannabis.schema.temporal.TemporalInstant.Instant.Builder builderForValue) {
+        if (modifiedBuilder_ == null) {
+          modified_ = builderForValue.build();
+          onChanged();
+        } else {
+          modifiedBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Timestamp indicating when this change occurred, in millisecond-level resolution.
+       * </pre>
+       *
+       * <code>.opencannabis.temporal.Instant modified = 2;</code>
+       */
+      public Builder mergeModified(io.opencannabis.schema.temporal.TemporalInstant.Instant value) {
+        if (modifiedBuilder_ == null) {
+          if (modified_ != null) {
+            modified_ =
+              io.opencannabis.schema.temporal.TemporalInstant.Instant.newBuilder(modified_).mergeFrom(value).buildPartial();
+          } else {
+            modified_ = value;
+          }
+          onChanged();
+        } else {
+          modifiedBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Timestamp indicating when this change occurred, in millisecond-level resolution.
+       * </pre>
+       *
+       * <code>.opencannabis.temporal.Instant modified = 2;</code>
+       */
+      public Builder clearModified() {
+        if (modifiedBuilder_ == null) {
+          modified_ = null;
+          onChanged();
+        } else {
+          modified_ = null;
+          modifiedBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Timestamp indicating when this change occurred, in millisecond-level resolution.
+       * </pre>
+       *
+       * <code>.opencannabis.temporal.Instant modified = 2;</code>
+       */
+      public io.opencannabis.schema.temporal.TemporalInstant.Instant.Builder getModifiedBuilder() {
+        
+        onChanged();
+        return getModifiedFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * Timestamp indicating when this change occurred, in millisecond-level resolution.
+       * </pre>
+       *
+       * <code>.opencannabis.temporal.Instant modified = 2;</code>
+       */
+      public io.opencannabis.schema.temporal.TemporalInstant.InstantOrBuilder getModifiedOrBuilder() {
+        if (modifiedBuilder_ != null) {
+          return modifiedBuilder_.getMessageOrBuilder();
+        } else {
+          return modified_ == null ?
+              io.opencannabis.schema.temporal.TemporalInstant.Instant.getDefaultInstance() : modified_;
+        }
+      }
+      /**
+       * <pre>
+       * Timestamp indicating when this change occurred, in millisecond-level resolution.
+       * </pre>
+       *
+       * <code>.opencannabis.temporal.Instant modified = 2;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          io.opencannabis.schema.temporal.TemporalInstant.Instant, io.opencannabis.schema.temporal.TemporalInstant.Instant.Builder, io.opencannabis.schema.temporal.TemporalInstant.InstantOrBuilder> 
+          getModifiedFieldBuilder() {
+        if (modifiedBuilder_ == null) {
+          modifiedBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              io.opencannabis.schema.temporal.TemporalInstant.Instant, io.opencannabis.schema.temporal.TemporalInstant.Instant.Builder, io.opencannabis.schema.temporal.TemporalInstant.InstantOrBuilder>(
+                  getModified(),
+                  getParentForChildren(),
+                  isClean());
+          modified_ = null;
+        }
+        return modifiedBuilder_;
+      }
+
+      private com.google.protobuf.SingleFieldBuilderV3<
+          io.opencannabis.schema.menu.Menu, io.opencannabis.schema.menu.Menu.Builder, io.opencannabis.schema.menu.MenuOrBuilder> catalogBuilder_;
+      /**
+       * <pre>
+       * Specifies a full menu catalog, which is usually communicated as the initial response payload.
+       * </pre>
+       *
+       * <code>.opencannabis.products.menu.Menu catalog = 10;</code>
+       */
+      public boolean hasCatalog() {
+        return payloadCase_ == 10;
+      }
+      /**
+       * <pre>
+       * Specifies a full menu catalog, which is usually communicated as the initial response payload.
+       * </pre>
+       *
+       * <code>.opencannabis.products.menu.Menu catalog = 10;</code>
+       */
+      public io.opencannabis.schema.menu.Menu getCatalog() {
+        if (catalogBuilder_ == null) {
+          if (payloadCase_ == 10) {
+            return (io.opencannabis.schema.menu.Menu) payload_;
+          }
+          return io.opencannabis.schema.menu.Menu.getDefaultInstance();
+        } else {
+          if (payloadCase_ == 10) {
+            return catalogBuilder_.getMessage();
+          }
+          return io.opencannabis.schema.menu.Menu.getDefaultInstance();
+        }
+      }
+      /**
+       * <pre>
+       * Specifies a full menu catalog, which is usually communicated as the initial response payload.
+       * </pre>
+       *
+       * <code>.opencannabis.products.menu.Menu catalog = 10;</code>
+       */
+      public Builder setCatalog(io.opencannabis.schema.menu.Menu value) {
+        if (catalogBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          payload_ = value;
+          onChanged();
+        } else {
+          catalogBuilder_.setMessage(value);
+        }
+        payloadCase_ = 10;
+        return this;
+      }
+      /**
+       * <pre>
+       * Specifies a full menu catalog, which is usually communicated as the initial response payload.
+       * </pre>
+       *
+       * <code>.opencannabis.products.menu.Menu catalog = 10;</code>
+       */
+      public Builder setCatalog(
+          io.opencannabis.schema.menu.Menu.Builder builderForValue) {
+        if (catalogBuilder_ == null) {
+          payload_ = builderForValue.build();
+          onChanged();
+        } else {
+          catalogBuilder_.setMessage(builderForValue.build());
+        }
+        payloadCase_ = 10;
+        return this;
+      }
+      /**
+       * <pre>
+       * Specifies a full menu catalog, which is usually communicated as the initial response payload.
+       * </pre>
+       *
+       * <code>.opencannabis.products.menu.Menu catalog = 10;</code>
+       */
+      public Builder mergeCatalog(io.opencannabis.schema.menu.Menu value) {
+        if (catalogBuilder_ == null) {
+          if (payloadCase_ == 10 &&
+              payload_ != io.opencannabis.schema.menu.Menu.getDefaultInstance()) {
+            payload_ = io.opencannabis.schema.menu.Menu.newBuilder((io.opencannabis.schema.menu.Menu) payload_)
+                .mergeFrom(value).buildPartial();
+          } else {
+            payload_ = value;
+          }
+          onChanged();
+        } else {
+          if (payloadCase_ == 10) {
+            catalogBuilder_.mergeFrom(value);
+          }
+          catalogBuilder_.setMessage(value);
+        }
+        payloadCase_ = 10;
+        return this;
+      }
+      /**
+       * <pre>
+       * Specifies a full menu catalog, which is usually communicated as the initial response payload.
+       * </pre>
+       *
+       * <code>.opencannabis.products.menu.Menu catalog = 10;</code>
+       */
+      public Builder clearCatalog() {
+        if (catalogBuilder_ == null) {
+          if (payloadCase_ == 10) {
+            payloadCase_ = 0;
+            payload_ = null;
+            onChanged();
+          }
+        } else {
+          if (payloadCase_ == 10) {
+            payloadCase_ = 0;
+            payload_ = null;
+          }
+          catalogBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Specifies a full menu catalog, which is usually communicated as the initial response payload.
+       * </pre>
+       *
+       * <code>.opencannabis.products.menu.Menu catalog = 10;</code>
+       */
+      public io.opencannabis.schema.menu.Menu.Builder getCatalogBuilder() {
+        return getCatalogFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * Specifies a full menu catalog, which is usually communicated as the initial response payload.
+       * </pre>
+       *
+       * <code>.opencannabis.products.menu.Menu catalog = 10;</code>
+       */
+      public io.opencannabis.schema.menu.MenuOrBuilder getCatalogOrBuilder() {
+        if ((payloadCase_ == 10) && (catalogBuilder_ != null)) {
+          return catalogBuilder_.getMessageOrBuilder();
+        } else {
+          if (payloadCase_ == 10) {
+            return (io.opencannabis.schema.menu.Menu) payload_;
+          }
+          return io.opencannabis.schema.menu.Menu.getDefaultInstance();
+        }
+      }
+      /**
+       * <pre>
+       * Specifies a full menu catalog, which is usually communicated as the initial response payload.
+       * </pre>
+       *
+       * <code>.opencannabis.products.menu.Menu catalog = 10;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          io.opencannabis.schema.menu.Menu, io.opencannabis.schema.menu.Menu.Builder, io.opencannabis.schema.menu.MenuOrBuilder> 
+          getCatalogFieldBuilder() {
+        if (catalogBuilder_ == null) {
+          if (!(payloadCase_ == 10)) {
+            payload_ = io.opencannabis.schema.menu.Menu.getDefaultInstance();
+          }
+          catalogBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              io.opencannabis.schema.menu.Menu, io.opencannabis.schema.menu.Menu.Builder, io.opencannabis.schema.menu.MenuOrBuilder>(
+                  (io.opencannabis.schema.menu.Menu) payload_,
+                  getParentForChildren(),
+                  isClean());
+          payload_ = null;
+        }
+        payloadCase_ = 10;
+        onChanged();;
+        return catalogBuilder_;
+      }
+
+      private com.google.protobuf.SingleFieldBuilderV3<
+          io.bloombox.schema.services.menu.v1beta1.GetMenu.StreamEvent.MenuChanges, io.bloombox.schema.services.menu.v1beta1.GetMenu.StreamEvent.MenuChanges.Builder, io.bloombox.schema.services.menu.v1beta1.GetMenu.StreamEvent.MenuChangesOrBuilder> deltaBuilder_;
+      /**
+       * <pre>
+       * Delta payload, describing a menu change.
+       * </pre>
+       *
+       * <code>.bloombox.services.menu.v1beta1.GetMenu.StreamEvent.MenuChanges delta = 11;</code>
+       */
+      public boolean hasDelta() {
+        return payloadCase_ == 11;
+      }
+      /**
+       * <pre>
+       * Delta payload, describing a menu change.
+       * </pre>
+       *
+       * <code>.bloombox.services.menu.v1beta1.GetMenu.StreamEvent.MenuChanges delta = 11;</code>
+       */
+      public io.bloombox.schema.services.menu.v1beta1.GetMenu.StreamEvent.MenuChanges getDelta() {
+        if (deltaBuilder_ == null) {
+          if (payloadCase_ == 11) {
+            return (io.bloombox.schema.services.menu.v1beta1.GetMenu.StreamEvent.MenuChanges) payload_;
+          }
+          return io.bloombox.schema.services.menu.v1beta1.GetMenu.StreamEvent.MenuChanges.getDefaultInstance();
+        } else {
+          if (payloadCase_ == 11) {
+            return deltaBuilder_.getMessage();
+          }
+          return io.bloombox.schema.services.menu.v1beta1.GetMenu.StreamEvent.MenuChanges.getDefaultInstance();
+        }
+      }
+      /**
+       * <pre>
+       * Delta payload, describing a menu change.
+       * </pre>
+       *
+       * <code>.bloombox.services.menu.v1beta1.GetMenu.StreamEvent.MenuChanges delta = 11;</code>
+       */
+      public Builder setDelta(io.bloombox.schema.services.menu.v1beta1.GetMenu.StreamEvent.MenuChanges value) {
+        if (deltaBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          payload_ = value;
+          onChanged();
+        } else {
+          deltaBuilder_.setMessage(value);
+        }
+        payloadCase_ = 11;
+        return this;
+      }
+      /**
+       * <pre>
+       * Delta payload, describing a menu change.
+       * </pre>
+       *
+       * <code>.bloombox.services.menu.v1beta1.GetMenu.StreamEvent.MenuChanges delta = 11;</code>
+       */
+      public Builder setDelta(
+          io.bloombox.schema.services.menu.v1beta1.GetMenu.StreamEvent.MenuChanges.Builder builderForValue) {
+        if (deltaBuilder_ == null) {
+          payload_ = builderForValue.build();
+          onChanged();
+        } else {
+          deltaBuilder_.setMessage(builderForValue.build());
+        }
+        payloadCase_ = 11;
+        return this;
+      }
+      /**
+       * <pre>
+       * Delta payload, describing a menu change.
+       * </pre>
+       *
+       * <code>.bloombox.services.menu.v1beta1.GetMenu.StreamEvent.MenuChanges delta = 11;</code>
+       */
+      public Builder mergeDelta(io.bloombox.schema.services.menu.v1beta1.GetMenu.StreamEvent.MenuChanges value) {
+        if (deltaBuilder_ == null) {
+          if (payloadCase_ == 11 &&
+              payload_ != io.bloombox.schema.services.menu.v1beta1.GetMenu.StreamEvent.MenuChanges.getDefaultInstance()) {
+            payload_ = io.bloombox.schema.services.menu.v1beta1.GetMenu.StreamEvent.MenuChanges.newBuilder((io.bloombox.schema.services.menu.v1beta1.GetMenu.StreamEvent.MenuChanges) payload_)
+                .mergeFrom(value).buildPartial();
+          } else {
+            payload_ = value;
+          }
+          onChanged();
+        } else {
+          if (payloadCase_ == 11) {
+            deltaBuilder_.mergeFrom(value);
+          }
+          deltaBuilder_.setMessage(value);
+        }
+        payloadCase_ = 11;
+        return this;
+      }
+      /**
+       * <pre>
+       * Delta payload, describing a menu change.
+       * </pre>
+       *
+       * <code>.bloombox.services.menu.v1beta1.GetMenu.StreamEvent.MenuChanges delta = 11;</code>
+       */
+      public Builder clearDelta() {
+        if (deltaBuilder_ == null) {
+          if (payloadCase_ == 11) {
+            payloadCase_ = 0;
+            payload_ = null;
+            onChanged();
+          }
+        } else {
+          if (payloadCase_ == 11) {
+            payloadCase_ = 0;
+            payload_ = null;
+          }
+          deltaBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Delta payload, describing a menu change.
+       * </pre>
+       *
+       * <code>.bloombox.services.menu.v1beta1.GetMenu.StreamEvent.MenuChanges delta = 11;</code>
+       */
+      public io.bloombox.schema.services.menu.v1beta1.GetMenu.StreamEvent.MenuChanges.Builder getDeltaBuilder() {
+        return getDeltaFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * Delta payload, describing a menu change.
+       * </pre>
+       *
+       * <code>.bloombox.services.menu.v1beta1.GetMenu.StreamEvent.MenuChanges delta = 11;</code>
+       */
+      public io.bloombox.schema.services.menu.v1beta1.GetMenu.StreamEvent.MenuChangesOrBuilder getDeltaOrBuilder() {
+        if ((payloadCase_ == 11) && (deltaBuilder_ != null)) {
+          return deltaBuilder_.getMessageOrBuilder();
+        } else {
+          if (payloadCase_ == 11) {
+            return (io.bloombox.schema.services.menu.v1beta1.GetMenu.StreamEvent.MenuChanges) payload_;
+          }
+          return io.bloombox.schema.services.menu.v1beta1.GetMenu.StreamEvent.MenuChanges.getDefaultInstance();
+        }
+      }
+      /**
+       * <pre>
+       * Delta payload, describing a menu change.
+       * </pre>
+       *
+       * <code>.bloombox.services.menu.v1beta1.GetMenu.StreamEvent.MenuChanges delta = 11;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          io.bloombox.schema.services.menu.v1beta1.GetMenu.StreamEvent.MenuChanges, io.bloombox.schema.services.menu.v1beta1.GetMenu.StreamEvent.MenuChanges.Builder, io.bloombox.schema.services.menu.v1beta1.GetMenu.StreamEvent.MenuChangesOrBuilder> 
+          getDeltaFieldBuilder() {
+        if (deltaBuilder_ == null) {
+          if (!(payloadCase_ == 11)) {
+            payload_ = io.bloombox.schema.services.menu.v1beta1.GetMenu.StreamEvent.MenuChanges.getDefaultInstance();
+          }
+          deltaBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              io.bloombox.schema.services.menu.v1beta1.GetMenu.StreamEvent.MenuChanges, io.bloombox.schema.services.menu.v1beta1.GetMenu.StreamEvent.MenuChanges.Builder, io.bloombox.schema.services.menu.v1beta1.GetMenu.StreamEvent.MenuChangesOrBuilder>(
+                  (io.bloombox.schema.services.menu.v1beta1.GetMenu.StreamEvent.MenuChanges) payload_,
+                  getParentForChildren(),
+                  isClean());
+          payload_ = null;
+        }
+        payloadCase_ = 11;
+        onChanged();;
+        return deltaBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:bloombox.services.menu.v1beta1.GetMenu.StreamEvent)
+    }
+
+    // @@protoc_insertion_point(class_scope:bloombox.services.menu.v1beta1.GetMenu.StreamEvent)
+    private static final io.bloombox.schema.services.menu.v1beta1.GetMenu.StreamEvent DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new io.bloombox.schema.services.menu.v1beta1.GetMenu.StreamEvent();
+    }
+
+    public static io.bloombox.schema.services.menu.v1beta1.GetMenu.StreamEvent getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<StreamEvent>
+        PARSER = new com.google.protobuf.AbstractParser<StreamEvent>() {
+      @java.lang.Override
+      public StreamEvent parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new StreamEvent(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<StreamEvent> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<StreamEvent> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public io.bloombox.schema.services.menu.v1beta1.GetMenu.StreamEvent getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -2229,9 +8258,8 @@ private static final long serialVersionUID = 0L;
     }
     io.bloombox.schema.services.menu.v1beta1.GetMenu other = (io.bloombox.schema.services.menu.v1beta1.GetMenu) obj;
 
-    boolean result = true;
-    result = result && unknownFields.equals(other.unknownFields);
-    return result;
+    if (!unknownFields.equals(other.unknownFields)) return false;
+    return true;
   }
 
   @java.lang.Override
@@ -2411,35 +8439,35 @@ private static final long serialVersionUID = 0L;
 
     @java.lang.Override
     public Builder clone() {
-      return (Builder) super.clone();
+      return super.clone();
     }
     @java.lang.Override
     public Builder setField(
         com.google.protobuf.Descriptors.FieldDescriptor field,
         java.lang.Object value) {
-      return (Builder) super.setField(field, value);
+      return super.setField(field, value);
     }
     @java.lang.Override
     public Builder clearField(
         com.google.protobuf.Descriptors.FieldDescriptor field) {
-      return (Builder) super.clearField(field);
+      return super.clearField(field);
     }
     @java.lang.Override
     public Builder clearOneof(
         com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-      return (Builder) super.clearOneof(oneof);
+      return super.clearOneof(oneof);
     }
     @java.lang.Override
     public Builder setRepeatedField(
         com.google.protobuf.Descriptors.FieldDescriptor field,
         int index, java.lang.Object value) {
-      return (Builder) super.setRepeatedField(field, index, value);
+      return super.setRepeatedField(field, index, value);
     }
     @java.lang.Override
     public Builder addRepeatedField(
         com.google.protobuf.Descriptors.FieldDescriptor field,
         java.lang.Object value) {
-      return (Builder) super.addRepeatedField(field, value);
+      return super.addRepeatedField(field, value);
     }
     @java.lang.Override
     public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -2484,7 +8512,7 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public final Builder setUnknownFields(
         final com.google.protobuf.UnknownFieldSet unknownFields) {
-      return super.setUnknownFieldsProto3(unknownFields);
+      return super.setUnknownFields(unknownFields);
     }
 
     @java.lang.Override

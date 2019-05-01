@@ -1,12 +1,11 @@
 /*
- * Copyright 2018, Momentum Ideas, Co. All rights reserved.
+ * Copyright 2019, Momentum Ideas Co.
  *
- * Source and object computer code contained herein is the private intellectual
- * property of Momentum Ideas Co., a Delaware Corporation. Use of this
- * code in source form requires permission in writing before use or the
- * assembly, distribution, or publishing of derivative works, for commercial
- * purposes or any other purpose, from a duly authorized officer of Momentum
- * Ideas Co.
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *  http://www.apache.org/licenses/LICENSE-2.0
  *
  * Unless required by applicable law or agreed to in writing, software
  * distributed under the License is distributed on an "AS IS" BASIS,
@@ -21,19 +20,35 @@
 package io.opencannabis.schema.product.struct.testing;
 
 /**
+ * <pre>
+ * Specifies the different types of testing media that may be generated to act as verification of testing.
+ * </pre>
+ *
  * Protobuf enum {@code opencannabis.structs.labtesting.TestMediaType}
  */
 public enum TestMediaType
     implements com.google.protobuf.ProtocolMessageEnum {
   /**
+   * <pre>
+   * Represents a Certificate of Authenticity.
+   * </pre>
+   *
    * <code>CERTIFICATE = 0;</code>
    */
   CERTIFICATE(0),
   /**
+   * <pre>
+   * Represents a set of results from a test.
+   * </pre>
+   *
    * <code>RESULTS = 1;</code>
    */
   RESULTS(1),
   /**
+   * <pre>
+   * Represents a product image.
+   * </pre>
+   *
    * <code>PRODUCT_IMAGE = 2;</code>
    */
   PRODUCT_IMAGE(2),
@@ -41,14 +56,26 @@ public enum TestMediaType
   ;
 
   /**
+   * <pre>
+   * Represents a Certificate of Authenticity.
+   * </pre>
+   *
    * <code>CERTIFICATE = 0;</code>
    */
   public static final int CERTIFICATE_VALUE = 0;
   /**
+   * <pre>
+   * Represents a set of results from a test.
+   * </pre>
+   *
    * <code>RESULTS = 1;</code>
    */
   public static final int RESULTS_VALUE = 1;
   /**
+   * <pre>
+   * Represents a product image.
+   * </pre>
+   *
    * <code>PRODUCT_IMAGE = 2;</code>
    */
   public static final int PRODUCT_IMAGE_VALUE = 2;

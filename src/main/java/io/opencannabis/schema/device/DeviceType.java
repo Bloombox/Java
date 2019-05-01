@@ -1,12 +1,11 @@
 /*
- * Copyright 2018, Momentum Ideas, Co. All rights reserved.
+ * Copyright 2019, Momentum Ideas Co.
  *
- * Source and object computer code contained herein is the private intellectual
- * property of Momentum Ideas Co., a Delaware Corporation. Use of this
- * code in source form requires permission in writing before use or the
- * assembly, distribution, or publishing of derivative works, for commercial
- * purposes or any other purpose, from a duly authorized officer of Momentum
- * Ideas Co.
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *  http://www.apache.org/licenses/LICENSE-2.0
  *
  * Unless required by applicable law or agreed to in writing, software
  * distributed under the License is distributed on an "AS IS" BASIS,
@@ -69,6 +68,22 @@ public enum DeviceType
    * <code>TV = 4;</code>
    */
   TV(4),
+  /**
+   * <pre>
+   * Small or embedded compute units.
+   * </pre>
+   *
+   * <code>EMBEDDED = 5;</code>
+   */
+  EMBEDDED(5),
+  /**
+   * <pre>
+   * Server units.
+   * </pre>
+   *
+   * <code>SERVER = 6;</code>
+   */
+  SERVER(6),
   UNRECOGNIZED(-1),
   ;
 
@@ -112,6 +127,22 @@ public enum DeviceType
    * <code>TV = 4;</code>
    */
   public static final int TV_VALUE = 4;
+  /**
+   * <pre>
+   * Small or embedded compute units.
+   * </pre>
+   *
+   * <code>EMBEDDED = 5;</code>
+   */
+  public static final int EMBEDDED_VALUE = 5;
+  /**
+   * <pre>
+   * Server units.
+   * </pre>
+   *
+   * <code>SERVER = 6;</code>
+   */
+  public static final int SERVER_VALUE = 6;
 
 
   public final int getNumber() {
@@ -137,6 +168,8 @@ public enum DeviceType
       case 2: return PHONE;
       case 3: return TABLET;
       case 4: return TV;
+      case 5: return EMBEDDED;
+      case 6: return SERVER;
       default: return null;
     }
   }

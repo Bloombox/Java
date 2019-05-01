@@ -1,5 +1,5 @@
 /*
- * Copyright 2018, Momentum Ideas, Co. All rights reserved.
+ * Copyright 2019, Momentum Ideas, Co. All rights reserved.
  *
  * Source and object computer code contained herein is the private intellectual
  * property of Momentum Ideas Co., a Delaware Corporation. Use of this
@@ -377,7 +377,7 @@ public final class IdentityID {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -686,35 +686,32 @@ public final class IdentityID {
       }
       io.bloombox.schema.identity.IdentityID.IDReference other = (io.bloombox.schema.identity.IdentityID.IDReference) obj;
 
-      boolean result = true;
-      result = result && type_ == other.type_;
-      result = result && (hasExpireDate() == other.hasExpireDate());
+      if (type_ != other.type_) return false;
+      if (hasExpireDate() != other.hasExpireDate()) return false;
       if (hasExpireDate()) {
-        result = result && getExpireDate()
-            .equals(other.getExpireDate());
+        if (!getExpireDate()
+            .equals(other.getExpireDate())) return false;
       }
-      result = result && (hasBirthDate() == other.hasBirthDate());
+      if (hasBirthDate() != other.hasBirthDate()) return false;
       if (hasBirthDate()) {
-        result = result && getBirthDate()
-            .equals(other.getBirthDate());
+        if (!getBirthDate()
+            .equals(other.getBirthDate())) return false;
       }
-      result = result && getDocumentCase().equals(
-          other.getDocumentCase());
-      if (!result) return false;
+      if (!getDocumentCase().equals(other.getDocumentCase())) return false;
       switch (documentCase_) {
         case 20:
-          result = result && getLicense()
-              .equals(other.getLicense());
+          if (!getLicense()
+              .equals(other.getLicense())) return false;
           break;
         case 21:
-          result = result && getPassport()
-              .equals(other.getPassport());
+          if (!getPassport()
+              .equals(other.getPassport())) return false;
           break;
         case 0:
         default:
       }
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -957,35 +954,35 @@ public final class IdentityID {
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -1130,7 +1127,7 @@ public final class IdentityID {
         return this;
       }
 
-      private io.opencannabis.schema.temporal.TemporalDate.Date expireDate_ = null;
+      private io.opencannabis.schema.temporal.TemporalDate.Date expireDate_;
       private com.google.protobuf.SingleFieldBuilderV3<
           io.opencannabis.schema.temporal.TemporalDate.Date, io.opencannabis.schema.temporal.TemporalDate.Date.Builder, io.opencannabis.schema.temporal.TemporalDate.DateOrBuilder> expireDateBuilder_;
       /**
@@ -1283,7 +1280,7 @@ public final class IdentityID {
         return expireDateBuilder_;
       }
 
-      private io.opencannabis.schema.temporal.TemporalDate.Date birthDate_ = null;
+      private io.opencannabis.schema.temporal.TemporalDate.Date birthDate_;
       private com.google.protobuf.SingleFieldBuilderV3<
           io.opencannabis.schema.temporal.TemporalDate.Date, io.opencannabis.schema.temporal.TemporalDate.Date.Builder, io.opencannabis.schema.temporal.TemporalDate.DateOrBuilder> birthDateBuilder_;
       /**
@@ -1782,7 +1779,7 @@ public final class IdentityID {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -2019,7 +2016,6 @@ public final class IdentityID {
     private ID() {
       type_ = 0;
       id_ = "";
-      verified_ = false;
       globalId_ = "";
     }
 
@@ -2125,7 +2121,7 @@ public final class IdentityID {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -2550,41 +2546,38 @@ public final class IdentityID {
       }
       io.bloombox.schema.identity.IdentityID.ID other = (io.bloombox.schema.identity.IdentityID.ID) obj;
 
-      boolean result = true;
-      result = result && type_ == other.type_;
-      result = result && getId()
-          .equals(other.getId());
-      result = result && (hasExpireDate() == other.hasExpireDate());
+      if (type_ != other.type_) return false;
+      if (!getId()
+          .equals(other.getId())) return false;
+      if (hasExpireDate() != other.hasExpireDate()) return false;
       if (hasExpireDate()) {
-        result = result && getExpireDate()
-            .equals(other.getExpireDate());
+        if (!getExpireDate()
+            .equals(other.getExpireDate())) return false;
       }
-      result = result && (hasBirthDate() == other.hasBirthDate());
+      if (hasBirthDate() != other.hasBirthDate()) return false;
       if (hasBirthDate()) {
-        result = result && getBirthDate()
-            .equals(other.getBirthDate());
+        if (!getBirthDate()
+            .equals(other.getBirthDate())) return false;
       }
-      result = result && (getVerified()
-          == other.getVerified());
-      result = result && getGlobalId()
-          .equals(other.getGlobalId());
-      result = result && getDocumentCase().equals(
-          other.getDocumentCase());
-      if (!result) return false;
+      if (getVerified()
+          != other.getVerified()) return false;
+      if (!getGlobalId()
+          .equals(other.getGlobalId())) return false;
+      if (!getDocumentCase().equals(other.getDocumentCase())) return false;
       switch (documentCase_) {
         case 20:
-          result = result && getLicense()
-              .equals(other.getLicense());
+          if (!getLicense()
+              .equals(other.getLicense())) return false;
           break;
         case 21:
-          result = result && getPassport()
-              .equals(other.getPassport());
+          if (!getPassport()
+              .equals(other.getPassport())) return false;
           break;
         case 0:
         default:
       }
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -2843,35 +2836,35 @@ public final class IdentityID {
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -3116,7 +3109,7 @@ public final class IdentityID {
         return this;
       }
 
-      private io.opencannabis.schema.temporal.TemporalDate.Date expireDate_ = null;
+      private io.opencannabis.schema.temporal.TemporalDate.Date expireDate_;
       private com.google.protobuf.SingleFieldBuilderV3<
           io.opencannabis.schema.temporal.TemporalDate.Date, io.opencannabis.schema.temporal.TemporalDate.Date.Builder, io.opencannabis.schema.temporal.TemporalDate.DateOrBuilder> expireDateBuilder_;
       /**
@@ -3269,7 +3262,7 @@ public final class IdentityID {
         return expireDateBuilder_;
       }
 
-      private io.opencannabis.schema.temporal.TemporalDate.Date birthDate_ = null;
+      private io.opencannabis.schema.temporal.TemporalDate.Date birthDate_;
       private com.google.protobuf.SingleFieldBuilderV3<
           io.opencannabis.schema.temporal.TemporalDate.Date, io.opencannabis.schema.temporal.TemporalDate.Date.Builder, io.opencannabis.schema.temporal.TemporalDate.DateOrBuilder> birthDateBuilder_;
       /**
@@ -3895,7 +3888,7 @@ public final class IdentityID {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override

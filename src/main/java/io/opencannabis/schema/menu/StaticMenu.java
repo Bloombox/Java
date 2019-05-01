@@ -1,12 +1,11 @@
 /*
- * Copyright 2018, Momentum Ideas, Co. All rights reserved.
+ * Copyright 2019, Momentum Ideas Co.
  *
- * Source and object computer code contained herein is the private intellectual
- * property of Momentum Ideas Co., a Delaware Corporation. Use of this
- * code in source form requires permission in writing before use or the
- * assembly, distribution, or publishing of derivative works, for commercial
- * purposes or any other purpose, from a duly authorized officer of Momentum
- * Ideas Co.
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *  http://www.apache.org/licenses/LICENSE-2.0
  *
  * Unless required by applicable law or agreed to in writing, software
  * distributed under the License is distributed on an "AS IS" BASIS,
@@ -65,7 +64,7 @@ private static final long serialVersionUID = 0L;
             done = true;
             break;
           case 10: {
-            if (!((mutable_bitField0_ & 0x00000001) == 0x00000001)) {
+            if (!((mutable_bitField0_ & 0x00000001) != 0)) {
               apothecary_ = com.google.protobuf.MapField.newMapField(
                   ApothecaryDefaultEntryHolder.defaultEntry);
               mutable_bitField0_ |= 0x00000001;
@@ -78,7 +77,7 @@ private static final long serialVersionUID = 0L;
             break;
           }
           case 18: {
-            if (!((mutable_bitField0_ & 0x00000002) == 0x00000002)) {
+            if (!((mutable_bitField0_ & 0x00000002) != 0)) {
               cartridges_ = com.google.protobuf.MapField.newMapField(
                   CartridgesDefaultEntryHolder.defaultEntry);
               mutable_bitField0_ |= 0x00000002;
@@ -91,7 +90,7 @@ private static final long serialVersionUID = 0L;
             break;
           }
           case 26: {
-            if (!((mutable_bitField0_ & 0x00000004) == 0x00000004)) {
+            if (!((mutable_bitField0_ & 0x00000004) != 0)) {
               edibles_ = com.google.protobuf.MapField.newMapField(
                   EdiblesDefaultEntryHolder.defaultEntry);
               mutable_bitField0_ |= 0x00000004;
@@ -104,7 +103,7 @@ private static final long serialVersionUID = 0L;
             break;
           }
           case 34: {
-            if (!((mutable_bitField0_ & 0x00000008) == 0x00000008)) {
+            if (!((mutable_bitField0_ & 0x00000008) != 0)) {
               extracts_ = com.google.protobuf.MapField.newMapField(
                   ExtractsDefaultEntryHolder.defaultEntry);
               mutable_bitField0_ |= 0x00000008;
@@ -117,7 +116,7 @@ private static final long serialVersionUID = 0L;
             break;
           }
           case 42: {
-            if (!((mutable_bitField0_ & 0x00000010) == 0x00000010)) {
+            if (!((mutable_bitField0_ & 0x00000010) != 0)) {
               flowers_ = com.google.protobuf.MapField.newMapField(
                   FlowersDefaultEntryHolder.defaultEntry);
               mutable_bitField0_ |= 0x00000010;
@@ -130,7 +129,7 @@ private static final long serialVersionUID = 0L;
             break;
           }
           case 50: {
-            if (!((mutable_bitField0_ & 0x00000020) == 0x00000020)) {
+            if (!((mutable_bitField0_ & 0x00000020) != 0)) {
               merchandise_ = com.google.protobuf.MapField.newMapField(
                   MerchandiseDefaultEntryHolder.defaultEntry);
               mutable_bitField0_ |= 0x00000020;
@@ -143,7 +142,7 @@ private static final long serialVersionUID = 0L;
             break;
           }
           case 58: {
-            if (!((mutable_bitField0_ & 0x00000040) == 0x00000040)) {
+            if (!((mutable_bitField0_ & 0x00000040) != 0)) {
               plants_ = com.google.protobuf.MapField.newMapField(
                   PlantsDefaultEntryHolder.defaultEntry);
               mutable_bitField0_ |= 0x00000040;
@@ -156,7 +155,7 @@ private static final long serialVersionUID = 0L;
             break;
           }
           case 66: {
-            if (!((mutable_bitField0_ & 0x00000080) == 0x00000080)) {
+            if (!((mutable_bitField0_ & 0x00000080) != 0)) {
               prerolls_ = com.google.protobuf.MapField.newMapField(
                   PrerollsDefaultEntryHolder.defaultEntry);
               mutable_bitField0_ |= 0x00000080;
@@ -169,7 +168,7 @@ private static final long serialVersionUID = 0L;
             break;
           }
           default: {
-            if (!parseUnknownFieldProto3(
+            if (!parseUnknownField(
                 input, unknownFields, extensionRegistry, tag)) {
               done = true;
             }
@@ -1128,25 +1127,24 @@ private static final long serialVersionUID = 0L;
     }
     io.opencannabis.schema.menu.StaticMenu other = (io.opencannabis.schema.menu.StaticMenu) obj;
 
-    boolean result = true;
-    result = result && internalGetApothecary().equals(
-        other.internalGetApothecary());
-    result = result && internalGetCartridges().equals(
-        other.internalGetCartridges());
-    result = result && internalGetEdibles().equals(
-        other.internalGetEdibles());
-    result = result && internalGetExtracts().equals(
-        other.internalGetExtracts());
-    result = result && internalGetFlowers().equals(
-        other.internalGetFlowers());
-    result = result && internalGetMerchandise().equals(
-        other.internalGetMerchandise());
-    result = result && internalGetPlants().equals(
-        other.internalGetPlants());
-    result = result && internalGetPrerolls().equals(
-        other.internalGetPrerolls());
-    result = result && unknownFields.equals(other.unknownFields);
-    return result;
+    if (!internalGetApothecary().equals(
+        other.internalGetApothecary())) return false;
+    if (!internalGetCartridges().equals(
+        other.internalGetCartridges())) return false;
+    if (!internalGetEdibles().equals(
+        other.internalGetEdibles())) return false;
+    if (!internalGetExtracts().equals(
+        other.internalGetExtracts())) return false;
+    if (!internalGetFlowers().equals(
+        other.internalGetFlowers())) return false;
+    if (!internalGetMerchandise().equals(
+        other.internalGetMerchandise())) return false;
+    if (!internalGetPlants().equals(
+        other.internalGetPlants())) return false;
+    if (!internalGetPrerolls().equals(
+        other.internalGetPrerolls())) return false;
+    if (!unknownFields.equals(other.unknownFields)) return false;
+    return true;
   }
 
   @java.lang.Override
@@ -1433,35 +1431,35 @@ private static final long serialVersionUID = 0L;
 
     @java.lang.Override
     public Builder clone() {
-      return (Builder) super.clone();
+      return super.clone();
     }
     @java.lang.Override
     public Builder setField(
         com.google.protobuf.Descriptors.FieldDescriptor field,
         java.lang.Object value) {
-      return (Builder) super.setField(field, value);
+      return super.setField(field, value);
     }
     @java.lang.Override
     public Builder clearField(
         com.google.protobuf.Descriptors.FieldDescriptor field) {
-      return (Builder) super.clearField(field);
+      return super.clearField(field);
     }
     @java.lang.Override
     public Builder clearOneof(
         com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-      return (Builder) super.clearOneof(oneof);
+      return super.clearOneof(oneof);
     }
     @java.lang.Override
     public Builder setRepeatedField(
         com.google.protobuf.Descriptors.FieldDescriptor field,
         int index, java.lang.Object value) {
-      return (Builder) super.setRepeatedField(field, index, value);
+      return super.setRepeatedField(field, index, value);
     }
     @java.lang.Override
     public Builder addRepeatedField(
         com.google.protobuf.Descriptors.FieldDescriptor field,
         java.lang.Object value) {
-      return (Builder) super.addRepeatedField(field, value);
+      return super.addRepeatedField(field, value);
     }
     @java.lang.Override
     public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -2731,7 +2729,7 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public final Builder setUnknownFields(
         final com.google.protobuf.UnknownFieldSet unknownFields) {
-      return super.setUnknownFieldsProto3(unknownFields);
+      return super.setUnknownFields(unknownFields);
     }
 
     @java.lang.Override

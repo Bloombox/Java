@@ -1,5 +1,5 @@
 /*
- * Copyright 2018, Momentum Ideas, Co. All rights reserved.
+ * Copyright 2019, Momentum Ideas, Co. All rights reserved.
  *
  * Source and object computer code contained herein is the private intellectual
  * property of Momentum Ideas Co., a Delaware Corporation. Use of this
@@ -38,7 +38,7 @@ import static io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall;
  * </pre>
  */
 @javax.annotation.Generated(
-    value = "by gRPC proto compiler (version 1.18.0-SNAPSHOT)",
+    value = "by gRPC proto compiler (version 1.18.0)",
     comments = "Source: menu/v1beta1/MenuService_Beta1.proto")
 public final class MenuGrpc {
 
@@ -77,6 +77,38 @@ public final class MenuGrpc {
         }
      }
      return getRetrieveMethod;
+  }
+
+  private static volatile io.grpc.MethodDescriptor<io.bloombox.schema.services.menu.v1beta1.GetMenu.Request,
+      io.bloombox.schema.services.menu.v1beta1.GetMenu.StreamEvent> getLiveMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "Live",
+      requestType = io.bloombox.schema.services.menu.v1beta1.GetMenu.Request.class,
+      responseType = io.bloombox.schema.services.menu.v1beta1.GetMenu.StreamEvent.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.SERVER_STREAMING)
+  public static io.grpc.MethodDescriptor<io.bloombox.schema.services.menu.v1beta1.GetMenu.Request,
+      io.bloombox.schema.services.menu.v1beta1.GetMenu.StreamEvent> getLiveMethod() {
+    io.grpc.MethodDescriptor<io.bloombox.schema.services.menu.v1beta1.GetMenu.Request, io.bloombox.schema.services.menu.v1beta1.GetMenu.StreamEvent> getLiveMethod;
+    if ((getLiveMethod = MenuGrpc.getLiveMethod) == null) {
+      synchronized (MenuGrpc.class) {
+        if ((getLiveMethod = MenuGrpc.getLiveMethod) == null) {
+          MenuGrpc.getLiveMethod = getLiveMethod = 
+              io.grpc.MethodDescriptor.<io.bloombox.schema.services.menu.v1beta1.GetMenu.Request, io.bloombox.schema.services.menu.v1beta1.GetMenu.StreamEvent>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.SERVER_STREAMING)
+              .setFullMethodName(generateFullMethodName(
+                  "bloombox.services.menu.v1beta1.Menu", "Live"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  io.bloombox.schema.services.menu.v1beta1.GetMenu.Request.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  io.bloombox.schema.services.menu.v1beta1.GetMenu.StreamEvent.getDefaultInstance()))
+                  .setSchemaDescriptor(new MenuMethodDescriptorSupplier("Live"))
+                  .build();
+          }
+        }
+     }
+     return getLiveMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<io.bloombox.schema.services.menu.v1beta1.GetMenu.Request,
@@ -173,6 +205,38 @@ public final class MenuGrpc {
         }
      }
      return getProductsMethod;
+  }
+
+  private static volatile io.grpc.MethodDescriptor<io.bloombox.schema.services.menu.v1beta1.GetCatalog.Request,
+      com.google.api.HttpBody> getCatalogMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "Catalog",
+      requestType = io.bloombox.schema.services.menu.v1beta1.GetCatalog.Request.class,
+      responseType = com.google.api.HttpBody.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<io.bloombox.schema.services.menu.v1beta1.GetCatalog.Request,
+      com.google.api.HttpBody> getCatalogMethod() {
+    io.grpc.MethodDescriptor<io.bloombox.schema.services.menu.v1beta1.GetCatalog.Request, com.google.api.HttpBody> getCatalogMethod;
+    if ((getCatalogMethod = MenuGrpc.getCatalogMethod) == null) {
+      synchronized (MenuGrpc.class) {
+        if ((getCatalogMethod = MenuGrpc.getCatalogMethod) == null) {
+          MenuGrpc.getCatalogMethod = getCatalogMethod = 
+              io.grpc.MethodDescriptor.<io.bloombox.schema.services.menu.v1beta1.GetCatalog.Request, com.google.api.HttpBody>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(
+                  "bloombox.services.menu.v1beta1.Menu", "Catalog"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  io.bloombox.schema.services.menu.v1beta1.GetCatalog.Request.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.google.api.HttpBody.getDefaultInstance()))
+                  .setSchemaDescriptor(new MenuMethodDescriptorSupplier("Catalog"))
+                  .build();
+          }
+        }
+     }
+     return getCatalogMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<io.bloombox.schema.services.menu.v1beta1.SearchMenu.Request,
@@ -441,6 +505,16 @@ public final class MenuGrpc {
 
     /**
      * <pre>
+     * Begin a live menu streaming session, where changes are pushed to the listening code in real-time.
+     * </pre>
+     */
+    public void live(io.bloombox.schema.services.menu.v1beta1.GetMenu.Request request,
+        io.grpc.stub.StreamObserver<io.bloombox.schema.services.menu.v1beta1.GetMenu.StreamEvent> responseObserver) {
+      asyncUnimplementedUnaryCall(getLiveMethod(), responseObserver);
+    }
+
+    /**
+     * <pre>
      * Specifies an operation to read a sectioned menu.
      * </pre>
      */
@@ -467,6 +541,16 @@ public final class MenuGrpc {
     public void products(io.bloombox.schema.services.menu.v1beta1.GetProduct.Request request,
         io.grpc.stub.StreamObserver<io.bloombox.schema.services.menu.v1beta1.GetProduct.Response> responseObserver) {
       asyncUnimplementedUnaryCall(getProductsMethod(), responseObserver);
+    }
+
+    /**
+     * <pre>
+     * Retrieve products in a universal catalog format, based on CSV.
+     * </pre>
+     */
+    public void catalog(io.bloombox.schema.services.menu.v1beta1.GetCatalog.Request request,
+        io.grpc.stub.StreamObserver<com.google.api.HttpBody> responseObserver) {
+      asyncUnimplementedUnaryCall(getCatalogMethod(), responseObserver);
     }
 
     /**
@@ -549,6 +633,13 @@ public final class MenuGrpc {
                 io.bloombox.schema.services.menu.v1beta1.GetMenu.Response>(
                   this, METHODID_RETRIEVE)))
           .addMethod(
+            getLiveMethod(),
+            asyncServerStreamingCall(
+              new MethodHandlers<
+                io.bloombox.schema.services.menu.v1beta1.GetMenu.Request,
+                io.bloombox.schema.services.menu.v1beta1.GetMenu.StreamEvent>(
+                  this, METHODID_LIVE)))
+          .addMethod(
             getSectionMethod(),
             asyncUnaryCall(
               new MethodHandlers<
@@ -569,6 +660,13 @@ public final class MenuGrpc {
                 io.bloombox.schema.services.menu.v1beta1.GetProduct.Request,
                 io.bloombox.schema.services.menu.v1beta1.GetProduct.Response>(
                   this, METHODID_PRODUCTS)))
+          .addMethod(
+            getCatalogMethod(),
+            asyncUnaryCall(
+              new MethodHandlers<
+                io.bloombox.schema.services.menu.v1beta1.GetCatalog.Request,
+                com.google.api.HttpBody>(
+                  this, METHODID_CATALOG)))
           .addMethod(
             getSearchMethod(),
             asyncUnaryCall(
@@ -656,6 +754,17 @@ public final class MenuGrpc {
 
     /**
      * <pre>
+     * Begin a live menu streaming session, where changes are pushed to the listening code in real-time.
+     * </pre>
+     */
+    public void live(io.bloombox.schema.services.menu.v1beta1.GetMenu.Request request,
+        io.grpc.stub.StreamObserver<io.bloombox.schema.services.menu.v1beta1.GetMenu.StreamEvent> responseObserver) {
+      asyncServerStreamingCall(
+          getChannel().newCall(getLiveMethod(), getCallOptions()), request, responseObserver);
+    }
+
+    /**
+     * <pre>
      * Specifies an operation to read a sectioned menu.
      * </pre>
      */
@@ -685,6 +794,17 @@ public final class MenuGrpc {
         io.grpc.stub.StreamObserver<io.bloombox.schema.services.menu.v1beta1.GetProduct.Response> responseObserver) {
       asyncUnaryCall(
           getChannel().newCall(getProductsMethod(), getCallOptions()), request, responseObserver);
+    }
+
+    /**
+     * <pre>
+     * Retrieve products in a universal catalog format, based on CSV.
+     * </pre>
+     */
+    public void catalog(io.bloombox.schema.services.menu.v1beta1.GetCatalog.Request request,
+        io.grpc.stub.StreamObserver<com.google.api.HttpBody> responseObserver) {
+      asyncUnaryCall(
+          getChannel().newCall(getCatalogMethod(), getCallOptions()), request, responseObserver);
     }
 
     /**
@@ -798,6 +918,17 @@ public final class MenuGrpc {
 
     /**
      * <pre>
+     * Begin a live menu streaming session, where changes are pushed to the listening code in real-time.
+     * </pre>
+     */
+    public java.util.Iterator<io.bloombox.schema.services.menu.v1beta1.GetMenu.StreamEvent> live(
+        io.bloombox.schema.services.menu.v1beta1.GetMenu.Request request) {
+      return blockingServerStreamingCall(
+          getChannel(), getLiveMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
      * Specifies an operation to read a sectioned menu.
      * </pre>
      */
@@ -824,6 +955,16 @@ public final class MenuGrpc {
     public io.bloombox.schema.services.menu.v1beta1.GetProduct.Response products(io.bloombox.schema.services.menu.v1beta1.GetProduct.Request request) {
       return blockingUnaryCall(
           getChannel(), getProductsMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * Retrieve products in a universal catalog format, based on CSV.
+     * </pre>
+     */
+    public com.google.api.HttpBody catalog(io.bloombox.schema.services.menu.v1beta1.GetCatalog.Request request) {
+      return blockingUnaryCall(
+          getChannel(), getCatalogMethod(), getCallOptions(), request);
     }
 
     /**
@@ -964,6 +1105,17 @@ public final class MenuGrpc {
 
     /**
      * <pre>
+     * Retrieve products in a universal catalog format, based on CSV.
+     * </pre>
+     */
+    public com.google.common.util.concurrent.ListenableFuture<com.google.api.HttpBody> catalog(
+        io.bloombox.schema.services.menu.v1beta1.GetCatalog.Request request) {
+      return futureUnaryCall(
+          getChannel().newCall(getCatalogMethod(), getCallOptions()), request);
+    }
+
+    /**
+     * <pre>
      * Specifies an operation to read a full or sectioned menu.
      * </pre>
      */
@@ -1041,16 +1193,18 @@ public final class MenuGrpc {
   }
 
   private static final int METHODID_RETRIEVE = 0;
-  private static final int METHODID_SECTION = 1;
-  private static final int METHODID_FEATURED = 2;
-  private static final int METHODID_PRODUCTS = 3;
-  private static final int METHODID_SEARCH = 4;
-  private static final int METHODID_CREATE = 5;
-  private static final int METHODID_UPDATE = 6;
-  private static final int METHODID_REMOVE = 7;
-  private static final int METHODID_PRODUCT_STATUS = 8;
-  private static final int METHODID_IN_STOCK = 9;
-  private static final int METHODID_OUT_OF_STOCK = 10;
+  private static final int METHODID_LIVE = 1;
+  private static final int METHODID_SECTION = 2;
+  private static final int METHODID_FEATURED = 3;
+  private static final int METHODID_PRODUCTS = 4;
+  private static final int METHODID_CATALOG = 5;
+  private static final int METHODID_SEARCH = 6;
+  private static final int METHODID_CREATE = 7;
+  private static final int METHODID_UPDATE = 8;
+  private static final int METHODID_REMOVE = 9;
+  private static final int METHODID_PRODUCT_STATUS = 10;
+  private static final int METHODID_IN_STOCK = 11;
+  private static final int METHODID_OUT_OF_STOCK = 12;
 
   private static final class MethodHandlers<Req, Resp> implements
       io.grpc.stub.ServerCalls.UnaryMethod<Req, Resp>,
@@ -1073,6 +1227,10 @@ public final class MenuGrpc {
           serviceImpl.retrieve((io.bloombox.schema.services.menu.v1beta1.GetMenu.Request) request,
               (io.grpc.stub.StreamObserver<io.bloombox.schema.services.menu.v1beta1.GetMenu.Response>) responseObserver);
           break;
+        case METHODID_LIVE:
+          serviceImpl.live((io.bloombox.schema.services.menu.v1beta1.GetMenu.Request) request,
+              (io.grpc.stub.StreamObserver<io.bloombox.schema.services.menu.v1beta1.GetMenu.StreamEvent>) responseObserver);
+          break;
         case METHODID_SECTION:
           serviceImpl.section((io.bloombox.schema.services.menu.v1beta1.GetMenu.Request) request,
               (io.grpc.stub.StreamObserver<io.bloombox.schema.services.menu.v1beta1.GetMenu.Response>) responseObserver);
@@ -1084,6 +1242,10 @@ public final class MenuGrpc {
         case METHODID_PRODUCTS:
           serviceImpl.products((io.bloombox.schema.services.menu.v1beta1.GetProduct.Request) request,
               (io.grpc.stub.StreamObserver<io.bloombox.schema.services.menu.v1beta1.GetProduct.Response>) responseObserver);
+          break;
+        case METHODID_CATALOG:
+          serviceImpl.catalog((io.bloombox.schema.services.menu.v1beta1.GetCatalog.Request) request,
+              (io.grpc.stub.StreamObserver<com.google.api.HttpBody>) responseObserver);
           break;
         case METHODID_SEARCH:
           serviceImpl.search((io.bloombox.schema.services.menu.v1beta1.SearchMenu.Request) request,
@@ -1175,9 +1337,11 @@ public final class MenuGrpc {
           serviceDescriptor = result = io.grpc.ServiceDescriptor.newBuilder(SERVICE_NAME)
               .setSchemaDescriptor(new MenuFileDescriptorSupplier())
               .addMethod(getRetrieveMethod())
+              .addMethod(getLiveMethod())
               .addMethod(getSectionMethod())
               .addMethod(getFeaturedMethod())
               .addMethod(getProductsMethod())
+              .addMethod(getCatalogMethod())
               .addMethod(getSearchMethod())
               .addMethod(getCreateMethod())
               .addMethod(getUpdateMethod())

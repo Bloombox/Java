@@ -1,5 +1,5 @@
 /*
- * Copyright 2018, Momentum Ideas, Co. All rights reserved.
+ * Copyright 2019, Momentum Ideas, Co. All rights reserved.
  *
  * Source and object computer code contained herein is the private intellectual
  * property of Momentum Ideas Co., a Delaware Corporation. Use of this
@@ -193,7 +193,7 @@ public final class AppMember {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -382,24 +382,23 @@ public final class AppMember {
       }
       io.bloombox.schema.identity.AppMember.MembershipTimestamps other = (io.bloombox.schema.identity.AppMember.MembershipTimestamps) obj;
 
-      boolean result = true;
-      result = result && (hasEstablished() == other.hasEstablished());
+      if (hasEstablished() != other.hasEstablished()) return false;
       if (hasEstablished()) {
-        result = result && getEstablished()
-            .equals(other.getEstablished());
+        if (!getEstablished()
+            .equals(other.getEstablished())) return false;
       }
-      result = result && (hasSeen() == other.hasSeen());
+      if (hasSeen() != other.hasSeen()) return false;
       if (hasSeen()) {
-        result = result && getSeen()
-            .equals(other.getSeen());
+        if (!getSeen()
+            .equals(other.getSeen())) return false;
       }
-      result = result && (hasPurchase() == other.hasPurchase());
+      if (hasPurchase() != other.hasPurchase()) return false;
       if (hasPurchase()) {
-        result = result && getPurchase()
-            .equals(other.getPurchase());
+        if (!getPurchase()
+            .equals(other.getPurchase())) return false;
       }
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -623,35 +622,35 @@ public final class AppMember {
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -703,7 +702,7 @@ public final class AppMember {
         return this;
       }
 
-      private io.opencannabis.schema.temporal.TemporalInstant.Instant established_ = null;
+      private io.opencannabis.schema.temporal.TemporalInstant.Instant established_;
       private com.google.protobuf.SingleFieldBuilderV3<
           io.opencannabis.schema.temporal.TemporalInstant.Instant, io.opencannabis.schema.temporal.TemporalInstant.Instant.Builder, io.opencannabis.schema.temporal.TemporalInstant.InstantOrBuilder> establishedBuilder_;
       /**
@@ -856,7 +855,7 @@ public final class AppMember {
         return establishedBuilder_;
       }
 
-      private io.opencannabis.schema.temporal.TemporalInstant.Instant seen_ = null;
+      private io.opencannabis.schema.temporal.TemporalInstant.Instant seen_;
       private com.google.protobuf.SingleFieldBuilderV3<
           io.opencannabis.schema.temporal.TemporalInstant.Instant, io.opencannabis.schema.temporal.TemporalInstant.Instant.Builder, io.opencannabis.schema.temporal.TemporalInstant.InstantOrBuilder> seenBuilder_;
       /**
@@ -1009,7 +1008,7 @@ public final class AppMember {
         return seenBuilder_;
       }
 
-      private io.opencannabis.schema.temporal.TemporalInstant.Instant purchase_ = null;
+      private io.opencannabis.schema.temporal.TemporalInstant.Instant purchase_;
       private com.google.protobuf.SingleFieldBuilderV3<
           io.opencannabis.schema.temporal.TemporalInstant.Instant, io.opencannabis.schema.temporal.TemporalInstant.Instant.Builder, io.opencannabis.schema.temporal.TemporalInstant.InstantOrBuilder> purchaseBuilder_;
       /**
@@ -1164,7 +1163,7 @@ public final class AppMember {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -1338,7 +1337,7 @@ public final class AppMember {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -1487,19 +1486,18 @@ public final class AppMember {
       }
       io.bloombox.schema.identity.AppMember.Membership other = (io.bloombox.schema.identity.AppMember.Membership) obj;
 
-      boolean result = true;
-      result = result && (hasKey() == other.hasKey());
+      if (hasKey() != other.hasKey()) return false;
       if (hasKey()) {
-        result = result && getKey()
-            .equals(other.getKey());
+        if (!getKey()
+            .equals(other.getKey())) return false;
       }
-      result = result && (hasTs() == other.hasTs());
+      if (hasTs() != other.hasTs()) return false;
       if (hasTs()) {
-        result = result && getTs()
-            .equals(other.getTs());
+        if (!getTs()
+            .equals(other.getTs())) return false;
       }
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -1708,35 +1706,35 @@ public final class AppMember {
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -1785,7 +1783,7 @@ public final class AppMember {
         return this;
       }
 
-      private io.bloombox.schema.identity.AppMemberKey.MembershipKey key_ = null;
+      private io.bloombox.schema.identity.AppMemberKey.MembershipKey key_;
       private com.google.protobuf.SingleFieldBuilderV3<
           io.bloombox.schema.identity.AppMemberKey.MembershipKey, io.bloombox.schema.identity.AppMemberKey.MembershipKey.Builder, io.bloombox.schema.identity.AppMemberKey.MembershipKeyOrBuilder> keyBuilder_;
       /**
@@ -1938,7 +1936,7 @@ public final class AppMember {
         return keyBuilder_;
       }
 
-      private io.bloombox.schema.identity.AppMember.MembershipTimestamps ts_ = null;
+      private io.bloombox.schema.identity.AppMember.MembershipTimestamps ts_;
       private com.google.protobuf.SingleFieldBuilderV3<
           io.bloombox.schema.identity.AppMember.MembershipTimestamps, io.bloombox.schema.identity.AppMember.MembershipTimestamps.Builder, io.bloombox.schema.identity.AppMember.MembershipTimestampsOrBuilder> tsBuilder_;
       /**
@@ -2093,7 +2091,7 @@ public final class AppMember {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override

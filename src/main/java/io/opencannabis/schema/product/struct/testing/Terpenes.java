@@ -1,12 +1,11 @@
 /*
- * Copyright 2018, Momentum Ideas, Co. All rights reserved.
+ * Copyright 2019, Momentum Ideas Co.
  *
- * Source and object computer code contained herein is the private intellectual
- * property of Momentum Ideas Co., a Delaware Corporation. Use of this
- * code in source form requires permission in writing before use or the
- * assembly, distribution, or publishing of derivative works, for commercial
- * purposes or any other purpose, from a duly authorized officer of Momentum
- * Ideas Co.
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *  http://www.apache.org/licenses/LICENSE-2.0
  *
  * Unless required by applicable law or agreed to in writing, software
  * distributed under the License is distributed on an "AS IS" BASIS,
@@ -38,7 +37,6 @@ private static final long serialVersionUID = 0L;
     super(builder);
   }
   private Terpenes() {
-    available_ = false;
     terpene_ = java.util.Collections.emptyList();
     feeling_ = java.util.Collections.emptyList();
     aroma_ = java.util.Collections.emptyList();
@@ -75,7 +73,7 @@ private static final long serialVersionUID = 0L;
           }
           case 16: {
             int rawValue = input.readEnum();
-            if (!((mutable_bitField0_ & 0x00000004) == 0x00000004)) {
+            if (!((mutable_bitField0_ & 0x00000004) != 0)) {
               feeling_ = new java.util.ArrayList<java.lang.Integer>();
               mutable_bitField0_ |= 0x00000004;
             }
@@ -87,7 +85,7 @@ private static final long serialVersionUID = 0L;
             int oldLimit = input.pushLimit(length);
             while(input.getBytesUntilLimit() > 0) {
               int rawValue = input.readEnum();
-              if (!((mutable_bitField0_ & 0x00000004) == 0x00000004)) {
+              if (!((mutable_bitField0_ & 0x00000004) != 0)) {
                 feeling_ = new java.util.ArrayList<java.lang.Integer>();
                 mutable_bitField0_ |= 0x00000004;
               }
@@ -98,7 +96,7 @@ private static final long serialVersionUID = 0L;
           }
           case 24: {
             int rawValue = input.readEnum();
-            if (!((mutable_bitField0_ & 0x00000008) == 0x00000008)) {
+            if (!((mutable_bitField0_ & 0x00000008) != 0)) {
               aroma_ = new java.util.ArrayList<java.lang.Integer>();
               mutable_bitField0_ |= 0x00000008;
             }
@@ -110,7 +108,7 @@ private static final long serialVersionUID = 0L;
             int oldLimit = input.pushLimit(length);
             while(input.getBytesUntilLimit() > 0) {
               int rawValue = input.readEnum();
-              if (!((mutable_bitField0_ & 0x00000008) == 0x00000008)) {
+              if (!((mutable_bitField0_ & 0x00000008) != 0)) {
                 aroma_ = new java.util.ArrayList<java.lang.Integer>();
                 mutable_bitField0_ |= 0x00000008;
               }
@@ -120,7 +118,7 @@ private static final long serialVersionUID = 0L;
             break;
           }
           case 82: {
-            if (!((mutable_bitField0_ & 0x00000002) == 0x00000002)) {
+            if (!((mutable_bitField0_ & 0x00000002) != 0)) {
               terpene_ = new java.util.ArrayList<io.opencannabis.schema.product.struct.testing.Terpenes.Result>();
               mutable_bitField0_ |= 0x00000002;
             }
@@ -129,7 +127,7 @@ private static final long serialVersionUID = 0L;
             break;
           }
           default: {
-            if (!parseUnknownFieldProto3(
+            if (!parseUnknownField(
                 input, unknownFields, extensionRegistry, tag)) {
               done = true;
             }
@@ -143,13 +141,13 @@ private static final long serialVersionUID = 0L;
       throw new com.google.protobuf.InvalidProtocolBufferException(
           e).setUnfinishedMessage(this);
     } finally {
-      if (((mutable_bitField0_ & 0x00000004) == 0x00000004)) {
+      if (((mutable_bitField0_ & 0x00000004) != 0)) {
         feeling_ = java.util.Collections.unmodifiableList(feeling_);
       }
-      if (((mutable_bitField0_ & 0x00000008) == 0x00000008)) {
+      if (((mutable_bitField0_ & 0x00000008) != 0)) {
         aroma_ = java.util.Collections.unmodifiableList(aroma_);
       }
-      if (((mutable_bitField0_ & 0x00000002) == 0x00000002)) {
+      if (((mutable_bitField0_ & 0x00000002) != 0)) {
         terpene_ = java.util.Collections.unmodifiableList(terpene_);
       }
       this.unknownFields = unknownFields.build();
@@ -279,7 +277,7 @@ private static final long serialVersionUID = 0L;
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -420,15 +418,14 @@ private static final long serialVersionUID = 0L;
       }
       io.opencannabis.schema.product.struct.testing.Terpenes.Result other = (io.opencannabis.schema.product.struct.testing.Terpenes.Result) obj;
 
-      boolean result = true;
-      result = result && terpene_ == other.terpene_;
-      result = result && (hasMeasurement() == other.hasMeasurement());
+      if (terpene_ != other.terpene_) return false;
+      if (hasMeasurement() != other.hasMeasurement()) return false;
       if (hasMeasurement()) {
-        result = result && getMeasurement()
-            .equals(other.getMeasurement());
+        if (!getMeasurement()
+            .equals(other.getMeasurement())) return false;
       }
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -627,35 +624,35 @@ private static final long serialVersionUID = 0L;
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -769,7 +766,7 @@ private static final long serialVersionUID = 0L;
         return this;
       }
 
-      private io.opencannabis.schema.product.struct.testing.TestValue measurement_ = null;
+      private io.opencannabis.schema.product.struct.testing.TestValue measurement_;
       private com.google.protobuf.SingleFieldBuilderV3<
           io.opencannabis.schema.product.struct.testing.TestValue, io.opencannabis.schema.product.struct.testing.TestValue.Builder, io.opencannabis.schema.product.struct.testing.TestValueOrBuilder> measurementBuilder_;
       /**
@@ -924,7 +921,7 @@ private static final long serialVersionUID = 0L;
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -1266,15 +1263,14 @@ private static final long serialVersionUID = 0L;
     }
     io.opencannabis.schema.product.struct.testing.Terpenes other = (io.opencannabis.schema.product.struct.testing.Terpenes) obj;
 
-    boolean result = true;
-    result = result && (getAvailable()
-        == other.getAvailable());
-    result = result && getTerpeneList()
-        .equals(other.getTerpeneList());
-    result = result && feeling_.equals(other.feeling_);
-    result = result && aroma_.equals(other.aroma_);
-    result = result && unknownFields.equals(other.unknownFields);
-    return result;
+    if (getAvailable()
+        != other.getAvailable()) return false;
+    if (!getTerpeneList()
+        .equals(other.getTerpeneList())) return false;
+    if (!feeling_.equals(other.feeling_)) return false;
+    if (!aroma_.equals(other.aroma_)) return false;
+    if (!unknownFields.equals(other.unknownFields)) return false;
+    return true;
   }
 
   @java.lang.Override
@@ -1480,7 +1476,7 @@ private static final long serialVersionUID = 0L;
       int to_bitField0_ = 0;
       result.available_ = available_;
       if (terpeneBuilder_ == null) {
-        if (((bitField0_ & 0x00000002) == 0x00000002)) {
+        if (((bitField0_ & 0x00000002) != 0)) {
           terpene_ = java.util.Collections.unmodifiableList(terpene_);
           bitField0_ = (bitField0_ & ~0x00000002);
         }
@@ -1488,12 +1484,12 @@ private static final long serialVersionUID = 0L;
       } else {
         result.terpene_ = terpeneBuilder_.build();
       }
-      if (((bitField0_ & 0x00000004) == 0x00000004)) {
+      if (((bitField0_ & 0x00000004) != 0)) {
         feeling_ = java.util.Collections.unmodifiableList(feeling_);
         bitField0_ = (bitField0_ & ~0x00000004);
       }
       result.feeling_ = feeling_;
-      if (((bitField0_ & 0x00000008) == 0x00000008)) {
+      if (((bitField0_ & 0x00000008) != 0)) {
         aroma_ = java.util.Collections.unmodifiableList(aroma_);
         bitField0_ = (bitField0_ & ~0x00000008);
       }
@@ -1505,35 +1501,35 @@ private static final long serialVersionUID = 0L;
 
     @java.lang.Override
     public Builder clone() {
-      return (Builder) super.clone();
+      return super.clone();
     }
     @java.lang.Override
     public Builder setField(
         com.google.protobuf.Descriptors.FieldDescriptor field,
         java.lang.Object value) {
-      return (Builder) super.setField(field, value);
+      return super.setField(field, value);
     }
     @java.lang.Override
     public Builder clearField(
         com.google.protobuf.Descriptors.FieldDescriptor field) {
-      return (Builder) super.clearField(field);
+      return super.clearField(field);
     }
     @java.lang.Override
     public Builder clearOneof(
         com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-      return (Builder) super.clearOneof(oneof);
+      return super.clearOneof(oneof);
     }
     @java.lang.Override
     public Builder setRepeatedField(
         com.google.protobuf.Descriptors.FieldDescriptor field,
         int index, java.lang.Object value) {
-      return (Builder) super.setRepeatedField(field, index, value);
+      return super.setRepeatedField(field, index, value);
     }
     @java.lang.Override
     public Builder addRepeatedField(
         com.google.protobuf.Descriptors.FieldDescriptor field,
         java.lang.Object value) {
-      return (Builder) super.addRepeatedField(field, value);
+      return super.addRepeatedField(field, value);
     }
     @java.lang.Override
     public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -1667,7 +1663,7 @@ private static final long serialVersionUID = 0L;
     private java.util.List<io.opencannabis.schema.product.struct.testing.Terpenes.Result> terpene_ =
       java.util.Collections.emptyList();
     private void ensureTerpeneIsMutable() {
-      if (!((bitField0_ & 0x00000002) == 0x00000002)) {
+      if (!((bitField0_ & 0x00000002) != 0)) {
         terpene_ = new java.util.ArrayList<io.opencannabis.schema.product.struct.testing.Terpenes.Result>(terpene_);
         bitField0_ |= 0x00000002;
        }
@@ -1968,7 +1964,7 @@ private static final long serialVersionUID = 0L;
         terpeneBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
             io.opencannabis.schema.product.struct.testing.Terpenes.Result, io.opencannabis.schema.product.struct.testing.Terpenes.Result.Builder, io.opencannabis.schema.product.struct.testing.Terpenes.ResultOrBuilder>(
                 terpene_,
-                ((bitField0_ & 0x00000002) == 0x00000002),
+                ((bitField0_ & 0x00000002) != 0),
                 getParentForChildren(),
                 isClean());
         terpene_ = null;
@@ -1979,7 +1975,7 @@ private static final long serialVersionUID = 0L;
     private java.util.List<java.lang.Integer> feeling_ =
       java.util.Collections.emptyList();
     private void ensureFeelingIsMutable() {
-      if (!((bitField0_ & 0x00000004) == 0x00000004)) {
+      if (!((bitField0_ & 0x00000004) != 0)) {
         feeling_ = new java.util.ArrayList<java.lang.Integer>(feeling_);
         bitField0_ |= 0x00000004;
       }
@@ -2145,7 +2141,7 @@ private static final long serialVersionUID = 0L;
     private java.util.List<java.lang.Integer> aroma_ =
       java.util.Collections.emptyList();
     private void ensureAromaIsMutable() {
-      if (!((bitField0_ & 0x00000008) == 0x00000008)) {
+      if (!((bitField0_ & 0x00000008) != 0)) {
         aroma_ = new java.util.ArrayList<java.lang.Integer>(aroma_);
         bitField0_ |= 0x00000008;
       }
@@ -2310,7 +2306,7 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public final Builder setUnknownFields(
         final com.google.protobuf.UnknownFieldSet unknownFields) {
-      return super.setUnknownFieldsProto3(unknownFields);
+      return super.setUnknownFields(unknownFields);
     }
 
     @java.lang.Override

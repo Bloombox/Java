@@ -1,5 +1,5 @@
 /*
- * Copyright 2018, Momentum Ideas, Co. All rights reserved.
+ * Copyright 2019, Momentum Ideas, Co. All rights reserved.
  *
  * Source and object computer code contained herein is the private intellectual
  * property of Momentum Ideas Co., a Delaware Corporation. Use of this
@@ -174,7 +174,7 @@ public final class SMSComms {
               break;
             }
             case 26: {
-              if (!((mutable_bitField0_ & 0x00000004) == 0x00000004)) {
+              if (!((mutable_bitField0_ & 0x00000004) != 0)) {
                 media_ = new java.util.ArrayList<io.opencannabis.schema.media.MediaItemKey.MediaKey>();
                 mutable_bitField0_ |= 0x00000004;
               }
@@ -183,7 +183,7 @@ public final class SMSComms {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -197,7 +197,7 @@ public final class SMSComms {
         throw new com.google.protobuf.InvalidProtocolBufferException(
             e).setUnfinishedMessage(this);
       } finally {
-        if (((mutable_bitField0_ & 0x00000004) == 0x00000004)) {
+        if (((mutable_bitField0_ & 0x00000004) != 0)) {
           media_ = java.util.Collections.unmodifiableList(media_);
         }
         this.unknownFields = unknownFields.build();
@@ -414,15 +414,14 @@ public final class SMSComms {
       }
       io.bloombox.schema.comms.SMSComms.SMSContent other = (io.bloombox.schema.comms.SMSComms.SMSContent) obj;
 
-      boolean result = true;
-      result = result && getSubject()
-          .equals(other.getSubject());
-      result = result && getContent()
-          .equals(other.getContent());
-      result = result && getMediaList()
-          .equals(other.getMediaList());
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!getSubject()
+          .equals(other.getSubject())) return false;
+      if (!getContent()
+          .equals(other.getContent())) return false;
+      if (!getMediaList()
+          .equals(other.getMediaList())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -619,7 +618,7 @@ public final class SMSComms {
         result.subject_ = subject_;
         result.content_ = content_;
         if (mediaBuilder_ == null) {
-          if (((bitField0_ & 0x00000004) == 0x00000004)) {
+          if (((bitField0_ & 0x00000004) != 0)) {
             media_ = java.util.Collections.unmodifiableList(media_);
             bitField0_ = (bitField0_ & ~0x00000004);
           }
@@ -634,35 +633,35 @@ public final class SMSComms {
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -921,7 +920,7 @@ public final class SMSComms {
       private java.util.List<io.opencannabis.schema.media.MediaItemKey.MediaKey> media_ =
         java.util.Collections.emptyList();
       private void ensureMediaIsMutable() {
-        if (!((bitField0_ & 0x00000004) == 0x00000004)) {
+        if (!((bitField0_ & 0x00000004) != 0)) {
           media_ = new java.util.ArrayList<io.opencannabis.schema.media.MediaItemKey.MediaKey>(media_);
           bitField0_ |= 0x00000004;
          }
@@ -1222,7 +1221,7 @@ public final class SMSComms {
           mediaBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
               io.opencannabis.schema.media.MediaItemKey.MediaKey, io.opencannabis.schema.media.MediaItemKey.MediaKey.Builder, io.opencannabis.schema.media.MediaItemKey.MediaKeyOrBuilder>(
                   media_,
-                  ((bitField0_ & 0x00000004) == 0x00000004),
+                  ((bitField0_ & 0x00000004) != 0),
                   getParentForChildren(),
                   isClean());
           media_ = null;
@@ -1232,7 +1231,7 @@ public final class SMSComms {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -1444,7 +1443,7 @@ public final class SMSComms {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -1633,24 +1632,23 @@ public final class SMSComms {
       }
       io.bloombox.schema.comms.SMSComms.SMSMessage other = (io.bloombox.schema.comms.SMSComms.SMSMessage) obj;
 
-      boolean result = true;
-      result = result && (hasSender() == other.hasSender());
+      if (hasSender() != other.hasSender()) return false;
       if (hasSender()) {
-        result = result && getSender()
-            .equals(other.getSender());
+        if (!getSender()
+            .equals(other.getSender())) return false;
       }
-      result = result && (hasRecipient() == other.hasRecipient());
+      if (hasRecipient() != other.hasRecipient()) return false;
       if (hasRecipient()) {
-        result = result && getRecipient()
-            .equals(other.getRecipient());
+        if (!getRecipient()
+            .equals(other.getRecipient())) return false;
       }
-      result = result && (hasContent() == other.hasContent());
+      if (hasContent() != other.hasContent()) return false;
       if (hasContent()) {
-        result = result && getContent()
-            .equals(other.getContent());
+        if (!getContent()
+            .equals(other.getContent())) return false;
       }
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -1874,35 +1872,35 @@ public final class SMSComms {
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -1954,7 +1952,7 @@ public final class SMSComms {
         return this;
       }
 
-      private io.opencannabis.schema.contact.ContactPhone.PhoneNumber sender_ = null;
+      private io.opencannabis.schema.contact.ContactPhone.PhoneNumber sender_;
       private com.google.protobuf.SingleFieldBuilderV3<
           io.opencannabis.schema.contact.ContactPhone.PhoneNumber, io.opencannabis.schema.contact.ContactPhone.PhoneNumber.Builder, io.opencannabis.schema.contact.ContactPhone.PhoneNumberOrBuilder> senderBuilder_;
       /**
@@ -2107,7 +2105,7 @@ public final class SMSComms {
         return senderBuilder_;
       }
 
-      private io.opencannabis.schema.contact.ContactPhone.PhoneNumber recipient_ = null;
+      private io.opencannabis.schema.contact.ContactPhone.PhoneNumber recipient_;
       private com.google.protobuf.SingleFieldBuilderV3<
           io.opencannabis.schema.contact.ContactPhone.PhoneNumber, io.opencannabis.schema.contact.ContactPhone.PhoneNumber.Builder, io.opencannabis.schema.contact.ContactPhone.PhoneNumberOrBuilder> recipientBuilder_;
       /**
@@ -2260,7 +2258,7 @@ public final class SMSComms {
         return recipientBuilder_;
       }
 
-      private io.bloombox.schema.comms.SMSComms.SMSContent content_ = null;
+      private io.bloombox.schema.comms.SMSComms.SMSContent content_;
       private com.google.protobuf.SingleFieldBuilderV3<
           io.bloombox.schema.comms.SMSComms.SMSContent, io.bloombox.schema.comms.SMSComms.SMSContent.Builder, io.bloombox.schema.comms.SMSComms.SMSContentOrBuilder> contentBuilder_;
       /**
@@ -2415,7 +2413,7 @@ public final class SMSComms {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -2551,7 +2549,7 @@ public final class SMSComms {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -2660,14 +2658,13 @@ public final class SMSComms {
       }
       io.bloombox.schema.comms.SMSComms.SMSTransmission other = (io.bloombox.schema.comms.SMSComms.SMSTransmission) obj;
 
-      boolean result = true;
-      result = result && (hasMessage() == other.hasMessage());
+      if (hasMessage() != other.hasMessage()) return false;
       if (hasMessage()) {
-        result = result && getMessage()
-            .equals(other.getMessage());
+        if (!getMessage()
+            .equals(other.getMessage())) return false;
       }
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -2861,35 +2858,35 @@ public final class SMSComms {
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -2935,7 +2932,7 @@ public final class SMSComms {
         return this;
       }
 
-      private io.bloombox.schema.comms.SMSComms.SMSMessage message_ = null;
+      private io.bloombox.schema.comms.SMSComms.SMSMessage message_;
       private com.google.protobuf.SingleFieldBuilderV3<
           io.bloombox.schema.comms.SMSComms.SMSMessage, io.bloombox.schema.comms.SMSComms.SMSMessage.Builder, io.bloombox.schema.comms.SMSComms.SMSMessageOrBuilder> messageBuilder_;
       /**
@@ -3090,7 +3087,7 @@ public final class SMSComms {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -3233,7 +3230,7 @@ public final class SMSComms {
               done = true;
               break;
             case 10: {
-              if (!((mutable_bitField0_ & 0x00000001) == 0x00000001)) {
+              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
                 op_ = new java.util.ArrayList<io.bloombox.schema.comms.SMSComms.SMSTransmission>();
                 mutable_bitField0_ |= 0x00000001;
               }
@@ -3242,7 +3239,7 @@ public final class SMSComms {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -3256,7 +3253,7 @@ public final class SMSComms {
         throw new com.google.protobuf.InvalidProtocolBufferException(
             e).setUnfinishedMessage(this);
       } finally {
-        if (((mutable_bitField0_ & 0x00000001) == 0x00000001)) {
+        if (((mutable_bitField0_ & 0x00000001) != 0)) {
           op_ = java.util.Collections.unmodifiableList(op_);
         }
         this.unknownFields = unknownFields.build();
@@ -3376,11 +3373,10 @@ public final class SMSComms {
       }
       io.bloombox.schema.comms.SMSComms.SMSBatch other = (io.bloombox.schema.comms.SMSComms.SMSBatch) obj;
 
-      boolean result = true;
-      result = result && getOpList()
-          .equals(other.getOpList());
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!getOpList()
+          .equals(other.getOpList())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -3566,7 +3562,7 @@ public final class SMSComms {
         io.bloombox.schema.comms.SMSComms.SMSBatch result = new io.bloombox.schema.comms.SMSComms.SMSBatch(this);
         int from_bitField0_ = bitField0_;
         if (opBuilder_ == null) {
-          if (((bitField0_ & 0x00000001) == 0x00000001)) {
+          if (((bitField0_ & 0x00000001) != 0)) {
             op_ = java.util.Collections.unmodifiableList(op_);
             bitField0_ = (bitField0_ & ~0x00000001);
           }
@@ -3580,35 +3576,35 @@ public final class SMSComms {
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -3681,7 +3677,7 @@ public final class SMSComms {
       private java.util.List<io.bloombox.schema.comms.SMSComms.SMSTransmission> op_ =
         java.util.Collections.emptyList();
       private void ensureOpIsMutable() {
-        if (!((bitField0_ & 0x00000001) == 0x00000001)) {
+        if (!((bitField0_ & 0x00000001) != 0)) {
           op_ = new java.util.ArrayList<io.bloombox.schema.comms.SMSComms.SMSTransmission>(op_);
           bitField0_ |= 0x00000001;
          }
@@ -3982,7 +3978,7 @@ public final class SMSComms {
           opBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
               io.bloombox.schema.comms.SMSComms.SMSTransmission, io.bloombox.schema.comms.SMSComms.SMSTransmission.Builder, io.bloombox.schema.comms.SMSComms.SMSTransmissionOrBuilder>(
                   op_,
-                  ((bitField0_ & 0x00000001) == 0x00000001),
+                  ((bitField0_ & 0x00000001) != 0),
                   getParentForChildren(),
                   isClean());
           op_ = null;
@@ -3992,7 +3988,7 @@ public final class SMSComms {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -4128,7 +4124,7 @@ public final class SMSComms {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -4237,14 +4233,13 @@ public final class SMSComms {
       }
       io.bloombox.schema.comms.SMSComms.SMSSettings other = (io.bloombox.schema.comms.SMSComms.SMSSettings) obj;
 
-      boolean result = true;
-      result = result && (hasSender() == other.hasSender());
+      if (hasSender() != other.hasSender()) return false;
       if (hasSender()) {
-        result = result && getSender()
-            .equals(other.getSender());
+        if (!getSender()
+            .equals(other.getSender())) return false;
       }
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -4438,35 +4433,35 @@ public final class SMSComms {
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -4512,7 +4507,7 @@ public final class SMSComms {
         return this;
       }
 
-      private io.opencannabis.schema.contact.ContactPhone.PhoneNumber sender_ = null;
+      private io.opencannabis.schema.contact.ContactPhone.PhoneNumber sender_;
       private com.google.protobuf.SingleFieldBuilderV3<
           io.opencannabis.schema.contact.ContactPhone.PhoneNumber, io.opencannabis.schema.contact.ContactPhone.PhoneNumber.Builder, io.opencannabis.schema.contact.ContactPhone.PhoneNumberOrBuilder> senderBuilder_;
       /**
@@ -4667,7 +4662,7 @@ public final class SMSComms {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override

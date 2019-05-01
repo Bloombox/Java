@@ -1,5 +1,5 @@
 /*
- * Copyright 2018, Momentum Ideas, Co. All rights reserved.
+ * Copyright 2019, Momentum Ideas, Co. All rights reserved.
  *
  * Source and object computer code contained herein is the private intellectual
  * property of Momentum Ideas Co., a Delaware Corporation. Use of this
@@ -545,9 +545,6 @@ public final class PassID {
     private Pass() {
       token_ = "";
       uri_ = "";
-      active_ = false;
-      personalizable_ = false;
-      personalized_ = false;
       status_ = 0;
     }
 
@@ -726,7 +723,7 @@ public final class PassID {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -1343,65 +1340,64 @@ public final class PassID {
       }
       io.bloombox.schema.pass.PassID.Pass other = (io.bloombox.schema.pass.PassID.Pass) obj;
 
-      boolean result = true;
-      result = result && (hasKey() == other.hasKey());
+      if (hasKey() != other.hasKey()) return false;
       if (hasKey()) {
-        result = result && getKey()
-            .equals(other.getKey());
+        if (!getKey()
+            .equals(other.getKey())) return false;
       }
-      result = result && getToken()
-          .equals(other.getToken());
-      result = result && getUri()
-          .equals(other.getUri());
-      result = result && (getActive()
-          == other.getActive());
-      result = result && (getPersonalizable()
-          == other.getPersonalizable());
-      result = result && (getPersonalized()
-          == other.getPersonalized());
-      result = result && status_ == other.status_;
-      result = result && (hasProvisioned() == other.hasProvisioned());
+      if (!getToken()
+          .equals(other.getToken())) return false;
+      if (!getUri()
+          .equals(other.getUri())) return false;
+      if (getActive()
+          != other.getActive()) return false;
+      if (getPersonalizable()
+          != other.getPersonalizable()) return false;
+      if (getPersonalized()
+          != other.getPersonalized()) return false;
+      if (status_ != other.status_) return false;
+      if (hasProvisioned() != other.hasProvisioned()) return false;
       if (hasProvisioned()) {
-        result = result && getProvisioned()
-            .equals(other.getProvisioned());
+        if (!getProvisioned()
+            .equals(other.getProvisioned())) return false;
       }
-      result = result && (hasIssued() == other.hasIssued());
+      if (hasIssued() != other.hasIssued()) return false;
       if (hasIssued()) {
-        result = result && getIssued()
-            .equals(other.getIssued());
+        if (!getIssued()
+            .equals(other.getIssued())) return false;
       }
-      result = result && (hasActivated() == other.hasActivated());
+      if (hasActivated() != other.hasActivated()) return false;
       if (hasActivated()) {
-        result = result && getActivated()
-            .equals(other.getActivated());
+        if (!getActivated()
+            .equals(other.getActivated())) return false;
       }
-      result = result && (hasSuspended() == other.hasSuspended());
+      if (hasSuspended() != other.hasSuspended()) return false;
       if (hasSuspended()) {
-        result = result && getSuspended()
-            .equals(other.getSuspended());
+        if (!getSuspended()
+            .equals(other.getSuspended())) return false;
       }
-      result = result && (hasBanned() == other.hasBanned());
+      if (hasBanned() != other.hasBanned()) return false;
       if (hasBanned()) {
-        result = result && getBanned()
-            .equals(other.getBanned());
+        if (!getBanned()
+            .equals(other.getBanned())) return false;
       }
-      result = result && (hasSeen() == other.hasSeen());
+      if (hasSeen() != other.hasSeen()) return false;
       if (hasSeen()) {
-        result = result && getSeen()
-            .equals(other.getSeen());
+        if (!getSeen()
+            .equals(other.getSeen())) return false;
       }
-      result = result && (hasCheckin() == other.hasCheckin());
+      if (hasCheckin() != other.hasCheckin()) return false;
       if (hasCheckin()) {
-        result = result && getCheckin()
-            .equals(other.getCheckin());
+        if (!getCheckin()
+            .equals(other.getCheckin())) return false;
       }
-      result = result && (hasEnroll() == other.hasEnroll());
+      if (hasEnroll() != other.hasEnroll()) return false;
       if (hasEnroll()) {
-        result = result && getEnroll()
-            .equals(other.getEnroll());
+        if (!getEnroll()
+            .equals(other.getEnroll())) return false;
       }
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -1748,35 +1744,35 @@ public final class PassID {
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -1866,7 +1862,7 @@ public final class PassID {
         return this;
       }
 
-      private io.bloombox.schema.pass.PassIDKey.PassKey key_ = null;
+      private io.bloombox.schema.pass.PassIDKey.PassKey key_;
       private com.google.protobuf.SingleFieldBuilderV3<
           io.bloombox.schema.pass.PassIDKey.PassKey, io.bloombox.schema.pass.PassIDKey.PassKey.Builder, io.bloombox.schema.pass.PassIDKey.PassKeyOrBuilder> keyBuilder_;
       /**
@@ -2376,7 +2372,7 @@ public final class PassID {
         return this;
       }
 
-      private io.opencannabis.schema.temporal.TemporalInstant.Instant provisioned_ = null;
+      private io.opencannabis.schema.temporal.TemporalInstant.Instant provisioned_;
       private com.google.protobuf.SingleFieldBuilderV3<
           io.opencannabis.schema.temporal.TemporalInstant.Instant, io.opencannabis.schema.temporal.TemporalInstant.Instant.Builder, io.opencannabis.schema.temporal.TemporalInstant.InstantOrBuilder> provisionedBuilder_;
       /**
@@ -2529,7 +2525,7 @@ public final class PassID {
         return provisionedBuilder_;
       }
 
-      private io.opencannabis.schema.temporal.TemporalInstant.Instant issued_ = null;
+      private io.opencannabis.schema.temporal.TemporalInstant.Instant issued_;
       private com.google.protobuf.SingleFieldBuilderV3<
           io.opencannabis.schema.temporal.TemporalInstant.Instant, io.opencannabis.schema.temporal.TemporalInstant.Instant.Builder, io.opencannabis.schema.temporal.TemporalInstant.InstantOrBuilder> issuedBuilder_;
       /**
@@ -2682,7 +2678,7 @@ public final class PassID {
         return issuedBuilder_;
       }
 
-      private io.opencannabis.schema.temporal.TemporalInstant.Instant activated_ = null;
+      private io.opencannabis.schema.temporal.TemporalInstant.Instant activated_;
       private com.google.protobuf.SingleFieldBuilderV3<
           io.opencannabis.schema.temporal.TemporalInstant.Instant, io.opencannabis.schema.temporal.TemporalInstant.Instant.Builder, io.opencannabis.schema.temporal.TemporalInstant.InstantOrBuilder> activatedBuilder_;
       /**
@@ -2835,7 +2831,7 @@ public final class PassID {
         return activatedBuilder_;
       }
 
-      private io.opencannabis.schema.temporal.TemporalInstant.Instant suspended_ = null;
+      private io.opencannabis.schema.temporal.TemporalInstant.Instant suspended_;
       private com.google.protobuf.SingleFieldBuilderV3<
           io.opencannabis.schema.temporal.TemporalInstant.Instant, io.opencannabis.schema.temporal.TemporalInstant.Instant.Builder, io.opencannabis.schema.temporal.TemporalInstant.InstantOrBuilder> suspendedBuilder_;
       /**
@@ -2988,7 +2984,7 @@ public final class PassID {
         return suspendedBuilder_;
       }
 
-      private io.opencannabis.schema.temporal.TemporalInstant.Instant banned_ = null;
+      private io.opencannabis.schema.temporal.TemporalInstant.Instant banned_;
       private com.google.protobuf.SingleFieldBuilderV3<
           io.opencannabis.schema.temporal.TemporalInstant.Instant, io.opencannabis.schema.temporal.TemporalInstant.Instant.Builder, io.opencannabis.schema.temporal.TemporalInstant.InstantOrBuilder> bannedBuilder_;
       /**
@@ -3141,7 +3137,7 @@ public final class PassID {
         return bannedBuilder_;
       }
 
-      private io.opencannabis.schema.temporal.TemporalInstant.Instant seen_ = null;
+      private io.opencannabis.schema.temporal.TemporalInstant.Instant seen_;
       private com.google.protobuf.SingleFieldBuilderV3<
           io.opencannabis.schema.temporal.TemporalInstant.Instant, io.opencannabis.schema.temporal.TemporalInstant.Instant.Builder, io.opencannabis.schema.temporal.TemporalInstant.InstantOrBuilder> seenBuilder_;
       /**
@@ -3294,7 +3290,7 @@ public final class PassID {
         return seenBuilder_;
       }
 
-      private io.opencannabis.schema.temporal.TemporalInstant.Instant checkin_ = null;
+      private io.opencannabis.schema.temporal.TemporalInstant.Instant checkin_;
       private com.google.protobuf.SingleFieldBuilderV3<
           io.opencannabis.schema.temporal.TemporalInstant.Instant, io.opencannabis.schema.temporal.TemporalInstant.Instant.Builder, io.opencannabis.schema.temporal.TemporalInstant.InstantOrBuilder> checkinBuilder_;
       /**
@@ -3447,7 +3443,7 @@ public final class PassID {
         return checkinBuilder_;
       }
 
-      private io.opencannabis.schema.temporal.TemporalInstant.Instant enroll_ = null;
+      private io.opencannabis.schema.temporal.TemporalInstant.Instant enroll_;
       private com.google.protobuf.SingleFieldBuilderV3<
           io.opencannabis.schema.temporal.TemporalInstant.Instant, io.opencannabis.schema.temporal.TemporalInstant.Instant.Builder, io.opencannabis.schema.temporal.TemporalInstant.InstantOrBuilder> enrollBuilder_;
       /**
@@ -3602,7 +3598,7 @@ public final class PassID {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override

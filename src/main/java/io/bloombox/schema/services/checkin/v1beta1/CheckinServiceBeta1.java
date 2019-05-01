@@ -1,5 +1,5 @@
 /*
- * Copyright 2018, Momentum Ideas, Co. All rights reserved.
+ * Copyright 2019, Momentum Ideas, Co. All rights reserved.
  *
  * Source and object computer code contained herein is the private intellectual
  * property of Momentum Ideas Co., a Delaware Corporation. Use of this
@@ -139,7 +139,7 @@ public final class CheckinServiceBeta1 {
       "\232\001\n\tOperation\022G\n\007request\030\001 \001(\01326.bloombo" +
       "x.services.checkin.v1beta1.CardCheckin.R" +
       "equest\022D\n\010response\030\002 \001(\01322.bloombox.serv" +
-      "ices.checkin.v1beta1.CheckinResponse*\305\002\n" +
+      "ices.checkin.v1beta1.CheckinResponse*\356\002\n" +
       "\014CheckinError\022\014\n\010NO_ERROR\020\000\022\020\n\014ID_NOT_FO" +
       "UND\020\001\022\016\n\nID_EXPIRED\020\002\022\016\n\nID_INVALID\020\003\022\027\n" +
       "\023ID_TYPE_UNSUPPORTED\020\004\022\025\n\021CARD_TYPE_INVA" +
@@ -148,22 +148,23 @@ public final class CheckinServiceBeta1 {
       "NDED\020\t\022\023\n\017PARTNER_INVALID\020\n\022\024\n\020LOCATION_" +
       "INVALID\020\013\022\030\n\024JURISDICTION_INVALID\020\014\022\034\n\030J" +
       "URISDICTION_UNSUPPORTED\020\r\022\021\n\rUSER_UNDERA" +
-      "GE\020\0162\226\004\n\007Checkin\022\210\001\n\004Ping\022/.bloombox.ser" +
-      "vices.checkin.v1beta1.Ping.Request\0320.blo" +
-      "ombox.services.checkin.v1beta1.Ping.Resp" +
-      "onse\"\035\202\323\344\223\002\027\022\025/checkin/v1beta1/ping\022\341\001\n\016" +
-      "Identification\0224.bloombox.services.check" +
-      "in.v1beta1.IDCheckin.Request\0322.bloombox." +
-      "services.checkin.v1beta1.CheckinResponse" +
-      "\"e\202\323\344\223\002_\"9/checkin/v1beta1/{scope=partne" +
-      "rs/*/locations/*}/global:id:\001*Z\037\"\032/check" +
-      "in/v1beta1/global:id:\001*\022\233\001\n\004Card\0226.bloom" +
-      "box.services.checkin.v1beta1.CardCheckin" +
-      ".Request\0322.bloombox.services.checkin.v1b" +
-      "eta1.CheckinResponse\"\'\202\323\344\223\002!\"\034/checkin/v" +
-      "1beta1/global:card:\001*B7\n+io.bloombox.sch" +
-      "ema.services.checkin.v1beta1H\001P\001\242\002\003BBSb\006" +
-      "proto3"
+      "GE\020\016\022\031\n\025USER_CHECKIN_CONFLICT\020\017\022\014\n\010INTER" +
+      "NAL\020c2\226\004\n\007Checkin\022\210\001\n\004Ping\022/.bloombox.se" +
+      "rvices.checkin.v1beta1.Ping.Request\0320.bl" +
+      "oombox.services.checkin.v1beta1.Ping.Res" +
+      "ponse\"\035\202\323\344\223\002\027\022\025/checkin/v1beta1/ping\022\341\001\n" +
+      "\016Identification\0224.bloombox.services.chec" +
+      "kin.v1beta1.IDCheckin.Request\0322.bloombox" +
+      ".services.checkin.v1beta1.CheckinRespons" +
+      "e\"e\202\323\344\223\002_\"9/checkin/v1beta1/{scope=partn" +
+      "ers/*/locations/*}/global:id:\001*Z\037\"\032/chec" +
+      "kin/v1beta1/global:id:\001*\022\233\001\n\004Card\0226.bloo" +
+      "mbox.services.checkin.v1beta1.CardChecki" +
+      "n.Request\0322.bloombox.services.checkin.v1" +
+      "beta1.CheckinResponse\"\'\202\323\344\223\002!\"\034/checkin/" +
+      "v1beta1/global:card:\001*B7\n+io.bloombox.sc" +
+      "hema.services.checkin.v1beta1H\001P\001\242\002\003BBSb" +
+      "\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {

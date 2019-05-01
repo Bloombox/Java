@@ -1,5 +1,5 @@
 /*
- * Copyright 2018, Momentum Ideas, Co. All rights reserved.
+ * Copyright 2019, Momentum Ideas, Co. All rights reserved.
  *
  * Source and object computer code contained herein is the private intellectual
  * property of Momentum Ideas Co., a Delaware Corporation. Use of this
@@ -150,19 +150,20 @@ public final class DevicesServiceBeta1 {
       ".Response*p\n\013DeviceError\022\014\n\010NO_ERROR\020\000\022\022" +
       "\n\016INVALID_SERIAL\020\001\022\024\n\020DEVICE_NOT_FOUND\020\002" +
       "\022\022\n\016INTERNAL_ERROR\020\003\022\025\n\021DEVICE_UNASSIGNE" +
-      "D\020\004*H\n\nDeviceRole\022\016\n\nUNASSIGNED\020\000\022\010\n\004MEN" +
-      "U\020\001\022\013\n\007CHECKIN\020\002\022\n\n\006BEACON\020\003\022\007\n\003POS\020\004*!\n" +
-      "\017DataEnvironment\022\006\n\002V1\020\000\022\006\n\002V2\020\0012\303\002\n\007Dev" +
-      "ices\022\210\001\n\004Ping\022/.bloombox.services.device" +
-      "s.v1beta1.Ping.Request\0320.bloombox.servic" +
-      "es.devices.v1beta1.Ping.Response\"\035\202\323\344\223\002\027" +
-      "\022\025/devices/v1beta1/ping\022\254\001\n\010Activate\0225.b" +
-      "loombox.services.devices.v1beta1.Activat" +
-      "ion.Request\0326.bloombox.services.devices." +
-      "v1beta1.Activation.Response\"1\202\323\344\223\002+\022)/de" +
-      "vices/v1beta1/{serial}/device:activateB7" +
-      "\n+io.bloombox.schema.services.devices.v1" +
-      "beta1H\001P\001\242\002\003BBSb\006proto3"
+      "D\020\004*\\\n\nDeviceRole\022\016\n\nUNASSIGNED\020\000\022\010\n\004MEN" +
+      "U\020\001\022\013\n\007CHECKIN\020\002\022\n\n\006BEACON\020\003\022\007\n\003POS\020\004\022\010\n" +
+      "\004EDGE\020\005\022\010\n\004RFID\020\006*!\n\017DataEnvironment\022\006\n\002" +
+      "V1\020\000\022\006\n\002V2\020\0012\303\002\n\007Devices\022\210\001\n\004Ping\022/.bloo" +
+      "mbox.services.devices.v1beta1.Ping.Reque" +
+      "st\0320.bloombox.services.devices.v1beta1.P" +
+      "ing.Response\"\035\202\323\344\223\002\027\022\025/devices/v1beta1/p" +
+      "ing\022\254\001\n\010Activate\0225.bloombox.services.dev" +
+      "ices.v1beta1.Activation.Request\0326.bloomb" +
+      "ox.services.devices.v1beta1.Activation.R" +
+      "esponse\"1\202\323\344\223\002+\022)/devices/v1beta1/{seria" +
+      "l}/device:activateB7\n+io.bloombox.schema" +
+      ".services.devices.v1beta1H\001P\001\242\002\003BBSb\006pro" +
+      "to3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {

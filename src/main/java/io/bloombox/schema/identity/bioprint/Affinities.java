@@ -1,5 +1,5 @@
 /*
- * Copyright 2018, Momentum Ideas, Co. All rights reserved.
+ * Copyright 2019, Momentum Ideas, Co. All rights reserved.
  *
  * Source and object computer code contained herein is the private intellectual
  * property of Momentum Ideas Co., a Delaware Corporation. Use of this
@@ -175,7 +175,7 @@ public final class Affinities {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -342,19 +342,18 @@ public final class Affinities {
       }
       io.bloombox.schema.identity.bioprint.Affinities.SentimentResponse other = (io.bloombox.schema.identity.bioprint.Affinities.SentimentResponse) obj;
 
-      boolean result = true;
-      result = result && (hasPromote() == other.hasPromote());
+      if (hasPromote() != other.hasPromote()) return false;
       if (hasPromote()) {
-        result = result && getPromote()
-            .equals(other.getPromote());
+        if (!getPromote()
+            .equals(other.getPromote())) return false;
       }
-      result = result && (hasReject() == other.hasReject());
+      if (hasReject() != other.hasReject()) return false;
       if (hasReject()) {
-        result = result && getReject()
-            .equals(other.getReject());
+        if (!getReject()
+            .equals(other.getReject())) return false;
       }
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -565,35 +564,35 @@ public final class Affinities {
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -642,7 +641,7 @@ public final class Affinities {
         return this;
       }
 
-      private io.bloombox.schema.analytics.stream.Filter.OITDBloomFilter promote_ = null;
+      private io.bloombox.schema.analytics.stream.Filter.OITDBloomFilter promote_;
       private com.google.protobuf.SingleFieldBuilderV3<
           io.bloombox.schema.analytics.stream.Filter.OITDBloomFilter, io.bloombox.schema.analytics.stream.Filter.OITDBloomFilter.Builder, io.bloombox.schema.analytics.stream.Filter.OITDBloomFilterOrBuilder> promoteBuilder_;
       /**
@@ -822,7 +821,7 @@ public final class Affinities {
         return promoteBuilder_;
       }
 
-      private io.bloombox.schema.analytics.stream.Filter.OITDBloomFilter reject_ = null;
+      private io.bloombox.schema.analytics.stream.Filter.OITDBloomFilter reject_;
       private com.google.protobuf.SingleFieldBuilderV3<
           io.bloombox.schema.analytics.stream.Filter.OITDBloomFilter, io.bloombox.schema.analytics.stream.Filter.OITDBloomFilter.Builder, io.bloombox.schema.analytics.stream.Filter.OITDBloomFilterOrBuilder> rejectBuilder_;
       /**
@@ -1004,7 +1003,7 @@ public final class Affinities {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -1260,7 +1259,7 @@ public final class Affinities {
               done = true;
               break;
             case 10: {
-              if (!((mutable_bitField0_ & 0x00000001) == 0x00000001)) {
+              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
                 affinity_ = new java.util.ArrayList<io.bloombox.schema.identity.bioprint.Affinities.SentimentResponse>();
                 mutable_bitField0_ |= 0x00000001;
               }
@@ -1269,7 +1268,7 @@ public final class Affinities {
               break;
             }
             case 18: {
-              if (!((mutable_bitField0_ & 0x00000002) == 0x00000002)) {
+              if (!((mutable_bitField0_ & 0x00000002) != 0)) {
                 significance_ = new java.util.ArrayList<io.bloombox.schema.identity.bioprint.Weights.MetricSignificance>();
                 mutable_bitField0_ |= 0x00000002;
               }
@@ -1306,7 +1305,7 @@ public final class Affinities {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -1320,10 +1319,10 @@ public final class Affinities {
         throw new com.google.protobuf.InvalidProtocolBufferException(
             e).setUnfinishedMessage(this);
       } finally {
-        if (((mutable_bitField0_ & 0x00000001) == 0x00000001)) {
+        if (((mutable_bitField0_ & 0x00000001) != 0)) {
           affinity_ = java.util.Collections.unmodifiableList(affinity_);
         }
-        if (((mutable_bitField0_ & 0x00000002) == 0x00000002)) {
+        if (((mutable_bitField0_ & 0x00000002) != 0)) {
           significance_ = java.util.Collections.unmodifiableList(significance_);
         }
         this.unknownFields = unknownFields.build();
@@ -1649,28 +1648,25 @@ public final class Affinities {
       }
       io.bloombox.schema.identity.bioprint.Affinities.Affinity other = (io.bloombox.schema.identity.bioprint.Affinities.Affinity) obj;
 
-      boolean result = true;
-      result = result && getAffinityList()
-          .equals(other.getAffinityList());
-      result = result && getSignificanceList()
-          .equals(other.getSignificanceList());
-      result = result && getScopeCase().equals(
-          other.getScopeCase());
-      if (!result) return false;
+      if (!getAffinityList()
+          .equals(other.getAffinityList())) return false;
+      if (!getSignificanceList()
+          .equals(other.getSignificanceList())) return false;
+      if (!getScopeCase().equals(other.getScopeCase())) return false;
       switch (scopeCase_) {
         case 10:
-          result = result && getAspect()
-              .equals(other.getAspect());
+          if (!getAspect()
+              .equals(other.getAspect())) return false;
           break;
         case 11:
-          result = result && getGroup()
-              .equals(other.getGroup());
+          if (!getGroup()
+              .equals(other.getGroup())) return false;
           break;
         case 0:
         default:
       }
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -1883,7 +1879,7 @@ public final class Affinities {
         int from_bitField0_ = bitField0_;
         int to_bitField0_ = 0;
         if (affinityBuilder_ == null) {
-          if (((bitField0_ & 0x00000001) == 0x00000001)) {
+          if (((bitField0_ & 0x00000001) != 0)) {
             affinity_ = java.util.Collections.unmodifiableList(affinity_);
             bitField0_ = (bitField0_ & ~0x00000001);
           }
@@ -1892,7 +1888,7 @@ public final class Affinities {
           result.affinity_ = affinityBuilder_.build();
         }
         if (significanceBuilder_ == null) {
-          if (((bitField0_ & 0x00000002) == 0x00000002)) {
+          if (((bitField0_ & 0x00000002) != 0)) {
             significance_ = java.util.Collections.unmodifiableList(significance_);
             bitField0_ = (bitField0_ & ~0x00000002);
           }
@@ -1922,35 +1918,35 @@ public final class Affinities {
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -2077,7 +2073,7 @@ public final class Affinities {
       private java.util.List<io.bloombox.schema.identity.bioprint.Affinities.SentimentResponse> affinity_ =
         java.util.Collections.emptyList();
       private void ensureAffinityIsMutable() {
-        if (!((bitField0_ & 0x00000001) == 0x00000001)) {
+        if (!((bitField0_ & 0x00000001) != 0)) {
           affinity_ = new java.util.ArrayList<io.bloombox.schema.identity.bioprint.Affinities.SentimentResponse>(affinity_);
           bitField0_ |= 0x00000001;
          }
@@ -2396,7 +2392,7 @@ public final class Affinities {
           affinityBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
               io.bloombox.schema.identity.bioprint.Affinities.SentimentResponse, io.bloombox.schema.identity.bioprint.Affinities.SentimentResponse.Builder, io.bloombox.schema.identity.bioprint.Affinities.SentimentResponseOrBuilder>(
                   affinity_,
-                  ((bitField0_ & 0x00000001) == 0x00000001),
+                  ((bitField0_ & 0x00000001) != 0),
                   getParentForChildren(),
                   isClean());
           affinity_ = null;
@@ -2407,7 +2403,7 @@ public final class Affinities {
       private java.util.List<io.bloombox.schema.identity.bioprint.Weights.MetricSignificance> significance_ =
         java.util.Collections.emptyList();
       private void ensureSignificanceIsMutable() {
-        if (!((bitField0_ & 0x00000002) == 0x00000002)) {
+        if (!((bitField0_ & 0x00000002) != 0)) {
           significance_ = new java.util.ArrayList<io.bloombox.schema.identity.bioprint.Weights.MetricSignificance>(significance_);
           bitField0_ |= 0x00000002;
          }
@@ -2744,7 +2740,7 @@ public final class Affinities {
           significanceBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
               io.bloombox.schema.identity.bioprint.Weights.MetricSignificance, io.bloombox.schema.identity.bioprint.Weights.MetricSignificance.Builder, io.bloombox.schema.identity.bioprint.Weights.MetricSignificanceOrBuilder>(
                   significance_,
-                  ((bitField0_ & 0x00000002) == 0x00000002),
+                  ((bitField0_ & 0x00000002) != 0),
                   getParentForChildren(),
                   isClean());
           significance_ = null;
@@ -3098,7 +3094,7 @@ public final class Affinities {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override

@@ -1,12 +1,11 @@
 /*
- * Copyright 2018, Momentum Ideas, Co. All rights reserved.
+ * Copyright 2019, Momentum Ideas Co.
  *
- * Source and object computer code contained herein is the private intellectual
- * property of Momentum Ideas Co., a Delaware Corporation. Use of this
- * code in source form requires permission in writing before use or the
- * assembly, distribution, or publishing of derivative works, for commercial
- * purposes or any other purpose, from a duly authorized officer of Momentum
- * Ideas Co.
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *  http://www.apache.org/licenses/LICENSE-2.0
  *
  * Unless required by applicable law or agreed to in writing, software
  * distributed under the License is distributed on an "AS IS" BASIS,
@@ -81,7 +80,7 @@ private static final long serialVersionUID = 0L;
             break;
           }
           case 18: {
-            if (!((mutable_bitField0_ & 0x00000002) == 0x00000002)) {
+            if (!((mutable_bitField0_ & 0x00000002) != 0)) {
               tag_ = new java.util.ArrayList<io.opencannabis.schema.menu.ProductTag>();
               mutable_bitField0_ |= 0x00000002;
             }
@@ -90,7 +89,7 @@ private static final long serialVersionUID = 0L;
             break;
           }
           case 26: {
-            if (!((mutable_bitField0_ & 0x00000004) == 0x00000004)) {
+            if (!((mutable_bitField0_ & 0x00000004) != 0)) {
               ref_ = new java.util.ArrayList<io.opencannabis.schema.menu.ForeignReference>();
               mutable_bitField0_ |= 0x00000004;
             }
@@ -211,7 +210,7 @@ private static final long serialVersionUID = 0L;
             break;
           }
           default: {
-            if (!parseUnknownFieldProto3(
+            if (!parseUnknownField(
                 input, unknownFields, extensionRegistry, tag)) {
               done = true;
             }
@@ -225,10 +224,10 @@ private static final long serialVersionUID = 0L;
       throw new com.google.protobuf.InvalidProtocolBufferException(
           e).setUnfinishedMessage(this);
     } finally {
-      if (((mutable_bitField0_ & 0x00000002) == 0x00000002)) {
+      if (((mutable_bitField0_ & 0x00000002) != 0)) {
         tag_ = java.util.Collections.unmodifiableList(tag_);
       }
-      if (((mutable_bitField0_ & 0x00000004) == 0x00000004)) {
+      if (((mutable_bitField0_ & 0x00000004) != 0)) {
         ref_ = java.util.Collections.unmodifiableList(ref_);
       }
       this.unknownFields = unknownFields.build();
@@ -874,57 +873,54 @@ private static final long serialVersionUID = 0L;
     }
     io.opencannabis.schema.menu.MenuProduct other = (io.opencannabis.schema.menu.MenuProduct) obj;
 
-    boolean result = true;
-    result = result && (hasKey() == other.hasKey());
+    if (hasKey() != other.hasKey()) return false;
     if (hasKey()) {
-      result = result && getKey()
-          .equals(other.getKey());
+      if (!getKey()
+          .equals(other.getKey())) return false;
     }
-    result = result && getTagList()
-        .equals(other.getTagList());
-    result = result && getRefList()
-        .equals(other.getRefList());
-    result = result && getProductCase().equals(
-        other.getProductCase());
-    if (!result) return false;
+    if (!getTagList()
+        .equals(other.getTagList())) return false;
+    if (!getRefList()
+        .equals(other.getRefList())) return false;
+    if (!getProductCase().equals(other.getProductCase())) return false;
     switch (productCase_) {
       case 10:
-        result = result && getApothecary()
-            .equals(other.getApothecary());
+        if (!getApothecary()
+            .equals(other.getApothecary())) return false;
         break;
       case 11:
-        result = result && getCartridge()
-            .equals(other.getCartridge());
+        if (!getCartridge()
+            .equals(other.getCartridge())) return false;
         break;
       case 12:
-        result = result && getEdible()
-            .equals(other.getEdible());
+        if (!getEdible()
+            .equals(other.getEdible())) return false;
         break;
       case 13:
-        result = result && getExtract()
-            .equals(other.getExtract());
+        if (!getExtract()
+            .equals(other.getExtract())) return false;
         break;
       case 14:
-        result = result && getFlower()
-            .equals(other.getFlower());
+        if (!getFlower()
+            .equals(other.getFlower())) return false;
         break;
       case 15:
-        result = result && getMerchandise()
-            .equals(other.getMerchandise());
+        if (!getMerchandise()
+            .equals(other.getMerchandise())) return false;
         break;
       case 16:
-        result = result && getPlant()
-            .equals(other.getPlant());
+        if (!getPlant()
+            .equals(other.getPlant())) return false;
         break;
       case 17:
-        result = result && getPreroll()
-            .equals(other.getPreroll());
+        if (!getPreroll()
+            .equals(other.getPreroll())) return false;
         break;
       case 0:
       default:
     }
-    result = result && unknownFields.equals(other.unknownFields);
-    return result;
+    if (!unknownFields.equals(other.unknownFields)) return false;
+    return true;
   }
 
   @java.lang.Override
@@ -1177,7 +1173,7 @@ private static final long serialVersionUID = 0L;
         result.key_ = keyBuilder_.build();
       }
       if (tagBuilder_ == null) {
-        if (((bitField0_ & 0x00000002) == 0x00000002)) {
+        if (((bitField0_ & 0x00000002) != 0)) {
           tag_ = java.util.Collections.unmodifiableList(tag_);
           bitField0_ = (bitField0_ & ~0x00000002);
         }
@@ -1186,7 +1182,7 @@ private static final long serialVersionUID = 0L;
         result.tag_ = tagBuilder_.build();
       }
       if (refBuilder_ == null) {
-        if (((bitField0_ & 0x00000004) == 0x00000004)) {
+        if (((bitField0_ & 0x00000004) != 0)) {
           ref_ = java.util.Collections.unmodifiableList(ref_);
           bitField0_ = (bitField0_ & ~0x00000004);
         }
@@ -1258,35 +1254,35 @@ private static final long serialVersionUID = 0L;
 
     @java.lang.Override
     public Builder clone() {
-      return (Builder) super.clone();
+      return super.clone();
     }
     @java.lang.Override
     public Builder setField(
         com.google.protobuf.Descriptors.FieldDescriptor field,
         java.lang.Object value) {
-      return (Builder) super.setField(field, value);
+      return super.setField(field, value);
     }
     @java.lang.Override
     public Builder clearField(
         com.google.protobuf.Descriptors.FieldDescriptor field) {
-      return (Builder) super.clearField(field);
+      return super.clearField(field);
     }
     @java.lang.Override
     public Builder clearOneof(
         com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-      return (Builder) super.clearOneof(oneof);
+      return super.clearOneof(oneof);
     }
     @java.lang.Override
     public Builder setRepeatedField(
         com.google.protobuf.Descriptors.FieldDescriptor field,
         int index, java.lang.Object value) {
-      return (Builder) super.setRepeatedField(field, index, value);
+      return super.setRepeatedField(field, index, value);
     }
     @java.lang.Override
     public Builder addRepeatedField(
         com.google.protobuf.Descriptors.FieldDescriptor field,
         java.lang.Object value) {
-      return (Builder) super.addRepeatedField(field, value);
+      return super.addRepeatedField(field, value);
     }
     @java.lang.Override
     public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -1437,7 +1433,7 @@ private static final long serialVersionUID = 0L;
 
     private int bitField0_;
 
-    private io.opencannabis.schema.base.BaseProductKey.ProductKey key_ = null;
+    private io.opencannabis.schema.base.BaseProductKey.ProductKey key_;
     private com.google.protobuf.SingleFieldBuilderV3<
         io.opencannabis.schema.base.BaseProductKey.ProductKey, io.opencannabis.schema.base.BaseProductKey.ProductKey.Builder, io.opencannabis.schema.base.BaseProductKey.ProductKeyOrBuilder> keyBuilder_;
     /**
@@ -1602,7 +1598,7 @@ private static final long serialVersionUID = 0L;
     private java.util.List<io.opencannabis.schema.menu.ProductTag> tag_ =
       java.util.Collections.emptyList();
     private void ensureTagIsMutable() {
-      if (!((bitField0_ & 0x00000002) == 0x00000002)) {
+      if (!((bitField0_ & 0x00000002) != 0)) {
         tag_ = new java.util.ArrayList<io.opencannabis.schema.menu.ProductTag>(tag_);
         bitField0_ |= 0x00000002;
        }
@@ -1921,7 +1917,7 @@ private static final long serialVersionUID = 0L;
         tagBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
             io.opencannabis.schema.menu.ProductTag, io.opencannabis.schema.menu.ProductTag.Builder, io.opencannabis.schema.menu.ProductTagOrBuilder>(
                 tag_,
-                ((bitField0_ & 0x00000002) == 0x00000002),
+                ((bitField0_ & 0x00000002) != 0),
                 getParentForChildren(),
                 isClean());
         tag_ = null;
@@ -1932,7 +1928,7 @@ private static final long serialVersionUID = 0L;
     private java.util.List<io.opencannabis.schema.menu.ForeignReference> ref_ =
       java.util.Collections.emptyList();
     private void ensureRefIsMutable() {
-      if (!((bitField0_ & 0x00000004) == 0x00000004)) {
+      if (!((bitField0_ & 0x00000004) != 0)) {
         ref_ = new java.util.ArrayList<io.opencannabis.schema.menu.ForeignReference>(ref_);
         bitField0_ |= 0x00000004;
        }
@@ -2251,7 +2247,7 @@ private static final long serialVersionUID = 0L;
         refBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
             io.opencannabis.schema.menu.ForeignReference, io.opencannabis.schema.menu.ForeignReference.Builder, io.opencannabis.schema.menu.ForeignReferenceOrBuilder>(
                 ref_,
-                ((bitField0_ & 0x00000004) == 0x00000004),
+                ((bitField0_ & 0x00000004) != 0),
                 getParentForChildren(),
                 isClean());
         ref_ = null;
@@ -3637,7 +3633,7 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public final Builder setUnknownFields(
         final com.google.protobuf.UnknownFieldSet unknownFields) {
-      return super.setUnknownFieldsProto3(unknownFields);
+      return super.setUnknownFields(unknownFields);
     }
 
     @java.lang.Override

@@ -1,12 +1,11 @@
 /*
- * Copyright 2018, Momentum Ideas, Co. All rights reserved.
+ * Copyright 2019, Momentum Ideas Co.
  *
- * Source and object computer code contained herein is the private intellectual
- * property of Momentum Ideas Co., a Delaware Corporation. Use of this
- * code in source form requires permission in writing before use or the
- * assembly, distribution, or publishing of derivative works, for commercial
- * purposes or any other purpose, from a duly authorized officer of Momentum
- * Ideas Co.
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *  http://www.apache.org/licenses/LICENSE-2.0
  *
  * Unless required by applicable law or agreed to in writing, software
  * distributed under the License is distributed on an "AS IS" BASIS,
@@ -90,13 +89,14 @@ public final class ProductPricingSpec {
       "nabis.structs.pricing.SaleDescriptor\022A\n\010" +
       "manifest\030\002 \003(\0132/.opencannabis.structs.pr" +
       "icing.PricingDescriptor*%\n\013PricingType\022\010" +
-      "\n\004UNIT\020\000\022\014\n\010WEIGHTED\020\001*\253\001\n\021PricingWeight" +
+      "\n\004UNIT\020\000\022\014\n\010WEIGHTED\020\001*\314\001\n\021PricingWeight" +
       "Tier\022\r\n\tNO_WEIGHT\020\000\022\010\n\004GRAM\020\001\022\014\n\010HALFGRA" +
       "M\020\002\022\017\n\013QUARTERGRAM\020\003\022\007\n\003DUB\020\004\022\n\n\006EIGHTH\020" +
-      "\005\022\013\n\007QUARTER\020\006\022\010\n\004HALF\020\007\022\t\n\005OUNCE\020\010\022\t\n\005P" +
-      "OUND\020\t\022\010\n\004KILO\020\n\022\007\n\003TON\020\013\022\t\n\005OTHER\020\014BE\n%" +
-      "io.opencannabis.schema.product.structB\022P" +
-      "roductPricingSpecH\001P\001\242\002\003OCSb\006proto3"
+      "\005\022\013\n\007QUARTER\020\006\022\010\n\004HALF\020\007\022\t\n\005OUNCE\020\010\022\020\n\014Q" +
+      "UARTERPOUND\020\t\022\r\n\tHALFPOUND\020\n\022\t\n\005POUND\020\013\022" +
+      "\010\n\004KILO\020\014\022\007\n\003TON\020\r\022\t\n\005OTHER\020cBE\n%io.open" +
+      "cannabis.schema.product.structB\022ProductP" +
+      "ricingSpecH\001P\001\242\002\003OCSb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {

@@ -1,5 +1,5 @@
 /*
- * Copyright 2018, Momentum Ideas, Co. All rights reserved.
+ * Copyright 2019, Momentum Ideas, Co. All rights reserved.
  *
  * Source and object computer code contained herein is the private intellectual
  * property of Momentum Ideas Co., a Delaware Corporation. Use of this
@@ -39,10 +39,7 @@ private static final long serialVersionUID = 0L;
   private CampaignSummary() {
     name_ = "";
     description_ = "";
-    live_ = false;
     status_ = 0;
-    sms_ = false;
-    email_ = false;
     tag_ = java.util.Collections.emptyList();
   }
 
@@ -117,7 +114,7 @@ private static final long serialVersionUID = 0L;
             break;
           }
           case 66: {
-            if (!((mutable_bitField0_ & 0x00000080) == 0x00000080)) {
+            if (!((mutable_bitField0_ & 0x00000080) != 0)) {
               tag_ = new java.util.ArrayList<io.bloombox.schema.marketing.MarketingCampaign.CampaignTag>();
               mutable_bitField0_ |= 0x00000080;
             }
@@ -139,7 +136,7 @@ private static final long serialVersionUID = 0L;
             break;
           }
           default: {
-            if (!parseUnknownFieldProto3(
+            if (!parseUnknownField(
                 input, unknownFields, extensionRegistry, tag)) {
               done = true;
             }
@@ -153,7 +150,7 @@ private static final long serialVersionUID = 0L;
       throw new com.google.protobuf.InvalidProtocolBufferException(
           e).setUnfinishedMessage(this);
     } finally {
-      if (((mutable_bitField0_ & 0x00000080) == 0x00000080)) {
+      if (((mutable_bitField0_ & 0x00000080) != 0)) {
         tag_ = java.util.Collections.unmodifiableList(tag_);
       }
       this.unknownFields = unknownFields.build();
@@ -542,32 +539,31 @@ private static final long serialVersionUID = 0L;
     }
     io.bloombox.schema.services.marketing.v1beta1.CampaignSummary other = (io.bloombox.schema.services.marketing.v1beta1.CampaignSummary) obj;
 
-    boolean result = true;
-    result = result && (hasKey() == other.hasKey());
+    if (hasKey() != other.hasKey()) return false;
     if (hasKey()) {
-      result = result && getKey()
-          .equals(other.getKey());
+      if (!getKey()
+          .equals(other.getKey())) return false;
     }
-    result = result && getName()
-        .equals(other.getName());
-    result = result && getDescription()
-        .equals(other.getDescription());
-    result = result && (getLive()
-        == other.getLive());
-    result = result && status_ == other.status_;
-    result = result && (getSms()
-        == other.getSms());
-    result = result && (getEmail()
-        == other.getEmail());
-    result = result && getTagList()
-        .equals(other.getTagList());
-    result = result && (hasModified() == other.hasModified());
+    if (!getName()
+        .equals(other.getName())) return false;
+    if (!getDescription()
+        .equals(other.getDescription())) return false;
+    if (getLive()
+        != other.getLive()) return false;
+    if (status_ != other.status_) return false;
+    if (getSms()
+        != other.getSms()) return false;
+    if (getEmail()
+        != other.getEmail()) return false;
+    if (!getTagList()
+        .equals(other.getTagList())) return false;
+    if (hasModified() != other.hasModified()) return false;
     if (hasModified()) {
-      result = result && getModified()
-          .equals(other.getModified());
+      if (!getModified()
+          .equals(other.getModified())) return false;
     }
-    result = result && unknownFields.equals(other.unknownFields);
-    return result;
+    if (!unknownFields.equals(other.unknownFields)) return false;
+    return true;
   }
 
   @java.lang.Override
@@ -812,7 +808,7 @@ private static final long serialVersionUID = 0L;
       result.sms_ = sms_;
       result.email_ = email_;
       if (tagBuilder_ == null) {
-        if (((bitField0_ & 0x00000080) == 0x00000080)) {
+        if (((bitField0_ & 0x00000080) != 0)) {
           tag_ = java.util.Collections.unmodifiableList(tag_);
           bitField0_ = (bitField0_ & ~0x00000080);
         }
@@ -832,35 +828,35 @@ private static final long serialVersionUID = 0L;
 
     @java.lang.Override
     public Builder clone() {
-      return (Builder) super.clone();
+      return super.clone();
     }
     @java.lang.Override
     public Builder setField(
         com.google.protobuf.Descriptors.FieldDescriptor field,
         java.lang.Object value) {
-      return (Builder) super.setField(field, value);
+      return super.setField(field, value);
     }
     @java.lang.Override
     public Builder clearField(
         com.google.protobuf.Descriptors.FieldDescriptor field) {
-      return (Builder) super.clearField(field);
+      return super.clearField(field);
     }
     @java.lang.Override
     public Builder clearOneof(
         com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-      return (Builder) super.clearOneof(oneof);
+      return super.clearOneof(oneof);
     }
     @java.lang.Override
     public Builder setRepeatedField(
         com.google.protobuf.Descriptors.FieldDescriptor field,
         int index, java.lang.Object value) {
-      return (Builder) super.setRepeatedField(field, index, value);
+      return super.setRepeatedField(field, index, value);
     }
     @java.lang.Override
     public Builder addRepeatedField(
         com.google.protobuf.Descriptors.FieldDescriptor field,
         java.lang.Object value) {
-      return (Builder) super.addRepeatedField(field, value);
+      return super.addRepeatedField(field, value);
     }
     @java.lang.Override
     public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -956,7 +952,7 @@ private static final long serialVersionUID = 0L;
     }
     private int bitField0_;
 
-    private io.bloombox.schema.marketing.MarketingCampaign.CampaignKey key_ = null;
+    private io.bloombox.schema.marketing.MarketingCampaign.CampaignKey key_;
     private com.google.protobuf.SingleFieldBuilderV3<
         io.bloombox.schema.marketing.MarketingCampaign.CampaignKey, io.bloombox.schema.marketing.MarketingCampaign.CampaignKey.Builder, io.bloombox.schema.marketing.MarketingCampaign.CampaignKeyOrBuilder> keyBuilder_;
     /**
@@ -1469,7 +1465,7 @@ private static final long serialVersionUID = 0L;
     private java.util.List<io.bloombox.schema.marketing.MarketingCampaign.CampaignTag> tag_ =
       java.util.Collections.emptyList();
     private void ensureTagIsMutable() {
-      if (!((bitField0_ & 0x00000080) == 0x00000080)) {
+      if (!((bitField0_ & 0x00000080) != 0)) {
         tag_ = new java.util.ArrayList<io.bloombox.schema.marketing.MarketingCampaign.CampaignTag>(tag_);
         bitField0_ |= 0x00000080;
        }
@@ -1770,7 +1766,7 @@ private static final long serialVersionUID = 0L;
         tagBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
             io.bloombox.schema.marketing.MarketingCampaign.CampaignTag, io.bloombox.schema.marketing.MarketingCampaign.CampaignTag.Builder, io.bloombox.schema.marketing.MarketingCampaign.CampaignTagOrBuilder>(
                 tag_,
-                ((bitField0_ & 0x00000080) == 0x00000080),
+                ((bitField0_ & 0x00000080) != 0),
                 getParentForChildren(),
                 isClean());
         tag_ = null;
@@ -1778,7 +1774,7 @@ private static final long serialVersionUID = 0L;
       return tagBuilder_;
     }
 
-    private io.opencannabis.schema.temporal.TemporalInstant.Instant modified_ = null;
+    private io.opencannabis.schema.temporal.TemporalInstant.Instant modified_;
     private com.google.protobuf.SingleFieldBuilderV3<
         io.opencannabis.schema.temporal.TemporalInstant.Instant, io.opencannabis.schema.temporal.TemporalInstant.Instant.Builder, io.opencannabis.schema.temporal.TemporalInstant.InstantOrBuilder> modifiedBuilder_;
     /**
@@ -1933,7 +1929,7 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public final Builder setUnknownFields(
         final com.google.protobuf.UnknownFieldSet unknownFields) {
-      return super.setUnknownFieldsProto3(unknownFields);
+      return super.setUnknownFields(unknownFields);
     }
 
     @java.lang.Override

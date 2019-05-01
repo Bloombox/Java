@@ -1,5 +1,5 @@
 /*
- * Copyright 2018, Momentum Ideas, Co. All rights reserved.
+ * Copyright 2019, Momentum Ideas, Co. All rights reserved.
  *
  * Source and object computer code contained herein is the private intellectual
  * property of Momentum Ideas Co., a Delaware Corporation. Use of this
@@ -356,6 +356,31 @@ public final class AnalyticsPipeline {
      */
     io.bloombox.schema.services.telemetry.v1beta4.SearchEvent.ResultOrBuilder getSearchResultOrBuilder();
 
+    /**
+     * <pre>
+     * Inventory: Event.
+     * </pre>
+     *
+     * <code>.bloombox.services.telemetry.v1beta4.InventoryEvent inventory_event = 33;</code>
+     */
+    boolean hasInventoryEvent();
+    /**
+     * <pre>
+     * Inventory: Event.
+     * </pre>
+     *
+     * <code>.bloombox.services.telemetry.v1beta4.InventoryEvent inventory_event = 33;</code>
+     */
+    io.bloombox.schema.services.telemetry.v1beta4.InventoryEvent getInventoryEvent();
+    /**
+     * <pre>
+     * Inventory: Event.
+     * </pre>
+     *
+     * <code>.bloombox.services.telemetry.v1beta4.InventoryEvent inventory_event = 33;</code>
+     */
+    io.bloombox.schema.services.telemetry.v1beta4.InventoryEventOrBuilder getInventoryEventOrBuilder();
+
     public io.bloombox.schema.services.telemetry.v1beta4.AnalyticsPipeline.TelemetryEvent.EventCase getEventCase();
   }
   /**
@@ -377,7 +402,6 @@ public final class AnalyticsPipeline {
     private TelemetryEvent() {
       uuid_ = "";
       parent_ = "";
-      internal_ = false;
     }
 
     @java.lang.Override
@@ -572,8 +596,22 @@ public final class AnalyticsPipeline {
               eventCase_ = 32;
               break;
             }
+            case 266: {
+              io.bloombox.schema.services.telemetry.v1beta4.InventoryEvent.Builder subBuilder = null;
+              if (eventCase_ == 33) {
+                subBuilder = ((io.bloombox.schema.services.telemetry.v1beta4.InventoryEvent) event_).toBuilder();
+              }
+              event_ =
+                  input.readMessage(io.bloombox.schema.services.telemetry.v1beta4.InventoryEvent.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom((io.bloombox.schema.services.telemetry.v1beta4.InventoryEvent) event_);
+                event_ = subBuilder.buildPartial();
+              }
+              eventCase_ = 33;
+              break;
+            }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -616,6 +654,7 @@ public final class AnalyticsPipeline {
       USER_ACTION(30),
       SEARCH_QUERY(31),
       SEARCH_RESULT(32),
+      INVENTORY_EVENT(33),
       EVENT_NOT_SET(0);
       private final int value;
       private EventCase(int value) {
@@ -639,6 +678,7 @@ public final class AnalyticsPipeline {
           case 30: return USER_ACTION;
           case 31: return SEARCH_QUERY;
           case 32: return SEARCH_RESULT;
+          case 33: return INVENTORY_EVENT;
           case 0: return EVENT_NOT_SET;
           default: return null;
         }
@@ -1155,6 +1195,44 @@ public final class AnalyticsPipeline {
       return io.bloombox.schema.services.telemetry.v1beta4.SearchEvent.Result.getDefaultInstance();
     }
 
+    public static final int INVENTORY_EVENT_FIELD_NUMBER = 33;
+    /**
+     * <pre>
+     * Inventory: Event.
+     * </pre>
+     *
+     * <code>.bloombox.services.telemetry.v1beta4.InventoryEvent inventory_event = 33;</code>
+     */
+    public boolean hasInventoryEvent() {
+      return eventCase_ == 33;
+    }
+    /**
+     * <pre>
+     * Inventory: Event.
+     * </pre>
+     *
+     * <code>.bloombox.services.telemetry.v1beta4.InventoryEvent inventory_event = 33;</code>
+     */
+    public io.bloombox.schema.services.telemetry.v1beta4.InventoryEvent getInventoryEvent() {
+      if (eventCase_ == 33) {
+         return (io.bloombox.schema.services.telemetry.v1beta4.InventoryEvent) event_;
+      }
+      return io.bloombox.schema.services.telemetry.v1beta4.InventoryEvent.getDefaultInstance();
+    }
+    /**
+     * <pre>
+     * Inventory: Event.
+     * </pre>
+     *
+     * <code>.bloombox.services.telemetry.v1beta4.InventoryEvent inventory_event = 33;</code>
+     */
+    public io.bloombox.schema.services.telemetry.v1beta4.InventoryEventOrBuilder getInventoryEventOrBuilder() {
+      if (eventCase_ == 33) {
+         return (io.bloombox.schema.services.telemetry.v1beta4.InventoryEvent) event_;
+      }
+      return io.bloombox.schema.services.telemetry.v1beta4.InventoryEvent.getDefaultInstance();
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -1210,6 +1288,9 @@ public final class AnalyticsPipeline {
       }
       if (eventCase_ == 32) {
         output.writeMessage(32, (io.bloombox.schema.services.telemetry.v1beta4.SearchEvent.Result) event_);
+      }
+      if (eventCase_ == 33) {
+        output.writeMessage(33, (io.bloombox.schema.services.telemetry.v1beta4.InventoryEvent) event_);
       }
       unknownFields.writeTo(output);
     }
@@ -1274,6 +1355,10 @@ public final class AnalyticsPipeline {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(32, (io.bloombox.schema.services.telemetry.v1beta4.SearchEvent.Result) event_);
       }
+      if (eventCase_ == 33) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(33, (io.bloombox.schema.services.telemetry.v1beta4.InventoryEvent) event_);
+      }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
@@ -1289,69 +1374,70 @@ public final class AnalyticsPipeline {
       }
       io.bloombox.schema.services.telemetry.v1beta4.AnalyticsPipeline.TelemetryEvent other = (io.bloombox.schema.services.telemetry.v1beta4.AnalyticsPipeline.TelemetryEvent) obj;
 
-      boolean result = true;
-      result = result && getUuid()
-          .equals(other.getUuid());
-      result = result && getParent()
-          .equals(other.getParent());
-      result = result && (getInternal()
-          == other.getInternal());
-      result = result && (hasTiming() == other.hasTiming());
+      if (!getUuid()
+          .equals(other.getUuid())) return false;
+      if (!getParent()
+          .equals(other.getParent())) return false;
+      if (getInternal()
+          != other.getInternal()) return false;
+      if (hasTiming() != other.hasTiming()) return false;
       if (hasTiming()) {
-        result = result && getTiming()
-            .equals(other.getTiming());
+        if (!getTiming()
+            .equals(other.getTiming())) return false;
       }
-      result = result && (hasContext() == other.hasContext());
+      if (hasContext() != other.hasContext()) return false;
       if (hasContext()) {
-        result = result && getContext()
-            .equals(other.getContext());
+        if (!getContext()
+            .equals(other.getContext())) return false;
       }
-      result = result && (hasActors() == other.hasActors());
+      if (hasActors() != other.hasActors()) return false;
       if (hasActors()) {
-        result = result && getActors()
-            .equals(other.getActors());
+        if (!getActors()
+            .equals(other.getActors())) return false;
       }
-      result = result && getEventCase().equals(
-          other.getEventCase());
-      if (!result) return false;
+      if (!getEventCase().equals(other.getEventCase())) return false;
       switch (eventCase_) {
         case 10:
-          result = result && getGeneric()
-              .equals(other.getGeneric());
+          if (!getGeneric()
+              .equals(other.getGeneric())) return false;
           break;
         case 11:
-          result = result && getError()
-              .equals(other.getError());
+          if (!getError()
+              .equals(other.getError())) return false;
           break;
         case 20:
-          result = result && getImpression()
-              .equals(other.getImpression());
+          if (!getImpression()
+              .equals(other.getImpression())) return false;
           break;
         case 21:
-          result = result && getView()
-              .equals(other.getView());
+          if (!getView()
+              .equals(other.getView())) return false;
           break;
         case 22:
-          result = result && getAction()
-              .equals(other.getAction());
+          if (!getAction()
+              .equals(other.getAction())) return false;
           break;
         case 30:
-          result = result && getUserAction()
-              .equals(other.getUserAction());
+          if (!getUserAction()
+              .equals(other.getUserAction())) return false;
           break;
         case 31:
-          result = result && getSearchQuery()
-              .equals(other.getSearchQuery());
+          if (!getSearchQuery()
+              .equals(other.getSearchQuery())) return false;
           break;
         case 32:
-          result = result && getSearchResult()
-              .equals(other.getSearchResult());
+          if (!getSearchResult()
+              .equals(other.getSearchResult())) return false;
+          break;
+        case 33:
+          if (!getInventoryEvent()
+              .equals(other.getInventoryEvent())) return false;
           break;
         case 0:
         default:
       }
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -1412,6 +1498,10 @@ public final class AnalyticsPipeline {
         case 32:
           hash = (37 * hash) + SEARCH_RESULT_FIELD_NUMBER;
           hash = (53 * hash) + getSearchResult().hashCode();
+          break;
+        case 33:
+          hash = (37 * hash) + INVENTORY_EVENT_FIELD_NUMBER;
+          hash = (53 * hash) + getInventoryEvent().hashCode();
           break;
         case 0:
         default:
@@ -1679,6 +1769,13 @@ public final class AnalyticsPipeline {
             result.event_ = searchResultBuilder_.build();
           }
         }
+        if (eventCase_ == 33) {
+          if (inventoryEventBuilder_ == null) {
+            result.event_ = event_;
+          } else {
+            result.event_ = inventoryEventBuilder_.build();
+          }
+        }
         result.eventCase_ = eventCase_;
         onBuilt();
         return result;
@@ -1686,35 +1783,35 @@ public final class AnalyticsPipeline {
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -1779,6 +1876,10 @@ public final class AnalyticsPipeline {
           }
           case SEARCH_RESULT: {
             mergeSearchResult(other.getSearchResult());
+            break;
+          }
+          case INVENTORY_EVENT: {
+            mergeInventoryEvent(other.getInventoryEvent());
             break;
           }
           case EVENT_NOT_SET: {
@@ -2048,7 +2149,7 @@ public final class AnalyticsPipeline {
         return this;
       }
 
-      private io.bloombox.schema.telemetry.AnalyticsContext.EventPosition timing_ = null;
+      private io.bloombox.schema.telemetry.AnalyticsContext.EventPosition timing_;
       private com.google.protobuf.SingleFieldBuilderV3<
           io.bloombox.schema.telemetry.AnalyticsContext.EventPosition, io.bloombox.schema.telemetry.AnalyticsContext.EventPosition.Builder, io.bloombox.schema.telemetry.AnalyticsContext.EventPositionOrBuilder> timingBuilder_;
       /**
@@ -2201,7 +2302,7 @@ public final class AnalyticsPipeline {
         return timingBuilder_;
       }
 
-      private io.bloombox.schema.telemetry.AnalyticsContext.Context context_ = null;
+      private io.bloombox.schema.telemetry.AnalyticsContext.Context context_;
       private com.google.protobuf.SingleFieldBuilderV3<
           io.bloombox.schema.telemetry.AnalyticsContext.Context, io.bloombox.schema.telemetry.AnalyticsContext.Context.Builder, io.bloombox.schema.telemetry.AnalyticsContext.ContextOrBuilder> contextBuilder_;
       /**
@@ -2354,7 +2455,7 @@ public final class AnalyticsPipeline {
         return contextBuilder_;
       }
 
-      private io.bloombox.schema.telemetry.AnalyticsContext.EventActors actors_ = null;
+      private io.bloombox.schema.telemetry.AnalyticsContext.EventActors actors_;
       private com.google.protobuf.SingleFieldBuilderV3<
           io.bloombox.schema.telemetry.AnalyticsContext.EventActors, io.bloombox.schema.telemetry.AnalyticsContext.EventActors.Builder, io.bloombox.schema.telemetry.AnalyticsContext.EventActorsOrBuilder> actorsBuilder_;
       /**
@@ -3882,10 +3983,182 @@ public final class AnalyticsPipeline {
         onChanged();;
         return searchResultBuilder_;
       }
+
+      private com.google.protobuf.SingleFieldBuilderV3<
+          io.bloombox.schema.services.telemetry.v1beta4.InventoryEvent, io.bloombox.schema.services.telemetry.v1beta4.InventoryEvent.Builder, io.bloombox.schema.services.telemetry.v1beta4.InventoryEventOrBuilder> inventoryEventBuilder_;
+      /**
+       * <pre>
+       * Inventory: Event.
+       * </pre>
+       *
+       * <code>.bloombox.services.telemetry.v1beta4.InventoryEvent inventory_event = 33;</code>
+       */
+      public boolean hasInventoryEvent() {
+        return eventCase_ == 33;
+      }
+      /**
+       * <pre>
+       * Inventory: Event.
+       * </pre>
+       *
+       * <code>.bloombox.services.telemetry.v1beta4.InventoryEvent inventory_event = 33;</code>
+       */
+      public io.bloombox.schema.services.telemetry.v1beta4.InventoryEvent getInventoryEvent() {
+        if (inventoryEventBuilder_ == null) {
+          if (eventCase_ == 33) {
+            return (io.bloombox.schema.services.telemetry.v1beta4.InventoryEvent) event_;
+          }
+          return io.bloombox.schema.services.telemetry.v1beta4.InventoryEvent.getDefaultInstance();
+        } else {
+          if (eventCase_ == 33) {
+            return inventoryEventBuilder_.getMessage();
+          }
+          return io.bloombox.schema.services.telemetry.v1beta4.InventoryEvent.getDefaultInstance();
+        }
+      }
+      /**
+       * <pre>
+       * Inventory: Event.
+       * </pre>
+       *
+       * <code>.bloombox.services.telemetry.v1beta4.InventoryEvent inventory_event = 33;</code>
+       */
+      public Builder setInventoryEvent(io.bloombox.schema.services.telemetry.v1beta4.InventoryEvent value) {
+        if (inventoryEventBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          event_ = value;
+          onChanged();
+        } else {
+          inventoryEventBuilder_.setMessage(value);
+        }
+        eventCase_ = 33;
+        return this;
+      }
+      /**
+       * <pre>
+       * Inventory: Event.
+       * </pre>
+       *
+       * <code>.bloombox.services.telemetry.v1beta4.InventoryEvent inventory_event = 33;</code>
+       */
+      public Builder setInventoryEvent(
+          io.bloombox.schema.services.telemetry.v1beta4.InventoryEvent.Builder builderForValue) {
+        if (inventoryEventBuilder_ == null) {
+          event_ = builderForValue.build();
+          onChanged();
+        } else {
+          inventoryEventBuilder_.setMessage(builderForValue.build());
+        }
+        eventCase_ = 33;
+        return this;
+      }
+      /**
+       * <pre>
+       * Inventory: Event.
+       * </pre>
+       *
+       * <code>.bloombox.services.telemetry.v1beta4.InventoryEvent inventory_event = 33;</code>
+       */
+      public Builder mergeInventoryEvent(io.bloombox.schema.services.telemetry.v1beta4.InventoryEvent value) {
+        if (inventoryEventBuilder_ == null) {
+          if (eventCase_ == 33 &&
+              event_ != io.bloombox.schema.services.telemetry.v1beta4.InventoryEvent.getDefaultInstance()) {
+            event_ = io.bloombox.schema.services.telemetry.v1beta4.InventoryEvent.newBuilder((io.bloombox.schema.services.telemetry.v1beta4.InventoryEvent) event_)
+                .mergeFrom(value).buildPartial();
+          } else {
+            event_ = value;
+          }
+          onChanged();
+        } else {
+          if (eventCase_ == 33) {
+            inventoryEventBuilder_.mergeFrom(value);
+          }
+          inventoryEventBuilder_.setMessage(value);
+        }
+        eventCase_ = 33;
+        return this;
+      }
+      /**
+       * <pre>
+       * Inventory: Event.
+       * </pre>
+       *
+       * <code>.bloombox.services.telemetry.v1beta4.InventoryEvent inventory_event = 33;</code>
+       */
+      public Builder clearInventoryEvent() {
+        if (inventoryEventBuilder_ == null) {
+          if (eventCase_ == 33) {
+            eventCase_ = 0;
+            event_ = null;
+            onChanged();
+          }
+        } else {
+          if (eventCase_ == 33) {
+            eventCase_ = 0;
+            event_ = null;
+          }
+          inventoryEventBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Inventory: Event.
+       * </pre>
+       *
+       * <code>.bloombox.services.telemetry.v1beta4.InventoryEvent inventory_event = 33;</code>
+       */
+      public io.bloombox.schema.services.telemetry.v1beta4.InventoryEvent.Builder getInventoryEventBuilder() {
+        return getInventoryEventFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * Inventory: Event.
+       * </pre>
+       *
+       * <code>.bloombox.services.telemetry.v1beta4.InventoryEvent inventory_event = 33;</code>
+       */
+      public io.bloombox.schema.services.telemetry.v1beta4.InventoryEventOrBuilder getInventoryEventOrBuilder() {
+        if ((eventCase_ == 33) && (inventoryEventBuilder_ != null)) {
+          return inventoryEventBuilder_.getMessageOrBuilder();
+        } else {
+          if (eventCase_ == 33) {
+            return (io.bloombox.schema.services.telemetry.v1beta4.InventoryEvent) event_;
+          }
+          return io.bloombox.schema.services.telemetry.v1beta4.InventoryEvent.getDefaultInstance();
+        }
+      }
+      /**
+       * <pre>
+       * Inventory: Event.
+       * </pre>
+       *
+       * <code>.bloombox.services.telemetry.v1beta4.InventoryEvent inventory_event = 33;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          io.bloombox.schema.services.telemetry.v1beta4.InventoryEvent, io.bloombox.schema.services.telemetry.v1beta4.InventoryEvent.Builder, io.bloombox.schema.services.telemetry.v1beta4.InventoryEventOrBuilder> 
+          getInventoryEventFieldBuilder() {
+        if (inventoryEventBuilder_ == null) {
+          if (!(eventCase_ == 33)) {
+            event_ = io.bloombox.schema.services.telemetry.v1beta4.InventoryEvent.getDefaultInstance();
+          }
+          inventoryEventBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              io.bloombox.schema.services.telemetry.v1beta4.InventoryEvent, io.bloombox.schema.services.telemetry.v1beta4.InventoryEvent.Builder, io.bloombox.schema.services.telemetry.v1beta4.InventoryEventOrBuilder>(
+                  (io.bloombox.schema.services.telemetry.v1beta4.InventoryEvent) event_,
+                  getParentForChildren(),
+                  isClean());
+          event_ = null;
+        }
+        eventCase_ = 33;
+        onChanged();;
+        return inventoryEventBuilder_;
+      }
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -3954,7 +4227,7 @@ public final class AnalyticsPipeline {
       "ta4\032\016bq_field.proto\032\027analytics/Context.p" +
       "roto\032\035analytics/generic/Event.proto\032!ana" +
       "lytics/generic/Exception.proto\032.telemetr" +
-      "y/v1beta4/TelemetryService_Beta4.proto\"\256" +
+      "y/v1beta4/TelemetryService_Beta4.proto\"\376" +
       "\006\n\016TelemetryEvent\022\014\n\004uuid\030\001 \001(\t\022\016\n\006paren" +
       "t\030\002 \001(\t\022\020\n\010internal\030\003 \001(\010\0221\n\006timing\030\004 \001(" +
       "\0132!.bloombox.analytics.EventPosition\022,\n\007" +
@@ -3975,7 +4248,9 @@ public final class AnalyticsPipeline {
       "rvices.telemetry.v1beta4.SearchEvent.Que" +
       "ryH\000\022P\n\rsearch_result\030  \001(\01327.bloombox.s" +
       "ervices.telemetry.v1beta4.SearchEvent.Re" +
-      "sultH\000B\007\n\005eventBc\n-io.bloombox.schema.se" +
+      "sultH\000\022N\n\017inventory_event\030! \001(\01323.bloomb" +
+      "ox.services.telemetry.v1beta4.InventoryE" +
+      "ventH\000B\007\n\005eventBc\n-io.bloombox.schema.se" +
       "rvices.telemetry.v1beta4B\021AnalyticsPipel" +
       "ineH\001P\000\370\001\001\242\002\003BBS\252\002\021Telemetry.v1beta4b\006pr" +
       "oto3"
@@ -4002,7 +4277,7 @@ public final class AnalyticsPipeline {
     internal_static_bloombox_services_telemetry_v1beta4_TelemetryEvent_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_bloombox_services_telemetry_v1beta4_TelemetryEvent_descriptor,
-        new java.lang.String[] { "Uuid", "Parent", "Internal", "Timing", "Context", "Actors", "Generic", "Error", "Impression", "View", "Action", "UserAction", "SearchQuery", "SearchResult", "Event", });
+        new java.lang.String[] { "Uuid", "Parent", "Internal", "Timing", "Context", "Actors", "Generic", "Error", "Impression", "View", "Action", "UserAction", "SearchQuery", "SearchResult", "InventoryEvent", "Event", });
     gen_bq_schema.BqField.getDescriptor();
     io.bloombox.schema.telemetry.AnalyticsContext.getDescriptor();
     io.bloombox.schema.telemetry.AnalyticsEvent.getDescriptor();

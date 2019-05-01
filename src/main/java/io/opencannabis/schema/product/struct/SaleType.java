@@ -1,12 +1,11 @@
 /*
- * Copyright 2018, Momentum Ideas, Co. All rights reserved.
+ * Copyright 2019, Momentum Ideas Co.
  *
- * Source and object computer code contained herein is the private intellectual
- * property of Momentum Ideas Co., a Delaware Corporation. Use of this
- * code in source form requires permission in writing before use or the
- * assembly, distribution, or publishing of derivative works, for commercial
- * purposes or any other purpose, from a duly authorized officer of Momentum
- * Ideas Co.
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *  http://www.apache.org/licenses/LICENSE-2.0
  *
  * Unless required by applicable law or agreed to in writing, software
  * distributed under the License is distributed on an "AS IS" BASIS,
@@ -21,23 +20,43 @@
 package io.opencannabis.schema.product.struct;
 
 /**
+ * <pre>
+ * Enumerates the various types of "sales" I.E. a retail purchase made with a discount of some amount applied.
+ * </pre>
+ *
  * Protobuf enum {@code opencannabis.structs.pricing.SaleType}
  */
 public enum SaleType
     implements com.google.protobuf.ProtocolMessageEnum {
   /**
+   * <pre>
+   * A reduction of an item or the total by a percentage. I.E. "20% off".
+   * </pre>
+   *
    * <code>PERCENTAGE_REDUCTION = 0;</code>
    */
   PERCENTAGE_REDUCTION(0),
   /**
+   * <pre>
+   * The reduction of an item or total by a flat value. I.E. "$5 off".
+   * </pre>
+   *
    * <code>VALUE_REDUCTION = 1;</code>
    */
   VALUE_REDUCTION(1),
   /**
+   * <pre>
+   * A buy-one-get-one discount. Some discounted amount, applicable to the second item bought.
+   * </pre>
+   *
    * <code>BOGO = 2;</code>
    */
   BOGO(2),
   /**
+   * <pre>
+   * A discount for being a frequent or returning customer.
+   * </pre>
+   *
    * <code>LOYALTY = 3;</code>
    */
   LOYALTY(3),
@@ -45,18 +64,34 @@ public enum SaleType
   ;
 
   /**
+   * <pre>
+   * A reduction of an item or the total by a percentage. I.E. "20% off".
+   * </pre>
+   *
    * <code>PERCENTAGE_REDUCTION = 0;</code>
    */
   public static final int PERCENTAGE_REDUCTION_VALUE = 0;
   /**
+   * <pre>
+   * The reduction of an item or total by a flat value. I.E. "$5 off".
+   * </pre>
+   *
    * <code>VALUE_REDUCTION = 1;</code>
    */
   public static final int VALUE_REDUCTION_VALUE = 1;
   /**
+   * <pre>
+   * A buy-one-get-one discount. Some discounted amount, applicable to the second item bought.
+   * </pre>
+   *
    * <code>BOGO = 2;</code>
    */
   public static final int BOGO_VALUE = 2;
   /**
+   * <pre>
+   * A discount for being a frequent or returning customer.
+   * </pre>
+   *
    * <code>LOYALTY = 3;</code>
    */
   public static final int LOYALTY_VALUE = 3;

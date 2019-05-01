@@ -1,5 +1,5 @@
 /*
- * Copyright 2018, Momentum Ideas, Co. All rights reserved.
+ * Copyright 2019, Momentum Ideas, Co. All rights reserved.
  *
  * Source and object computer code contained herein is the private intellectual
  * property of Momentum Ideas Co., a Delaware Corporation. Use of this
@@ -69,6 +69,22 @@ public enum DeviceRole
    * <code>POS = 4;</code>
    */
   POS(4),
+  /**
+   * <pre>
+   * The device should act as an edge compute device.
+   * </pre>
+   *
+   * <code>EDGE = 5;</code>
+   */
+  EDGE(5),
+  /**
+   * <pre>
+   * The device should act as an RFID reader or controller device.
+   * </pre>
+   *
+   * <code>RFID = 6;</code>
+   */
+  RFID(6),
   UNRECOGNIZED(-1),
   ;
 
@@ -112,6 +128,22 @@ public enum DeviceRole
    * <code>POS = 4;</code>
    */
   public static final int POS_VALUE = 4;
+  /**
+   * <pre>
+   * The device should act as an edge compute device.
+   * </pre>
+   *
+   * <code>EDGE = 5;</code>
+   */
+  public static final int EDGE_VALUE = 5;
+  /**
+   * <pre>
+   * The device should act as an RFID reader or controller device.
+   * </pre>
+   *
+   * <code>RFID = 6;</code>
+   */
+  public static final int RFID_VALUE = 6;
 
 
   public final int getNumber() {
@@ -137,6 +169,8 @@ public enum DeviceRole
       case 2: return CHECKIN;
       case 3: return BEACON;
       case 4: return POS;
+      case 5: return EDGE;
+      case 6: return RFID;
       default: return null;
     }
   }

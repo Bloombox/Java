@@ -1,5 +1,5 @@
 /*
- * Copyright 2018, Momentum Ideas, Co. All rights reserved.
+ * Copyright 2019, Momentum Ideas, Co. All rights reserved.
  *
  * Source and object computer code contained herein is the private intellectual
  * property of Momentum Ideas Co., a Delaware Corporation. Use of this
@@ -117,9 +117,9 @@ public final class OrderAnalytics {
      * An order was set to in-progress by a back-office user.
      * </pre>
      *
-     * <code>ORDER_IN_PROGERSS = 9;</code>
+     * <code>ORDER_IN_PROGRESS = 9;</code>
      */
-    ORDER_IN_PROGERSS(9),
+    ORDER_IN_PROGRESS(9),
     /**
      * <pre>
      * An order left for delivery.
@@ -216,9 +216,9 @@ public final class OrderAnalytics {
      * An order was set to in-progress by a back-office user.
      * </pre>
      *
-     * <code>ORDER_IN_PROGERSS = 9;</code>
+     * <code>ORDER_IN_PROGRESS = 9;</code>
      */
-    public static final int ORDER_IN_PROGERSS_VALUE = 9;
+    public static final int ORDER_IN_PROGRESS_VALUE = 9;
     /**
      * <pre>
      * An order left for delivery.
@@ -264,7 +264,7 @@ public final class OrderAnalytics {
         case 6: return ORDER_CANCEL;
         case 7: return ORDER_ACCEPTED;
         case 8: return ORDER_REJECTED;
-        case 9: return ORDER_IN_PROGERSS;
+        case 9: return ORDER_IN_PROGRESS;
         case 10: return ORDER_OUT_FOR_DELIVERY;
         case 11: return ORDER_FULFILLED;
         default: return null;
@@ -506,7 +506,7 @@ public final class OrderAnalytics {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -727,25 +727,24 @@ public final class OrderAnalytics {
       }
       io.bloombox.schema.analytics.order.OrderAnalytics.Action other = (io.bloombox.schema.analytics.order.OrderAnalytics.Action) obj;
 
-      boolean result = true;
-      result = result && (hasOrderKey() == other.hasOrderKey());
+      if (hasOrderKey() != other.hasOrderKey()) return false;
       if (hasOrderKey()) {
-        result = result && getOrderKey()
-            .equals(other.getOrderKey());
+        if (!getOrderKey()
+            .equals(other.getOrderKey())) return false;
       }
-      result = result && verb_ == other.verb_;
-      result = result && (hasCustomer() == other.hasCustomer());
+      if (verb_ != other.verb_) return false;
+      if (hasCustomer() != other.hasCustomer()) return false;
       if (hasCustomer()) {
-        result = result && getCustomer()
-            .equals(other.getCustomer());
+        if (!getCustomer()
+            .equals(other.getCustomer())) return false;
       }
-      result = result && (hasOccurred() == other.hasOccurred());
+      if (hasOccurred() != other.hasOccurred()) return false;
       if (hasOccurred()) {
-        result = result && getOccurred()
-            .equals(other.getOccurred());
+        if (!getOccurred()
+            .equals(other.getOccurred())) return false;
       }
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -975,35 +974,35 @@ public final class OrderAnalytics {
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -1058,7 +1057,7 @@ public final class OrderAnalytics {
         return this;
       }
 
-      private io.opencannabis.schema.commerce.CommercialOrder.OrderKey orderKey_ = null;
+      private io.opencannabis.schema.commerce.CommercialOrder.OrderKey orderKey_;
       private com.google.protobuf.SingleFieldBuilderV3<
           io.opencannabis.schema.commerce.CommercialOrder.OrderKey, io.opencannabis.schema.commerce.CommercialOrder.OrderKey.Builder, io.opencannabis.schema.commerce.CommercialOrder.OrderKeyOrBuilder> orderKeyBuilder_;
       /**
@@ -1276,7 +1275,7 @@ public final class OrderAnalytics {
         return this;
       }
 
-      private io.opencannabis.schema.commerce.OrderCustomer.Customer customer_ = null;
+      private io.opencannabis.schema.commerce.OrderCustomer.Customer customer_;
       private com.google.protobuf.SingleFieldBuilderV3<
           io.opencannabis.schema.commerce.OrderCustomer.Customer, io.opencannabis.schema.commerce.OrderCustomer.Customer.Builder, io.opencannabis.schema.commerce.OrderCustomer.CustomerOrBuilder> customerBuilder_;
       /**
@@ -1429,7 +1428,7 @@ public final class OrderAnalytics {
         return customerBuilder_;
       }
 
-      private io.opencannabis.schema.temporal.TemporalInstant.Instant occurred_ = null;
+      private io.opencannabis.schema.temporal.TemporalInstant.Instant occurred_;
       private com.google.protobuf.SingleFieldBuilderV3<
           io.opencannabis.schema.temporal.TemporalInstant.Instant, io.opencannabis.schema.temporal.TemporalInstant.Instant.Builder, io.opencannabis.schema.temporal.TemporalInstant.InstantOrBuilder> occurredBuilder_;
       /**
@@ -1584,7 +1583,7 @@ public final class OrderAnalytics {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -1661,7 +1660,7 @@ public final class OrderAnalytics {
       "ROM_CART\020\001\022\020\n\014RESTORE_CART\020\002\022\021\n\rVERIFY_M" +
       "EMBER\020\003\022\020\n\014ORDER_SUBMIT\020\004\022\020\n\014ORDER_STATU" +
       "S\020\005\022\020\n\014ORDER_CANCEL\020\006\022\022\n\016ORDER_ACCEPTED\020" +
-      "\007\022\022\n\016ORDER_REJECTED\020\010\022\025\n\021ORDER_IN_PROGER" +
+      "\007\022\022\n\016ORDER_REJECTED\020\010\022\025\n\021ORDER_IN_PROGRE" +
       "SS\020\t\022\032\n\026ORDER_OUT_FOR_DELIVERY\020\n\022\023\n\017ORDE" +
       "R_FULFILLED\020\013B>\n\"io.bloombox.schema.anal" +
       "ytics.orderB\016OrderAnalyticsH\001P\000\242\002\003BBSb\006p" +

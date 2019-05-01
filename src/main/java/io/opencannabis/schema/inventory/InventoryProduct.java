@@ -1,12 +1,11 @@
 /*
- * Copyright 2018, Momentum Ideas, Co. All rights reserved.
+ * Copyright 2019, Momentum Ideas Co.
  *
- * Source and object computer code contained herein is the private intellectual
- * property of Momentum Ideas Co., a Delaware Corporation. Use of this
- * code in source form requires permission in writing before use or the
- * assembly, distribution, or publishing of derivative works, for commercial
- * purposes or any other purpose, from a duly authorized officer of Momentum
- * Ideas Co.
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *  http://www.apache.org/licenses/LICENSE-2.0
  *
  * Unless required by applicable law or agreed to in writing, software
  * distributed under the License is distributed on an "AS IS" BASIS,
@@ -83,7 +82,7 @@ private static final long serialVersionUID = 0L;
           }
           case 18: {
             java.lang.String s = input.readStringRequireUtf8();
-            if (!((mutable_bitField0_ & 0x00000002) == 0x00000002)) {
+            if (!((mutable_bitField0_ & 0x00000002) != 0)) {
               sku_ = new com.google.protobuf.LazyStringArrayList();
               mutable_bitField0_ |= 0x00000002;
             }
@@ -91,7 +90,7 @@ private static final long serialVersionUID = 0L;
             break;
           }
           case 26: {
-            if (!((mutable_bitField0_ & 0x00000004) == 0x00000004)) {
+            if (!((mutable_bitField0_ & 0x00000004) != 0)) {
               variant_ = new java.util.ArrayList<io.opencannabis.schema.commerce.OrderItem.VariantSpec>();
               mutable_bitField0_ |= 0x00000004;
             }
@@ -113,7 +112,7 @@ private static final long serialVersionUID = 0L;
             break;
           }
           case 90: {
-            if (!((mutable_bitField0_ & 0x00000010) == 0x00000010)) {
+            if (!((mutable_bitField0_ & 0x00000010) != 0)) {
               history_ = new java.util.ArrayList<io.opencannabis.schema.inventory.InventoryState>();
               mutable_bitField0_ |= 0x00000010;
             }
@@ -135,7 +134,7 @@ private static final long serialVersionUID = 0L;
             break;
           }
           default: {
-            if (!parseUnknownFieldProto3(
+            if (!parseUnknownField(
                 input, unknownFields, extensionRegistry, tag)) {
               done = true;
             }
@@ -149,13 +148,13 @@ private static final long serialVersionUID = 0L;
       throw new com.google.protobuf.InvalidProtocolBufferException(
           e).setUnfinishedMessage(this);
     } finally {
-      if (((mutable_bitField0_ & 0x00000002) == 0x00000002)) {
+      if (((mutable_bitField0_ & 0x00000002) != 0)) {
         sku_ = sku_.getUnmodifiableView();
       }
-      if (((mutable_bitField0_ & 0x00000004) == 0x00000004)) {
+      if (((mutable_bitField0_ & 0x00000004) != 0)) {
         variant_ = java.util.Collections.unmodifiableList(variant_);
       }
-      if (((mutable_bitField0_ & 0x00000010) == 0x00000010)) {
+      if (((mutable_bitField0_ & 0x00000010) != 0)) {
         history_ = java.util.Collections.unmodifiableList(history_);
       }
       this.unknownFields = unknownFields.build();
@@ -552,30 +551,29 @@ private static final long serialVersionUID = 0L;
     }
     io.opencannabis.schema.inventory.InventoryProduct other = (io.opencannabis.schema.inventory.InventoryProduct) obj;
 
-    boolean result = true;
-    result = result && (hasKey() == other.hasKey());
+    if (hasKey() != other.hasKey()) return false;
     if (hasKey()) {
-      result = result && getKey()
-          .equals(other.getKey());
+      if (!getKey()
+          .equals(other.getKey())) return false;
     }
-    result = result && getSkuList()
-        .equals(other.getSkuList());
-    result = result && getVariantList()
-        .equals(other.getVariantList());
-    result = result && (hasState() == other.hasState());
+    if (!getSkuList()
+        .equals(other.getSkuList())) return false;
+    if (!getVariantList()
+        .equals(other.getVariantList())) return false;
+    if (hasState() != other.hasState()) return false;
     if (hasState()) {
-      result = result && getState()
-          .equals(other.getState());
+      if (!getState()
+          .equals(other.getState())) return false;
     }
-    result = result && getHistoryList()
-        .equals(other.getHistoryList());
-    result = result && (hasItem() == other.hasItem());
+    if (!getHistoryList()
+        .equals(other.getHistoryList())) return false;
+    if (hasItem() != other.hasItem()) return false;
     if (hasItem()) {
-      result = result && getItem()
-          .equals(other.getItem());
+      if (!getItem()
+          .equals(other.getItem())) return false;
     }
-    result = result && unknownFields.equals(other.unknownFields);
-    return result;
+    if (!unknownFields.equals(other.unknownFields)) return false;
+    return true;
   }
 
   @java.lang.Override
@@ -815,13 +813,13 @@ private static final long serialVersionUID = 0L;
       } else {
         result.key_ = keyBuilder_.build();
       }
-      if (((bitField0_ & 0x00000002) == 0x00000002)) {
+      if (((bitField0_ & 0x00000002) != 0)) {
         sku_ = sku_.getUnmodifiableView();
         bitField0_ = (bitField0_ & ~0x00000002);
       }
       result.sku_ = sku_;
       if (variantBuilder_ == null) {
-        if (((bitField0_ & 0x00000004) == 0x00000004)) {
+        if (((bitField0_ & 0x00000004) != 0)) {
           variant_ = java.util.Collections.unmodifiableList(variant_);
           bitField0_ = (bitField0_ & ~0x00000004);
         }
@@ -835,7 +833,7 @@ private static final long serialVersionUID = 0L;
         result.state_ = stateBuilder_.build();
       }
       if (historyBuilder_ == null) {
-        if (((bitField0_ & 0x00000010) == 0x00000010)) {
+        if (((bitField0_ & 0x00000010) != 0)) {
           history_ = java.util.Collections.unmodifiableList(history_);
           bitField0_ = (bitField0_ & ~0x00000010);
         }
@@ -855,35 +853,35 @@ private static final long serialVersionUID = 0L;
 
     @java.lang.Override
     public Builder clone() {
-      return (Builder) super.clone();
+      return super.clone();
     }
     @java.lang.Override
     public Builder setField(
         com.google.protobuf.Descriptors.FieldDescriptor field,
         java.lang.Object value) {
-      return (Builder) super.setField(field, value);
+      return super.setField(field, value);
     }
     @java.lang.Override
     public Builder clearField(
         com.google.protobuf.Descriptors.FieldDescriptor field) {
-      return (Builder) super.clearField(field);
+      return super.clearField(field);
     }
     @java.lang.Override
     public Builder clearOneof(
         com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-      return (Builder) super.clearOneof(oneof);
+      return super.clearOneof(oneof);
     }
     @java.lang.Override
     public Builder setRepeatedField(
         com.google.protobuf.Descriptors.FieldDescriptor field,
         int index, java.lang.Object value) {
-      return (Builder) super.setRepeatedField(field, index, value);
+      return super.setRepeatedField(field, index, value);
     }
     @java.lang.Override
     public Builder addRepeatedField(
         com.google.protobuf.Descriptors.FieldDescriptor field,
         java.lang.Object value) {
-      return (Builder) super.addRepeatedField(field, value);
+      return super.addRepeatedField(field, value);
     }
     @java.lang.Override
     public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -998,7 +996,7 @@ private static final long serialVersionUID = 0L;
     }
     private int bitField0_;
 
-    private io.opencannabis.schema.inventory.InventoryKey key_ = null;
+    private io.opencannabis.schema.inventory.InventoryKey key_;
     private com.google.protobuf.SingleFieldBuilderV3<
         io.opencannabis.schema.inventory.InventoryKey, io.opencannabis.schema.inventory.InventoryKey.Builder, io.opencannabis.schema.inventory.InventoryKeyOrBuilder> keyBuilder_;
     /**
@@ -1162,7 +1160,7 @@ private static final long serialVersionUID = 0L;
 
     private com.google.protobuf.LazyStringList sku_ = com.google.protobuf.LazyStringArrayList.EMPTY;
     private void ensureSkuIsMutable() {
-      if (!((bitField0_ & 0x00000002) == 0x00000002)) {
+      if (!((bitField0_ & 0x00000002) != 0)) {
         sku_ = new com.google.protobuf.LazyStringArrayList(sku_);
         bitField0_ |= 0x00000002;
        }
@@ -1302,7 +1300,7 @@ private static final long serialVersionUID = 0L;
     private java.util.List<io.opencannabis.schema.commerce.OrderItem.VariantSpec> variant_ =
       java.util.Collections.emptyList();
     private void ensureVariantIsMutable() {
-      if (!((bitField0_ & 0x00000004) == 0x00000004)) {
+      if (!((bitField0_ & 0x00000004) != 0)) {
         variant_ = new java.util.ArrayList<io.opencannabis.schema.commerce.OrderItem.VariantSpec>(variant_);
         bitField0_ |= 0x00000004;
        }
@@ -1639,7 +1637,7 @@ private static final long serialVersionUID = 0L;
         variantBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
             io.opencannabis.schema.commerce.OrderItem.VariantSpec, io.opencannabis.schema.commerce.OrderItem.VariantSpec.Builder, io.opencannabis.schema.commerce.OrderItem.VariantSpecOrBuilder>(
                 variant_,
-                ((bitField0_ & 0x00000004) == 0x00000004),
+                ((bitField0_ & 0x00000004) != 0),
                 getParentForChildren(),
                 isClean());
         variant_ = null;
@@ -1647,7 +1645,7 @@ private static final long serialVersionUID = 0L;
       return variantBuilder_;
     }
 
-    private io.opencannabis.schema.inventory.InventoryState state_ = null;
+    private io.opencannabis.schema.inventory.InventoryState state_;
     private com.google.protobuf.SingleFieldBuilderV3<
         io.opencannabis.schema.inventory.InventoryState, io.opencannabis.schema.inventory.InventoryState.Builder, io.opencannabis.schema.inventory.InventoryStateOrBuilder> stateBuilder_;
     /**
@@ -1812,7 +1810,7 @@ private static final long serialVersionUID = 0L;
     private java.util.List<io.opencannabis.schema.inventory.InventoryState> history_ =
       java.util.Collections.emptyList();
     private void ensureHistoryIsMutable() {
-      if (!((bitField0_ & 0x00000010) == 0x00000010)) {
+      if (!((bitField0_ & 0x00000010) != 0)) {
         history_ = new java.util.ArrayList<io.opencannabis.schema.inventory.InventoryState>(history_);
         bitField0_ |= 0x00000010;
        }
@@ -2167,7 +2165,7 @@ private static final long serialVersionUID = 0L;
         historyBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
             io.opencannabis.schema.inventory.InventoryState, io.opencannabis.schema.inventory.InventoryState.Builder, io.opencannabis.schema.inventory.InventoryStateOrBuilder>(
                 history_,
-                ((bitField0_ & 0x00000010) == 0x00000010),
+                ((bitField0_ & 0x00000010) != 0),
                 getParentForChildren(),
                 isClean());
         history_ = null;
@@ -2175,7 +2173,7 @@ private static final long serialVersionUID = 0L;
       return historyBuilder_;
     }
 
-    private io.opencannabis.schema.menu.MenuProduct item_ = null;
+    private io.opencannabis.schema.menu.MenuProduct item_;
     private com.google.protobuf.SingleFieldBuilderV3<
         io.opencannabis.schema.menu.MenuProduct, io.opencannabis.schema.menu.MenuProduct.Builder, io.opencannabis.schema.menu.MenuProductOrBuilder> itemBuilder_;
     /**
@@ -2339,7 +2337,7 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public final Builder setUnknownFields(
         final com.google.protobuf.UnknownFieldSet unknownFields) {
-      return super.setUnknownFieldsProto3(unknownFields);
+      return super.setUnknownFields(unknownFields);
     }
 
     @java.lang.Override

@@ -1,5 +1,5 @@
 /*
- * Copyright 2018, Momentum Ideas, Co. All rights reserved.
+ * Copyright 2019, Momentum Ideas, Co. All rights reserved.
  *
  * Source and object computer code contained herein is the private intellectual
  * property of Momentum Ideas Co., a Delaware Corporation. Use of this
@@ -101,6 +101,51 @@ public final class TelemetryServiceBeta4 {
   static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_bloombox_services_telemetry_v1beta4_SearchEvent_Result_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_bloombox_services_telemetry_v1beta4_InventoryContext_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_bloombox_services_telemetry_v1beta4_InventoryContext_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_bloombox_services_telemetry_v1beta4_InventoryEvent_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_bloombox_services_telemetry_v1beta4_InventoryEvent_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_bloombox_services_telemetry_v1beta4_InventoryEvent_Encounter_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_bloombox_services_telemetry_v1beta4_InventoryEvent_Encounter_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_bloombox_services_telemetry_v1beta4_InventoryEvent_StockIntake_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_bloombox_services_telemetry_v1beta4_InventoryEvent_StockIntake_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_bloombox_services_telemetry_v1beta4_InventoryEvent_StockUpdate_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_bloombox_services_telemetry_v1beta4_InventoryEvent_StockUpdate_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_bloombox_services_telemetry_v1beta4_InventoryEvent_StockTransfer_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_bloombox_services_telemetry_v1beta4_InventoryEvent_StockTransfer_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_bloombox_services_telemetry_v1beta4_InventoryEvent_StockReserve_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_bloombox_services_telemetry_v1beta4_InventoryEvent_StockReserve_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_bloombox_services_telemetry_v1beta4_InventoryEvent_ReservationCancel_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_bloombox_services_telemetry_v1beta4_InventoryEvent_ReservationCancel_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_bloombox_services_telemetry_v1beta4_InventoryEvent_StockConsume_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_bloombox_services_telemetry_v1beta4_InventoryEvent_StockConsume_fieldAccessorTable;
 
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
@@ -112,112 +157,200 @@ public final class TelemetryServiceBeta4 {
     java.lang.String[] descriptorData = {
       "\n.telemetry/v1beta4/TelemetryService_Bet" +
       "a4.proto\022#bloombox.services.telemetry.v1" +
-      "beta4\032\025base/ProductKey.proto\032\027analytics/" +
-      "Context.proto\032\034services/ServiceStatus.pr" +
-      "oto\032&analytics/commerce/ShopAnalytics.pr" +
-      "oto\032\'analytics/commerce/OrderAnalytics.p" +
-      "roto\032)analytics/commerce/ProductAnalytic" +
-      "s.proto\032)analytics/commerce/SectionAnaly" +
-      "tics.proto\032&analytics/identity/UserAnaly" +
-      "tics.proto\032%analytics/search/SearchPrope" +
-      "rty.proto\032+telemetry/v1beta4/GenericEven" +
-      "ts_Beta4.proto\032\033google/protobuf/empty.pr" +
-      "oto\032\034google/api/annotations.proto\"\233\001\n\021Te" +
-      "lemetryResponse\022D\n\006status\030\001 \001(\01624.bloomb" +
-      "ox.services.telemetry.v1beta4.OperationS" +
-      "tatus\022\r\n\005count\030\002 \001(\r\0221\n\007service\030\003 \001(\0162 ." +
-      "bloombox.services.ServiceStatus\"\202\002\n\rTele" +
-      "metryPing\032\t\n\007Request\032<\n\010Response\0220\n\006stat" +
-      "us\030\001 \001(\0162 .bloombox.services.ServiceStat" +
-      "us\032\247\001\n\tOperation\022K\n\007request\030\001 \001(\0132:.bloo" +
-      "mbox.services.telemetry.v1beta4.Telemetr" +
-      "yPing.Request\022M\n\010response\030\002 \001(\0132;.bloomb" +
-      "ox.services.telemetry.v1beta4.TelemetryP" +
-      "ing.Response\"\375\005\n\017CommercialEvent\032\356\001\n\nImp" +
-      "ression\022,\n\007context\030\001 \001(\0132\033.bloombox.anal" +
-      "ytics.Context\0229\n\007section\030\n \001(\0132&.bloombo" +
-      "x.analytics.section.ImpressionH\000\0229\n\007prod" +
-      "uct\030\013 \001(\0132&.bloombox.analytics.product.I" +
-      "mpressionH\000\0223\n\004shop\030\014 \001(\0132#.bloombox.ana" +
-      "lytics.shop.ImpressionH\000B\007\n\005event\032\326\001\n\004Vi" +
-      "ew\022,\n\007context\030\001 \001(\0132\033.bloombox.analytics" +
-      ".Context\0223\n\007section\030\n \001(\0132 .bloombox.ana" +
-      "lytics.section.ViewH\000\0223\n\007product\030\013 \001(\0132 " +
-      ".bloombox.analytics.product.ViewH\000\022-\n\004sh" +
-      "op\030\014 \001(\0132\035.bloombox.analytics.shop.ViewH" +
-      "\000B\007\n\005event\032\237\002\n\006Action\022\014\n\004name\030\001 \001(\t\022,\n\007c" +
-      "ontext\030\002 \001(\0132\033.bloombox.analytics.Contex" +
-      "t\0225\n\007section\030\n \001(\0132\".bloombox.analytics." +
-      "section.ActionH\000\0225\n\007product\030\013 \001(\0132\".bloo" +
-      "mbox.analytics.product.ActionH\000\022/\n\004shop\030" +
-      "\014 \001(\0132\037.bloombox.analytics.shop.ActionH\000" +
-      "\0221\n\005order\030\r \001(\0132 .bloombox.analytics.ord" +
-      "er.ActionH\000B\007\n\005event\"\226\001\n\rIdentityEvent\032\204" +
-      "\001\n\006Action\022\014\n\004name\030\001 \001(\t\022,\n\007context\030\002 \001(\013" +
-      "2\033.bloombox.analytics.Context\0225\n\006action\030" +
-      "\n \001(\0132#.bloombox.analytics.identity.Acti" +
-      "onH\000B\007\n\005event\"\207\003\n\013SearchEvent\032\227\001\n\005Query\022" +
-      "\014\n\004term\030\001 \001(\t\022,\n\007context\030\002 \001(\0132\033.bloombo" +
-      "x.analytics.Context\022;\n\010property\030\003 \001(\0162)." +
-      "bloombox.analytics.search.SearchProperty" +
-      "\022\025\n\rtotal_results\030\004 \001(\r\032\335\001\n\006Result\022\014\n\004te" +
-      "rm\030\001 \001(\t\022,\n\007context\030\002 \001(\0132\033.bloombox.ana" +
-      "lytics.Context\022;\n\010property\030\003 \001(\0162).bloom" +
-      "box.analytics.search.SearchProperty\022\025\n\rt" +
-      "otal_results\030\004 \001(\r\022\027\n\017selected_result\030\005 " +
-      "\001(\r\022*\n\003key\030\006 \001(\0132\035.opencannabis.base.Pro" +
-      "ductKey*$\n\017OperationStatus\022\006\n\002OK\020\000\022\t\n\005ER" +
-      "ROR\020\001*\336\001\n\016TelemetryError\022\013\n\007UNKNOWN\020\000\022\026\n" +
-      "\022INVALID_COLLECTION\020\001\022\023\n\017INVALID_PARTNER" +
-      "\020\002\022\024\n\020INVALID_LOCATION\020\003\022\022\n\016INVALID_DEVI" +
-      "CE\020\004\022\020\n\014INVALID_USER\020\005\022\022\n\016INVALID_CLIENT" +
-      "\020\006\022\025\n\021PARTNER_NOT_FOUND\020\007\022\026\n\022LOCATION_NO" +
-      "T_FOUND\020\010\022\023\n\017INVALID_PAYLOAD\020c2\200\005\n\016Event" +
-      "Telemetry\022\240\001\n\004Ping\022:.bloombox.services.t" +
-      "elemetry.v1beta4.TelemetryPing.Request\032;" +
-      ".bloombox.services.telemetry.v1beta4.Tel" +
-      "emetryPing.Response\"\037\202\323\344\223\002\031\022\027/telemetry/" +
-      "v1beta4/ping\022\222\001\n\005Event\0222.bloombox.servic" +
-      "es.telemetry.v1beta4.Event.Request\032\026.goo" +
-      "gle.protobuf.Empty\"=\202\323\344\223\0027\"2/telemetry/v" +
-      "1beta4/{context.collection.name}:event:\001" +
-      "*\022\244\001\n\005Batch\0227.bloombox.services.telemetr" +
-      "y.v1beta4.Event.BatchRequest\0326.bloombox." +
-      "services.telemetry.v1beta4.TelemetryResp" +
-      "onse\"*\202\323\344\223\002$\"\037/telemetry/v1beta4/events:" +
-      "batch:\001*\022\216\001\n\005Error\022..bloombox.services.t" +
-      "elemetry.v1beta4.Exception\032\026.google.prot" +
-      "obuf.Empty\"=\202\323\344\223\0027\"2/telemetry/v1beta4/{" +
-      "context.collection.name}:error:\001*2\243\004\n\023Co" +
-      "mmercialTelemetry\022\262\001\n\nImpression\022?.bloom" +
-      "box.services.telemetry.v1beta4.Commercia" +
-      "lEvent.Impression\032\026.google.protobuf.Empt" +
-      "y\"K\202\323\344\223\002E\"@/telemetry/v1beta4/commerce/{" +
-      "context.scope.commercial=*}:impress:\001*\022\243" +
-      "\001\n\004View\0229.bloombox.services.telemetry.v1" +
-      "beta4.CommercialEvent.View\032\026.google.prot" +
-      "obuf.Empty\"H\202\323\344\223\002B\"=/telemetry/v1beta4/c" +
-      "ommerce/{context.scope.commercial=*}:vie" +
-      "w:\001*\022\260\001\n\006Action\022;.bloombox.services.tele" +
-      "metry.v1beta4.CommercialEvent.Action\032\026.g" +
-      "oogle.protobuf.Empty\"Q\202\323\344\223\002K\"F/telemetry" +
-      "/v1beta4/commerce/{name}/{context.scope." +
-      "commercial=*}:action:\001*2\276\001\n\021IdentityTele" +
-      "metry\022\250\001\n\006Action\0229.bloombox.services.tel" +
-      "emetry.v1beta4.IdentityEvent.Action\032\026.go" +
-      "ogle.protobuf.Empty\"K\202\323\344\223\002E\"@/telemetry/" +
-      "v1beta4/identity/{name}/{context.user_ke" +
-      "y.uid}:action:\001*2\304\002\n\017SearchTelemetry\022\225\001\n" +
-      "\005Query\0226.bloombox.services.telemetry.v1b" +
-      "eta4.SearchEvent.Query\032\026.google.protobuf" +
-      ".Empty\"<\202\323\344\223\0026\"1/telemetry/v1beta4/searc" +
-      "h/{property}/{term}:query:\001*\022\230\001\n\006Result\022" +
-      "7.bloombox.services.telemetry.v1beta4.Se" +
-      "archEvent.Result\032\026.google.protobuf.Empty" +
-      "\"=\202\323\344\223\0027\"2/telemetry/v1beta4/search/{pro" +
-      "perty}/{term}:result:\001*BM\n-io.bloombox.s" +
-      "chema.services.telemetry.v1beta4H\001P\001\242\002\003B" +
-      "BS\252\002\021Telemetry.v1beta4b\006proto3"
+      "beta4\032\025base/ProductKey.proto\032\026crypto/Sig" +
+      "nature.proto\032\027temporal/Duration.proto\032\027a" +
+      "nalytics/Context.proto\032\034services/Service" +
+      "Status.proto\032&analytics/commerce/ShopAna" +
+      "lytics.proto\032\'analytics/commerce/OrderAn" +
+      "alytics.proto\032)analytics/commerce/Produc" +
+      "tAnalytics.proto\032)analytics/commerce/Sec" +
+      "tionAnalytics.proto\032&analytics/identity/" +
+      "UserAnalytics.proto\032%analytics/search/Se" +
+      "archProperty.proto\032 inventory/InventoryP" +
+      "roduct.proto\032!inventory/InventoryLocatio" +
+      "n.proto\032\031inventory/rfid/LLRP.proto\032+tele" +
+      "metry/v1beta4/GenericEvents_Beta4.proto\032" +
+      "\033google/protobuf/empty.proto\032\034google/api" +
+      "/annotations.proto\"\233\001\n\021TelemetryResponse" +
+      "\022D\n\006status\030\001 \001(\01624.bloombox.services.tel" +
+      "emetry.v1beta4.OperationStatus\022\r\n\005count\030" +
+      "\002 \001(\r\0221\n\007service\030\003 \001(\0162 .bloombox.servic" +
+      "es.ServiceStatus\"\202\002\n\rTelemetryPing\032\t\n\007Re" +
+      "quest\032<\n\010Response\0220\n\006status\030\001 \001(\0162 .bloo" +
+      "mbox.services.ServiceStatus\032\247\001\n\tOperatio" +
+      "n\022K\n\007request\030\001 \001(\0132:.bloombox.services.t" +
+      "elemetry.v1beta4.TelemetryPing.Request\022M" +
+      "\n\010response\030\002 \001(\0132;.bloombox.services.tel" +
+      "emetry.v1beta4.TelemetryPing.Response\"\375\005" +
+      "\n\017CommercialEvent\032\356\001\n\nImpression\022,\n\007cont" +
+      "ext\030\001 \001(\0132\033.bloombox.analytics.Context\0229" +
+      "\n\007section\030\n \001(\0132&.bloombox.analytics.sec" +
+      "tion.ImpressionH\000\0229\n\007product\030\013 \001(\0132&.blo" +
+      "ombox.analytics.product.ImpressionH\000\0223\n\004" +
+      "shop\030\014 \001(\0132#.bloombox.analytics.shop.Imp" +
+      "ressionH\000B\007\n\005event\032\326\001\n\004View\022,\n\007context\030\001" +
+      " \001(\0132\033.bloombox.analytics.Context\0223\n\007sec" +
+      "tion\030\n \001(\0132 .bloombox.analytics.section." +
+      "ViewH\000\0223\n\007product\030\013 \001(\0132 .bloombox.analy" +
+      "tics.product.ViewH\000\022-\n\004shop\030\014 \001(\0132\035.bloo" +
+      "mbox.analytics.shop.ViewH\000B\007\n\005event\032\237\002\n\006" +
+      "Action\022\014\n\004name\030\001 \001(\t\022,\n\007context\030\002 \001(\0132\033." +
+      "bloombox.analytics.Context\0225\n\007section\030\n " +
+      "\001(\0132\".bloombox.analytics.section.ActionH" +
+      "\000\0225\n\007product\030\013 \001(\0132\".bloombox.analytics." +
+      "product.ActionH\000\022/\n\004shop\030\014 \001(\0132\037.bloombo" +
+      "x.analytics.shop.ActionH\000\0221\n\005order\030\r \001(\013" +
+      "2 .bloombox.analytics.order.ActionH\000B\007\n\005" +
+      "event\"\226\001\n\rIdentityEvent\032\204\001\n\006Action\022\014\n\004na" +
+      "me\030\001 \001(\t\022,\n\007context\030\002 \001(\0132\033.bloombox.ana" +
+      "lytics.Context\0225\n\006action\030\n \001(\0132#.bloombo" +
+      "x.analytics.identity.ActionH\000B\007\n\005event\"\207" +
+      "\003\n\013SearchEvent\032\227\001\n\005Query\022\014\n\004term\030\001 \001(\t\022," +
+      "\n\007context\030\002 \001(\0132\033.bloombox.analytics.Con" +
+      "text\022;\n\010property\030\003 \001(\0162).bloombox.analyt" +
+      "ics.search.SearchProperty\022\025\n\rtotal_resul" +
+      "ts\030\004 \001(\r\032\335\001\n\006Result\022\014\n\004term\030\001 \001(\t\022,\n\007con" +
+      "text\030\002 \001(\0132\033.bloombox.analytics.Context\022" +
+      ";\n\010property\030\003 \001(\0162).bloombox.analytics.s" +
+      "earch.SearchProperty\022\025\n\rtotal_results\030\004 " +
+      "\001(\r\022\027\n\017selected_result\030\005 \001(\r\022*\n\003key\030\006 \001(" +
+      "\0132\035.opencannabis.base.ProductKey\"\264\001\n\020Inv" +
+      "entoryContext\0221\n\006timing\030\001 \001(\0132!.bloombox" +
+      ".analytics.EventPosition\022,\n\007context\030\002 \001(" +
+      "\0132\033.bloombox.analytics.Context\0221\n\tsignat" +
+      "ure\030\003 \001(\0132\036.opencannabis.crypto.Signatur" +
+      "e\022\014\n\004uuid\030\004 \001(\t\"\263\020\n\016InventoryEvent\022R\n\ten" +
+      "counter\030\n \001(\0132=.bloombox.services.teleme" +
+      "try.v1beta4.InventoryEvent.EncounterH\000\022Q" +
+      "\n\006intake\030\013 \001(\0132?.bloombox.services.telem" +
+      "etry.v1beta4.InventoryEvent.StockIntakeH" +
+      "\000\022Q\n\006update\030\014 \001(\0132?.bloombox.services.te" +
+      "lemetry.v1beta4.InventoryEvent.StockUpda" +
+      "teH\000\022U\n\010transfer\030\r \001(\0132A.bloombox.servic" +
+      "es.telemetry.v1beta4.InventoryEvent.Stoc" +
+      "kTransferH\000\022W\n\013reservation\030\016 \001(\0132@.bloom" +
+      "box.services.telemetry.v1beta4.Inventory" +
+      "Event.StockReserveH\000\022]\n\014cancellation\030\017 \001" +
+      "(\0132E.bloombox.services.telemetry.v1beta4" +
+      ".InventoryEvent.ReservationCancelH\000\022W\n\013c" +
+      "onsumption\030\020 \001(\0132@.bloombox.services.tel" +
+      "emetry.v1beta4.InventoryEvent.StockConsu" +
+      "meH\000\032\305\001\n\tEncounter\022D\n\005event\030\001 \001(\01325.bloo" +
+      "mbox.services.telemetry.v1beta4.Inventor" +
+      "yContext\022<\n\006origin\030\002 \001(\0132,.opencannabis." +
+      "inventory.rfid.TagReportOrigin\0224\n\004rfid\030\003" +
+      " \003(\0132&.opencannabis.inventory.rfid.TagRe" +
+      "port\032\245\001\n\013StockIntake\022\023\n\013transaction\030\001 \001(" +
+      "\t\022D\n\005event\030\002 \001(\01325.bloombox.services.tel" +
+      "emetry.v1beta4.InventoryContext\022;\n\tinven" +
+      "tory\030\003 \003(\0132(.opencannabis.inventory.Inve" +
+      "ntoryProduct\032\265\001\n\013StockUpdate\022\023\n\013transact" +
+      "ion\030\001 \001(\t\022\016\n\006parent\030\002 \001(\t\022D\n\005event\030\003 \001(\013" +
+      "25.bloombox.services.telemetry.v1beta4.I" +
+      "nventoryContext\022;\n\tinventory\030\004 \003(\0132(.ope" +
+      "ncannabis.inventory.InventoryProduct\032\243\002\n" +
+      "\rStockTransfer\022\023\n\013transaction\030\001 \001(\t\022\016\n\006p" +
+      "arent\030\002 \001(\t\022D\n\005event\030\003 \001(\01325.bloombox.se" +
+      "rvices.telemetry.v1beta4.InventoryContex" +
+      "t\0221\n\003key\030\004 \001(\0132$.opencannabis.inventory." +
+      "InventoryKey\0229\n\006origin\030\005 \001(\0132).opencanna" +
+      "bis.inventory.InventoryLocation\0229\n\006targe" +
+      "t\030\006 \001(\0132).opencannabis.inventory.Invento" +
+      "ryLocation\032\334\001\n\014StockReserve\022\023\n\013transacti" +
+      "on\030\001 \001(\t\022\016\n\006parent\030\002 \001(\t\022D\n\005event\030\003 \001(\0132" +
+      "5.bloombox.services.telemetry.v1beta4.In" +
+      "ventoryContext\0221\n\003key\030\004 \001(\0132$.opencannab" +
+      "is.inventory.InventoryKey\022.\n\005lease\030\005 \001(\013" +
+      "2\037.opencannabis.temporal.Duration\032\241\001\n\021Re" +
+      "servationCancel\022\023\n\013reservation\030\001 \001(\t\022D\n\005" +
+      "event\030\002 \001(\01325.bloombox.services.telemetr" +
+      "y.v1beta4.InventoryContext\0221\n\003key\030\003 \001(\0132" +
+      "$.opencannabis.inventory.InventoryKey\032\344\001" +
+      "\n\014StockConsume\022\023\n\013transaction\030\001 \001(\t\022D\n\005e" +
+      "vent\030\002 \001(\01325.bloombox.services.telemetry" +
+      ".v1beta4.InventoryContext\0221\n\003key\030\003 \001(\0132$" +
+      ".opencannabis.inventory.InventoryKey\022\031\n\017" +
+      "remaining_count\030\004 \001(\rH\000\022\036\n\024remaining_per" +
+      "centage\030\005 \001(\001H\000B\013\n\tremainingB\007\n\005event*$\n" +
+      "\017OperationStatus\022\006\n\002OK\020\000\022\t\n\005ERROR\020\001*\336\001\n\016" +
+      "TelemetryError\022\013\n\007UNKNOWN\020\000\022\026\n\022INVALID_C" +
+      "OLLECTION\020\001\022\023\n\017INVALID_PARTNER\020\002\022\024\n\020INVA" +
+      "LID_LOCATION\020\003\022\022\n\016INVALID_DEVICE\020\004\022\020\n\014IN" +
+      "VALID_USER\020\005\022\022\n\016INVALID_CLIENT\020\006\022\025\n\021PART" +
+      "NER_NOT_FOUND\020\007\022\026\n\022LOCATION_NOT_FOUND\020\010\022" +
+      "\023\n\017INVALID_PAYLOAD\020c2\200\005\n\016EventTelemetry\022" +
+      "\240\001\n\004Ping\022:.bloombox.services.telemetry.v" +
+      "1beta4.TelemetryPing.Request\032;.bloombox." +
+      "services.telemetry.v1beta4.TelemetryPing" +
+      ".Response\"\037\202\323\344\223\002\031\022\027/telemetry/v1beta4/pi" +
+      "ng\022\222\001\n\005Event\0222.bloombox.services.telemet" +
+      "ry.v1beta4.Event.Request\032\026.google.protob" +
+      "uf.Empty\"=\202\323\344\223\0027\"2/telemetry/v1beta4/{co" +
+      "ntext.collection.name}:event:\001*\022\244\001\n\005Batc" +
+      "h\0227.bloombox.services.telemetry.v1beta4." +
+      "Event.BatchRequest\0326.bloombox.services.t" +
+      "elemetry.v1beta4.TelemetryResponse\"*\202\323\344\223" +
+      "\002$\"\037/telemetry/v1beta4/events:batch:\001*\022\216" +
+      "\001\n\005Error\022..bloombox.services.telemetry.v" +
+      "1beta4.Exception\032\026.google.protobuf.Empty" +
+      "\"=\202\323\344\223\0027\"2/telemetry/v1beta4/{context.co" +
+      "llection.name}:error:\001*2\243\004\n\023CommercialTe" +
+      "lemetry\022\262\001\n\nImpression\022?.bloombox.servic" +
+      "es.telemetry.v1beta4.CommercialEvent.Imp" +
+      "ression\032\026.google.protobuf.Empty\"K\202\323\344\223\002E\"" +
+      "@/telemetry/v1beta4/commerce/{context.sc" +
+      "ope.commercial=*}:impress:\001*\022\243\001\n\004View\0229." +
+      "bloombox.services.telemetry.v1beta4.Comm" +
+      "ercialEvent.View\032\026.google.protobuf.Empty" +
+      "\"H\202\323\344\223\002B\"=/telemetry/v1beta4/commerce/{c" +
+      "ontext.scope.commercial=*}:view:\001*\022\260\001\n\006A" +
+      "ction\022;.bloombox.services.telemetry.v1be" +
+      "ta4.CommercialEvent.Action\032\026.google.prot" +
+      "obuf.Empty\"Q\202\323\344\223\002K\"F/telemetry/v1beta4/c" +
+      "ommerce/{name}/{context.scope.commercial" +
+      "=*}:action:\001*2\276\001\n\021IdentityTelemetry\022\250\001\n\006" +
+      "Action\0229.bloombox.services.telemetry.v1b" +
+      "eta4.IdentityEvent.Action\032\026.google.proto" +
+      "buf.Empty\"K\202\323\344\223\002E\"@/telemetry/v1beta4/id" +
+      "entity/{name}/{context.user_key.uid}:act" +
+      "ion:\001*2\304\002\n\017SearchTelemetry\022\225\001\n\005Query\0226.b" +
+      "loombox.services.telemetry.v1beta4.Searc" +
+      "hEvent.Query\032\026.google.protobuf.Empty\"<\202\323" +
+      "\344\223\0026\"1/telemetry/v1beta4/search/{propert" +
+      "y}/{term}:query:\001*\022\230\001\n\006Result\0227.bloombox" +
+      ".services.telemetry.v1beta4.SearchEvent." +
+      "Result\032\026.google.protobuf.Empty\"=\202\323\344\223\0027\"2" +
+      "/telemetry/v1beta4/search/{property}/{te" +
+      "rm}:result:\001*2\307\010\n\022InventoryTelemetry\022\213\001\n" +
+      "\tEncounter\022=.bloombox.services.telemetry" +
+      ".v1beta4.InventoryEvent.Encounter\032\026.goog" +
+      "le.protobuf.Empty\"\'\202\323\344\223\002!\"\034/inventory/v1" +
+      "beta1/encounter:\001*\022\207\001\n\006Intake\022?.bloombox" +
+      ".services.telemetry.v1beta4.InventoryEve" +
+      "nt.StockIntake\032\026.google.protobuf.Empty\"$" +
+      "\202\323\344\223\002\036\"\031/inventory/v1beta1/intake:\001*\022\207\001\n" +
+      "\006Update\022?.bloombox.services.telemetry.v1" +
+      "beta4.InventoryEvent.StockIntake\032\026.googl" +
+      "e.protobuf.Empty\"$\202\323\344\223\002\036\"\031/inventory/v1b" +
+      "eta1/update:\001*\022\215\001\n\010Transfer\022A.bloombox.s" +
+      "ervices.telemetry.v1beta4.InventoryEvent" +
+      ".StockTransfer\032\026.google.protobuf.Empty\"&" +
+      "\202\323\344\223\002 \"\033/inventory/v1beta1/transfer:\001*\022\212" +
+      "\001\n\007Reserve\022@.bloombox.services.telemetry" +
+      ".v1beta4.InventoryEvent.StockReserve\032\026.g" +
+      "oogle.protobuf.Empty\"%\202\323\344\223\002\037\"\032/inventory" +
+      "/v1beta1/reserve:\001*\022\215\001\n\006Cancel\022E.bloombo" +
+      "x.services.telemetry.v1beta4.InventoryEv" +
+      "ent.ReservationCancel\032\026.google.protobuf." +
+      "Empty\"$\202\323\344\223\002\036\"\031/inventory/v1beta1/cancel" +
+      ":\001*\022\212\001\n\007Consume\022@.bloombox.services.tele" +
+      "metry.v1beta4.InventoryEvent.StockConsum" +
+      "e\032\026.google.protobuf.Empty\"%\202\323\344\223\002\037\"\032/inve" +
+      "ntory/v1beta1/consume:\001*\022U\n\004Live\0223.bloom" +
+      "box.services.telemetry.v1beta4.Inventory" +
+      "Event\032\026.google.protobuf.Empty(\001BM\n-io.bl" +
+      "oombox.schema.services.telemetry.v1beta4" +
+      "H\001P\001\242\002\003BBS\252\002\021Telemetry.v1beta4b\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -231,6 +364,8 @@ public final class TelemetryServiceBeta4 {
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
           io.opencannabis.schema.base.BaseProductKey.getDescriptor(),
+          io.opencannabis.schema.crypto.SignatureOuterClass.getDescriptor(),
+          io.opencannabis.schema.temporal.DurationOuterClass.getDescriptor(),
           io.bloombox.schema.telemetry.AnalyticsContext.getDescriptor(),
           io.bloombox.schema.services.ServiceStatusOuterClass.getDescriptor(),
           io.bloombox.schema.analytics.shop.ShopAnalytics.getDescriptor(),
@@ -239,6 +374,9 @@ public final class TelemetryServiceBeta4 {
           io.bloombox.schema.analytics.section.SectionAnalytics.getDescriptor(),
           io.bloombox.schema.analytics.user.UserAnalytics.getDescriptor(),
           io.bloombox.schema.telemetry.search.SearchAnalytics.getDescriptor(),
+          io.opencannabis.schema.inventory.InventoryProductOuterClass.getDescriptor(),
+          io.opencannabis.schema.inventory.InventoryLocationOuterClass.getDescriptor(),
+          io.opencannabis.schema.inventory.LLRP.getDescriptor(),
           io.bloombox.schema.services.telemetry.v1beta4.GenericEventsBeta4.getDescriptor(),
           com.google.protobuf.EmptyProto.getDescriptor(),
           com.google.api.AnnotationsProto.getDescriptor(),
@@ -327,12 +465,68 @@ public final class TelemetryServiceBeta4 {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_bloombox_services_telemetry_v1beta4_SearchEvent_Result_descriptor,
         new java.lang.String[] { "Term", "Context", "Property", "TotalResults", "SelectedResult", "Key", });
+    internal_static_bloombox_services_telemetry_v1beta4_InventoryContext_descriptor =
+      getDescriptor().getMessageTypes().get(5);
+    internal_static_bloombox_services_telemetry_v1beta4_InventoryContext_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_bloombox_services_telemetry_v1beta4_InventoryContext_descriptor,
+        new java.lang.String[] { "Timing", "Context", "Signature", "Uuid", });
+    internal_static_bloombox_services_telemetry_v1beta4_InventoryEvent_descriptor =
+      getDescriptor().getMessageTypes().get(6);
+    internal_static_bloombox_services_telemetry_v1beta4_InventoryEvent_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_bloombox_services_telemetry_v1beta4_InventoryEvent_descriptor,
+        new java.lang.String[] { "Encounter", "Intake", "Update", "Transfer", "Reservation", "Cancellation", "Consumption", "Event", });
+    internal_static_bloombox_services_telemetry_v1beta4_InventoryEvent_Encounter_descriptor =
+      internal_static_bloombox_services_telemetry_v1beta4_InventoryEvent_descriptor.getNestedTypes().get(0);
+    internal_static_bloombox_services_telemetry_v1beta4_InventoryEvent_Encounter_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_bloombox_services_telemetry_v1beta4_InventoryEvent_Encounter_descriptor,
+        new java.lang.String[] { "Event", "Origin", "Rfid", });
+    internal_static_bloombox_services_telemetry_v1beta4_InventoryEvent_StockIntake_descriptor =
+      internal_static_bloombox_services_telemetry_v1beta4_InventoryEvent_descriptor.getNestedTypes().get(1);
+    internal_static_bloombox_services_telemetry_v1beta4_InventoryEvent_StockIntake_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_bloombox_services_telemetry_v1beta4_InventoryEvent_StockIntake_descriptor,
+        new java.lang.String[] { "Transaction", "Event", "Inventory", });
+    internal_static_bloombox_services_telemetry_v1beta4_InventoryEvent_StockUpdate_descriptor =
+      internal_static_bloombox_services_telemetry_v1beta4_InventoryEvent_descriptor.getNestedTypes().get(2);
+    internal_static_bloombox_services_telemetry_v1beta4_InventoryEvent_StockUpdate_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_bloombox_services_telemetry_v1beta4_InventoryEvent_StockUpdate_descriptor,
+        new java.lang.String[] { "Transaction", "Parent", "Event", "Inventory", });
+    internal_static_bloombox_services_telemetry_v1beta4_InventoryEvent_StockTransfer_descriptor =
+      internal_static_bloombox_services_telemetry_v1beta4_InventoryEvent_descriptor.getNestedTypes().get(3);
+    internal_static_bloombox_services_telemetry_v1beta4_InventoryEvent_StockTransfer_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_bloombox_services_telemetry_v1beta4_InventoryEvent_StockTransfer_descriptor,
+        new java.lang.String[] { "Transaction", "Parent", "Event", "Key", "Origin", "Target", });
+    internal_static_bloombox_services_telemetry_v1beta4_InventoryEvent_StockReserve_descriptor =
+      internal_static_bloombox_services_telemetry_v1beta4_InventoryEvent_descriptor.getNestedTypes().get(4);
+    internal_static_bloombox_services_telemetry_v1beta4_InventoryEvent_StockReserve_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_bloombox_services_telemetry_v1beta4_InventoryEvent_StockReserve_descriptor,
+        new java.lang.String[] { "Transaction", "Parent", "Event", "Key", "Lease", });
+    internal_static_bloombox_services_telemetry_v1beta4_InventoryEvent_ReservationCancel_descriptor =
+      internal_static_bloombox_services_telemetry_v1beta4_InventoryEvent_descriptor.getNestedTypes().get(5);
+    internal_static_bloombox_services_telemetry_v1beta4_InventoryEvent_ReservationCancel_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_bloombox_services_telemetry_v1beta4_InventoryEvent_ReservationCancel_descriptor,
+        new java.lang.String[] { "Reservation", "Event", "Key", });
+    internal_static_bloombox_services_telemetry_v1beta4_InventoryEvent_StockConsume_descriptor =
+      internal_static_bloombox_services_telemetry_v1beta4_InventoryEvent_descriptor.getNestedTypes().get(6);
+    internal_static_bloombox_services_telemetry_v1beta4_InventoryEvent_StockConsume_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_bloombox_services_telemetry_v1beta4_InventoryEvent_StockConsume_descriptor,
+        new java.lang.String[] { "Transaction", "Event", "Key", "RemainingCount", "RemainingPercentage", "Remaining", });
     com.google.protobuf.ExtensionRegistry registry =
         com.google.protobuf.ExtensionRegistry.newInstance();
     registry.add(com.google.api.AnnotationsProto.http);
     com.google.protobuf.Descriptors.FileDescriptor
         .internalUpdateFileDescriptor(descriptor, registry);
     io.opencannabis.schema.base.BaseProductKey.getDescriptor();
+    io.opencannabis.schema.crypto.SignatureOuterClass.getDescriptor();
+    io.opencannabis.schema.temporal.DurationOuterClass.getDescriptor();
     io.bloombox.schema.telemetry.AnalyticsContext.getDescriptor();
     io.bloombox.schema.services.ServiceStatusOuterClass.getDescriptor();
     io.bloombox.schema.analytics.shop.ShopAnalytics.getDescriptor();
@@ -341,6 +535,9 @@ public final class TelemetryServiceBeta4 {
     io.bloombox.schema.analytics.section.SectionAnalytics.getDescriptor();
     io.bloombox.schema.analytics.user.UserAnalytics.getDescriptor();
     io.bloombox.schema.telemetry.search.SearchAnalytics.getDescriptor();
+    io.opencannabis.schema.inventory.InventoryProductOuterClass.getDescriptor();
+    io.opencannabis.schema.inventory.InventoryLocationOuterClass.getDescriptor();
+    io.opencannabis.schema.inventory.LLRP.getDescriptor();
     io.bloombox.schema.services.telemetry.v1beta4.GenericEventsBeta4.getDescriptor();
     com.google.protobuf.EmptyProto.getDescriptor();
     com.google.api.AnnotationsProto.getDescriptor();

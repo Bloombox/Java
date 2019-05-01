@@ -1,12 +1,11 @@
 /*
- * Copyright 2018, Momentum Ideas, Co. All rights reserved.
+ * Copyright 2019, Momentum Ideas Co.
  *
- * Source and object computer code contained herein is the private intellectual
- * property of Momentum Ideas Co., a Delaware Corporation. Use of this
- * code in source form requires permission in writing before use or the
- * assembly, distribution, or publishing of derivative works, for commercial
- * purposes or any other purpose, from a duly authorized officer of Momentum
- * Ideas Co.
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *  http://www.apache.org/licenses/LICENSE-2.0
  *
  * Unless required by applicable law or agreed to in writing, software
  * distributed under the License is distributed on an "AS IS" BASIS,
@@ -155,7 +154,7 @@ public final class BrandContent {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -304,19 +303,18 @@ public final class BrandContent {
       }
       io.opencannabis.schema.content.BrandContent.RasterGraphic other = (io.opencannabis.schema.content.BrandContent.RasterGraphic) obj;
 
-      boolean result = true;
-      result = result && (hasStandard() == other.hasStandard());
+      if (hasStandard() != other.hasStandard()) return false;
       if (hasStandard()) {
-        result = result && getStandard()
-            .equals(other.getStandard());
+        if (!getStandard()
+            .equals(other.getStandard())) return false;
       }
-      result = result && (hasRetina() == other.hasRetina());
+      if (hasRetina() != other.hasRetina()) return false;
       if (hasRetina()) {
-        result = result && getRetina()
-            .equals(other.getRetina());
+        if (!getRetina()
+            .equals(other.getRetina())) return false;
       }
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -525,35 +523,35 @@ public final class BrandContent {
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -602,7 +600,7 @@ public final class BrandContent {
         return this;
       }
 
-      private io.opencannabis.schema.media.MediaItemKey.MediaReference standard_ = null;
+      private io.opencannabis.schema.media.MediaItemKey.MediaReference standard_;
       private com.google.protobuf.SingleFieldBuilderV3<
           io.opencannabis.schema.media.MediaItemKey.MediaReference, io.opencannabis.schema.media.MediaItemKey.MediaReference.Builder, io.opencannabis.schema.media.MediaItemKey.MediaReferenceOrBuilder> standardBuilder_;
       /**
@@ -755,7 +753,7 @@ public final class BrandContent {
         return standardBuilder_;
       }
 
-      private io.opencannabis.schema.media.MediaItemKey.MediaReference retina_ = null;
+      private io.opencannabis.schema.media.MediaItemKey.MediaReference retina_;
       private com.google.protobuf.SingleFieldBuilderV3<
           io.opencannabis.schema.media.MediaItemKey.MediaReference, io.opencannabis.schema.media.MediaItemKey.MediaReference.Builder, io.opencannabis.schema.media.MediaItemKey.MediaReferenceOrBuilder> retinaBuilder_;
       /**
@@ -910,7 +908,7 @@ public final class BrandContent {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -1084,7 +1082,7 @@ public final class BrandContent {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -1233,19 +1231,18 @@ public final class BrandContent {
       }
       io.opencannabis.schema.content.BrandContent.BrandAsset other = (io.opencannabis.schema.content.BrandContent.BrandAsset) obj;
 
-      boolean result = true;
-      result = result && (hasRaster() == other.hasRaster());
+      if (hasRaster() != other.hasRaster()) return false;
       if (hasRaster()) {
-        result = result && getRaster()
-            .equals(other.getRaster());
+        if (!getRaster()
+            .equals(other.getRaster())) return false;
       }
-      result = result && (hasVector() == other.hasVector());
+      if (hasVector() != other.hasVector()) return false;
       if (hasVector()) {
-        result = result && getVector()
-            .equals(other.getVector());
+        if (!getVector()
+            .equals(other.getVector())) return false;
       }
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -1454,35 +1451,35 @@ public final class BrandContent {
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -1531,7 +1528,7 @@ public final class BrandContent {
         return this;
       }
 
-      private io.opencannabis.schema.content.BrandContent.RasterGraphic raster_ = null;
+      private io.opencannabis.schema.content.BrandContent.RasterGraphic raster_;
       private com.google.protobuf.SingleFieldBuilderV3<
           io.opencannabis.schema.content.BrandContent.RasterGraphic, io.opencannabis.schema.content.BrandContent.RasterGraphic.Builder, io.opencannabis.schema.content.BrandContent.RasterGraphicOrBuilder> rasterBuilder_;
       /**
@@ -1684,7 +1681,7 @@ public final class BrandContent {
         return rasterBuilder_;
       }
 
-      private io.opencannabis.schema.media.MediaItemKey.MediaReference vector_ = null;
+      private io.opencannabis.schema.media.MediaItemKey.MediaReference vector_;
       private com.google.protobuf.SingleFieldBuilderV3<
           io.opencannabis.schema.media.MediaItemKey.MediaReference, io.opencannabis.schema.media.MediaItemKey.MediaReference.Builder, io.opencannabis.schema.media.MediaItemKey.MediaReferenceOrBuilder> vectorBuilder_;
       /**
@@ -1839,7 +1836,7 @@ public final class BrandContent {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -2121,7 +2118,7 @@ public final class BrandContent {
               break;
             }
             case 162: {
-              if (!((mutable_bitField0_ & 0x00000008) == 0x00000008)) {
+              if (!((mutable_bitField0_ & 0x00000008) != 0)) {
                 media_ = new java.util.ArrayList<io.opencannabis.schema.content.BrandContent.BrandAsset>();
                 mutable_bitField0_ |= 0x00000008;
               }
@@ -2143,7 +2140,7 @@ public final class BrandContent {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -2157,7 +2154,7 @@ public final class BrandContent {
         throw new com.google.protobuf.InvalidProtocolBufferException(
             e).setUnfinishedMessage(this);
       } finally {
-        if (((mutable_bitField0_ & 0x00000008) == 0x00000008)) {
+        if (((mutable_bitField0_ & 0x00000008) != 0)) {
           media_ = java.util.Collections.unmodifiableList(media_);
         }
         this.unknownFields = unknownFields.build();
@@ -2438,31 +2435,30 @@ public final class BrandContent {
       }
       io.opencannabis.schema.content.BrandContent.Brand other = (io.opencannabis.schema.content.BrandContent.Brand) obj;
 
-      boolean result = true;
-      result = result && (hasName() == other.hasName());
+      if (hasName() != other.hasName()) return false;
       if (hasName()) {
-        result = result && getName()
-            .equals(other.getName());
+        if (!getName()
+            .equals(other.getName())) return false;
       }
-      result = result && (hasParent() == other.hasParent());
+      if (hasParent() != other.hasParent()) return false;
       if (hasParent()) {
-        result = result && getParent()
-            .equals(other.getParent());
+        if (!getParent()
+            .equals(other.getParent())) return false;
       }
-      result = result && (hasSummary() == other.hasSummary());
+      if (hasSummary() != other.hasSummary()) return false;
       if (hasSummary()) {
-        result = result && getSummary()
-            .equals(other.getSummary());
+        if (!getSummary()
+            .equals(other.getSummary())) return false;
       }
-      result = result && getMediaList()
-          .equals(other.getMediaList());
-      result = result && (hasTheme() == other.hasTheme());
+      if (!getMediaList()
+          .equals(other.getMediaList())) return false;
+      if (hasTheme() != other.hasTheme()) return false;
       if (hasTheme()) {
-        result = result && getTheme()
-            .equals(other.getTheme());
+        if (!getTheme()
+            .equals(other.getTheme())) return false;
       }
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -2704,7 +2700,7 @@ public final class BrandContent {
           result.summary_ = summaryBuilder_.build();
         }
         if (mediaBuilder_ == null) {
-          if (((bitField0_ & 0x00000008) == 0x00000008)) {
+          if (((bitField0_ & 0x00000008) != 0)) {
             media_ = java.util.Collections.unmodifiableList(media_);
             bitField0_ = (bitField0_ & ~0x00000008);
           }
@@ -2724,35 +2720,35 @@ public final class BrandContent {
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -2834,7 +2830,7 @@ public final class BrandContent {
       }
       private int bitField0_;
 
-      private io.opencannabis.schema.content.NameContent.Name name_ = null;
+      private io.opencannabis.schema.content.NameContent.Name name_;
       private com.google.protobuf.SingleFieldBuilderV3<
           io.opencannabis.schema.content.NameContent.Name, io.opencannabis.schema.content.NameContent.Name.Builder, io.opencannabis.schema.content.NameContent.NameOrBuilder> nameBuilder_;
       /**
@@ -2987,7 +2983,7 @@ public final class BrandContent {
         return nameBuilder_;
       }
 
-      private io.opencannabis.schema.content.BrandContent.Brand parent_ = null;
+      private io.opencannabis.schema.content.BrandContent.Brand parent_;
       private com.google.protobuf.SingleFieldBuilderV3<
           io.opencannabis.schema.content.BrandContent.Brand, io.opencannabis.schema.content.BrandContent.Brand.Builder, io.opencannabis.schema.content.BrandContent.BrandOrBuilder> parentBuilder_;
       /**
@@ -3140,7 +3136,7 @@ public final class BrandContent {
         return parentBuilder_;
       }
 
-      private io.opencannabis.schema.content.GenericContent.Content summary_ = null;
+      private io.opencannabis.schema.content.GenericContent.Content summary_;
       private com.google.protobuf.SingleFieldBuilderV3<
           io.opencannabis.schema.content.GenericContent.Content, io.opencannabis.schema.content.GenericContent.Content.Builder, io.opencannabis.schema.content.GenericContent.ContentOrBuilder> summaryBuilder_;
       /**
@@ -3296,7 +3292,7 @@ public final class BrandContent {
       private java.util.List<io.opencannabis.schema.content.BrandContent.BrandAsset> media_ =
         java.util.Collections.emptyList();
       private void ensureMediaIsMutable() {
-        if (!((bitField0_ & 0x00000008) == 0x00000008)) {
+        if (!((bitField0_ & 0x00000008) != 0)) {
           media_ = new java.util.ArrayList<io.opencannabis.schema.content.BrandContent.BrandAsset>(media_);
           bitField0_ |= 0x00000008;
          }
@@ -3597,7 +3593,7 @@ public final class BrandContent {
           mediaBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
               io.opencannabis.schema.content.BrandContent.BrandAsset, io.opencannabis.schema.content.BrandContent.BrandAsset.Builder, io.opencannabis.schema.content.BrandContent.BrandAssetOrBuilder>(
                   media_,
-                  ((bitField0_ & 0x00000008) == 0x00000008),
+                  ((bitField0_ & 0x00000008) != 0),
                   getParentForChildren(),
                   isClean());
           media_ = null;
@@ -3605,7 +3601,7 @@ public final class BrandContent {
         return mediaBuilder_;
       }
 
-      private io.opencannabis.schema.content.Colors.ColorScheme theme_ = null;
+      private io.opencannabis.schema.content.Colors.ColorScheme theme_;
       private com.google.protobuf.SingleFieldBuilderV3<
           io.opencannabis.schema.content.Colors.ColorScheme, io.opencannabis.schema.content.Colors.ColorScheme.Builder, io.opencannabis.schema.content.Colors.ColorSchemeOrBuilder> themeBuilder_;
       /**
@@ -3760,7 +3756,7 @@ public final class BrandContent {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
