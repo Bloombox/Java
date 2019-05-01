@@ -1,5 +1,5 @@
 /*
- * Copyright 2018, Momentum Ideas, Co. All rights reserved.
+ * Copyright 2019, Momentum Ideas, Co. All rights reserved.
  *
  * Source and object computer code contained herein is the private intellectual
  * property of Momentum Ideas Co., a Delaware Corporation. Use of this
@@ -223,7 +223,7 @@ public final class AppMemberKey {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -508,31 +508,28 @@ public final class AppMemberKey {
       }
       io.bloombox.schema.identity.AppMemberKey.MembershipKey other = (io.bloombox.schema.identity.AppMemberKey.MembershipKey) obj;
 
-      boolean result = true;
-      result = result && getUuid()
-          .equals(other.getUuid());
-      result = result && (hasUser() == other.hasUser());
+      if (!getUuid()
+          .equals(other.getUuid())) return false;
+      if (hasUser() != other.hasUser()) return false;
       if (hasUser()) {
-        result = result && getUser()
-            .equals(other.getUser());
+        if (!getUser()
+            .equals(other.getUser())) return false;
       }
-      result = result && getScopeCase().equals(
-          other.getScopeCase());
-      if (!result) return false;
+      if (!getScopeCase().equals(other.getScopeCase())) return false;
       switch (scopeCase_) {
         case 3:
-          result = result && getPartner()
-              .equals(other.getPartner());
+          if (!getPartner()
+              .equals(other.getPartner())) return false;
           break;
         case 4:
-          result = result && getLocation()
-              .equals(other.getLocation());
+          if (!getLocation()
+              .equals(other.getLocation())) return false;
           break;
         case 0:
         default:
       }
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -761,35 +758,35 @@ public final class AppMemberKey {
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -956,7 +953,7 @@ public final class AppMemberKey {
         return this;
       }
 
-      private io.bloombox.schema.identity.AppUserKey.UserKey user_ = null;
+      private io.bloombox.schema.identity.AppUserKey.UserKey user_;
       private com.google.protobuf.SingleFieldBuilderV3<
           io.bloombox.schema.identity.AppUserKey.UserKey, io.bloombox.schema.identity.AppUserKey.UserKey.Builder, io.bloombox.schema.identity.AppUserKey.UserKeyOrBuilder> userBuilder_;
       /**
@@ -1455,7 +1452,7 @@ public final class AppMemberKey {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -1667,7 +1664,7 @@ public final class AppMemberKey {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -1856,24 +1853,23 @@ public final class AppMemberKey {
       }
       io.bloombox.schema.identity.AppMemberKey.MembershipReference other = (io.bloombox.schema.identity.AppMemberKey.MembershipReference) obj;
 
-      boolean result = true;
-      result = result && (hasKey() == other.hasKey());
+      if (hasKey() != other.hasKey()) return false;
       if (hasKey()) {
-        result = result && getKey()
-            .equals(other.getKey());
+        if (!getKey()
+            .equals(other.getKey())) return false;
       }
-      result = result && (hasName() == other.hasName());
+      if (hasName() != other.hasName()) return false;
       if (hasName()) {
-        result = result && getName()
-            .equals(other.getName());
+        if (!getName()
+            .equals(other.getName())) return false;
       }
-      result = result && (hasPortrait() == other.hasPortrait());
+      if (hasPortrait() != other.hasPortrait()) return false;
       if (hasPortrait()) {
-        result = result && getPortrait()
-            .equals(other.getPortrait());
+        if (!getPortrait()
+            .equals(other.getPortrait())) return false;
       }
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -2097,35 +2093,35 @@ public final class AppMemberKey {
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -2177,7 +2173,7 @@ public final class AppMemberKey {
         return this;
       }
 
-      private io.bloombox.schema.identity.AppMemberKey.MembershipKey key_ = null;
+      private io.bloombox.schema.identity.AppMemberKey.MembershipKey key_;
       private com.google.protobuf.SingleFieldBuilderV3<
           io.bloombox.schema.identity.AppMemberKey.MembershipKey, io.bloombox.schema.identity.AppMemberKey.MembershipKey.Builder, io.bloombox.schema.identity.AppMemberKey.MembershipKeyOrBuilder> keyBuilder_;
       /**
@@ -2330,7 +2326,7 @@ public final class AppMemberKey {
         return keyBuilder_;
       }
 
-      private io.opencannabis.schema.person.Name name_ = null;
+      private io.opencannabis.schema.person.Name name_;
       private com.google.protobuf.SingleFieldBuilderV3<
           io.opencannabis.schema.person.Name, io.opencannabis.schema.person.Name.Builder, io.opencannabis.schema.person.NameOrBuilder> nameBuilder_;
       /**
@@ -2483,7 +2479,7 @@ public final class AppMemberKey {
         return nameBuilder_;
       }
 
-      private io.opencannabis.schema.media.MediaItemKey.MediaKey portrait_ = null;
+      private io.opencannabis.schema.media.MediaItemKey.MediaKey portrait_;
       private com.google.protobuf.SingleFieldBuilderV3<
           io.opencannabis.schema.media.MediaItemKey.MediaKey, io.opencannabis.schema.media.MediaItemKey.MediaKey.Builder, io.opencannabis.schema.media.MediaItemKey.MediaKeyOrBuilder> portraitBuilder_;
       /**
@@ -2638,7 +2634,7 @@ public final class AppMemberKey {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override

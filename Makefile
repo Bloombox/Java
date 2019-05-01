@@ -19,8 +19,8 @@
 
 BUILDMODE ?= gradle
 TESTS ?= yes
-RELEASE_VERSION ?= 1.7
-CLIENT_VERSION ?= 1.7-SNAPSHOT
+RELEASE_VERSION ?= 1.8
+CLIENT_VERSION ?= 1.8-SNAPSHOT
 SERVICE_ARGS ?= -Dbloombox.shop.version=$(SHOP_VERSION) -Dbloombox.telemetry.version=$(TELEMETRY_VERSION)
 SCHEMA ?= schema/
 RELEASE_ARGS ?= -DperformRelease=true
@@ -119,7 +119,7 @@ sync-schema: $(SCHEMA)
 	@echo "Updating schema..."
 	@git submodule update --init --remote schema
 	@echo "Building schema..."
-	@$(MAKE) -C schema SERVICES=yes TABLES=no LANGUAGES=java PROTO_FLAGS=--javagrpc_out=languages/java
+	@$(MAKE) -C schema SERVICES=yes TABLES=no LANGUAGES=java PROTO_FLAGS=--grpc-java_out=languages/java
 	@echo "Copying schemas..."
 	@mkdir -p src/main/java/
 	@rm -fr src/main/java/*

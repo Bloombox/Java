@@ -1,5 +1,5 @@
 /*
- * Copyright 2018, Momentum Ideas, Co. All rights reserved.
+ * Copyright 2019, Momentum Ideas, Co. All rights reserved.
  *
  * Source and object computer code contained herein is the private intellectual
  * property of Momentum Ideas Co., a Delaware Corporation. Use of this
@@ -79,9 +79,6 @@ public final class MailchimpSettingsOuterClass {
       super(builder);
     }
     private MailchimpIntegrationFeatures() {
-      signups_ = false;
-      segments_ = false;
-      ordering_ = false;
     }
 
     @java.lang.Override
@@ -124,7 +121,7 @@ public final class MailchimpSettingsOuterClass {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -253,15 +250,14 @@ public final class MailchimpSettingsOuterClass {
       }
       io.bloombox.schema.partner.integrations.mailchimp.MailchimpSettingsOuterClass.MailchimpIntegrationFeatures other = (io.bloombox.schema.partner.integrations.mailchimp.MailchimpSettingsOuterClass.MailchimpIntegrationFeatures) obj;
 
-      boolean result = true;
-      result = result && (getSignups()
-          == other.getSignups());
-      result = result && (getSegments()
-          == other.getSegments());
-      result = result && (getOrdering()
-          == other.getOrdering());
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (getSignups()
+          != other.getSignups()) return false;
+      if (getSegments()
+          != other.getSegments()) return false;
+      if (getOrdering()
+          != other.getOrdering()) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -458,35 +454,35 @@ public final class MailchimpSettingsOuterClass {
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -654,7 +650,7 @@ public final class MailchimpSettingsOuterClass {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -802,7 +798,7 @@ public final class MailchimpSettingsOuterClass {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -967,13 +963,12 @@ public final class MailchimpSettingsOuterClass {
       }
       io.bloombox.schema.partner.integrations.mailchimp.MailchimpSettingsOuterClass.MailchimpLists other = (io.bloombox.schema.partner.integrations.mailchimp.MailchimpSettingsOuterClass.MailchimpLists) obj;
 
-      boolean result = true;
-      result = result && getComms()
-          .equals(other.getComms());
-      result = result && getMarketing()
-          .equals(other.getMarketing());
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!getComms()
+          .equals(other.getComms())) return false;
+      if (!getMarketing()
+          .equals(other.getMarketing())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -1162,35 +1157,35 @@ public final class MailchimpSettingsOuterClass {
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -1421,7 +1416,7 @@ public final class MailchimpSettingsOuterClass {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -1620,7 +1615,7 @@ public final class MailchimpSettingsOuterClass {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -1817,21 +1812,20 @@ public final class MailchimpSettingsOuterClass {
       }
       io.bloombox.schema.partner.integrations.mailchimp.MailchimpSettingsOuterClass.MailchimpSettings other = (io.bloombox.schema.partner.integrations.mailchimp.MailchimpSettingsOuterClass.MailchimpSettings) obj;
 
-      boolean result = true;
-      result = result && getApiKey()
-          .equals(other.getApiKey());
-      result = result && (hasFeatures() == other.hasFeatures());
+      if (!getApiKey()
+          .equals(other.getApiKey())) return false;
+      if (hasFeatures() != other.hasFeatures()) return false;
       if (hasFeatures()) {
-        result = result && getFeatures()
-            .equals(other.getFeatures());
+        if (!getFeatures()
+            .equals(other.getFeatures())) return false;
       }
-      result = result && (hasLists() == other.hasLists());
+      if (hasLists() != other.hasLists()) return false;
       if (hasLists()) {
-        result = result && getLists()
-            .equals(other.getLists());
+        if (!getLists()
+            .equals(other.getLists())) return false;
       }
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -2045,35 +2039,35 @@ public final class MailchimpSettingsOuterClass {
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -2215,7 +2209,7 @@ public final class MailchimpSettingsOuterClass {
         return this;
       }
 
-      private io.bloombox.schema.partner.integrations.mailchimp.MailchimpSettingsOuterClass.MailchimpIntegrationFeatures features_ = null;
+      private io.bloombox.schema.partner.integrations.mailchimp.MailchimpSettingsOuterClass.MailchimpIntegrationFeatures features_;
       private com.google.protobuf.SingleFieldBuilderV3<
           io.bloombox.schema.partner.integrations.mailchimp.MailchimpSettingsOuterClass.MailchimpIntegrationFeatures, io.bloombox.schema.partner.integrations.mailchimp.MailchimpSettingsOuterClass.MailchimpIntegrationFeatures.Builder, io.bloombox.schema.partner.integrations.mailchimp.MailchimpSettingsOuterClass.MailchimpIntegrationFeaturesOrBuilder> featuresBuilder_;
       /**
@@ -2368,7 +2362,7 @@ public final class MailchimpSettingsOuterClass {
         return featuresBuilder_;
       }
 
-      private io.bloombox.schema.partner.integrations.mailchimp.MailchimpSettingsOuterClass.MailchimpLists lists_ = null;
+      private io.bloombox.schema.partner.integrations.mailchimp.MailchimpSettingsOuterClass.MailchimpLists lists_;
       private com.google.protobuf.SingleFieldBuilderV3<
           io.bloombox.schema.partner.integrations.mailchimp.MailchimpSettingsOuterClass.MailchimpLists, io.bloombox.schema.partner.integrations.mailchimp.MailchimpSettingsOuterClass.MailchimpLists.Builder, io.bloombox.schema.partner.integrations.mailchimp.MailchimpSettingsOuterClass.MailchimpListsOrBuilder> listsBuilder_;
       /**
@@ -2523,7 +2517,7 @@ public final class MailchimpSettingsOuterClass {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override

@@ -1,5 +1,5 @@
 /*
- * Copyright 2018, Momentum Ideas, Co. All rights reserved.
+ * Copyright 2019, Momentum Ideas, Co. All rights reserved.
  *
  * Source and object computer code contained herein is the private intellectual
  * property of Momentum Ideas Co., a Delaware Corporation. Use of this
@@ -87,8 +87,7 @@ public final class Filter {
       super(builder);
     }
     private BloomFilter() {
-      hashCount_ = 0;
-      bits_ = java.util.Collections.emptyList();
+      bits_ = emptyLongList();
     }
 
     @java.lang.Override
@@ -121,28 +120,28 @@ public final class Filter {
               break;
             }
             case 17: {
-              if (!((mutable_bitField0_ & 0x00000002) == 0x00000002)) {
-                bits_ = new java.util.ArrayList<java.lang.Long>();
+              if (!((mutable_bitField0_ & 0x00000002) != 0)) {
+                bits_ = newLongList();
                 mutable_bitField0_ |= 0x00000002;
               }
-              bits_.add(input.readFixed64());
+              bits_.addLong(input.readFixed64());
               break;
             }
             case 18: {
               int length = input.readRawVarint32();
               int limit = input.pushLimit(length);
-              if (!((mutable_bitField0_ & 0x00000002) == 0x00000002) && input.getBytesUntilLimit() > 0) {
-                bits_ = new java.util.ArrayList<java.lang.Long>();
+              if (!((mutable_bitField0_ & 0x00000002) != 0) && input.getBytesUntilLimit() > 0) {
+                bits_ = newLongList();
                 mutable_bitField0_ |= 0x00000002;
               }
               while (input.getBytesUntilLimit() > 0) {
-                bits_.add(input.readFixed64());
+                bits_.addLong(input.readFixed64());
               }
               input.popLimit(limit);
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -156,8 +155,8 @@ public final class Filter {
         throw new com.google.protobuf.InvalidProtocolBufferException(
             e).setUnfinishedMessage(this);
       } finally {
-        if (((mutable_bitField0_ & 0x00000002) == 0x00000002)) {
-          bits_ = java.util.Collections.unmodifiableList(bits_);
+        if (((mutable_bitField0_ & 0x00000002) != 0)) {
+          bits_.makeImmutable(); // C
         }
         this.unknownFields = unknownFields.build();
         makeExtensionsImmutable();
@@ -191,7 +190,7 @@ public final class Filter {
     }
 
     public static final int BITS_FIELD_NUMBER = 2;
-    private java.util.List<java.lang.Long> bits_;
+    private com.google.protobuf.Internal.LongList bits_;
     /**
      * <pre>
      * Raw bits of the Bloom filter.
@@ -221,7 +220,7 @@ public final class Filter {
      * <code>repeated fixed64 bits = 2;</code>
      */
     public long getBits(int index) {
-      return bits_.get(index);
+      return bits_.getLong(index);
     }
     private int bitsMemoizedSerializedSize = -1;
 
@@ -248,7 +247,7 @@ public final class Filter {
         output.writeUInt32NoTag(bitsMemoizedSerializedSize);
       }
       for (int i = 0; i < bits_.size(); i++) {
-        output.writeFixed64NoTag(bits_.get(i));
+        output.writeFixed64NoTag(bits_.getLong(i));
       }
       unknownFields.writeTo(output);
     }
@@ -289,13 +288,12 @@ public final class Filter {
       }
       io.bloombox.schema.analytics.stream.Filter.BloomFilter other = (io.bloombox.schema.analytics.stream.Filter.BloomFilter) obj;
 
-      boolean result = true;
-      result = result && (getHashCount()
-          == other.getHashCount());
-      result = result && getBitsList()
-          .equals(other.getBitsList());
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (getHashCount()
+          != other.getHashCount()) return false;
+      if (!getBitsList()
+          .equals(other.getBitsList())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -451,7 +449,7 @@ public final class Filter {
         super.clear();
         hashCount_ = 0;
 
-        bits_ = java.util.Collections.emptyList();
+        bits_ = emptyLongList();
         bitField0_ = (bitField0_ & ~0x00000002);
         return this;
       }
@@ -482,8 +480,8 @@ public final class Filter {
         int from_bitField0_ = bitField0_;
         int to_bitField0_ = 0;
         result.hashCount_ = hashCount_;
-        if (((bitField0_ & 0x00000002) == 0x00000002)) {
-          bits_ = java.util.Collections.unmodifiableList(bits_);
+        if (((bitField0_ & 0x00000002) != 0)) {
+          bits_.makeImmutable();
           bitField0_ = (bitField0_ & ~0x00000002);
         }
         result.bits_ = bits_;
@@ -494,35 +492,35 @@ public final class Filter {
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -617,10 +615,10 @@ public final class Filter {
         return this;
       }
 
-      private java.util.List<java.lang.Long> bits_ = java.util.Collections.emptyList();
+      private com.google.protobuf.Internal.LongList bits_ = emptyLongList();
       private void ensureBitsIsMutable() {
-        if (!((bitField0_ & 0x00000002) == 0x00000002)) {
-          bits_ = new java.util.ArrayList<java.lang.Long>(bits_);
+        if (!((bitField0_ & 0x00000002) != 0)) {
+          bits_ = mutableCopy(bits_);
           bitField0_ |= 0x00000002;
          }
       }
@@ -633,7 +631,8 @@ public final class Filter {
        */
       public java.util.List<java.lang.Long>
           getBitsList() {
-        return java.util.Collections.unmodifiableList(bits_);
+        return ((bitField0_ & 0x00000002) != 0) ?
+                 java.util.Collections.unmodifiableList(bits_) : bits_;
       }
       /**
        * <pre>
@@ -653,7 +652,7 @@ public final class Filter {
        * <code>repeated fixed64 bits = 2;</code>
        */
       public long getBits(int index) {
-        return bits_.get(index);
+        return bits_.getLong(index);
       }
       /**
        * <pre>
@@ -665,7 +664,7 @@ public final class Filter {
       public Builder setBits(
           int index, long value) {
         ensureBitsIsMutable();
-        bits_.set(index, value);
+        bits_.setLong(index, value);
         onChanged();
         return this;
       }
@@ -678,7 +677,7 @@ public final class Filter {
        */
       public Builder addBits(long value) {
         ensureBitsIsMutable();
-        bits_.add(value);
+        bits_.addLong(value);
         onChanged();
         return this;
       }
@@ -705,7 +704,7 @@ public final class Filter {
        * <code>repeated fixed64 bits = 2;</code>
        */
       public Builder clearBits() {
-        bits_ = java.util.Collections.emptyList();
+        bits_ = emptyLongList();
         bitField0_ = (bitField0_ & ~0x00000002);
         onChanged();
         return this;
@@ -713,7 +712,7 @@ public final class Filter {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -839,7 +838,6 @@ public final class Filter {
     }
     private LayeredBloomFilter() {
       filter_ = java.util.Collections.emptyList();
-      limit_ = 0;
     }
 
     @java.lang.Override
@@ -867,7 +865,7 @@ public final class Filter {
               done = true;
               break;
             case 10: {
-              if (!((mutable_bitField0_ & 0x00000001) == 0x00000001)) {
+              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
                 filter_ = new java.util.ArrayList<io.bloombox.schema.analytics.stream.Filter.BloomFilter>();
                 mutable_bitField0_ |= 0x00000001;
               }
@@ -881,7 +879,7 @@ public final class Filter {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -895,7 +893,7 @@ public final class Filter {
         throw new com.google.protobuf.InvalidProtocolBufferException(
             e).setUnfinishedMessage(this);
       } finally {
-        if (((mutable_bitField0_ & 0x00000001) == 0x00000001)) {
+        if (((mutable_bitField0_ & 0x00000001) != 0)) {
           filter_ = java.util.Collections.unmodifiableList(filter_);
         }
         this.unknownFields = unknownFields.build();
@@ -1036,13 +1034,12 @@ public final class Filter {
       }
       io.bloombox.schema.analytics.stream.Filter.LayeredBloomFilter other = (io.bloombox.schema.analytics.stream.Filter.LayeredBloomFilter) obj;
 
-      boolean result = true;
-      result = result && getFilterList()
-          .equals(other.getFilterList());
-      result = result && (getLimit()
-          == other.getLimit());
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!getFilterList()
+          .equals(other.getFilterList())) return false;
+      if (getLimit()
+          != other.getLimit()) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -1234,7 +1231,7 @@ public final class Filter {
         int from_bitField0_ = bitField0_;
         int to_bitField0_ = 0;
         if (filterBuilder_ == null) {
-          if (((bitField0_ & 0x00000001) == 0x00000001)) {
+          if (((bitField0_ & 0x00000001) != 0)) {
             filter_ = java.util.Collections.unmodifiableList(filter_);
             bitField0_ = (bitField0_ & ~0x00000001);
           }
@@ -1250,35 +1247,35 @@ public final class Filter {
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -1354,7 +1351,7 @@ public final class Filter {
       private java.util.List<io.bloombox.schema.analytics.stream.Filter.BloomFilter> filter_ =
         java.util.Collections.emptyList();
       private void ensureFilterIsMutable() {
-        if (!((bitField0_ & 0x00000001) == 0x00000001)) {
+        if (!((bitField0_ & 0x00000001) != 0)) {
           filter_ = new java.util.ArrayList<io.bloombox.schema.analytics.stream.Filter.BloomFilter>(filter_);
           bitField0_ |= 0x00000001;
          }
@@ -1655,7 +1652,7 @@ public final class Filter {
           filterBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
               io.bloombox.schema.analytics.stream.Filter.BloomFilter, io.bloombox.schema.analytics.stream.Filter.BloomFilter.Builder, io.bloombox.schema.analytics.stream.Filter.BloomFilterOrBuilder>(
                   filter_,
-                  ((bitField0_ & 0x00000001) == 0x00000001),
+                  ((bitField0_ & 0x00000001) != 0),
                   getParentForChildren(),
                   isClean());
           filter_ = null;
@@ -1703,7 +1700,7 @@ public final class Filter {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -1809,8 +1806,7 @@ public final class Filter {
       super(builder);
     }
     private CountingBloomFilter() {
-      hashCount_ = 0;
-      bucket_ = java.util.Collections.emptyList();
+      bucket_ = emptyLongList();
     }
 
     @java.lang.Override
@@ -1843,28 +1839,28 @@ public final class Filter {
               break;
             }
             case 17: {
-              if (!((mutable_bitField0_ & 0x00000002) == 0x00000002)) {
-                bucket_ = new java.util.ArrayList<java.lang.Long>();
+              if (!((mutable_bitField0_ & 0x00000002) != 0)) {
+                bucket_ = newLongList();
                 mutable_bitField0_ |= 0x00000002;
               }
-              bucket_.add(input.readFixed64());
+              bucket_.addLong(input.readFixed64());
               break;
             }
             case 18: {
               int length = input.readRawVarint32();
               int limit = input.pushLimit(length);
-              if (!((mutable_bitField0_ & 0x00000002) == 0x00000002) && input.getBytesUntilLimit() > 0) {
-                bucket_ = new java.util.ArrayList<java.lang.Long>();
+              if (!((mutable_bitField0_ & 0x00000002) != 0) && input.getBytesUntilLimit() > 0) {
+                bucket_ = newLongList();
                 mutable_bitField0_ |= 0x00000002;
               }
               while (input.getBytesUntilLimit() > 0) {
-                bucket_.add(input.readFixed64());
+                bucket_.addLong(input.readFixed64());
               }
               input.popLimit(limit);
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -1878,8 +1874,8 @@ public final class Filter {
         throw new com.google.protobuf.InvalidProtocolBufferException(
             e).setUnfinishedMessage(this);
       } finally {
-        if (((mutable_bitField0_ & 0x00000002) == 0x00000002)) {
-          bucket_ = java.util.Collections.unmodifiableList(bucket_);
+        if (((mutable_bitField0_ & 0x00000002) != 0)) {
+          bucket_.makeImmutable(); // C
         }
         this.unknownFields = unknownFields.build();
         makeExtensionsImmutable();
@@ -1913,7 +1909,7 @@ public final class Filter {
     }
 
     public static final int BUCKET_FIELD_NUMBER = 2;
-    private java.util.List<java.lang.Long> bucket_;
+    private com.google.protobuf.Internal.LongList bucket_;
     /**
      * <pre>
      * Raw buckets for the counter.
@@ -1943,7 +1939,7 @@ public final class Filter {
      * <code>repeated fixed64 bucket = 2;</code>
      */
     public long getBucket(int index) {
-      return bucket_.get(index);
+      return bucket_.getLong(index);
     }
     private int bucketMemoizedSerializedSize = -1;
 
@@ -1970,7 +1966,7 @@ public final class Filter {
         output.writeUInt32NoTag(bucketMemoizedSerializedSize);
       }
       for (int i = 0; i < bucket_.size(); i++) {
-        output.writeFixed64NoTag(bucket_.get(i));
+        output.writeFixed64NoTag(bucket_.getLong(i));
       }
       unknownFields.writeTo(output);
     }
@@ -2011,13 +2007,12 @@ public final class Filter {
       }
       io.bloombox.schema.analytics.stream.Filter.CountingBloomFilter other = (io.bloombox.schema.analytics.stream.Filter.CountingBloomFilter) obj;
 
-      boolean result = true;
-      result = result && (getHashCount()
-          == other.getHashCount());
-      result = result && getBucketList()
-          .equals(other.getBucketList());
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (getHashCount()
+          != other.getHashCount()) return false;
+      if (!getBucketList()
+          .equals(other.getBucketList())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -2173,7 +2168,7 @@ public final class Filter {
         super.clear();
         hashCount_ = 0;
 
-        bucket_ = java.util.Collections.emptyList();
+        bucket_ = emptyLongList();
         bitField0_ = (bitField0_ & ~0x00000002);
         return this;
       }
@@ -2204,8 +2199,8 @@ public final class Filter {
         int from_bitField0_ = bitField0_;
         int to_bitField0_ = 0;
         result.hashCount_ = hashCount_;
-        if (((bitField0_ & 0x00000002) == 0x00000002)) {
-          bucket_ = java.util.Collections.unmodifiableList(bucket_);
+        if (((bitField0_ & 0x00000002) != 0)) {
+          bucket_.makeImmutable();
           bitField0_ = (bitField0_ & ~0x00000002);
         }
         result.bucket_ = bucket_;
@@ -2216,35 +2211,35 @@ public final class Filter {
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -2339,10 +2334,10 @@ public final class Filter {
         return this;
       }
 
-      private java.util.List<java.lang.Long> bucket_ = java.util.Collections.emptyList();
+      private com.google.protobuf.Internal.LongList bucket_ = emptyLongList();
       private void ensureBucketIsMutable() {
-        if (!((bitField0_ & 0x00000002) == 0x00000002)) {
-          bucket_ = new java.util.ArrayList<java.lang.Long>(bucket_);
+        if (!((bitField0_ & 0x00000002) != 0)) {
+          bucket_ = mutableCopy(bucket_);
           bitField0_ |= 0x00000002;
          }
       }
@@ -2355,7 +2350,8 @@ public final class Filter {
        */
       public java.util.List<java.lang.Long>
           getBucketList() {
-        return java.util.Collections.unmodifiableList(bucket_);
+        return ((bitField0_ & 0x00000002) != 0) ?
+                 java.util.Collections.unmodifiableList(bucket_) : bucket_;
       }
       /**
        * <pre>
@@ -2375,7 +2371,7 @@ public final class Filter {
        * <code>repeated fixed64 bucket = 2;</code>
        */
       public long getBucket(int index) {
-        return bucket_.get(index);
+        return bucket_.getLong(index);
       }
       /**
        * <pre>
@@ -2387,7 +2383,7 @@ public final class Filter {
       public Builder setBucket(
           int index, long value) {
         ensureBucketIsMutable();
-        bucket_.set(index, value);
+        bucket_.setLong(index, value);
         onChanged();
         return this;
       }
@@ -2400,7 +2396,7 @@ public final class Filter {
        */
       public Builder addBucket(long value) {
         ensureBucketIsMutable();
-        bucket_.add(value);
+        bucket_.addLong(value);
         onChanged();
         return this;
       }
@@ -2427,7 +2423,7 @@ public final class Filter {
        * <code>repeated fixed64 bucket = 2;</code>
        */
       public Builder clearBucket() {
-        bucket_ = java.util.Collections.emptyList();
+        bucket_ = emptyLongList();
         bitField0_ = (bitField0_ & ~0x00000002);
         onChanged();
         return this;
@@ -2435,7 +2431,7 @@ public final class Filter {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -2660,11 +2656,10 @@ public final class Filter {
       super(builder);
     }
     private OITDBloomFilter() {
-      hashCount_ = 0;
-      bitset_ = java.util.Collections.emptyList();
-      bucket_ = java.util.Collections.emptyList();
-      timestamp_ = java.util.Collections.emptyList();
-      insertions_ = java.util.Collections.emptyList();
+      bitset_ = emptyLongList();
+      bucket_ = emptyLongList();
+      timestamp_ = emptyLongList();
+      insertions_ = emptyIntList();
       membership_ = java.util.Collections.emptyList();
     }
 
@@ -2698,91 +2693,91 @@ public final class Filter {
               break;
             }
             case 17: {
-              if (!((mutable_bitField0_ & 0x00000002) == 0x00000002)) {
-                bitset_ = new java.util.ArrayList<java.lang.Long>();
+              if (!((mutable_bitField0_ & 0x00000002) != 0)) {
+                bitset_ = newLongList();
                 mutable_bitField0_ |= 0x00000002;
               }
-              bitset_.add(input.readFixed64());
+              bitset_.addLong(input.readFixed64());
               break;
             }
             case 18: {
               int length = input.readRawVarint32();
               int limit = input.pushLimit(length);
-              if (!((mutable_bitField0_ & 0x00000002) == 0x00000002) && input.getBytesUntilLimit() > 0) {
-                bitset_ = new java.util.ArrayList<java.lang.Long>();
+              if (!((mutable_bitField0_ & 0x00000002) != 0) && input.getBytesUntilLimit() > 0) {
+                bitset_ = newLongList();
                 mutable_bitField0_ |= 0x00000002;
               }
               while (input.getBytesUntilLimit() > 0) {
-                bitset_.add(input.readFixed64());
+                bitset_.addLong(input.readFixed64());
               }
               input.popLimit(limit);
               break;
             }
             case 25: {
-              if (!((mutable_bitField0_ & 0x00000004) == 0x00000004)) {
-                bucket_ = new java.util.ArrayList<java.lang.Long>();
+              if (!((mutable_bitField0_ & 0x00000004) != 0)) {
+                bucket_ = newLongList();
                 mutable_bitField0_ |= 0x00000004;
               }
-              bucket_.add(input.readFixed64());
+              bucket_.addLong(input.readFixed64());
               break;
             }
             case 26: {
               int length = input.readRawVarint32();
               int limit = input.pushLimit(length);
-              if (!((mutable_bitField0_ & 0x00000004) == 0x00000004) && input.getBytesUntilLimit() > 0) {
-                bucket_ = new java.util.ArrayList<java.lang.Long>();
+              if (!((mutable_bitField0_ & 0x00000004) != 0) && input.getBytesUntilLimit() > 0) {
+                bucket_ = newLongList();
                 mutable_bitField0_ |= 0x00000004;
               }
               while (input.getBytesUntilLimit() > 0) {
-                bucket_.add(input.readFixed64());
+                bucket_.addLong(input.readFixed64());
               }
               input.popLimit(limit);
               break;
             }
             case 32: {
-              if (!((mutable_bitField0_ & 0x00000008) == 0x00000008)) {
-                timestamp_ = new java.util.ArrayList<java.lang.Long>();
+              if (!((mutable_bitField0_ & 0x00000008) != 0)) {
+                timestamp_ = newLongList();
                 mutable_bitField0_ |= 0x00000008;
               }
-              timestamp_.add(input.readUInt64());
+              timestamp_.addLong(input.readUInt64());
               break;
             }
             case 34: {
               int length = input.readRawVarint32();
               int limit = input.pushLimit(length);
-              if (!((mutable_bitField0_ & 0x00000008) == 0x00000008) && input.getBytesUntilLimit() > 0) {
-                timestamp_ = new java.util.ArrayList<java.lang.Long>();
+              if (!((mutable_bitField0_ & 0x00000008) != 0) && input.getBytesUntilLimit() > 0) {
+                timestamp_ = newLongList();
                 mutable_bitField0_ |= 0x00000008;
               }
               while (input.getBytesUntilLimit() > 0) {
-                timestamp_.add(input.readUInt64());
+                timestamp_.addLong(input.readUInt64());
               }
               input.popLimit(limit);
               break;
             }
             case 40: {
-              if (!((mutable_bitField0_ & 0x00000010) == 0x00000010)) {
-                insertions_ = new java.util.ArrayList<java.lang.Integer>();
+              if (!((mutable_bitField0_ & 0x00000010) != 0)) {
+                insertions_ = newIntList();
                 mutable_bitField0_ |= 0x00000010;
               }
-              insertions_.add(input.readUInt32());
+              insertions_.addInt(input.readUInt32());
               break;
             }
             case 42: {
               int length = input.readRawVarint32();
               int limit = input.pushLimit(length);
-              if (!((mutable_bitField0_ & 0x00000010) == 0x00000010) && input.getBytesUntilLimit() > 0) {
-                insertions_ = new java.util.ArrayList<java.lang.Integer>();
+              if (!((mutable_bitField0_ & 0x00000010) != 0) && input.getBytesUntilLimit() > 0) {
+                insertions_ = newIntList();
                 mutable_bitField0_ |= 0x00000010;
               }
               while (input.getBytesUntilLimit() > 0) {
-                insertions_.add(input.readUInt32());
+                insertions_.addInt(input.readUInt32());
               }
               input.popLimit(limit);
               break;
             }
             case 50: {
-              if (!((mutable_bitField0_ & 0x00000020) == 0x00000020)) {
+              if (!((mutable_bitField0_ & 0x00000020) != 0)) {
                 membership_ = new java.util.ArrayList<io.bloombox.schema.analytics.stream.Filter.BloomFilter>();
                 mutable_bitField0_ |= 0x00000020;
               }
@@ -2791,7 +2786,7 @@ public final class Filter {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -2805,19 +2800,19 @@ public final class Filter {
         throw new com.google.protobuf.InvalidProtocolBufferException(
             e).setUnfinishedMessage(this);
       } finally {
-        if (((mutable_bitField0_ & 0x00000002) == 0x00000002)) {
-          bitset_ = java.util.Collections.unmodifiableList(bitset_);
+        if (((mutable_bitField0_ & 0x00000002) != 0)) {
+          bitset_.makeImmutable(); // C
         }
-        if (((mutable_bitField0_ & 0x00000004) == 0x00000004)) {
-          bucket_ = java.util.Collections.unmodifiableList(bucket_);
+        if (((mutable_bitField0_ & 0x00000004) != 0)) {
+          bucket_.makeImmutable(); // C
         }
-        if (((mutable_bitField0_ & 0x00000008) == 0x00000008)) {
-          timestamp_ = java.util.Collections.unmodifiableList(timestamp_);
+        if (((mutable_bitField0_ & 0x00000008) != 0)) {
+          timestamp_.makeImmutable(); // C
         }
-        if (((mutable_bitField0_ & 0x00000010) == 0x00000010)) {
-          insertions_ = java.util.Collections.unmodifiableList(insertions_);
+        if (((mutable_bitField0_ & 0x00000010) != 0)) {
+          insertions_.makeImmutable(); // C
         }
-        if (((mutable_bitField0_ & 0x00000020) == 0x00000020)) {
+        if (((mutable_bitField0_ & 0x00000020) != 0)) {
           membership_ = java.util.Collections.unmodifiableList(membership_);
         }
         this.unknownFields = unknownFields.build();
@@ -2852,7 +2847,7 @@ public final class Filter {
     }
 
     public static final int BITSET_FIELD_NUMBER = 2;
-    private java.util.List<java.lang.Long> bitset_;
+    private com.google.protobuf.Internal.LongList bitset_;
     /**
      * <pre>
      * Set of raw filter bits (i.e., the "content" of the filter).
@@ -2882,12 +2877,12 @@ public final class Filter {
      * <code>repeated fixed64 bitset = 2;</code>
      */
     public long getBitset(int index) {
-      return bitset_.get(index);
+      return bitset_.getLong(index);
     }
     private int bitsetMemoizedSerializedSize = -1;
 
     public static final int BUCKET_FIELD_NUMBER = 3;
-    private java.util.List<java.lang.Long> bucket_;
+    private com.google.protobuf.Internal.LongList bucket_;
     /**
      * <pre>
      * Counter buckets corresponding to each filter bit position.
@@ -2917,12 +2912,12 @@ public final class Filter {
      * <code>repeated fixed64 bucket = 3;</code>
      */
     public long getBucket(int index) {
-      return bucket_.get(index);
+      return bucket_.getLong(index);
     }
     private int bucketMemoizedSerializedSize = -1;
 
     public static final int TIMESTAMP_FIELD_NUMBER = 4;
-    private java.util.List<java.lang.Long> timestamp_;
+    private com.google.protobuf.Internal.LongList timestamp_;
     /**
      * <pre>
      * Set of timestamps corresponding to each filter bit position.
@@ -2952,12 +2947,12 @@ public final class Filter {
      * <code>repeated uint64 timestamp = 4;</code>
      */
     public long getTimestamp(int index) {
-      return timestamp_.get(index);
+      return timestamp_.getLong(index);
     }
     private int timestampMemoizedSerializedSize = -1;
 
     public static final int INSERTIONS_FIELD_NUMBER = 5;
-    private java.util.List<java.lang.Integer> insertions_;
+    private com.google.protobuf.Internal.IntList insertions_;
     /**
      * <pre>
      * Specifies an insertions count, which tracks the number of items globally inserted into each layer.
@@ -2987,7 +2982,7 @@ public final class Filter {
      * <code>repeated uint32 insertions = 5;</code>
      */
     public int getInsertions(int index) {
-      return insertions_.get(index);
+      return insertions_.getInt(index);
     }
     private int insertionsMemoizedSerializedSize = -1;
 
@@ -3069,28 +3064,28 @@ public final class Filter {
         output.writeUInt32NoTag(bitsetMemoizedSerializedSize);
       }
       for (int i = 0; i < bitset_.size(); i++) {
-        output.writeFixed64NoTag(bitset_.get(i));
+        output.writeFixed64NoTag(bitset_.getLong(i));
       }
       if (getBucketList().size() > 0) {
         output.writeUInt32NoTag(26);
         output.writeUInt32NoTag(bucketMemoizedSerializedSize);
       }
       for (int i = 0; i < bucket_.size(); i++) {
-        output.writeFixed64NoTag(bucket_.get(i));
+        output.writeFixed64NoTag(bucket_.getLong(i));
       }
       if (getTimestampList().size() > 0) {
         output.writeUInt32NoTag(34);
         output.writeUInt32NoTag(timestampMemoizedSerializedSize);
       }
       for (int i = 0; i < timestamp_.size(); i++) {
-        output.writeUInt64NoTag(timestamp_.get(i));
+        output.writeUInt64NoTag(timestamp_.getLong(i));
       }
       if (getInsertionsList().size() > 0) {
         output.writeUInt32NoTag(42);
         output.writeUInt32NoTag(insertionsMemoizedSerializedSize);
       }
       for (int i = 0; i < insertions_.size(); i++) {
-        output.writeUInt32NoTag(insertions_.get(i));
+        output.writeUInt32NoTag(insertions_.getInt(i));
       }
       for (int i = 0; i < membership_.size(); i++) {
         output.writeMessage(6, membership_.get(i));
@@ -3134,7 +3129,7 @@ public final class Filter {
         int dataSize = 0;
         for (int i = 0; i < timestamp_.size(); i++) {
           dataSize += com.google.protobuf.CodedOutputStream
-            .computeUInt64SizeNoTag(timestamp_.get(i));
+            .computeUInt64SizeNoTag(timestamp_.getLong(i));
         }
         size += dataSize;
         if (!getTimestampList().isEmpty()) {
@@ -3148,7 +3143,7 @@ public final class Filter {
         int dataSize = 0;
         for (int i = 0; i < insertions_.size(); i++) {
           dataSize += com.google.protobuf.CodedOutputStream
-            .computeUInt32SizeNoTag(insertions_.get(i));
+            .computeUInt32SizeNoTag(insertions_.getInt(i));
         }
         size += dataSize;
         if (!getInsertionsList().isEmpty()) {
@@ -3177,21 +3172,20 @@ public final class Filter {
       }
       io.bloombox.schema.analytics.stream.Filter.OITDBloomFilter other = (io.bloombox.schema.analytics.stream.Filter.OITDBloomFilter) obj;
 
-      boolean result = true;
-      result = result && (getHashCount()
-          == other.getHashCount());
-      result = result && getBitsetList()
-          .equals(other.getBitsetList());
-      result = result && getBucketList()
-          .equals(other.getBucketList());
-      result = result && getTimestampList()
-          .equals(other.getTimestampList());
-      result = result && getInsertionsList()
-          .equals(other.getInsertionsList());
-      result = result && getMembershipList()
-          .equals(other.getMembershipList());
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (getHashCount()
+          != other.getHashCount()) return false;
+      if (!getBitsetList()
+          .equals(other.getBitsetList())) return false;
+      if (!getBucketList()
+          .equals(other.getBucketList())) return false;
+      if (!getTimestampList()
+          .equals(other.getTimestampList())) return false;
+      if (!getInsertionsList()
+          .equals(other.getInsertionsList())) return false;
+      if (!getMembershipList()
+          .equals(other.getMembershipList())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -3364,13 +3358,13 @@ public final class Filter {
         super.clear();
         hashCount_ = 0;
 
-        bitset_ = java.util.Collections.emptyList();
+        bitset_ = emptyLongList();
         bitField0_ = (bitField0_ & ~0x00000002);
-        bucket_ = java.util.Collections.emptyList();
+        bucket_ = emptyLongList();
         bitField0_ = (bitField0_ & ~0x00000004);
-        timestamp_ = java.util.Collections.emptyList();
+        timestamp_ = emptyLongList();
         bitField0_ = (bitField0_ & ~0x00000008);
-        insertions_ = java.util.Collections.emptyList();
+        insertions_ = emptyIntList();
         bitField0_ = (bitField0_ & ~0x00000010);
         if (membershipBuilder_ == null) {
           membership_ = java.util.Collections.emptyList();
@@ -3407,28 +3401,28 @@ public final class Filter {
         int from_bitField0_ = bitField0_;
         int to_bitField0_ = 0;
         result.hashCount_ = hashCount_;
-        if (((bitField0_ & 0x00000002) == 0x00000002)) {
-          bitset_ = java.util.Collections.unmodifiableList(bitset_);
+        if (((bitField0_ & 0x00000002) != 0)) {
+          bitset_.makeImmutable();
           bitField0_ = (bitField0_ & ~0x00000002);
         }
         result.bitset_ = bitset_;
-        if (((bitField0_ & 0x00000004) == 0x00000004)) {
-          bucket_ = java.util.Collections.unmodifiableList(bucket_);
+        if (((bitField0_ & 0x00000004) != 0)) {
+          bucket_.makeImmutable();
           bitField0_ = (bitField0_ & ~0x00000004);
         }
         result.bucket_ = bucket_;
-        if (((bitField0_ & 0x00000008) == 0x00000008)) {
-          timestamp_ = java.util.Collections.unmodifiableList(timestamp_);
+        if (((bitField0_ & 0x00000008) != 0)) {
+          timestamp_.makeImmutable();
           bitField0_ = (bitField0_ & ~0x00000008);
         }
         result.timestamp_ = timestamp_;
-        if (((bitField0_ & 0x00000010) == 0x00000010)) {
-          insertions_ = java.util.Collections.unmodifiableList(insertions_);
+        if (((bitField0_ & 0x00000010) != 0)) {
+          insertions_.makeImmutable();
           bitField0_ = (bitField0_ & ~0x00000010);
         }
         result.insertions_ = insertions_;
         if (membershipBuilder_ == null) {
-          if (((bitField0_ & 0x00000020) == 0x00000020)) {
+          if (((bitField0_ & 0x00000020) != 0)) {
             membership_ = java.util.Collections.unmodifiableList(membership_);
             bitField0_ = (bitField0_ & ~0x00000020);
           }
@@ -3443,35 +3437,35 @@ public final class Filter {
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -3622,10 +3616,10 @@ public final class Filter {
         return this;
       }
 
-      private java.util.List<java.lang.Long> bitset_ = java.util.Collections.emptyList();
+      private com.google.protobuf.Internal.LongList bitset_ = emptyLongList();
       private void ensureBitsetIsMutable() {
-        if (!((bitField0_ & 0x00000002) == 0x00000002)) {
-          bitset_ = new java.util.ArrayList<java.lang.Long>(bitset_);
+        if (!((bitField0_ & 0x00000002) != 0)) {
+          bitset_ = mutableCopy(bitset_);
           bitField0_ |= 0x00000002;
          }
       }
@@ -3638,7 +3632,8 @@ public final class Filter {
        */
       public java.util.List<java.lang.Long>
           getBitsetList() {
-        return java.util.Collections.unmodifiableList(bitset_);
+        return ((bitField0_ & 0x00000002) != 0) ?
+                 java.util.Collections.unmodifiableList(bitset_) : bitset_;
       }
       /**
        * <pre>
@@ -3658,7 +3653,7 @@ public final class Filter {
        * <code>repeated fixed64 bitset = 2;</code>
        */
       public long getBitset(int index) {
-        return bitset_.get(index);
+        return bitset_.getLong(index);
       }
       /**
        * <pre>
@@ -3670,7 +3665,7 @@ public final class Filter {
       public Builder setBitset(
           int index, long value) {
         ensureBitsetIsMutable();
-        bitset_.set(index, value);
+        bitset_.setLong(index, value);
         onChanged();
         return this;
       }
@@ -3683,7 +3678,7 @@ public final class Filter {
        */
       public Builder addBitset(long value) {
         ensureBitsetIsMutable();
-        bitset_.add(value);
+        bitset_.addLong(value);
         onChanged();
         return this;
       }
@@ -3710,16 +3705,16 @@ public final class Filter {
        * <code>repeated fixed64 bitset = 2;</code>
        */
       public Builder clearBitset() {
-        bitset_ = java.util.Collections.emptyList();
+        bitset_ = emptyLongList();
         bitField0_ = (bitField0_ & ~0x00000002);
         onChanged();
         return this;
       }
 
-      private java.util.List<java.lang.Long> bucket_ = java.util.Collections.emptyList();
+      private com.google.protobuf.Internal.LongList bucket_ = emptyLongList();
       private void ensureBucketIsMutable() {
-        if (!((bitField0_ & 0x00000004) == 0x00000004)) {
-          bucket_ = new java.util.ArrayList<java.lang.Long>(bucket_);
+        if (!((bitField0_ & 0x00000004) != 0)) {
+          bucket_ = mutableCopy(bucket_);
           bitField0_ |= 0x00000004;
          }
       }
@@ -3732,7 +3727,8 @@ public final class Filter {
        */
       public java.util.List<java.lang.Long>
           getBucketList() {
-        return java.util.Collections.unmodifiableList(bucket_);
+        return ((bitField0_ & 0x00000004) != 0) ?
+                 java.util.Collections.unmodifiableList(bucket_) : bucket_;
       }
       /**
        * <pre>
@@ -3752,7 +3748,7 @@ public final class Filter {
        * <code>repeated fixed64 bucket = 3;</code>
        */
       public long getBucket(int index) {
-        return bucket_.get(index);
+        return bucket_.getLong(index);
       }
       /**
        * <pre>
@@ -3764,7 +3760,7 @@ public final class Filter {
       public Builder setBucket(
           int index, long value) {
         ensureBucketIsMutable();
-        bucket_.set(index, value);
+        bucket_.setLong(index, value);
         onChanged();
         return this;
       }
@@ -3777,7 +3773,7 @@ public final class Filter {
        */
       public Builder addBucket(long value) {
         ensureBucketIsMutable();
-        bucket_.add(value);
+        bucket_.addLong(value);
         onChanged();
         return this;
       }
@@ -3804,16 +3800,16 @@ public final class Filter {
        * <code>repeated fixed64 bucket = 3;</code>
        */
       public Builder clearBucket() {
-        bucket_ = java.util.Collections.emptyList();
+        bucket_ = emptyLongList();
         bitField0_ = (bitField0_ & ~0x00000004);
         onChanged();
         return this;
       }
 
-      private java.util.List<java.lang.Long> timestamp_ = java.util.Collections.emptyList();
+      private com.google.protobuf.Internal.LongList timestamp_ = emptyLongList();
       private void ensureTimestampIsMutable() {
-        if (!((bitField0_ & 0x00000008) == 0x00000008)) {
-          timestamp_ = new java.util.ArrayList<java.lang.Long>(timestamp_);
+        if (!((bitField0_ & 0x00000008) != 0)) {
+          timestamp_ = mutableCopy(timestamp_);
           bitField0_ |= 0x00000008;
          }
       }
@@ -3826,7 +3822,8 @@ public final class Filter {
        */
       public java.util.List<java.lang.Long>
           getTimestampList() {
-        return java.util.Collections.unmodifiableList(timestamp_);
+        return ((bitField0_ & 0x00000008) != 0) ?
+                 java.util.Collections.unmodifiableList(timestamp_) : timestamp_;
       }
       /**
        * <pre>
@@ -3846,7 +3843,7 @@ public final class Filter {
        * <code>repeated uint64 timestamp = 4;</code>
        */
       public long getTimestamp(int index) {
-        return timestamp_.get(index);
+        return timestamp_.getLong(index);
       }
       /**
        * <pre>
@@ -3858,7 +3855,7 @@ public final class Filter {
       public Builder setTimestamp(
           int index, long value) {
         ensureTimestampIsMutable();
-        timestamp_.set(index, value);
+        timestamp_.setLong(index, value);
         onChanged();
         return this;
       }
@@ -3871,7 +3868,7 @@ public final class Filter {
        */
       public Builder addTimestamp(long value) {
         ensureTimestampIsMutable();
-        timestamp_.add(value);
+        timestamp_.addLong(value);
         onChanged();
         return this;
       }
@@ -3898,16 +3895,16 @@ public final class Filter {
        * <code>repeated uint64 timestamp = 4;</code>
        */
       public Builder clearTimestamp() {
-        timestamp_ = java.util.Collections.emptyList();
+        timestamp_ = emptyLongList();
         bitField0_ = (bitField0_ & ~0x00000008);
         onChanged();
         return this;
       }
 
-      private java.util.List<java.lang.Integer> insertions_ = java.util.Collections.emptyList();
+      private com.google.protobuf.Internal.IntList insertions_ = emptyIntList();
       private void ensureInsertionsIsMutable() {
-        if (!((bitField0_ & 0x00000010) == 0x00000010)) {
-          insertions_ = new java.util.ArrayList<java.lang.Integer>(insertions_);
+        if (!((bitField0_ & 0x00000010) != 0)) {
+          insertions_ = mutableCopy(insertions_);
           bitField0_ |= 0x00000010;
          }
       }
@@ -3920,7 +3917,8 @@ public final class Filter {
        */
       public java.util.List<java.lang.Integer>
           getInsertionsList() {
-        return java.util.Collections.unmodifiableList(insertions_);
+        return ((bitField0_ & 0x00000010) != 0) ?
+                 java.util.Collections.unmodifiableList(insertions_) : insertions_;
       }
       /**
        * <pre>
@@ -3940,7 +3938,7 @@ public final class Filter {
        * <code>repeated uint32 insertions = 5;</code>
        */
       public int getInsertions(int index) {
-        return insertions_.get(index);
+        return insertions_.getInt(index);
       }
       /**
        * <pre>
@@ -3952,7 +3950,7 @@ public final class Filter {
       public Builder setInsertions(
           int index, int value) {
         ensureInsertionsIsMutable();
-        insertions_.set(index, value);
+        insertions_.setInt(index, value);
         onChanged();
         return this;
       }
@@ -3965,7 +3963,7 @@ public final class Filter {
        */
       public Builder addInsertions(int value) {
         ensureInsertionsIsMutable();
-        insertions_.add(value);
+        insertions_.addInt(value);
         onChanged();
         return this;
       }
@@ -3992,7 +3990,7 @@ public final class Filter {
        * <code>repeated uint32 insertions = 5;</code>
        */
       public Builder clearInsertions() {
-        insertions_ = java.util.Collections.emptyList();
+        insertions_ = emptyIntList();
         bitField0_ = (bitField0_ & ~0x00000010);
         onChanged();
         return this;
@@ -4001,7 +3999,7 @@ public final class Filter {
       private java.util.List<io.bloombox.schema.analytics.stream.Filter.BloomFilter> membership_ =
         java.util.Collections.emptyList();
       private void ensureMembershipIsMutable() {
-        if (!((bitField0_ & 0x00000020) == 0x00000020)) {
+        if (!((bitField0_ & 0x00000020) != 0)) {
           membership_ = new java.util.ArrayList<io.bloombox.schema.analytics.stream.Filter.BloomFilter>(membership_);
           bitField0_ |= 0x00000020;
          }
@@ -4302,7 +4300,7 @@ public final class Filter {
           membershipBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
               io.bloombox.schema.analytics.stream.Filter.BloomFilter, io.bloombox.schema.analytics.stream.Filter.BloomFilter.Builder, io.bloombox.schema.analytics.stream.Filter.BloomFilterOrBuilder>(
                   membership_,
-                  ((bitField0_ & 0x00000020) == 0x00000020),
+                  ((bitField0_ & 0x00000020) != 0),
                   getParentForChildren(),
                   isClean());
           membership_ = null;
@@ -4312,7 +4310,7 @@ public final class Filter {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -4507,8 +4505,7 @@ public final class Filter {
     }
     private LayeredOITDBloomFilter() {
       filter_ = java.util.Collections.emptyList();
-      limit_ = 0;
-      insertions_ = java.util.Collections.emptyList();
+      insertions_ = emptyIntList();
       membership_ = java.util.Collections.emptyList();
     }
 
@@ -4537,7 +4534,7 @@ public final class Filter {
               done = true;
               break;
             case 10: {
-              if (!((mutable_bitField0_ & 0x00000001) == 0x00000001)) {
+              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
                 filter_ = new java.util.ArrayList<io.bloombox.schema.analytics.stream.Filter.OITDBloomFilter>();
                 mutable_bitField0_ |= 0x00000001;
               }
@@ -4551,28 +4548,28 @@ public final class Filter {
               break;
             }
             case 24: {
-              if (!((mutable_bitField0_ & 0x00000004) == 0x00000004)) {
-                insertions_ = new java.util.ArrayList<java.lang.Integer>();
+              if (!((mutable_bitField0_ & 0x00000004) != 0)) {
+                insertions_ = newIntList();
                 mutable_bitField0_ |= 0x00000004;
               }
-              insertions_.add(input.readUInt32());
+              insertions_.addInt(input.readUInt32());
               break;
             }
             case 26: {
               int length = input.readRawVarint32();
               int limit = input.pushLimit(length);
-              if (!((mutable_bitField0_ & 0x00000004) == 0x00000004) && input.getBytesUntilLimit() > 0) {
-                insertions_ = new java.util.ArrayList<java.lang.Integer>();
+              if (!((mutable_bitField0_ & 0x00000004) != 0) && input.getBytesUntilLimit() > 0) {
+                insertions_ = newIntList();
                 mutable_bitField0_ |= 0x00000004;
               }
               while (input.getBytesUntilLimit() > 0) {
-                insertions_.add(input.readUInt32());
+                insertions_.addInt(input.readUInt32());
               }
               input.popLimit(limit);
               break;
             }
             case 34: {
-              if (!((mutable_bitField0_ & 0x00000008) == 0x00000008)) {
+              if (!((mutable_bitField0_ & 0x00000008) != 0)) {
                 membership_ = new java.util.ArrayList<io.bloombox.schema.analytics.stream.Filter.BloomFilter>();
                 mutable_bitField0_ |= 0x00000008;
               }
@@ -4581,7 +4578,7 @@ public final class Filter {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -4595,13 +4592,13 @@ public final class Filter {
         throw new com.google.protobuf.InvalidProtocolBufferException(
             e).setUnfinishedMessage(this);
       } finally {
-        if (((mutable_bitField0_ & 0x00000001) == 0x00000001)) {
+        if (((mutable_bitField0_ & 0x00000001) != 0)) {
           filter_ = java.util.Collections.unmodifiableList(filter_);
         }
-        if (((mutable_bitField0_ & 0x00000004) == 0x00000004)) {
-          insertions_ = java.util.Collections.unmodifiableList(insertions_);
+        if (((mutable_bitField0_ & 0x00000004) != 0)) {
+          insertions_.makeImmutable(); // C
         }
-        if (((mutable_bitField0_ & 0x00000008) == 0x00000008)) {
+        if (((mutable_bitField0_ & 0x00000008) != 0)) {
           membership_ = java.util.Collections.unmodifiableList(membership_);
         }
         this.unknownFields = unknownFields.build();
@@ -4691,7 +4688,7 @@ public final class Filter {
     }
 
     public static final int INSERTIONS_FIELD_NUMBER = 3;
-    private java.util.List<java.lang.Integer> insertions_;
+    private com.google.protobuf.Internal.IntList insertions_;
     /**
      * <pre>
      * Specifies an insertions count, which tracks the number of items globally inserted into each layer.
@@ -4721,7 +4718,7 @@ public final class Filter {
      * <code>repeated uint32 insertions = 3;</code>
      */
     public int getInsertions(int index) {
-      return insertions_.get(index);
+      return insertions_.getInt(index);
     }
     private int insertionsMemoizedSerializedSize = -1;
 
@@ -4806,7 +4803,7 @@ public final class Filter {
         output.writeUInt32NoTag(insertionsMemoizedSerializedSize);
       }
       for (int i = 0; i < insertions_.size(); i++) {
-        output.writeUInt32NoTag(insertions_.get(i));
+        output.writeUInt32NoTag(insertions_.getInt(i));
       }
       for (int i = 0; i < membership_.size(); i++) {
         output.writeMessage(4, membership_.get(i));
@@ -4832,7 +4829,7 @@ public final class Filter {
         int dataSize = 0;
         for (int i = 0; i < insertions_.size(); i++) {
           dataSize += com.google.protobuf.CodedOutputStream
-            .computeUInt32SizeNoTag(insertions_.get(i));
+            .computeUInt32SizeNoTag(insertions_.getInt(i));
         }
         size += dataSize;
         if (!getInsertionsList().isEmpty()) {
@@ -4861,17 +4858,16 @@ public final class Filter {
       }
       io.bloombox.schema.analytics.stream.Filter.LayeredOITDBloomFilter other = (io.bloombox.schema.analytics.stream.Filter.LayeredOITDBloomFilter) obj;
 
-      boolean result = true;
-      result = result && getFilterList()
-          .equals(other.getFilterList());
-      result = result && (getLimit()
-          == other.getLimit());
-      result = result && getInsertionsList()
-          .equals(other.getInsertionsList());
-      result = result && getMembershipList()
-          .equals(other.getMembershipList());
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!getFilterList()
+          .equals(other.getFilterList())) return false;
+      if (getLimit()
+          != other.getLimit()) return false;
+      if (!getInsertionsList()
+          .equals(other.getInsertionsList())) return false;
+      if (!getMembershipList()
+          .equals(other.getMembershipList())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -5043,7 +5039,7 @@ public final class Filter {
         }
         limit_ = 0;
 
-        insertions_ = java.util.Collections.emptyList();
+        insertions_ = emptyIntList();
         bitField0_ = (bitField0_ & ~0x00000004);
         if (membershipBuilder_ == null) {
           membership_ = java.util.Collections.emptyList();
@@ -5080,7 +5076,7 @@ public final class Filter {
         int from_bitField0_ = bitField0_;
         int to_bitField0_ = 0;
         if (filterBuilder_ == null) {
-          if (((bitField0_ & 0x00000001) == 0x00000001)) {
+          if (((bitField0_ & 0x00000001) != 0)) {
             filter_ = java.util.Collections.unmodifiableList(filter_);
             bitField0_ = (bitField0_ & ~0x00000001);
           }
@@ -5089,13 +5085,13 @@ public final class Filter {
           result.filter_ = filterBuilder_.build();
         }
         result.limit_ = limit_;
-        if (((bitField0_ & 0x00000004) == 0x00000004)) {
-          insertions_ = java.util.Collections.unmodifiableList(insertions_);
+        if (((bitField0_ & 0x00000004) != 0)) {
+          insertions_.makeImmutable();
           bitField0_ = (bitField0_ & ~0x00000004);
         }
         result.insertions_ = insertions_;
         if (membershipBuilder_ == null) {
-          if (((bitField0_ & 0x00000008) == 0x00000008)) {
+          if (((bitField0_ & 0x00000008) != 0)) {
             membership_ = java.util.Collections.unmodifiableList(membership_);
             bitField0_ = (bitField0_ & ~0x00000008);
           }
@@ -5110,35 +5106,35 @@ public final class Filter {
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -5250,7 +5246,7 @@ public final class Filter {
       private java.util.List<io.bloombox.schema.analytics.stream.Filter.OITDBloomFilter> filter_ =
         java.util.Collections.emptyList();
       private void ensureFilterIsMutable() {
-        if (!((bitField0_ & 0x00000001) == 0x00000001)) {
+        if (!((bitField0_ & 0x00000001) != 0)) {
           filter_ = new java.util.ArrayList<io.bloombox.schema.analytics.stream.Filter.OITDBloomFilter>(filter_);
           bitField0_ |= 0x00000001;
          }
@@ -5551,7 +5547,7 @@ public final class Filter {
           filterBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
               io.bloombox.schema.analytics.stream.Filter.OITDBloomFilter, io.bloombox.schema.analytics.stream.Filter.OITDBloomFilter.Builder, io.bloombox.schema.analytics.stream.Filter.OITDBloomFilterOrBuilder>(
                   filter_,
-                  ((bitField0_ & 0x00000001) == 0x00000001),
+                  ((bitField0_ & 0x00000001) != 0),
                   getParentForChildren(),
                   isClean());
           filter_ = null;
@@ -5597,10 +5593,10 @@ public final class Filter {
         return this;
       }
 
-      private java.util.List<java.lang.Integer> insertions_ = java.util.Collections.emptyList();
+      private com.google.protobuf.Internal.IntList insertions_ = emptyIntList();
       private void ensureInsertionsIsMutable() {
-        if (!((bitField0_ & 0x00000004) == 0x00000004)) {
-          insertions_ = new java.util.ArrayList<java.lang.Integer>(insertions_);
+        if (!((bitField0_ & 0x00000004) != 0)) {
+          insertions_ = mutableCopy(insertions_);
           bitField0_ |= 0x00000004;
          }
       }
@@ -5613,7 +5609,8 @@ public final class Filter {
        */
       public java.util.List<java.lang.Integer>
           getInsertionsList() {
-        return java.util.Collections.unmodifiableList(insertions_);
+        return ((bitField0_ & 0x00000004) != 0) ?
+                 java.util.Collections.unmodifiableList(insertions_) : insertions_;
       }
       /**
        * <pre>
@@ -5633,7 +5630,7 @@ public final class Filter {
        * <code>repeated uint32 insertions = 3;</code>
        */
       public int getInsertions(int index) {
-        return insertions_.get(index);
+        return insertions_.getInt(index);
       }
       /**
        * <pre>
@@ -5645,7 +5642,7 @@ public final class Filter {
       public Builder setInsertions(
           int index, int value) {
         ensureInsertionsIsMutable();
-        insertions_.set(index, value);
+        insertions_.setInt(index, value);
         onChanged();
         return this;
       }
@@ -5658,7 +5655,7 @@ public final class Filter {
        */
       public Builder addInsertions(int value) {
         ensureInsertionsIsMutable();
-        insertions_.add(value);
+        insertions_.addInt(value);
         onChanged();
         return this;
       }
@@ -5685,7 +5682,7 @@ public final class Filter {
        * <code>repeated uint32 insertions = 3;</code>
        */
       public Builder clearInsertions() {
-        insertions_ = java.util.Collections.emptyList();
+        insertions_ = emptyIntList();
         bitField0_ = (bitField0_ & ~0x00000004);
         onChanged();
         return this;
@@ -5694,7 +5691,7 @@ public final class Filter {
       private java.util.List<io.bloombox.schema.analytics.stream.Filter.BloomFilter> membership_ =
         java.util.Collections.emptyList();
       private void ensureMembershipIsMutable() {
-        if (!((bitField0_ & 0x00000008) == 0x00000008)) {
+        if (!((bitField0_ & 0x00000008) != 0)) {
           membership_ = new java.util.ArrayList<io.bloombox.schema.analytics.stream.Filter.BloomFilter>(membership_);
           bitField0_ |= 0x00000008;
          }
@@ -5995,7 +5992,7 @@ public final class Filter {
           membershipBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
               io.bloombox.schema.analytics.stream.Filter.BloomFilter, io.bloombox.schema.analytics.stream.Filter.BloomFilter.Builder, io.bloombox.schema.analytics.stream.Filter.BloomFilterOrBuilder>(
                   membership_,
-                  ((bitField0_ & 0x00000008) == 0x00000008),
+                  ((bitField0_ & 0x00000008) != 0),
                   getParentForChildren(),
                   isClean());
           membership_ = null;
@@ -6005,7 +6002,7 @@ public final class Filter {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override

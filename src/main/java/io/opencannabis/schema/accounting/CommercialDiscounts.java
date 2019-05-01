@@ -1,12 +1,11 @@
 /*
- * Copyright 2018, Momentum Ideas, Co. All rights reserved.
+ * Copyright 2019, Momentum Ideas Co.
  *
- * Source and object computer code contained herein is the private intellectual
- * property of Momentum Ideas Co., a Delaware Corporation. Use of this
- * code in source form requires permission in writing before use or the
- * assembly, distribution, or publishing of derivative works, for commercial
- * purposes or any other purpose, from a duly authorized officer of Momentum
- * Ideas Co.
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *  http://www.apache.org/licenses/LICENSE-2.0
  *
  * Unless required by applicable law or agreed to in writing, software
  * distributed under the License is distributed on an "AS IS" BASIS,
@@ -427,7 +426,7 @@ public final class CommercialDiscounts {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -646,30 +645,25 @@ public final class CommercialDiscounts {
       }
       io.opencannabis.schema.accounting.CommercialDiscounts.DiscountSpec other = (io.opencannabis.schema.accounting.CommercialDiscounts.DiscountSpec) obj;
 
-      boolean result = true;
-      result = result && type_ == other.type_;
-      result = result && basis_ == other.basis_;
-      result = result && getRateCase().equals(
-          other.getRateCase());
-      if (!result) return false;
+      if (type_ != other.type_) return false;
+      if (basis_ != other.basis_) return false;
+      if (!getRateCase().equals(other.getRateCase())) return false;
       switch (rateCase_) {
         case 3:
-          result = result && (
-              java.lang.Double.doubleToLongBits(getPercentage())
-              == java.lang.Double.doubleToLongBits(
-                  other.getPercentage()));
+          if (java.lang.Double.doubleToLongBits(getPercentage())
+              != java.lang.Double.doubleToLongBits(
+                  other.getPercentage())) return false;
           break;
         case 4:
-          result = result && (
-              java.lang.Double.doubleToLongBits(getStaticValue())
-              == java.lang.Double.doubleToLongBits(
-                  other.getStaticValue()));
+          if (java.lang.Double.doubleToLongBits(getStaticValue())
+              != java.lang.Double.doubleToLongBits(
+                  other.getStaticValue())) return false;
           break;
         case 0:
         default:
       }
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -881,35 +875,35 @@ public final class CommercialDiscounts {
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -1202,7 +1196,7 @@ public final class CommercialDiscounts {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -1516,7 +1510,7 @@ public final class CommercialDiscounts {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -1899,32 +1893,31 @@ public final class CommercialDiscounts {
       }
       io.opencannabis.schema.accounting.CommercialDiscounts.Discount other = (io.opencannabis.schema.accounting.CommercialDiscounts.Discount) obj;
 
-      boolean result = true;
-      result = result && getId()
-          .equals(other.getId());
-      result = result && (hasSpec() == other.hasSpec());
+      if (!getId()
+          .equals(other.getId())) return false;
+      if (hasSpec() != other.hasSpec()) return false;
       if (hasSpec()) {
-        result = result && getSpec()
-            .equals(other.getSpec());
+        if (!getSpec()
+            .equals(other.getSpec())) return false;
       }
-      result = result && getName()
-          .equals(other.getName());
-      result = result && getLabel()
-          .equals(other.getLabel());
-      result = result && getDescription()
-          .equals(other.getDescription());
-      result = result && (hasModifiedAt() == other.hasModifiedAt());
+      if (!getName()
+          .equals(other.getName())) return false;
+      if (!getLabel()
+          .equals(other.getLabel())) return false;
+      if (!getDescription()
+          .equals(other.getDescription())) return false;
+      if (hasModifiedAt() != other.hasModifiedAt()) return false;
       if (hasModifiedAt()) {
-        result = result && getModifiedAt()
-            .equals(other.getModifiedAt());
+        if (!getModifiedAt()
+            .equals(other.getModifiedAt())) return false;
       }
-      result = result && (hasCreatedAt() == other.hasCreatedAt());
+      if (hasCreatedAt() != other.hasCreatedAt()) return false;
       if (hasCreatedAt()) {
-        result = result && getCreatedAt()
-            .equals(other.getCreatedAt());
+        if (!getCreatedAt()
+            .equals(other.getCreatedAt())) return false;
       }
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -2168,35 +2161,35 @@ public final class CommercialDiscounts {
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -2353,7 +2346,7 @@ public final class CommercialDiscounts {
         return this;
       }
 
-      private io.opencannabis.schema.accounting.CommercialDiscounts.DiscountSpec spec_ = null;
+      private io.opencannabis.schema.accounting.CommercialDiscounts.DiscountSpec spec_;
       private com.google.protobuf.SingleFieldBuilderV3<
           io.opencannabis.schema.accounting.CommercialDiscounts.DiscountSpec, io.opencannabis.schema.accounting.CommercialDiscounts.DiscountSpec.Builder, io.opencannabis.schema.accounting.CommercialDiscounts.DiscountSpecOrBuilder> specBuilder_;
       /**
@@ -2778,7 +2771,7 @@ public final class CommercialDiscounts {
         return this;
       }
 
-      private io.opencannabis.schema.temporal.TemporalInstant.Instant modifiedAt_ = null;
+      private io.opencannabis.schema.temporal.TemporalInstant.Instant modifiedAt_;
       private com.google.protobuf.SingleFieldBuilderV3<
           io.opencannabis.schema.temporal.TemporalInstant.Instant, io.opencannabis.schema.temporal.TemporalInstant.Instant.Builder, io.opencannabis.schema.temporal.TemporalInstant.InstantOrBuilder> modifiedAtBuilder_;
       /**
@@ -2931,7 +2924,7 @@ public final class CommercialDiscounts {
         return modifiedAtBuilder_;
       }
 
-      private io.opencannabis.schema.temporal.TemporalInstant.Instant createdAt_ = null;
+      private io.opencannabis.schema.temporal.TemporalInstant.Instant createdAt_;
       private com.google.protobuf.SingleFieldBuilderV3<
           io.opencannabis.schema.temporal.TemporalInstant.Instant, io.opencannabis.schema.temporal.TemporalInstant.Instant.Builder, io.opencannabis.schema.temporal.TemporalInstant.InstantOrBuilder> createdAtBuilder_;
       /**
@@ -3086,7 +3079,7 @@ public final class CommercialDiscounts {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override

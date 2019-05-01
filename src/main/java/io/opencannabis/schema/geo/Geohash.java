@@ -1,12 +1,11 @@
 /*
- * Copyright 2018, Momentum Ideas, Co. All rights reserved.
+ * Copyright 2019, Momentum Ideas Co.
  *
- * Source and object computer code contained herein is the private intellectual
- * property of Momentum Ideas Co., a Delaware Corporation. Use of this
- * code in source form requires permission in writing before use or the
- * assembly, distribution, or publishing of derivative works, for commercial
- * purposes or any other purpose, from a duly authorized officer of Momentum
- * Ideas Co.
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *  http://www.apache.org/licenses/LICENSE-2.0
  *
  * Unless required by applicable law or agreed to in writing, software
  * distributed under the License is distributed on an "AS IS" BASIS,
@@ -67,7 +66,7 @@ private static final long serialVersionUID = 0L;
             break;
           case 10: {
             java.lang.String s = input.readStringRequireUtf8();
-            if (!((mutable_bitField0_ & 0x00000001) == 0x00000001)) {
+            if (!((mutable_bitField0_ & 0x00000001) != 0)) {
               component_ = new com.google.protobuf.LazyStringArrayList();
               mutable_bitField0_ |= 0x00000001;
             }
@@ -101,7 +100,7 @@ private static final long serialVersionUID = 0L;
             break;
           }
           default: {
-            if (!parseUnknownFieldProto3(
+            if (!parseUnknownField(
                 input, unknownFields, extensionRegistry, tag)) {
               done = true;
             }
@@ -115,7 +114,7 @@ private static final long serialVersionUID = 0L;
       throw new com.google.protobuf.InvalidProtocolBufferException(
           e).setUnfinishedMessage(this);
     } finally {
-      if (((mutable_bitField0_ & 0x00000001) == 0x00000001)) {
+      if (((mutable_bitField0_ & 0x00000001) != 0)) {
         component_ = component_.getUnmodifiableView();
       }
       this.unknownFields = unknownFields.build();
@@ -310,21 +309,20 @@ private static final long serialVersionUID = 0L;
     }
     io.opencannabis.schema.geo.Geohash other = (io.opencannabis.schema.geo.Geohash) obj;
 
-    boolean result = true;
-    result = result && getComponentList()
-        .equals(other.getComponentList());
-    result = result && (hasElevation() == other.hasElevation());
+    if (!getComponentList()
+        .equals(other.getComponentList())) return false;
+    if (hasElevation() != other.hasElevation()) return false;
     if (hasElevation()) {
-      result = result && getElevation()
-          .equals(other.getElevation());
+      if (!getElevation()
+          .equals(other.getElevation())) return false;
     }
-    result = result && (hasAccuracy() == other.hasAccuracy());
+    if (hasAccuracy() != other.hasAccuracy()) return false;
     if (hasAccuracy()) {
-      result = result && getAccuracy()
-          .equals(other.getAccuracy());
+      if (!getAccuracy()
+          .equals(other.getAccuracy())) return false;
     }
-    result = result && unknownFields.equals(other.unknownFields);
-    return result;
+    if (!unknownFields.equals(other.unknownFields)) return false;
+    return true;
   }
 
   @java.lang.Override
@@ -526,7 +524,7 @@ private static final long serialVersionUID = 0L;
       io.opencannabis.schema.geo.Geohash result = new io.opencannabis.schema.geo.Geohash(this);
       int from_bitField0_ = bitField0_;
       int to_bitField0_ = 0;
-      if (((bitField0_ & 0x00000001) == 0x00000001)) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         component_ = component_.getUnmodifiableView();
         bitField0_ = (bitField0_ & ~0x00000001);
       }
@@ -548,35 +546,35 @@ private static final long serialVersionUID = 0L;
 
     @java.lang.Override
     public Builder clone() {
-      return (Builder) super.clone();
+      return super.clone();
     }
     @java.lang.Override
     public Builder setField(
         com.google.protobuf.Descriptors.FieldDescriptor field,
         java.lang.Object value) {
-      return (Builder) super.setField(field, value);
+      return super.setField(field, value);
     }
     @java.lang.Override
     public Builder clearField(
         com.google.protobuf.Descriptors.FieldDescriptor field) {
-      return (Builder) super.clearField(field);
+      return super.clearField(field);
     }
     @java.lang.Override
     public Builder clearOneof(
         com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-      return (Builder) super.clearOneof(oneof);
+      return super.clearOneof(oneof);
     }
     @java.lang.Override
     public Builder setRepeatedField(
         com.google.protobuf.Descriptors.FieldDescriptor field,
         int index, java.lang.Object value) {
-      return (Builder) super.setRepeatedField(field, index, value);
+      return super.setRepeatedField(field, index, value);
     }
     @java.lang.Override
     public Builder addRepeatedField(
         com.google.protobuf.Descriptors.FieldDescriptor field,
         java.lang.Object value) {
-      return (Builder) super.addRepeatedField(field, value);
+      return super.addRepeatedField(field, value);
     }
     @java.lang.Override
     public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -638,7 +636,7 @@ private static final long serialVersionUID = 0L;
 
     private com.google.protobuf.LazyStringList component_ = com.google.protobuf.LazyStringArrayList.EMPTY;
     private void ensureComponentIsMutable() {
-      if (!((bitField0_ & 0x00000001) == 0x00000001)) {
+      if (!((bitField0_ & 0x00000001) != 0)) {
         component_ = new com.google.protobuf.LazyStringArrayList(component_);
         bitField0_ |= 0x00000001;
        }
@@ -766,7 +764,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
 
-    private io.opencannabis.schema.geo.Distance elevation_ = null;
+    private io.opencannabis.schema.geo.Distance elevation_;
     private com.google.protobuf.SingleFieldBuilderV3<
         io.opencannabis.schema.geo.Distance, io.opencannabis.schema.geo.Distance.Builder, io.opencannabis.schema.geo.DistanceOrBuilder> elevationBuilder_;
     /**
@@ -919,7 +917,7 @@ private static final long serialVersionUID = 0L;
       return elevationBuilder_;
     }
 
-    private io.opencannabis.schema.geo.Distance accuracy_ = null;
+    private io.opencannabis.schema.geo.Distance accuracy_;
     private com.google.protobuf.SingleFieldBuilderV3<
         io.opencannabis.schema.geo.Distance, io.opencannabis.schema.geo.Distance.Builder, io.opencannabis.schema.geo.DistanceOrBuilder> accuracyBuilder_;
     /**
@@ -1074,7 +1072,7 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public final Builder setUnknownFields(
         final com.google.protobuf.UnknownFieldSet unknownFields) {
-      return super.setUnknownFieldsProto3(unknownFields);
+      return super.setUnknownFields(unknownFields);
     }
 
     @java.lang.Override

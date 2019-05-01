@@ -1,5 +1,5 @@
 /*
- * Copyright 2018, Momentum Ideas, Co. All rights reserved.
+ * Copyright 2019, Momentum Ideas, Co. All rights reserved.
  *
  * Source and object computer code contained herein is the private intellectual
  * property of Momentum Ideas Co., a Delaware Corporation. Use of this
@@ -64,7 +64,7 @@ private static final long serialVersionUID = 0L;
             done = true;
             break;
           default: {
-            if (!parseUnknownFieldProto3(
+            if (!parseUnknownField(
                 input, unknownFields, extensionRegistry, tag)) {
               done = true;
             }
@@ -181,7 +181,7 @@ private static final long serialVersionUID = 0L;
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -290,14 +290,13 @@ private static final long serialVersionUID = 0L;
       }
       io.bloombox.schema.services.ledger.v1beta1.AccountHistory.Request other = (io.bloombox.schema.services.ledger.v1beta1.AccountHistory.Request) obj;
 
-      boolean result = true;
-      result = result && (hasAccount() == other.hasAccount());
+      if (hasAccount() != other.hasAccount()) return false;
       if (hasAccount()) {
-        result = result && getAccount()
-            .equals(other.getAccount());
+        if (!getAccount()
+            .equals(other.getAccount())) return false;
       }
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -491,35 +490,35 @@ private static final long serialVersionUID = 0L;
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -565,7 +564,7 @@ private static final long serialVersionUID = 0L;
         return this;
       }
 
-      private io.bloombox.schema.ledger.Accounts.LedgerIdentity account_ = null;
+      private io.bloombox.schema.ledger.Accounts.LedgerIdentity account_;
       private com.google.protobuf.SingleFieldBuilderV3<
           io.bloombox.schema.ledger.Accounts.LedgerIdentity, io.bloombox.schema.ledger.Accounts.LedgerIdentity.Builder, io.bloombox.schema.ledger.Accounts.LedgerIdentityOrBuilder> accountBuilder_;
       /**
@@ -720,7 +719,7 @@ private static final long serialVersionUID = 0L;
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -863,7 +862,7 @@ private static final long serialVersionUID = 0L;
               done = true;
               break;
             case 10: {
-              if (!((mutable_bitField0_ & 0x00000001) == 0x00000001)) {
+              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
                 txn_ = new java.util.ArrayList<io.bloombox.schema.ledger.Transactions.TransactionKey>();
                 mutable_bitField0_ |= 0x00000001;
               }
@@ -872,7 +871,7 @@ private static final long serialVersionUID = 0L;
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -886,7 +885,7 @@ private static final long serialVersionUID = 0L;
         throw new com.google.protobuf.InvalidProtocolBufferException(
             e).setUnfinishedMessage(this);
       } finally {
-        if (((mutable_bitField0_ & 0x00000001) == 0x00000001)) {
+        if (((mutable_bitField0_ & 0x00000001) != 0)) {
           txn_ = java.util.Collections.unmodifiableList(txn_);
         }
         this.unknownFields = unknownFields.build();
@@ -1006,11 +1005,10 @@ private static final long serialVersionUID = 0L;
       }
       io.bloombox.schema.services.ledger.v1beta1.AccountHistory.Response other = (io.bloombox.schema.services.ledger.v1beta1.AccountHistory.Response) obj;
 
-      boolean result = true;
-      result = result && getTxnList()
-          .equals(other.getTxnList());
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!getTxnList()
+          .equals(other.getTxnList())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -1196,7 +1194,7 @@ private static final long serialVersionUID = 0L;
         io.bloombox.schema.services.ledger.v1beta1.AccountHistory.Response result = new io.bloombox.schema.services.ledger.v1beta1.AccountHistory.Response(this);
         int from_bitField0_ = bitField0_;
         if (txnBuilder_ == null) {
-          if (((bitField0_ & 0x00000001) == 0x00000001)) {
+          if (((bitField0_ & 0x00000001) != 0)) {
             txn_ = java.util.Collections.unmodifiableList(txn_);
             bitField0_ = (bitField0_ & ~0x00000001);
           }
@@ -1210,35 +1208,35 @@ private static final long serialVersionUID = 0L;
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -1311,7 +1309,7 @@ private static final long serialVersionUID = 0L;
       private java.util.List<io.bloombox.schema.ledger.Transactions.TransactionKey> txn_ =
         java.util.Collections.emptyList();
       private void ensureTxnIsMutable() {
-        if (!((bitField0_ & 0x00000001) == 0x00000001)) {
+        if (!((bitField0_ & 0x00000001) != 0)) {
           txn_ = new java.util.ArrayList<io.bloombox.schema.ledger.Transactions.TransactionKey>(txn_);
           bitField0_ |= 0x00000001;
          }
@@ -1612,7 +1610,7 @@ private static final long serialVersionUID = 0L;
           txnBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
               io.bloombox.schema.ledger.Transactions.TransactionKey, io.bloombox.schema.ledger.Transactions.TransactionKey.Builder, io.bloombox.schema.ledger.Transactions.TransactionKeyOrBuilder>(
                   txn_,
-                  ((bitField0_ & 0x00000001) == 0x00000001),
+                  ((bitField0_ & 0x00000001) != 0),
                   getParentForChildren(),
                   isClean());
           txn_ = null;
@@ -1622,7 +1620,7 @@ private static final long serialVersionUID = 0L;
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -1796,7 +1794,7 @@ private static final long serialVersionUID = 0L;
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -1945,19 +1943,18 @@ private static final long serialVersionUID = 0L;
       }
       io.bloombox.schema.services.ledger.v1beta1.AccountHistory.Operation other = (io.bloombox.schema.services.ledger.v1beta1.AccountHistory.Operation) obj;
 
-      boolean result = true;
-      result = result && (hasRequest() == other.hasRequest());
+      if (hasRequest() != other.hasRequest()) return false;
       if (hasRequest()) {
-        result = result && getRequest()
-            .equals(other.getRequest());
+        if (!getRequest()
+            .equals(other.getRequest())) return false;
       }
-      result = result && (hasResponse() == other.hasResponse());
+      if (hasResponse() != other.hasResponse()) return false;
       if (hasResponse()) {
-        result = result && getResponse()
-            .equals(other.getResponse());
+        if (!getResponse()
+            .equals(other.getResponse())) return false;
       }
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -2166,35 +2163,35 @@ private static final long serialVersionUID = 0L;
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -2243,7 +2240,7 @@ private static final long serialVersionUID = 0L;
         return this;
       }
 
-      private io.bloombox.schema.services.ledger.v1beta1.AccountHistory.Request request_ = null;
+      private io.bloombox.schema.services.ledger.v1beta1.AccountHistory.Request request_;
       private com.google.protobuf.SingleFieldBuilderV3<
           io.bloombox.schema.services.ledger.v1beta1.AccountHistory.Request, io.bloombox.schema.services.ledger.v1beta1.AccountHistory.Request.Builder, io.bloombox.schema.services.ledger.v1beta1.AccountHistory.RequestOrBuilder> requestBuilder_;
       /**
@@ -2396,7 +2393,7 @@ private static final long serialVersionUID = 0L;
         return requestBuilder_;
       }
 
-      private io.bloombox.schema.services.ledger.v1beta1.AccountHistory.Response response_ = null;
+      private io.bloombox.schema.services.ledger.v1beta1.AccountHistory.Response response_;
       private com.google.protobuf.SingleFieldBuilderV3<
           io.bloombox.schema.services.ledger.v1beta1.AccountHistory.Response, io.bloombox.schema.services.ledger.v1beta1.AccountHistory.Response.Builder, io.bloombox.schema.services.ledger.v1beta1.AccountHistory.ResponseOrBuilder> responseBuilder_;
       /**
@@ -2551,7 +2548,7 @@ private static final long serialVersionUID = 0L;
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -2639,9 +2636,8 @@ private static final long serialVersionUID = 0L;
     }
     io.bloombox.schema.services.ledger.v1beta1.AccountHistory other = (io.bloombox.schema.services.ledger.v1beta1.AccountHistory) obj;
 
-    boolean result = true;
-    result = result && unknownFields.equals(other.unknownFields);
-    return result;
+    if (!unknownFields.equals(other.unknownFields)) return false;
+    return true;
   }
 
   @java.lang.Override
@@ -2821,35 +2817,35 @@ private static final long serialVersionUID = 0L;
 
     @java.lang.Override
     public Builder clone() {
-      return (Builder) super.clone();
+      return super.clone();
     }
     @java.lang.Override
     public Builder setField(
         com.google.protobuf.Descriptors.FieldDescriptor field,
         java.lang.Object value) {
-      return (Builder) super.setField(field, value);
+      return super.setField(field, value);
     }
     @java.lang.Override
     public Builder clearField(
         com.google.protobuf.Descriptors.FieldDescriptor field) {
-      return (Builder) super.clearField(field);
+      return super.clearField(field);
     }
     @java.lang.Override
     public Builder clearOneof(
         com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-      return (Builder) super.clearOneof(oneof);
+      return super.clearOneof(oneof);
     }
     @java.lang.Override
     public Builder setRepeatedField(
         com.google.protobuf.Descriptors.FieldDescriptor field,
         int index, java.lang.Object value) {
-      return (Builder) super.setRepeatedField(field, index, value);
+      return super.setRepeatedField(field, index, value);
     }
     @java.lang.Override
     public Builder addRepeatedField(
         com.google.protobuf.Descriptors.FieldDescriptor field,
         java.lang.Object value) {
-      return (Builder) super.addRepeatedField(field, value);
+      return super.addRepeatedField(field, value);
     }
     @java.lang.Override
     public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -2894,7 +2890,7 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public final Builder setUnknownFields(
         final com.google.protobuf.UnknownFieldSet unknownFields) {
-      return super.setUnknownFieldsProto3(unknownFields);
+      return super.setUnknownFields(unknownFields);
     }
 
     @java.lang.Override

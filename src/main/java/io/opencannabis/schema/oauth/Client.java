@@ -1,12 +1,11 @@
 /*
- * Copyright 2018, Momentum Ideas, Co. All rights reserved.
+ * Copyright 2019, Momentum Ideas Co.
  *
- * Source and object computer code contained herein is the private intellectual
- * property of Momentum Ideas Co., a Delaware Corporation. Use of this
- * code in source form requires permission in writing before use or the
- * assembly, distribution, or publishing of derivative works, for commercial
- * purposes or any other purpose, from a duly authorized officer of Momentum
- * Ideas Co.
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *  http://www.apache.org/licenses/LICENSE-2.0
  *
  * Unless required by applicable law or agreed to in writing, software
  * distributed under the License is distributed on an "AS IS" BASIS,
@@ -43,7 +42,6 @@ private static final long serialVersionUID = 0L;
     contact_ = com.google.protobuf.LazyStringArrayList.EMPTY;
     grantTypes_ = java.util.Collections.emptyList();
     owner_ = "";
-    public_ = false;
     redirectUri_ = com.google.protobuf.LazyStringArrayList.EMPTY;
     responseType_ = java.util.Collections.emptyList();
     scope_ = java.util.Collections.emptyList();
@@ -93,7 +91,7 @@ private static final long serialVersionUID = 0L;
           }
           case 34: {
             java.lang.String s = input.readStringRequireUtf8();
-            if (!((mutable_bitField0_ & 0x00000008) == 0x00000008)) {
+            if (!((mutable_bitField0_ & 0x00000008) != 0)) {
               contact_ = new com.google.protobuf.LazyStringArrayList();
               mutable_bitField0_ |= 0x00000008;
             }
@@ -102,7 +100,7 @@ private static final long serialVersionUID = 0L;
           }
           case 40: {
             int rawValue = input.readEnum();
-            if (!((mutable_bitField0_ & 0x00000010) == 0x00000010)) {
+            if (!((mutable_bitField0_ & 0x00000010) != 0)) {
               grantTypes_ = new java.util.ArrayList<java.lang.Integer>();
               mutable_bitField0_ |= 0x00000010;
             }
@@ -114,7 +112,7 @@ private static final long serialVersionUID = 0L;
             int oldLimit = input.pushLimit(length);
             while(input.getBytesUntilLimit() > 0) {
               int rawValue = input.readEnum();
-              if (!((mutable_bitField0_ & 0x00000010) == 0x00000010)) {
+              if (!((mutable_bitField0_ & 0x00000010) != 0)) {
                 grantTypes_ = new java.util.ArrayList<java.lang.Integer>();
                 mutable_bitField0_ |= 0x00000010;
               }
@@ -175,7 +173,7 @@ private static final long serialVersionUID = 0L;
           }
           case 90: {
             java.lang.String s = input.readStringRequireUtf8();
-            if (!((mutable_bitField0_ & 0x00000400) == 0x00000400)) {
+            if (!((mutable_bitField0_ & 0x00000400) != 0)) {
               redirectUri_ = new com.google.protobuf.LazyStringArrayList();
               mutable_bitField0_ |= 0x00000400;
             }
@@ -184,7 +182,7 @@ private static final long serialVersionUID = 0L;
           }
           case 96: {
             int rawValue = input.readEnum();
-            if (!((mutable_bitField0_ & 0x00000800) == 0x00000800)) {
+            if (!((mutable_bitField0_ & 0x00000800) != 0)) {
               responseType_ = new java.util.ArrayList<java.lang.Integer>();
               mutable_bitField0_ |= 0x00000800;
             }
@@ -196,7 +194,7 @@ private static final long serialVersionUID = 0L;
             int oldLimit = input.pushLimit(length);
             while(input.getBytesUntilLimit() > 0) {
               int rawValue = input.readEnum();
-              if (!((mutable_bitField0_ & 0x00000800) == 0x00000800)) {
+              if (!((mutable_bitField0_ & 0x00000800) != 0)) {
                 responseType_ = new java.util.ArrayList<java.lang.Integer>();
                 mutable_bitField0_ |= 0x00000800;
               }
@@ -206,7 +204,7 @@ private static final long serialVersionUID = 0L;
             break;
           }
           case 106: {
-            if (!((mutable_bitField0_ & 0x00001000) == 0x00001000)) {
+            if (!((mutable_bitField0_ & 0x00001000) != 0)) {
               scope_ = new java.util.ArrayList<io.opencannabis.schema.oauth.AuthorizationScope>();
               mutable_bitField0_ |= 0x00001000;
             }
@@ -215,7 +213,7 @@ private static final long serialVersionUID = 0L;
             break;
           }
           default: {
-            if (!parseUnknownFieldProto3(
+            if (!parseUnknownField(
                 input, unknownFields, extensionRegistry, tag)) {
               done = true;
             }
@@ -229,19 +227,19 @@ private static final long serialVersionUID = 0L;
       throw new com.google.protobuf.InvalidProtocolBufferException(
           e).setUnfinishedMessage(this);
     } finally {
-      if (((mutable_bitField0_ & 0x00000008) == 0x00000008)) {
+      if (((mutable_bitField0_ & 0x00000008) != 0)) {
         contact_ = contact_.getUnmodifiableView();
       }
-      if (((mutable_bitField0_ & 0x00000010) == 0x00000010)) {
+      if (((mutable_bitField0_ & 0x00000010) != 0)) {
         grantTypes_ = java.util.Collections.unmodifiableList(grantTypes_);
       }
-      if (((mutable_bitField0_ & 0x00000400) == 0x00000400)) {
+      if (((mutable_bitField0_ & 0x00000400) != 0)) {
         redirectUri_ = redirectUri_.getUnmodifiableView();
       }
-      if (((mutable_bitField0_ & 0x00000800) == 0x00000800)) {
+      if (((mutable_bitField0_ & 0x00000800) != 0)) {
         responseType_ = java.util.Collections.unmodifiableList(responseType_);
       }
-      if (((mutable_bitField0_ & 0x00001000) == 0x00001000)) {
+      if (((mutable_bitField0_ & 0x00001000) != 0)) {
         scope_ = java.util.Collections.unmodifiableList(scope_);
       }
       this.unknownFields = unknownFields.build();
@@ -977,42 +975,41 @@ private static final long serialVersionUID = 0L;
     }
     io.opencannabis.schema.oauth.Client other = (io.opencannabis.schema.oauth.Client) obj;
 
-    boolean result = true;
-    result = result && getId()
-        .equals(other.getId());
-    result = result && getSecret()
-        .equals(other.getSecret());
-    result = result && getName()
-        .equals(other.getName());
-    result = result && getContactList()
-        .equals(other.getContactList());
-    result = result && grantTypes_.equals(other.grantTypes_);
-    result = result && (hasBranding() == other.hasBranding());
+    if (!getId()
+        .equals(other.getId())) return false;
+    if (!getSecret()
+        .equals(other.getSecret())) return false;
+    if (!getName()
+        .equals(other.getName())) return false;
+    if (!getContactList()
+        .equals(other.getContactList())) return false;
+    if (!grantTypes_.equals(other.grantTypes_)) return false;
+    if (hasBranding() != other.hasBranding()) return false;
     if (hasBranding()) {
-      result = result && getBranding()
-          .equals(other.getBranding());
+      if (!getBranding()
+          .equals(other.getBranding())) return false;
     }
-    result = result && getOwner()
-        .equals(other.getOwner());
-    result = result && (hasPolicy() == other.hasPolicy());
+    if (!getOwner()
+        .equals(other.getOwner())) return false;
+    if (hasPolicy() != other.hasPolicy()) return false;
     if (hasPolicy()) {
-      result = result && getPolicy()
-          .equals(other.getPolicy());
+      if (!getPolicy()
+          .equals(other.getPolicy())) return false;
     }
-    result = result && (hasTerms() == other.hasTerms());
+    if (hasTerms() != other.hasTerms()) return false;
     if (hasTerms()) {
-      result = result && getTerms()
-          .equals(other.getTerms());
+      if (!getTerms()
+          .equals(other.getTerms())) return false;
     }
-    result = result && (getPublic()
-        == other.getPublic());
-    result = result && getRedirectUriList()
-        .equals(other.getRedirectUriList());
-    result = result && responseType_.equals(other.responseType_);
-    result = result && getScopeList()
-        .equals(other.getScopeList());
-    result = result && unknownFields.equals(other.unknownFields);
-    return result;
+    if (getPublic()
+        != other.getPublic()) return false;
+    if (!getRedirectUriList()
+        .equals(other.getRedirectUriList())) return false;
+    if (!responseType_.equals(other.responseType_)) return false;
+    if (!getScopeList()
+        .equals(other.getScopeList())) return false;
+    if (!unknownFields.equals(other.unknownFields)) return false;
+    return true;
   }
 
   @java.lang.Override
@@ -1276,12 +1273,12 @@ private static final long serialVersionUID = 0L;
       result.id_ = id_;
       result.secret_ = secret_;
       result.name_ = name_;
-      if (((bitField0_ & 0x00000008) == 0x00000008)) {
+      if (((bitField0_ & 0x00000008) != 0)) {
         contact_ = contact_.getUnmodifiableView();
         bitField0_ = (bitField0_ & ~0x00000008);
       }
       result.contact_ = contact_;
-      if (((bitField0_ & 0x00000010) == 0x00000010)) {
+      if (((bitField0_ & 0x00000010) != 0)) {
         grantTypes_ = java.util.Collections.unmodifiableList(grantTypes_);
         bitField0_ = (bitField0_ & ~0x00000010);
       }
@@ -1303,18 +1300,18 @@ private static final long serialVersionUID = 0L;
         result.terms_ = termsBuilder_.build();
       }
       result.public_ = public_;
-      if (((bitField0_ & 0x00000400) == 0x00000400)) {
+      if (((bitField0_ & 0x00000400) != 0)) {
         redirectUri_ = redirectUri_.getUnmodifiableView();
         bitField0_ = (bitField0_ & ~0x00000400);
       }
       result.redirectUri_ = redirectUri_;
-      if (((bitField0_ & 0x00000800) == 0x00000800)) {
+      if (((bitField0_ & 0x00000800) != 0)) {
         responseType_ = java.util.Collections.unmodifiableList(responseType_);
         bitField0_ = (bitField0_ & ~0x00000800);
       }
       result.responseType_ = responseType_;
       if (scopeBuilder_ == null) {
-        if (((bitField0_ & 0x00001000) == 0x00001000)) {
+        if (((bitField0_ & 0x00001000) != 0)) {
           scope_ = java.util.Collections.unmodifiableList(scope_);
           bitField0_ = (bitField0_ & ~0x00001000);
         }
@@ -1329,35 +1326,35 @@ private static final long serialVersionUID = 0L;
 
     @java.lang.Override
     public Builder clone() {
-      return (Builder) super.clone();
+      return super.clone();
     }
     @java.lang.Override
     public Builder setField(
         com.google.protobuf.Descriptors.FieldDescriptor field,
         java.lang.Object value) {
-      return (Builder) super.setField(field, value);
+      return super.setField(field, value);
     }
     @java.lang.Override
     public Builder clearField(
         com.google.protobuf.Descriptors.FieldDescriptor field) {
-      return (Builder) super.clearField(field);
+      return super.clearField(field);
     }
     @java.lang.Override
     public Builder clearOneof(
         com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-      return (Builder) super.clearOneof(oneof);
+      return super.clearOneof(oneof);
     }
     @java.lang.Override
     public Builder setRepeatedField(
         com.google.protobuf.Descriptors.FieldDescriptor field,
         int index, java.lang.Object value) {
-      return (Builder) super.setRepeatedField(field, index, value);
+      return super.setRepeatedField(field, index, value);
     }
     @java.lang.Override
     public Builder addRepeatedField(
         com.google.protobuf.Descriptors.FieldDescriptor field,
         java.lang.Object value) {
-      return (Builder) super.addRepeatedField(field, value);
+      return super.addRepeatedField(field, value);
     }
     @java.lang.Override
     public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -1764,7 +1761,7 @@ private static final long serialVersionUID = 0L;
 
     private com.google.protobuf.LazyStringList contact_ = com.google.protobuf.LazyStringArrayList.EMPTY;
     private void ensureContactIsMutable() {
-      if (!((bitField0_ & 0x00000008) == 0x00000008)) {
+      if (!((bitField0_ & 0x00000008) != 0)) {
         contact_ = new com.google.protobuf.LazyStringArrayList(contact_);
         bitField0_ |= 0x00000008;
        }
@@ -1895,7 +1892,7 @@ private static final long serialVersionUID = 0L;
     private java.util.List<java.lang.Integer> grantTypes_ =
       java.util.Collections.emptyList();
     private void ensureGrantTypesIsMutable() {
-      if (!((bitField0_ & 0x00000010) == 0x00000010)) {
+      if (!((bitField0_ & 0x00000010) != 0)) {
         grantTypes_ = new java.util.ArrayList<java.lang.Integer>(grantTypes_);
         bitField0_ |= 0x00000010;
       }
@@ -2058,7 +2055,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
 
-    private io.opencannabis.schema.media.AttachedMedia.MediaItem branding_ = null;
+    private io.opencannabis.schema.media.AttachedMedia.MediaItem branding_;
     private com.google.protobuf.SingleFieldBuilderV3<
         io.opencannabis.schema.media.AttachedMedia.MediaItem, io.opencannabis.schema.media.AttachedMedia.MediaItem.Builder, io.opencannabis.schema.media.AttachedMedia.MediaItemOrBuilder> brandingBuilder_;
     /**
@@ -2300,7 +2297,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
 
-    private io.opencannabis.schema.media.AttachedMedia.MediaItem policy_ = null;
+    private io.opencannabis.schema.media.AttachedMedia.MediaItem policy_;
     private com.google.protobuf.SingleFieldBuilderV3<
         io.opencannabis.schema.media.AttachedMedia.MediaItem, io.opencannabis.schema.media.AttachedMedia.MediaItem.Builder, io.opencannabis.schema.media.AttachedMedia.MediaItemOrBuilder> policyBuilder_;
     /**
@@ -2453,7 +2450,7 @@ private static final long serialVersionUID = 0L;
       return policyBuilder_;
     }
 
-    private io.opencannabis.schema.media.AttachedMedia.MediaItem terms_ = null;
+    private io.opencannabis.schema.media.AttachedMedia.MediaItem terms_;
     private com.google.protobuf.SingleFieldBuilderV3<
         io.opencannabis.schema.media.AttachedMedia.MediaItem, io.opencannabis.schema.media.AttachedMedia.MediaItem.Builder, io.opencannabis.schema.media.AttachedMedia.MediaItemOrBuilder> termsBuilder_;
     /**
@@ -2646,7 +2643,7 @@ private static final long serialVersionUID = 0L;
 
     private com.google.protobuf.LazyStringList redirectUri_ = com.google.protobuf.LazyStringArrayList.EMPTY;
     private void ensureRedirectUriIsMutable() {
-      if (!((bitField0_ & 0x00000400) == 0x00000400)) {
+      if (!((bitField0_ & 0x00000400) != 0)) {
         redirectUri_ = new com.google.protobuf.LazyStringArrayList(redirectUri_);
         bitField0_ |= 0x00000400;
        }
@@ -2777,7 +2774,7 @@ private static final long serialVersionUID = 0L;
     private java.util.List<java.lang.Integer> responseType_ =
       java.util.Collections.emptyList();
     private void ensureResponseTypeIsMutable() {
-      if (!((bitField0_ & 0x00000800) == 0x00000800)) {
+      if (!((bitField0_ & 0x00000800) != 0)) {
         responseType_ = new java.util.ArrayList<java.lang.Integer>(responseType_);
         bitField0_ |= 0x00000800;
       }
@@ -2943,7 +2940,7 @@ private static final long serialVersionUID = 0L;
     private java.util.List<io.opencannabis.schema.oauth.AuthorizationScope> scope_ =
       java.util.Collections.emptyList();
     private void ensureScopeIsMutable() {
-      if (!((bitField0_ & 0x00001000) == 0x00001000)) {
+      if (!((bitField0_ & 0x00001000) != 0)) {
         scope_ = new java.util.ArrayList<io.opencannabis.schema.oauth.AuthorizationScope>(scope_);
         bitField0_ |= 0x00001000;
        }
@@ -3244,7 +3241,7 @@ private static final long serialVersionUID = 0L;
         scopeBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
             io.opencannabis.schema.oauth.AuthorizationScope, io.opencannabis.schema.oauth.AuthorizationScope.Builder, io.opencannabis.schema.oauth.AuthorizationScopeOrBuilder>(
                 scope_,
-                ((bitField0_ & 0x00001000) == 0x00001000),
+                ((bitField0_ & 0x00001000) != 0),
                 getParentForChildren(),
                 isClean());
         scope_ = null;
@@ -3254,7 +3251,7 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public final Builder setUnknownFields(
         final com.google.protobuf.UnknownFieldSet unknownFields) {
-      return super.setUnknownFieldsProto3(unknownFields);
+      return super.setUnknownFields(unknownFields);
     }
 
     @java.lang.Override

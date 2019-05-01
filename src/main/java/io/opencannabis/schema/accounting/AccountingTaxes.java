@@ -1,12 +1,11 @@
 /*
- * Copyright 2018, Momentum Ideas, Co. All rights reserved.
+ * Copyright 2019, Momentum Ideas Co.
  *
- * Source and object computer code contained herein is the private intellectual
- * property of Momentum Ideas Co., a Delaware Corporation. Use of this
- * code in source form requires permission in writing before use or the
- * assembly, distribution, or publishing of derivative works, for commercial
- * purposes or any other purpose, from a duly authorized officer of Momentum
- * Ideas Co.
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *  http://www.apache.org/licenses/LICENSE-2.0
  *
  * Unless required by applicable law or agreed to in writing, software
  * distributed under the License is distributed on an "AS IS" BASIS,
@@ -450,7 +449,7 @@ public final class AccountingTaxes {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -647,21 +646,20 @@ public final class AccountingTaxes {
       }
       io.opencannabis.schema.accounting.AccountingTaxes.LocalTax other = (io.opencannabis.schema.accounting.AccountingTaxes.LocalTax) obj;
 
-      boolean result = true;
-      result = result && getMunicipality()
-          .equals(other.getMunicipality());
-      result = result && (hasProvince() == other.hasProvince());
+      if (!getMunicipality()
+          .equals(other.getMunicipality())) return false;
+      if (hasProvince() != other.hasProvince()) return false;
       if (hasProvince()) {
-        result = result && getProvince()
-            .equals(other.getProvince());
+        if (!getProvince()
+            .equals(other.getProvince())) return false;
       }
-      result = result && (hasCountry() == other.hasCountry());
+      if (hasCountry() != other.hasCountry()) return false;
       if (hasCountry()) {
-        result = result && getCountry()
-            .equals(other.getCountry());
+        if (!getCountry()
+            .equals(other.getCountry())) return false;
       }
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -875,35 +873,35 @@ public final class AccountingTaxes {
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -1045,7 +1043,7 @@ public final class AccountingTaxes {
         return this;
       }
 
-      private io.opencannabis.schema.geo.Province province_ = null;
+      private io.opencannabis.schema.geo.Province province_;
       private com.google.protobuf.SingleFieldBuilderV3<
           io.opencannabis.schema.geo.Province, io.opencannabis.schema.geo.Province.Builder, io.opencannabis.schema.geo.ProvinceOrBuilder> provinceBuilder_;
       /**
@@ -1198,7 +1196,7 @@ public final class AccountingTaxes {
         return provinceBuilder_;
       }
 
-      private io.opencannabis.schema.geo.Country country_ = null;
+      private io.opencannabis.schema.geo.Country country_;
       private com.google.protobuf.SingleFieldBuilderV3<
           io.opencannabis.schema.geo.Country, io.opencannabis.schema.geo.Country.Builder, io.opencannabis.schema.geo.CountryOrBuilder> countryBuilder_;
       /**
@@ -1353,7 +1351,7 @@ public final class AccountingTaxes {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -1527,7 +1525,7 @@ public final class AccountingTaxes {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -1676,19 +1674,18 @@ public final class AccountingTaxes {
       }
       io.opencannabis.schema.accounting.AccountingTaxes.ProvincialTax other = (io.opencannabis.schema.accounting.AccountingTaxes.ProvincialTax) obj;
 
-      boolean result = true;
-      result = result && (hasProvince() == other.hasProvince());
+      if (hasProvince() != other.hasProvince()) return false;
       if (hasProvince()) {
-        result = result && getProvince()
-            .equals(other.getProvince());
+        if (!getProvince()
+            .equals(other.getProvince())) return false;
       }
-      result = result && (hasCountry() == other.hasCountry());
+      if (hasCountry() != other.hasCountry()) return false;
       if (hasCountry()) {
-        result = result && getCountry()
-            .equals(other.getCountry());
+        if (!getCountry()
+            .equals(other.getCountry())) return false;
       }
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -1897,35 +1894,35 @@ public final class AccountingTaxes {
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -1974,7 +1971,7 @@ public final class AccountingTaxes {
         return this;
       }
 
-      private io.opencannabis.schema.geo.Province province_ = null;
+      private io.opencannabis.schema.geo.Province province_;
       private com.google.protobuf.SingleFieldBuilderV3<
           io.opencannabis.schema.geo.Province, io.opencannabis.schema.geo.Province.Builder, io.opencannabis.schema.geo.ProvinceOrBuilder> provinceBuilder_;
       /**
@@ -2127,7 +2124,7 @@ public final class AccountingTaxes {
         return provinceBuilder_;
       }
 
-      private io.opencannabis.schema.geo.Country country_ = null;
+      private io.opencannabis.schema.geo.Country country_;
       private com.google.protobuf.SingleFieldBuilderV3<
           io.opencannabis.schema.geo.Country, io.opencannabis.schema.geo.Country.Builder, io.opencannabis.schema.geo.CountryOrBuilder> countryBuilder_;
       /**
@@ -2282,7 +2279,7 @@ public final class AccountingTaxes {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -2418,7 +2415,7 @@ public final class AccountingTaxes {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -2527,14 +2524,13 @@ public final class AccountingTaxes {
       }
       io.opencannabis.schema.accounting.AccountingTaxes.FederalTax other = (io.opencannabis.schema.accounting.AccountingTaxes.FederalTax) obj;
 
-      boolean result = true;
-      result = result && (hasCountry() == other.hasCountry());
+      if (hasCountry() != other.hasCountry()) return false;
       if (hasCountry()) {
-        result = result && getCountry()
-            .equals(other.getCountry());
+        if (!getCountry()
+            .equals(other.getCountry())) return false;
       }
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -2728,35 +2724,35 @@ public final class AccountingTaxes {
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -2802,7 +2798,7 @@ public final class AccountingTaxes {
         return this;
       }
 
-      private io.opencannabis.schema.geo.Country country_ = null;
+      private io.opencannabis.schema.geo.Country country_;
       private com.google.protobuf.SingleFieldBuilderV3<
           io.opencannabis.schema.geo.Country, io.opencannabis.schema.geo.Country.Builder, io.opencannabis.schema.geo.CountryOrBuilder> countryBuilder_;
       /**
@@ -2957,7 +2953,7 @@ public final class AccountingTaxes {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -3198,7 +3194,7 @@ public final class AccountingTaxes {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -3474,29 +3470,26 @@ public final class AccountingTaxes {
       }
       io.opencannabis.schema.accounting.AccountingTaxes.TaxJurisdiction other = (io.opencannabis.schema.accounting.AccountingTaxes.TaxJurisdiction) obj;
 
-      boolean result = true;
-      result = result && mode_ == other.mode_;
-      result = result && getJurisdictionCase().equals(
-          other.getJurisdictionCase());
-      if (!result) return false;
+      if (mode_ != other.mode_) return false;
+      if (!getJurisdictionCase().equals(other.getJurisdictionCase())) return false;
       switch (jurisdictionCase_) {
         case 2:
-          result = result && getLocal()
-              .equals(other.getLocal());
+          if (!getLocal()
+              .equals(other.getLocal())) return false;
           break;
         case 3:
-          result = result && getProvincial()
-              .equals(other.getProvincial());
+          if (!getProvincial()
+              .equals(other.getProvincial())) return false;
           break;
         case 4:
-          result = result && getFederal()
-              .equals(other.getFederal());
+          if (!getFederal()
+              .equals(other.getFederal())) return false;
           break;
         case 0:
         default:
       }
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -3720,35 +3713,35 @@ public final class AccountingTaxes {
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -4409,7 +4402,7 @@ public final class AccountingTaxes {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -4624,7 +4617,7 @@ public final class AccountingTaxes {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -4899,36 +4892,31 @@ public final class AccountingTaxes {
       }
       io.opencannabis.schema.accounting.AccountingTaxes.TaxSpec other = (io.opencannabis.schema.accounting.AccountingTaxes.TaxSpec) obj;
 
-      boolean result = true;
-      result = result && basis_ == other.basis_;
-      result = result && (hasJurisdiction() == other.hasJurisdiction());
+      if (basis_ != other.basis_) return false;
+      if (hasJurisdiction() != other.hasJurisdiction()) return false;
       if (hasJurisdiction()) {
-        result = result && getJurisdiction()
-            .equals(other.getJurisdiction());
+        if (!getJurisdiction()
+            .equals(other.getJurisdiction())) return false;
       }
-      result = result && getTransactionLabel()
-          .equals(other.getTransactionLabel());
-      result = result && getRateCase().equals(
-          other.getRateCase());
-      if (!result) return false;
+      if (!getTransactionLabel()
+          .equals(other.getTransactionLabel())) return false;
+      if (!getRateCase().equals(other.getRateCase())) return false;
       switch (rateCase_) {
         case 4:
-          result = result && (
-              java.lang.Double.doubleToLongBits(getPercentage())
-              == java.lang.Double.doubleToLongBits(
-                  other.getPercentage()));
+          if (java.lang.Double.doubleToLongBits(getPercentage())
+              != java.lang.Double.doubleToLongBits(
+                  other.getPercentage())) return false;
           break;
         case 5:
-          result = result && (
-              java.lang.Double.doubleToLongBits(getStaticValue())
-              == java.lang.Double.doubleToLongBits(
-                  other.getStaticValue()));
+          if (java.lang.Double.doubleToLongBits(getStaticValue())
+              != java.lang.Double.doubleToLongBits(
+                  other.getStaticValue())) return false;
           break;
         case 0:
         default:
       }
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -5155,35 +5143,35 @@ public final class AccountingTaxes {
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -5329,7 +5317,7 @@ public final class AccountingTaxes {
         return this;
       }
 
-      private io.opencannabis.schema.accounting.AccountingTaxes.TaxJurisdiction jurisdiction_ = null;
+      private io.opencannabis.schema.accounting.AccountingTaxes.TaxJurisdiction jurisdiction_;
       private com.google.protobuf.SingleFieldBuilderV3<
           io.opencannabis.schema.accounting.AccountingTaxes.TaxJurisdiction, io.opencannabis.schema.accounting.AccountingTaxes.TaxJurisdiction.Builder, io.opencannabis.schema.accounting.AccountingTaxes.TaxJurisdictionOrBuilder> jurisdictionBuilder_;
       /**
@@ -5657,7 +5645,7 @@ public final class AccountingTaxes {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -5895,7 +5883,7 @@ public final class AccountingTaxes {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -6198,22 +6186,21 @@ public final class AccountingTaxes {
       }
       io.opencannabis.schema.accounting.AccountingTaxes.Tax other = (io.opencannabis.schema.accounting.AccountingTaxes.Tax) obj;
 
-      boolean result = true;
-      result = result && getId()
-          .equals(other.getId());
-      result = result && (hasSpec() == other.hasSpec());
+      if (!getId()
+          .equals(other.getId())) return false;
+      if (hasSpec() != other.hasSpec()) return false;
       if (hasSpec()) {
-        result = result && getSpec()
-            .equals(other.getSpec());
+        if (!getSpec()
+            .equals(other.getSpec())) return false;
       }
-      result = result && getName()
-          .equals(other.getName());
-      result = result && getLabel()
-          .equals(other.getLabel());
-      result = result && getDescription()
-          .equals(other.getDescription());
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!getName()
+          .equals(other.getName())) return false;
+      if (!getLabel()
+          .equals(other.getLabel())) return false;
+      if (!getDescription()
+          .equals(other.getDescription())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -6427,35 +6414,35 @@ public final class AccountingTaxes {
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -6606,7 +6593,7 @@ public final class AccountingTaxes {
         return this;
       }
 
-      private io.opencannabis.schema.accounting.AccountingTaxes.TaxSpec spec_ = null;
+      private io.opencannabis.schema.accounting.AccountingTaxes.TaxSpec spec_;
       private com.google.protobuf.SingleFieldBuilderV3<
           io.opencannabis.schema.accounting.AccountingTaxes.TaxSpec, io.opencannabis.schema.accounting.AccountingTaxes.TaxSpec.Builder, io.opencannabis.schema.accounting.AccountingTaxes.TaxSpecOrBuilder> specBuilder_;
       /**
@@ -7033,7 +7020,7 @@ public final class AccountingTaxes {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override

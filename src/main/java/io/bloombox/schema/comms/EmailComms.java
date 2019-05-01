@@ -1,5 +1,5 @@
 /*
- * Copyright 2018, Momentum Ideas, Co. All rights reserved.
+ * Copyright 2019, Momentum Ideas, Co. All rights reserved.
  *
  * Source and object computer code contained herein is the private intellectual
  * property of Momentum Ideas Co., a Delaware Corporation. Use of this
@@ -194,7 +194,7 @@ public final class EmailComms {
               break;
             }
             case 18: {
-              if (!((mutable_bitField0_ & 0x00000002) == 0x00000002)) {
+              if (!((mutable_bitField0_ & 0x00000002) != 0)) {
                 content_ = new java.util.ArrayList<io.opencannabis.schema.content.GenericContent.Content>();
                 mutable_bitField0_ |= 0x00000002;
               }
@@ -203,7 +203,7 @@ public final class EmailComms {
               break;
             }
             case 26: {
-              if (!((mutable_bitField0_ & 0x00000004) == 0x00000004)) {
+              if (!((mutable_bitField0_ & 0x00000004) != 0)) {
                 attachment_ = new java.util.ArrayList<io.opencannabis.schema.media.MediaItemKey.MediaKey>();
                 mutable_bitField0_ |= 0x00000004;
               }
@@ -212,7 +212,7 @@ public final class EmailComms {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -226,10 +226,10 @@ public final class EmailComms {
         throw new com.google.protobuf.InvalidProtocolBufferException(
             e).setUnfinishedMessage(this);
       } finally {
-        if (((mutable_bitField0_ & 0x00000002) == 0x00000002)) {
+        if (((mutable_bitField0_ & 0x00000002) != 0)) {
           content_ = java.util.Collections.unmodifiableList(content_);
         }
-        if (((mutable_bitField0_ & 0x00000004) == 0x00000004)) {
+        if (((mutable_bitField0_ & 0x00000004) != 0)) {
           attachment_ = java.util.Collections.unmodifiableList(attachment_);
         }
         this.unknownFields = unknownFields.build();
@@ -460,15 +460,14 @@ public final class EmailComms {
       }
       io.bloombox.schema.comms.EmailComms.EmailContent other = (io.bloombox.schema.comms.EmailComms.EmailContent) obj;
 
-      boolean result = true;
-      result = result && getSubject()
-          .equals(other.getSubject());
-      result = result && getContentList()
-          .equals(other.getContentList());
-      result = result && getAttachmentList()
-          .equals(other.getAttachmentList());
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!getSubject()
+          .equals(other.getSubject())) return false;
+      if (!getContentList()
+          .equals(other.getContentList())) return false;
+      if (!getAttachmentList()
+          .equals(other.getAttachmentList())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -671,7 +670,7 @@ public final class EmailComms {
         int to_bitField0_ = 0;
         result.subject_ = subject_;
         if (contentBuilder_ == null) {
-          if (((bitField0_ & 0x00000002) == 0x00000002)) {
+          if (((bitField0_ & 0x00000002) != 0)) {
             content_ = java.util.Collections.unmodifiableList(content_);
             bitField0_ = (bitField0_ & ~0x00000002);
           }
@@ -680,7 +679,7 @@ public final class EmailComms {
           result.content_ = contentBuilder_.build();
         }
         if (attachmentBuilder_ == null) {
-          if (((bitField0_ & 0x00000004) == 0x00000004)) {
+          if (((bitField0_ & 0x00000004) != 0)) {
             attachment_ = java.util.Collections.unmodifiableList(attachment_);
             bitField0_ = (bitField0_ & ~0x00000004);
           }
@@ -695,35 +694,35 @@ public final class EmailComms {
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -915,7 +914,7 @@ public final class EmailComms {
       private java.util.List<io.opencannabis.schema.content.GenericContent.Content> content_ =
         java.util.Collections.emptyList();
       private void ensureContentIsMutable() {
-        if (!((bitField0_ & 0x00000002) == 0x00000002)) {
+        if (!((bitField0_ & 0x00000002) != 0)) {
           content_ = new java.util.ArrayList<io.opencannabis.schema.content.GenericContent.Content>(content_);
           bitField0_ |= 0x00000002;
          }
@@ -1216,7 +1215,7 @@ public final class EmailComms {
           contentBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
               io.opencannabis.schema.content.GenericContent.Content, io.opencannabis.schema.content.GenericContent.Content.Builder, io.opencannabis.schema.content.GenericContent.ContentOrBuilder>(
                   content_,
-                  ((bitField0_ & 0x00000002) == 0x00000002),
+                  ((bitField0_ & 0x00000002) != 0),
                   getParentForChildren(),
                   isClean());
           content_ = null;
@@ -1227,7 +1226,7 @@ public final class EmailComms {
       private java.util.List<io.opencannabis.schema.media.MediaItemKey.MediaKey> attachment_ =
         java.util.Collections.emptyList();
       private void ensureAttachmentIsMutable() {
-        if (!((bitField0_ & 0x00000004) == 0x00000004)) {
+        if (!((bitField0_ & 0x00000004) != 0)) {
           attachment_ = new java.util.ArrayList<io.opencannabis.schema.media.MediaItemKey.MediaKey>(attachment_);
           bitField0_ |= 0x00000004;
          }
@@ -1528,7 +1527,7 @@ public final class EmailComms {
           attachmentBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
               io.opencannabis.schema.media.MediaItemKey.MediaKey, io.opencannabis.schema.media.MediaItemKey.MediaKey.Builder, io.opencannabis.schema.media.MediaItemKey.MediaKeyOrBuilder>(
                   attachment_,
-                  ((bitField0_ & 0x00000004) == 0x00000004),
+                  ((bitField0_ & 0x00000004) != 0),
                   getParentForChildren(),
                   isClean());
           attachment_ = null;
@@ -1538,7 +1537,7 @@ public final class EmailComms {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -1878,7 +1877,7 @@ public final class EmailComms {
               break;
             }
             case 42: {
-              if (!((mutable_bitField0_ & 0x00000010) == 0x00000010)) {
+              if (!((mutable_bitField0_ & 0x00000010) != 0)) {
                 cc_ = new java.util.ArrayList<io.opencannabis.schema.contact.ContactEmail.EmailAddress>();
                 mutable_bitField0_ |= 0x00000010;
               }
@@ -1887,7 +1886,7 @@ public final class EmailComms {
               break;
             }
             case 50: {
-              if (!((mutable_bitField0_ & 0x00000020) == 0x00000020)) {
+              if (!((mutable_bitField0_ & 0x00000020) != 0)) {
                 bcc_ = new java.util.ArrayList<io.opencannabis.schema.contact.ContactEmail.EmailAddress>();
                 mutable_bitField0_ |= 0x00000020;
               }
@@ -1896,7 +1895,7 @@ public final class EmailComms {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -1910,10 +1909,10 @@ public final class EmailComms {
         throw new com.google.protobuf.InvalidProtocolBufferException(
             e).setUnfinishedMessage(this);
       } finally {
-        if (((mutable_bitField0_ & 0x00000010) == 0x00000010)) {
+        if (((mutable_bitField0_ & 0x00000010) != 0)) {
           cc_ = java.util.Collections.unmodifiableList(cc_);
         }
-        if (((mutable_bitField0_ & 0x00000020) == 0x00000020)) {
+        if (((mutable_bitField0_ & 0x00000020) != 0)) {
           bcc_ = java.util.Collections.unmodifiableList(bcc_);
         }
         this.unknownFields = unknownFields.build();
@@ -2256,33 +2255,32 @@ public final class EmailComms {
       }
       io.bloombox.schema.comms.EmailComms.EmailMessage other = (io.bloombox.schema.comms.EmailComms.EmailMessage) obj;
 
-      boolean result = true;
-      result = result && (hasSender() == other.hasSender());
+      if (hasSender() != other.hasSender()) return false;
       if (hasSender()) {
-        result = result && getSender()
-            .equals(other.getSender());
+        if (!getSender()
+            .equals(other.getSender())) return false;
       }
-      result = result && (hasRecipient() == other.hasRecipient());
+      if (hasRecipient() != other.hasRecipient()) return false;
       if (hasRecipient()) {
-        result = result && getRecipient()
-            .equals(other.getRecipient());
+        if (!getRecipient()
+            .equals(other.getRecipient())) return false;
       }
-      result = result && (hasContent() == other.hasContent());
+      if (hasContent() != other.hasContent()) return false;
       if (hasContent()) {
-        result = result && getContent()
-            .equals(other.getContent());
+        if (!getContent()
+            .equals(other.getContent())) return false;
       }
-      result = result && (hasReplyTo() == other.hasReplyTo());
+      if (hasReplyTo() != other.hasReplyTo()) return false;
       if (hasReplyTo()) {
-        result = result && getReplyTo()
-            .equals(other.getReplyTo());
+        if (!getReplyTo()
+            .equals(other.getReplyTo())) return false;
       }
-      result = result && getCcList()
-          .equals(other.getCcList());
-      result = result && getBccList()
-          .equals(other.getBccList());
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!getCcList()
+          .equals(other.getCcList())) return false;
+      if (!getBccList()
+          .equals(other.getBccList())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -2540,7 +2538,7 @@ public final class EmailComms {
           result.replyTo_ = replyToBuilder_.build();
         }
         if (ccBuilder_ == null) {
-          if (((bitField0_ & 0x00000010) == 0x00000010)) {
+          if (((bitField0_ & 0x00000010) != 0)) {
             cc_ = java.util.Collections.unmodifiableList(cc_);
             bitField0_ = (bitField0_ & ~0x00000010);
           }
@@ -2549,7 +2547,7 @@ public final class EmailComms {
           result.cc_ = ccBuilder_.build();
         }
         if (bccBuilder_ == null) {
-          if (((bitField0_ & 0x00000020) == 0x00000020)) {
+          if (((bitField0_ & 0x00000020) != 0)) {
             bcc_ = java.util.Collections.unmodifiableList(bcc_);
             bitField0_ = (bitField0_ & ~0x00000020);
           }
@@ -2564,35 +2562,35 @@ public final class EmailComms {
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -2700,7 +2698,7 @@ public final class EmailComms {
       }
       private int bitField0_;
 
-      private io.opencannabis.schema.contact.ContactEmail.EmailAddress sender_ = null;
+      private io.opencannabis.schema.contact.ContactEmail.EmailAddress sender_;
       private com.google.protobuf.SingleFieldBuilderV3<
           io.opencannabis.schema.contact.ContactEmail.EmailAddress, io.opencannabis.schema.contact.ContactEmail.EmailAddress.Builder, io.opencannabis.schema.contact.ContactEmail.EmailAddressOrBuilder> senderBuilder_;
       /**
@@ -2853,7 +2851,7 @@ public final class EmailComms {
         return senderBuilder_;
       }
 
-      private io.opencannabis.schema.contact.ContactEmail.EmailAddress recipient_ = null;
+      private io.opencannabis.schema.contact.ContactEmail.EmailAddress recipient_;
       private com.google.protobuf.SingleFieldBuilderV3<
           io.opencannabis.schema.contact.ContactEmail.EmailAddress, io.opencannabis.schema.contact.ContactEmail.EmailAddress.Builder, io.opencannabis.schema.contact.ContactEmail.EmailAddressOrBuilder> recipientBuilder_;
       /**
@@ -3006,7 +3004,7 @@ public final class EmailComms {
         return recipientBuilder_;
       }
 
-      private io.bloombox.schema.comms.EmailComms.EmailContent content_ = null;
+      private io.bloombox.schema.comms.EmailComms.EmailContent content_;
       private com.google.protobuf.SingleFieldBuilderV3<
           io.bloombox.schema.comms.EmailComms.EmailContent, io.bloombox.schema.comms.EmailComms.EmailContent.Builder, io.bloombox.schema.comms.EmailComms.EmailContentOrBuilder> contentBuilder_;
       /**
@@ -3159,7 +3157,7 @@ public final class EmailComms {
         return contentBuilder_;
       }
 
-      private io.opencannabis.schema.contact.ContactEmail.EmailAddress replyTo_ = null;
+      private io.opencannabis.schema.contact.ContactEmail.EmailAddress replyTo_;
       private com.google.protobuf.SingleFieldBuilderV3<
           io.opencannabis.schema.contact.ContactEmail.EmailAddress, io.opencannabis.schema.contact.ContactEmail.EmailAddress.Builder, io.opencannabis.schema.contact.ContactEmail.EmailAddressOrBuilder> replyToBuilder_;
       /**
@@ -3315,7 +3313,7 @@ public final class EmailComms {
       private java.util.List<io.opencannabis.schema.contact.ContactEmail.EmailAddress> cc_ =
         java.util.Collections.emptyList();
       private void ensureCcIsMutable() {
-        if (!((bitField0_ & 0x00000010) == 0x00000010)) {
+        if (!((bitField0_ & 0x00000010) != 0)) {
           cc_ = new java.util.ArrayList<io.opencannabis.schema.contact.ContactEmail.EmailAddress>(cc_);
           bitField0_ |= 0x00000010;
          }
@@ -3616,7 +3614,7 @@ public final class EmailComms {
           ccBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
               io.opencannabis.schema.contact.ContactEmail.EmailAddress, io.opencannabis.schema.contact.ContactEmail.EmailAddress.Builder, io.opencannabis.schema.contact.ContactEmail.EmailAddressOrBuilder>(
                   cc_,
-                  ((bitField0_ & 0x00000010) == 0x00000010),
+                  ((bitField0_ & 0x00000010) != 0),
                   getParentForChildren(),
                   isClean());
           cc_ = null;
@@ -3627,7 +3625,7 @@ public final class EmailComms {
       private java.util.List<io.opencannabis.schema.contact.ContactEmail.EmailAddress> bcc_ =
         java.util.Collections.emptyList();
       private void ensureBccIsMutable() {
-        if (!((bitField0_ & 0x00000020) == 0x00000020)) {
+        if (!((bitField0_ & 0x00000020) != 0)) {
           bcc_ = new java.util.ArrayList<io.opencannabis.schema.contact.ContactEmail.EmailAddress>(bcc_);
           bitField0_ |= 0x00000020;
          }
@@ -3928,7 +3926,7 @@ public final class EmailComms {
           bccBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
               io.opencannabis.schema.contact.ContactEmail.EmailAddress, io.opencannabis.schema.contact.ContactEmail.EmailAddress.Builder, io.opencannabis.schema.contact.ContactEmail.EmailAddressOrBuilder>(
                   bcc_,
-                  ((bitField0_ & 0x00000020) == 0x00000020),
+                  ((bitField0_ & 0x00000020) != 0),
                   getParentForChildren(),
                   isClean());
           bcc_ = null;
@@ -3938,7 +3936,7 @@ public final class EmailComms {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -4161,7 +4159,7 @@ public final class EmailComms {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -4470,19 +4468,18 @@ public final class EmailComms {
       }
       io.bloombox.schema.comms.EmailComms.PublisherMetadata other = (io.bloombox.schema.comms.EmailComms.PublisherMetadata) obj;
 
-      boolean result = true;
-      result = result && getName()
-          .equals(other.getName());
-      result = result && getUrl()
-          .equals(other.getUrl());
-      result = result && getGooglePlus()
-          .equals(other.getGooglePlus());
-      result = result && getTwitter()
-          .equals(other.getTwitter());
-      result = result && getFacebook()
-          .equals(other.getFacebook());
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!getName()
+          .equals(other.getName())) return false;
+      if (!getUrl()
+          .equals(other.getUrl())) return false;
+      if (!getGooglePlus()
+          .equals(other.getGooglePlus())) return false;
+      if (!getTwitter()
+          .equals(other.getTwitter())) return false;
+      if (!getFacebook()
+          .equals(other.getFacebook())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -4686,35 +4683,35 @@ public final class EmailComms {
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -5224,7 +5221,7 @@ public final class EmailComms {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -5321,7 +5318,7 @@ public final class EmailComms {
               done = true;
               break;
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -5640,7 +5637,7 @@ public final class EmailComms {
                 break;
               }
               default: {
-                if (!parseUnknownFieldProto3(
+                if (!parseUnknownField(
                     input, unknownFields, extensionRegistry, tag)) {
                   done = true;
                 }
@@ -5845,18 +5842,17 @@ public final class EmailComms {
         }
         io.bloombox.schema.comms.EmailComms.EmailMetadata.GoToView other = (io.bloombox.schema.comms.EmailComms.EmailMetadata.GoToView) obj;
 
-        boolean result = true;
-        result = result && getName()
-            .equals(other.getName());
-        result = result && getTarget()
-            .equals(other.getTarget());
-        result = result && (hasPublisher() == other.hasPublisher());
+        if (!getName()
+            .equals(other.getName())) return false;
+        if (!getTarget()
+            .equals(other.getTarget())) return false;
+        if (hasPublisher() != other.hasPublisher()) return false;
         if (hasPublisher()) {
-          result = result && getPublisher()
-              .equals(other.getPublisher());
+          if (!getPublisher()
+              .equals(other.getPublisher())) return false;
         }
-        result = result && unknownFields.equals(other.unknownFields);
-        return result;
+        if (!unknownFields.equals(other.unknownFields)) return false;
+        return true;
       }
 
       @java.lang.Override
@@ -6060,35 +6056,35 @@ public final class EmailComms {
 
         @java.lang.Override
         public Builder clone() {
-          return (Builder) super.clone();
+          return super.clone();
         }
         @java.lang.Override
         public Builder setField(
             com.google.protobuf.Descriptors.FieldDescriptor field,
             java.lang.Object value) {
-          return (Builder) super.setField(field, value);
+          return super.setField(field, value);
         }
         @java.lang.Override
         public Builder clearField(
             com.google.protobuf.Descriptors.FieldDescriptor field) {
-          return (Builder) super.clearField(field);
+          return super.clearField(field);
         }
         @java.lang.Override
         public Builder clearOneof(
             com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-          return (Builder) super.clearOneof(oneof);
+          return super.clearOneof(oneof);
         }
         @java.lang.Override
         public Builder setRepeatedField(
             com.google.protobuf.Descriptors.FieldDescriptor field,
             int index, java.lang.Object value) {
-          return (Builder) super.setRepeatedField(field, index, value);
+          return super.setRepeatedField(field, index, value);
         }
         @java.lang.Override
         public Builder addRepeatedField(
             com.google.protobuf.Descriptors.FieldDescriptor field,
             java.lang.Object value) {
-          return (Builder) super.addRepeatedField(field, value);
+          return super.addRepeatedField(field, value);
         }
         @java.lang.Override
         public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -6320,7 +6316,7 @@ public final class EmailComms {
           return this;
         }
 
-        private io.bloombox.schema.comms.EmailComms.PublisherMetadata publisher_ = null;
+        private io.bloombox.schema.comms.EmailComms.PublisherMetadata publisher_;
         private com.google.protobuf.SingleFieldBuilderV3<
             io.bloombox.schema.comms.EmailComms.PublisherMetadata, io.bloombox.schema.comms.EmailComms.PublisherMetadata.Builder, io.bloombox.schema.comms.EmailComms.PublisherMetadataOrBuilder> publisherBuilder_;
         /**
@@ -6475,7 +6471,7 @@ public final class EmailComms {
         @java.lang.Override
         public final Builder setUnknownFields(
             final com.google.protobuf.UnknownFieldSet unknownFields) {
-          return super.setUnknownFieldsProto3(unknownFields);
+          return super.setUnknownFields(unknownFields);
         }
 
         @java.lang.Override
@@ -6788,7 +6784,7 @@ public final class EmailComms {
                 break;
               }
               default: {
-                if (!parseUnknownFieldProto3(
+                if (!parseUnknownField(
                     input, unknownFields, extensionRegistry, tag)) {
                   done = true;
                 }
@@ -7105,36 +7101,35 @@ public final class EmailComms {
         }
         io.bloombox.schema.comms.EmailComms.EmailMetadata.GoToTrack other = (io.bloombox.schema.comms.EmailComms.EmailMetadata.GoToTrack) obj;
 
-        boolean result = true;
-        result = result && (hasDeliveryAddress() == other.hasDeliveryAddress());
+        if (hasDeliveryAddress() != other.hasDeliveryAddress()) return false;
         if (hasDeliveryAddress()) {
-          result = result && getDeliveryAddress()
-              .equals(other.getDeliveryAddress());
+          if (!getDeliveryAddress()
+              .equals(other.getDeliveryAddress())) return false;
         }
-        result = result && (hasEstimatedReady() == other.hasEstimatedReady());
+        if (hasEstimatedReady() != other.hasEstimatedReady()) return false;
         if (hasEstimatedReady()) {
-          result = result && getEstimatedReady()
-              .equals(other.getEstimatedReady());
+          if (!getEstimatedReady()
+              .equals(other.getEstimatedReady())) return false;
         }
-        result = result && (hasEstimatedArrival() == other.hasEstimatedArrival());
+        if (hasEstimatedArrival() != other.hasEstimatedArrival()) return false;
         if (hasEstimatedArrival()) {
-          result = result && getEstimatedArrival()
-              .equals(other.getEstimatedArrival());
+          if (!getEstimatedArrival()
+              .equals(other.getEstimatedArrival())) return false;
         }
-        result = result && (hasPartner() == other.hasPartner());
+        if (hasPartner() != other.hasPartner()) return false;
         if (hasPartner()) {
-          result = result && getPartner()
-              .equals(other.getPartner());
+          if (!getPartner()
+              .equals(other.getPartner())) return false;
         }
-        result = result && (hasOrder() == other.hasOrder());
+        if (hasOrder() != other.hasOrder()) return false;
         if (hasOrder()) {
-          result = result && getOrder()
-              .equals(other.getOrder());
+          if (!getOrder()
+              .equals(other.getOrder())) return false;
         }
-        result = result && getTrackingUrl()
-            .equals(other.getTrackingUrl());
-        result = result && unknownFields.equals(other.unknownFields);
-        return result;
+        if (!getTrackingUrl()
+            .equals(other.getTrackingUrl())) return false;
+        if (!unknownFields.equals(other.unknownFields)) return false;
+        return true;
       }
 
       @java.lang.Override
@@ -7393,35 +7388,35 @@ public final class EmailComms {
 
         @java.lang.Override
         public Builder clone() {
-          return (Builder) super.clone();
+          return super.clone();
         }
         @java.lang.Override
         public Builder setField(
             com.google.protobuf.Descriptors.FieldDescriptor field,
             java.lang.Object value) {
-          return (Builder) super.setField(field, value);
+          return super.setField(field, value);
         }
         @java.lang.Override
         public Builder clearField(
             com.google.protobuf.Descriptors.FieldDescriptor field) {
-          return (Builder) super.clearField(field);
+          return super.clearField(field);
         }
         @java.lang.Override
         public Builder clearOneof(
             com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-          return (Builder) super.clearOneof(oneof);
+          return super.clearOneof(oneof);
         }
         @java.lang.Override
         public Builder setRepeatedField(
             com.google.protobuf.Descriptors.FieldDescriptor field,
             int index, java.lang.Object value) {
-          return (Builder) super.setRepeatedField(field, index, value);
+          return super.setRepeatedField(field, index, value);
         }
         @java.lang.Override
         public Builder addRepeatedField(
             com.google.protobuf.Descriptors.FieldDescriptor field,
             java.lang.Object value) {
-          return (Builder) super.addRepeatedField(field, value);
+          return super.addRepeatedField(field, value);
         }
         @java.lang.Override
         public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -7483,7 +7478,7 @@ public final class EmailComms {
           return this;
         }
 
-        private io.opencannabis.schema.geo.Address deliveryAddress_ = null;
+        private io.opencannabis.schema.geo.Address deliveryAddress_;
         private com.google.protobuf.SingleFieldBuilderV3<
             io.opencannabis.schema.geo.Address, io.opencannabis.schema.geo.Address.Builder, io.opencannabis.schema.geo.AddressOrBuilder> deliveryAddressBuilder_;
         /**
@@ -7636,7 +7631,7 @@ public final class EmailComms {
           return deliveryAddressBuilder_;
         }
 
-        private io.opencannabis.schema.temporal.TemporalInstant.Instant estimatedReady_ = null;
+        private io.opencannabis.schema.temporal.TemporalInstant.Instant estimatedReady_;
         private com.google.protobuf.SingleFieldBuilderV3<
             io.opencannabis.schema.temporal.TemporalInstant.Instant, io.opencannabis.schema.temporal.TemporalInstant.Instant.Builder, io.opencannabis.schema.temporal.TemporalInstant.InstantOrBuilder> estimatedReadyBuilder_;
         /**
@@ -7789,7 +7784,7 @@ public final class EmailComms {
           return estimatedReadyBuilder_;
         }
 
-        private io.opencannabis.schema.temporal.TemporalInstant.Instant estimatedArrival_ = null;
+        private io.opencannabis.schema.temporal.TemporalInstant.Instant estimatedArrival_;
         private com.google.protobuf.SingleFieldBuilderV3<
             io.opencannabis.schema.temporal.TemporalInstant.Instant, io.opencannabis.schema.temporal.TemporalInstant.Instant.Builder, io.opencannabis.schema.temporal.TemporalInstant.InstantOrBuilder> estimatedArrivalBuilder_;
         /**
@@ -7942,7 +7937,7 @@ public final class EmailComms {
           return estimatedArrivalBuilder_;
         }
 
-        private io.bloombox.schema.partner.PartnerAccount.Partner partner_ = null;
+        private io.bloombox.schema.partner.PartnerAccount.Partner partner_;
         private com.google.protobuf.SingleFieldBuilderV3<
             io.bloombox.schema.partner.PartnerAccount.Partner, io.bloombox.schema.partner.PartnerAccount.Partner.Builder, io.bloombox.schema.partner.PartnerAccount.PartnerOrBuilder> partnerBuilder_;
         /**
@@ -8095,7 +8090,7 @@ public final class EmailComms {
           return partnerBuilder_;
         }
 
-        private io.opencannabis.schema.commerce.CommercialOrder.Order order_ = null;
+        private io.opencannabis.schema.commerce.CommercialOrder.Order order_;
         private com.google.protobuf.SingleFieldBuilderV3<
             io.opencannabis.schema.commerce.CommercialOrder.Order, io.opencannabis.schema.commerce.CommercialOrder.Order.Builder, io.opencannabis.schema.commerce.CommercialOrder.OrderOrBuilder> orderBuilder_;
         /**
@@ -8339,7 +8334,7 @@ public final class EmailComms {
         @java.lang.Override
         public final Builder setUnknownFields(
             final com.google.protobuf.UnknownFieldSet unknownFields) {
-          return super.setUnknownFieldsProto3(unknownFields);
+          return super.setUnknownFields(unknownFields);
         }
 
         @java.lang.Override
@@ -8536,7 +8531,7 @@ public final class EmailComms {
                 break;
               }
               default: {
-                if (!parseUnknownFieldProto3(
+                if (!parseUnknownField(
                     input, unknownFields, extensionRegistry, tag)) {
                   done = true;
                 }
@@ -8916,16 +8911,15 @@ public final class EmailComms {
         }
         io.bloombox.schema.comms.EmailComms.EmailMetadata.OneClickAction other = (io.bloombox.schema.comms.EmailComms.EmailMetadata.OneClickAction) obj;
 
-        boolean result = true;
-        result = result && type_ == other.type_;
-        result = result && getName()
-            .equals(other.getName());
-        result = result && getTarget()
-            .equals(other.getTarget());
-        result = result && getDescription()
-            .equals(other.getDescription());
-        result = result && unknownFields.equals(other.unknownFields);
-        return result;
+        if (type_ != other.type_) return false;
+        if (!getName()
+            .equals(other.getName())) return false;
+        if (!getTarget()
+            .equals(other.getTarget())) return false;
+        if (!getDescription()
+            .equals(other.getDescription())) return false;
+        if (!unknownFields.equals(other.unknownFields)) return false;
+        return true;
       }
 
       @java.lang.Override
@@ -9124,35 +9118,35 @@ public final class EmailComms {
 
         @java.lang.Override
         public Builder clone() {
-          return (Builder) super.clone();
+          return super.clone();
         }
         @java.lang.Override
         public Builder setField(
             com.google.protobuf.Descriptors.FieldDescriptor field,
             java.lang.Object value) {
-          return (Builder) super.setField(field, value);
+          return super.setField(field, value);
         }
         @java.lang.Override
         public Builder clearField(
             com.google.protobuf.Descriptors.FieldDescriptor field) {
-          return (Builder) super.clearField(field);
+          return super.clearField(field);
         }
         @java.lang.Override
         public Builder clearOneof(
             com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-          return (Builder) super.clearOneof(oneof);
+          return super.clearOneof(oneof);
         }
         @java.lang.Override
         public Builder setRepeatedField(
             com.google.protobuf.Descriptors.FieldDescriptor field,
             int index, java.lang.Object value) {
-          return (Builder) super.setRepeatedField(field, index, value);
+          return super.setRepeatedField(field, index, value);
         }
         @java.lang.Override
         public Builder addRepeatedField(
             com.google.protobuf.Descriptors.FieldDescriptor field,
             java.lang.Object value) {
-          return (Builder) super.addRepeatedField(field, value);
+          return super.addRepeatedField(field, value);
         }
         @java.lang.Override
         public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -9544,7 +9538,7 @@ public final class EmailComms {
         @java.lang.Override
         public final Builder setUnknownFields(
             final com.google.protobuf.UnknownFieldSet unknownFields) {
-          return super.setUnknownFieldsProto3(unknownFields);
+          return super.setUnknownFields(unknownFields);
         }
 
         @java.lang.Override
@@ -9729,7 +9723,6 @@ public final class EmailComms {
       }
       private OrderMetadata() {
         currency_ = "";
-        subtotal_ = 0D;
         statusUrl_ = "";
         mobileUrl_ = "";
       }
@@ -9808,7 +9801,7 @@ public final class EmailComms {
                 break;
               }
               default: {
-                if (!parseUnknownFieldProto3(
+                if (!parseUnknownField(
                     input, unknownFields, extensionRegistry, tag)) {
                   done = true;
                 }
@@ -10121,29 +10114,27 @@ public final class EmailComms {
         }
         io.bloombox.schema.comms.EmailComms.EmailMetadata.OrderMetadata other = (io.bloombox.schema.comms.EmailComms.EmailMetadata.OrderMetadata) obj;
 
-        boolean result = true;
-        result = result && (hasPartner() == other.hasPartner());
+        if (hasPartner() != other.hasPartner()) return false;
         if (hasPartner()) {
-          result = result && getPartner()
-              .equals(other.getPartner());
+          if (!getPartner()
+              .equals(other.getPartner())) return false;
         }
-        result = result && (hasOrder() == other.hasOrder());
+        if (hasOrder() != other.hasOrder()) return false;
         if (hasOrder()) {
-          result = result && getOrder()
-              .equals(other.getOrder());
+          if (!getOrder()
+              .equals(other.getOrder())) return false;
         }
-        result = result && getCurrency()
-            .equals(other.getCurrency());
-        result = result && (
-            java.lang.Double.doubleToLongBits(getSubtotal())
-            == java.lang.Double.doubleToLongBits(
-                other.getSubtotal()));
-        result = result && getStatusUrl()
-            .equals(other.getStatusUrl());
-        result = result && getMobileUrl()
-            .equals(other.getMobileUrl());
-        result = result && unknownFields.equals(other.unknownFields);
-        return result;
+        if (!getCurrency()
+            .equals(other.getCurrency())) return false;
+        if (java.lang.Double.doubleToLongBits(getSubtotal())
+            != java.lang.Double.doubleToLongBits(
+                other.getSubtotal())) return false;
+        if (!getStatusUrl()
+            .equals(other.getStatusUrl())) return false;
+        if (!getMobileUrl()
+            .equals(other.getMobileUrl())) return false;
+        if (!unknownFields.equals(other.unknownFields)) return false;
+        return true;
       }
 
       @java.lang.Override
@@ -10373,35 +10364,35 @@ public final class EmailComms {
 
         @java.lang.Override
         public Builder clone() {
-          return (Builder) super.clone();
+          return super.clone();
         }
         @java.lang.Override
         public Builder setField(
             com.google.protobuf.Descriptors.FieldDescriptor field,
             java.lang.Object value) {
-          return (Builder) super.setField(field, value);
+          return super.setField(field, value);
         }
         @java.lang.Override
         public Builder clearField(
             com.google.protobuf.Descriptors.FieldDescriptor field) {
-          return (Builder) super.clearField(field);
+          return super.clearField(field);
         }
         @java.lang.Override
         public Builder clearOneof(
             com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-          return (Builder) super.clearOneof(oneof);
+          return super.clearOneof(oneof);
         }
         @java.lang.Override
         public Builder setRepeatedField(
             com.google.protobuf.Descriptors.FieldDescriptor field,
             int index, java.lang.Object value) {
-          return (Builder) super.setRepeatedField(field, index, value);
+          return super.setRepeatedField(field, index, value);
         }
         @java.lang.Override
         public Builder addRepeatedField(
             com.google.protobuf.Descriptors.FieldDescriptor field,
             java.lang.Object value) {
-          return (Builder) super.addRepeatedField(field, value);
+          return super.addRepeatedField(field, value);
         }
         @java.lang.Override
         public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -10465,7 +10456,7 @@ public final class EmailComms {
           return this;
         }
 
-        private io.bloombox.schema.partner.PartnerAccount.Partner partner_ = null;
+        private io.bloombox.schema.partner.PartnerAccount.Partner partner_;
         private com.google.protobuf.SingleFieldBuilderV3<
             io.bloombox.schema.partner.PartnerAccount.Partner, io.bloombox.schema.partner.PartnerAccount.Partner.Builder, io.bloombox.schema.partner.PartnerAccount.PartnerOrBuilder> partnerBuilder_;
         /**
@@ -10618,7 +10609,7 @@ public final class EmailComms {
           return partnerBuilder_;
         }
 
-        private io.opencannabis.schema.commerce.CommercialOrder.Order order_ = null;
+        private io.opencannabis.schema.commerce.CommercialOrder.Order order_;
         private com.google.protobuf.SingleFieldBuilderV3<
             io.opencannabis.schema.commerce.CommercialOrder.Order, io.opencannabis.schema.commerce.CommercialOrder.Order.Builder, io.opencannabis.schema.commerce.CommercialOrder.OrderOrBuilder> orderBuilder_;
         /**
@@ -11078,7 +11069,7 @@ public final class EmailComms {
         @java.lang.Override
         public final Builder setUnknownFields(
             final com.google.protobuf.UnknownFieldSet unknownFields) {
-          return super.setUnknownFieldsProto3(unknownFields);
+          return super.setUnknownFields(unknownFields);
         }
 
         @java.lang.Override
@@ -11358,7 +11349,7 @@ public final class EmailComms {
                 break;
               }
               default: {
-                if (!parseUnknownFieldProto3(
+                if (!parseUnknownField(
                     input, unknownFields, extensionRegistry, tag)) {
                   done = true;
                 }
@@ -11681,33 +11672,30 @@ public final class EmailComms {
         }
         io.bloombox.schema.comms.EmailComms.EmailMetadata.SchemaBlock other = (io.bloombox.schema.comms.EmailComms.EmailMetadata.SchemaBlock) obj;
 
-        boolean result = true;
-        result = result && type_ == other.type_;
-        result = result && getBlockCase().equals(
-            other.getBlockCase());
-        if (!result) return false;
+        if (type_ != other.type_) return false;
+        if (!getBlockCase().equals(other.getBlockCase())) return false;
         switch (blockCase_) {
           case 10:
-            result = result && getView()
-                .equals(other.getView());
+            if (!getView()
+                .equals(other.getView())) return false;
             break;
           case 15:
-            result = result && getTrack()
-                .equals(other.getTrack());
+            if (!getTrack()
+                .equals(other.getTrack())) return false;
             break;
           case 20:
-            result = result && getOneClick()
-                .equals(other.getOneClick());
+            if (!getOneClick()
+                .equals(other.getOneClick())) return false;
             break;
           case 30:
-            result = result && getOrder()
-                .equals(other.getOrder());
+            if (!getOrder()
+                .equals(other.getOrder())) return false;
             break;
           case 0:
           default:
         }
-        result = result && unknownFields.equals(other.unknownFields);
-        return result;
+        if (!unknownFields.equals(other.unknownFields)) return false;
+        return true;
       }
 
       @java.lang.Override
@@ -11942,35 +11930,35 @@ public final class EmailComms {
 
         @java.lang.Override
         public Builder clone() {
-          return (Builder) super.clone();
+          return super.clone();
         }
         @java.lang.Override
         public Builder setField(
             com.google.protobuf.Descriptors.FieldDescriptor field,
             java.lang.Object value) {
-          return (Builder) super.setField(field, value);
+          return super.setField(field, value);
         }
         @java.lang.Override
         public Builder clearField(
             com.google.protobuf.Descriptors.FieldDescriptor field) {
-          return (Builder) super.clearField(field);
+          return super.clearField(field);
         }
         @java.lang.Override
         public Builder clearOneof(
             com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-          return (Builder) super.clearOneof(oneof);
+          return super.clearOneof(oneof);
         }
         @java.lang.Override
         public Builder setRepeatedField(
             com.google.protobuf.Descriptors.FieldDescriptor field,
             int index, java.lang.Object value) {
-          return (Builder) super.setRepeatedField(field, index, value);
+          return super.setRepeatedField(field, index, value);
         }
         @java.lang.Override
         public Builder addRepeatedField(
             com.google.protobuf.Descriptors.FieldDescriptor field,
             java.lang.Object value) {
-          return (Builder) super.addRepeatedField(field, value);
+          return super.addRepeatedField(field, value);
         }
         @java.lang.Override
         public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -12807,7 +12795,7 @@ public final class EmailComms {
         @java.lang.Override
         public final Builder setUnknownFields(
             final com.google.protobuf.UnknownFieldSet unknownFields) {
-          return super.setUnknownFieldsProto3(unknownFields);
+          return super.setUnknownFields(unknownFields);
         }
 
         @java.lang.Override
@@ -12895,9 +12883,8 @@ public final class EmailComms {
       }
       io.bloombox.schema.comms.EmailComms.EmailMetadata other = (io.bloombox.schema.comms.EmailComms.EmailMetadata) obj;
 
-      boolean result = true;
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -13076,35 +13063,35 @@ public final class EmailComms {
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -13149,7 +13136,7 @@ public final class EmailComms {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -13285,7 +13272,7 @@ public final class EmailComms {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -13394,14 +13381,13 @@ public final class EmailComms {
       }
       io.bloombox.schema.comms.EmailComms.EmailTransmission other = (io.bloombox.schema.comms.EmailComms.EmailTransmission) obj;
 
-      boolean result = true;
-      result = result && (hasMessage() == other.hasMessage());
+      if (hasMessage() != other.hasMessage()) return false;
       if (hasMessage()) {
-        result = result && getMessage()
-            .equals(other.getMessage());
+        if (!getMessage()
+            .equals(other.getMessage())) return false;
       }
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -13595,35 +13581,35 @@ public final class EmailComms {
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -13669,7 +13655,7 @@ public final class EmailComms {
         return this;
       }
 
-      private io.bloombox.schema.comms.EmailComms.EmailMessage message_ = null;
+      private io.bloombox.schema.comms.EmailComms.EmailMessage message_;
       private com.google.protobuf.SingleFieldBuilderV3<
           io.bloombox.schema.comms.EmailComms.EmailMessage, io.bloombox.schema.comms.EmailComms.EmailMessage.Builder, io.bloombox.schema.comms.EmailComms.EmailMessageOrBuilder> messageBuilder_;
       /**
@@ -13824,7 +13810,7 @@ public final class EmailComms {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -13967,7 +13953,7 @@ public final class EmailComms {
               done = true;
               break;
             case 10: {
-              if (!((mutable_bitField0_ & 0x00000001) == 0x00000001)) {
+              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
                 op_ = new java.util.ArrayList<io.bloombox.schema.comms.EmailComms.EmailTransmission>();
                 mutable_bitField0_ |= 0x00000001;
               }
@@ -13976,7 +13962,7 @@ public final class EmailComms {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -13990,7 +13976,7 @@ public final class EmailComms {
         throw new com.google.protobuf.InvalidProtocolBufferException(
             e).setUnfinishedMessage(this);
       } finally {
-        if (((mutable_bitField0_ & 0x00000001) == 0x00000001)) {
+        if (((mutable_bitField0_ & 0x00000001) != 0)) {
           op_ = java.util.Collections.unmodifiableList(op_);
         }
         this.unknownFields = unknownFields.build();
@@ -14110,11 +14096,10 @@ public final class EmailComms {
       }
       io.bloombox.schema.comms.EmailComms.EmailBatch other = (io.bloombox.schema.comms.EmailComms.EmailBatch) obj;
 
-      boolean result = true;
-      result = result && getOpList()
-          .equals(other.getOpList());
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!getOpList()
+          .equals(other.getOpList())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -14300,7 +14285,7 @@ public final class EmailComms {
         io.bloombox.schema.comms.EmailComms.EmailBatch result = new io.bloombox.schema.comms.EmailComms.EmailBatch(this);
         int from_bitField0_ = bitField0_;
         if (opBuilder_ == null) {
-          if (((bitField0_ & 0x00000001) == 0x00000001)) {
+          if (((bitField0_ & 0x00000001) != 0)) {
             op_ = java.util.Collections.unmodifiableList(op_);
             bitField0_ = (bitField0_ & ~0x00000001);
           }
@@ -14314,35 +14299,35 @@ public final class EmailComms {
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -14415,7 +14400,7 @@ public final class EmailComms {
       private java.util.List<io.bloombox.schema.comms.EmailComms.EmailTransmission> op_ =
         java.util.Collections.emptyList();
       private void ensureOpIsMutable() {
-        if (!((bitField0_ & 0x00000001) == 0x00000001)) {
+        if (!((bitField0_ & 0x00000001) != 0)) {
           op_ = new java.util.ArrayList<io.bloombox.schema.comms.EmailComms.EmailTransmission>(op_);
           bitField0_ |= 0x00000001;
          }
@@ -14716,7 +14701,7 @@ public final class EmailComms {
           opBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
               io.bloombox.schema.comms.EmailComms.EmailTransmission, io.bloombox.schema.comms.EmailComms.EmailTransmission.Builder, io.bloombox.schema.comms.EmailComms.EmailTransmissionOrBuilder>(
                   op_,
-                  ((bitField0_ & 0x00000001) == 0x00000001),
+                  ((bitField0_ & 0x00000001) != 0),
                   getParentForChildren(),
                   isClean());
           op_ = null;
@@ -14726,7 +14711,7 @@ public final class EmailComms {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -14893,7 +14878,7 @@ public final class EmailComms {
               break;
             case 8: {
               int rawValue = input.readEnum();
-              if (!((mutable_bitField0_ & 0x00000001) == 0x00000001)) {
+              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
                 role_ = new java.util.ArrayList<java.lang.Integer>();
                 mutable_bitField0_ |= 0x00000001;
               }
@@ -14905,7 +14890,7 @@ public final class EmailComms {
               int oldLimit = input.pushLimit(length);
               while(input.getBytesUntilLimit() > 0) {
                 int rawValue = input.readEnum();
-                if (!((mutable_bitField0_ & 0x00000001) == 0x00000001)) {
+                if (!((mutable_bitField0_ & 0x00000001) != 0)) {
                   role_ = new java.util.ArrayList<java.lang.Integer>();
                   mutable_bitField0_ |= 0x00000001;
                 }
@@ -14928,7 +14913,7 @@ public final class EmailComms {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -14942,7 +14927,7 @@ public final class EmailComms {
         throw new com.google.protobuf.InvalidProtocolBufferException(
             e).setUnfinishedMessage(this);
       } finally {
-        if (((mutable_bitField0_ & 0x00000001) == 0x00000001)) {
+        if (((mutable_bitField0_ & 0x00000001) != 0)) {
           role_ = java.util.Collections.unmodifiableList(role_);
         }
         this.unknownFields = unknownFields.build();
@@ -15279,15 +15264,14 @@ public final class EmailComms {
       }
       io.bloombox.schema.comms.EmailComms.EmailSender other = (io.bloombox.schema.comms.EmailComms.EmailSender) obj;
 
-      boolean result = true;
-      result = result && role_.equals(other.role_);
-      result = result && (hasContact() == other.hasContact());
+      if (!role_.equals(other.role_)) return false;
+      if (hasContact() != other.hasContact()) return false;
       if (hasContact()) {
-        result = result && getContact()
-            .equals(other.getContact());
+        if (!getContact()
+            .equals(other.getContact())) return false;
       }
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -15478,7 +15462,7 @@ public final class EmailComms {
         io.bloombox.schema.comms.EmailComms.EmailSender result = new io.bloombox.schema.comms.EmailComms.EmailSender(this);
         int from_bitField0_ = bitField0_;
         int to_bitField0_ = 0;
-        if (((bitField0_ & 0x00000001) == 0x00000001)) {
+        if (((bitField0_ & 0x00000001) != 0)) {
           role_ = java.util.Collections.unmodifiableList(role_);
           bitField0_ = (bitField0_ & ~0x00000001);
         }
@@ -15495,35 +15479,35 @@ public final class EmailComms {
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -15583,7 +15567,7 @@ public final class EmailComms {
       private java.util.List<java.lang.Integer> role_ =
         java.util.Collections.emptyList();
       private void ensureRoleIsMutable() {
-        if (!((bitField0_ & 0x00000001) == 0x00000001)) {
+        if (!((bitField0_ & 0x00000001) != 0)) {
           role_ = new java.util.ArrayList<java.lang.Integer>(role_);
           bitField0_ |= 0x00000001;
         }
@@ -15746,7 +15730,7 @@ public final class EmailComms {
         return this;
       }
 
-      private io.opencannabis.schema.contact.ContactEmail.EmailAddress contact_ = null;
+      private io.opencannabis.schema.contact.ContactEmail.EmailAddress contact_;
       private com.google.protobuf.SingleFieldBuilderV3<
           io.opencannabis.schema.contact.ContactEmail.EmailAddress, io.opencannabis.schema.contact.ContactEmail.EmailAddress.Builder, io.opencannabis.schema.contact.ContactEmail.EmailAddressOrBuilder> contactBuilder_;
       /**
@@ -15901,7 +15885,7 @@ public final class EmailComms {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -16044,9 +16028,6 @@ public final class EmailComms {
     }
     private EmailSettings() {
       sender_ = java.util.Collections.emptyList();
-      enableText_ = false;
-      enableHtml_ = false;
-      asmGroup_ = 0;
     }
 
     @java.lang.Override
@@ -16074,7 +16055,7 @@ public final class EmailComms {
               done = true;
               break;
             case 10: {
-              if (!((mutable_bitField0_ & 0x00000001) == 0x00000001)) {
+              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
                 sender_ = new java.util.ArrayList<io.bloombox.schema.comms.EmailComms.EmailSender>();
                 mutable_bitField0_ |= 0x00000001;
               }
@@ -16098,7 +16079,7 @@ public final class EmailComms {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -16112,7 +16093,7 @@ public final class EmailComms {
         throw new com.google.protobuf.InvalidProtocolBufferException(
             e).setUnfinishedMessage(this);
       } finally {
-        if (((mutable_bitField0_ & 0x00000001) == 0x00000001)) {
+        if (((mutable_bitField0_ & 0x00000001) != 0)) {
           sender_ = java.util.Collections.unmodifiableList(sender_);
         }
         this.unknownFields = unknownFields.build();
@@ -16293,17 +16274,16 @@ public final class EmailComms {
       }
       io.bloombox.schema.comms.EmailComms.EmailSettings other = (io.bloombox.schema.comms.EmailComms.EmailSettings) obj;
 
-      boolean result = true;
-      result = result && getSenderList()
-          .equals(other.getSenderList());
-      result = result && (getEnableText()
-          == other.getEnableText());
-      result = result && (getEnableHtml()
-          == other.getEnableHtml());
-      result = result && (getAsmGroup()
-          == other.getAsmGroup());
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!getSenderList()
+          .equals(other.getSenderList())) return false;
+      if (getEnableText()
+          != other.getEnableText()) return false;
+      if (getEnableHtml()
+          != other.getEnableHtml()) return false;
+      if (getAsmGroup()
+          != other.getAsmGroup()) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -16504,7 +16484,7 @@ public final class EmailComms {
         int from_bitField0_ = bitField0_;
         int to_bitField0_ = 0;
         if (senderBuilder_ == null) {
-          if (((bitField0_ & 0x00000001) == 0x00000001)) {
+          if (((bitField0_ & 0x00000001) != 0)) {
             sender_ = java.util.Collections.unmodifiableList(sender_);
             bitField0_ = (bitField0_ & ~0x00000001);
           }
@@ -16522,35 +16502,35 @@ public final class EmailComms {
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -16632,7 +16612,7 @@ public final class EmailComms {
       private java.util.List<io.bloombox.schema.comms.EmailComms.EmailSender> sender_ =
         java.util.Collections.emptyList();
       private void ensureSenderIsMutable() {
-        if (!((bitField0_ & 0x00000001) == 0x00000001)) {
+        if (!((bitField0_ & 0x00000001) != 0)) {
           sender_ = new java.util.ArrayList<io.bloombox.schema.comms.EmailComms.EmailSender>(sender_);
           bitField0_ |= 0x00000001;
          }
@@ -16933,7 +16913,7 @@ public final class EmailComms {
           senderBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
               io.bloombox.schema.comms.EmailComms.EmailSender, io.bloombox.schema.comms.EmailComms.EmailSender.Builder, io.bloombox.schema.comms.EmailComms.EmailSenderOrBuilder>(
                   sender_,
-                  ((bitField0_ & 0x00000001) == 0x00000001),
+                  ((bitField0_ & 0x00000001) != 0),
                   getParentForChildren(),
                   isClean());
           sender_ = null;
@@ -17057,7 +17037,7 @@ public final class EmailComms {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override

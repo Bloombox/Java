@@ -1,5 +1,5 @@
 /*
- * Copyright 2018, Momentum Ideas, Co. All rights reserved.
+ * Copyright 2019, Momentum Ideas, Co. All rights reserved.
  *
  * Source and object computer code contained herein is the private intellectual
  * property of Momentum Ideas Co., a Delaware Corporation. Use of this
@@ -162,7 +162,7 @@ public final class Transactions {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -317,19 +317,18 @@ public final class Transactions {
       }
       io.bloombox.schema.ledger.Transactions.CreateOperation other = (io.bloombox.schema.ledger.Transactions.CreateOperation) obj;
 
-      boolean result = true;
-      result = result && (hasAsset() == other.hasAsset());
+      if (hasAsset() != other.hasAsset()) return false;
       if (hasAsset()) {
-        result = result && getAsset()
-            .equals(other.getAsset());
+        if (!getAsset()
+            .equals(other.getAsset())) return false;
       }
-      result = result && (hasOwner() == other.hasOwner());
+      if (hasOwner() != other.hasOwner()) return false;
       if (hasOwner()) {
-        result = result && getOwner()
-            .equals(other.getOwner());
+        if (!getOwner()
+            .equals(other.getOwner())) return false;
       }
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -539,35 +538,35 @@ public final class Transactions {
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -616,7 +615,7 @@ public final class Transactions {
         return this;
       }
 
-      private io.bloombox.schema.ledger.Assets.DigitalAsset asset_ = null;
+      private io.bloombox.schema.ledger.Assets.DigitalAsset asset_;
       private com.google.protobuf.SingleFieldBuilderV3<
           io.bloombox.schema.ledger.Assets.DigitalAsset, io.bloombox.schema.ledger.Assets.DigitalAsset.Builder, io.bloombox.schema.ledger.Assets.DigitalAssetOrBuilder> assetBuilder_;
       /**
@@ -778,7 +777,7 @@ public final class Transactions {
         return assetBuilder_;
       }
 
-      private io.bloombox.schema.ledger.Accounts.LedgerIdentity owner_ = null;
+      private io.bloombox.schema.ledger.Accounts.LedgerIdentity owner_;
       private com.google.protobuf.SingleFieldBuilderV3<
           io.bloombox.schema.ledger.Accounts.LedgerIdentity, io.bloombox.schema.ledger.Accounts.LedgerIdentity.Builder, io.bloombox.schema.ledger.Accounts.LedgerIdentityOrBuilder> ownerBuilder_;
       /**
@@ -942,7 +941,7 @@ public final class Transactions {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -1164,7 +1163,7 @@ public final class Transactions {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -1362,24 +1361,23 @@ public final class Transactions {
       }
       io.bloombox.schema.ledger.Transactions.TransferOperation other = (io.bloombox.schema.ledger.Transactions.TransferOperation) obj;
 
-      boolean result = true;
-      result = result && (hasAsset() == other.hasAsset());
+      if (hasAsset() != other.hasAsset()) return false;
       if (hasAsset()) {
-        result = result && getAsset()
-            .equals(other.getAsset());
+        if (!getAsset()
+            .equals(other.getAsset())) return false;
       }
-      result = result && (hasSource() == other.hasSource());
+      if (hasSource() != other.hasSource()) return false;
       if (hasSource()) {
-        result = result && getSource()
-            .equals(other.getSource());
+        if (!getSource()
+            .equals(other.getSource())) return false;
       }
-      result = result && (hasTarget() == other.hasTarget());
+      if (hasTarget() != other.hasTarget()) return false;
       if (hasTarget()) {
-        result = result && getTarget()
-            .equals(other.getTarget());
+        if (!getTarget()
+            .equals(other.getTarget())) return false;
       }
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -1604,35 +1602,35 @@ public final class Transactions {
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -1684,7 +1682,7 @@ public final class Transactions {
         return this;
       }
 
-      private io.bloombox.schema.ledger.Assets.AssetKey asset_ = null;
+      private io.bloombox.schema.ledger.Assets.AssetKey asset_;
       private com.google.protobuf.SingleFieldBuilderV3<
           io.bloombox.schema.ledger.Assets.AssetKey, io.bloombox.schema.ledger.Assets.AssetKey.Builder, io.bloombox.schema.ledger.Assets.AssetKeyOrBuilder> assetBuilder_;
       /**
@@ -1846,7 +1844,7 @@ public final class Transactions {
         return assetBuilder_;
       }
 
-      private io.bloombox.schema.ledger.Accounts.LedgerIdentity source_ = null;
+      private io.bloombox.schema.ledger.Accounts.LedgerIdentity source_;
       private com.google.protobuf.SingleFieldBuilderV3<
           io.bloombox.schema.ledger.Accounts.LedgerIdentity, io.bloombox.schema.ledger.Accounts.LedgerIdentity.Builder, io.bloombox.schema.ledger.Accounts.LedgerIdentityOrBuilder> sourceBuilder_;
       /**
@@ -2008,7 +2006,7 @@ public final class Transactions {
         return sourceBuilder_;
       }
 
-      private io.bloombox.schema.ledger.Accounts.LedgerIdentity target_ = null;
+      private io.bloombox.schema.ledger.Accounts.LedgerIdentity target_;
       private com.google.protobuf.SingleFieldBuilderV3<
           io.bloombox.schema.ledger.Accounts.LedgerIdentity, io.bloombox.schema.ledger.Accounts.LedgerIdentity.Builder, io.bloombox.schema.ledger.Accounts.LedgerIdentityOrBuilder> targetBuilder_;
       /**
@@ -2172,7 +2170,7 @@ public final class Transactions {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -2325,7 +2323,7 @@ public final class Transactions {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -2494,13 +2492,12 @@ public final class Transactions {
       }
       io.bloombox.schema.ledger.Transactions.TransactionKey other = (io.bloombox.schema.ledger.Transactions.TransactionKey) obj;
 
-      boolean result = true;
-      result = result && getXid()
-          .equals(other.getXid());
-      result = result && getId()
-          .equals(other.getId());
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!getXid()
+          .equals(other.getXid())) return false;
+      if (!getId()
+          .equals(other.getId())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -2690,35 +2687,35 @@ public final class Transactions {
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -2959,7 +2956,7 @@ public final class Transactions {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -3281,7 +3278,7 @@ public final class Transactions {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -3754,40 +3751,37 @@ public final class Transactions {
       }
       io.bloombox.schema.ledger.Transactions.Transaction other = (io.bloombox.schema.ledger.Transactions.Transaction) obj;
 
-      boolean result = true;
-      result = result && (hasKey() == other.hasKey());
+      if (hasKey() != other.hasKey()) return false;
       if (hasKey()) {
-        result = result && getKey()
-            .equals(other.getKey());
+        if (!getKey()
+            .equals(other.getKey())) return false;
       }
-      result = result && operation_ == other.operation_;
-      result = result && (hasCreated() == other.hasCreated());
+      if (operation_ != other.operation_) return false;
+      if (hasCreated() != other.hasCreated()) return false;
       if (hasCreated()) {
-        result = result && getCreated()
-            .equals(other.getCreated());
+        if (!getCreated()
+            .equals(other.getCreated())) return false;
       }
-      result = result && (hasModified() == other.hasModified());
+      if (hasModified() != other.hasModified()) return false;
       if (hasModified()) {
-        result = result && getModified()
-            .equals(other.getModified());
+        if (!getModified()
+            .equals(other.getModified())) return false;
       }
-      result = result && getTxnCase().equals(
-          other.getTxnCase());
-      if (!result) return false;
+      if (!getTxnCase().equals(other.getTxnCase())) return false;
       switch (txnCase_) {
         case 10:
-          result = result && getIssuance()
-              .equals(other.getIssuance());
+          if (!getIssuance()
+              .equals(other.getIssuance())) return false;
           break;
         case 11:
-          result = result && getInterchange()
-              .equals(other.getInterchange());
+          if (!getInterchange()
+              .equals(other.getInterchange())) return false;
           break;
         case 0:
         default:
       }
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -4046,35 +4040,35 @@ public final class Transactions {
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -4157,7 +4151,7 @@ public final class Transactions {
       }
 
 
-      private io.bloombox.schema.ledger.Transactions.TransactionKey key_ = null;
+      private io.bloombox.schema.ledger.Transactions.TransactionKey key_;
       private com.google.protobuf.SingleFieldBuilderV3<
           io.bloombox.schema.ledger.Transactions.TransactionKey, io.bloombox.schema.ledger.Transactions.TransactionKey.Builder, io.bloombox.schema.ledger.Transactions.TransactionKeyOrBuilder> keyBuilder_;
       /**
@@ -4733,7 +4727,7 @@ public final class Transactions {
         return interchangeBuilder_;
       }
 
-      private io.opencannabis.schema.temporal.TemporalInstant.Instant created_ = null;
+      private io.opencannabis.schema.temporal.TemporalInstant.Instant created_;
       private com.google.protobuf.SingleFieldBuilderV3<
           io.opencannabis.schema.temporal.TemporalInstant.Instant, io.opencannabis.schema.temporal.TemporalInstant.Instant.Builder, io.opencannabis.schema.temporal.TemporalInstant.InstantOrBuilder> createdBuilder_;
       /**
@@ -4886,7 +4880,7 @@ public final class Transactions {
         return createdBuilder_;
       }
 
-      private io.opencannabis.schema.temporal.TemporalInstant.Instant modified_ = null;
+      private io.opencannabis.schema.temporal.TemporalInstant.Instant modified_;
       private com.google.protobuf.SingleFieldBuilderV3<
           io.opencannabis.schema.temporal.TemporalInstant.Instant, io.opencannabis.schema.temporal.TemporalInstant.Instant.Builder, io.opencannabis.schema.temporal.TemporalInstant.InstantOrBuilder> modifiedBuilder_;
       /**
@@ -5041,7 +5035,7 @@ public final class Transactions {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override

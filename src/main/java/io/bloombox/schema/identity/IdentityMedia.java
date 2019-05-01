@@ -1,5 +1,5 @@
 /*
- * Copyright 2018, Momentum Ideas, Co. All rights reserved.
+ * Copyright 2019, Momentum Ideas, Co. All rights reserved.
  *
  * Source and object computer code contained herein is the private intellectual
  * property of Momentum Ideas Co., a Delaware Corporation. Use of this
@@ -251,8 +251,6 @@ public final class IdentityMedia {
       type_ = 0;
       orientation_ = 0;
       data_ = com.google.protobuf.ByteString.EMPTY;
-      imageType_ = 0;
-      quality_ = 0D;
     }
 
     @java.lang.Override
@@ -307,7 +305,7 @@ public final class IdentityMedia {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -500,19 +498,17 @@ public final class IdentityMedia {
       }
       io.bloombox.schema.identity.IdentityMedia.IDMediaAttachment other = (io.bloombox.schema.identity.IdentityMedia.IDMediaAttachment) obj;
 
-      boolean result = true;
-      result = result && type_ == other.type_;
-      result = result && orientation_ == other.orientation_;
-      result = result && getData()
-          .equals(other.getData());
-      result = result && (getImageType()
-          == other.getImageType());
-      result = result && (
-          java.lang.Double.doubleToLongBits(getQuality())
-          == java.lang.Double.doubleToLongBits(
-              other.getQuality()));
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (type_ != other.type_) return false;
+      if (orientation_ != other.orientation_) return false;
+      if (!getData()
+          .equals(other.getData())) return false;
+      if (getImageType()
+          != other.getImageType()) return false;
+      if (java.lang.Double.doubleToLongBits(getQuality())
+          != java.lang.Double.doubleToLongBits(
+              other.getQuality())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -717,35 +713,35 @@ public final class IdentityMedia {
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -1052,7 +1048,7 @@ public final class IdentityMedia {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override

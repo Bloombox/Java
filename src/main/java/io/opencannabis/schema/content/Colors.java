@@ -1,12 +1,11 @@
 /*
- * Copyright 2018, Momentum Ideas, Co. All rights reserved.
+ * Copyright 2019, Momentum Ideas Co.
  *
- * Source and object computer code contained herein is the private intellectual
- * property of Momentum Ideas Co., a Delaware Corporation. Use of this
- * code in source form requires permission in writing before use or the
- * assembly, distribution, or publishing of derivative works, for commercial
- * purposes or any other purpose, from a duly authorized officer of Momentum
- * Ideas Co.
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *  http://www.apache.org/licenses/LICENSE-2.0
  *
  * Unless required by applicable law or agreed to in writing, software
  * distributed under the License is distributed on an "AS IS" BASIS,
@@ -342,10 +341,6 @@ public final class Colors {
       super(builder);
     }
     private RGBAColorSpec() {
-      r_ = 0L;
-      g_ = 0L;
-      b_ = 0L;
-      a_ = 0L;
     }
 
     @java.lang.Override
@@ -393,7 +388,7 @@ public final class Colors {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -542,17 +537,16 @@ public final class Colors {
       }
       io.opencannabis.schema.content.Colors.RGBAColorSpec other = (io.opencannabis.schema.content.Colors.RGBAColorSpec) obj;
 
-      boolean result = true;
-      result = result && (getR()
-          == other.getR());
-      result = result && (getG()
-          == other.getG());
-      result = result && (getB()
-          == other.getB());
-      result = result && (getA()
-          == other.getA());
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (getR()
+          != other.getR()) return false;
+      if (getG()
+          != other.getG()) return false;
+      if (getB()
+          != other.getB()) return false;
+      if (getA()
+          != other.getA()) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -755,35 +749,35 @@ public final class Colors {
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -992,7 +986,7 @@ public final class Colors {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -1090,9 +1084,6 @@ public final class Colors {
       super(builder);
     }
     private HSBColorSpec() {
-      h_ = 0L;
-      s_ = 0L;
-      b_ = 0L;
     }
 
     @java.lang.Override
@@ -1135,7 +1126,7 @@ public final class Colors {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -1264,15 +1255,14 @@ public final class Colors {
       }
       io.opencannabis.schema.content.Colors.HSBColorSpec other = (io.opencannabis.schema.content.Colors.HSBColorSpec) obj;
 
-      boolean result = true;
-      result = result && (getH()
-          == other.getH());
-      result = result && (getS()
-          == other.getS());
-      result = result && (getB()
-          == other.getB());
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (getH()
+          != other.getH()) return false;
+      if (getS()
+          != other.getS()) return false;
+      if (getB()
+          != other.getB()) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -1469,35 +1459,35 @@ public final class Colors {
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -1665,7 +1655,7 @@ public final class Colors {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -1772,10 +1762,6 @@ public final class Colors {
       super(builder);
     }
     private CMYKColorSpec() {
-      c_ = 0L;
-      m_ = 0L;
-      y_ = 0L;
-      k_ = 0L;
     }
 
     @java.lang.Override
@@ -1823,7 +1809,7 @@ public final class Colors {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -1972,17 +1958,16 @@ public final class Colors {
       }
       io.opencannabis.schema.content.Colors.CMYKColorSpec other = (io.opencannabis.schema.content.Colors.CMYKColorSpec) obj;
 
-      boolean result = true;
-      result = result && (getC()
-          == other.getC());
-      result = result && (getM()
-          == other.getM());
-      result = result && (getY()
-          == other.getY());
-      result = result && (getK()
-          == other.getK());
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (getC()
+          != other.getC()) return false;
+      if (getM()
+          != other.getM()) return false;
+      if (getY()
+          != other.getY()) return false;
+      if (getK()
+          != other.getK()) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -2185,35 +2170,35 @@ public final class Colors {
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -2422,7 +2407,7 @@ public final class Colors {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -2686,7 +2671,7 @@ public final class Colors {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -3029,36 +3014,33 @@ public final class Colors {
       }
       io.opencannabis.schema.content.Colors.Color other = (io.opencannabis.schema.content.Colors.Color) obj;
 
-      boolean result = true;
-      result = result && getSpecCase().equals(
-          other.getSpecCase());
-      if (!result) return false;
+      if (!getSpecCase().equals(other.getSpecCase())) return false;
       switch (specCase_) {
         case 1:
-          result = result && getStandardValue()
-              == other.getStandardValue();
+          if (getStandardValue()
+              != other.getStandardValue()) return false;
           break;
         case 2:
-          result = result && getHex()
-              .equals(other.getHex());
+          if (!getHex()
+              .equals(other.getHex())) return false;
           break;
         case 3:
-          result = result && getRgba()
-              .equals(other.getRgba());
+          if (!getRgba()
+              .equals(other.getRgba())) return false;
           break;
         case 4:
-          result = result && getHsb()
-              .equals(other.getHsb());
+          if (!getHsb()
+              .equals(other.getHsb())) return false;
           break;
         case 5:
-          result = result && getCmyk()
-              .equals(other.getCmyk());
+          if (!getCmyk()
+              .equals(other.getCmyk())) return false;
           break;
         case 0:
         default:
       }
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -3291,35 +3273,35 @@ public final class Colors {
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -4096,7 +4078,7 @@ public final class Colors {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -4353,7 +4335,7 @@ public final class Colors {
               break;
             }
             case 34: {
-              if (!((mutable_bitField0_ & 0x00000008) == 0x00000008)) {
+              if (!((mutable_bitField0_ & 0x00000008) != 0)) {
                 shades_ = new java.util.ArrayList<io.opencannabis.schema.content.Colors.Color>();
                 mutable_bitField0_ |= 0x00000008;
               }
@@ -4362,7 +4344,7 @@ public final class Colors {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -4376,7 +4358,7 @@ public final class Colors {
         throw new com.google.protobuf.InvalidProtocolBufferException(
             e).setUnfinishedMessage(this);
       } finally {
-        if (((mutable_bitField0_ & 0x00000008) == 0x00000008)) {
+        if (((mutable_bitField0_ & 0x00000008) != 0)) {
           shades_ = java.util.Collections.unmodifiableList(shades_);
         }
         this.unknownFields = unknownFields.build();
@@ -4617,26 +4599,25 @@ public final class Colors {
       }
       io.opencannabis.schema.content.Colors.ColorScheme other = (io.opencannabis.schema.content.Colors.ColorScheme) obj;
 
-      boolean result = true;
-      result = result && (hasPrimary() == other.hasPrimary());
+      if (hasPrimary() != other.hasPrimary()) return false;
       if (hasPrimary()) {
-        result = result && getPrimary()
-            .equals(other.getPrimary());
+        if (!getPrimary()
+            .equals(other.getPrimary())) return false;
       }
-      result = result && (hasSecondary() == other.hasSecondary());
+      if (hasSecondary() != other.hasSecondary()) return false;
       if (hasSecondary()) {
-        result = result && getSecondary()
-            .equals(other.getSecondary());
+        if (!getSecondary()
+            .equals(other.getSecondary())) return false;
       }
-      result = result && (hasAlert() == other.hasAlert());
+      if (hasAlert() != other.hasAlert()) return false;
       if (hasAlert()) {
-        result = result && getAlert()
-            .equals(other.getAlert());
+        if (!getAlert()
+            .equals(other.getAlert())) return false;
       }
-      result = result && getShadesList()
-          .equals(other.getShadesList());
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!getShadesList()
+          .equals(other.getShadesList())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -4868,7 +4849,7 @@ public final class Colors {
           result.alert_ = alertBuilder_.build();
         }
         if (shadesBuilder_ == null) {
-          if (((bitField0_ & 0x00000008) == 0x00000008)) {
+          if (((bitField0_ & 0x00000008) != 0)) {
             shades_ = java.util.Collections.unmodifiableList(shades_);
             bitField0_ = (bitField0_ & ~0x00000008);
           }
@@ -4883,35 +4864,35 @@ public final class Colors {
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -4990,7 +4971,7 @@ public final class Colors {
       }
       private int bitField0_;
 
-      private io.opencannabis.schema.content.Colors.Color primary_ = null;
+      private io.opencannabis.schema.content.Colors.Color primary_;
       private com.google.protobuf.SingleFieldBuilderV3<
           io.opencannabis.schema.content.Colors.Color, io.opencannabis.schema.content.Colors.Color.Builder, io.opencannabis.schema.content.Colors.ColorOrBuilder> primaryBuilder_;
       /**
@@ -5143,7 +5124,7 @@ public final class Colors {
         return primaryBuilder_;
       }
 
-      private io.opencannabis.schema.content.Colors.Color secondary_ = null;
+      private io.opencannabis.schema.content.Colors.Color secondary_;
       private com.google.protobuf.SingleFieldBuilderV3<
           io.opencannabis.schema.content.Colors.Color, io.opencannabis.schema.content.Colors.Color.Builder, io.opencannabis.schema.content.Colors.ColorOrBuilder> secondaryBuilder_;
       /**
@@ -5296,7 +5277,7 @@ public final class Colors {
         return secondaryBuilder_;
       }
 
-      private io.opencannabis.schema.content.Colors.Color alert_ = null;
+      private io.opencannabis.schema.content.Colors.Color alert_;
       private com.google.protobuf.SingleFieldBuilderV3<
           io.opencannabis.schema.content.Colors.Color, io.opencannabis.schema.content.Colors.Color.Builder, io.opencannabis.schema.content.Colors.ColorOrBuilder> alertBuilder_;
       /**
@@ -5452,7 +5433,7 @@ public final class Colors {
       private java.util.List<io.opencannabis.schema.content.Colors.Color> shades_ =
         java.util.Collections.emptyList();
       private void ensureShadesIsMutable() {
-        if (!((bitField0_ & 0x00000008) == 0x00000008)) {
+        if (!((bitField0_ & 0x00000008) != 0)) {
           shades_ = new java.util.ArrayList<io.opencannabis.schema.content.Colors.Color>(shades_);
           bitField0_ |= 0x00000008;
          }
@@ -5753,7 +5734,7 @@ public final class Colors {
           shadesBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
               io.opencannabis.schema.content.Colors.Color, io.opencannabis.schema.content.Colors.Color.Builder, io.opencannabis.schema.content.Colors.ColorOrBuilder>(
                   shades_,
-                  ((bitField0_ & 0x00000008) == 0x00000008),
+                  ((bitField0_ & 0x00000008) != 0),
                   getParentForChildren(),
                   isClean());
           shades_ = null;
@@ -5763,7 +5744,7 @@ public final class Colors {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override

@@ -1,12 +1,11 @@
 /*
- * Copyright 2018, Momentum Ideas, Co. All rights reserved.
+ * Copyright 2019, Momentum Ideas Co.
  *
- * Source and object computer code contained herein is the private intellectual
- * property of Momentum Ideas Co., a Delaware Corporation. Use of this
- * code in source form requires permission in writing before use or the
- * assembly, distribution, or publishing of derivative works, for commercial
- * purposes or any other purpose, from a duly authorized officer of Momentum
- * Ideas Co.
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *  http://www.apache.org/licenses/LICENSE-2.0
  *
  * Unless required by applicable law or agreed to in writing, software
  * distributed under the License is distributed on an "AS IS" BASIS,
@@ -73,10 +72,11 @@ public final class DeviceOuterClass {
       "\022\030\n\013private_key\030\002 \001(\014B\003\200@\001\022;\n\006sha256\030\003 \001" +
       "(\tB+\212@(SHA256 hash of this device\'s publ" +
       "ic key.\022\025\n\010identity\030\004 \001(\tB\003\200@\001\022\030\n\013author" +
-      "ities\030\005 \003(\014B\003\200@\001*Q\n\nDeviceType\022\027\n\023UNKNOW" +
+      "ities\030\005 \003(\014B\003\200@\001*k\n\nDeviceType\022\027\n\023UNKNOW" +
       "N_DEVICE_TYPE\020\000\022\013\n\007DESKTOP\020\001\022\t\n\005PHONE\020\002\022" +
-      "\n\n\006TABLET\020\003\022\006\n\002TV\020\004B)\n\035io.opencannabis.s" +
-      "chema.deviceH\001P\001\242\002\003OCSb\006proto3"
+      "\n\n\006TABLET\020\003\022\006\n\002TV\020\004\022\014\n\010EMBEDDED\020\005\022\n\n\006SER" +
+      "VER\020\006B)\n\035io.opencannabis.schema.deviceH\001" +
+      "P\001\242\002\003OCSb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {

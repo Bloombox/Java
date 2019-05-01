@@ -1,5 +1,5 @@
 /*
- * Copyright 2018, Momentum Ideas, Co. All rights reserved.
+ * Copyright 2019, Momentum Ideas, Co. All rights reserved.
  *
  * Source and object computer code contained herein is the private intellectual
  * property of Momentum Ideas Co., a Delaware Corporation. Use of this
@@ -1292,7 +1292,7 @@ public final class AppUser {
               break;
             }
             case 162: {
-              if (!((mutable_bitField0_ & 0x00000008) == 0x00000008)) {
+              if (!((mutable_bitField0_ & 0x00000008) != 0)) {
                 identification_ = new java.util.ArrayList<io.bloombox.schema.identity.IdentityID.ID>();
                 mutable_bitField0_ |= 0x00000008;
               }
@@ -1301,7 +1301,7 @@ public final class AppUser {
               break;
             }
             case 170: {
-              if (!((mutable_bitField0_ & 0x00000010) == 0x00000010)) {
+              if (!((mutable_bitField0_ & 0x00000010) != 0)) {
                 doctorRec_ = new java.util.ArrayList<io.bloombox.schema.identity.ids.PrescriptionID.UserDoctorRec>();
                 mutable_bitField0_ |= 0x00000010;
               }
@@ -1336,7 +1336,7 @@ public final class AppUser {
               break;
             }
             case 322: {
-              if (!((mutable_bitField0_ & 0x00000080) == 0x00000080)) {
+              if (!((mutable_bitField0_ & 0x00000080) != 0)) {
                 identities_ = com.google.protobuf.MapField.newMapField(
                     IdentitiesDefaultEntryHolder.defaultEntry);
                 mutable_bitField0_ |= 0x00000080;
@@ -1349,7 +1349,7 @@ public final class AppUser {
               break;
             }
             case 330: {
-              if (!((mutable_bitField0_ & 0x00000100) == 0x00000100)) {
+              if (!((mutable_bitField0_ & 0x00000100) != 0)) {
                 media_ = com.google.protobuf.MapField.newMapField(
                     MediaDefaultEntryHolder.defaultEntry);
                 mutable_bitField0_ |= 0x00000100;
@@ -1388,7 +1388,7 @@ public final class AppUser {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -1402,10 +1402,10 @@ public final class AppUser {
         throw new com.google.protobuf.InvalidProtocolBufferException(
             e).setUnfinishedMessage(this);
       } finally {
-        if (((mutable_bitField0_ & 0x00000008) == 0x00000008)) {
+        if (((mutable_bitField0_ & 0x00000008) != 0)) {
           identification_ = java.util.Collections.unmodifiableList(identification_);
         }
-        if (((mutable_bitField0_ & 0x00000010) == 0x00000010)) {
+        if (((mutable_bitField0_ & 0x00000010) != 0)) {
           doctorRec_ = java.util.Collections.unmodifiableList(doctorRec_);
         }
         this.unknownFields = unknownFields.build();
@@ -2106,49 +2106,48 @@ public final class AppUser {
       }
       io.bloombox.schema.identity.AppUser.User other = (io.bloombox.schema.identity.AppUser.User) obj;
 
-      boolean result = true;
-      result = result && getUid()
-          .equals(other.getUid());
-      result = result && (hasFlags() == other.hasFlags());
+      if (!getUid()
+          .equals(other.getUid())) return false;
+      if (hasFlags() != other.hasFlags()) return false;
       if (hasFlags()) {
-        result = result && getFlags()
-            .equals(other.getFlags());
+        if (!getFlags()
+            .equals(other.getFlags())) return false;
       }
-      result = result && (hasPerson() == other.hasPerson());
+      if (hasPerson() != other.hasPerson()) return false;
       if (hasPerson()) {
-        result = result && getPerson()
-            .equals(other.getPerson());
+        if (!getPerson()
+            .equals(other.getPerson())) return false;
       }
-      result = result && getIdentificationList()
-          .equals(other.getIdentificationList());
-      result = result && getDoctorRecList()
-          .equals(other.getDoctorRecList());
-      result = result && (hasSeen() == other.hasSeen());
+      if (!getIdentificationList()
+          .equals(other.getIdentificationList())) return false;
+      if (!getDoctorRecList()
+          .equals(other.getDoctorRecList())) return false;
+      if (hasSeen() != other.hasSeen()) return false;
       if (hasSeen()) {
-        result = result && getSeen()
-            .equals(other.getSeen());
+        if (!getSeen()
+            .equals(other.getSeen())) return false;
       }
-      result = result && (hasSignup() == other.hasSignup());
+      if (hasSignup() != other.hasSignup()) return false;
       if (hasSignup()) {
-        result = result && getSignup()
-            .equals(other.getSignup());
+        if (!getSignup()
+            .equals(other.getSignup())) return false;
       }
-      result = result && internalGetIdentities().equals(
-          other.internalGetIdentities());
-      result = result && internalGetMedia().equals(
-          other.internalGetMedia());
-      result = result && (hasConsumer() == other.hasConsumer());
+      if (!internalGetIdentities().equals(
+          other.internalGetIdentities())) return false;
+      if (!internalGetMedia().equals(
+          other.internalGetMedia())) return false;
+      if (hasConsumer() != other.hasConsumer()) return false;
       if (hasConsumer()) {
-        result = result && getConsumer()
-            .equals(other.getConsumer());
+        if (!getConsumer()
+            .equals(other.getConsumer())) return false;
       }
-      result = result && (hasIndustry() == other.hasIndustry());
+      if (hasIndustry() != other.hasIndustry()) return false;
       if (hasIndustry()) {
-        result = result && getIndustry()
-            .equals(other.getIndustry());
+        if (!getIndustry()
+            .equals(other.getIndustry())) return false;
       }
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -2457,7 +2456,7 @@ public final class AppUser {
           result.person_ = personBuilder_.build();
         }
         if (identificationBuilder_ == null) {
-          if (((bitField0_ & 0x00000008) == 0x00000008)) {
+          if (((bitField0_ & 0x00000008) != 0)) {
             identification_ = java.util.Collections.unmodifiableList(identification_);
             bitField0_ = (bitField0_ & ~0x00000008);
           }
@@ -2466,7 +2465,7 @@ public final class AppUser {
           result.identification_ = identificationBuilder_.build();
         }
         if (doctorRecBuilder_ == null) {
-          if (((bitField0_ & 0x00000010) == 0x00000010)) {
+          if (((bitField0_ & 0x00000010) != 0)) {
             doctorRec_ = java.util.Collections.unmodifiableList(doctorRec_);
             bitField0_ = (bitField0_ & ~0x00000010);
           }
@@ -2505,35 +2504,35 @@ public final class AppUser {
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -2744,7 +2743,7 @@ public final class AppUser {
         return this;
       }
 
-      private io.bloombox.schema.identity.AppUser.UserFlags flags_ = null;
+      private io.bloombox.schema.identity.AppUser.UserFlags flags_;
       private com.google.protobuf.SingleFieldBuilderV3<
           io.bloombox.schema.identity.AppUser.UserFlags, io.bloombox.schema.identity.AppUser.UserFlags.Builder, io.bloombox.schema.identity.AppUser.UserFlagsOrBuilder> flagsBuilder_;
       /**
@@ -2897,7 +2896,7 @@ public final class AppUser {
         return flagsBuilder_;
       }
 
-      private io.opencannabis.schema.person.Person person_ = null;
+      private io.opencannabis.schema.person.Person person_;
       private com.google.protobuf.SingleFieldBuilderV3<
           io.opencannabis.schema.person.Person, io.opencannabis.schema.person.Person.Builder, io.opencannabis.schema.person.PersonOrBuilder> personBuilder_;
       /**
@@ -3053,7 +3052,7 @@ public final class AppUser {
       private java.util.List<io.bloombox.schema.identity.IdentityID.ID> identification_ =
         java.util.Collections.emptyList();
       private void ensureIdentificationIsMutable() {
-        if (!((bitField0_ & 0x00000008) == 0x00000008)) {
+        if (!((bitField0_ & 0x00000008) != 0)) {
           identification_ = new java.util.ArrayList<io.bloombox.schema.identity.IdentityID.ID>(identification_);
           bitField0_ |= 0x00000008;
          }
@@ -3354,7 +3353,7 @@ public final class AppUser {
           identificationBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
               io.bloombox.schema.identity.IdentityID.ID, io.bloombox.schema.identity.IdentityID.ID.Builder, io.bloombox.schema.identity.IdentityID.IDOrBuilder>(
                   identification_,
-                  ((bitField0_ & 0x00000008) == 0x00000008),
+                  ((bitField0_ & 0x00000008) != 0),
                   getParentForChildren(),
                   isClean());
           identification_ = null;
@@ -3365,7 +3364,7 @@ public final class AppUser {
       private java.util.List<io.bloombox.schema.identity.ids.PrescriptionID.UserDoctorRec> doctorRec_ =
         java.util.Collections.emptyList();
       private void ensureDoctorRecIsMutable() {
-        if (!((bitField0_ & 0x00000010) == 0x00000010)) {
+        if (!((bitField0_ & 0x00000010) != 0)) {
           doctorRec_ = new java.util.ArrayList<io.bloombox.schema.identity.ids.PrescriptionID.UserDoctorRec>(doctorRec_);
           bitField0_ |= 0x00000010;
          }
@@ -3666,7 +3665,7 @@ public final class AppUser {
           doctorRecBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
               io.bloombox.schema.identity.ids.PrescriptionID.UserDoctorRec, io.bloombox.schema.identity.ids.PrescriptionID.UserDoctorRec.Builder, io.bloombox.schema.identity.ids.PrescriptionID.UserDoctorRecOrBuilder>(
                   doctorRec_,
-                  ((bitField0_ & 0x00000010) == 0x00000010),
+                  ((bitField0_ & 0x00000010) != 0),
                   getParentForChildren(),
                   isClean());
           doctorRec_ = null;
@@ -3674,7 +3673,7 @@ public final class AppUser {
         return doctorRecBuilder_;
       }
 
-      private io.opencannabis.schema.temporal.TemporalInstant.Instant seen_ = null;
+      private io.opencannabis.schema.temporal.TemporalInstant.Instant seen_;
       private com.google.protobuf.SingleFieldBuilderV3<
           io.opencannabis.schema.temporal.TemporalInstant.Instant, io.opencannabis.schema.temporal.TemporalInstant.Instant.Builder, io.opencannabis.schema.temporal.TemporalInstant.InstantOrBuilder> seenBuilder_;
       /**
@@ -3827,7 +3826,7 @@ public final class AppUser {
         return seenBuilder_;
       }
 
-      private io.opencannabis.schema.temporal.TemporalInstant.Instant signup_ = null;
+      private io.opencannabis.schema.temporal.TemporalInstant.Instant signup_;
       private com.google.protobuf.SingleFieldBuilderV3<
           io.opencannabis.schema.temporal.TemporalInstant.Instant, io.opencannabis.schema.temporal.TemporalInstant.Instant.Builder, io.opencannabis.schema.temporal.TemporalInstant.InstantOrBuilder> signupBuilder_;
       /**
@@ -4282,7 +4281,7 @@ public final class AppUser {
         return this;
       }
 
-      private io.bloombox.schema.identity.AppUser.ConsumerProfile consumer_ = null;
+      private io.bloombox.schema.identity.AppUser.ConsumerProfile consumer_;
       private com.google.protobuf.SingleFieldBuilderV3<
           io.bloombox.schema.identity.AppUser.ConsumerProfile, io.bloombox.schema.identity.AppUser.ConsumerProfile.Builder, io.bloombox.schema.identity.AppUser.ConsumerProfileOrBuilder> consumerBuilder_;
       /**
@@ -4435,7 +4434,7 @@ public final class AppUser {
         return consumerBuilder_;
       }
 
-      private io.bloombox.schema.identity.AppUser.IndustryProfile industry_ = null;
+      private io.bloombox.schema.identity.AppUser.IndustryProfile industry_;
       private com.google.protobuf.SingleFieldBuilderV3<
           io.bloombox.schema.identity.AppUser.IndustryProfile, io.bloombox.schema.identity.AppUser.IndustryProfile.Builder, io.bloombox.schema.identity.AppUser.IndustryProfileOrBuilder> industryBuilder_;
       /**
@@ -4590,7 +4589,7 @@ public final class AppUser {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -4706,11 +4705,6 @@ public final class AppUser {
       super(builder);
     }
     private UserFlags() {
-      validated_ = false;
-      suspended_ = false;
-      admin_ = false;
-      beta_ = false;
-      sandbox_ = false;
     }
 
     @java.lang.Override
@@ -4763,7 +4757,7 @@ public final class AppUser {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -4932,19 +4926,18 @@ public final class AppUser {
       }
       io.bloombox.schema.identity.AppUser.UserFlags other = (io.bloombox.schema.identity.AppUser.UserFlags) obj;
 
-      boolean result = true;
-      result = result && (getValidated()
-          == other.getValidated());
-      result = result && (getSuspended()
-          == other.getSuspended());
-      result = result && (getAdmin()
-          == other.getAdmin());
-      result = result && (getBeta()
-          == other.getBeta());
-      result = result && (getSandbox()
-          == other.getSandbox());
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (getValidated()
+          != other.getValidated()) return false;
+      if (getSuspended()
+          != other.getSuspended()) return false;
+      if (getAdmin()
+          != other.getAdmin()) return false;
+      if (getBeta()
+          != other.getBeta()) return false;
+      if (getSandbox()
+          != other.getSandbox()) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -5153,35 +5146,35 @@ public final class AppUser {
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -5431,7 +5424,7 @@ public final class AppUser {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -5616,7 +5609,7 @@ public final class AppUser {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -5805,17 +5798,16 @@ public final class AppUser {
       }
       io.bloombox.schema.identity.AppUser.UserIdentity other = (io.bloombox.schema.identity.AppUser.UserIdentity) obj;
 
-      boolean result = true;
-      result = result && provider_ == other.provider_;
-      result = result && getId()
-          .equals(other.getId());
-      result = result && (hasSeen() == other.hasSeen());
+      if (provider_ != other.provider_) return false;
+      if (!getId()
+          .equals(other.getId())) return false;
+      if (hasSeen() != other.hasSeen()) return false;
       if (hasSeen()) {
-        result = result && getSeen()
-            .equals(other.getSeen());
+        if (!getSeen()
+            .equals(other.getSeen())) return false;
       }
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -6019,35 +6011,35 @@ public final class AppUser {
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -6254,7 +6246,7 @@ public final class AppUser {
         return this;
       }
 
-      private io.opencannabis.schema.temporal.TemporalInstant.Instant seen_ = null;
+      private io.opencannabis.schema.temporal.TemporalInstant.Instant seen_;
       private com.google.protobuf.SingleFieldBuilderV3<
           io.opencannabis.schema.temporal.TemporalInstant.Instant, io.opencannabis.schema.temporal.TemporalInstant.Instant.Builder, io.opencannabis.schema.temporal.TemporalInstant.InstantOrBuilder> seenBuilder_;
       /**
@@ -6409,7 +6401,7 @@ public final class AppUser {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -6636,7 +6628,6 @@ public final class AppUser {
       super(builder);
     }
     private ConsumerProfile() {
-      active_ = false;
       favoriteDispensaries_ = com.google.protobuf.LazyStringArrayList.EMPTY;
       enrollmentSource_ = 0;
       enrollmentChannel_ = "";
@@ -6676,7 +6667,7 @@ public final class AppUser {
             }
             case 18: {
               java.lang.String s = input.readStringRequireUtf8();
-              if (!((mutable_bitField0_ & 0x00000002) == 0x00000002)) {
+              if (!((mutable_bitField0_ & 0x00000002) != 0)) {
                 favoriteDispensaries_ = new com.google.protobuf.LazyStringArrayList();
                 mutable_bitField0_ |= 0x00000002;
               }
@@ -6727,7 +6718,7 @@ public final class AppUser {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -6741,7 +6732,7 @@ public final class AppUser {
         throw new com.google.protobuf.InvalidProtocolBufferException(
             e).setUnfinishedMessage(this);
       } finally {
-        if (((mutable_bitField0_ & 0x00000002) == 0x00000002)) {
+        if (((mutable_bitField0_ & 0x00000002) != 0)) {
           favoriteDispensaries_ = favoriteDispensaries_.getUnmodifiableView();
         }
         this.unknownFields = unknownFields.build();
@@ -7108,25 +7099,24 @@ public final class AppUser {
       }
       io.bloombox.schema.identity.AppUser.ConsumerProfile other = (io.bloombox.schema.identity.AppUser.ConsumerProfile) obj;
 
-      boolean result = true;
-      result = result && (getActive()
-          == other.getActive());
-      result = result && getFavoriteDispensariesList()
-          .equals(other.getFavoriteDispensariesList());
-      result = result && enrollmentSource_ == other.enrollmentSource_;
-      result = result && getEnrollmentChannel()
-          .equals(other.getEnrollmentChannel());
-      result = result && (hasPreferences() == other.hasPreferences());
+      if (getActive()
+          != other.getActive()) return false;
+      if (!getFavoriteDispensariesList()
+          .equals(other.getFavoriteDispensariesList())) return false;
+      if (enrollmentSource_ != other.enrollmentSource_) return false;
+      if (!getEnrollmentChannel()
+          .equals(other.getEnrollmentChannel())) return false;
+      if (hasPreferences() != other.hasPreferences()) return false;
       if (hasPreferences()) {
-        result = result && getPreferences()
-            .equals(other.getPreferences());
+        if (!getPreferences()
+            .equals(other.getPreferences())) return false;
       }
-      result = result && type_ == other.type_;
-      result = result && referralSource_ == other.referralSource_;
-      result = result && getReferralDetail()
-          .equals(other.getReferralDetail());
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (type_ != other.type_) return false;
+      if (referralSource_ != other.referralSource_) return false;
+      if (!getReferralDetail()
+          .equals(other.getReferralDetail())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -7343,7 +7333,7 @@ public final class AppUser {
         int from_bitField0_ = bitField0_;
         int to_bitField0_ = 0;
         result.active_ = active_;
-        if (((bitField0_ & 0x00000002) == 0x00000002)) {
+        if (((bitField0_ & 0x00000002) != 0)) {
           favoriteDispensaries_ = favoriteDispensaries_.getUnmodifiableView();
           bitField0_ = (bitField0_ & ~0x00000002);
         }
@@ -7365,35 +7355,35 @@ public final class AppUser {
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -7510,7 +7500,7 @@ public final class AppUser {
 
       private com.google.protobuf.LazyStringList favoriteDispensaries_ = com.google.protobuf.LazyStringArrayList.EMPTY;
       private void ensureFavoriteDispensariesIsMutable() {
-        if (!((bitField0_ & 0x00000002) == 0x00000002)) {
+        if (!((bitField0_ & 0x00000002) != 0)) {
           favoriteDispensaries_ = new com.google.protobuf.LazyStringArrayList(favoriteDispensaries_);
           bitField0_ |= 0x00000002;
          }
@@ -7792,7 +7782,7 @@ public final class AppUser {
         return this;
       }
 
-      private io.bloombox.schema.identity.AppUser.ConsumerPreferences preferences_ = null;
+      private io.bloombox.schema.identity.AppUser.ConsumerPreferences preferences_;
       private com.google.protobuf.SingleFieldBuilderV3<
           io.bloombox.schema.identity.AppUser.ConsumerPreferences, io.bloombox.schema.identity.AppUser.ConsumerPreferences.Builder, io.bloombox.schema.identity.AppUser.ConsumerPreferencesOrBuilder> preferencesBuilder_;
       /**
@@ -8166,7 +8156,7 @@ public final class AppUser {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -8516,7 +8506,7 @@ public final class AppUser {
               break;
             case 8: {
               int rawValue = input.readEnum();
-              if (!((mutable_bitField0_ & 0x00000001) == 0x00000001)) {
+              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
                 section_ = new java.util.ArrayList<java.lang.Integer>();
                 mutable_bitField0_ |= 0x00000001;
               }
@@ -8528,7 +8518,7 @@ public final class AppUser {
               int oldLimit = input.pushLimit(length);
               while(input.getBytesUntilLimit() > 0) {
                 int rawValue = input.readEnum();
-                if (!((mutable_bitField0_ & 0x00000001) == 0x00000001)) {
+                if (!((mutable_bitField0_ & 0x00000001) != 0)) {
                   section_ = new java.util.ArrayList<java.lang.Integer>();
                   mutable_bitField0_ |= 0x00000001;
                 }
@@ -8539,7 +8529,7 @@ public final class AppUser {
             }
             case 16: {
               int rawValue = input.readEnum();
-              if (!((mutable_bitField0_ & 0x00000002) == 0x00000002)) {
+              if (!((mutable_bitField0_ & 0x00000002) != 0)) {
                 feeling_ = new java.util.ArrayList<java.lang.Integer>();
                 mutable_bitField0_ |= 0x00000002;
               }
@@ -8551,7 +8541,7 @@ public final class AppUser {
               int oldLimit = input.pushLimit(length);
               while(input.getBytesUntilLimit() > 0) {
                 int rawValue = input.readEnum();
-                if (!((mutable_bitField0_ & 0x00000002) == 0x00000002)) {
+                if (!((mutable_bitField0_ & 0x00000002) != 0)) {
                   feeling_ = new java.util.ArrayList<java.lang.Integer>();
                   mutable_bitField0_ |= 0x00000002;
                 }
@@ -8562,7 +8552,7 @@ public final class AppUser {
             }
             case 24: {
               int rawValue = input.readEnum();
-              if (!((mutable_bitField0_ & 0x00000004) == 0x00000004)) {
+              if (!((mutable_bitField0_ & 0x00000004) != 0)) {
                 tasteNote_ = new java.util.ArrayList<java.lang.Integer>();
                 mutable_bitField0_ |= 0x00000004;
               }
@@ -8574,7 +8564,7 @@ public final class AppUser {
               int oldLimit = input.pushLimit(length);
               while(input.getBytesUntilLimit() > 0) {
                 int rawValue = input.readEnum();
-                if (!((mutable_bitField0_ & 0x00000004) == 0x00000004)) {
+                if (!((mutable_bitField0_ & 0x00000004) != 0)) {
                   tasteNote_ = new java.util.ArrayList<java.lang.Integer>();
                   mutable_bitField0_ |= 0x00000004;
                 }
@@ -8597,7 +8587,7 @@ public final class AppUser {
             }
             case 48: {
               int rawValue = input.readEnum();
-              if (!((mutable_bitField0_ & 0x00000020) == 0x00000020)) {
+              if (!((mutable_bitField0_ & 0x00000020) != 0)) {
                 species_ = new java.util.ArrayList<java.lang.Integer>();
                 mutable_bitField0_ |= 0x00000020;
               }
@@ -8609,7 +8599,7 @@ public final class AppUser {
               int oldLimit = input.pushLimit(length);
               while(input.getBytesUntilLimit() > 0) {
                 int rawValue = input.readEnum();
-                if (!((mutable_bitField0_ & 0x00000020) == 0x00000020)) {
+                if (!((mutable_bitField0_ & 0x00000020) != 0)) {
                   species_ = new java.util.ArrayList<java.lang.Integer>();
                   mutable_bitField0_ |= 0x00000020;
                 }
@@ -8620,7 +8610,7 @@ public final class AppUser {
             }
             case 56: {
               int rawValue = input.readEnum();
-              if (!((mutable_bitField0_ & 0x00000040) == 0x00000040)) {
+              if (!((mutable_bitField0_ & 0x00000040) != 0)) {
                 grow_ = new java.util.ArrayList<java.lang.Integer>();
                 mutable_bitField0_ |= 0x00000040;
               }
@@ -8632,7 +8622,7 @@ public final class AppUser {
               int oldLimit = input.pushLimit(length);
               while(input.getBytesUntilLimit() > 0) {
                 int rawValue = input.readEnum();
-                if (!((mutable_bitField0_ & 0x00000040) == 0x00000040)) {
+                if (!((mutable_bitField0_ & 0x00000040) != 0)) {
                   grow_ = new java.util.ArrayList<java.lang.Integer>();
                   mutable_bitField0_ |= 0x00000040;
                 }
@@ -8642,7 +8632,7 @@ public final class AppUser {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -8656,19 +8646,19 @@ public final class AppUser {
         throw new com.google.protobuf.InvalidProtocolBufferException(
             e).setUnfinishedMessage(this);
       } finally {
-        if (((mutable_bitField0_ & 0x00000001) == 0x00000001)) {
+        if (((mutable_bitField0_ & 0x00000001) != 0)) {
           section_ = java.util.Collections.unmodifiableList(section_);
         }
-        if (((mutable_bitField0_ & 0x00000002) == 0x00000002)) {
+        if (((mutable_bitField0_ & 0x00000002) != 0)) {
           feeling_ = java.util.Collections.unmodifiableList(feeling_);
         }
-        if (((mutable_bitField0_ & 0x00000004) == 0x00000004)) {
+        if (((mutable_bitField0_ & 0x00000004) != 0)) {
           tasteNote_ = java.util.Collections.unmodifiableList(tasteNote_);
         }
-        if (((mutable_bitField0_ & 0x00000020) == 0x00000020)) {
+        if (((mutable_bitField0_ & 0x00000020) != 0)) {
           species_ = java.util.Collections.unmodifiableList(species_);
         }
-        if (((mutable_bitField0_ & 0x00000040) == 0x00000040)) {
+        if (((mutable_bitField0_ & 0x00000040) != 0)) {
           grow_ = java.util.Collections.unmodifiableList(grow_);
         }
         this.unknownFields = unknownFields.build();
@@ -9217,16 +9207,15 @@ public final class AppUser {
       }
       io.bloombox.schema.identity.AppUser.MenuPreferences other = (io.bloombox.schema.identity.AppUser.MenuPreferences) obj;
 
-      boolean result = true;
-      result = result && section_.equals(other.section_);
-      result = result && feeling_.equals(other.feeling_);
-      result = result && tasteNote_.equals(other.tasteNote_);
-      result = result && desiredPotency_ == other.desiredPotency_;
-      result = result && cannabinoidRatio_ == other.cannabinoidRatio_;
-      result = result && species_.equals(other.species_);
-      result = result && grow_.equals(other.grow_);
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!section_.equals(other.section_)) return false;
+      if (!feeling_.equals(other.feeling_)) return false;
+      if (!tasteNote_.equals(other.tasteNote_)) return false;
+      if (desiredPotency_ != other.desiredPotency_) return false;
+      if (cannabinoidRatio_ != other.cannabinoidRatio_) return false;
+      if (!species_.equals(other.species_)) return false;
+      if (!grow_.equals(other.grow_)) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -9439,29 +9428,29 @@ public final class AppUser {
         io.bloombox.schema.identity.AppUser.MenuPreferences result = new io.bloombox.schema.identity.AppUser.MenuPreferences(this);
         int from_bitField0_ = bitField0_;
         int to_bitField0_ = 0;
-        if (((bitField0_ & 0x00000001) == 0x00000001)) {
+        if (((bitField0_ & 0x00000001) != 0)) {
           section_ = java.util.Collections.unmodifiableList(section_);
           bitField0_ = (bitField0_ & ~0x00000001);
         }
         result.section_ = section_;
-        if (((bitField0_ & 0x00000002) == 0x00000002)) {
+        if (((bitField0_ & 0x00000002) != 0)) {
           feeling_ = java.util.Collections.unmodifiableList(feeling_);
           bitField0_ = (bitField0_ & ~0x00000002);
         }
         result.feeling_ = feeling_;
-        if (((bitField0_ & 0x00000004) == 0x00000004)) {
+        if (((bitField0_ & 0x00000004) != 0)) {
           tasteNote_ = java.util.Collections.unmodifiableList(tasteNote_);
           bitField0_ = (bitField0_ & ~0x00000004);
         }
         result.tasteNote_ = tasteNote_;
         result.desiredPotency_ = desiredPotency_;
         result.cannabinoidRatio_ = cannabinoidRatio_;
-        if (((bitField0_ & 0x00000020) == 0x00000020)) {
+        if (((bitField0_ & 0x00000020) != 0)) {
           species_ = java.util.Collections.unmodifiableList(species_);
           bitField0_ = (bitField0_ & ~0x00000020);
         }
         result.species_ = species_;
-        if (((bitField0_ & 0x00000040) == 0x00000040)) {
+        if (((bitField0_ & 0x00000040) != 0)) {
           grow_ = java.util.Collections.unmodifiableList(grow_);
           bitField0_ = (bitField0_ & ~0x00000040);
         }
@@ -9473,35 +9462,35 @@ public final class AppUser {
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -9604,7 +9593,7 @@ public final class AppUser {
       private java.util.List<java.lang.Integer> section_ =
         java.util.Collections.emptyList();
       private void ensureSectionIsMutable() {
-        if (!((bitField0_ & 0x00000001) == 0x00000001)) {
+        if (!((bitField0_ & 0x00000001) != 0)) {
           section_ = new java.util.ArrayList<java.lang.Integer>(section_);
           bitField0_ |= 0x00000001;
         }
@@ -9770,7 +9759,7 @@ public final class AppUser {
       private java.util.List<java.lang.Integer> feeling_ =
         java.util.Collections.emptyList();
       private void ensureFeelingIsMutable() {
-        if (!((bitField0_ & 0x00000002) == 0x00000002)) {
+        if (!((bitField0_ & 0x00000002) != 0)) {
           feeling_ = new java.util.ArrayList<java.lang.Integer>(feeling_);
           bitField0_ |= 0x00000002;
         }
@@ -9936,7 +9925,7 @@ public final class AppUser {
       private java.util.List<java.lang.Integer> tasteNote_ =
         java.util.Collections.emptyList();
       private void ensureTasteNoteIsMutable() {
-        if (!((bitField0_ & 0x00000004) == 0x00000004)) {
+        if (!((bitField0_ & 0x00000004) != 0)) {
           tasteNote_ = new java.util.ArrayList<java.lang.Integer>(tasteNote_);
           bitField0_ |= 0x00000004;
         }
@@ -10232,7 +10221,7 @@ public final class AppUser {
       private java.util.List<java.lang.Integer> species_ =
         java.util.Collections.emptyList();
       private void ensureSpeciesIsMutable() {
-        if (!((bitField0_ & 0x00000020) == 0x00000020)) {
+        if (!((bitField0_ & 0x00000020) != 0)) {
           species_ = new java.util.ArrayList<java.lang.Integer>(species_);
           bitField0_ |= 0x00000020;
         }
@@ -10398,7 +10387,7 @@ public final class AppUser {
       private java.util.List<java.lang.Integer> grow_ =
         java.util.Collections.emptyList();
       private void ensureGrowIsMutable() {
-        if (!((bitField0_ & 0x00000040) == 0x00000040)) {
+        if (!((bitField0_ & 0x00000040) != 0)) {
           grow_ = new java.util.ArrayList<java.lang.Integer>(grow_);
           bitField0_ |= 0x00000040;
         }
@@ -10563,7 +10552,7 @@ public final class AppUser {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -10802,7 +10791,7 @@ public final class AppUser {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -11137,37 +11126,34 @@ public final class AppUser {
       }
       io.bloombox.schema.identity.AppUser.ProductTypePreference other = (io.bloombox.schema.identity.AppUser.ProductTypePreference) obj;
 
-      boolean result = true;
-      result = result && major_ == other.major_;
-      result = result && getMinorCase().equals(
-          other.getMinorCase());
-      if (!result) return false;
+      if (major_ != other.major_) return false;
+      if (!getMinorCase().equals(other.getMinorCase())) return false;
       switch (minorCase_) {
         case 10:
-          result = result && getApothecaryValue()
-              == other.getApothecaryValue();
+          if (getApothecaryValue()
+              != other.getApothecaryValue()) return false;
           break;
         case 11:
-          result = result && getCartridgeValue()
-              == other.getCartridgeValue();
+          if (getCartridgeValue()
+              != other.getCartridgeValue()) return false;
           break;
         case 12:
-          result = result && getEdibleValue()
-              == other.getEdibleValue();
+          if (getEdibleValue()
+              != other.getEdibleValue()) return false;
           break;
         case 13:
-          result = result && getExtractValue()
-              == other.getExtractValue();
+          if (getExtractValue()
+              != other.getExtractValue()) return false;
           break;
         case 14:
-          result = result && getPlantValue()
-              == other.getPlantValue();
+          if (getPlantValue()
+              != other.getPlantValue()) return false;
           break;
         case 0:
         default:
       }
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -11393,35 +11379,35 @@ public final class AppUser {
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -11944,7 +11930,7 @@ public final class AppUser {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -12169,7 +12155,7 @@ public final class AppUser {
             }
             case 88: {
               int rawValue = input.readEnum();
-              if (!((mutable_bitField0_ & 0x00000002) == 0x00000002)) {
+              if (!((mutable_bitField0_ & 0x00000002) != 0)) {
                 method_ = new java.util.ArrayList<java.lang.Integer>();
                 mutable_bitField0_ |= 0x00000002;
               }
@@ -12181,7 +12167,7 @@ public final class AppUser {
               int oldLimit = input.pushLimit(length);
               while(input.getBytesUntilLimit() > 0) {
                 int rawValue = input.readEnum();
-                if (!((mutable_bitField0_ & 0x00000002) == 0x00000002)) {
+                if (!((mutable_bitField0_ & 0x00000002) != 0)) {
                   method_ = new java.util.ArrayList<java.lang.Integer>();
                   mutable_bitField0_ |= 0x00000002;
                 }
@@ -12191,7 +12177,7 @@ public final class AppUser {
               break;
             }
             case 98: {
-              if (!((mutable_bitField0_ & 0x00000004) == 0x00000004)) {
+              if (!((mutable_bitField0_ & 0x00000004) != 0)) {
                 kind_ = new java.util.ArrayList<io.bloombox.schema.identity.AppUser.ProductTypePreference>();
                 mutable_bitField0_ |= 0x00000004;
               }
@@ -12200,7 +12186,7 @@ public final class AppUser {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -12214,10 +12200,10 @@ public final class AppUser {
         throw new com.google.protobuf.InvalidProtocolBufferException(
             e).setUnfinishedMessage(this);
       } finally {
-        if (((mutable_bitField0_ & 0x00000002) == 0x00000002)) {
+        if (((mutable_bitField0_ & 0x00000002) != 0)) {
           method_ = java.util.Collections.unmodifiableList(method_);
         }
-        if (((mutable_bitField0_ & 0x00000004) == 0x00000004)) {
+        if (((mutable_bitField0_ & 0x00000004) != 0)) {
           kind_ = java.util.Collections.unmodifiableList(kind_);
         }
         this.unknownFields = unknownFields.build();
@@ -12464,17 +12450,16 @@ public final class AppUser {
       }
       io.bloombox.schema.identity.AppUser.ConsumerPreferences other = (io.bloombox.schema.identity.AppUser.ConsumerPreferences) obj;
 
-      boolean result = true;
-      result = result && (hasMenu() == other.hasMenu());
+      if (hasMenu() != other.hasMenu()) return false;
       if (hasMenu()) {
-        result = result && getMenu()
-            .equals(other.getMenu());
+        if (!getMenu()
+            .equals(other.getMenu())) return false;
       }
-      result = result && method_.equals(other.method_);
-      result = result && getKindList()
-          .equals(other.getKindList());
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!method_.equals(other.method_)) return false;
+      if (!getKindList()
+          .equals(other.getKindList())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -12681,13 +12666,13 @@ public final class AppUser {
         } else {
           result.menu_ = menuBuilder_.build();
         }
-        if (((bitField0_ & 0x00000002) == 0x00000002)) {
+        if (((bitField0_ & 0x00000002) != 0)) {
           method_ = java.util.Collections.unmodifiableList(method_);
           bitField0_ = (bitField0_ & ~0x00000002);
         }
         result.method_ = method_;
         if (kindBuilder_ == null) {
-          if (((bitField0_ & 0x00000004) == 0x00000004)) {
+          if (((bitField0_ & 0x00000004) != 0)) {
             kind_ = java.util.Collections.unmodifiableList(kind_);
             bitField0_ = (bitField0_ & ~0x00000004);
           }
@@ -12702,35 +12687,35 @@ public final class AppUser {
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -12813,7 +12798,7 @@ public final class AppUser {
       }
       private int bitField0_;
 
-      private io.bloombox.schema.identity.AppUser.MenuPreferences menu_ = null;
+      private io.bloombox.schema.identity.AppUser.MenuPreferences menu_;
       private com.google.protobuf.SingleFieldBuilderV3<
           io.bloombox.schema.identity.AppUser.MenuPreferences, io.bloombox.schema.identity.AppUser.MenuPreferences.Builder, io.bloombox.schema.identity.AppUser.MenuPreferencesOrBuilder> menuBuilder_;
       /**
@@ -12969,7 +12954,7 @@ public final class AppUser {
       private java.util.List<java.lang.Integer> method_ =
         java.util.Collections.emptyList();
       private void ensureMethodIsMutable() {
-        if (!((bitField0_ & 0x00000002) == 0x00000002)) {
+        if (!((bitField0_ & 0x00000002) != 0)) {
           method_ = new java.util.ArrayList<java.lang.Integer>(method_);
           bitField0_ |= 0x00000002;
         }
@@ -13135,7 +13120,7 @@ public final class AppUser {
       private java.util.List<io.bloombox.schema.identity.AppUser.ProductTypePreference> kind_ =
         java.util.Collections.emptyList();
       private void ensureKindIsMutable() {
-        if (!((bitField0_ & 0x00000004) == 0x00000004)) {
+        if (!((bitField0_ & 0x00000004) != 0)) {
           kind_ = new java.util.ArrayList<io.bloombox.schema.identity.AppUser.ProductTypePreference>(kind_);
           bitField0_ |= 0x00000004;
          }
@@ -13436,7 +13421,7 @@ public final class AppUser {
           kindBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
               io.bloombox.schema.identity.AppUser.ProductTypePreference, io.bloombox.schema.identity.AppUser.ProductTypePreference.Builder, io.bloombox.schema.identity.AppUser.ProductTypePreferenceOrBuilder>(
                   kind_,
-                  ((bitField0_ & 0x00000004) == 0x00000004),
+                  ((bitField0_ & 0x00000004) != 0),
                   getParentForChildren(),
                   isClean());
           kind_ = null;
@@ -13446,7 +13431,7 @@ public final class AppUser {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -13732,7 +13717,7 @@ public final class AppUser {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -14049,29 +14034,28 @@ public final class AppUser {
       }
       io.bloombox.schema.identity.AppUser.ConsumerMembership other = (io.bloombox.schema.identity.AppUser.ConsumerMembership) obj;
 
-      boolean result = true;
-      result = result && referralSource_ == other.referralSource_;
-      result = result && getReferralChannel()
-          .equals(other.getReferralChannel());
-      result = result && (hasSignedUpAt() == other.hasSignedUpAt());
+      if (referralSource_ != other.referralSource_) return false;
+      if (!getReferralChannel()
+          .equals(other.getReferralChannel())) return false;
+      if (hasSignedUpAt() != other.hasSignedUpAt()) return false;
       if (hasSignedUpAt()) {
-        result = result && getSignedUpAt()
-            .equals(other.getSignedUpAt());
+        if (!getSignedUpAt()
+            .equals(other.getSignedUpAt())) return false;
       }
-      result = result && (hasSeen() == other.hasSeen());
+      if (hasSeen() != other.hasSeen()) return false;
       if (hasSeen()) {
-        result = result && getSeen()
-            .equals(other.getSeen());
+        if (!getSeen()
+            .equals(other.getSeen())) return false;
       }
-      result = result && getForeignId()
-          .equals(other.getForeignId());
-      result = result && (hasKey() == other.hasKey());
+      if (!getForeignId()
+          .equals(other.getForeignId())) return false;
+      if (hasKey() != other.hasKey()) return false;
       if (hasKey()) {
-        result = result && getKey()
-            .equals(other.getKey());
+        if (!getKey()
+            .equals(other.getKey())) return false;
       }
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -14310,35 +14294,35 @@ public final class AppUser {
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -14555,7 +14539,7 @@ public final class AppUser {
         return this;
       }
 
-      private io.opencannabis.schema.temporal.TemporalInstant.Instant signedUpAt_ = null;
+      private io.opencannabis.schema.temporal.TemporalInstant.Instant signedUpAt_;
       private com.google.protobuf.SingleFieldBuilderV3<
           io.opencannabis.schema.temporal.TemporalInstant.Instant, io.opencannabis.schema.temporal.TemporalInstant.Instant.Builder, io.opencannabis.schema.temporal.TemporalInstant.InstantOrBuilder> signedUpAtBuilder_;
       /**
@@ -14708,7 +14692,7 @@ public final class AppUser {
         return signedUpAtBuilder_;
       }
 
-      private io.opencannabis.schema.temporal.TemporalInstant.Instant seen_ = null;
+      private io.opencannabis.schema.temporal.TemporalInstant.Instant seen_;
       private com.google.protobuf.SingleFieldBuilderV3<
           io.opencannabis.schema.temporal.TemporalInstant.Instant, io.opencannabis.schema.temporal.TemporalInstant.Instant.Builder, io.opencannabis.schema.temporal.TemporalInstant.InstantOrBuilder> seenBuilder_;
       /**
@@ -14950,7 +14934,7 @@ public final class AppUser {
         return this;
       }
 
-      private io.bloombox.schema.identity.AppMemberKey.MembershipKey key_ = null;
+      private io.bloombox.schema.identity.AppMemberKey.MembershipKey key_;
       private com.google.protobuf.SingleFieldBuilderV3<
           io.bloombox.schema.identity.AppMemberKey.MembershipKey, io.bloombox.schema.identity.AppMemberKey.MembershipKey.Builder, io.bloombox.schema.identity.AppMemberKey.MembershipKeyOrBuilder> keyBuilder_;
       /**
@@ -15105,7 +15089,7 @@ public final class AppUser {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -15264,7 +15248,6 @@ public final class AppUser {
       super(builder);
     }
     private IndustryProfile() {
-      active_ = false;
     }
 
     @java.lang.Override
@@ -15297,7 +15280,7 @@ public final class AppUser {
               break;
             }
             case 18: {
-              if (!((mutable_bitField0_ & 0x00000002) == 0x00000002)) {
+              if (!((mutable_bitField0_ & 0x00000002) != 0)) {
                 partners_ = com.google.protobuf.MapField.newMapField(
                     PartnersDefaultEntryHolder.defaultEntry);
                 mutable_bitField0_ |= 0x00000002;
@@ -15323,7 +15306,7 @@ public final class AppUser {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -15573,18 +15556,17 @@ public final class AppUser {
       }
       io.bloombox.schema.identity.AppUser.IndustryProfile other = (io.bloombox.schema.identity.AppUser.IndustryProfile) obj;
 
-      boolean result = true;
-      result = result && (getActive()
-          == other.getActive());
-      result = result && internalGetPartners().equals(
-          other.internalGetPartners());
-      result = result && (hasSettings() == other.hasSettings());
+      if (getActive()
+          != other.getActive()) return false;
+      if (!internalGetPartners().equals(
+          other.internalGetPartners())) return false;
+      if (hasSettings() != other.hasSettings()) return false;
       if (hasSettings()) {
-        result = result && getSettings()
-            .equals(other.getSettings());
+        if (!getSettings()
+            .equals(other.getSettings())) return false;
       }
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -15816,35 +15798,35 @@ public final class AppUser {
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -16085,7 +16067,7 @@ public final class AppUser {
         return this;
       }
 
-      private io.bloombox.schema.identity.industry.UserStaffSettings.StaffSettings settings_ = null;
+      private io.bloombox.schema.identity.industry.UserStaffSettings.StaffSettings settings_;
       private com.google.protobuf.SingleFieldBuilderV3<
           io.bloombox.schema.identity.industry.UserStaffSettings.StaffSettings, io.bloombox.schema.identity.industry.UserStaffSettings.StaffSettings.Builder, io.bloombox.schema.identity.industry.UserStaffSettings.StaffSettingsOrBuilder> settingsBuilder_;
       /**
@@ -16240,7 +16222,7 @@ public final class AppUser {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override

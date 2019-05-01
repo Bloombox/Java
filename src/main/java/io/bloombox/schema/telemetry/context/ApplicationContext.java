@@ -1,5 +1,5 @@
 /*
- * Copyright 2018, Momentum Ideas, Co. All rights reserved.
+ * Copyright 2019, Momentum Ideas, Co. All rights reserved.
  *
  * Source and object computer code contained herein is the private intellectual
  * property of Momentum Ideas Co., a Delaware Corporation. Use of this
@@ -347,7 +347,7 @@ public final class ApplicationContext {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -704,21 +704,20 @@ public final class ApplicationContext {
       }
       io.bloombox.schema.telemetry.context.ApplicationContext.WebApplication other = (io.bloombox.schema.telemetry.context.ApplicationContext.WebApplication) obj;
 
-      boolean result = true;
-      result = result && getOrigin()
-          .equals(other.getOrigin());
-      result = result && getLocation()
-          .equals(other.getLocation());
-      result = result && getAnchor()
-          .equals(other.getAnchor());
-      result = result && getTitle()
-          .equals(other.getTitle());
-      result = result && getReferrer()
-          .equals(other.getReferrer());
-      result = result && getProtocol()
-          .equals(other.getProtocol());
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!getOrigin()
+          .equals(other.getOrigin())) return false;
+      if (!getLocation()
+          .equals(other.getLocation())) return false;
+      if (!getAnchor()
+          .equals(other.getAnchor())) return false;
+      if (!getTitle()
+          .equals(other.getTitle())) return false;
+      if (!getReferrer()
+          .equals(other.getReferrer())) return false;
+      if (!getProtocol()
+          .equals(other.getProtocol())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -927,35 +926,35 @@ public final class ApplicationContext {
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -1558,7 +1557,7 @@ public final class ApplicationContext {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -1807,7 +1806,7 @@ public final class ApplicationContext {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -2147,34 +2146,31 @@ public final class ApplicationContext {
       }
       io.bloombox.schema.telemetry.context.ApplicationContext.DeviceApplication other = (io.bloombox.schema.telemetry.context.ApplicationContext.DeviceApplication) obj;
 
-      boolean result = true;
-      result = result && type_ == other.type_;
-      result = result && (hasVersion() == other.hasVersion());
+      if (type_ != other.type_) return false;
+      if (hasVersion() != other.hasVersion()) return false;
       if (hasVersion()) {
-        result = result && getVersion()
-            .equals(other.getVersion());
+        if (!getVersion()
+            .equals(other.getVersion())) return false;
       }
-      result = result && getSpecCase().equals(
-          other.getSpecCase());
-      if (!result) return false;
+      if (!getSpecCase().equals(other.getSpecCase())) return false;
       switch (specCase_) {
         case 10:
-          result = result && getWeb()
-              .equals(other.getWeb());
+          if (!getWeb()
+              .equals(other.getWeb())) return false;
           break;
         case 20:
-          result = result && getBundleId()
-              .equals(other.getBundleId());
+          if (!getBundleId()
+              .equals(other.getBundleId())) return false;
           break;
         case 30:
-          result = result && getAndroidPackageId()
-              .equals(other.getAndroidPackageId());
+          if (!getAndroidPackageId()
+              .equals(other.getAndroidPackageId())) return false;
           break;
         case 0:
         default:
       }
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -2405,35 +2401,35 @@ public final class ApplicationContext {
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -2583,7 +2579,7 @@ public final class ApplicationContext {
         return this;
       }
 
-      private io.opencannabis.schema.struct.VersionSpec version_ = null;
+      private io.opencannabis.schema.struct.VersionSpec version_;
       private com.google.protobuf.SingleFieldBuilderV3<
           io.opencannabis.schema.struct.VersionSpec, io.opencannabis.schema.struct.VersionSpec.Builder, io.opencannabis.schema.struct.VersionSpecOrBuilder> versionBuilder_;
       /**
@@ -3110,7 +3106,7 @@ public final class ApplicationContext {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override

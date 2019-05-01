@@ -1,5 +1,5 @@
 /*
- * Copyright 2018, Momentum Ideas, Co. All rights reserved.
+ * Copyright 2019, Momentum Ideas, Co. All rights reserved.
  *
  * Source and object computer code contained herein is the private intellectual
  * property of Momentum Ideas Co., a Delaware Corporation. Use of this
@@ -202,9 +202,6 @@ public final class BioprintOuterClass {
     }
     private MasterKey() {
       name_ = "";
-      sequence_ = 0;
-      disabled_ = false;
-      superseded_ = false;
     }
 
     @java.lang.Override
@@ -305,7 +302,7 @@ public final class BioprintOuterClass {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -644,37 +641,36 @@ public final class BioprintOuterClass {
       }
       io.bloombox.schema.identity.bioprint.BioprintOuterClass.MasterKey other = (io.bloombox.schema.identity.bioprint.BioprintOuterClass.MasterKey) obj;
 
-      boolean result = true;
-      result = result && getName()
-          .equals(other.getName());
-      result = result && (getSequence()
-          == other.getSequence());
-      result = result && (getDisabled()
-          == other.getDisabled());
-      result = result && (getSuperseded()
-          == other.getSuperseded());
-      result = result && (hasKey() == other.hasKey());
+      if (!getName()
+          .equals(other.getName())) return false;
+      if (getSequence()
+          != other.getSequence()) return false;
+      if (getDisabled()
+          != other.getDisabled()) return false;
+      if (getSuperseded()
+          != other.getSuperseded()) return false;
+      if (hasKey() != other.hasKey()) return false;
       if (hasKey()) {
-        result = result && getKey()
-            .equals(other.getKey());
+        if (!getKey()
+            .equals(other.getKey())) return false;
       }
-      result = result && (hasUsed() == other.hasUsed());
+      if (hasUsed() != other.hasUsed()) return false;
       if (hasUsed()) {
-        result = result && getUsed()
-            .equals(other.getUsed());
+        if (!getUsed()
+            .equals(other.getUsed())) return false;
       }
-      result = result && (hasGenerated() == other.hasGenerated());
+      if (hasGenerated() != other.hasGenerated()) return false;
       if (hasGenerated()) {
-        result = result && getGenerated()
-            .equals(other.getGenerated());
+        if (!getGenerated()
+            .equals(other.getGenerated())) return false;
       }
-      result = result && (hasRevoked() == other.hasRevoked());
+      if (hasRevoked() != other.hasRevoked()) return false;
       if (hasRevoked()) {
-        result = result && getRevoked()
-            .equals(other.getRevoked());
+        if (!getRevoked()
+            .equals(other.getRevoked())) return false;
       }
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -937,35 +933,35 @@ public final class BioprintOuterClass {
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -1242,7 +1238,7 @@ public final class BioprintOuterClass {
         return this;
       }
 
-      private io.opencannabis.schema.crypto.primitives.SymmetricKey key_ = null;
+      private io.opencannabis.schema.crypto.primitives.SymmetricKey key_;
       private com.google.protobuf.SingleFieldBuilderV3<
           io.opencannabis.schema.crypto.primitives.SymmetricKey, io.opencannabis.schema.crypto.primitives.SymmetricKey.Builder, io.opencannabis.schema.crypto.primitives.SymmetricKeyOrBuilder> keyBuilder_;
       /**
@@ -1395,7 +1391,7 @@ public final class BioprintOuterClass {
         return keyBuilder_;
       }
 
-      private io.opencannabis.schema.temporal.TemporalInstant.Instant used_ = null;
+      private io.opencannabis.schema.temporal.TemporalInstant.Instant used_;
       private com.google.protobuf.SingleFieldBuilderV3<
           io.opencannabis.schema.temporal.TemporalInstant.Instant, io.opencannabis.schema.temporal.TemporalInstant.Instant.Builder, io.opencannabis.schema.temporal.TemporalInstant.InstantOrBuilder> usedBuilder_;
       /**
@@ -1548,7 +1544,7 @@ public final class BioprintOuterClass {
         return usedBuilder_;
       }
 
-      private io.opencannabis.schema.temporal.TemporalInstant.Instant generated_ = null;
+      private io.opencannabis.schema.temporal.TemporalInstant.Instant generated_;
       private com.google.protobuf.SingleFieldBuilderV3<
           io.opencannabis.schema.temporal.TemporalInstant.Instant, io.opencannabis.schema.temporal.TemporalInstant.Instant.Builder, io.opencannabis.schema.temporal.TemporalInstant.InstantOrBuilder> generatedBuilder_;
       /**
@@ -1701,7 +1697,7 @@ public final class BioprintOuterClass {
         return generatedBuilder_;
       }
 
-      private io.opencannabis.schema.temporal.TemporalInstant.Instant revoked_ = null;
+      private io.opencannabis.schema.temporal.TemporalInstant.Instant revoked_;
       private com.google.protobuf.SingleFieldBuilderV3<
           io.opencannabis.schema.temporal.TemporalInstant.Instant, io.opencannabis.schema.temporal.TemporalInstant.Instant.Builder, io.opencannabis.schema.temporal.TemporalInstant.InstantOrBuilder> revokedBuilder_;
       /**
@@ -1856,7 +1852,7 @@ public final class BioprintOuterClass {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -2033,7 +2029,6 @@ public final class BioprintOuterClass {
     }
     private RestorationKey() {
       name_ = "";
-      disabled_ = false;
     }
 
     @java.lang.Override
@@ -2111,7 +2106,7 @@ public final class BioprintOuterClass {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -2368,28 +2363,27 @@ public final class BioprintOuterClass {
       }
       io.bloombox.schema.identity.bioprint.BioprintOuterClass.RestorationKey other = (io.bloombox.schema.identity.bioprint.BioprintOuterClass.RestorationKey) obj;
 
-      boolean result = true;
-      result = result && getName()
-          .equals(other.getName());
-      result = result && (getDisabled()
-          == other.getDisabled());
-      result = result && (hasKey() == other.hasKey());
+      if (!getName()
+          .equals(other.getName())) return false;
+      if (getDisabled()
+          != other.getDisabled()) return false;
+      if (hasKey() != other.hasKey()) return false;
       if (hasKey()) {
-        result = result && getKey()
-            .equals(other.getKey());
+        if (!getKey()
+            .equals(other.getKey())) return false;
       }
-      result = result && (hasGenerated() == other.hasGenerated());
+      if (hasGenerated() != other.hasGenerated()) return false;
       if (hasGenerated()) {
-        result = result && getGenerated()
-            .equals(other.getGenerated());
+        if (!getGenerated()
+            .equals(other.getGenerated())) return false;
       }
-      result = result && (hasRevoked() == other.hasRevoked());
+      if (hasRevoked() != other.hasRevoked()) return false;
       if (hasRevoked()) {
-        result = result && getRevoked()
-            .equals(other.getRevoked());
+        if (!getRevoked()
+            .equals(other.getRevoked())) return false;
       }
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -2627,35 +2621,35 @@ public final class BioprintOuterClass {
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -2841,7 +2835,7 @@ public final class BioprintOuterClass {
         return this;
       }
 
-      private io.opencannabis.schema.crypto.primitives.SymmetricKey key_ = null;
+      private io.opencannabis.schema.crypto.primitives.SymmetricKey key_;
       private com.google.protobuf.SingleFieldBuilderV3<
           io.opencannabis.schema.crypto.primitives.SymmetricKey, io.opencannabis.schema.crypto.primitives.SymmetricKey.Builder, io.opencannabis.schema.crypto.primitives.SymmetricKeyOrBuilder> keyBuilder_;
       /**
@@ -2994,7 +2988,7 @@ public final class BioprintOuterClass {
         return keyBuilder_;
       }
 
-      private io.opencannabis.schema.temporal.TemporalInstant.Instant generated_ = null;
+      private io.opencannabis.schema.temporal.TemporalInstant.Instant generated_;
       private com.google.protobuf.SingleFieldBuilderV3<
           io.opencannabis.schema.temporal.TemporalInstant.Instant, io.opencannabis.schema.temporal.TemporalInstant.Instant.Builder, io.opencannabis.schema.temporal.TemporalInstant.InstantOrBuilder> generatedBuilder_;
       /**
@@ -3147,7 +3141,7 @@ public final class BioprintOuterClass {
         return generatedBuilder_;
       }
 
-      private io.opencannabis.schema.temporal.TemporalInstant.Instant revoked_ = null;
+      private io.opencannabis.schema.temporal.TemporalInstant.Instant revoked_;
       private com.google.protobuf.SingleFieldBuilderV3<
           io.opencannabis.schema.temporal.TemporalInstant.Instant, io.opencannabis.schema.temporal.TemporalInstant.Instant.Builder, io.opencannabis.schema.temporal.TemporalInstant.InstantOrBuilder> revokedBuilder_;
       /**
@@ -3302,7 +3296,7 @@ public final class BioprintOuterClass {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -3504,7 +3498,6 @@ public final class BioprintOuterClass {
     }
     private StubKey() {
       name_ = "";
-      disabled_ = false;
     }
 
     @java.lang.Override
@@ -3595,7 +3588,7 @@ public final class BioprintOuterClass {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -3892,33 +3885,32 @@ public final class BioprintOuterClass {
       }
       io.bloombox.schema.identity.bioprint.BioprintOuterClass.StubKey other = (io.bloombox.schema.identity.bioprint.BioprintOuterClass.StubKey) obj;
 
-      boolean result = true;
-      result = result && (hasId() == other.hasId());
+      if (hasId() != other.hasId()) return false;
       if (hasId()) {
-        result = result && getId()
-            .equals(other.getId());
+        if (!getId()
+            .equals(other.getId())) return false;
       }
-      result = result && getName()
-          .equals(other.getName());
-      result = result && (getDisabled()
-          == other.getDisabled());
-      result = result && (hasKey() == other.hasKey());
+      if (!getName()
+          .equals(other.getName())) return false;
+      if (getDisabled()
+          != other.getDisabled()) return false;
+      if (hasKey() != other.hasKey()) return false;
       if (hasKey()) {
-        result = result && getKey()
-            .equals(other.getKey());
+        if (!getKey()
+            .equals(other.getKey())) return false;
       }
-      result = result && (hasGenerated() == other.hasGenerated());
+      if (hasGenerated() != other.hasGenerated()) return false;
       if (hasGenerated()) {
-        result = result && getGenerated()
-            .equals(other.getGenerated());
+        if (!getGenerated()
+            .equals(other.getGenerated())) return false;
       }
-      result = result && (hasRevoked() == other.hasRevoked());
+      if (hasRevoked() != other.hasRevoked()) return false;
       if (hasRevoked()) {
-        result = result && getRevoked()
-            .equals(other.getRevoked());
+        if (!getRevoked()
+            .equals(other.getRevoked())) return false;
       }
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -4171,35 +4163,35 @@ public final class BioprintOuterClass {
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -4261,7 +4253,7 @@ public final class BioprintOuterClass {
         return this;
       }
 
-      private io.bloombox.schema.identity.bioprint.BioprintOuterClass.BioprintID id_ = null;
+      private io.bloombox.schema.identity.bioprint.BioprintOuterClass.BioprintID id_;
       private com.google.protobuf.SingleFieldBuilderV3<
           io.bloombox.schema.identity.bioprint.BioprintOuterClass.BioprintID, io.bloombox.schema.identity.bioprint.BioprintOuterClass.BioprintID.Builder, io.bloombox.schema.identity.bioprint.BioprintOuterClass.BioprintIDOrBuilder> idBuilder_;
       /**
@@ -4541,7 +4533,7 @@ public final class BioprintOuterClass {
         return this;
       }
 
-      private io.opencannabis.schema.crypto.primitives.SymmetricKey key_ = null;
+      private io.opencannabis.schema.crypto.primitives.SymmetricKey key_;
       private com.google.protobuf.SingleFieldBuilderV3<
           io.opencannabis.schema.crypto.primitives.SymmetricKey, io.opencannabis.schema.crypto.primitives.SymmetricKey.Builder, io.opencannabis.schema.crypto.primitives.SymmetricKeyOrBuilder> keyBuilder_;
       /**
@@ -4694,7 +4686,7 @@ public final class BioprintOuterClass {
         return keyBuilder_;
       }
 
-      private io.opencannabis.schema.temporal.TemporalInstant.Instant generated_ = null;
+      private io.opencannabis.schema.temporal.TemporalInstant.Instant generated_;
       private com.google.protobuf.SingleFieldBuilderV3<
           io.opencannabis.schema.temporal.TemporalInstant.Instant, io.opencannabis.schema.temporal.TemporalInstant.Instant.Builder, io.opencannabis.schema.temporal.TemporalInstant.InstantOrBuilder> generatedBuilder_;
       /**
@@ -4847,7 +4839,7 @@ public final class BioprintOuterClass {
         return generatedBuilder_;
       }
 
-      private io.opencannabis.schema.temporal.TemporalInstant.Instant revoked_ = null;
+      private io.opencannabis.schema.temporal.TemporalInstant.Instant revoked_;
       private com.google.protobuf.SingleFieldBuilderV3<
           io.opencannabis.schema.temporal.TemporalInstant.Instant, io.opencannabis.schema.temporal.TemporalInstant.Instant.Builder, io.opencannabis.schema.temporal.TemporalInstant.InstantOrBuilder> revokedBuilder_;
       /**
@@ -5002,7 +4994,7 @@ public final class BioprintOuterClass {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -5215,7 +5207,7 @@ public final class BioprintOuterClass {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -5404,24 +5396,23 @@ public final class BioprintOuterClass {
       }
       io.bloombox.schema.identity.bioprint.BioprintOuterClass.BioprintToken other = (io.bloombox.schema.identity.bioprint.BioprintOuterClass.BioprintToken) obj;
 
-      boolean result = true;
-      result = result && (hasToken() == other.hasToken());
+      if (hasToken() != other.hasToken()) return false;
       if (hasToken()) {
-        result = result && getToken()
-            .equals(other.getToken());
+        if (!getToken()
+            .equals(other.getToken())) return false;
       }
-      result = result && (hasFingerprint() == other.hasFingerprint());
+      if (hasFingerprint() != other.hasFingerprint()) return false;
       if (hasFingerprint()) {
-        result = result && getFingerprint()
-            .equals(other.getFingerprint());
+        if (!getFingerprint()
+            .equals(other.getFingerprint())) return false;
       }
-      result = result && (hasIssued() == other.hasIssued());
+      if (hasIssued() != other.hasIssued()) return false;
       if (hasIssued()) {
-        result = result && getIssued()
-            .equals(other.getIssued());
+        if (!getIssued()
+            .equals(other.getIssued())) return false;
       }
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -5646,35 +5637,35 @@ public final class BioprintOuterClass {
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -5726,7 +5717,7 @@ public final class BioprintOuterClass {
         return this;
       }
 
-      private io.bloombox.schema.security.AuthToken token_ = null;
+      private io.bloombox.schema.security.AuthToken token_;
       private com.google.protobuf.SingleFieldBuilderV3<
           io.bloombox.schema.security.AuthToken, io.bloombox.schema.security.AuthToken.Builder, io.bloombox.schema.security.AuthTokenOrBuilder> tokenBuilder_;
       /**
@@ -5879,7 +5870,7 @@ public final class BioprintOuterClass {
         return tokenBuilder_;
       }
 
-      private io.opencannabis.schema.crypto.primitives.integrity.Hash fingerprint_ = null;
+      private io.opencannabis.schema.crypto.primitives.integrity.Hash fingerprint_;
       private com.google.protobuf.SingleFieldBuilderV3<
           io.opencannabis.schema.crypto.primitives.integrity.Hash, io.opencannabis.schema.crypto.primitives.integrity.Hash.Builder, io.opencannabis.schema.crypto.primitives.integrity.HashOrBuilder> fingerprintBuilder_;
       /**
@@ -6032,7 +6023,7 @@ public final class BioprintOuterClass {
         return fingerprintBuilder_;
       }
 
-      private io.opencannabis.schema.temporal.TemporalInstant.Instant issued_ = null;
+      private io.opencannabis.schema.temporal.TemporalInstant.Instant issued_;
       private com.google.protobuf.SingleFieldBuilderV3<
           io.opencannabis.schema.temporal.TemporalInstant.Instant, io.opencannabis.schema.temporal.TemporalInstant.Instant.Builder, io.opencannabis.schema.temporal.TemporalInstant.InstantOrBuilder> issuedBuilder_;
       /**
@@ -6187,7 +6178,7 @@ public final class BioprintOuterClass {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -6456,7 +6447,7 @@ public final class BioprintOuterClass {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -6746,28 +6737,27 @@ public final class BioprintOuterClass {
       }
       io.bloombox.schema.identity.bioprint.BioprintOuterClass.BioprintID other = (io.bloombox.schema.identity.bioprint.BioprintOuterClass.BioprintID) obj;
 
-      boolean result = true;
-      result = result && getOrigin()
-          .equals(other.getOrigin());
-      result = result && getAncestor()
-          .equals(other.getAncestor());
-      result = result && (hasIssued() == other.hasIssued());
+      if (!getOrigin()
+          .equals(other.getOrigin())) return false;
+      if (!getAncestor()
+          .equals(other.getAncestor())) return false;
+      if (hasIssued() != other.hasIssued()) return false;
       if (hasIssued()) {
-        result = result && getIssued()
-            .equals(other.getIssued());
+        if (!getIssued()
+            .equals(other.getIssued())) return false;
       }
-      result = result && (hasSignature() == other.hasSignature());
+      if (hasSignature() != other.hasSignature()) return false;
       if (hasSignature()) {
-        result = result && getSignature()
-            .equals(other.getSignature());
+        if (!getSignature()
+            .equals(other.getSignature())) return false;
       }
-      result = result && (hasPartner() == other.hasPartner());
+      if (hasPartner() != other.hasPartner()) return false;
       if (hasPartner()) {
-        result = result && getPartner()
-            .equals(other.getPartner());
+        if (!getPartner()
+            .equals(other.getPartner())) return false;
       }
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -7003,35 +6993,35 @@ public final class BioprintOuterClass {
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -7274,7 +7264,7 @@ public final class BioprintOuterClass {
         return this;
       }
 
-      private io.opencannabis.schema.temporal.TemporalInstant.Instant issued_ = null;
+      private io.opencannabis.schema.temporal.TemporalInstant.Instant issued_;
       private com.google.protobuf.SingleFieldBuilderV3<
           io.opencannabis.schema.temporal.TemporalInstant.Instant, io.opencannabis.schema.temporal.TemporalInstant.Instant.Builder, io.opencannabis.schema.temporal.TemporalInstant.InstantOrBuilder> issuedBuilder_;
       /**
@@ -7427,7 +7417,7 @@ public final class BioprintOuterClass {
         return issuedBuilder_;
       }
 
-      private io.opencannabis.schema.crypto.Signature signature_ = null;
+      private io.opencannabis.schema.crypto.Signature signature_;
       private com.google.protobuf.SingleFieldBuilderV3<
           io.opencannabis.schema.crypto.Signature, io.opencannabis.schema.crypto.Signature.Builder, io.opencannabis.schema.crypto.SignatureOrBuilder> signatureBuilder_;
       /**
@@ -7580,7 +7570,7 @@ public final class BioprintOuterClass {
         return signatureBuilder_;
       }
 
-      private io.bloombox.schema.partner.PartnerMeta.PartnerKey partner_ = null;
+      private io.bloombox.schema.partner.PartnerMeta.PartnerKey partner_;
       private com.google.protobuf.SingleFieldBuilderV3<
           io.bloombox.schema.partner.PartnerMeta.PartnerKey, io.bloombox.schema.partner.PartnerMeta.PartnerKey.Builder, io.bloombox.schema.partner.PartnerMeta.PartnerKeyOrBuilder> partnerBuilder_;
       /**
@@ -7744,7 +7734,7 @@ public final class BioprintOuterClass {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -7940,7 +7930,6 @@ public final class BioprintOuterClass {
     private Keychain() {
       master_ = java.util.Collections.emptyList();
       restoration_ = java.util.Collections.emptyList();
-      generation_ = 0;
     }
 
     @java.lang.Override
@@ -7968,7 +7957,7 @@ public final class BioprintOuterClass {
               done = true;
               break;
             case 10: {
-              if (!((mutable_bitField0_ & 0x00000001) == 0x00000001)) {
+              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
                 master_ = new java.util.ArrayList<io.bloombox.schema.identity.bioprint.BioprintOuterClass.MasterKey>();
                 mutable_bitField0_ |= 0x00000001;
               }
@@ -7977,7 +7966,7 @@ public final class BioprintOuterClass {
               break;
             }
             case 18: {
-              if (!((mutable_bitField0_ & 0x00000002) == 0x00000002)) {
+              if (!((mutable_bitField0_ & 0x00000002) != 0)) {
                 restoration_ = new java.util.ArrayList<io.bloombox.schema.identity.bioprint.BioprintOuterClass.RestorationKey>();
                 mutable_bitField0_ |= 0x00000002;
               }
@@ -8004,7 +7993,7 @@ public final class BioprintOuterClass {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -8018,10 +8007,10 @@ public final class BioprintOuterClass {
         throw new com.google.protobuf.InvalidProtocolBufferException(
             e).setUnfinishedMessage(this);
       } finally {
-        if (((mutable_bitField0_ & 0x00000001) == 0x00000001)) {
+        if (((mutable_bitField0_ & 0x00000001) != 0)) {
           master_ = java.util.Collections.unmodifiableList(master_);
         }
-        if (((mutable_bitField0_ & 0x00000002) == 0x00000002)) {
+        if (((mutable_bitField0_ & 0x00000002) != 0)) {
           restoration_ = java.util.Collections.unmodifiableList(restoration_);
         }
         this.unknownFields = unknownFields.build();
@@ -8264,20 +8253,19 @@ public final class BioprintOuterClass {
       }
       io.bloombox.schema.identity.bioprint.BioprintOuterClass.Keychain other = (io.bloombox.schema.identity.bioprint.BioprintOuterClass.Keychain) obj;
 
-      boolean result = true;
-      result = result && getMasterList()
-          .equals(other.getMasterList());
-      result = result && getRestorationList()
-          .equals(other.getRestorationList());
-      result = result && (getGeneration()
-          == other.getGeneration());
-      result = result && (hasLastRotated() == other.hasLastRotated());
+      if (!getMasterList()
+          .equals(other.getMasterList())) return false;
+      if (!getRestorationList()
+          .equals(other.getRestorationList())) return false;
+      if (getGeneration()
+          != other.getGeneration()) return false;
+      if (hasLastRotated() != other.hasLastRotated()) return false;
       if (hasLastRotated()) {
-        result = result && getLastRotated()
-            .equals(other.getLastRotated());
+        if (!getLastRotated()
+            .equals(other.getLastRotated())) return false;
       }
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -8490,7 +8478,7 @@ public final class BioprintOuterClass {
         int from_bitField0_ = bitField0_;
         int to_bitField0_ = 0;
         if (masterBuilder_ == null) {
-          if (((bitField0_ & 0x00000001) == 0x00000001)) {
+          if (((bitField0_ & 0x00000001) != 0)) {
             master_ = java.util.Collections.unmodifiableList(master_);
             bitField0_ = (bitField0_ & ~0x00000001);
           }
@@ -8499,7 +8487,7 @@ public final class BioprintOuterClass {
           result.master_ = masterBuilder_.build();
         }
         if (restorationBuilder_ == null) {
-          if (((bitField0_ & 0x00000002) == 0x00000002)) {
+          if (((bitField0_ & 0x00000002) != 0)) {
             restoration_ = java.util.Collections.unmodifiableList(restoration_);
             bitField0_ = (bitField0_ & ~0x00000002);
           }
@@ -8520,35 +8508,35 @@ public final class BioprintOuterClass {
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -8653,7 +8641,7 @@ public final class BioprintOuterClass {
       private java.util.List<io.bloombox.schema.identity.bioprint.BioprintOuterClass.MasterKey> master_ =
         java.util.Collections.emptyList();
       private void ensureMasterIsMutable() {
-        if (!((bitField0_ & 0x00000001) == 0x00000001)) {
+        if (!((bitField0_ & 0x00000001) != 0)) {
           master_ = new java.util.ArrayList<io.bloombox.schema.identity.bioprint.BioprintOuterClass.MasterKey>(master_);
           bitField0_ |= 0x00000001;
          }
@@ -8954,7 +8942,7 @@ public final class BioprintOuterClass {
           masterBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
               io.bloombox.schema.identity.bioprint.BioprintOuterClass.MasterKey, io.bloombox.schema.identity.bioprint.BioprintOuterClass.MasterKey.Builder, io.bloombox.schema.identity.bioprint.BioprintOuterClass.MasterKeyOrBuilder>(
                   master_,
-                  ((bitField0_ & 0x00000001) == 0x00000001),
+                  ((bitField0_ & 0x00000001) != 0),
                   getParentForChildren(),
                   isClean());
           master_ = null;
@@ -8965,7 +8953,7 @@ public final class BioprintOuterClass {
       private java.util.List<io.bloombox.schema.identity.bioprint.BioprintOuterClass.RestorationKey> restoration_ =
         java.util.Collections.emptyList();
       private void ensureRestorationIsMutable() {
-        if (!((bitField0_ & 0x00000002) == 0x00000002)) {
+        if (!((bitField0_ & 0x00000002) != 0)) {
           restoration_ = new java.util.ArrayList<io.bloombox.schema.identity.bioprint.BioprintOuterClass.RestorationKey>(restoration_);
           bitField0_ |= 0x00000002;
          }
@@ -9266,7 +9254,7 @@ public final class BioprintOuterClass {
           restorationBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
               io.bloombox.schema.identity.bioprint.BioprintOuterClass.RestorationKey, io.bloombox.schema.identity.bioprint.BioprintOuterClass.RestorationKey.Builder, io.bloombox.schema.identity.bioprint.BioprintOuterClass.RestorationKeyOrBuilder>(
                   restoration_,
-                  ((bitField0_ & 0x00000002) == 0x00000002),
+                  ((bitField0_ & 0x00000002) != 0),
                   getParentForChildren(),
                   isClean());
           restoration_ = null;
@@ -9312,7 +9300,7 @@ public final class BioprintOuterClass {
         return this;
       }
 
-      private io.opencannabis.schema.temporal.TemporalInstant.Instant lastRotated_ = null;
+      private io.opencannabis.schema.temporal.TemporalInstant.Instant lastRotated_;
       private com.google.protobuf.SingleFieldBuilderV3<
           io.opencannabis.schema.temporal.TemporalInstant.Instant, io.opencannabis.schema.temporal.TemporalInstant.Instant.Builder, io.opencannabis.schema.temporal.TemporalInstant.InstantOrBuilder> lastRotatedBuilder_;
       /**
@@ -9467,7 +9455,7 @@ public final class BioprintOuterClass {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -9628,7 +9616,6 @@ public final class BioprintOuterClass {
       super(builder);
     }
     private BioprintPayload() {
-      generation_ = 0;
       affinity_ = java.util.Collections.emptyList();
     }
 
@@ -9662,7 +9649,7 @@ public final class BioprintOuterClass {
               break;
             }
             case 18: {
-              if (!((mutable_bitField0_ & 0x00000002) == 0x00000002)) {
+              if (!((mutable_bitField0_ & 0x00000002) != 0)) {
                 affinity_ = new java.util.ArrayList<io.bloombox.schema.identity.bioprint.Affinities.Affinity>();
                 mutable_bitField0_ |= 0x00000002;
               }
@@ -9684,7 +9671,7 @@ public final class BioprintOuterClass {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -9698,7 +9685,7 @@ public final class BioprintOuterClass {
         throw new com.google.protobuf.InvalidProtocolBufferException(
             e).setUnfinishedMessage(this);
       } finally {
-        if (((mutable_bitField0_ & 0x00000002) == 0x00000002)) {
+        if (((mutable_bitField0_ & 0x00000002) != 0)) {
           affinity_ = java.util.Collections.unmodifiableList(affinity_);
         }
         this.unknownFields = unknownFields.build();
@@ -9889,18 +9876,17 @@ public final class BioprintOuterClass {
       }
       io.bloombox.schema.identity.bioprint.BioprintOuterClass.BioprintPayload other = (io.bloombox.schema.identity.bioprint.BioprintOuterClass.BioprintPayload) obj;
 
-      boolean result = true;
-      result = result && (getGeneration()
-          == other.getGeneration());
-      result = result && getAffinityList()
-          .equals(other.getAffinityList());
-      result = result && (hasPreferences() == other.hasPreferences());
+      if (getGeneration()
+          != other.getGeneration()) return false;
+      if (!getAffinityList()
+          .equals(other.getAffinityList())) return false;
+      if (hasPreferences() != other.hasPreferences()) return false;
       if (hasPreferences()) {
-        result = result && getPreferences()
-            .equals(other.getPreferences());
+        if (!getPreferences()
+            .equals(other.getPreferences())) return false;
       }
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -10104,7 +10090,7 @@ public final class BioprintOuterClass {
         int to_bitField0_ = 0;
         result.generation_ = generation_;
         if (affinityBuilder_ == null) {
-          if (((bitField0_ & 0x00000002) == 0x00000002)) {
+          if (((bitField0_ & 0x00000002) != 0)) {
             affinity_ = java.util.Collections.unmodifiableList(affinity_);
             bitField0_ = (bitField0_ & ~0x00000002);
           }
@@ -10124,35 +10110,35 @@ public final class BioprintOuterClass {
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -10275,7 +10261,7 @@ public final class BioprintOuterClass {
       private java.util.List<io.bloombox.schema.identity.bioprint.Affinities.Affinity> affinity_ =
         java.util.Collections.emptyList();
       private void ensureAffinityIsMutable() {
-        if (!((bitField0_ & 0x00000002) == 0x00000002)) {
+        if (!((bitField0_ & 0x00000002) != 0)) {
           affinity_ = new java.util.ArrayList<io.bloombox.schema.identity.bioprint.Affinities.Affinity>(affinity_);
           bitField0_ |= 0x00000002;
          }
@@ -10594,7 +10580,7 @@ public final class BioprintOuterClass {
           affinityBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
               io.bloombox.schema.identity.bioprint.Affinities.Affinity, io.bloombox.schema.identity.bioprint.Affinities.Affinity.Builder, io.bloombox.schema.identity.bioprint.Affinities.AffinityOrBuilder>(
                   affinity_,
-                  ((bitField0_ & 0x00000002) == 0x00000002),
+                  ((bitField0_ & 0x00000002) != 0),
                   getParentForChildren(),
                   isClean());
           affinity_ = null;
@@ -10602,7 +10588,7 @@ public final class BioprintOuterClass {
         return affinityBuilder_;
       }
 
-      private io.bloombox.schema.identity.AppUser.ConsumerPreferences preferences_ = null;
+      private io.bloombox.schema.identity.AppUser.ConsumerPreferences preferences_;
       private com.google.protobuf.SingleFieldBuilderV3<
           io.bloombox.schema.identity.AppUser.ConsumerPreferences, io.bloombox.schema.identity.AppUser.ConsumerPreferences.Builder, io.bloombox.schema.identity.AppUser.ConsumerPreferencesOrBuilder> preferencesBuilder_;
       /**
@@ -10766,7 +10752,7 @@ public final class BioprintOuterClass {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -10979,7 +10965,7 @@ public final class BioprintOuterClass {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -11168,24 +11154,23 @@ public final class BioprintOuterClass {
       }
       io.bloombox.schema.identity.bioprint.BioprintOuterClass.BioprintRevision other = (io.bloombox.schema.identity.bioprint.BioprintOuterClass.BioprintRevision) obj;
 
-      boolean result = true;
-      result = result && (hasId() == other.hasId());
+      if (hasId() != other.hasId()) return false;
       if (hasId()) {
-        result = result && getId()
-            .equals(other.getId());
+        if (!getId()
+            .equals(other.getId())) return false;
       }
-      result = result && (hasApplied() == other.hasApplied());
+      if (hasApplied() != other.hasApplied()) return false;
       if (hasApplied()) {
-        result = result && getApplied()
-            .equals(other.getApplied());
+        if (!getApplied()
+            .equals(other.getApplied())) return false;
       }
-      result = result && (hasProfile() == other.hasProfile());
+      if (hasProfile() != other.hasProfile()) return false;
       if (hasProfile()) {
-        result = result && getProfile()
-            .equals(other.getProfile());
+        if (!getProfile()
+            .equals(other.getProfile())) return false;
       }
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -11410,35 +11395,35 @@ public final class BioprintOuterClass {
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -11490,7 +11475,7 @@ public final class BioprintOuterClass {
         return this;
       }
 
-      private io.bloombox.schema.identity.bioprint.BioprintOuterClass.BioprintID id_ = null;
+      private io.bloombox.schema.identity.bioprint.BioprintOuterClass.BioprintID id_;
       private com.google.protobuf.SingleFieldBuilderV3<
           io.bloombox.schema.identity.bioprint.BioprintOuterClass.BioprintID, io.bloombox.schema.identity.bioprint.BioprintOuterClass.BioprintID.Builder, io.bloombox.schema.identity.bioprint.BioprintOuterClass.BioprintIDOrBuilder> idBuilder_;
       /**
@@ -11643,7 +11628,7 @@ public final class BioprintOuterClass {
         return idBuilder_;
       }
 
-      private io.opencannabis.schema.temporal.TemporalInstant.Instant applied_ = null;
+      private io.opencannabis.schema.temporal.TemporalInstant.Instant applied_;
       private com.google.protobuf.SingleFieldBuilderV3<
           io.opencannabis.schema.temporal.TemporalInstant.Instant, io.opencannabis.schema.temporal.TemporalInstant.Instant.Builder, io.opencannabis.schema.temporal.TemporalInstant.InstantOrBuilder> appliedBuilder_;
       /**
@@ -11796,7 +11781,7 @@ public final class BioprintOuterClass {
         return appliedBuilder_;
       }
 
-      private io.bloombox.schema.identity.bioprint.BioprintOuterClass.BioprintPayload profile_ = null;
+      private io.bloombox.schema.identity.bioprint.BioprintOuterClass.BioprintPayload profile_;
       private com.google.protobuf.SingleFieldBuilderV3<
           io.bloombox.schema.identity.bioprint.BioprintOuterClass.BioprintPayload, io.bloombox.schema.identity.bioprint.BioprintOuterClass.BioprintPayload.Builder, io.bloombox.schema.identity.bioprint.BioprintOuterClass.BioprintPayloadOrBuilder> profileBuilder_;
       /**
@@ -11951,7 +11936,7 @@ public final class BioprintOuterClass {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -12390,7 +12375,7 @@ public final class BioprintOuterClass {
               break;
             }
             case 50: {
-              if (!((mutable_bitField0_ & 0x00000020) == 0x00000020)) {
+              if (!((mutable_bitField0_ & 0x00000020) != 0)) {
                 memberships_ = com.google.protobuf.MapField.newMapField(
                     MembershipsDefaultEntryHolder.defaultEntry);
                 mutable_bitField0_ |= 0x00000020;
@@ -12403,7 +12388,7 @@ public final class BioprintOuterClass {
               break;
             }
             case 58: {
-              if (!((mutable_bitField0_ & 0x00000040) == 0x00000040)) {
+              if (!((mutable_bitField0_ & 0x00000040) != 0)) {
                 revision_ = new java.util.ArrayList<io.bloombox.schema.identity.bioprint.BioprintOuterClass.BioprintRevision>();
                 mutable_bitField0_ |= 0x00000040;
               }
@@ -12438,7 +12423,7 @@ public final class BioprintOuterClass {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -12452,7 +12437,7 @@ public final class BioprintOuterClass {
         throw new com.google.protobuf.InvalidProtocolBufferException(
             e).setUnfinishedMessage(this);
       } finally {
-        if (((mutable_bitField0_ & 0x00000040) == 0x00000040)) {
+        if (((mutable_bitField0_ & 0x00000040) != 0)) {
           revision_ = java.util.Collections.unmodifiableList(revision_);
         }
         this.unknownFields = unknownFields.build();
@@ -12973,48 +12958,47 @@ public final class BioprintOuterClass {
       }
       io.bloombox.schema.identity.bioprint.BioprintOuterClass.Bioprint other = (io.bloombox.schema.identity.bioprint.BioprintOuterClass.Bioprint) obj;
 
-      boolean result = true;
-      result = result && (hasId() == other.hasId());
+      if (hasId() != other.hasId()) return false;
       if (hasId()) {
-        result = result && getId()
-            .equals(other.getId());
+        if (!getId()
+            .equals(other.getId())) return false;
       }
-      result = result && (hasKeychain() == other.hasKeychain());
+      if (hasKeychain() != other.hasKeychain()) return false;
       if (hasKeychain()) {
-        result = result && getKeychain()
-            .equals(other.getKeychain());
+        if (!getKeychain()
+            .equals(other.getKeychain())) return false;
       }
-      result = result && (hasProfile() == other.hasProfile());
+      if (hasProfile() != other.hasProfile()) return false;
       if (hasProfile()) {
-        result = result && getProfile()
-            .equals(other.getProfile());
+        if (!getProfile()
+            .equals(other.getProfile())) return false;
       }
-      result = result && (hasIdentification() == other.hasIdentification());
+      if (hasIdentification() != other.hasIdentification()) return false;
       if (hasIdentification()) {
-        result = result && getIdentification()
-            .equals(other.getIdentification());
+        if (!getIdentification()
+            .equals(other.getIdentification())) return false;
       }
-      result = result && (hasUser() == other.hasUser());
+      if (hasUser() != other.hasUser()) return false;
       if (hasUser()) {
-        result = result && getUser()
-            .equals(other.getUser());
+        if (!getUser()
+            .equals(other.getUser())) return false;
       }
-      result = result && internalGetMemberships().equals(
-          other.internalGetMemberships());
-      result = result && getRevisionList()
-          .equals(other.getRevisionList());
-      result = result && (hasModified() == other.hasModified());
+      if (!internalGetMemberships().equals(
+          other.internalGetMemberships())) return false;
+      if (!getRevisionList()
+          .equals(other.getRevisionList())) return false;
+      if (hasModified() != other.hasModified()) return false;
       if (hasModified()) {
-        result = result && getModified()
-            .equals(other.getModified());
+        if (!getModified()
+            .equals(other.getModified())) return false;
       }
-      result = result && (hasCreated() == other.hasCreated());
+      if (hasCreated() != other.hasCreated()) return false;
       if (hasCreated()) {
-        result = result && getCreated()
-            .equals(other.getCreated());
+        if (!getCreated()
+            .equals(other.getCreated())) return false;
       }
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -13327,7 +13311,7 @@ public final class BioprintOuterClass {
         result.memberships_ = internalGetMemberships();
         result.memberships_.makeImmutable();
         if (revisionBuilder_ == null) {
-          if (((bitField0_ & 0x00000040) == 0x00000040)) {
+          if (((bitField0_ & 0x00000040) != 0)) {
             revision_ = java.util.Collections.unmodifiableList(revision_);
             bitField0_ = (bitField0_ & ~0x00000040);
           }
@@ -13352,35 +13336,35 @@ public final class BioprintOuterClass {
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -13473,7 +13457,7 @@ public final class BioprintOuterClass {
       }
       private int bitField0_;
 
-      private io.bloombox.schema.identity.bioprint.BioprintOuterClass.BioprintID id_ = null;
+      private io.bloombox.schema.identity.bioprint.BioprintOuterClass.BioprintID id_;
       private com.google.protobuf.SingleFieldBuilderV3<
           io.bloombox.schema.identity.bioprint.BioprintOuterClass.BioprintID, io.bloombox.schema.identity.bioprint.BioprintOuterClass.BioprintID.Builder, io.bloombox.schema.identity.bioprint.BioprintOuterClass.BioprintIDOrBuilder> idBuilder_;
       /**
@@ -13626,7 +13610,7 @@ public final class BioprintOuterClass {
         return idBuilder_;
       }
 
-      private io.bloombox.schema.identity.bioprint.BioprintOuterClass.Keychain keychain_ = null;
+      private io.bloombox.schema.identity.bioprint.BioprintOuterClass.Keychain keychain_;
       private com.google.protobuf.SingleFieldBuilderV3<
           io.bloombox.schema.identity.bioprint.BioprintOuterClass.Keychain, io.bloombox.schema.identity.bioprint.BioprintOuterClass.Keychain.Builder, io.bloombox.schema.identity.bioprint.BioprintOuterClass.KeychainOrBuilder> keychainBuilder_;
       /**
@@ -13779,7 +13763,7 @@ public final class BioprintOuterClass {
         return keychainBuilder_;
       }
 
-      private io.bloombox.schema.identity.bioprint.BioprintOuterClass.BioprintPayload profile_ = null;
+      private io.bloombox.schema.identity.bioprint.BioprintOuterClass.BioprintPayload profile_;
       private com.google.protobuf.SingleFieldBuilderV3<
           io.bloombox.schema.identity.bioprint.BioprintOuterClass.BioprintPayload, io.bloombox.schema.identity.bioprint.BioprintOuterClass.BioprintPayload.Builder, io.bloombox.schema.identity.bioprint.BioprintOuterClass.BioprintPayloadOrBuilder> profileBuilder_;
       /**
@@ -13932,7 +13916,7 @@ public final class BioprintOuterClass {
         return profileBuilder_;
       }
 
-      private io.bloombox.schema.identity.IdentityID.ID identification_ = null;
+      private io.bloombox.schema.identity.IdentityID.ID identification_;
       private com.google.protobuf.SingleFieldBuilderV3<
           io.bloombox.schema.identity.IdentityID.ID, io.bloombox.schema.identity.IdentityID.ID.Builder, io.bloombox.schema.identity.IdentityID.IDOrBuilder> identificationBuilder_;
       /**
@@ -14085,7 +14069,7 @@ public final class BioprintOuterClass {
         return identificationBuilder_;
       }
 
-      private io.bloombox.schema.identity.AppUserKey.UserKey user_ = null;
+      private io.bloombox.schema.identity.AppUserKey.UserKey user_;
       private com.google.protobuf.SingleFieldBuilderV3<
           io.bloombox.schema.identity.AppUserKey.UserKey, io.bloombox.schema.identity.AppUserKey.UserKey.Builder, io.bloombox.schema.identity.AppUserKey.UserKeyOrBuilder> userBuilder_;
       /**
@@ -14392,7 +14376,7 @@ public final class BioprintOuterClass {
       private java.util.List<io.bloombox.schema.identity.bioprint.BioprintOuterClass.BioprintRevision> revision_ =
         java.util.Collections.emptyList();
       private void ensureRevisionIsMutable() {
-        if (!((bitField0_ & 0x00000040) == 0x00000040)) {
+        if (!((bitField0_ & 0x00000040) != 0)) {
           revision_ = new java.util.ArrayList<io.bloombox.schema.identity.bioprint.BioprintOuterClass.BioprintRevision>(revision_);
           bitField0_ |= 0x00000040;
          }
@@ -14693,7 +14677,7 @@ public final class BioprintOuterClass {
           revisionBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
               io.bloombox.schema.identity.bioprint.BioprintOuterClass.BioprintRevision, io.bloombox.schema.identity.bioprint.BioprintOuterClass.BioprintRevision.Builder, io.bloombox.schema.identity.bioprint.BioprintOuterClass.BioprintRevisionOrBuilder>(
                   revision_,
-                  ((bitField0_ & 0x00000040) == 0x00000040),
+                  ((bitField0_ & 0x00000040) != 0),
                   getParentForChildren(),
                   isClean());
           revision_ = null;
@@ -14701,7 +14685,7 @@ public final class BioprintOuterClass {
         return revisionBuilder_;
       }
 
-      private io.opencannabis.schema.temporal.TemporalInstant.Instant modified_ = null;
+      private io.opencannabis.schema.temporal.TemporalInstant.Instant modified_;
       private com.google.protobuf.SingleFieldBuilderV3<
           io.opencannabis.schema.temporal.TemporalInstant.Instant, io.opencannabis.schema.temporal.TemporalInstant.Instant.Builder, io.opencannabis.schema.temporal.TemporalInstant.InstantOrBuilder> modifiedBuilder_;
       /**
@@ -14854,7 +14838,7 @@ public final class BioprintOuterClass {
         return modifiedBuilder_;
       }
 
-      private io.opencannabis.schema.temporal.TemporalInstant.Instant created_ = null;
+      private io.opencannabis.schema.temporal.TemporalInstant.Instant created_;
       private com.google.protobuf.SingleFieldBuilderV3<
           io.opencannabis.schema.temporal.TemporalInstant.Instant, io.opencannabis.schema.temporal.TemporalInstant.Instant.Builder, io.opencannabis.schema.temporal.TemporalInstant.InstantOrBuilder> createdBuilder_;
       /**
@@ -15009,7 +14993,7 @@ public final class BioprintOuterClass {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override

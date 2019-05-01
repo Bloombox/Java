@@ -1,12 +1,11 @@
 /*
- * Copyright 2018, Momentum Ideas, Co. All rights reserved.
+ * Copyright 2019, Momentum Ideas Co.
  *
- * Source and object computer code contained herein is the private intellectual
- * property of Momentum Ideas Co., a Delaware Corporation. Use of this
- * code in source form requires permission in writing before use or the
- * assembly, distribution, or publishing of derivative works, for commercial
- * purposes or any other purpose, from a duly authorized officer of Momentum
- * Ideas Co.
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *  http://www.apache.org/licenses/LICENSE-2.0
  *
  * Unless required by applicable law or agreed to in writing, software
  * distributed under the License is distributed on an "AS IS" BASIS,
@@ -21,6 +20,10 @@
 package io.opencannabis.schema.product.struct.testing;
 
 /**
+ * <pre>
+ * Specifies media acting as verification for testing.
+ * </pre>
+ *
  * Protobuf type {@code opencannabis.structs.labtesting.TestMedia}
  */
 public  final class TestMedia extends
@@ -80,7 +83,7 @@ private static final long serialVersionUID = 0L;
             break;
           }
           default: {
-            if (!parseUnknownFieldProto3(
+            if (!parseUnknownField(
                 input, unknownFields, extensionRegistry, tag)) {
               done = true;
             }
@@ -114,12 +117,20 @@ private static final long serialVersionUID = 0L;
   public static final int TYPE_FIELD_NUMBER = 1;
   private int type_;
   /**
+   * <pre>
+   * Represents the testing media type.
+   * </pre>
+   *
    * <code>.opencannabis.structs.labtesting.TestMediaType type = 1;</code>
    */
   public int getTypeValue() {
     return type_;
   }
   /**
+   * <pre>
+   * Represents the testing media type.
+   * </pre>
+   *
    * <code>.opencannabis.structs.labtesting.TestMediaType type = 1;</code>
    */
   public io.opencannabis.schema.product.struct.testing.TestMediaType getType() {
@@ -131,18 +142,30 @@ private static final long serialVersionUID = 0L;
   public static final int MEDIA_ITEM_FIELD_NUMBER = 2;
   private io.opencannabis.schema.media.AttachedMedia.MediaItem mediaItem_;
   /**
+   * <pre>
+   * Represents the location of the test media.
+   * </pre>
+   *
    * <code>.opencannabis.media.MediaItem media_item = 2;</code>
    */
   public boolean hasMediaItem() {
     return mediaItem_ != null;
   }
   /**
+   * <pre>
+   * Represents the location of the test media.
+   * </pre>
+   *
    * <code>.opencannabis.media.MediaItem media_item = 2;</code>
    */
   public io.opencannabis.schema.media.AttachedMedia.MediaItem getMediaItem() {
     return mediaItem_ == null ? io.opencannabis.schema.media.AttachedMedia.MediaItem.getDefaultInstance() : mediaItem_;
   }
   /**
+   * <pre>
+   * Represents the location of the test media.
+   * </pre>
+   *
    * <code>.opencannabis.media.MediaItem media_item = 2;</code>
    */
   public io.opencannabis.schema.media.AttachedMedia.MediaItemOrBuilder getMediaItemOrBuilder() {
@@ -201,15 +224,14 @@ private static final long serialVersionUID = 0L;
     }
     io.opencannabis.schema.product.struct.testing.TestMedia other = (io.opencannabis.schema.product.struct.testing.TestMedia) obj;
 
-    boolean result = true;
-    result = result && type_ == other.type_;
-    result = result && (hasMediaItem() == other.hasMediaItem());
+    if (type_ != other.type_) return false;
+    if (hasMediaItem() != other.hasMediaItem()) return false;
     if (hasMediaItem()) {
-      result = result && getMediaItem()
-          .equals(other.getMediaItem());
+      if (!getMediaItem()
+          .equals(other.getMediaItem())) return false;
     }
-    result = result && unknownFields.equals(other.unknownFields);
-    return result;
+    if (!unknownFields.equals(other.unknownFields)) return false;
+    return true;
   }
 
   @java.lang.Override
@@ -321,6 +343,10 @@ private static final long serialVersionUID = 0L;
     return builder;
   }
   /**
+   * <pre>
+   * Specifies media acting as verification for testing.
+   * </pre>
+   *
    * Protobuf type {@code opencannabis.structs.labtesting.TestMedia}
    */
   public static final class Builder extends
@@ -404,35 +430,35 @@ private static final long serialVersionUID = 0L;
 
     @java.lang.Override
     public Builder clone() {
-      return (Builder) super.clone();
+      return super.clone();
     }
     @java.lang.Override
     public Builder setField(
         com.google.protobuf.Descriptors.FieldDescriptor field,
         java.lang.Object value) {
-      return (Builder) super.setField(field, value);
+      return super.setField(field, value);
     }
     @java.lang.Override
     public Builder clearField(
         com.google.protobuf.Descriptors.FieldDescriptor field) {
-      return (Builder) super.clearField(field);
+      return super.clearField(field);
     }
     @java.lang.Override
     public Builder clearOneof(
         com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-      return (Builder) super.clearOneof(oneof);
+      return super.clearOneof(oneof);
     }
     @java.lang.Override
     public Builder setRepeatedField(
         com.google.protobuf.Descriptors.FieldDescriptor field,
         int index, java.lang.Object value) {
-      return (Builder) super.setRepeatedField(field, index, value);
+      return super.setRepeatedField(field, index, value);
     }
     @java.lang.Override
     public Builder addRepeatedField(
         com.google.protobuf.Descriptors.FieldDescriptor field,
         java.lang.Object value) {
-      return (Builder) super.addRepeatedField(field, value);
+      return super.addRepeatedField(field, value);
     }
     @java.lang.Override
     public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -483,12 +509,20 @@ private static final long serialVersionUID = 0L;
 
     private int type_ = 0;
     /**
+     * <pre>
+     * Represents the testing media type.
+     * </pre>
+     *
      * <code>.opencannabis.structs.labtesting.TestMediaType type = 1;</code>
      */
     public int getTypeValue() {
       return type_;
     }
     /**
+     * <pre>
+     * Represents the testing media type.
+     * </pre>
+     *
      * <code>.opencannabis.structs.labtesting.TestMediaType type = 1;</code>
      */
     public Builder setTypeValue(int value) {
@@ -497,6 +531,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * Represents the testing media type.
+     * </pre>
+     *
      * <code>.opencannabis.structs.labtesting.TestMediaType type = 1;</code>
      */
     public io.opencannabis.schema.product.struct.testing.TestMediaType getType() {
@@ -505,6 +543,10 @@ private static final long serialVersionUID = 0L;
       return result == null ? io.opencannabis.schema.product.struct.testing.TestMediaType.UNRECOGNIZED : result;
     }
     /**
+     * <pre>
+     * Represents the testing media type.
+     * </pre>
+     *
      * <code>.opencannabis.structs.labtesting.TestMediaType type = 1;</code>
      */
     public Builder setType(io.opencannabis.schema.product.struct.testing.TestMediaType value) {
@@ -517,6 +559,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * Represents the testing media type.
+     * </pre>
+     *
      * <code>.opencannabis.structs.labtesting.TestMediaType type = 1;</code>
      */
     public Builder clearType() {
@@ -526,16 +572,24 @@ private static final long serialVersionUID = 0L;
       return this;
     }
 
-    private io.opencannabis.schema.media.AttachedMedia.MediaItem mediaItem_ = null;
+    private io.opencannabis.schema.media.AttachedMedia.MediaItem mediaItem_;
     private com.google.protobuf.SingleFieldBuilderV3<
         io.opencannabis.schema.media.AttachedMedia.MediaItem, io.opencannabis.schema.media.AttachedMedia.MediaItem.Builder, io.opencannabis.schema.media.AttachedMedia.MediaItemOrBuilder> mediaItemBuilder_;
     /**
+     * <pre>
+     * Represents the location of the test media.
+     * </pre>
+     *
      * <code>.opencannabis.media.MediaItem media_item = 2;</code>
      */
     public boolean hasMediaItem() {
       return mediaItemBuilder_ != null || mediaItem_ != null;
     }
     /**
+     * <pre>
+     * Represents the location of the test media.
+     * </pre>
+     *
      * <code>.opencannabis.media.MediaItem media_item = 2;</code>
      */
     public io.opencannabis.schema.media.AttachedMedia.MediaItem getMediaItem() {
@@ -546,6 +600,10 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     * <pre>
+     * Represents the location of the test media.
+     * </pre>
+     *
      * <code>.opencannabis.media.MediaItem media_item = 2;</code>
      */
     public Builder setMediaItem(io.opencannabis.schema.media.AttachedMedia.MediaItem value) {
@@ -562,6 +620,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * Represents the location of the test media.
+     * </pre>
+     *
      * <code>.opencannabis.media.MediaItem media_item = 2;</code>
      */
     public Builder setMediaItem(
@@ -576,6 +638,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * Represents the location of the test media.
+     * </pre>
+     *
      * <code>.opencannabis.media.MediaItem media_item = 2;</code>
      */
     public Builder mergeMediaItem(io.opencannabis.schema.media.AttachedMedia.MediaItem value) {
@@ -594,6 +660,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * Represents the location of the test media.
+     * </pre>
+     *
      * <code>.opencannabis.media.MediaItem media_item = 2;</code>
      */
     public Builder clearMediaItem() {
@@ -608,6 +678,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * Represents the location of the test media.
+     * </pre>
+     *
      * <code>.opencannabis.media.MediaItem media_item = 2;</code>
      */
     public io.opencannabis.schema.media.AttachedMedia.MediaItem.Builder getMediaItemBuilder() {
@@ -616,6 +690,10 @@ private static final long serialVersionUID = 0L;
       return getMediaItemFieldBuilder().getBuilder();
     }
     /**
+     * <pre>
+     * Represents the location of the test media.
+     * </pre>
+     *
      * <code>.opencannabis.media.MediaItem media_item = 2;</code>
      */
     public io.opencannabis.schema.media.AttachedMedia.MediaItemOrBuilder getMediaItemOrBuilder() {
@@ -627,6 +705,10 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     * <pre>
+     * Represents the location of the test media.
+     * </pre>
+     *
      * <code>.opencannabis.media.MediaItem media_item = 2;</code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<
@@ -645,7 +727,7 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public final Builder setUnknownFields(
         final com.google.protobuf.UnknownFieldSet unknownFields) {
-      return super.setUnknownFieldsProto3(unknownFields);
+      return super.setUnknownFields(unknownFields);
     }
 
     @java.lang.Override

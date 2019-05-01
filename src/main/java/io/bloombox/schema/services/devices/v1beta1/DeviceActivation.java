@@ -1,5 +1,5 @@
 /*
- * Copyright 2018, Momentum Ideas, Co. All rights reserved.
+ * Copyright 2019, Momentum Ideas, Co. All rights reserved.
  *
  * Source and object computer code contained herein is the private intellectual
  * property of Momentum Ideas Co., a Delaware Corporation. Use of this
@@ -144,7 +144,7 @@ private static final long serialVersionUID = 0L;
             break;
           }
           default: {
-            if (!parseUnknownFieldProto3(
+            if (!parseUnknownField(
                 input, unknownFields, extensionRegistry, tag)) {
               done = true;
             }
@@ -521,38 +521,37 @@ private static final long serialVersionUID = 0L;
     }
     io.bloombox.schema.services.devices.v1beta1.DeviceActivation other = (io.bloombox.schema.services.devices.v1beta1.DeviceActivation) obj;
 
-    boolean result = true;
-    result = result && getUuid()
-        .equals(other.getUuid());
-    result = result && getHostname()
-        .equals(other.getHostname());
-    result = result && (hasAssignment() == other.hasAssignment());
+    if (!getUuid()
+        .equals(other.getUuid())) return false;
+    if (!getHostname()
+        .equals(other.getHostname())) return false;
+    if (hasAssignment() != other.hasAssignment()) return false;
     if (hasAssignment()) {
-      result = result && getAssignment()
-          .equals(other.getAssignment());
+      if (!getAssignment()
+          .equals(other.getAssignment())) return false;
     }
-    result = result && (hasTicket() == other.hasTicket());
+    if (hasTicket() != other.hasTicket()) return false;
     if (hasTicket()) {
-      result = result && getTicket()
-          .equals(other.getTicket());
+      if (!getTicket()
+          .equals(other.getTicket())) return false;
     }
-    result = result && (hasEndpoints() == other.hasEndpoints());
+    if (hasEndpoints() != other.hasEndpoints()) return false;
     if (hasEndpoints()) {
-      result = result && getEndpoints()
-          .equals(other.getEndpoints());
+      if (!getEndpoints()
+          .equals(other.getEndpoints())) return false;
     }
-    result = result && (hasBeacon() == other.hasBeacon());
+    if (hasBeacon() != other.hasBeacon()) return false;
     if (hasBeacon()) {
-      result = result && getBeacon()
-          .equals(other.getBeacon());
+      if (!getBeacon()
+          .equals(other.getBeacon())) return false;
     }
-    result = result && (hasCredentials() == other.hasCredentials());
+    if (hasCredentials() != other.hasCredentials()) return false;
     if (hasCredentials()) {
-      result = result && getCredentials()
-          .equals(other.getCredentials());
+      if (!getCredentials()
+          .equals(other.getCredentials())) return false;
     }
-    result = result && unknownFields.equals(other.unknownFields);
-    return result;
+    if (!unknownFields.equals(other.unknownFields)) return false;
+    return true;
   }
 
   @java.lang.Override
@@ -817,35 +816,35 @@ private static final long serialVersionUID = 0L;
 
     @java.lang.Override
     public Builder clone() {
-      return (Builder) super.clone();
+      return super.clone();
     }
     @java.lang.Override
     public Builder setField(
         com.google.protobuf.Descriptors.FieldDescriptor field,
         java.lang.Object value) {
-      return (Builder) super.setField(field, value);
+      return super.setField(field, value);
     }
     @java.lang.Override
     public Builder clearField(
         com.google.protobuf.Descriptors.FieldDescriptor field) {
-      return (Builder) super.clearField(field);
+      return super.clearField(field);
     }
     @java.lang.Override
     public Builder clearOneof(
         com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-      return (Builder) super.clearOneof(oneof);
+      return super.clearOneof(oneof);
     }
     @java.lang.Override
     public Builder setRepeatedField(
         com.google.protobuf.Descriptors.FieldDescriptor field,
         int index, java.lang.Object value) {
-      return (Builder) super.setRepeatedField(field, index, value);
+      return super.setRepeatedField(field, index, value);
     }
     @java.lang.Override
     public Builder addRepeatedField(
         com.google.protobuf.Descriptors.FieldDescriptor field,
         java.lang.Object value) {
-      return (Builder) super.addRepeatedField(field, value);
+      return super.addRepeatedField(field, value);
     }
     @java.lang.Override
     public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -1089,7 +1088,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
 
-    private io.bloombox.schema.services.devices.v1beta1.DeviceAssignment assignment_ = null;
+    private io.bloombox.schema.services.devices.v1beta1.DeviceAssignment assignment_;
     private com.google.protobuf.SingleFieldBuilderV3<
         io.bloombox.schema.services.devices.v1beta1.DeviceAssignment, io.bloombox.schema.services.devices.v1beta1.DeviceAssignment.Builder, io.bloombox.schema.services.devices.v1beta1.DeviceAssignmentOrBuilder> assignmentBuilder_;
     /**
@@ -1242,7 +1241,7 @@ private static final long serialVersionUID = 0L;
       return assignmentBuilder_;
     }
 
-    private io.bloombox.schema.security.DeviceSecurity.DeviceTicket ticket_ = null;
+    private io.bloombox.schema.security.DeviceSecurity.DeviceTicket ticket_;
     private com.google.protobuf.SingleFieldBuilderV3<
         io.bloombox.schema.security.DeviceSecurity.DeviceTicket, io.bloombox.schema.security.DeviceSecurity.DeviceTicket.Builder, io.bloombox.schema.security.DeviceSecurity.DeviceTicketOrBuilder> ticketBuilder_;
     /**
@@ -1404,7 +1403,7 @@ private static final long serialVersionUID = 0L;
       return ticketBuilder_;
     }
 
-    private io.bloombox.schema.services.devices.v1beta1.DeviceEndpoints endpoints_ = null;
+    private io.bloombox.schema.services.devices.v1beta1.DeviceEndpoints endpoints_;
     private com.google.protobuf.SingleFieldBuilderV3<
         io.bloombox.schema.services.devices.v1beta1.DeviceEndpoints, io.bloombox.schema.services.devices.v1beta1.DeviceEndpoints.Builder, io.bloombox.schema.services.devices.v1beta1.DeviceEndpointsOrBuilder> endpointsBuilder_;
     /**
@@ -1566,7 +1565,7 @@ private static final long serialVersionUID = 0L;
       return endpointsBuilder_;
     }
 
-    private io.opencannabis.schema.proximity.BluetoothBeacon beacon_ = null;
+    private io.opencannabis.schema.proximity.BluetoothBeacon beacon_;
     private com.google.protobuf.SingleFieldBuilderV3<
         io.opencannabis.schema.proximity.BluetoothBeacon, io.opencannabis.schema.proximity.BluetoothBeacon.Builder, io.opencannabis.schema.proximity.BluetoothBeaconOrBuilder> beaconBuilder_;
     /**
@@ -1728,7 +1727,7 @@ private static final long serialVersionUID = 0L;
       return beaconBuilder_;
     }
 
-    private io.bloombox.schema.services.devices.v1beta1.DeviceKeys credentials_ = null;
+    private io.bloombox.schema.services.devices.v1beta1.DeviceKeys credentials_;
     private com.google.protobuf.SingleFieldBuilderV3<
         io.bloombox.schema.services.devices.v1beta1.DeviceKeys, io.bloombox.schema.services.devices.v1beta1.DeviceKeys.Builder, io.bloombox.schema.services.devices.v1beta1.DeviceKeysOrBuilder> credentialsBuilder_;
     /**
@@ -1892,7 +1891,7 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public final Builder setUnknownFields(
         final com.google.protobuf.UnknownFieldSet unknownFields) {
-      return super.setUnknownFieldsProto3(unknownFields);
+      return super.setUnknownFields(unknownFields);
     }
 
     @java.lang.Override

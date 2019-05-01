@@ -1,5 +1,5 @@
 /*
- * Copyright 2018, Momentum Ideas, Co. All rights reserved.
+ * Copyright 2019, Momentum Ideas, Co. All rights reserved.
  *
  * Source and object computer code contained herein is the private intellectual
  * property of Momentum Ideas Co., a Delaware Corporation. Use of this
@@ -1253,7 +1253,7 @@ public final class PartnerLocationSettingsOuterClass {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -1370,11 +1370,10 @@ public final class PartnerLocationSettingsOuterClass {
       }
       io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.APISettings other = (io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.APISettings) obj;
 
-      boolean result = true;
-      result = result && getEmbed()
-          .equals(other.getEmbed());
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!getEmbed()
+          .equals(other.getEmbed())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -1558,35 +1557,35 @@ public final class PartnerLocationSettingsOuterClass {
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -1724,7 +1723,7 @@ public final class PartnerLocationSettingsOuterClass {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -1884,7 +1883,7 @@ public final class PartnerLocationSettingsOuterClass {
             }
             case 18: {
               java.lang.String s = input.readStringRequireUtf8();
-              if (!((mutable_bitField0_ & 0x00000002) == 0x00000002)) {
+              if (!((mutable_bitField0_ & 0x00000002) != 0)) {
                 brand_ = new com.google.protobuf.LazyStringArrayList();
                 mutable_bitField0_ |= 0x00000002;
               }
@@ -1892,7 +1891,7 @@ public final class PartnerLocationSettingsOuterClass {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -1906,7 +1905,7 @@ public final class PartnerLocationSettingsOuterClass {
         throw new com.google.protobuf.InvalidProtocolBufferException(
             e).setUnfinishedMessage(this);
       } finally {
-        if (((mutable_bitField0_ & 0x00000002) == 0x00000002)) {
+        if (((mutable_bitField0_ & 0x00000002) != 0)) {
           brand_ = brand_.getUnmodifiableView();
         }
         this.unknownFields = unknownFields.build();
@@ -2069,13 +2068,12 @@ public final class PartnerLocationSettingsOuterClass {
       }
       io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.InHouseBrand other = (io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.InHouseBrand) obj;
 
-      boolean result = true;
-      result = result && getLabel()
-          .equals(other.getLabel());
-      result = result && getBrandList()
-          .equals(other.getBrandList());
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!getLabel()
+          .equals(other.getLabel())) return false;
+      if (!getBrandList()
+          .equals(other.getBrandList())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -2261,7 +2259,7 @@ public final class PartnerLocationSettingsOuterClass {
         int from_bitField0_ = bitField0_;
         int to_bitField0_ = 0;
         result.label_ = label_;
-        if (((bitField0_ & 0x00000002) == 0x00000002)) {
+        if (((bitField0_ & 0x00000002) != 0)) {
           brand_ = brand_.getUnmodifiableView();
           bitField0_ = (bitField0_ & ~0x00000002);
         }
@@ -2273,35 +2271,35 @@ public final class PartnerLocationSettingsOuterClass {
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -2450,7 +2448,7 @@ public final class PartnerLocationSettingsOuterClass {
 
       private com.google.protobuf.LazyStringList brand_ = com.google.protobuf.LazyStringArrayList.EMPTY;
       private void ensureBrandIsMutable() {
-        if (!((bitField0_ & 0x00000002) == 0x00000002)) {
+        if (!((bitField0_ & 0x00000002) != 0)) {
           brand_ = new com.google.protobuf.LazyStringArrayList(brand_);
           bitField0_ |= 0x00000002;
          }
@@ -2580,7 +2578,7 @@ public final class PartnerLocationSettingsOuterClass {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -2723,7 +2721,7 @@ public final class PartnerLocationSettingsOuterClass {
               done = true;
               break;
             case 10: {
-              if (!((mutable_bitField0_ & 0x00000001) == 0x00000001)) {
+              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
                 inhouse_ = new java.util.ArrayList<io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.InHouseBrand>();
                 mutable_bitField0_ |= 0x00000001;
               }
@@ -2732,7 +2730,7 @@ public final class PartnerLocationSettingsOuterClass {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -2746,7 +2744,7 @@ public final class PartnerLocationSettingsOuterClass {
         throw new com.google.protobuf.InvalidProtocolBufferException(
             e).setUnfinishedMessage(this);
       } finally {
-        if (((mutable_bitField0_ & 0x00000001) == 0x00000001)) {
+        if (((mutable_bitField0_ & 0x00000001) != 0)) {
           inhouse_ = java.util.Collections.unmodifiableList(inhouse_);
         }
         this.unknownFields = unknownFields.build();
@@ -2866,11 +2864,10 @@ public final class PartnerLocationSettingsOuterClass {
       }
       io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.ProductBrandSettings other = (io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.ProductBrandSettings) obj;
 
-      boolean result = true;
-      result = result && getInhouseList()
-          .equals(other.getInhouseList());
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!getInhouseList()
+          .equals(other.getInhouseList())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -3056,7 +3053,7 @@ public final class PartnerLocationSettingsOuterClass {
         io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.ProductBrandSettings result = new io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.ProductBrandSettings(this);
         int from_bitField0_ = bitField0_;
         if (inhouseBuilder_ == null) {
-          if (((bitField0_ & 0x00000001) == 0x00000001)) {
+          if (((bitField0_ & 0x00000001) != 0)) {
             inhouse_ = java.util.Collections.unmodifiableList(inhouse_);
             bitField0_ = (bitField0_ & ~0x00000001);
           }
@@ -3070,35 +3067,35 @@ public final class PartnerLocationSettingsOuterClass {
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -3171,7 +3168,7 @@ public final class PartnerLocationSettingsOuterClass {
       private java.util.List<io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.InHouseBrand> inhouse_ =
         java.util.Collections.emptyList();
       private void ensureInhouseIsMutable() {
-        if (!((bitField0_ & 0x00000001) == 0x00000001)) {
+        if (!((bitField0_ & 0x00000001) != 0)) {
           inhouse_ = new java.util.ArrayList<io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.InHouseBrand>(inhouse_);
           bitField0_ |= 0x00000001;
          }
@@ -3472,7 +3469,7 @@ public final class PartnerLocationSettingsOuterClass {
           inhouseBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
               io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.InHouseBrand, io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.InHouseBrand.Builder, io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.InHouseBrandOrBuilder>(
                   inhouse_,
-                  ((bitField0_ & 0x00000001) == 0x00000001),
+                  ((bitField0_ & 0x00000001) != 0),
                   getParentForChildren(),
                   isClean());
           inhouse_ = null;
@@ -3482,7 +3479,7 @@ public final class PartnerLocationSettingsOuterClass {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -3571,8 +3568,6 @@ public final class PartnerLocationSettingsOuterClass {
       super(builder);
     }
     private PublishSettings() {
-      menu_ = false;
-      profile_ = false;
     }
 
     @java.lang.Override
@@ -3610,7 +3605,7 @@ public final class PartnerLocationSettingsOuterClass {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -3719,13 +3714,12 @@ public final class PartnerLocationSettingsOuterClass {
       }
       io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.PublishSettings other = (io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.PublishSettings) obj;
 
-      boolean result = true;
-      result = result && (getMenu()
-          == other.getMenu());
-      result = result && (getProfile()
-          == other.getProfile());
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (getMenu()
+          != other.getMenu()) return false;
+      if (getProfile()
+          != other.getProfile()) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -3916,35 +3910,35 @@ public final class PartnerLocationSettingsOuterClass {
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -4071,7 +4065,7 @@ public final class PartnerLocationSettingsOuterClass {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -4219,7 +4213,7 @@ public final class PartnerLocationSettingsOuterClass {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -4410,22 +4404,19 @@ public final class PartnerLocationSettingsOuterClass {
       }
       io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.CustomSectionSettings other = (io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.CustomSectionSettings) obj;
 
-      boolean result = true;
-      result = result && getSpec()
-          .equals(other.getSpec());
-      result = result && getSettingsCase().equals(
-          other.getSettingsCase());
-      if (!result) return false;
+      if (!getSpec()
+          .equals(other.getSpec())) return false;
+      if (!getSettingsCase().equals(other.getSettingsCase())) return false;
       switch (settingsCase_) {
         case 2:
-          result = result && getFilterValue()
-              == other.getFilterValue();
+          if (getFilterValue()
+              != other.getFilterValue()) return false;
           break;
         case 0:
         default:
       }
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -4623,35 +4614,35 @@ public final class PartnerLocationSettingsOuterClass {
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -4887,7 +4878,7 @@ public final class PartnerLocationSettingsOuterClass {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -5059,8 +5050,6 @@ public final class PartnerLocationSettingsOuterClass {
       super(builder);
     }
     private SectionSettingsPayload() {
-      hide_ = false;
-      label_ = false;
       media_ = "";
       text_ = "";
     }
@@ -5132,7 +5121,7 @@ public final class PartnerLocationSettingsOuterClass {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -5461,32 +5450,29 @@ public final class PartnerLocationSettingsOuterClass {
       }
       io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.SectionSettingsPayload other = (io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.SectionSettingsPayload) obj;
 
-      boolean result = true;
-      result = result && (getHide()
-          == other.getHide());
-      result = result && (getLabel()
-          == other.getLabel());
-      result = result && getMedia()
-          .equals(other.getMedia());
-      result = result && getText()
-          .equals(other.getText());
-      result = result && getKindCase().equals(
-          other.getKindCase());
-      if (!result) return false;
+      if (getHide()
+          != other.getHide()) return false;
+      if (getLabel()
+          != other.getLabel()) return false;
+      if (!getMedia()
+          .equals(other.getMedia())) return false;
+      if (!getText()
+          .equals(other.getText())) return false;
+      if (!getKindCase().equals(other.getKindCase())) return false;
       switch (kindCase_) {
         case 5:
-          result = result && getTypeValue()
-              == other.getTypeValue();
+          if (getTypeValue()
+              != other.getTypeValue()) return false;
           break;
         case 6:
-          result = result && getCustom()
-              .equals(other.getCustom());
+          if (!getCustom()
+              .equals(other.getCustom())) return false;
           break;
         case 0:
         default:
       }
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -5712,35 +5698,35 @@ public final class PartnerLocationSettingsOuterClass {
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -6335,7 +6321,7 @@ public final class PartnerLocationSettingsOuterClass {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -6851,7 +6837,7 @@ public final class PartnerLocationSettingsOuterClass {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -7360,64 +7346,63 @@ public final class PartnerLocationSettingsOuterClass {
       }
       io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.SectionSettings other = (io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.SectionSettings) obj;
 
-      boolean result = true;
-      result = result && (hasApothecary() == other.hasApothecary());
+      if (hasApothecary() != other.hasApothecary()) return false;
       if (hasApothecary()) {
-        result = result && getApothecary()
-            .equals(other.getApothecary());
+        if (!getApothecary()
+            .equals(other.getApothecary())) return false;
       }
-      result = result && (hasCartridges() == other.hasCartridges());
+      if (hasCartridges() != other.hasCartridges()) return false;
       if (hasCartridges()) {
-        result = result && getCartridges()
-            .equals(other.getCartridges());
+        if (!getCartridges()
+            .equals(other.getCartridges())) return false;
       }
-      result = result && (hasConcentrates() == other.hasConcentrates());
+      if (hasConcentrates() != other.hasConcentrates()) return false;
       if (hasConcentrates()) {
-        result = result && getConcentrates()
-            .equals(other.getConcentrates());
+        if (!getConcentrates()
+            .equals(other.getConcentrates())) return false;
       }
-      result = result && (hasEdibles() == other.hasEdibles());
+      if (hasEdibles() != other.hasEdibles()) return false;
       if (hasEdibles()) {
-        result = result && getEdibles()
-            .equals(other.getEdibles());
+        if (!getEdibles()
+            .equals(other.getEdibles())) return false;
       }
-      result = result && (hasFlowers() == other.hasFlowers());
+      if (hasFlowers() != other.hasFlowers()) return false;
       if (hasFlowers()) {
-        result = result && getFlowers()
-            .equals(other.getFlowers());
+        if (!getFlowers()
+            .equals(other.getFlowers())) return false;
       }
-      result = result && (hasPrerolls() == other.hasPrerolls());
+      if (hasPrerolls() != other.hasPrerolls()) return false;
       if (hasPrerolls()) {
-        result = result && getPrerolls()
-            .equals(other.getPrerolls());
+        if (!getPrerolls()
+            .equals(other.getPrerolls())) return false;
       }
-      result = result && (hasMerchandise() == other.hasMerchandise());
+      if (hasMerchandise() != other.hasMerchandise()) return false;
       if (hasMerchandise()) {
-        result = result && getMerchandise()
-            .equals(other.getMerchandise());
+        if (!getMerchandise()
+            .equals(other.getMerchandise())) return false;
       }
-      result = result && (hasPlants() == other.hasPlants());
+      if (hasPlants() != other.hasPlants()) return false;
       if (hasPlants()) {
-        result = result && getPlants()
-            .equals(other.getPlants());
+        if (!getPlants()
+            .equals(other.getPlants())) return false;
       }
-      result = result && (hasCbd() == other.hasCbd());
+      if (hasCbd() != other.hasCbd()) return false;
       if (hasCbd()) {
-        result = result && getCbd()
-            .equals(other.getCbd());
+        if (!getCbd()
+            .equals(other.getCbd())) return false;
       }
-      result = result && (hasHouse() == other.hasHouse());
+      if (hasHouse() != other.hasHouse()) return false;
       if (hasHouse()) {
-        result = result && getHouse()
-            .equals(other.getHouse());
+        if (!getHouse()
+            .equals(other.getHouse())) return false;
       }
-      result = result && (hasOnsale() == other.hasOnsale());
+      if (hasOnsale() != other.hasOnsale()) return false;
       if (hasOnsale()) {
-        result = result && getOnsale()
-            .equals(other.getOnsale());
+        if (!getOnsale()
+            .equals(other.getOnsale())) return false;
       }
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -7761,35 +7746,35 @@ public final class PartnerLocationSettingsOuterClass {
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -7865,7 +7850,7 @@ public final class PartnerLocationSettingsOuterClass {
         return this;
       }
 
-      private io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.SectionSettingsPayload apothecary_ = null;
+      private io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.SectionSettingsPayload apothecary_;
       private com.google.protobuf.SingleFieldBuilderV3<
           io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.SectionSettingsPayload, io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.SectionSettingsPayload.Builder, io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.SectionSettingsPayloadOrBuilder> apothecaryBuilder_;
       /**
@@ -8018,7 +8003,7 @@ public final class PartnerLocationSettingsOuterClass {
         return apothecaryBuilder_;
       }
 
-      private io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.SectionSettingsPayload cartridges_ = null;
+      private io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.SectionSettingsPayload cartridges_;
       private com.google.protobuf.SingleFieldBuilderV3<
           io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.SectionSettingsPayload, io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.SectionSettingsPayload.Builder, io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.SectionSettingsPayloadOrBuilder> cartridgesBuilder_;
       /**
@@ -8171,7 +8156,7 @@ public final class PartnerLocationSettingsOuterClass {
         return cartridgesBuilder_;
       }
 
-      private io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.SectionSettingsPayload concentrates_ = null;
+      private io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.SectionSettingsPayload concentrates_;
       private com.google.protobuf.SingleFieldBuilderV3<
           io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.SectionSettingsPayload, io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.SectionSettingsPayload.Builder, io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.SectionSettingsPayloadOrBuilder> concentratesBuilder_;
       /**
@@ -8324,7 +8309,7 @@ public final class PartnerLocationSettingsOuterClass {
         return concentratesBuilder_;
       }
 
-      private io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.SectionSettingsPayload edibles_ = null;
+      private io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.SectionSettingsPayload edibles_;
       private com.google.protobuf.SingleFieldBuilderV3<
           io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.SectionSettingsPayload, io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.SectionSettingsPayload.Builder, io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.SectionSettingsPayloadOrBuilder> ediblesBuilder_;
       /**
@@ -8477,7 +8462,7 @@ public final class PartnerLocationSettingsOuterClass {
         return ediblesBuilder_;
       }
 
-      private io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.SectionSettingsPayload flowers_ = null;
+      private io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.SectionSettingsPayload flowers_;
       private com.google.protobuf.SingleFieldBuilderV3<
           io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.SectionSettingsPayload, io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.SectionSettingsPayload.Builder, io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.SectionSettingsPayloadOrBuilder> flowersBuilder_;
       /**
@@ -8630,7 +8615,7 @@ public final class PartnerLocationSettingsOuterClass {
         return flowersBuilder_;
       }
 
-      private io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.SectionSettingsPayload prerolls_ = null;
+      private io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.SectionSettingsPayload prerolls_;
       private com.google.protobuf.SingleFieldBuilderV3<
           io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.SectionSettingsPayload, io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.SectionSettingsPayload.Builder, io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.SectionSettingsPayloadOrBuilder> prerollsBuilder_;
       /**
@@ -8783,7 +8768,7 @@ public final class PartnerLocationSettingsOuterClass {
         return prerollsBuilder_;
       }
 
-      private io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.SectionSettingsPayload merchandise_ = null;
+      private io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.SectionSettingsPayload merchandise_;
       private com.google.protobuf.SingleFieldBuilderV3<
           io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.SectionSettingsPayload, io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.SectionSettingsPayload.Builder, io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.SectionSettingsPayloadOrBuilder> merchandiseBuilder_;
       /**
@@ -8936,7 +8921,7 @@ public final class PartnerLocationSettingsOuterClass {
         return merchandiseBuilder_;
       }
 
-      private io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.SectionSettingsPayload plants_ = null;
+      private io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.SectionSettingsPayload plants_;
       private com.google.protobuf.SingleFieldBuilderV3<
           io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.SectionSettingsPayload, io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.SectionSettingsPayload.Builder, io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.SectionSettingsPayloadOrBuilder> plantsBuilder_;
       /**
@@ -9089,7 +9074,7 @@ public final class PartnerLocationSettingsOuterClass {
         return plantsBuilder_;
       }
 
-      private io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.SectionSettingsPayload cbd_ = null;
+      private io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.SectionSettingsPayload cbd_;
       private com.google.protobuf.SingleFieldBuilderV3<
           io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.SectionSettingsPayload, io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.SectionSettingsPayload.Builder, io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.SectionSettingsPayloadOrBuilder> cbdBuilder_;
       /**
@@ -9242,7 +9227,7 @@ public final class PartnerLocationSettingsOuterClass {
         return cbdBuilder_;
       }
 
-      private io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.SectionSettingsPayload house_ = null;
+      private io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.SectionSettingsPayload house_;
       private com.google.protobuf.SingleFieldBuilderV3<
           io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.SectionSettingsPayload, io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.SectionSettingsPayload.Builder, io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.SectionSettingsPayloadOrBuilder> houseBuilder_;
       /**
@@ -9395,7 +9380,7 @@ public final class PartnerLocationSettingsOuterClass {
         return houseBuilder_;
       }
 
-      private io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.SectionSettingsPayload onsale_ = null;
+      private io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.SectionSettingsPayload onsale_;
       private com.google.protobuf.SingleFieldBuilderV3<
           io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.SectionSettingsPayload, io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.SectionSettingsPayload.Builder, io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.SectionSettingsPayloadOrBuilder> onsaleBuilder_;
       /**
@@ -9550,7 +9535,7 @@ public final class PartnerLocationSettingsOuterClass {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -9698,7 +9683,7 @@ public final class PartnerLocationSettingsOuterClass {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -9863,13 +9848,12 @@ public final class PartnerLocationSettingsOuterClass {
       }
       io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.TVBannerSettings other = (io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.TVBannerSettings) obj;
 
-      boolean result = true;
-      result = result && getBannerText()
-          .equals(other.getBannerText());
-      result = result && getImage()
-          .equals(other.getImage());
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!getBannerText()
+          .equals(other.getBannerText())) return false;
+      if (!getImage()
+          .equals(other.getImage())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -10058,35 +10042,35 @@ public final class PartnerLocationSettingsOuterClass {
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -10317,7 +10301,7 @@ public final class PartnerLocationSettingsOuterClass {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -10433,7 +10417,6 @@ public final class PartnerLocationSettingsOuterClass {
       super(builder);
     }
     private TVSectionSettingsPayload() {
-      sort_ = 0;
       title_ = "";
       image_ = "";
     }
@@ -10480,7 +10463,7 @@ public final class PartnerLocationSettingsOuterClass {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -10665,15 +10648,14 @@ public final class PartnerLocationSettingsOuterClass {
       }
       io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.TVSectionSettingsPayload other = (io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.TVSectionSettingsPayload) obj;
 
-      boolean result = true;
-      result = result && (getSort()
-          == other.getSort());
-      result = result && getTitle()
-          .equals(other.getTitle());
-      result = result && getImage()
-          .equals(other.getImage());
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (getSort()
+          != other.getSort()) return false;
+      if (!getTitle()
+          .equals(other.getTitle())) return false;
+      if (!getImage()
+          .equals(other.getImage())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -10867,35 +10849,35 @@ public final class PartnerLocationSettingsOuterClass {
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -11167,7 +11149,7 @@ public final class PartnerLocationSettingsOuterClass {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -11569,7 +11551,7 @@ public final class PartnerLocationSettingsOuterClass {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -11958,49 +11940,48 @@ public final class PartnerLocationSettingsOuterClass {
       }
       io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.TVMenuSettings other = (io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.TVMenuSettings) obj;
 
-      boolean result = true;
-      result = result && (hasApothecary() == other.hasApothecary());
+      if (hasApothecary() != other.hasApothecary()) return false;
       if (hasApothecary()) {
-        result = result && getApothecary()
-            .equals(other.getApothecary());
+        if (!getApothecary()
+            .equals(other.getApothecary())) return false;
       }
-      result = result && (hasCartridges() == other.hasCartridges());
+      if (hasCartridges() != other.hasCartridges()) return false;
       if (hasCartridges()) {
-        result = result && getCartridges()
-            .equals(other.getCartridges());
+        if (!getCartridges()
+            .equals(other.getCartridges())) return false;
       }
-      result = result && (hasConcentrates() == other.hasConcentrates());
+      if (hasConcentrates() != other.hasConcentrates()) return false;
       if (hasConcentrates()) {
-        result = result && getConcentrates()
-            .equals(other.getConcentrates());
+        if (!getConcentrates()
+            .equals(other.getConcentrates())) return false;
       }
-      result = result && (hasEdibles() == other.hasEdibles());
+      if (hasEdibles() != other.hasEdibles()) return false;
       if (hasEdibles()) {
-        result = result && getEdibles()
-            .equals(other.getEdibles());
+        if (!getEdibles()
+            .equals(other.getEdibles())) return false;
       }
-      result = result && (hasFlowers() == other.hasFlowers());
+      if (hasFlowers() != other.hasFlowers()) return false;
       if (hasFlowers()) {
-        result = result && getFlowers()
-            .equals(other.getFlowers());
+        if (!getFlowers()
+            .equals(other.getFlowers())) return false;
       }
-      result = result && (hasPrerolls() == other.hasPrerolls());
+      if (hasPrerolls() != other.hasPrerolls()) return false;
       if (hasPrerolls()) {
-        result = result && getPrerolls()
-            .equals(other.getPrerolls());
+        if (!getPrerolls()
+            .equals(other.getPrerolls())) return false;
       }
-      result = result && (hasMerchandise() == other.hasMerchandise());
+      if (hasMerchandise() != other.hasMerchandise()) return false;
       if (hasMerchandise()) {
-        result = result && getMerchandise()
-            .equals(other.getMerchandise());
+        if (!getMerchandise()
+            .equals(other.getMerchandise())) return false;
       }
-      result = result && (hasPlants() == other.hasPlants());
+      if (hasPlants() != other.hasPlants()) return false;
       if (hasPlants()) {
-        result = result && getPlants()
-            .equals(other.getPlants());
+        if (!getPlants()
+            .equals(other.getPlants())) return false;
       }
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -12299,35 +12280,35 @@ public final class PartnerLocationSettingsOuterClass {
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -12394,7 +12375,7 @@ public final class PartnerLocationSettingsOuterClass {
         return this;
       }
 
-      private io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.TVSectionSettingsPayload apothecary_ = null;
+      private io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.TVSectionSettingsPayload apothecary_;
       private com.google.protobuf.SingleFieldBuilderV3<
           io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.TVSectionSettingsPayload, io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.TVSectionSettingsPayload.Builder, io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.TVSectionSettingsPayloadOrBuilder> apothecaryBuilder_;
       /**
@@ -12547,7 +12528,7 @@ public final class PartnerLocationSettingsOuterClass {
         return apothecaryBuilder_;
       }
 
-      private io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.TVSectionSettingsPayload cartridges_ = null;
+      private io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.TVSectionSettingsPayload cartridges_;
       private com.google.protobuf.SingleFieldBuilderV3<
           io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.TVSectionSettingsPayload, io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.TVSectionSettingsPayload.Builder, io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.TVSectionSettingsPayloadOrBuilder> cartridgesBuilder_;
       /**
@@ -12700,7 +12681,7 @@ public final class PartnerLocationSettingsOuterClass {
         return cartridgesBuilder_;
       }
 
-      private io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.TVSectionSettingsPayload concentrates_ = null;
+      private io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.TVSectionSettingsPayload concentrates_;
       private com.google.protobuf.SingleFieldBuilderV3<
           io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.TVSectionSettingsPayload, io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.TVSectionSettingsPayload.Builder, io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.TVSectionSettingsPayloadOrBuilder> concentratesBuilder_;
       /**
@@ -12853,7 +12834,7 @@ public final class PartnerLocationSettingsOuterClass {
         return concentratesBuilder_;
       }
 
-      private io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.TVSectionSettingsPayload edibles_ = null;
+      private io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.TVSectionSettingsPayload edibles_;
       private com.google.protobuf.SingleFieldBuilderV3<
           io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.TVSectionSettingsPayload, io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.TVSectionSettingsPayload.Builder, io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.TVSectionSettingsPayloadOrBuilder> ediblesBuilder_;
       /**
@@ -13006,7 +12987,7 @@ public final class PartnerLocationSettingsOuterClass {
         return ediblesBuilder_;
       }
 
-      private io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.TVSectionSettingsPayload flowers_ = null;
+      private io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.TVSectionSettingsPayload flowers_;
       private com.google.protobuf.SingleFieldBuilderV3<
           io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.TVSectionSettingsPayload, io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.TVSectionSettingsPayload.Builder, io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.TVSectionSettingsPayloadOrBuilder> flowersBuilder_;
       /**
@@ -13159,7 +13140,7 @@ public final class PartnerLocationSettingsOuterClass {
         return flowersBuilder_;
       }
 
-      private io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.TVSectionSettingsPayload prerolls_ = null;
+      private io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.TVSectionSettingsPayload prerolls_;
       private com.google.protobuf.SingleFieldBuilderV3<
           io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.TVSectionSettingsPayload, io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.TVSectionSettingsPayload.Builder, io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.TVSectionSettingsPayloadOrBuilder> prerollsBuilder_;
       /**
@@ -13312,7 +13293,7 @@ public final class PartnerLocationSettingsOuterClass {
         return prerollsBuilder_;
       }
 
-      private io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.TVSectionSettingsPayload merchandise_ = null;
+      private io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.TVSectionSettingsPayload merchandise_;
       private com.google.protobuf.SingleFieldBuilderV3<
           io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.TVSectionSettingsPayload, io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.TVSectionSettingsPayload.Builder, io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.TVSectionSettingsPayloadOrBuilder> merchandiseBuilder_;
       /**
@@ -13465,7 +13446,7 @@ public final class PartnerLocationSettingsOuterClass {
         return merchandiseBuilder_;
       }
 
-      private io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.TVSectionSettingsPayload plants_ = null;
+      private io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.TVSectionSettingsPayload plants_;
       private com.google.protobuf.SingleFieldBuilderV3<
           io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.TVSectionSettingsPayload, io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.TVSectionSettingsPayload.Builder, io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.TVSectionSettingsPayloadOrBuilder> plantsBuilder_;
       /**
@@ -13620,7 +13601,7 @@ public final class PartnerLocationSettingsOuterClass {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -13794,7 +13775,7 @@ public final class PartnerLocationSettingsOuterClass {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -13943,19 +13924,18 @@ public final class PartnerLocationSettingsOuterClass {
       }
       io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.TVSettings other = (io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.TVSettings) obj;
 
-      boolean result = true;
-      result = result && (hasBanner() == other.hasBanner());
+      if (hasBanner() != other.hasBanner()) return false;
       if (hasBanner()) {
-        result = result && getBanner()
-            .equals(other.getBanner());
+        if (!getBanner()
+            .equals(other.getBanner())) return false;
       }
-      result = result && (hasSettings() == other.hasSettings());
+      if (hasSettings() != other.hasSettings()) return false;
       if (hasSettings()) {
-        result = result && getSettings()
-            .equals(other.getSettings());
+        if (!getSettings()
+            .equals(other.getSettings())) return false;
       }
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -14164,35 +14144,35 @@ public final class PartnerLocationSettingsOuterClass {
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -14241,7 +14221,7 @@ public final class PartnerLocationSettingsOuterClass {
         return this;
       }
 
-      private io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.TVBannerSettings banner_ = null;
+      private io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.TVBannerSettings banner_;
       private com.google.protobuf.SingleFieldBuilderV3<
           io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.TVBannerSettings, io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.TVBannerSettings.Builder, io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.TVBannerSettingsOrBuilder> bannerBuilder_;
       /**
@@ -14394,7 +14374,7 @@ public final class PartnerLocationSettingsOuterClass {
         return bannerBuilder_;
       }
 
-      private io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.TVMenuSettings settings_ = null;
+      private io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.TVMenuSettings settings_;
       private com.google.protobuf.SingleFieldBuilderV3<
           io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.TVMenuSettings, io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.TVMenuSettings.Builder, io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.TVMenuSettingsOrBuilder> settingsBuilder_;
       /**
@@ -14549,7 +14529,7 @@ public final class PartnerLocationSettingsOuterClass {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -14638,8 +14618,6 @@ public final class PartnerLocationSettingsOuterClass {
       super(builder);
     }
     private HoursSpec() {
-      hour_ = 0;
-      minute_ = 0;
     }
 
     @java.lang.Override
@@ -14677,7 +14655,7 @@ public final class PartnerLocationSettingsOuterClass {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -14786,13 +14764,12 @@ public final class PartnerLocationSettingsOuterClass {
       }
       io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.HoursSpec other = (io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.HoursSpec) obj;
 
-      boolean result = true;
-      result = result && (getHour()
-          == other.getHour());
-      result = result && (getMinute()
-          == other.getMinute());
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (getHour()
+          != other.getHour()) return false;
+      if (getMinute()
+          != other.getMinute()) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -14981,35 +14958,35 @@ public final class PartnerLocationSettingsOuterClass {
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -15136,7 +15113,7 @@ public final class PartnerLocationSettingsOuterClass {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -15334,7 +15311,7 @@ public final class PartnerLocationSettingsOuterClass {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -15515,20 +15492,19 @@ public final class PartnerLocationSettingsOuterClass {
       }
       io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.HoursBoundary other = (io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.HoursBoundary) obj;
 
-      boolean result = true;
-      result = result && (hasBegin() == other.hasBegin());
+      if (hasBegin() != other.hasBegin()) return false;
       if (hasBegin()) {
-        result = result && getBegin()
-            .equals(other.getBegin());
+        if (!getBegin()
+            .equals(other.getBegin())) return false;
       }
-      result = result && (hasEnd() == other.hasEnd());
+      if (hasEnd() != other.hasEnd()) return false;
       if (hasEnd()) {
-        result = result && getEnd()
-            .equals(other.getEnd());
+        if (!getEnd()
+            .equals(other.getEnd())) return false;
       }
-      result = result && span_ == other.span_;
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (span_ != other.span_) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -15742,35 +15718,35 @@ public final class PartnerLocationSettingsOuterClass {
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -15822,7 +15798,7 @@ public final class PartnerLocationSettingsOuterClass {
         return this;
       }
 
-      private io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.HoursSpec begin_ = null;
+      private io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.HoursSpec begin_;
       private com.google.protobuf.SingleFieldBuilderV3<
           io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.HoursSpec, io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.HoursSpec.Builder, io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.HoursSpecOrBuilder> beginBuilder_;
       /**
@@ -15975,7 +15951,7 @@ public final class PartnerLocationSettingsOuterClass {
         return beginBuilder_;
       }
 
-      private io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.HoursSpec end_ = null;
+      private io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.HoursSpec end_;
       private com.google.protobuf.SingleFieldBuilderV3<
           io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.HoursSpec, io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.HoursSpec.Builder, io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.HoursSpecOrBuilder> endBuilder_;
       /**
@@ -16195,7 +16171,7 @@ public final class PartnerLocationSettingsOuterClass {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -16355,7 +16331,7 @@ public final class PartnerLocationSettingsOuterClass {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -16496,15 +16472,14 @@ public final class PartnerLocationSettingsOuterClass {
       }
       io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.RegularHoursSettings other = (io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.RegularHoursSettings) obj;
 
-      boolean result = true;
-      result = result && (hasBounds() == other.hasBounds());
+      if (hasBounds() != other.hasBounds()) return false;
       if (hasBounds()) {
-        result = result && getBounds()
-            .equals(other.getBounds());
+        if (!getBounds()
+            .equals(other.getBounds())) return false;
       }
-      result = result && mode_ == other.mode_;
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (mode_ != other.mode_) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -16703,35 +16678,35 @@ public final class PartnerLocationSettingsOuterClass {
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -16780,7 +16755,7 @@ public final class PartnerLocationSettingsOuterClass {
         return this;
       }
 
-      private io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.HoursBoundary bounds_ = null;
+      private io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.HoursBoundary bounds_;
       private com.google.protobuf.SingleFieldBuilderV3<
           io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.HoursBoundary, io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.HoursBoundary.Builder, io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.HoursBoundaryOrBuilder> boundsBuilder_;
       /**
@@ -17000,7 +16975,7 @@ public final class PartnerLocationSettingsOuterClass {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -17198,7 +17173,7 @@ public final class PartnerLocationSettingsOuterClass {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -17379,20 +17354,19 @@ public final class PartnerLocationSettingsOuterClass {
       }
       io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.SpecialHoursSettings other = (io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.SpecialHoursSettings) obj;
 
-      boolean result = true;
-      result = result && (hasBounds() == other.hasBounds());
+      if (hasBounds() != other.hasBounds()) return false;
       if (hasBounds()) {
-        result = result && getBounds()
-            .equals(other.getBounds());
+        if (!getBounds()
+            .equals(other.getBounds())) return false;
       }
-      result = result && mode_ == other.mode_;
-      result = result && (hasDate() == other.hasDate());
+      if (mode_ != other.mode_) return false;
+      if (hasDate() != other.hasDate()) return false;
       if (hasDate()) {
-        result = result && getDate()
-            .equals(other.getDate());
+        if (!getDate()
+            .equals(other.getDate())) return false;
       }
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -17606,35 +17580,35 @@ public final class PartnerLocationSettingsOuterClass {
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -17686,7 +17660,7 @@ public final class PartnerLocationSettingsOuterClass {
         return this;
       }
 
-      private io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.HoursBoundary bounds_ = null;
+      private io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.HoursBoundary bounds_;
       private com.google.protobuf.SingleFieldBuilderV3<
           io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.HoursBoundary, io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.HoursBoundary.Builder, io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.HoursBoundaryOrBuilder> boundsBuilder_;
       /**
@@ -17904,7 +17878,7 @@ public final class PartnerLocationSettingsOuterClass {
         return this;
       }
 
-      private io.opencannabis.schema.temporal.TemporalDate.Date date_ = null;
+      private io.opencannabis.schema.temporal.TemporalDate.Date date_;
       private com.google.protobuf.SingleFieldBuilderV3<
           io.opencannabis.schema.temporal.TemporalDate.Date, io.opencannabis.schema.temporal.TemporalDate.Date.Builder, io.opencannabis.schema.temporal.TemporalDate.DateOrBuilder> dateBuilder_;
       /**
@@ -18059,7 +18033,7 @@ public final class PartnerLocationSettingsOuterClass {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -18256,7 +18230,7 @@ public final class PartnerLocationSettingsOuterClass {
               done = true;
               break;
             case 10: {
-              if (!((mutable_bitField0_ & 0x00000001) == 0x00000001)) {
+              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
                 regular_ = new java.util.ArrayList<io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.RegularHoursSettings>();
                 mutable_bitField0_ |= 0x00000001;
               }
@@ -18265,7 +18239,7 @@ public final class PartnerLocationSettingsOuterClass {
               break;
             }
             case 18: {
-              if (!((mutable_bitField0_ & 0x00000002) == 0x00000002)) {
+              if (!((mutable_bitField0_ & 0x00000002) != 0)) {
                 special_ = com.google.protobuf.MapField.newMapField(
                     SpecialDefaultEntryHolder.defaultEntry);
                 mutable_bitField0_ |= 0x00000002;
@@ -18278,7 +18252,7 @@ public final class PartnerLocationSettingsOuterClass {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -18292,7 +18266,7 @@ public final class PartnerLocationSettingsOuterClass {
         throw new com.google.protobuf.InvalidProtocolBufferException(
             e).setUnfinishedMessage(this);
       } finally {
-        if (((mutable_bitField0_ & 0x00000001) == 0x00000001)) {
+        if (((mutable_bitField0_ & 0x00000001) != 0)) {
           regular_ = java.util.Collections.unmodifiableList(regular_);
         }
         this.unknownFields = unknownFields.build();
@@ -18532,13 +18506,12 @@ public final class PartnerLocationSettingsOuterClass {
       }
       io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.ShopHoursSettings other = (io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.ShopHoursSettings) obj;
 
-      boolean result = true;
-      result = result && getRegularList()
-          .equals(other.getRegularList());
-      result = result && internalGetSpecial().equals(
-          other.internalGetSpecial());
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!getRegularList()
+          .equals(other.getRegularList())) return false;
+      if (!internalGetSpecial().equals(
+          other.internalGetSpecial())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -18751,7 +18724,7 @@ public final class PartnerLocationSettingsOuterClass {
         io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.ShopHoursSettings result = new io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.ShopHoursSettings(this);
         int from_bitField0_ = bitField0_;
         if (regularBuilder_ == null) {
-          if (((bitField0_ & 0x00000001) == 0x00000001)) {
+          if (((bitField0_ & 0x00000001) != 0)) {
             regular_ = java.util.Collections.unmodifiableList(regular_);
             bitField0_ = (bitField0_ & ~0x00000001);
           }
@@ -18767,35 +18740,35 @@ public final class PartnerLocationSettingsOuterClass {
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -18870,7 +18843,7 @@ public final class PartnerLocationSettingsOuterClass {
       private java.util.List<io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.RegularHoursSettings> regular_ =
         java.util.Collections.emptyList();
       private void ensureRegularIsMutable() {
-        if (!((bitField0_ & 0x00000001) == 0x00000001)) {
+        if (!((bitField0_ & 0x00000001) != 0)) {
           regular_ = new java.util.ArrayList<io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.RegularHoursSettings>(regular_);
           bitField0_ |= 0x00000001;
          }
@@ -19171,7 +19144,7 @@ public final class PartnerLocationSettingsOuterClass {
           regularBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
               io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.RegularHoursSettings, io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.RegularHoursSettings.Builder, io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.RegularHoursSettingsOrBuilder>(
                   regular_,
-                  ((bitField0_ & 0x00000001) == 0x00000001),
+                  ((bitField0_ & 0x00000001) != 0),
                   getParentForChildren(),
                   isClean());
           regular_ = null;
@@ -19332,7 +19305,7 @@ public final class PartnerLocationSettingsOuterClass {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -19457,12 +19430,6 @@ public final class PartnerLocationSettingsOuterClass {
       super(builder);
     }
     private ShopServiceSettings() {
-      delivery_ = false;
-      express_ = false;
-      pickup_ = false;
-      storefront_ = false;
-      medical_ = false;
-      adultUse_ = false;
     }
 
     @java.lang.Override
@@ -19520,7 +19487,7 @@ public final class PartnerLocationSettingsOuterClass {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -19709,21 +19676,20 @@ public final class PartnerLocationSettingsOuterClass {
       }
       io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.ShopServiceSettings other = (io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.ShopServiceSettings) obj;
 
-      boolean result = true;
-      result = result && (getDelivery()
-          == other.getDelivery());
-      result = result && (getExpress()
-          == other.getExpress());
-      result = result && (getPickup()
-          == other.getPickup());
-      result = result && (getStorefront()
-          == other.getStorefront());
-      result = result && (getMedical()
-          == other.getMedical());
-      result = result && (getAdultUse()
-          == other.getAdultUse());
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (getDelivery()
+          != other.getDelivery()) return false;
+      if (getExpress()
+          != other.getExpress()) return false;
+      if (getPickup()
+          != other.getPickup()) return false;
+      if (getStorefront()
+          != other.getStorefront()) return false;
+      if (getMedical()
+          != other.getMedical()) return false;
+      if (getAdultUse()
+          != other.getAdultUse()) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -19938,35 +19904,35 @@ public final class PartnerLocationSettingsOuterClass {
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -20257,7 +20223,7 @@ public final class PartnerLocationSettingsOuterClass {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -20366,8 +20332,6 @@ public final class PartnerLocationSettingsOuterClass {
     }
     private DeliveryZipcodeSettings() {
       zipcode_ = "";
-      enabled_ = false;
-      deliveryMinimum_ = 0;
     }
 
     @java.lang.Override
@@ -20411,7 +20375,7 @@ public final class PartnerLocationSettingsOuterClass {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -20569,15 +20533,14 @@ public final class PartnerLocationSettingsOuterClass {
       }
       io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.DeliveryZipcodeSettings other = (io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.DeliveryZipcodeSettings) obj;
 
-      boolean result = true;
-      result = result && getZipcode()
-          .equals(other.getZipcode());
-      result = result && (getEnabled()
-          == other.getEnabled());
-      result = result && (getDeliveryMinimum()
-          == other.getDeliveryMinimum());
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!getZipcode()
+          .equals(other.getZipcode())) return false;
+      if (getEnabled()
+          != other.getEnabled()) return false;
+      if (getDeliveryMinimum()
+          != other.getDeliveryMinimum()) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -20772,35 +20735,35 @@ public final class PartnerLocationSettingsOuterClass {
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -21023,7 +20986,7 @@ public final class PartnerLocationSettingsOuterClass {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -21157,7 +21120,6 @@ public final class PartnerLocationSettingsOuterClass {
       super(builder);
     }
     private DeliverySettings() {
-      globalMinimum_ = 0;
     }
 
     @java.lang.Override
@@ -21190,7 +21152,7 @@ public final class PartnerLocationSettingsOuterClass {
               break;
             }
             case 18: {
-              if (!((mutable_bitField0_ & 0x00000002) == 0x00000002)) {
+              if (!((mutable_bitField0_ & 0x00000002) != 0)) {
                 zipcodes_ = com.google.protobuf.MapField.newMapField(
                     ZipcodesDefaultEntryHolder.defaultEntry);
                 mutable_bitField0_ |= 0x00000002;
@@ -21203,7 +21165,7 @@ public final class PartnerLocationSettingsOuterClass {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -21413,13 +21375,12 @@ public final class PartnerLocationSettingsOuterClass {
       }
       io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.DeliverySettings other = (io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.DeliverySettings) obj;
 
-      boolean result = true;
-      result = result && (getGlobalMinimum()
-          == other.getGlobalMinimum());
-      result = result && internalGetZipcodes().equals(
-          other.internalGetZipcodes());
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (getGlobalMinimum()
+          != other.getGlobalMinimum()) return false;
+      if (!internalGetZipcodes().equals(
+          other.internalGetZipcodes())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -21635,35 +21596,35 @@ public final class PartnerLocationSettingsOuterClass {
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -21903,7 +21864,7 @@ public final class PartnerLocationSettingsOuterClass {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -21992,8 +21953,6 @@ public final class PartnerLocationSettingsOuterClass {
       super(builder);
     }
     private ShopContactChannelSettings() {
-      email_ = false;
-      sms_ = false;
     }
 
     @java.lang.Override
@@ -22031,7 +21990,7 @@ public final class PartnerLocationSettingsOuterClass {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -22140,13 +22099,12 @@ public final class PartnerLocationSettingsOuterClass {
       }
       io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.ShopContactChannelSettings other = (io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.ShopContactChannelSettings) obj;
 
-      boolean result = true;
-      result = result && (getEmail()
-          == other.getEmail());
-      result = result && (getSms()
-          == other.getSms());
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (getEmail()
+          != other.getEmail()) return false;
+      if (getSms()
+          != other.getSms()) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -22337,35 +22295,35 @@ public final class PartnerLocationSettingsOuterClass {
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -22492,7 +22450,7 @@ public final class PartnerLocationSettingsOuterClass {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -22704,7 +22662,7 @@ public final class PartnerLocationSettingsOuterClass {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -22893,24 +22851,23 @@ public final class PartnerLocationSettingsOuterClass {
       }
       io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.ShopChannelSettings other = (io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.ShopChannelSettings) obj;
 
-      boolean result = true;
-      result = result && (hasOrders() == other.hasOrders());
+      if (hasOrders() != other.hasOrders()) return false;
       if (hasOrders()) {
-        result = result && getOrders()
-            .equals(other.getOrders());
+        if (!getOrders()
+            .equals(other.getOrders())) return false;
       }
-      result = result && (hasEnrollment() == other.hasEnrollment());
+      if (hasEnrollment() != other.hasEnrollment()) return false;
       if (hasEnrollment()) {
-        result = result && getEnrollment()
-            .equals(other.getEnrollment());
+        if (!getEnrollment()
+            .equals(other.getEnrollment())) return false;
       }
-      result = result && (hasMarketing() == other.hasMarketing());
+      if (hasMarketing() != other.hasMarketing()) return false;
       if (hasMarketing()) {
-        result = result && getMarketing()
-            .equals(other.getMarketing());
+        if (!getMarketing()
+            .equals(other.getMarketing())) return false;
       }
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -23134,35 +23091,35 @@ public final class PartnerLocationSettingsOuterClass {
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -23214,7 +23171,7 @@ public final class PartnerLocationSettingsOuterClass {
         return this;
       }
 
-      private io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.ShopContactChannelSettings orders_ = null;
+      private io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.ShopContactChannelSettings orders_;
       private com.google.protobuf.SingleFieldBuilderV3<
           io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.ShopContactChannelSettings, io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.ShopContactChannelSettings.Builder, io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.ShopContactChannelSettingsOrBuilder> ordersBuilder_;
       /**
@@ -23367,7 +23324,7 @@ public final class PartnerLocationSettingsOuterClass {
         return ordersBuilder_;
       }
 
-      private io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.ShopContactChannelSettings enrollment_ = null;
+      private io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.ShopContactChannelSettings enrollment_;
       private com.google.protobuf.SingleFieldBuilderV3<
           io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.ShopContactChannelSettings, io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.ShopContactChannelSettings.Builder, io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.ShopContactChannelSettingsOrBuilder> enrollmentBuilder_;
       /**
@@ -23520,7 +23477,7 @@ public final class PartnerLocationSettingsOuterClass {
         return enrollmentBuilder_;
       }
 
-      private io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.ShopContactChannelSettings marketing_ = null;
+      private io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.ShopContactChannelSettings marketing_;
       private com.google.protobuf.SingleFieldBuilderV3<
           io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.ShopContactChannelSettings, io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.ShopContactChannelSettings.Builder, io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.ShopContactChannelSettingsOrBuilder> marketingBuilder_;
       /**
@@ -23675,7 +23632,7 @@ public final class PartnerLocationSettingsOuterClass {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -23849,7 +23806,6 @@ public final class PartnerLocationSettingsOuterClass {
     }
     private ShopContactTarget() {
       label_ = "";
-      debug_ = false;
     }
 
     @java.lang.Override
@@ -23927,7 +23883,7 @@ public final class PartnerLocationSettingsOuterClass {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -24184,28 +24140,27 @@ public final class PartnerLocationSettingsOuterClass {
       }
       io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.ShopContactTarget other = (io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.ShopContactTarget) obj;
 
-      boolean result = true;
-      result = result && getLabel()
-          .equals(other.getLabel());
-      result = result && (getDebug()
-          == other.getDebug());
-      result = result && (hasEmail() == other.hasEmail());
+      if (!getLabel()
+          .equals(other.getLabel())) return false;
+      if (getDebug()
+          != other.getDebug()) return false;
+      if (hasEmail() != other.hasEmail()) return false;
       if (hasEmail()) {
-        result = result && getEmail()
-            .equals(other.getEmail());
+        if (!getEmail()
+            .equals(other.getEmail())) return false;
       }
-      result = result && (hasPhone() == other.hasPhone());
+      if (hasPhone() != other.hasPhone()) return false;
       if (hasPhone()) {
-        result = result && getPhone()
-            .equals(other.getPhone());
+        if (!getPhone()
+            .equals(other.getPhone())) return false;
       }
-      result = result && (hasChannels() == other.hasChannels());
+      if (hasChannels() != other.hasChannels()) return false;
       if (hasChannels()) {
-        result = result && getChannels()
-            .equals(other.getChannels());
+        if (!getChannels()
+            .equals(other.getChannels())) return false;
       }
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -24440,35 +24395,35 @@ public final class PartnerLocationSettingsOuterClass {
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -24654,7 +24609,7 @@ public final class PartnerLocationSettingsOuterClass {
         return this;
       }
 
-      private io.opencannabis.schema.contact.ContactEmail.EmailAddress email_ = null;
+      private io.opencannabis.schema.contact.ContactEmail.EmailAddress email_;
       private com.google.protobuf.SingleFieldBuilderV3<
           io.opencannabis.schema.contact.ContactEmail.EmailAddress, io.opencannabis.schema.contact.ContactEmail.EmailAddress.Builder, io.opencannabis.schema.contact.ContactEmail.EmailAddressOrBuilder> emailBuilder_;
       /**
@@ -24807,7 +24762,7 @@ public final class PartnerLocationSettingsOuterClass {
         return emailBuilder_;
       }
 
-      private io.opencannabis.schema.contact.ContactPhone.PhoneNumber phone_ = null;
+      private io.opencannabis.schema.contact.ContactPhone.PhoneNumber phone_;
       private com.google.protobuf.SingleFieldBuilderV3<
           io.opencannabis.schema.contact.ContactPhone.PhoneNumber, io.opencannabis.schema.contact.ContactPhone.PhoneNumber.Builder, io.opencannabis.schema.contact.ContactPhone.PhoneNumberOrBuilder> phoneBuilder_;
       /**
@@ -24960,7 +24915,7 @@ public final class PartnerLocationSettingsOuterClass {
         return phoneBuilder_;
       }
 
-      private io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.ShopChannelSettings channels_ = null;
+      private io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.ShopChannelSettings channels_;
       private com.google.protobuf.SingleFieldBuilderV3<
           io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.ShopChannelSettings, io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.ShopChannelSettings.Builder, io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.ShopChannelSettingsOrBuilder> channelsBuilder_;
       /**
@@ -25115,7 +25070,7 @@ public final class PartnerLocationSettingsOuterClass {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -25289,7 +25244,7 @@ public final class PartnerLocationSettingsOuterClass {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -25438,19 +25393,18 @@ public final class PartnerLocationSettingsOuterClass {
       }
       io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.CommsSenderSettings other = (io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.CommsSenderSettings) obj;
 
-      boolean result = true;
-      result = result && (hasEmail() == other.hasEmail());
+      if (hasEmail() != other.hasEmail()) return false;
       if (hasEmail()) {
-        result = result && getEmail()
-            .equals(other.getEmail());
+        if (!getEmail()
+            .equals(other.getEmail())) return false;
       }
-      result = result && (hasPhone() == other.hasPhone());
+      if (hasPhone() != other.hasPhone()) return false;
       if (hasPhone()) {
-        result = result && getPhone()
-            .equals(other.getPhone());
+        if (!getPhone()
+            .equals(other.getPhone())) return false;
       }
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -25659,35 +25613,35 @@ public final class PartnerLocationSettingsOuterClass {
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -25736,7 +25690,7 @@ public final class PartnerLocationSettingsOuterClass {
         return this;
       }
 
-      private io.opencannabis.schema.contact.ContactEmail.EmailAddress email_ = null;
+      private io.opencannabis.schema.contact.ContactEmail.EmailAddress email_;
       private com.google.protobuf.SingleFieldBuilderV3<
           io.opencannabis.schema.contact.ContactEmail.EmailAddress, io.opencannabis.schema.contact.ContactEmail.EmailAddress.Builder, io.opencannabis.schema.contact.ContactEmail.EmailAddressOrBuilder> emailBuilder_;
       /**
@@ -25889,7 +25843,7 @@ public final class PartnerLocationSettingsOuterClass {
         return emailBuilder_;
       }
 
-      private io.opencannabis.schema.contact.ContactPhone.PhoneNumber phone_ = null;
+      private io.opencannabis.schema.contact.ContactPhone.PhoneNumber phone_;
       private com.google.protobuf.SingleFieldBuilderV3<
           io.opencannabis.schema.contact.ContactPhone.PhoneNumber, io.opencannabis.schema.contact.ContactPhone.PhoneNumber.Builder, io.opencannabis.schema.contact.ContactPhone.PhoneNumberOrBuilder> phoneBuilder_;
       /**
@@ -26044,7 +25998,7 @@ public final class PartnerLocationSettingsOuterClass {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -26246,7 +26200,7 @@ public final class PartnerLocationSettingsOuterClass {
               break;
             }
             case 18: {
-              if (!((mutable_bitField0_ & 0x00000002) == 0x00000002)) {
+              if (!((mutable_bitField0_ & 0x00000002) != 0)) {
                 contacts_ = new java.util.ArrayList<io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.ShopContactTarget>();
                 mutable_bitField0_ |= 0x00000002;
               }
@@ -26268,7 +26222,7 @@ public final class PartnerLocationSettingsOuterClass {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -26282,7 +26236,7 @@ public final class PartnerLocationSettingsOuterClass {
         throw new com.google.protobuf.InvalidProtocolBufferException(
             e).setUnfinishedMessage(this);
       } finally {
-        if (((mutable_bitField0_ & 0x00000002) == 0x00000002)) {
+        if (((mutable_bitField0_ & 0x00000002) != 0)) {
           contacts_ = java.util.Collections.unmodifiableList(contacts_);
         }
         this.unknownFields = unknownFields.build();
@@ -26485,17 +26439,16 @@ public final class PartnerLocationSettingsOuterClass {
       }
       io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.CommsSettingsPayload other = (io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.CommsSettingsPayload) obj;
 
-      boolean result = true;
-      result = result && type_ == other.type_;
-      result = result && getContactsList()
-          .equals(other.getContactsList());
-      result = result && (hasSender() == other.hasSender());
+      if (type_ != other.type_) return false;
+      if (!getContactsList()
+          .equals(other.getContactsList())) return false;
+      if (hasSender() != other.hasSender()) return false;
       if (hasSender()) {
-        result = result && getSender()
-            .equals(other.getSender());
+        if (!getSender()
+            .equals(other.getSender())) return false;
       }
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -26697,7 +26650,7 @@ public final class PartnerLocationSettingsOuterClass {
         int to_bitField0_ = 0;
         result.type_ = type_;
         if (contactsBuilder_ == null) {
-          if (((bitField0_ & 0x00000002) == 0x00000002)) {
+          if (((bitField0_ & 0x00000002) != 0)) {
             contacts_ = java.util.Collections.unmodifiableList(contacts_);
             bitField0_ = (bitField0_ & ~0x00000002);
           }
@@ -26717,35 +26670,35 @@ public final class PartnerLocationSettingsOuterClass {
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -26894,7 +26847,7 @@ public final class PartnerLocationSettingsOuterClass {
       private java.util.List<io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.ShopContactTarget> contacts_ =
         java.util.Collections.emptyList();
       private void ensureContactsIsMutable() {
-        if (!((bitField0_ & 0x00000002) == 0x00000002)) {
+        if (!((bitField0_ & 0x00000002) != 0)) {
           contacts_ = new java.util.ArrayList<io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.ShopContactTarget>(contacts_);
           bitField0_ |= 0x00000002;
          }
@@ -27213,7 +27166,7 @@ public final class PartnerLocationSettingsOuterClass {
           contactsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
               io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.ShopContactTarget, io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.ShopContactTarget.Builder, io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.ShopContactTargetOrBuilder>(
                   contacts_,
-                  ((bitField0_ & 0x00000002) == 0x00000002),
+                  ((bitField0_ & 0x00000002) != 0),
                   getParentForChildren(),
                   isClean());
           contacts_ = null;
@@ -27221,7 +27174,7 @@ public final class PartnerLocationSettingsOuterClass {
         return contactsBuilder_;
       }
 
-      private io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.CommsSenderSettings sender_ = null;
+      private io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.CommsSenderSettings sender_;
       private com.google.protobuf.SingleFieldBuilderV3<
           io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.CommsSenderSettings, io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.CommsSenderSettings.Builder, io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.CommsSenderSettingsOrBuilder> senderBuilder_;
       /**
@@ -27385,7 +27338,7 @@ public final class PartnerLocationSettingsOuterClass {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -27562,7 +27515,7 @@ public final class PartnerLocationSettingsOuterClass {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -27714,19 +27667,18 @@ public final class PartnerLocationSettingsOuterClass {
       }
       io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.ShopCommsSettings other = (io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.ShopCommsSettings) obj;
 
-      boolean result = true;
-      result = result && (hasInternal() == other.hasInternal());
+      if (hasInternal() != other.hasInternal()) return false;
       if (hasInternal()) {
-        result = result && getInternal()
-            .equals(other.getInternal());
+        if (!getInternal()
+            .equals(other.getInternal())) return false;
       }
-      result = result && (hasExternal() == other.hasExternal());
+      if (hasExternal() != other.hasExternal()) return false;
       if (hasExternal()) {
-        result = result && getExternal()
-            .equals(other.getExternal());
+        if (!getExternal()
+            .equals(other.getExternal())) return false;
       }
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -27935,35 +27887,35 @@ public final class PartnerLocationSettingsOuterClass {
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -28012,7 +27964,7 @@ public final class PartnerLocationSettingsOuterClass {
         return this;
       }
 
-      private io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.CommsSettingsPayload internal_ = null;
+      private io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.CommsSettingsPayload internal_;
       private com.google.protobuf.SingleFieldBuilderV3<
           io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.CommsSettingsPayload, io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.CommsSettingsPayload.Builder, io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.CommsSettingsPayloadOrBuilder> internalBuilder_;
       /**
@@ -28165,7 +28117,7 @@ public final class PartnerLocationSettingsOuterClass {
         return internalBuilder_;
       }
 
-      private io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.CommsSettingsPayload external_ = null;
+      private io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.CommsSettingsPayload external_;
       private com.google.protobuf.SingleFieldBuilderV3<
           io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.CommsSettingsPayload, io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.CommsSettingsPayload.Builder, io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.CommsSettingsPayloadOrBuilder> externalBuilder_;
       /**
@@ -28329,7 +28281,7 @@ public final class PartnerLocationSettingsOuterClass {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -28652,7 +28604,7 @@ public final class PartnerLocationSettingsOuterClass {
             }
             case 48: {
               int rawValue = input.readEnum();
-              if (!((mutable_bitField0_ & 0x00000020) == 0x00000020)) {
+              if (!((mutable_bitField0_ & 0x00000020) != 0)) {
                 acceptedMethod_ = new java.util.ArrayList<java.lang.Integer>();
                 mutable_bitField0_ |= 0x00000020;
               }
@@ -28664,7 +28616,7 @@ public final class PartnerLocationSettingsOuterClass {
               int oldLimit = input.pushLimit(length);
               while(input.getBytesUntilLimit() > 0) {
                 int rawValue = input.readEnum();
-                if (!((mutable_bitField0_ & 0x00000020) == 0x00000020)) {
+                if (!((mutable_bitField0_ & 0x00000020) != 0)) {
                   acceptedMethod_ = new java.util.ArrayList<java.lang.Integer>();
                   mutable_bitField0_ |= 0x00000020;
                 }
@@ -28675,7 +28627,7 @@ public final class PartnerLocationSettingsOuterClass {
             }
             case 56: {
               int rawValue = input.readEnum();
-              if (!((mutable_bitField0_ & 0x00000040) == 0x00000040)) {
+              if (!((mutable_bitField0_ & 0x00000040) != 0)) {
                 acceptedCard_ = new java.util.ArrayList<java.lang.Integer>();
                 mutable_bitField0_ |= 0x00000040;
               }
@@ -28687,7 +28639,7 @@ public final class PartnerLocationSettingsOuterClass {
               int oldLimit = input.pushLimit(length);
               while(input.getBytesUntilLimit() > 0) {
                 int rawValue = input.readEnum();
-                if (!((mutable_bitField0_ & 0x00000040) == 0x00000040)) {
+                if (!((mutable_bitField0_ & 0x00000040) != 0)) {
                   acceptedCard_ = new java.util.ArrayList<java.lang.Integer>();
                   mutable_bitField0_ |= 0x00000040;
                 }
@@ -28697,7 +28649,7 @@ public final class PartnerLocationSettingsOuterClass {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -28711,10 +28663,10 @@ public final class PartnerLocationSettingsOuterClass {
         throw new com.google.protobuf.InvalidProtocolBufferException(
             e).setUnfinishedMessage(this);
       } finally {
-        if (((mutable_bitField0_ & 0x00000020) == 0x00000020)) {
+        if (((mutable_bitField0_ & 0x00000020) != 0)) {
           acceptedMethod_ = java.util.Collections.unmodifiableList(acceptedMethod_);
         }
-        if (((mutable_bitField0_ & 0x00000040) == 0x00000040)) {
+        if (((mutable_bitField0_ & 0x00000040) != 0)) {
           acceptedCard_ = java.util.Collections.unmodifiableList(acceptedCard_);
         }
         this.unknownFields = unknownFields.build();
@@ -29176,24 +29128,23 @@ public final class PartnerLocationSettingsOuterClass {
       }
       io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.OnlineShopSettings other = (io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.OnlineShopSettings) obj;
 
-      boolean result = true;
-      result = result && getOrigin()
-          .equals(other.getOrigin());
-      result = result && (hasComms() == other.hasComms());
+      if (!getOrigin()
+          .equals(other.getOrigin())) return false;
+      if (hasComms() != other.hasComms()) return false;
       if (hasComms()) {
-        result = result && getComms()
-            .equals(other.getComms());
+        if (!getComms()
+            .equals(other.getComms())) return false;
       }
-      result = result && getDomain()
-          .equals(other.getDomain());
-      result = result && getSignup()
-          .equals(other.getSignup());
-      result = result && getLogin()
-          .equals(other.getLogin());
-      result = result && acceptedMethod_.equals(other.acceptedMethod_);
-      result = result && acceptedCard_.equals(other.acceptedCard_);
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!getDomain()
+          .equals(other.getDomain())) return false;
+      if (!getSignup()
+          .equals(other.getSignup())) return false;
+      if (!getLogin()
+          .equals(other.getLogin())) return false;
+      if (!acceptedMethod_.equals(other.acceptedMethod_)) return false;
+      if (!acceptedCard_.equals(other.acceptedCard_)) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -29415,12 +29366,12 @@ public final class PartnerLocationSettingsOuterClass {
         result.domain_ = domain_;
         result.signup_ = signup_;
         result.login_ = login_;
-        if (((bitField0_ & 0x00000020) == 0x00000020)) {
+        if (((bitField0_ & 0x00000020) != 0)) {
           acceptedMethod_ = java.util.Collections.unmodifiableList(acceptedMethod_);
           bitField0_ = (bitField0_ & ~0x00000020);
         }
         result.acceptedMethod_ = acceptedMethod_;
-        if (((bitField0_ & 0x00000040) == 0x00000040)) {
+        if (((bitField0_ & 0x00000040) != 0)) {
           acceptedCard_ = java.util.Collections.unmodifiableList(acceptedCard_);
           bitField0_ = (bitField0_ & ~0x00000040);
         }
@@ -29432,35 +29383,35 @@ public final class PartnerLocationSettingsOuterClass {
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -29632,7 +29583,7 @@ public final class PartnerLocationSettingsOuterClass {
         return this;
       }
 
-      private io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.ShopCommsSettings comms_ = null;
+      private io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.ShopCommsSettings comms_;
       private com.google.protobuf.SingleFieldBuilderV3<
           io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.ShopCommsSettings, io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.ShopCommsSettings.Builder, io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.ShopCommsSettingsOrBuilder> commsBuilder_;
       /**
@@ -30055,7 +30006,7 @@ public final class PartnerLocationSettingsOuterClass {
       private java.util.List<java.lang.Integer> acceptedMethod_ =
         java.util.Collections.emptyList();
       private void ensureAcceptedMethodIsMutable() {
-        if (!((bitField0_ & 0x00000020) == 0x00000020)) {
+        if (!((bitField0_ & 0x00000020) != 0)) {
           acceptedMethod_ = new java.util.ArrayList<java.lang.Integer>(acceptedMethod_);
           bitField0_ |= 0x00000020;
         }
@@ -30221,7 +30172,7 @@ public final class PartnerLocationSettingsOuterClass {
       private java.util.List<java.lang.Integer> acceptedCard_ =
         java.util.Collections.emptyList();
       private void ensureAcceptedCardIsMutable() {
-        if (!((bitField0_ & 0x00000040) == 0x00000040)) {
+        if (!((bitField0_ & 0x00000040) != 0)) {
           acceptedCard_ = new java.util.ArrayList<java.lang.Integer>(acceptedCard_);
           bitField0_ |= 0x00000040;
         }
@@ -30386,7 +30337,7 @@ public final class PartnerLocationSettingsOuterClass {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -30609,7 +30560,7 @@ public final class PartnerLocationSettingsOuterClass {
             }
             case 16: {
               int rawValue = input.readEnum();
-              if (!((mutable_bitField0_ & 0x00000002) == 0x00000002)) {
+              if (!((mutable_bitField0_ & 0x00000002) != 0)) {
                 acceptedMethod_ = new java.util.ArrayList<java.lang.Integer>();
                 mutable_bitField0_ |= 0x00000002;
               }
@@ -30621,7 +30572,7 @@ public final class PartnerLocationSettingsOuterClass {
               int oldLimit = input.pushLimit(length);
               while(input.getBytesUntilLimit() > 0) {
                 int rawValue = input.readEnum();
-                if (!((mutable_bitField0_ & 0x00000002) == 0x00000002)) {
+                if (!((mutable_bitField0_ & 0x00000002) != 0)) {
                   acceptedMethod_ = new java.util.ArrayList<java.lang.Integer>();
                   mutable_bitField0_ |= 0x00000002;
                 }
@@ -30632,7 +30583,7 @@ public final class PartnerLocationSettingsOuterClass {
             }
             case 24: {
               int rawValue = input.readEnum();
-              if (!((mutable_bitField0_ & 0x00000004) == 0x00000004)) {
+              if (!((mutable_bitField0_ & 0x00000004) != 0)) {
                 acceptedCard_ = new java.util.ArrayList<java.lang.Integer>();
                 mutable_bitField0_ |= 0x00000004;
               }
@@ -30644,7 +30595,7 @@ public final class PartnerLocationSettingsOuterClass {
               int oldLimit = input.pushLimit(length);
               while(input.getBytesUntilLimit() > 0) {
                 int rawValue = input.readEnum();
-                if (!((mutable_bitField0_ & 0x00000004) == 0x00000004)) {
+                if (!((mutable_bitField0_ & 0x00000004) != 0)) {
                   acceptedCard_ = new java.util.ArrayList<java.lang.Integer>();
                   mutable_bitField0_ |= 0x00000004;
                 }
@@ -30654,7 +30605,7 @@ public final class PartnerLocationSettingsOuterClass {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -30668,10 +30619,10 @@ public final class PartnerLocationSettingsOuterClass {
         throw new com.google.protobuf.InvalidProtocolBufferException(
             e).setUnfinishedMessage(this);
       } finally {
-        if (((mutable_bitField0_ & 0x00000002) == 0x00000002)) {
+        if (((mutable_bitField0_ & 0x00000002) != 0)) {
           acceptedMethod_ = java.util.Collections.unmodifiableList(acceptedMethod_);
         }
-        if (((mutable_bitField0_ & 0x00000004) == 0x00000004)) {
+        if (((mutable_bitField0_ & 0x00000004) != 0)) {
           acceptedCard_ = java.util.Collections.unmodifiableList(acceptedCard_);
         }
         this.unknownFields = unknownFields.build();
@@ -30941,16 +30892,15 @@ public final class PartnerLocationSettingsOuterClass {
       }
       io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.PhysicalStorefrontSettings other = (io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.PhysicalStorefrontSettings) obj;
 
-      boolean result = true;
-      result = result && (hasLocation() == other.hasLocation());
+      if (hasLocation() != other.hasLocation()) return false;
       if (hasLocation()) {
-        result = result && getLocation()
-            .equals(other.getLocation());
+        if (!getLocation()
+            .equals(other.getLocation())) return false;
       }
-      result = result && acceptedMethod_.equals(other.acceptedMethod_);
-      result = result && acceptedCard_.equals(other.acceptedCard_);
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!acceptedMethod_.equals(other.acceptedMethod_)) return false;
+      if (!acceptedCard_.equals(other.acceptedCard_)) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -31152,12 +31102,12 @@ public final class PartnerLocationSettingsOuterClass {
         } else {
           result.location_ = locationBuilder_.build();
         }
-        if (((bitField0_ & 0x00000002) == 0x00000002)) {
+        if (((bitField0_ & 0x00000002) != 0)) {
           acceptedMethod_ = java.util.Collections.unmodifiableList(acceptedMethod_);
           bitField0_ = (bitField0_ & ~0x00000002);
         }
         result.acceptedMethod_ = acceptedMethod_;
-        if (((bitField0_ & 0x00000004) == 0x00000004)) {
+        if (((bitField0_ & 0x00000004) != 0)) {
           acceptedCard_ = java.util.Collections.unmodifiableList(acceptedCard_);
           bitField0_ = (bitField0_ & ~0x00000004);
         }
@@ -31169,35 +31119,35 @@ public final class PartnerLocationSettingsOuterClass {
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -31264,7 +31214,7 @@ public final class PartnerLocationSettingsOuterClass {
       }
       private int bitField0_;
 
-      private io.opencannabis.schema.geo.Location location_ = null;
+      private io.opencannabis.schema.geo.Location location_;
       private com.google.protobuf.SingleFieldBuilderV3<
           io.opencannabis.schema.geo.Location, io.opencannabis.schema.geo.Location.Builder, io.opencannabis.schema.geo.LocationOrBuilder> locationBuilder_;
       /**
@@ -31420,7 +31370,7 @@ public final class PartnerLocationSettingsOuterClass {
       private java.util.List<java.lang.Integer> acceptedMethod_ =
         java.util.Collections.emptyList();
       private void ensureAcceptedMethodIsMutable() {
-        if (!((bitField0_ & 0x00000002) == 0x00000002)) {
+        if (!((bitField0_ & 0x00000002) != 0)) {
           acceptedMethod_ = new java.util.ArrayList<java.lang.Integer>(acceptedMethod_);
           bitField0_ |= 0x00000002;
         }
@@ -31586,7 +31536,7 @@ public final class PartnerLocationSettingsOuterClass {
       private java.util.List<java.lang.Integer> acceptedCard_ =
         java.util.Collections.emptyList();
       private void ensureAcceptedCardIsMutable() {
-        if (!((bitField0_ & 0x00000004) == 0x00000004)) {
+        if (!((bitField0_ & 0x00000004) != 0)) {
           acceptedCard_ = new java.util.ArrayList<java.lang.Integer>(acceptedCard_);
           bitField0_ |= 0x00000004;
         }
@@ -31751,7 +31701,7 @@ public final class PartnerLocationSettingsOuterClass {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -31963,7 +31913,7 @@ public final class PartnerLocationSettingsOuterClass {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -32152,24 +32102,23 @@ public final class PartnerLocationSettingsOuterClass {
       }
       io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.StorefrontSettings other = (io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.StorefrontSettings) obj;
 
-      boolean result = true;
-      result = result && (hasDelivery() == other.hasDelivery());
+      if (hasDelivery() != other.hasDelivery()) return false;
       if (hasDelivery()) {
-        result = result && getDelivery()
-            .equals(other.getDelivery());
+        if (!getDelivery()
+            .equals(other.getDelivery())) return false;
       }
-      result = result && (hasOnline() == other.hasOnline());
+      if (hasOnline() != other.hasOnline()) return false;
       if (hasOnline()) {
-        result = result && getOnline()
-            .equals(other.getOnline());
+        if (!getOnline()
+            .equals(other.getOnline())) return false;
       }
-      result = result && (hasPhysical() == other.hasPhysical());
+      if (hasPhysical() != other.hasPhysical()) return false;
       if (hasPhysical()) {
-        result = result && getPhysical()
-            .equals(other.getPhysical());
+        if (!getPhysical()
+            .equals(other.getPhysical())) return false;
       }
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -32393,35 +32342,35 @@ public final class PartnerLocationSettingsOuterClass {
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -32473,7 +32422,7 @@ public final class PartnerLocationSettingsOuterClass {
         return this;
       }
 
-      private io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.DeliverySettings delivery_ = null;
+      private io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.DeliverySettings delivery_;
       private com.google.protobuf.SingleFieldBuilderV3<
           io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.DeliverySettings, io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.DeliverySettings.Builder, io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.DeliverySettingsOrBuilder> deliveryBuilder_;
       /**
@@ -32626,7 +32575,7 @@ public final class PartnerLocationSettingsOuterClass {
         return deliveryBuilder_;
       }
 
-      private io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.OnlineShopSettings online_ = null;
+      private io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.OnlineShopSettings online_;
       private com.google.protobuf.SingleFieldBuilderV3<
           io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.OnlineShopSettings, io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.OnlineShopSettings.Builder, io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.OnlineShopSettingsOrBuilder> onlineBuilder_;
       /**
@@ -32779,7 +32728,7 @@ public final class PartnerLocationSettingsOuterClass {
         return onlineBuilder_;
       }
 
-      private io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.PhysicalStorefrontSettings physical_ = null;
+      private io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.PhysicalStorefrontSettings physical_;
       private com.google.protobuf.SingleFieldBuilderV3<
           io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.PhysicalStorefrontSettings, io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.PhysicalStorefrontSettings.Builder, io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.PhysicalStorefrontSettingsOrBuilder> physicalBuilder_;
       /**
@@ -32934,7 +32883,7 @@ public final class PartnerLocationSettingsOuterClass {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -33146,7 +33095,7 @@ public final class PartnerLocationSettingsOuterClass {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -33335,24 +33284,23 @@ public final class PartnerLocationSettingsOuterClass {
       }
       io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.ShopSettings other = (io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.ShopSettings) obj;
 
-      boolean result = true;
-      result = result && (hasHours() == other.hasHours());
+      if (hasHours() != other.hasHours()) return false;
       if (hasHours()) {
-        result = result && getHours()
-            .equals(other.getHours());
+        if (!getHours()
+            .equals(other.getHours())) return false;
       }
-      result = result && (hasServices() == other.hasServices());
+      if (hasServices() != other.hasServices()) return false;
       if (hasServices()) {
-        result = result && getServices()
-            .equals(other.getServices());
+        if (!getServices()
+            .equals(other.getServices())) return false;
       }
-      result = result && (hasStorefront() == other.hasStorefront());
+      if (hasStorefront() != other.hasStorefront()) return false;
       if (hasStorefront()) {
-        result = result && getStorefront()
-            .equals(other.getStorefront());
+        if (!getStorefront()
+            .equals(other.getStorefront())) return false;
       }
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -33576,35 +33524,35 @@ public final class PartnerLocationSettingsOuterClass {
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -33656,7 +33604,7 @@ public final class PartnerLocationSettingsOuterClass {
         return this;
       }
 
-      private io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.ShopHoursSettings hours_ = null;
+      private io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.ShopHoursSettings hours_;
       private com.google.protobuf.SingleFieldBuilderV3<
           io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.ShopHoursSettings, io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.ShopHoursSettings.Builder, io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.ShopHoursSettingsOrBuilder> hoursBuilder_;
       /**
@@ -33809,7 +33757,7 @@ public final class PartnerLocationSettingsOuterClass {
         return hoursBuilder_;
       }
 
-      private io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.ShopServiceSettings services_ = null;
+      private io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.ShopServiceSettings services_;
       private com.google.protobuf.SingleFieldBuilderV3<
           io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.ShopServiceSettings, io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.ShopServiceSettings.Builder, io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.ShopServiceSettingsOrBuilder> servicesBuilder_;
       /**
@@ -33962,7 +33910,7 @@ public final class PartnerLocationSettingsOuterClass {
         return servicesBuilder_;
       }
 
-      private io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.StorefrontSettings storefront_ = null;
+      private io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.StorefrontSettings storefront_;
       private com.google.protobuf.SingleFieldBuilderV3<
           io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.StorefrontSettings, io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.StorefrontSettings.Builder, io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.StorefrontSettingsOrBuilder> storefrontBuilder_;
       /**
@@ -34117,7 +34065,7 @@ public final class PartnerLocationSettingsOuterClass {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -34263,7 +34211,7 @@ public final class PartnerLocationSettingsOuterClass {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -34396,11 +34344,10 @@ public final class PartnerLocationSettingsOuterClass {
       }
       io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.CartSettings other = (io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.CartSettings) obj;
 
-      boolean result = true;
-      result = result && mode_ == other.mode_;
-      result = result && orderType_ == other.orderType_;
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (mode_ != other.mode_) return false;
+      if (orderType_ != other.orderType_) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -34589,35 +34536,35 @@ public final class PartnerLocationSettingsOuterClass {
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -34798,7 +34745,7 @@ public final class PartnerLocationSettingsOuterClass {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -34934,7 +34881,7 @@ public final class PartnerLocationSettingsOuterClass {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -35043,14 +34990,13 @@ public final class PartnerLocationSettingsOuterClass {
       }
       io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.TabletSettings other = (io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.TabletSettings) obj;
 
-      boolean result = true;
-      result = result && (hasCart() == other.hasCart());
+      if (hasCart() != other.hasCart()) return false;
       if (hasCart()) {
-        result = result && getCart()
-            .equals(other.getCart());
+        if (!getCart()
+            .equals(other.getCart())) return false;
       }
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -35244,35 +35190,35 @@ public final class PartnerLocationSettingsOuterClass {
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -35318,7 +35264,7 @@ public final class PartnerLocationSettingsOuterClass {
         return this;
       }
 
-      private io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.CartSettings cart_ = null;
+      private io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.CartSettings cart_;
       private com.google.protobuf.SingleFieldBuilderV3<
           io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.CartSettings, io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.CartSettings.Builder, io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.CartSettingsOrBuilder> cartBuilder_;
       /**
@@ -35473,7 +35419,7 @@ public final class PartnerLocationSettingsOuterClass {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -35875,7 +35821,7 @@ public final class PartnerLocationSettingsOuterClass {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -36264,49 +36210,48 @@ public final class PartnerLocationSettingsOuterClass {
       }
       io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.PartnerLocationSettings other = (io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.PartnerLocationSettings) obj;
 
-      boolean result = true;
-      result = result && (hasApi() == other.hasApi());
+      if (hasApi() != other.hasApi()) return false;
       if (hasApi()) {
-        result = result && getApi()
-            .equals(other.getApi());
+        if (!getApi()
+            .equals(other.getApi())) return false;
       }
-      result = result && (hasBrands() == other.hasBrands());
+      if (hasBrands() != other.hasBrands()) return false;
       if (hasBrands()) {
-        result = result && getBrands()
-            .equals(other.getBrands());
+        if (!getBrands()
+            .equals(other.getBrands())) return false;
       }
-      result = result && (hasPublish() == other.hasPublish());
+      if (hasPublish() != other.hasPublish()) return false;
       if (hasPublish()) {
-        result = result && getPublish()
-            .equals(other.getPublish());
+        if (!getPublish()
+            .equals(other.getPublish())) return false;
       }
-      result = result && (hasSections() == other.hasSections());
+      if (hasSections() != other.hasSections()) return false;
       if (hasSections()) {
-        result = result && getSections()
-            .equals(other.getSections());
+        if (!getSections()
+            .equals(other.getSections())) return false;
       }
-      result = result && (hasShop() == other.hasShop());
+      if (hasShop() != other.hasShop()) return false;
       if (hasShop()) {
-        result = result && getShop()
-            .equals(other.getShop());
+        if (!getShop()
+            .equals(other.getShop())) return false;
       }
-      result = result && (hasTv() == other.hasTv());
+      if (hasTv() != other.hasTv()) return false;
       if (hasTv()) {
-        result = result && getTv()
-            .equals(other.getTv());
+        if (!getTv()
+            .equals(other.getTv())) return false;
       }
-      result = result && (hasTablet() == other.hasTablet());
+      if (hasTablet() != other.hasTablet()) return false;
       if (hasTablet()) {
-        result = result && getTablet()
-            .equals(other.getTablet());
+        if (!getTablet()
+            .equals(other.getTablet())) return false;
       }
-      result = result && (hasIntegration() == other.hasIntegration());
+      if (hasIntegration() != other.hasIntegration()) return false;
       if (hasIntegration()) {
-        result = result && getIntegration()
-            .equals(other.getIntegration());
+        if (!getIntegration()
+            .equals(other.getIntegration())) return false;
       }
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -36605,35 +36550,35 @@ public final class PartnerLocationSettingsOuterClass {
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -36700,7 +36645,7 @@ public final class PartnerLocationSettingsOuterClass {
         return this;
       }
 
-      private io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.APISettings api_ = null;
+      private io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.APISettings api_;
       private com.google.protobuf.SingleFieldBuilderV3<
           io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.APISettings, io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.APISettings.Builder, io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.APISettingsOrBuilder> apiBuilder_;
       /**
@@ -36853,7 +36798,7 @@ public final class PartnerLocationSettingsOuterClass {
         return apiBuilder_;
       }
 
-      private io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.ProductBrandSettings brands_ = null;
+      private io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.ProductBrandSettings brands_;
       private com.google.protobuf.SingleFieldBuilderV3<
           io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.ProductBrandSettings, io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.ProductBrandSettings.Builder, io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.ProductBrandSettingsOrBuilder> brandsBuilder_;
       /**
@@ -37006,7 +36951,7 @@ public final class PartnerLocationSettingsOuterClass {
         return brandsBuilder_;
       }
 
-      private io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.PublishSettings publish_ = null;
+      private io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.PublishSettings publish_;
       private com.google.protobuf.SingleFieldBuilderV3<
           io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.PublishSettings, io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.PublishSettings.Builder, io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.PublishSettingsOrBuilder> publishBuilder_;
       /**
@@ -37159,7 +37104,7 @@ public final class PartnerLocationSettingsOuterClass {
         return publishBuilder_;
       }
 
-      private io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.SectionSettings sections_ = null;
+      private io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.SectionSettings sections_;
       private com.google.protobuf.SingleFieldBuilderV3<
           io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.SectionSettings, io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.SectionSettings.Builder, io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.SectionSettingsOrBuilder> sectionsBuilder_;
       /**
@@ -37312,7 +37257,7 @@ public final class PartnerLocationSettingsOuterClass {
         return sectionsBuilder_;
       }
 
-      private io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.ShopSettings shop_ = null;
+      private io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.ShopSettings shop_;
       private com.google.protobuf.SingleFieldBuilderV3<
           io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.ShopSettings, io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.ShopSettings.Builder, io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.ShopSettingsOrBuilder> shopBuilder_;
       /**
@@ -37465,7 +37410,7 @@ public final class PartnerLocationSettingsOuterClass {
         return shopBuilder_;
       }
 
-      private io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.TVSettings tv_ = null;
+      private io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.TVSettings tv_;
       private com.google.protobuf.SingleFieldBuilderV3<
           io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.TVSettings, io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.TVSettings.Builder, io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.TVSettingsOrBuilder> tvBuilder_;
       /**
@@ -37618,7 +37563,7 @@ public final class PartnerLocationSettingsOuterClass {
         return tvBuilder_;
       }
 
-      private io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.TabletSettings tablet_ = null;
+      private io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.TabletSettings tablet_;
       private com.google.protobuf.SingleFieldBuilderV3<
           io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.TabletSettings, io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.TabletSettings.Builder, io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.TabletSettingsOrBuilder> tabletBuilder_;
       /**
@@ -37771,7 +37716,7 @@ public final class PartnerLocationSettingsOuterClass {
         return tabletBuilder_;
       }
 
-      private io.bloombox.schema.partner.integrations.IntegrationSettings.LocationIntegrationSettings integration_ = null;
+      private io.bloombox.schema.partner.integrations.IntegrationSettings.LocationIntegrationSettings integration_;
       private com.google.protobuf.SingleFieldBuilderV3<
           io.bloombox.schema.partner.integrations.IntegrationSettings.LocationIntegrationSettings, io.bloombox.schema.partner.integrations.IntegrationSettings.LocationIntegrationSettings.Builder, io.bloombox.schema.partner.integrations.IntegrationSettings.LocationIntegrationSettingsOrBuilder> integrationBuilder_;
       /**
@@ -37926,7 +37871,7 @@ public final class PartnerLocationSettingsOuterClass {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override

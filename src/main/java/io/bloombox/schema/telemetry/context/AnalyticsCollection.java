@@ -1,5 +1,5 @@
 /*
- * Copyright 2018, Momentum Ideas, Co. All rights reserved.
+ * Copyright 2019, Momentum Ideas, Co. All rights reserved.
  *
  * Source and object computer code contained herein is the private intellectual
  * property of Momentum Ideas Co., a Delaware Corporation. Use of this
@@ -80,6 +80,14 @@ public final class AnalyticsCollection {
      * <code>OPERATIONAL = 4;</code>
      */
     OPERATIONAL(4),
+    /**
+     * <pre>
+     * Events from RFID, BCR, or other inventory infrastructure.
+     * </pre>
+     *
+     * <code>INVENTORY = 5;</code>
+     */
+    INVENTORY(5),
     UNRECOGNIZED(-1),
     ;
 
@@ -123,6 +131,14 @@ public final class AnalyticsCollection {
      * <code>OPERATIONAL = 4;</code>
      */
     public static final int OPERATIONAL_VALUE = 4;
+    /**
+     * <pre>
+     * Events from RFID, BCR, or other inventory infrastructure.
+     * </pre>
+     *
+     * <code>INVENTORY = 5;</code>
+     */
+    public static final int INVENTORY_VALUE = 5;
 
 
     public final int getNumber() {
@@ -148,6 +164,7 @@ public final class AnalyticsCollection {
         case 2: return IDENTITY;
         case 3: return EXPERIENCE;
         case 4: return OPERATIONAL;
+        case 5: return INVENTORY;
         default: return null;
       }
     }
@@ -206,18 +223,18 @@ public final class AnalyticsCollection {
 
     /**
      * <pre>
-     * Specifies an unenumerated collection by name.
+     * Specifies an un-enumerated collection by name.
      * </pre>
      *
-     * <code>string name = 1 [(.gen_bq_schema.require) = true, (.gen_bq_schema.description) = "Specifies an unenumerated collection by name."];</code>
+     * <code>string name = 1 [(.gen_bq_schema.require) = true, (.gen_bq_schema.description) = "Specifies an un-enumerated collection by name."];</code>
      */
     java.lang.String getName();
     /**
      * <pre>
-     * Specifies an unenumerated collection by name.
+     * Specifies an un-enumerated collection by name.
      * </pre>
      *
-     * <code>string name = 1 [(.gen_bq_schema.require) = true, (.gen_bq_schema.description) = "Specifies an unenumerated collection by name."];</code>
+     * <code>string name = 1 [(.gen_bq_schema.require) = true, (.gen_bq_schema.description) = "Specifies an un-enumerated collection by name."];</code>
      */
     com.google.protobuf.ByteString
         getNameBytes();
@@ -266,7 +283,6 @@ public final class AnalyticsCollection {
     }
     private Collection() {
       name_ = "";
-      internal_ = false;
       type_ = 0;
     }
 
@@ -312,7 +328,7 @@ public final class AnalyticsCollection {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -347,10 +363,10 @@ public final class AnalyticsCollection {
     private volatile java.lang.Object name_;
     /**
      * <pre>
-     * Specifies an unenumerated collection by name.
+     * Specifies an un-enumerated collection by name.
      * </pre>
      *
-     * <code>string name = 1 [(.gen_bq_schema.require) = true, (.gen_bq_schema.description) = "Specifies an unenumerated collection by name."];</code>
+     * <code>string name = 1 [(.gen_bq_schema.require) = true, (.gen_bq_schema.description) = "Specifies an un-enumerated collection by name."];</code>
      */
     public java.lang.String getName() {
       java.lang.Object ref = name_;
@@ -366,10 +382,10 @@ public final class AnalyticsCollection {
     }
     /**
      * <pre>
-     * Specifies an unenumerated collection by name.
+     * Specifies an un-enumerated collection by name.
      * </pre>
      *
-     * <code>string name = 1 [(.gen_bq_schema.require) = true, (.gen_bq_schema.description) = "Specifies an unenumerated collection by name."];</code>
+     * <code>string name = 1 [(.gen_bq_schema.require) = true, (.gen_bq_schema.description) = "Specifies an un-enumerated collection by name."];</code>
      */
     public com.google.protobuf.ByteString
         getNameBytes() {
@@ -481,14 +497,13 @@ public final class AnalyticsCollection {
       }
       io.bloombox.schema.telemetry.context.AnalyticsCollection.Collection other = (io.bloombox.schema.telemetry.context.AnalyticsCollection.Collection) obj;
 
-      boolean result = true;
-      result = result && getName()
-          .equals(other.getName());
-      result = result && (getInternal()
-          == other.getInternal());
-      result = result && type_ == other.type_;
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!getName()
+          .equals(other.getName())) return false;
+      if (getInternal()
+          != other.getInternal()) return false;
+      if (type_ != other.type_) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -683,35 +698,35 @@ public final class AnalyticsCollection {
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -767,10 +782,10 @@ public final class AnalyticsCollection {
       private java.lang.Object name_ = "";
       /**
        * <pre>
-       * Specifies an unenumerated collection by name.
+       * Specifies an un-enumerated collection by name.
        * </pre>
        *
-       * <code>string name = 1 [(.gen_bq_schema.require) = true, (.gen_bq_schema.description) = "Specifies an unenumerated collection by name."];</code>
+       * <code>string name = 1 [(.gen_bq_schema.require) = true, (.gen_bq_schema.description) = "Specifies an un-enumerated collection by name."];</code>
        */
       public java.lang.String getName() {
         java.lang.Object ref = name_;
@@ -786,10 +801,10 @@ public final class AnalyticsCollection {
       }
       /**
        * <pre>
-       * Specifies an unenumerated collection by name.
+       * Specifies an un-enumerated collection by name.
        * </pre>
        *
-       * <code>string name = 1 [(.gen_bq_schema.require) = true, (.gen_bq_schema.description) = "Specifies an unenumerated collection by name."];</code>
+       * <code>string name = 1 [(.gen_bq_schema.require) = true, (.gen_bq_schema.description) = "Specifies an un-enumerated collection by name."];</code>
        */
       public com.google.protobuf.ByteString
           getNameBytes() {
@@ -806,10 +821,10 @@ public final class AnalyticsCollection {
       }
       /**
        * <pre>
-       * Specifies an unenumerated collection by name.
+       * Specifies an un-enumerated collection by name.
        * </pre>
        *
-       * <code>string name = 1 [(.gen_bq_schema.require) = true, (.gen_bq_schema.description) = "Specifies an unenumerated collection by name."];</code>
+       * <code>string name = 1 [(.gen_bq_schema.require) = true, (.gen_bq_schema.description) = "Specifies an un-enumerated collection by name."];</code>
        */
       public Builder setName(
           java.lang.String value) {
@@ -823,10 +838,10 @@ public final class AnalyticsCollection {
       }
       /**
        * <pre>
-       * Specifies an unenumerated collection by name.
+       * Specifies an un-enumerated collection by name.
        * </pre>
        *
-       * <code>string name = 1 [(.gen_bq_schema.require) = true, (.gen_bq_schema.description) = "Specifies an unenumerated collection by name."];</code>
+       * <code>string name = 1 [(.gen_bq_schema.require) = true, (.gen_bq_schema.description) = "Specifies an un-enumerated collection by name."];</code>
        */
       public Builder clearName() {
         
@@ -836,10 +851,10 @@ public final class AnalyticsCollection {
       }
       /**
        * <pre>
-       * Specifies an unenumerated collection by name.
+       * Specifies an un-enumerated collection by name.
        * </pre>
        *
-       * <code>string name = 1 [(.gen_bq_schema.require) = true, (.gen_bq_schema.description) = "Specifies an unenumerated collection by name."];</code>
+       * <code>string name = 1 [(.gen_bq_schema.require) = true, (.gen_bq_schema.description) = "Specifies an un-enumerated collection by name."];</code>
        */
       public Builder setNameBytes(
           com.google.protobuf.ByteString value) {
@@ -958,7 +973,7 @@ public final class AnalyticsCollection {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -1024,18 +1039,18 @@ public final class AnalyticsCollection {
     java.lang.String[] descriptorData = {
       "\n\"analytics/context/Collection.proto\022\032bl" +
       "oombox.analytics.context\032\016bq_field.proto" +
-      "\"\243\002\n\nCollection\022A\n\004name\030\001 \001(\tB3\360?\001\212@-Spe" +
-      "cifies an unenumerated collection by nam" +
-      "e.\022T\n\010internal\030\002 \001(\010BB\212@?Specifies a spe" +
-      "cific collection as internal. Backend-on" +
-      "ly flag.\022|\n\004type\030\003 \001(\0162%.bloombox.analyt" +
-      "ics.context.EventTypeBG\212@DSpecifies the " +
-      "type of event. Usually added by the tele" +
-      "metry backend.*W\n\tEventType\022\013\n\007GENERIC\020\000" +
-      "\022\016\n\nCOMMERCIAL\020\001\022\014\n\010IDENTITY\020\002\022\016\n\nEXPERI" +
-      "ENCE\020\003\022\017\n\013OPERATIONAL\020\004BE\n$io.bloombox.s" +
-      "chema.telemetry.contextB\023AnalyticsCollec" +
-      "tionH\001P\000\242\002\003BBSb\006proto3"
+      "\"\244\002\n\nCollection\022B\n\004name\030\001 \001(\tB4\360?\001\212@.Spe" +
+      "cifies an un-enumerated collection by na" +
+      "me.\022T\n\010internal\030\002 \001(\010BB\212@?Specifies a sp" +
+      "ecific collection as internal. Backend-o" +
+      "nly flag.\022|\n\004type\030\003 \001(\0162%.bloombox.analy" +
+      "tics.context.EventTypeBG\212@DSpecifies the" +
+      " type of event. Usually added by the tel" +
+      "emetry backend.*f\n\tEventType\022\013\n\007GENERIC\020" +
+      "\000\022\016\n\nCOMMERCIAL\020\001\022\014\n\010IDENTITY\020\002\022\016\n\nEXPER" +
+      "IENCE\020\003\022\017\n\013OPERATIONAL\020\004\022\r\n\tINVENTORY\020\005B" +
+      "E\n$io.bloombox.schema.telemetry.contextB" +
+      "\023AnalyticsCollectionH\001P\000\242\002\003BBSb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {

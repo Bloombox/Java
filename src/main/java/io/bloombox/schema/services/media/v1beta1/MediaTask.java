@@ -1,5 +1,5 @@
 /*
- * Copyright 2018, Momentum Ideas, Co. All rights reserved.
+ * Copyright 2019, Momentum Ideas, Co. All rights reserved.
  *
  * Source and object computer code contained herein is the private intellectual
  * property of Momentum Ideas Co., a Delaware Corporation. Use of this
@@ -116,7 +116,7 @@ private static final long serialVersionUID = 0L;
             break;
           }
           default: {
-            if (!parseUnknownFieldProto3(
+            if (!parseUnknownField(
                 input, unknownFields, extensionRegistry, tag)) {
               done = true;
             }
@@ -222,8 +222,6 @@ private static final long serialVersionUID = 0L;
     private ImageOptimization() {
       format_ = 0;
       dpi_ = 0;
-      width_ = 0L;
-      height_ = 0L;
     }
 
     @java.lang.Override
@@ -273,7 +271,7 @@ private static final long serialVersionUID = 0L;
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -446,15 +444,14 @@ private static final long serialVersionUID = 0L;
       }
       io.bloombox.schema.services.media.v1beta1.MediaTask.ImageOptimization other = (io.bloombox.schema.services.media.v1beta1.MediaTask.ImageOptimization) obj;
 
-      boolean result = true;
-      result = result && format_ == other.format_;
-      result = result && dpi_ == other.dpi_;
-      result = result && (getWidth()
-          == other.getWidth());
-      result = result && (getHeight()
-          == other.getHeight());
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (format_ != other.format_) return false;
+      if (dpi_ != other.dpi_) return false;
+      if (getWidth()
+          != other.getWidth()) return false;
+      if (getHeight()
+          != other.getHeight()) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -655,35 +652,35 @@ private static final long serialVersionUID = 0L;
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -946,7 +943,7 @@ private static final long serialVersionUID = 0L;
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -1269,36 +1266,33 @@ private static final long serialVersionUID = 0L;
     }
     io.bloombox.schema.services.media.v1beta1.MediaTask other = (io.bloombox.schema.services.media.v1beta1.MediaTask) obj;
 
-    boolean result = true;
-    result = result && getUuid()
-        .equals(other.getUuid());
-    result = result && (hasKey() == other.hasKey());
+    if (!getUuid()
+        .equals(other.getUuid())) return false;
+    if (hasKey() != other.hasKey()) return false;
     if (hasKey()) {
-      result = result && getKey()
-          .equals(other.getKey());
+      if (!getKey()
+          .equals(other.getKey())) return false;
     }
-    result = result && (hasMedia() == other.hasMedia());
+    if (hasMedia() != other.hasMedia()) return false;
     if (hasMedia()) {
-      result = result && getMedia()
-          .equals(other.getMedia());
+      if (!getMedia()
+          .equals(other.getMedia())) return false;
     }
-    result = result && getTaskCase().equals(
-        other.getTaskCase());
-    if (!result) return false;
+    if (!getTaskCase().equals(other.getTaskCase())) return false;
     switch (taskCase_) {
       case 10:
-        result = result && getImageMin()
-            .equals(other.getImageMin());
+        if (!getImageMin()
+            .equals(other.getImageMin())) return false;
         break;
       case 11:
-        result = result && (getImagePublish()
-            == other.getImagePublish());
+        if (getImagePublish()
+            != other.getImagePublish()) return false;
         break;
       case 0:
       default:
     }
-    result = result && unknownFields.equals(other.unknownFields);
-    return result;
+    if (!unknownFields.equals(other.unknownFields)) return false;
+    return true;
   }
 
   @java.lang.Override
@@ -1538,35 +1532,35 @@ private static final long serialVersionUID = 0L;
 
     @java.lang.Override
     public Builder clone() {
-      return (Builder) super.clone();
+      return super.clone();
     }
     @java.lang.Override
     public Builder setField(
         com.google.protobuf.Descriptors.FieldDescriptor field,
         java.lang.Object value) {
-      return (Builder) super.setField(field, value);
+      return super.setField(field, value);
     }
     @java.lang.Override
     public Builder clearField(
         com.google.protobuf.Descriptors.FieldDescriptor field) {
-      return (Builder) super.clearField(field);
+      return super.clearField(field);
     }
     @java.lang.Override
     public Builder clearOneof(
         com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-      return (Builder) super.clearOneof(oneof);
+      return super.clearOneof(oneof);
     }
     @java.lang.Override
     public Builder setRepeatedField(
         com.google.protobuf.Descriptors.FieldDescriptor field,
         int index, java.lang.Object value) {
-      return (Builder) super.setRepeatedField(field, index, value);
+      return super.setRepeatedField(field, index, value);
     }
     @java.lang.Override
     public Builder addRepeatedField(
         com.google.protobuf.Descriptors.FieldDescriptor field,
         java.lang.Object value) {
-      return (Builder) super.addRepeatedField(field, value);
+      return super.addRepeatedField(field, value);
     }
     @java.lang.Override
     public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -1736,7 +1730,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
 
-    private io.opencannabis.schema.media.MediaItemKey.MediaKey key_ = null;
+    private io.opencannabis.schema.media.MediaItemKey.MediaKey key_;
     private com.google.protobuf.SingleFieldBuilderV3<
         io.opencannabis.schema.media.MediaItemKey.MediaKey, io.opencannabis.schema.media.MediaItemKey.MediaKey.Builder, io.opencannabis.schema.media.MediaItemKey.MediaKeyOrBuilder> keyBuilder_;
     /**
@@ -1889,7 +1883,7 @@ private static final long serialVersionUID = 0L;
       return keyBuilder_;
     }
 
-    private io.opencannabis.schema.media.AttachedMedia.MediaItem media_ = null;
+    private io.opencannabis.schema.media.AttachedMedia.MediaItem media_;
     private com.google.protobuf.SingleFieldBuilderV3<
         io.opencannabis.schema.media.AttachedMedia.MediaItem, io.opencannabis.schema.media.AttachedMedia.MediaItem.Builder, io.opencannabis.schema.media.AttachedMedia.MediaItemOrBuilder> mediaBuilder_;
     /**
@@ -2258,7 +2252,7 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public final Builder setUnknownFields(
         final com.google.protobuf.UnknownFieldSet unknownFields) {
-      return super.setUnknownFieldsProto3(unknownFields);
+      return super.setUnknownFields(unknownFields);
     }
 
     @java.lang.Override

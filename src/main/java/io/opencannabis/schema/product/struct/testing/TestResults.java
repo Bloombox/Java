@@ -1,12 +1,11 @@
 /*
- * Copyright 2018, Momentum Ideas, Co. All rights reserved.
+ * Copyright 2019, Momentum Ideas Co.
  *
- * Source and object computer code contained herein is the private intellectual
- * property of Momentum Ideas Co., a Delaware Corporation. Use of this
- * code in source form requires permission in writing before use or the
- * assembly, distribution, or publishing of derivative works, for commercial
- * purposes or any other purpose, from a duly authorized officer of Momentum
- * Ideas Co.
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *  http://www.apache.org/licenses/LICENSE-2.0
  *
  * Unless required by applicable law or agreed to in writing, software
  * distributed under the License is distributed on an "AS IS" BASIS,
@@ -38,7 +37,6 @@ private static final long serialVersionUID = 0L;
     super(builder);
   }
   private TestResults() {
-    available_ = false;
     media_ = java.util.Collections.emptyList();
     aroma_ = java.util.Collections.emptyList();
     data_ = java.util.Collections.emptyList();
@@ -74,7 +72,7 @@ private static final long serialVersionUID = 0L;
             break;
           }
           case 18: {
-            if (!((mutable_bitField0_ & 0x00000002) == 0x00000002)) {
+            if (!((mutable_bitField0_ & 0x00000002) != 0)) {
               media_ = new java.util.ArrayList<io.opencannabis.schema.product.struct.testing.TestMedia>();
               mutable_bitField0_ |= 0x00000002;
             }
@@ -188,7 +186,7 @@ private static final long serialVersionUID = 0L;
           }
           case 280: {
             int rawValue = input.readEnum();
-            if (!((mutable_bitField0_ & 0x00000400) == 0x00000400)) {
+            if (!((mutable_bitField0_ & 0x00000400) != 0)) {
               aroma_ = new java.util.ArrayList<java.lang.Integer>();
               mutable_bitField0_ |= 0x00000400;
             }
@@ -200,7 +198,7 @@ private static final long serialVersionUID = 0L;
             int oldLimit = input.pushLimit(length);
             while(input.getBytesUntilLimit() > 0) {
               int rawValue = input.readEnum();
-              if (!((mutable_bitField0_ & 0x00000400) == 0x00000400)) {
+              if (!((mutable_bitField0_ & 0x00000400) != 0)) {
                 aroma_ = new java.util.ArrayList<java.lang.Integer>();
                 mutable_bitField0_ |= 0x00000400;
               }
@@ -210,7 +208,7 @@ private static final long serialVersionUID = 0L;
             break;
           }
           case 290: {
-            if (!((mutable_bitField0_ & 0x00000800) == 0x00000800)) {
+            if (!((mutable_bitField0_ & 0x00000800) != 0)) {
               data_ = new java.util.ArrayList<io.opencannabis.schema.product.struct.testing.TestResults>();
               mutable_bitField0_ |= 0x00000800;
             }
@@ -219,7 +217,7 @@ private static final long serialVersionUID = 0L;
             break;
           }
           default: {
-            if (!parseUnknownFieldProto3(
+            if (!parseUnknownField(
                 input, unknownFields, extensionRegistry, tag)) {
               done = true;
             }
@@ -233,13 +231,13 @@ private static final long serialVersionUID = 0L;
       throw new com.google.protobuf.InvalidProtocolBufferException(
           e).setUnfinishedMessage(this);
     } finally {
-      if (((mutable_bitField0_ & 0x00000002) == 0x00000002)) {
+      if (((mutable_bitField0_ & 0x00000002) != 0)) {
         media_ = java.util.Collections.unmodifiableList(media_);
       }
-      if (((mutable_bitField0_ & 0x00000400) == 0x00000400)) {
+      if (((mutable_bitField0_ & 0x00000400) != 0)) {
         aroma_ = java.util.Collections.unmodifiableList(aroma_);
       }
-      if (((mutable_bitField0_ & 0x00000800) == 0x00000800)) {
+      if (((mutable_bitField0_ & 0x00000800) != 0)) {
         data_ = java.util.Collections.unmodifiableList(data_);
       }
       this.unknownFields = unknownFields.build();
@@ -867,56 +865,55 @@ private static final long serialVersionUID = 0L;
     }
     io.opencannabis.schema.product.struct.testing.TestResults other = (io.opencannabis.schema.product.struct.testing.TestResults) obj;
 
-    boolean result = true;
-    result = result && (getAvailable()
-        == other.getAvailable());
-    result = result && getMediaList()
-        .equals(other.getMediaList());
-    result = result && (hasLastUpdated() == other.hasLastUpdated());
+    if (getAvailable()
+        != other.getAvailable()) return false;
+    if (!getMediaList()
+        .equals(other.getMediaList())) return false;
+    if (hasLastUpdated() != other.hasLastUpdated()) return false;
     if (hasLastUpdated()) {
-      result = result && getLastUpdated()
-          .equals(other.getLastUpdated());
+      if (!getLastUpdated()
+          .equals(other.getLastUpdated())) return false;
     }
-    result = result && (hasSealed() == other.hasSealed());
+    if (hasSealed() != other.hasSealed()) return false;
     if (hasSealed()) {
-      result = result && getSealed()
-          .equals(other.getSealed());
+      if (!getSealed()
+          .equals(other.getSealed())) return false;
     }
-    result = result && (hasCoordinates() == other.hasCoordinates());
+    if (hasCoordinates() != other.hasCoordinates()) return false;
     if (hasCoordinates()) {
-      result = result && getCoordinates()
-          .equals(other.getCoordinates());
+      if (!getCoordinates()
+          .equals(other.getCoordinates())) return false;
     }
-    result = result && (hasCannabinoids() == other.hasCannabinoids());
+    if (hasCannabinoids() != other.hasCannabinoids()) return false;
     if (hasCannabinoids()) {
-      result = result && getCannabinoids()
-          .equals(other.getCannabinoids());
+      if (!getCannabinoids()
+          .equals(other.getCannabinoids())) return false;
     }
-    result = result && (hasTerpenes() == other.hasTerpenes());
+    if (hasTerpenes() != other.hasTerpenes()) return false;
     if (hasTerpenes()) {
-      result = result && getTerpenes()
-          .equals(other.getTerpenes());
+      if (!getTerpenes()
+          .equals(other.getTerpenes())) return false;
     }
-    result = result && (hasContaminants() == other.hasContaminants());
+    if (hasContaminants() != other.hasContaminants()) return false;
     if (hasContaminants()) {
-      result = result && getContaminants()
-          .equals(other.getContaminants());
+      if (!getContaminants()
+          .equals(other.getContaminants())) return false;
     }
-    result = result && (hasMoisture() == other.hasMoisture());
+    if (hasMoisture() != other.hasMoisture()) return false;
     if (hasMoisture()) {
-      result = result && getMoisture()
-          .equals(other.getMoisture());
+      if (!getMoisture()
+          .equals(other.getMoisture())) return false;
     }
-    result = result && (hasSubjective() == other.hasSubjective());
+    if (hasSubjective() != other.hasSubjective()) return false;
     if (hasSubjective()) {
-      result = result && getSubjective()
-          .equals(other.getSubjective());
+      if (!getSubjective()
+          .equals(other.getSubjective())) return false;
     }
-    result = result && aroma_.equals(other.aroma_);
-    result = result && getDataList()
-        .equals(other.getDataList());
-    result = result && unknownFields.equals(other.unknownFields);
-    return result;
+    if (!aroma_.equals(other.aroma_)) return false;
+    if (!getDataList()
+        .equals(other.getDataList())) return false;
+    if (!unknownFields.equals(other.unknownFields)) return false;
+    return true;
   }
 
   @java.lang.Override
@@ -1207,7 +1204,7 @@ private static final long serialVersionUID = 0L;
       int to_bitField0_ = 0;
       result.available_ = available_;
       if (mediaBuilder_ == null) {
-        if (((bitField0_ & 0x00000002) == 0x00000002)) {
+        if (((bitField0_ & 0x00000002) != 0)) {
           media_ = java.util.Collections.unmodifiableList(media_);
           bitField0_ = (bitField0_ & ~0x00000002);
         }
@@ -1255,13 +1252,13 @@ private static final long serialVersionUID = 0L;
       } else {
         result.subjective_ = subjectiveBuilder_.build();
       }
-      if (((bitField0_ & 0x00000400) == 0x00000400)) {
+      if (((bitField0_ & 0x00000400) != 0)) {
         aroma_ = java.util.Collections.unmodifiableList(aroma_);
         bitField0_ = (bitField0_ & ~0x00000400);
       }
       result.aroma_ = aroma_;
       if (dataBuilder_ == null) {
-        if (((bitField0_ & 0x00000800) == 0x00000800)) {
+        if (((bitField0_ & 0x00000800) != 0)) {
           data_ = java.util.Collections.unmodifiableList(data_);
           bitField0_ = (bitField0_ & ~0x00000800);
         }
@@ -1276,35 +1273,35 @@ private static final long serialVersionUID = 0L;
 
     @java.lang.Override
     public Builder clone() {
-      return (Builder) super.clone();
+      return super.clone();
     }
     @java.lang.Override
     public Builder setField(
         com.google.protobuf.Descriptors.FieldDescriptor field,
         java.lang.Object value) {
-      return (Builder) super.setField(field, value);
+      return super.setField(field, value);
     }
     @java.lang.Override
     public Builder clearField(
         com.google.protobuf.Descriptors.FieldDescriptor field) {
-      return (Builder) super.clearField(field);
+      return super.clearField(field);
     }
     @java.lang.Override
     public Builder clearOneof(
         com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-      return (Builder) super.clearOneof(oneof);
+      return super.clearOneof(oneof);
     }
     @java.lang.Override
     public Builder setRepeatedField(
         com.google.protobuf.Descriptors.FieldDescriptor field,
         int index, java.lang.Object value) {
-      return (Builder) super.setRepeatedField(field, index, value);
+      return super.setRepeatedField(field, index, value);
     }
     @java.lang.Override
     public Builder addRepeatedField(
         com.google.protobuf.Descriptors.FieldDescriptor field,
         java.lang.Object value) {
-      return (Builder) super.addRepeatedField(field, value);
+      return super.addRepeatedField(field, value);
     }
     @java.lang.Override
     public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -1478,7 +1475,7 @@ private static final long serialVersionUID = 0L;
     private java.util.List<io.opencannabis.schema.product.struct.testing.TestMedia> media_ =
       java.util.Collections.emptyList();
     private void ensureMediaIsMutable() {
-      if (!((bitField0_ & 0x00000002) == 0x00000002)) {
+      if (!((bitField0_ & 0x00000002) != 0)) {
         media_ = new java.util.ArrayList<io.opencannabis.schema.product.struct.testing.TestMedia>(media_);
         bitField0_ |= 0x00000002;
        }
@@ -1797,7 +1794,7 @@ private static final long serialVersionUID = 0L;
         mediaBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
             io.opencannabis.schema.product.struct.testing.TestMedia, io.opencannabis.schema.product.struct.testing.TestMedia.Builder, io.opencannabis.schema.product.struct.testing.TestMediaOrBuilder>(
                 media_,
-                ((bitField0_ & 0x00000002) == 0x00000002),
+                ((bitField0_ & 0x00000002) != 0),
                 getParentForChildren(),
                 isClean());
         media_ = null;
@@ -1805,7 +1802,7 @@ private static final long serialVersionUID = 0L;
       return mediaBuilder_;
     }
 
-    private io.opencannabis.schema.temporal.TemporalInstant.Instant lastUpdated_ = null;
+    private io.opencannabis.schema.temporal.TemporalInstant.Instant lastUpdated_;
     private com.google.protobuf.SingleFieldBuilderV3<
         io.opencannabis.schema.temporal.TemporalInstant.Instant, io.opencannabis.schema.temporal.TemporalInstant.Instant.Builder, io.opencannabis.schema.temporal.TemporalInstant.InstantOrBuilder> lastUpdatedBuilder_;
     /**
@@ -1958,7 +1955,7 @@ private static final long serialVersionUID = 0L;
       return lastUpdatedBuilder_;
     }
 
-    private io.opencannabis.schema.temporal.TemporalInstant.Instant sealed_ = null;
+    private io.opencannabis.schema.temporal.TemporalInstant.Instant sealed_;
     private com.google.protobuf.SingleFieldBuilderV3<
         io.opencannabis.schema.temporal.TemporalInstant.Instant, io.opencannabis.schema.temporal.TemporalInstant.Instant.Builder, io.opencannabis.schema.temporal.TemporalInstant.InstantOrBuilder> sealedBuilder_;
     /**
@@ -2120,7 +2117,7 @@ private static final long serialVersionUID = 0L;
       return sealedBuilder_;
     }
 
-    private io.opencannabis.schema.product.struct.testing.TestCoordinates coordinates_ = null;
+    private io.opencannabis.schema.product.struct.testing.TestCoordinates coordinates_;
     private com.google.protobuf.SingleFieldBuilderV3<
         io.opencannabis.schema.product.struct.testing.TestCoordinates, io.opencannabis.schema.product.struct.testing.TestCoordinates.Builder, io.opencannabis.schema.product.struct.testing.TestCoordinatesOrBuilder> coordinatesBuilder_;
     /**
@@ -2282,7 +2279,7 @@ private static final long serialVersionUID = 0L;
       return coordinatesBuilder_;
     }
 
-    private io.opencannabis.schema.product.struct.testing.Cannabinoids cannabinoids_ = null;
+    private io.opencannabis.schema.product.struct.testing.Cannabinoids cannabinoids_;
     private com.google.protobuf.SingleFieldBuilderV3<
         io.opencannabis.schema.product.struct.testing.Cannabinoids, io.opencannabis.schema.product.struct.testing.Cannabinoids.Builder, io.opencannabis.schema.product.struct.testing.CannabinoidsOrBuilder> cannabinoidsBuilder_;
     /**
@@ -2444,7 +2441,7 @@ private static final long serialVersionUID = 0L;
       return cannabinoidsBuilder_;
     }
 
-    private io.opencannabis.schema.product.struct.testing.Terpenes terpenes_ = null;
+    private io.opencannabis.schema.product.struct.testing.Terpenes terpenes_;
     private com.google.protobuf.SingleFieldBuilderV3<
         io.opencannabis.schema.product.struct.testing.Terpenes, io.opencannabis.schema.product.struct.testing.Terpenes.Builder, io.opencannabis.schema.product.struct.testing.TerpenesOrBuilder> terpenesBuilder_;
     /**
@@ -2597,7 +2594,7 @@ private static final long serialVersionUID = 0L;
       return terpenesBuilder_;
     }
 
-    private io.opencannabis.schema.product.struct.testing.Contaminants contaminants_ = null;
+    private io.opencannabis.schema.product.struct.testing.Contaminants contaminants_;
     private com.google.protobuf.SingleFieldBuilderV3<
         io.opencannabis.schema.product.struct.testing.Contaminants, io.opencannabis.schema.product.struct.testing.Contaminants.Builder, io.opencannabis.schema.product.struct.testing.ContaminantsOrBuilder> contaminantsBuilder_;
     /**
@@ -2750,7 +2747,7 @@ private static final long serialVersionUID = 0L;
       return contaminantsBuilder_;
     }
 
-    private io.opencannabis.schema.product.struct.testing.Moisture moisture_ = null;
+    private io.opencannabis.schema.product.struct.testing.Moisture moisture_;
     private com.google.protobuf.SingleFieldBuilderV3<
         io.opencannabis.schema.product.struct.testing.Moisture, io.opencannabis.schema.product.struct.testing.Moisture.Builder, io.opencannabis.schema.product.struct.testing.MoistureOrBuilder> moistureBuilder_;
     /**
@@ -2903,7 +2900,7 @@ private static final long serialVersionUID = 0L;
       return moistureBuilder_;
     }
 
-    private io.opencannabis.schema.product.struct.testing.Subjective subjective_ = null;
+    private io.opencannabis.schema.product.struct.testing.Subjective subjective_;
     private com.google.protobuf.SingleFieldBuilderV3<
         io.opencannabis.schema.product.struct.testing.Subjective, io.opencannabis.schema.product.struct.testing.Subjective.Builder, io.opencannabis.schema.product.struct.testing.SubjectiveOrBuilder> subjectiveBuilder_;
     /**
@@ -3059,7 +3056,7 @@ private static final long serialVersionUID = 0L;
     private java.util.List<java.lang.Integer> aroma_ =
       java.util.Collections.emptyList();
     private void ensureAromaIsMutable() {
-      if (!((bitField0_ & 0x00000400) == 0x00000400)) {
+      if (!((bitField0_ & 0x00000400) != 0)) {
         aroma_ = new java.util.ArrayList<java.lang.Integer>(aroma_);
         bitField0_ |= 0x00000400;
       }
@@ -3237,7 +3234,7 @@ private static final long serialVersionUID = 0L;
     private java.util.List<io.opencannabis.schema.product.struct.testing.TestResults> data_ =
       java.util.Collections.emptyList();
     private void ensureDataIsMutable() {
-      if (!((bitField0_ & 0x00000800) == 0x00000800)) {
+      if (!((bitField0_ & 0x00000800) != 0)) {
         data_ = new java.util.ArrayList<io.opencannabis.schema.product.struct.testing.TestResults>(data_);
         bitField0_ |= 0x00000800;
        }
@@ -3538,7 +3535,7 @@ private static final long serialVersionUID = 0L;
         dataBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
             io.opencannabis.schema.product.struct.testing.TestResults, io.opencannabis.schema.product.struct.testing.TestResults.Builder, io.opencannabis.schema.product.struct.testing.TestResultsOrBuilder>(
                 data_,
-                ((bitField0_ & 0x00000800) == 0x00000800),
+                ((bitField0_ & 0x00000800) != 0),
                 getParentForChildren(),
                 isClean());
         data_ = null;
@@ -3548,7 +3545,7 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public final Builder setUnknownFields(
         final com.google.protobuf.UnknownFieldSet unknownFields) {
-      return super.setUnknownFieldsProto3(unknownFields);
+      return super.setUnknownFields(unknownFields);
     }
 
     @java.lang.Override

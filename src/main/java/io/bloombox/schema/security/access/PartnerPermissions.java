@@ -1,5 +1,5 @@
 /*
- * Copyright 2018, Momentum Ideas, Co. All rights reserved.
+ * Copyright 2019, Momentum Ideas, Co. All rights reserved.
  *
  * Source and object computer code contained herein is the private intellectual
  * property of Momentum Ideas Co., a Delaware Corporation. Use of this
@@ -364,7 +364,7 @@ public final class PartnerPermissions {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -561,24 +561,21 @@ public final class PartnerPermissions {
       }
       io.bloombox.schema.security.access.PartnerPermissions.AccessSubject other = (io.bloombox.schema.security.access.PartnerPermissions.AccessSubject) obj;
 
-      boolean result = true;
-      result = result && getAccountCase().equals(
-          other.getAccountCase());
-      if (!result) return false;
+      if (!getAccountCase().equals(other.getAccountCase())) return false;
       switch (accountCase_) {
         case 10:
-          result = result && getPartner()
-              .equals(other.getPartner());
+          if (!getPartner()
+              .equals(other.getPartner())) return false;
           break;
         case 20:
-          result = result && getLocation()
-              .equals(other.getLocation());
+          if (!getLocation()
+              .equals(other.getLocation())) return false;
           break;
         case 0:
         default:
       }
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -787,35 +784,35 @@ public final class PartnerPermissions {
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -1232,7 +1229,7 @@ public final class PartnerPermissions {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -1538,7 +1535,7 @@ public final class PartnerPermissions {
             }
             case 24: {
               int rawValue = input.readEnum();
-              if (!((mutable_bitField0_ & 0x00000004) == 0x00000004)) {
+              if (!((mutable_bitField0_ & 0x00000004) != 0)) {
                 privilege_ = new java.util.ArrayList<java.lang.Integer>();
                 mutable_bitField0_ |= 0x00000004;
               }
@@ -1550,7 +1547,7 @@ public final class PartnerPermissions {
               int oldLimit = input.pushLimit(length);
               while(input.getBytesUntilLimit() > 0) {
                 int rawValue = input.readEnum();
-                if (!((mutable_bitField0_ & 0x00000004) == 0x00000004)) {
+                if (!((mutable_bitField0_ & 0x00000004) != 0)) {
                   privilege_ = new java.util.ArrayList<java.lang.Integer>();
                   mutable_bitField0_ |= 0x00000004;
                 }
@@ -1612,7 +1609,7 @@ public final class PartnerPermissions {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -1626,7 +1623,7 @@ public final class PartnerPermissions {
         throw new com.google.protobuf.InvalidProtocolBufferException(
             e).setUnfinishedMessage(this);
       } finally {
-        if (((mutable_bitField0_ & 0x00000004) == 0x00000004)) {
+        if (((mutable_bitField0_ & 0x00000004) != 0)) {
           privilege_ = java.util.Collections.unmodifiableList(privilege_);
         }
         this.unknownFields = unknownFields.build();
@@ -2019,37 +2016,36 @@ public final class PartnerPermissions {
       }
       io.bloombox.schema.security.access.PartnerPermissions.AccessPolicy other = (io.bloombox.schema.security.access.PartnerPermissions.AccessPolicy) obj;
 
-      boolean result = true;
-      result = result && getUuid()
-          .equals(other.getUuid());
-      result = result && (hasSubject() == other.hasSubject());
+      if (!getUuid()
+          .equals(other.getUuid())) return false;
+      if (hasSubject() != other.hasSubject()) return false;
       if (hasSubject()) {
-        result = result && getSubject()
-            .equals(other.getSubject());
+        if (!getSubject()
+            .equals(other.getSubject())) return false;
       }
-      result = result && privilege_.equals(other.privilege_);
-      result = result && (hasUser() == other.hasUser());
+      if (!privilege_.equals(other.privilege_)) return false;
+      if (hasUser() != other.hasUser()) return false;
       if (hasUser()) {
-        result = result && getUser()
-            .equals(other.getUser());
+        if (!getUser()
+            .equals(other.getUser())) return false;
       }
-      result = result && (hasGrantor() == other.hasGrantor());
+      if (hasGrantor() != other.hasGrantor()) return false;
       if (hasGrantor()) {
-        result = result && getGrantor()
-            .equals(other.getGrantor());
+        if (!getGrantor()
+            .equals(other.getGrantor())) return false;
       }
-      result = result && (hasModified() == other.hasModified());
+      if (hasModified() != other.hasModified()) return false;
       if (hasModified()) {
-        result = result && getModified()
-            .equals(other.getModified());
+        if (!getModified()
+            .equals(other.getModified())) return false;
       }
-      result = result && (hasCreated() == other.hasCreated());
+      if (hasCreated() != other.hasCreated()) return false;
       if (hasCreated()) {
-        result = result && getCreated()
-            .equals(other.getCreated());
+        if (!getCreated()
+            .equals(other.getCreated())) return false;
       }
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -2291,7 +2287,7 @@ public final class PartnerPermissions {
         } else {
           result.subject_ = subjectBuilder_.build();
         }
-        if (((bitField0_ & 0x00000004) == 0x00000004)) {
+        if (((bitField0_ & 0x00000004) != 0)) {
           privilege_ = java.util.Collections.unmodifiableList(privilege_);
           bitField0_ = (bitField0_ & ~0x00000004);
         }
@@ -2323,35 +2319,35 @@ public final class PartnerPermissions {
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -2513,7 +2509,7 @@ public final class PartnerPermissions {
         return this;
       }
 
-      private io.bloombox.schema.security.access.PartnerPermissions.AccessSubject subject_ = null;
+      private io.bloombox.schema.security.access.PartnerPermissions.AccessSubject subject_;
       private com.google.protobuf.SingleFieldBuilderV3<
           io.bloombox.schema.security.access.PartnerPermissions.AccessSubject, io.bloombox.schema.security.access.PartnerPermissions.AccessSubject.Builder, io.bloombox.schema.security.access.PartnerPermissions.AccessSubjectOrBuilder> subjectBuilder_;
       /**
@@ -2669,7 +2665,7 @@ public final class PartnerPermissions {
       private java.util.List<java.lang.Integer> privilege_ =
         java.util.Collections.emptyList();
       private void ensurePrivilegeIsMutable() {
-        if (!((bitField0_ & 0x00000004) == 0x00000004)) {
+        if (!((bitField0_ & 0x00000004) != 0)) {
           privilege_ = new java.util.ArrayList<java.lang.Integer>(privilege_);
           bitField0_ |= 0x00000004;
         }
@@ -2832,7 +2828,7 @@ public final class PartnerPermissions {
         return this;
       }
 
-      private io.bloombox.schema.identity.AppUserKey.UserKey user_ = null;
+      private io.bloombox.schema.identity.AppUserKey.UserKey user_;
       private com.google.protobuf.SingleFieldBuilderV3<
           io.bloombox.schema.identity.AppUserKey.UserKey, io.bloombox.schema.identity.AppUserKey.UserKey.Builder, io.bloombox.schema.identity.AppUserKey.UserKeyOrBuilder> userBuilder_;
       /**
@@ -2985,7 +2981,7 @@ public final class PartnerPermissions {
         return userBuilder_;
       }
 
-      private io.bloombox.schema.identity.AppUserKey.UserKey grantor_ = null;
+      private io.bloombox.schema.identity.AppUserKey.UserKey grantor_;
       private com.google.protobuf.SingleFieldBuilderV3<
           io.bloombox.schema.identity.AppUserKey.UserKey, io.bloombox.schema.identity.AppUserKey.UserKey.Builder, io.bloombox.schema.identity.AppUserKey.UserKeyOrBuilder> grantorBuilder_;
       /**
@@ -3138,7 +3134,7 @@ public final class PartnerPermissions {
         return grantorBuilder_;
       }
 
-      private io.opencannabis.schema.temporal.TemporalInstant.Instant modified_ = null;
+      private io.opencannabis.schema.temporal.TemporalInstant.Instant modified_;
       private com.google.protobuf.SingleFieldBuilderV3<
           io.opencannabis.schema.temporal.TemporalInstant.Instant, io.opencannabis.schema.temporal.TemporalInstant.Instant.Builder, io.opencannabis.schema.temporal.TemporalInstant.InstantOrBuilder> modifiedBuilder_;
       /**
@@ -3291,7 +3287,7 @@ public final class PartnerPermissions {
         return modifiedBuilder_;
       }
 
-      private io.opencannabis.schema.temporal.TemporalInstant.Instant created_ = null;
+      private io.opencannabis.schema.temporal.TemporalInstant.Instant created_;
       private com.google.protobuf.SingleFieldBuilderV3<
           io.opencannabis.schema.temporal.TemporalInstant.Instant, io.opencannabis.schema.temporal.TemporalInstant.Instant.Builder, io.opencannabis.schema.temporal.TemporalInstant.InstantOrBuilder> createdBuilder_;
       /**
@@ -3446,7 +3442,7 @@ public final class PartnerPermissions {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override

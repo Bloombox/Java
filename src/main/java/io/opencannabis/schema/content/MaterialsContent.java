@@ -1,12 +1,11 @@
 /*
- * Copyright 2018, Momentum Ideas, Co. All rights reserved.
+ * Copyright 2019, Momentum Ideas Co.
  *
- * Source and object computer code contained herein is the private intellectual
- * property of Momentum Ideas Co., a Delaware Corporation. Use of this
- * code in source form requires permission in writing before use or the
- * assembly, distribution, or publishing of derivative works, for commercial
- * purposes or any other purpose, from a duly authorized officer of Momentum
- * Ideas Co.
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *  http://www.apache.org/licenses/LICENSE-2.0
  *
  * Unless required by applicable law or agreed to in writing, software
  * distributed under the License is distributed on an "AS IS" BASIS,
@@ -234,7 +233,7 @@ public final class MaterialsContent {
               break;
             }
             case 42: {
-              if (!((mutable_bitField0_ & 0x00000010) == 0x00000010)) {
+              if (!((mutable_bitField0_ & 0x00000010) != 0)) {
                 channel_ = new java.util.ArrayList<io.opencannabis.schema.product.DistributionChannel.DistributionPolicy>();
                 mutable_bitField0_ |= 0x00000010;
               }
@@ -243,7 +242,7 @@ public final class MaterialsContent {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -257,7 +256,7 @@ public final class MaterialsContent {
         throw new com.google.protobuf.InvalidProtocolBufferException(
             e).setUnfinishedMessage(this);
       } finally {
-        if (((mutable_bitField0_ & 0x00000010) == 0x00000010)) {
+        if (((mutable_bitField0_ & 0x00000010) != 0)) {
           channel_ = java.util.Collections.unmodifiableList(channel_);
         }
         this.unknownFields = unknownFields.build();
@@ -514,19 +513,18 @@ public final class MaterialsContent {
       }
       io.opencannabis.schema.content.MaterialsContent.MaterialsData other = (io.opencannabis.schema.content.MaterialsContent.MaterialsData) obj;
 
-      boolean result = true;
-      result = result && species_ == other.species_;
-      result = result && (hasGenetics() == other.hasGenetics());
+      if (species_ != other.species_) return false;
+      if (hasGenetics() != other.hasGenetics()) return false;
       if (hasGenetics()) {
-        result = result && getGenetics()
-            .equals(other.getGenetics());
+        if (!getGenetics()
+            .equals(other.getGenetics())) return false;
       }
-      result = result && grow_ == other.grow_;
-      result = result && shelf_ == other.shelf_;
-      result = result && getChannelList()
-          .equals(other.getChannelList());
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (grow_ != other.grow_) return false;
+      if (shelf_ != other.shelf_) return false;
+      if (!getChannelList()
+          .equals(other.getChannelList())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -743,7 +741,7 @@ public final class MaterialsContent {
         result.grow_ = grow_;
         result.shelf_ = shelf_;
         if (channelBuilder_ == null) {
-          if (((bitField0_ & 0x00000010) == 0x00000010)) {
+          if (((bitField0_ & 0x00000010) != 0)) {
             channel_ = java.util.Collections.unmodifiableList(channel_);
             bitField0_ = (bitField0_ & ~0x00000010);
           }
@@ -758,35 +756,35 @@ public final class MaterialsContent {
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -933,7 +931,7 @@ public final class MaterialsContent {
         return this;
       }
 
-      private io.opencannabis.schema.product.struct.Genetics genetics_ = null;
+      private io.opencannabis.schema.product.struct.Genetics genetics_;
       private com.google.protobuf.SingleFieldBuilderV3<
           io.opencannabis.schema.product.struct.Genetics, io.opencannabis.schema.product.struct.Genetics.Builder, io.opencannabis.schema.product.struct.GeneticsOrBuilder> geneticsBuilder_;
       /**
@@ -1219,7 +1217,7 @@ public final class MaterialsContent {
       private java.util.List<io.opencannabis.schema.product.DistributionChannel.DistributionPolicy> channel_ =
         java.util.Collections.emptyList();
       private void ensureChannelIsMutable() {
-        if (!((bitField0_ & 0x00000010) == 0x00000010)) {
+        if (!((bitField0_ & 0x00000010) != 0)) {
           channel_ = new java.util.ArrayList<io.opencannabis.schema.product.DistributionChannel.DistributionPolicy>(channel_);
           bitField0_ |= 0x00000010;
          }
@@ -1520,7 +1518,7 @@ public final class MaterialsContent {
           channelBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
               io.opencannabis.schema.product.DistributionChannel.DistributionPolicy, io.opencannabis.schema.product.DistributionChannel.DistributionPolicy.Builder, io.opencannabis.schema.product.DistributionChannel.DistributionPolicyOrBuilder>(
                   channel_,
-                  ((bitField0_ & 0x00000010) == 0x00000010),
+                  ((bitField0_ & 0x00000010) != 0),
                   getParentForChildren(),
                   isClean());
           channel_ = null;
@@ -1530,7 +1528,7 @@ public final class MaterialsContent {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override

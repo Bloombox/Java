@@ -1,5 +1,5 @@
 /*
- * Copyright 2018, Momentum Ideas, Co. All rights reserved.
+ * Copyright 2019, Momentum Ideas, Co. All rights reserved.
  *
  * Source and object computer code contained herein is the private intellectual
  * property of Momentum Ideas Co., a Delaware Corporation. Use of this
@@ -120,8 +120,6 @@ public final class AnalyticsContext {
       super(builder);
     }
     private EventPosition() {
-      processed_ = 0L;
-      enriched_ = 0L;
     }
 
     @java.lang.Override
@@ -185,7 +183,7 @@ public final class AnalyticsContext {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -374,23 +372,22 @@ public final class AnalyticsContext {
       }
       io.bloombox.schema.telemetry.AnalyticsContext.EventPosition other = (io.bloombox.schema.telemetry.AnalyticsContext.EventPosition) obj;
 
-      boolean result = true;
-      result = result && (hasIngest() == other.hasIngest());
+      if (hasIngest() != other.hasIngest()) return false;
       if (hasIngest()) {
-        result = result && getIngest()
-            .equals(other.getIngest());
+        if (!getIngest()
+            .equals(other.getIngest())) return false;
       }
-      result = result && (hasOccurred() == other.hasOccurred());
+      if (hasOccurred() != other.hasOccurred()) return false;
       if (hasOccurred()) {
-        result = result && getOccurred()
-            .equals(other.getOccurred());
+        if (!getOccurred()
+            .equals(other.getOccurred())) return false;
       }
-      result = result && (getProcessed()
-          == other.getProcessed());
-      result = result && (getEnriched()
-          == other.getEnriched());
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (getProcessed()
+          != other.getProcessed()) return false;
+      if (getEnriched()
+          != other.getEnriched()) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -611,35 +608,35 @@ public final class AnalyticsContext {
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -694,7 +691,7 @@ public final class AnalyticsContext {
         return this;
       }
 
-      private io.opencannabis.schema.temporal.TemporalInstant.Instant ingest_ = null;
+      private io.opencannabis.schema.temporal.TemporalInstant.Instant ingest_;
       private com.google.protobuf.SingleFieldBuilderV3<
           io.opencannabis.schema.temporal.TemporalInstant.Instant, io.opencannabis.schema.temporal.TemporalInstant.Instant.Builder, io.opencannabis.schema.temporal.TemporalInstant.InstantOrBuilder> ingestBuilder_;
       /**
@@ -847,7 +844,7 @@ public final class AnalyticsContext {
         return ingestBuilder_;
       }
 
-      private io.opencannabis.schema.temporal.TemporalInstant.Instant occurred_ = null;
+      private io.opencannabis.schema.temporal.TemporalInstant.Instant occurred_;
       private com.google.protobuf.SingleFieldBuilderV3<
           io.opencannabis.schema.temporal.TemporalInstant.Instant, io.opencannabis.schema.temporal.TemporalInstant.Instant.Builder, io.opencannabis.schema.temporal.TemporalInstant.InstantOrBuilder> occurredBuilder_;
       /**
@@ -1078,7 +1075,7 @@ public final class AnalyticsContext {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -1290,7 +1287,7 @@ public final class AnalyticsContext {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -1479,24 +1476,23 @@ public final class AnalyticsContext {
       }
       io.bloombox.schema.telemetry.AnalyticsContext.EventActors other = (io.bloombox.schema.telemetry.AnalyticsContext.EventActors) obj;
 
-      boolean result = true;
-      result = result && (hasUser() == other.hasUser());
+      if (hasUser() != other.hasUser()) return false;
       if (hasUser()) {
-        result = result && getUser()
-            .equals(other.getUser());
+        if (!getUser()
+            .equals(other.getUser())) return false;
       }
-      result = result && (hasPartner() == other.hasPartner());
+      if (hasPartner() != other.hasPartner()) return false;
       if (hasPartner()) {
-        result = result && getPartner()
-            .equals(other.getPartner());
+        if (!getPartner()
+            .equals(other.getPartner())) return false;
       }
-      result = result && (hasLocation() == other.hasLocation());
+      if (hasLocation() != other.hasLocation()) return false;
       if (hasLocation()) {
-        result = result && getLocation()
-            .equals(other.getLocation());
+        if (!getLocation()
+            .equals(other.getLocation())) return false;
       }
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -1720,35 +1716,35 @@ public final class AnalyticsContext {
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -1800,7 +1796,7 @@ public final class AnalyticsContext {
         return this;
       }
 
-      private io.bloombox.schema.identity.AppUser.User user_ = null;
+      private io.bloombox.schema.identity.AppUser.User user_;
       private com.google.protobuf.SingleFieldBuilderV3<
           io.bloombox.schema.identity.AppUser.User, io.bloombox.schema.identity.AppUser.User.Builder, io.bloombox.schema.identity.AppUser.UserOrBuilder> userBuilder_;
       /**
@@ -1953,7 +1949,7 @@ public final class AnalyticsContext {
         return userBuilder_;
       }
 
-      private io.bloombox.schema.partner.PartnerAccount.Partner partner_ = null;
+      private io.bloombox.schema.partner.PartnerAccount.Partner partner_;
       private com.google.protobuf.SingleFieldBuilderV3<
           io.bloombox.schema.partner.PartnerAccount.Partner, io.bloombox.schema.partner.PartnerAccount.Partner.Builder, io.bloombox.schema.partner.PartnerAccount.PartnerOrBuilder> partnerBuilder_;
       /**
@@ -2106,7 +2102,7 @@ public final class AnalyticsContext {
         return partnerBuilder_;
       }
 
-      private io.bloombox.schema.partner.LocationAccount.PartnerLocation location_ = null;
+      private io.bloombox.schema.partner.LocationAccount.PartnerLocation location_;
       private com.google.protobuf.SingleFieldBuilderV3<
           io.bloombox.schema.partner.LocationAccount.PartnerLocation, io.bloombox.schema.partner.LocationAccount.PartnerLocation.Builder, io.bloombox.schema.partner.LocationAccount.PartnerLocationOrBuilder> locationBuilder_;
       /**
@@ -2261,7 +2257,7 @@ public final class AnalyticsContext {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -2768,7 +2764,7 @@ public final class AnalyticsContext {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -3354,57 +3350,56 @@ public final class AnalyticsContext {
       }
       io.bloombox.schema.telemetry.AnalyticsContext.Context other = (io.bloombox.schema.telemetry.AnalyticsContext.Context) obj;
 
-      boolean result = true;
-      result = result && (hasCollection() == other.hasCollection());
+      if (hasCollection() != other.hasCollection()) return false;
       if (hasCollection()) {
-        result = result && getCollection()
-            .equals(other.getCollection());
+        if (!getCollection()
+            .equals(other.getCollection())) return false;
       }
-      result = result && (hasUserKey() == other.hasUserKey());
+      if (hasUserKey() != other.hasUserKey()) return false;
       if (hasUserKey()) {
-        result = result && getUserKey()
-            .equals(other.getUserKey());
+        if (!getUserKey()
+            .equals(other.getUserKey())) return false;
       }
-      result = result && getFingerprint()
-          .equals(other.getFingerprint());
-      result = result && getGroup()
-          .equals(other.getGroup());
-      result = result && getHostname()
-          .equals(other.getHostname());
-      result = result && getIpAddress()
-          .equals(other.getIpAddress());
-      result = result && (hasScope() == other.hasScope());
+      if (!getFingerprint()
+          .equals(other.getFingerprint())) return false;
+      if (!getGroup()
+          .equals(other.getGroup())) return false;
+      if (!getHostname()
+          .equals(other.getHostname())) return false;
+      if (!getIpAddress()
+          .equals(other.getIpAddress())) return false;
+      if (hasScope() != other.hasScope()) return false;
       if (hasScope()) {
-        result = result && getScope()
-            .equals(other.getScope());
+        if (!getScope()
+            .equals(other.getScope())) return false;
       }
-      result = result && (hasApp() == other.hasApp());
+      if (hasApp() != other.hasApp()) return false;
       if (hasApp()) {
-        result = result && getApp()
-            .equals(other.getApp());
+        if (!getApp()
+            .equals(other.getApp())) return false;
       }
-      result = result && (hasLibrary() == other.hasLibrary());
+      if (hasLibrary() != other.hasLibrary()) return false;
       if (hasLibrary()) {
-        result = result && getLibrary()
-            .equals(other.getLibrary());
+        if (!getLibrary()
+            .equals(other.getLibrary())) return false;
       }
-      result = result && (hasNative() == other.hasNative());
+      if (hasNative() != other.hasNative()) return false;
       if (hasNative()) {
-        result = result && getNative()
-            .equals(other.getNative());
+        if (!getNative()
+            .equals(other.getNative())) return false;
       }
-      result = result && (hasBrowser() == other.hasBrowser());
+      if (hasBrowser() != other.hasBrowser()) return false;
       if (hasBrowser()) {
-        result = result && getBrowser()
-            .equals(other.getBrowser());
+        if (!getBrowser()
+            .equals(other.getBrowser())) return false;
       }
-      result = result && (hasLocation() == other.hasLocation());
+      if (hasLocation() != other.hasLocation()) return false;
       if (hasLocation()) {
-        result = result && getLocation()
-            .equals(other.getLocation());
+        if (!getLocation()
+            .equals(other.getLocation())) return false;
       }
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -3723,35 +3718,35 @@ public final class AnalyticsContext {
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -3834,7 +3829,7 @@ public final class AnalyticsContext {
         return this;
       }
 
-      private io.bloombox.schema.telemetry.context.AnalyticsCollection.Collection collection_ = null;
+      private io.bloombox.schema.telemetry.context.AnalyticsCollection.Collection collection_;
       private com.google.protobuf.SingleFieldBuilderV3<
           io.bloombox.schema.telemetry.context.AnalyticsCollection.Collection, io.bloombox.schema.telemetry.context.AnalyticsCollection.Collection.Builder, io.bloombox.schema.telemetry.context.AnalyticsCollection.CollectionOrBuilder> collectionBuilder_;
       /**
@@ -3987,7 +3982,7 @@ public final class AnalyticsContext {
         return collectionBuilder_;
       }
 
-      private io.bloombox.schema.identity.AppUserKey.UserKey userKey_ = null;
+      private io.bloombox.schema.identity.AppUserKey.UserKey userKey_;
       private com.google.protobuf.SingleFieldBuilderV3<
           io.bloombox.schema.identity.AppUserKey.UserKey, io.bloombox.schema.identity.AppUserKey.UserKey.Builder, io.bloombox.schema.identity.AppUserKey.UserKeyOrBuilder> userKeyBuilder_;
       /**
@@ -4501,7 +4496,7 @@ public final class AnalyticsContext {
         return this;
       }
 
-      private io.bloombox.schema.telemetry.AnalyticsScope.Scope scope_ = null;
+      private io.bloombox.schema.telemetry.AnalyticsScope.Scope scope_;
       private com.google.protobuf.SingleFieldBuilderV3<
           io.bloombox.schema.telemetry.AnalyticsScope.Scope, io.bloombox.schema.telemetry.AnalyticsScope.Scope.Builder, io.bloombox.schema.telemetry.AnalyticsScope.ScopeOrBuilder> scopeBuilder_;
       /**
@@ -4654,7 +4649,7 @@ public final class AnalyticsContext {
         return scopeBuilder_;
       }
 
-      private io.bloombox.schema.telemetry.context.ApplicationContext.DeviceApplication app_ = null;
+      private io.bloombox.schema.telemetry.context.ApplicationContext.DeviceApplication app_;
       private com.google.protobuf.SingleFieldBuilderV3<
           io.bloombox.schema.telemetry.context.ApplicationContext.DeviceApplication, io.bloombox.schema.telemetry.context.ApplicationContext.DeviceApplication.Builder, io.bloombox.schema.telemetry.context.ApplicationContext.DeviceApplicationOrBuilder> appBuilder_;
       /**
@@ -4807,7 +4802,7 @@ public final class AnalyticsContext {
         return appBuilder_;
       }
 
-      private io.bloombox.schema.telemetry.context.LibraryContext.DeviceLibrary library_ = null;
+      private io.bloombox.schema.telemetry.context.LibraryContext.DeviceLibrary library_;
       private com.google.protobuf.SingleFieldBuilderV3<
           io.bloombox.schema.telemetry.context.LibraryContext.DeviceLibrary, io.bloombox.schema.telemetry.context.LibraryContext.DeviceLibrary.Builder, io.bloombox.schema.telemetry.context.LibraryContext.DeviceLibraryOrBuilder> libraryBuilder_;
       /**
@@ -4960,7 +4955,7 @@ public final class AnalyticsContext {
         return libraryBuilder_;
       }
 
-      private io.bloombox.schema.telemetry.context.DeviceContext.NativeDeviceContext native_ = null;
+      private io.bloombox.schema.telemetry.context.DeviceContext.NativeDeviceContext native_;
       private com.google.protobuf.SingleFieldBuilderV3<
           io.bloombox.schema.telemetry.context.DeviceContext.NativeDeviceContext, io.bloombox.schema.telemetry.context.DeviceContext.NativeDeviceContext.Builder, io.bloombox.schema.telemetry.context.DeviceContext.NativeDeviceContextOrBuilder> nativeBuilder_;
       /**
@@ -5122,7 +5117,7 @@ public final class AnalyticsContext {
         return nativeBuilder_;
       }
 
-      private io.bloombox.schema.telemetry.context.BrowserContext.BrowserDeviceContext browser_ = null;
+      private io.bloombox.schema.telemetry.context.BrowserContext.BrowserDeviceContext browser_;
       private com.google.protobuf.SingleFieldBuilderV3<
           io.bloombox.schema.telemetry.context.BrowserContext.BrowserDeviceContext, io.bloombox.schema.telemetry.context.BrowserContext.BrowserDeviceContext.Builder, io.bloombox.schema.telemetry.context.BrowserContext.BrowserDeviceContextOrBuilder> browserBuilder_;
       /**
@@ -5275,7 +5270,7 @@ public final class AnalyticsContext {
         return browserBuilder_;
       }
 
-      private io.opencannabis.schema.geo.Location location_ = null;
+      private io.opencannabis.schema.geo.Location location_;
       private com.google.protobuf.SingleFieldBuilderV3<
           io.opencannabis.schema.geo.Location, io.opencannabis.schema.geo.Location.Builder, io.opencannabis.schema.geo.LocationOrBuilder> locationBuilder_;
       /**
@@ -5430,7 +5425,7 @@ public final class AnalyticsContext {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override

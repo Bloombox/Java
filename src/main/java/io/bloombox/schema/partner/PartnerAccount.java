@@ -1,5 +1,5 @@
 /*
- * Copyright 2018, Momentum Ideas, Co. All rights reserved.
+ * Copyright 2019, Momentum Ideas, Co. All rights reserved.
  *
  * Source and object computer code contained herein is the private intellectual
  * property of Momentum Ideas Co., a Delaware Corporation. Use of this
@@ -573,7 +573,7 @@ public final class PartnerAccount {
               break;
             }
             case 74: {
-              if (!((mutable_bitField0_ & 0x00000100) == 0x00000100)) {
+              if (!((mutable_bitField0_ & 0x00000100) != 0)) {
                 location_ = new java.util.ArrayList<io.bloombox.schema.partner.LocationAccount.PartnerLocation>();
                 mutable_bitField0_ |= 0x00000100;
               }
@@ -582,7 +582,7 @@ public final class PartnerAccount {
               break;
             }
             case 82: {
-              if (!((mutable_bitField0_ & 0x00000200) == 0x00000200)) {
+              if (!((mutable_bitField0_ & 0x00000200) != 0)) {
                 policy_ = new java.util.ArrayList<io.bloombox.schema.security.access.PartnerPermissions.AccessPolicy>();
                 mutable_bitField0_ |= 0x00000200;
               }
@@ -617,7 +617,7 @@ public final class PartnerAccount {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -631,10 +631,10 @@ public final class PartnerAccount {
         throw new com.google.protobuf.InvalidProtocolBufferException(
             e).setUnfinishedMessage(this);
       } finally {
-        if (((mutable_bitField0_ & 0x00000100) == 0x00000100)) {
+        if (((mutable_bitField0_ & 0x00000100) != 0)) {
           location_ = java.util.Collections.unmodifiableList(location_);
         }
-        if (((mutable_bitField0_ & 0x00000200) == 0x00000200)) {
+        if (((mutable_bitField0_ & 0x00000200) != 0)) {
           policy_ = java.util.Collections.unmodifiableList(policy_);
         }
         this.unknownFields = unknownFields.build();
@@ -1233,50 +1233,49 @@ public final class PartnerAccount {
       }
       io.bloombox.schema.partner.PartnerAccount.Partner other = (io.bloombox.schema.partner.PartnerAccount.Partner) obj;
 
-      boolean result = true;
-      result = result && getCode()
-          .equals(other.getCode());
-      result = result && getName()
-          .equals(other.getName());
-      result = result && (hasFlags() == other.hasFlags());
+      if (!getCode()
+          .equals(other.getCode())) return false;
+      if (!getName()
+          .equals(other.getName())) return false;
+      if (hasFlags() != other.hasFlags()) return false;
       if (hasFlags()) {
-        result = result && getFlags()
-            .equals(other.getFlags());
+        if (!getFlags()
+            .equals(other.getFlags())) return false;
       }
-      result = result && getLegalName()
-          .equals(other.getLegalName());
-      result = result && (hasContact() == other.hasContact());
+      if (!getLegalName()
+          .equals(other.getLegalName())) return false;
+      if (hasContact() != other.hasContact()) return false;
       if (hasContact()) {
-        result = result && getContact()
-            .equals(other.getContact());
+        if (!getContact()
+            .equals(other.getContact())) return false;
       }
-      result = result && (hasBranding() == other.hasBranding());
+      if (hasBranding() != other.hasBranding()) return false;
       if (hasBranding()) {
-        result = result && getBranding()
-            .equals(other.getBranding());
+        if (!getBranding()
+            .equals(other.getBranding())) return false;
       }
-      result = result && channel_ == other.channel_;
-      result = result && (hasSettings() == other.hasSettings());
+      if (channel_ != other.channel_) return false;
+      if (hasSettings() != other.hasSettings()) return false;
       if (hasSettings()) {
-        result = result && getSettings()
-            .equals(other.getSettings());
+        if (!getSettings()
+            .equals(other.getSettings())) return false;
       }
-      result = result && getLocationList()
-          .equals(other.getLocationList());
-      result = result && getPolicyList()
-          .equals(other.getPolicyList());
-      result = result && (hasCreated() == other.hasCreated());
+      if (!getLocationList()
+          .equals(other.getLocationList())) return false;
+      if (!getPolicyList()
+          .equals(other.getPolicyList())) return false;
+      if (hasCreated() != other.hasCreated()) return false;
       if (hasCreated()) {
-        result = result && getCreated()
-            .equals(other.getCreated());
+        if (!getCreated()
+            .equals(other.getCreated())) return false;
       }
-      result = result && (hasModified() == other.hasModified());
+      if (hasModified() != other.hasModified()) return false;
       if (hasModified()) {
-        result = result && getModified()
-            .equals(other.getModified());
+        if (!getModified()
+            .equals(other.getModified())) return false;
       }
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -1576,7 +1575,7 @@ public final class PartnerAccount {
           result.settings_ = settingsBuilder_.build();
         }
         if (locationBuilder_ == null) {
-          if (((bitField0_ & 0x00000100) == 0x00000100)) {
+          if (((bitField0_ & 0x00000100) != 0)) {
             location_ = java.util.Collections.unmodifiableList(location_);
             bitField0_ = (bitField0_ & ~0x00000100);
           }
@@ -1585,7 +1584,7 @@ public final class PartnerAccount {
           result.location_ = locationBuilder_.build();
         }
         if (policyBuilder_ == null) {
-          if (((bitField0_ & 0x00000200) == 0x00000200)) {
+          if (((bitField0_ & 0x00000200) != 0)) {
             policy_ = java.util.Collections.unmodifiableList(policy_);
             bitField0_ = (bitField0_ & ~0x00000200);
           }
@@ -1610,35 +1609,35 @@ public final class PartnerAccount {
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -1945,7 +1944,7 @@ public final class PartnerAccount {
         return this;
       }
 
-      private io.bloombox.schema.partner.PartnerInfo.PartnerFlags flags_ = null;
+      private io.bloombox.schema.partner.PartnerInfo.PartnerFlags flags_;
       private com.google.protobuf.SingleFieldBuilderV3<
           io.bloombox.schema.partner.PartnerInfo.PartnerFlags, io.bloombox.schema.partner.PartnerInfo.PartnerFlags.Builder, io.bloombox.schema.partner.PartnerInfo.PartnerFlagsOrBuilder> flagsBuilder_;
       /**
@@ -2187,7 +2186,7 @@ public final class PartnerAccount {
         return this;
       }
 
-      private io.opencannabis.schema.contact.GenericContact.ContactInfo contact_ = null;
+      private io.opencannabis.schema.contact.GenericContact.ContactInfo contact_;
       private com.google.protobuf.SingleFieldBuilderV3<
           io.opencannabis.schema.contact.GenericContact.ContactInfo, io.opencannabis.schema.contact.GenericContact.ContactInfo.Builder, io.opencannabis.schema.contact.GenericContact.ContactInfoOrBuilder> contactBuilder_;
       /**
@@ -2340,7 +2339,7 @@ public final class PartnerAccount {
         return contactBuilder_;
       }
 
-      private io.opencannabis.schema.media.AttachedMedia.MediaItem branding_ = null;
+      private io.opencannabis.schema.media.AttachedMedia.MediaItem branding_;
       private com.google.protobuf.SingleFieldBuilderV3<
           io.opencannabis.schema.media.AttachedMedia.MediaItem, io.opencannabis.schema.media.AttachedMedia.MediaItem.Builder, io.opencannabis.schema.media.AttachedMedia.MediaItemOrBuilder> brandingBuilder_;
       /**
@@ -2558,7 +2557,7 @@ public final class PartnerAccount {
         return this;
       }
 
-      private io.bloombox.schema.partner.settings.PartnerSettingsOuterClass.PartnerSettings settings_ = null;
+      private io.bloombox.schema.partner.settings.PartnerSettingsOuterClass.PartnerSettings settings_;
       private com.google.protobuf.SingleFieldBuilderV3<
           io.bloombox.schema.partner.settings.PartnerSettingsOuterClass.PartnerSettings, io.bloombox.schema.partner.settings.PartnerSettingsOuterClass.PartnerSettings.Builder, io.bloombox.schema.partner.settings.PartnerSettingsOuterClass.PartnerSettingsOrBuilder> settingsBuilder_;
       /**
@@ -2714,7 +2713,7 @@ public final class PartnerAccount {
       private java.util.List<io.bloombox.schema.partner.LocationAccount.PartnerLocation> location_ =
         java.util.Collections.emptyList();
       private void ensureLocationIsMutable() {
-        if (!((bitField0_ & 0x00000100) == 0x00000100)) {
+        if (!((bitField0_ & 0x00000100) != 0)) {
           location_ = new java.util.ArrayList<io.bloombox.schema.partner.LocationAccount.PartnerLocation>(location_);
           bitField0_ |= 0x00000100;
          }
@@ -3015,7 +3014,7 @@ public final class PartnerAccount {
           locationBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
               io.bloombox.schema.partner.LocationAccount.PartnerLocation, io.bloombox.schema.partner.LocationAccount.PartnerLocation.Builder, io.bloombox.schema.partner.LocationAccount.PartnerLocationOrBuilder>(
                   location_,
-                  ((bitField0_ & 0x00000100) == 0x00000100),
+                  ((bitField0_ & 0x00000100) != 0),
                   getParentForChildren(),
                   isClean());
           location_ = null;
@@ -3026,7 +3025,7 @@ public final class PartnerAccount {
       private java.util.List<io.bloombox.schema.security.access.PartnerPermissions.AccessPolicy> policy_ =
         java.util.Collections.emptyList();
       private void ensurePolicyIsMutable() {
-        if (!((bitField0_ & 0x00000200) == 0x00000200)) {
+        if (!((bitField0_ & 0x00000200) != 0)) {
           policy_ = new java.util.ArrayList<io.bloombox.schema.security.access.PartnerPermissions.AccessPolicy>(policy_);
           bitField0_ |= 0x00000200;
          }
@@ -3327,7 +3326,7 @@ public final class PartnerAccount {
           policyBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
               io.bloombox.schema.security.access.PartnerPermissions.AccessPolicy, io.bloombox.schema.security.access.PartnerPermissions.AccessPolicy.Builder, io.bloombox.schema.security.access.PartnerPermissions.AccessPolicyOrBuilder>(
                   policy_,
-                  ((bitField0_ & 0x00000200) == 0x00000200),
+                  ((bitField0_ & 0x00000200) != 0),
                   getParentForChildren(),
                   isClean());
           policy_ = null;
@@ -3335,7 +3334,7 @@ public final class PartnerAccount {
         return policyBuilder_;
       }
 
-      private io.opencannabis.schema.temporal.TemporalInstant.Instant created_ = null;
+      private io.opencannabis.schema.temporal.TemporalInstant.Instant created_;
       private com.google.protobuf.SingleFieldBuilderV3<
           io.opencannabis.schema.temporal.TemporalInstant.Instant, io.opencannabis.schema.temporal.TemporalInstant.Instant.Builder, io.opencannabis.schema.temporal.TemporalInstant.InstantOrBuilder> createdBuilder_;
       /**
@@ -3488,7 +3487,7 @@ public final class PartnerAccount {
         return createdBuilder_;
       }
 
-      private io.opencannabis.schema.temporal.TemporalInstant.Instant modified_ = null;
+      private io.opencannabis.schema.temporal.TemporalInstant.Instant modified_;
       private com.google.protobuf.SingleFieldBuilderV3<
           io.opencannabis.schema.temporal.TemporalInstant.Instant, io.opencannabis.schema.temporal.TemporalInstant.Instant.Builder, io.opencannabis.schema.temporal.TemporalInstant.InstantOrBuilder> modifiedBuilder_;
       /**
@@ -3643,7 +3642,7 @@ public final class PartnerAccount {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override

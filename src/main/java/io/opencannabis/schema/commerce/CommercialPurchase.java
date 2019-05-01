@@ -1,12 +1,11 @@
 /*
- * Copyright 2018, Momentum Ideas, Co. All rights reserved.
+ * Copyright 2019, Momentum Ideas Co.
  *
- * Source and object computer code contained herein is the private intellectual
- * property of Momentum Ideas Co., a Delaware Corporation. Use of this
- * code in source form requires permission in writing before use or the
- * assembly, distribution, or publishing of derivative works, for commercial
- * purposes or any other purpose, from a duly authorized officer of Momentum
- * Ideas Co.
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *  http://www.apache.org/licenses/LICENSE-2.0
  *
  * Unless required by applicable law or agreed to in writing, software
  * distributed under the License is distributed on an "AS IS" BASIS,
@@ -782,7 +781,7 @@ public final class CommercialPurchase {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -1043,20 +1042,19 @@ public final class CommercialPurchase {
       }
       io.opencannabis.schema.commerce.CommercialPurchase.PurchaseLogEntry other = (io.opencannabis.schema.commerce.CommercialPurchase.PurchaseLogEntry) obj;
 
-      boolean result = true;
-      result = result && status_ == other.status_;
-      result = result && event_ == other.event_;
-      result = result && (hasInstant() == other.hasInstant());
+      if (status_ != other.status_) return false;
+      if (event_ != other.event_) return false;
+      if (hasInstant() != other.hasInstant()) return false;
       if (hasInstant()) {
-        result = result && getInstant()
-            .equals(other.getInstant());
+        if (!getInstant()
+            .equals(other.getInstant())) return false;
       }
-      result = result && getSku()
-          .equals(other.getSku());
-      result = result && getMessage()
-          .equals(other.getMessage());
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!getSku()
+          .equals(other.getSku())) return false;
+      if (!getMessage()
+          .equals(other.getMessage())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -1270,35 +1268,35 @@ public final class CommercialPurchase {
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -1468,7 +1466,7 @@ public final class CommercialPurchase {
         return this;
       }
 
-      private io.opencannabis.schema.temporal.TemporalInstant.Instant instant_ = null;
+      private io.opencannabis.schema.temporal.TemporalInstant.Instant instant_;
       private com.google.protobuf.SingleFieldBuilderV3<
           io.opencannabis.schema.temporal.TemporalInstant.Instant, io.opencannabis.schema.temporal.TemporalInstant.Instant.Builder, io.opencannabis.schema.temporal.TemporalInstant.InstantOrBuilder> instantBuilder_;
       /**
@@ -1801,7 +1799,7 @@ public final class CommercialPurchase {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -2025,11 +2023,6 @@ public final class CommercialPurchase {
       status_ = 0;
       tax_ = java.util.Collections.emptyList();
       discount_ = java.util.Collections.emptyList();
-      price_ = 0D;
-      taxes_ = 0D;
-      discounts_ = 0D;
-      subtotal_ = 0D;
-      total_ = 0D;
     }
 
     @java.lang.Override
@@ -2063,7 +2056,7 @@ public final class CommercialPurchase {
               break;
             }
             case 18: {
-              if (!((mutable_bitField0_ & 0x00000002) == 0x00000002)) {
+              if (!((mutable_bitField0_ & 0x00000002) != 0)) {
                 tax_ = new java.util.ArrayList<io.opencannabis.schema.accounting.AccountingTaxes.Tax>();
                 mutable_bitField0_ |= 0x00000002;
               }
@@ -2072,7 +2065,7 @@ public final class CommercialPurchase {
               break;
             }
             case 26: {
-              if (!((mutable_bitField0_ & 0x00000004) == 0x00000004)) {
+              if (!((mutable_bitField0_ & 0x00000004) != 0)) {
                 discount_ = new java.util.ArrayList<io.opencannabis.schema.accounting.CommercialDiscounts.Discount>();
                 mutable_bitField0_ |= 0x00000004;
               }
@@ -2106,7 +2099,7 @@ public final class CommercialPurchase {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -2120,10 +2113,10 @@ public final class CommercialPurchase {
         throw new com.google.protobuf.InvalidProtocolBufferException(
             e).setUnfinishedMessage(this);
       } finally {
-        if (((mutable_bitField0_ & 0x00000002) == 0x00000002)) {
+        if (((mutable_bitField0_ & 0x00000002) != 0)) {
           tax_ = java.util.Collections.unmodifiableList(tax_);
         }
-        if (((mutable_bitField0_ & 0x00000004) == 0x00000004)) {
+        if (((mutable_bitField0_ & 0x00000004) != 0)) {
           discount_ = java.util.Collections.unmodifiableList(discount_);
         }
         this.unknownFields = unknownFields.build();
@@ -2438,34 +2431,28 @@ public final class CommercialPurchase {
       }
       io.opencannabis.schema.commerce.CommercialPurchase.BillOfCharges other = (io.opencannabis.schema.commerce.CommercialPurchase.BillOfCharges) obj;
 
-      boolean result = true;
-      result = result && status_ == other.status_;
-      result = result && getTaxList()
-          .equals(other.getTaxList());
-      result = result && getDiscountList()
-          .equals(other.getDiscountList());
-      result = result && (
-          java.lang.Double.doubleToLongBits(getPrice())
-          == java.lang.Double.doubleToLongBits(
-              other.getPrice()));
-      result = result && (
-          java.lang.Double.doubleToLongBits(getTaxes())
-          == java.lang.Double.doubleToLongBits(
-              other.getTaxes()));
-      result = result && (
-          java.lang.Double.doubleToLongBits(getDiscounts())
-          == java.lang.Double.doubleToLongBits(
-              other.getDiscounts()));
-      result = result && (
-          java.lang.Double.doubleToLongBits(getSubtotal())
-          == java.lang.Double.doubleToLongBits(
-              other.getSubtotal()));
-      result = result && (
-          java.lang.Double.doubleToLongBits(getTotal())
-          == java.lang.Double.doubleToLongBits(
-              other.getTotal()));
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (status_ != other.status_) return false;
+      if (!getTaxList()
+          .equals(other.getTaxList())) return false;
+      if (!getDiscountList()
+          .equals(other.getDiscountList())) return false;
+      if (java.lang.Double.doubleToLongBits(getPrice())
+          != java.lang.Double.doubleToLongBits(
+              other.getPrice())) return false;
+      if (java.lang.Double.doubleToLongBits(getTaxes())
+          != java.lang.Double.doubleToLongBits(
+              other.getTaxes())) return false;
+      if (java.lang.Double.doubleToLongBits(getDiscounts())
+          != java.lang.Double.doubleToLongBits(
+              other.getDiscounts())) return false;
+      if (java.lang.Double.doubleToLongBits(getSubtotal())
+          != java.lang.Double.doubleToLongBits(
+              other.getSubtotal())) return false;
+      if (java.lang.Double.doubleToLongBits(getTotal())
+          != java.lang.Double.doubleToLongBits(
+              other.getTotal())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -2693,7 +2680,7 @@ public final class CommercialPurchase {
         int to_bitField0_ = 0;
         result.status_ = status_;
         if (taxBuilder_ == null) {
-          if (((bitField0_ & 0x00000002) == 0x00000002)) {
+          if (((bitField0_ & 0x00000002) != 0)) {
             tax_ = java.util.Collections.unmodifiableList(tax_);
             bitField0_ = (bitField0_ & ~0x00000002);
           }
@@ -2702,7 +2689,7 @@ public final class CommercialPurchase {
           result.tax_ = taxBuilder_.build();
         }
         if (discountBuilder_ == null) {
-          if (((bitField0_ & 0x00000004) == 0x00000004)) {
+          if (((bitField0_ & 0x00000004) != 0)) {
             discount_ = java.util.Collections.unmodifiableList(discount_);
             bitField0_ = (bitField0_ & ~0x00000004);
           }
@@ -2722,35 +2709,35 @@ public final class CommercialPurchase {
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -2932,7 +2919,7 @@ public final class CommercialPurchase {
       private java.util.List<io.opencannabis.schema.accounting.AccountingTaxes.Tax> tax_ =
         java.util.Collections.emptyList();
       private void ensureTaxIsMutable() {
-        if (!((bitField0_ & 0x00000002) == 0x00000002)) {
+        if (!((bitField0_ & 0x00000002) != 0)) {
           tax_ = new java.util.ArrayList<io.opencannabis.schema.accounting.AccountingTaxes.Tax>(tax_);
           bitField0_ |= 0x00000002;
          }
@@ -3233,7 +3220,7 @@ public final class CommercialPurchase {
           taxBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
               io.opencannabis.schema.accounting.AccountingTaxes.Tax, io.opencannabis.schema.accounting.AccountingTaxes.Tax.Builder, io.opencannabis.schema.accounting.AccountingTaxes.TaxOrBuilder>(
                   tax_,
-                  ((bitField0_ & 0x00000002) == 0x00000002),
+                  ((bitField0_ & 0x00000002) != 0),
                   getParentForChildren(),
                   isClean());
           tax_ = null;
@@ -3244,7 +3231,7 @@ public final class CommercialPurchase {
       private java.util.List<io.opencannabis.schema.accounting.CommercialDiscounts.Discount> discount_ =
         java.util.Collections.emptyList();
       private void ensureDiscountIsMutable() {
-        if (!((bitField0_ & 0x00000004) == 0x00000004)) {
+        if (!((bitField0_ & 0x00000004) != 0)) {
           discount_ = new java.util.ArrayList<io.opencannabis.schema.accounting.CommercialDiscounts.Discount>(discount_);
           bitField0_ |= 0x00000004;
          }
@@ -3545,7 +3532,7 @@ public final class CommercialPurchase {
           discountBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
               io.opencannabis.schema.accounting.CommercialDiscounts.Discount, io.opencannabis.schema.accounting.CommercialDiscounts.Discount.Builder, io.opencannabis.schema.accounting.CommercialDiscounts.DiscountOrBuilder>(
                   discount_,
-                  ((bitField0_ & 0x00000004) == 0x00000004),
+                  ((bitField0_ & 0x00000004) != 0),
                   getParentForChildren(),
                   isClean());
           discount_ = null;
@@ -3745,7 +3732,7 @@ public final class CommercialPurchase {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -3983,7 +3970,7 @@ public final class CommercialPurchase {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -4220,26 +4207,25 @@ public final class CommercialPurchase {
       }
       io.opencannabis.schema.commerce.CommercialPurchase.TicketItem other = (io.opencannabis.schema.commerce.CommercialPurchase.TicketItem) obj;
 
-      boolean result = true;
-      result = result && (hasKey() == other.hasKey());
+      if (hasKey() != other.hasKey()) return false;
       if (hasKey()) {
-        result = result && getKey()
-            .equals(other.getKey());
+        if (!getKey()
+            .equals(other.getKey())) return false;
       }
-      result = result && getSku()
-          .equals(other.getSku());
-      result = result && (hasItem() == other.hasItem());
+      if (!getSku()
+          .equals(other.getSku())) return false;
+      if (hasItem() != other.hasItem()) return false;
       if (hasItem()) {
-        result = result && getItem()
-            .equals(other.getItem());
+        if (!getItem()
+            .equals(other.getItem())) return false;
       }
-      result = result && (hasLine() == other.hasLine());
+      if (hasLine() != other.hasLine()) return false;
       if (hasLine()) {
-        result = result && getLine()
-            .equals(other.getLine());
+        if (!getLine()
+            .equals(other.getLine())) return false;
       }
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -4469,35 +4455,35 @@ public final class CommercialPurchase {
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -4553,7 +4539,7 @@ public final class CommercialPurchase {
         return this;
       }
 
-      private io.opencannabis.schema.inventory.InventoryKey key_ = null;
+      private io.opencannabis.schema.inventory.InventoryKey key_;
       private com.google.protobuf.SingleFieldBuilderV3<
           io.opencannabis.schema.inventory.InventoryKey, io.opencannabis.schema.inventory.InventoryKey.Builder, io.opencannabis.schema.inventory.InventoryKeyOrBuilder> keyBuilder_;
       /**
@@ -4795,7 +4781,7 @@ public final class CommercialPurchase {
         return this;
       }
 
-      private io.opencannabis.schema.commerce.OrderItem.Item item_ = null;
+      private io.opencannabis.schema.commerce.OrderItem.Item item_;
       private com.google.protobuf.SingleFieldBuilderV3<
           io.opencannabis.schema.commerce.OrderItem.Item, io.opencannabis.schema.commerce.OrderItem.Item.Builder, io.opencannabis.schema.commerce.OrderItem.ItemOrBuilder> itemBuilder_;
       /**
@@ -4948,7 +4934,7 @@ public final class CommercialPurchase {
         return itemBuilder_;
       }
 
-      private io.opencannabis.schema.commerce.CommercialPurchase.BillOfCharges line_ = null;
+      private io.opencannabis.schema.commerce.CommercialPurchase.BillOfCharges line_;
       private com.google.protobuf.SingleFieldBuilderV3<
           io.opencannabis.schema.commerce.CommercialPurchase.BillOfCharges, io.opencannabis.schema.commerce.CommercialPurchase.BillOfCharges.Builder, io.opencannabis.schema.commerce.CommercialPurchase.BillOfChargesOrBuilder> lineBuilder_;
       /**
@@ -5103,7 +5089,7 @@ public final class CommercialPurchase {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -5391,7 +5377,7 @@ public final class CommercialPurchase {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -5660,34 +5646,33 @@ public final class CommercialPurchase {
       }
       io.opencannabis.schema.commerce.CommercialPurchase.PurchaseTimestamps other = (io.opencannabis.schema.commerce.CommercialPurchase.PurchaseTimestamps) obj;
 
-      boolean result = true;
-      result = result && (hasEstablished() == other.hasEstablished());
+      if (hasEstablished() != other.hasEstablished()) return false;
       if (hasEstablished()) {
-        result = result && getEstablished()
-            .equals(other.getEstablished());
+        if (!getEstablished()
+            .equals(other.getEstablished())) return false;
       }
-      result = result && (hasCreated() == other.hasCreated());
+      if (hasCreated() != other.hasCreated()) return false;
       if (hasCreated()) {
-        result = result && getCreated()
-            .equals(other.getCreated());
+        if (!getCreated()
+            .equals(other.getCreated())) return false;
       }
-      result = result && (hasModified() == other.hasModified());
+      if (hasModified() != other.hasModified()) return false;
       if (hasModified()) {
-        result = result && getModified()
-            .equals(other.getModified());
+        if (!getModified()
+            .equals(other.getModified())) return false;
       }
-      result = result && (hasExecuted() == other.hasExecuted());
+      if (hasExecuted() != other.hasExecuted()) return false;
       if (hasExecuted()) {
-        result = result && getExecuted()
-            .equals(other.getExecuted());
+        if (!getExecuted()
+            .equals(other.getExecuted())) return false;
       }
-      result = result && (hasFinalized() == other.hasFinalized());
+      if (hasFinalized() != other.hasFinalized()) return false;
       if (hasFinalized()) {
-        result = result && getFinalized()
-            .equals(other.getFinalized());
+        if (!getFinalized()
+            .equals(other.getFinalized())) return false;
       }
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -5941,35 +5926,35 @@ public final class CommercialPurchase {
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -6027,7 +6012,7 @@ public final class CommercialPurchase {
         return this;
       }
 
-      private io.opencannabis.schema.temporal.TemporalInstant.Instant established_ = null;
+      private io.opencannabis.schema.temporal.TemporalInstant.Instant established_;
       private com.google.protobuf.SingleFieldBuilderV3<
           io.opencannabis.schema.temporal.TemporalInstant.Instant, io.opencannabis.schema.temporal.TemporalInstant.Instant.Builder, io.opencannabis.schema.temporal.TemporalInstant.InstantOrBuilder> establishedBuilder_;
       /**
@@ -6180,7 +6165,7 @@ public final class CommercialPurchase {
         return establishedBuilder_;
       }
 
-      private io.opencannabis.schema.temporal.TemporalInstant.Instant created_ = null;
+      private io.opencannabis.schema.temporal.TemporalInstant.Instant created_;
       private com.google.protobuf.SingleFieldBuilderV3<
           io.opencannabis.schema.temporal.TemporalInstant.Instant, io.opencannabis.schema.temporal.TemporalInstant.Instant.Builder, io.opencannabis.schema.temporal.TemporalInstant.InstantOrBuilder> createdBuilder_;
       /**
@@ -6333,7 +6318,7 @@ public final class CommercialPurchase {
         return createdBuilder_;
       }
 
-      private io.opencannabis.schema.temporal.TemporalInstant.Instant modified_ = null;
+      private io.opencannabis.schema.temporal.TemporalInstant.Instant modified_;
       private com.google.protobuf.SingleFieldBuilderV3<
           io.opencannabis.schema.temporal.TemporalInstant.Instant, io.opencannabis.schema.temporal.TemporalInstant.Instant.Builder, io.opencannabis.schema.temporal.TemporalInstant.InstantOrBuilder> modifiedBuilder_;
       /**
@@ -6486,7 +6471,7 @@ public final class CommercialPurchase {
         return modifiedBuilder_;
       }
 
-      private io.opencannabis.schema.temporal.TemporalInstant.Instant executed_ = null;
+      private io.opencannabis.schema.temporal.TemporalInstant.Instant executed_;
       private com.google.protobuf.SingleFieldBuilderV3<
           io.opencannabis.schema.temporal.TemporalInstant.Instant, io.opencannabis.schema.temporal.TemporalInstant.Instant.Builder, io.opencannabis.schema.temporal.TemporalInstant.InstantOrBuilder> executedBuilder_;
       /**
@@ -6639,7 +6624,7 @@ public final class CommercialPurchase {
         return executedBuilder_;
       }
 
-      private io.opencannabis.schema.temporal.TemporalInstant.Instant finalized_ = null;
+      private io.opencannabis.schema.temporal.TemporalInstant.Instant finalized_;
       private com.google.protobuf.SingleFieldBuilderV3<
           io.opencannabis.schema.temporal.TemporalInstant.Instant, io.opencannabis.schema.temporal.TemporalInstant.Instant.Builder, io.opencannabis.schema.temporal.TemporalInstant.InstantOrBuilder> finalizedBuilder_;
       /**
@@ -6794,7 +6779,7 @@ public final class CommercialPurchase {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -6917,7 +6902,7 @@ public final class CommercialPurchase {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -7034,11 +7019,10 @@ public final class CommercialPurchase {
       }
       io.opencannabis.schema.commerce.CommercialPurchase.PurchaseKey other = (io.opencannabis.schema.commerce.CommercialPurchase.PurchaseKey) obj;
 
-      boolean result = true;
-      result = result && getUuid()
-          .equals(other.getUuid());
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!getUuid()
+          .equals(other.getUuid())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -7222,35 +7206,35 @@ public final class CommercialPurchase {
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -7388,7 +7372,7 @@ public final class CommercialPurchase {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -7587,7 +7571,7 @@ public final class CommercialPurchase {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -7784,21 +7768,20 @@ public final class CommercialPurchase {
       }
       io.opencannabis.schema.commerce.CommercialPurchase.PurchaseSignature other = (io.opencannabis.schema.commerce.CommercialPurchase.PurchaseSignature) obj;
 
-      boolean result = true;
-      result = result && getNonce()
-          .equals(other.getNonce());
-      result = result && (hasFacilitator() == other.hasFacilitator());
+      if (!getNonce()
+          .equals(other.getNonce())) return false;
+      if (hasFacilitator() != other.hasFacilitator()) return false;
       if (hasFacilitator()) {
-        result = result && getFacilitator()
-            .equals(other.getFacilitator());
+        if (!getFacilitator()
+            .equals(other.getFacilitator())) return false;
       }
-      result = result && (hasCustomer() == other.hasCustomer());
+      if (hasCustomer() != other.hasCustomer()) return false;
       if (hasCustomer()) {
-        result = result && getCustomer()
-            .equals(other.getCustomer());
+        if (!getCustomer()
+            .equals(other.getCustomer())) return false;
       }
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -8012,35 +7995,35 @@ public final class CommercialPurchase {
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -8182,7 +8165,7 @@ public final class CommercialPurchase {
         return this;
       }
 
-      private io.opencannabis.schema.crypto.Signature facilitator_ = null;
+      private io.opencannabis.schema.crypto.Signature facilitator_;
       private com.google.protobuf.SingleFieldBuilderV3<
           io.opencannabis.schema.crypto.Signature, io.opencannabis.schema.crypto.Signature.Builder, io.opencannabis.schema.crypto.SignatureOrBuilder> facilitatorBuilder_;
       /**
@@ -8335,7 +8318,7 @@ public final class CommercialPurchase {
         return facilitatorBuilder_;
       }
 
-      private io.opencannabis.schema.crypto.Signature customer_ = null;
+      private io.opencannabis.schema.crypto.Signature customer_;
       private com.google.protobuf.SingleFieldBuilderV3<
           io.opencannabis.schema.crypto.Signature, io.opencannabis.schema.crypto.Signature.Builder, io.opencannabis.schema.crypto.SignatureOrBuilder> customerBuilder_;
       /**
@@ -8490,7 +8473,7 @@ public final class CommercialPurchase {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -8652,7 +8635,7 @@ public final class CommercialPurchase {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -8809,16 +8792,15 @@ public final class CommercialPurchase {
       }
       io.opencannabis.schema.commerce.CommercialPurchase.PurchaseCustomer other = (io.opencannabis.schema.commerce.CommercialPurchase.PurchaseCustomer) obj;
 
-      boolean result = true;
-      result = result && getUniqueId()
-          .equals(other.getUniqueId());
-      result = result && (hasSignature() == other.hasSignature());
+      if (!getUniqueId()
+          .equals(other.getUniqueId())) return false;
+      if (hasSignature() != other.hasSignature()) return false;
       if (hasSignature()) {
-        result = result && getSignature()
-            .equals(other.getSignature());
+        if (!getSignature()
+            .equals(other.getSignature())) return false;
       }
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -9018,35 +9000,35 @@ public final class CommercialPurchase {
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -9185,7 +9167,7 @@ public final class CommercialPurchase {
         return this;
       }
 
-      private io.opencannabis.schema.commerce.CommercialPurchase.PurchaseSignature signature_ = null;
+      private io.opencannabis.schema.commerce.CommercialPurchase.PurchaseSignature signature_;
       private com.google.protobuf.SingleFieldBuilderV3<
           io.opencannabis.schema.commerce.CommercialPurchase.PurchaseSignature, io.opencannabis.schema.commerce.CommercialPurchase.PurchaseSignature.Builder, io.opencannabis.schema.commerce.CommercialPurchase.PurchaseSignatureOrBuilder> signatureBuilder_;
       /**
@@ -9340,7 +9322,7 @@ public final class CommercialPurchase {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -9553,7 +9535,7 @@ public final class CommercialPurchase {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -9792,19 +9774,18 @@ public final class CommercialPurchase {
       }
       io.opencannabis.schema.commerce.CommercialPurchase.PurchaseFacilitator other = (io.opencannabis.schema.commerce.CommercialPurchase.PurchaseFacilitator) obj;
 
-      boolean result = true;
-      result = result && authority_ == other.authority_;
-      result = result && getAgent()
-          .equals(other.getAgent());
-      result = result && getDevice()
-          .equals(other.getDevice());
-      result = result && (hasSignature() == other.hasSignature());
+      if (authority_ != other.authority_) return false;
+      if (!getAgent()
+          .equals(other.getAgent())) return false;
+      if (!getDevice()
+          .equals(other.getDevice())) return false;
+      if (hasSignature() != other.hasSignature()) return false;
       if (hasSignature()) {
-        result = result && getSignature()
-            .equals(other.getSignature());
+        if (!getSignature()
+            .equals(other.getSignature())) return false;
       }
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -10014,35 +9995,35 @@ public final class CommercialPurchase {
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -10347,7 +10328,7 @@ public final class CommercialPurchase {
         return this;
       }
 
-      private io.opencannabis.schema.commerce.CommercialPurchase.PurchaseSignature signature_ = null;
+      private io.opencannabis.schema.commerce.CommercialPurchase.PurchaseSignature signature_;
       private com.google.protobuf.SingleFieldBuilderV3<
           io.opencannabis.schema.commerce.CommercialPurchase.PurchaseSignature, io.opencannabis.schema.commerce.CommercialPurchase.PurchaseSignature.Builder, io.opencannabis.schema.commerce.CommercialPurchase.PurchaseSignatureOrBuilder> signatureBuilder_;
       /**
@@ -10502,7 +10483,7 @@ public final class CommercialPurchase {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -10625,7 +10606,7 @@ public final class CommercialPurchase {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -10742,11 +10723,10 @@ public final class CommercialPurchase {
       }
       io.opencannabis.schema.commerce.CommercialPurchase.PaymentKey other = (io.opencannabis.schema.commerce.CommercialPurchase.PaymentKey) obj;
 
-      boolean result = true;
-      result = result && getUuid()
-          .equals(other.getUuid());
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!getUuid()
+          .equals(other.getUuid())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -10930,35 +10910,35 @@ public final class CommercialPurchase {
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -11096,7 +11076,7 @@ public final class CommercialPurchase {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -11373,8 +11353,6 @@ public final class CommercialPurchase {
     private Payment() {
       method_ = 0;
       status_ = 0;
-      amount_ = 0D;
-      full_ = false;
     }
 
     @java.lang.Override
@@ -11507,7 +11485,7 @@ public final class CommercialPurchase {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -11662,7 +11640,7 @@ public final class CommercialPurchase {
                 break;
               }
               default: {
-                if (!parseUnknownFieldProto3(
+                if (!parseUnknownField(
                     input, unknownFields, extensionRegistry, tag)) {
                   done = true;
                 }
@@ -11811,19 +11789,18 @@ public final class CommercialPurchase {
         }
         io.opencannabis.schema.commerce.CommercialPurchase.Payment.CashPayment other = (io.opencannabis.schema.commerce.CommercialPurchase.Payment.CashPayment) obj;
 
-        boolean result = true;
-        result = result && (hasTendered() == other.hasTendered());
+        if (hasTendered() != other.hasTendered()) return false;
         if (hasTendered()) {
-          result = result && getTendered()
-              .equals(other.getTendered());
+          if (!getTendered()
+              .equals(other.getTendered())) return false;
         }
-        result = result && (hasChange() == other.hasChange());
+        if (hasChange() != other.hasChange()) return false;
         if (hasChange()) {
-          result = result && getChange()
-              .equals(other.getChange());
+          if (!getChange()
+              .equals(other.getChange())) return false;
         }
-        result = result && unknownFields.equals(other.unknownFields);
-        return result;
+        if (!unknownFields.equals(other.unknownFields)) return false;
+        return true;
       }
 
       @java.lang.Override
@@ -12032,35 +12009,35 @@ public final class CommercialPurchase {
 
         @java.lang.Override
         public Builder clone() {
-          return (Builder) super.clone();
+          return super.clone();
         }
         @java.lang.Override
         public Builder setField(
             com.google.protobuf.Descriptors.FieldDescriptor field,
             java.lang.Object value) {
-          return (Builder) super.setField(field, value);
+          return super.setField(field, value);
         }
         @java.lang.Override
         public Builder clearField(
             com.google.protobuf.Descriptors.FieldDescriptor field) {
-          return (Builder) super.clearField(field);
+          return super.clearField(field);
         }
         @java.lang.Override
         public Builder clearOneof(
             com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-          return (Builder) super.clearOneof(oneof);
+          return super.clearOneof(oneof);
         }
         @java.lang.Override
         public Builder setRepeatedField(
             com.google.protobuf.Descriptors.FieldDescriptor field,
             int index, java.lang.Object value) {
-          return (Builder) super.setRepeatedField(field, index, value);
+          return super.setRepeatedField(field, index, value);
         }
         @java.lang.Override
         public Builder addRepeatedField(
             com.google.protobuf.Descriptors.FieldDescriptor field,
             java.lang.Object value) {
-          return (Builder) super.addRepeatedField(field, value);
+          return super.addRepeatedField(field, value);
         }
         @java.lang.Override
         public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -12109,7 +12086,7 @@ public final class CommercialPurchase {
           return this;
         }
 
-        private io.opencannabis.schema.currency.CommerceCurrency.CurrencyValue tendered_ = null;
+        private io.opencannabis.schema.currency.CommerceCurrency.CurrencyValue tendered_;
         private com.google.protobuf.SingleFieldBuilderV3<
             io.opencannabis.schema.currency.CommerceCurrency.CurrencyValue, io.opencannabis.schema.currency.CommerceCurrency.CurrencyValue.Builder, io.opencannabis.schema.currency.CommerceCurrency.CurrencyValueOrBuilder> tenderedBuilder_;
         /**
@@ -12262,7 +12239,7 @@ public final class CommercialPurchase {
           return tenderedBuilder_;
         }
 
-        private io.opencannabis.schema.currency.CommerceCurrency.CurrencyValue change_ = null;
+        private io.opencannabis.schema.currency.CommerceCurrency.CurrencyValue change_;
         private com.google.protobuf.SingleFieldBuilderV3<
             io.opencannabis.schema.currency.CommerceCurrency.CurrencyValue, io.opencannabis.schema.currency.CommerceCurrency.CurrencyValue.Builder, io.opencannabis.schema.currency.CommerceCurrency.CurrencyValueOrBuilder> changeBuilder_;
         /**
@@ -12417,7 +12394,7 @@ public final class CommercialPurchase {
         @java.lang.Override
         public final Builder setUnknownFields(
             final com.google.protobuf.UnknownFieldSet unknownFields) {
-          return super.setUnknownFieldsProto3(unknownFields);
+          return super.setUnknownFields(unknownFields);
         }
 
         @java.lang.Override
@@ -12573,7 +12550,6 @@ public final class CommercialPurchase {
         routingNumber_ = "";
         accountNumber_ = "";
         institution_ = "";
-        certified_ = false;
       }
 
       @java.lang.Override
@@ -12630,7 +12606,7 @@ public final class CommercialPurchase {
                 break;
               }
               default: {
-                if (!parseUnknownFieldProto3(
+                if (!parseUnknownField(
                     input, unknownFields, extensionRegistry, tag)) {
                   done = true;
                 }
@@ -12911,19 +12887,18 @@ public final class CommercialPurchase {
         }
         io.opencannabis.schema.commerce.CommercialPurchase.Payment.CheckPayment other = (io.opencannabis.schema.commerce.CommercialPurchase.Payment.CheckPayment) obj;
 
-        boolean result = true;
-        result = result && getCheckNumber()
-            .equals(other.getCheckNumber());
-        result = result && getRoutingNumber()
-            .equals(other.getRoutingNumber());
-        result = result && getAccountNumber()
-            .equals(other.getAccountNumber());
-        result = result && getInstitution()
-            .equals(other.getInstitution());
-        result = result && (getCertified()
-            == other.getCertified());
-        result = result && unknownFields.equals(other.unknownFields);
-        return result;
+        if (!getCheckNumber()
+            .equals(other.getCheckNumber())) return false;
+        if (!getRoutingNumber()
+            .equals(other.getRoutingNumber())) return false;
+        if (!getAccountNumber()
+            .equals(other.getAccountNumber())) return false;
+        if (!getInstitution()
+            .equals(other.getInstitution())) return false;
+        if (getCertified()
+            != other.getCertified()) return false;
+        if (!unknownFields.equals(other.unknownFields)) return false;
+        return true;
       }
 
       @java.lang.Override
@@ -13128,35 +13103,35 @@ public final class CommercialPurchase {
 
         @java.lang.Override
         public Builder clone() {
-          return (Builder) super.clone();
+          return super.clone();
         }
         @java.lang.Override
         public Builder setField(
             com.google.protobuf.Descriptors.FieldDescriptor field,
             java.lang.Object value) {
-          return (Builder) super.setField(field, value);
+          return super.setField(field, value);
         }
         @java.lang.Override
         public Builder clearField(
             com.google.protobuf.Descriptors.FieldDescriptor field) {
-          return (Builder) super.clearField(field);
+          return super.clearField(field);
         }
         @java.lang.Override
         public Builder clearOneof(
             com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-          return (Builder) super.clearOneof(oneof);
+          return super.clearOneof(oneof);
         }
         @java.lang.Override
         public Builder setRepeatedField(
             com.google.protobuf.Descriptors.FieldDescriptor field,
             int index, java.lang.Object value) {
-          return (Builder) super.setRepeatedField(field, index, value);
+          return super.setRepeatedField(field, index, value);
         }
         @java.lang.Override
         public Builder addRepeatedField(
             com.google.protobuf.Descriptors.FieldDescriptor field,
             java.lang.Object value) {
-          return (Builder) super.addRepeatedField(field, value);
+          return super.addRepeatedField(field, value);
         }
         @java.lang.Override
         public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -13614,7 +13589,7 @@ public final class CommercialPurchase {
         @java.lang.Override
         public final Builder setUnknownFields(
             final com.google.protobuf.UnknownFieldSet unknownFields) {
-          return super.setUnknownFieldsProto3(unknownFields);
+          return super.setUnknownFields(unknownFields);
         }
 
         @java.lang.Override
@@ -13736,7 +13711,7 @@ public final class CommercialPurchase {
                 break;
               }
               default: {
-                if (!parseUnknownFieldProto3(
+                if (!parseUnknownField(
                     input, unknownFields, extensionRegistry, tag)) {
                   done = true;
                 }
@@ -13837,10 +13812,9 @@ public final class CommercialPurchase {
         }
         io.opencannabis.schema.commerce.CommercialPurchase.Payment.CardPayment other = (io.opencannabis.schema.commerce.CommercialPurchase.Payment.CardPayment) obj;
 
-        boolean result = true;
-        result = result && cardType_ == other.cardType_;
-        result = result && unknownFields.equals(other.unknownFields);
-        return result;
+        if (cardType_ != other.cardType_) return false;
+        if (!unknownFields.equals(other.unknownFields)) return false;
+        return true;
       }
 
       @java.lang.Override
@@ -14024,35 +13998,35 @@ public final class CommercialPurchase {
 
         @java.lang.Override
         public Builder clone() {
-          return (Builder) super.clone();
+          return super.clone();
         }
         @java.lang.Override
         public Builder setField(
             com.google.protobuf.Descriptors.FieldDescriptor field,
             java.lang.Object value) {
-          return (Builder) super.setField(field, value);
+          return super.setField(field, value);
         }
         @java.lang.Override
         public Builder clearField(
             com.google.protobuf.Descriptors.FieldDescriptor field) {
-          return (Builder) super.clearField(field);
+          return super.clearField(field);
         }
         @java.lang.Override
         public Builder clearOneof(
             com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-          return (Builder) super.clearOneof(oneof);
+          return super.clearOneof(oneof);
         }
         @java.lang.Override
         public Builder setRepeatedField(
             com.google.protobuf.Descriptors.FieldDescriptor field,
             int index, java.lang.Object value) {
-          return (Builder) super.setRepeatedField(field, index, value);
+          return super.setRepeatedField(field, index, value);
         }
         @java.lang.Override
         public Builder addRepeatedField(
             com.google.protobuf.Descriptors.FieldDescriptor field,
             java.lang.Object value) {
-          return (Builder) super.addRepeatedField(field, value);
+          return super.addRepeatedField(field, value);
         }
         @java.lang.Override
         public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -14165,7 +14139,7 @@ public final class CommercialPurchase {
         @java.lang.Override
         public final Builder setUnknownFields(
             final com.google.protobuf.UnknownFieldSet unknownFields) {
-          return super.setUnknownFieldsProto3(unknownFields);
+          return super.setUnknownFields(unknownFields);
         }
 
         @java.lang.Override
@@ -14338,7 +14312,7 @@ public final class CommercialPurchase {
                 break;
               }
               default: {
-                if (!parseUnknownFieldProto3(
+                if (!parseUnknownField(
                     input, unknownFields, extensionRegistry, tag)) {
                   done = true;
                 }
@@ -14551,15 +14525,14 @@ public final class CommercialPurchase {
         }
         io.opencannabis.schema.commerce.CommercialPurchase.Payment.BankPayment other = (io.opencannabis.schema.commerce.CommercialPurchase.Payment.BankPayment) obj;
 
-        boolean result = true;
-        result = result && getRoutingNumber()
-            .equals(other.getRoutingNumber());
-        result = result && getAccountNumber()
-            .equals(other.getAccountNumber());
-        result = result && getReference()
-            .equals(other.getReference());
-        result = result && unknownFields.equals(other.unknownFields);
-        return result;
+        if (!getRoutingNumber()
+            .equals(other.getRoutingNumber())) return false;
+        if (!getAccountNumber()
+            .equals(other.getAccountNumber())) return false;
+        if (!getReference()
+            .equals(other.getReference())) return false;
+        if (!unknownFields.equals(other.unknownFields)) return false;
+        return true;
       }
 
       @java.lang.Override
@@ -14753,35 +14726,35 @@ public final class CommercialPurchase {
 
         @java.lang.Override
         public Builder clone() {
-          return (Builder) super.clone();
+          return super.clone();
         }
         @java.lang.Override
         public Builder setField(
             com.google.protobuf.Descriptors.FieldDescriptor field,
             java.lang.Object value) {
-          return (Builder) super.setField(field, value);
+          return super.setField(field, value);
         }
         @java.lang.Override
         public Builder clearField(
             com.google.protobuf.Descriptors.FieldDescriptor field) {
-          return (Builder) super.clearField(field);
+          return super.clearField(field);
         }
         @java.lang.Override
         public Builder clearOneof(
             com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-          return (Builder) super.clearOneof(oneof);
+          return super.clearOneof(oneof);
         }
         @java.lang.Override
         public Builder setRepeatedField(
             com.google.protobuf.Descriptors.FieldDescriptor field,
             int index, java.lang.Object value) {
-          return (Builder) super.setRepeatedField(field, index, value);
+          return super.setRepeatedField(field, index, value);
         }
         @java.lang.Override
         public Builder addRepeatedField(
             com.google.protobuf.Descriptors.FieldDescriptor field,
             java.lang.Object value) {
-          return (Builder) super.addRepeatedField(field, value);
+          return super.addRepeatedField(field, value);
         }
         @java.lang.Override
         public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -15105,7 +15078,7 @@ public final class CommercialPurchase {
         @java.lang.Override
         public final Builder setUnknownFields(
             final com.google.protobuf.UnknownFieldSet unknownFields) {
-          return super.setUnknownFieldsProto3(unknownFields);
+          return super.setUnknownFields(unknownFields);
         }
 
         @java.lang.Override
@@ -15277,7 +15250,7 @@ public final class CommercialPurchase {
                 break;
               }
               default: {
-                if (!parseUnknownFieldProto3(
+                if (!parseUnknownField(
                     input, unknownFields, extensionRegistry, tag)) {
                   done = true;
                 }
@@ -15474,14 +15447,13 @@ public final class CommercialPurchase {
         }
         io.opencannabis.schema.commerce.CommercialPurchase.Payment.DigitalPayment other = (io.opencannabis.schema.commerce.CommercialPurchase.Payment.DigitalPayment) obj;
 
-        boolean result = true;
-        result = result && network_ == other.network_;
-        result = result && getUsername()
-            .equals(other.getUsername());
-        result = result && getReference()
-            .equals(other.getReference());
-        result = result && unknownFields.equals(other.unknownFields);
-        return result;
+        if (network_ != other.network_) return false;
+        if (!getUsername()
+            .equals(other.getUsername())) return false;
+        if (!getReference()
+            .equals(other.getReference())) return false;
+        if (!unknownFields.equals(other.unknownFields)) return false;
+        return true;
       }
 
       @java.lang.Override
@@ -15675,35 +15647,35 @@ public final class CommercialPurchase {
 
         @java.lang.Override
         public Builder clone() {
-          return (Builder) super.clone();
+          return super.clone();
         }
         @java.lang.Override
         public Builder setField(
             com.google.protobuf.Descriptors.FieldDescriptor field,
             java.lang.Object value) {
-          return (Builder) super.setField(field, value);
+          return super.setField(field, value);
         }
         @java.lang.Override
         public Builder clearField(
             com.google.protobuf.Descriptors.FieldDescriptor field) {
-          return (Builder) super.clearField(field);
+          return super.clearField(field);
         }
         @java.lang.Override
         public Builder clearOneof(
             com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-          return (Builder) super.clearOneof(oneof);
+          return super.clearOneof(oneof);
         }
         @java.lang.Override
         public Builder setRepeatedField(
             com.google.protobuf.Descriptors.FieldDescriptor field,
             int index, java.lang.Object value) {
-          return (Builder) super.setRepeatedField(field, index, value);
+          return super.setRepeatedField(field, index, value);
         }
         @java.lang.Override
         public Builder addRepeatedField(
             com.google.protobuf.Descriptors.FieldDescriptor field,
             java.lang.Object value) {
-          return (Builder) super.addRepeatedField(field, value);
+          return super.addRepeatedField(field, value);
         }
         @java.lang.Override
         public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -16002,7 +15974,7 @@ public final class CommercialPurchase {
         @java.lang.Override
         public final Builder setUnknownFields(
             final com.google.protobuf.UnknownFieldSet unknownFields) {
-          return super.setUnknownFieldsProto3(unknownFields);
+          return super.setUnknownFields(unknownFields);
         }
 
         @java.lang.Override
@@ -16503,49 +16475,45 @@ public final class CommercialPurchase {
       }
       io.opencannabis.schema.commerce.CommercialPurchase.Payment other = (io.opencannabis.schema.commerce.CommercialPurchase.Payment) obj;
 
-      boolean result = true;
-      result = result && (hasKey() == other.hasKey());
+      if (hasKey() != other.hasKey()) return false;
       if (hasKey()) {
-        result = result && getKey()
-            .equals(other.getKey());
+        if (!getKey()
+            .equals(other.getKey())) return false;
       }
-      result = result && method_ == other.method_;
-      result = result && status_ == other.status_;
-      result = result && (
-          java.lang.Double.doubleToLongBits(getAmount())
-          == java.lang.Double.doubleToLongBits(
-              other.getAmount()));
-      result = result && (getFull()
-          == other.getFull());
-      result = result && getSpecCase().equals(
-          other.getSpecCase());
-      if (!result) return false;
+      if (method_ != other.method_) return false;
+      if (status_ != other.status_) return false;
+      if (java.lang.Double.doubleToLongBits(getAmount())
+          != java.lang.Double.doubleToLongBits(
+              other.getAmount())) return false;
+      if (getFull()
+          != other.getFull()) return false;
+      if (!getSpecCase().equals(other.getSpecCase())) return false;
       switch (specCase_) {
         case 10:
-          result = result && getCash()
-              .equals(other.getCash());
+          if (!getCash()
+              .equals(other.getCash())) return false;
           break;
         case 11:
-          result = result && getCheck()
-              .equals(other.getCheck());
+          if (!getCheck()
+              .equals(other.getCheck())) return false;
           break;
         case 12:
-          result = result && getCard()
-              .equals(other.getCard());
+          if (!getCard()
+              .equals(other.getCard())) return false;
           break;
         case 13:
-          result = result && getBank()
-              .equals(other.getBank());
+          if (!getBank()
+              .equals(other.getBank())) return false;
           break;
         case 14:
-          result = result && getDigital()
-              .equals(other.getDigital());
+          if (!getDigital()
+              .equals(other.getDigital())) return false;
           break;
         case 0:
         default:
       }
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -16823,35 +16791,35 @@ public final class CommercialPurchase {
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -16949,7 +16917,7 @@ public final class CommercialPurchase {
       }
 
 
-      private io.opencannabis.schema.commerce.CommercialPurchase.PaymentKey key_ = null;
+      private io.opencannabis.schema.commerce.CommercialPurchase.PaymentKey key_;
       private com.google.protobuf.SingleFieldBuilderV3<
           io.opencannabis.schema.commerce.CommercialPurchase.PaymentKey, io.opencannabis.schema.commerce.CommercialPurchase.PaymentKey.Builder, io.opencannabis.schema.commerce.CommercialPurchase.PaymentKeyOrBuilder> keyBuilder_;
       /**
@@ -18170,7 +18138,7 @@ public final class CommercialPurchase {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -18305,89 +18273,84 @@ public final class CommercialPurchase {
   static {
     java.lang.String[] descriptorData = {
       "\n\027commerce/Purchase.proto\022\025opencannabis." +
-      "commerce\032\024core/Datamodel.proto\032\033partner/" +
-      "PartnerDevice.proto\032\026accounting/Taxes.pr" +
-      "oto\032\023commerce/Item.proto\032\027commerce/Curre" +
-      "ncy.proto\032\030commerce/Discounts.proto\032\037com" +
-      "merce/payments/Payment.proto\032\021identity/I" +
-      "D.proto\032\026identity/UserKey.proto\032\033identit" +
-      "y/pass/PassKey.proto\032\034identity/Membershi" +
-      "pKey.proto\032 inventory/InventoryProduct.p" +
-      "roto\032\026crypto/Signature.proto\032\034crypto/pri" +
-      "mitives/Keys.proto\032!crypto/primitives/In" +
-      "tegrity.proto\032\026temporal/Instant.proto\"\315\001" +
-      "\n\020PurchaseLogEntry\0225\n\006status\030\001 \001(\0162%.ope" +
-      "ncannabis.commerce.PurchaseStatus\0223\n\005eve" +
-      "nt\030\002 \001(\0162$.opencannabis.commerce.Purchas" +
-      "eEvent\022/\n\007instant\030\003 \001(\0132\036.opencannabis.t" +
-      "emporal.Instant\022\013\n\003sku\030\004 \001(\t\022\017\n\007message\030" +
-      "\005 \001(\t\"\355\001\n\rBillOfCharges\0221\n\006status\030\001 \001(\0162" +
-      "!.opencannabis.commerce.BillStatus\022$\n\003ta" +
-      "x\030\002 \003(\0132\027.opencannabis.taxes.Tax\0221\n\010disc" +
-      "ount\030\003 \003(\0132\037.opencannabis.commerce.Disco" +
-      "unt\022\r\n\005price\030\004 \001(\001\022\r\n\005taxes\030\005 \001(\001\022\021\n\tdis" +
-      "counts\030\006 \001(\001\022\020\n\010subtotal\030\007 \001(\001\022\r\n\005total\030" +
-      "\010 \001(\001\"\253\001\n\nTicketItem\0221\n\003key\030\001 \001(\0132$.open" +
-      "cannabis.inventory.InventoryKey\022\013\n\003sku\030\002" +
-      " \001(\t\022)\n\004item\030\003 \001(\0132\033.opencannabis.commer" +
-      "ce.Item\0222\n\004line\030\004 \001(\0132$.opencannabis.com" +
-      "merce.BillOfCharges\"\221\002\n\022PurchaseTimestam" +
-      "ps\0223\n\013established\030\001 \001(\0132\036.opencannabis.t" +
-      "emporal.Instant\022/\n\007created\030\002 \001(\0132\036.openc" +
-      "annabis.temporal.Instant\0220\n\010modified\030\003 \001" +
-      "(\0132\036.opencannabis.temporal.Instant\0220\n\010ex" +
-      "ecuted\030\004 \001(\0132\036.opencannabis.temporal.Ins" +
-      "tant\0221\n\tfinalized\030\005 \001(\0132\036.opencannabis.t" +
-      "emporal.Instant\"#\n\013PurchaseKey\022\024\n\004uuid\030\001" +
-      " \001(\tB\006\302\265\003\002\010\002\"\211\001\n\021PurchaseSignature\022\r\n\005no" +
-      "nce\030\001 \001(\t\0223\n\013facilitator\030\002 \001(\0132\036.opencan" +
-      "nabis.crypto.Signature\0220\n\010customer\030\003 \001(\013" +
-      "2\036.opencannabis.crypto.Signature\"b\n\020Purc" +
-      "haseCustomer\022\021\n\tunique_id\030\001 \001(\t\022;\n\tsigna" +
-      "ture\030\002 \001(\0132(.opencannabis.commerce.Purch" +
-      "aseSignature\"\256\001\n\023PurchaseFacilitator\022;\n\t" +
-      "authority\030\001 \001(\0162(.opencannabis.commerce." +
-      "PurchaseAuthority\022\r\n\005agent\030\002 \001(\t\022\016\n\006devi" +
-      "ce\030\003 \001(\t\022;\n\tsignature\030\004 \001(\0132(.opencannab" +
-      "is.commerce.PurchaseSignature\"\"\n\nPayment" +
-      "Key\022\024\n\004uuid\030\001 \001(\tB\006\302\265\003\002\010\002\"\224\010\n\007Payment\0226\n" +
-      "\003key\030\001 \001(\0132!.opencannabis.commerce.Payme" +
-      "ntKeyB\006\302\265\003\002\010\001\0224\n\006method\030\002 \001(\0162$.opencann" +
-      "abis.commerce.PaymentMethod\0224\n\006status\030\003 " +
-      "\001(\0162$.opencannabis.commerce.PaymentStatu" +
-      "s\022\016\n\006amount\030\004 \001(\001\022\014\n\004full\030\005 \001(\010\022:\n\004cash\030" +
-      "\n \001(\0132*.opencannabis.commerce.Payment.Ca" +
-      "shPaymentH\000\022<\n\005check\030\013 \001(\0132+.opencannabi" +
-      "s.commerce.Payment.CheckPaymentH\000\022:\n\004car" +
-      "d\030\014 \001(\0132*.opencannabis.commerce.Payment." +
-      "CardPaymentH\000\022:\n\004bank\030\r \001(\0132*.opencannab" +
-      "is.commerce.Payment.BankPaymentH\000\022@\n\007dig" +
-      "ital\030\016 \001(\0132-.opencannabis.commerce.Payme" +
-      "nt.DigitalPaymentH\000\032{\n\013CashPayment\0226\n\010te" +
-      "ndered\030\001 \001(\0132$.opencannabis.commerce.Cur" +
-      "rencyValue\0224\n\006change\030\002 \001(\0132$.opencannabi" +
-      "s.commerce.CurrencyValue\032|\n\014CheckPayment" +
-      "\022\024\n\014check_number\030\001 \001(\t\022\026\n\016routing_number" +
-      "\030\002 \001(\t\022\026\n\016account_number\030\003 \001(\t\022\023\n\013instit" +
-      "ution\030\004 \001(\t\022\021\n\tcertified\030\005 \001(\010\032H\n\013CardPa" +
-      "yment\0229\n\tcard_type\030\001 \001(\0162&.opencannabis." +
-      "commerce.PaymentCardType\032P\n\013BankPayment\022" +
-      "\026\n\016routing_number\030\001 \001(\t\022\026\n\016account_numbe" +
-      "r\030\002 \001(\t\022\021\n\treference\030\003 \001(\t\032t\n\016DigitalPay" +
-      "ment\022=\n\007network\030\001 \001(\0162,.opencannabis.com" +
-      "merce.DigitalPaymentNetwork\022\020\n\010username\030" +
-      "\002 \001(\t\022\021\n\treference\030\003 \001(\tB\006\n\004spec*\\\n\016Purc" +
-      "haseStatus\022\t\n\005FRESH\020\000\022\010\n\004OPEN\020\001\022\n\n\006CLOSE" +
-      "D\020\002\022\n\n\006VOIDED\020\003\022\r\n\tFINALIZED\020\004\022\016\n\nRECONC" +
-      "ILED\020\005*=\n\021PurchaseAuthority\022\014\n\010STANDARD\020" +
-      "\000\022\013\n\007MEDICAL\020\001\022\r\n\tADULT_USE\020\002*\312\001\n\rPurcha" +
-      "seEvent\022\n\n\006STATUS\020\000\022\010\n\004SAVE\020\001\022\010\n\004LOAD\020\002\022" +
-      "\016\n\nITEM_ADDED\020\n\022\020\n\014ITEM_REMOVED\020\013\022\031\n\025ITE" +
-      "M_QUANTITY_CHANGED\020\014\022\027\n\023ITEM_DISCOUNT_AD" +
-      "DED\020\r\022\031\n\025ITEM_DISCOUNT_REMOVED\020\016\022\021\n\rPURC" +
-      "HASE_VOID\020\024\022\025\n\021PURCHASE_FINALIZE\020\025B?\n\037io" +
-      ".opencannabis.schema.commerceB\022Commercia" +
-      "lPurchaseH\001P\000\242\002\003OCSb\006proto3"
+      "commerce\032\024core/Datamodel.proto\032\026accounti" +
+      "ng/Taxes.proto\032\023commerce/Item.proto\032\027com" +
+      "merce/Currency.proto\032\030commerce/Discounts" +
+      ".proto\032\037commerce/payments/Payment.proto\032" +
+      " inventory/InventoryProduct.proto\032\026crypt" +
+      "o/Signature.proto\032\026temporal/Instant.prot" +
+      "o\"\315\001\n\020PurchaseLogEntry\0225\n\006status\030\001 \001(\0162%" +
+      ".opencannabis.commerce.PurchaseStatus\0223\n" +
+      "\005event\030\002 \001(\0162$.opencannabis.commerce.Pur" +
+      "chaseEvent\022/\n\007instant\030\003 \001(\0132\036.opencannab" +
+      "is.temporal.Instant\022\013\n\003sku\030\004 \001(\t\022\017\n\007mess" +
+      "age\030\005 \001(\t\"\355\001\n\rBillOfCharges\0221\n\006status\030\001 " +
+      "\001(\0162!.opencannabis.commerce.BillStatus\022$" +
+      "\n\003tax\030\002 \003(\0132\027.opencannabis.taxes.Tax\0221\n\010" +
+      "discount\030\003 \003(\0132\037.opencannabis.commerce.D" +
+      "iscount\022\r\n\005price\030\004 \001(\001\022\r\n\005taxes\030\005 \001(\001\022\021\n" +
+      "\tdiscounts\030\006 \001(\001\022\020\n\010subtotal\030\007 \001(\001\022\r\n\005to" +
+      "tal\030\010 \001(\001\"\253\001\n\nTicketItem\0221\n\003key\030\001 \001(\0132$." +
+      "opencannabis.inventory.InventoryKey\022\013\n\003s" +
+      "ku\030\002 \001(\t\022)\n\004item\030\003 \001(\0132\033.opencannabis.co" +
+      "mmerce.Item\0222\n\004line\030\004 \001(\0132$.opencannabis" +
+      ".commerce.BillOfCharges\"\221\002\n\022PurchaseTime" +
+      "stamps\0223\n\013established\030\001 \001(\0132\036.opencannab" +
+      "is.temporal.Instant\022/\n\007created\030\002 \001(\0132\036.o" +
+      "pencannabis.temporal.Instant\0220\n\010modified" +
+      "\030\003 \001(\0132\036.opencannabis.temporal.Instant\0220" +
+      "\n\010executed\030\004 \001(\0132\036.opencannabis.temporal" +
+      ".Instant\0221\n\tfinalized\030\005 \001(\0132\036.opencannab" +
+      "is.temporal.Instant\"#\n\013PurchaseKey\022\024\n\004uu" +
+      "id\030\001 \001(\tB\006\302\265\003\002\010\002\"\211\001\n\021PurchaseSignature\022\r" +
+      "\n\005nonce\030\001 \001(\t\0223\n\013facilitator\030\002 \001(\0132\036.ope" +
+      "ncannabis.crypto.Signature\0220\n\010customer\030\003" +
+      " \001(\0132\036.opencannabis.crypto.Signature\"b\n\020" +
+      "PurchaseCustomer\022\021\n\tunique_id\030\001 \001(\t\022;\n\ts" +
+      "ignature\030\002 \001(\0132(.opencannabis.commerce.P" +
+      "urchaseSignature\"\256\001\n\023PurchaseFacilitator" +
+      "\022;\n\tauthority\030\001 \001(\0162(.opencannabis.comme" +
+      "rce.PurchaseAuthority\022\r\n\005agent\030\002 \001(\t\022\016\n\006" +
+      "device\030\003 \001(\t\022;\n\tsignature\030\004 \001(\0132(.openca" +
+      "nnabis.commerce.PurchaseSignature\"\"\n\nPay" +
+      "mentKey\022\024\n\004uuid\030\001 \001(\tB\006\302\265\003\002\010\002\"\224\010\n\007Paymen" +
+      "t\0226\n\003key\030\001 \001(\0132!.opencannabis.commerce.P" +
+      "aymentKeyB\006\302\265\003\002\010\001\0224\n\006method\030\002 \001(\0162$.open" +
+      "cannabis.commerce.PaymentMethod\0224\n\006statu" +
+      "s\030\003 \001(\0162$.opencannabis.commerce.PaymentS" +
+      "tatus\022\016\n\006amount\030\004 \001(\001\022\014\n\004full\030\005 \001(\010\022:\n\004c" +
+      "ash\030\n \001(\0132*.opencannabis.commerce.Paymen" +
+      "t.CashPaymentH\000\022<\n\005check\030\013 \001(\0132+.opencan" +
+      "nabis.commerce.Payment.CheckPaymentH\000\022:\n" +
+      "\004card\030\014 \001(\0132*.opencannabis.commerce.Paym" +
+      "ent.CardPaymentH\000\022:\n\004bank\030\r \001(\0132*.openca" +
+      "nnabis.commerce.Payment.BankPaymentH\000\022@\n" +
+      "\007digital\030\016 \001(\0132-.opencannabis.commerce.P" +
+      "ayment.DigitalPaymentH\000\032{\n\013CashPayment\0226" +
+      "\n\010tendered\030\001 \001(\0132$.opencannabis.commerce" +
+      ".CurrencyValue\0224\n\006change\030\002 \001(\0132$.opencan" +
+      "nabis.commerce.CurrencyValue\032|\n\014CheckPay" +
+      "ment\022\024\n\014check_number\030\001 \001(\t\022\026\n\016routing_nu" +
+      "mber\030\002 \001(\t\022\026\n\016account_number\030\003 \001(\t\022\023\n\013in" +
+      "stitution\030\004 \001(\t\022\021\n\tcertified\030\005 \001(\010\032H\n\013Ca" +
+      "rdPayment\0229\n\tcard_type\030\001 \001(\0162&.opencanna" +
+      "bis.commerce.PaymentCardType\032P\n\013BankPaym" +
+      "ent\022\026\n\016routing_number\030\001 \001(\t\022\026\n\016account_n" +
+      "umber\030\002 \001(\t\022\021\n\treference\030\003 \001(\t\032t\n\016Digita" +
+      "lPayment\022=\n\007network\030\001 \001(\0162,.opencannabis" +
+      ".commerce.DigitalPaymentNetwork\022\020\n\010usern" +
+      "ame\030\002 \001(\t\022\021\n\treference\030\003 \001(\tB\006\n\004spec*\\\n\016" +
+      "PurchaseStatus\022\t\n\005FRESH\020\000\022\010\n\004OPEN\020\001\022\n\n\006C" +
+      "LOSED\020\002\022\n\n\006VOIDED\020\003\022\r\n\tFINALIZED\020\004\022\016\n\nRE" +
+      "CONCILED\020\005*=\n\021PurchaseAuthority\022\014\n\010STAND" +
+      "ARD\020\000\022\013\n\007MEDICAL\020\001\022\r\n\tADULT_USE\020\002*\312\001\n\rPu" +
+      "rchaseEvent\022\n\n\006STATUS\020\000\022\010\n\004SAVE\020\001\022\010\n\004LOA" +
+      "D\020\002\022\016\n\nITEM_ADDED\020\n\022\020\n\014ITEM_REMOVED\020\013\022\031\n" +
+      "\025ITEM_QUANTITY_CHANGED\020\014\022\027\n\023ITEM_DISCOUN" +
+      "T_ADDED\020\r\022\031\n\025ITEM_DISCOUNT_REMOVED\020\016\022\021\n\r" +
+      "PURCHASE_VOID\020\024\022\025\n\021PURCHASE_FINALIZE\020\025B?" +
+      "\n\037io.opencannabis.schema.commerceB\022Comme" +
+      "rcialPurchaseH\001P\000\242\002\003OCSb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -18401,20 +18364,13 @@ public final class CommercialPurchase {
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
           core.Datamodel.getDescriptor(),
-          io.bloombox.schema.partner.PartnerDevices.getDescriptor(),
           io.opencannabis.schema.accounting.AccountingTaxes.getDescriptor(),
           io.opencannabis.schema.commerce.OrderItem.getDescriptor(),
           io.opencannabis.schema.currency.CommerceCurrency.getDescriptor(),
           io.opencannabis.schema.accounting.CommercialDiscounts.getDescriptor(),
           io.opencannabis.schema.commerce.Payments.getDescriptor(),
-          io.bloombox.schema.identity.IdentityID.getDescriptor(),
-          io.bloombox.schema.identity.AppUserKey.getDescriptor(),
-          io.bloombox.schema.pass.PassIDKey.getDescriptor(),
-          io.bloombox.schema.identity.AppMemberKey.getDescriptor(),
           io.opencannabis.schema.inventory.InventoryProductOuterClass.getDescriptor(),
           io.opencannabis.schema.crypto.SignatureOuterClass.getDescriptor(),
-          io.opencannabis.schema.crypto.primitives.Keys.getDescriptor(),
-          io.opencannabis.schema.crypto.primitives.integrity.Integrity.getDescriptor(),
           io.opencannabis.schema.temporal.TemporalInstant.getDescriptor(),
         }, assigner);
     internal_static_opencannabis_commerce_PurchaseLogEntry_descriptor =
@@ -18513,20 +18469,13 @@ public final class CommercialPurchase {
     com.google.protobuf.Descriptors.FileDescriptor
         .internalUpdateFileDescriptor(descriptor, registry);
     core.Datamodel.getDescriptor();
-    io.bloombox.schema.partner.PartnerDevices.getDescriptor();
     io.opencannabis.schema.accounting.AccountingTaxes.getDescriptor();
     io.opencannabis.schema.commerce.OrderItem.getDescriptor();
     io.opencannabis.schema.currency.CommerceCurrency.getDescriptor();
     io.opencannabis.schema.accounting.CommercialDiscounts.getDescriptor();
     io.opencannabis.schema.commerce.Payments.getDescriptor();
-    io.bloombox.schema.identity.IdentityID.getDescriptor();
-    io.bloombox.schema.identity.AppUserKey.getDescriptor();
-    io.bloombox.schema.pass.PassIDKey.getDescriptor();
-    io.bloombox.schema.identity.AppMemberKey.getDescriptor();
     io.opencannabis.schema.inventory.InventoryProductOuterClass.getDescriptor();
     io.opencannabis.schema.crypto.SignatureOuterClass.getDescriptor();
-    io.opencannabis.schema.crypto.primitives.Keys.getDescriptor();
-    io.opencannabis.schema.crypto.primitives.integrity.Integrity.getDescriptor();
     io.opencannabis.schema.temporal.TemporalInstant.getDescriptor();
   }
 

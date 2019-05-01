@@ -1,5 +1,5 @@
 /*
- * Copyright 2018, Momentum Ideas, Co. All rights reserved.
+ * Copyright 2019, Momentum Ideas, Co. All rights reserved.
  *
  * Source and object computer code contained herein is the private intellectual
  * property of Momentum Ideas Co., a Delaware Corporation. Use of this
@@ -345,7 +345,7 @@ public final class PartnerDevices {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -502,16 +502,15 @@ public final class PartnerDevices {
       }
       io.bloombox.schema.partner.PartnerDevices.PartnerDeviceKey other = (io.bloombox.schema.partner.PartnerDevices.PartnerDeviceKey) obj;
 
-      boolean result = true;
-      result = result && (hasLocation() == other.hasLocation());
+      if (hasLocation() != other.hasLocation()) return false;
       if (hasLocation()) {
-        result = result && getLocation()
-            .equals(other.getLocation());
+        if (!getLocation()
+            .equals(other.getLocation())) return false;
       }
-      result = result && getUuid()
-          .equals(other.getUuid());
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!getUuid()
+          .equals(other.getUuid())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -710,35 +709,35 @@ public final class PartnerDevices {
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -788,7 +787,7 @@ public final class PartnerDevices {
         return this;
       }
 
-      private io.bloombox.schema.partner.LocationAccountKey.LocationKey location_ = null;
+      private io.bloombox.schema.partner.LocationAccountKey.LocationKey location_;
       private com.google.protobuf.SingleFieldBuilderV3<
           io.bloombox.schema.partner.LocationAccountKey.LocationKey, io.bloombox.schema.partner.LocationAccountKey.LocationKey.Builder, io.bloombox.schema.partner.LocationAccountKey.LocationKeyOrBuilder> locationBuilder_;
       /**
@@ -1032,7 +1031,7 @@ public final class PartnerDevices {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -1369,7 +1368,7 @@ public final class PartnerDevices {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -1718,37 +1717,36 @@ public final class PartnerDevices {
       }
       io.bloombox.schema.partner.PartnerDevices.PartnerDevice other = (io.bloombox.schema.partner.PartnerDevices.PartnerDevice) obj;
 
-      boolean result = true;
-      result = result && getUuid()
-          .equals(other.getUuid());
-      result = result && (hasLocation() == other.hasLocation());
+      if (!getUuid()
+          .equals(other.getUuid())) return false;
+      if (hasLocation() != other.hasLocation()) return false;
       if (hasLocation()) {
-        result = result && getLocation()
-            .equals(other.getLocation());
+        if (!getLocation()
+            .equals(other.getLocation())) return false;
       }
-      result = result && type_ == other.type_;
-      result = result && (hasFlags() == other.hasFlags());
+      if (type_ != other.type_) return false;
+      if (hasFlags() != other.hasFlags()) return false;
       if (hasFlags()) {
-        result = result && getFlags()
-            .equals(other.getFlags());
+        if (!getFlags()
+            .equals(other.getFlags())) return false;
       }
-      result = result && (hasDevice() == other.hasDevice());
+      if (hasDevice() != other.hasDevice()) return false;
       if (hasDevice()) {
-        result = result && getDevice()
-            .equals(other.getDevice());
+        if (!getDevice()
+            .equals(other.getDevice())) return false;
       }
-      result = result && (hasSeen() == other.hasSeen());
+      if (hasSeen() != other.hasSeen()) return false;
       if (hasSeen()) {
-        result = result && getSeen()
-            .equals(other.getSeen());
+        if (!getSeen()
+            .equals(other.getSeen())) return false;
       }
-      result = result && (hasRegistered() == other.hasRegistered());
+      if (hasRegistered() != other.hasRegistered()) return false;
       if (hasRegistered()) {
-        result = result && getRegistered()
-            .equals(other.getRegistered());
+        if (!getRegistered()
+            .equals(other.getRegistered())) return false;
       }
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -2012,35 +2010,35 @@ public final class PartnerDevices {
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -2194,7 +2192,7 @@ public final class PartnerDevices {
         return this;
       }
 
-      private io.bloombox.schema.partner.LocationAccountKey.LocationKey location_ = null;
+      private io.bloombox.schema.partner.LocationAccountKey.LocationKey location_;
       private com.google.protobuf.SingleFieldBuilderV3<
           io.bloombox.schema.partner.LocationAccountKey.LocationKey, io.bloombox.schema.partner.LocationAccountKey.LocationKey.Builder, io.bloombox.schema.partner.LocationAccountKey.LocationKeyOrBuilder> locationBuilder_;
       /**
@@ -2412,7 +2410,7 @@ public final class PartnerDevices {
         return this;
       }
 
-      private io.bloombox.schema.partner.PartnerDevices.PartnerDeviceFlags flags_ = null;
+      private io.bloombox.schema.partner.PartnerDevices.PartnerDeviceFlags flags_;
       private com.google.protobuf.SingleFieldBuilderV3<
           io.bloombox.schema.partner.PartnerDevices.PartnerDeviceFlags, io.bloombox.schema.partner.PartnerDevices.PartnerDeviceFlags.Builder, io.bloombox.schema.partner.PartnerDevices.PartnerDeviceFlagsOrBuilder> flagsBuilder_;
       /**
@@ -2565,7 +2563,7 @@ public final class PartnerDevices {
         return flagsBuilder_;
       }
 
-      private io.opencannabis.schema.device.Device device_ = null;
+      private io.opencannabis.schema.device.Device device_;
       private com.google.protobuf.SingleFieldBuilderV3<
           io.opencannabis.schema.device.Device, io.opencannabis.schema.device.Device.Builder, io.opencannabis.schema.device.DeviceOrBuilder> deviceBuilder_;
       /**
@@ -2718,7 +2716,7 @@ public final class PartnerDevices {
         return deviceBuilder_;
       }
 
-      private io.opencannabis.schema.temporal.TemporalInstant.Instant seen_ = null;
+      private io.opencannabis.schema.temporal.TemporalInstant.Instant seen_;
       private com.google.protobuf.SingleFieldBuilderV3<
           io.opencannabis.schema.temporal.TemporalInstant.Instant, io.opencannabis.schema.temporal.TemporalInstant.Instant.Builder, io.opencannabis.schema.temporal.TemporalInstant.InstantOrBuilder> seenBuilder_;
       /**
@@ -2871,7 +2869,7 @@ public final class PartnerDevices {
         return seenBuilder_;
       }
 
-      private io.opencannabis.schema.temporal.TemporalInstant.Instant registered_ = null;
+      private io.opencannabis.schema.temporal.TemporalInstant.Instant registered_;
       private com.google.protobuf.SingleFieldBuilderV3<
           io.opencannabis.schema.temporal.TemporalInstant.Instant, io.opencannabis.schema.temporal.TemporalInstant.Instant.Builder, io.opencannabis.schema.temporal.TemporalInstant.InstantOrBuilder> registeredBuilder_;
       /**
@@ -3026,7 +3024,7 @@ public final class PartnerDevices {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -3133,10 +3131,6 @@ public final class PartnerDevices {
       super(builder);
     }
     private PartnerDeviceFlags() {
-      active_ = false;
-      suspended_ = false;
-      beta_ = false;
-      sandbox_ = false;
     }
 
     @java.lang.Override
@@ -3184,7 +3178,7 @@ public final class PartnerDevices {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -3333,17 +3327,16 @@ public final class PartnerDevices {
       }
       io.bloombox.schema.partner.PartnerDevices.PartnerDeviceFlags other = (io.bloombox.schema.partner.PartnerDevices.PartnerDeviceFlags) obj;
 
-      boolean result = true;
-      result = result && (getActive()
-          == other.getActive());
-      result = result && (getSuspended()
-          == other.getSuspended());
-      result = result && (getBeta()
-          == other.getBeta());
-      result = result && (getSandbox()
-          == other.getSandbox());
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (getActive()
+          != other.getActive()) return false;
+      if (getSuspended()
+          != other.getSuspended()) return false;
+      if (getBeta()
+          != other.getBeta()) return false;
+      if (getSandbox()
+          != other.getSandbox()) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -3546,35 +3539,35 @@ public final class PartnerDevices {
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -3783,7 +3776,7 @@ public final class PartnerDevices {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override

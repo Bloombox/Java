@@ -1,12 +1,11 @@
 /*
- * Copyright 2018, Momentum Ideas, Co. All rights reserved.
+ * Copyright 2019, Momentum Ideas Co.
  *
- * Source and object computer code contained herein is the private intellectual
- * property of Momentum Ideas Co., a Delaware Corporation. Use of this
- * code in source form requires permission in writing before use or the
- * assembly, distribution, or publishing of derivative works, for commercial
- * purposes or any other purpose, from a duly authorized officer of Momentum
- * Ideas Co.
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *  http://www.apache.org/licenses/LICENSE-2.0
  *
  * Unless required by applicable law or agreed to in writing, software
  * distributed under the License is distributed on an "AS IS" BASIS,
@@ -26,7 +25,7 @@ public interface SaleDescriptorOrBuilder extends
 
   /**
    * <pre>
-   * sale metadata
+   * Sale metadata.
    * </pre>
    *
    * <code>.opencannabis.structs.pricing.SaleType type = 1;</code>
@@ -34,7 +33,7 @@ public interface SaleDescriptorOrBuilder extends
   int getTypeValue();
   /**
    * <pre>
-   * sale metadata
+   * Sale metadata.
    * </pre>
    *
    * <code>.opencannabis.structs.pricing.SaleType type = 1;</code>
@@ -42,66 +41,126 @@ public interface SaleDescriptorOrBuilder extends
   io.opencannabis.schema.product.struct.SaleType getType();
 
   /**
+   * <pre>
+   * Represents the date that the discount can be applied.
+   * </pre>
+   *
    * <code>.opencannabis.temporal.Instant effective = 2;</code>
    */
   boolean hasEffective();
   /**
+   * <pre>
+   * Represents the date that the discount can be applied.
+   * </pre>
+   *
    * <code>.opencannabis.temporal.Instant effective = 2;</code>
    */
   io.opencannabis.schema.temporal.TemporalInstant.Instant getEffective();
   /**
+   * <pre>
+   * Represents the date that the discount can be applied.
+   * </pre>
+   *
    * <code>.opencannabis.temporal.Instant effective = 2;</code>
    */
   io.opencannabis.schema.temporal.TemporalInstant.InstantOrBuilder getEffectiveOrBuilder();
 
   /**
+   * <pre>
+   * Represents the final date that the discount can be applied.
+   * </pre>
+   *
    * <code>.opencannabis.temporal.Instant expiration = 3;</code>
    */
   boolean hasExpiration();
   /**
+   * <pre>
+   * Represents the final date that the discount can be applied.
+   * </pre>
+   *
    * <code>.opencannabis.temporal.Instant expiration = 3;</code>
    */
   io.opencannabis.schema.temporal.TemporalInstant.Instant getExpiration();
   /**
+   * <pre>
+   * Represents the final date that the discount can be applied.
+   * </pre>
+   *
    * <code>.opencannabis.temporal.Instant expiration = 3;</code>
    */
   io.opencannabis.schema.temporal.TemporalInstant.InstantOrBuilder getExpirationOrBuilder();
 
   /**
+   * <pre>
+   * Represents the percentage value to be discounted.
+   * </pre>
+   *
    * <code>.opencannabis.structs.pricing.PercentageDiscount percentage_off = 4;</code>
    */
   boolean hasPercentageOff();
   /**
+   * <pre>
+   * Represents the percentage value to be discounted.
+   * </pre>
+   *
    * <code>.opencannabis.structs.pricing.PercentageDiscount percentage_off = 4;</code>
    */
   io.opencannabis.schema.product.struct.PercentageDiscount getPercentageOff();
   /**
+   * <pre>
+   * Represents the percentage value to be discounted.
+   * </pre>
+   *
    * <code>.opencannabis.structs.pricing.PercentageDiscount percentage_off = 4;</code>
    */
   io.opencannabis.schema.product.struct.PercentageDiscountOrBuilder getPercentageOffOrBuilder();
 
   /**
+   * <pre>
+   * Represents that the discount is buy one get one.
+   * </pre>
+   *
    * <code>.opencannabis.structs.pricing.BOGODiscount bogo = 5;</code>
    */
   boolean hasBogo();
   /**
+   * <pre>
+   * Represents that the discount is buy one get one.
+   * </pre>
+   *
    * <code>.opencannabis.structs.pricing.BOGODiscount bogo = 5;</code>
    */
   io.opencannabis.schema.product.struct.BOGODiscount getBogo();
   /**
+   * <pre>
+   * Represents that the discount is buy one get one.
+   * </pre>
+   *
    * <code>.opencannabis.structs.pricing.BOGODiscount bogo = 5;</code>
    */
   io.opencannabis.schema.product.struct.BOGODiscountOrBuilder getBogoOrBuilder();
 
   /**
+   * <pre>
+   * Represents that the discount is using accrued loyalty rewards.
+   * </pre>
+   *
    * <code>.opencannabis.structs.pricing.LoyaltyDiscount loyalty = 6;</code>
    */
   boolean hasLoyalty();
   /**
+   * <pre>
+   * Represents that the discount is using accrued loyalty rewards.
+   * </pre>
+   *
    * <code>.opencannabis.structs.pricing.LoyaltyDiscount loyalty = 6;</code>
    */
   io.opencannabis.schema.product.struct.LoyaltyDiscount getLoyalty();
   /**
+   * <pre>
+   * Represents that the discount is using accrued loyalty rewards.
+   * </pre>
+   *
    * <code>.opencannabis.structs.pricing.LoyaltyDiscount loyalty = 6;</code>
    */
   io.opencannabis.schema.product.struct.LoyaltyDiscountOrBuilder getLoyaltyOrBuilder();

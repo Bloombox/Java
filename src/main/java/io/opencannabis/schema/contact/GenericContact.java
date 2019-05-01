@@ -1,12 +1,11 @@
 /*
- * Copyright 2018, Momentum Ideas, Co. All rights reserved.
+ * Copyright 2019, Momentum Ideas Co.
  *
- * Source and object computer code contained herein is the private intellectual
- * property of Momentum Ideas Co., a Delaware Corporation. Use of this
- * code in source form requires permission in writing before use or the
- * assembly, distribution, or publishing of derivative works, for commercial
- * purposes or any other purpose, from a duly authorized officer of Momentum
- * Ideas Co.
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *  http://www.apache.org/licenses/LICENSE-2.0
  *
  * Unless required by applicable law or agreed to in writing, software
  * distributed under the License is distributed on an "AS IS" BASIS,
@@ -231,7 +230,7 @@ public final class GenericContact {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -460,29 +459,28 @@ public final class GenericContact {
       }
       io.opencannabis.schema.contact.GenericContact.ContactInfo other = (io.opencannabis.schema.contact.GenericContact.ContactInfo) obj;
 
-      boolean result = true;
-      result = result && (hasLocation() == other.hasLocation());
+      if (hasLocation() != other.hasLocation()) return false;
       if (hasLocation()) {
-        result = result && getLocation()
-            .equals(other.getLocation());
+        if (!getLocation()
+            .equals(other.getLocation())) return false;
       }
-      result = result && (hasPhone() == other.hasPhone());
+      if (hasPhone() != other.hasPhone()) return false;
       if (hasPhone()) {
-        result = result && getPhone()
-            .equals(other.getPhone());
+        if (!getPhone()
+            .equals(other.getPhone())) return false;
       }
-      result = result && (hasEmail() == other.hasEmail());
+      if (hasEmail() != other.hasEmail()) return false;
       if (hasEmail()) {
-        result = result && getEmail()
-            .equals(other.getEmail());
+        if (!getEmail()
+            .equals(other.getEmail())) return false;
       }
-      result = result && (hasWebsite() == other.hasWebsite());
+      if (hasWebsite() != other.hasWebsite()) return false;
       if (hasWebsite()) {
-        result = result && getWebsite()
-            .equals(other.getWebsite());
+        if (!getWebsite()
+            .equals(other.getWebsite())) return false;
       }
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -721,35 +719,35 @@ public final class GenericContact {
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -804,7 +802,7 @@ public final class GenericContact {
         return this;
       }
 
-      private io.opencannabis.schema.geo.Location location_ = null;
+      private io.opencannabis.schema.geo.Location location_;
       private com.google.protobuf.SingleFieldBuilderV3<
           io.opencannabis.schema.geo.Location, io.opencannabis.schema.geo.Location.Builder, io.opencannabis.schema.geo.LocationOrBuilder> locationBuilder_;
       /**
@@ -957,7 +955,7 @@ public final class GenericContact {
         return locationBuilder_;
       }
 
-      private io.opencannabis.schema.contact.ContactPhone.PhoneNumber phone_ = null;
+      private io.opencannabis.schema.contact.ContactPhone.PhoneNumber phone_;
       private com.google.protobuf.SingleFieldBuilderV3<
           io.opencannabis.schema.contact.ContactPhone.PhoneNumber, io.opencannabis.schema.contact.ContactPhone.PhoneNumber.Builder, io.opencannabis.schema.contact.ContactPhone.PhoneNumberOrBuilder> phoneBuilder_;
       /**
@@ -1110,7 +1108,7 @@ public final class GenericContact {
         return phoneBuilder_;
       }
 
-      private io.opencannabis.schema.contact.ContactEmail.EmailAddress email_ = null;
+      private io.opencannabis.schema.contact.ContactEmail.EmailAddress email_;
       private com.google.protobuf.SingleFieldBuilderV3<
           io.opencannabis.schema.contact.ContactEmail.EmailAddress, io.opencannabis.schema.contact.ContactEmail.EmailAddress.Builder, io.opencannabis.schema.contact.ContactEmail.EmailAddressOrBuilder> emailBuilder_;
       /**
@@ -1263,7 +1261,7 @@ public final class GenericContact {
         return emailBuilder_;
       }
 
-      private io.opencannabis.schema.contact.ContactWebsite.Website website_ = null;
+      private io.opencannabis.schema.contact.ContactWebsite.Website website_;
       private com.google.protobuf.SingleFieldBuilderV3<
           io.opencannabis.schema.contact.ContactWebsite.Website, io.opencannabis.schema.contact.ContactWebsite.Website.Builder, io.opencannabis.schema.contact.ContactWebsite.WebsiteOrBuilder> websiteBuilder_;
       /**
@@ -1418,7 +1416,7 @@ public final class GenericContact {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -1468,11 +1466,2392 @@ public final class GenericContact {
 
   }
 
+  public interface SocialInfoOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:opencannabis.contact.SocialInfo)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * Profile listings for a given entity or person.
+     * </pre>
+     *
+     * <code>repeated .opencannabis.contact.SocialInfo.SocialProfile profile = 1;</code>
+     */
+    java.util.List<io.opencannabis.schema.contact.GenericContact.SocialInfo.SocialProfile> 
+        getProfileList();
+    /**
+     * <pre>
+     * Profile listings for a given entity or person.
+     * </pre>
+     *
+     * <code>repeated .opencannabis.contact.SocialInfo.SocialProfile profile = 1;</code>
+     */
+    io.opencannabis.schema.contact.GenericContact.SocialInfo.SocialProfile getProfile(int index);
+    /**
+     * <pre>
+     * Profile listings for a given entity or person.
+     * </pre>
+     *
+     * <code>repeated .opencannabis.contact.SocialInfo.SocialProfile profile = 1;</code>
+     */
+    int getProfileCount();
+    /**
+     * <pre>
+     * Profile listings for a given entity or person.
+     * </pre>
+     *
+     * <code>repeated .opencannabis.contact.SocialInfo.SocialProfile profile = 1;</code>
+     */
+    java.util.List<? extends io.opencannabis.schema.contact.GenericContact.SocialInfo.SocialProfileOrBuilder> 
+        getProfileOrBuilderList();
+    /**
+     * <pre>
+     * Profile listings for a given entity or person.
+     * </pre>
+     *
+     * <code>repeated .opencannabis.contact.SocialInfo.SocialProfile profile = 1;</code>
+     */
+    io.opencannabis.schema.contact.GenericContact.SocialInfo.SocialProfileOrBuilder getProfileOrBuilder(
+        int index);
+  }
+  /**
+   * <pre>
+   * Specifies social profile URLs for a given entity, person, or organization.
+   * </pre>
+   *
+   * Protobuf type {@code opencannabis.contact.SocialInfo}
+   */
+  public  static final class SocialInfo extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:opencannabis.contact.SocialInfo)
+      SocialInfoOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use SocialInfo.newBuilder() to construct.
+    private SocialInfo(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private SocialInfo() {
+      profile_ = java.util.Collections.emptyList();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private SocialInfo(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
+                profile_ = new java.util.ArrayList<io.opencannabis.schema.contact.GenericContact.SocialInfo.SocialProfile>();
+                mutable_bitField0_ |= 0x00000001;
+              }
+              profile_.add(
+                  input.readMessage(io.opencannabis.schema.contact.GenericContact.SocialInfo.SocialProfile.parser(), extensionRegistry));
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        if (((mutable_bitField0_ & 0x00000001) != 0)) {
+          profile_ = java.util.Collections.unmodifiableList(profile_);
+        }
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return io.opencannabis.schema.contact.GenericContact.internal_static_opencannabis_contact_SocialInfo_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return io.opencannabis.schema.contact.GenericContact.internal_static_opencannabis_contact_SocialInfo_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              io.opencannabis.schema.contact.GenericContact.SocialInfo.class, io.opencannabis.schema.contact.GenericContact.SocialInfo.Builder.class);
+    }
+
+    /**
+     * <pre>
+     * Enumerates known social providers.
+     * </pre>
+     *
+     * Protobuf enum {@code opencannabis.contact.SocialInfo.SocialProvider}
+     */
+    public enum SocialProvider
+        implements com.google.protobuf.ProtocolMessageEnum {
+      /**
+       * <pre>
+       * Indicates an un-enumerated social provider.
+       * </pre>
+       *
+       * <code>UNSPECIFIED_SOCIAL_PROVIDER = 0;</code>
+       */
+      UNSPECIFIED_SOCIAL_PROVIDER(0),
+      /**
+       * <pre>
+       * Social profile on Facebook.
+       * </pre>
+       *
+       * <code>FACEBOOK = 1;</code>
+       */
+      FACEBOOK(1),
+      /**
+       * <pre>
+       * Social profile on Twitter.
+       * </pre>
+       *
+       * <code>TWITTER = 2;</code>
+       */
+      TWITTER(2),
+      /**
+       * <pre>
+       * Social profile on Instagram.
+       * </pre>
+       *
+       * <code>INSTAGRAM = 3;</code>
+       */
+      INSTAGRAM(3),
+      /**
+       * <pre>
+       * Social profile on YouTube.
+       * </pre>
+       *
+       * <code>YOUTUBE = 4;</code>
+       */
+      YOUTUBE(4),
+      /**
+       * <pre>
+       * Social profile on Leafly.
+       * </pre>
+       *
+       * <code>LEAFLY = 5;</code>
+       */
+      LEAFLY(5),
+      /**
+       * <pre>
+       * Social profile on WeedMaps.
+       * </pre>
+       *
+       * <code>WEEDMAPS = 6;</code>
+       */
+      WEEDMAPS(6),
+      UNRECOGNIZED(-1),
+      ;
+
+      /**
+       * <pre>
+       * Indicates an un-enumerated social provider.
+       * </pre>
+       *
+       * <code>UNSPECIFIED_SOCIAL_PROVIDER = 0;</code>
+       */
+      public static final int UNSPECIFIED_SOCIAL_PROVIDER_VALUE = 0;
+      /**
+       * <pre>
+       * Social profile on Facebook.
+       * </pre>
+       *
+       * <code>FACEBOOK = 1;</code>
+       */
+      public static final int FACEBOOK_VALUE = 1;
+      /**
+       * <pre>
+       * Social profile on Twitter.
+       * </pre>
+       *
+       * <code>TWITTER = 2;</code>
+       */
+      public static final int TWITTER_VALUE = 2;
+      /**
+       * <pre>
+       * Social profile on Instagram.
+       * </pre>
+       *
+       * <code>INSTAGRAM = 3;</code>
+       */
+      public static final int INSTAGRAM_VALUE = 3;
+      /**
+       * <pre>
+       * Social profile on YouTube.
+       * </pre>
+       *
+       * <code>YOUTUBE = 4;</code>
+       */
+      public static final int YOUTUBE_VALUE = 4;
+      /**
+       * <pre>
+       * Social profile on Leafly.
+       * </pre>
+       *
+       * <code>LEAFLY = 5;</code>
+       */
+      public static final int LEAFLY_VALUE = 5;
+      /**
+       * <pre>
+       * Social profile on WeedMaps.
+       * </pre>
+       *
+       * <code>WEEDMAPS = 6;</code>
+       */
+      public static final int WEEDMAPS_VALUE = 6;
+
+
+      public final int getNumber() {
+        if (this == UNRECOGNIZED) {
+          throw new java.lang.IllegalArgumentException(
+              "Can't get the number of an unknown enum value.");
+        }
+        return value;
+      }
+
+      /**
+       * @deprecated Use {@link #forNumber(int)} instead.
+       */
+      @java.lang.Deprecated
+      public static SocialProvider valueOf(int value) {
+        return forNumber(value);
+      }
+
+      public static SocialProvider forNumber(int value) {
+        switch (value) {
+          case 0: return UNSPECIFIED_SOCIAL_PROVIDER;
+          case 1: return FACEBOOK;
+          case 2: return TWITTER;
+          case 3: return INSTAGRAM;
+          case 4: return YOUTUBE;
+          case 5: return LEAFLY;
+          case 6: return WEEDMAPS;
+          default: return null;
+        }
+      }
+
+      public static com.google.protobuf.Internal.EnumLiteMap<SocialProvider>
+          internalGetValueMap() {
+        return internalValueMap;
+      }
+      private static final com.google.protobuf.Internal.EnumLiteMap<
+          SocialProvider> internalValueMap =
+            new com.google.protobuf.Internal.EnumLiteMap<SocialProvider>() {
+              public SocialProvider findValueByNumber(int number) {
+                return SocialProvider.forNumber(number);
+              }
+            };
+
+      public final com.google.protobuf.Descriptors.EnumValueDescriptor
+          getValueDescriptor() {
+        return getDescriptor().getValues().get(ordinal());
+      }
+      public final com.google.protobuf.Descriptors.EnumDescriptor
+          getDescriptorForType() {
+        return getDescriptor();
+      }
+      public static final com.google.protobuf.Descriptors.EnumDescriptor
+          getDescriptor() {
+        return io.opencannabis.schema.contact.GenericContact.SocialInfo.getDescriptor().getEnumTypes().get(0);
+      }
+
+      private static final SocialProvider[] VALUES = values();
+
+      public static SocialProvider valueOf(
+          com.google.protobuf.Descriptors.EnumValueDescriptor desc) {
+        if (desc.getType() != getDescriptor()) {
+          throw new java.lang.IllegalArgumentException(
+            "EnumValueDescriptor is not for this type.");
+        }
+        if (desc.getIndex() == -1) {
+          return UNRECOGNIZED;
+        }
+        return VALUES[desc.getIndex()];
+      }
+
+      private final int value;
+
+      private SocialProvider(int value) {
+        this.value = value;
+      }
+
+      // @@protoc_insertion_point(enum_scope:opencannabis.contact.SocialInfo.SocialProvider)
+    }
+
+    public interface SocialProfileOrBuilder extends
+        // @@protoc_insertion_point(interface_extends:opencannabis.contact.SocialInfo.SocialProfile)
+        com.google.protobuf.MessageOrBuilder {
+
+      /**
+       * <pre>
+       * Known social account provider.
+       * </pre>
+       *
+       * <code>.opencannabis.contact.SocialInfo.SocialProvider known = 10;</code>
+       */
+      int getKnownValue();
+      /**
+       * <pre>
+       * Known social account provider.
+       * </pre>
+       *
+       * <code>.opencannabis.contact.SocialInfo.SocialProvider known = 10;</code>
+       */
+      io.opencannabis.schema.contact.GenericContact.SocialInfo.SocialProvider getKnown();
+
+      /**
+       * <pre>
+       * Custom social account provider.
+       * </pre>
+       *
+       * <code>string custom = 11;</code>
+       */
+      java.lang.String getCustom();
+      /**
+       * <pre>
+       * Custom social account provider.
+       * </pre>
+       *
+       * <code>string custom = 11;</code>
+       */
+      com.google.protobuf.ByteString
+          getCustomBytes();
+
+      /**
+       * <pre>
+       * Profile ID/username.
+       * </pre>
+       *
+       * <code>string username = 1;</code>
+       */
+      java.lang.String getUsername();
+      /**
+       * <pre>
+       * Profile ID/username.
+       * </pre>
+       *
+       * <code>string username = 1;</code>
+       */
+      com.google.protobuf.ByteString
+          getUsernameBytes();
+
+      /**
+       * <pre>
+       * Full URL to the profile.
+       * </pre>
+       *
+       * <code>.opencannabis.contact.Website url = 2;</code>
+       */
+      boolean hasUrl();
+      /**
+       * <pre>
+       * Full URL to the profile.
+       * </pre>
+       *
+       * <code>.opencannabis.contact.Website url = 2;</code>
+       */
+      io.opencannabis.schema.contact.ContactWebsite.Website getUrl();
+      /**
+       * <pre>
+       * Full URL to the profile.
+       * </pre>
+       *
+       * <code>.opencannabis.contact.Website url = 2;</code>
+       */
+      io.opencannabis.schema.contact.ContactWebsite.WebsiteOrBuilder getUrlOrBuilder();
+
+      public io.opencannabis.schema.contact.GenericContact.SocialInfo.SocialProfile.ProviderCase getProviderCase();
+    }
+    /**
+     * <pre>
+     * Specifies the notion of an individual social profile, for a given provider.
+     * </pre>
+     *
+     * Protobuf type {@code opencannabis.contact.SocialInfo.SocialProfile}
+     */
+    public  static final class SocialProfile extends
+        com.google.protobuf.GeneratedMessageV3 implements
+        // @@protoc_insertion_point(message_implements:opencannabis.contact.SocialInfo.SocialProfile)
+        SocialProfileOrBuilder {
+    private static final long serialVersionUID = 0L;
+      // Use SocialProfile.newBuilder() to construct.
+      private SocialProfile(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+        super(builder);
+      }
+      private SocialProfile() {
+        username_ = "";
+      }
+
+      @java.lang.Override
+      public final com.google.protobuf.UnknownFieldSet
+      getUnknownFields() {
+        return this.unknownFields;
+      }
+      private SocialProfile(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        this();
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        int mutable_bitField0_ = 0;
+        com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+            com.google.protobuf.UnknownFieldSet.newBuilder();
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                java.lang.String s = input.readStringRequireUtf8();
+
+                username_ = s;
+                break;
+              }
+              case 18: {
+                io.opencannabis.schema.contact.ContactWebsite.Website.Builder subBuilder = null;
+                if (url_ != null) {
+                  subBuilder = url_.toBuilder();
+                }
+                url_ = input.readMessage(io.opencannabis.schema.contact.ContactWebsite.Website.parser(), extensionRegistry);
+                if (subBuilder != null) {
+                  subBuilder.mergeFrom(url_);
+                  url_ = subBuilder.buildPartial();
+                }
+
+                break;
+              }
+              case 80: {
+                int rawValue = input.readEnum();
+                providerCase_ = 10;
+                provider_ = rawValue;
+                break;
+              }
+              case 90: {
+                java.lang.String s = input.readStringRequireUtf8();
+                providerCase_ = 11;
+                provider_ = s;
+                break;
+              }
+              default: {
+                if (!parseUnknownField(
+                    input, unknownFields, extensionRegistry, tag)) {
+                  done = true;
+                }
+                break;
+              }
+            }
+          }
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(this);
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(
+              e).setUnfinishedMessage(this);
+        } finally {
+          this.unknownFields = unknownFields.build();
+          makeExtensionsImmutable();
+        }
+      }
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return io.opencannabis.schema.contact.GenericContact.internal_static_opencannabis_contact_SocialInfo_SocialProfile_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return io.opencannabis.schema.contact.GenericContact.internal_static_opencannabis_contact_SocialInfo_SocialProfile_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                io.opencannabis.schema.contact.GenericContact.SocialInfo.SocialProfile.class, io.opencannabis.schema.contact.GenericContact.SocialInfo.SocialProfile.Builder.class);
+      }
+
+      private int providerCase_ = 0;
+      private java.lang.Object provider_;
+      public enum ProviderCase
+          implements com.google.protobuf.Internal.EnumLite {
+        KNOWN(10),
+        CUSTOM(11),
+        PROVIDER_NOT_SET(0);
+        private final int value;
+        private ProviderCase(int value) {
+          this.value = value;
+        }
+        /**
+         * @deprecated Use {@link #forNumber(int)} instead.
+         */
+        @java.lang.Deprecated
+        public static ProviderCase valueOf(int value) {
+          return forNumber(value);
+        }
+
+        public static ProviderCase forNumber(int value) {
+          switch (value) {
+            case 10: return KNOWN;
+            case 11: return CUSTOM;
+            case 0: return PROVIDER_NOT_SET;
+            default: return null;
+          }
+        }
+        public int getNumber() {
+          return this.value;
+        }
+      };
+
+      public ProviderCase
+      getProviderCase() {
+        return ProviderCase.forNumber(
+            providerCase_);
+      }
+
+      public static final int KNOWN_FIELD_NUMBER = 10;
+      /**
+       * <pre>
+       * Known social account provider.
+       * </pre>
+       *
+       * <code>.opencannabis.contact.SocialInfo.SocialProvider known = 10;</code>
+       */
+      public int getKnownValue() {
+        if (providerCase_ == 10) {
+          return (java.lang.Integer) provider_;
+        }
+        return 0;
+      }
+      /**
+       * <pre>
+       * Known social account provider.
+       * </pre>
+       *
+       * <code>.opencannabis.contact.SocialInfo.SocialProvider known = 10;</code>
+       */
+      public io.opencannabis.schema.contact.GenericContact.SocialInfo.SocialProvider getKnown() {
+        if (providerCase_ == 10) {
+          @SuppressWarnings("deprecation")
+          io.opencannabis.schema.contact.GenericContact.SocialInfo.SocialProvider result = io.opencannabis.schema.contact.GenericContact.SocialInfo.SocialProvider.valueOf(
+              (java.lang.Integer) provider_);
+          return result == null ? io.opencannabis.schema.contact.GenericContact.SocialInfo.SocialProvider.UNRECOGNIZED : result;
+        }
+        return io.opencannabis.schema.contact.GenericContact.SocialInfo.SocialProvider.UNSPECIFIED_SOCIAL_PROVIDER;
+      }
+
+      public static final int CUSTOM_FIELD_NUMBER = 11;
+      /**
+       * <pre>
+       * Custom social account provider.
+       * </pre>
+       *
+       * <code>string custom = 11;</code>
+       */
+      public java.lang.String getCustom() {
+        java.lang.Object ref = "";
+        if (providerCase_ == 11) {
+          ref = provider_;
+        }
+        if (ref instanceof java.lang.String) {
+          return (java.lang.String) ref;
+        } else {
+          com.google.protobuf.ByteString bs = 
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          if (providerCase_ == 11) {
+            provider_ = s;
+          }
+          return s;
+        }
+      }
+      /**
+       * <pre>
+       * Custom social account provider.
+       * </pre>
+       *
+       * <code>string custom = 11;</code>
+       */
+      public com.google.protobuf.ByteString
+          getCustomBytes() {
+        java.lang.Object ref = "";
+        if (providerCase_ == 11) {
+          ref = provider_;
+        }
+        if (ref instanceof java.lang.String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          if (providerCase_ == 11) {
+            provider_ = b;
+          }
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+
+      public static final int USERNAME_FIELD_NUMBER = 1;
+      private volatile java.lang.Object username_;
+      /**
+       * <pre>
+       * Profile ID/username.
+       * </pre>
+       *
+       * <code>string username = 1;</code>
+       */
+      public java.lang.String getUsername() {
+        java.lang.Object ref = username_;
+        if (ref instanceof java.lang.String) {
+          return (java.lang.String) ref;
+        } else {
+          com.google.protobuf.ByteString bs = 
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          username_ = s;
+          return s;
+        }
+      }
+      /**
+       * <pre>
+       * Profile ID/username.
+       * </pre>
+       *
+       * <code>string username = 1;</code>
+       */
+      public com.google.protobuf.ByteString
+          getUsernameBytes() {
+        java.lang.Object ref = username_;
+        if (ref instanceof java.lang.String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          username_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+
+      public static final int URL_FIELD_NUMBER = 2;
+      private io.opencannabis.schema.contact.ContactWebsite.Website url_;
+      /**
+       * <pre>
+       * Full URL to the profile.
+       * </pre>
+       *
+       * <code>.opencannabis.contact.Website url = 2;</code>
+       */
+      public boolean hasUrl() {
+        return url_ != null;
+      }
+      /**
+       * <pre>
+       * Full URL to the profile.
+       * </pre>
+       *
+       * <code>.opencannabis.contact.Website url = 2;</code>
+       */
+      public io.opencannabis.schema.contact.ContactWebsite.Website getUrl() {
+        return url_ == null ? io.opencannabis.schema.contact.ContactWebsite.Website.getDefaultInstance() : url_;
+      }
+      /**
+       * <pre>
+       * Full URL to the profile.
+       * </pre>
+       *
+       * <code>.opencannabis.contact.Website url = 2;</code>
+       */
+      public io.opencannabis.schema.contact.ContactWebsite.WebsiteOrBuilder getUrlOrBuilder() {
+        return getUrl();
+      }
+
+      private byte memoizedIsInitialized = -1;
+      @java.lang.Override
+      public final boolean isInitialized() {
+        byte isInitialized = memoizedIsInitialized;
+        if (isInitialized == 1) return true;
+        if (isInitialized == 0) return false;
+
+        memoizedIsInitialized = 1;
+        return true;
+      }
+
+      @java.lang.Override
+      public void writeTo(com.google.protobuf.CodedOutputStream output)
+                          throws java.io.IOException {
+        if (!getUsernameBytes().isEmpty()) {
+          com.google.protobuf.GeneratedMessageV3.writeString(output, 1, username_);
+        }
+        if (url_ != null) {
+          output.writeMessage(2, getUrl());
+        }
+        if (providerCase_ == 10) {
+          output.writeEnum(10, ((java.lang.Integer) provider_));
+        }
+        if (providerCase_ == 11) {
+          com.google.protobuf.GeneratedMessageV3.writeString(output, 11, provider_);
+        }
+        unknownFields.writeTo(output);
+      }
+
+      @java.lang.Override
+      public int getSerializedSize() {
+        int size = memoizedSize;
+        if (size != -1) return size;
+
+        size = 0;
+        if (!getUsernameBytes().isEmpty()) {
+          size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, username_);
+        }
+        if (url_ != null) {
+          size += com.google.protobuf.CodedOutputStream
+            .computeMessageSize(2, getUrl());
+        }
+        if (providerCase_ == 10) {
+          size += com.google.protobuf.CodedOutputStream
+            .computeEnumSize(10, ((java.lang.Integer) provider_));
+        }
+        if (providerCase_ == 11) {
+          size += com.google.protobuf.GeneratedMessageV3.computeStringSize(11, provider_);
+        }
+        size += unknownFields.getSerializedSize();
+        memoizedSize = size;
+        return size;
+      }
+
+      @java.lang.Override
+      public boolean equals(final java.lang.Object obj) {
+        if (obj == this) {
+         return true;
+        }
+        if (!(obj instanceof io.opencannabis.schema.contact.GenericContact.SocialInfo.SocialProfile)) {
+          return super.equals(obj);
+        }
+        io.opencannabis.schema.contact.GenericContact.SocialInfo.SocialProfile other = (io.opencannabis.schema.contact.GenericContact.SocialInfo.SocialProfile) obj;
+
+        if (!getUsername()
+            .equals(other.getUsername())) return false;
+        if (hasUrl() != other.hasUrl()) return false;
+        if (hasUrl()) {
+          if (!getUrl()
+              .equals(other.getUrl())) return false;
+        }
+        if (!getProviderCase().equals(other.getProviderCase())) return false;
+        switch (providerCase_) {
+          case 10:
+            if (getKnownValue()
+                != other.getKnownValue()) return false;
+            break;
+          case 11:
+            if (!getCustom()
+                .equals(other.getCustom())) return false;
+            break;
+          case 0:
+          default:
+        }
+        if (!unknownFields.equals(other.unknownFields)) return false;
+        return true;
+      }
+
+      @java.lang.Override
+      public int hashCode() {
+        if (memoizedHashCode != 0) {
+          return memoizedHashCode;
+        }
+        int hash = 41;
+        hash = (19 * hash) + getDescriptor().hashCode();
+        hash = (37 * hash) + USERNAME_FIELD_NUMBER;
+        hash = (53 * hash) + getUsername().hashCode();
+        if (hasUrl()) {
+          hash = (37 * hash) + URL_FIELD_NUMBER;
+          hash = (53 * hash) + getUrl().hashCode();
+        }
+        switch (providerCase_) {
+          case 10:
+            hash = (37 * hash) + KNOWN_FIELD_NUMBER;
+            hash = (53 * hash) + getKnownValue();
+            break;
+          case 11:
+            hash = (37 * hash) + CUSTOM_FIELD_NUMBER;
+            hash = (53 * hash) + getCustom().hashCode();
+            break;
+          case 0:
+          default:
+        }
+        hash = (29 * hash) + unknownFields.hashCode();
+        memoizedHashCode = hash;
+        return hash;
+      }
+
+      public static io.opencannabis.schema.contact.GenericContact.SocialInfo.SocialProfile parseFrom(
+          java.nio.ByteBuffer data)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data);
+      }
+      public static io.opencannabis.schema.contact.GenericContact.SocialInfo.SocialProfile parseFrom(
+          java.nio.ByteBuffer data,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data, extensionRegistry);
+      }
+      public static io.opencannabis.schema.contact.GenericContact.SocialInfo.SocialProfile parseFrom(
+          com.google.protobuf.ByteString data)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data);
+      }
+      public static io.opencannabis.schema.contact.GenericContact.SocialInfo.SocialProfile parseFrom(
+          com.google.protobuf.ByteString data,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data, extensionRegistry);
+      }
+      public static io.opencannabis.schema.contact.GenericContact.SocialInfo.SocialProfile parseFrom(byte[] data)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data);
+      }
+      public static io.opencannabis.schema.contact.GenericContact.SocialInfo.SocialProfile parseFrom(
+          byte[] data,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data, extensionRegistry);
+      }
+      public static io.opencannabis.schema.contact.GenericContact.SocialInfo.SocialProfile parseFrom(java.io.InputStream input)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input);
+      }
+      public static io.opencannabis.schema.contact.GenericContact.SocialInfo.SocialProfile parseFrom(
+          java.io.InputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input, extensionRegistry);
+      }
+      public static io.opencannabis.schema.contact.GenericContact.SocialInfo.SocialProfile parseDelimitedFrom(java.io.InputStream input)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseDelimitedWithIOException(PARSER, input);
+      }
+      public static io.opencannabis.schema.contact.GenericContact.SocialInfo.SocialProfile parseDelimitedFrom(
+          java.io.InputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+      }
+      public static io.opencannabis.schema.contact.GenericContact.SocialInfo.SocialProfile parseFrom(
+          com.google.protobuf.CodedInputStream input)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input);
+      }
+      public static io.opencannabis.schema.contact.GenericContact.SocialInfo.SocialProfile parseFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input, extensionRegistry);
+      }
+
+      @java.lang.Override
+      public Builder newBuilderForType() { return newBuilder(); }
+      public static Builder newBuilder() {
+        return DEFAULT_INSTANCE.toBuilder();
+      }
+      public static Builder newBuilder(io.opencannabis.schema.contact.GenericContact.SocialInfo.SocialProfile prototype) {
+        return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+      }
+      @java.lang.Override
+      public Builder toBuilder() {
+        return this == DEFAULT_INSTANCE
+            ? new Builder() : new Builder().mergeFrom(this);
+      }
+
+      @java.lang.Override
+      protected Builder newBuilderForType(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        Builder builder = new Builder(parent);
+        return builder;
+      }
+      /**
+       * <pre>
+       * Specifies the notion of an individual social profile, for a given provider.
+       * </pre>
+       *
+       * Protobuf type {@code opencannabis.contact.SocialInfo.SocialProfile}
+       */
+      public static final class Builder extends
+          com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+          // @@protoc_insertion_point(builder_implements:opencannabis.contact.SocialInfo.SocialProfile)
+          io.opencannabis.schema.contact.GenericContact.SocialInfo.SocialProfileOrBuilder {
+        public static final com.google.protobuf.Descriptors.Descriptor
+            getDescriptor() {
+          return io.opencannabis.schema.contact.GenericContact.internal_static_opencannabis_contact_SocialInfo_SocialProfile_descriptor;
+        }
+
+        @java.lang.Override
+        protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+            internalGetFieldAccessorTable() {
+          return io.opencannabis.schema.contact.GenericContact.internal_static_opencannabis_contact_SocialInfo_SocialProfile_fieldAccessorTable
+              .ensureFieldAccessorsInitialized(
+                  io.opencannabis.schema.contact.GenericContact.SocialInfo.SocialProfile.class, io.opencannabis.schema.contact.GenericContact.SocialInfo.SocialProfile.Builder.class);
+        }
+
+        // Construct using io.opencannabis.schema.contact.GenericContact.SocialInfo.SocialProfile.newBuilder()
+        private Builder() {
+          maybeForceBuilderInitialization();
+        }
+
+        private Builder(
+            com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+          super(parent);
+          maybeForceBuilderInitialization();
+        }
+        private void maybeForceBuilderInitialization() {
+          if (com.google.protobuf.GeneratedMessageV3
+                  .alwaysUseFieldBuilders) {
+          }
+        }
+        @java.lang.Override
+        public Builder clear() {
+          super.clear();
+          username_ = "";
+
+          if (urlBuilder_ == null) {
+            url_ = null;
+          } else {
+            url_ = null;
+            urlBuilder_ = null;
+          }
+          providerCase_ = 0;
+          provider_ = null;
+          return this;
+        }
+
+        @java.lang.Override
+        public com.google.protobuf.Descriptors.Descriptor
+            getDescriptorForType() {
+          return io.opencannabis.schema.contact.GenericContact.internal_static_opencannabis_contact_SocialInfo_SocialProfile_descriptor;
+        }
+
+        @java.lang.Override
+        public io.opencannabis.schema.contact.GenericContact.SocialInfo.SocialProfile getDefaultInstanceForType() {
+          return io.opencannabis.schema.contact.GenericContact.SocialInfo.SocialProfile.getDefaultInstance();
+        }
+
+        @java.lang.Override
+        public io.opencannabis.schema.contact.GenericContact.SocialInfo.SocialProfile build() {
+          io.opencannabis.schema.contact.GenericContact.SocialInfo.SocialProfile result = buildPartial();
+          if (!result.isInitialized()) {
+            throw newUninitializedMessageException(result);
+          }
+          return result;
+        }
+
+        @java.lang.Override
+        public io.opencannabis.schema.contact.GenericContact.SocialInfo.SocialProfile buildPartial() {
+          io.opencannabis.schema.contact.GenericContact.SocialInfo.SocialProfile result = new io.opencannabis.schema.contact.GenericContact.SocialInfo.SocialProfile(this);
+          if (providerCase_ == 10) {
+            result.provider_ = provider_;
+          }
+          if (providerCase_ == 11) {
+            result.provider_ = provider_;
+          }
+          result.username_ = username_;
+          if (urlBuilder_ == null) {
+            result.url_ = url_;
+          } else {
+            result.url_ = urlBuilder_.build();
+          }
+          result.providerCase_ = providerCase_;
+          onBuilt();
+          return result;
+        }
+
+        @java.lang.Override
+        public Builder clone() {
+          return super.clone();
+        }
+        @java.lang.Override
+        public Builder setField(
+            com.google.protobuf.Descriptors.FieldDescriptor field,
+            java.lang.Object value) {
+          return super.setField(field, value);
+        }
+        @java.lang.Override
+        public Builder clearField(
+            com.google.protobuf.Descriptors.FieldDescriptor field) {
+          return super.clearField(field);
+        }
+        @java.lang.Override
+        public Builder clearOneof(
+            com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+          return super.clearOneof(oneof);
+        }
+        @java.lang.Override
+        public Builder setRepeatedField(
+            com.google.protobuf.Descriptors.FieldDescriptor field,
+            int index, java.lang.Object value) {
+          return super.setRepeatedField(field, index, value);
+        }
+        @java.lang.Override
+        public Builder addRepeatedField(
+            com.google.protobuf.Descriptors.FieldDescriptor field,
+            java.lang.Object value) {
+          return super.addRepeatedField(field, value);
+        }
+        @java.lang.Override
+        public Builder mergeFrom(com.google.protobuf.Message other) {
+          if (other instanceof io.opencannabis.schema.contact.GenericContact.SocialInfo.SocialProfile) {
+            return mergeFrom((io.opencannabis.schema.contact.GenericContact.SocialInfo.SocialProfile)other);
+          } else {
+            super.mergeFrom(other);
+            return this;
+          }
+        }
+
+        public Builder mergeFrom(io.opencannabis.schema.contact.GenericContact.SocialInfo.SocialProfile other) {
+          if (other == io.opencannabis.schema.contact.GenericContact.SocialInfo.SocialProfile.getDefaultInstance()) return this;
+          if (!other.getUsername().isEmpty()) {
+            username_ = other.username_;
+            onChanged();
+          }
+          if (other.hasUrl()) {
+            mergeUrl(other.getUrl());
+          }
+          switch (other.getProviderCase()) {
+            case KNOWN: {
+              setKnownValue(other.getKnownValue());
+              break;
+            }
+            case CUSTOM: {
+              providerCase_ = 11;
+              provider_ = other.provider_;
+              onChanged();
+              break;
+            }
+            case PROVIDER_NOT_SET: {
+              break;
+            }
+          }
+          this.mergeUnknownFields(other.unknownFields);
+          onChanged();
+          return this;
+        }
+
+        @java.lang.Override
+        public final boolean isInitialized() {
+          return true;
+        }
+
+        @java.lang.Override
+        public Builder mergeFrom(
+            com.google.protobuf.CodedInputStream input,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws java.io.IOException {
+          io.opencannabis.schema.contact.GenericContact.SocialInfo.SocialProfile parsedMessage = null;
+          try {
+            parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+          } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+            parsedMessage = (io.opencannabis.schema.contact.GenericContact.SocialInfo.SocialProfile) e.getUnfinishedMessage();
+            throw e.unwrapIOException();
+          } finally {
+            if (parsedMessage != null) {
+              mergeFrom(parsedMessage);
+            }
+          }
+          return this;
+        }
+        private int providerCase_ = 0;
+        private java.lang.Object provider_;
+        public ProviderCase
+            getProviderCase() {
+          return ProviderCase.forNumber(
+              providerCase_);
+        }
+
+        public Builder clearProvider() {
+          providerCase_ = 0;
+          provider_ = null;
+          onChanged();
+          return this;
+        }
+
+
+        /**
+         * <pre>
+         * Known social account provider.
+         * </pre>
+         *
+         * <code>.opencannabis.contact.SocialInfo.SocialProvider known = 10;</code>
+         */
+        public int getKnownValue() {
+          if (providerCase_ == 10) {
+            return ((java.lang.Integer) provider_).intValue();
+          }
+          return 0;
+        }
+        /**
+         * <pre>
+         * Known social account provider.
+         * </pre>
+         *
+         * <code>.opencannabis.contact.SocialInfo.SocialProvider known = 10;</code>
+         */
+        public Builder setKnownValue(int value) {
+          providerCase_ = 10;
+          provider_ = value;
+          onChanged();
+          return this;
+        }
+        /**
+         * <pre>
+         * Known social account provider.
+         * </pre>
+         *
+         * <code>.opencannabis.contact.SocialInfo.SocialProvider known = 10;</code>
+         */
+        public io.opencannabis.schema.contact.GenericContact.SocialInfo.SocialProvider getKnown() {
+          if (providerCase_ == 10) {
+            @SuppressWarnings("deprecation")
+            io.opencannabis.schema.contact.GenericContact.SocialInfo.SocialProvider result = io.opencannabis.schema.contact.GenericContact.SocialInfo.SocialProvider.valueOf(
+                (java.lang.Integer) provider_);
+            return result == null ? io.opencannabis.schema.contact.GenericContact.SocialInfo.SocialProvider.UNRECOGNIZED : result;
+          }
+          return io.opencannabis.schema.contact.GenericContact.SocialInfo.SocialProvider.UNSPECIFIED_SOCIAL_PROVIDER;
+        }
+        /**
+         * <pre>
+         * Known social account provider.
+         * </pre>
+         *
+         * <code>.opencannabis.contact.SocialInfo.SocialProvider known = 10;</code>
+         */
+        public Builder setKnown(io.opencannabis.schema.contact.GenericContact.SocialInfo.SocialProvider value) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          providerCase_ = 10;
+          provider_ = value.getNumber();
+          onChanged();
+          return this;
+        }
+        /**
+         * <pre>
+         * Known social account provider.
+         * </pre>
+         *
+         * <code>.opencannabis.contact.SocialInfo.SocialProvider known = 10;</code>
+         */
+        public Builder clearKnown() {
+          if (providerCase_ == 10) {
+            providerCase_ = 0;
+            provider_ = null;
+            onChanged();
+          }
+          return this;
+        }
+
+        /**
+         * <pre>
+         * Custom social account provider.
+         * </pre>
+         *
+         * <code>string custom = 11;</code>
+         */
+        public java.lang.String getCustom() {
+          java.lang.Object ref = "";
+          if (providerCase_ == 11) {
+            ref = provider_;
+          }
+          if (!(ref instanceof java.lang.String)) {
+            com.google.protobuf.ByteString bs =
+                (com.google.protobuf.ByteString) ref;
+            java.lang.String s = bs.toStringUtf8();
+            if (providerCase_ == 11) {
+              provider_ = s;
+            }
+            return s;
+          } else {
+            return (java.lang.String) ref;
+          }
+        }
+        /**
+         * <pre>
+         * Custom social account provider.
+         * </pre>
+         *
+         * <code>string custom = 11;</code>
+         */
+        public com.google.protobuf.ByteString
+            getCustomBytes() {
+          java.lang.Object ref = "";
+          if (providerCase_ == 11) {
+            ref = provider_;
+          }
+          if (ref instanceof String) {
+            com.google.protobuf.ByteString b = 
+                com.google.protobuf.ByteString.copyFromUtf8(
+                    (java.lang.String) ref);
+            if (providerCase_ == 11) {
+              provider_ = b;
+            }
+            return b;
+          } else {
+            return (com.google.protobuf.ByteString) ref;
+          }
+        }
+        /**
+         * <pre>
+         * Custom social account provider.
+         * </pre>
+         *
+         * <code>string custom = 11;</code>
+         */
+        public Builder setCustom(
+            java.lang.String value) {
+          if (value == null) {
+    throw new NullPointerException();
+  }
+  providerCase_ = 11;
+          provider_ = value;
+          onChanged();
+          return this;
+        }
+        /**
+         * <pre>
+         * Custom social account provider.
+         * </pre>
+         *
+         * <code>string custom = 11;</code>
+         */
+        public Builder clearCustom() {
+          if (providerCase_ == 11) {
+            providerCase_ = 0;
+            provider_ = null;
+            onChanged();
+          }
+          return this;
+        }
+        /**
+         * <pre>
+         * Custom social account provider.
+         * </pre>
+         *
+         * <code>string custom = 11;</code>
+         */
+        public Builder setCustomBytes(
+            com.google.protobuf.ByteString value) {
+          if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+          providerCase_ = 11;
+          provider_ = value;
+          onChanged();
+          return this;
+        }
+
+        private java.lang.Object username_ = "";
+        /**
+         * <pre>
+         * Profile ID/username.
+         * </pre>
+         *
+         * <code>string username = 1;</code>
+         */
+        public java.lang.String getUsername() {
+          java.lang.Object ref = username_;
+          if (!(ref instanceof java.lang.String)) {
+            com.google.protobuf.ByteString bs =
+                (com.google.protobuf.ByteString) ref;
+            java.lang.String s = bs.toStringUtf8();
+            username_ = s;
+            return s;
+          } else {
+            return (java.lang.String) ref;
+          }
+        }
+        /**
+         * <pre>
+         * Profile ID/username.
+         * </pre>
+         *
+         * <code>string username = 1;</code>
+         */
+        public com.google.protobuf.ByteString
+            getUsernameBytes() {
+          java.lang.Object ref = username_;
+          if (ref instanceof String) {
+            com.google.protobuf.ByteString b = 
+                com.google.protobuf.ByteString.copyFromUtf8(
+                    (java.lang.String) ref);
+            username_ = b;
+            return b;
+          } else {
+            return (com.google.protobuf.ByteString) ref;
+          }
+        }
+        /**
+         * <pre>
+         * Profile ID/username.
+         * </pre>
+         *
+         * <code>string username = 1;</code>
+         */
+        public Builder setUsername(
+            java.lang.String value) {
+          if (value == null) {
+    throw new NullPointerException();
+  }
+  
+          username_ = value;
+          onChanged();
+          return this;
+        }
+        /**
+         * <pre>
+         * Profile ID/username.
+         * </pre>
+         *
+         * <code>string username = 1;</code>
+         */
+        public Builder clearUsername() {
+          
+          username_ = getDefaultInstance().getUsername();
+          onChanged();
+          return this;
+        }
+        /**
+         * <pre>
+         * Profile ID/username.
+         * </pre>
+         *
+         * <code>string username = 1;</code>
+         */
+        public Builder setUsernameBytes(
+            com.google.protobuf.ByteString value) {
+          if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+          
+          username_ = value;
+          onChanged();
+          return this;
+        }
+
+        private io.opencannabis.schema.contact.ContactWebsite.Website url_;
+        private com.google.protobuf.SingleFieldBuilderV3<
+            io.opencannabis.schema.contact.ContactWebsite.Website, io.opencannabis.schema.contact.ContactWebsite.Website.Builder, io.opencannabis.schema.contact.ContactWebsite.WebsiteOrBuilder> urlBuilder_;
+        /**
+         * <pre>
+         * Full URL to the profile.
+         * </pre>
+         *
+         * <code>.opencannabis.contact.Website url = 2;</code>
+         */
+        public boolean hasUrl() {
+          return urlBuilder_ != null || url_ != null;
+        }
+        /**
+         * <pre>
+         * Full URL to the profile.
+         * </pre>
+         *
+         * <code>.opencannabis.contact.Website url = 2;</code>
+         */
+        public io.opencannabis.schema.contact.ContactWebsite.Website getUrl() {
+          if (urlBuilder_ == null) {
+            return url_ == null ? io.opencannabis.schema.contact.ContactWebsite.Website.getDefaultInstance() : url_;
+          } else {
+            return urlBuilder_.getMessage();
+          }
+        }
+        /**
+         * <pre>
+         * Full URL to the profile.
+         * </pre>
+         *
+         * <code>.opencannabis.contact.Website url = 2;</code>
+         */
+        public Builder setUrl(io.opencannabis.schema.contact.ContactWebsite.Website value) {
+          if (urlBuilder_ == null) {
+            if (value == null) {
+              throw new NullPointerException();
+            }
+            url_ = value;
+            onChanged();
+          } else {
+            urlBuilder_.setMessage(value);
+          }
+
+          return this;
+        }
+        /**
+         * <pre>
+         * Full URL to the profile.
+         * </pre>
+         *
+         * <code>.opencannabis.contact.Website url = 2;</code>
+         */
+        public Builder setUrl(
+            io.opencannabis.schema.contact.ContactWebsite.Website.Builder builderForValue) {
+          if (urlBuilder_ == null) {
+            url_ = builderForValue.build();
+            onChanged();
+          } else {
+            urlBuilder_.setMessage(builderForValue.build());
+          }
+
+          return this;
+        }
+        /**
+         * <pre>
+         * Full URL to the profile.
+         * </pre>
+         *
+         * <code>.opencannabis.contact.Website url = 2;</code>
+         */
+        public Builder mergeUrl(io.opencannabis.schema.contact.ContactWebsite.Website value) {
+          if (urlBuilder_ == null) {
+            if (url_ != null) {
+              url_ =
+                io.opencannabis.schema.contact.ContactWebsite.Website.newBuilder(url_).mergeFrom(value).buildPartial();
+            } else {
+              url_ = value;
+            }
+            onChanged();
+          } else {
+            urlBuilder_.mergeFrom(value);
+          }
+
+          return this;
+        }
+        /**
+         * <pre>
+         * Full URL to the profile.
+         * </pre>
+         *
+         * <code>.opencannabis.contact.Website url = 2;</code>
+         */
+        public Builder clearUrl() {
+          if (urlBuilder_ == null) {
+            url_ = null;
+            onChanged();
+          } else {
+            url_ = null;
+            urlBuilder_ = null;
+          }
+
+          return this;
+        }
+        /**
+         * <pre>
+         * Full URL to the profile.
+         * </pre>
+         *
+         * <code>.opencannabis.contact.Website url = 2;</code>
+         */
+        public io.opencannabis.schema.contact.ContactWebsite.Website.Builder getUrlBuilder() {
+          
+          onChanged();
+          return getUrlFieldBuilder().getBuilder();
+        }
+        /**
+         * <pre>
+         * Full URL to the profile.
+         * </pre>
+         *
+         * <code>.opencannabis.contact.Website url = 2;</code>
+         */
+        public io.opencannabis.schema.contact.ContactWebsite.WebsiteOrBuilder getUrlOrBuilder() {
+          if (urlBuilder_ != null) {
+            return urlBuilder_.getMessageOrBuilder();
+          } else {
+            return url_ == null ?
+                io.opencannabis.schema.contact.ContactWebsite.Website.getDefaultInstance() : url_;
+          }
+        }
+        /**
+         * <pre>
+         * Full URL to the profile.
+         * </pre>
+         *
+         * <code>.opencannabis.contact.Website url = 2;</code>
+         */
+        private com.google.protobuf.SingleFieldBuilderV3<
+            io.opencannabis.schema.contact.ContactWebsite.Website, io.opencannabis.schema.contact.ContactWebsite.Website.Builder, io.opencannabis.schema.contact.ContactWebsite.WebsiteOrBuilder> 
+            getUrlFieldBuilder() {
+          if (urlBuilder_ == null) {
+            urlBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+                io.opencannabis.schema.contact.ContactWebsite.Website, io.opencannabis.schema.contact.ContactWebsite.Website.Builder, io.opencannabis.schema.contact.ContactWebsite.WebsiteOrBuilder>(
+                    getUrl(),
+                    getParentForChildren(),
+                    isClean());
+            url_ = null;
+          }
+          return urlBuilder_;
+        }
+        @java.lang.Override
+        public final Builder setUnknownFields(
+            final com.google.protobuf.UnknownFieldSet unknownFields) {
+          return super.setUnknownFields(unknownFields);
+        }
+
+        @java.lang.Override
+        public final Builder mergeUnknownFields(
+            final com.google.protobuf.UnknownFieldSet unknownFields) {
+          return super.mergeUnknownFields(unknownFields);
+        }
+
+
+        // @@protoc_insertion_point(builder_scope:opencannabis.contact.SocialInfo.SocialProfile)
+      }
+
+      // @@protoc_insertion_point(class_scope:opencannabis.contact.SocialInfo.SocialProfile)
+      private static final io.opencannabis.schema.contact.GenericContact.SocialInfo.SocialProfile DEFAULT_INSTANCE;
+      static {
+        DEFAULT_INSTANCE = new io.opencannabis.schema.contact.GenericContact.SocialInfo.SocialProfile();
+      }
+
+      public static io.opencannabis.schema.contact.GenericContact.SocialInfo.SocialProfile getDefaultInstance() {
+        return DEFAULT_INSTANCE;
+      }
+
+      private static final com.google.protobuf.Parser<SocialProfile>
+          PARSER = new com.google.protobuf.AbstractParser<SocialProfile>() {
+        @java.lang.Override
+        public SocialProfile parsePartialFrom(
+            com.google.protobuf.CodedInputStream input,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws com.google.protobuf.InvalidProtocolBufferException {
+          return new SocialProfile(input, extensionRegistry);
+        }
+      };
+
+      public static com.google.protobuf.Parser<SocialProfile> parser() {
+        return PARSER;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Parser<SocialProfile> getParserForType() {
+        return PARSER;
+      }
+
+      @java.lang.Override
+      public io.opencannabis.schema.contact.GenericContact.SocialInfo.SocialProfile getDefaultInstanceForType() {
+        return DEFAULT_INSTANCE;
+      }
+
+    }
+
+    public static final int PROFILE_FIELD_NUMBER = 1;
+    private java.util.List<io.opencannabis.schema.contact.GenericContact.SocialInfo.SocialProfile> profile_;
+    /**
+     * <pre>
+     * Profile listings for a given entity or person.
+     * </pre>
+     *
+     * <code>repeated .opencannabis.contact.SocialInfo.SocialProfile profile = 1;</code>
+     */
+    public java.util.List<io.opencannabis.schema.contact.GenericContact.SocialInfo.SocialProfile> getProfileList() {
+      return profile_;
+    }
+    /**
+     * <pre>
+     * Profile listings for a given entity or person.
+     * </pre>
+     *
+     * <code>repeated .opencannabis.contact.SocialInfo.SocialProfile profile = 1;</code>
+     */
+    public java.util.List<? extends io.opencannabis.schema.contact.GenericContact.SocialInfo.SocialProfileOrBuilder> 
+        getProfileOrBuilderList() {
+      return profile_;
+    }
+    /**
+     * <pre>
+     * Profile listings for a given entity or person.
+     * </pre>
+     *
+     * <code>repeated .opencannabis.contact.SocialInfo.SocialProfile profile = 1;</code>
+     */
+    public int getProfileCount() {
+      return profile_.size();
+    }
+    /**
+     * <pre>
+     * Profile listings for a given entity or person.
+     * </pre>
+     *
+     * <code>repeated .opencannabis.contact.SocialInfo.SocialProfile profile = 1;</code>
+     */
+    public io.opencannabis.schema.contact.GenericContact.SocialInfo.SocialProfile getProfile(int index) {
+      return profile_.get(index);
+    }
+    /**
+     * <pre>
+     * Profile listings for a given entity or person.
+     * </pre>
+     *
+     * <code>repeated .opencannabis.contact.SocialInfo.SocialProfile profile = 1;</code>
+     */
+    public io.opencannabis.schema.contact.GenericContact.SocialInfo.SocialProfileOrBuilder getProfileOrBuilder(
+        int index) {
+      return profile_.get(index);
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      for (int i = 0; i < profile_.size(); i++) {
+        output.writeMessage(1, profile_.get(i));
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      for (int i = 0; i < profile_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, profile_.get(i));
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof io.opencannabis.schema.contact.GenericContact.SocialInfo)) {
+        return super.equals(obj);
+      }
+      io.opencannabis.schema.contact.GenericContact.SocialInfo other = (io.opencannabis.schema.contact.GenericContact.SocialInfo) obj;
+
+      if (!getProfileList()
+          .equals(other.getProfileList())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (getProfileCount() > 0) {
+        hash = (37 * hash) + PROFILE_FIELD_NUMBER;
+        hash = (53 * hash) + getProfileList().hashCode();
+      }
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static io.opencannabis.schema.contact.GenericContact.SocialInfo parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static io.opencannabis.schema.contact.GenericContact.SocialInfo parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static io.opencannabis.schema.contact.GenericContact.SocialInfo parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static io.opencannabis.schema.contact.GenericContact.SocialInfo parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static io.opencannabis.schema.contact.GenericContact.SocialInfo parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static io.opencannabis.schema.contact.GenericContact.SocialInfo parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static io.opencannabis.schema.contact.GenericContact.SocialInfo parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static io.opencannabis.schema.contact.GenericContact.SocialInfo parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static io.opencannabis.schema.contact.GenericContact.SocialInfo parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static io.opencannabis.schema.contact.GenericContact.SocialInfo parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static io.opencannabis.schema.contact.GenericContact.SocialInfo parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static io.opencannabis.schema.contact.GenericContact.SocialInfo parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(io.opencannabis.schema.contact.GenericContact.SocialInfo prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * Specifies social profile URLs for a given entity, person, or organization.
+     * </pre>
+     *
+     * Protobuf type {@code opencannabis.contact.SocialInfo}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:opencannabis.contact.SocialInfo)
+        io.opencannabis.schema.contact.GenericContact.SocialInfoOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return io.opencannabis.schema.contact.GenericContact.internal_static_opencannabis_contact_SocialInfo_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return io.opencannabis.schema.contact.GenericContact.internal_static_opencannabis_contact_SocialInfo_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                io.opencannabis.schema.contact.GenericContact.SocialInfo.class, io.opencannabis.schema.contact.GenericContact.SocialInfo.Builder.class);
+      }
+
+      // Construct using io.opencannabis.schema.contact.GenericContact.SocialInfo.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getProfileFieldBuilder();
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        if (profileBuilder_ == null) {
+          profile_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000001);
+        } else {
+          profileBuilder_.clear();
+        }
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return io.opencannabis.schema.contact.GenericContact.internal_static_opencannabis_contact_SocialInfo_descriptor;
+      }
+
+      @java.lang.Override
+      public io.opencannabis.schema.contact.GenericContact.SocialInfo getDefaultInstanceForType() {
+        return io.opencannabis.schema.contact.GenericContact.SocialInfo.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public io.opencannabis.schema.contact.GenericContact.SocialInfo build() {
+        io.opencannabis.schema.contact.GenericContact.SocialInfo result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public io.opencannabis.schema.contact.GenericContact.SocialInfo buildPartial() {
+        io.opencannabis.schema.contact.GenericContact.SocialInfo result = new io.opencannabis.schema.contact.GenericContact.SocialInfo(this);
+        int from_bitField0_ = bitField0_;
+        if (profileBuilder_ == null) {
+          if (((bitField0_ & 0x00000001) != 0)) {
+            profile_ = java.util.Collections.unmodifiableList(profile_);
+            bitField0_ = (bitField0_ & ~0x00000001);
+          }
+          result.profile_ = profile_;
+        } else {
+          result.profile_ = profileBuilder_.build();
+        }
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof io.opencannabis.schema.contact.GenericContact.SocialInfo) {
+          return mergeFrom((io.opencannabis.schema.contact.GenericContact.SocialInfo)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(io.opencannabis.schema.contact.GenericContact.SocialInfo other) {
+        if (other == io.opencannabis.schema.contact.GenericContact.SocialInfo.getDefaultInstance()) return this;
+        if (profileBuilder_ == null) {
+          if (!other.profile_.isEmpty()) {
+            if (profile_.isEmpty()) {
+              profile_ = other.profile_;
+              bitField0_ = (bitField0_ & ~0x00000001);
+            } else {
+              ensureProfileIsMutable();
+              profile_.addAll(other.profile_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.profile_.isEmpty()) {
+            if (profileBuilder_.isEmpty()) {
+              profileBuilder_.dispose();
+              profileBuilder_ = null;
+              profile_ = other.profile_;
+              bitField0_ = (bitField0_ & ~0x00000001);
+              profileBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getProfileFieldBuilder() : null;
+            } else {
+              profileBuilder_.addAllMessages(other.profile_);
+            }
+          }
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        io.opencannabis.schema.contact.GenericContact.SocialInfo parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (io.opencannabis.schema.contact.GenericContact.SocialInfo) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+      private int bitField0_;
+
+      private java.util.List<io.opencannabis.schema.contact.GenericContact.SocialInfo.SocialProfile> profile_ =
+        java.util.Collections.emptyList();
+      private void ensureProfileIsMutable() {
+        if (!((bitField0_ & 0x00000001) != 0)) {
+          profile_ = new java.util.ArrayList<io.opencannabis.schema.contact.GenericContact.SocialInfo.SocialProfile>(profile_);
+          bitField0_ |= 0x00000001;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          io.opencannabis.schema.contact.GenericContact.SocialInfo.SocialProfile, io.opencannabis.schema.contact.GenericContact.SocialInfo.SocialProfile.Builder, io.opencannabis.schema.contact.GenericContact.SocialInfo.SocialProfileOrBuilder> profileBuilder_;
+
+      /**
+       * <pre>
+       * Profile listings for a given entity or person.
+       * </pre>
+       *
+       * <code>repeated .opencannabis.contact.SocialInfo.SocialProfile profile = 1;</code>
+       */
+      public java.util.List<io.opencannabis.schema.contact.GenericContact.SocialInfo.SocialProfile> getProfileList() {
+        if (profileBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(profile_);
+        } else {
+          return profileBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <pre>
+       * Profile listings for a given entity or person.
+       * </pre>
+       *
+       * <code>repeated .opencannabis.contact.SocialInfo.SocialProfile profile = 1;</code>
+       */
+      public int getProfileCount() {
+        if (profileBuilder_ == null) {
+          return profile_.size();
+        } else {
+          return profileBuilder_.getCount();
+        }
+      }
+      /**
+       * <pre>
+       * Profile listings for a given entity or person.
+       * </pre>
+       *
+       * <code>repeated .opencannabis.contact.SocialInfo.SocialProfile profile = 1;</code>
+       */
+      public io.opencannabis.schema.contact.GenericContact.SocialInfo.SocialProfile getProfile(int index) {
+        if (profileBuilder_ == null) {
+          return profile_.get(index);
+        } else {
+          return profileBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <pre>
+       * Profile listings for a given entity or person.
+       * </pre>
+       *
+       * <code>repeated .opencannabis.contact.SocialInfo.SocialProfile profile = 1;</code>
+       */
+      public Builder setProfile(
+          int index, io.opencannabis.schema.contact.GenericContact.SocialInfo.SocialProfile value) {
+        if (profileBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureProfileIsMutable();
+          profile_.set(index, value);
+          onChanged();
+        } else {
+          profileBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Profile listings for a given entity or person.
+       * </pre>
+       *
+       * <code>repeated .opencannabis.contact.SocialInfo.SocialProfile profile = 1;</code>
+       */
+      public Builder setProfile(
+          int index, io.opencannabis.schema.contact.GenericContact.SocialInfo.SocialProfile.Builder builderForValue) {
+        if (profileBuilder_ == null) {
+          ensureProfileIsMutable();
+          profile_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          profileBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Profile listings for a given entity or person.
+       * </pre>
+       *
+       * <code>repeated .opencannabis.contact.SocialInfo.SocialProfile profile = 1;</code>
+       */
+      public Builder addProfile(io.opencannabis.schema.contact.GenericContact.SocialInfo.SocialProfile value) {
+        if (profileBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureProfileIsMutable();
+          profile_.add(value);
+          onChanged();
+        } else {
+          profileBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Profile listings for a given entity or person.
+       * </pre>
+       *
+       * <code>repeated .opencannabis.contact.SocialInfo.SocialProfile profile = 1;</code>
+       */
+      public Builder addProfile(
+          int index, io.opencannabis.schema.contact.GenericContact.SocialInfo.SocialProfile value) {
+        if (profileBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureProfileIsMutable();
+          profile_.add(index, value);
+          onChanged();
+        } else {
+          profileBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Profile listings for a given entity or person.
+       * </pre>
+       *
+       * <code>repeated .opencannabis.contact.SocialInfo.SocialProfile profile = 1;</code>
+       */
+      public Builder addProfile(
+          io.opencannabis.schema.contact.GenericContact.SocialInfo.SocialProfile.Builder builderForValue) {
+        if (profileBuilder_ == null) {
+          ensureProfileIsMutable();
+          profile_.add(builderForValue.build());
+          onChanged();
+        } else {
+          profileBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Profile listings for a given entity or person.
+       * </pre>
+       *
+       * <code>repeated .opencannabis.contact.SocialInfo.SocialProfile profile = 1;</code>
+       */
+      public Builder addProfile(
+          int index, io.opencannabis.schema.contact.GenericContact.SocialInfo.SocialProfile.Builder builderForValue) {
+        if (profileBuilder_ == null) {
+          ensureProfileIsMutable();
+          profile_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          profileBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Profile listings for a given entity or person.
+       * </pre>
+       *
+       * <code>repeated .opencannabis.contact.SocialInfo.SocialProfile profile = 1;</code>
+       */
+      public Builder addAllProfile(
+          java.lang.Iterable<? extends io.opencannabis.schema.contact.GenericContact.SocialInfo.SocialProfile> values) {
+        if (profileBuilder_ == null) {
+          ensureProfileIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, profile_);
+          onChanged();
+        } else {
+          profileBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Profile listings for a given entity or person.
+       * </pre>
+       *
+       * <code>repeated .opencannabis.contact.SocialInfo.SocialProfile profile = 1;</code>
+       */
+      public Builder clearProfile() {
+        if (profileBuilder_ == null) {
+          profile_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000001);
+          onChanged();
+        } else {
+          profileBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Profile listings for a given entity or person.
+       * </pre>
+       *
+       * <code>repeated .opencannabis.contact.SocialInfo.SocialProfile profile = 1;</code>
+       */
+      public Builder removeProfile(int index) {
+        if (profileBuilder_ == null) {
+          ensureProfileIsMutable();
+          profile_.remove(index);
+          onChanged();
+        } else {
+          profileBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Profile listings for a given entity or person.
+       * </pre>
+       *
+       * <code>repeated .opencannabis.contact.SocialInfo.SocialProfile profile = 1;</code>
+       */
+      public io.opencannabis.schema.contact.GenericContact.SocialInfo.SocialProfile.Builder getProfileBuilder(
+          int index) {
+        return getProfileFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <pre>
+       * Profile listings for a given entity or person.
+       * </pre>
+       *
+       * <code>repeated .opencannabis.contact.SocialInfo.SocialProfile profile = 1;</code>
+       */
+      public io.opencannabis.schema.contact.GenericContact.SocialInfo.SocialProfileOrBuilder getProfileOrBuilder(
+          int index) {
+        if (profileBuilder_ == null) {
+          return profile_.get(index);  } else {
+          return profileBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <pre>
+       * Profile listings for a given entity or person.
+       * </pre>
+       *
+       * <code>repeated .opencannabis.contact.SocialInfo.SocialProfile profile = 1;</code>
+       */
+      public java.util.List<? extends io.opencannabis.schema.contact.GenericContact.SocialInfo.SocialProfileOrBuilder> 
+           getProfileOrBuilderList() {
+        if (profileBuilder_ != null) {
+          return profileBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(profile_);
+        }
+      }
+      /**
+       * <pre>
+       * Profile listings for a given entity or person.
+       * </pre>
+       *
+       * <code>repeated .opencannabis.contact.SocialInfo.SocialProfile profile = 1;</code>
+       */
+      public io.opencannabis.schema.contact.GenericContact.SocialInfo.SocialProfile.Builder addProfileBuilder() {
+        return getProfileFieldBuilder().addBuilder(
+            io.opencannabis.schema.contact.GenericContact.SocialInfo.SocialProfile.getDefaultInstance());
+      }
+      /**
+       * <pre>
+       * Profile listings for a given entity or person.
+       * </pre>
+       *
+       * <code>repeated .opencannabis.contact.SocialInfo.SocialProfile profile = 1;</code>
+       */
+      public io.opencannabis.schema.contact.GenericContact.SocialInfo.SocialProfile.Builder addProfileBuilder(
+          int index) {
+        return getProfileFieldBuilder().addBuilder(
+            index, io.opencannabis.schema.contact.GenericContact.SocialInfo.SocialProfile.getDefaultInstance());
+      }
+      /**
+       * <pre>
+       * Profile listings for a given entity or person.
+       * </pre>
+       *
+       * <code>repeated .opencannabis.contact.SocialInfo.SocialProfile profile = 1;</code>
+       */
+      public java.util.List<io.opencannabis.schema.contact.GenericContact.SocialInfo.SocialProfile.Builder> 
+           getProfileBuilderList() {
+        return getProfileFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          io.opencannabis.schema.contact.GenericContact.SocialInfo.SocialProfile, io.opencannabis.schema.contact.GenericContact.SocialInfo.SocialProfile.Builder, io.opencannabis.schema.contact.GenericContact.SocialInfo.SocialProfileOrBuilder> 
+          getProfileFieldBuilder() {
+        if (profileBuilder_ == null) {
+          profileBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              io.opencannabis.schema.contact.GenericContact.SocialInfo.SocialProfile, io.opencannabis.schema.contact.GenericContact.SocialInfo.SocialProfile.Builder, io.opencannabis.schema.contact.GenericContact.SocialInfo.SocialProfileOrBuilder>(
+                  profile_,
+                  ((bitField0_ & 0x00000001) != 0),
+                  getParentForChildren(),
+                  isClean());
+          profile_ = null;
+        }
+        return profileBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:opencannabis.contact.SocialInfo)
+    }
+
+    // @@protoc_insertion_point(class_scope:opencannabis.contact.SocialInfo)
+    private static final io.opencannabis.schema.contact.GenericContact.SocialInfo DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new io.opencannabis.schema.contact.GenericContact.SocialInfo();
+    }
+
+    public static io.opencannabis.schema.contact.GenericContact.SocialInfo getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<SocialInfo>
+        PARSER = new com.google.protobuf.AbstractParser<SocialInfo>() {
+      @java.lang.Override
+      public SocialInfo parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new SocialInfo(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<SocialInfo> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<SocialInfo> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public io.opencannabis.schema.contact.GenericContact.SocialInfo getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
   private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_opencannabis_contact_ContactInfo_descriptor;
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_opencannabis_contact_ContactInfo_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_opencannabis_contact_SocialInfo_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_opencannabis_contact_SocialInfo_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_opencannabis_contact_SocialInfo_SocialProfile_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_opencannabis_contact_SocialInfo_SocialProfile_fieldAccessorTable;
 
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
@@ -1495,9 +3874,19 @@ public final class GenericContact {
       "bis.contact.EmailAddressB\'\212@$Electronic " +
       "mail contact information.\022O\n\007website\030\004 \001" +
       "(\0132\035.opencannabis.contact.WebsiteB\037\212@\034We" +
-      "bsite contact information.B:\n\036io.opencan" +
-      "nabis.schema.contactB\016GenericContactH\001P\000" +
-      "\242\002\003OCSb\006proto3"
+      "bsite contact information.\"\202\003\n\nSocialInf" +
+      "o\022?\n\007profile\030\001 \003(\0132..opencannabis.contac" +
+      "t.SocialInfo.SocialProfile\032\255\001\n\rSocialPro" +
+      "file\022@\n\005known\030\n \001(\0162/.opencannabis.conta" +
+      "ct.SocialInfo.SocialProviderH\000\022\020\n\006custom" +
+      "\030\013 \001(\tH\000\022\020\n\010username\030\001 \001(\t\022*\n\003url\030\002 \001(\0132" +
+      "\035.opencannabis.contact.WebsiteB\n\n\010provid" +
+      "er\"\202\001\n\016SocialProvider\022\037\n\033UNSPECIFIED_SOC" +
+      "IAL_PROVIDER\020\000\022\014\n\010FACEBOOK\020\001\022\013\n\007TWITTER\020" +
+      "\002\022\r\n\tINSTAGRAM\020\003\022\013\n\007YOUTUBE\020\004\022\n\n\006LEAFLY\020" +
+      "\005\022\014\n\010WEEDMAPS\020\006B:\n\036io.opencannabis.schem" +
+      "a.contactB\016GenericContactH\001P\000\242\002\003OCSb\006pro" +
+      "to3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -1522,6 +3911,18 @@ public final class GenericContact {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_opencannabis_contact_ContactInfo_descriptor,
         new java.lang.String[] { "Location", "Phone", "Email", "Website", });
+    internal_static_opencannabis_contact_SocialInfo_descriptor =
+      getDescriptor().getMessageTypes().get(1);
+    internal_static_opencannabis_contact_SocialInfo_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_opencannabis_contact_SocialInfo_descriptor,
+        new java.lang.String[] { "Profile", });
+    internal_static_opencannabis_contact_SocialInfo_SocialProfile_descriptor =
+      internal_static_opencannabis_contact_SocialInfo_descriptor.getNestedTypes().get(0);
+    internal_static_opencannabis_contact_SocialInfo_SocialProfile_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_opencannabis_contact_SocialInfo_SocialProfile_descriptor,
+        new java.lang.String[] { "Known", "Custom", "Username", "Url", "Provider", });
     com.google.protobuf.ExtensionRegistry registry =
         com.google.protobuf.ExtensionRegistry.newInstance();
     registry.add(gen_bq_schema.BqField.description);

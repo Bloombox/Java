@@ -1,12 +1,11 @@
 /*
- * Copyright 2018, Momentum Ideas, Co. All rights reserved.
+ * Copyright 2019, Momentum Ideas Co.
  *
- * Source and object computer code contained herein is the private intellectual
- * property of Momentum Ideas Co., a Delaware Corporation. Use of this
- * code in source form requires permission in writing before use or the
- * assembly, distribution, or publishing of derivative works, for commercial
- * purposes or any other purpose, from a duly authorized officer of Momentum
- * Ideas Co.
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *  http://www.apache.org/licenses/LICENSE-2.0
  *
  * Unless required by applicable law or agreed to in writing, software
  * distributed under the License is distributed on an "AS IS" BASIS,
@@ -107,36 +106,52 @@ public enum PricingWeightTier
   OUNCE(8),
   /**
    * <pre>
+   * Pricing for 'QUARTER POUND' of subject material or merchandise.
+   * </pre>
+   *
+   * <code>QUARTERPOUND = 9;</code>
+   */
+  QUARTERPOUND(9),
+  /**
+   * <pre>
+   * Pricing for 'HALF POUND' of subject material or merchandise.
+   * </pre>
+   *
+   * <code>HALFPOUND = 10;</code>
+   */
+  HALFPOUND(10),
+  /**
+   * <pre>
    * Pricing for 'ONE POUND' of subject material or merchandise.
    * </pre>
    *
-   * <code>POUND = 9;</code>
+   * <code>POUND = 11;</code>
    */
-  POUND(9),
+  POUND(11),
   /**
    * <pre>
    * Pricing for 'ONE KILO' of subject material or merchandise.
    * </pre>
    *
-   * <code>KILO = 10;</code>
+   * <code>KILO = 12;</code>
    */
-  KILO(10),
+  KILO(12),
   /**
    * <pre>
    * Pricing for 'ONE TON' of subject material or merchandise.
    * </pre>
    *
-   * <code>TON = 11;</code>
+   * <code>TON = 13;</code>
    */
-  TON(11),
+  TON(13),
   /**
    * <pre>
    * 'Other,' or custom weighted pricing.
    * </pre>
    *
-   * <code>OTHER = 12;</code>
+   * <code>OTHER = 99;</code>
    */
-  OTHER(12),
+  OTHER(99),
   UNRECOGNIZED(-1),
   ;
 
@@ -216,36 +231,52 @@ public enum PricingWeightTier
   public static final int OUNCE_VALUE = 8;
   /**
    * <pre>
+   * Pricing for 'QUARTER POUND' of subject material or merchandise.
+   * </pre>
+   *
+   * <code>QUARTERPOUND = 9;</code>
+   */
+  public static final int QUARTERPOUND_VALUE = 9;
+  /**
+   * <pre>
+   * Pricing for 'HALF POUND' of subject material or merchandise.
+   * </pre>
+   *
+   * <code>HALFPOUND = 10;</code>
+   */
+  public static final int HALFPOUND_VALUE = 10;
+  /**
+   * <pre>
    * Pricing for 'ONE POUND' of subject material or merchandise.
    * </pre>
    *
-   * <code>POUND = 9;</code>
+   * <code>POUND = 11;</code>
    */
-  public static final int POUND_VALUE = 9;
+  public static final int POUND_VALUE = 11;
   /**
    * <pre>
    * Pricing for 'ONE KILO' of subject material or merchandise.
    * </pre>
    *
-   * <code>KILO = 10;</code>
+   * <code>KILO = 12;</code>
    */
-  public static final int KILO_VALUE = 10;
+  public static final int KILO_VALUE = 12;
   /**
    * <pre>
    * Pricing for 'ONE TON' of subject material or merchandise.
    * </pre>
    *
-   * <code>TON = 11;</code>
+   * <code>TON = 13;</code>
    */
-  public static final int TON_VALUE = 11;
+  public static final int TON_VALUE = 13;
   /**
    * <pre>
    * 'Other,' or custom weighted pricing.
    * </pre>
    *
-   * <code>OTHER = 12;</code>
+   * <code>OTHER = 99;</code>
    */
-  public static final int OTHER_VALUE = 12;
+  public static final int OTHER_VALUE = 99;
 
 
   public final int getNumber() {
@@ -275,10 +306,12 @@ public enum PricingWeightTier
       case 6: return QUARTER;
       case 7: return HALF;
       case 8: return OUNCE;
-      case 9: return POUND;
-      case 10: return KILO;
-      case 11: return TON;
-      case 12: return OTHER;
+      case 9: return QUARTERPOUND;
+      case 10: return HALFPOUND;
+      case 11: return POUND;
+      case 12: return KILO;
+      case 13: return TON;
+      case 99: return OTHER;
       default: return null;
     }
   }

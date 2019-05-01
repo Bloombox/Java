@@ -1,5 +1,5 @@
 /*
- * Copyright 2018, Momentum Ideas, Co. All rights reserved.
+ * Copyright 2019, Momentum Ideas, Co. All rights reserved.
  *
  * Source and object computer code contained herein is the private intellectual
  * property of Momentum Ideas Co., a Delaware Corporation. Use of this
@@ -992,7 +992,7 @@ public final class Aspects {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -1213,7 +1213,7 @@ public final class Aspects {
                 break;
               }
               default: {
-                if (!parseUnknownFieldProto3(
+                if (!parseUnknownField(
                     input, unknownFields, extensionRegistry, tag)) {
                   done = true;
                 }
@@ -1548,37 +1548,34 @@ public final class Aspects {
         }
         io.bloombox.schema.identity.bioprint.Aspects.Aspect.ProductCategory other = (io.bloombox.schema.identity.bioprint.Aspects.Aspect.ProductCategory) obj;
 
-        boolean result = true;
-        result = result && kind_ == other.kind_;
-        result = result && getSubcategoryCase().equals(
-            other.getSubcategoryCase());
-        if (!result) return false;
+        if (kind_ != other.kind_) return false;
+        if (!getSubcategoryCase().equals(other.getSubcategoryCase())) return false;
         switch (subcategoryCase_) {
           case 10:
-            result = result && getApothecaryValue()
-                == other.getApothecaryValue();
+            if (getApothecaryValue()
+                != other.getApothecaryValue()) return false;
             break;
           case 11:
-            result = result && getCartridgeValue()
-                == other.getCartridgeValue();
+            if (getCartridgeValue()
+                != other.getCartridgeValue()) return false;
             break;
           case 12:
-            result = result && getEdibleValue()
-                == other.getEdibleValue();
+            if (getEdibleValue()
+                != other.getEdibleValue()) return false;
             break;
           case 13:
-            result = result && getExtractValue()
-                == other.getExtractValue();
+            if (getExtractValue()
+                != other.getExtractValue()) return false;
             break;
           case 14:
-            result = result && getPlantValue()
-                == other.getPlantValue();
+            if (getPlantValue()
+                != other.getPlantValue()) return false;
             break;
           case 0:
           default:
         }
-        result = result && unknownFields.equals(other.unknownFields);
-        return result;
+        if (!unknownFields.equals(other.unknownFields)) return false;
+        return true;
       }
 
       @java.lang.Override
@@ -1805,35 +1802,35 @@ public final class Aspects {
 
         @java.lang.Override
         public Builder clone() {
-          return (Builder) super.clone();
+          return super.clone();
         }
         @java.lang.Override
         public Builder setField(
             com.google.protobuf.Descriptors.FieldDescriptor field,
             java.lang.Object value) {
-          return (Builder) super.setField(field, value);
+          return super.setField(field, value);
         }
         @java.lang.Override
         public Builder clearField(
             com.google.protobuf.Descriptors.FieldDescriptor field) {
-          return (Builder) super.clearField(field);
+          return super.clearField(field);
         }
         @java.lang.Override
         public Builder clearOneof(
             com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-          return (Builder) super.clearOneof(oneof);
+          return super.clearOneof(oneof);
         }
         @java.lang.Override
         public Builder setRepeatedField(
             com.google.protobuf.Descriptors.FieldDescriptor field,
             int index, java.lang.Object value) {
-          return (Builder) super.setRepeatedField(field, index, value);
+          return super.setRepeatedField(field, index, value);
         }
         @java.lang.Override
         public Builder addRepeatedField(
             com.google.protobuf.Descriptors.FieldDescriptor field,
             java.lang.Object value) {
-          return (Builder) super.addRepeatedField(field, value);
+          return super.addRepeatedField(field, value);
         }
         @java.lang.Override
         public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -2356,7 +2353,7 @@ public final class Aspects {
         @java.lang.Override
         public final Builder setUnknownFields(
             final com.google.protobuf.UnknownFieldSet unknownFields) {
-          return super.setUnknownFieldsProto3(unknownFields);
+          return super.setUnknownFields(unknownFields);
         }
 
         @java.lang.Override
@@ -2493,7 +2490,7 @@ public final class Aspects {
                 break;
               }
               default: {
-                if (!parseUnknownFieldProto3(
+                if (!parseUnknownField(
                     input, unknownFields, extensionRegistry, tag)) {
                   done = true;
                 }
@@ -2602,14 +2599,13 @@ public final class Aspects {
         }
         io.bloombox.schema.identity.bioprint.Aspects.Aspect.MethodOfConsumption other = (io.bloombox.schema.identity.bioprint.Aspects.Aspect.MethodOfConsumption) obj;
 
-        boolean result = true;
-        result = result && (hasBioDelivery() == other.hasBioDelivery());
+        if (hasBioDelivery() != other.hasBioDelivery()) return false;
         if (hasBioDelivery()) {
-          result = result && getBioDelivery()
-              .equals(other.getBioDelivery());
+          if (!getBioDelivery()
+              .equals(other.getBioDelivery())) return false;
         }
-        result = result && unknownFields.equals(other.unknownFields);
-        return result;
+        if (!unknownFields.equals(other.unknownFields)) return false;
+        return true;
       }
 
       @java.lang.Override
@@ -2804,35 +2800,35 @@ public final class Aspects {
 
         @java.lang.Override
         public Builder clone() {
-          return (Builder) super.clone();
+          return super.clone();
         }
         @java.lang.Override
         public Builder setField(
             com.google.protobuf.Descriptors.FieldDescriptor field,
             java.lang.Object value) {
-          return (Builder) super.setField(field, value);
+          return super.setField(field, value);
         }
         @java.lang.Override
         public Builder clearField(
             com.google.protobuf.Descriptors.FieldDescriptor field) {
-          return (Builder) super.clearField(field);
+          return super.clearField(field);
         }
         @java.lang.Override
         public Builder clearOneof(
             com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-          return (Builder) super.clearOneof(oneof);
+          return super.clearOneof(oneof);
         }
         @java.lang.Override
         public Builder setRepeatedField(
             com.google.protobuf.Descriptors.FieldDescriptor field,
             int index, java.lang.Object value) {
-          return (Builder) super.setRepeatedField(field, index, value);
+          return super.setRepeatedField(field, index, value);
         }
         @java.lang.Override
         public Builder addRepeatedField(
             com.google.protobuf.Descriptors.FieldDescriptor field,
             java.lang.Object value) {
-          return (Builder) super.addRepeatedField(field, value);
+          return super.addRepeatedField(field, value);
         }
         @java.lang.Override
         public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -2878,7 +2874,7 @@ public final class Aspects {
           return this;
         }
 
-        private io.bloombox.schema.consumption.Biodelivery.BiodeliveryInfo bioDelivery_ = null;
+        private io.bloombox.schema.consumption.Biodelivery.BiodeliveryInfo bioDelivery_;
         private com.google.protobuf.SingleFieldBuilderV3<
             io.bloombox.schema.consumption.Biodelivery.BiodeliveryInfo, io.bloombox.schema.consumption.Biodelivery.BiodeliveryInfo.Builder, io.bloombox.schema.consumption.Biodelivery.BiodeliveryInfoOrBuilder> bioDeliveryBuilder_;
         /**
@@ -3033,7 +3029,7 @@ public final class Aspects {
         @java.lang.Override
         public final Builder setUnknownFields(
             final com.google.protobuf.UnknownFieldSet unknownFields) {
-          return super.setUnknownFieldsProto3(unknownFields);
+          return super.setUnknownFields(unknownFields);
         }
 
         @java.lang.Override
@@ -3249,7 +3245,6 @@ public final class Aspects {
         super(builder);
       }
       private CompoundMeasurement() {
-        presence_ = false;
       }
 
       @java.lang.Override
@@ -3346,7 +3341,7 @@ public final class Aspects {
                 break;
               }
               default: {
-                if (!parseUnknownFieldProto3(
+                if (!parseUnknownField(
                     input, unknownFields, extensionRegistry, tag)) {
                   done = true;
                 }
@@ -3895,46 +3890,43 @@ public final class Aspects {
         }
         io.bloombox.schema.identity.bioprint.Aspects.Aspect.CompoundMeasurement other = (io.bloombox.schema.identity.bioprint.Aspects.Aspect.CompoundMeasurement) obj;
 
-        boolean result = true;
-        result = result && (hasMinimum() == other.hasMinimum());
+        if (hasMinimum() != other.hasMinimum()) return false;
         if (hasMinimum()) {
-          result = result && getMinimum()
-              .equals(other.getMinimum());
+          if (!getMinimum()
+              .equals(other.getMinimum())) return false;
         }
-        result = result && (hasAverage() == other.hasAverage());
+        if (hasAverage() != other.hasAverage()) return false;
         if (hasAverage()) {
-          result = result && getAverage()
-              .equals(other.getAverage());
+          if (!getAverage()
+              .equals(other.getAverage())) return false;
         }
-        result = result && (hasMaximum() == other.hasMaximum());
+        if (hasMaximum() != other.hasMaximum()) return false;
         if (hasMaximum()) {
-          result = result && getMaximum()
-              .equals(other.getMaximum());
+          if (!getMaximum()
+              .equals(other.getMaximum())) return false;
         }
-        result = result && (hasRounded() == other.hasRounded());
+        if (hasRounded() != other.hasRounded()) return false;
         if (hasRounded()) {
-          result = result && getRounded()
-              .equals(other.getRounded());
+          if (!getRounded()
+              .equals(other.getRounded())) return false;
         }
-        result = result && (getPresence()
-            == other.getPresence());
-        result = result && getCompoundCase().equals(
-            other.getCompoundCase());
-        if (!result) return false;
+        if (getPresence()
+            != other.getPresence()) return false;
+        if (!getCompoundCase().equals(other.getCompoundCase())) return false;
         switch (compoundCase_) {
           case 10:
-            result = result && getCannabinoidValue()
-                == other.getCannabinoidValue();
+            if (getCannabinoidValue()
+                != other.getCannabinoidValue()) return false;
             break;
           case 11:
-            result = result && getTerpeneValue()
-                == other.getTerpeneValue();
+            if (getTerpeneValue()
+                != other.getTerpeneValue()) return false;
             break;
           case 0:
           default:
         }
-        result = result && unknownFields.equals(other.unknownFields);
-        return result;
+        if (!unknownFields.equals(other.unknownFields)) return false;
+        return true;
       }
 
       @java.lang.Override
@@ -4200,35 +4192,35 @@ public final class Aspects {
 
         @java.lang.Override
         public Builder clone() {
-          return (Builder) super.clone();
+          return super.clone();
         }
         @java.lang.Override
         public Builder setField(
             com.google.protobuf.Descriptors.FieldDescriptor field,
             java.lang.Object value) {
-          return (Builder) super.setField(field, value);
+          return super.setField(field, value);
         }
         @java.lang.Override
         public Builder clearField(
             com.google.protobuf.Descriptors.FieldDescriptor field) {
-          return (Builder) super.clearField(field);
+          return super.clearField(field);
         }
         @java.lang.Override
         public Builder clearOneof(
             com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-          return (Builder) super.clearOneof(oneof);
+          return super.clearOneof(oneof);
         }
         @java.lang.Override
         public Builder setRepeatedField(
             com.google.protobuf.Descriptors.FieldDescriptor field,
             int index, java.lang.Object value) {
-          return (Builder) super.setRepeatedField(field, index, value);
+          return super.setRepeatedField(field, index, value);
         }
         @java.lang.Override
         public Builder addRepeatedField(
             com.google.protobuf.Descriptors.FieldDescriptor field,
             java.lang.Object value) {
-          return (Builder) super.addRepeatedField(field, value);
+          return super.addRepeatedField(field, value);
         }
         @java.lang.Override
         public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -4314,7 +4306,7 @@ public final class Aspects {
         }
 
 
-        private io.opencannabis.schema.product.struct.testing.TestValue minimum_ = null;
+        private io.opencannabis.schema.product.struct.testing.TestValue minimum_;
         private com.google.protobuf.SingleFieldBuilderV3<
             io.opencannabis.schema.product.struct.testing.TestValue, io.opencannabis.schema.product.struct.testing.TestValue.Builder, io.opencannabis.schema.product.struct.testing.TestValueOrBuilder> minimumBuilder_;
         /**
@@ -4467,7 +4459,7 @@ public final class Aspects {
           return minimumBuilder_;
         }
 
-        private io.opencannabis.schema.product.struct.testing.TestValue average_ = null;
+        private io.opencannabis.schema.product.struct.testing.TestValue average_;
         private com.google.protobuf.SingleFieldBuilderV3<
             io.opencannabis.schema.product.struct.testing.TestValue, io.opencannabis.schema.product.struct.testing.TestValue.Builder, io.opencannabis.schema.product.struct.testing.TestValueOrBuilder> averageBuilder_;
         /**
@@ -4620,7 +4612,7 @@ public final class Aspects {
           return averageBuilder_;
         }
 
-        private io.opencannabis.schema.product.struct.testing.TestValue maximum_ = null;
+        private io.opencannabis.schema.product.struct.testing.TestValue maximum_;
         private com.google.protobuf.SingleFieldBuilderV3<
             io.opencannabis.schema.product.struct.testing.TestValue, io.opencannabis.schema.product.struct.testing.TestValue.Builder, io.opencannabis.schema.product.struct.testing.TestValueOrBuilder> maximumBuilder_;
         /**
@@ -4773,7 +4765,7 @@ public final class Aspects {
           return maximumBuilder_;
         }
 
-        private io.opencannabis.schema.product.struct.testing.TestValue rounded_ = null;
+        private io.opencannabis.schema.product.struct.testing.TestValue rounded_;
         private com.google.protobuf.SingleFieldBuilderV3<
             io.opencannabis.schema.product.struct.testing.TestValue, io.opencannabis.schema.product.struct.testing.TestValue.Builder, io.opencannabis.schema.product.struct.testing.TestValueOrBuilder> roundedBuilder_;
         /**
@@ -5114,7 +5106,7 @@ public final class Aspects {
         @java.lang.Override
         public final Builder setUnknownFields(
             final com.google.protobuf.UnknownFieldSet unknownFields) {
-          return super.setUnknownFieldsProto3(unknownFields);
+          return super.setUnknownFields(unknownFields);
         }
 
         @java.lang.Override
@@ -5237,7 +5229,7 @@ public final class Aspects {
                 break;
               }
               default: {
-                if (!parseUnknownFieldProto3(
+                if (!parseUnknownField(
                     input, unknownFields, extensionRegistry, tag)) {
                   done = true;
                 }
@@ -5524,10 +5516,9 @@ public final class Aspects {
         }
         io.bloombox.schema.identity.bioprint.Aspects.Aspect.BoundedCompoundMeasurement other = (io.bloombox.schema.identity.bioprint.Aspects.Aspect.BoundedCompoundMeasurement) obj;
 
-        boolean result = true;
-        result = result && bucket_ == other.bucket_;
-        result = result && unknownFields.equals(other.unknownFields);
-        return result;
+        if (bucket_ != other.bucket_) return false;
+        if (!unknownFields.equals(other.unknownFields)) return false;
+        return true;
       }
 
       @java.lang.Override
@@ -5712,35 +5703,35 @@ public final class Aspects {
 
         @java.lang.Override
         public Builder clone() {
-          return (Builder) super.clone();
+          return super.clone();
         }
         @java.lang.Override
         public Builder setField(
             com.google.protobuf.Descriptors.FieldDescriptor field,
             java.lang.Object value) {
-          return (Builder) super.setField(field, value);
+          return super.setField(field, value);
         }
         @java.lang.Override
         public Builder clearField(
             com.google.protobuf.Descriptors.FieldDescriptor field) {
-          return (Builder) super.clearField(field);
+          return super.clearField(field);
         }
         @java.lang.Override
         public Builder clearOneof(
             com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-          return (Builder) super.clearOneof(oneof);
+          return super.clearOneof(oneof);
         }
         @java.lang.Override
         public Builder setRepeatedField(
             com.google.protobuf.Descriptors.FieldDescriptor field,
             int index, java.lang.Object value) {
-          return (Builder) super.setRepeatedField(field, index, value);
+          return super.setRepeatedField(field, index, value);
         }
         @java.lang.Override
         public Builder addRepeatedField(
             com.google.protobuf.Descriptors.FieldDescriptor field,
             java.lang.Object value) {
-          return (Builder) super.addRepeatedField(field, value);
+          return super.addRepeatedField(field, value);
         }
         @java.lang.Override
         public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -5853,7 +5844,7 @@ public final class Aspects {
         @java.lang.Override
         public final Builder setUnknownFields(
             final com.google.protobuf.UnknownFieldSet unknownFields) {
-          return super.setUnknownFieldsProto3(unknownFields);
+          return super.setUnknownFields(unknownFields);
         }
 
         @java.lang.Override
@@ -6027,7 +6018,7 @@ public final class Aspects {
                 break;
               }
               default: {
-                if (!parseUnknownFieldProto3(
+                if (!parseUnknownField(
                     input, unknownFields, extensionRegistry, tag)) {
                   done = true;
                 }
@@ -6124,7 +6115,6 @@ public final class Aspects {
           super(builder);
         }
         private RatioPortion() {
-          value_ = 0;
         }
 
         @java.lang.Override
@@ -6169,7 +6159,7 @@ public final class Aspects {
                   break;
                 }
                 default: {
-                  if (!parseUnknownFieldProto3(
+                  if (!parseUnknownField(
                       input, unknownFields, extensionRegistry, tag)) {
                     done = true;
                   }
@@ -6372,26 +6362,23 @@ public final class Aspects {
           }
           io.bloombox.schema.identity.bioprint.Aspects.Aspect.CompoundRatio.RatioPortion other = (io.bloombox.schema.identity.bioprint.Aspects.Aspect.CompoundRatio.RatioPortion) obj;
 
-          boolean result = true;
-          result = result && (getValue()
-              == other.getValue());
-          result = result && getCompoundCase().equals(
-              other.getCompoundCase());
-          if (!result) return false;
+          if (getValue()
+              != other.getValue()) return false;
+          if (!getCompoundCase().equals(other.getCompoundCase())) return false;
           switch (compoundCase_) {
             case 10:
-              result = result && getCannabinoidValue()
-                  == other.getCannabinoidValue();
+              if (getCannabinoidValue()
+                  != other.getCannabinoidValue()) return false;
               break;
             case 11:
-              result = result && getTerpeneValue()
-                  == other.getTerpeneValue();
+              if (getTerpeneValue()
+                  != other.getTerpeneValue()) return false;
               break;
             case 0:
             default:
           }
-          result = result && unknownFields.equals(other.unknownFields);
-          return result;
+          if (!unknownFields.equals(other.unknownFields)) return false;
+          return true;
         }
 
         @java.lang.Override
@@ -6596,35 +6583,35 @@ public final class Aspects {
 
           @java.lang.Override
           public Builder clone() {
-            return (Builder) super.clone();
+            return super.clone();
           }
           @java.lang.Override
           public Builder setField(
               com.google.protobuf.Descriptors.FieldDescriptor field,
               java.lang.Object value) {
-            return (Builder) super.setField(field, value);
+            return super.setField(field, value);
           }
           @java.lang.Override
           public Builder clearField(
               com.google.protobuf.Descriptors.FieldDescriptor field) {
-            return (Builder) super.clearField(field);
+            return super.clearField(field);
           }
           @java.lang.Override
           public Builder clearOneof(
               com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-            return (Builder) super.clearOneof(oneof);
+            return super.clearOneof(oneof);
           }
           @java.lang.Override
           public Builder setRepeatedField(
               com.google.protobuf.Descriptors.FieldDescriptor field,
               int index, java.lang.Object value) {
-            return (Builder) super.setRepeatedField(field, index, value);
+            return super.setRepeatedField(field, index, value);
           }
           @java.lang.Override
           public Builder addRepeatedField(
               com.google.protobuf.Descriptors.FieldDescriptor field,
               java.lang.Object value) {
-            return (Builder) super.addRepeatedField(field, value);
+            return super.addRepeatedField(field, value);
           }
           @java.lang.Override
           public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -6886,7 +6873,7 @@ public final class Aspects {
           @java.lang.Override
           public final Builder setUnknownFields(
               final com.google.protobuf.UnknownFieldSet unknownFields) {
-            return super.setUnknownFieldsProto3(unknownFields);
+            return super.setUnknownFields(unknownFields);
           }
 
           @java.lang.Override
@@ -7054,19 +7041,18 @@ public final class Aspects {
         }
         io.bloombox.schema.identity.bioprint.Aspects.Aspect.CompoundRatio other = (io.bloombox.schema.identity.bioprint.Aspects.Aspect.CompoundRatio) obj;
 
-        boolean result = true;
-        result = result && (hasLeft() == other.hasLeft());
+        if (hasLeft() != other.hasLeft()) return false;
         if (hasLeft()) {
-          result = result && getLeft()
-              .equals(other.getLeft());
+          if (!getLeft()
+              .equals(other.getLeft())) return false;
         }
-        result = result && (hasRight() == other.hasRight());
+        if (hasRight() != other.hasRight()) return false;
         if (hasRight()) {
-          result = result && getRight()
-              .equals(other.getRight());
+          if (!getRight()
+              .equals(other.getRight())) return false;
         }
-        result = result && unknownFields.equals(other.unknownFields);
-        return result;
+        if (!unknownFields.equals(other.unknownFields)) return false;
+        return true;
       }
 
       @java.lang.Override
@@ -7275,35 +7261,35 @@ public final class Aspects {
 
         @java.lang.Override
         public Builder clone() {
-          return (Builder) super.clone();
+          return super.clone();
         }
         @java.lang.Override
         public Builder setField(
             com.google.protobuf.Descriptors.FieldDescriptor field,
             java.lang.Object value) {
-          return (Builder) super.setField(field, value);
+          return super.setField(field, value);
         }
         @java.lang.Override
         public Builder clearField(
             com.google.protobuf.Descriptors.FieldDescriptor field) {
-          return (Builder) super.clearField(field);
+          return super.clearField(field);
         }
         @java.lang.Override
         public Builder clearOneof(
             com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-          return (Builder) super.clearOneof(oneof);
+          return super.clearOneof(oneof);
         }
         @java.lang.Override
         public Builder setRepeatedField(
             com.google.protobuf.Descriptors.FieldDescriptor field,
             int index, java.lang.Object value) {
-          return (Builder) super.setRepeatedField(field, index, value);
+          return super.setRepeatedField(field, index, value);
         }
         @java.lang.Override
         public Builder addRepeatedField(
             com.google.protobuf.Descriptors.FieldDescriptor field,
             java.lang.Object value) {
-          return (Builder) super.addRepeatedField(field, value);
+          return super.addRepeatedField(field, value);
         }
         @java.lang.Override
         public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -7352,7 +7338,7 @@ public final class Aspects {
           return this;
         }
 
-        private io.bloombox.schema.identity.bioprint.Aspects.Aspect.CompoundRatio.RatioPortion left_ = null;
+        private io.bloombox.schema.identity.bioprint.Aspects.Aspect.CompoundRatio.RatioPortion left_;
         private com.google.protobuf.SingleFieldBuilderV3<
             io.bloombox.schema.identity.bioprint.Aspects.Aspect.CompoundRatio.RatioPortion, io.bloombox.schema.identity.bioprint.Aspects.Aspect.CompoundRatio.RatioPortion.Builder, io.bloombox.schema.identity.bioprint.Aspects.Aspect.CompoundRatio.RatioPortionOrBuilder> leftBuilder_;
         /**
@@ -7505,7 +7491,7 @@ public final class Aspects {
           return leftBuilder_;
         }
 
-        private io.bloombox.schema.identity.bioprint.Aspects.Aspect.CompoundRatio.RatioPortion right_ = null;
+        private io.bloombox.schema.identity.bioprint.Aspects.Aspect.CompoundRatio.RatioPortion right_;
         private com.google.protobuf.SingleFieldBuilderV3<
             io.bloombox.schema.identity.bioprint.Aspects.Aspect.CompoundRatio.RatioPortion, io.bloombox.schema.identity.bioprint.Aspects.Aspect.CompoundRatio.RatioPortion.Builder, io.bloombox.schema.identity.bioprint.Aspects.Aspect.CompoundRatio.RatioPortionOrBuilder> rightBuilder_;
         /**
@@ -7660,7 +7646,7 @@ public final class Aspects {
         @java.lang.Override
         public final Builder setUnknownFields(
             final com.google.protobuf.UnknownFieldSet unknownFields) {
-          return super.setUnknownFieldsProto3(unknownFields);
+          return super.setUnknownFields(unknownFields);
         }
 
         @java.lang.Override
@@ -7873,7 +7859,7 @@ public final class Aspects {
                 break;
               }
               default: {
-                if (!parseUnknownFieldProto3(
+                if (!parseUnknownField(
                     input, unknownFields, extensionRegistry, tag)) {
                   done = true;
                 }
@@ -8062,24 +8048,23 @@ public final class Aspects {
         }
         io.bloombox.schema.identity.bioprint.Aspects.Aspect.TimingBoundary other = (io.bloombox.schema.identity.bioprint.Aspects.Aspect.TimingBoundary) obj;
 
-        boolean result = true;
-        result = result && (hasFirst() == other.hasFirst());
+        if (hasFirst() != other.hasFirst()) return false;
         if (hasFirst()) {
-          result = result && getFirst()
-              .equals(other.getFirst());
+          if (!getFirst()
+              .equals(other.getFirst())) return false;
         }
-        result = result && (hasLatest() == other.hasLatest());
+        if (hasLatest() != other.hasLatest()) return false;
         if (hasLatest()) {
-          result = result && getLatest()
-              .equals(other.getLatest());
+          if (!getLatest()
+              .equals(other.getLatest())) return false;
         }
-        result = result && (hasArea() == other.hasArea());
+        if (hasArea() != other.hasArea()) return false;
         if (hasArea()) {
-          result = result && getArea()
-              .equals(other.getArea());
+          if (!getArea()
+              .equals(other.getArea())) return false;
         }
-        result = result && unknownFields.equals(other.unknownFields);
-        return result;
+        if (!unknownFields.equals(other.unknownFields)) return false;
+        return true;
       }
 
       @java.lang.Override
@@ -8304,35 +8289,35 @@ public final class Aspects {
 
         @java.lang.Override
         public Builder clone() {
-          return (Builder) super.clone();
+          return super.clone();
         }
         @java.lang.Override
         public Builder setField(
             com.google.protobuf.Descriptors.FieldDescriptor field,
             java.lang.Object value) {
-          return (Builder) super.setField(field, value);
+          return super.setField(field, value);
         }
         @java.lang.Override
         public Builder clearField(
             com.google.protobuf.Descriptors.FieldDescriptor field) {
-          return (Builder) super.clearField(field);
+          return super.clearField(field);
         }
         @java.lang.Override
         public Builder clearOneof(
             com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-          return (Builder) super.clearOneof(oneof);
+          return super.clearOneof(oneof);
         }
         @java.lang.Override
         public Builder setRepeatedField(
             com.google.protobuf.Descriptors.FieldDescriptor field,
             int index, java.lang.Object value) {
-          return (Builder) super.setRepeatedField(field, index, value);
+          return super.setRepeatedField(field, index, value);
         }
         @java.lang.Override
         public Builder addRepeatedField(
             com.google.protobuf.Descriptors.FieldDescriptor field,
             java.lang.Object value) {
-          return (Builder) super.addRepeatedField(field, value);
+          return super.addRepeatedField(field, value);
         }
         @java.lang.Override
         public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -8384,7 +8369,7 @@ public final class Aspects {
           return this;
         }
 
-        private io.opencannabis.schema.temporal.Timehash first_ = null;
+        private io.opencannabis.schema.temporal.Timehash first_;
         private com.google.protobuf.SingleFieldBuilderV3<
             io.opencannabis.schema.temporal.Timehash, io.opencannabis.schema.temporal.Timehash.Builder, io.opencannabis.schema.temporal.TimehashOrBuilder> firstBuilder_;
         /**
@@ -8537,7 +8522,7 @@ public final class Aspects {
           return firstBuilder_;
         }
 
-        private io.opencannabis.schema.temporal.Timehash latest_ = null;
+        private io.opencannabis.schema.temporal.Timehash latest_;
         private com.google.protobuf.SingleFieldBuilderV3<
             io.opencannabis.schema.temporal.Timehash, io.opencannabis.schema.temporal.Timehash.Builder, io.opencannabis.schema.temporal.TimehashOrBuilder> latestBuilder_;
         /**
@@ -8690,7 +8675,7 @@ public final class Aspects {
           return latestBuilder_;
         }
 
-        private io.opencannabis.schema.temporal.Timehash area_ = null;
+        private io.opencannabis.schema.temporal.Timehash area_;
         private com.google.protobuf.SingleFieldBuilderV3<
             io.opencannabis.schema.temporal.Timehash, io.opencannabis.schema.temporal.Timehash.Builder, io.opencannabis.schema.temporal.TimehashOrBuilder> areaBuilder_;
         /**
@@ -8845,7 +8830,7 @@ public final class Aspects {
         @java.lang.Override
         public final Builder setUnknownFields(
             final com.google.protobuf.UnknownFieldSet unknownFields) {
-          return super.setUnknownFieldsProto3(unknownFields);
+          return super.setUnknownFields(unknownFields);
         }
 
         @java.lang.Override
@@ -8982,7 +8967,7 @@ public final class Aspects {
                 break;
               }
               default: {
-                if (!parseUnknownFieldProto3(
+                if (!parseUnknownField(
                     input, unknownFields, extensionRegistry, tag)) {
                   done = true;
                 }
@@ -9091,14 +9076,13 @@ public final class Aspects {
         }
         io.bloombox.schema.identity.bioprint.Aspects.Aspect.LocationBoundary other = (io.bloombox.schema.identity.bioprint.Aspects.Aspect.LocationBoundary) obj;
 
-        boolean result = true;
-        result = result && (hasArea() == other.hasArea());
+        if (hasArea() != other.hasArea()) return false;
         if (hasArea()) {
-          result = result && getArea()
-              .equals(other.getArea());
+          if (!getArea()
+              .equals(other.getArea())) return false;
         }
-        result = result && unknownFields.equals(other.unknownFields);
-        return result;
+        if (!unknownFields.equals(other.unknownFields)) return false;
+        return true;
       }
 
       @java.lang.Override
@@ -9293,35 +9277,35 @@ public final class Aspects {
 
         @java.lang.Override
         public Builder clone() {
-          return (Builder) super.clone();
+          return super.clone();
         }
         @java.lang.Override
         public Builder setField(
             com.google.protobuf.Descriptors.FieldDescriptor field,
             java.lang.Object value) {
-          return (Builder) super.setField(field, value);
+          return super.setField(field, value);
         }
         @java.lang.Override
         public Builder clearField(
             com.google.protobuf.Descriptors.FieldDescriptor field) {
-          return (Builder) super.clearField(field);
+          return super.clearField(field);
         }
         @java.lang.Override
         public Builder clearOneof(
             com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-          return (Builder) super.clearOneof(oneof);
+          return super.clearOneof(oneof);
         }
         @java.lang.Override
         public Builder setRepeatedField(
             com.google.protobuf.Descriptors.FieldDescriptor field,
             int index, java.lang.Object value) {
-          return (Builder) super.setRepeatedField(field, index, value);
+          return super.setRepeatedField(field, index, value);
         }
         @java.lang.Override
         public Builder addRepeatedField(
             com.google.protobuf.Descriptors.FieldDescriptor field,
             java.lang.Object value) {
-          return (Builder) super.addRepeatedField(field, value);
+          return super.addRepeatedField(field, value);
         }
         @java.lang.Override
         public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -9367,7 +9351,7 @@ public final class Aspects {
           return this;
         }
 
-        private io.opencannabis.schema.geo.Geohash area_ = null;
+        private io.opencannabis.schema.geo.Geohash area_;
         private com.google.protobuf.SingleFieldBuilderV3<
             io.opencannabis.schema.geo.Geohash, io.opencannabis.schema.geo.Geohash.Builder, io.opencannabis.schema.geo.GeohashOrBuilder> areaBuilder_;
         /**
@@ -9522,7 +9506,7 @@ public final class Aspects {
         @java.lang.Override
         public final Builder setUnknownFields(
             final com.google.protobuf.UnknownFieldSet unknownFields) {
-          return super.setUnknownFieldsProto3(unknownFields);
+          return super.setUnknownFields(unknownFields);
         }
 
         @java.lang.Override
@@ -9735,7 +9719,7 @@ public final class Aspects {
                 break;
               }
               default: {
-                if (!parseUnknownFieldProto3(
+                if (!parseUnknownField(
                     input, unknownFields, extensionRegistry, tag)) {
                   done = true;
                 }
@@ -9924,24 +9908,23 @@ public final class Aspects {
         }
         io.bloombox.schema.identity.bioprint.Aspects.Aspect.DurationBoundary other = (io.bloombox.schema.identity.bioprint.Aspects.Aspect.DurationBoundary) obj;
 
-        boolean result = true;
-        result = result && (hasMinimum() == other.hasMinimum());
+        if (hasMinimum() != other.hasMinimum()) return false;
         if (hasMinimum()) {
-          result = result && getMinimum()
-              .equals(other.getMinimum());
+          if (!getMinimum()
+              .equals(other.getMinimum())) return false;
         }
-        result = result && (hasAverage() == other.hasAverage());
+        if (hasAverage() != other.hasAverage()) return false;
         if (hasAverage()) {
-          result = result && getAverage()
-              .equals(other.getAverage());
+          if (!getAverage()
+              .equals(other.getAverage())) return false;
         }
-        result = result && (hasMaximum() == other.hasMaximum());
+        if (hasMaximum() != other.hasMaximum()) return false;
         if (hasMaximum()) {
-          result = result && getMaximum()
-              .equals(other.getMaximum());
+          if (!getMaximum()
+              .equals(other.getMaximum())) return false;
         }
-        result = result && unknownFields.equals(other.unknownFields);
-        return result;
+        if (!unknownFields.equals(other.unknownFields)) return false;
+        return true;
       }
 
       @java.lang.Override
@@ -10166,35 +10149,35 @@ public final class Aspects {
 
         @java.lang.Override
         public Builder clone() {
-          return (Builder) super.clone();
+          return super.clone();
         }
         @java.lang.Override
         public Builder setField(
             com.google.protobuf.Descriptors.FieldDescriptor field,
             java.lang.Object value) {
-          return (Builder) super.setField(field, value);
+          return super.setField(field, value);
         }
         @java.lang.Override
         public Builder clearField(
             com.google.protobuf.Descriptors.FieldDescriptor field) {
-          return (Builder) super.clearField(field);
+          return super.clearField(field);
         }
         @java.lang.Override
         public Builder clearOneof(
             com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-          return (Builder) super.clearOneof(oneof);
+          return super.clearOneof(oneof);
         }
         @java.lang.Override
         public Builder setRepeatedField(
             com.google.protobuf.Descriptors.FieldDescriptor field,
             int index, java.lang.Object value) {
-          return (Builder) super.setRepeatedField(field, index, value);
+          return super.setRepeatedField(field, index, value);
         }
         @java.lang.Override
         public Builder addRepeatedField(
             com.google.protobuf.Descriptors.FieldDescriptor field,
             java.lang.Object value) {
-          return (Builder) super.addRepeatedField(field, value);
+          return super.addRepeatedField(field, value);
         }
         @java.lang.Override
         public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -10246,7 +10229,7 @@ public final class Aspects {
           return this;
         }
 
-        private io.opencannabis.schema.temporal.Duration minimum_ = null;
+        private io.opencannabis.schema.temporal.Duration minimum_;
         private com.google.protobuf.SingleFieldBuilderV3<
             io.opencannabis.schema.temporal.Duration, io.opencannabis.schema.temporal.Duration.Builder, io.opencannabis.schema.temporal.DurationOrBuilder> minimumBuilder_;
         /**
@@ -10399,7 +10382,7 @@ public final class Aspects {
           return minimumBuilder_;
         }
 
-        private io.opencannabis.schema.temporal.Duration average_ = null;
+        private io.opencannabis.schema.temporal.Duration average_;
         private com.google.protobuf.SingleFieldBuilderV3<
             io.opencannabis.schema.temporal.Duration, io.opencannabis.schema.temporal.Duration.Builder, io.opencannabis.schema.temporal.DurationOrBuilder> averageBuilder_;
         /**
@@ -10552,7 +10535,7 @@ public final class Aspects {
           return averageBuilder_;
         }
 
-        private io.opencannabis.schema.temporal.Duration maximum_ = null;
+        private io.opencannabis.schema.temporal.Duration maximum_;
         private com.google.protobuf.SingleFieldBuilderV3<
             io.opencannabis.schema.temporal.Duration, io.opencannabis.schema.temporal.Duration.Builder, io.opencannabis.schema.temporal.DurationOrBuilder> maximumBuilder_;
         /**
@@ -10707,7 +10690,7 @@ public final class Aspects {
         @java.lang.Override
         public final Builder setUnknownFields(
             final com.google.protobuf.UnknownFieldSet unknownFields) {
-          return super.setUnknownFieldsProto3(unknownFields);
+          return super.setUnknownFields(unknownFields);
         }
 
         @java.lang.Override
@@ -10920,7 +10903,7 @@ public final class Aspects {
                 break;
               }
               default: {
-                if (!parseUnknownFieldProto3(
+                if (!parseUnknownField(
                     input, unknownFields, extensionRegistry, tag)) {
                   done = true;
                 }
@@ -11109,24 +11092,23 @@ public final class Aspects {
         }
         io.bloombox.schema.identity.bioprint.Aspects.Aspect.CostBoundary other = (io.bloombox.schema.identity.bioprint.Aspects.Aspect.CostBoundary) obj;
 
-        boolean result = true;
-        result = result && (hasMinimum() == other.hasMinimum());
+        if (hasMinimum() != other.hasMinimum()) return false;
         if (hasMinimum()) {
-          result = result && getMinimum()
-              .equals(other.getMinimum());
+          if (!getMinimum()
+              .equals(other.getMinimum())) return false;
         }
-        result = result && (hasAverage() == other.hasAverage());
+        if (hasAverage() != other.hasAverage()) return false;
         if (hasAverage()) {
-          result = result && getAverage()
-              .equals(other.getAverage());
+          if (!getAverage()
+              .equals(other.getAverage())) return false;
         }
-        result = result && (hasMaximum() == other.hasMaximum());
+        if (hasMaximum() != other.hasMaximum()) return false;
         if (hasMaximum()) {
-          result = result && getMaximum()
-              .equals(other.getMaximum());
+          if (!getMaximum()
+              .equals(other.getMaximum())) return false;
         }
-        result = result && unknownFields.equals(other.unknownFields);
-        return result;
+        if (!unknownFields.equals(other.unknownFields)) return false;
+        return true;
       }
 
       @java.lang.Override
@@ -11351,35 +11333,35 @@ public final class Aspects {
 
         @java.lang.Override
         public Builder clone() {
-          return (Builder) super.clone();
+          return super.clone();
         }
         @java.lang.Override
         public Builder setField(
             com.google.protobuf.Descriptors.FieldDescriptor field,
             java.lang.Object value) {
-          return (Builder) super.setField(field, value);
+          return super.setField(field, value);
         }
         @java.lang.Override
         public Builder clearField(
             com.google.protobuf.Descriptors.FieldDescriptor field) {
-          return (Builder) super.clearField(field);
+          return super.clearField(field);
         }
         @java.lang.Override
         public Builder clearOneof(
             com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-          return (Builder) super.clearOneof(oneof);
+          return super.clearOneof(oneof);
         }
         @java.lang.Override
         public Builder setRepeatedField(
             com.google.protobuf.Descriptors.FieldDescriptor field,
             int index, java.lang.Object value) {
-          return (Builder) super.setRepeatedField(field, index, value);
+          return super.setRepeatedField(field, index, value);
         }
         @java.lang.Override
         public Builder addRepeatedField(
             com.google.protobuf.Descriptors.FieldDescriptor field,
             java.lang.Object value) {
-          return (Builder) super.addRepeatedField(field, value);
+          return super.addRepeatedField(field, value);
         }
         @java.lang.Override
         public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -11431,7 +11413,7 @@ public final class Aspects {
           return this;
         }
 
-        private io.opencannabis.schema.currency.CommerceCurrency.CurrencyValue minimum_ = null;
+        private io.opencannabis.schema.currency.CommerceCurrency.CurrencyValue minimum_;
         private com.google.protobuf.SingleFieldBuilderV3<
             io.opencannabis.schema.currency.CommerceCurrency.CurrencyValue, io.opencannabis.schema.currency.CommerceCurrency.CurrencyValue.Builder, io.opencannabis.schema.currency.CommerceCurrency.CurrencyValueOrBuilder> minimumBuilder_;
         /**
@@ -11584,7 +11566,7 @@ public final class Aspects {
           return minimumBuilder_;
         }
 
-        private io.opencannabis.schema.currency.CommerceCurrency.CurrencyValue average_ = null;
+        private io.opencannabis.schema.currency.CommerceCurrency.CurrencyValue average_;
         private com.google.protobuf.SingleFieldBuilderV3<
             io.opencannabis.schema.currency.CommerceCurrency.CurrencyValue, io.opencannabis.schema.currency.CommerceCurrency.CurrencyValue.Builder, io.opencannabis.schema.currency.CommerceCurrency.CurrencyValueOrBuilder> averageBuilder_;
         /**
@@ -11737,7 +11719,7 @@ public final class Aspects {
           return averageBuilder_;
         }
 
-        private io.opencannabis.schema.currency.CommerceCurrency.CurrencyValue maximum_ = null;
+        private io.opencannabis.schema.currency.CommerceCurrency.CurrencyValue maximum_;
         private com.google.protobuf.SingleFieldBuilderV3<
             io.opencannabis.schema.currency.CommerceCurrency.CurrencyValue, io.opencannabis.schema.currency.CommerceCurrency.CurrencyValue.Builder, io.opencannabis.schema.currency.CommerceCurrency.CurrencyValueOrBuilder> maximumBuilder_;
         /**
@@ -11892,7 +11874,7 @@ public final class Aspects {
         @java.lang.Override
         public final Builder setUnknownFields(
             final com.google.protobuf.UnknownFieldSet unknownFields) {
-          return super.setUnknownFieldsProto3(unknownFields);
+          return super.setUnknownFields(unknownFields);
         }
 
         @java.lang.Override
@@ -12422,49 +12404,46 @@ public final class Aspects {
       }
       io.bloombox.schema.identity.bioprint.Aspects.Aspect other = (io.bloombox.schema.identity.bioprint.Aspects.Aspect) obj;
 
-      boolean result = true;
-      result = result && aspect_ == other.aspect_;
-      result = result && getDetailCase().equals(
-          other.getDetailCase());
-      if (!result) return false;
+      if (aspect_ != other.aspect_) return false;
+      if (!getDetailCase().equals(other.getDetailCase())) return false;
       switch (detailCase_) {
         case 10:
-          result = result && getProductCategory()
-              .equals(other.getProductCategory());
+          if (!getProductCategory()
+              .equals(other.getProductCategory())) return false;
           break;
         case 11:
-          result = result && getConsumptionMethod()
-              .equals(other.getConsumptionMethod());
+          if (!getConsumptionMethod()
+              .equals(other.getConsumptionMethod())) return false;
           break;
         case 12:
-          result = result && getCompound()
-              .equals(other.getCompound());
+          if (!getCompound()
+              .equals(other.getCompound())) return false;
           break;
         case 13:
-          result = result && getCompoundRatio()
-              .equals(other.getCompoundRatio());
+          if (!getCompoundRatio()
+              .equals(other.getCompoundRatio())) return false;
           break;
         case 14:
-          result = result && getTiming()
-              .equals(other.getTiming());
+          if (!getTiming()
+              .equals(other.getTiming())) return false;
           break;
         case 15:
-          result = result && getLocation()
-              .equals(other.getLocation());
+          if (!getLocation()
+              .equals(other.getLocation())) return false;
           break;
         case 16:
-          result = result && getDuration()
-              .equals(other.getDuration());
+          if (!getDuration()
+              .equals(other.getDuration())) return false;
           break;
         case 17:
-          result = result && getCost()
-              .equals(other.getCost());
+          if (!getCost()
+              .equals(other.getCost())) return false;
           break;
         case 0:
         default:
       }
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -12745,35 +12724,35 @@ public final class Aspects {
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -14314,7 +14293,7 @@ public final class Aspects {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -14500,7 +14479,7 @@ public final class Aspects {
               break;
             }
             case 18: {
-              if (!((mutable_bitField0_ & 0x00000002) == 0x00000002)) {
+              if (!((mutable_bitField0_ & 0x00000002) != 0)) {
                 aspect_ = new java.util.ArrayList<io.bloombox.schema.identity.bioprint.Aspects.Aspect>();
                 mutable_bitField0_ |= 0x00000002;
               }
@@ -14509,7 +14488,7 @@ public final class Aspects {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -14523,7 +14502,7 @@ public final class Aspects {
         throw new com.google.protobuf.InvalidProtocolBufferException(
             e).setUnfinishedMessage(this);
       } finally {
-        if (((mutable_bitField0_ & 0x00000002) == 0x00000002)) {
+        if (((mutable_bitField0_ & 0x00000002) != 0)) {
           aspect_ = java.util.Collections.unmodifiableList(aspect_);
         }
         this.unknownFields = unknownFields.build();
@@ -14693,12 +14672,11 @@ public final class Aspects {
       }
       io.bloombox.schema.identity.bioprint.Aspects.AspectGroup other = (io.bloombox.schema.identity.bioprint.Aspects.AspectGroup) obj;
 
-      boolean result = true;
-      result = result && category_ == other.category_;
-      result = result && getAspectList()
-          .equals(other.getAspectList());
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (category_ != other.category_) return false;
+      if (!getAspectList()
+          .equals(other.getAspectList())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -14892,7 +14870,7 @@ public final class Aspects {
         int to_bitField0_ = 0;
         result.category_ = category_;
         if (aspectBuilder_ == null) {
-          if (((bitField0_ & 0x00000002) == 0x00000002)) {
+          if (((bitField0_ & 0x00000002) != 0)) {
             aspect_ = java.util.Collections.unmodifiableList(aspect_);
             bitField0_ = (bitField0_ & ~0x00000002);
           }
@@ -14907,35 +14885,35 @@ public final class Aspects {
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -15081,7 +15059,7 @@ public final class Aspects {
       private java.util.List<io.bloombox.schema.identity.bioprint.Aspects.Aspect> aspect_ =
         java.util.Collections.emptyList();
       private void ensureAspectIsMutable() {
-        if (!((bitField0_ & 0x00000002) == 0x00000002)) {
+        if (!((bitField0_ & 0x00000002) != 0)) {
           aspect_ = new java.util.ArrayList<io.bloombox.schema.identity.bioprint.Aspects.Aspect>(aspect_);
           bitField0_ |= 0x00000002;
          }
@@ -15436,7 +15414,7 @@ public final class Aspects {
           aspectBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
               io.bloombox.schema.identity.bioprint.Aspects.Aspect, io.bloombox.schema.identity.bioprint.Aspects.Aspect.Builder, io.bloombox.schema.identity.bioprint.Aspects.AspectOrBuilder>(
                   aspect_,
-                  ((bitField0_ & 0x00000002) == 0x00000002),
+                  ((bitField0_ & 0x00000002) != 0),
                   getParentForChildren(),
                   isClean());
           aspect_ = null;
@@ -15446,7 +15424,7 @@ public final class Aspects {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override

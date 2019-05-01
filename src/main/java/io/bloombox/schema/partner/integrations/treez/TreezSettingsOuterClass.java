@@ -1,5 +1,5 @@
 /*
- * Copyright 2018, Momentum Ideas, Co. All rights reserved.
+ * Copyright 2019, Momentum Ideas, Co. All rights reserved.
  *
  * Source and object computer code contained herein is the private intellectual
  * property of Momentum Ideas Co., a Delaware Corporation. Use of this
@@ -61,7 +61,6 @@ public final class TreezSettingsOuterClass {
       super(builder);
     }
     private TreezIntegrationFeatures() {
-      menuRead_ = false;
     }
 
     @java.lang.Override
@@ -94,7 +93,7 @@ public final class TreezSettingsOuterClass {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -183,11 +182,10 @@ public final class TreezSettingsOuterClass {
       }
       io.bloombox.schema.partner.integrations.treez.TreezSettingsOuterClass.TreezIntegrationFeatures other = (io.bloombox.schema.partner.integrations.treez.TreezSettingsOuterClass.TreezIntegrationFeatures) obj;
 
-      boolean result = true;
-      result = result && (getMenuRead()
-          == other.getMenuRead());
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (getMenuRead()
+          != other.getMenuRead()) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -372,35 +370,35 @@ public final class TreezSettingsOuterClass {
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -486,7 +484,7 @@ public final class TreezSettingsOuterClass {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -685,7 +683,7 @@ public final class TreezSettingsOuterClass {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -882,21 +880,20 @@ public final class TreezSettingsOuterClass {
       }
       io.bloombox.schema.partner.integrations.treez.TreezSettingsOuterClass.TreezSettings other = (io.bloombox.schema.partner.integrations.treez.TreezSettingsOuterClass.TreezSettings) obj;
 
-      boolean result = true;
-      result = result && getAccountId()
-          .equals(other.getAccountId());
-      result = result && (hasSyncInterval() == other.hasSyncInterval());
+      if (!getAccountId()
+          .equals(other.getAccountId())) return false;
+      if (hasSyncInterval() != other.hasSyncInterval()) return false;
       if (hasSyncInterval()) {
-        result = result && getSyncInterval()
-            .equals(other.getSyncInterval());
+        if (!getSyncInterval()
+            .equals(other.getSyncInterval())) return false;
       }
-      result = result && (hasFeatures() == other.hasFeatures());
+      if (hasFeatures() != other.hasFeatures()) return false;
       if (hasFeatures()) {
-        result = result && getFeatures()
-            .equals(other.getFeatures());
+        if (!getFeatures()
+            .equals(other.getFeatures())) return false;
       }
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -1110,35 +1107,35 @@ public final class TreezSettingsOuterClass {
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -1280,7 +1277,7 @@ public final class TreezSettingsOuterClass {
         return this;
       }
 
-      private io.opencannabis.schema.temporal.TemporalSchedule.Schedule syncInterval_ = null;
+      private io.opencannabis.schema.temporal.TemporalSchedule.Schedule syncInterval_;
       private com.google.protobuf.SingleFieldBuilderV3<
           io.opencannabis.schema.temporal.TemporalSchedule.Schedule, io.opencannabis.schema.temporal.TemporalSchedule.Schedule.Builder, io.opencannabis.schema.temporal.TemporalSchedule.ScheduleOrBuilder> syncIntervalBuilder_;
       /**
@@ -1433,7 +1430,7 @@ public final class TreezSettingsOuterClass {
         return syncIntervalBuilder_;
       }
 
-      private io.bloombox.schema.partner.integrations.treez.TreezSettingsOuterClass.TreezIntegrationFeatures features_ = null;
+      private io.bloombox.schema.partner.integrations.treez.TreezSettingsOuterClass.TreezIntegrationFeatures features_;
       private com.google.protobuf.SingleFieldBuilderV3<
           io.bloombox.schema.partner.integrations.treez.TreezSettingsOuterClass.TreezIntegrationFeatures, io.bloombox.schema.partner.integrations.treez.TreezSettingsOuterClass.TreezIntegrationFeatures.Builder, io.bloombox.schema.partner.integrations.treez.TreezSettingsOuterClass.TreezIntegrationFeaturesOrBuilder> featuresBuilder_;
       /**
@@ -1588,7 +1585,7 @@ public final class TreezSettingsOuterClass {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override

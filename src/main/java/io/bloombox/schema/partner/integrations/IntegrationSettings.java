@@ -1,5 +1,5 @@
 /*
- * Copyright 2018, Momentum Ideas, Co. All rights reserved.
+ * Copyright 2019, Momentum Ideas, Co. All rights reserved.
  *
  * Source and object computer code contained herein is the private intellectual
  * property of Momentum Ideas Co., a Delaware Corporation. Use of this
@@ -367,8 +367,6 @@ public final class IntegrationSettings {
     }
     private GenericIntegrationSettings() {
       partner_ = 0;
-      enabled_ = false;
-      fullySetup_ = false;
     }
 
     @java.lang.Override
@@ -425,7 +423,7 @@ public final class IntegrationSettings {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -606,19 +604,18 @@ public final class IntegrationSettings {
       }
       io.bloombox.schema.partner.integrations.IntegrationSettings.GenericIntegrationSettings other = (io.bloombox.schema.partner.integrations.IntegrationSettings.GenericIntegrationSettings) obj;
 
-      boolean result = true;
-      result = result && partner_ == other.partner_;
-      result = result && (getEnabled()
-          == other.getEnabled());
-      result = result && (getFullySetup()
-          == other.getFullySetup());
-      result = result && (hasLastTested() == other.hasLastTested());
+      if (partner_ != other.partner_) return false;
+      if (getEnabled()
+          != other.getEnabled()) return false;
+      if (getFullySetup()
+          != other.getFullySetup()) return false;
+      if (hasLastTested() != other.hasLastTested()) return false;
       if (hasLastTested()) {
-        result = result && getLastTested()
-            .equals(other.getLastTested());
+        if (!getLastTested()
+            .equals(other.getLastTested())) return false;
       }
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -829,35 +826,35 @@ public final class IntegrationSettings {
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -1053,7 +1050,7 @@ public final class IntegrationSettings {
         return this;
       }
 
-      private io.opencannabis.schema.temporal.TemporalInstant.Instant lastTested_ = null;
+      private io.opencannabis.schema.temporal.TemporalInstant.Instant lastTested_;
       private com.google.protobuf.SingleFieldBuilderV3<
           io.opencannabis.schema.temporal.TemporalInstant.Instant, io.opencannabis.schema.temporal.TemporalInstant.Instant.Builder, io.opencannabis.schema.temporal.TemporalInstant.InstantOrBuilder> lastTestedBuilder_;
       /**
@@ -1208,7 +1205,7 @@ public final class IntegrationSettings {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -1554,7 +1551,7 @@ public final class IntegrationSettings {
               break;
             case 8: {
               int rawValue = input.readEnum();
-              if (!((mutable_bitField0_ & 0x00000001) == 0x00000001)) {
+              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
                 integrations_ = new java.util.ArrayList<java.lang.Integer>();
                 mutable_bitField0_ |= 0x00000001;
               }
@@ -1566,7 +1563,7 @@ public final class IntegrationSettings {
               int oldLimit = input.pushLimit(length);
               while(input.getBytesUntilLimit() > 0) {
                 int rawValue = input.readEnum();
-                if (!((mutable_bitField0_ & 0x00000001) == 0x00000001)) {
+                if (!((mutable_bitField0_ & 0x00000001) != 0)) {
                   integrations_ = new java.util.ArrayList<java.lang.Integer>();
                   mutable_bitField0_ |= 0x00000001;
                 }
@@ -1576,7 +1573,7 @@ public final class IntegrationSettings {
               break;
             }
             case 18: {
-              if (!((mutable_bitField0_ & 0x00000002) == 0x00000002)) {
+              if (!((mutable_bitField0_ & 0x00000002) != 0)) {
                 generic_ = com.google.protobuf.MapField.newMapField(
                     GenericDefaultEntryHolder.defaultEntry);
                 mutable_bitField0_ |= 0x00000002;
@@ -1667,7 +1664,7 @@ public final class IntegrationSettings {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -1681,7 +1678,7 @@ public final class IntegrationSettings {
         throw new com.google.protobuf.InvalidProtocolBufferException(
             e).setUnfinishedMessage(this);
       } finally {
-        if (((mutable_bitField0_ & 0x00000001) == 0x00000001)) {
+        if (((mutable_bitField0_ & 0x00000001) != 0)) {
           integrations_ = java.util.Collections.unmodifiableList(integrations_);
         }
         this.unknownFields = unknownFields.build();
@@ -2186,42 +2183,41 @@ public final class IntegrationSettings {
       }
       io.bloombox.schema.partner.integrations.IntegrationSettings.LocationIntegrationSettings other = (io.bloombox.schema.partner.integrations.IntegrationSettings.LocationIntegrationSettings) obj;
 
-      boolean result = true;
-      result = result && integrations_.equals(other.integrations_);
-      result = result && internalGetGeneric().equals(
-          other.internalGetGeneric());
-      result = result && (hasGreenbits() == other.hasGreenbits());
+      if (!integrations_.equals(other.integrations_)) return false;
+      if (!internalGetGeneric().equals(
+          other.internalGetGeneric())) return false;
+      if (hasGreenbits() != other.hasGreenbits()) return false;
       if (hasGreenbits()) {
-        result = result && getGreenbits()
-            .equals(other.getGreenbits());
+        if (!getGreenbits()
+            .equals(other.getGreenbits())) return false;
       }
-      result = result && (hasMailchimp() == other.hasMailchimp());
+      if (hasMailchimp() != other.hasMailchimp()) return false;
       if (hasMailchimp()) {
-        result = result && getMailchimp()
-            .equals(other.getMailchimp());
+        if (!getMailchimp()
+            .equals(other.getMailchimp())) return false;
       }
-      result = result && (hasSendgrid() == other.hasSendgrid());
+      if (hasSendgrid() != other.hasSendgrid()) return false;
       if (hasSendgrid()) {
-        result = result && getSendgrid()
-            .equals(other.getSendgrid());
+        if (!getSendgrid()
+            .equals(other.getSendgrid())) return false;
       }
-      result = result && (hasTwilio() == other.hasTwilio());
+      if (hasTwilio() != other.hasTwilio()) return false;
       if (hasTwilio()) {
-        result = result && getTwilio()
-            .equals(other.getTwilio());
+        if (!getTwilio()
+            .equals(other.getTwilio())) return false;
       }
-      result = result && (hasOnfleet() == other.hasOnfleet());
+      if (hasOnfleet() != other.hasOnfleet()) return false;
       if (hasOnfleet()) {
-        result = result && getOnfleet()
-            .equals(other.getOnfleet());
+        if (!getOnfleet()
+            .equals(other.getOnfleet())) return false;
       }
-      result = result && (hasTreez() == other.hasTreez());
+      if (hasTreez() != other.hasTreez()) return false;
       if (hasTreez()) {
-        result = result && getTreez()
-            .equals(other.getTreez());
+        if (!getTreez()
+            .equals(other.getTreez())) return false;
       }
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -2489,7 +2485,7 @@ public final class IntegrationSettings {
         io.bloombox.schema.partner.integrations.IntegrationSettings.LocationIntegrationSettings result = new io.bloombox.schema.partner.integrations.IntegrationSettings.LocationIntegrationSettings(this);
         int from_bitField0_ = bitField0_;
         int to_bitField0_ = 0;
-        if (((bitField0_ & 0x00000001) == 0x00000001)) {
+        if (((bitField0_ & 0x00000001) != 0)) {
           integrations_ = java.util.Collections.unmodifiableList(integrations_);
           bitField0_ = (bitField0_ & ~0x00000001);
         }
@@ -2533,35 +2529,35 @@ public final class IntegrationSettings {
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -2638,7 +2634,7 @@ public final class IntegrationSettings {
       private java.util.List<java.lang.Integer> integrations_ =
         java.util.Collections.emptyList();
       private void ensureIntegrationsIsMutable() {
-        if (!((bitField0_ & 0x00000001) == 0x00000001)) {
+        if (!((bitField0_ & 0x00000001) != 0)) {
           integrations_ = new java.util.ArrayList<java.lang.Integer>(integrations_);
           bitField0_ |= 0x00000001;
         }
@@ -2952,7 +2948,7 @@ public final class IntegrationSettings {
         return this;
       }
 
-      private io.bloombox.schema.partner.integrations.greenbits.GreenbitsSettingsOuterClass.GreenbitsSettings greenbits_ = null;
+      private io.bloombox.schema.partner.integrations.greenbits.GreenbitsSettingsOuterClass.GreenbitsSettings greenbits_;
       private com.google.protobuf.SingleFieldBuilderV3<
           io.bloombox.schema.partner.integrations.greenbits.GreenbitsSettingsOuterClass.GreenbitsSettings, io.bloombox.schema.partner.integrations.greenbits.GreenbitsSettingsOuterClass.GreenbitsSettings.Builder, io.bloombox.schema.partner.integrations.greenbits.GreenbitsSettingsOuterClass.GreenbitsSettingsOrBuilder> greenbitsBuilder_;
       /**
@@ -3105,7 +3101,7 @@ public final class IntegrationSettings {
         return greenbitsBuilder_;
       }
 
-      private io.bloombox.schema.partner.integrations.mailchimp.MailchimpSettingsOuterClass.MailchimpSettings mailchimp_ = null;
+      private io.bloombox.schema.partner.integrations.mailchimp.MailchimpSettingsOuterClass.MailchimpSettings mailchimp_;
       private com.google.protobuf.SingleFieldBuilderV3<
           io.bloombox.schema.partner.integrations.mailchimp.MailchimpSettingsOuterClass.MailchimpSettings, io.bloombox.schema.partner.integrations.mailchimp.MailchimpSettingsOuterClass.MailchimpSettings.Builder, io.bloombox.schema.partner.integrations.mailchimp.MailchimpSettingsOuterClass.MailchimpSettingsOrBuilder> mailchimpBuilder_;
       /**
@@ -3258,7 +3254,7 @@ public final class IntegrationSettings {
         return mailchimpBuilder_;
       }
 
-      private io.bloombox.schema.partner.integrations.sendgrid.SendgridSettingsOuterClass.SendgridSettings sendgrid_ = null;
+      private io.bloombox.schema.partner.integrations.sendgrid.SendgridSettingsOuterClass.SendgridSettings sendgrid_;
       private com.google.protobuf.SingleFieldBuilderV3<
           io.bloombox.schema.partner.integrations.sendgrid.SendgridSettingsOuterClass.SendgridSettings, io.bloombox.schema.partner.integrations.sendgrid.SendgridSettingsOuterClass.SendgridSettings.Builder, io.bloombox.schema.partner.integrations.sendgrid.SendgridSettingsOuterClass.SendgridSettingsOrBuilder> sendgridBuilder_;
       /**
@@ -3411,7 +3407,7 @@ public final class IntegrationSettings {
         return sendgridBuilder_;
       }
 
-      private io.bloombox.schema.partner.integrations.twilio.TwilioSettingsOuterClass.TwilioSettings twilio_ = null;
+      private io.bloombox.schema.partner.integrations.twilio.TwilioSettingsOuterClass.TwilioSettings twilio_;
       private com.google.protobuf.SingleFieldBuilderV3<
           io.bloombox.schema.partner.integrations.twilio.TwilioSettingsOuterClass.TwilioSettings, io.bloombox.schema.partner.integrations.twilio.TwilioSettingsOuterClass.TwilioSettings.Builder, io.bloombox.schema.partner.integrations.twilio.TwilioSettingsOuterClass.TwilioSettingsOrBuilder> twilioBuilder_;
       /**
@@ -3564,7 +3560,7 @@ public final class IntegrationSettings {
         return twilioBuilder_;
       }
 
-      private io.bloombox.schema.partner.integrations.onfleet.OnFleetSettingsOuterClass.OnFleetSettings onfleet_ = null;
+      private io.bloombox.schema.partner.integrations.onfleet.OnFleetSettingsOuterClass.OnFleetSettings onfleet_;
       private com.google.protobuf.SingleFieldBuilderV3<
           io.bloombox.schema.partner.integrations.onfleet.OnFleetSettingsOuterClass.OnFleetSettings, io.bloombox.schema.partner.integrations.onfleet.OnFleetSettingsOuterClass.OnFleetSettings.Builder, io.bloombox.schema.partner.integrations.onfleet.OnFleetSettingsOuterClass.OnFleetSettingsOrBuilder> onfleetBuilder_;
       /**
@@ -3717,7 +3713,7 @@ public final class IntegrationSettings {
         return onfleetBuilder_;
       }
 
-      private io.bloombox.schema.partner.integrations.treez.TreezSettingsOuterClass.TreezSettings treez_ = null;
+      private io.bloombox.schema.partner.integrations.treez.TreezSettingsOuterClass.TreezSettings treez_;
       private com.google.protobuf.SingleFieldBuilderV3<
           io.bloombox.schema.partner.integrations.treez.TreezSettingsOuterClass.TreezSettings, io.bloombox.schema.partner.integrations.treez.TreezSettingsOuterClass.TreezSettings.Builder, io.bloombox.schema.partner.integrations.treez.TreezSettingsOuterClass.TreezSettingsOrBuilder> treezBuilder_;
       /**
@@ -3872,7 +3868,7 @@ public final class IntegrationSettings {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -4093,7 +4089,7 @@ public final class IntegrationSettings {
               break;
             case 8: {
               int rawValue = input.readEnum();
-              if (!((mutable_bitField0_ & 0x00000001) == 0x00000001)) {
+              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
                 integrations_ = new java.util.ArrayList<java.lang.Integer>();
                 mutable_bitField0_ |= 0x00000001;
               }
@@ -4105,7 +4101,7 @@ public final class IntegrationSettings {
               int oldLimit = input.pushLimit(length);
               while(input.getBytesUntilLimit() > 0) {
                 int rawValue = input.readEnum();
-                if (!((mutable_bitField0_ & 0x00000001) == 0x00000001)) {
+                if (!((mutable_bitField0_ & 0x00000001) != 0)) {
                   integrations_ = new java.util.ArrayList<java.lang.Integer>();
                   mutable_bitField0_ |= 0x00000001;
                 }
@@ -4115,7 +4111,7 @@ public final class IntegrationSettings {
               break;
             }
             case 18: {
-              if (!((mutable_bitField0_ & 0x00000002) == 0x00000002)) {
+              if (!((mutable_bitField0_ & 0x00000002) != 0)) {
                 generic_ = com.google.protobuf.MapField.newMapField(
                     GenericDefaultEntryHolder.defaultEntry);
                 mutable_bitField0_ |= 0x00000002;
@@ -4141,7 +4137,7 @@ public final class IntegrationSettings {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -4155,7 +4151,7 @@ public final class IntegrationSettings {
         throw new com.google.protobuf.InvalidProtocolBufferException(
             e).setUnfinishedMessage(this);
       } finally {
-        if (((mutable_bitField0_ & 0x00000001) == 0x00000001)) {
+        if (((mutable_bitField0_ & 0x00000001) != 0)) {
           integrations_ = java.util.Collections.unmodifiableList(integrations_);
         }
         this.unknownFields = unknownFields.build();
@@ -4460,17 +4456,16 @@ public final class IntegrationSettings {
       }
       io.bloombox.schema.partner.integrations.IntegrationSettings.PartnerIntegrationSettings other = (io.bloombox.schema.partner.integrations.IntegrationSettings.PartnerIntegrationSettings) obj;
 
-      boolean result = true;
-      result = result && integrations_.equals(other.integrations_);
-      result = result && internalGetGeneric().equals(
-          other.internalGetGeneric());
-      result = result && (hasGsuite() == other.hasGsuite());
+      if (!integrations_.equals(other.integrations_)) return false;
+      if (!internalGetGeneric().equals(
+          other.internalGetGeneric())) return false;
+      if (hasGsuite() != other.hasGsuite()) return false;
       if (hasGsuite()) {
-        result = result && getGsuite()
-            .equals(other.getGsuite());
+        if (!getGsuite()
+            .equals(other.getGsuite())) return false;
       }
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -4688,7 +4683,7 @@ public final class IntegrationSettings {
         io.bloombox.schema.partner.integrations.IntegrationSettings.PartnerIntegrationSettings result = new io.bloombox.schema.partner.integrations.IntegrationSettings.PartnerIntegrationSettings(this);
         int from_bitField0_ = bitField0_;
         int to_bitField0_ = 0;
-        if (((bitField0_ & 0x00000001) == 0x00000001)) {
+        if (((bitField0_ & 0x00000001) != 0)) {
           integrations_ = java.util.Collections.unmodifiableList(integrations_);
           bitField0_ = (bitField0_ & ~0x00000001);
         }
@@ -4707,35 +4702,35 @@ public final class IntegrationSettings {
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -4797,7 +4792,7 @@ public final class IntegrationSettings {
       private java.util.List<java.lang.Integer> integrations_ =
         java.util.Collections.emptyList();
       private void ensureIntegrationsIsMutable() {
-        if (!((bitField0_ & 0x00000001) == 0x00000001)) {
+        if (!((bitField0_ & 0x00000001) != 0)) {
           integrations_ = new java.util.ArrayList<java.lang.Integer>(integrations_);
           bitField0_ |= 0x00000001;
         }
@@ -5111,7 +5106,7 @@ public final class IntegrationSettings {
         return this;
       }
 
-      private io.bloombox.schema.partner.integrations.gsuite.GSuiteSettingsOuterClass.GSuiteSettings gsuite_ = null;
+      private io.bloombox.schema.partner.integrations.gsuite.GSuiteSettingsOuterClass.GSuiteSettings gsuite_;
       private com.google.protobuf.SingleFieldBuilderV3<
           io.bloombox.schema.partner.integrations.gsuite.GSuiteSettingsOuterClass.GSuiteSettings, io.bloombox.schema.partner.integrations.gsuite.GSuiteSettingsOuterClass.GSuiteSettings.Builder, io.bloombox.schema.partner.integrations.gsuite.GSuiteSettingsOuterClass.GSuiteSettingsOrBuilder> gsuiteBuilder_;
       /**
@@ -5266,7 +5261,7 @@ public final class IntegrationSettings {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override

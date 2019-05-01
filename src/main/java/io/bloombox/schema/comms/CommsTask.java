@@ -1,5 +1,5 @@
 /*
- * Copyright 2018, Momentum Ideas, Co. All rights reserved.
+ * Copyright 2019, Momentum Ideas, Co. All rights reserved.
  *
  * Source and object computer code contained herein is the private intellectual
  * property of Momentum Ideas Co., a Delaware Corporation. Use of this
@@ -168,7 +168,6 @@ public final class CommsTask {
       uuid_ = "";
       channel_ = 0;
       status_ = 0;
-      dryRun_ = false;
     }
 
     @java.lang.Override
@@ -247,7 +246,7 @@ public final class CommsTask {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -728,30 +727,27 @@ public final class CommsTask {
       }
       io.bloombox.schema.comms.CommsTask.SendOperation other = (io.bloombox.schema.comms.CommsTask.SendOperation) obj;
 
-      boolean result = true;
-      result = result && getUuid()
-          .equals(other.getUuid());
-      result = result && channel_ == other.channel_;
-      result = result && status_ == other.status_;
-      result = result && (getDryRun()
-          == other.getDryRun());
-      result = result && getOperationCase().equals(
-          other.getOperationCase());
-      if (!result) return false;
+      if (!getUuid()
+          .equals(other.getUuid())) return false;
+      if (channel_ != other.channel_) return false;
+      if (status_ != other.status_) return false;
+      if (getDryRun()
+          != other.getDryRun()) return false;
+      if (!getOperationCase().equals(other.getOperationCase())) return false;
       switch (operationCase_) {
         case 10:
-          result = result && getSms()
-              .equals(other.getSms());
+          if (!getSms()
+              .equals(other.getSms())) return false;
           break;
         case 11:
-          result = result && getEmail()
-              .equals(other.getEmail());
+          if (!getEmail()
+              .equals(other.getEmail())) return false;
           break;
         case 0:
         default:
       }
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -980,35 +976,35 @@ public final class CommsTask {
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -1695,7 +1691,7 @@ public final class CommsTask {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -1989,7 +1985,6 @@ public final class CommsTask {
       campaign_ = "";
       channel_ = java.util.Collections.emptyList();
       op_ = java.util.Collections.emptyList();
-      dryRun_ = false;
     }
 
     @java.lang.Override
@@ -2068,7 +2063,7 @@ public final class CommsTask {
             }
             case 56: {
               int rawValue = input.readEnum();
-              if (!((mutable_bitField0_ & 0x00000040) == 0x00000040)) {
+              if (!((mutable_bitField0_ & 0x00000040) != 0)) {
                 channel_ = new java.util.ArrayList<java.lang.Integer>();
                 mutable_bitField0_ |= 0x00000040;
               }
@@ -2080,7 +2075,7 @@ public final class CommsTask {
               int oldLimit = input.pushLimit(length);
               while(input.getBytesUntilLimit() > 0) {
                 int rawValue = input.readEnum();
-                if (!((mutable_bitField0_ & 0x00000040) == 0x00000040)) {
+                if (!((mutable_bitField0_ & 0x00000040) != 0)) {
                   channel_ = new java.util.ArrayList<java.lang.Integer>();
                   mutable_bitField0_ |= 0x00000040;
                 }
@@ -2090,7 +2085,7 @@ public final class CommsTask {
               break;
             }
             case 66: {
-              if (!((mutable_bitField0_ & 0x00000080) == 0x00000080)) {
+              if (!((mutable_bitField0_ & 0x00000080) != 0)) {
                 op_ = new java.util.ArrayList<io.bloombox.schema.comms.CommsTask.SendOperation>();
                 mutable_bitField0_ |= 0x00000080;
               }
@@ -2104,7 +2099,7 @@ public final class CommsTask {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -2118,10 +2113,10 @@ public final class CommsTask {
         throw new com.google.protobuf.InvalidProtocolBufferException(
             e).setUnfinishedMessage(this);
       } finally {
-        if (((mutable_bitField0_ & 0x00000040) == 0x00000040)) {
+        if (((mutable_bitField0_ & 0x00000040) != 0)) {
           channel_ = java.util.Collections.unmodifiableList(channel_);
         }
-        if (((mutable_bitField0_ & 0x00000080) == 0x00000080)) {
+        if (((mutable_bitField0_ & 0x00000080) != 0)) {
           op_ = java.util.Collections.unmodifiableList(op_);
         }
         this.unknownFields = unknownFields.build();
@@ -2620,32 +2615,31 @@ public final class CommsTask {
       }
       io.bloombox.schema.comms.CommsTask.TriggerOperation other = (io.bloombox.schema.comms.CommsTask.TriggerOperation) obj;
 
-      boolean result = true;
-      result = result && getUuid()
-          .equals(other.getUuid());
-      result = result && getPartner()
-          .equals(other.getPartner());
-      result = result && getLocation()
-          .equals(other.getLocation());
-      result = result && getCampaign()
-          .equals(other.getCampaign());
-      result = result && (hasSubmitted() == other.hasSubmitted());
+      if (!getUuid()
+          .equals(other.getUuid())) return false;
+      if (!getPartner()
+          .equals(other.getPartner())) return false;
+      if (!getLocation()
+          .equals(other.getLocation())) return false;
+      if (!getCampaign()
+          .equals(other.getCampaign())) return false;
+      if (hasSubmitted() != other.hasSubmitted()) return false;
       if (hasSubmitted()) {
-        result = result && getSubmitted()
-            .equals(other.getSubmitted());
+        if (!getSubmitted()
+            .equals(other.getSubmitted())) return false;
       }
-      result = result && (hasNotBefore() == other.hasNotBefore());
+      if (hasNotBefore() != other.hasNotBefore()) return false;
       if (hasNotBefore()) {
-        result = result && getNotBefore()
-            .equals(other.getNotBefore());
+        if (!getNotBefore()
+            .equals(other.getNotBefore())) return false;
       }
-      result = result && channel_.equals(other.channel_);
-      result = result && getOpList()
-          .equals(other.getOpList());
-      result = result && (getDryRun()
-          == other.getDryRun());
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!channel_.equals(other.channel_)) return false;
+      if (!getOpList()
+          .equals(other.getOpList())) return false;
+      if (getDryRun()
+          != other.getDryRun()) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -2892,13 +2886,13 @@ public final class CommsTask {
         } else {
           result.notBefore_ = notBeforeBuilder_.build();
         }
-        if (((bitField0_ & 0x00000040) == 0x00000040)) {
+        if (((bitField0_ & 0x00000040) != 0)) {
           channel_ = java.util.Collections.unmodifiableList(channel_);
           bitField0_ = (bitField0_ & ~0x00000040);
         }
         result.channel_ = channel_;
         if (opBuilder_ == null) {
-          if (((bitField0_ & 0x00000080) == 0x00000080)) {
+          if (((bitField0_ & 0x00000080) != 0)) {
             op_ = java.util.Collections.unmodifiableList(op_);
             bitField0_ = (bitField0_ & ~0x00000080);
           }
@@ -2914,35 +2908,35 @@ public final class CommsTask {
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -3403,7 +3397,7 @@ public final class CommsTask {
         return this;
       }
 
-      private io.opencannabis.schema.temporal.TemporalInstant.Instant submitted_ = null;
+      private io.opencannabis.schema.temporal.TemporalInstant.Instant submitted_;
       private com.google.protobuf.SingleFieldBuilderV3<
           io.opencannabis.schema.temporal.TemporalInstant.Instant, io.opencannabis.schema.temporal.TemporalInstant.Instant.Builder, io.opencannabis.schema.temporal.TemporalInstant.InstantOrBuilder> submittedBuilder_;
       /**
@@ -3556,7 +3550,7 @@ public final class CommsTask {
         return submittedBuilder_;
       }
 
-      private io.opencannabis.schema.temporal.TemporalInstant.Instant notBefore_ = null;
+      private io.opencannabis.schema.temporal.TemporalInstant.Instant notBefore_;
       private com.google.protobuf.SingleFieldBuilderV3<
           io.opencannabis.schema.temporal.TemporalInstant.Instant, io.opencannabis.schema.temporal.TemporalInstant.Instant.Builder, io.opencannabis.schema.temporal.TemporalInstant.InstantOrBuilder> notBeforeBuilder_;
       /**
@@ -3712,7 +3706,7 @@ public final class CommsTask {
       private java.util.List<java.lang.Integer> channel_ =
         java.util.Collections.emptyList();
       private void ensureChannelIsMutable() {
-        if (!((bitField0_ & 0x00000040) == 0x00000040)) {
+        if (!((bitField0_ & 0x00000040) != 0)) {
           channel_ = new java.util.ArrayList<java.lang.Integer>(channel_);
           bitField0_ |= 0x00000040;
         }
@@ -3878,7 +3872,7 @@ public final class CommsTask {
       private java.util.List<io.bloombox.schema.comms.CommsTask.SendOperation> op_ =
         java.util.Collections.emptyList();
       private void ensureOpIsMutable() {
-        if (!((bitField0_ & 0x00000080) == 0x00000080)) {
+        if (!((bitField0_ & 0x00000080) != 0)) {
           op_ = new java.util.ArrayList<io.bloombox.schema.comms.CommsTask.SendOperation>(op_);
           bitField0_ |= 0x00000080;
          }
@@ -4179,7 +4173,7 @@ public final class CommsTask {
           opBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
               io.bloombox.schema.comms.CommsTask.SendOperation, io.bloombox.schema.comms.CommsTask.SendOperation.Builder, io.bloombox.schema.comms.CommsTask.SendOperationOrBuilder>(
                   op_,
-                  ((bitField0_ & 0x00000080) == 0x00000080),
+                  ((bitField0_ & 0x00000080) != 0),
                   getParentForChildren(),
                   isClean());
           op_ = null;
@@ -4227,7 +4221,7 @@ public final class CommsTask {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -4470,7 +4464,6 @@ public final class CommsTask {
     private AdEngineOperation() {
       execution_ = "";
       channel_ = java.util.Collections.emptyList();
-      dryRun_ = false;
     }
 
     @java.lang.Override
@@ -4518,7 +4511,7 @@ public final class CommsTask {
             }
             case 56: {
               int rawValue = input.readEnum();
-              if (!((mutable_bitField0_ & 0x00000004) == 0x00000004)) {
+              if (!((mutable_bitField0_ & 0x00000004) != 0)) {
                 channel_ = new java.util.ArrayList<java.lang.Integer>();
                 mutable_bitField0_ |= 0x00000004;
               }
@@ -4530,7 +4523,7 @@ public final class CommsTask {
               int oldLimit = input.pushLimit(length);
               while(input.getBytesUntilLimit() > 0) {
                 int rawValue = input.readEnum();
-                if (!((mutable_bitField0_ & 0x00000004) == 0x00000004)) {
+                if (!((mutable_bitField0_ & 0x00000004) != 0)) {
                   channel_ = new java.util.ArrayList<java.lang.Integer>();
                   mutable_bitField0_ |= 0x00000004;
                 }
@@ -4584,7 +4577,7 @@ public final class CommsTask {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -4598,7 +4591,7 @@ public final class CommsTask {
         throw new com.google.protobuf.InvalidProtocolBufferException(
             e).setUnfinishedMessage(this);
       } finally {
-        if (((mutable_bitField0_ & 0x00000004) == 0x00000004)) {
+        if (((mutable_bitField0_ & 0x00000004) != 0)) {
           channel_ = java.util.Collections.unmodifiableList(channel_);
         }
         this.unknownFields = unknownFields.build();
@@ -4971,34 +4964,33 @@ public final class CommsTask {
       }
       io.bloombox.schema.comms.CommsTask.AdEngineOperation other = (io.bloombox.schema.comms.CommsTask.AdEngineOperation) obj;
 
-      boolean result = true;
-      result = result && getExecution()
-          .equals(other.getExecution());
-      result = result && (hasCampaign() == other.hasCampaign());
+      if (!getExecution()
+          .equals(other.getExecution())) return false;
+      if (hasCampaign() != other.hasCampaign()) return false;
       if (hasCampaign()) {
-        result = result && getCampaign()
-            .equals(other.getCampaign());
+        if (!getCampaign()
+            .equals(other.getCampaign())) return false;
       }
-      result = result && channel_.equals(other.channel_);
-      result = result && (hasMembership() == other.hasMembership());
+      if (!channel_.equals(other.channel_)) return false;
+      if (hasMembership() != other.hasMembership()) return false;
       if (hasMembership()) {
-        result = result && getMembership()
-            .equals(other.getMembership());
+        if (!getMembership()
+            .equals(other.getMembership())) return false;
       }
-      result = result && (hasUser() == other.hasUser());
+      if (hasUser() != other.hasUser()) return false;
       if (hasUser()) {
-        result = result && getUser()
-            .equals(other.getUser());
+        if (!getUser()
+            .equals(other.getUser())) return false;
       }
-      result = result && (hasNotBefore() == other.hasNotBefore());
+      if (hasNotBefore() != other.hasNotBefore()) return false;
       if (hasNotBefore()) {
-        result = result && getNotBefore()
-            .equals(other.getNotBefore());
+        if (!getNotBefore()
+            .equals(other.getNotBefore())) return false;
       }
-      result = result && (getDryRun()
-          == other.getDryRun());
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (getDryRun()
+          != other.getDryRun()) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -5235,7 +5227,7 @@ public final class CommsTask {
         } else {
           result.campaign_ = campaignBuilder_.build();
         }
-        if (((bitField0_ & 0x00000004) == 0x00000004)) {
+        if (((bitField0_ & 0x00000004) != 0)) {
           channel_ = java.util.Collections.unmodifiableList(channel_);
           bitField0_ = (bitField0_ & ~0x00000004);
         }
@@ -5263,35 +5255,35 @@ public final class CommsTask {
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -5453,7 +5445,7 @@ public final class CommsTask {
         return this;
       }
 
-      private io.bloombox.schema.marketing.MarketingCampaign.Campaign campaign_ = null;
+      private io.bloombox.schema.marketing.MarketingCampaign.Campaign campaign_;
       private com.google.protobuf.SingleFieldBuilderV3<
           io.bloombox.schema.marketing.MarketingCampaign.Campaign, io.bloombox.schema.marketing.MarketingCampaign.Campaign.Builder, io.bloombox.schema.marketing.MarketingCampaign.CampaignOrBuilder> campaignBuilder_;
       /**
@@ -5609,7 +5601,7 @@ public final class CommsTask {
       private java.util.List<java.lang.Integer> channel_ =
         java.util.Collections.emptyList();
       private void ensureChannelIsMutable() {
-        if (!((bitField0_ & 0x00000004) == 0x00000004)) {
+        if (!((bitField0_ & 0x00000004) != 0)) {
           channel_ = new java.util.ArrayList<java.lang.Integer>(channel_);
           bitField0_ |= 0x00000004;
         }
@@ -5772,7 +5764,7 @@ public final class CommsTask {
         return this;
       }
 
-      private io.bloombox.schema.identity.AppUser.ConsumerMembership membership_ = null;
+      private io.bloombox.schema.identity.AppUser.ConsumerMembership membership_;
       private com.google.protobuf.SingleFieldBuilderV3<
           io.bloombox.schema.identity.AppUser.ConsumerMembership, io.bloombox.schema.identity.AppUser.ConsumerMembership.Builder, io.bloombox.schema.identity.AppUser.ConsumerMembershipOrBuilder> membershipBuilder_;
       /**
@@ -5925,7 +5917,7 @@ public final class CommsTask {
         return membershipBuilder_;
       }
 
-      private io.bloombox.schema.identity.AppUserKey.UserKey user_ = null;
+      private io.bloombox.schema.identity.AppUserKey.UserKey user_;
       private com.google.protobuf.SingleFieldBuilderV3<
           io.bloombox.schema.identity.AppUserKey.UserKey, io.bloombox.schema.identity.AppUserKey.UserKey.Builder, io.bloombox.schema.identity.AppUserKey.UserKeyOrBuilder> userBuilder_;
       /**
@@ -6078,7 +6070,7 @@ public final class CommsTask {
         return userBuilder_;
       }
 
-      private io.opencannabis.schema.temporal.TemporalInstant.Instant notBefore_ = null;
+      private io.opencannabis.schema.temporal.TemporalInstant.Instant notBefore_;
       private com.google.protobuf.SingleFieldBuilderV3<
           io.opencannabis.schema.temporal.TemporalInstant.Instant, io.opencannabis.schema.temporal.TemporalInstant.Instant.Builder, io.opencannabis.schema.temporal.TemporalInstant.InstantOrBuilder> notBeforeBuilder_;
       /**
@@ -6271,7 +6263,7 @@ public final class CommsTask {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override

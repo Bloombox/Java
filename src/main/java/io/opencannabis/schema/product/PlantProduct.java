@@ -1,12 +1,11 @@
 /*
- * Copyright 2018, Momentum Ideas, Co. All rights reserved.
+ * Copyright 2019, Momentum Ideas Co.
  *
- * Source and object computer code contained herein is the private intellectual
- * property of Momentum Ideas Co., a Delaware Corporation. Use of this
- * code in source form requires permission in writing before use or the
- * assembly, distribution, or publishing of derivative works, for commercial
- * purposes or any other purpose, from a duly authorized officer of Momentum
- * Ideas Co.
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *  http://www.apache.org/licenses/LICENSE-2.0
  *
  * Unless required by applicable law or agreed to in writing, software
  * distributed under the License is distributed on an "AS IS" BASIS,
@@ -371,7 +370,7 @@ public final class PlantProduct {
               break;
             }
             case 26: {
-              if (!((mutable_bitField0_ & 0x00000004) == 0x00000004)) {
+              if (!((mutable_bitField0_ & 0x00000004) != 0)) {
                 origin_ = new java.util.ArrayList<io.opencannabis.schema.base.BaseProductKey.ProductReference>();
                 mutable_bitField0_ |= 0x00000004;
               }
@@ -406,7 +405,7 @@ public final class PlantProduct {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -420,7 +419,7 @@ public final class PlantProduct {
         throw new com.google.protobuf.InvalidProtocolBufferException(
             e).setUnfinishedMessage(this);
       } finally {
-        if (((mutable_bitField0_ & 0x00000004) == 0x00000004)) {
+        if (((mutable_bitField0_ & 0x00000004) != 0)) {
           origin_ = java.util.Collections.unmodifiableList(origin_);
         }
         this.unknownFields = unknownFields.build();
@@ -693,27 +692,26 @@ public final class PlantProduct {
       }
       io.opencannabis.schema.product.PlantProduct.Plant other = (io.opencannabis.schema.product.PlantProduct.Plant) obj;
 
-      boolean result = true;
-      result = result && (hasKey() == other.hasKey());
+      if (hasKey() != other.hasKey()) return false;
       if (hasKey()) {
-        result = result && getKey()
-            .equals(other.getKey());
+        if (!getKey()
+            .equals(other.getKey())) return false;
       }
-      result = result && type_ == other.type_;
-      result = result && getOriginList()
-          .equals(other.getOriginList());
-      result = result && (hasProduct() == other.hasProduct());
+      if (type_ != other.type_) return false;
+      if (!getOriginList()
+          .equals(other.getOriginList())) return false;
+      if (hasProduct() != other.hasProduct()) return false;
       if (hasProduct()) {
-        result = result && getProduct()
-            .equals(other.getProduct());
+        if (!getProduct()
+            .equals(other.getProduct())) return false;
       }
-      result = result && (hasMaterial() == other.hasMaterial());
+      if (hasMaterial() != other.hasMaterial()) return false;
       if (hasMaterial()) {
-        result = result && getMaterial()
-            .equals(other.getMaterial());
+        if (!getMaterial()
+            .equals(other.getMaterial())) return false;
       }
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -940,7 +938,7 @@ public final class PlantProduct {
         }
         result.type_ = type_;
         if (originBuilder_ == null) {
-          if (((bitField0_ & 0x00000004) == 0x00000004)) {
+          if (((bitField0_ & 0x00000004) != 0)) {
             origin_ = java.util.Collections.unmodifiableList(origin_);
             bitField0_ = (bitField0_ & ~0x00000004);
           }
@@ -965,35 +963,35 @@ public final class PlantProduct {
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -1075,7 +1073,7 @@ public final class PlantProduct {
       }
       private int bitField0_;
 
-      private io.opencannabis.schema.base.BaseProductKey.ProductKey key_ = null;
+      private io.opencannabis.schema.base.BaseProductKey.ProductKey key_;
       private com.google.protobuf.SingleFieldBuilderV3<
           io.opencannabis.schema.base.BaseProductKey.ProductKey, io.opencannabis.schema.base.BaseProductKey.ProductKey.Builder, io.opencannabis.schema.base.BaseProductKey.ProductKeyOrBuilder> keyBuilder_;
       /**
@@ -1296,7 +1294,7 @@ public final class PlantProduct {
       private java.util.List<io.opencannabis.schema.base.BaseProductKey.ProductReference> origin_ =
         java.util.Collections.emptyList();
       private void ensureOriginIsMutable() {
-        if (!((bitField0_ & 0x00000004) == 0x00000004)) {
+        if (!((bitField0_ & 0x00000004) != 0)) {
           origin_ = new java.util.ArrayList<io.opencannabis.schema.base.BaseProductKey.ProductReference>(origin_);
           bitField0_ |= 0x00000004;
          }
@@ -1597,7 +1595,7 @@ public final class PlantProduct {
           originBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
               io.opencannabis.schema.base.BaseProductKey.ProductReference, io.opencannabis.schema.base.BaseProductKey.ProductReference.Builder, io.opencannabis.schema.base.BaseProductKey.ProductReferenceOrBuilder>(
                   origin_,
-                  ((bitField0_ & 0x00000004) == 0x00000004),
+                  ((bitField0_ & 0x00000004) != 0),
                   getParentForChildren(),
                   isClean());
           origin_ = null;
@@ -1605,7 +1603,7 @@ public final class PlantProduct {
         return originBuilder_;
       }
 
-      private io.opencannabis.schema.content.AttachedContent.ProductContent product_ = null;
+      private io.opencannabis.schema.content.AttachedContent.ProductContent product_;
       private com.google.protobuf.SingleFieldBuilderV3<
           io.opencannabis.schema.content.AttachedContent.ProductContent, io.opencannabis.schema.content.AttachedContent.ProductContent.Builder, io.opencannabis.schema.content.AttachedContent.ProductContentOrBuilder> productBuilder_;
       /**
@@ -1758,7 +1756,7 @@ public final class PlantProduct {
         return productBuilder_;
       }
 
-      private io.opencannabis.schema.content.MaterialsContent.MaterialsData material_ = null;
+      private io.opencannabis.schema.content.MaterialsContent.MaterialsData material_;
       private com.google.protobuf.SingleFieldBuilderV3<
           io.opencannabis.schema.content.MaterialsContent.MaterialsData, io.opencannabis.schema.content.MaterialsContent.MaterialsData.Builder, io.opencannabis.schema.content.MaterialsContent.MaterialsDataOrBuilder> materialBuilder_;
       /**
@@ -1913,7 +1911,7 @@ public final class PlantProduct {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override

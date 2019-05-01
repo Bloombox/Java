@@ -1,5 +1,5 @@
 /*
- * Copyright 2018, Momentum Ideas, Co. All rights reserved.
+ * Copyright 2019, Momentum Ideas, Co. All rights reserved.
  *
  * Source and object computer code contained herein is the private intellectual
  * property of Momentum Ideas Co., a Delaware Corporation. Use of this
@@ -136,7 +136,6 @@ public final class AppStaff {
       super(builder);
     }
     private StaffUser() {
-      setup_ = false;
     }
 
     @java.lang.Override
@@ -208,7 +207,7 @@ public final class AppStaff {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -417,26 +416,25 @@ public final class AppStaff {
       }
       io.bloombox.schema.identity.AppStaff.StaffUser other = (io.bloombox.schema.identity.AppStaff.StaffUser) obj;
 
-      boolean result = true;
-      result = result && (hasName() == other.hasName());
+      if (hasName() != other.hasName()) return false;
       if (hasName()) {
-        result = result && getName()
-            .equals(other.getName());
+        if (!getName()
+            .equals(other.getName())) return false;
       }
-      result = result && (hasPortrait() == other.hasPortrait());
+      if (hasPortrait() != other.hasPortrait()) return false;
       if (hasPortrait()) {
-        result = result && getPortrait()
-            .equals(other.getPortrait());
+        if (!getPortrait()
+            .equals(other.getPortrait())) return false;
       }
-      result = result && (hasIdentity() == other.hasIdentity());
+      if (hasIdentity() != other.hasIdentity()) return false;
       if (hasIdentity()) {
-        result = result && getIdentity()
-            .equals(other.getIdentity());
+        if (!getIdentity()
+            .equals(other.getIdentity())) return false;
       }
-      result = result && (getSetup()
-          == other.getSetup());
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (getSetup()
+          != other.getSetup()) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -666,35 +664,35 @@ public final class AppStaff {
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -749,7 +747,7 @@ public final class AppStaff {
         return this;
       }
 
-      private io.opencannabis.schema.person.Name name_ = null;
+      private io.opencannabis.schema.person.Name name_;
       private com.google.protobuf.SingleFieldBuilderV3<
           io.opencannabis.schema.person.Name, io.opencannabis.schema.person.Name.Builder, io.opencannabis.schema.person.NameOrBuilder> nameBuilder_;
       /**
@@ -902,7 +900,7 @@ public final class AppStaff {
         return nameBuilder_;
       }
 
-      private io.opencannabis.schema.media.MediaItemKey.MediaKey portrait_ = null;
+      private io.opencannabis.schema.media.MediaItemKey.MediaKey portrait_;
       private com.google.protobuf.SingleFieldBuilderV3<
           io.opencannabis.schema.media.MediaItemKey.MediaKey, io.opencannabis.schema.media.MediaItemKey.MediaKey.Builder, io.opencannabis.schema.media.MediaItemKey.MediaKeyOrBuilder> portraitBuilder_;
       /**
@@ -1055,7 +1053,7 @@ public final class AppStaff {
         return portraitBuilder_;
       }
 
-      private io.bloombox.schema.identity.AppUser.UserIdentity identity_ = null;
+      private io.bloombox.schema.identity.AppUser.UserIdentity identity_;
       private com.google.protobuf.SingleFieldBuilderV3<
           io.bloombox.schema.identity.AppUser.UserIdentity, io.bloombox.schema.identity.AppUser.UserIdentity.Builder, io.bloombox.schema.identity.AppUser.UserIdentityOrBuilder> identityBuilder_;
       /**
@@ -1248,7 +1246,7 @@ public final class AppStaff {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override

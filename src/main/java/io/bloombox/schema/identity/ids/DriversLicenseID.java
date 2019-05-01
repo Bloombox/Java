@@ -1,5 +1,5 @@
 /*
- * Copyright 2018, Momentum Ideas, Co. All rights reserved.
+ * Copyright 2019, Momentum Ideas, Co. All rights reserved.
  *
  * Source and object computer code contained herein is the private intellectual
  * property of Momentum Ideas Co., a Delaware Corporation. Use of this
@@ -60,7 +60,7 @@ public final class DriversLicenseID {
     FAMILY_NAME(1),
     /**
      * <pre>
-     * Person's first anme, or given name.
+     * Person's first name, or given name.
      * </pre>
      *
      * <code>GIVEN_NAME = 2;</code>
@@ -360,7 +360,7 @@ public final class DriversLicenseID {
     public static final int FAMILY_NAME_VALUE = 1;
     /**
      * <pre>
-     * Person's first anme, or given name.
+     * Person's first name, or given name.
      * </pre>
      *
      * <code>GIVEN_NAME = 2;</code>
@@ -859,7 +859,7 @@ public final class DriversLicenseID {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -1079,25 +1079,22 @@ public final class DriversLicenseID {
       }
       io.bloombox.schema.identity.ids.DriversLicenseID.USDLFieldValue other = (io.bloombox.schema.identity.ids.DriversLicenseID.USDLFieldValue) obj;
 
-      boolean result = true;
-      result = result && field_ == other.field_;
-      result = result && getDataCase().equals(
-          other.getDataCase());
-      if (!result) return false;
+      if (field_ != other.field_) return false;
+      if (!getDataCase().equals(other.getDataCase())) return false;
       switch (dataCase_) {
         case 2:
-          result = result && getValue()
-              .equals(other.getValue());
+          if (!getValue()
+              .equals(other.getValue())) return false;
           break;
         case 3:
-          result = result && getRawValue()
-              .equals(other.getRawValue());
+          if (!getRawValue()
+              .equals(other.getRawValue())) return false;
           break;
         case 0:
         default:
       }
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -1302,35 +1299,35 @@ public final class DriversLicenseID {
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -1618,7 +1615,7 @@ public final class DriversLicenseID {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -1791,7 +1788,7 @@ public final class DriversLicenseID {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -2060,26 +2057,23 @@ public final class DriversLicenseID {
       }
       io.bloombox.schema.identity.ids.DriversLicenseID.USDLReference other = (io.bloombox.schema.identity.ids.DriversLicenseID.USDLReference) obj;
 
-      boolean result = true;
-      result = result && getNumber()
-          .equals(other.getNumber());
-      result = result && getDataCase().equals(
-          other.getDataCase());
-      if (!result) return false;
+      if (!getNumber()
+          .equals(other.getNumber())) return false;
+      if (!getDataCase().equals(other.getDataCase())) return false;
       switch (dataCase_) {
         case 2:
-          result = result && getBarcode()
-              .equals(other.getBarcode());
+          if (!getBarcode()
+              .equals(other.getBarcode())) return false;
           break;
         case 3:
-          result = result && getMagstripe()
-              .equals(other.getMagstripe());
+          if (!getMagstripe()
+              .equals(other.getMagstripe())) return false;
           break;
         case 0:
         default:
       }
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -2284,35 +2278,35 @@ public final class DriversLicenseID {
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -2682,7 +2676,7 @@ public final class DriversLicenseID {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -2862,7 +2856,6 @@ public final class DriversLicenseID {
       barcode_ = "";
       magstripe_ = "";
       jurisdiction_ = 0;
-      identificationCard_ = false;
       fields_ = java.util.Collections.emptyList();
     }
 
@@ -2914,7 +2907,7 @@ public final class DriversLicenseID {
               break;
             }
             case 802: {
-              if (!((mutable_bitField0_ & 0x00000010) == 0x00000010)) {
+              if (!((mutable_bitField0_ & 0x00000010) != 0)) {
                 fields_ = new java.util.ArrayList<io.bloombox.schema.identity.ids.DriversLicenseID.USDLFieldValue>();
                 mutable_bitField0_ |= 0x00000010;
               }
@@ -2923,7 +2916,7 @@ public final class DriversLicenseID {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -2937,7 +2930,7 @@ public final class DriversLicenseID {
         throw new com.google.protobuf.InvalidProtocolBufferException(
             e).setUnfinishedMessage(this);
       } finally {
-        if (((mutable_bitField0_ & 0x00000010) == 0x00000010)) {
+        if (((mutable_bitField0_ & 0x00000010) != 0)) {
           fields_ = java.util.Collections.unmodifiableList(fields_);
         }
         this.unknownFields = unknownFields.build();
@@ -3206,18 +3199,17 @@ public final class DriversLicenseID {
       }
       io.bloombox.schema.identity.ids.DriversLicenseID.USDL other = (io.bloombox.schema.identity.ids.DriversLicenseID.USDL) obj;
 
-      boolean result = true;
-      result = result && getBarcode()
-          .equals(other.getBarcode());
-      result = result && getMagstripe()
-          .equals(other.getMagstripe());
-      result = result && jurisdiction_ == other.jurisdiction_;
-      result = result && (getIdentificationCard()
-          == other.getIdentificationCard());
-      result = result && getFieldsList()
-          .equals(other.getFieldsList());
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!getBarcode()
+          .equals(other.getBarcode())) return false;
+      if (!getMagstripe()
+          .equals(other.getMagstripe())) return false;
+      if (jurisdiction_ != other.jurisdiction_) return false;
+      if (getIdentificationCard()
+          != other.getIdentificationCard()) return false;
+      if (!getFieldsList()
+          .equals(other.getFieldsList())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -3425,7 +3417,7 @@ public final class DriversLicenseID {
         result.jurisdiction_ = jurisdiction_;
         result.identificationCard_ = identificationCard_;
         if (fieldsBuilder_ == null) {
-          if (((bitField0_ & 0x00000010) == 0x00000010)) {
+          if (((bitField0_ & 0x00000010) != 0)) {
             fields_ = java.util.Collections.unmodifiableList(fields_);
             bitField0_ = (bitField0_ & ~0x00000010);
           }
@@ -3440,35 +3432,35 @@ public final class DriversLicenseID {
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -3836,7 +3828,7 @@ public final class DriversLicenseID {
       private java.util.List<io.bloombox.schema.identity.ids.DriversLicenseID.USDLFieldValue> fields_ =
         java.util.Collections.emptyList();
       private void ensureFieldsIsMutable() {
-        if (!((bitField0_ & 0x00000010) == 0x00000010)) {
+        if (!((bitField0_ & 0x00000010) != 0)) {
           fields_ = new java.util.ArrayList<io.bloombox.schema.identity.ids.DriversLicenseID.USDLFieldValue>(fields_);
           bitField0_ |= 0x00000010;
          }
@@ -4137,7 +4129,7 @@ public final class DriversLicenseID {
           fieldsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
               io.bloombox.schema.identity.ids.DriversLicenseID.USDLFieldValue, io.bloombox.schema.identity.ids.DriversLicenseID.USDLFieldValue.Builder, io.bloombox.schema.identity.ids.DriversLicenseID.USDLFieldValueOrBuilder>(
                   fields_,
-                  ((bitField0_ & 0x00000010) == 0x00000010),
+                  ((bitField0_ & 0x00000010) != 0),
                   getParentForChildren(),
                   isClean());
           fields_ = null;
@@ -4147,7 +4139,7 @@ public final class DriversLicenseID {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override

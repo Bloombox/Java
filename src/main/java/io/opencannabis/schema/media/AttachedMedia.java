@@ -1,12 +1,11 @@
 /*
- * Copyright 2018, Momentum Ideas, Co. All rights reserved.
+ * Copyright 2019, Momentum Ideas Co.
  *
- * Source and object computer code contained herein is the private intellectual
- * property of Momentum Ideas Co., a Delaware Corporation. Use of this
- * code in source form requires permission in writing before use or the
- * assembly, distribution, or publishing of derivative works, for commercial
- * purposes or any other purpose, from a duly authorized officer of Momentum
- * Ideas Co.
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *  http://www.apache.org/licenses/LICENSE-2.0
  *
  * Unless required by applicable law or agreed to in writing, software
  * distributed under the License is distributed on an "AS IS" BASIS,
@@ -483,7 +482,7 @@ public final class AttachedMedia {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -777,32 +776,29 @@ public final class AttachedMedia {
       }
       io.opencannabis.schema.media.AttachedMedia.MediaSubject other = (io.opencannabis.schema.media.AttachedMedia.MediaSubject) obj;
 
-      boolean result = true;
-      result = result && getAttachmentCase().equals(
-          other.getAttachmentCase());
-      if (!result) return false;
+      if (!getAttachmentCase().equals(other.getAttachmentCase())) return false;
       switch (attachmentCase_) {
         case 2:
-          result = result && getProduct()
-              .equals(other.getProduct());
+          if (!getProduct()
+              .equals(other.getProduct())) return false;
           break;
         case 3:
-          result = result && getPartner()
-              .equals(other.getPartner());
+          if (!getPartner()
+              .equals(other.getPartner())) return false;
           break;
         case 4:
-          result = result && getLocation()
-              .equals(other.getLocation());
+          if (!getLocation()
+              .equals(other.getLocation())) return false;
           break;
         case 5:
-          result = result && (getGlobal()
-              == other.getGlobal());
+          if (getGlobal()
+              != other.getGlobal()) return false;
           break;
         case 0:
         default:
       }
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -1022,35 +1018,35 @@ public final class AttachedMedia {
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -1549,7 +1545,7 @@ public final class AttachedMedia {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -1867,8 +1863,6 @@ public final class AttachedMedia {
       token_ = "";
       operation_ = "";
       mime_ = "";
-      size_ = 0L;
-      finished_ = false;
       md5_ = "";
       crc32_ = "";
       owner_ = "";
@@ -1998,7 +1992,7 @@ public final class AttachedMedia {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -2617,44 +2611,43 @@ public final class AttachedMedia {
       }
       io.opencannabis.schema.media.AttachedMedia.MediaUpload other = (io.opencannabis.schema.media.AttachedMedia.MediaUpload) obj;
 
-      boolean result = true;
-      result = result && getToken()
-          .equals(other.getToken());
-      result = result && getOperation()
-          .equals(other.getOperation());
-      result = result && (hasMedia() == other.hasMedia());
+      if (!getToken()
+          .equals(other.getToken())) return false;
+      if (!getOperation()
+          .equals(other.getOperation())) return false;
+      if (hasMedia() != other.hasMedia()) return false;
       if (hasMedia()) {
-        result = result && getMedia()
-            .equals(other.getMedia());
+        if (!getMedia()
+            .equals(other.getMedia())) return false;
       }
-      result = result && getMime()
-          .equals(other.getMime());
-      result = result && (getSize()
-          == other.getSize());
-      result = result && (getFinished()
-          == other.getFinished());
-      result = result && getMd5()
-          .equals(other.getMd5());
-      result = result && getCrc32()
-          .equals(other.getCrc32());
-      result = result && getOwner()
-          .equals(other.getOwner());
-      result = result && getPath()
-          .equals(other.getPath());
-      result = result && getParent()
-          .equals(other.getParent());
-      result = result && (hasCreated() == other.hasCreated());
+      if (!getMime()
+          .equals(other.getMime())) return false;
+      if (getSize()
+          != other.getSize()) return false;
+      if (getFinished()
+          != other.getFinished()) return false;
+      if (!getMd5()
+          .equals(other.getMd5())) return false;
+      if (!getCrc32()
+          .equals(other.getCrc32())) return false;
+      if (!getOwner()
+          .equals(other.getOwner())) return false;
+      if (!getPath()
+          .equals(other.getPath())) return false;
+      if (!getParent()
+          .equals(other.getParent())) return false;
+      if (hasCreated() != other.hasCreated()) return false;
       if (hasCreated()) {
-        result = result && getCreated()
-            .equals(other.getCreated());
+        if (!getCreated()
+            .equals(other.getCreated())) return false;
       }
-      result = result && (hasCompleted() == other.hasCompleted());
+      if (hasCompleted() != other.hasCompleted()) return false;
       if (hasCompleted()) {
-        result = result && getCompleted()
-            .equals(other.getCompleted());
+        if (!getCompleted()
+            .equals(other.getCompleted())) return false;
       }
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -2931,35 +2924,35 @@ public final class AttachedMedia {
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -3232,7 +3225,7 @@ public final class AttachedMedia {
         return this;
       }
 
-      private io.opencannabis.schema.media.AttachedMedia.MediaItem media_ = null;
+      private io.opencannabis.schema.media.AttachedMedia.MediaItem media_;
       private com.google.protobuf.SingleFieldBuilderV3<
           io.opencannabis.schema.media.AttachedMedia.MediaItem, io.opencannabis.schema.media.AttachedMedia.MediaItem.Builder, io.opencannabis.schema.media.AttachedMedia.MediaItemOrBuilder> mediaBuilder_;
       /**
@@ -4005,7 +3998,7 @@ public final class AttachedMedia {
         return this;
       }
 
-      private io.opencannabis.schema.temporal.TemporalInstant.Instant created_ = null;
+      private io.opencannabis.schema.temporal.TemporalInstant.Instant created_;
       private com.google.protobuf.SingleFieldBuilderV3<
           io.opencannabis.schema.temporal.TemporalInstant.Instant, io.opencannabis.schema.temporal.TemporalInstant.Instant.Builder, io.opencannabis.schema.temporal.TemporalInstant.InstantOrBuilder> createdBuilder_;
       /**
@@ -4158,7 +4151,7 @@ public final class AttachedMedia {
         return createdBuilder_;
       }
 
-      private io.opencannabis.schema.temporal.TemporalInstant.Instant completed_ = null;
+      private io.opencannabis.schema.temporal.TemporalInstant.Instant completed_;
       private com.google.protobuf.SingleFieldBuilderV3<
           io.opencannabis.schema.temporal.TemporalInstant.Instant, io.opencannabis.schema.temporal.TemporalInstant.Instant.Builder, io.opencannabis.schema.temporal.TemporalInstant.InstantOrBuilder> completedBuilder_;
       /**
@@ -4313,7 +4306,7 @@ public final class AttachedMedia {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -4768,7 +4761,7 @@ public final class AttachedMedia {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -5333,46 +5326,45 @@ public final class AttachedMedia {
       }
       io.opencannabis.schema.media.AttachedMedia.MediaItem other = (io.opencannabis.schema.media.AttachedMedia.MediaItem) obj;
 
-      boolean result = true;
-      result = result && (hasKey() == other.hasKey());
+      if (hasKey() != other.hasKey()) return false;
       if (hasKey()) {
-        result = result && getKey()
-            .equals(other.getKey());
+        if (!getKey()
+            .equals(other.getKey())) return false;
       }
-      result = result && status_ == other.status_;
-      result = result && (hasType() == other.hasType());
+      if (status_ != other.status_) return false;
+      if (hasType() != other.hasType()) return false;
       if (hasType()) {
-        result = result && getType()
-            .equals(other.getType());
+        if (!getType()
+            .equals(other.getType())) return false;
       }
-      result = result && getName()
-          .equals(other.getName());
-      result = result && getUri()
-          .equals(other.getUri());
-      result = result && getServingUri()
-          .equals(other.getServingUri());
-      result = result && privacy_ == other.privacy_;
-      result = result && (hasCreated() == other.hasCreated());
+      if (!getName()
+          .equals(other.getName())) return false;
+      if (!getUri()
+          .equals(other.getUri())) return false;
+      if (!getServingUri()
+          .equals(other.getServingUri())) return false;
+      if (privacy_ != other.privacy_) return false;
+      if (hasCreated() != other.hasCreated()) return false;
       if (hasCreated()) {
-        result = result && getCreated()
-            .equals(other.getCreated());
+        if (!getCreated()
+            .equals(other.getCreated())) return false;
       }
-      result = result && (hasModified() == other.hasModified());
+      if (hasModified() != other.hasModified()) return false;
       if (hasModified()) {
-        result = result && getModified()
-            .equals(other.getModified());
+        if (!getModified()
+            .equals(other.getModified())) return false;
       }
-      result = result && (hasPublished() == other.hasPublished());
+      if (hasPublished() != other.hasPublished()) return false;
       if (hasPublished()) {
-        result = result && getPublished()
-            .equals(other.getPublished());
+        if (!getPublished()
+            .equals(other.getPublished())) return false;
       }
-      result = result && getScope()
-          .equals(other.getScope());
-      result = result && getToken()
-          .equals(other.getToken());
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!getScope()
+          .equals(other.getScope())) return false;
+      if (!getToken()
+          .equals(other.getToken())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -5663,35 +5655,35 @@ public final class AttachedMedia {
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -5775,7 +5767,7 @@ public final class AttachedMedia {
         return this;
       }
 
-      private io.opencannabis.schema.media.MediaItemKey.MediaKey key_ = null;
+      private io.opencannabis.schema.media.MediaItemKey.MediaKey key_;
       private com.google.protobuf.SingleFieldBuilderV3<
           io.opencannabis.schema.media.MediaItemKey.MediaKey, io.opencannabis.schema.media.MediaItemKey.MediaKey.Builder, io.opencannabis.schema.media.MediaItemKey.MediaKeyOrBuilder> keyBuilder_;
       /**
@@ -5973,7 +5965,7 @@ public final class AttachedMedia {
         return this;
       }
 
-      private io.opencannabis.schema.media.MediaItemType.MediaType type_ = null;
+      private io.opencannabis.schema.media.MediaItemType.MediaType type_;
       private com.google.protobuf.SingleFieldBuilderV3<
           io.opencannabis.schema.media.MediaItemType.MediaType, io.opencannabis.schema.media.MediaItemType.MediaType.Builder, io.opencannabis.schema.media.MediaItemType.MediaTypeOrBuilder> typeBuilder_;
       /**
@@ -6458,7 +6450,7 @@ public final class AttachedMedia {
         return this;
       }
 
-      private io.opencannabis.schema.temporal.TemporalInstant.Instant created_ = null;
+      private io.opencannabis.schema.temporal.TemporalInstant.Instant created_;
       private com.google.protobuf.SingleFieldBuilderV3<
           io.opencannabis.schema.temporal.TemporalInstant.Instant, io.opencannabis.schema.temporal.TemporalInstant.Instant.Builder, io.opencannabis.schema.temporal.TemporalInstant.InstantOrBuilder> createdBuilder_;
       /**
@@ -6611,7 +6603,7 @@ public final class AttachedMedia {
         return createdBuilder_;
       }
 
-      private io.opencannabis.schema.temporal.TemporalInstant.Instant modified_ = null;
+      private io.opencannabis.schema.temporal.TemporalInstant.Instant modified_;
       private com.google.protobuf.SingleFieldBuilderV3<
           io.opencannabis.schema.temporal.TemporalInstant.Instant, io.opencannabis.schema.temporal.TemporalInstant.Instant.Builder, io.opencannabis.schema.temporal.TemporalInstant.InstantOrBuilder> modifiedBuilder_;
       /**
@@ -6764,7 +6756,7 @@ public final class AttachedMedia {
         return modifiedBuilder_;
       }
 
-      private io.opencannabis.schema.temporal.TemporalInstant.Instant published_ = null;
+      private io.opencannabis.schema.temporal.TemporalInstant.Instant published_;
       private com.google.protobuf.SingleFieldBuilderV3<
           io.opencannabis.schema.temporal.TemporalInstant.Instant, io.opencannabis.schema.temporal.TemporalInstant.Instant.Builder, io.opencannabis.schema.temporal.TemporalInstant.InstantOrBuilder> publishedBuilder_;
       /**
@@ -7097,7 +7089,7 @@ public final class AttachedMedia {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override

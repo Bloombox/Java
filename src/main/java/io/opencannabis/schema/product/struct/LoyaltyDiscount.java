@@ -1,12 +1,11 @@
 /*
- * Copyright 2018, Momentum Ideas, Co. All rights reserved.
+ * Copyright 2019, Momentum Ideas Co.
  *
- * Source and object computer code contained herein is the private intellectual
- * property of Momentum Ideas Co., a Delaware Corporation. Use of this
- * code in source form requires permission in writing before use or the
- * assembly, distribution, or publishing of derivative works, for commercial
- * purposes or any other purpose, from a duly authorized officer of Momentum
- * Ideas Co.
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *  http://www.apache.org/licenses/LICENSE-2.0
  *
  * Unless required by applicable law or agreed to in writing, software
  * distributed under the License is distributed on an "AS IS" BASIS,
@@ -21,6 +20,11 @@
 package io.opencannabis.schema.product.struct;
 
 /**
+ * <pre>
+ * A discount for returning to a partner or partner location multiple times or for having been a member for a certain
+ * amount of time or having displayed a certain amount of buying power at a partner or partner location.
+ * </pre>
+ *
  * Protobuf type {@code opencannabis.structs.pricing.LoyaltyDiscount}
  */
 public  final class LoyaltyDiscount extends
@@ -33,8 +37,6 @@ private static final long serialVersionUID = 0L;
     super(builder);
   }
   private LoyaltyDiscount() {
-    trigger_ = 0;
-    reward_ = 0;
   }
 
   @java.lang.Override
@@ -72,7 +74,7 @@ private static final long serialVersionUID = 0L;
             break;
           }
           default: {
-            if (!parseUnknownFieldProto3(
+            if (!parseUnknownField(
                 input, unknownFields, extensionRegistry, tag)) {
               done = true;
             }
@@ -106,6 +108,10 @@ private static final long serialVersionUID = 0L;
   public static final int TRIGGER_FIELD_NUMBER = 23;
   private int trigger_;
   /**
+   * <pre>
+   * The discount code used to trigger the discount.
+   * </pre>
+   *
    * <code>uint32 trigger = 23;</code>
    */
   public int getTrigger() {
@@ -115,6 +121,10 @@ private static final long serialVersionUID = 0L;
   public static final int REWARD_FIELD_NUMBER = 24;
   private int reward_;
   /**
+   * <pre>
+   * The value for the discount.
+   * </pre>
+   *
    * <code>uint32 reward = 24;</code>
    */
   public int getReward() {
@@ -173,13 +183,12 @@ private static final long serialVersionUID = 0L;
     }
     io.opencannabis.schema.product.struct.LoyaltyDiscount other = (io.opencannabis.schema.product.struct.LoyaltyDiscount) obj;
 
-    boolean result = true;
-    result = result && (getTrigger()
-        == other.getTrigger());
-    result = result && (getReward()
-        == other.getReward());
-    result = result && unknownFields.equals(other.unknownFields);
-    return result;
+    if (getTrigger()
+        != other.getTrigger()) return false;
+    if (getReward()
+        != other.getReward()) return false;
+    if (!unknownFields.equals(other.unknownFields)) return false;
+    return true;
   }
 
   @java.lang.Override
@@ -289,6 +298,11 @@ private static final long serialVersionUID = 0L;
     return builder;
   }
   /**
+   * <pre>
+   * A discount for returning to a partner or partner location multiple times or for having been a member for a certain
+   * amount of time or having displayed a certain amount of buying power at a partner or partner location.
+   * </pre>
+   *
    * Protobuf type {@code opencannabis.structs.pricing.LoyaltyDiscount}
    */
   public static final class Builder extends
@@ -364,35 +378,35 @@ private static final long serialVersionUID = 0L;
 
     @java.lang.Override
     public Builder clone() {
-      return (Builder) super.clone();
+      return super.clone();
     }
     @java.lang.Override
     public Builder setField(
         com.google.protobuf.Descriptors.FieldDescriptor field,
         java.lang.Object value) {
-      return (Builder) super.setField(field, value);
+      return super.setField(field, value);
     }
     @java.lang.Override
     public Builder clearField(
         com.google.protobuf.Descriptors.FieldDescriptor field) {
-      return (Builder) super.clearField(field);
+      return super.clearField(field);
     }
     @java.lang.Override
     public Builder clearOneof(
         com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-      return (Builder) super.clearOneof(oneof);
+      return super.clearOneof(oneof);
     }
     @java.lang.Override
     public Builder setRepeatedField(
         com.google.protobuf.Descriptors.FieldDescriptor field,
         int index, java.lang.Object value) {
-      return (Builder) super.setRepeatedField(field, index, value);
+      return super.setRepeatedField(field, index, value);
     }
     @java.lang.Override
     public Builder addRepeatedField(
         com.google.protobuf.Descriptors.FieldDescriptor field,
         java.lang.Object value) {
-      return (Builder) super.addRepeatedField(field, value);
+      return super.addRepeatedField(field, value);
     }
     @java.lang.Override
     public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -443,12 +457,20 @@ private static final long serialVersionUID = 0L;
 
     private int trigger_ ;
     /**
+     * <pre>
+     * The discount code used to trigger the discount.
+     * </pre>
+     *
      * <code>uint32 trigger = 23;</code>
      */
     public int getTrigger() {
       return trigger_;
     }
     /**
+     * <pre>
+     * The discount code used to trigger the discount.
+     * </pre>
+     *
      * <code>uint32 trigger = 23;</code>
      */
     public Builder setTrigger(int value) {
@@ -458,6 +480,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * The discount code used to trigger the discount.
+     * </pre>
+     *
      * <code>uint32 trigger = 23;</code>
      */
     public Builder clearTrigger() {
@@ -469,12 +495,20 @@ private static final long serialVersionUID = 0L;
 
     private int reward_ ;
     /**
+     * <pre>
+     * The value for the discount.
+     * </pre>
+     *
      * <code>uint32 reward = 24;</code>
      */
     public int getReward() {
       return reward_;
     }
     /**
+     * <pre>
+     * The value for the discount.
+     * </pre>
+     *
      * <code>uint32 reward = 24;</code>
      */
     public Builder setReward(int value) {
@@ -484,6 +518,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * The value for the discount.
+     * </pre>
+     *
      * <code>uint32 reward = 24;</code>
      */
     public Builder clearReward() {
@@ -495,7 +533,7 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public final Builder setUnknownFields(
         final com.google.protobuf.UnknownFieldSet unknownFields) {
-      return super.setUnknownFieldsProto3(unknownFields);
+      return super.setUnknownFields(unknownFields);
     }
 
     @java.lang.Override

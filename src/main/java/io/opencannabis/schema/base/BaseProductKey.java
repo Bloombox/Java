@@ -1,12 +1,11 @@
 /*
- * Copyright 2018, Momentum Ideas, Co. All rights reserved.
+ * Copyright 2019, Momentum Ideas Co.
  *
- * Source and object computer code contained herein is the private intellectual
- * property of Momentum Ideas Co., a Delaware Corporation. Use of this
- * code in source form requires permission in writing before use or the
- * assembly, distribution, or publishing of derivative works, for commercial
- * purposes or any other purpose, from a duly authorized officer of Momentum
- * Ideas Co.
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *  http://www.apache.org/licenses/LICENSE-2.0
  *
  * Unless required by applicable law or agreed to in writing, software
  * distributed under the License is distributed on an "AS IS" BASIS,
@@ -40,7 +39,7 @@ public final class BaseProductKey {
      * Specifies the name of a product.
      * </pre>
      *
-     * <code>.opencannabis.content.Name name = 1;</code>
+     * <code>.opencannabis.content.Name name = 1 [(.gen_bq_schema.description) = "Specifies the name of a product."];</code>
      */
     boolean hasName();
     /**
@@ -48,7 +47,7 @@ public final class BaseProductKey {
      * Specifies the name of a product.
      * </pre>
      *
-     * <code>.opencannabis.content.Name name = 1;</code>
+     * <code>.opencannabis.content.Name name = 1 [(.gen_bq_schema.description) = "Specifies the name of a product."];</code>
      */
     io.opencannabis.schema.content.NameContent.Name getName();
     /**
@@ -56,7 +55,7 @@ public final class BaseProductKey {
      * Specifies the name of a product.
      * </pre>
      *
-     * <code>.opencannabis.content.Name name = 1;</code>
+     * <code>.opencannabis.content.Name name = 1 [(.gen_bq_schema.description) = "Specifies the name of a product."];</code>
      */
     io.opencannabis.schema.content.NameContent.NameOrBuilder getNameOrBuilder();
 
@@ -65,7 +64,7 @@ public final class BaseProductKey {
      * Specifies the key, if known, of a product.
      * </pre>
      *
-     * <code>.opencannabis.base.ProductKey key = 2;</code>
+     * <code>.opencannabis.base.ProductKey key = 2 [(.gen_bq_schema.description) = "Specifies the key, if known, of a product."];</code>
      */
     boolean hasKey();
     /**
@@ -73,7 +72,7 @@ public final class BaseProductKey {
      * Specifies the key, if known, of a product.
      * </pre>
      *
-     * <code>.opencannabis.base.ProductKey key = 2;</code>
+     * <code>.opencannabis.base.ProductKey key = 2 [(.gen_bq_schema.description) = "Specifies the key, if known, of a product."];</code>
      */
     io.opencannabis.schema.base.BaseProductKey.ProductKey getKey();
     /**
@@ -81,7 +80,7 @@ public final class BaseProductKey {
      * Specifies the key, if known, of a product.
      * </pre>
      *
-     * <code>.opencannabis.base.ProductKey key = 2;</code>
+     * <code>.opencannabis.base.ProductKey key = 2 [(.gen_bq_schema.description) = "Specifies the key, if known, of a product."];</code>
      */
     io.opencannabis.schema.base.BaseProductKey.ProductKeyOrBuilder getKeyOrBuilder();
   }
@@ -155,7 +154,7 @@ public final class BaseProductKey {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -193,7 +192,7 @@ public final class BaseProductKey {
      * Specifies the name of a product.
      * </pre>
      *
-     * <code>.opencannabis.content.Name name = 1;</code>
+     * <code>.opencannabis.content.Name name = 1 [(.gen_bq_schema.description) = "Specifies the name of a product."];</code>
      */
     public boolean hasName() {
       return name_ != null;
@@ -203,7 +202,7 @@ public final class BaseProductKey {
      * Specifies the name of a product.
      * </pre>
      *
-     * <code>.opencannabis.content.Name name = 1;</code>
+     * <code>.opencannabis.content.Name name = 1 [(.gen_bq_schema.description) = "Specifies the name of a product."];</code>
      */
     public io.opencannabis.schema.content.NameContent.Name getName() {
       return name_ == null ? io.opencannabis.schema.content.NameContent.Name.getDefaultInstance() : name_;
@@ -213,7 +212,7 @@ public final class BaseProductKey {
      * Specifies the name of a product.
      * </pre>
      *
-     * <code>.opencannabis.content.Name name = 1;</code>
+     * <code>.opencannabis.content.Name name = 1 [(.gen_bq_schema.description) = "Specifies the name of a product."];</code>
      */
     public io.opencannabis.schema.content.NameContent.NameOrBuilder getNameOrBuilder() {
       return getName();
@@ -226,7 +225,7 @@ public final class BaseProductKey {
      * Specifies the key, if known, of a product.
      * </pre>
      *
-     * <code>.opencannabis.base.ProductKey key = 2;</code>
+     * <code>.opencannabis.base.ProductKey key = 2 [(.gen_bq_schema.description) = "Specifies the key, if known, of a product."];</code>
      */
     public boolean hasKey() {
       return key_ != null;
@@ -236,7 +235,7 @@ public final class BaseProductKey {
      * Specifies the key, if known, of a product.
      * </pre>
      *
-     * <code>.opencannabis.base.ProductKey key = 2;</code>
+     * <code>.opencannabis.base.ProductKey key = 2 [(.gen_bq_schema.description) = "Specifies the key, if known, of a product."];</code>
      */
     public io.opencannabis.schema.base.BaseProductKey.ProductKey getKey() {
       return key_ == null ? io.opencannabis.schema.base.BaseProductKey.ProductKey.getDefaultInstance() : key_;
@@ -246,7 +245,7 @@ public final class BaseProductKey {
      * Specifies the key, if known, of a product.
      * </pre>
      *
-     * <code>.opencannabis.base.ProductKey key = 2;</code>
+     * <code>.opencannabis.base.ProductKey key = 2 [(.gen_bq_schema.description) = "Specifies the key, if known, of a product."];</code>
      */
     public io.opencannabis.schema.base.BaseProductKey.ProductKeyOrBuilder getKeyOrBuilder() {
       return getKey();
@@ -304,19 +303,18 @@ public final class BaseProductKey {
       }
       io.opencannabis.schema.base.BaseProductKey.ProductReference other = (io.opencannabis.schema.base.BaseProductKey.ProductReference) obj;
 
-      boolean result = true;
-      result = result && (hasName() == other.hasName());
+      if (hasName() != other.hasName()) return false;
       if (hasName()) {
-        result = result && getName()
-            .equals(other.getName());
+        if (!getName()
+            .equals(other.getName())) return false;
       }
-      result = result && (hasKey() == other.hasKey());
+      if (hasKey() != other.hasKey()) return false;
       if (hasKey()) {
-        result = result && getKey()
-            .equals(other.getKey());
+        if (!getKey()
+            .equals(other.getKey())) return false;
       }
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -525,35 +523,35 @@ public final class BaseProductKey {
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -602,7 +600,7 @@ public final class BaseProductKey {
         return this;
       }
 
-      private io.opencannabis.schema.content.NameContent.Name name_ = null;
+      private io.opencannabis.schema.content.NameContent.Name name_;
       private com.google.protobuf.SingleFieldBuilderV3<
           io.opencannabis.schema.content.NameContent.Name, io.opencannabis.schema.content.NameContent.Name.Builder, io.opencannabis.schema.content.NameContent.NameOrBuilder> nameBuilder_;
       /**
@@ -610,7 +608,7 @@ public final class BaseProductKey {
        * Specifies the name of a product.
        * </pre>
        *
-       * <code>.opencannabis.content.Name name = 1;</code>
+       * <code>.opencannabis.content.Name name = 1 [(.gen_bq_schema.description) = "Specifies the name of a product."];</code>
        */
       public boolean hasName() {
         return nameBuilder_ != null || name_ != null;
@@ -620,7 +618,7 @@ public final class BaseProductKey {
        * Specifies the name of a product.
        * </pre>
        *
-       * <code>.opencannabis.content.Name name = 1;</code>
+       * <code>.opencannabis.content.Name name = 1 [(.gen_bq_schema.description) = "Specifies the name of a product."];</code>
        */
       public io.opencannabis.schema.content.NameContent.Name getName() {
         if (nameBuilder_ == null) {
@@ -634,7 +632,7 @@ public final class BaseProductKey {
        * Specifies the name of a product.
        * </pre>
        *
-       * <code>.opencannabis.content.Name name = 1;</code>
+       * <code>.opencannabis.content.Name name = 1 [(.gen_bq_schema.description) = "Specifies the name of a product."];</code>
        */
       public Builder setName(io.opencannabis.schema.content.NameContent.Name value) {
         if (nameBuilder_ == null) {
@@ -654,7 +652,7 @@ public final class BaseProductKey {
        * Specifies the name of a product.
        * </pre>
        *
-       * <code>.opencannabis.content.Name name = 1;</code>
+       * <code>.opencannabis.content.Name name = 1 [(.gen_bq_schema.description) = "Specifies the name of a product."];</code>
        */
       public Builder setName(
           io.opencannabis.schema.content.NameContent.Name.Builder builderForValue) {
@@ -672,7 +670,7 @@ public final class BaseProductKey {
        * Specifies the name of a product.
        * </pre>
        *
-       * <code>.opencannabis.content.Name name = 1;</code>
+       * <code>.opencannabis.content.Name name = 1 [(.gen_bq_schema.description) = "Specifies the name of a product."];</code>
        */
       public Builder mergeName(io.opencannabis.schema.content.NameContent.Name value) {
         if (nameBuilder_ == null) {
@@ -694,7 +692,7 @@ public final class BaseProductKey {
        * Specifies the name of a product.
        * </pre>
        *
-       * <code>.opencannabis.content.Name name = 1;</code>
+       * <code>.opencannabis.content.Name name = 1 [(.gen_bq_schema.description) = "Specifies the name of a product."];</code>
        */
       public Builder clearName() {
         if (nameBuilder_ == null) {
@@ -712,7 +710,7 @@ public final class BaseProductKey {
        * Specifies the name of a product.
        * </pre>
        *
-       * <code>.opencannabis.content.Name name = 1;</code>
+       * <code>.opencannabis.content.Name name = 1 [(.gen_bq_schema.description) = "Specifies the name of a product."];</code>
        */
       public io.opencannabis.schema.content.NameContent.Name.Builder getNameBuilder() {
         
@@ -724,7 +722,7 @@ public final class BaseProductKey {
        * Specifies the name of a product.
        * </pre>
        *
-       * <code>.opencannabis.content.Name name = 1;</code>
+       * <code>.opencannabis.content.Name name = 1 [(.gen_bq_schema.description) = "Specifies the name of a product."];</code>
        */
       public io.opencannabis.schema.content.NameContent.NameOrBuilder getNameOrBuilder() {
         if (nameBuilder_ != null) {
@@ -739,7 +737,7 @@ public final class BaseProductKey {
        * Specifies the name of a product.
        * </pre>
        *
-       * <code>.opencannabis.content.Name name = 1;</code>
+       * <code>.opencannabis.content.Name name = 1 [(.gen_bq_schema.description) = "Specifies the name of a product."];</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
           io.opencannabis.schema.content.NameContent.Name, io.opencannabis.schema.content.NameContent.Name.Builder, io.opencannabis.schema.content.NameContent.NameOrBuilder> 
@@ -755,7 +753,7 @@ public final class BaseProductKey {
         return nameBuilder_;
       }
 
-      private io.opencannabis.schema.base.BaseProductKey.ProductKey key_ = null;
+      private io.opencannabis.schema.base.BaseProductKey.ProductKey key_;
       private com.google.protobuf.SingleFieldBuilderV3<
           io.opencannabis.schema.base.BaseProductKey.ProductKey, io.opencannabis.schema.base.BaseProductKey.ProductKey.Builder, io.opencannabis.schema.base.BaseProductKey.ProductKeyOrBuilder> keyBuilder_;
       /**
@@ -763,7 +761,7 @@ public final class BaseProductKey {
        * Specifies the key, if known, of a product.
        * </pre>
        *
-       * <code>.opencannabis.base.ProductKey key = 2;</code>
+       * <code>.opencannabis.base.ProductKey key = 2 [(.gen_bq_schema.description) = "Specifies the key, if known, of a product."];</code>
        */
       public boolean hasKey() {
         return keyBuilder_ != null || key_ != null;
@@ -773,7 +771,7 @@ public final class BaseProductKey {
        * Specifies the key, if known, of a product.
        * </pre>
        *
-       * <code>.opencannabis.base.ProductKey key = 2;</code>
+       * <code>.opencannabis.base.ProductKey key = 2 [(.gen_bq_schema.description) = "Specifies the key, if known, of a product."];</code>
        */
       public io.opencannabis.schema.base.BaseProductKey.ProductKey getKey() {
         if (keyBuilder_ == null) {
@@ -787,7 +785,7 @@ public final class BaseProductKey {
        * Specifies the key, if known, of a product.
        * </pre>
        *
-       * <code>.opencannabis.base.ProductKey key = 2;</code>
+       * <code>.opencannabis.base.ProductKey key = 2 [(.gen_bq_schema.description) = "Specifies the key, if known, of a product."];</code>
        */
       public Builder setKey(io.opencannabis.schema.base.BaseProductKey.ProductKey value) {
         if (keyBuilder_ == null) {
@@ -807,7 +805,7 @@ public final class BaseProductKey {
        * Specifies the key, if known, of a product.
        * </pre>
        *
-       * <code>.opencannabis.base.ProductKey key = 2;</code>
+       * <code>.opencannabis.base.ProductKey key = 2 [(.gen_bq_schema.description) = "Specifies the key, if known, of a product."];</code>
        */
       public Builder setKey(
           io.opencannabis.schema.base.BaseProductKey.ProductKey.Builder builderForValue) {
@@ -825,7 +823,7 @@ public final class BaseProductKey {
        * Specifies the key, if known, of a product.
        * </pre>
        *
-       * <code>.opencannabis.base.ProductKey key = 2;</code>
+       * <code>.opencannabis.base.ProductKey key = 2 [(.gen_bq_schema.description) = "Specifies the key, if known, of a product."];</code>
        */
       public Builder mergeKey(io.opencannabis.schema.base.BaseProductKey.ProductKey value) {
         if (keyBuilder_ == null) {
@@ -847,7 +845,7 @@ public final class BaseProductKey {
        * Specifies the key, if known, of a product.
        * </pre>
        *
-       * <code>.opencannabis.base.ProductKey key = 2;</code>
+       * <code>.opencannabis.base.ProductKey key = 2 [(.gen_bq_schema.description) = "Specifies the key, if known, of a product."];</code>
        */
       public Builder clearKey() {
         if (keyBuilder_ == null) {
@@ -865,7 +863,7 @@ public final class BaseProductKey {
        * Specifies the key, if known, of a product.
        * </pre>
        *
-       * <code>.opencannabis.base.ProductKey key = 2;</code>
+       * <code>.opencannabis.base.ProductKey key = 2 [(.gen_bq_schema.description) = "Specifies the key, if known, of a product."];</code>
        */
       public io.opencannabis.schema.base.BaseProductKey.ProductKey.Builder getKeyBuilder() {
         
@@ -877,7 +875,7 @@ public final class BaseProductKey {
        * Specifies the key, if known, of a product.
        * </pre>
        *
-       * <code>.opencannabis.base.ProductKey key = 2;</code>
+       * <code>.opencannabis.base.ProductKey key = 2 [(.gen_bq_schema.description) = "Specifies the key, if known, of a product."];</code>
        */
       public io.opencannabis.schema.base.BaseProductKey.ProductKeyOrBuilder getKeyOrBuilder() {
         if (keyBuilder_ != null) {
@@ -892,7 +890,7 @@ public final class BaseProductKey {
        * Specifies the key, if known, of a product.
        * </pre>
        *
-       * <code>.opencannabis.base.ProductKey key = 2;</code>
+       * <code>.opencannabis.base.ProductKey key = 2 [(.gen_bq_schema.description) = "Specifies the key, if known, of a product."];</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
           io.opencannabis.schema.base.BaseProductKey.ProductKey, io.opencannabis.schema.base.BaseProductKey.ProductKey.Builder, io.opencannabis.schema.base.BaseProductKey.ProductKeyOrBuilder> 
@@ -910,7 +908,7 @@ public final class BaseProductKey {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -991,7 +989,7 @@ public final class BaseProductKey {
      * Type of product the ID is referring to. In most cases this entry can be omitted.
      * </pre>
      *
-     * <code>.opencannabis.base.ProductKind type = 2 [(.gen_bq_schema.ignore) = true];</code>
+     * <code>.opencannabis.base.ProductKind type = 2 [(.gen_bq_schema.description) = "Type of product the ID is referring to. In most cases this entry can be omitted."];</code>
      */
     int getTypeValue();
     /**
@@ -999,7 +997,7 @@ public final class BaseProductKey {
      * Type of product the ID is referring to. In most cases this entry can be omitted.
      * </pre>
      *
-     * <code>.opencannabis.base.ProductKind type = 2 [(.gen_bq_schema.ignore) = true];</code>
+     * <code>.opencannabis.base.ProductKind type = 2 [(.gen_bq_schema.description) = "Type of product the ID is referring to. In most cases this entry can be omitted."];</code>
      */
     io.opencannabis.schema.base.BaseProductKind.ProductKind getType();
   }
@@ -1062,7 +1060,7 @@ public final class BaseProductKey {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -1146,7 +1144,7 @@ public final class BaseProductKey {
      * Type of product the ID is referring to. In most cases this entry can be omitted.
      * </pre>
      *
-     * <code>.opencannabis.base.ProductKind type = 2 [(.gen_bq_schema.ignore) = true];</code>
+     * <code>.opencannabis.base.ProductKind type = 2 [(.gen_bq_schema.description) = "Type of product the ID is referring to. In most cases this entry can be omitted."];</code>
      */
     public int getTypeValue() {
       return type_;
@@ -1156,7 +1154,7 @@ public final class BaseProductKey {
      * Type of product the ID is referring to. In most cases this entry can be omitted.
      * </pre>
      *
-     * <code>.opencannabis.base.ProductKind type = 2 [(.gen_bq_schema.ignore) = true];</code>
+     * <code>.opencannabis.base.ProductKind type = 2 [(.gen_bq_schema.description) = "Type of product the ID is referring to. In most cases this entry can be omitted."];</code>
      */
     public io.opencannabis.schema.base.BaseProductKind.ProductKind getType() {
       @SuppressWarnings("deprecation")
@@ -1215,12 +1213,11 @@ public final class BaseProductKey {
       }
       io.opencannabis.schema.base.BaseProductKey.ProductKey other = (io.opencannabis.schema.base.BaseProductKey.ProductKey) obj;
 
-      boolean result = true;
-      result = result && getId()
-          .equals(other.getId());
-      result = result && type_ == other.type_;
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!getId()
+          .equals(other.getId())) return false;
+      if (type_ != other.type_) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -1410,35 +1407,35 @@ public final class BaseProductKey {
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -1593,7 +1590,7 @@ public final class BaseProductKey {
        * Type of product the ID is referring to. In most cases this entry can be omitted.
        * </pre>
        *
-       * <code>.opencannabis.base.ProductKind type = 2 [(.gen_bq_schema.ignore) = true];</code>
+       * <code>.opencannabis.base.ProductKind type = 2 [(.gen_bq_schema.description) = "Type of product the ID is referring to. In most cases this entry can be omitted."];</code>
        */
       public int getTypeValue() {
         return type_;
@@ -1603,7 +1600,7 @@ public final class BaseProductKey {
        * Type of product the ID is referring to. In most cases this entry can be omitted.
        * </pre>
        *
-       * <code>.opencannabis.base.ProductKind type = 2 [(.gen_bq_schema.ignore) = true];</code>
+       * <code>.opencannabis.base.ProductKind type = 2 [(.gen_bq_schema.description) = "Type of product the ID is referring to. In most cases this entry can be omitted."];</code>
        */
       public Builder setTypeValue(int value) {
         type_ = value;
@@ -1615,7 +1612,7 @@ public final class BaseProductKey {
        * Type of product the ID is referring to. In most cases this entry can be omitted.
        * </pre>
        *
-       * <code>.opencannabis.base.ProductKind type = 2 [(.gen_bq_schema.ignore) = true];</code>
+       * <code>.opencannabis.base.ProductKind type = 2 [(.gen_bq_schema.description) = "Type of product the ID is referring to. In most cases this entry can be omitted."];</code>
        */
       public io.opencannabis.schema.base.BaseProductKind.ProductKind getType() {
         @SuppressWarnings("deprecation")
@@ -1627,7 +1624,7 @@ public final class BaseProductKey {
        * Type of product the ID is referring to. In most cases this entry can be omitted.
        * </pre>
        *
-       * <code>.opencannabis.base.ProductKind type = 2 [(.gen_bq_schema.ignore) = true];</code>
+       * <code>.opencannabis.base.ProductKind type = 2 [(.gen_bq_schema.description) = "Type of product the ID is referring to. In most cases this entry can be omitted."];</code>
        */
       public Builder setType(io.opencannabis.schema.base.BaseProductKind.ProductKind value) {
         if (value == null) {
@@ -1643,7 +1640,7 @@ public final class BaseProductKey {
        * Type of product the ID is referring to. In most cases this entry can be omitted.
        * </pre>
        *
-       * <code>.opencannabis.base.ProductKind type = 2 [(.gen_bq_schema.ignore) = true];</code>
+       * <code>.opencannabis.base.ProductKind type = 2 [(.gen_bq_schema.description) = "Type of product the ID is referring to. In most cases this entry can be omitted."];</code>
        */
       public Builder clearType() {
         
@@ -1654,7 +1651,7 @@ public final class BaseProductKey {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -1726,15 +1723,19 @@ public final class BaseProductKey {
       "\n\025base/ProductKey.proto\022\021opencannabis.ba" +
       "se\032\016bq_field.proto\032\024core/Datamodel.proto" +
       "\032\022content/Name.proto\032\026base/ProductKind.p" +
-      "roto\"h\n\020ProductReference\022(\n\004name\030\001 \001(\0132\032" +
-      ".opencannabis.content.Name\022*\n\003key\030\002 \001(\0132" +
-      "\035.opencannabis.base.ProductKey\"\224\001\n\nProdu" +
-      "ctKey\022S\n\002id\030\001 \001(\tBG\302\265\003\002\010\002\360?\001\212@;Product I" +
-      "D, an opaque string that is usually auto" +
-      "generated.\0221\n\004type\030\002 \001(\0162\036.opencannabis." +
-      "base.ProductKindB\003\200@\001B7\n\033io.opencannabis" +
-      ".schema.baseB\016BaseProductKeyH\001P\000\242\002\003OCSb\006" +
-      "proto3"
+      "roto\"\274\001\n\020ProductReference\022M\n\004name\030\001 \001(\0132" +
+      "\032.opencannabis.content.NameB#\212@ Specifie" +
+      "s the name of a product.\022Y\n\003key\030\002 \001(\0132\035." +
+      "opencannabis.base.ProductKeyB-\212@*Specifi" +
+      "es the key, if known, of a product.\"\345\001\n\n" +
+      "ProductKey\022S\n\002id\030\001 \001(\tBG\302\265\003\002\010\002\360?\001\212@;Prod" +
+      "uct ID, an opaque string that is usually" +
+      " autogenerated.\022\201\001\n\004type\030\002 \001(\0162\036.opencan" +
+      "nabis.base.ProductKindBS\212@PType of produ" +
+      "ct the ID is referring to. In most cases" +
+      " this entry can be omitted.B7\n\033io.openca" +
+      "nnabis.schema.baseB\016BaseProductKeyH\001P\000\242\002" +
+      "\003OCSb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -1768,7 +1769,6 @@ public final class BaseProductKey {
         com.google.protobuf.ExtensionRegistry.newInstance();
     registry.add(core.Datamodel.field);
     registry.add(gen_bq_schema.BqField.description);
-    registry.add(gen_bq_schema.BqField.ignore);
     registry.add(gen_bq_schema.BqField.require);
     com.google.protobuf.Descriptors.FileDescriptor
         .internalUpdateFileDescriptor(descriptor, registry);

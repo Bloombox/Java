@@ -1,12 +1,11 @@
 /*
- * Copyright 2018, Momentum Ideas, Co. All rights reserved.
+ * Copyright 2019, Momentum Ideas Co.
  *
- * Source and object computer code contained herein is the private intellectual
- * property of Momentum Ideas Co., a Delaware Corporation. Use of this
- * code in source form requires permission in writing before use or the
- * assembly, distribution, or publishing of derivative works, for commercial
- * purposes or any other purpose, from a duly authorized officer of Momentum
- * Ideas Co.
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *  http://www.apache.org/licenses/LICENSE-2.0
  *
  * Unless required by applicable law or agreed to in writing, software
  * distributed under the License is distributed on an "AS IS" BASIS,
@@ -37,8 +36,6 @@ private static final long serialVersionUID = 0L;
     super(builder);
   }
   private MenuSettings() {
-    full_ = false;
-    keysOnly_ = false;
     section_ = java.util.Collections.emptyList();
     availableSection_ = java.util.Collections.emptyList();
   }
@@ -105,7 +102,7 @@ private static final long serialVersionUID = 0L;
           }
           case 40: {
             int rawValue = input.readEnum();
-            if (!((mutable_bitField0_ & 0x00000010) == 0x00000010)) {
+            if (!((mutable_bitField0_ & 0x00000010) != 0)) {
               section_ = new java.util.ArrayList<java.lang.Integer>();
               mutable_bitField0_ |= 0x00000010;
             }
@@ -117,7 +114,7 @@ private static final long serialVersionUID = 0L;
             int oldLimit = input.pushLimit(length);
             while(input.getBytesUntilLimit() > 0) {
               int rawValue = input.readEnum();
-              if (!((mutable_bitField0_ & 0x00000010) == 0x00000010)) {
+              if (!((mutable_bitField0_ & 0x00000010) != 0)) {
                 section_ = new java.util.ArrayList<java.lang.Integer>();
                 mutable_bitField0_ |= 0x00000010;
               }
@@ -128,7 +125,7 @@ private static final long serialVersionUID = 0L;
           }
           case 48: {
             int rawValue = input.readEnum();
-            if (!((mutable_bitField0_ & 0x00000020) == 0x00000020)) {
+            if (!((mutable_bitField0_ & 0x00000020) != 0)) {
               availableSection_ = new java.util.ArrayList<java.lang.Integer>();
               mutable_bitField0_ |= 0x00000020;
             }
@@ -140,7 +137,7 @@ private static final long serialVersionUID = 0L;
             int oldLimit = input.pushLimit(length);
             while(input.getBytesUntilLimit() > 0) {
               int rawValue = input.readEnum();
-              if (!((mutable_bitField0_ & 0x00000020) == 0x00000020)) {
+              if (!((mutable_bitField0_ & 0x00000020) != 0)) {
                 availableSection_ = new java.util.ArrayList<java.lang.Integer>();
                 mutable_bitField0_ |= 0x00000020;
               }
@@ -150,7 +147,7 @@ private static final long serialVersionUID = 0L;
             break;
           }
           default: {
-            if (!parseUnknownFieldProto3(
+            if (!parseUnknownField(
                 input, unknownFields, extensionRegistry, tag)) {
               done = true;
             }
@@ -164,10 +161,10 @@ private static final long serialVersionUID = 0L;
       throw new com.google.protobuf.InvalidProtocolBufferException(
           e).setUnfinishedMessage(this);
     } finally {
-      if (((mutable_bitField0_ & 0x00000010) == 0x00000010)) {
+      if (((mutable_bitField0_ & 0x00000010) != 0)) {
         section_ = java.util.Collections.unmodifiableList(section_);
       }
-      if (((mutable_bitField0_ & 0x00000020) == 0x00000020)) {
+      if (((mutable_bitField0_ & 0x00000020) != 0)) {
         availableSection_ = java.util.Collections.unmodifiableList(availableSection_);
       }
       this.unknownFields = unknownFields.build();
@@ -517,25 +514,24 @@ private static final long serialVersionUID = 0L;
     }
     io.opencannabis.schema.menu.MenuSettings other = (io.opencannabis.schema.menu.MenuSettings) obj;
 
-    boolean result = true;
-    result = result && (getFull()
-        == other.getFull());
-    result = result && (getKeysOnly()
-        == other.getKeysOnly());
-    result = result && (hasSnapshot() == other.hasSnapshot());
+    if (getFull()
+        != other.getFull()) return false;
+    if (getKeysOnly()
+        != other.getKeysOnly()) return false;
+    if (hasSnapshot() != other.hasSnapshot()) return false;
     if (hasSnapshot()) {
-      result = result && getSnapshot()
-          .equals(other.getSnapshot());
+      if (!getSnapshot()
+          .equals(other.getSnapshot())) return false;
     }
-    result = result && (hasFingerprint() == other.hasFingerprint());
+    if (hasFingerprint() != other.hasFingerprint()) return false;
     if (hasFingerprint()) {
-      result = result && getFingerprint()
-          .equals(other.getFingerprint());
+      if (!getFingerprint()
+          .equals(other.getFingerprint())) return false;
     }
-    result = result && section_.equals(other.section_);
-    result = result && availableSection_.equals(other.availableSection_);
-    result = result && unknownFields.equals(other.unknownFields);
-    return result;
+    if (!section_.equals(other.section_)) return false;
+    if (!availableSection_.equals(other.availableSection_)) return false;
+    if (!unknownFields.equals(other.unknownFields)) return false;
+    return true;
   }
 
   @java.lang.Override
@@ -764,12 +760,12 @@ private static final long serialVersionUID = 0L;
       } else {
         result.fingerprint_ = fingerprintBuilder_.build();
       }
-      if (((bitField0_ & 0x00000010) == 0x00000010)) {
+      if (((bitField0_ & 0x00000010) != 0)) {
         section_ = java.util.Collections.unmodifiableList(section_);
         bitField0_ = (bitField0_ & ~0x00000010);
       }
       result.section_ = section_;
-      if (((bitField0_ & 0x00000020) == 0x00000020)) {
+      if (((bitField0_ & 0x00000020) != 0)) {
         availableSection_ = java.util.Collections.unmodifiableList(availableSection_);
         bitField0_ = (bitField0_ & ~0x00000020);
       }
@@ -781,35 +777,35 @@ private static final long serialVersionUID = 0L;
 
     @java.lang.Override
     public Builder clone() {
-      return (Builder) super.clone();
+      return super.clone();
     }
     @java.lang.Override
     public Builder setField(
         com.google.protobuf.Descriptors.FieldDescriptor field,
         java.lang.Object value) {
-      return (Builder) super.setField(field, value);
+      return super.setField(field, value);
     }
     @java.lang.Override
     public Builder clearField(
         com.google.protobuf.Descriptors.FieldDescriptor field) {
-      return (Builder) super.clearField(field);
+      return super.clearField(field);
     }
     @java.lang.Override
     public Builder clearOneof(
         com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-      return (Builder) super.clearOneof(oneof);
+      return super.clearOneof(oneof);
     }
     @java.lang.Override
     public Builder setRepeatedField(
         com.google.protobuf.Descriptors.FieldDescriptor field,
         int index, java.lang.Object value) {
-      return (Builder) super.setRepeatedField(field, index, value);
+      return super.setRepeatedField(field, index, value);
     }
     @java.lang.Override
     public Builder addRepeatedField(
         com.google.protobuf.Descriptors.FieldDescriptor field,
         java.lang.Object value) {
-      return (Builder) super.addRepeatedField(field, value);
+      return super.addRepeatedField(field, value);
     }
     @java.lang.Override
     public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -961,7 +957,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
 
-    private io.opencannabis.schema.crypto.primitives.integrity.Hash snapshot_ = null;
+    private io.opencannabis.schema.crypto.primitives.integrity.Hash snapshot_;
     private com.google.protobuf.SingleFieldBuilderV3<
         io.opencannabis.schema.crypto.primitives.integrity.Hash, io.opencannabis.schema.crypto.primitives.integrity.Hash.Builder, io.opencannabis.schema.crypto.primitives.integrity.HashOrBuilder> snapshotBuilder_;
     /**
@@ -1114,7 +1110,7 @@ private static final long serialVersionUID = 0L;
       return snapshotBuilder_;
     }
 
-    private io.opencannabis.schema.crypto.primitives.integrity.Hash fingerprint_ = null;
+    private io.opencannabis.schema.crypto.primitives.integrity.Hash fingerprint_;
     private com.google.protobuf.SingleFieldBuilderV3<
         io.opencannabis.schema.crypto.primitives.integrity.Hash, io.opencannabis.schema.crypto.primitives.integrity.Hash.Builder, io.opencannabis.schema.crypto.primitives.integrity.HashOrBuilder> fingerprintBuilder_;
     /**
@@ -1270,7 +1266,7 @@ private static final long serialVersionUID = 0L;
     private java.util.List<java.lang.Integer> section_ =
       java.util.Collections.emptyList();
     private void ensureSectionIsMutable() {
-      if (!((bitField0_ & 0x00000010) == 0x00000010)) {
+      if (!((bitField0_ & 0x00000010) != 0)) {
         section_ = new java.util.ArrayList<java.lang.Integer>(section_);
         bitField0_ |= 0x00000010;
       }
@@ -1436,7 +1432,7 @@ private static final long serialVersionUID = 0L;
     private java.util.List<java.lang.Integer> availableSection_ =
       java.util.Collections.emptyList();
     private void ensureAvailableSectionIsMutable() {
-      if (!((bitField0_ & 0x00000020) == 0x00000020)) {
+      if (!((bitField0_ & 0x00000020) != 0)) {
         availableSection_ = new java.util.ArrayList<java.lang.Integer>(availableSection_);
         bitField0_ |= 0x00000020;
       }
@@ -1601,7 +1597,7 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public final Builder setUnknownFields(
         final com.google.protobuf.UnknownFieldSet unknownFields) {
-      return super.setUnknownFieldsProto3(unknownFields);
+      return super.setUnknownFields(unknownFields);
     }
 
     @java.lang.Override

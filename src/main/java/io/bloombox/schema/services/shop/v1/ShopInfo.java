@@ -1,5 +1,5 @@
 /*
- * Copyright 2018, Momentum Ideas, Co. All rights reserved.
+ * Copyright 2019, Momentum Ideas, Co. All rights reserved.
  *
  * Source and object computer code contained herein is the private intellectual
  * property of Momentum Ideas Co., a Delaware Corporation. Use of this
@@ -63,7 +63,7 @@ private static final long serialVersionUID = 0L;
             done = true;
             break;
           default: {
-            if (!parseUnknownFieldProto3(
+            if (!parseUnknownField(
                 input, unknownFields, extensionRegistry, tag)) {
               done = true;
             }
@@ -122,8 +122,39 @@ private static final long serialVersionUID = 0L;
      * <code>.bloombox.partner.LocationKey location = 1;</code>
      */
     io.bloombox.schema.partner.LocationAccountKey.LocationKeyOrBuilder getLocationOrBuilder();
+
+    /**
+     * <pre>
+     * Partner key, if requesting partner-level scope.
+     * </pre>
+     *
+     * <code>.bloombox.partner.PartnerKey partner = 2;</code>
+     */
+    boolean hasPartner();
+    /**
+     * <pre>
+     * Partner key, if requesting partner-level scope.
+     * </pre>
+     *
+     * <code>.bloombox.partner.PartnerKey partner = 2;</code>
+     */
+    io.bloombox.schema.partner.PartnerMeta.PartnerKey getPartner();
+    /**
+     * <pre>
+     * Partner key, if requesting partner-level scope.
+     * </pre>
+     *
+     * <code>.bloombox.partner.PartnerKey partner = 2;</code>
+     */
+    io.bloombox.schema.partner.PartnerMeta.PartnerKeyOrBuilder getPartnerOrBuilder();
+
+    public io.bloombox.schema.services.shop.v1.ShopInfo.Request.ScopeCase getScopeCase();
   }
   /**
+   * <pre>
+   * Request info about a digital shop via the API.
+   * </pre>
+   *
    * Protobuf type {@code bloombox.services.shop.v1.ShopInfo.Request}
    */
   public  static final class Request extends
@@ -164,19 +195,34 @@ private static final long serialVersionUID = 0L;
               break;
             case 10: {
               io.bloombox.schema.partner.LocationAccountKey.LocationKey.Builder subBuilder = null;
-              if (location_ != null) {
-                subBuilder = location_.toBuilder();
+              if (scopeCase_ == 1) {
+                subBuilder = ((io.bloombox.schema.partner.LocationAccountKey.LocationKey) scope_).toBuilder();
               }
-              location_ = input.readMessage(io.bloombox.schema.partner.LocationAccountKey.LocationKey.parser(), extensionRegistry);
+              scope_ =
+                  input.readMessage(io.bloombox.schema.partner.LocationAccountKey.LocationKey.parser(), extensionRegistry);
               if (subBuilder != null) {
-                subBuilder.mergeFrom(location_);
-                location_ = subBuilder.buildPartial();
+                subBuilder.mergeFrom((io.bloombox.schema.partner.LocationAccountKey.LocationKey) scope_);
+                scope_ = subBuilder.buildPartial();
               }
-
+              scopeCase_ = 1;
+              break;
+            }
+            case 18: {
+              io.bloombox.schema.partner.PartnerMeta.PartnerKey.Builder subBuilder = null;
+              if (scopeCase_ == 2) {
+                subBuilder = ((io.bloombox.schema.partner.PartnerMeta.PartnerKey) scope_).toBuilder();
+              }
+              scope_ =
+                  input.readMessage(io.bloombox.schema.partner.PartnerMeta.PartnerKey.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom((io.bloombox.schema.partner.PartnerMeta.PartnerKey) scope_);
+                scope_ = subBuilder.buildPartial();
+              }
+              scopeCase_ = 2;
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -207,8 +253,45 @@ private static final long serialVersionUID = 0L;
               io.bloombox.schema.services.shop.v1.ShopInfo.Request.class, io.bloombox.schema.services.shop.v1.ShopInfo.Request.Builder.class);
     }
 
+    private int scopeCase_ = 0;
+    private java.lang.Object scope_;
+    public enum ScopeCase
+        implements com.google.protobuf.Internal.EnumLite {
+      LOCATION(1),
+      PARTNER(2),
+      SCOPE_NOT_SET(0);
+      private final int value;
+      private ScopeCase(int value) {
+        this.value = value;
+      }
+      /**
+       * @deprecated Use {@link #forNumber(int)} instead.
+       */
+      @java.lang.Deprecated
+      public static ScopeCase valueOf(int value) {
+        return forNumber(value);
+      }
+
+      public static ScopeCase forNumber(int value) {
+        switch (value) {
+          case 1: return LOCATION;
+          case 2: return PARTNER;
+          case 0: return SCOPE_NOT_SET;
+          default: return null;
+        }
+      }
+      public int getNumber() {
+        return this.value;
+      }
+    };
+
+    public ScopeCase
+    getScopeCase() {
+      return ScopeCase.forNumber(
+          scopeCase_);
+    }
+
     public static final int LOCATION_FIELD_NUMBER = 1;
-    private io.bloombox.schema.partner.LocationAccountKey.LocationKey location_;
     /**
      * <pre>
      * Location key.
@@ -217,7 +300,7 @@ private static final long serialVersionUID = 0L;
      * <code>.bloombox.partner.LocationKey location = 1;</code>
      */
     public boolean hasLocation() {
-      return location_ != null;
+      return scopeCase_ == 1;
     }
     /**
      * <pre>
@@ -227,7 +310,10 @@ private static final long serialVersionUID = 0L;
      * <code>.bloombox.partner.LocationKey location = 1;</code>
      */
     public io.bloombox.schema.partner.LocationAccountKey.LocationKey getLocation() {
-      return location_ == null ? io.bloombox.schema.partner.LocationAccountKey.LocationKey.getDefaultInstance() : location_;
+      if (scopeCase_ == 1) {
+         return (io.bloombox.schema.partner.LocationAccountKey.LocationKey) scope_;
+      }
+      return io.bloombox.schema.partner.LocationAccountKey.LocationKey.getDefaultInstance();
     }
     /**
      * <pre>
@@ -237,7 +323,48 @@ private static final long serialVersionUID = 0L;
      * <code>.bloombox.partner.LocationKey location = 1;</code>
      */
     public io.bloombox.schema.partner.LocationAccountKey.LocationKeyOrBuilder getLocationOrBuilder() {
-      return getLocation();
+      if (scopeCase_ == 1) {
+         return (io.bloombox.schema.partner.LocationAccountKey.LocationKey) scope_;
+      }
+      return io.bloombox.schema.partner.LocationAccountKey.LocationKey.getDefaultInstance();
+    }
+
+    public static final int PARTNER_FIELD_NUMBER = 2;
+    /**
+     * <pre>
+     * Partner key, if requesting partner-level scope.
+     * </pre>
+     *
+     * <code>.bloombox.partner.PartnerKey partner = 2;</code>
+     */
+    public boolean hasPartner() {
+      return scopeCase_ == 2;
+    }
+    /**
+     * <pre>
+     * Partner key, if requesting partner-level scope.
+     * </pre>
+     *
+     * <code>.bloombox.partner.PartnerKey partner = 2;</code>
+     */
+    public io.bloombox.schema.partner.PartnerMeta.PartnerKey getPartner() {
+      if (scopeCase_ == 2) {
+         return (io.bloombox.schema.partner.PartnerMeta.PartnerKey) scope_;
+      }
+      return io.bloombox.schema.partner.PartnerMeta.PartnerKey.getDefaultInstance();
+    }
+    /**
+     * <pre>
+     * Partner key, if requesting partner-level scope.
+     * </pre>
+     *
+     * <code>.bloombox.partner.PartnerKey partner = 2;</code>
+     */
+    public io.bloombox.schema.partner.PartnerMeta.PartnerKeyOrBuilder getPartnerOrBuilder() {
+      if (scopeCase_ == 2) {
+         return (io.bloombox.schema.partner.PartnerMeta.PartnerKey) scope_;
+      }
+      return io.bloombox.schema.partner.PartnerMeta.PartnerKey.getDefaultInstance();
     }
 
     private byte memoizedIsInitialized = -1;
@@ -254,8 +381,11 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (location_ != null) {
-        output.writeMessage(1, getLocation());
+      if (scopeCase_ == 1) {
+        output.writeMessage(1, (io.bloombox.schema.partner.LocationAccountKey.LocationKey) scope_);
+      }
+      if (scopeCase_ == 2) {
+        output.writeMessage(2, (io.bloombox.schema.partner.PartnerMeta.PartnerKey) scope_);
       }
       unknownFields.writeTo(output);
     }
@@ -266,9 +396,13 @@ private static final long serialVersionUID = 0L;
       if (size != -1) return size;
 
       size = 0;
-      if (location_ != null) {
+      if (scopeCase_ == 1) {
         size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(1, getLocation());
+          .computeMessageSize(1, (io.bloombox.schema.partner.LocationAccountKey.LocationKey) scope_);
+      }
+      if (scopeCase_ == 2) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(2, (io.bloombox.schema.partner.PartnerMeta.PartnerKey) scope_);
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -285,14 +419,21 @@ private static final long serialVersionUID = 0L;
       }
       io.bloombox.schema.services.shop.v1.ShopInfo.Request other = (io.bloombox.schema.services.shop.v1.ShopInfo.Request) obj;
 
-      boolean result = true;
-      result = result && (hasLocation() == other.hasLocation());
-      if (hasLocation()) {
-        result = result && getLocation()
-            .equals(other.getLocation());
+      if (!getScopeCase().equals(other.getScopeCase())) return false;
+      switch (scopeCase_) {
+        case 1:
+          if (!getLocation()
+              .equals(other.getLocation())) return false;
+          break;
+        case 2:
+          if (!getPartner()
+              .equals(other.getPartner())) return false;
+          break;
+        case 0:
+        default:
       }
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -302,9 +443,17 @@ private static final long serialVersionUID = 0L;
       }
       int hash = 41;
       hash = (19 * hash) + getDescriptor().hashCode();
-      if (hasLocation()) {
-        hash = (37 * hash) + LOCATION_FIELD_NUMBER;
-        hash = (53 * hash) + getLocation().hashCode();
+      switch (scopeCase_) {
+        case 1:
+          hash = (37 * hash) + LOCATION_FIELD_NUMBER;
+          hash = (53 * hash) + getLocation().hashCode();
+          break;
+        case 2:
+          hash = (37 * hash) + PARTNER_FIELD_NUMBER;
+          hash = (53 * hash) + getPartner().hashCode();
+          break;
+        case 0:
+        default:
       }
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
@@ -402,6 +551,10 @@ private static final long serialVersionUID = 0L;
       return builder;
     }
     /**
+     * <pre>
+     * Request info about a digital shop via the API.
+     * </pre>
+     *
      * Protobuf type {@code bloombox.services.shop.v1.ShopInfo.Request}
      */
     public static final class Builder extends
@@ -439,12 +592,8 @@ private static final long serialVersionUID = 0L;
       @java.lang.Override
       public Builder clear() {
         super.clear();
-        if (locationBuilder_ == null) {
-          location_ = null;
-        } else {
-          location_ = null;
-          locationBuilder_ = null;
-        }
+        scopeCase_ = 0;
+        scope_ = null;
         return this;
       }
 
@@ -471,46 +620,56 @@ private static final long serialVersionUID = 0L;
       @java.lang.Override
       public io.bloombox.schema.services.shop.v1.ShopInfo.Request buildPartial() {
         io.bloombox.schema.services.shop.v1.ShopInfo.Request result = new io.bloombox.schema.services.shop.v1.ShopInfo.Request(this);
-        if (locationBuilder_ == null) {
-          result.location_ = location_;
-        } else {
-          result.location_ = locationBuilder_.build();
+        if (scopeCase_ == 1) {
+          if (locationBuilder_ == null) {
+            result.scope_ = scope_;
+          } else {
+            result.scope_ = locationBuilder_.build();
+          }
         }
+        if (scopeCase_ == 2) {
+          if (partnerBuilder_ == null) {
+            result.scope_ = scope_;
+          } else {
+            result.scope_ = partnerBuilder_.build();
+          }
+        }
+        result.scopeCase_ = scopeCase_;
         onBuilt();
         return result;
       }
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -524,8 +683,18 @@ private static final long serialVersionUID = 0L;
 
       public Builder mergeFrom(io.bloombox.schema.services.shop.v1.ShopInfo.Request other) {
         if (other == io.bloombox.schema.services.shop.v1.ShopInfo.Request.getDefaultInstance()) return this;
-        if (other.hasLocation()) {
-          mergeLocation(other.getLocation());
+        switch (other.getScopeCase()) {
+          case LOCATION: {
+            mergeLocation(other.getLocation());
+            break;
+          }
+          case PARTNER: {
+            mergePartner(other.getPartner());
+            break;
+          }
+          case SCOPE_NOT_SET: {
+            break;
+          }
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -555,8 +724,22 @@ private static final long serialVersionUID = 0L;
         }
         return this;
       }
+      private int scopeCase_ = 0;
+      private java.lang.Object scope_;
+      public ScopeCase
+          getScopeCase() {
+        return ScopeCase.forNumber(
+            scopeCase_);
+      }
 
-      private io.bloombox.schema.partner.LocationAccountKey.LocationKey location_ = null;
+      public Builder clearScope() {
+        scopeCase_ = 0;
+        scope_ = null;
+        onChanged();
+        return this;
+      }
+
+
       private com.google.protobuf.SingleFieldBuilderV3<
           io.bloombox.schema.partner.LocationAccountKey.LocationKey, io.bloombox.schema.partner.LocationAccountKey.LocationKey.Builder, io.bloombox.schema.partner.LocationAccountKey.LocationKeyOrBuilder> locationBuilder_;
       /**
@@ -567,7 +750,7 @@ private static final long serialVersionUID = 0L;
        * <code>.bloombox.partner.LocationKey location = 1;</code>
        */
       public boolean hasLocation() {
-        return locationBuilder_ != null || location_ != null;
+        return scopeCase_ == 1;
       }
       /**
        * <pre>
@@ -578,9 +761,15 @@ private static final long serialVersionUID = 0L;
        */
       public io.bloombox.schema.partner.LocationAccountKey.LocationKey getLocation() {
         if (locationBuilder_ == null) {
-          return location_ == null ? io.bloombox.schema.partner.LocationAccountKey.LocationKey.getDefaultInstance() : location_;
+          if (scopeCase_ == 1) {
+            return (io.bloombox.schema.partner.LocationAccountKey.LocationKey) scope_;
+          }
+          return io.bloombox.schema.partner.LocationAccountKey.LocationKey.getDefaultInstance();
         } else {
-          return locationBuilder_.getMessage();
+          if (scopeCase_ == 1) {
+            return locationBuilder_.getMessage();
+          }
+          return io.bloombox.schema.partner.LocationAccountKey.LocationKey.getDefaultInstance();
         }
       }
       /**
@@ -595,12 +784,12 @@ private static final long serialVersionUID = 0L;
           if (value == null) {
             throw new NullPointerException();
           }
-          location_ = value;
+          scope_ = value;
           onChanged();
         } else {
           locationBuilder_.setMessage(value);
         }
-
+        scopeCase_ = 1;
         return this;
       }
       /**
@@ -613,12 +802,12 @@ private static final long serialVersionUID = 0L;
       public Builder setLocation(
           io.bloombox.schema.partner.LocationAccountKey.LocationKey.Builder builderForValue) {
         if (locationBuilder_ == null) {
-          location_ = builderForValue.build();
+          scope_ = builderForValue.build();
           onChanged();
         } else {
           locationBuilder_.setMessage(builderForValue.build());
         }
-
+        scopeCase_ = 1;
         return this;
       }
       /**
@@ -630,17 +819,21 @@ private static final long serialVersionUID = 0L;
        */
       public Builder mergeLocation(io.bloombox.schema.partner.LocationAccountKey.LocationKey value) {
         if (locationBuilder_ == null) {
-          if (location_ != null) {
-            location_ =
-              io.bloombox.schema.partner.LocationAccountKey.LocationKey.newBuilder(location_).mergeFrom(value).buildPartial();
+          if (scopeCase_ == 1 &&
+              scope_ != io.bloombox.schema.partner.LocationAccountKey.LocationKey.getDefaultInstance()) {
+            scope_ = io.bloombox.schema.partner.LocationAccountKey.LocationKey.newBuilder((io.bloombox.schema.partner.LocationAccountKey.LocationKey) scope_)
+                .mergeFrom(value).buildPartial();
           } else {
-            location_ = value;
+            scope_ = value;
           }
           onChanged();
         } else {
-          locationBuilder_.mergeFrom(value);
+          if (scopeCase_ == 1) {
+            locationBuilder_.mergeFrom(value);
+          }
+          locationBuilder_.setMessage(value);
         }
-
+        scopeCase_ = 1;
         return this;
       }
       /**
@@ -652,13 +845,18 @@ private static final long serialVersionUID = 0L;
        */
       public Builder clearLocation() {
         if (locationBuilder_ == null) {
-          location_ = null;
-          onChanged();
+          if (scopeCase_ == 1) {
+            scopeCase_ = 0;
+            scope_ = null;
+            onChanged();
+          }
         } else {
-          location_ = null;
-          locationBuilder_ = null;
+          if (scopeCase_ == 1) {
+            scopeCase_ = 0;
+            scope_ = null;
+          }
+          locationBuilder_.clear();
         }
-
         return this;
       }
       /**
@@ -669,8 +867,6 @@ private static final long serialVersionUID = 0L;
        * <code>.bloombox.partner.LocationKey location = 1;</code>
        */
       public io.bloombox.schema.partner.LocationAccountKey.LocationKey.Builder getLocationBuilder() {
-        
-        onChanged();
         return getLocationFieldBuilder().getBuilder();
       }
       /**
@@ -681,11 +877,13 @@ private static final long serialVersionUID = 0L;
        * <code>.bloombox.partner.LocationKey location = 1;</code>
        */
       public io.bloombox.schema.partner.LocationAccountKey.LocationKeyOrBuilder getLocationOrBuilder() {
-        if (locationBuilder_ != null) {
+        if ((scopeCase_ == 1) && (locationBuilder_ != null)) {
           return locationBuilder_.getMessageOrBuilder();
         } else {
-          return location_ == null ?
-              io.bloombox.schema.partner.LocationAccountKey.LocationKey.getDefaultInstance() : location_;
+          if (scopeCase_ == 1) {
+            return (io.bloombox.schema.partner.LocationAccountKey.LocationKey) scope_;
+          }
+          return io.bloombox.schema.partner.LocationAccountKey.LocationKey.getDefaultInstance();
         }
       }
       /**
@@ -699,19 +897,196 @@ private static final long serialVersionUID = 0L;
           io.bloombox.schema.partner.LocationAccountKey.LocationKey, io.bloombox.schema.partner.LocationAccountKey.LocationKey.Builder, io.bloombox.schema.partner.LocationAccountKey.LocationKeyOrBuilder> 
           getLocationFieldBuilder() {
         if (locationBuilder_ == null) {
+          if (!(scopeCase_ == 1)) {
+            scope_ = io.bloombox.schema.partner.LocationAccountKey.LocationKey.getDefaultInstance();
+          }
           locationBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
               io.bloombox.schema.partner.LocationAccountKey.LocationKey, io.bloombox.schema.partner.LocationAccountKey.LocationKey.Builder, io.bloombox.schema.partner.LocationAccountKey.LocationKeyOrBuilder>(
-                  getLocation(),
+                  (io.bloombox.schema.partner.LocationAccountKey.LocationKey) scope_,
                   getParentForChildren(),
                   isClean());
-          location_ = null;
+          scope_ = null;
         }
+        scopeCase_ = 1;
+        onChanged();;
         return locationBuilder_;
+      }
+
+      private com.google.protobuf.SingleFieldBuilderV3<
+          io.bloombox.schema.partner.PartnerMeta.PartnerKey, io.bloombox.schema.partner.PartnerMeta.PartnerKey.Builder, io.bloombox.schema.partner.PartnerMeta.PartnerKeyOrBuilder> partnerBuilder_;
+      /**
+       * <pre>
+       * Partner key, if requesting partner-level scope.
+       * </pre>
+       *
+       * <code>.bloombox.partner.PartnerKey partner = 2;</code>
+       */
+      public boolean hasPartner() {
+        return scopeCase_ == 2;
+      }
+      /**
+       * <pre>
+       * Partner key, if requesting partner-level scope.
+       * </pre>
+       *
+       * <code>.bloombox.partner.PartnerKey partner = 2;</code>
+       */
+      public io.bloombox.schema.partner.PartnerMeta.PartnerKey getPartner() {
+        if (partnerBuilder_ == null) {
+          if (scopeCase_ == 2) {
+            return (io.bloombox.schema.partner.PartnerMeta.PartnerKey) scope_;
+          }
+          return io.bloombox.schema.partner.PartnerMeta.PartnerKey.getDefaultInstance();
+        } else {
+          if (scopeCase_ == 2) {
+            return partnerBuilder_.getMessage();
+          }
+          return io.bloombox.schema.partner.PartnerMeta.PartnerKey.getDefaultInstance();
+        }
+      }
+      /**
+       * <pre>
+       * Partner key, if requesting partner-level scope.
+       * </pre>
+       *
+       * <code>.bloombox.partner.PartnerKey partner = 2;</code>
+       */
+      public Builder setPartner(io.bloombox.schema.partner.PartnerMeta.PartnerKey value) {
+        if (partnerBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          scope_ = value;
+          onChanged();
+        } else {
+          partnerBuilder_.setMessage(value);
+        }
+        scopeCase_ = 2;
+        return this;
+      }
+      /**
+       * <pre>
+       * Partner key, if requesting partner-level scope.
+       * </pre>
+       *
+       * <code>.bloombox.partner.PartnerKey partner = 2;</code>
+       */
+      public Builder setPartner(
+          io.bloombox.schema.partner.PartnerMeta.PartnerKey.Builder builderForValue) {
+        if (partnerBuilder_ == null) {
+          scope_ = builderForValue.build();
+          onChanged();
+        } else {
+          partnerBuilder_.setMessage(builderForValue.build());
+        }
+        scopeCase_ = 2;
+        return this;
+      }
+      /**
+       * <pre>
+       * Partner key, if requesting partner-level scope.
+       * </pre>
+       *
+       * <code>.bloombox.partner.PartnerKey partner = 2;</code>
+       */
+      public Builder mergePartner(io.bloombox.schema.partner.PartnerMeta.PartnerKey value) {
+        if (partnerBuilder_ == null) {
+          if (scopeCase_ == 2 &&
+              scope_ != io.bloombox.schema.partner.PartnerMeta.PartnerKey.getDefaultInstance()) {
+            scope_ = io.bloombox.schema.partner.PartnerMeta.PartnerKey.newBuilder((io.bloombox.schema.partner.PartnerMeta.PartnerKey) scope_)
+                .mergeFrom(value).buildPartial();
+          } else {
+            scope_ = value;
+          }
+          onChanged();
+        } else {
+          if (scopeCase_ == 2) {
+            partnerBuilder_.mergeFrom(value);
+          }
+          partnerBuilder_.setMessage(value);
+        }
+        scopeCase_ = 2;
+        return this;
+      }
+      /**
+       * <pre>
+       * Partner key, if requesting partner-level scope.
+       * </pre>
+       *
+       * <code>.bloombox.partner.PartnerKey partner = 2;</code>
+       */
+      public Builder clearPartner() {
+        if (partnerBuilder_ == null) {
+          if (scopeCase_ == 2) {
+            scopeCase_ = 0;
+            scope_ = null;
+            onChanged();
+          }
+        } else {
+          if (scopeCase_ == 2) {
+            scopeCase_ = 0;
+            scope_ = null;
+          }
+          partnerBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Partner key, if requesting partner-level scope.
+       * </pre>
+       *
+       * <code>.bloombox.partner.PartnerKey partner = 2;</code>
+       */
+      public io.bloombox.schema.partner.PartnerMeta.PartnerKey.Builder getPartnerBuilder() {
+        return getPartnerFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * Partner key, if requesting partner-level scope.
+       * </pre>
+       *
+       * <code>.bloombox.partner.PartnerKey partner = 2;</code>
+       */
+      public io.bloombox.schema.partner.PartnerMeta.PartnerKeyOrBuilder getPartnerOrBuilder() {
+        if ((scopeCase_ == 2) && (partnerBuilder_ != null)) {
+          return partnerBuilder_.getMessageOrBuilder();
+        } else {
+          if (scopeCase_ == 2) {
+            return (io.bloombox.schema.partner.PartnerMeta.PartnerKey) scope_;
+          }
+          return io.bloombox.schema.partner.PartnerMeta.PartnerKey.getDefaultInstance();
+        }
+      }
+      /**
+       * <pre>
+       * Partner key, if requesting partner-level scope.
+       * </pre>
+       *
+       * <code>.bloombox.partner.PartnerKey partner = 2;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          io.bloombox.schema.partner.PartnerMeta.PartnerKey, io.bloombox.schema.partner.PartnerMeta.PartnerKey.Builder, io.bloombox.schema.partner.PartnerMeta.PartnerKeyOrBuilder> 
+          getPartnerFieldBuilder() {
+        if (partnerBuilder_ == null) {
+          if (!(scopeCase_ == 2)) {
+            scope_ = io.bloombox.schema.partner.PartnerMeta.PartnerKey.getDefaultInstance();
+          }
+          partnerBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              io.bloombox.schema.partner.PartnerMeta.PartnerKey, io.bloombox.schema.partner.PartnerMeta.PartnerKey.Builder, io.bloombox.schema.partner.PartnerMeta.PartnerKeyOrBuilder>(
+                  (io.bloombox.schema.partner.PartnerMeta.PartnerKey) scope_,
+                  getParentForChildren(),
+                  isClean());
+          scope_ = null;
+        }
+        scopeCase_ = 2;
+        onChanged();;
+        return partnerBuilder_;
       }
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -781,8 +1156,137 @@ private static final long serialVersionUID = 0L;
      * <code>.bloombox.partner.settings.ShopStatus shop_status = 1;</code>
      */
     io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.ShopStatus getShopStatus();
+
+    /**
+     * <pre>
+     * Indicates support/settings for a given digital shop context.
+     * </pre>
+     *
+     * <code>.bloombox.partner.settings.ShopServiceSettings settings = 2;</code>
+     */
+    boolean hasSettings();
+    /**
+     * <pre>
+     * Indicates support/settings for a given digital shop context.
+     * </pre>
+     *
+     * <code>.bloombox.partner.settings.ShopServiceSettings settings = 2;</code>
+     */
+    io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.ShopServiceSettings getSettings();
+    /**
+     * <pre>
+     * Indicates support/settings for a given digital shop context.
+     * </pre>
+     *
+     * <code>.bloombox.partner.settings.ShopServiceSettings settings = 2;</code>
+     */
+    io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.ShopServiceSettingsOrBuilder getSettingsOrBuilder();
+
+    /**
+     * <pre>
+     * Indicates regular and special hours that apply for a given digital shop context.
+     * </pre>
+     *
+     * <code>.bloombox.partner.settings.ShopHoursSettings hours = 3;</code>
+     */
+    boolean hasHours();
+    /**
+     * <pre>
+     * Indicates regular and special hours that apply for a given digital shop context.
+     * </pre>
+     *
+     * <code>.bloombox.partner.settings.ShopHoursSettings hours = 3;</code>
+     */
+    io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.ShopHoursSettings getHours();
+    /**
+     * <pre>
+     * Indicates regular and special hours that apply for a given digital shop context.
+     * </pre>
+     *
+     * <code>.bloombox.partner.settings.ShopHoursSettings hours = 3;</code>
+     */
+    io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.ShopHoursSettingsOrBuilder getHoursOrBuilder();
+
+    /**
+     * <pre>
+     * Indicates contact info for a given partner location.
+     * </pre>
+     *
+     * <code>.opencannabis.contact.ContactInfo contact = 4;</code>
+     */
+    boolean hasContact();
+    /**
+     * <pre>
+     * Indicates contact info for a given partner location.
+     * </pre>
+     *
+     * <code>.opencannabis.contact.ContactInfo contact = 4;</code>
+     */
+    io.opencannabis.schema.contact.GenericContact.ContactInfo getContact();
+    /**
+     * <pre>
+     * Indicates contact info for a given partner location.
+     * </pre>
+     *
+     * <code>.opencannabis.contact.ContactInfo contact = 4;</code>
+     */
+    io.opencannabis.schema.contact.GenericContact.ContactInfoOrBuilder getContactOrBuilder();
+
+    /**
+     * <pre>
+     * Social account listings.
+     * </pre>
+     *
+     * <code>.opencannabis.contact.SocialInfo social = 5;</code>
+     */
+    boolean hasSocial();
+    /**
+     * <pre>
+     * Social account listings.
+     * </pre>
+     *
+     * <code>.opencannabis.contact.SocialInfo social = 5;</code>
+     */
+    io.opencannabis.schema.contact.GenericContact.SocialInfo getSocial();
+    /**
+     * <pre>
+     * Social account listings.
+     * </pre>
+     *
+     * <code>.opencannabis.contact.SocialInfo social = 5;</code>
+     */
+    io.opencannabis.schema.contact.GenericContact.SocialInfoOrBuilder getSocialOrBuilder();
+
+    /**
+     * <pre>
+     * Branding information for the digital shop in question.
+     * </pre>
+     *
+     * <code>.bloombox.services.shop.v1.ShopBranding branding = 6;</code>
+     */
+    boolean hasBranding();
+    /**
+     * <pre>
+     * Branding information for the digital shop in question.
+     * </pre>
+     *
+     * <code>.bloombox.services.shop.v1.ShopBranding branding = 6;</code>
+     */
+    io.bloombox.schema.services.shop.v1.ShopBranding getBranding();
+    /**
+     * <pre>
+     * Branding information for the digital shop in question.
+     * </pre>
+     *
+     * <code>.bloombox.services.shop.v1.ShopBranding branding = 6;</code>
+     */
+    io.bloombox.schema.services.shop.v1.ShopBrandingOrBuilder getBrandingOrBuilder();
   }
   /**
+   * <pre>
+   * Response to a request for info about a digital shop via the API.
+   * </pre>
+   *
    * Protobuf type {@code bloombox.services.shop.v1.ShopInfo.Response}
    */
   public  static final class Response extends
@@ -828,8 +1332,73 @@ private static final long serialVersionUID = 0L;
               shopStatus_ = rawValue;
               break;
             }
+            case 18: {
+              io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.ShopServiceSettings.Builder subBuilder = null;
+              if (settings_ != null) {
+                subBuilder = settings_.toBuilder();
+              }
+              settings_ = input.readMessage(io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.ShopServiceSettings.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(settings_);
+                settings_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            case 26: {
+              io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.ShopHoursSettings.Builder subBuilder = null;
+              if (hours_ != null) {
+                subBuilder = hours_.toBuilder();
+              }
+              hours_ = input.readMessage(io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.ShopHoursSettings.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(hours_);
+                hours_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            case 34: {
+              io.opencannabis.schema.contact.GenericContact.ContactInfo.Builder subBuilder = null;
+              if (contact_ != null) {
+                subBuilder = contact_.toBuilder();
+              }
+              contact_ = input.readMessage(io.opencannabis.schema.contact.GenericContact.ContactInfo.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(contact_);
+                contact_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            case 42: {
+              io.opencannabis.schema.contact.GenericContact.SocialInfo.Builder subBuilder = null;
+              if (social_ != null) {
+                subBuilder = social_.toBuilder();
+              }
+              social_ = input.readMessage(io.opencannabis.schema.contact.GenericContact.SocialInfo.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(social_);
+                social_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            case 50: {
+              io.bloombox.schema.services.shop.v1.ShopBranding.Builder subBuilder = null;
+              if (branding_ != null) {
+                subBuilder = branding_.toBuilder();
+              }
+              branding_ = input.readMessage(io.bloombox.schema.services.shop.v1.ShopBranding.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(branding_);
+                branding_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -885,6 +1454,171 @@ private static final long serialVersionUID = 0L;
       return result == null ? io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.ShopStatus.UNRECOGNIZED : result;
     }
 
+    public static final int SETTINGS_FIELD_NUMBER = 2;
+    private io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.ShopServiceSettings settings_;
+    /**
+     * <pre>
+     * Indicates support/settings for a given digital shop context.
+     * </pre>
+     *
+     * <code>.bloombox.partner.settings.ShopServiceSettings settings = 2;</code>
+     */
+    public boolean hasSettings() {
+      return settings_ != null;
+    }
+    /**
+     * <pre>
+     * Indicates support/settings for a given digital shop context.
+     * </pre>
+     *
+     * <code>.bloombox.partner.settings.ShopServiceSettings settings = 2;</code>
+     */
+    public io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.ShopServiceSettings getSettings() {
+      return settings_ == null ? io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.ShopServiceSettings.getDefaultInstance() : settings_;
+    }
+    /**
+     * <pre>
+     * Indicates support/settings for a given digital shop context.
+     * </pre>
+     *
+     * <code>.bloombox.partner.settings.ShopServiceSettings settings = 2;</code>
+     */
+    public io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.ShopServiceSettingsOrBuilder getSettingsOrBuilder() {
+      return getSettings();
+    }
+
+    public static final int HOURS_FIELD_NUMBER = 3;
+    private io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.ShopHoursSettings hours_;
+    /**
+     * <pre>
+     * Indicates regular and special hours that apply for a given digital shop context.
+     * </pre>
+     *
+     * <code>.bloombox.partner.settings.ShopHoursSettings hours = 3;</code>
+     */
+    public boolean hasHours() {
+      return hours_ != null;
+    }
+    /**
+     * <pre>
+     * Indicates regular and special hours that apply for a given digital shop context.
+     * </pre>
+     *
+     * <code>.bloombox.partner.settings.ShopHoursSettings hours = 3;</code>
+     */
+    public io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.ShopHoursSettings getHours() {
+      return hours_ == null ? io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.ShopHoursSettings.getDefaultInstance() : hours_;
+    }
+    /**
+     * <pre>
+     * Indicates regular and special hours that apply for a given digital shop context.
+     * </pre>
+     *
+     * <code>.bloombox.partner.settings.ShopHoursSettings hours = 3;</code>
+     */
+    public io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.ShopHoursSettingsOrBuilder getHoursOrBuilder() {
+      return getHours();
+    }
+
+    public static final int CONTACT_FIELD_NUMBER = 4;
+    private io.opencannabis.schema.contact.GenericContact.ContactInfo contact_;
+    /**
+     * <pre>
+     * Indicates contact info for a given partner location.
+     * </pre>
+     *
+     * <code>.opencannabis.contact.ContactInfo contact = 4;</code>
+     */
+    public boolean hasContact() {
+      return contact_ != null;
+    }
+    /**
+     * <pre>
+     * Indicates contact info for a given partner location.
+     * </pre>
+     *
+     * <code>.opencannabis.contact.ContactInfo contact = 4;</code>
+     */
+    public io.opencannabis.schema.contact.GenericContact.ContactInfo getContact() {
+      return contact_ == null ? io.opencannabis.schema.contact.GenericContact.ContactInfo.getDefaultInstance() : contact_;
+    }
+    /**
+     * <pre>
+     * Indicates contact info for a given partner location.
+     * </pre>
+     *
+     * <code>.opencannabis.contact.ContactInfo contact = 4;</code>
+     */
+    public io.opencannabis.schema.contact.GenericContact.ContactInfoOrBuilder getContactOrBuilder() {
+      return getContact();
+    }
+
+    public static final int SOCIAL_FIELD_NUMBER = 5;
+    private io.opencannabis.schema.contact.GenericContact.SocialInfo social_;
+    /**
+     * <pre>
+     * Social account listings.
+     * </pre>
+     *
+     * <code>.opencannabis.contact.SocialInfo social = 5;</code>
+     */
+    public boolean hasSocial() {
+      return social_ != null;
+    }
+    /**
+     * <pre>
+     * Social account listings.
+     * </pre>
+     *
+     * <code>.opencannabis.contact.SocialInfo social = 5;</code>
+     */
+    public io.opencannabis.schema.contact.GenericContact.SocialInfo getSocial() {
+      return social_ == null ? io.opencannabis.schema.contact.GenericContact.SocialInfo.getDefaultInstance() : social_;
+    }
+    /**
+     * <pre>
+     * Social account listings.
+     * </pre>
+     *
+     * <code>.opencannabis.contact.SocialInfo social = 5;</code>
+     */
+    public io.opencannabis.schema.contact.GenericContact.SocialInfoOrBuilder getSocialOrBuilder() {
+      return getSocial();
+    }
+
+    public static final int BRANDING_FIELD_NUMBER = 6;
+    private io.bloombox.schema.services.shop.v1.ShopBranding branding_;
+    /**
+     * <pre>
+     * Branding information for the digital shop in question.
+     * </pre>
+     *
+     * <code>.bloombox.services.shop.v1.ShopBranding branding = 6;</code>
+     */
+    public boolean hasBranding() {
+      return branding_ != null;
+    }
+    /**
+     * <pre>
+     * Branding information for the digital shop in question.
+     * </pre>
+     *
+     * <code>.bloombox.services.shop.v1.ShopBranding branding = 6;</code>
+     */
+    public io.bloombox.schema.services.shop.v1.ShopBranding getBranding() {
+      return branding_ == null ? io.bloombox.schema.services.shop.v1.ShopBranding.getDefaultInstance() : branding_;
+    }
+    /**
+     * <pre>
+     * Branding information for the digital shop in question.
+     * </pre>
+     *
+     * <code>.bloombox.services.shop.v1.ShopBranding branding = 6;</code>
+     */
+    public io.bloombox.schema.services.shop.v1.ShopBrandingOrBuilder getBrandingOrBuilder() {
+      return getBranding();
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -902,6 +1636,21 @@ private static final long serialVersionUID = 0L;
       if (shopStatus_ != io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.ShopStatus.OPEN.getNumber()) {
         output.writeEnum(1, shopStatus_);
       }
+      if (settings_ != null) {
+        output.writeMessage(2, getSettings());
+      }
+      if (hours_ != null) {
+        output.writeMessage(3, getHours());
+      }
+      if (contact_ != null) {
+        output.writeMessage(4, getContact());
+      }
+      if (social_ != null) {
+        output.writeMessage(5, getSocial());
+      }
+      if (branding_ != null) {
+        output.writeMessage(6, getBranding());
+      }
       unknownFields.writeTo(output);
     }
 
@@ -914,6 +1663,26 @@ private static final long serialVersionUID = 0L;
       if (shopStatus_ != io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.ShopStatus.OPEN.getNumber()) {
         size += com.google.protobuf.CodedOutputStream
           .computeEnumSize(1, shopStatus_);
+      }
+      if (settings_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(2, getSettings());
+      }
+      if (hours_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(3, getHours());
+      }
+      if (contact_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(4, getContact());
+      }
+      if (social_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(5, getSocial());
+      }
+      if (branding_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(6, getBranding());
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -930,10 +1699,34 @@ private static final long serialVersionUID = 0L;
       }
       io.bloombox.schema.services.shop.v1.ShopInfo.Response other = (io.bloombox.schema.services.shop.v1.ShopInfo.Response) obj;
 
-      boolean result = true;
-      result = result && shopStatus_ == other.shopStatus_;
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (shopStatus_ != other.shopStatus_) return false;
+      if (hasSettings() != other.hasSettings()) return false;
+      if (hasSettings()) {
+        if (!getSettings()
+            .equals(other.getSettings())) return false;
+      }
+      if (hasHours() != other.hasHours()) return false;
+      if (hasHours()) {
+        if (!getHours()
+            .equals(other.getHours())) return false;
+      }
+      if (hasContact() != other.hasContact()) return false;
+      if (hasContact()) {
+        if (!getContact()
+            .equals(other.getContact())) return false;
+      }
+      if (hasSocial() != other.hasSocial()) return false;
+      if (hasSocial()) {
+        if (!getSocial()
+            .equals(other.getSocial())) return false;
+      }
+      if (hasBranding() != other.hasBranding()) return false;
+      if (hasBranding()) {
+        if (!getBranding()
+            .equals(other.getBranding())) return false;
+      }
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -945,6 +1738,26 @@ private static final long serialVersionUID = 0L;
       hash = (19 * hash) + getDescriptor().hashCode();
       hash = (37 * hash) + SHOP_STATUS_FIELD_NUMBER;
       hash = (53 * hash) + shopStatus_;
+      if (hasSettings()) {
+        hash = (37 * hash) + SETTINGS_FIELD_NUMBER;
+        hash = (53 * hash) + getSettings().hashCode();
+      }
+      if (hasHours()) {
+        hash = (37 * hash) + HOURS_FIELD_NUMBER;
+        hash = (53 * hash) + getHours().hashCode();
+      }
+      if (hasContact()) {
+        hash = (37 * hash) + CONTACT_FIELD_NUMBER;
+        hash = (53 * hash) + getContact().hashCode();
+      }
+      if (hasSocial()) {
+        hash = (37 * hash) + SOCIAL_FIELD_NUMBER;
+        hash = (53 * hash) + getSocial().hashCode();
+      }
+      if (hasBranding()) {
+        hash = (37 * hash) + BRANDING_FIELD_NUMBER;
+        hash = (53 * hash) + getBranding().hashCode();
+      }
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -1041,6 +1854,10 @@ private static final long serialVersionUID = 0L;
       return builder;
     }
     /**
+     * <pre>
+     * Response to a request for info about a digital shop via the API.
+     * </pre>
+     *
      * Protobuf type {@code bloombox.services.shop.v1.ShopInfo.Response}
      */
     public static final class Builder extends
@@ -1080,6 +1897,36 @@ private static final long serialVersionUID = 0L;
         super.clear();
         shopStatus_ = 0;
 
+        if (settingsBuilder_ == null) {
+          settings_ = null;
+        } else {
+          settings_ = null;
+          settingsBuilder_ = null;
+        }
+        if (hoursBuilder_ == null) {
+          hours_ = null;
+        } else {
+          hours_ = null;
+          hoursBuilder_ = null;
+        }
+        if (contactBuilder_ == null) {
+          contact_ = null;
+        } else {
+          contact_ = null;
+          contactBuilder_ = null;
+        }
+        if (socialBuilder_ == null) {
+          social_ = null;
+        } else {
+          social_ = null;
+          socialBuilder_ = null;
+        }
+        if (brandingBuilder_ == null) {
+          branding_ = null;
+        } else {
+          branding_ = null;
+          brandingBuilder_ = null;
+        }
         return this;
       }
 
@@ -1107,41 +1954,66 @@ private static final long serialVersionUID = 0L;
       public io.bloombox.schema.services.shop.v1.ShopInfo.Response buildPartial() {
         io.bloombox.schema.services.shop.v1.ShopInfo.Response result = new io.bloombox.schema.services.shop.v1.ShopInfo.Response(this);
         result.shopStatus_ = shopStatus_;
+        if (settingsBuilder_ == null) {
+          result.settings_ = settings_;
+        } else {
+          result.settings_ = settingsBuilder_.build();
+        }
+        if (hoursBuilder_ == null) {
+          result.hours_ = hours_;
+        } else {
+          result.hours_ = hoursBuilder_.build();
+        }
+        if (contactBuilder_ == null) {
+          result.contact_ = contact_;
+        } else {
+          result.contact_ = contactBuilder_.build();
+        }
+        if (socialBuilder_ == null) {
+          result.social_ = social_;
+        } else {
+          result.social_ = socialBuilder_.build();
+        }
+        if (brandingBuilder_ == null) {
+          result.branding_ = branding_;
+        } else {
+          result.branding_ = brandingBuilder_.build();
+        }
         onBuilt();
         return result;
       }
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -1157,6 +2029,21 @@ private static final long serialVersionUID = 0L;
         if (other == io.bloombox.schema.services.shop.v1.ShopInfo.Response.getDefaultInstance()) return this;
         if (other.shopStatus_ != 0) {
           setShopStatusValue(other.getShopStatusValue());
+        }
+        if (other.hasSettings()) {
+          mergeSettings(other.getSettings());
+        }
+        if (other.hasHours()) {
+          mergeHours(other.getHours());
+        }
+        if (other.hasContact()) {
+          mergeContact(other.getContact());
+        }
+        if (other.hasSocial()) {
+          mergeSocial(other.getSocial());
+        }
+        if (other.hasBranding()) {
+          mergeBranding(other.getBranding());
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -1251,10 +2138,775 @@ private static final long serialVersionUID = 0L;
         onChanged();
         return this;
       }
+
+      private io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.ShopServiceSettings settings_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.ShopServiceSettings, io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.ShopServiceSettings.Builder, io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.ShopServiceSettingsOrBuilder> settingsBuilder_;
+      /**
+       * <pre>
+       * Indicates support/settings for a given digital shop context.
+       * </pre>
+       *
+       * <code>.bloombox.partner.settings.ShopServiceSettings settings = 2;</code>
+       */
+      public boolean hasSettings() {
+        return settingsBuilder_ != null || settings_ != null;
+      }
+      /**
+       * <pre>
+       * Indicates support/settings for a given digital shop context.
+       * </pre>
+       *
+       * <code>.bloombox.partner.settings.ShopServiceSettings settings = 2;</code>
+       */
+      public io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.ShopServiceSettings getSettings() {
+        if (settingsBuilder_ == null) {
+          return settings_ == null ? io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.ShopServiceSettings.getDefaultInstance() : settings_;
+        } else {
+          return settingsBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * Indicates support/settings for a given digital shop context.
+       * </pre>
+       *
+       * <code>.bloombox.partner.settings.ShopServiceSettings settings = 2;</code>
+       */
+      public Builder setSettings(io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.ShopServiceSettings value) {
+        if (settingsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          settings_ = value;
+          onChanged();
+        } else {
+          settingsBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Indicates support/settings for a given digital shop context.
+       * </pre>
+       *
+       * <code>.bloombox.partner.settings.ShopServiceSettings settings = 2;</code>
+       */
+      public Builder setSettings(
+          io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.ShopServiceSettings.Builder builderForValue) {
+        if (settingsBuilder_ == null) {
+          settings_ = builderForValue.build();
+          onChanged();
+        } else {
+          settingsBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Indicates support/settings for a given digital shop context.
+       * </pre>
+       *
+       * <code>.bloombox.partner.settings.ShopServiceSettings settings = 2;</code>
+       */
+      public Builder mergeSettings(io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.ShopServiceSettings value) {
+        if (settingsBuilder_ == null) {
+          if (settings_ != null) {
+            settings_ =
+              io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.ShopServiceSettings.newBuilder(settings_).mergeFrom(value).buildPartial();
+          } else {
+            settings_ = value;
+          }
+          onChanged();
+        } else {
+          settingsBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Indicates support/settings for a given digital shop context.
+       * </pre>
+       *
+       * <code>.bloombox.partner.settings.ShopServiceSettings settings = 2;</code>
+       */
+      public Builder clearSettings() {
+        if (settingsBuilder_ == null) {
+          settings_ = null;
+          onChanged();
+        } else {
+          settings_ = null;
+          settingsBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Indicates support/settings for a given digital shop context.
+       * </pre>
+       *
+       * <code>.bloombox.partner.settings.ShopServiceSettings settings = 2;</code>
+       */
+      public io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.ShopServiceSettings.Builder getSettingsBuilder() {
+        
+        onChanged();
+        return getSettingsFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * Indicates support/settings for a given digital shop context.
+       * </pre>
+       *
+       * <code>.bloombox.partner.settings.ShopServiceSettings settings = 2;</code>
+       */
+      public io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.ShopServiceSettingsOrBuilder getSettingsOrBuilder() {
+        if (settingsBuilder_ != null) {
+          return settingsBuilder_.getMessageOrBuilder();
+        } else {
+          return settings_ == null ?
+              io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.ShopServiceSettings.getDefaultInstance() : settings_;
+        }
+      }
+      /**
+       * <pre>
+       * Indicates support/settings for a given digital shop context.
+       * </pre>
+       *
+       * <code>.bloombox.partner.settings.ShopServiceSettings settings = 2;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.ShopServiceSettings, io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.ShopServiceSettings.Builder, io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.ShopServiceSettingsOrBuilder> 
+          getSettingsFieldBuilder() {
+        if (settingsBuilder_ == null) {
+          settingsBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.ShopServiceSettings, io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.ShopServiceSettings.Builder, io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.ShopServiceSettingsOrBuilder>(
+                  getSettings(),
+                  getParentForChildren(),
+                  isClean());
+          settings_ = null;
+        }
+        return settingsBuilder_;
+      }
+
+      private io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.ShopHoursSettings hours_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.ShopHoursSettings, io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.ShopHoursSettings.Builder, io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.ShopHoursSettingsOrBuilder> hoursBuilder_;
+      /**
+       * <pre>
+       * Indicates regular and special hours that apply for a given digital shop context.
+       * </pre>
+       *
+       * <code>.bloombox.partner.settings.ShopHoursSettings hours = 3;</code>
+       */
+      public boolean hasHours() {
+        return hoursBuilder_ != null || hours_ != null;
+      }
+      /**
+       * <pre>
+       * Indicates regular and special hours that apply for a given digital shop context.
+       * </pre>
+       *
+       * <code>.bloombox.partner.settings.ShopHoursSettings hours = 3;</code>
+       */
+      public io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.ShopHoursSettings getHours() {
+        if (hoursBuilder_ == null) {
+          return hours_ == null ? io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.ShopHoursSettings.getDefaultInstance() : hours_;
+        } else {
+          return hoursBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * Indicates regular and special hours that apply for a given digital shop context.
+       * </pre>
+       *
+       * <code>.bloombox.partner.settings.ShopHoursSettings hours = 3;</code>
+       */
+      public Builder setHours(io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.ShopHoursSettings value) {
+        if (hoursBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          hours_ = value;
+          onChanged();
+        } else {
+          hoursBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Indicates regular and special hours that apply for a given digital shop context.
+       * </pre>
+       *
+       * <code>.bloombox.partner.settings.ShopHoursSettings hours = 3;</code>
+       */
+      public Builder setHours(
+          io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.ShopHoursSettings.Builder builderForValue) {
+        if (hoursBuilder_ == null) {
+          hours_ = builderForValue.build();
+          onChanged();
+        } else {
+          hoursBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Indicates regular and special hours that apply for a given digital shop context.
+       * </pre>
+       *
+       * <code>.bloombox.partner.settings.ShopHoursSettings hours = 3;</code>
+       */
+      public Builder mergeHours(io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.ShopHoursSettings value) {
+        if (hoursBuilder_ == null) {
+          if (hours_ != null) {
+            hours_ =
+              io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.ShopHoursSettings.newBuilder(hours_).mergeFrom(value).buildPartial();
+          } else {
+            hours_ = value;
+          }
+          onChanged();
+        } else {
+          hoursBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Indicates regular and special hours that apply for a given digital shop context.
+       * </pre>
+       *
+       * <code>.bloombox.partner.settings.ShopHoursSettings hours = 3;</code>
+       */
+      public Builder clearHours() {
+        if (hoursBuilder_ == null) {
+          hours_ = null;
+          onChanged();
+        } else {
+          hours_ = null;
+          hoursBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Indicates regular and special hours that apply for a given digital shop context.
+       * </pre>
+       *
+       * <code>.bloombox.partner.settings.ShopHoursSettings hours = 3;</code>
+       */
+      public io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.ShopHoursSettings.Builder getHoursBuilder() {
+        
+        onChanged();
+        return getHoursFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * Indicates regular and special hours that apply for a given digital shop context.
+       * </pre>
+       *
+       * <code>.bloombox.partner.settings.ShopHoursSettings hours = 3;</code>
+       */
+      public io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.ShopHoursSettingsOrBuilder getHoursOrBuilder() {
+        if (hoursBuilder_ != null) {
+          return hoursBuilder_.getMessageOrBuilder();
+        } else {
+          return hours_ == null ?
+              io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.ShopHoursSettings.getDefaultInstance() : hours_;
+        }
+      }
+      /**
+       * <pre>
+       * Indicates regular and special hours that apply for a given digital shop context.
+       * </pre>
+       *
+       * <code>.bloombox.partner.settings.ShopHoursSettings hours = 3;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.ShopHoursSettings, io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.ShopHoursSettings.Builder, io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.ShopHoursSettingsOrBuilder> 
+          getHoursFieldBuilder() {
+        if (hoursBuilder_ == null) {
+          hoursBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.ShopHoursSettings, io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.ShopHoursSettings.Builder, io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.ShopHoursSettingsOrBuilder>(
+                  getHours(),
+                  getParentForChildren(),
+                  isClean());
+          hours_ = null;
+        }
+        return hoursBuilder_;
+      }
+
+      private io.opencannabis.schema.contact.GenericContact.ContactInfo contact_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          io.opencannabis.schema.contact.GenericContact.ContactInfo, io.opencannabis.schema.contact.GenericContact.ContactInfo.Builder, io.opencannabis.schema.contact.GenericContact.ContactInfoOrBuilder> contactBuilder_;
+      /**
+       * <pre>
+       * Indicates contact info for a given partner location.
+       * </pre>
+       *
+       * <code>.opencannabis.contact.ContactInfo contact = 4;</code>
+       */
+      public boolean hasContact() {
+        return contactBuilder_ != null || contact_ != null;
+      }
+      /**
+       * <pre>
+       * Indicates contact info for a given partner location.
+       * </pre>
+       *
+       * <code>.opencannabis.contact.ContactInfo contact = 4;</code>
+       */
+      public io.opencannabis.schema.contact.GenericContact.ContactInfo getContact() {
+        if (contactBuilder_ == null) {
+          return contact_ == null ? io.opencannabis.schema.contact.GenericContact.ContactInfo.getDefaultInstance() : contact_;
+        } else {
+          return contactBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * Indicates contact info for a given partner location.
+       * </pre>
+       *
+       * <code>.opencannabis.contact.ContactInfo contact = 4;</code>
+       */
+      public Builder setContact(io.opencannabis.schema.contact.GenericContact.ContactInfo value) {
+        if (contactBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          contact_ = value;
+          onChanged();
+        } else {
+          contactBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Indicates contact info for a given partner location.
+       * </pre>
+       *
+       * <code>.opencannabis.contact.ContactInfo contact = 4;</code>
+       */
+      public Builder setContact(
+          io.opencannabis.schema.contact.GenericContact.ContactInfo.Builder builderForValue) {
+        if (contactBuilder_ == null) {
+          contact_ = builderForValue.build();
+          onChanged();
+        } else {
+          contactBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Indicates contact info for a given partner location.
+       * </pre>
+       *
+       * <code>.opencannabis.contact.ContactInfo contact = 4;</code>
+       */
+      public Builder mergeContact(io.opencannabis.schema.contact.GenericContact.ContactInfo value) {
+        if (contactBuilder_ == null) {
+          if (contact_ != null) {
+            contact_ =
+              io.opencannabis.schema.contact.GenericContact.ContactInfo.newBuilder(contact_).mergeFrom(value).buildPartial();
+          } else {
+            contact_ = value;
+          }
+          onChanged();
+        } else {
+          contactBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Indicates contact info for a given partner location.
+       * </pre>
+       *
+       * <code>.opencannabis.contact.ContactInfo contact = 4;</code>
+       */
+      public Builder clearContact() {
+        if (contactBuilder_ == null) {
+          contact_ = null;
+          onChanged();
+        } else {
+          contact_ = null;
+          contactBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Indicates contact info for a given partner location.
+       * </pre>
+       *
+       * <code>.opencannabis.contact.ContactInfo contact = 4;</code>
+       */
+      public io.opencannabis.schema.contact.GenericContact.ContactInfo.Builder getContactBuilder() {
+        
+        onChanged();
+        return getContactFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * Indicates contact info for a given partner location.
+       * </pre>
+       *
+       * <code>.opencannabis.contact.ContactInfo contact = 4;</code>
+       */
+      public io.opencannabis.schema.contact.GenericContact.ContactInfoOrBuilder getContactOrBuilder() {
+        if (contactBuilder_ != null) {
+          return contactBuilder_.getMessageOrBuilder();
+        } else {
+          return contact_ == null ?
+              io.opencannabis.schema.contact.GenericContact.ContactInfo.getDefaultInstance() : contact_;
+        }
+      }
+      /**
+       * <pre>
+       * Indicates contact info for a given partner location.
+       * </pre>
+       *
+       * <code>.opencannabis.contact.ContactInfo contact = 4;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          io.opencannabis.schema.contact.GenericContact.ContactInfo, io.opencannabis.schema.contact.GenericContact.ContactInfo.Builder, io.opencannabis.schema.contact.GenericContact.ContactInfoOrBuilder> 
+          getContactFieldBuilder() {
+        if (contactBuilder_ == null) {
+          contactBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              io.opencannabis.schema.contact.GenericContact.ContactInfo, io.opencannabis.schema.contact.GenericContact.ContactInfo.Builder, io.opencannabis.schema.contact.GenericContact.ContactInfoOrBuilder>(
+                  getContact(),
+                  getParentForChildren(),
+                  isClean());
+          contact_ = null;
+        }
+        return contactBuilder_;
+      }
+
+      private io.opencannabis.schema.contact.GenericContact.SocialInfo social_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          io.opencannabis.schema.contact.GenericContact.SocialInfo, io.opencannabis.schema.contact.GenericContact.SocialInfo.Builder, io.opencannabis.schema.contact.GenericContact.SocialInfoOrBuilder> socialBuilder_;
+      /**
+       * <pre>
+       * Social account listings.
+       * </pre>
+       *
+       * <code>.opencannabis.contact.SocialInfo social = 5;</code>
+       */
+      public boolean hasSocial() {
+        return socialBuilder_ != null || social_ != null;
+      }
+      /**
+       * <pre>
+       * Social account listings.
+       * </pre>
+       *
+       * <code>.opencannabis.contact.SocialInfo social = 5;</code>
+       */
+      public io.opencannabis.schema.contact.GenericContact.SocialInfo getSocial() {
+        if (socialBuilder_ == null) {
+          return social_ == null ? io.opencannabis.schema.contact.GenericContact.SocialInfo.getDefaultInstance() : social_;
+        } else {
+          return socialBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * Social account listings.
+       * </pre>
+       *
+       * <code>.opencannabis.contact.SocialInfo social = 5;</code>
+       */
+      public Builder setSocial(io.opencannabis.schema.contact.GenericContact.SocialInfo value) {
+        if (socialBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          social_ = value;
+          onChanged();
+        } else {
+          socialBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Social account listings.
+       * </pre>
+       *
+       * <code>.opencannabis.contact.SocialInfo social = 5;</code>
+       */
+      public Builder setSocial(
+          io.opencannabis.schema.contact.GenericContact.SocialInfo.Builder builderForValue) {
+        if (socialBuilder_ == null) {
+          social_ = builderForValue.build();
+          onChanged();
+        } else {
+          socialBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Social account listings.
+       * </pre>
+       *
+       * <code>.opencannabis.contact.SocialInfo social = 5;</code>
+       */
+      public Builder mergeSocial(io.opencannabis.schema.contact.GenericContact.SocialInfo value) {
+        if (socialBuilder_ == null) {
+          if (social_ != null) {
+            social_ =
+              io.opencannabis.schema.contact.GenericContact.SocialInfo.newBuilder(social_).mergeFrom(value).buildPartial();
+          } else {
+            social_ = value;
+          }
+          onChanged();
+        } else {
+          socialBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Social account listings.
+       * </pre>
+       *
+       * <code>.opencannabis.contact.SocialInfo social = 5;</code>
+       */
+      public Builder clearSocial() {
+        if (socialBuilder_ == null) {
+          social_ = null;
+          onChanged();
+        } else {
+          social_ = null;
+          socialBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Social account listings.
+       * </pre>
+       *
+       * <code>.opencannabis.contact.SocialInfo social = 5;</code>
+       */
+      public io.opencannabis.schema.contact.GenericContact.SocialInfo.Builder getSocialBuilder() {
+        
+        onChanged();
+        return getSocialFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * Social account listings.
+       * </pre>
+       *
+       * <code>.opencannabis.contact.SocialInfo social = 5;</code>
+       */
+      public io.opencannabis.schema.contact.GenericContact.SocialInfoOrBuilder getSocialOrBuilder() {
+        if (socialBuilder_ != null) {
+          return socialBuilder_.getMessageOrBuilder();
+        } else {
+          return social_ == null ?
+              io.opencannabis.schema.contact.GenericContact.SocialInfo.getDefaultInstance() : social_;
+        }
+      }
+      /**
+       * <pre>
+       * Social account listings.
+       * </pre>
+       *
+       * <code>.opencannabis.contact.SocialInfo social = 5;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          io.opencannabis.schema.contact.GenericContact.SocialInfo, io.opencannabis.schema.contact.GenericContact.SocialInfo.Builder, io.opencannabis.schema.contact.GenericContact.SocialInfoOrBuilder> 
+          getSocialFieldBuilder() {
+        if (socialBuilder_ == null) {
+          socialBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              io.opencannabis.schema.contact.GenericContact.SocialInfo, io.opencannabis.schema.contact.GenericContact.SocialInfo.Builder, io.opencannabis.schema.contact.GenericContact.SocialInfoOrBuilder>(
+                  getSocial(),
+                  getParentForChildren(),
+                  isClean());
+          social_ = null;
+        }
+        return socialBuilder_;
+      }
+
+      private io.bloombox.schema.services.shop.v1.ShopBranding branding_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          io.bloombox.schema.services.shop.v1.ShopBranding, io.bloombox.schema.services.shop.v1.ShopBranding.Builder, io.bloombox.schema.services.shop.v1.ShopBrandingOrBuilder> brandingBuilder_;
+      /**
+       * <pre>
+       * Branding information for the digital shop in question.
+       * </pre>
+       *
+       * <code>.bloombox.services.shop.v1.ShopBranding branding = 6;</code>
+       */
+      public boolean hasBranding() {
+        return brandingBuilder_ != null || branding_ != null;
+      }
+      /**
+       * <pre>
+       * Branding information for the digital shop in question.
+       * </pre>
+       *
+       * <code>.bloombox.services.shop.v1.ShopBranding branding = 6;</code>
+       */
+      public io.bloombox.schema.services.shop.v1.ShopBranding getBranding() {
+        if (brandingBuilder_ == null) {
+          return branding_ == null ? io.bloombox.schema.services.shop.v1.ShopBranding.getDefaultInstance() : branding_;
+        } else {
+          return brandingBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * Branding information for the digital shop in question.
+       * </pre>
+       *
+       * <code>.bloombox.services.shop.v1.ShopBranding branding = 6;</code>
+       */
+      public Builder setBranding(io.bloombox.schema.services.shop.v1.ShopBranding value) {
+        if (brandingBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          branding_ = value;
+          onChanged();
+        } else {
+          brandingBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Branding information for the digital shop in question.
+       * </pre>
+       *
+       * <code>.bloombox.services.shop.v1.ShopBranding branding = 6;</code>
+       */
+      public Builder setBranding(
+          io.bloombox.schema.services.shop.v1.ShopBranding.Builder builderForValue) {
+        if (brandingBuilder_ == null) {
+          branding_ = builderForValue.build();
+          onChanged();
+        } else {
+          brandingBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Branding information for the digital shop in question.
+       * </pre>
+       *
+       * <code>.bloombox.services.shop.v1.ShopBranding branding = 6;</code>
+       */
+      public Builder mergeBranding(io.bloombox.schema.services.shop.v1.ShopBranding value) {
+        if (brandingBuilder_ == null) {
+          if (branding_ != null) {
+            branding_ =
+              io.bloombox.schema.services.shop.v1.ShopBranding.newBuilder(branding_).mergeFrom(value).buildPartial();
+          } else {
+            branding_ = value;
+          }
+          onChanged();
+        } else {
+          brandingBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Branding information for the digital shop in question.
+       * </pre>
+       *
+       * <code>.bloombox.services.shop.v1.ShopBranding branding = 6;</code>
+       */
+      public Builder clearBranding() {
+        if (brandingBuilder_ == null) {
+          branding_ = null;
+          onChanged();
+        } else {
+          branding_ = null;
+          brandingBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Branding information for the digital shop in question.
+       * </pre>
+       *
+       * <code>.bloombox.services.shop.v1.ShopBranding branding = 6;</code>
+       */
+      public io.bloombox.schema.services.shop.v1.ShopBranding.Builder getBrandingBuilder() {
+        
+        onChanged();
+        return getBrandingFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * Branding information for the digital shop in question.
+       * </pre>
+       *
+       * <code>.bloombox.services.shop.v1.ShopBranding branding = 6;</code>
+       */
+      public io.bloombox.schema.services.shop.v1.ShopBrandingOrBuilder getBrandingOrBuilder() {
+        if (brandingBuilder_ != null) {
+          return brandingBuilder_.getMessageOrBuilder();
+        } else {
+          return branding_ == null ?
+              io.bloombox.schema.services.shop.v1.ShopBranding.getDefaultInstance() : branding_;
+        }
+      }
+      /**
+       * <pre>
+       * Branding information for the digital shop in question.
+       * </pre>
+       *
+       * <code>.bloombox.services.shop.v1.ShopBranding branding = 6;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          io.bloombox.schema.services.shop.v1.ShopBranding, io.bloombox.schema.services.shop.v1.ShopBranding.Builder, io.bloombox.schema.services.shop.v1.ShopBrandingOrBuilder> 
+          getBrandingFieldBuilder() {
+        if (brandingBuilder_ == null) {
+          brandingBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              io.bloombox.schema.services.shop.v1.ShopBranding, io.bloombox.schema.services.shop.v1.ShopBranding.Builder, io.bloombox.schema.services.shop.v1.ShopBrandingOrBuilder>(
+                  getBranding(),
+                  getParentForChildren(),
+                  isClean());
+          branding_ = null;
+        }
+        return brandingBuilder_;
+      }
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -1359,6 +3011,10 @@ private static final long serialVersionUID = 0L;
     io.bloombox.schema.services.shop.v1.ShopInfo.ResponseOrBuilder getResponseOrBuilder();
   }
   /**
+   * <pre>
+   * Specifies an entire operation to query information about one or more digital shops.
+   * </pre>
+   *
    * Protobuf type {@code bloombox.services.shop.v1.ShopInfo.Operation}
    */
   public  static final class Operation extends
@@ -1424,7 +3080,7 @@ private static final long serialVersionUID = 0L;
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -1573,19 +3229,18 @@ private static final long serialVersionUID = 0L;
       }
       io.bloombox.schema.services.shop.v1.ShopInfo.Operation other = (io.bloombox.schema.services.shop.v1.ShopInfo.Operation) obj;
 
-      boolean result = true;
-      result = result && (hasRequest() == other.hasRequest());
+      if (hasRequest() != other.hasRequest()) return false;
       if (hasRequest()) {
-        result = result && getRequest()
-            .equals(other.getRequest());
+        if (!getRequest()
+            .equals(other.getRequest())) return false;
       }
-      result = result && (hasResponse() == other.hasResponse());
+      if (hasResponse() != other.hasResponse()) return false;
       if (hasResponse()) {
-        result = result && getResponse()
-            .equals(other.getResponse());
+        if (!getResponse()
+            .equals(other.getResponse())) return false;
       }
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -1699,6 +3354,10 @@ private static final long serialVersionUID = 0L;
       return builder;
     }
     /**
+     * <pre>
+     * Specifies an entire operation to query information about one or more digital shops.
+     * </pre>
+     *
      * Protobuf type {@code bloombox.services.shop.v1.ShopInfo.Operation}
      */
     public static final class Builder extends
@@ -1790,35 +3449,35 @@ private static final long serialVersionUID = 0L;
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -1867,7 +3526,7 @@ private static final long serialVersionUID = 0L;
         return this;
       }
 
-      private io.bloombox.schema.services.shop.v1.ShopInfo.Request request_ = null;
+      private io.bloombox.schema.services.shop.v1.ShopInfo.Request request_;
       private com.google.protobuf.SingleFieldBuilderV3<
           io.bloombox.schema.services.shop.v1.ShopInfo.Request, io.bloombox.schema.services.shop.v1.ShopInfo.Request.Builder, io.bloombox.schema.services.shop.v1.ShopInfo.RequestOrBuilder> requestBuilder_;
       /**
@@ -2020,7 +3679,7 @@ private static final long serialVersionUID = 0L;
         return requestBuilder_;
       }
 
-      private io.bloombox.schema.services.shop.v1.ShopInfo.Response response_ = null;
+      private io.bloombox.schema.services.shop.v1.ShopInfo.Response response_;
       private com.google.protobuf.SingleFieldBuilderV3<
           io.bloombox.schema.services.shop.v1.ShopInfo.Response, io.bloombox.schema.services.shop.v1.ShopInfo.Response.Builder, io.bloombox.schema.services.shop.v1.ShopInfo.ResponseOrBuilder> responseBuilder_;
       /**
@@ -2175,7 +3834,7 @@ private static final long serialVersionUID = 0L;
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -2263,9 +3922,8 @@ private static final long serialVersionUID = 0L;
     }
     io.bloombox.schema.services.shop.v1.ShopInfo other = (io.bloombox.schema.services.shop.v1.ShopInfo) obj;
 
-    boolean result = true;
-    result = result && unknownFields.equals(other.unknownFields);
-    return result;
+    if (!unknownFields.equals(other.unknownFields)) return false;
+    return true;
   }
 
   @java.lang.Override
@@ -2444,35 +4102,35 @@ private static final long serialVersionUID = 0L;
 
     @java.lang.Override
     public Builder clone() {
-      return (Builder) super.clone();
+      return super.clone();
     }
     @java.lang.Override
     public Builder setField(
         com.google.protobuf.Descriptors.FieldDescriptor field,
         java.lang.Object value) {
-      return (Builder) super.setField(field, value);
+      return super.setField(field, value);
     }
     @java.lang.Override
     public Builder clearField(
         com.google.protobuf.Descriptors.FieldDescriptor field) {
-      return (Builder) super.clearField(field);
+      return super.clearField(field);
     }
     @java.lang.Override
     public Builder clearOneof(
         com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-      return (Builder) super.clearOneof(oneof);
+      return super.clearOneof(oneof);
     }
     @java.lang.Override
     public Builder setRepeatedField(
         com.google.protobuf.Descriptors.FieldDescriptor field,
         int index, java.lang.Object value) {
-      return (Builder) super.setRepeatedField(field, index, value);
+      return super.setRepeatedField(field, index, value);
     }
     @java.lang.Override
     public Builder addRepeatedField(
         com.google.protobuf.Descriptors.FieldDescriptor field,
         java.lang.Object value) {
-      return (Builder) super.addRepeatedField(field, value);
+      return super.addRepeatedField(field, value);
     }
     @java.lang.Override
     public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -2517,7 +4175,7 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public final Builder setUnknownFields(
         final com.google.protobuf.UnknownFieldSet unknownFields) {
-      return super.setUnknownFieldsProto3(unknownFields);
+      return super.setUnknownFields(unknownFields);
     }
 
     @java.lang.Override

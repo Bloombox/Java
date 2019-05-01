@@ -1,12 +1,11 @@
 /*
- * Copyright 2018, Momentum Ideas, Co. All rights reserved.
+ * Copyright 2019, Momentum Ideas Co.
  *
- * Source and object computer code contained herein is the private intellectual
- * property of Momentum Ideas Co., a Delaware Corporation. Use of this
- * code in source form requires permission in writing before use or the
- * assembly, distribution, or publishing of derivative works, for commercial
- * purposes or any other purpose, from a duly authorized officer of Momentum
- * Ideas Co.
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *  http://www.apache.org/licenses/LICENSE-2.0
  *
  * Unless required by applicable law or agreed to in writing, software
  * distributed under the License is distributed on an "AS IS" BASIS,
@@ -311,7 +310,7 @@ public final class OrderItem {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -604,29 +603,26 @@ public final class OrderItem {
       }
       io.opencannabis.schema.commerce.OrderItem.VariantSpec other = (io.opencannabis.schema.commerce.OrderItem.VariantSpec) obj;
 
-      boolean result = true;
-      result = result && variant_ == other.variant_;
-      result = result && getSpecCase().equals(
-          other.getSpecCase());
-      if (!result) return false;
+      if (variant_ != other.variant_) return false;
+      if (!getSpecCase().equals(other.getSpecCase())) return false;
       switch (specCase_) {
         case 2:
-          result = result && getWeightValue()
-              == other.getWeightValue();
+          if (getWeightValue()
+              != other.getWeightValue()) return false;
           break;
         case 3:
-          result = result && getSize()
-              .equals(other.getSize());
+          if (!getSize()
+              .equals(other.getSize())) return false;
           break;
         case 4:
-          result = result && getColor()
-              .equals(other.getColor());
+          if (!getColor()
+              .equals(other.getColor())) return false;
           break;
         case 0:
         default:
       }
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -838,35 +834,35 @@ public final class OrderItem {
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -1289,7 +1285,7 @@ public final class OrderItem {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -1475,7 +1471,6 @@ public final class OrderItem {
     }
     private Item() {
       variant_ = java.util.Collections.emptyList();
-      count_ = 0;
       uri_ = "";
       imageUri_ = "";
     }
@@ -1518,7 +1513,7 @@ public final class OrderItem {
               break;
             }
             case 18: {
-              if (!((mutable_bitField0_ & 0x00000002) == 0x00000002)) {
+              if (!((mutable_bitField0_ & 0x00000002) != 0)) {
                 variant_ = new java.util.ArrayList<io.opencannabis.schema.commerce.OrderItem.VariantSpec>();
                 mutable_bitField0_ |= 0x00000002;
               }
@@ -1544,7 +1539,7 @@ public final class OrderItem {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -1558,7 +1553,7 @@ public final class OrderItem {
         throw new com.google.protobuf.InvalidProtocolBufferException(
             e).setUnfinishedMessage(this);
       } finally {
-        if (((mutable_bitField0_ & 0x00000002) == 0x00000002)) {
+        if (((mutable_bitField0_ & 0x00000002) != 0)) {
           variant_ = java.util.Collections.unmodifiableList(variant_);
         }
         this.unknownFields = unknownFields.build();
@@ -1835,22 +1830,21 @@ public final class OrderItem {
       }
       io.opencannabis.schema.commerce.OrderItem.Item other = (io.opencannabis.schema.commerce.OrderItem.Item) obj;
 
-      boolean result = true;
-      result = result && (hasKey() == other.hasKey());
+      if (hasKey() != other.hasKey()) return false;
       if (hasKey()) {
-        result = result && getKey()
-            .equals(other.getKey());
+        if (!getKey()
+            .equals(other.getKey())) return false;
       }
-      result = result && getVariantList()
-          .equals(other.getVariantList());
-      result = result && (getCount()
-          == other.getCount());
-      result = result && getUri()
-          .equals(other.getUri());
-      result = result && getImageUri()
-          .equals(other.getImageUri());
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!getVariantList()
+          .equals(other.getVariantList())) return false;
+      if (getCount()
+          != other.getCount()) return false;
+      if (!getUri()
+          .equals(other.getUri())) return false;
+      if (!getImageUri()
+          .equals(other.getImageUri())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -2064,7 +2058,7 @@ public final class OrderItem {
           result.key_ = keyBuilder_.build();
         }
         if (variantBuilder_ == null) {
-          if (((bitField0_ & 0x00000002) == 0x00000002)) {
+          if (((bitField0_ & 0x00000002) != 0)) {
             variant_ = java.util.Collections.unmodifiableList(variant_);
             bitField0_ = (bitField0_ & ~0x00000002);
           }
@@ -2082,35 +2076,35 @@ public final class OrderItem {
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -2194,7 +2188,7 @@ public final class OrderItem {
       }
       private int bitField0_;
 
-      private io.opencannabis.schema.base.BaseProductKey.ProductKey key_ = null;
+      private io.opencannabis.schema.base.BaseProductKey.ProductKey key_;
       private com.google.protobuf.SingleFieldBuilderV3<
           io.opencannabis.schema.base.BaseProductKey.ProductKey, io.opencannabis.schema.base.BaseProductKey.ProductKey.Builder, io.opencannabis.schema.base.BaseProductKey.ProductKeyOrBuilder> keyBuilder_;
       /**
@@ -2350,7 +2344,7 @@ public final class OrderItem {
       private java.util.List<io.opencannabis.schema.commerce.OrderItem.VariantSpec> variant_ =
         java.util.Collections.emptyList();
       private void ensureVariantIsMutable() {
-        if (!((bitField0_ & 0x00000002) == 0x00000002)) {
+        if (!((bitField0_ & 0x00000002) != 0)) {
           variant_ = new java.util.ArrayList<io.opencannabis.schema.commerce.OrderItem.VariantSpec>(variant_);
           bitField0_ |= 0x00000002;
          }
@@ -2651,7 +2645,7 @@ public final class OrderItem {
           variantBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
               io.opencannabis.schema.commerce.OrderItem.VariantSpec, io.opencannabis.schema.commerce.OrderItem.VariantSpec.Builder, io.opencannabis.schema.commerce.OrderItem.VariantSpecOrBuilder>(
                   variant_,
-                  ((bitField0_ & 0x00000002) == 0x00000002),
+                  ((bitField0_ & 0x00000002) != 0),
                   getParentForChildren(),
                   isClean());
           variant_ = null;
@@ -2877,7 +2871,7 @@ public final class OrderItem {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override

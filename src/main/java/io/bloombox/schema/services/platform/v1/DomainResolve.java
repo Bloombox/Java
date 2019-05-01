@@ -1,5 +1,5 @@
 /*
- * Copyright 2018, Momentum Ideas, Co. All rights reserved.
+ * Copyright 2019, Momentum Ideas, Co. All rights reserved.
  *
  * Source and object computer code contained herein is the private intellectual
  * property of Momentum Ideas Co., a Delaware Corporation. Use of this
@@ -63,7 +63,7 @@ private static final long serialVersionUID = 0L;
             done = true;
             break;
           default: {
-            if (!parseUnknownFieldProto3(
+            if (!parseUnknownField(
                 input, unknownFields, extensionRegistry, tag)) {
               done = true;
             }
@@ -167,7 +167,7 @@ private static final long serialVersionUID = 0L;
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -284,11 +284,10 @@ private static final long serialVersionUID = 0L;
       }
       io.bloombox.schema.services.platform.v1.DomainResolve.Request other = (io.bloombox.schema.services.platform.v1.DomainResolve.Request) obj;
 
-      boolean result = true;
-      result = result && getOrigin()
-          .equals(other.getOrigin());
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!getOrigin()
+          .equals(other.getOrigin())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -472,35 +471,35 @@ private static final long serialVersionUID = 0L;
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -638,7 +637,7 @@ private static final long serialVersionUID = 0L;
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -763,6 +762,50 @@ private static final long serialVersionUID = 0L;
      */
     com.google.protobuf.ByteString
         getClientIdBytes();
+
+    /**
+     * <pre>
+     * Describes locations considered "other" locations from this context, under this same partner.
+     * </pre>
+     *
+     * <code>repeated .bloombox.services.platform.v1.ReferencedLocation referenced_location = 7;</code>
+     */
+    java.util.List<io.bloombox.schema.services.platform.v1.ReferencedLocation> 
+        getReferencedLocationList();
+    /**
+     * <pre>
+     * Describes locations considered "other" locations from this context, under this same partner.
+     * </pre>
+     *
+     * <code>repeated .bloombox.services.platform.v1.ReferencedLocation referenced_location = 7;</code>
+     */
+    io.bloombox.schema.services.platform.v1.ReferencedLocation getReferencedLocation(int index);
+    /**
+     * <pre>
+     * Describes locations considered "other" locations from this context, under this same partner.
+     * </pre>
+     *
+     * <code>repeated .bloombox.services.platform.v1.ReferencedLocation referenced_location = 7;</code>
+     */
+    int getReferencedLocationCount();
+    /**
+     * <pre>
+     * Describes locations considered "other" locations from this context, under this same partner.
+     * </pre>
+     *
+     * <code>repeated .bloombox.services.platform.v1.ReferencedLocation referenced_location = 7;</code>
+     */
+    java.util.List<? extends io.bloombox.schema.services.platform.v1.ReferencedLocationOrBuilder> 
+        getReferencedLocationOrBuilderList();
+    /**
+     * <pre>
+     * Describes locations considered "other" locations from this context, under this same partner.
+     * </pre>
+     *
+     * <code>repeated .bloombox.services.platform.v1.ReferencedLocation referenced_location = 7;</code>
+     */
+    io.bloombox.schema.services.platform.v1.ReferencedLocationOrBuilder getReferencedLocationOrBuilder(
+        int index);
   }
   /**
    * <pre>
@@ -785,6 +828,7 @@ private static final long serialVersionUID = 0L;
       location_ = "";
       apikey_ = "";
       clientId_ = "";
+      referencedLocation_ = java.util.Collections.emptyList();
     }
 
     @java.lang.Override
@@ -835,8 +879,17 @@ private static final long serialVersionUID = 0L;
               clientId_ = s;
               break;
             }
+            case 58: {
+              if (!((mutable_bitField0_ & 0x00000010) != 0)) {
+                referencedLocation_ = new java.util.ArrayList<io.bloombox.schema.services.platform.v1.ReferencedLocation>();
+                mutable_bitField0_ |= 0x00000010;
+              }
+              referencedLocation_.add(
+                  input.readMessage(io.bloombox.schema.services.platform.v1.ReferencedLocation.parser(), extensionRegistry));
+              break;
+            }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -850,6 +903,9 @@ private static final long serialVersionUID = 0L;
         throw new com.google.protobuf.InvalidProtocolBufferException(
             e).setUnfinishedMessage(this);
       } finally {
+        if (((mutable_bitField0_ & 0x00000010) != 0)) {
+          referencedLocation_ = java.util.Collections.unmodifiableList(referencedLocation_);
+        }
         this.unknownFields = unknownFields.build();
         makeExtensionsImmutable();
       }
@@ -867,6 +923,7 @@ private static final long serialVersionUID = 0L;
               io.bloombox.schema.services.platform.v1.DomainResolve.Response.class, io.bloombox.schema.services.platform.v1.DomainResolve.Response.Builder.class);
     }
 
+    private int bitField0_;
     public static final int PARTNER_FIELD_NUMBER = 1;
     private volatile java.lang.Object partner_;
     /**
@@ -1035,6 +1092,61 @@ private static final long serialVersionUID = 0L;
       }
     }
 
+    public static final int REFERENCED_LOCATION_FIELD_NUMBER = 7;
+    private java.util.List<io.bloombox.schema.services.platform.v1.ReferencedLocation> referencedLocation_;
+    /**
+     * <pre>
+     * Describes locations considered "other" locations from this context, under this same partner.
+     * </pre>
+     *
+     * <code>repeated .bloombox.services.platform.v1.ReferencedLocation referenced_location = 7;</code>
+     */
+    public java.util.List<io.bloombox.schema.services.platform.v1.ReferencedLocation> getReferencedLocationList() {
+      return referencedLocation_;
+    }
+    /**
+     * <pre>
+     * Describes locations considered "other" locations from this context, under this same partner.
+     * </pre>
+     *
+     * <code>repeated .bloombox.services.platform.v1.ReferencedLocation referenced_location = 7;</code>
+     */
+    public java.util.List<? extends io.bloombox.schema.services.platform.v1.ReferencedLocationOrBuilder> 
+        getReferencedLocationOrBuilderList() {
+      return referencedLocation_;
+    }
+    /**
+     * <pre>
+     * Describes locations considered "other" locations from this context, under this same partner.
+     * </pre>
+     *
+     * <code>repeated .bloombox.services.platform.v1.ReferencedLocation referenced_location = 7;</code>
+     */
+    public int getReferencedLocationCount() {
+      return referencedLocation_.size();
+    }
+    /**
+     * <pre>
+     * Describes locations considered "other" locations from this context, under this same partner.
+     * </pre>
+     *
+     * <code>repeated .bloombox.services.platform.v1.ReferencedLocation referenced_location = 7;</code>
+     */
+    public io.bloombox.schema.services.platform.v1.ReferencedLocation getReferencedLocation(int index) {
+      return referencedLocation_.get(index);
+    }
+    /**
+     * <pre>
+     * Describes locations considered "other" locations from this context, under this same partner.
+     * </pre>
+     *
+     * <code>repeated .bloombox.services.platform.v1.ReferencedLocation referenced_location = 7;</code>
+     */
+    public io.bloombox.schema.services.platform.v1.ReferencedLocationOrBuilder getReferencedLocationOrBuilder(
+        int index) {
+      return referencedLocation_.get(index);
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -1061,6 +1173,9 @@ private static final long serialVersionUID = 0L;
       if (!getClientIdBytes().isEmpty()) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 4, clientId_);
       }
+      for (int i = 0; i < referencedLocation_.size(); i++) {
+        output.writeMessage(7, referencedLocation_.get(i));
+      }
       unknownFields.writeTo(output);
     }
 
@@ -1082,6 +1197,10 @@ private static final long serialVersionUID = 0L;
       if (!getClientIdBytes().isEmpty()) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(4, clientId_);
       }
+      for (int i = 0; i < referencedLocation_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(7, referencedLocation_.get(i));
+      }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
@@ -1097,17 +1216,18 @@ private static final long serialVersionUID = 0L;
       }
       io.bloombox.schema.services.platform.v1.DomainResolve.Response other = (io.bloombox.schema.services.platform.v1.DomainResolve.Response) obj;
 
-      boolean result = true;
-      result = result && getPartner()
-          .equals(other.getPartner());
-      result = result && getLocation()
-          .equals(other.getLocation());
-      result = result && getApikey()
-          .equals(other.getApikey());
-      result = result && getClientId()
-          .equals(other.getClientId());
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!getPartner()
+          .equals(other.getPartner())) return false;
+      if (!getLocation()
+          .equals(other.getLocation())) return false;
+      if (!getApikey()
+          .equals(other.getApikey())) return false;
+      if (!getClientId()
+          .equals(other.getClientId())) return false;
+      if (!getReferencedLocationList()
+          .equals(other.getReferencedLocationList())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -1125,6 +1245,10 @@ private static final long serialVersionUID = 0L;
       hash = (53 * hash) + getApikey().hashCode();
       hash = (37 * hash) + CLIENT_ID_FIELD_NUMBER;
       hash = (53 * hash) + getClientId().hashCode();
+      if (getReferencedLocationCount() > 0) {
+        hash = (37 * hash) + REFERENCED_LOCATION_FIELD_NUMBER;
+        hash = (53 * hash) + getReferencedLocationList().hashCode();
+      }
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -1257,6 +1381,7 @@ private static final long serialVersionUID = 0L;
       private void maybeForceBuilderInitialization() {
         if (com.google.protobuf.GeneratedMessageV3
                 .alwaysUseFieldBuilders) {
+          getReferencedLocationFieldBuilder();
         }
       }
       @java.lang.Override
@@ -1270,6 +1395,12 @@ private static final long serialVersionUID = 0L;
 
         clientId_ = "";
 
+        if (referencedLocationBuilder_ == null) {
+          referencedLocation_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000010);
+        } else {
+          referencedLocationBuilder_.clear();
+        }
         return this;
       }
 
@@ -1296,45 +1427,57 @@ private static final long serialVersionUID = 0L;
       @java.lang.Override
       public io.bloombox.schema.services.platform.v1.DomainResolve.Response buildPartial() {
         io.bloombox.schema.services.platform.v1.DomainResolve.Response result = new io.bloombox.schema.services.platform.v1.DomainResolve.Response(this);
+        int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
         result.partner_ = partner_;
         result.location_ = location_;
         result.apikey_ = apikey_;
         result.clientId_ = clientId_;
+        if (referencedLocationBuilder_ == null) {
+          if (((bitField0_ & 0x00000010) != 0)) {
+            referencedLocation_ = java.util.Collections.unmodifiableList(referencedLocation_);
+            bitField0_ = (bitField0_ & ~0x00000010);
+          }
+          result.referencedLocation_ = referencedLocation_;
+        } else {
+          result.referencedLocation_ = referencedLocationBuilder_.build();
+        }
+        result.bitField0_ = to_bitField0_;
         onBuilt();
         return result;
       }
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -1364,6 +1507,32 @@ private static final long serialVersionUID = 0L;
           clientId_ = other.clientId_;
           onChanged();
         }
+        if (referencedLocationBuilder_ == null) {
+          if (!other.referencedLocation_.isEmpty()) {
+            if (referencedLocation_.isEmpty()) {
+              referencedLocation_ = other.referencedLocation_;
+              bitField0_ = (bitField0_ & ~0x00000010);
+            } else {
+              ensureReferencedLocationIsMutable();
+              referencedLocation_.addAll(other.referencedLocation_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.referencedLocation_.isEmpty()) {
+            if (referencedLocationBuilder_.isEmpty()) {
+              referencedLocationBuilder_.dispose();
+              referencedLocationBuilder_ = null;
+              referencedLocation_ = other.referencedLocation_;
+              bitField0_ = (bitField0_ & ~0x00000010);
+              referencedLocationBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getReferencedLocationFieldBuilder() : null;
+            } else {
+              referencedLocationBuilder_.addAllMessages(other.referencedLocation_);
+            }
+          }
+        }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
         return this;
@@ -1392,6 +1561,7 @@ private static final long serialVersionUID = 0L;
         }
         return this;
       }
+      private int bitField0_;
 
       private java.lang.Object partner_ = "";
       /**
@@ -1748,10 +1918,322 @@ private static final long serialVersionUID = 0L;
         onChanged();
         return this;
       }
+
+      private java.util.List<io.bloombox.schema.services.platform.v1.ReferencedLocation> referencedLocation_ =
+        java.util.Collections.emptyList();
+      private void ensureReferencedLocationIsMutable() {
+        if (!((bitField0_ & 0x00000010) != 0)) {
+          referencedLocation_ = new java.util.ArrayList<io.bloombox.schema.services.platform.v1.ReferencedLocation>(referencedLocation_);
+          bitField0_ |= 0x00000010;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          io.bloombox.schema.services.platform.v1.ReferencedLocation, io.bloombox.schema.services.platform.v1.ReferencedLocation.Builder, io.bloombox.schema.services.platform.v1.ReferencedLocationOrBuilder> referencedLocationBuilder_;
+
+      /**
+       * <pre>
+       * Describes locations considered "other" locations from this context, under this same partner.
+       * </pre>
+       *
+       * <code>repeated .bloombox.services.platform.v1.ReferencedLocation referenced_location = 7;</code>
+       */
+      public java.util.List<io.bloombox.schema.services.platform.v1.ReferencedLocation> getReferencedLocationList() {
+        if (referencedLocationBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(referencedLocation_);
+        } else {
+          return referencedLocationBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <pre>
+       * Describes locations considered "other" locations from this context, under this same partner.
+       * </pre>
+       *
+       * <code>repeated .bloombox.services.platform.v1.ReferencedLocation referenced_location = 7;</code>
+       */
+      public int getReferencedLocationCount() {
+        if (referencedLocationBuilder_ == null) {
+          return referencedLocation_.size();
+        } else {
+          return referencedLocationBuilder_.getCount();
+        }
+      }
+      /**
+       * <pre>
+       * Describes locations considered "other" locations from this context, under this same partner.
+       * </pre>
+       *
+       * <code>repeated .bloombox.services.platform.v1.ReferencedLocation referenced_location = 7;</code>
+       */
+      public io.bloombox.schema.services.platform.v1.ReferencedLocation getReferencedLocation(int index) {
+        if (referencedLocationBuilder_ == null) {
+          return referencedLocation_.get(index);
+        } else {
+          return referencedLocationBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <pre>
+       * Describes locations considered "other" locations from this context, under this same partner.
+       * </pre>
+       *
+       * <code>repeated .bloombox.services.platform.v1.ReferencedLocation referenced_location = 7;</code>
+       */
+      public Builder setReferencedLocation(
+          int index, io.bloombox.schema.services.platform.v1.ReferencedLocation value) {
+        if (referencedLocationBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureReferencedLocationIsMutable();
+          referencedLocation_.set(index, value);
+          onChanged();
+        } else {
+          referencedLocationBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Describes locations considered "other" locations from this context, under this same partner.
+       * </pre>
+       *
+       * <code>repeated .bloombox.services.platform.v1.ReferencedLocation referenced_location = 7;</code>
+       */
+      public Builder setReferencedLocation(
+          int index, io.bloombox.schema.services.platform.v1.ReferencedLocation.Builder builderForValue) {
+        if (referencedLocationBuilder_ == null) {
+          ensureReferencedLocationIsMutable();
+          referencedLocation_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          referencedLocationBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Describes locations considered "other" locations from this context, under this same partner.
+       * </pre>
+       *
+       * <code>repeated .bloombox.services.platform.v1.ReferencedLocation referenced_location = 7;</code>
+       */
+      public Builder addReferencedLocation(io.bloombox.schema.services.platform.v1.ReferencedLocation value) {
+        if (referencedLocationBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureReferencedLocationIsMutable();
+          referencedLocation_.add(value);
+          onChanged();
+        } else {
+          referencedLocationBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Describes locations considered "other" locations from this context, under this same partner.
+       * </pre>
+       *
+       * <code>repeated .bloombox.services.platform.v1.ReferencedLocation referenced_location = 7;</code>
+       */
+      public Builder addReferencedLocation(
+          int index, io.bloombox.schema.services.platform.v1.ReferencedLocation value) {
+        if (referencedLocationBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureReferencedLocationIsMutable();
+          referencedLocation_.add(index, value);
+          onChanged();
+        } else {
+          referencedLocationBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Describes locations considered "other" locations from this context, under this same partner.
+       * </pre>
+       *
+       * <code>repeated .bloombox.services.platform.v1.ReferencedLocation referenced_location = 7;</code>
+       */
+      public Builder addReferencedLocation(
+          io.bloombox.schema.services.platform.v1.ReferencedLocation.Builder builderForValue) {
+        if (referencedLocationBuilder_ == null) {
+          ensureReferencedLocationIsMutable();
+          referencedLocation_.add(builderForValue.build());
+          onChanged();
+        } else {
+          referencedLocationBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Describes locations considered "other" locations from this context, under this same partner.
+       * </pre>
+       *
+       * <code>repeated .bloombox.services.platform.v1.ReferencedLocation referenced_location = 7;</code>
+       */
+      public Builder addReferencedLocation(
+          int index, io.bloombox.schema.services.platform.v1.ReferencedLocation.Builder builderForValue) {
+        if (referencedLocationBuilder_ == null) {
+          ensureReferencedLocationIsMutable();
+          referencedLocation_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          referencedLocationBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Describes locations considered "other" locations from this context, under this same partner.
+       * </pre>
+       *
+       * <code>repeated .bloombox.services.platform.v1.ReferencedLocation referenced_location = 7;</code>
+       */
+      public Builder addAllReferencedLocation(
+          java.lang.Iterable<? extends io.bloombox.schema.services.platform.v1.ReferencedLocation> values) {
+        if (referencedLocationBuilder_ == null) {
+          ensureReferencedLocationIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, referencedLocation_);
+          onChanged();
+        } else {
+          referencedLocationBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Describes locations considered "other" locations from this context, under this same partner.
+       * </pre>
+       *
+       * <code>repeated .bloombox.services.platform.v1.ReferencedLocation referenced_location = 7;</code>
+       */
+      public Builder clearReferencedLocation() {
+        if (referencedLocationBuilder_ == null) {
+          referencedLocation_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000010);
+          onChanged();
+        } else {
+          referencedLocationBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Describes locations considered "other" locations from this context, under this same partner.
+       * </pre>
+       *
+       * <code>repeated .bloombox.services.platform.v1.ReferencedLocation referenced_location = 7;</code>
+       */
+      public Builder removeReferencedLocation(int index) {
+        if (referencedLocationBuilder_ == null) {
+          ensureReferencedLocationIsMutable();
+          referencedLocation_.remove(index);
+          onChanged();
+        } else {
+          referencedLocationBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Describes locations considered "other" locations from this context, under this same partner.
+       * </pre>
+       *
+       * <code>repeated .bloombox.services.platform.v1.ReferencedLocation referenced_location = 7;</code>
+       */
+      public io.bloombox.schema.services.platform.v1.ReferencedLocation.Builder getReferencedLocationBuilder(
+          int index) {
+        return getReferencedLocationFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <pre>
+       * Describes locations considered "other" locations from this context, under this same partner.
+       * </pre>
+       *
+       * <code>repeated .bloombox.services.platform.v1.ReferencedLocation referenced_location = 7;</code>
+       */
+      public io.bloombox.schema.services.platform.v1.ReferencedLocationOrBuilder getReferencedLocationOrBuilder(
+          int index) {
+        if (referencedLocationBuilder_ == null) {
+          return referencedLocation_.get(index);  } else {
+          return referencedLocationBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <pre>
+       * Describes locations considered "other" locations from this context, under this same partner.
+       * </pre>
+       *
+       * <code>repeated .bloombox.services.platform.v1.ReferencedLocation referenced_location = 7;</code>
+       */
+      public java.util.List<? extends io.bloombox.schema.services.platform.v1.ReferencedLocationOrBuilder> 
+           getReferencedLocationOrBuilderList() {
+        if (referencedLocationBuilder_ != null) {
+          return referencedLocationBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(referencedLocation_);
+        }
+      }
+      /**
+       * <pre>
+       * Describes locations considered "other" locations from this context, under this same partner.
+       * </pre>
+       *
+       * <code>repeated .bloombox.services.platform.v1.ReferencedLocation referenced_location = 7;</code>
+       */
+      public io.bloombox.schema.services.platform.v1.ReferencedLocation.Builder addReferencedLocationBuilder() {
+        return getReferencedLocationFieldBuilder().addBuilder(
+            io.bloombox.schema.services.platform.v1.ReferencedLocation.getDefaultInstance());
+      }
+      /**
+       * <pre>
+       * Describes locations considered "other" locations from this context, under this same partner.
+       * </pre>
+       *
+       * <code>repeated .bloombox.services.platform.v1.ReferencedLocation referenced_location = 7;</code>
+       */
+      public io.bloombox.schema.services.platform.v1.ReferencedLocation.Builder addReferencedLocationBuilder(
+          int index) {
+        return getReferencedLocationFieldBuilder().addBuilder(
+            index, io.bloombox.schema.services.platform.v1.ReferencedLocation.getDefaultInstance());
+      }
+      /**
+       * <pre>
+       * Describes locations considered "other" locations from this context, under this same partner.
+       * </pre>
+       *
+       * <code>repeated .bloombox.services.platform.v1.ReferencedLocation referenced_location = 7;</code>
+       */
+      public java.util.List<io.bloombox.schema.services.platform.v1.ReferencedLocation.Builder> 
+           getReferencedLocationBuilderList() {
+        return getReferencedLocationFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          io.bloombox.schema.services.platform.v1.ReferencedLocation, io.bloombox.schema.services.platform.v1.ReferencedLocation.Builder, io.bloombox.schema.services.platform.v1.ReferencedLocationOrBuilder> 
+          getReferencedLocationFieldBuilder() {
+        if (referencedLocationBuilder_ == null) {
+          referencedLocationBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              io.bloombox.schema.services.platform.v1.ReferencedLocation, io.bloombox.schema.services.platform.v1.ReferencedLocation.Builder, io.bloombox.schema.services.platform.v1.ReferencedLocationOrBuilder>(
+                  referencedLocation_,
+                  ((bitField0_ & 0x00000010) != 0),
+                  getParentForChildren(),
+                  isClean());
+          referencedLocation_ = null;
+        }
+        return referencedLocationBuilder_;
+      }
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -1839,9 +2321,8 @@ private static final long serialVersionUID = 0L;
     }
     io.bloombox.schema.services.platform.v1.DomainResolve other = (io.bloombox.schema.services.platform.v1.DomainResolve) obj;
 
-    boolean result = true;
-    result = result && unknownFields.equals(other.unknownFields);
-    return result;
+    if (!unknownFields.equals(other.unknownFields)) return false;
+    return true;
   }
 
   @java.lang.Override
@@ -2020,35 +2501,35 @@ private static final long serialVersionUID = 0L;
 
     @java.lang.Override
     public Builder clone() {
-      return (Builder) super.clone();
+      return super.clone();
     }
     @java.lang.Override
     public Builder setField(
         com.google.protobuf.Descriptors.FieldDescriptor field,
         java.lang.Object value) {
-      return (Builder) super.setField(field, value);
+      return super.setField(field, value);
     }
     @java.lang.Override
     public Builder clearField(
         com.google.protobuf.Descriptors.FieldDescriptor field) {
-      return (Builder) super.clearField(field);
+      return super.clearField(field);
     }
     @java.lang.Override
     public Builder clearOneof(
         com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-      return (Builder) super.clearOneof(oneof);
+      return super.clearOneof(oneof);
     }
     @java.lang.Override
     public Builder setRepeatedField(
         com.google.protobuf.Descriptors.FieldDescriptor field,
         int index, java.lang.Object value) {
-      return (Builder) super.setRepeatedField(field, index, value);
+      return super.setRepeatedField(field, index, value);
     }
     @java.lang.Override
     public Builder addRepeatedField(
         com.google.protobuf.Descriptors.FieldDescriptor field,
         java.lang.Object value) {
-      return (Builder) super.addRepeatedField(field, value);
+      return super.addRepeatedField(field, value);
     }
     @java.lang.Override
     public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -2093,7 +2574,7 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public final Builder setUnknownFields(
         final com.google.protobuf.UnknownFieldSet unknownFields) {
-      return super.setUnknownFieldsProto3(unknownFields);
+      return super.setUnknownFields(unknownFields);
     }
 
     @java.lang.Override
