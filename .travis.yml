@@ -16,7 +16,6 @@ branches:
 git:
   submodules: false
 jdk:
-  - oraclejdk8
   - openjdk8
   - oraclejdk9
   - openjdk9
