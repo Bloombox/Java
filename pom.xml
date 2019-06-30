@@ -97,7 +97,7 @@
         <maven.clean.version>3.1.0</maven.clean.version>
         <maven.compiler.version>3.8.1</maven.compiler.version>
         <maven.jar.version>3.1.2</maven.jar.version>
-        <maven.javadoc.version>3.0.1</maven.javadoc.version>
+        <maven.javadoc.version>3.1.0</maven.javadoc.version>
         <maven.reports.version>3.0.0</maven.reports.version>
         <maven.release.version>2.5.3</maven.release.version>
         <maven.resources.version>3.1.0</maven.resources.version>
