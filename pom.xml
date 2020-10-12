@@ -91,7 +91,7 @@
         <commons-codec.version>1.13</commons-codec.version>
 
         <!-- Testing -->
-        <junit.version>4.12</junit.version>
+        <junit.version>4.13.1</junit.version>
 
         <!-- Plugins -->
         <maven.clean.version>3.1.0</maven.clean.version>
