@@ -1,0 +1,29 @@
+version: 2
+updates:
+- package-ecosystem: maven
+  directory: "/"
+  schedule:
+    interval: daily
+    time: "09:00"
+  open-pull-requests-limit: 10
+  ignore:
+  - dependency-name: com.google.protobuf:protobuf-java
+    versions:
+    - 3.14.0
+    - 3.15.0
+    - 3.15.1
+    - 3.15.2
+    - 3.15.3
+    - 3.15.4
+    - 3.15.5
+    - 3.15.6
+    - 3.15.7
+  - dependency-name: io.netty:netty-tcnative-boringssl-static
+    versions:
+    - 2.0.36.Final
+    - 2.0.38.Final
+  - dependency-name: org.jetbrains.dokka:dokka-maven-plugin
+    versions:
+    - 1.4.20
+    - 1.4.20-dev-65
+    - 1.4.30
